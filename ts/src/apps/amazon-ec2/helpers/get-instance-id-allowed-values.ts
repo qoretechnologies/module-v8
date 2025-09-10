@@ -12,12 +12,13 @@ export const getAmazonEc2InstanceIdAllowedValues: TQoreGetAllowedValuesFunction<
   TCustomConnOptions,
   string
 > = async (context) => {
-  const { access_key_id, secret_access_key, region } = getQoreContextRequiredValues({
+  const { access_key_id, secret_access_key } = getQoreContextRequiredValues({
     context,
     connectionFields: ['access_key_id', 'secret_access_key'],
-    optionFields: ['region'],
     ErrorClass: AmazonEC2Error,
   });
+
+  const region = context?.opts?.region || context?.conn_opts?.region;
 
   try {
     const ec2Client = createEC2Client({

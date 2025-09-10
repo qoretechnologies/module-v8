@@ -6,11 +6,11 @@ import {
   startAmazonEc2Instance,
 } from '../apps/amazon-ec2/actions';
 import { getAmazonEc2InstanceIdAllowedValues } from '../apps/amazon-ec2/helpers/get-instance-id-allowed-values';
-import { getAmazonEc2RegionAllowedValues } from '../apps/amazon-ec2/helpers/get-region-allowed-values';
 import {
   NewAmazonEc2InstanceTrigger,
   NewAmazonEc2ScheduledEventTrigger,
 } from '../apps/amazon-ec2/triggers';
+import { getAWSRegionAllowedValues } from '../global/helpers/get-amazon-region-allowed-values';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 
 configDotenv({ path: '.env' });
@@ -40,7 +40,7 @@ describe('Amazon EC2', () => {
   let instance: string | undefined;
   describe('Should test allowed values', () => {
     it('Should get region allowed values', async () => {
-      const allowed_values = await getAmazonEc2RegionAllowedValues(base_context);
+      const allowed_values = await getAWSRegionAllowedValues(base_context);
 
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);

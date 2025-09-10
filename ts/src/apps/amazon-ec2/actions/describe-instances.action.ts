@@ -1,10 +1,13 @@
 import { DescribeInstancesCommand } from '@aws-sdk/client-ec2';
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
+import {
+  getAmazonDefaultRegion,
+  getAWSRegionAllowedValues,
+} from '../../../global/helpers/get-amazon-region-allowed-values';
 import { AMAZON_EC2_APP_NAME, AmazonEC2Error } from '../constants';
 import { createEC2Client, formatEC2Date } from '../helpers/constants';
 import { getAmazonEc2InstanceIdAllowedValues } from '../helpers/get-instance-id-allowed-values';
-import { getAmazonEc2RegionAllowedValues } from '../helpers/get-region-allowed-values';
 
 const options = {
   instance_ids: {
@@ -17,11 +20,12 @@ const options = {
     get_element_allowed_values: getAmazonEc2InstanceIdAllowedValues,
   },
   region: {
-    required: true,
+    required: false,
+    preselected: true,
     type: 'string',
-    default_value: 'us-east-1',
     allowed_values_creatable: true,
-    get_allowed_values: getAmazonEc2RegionAllowedValues,
+    get_default_value: getAmazonDefaultRegion,
+    get_allowed_values: getAWSRegionAllowedValues,
   },
   max_results: {
     required: false,
@@ -40,13 +44,13 @@ const describeInstances = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { access_key_id, secret_access_key, region } = getQoreContextRequiredValues({
+    const { access_key_id, secret_access_key } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },
       connectionFields: ['access_key_id', 'secret_access_key'],
-      optionFields: ['region'],
       ErrorClass: AmazonEC2Error,
     });
 
+    const region = obj?.region || context?.conn_opts?.region;
     const { instance_ids, max_results = 100, next_page_token } = obj || {};
 
     try {

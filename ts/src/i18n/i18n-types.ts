@@ -5264,7 +5264,7 @@ type RootTranslation = {
 		}
 		AmazonEC2: {
 			/**
-			 * A​m​a​z​o​n​ ​E​C​2
+			 * A​W​S​ ​E​C​2
 			 */
 			displayName: string
 			/**
@@ -5630,6 +5630,2384 @@ type RootTranslation = {
 				}
 			}
 		}
+		AmazonS3: {
+			/**
+			 * A​W​S​ ​S​3
+			 */
+			displayName: string
+			/**
+			 * S​e​a​m​l​e​s​s​l​y​ ​c​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​S​3​ ​t​o​ ​m​a​n​a​g​e​ ​b​u​c​k​e​t​s​,​ ​u​p​l​o​a​d​ ​f​i​l​e​s​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​y​o​u​r​ ​c​l​o​u​d​ ​s​t​o​r​a​g​e​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​A​m​a​z​o​n​ ​S​3​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​A​m​a​z​o​n​ ​S​i​m​p​l​e​ ​S​t​o​r​a​g​e​ ​S​e​r​v​i​c​e​.​ ​W​h​e​t​h​e​r​ ​y​o​u​ ​n​e​e​d​ ​t​o​ ​m​a​n​a​g​e​ ​b​u​c​k​e​t​s​,​ ​u​p​l​o​a​d​ ​a​n​d​ ​d​o​w​n​l​o​a​d​ ​f​i​l​e​s​,​ ​o​r​ ​m​o​n​i​t​o​r​ ​c​h​a​n​g​e​s​ ​t​o​ ​y​o​u​r​ ​S​3​ ​o​b​j​e​c​t​s​,​ ​t​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​s​i​m​p​l​i​f​i​e​s​ ​y​o​u​r​ ​c​l​o​u​d​ ​s​t​o​r​a​g​e​ ​a​u​t​o​m​a​t​i​o​n​ ​a​n​d​ ​f​i​l​e​ ​m​a​n​a​g​e​m​e​n​t​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			longDesc: string
+			triggers: {
+				new_bucket: {
+					/**
+					 * N​e​w​ ​B​u​c​k​e​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​S​3​ ​b​u​c​k​e​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​S​3​ ​b​u​c​k​e​t​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​b​u​c​k​e​t​ ​i​s​ ​d​e​t​e​c​t​e​d​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​t​r​a​c​k​i​n​g​ ​b​u​c​k​e​t​ ​c​r​e​a​t​i​o​n​ ​e​v​e​n​t​s​ ​a​n​d​ ​i​m​p​l​e​m​e​n​t​i​n​g​ ​a​u​t​o​m​a​t​e​d​ ​g​o​v​e​r​n​a​n​c​e​ ​p​o​l​i​c​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​b​u​c​k​e​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​3​ ​c​l​i​e​n​t​ ​w​i​l​l​ ​b​e​ ​c​o​n​f​i​g​u​r​e​d​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​b​u​c​k​e​t​ ​c​r​e​a​t​i​o​n​ ​e​v​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_or_updated_file: {
+					/**
+					 * N​e​w​ ​o​r​ ​U​p​d​a​t​e​d​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​f​i​l​e​s​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​o​r​ ​m​o​d​i​f​i​e​d​ ​i​n​ ​a​n​ ​S​3​ ​b​u​c​k​e​t
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​n​ ​S​3​ ​b​u​c​k​e​t​ ​f​o​r​ ​n​e​w​ ​o​r​ ​u​p​d​a​t​e​d​ ​f​i​l​e​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​c​h​a​n​g​e​s​ ​a​r​e​ ​d​e​t​e​c​t​e​d​.​ ​S​u​p​p​o​r​t​s​ ​p​r​e​f​i​x​ ​f​i​l​t​e​r​i​n​g​ ​t​o​ ​m​o​n​i​t​o​r​ ​s​p​e​c​i​f​i​c​ ​d​i​r​e​c​t​o​r​i​e​s​ ​o​r​ ​f​i​l​e​ ​p​a​t​t​e​r​n​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d​ ​f​o​r​ ​m​o​n​i​t​o​r​i​n​g​ ​f​i​l​e​ ​c​h​a​n​g​e​s​.
+							 */
+							longDesc: string
+						}
+						bucket_name: {
+							/**
+							 * B​u​c​k​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​b​u​c​k​e​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​f​i​l​e​ ​c​h​a​n​g​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​o​r​ ​u​p​d​a​t​e​d​ ​f​i​l​e​s​.
+							 */
+							longDesc: string
+						}
+						prefix: {
+							/**
+							 * P​r​e​f​i​x​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​e​f​i​x​ ​t​o​ ​f​i​l​t​e​r​ ​o​b​j​e​c​t​s​ ​(​e​.​g​.​,​ ​"​u​p​l​o​a​d​s​/​"​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​e​f​i​x​ ​t​o​ ​l​i​m​i​t​ ​m​o​n​i​t​o​r​i​n​g​ ​t​o​ ​o​b​j​e​c​t​s​ ​w​i​t​h​ ​s​p​e​c​i​f​i​c​ ​k​e​y​ ​p​r​e​f​i​x​e​s​,​ ​u​s​e​f​u​l​ ​f​o​r​ ​m​o​n​i​t​o​r​i​n​g​ ​s​p​e​c​i​f​i​c​ ​d​i​r​e​c​t​o​r​i​e​s​ ​o​r​ ​f​i​l​e​ ​p​a​t​t​e​r​n​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				create_bucket: {
+					/**
+					 * C​r​e​a​t​e​ ​B​u​c​k​e​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​S​3​ ​b​u​c​k​e​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​S​3​ ​b​u​c​k​e​t​ ​w​i​t​h​ ​c​o​n​f​i​g​u​r​a​b​l​e​ ​a​c​c​e​s​s​ ​c​o​n​t​r​o​l​ ​a​n​d​ ​o​b​j​e​c​t​ ​l​o​c​k​ ​s​e​t​t​i​n​g​s​.​ ​B​u​c​k​e​t​ ​n​a​m​e​s​ ​m​u​s​t​ ​b​e​ ​g​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​a​n​d​ ​f​o​l​l​o​w​ ​A​W​S​ ​n​a​m​i​n​g​ ​c​o​n​v​e​n​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						bucket_name: {
+							/**
+							 * B​u​c​k​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​b​u​c​k​e​t​ ​(​m​u​s​t​ ​b​e​ ​g​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​)
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​S​3​ ​b​u​c​k​e​t​.​ ​M​u​s​t​ ​b​e​ ​g​l​o​b​a​l​l​y​ ​u​n​i​q​u​e​ ​a​c​r​o​s​s​ ​a​l​l​ ​A​W​S​ ​a​c​c​o​u​n​t​s​ ​a​n​d​ ​f​o​l​l​o​w​ ​S​3​ ​n​a​m​i​n​g​ ​c​o​n​v​e​n​t​i​o​n​s​ ​(​l​o​w​e​r​c​a​s​e​ ​l​e​t​t​e​r​s​,​ ​n​u​m​b​e​r​s​,​ ​h​y​p​h​e​n​s​ ​o​n​l​y​)​.
+							 */
+							longDesc: string
+						}
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​b​u​c​k​e​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.​ ​A​f​f​e​c​t​s​ ​l​a​t​e​n​c​y​ ​a​n​d​ ​d​a​t​a​ ​r​e​s​i​d​e​n​c​y​.
+							 */
+							longDesc: string
+						}
+						acl: {
+							/**
+							 * A​c​c​e​s​s​ ​C​o​n​t​r​o​l​ ​L​i​s​t​ ​(​A​C​L​)
+							 */
+							displayName: string
+							/**
+							 * A​c​c​e​s​s​ ​p​e​r​m​i​s​s​i​o​n​s​ ​f​o​r​ ​t​h​e​ ​b​u​c​k​e​t
+							 */
+							shortDesc: string
+							/**
+							 * P​r​e​d​e​f​i​n​e​d​ ​a​c​c​e​s​s​ ​c​o​n​t​r​o​l​ ​l​i​s​t​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​w​h​o​ ​c​a​n​ ​a​c​c​e​s​s​ ​t​h​e​ ​b​u​c​k​e​t​ ​a​n​d​ ​w​h​a​t​ ​p​e​r​m​i​s​s​i​o​n​s​ ​t​h​e​y​ ​h​a​v​e​.
+							 */
+							longDesc: string
+						}
+						object_lock_enabled: {
+							/**
+							 * O​b​j​e​c​t​ ​L​o​c​k​ ​E​n​a​b​l​e​d
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​ ​o​b​j​e​c​t​ ​l​o​c​k​ ​f​o​r​ ​c​o​m​p​l​i​a​n​c​e​ ​a​n​d​ ​d​a​t​a​ ​r​e​t​e​n​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * E​n​a​b​l​e​s​ ​S​3​ ​O​b​j​e​c​t​ ​L​o​c​k​ ​t​o​ ​p​r​e​v​e​n​t​ ​o​b​j​e​c​t​ ​d​e​l​e​t​i​o​n​ ​o​r​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​f​o​r​ ​c​o​m​p​l​i​a​n​c​e​ ​a​n​d​ ​d​a​t​a​ ​r​e​t​e​n​t​i​o​n​ ​r​e​q​u​i​r​e​m​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_text_object: {
+					/**
+					 * C​r​e​a​t​e​ ​T​e​x​t​ ​O​b​j​e​c​t
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​d​i​r​e​c​t​l​y​ ​t​o​ ​S​3
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​n​ ​S​3​ ​o​b​j​e​c​t​ ​w​i​t​h​ ​t​e​x​t​ ​c​o​n​t​e​n​t​,​ ​s​u​p​p​o​r​t​i​n​g​ ​v​a​r​i​o​u​s​ ​t​e​x​t​ ​f​o​r​m​a​t​s​ ​a​n​d​ ​c​o​n​t​e​n​t​ ​t​y​p​e​s​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​u​p​l​o​a​d​i​n​g​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​i​l​e​s​,​ ​l​o​g​s​,​ ​o​r​ ​d​o​c​u​m​e​n​t​ ​c​o​n​t​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​S​3​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						bucket_name: {
+							/**
+							 * B​u​c​k​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​S​3​ ​b​u​c​k​e​t​ ​f​o​r​ ​t​h​e​ ​t​e​x​t​ ​o​b​j​e​c​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​w​h​e​r​e​ ​t​h​e​ ​t​e​x​t​ ​o​b​j​e​c​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						object_key: {
+							/**
+							 * O​b​j​e​c​t​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​(​f​i​l​e​ ​p​a​t​h​)​ ​f​o​r​ ​t​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​t​h​a​t​ ​s​e​r​v​e​s​ ​a​s​ ​t​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​n​d​ ​p​a​t​h​ ​f​o​r​ ​t​h​e​ ​t​e​x​t​ ​o​b​j​e​c​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​b​u​c​k​e​t​.
+							 */
+							longDesc: string
+						}
+						content: {
+							/**
+							 * C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​c​o​n​t​e​n​t​ ​t​o​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​u​p​l​o​a​d​e​d​ ​t​o​ ​S​3​ ​a​s​ ​t​h​e​ ​o​b​j​e​c​t​ ​b​o​d​y​.
+							 */
+							longDesc: string
+						}
+						content_type: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * M​I​M​E​ ​t​y​p​e​ ​f​o​r​ ​t​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​M​I​M​E​ ​t​y​p​e​ ​t​h​a​t​ ​d​e​s​c​r​i​b​e​s​ ​t​h​e​ ​f​o​r​m​a​t​ ​o​f​ ​t​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​b​e​i​n​g​ ​u​p​l​o​a​d​e​d​.
+							 */
+							longDesc: string
+						}
+						storage_class: {
+							/**
+							 * S​t​o​r​a​g​e​ ​C​l​a​s​s
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​s​t​o​r​a​g​e​ ​c​l​a​s​s​ ​f​o​r​ ​c​o​s​t​ ​o​p​t​i​m​i​z​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​3​ ​s​t​o​r​a​g​e​ ​c​l​a​s​s​ ​t​h​a​t​ ​d​e​t​e​r​m​i​n​e​s​ ​t​h​e​ ​s​t​o​r​a​g​e​ ​c​o​s​t​s​ ​a​n​d​ ​r​e​t​r​i​e​v​a​l​ ​c​h​a​r​a​c​t​e​r​i​s​t​i​c​s​ ​o​f​ ​t​h​e​ ​o​b​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						metadata: {
+							/**
+							 * M​e​t​a​d​a​t​a
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​ ​a​s​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​s​t​o​r​e​d​ ​w​i​t​h​ ​t​h​e​ ​o​b​j​e​c​t​ ​f​o​r​ ​a​d​d​i​t​i​o​n​a​l​ ​c​o​n​t​e​x​t​ ​o​r​ ​a​p​p​l​i​c​a​t​i​o​n​ ​u​s​e​.
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * O​b​j​e​c​t​ ​t​a​g​s​ ​f​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​a​n​d​ ​c​o​s​t​ ​t​r​a​c​k​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * K​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​u​s​e​d​ ​f​o​r​ ​o​b​j​e​c​t​ ​o​r​g​a​n​i​z​a​t​i​o​n​,​ ​c​o​s​t​ ​a​l​l​o​c​a​t​i​o​n​,​ ​a​n​d​ ​l​i​f​e​c​y​c​l​e​ ​m​a​n​a​g​e​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				upload_file: {
+					/**
+					 * U​p​l​o​a​d​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​a​ ​f​i​l​e​ ​t​o​ ​S​3
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​s​ ​a​ ​f​i​l​e​ ​t​o​ ​S​3​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​c​u​s​t​o​m​ ​o​b​j​e​c​t​ ​k​e​y​s​,​ ​s​t​o​r​a​g​e​ ​c​l​a​s​s​e​s​,​ ​m​e​t​a​d​a​t​a​,​ ​a​n​d​ ​t​a​g​g​i​n​g​.​ ​H​a​n​d​l​e​s​ ​b​i​n​a​r​y​ ​f​i​l​e​s​ ​t​h​r​o​u​g​h​ ​b​a​s​e​6​4​ ​e​n​c​o​d​i​n​g​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​S​3​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						bucket_name: {
+							/**
+							 * B​u​c​k​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​S​3​ ​b​u​c​k​e​t​ ​f​o​r​ ​t​h​e​ ​f​i​l​e​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​u​p​l​o​a​d​e​d​.
+							 */
+							longDesc: string
+						}
+						file: {
+							/**
+							 * F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​e​ ​t​o​ ​u​p​l​o​a​d​ ​t​o​ ​S​3
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​b​e​ ​u​p​l​o​a​d​e​d​ ​t​o​ ​S​3​,​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​c​o​n​t​e​n​t​,​ ​f​i​l​e​n​a​m​e​,​ ​a​n​d​ ​M​I​M​E​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						object_key: {
+							/**
+							 * O​b​j​e​c​t​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​(​o​p​t​i​o​n​a​l​,​ ​u​s​e​s​ ​f​i​l​e​n​a​m​e​ ​i​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​f​o​r​ ​t​h​e​ ​u​p​l​o​a​d​e​d​ ​f​i​l​e​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​f​i​l​e​n​a​m​e​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​.
+							 */
+							longDesc: string
+						}
+						storage_class: {
+							/**
+							 * S​t​o​r​a​g​e​ ​C​l​a​s​s
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​s​t​o​r​a​g​e​ ​c​l​a​s​s​ ​f​o​r​ ​c​o​s​t​ ​o​p​t​i​m​i​z​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​3​ ​s​t​o​r​a​g​e​ ​c​l​a​s​s​ ​t​h​a​t​ ​d​e​t​e​r​m​i​n​e​s​ ​t​h​e​ ​s​t​o​r​a​g​e​ ​c​o​s​t​s​ ​a​n​d​ ​r​e​t​r​i​e​v​a​l​ ​c​h​a​r​a​c​t​e​r​i​s​t​i​c​s​ ​o​f​ ​t​h​e​ ​u​p​l​o​a​d​e​d​ ​f​i​l​e​.
+							 */
+							longDesc: string
+						}
+						metadata: {
+							/**
+							 * M​e​t​a​d​a​t​a
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​ ​a​s​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​s​t​o​r​e​d​ ​w​i​t​h​ ​t​h​e​ ​u​p​l​o​a​d​e​d​ ​f​i​l​e​.
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​e​ ​t​a​g​s​ ​f​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​a​n​d​ ​c​o​s​t​ ​t​r​a​c​k​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * K​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​u​s​e​d​ ​f​o​r​ ​f​i​l​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​,​ ​c​o​s​t​ ​a​l​l​o​c​a​t​i​o​n​,​ ​a​n​d​ ​l​i​f​e​c​y​c​l​e​ ​m​a​n​a​g​e​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_object: {
+					/**
+					 * G​e​t​ ​O​b​j​e​c​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​S​3​ ​o​b​j​e​c​t​ ​w​i​t​h​ ​d​e​t​a​i​l​e​d​ ​m​e​t​a​d​a​t​a
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​n​ ​S​3​ ​o​b​j​e​c​t​ ​w​i​t​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​m​e​t​a​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​s​i​z​e​,​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​d​a​t​e​s​,​ ​s​t​o​r​a​g​e​ ​c​l​a​s​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​.​ ​O​p​t​i​o​n​a​l​l​y​ ​i​n​c​l​u​d​e​s​ ​o​b​j​e​c​t​ ​c​o​n​t​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​s​o​u​r​c​e​ ​S​3​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						bucket_name: {
+							/**
+							 * B​u​c​k​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * S​o​u​r​c​e​ ​S​3​ ​b​u​c​k​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​o​b​j​e​c​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​o​b​j​e​c​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+						object_key: {
+							/**
+							 * O​b​j​e​c​t​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​t​h​a​t​ ​u​n​i​q​u​e​l​y​ ​i​d​e​n​t​i​f​i​e​s​ ​t​h​e​ ​o​b​j​e​c​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​b​u​c​k​e​t​.
+							 */
+							longDesc: string
+						}
+						include_content: {
+							/**
+							 * I​n​c​l​u​d​e​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​o​b​j​e​c​t​ ​c​o​n​t​e​n​t​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​i​n​c​l​u​d​e​s​ ​t​h​e​ ​a​c​t​u​a​l​ ​o​b​j​e​c​t​ ​c​o​n​t​e​n​t​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.​ ​D​i​s​a​b​l​e​ ​f​o​r​ ​m​e​t​a​d​a​t​a​-​o​n​l​y​ ​r​e​t​r​i​e​v​a​l​ ​t​o​ ​i​m​p​r​o​v​e​ ​p​e​r​f​o​r​m​a​n​c​e​.
+							 */
+							longDesc: string
+						}
+						version_id: {
+							/**
+							 * V​e​r​s​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​o​b​j​e​c​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​(​f​o​r​ ​v​e​r​s​i​o​n​e​d​ ​b​u​c​k​e​t​s​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​v​e​r​s​i​o​n​ ​I​D​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​o​b​j​e​c​t​ ​f​r​o​m​ ​a​ ​v​e​r​s​i​o​n​e​d​ ​S​3​ ​b​u​c​k​e​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_file: {
+					/**
+					 * G​e​t​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * D​o​w​n​l​o​a​d​ ​f​i​l​e​ ​f​r​o​m​ ​S​3
+					 */
+					shortDesc: string
+					/**
+					 * D​o​w​n​l​o​a​d​s​ ​a​ ​f​i​l​e​ ​f​r​o​m​ ​S​3​ ​a​n​d​ ​r​e​t​u​r​n​s​ ​i​t​ ​i​n​ ​s​t​a​n​d​a​r​d​ ​f​i​l​e​ ​f​o​r​m​a​t​ ​f​o​r​ ​d​i​r​e​c​t​ ​u​s​e​.​ ​S​i​m​p​l​e​r​ ​a​l​t​e​r​n​a​t​i​v​e​ ​t​o​ ​G​e​t​ ​O​b​j​e​c​t​ ​w​h​e​n​ ​o​n​l​y​ ​t​h​e​ ​f​i​l​e​ ​c​o​n​t​e​n​t​ ​i​s​ ​n​e​e​d​e​d​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​s​o​u​r​c​e​ ​S​3​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						bucket_name: {
+							/**
+							 * B​u​c​k​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * S​o​u​r​c​e​ ​S​3​ ​b​u​c​k​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​d​o​w​n​l​o​a​d​.
+							 */
+							longDesc: string
+						}
+						object_key: {
+							/**
+							 * O​b​j​e​c​t​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​d​o​w​n​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​t​h​a​t​ ​u​n​i​q​u​e​l​y​ ​i​d​e​n​t​i​f​i​e​s​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​d​o​w​n​l​o​a​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​b​u​c​k​e​t​.
+							 */
+							longDesc: string
+						}
+						version_id: {
+							/**
+							 * V​e​r​s​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​d​o​w​n​l​o​a​d​ ​(​f​o​r​ ​v​e​r​s​i​o​n​e​d​ ​b​u​c​k​e​t​s​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​v​e​r​s​i​o​n​ ​I​D​ ​t​o​ ​d​o​w​n​l​o​a​d​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​f​r​o​m​ ​a​ ​v​e​r​s​i​o​n​e​d​ ​S​3​ ​b​u​c​k​e​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_objects: {
+					/**
+					 * L​i​s​t​ ​O​b​j​e​c​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​o​b​j​e​c​t​s​ ​i​n​ ​a​n​ ​S​3​ ​b​u​c​k​e​t
+					 */
+					shortDesc: string
+					/**
+					 * L​i​s​t​s​ ​a​l​l​ ​o​b​j​e​c​t​s​ ​i​n​ ​a​n​ ​S​3​ ​b​u​c​k​e​t​ ​i​n​c​l​u​d​i​n​g​ ​f​i​l​e​s​ ​a​n​d​ ​d​i​r​e​c​t​o​r​i​e​s​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​,​ ​p​r​e​f​i​x​e​s​,​ ​a​n​d​ ​d​e​l​i​m​i​t​e​r​s​ ​f​o​r​ ​h​i​e​r​a​r​c​h​i​c​a​l​ ​n​a​v​i​g​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​S​3​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						bucket_name: {
+							/**
+							 * B​u​c​k​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​b​u​c​k​e​t​ ​t​o​ ​l​i​s​t​ ​o​b​j​e​c​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​l​i​s​t​ ​o​b​j​e​c​t​s​.
+							 */
+							longDesc: string
+						}
+						prefix: {
+							/**
+							 * P​r​e​f​i​x​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​e​f​i​x​ ​t​o​ ​f​i​l​t​e​r​ ​o​b​j​e​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​e​f​i​x​ ​t​o​ ​l​i​m​i​t​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​b​j​e​c​t​s​ ​w​i​t​h​ ​k​e​y​s​ ​t​h​a​t​ ​s​t​a​r​t​ ​w​i​t​h​ ​t​h​i​s​ ​p​r​e​f​i​x​.
+							 */
+							longDesc: string
+						}
+						max_keys: {
+							/**
+							 * M​a​x​ ​K​e​y​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​o​b​j​e​c​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​o​b​j​e​c​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​U​s​e​ ​w​i​t​h​ ​c​o​n​t​i​n​u​a​t​i​o​n​ ​t​o​k​e​n​s​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						continuation_token: {
+							/**
+							 * C​o​n​t​i​n​u​a​t​i​o​n​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​t​i​n​u​a​t​i​o​n​ ​t​o​k​e​n​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​q​u​e​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						delimiter: {
+							/**
+							 * D​e​l​i​m​i​t​e​r
+							 */
+							displayName: string
+							/**
+							 * D​e​l​i​m​i​t​e​r​ ​f​o​r​ ​h​i​e​r​a​r​c​h​i​c​a​l​ ​l​i​s​t​i​n​g​ ​(​e​.​g​.​,​ ​"​/​"​)
+							 */
+							shortDesc: string
+							/**
+							 * C​h​a​r​a​c​t​e​r​ ​u​s​e​d​ ​t​o​ ​g​r​o​u​p​ ​o​b​j​e​c​t​s​ ​i​n​t​o​ ​a​ ​h​i​e​r​a​r​c​h​y​.​ ​C​o​m​m​o​n​ ​p​r​e​f​i​x​e​s​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​ ​s​e​p​a​r​a​t​e​l​y​.
+							 */
+							longDesc: string
+						}
+						start_after: {
+							/**
+							 * S​t​a​r​t​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * O​b​j​e​c​t​ ​k​e​y​ ​t​o​ ​s​t​a​r​t​ ​l​i​s​t​i​n​g​ ​a​f​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * S​t​a​r​t​ ​l​i​s​t​i​n​g​ ​o​b​j​e​c​t​s​ ​l​e​x​i​c​o​g​r​a​p​h​i​c​a​l​l​y​ ​a​f​t​e​r​ ​t​h​i​s​ ​k​e​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_files: {
+					/**
+					 * L​i​s​t​ ​F​i​l​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​f​i​l​e​s​ ​i​n​ ​a​n​ ​S​3​ ​b​u​c​k​e​t​ ​(​e​x​c​l​u​d​e​s​ ​d​i​r​e​c​t​o​r​i​e​s​)
+					 */
+					shortDesc: string
+					/**
+					 * L​i​s​t​s​ ​o​n​l​y​ ​a​c​t​u​a​l​ ​f​i​l​e​s​ ​i​n​ ​a​n​ ​S​3​ ​b​u​c​k​e​t​,​ ​e​x​c​l​u​d​i​n​g​ ​d​i​r​e​c​t​o​r​i​e​s​ ​a​n​d​ ​c​o​m​m​o​n​ ​p​r​e​f​i​x​e​s​.​ ​S​u​p​p​o​r​t​s​ ​f​i​l​e​ ​e​x​t​e​n​s​i​o​n​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​p​r​o​v​i​d​e​s​ ​f​i​l​e​-​s​p​e​c​i​f​i​c​ ​s​t​a​t​i​s​t​i​c​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​S​3​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						bucket_name: {
+							/**
+							 * B​u​c​k​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​b​u​c​k​e​t​ ​t​o​ ​l​i​s​t​ ​f​i​l​e​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​l​i​s​t​ ​f​i​l​e​s​.
+							 */
+							longDesc: string
+						}
+						prefix: {
+							/**
+							 * P​r​e​f​i​x​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​e​f​i​x​ ​t​o​ ​f​i​l​t​e​r​ ​f​i​l​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​e​f​i​x​ ​t​o​ ​l​i​m​i​t​ ​r​e​s​u​l​t​s​ ​t​o​ ​f​i​l​e​s​ ​w​i​t​h​ ​k​e​y​s​ ​t​h​a​t​ ​s​t​a​r​t​ ​w​i​t​h​ ​t​h​i​s​ ​p​r​e​f​i​x​.
+							 */
+							longDesc: string
+						}
+						max_keys: {
+							/**
+							 * M​a​x​ ​K​e​y​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​f​i​l​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​f​i​l​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.
+							 */
+							longDesc: string
+						}
+						file_extensions: {
+							/**
+							 * F​i​l​e​ ​E​x​t​e​n​s​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​f​i​l​e​ ​e​x​t​e​n​s​i​o​n​s​ ​(​e​.​g​.​,​ ​[​"​p​d​f​"​,​ ​"​j​p​g​"​]​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​l​i​s​t​ ​o​f​ ​f​i​l​e​ ​e​x​t​e​n​s​i​o​n​s​ ​t​o​ ​f​i​l​t​e​r​ ​r​e​s​u​l​t​s​.​ ​O​n​l​y​ ​f​i​l​e​s​ ​w​i​t​h​ ​m​a​t​c​h​i​n​g​ ​e​x​t​e​n​s​i​o​n​s​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+						continuation_token: {
+							/**
+							 * C​o​n​t​i​n​u​a​t​i​o​n​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​t​i​n​u​a​t​i​o​n​ ​t​o​k​e​n​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​q​u​e​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_object: {
+					/**
+					 * D​e​l​e​t​e​ ​O​b​j​e​c​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​n​ ​o​b​j​e​c​t​ ​f​r​o​m​ ​S​3
+					 */
+					shortDesc: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​n​ ​o​b​j​e​c​t​ ​f​r​o​m​ ​S​3​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​v​e​r​s​i​o​n​e​d​ ​o​b​j​e​c​t​s​ ​a​n​d​ ​g​o​v​e​r​n​a​n​c​e​ ​r​e​t​e​n​t​i​o​n​ ​b​y​p​a​s​s​.​ ​U​s​e​ ​w​i​t​h​ ​c​a​u​t​i​o​n​ ​a​s​ ​d​e​l​e​t​i​o​n​s​ ​m​a​y​ ​b​e​ ​p​e​r​m​a​n​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​S​3​ ​b​u​c​k​e​t​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						bucket_name: {
+							/**
+							 * B​u​c​k​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​b​u​c​k​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​o​b​j​e​c​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​S​3​ ​b​u​c​k​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​o​b​j​e​c​t​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+						object_key: {
+							/**
+							 * O​b​j​e​c​t​ ​K​e​y
+							 */
+							displayName: string
+							/**
+							 * S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​3​ ​o​b​j​e​c​t​ ​k​e​y​ ​t​h​a​t​ ​u​n​i​q​u​e​l​y​ ​i​d​e​n​t​i​f​i​e​s​ ​t​h​e​ ​o​b​j​e​c​t​ ​t​o​ ​d​e​l​e​t​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​b​u​c​k​e​t​.
+							 */
+							longDesc: string
+						}
+						version_id: {
+							/**
+							 * V​e​r​s​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​t​o​ ​d​e​l​e​t​e​ ​(​f​o​r​ ​v​e​r​s​i​o​n​e​d​ ​b​u​c​k​e​t​s​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​v​e​r​s​i​o​n​ ​I​D​ ​t​o​ ​d​e​l​e​t​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​o​b​j​e​c​t​ ​f​r​o​m​ ​a​ ​v​e​r​s​i​o​n​e​d​ ​S​3​ ​b​u​c​k​e​t​.
+							 */
+							longDesc: string
+						}
+						bypass_governance_retention: {
+							/**
+							 * B​y​p​a​s​s​ ​G​o​v​e​r​n​a​n​c​e​ ​R​e​t​e​n​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * B​y​p​a​s​s​ ​g​o​v​e​r​n​a​n​c​e​-​m​o​d​e​ ​o​b​j​e​c​t​ ​l​o​c​k​ ​r​e​t​e​n​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​b​y​p​a​s​s​e​s​ ​g​o​v​e​r​n​a​n​c​e​-​m​o​d​e​ ​O​b​j​e​c​t​ ​L​o​c​k​ ​r​e​t​e​n​t​i​o​n​.​ ​R​e​q​u​i​r​e​s​ ​a​p​p​r​o​p​r​i​a​t​e​ ​p​e​r​m​i​s​s​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_buckets: {
+					/**
+					 * L​i​s​t​ ​B​u​c​k​e​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​S​3​ ​b​u​c​k​e​t​s​ ​i​n​ ​t​h​e​ ​a​c​c​o​u​n​t
+					 */
+					shortDesc: string
+					/**
+					 * L​i​s​t​s​ ​a​l​l​ ​S​3​ ​b​u​c​k​e​t​s​ ​i​n​ ​t​h​e​ ​A​W​S​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​s​ ​a​n​d​ ​r​e​g​i​o​n​s​.​ ​O​p​t​i​o​n​a​l​l​y​ ​i​n​c​l​u​d​e​s​ ​d​e​t​a​i​l​e​d​ ​l​o​c​a​t​i​o​n​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​ ​e​a​c​h​ ​b​u​c​k​e​t​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​f​o​r​ ​t​h​e​ ​S​3​ ​c​l​i​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​3​ ​c​l​i​e​n​t​ ​w​i​l​l​ ​b​e​ ​c​o​n​f​i​g​u​r​e​d​ ​f​o​r​ ​l​i​s​t​i​n​g​ ​b​u​c​k​e​t​s​.
+							 */
+							longDesc: string
+						}
+						include_location: {
+							/**
+							 * I​n​c​l​u​d​e​ ​L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​f​e​t​c​h​ ​t​h​e​ ​a​c​t​u​a​l​ ​r​e​g​i​o​n​ ​f​o​r​ ​e​a​c​h​ ​b​u​c​k​e​t
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​e​t​c​h​e​s​ ​t​h​e​ ​a​c​t​u​a​l​ ​A​W​S​ ​r​e​g​i​o​n​ ​f​o​r​ ​e​a​c​h​ ​b​u​c​k​e​t​.​ ​D​i​s​a​b​l​e​ ​f​o​r​ ​f​a​s​t​e​r​ ​r​e​s​p​o​n​s​e​s​ ​w​h​e​n​ ​r​e​g​i​o​n​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​s​ ​n​o​t​ ​n​e​e​d​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
+		AmazonLambda: {
+			/**
+			 * A​W​S​ ​L​a​m​b​d​a
+			 */
+			displayName: string
+			/**
+			 * S​e​r​v​e​r​l​e​s​s​ ​c​o​m​p​u​t​e​ ​s​e​r​v​i​c​e​ ​t​h​a​t​ ​r​u​n​s​ ​c​o​d​e​ ​w​i​t​h​o​u​t​ ​p​r​o​v​i​s​i​o​n​i​n​g​ ​o​r​ ​m​a​n​a​g​i​n​g​ ​s​e​r​v​e​r​s​.
+			 */
+			shortDesc: string
+			/**
+			 * A​m​a​z​o​n​ ​L​a​m​b​d​a​ ​i​s​ ​a​ ​s​e​r​v​e​r​l​e​s​s​ ​c​o​m​p​u​t​e​ ​s​e​r​v​i​c​e​ ​t​h​a​t​ ​l​e​t​s​ ​y​o​u​ ​r​u​n​ ​c​o​d​e​ ​w​i​t​h​o​u​t​ ​p​r​o​v​i​s​i​o​n​i​n​g​ ​o​r​ ​m​a​n​a​g​i​n​g​ ​s​e​r​v​e​r​s​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​m​a​n​a​g​e​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​s​,​ ​l​a​y​e​r​s​,​ ​a​n​d​ ​i​n​v​o​c​a​t​i​o​n​s​.​ ​Y​o​u​ ​c​a​n​ ​l​i​s​t​ ​f​u​n​c​t​i​o​n​s​,​ ​i​n​v​o​k​e​ ​t​h​e​m​,​ ​m​a​n​a​g​e​ ​l​a​y​e​r​s​,​ ​a​n​d​ ​m​o​n​i​t​o​r​ ​n​e​w​ ​f​u​n​c​t​i​o​n​ ​a​n​d​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​ ​c​r​e​a​t​i​o​n​.
+			 */
+			longDesc: string
+			actions: {
+				list_functions: {
+					/**
+					 * L​i​s​t​ ​F​u​n​c​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​s​ ​i​n​ ​y​o​u​r​ ​A​W​S​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​r​e​g​i​o​n​.​ ​Y​o​u​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​b​y​ ​f​u​n​c​t​i​o​n​ ​v​e​r​s​i​o​n​,​ ​m​a​s​t​e​r​ ​r​e​g​i​o​n​,​ ​a​n​d​ ​c​o​n​t​r​o​l​ ​p​a​g​i​n​a​t​i​o​n​ ​w​i​t​h​ ​m​a​x​ ​i​t​e​m​s​ ​a​n​d​ ​m​a​r​k​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​s​ ​a​r​e​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​l​i​s​t​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​s​ ​f​r​o​m​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						function_version: {
+							/**
+							 * F​u​n​c​t​i​o​n​ ​V​e​r​s​i​o​n
+							 */
+							displayName: string
+							/**
+							 * V​e​r​s​i​o​n​ ​o​f​ ​f​u​n​c​t​i​o​n​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​A​L​L​ ​t​o​ ​i​n​c​l​u​d​e​ ​a​l​l​ ​p​u​b​l​i​s​h​e​d​ ​v​e​r​s​i​o​n​s​ ​o​f​ ​e​a​c​h​ ​f​u​n​c​t​i​o​n​,​ ​o​r​ ​l​e​a​v​e​ ​e​m​p​t​y​ ​f​o​r​ ​l​a​t​e​s​t​ ​v​e​r​s​i​o​n​s​ ​o​n​l​y​.
+							 */
+							longDesc: string
+						}
+						master_region: {
+							/**
+							 * M​a​s​t​e​r​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​f​u​n​c​t​i​o​n​s​ ​b​y​ ​m​a​s​t​e​r​ ​r​e​g​i​o​n​ ​f​o​r​ ​L​a​m​b​d​a​@​E​d​g​e
+							 */
+							shortDesc: string
+							/**
+							 * F​o​r​ ​L​a​m​b​d​a​@​E​d​g​e​ ​f​u​n​c​t​i​o​n​s​,​ ​s​p​e​c​i​f​y​ ​t​h​e​ ​m​a​s​t​e​r​ ​r​e​g​i​o​n​ ​t​o​ ​f​i​l​t​e​r​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						max_items: {
+							/**
+							 * M​a​x​i​m​u​m​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​f​u​n​c​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * L​i​m​i​t​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​f​u​n​c​t​i​o​n​s​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.
+							 */
+							longDesc: string
+						}
+						next_marker: {
+							/**
+							 * N​e​x​t​ ​M​a​r​k​e​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​m​a​r​k​e​r​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​a​d​d​i​t​i​o​n​a​l​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​e​ ​m​a​r​k​e​r​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_function: {
+					/**
+					 * G​e​t​ ​F​u​n​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​,​ ​c​o​d​e​ ​d​e​t​a​i​l​s​,​ ​t​a​g​s​,​ ​a​n​d​ ​c​o​n​c​u​r​r​e​n​c​y​ ​s​e​t​t​i​n​g​s​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​i​n​s​p​e​c​t​i​n​g​ ​f​u​n​c​t​i​o​n​ ​p​r​o​p​e​r​t​i​e​s​ ​a​n​d​ ​c​u​r​r​e​n​t​ ​s​t​a​t​e​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​f​u​n​c​t​i​o​n​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​r​e​s​i​d​e​s​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						function_name: {
+							/**
+							 * F​u​n​c​t​i​o​n​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​r​ ​A​R​N​ ​o​f​ ​t​h​e​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​,​ ​A​R​N​,​ ​o​r​ ​p​a​r​t​i​a​l​ ​A​R​N​ ​o​f​ ​t​h​e​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+						qualifier: {
+							/**
+							 * Q​u​a​l​i​f​i​e​r
+							 */
+							displayName: string
+							/**
+							 * F​u​n​c​t​i​o​n​ ​v​e​r​s​i​o​n​ ​o​r​ ​a​l​i​a​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​a​ ​v​e​r​s​i​o​n​ ​n​u​m​b​e​r​,​ ​a​l​i​a​s​ ​n​a​m​e​,​ ​o​r​ ​$​L​A​T​E​S​T​ ​t​o​ ​g​e​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​f​u​n​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				invoke_function: {
+					/**
+					 * I​n​v​o​k​e​ ​F​u​n​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * E​x​e​c​u​t​e​ ​a​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​w​i​t​h​ ​c​u​s​t​o​m​ ​p​a​y​l​o​a​d​.
+					 */
+					shortDesc: string
+					/**
+					 * I​n​v​o​k​e​s​ ​a​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​s​y​n​c​h​r​o​n​o​u​s​l​y​ ​o​r​ ​a​s​y​n​c​h​r​o​n​o​u​s​l​y​ ​w​i​t​h​ ​a​ ​c​u​s​t​o​m​ ​J​S​O​N​ ​p​a​y​l​o​a​d​.​ ​Y​o​u​ ​c​a​n​ ​s​p​e​c​i​f​y​ ​i​n​v​o​c​a​t​i​o​n​ ​t​y​p​e​,​ ​l​o​g​g​i​n​g​ ​p​r​e​f​e​r​e​n​c​e​s​,​ ​a​n​d​ ​f​u​n​c​t​i​o​n​ ​v​e​r​s​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​f​u​n​c​t​i​o​n​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​r​e​s​i​d​e​s​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						function_name: {
+							/**
+							 * F​u​n​c​t​i​o​n​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​r​ ​A​R​N​ ​o​f​ ​t​h​e​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​t​o​ ​i​n​v​o​k​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​,​ ​A​R​N​,​ ​o​r​ ​p​a​r​t​i​a​l​ ​A​R​N​ ​o​f​ ​t​h​e​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​t​o​ ​i​n​v​o​k​e​.
+							 */
+							longDesc: string
+						}
+						invocation_type: {
+							/**
+							 * I​n​v​o​c​a​t​i​o​n​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​i​n​v​o​k​e​ ​t​h​e​ ​f​u​n​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * R​e​q​u​e​s​t​R​e​s​p​o​n​s​e​ ​f​o​r​ ​s​y​n​c​h​r​o​n​o​u​s​ ​e​x​e​c​u​t​i​o​n​,​ ​E​v​e​n​t​ ​f​o​r​ ​a​s​y​n​c​h​r​o​n​o​u​s​ ​e​x​e​c​u​t​i​o​n​,​ ​o​r​ ​D​r​y​R​u​n​ ​t​o​ ​v​a​l​i​d​a​t​e​ ​p​a​r​a​m​e​t​e​r​s​ ​w​i​t​h​o​u​t​ ​i​n​v​o​k​i​n​g​.
+							 */
+							longDesc: string
+						}
+						log_type: {
+							/**
+							 * L​o​g​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​e​x​e​c​u​t​i​o​n​ ​l​o​g​s​ ​i​n​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​T​a​i​l​ ​t​o​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​l​a​s​t​ ​4​K​B​ ​o​f​ ​e​x​e​c​u​t​i​o​n​ ​l​o​g​s​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​,​ ​o​r​ ​N​o​n​e​ ​t​o​ ​e​x​c​l​u​d​e​ ​l​o​g​s​.
+							 */
+							longDesc: string
+						}
+						payload: {
+							/**
+							 * P​a​y​l​o​a​d
+							 */
+							displayName: string
+							/**
+							 * J​S​O​N​ ​p​a​y​l​o​a​d​ ​t​o​ ​s​e​n​d​ ​t​o​ ​t​h​e​ ​f​u​n​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * J​S​O​N​ ​s​t​r​i​n​g​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​d​a​t​a​ ​t​o​ ​p​a​s​s​ ​t​o​ ​y​o​u​r​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​.​ ​M​u​s​t​ ​b​e​ ​v​a​l​i​d​ ​J​S​O​N​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						qualifier: {
+							/**
+							 * Q​u​a​l​i​f​i​e​r
+							 */
+							displayName: string
+							/**
+							 * F​u​n​c​t​i​o​n​ ​v​e​r​s​i​o​n​ ​o​r​ ​a​l​i​a​s​ ​t​o​ ​i​n​v​o​k​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​a​ ​v​e​r​s​i​o​n​ ​n​u​m​b​e​r​,​ ​a​l​i​a​s​ ​n​a​m​e​,​ ​o​r​ ​$​L​A​T​E​S​T​ ​t​o​ ​i​n​v​o​k​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​f​u​n​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_layers: {
+					/**
+					 * L​i​s​t​ ​L​a​y​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​L​a​m​b​d​a​ ​l​a​y​e​r​s​ ​i​n​ ​y​o​u​r​ ​A​W​S​ ​a​c​c​o​u​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​L​a​m​b​d​a​ ​l​a​y​e​r​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​r​e​g​i​o​n​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​c​o​m​p​a​t​i​b​l​e​ ​r​u​n​t​i​m​e​ ​a​n​d​ ​c​o​n​t​r​o​l​ ​p​a​g​i​n​a​t​i​o​n​ ​w​i​t​h​ ​m​a​x​ ​i​t​e​m​s​ ​a​n​d​ ​m​a​r​k​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​L​a​m​b​d​a​ ​l​a​y​e​r​s​ ​a​r​e​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​l​i​s​t​ ​L​a​m​b​d​a​ ​l​a​y​e​r​s​ ​f​r​o​m​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						compatible_runtime: {
+							/**
+							 * C​o​m​p​a​t​i​b​l​e​ ​R​u​n​t​i​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​l​a​y​e​r​s​ ​b​y​ ​c​o​m​p​a​t​i​b​l​e​ ​r​u​n​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * R​e​t​u​r​n​ ​o​n​l​y​ ​l​a​y​e​r​s​ ​t​h​a​t​ ​a​r​e​ ​c​o​m​p​a​t​i​b​l​e​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​u​n​t​i​m​e​ ​e​n​v​i​r​o​n​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+						max_items: {
+							/**
+							 * M​a​x​i​m​u​m​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​l​a​y​e​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * L​i​m​i​t​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​l​a​y​e​r​s​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.
+							 */
+							longDesc: string
+						}
+						next_marker: {
+							/**
+							 * N​e​x​t​ ​M​a​r​k​e​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​m​a​r​k​e​r​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​a​d​d​i​t​i​o​n​a​l​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​e​ ​m​a​r​k​e​r​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_layer_versions: {
+					/**
+					 * L​i​s​t​ ​L​a​y​e​r​ ​V​e​r​s​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​v​e​r​s​i​o​n​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​L​a​m​b​d​a​ ​l​a​y​e​r​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​v​e​r​s​i​o​n​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​L​a​m​b​d​a​ ​l​a​y​e​r​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​c​o​m​p​a​t​i​b​l​e​ ​r​u​n​t​i​m​e​ ​a​n​d​ ​c​o​n​t​r​o​l​ ​p​a​g​i​n​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​l​a​y​e​r​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​L​a​m​b​d​a​ ​l​a​y​e​r​ ​r​e​s​i​d​e​s​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						layer_name: {
+							/**
+							 * L​a​y​e​r​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​r​ ​A​R​N​ ​o​f​ ​t​h​e​ ​L​a​m​b​d​a​ ​l​a​y​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​r​ ​A​R​N​ ​o​f​ ​t​h​e​ ​L​a​m​b​d​a​ ​l​a​y​e​r​ ​t​o​ ​l​i​s​t​ ​v​e​r​s​i​o​n​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+						compatible_runtime: {
+							/**
+							 * C​o​m​p​a​t​i​b​l​e​ ​R​u​n​t​i​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​v​e​r​s​i​o​n​s​ ​b​y​ ​c​o​m​p​a​t​i​b​l​e​ ​r​u​n​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * R​e​t​u​r​n​ ​o​n​l​y​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​s​ ​t​h​a​t​ ​a​r​e​ ​c​o​m​p​a​t​i​b​l​e​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​u​n​t​i​m​e​ ​e​n​v​i​r​o​n​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+						max_items: {
+							/**
+							 * M​a​x​i​m​u​m​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​v​e​r​s​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * L​i​m​i​t​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​s​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.
+							 */
+							longDesc: string
+						}
+						next_marker: {
+							/**
+							 * N​e​x​t​ ​M​a​r​k​e​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​m​a​r​k​e​r​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​a​d​d​i​t​i​o​n​a​l​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​e​ ​m​a​r​k​e​r​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_layer_version: {
+					/**
+					 * G​e​t​ ​L​a​y​e​r​ ​V​e​r​s​i​o​n
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​o​f​ ​a​ ​L​a​m​b​d​a​ ​l​a​y​e​r​ ​i​n​c​l​u​d​i​n​g​ ​c​o​n​t​e​n​t​ ​d​e​t​a​i​l​s​,​ ​c​o​m​p​a​t​i​b​l​e​ ​r​u​n​t​i​m​e​s​,​ ​a​n​d​ ​m​e​t​a​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​l​a​y​e​r​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​L​a​m​b​d​a​ ​l​a​y​e​r​ ​r​e​s​i​d​e​s​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						layer_name: {
+							/**
+							 * L​a​y​e​r​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​r​ ​A​R​N​ ​o​f​ ​t​h​e​ ​L​a​m​b​d​a​ ​l​a​y​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​r​ ​A​R​N​ ​o​f​ ​t​h​e​ ​L​a​m​b​d​a​ ​l​a​y​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​v​e​r​s​i​o​n​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+						version_number: {
+							/**
+							 * V​e​r​s​i​o​n​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​v​e​r​s​i​o​n​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​l​a​y​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​e​r​s​i​o​n​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​l​a​y​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_function: {
+					/**
+					 * N​e​w​ ​F​u​n​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​A​W​S​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​r​e​g​i​o​n​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​f​u​n​c​t​i​o​n​ ​i​s​ ​d​e​t​e​c​t​e​d​,​ ​p​r​o​v​i​d​i​n​g​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​f​u​n​c​t​i​o​n​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​f​u​n​c​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​ ​c​r​e​a​t​i​o​n​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_layer_version: {
+					/**
+					 * N​e​w​ ​L​a​y​e​r​ ​V​e​r​s​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​L​a​m​b​d​a​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​ ​i​s​ ​p​u​b​l​i​s​h​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​A​W​S​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​p​u​b​l​i​s​h​e​d​ ​L​a​m​b​d​a​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​r​e​g​i​o​n​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​ ​i​s​ ​d​e​t​e​c​t​e​d​,​ ​p​r​o​v​i​d​i​n​g​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​L​a​m​b​d​a​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​ ​c​r​e​a​t​i​o​n​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
+		AmazonCloudFront: {
+			/**
+			 * C​l​o​u​d​F​r​o​n​t
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​C​l​o​u​d​F​r​o​n​t​ ​t​o​ ​m​a​n​a​g​e​ ​C​D​N​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​,​ ​c​a​c​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​s​,​ ​a​n​d​ ​c​o​n​t​e​n​t​ ​d​e​l​i​v​e​r​y​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​A​m​a​z​o​n​ ​C​l​o​u​d​F​r​o​n​t​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​c​o​n​t​e​n​t​ ​d​e​l​i​v​e​r​y​ ​n​e​t​w​o​r​k​ ​(​C​D​N​)​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​.​ ​M​o​n​i​t​o​r​ ​n​e​w​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​ ​a​n​d​ ​i​n​v​a​l​i​d​a​t​i​o​n​s​,​ ​e​n​a​b​l​e​ ​o​r​ ​d​i​s​a​b​l​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​,​ ​c​r​e​a​t​e​ ​c​a​c​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​s​,​ ​a​n​d​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​s​.​ ​P​e​r​f​e​c​t​ ​f​o​r​ ​a​u​t​o​m​a​t​i​n​g​ ​C​D​N​ ​m​a​n​a​g​e​m​e​n​t​,​ ​c​a​c​h​e​ ​c​l​e​a​r​i​n​g​ ​w​o​r​k​f​l​o​w​s​,​ ​a​n​d​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​m​o​n​i​t​o​r​i​n​g​ ​i​n​ ​y​o​u​r​ ​A​W​S​ ​i​n​f​r​a​s​t​r​u​c​t​u​r​e​.
+			 */
+			longDesc: string
+			triggers: {
+				new_distribution: {
+					/**
+					 * N​e​w​ ​D​i​s​t​r​i​b​u​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​m​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​ ​i​n​ ​y​o​u​r​ ​A​W​S​ ​a​c​c​o​u​n​t​.​ ​I​t​ ​w​i​l​l​ ​f​i​r​e​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​i​s​ ​d​e​t​e​c​t​e​d​,​ ​p​r​o​v​i​d​i​n​g​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​a​n​d​ ​s​t​a​t​u​s​.
+					 */
+					longDesc: string
+				}
+				new_invalidation: {
+					/**
+					 * N​e​w​ ​I​n​v​a​l​i​d​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​a​ ​d​i​s​t​r​i​b​u​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​m​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​ ​c​a​c​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​s​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​.​ ​I​t​ ​w​i​l​l​ ​f​i​r​e​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​ ​i​s​ ​s​u​b​m​i​t​t​e​d​,​ ​p​r​o​v​i​d​i​n​g​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​s​t​a​t​u​s​ ​a​n​d​ ​a​f​f​e​c​t​e​d​ ​p​a​t​h​s​.
+					 */
+					longDesc: string
+					options: {
+						distribution_id: {
+							/**
+							 * D​i​s​t​r​i​b​u​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​i​n​v​a​l​i​d​a​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​s​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​o​n​l​y​ ​f​i​r​e​ ​f​o​r​ ​i​n​v​a​l​i​d​a​t​i​o​n​s​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​t​h​i​s​ ​d​i​s​t​r​i​b​u​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				list_distributions: {
+					/**
+					 * L​i​s​t​ ​D​i​s​t​r​i​b​u​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​ ​i​n​ ​y​o​u​r​ ​A​W​S​ ​a​c​c​o​u​n​t​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​i​r​ ​s​t​a​t​u​s​,​ ​d​o​m​a​i​n​ ​n​a​m​e​s​,​ ​a​n​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​d​e​t​a​i​l​s​.​ ​Y​o​u​ ​c​a​n​ ​c​o​n​t​r​o​l​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​a​n​d​ ​u​s​e​ ​p​a​g​i​n​a​t​i​o​n​ ​f​o​r​ ​l​a​r​g​e​ ​s​e​t​s​ ​o​f​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						max_items: {
+							/**
+							 * M​a​x​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​c​o​n​t​r​o​l​ ​p​a​g​i​n​a​t​i​o​n​ ​a​n​d​ ​r​e​s​p​o​n​s​e​ ​s​i​z​e​.
+							 */
+							longDesc: string
+						}
+						marker: {
+							/**
+							 * M​a​r​k​e​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​m​a​r​k​e​r​ ​f​o​r​ ​c​o​n​t​i​n​u​i​n​g​ ​f​r​o​m​ ​p​r​e​v​i​o​u​s​ ​r​e​q​u​e​s​t
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​m​a​r​k​e​r​ ​t​o​ ​c​o​n​t​i​n​u​e​ ​p​a​g​i​n​a​t​i​o​n​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​l​i​s​t​ ​r​e​q​u​e​s​t​.​ ​T​h​i​s​ ​v​a​l​u​e​ ​i​s​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​t​h​e​ ​n​e​x​t​_​m​a​r​k​e​r​ ​f​i​e​l​d​ ​o​f​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​s​ ​w​h​e​n​ ​r​e​s​u​l​t​s​ ​a​r​e​ ​t​r​u​n​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_distribution: {
+					/**
+					 * G​e​t​ ​D​i​s​t​r​i​b​u​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​i​s​t​r​i​b​u​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​,​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​,​ ​o​r​i​g​i​n​s​,​ ​c​a​c​h​e​ ​b​e​h​a​v​i​o​r​s​,​ ​a​n​d​ ​c​u​r​r​e​n​t​ ​s​t​a​t​u​s​.​ ​T​h​i​s​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​l​e​t​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​h​o​w​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​i​s​ ​c​o​n​f​i​g​u​r​e​d​.
+					 */
+					longDesc: string
+					options: {
+						distribution_id: {
+							/**
+							 * D​i​s​t​r​i​b​u​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​.​ ​T​h​i​s​ ​w​i​l​l​ ​r​e​t​u​r​n​ ​t​h​e​ ​c​o​m​p​l​e​t​e​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​a​n​d​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_distribution_status: {
+					/**
+					 * U​p​d​a​t​e​ ​D​i​s​t​r​i​b​u​t​i​o​n​ ​S​t​a​t​u​s
+					 */
+					displayName: string
+					/**
+					 * E​n​a​b​l​e​ ​o​r​ ​d​i​s​a​b​l​e​ ​a​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​e​n​a​b​l​e​d​/​d​i​s​a​b​l​e​d​ ​s​t​a​t​u​s​ ​o​f​ ​a​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​.​ ​W​h​e​n​ ​y​o​u​ ​d​i​s​a​b​l​e​ ​a​ ​d​i​s​t​r​i​b​u​t​i​o​n​,​ ​i​t​ ​s​t​o​p​s​ ​s​e​r​v​i​n​g​ ​c​o​n​t​e​n​t​ ​a​n​d​ ​y​o​u​ ​s​t​o​p​ ​b​e​i​n​g​ ​c​h​a​r​g​e​d​ ​f​o​r​ ​i​t​.​ ​E​n​a​b​l​i​n​g​ ​i​t​ ​a​g​a​i​n​ ​w​i​l​l​ ​r​e​s​u​m​e​ ​c​o​n​t​e​n​t​ ​d​e​l​i​v​e​r​y​.
+					 */
+					longDesc: string
+					options: {
+						distribution_id: {
+							/**
+							 * D​i​s​t​r​i​b​u​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​w​h​o​s​e​ ​s​t​a​t​u​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​h​a​n​g​e​.​ ​T​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​m​u​s​t​ ​e​x​i​s​t​ ​a​n​d​ ​b​e​ ​i​n​ ​a​ ​s​t​a​t​e​ ​t​h​a​t​ ​a​l​l​o​w​s​ ​s​t​a​t​u​s​ ​c​h​a​n​g​e​s​.
+							 */
+							longDesc: string
+						}
+						enabled: {
+							/**
+							 * E​n​a​b​l​e​ ​D​i​s​t​r​i​b​u​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​e​n​a​b​l​e​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​,​ ​f​a​l​s​e​ ​t​o​ ​d​i​s​a​b​l​e​ ​i​t
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​e​n​a​b​l​e​ ​o​r​ ​d​i​s​a​b​l​e​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​.​ ​E​n​a​b​l​i​n​g​ ​a​l​l​o​w​s​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​t​o​ ​s​e​r​v​e​ ​c​o​n​t​e​n​t​,​ ​w​h​i​l​e​ ​d​i​s​a​b​l​i​n​g​ ​s​t​o​p​s​ ​c​o​n​t​e​n​t​ ​d​e​l​i​v​e​r​y​ ​a​n​d​ ​b​i​l​l​i​n​g​.​ ​S​t​a​t​u​s​ ​c​h​a​n​g​e​s​ ​c​a​n​ ​t​a​k​e​ ​t​i​m​e​ ​t​o​ ​p​r​o​p​a​g​a​t​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				invalidate_item: {
+					/**
+					 * I​n​v​a​l​i​d​a​t​e​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​n​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​ ​t​o​ ​c​l​e​a​r​ ​c​a​c​h​e​d​ ​c​o​n​t​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​n​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​ ​t​o​ ​r​e​m​o​v​e​ ​s​p​e​c​i​f​i​c​ ​f​i​l​e​s​ ​f​r​o​m​ ​C​l​o​u​d​F​r​o​n​t​ ​e​d​g​e​ ​c​a​c​h​e​s​.​ ​T​h​i​s​ ​f​o​r​c​e​s​ ​C​l​o​u​d​F​r​o​n​t​ ​t​o​ ​f​e​t​c​h​ ​f​r​e​s​h​ ​c​o​n​t​e​n​t​ ​f​r​o​m​ ​t​h​e​ ​o​r​i​g​i​n​ ​f​o​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​p​a​t​h​s​ ​o​n​ ​t​h​e​ ​n​e​x​t​ ​r​e​q​u​e​s​t​.
+					 */
+					longDesc: string
+					options: {
+						distribution_id: {
+							/**
+							 * D​i​s​t​r​i​b​u​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​t​o​ ​i​n​v​a​l​i​d​a​t​e​ ​c​o​n​t​e​n​t​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​i​n​v​a​l​i​d​a​t​e​ ​c​a​c​h​e​d​ ​c​o​n​t​e​n​t​.​ ​T​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​w​i​l​l​ ​a​p​p​l​y​ ​t​o​ ​a​l​l​ ​e​d​g​e​ ​l​o​c​a​t​i​o​n​s​ ​f​o​r​ ​t​h​i​s​ ​d​i​s​t​r​i​b​u​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						paths: {
+							/**
+							 * P​a​t​h​s​ ​t​o​ ​I​n​v​a​l​i​d​a​t​e
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​f​i​l​e​ ​p​a​t​h​s​ ​t​o​ ​i​n​v​a​l​i​d​a​t​e​ ​f​r​o​m​ ​t​h​e​ ​c​a​c​h​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​p​a​t​h​s​ ​o​f​ ​f​i​l​e​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​i​n​v​a​l​i​d​a​t​e​ ​f​r​o​m​ ​t​h​e​ ​C​l​o​u​d​F​r​o​n​t​ ​c​a​c​h​e​.​ ​U​s​e​ ​/​*​ ​t​o​ ​i​n​v​a​l​i​d​a​t​e​ ​a​l​l​ ​f​i​l​e​s​,​ ​o​r​ ​s​p​e​c​i​f​y​ ​i​n​d​i​v​i​d​u​a​l​ ​f​i​l​e​ ​p​a​t​h​s​ ​l​i​k​e​ ​/​i​m​a​g​e​s​/​l​o​g​o​.​p​n​g​.​ ​P​a​t​h​s​ ​s​h​o​u​l​d​ ​s​t​a​r​t​ ​w​i​t​h​ ​/​.
+							 */
+							longDesc: string
+						}
+						caller_reference: {
+							/**
+							 * C​a​l​l​e​r​ ​R​e​f​e​r​e​n​c​e
+							 */
+							displayName: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​i​s​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​i​s​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​a​ ​u​n​i​q​u​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​g​e​n​e​r​a​t​e​d​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​t​r​a​c​k​ ​a​n​d​ ​i​d​e​n​t​i​f​y​ ​s​p​e​c​i​f​i​c​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_invalidations: {
+					/**
+					 * L​i​s​t​ ​I​n​v​a​l​i​d​a​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​i​n​v​a​l​i​d​a​t​i​o​n​s​ ​f​o​r​ ​a​ ​d​i​s​t​r​i​b​u​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​c​a​c​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​,​ ​s​h​o​w​i​n​g​ ​t​h​e​i​r​ ​s​t​a​t​u​s​ ​a​n​d​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e​s​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​y​o​u​ ​t​r​a​c​k​ ​t​h​e​ ​p​r​o​g​r​e​s​s​ ​a​n​d​ ​h​i​s​t​o​r​y​ ​o​f​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​s​.
+					 */
+					longDesc: string
+					options: {
+						distribution_id: {
+							/**
+							 * D​i​s​t​r​i​b​u​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​t​o​ ​l​i​s​t​ ​i​n​v​a​l​i​d​a​t​i​o​n​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​w​h​o​s​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​h​i​s​t​o​r​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​T​h​i​s​ ​w​i​l​l​ ​s​h​o​w​ ​a​l​l​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​s​ ​m​a​d​e​ ​f​o​r​ ​t​h​i​s​ ​d​i​s​t​r​i​b​u​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						max_items: {
+							/**
+							 * M​a​x​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​v​a​l​i​d​a​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​c​o​n​t​r​o​l​ ​p​a​g​i​n​a​t​i​o​n​ ​a​n​d​ ​r​e​s​p​o​n​s​e​ ​s​i​z​e​.
+							 */
+							longDesc: string
+						}
+						marker: {
+							/**
+							 * M​a​r​k​e​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​m​a​r​k​e​r​ ​f​o​r​ ​c​o​n​t​i​n​u​i​n​g​ ​f​r​o​m​ ​p​r​e​v​i​o​u​s​ ​r​e​q​u​e​s​t
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​m​a​r​k​e​r​ ​t​o​ ​c​o​n​t​i​n​u​e​ ​p​a​g​i​n​a​t​i​o​n​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​l​i​s​t​ ​r​e​q​u​e​s​t​.​ ​T​h​i​s​ ​v​a​l​u​e​ ​i​s​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​t​h​e​ ​n​e​x​t​_​m​a​r​k​e​r​ ​f​i​e​l​d​ ​o​f​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​s​ ​w​h​e​n​ ​r​e​s​u​l​t​s​ ​a​r​e​ ​t​r​u​n​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_invalidation: {
+					/**
+					 * G​e​t​ ​I​n​v​a​l​i​d​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​c​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​,​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​s​t​a​t​u​s​,​ ​t​h​e​ ​p​a​t​h​s​ ​b​e​i​n​g​ ​i​n​v​a​l​i​d​a​t​e​d​,​ ​a​n​d​ ​t​i​m​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​c​h​e​c​k​ ​t​h​e​ ​p​r​o​g​r​e​s​s​ ​o​f​ ​a​n​ ​i​n​v​a​l​i​d​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						distribution_id: {
+							/**
+							 * D​i​s​t​r​i​b​u​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​t​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​b​e​l​o​n​g​s​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​l​o​u​d​F​r​o​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​t​h​a​t​ ​t​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​ ​w​a​s​ ​c​r​e​a​t​e​d​ ​f​o​r​.​ ​T​h​i​s​ ​i​s​ ​r​e​q​u​i​r​e​d​ ​t​o​ ​l​o​c​a​t​e​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​i​n​v​a​l​i​d​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						invalidation_id: {
+							/**
+							 * I​n​v​a​l​i​d​a​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​.​ ​T​h​i​s​ ​w​i​l​l​ ​s​h​o​w​ ​t​h​e​ ​c​o​m​p​l​e​t​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​c​u​r​r​e​n​t​ ​s​t​a​t​u​s​ ​a​n​d​ ​a​f​f​e​c​t​e​d​ ​p​a​t​h​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
+		AmazonSNS: {
+			/**
+			 * A​W​S​ ​S​N​S
+			 */
+			displayName: string
+			/**
+			 * S​e​n​d​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​a​n​d​ ​m​e​s​s​a​g​e​s​ ​t​h​r​o​u​g​h​ ​A​m​a​z​o​n​ ​S​i​m​p​l​e​ ​N​o​t​i​f​i​c​a​t​i​o​n​ ​S​e​r​v​i​c​e​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​A​m​a​z​o​n​ ​S​N​S​ ​i​n​t​e​g​r​a​t​i​o​n​ ​e​n​a​b​l​e​s​ ​y​o​u​ ​t​o​ ​c​r​e​a​t​e​ ​t​o​p​i​c​s​,​ ​s​e​n​d​ ​m​e​s​s​a​g​e​s​,​ ​m​a​n​a​g​e​ ​s​u​b​s​c​r​i​b​e​r​s​,​ ​a​n​d​ ​m​o​n​i​t​o​r​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​t​h​r​o​u​g​h​ ​A​m​a​z​o​n​ ​S​i​m​p​l​e​ ​N​o​t​i​f​i​c​a​t​i​o​n​ ​S​e​r​v​i​c​e​.​ ​P​e​r​f​e​c​t​ ​f​o​r​ ​b​u​i​l​d​i​n​g​ ​s​c​a​l​a​b​l​e​ ​m​e​s​s​a​g​i​n​g​ ​s​y​s​t​e​m​s​,​ ​s​e​n​d​i​n​g​ ​a​l​e​r​t​s​,​ ​a​n​d​ ​c​o​o​r​d​i​n​a​t​i​n​g​ ​d​i​s​t​r​i​b​u​t​e​d​ ​a​p​p​l​i​c​a​t​i​o​n​s​ ​w​i​t​h​ ​r​e​l​i​a​b​l​e​ ​m​e​s​s​a​g​e​ ​d​e​l​i​v​e​r​y​.
+			 */
+			longDesc: string
+			triggers: {
+				new_topic: {
+					/**
+					 * N​e​w​ ​T​o​p​i​c
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​S​N​S​ ​t​o​p​i​c​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​A​m​a​z​o​n​ ​S​N​S​ ​s​e​r​v​i​c​e​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​t​o​p​i​c​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​o​p​i​c​ ​i​s​ ​d​e​t​e​c​t​e​d​ ​i​n​ ​y​o​u​r​ ​s​p​e​c​i​f​i​e​d​ ​r​e​g​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​t​o​p​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​S​N​S​ ​t​o​p​i​c​s​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​d​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				create_topic: {
+					/**
+					 * C​r​e​a​t​e​ ​T​o​p​i​c
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​S​N​S​ ​t​o​p​i​c
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​A​m​a​z​o​n​ ​S​N​S​ ​t​o​p​i​c​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s​,​ ​e​n​c​r​y​p​t​i​o​n​,​ ​a​n​d​ ​d​e​l​i​v​e​r​y​ ​p​o​l​i​c​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						topic_name: {
+							/**
+							 * T​o​p​i​c​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​S​N​S​ ​t​o​p​i​c​.​ ​F​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s​,​ ​t​h​e​ ​n​a​m​e​ ​m​u​s​t​ ​e​n​d​ ​w​i​t​h​ ​.​f​i​f​o​ ​s​u​f​f​i​x​.
+							 */
+							longDesc: string
+						}
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​f​o​r​ ​t​h​e​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​o​p​i​c​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						display_name: {
+							/**
+							 * D​i​s​p​l​a​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * H​u​m​a​n​-​r​e​a​d​a​b​l​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​h​u​m​a​n​-​r​e​a​d​a​b​l​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​t​o​p​i​c​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​i​n​ ​e​m​a​i​l​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​a​n​d​ ​o​t​h​e​r​ ​c​o​n​t​e​x​t​s​.
+							 */
+							longDesc: string
+						}
+						delivery_policy: {
+							/**
+							 * D​e​l​i​v​e​r​y​ ​P​o​l​i​c​y
+							 */
+							displayName: string
+							/**
+							 * J​S​O​N​ ​d​e​l​i​v​e​r​y​ ​p​o​l​i​c​y​ ​f​o​r​ ​t​h​e​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​J​S​O​N​ ​s​t​r​i​n​g​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​t​h​e​ ​d​e​l​i​v​e​r​y​ ​p​o​l​i​c​y​ ​f​o​r​ ​t​h​e​ ​t​o​p​i​c​,​ ​c​o​n​t​r​o​l​l​i​n​g​ ​r​e​t​r​y​ ​b​e​h​a​v​i​o​r​ ​a​n​d​ ​d​e​l​i​v​e​r​y​ ​s​e​t​t​i​n​g​s​.
+							 */
+							longDesc: string
+						}
+						policy: {
+							/**
+							 * P​o​l​i​c​y
+							 */
+							displayName: string
+							/**
+							 * A​c​c​e​s​s​ ​p​o​l​i​c​y​ ​f​o​r​ ​t​h​e​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​J​S​O​N​ ​s​t​r​i​n​g​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​t​h​e​ ​a​c​c​e​s​s​ ​p​o​l​i​c​y​ ​f​o​r​ ​t​h​e​ ​t​o​p​i​c​,​ ​c​o​n​t​r​o​l​l​i​n​g​ ​w​h​o​ ​c​a​n​ ​p​u​b​l​i​s​h​ ​t​o​ ​o​r​ ​s​u​b​s​c​r​i​b​e​ ​t​o​ ​t​h​e​ ​t​o​p​i​c​.
+							 */
+							longDesc: string
+						}
+						kms_master_key_id: {
+							/**
+							 * K​M​S​ ​M​a​s​t​e​r​ ​K​e​y​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * K​M​S​ ​k​e​y​ ​f​o​r​ ​t​o​p​i​c​ ​e​n​c​r​y​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​a​n​ ​A​W​S​ ​K​M​S​ ​k​e​y​ ​t​o​ ​u​s​e​ ​f​o​r​ ​e​n​c​r​y​p​t​i​n​g​ ​m​e​s​s​a​g​e​s​ ​p​u​b​l​i​s​h​e​d​ ​t​o​ ​t​h​i​s​ ​t​o​p​i​c​.
+							 */
+							longDesc: string
+						}
+						fifo_topic: {
+							/**
+							 * F​I​F​O​ ​T​o​p​i​c
+							 */
+							displayName: string
+							/**
+							 * C​r​e​a​t​e​ ​a​s​ ​F​I​F​O​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​F​I​F​O​ ​(​F​i​r​s​t​-​I​n​-​F​i​r​s​t​-​O​u​t​)​ ​t​o​p​i​c​ ​t​h​a​t​ ​p​r​e​s​e​r​v​e​s​ ​m​e​s​s​a​g​e​ ​o​r​d​e​r​i​n​g​ ​a​n​d​ ​p​r​e​v​e​n​t​s​ ​d​u​p​l​i​c​a​t​e​s​.
+							 */
+							longDesc: string
+						}
+						content_based_deduplication: {
+							/**
+							 * C​o​n​t​e​n​t​-​B​a​s​e​d​ ​D​e​d​u​p​l​i​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​ ​c​o​n​t​e​n​t​-​b​a​s​e​d​ ​d​e​d​u​p​l​i​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​e​n​a​b​l​e​ ​c​o​n​t​e​n​t​-​b​a​s​e​d​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s​,​ ​w​h​i​c​h​ ​p​r​e​v​e​n​t​s​ ​d​u​p​l​i​c​a​t​e​ ​m​e​s​s​a​g​e​s​ ​b​a​s​e​d​ ​o​n​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_message: {
+					/**
+					 * C​r​e​a​t​e​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​n​ ​S​N​S​ ​t​o​p​i​c
+					 */
+					shortDesc: string
+					/**
+					 * P​u​b​l​i​s​h​e​s​ ​a​ ​t​e​x​t​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​n​ ​A​m​a​z​o​n​ ​S​N​S​ ​t​o​p​i​c​,​ ​w​h​i​c​h​ ​w​i​l​l​ ​b​e​ ​d​e​l​i​v​e​r​e​d​ ​t​o​ ​a​l​l​ ​s​u​b​s​c​r​i​b​e​r​s​ ​o​f​ ​t​h​e​ ​t​o​p​i​c​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​o​f​ ​t​h​e​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​t​o​p​i​c​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						topic_arn: {
+							/**
+							 * T​o​p​i​c​ ​A​R​N
+							 */
+							displayName: string
+							/**
+							 * A​R​N​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​m​a​z​o​n​ ​R​e​s​o​u​r​c​e​ ​N​a​m​e​ ​(​A​R​N​)​ ​o​f​ ​t​h​e​ ​S​N​S​ ​t​o​p​i​c​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​b​e​ ​p​u​b​l​i​s​h​e​d​.
+							 */
+							longDesc: string
+						}
+						message: {
+							/**
+							 * M​e​s​s​a​g​e
+							 */
+							displayName: string
+							/**
+							 * M​e​s​s​a​g​e​ ​c​o​n​t​e​n​t​ ​t​o​ ​s​e​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​b​e​ ​s​e​n​t​ ​t​o​ ​a​l​l​ ​t​o​p​i​c​ ​s​u​b​s​c​r​i​b​e​r​s​.
+							 */
+							longDesc: string
+						}
+						subject: {
+							/**
+							 * S​u​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * M​e​s​s​a​g​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​f​o​r​ ​t​h​e​ ​m​e​s​s​a​g​e​,​ ​u​s​e​d​ ​p​r​i​m​a​r​i​l​y​ ​f​o​r​ ​e​m​a​i​l​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						message_attributes: {
+							/**
+							 * M​e​s​s​a​g​e​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​m​e​s​s​a​g​e​ ​m​e​t​a​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​h​a​s​h​ ​o​f​ ​a​d​d​i​t​i​o​n​a​l​ ​a​t​t​r​i​b​u​t​e​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​w​i​t​h​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​r​o​u​t​i​n​g​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						message_deduplication_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​D​e​d​u​p​l​i​c​a​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * D​e​d​u​p​l​i​c​a​t​i​o​n​ ​I​D​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​m​e​s​s​a​g​e​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​ ​i​n​ ​F​I​F​O​ ​t​o​p​i​c​s​.​ ​R​e​q​u​i​r​e​d​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s​ ​w​i​t​h​o​u​t​ ​c​o​n​t​e​n​t​-​b​a​s​e​d​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						message_group_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * G​r​o​u​p​ ​I​D​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​t​a​g​ ​t​h​a​t​ ​s​p​e​c​i​f​i​e​s​ ​t​h​a​t​ ​m​e​s​s​a​g​e​s​ ​b​e​l​o​n​g​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​g​r​o​u​p​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s​.​ ​R​e​q​u​i​r​e​d​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_json_message: {
+					/**
+					 * C​r​e​a​t​e​ ​J​S​O​N​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​s​t​r​u​c​t​u​r​e​d​ ​J​S​O​N​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​n​ ​S​N​S​ ​t​o​p​i​c
+					 */
+					shortDesc: string
+					/**
+					 * P​u​b​l​i​s​h​e​s​ ​a​ ​J​S​O​N​-​s​t​r​u​c​t​u​r​e​d​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​n​ ​A​m​a​z​o​n​ ​S​N​S​ ​t​o​p​i​c​,​ ​a​l​l​o​w​i​n​g​ ​f​o​r​ ​r​i​c​h​ ​c​o​n​t​e​n​t​ ​a​n​d​ ​s​t​r​u​c​t​u​r​e​d​ ​d​a​t​a​ ​d​e​l​i​v​e​r​y​ ​t​o​ ​s​u​b​s​c​r​i​b​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​o​f​ ​t​h​e​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​t​o​p​i​c​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						topic_arn: {
+							/**
+							 * T​o​p​i​c​ ​A​R​N
+							 */
+							displayName: string
+							/**
+							 * A​R​N​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​m​a​z​o​n​ ​R​e​s​o​u​r​c​e​ ​N​a​m​e​ ​(​A​R​N​)​ ​o​f​ ​t​h​e​ ​S​N​S​ ​t​o​p​i​c​ ​w​h​e​r​e​ ​t​h​e​ ​J​S​O​N​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​b​e​ ​p​u​b​l​i​s​h​e​d​.
+							 */
+							longDesc: string
+						}
+						json_message: {
+							/**
+							 * J​S​O​N​ ​M​e​s​s​a​g​e
+							 */
+							displayName: string
+							/**
+							 * J​S​O​N​ ​o​b​j​e​c​t​ ​t​o​ ​s​e​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​J​S​O​N​ ​o​b​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​s​t​r​u​c​t​u​r​e​d​ ​d​a​t​a​ ​t​o​ ​b​e​ ​s​e​n​t​ ​t​o​ ​a​l​l​ ​t​o​p​i​c​ ​s​u​b​s​c​r​i​b​e​r​s​.
+							 */
+							longDesc: string
+						}
+						subject: {
+							/**
+							 * S​u​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * M​e​s​s​a​g​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​f​o​r​ ​t​h​e​ ​m​e​s​s​a​g​e​,​ ​u​s​e​d​ ​p​r​i​m​a​r​i​l​y​ ​f​o​r​ ​e​m​a​i​l​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						message_attributes: {
+							/**
+							 * M​e​s​s​a​g​e​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​m​e​s​s​a​g​e​ ​m​e​t​a​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​h​a​s​h​ ​o​f​ ​a​d​d​i​t​i​o​n​a​l​ ​a​t​t​r​i​b​u​t​e​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​w​i​t​h​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​r​o​u​t​i​n​g​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						message_deduplication_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​D​e​d​u​p​l​i​c​a​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * D​e​d​u​p​l​i​c​a​t​i​o​n​ ​I​D​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​m​e​s​s​a​g​e​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​ ​i​n​ ​F​I​F​O​ ​t​o​p​i​c​s​.​ ​R​e​q​u​i​r​e​d​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s​ ​w​i​t​h​o​u​t​ ​c​o​n​t​e​n​t​-​b​a​s​e​d​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						message_group_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * G​r​o​u​p​ ​I​D​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​t​a​g​ ​t​h​a​t​ ​s​p​e​c​i​f​i​e​s​ ​t​h​a​t​ ​m​e​s​s​a​g​e​s​ ​b​e​l​o​n​g​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​g​r​o​u​p​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s​.​ ​R​e​q​u​i​r​e​d​ ​f​o​r​ ​F​I​F​O​ ​t​o​p​i​c​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_topics: {
+					/**
+					 * L​i​s​t​ ​T​o​p​i​c​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​S​N​S​ ​t​o​p​i​c​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​A​m​a​z​o​n​ ​S​N​S​ ​t​o​p​i​c​s​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​e​g​i​o​n​,​ ​o​p​t​i​o​n​a​l​l​y​ ​i​n​c​l​u​d​i​n​g​ ​d​e​t​a​i​l​e​d​ ​a​t​t​r​i​b​u​t​e​s​ ​f​o​r​ ​e​a​c​h​ ​t​o​p​i​c​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​l​i​s​t​ ​t​o​p​i​c​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​S​N​S​ ​t​o​p​i​c​s​.
+							 */
+							longDesc: string
+						}
+						include_attributes: {
+							/**
+							 * I​n​c​l​u​d​e​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​d​e​t​a​i​l​e​d​ ​t​o​p​i​c​ ​a​t​t​r​i​b​u​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​d​e​t​a​i​l​e​d​ ​a​t​t​r​i​b​u​t​e​s​ ​f​o​r​ ​e​a​c​h​ ​t​o​p​i​c​,​ ​s​u​c​h​ ​a​s​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​c​o​u​n​t​s​ ​a​n​d​ ​p​o​l​i​c​i​e​s​.
+							 */
+							longDesc: string
+						}
+						next_token: {
+							/**
+							 * N​e​x​t​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​t​o​k​e​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​t​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​n​g​ ​t​h​r​o​u​g​h​ ​l​a​r​g​e​ ​l​i​s​t​s​ ​o​f​ ​t​o​p​i​c​s​.​ ​U​s​e​ ​t​h​e​ ​t​o​k​e​n​ ​r​e​t​u​r​n​e​d​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​c​a​l​l​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_topic: {
+					/**
+					 * G​e​t​ ​T​o​p​i​c
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​S​N​S​ ​t​o​p​i​c
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​A​m​a​z​o​n​ ​S​N​S​ ​t​o​p​i​c​,​ ​i​n​c​l​u​d​i​n​g​ ​a​t​t​r​i​b​u​t​e​s​,​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​s​t​a​t​i​s​t​i​c​s​,​ ​a​n​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​o​f​ ​t​h​e​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​o​p​i​c​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						topic_arn: {
+							/**
+							 * T​o​p​i​c​ ​A​R​N
+							 */
+							displayName: string
+							/**
+							 * A​R​N​ ​o​f​ ​t​h​e​ ​t​o​p​i​c​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​m​a​z​o​n​ ​R​e​s​o​u​r​c​e​ ​N​a​m​e​ ​(​A​R​N​)​ ​o​f​ ​t​h​e​ ​S​N​S​ ​t​o​p​i​c​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_subscriber: {
+					/**
+					 * A​d​d​ ​S​u​b​s​c​r​i​b​e​r
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​s​u​b​s​c​r​i​b​e​r​ ​t​o​ ​a​n​ ​S​N​S​ ​t​o​p​i​c
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​t​o​ ​a​n​ ​A​m​a​z​o​n​ ​S​N​S​ ​t​o​p​i​c​,​ ​a​l​l​o​w​i​n​g​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​e​n​d​p​o​i​n​t​ ​t​o​ ​r​e​c​e​i​v​e​ ​m​e​s​s​a​g​e​s​ ​p​u​b​l​i​s​h​e​d​ ​t​o​ ​t​h​e​ ​t​o​p​i​c​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​W​S​ ​r​e​g​i​o​n​ ​o​f​ ​t​h​e​ ​t​o​p​i​c
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​t​o​p​i​c​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						topic_arn: {
+							/**
+							 * T​o​p​i​c​ ​A​R​N
+							 */
+							displayName: string
+							/**
+							 * A​R​N​ ​o​f​ ​t​h​e​ ​t​o​p​i​c​ ​t​o​ ​s​u​b​s​c​r​i​b​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​A​m​a​z​o​n​ ​R​e​s​o​u​r​c​e​ ​N​a​m​e​ ​(​A​R​N​)​ ​o​f​ ​t​h​e​ ​S​N​S​ ​t​o​p​i​c​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+						protocol: {
+							/**
+							 * P​r​o​t​o​c​o​l
+							 */
+							displayName: string
+							/**
+							 * S​u​b​s​c​r​i​p​t​i​o​n​ ​p​r​o​t​o​c​o​l​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​t​o​c​o​l​ ​t​o​ ​u​s​e​ ​f​o​r​ ​d​e​l​i​v​e​r​i​n​g​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​t​h​e​ ​s​u​b​s​c​r​i​b​e​r​ ​(​H​T​T​P​,​ ​H​T​T​P​S​,​ ​E​m​a​i​l​,​ ​S​M​S​,​ ​S​Q​S​,​ ​L​a​m​b​d​a​,​ ​o​r​ ​A​p​p​l​i​c​a​t​i​o​n​)​.
+							 */
+							longDesc: string
+						}
+						endpoint: {
+							/**
+							 * E​n​d​p​o​i​n​t
+							 */
+							displayName: string
+							/**
+							 * S​u​b​s​c​r​i​b​e​r​ ​e​n​d​p​o​i​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​n​d​p​o​i​n​t​ ​t​h​a​t​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​e​ ​m​e​s​s​a​g​e​s​.​ ​F​o​r​m​a​t​ ​d​e​p​e​n​d​s​ ​o​n​ ​t​h​e​ ​p​r​o​t​o​c​o​l​ ​(​U​R​L​ ​f​o​r​ ​H​T​T​P​/​H​T​T​P​S​,​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​e​m​a​i​l​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​S​M​S​,​ ​e​t​c​.​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Claude: {
 			/**
 			 * C​l​a​u​d​e
@@ -5785,6 +8163,854 @@ type RootTranslation = {
 					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​C​l​a​u​d​e​ ​m​o​d​e​l​s​.
 					 */
 					longDesc: string
+				}
+			}
+		}
+		AmazonSQS: {
+			/**
+			 * A​W​S​ ​S​Q​S
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​S​i​m​p​l​e​ ​Q​u​e​u​e​ ​S​e​r​v​i​c​e​ ​t​o​ ​m​a​n​a​g​e​ ​m​e​s​s​a​g​e​ ​q​u​e​u​e​s​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​m​e​s​s​a​g​e​ ​p​r​o​c​e​s​s​i​n​g​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​A​W​S​ ​S​Q​S​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​q​u​e​u​e​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​m​e​s​s​a​g​e​ ​h​a​n​d​l​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​f​o​r​ ​A​m​a​z​o​n​ ​S​i​m​p​l​e​ ​Q​u​e​u​e​ ​S​e​r​v​i​c​e​.​ ​C​r​e​a​t​e​ ​a​n​d​ ​m​a​n​a​g​e​ ​q​u​e​u​e​s​,​ ​s​e​n​d​ ​m​e​s​s​a​g​e​s​ ​(​i​n​c​l​u​d​i​n​g​ ​J​S​O​N​)​,​ ​r​e​c​e​i​v​e​ ​m​e​s​s​a​g​e​s​ ​w​i​t​h​ ​p​o​l​l​i​n​g​ ​t​r​i​g​g​e​r​s​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​y​o​u​r​ ​m​e​s​s​a​g​e​-​d​r​i​v​e​n​ ​a​r​c​h​i​t​e​c​t​u​r​e​s​ ​w​i​t​h​ ​r​e​l​i​a​b​l​e​,​ ​s​c​a​l​a​b​l​e​ ​q​u​e​u​e​ ​o​p​e​r​a​t​i​o​n​s​.
+			 */
+			longDesc: string
+			triggers: {
+				new_message: {
+					/**
+					 * N​e​w​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​i​s​ ​r​e​c​e​i​v​e​d​ ​i​n​ ​a​n​ ​S​Q​S​ ​q​u​e​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​n​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​f​o​r​ ​n​e​w​ ​m​e​s​s​a​g​e​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​m​e​s​s​a​g​e​s​ ​a​r​e​ ​a​v​a​i​l​a​b​l​e​.​ ​S​u​p​p​o​r​t​s​ ​l​o​n​g​ ​p​o​l​l​i​n​g​ ​a​n​d​ ​m​e​s​s​a​g​e​ ​a​t​t​r​i​b​u​t​e​s​ ​r​e​t​r​i​e​v​a​l​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​r​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​h​o​s​t​e​d​.​ ​T​h​i​s​ ​d​e​t​e​r​m​i​n​e​s​ ​t​h​e​ ​e​n​d​p​o​i​n​t​ ​u​s​e​d​ ​f​o​r​ ​A​P​I​ ​c​a​l​l​s​.
+							 */
+							longDesc: string
+						}
+						queue_url: {
+							/**
+							 * Q​u​e​u​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​l​e​t​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​r​e​c​e​i​v​e​ ​m​e​s​s​a​g​e​s​.
+							 */
+							longDesc: string
+						}
+						wait_time_seconds: {
+							/**
+							 * W​a​i​t​ ​T​i​m​e​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * L​o​n​g​ ​p​o​l​l​i​n​g​ ​w​a​i​t​ ​t​i​m​e​ ​i​n​ ​s​e​c​o​n​d​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​u​r​a​t​i​o​n​ ​(​0​-​2​0​ ​s​e​c​o​n​d​s​)​ ​f​o​r​ ​w​h​i​c​h​ ​t​h​e​ ​c​a​l​l​ ​w​a​i​t​s​ ​f​o​r​ ​a​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​r​r​i​v​e​ ​i​n​ ​t​h​e​ ​q​u​e​u​e​ ​b​e​f​o​r​e​ ​r​e​t​u​r​n​i​n​g​.
+							 */
+							longDesc: string
+						}
+						max_messages: {
+							/**
+							 * M​a​x​ ​M​e​s​s​a​g​e​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​c​e​i​v​e​ ​p​e​r​ ​p​o​l​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​(​1​-​1​0​)​.​ ​N​o​t​e​ ​t​h​a​t​ ​f​e​w​e​r​ ​m​e​s​s​a​g​e​s​ ​m​i​g​h​t​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_json_message: {
+					/**
+					 * N​e​w​ ​J​S​O​N​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​J​S​O​N​ ​m​e​s​s​a​g​e​ ​i​s​ ​r​e​c​e​i​v​e​d​ ​i​n​ ​a​n​ ​S​Q​S​ ​q​u​e​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​n​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​f​o​r​ ​n​e​w​ ​m​e​s​s​a​g​e​s​ ​c​o​n​t​a​i​n​i​n​g​ ​v​a​l​i​d​ ​J​S​O​N​ ​d​a​t​a​.​ ​O​n​l​y​ ​t​r​i​g​g​e​r​s​ ​f​o​r​ ​m​e​s​s​a​g​e​s​ ​w​i​t​h​ ​p​a​r​s​e​a​b​l​e​ ​J​S​O​N​ ​c​o​n​t​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​r​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​h​o​s​t​e​d​.​ ​T​h​i​s​ ​d​e​t​e​r​m​i​n​e​s​ ​t​h​e​ ​e​n​d​p​o​i​n​t​ ​u​s​e​d​ ​f​o​r​ ​A​P​I​ ​c​a​l​l​s​.
+							 */
+							longDesc: string
+						}
+						queue_url: {
+							/**
+							 * Q​u​e​u​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​l​e​t​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​r​e​c​e​i​v​e​ ​J​S​O​N​ ​m​e​s​s​a​g​e​s​.
+							 */
+							longDesc: string
+						}
+						wait_time_seconds: {
+							/**
+							 * W​a​i​t​ ​T​i​m​e​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * L​o​n​g​ ​p​o​l​l​i​n​g​ ​w​a​i​t​ ​t​i​m​e​ ​i​n​ ​s​e​c​o​n​d​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​u​r​a​t​i​o​n​ ​(​0​-​2​0​ ​s​e​c​o​n​d​s​)​ ​f​o​r​ ​w​h​i​c​h​ ​t​h​e​ ​c​a​l​l​ ​w​a​i​t​s​ ​f​o​r​ ​a​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​r​r​i​v​e​ ​i​n​ ​t​h​e​ ​q​u​e​u​e​ ​b​e​f​o​r​e​ ​r​e​t​u​r​n​i​n​g​.
+							 */
+							longDesc: string
+						}
+						max_messages: {
+							/**
+							 * M​a​x​ ​M​e​s​s​a​g​e​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​c​e​i​v​e​ ​p​e​r​ ​p​o​l​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​(​1​-​1​0​)​.​ ​N​o​t​e​ ​t​h​a​t​ ​f​e​w​e​r​ ​m​e​s​s​a​g​e​s​ ​m​i​g​h​t​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_queue: {
+					/**
+					 * N​e​w​ ​Q​u​e​u​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​s​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​e​g​i​o​n​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​q​u​e​u​e​s​ ​a​r​e​ ​d​e​t​e​c​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​q​u​e​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​S​Q​S​ ​q​u​e​u​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				create_message: {
+					/**
+					 * C​r​e​a​t​e​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​t​e​x​t​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​n​ ​S​Q​S​ ​q​u​e​u​e
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​t​e​x​t​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​n​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​m​e​s​s​a​g​e​ ​a​t​t​r​i​b​u​t​e​s​,​ ​d​e​l​a​y​ ​s​e​t​t​i​n​g​s​,​ ​a​n​d​ ​F​I​F​O​ ​q​u​e​u​e​ ​p​a​r​a​m​e​t​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​r​ ​t​a​r​g​e​t​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​h​o​s​t​e​d​.
+							 */
+							longDesc: string
+						}
+						queue_url: {
+							/**
+							 * Q​u​e​u​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​S​Q​S​ ​q​u​e​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​l​e​t​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​b​e​ ​s​e​n​t​.
+							 */
+							longDesc: string
+						}
+						message_body: {
+							/**
+							 * M​e​s​s​a​g​e​ ​B​o​d​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t​ ​t​o​ ​s​e​n​d​.​ ​C​a​n​ ​b​e​ ​p​l​a​i​n​ ​t​e​x​t​ ​o​r​ ​a​n​y​ ​s​t​r​i​n​g​ ​f​o​r​m​a​t​ ​u​p​ ​t​o​ ​2​5​6​ ​K​B​.
+							 */
+							longDesc: string
+						}
+						delay_seconds: {
+							/**
+							 * D​e​l​a​y​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​s​e​c​o​n​d​s​ ​t​o​ ​d​e​l​a​y​ ​m​e​s​s​a​g​e​ ​d​e​l​i​v​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​e​n​g​t​h​ ​o​f​ ​t​i​m​e​ ​(​0​-​9​0​0​ ​s​e​c​o​n​d​s​)​ ​f​o​r​ ​w​h​i​c​h​ ​t​o​ ​d​e​l​a​y​ ​d​e​l​i​v​e​r​y​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						message_attributes: {
+							/**
+							 * M​e​s​s​a​g​e​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​m​e​t​a​d​a​t​a​ ​f​o​r​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​w​i​t​h​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​p​r​o​c​e​s​s​i​n​g​.
+							 */
+							longDesc: string
+						}
+						message_group_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * G​r​o​u​p​ ​I​D​ ​f​o​r​ ​F​I​F​O​ ​q​u​e​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​g​ ​t​h​a​t​ ​s​p​e​c​i​f​i​e​s​ ​t​h​a​t​ ​a​ ​m​e​s​s​a​g​e​ ​b​e​l​o​n​g​s​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​g​r​o​u​p​ ​(​F​I​F​O​ ​q​u​e​u​e​s​ ​o​n​l​y​)​.
+							 */
+							longDesc: string
+						}
+						message_deduplication_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​D​e​d​u​p​l​i​c​a​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * D​e​d​u​p​l​i​c​a​t​i​o​n​ ​I​D​ ​f​o​r​ ​F​I​F​O​ ​q​u​e​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​o​k​e​n​ ​u​s​e​d​ ​f​o​r​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​ ​o​f​ ​s​e​n​t​ ​m​e​s​s​a​g​e​s​ ​(​F​I​F​O​ ​q​u​e​u​e​s​ ​o​n​l​y​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_json_message: {
+					/**
+					 * C​r​e​a​t​e​ ​J​S​O​N​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​J​S​O​N​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​n​ ​S​Q​S​ ​q​u​e​u​e
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​s​t​r​u​c​t​u​r​e​d​ ​J​S​O​N​ ​d​a​t​a​ ​t​o​ ​a​n​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​.​ ​T​h​e​ ​J​S​O​N​ ​o​b​j​e​c​t​ ​w​i​l​l​ ​b​e​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​s​e​r​i​a​l​i​z​e​d​ ​i​n​t​o​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​b​o​d​y​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​r​ ​t​a​r​g​e​t​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​h​o​s​t​e​d​.
+							 */
+							longDesc: string
+						}
+						queue_url: {
+							/**
+							 * Q​u​e​u​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​S​Q​S​ ​q​u​e​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​l​e​t​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​w​h​e​r​e​ ​t​h​e​ ​J​S​O​N​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​b​e​ ​s​e​n​t​.
+							 */
+							longDesc: string
+						}
+						message_data: {
+							/**
+							 * M​e​s​s​a​g​e​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​J​S​O​N​ ​o​b​j​e​c​t​ ​t​o​ ​s​e​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​r​u​c​t​u​r​e​d​ ​d​a​t​a​ ​o​b​j​e​c​t​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​s​e​r​i​a​l​i​z​e​d​ ​t​o​ ​J​S​O​N​ ​a​n​d​ ​s​e​n​t​ ​a​s​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​b​o​d​y​.
+							 */
+							longDesc: string
+						}
+						delay_seconds: {
+							/**
+							 * D​e​l​a​y​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​s​e​c​o​n​d​s​ ​t​o​ ​d​e​l​a​y​ ​m​e​s​s​a​g​e​ ​d​e​l​i​v​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​e​n​g​t​h​ ​o​f​ ​t​i​m​e​ ​(​0​-​9​0​0​ ​s​e​c​o​n​d​s​)​ ​f​o​r​ ​w​h​i​c​h​ ​t​o​ ​d​e​l​a​y​ ​d​e​l​i​v​e​r​y​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						message_attributes: {
+							/**
+							 * M​e​s​s​a​g​e​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​m​e​t​a​d​a​t​a​ ​f​o​r​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​w​i​t​h​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​p​r​o​c​e​s​s​i​n​g​.
+							 */
+							longDesc: string
+						}
+						message_group_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * G​r​o​u​p​ ​I​D​ ​f​o​r​ ​F​I​F​O​ ​q​u​e​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​g​ ​t​h​a​t​ ​s​p​e​c​i​f​i​e​s​ ​t​h​a​t​ ​a​ ​m​e​s​s​a​g​e​ ​b​e​l​o​n​g​s​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​g​r​o​u​p​ ​(​F​I​F​O​ ​q​u​e​u​e​s​ ​o​n​l​y​)​.
+							 */
+							longDesc: string
+						}
+						message_deduplication_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​D​e​d​u​p​l​i​c​a​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * D​e​d​u​p​l​i​c​a​t​i​o​n​ ​I​D​ ​f​o​r​ ​F​I​F​O​ ​q​u​e​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​o​k​e​n​ ​u​s​e​d​ ​f​o​r​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​ ​o​f​ ​s​e​n​t​ ​m​e​s​s​a​g​e​s​ ​(​F​I​F​O​ ​q​u​e​u​e​s​ ​o​n​l​y​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_queue: {
+					/**
+					 * C​r​e​a​t​e​ ​Q​u​e​u​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​S​Q​S​ ​q​u​e​u​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​w​i​t​h​ ​c​o​n​f​i​g​u​r​a​b​l​e​ ​s​e​t​t​i​n​g​s​ ​i​n​c​l​u​d​i​n​g​ ​F​I​F​O​ ​c​a​p​a​b​i​l​i​t​i​e​s​,​ ​d​e​a​d​ ​l​e​t​t​e​r​ ​q​u​e​u​e​s​,​ ​a​n​d​ ​e​n​c​r​y​p​t​i​o​n​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​q​u​e​u​e​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​n​e​w​ ​S​Q​S​ ​q​u​e​u​e​.
+							 */
+							longDesc: string
+						}
+						queue_name: {
+							/**
+							 * Q​u​e​u​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​n​e​w​ ​q​u​e​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​q​u​e​u​e​.​ ​F​I​F​O​ ​q​u​e​u​e​ ​n​a​m​e​s​ ​m​u​s​t​ ​e​n​d​ ​w​i​t​h​ ​.​f​i​f​o​ ​s​u​f​f​i​x​.
+							 */
+							longDesc: string
+						}
+						fifo_queue: {
+							/**
+							 * F​I​F​O​ ​Q​u​e​u​e
+							 */
+							displayName: string
+							/**
+							 * C​r​e​a​t​e​ ​a​s​ ​a​ ​F​I​F​O​ ​(​F​i​r​s​t​-​I​n​-​F​i​r​s​t​-​O​u​t​)​ ​q​u​e​u​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​F​I​F​O​ ​q​u​e​u​e​ ​t​h​a​t​ ​e​n​s​u​r​e​s​ ​m​e​s​s​a​g​e​s​ ​a​r​e​ ​p​r​o​c​e​s​s​e​d​ ​e​x​a​c​t​l​y​ ​o​n​c​e​ ​i​n​ ​t​h​e​ ​e​x​a​c​t​ ​o​r​d​e​r​ ​s​e​n​t​.
+							 */
+							longDesc: string
+						}
+						content_based_deduplication: {
+							/**
+							 * C​o​n​t​e​n​t​-​B​a​s​e​d​ ​D​e​d​u​p​l​i​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​ ​a​u​t​o​m​a​t​i​c​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​ ​b​a​s​e​d​ ​o​n​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * F​o​r​ ​F​I​F​O​ ​q​u​e​u​e​s​,​ ​e​n​a​b​l​e​s​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​ ​u​s​i​n​g​ ​a​ ​S​H​A​-​2​5​6​ ​h​a​s​h​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​b​o​d​y​.
+							 */
+							longDesc: string
+						}
+						visibility_timeout: {
+							/**
+							 * V​i​s​i​b​i​l​i​t​y​ ​T​i​m​e​o​u​t​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​ ​a​ ​m​e​s​s​a​g​e​ ​i​s​ ​i​n​v​i​s​i​b​l​e​ ​a​f​t​e​r​ ​b​e​i​n​g​ ​r​e​c​e​i​v​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​e​n​g​t​h​ ​o​f​ ​t​i​m​e​ ​(​0​-​4​3​2​0​0​ ​s​e​c​o​n​d​s​)​ ​t​h​a​t​ ​a​ ​m​e​s​s​a​g​e​ ​i​s​ ​i​n​v​i​s​i​b​l​e​ ​t​o​ ​o​t​h​e​r​ ​c​o​n​s​u​m​e​r​s​ ​a​f​t​e​r​ ​b​e​i​n​g​ ​r​e​c​e​i​v​e​d​.
+							 */
+							longDesc: string
+						}
+						message_retention_period: {
+							/**
+							 * M​e​s​s​a​g​e​ ​R​e​t​e​n​t​i​o​n​ ​P​e​r​i​o​d​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​l​o​n​g​ ​m​e​s​s​a​g​e​s​ ​a​r​e​ ​r​e​t​a​i​n​e​d​ ​i​n​ ​t​h​e​ ​q​u​e​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​e​n​g​t​h​ ​o​f​ ​t​i​m​e​ ​(​6​0​-​1​2​0​9​6​0​0​ ​s​e​c​o​n​d​s​)​ ​t​h​a​t​ ​m​e​s​s​a​g​e​s​ ​a​r​e​ ​r​e​t​a​i​n​e​d​ ​i​n​ ​t​h​e​ ​q​u​e​u​e​.
+							 */
+							longDesc: string
+						}
+						delay_seconds: {
+							/**
+							 * D​e​l​a​y​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * D​e​f​a​u​l​t​ ​d​e​l​a​y​ ​f​o​r​ ​n​e​w​ ​m​e​s​s​a​g​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​e​f​a​u​l​t​ ​d​e​l​a​y​ ​(​0​-​9​0​0​ ​s​e​c​o​n​d​s​)​ ​f​o​r​ ​m​e​s​s​a​g​e​s​ ​a​d​d​e​d​ ​t​o​ ​t​h​i​s​ ​q​u​e​u​e​.
+							 */
+							longDesc: string
+						}
+						receive_message_wait_time_seconds: {
+							/**
+							 * R​e​c​e​i​v​e​ ​W​a​i​t​ ​T​i​m​e​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * L​o​n​g​ ​p​o​l​l​i​n​g​ ​w​a​i​t​ ​t​i​m​e​ ​f​o​r​ ​r​e​c​e​i​v​e​ ​o​p​e​r​a​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​ ​(​0​-​2​0​ ​s​e​c​o​n​d​s​)​ ​f​o​r​ ​w​h​i​c​h​ ​R​e​c​e​i​v​e​M​e​s​s​a​g​e​ ​c​a​l​l​s​ ​w​a​i​t​ ​f​o​r​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​a​r​r​i​v​e​.
+							 */
+							longDesc: string
+						}
+						max_receive_count: {
+							/**
+							 * M​a​x​ ​R​e​c​e​i​v​e​ ​C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​r​e​c​e​i​v​e​s​ ​b​e​f​o​r​e​ ​m​o​v​i​n​g​ ​t​o​ ​d​e​a​d​ ​l​e​t​t​e​r​ ​q​u​e​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​i​m​e​s​ ​a​ ​m​e​s​s​a​g​e​ ​c​a​n​ ​b​e​ ​r​e​c​e​i​v​e​d​ ​b​e​f​o​r​e​ ​b​e​i​n​g​ ​m​o​v​e​d​ ​t​o​ ​t​h​e​ ​d​e​a​d​ ​l​e​t​t​e​r​ ​q​u​e​u​e​.
+							 */
+							longDesc: string
+						}
+						dead_letter_queue_url: {
+							/**
+							 * D​e​a​d​ ​L​e​t​t​e​r​ ​Q​u​e​u​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * U​R​L​ ​o​f​ ​t​h​e​ ​d​e​a​d​ ​l​e​t​t​e​r​ ​q​u​e​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​q​u​e​u​e​ ​t​o​ ​u​s​e​ ​a​s​ ​a​ ​d​e​a​d​ ​l​e​t​t​e​r​ ​q​u​e​u​e​ ​f​o​r​ ​f​a​i​l​e​d​ ​m​e​s​s​a​g​e​ ​p​r​o​c​e​s​s​i​n​g​.
+							 */
+							longDesc: string
+						}
+						kms_master_key_id: {
+							/**
+							 * K​M​S​ ​M​a​s​t​e​r​ ​K​e​y​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * K​M​S​ ​k​e​y​ ​f​o​r​ ​s​e​r​v​e​r​-​s​i​d​e​ ​e​n​c​r​y​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​a​n​ ​A​W​S​ ​K​M​S​ ​k​e​y​ ​f​o​r​ ​s​e​r​v​e​r​-​s​i​d​e​ ​e​n​c​r​y​p​t​i​o​n​ ​o​f​ ​q​u​e​u​e​ ​m​e​s​s​a​g​e​s​.
+							 */
+							longDesc: string
+						}
+						kms_data_key_reuse_period_seconds: {
+							/**
+							 * K​M​S​ ​D​a​t​a​ ​K​e​y​ ​R​e​u​s​e​ ​P​e​r​i​o​d​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​l​o​n​g​ ​t​o​ ​r​e​u​s​e​ ​K​M​S​ ​d​a​t​a​ ​k​e​y​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​e​n​g​t​h​ ​o​f​ ​t​i​m​e​ ​(​6​0​-​8​6​4​0​0​ ​s​e​c​o​n​d​s​)​ ​f​o​r​ ​w​h​i​c​h​ ​A​m​a​z​o​n​ ​S​Q​S​ ​c​a​n​ ​r​e​u​s​e​ ​a​ ​d​a​t​a​ ​k​e​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_queues: {
+					/**
+					 * L​i​s​t​ ​Q​u​e​u​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​S​Q​S​ ​q​u​e​u​e​s​ ​i​n​ ​a​ ​r​e​g​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​s​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​e​g​i​o​n​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​d​e​t​a​i​l​e​d​ ​q​u​e​u​e​ ​a​t​t​r​i​b​u​t​e​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​l​i​s​t​ ​q​u​e​u​e​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​S​Q​S​ ​q​u​e​u​e​s​.
+							 */
+							longDesc: string
+						}
+						queue_name_prefix: {
+							/**
+							 * Q​u​e​u​e​ ​N​a​m​e​ ​P​r​e​f​i​x
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​q​u​e​u​e​s​ ​b​y​ ​n​a​m​e​ ​p​r​e​f​i​x
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​e​f​i​x​ ​t​o​ ​f​i​l​t​e​r​ ​q​u​e​u​e​ ​n​a​m​e​s​.​ ​O​n​l​y​ ​q​u​e​u​e​s​ ​w​i​t​h​ ​n​a​m​e​s​ ​s​t​a​r​t​i​n​g​ ​w​i​t​h​ ​t​h​i​s​ ​p​r​e​f​i​x​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+						max_results: {
+							/**
+							 * M​a​x​ ​R​e​s​u​l​t​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​q​u​e​u​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​q​u​e​u​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​(​1​-​1​0​0​0​)​.
+							 */
+							longDesc: string
+						}
+						include_attributes: {
+							/**
+							 * I​n​c​l​u​d​e​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​d​e​t​a​i​l​e​d​ ​q​u​e​u​e​ ​a​t​t​r​i​b​u​t​e​s​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​d​e​t​a​i​l​e​d​ ​q​u​e​u​e​ ​a​t​t​r​i​b​u​t​e​s​ ​l​i​k​e​ ​m​e​s​s​a​g​e​ ​c​o​u​n​t​s​,​ ​t​i​m​e​s​t​a​m​p​s​,​ ​a​n​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​s​e​t​t​i​n​g​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_messages: {
+					/**
+					 * L​i​s​t​ ​M​e​s​s​a​g​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​c​e​i​v​e​ ​m​e​s​s​a​g​e​s​ ​f​r​o​m​ ​a​n​ ​S​Q​S​ ​q​u​e​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​m​e​s​s​a​g​e​s​ ​f​r​o​m​ ​a​n​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​w​i​t​h​ ​c​o​n​f​i​g​u​r​a​b​l​e​ ​p​o​l​l​i​n​g​ ​o​p​t​i​o​n​s​ ​a​n​d​ ​m​e​s​s​a​g​e​ ​a​t​t​r​i​b​u​t​e​ ​r​e​t​r​i​e​v​a​l​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​r​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​h​o​s​t​e​d​.
+							 */
+							longDesc: string
+						}
+						queue_url: {
+							/**
+							 * Q​u​e​u​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​t​o​ ​r​e​a​d​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​l​e​t​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​r​e​c​e​i​v​e​ ​m​e​s​s​a​g​e​s​.
+							 */
+							longDesc: string
+						}
+						max_number_of_messages: {
+							/**
+							 * M​a​x​ ​N​u​m​b​e​r​ ​o​f​ ​M​e​s​s​a​g​e​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​c​e​i​v​e​ ​(​1​-​1​0​)
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​ ​(​1​-​1​0​)​.
+							 */
+							longDesc: string
+						}
+						wait_time_seconds: {
+							/**
+							 * W​a​i​t​ ​T​i​m​e​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * L​o​n​g​ ​p​o​l​l​i​n​g​ ​w​a​i​t​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​u​r​a​t​i​o​n​ ​(​0​-​2​0​ ​s​e​c​o​n​d​s​)​ ​f​o​r​ ​w​h​i​c​h​ ​t​h​e​ ​c​a​l​l​ ​w​a​i​t​s​ ​f​o​r​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​a​r​r​i​v​e​.
+							 */
+							longDesc: string
+						}
+						visibility_timeout: {
+							/**
+							 * V​i​s​i​b​i​l​i​t​y​ ​T​i​m​e​o​u​t​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * O​v​e​r​r​i​d​e​ ​t​h​e​ ​q​u​e​u​e​ ​d​e​f​a​u​l​t​ ​v​i​s​i​b​i​l​i​t​y​ ​t​i​m​e​o​u​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​u​r​a​t​i​o​n​ ​f​o​r​ ​w​h​i​c​h​ ​r​e​c​e​i​v​e​d​ ​m​e​s​s​a​g​e​s​ ​a​r​e​ ​h​i​d​d​e​n​ ​f​r​o​m​ ​s​u​b​s​e​q​u​e​n​t​ ​r​e​t​r​i​e​v​e​ ​r​e​q​u​e​s​t​s​.
+							 */
+							longDesc: string
+						}
+						message_attribute_names: {
+							/**
+							 * M​e​s​s​a​g​e​ ​A​t​t​r​i​b​u​t​e​ ​N​a​m​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​m​e​s​s​a​g​e​ ​a​t​t​r​i​b​u​t​e​ ​n​a​m​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​s​ ​o​f​ ​m​e​s​s​a​g​e​ ​a​t​t​r​i​b​u​t​e​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​U​s​e​ ​"​A​l​l​"​ ​t​o​ ​r​e​t​u​r​n​ ​a​l​l​ ​a​t​t​r​i​b​u​t​e​s​.
+							 */
+							longDesc: string
+						}
+						attribute_names: {
+							/**
+							 * A​t​t​r​i​b​u​t​e​ ​N​a​m​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​m​e​s​s​a​g​e​ ​s​y​s​t​e​m​ ​a​t​t​r​i​b​u​t​e​ ​n​a​m​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​s​ ​o​f​ ​s​y​s​t​e​m​ ​a​t​t​r​i​b​u​t​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​w​i​t​h​ ​e​a​c​h​ ​m​e​s​s​a​g​e​.​ ​U​s​e​ ​"​A​l​l​"​ ​t​o​ ​r​e​t​u​r​n​ ​a​l​l​ ​a​t​t​r​i​b​u​t​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_queue: {
+					/**
+					 * G​e​t​ ​Q​u​e​u​e
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​S​Q​S​ ​q​u​e​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​n​d​ ​a​t​t​r​i​b​u​t​e​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​i​n​c​l​u​d​i​n​g​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​,​ ​m​e​s​s​a​g​e​ ​c​o​u​n​t​s​,​ ​a​n​d​ ​t​i​m​e​s​t​a​m​p​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​r​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​h​o​s​t​e​d​.
+							 */
+							longDesc: string
+						}
+						queue_url: {
+							/**
+							 * Q​u​e​u​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​t​o​ ​i​n​s​p​e​c​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​l​e​t​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​.
+							 */
+							longDesc: string
+						}
+						attribute_names: {
+							/**
+							 * A​t​t​r​i​b​u​t​e​ ​N​a​m​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​q​u​e​u​e​ ​a​t​t​r​i​b​u​t​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​s​ ​o​f​ ​q​u​e​u​e​ ​a​t​t​r​i​b​u​t​e​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​U​s​e​ ​"​A​l​l​"​ ​t​o​ ​r​e​t​u​r​n​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​a​t​t​r​i​b​u​t​e​s​.
+							 */
+							longDesc: string
+						}
+					}
 				}
 			}
 		}
@@ -71745,7 +74971,7 @@ export type TranslationFunctions = {
 		}
 		AmazonEC2: {
 			/**
-			 * Amazon EC2
+			 * AWS EC2
 			 */
 			displayName: () => LocalizedString
 			/**
@@ -72111,6 +75337,2384 @@ export type TranslationFunctions = {
 				}
 			}
 		}
+		AmazonS3: {
+			/**
+			 * AWS S3
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Seamlessly connect to Amazon S3 to manage buckets, upload files, and automate your cloud storage workflows.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Amazon S3 integration provides comprehensive actions and triggers to interact with Amazon Simple Storage Service. Whether you need to manage buckets, upload and download files, or monitor changes to your S3 objects, this integration simplifies your cloud storage automation and file management workflows.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_bucket: {
+					/**
+					 * New Bucket
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new S3 bucket is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors for newly created S3 buckets and triggers when a bucket is detected. Useful for tracking bucket creation events and implementing automated governance policies.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region to monitor for new buckets
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the S3 client will be configured to monitor for new bucket creation events.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_or_updated_file: {
+					/**
+					 * New or Updated File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when files are created or modified in an S3 bucket
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors an S3 bucket for new or updated files and triggers when changes are detected. Supports prefix filtering to monitor specific directories or file patterns.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the bucket is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the S3 bucket is located for monitoring file changes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket_name: {
+							/**
+							 * Bucket Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 bucket to monitor for file changes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the S3 bucket to monitor for new or updated files.
+							 */
+							longDesc: () => LocalizedString
+						}
+						prefix: {
+							/**
+							 * Prefix Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional prefix to filter objects (e.g., "uploads/")
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional prefix to limit monitoring to objects with specific key prefixes, useful for monitoring specific directories or file patterns.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				create_bucket: {
+					/**
+					 * Create Bucket
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new S3 bucket
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new S3 bucket with configurable access control and object lock settings. Bucket names must be globally unique and follow AWS naming conventions.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						bucket_name: {
+							/**
+							 * Bucket Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the new bucket (must be globally unique)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name for the new S3 bucket. Must be globally unique across all AWS accounts and follow S3 naming conventions (lowercase letters, numbers, hyphens only).
+							 */
+							longDesc: () => LocalizedString
+						}
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the bucket will be created
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the S3 bucket will be created. Affects latency and data residency.
+							 */
+							longDesc: () => LocalizedString
+						}
+						acl: {
+							/**
+							 * Access Control List (ACL)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Access permissions for the bucket
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Predefined access control list that defines who can access the bucket and what permissions they have.
+							 */
+							longDesc: () => LocalizedString
+						}
+						object_lock_enabled: {
+							/**
+							 * Object Lock Enabled
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable object lock for compliance and data retention
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enables S3 Object Lock to prevent object deletion or modification for compliance and data retention requirements.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_text_object: {
+					/**
+					 * Create Text Object
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload text content directly to S3
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates an S3 object with text content, supporting various text formats and content types. Useful for uploading configuration files, logs, or document content.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the bucket is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the target S3 bucket is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket_name: {
+							/**
+							 * Bucket Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target S3 bucket for the text object
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the S3 bucket where the text object will be created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						object_key: {
+							/**
+							 * Object Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 object key (file path) for the text content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The S3 object key that serves as the unique identifier and path for the text object within the bucket.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content: {
+							/**
+							 * Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text content to upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content that will be uploaded to S3 as the object body.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * MIME type for the text content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The MIME type that describes the format of the text content being uploaded.
+							 */
+							longDesc: () => LocalizedString
+						}
+						storage_class: {
+							/**
+							 * Storage Class
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 storage class for cost optimization
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The S3 storage class that determines the storage costs and retrieval characteristics of the object.
+							 */
+							longDesc: () => LocalizedString
+						}
+						metadata: {
+							/**
+							 * Metadata
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom metadata key-value pairs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom metadata as key-value pairs that will be stored with the object for additional context or application use.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Object tags for organization and cost tracking
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Key-value pairs used for object organization, cost allocation, and lifecycle management.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				upload_file: {
+					/**
+					 * Upload File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload a file to S3
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Uploads a file to S3 with support for custom object keys, storage classes, metadata, and tagging. Handles binary files through base64 encoding.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the bucket is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the target S3 bucket is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket_name: {
+							/**
+							 * Bucket Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target S3 bucket for the file upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the S3 bucket where the file will be uploaded.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file: {
+							/**
+							 * File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * File to upload to S3
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The file to be uploaded to S3, including its content, filename, and MIME type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						object_key: {
+							/**
+							 * Object Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom S3 object key (optional, uses filename if not provided)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional custom S3 object key for the uploaded file. If not provided, the original filename will be used.
+							 */
+							longDesc: () => LocalizedString
+						}
+						storage_class: {
+							/**
+							 * Storage Class
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 storage class for cost optimization
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The S3 storage class that determines the storage costs and retrieval characteristics of the uploaded file.
+							 */
+							longDesc: () => LocalizedString
+						}
+						metadata: {
+							/**
+							 * Metadata
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom metadata key-value pairs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom metadata as key-value pairs that will be stored with the uploaded file.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * File tags for organization and cost tracking
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Key-value pairs used for file organization, cost allocation, and lifecycle management.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_object: {
+					/**
+					 * Get Object
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve S3 object with detailed metadata
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves an S3 object with comprehensive metadata including size, modification dates, storage class, and custom metadata. Optionally includes object content.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the bucket is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the source S3 bucket is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket_name: {
+							/**
+							 * Bucket Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Source S3 bucket containing the object
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the S3 bucket containing the object to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+						object_key: {
+							/**
+							 * Object Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 object key to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The S3 object key that uniquely identifies the object to retrieve within the bucket.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_content: {
+							/**
+							 * Include Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to include the object content in the response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, includes the actual object content in the response. Disable for metadata-only retrieval to improve performance.
+							 */
+							longDesc: () => LocalizedString
+						}
+						version_id: {
+							/**
+							 * Version ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific version of the object to retrieve (for versioned buckets)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional version ID to retrieve a specific version of the object from a versioned S3 bucket.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_file: {
+					/**
+					 * Get File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Download file from S3
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Downloads a file from S3 and returns it in standard file format for direct use. Simpler alternative to Get Object when only the file content is needed.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the bucket is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the source S3 bucket is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket_name: {
+							/**
+							 * Bucket Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Source S3 bucket containing the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the S3 bucket containing the file to download.
+							 */
+							longDesc: () => LocalizedString
+						}
+						object_key: {
+							/**
+							 * Object Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 object key of the file to download
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The S3 object key that uniquely identifies the file to download within the bucket.
+							 */
+							longDesc: () => LocalizedString
+						}
+						version_id: {
+							/**
+							 * Version ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific version of the file to download (for versioned buckets)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional version ID to download a specific version of the file from a versioned S3 bucket.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_objects: {
+					/**
+					 * List Objects
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all objects in an S3 bucket
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Lists all objects in an S3 bucket including files and directories with support for pagination, prefixes, and delimiters for hierarchical navigation.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the bucket is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the target S3 bucket is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket_name: {
+							/**
+							 * Bucket Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 bucket to list objects from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the S3 bucket from which to list objects.
+							 */
+							longDesc: () => LocalizedString
+						}
+						prefix: {
+							/**
+							 * Prefix Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional prefix to filter objects
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional prefix to limit results to objects with keys that start with this prefix.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_keys: {
+							/**
+							 * Max Keys
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of objects to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of objects to return in a single request. Use with continuation tokens for pagination.
+							 */
+							longDesc: () => LocalizedString
+						}
+						continuation_token: {
+							/**
+							 * Continuation Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Continuation token from a previous request to retrieve the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						delimiter: {
+							/**
+							 * Delimiter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Delimiter for hierarchical listing (e.g., "/")
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Character used to group objects into a hierarchy. Common prefixes will be returned separately.
+							 */
+							longDesc: () => LocalizedString
+						}
+						start_after: {
+							/**
+							 * Start After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Object key to start listing after
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Start listing objects lexicographically after this key.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_files: {
+					/**
+					 * List Files
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List files in an S3 bucket (excludes directories)
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Lists only actual files in an S3 bucket, excluding directories and common prefixes. Supports file extension filtering and provides file-specific statistics.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the bucket is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the target S3 bucket is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket_name: {
+							/**
+							 * Bucket Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 bucket to list files from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the S3 bucket from which to list files.
+							 */
+							longDesc: () => LocalizedString
+						}
+						prefix: {
+							/**
+							 * Prefix Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional prefix to filter files
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional prefix to limit results to files with keys that start with this prefix.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_keys: {
+							/**
+							 * Max Keys
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of files to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of files to return in a single request.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_extensions: {
+							/**
+							 * File Extensions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by specific file extensions (e.g., ["pdf", "jpg"])
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional list of file extensions to filter results. Only files with matching extensions will be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+						continuation_token: {
+							/**
+							 * Continuation Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Continuation token from a previous request to retrieve the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_object: {
+					/**
+					 * Delete Object
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete an object from S3
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Deletes an object from S3 with support for versioned objects and governance retention bypass. Use with caution as deletions may be permanent.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the bucket is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the target S3 bucket is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket_name: {
+							/**
+							 * Bucket Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 bucket containing the object to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the S3 bucket containing the object to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+						object_key: {
+							/**
+							 * Object Key
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * S3 object key to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The S3 object key that uniquely identifies the object to delete within the bucket.
+							 */
+							longDesc: () => LocalizedString
+						}
+						version_id: {
+							/**
+							 * Version ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific version to delete (for versioned buckets)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional version ID to delete a specific version of the object from a versioned S3 bucket.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bypass_governance_retention: {
+							/**
+							 * Bypass Governance Retention
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Bypass governance-mode object lock retention
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, bypasses governance-mode Object Lock retention. Requires appropriate permissions.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_buckets: {
+					/**
+					 * List Buckets
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all S3 buckets in the account
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Lists all S3 buckets in the AWS account with creation dates and regions. Optionally includes detailed location information for each bucket.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region for the S3 client
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the S3 client will be configured for listing buckets.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_location: {
+							/**
+							 * Include Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to fetch the actual region for each bucket
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, fetches the actual AWS region for each bucket. Disable for faster responses when region information is not needed.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		AmazonLambda: {
+			/**
+			 * AWS Lambda
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Serverless compute service that runs code without provisioning or managing servers.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Amazon Lambda is a serverless compute service that lets you run code without provisioning or managing servers. This integration provides comprehensive actions and triggers to manage Lambda functions, layers, and invocations. You can list functions, invoke them, manage layers, and monitor new function and layer version creation.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				list_functions: {
+					/**
+					 * List Functions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of Lambda functions in your AWS account.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns a paginated list of Lambda functions in a specified region. You can optionally filter by function version, master region, and control pagination with max items and markers.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where Lambda functions are located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region to list Lambda functions from. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						function_version: {
+							/**
+							 * Function Version
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Version of functions to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to ALL to include all published versions of each function, or leave empty for latest versions only.
+							 */
+							longDesc: () => LocalizedString
+						}
+						master_region: {
+							/**
+							 * Master Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter functions by master region for Lambda@Edge
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * For Lambda@Edge functions, specify the master region to filter results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_items: {
+							/**
+							 * Maximum Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of functions to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Limit the number of functions returned in a single request.
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_marker: {
+							/**
+							 * Next Marker
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination marker for retrieving additional results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use the marker from a previous response to retrieve the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_function: {
+					/**
+					 * Get Function
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific Lambda function.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns comprehensive information about a Lambda function including configuration, code details, tags, and concurrency settings. Useful for inspecting function properties and current state.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the function is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region where the Lambda function resides. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						function_name: {
+							/**
+							 * Function Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name or ARN of the Lambda function
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name, ARN, or partial ARN of the Lambda function to retrieve information for.
+							 */
+							longDesc: () => LocalizedString
+						}
+						qualifier: {
+							/**
+							 * Qualifier
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Function version or alias
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify a version number, alias name, or $LATEST to get information for a specific version of the function.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				invoke_function: {
+					/**
+					 * Invoke Function
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Execute a Lambda function with custom payload.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Invokes a Lambda function synchronously or asynchronously with a custom JSON payload. You can specify invocation type, logging preferences, and function version.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the function is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region where the Lambda function resides. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						function_name: {
+							/**
+							 * Function Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name or ARN of the Lambda function to invoke
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name, ARN, or partial ARN of the Lambda function to invoke.
+							 */
+							longDesc: () => LocalizedString
+						}
+						invocation_type: {
+							/**
+							 * Invocation Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to invoke the function
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * RequestResponse for synchronous execution, Event for asynchronous execution, or DryRun to validate parameters without invoking.
+							 */
+							longDesc: () => LocalizedString
+						}
+						log_type: {
+							/**
+							 * Log Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include execution logs in response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to Tail to include the last 4KB of execution logs in the response, or None to exclude logs.
+							 */
+							longDesc: () => LocalizedString
+						}
+						payload: {
+							/**
+							 * Payload
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * JSON payload to send to the function
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * JSON string containing the data to pass to your Lambda function. Must be valid JSON format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						qualifier: {
+							/**
+							 * Qualifier
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Function version or alias to invoke
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify a version number, alias name, or $LATEST to invoke a specific version of the function.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_layers: {
+					/**
+					 * List Layers
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of Lambda layers in your AWS account.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns a paginated list of Lambda layers in a specified region. You can filter by compatible runtime and control pagination with max items and markers.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where Lambda layers are located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region to list Lambda layers from. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						compatible_runtime: {
+							/**
+							 * Compatible Runtime
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter layers by compatible runtime
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Return only layers that are compatible with the specified runtime environment.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_items: {
+							/**
+							 * Maximum Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of layers to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Limit the number of layers returned in a single request.
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_marker: {
+							/**
+							 * Next Marker
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination marker for retrieving additional results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use the marker from a previous response to retrieve the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_layer_versions: {
+					/**
+					 * List Layer Versions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve versions of a specific Lambda layer.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns a paginated list of versions for a specific Lambda layer. You can filter by compatible runtime and control pagination.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the layer is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region where the Lambda layer resides. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						layer_name: {
+							/**
+							 * Layer Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name or ARN of the Lambda layer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name or ARN of the Lambda layer to list versions for.
+							 */
+							longDesc: () => LocalizedString
+						}
+						compatible_runtime: {
+							/**
+							 * Compatible Runtime
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter versions by compatible runtime
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Return only layer versions that are compatible with the specified runtime environment.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_items: {
+							/**
+							 * Maximum Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of versions to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Limit the number of layer versions returned in a single request.
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_marker: {
+							/**
+							 * Next Marker
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination marker for retrieving additional results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use the marker from a previous response to retrieve the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_layer_version: {
+					/**
+					 * Get Layer Version
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific layer version.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns comprehensive information about a specific version of a Lambda layer including content details, compatible runtimes, and metadata.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region where the layer is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region where the Lambda layer resides. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						layer_name: {
+							/**
+							 * Layer Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name or ARN of the Lambda layer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name or ARN of the Lambda layer to retrieve version information for.
+							 */
+							longDesc: () => LocalizedString
+						}
+						version_number: {
+							/**
+							 * Version Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific version number of the layer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The version number of the layer to retrieve detailed information for.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_function: {
+					/**
+					 * New Function
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new Lambda function is created.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your AWS account for newly created Lambda functions in a specified region. This trigger fires when a new function is detected, providing comprehensive function details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region to monitor for new functions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region to monitor for new Lambda function creation. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_layer_version: {
+					/**
+					 * New Layer Version
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new Lambda layer version is published.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your AWS account for newly published Lambda layer versions in a specified region. This trigger fires when a new layer version is detected, providing layer version details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region to monitor for new layer versions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region to monitor for new Lambda layer version creation. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		AmazonCloudFront: {
+			/**
+			 * CloudFront
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Amazon CloudFront to manage CDN distributions, cache invalidations, and content delivery.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Amazon CloudFront integration provides comprehensive actions and triggers to manage your content delivery network (CDN) distributions. Monitor new distributions and invalidations, enable or disable distributions, create cache invalidations, and retrieve detailed distribution configurations. Perfect for automating CDN management, cache clearing workflows, and distribution monitoring in your AWS infrastructure.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_distribution: {
+					/**
+					 * New Distribution
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new CloudFront distribution is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger monitors for newly created CloudFront distributions in your AWS account. It will fire whenever a new distribution is detected, providing details about the distribution configuration and status.
+					 */
+					longDesc: () => LocalizedString
+				}
+				new_invalidation: {
+					/**
+					 * New Invalidation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new invalidation is created for a distribution
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger monitors for new cache invalidations created for a specific CloudFront distribution. It will fire whenever a new invalidation request is submitted, providing details about the invalidation status and affected paths.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						distribution_id: {
+							/**
+							 * Distribution ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The CloudFront distribution to monitor for invalidations
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific CloudFront distribution that you want to monitor for new invalidation requests. The trigger will only fire for invalidations created for this distribution.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				list_distributions: {
+					/**
+					 * List Distributions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of CloudFront distributions
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of all CloudFront distributions in your AWS account, including their status, domain names, and configuration details. You can control the number of results and use pagination for large sets of distributions.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						max_items: {
+							/**
+							 * Max Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of distributions to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of distributions to return in a single request. Default is 100. Use this to control pagination and response size.
+							 */
+							longDesc: () => LocalizedString
+						}
+						marker: {
+							/**
+							 * Marker
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination marker for continuing from previous request
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this marker to continue pagination from a previous list request. This value is returned in the next_marker field of previous responses when results are truncated.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_distribution: {
+					/**
+					 * Get Distribution
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific distribution
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive details about a specific CloudFront distribution, including its configuration, origins, cache behaviors, and current status. This provides complete information about how the distribution is configured.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						distribution_id: {
+							/**
+							 * Distribution ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the distribution to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific CloudFront distribution you want to get detailed information about. This will return the complete configuration and status of the distribution.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_distribution_status: {
+					/**
+					 * Update Distribution Status
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Enable or disable a CloudFront distribution
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the enabled/disabled status of a CloudFront distribution. When you disable a distribution, it stops serving content and you stop being charged for it. Enabling it again will resume content delivery.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						distribution_id: {
+							/**
+							 * Distribution ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the distribution to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the CloudFront distribution whose status you want to change. The distribution must exist and be in a state that allows status changes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						enabled: {
+							/**
+							 * Enable Distribution
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Set to true to enable the distribution, false to disable it
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether to enable or disable the distribution. Enabling allows the distribution to serve content, while disabling stops content delivery and billing. Status changes can take time to propagate.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				invalidate_item: {
+					/**
+					 * Invalidate Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create an invalidation request to clear cached content
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates an invalidation request to remove specific files from CloudFront edge caches. This forces CloudFront to fetch fresh content from the origin for the specified paths on the next request.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						distribution_id: {
+							/**
+							 * Distribution ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the distribution to invalidate content for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the CloudFront distribution where you want to invalidate cached content. The invalidation will apply to all edge locations for this distribution.
+							 */
+							longDesc: () => LocalizedString
+						}
+						paths: {
+							/**
+							 * Paths to Invalidate
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of file paths to invalidate from the cache
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the paths of files you want to invalidate from the CloudFront cache. Use /* to invalidate all files, or specify individual file paths like /images/logo.png. Paths should start with /.
+							 */
+							longDesc: () => LocalizedString
+						}
+						caller_reference: {
+							/**
+							 * Caller Reference
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Unique identifier for this invalidation request
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional unique identifier for this invalidation request. If not provided, a unique value will be generated automatically. This helps track and identify specific invalidation requests.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_invalidations: {
+					/**
+					 * List Invalidations
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of invalidations for a distribution
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of cache invalidation requests for a specific CloudFront distribution, showing their status and creation times. This helps you track the progress and history of invalidation requests.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						distribution_id: {
+							/**
+							 * Distribution ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the distribution to list invalidations for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the CloudFront distribution whose invalidation history you want to retrieve. This will show all invalidation requests made for this distribution.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_items: {
+							/**
+							 * Max Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of invalidations to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of invalidation records to return in a single request. Default is 100. Use this to control pagination and response size.
+							 */
+							longDesc: () => LocalizedString
+						}
+						marker: {
+							/**
+							 * Marker
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination marker for continuing from previous request
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this marker to continue pagination from a previous list request. This value is returned in the next_marker field of previous responses when results are truncated.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_invalidation: {
+					/**
+					 * Get Invalidation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details about a specific invalidation request
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information about a specific cache invalidation request, including its status, the paths being invalidated, and timing information. Use this to check the progress of an invalidation.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						distribution_id: {
+							/**
+							 * Distribution ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the distribution the invalidation belongs to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the CloudFront distribution that the invalidation request was created for. This is required to locate the specific invalidation.
+							 */
+							longDesc: () => LocalizedString
+						}
+						invalidation_id: {
+							/**
+							 * Invalidation ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the invalidation request to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific invalidation request you want to get details about. This will show the complete information about the invalidation including its current status and affected paths.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		AmazonSNS: {
+			/**
+			 * AWS SNS
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Send notifications and messages through Amazon Simple Notification Service.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Amazon SNS integration enables you to create topics, send messages, manage subscribers, and monitor notifications through Amazon Simple Notification Service. Perfect for building scalable messaging systems, sending alerts, and coordinating distributed applications with reliable message delivery.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_topic: {
+					/**
+					 * New Topic
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new SNS topic is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your Amazon SNS service for newly created topics and triggers when a new topic is detected in your specified region.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region to monitor for new topics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where you want to monitor for new SNS topics. If not specified, defaults to us-east-1.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				create_topic: {
+					/**
+					 * Create Topic
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new SNS topic
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new Amazon SNS topic with optional configuration for FIFO topics, encryption, and delivery policies.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						topic_name: {
+							/**
+							 * Topic Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the new topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name for the SNS topic. For FIFO topics, the name must end with .fifo suffix.
+							 */
+							longDesc: () => LocalizedString
+						}
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region for the topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the topic will be created. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						display_name: {
+							/**
+							 * Display Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Human-readable name for the topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A human-readable name for the topic that appears in email notifications and other contexts.
+							 */
+							longDesc: () => LocalizedString
+						}
+						delivery_policy: {
+							/**
+							 * Delivery Policy
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * JSON delivery policy for the topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A JSON string that defines the delivery policy for the topic, controlling retry behavior and delivery settings.
+							 */
+							longDesc: () => LocalizedString
+						}
+						policy: {
+							/**
+							 * Policy
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Access policy for the topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A JSON string that defines the access policy for the topic, controlling who can publish to or subscribe to the topic.
+							 */
+							longDesc: () => LocalizedString
+						}
+						kms_master_key_id: {
+							/**
+							 * KMS Master Key ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * KMS key for topic encryption
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of an AWS KMS key to use for encrypting messages published to this topic.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fifo_topic: {
+							/**
+							 * FIFO Topic
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Create as FIFO topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to create a FIFO (First-In-First-Out) topic that preserves message ordering and prevents duplicates.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_based_deduplication: {
+							/**
+							 * Content-Based Deduplication
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable content-based deduplication
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to enable content-based deduplication for FIFO topics, which prevents duplicate messages based on message content.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_message: {
+					/**
+					 * Create Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a message to an SNS topic
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Publishes a text message to an Amazon SNS topic, which will be delivered to all subscribers of the topic.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region of the topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the target topic is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						topic_arn: {
+							/**
+							 * Topic ARN
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ARN of the target topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Amazon Resource Name (ARN) of the SNS topic where the message will be published.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message: {
+							/**
+							 * Message
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Message content to send
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content of the message to be sent to all topic subscribers.
+							 */
+							longDesc: () => LocalizedString
+						}
+						subject: {
+							/**
+							 * Subject
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Message subject line
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional subject line for the message, used primarily for email notifications.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_attributes: {
+							/**
+							 * Message Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional message metadata
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A hash of additional attributes to include with the message for filtering and routing purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_deduplication_id: {
+							/**
+							 * Message Deduplication ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Deduplication ID for FIFO topics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A unique identifier for message deduplication in FIFO topics. Required for FIFO topics without content-based deduplication.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_group_id: {
+							/**
+							 * Message Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Group ID for FIFO topics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A tag that specifies that messages belong to a specific message group for FIFO topics. Required for FIFO topics.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_json_message: {
+					/**
+					 * Create JSON Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a structured JSON message to an SNS topic
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Publishes a JSON-structured message to an Amazon SNS topic, allowing for rich content and structured data delivery to subscribers.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region of the topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the target topic is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						topic_arn: {
+							/**
+							 * Topic ARN
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ARN of the target topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Amazon Resource Name (ARN) of the SNS topic where the JSON message will be published.
+							 */
+							longDesc: () => LocalizedString
+						}
+						json_message: {
+							/**
+							 * JSON Message
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * JSON object to send
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The JSON object containing the structured data to be sent to all topic subscribers.
+							 */
+							longDesc: () => LocalizedString
+						}
+						subject: {
+							/**
+							 * Subject
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Message subject line
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional subject line for the message, used primarily for email notifications.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_attributes: {
+							/**
+							 * Message Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional message metadata
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A hash of additional attributes to include with the message for filtering and routing purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_deduplication_id: {
+							/**
+							 * Message Deduplication ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Deduplication ID for FIFO topics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A unique identifier for message deduplication in FIFO topics. Required for FIFO topics without content-based deduplication.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_group_id: {
+							/**
+							 * Message Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Group ID for FIFO topics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A tag that specifies that messages belong to a specific message group for FIFO topics. Required for FIFO topics.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_topics: {
+					/**
+					 * List Topics
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all SNS topics
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of all Amazon SNS topics in the specified region, optionally including detailed attributes for each topic.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region to list topics from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region from which to retrieve the list of SNS topics.
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_attributes: {
+							/**
+							 * Include Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include detailed topic attributes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include detailed attributes for each topic, such as subscription counts and policies.
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_token: {
+							/**
+							 * Next Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination token
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A token for paginating through large lists of topics. Use the token returned from a previous call.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_topic: {
+					/**
+					 * Get Topic
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get details of a specific SNS topic
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves detailed information about a specific Amazon SNS topic, including attributes, subscription statistics, and configuration details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region of the topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the topic is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						topic_arn: {
+							/**
+							 * Topic ARN
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ARN of the topic to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Amazon Resource Name (ARN) of the SNS topic to get details for.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_subscriber: {
+					/**
+					 * Add Subscriber
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a subscriber to an SNS topic
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new subscription to an Amazon SNS topic, allowing the specified endpoint to receive messages published to the topic.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * AWS region of the topic
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The AWS region where the target topic is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						topic_arn: {
+							/**
+							 * Topic ARN
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ARN of the topic to subscribe to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Amazon Resource Name (ARN) of the SNS topic to create a subscription for.
+							 */
+							longDesc: () => LocalizedString
+						}
+						protocol: {
+							/**
+							 * Protocol
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Subscription protocol type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The protocol to use for delivering messages to the subscriber (HTTP, HTTPS, Email, SMS, SQS, Lambda, or Application).
+							 */
+							longDesc: () => LocalizedString
+						}
+						endpoint: {
+							/**
+							 * Endpoint
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Subscriber endpoint
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The endpoint that will receive the messages. Format depends on the protocol (URL for HTTP/HTTPS, email address for email, phone number for SMS, etc.).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
 		Claude: {
 			/**
 			 * Claude
@@ -72266,6 +77870,854 @@ export type TranslationFunctions = {
 					 * Get a list of all available Claude models.
 					 */
 					longDesc: () => LocalizedString
+				}
+			}
+		}
+		AmazonSQS: {
+			/**
+			 * AWS SQS
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Amazon Simple Queue Service to manage message queues and automate message processing workflows.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The AWS SQS integration provides comprehensive queue management and message handling capabilities for Amazon Simple Queue Service. Create and manage queues, send messages (including JSON), receive messages with polling triggers, and automate your message-driven architectures with reliable, scalable queue operations.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_message: {
+					/**
+					 * New Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new message is received in an SQS queue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors an Amazon SQS queue for new messages and triggers when messages are available. Supports long polling and message attributes retrieval.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region where the SQS queue is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where your SQS queue is hosted. This determines the endpoint used for API calls.
+							 */
+							longDesc: () => LocalizedString
+						}
+						queue_url: {
+							/**
+							 * Queue URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The URL of the SQS queue to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The complete URL of the Amazon SQS queue from which to receive messages.
+							 */
+							longDesc: () => LocalizedString
+						}
+						wait_time_seconds: {
+							/**
+							 * Wait Time (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Long polling wait time in seconds
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The duration (0-20 seconds) for which the call waits for a message to arrive in the queue before returning.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_messages: {
+							/**
+							 * Max Messages
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of messages to receive per poll
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of messages to return (1-10). Note that fewer messages might be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_json_message: {
+					/**
+					 * New JSON Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new JSON message is received in an SQS queue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors an Amazon SQS queue for new messages containing valid JSON data. Only triggers for messages with parseable JSON content.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region where the SQS queue is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where your SQS queue is hosted. This determines the endpoint used for API calls.
+							 */
+							longDesc: () => LocalizedString
+						}
+						queue_url: {
+							/**
+							 * Queue URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The URL of the SQS queue to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The complete URL of the Amazon SQS queue from which to receive JSON messages.
+							 */
+							longDesc: () => LocalizedString
+						}
+						wait_time_seconds: {
+							/**
+							 * Wait Time (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Long polling wait time in seconds
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The duration (0-20 seconds) for which the call waits for a message to arrive in the queue before returning.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_messages: {
+							/**
+							 * Max Messages
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of messages to receive per poll
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of messages to return (1-10). Note that fewer messages might be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_queue: {
+					/**
+					 * New Queue
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new SQS queue is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors for newly created Amazon SQS queues in the specified region and triggers when new queues are detected.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region to monitor for new queues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where you want to monitor for newly created SQS queues.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				create_message: {
+					/**
+					 * Create Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a text message to an SQS queue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a text message to an Amazon SQS queue with optional message attributes, delay settings, and FIFO queue parameters.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region where the SQS queue is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where your target SQS queue is hosted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						queue_url: {
+							/**
+							 * Queue URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The URL of the target SQS queue
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The complete URL of the Amazon SQS queue where the message will be sent.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_body: {
+							/**
+							 * Message Body
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The text content of the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The message content to send. Can be plain text or any string format up to 256 KB.
+							 */
+							longDesc: () => LocalizedString
+						}
+						delay_seconds: {
+							/**
+							 * Delay (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of seconds to delay message delivery
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The length of time (0-900 seconds) for which to delay delivery of the message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_attributes: {
+							/**
+							 * Message Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional metadata for the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom attributes to include with the message for filtering and processing.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_group_id: {
+							/**
+							 * Message Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Group ID for FIFO queues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The tag that specifies that a message belongs to a specific message group (FIFO queues only).
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_deduplication_id: {
+							/**
+							 * Message Deduplication ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Deduplication ID for FIFO queues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The token used for deduplication of sent messages (FIFO queues only).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_json_message: {
+					/**
+					 * Create JSON Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a JSON message to an SQS queue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send structured JSON data to an Amazon SQS queue. The JSON object will be automatically serialized into the message body.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region where the SQS queue is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where your target SQS queue is hosted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						queue_url: {
+							/**
+							 * Queue URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The URL of the target SQS queue
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The complete URL of the Amazon SQS queue where the JSON message will be sent.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_data: {
+							/**
+							 * Message Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The JSON object to send
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The structured data object that will be serialized to JSON and sent as the message body.
+							 */
+							longDesc: () => LocalizedString
+						}
+						delay_seconds: {
+							/**
+							 * Delay (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of seconds to delay message delivery
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The length of time (0-900 seconds) for which to delay delivery of the message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_attributes: {
+							/**
+							 * Message Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional metadata for the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom attributes to include with the message for filtering and processing.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_group_id: {
+							/**
+							 * Message Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Group ID for FIFO queues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The tag that specifies that a message belongs to a specific message group (FIFO queues only).
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_deduplication_id: {
+							/**
+							 * Message Deduplication ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Deduplication ID for FIFO queues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The token used for deduplication of sent messages (FIFO queues only).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_queue: {
+					/**
+					 * Create Queue
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new SQS queue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new Amazon SQS queue with configurable settings including FIFO capabilities, dead letter queues, and encryption options.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region where the queue will be created
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where you want to create the new SQS queue.
+							 */
+							longDesc: () => LocalizedString
+						}
+						queue_name: {
+							/**
+							 * Queue Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the new queue
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name for the queue. FIFO queue names must end with .fifo suffix.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fifo_queue: {
+							/**
+							 * FIFO Queue
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Create as a FIFO (First-In-First-Out) queue
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to create a FIFO queue that ensures messages are processed exactly once in the exact order sent.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_based_deduplication: {
+							/**
+							 * Content-Based Deduplication
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable automatic deduplication based on message content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * For FIFO queues, enables deduplication using a SHA-256 hash of the message body.
+							 */
+							longDesc: () => LocalizedString
+						}
+						visibility_timeout: {
+							/**
+							 * Visibility Timeout (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Time a message is invisible after being received
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The length of time (0-43200 seconds) that a message is invisible to other consumers after being received.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_retention_period: {
+							/**
+							 * Message Retention Period (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How long messages are retained in the queue
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The length of time (60-1209600 seconds) that messages are retained in the queue.
+							 */
+							longDesc: () => LocalizedString
+						}
+						delay_seconds: {
+							/**
+							 * Delay (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Default delay for new messages
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The default delay (0-900 seconds) for messages added to this queue.
+							 */
+							longDesc: () => LocalizedString
+						}
+						receive_message_wait_time_seconds: {
+							/**
+							 * Receive Wait Time (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Long polling wait time for receive operations
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The time (0-20 seconds) for which ReceiveMessage calls wait for messages to arrive.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_receive_count: {
+							/**
+							 * Max Receive Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum receives before moving to dead letter queue
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of times a message can be received before being moved to the dead letter queue.
+							 */
+							longDesc: () => LocalizedString
+						}
+						dead_letter_queue_url: {
+							/**
+							 * Dead Letter Queue URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * URL of the dead letter queue
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The URL of the queue to use as a dead letter queue for failed message processing.
+							 */
+							longDesc: () => LocalizedString
+						}
+						kms_master_key_id: {
+							/**
+							 * KMS Master Key ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * KMS key for server-side encryption
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of an AWS KMS key for server-side encryption of queue messages.
+							 */
+							longDesc: () => LocalizedString
+						}
+						kms_data_key_reuse_period_seconds: {
+							/**
+							 * KMS Data Key Reuse Period (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How long to reuse KMS data keys
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The length of time (60-86400 seconds) for which Amazon SQS can reuse a data key.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_queues: {
+					/**
+					 * List Queues
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all SQS queues in a region
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all Amazon SQS queues in the specified region with optional filtering and detailed queue attributes.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region to list queues from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region from which to retrieve the list of SQS queues.
+							 */
+							longDesc: () => LocalizedString
+						}
+						queue_name_prefix: {
+							/**
+							 * Queue Name Prefix
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter queues by name prefix
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional prefix to filter queue names. Only queues with names starting with this prefix will be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_results: {
+							/**
+							 * Max Results
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of queues to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of queue results to return (1-1000).
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_attributes: {
+							/**
+							 * Include Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include detailed queue attributes in the response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include detailed queue attributes like message counts, timestamps, and configuration settings.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_messages: {
+					/**
+					 * List Messages
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Receive messages from an SQS queue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve messages from an Amazon SQS queue with configurable polling options and message attribute retrieval.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region where the SQS queue is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where your SQS queue is hosted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						queue_url: {
+							/**
+							 * Queue URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The URL of the SQS queue to read from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The complete URL of the Amazon SQS queue from which to receive messages.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_number_of_messages: {
+							/**
+							 * Max Number of Messages
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum messages to receive (1-10)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of messages to return in a single request (1-10).
+							 */
+							longDesc: () => LocalizedString
+						}
+						wait_time_seconds: {
+							/**
+							 * Wait Time (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Long polling wait time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The duration (0-20 seconds) for which the call waits for messages to arrive.
+							 */
+							longDesc: () => LocalizedString
+						}
+						visibility_timeout: {
+							/**
+							 * Visibility Timeout (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Override the queue default visibility timeout
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The duration for which received messages are hidden from subsequent retrieve requests.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_attribute_names: {
+							/**
+							 * Message Attribute Names
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of message attribute names to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The names of message attributes to return. Use "All" to return all attributes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attribute_names: {
+							/**
+							 * Attribute Names
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of message system attribute names to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The names of system attributes to return with each message. Use "All" to return all attributes.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_queue: {
+					/**
+					 * Get Queue
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get details about a specific SQS queue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information and attributes for a specific Amazon SQS queue including configuration, message counts, and timestamps.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region where the SQS queue is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where your SQS queue is hosted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						queue_url: {
+							/**
+							 * Queue URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The URL of the SQS queue to inspect
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The complete URL of the Amazon SQS queue to retrieve information about.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attribute_names: {
+							/**
+							 * Attribute Names
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of queue attributes to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The names of queue attributes to return. Use "All" to return all available attributes.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 			}
 		}

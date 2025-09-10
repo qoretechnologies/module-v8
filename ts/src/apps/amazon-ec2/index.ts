@@ -2,9 +2,10 @@ import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
+import { AMAZON_EC2_APP_LOGO, AMAZON_EC2_APP_NAME } from './constants';
+
 import * as AMAZON_EC2_ACTIONS from './actions';
 import * as AMAZON_EC2_TRIGGERS from './triggers';
-import { AMAZON_EC2_APP_LOGO, AMAZON_EC2_APP_NAME } from './constants';
 
 export default (locale: Locales) =>
   ({
