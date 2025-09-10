@@ -8166,6 +8166,854 @@ type RootTranslation = {
 				}
 			}
 		}
+		AmazonSQS: {
+			/**
+			 * A​W​S​ ​S​Q​S
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​S​i​m​p​l​e​ ​Q​u​e​u​e​ ​S​e​r​v​i​c​e​ ​t​o​ ​m​a​n​a​g​e​ ​m​e​s​s​a​g​e​ ​q​u​e​u​e​s​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​m​e​s​s​a​g​e​ ​p​r​o​c​e​s​s​i​n​g​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​A​W​S​ ​S​Q​S​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​q​u​e​u​e​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​m​e​s​s​a​g​e​ ​h​a​n​d​l​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​f​o​r​ ​A​m​a​z​o​n​ ​S​i​m​p​l​e​ ​Q​u​e​u​e​ ​S​e​r​v​i​c​e​.​ ​C​r​e​a​t​e​ ​a​n​d​ ​m​a​n​a​g​e​ ​q​u​e​u​e​s​,​ ​s​e​n​d​ ​m​e​s​s​a​g​e​s​ ​(​i​n​c​l​u​d​i​n​g​ ​J​S​O​N​)​,​ ​r​e​c​e​i​v​e​ ​m​e​s​s​a​g​e​s​ ​w​i​t​h​ ​p​o​l​l​i​n​g​ ​t​r​i​g​g​e​r​s​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​y​o​u​r​ ​m​e​s​s​a​g​e​-​d​r​i​v​e​n​ ​a​r​c​h​i​t​e​c​t​u​r​e​s​ ​w​i​t​h​ ​r​e​l​i​a​b​l​e​,​ ​s​c​a​l​a​b​l​e​ ​q​u​e​u​e​ ​o​p​e​r​a​t​i​o​n​s​.
+			 */
+			longDesc: string
+			triggers: {
+				new_message: {
+					/**
+					 * N​e​w​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​i​s​ ​r​e​c​e​i​v​e​d​ ​i​n​ ​a​n​ ​S​Q​S​ ​q​u​e​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​n​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​f​o​r​ ​n​e​w​ ​m​e​s​s​a​g​e​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​m​e​s​s​a​g​e​s​ ​a​r​e​ ​a​v​a​i​l​a​b​l​e​.​ ​S​u​p​p​o​r​t​s​ ​l​o​n​g​ ​p​o​l​l​i​n​g​ ​a​n​d​ ​m​e​s​s​a​g​e​ ​a​t​t​r​i​b​u​t​e​s​ ​r​e​t​r​i​e​v​a​l​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​r​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​h​o​s​t​e​d​.​ ​T​h​i​s​ ​d​e​t​e​r​m​i​n​e​s​ ​t​h​e​ ​e​n​d​p​o​i​n​t​ ​u​s​e​d​ ​f​o​r​ ​A​P​I​ ​c​a​l​l​s​.
+							 */
+							longDesc: string
+						}
+						queue_url: {
+							/**
+							 * Q​u​e​u​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​l​e​t​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​r​e​c​e​i​v​e​ ​m​e​s​s​a​g​e​s​.
+							 */
+							longDesc: string
+						}
+						wait_time_seconds: {
+							/**
+							 * W​a​i​t​ ​T​i​m​e​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * L​o​n​g​ ​p​o​l​l​i​n​g​ ​w​a​i​t​ ​t​i​m​e​ ​i​n​ ​s​e​c​o​n​d​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​u​r​a​t​i​o​n​ ​(​0​-​2​0​ ​s​e​c​o​n​d​s​)​ ​f​o​r​ ​w​h​i​c​h​ ​t​h​e​ ​c​a​l​l​ ​w​a​i​t​s​ ​f​o​r​ ​a​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​r​r​i​v​e​ ​i​n​ ​t​h​e​ ​q​u​e​u​e​ ​b​e​f​o​r​e​ ​r​e​t​u​r​n​i​n​g​.
+							 */
+							longDesc: string
+						}
+						max_messages: {
+							/**
+							 * M​a​x​ ​M​e​s​s​a​g​e​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​c​e​i​v​e​ ​p​e​r​ ​p​o​l​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​(​1​-​1​0​)​.​ ​N​o​t​e​ ​t​h​a​t​ ​f​e​w​e​r​ ​m​e​s​s​a​g​e​s​ ​m​i​g​h​t​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_json_message: {
+					/**
+					 * N​e​w​ ​J​S​O​N​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​J​S​O​N​ ​m​e​s​s​a​g​e​ ​i​s​ ​r​e​c​e​i​v​e​d​ ​i​n​ ​a​n​ ​S​Q​S​ ​q​u​e​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​n​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​f​o​r​ ​n​e​w​ ​m​e​s​s​a​g​e​s​ ​c​o​n​t​a​i​n​i​n​g​ ​v​a​l​i​d​ ​J​S​O​N​ ​d​a​t​a​.​ ​O​n​l​y​ ​t​r​i​g​g​e​r​s​ ​f​o​r​ ​m​e​s​s​a​g​e​s​ ​w​i​t​h​ ​p​a​r​s​e​a​b​l​e​ ​J​S​O​N​ ​c​o​n​t​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​r​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​h​o​s​t​e​d​.​ ​T​h​i​s​ ​d​e​t​e​r​m​i​n​e​s​ ​t​h​e​ ​e​n​d​p​o​i​n​t​ ​u​s​e​d​ ​f​o​r​ ​A​P​I​ ​c​a​l​l​s​.
+							 */
+							longDesc: string
+						}
+						queue_url: {
+							/**
+							 * Q​u​e​u​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​l​e​t​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​r​e​c​e​i​v​e​ ​J​S​O​N​ ​m​e​s​s​a​g​e​s​.
+							 */
+							longDesc: string
+						}
+						wait_time_seconds: {
+							/**
+							 * W​a​i​t​ ​T​i​m​e​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * L​o​n​g​ ​p​o​l​l​i​n​g​ ​w​a​i​t​ ​t​i​m​e​ ​i​n​ ​s​e​c​o​n​d​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​u​r​a​t​i​o​n​ ​(​0​-​2​0​ ​s​e​c​o​n​d​s​)​ ​f​o​r​ ​w​h​i​c​h​ ​t​h​e​ ​c​a​l​l​ ​w​a​i​t​s​ ​f​o​r​ ​a​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​r​r​i​v​e​ ​i​n​ ​t​h​e​ ​q​u​e​u​e​ ​b​e​f​o​r​e​ ​r​e​t​u​r​n​i​n​g​.
+							 */
+							longDesc: string
+						}
+						max_messages: {
+							/**
+							 * M​a​x​ ​M​e​s​s​a​g​e​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​c​e​i​v​e​ ​p​e​r​ ​p​o​l​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​(​1​-​1​0​)​.​ ​N​o​t​e​ ​t​h​a​t​ ​f​e​w​e​r​ ​m​e​s​s​a​g​e​s​ ​m​i​g​h​t​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_queue: {
+					/**
+					 * N​e​w​ ​Q​u​e​u​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​s​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​e​g​i​o​n​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​q​u​e​u​e​s​ ​a​r​e​ ​d​e​t​e​c​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​q​u​e​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​S​Q​S​ ​q​u​e​u​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				create_message: {
+					/**
+					 * C​r​e​a​t​e​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​t​e​x​t​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​n​ ​S​Q​S​ ​q​u​e​u​e
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​t​e​x​t​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​n​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​m​e​s​s​a​g​e​ ​a​t​t​r​i​b​u​t​e​s​,​ ​d​e​l​a​y​ ​s​e​t​t​i​n​g​s​,​ ​a​n​d​ ​F​I​F​O​ ​q​u​e​u​e​ ​p​a​r​a​m​e​t​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​r​ ​t​a​r​g​e​t​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​h​o​s​t​e​d​.
+							 */
+							longDesc: string
+						}
+						queue_url: {
+							/**
+							 * Q​u​e​u​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​S​Q​S​ ​q​u​e​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​l​e​t​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​b​e​ ​s​e​n​t​.
+							 */
+							longDesc: string
+						}
+						message_body: {
+							/**
+							 * M​e​s​s​a​g​e​ ​B​o​d​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t​ ​t​o​ ​s​e​n​d​.​ ​C​a​n​ ​b​e​ ​p​l​a​i​n​ ​t​e​x​t​ ​o​r​ ​a​n​y​ ​s​t​r​i​n​g​ ​f​o​r​m​a​t​ ​u​p​ ​t​o​ ​2​5​6​ ​K​B​.
+							 */
+							longDesc: string
+						}
+						delay_seconds: {
+							/**
+							 * D​e​l​a​y​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​s​e​c​o​n​d​s​ ​t​o​ ​d​e​l​a​y​ ​m​e​s​s​a​g​e​ ​d​e​l​i​v​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​e​n​g​t​h​ ​o​f​ ​t​i​m​e​ ​(​0​-​9​0​0​ ​s​e​c​o​n​d​s​)​ ​f​o​r​ ​w​h​i​c​h​ ​t​o​ ​d​e​l​a​y​ ​d​e​l​i​v​e​r​y​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						message_attributes: {
+							/**
+							 * M​e​s​s​a​g​e​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​m​e​t​a​d​a​t​a​ ​f​o​r​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​w​i​t​h​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​p​r​o​c​e​s​s​i​n​g​.
+							 */
+							longDesc: string
+						}
+						message_group_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * G​r​o​u​p​ ​I​D​ ​f​o​r​ ​F​I​F​O​ ​q​u​e​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​g​ ​t​h​a​t​ ​s​p​e​c​i​f​i​e​s​ ​t​h​a​t​ ​a​ ​m​e​s​s​a​g​e​ ​b​e​l​o​n​g​s​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​g​r​o​u​p​ ​(​F​I​F​O​ ​q​u​e​u​e​s​ ​o​n​l​y​)​.
+							 */
+							longDesc: string
+						}
+						message_deduplication_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​D​e​d​u​p​l​i​c​a​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * D​e​d​u​p​l​i​c​a​t​i​o​n​ ​I​D​ ​f​o​r​ ​F​I​F​O​ ​q​u​e​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​o​k​e​n​ ​u​s​e​d​ ​f​o​r​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​ ​o​f​ ​s​e​n​t​ ​m​e​s​s​a​g​e​s​ ​(​F​I​F​O​ ​q​u​e​u​e​s​ ​o​n​l​y​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_json_message: {
+					/**
+					 * C​r​e​a​t​e​ ​J​S​O​N​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​J​S​O​N​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​n​ ​S​Q​S​ ​q​u​e​u​e
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​s​t​r​u​c​t​u​r​e​d​ ​J​S​O​N​ ​d​a​t​a​ ​t​o​ ​a​n​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​.​ ​T​h​e​ ​J​S​O​N​ ​o​b​j​e​c​t​ ​w​i​l​l​ ​b​e​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​s​e​r​i​a​l​i​z​e​d​ ​i​n​t​o​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​b​o​d​y​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​r​ ​t​a​r​g​e​t​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​h​o​s​t​e​d​.
+							 */
+							longDesc: string
+						}
+						queue_url: {
+							/**
+							 * Q​u​e​u​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​S​Q​S​ ​q​u​e​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​l​e​t​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​w​h​e​r​e​ ​t​h​e​ ​J​S​O​N​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​b​e​ ​s​e​n​t​.
+							 */
+							longDesc: string
+						}
+						message_data: {
+							/**
+							 * M​e​s​s​a​g​e​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​J​S​O​N​ ​o​b​j​e​c​t​ ​t​o​ ​s​e​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​r​u​c​t​u​r​e​d​ ​d​a​t​a​ ​o​b​j​e​c​t​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​s​e​r​i​a​l​i​z​e​d​ ​t​o​ ​J​S​O​N​ ​a​n​d​ ​s​e​n​t​ ​a​s​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​b​o​d​y​.
+							 */
+							longDesc: string
+						}
+						delay_seconds: {
+							/**
+							 * D​e​l​a​y​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​s​e​c​o​n​d​s​ ​t​o​ ​d​e​l​a​y​ ​m​e​s​s​a​g​e​ ​d​e​l​i​v​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​e​n​g​t​h​ ​o​f​ ​t​i​m​e​ ​(​0​-​9​0​0​ ​s​e​c​o​n​d​s​)​ ​f​o​r​ ​w​h​i​c​h​ ​t​o​ ​d​e​l​a​y​ ​d​e​l​i​v​e​r​y​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						message_attributes: {
+							/**
+							 * M​e​s​s​a​g​e​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​m​e​t​a​d​a​t​a​ ​f​o​r​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​w​i​t​h​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​p​r​o​c​e​s​s​i​n​g​.
+							 */
+							longDesc: string
+						}
+						message_group_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * G​r​o​u​p​ ​I​D​ ​f​o​r​ ​F​I​F​O​ ​q​u​e​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​g​ ​t​h​a​t​ ​s​p​e​c​i​f​i​e​s​ ​t​h​a​t​ ​a​ ​m​e​s​s​a​g​e​ ​b​e​l​o​n​g​s​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​g​r​o​u​p​ ​(​F​I​F​O​ ​q​u​e​u​e​s​ ​o​n​l​y​)​.
+							 */
+							longDesc: string
+						}
+						message_deduplication_id: {
+							/**
+							 * M​e​s​s​a​g​e​ ​D​e​d​u​p​l​i​c​a​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * D​e​d​u​p​l​i​c​a​t​i​o​n​ ​I​D​ ​f​o​r​ ​F​I​F​O​ ​q​u​e​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​o​k​e​n​ ​u​s​e​d​ ​f​o​r​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​ ​o​f​ ​s​e​n​t​ ​m​e​s​s​a​g​e​s​ ​(​F​I​F​O​ ​q​u​e​u​e​s​ ​o​n​l​y​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_queue: {
+					/**
+					 * C​r​e​a​t​e​ ​Q​u​e​u​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​S​Q​S​ ​q​u​e​u​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​w​i​t​h​ ​c​o​n​f​i​g​u​r​a​b​l​e​ ​s​e​t​t​i​n​g​s​ ​i​n​c​l​u​d​i​n​g​ ​F​I​F​O​ ​c​a​p​a​b​i​l​i​t​i​e​s​,​ ​d​e​a​d​ ​l​e​t​t​e​r​ ​q​u​e​u​e​s​,​ ​a​n​d​ ​e​n​c​r​y​p​t​i​o​n​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​q​u​e​u​e​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​n​e​w​ ​S​Q​S​ ​q​u​e​u​e​.
+							 */
+							longDesc: string
+						}
+						queue_name: {
+							/**
+							 * Q​u​e​u​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​n​e​w​ ​q​u​e​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​q​u​e​u​e​.​ ​F​I​F​O​ ​q​u​e​u​e​ ​n​a​m​e​s​ ​m​u​s​t​ ​e​n​d​ ​w​i​t​h​ ​.​f​i​f​o​ ​s​u​f​f​i​x​.
+							 */
+							longDesc: string
+						}
+						fifo_queue: {
+							/**
+							 * F​I​F​O​ ​Q​u​e​u​e
+							 */
+							displayName: string
+							/**
+							 * C​r​e​a​t​e​ ​a​s​ ​a​ ​F​I​F​O​ ​(​F​i​r​s​t​-​I​n​-​F​i​r​s​t​-​O​u​t​)​ ​q​u​e​u​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​F​I​F​O​ ​q​u​e​u​e​ ​t​h​a​t​ ​e​n​s​u​r​e​s​ ​m​e​s​s​a​g​e​s​ ​a​r​e​ ​p​r​o​c​e​s​s​e​d​ ​e​x​a​c​t​l​y​ ​o​n​c​e​ ​i​n​ ​t​h​e​ ​e​x​a​c​t​ ​o​r​d​e​r​ ​s​e​n​t​.
+							 */
+							longDesc: string
+						}
+						content_based_deduplication: {
+							/**
+							 * C​o​n​t​e​n​t​-​B​a​s​e​d​ ​D​e​d​u​p​l​i​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​ ​a​u​t​o​m​a​t​i​c​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​ ​b​a​s​e​d​ ​o​n​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * F​o​r​ ​F​I​F​O​ ​q​u​e​u​e​s​,​ ​e​n​a​b​l​e​s​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​ ​u​s​i​n​g​ ​a​ ​S​H​A​-​2​5​6​ ​h​a​s​h​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​b​o​d​y​.
+							 */
+							longDesc: string
+						}
+						visibility_timeout: {
+							/**
+							 * V​i​s​i​b​i​l​i​t​y​ ​T​i​m​e​o​u​t​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​ ​a​ ​m​e​s​s​a​g​e​ ​i​s​ ​i​n​v​i​s​i​b​l​e​ ​a​f​t​e​r​ ​b​e​i​n​g​ ​r​e​c​e​i​v​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​e​n​g​t​h​ ​o​f​ ​t​i​m​e​ ​(​0​-​4​3​2​0​0​ ​s​e​c​o​n​d​s​)​ ​t​h​a​t​ ​a​ ​m​e​s​s​a​g​e​ ​i​s​ ​i​n​v​i​s​i​b​l​e​ ​t​o​ ​o​t​h​e​r​ ​c​o​n​s​u​m​e​r​s​ ​a​f​t​e​r​ ​b​e​i​n​g​ ​r​e​c​e​i​v​e​d​.
+							 */
+							longDesc: string
+						}
+						message_retention_period: {
+							/**
+							 * M​e​s​s​a​g​e​ ​R​e​t​e​n​t​i​o​n​ ​P​e​r​i​o​d​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​l​o​n​g​ ​m​e​s​s​a​g​e​s​ ​a​r​e​ ​r​e​t​a​i​n​e​d​ ​i​n​ ​t​h​e​ ​q​u​e​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​e​n​g​t​h​ ​o​f​ ​t​i​m​e​ ​(​6​0​-​1​2​0​9​6​0​0​ ​s​e​c​o​n​d​s​)​ ​t​h​a​t​ ​m​e​s​s​a​g​e​s​ ​a​r​e​ ​r​e​t​a​i​n​e​d​ ​i​n​ ​t​h​e​ ​q​u​e​u​e​.
+							 */
+							longDesc: string
+						}
+						delay_seconds: {
+							/**
+							 * D​e​l​a​y​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * D​e​f​a​u​l​t​ ​d​e​l​a​y​ ​f​o​r​ ​n​e​w​ ​m​e​s​s​a​g​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​e​f​a​u​l​t​ ​d​e​l​a​y​ ​(​0​-​9​0​0​ ​s​e​c​o​n​d​s​)​ ​f​o​r​ ​m​e​s​s​a​g​e​s​ ​a​d​d​e​d​ ​t​o​ ​t​h​i​s​ ​q​u​e​u​e​.
+							 */
+							longDesc: string
+						}
+						receive_message_wait_time_seconds: {
+							/**
+							 * R​e​c​e​i​v​e​ ​W​a​i​t​ ​T​i​m​e​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * L​o​n​g​ ​p​o​l​l​i​n​g​ ​w​a​i​t​ ​t​i​m​e​ ​f​o​r​ ​r​e​c​e​i​v​e​ ​o​p​e​r​a​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​ ​(​0​-​2​0​ ​s​e​c​o​n​d​s​)​ ​f​o​r​ ​w​h​i​c​h​ ​R​e​c​e​i​v​e​M​e​s​s​a​g​e​ ​c​a​l​l​s​ ​w​a​i​t​ ​f​o​r​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​a​r​r​i​v​e​.
+							 */
+							longDesc: string
+						}
+						max_receive_count: {
+							/**
+							 * M​a​x​ ​R​e​c​e​i​v​e​ ​C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​r​e​c​e​i​v​e​s​ ​b​e​f​o​r​e​ ​m​o​v​i​n​g​ ​t​o​ ​d​e​a​d​ ​l​e​t​t​e​r​ ​q​u​e​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​i​m​e​s​ ​a​ ​m​e​s​s​a​g​e​ ​c​a​n​ ​b​e​ ​r​e​c​e​i​v​e​d​ ​b​e​f​o​r​e​ ​b​e​i​n​g​ ​m​o​v​e​d​ ​t​o​ ​t​h​e​ ​d​e​a​d​ ​l​e​t​t​e​r​ ​q​u​e​u​e​.
+							 */
+							longDesc: string
+						}
+						dead_letter_queue_url: {
+							/**
+							 * D​e​a​d​ ​L​e​t​t​e​r​ ​Q​u​e​u​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * U​R​L​ ​o​f​ ​t​h​e​ ​d​e​a​d​ ​l​e​t​t​e​r​ ​q​u​e​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​q​u​e​u​e​ ​t​o​ ​u​s​e​ ​a​s​ ​a​ ​d​e​a​d​ ​l​e​t​t​e​r​ ​q​u​e​u​e​ ​f​o​r​ ​f​a​i​l​e​d​ ​m​e​s​s​a​g​e​ ​p​r​o​c​e​s​s​i​n​g​.
+							 */
+							longDesc: string
+						}
+						kms_master_key_id: {
+							/**
+							 * K​M​S​ ​M​a​s​t​e​r​ ​K​e​y​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * K​M​S​ ​k​e​y​ ​f​o​r​ ​s​e​r​v​e​r​-​s​i​d​e​ ​e​n​c​r​y​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​a​n​ ​A​W​S​ ​K​M​S​ ​k​e​y​ ​f​o​r​ ​s​e​r​v​e​r​-​s​i​d​e​ ​e​n​c​r​y​p​t​i​o​n​ ​o​f​ ​q​u​e​u​e​ ​m​e​s​s​a​g​e​s​.
+							 */
+							longDesc: string
+						}
+						kms_data_key_reuse_period_seconds: {
+							/**
+							 * K​M​S​ ​D​a​t​a​ ​K​e​y​ ​R​e​u​s​e​ ​P​e​r​i​o​d​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​l​o​n​g​ ​t​o​ ​r​e​u​s​e​ ​K​M​S​ ​d​a​t​a​ ​k​e​y​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​e​n​g​t​h​ ​o​f​ ​t​i​m​e​ ​(​6​0​-​8​6​4​0​0​ ​s​e​c​o​n​d​s​)​ ​f​o​r​ ​w​h​i​c​h​ ​A​m​a​z​o​n​ ​S​Q​S​ ​c​a​n​ ​r​e​u​s​e​ ​a​ ​d​a​t​a​ ​k​e​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_queues: {
+					/**
+					 * L​i​s​t​ ​Q​u​e​u​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​S​Q​S​ ​q​u​e​u​e​s​ ​i​n​ ​a​ ​r​e​g​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​s​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​e​g​i​o​n​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​d​e​t​a​i​l​e​d​ ​q​u​e​u​e​ ​a​t​t​r​i​b​u​t​e​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​l​i​s​t​ ​q​u​e​u​e​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​S​Q​S​ ​q​u​e​u​e​s​.
+							 */
+							longDesc: string
+						}
+						queue_name_prefix: {
+							/**
+							 * Q​u​e​u​e​ ​N​a​m​e​ ​P​r​e​f​i​x
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​q​u​e​u​e​s​ ​b​y​ ​n​a​m​e​ ​p​r​e​f​i​x
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​e​f​i​x​ ​t​o​ ​f​i​l​t​e​r​ ​q​u​e​u​e​ ​n​a​m​e​s​.​ ​O​n​l​y​ ​q​u​e​u​e​s​ ​w​i​t​h​ ​n​a​m​e​s​ ​s​t​a​r​t​i​n​g​ ​w​i​t​h​ ​t​h​i​s​ ​p​r​e​f​i​x​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+						max_results: {
+							/**
+							 * M​a​x​ ​R​e​s​u​l​t​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​q​u​e​u​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​q​u​e​u​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​(​1​-​1​0​0​0​)​.
+							 */
+							longDesc: string
+						}
+						include_attributes: {
+							/**
+							 * I​n​c​l​u​d​e​ ​A​t​t​r​i​b​u​t​e​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​d​e​t​a​i​l​e​d​ ​q​u​e​u​e​ ​a​t​t​r​i​b​u​t​e​s​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​d​e​t​a​i​l​e​d​ ​q​u​e​u​e​ ​a​t​t​r​i​b​u​t​e​s​ ​l​i​k​e​ ​m​e​s​s​a​g​e​ ​c​o​u​n​t​s​,​ ​t​i​m​e​s​t​a​m​p​s​,​ ​a​n​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​s​e​t​t​i​n​g​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_messages: {
+					/**
+					 * L​i​s​t​ ​M​e​s​s​a​g​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​c​e​i​v​e​ ​m​e​s​s​a​g​e​s​ ​f​r​o​m​ ​a​n​ ​S​Q​S​ ​q​u​e​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​m​e​s​s​a​g​e​s​ ​f​r​o​m​ ​a​n​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​w​i​t​h​ ​c​o​n​f​i​g​u​r​a​b​l​e​ ​p​o​l​l​i​n​g​ ​o​p​t​i​o​n​s​ ​a​n​d​ ​m​e​s​s​a​g​e​ ​a​t​t​r​i​b​u​t​e​ ​r​e​t​r​i​e​v​a​l​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​r​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​h​o​s​t​e​d​.
+							 */
+							longDesc: string
+						}
+						queue_url: {
+							/**
+							 * Q​u​e​u​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​t​o​ ​r​e​a​d​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​l​e​t​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​r​e​c​e​i​v​e​ ​m​e​s​s​a​g​e​s​.
+							 */
+							longDesc: string
+						}
+						max_number_of_messages: {
+							/**
+							 * M​a​x​ ​N​u​m​b​e​r​ ​o​f​ ​M​e​s​s​a​g​e​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​c​e​i​v​e​ ​(​1​-​1​0​)
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​ ​(​1​-​1​0​)​.
+							 */
+							longDesc: string
+						}
+						wait_time_seconds: {
+							/**
+							 * W​a​i​t​ ​T​i​m​e​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * L​o​n​g​ ​p​o​l​l​i​n​g​ ​w​a​i​t​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​u​r​a​t​i​o​n​ ​(​0​-​2​0​ ​s​e​c​o​n​d​s​)​ ​f​o​r​ ​w​h​i​c​h​ ​t​h​e​ ​c​a​l​l​ ​w​a​i​t​s​ ​f​o​r​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​a​r​r​i​v​e​.
+							 */
+							longDesc: string
+						}
+						visibility_timeout: {
+							/**
+							 * V​i​s​i​b​i​l​i​t​y​ ​T​i​m​e​o​u​t​ ​(​S​e​c​o​n​d​s​)
+							 */
+							displayName: string
+							/**
+							 * O​v​e​r​r​i​d​e​ ​t​h​e​ ​q​u​e​u​e​ ​d​e​f​a​u​l​t​ ​v​i​s​i​b​i​l​i​t​y​ ​t​i​m​e​o​u​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​u​r​a​t​i​o​n​ ​f​o​r​ ​w​h​i​c​h​ ​r​e​c​e​i​v​e​d​ ​m​e​s​s​a​g​e​s​ ​a​r​e​ ​h​i​d​d​e​n​ ​f​r​o​m​ ​s​u​b​s​e​q​u​e​n​t​ ​r​e​t​r​i​e​v​e​ ​r​e​q​u​e​s​t​s​.
+							 */
+							longDesc: string
+						}
+						message_attribute_names: {
+							/**
+							 * M​e​s​s​a​g​e​ ​A​t​t​r​i​b​u​t​e​ ​N​a​m​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​m​e​s​s​a​g​e​ ​a​t​t​r​i​b​u​t​e​ ​n​a​m​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​s​ ​o​f​ ​m​e​s​s​a​g​e​ ​a​t​t​r​i​b​u​t​e​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​U​s​e​ ​"​A​l​l​"​ ​t​o​ ​r​e​t​u​r​n​ ​a​l​l​ ​a​t​t​r​i​b​u​t​e​s​.
+							 */
+							longDesc: string
+						}
+						attribute_names: {
+							/**
+							 * A​t​t​r​i​b​u​t​e​ ​N​a​m​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​m​e​s​s​a​g​e​ ​s​y​s​t​e​m​ ​a​t​t​r​i​b​u​t​e​ ​n​a​m​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​s​ ​o​f​ ​s​y​s​t​e​m​ ​a​t​t​r​i​b​u​t​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​w​i​t​h​ ​e​a​c​h​ ​m​e​s​s​a​g​e​.​ ​U​s​e​ ​"​A​l​l​"​ ​t​o​ ​r​e​t​u​r​n​ ​a​l​l​ ​a​t​t​r​i​b​u​t​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_queue: {
+					/**
+					 * G​e​t​ ​Q​u​e​u​e
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​S​Q​S​ ​q​u​e​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​n​d​ ​a​t​t​r​i​b​u​t​e​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​i​n​c​l​u​d​i​n​g​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​,​ ​m​e​s​s​a​g​e​ ​c​o​u​n​t​s​,​ ​a​n​d​ ​t​i​m​e​s​t​a​m​p​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​r​ ​S​Q​S​ ​q​u​e​u​e​ ​i​s​ ​h​o​s​t​e​d​.
+							 */
+							longDesc: string
+						}
+						queue_url: {
+							/**
+							 * Q​u​e​u​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​S​Q​S​ ​q​u​e​u​e​ ​t​o​ ​i​n​s​p​e​c​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​l​e​t​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​A​m​a​z​o​n​ ​S​Q​S​ ​q​u​e​u​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​.
+							 */
+							longDesc: string
+						}
+						attribute_names: {
+							/**
+							 * A​t​t​r​i​b​u​t​e​ ​N​a​m​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​q​u​e​u​e​ ​a​t​t​r​i​b​u​t​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​s​ ​o​f​ ​q​u​e​u​e​ ​a​t​t​r​i​b​u​t​e​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​U​s​e​ ​"​A​l​l​"​ ​t​o​ ​r​e​t​u​r​n​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​a​t​t​r​i​b​u​t​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		LinkedIn: {
 			/**
 			 * L​i​n​k​e​d​I​n
@@ -77022,6 +77870,854 @@ export type TranslationFunctions = {
 					 * Get a list of all available Claude models.
 					 */
 					longDesc: () => LocalizedString
+				}
+			}
+		}
+		AmazonSQS: {
+			/**
+			 * AWS SQS
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Amazon Simple Queue Service to manage message queues and automate message processing workflows.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The AWS SQS integration provides comprehensive queue management and message handling capabilities for Amazon Simple Queue Service. Create and manage queues, send messages (including JSON), receive messages with polling triggers, and automate your message-driven architectures with reliable, scalable queue operations.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_message: {
+					/**
+					 * New Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new message is received in an SQS queue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors an Amazon SQS queue for new messages and triggers when messages are available. Supports long polling and message attributes retrieval.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region where the SQS queue is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where your SQS queue is hosted. This determines the endpoint used for API calls.
+							 */
+							longDesc: () => LocalizedString
+						}
+						queue_url: {
+							/**
+							 * Queue URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The URL of the SQS queue to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The complete URL of the Amazon SQS queue from which to receive messages.
+							 */
+							longDesc: () => LocalizedString
+						}
+						wait_time_seconds: {
+							/**
+							 * Wait Time (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Long polling wait time in seconds
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The duration (0-20 seconds) for which the call waits for a message to arrive in the queue before returning.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_messages: {
+							/**
+							 * Max Messages
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of messages to receive per poll
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of messages to return (1-10). Note that fewer messages might be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_json_message: {
+					/**
+					 * New JSON Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new JSON message is received in an SQS queue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors an Amazon SQS queue for new messages containing valid JSON data. Only triggers for messages with parseable JSON content.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region where the SQS queue is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where your SQS queue is hosted. This determines the endpoint used for API calls.
+							 */
+							longDesc: () => LocalizedString
+						}
+						queue_url: {
+							/**
+							 * Queue URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The URL of the SQS queue to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The complete URL of the Amazon SQS queue from which to receive JSON messages.
+							 */
+							longDesc: () => LocalizedString
+						}
+						wait_time_seconds: {
+							/**
+							 * Wait Time (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Long polling wait time in seconds
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The duration (0-20 seconds) for which the call waits for a message to arrive in the queue before returning.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_messages: {
+							/**
+							 * Max Messages
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of messages to receive per poll
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of messages to return (1-10). Note that fewer messages might be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_queue: {
+					/**
+					 * New Queue
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new SQS queue is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors for newly created Amazon SQS queues in the specified region and triggers when new queues are detected.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region to monitor for new queues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where you want to monitor for newly created SQS queues.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				create_message: {
+					/**
+					 * Create Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a text message to an SQS queue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a text message to an Amazon SQS queue with optional message attributes, delay settings, and FIFO queue parameters.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region where the SQS queue is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where your target SQS queue is hosted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						queue_url: {
+							/**
+							 * Queue URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The URL of the target SQS queue
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The complete URL of the Amazon SQS queue where the message will be sent.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_body: {
+							/**
+							 * Message Body
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The text content of the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The message content to send. Can be plain text or any string format up to 256 KB.
+							 */
+							longDesc: () => LocalizedString
+						}
+						delay_seconds: {
+							/**
+							 * Delay (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of seconds to delay message delivery
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The length of time (0-900 seconds) for which to delay delivery of the message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_attributes: {
+							/**
+							 * Message Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional metadata for the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom attributes to include with the message for filtering and processing.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_group_id: {
+							/**
+							 * Message Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Group ID for FIFO queues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The tag that specifies that a message belongs to a specific message group (FIFO queues only).
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_deduplication_id: {
+							/**
+							 * Message Deduplication ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Deduplication ID for FIFO queues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The token used for deduplication of sent messages (FIFO queues only).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_json_message: {
+					/**
+					 * Create JSON Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a JSON message to an SQS queue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send structured JSON data to an Amazon SQS queue. The JSON object will be automatically serialized into the message body.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region where the SQS queue is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where your target SQS queue is hosted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						queue_url: {
+							/**
+							 * Queue URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The URL of the target SQS queue
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The complete URL of the Amazon SQS queue where the JSON message will be sent.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_data: {
+							/**
+							 * Message Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The JSON object to send
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The structured data object that will be serialized to JSON and sent as the message body.
+							 */
+							longDesc: () => LocalizedString
+						}
+						delay_seconds: {
+							/**
+							 * Delay (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of seconds to delay message delivery
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The length of time (0-900 seconds) for which to delay delivery of the message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_attributes: {
+							/**
+							 * Message Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional metadata for the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom attributes to include with the message for filtering and processing.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_group_id: {
+							/**
+							 * Message Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Group ID for FIFO queues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The tag that specifies that a message belongs to a specific message group (FIFO queues only).
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_deduplication_id: {
+							/**
+							 * Message Deduplication ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Deduplication ID for FIFO queues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The token used for deduplication of sent messages (FIFO queues only).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_queue: {
+					/**
+					 * Create Queue
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new SQS queue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new Amazon SQS queue with configurable settings including FIFO capabilities, dead letter queues, and encryption options.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region where the queue will be created
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where you want to create the new SQS queue.
+							 */
+							longDesc: () => LocalizedString
+						}
+						queue_name: {
+							/**
+							 * Queue Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the new queue
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name for the queue. FIFO queue names must end with .fifo suffix.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fifo_queue: {
+							/**
+							 * FIFO Queue
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Create as a FIFO (First-In-First-Out) queue
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to create a FIFO queue that ensures messages are processed exactly once in the exact order sent.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_based_deduplication: {
+							/**
+							 * Content-Based Deduplication
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable automatic deduplication based on message content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * For FIFO queues, enables deduplication using a SHA-256 hash of the message body.
+							 */
+							longDesc: () => LocalizedString
+						}
+						visibility_timeout: {
+							/**
+							 * Visibility Timeout (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Time a message is invisible after being received
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The length of time (0-43200 seconds) that a message is invisible to other consumers after being received.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_retention_period: {
+							/**
+							 * Message Retention Period (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How long messages are retained in the queue
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The length of time (60-1209600 seconds) that messages are retained in the queue.
+							 */
+							longDesc: () => LocalizedString
+						}
+						delay_seconds: {
+							/**
+							 * Delay (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Default delay for new messages
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The default delay (0-900 seconds) for messages added to this queue.
+							 */
+							longDesc: () => LocalizedString
+						}
+						receive_message_wait_time_seconds: {
+							/**
+							 * Receive Wait Time (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Long polling wait time for receive operations
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The time (0-20 seconds) for which ReceiveMessage calls wait for messages to arrive.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_receive_count: {
+							/**
+							 * Max Receive Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum receives before moving to dead letter queue
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of times a message can be received before being moved to the dead letter queue.
+							 */
+							longDesc: () => LocalizedString
+						}
+						dead_letter_queue_url: {
+							/**
+							 * Dead Letter Queue URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * URL of the dead letter queue
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The URL of the queue to use as a dead letter queue for failed message processing.
+							 */
+							longDesc: () => LocalizedString
+						}
+						kms_master_key_id: {
+							/**
+							 * KMS Master Key ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * KMS key for server-side encryption
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of an AWS KMS key for server-side encryption of queue messages.
+							 */
+							longDesc: () => LocalizedString
+						}
+						kms_data_key_reuse_period_seconds: {
+							/**
+							 * KMS Data Key Reuse Period (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How long to reuse KMS data keys
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The length of time (60-86400 seconds) for which Amazon SQS can reuse a data key.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_queues: {
+					/**
+					 * List Queues
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all SQS queues in a region
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all Amazon SQS queues in the specified region with optional filtering and detailed queue attributes.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region to list queues from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region from which to retrieve the list of SQS queues.
+							 */
+							longDesc: () => LocalizedString
+						}
+						queue_name_prefix: {
+							/**
+							 * Queue Name Prefix
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter queues by name prefix
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional prefix to filter queue names. Only queues with names starting with this prefix will be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_results: {
+							/**
+							 * Max Results
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of queues to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of queue results to return (1-1000).
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_attributes: {
+							/**
+							 * Include Attributes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include detailed queue attributes in the response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include detailed queue attributes like message counts, timestamps, and configuration settings.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_messages: {
+					/**
+					 * List Messages
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Receive messages from an SQS queue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve messages from an Amazon SQS queue with configurable polling options and message attribute retrieval.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region where the SQS queue is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where your SQS queue is hosted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						queue_url: {
+							/**
+							 * Queue URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The URL of the SQS queue to read from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The complete URL of the Amazon SQS queue from which to receive messages.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_number_of_messages: {
+							/**
+							 * Max Number of Messages
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum messages to receive (1-10)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of messages to return in a single request (1-10).
+							 */
+							longDesc: () => LocalizedString
+						}
+						wait_time_seconds: {
+							/**
+							 * Wait Time (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Long polling wait time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The duration (0-20 seconds) for which the call waits for messages to arrive.
+							 */
+							longDesc: () => LocalizedString
+						}
+						visibility_timeout: {
+							/**
+							 * Visibility Timeout (Seconds)
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Override the queue default visibility timeout
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The duration for which received messages are hidden from subsequent retrieve requests.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message_attribute_names: {
+							/**
+							 * Message Attribute Names
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of message attribute names to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The names of message attributes to return. Use "All" to return all attributes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attribute_names: {
+							/**
+							 * Attribute Names
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of message system attribute names to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The names of system attributes to return with each message. Use "All" to return all attributes.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_queue: {
+					/**
+					 * Get Queue
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get details about a specific SQS queue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information and attributes for a specific Amazon SQS queue including configuration, message counts, and timestamps.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region where the SQS queue is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where your SQS queue is hosted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						queue_url: {
+							/**
+							 * Queue URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The URL of the SQS queue to inspect
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The complete URL of the Amazon SQS queue to retrieve information about.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attribute_names: {
+							/**
+							 * Attribute Names
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of queue attributes to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The names of queue attributes to return. Use "All" to return all available attributes.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 			}
 		}
