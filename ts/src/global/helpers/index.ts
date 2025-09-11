@@ -283,7 +283,7 @@ export const mapActionsToApp = (
         'options' in action && action.options
           ? fixOptions(action, action.options, app, locale)
           : undefined,
-      ...(action?.override_options && {
+      ...(action.override_options && {
         override_options: fixOptions(action, action.override_options, app, locale),
       }),
       response_type:
@@ -337,7 +337,7 @@ export const mapTriggersToApp = (
   locale: Locales
 ): TQoreAppEventAction[] => {
   const mappedTriggers = Object.entries(triggers).map(([_a, trigger]) => {
-    const eventInfo: TQoreAppActionWithEventOrWebhookEventInfo | undefined = trigger?.event_info
+    const eventInfo: TQoreAppActionWithEventOrWebhookEventInfo | undefined = trigger.event_info
       ? {
           ...trigger.event_info,
           type: fixResponseOrEventInfo(trigger.event_info.type, app, locale, trigger),
@@ -360,7 +360,7 @@ export const mapTriggersToApp = (
       desc: getLocaleField(app, locale, trigger, 'desc'),
       ...(group && { group }),
       app,
-      options: trigger?.options ? fixOptions(trigger, trigger.options, app, locale) : undefined,
+      options: trigger.options ? fixOptions(trigger, trigger.options, app, locale) : undefined,
       event_info: eventInfo || { desc: '', type: { type: 'hash' } },
     } satisfies IQoreAppActionWithEventOrWebhook;
 

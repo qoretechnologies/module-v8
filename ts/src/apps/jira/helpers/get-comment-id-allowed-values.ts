@@ -44,7 +44,7 @@ const mapJiraComment = (comment: {
   value: comment.id,
   display_name: comment?.author?.displayName || 'Unknown author',
   desc:
-    `Id: ${comment.id}\n\nAuthor: ${comment?.author?.displayName}\n\nCreated: ${comment.created}\n\n` +
+    `Id: ${comment.id}\n\nAuthor: ${comment.author?.displayName}\n\nCreated: ${comment.created}\n\n` +
     `Link: [View comment](${comment.self})`,
 });
 

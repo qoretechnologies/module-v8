@@ -59,12 +59,15 @@ export const getTeamsChatIdAllowedValues: TQoreGetAllowedValuesFunction<
           displayName = `Group chat (${members.length} members)`;
         }
 
+        const membersDesc =
+          members.length > 0
+            ? `Members:\n${members.map((member) => `- ${member.displayName}` || 'Unknown').join('\n')}`
+            : 'Members: None';
+
         allowedValues.push({
           display_name: displayName,
           value: chat.id!,
-          short_desc:
-            `Type: ${chat.chatType || 'Unknown'}\n\n` +
-            `Members:\n${members.map((member) => `- ${member.displayName}` || 'Unknown').join('\n') || 'None'}`,
+          short_desc: `Type: ${chat.chatType || 'Unknown'}\n\n` + membersDesc,
         });
       }
 

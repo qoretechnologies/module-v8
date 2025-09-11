@@ -54,7 +54,7 @@ const searchWorksheets = QoreAppCreator.createLocalizedAction<typeof options>({
       }
 
       const spreadsheetTitle = response.data.properties?.title || 'Untitled Spreadsheet';
-      const allSheets = response.data.sheets || [];
+      const allSheets = response.data.sheets;
 
       let matchingSheets = allSheets;
 

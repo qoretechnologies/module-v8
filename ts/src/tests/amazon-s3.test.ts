@@ -1,21 +1,18 @@
 import { configDotenv } from 'dotenv';
 import {
-  createAmazonS3TextObject,
-  deleteAmazonS3Object,
-  getAmazonS3File,
-  getAmazonS3Object,
-  listAmazonS3Buckets,
-  listAmazonS3Files,
-  listAmazonS3Objects,
-  uploadAmazonS3File,
+  CreateAmazonS3TextObject,
+  DeleteAmazonS3Object,
+  GetAmazonS3File,
+  GetAmazonS3Object,
+  ListAmazonS3Buckets,
+  ListAmazonS3Files,
+  ListAmazonS3Objects,
+  UploadAmazonS3File,
 } from '../apps/amazon-s3/actions';
 import { getAmazonS3BucketAllowedValues } from '../apps/amazon-s3/helpers/get-bucket-allowed-values';
 import { getAmazonS3ObjectAllowedValues } from '../apps/amazon-s3/helpers/get-object-allowed-values';
+import { NewAmazonS3Bucket, NewOrUpdatedAmazonS3File } from '../apps/amazon-s3/triggers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import {
-  NewAmazonS3BucketTrigger,
-  NewOrUpdatedAmazonS3FileTrigger,
-} from '../apps/amazon-s3/triggers';
 
 configDotenv({ path: '.env' });
 Debugger.level = DebugLevels.Verbose;
@@ -94,7 +91,7 @@ describe('Amazon S3', () => {
     // });
 
     it('Should list buckets', async () => {
-      const action = listAmazonS3Buckets;
+      const action = ListAmazonS3Buckets;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -112,7 +109,7 @@ describe('Amazon S3', () => {
     });
 
     it('Should create a text object with basic parameters', async () => {
-      const action = createAmazonS3TextObject;
+      const action = CreateAmazonS3TextObject;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -146,7 +143,7 @@ describe('Amazon S3', () => {
     });
 
     it('Should upload a PDF file with metadata and tags', async () => {
-      const action = uploadAmazonS3File;
+      const action = UploadAmazonS3File;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -188,7 +185,7 @@ describe('Amazon S3', () => {
     });
 
     it('Should get file', async () => {
-      const action = getAmazonS3File;
+      const action = GetAmazonS3File;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -208,7 +205,7 @@ describe('Amazon S3', () => {
     });
 
     it('Should get the object', async () => {
-      const action = getAmazonS3Object;
+      const action = GetAmazonS3Object;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -227,7 +224,7 @@ describe('Amazon S3', () => {
     });
 
     it('Should list files', async () => {
-      const action = listAmazonS3Files;
+      const action = ListAmazonS3Files;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -246,7 +243,7 @@ describe('Amazon S3', () => {
     });
 
     it('Should list objects', async () => {
-      const action = listAmazonS3Objects;
+      const action = ListAmazonS3Objects;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -265,7 +262,7 @@ describe('Amazon S3', () => {
     });
 
     it('Should delete the created object', async () => {
-      const action = deleteAmazonS3Object;
+      const action = DeleteAmazonS3Object;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -284,7 +281,7 @@ describe('Amazon S3', () => {
     });
 
     it('Should delete the created file', async () => {
-      const action = deleteAmazonS3Object;
+      const action = DeleteAmazonS3Object;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -305,7 +302,7 @@ describe('Amazon S3', () => {
 
   describe('Should test triggers event example data', () => {
     it('Should get example event data for new file trigger', async () => {
-      const trigger = NewOrUpdatedAmazonS3FileTrigger;
+      const trigger = NewOrUpdatedAmazonS3File;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');
@@ -320,7 +317,7 @@ describe('Amazon S3', () => {
     });
 
     it('Should get example event data for new bucket trigger', async () => {
-      const trigger = NewAmazonS3BucketTrigger;
+      const trigger = NewAmazonS3Bucket;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');

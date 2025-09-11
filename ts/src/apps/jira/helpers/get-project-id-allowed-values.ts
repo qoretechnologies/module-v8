@@ -36,8 +36,8 @@ export const getJiraProjectIdAllowedValues: TQoreGetAllowedValuesFunction<
       (project: any): IQoreAllowedValue<string> => ({
         value: project.id,
         display_name: `[${project.key}] ${project.name}`,
-        ...(project?.avatarUrls?.['48x48'] && { image: project.avatarUrls['48x48'] }),
-        ...(project?.description && { desc: project.description }),
+        ...(project.avatarUrls?.['48x48'] && { image: project.avatarUrls['48x48'] }),
+        ...(project.description && { desc: project.description }),
       })
     )
   );

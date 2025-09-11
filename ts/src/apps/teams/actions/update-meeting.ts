@@ -97,7 +97,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const UpdateTeamsMeeting = QoreAppCreator.createLocalizedAction<typeof options>({
+const UpdateTeamsMeeting = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'update-meeting',
   app: TEAMS_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -229,3 +229,5 @@ export const UpdateTeamsMeeting = QoreAppCreator.createLocalizedAction<typeof op
   options,
   response_type,
 });
+
+export default UpdateTeamsMeeting;

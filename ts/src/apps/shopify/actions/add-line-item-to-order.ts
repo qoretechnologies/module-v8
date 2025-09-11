@@ -369,7 +369,7 @@ const commitOrderEdit = async (
   return commitResult.data.orderEditCommit;
 };
 
-export const AddLineItemToShopifyOrder = QoreAppCreator.createLocalizedAction<
+const AddLineItemToShopifyOrder = QoreAppCreator.createLocalizedAction<
   typeof options &
     Partial<typeof additional_custom_item_options & typeof additional_product_options>
 >({
@@ -457,3 +457,5 @@ export const AddLineItemToShopifyOrder = QoreAppCreator.createLocalizedAction<
   options,
   response_type: ShopifyAddLineItemToOrderResponseType,
 });
+
+export default AddLineItemToShopifyOrder;

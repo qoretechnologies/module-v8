@@ -1,7 +1,7 @@
-export { default as newRepositoryIssue } from './new-issue.trigger';
-export { default as newCommitComment } from './new-commit-comment.trigger';
-export { default as newCommit } from './new-commit.trigger';
-export { default as newPullRequest } from './new-pull-request.trigger';
-export { default as newReviewRequest } from './new-review-request.trigger';
-export { default as newRelease } from './new-release.trigger';
-export { default as newBranch } from './new-branch.trigger';
+export { default as NewGitHubRepositoryIssue } from './new-issue.trigger';
+export { default as NewGitHubCommitComment } from './new-commit-comment.trigger';
+export { default as NewGitHubCommit } from './new-commit.trigger';
+export { default as NewGitHubPullRequest } from './new-pull-request.trigger';
+export { default as NewGitHubReviewRequest } from './new-review-request.trigger';
+export { default as NewGitHubRelease } from './new-release.trigger';
+export { default as NewGitHubBranch } from './new-branch.trigger';

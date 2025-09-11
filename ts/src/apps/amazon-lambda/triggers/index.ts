@@ -1,2 +1,2 @@
-export { default as AWSLambdaNewFunctionTrigger } from './new-function.trigger';
-export { default as AWSLambdaNewLayerVersionTrigger } from './new-layer-version.trigger';
+export { default as NewAWSLambdaFunction } from './new-function.trigger';
+export { default as NewAWSLambdaLayerVersion } from './new-layer-version.trigger';

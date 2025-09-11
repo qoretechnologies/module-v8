@@ -89,7 +89,7 @@ export const slack = createPiece({
       }
 
       return {
-        event: payloadBody?.event?.type,
+        event: payloadBody.event?.type,
         identifierValue: payloadBody.team_id,
       };
     },

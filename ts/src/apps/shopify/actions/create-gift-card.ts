@@ -172,7 +172,7 @@ const createGiftCard = async (context: TShopifyContextWithConn, data: TCreateGif
   return createGiftCardResult.data.giftCardCreate;
 };
 
-export const CreateShopifyGiftCard = QoreAppCreator.createLocalizedAction<typeof options>({
+const CreateShopifyGiftCard = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'create-gift-card',
   app: SHOPIFY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -219,3 +219,5 @@ export const CreateShopifyGiftCard = QoreAppCreator.createLocalizedAction<typeof
   options,
   response_type: ShopifyCreateGiftCardResponseType,
 });
+
+export default CreateShopifyGiftCard;

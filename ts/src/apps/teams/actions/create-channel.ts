@@ -49,7 +49,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const CreateTeamsChannel = QoreAppCreator.createLocalizedAction<typeof options>({
+const CreateTeamsChannel = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'create-channel',
   app: TEAMS_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -108,3 +108,5 @@ export const CreateTeamsChannel = QoreAppCreator.createLocalizedAction<typeof op
   options,
   response_type,
 });
+
+export default CreateTeamsChannel;

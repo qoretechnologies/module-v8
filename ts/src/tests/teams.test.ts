@@ -1,5 +1,4 @@
 import { IQoreAppActionWithFunction } from '@qoretechnologies/ts-toolkit';
-import { UpdateTeamsChannel } from '../apps/teams/actions/update-channel';
 import { getTeamsAttendeesAllowedValues } from '../apps/teams/helpers/get-attendee-allowed-values';
 import { getTeamsChannelIdAllowedValues } from '../apps/teams/helpers/get-channel-id-allowed-values';
 import { getTeamsChannelMembersAllowedValues } from '../apps/teams/helpers/get-channel-member-allowed-values';
@@ -11,6 +10,7 @@ import {
   CreateTeamsMeeting,
   DeleteTeamsMeeting,
   SendTeamsChannelMessage,
+  UpdateTeamsChannel,
   UpdateTeamsMeeting,
 } from '../apps/teams/actions';
 import { configDotenv } from 'dotenv';

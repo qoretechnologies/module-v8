@@ -1,24 +1,24 @@
 import { configDotenv } from 'dotenv';
 import {
-  archivePaddleProduct,
-  createPaddleCustomer,
-  createPaddlePrice,
-  createPaddleProduct,
-  createPaddleTransaction,
-  getPaddleCustomer,
-  getPaddleCustomerAuthToken,
-  getPaddlePrice,
-  getPaddleProduct,
-  getPaddleSubscription,
-  getPaddleTransaction,
-  listPaddleCustomers,
-  listPaddlePrices,
-  listPaddleProducts,
-  listPaddleSubscriptions,
-  listPaddleTransactions,
-  updatePaddleCustomer,
-  updatePaddlePrice,
-  updatePaddleProduct,
+  ArchivePaddleProduct,
+  CreatePaddleCustomer,
+  CreatePaddlePrice,
+  CreatePaddleProduct,
+  CreatePaddleTransaction,
+  GetPaddleCustomer,
+  GetPaddleCustomerAuthToken,
+  GetPaddlePrice,
+  GetPaddleProduct,
+  GetPaddleSubscription,
+  GetPaddleTransaction,
+  ListPaddleCustomers,
+  ListPaddlePrices,
+  ListPaddleProducts,
+  ListPaddleSubscriptions,
+  ListPaddleTransactions,
+  UpdatePaddleCustomer,
+  UpdatePaddlePrice,
+  UpdatePaddleProduct,
 } from '../apps/paddle/actions';
 import { PADDLE_INSTANCE_TYPE } from '../apps/paddle/constants';
 import { createPaddleClient } from '../apps/paddle/helpers/constants';
@@ -29,11 +29,11 @@ import { getPaddleProductIdAllowedValues } from '../apps/paddle/helpers/get-prod
 import { getPaddleSubscriptionIdAllowedValues } from '../apps/paddle/helpers/get-subscription-id-allowed-values';
 import { getPaddleTransactionIdAllowedValues } from '../apps/paddle/helpers/get-transaction-id-allowed-values';
 import {
-  PaddleNewCustomerTrigger,
-  PaddleNewProductTrigger,
-  PaddleNewReportTrigger,
-  PaddleNewSubscriptionTrigger,
-  PaddleNewTransactionTrigger,
+  NewPaddleCustomer,
+  NewPaddleProduct,
+  NewPaddleTransaction,
+  NewPaddleSubscription,
+  NewPaddleReport,
 } from '../apps/paddle/triggers';
 
 configDotenv({ path: '.env' });
@@ -117,7 +117,7 @@ describe('Test Paddle Actions', () => {
   describe('Should test Paddle actions', () => {
     describe('Should test Paddle products', () => {
       it('Should get a product', async () => {
-        const action = getPaddleProduct;
+        const action = GetPaddleProduct;
         if (!('api_function' in action)) throw new Error('api_function not found in action');
         const result = await action.api_function(
           {
@@ -132,7 +132,7 @@ describe('Test Paddle Actions', () => {
       });
 
       it('Should create a product', async () => {
-        const action = createPaddleProduct;
+        const action = CreatePaddleProduct;
 
         if (!('api_function' in action)) throw new Error('api_function not found in action');
         const name = `[To Delete] Test Product ${Date.now()}`;
@@ -157,7 +157,7 @@ describe('Test Paddle Actions', () => {
       });
 
       it('Should list products', async () => {
-        const action = listPaddleProducts;
+        const action = ListPaddleProducts;
 
         if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -175,7 +175,7 @@ describe('Test Paddle Actions', () => {
       });
 
       it('Should update a product', async () => {
-        const action = updatePaddleProduct;
+        const action = UpdatePaddleProduct;
 
         if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -198,7 +198,7 @@ describe('Test Paddle Actions', () => {
 
     describe('Should test Paddle prices', () => {
       it('Should get a price', async () => {
-        const action = getPaddlePrice;
+        const action = GetPaddlePrice;
 
         if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -217,7 +217,7 @@ describe('Test Paddle Actions', () => {
       });
 
       it('Should create a price', async () => {
-        const action = createPaddlePrice;
+        const action = CreatePaddlePrice;
 
         if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -242,7 +242,7 @@ describe('Test Paddle Actions', () => {
       });
 
       it('Should update a price', async () => {
-        const action = updatePaddlePrice;
+        const action = UpdatePaddlePrice;
 
         if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -262,7 +262,7 @@ describe('Test Paddle Actions', () => {
       });
 
       it('Should list prices', async () => {
-        const action = listPaddlePrices;
+        const action = ListPaddlePrices;
 
         if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -282,7 +282,7 @@ describe('Test Paddle Actions', () => {
 
     describe('Should test Paddle customers', () => {
       it('Should create a customer', async () => {
-        const action = createPaddleCustomer;
+        const action = CreatePaddleCustomer;
 
         if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -303,7 +303,7 @@ describe('Test Paddle Actions', () => {
       });
 
       it('Should update a customer', async () => {
-        const action = updatePaddleCustomer;
+        const action = UpdatePaddleCustomer;
         if (!('api_function' in action)) throw new Error('api_function not found in action');
 
         const name = `Updated Test Customer ${Date.now()}`;
@@ -322,7 +322,7 @@ describe('Test Paddle Actions', () => {
         expect(result.name).toBe(name);
       });
       it('Should get a customer', async () => {
-        const action = getPaddleCustomer;
+        const action = GetPaddleCustomer;
 
         if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -360,7 +360,7 @@ describe('Test Paddle Actions', () => {
       // });
 
       it('Should get a customer auth token', async () => {
-        const action = getPaddleCustomerAuthToken;
+        const action = GetPaddleCustomerAuthToken;
 
         if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -377,7 +377,7 @@ describe('Test Paddle Actions', () => {
       });
 
       it('Should list customers', async () => {
-        const action = listPaddleCustomers;
+        const action = ListPaddleCustomers;
 
         if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -397,7 +397,7 @@ describe('Test Paddle Actions', () => {
 
     describe('Should test Paddle transactions', () => {
       it('Should create a transaction', async () => {
-        const action = createPaddleTransaction;
+        const action = CreatePaddleTransaction;
 
         if (!('api_function' in action)) throw new Error('api_function not found in action');
         if (!created_price_id || !created_customer_id) {
@@ -424,7 +424,7 @@ describe('Test Paddle Actions', () => {
         created_transaction_id = result.id;
       });
       it('Should get a transaction', async () => {
-        const action = getPaddleTransaction;
+        const action = GetPaddleTransaction;
 
         if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -450,7 +450,7 @@ describe('Test Paddle Actions', () => {
       });
 
       it('Should list transactions', async () => {
-        const action = listPaddleTransactions;
+        const action = ListPaddleTransactions;
 
         if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -547,7 +547,7 @@ describe('Test Paddle Actions', () => {
     describe('Should test Paddle subscriptions', () => {
       let subscription_id: string | undefined;
       it('Should list subscriptions', async () => {
-        const action = listPaddleSubscriptions;
+        const action = ListPaddleSubscriptions;
 
         if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -565,7 +565,7 @@ describe('Test Paddle Actions', () => {
         subscription_id = result[0].id;
       });
       it('Should get a subscription', async () => {
-        const action = getPaddleSubscription;
+        const action = GetPaddleSubscription;
 
         if (!('api_function' in action)) throw new Error('api_function not found in action');
         const result = await action.api_function(
@@ -607,7 +607,7 @@ describe('Test Paddle Actions', () => {
     });
 
     it('Should archive a product', async () => {
-      const action = archivePaddleProduct;
+      const action = ArchivePaddleProduct;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -626,7 +626,7 @@ describe('Test Paddle Actions', () => {
 
   describe('Should test Paddle triggers event example data', () => {
     it('Should get example event data for new transaction trigger', async () => {
-      const trigger = PaddleNewTransactionTrigger;
+      const trigger = NewPaddleTransaction;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');
@@ -637,7 +637,7 @@ describe('Test Paddle Actions', () => {
     });
 
     it('Should get example event data for new subscription trigger', async () => {
-      const trigger = PaddleNewSubscriptionTrigger;
+      const trigger = NewPaddleSubscription;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');
@@ -648,7 +648,7 @@ describe('Test Paddle Actions', () => {
     });
 
     it('Should get example event data for new customer trigger', async () => {
-      const trigger = PaddleNewCustomerTrigger;
+      const trigger = NewPaddleCustomer;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');
@@ -659,7 +659,7 @@ describe('Test Paddle Actions', () => {
     });
 
     it('Should get example event data for new report trigger', async () => {
-      const trigger = PaddleNewReportTrigger;
+      const trigger = NewPaddleReport;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');
@@ -670,7 +670,7 @@ describe('Test Paddle Actions', () => {
     });
 
     it('Should get example event data for new product trigger', async () => {
-      const trigger = PaddleNewProductTrigger;
+      const trigger = NewPaddleProduct;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');

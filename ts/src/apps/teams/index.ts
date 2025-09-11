@@ -2,11 +2,10 @@ import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
-import * as actions from './actions';
 import { TEAMS_APP_LOGO, TEAMS_APP_NAME } from './constants';
-import * as TEAMS_TRIGGERS from './triggers';
 
-const TEAMS_ACTIONS = Object.values(actions);
+import * as TEAMS_ACTIONS from './actions';
+import * as TEAMS_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
   ({

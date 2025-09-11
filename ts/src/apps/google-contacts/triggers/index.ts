@@ -1,1 +1,1 @@
-export { default as GoogleContactsNewContactTrigger } from './new-contact.trigger';
+export { default as NewGoogleContactsContact } from './new-contact.trigger';

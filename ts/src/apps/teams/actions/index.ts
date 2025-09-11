@@ -1,7 +1,7 @@
-export { CreateTeamsChannel } from './create-channel';
-export { CreateTeamsMeeting } from './create-meeting';
-export { DeleteTeamsMeeting } from './delete-meeting';
-export { SendTeamsChannelMessage } from './send-channel-message';
-export { SendTeamsChatMessage } from './send-chat-message';
-export { UpdateTeamsChannel } from './update-channel';
-export { UpdateTeamsMeeting } from './update-meeting';
+export { default as CreateTeamsChannel } from './create-channel';
+export { default as CreateTeamsMeeting } from './create-meeting';
+export { default as DeleteTeamsMeeting } from './delete-meeting';
+export { default as SendTeamsChannelMessage } from './send-channel-message';
+export { default as SendTeamsChatMessage } from './send-chat-message';
+export { default as UpdateTeamsChannel } from './update-channel';
+export { default as UpdateTeamsMeeting } from './update-meeting';

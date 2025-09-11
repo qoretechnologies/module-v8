@@ -20,7 +20,7 @@ const mapGithubRepo = (repo: {
   display_name: repo.name,
   short_desc: repo.full_name || undefined,
   desc: repo.description || undefined,
-  ...(repo?.owner?.avatar_url && { image: repo.owner.avatar_url }),
+  ...(repo.owner?.avatar_url && { image: repo.owner.avatar_url }),
 });
 
 export const getGitHubRepositoryIdAllowedValues: TQoreGetAllowedValuesFunction<

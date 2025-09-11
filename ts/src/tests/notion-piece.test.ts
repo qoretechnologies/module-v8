@@ -370,7 +370,9 @@ describe('notionPieceTest', () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'notion_find_database_item'
     ) as IQoreAppActionWithFunction;
-    const actionFunction = action?.api_function;
+    expect(action).toBeDefined();
+
+    const actionFunction = action.api_function;
 
     expect(actionFunction).toBeDefined();
     expect(database).toBeDefined();
@@ -388,7 +390,10 @@ describe('notionPieceTest', () => {
     const action = notionApp.actions.find(
       (action) => action.action === 'remove_page'
     ) as IQoreAppActionWithFunction;
-    const actionFunction = action?.api_function;
+
+    expect(action).toBeDefined();
+
+    const actionFunction = action.api_function;
 
     const pages = await action.options!.pageId.get_allowed_values!(actionContext);
     const pageId = pages.find(

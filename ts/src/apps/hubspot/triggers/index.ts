@@ -1,8 +1,8 @@
-export { default as hubspotCompanyCreatedOrUpdatedTrigger } from './company-created-or-updated.trigger';
-export { default as hubspotContactCreatedOrUpdatedTrigger } from './contact-created-or-updated.trigger';
-export { default as hubspotCustomObjectCreatedOrUpdatedTrigger } from './custom-object-created-or-updated.trigger';
-export { default as hubspotDealCreatedOrUpdatedTrigger } from './deal-created-or-updated.trigger';
-export { default as hubspotLeadCreatedOrUpdatedTrigger } from './lead-created-or-updated.trigger';
-export { default as hubspotProductCreatedOrUpdatedTrigger } from './product-created-or-updated.trigger';
-export { default as hubspotTicketCreatedOrUpdatedTrigger } from './ticket-created-or-updated.trigger';
-export { default as hubspotUserCreatedOrUpdatedTrigger } from './user-created-or-updated.trigger';
+export { default as HubspotCompanyCreatedOrUpdated } from './company-created-or-updated.trigger';
+export { default as HubspotContactCreatedOrUpdated } from './contact-created-or-updated.trigger';
+export { default as HubspotCustomObjectCreatedOrUpdated } from './custom-object-created-or-updated.trigger';
+export { default as HubspotDealCreatedOrUpdated } from './deal-created-or-updated.trigger';
+export { default as HubspotLeadCreatedOrUpdated } from './lead-created-or-updated.trigger';
+export { default as HubspotProductCreatedOrUpdated } from './product-created-or-updated.trigger';
+export { default as HubspotTicketCreatedOrUpdated } from './ticket-created-or-updated.trigger';
+export { default as HubspotUserCreatedOrUpdated } from './user-created-or-updated.trigger';

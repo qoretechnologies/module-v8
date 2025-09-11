@@ -1,15 +1,15 @@
 import { configDotenv } from 'dotenv';
 import {
-  createOdooLead,
-  createOdooPartner,
-  deleteOdooLead,
-  deleteOdooPartner,
-  getOdooLead,
-  getOdooPartner,
-  listOdooCompanies,
-  listOdooLeads,
-  listOdooPartners,
-  updateOdooLead,
+  CreateOdooLead,
+  CreateOdooPartner,
+  DeleteOdooLead,
+  DeleteOdooPartner,
+  GetOdooLead,
+  GetOdooPartner,
+  ListOdooCompanies,
+  ListOdooLeads,
+  ListOdooPartners,
+  UpdateOdooLead,
 } from '../apps/odoo/actions';
 import { getOdooActivityIdAllowedValues } from '../apps/odoo/helpers/get-activity-type-allowed-values';
 import { getOdooUtmCampaignIdAllowedValues } from '../apps/odoo/helpers/get-campaign-allowed-values';
@@ -184,7 +184,7 @@ describe('Tests Odoo Actions', () => {
     let created_partner_id: number | undefined;
 
     it('Should get a lead', async () => {
-      const action = getOdooLead;
+      const action = GetOdooLead;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -201,7 +201,7 @@ describe('Tests Odoo Actions', () => {
     });
 
     it('Should list leads', async () => {
-      const action = listOdooLeads;
+      const action = ListOdooLeads;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -223,7 +223,7 @@ describe('Tests Odoo Actions', () => {
     });
 
     it('should create a lead using all available fields', async () => {
-      const action = createOdooLead;
+      const action = CreateOdooLead;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const result = await action.api_function(
@@ -242,7 +242,7 @@ describe('Tests Odoo Actions', () => {
     });
 
     it('Should update a lead', async () => {
-      const action = updateOdooLead;
+      const action = UpdateOdooLead;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -260,7 +260,7 @@ describe('Tests Odoo Actions', () => {
     });
 
     it('Should delete a lead', async () => {
-      const action = deleteOdooLead;
+      const action = DeleteOdooLead;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -277,7 +277,7 @@ describe('Tests Odoo Actions', () => {
     });
 
     it('Should list partners', async () => {
-      const action = listOdooPartners;
+      const action = ListOdooPartners;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const result = await action.api_function(
@@ -297,7 +297,7 @@ describe('Tests Odoo Actions', () => {
     });
 
     it('Should list companies', async () => {
-      const action = listOdooCompanies;
+      const action = ListOdooCompanies;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const result = await action.api_function(
@@ -317,7 +317,7 @@ describe('Tests Odoo Actions', () => {
     });
 
     it('Should create a partner', async () => {
-      const action = createOdooPartner;
+      const action = CreateOdooPartner;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const result = await action.api_function(
@@ -334,7 +334,7 @@ describe('Tests Odoo Actions', () => {
     });
 
     it('Should get a partner', async () => {
-      const action = getOdooPartner;
+      const action = GetOdooPartner;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -351,7 +351,7 @@ describe('Tests Odoo Actions', () => {
     });
 
     it('Should delete a partner', async () => {
-      const action = deleteOdooPartner;
+      const action = DeleteOdooPartner;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 

@@ -10,7 +10,7 @@ import {
 } from '../apps/intercom/helpers/get-lead-id-allowed-values';
 import { getIntercomSectionIdAllowedValues } from '../apps/intercom/helpers/get-section-id-allowed-values';
 import { getIntercomTagIdAllowedValues } from '../apps/intercom/helpers/get-tag-id-allowed-values';
-import { IntercomNewConversationTrigger } from '../apps/intercom/triggers';
+import { NewIntercomConversation } from '../apps/intercom/triggers';
 import { delay } from '../global/helpers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 
@@ -163,7 +163,7 @@ describe('Should test Intercom integration', () => {
     });
 
     it('Should get example event data for new conversation trigger', async () => {
-      const trigger = IntercomNewConversationTrigger;
+      const trigger = NewIntercomConversation;
 
       if ('get_example_event_data' in trigger) {
         const createdData = await trigger.get_example_event_data!({

@@ -51,7 +51,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const SendTeamsChannelMessage = QoreAppCreator.createLocalizedAction<typeof options>({
+const SendTeamsChannelMessage = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'send-channel-message',
   app: TEAMS_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -104,3 +104,5 @@ export const SendTeamsChannelMessage = QoreAppCreator.createLocalizedAction<type
   options,
   response_type,
 });
+
+export default SendTeamsChannelMessage;

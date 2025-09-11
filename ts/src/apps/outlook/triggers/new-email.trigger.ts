@@ -124,7 +124,7 @@ const OutlookNewEmailTrigger = QoreAppCreator.createLocalizedTrigger<
     });
   },
   get_example_event_data: async (context) => {
-    const token = context?.conn_opts?.token;
+    const token = context.conn_opts?.token;
     const includeAttachmentData = context.opts?.includeAttachmentData || false;
 
     if (!token) {

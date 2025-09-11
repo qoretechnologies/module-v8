@@ -12,7 +12,7 @@ import { getAirtableRecordAllowedValues } from '../apps/airtable/helpers/get-rec
 import { getAirtableTableFieldsAllowedValues } from '../apps/airtable/helpers/get-table-fields-allowed-values';
 import { getAirtableTableIdAllowedValues } from '../apps/airtable/helpers/get-table-id-allowed-values';
 import { getAirtableViewsAllowedValues } from '../apps/airtable/helpers/get-view-id-allowed-values';
-import { AirtableNewRecordTrigger } from '../apps/airtable/triggers';
+import { NewAirtableRecord } from '../apps/airtable/triggers';
 
 configDotenv({ path: '.env' });
 
@@ -200,7 +200,7 @@ describe('Test Airtable Actions', () => {
 
   describe('Should test Airtable triggers event example data', () => {
     it('Should get example event data for new record trigger', async () => {
-      const trigger = AirtableNewRecordTrigger;
+      const trigger = NewAirtableRecord;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');

@@ -7,18 +7,18 @@ import {
 
 import { createGoogleDriveClient } from '../apps/google-drive/helpers/constants';
 import {
-  addSpreadsheetRows,
-  clearSpreadsheetRows,
-  copyWorksheet,
-  createSpreadsheet,
-  createWorksheet,
-  findSpreadsheetRows,
-  formatSpreadsheetRows,
-  searchWorksheets,
-  updateSpreadsheetRows,
+  AddGoogleSheetsSpreadsheetRows,
+  ClearGoogleSheetsSpreadsheetRows,
+  CopyGoogleSheetsWorksheet,
+  CreateGoogleSheetsSpreadsheet,
+  CreateGoogleSheetsSpreadsheetColumn,
+  CreateGoogleSheetsWorksheet,
+  DeleteGoogleSheetsSpreadsheetRow,
+  FindGoogleSheetsSpreadsheetRows,
+  FormatGoogleSheetsSpreadsheetRows,
+  SearchGoogleSheetsWorksheets,
+  UpdateGoogleSheetsSpreadsheetRows,
 } from '../apps/google-sheets/actions';
-import createSpreadsheetColumn from '../apps/google-sheets/actions/add-spreadsheet-column.action';
-import deleteRow from '../apps/google-sheets/actions/delete-spreadsheet-row.action';
 import { createGoogleSheetsClient } from '../apps/google-sheets/helpers/constants';
 import { getGoogleDriveFileIdAllowedValues } from '../apps/google-sheets/helpers/get-drive-file-id-allowed-values';
 import { getGoogleSheetHeadersAllowedValues } from '../apps/google-sheets/helpers/get-headers-allowed-values';
@@ -138,7 +138,7 @@ describe('Google Sheets', () => {
 
   describe('Should test google sheets actions', () => {
     it('Should clear spreadsheet rows', async () => {
-      const action = clearSpreadsheetRows as IQoreAppActionWithFunction;
+      const action = ClearGoogleSheetsSpreadsheetRows as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           spreadsheet_id: spreadsheetId,
@@ -153,7 +153,7 @@ describe('Google Sheets', () => {
     });
 
     it('Should search for worksheets', async () => {
-      const action = searchWorksheets as IQoreAppActionWithFunction;
+      const action = SearchGoogleSheetsWorksheets as IQoreAppActionWithFunction;
 
       const result = await action.api_function(
         {
@@ -169,7 +169,7 @@ describe('Google Sheets', () => {
     });
 
     it('Should copy worksheet', async () => {
-      const action = copyWorksheet as IQoreAppActionWithFunction;
+      const action = CopyGoogleSheetsWorksheet as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           source_spreadsheet_id: spreadsheetId,
@@ -188,7 +188,7 @@ describe('Google Sheets', () => {
     });
 
     it('Should add spreadsheet rows', async () => {
-      const action = addSpreadsheetRows as IQoreAppActionWithFunction;
+      const action = AddGoogleSheetsSpreadsheetRows as IQoreAppActionWithFunction;
       const rows: Record<string, string> = {};
       if (!rowOptions) {
         throw new Error('Row options are not defined');
@@ -210,7 +210,7 @@ describe('Google Sheets', () => {
     });
 
     it('Should create a copy of the spreadsheet', async () => {
-      const action = createSpreadsheet as IQoreAppActionWithFunction;
+      const action = CreateGoogleSheetsSpreadsheet as IQoreAppActionWithFunction;
 
       const result = await action.api_function(
         {
@@ -230,7 +230,7 @@ describe('Google Sheets', () => {
     });
 
     it('Should create a spreadsheet with headers', async () => {
-      const action = createSpreadsheet as IQoreAppActionWithFunction;
+      const action = CreateGoogleSheetsSpreadsheet as IQoreAppActionWithFunction;
 
       const result = await action.api_function(
         {
@@ -248,7 +248,7 @@ describe('Google Sheets', () => {
     });
 
     it('Should create a spreadsheet column', async () => {
-      const action = createSpreadsheetColumn as IQoreAppActionWithFunction;
+      const action = CreateGoogleSheetsSpreadsheetColumn as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           spreadsheet_id: spreadsheetId,
@@ -265,7 +265,7 @@ describe('Google Sheets', () => {
     });
 
     it('Should create a worksheet', async () => {
-      const action = createWorksheet as IQoreAppActionWithFunction;
+      const action = CreateGoogleSheetsWorksheet as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           spreadsheet_id: spreadsheetId,
@@ -285,7 +285,7 @@ describe('Google Sheets', () => {
     });
 
     it('Should search for rows', async () => {
-      const action = findSpreadsheetRows as IQoreAppActionWithFunction;
+      const action = FindGoogleSheetsSpreadsheetRows as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           spreadsheet_id: spreadsheetId,
@@ -307,7 +307,7 @@ describe('Google Sheets', () => {
     });
 
     it('Should delete a row', async () => {
-      const action = deleteRow as IQoreAppActionWithFunction;
+      const action = DeleteGoogleSheetsSpreadsheetRow as IQoreAppActionWithFunction;
 
       const result = await action.api_function(
         {
@@ -324,7 +324,7 @@ describe('Google Sheets', () => {
     });
 
     it('Should format spreadsheet rows', async () => {
-      const action = formatSpreadsheetRows as IQoreAppActionWithFunction;
+      const action = FormatGoogleSheetsSpreadsheetRows as IQoreAppActionWithFunction;
 
       const result = await action.api_function(
         {
@@ -360,7 +360,7 @@ describe('Google Sheets', () => {
     });
 
     it('Should update spreadsheet rows', async () => {
-      const action = updateSpreadsheetRows as IQoreAppActionWithFunction;
+      const action = UpdateGoogleSheetsSpreadsheetRows as IQoreAppActionWithFunction;
 
       const result = await action.api_function(
         {

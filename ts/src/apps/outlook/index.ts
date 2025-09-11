@@ -1,12 +1,11 @@
 import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import L from '../../i18n/i18n-node';
 import { OUTLOOK_APP_LOGO, OUTLOOK_APP_NAME } from './constants';
-import * as OUTLOOK_TRIGGERS from './triggers';
-import * as actions from './actions';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import { Locales } from '../../i18n/i18n-types';
 
-const OUTLOOK_ACTIONS = Object.values(actions);
+import * as OUTLOOK_ACTIONS from './actions';
+import * as OUTLOOK_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
   ({

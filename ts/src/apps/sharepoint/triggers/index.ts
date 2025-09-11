@@ -1,1 +1,1 @@
-export { default as sharePointNewRowTrigger } from './new-row.trigger';
+export { default as NewSharePointRow } from './new-row.trigger';

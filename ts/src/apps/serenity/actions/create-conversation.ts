@@ -45,7 +45,7 @@ const response_type = {
   fields: {},
 } satisfies TQoreResponseType;
 
-export const CreateSerenityConversation = QoreAppCreator.createLocalizedAction<typeof options>({
+const CreateSerenityConversation = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'create-conversation',
   app: SERENITY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -100,3 +100,5 @@ export const CreateSerenityConversation = QoreAppCreator.createLocalizedAction<t
   options,
   response_type,
 });
+
+export default CreateSerenityConversation;

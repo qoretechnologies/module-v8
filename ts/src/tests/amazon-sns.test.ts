@@ -1,14 +1,14 @@
 import { configDotenv } from 'dotenv';
 import {
-  addAmazonSNSSubscriber,
-  createAmazonSNSJsonMessage,
-  createAmazonSNSMessage,
-  createAmazonSNSTopic,
-  getAmazonSNSTopic,
-  listAmazonSNSTopics,
+  AddAmazonSNSSubscriber,
+  CreateAmazonSNSJsonMessage,
+  CreateAmazonSNSMessage,
+  CreateAmazonSNSTopic,
+  GetAmazonSNSTopic,
+  ListAmazonSNSTopics,
 } from '../apps/amazon-sns/actions';
 import { getAmazonSNSTopicAllowedValues } from '../apps/amazon-sns/helpers/get-topic-allowed-values';
-import { NewAmazonSNSTopicTrigger } from '../apps/amazon-sns/triggers';
+import { NewAmazonSNSTopic } from '../apps/amazon-sns/triggers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import { createSNSClient } from '../apps/amazon-sns/helpers/constants';
 import { DeleteTopicCommand } from '@aws-sdk/client-sns';
@@ -60,7 +60,7 @@ describe('Amazon SNS', () => {
 
   describe('Should test actions', () => {
     it('Should create a test topic', async () => {
-      const action = createAmazonSNSTopic;
+      const action = CreateAmazonSNSTopic;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -89,7 +89,7 @@ describe('Amazon SNS', () => {
     });
 
     it('Should list topics', async () => {
-      const action = listAmazonSNSTopics;
+      const action = ListAmazonSNSTopics;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -112,7 +112,7 @@ describe('Amazon SNS', () => {
     });
 
     it('Should get topic details if topics exist', async () => {
-      const action = getAmazonSNSTopic;
+      const action = GetAmazonSNSTopic;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const result = await action.api_function(
@@ -135,7 +135,7 @@ describe('Amazon SNS', () => {
     });
 
     it('Should add a subscriber to a topic', async () => {
-      const action = addAmazonSNSSubscriber;
+      const action = AddAmazonSNSSubscriber;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -155,7 +155,7 @@ describe('Amazon SNS', () => {
     });
 
     it('Should create a plain text message if topics exist', async () => {
-      const action = createAmazonSNSMessage;
+      const action = CreateAmazonSNSMessage;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const testMessage = 'This is a test message from Qorus SNS integration test';
@@ -190,7 +190,7 @@ describe('Amazon SNS', () => {
     });
 
     it('Should create a JSON message if topics exist', async () => {
-      const action = createAmazonSNSJsonMessage;
+      const action = CreateAmazonSNSJsonMessage;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const testJsonMessage = {
@@ -237,7 +237,7 @@ describe('Amazon SNS', () => {
 
   describe('Should test triggers event example data', () => {
     it('Should get example event data for new topic trigger', async () => {
-      const trigger = NewAmazonSNSTopicTrigger;
+      const trigger = NewAmazonSNSTopic;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');

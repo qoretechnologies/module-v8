@@ -104,7 +104,7 @@ const searchPagePosts = QoreAppCreator.createLocalizedAction<typeof options>({
       }
 
       const postsResponse = await pageWithToken.getPosts(fields, params);
-      let posts: Record<string, any>[] = postsResponse;
+      let posts: Record<string, any>[] = postsResponse || [];
       const cursors = postsResponse?.paging?.cursors;
 
       if (searchText) {

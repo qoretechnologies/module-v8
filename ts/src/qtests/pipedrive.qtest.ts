@@ -24,10 +24,10 @@ import { getPipedriveTaskIdAllowedValues } from '../apps/pipedrive/helpers/get-t
 import { getPipedriveUserIdAllowedValues } from '../apps/pipedrive/helpers/get-user-id-allowed-values';
 import { delay } from '../global/helpers';
 import {
-  pipedriveActivityTrigger,
-  pipedriveDealTrigger,
-  pipedriveLeadTrigger,
-  pipedriveNoteTrigger,
+  PipedriveActivityTrigger,
+  PipedriveDealTrigger,
+  PipedriveLeadTrigger,
+  PipedriveNoteTrigger,
 } from '../apps/pipedrive/triggers';
 
 let connection: string;
@@ -713,7 +713,7 @@ describe('Tests Pipedrive  actions', () => {
     describe('Should test new activity trigger registration', () => {
       let webhook: void | Record<string, any>;
       it('Should register new activity trigger', async () => {
-        const trigger = pipedriveActivityTrigger as IQoreAppActionWithWebhookBase;
+        const trigger = PipedriveActivityTrigger as IQoreAppActionWithWebhookBase;
 
         const webhookData = await trigger.webhook_register(
           {
@@ -733,7 +733,7 @@ describe('Tests Pipedrive  actions', () => {
       it('Should deregister new activity trigger', async () => {
         expect(webhook).toBeDefined();
 
-        const trigger = pipedriveActivityTrigger as IQoreAppActionWithWebhookBase;
+        const trigger = PipedriveActivityTrigger as IQoreAppActionWithWebhookBase;
 
         await trigger.webhook_deregister(baseContext, 'https://example.com', { webhook });
       });
@@ -743,7 +743,7 @@ describe('Tests Pipedrive  actions', () => {
       let webhook: void | Record<string, any>;
 
       it('Should register deal trigger', async () => {
-        const trigger = pipedriveDealTrigger as IQoreAppActionWithWebhookBase;
+        const trigger = PipedriveDealTrigger as IQoreAppActionWithWebhookBase;
 
         const webhookData = await trigger.webhook_register(
           {
@@ -764,7 +764,7 @@ describe('Tests Pipedrive  actions', () => {
       it('Should deregister deal trigger', async () => {
         expect(webhook).toBeDefined();
 
-        const trigger = pipedriveDealTrigger as IQoreAppActionWithWebhookBase;
+        const trigger = PipedriveDealTrigger as IQoreAppActionWithWebhookBase;
 
         await trigger.webhook_deregister(baseContext, 'https://example.com', { webhook });
       });
@@ -774,7 +774,7 @@ describe('Tests Pipedrive  actions', () => {
       let webhook: void | Record<string, any>;
 
       it('Should register lead trigger', async () => {
-        const trigger = pipedriveLeadTrigger as IQoreAppActionWithWebhookBase;
+        const trigger = PipedriveLeadTrigger as IQoreAppActionWithWebhookBase;
 
         const webhookData = await trigger.webhook_register(
           {
@@ -795,7 +795,7 @@ describe('Tests Pipedrive  actions', () => {
       it('Should deregister lead trigger', async () => {
         expect(webhook).toBeDefined();
 
-        const trigger = pipedriveLeadTrigger as IQoreAppActionWithWebhookBase;
+        const trigger = PipedriveLeadTrigger as IQoreAppActionWithWebhookBase;
 
         await trigger.webhook_deregister(baseContext, 'https://example.com', { webhook });
       });
@@ -805,7 +805,7 @@ describe('Tests Pipedrive  actions', () => {
       let webhook: void | Record<string, any>;
 
       it('Should register note trigger', async () => {
-        const trigger = pipedriveNoteTrigger as IQoreAppActionWithWebhookBase;
+        const trigger = PipedriveNoteTrigger as IQoreAppActionWithWebhookBase;
 
         const webhookData = await trigger.webhook_register(
           {
@@ -826,7 +826,7 @@ describe('Tests Pipedrive  actions', () => {
       it('Should deregister note trigger', async () => {
         expect(webhook).toBeDefined();
 
-        const trigger = pipedriveNoteTrigger as IQoreAppActionWithWebhookBase;
+        const trigger = PipedriveNoteTrigger as IQoreAppActionWithWebhookBase;
 
         await trigger.webhook_deregister(baseContext, 'https://example.com', { webhook });
       });

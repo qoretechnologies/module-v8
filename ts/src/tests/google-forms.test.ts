@@ -2,11 +2,11 @@ import { IQoreAppActionWithFunction } from '@qoretechnologies/ts-toolkit';
 
 import { createGoogleDriveClient } from '../apps/google-drive/helpers/constants';
 import {
-  createGoogleForm,
-  getGoogleFormById,
-  getGoogleFormResponseById,
-  getGoogleFormResponses,
-  searchGoogleForms,
+  CreateGoogleForm,
+  GetGoogleFormById,
+  GetGoogleFormResponseById,
+  GetGoogleFormResponses,
+  SearchGoogleForms,
 } from '../apps/google-forms/actions';
 import { getGoogleFormIdAllowedValues } from '../apps/google-forms/helpers/get-form-id-allowed-values';
 import { getGoogleFormQuestionIdAllowedValues } from '../apps/google-forms/helpers/get-form-question-id-allowed-values';
@@ -110,7 +110,7 @@ describe('Google Drive', () => {
 
   describe('Should test google forms actions', () => {
     it('Should create a new form', async () => {
-      const action = createGoogleForm as IQoreAppActionWithFunction;
+      const action = CreateGoogleForm as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           title: 'Ultimate Test Form',
@@ -199,7 +199,7 @@ describe('Google Drive', () => {
     });
 
     it('Should get form by ID', async () => {
-      const action = getGoogleFormById as IQoreAppActionWithFunction;
+      const action = GetGoogleFormById as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           form_id: createdFormId,
@@ -213,7 +213,7 @@ describe('Google Drive', () => {
     });
 
     it('Should search forms', async () => {
-      const action = searchGoogleForms as IQoreAppActionWithFunction;
+      const action = SearchGoogleForms as IQoreAppActionWithFunction;
 
       const result = await action.api_function(
         {
@@ -231,7 +231,7 @@ describe('Google Drive', () => {
     });
 
     it('Should get form responses', async () => {
-      const action = getGoogleFormResponses as IQoreAppActionWithFunction;
+      const action = GetGoogleFormResponses as IQoreAppActionWithFunction;
 
       const result = await action.api_function(
         {
@@ -248,7 +248,7 @@ describe('Google Drive', () => {
     });
 
     it('Should get form response by ID', async () => {
-      const action = getGoogleFormResponseById as IQoreAppActionWithFunction;
+      const action = GetGoogleFormResponseById as IQoreAppActionWithFunction;
 
       const result = await action.api_function(
         {

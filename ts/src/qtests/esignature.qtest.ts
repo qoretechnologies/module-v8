@@ -77,9 +77,9 @@ describe('Tests eSignature Actions', () => {
 
   describe('Should test trigger creation', () => {
     it('Should create an envelope status update trigger', async () => {
-      const trigger = ESIGNATURE_TRIGGERS['envelopeStatusUpdated'] as IQoreAppActionWithWebhookBase<
-        typeof ESIGNATURE_CONN_OPTIONS
-      >;
+      const trigger = ESIGNATURE_TRIGGERS[
+        'UpdatedEsignatureEnvelopeStatus'
+      ] as IQoreAppActionWithWebhookBase<typeof ESIGNATURE_CONN_OPTIONS>;
 
       expect(trigger).toBeDefined();
       expect(trigger.webhook_register).toBeDefined();
@@ -122,9 +122,9 @@ describe('Tests eSignature Actions', () => {
     });
 
     it('Should create a template status update trigger', async () => {
-      const trigger = ESIGNATURE_TRIGGERS['templateUpdated'] as IQoreAppActionWithWebhookBase<
-        typeof ESIGNATURE_CONN_OPTIONS
-      >;
+      const trigger = ESIGNATURE_TRIGGERS[
+        'UpdatedEsignatureTemplate'
+      ] as IQoreAppActionWithWebhookBase<typeof ESIGNATURE_CONN_OPTIONS>;
 
       expect(trigger).toBeDefined();
       expect(trigger.webhook_register).toBeDefined();

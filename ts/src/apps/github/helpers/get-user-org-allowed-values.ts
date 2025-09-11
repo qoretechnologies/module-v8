@@ -29,7 +29,7 @@ export const getGitHubOrgAllowedValues: TQoreGetAllowedValuesFunction = async (
             value: org.login,
             display_name: org.login,
             desc: org.description || undefined,
-            image: org?.avatar_url,
+            image: org.avatar_url,
           })
         )
       );

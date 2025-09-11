@@ -41,10 +41,10 @@ const fetchJiraWorklogs = async ({
 
 const mapJiraWorklog = (worklog: any): IQoreAllowedValue => ({
   value: worklog.id,
-  display_name: `${worklog?.id} - ${worklog?.timeSpent}`,
+  display_name: `${worklog.id} - ${worklog.timeSpent}`,
   desc:
-    `Id: ${worklog?.id}\n\nAuthor: ${worklog?.author?.displayName}\n\n` +
-    `Started: ${new Date(worklog?.started).toUTCString()}\n\nTime spent: ${worklog?.timeSpent}\n\n`,
+    `Id: ${worklog.id}\n\nAuthor: ${worklog.author?.displayName}\n\n` +
+    `Started: ${new Date(worklog.started).toUTCString()}\n\nTime spent: ${worklog.timeSpent}\n\n`,
 });
 
 export const getJiraWorklogIdAllowedValues: TQoreGetAllowedValuesFunction<

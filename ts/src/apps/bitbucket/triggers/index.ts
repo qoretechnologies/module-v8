@@ -1,3 +1,3 @@
-export { default as BitbucketNewDeploymentTrigger } from './new-deployment.trigger';
-export { default as BitbucketNewPullRequestTrigger } from './new-pull-request.trigger';
-export { default as BitbucketNewCommitTrigger } from './new-commit.trigger';
+export { default as NewBitbucketDeployment } from './new-deployment.trigger';
+export { default as NewBitbucketPullRequest } from './new-pull-request.trigger';
+export { default as NewBitbucketCommit } from './new-commit.trigger';

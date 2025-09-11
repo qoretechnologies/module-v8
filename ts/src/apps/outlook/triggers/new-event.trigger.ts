@@ -46,7 +46,7 @@ const OutlookNewEventTrigger = QoreAppCreator.createLocalizedTrigger({
     });
   },
   get_example_event_data: async (context) => {
-    const token = context?.conn_opts?.token;
+    const token = context.conn_opts?.token;
     const calendarId = context.opts?.calendarId;
 
     if (!token) {
