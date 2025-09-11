@@ -3,9 +3,8 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { Octokit } from '@octokit/rest';
 import { Debugger } from '../../../utils/Debugger';
-import { GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
+import { createGitHubClient, GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 const PER_PAGE = 100;
 
@@ -34,9 +33,7 @@ export const getGitHubRepositoryIdAllowedValues: TQoreGetAllowedValuesFunction<
     throw new Error('The token is required to get Github repository allowed values');
   }
 
-  const octokit = new Octokit({
-    auth: token,
-  });
+  const octokit = await createGitHubClient(token);
 
   Debugger.log('Github Repo allowed values opts', {
     opts: context.opts,

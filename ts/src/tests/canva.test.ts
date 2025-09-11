@@ -1,4 +1,3 @@
-import { Octokit } from '@octokit/rest';
 import { configDotenv } from 'dotenv';
 import _sodium from 'libsodium-wrappers';
 import {
@@ -16,6 +15,7 @@ import { getCanvaDesignAllowedValues } from '../apps/canva/helpers/get-design-al
 import { NewCanvaDesign, NewCanvaThreadReply } from '../apps/canva/triggers';
 import { encryptGitHubSecret } from '../qtests/utils';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import { createGitHubClient } from '../apps/github/helpers/constants';
 
 configDotenv({ path: '.env' });
 Debugger.level = DebugLevels.Verbose;
@@ -323,9 +323,7 @@ const updateCanvaRefreshTokenVariable = async (refreshToken: string) => {
   try {
     await _sodium.ready;
 
-    const octokit = new Octokit({
-      auth: ghPatForSecrets,
-    });
+    const octokit = await createGitHubClient(ghPatForSecrets);
 
     const { data: publicKeyData } = await octokit.rest.actions.getRepoPublicKey({
       owner: ghModuleRepoOwner,

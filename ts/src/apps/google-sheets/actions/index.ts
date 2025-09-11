@@ -1,4 +1,3 @@
-export { default as AddGoogleSheetsSpreadsheetColumn } from './add-spreadsheet-column.action';
 export { default as AddGoogleSheetsSpreadsheetRows } from './add-spreadsheet-rows.action';
 export { default as ClearGoogleSheetsSpreadsheetRows } from './clear-spreadsheet-rows.action';
 export { default as CopyGoogleSheetsWorksheet } from './copy-worksheet.action';
