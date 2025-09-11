@@ -1499,6 +1499,12 @@ public class TypeScriptActionInterface {
                     "\"webhook_confirmation_method\" attribute; got type %y; expecting \"string\"", action.app,
                     action.action, webhook_confirmation_url_loc.fullType());
             }
+            auto webhook_assume_json = remove action.webhook_assume_json;
+            if (exists webhook_assume_json && (webhook_assume_json.typeCode() != NT_STRING)) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"webhook_assume_json\" "
+                    "attribute; got type %y; expecting \"string\"", action.app, action.action,
+                    webhook_assume_json.fullType());
+            }
             TypeScriptActionInterface::registerAsyncCall(\webhook_register, "app", app.name, action.action);
             TypeScriptActionInterface::registerAsyncCall(\webhook_deregister, "app", app.name, action.action);
 
@@ -1506,7 +1512,7 @@ public class TypeScriptActionInterface {
                 get_example_event_data, get_dynamic_type, fctx, method, webhook_register, webhook_deregister,
                 webhook_auth, webhook_perms, webhook_event_loc, webhook_echo_header, webhook_echo_body_keys,
                 webhook_confirmation_key_loc, webhook_confirmation_value, webhook_confirmation_url_loc,
-                webhook_confirmation_method);
+                webhook_confirmation_method, webhook_assume_json);
             rv = AES_WH_EVENT;
         } else {
             auto event_function = remove action.event_function;
