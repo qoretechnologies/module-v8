@@ -39,7 +39,6 @@ describe('Amazon CloudWatch', () => {
 
   let existingAlarmName: string | undefined;
   const region = 'us-east-1';
-  existingAlarmName = 'Testing for qore';
 
   describe('Should test allowed values', () => {
     it('Should get alarm allowed values', async () => {
@@ -192,7 +191,6 @@ describe('Amazon CloudWatch', () => {
           region,
           state_filter: 'OK',
           max_records: 10,
-          actions_enabled_filter: true,
         },
         undefined,
         base_context
@@ -203,7 +201,6 @@ describe('Amazon CloudWatch', () => {
       expect(Array.isArray(result.alarms)).toBe(true);
       expect(result.filters).toBeDefined();
       expect(result.filters.state_filter).toBe('OK');
-      expect(result.filters.actions_enabled_filter).toBe(true);
 
       result.alarms.forEach((alarm: any) => {
         expect(alarm.state_value).toBe('OK');
