@@ -61,7 +61,7 @@ export const getTeamsChatIdAllowedValues: TQoreGetAllowedValuesFunction<
 
         const membersDesc =
           members.length > 0
-            ? `Members:\n${members.map((member) => `- ${member.displayName}` || 'Unknown').join('\n')}`
+            ? `Members:\n${members.map((member) => `- ${member.displayName || 'Unknown'}`).join('\n')}`
             : 'Members: None';
 
         allowedValues.push({

@@ -22,7 +22,6 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': ['warn', { fixToUnknown: true }],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
     'max-len': ['error', { code: 120, ignorePattern: '^import .*' }],
     'no-console': 'warn',
     'require-await': 'error',
