@@ -7430,6 +7430,402 @@ type RootTranslation = {
 				}
 			}
 		}
+		AmazonCloudWatch: {
+			/**
+			 * A​m​a​z​o​n​ ​C​l​o​u​d​W​a​t​c​h
+			 */
+			displayName: string
+			/**
+			 * M​o​n​i​t​o​r​ ​A​W​S​ ​r​e​s​o​u​r​c​e​s​ ​a​n​d​ ​a​p​p​l​i​c​a​t​i​o​n​s​ ​w​i​t​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​l​a​r​m​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​r​e​a​l​-​t​i​m​e​ ​s​t​a​t​e​ ​t​r​a​c​k​i​n​g​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​A​m​a​z​o​n​ ​C​l​o​u​d​W​a​t​c​h​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​l​e​t​e​ ​a​c​c​e​s​s​ ​t​o​ ​A​W​S​ ​m​o​n​i​t​o​r​i​n​g​ ​a​n​d​ ​a​l​e​r​t​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​.​ ​M​o​n​i​t​o​r​ ​a​l​a​r​m​ ​s​t​a​t​e​ ​c​h​a​n​g​e​s​,​ ​m​a​n​a​g​e​ ​a​l​a​r​m​ ​a​c​t​i​o​n​s​,​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​a​l​a​r​m​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​r​e​s​p​o​n​s​e​s​ ​t​o​ ​i​n​f​r​a​s​t​r​u​c​t​u​r​e​ ​e​v​e​n​t​s​.​ ​P​e​r​f​e​c​t​ ​f​o​r​ ​m​a​i​n​t​a​i​n​i​n​g​ ​s​y​s​t​e​m​ ​r​e​l​i​a​b​i​l​i​t​y​,​ ​i​m​p​l​e​m​e​n​t​i​n​g​ ​a​u​t​o​m​a​t​e​d​ ​i​n​c​i​d​e​n​t​ ​r​e​s​p​o​n​s​e​,​ ​a​n​d​ ​e​n​s​u​r​i​n​g​ ​o​p​t​i​m​a​l​ ​A​W​S​ ​r​e​s​o​u​r​c​e​ ​p​e​r​f​o​r​m​a​n​c​e​.
+			 */
+			longDesc: string
+			triggers: {
+				new_alarm: {
+					/**
+					 * N​e​w​ ​A​l​a​r​m
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​C​l​o​u​d​W​a​t​c​h​ ​a​l​a​r​m​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​A​W​S​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​C​l​o​u​d​W​a​t​c​h​ ​a​l​a​r​m​s​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​r​e​s​p​o​n​d​ ​t​o​ ​n​e​w​ ​m​o​n​i​t​o​r​i​n​g​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​s​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​a​u​d​i​t​ ​t​r​a​i​l​s​,​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​s​e​t​u​p​s​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​d​ ​a​l​a​r​m​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​w​o​r​k​f​l​o​w​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​a​l​a​r​m​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​C​l​o​u​d​W​a​t​c​h​ ​a​l​a​r​m​s​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						alarm_name_prefix: {
+							/**
+							 * A​l​a​r​m​ ​N​a​m​e​ ​P​r​e​f​i​x
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​a​l​a​r​m​s​ ​b​y​ ​n​a​m​e​ ​p​r​e​f​i​x
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​m​o​n​i​t​o​r​ ​a​l​a​r​m​s​ ​w​h​o​s​e​ ​n​a​m​e​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​p​r​e​f​i​x​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​a​l​a​r​m​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				alarm_state_change: {
+					/**
+					 * A​l​a​r​m​ ​S​t​a​t​e​ ​C​h​a​n​g​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​a​l​a​r​m​ ​c​h​a​n​g​e​s​ ​s​t​a​t​e
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​C​l​o​u​d​W​a​t​c​h​ ​a​l​a​r​m​s​ ​f​o​r​ ​s​t​a​t​e​ ​c​h​a​n​g​e​s​ ​b​e​t​w​e​e​n​ ​O​K​,​ ​A​L​A​R​M​,​ ​a​n​d​ ​I​N​S​U​F​F​I​C​I​E​N​T​_​D​A​T​A​ ​s​t​a​t​e​s​.​ ​E​s​s​e​n​t​i​a​l​ ​f​o​r​ ​a​u​t​o​m​a​t​e​d​ ​i​n​c​i​d​e​n​t​ ​r​e​s​p​o​n​s​e​,​ ​e​s​c​a​l​a​t​i​o​n​ ​w​o​r​k​f​l​o​w​s​,​ ​a​n​d​ ​r​e​a​l​-​t​i​m​e​ ​m​o​n​i​t​o​r​i​n​g​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​s​t​a​t​e​ ​c​h​a​n​g​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​a​r​m​ ​s​t​a​t​e​ ​c​h​a​n​g​e​s​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						alarm_name_prefix: {
+							/**
+							 * A​l​a​r​m​ ​N​a​m​e​ ​P​r​e​f​i​x
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​a​l​a​r​m​s​ ​b​y​ ​n​a​m​e​ ​p​r​e​f​i​x
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​m​o​n​i​t​o​r​ ​a​l​a​r​m​s​ ​w​h​o​s​e​ ​n​a​m​e​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​p​r​e​f​i​x​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​a​l​a​r​m​s​.
+							 */
+							longDesc: string
+						}
+						state_filter: {
+							/**
+							 * S​t​a​t​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​a​l​a​r​m​ ​s​t​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​o​n​ ​a​l​a​r​m​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​t​a​t​e​ ​(​O​K​,​ ​A​L​A​R​M​,​ ​o​r​ ​I​N​S​U​F​F​I​C​I​E​N​T​_​D​A​T​A​)​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​s​t​a​t​e​ ​c​h​a​n​g​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				disable_alarm_actions: {
+					/**
+					 * D​i​s​a​b​l​e​ ​A​l​a​r​m​ ​A​c​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * D​i​s​a​b​l​e​ ​a​c​t​i​o​n​s​ ​f​o​r​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​C​l​o​u​d​W​a​t​c​h​ ​a​l​a​r​m​s
+					 */
+					shortDesc: string
+					/**
+					 * T​e​m​p​o​r​a​r​i​l​y​ ​d​i​s​a​b​l​e​ ​a​c​t​i​o​n​s​ ​(​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​a​u​t​o​-​s​c​a​l​i​n​g​,​ ​e​t​c​.​)​ ​f​o​r​ ​s​p​e​c​i​f​i​e​d​ ​C​l​o​u​d​W​a​t​c​h​ ​a​l​a​r​m​s​.​ ​U​s​e​f​u​l​ ​d​u​r​i​n​g​ ​m​a​i​n​t​e​n​a​n​c​e​ ​w​i​n​d​o​w​s​,​ ​t​e​s​t​i​n​g​ ​p​e​r​i​o​d​s​,​ ​o​r​ ​w​h​e​n​ ​y​o​u​ ​n​e​e​d​ ​t​o​ ​s​u​p​p​r​e​s​s​ ​a​l​a​r​m​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​w​i​t​h​o​u​t​ ​d​e​l​e​t​i​n​g​ ​t​h​e​ ​a​l​a​r​m​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​a​l​a​r​m​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​a​l​a​r​m​s​ ​a​r​e​ ​l​o​c​a​t​e​d​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						alarm_names: {
+							/**
+							 * A​l​a​r​m​ ​N​a​m​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​a​l​a​r​m​ ​n​a​m​e​s​ ​t​o​ ​d​i​s​a​b​l​e​ ​a​c​t​i​o​n​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​C​l​o​u​d​W​a​t​c​h​ ​a​l​a​r​m​s​ ​t​o​ ​d​i​s​a​b​l​e​ ​a​c​t​i​o​n​s​ ​f​o​r​.​ ​A​c​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​S​N​S​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​A​u​t​o​ ​S​c​a​l​i​n​g​ ​p​o​l​i​c​i​e​s​,​ ​a​n​d​ ​E​C​2​ ​a​c​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				enable_alarm_actions: {
+					/**
+					 * E​n​a​b​l​e​ ​A​l​a​r​m​ ​A​c​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * E​n​a​b​l​e​ ​a​c​t​i​o​n​s​ ​f​o​r​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​C​l​o​u​d​W​a​t​c​h​ ​a​l​a​r​m​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​-​e​n​a​b​l​e​ ​a​c​t​i​o​n​s​ ​(​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​a​u​t​o​-​s​c​a​l​i​n​g​,​ ​e​t​c​.​)​ ​f​o​r​ ​s​p​e​c​i​f​i​e​d​ ​C​l​o​u​d​W​a​t​c​h​ ​a​l​a​r​m​s​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​r​e​s​t​o​r​e​ ​a​l​a​r​m​ ​f​u​n​c​t​i​o​n​a​l​i​t​y​ ​a​f​t​e​r​ ​m​a​i​n​t​e​n​a​n​c​e​ ​o​r​ ​t​e​s​t​i​n​g​ ​p​e​r​i​o​d​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​a​l​a​r​m​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​a​l​a​r​m​s​ ​a​r​e​ ​l​o​c​a​t​e​d​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						alarm_names: {
+							/**
+							 * A​l​a​r​m​ ​N​a​m​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​a​l​a​r​m​ ​n​a​m​e​s​ ​t​o​ ​e​n​a​b​l​e​ ​a​c​t​i​o​n​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​C​l​o​u​d​W​a​t​c​h​ ​a​l​a​r​m​s​ ​t​o​ ​e​n​a​b​l​e​ ​a​c​t​i​o​n​s​ ​f​o​r​.​ ​T​h​i​s​ ​w​i​l​l​ ​r​e​s​t​o​r​e​ ​S​N​S​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​A​u​t​o​ ​S​c​a​l​i​n​g​ ​p​o​l​i​c​i​e​s​,​ ​a​n​d​ ​E​C​2​ ​a​c​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				set_alarm_state: {
+					/**
+					 * S​e​t​ ​A​l​a​r​m​ ​S​t​a​t​e
+					 */
+					displayName: string
+					/**
+					 * M​a​n​u​a​l​l​y​ ​s​e​t​ ​t​h​e​ ​s​t​a​t​e​ ​o​f​ ​a​ ​C​l​o​u​d​W​a​t​c​h​ ​a​l​a​r​m
+					 */
+					shortDesc: string
+					/**
+					 * O​v​e​r​r​i​d​e​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​s​t​a​t​e​ ​o​f​ ​a​ ​C​l​o​u​d​W​a​t​c​h​ ​a​l​a​r​m​ ​b​y​ ​m​a​n​u​a​l​l​y​ ​s​e​t​t​i​n​g​ ​i​t​ ​t​o​ ​O​K​,​ ​A​L​A​R​M​,​ ​o​r​ ​I​N​S​U​F​F​I​C​I​E​N​T​_​D​A​T​A​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​t​e​s​t​i​n​g​ ​a​l​a​r​m​ ​w​o​r​k​f​l​o​w​s​,​ ​c​l​e​a​r​i​n​g​ ​f​a​l​s​e​ ​a​l​a​r​m​s​,​ ​o​r​ ​f​o​r​c​i​n​g​ ​s​p​e​c​i​f​i​c​ ​a​l​a​r​m​ ​s​t​a​t​e​s​ ​f​o​r​ ​o​p​e​r​a​t​i​o​n​a​l​ ​p​u​r​p​o​s​e​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​a​l​a​r​m
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​a​l​a​r​m​ ​i​s​ ​l​o​c​a​t​e​d​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						alarm_name: {
+							/**
+							 * A​l​a​r​m​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​a​l​a​r​m​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​l​o​u​d​W​a​t​c​h​ ​a​l​a​r​m​ ​w​h​o​s​e​ ​s​t​a​t​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​a​n​u​a​l​l​y​ ​s​e​t​.
+							 */
+							longDesc: string
+						}
+						state_value: {
+							/**
+							 * S​t​a​t​e​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​s​t​a​t​e​ ​f​o​r​ ​t​h​e​ ​a​l​a​r​m
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​d​e​s​i​r​e​d​ ​s​t​a​t​e​:​ ​O​K​ ​(​n​o​r​m​a​l​ ​o​p​e​r​a​t​i​o​n​)​,​ ​A​L​A​R​M​ ​(​t​h​r​e​s​h​o​l​d​ ​b​r​e​a​c​h​e​d​)​,​ ​o​r​ ​I​N​S​U​F​F​I​C​I​E​N​T​_​D​A​T​A​ ​(​n​o​t​ ​e​n​o​u​g​h​ ​d​a​t​a​ ​t​o​ ​e​v​a​l​u​a​t​e​)​.
+							 */
+							longDesc: string
+						}
+						state_reason: {
+							/**
+							 * S​t​a​t​e​ ​R​e​a​s​o​n
+							 */
+							displayName: string
+							/**
+							 * R​e​a​s​o​n​ ​f​o​r​ ​t​h​e​ ​s​t​a​t​e​ ​c​h​a​n​g​e
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​a​ ​h​u​m​a​n​-​r​e​a​d​a​b​l​e​ ​r​e​a​s​o​n​ ​f​o​r​ ​m​a​n​u​a​l​l​y​ ​s​e​t​t​i​n​g​ ​t​h​e​ ​a​l​a​r​m​ ​s​t​a​t​e​.​ ​T​h​i​s​ ​a​p​p​e​a​r​s​ ​i​n​ ​C​l​o​u​d​W​a​t​c​h​ ​l​o​g​s​ ​a​n​d​ ​a​l​a​r​m​ ​h​i​s​t​o​r​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_alarm: {
+					/**
+					 * G​e​t​ ​A​l​a​r​m
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​C​l​o​u​d​W​a​t​c​h​ ​a​l​a​r​m
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​C​l​o​u​d​W​a​t​c​h​ ​a​l​a​r​m​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​c​u​r​r​e​n​t​ ​s​t​a​t​e​,​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​,​ ​t​h​r​e​s​h​o​l​d​s​,​ ​d​i​m​e​n​s​i​o​n​s​,​ ​a​n​d​ ​a​c​t​i​o​n​s​.​ ​P​e​r​f​e​c​t​ ​f​o​r​ ​a​l​a​r​m​ ​a​u​d​i​t​i​n​g​,​ ​t​r​o​u​b​l​e​s​h​o​o​t​i​n​g​,​ ​a​n​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​v​e​r​i​f​i​c​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​a​l​a​r​m
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​a​l​a​r​m​ ​i​s​ ​l​o​c​a​t​e​d​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						alarm_name: {
+							/**
+							 * A​l​a​r​m​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​a​l​a​r​m​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​l​o​u​d​W​a​t​c​h​ ​a​l​a​r​m​ ​w​h​o​s​e​ ​d​e​t​a​i​l​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_alarms: {
+					/**
+					 * L​i​s​t​ ​A​l​a​r​m​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​C​l​o​u​d​W​a​t​c​h​ ​a​l​a​r​m​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​C​l​o​u​d​W​a​t​c​h​ ​a​l​a​r​m​s​ ​i​n​ ​y​o​u​r​ ​A​W​S​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​s​t​a​t​e​,​ ​n​a​m​e​ ​p​r​e​f​i​x​,​ ​a​n​d​ ​a​c​t​i​o​n​ ​s​t​a​t​u​s​.​ ​I​n​c​l​u​d​e​s​ ​s​u​m​m​a​r​y​ ​s​t​a​t​i​s​t​i​c​s​ ​a​n​d​ ​d​e​t​a​i​l​e​d​ ​a​l​a​r​m​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​ ​m​o​n​i​t​o​r​i​n​g​ ​a​n​d​ ​m​a​n​a​g​e​m​e​n​t​ ​p​u​r​p​o​s​e​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​l​i​s​t​ ​a​l​a​r​m​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t​ ​C​l​o​u​d​W​a​t​c​h​ ​a​l​a​r​m​s​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​u​s​-​e​a​s​t​-​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						alarm_name_prefix: {
+							/**
+							 * A​l​a​r​m​ ​N​a​m​e​ ​P​r​e​f​i​x
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​a​l​a​r​m​s​ ​b​y​ ​n​a​m​e​ ​p​r​e​f​i​x
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​r​e​t​u​r​n​ ​a​l​a​r​m​s​ ​w​h​o​s​e​ ​n​a​m​e​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​p​r​e​f​i​x​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​l​i​s​t​ ​a​l​l​ ​a​l​a​r​m​s​.
+							 */
+							longDesc: string
+						}
+						state_filter: {
+							/**
+							 * S​t​a​t​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​l​a​r​m​ ​s​t​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​r​e​t​u​r​n​ ​a​l​a​r​m​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​t​a​t​e​ ​(​O​K​,​ ​A​L​A​R​M​,​ ​o​r​ ​I​N​S​U​F​F​I​C​I​E​N​T​_​D​A​T​A​)​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​i​n​c​l​u​d​e​ ​a​l​l​ ​s​t​a​t​e​s​.
+							 */
+							longDesc: string
+						}
+						max_records: {
+							/**
+							 * M​a​x​i​m​u​m​ ​R​e​c​o​r​d​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​a​l​a​r​m​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * L​i​m​i​t​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​a​l​a​r​m​s​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​,​ ​m​a​x​i​m​u​m​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		AmazonSNS: {
 			/**
 			 * A​W​S​ ​S​N​S
@@ -77174,6 +77570,402 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Select the specific invalidation request you want to get details about. This will show the complete information about the invalidation including its current status and affected paths.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		AmazonCloudWatch: {
+			/**
+			 * Amazon CloudWatch
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Monitor AWS resources and applications with comprehensive alarm management and real-time state tracking.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Amazon CloudWatch integration provides complete access to AWS monitoring and alerting capabilities. Monitor alarm state changes, manage alarm actions, retrieve detailed alarm information, and automate responses to infrastructure events. Perfect for maintaining system reliability, implementing automated incident response, and ensuring optimal AWS resource performance.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_alarm: {
+					/**
+					 * New Alarm
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new CloudWatch alarm is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your AWS account for newly created CloudWatch alarms, allowing you to automatically respond to new monitoring configurations. Useful for audit trails, notification setups, and automated alarm configuration workflows.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region to monitor for new alarms
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region where you want to monitor for new CloudWatch alarms. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						alarm_name_prefix: {
+							/**
+							 * Alarm Name Prefix
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter alarms by name prefix
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to only monitor alarms whose names start with the specified prefix. Leave empty to monitor all alarms.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				alarm_state_change: {
+					/**
+					 * Alarm State Change
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an alarm changes state
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors CloudWatch alarms for state changes between OK, ALARM, and INSUFFICIENT_DATA states. Essential for automated incident response, escalation workflows, and real-time monitoring notifications.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region to monitor for state changes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region where you want to monitor alarm state changes. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						alarm_name_prefix: {
+							/**
+							 * Alarm Name Prefix
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter alarms by name prefix
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to only monitor alarms whose names start with the specified prefix. Leave empty to monitor all alarms.
+							 */
+							longDesc: () => LocalizedString
+						}
+						state_filter: {
+							/**
+							 * State Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by specific alarm state
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to only trigger on alarms in a specific state (OK, ALARM, or INSUFFICIENT_DATA). Leave empty to monitor all state changes.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				disable_alarm_actions: {
+					/**
+					 * Disable Alarm Actions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Disable actions for one or more CloudWatch alarms
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Temporarily disable actions (notifications, auto-scaling, etc.) for specified CloudWatch alarms. Useful during maintenance windows, testing periods, or when you need to suppress alarm notifications without deleting the alarms.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region containing the alarms
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region where the target alarms are located. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						alarm_names: {
+							/**
+							 * Alarm Names
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of alarm names to disable actions for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select one or more CloudWatch alarms to disable actions for. Actions include SNS notifications, Auto Scaling policies, and EC2 actions.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				enable_alarm_actions: {
+					/**
+					 * Enable Alarm Actions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Enable actions for one or more CloudWatch alarms
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Re-enable actions (notifications, auto-scaling, etc.) for specified CloudWatch alarms. Use this to restore alarm functionality after maintenance or testing periods.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region containing the alarms
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region where the target alarms are located. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						alarm_names: {
+							/**
+							 * Alarm Names
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of alarm names to enable actions for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select one or more CloudWatch alarms to enable actions for. This will restore SNS notifications, Auto Scaling policies, and EC2 actions.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				set_alarm_state: {
+					/**
+					 * Set Alarm State
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Manually set the state of a CloudWatch alarm
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Override the current state of a CloudWatch alarm by manually setting it to OK, ALARM, or INSUFFICIENT_DATA. Useful for testing alarm workflows, clearing false alarms, or forcing specific alarm states for operational purposes.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region containing the alarm
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region where the target alarm is located. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						alarm_name: {
+							/**
+							 * Alarm Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the alarm to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the CloudWatch alarm whose state you want to manually set.
+							 */
+							longDesc: () => LocalizedString
+						}
+						state_value: {
+							/**
+							 * State Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new state for the alarm
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the desired state: OK (normal operation), ALARM (threshold breached), or INSUFFICIENT_DATA (not enough data to evaluate).
+							 */
+							longDesc: () => LocalizedString
+						}
+						state_reason: {
+							/**
+							 * State Reason
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Reason for the state change
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide a human-readable reason for manually setting the alarm state. This appears in CloudWatch logs and alarm history.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_alarm: {
+					/**
+					 * Get Alarm
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a CloudWatch alarm
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch comprehensive details about a specific CloudWatch alarm including its current state, configuration, thresholds, dimensions, and actions. Perfect for alarm auditing, troubleshooting, and configuration verification.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region containing the alarm
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region where the target alarm is located. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						alarm_name: {
+							/**
+							 * Alarm Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the alarm to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the CloudWatch alarm whose details you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_alarms: {
+					/**
+					 * List Alarms
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List CloudWatch alarms with optional filtering
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of CloudWatch alarms in your AWS account with optional filtering by state, name prefix, and action status. Includes summary statistics and detailed alarm information for monitoring and management purposes.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region to list alarms from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the AWS region where you want to list CloudWatch alarms. Defaults to us-east-1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						alarm_name_prefix: {
+							/**
+							 * Alarm Name Prefix
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter alarms by name prefix
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to only return alarms whose names start with the specified prefix. Leave empty to list all alarms.
+							 */
+							longDesc: () => LocalizedString
+						}
+						state_filter: {
+							/**
+							 * State Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by alarm state
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to only return alarms in a specific state (OK, ALARM, or INSUFFICIENT_DATA). Leave empty to include all states.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_records: {
+							/**
+							 * Maximum Records
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of alarms to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Limit the number of alarms returned in the response. Default is 50, maximum is 100.
 							 */
 							longDesc: () => LocalizedString
 						}
