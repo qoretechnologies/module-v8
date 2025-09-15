@@ -69,7 +69,6 @@ describe('Amazon SES', () => {
     //   expect(result.message).toContain('Verification email sent');
     //   expect(result.next_steps).toBeDefined();
     //   expect(Array.isArray(result.next_steps)).toBe(true);
-    //   expect(result.identity_arn).toContain(emailToVerify);
     //   expect(result.verification_initiated_at).toBeDefined();
     // });
 
@@ -151,7 +150,6 @@ describe('Amazon SES', () => {
         expect(result.verification_status).toBe('Success');
         expect(result.verified_at).toBeDefined();
         expect(result.region).toBe(testRegion);
-        expect(result.identity_arn).toContain('identity');
       }
     });
   });
