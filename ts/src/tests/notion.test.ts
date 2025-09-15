@@ -1,3 +1,4 @@
+import { IQoreTypeObjectNonList } from '@qoretechnologies/ts-toolkit';
 import { configDotenv } from 'dotenv';
 import {
   AddCommentToNotionDiscussion,
@@ -213,14 +214,13 @@ describe('Notion', () => {
     });
 
     it('Should get database properties dynamic type', async () => {
-      const result = await getNotionDataSourceProperties({
+      const result = (await getNotionDataSourceProperties({
         opts: { data_source_id },
         ...base_context,
-      });
+      })) as IQoreTypeObjectNonList;
 
       expect(result).toBeDefined();
-      if (typeof result !== 'object' || !('fields' in result) || !result.fields)
-        throw new Error('Fields not found in result');
+      if (!('fields' in result) || !result.fields) throw new Error('Fields not found in result');
 
       expect(Object.keys(result.fields).length).toBeGreaterThan(0);
     });

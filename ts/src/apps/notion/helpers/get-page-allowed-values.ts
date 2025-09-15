@@ -62,7 +62,7 @@ export const getNotionPageAllowedValues: TQoreGetAllowedValuesFunction<
             let createdBy = 'Unknown';
             if (page.created_by?.object === 'user') {
               if ('name' in page.created_by && page.created_by.name) {
-                createdBy = (page.created_by.name as string) || page.created_by.id;
+                createdBy = page.created_by.name as string;
               } else if ('id' in page.created_by) {
                 createdBy = `User ${page.created_by.id.substring(0, 8)}`;
               }
