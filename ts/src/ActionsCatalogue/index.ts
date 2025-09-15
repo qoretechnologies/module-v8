@@ -80,6 +80,7 @@ import amazonSns from '../apps/amazon-sns';
 import amazonSqs from '../apps/amazon-sqs';
 import amazonCloudWatch from '../apps/amazon-cloudwatch';
 import notion from '../apps/notion';
+import amazonSes from '../apps/amazon-ses';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -98,6 +99,7 @@ const NEW_APPS = {
   airtable,
   amazonEc2,
   amazonS3,
+  amazonSes,
   amazonLambda,
   amazonCloudfront,
   amazonCloudWatch,

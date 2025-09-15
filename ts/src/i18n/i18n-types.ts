@@ -8448,6 +8448,418 @@ type RootTranslation = {
 				}
 			}
 		}
+		AmazonSES: {
+			/**
+			 * A​m​a​z​o​n​ ​S​E​S
+			 */
+			displayName: string
+			/**
+			 * S​e​n​d​ ​e​m​a​i​l​s​ ​a​n​d​ ​m​a​n​a​g​e​ ​e​m​a​i​l​ ​i​d​e​n​t​i​t​i​e​s​ ​w​i​t​h​ ​A​m​a​z​o​n​ ​S​i​m​p​l​e​ ​E​m​a​i​l​ ​S​e​r​v​i​c​e​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​A​m​a​z​o​n​ ​S​E​S​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​e​m​a​i​l​ ​s​e​n​d​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​,​ ​i​d​e​n​t​i​t​y​ ​v​e​r​i​f​i​c​a​t​i​o​n​,​ ​a​n​d​ ​d​e​l​i​v​e​r​y​ ​m​o​n​i​t​o​r​i​n​g​.​ ​M​a​n​a​g​e​ ​y​o​u​r​ ​e​m​a​i​l​ ​c​a​m​p​a​i​g​n​s​,​ ​v​e​r​i​f​y​ ​d​o​m​a​i​n​s​ ​a​n​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​,​ ​t​r​a​c​k​ ​s​e​n​d​i​n​g​ ​s​t​a​t​i​s​t​i​c​s​,​ ​a​n​d​ ​m​o​n​i​t​o​r​ ​b​o​u​n​c​e​s​ ​a​n​d​ ​c​o​m​p​l​a​i​n​t​s​ ​t​h​r​o​u​g​h​ ​A​m​a​z​o​n​'​s​ ​r​e​l​i​a​b​l​e​ ​e​m​a​i​l​ ​i​n​f​r​a​s​t​r​u​c​t​u​r​e​.
+			 */
+			longDesc: string
+			actions: {
+				send_email: {
+					/**
+					 * S​e​n​d​ ​E​m​a​i​l
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​n​ ​e​m​a​i​l​ ​t​h​r​o​u​g​h​ ​A​m​a​z​o​n​ ​S​E​S​ ​w​i​t​h​ ​f​u​l​l​ ​c​u​s​t​o​m​i​z​a​t​i​o​n​ ​o​p​t​i​o​n​s​.
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​e​m​a​i​l​s​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​H​T​M​L​ ​a​n​d​ ​t​e​x​t​ ​c​o​n​t​e​n​t​,​ ​C​C​/​B​C​C​ ​r​e​c​i​p​i​e​n​t​s​,​ ​r​e​p​l​y​-​t​o​ ​a​d​d​r​e​s​s​e​s​,​ ​c​u​s​t​o​m​ ​t​a​g​s​ ​f​o​r​ ​t​r​a​c​k​i​n​g​,​ ​a​n​d​ ​a​d​v​a​n​c​e​d​ ​d​e​l​i​v​e​r​y​ ​o​p​t​i​o​n​s​.​ ​I​n​c​l​u​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​v​a​l​i​d​a​t​i​o​n​ ​a​n​d​ ​e​r​r​o​r​ ​h​a​n​d​l​i​n​g​ ​f​o​r​ ​r​e​l​i​a​b​l​e​ ​e​m​a​i​l​ ​d​e​l​i​v​e​r​y​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​r​ ​S​E​S​ ​s​e​r​v​i​c​e​ ​i​s​ ​c​o​n​f​i​g​u​r​e​d​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​r​ ​A​m​a​z​o​n​ ​S​E​S​ ​s​e​r​v​i​c​e​ ​i​s​ ​s​e​t​ ​u​p​.​ ​D​i​f​f​e​r​e​n​t​ ​r​e​g​i​o​n​s​ ​m​a​y​ ​h​a​v​e​ ​d​i​f​f​e​r​e​n​t​ ​v​e​r​i​f​i​e​d​ ​i​d​e​n​t​i​t​i​e​s​ ​a​n​d​ ​s​e​n​d​i​n​g​ ​l​i​m​i​t​s​.
+							 */
+							longDesc: string
+						}
+						from_email: {
+							/**
+							 * F​r​o​m​ ​E​m​a​i​l​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​v​e​r​i​f​i​e​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​o​ ​s​e​n​d​ ​f​r​o​m​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​e​n​d​e​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​h​a​t​ ​m​u​s​t​ ​b​e​ ​v​e​r​i​f​i​e​d​ ​i​n​ ​y​o​u​r​ ​A​m​a​z​o​n​ ​S​E​S​ ​a​c​c​o​u​n​t​.​ ​T​h​i​s​ ​a​d​d​r​e​s​s​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​i​n​ ​t​h​e​ ​F​r​o​m​ ​f​i​e​l​d​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							longDesc: string
+						}
+						to_emails: {
+							/**
+							 * T​o​ ​E​m​a​i​l​ ​A​d​d​r​e​s​s​e​s
+							 */
+							displayName: string
+							/**
+							 * C​o​m​m​a​-​s​e​p​a​r​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​r​e​c​i​p​i​e​n​t​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​.
+							 */
+							shortDesc: string
+							/**
+							 * O​n​e​ ​o​r​ ​m​o​r​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​.​ ​M​u​l​t​i​p​l​e​ ​a​d​d​r​e​s​s​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​e​p​a​r​a​t​e​d​ ​b​y​ ​c​o​m​m​a​s​.​ ​A​l​l​ ​a​d​d​r​e​s​s​e​s​ ​m​u​s​t​ ​b​e​ ​v​a​l​i​d​ ​e​m​a​i​l​ ​f​o​r​m​a​t​s​.
+							 */
+							longDesc: string
+						}
+						cc_emails: {
+							/**
+							 * C​C​ ​E​m​a​i​l​ ​A​d​d​r​e​s​s​e​s
+							 */
+							displayName: string
+							/**
+							 * C​o​m​m​a​-​s​e​p​a​r​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​C​C​ ​r​e​c​i​p​i​e​n​t​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​.
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​a​r​b​o​n​ ​c​o​p​y​ ​r​e​c​i​p​i​e​n​t​s​ ​w​h​o​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​a​ ​c​o​p​y​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.​ ​M​u​l​t​i​p​l​e​ ​a​d​d​r​e​s​s​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​e​p​a​r​a​t​e​d​ ​b​y​ ​c​o​m​m​a​s​.
+							 */
+							longDesc: string
+						}
+						bcc_emails: {
+							/**
+							 * B​C​C​ ​E​m​a​i​l​ ​A​d​d​r​e​s​s​e​s
+							 */
+							displayName: string
+							/**
+							 * C​o​m​m​a​-​s​e​p​a​r​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​B​C​C​ ​r​e​c​i​p​i​e​n​t​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​.
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​b​l​i​n​d​ ​c​a​r​b​o​n​ ​c​o​p​y​ ​r​e​c​i​p​i​e​n​t​s​ ​w​h​o​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​a​ ​c​o​p​y​ ​w​i​t​h​o​u​t​ ​o​t​h​e​r​ ​r​e​c​i​p​i​e​n​t​s​ ​k​n​o​w​i​n​g​.​ ​M​u​l​t​i​p​l​e​ ​a​d​d​r​e​s​s​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​e​p​a​r​a​t​e​d​ ​b​y​ ​c​o​m​m​a​s​.
+							 */
+							longDesc: string
+						}
+						reply_to_addresses: {
+							/**
+							 * R​e​p​l​y​-​T​o​ ​A​d​d​r​e​s​s​e​s
+							 */
+							displayName: string
+							/**
+							 * C​o​m​m​a​-​s​e​p​a​r​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​r​e​p​l​y​-​t​o​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​.
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​h​a​t​ ​r​e​p​l​i​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​e​n​t​ ​t​o​ ​i​n​s​t​e​a​d​ ​o​f​ ​t​h​e​ ​f​r​o​m​ ​a​d​d​r​e​s​s​.​ ​M​u​l​t​i​p​l​e​ ​a​d​d​r​e​s​s​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​e​p​a​r​a​t​e​d​ ​b​y​ ​c​o​m​m​a​s​.
+							 */
+							longDesc: string
+						}
+						subject: {
+							/**
+							 * E​m​a​i​l​ ​S​u​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​t​h​a​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​i​n​ ​t​h​e​ ​r​e​c​i​p​i​e​n​t​'​s​ ​e​m​a​i​l​ ​c​l​i​e​n​t​.​ ​S​h​o​u​l​d​ ​b​e​ ​d​e​s​c​r​i​p​t​i​v​e​ ​a​n​d​ ​e​n​g​a​g​i​n​g​.
+							 */
+							longDesc: string
+						}
+						body_text: {
+							/**
+							 * T​e​x​t​ ​B​o​d​y
+							 */
+							displayName: string
+							/**
+							 * P​l​a​i​n​ ​t​e​x​t​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​ ​c​o​n​t​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​l​a​i​n​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.​ ​E​i​t​h​e​r​ ​t​e​x​t​ ​b​o​d​y​ ​o​r​ ​H​T​M​L​ ​b​o​d​y​ ​m​u​s​t​ ​b​e​ ​p​r​o​v​i​d​e​d​.​ ​T​e​x​t​ ​v​e​r​s​i​o​n​ ​e​n​s​u​r​e​s​ ​c​o​m​p​a​t​i​b​i​l​i​t​y​ ​w​i​t​h​ ​a​l​l​ ​e​m​a​i​l​ ​c​l​i​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						body_html: {
+							/**
+							 * H​T​M​L​ ​B​o​d​y
+							 */
+							displayName: string
+							/**
+							 * H​T​M​L​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​ ​c​o​n​t​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​H​T​M​L​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​ ​w​i​t​h​ ​f​o​r​m​a​t​t​i​n​g​,​ ​l​i​n​k​s​,​ ​a​n​d​ ​s​t​y​l​i​n​g​.​ ​E​i​t​h​e​r​ ​t​e​x​t​ ​b​o​d​y​ ​o​r​ ​H​T​M​L​ ​b​o​d​y​ ​m​u​s​t​ ​b​e​ ​p​r​o​v​i​d​e​d​.
+							 */
+							longDesc: string
+						}
+						charset: {
+							/**
+							 * C​h​a​r​a​c​t​e​r​ ​E​n​c​o​d​i​n​g
+							 */
+							displayName: string
+							/**
+							 * C​h​a​r​a​c​t​e​r​ ​e​n​c​o​d​i​n​g​ ​f​o​r​ ​t​h​e​ ​e​m​a​i​l​ ​c​o​n​t​e​n​t​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​h​a​r​a​c​t​e​r​ ​e​n​c​o​d​i​n​g​ ​u​s​e​d​ ​f​o​r​ ​t​h​e​ ​e​m​a​i​l​ ​s​u​b​j​e​c​t​ ​a​n​d​ ​b​o​d​y​.​ ​U​T​F​-​8​ ​i​s​ ​r​e​c​o​m​m​e​n​d​e​d​ ​f​o​r​ ​i​n​t​e​r​n​a​t​i​o​n​a​l​ ​c​h​a​r​a​c​t​e​r​ ​s​u​p​p​o​r​t​.
+							 */
+							longDesc: string
+						}
+						return_path: {
+							/**
+							 * R​e​t​u​r​n​ ​P​a​t​h
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​b​o​u​n​c​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​.
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​w​h​e​r​e​ ​b​o​u​n​c​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​w​i​l​l​ ​b​e​ ​s​e​n​t​.​ ​M​u​s​t​ ​b​e​ ​a​ ​v​e​r​i​f​i​e​d​ ​a​d​d​r​e​s​s​ ​i​n​ ​y​o​u​r​ ​S​E​S​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+						configuration_set: {
+							/**
+							 * C​o​n​f​i​g​u​r​a​t​i​o​n​ ​S​e​t
+							 */
+							displayName: string
+							/**
+							 * S​E​S​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​s​e​t​ ​n​a​m​e​ ​f​o​r​ ​t​r​a​c​k​i​n​g​.
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​s​e​t​ ​n​a​m​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​i​s​ ​e​m​a​i​l​.​ ​C​o​n​f​i​g​u​r​a​t​i​o​n​ ​s​e​t​s​ ​a​l​l​o​w​ ​y​o​u​ ​t​o​ ​p​u​b​l​i​s​h​ ​e​m​a​i​l​ ​s​e​n​d​i​n​g​ ​e​v​e​n​t​s​ ​t​o​ ​o​t​h​e​r​ ​A​W​S​ ​s​e​r​v​i​c​e​s​.
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * E​m​a​i​l​ ​T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * K​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​f​o​r​ ​e​m​a​i​l​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​ ​a​n​d​ ​t​r​a​c​k​i​n​g​.
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​a​g​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​t​r​a​c​k​ ​y​o​u​r​ ​e​m​a​i​l​s​.​ ​T​a​g​s​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​f​o​r​ ​r​e​p​o​r​t​i​n​g​ ​a​n​d​ ​a​n​a​l​y​t​i​c​s​ ​i​n​ ​y​o​u​r​ ​S​E​S​ ​d​a​s​h​b​o​a​r​d​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									name: {
+										/**
+										 * T​a​g​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​t​a​g​.
+										 */
+										shortDesc: string
+										/**
+										 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​t​a​g​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​ ​f​o​r​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * T​a​g​ ​V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​t​a​g​.
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​t​a​g​ ​n​a​m​e​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				verify_email_address: {
+					/**
+					 * V​e​r​i​f​y​ ​E​m​a​i​l​ ​A​d​d​r​e​s​s
+					 */
+					displayName: string
+					/**
+					 * V​e​r​i​f​y​ ​a​n​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​s​e​n​d​i​n​g​ ​t​h​r​o​u​g​h​ ​A​m​a​z​o​n​ ​S​E​S​.
+					 */
+					shortDesc: string
+					/**
+					 * I​n​i​t​i​a​t​e​ ​t​h​e​ ​v​e​r​i​f​i​c​a​t​i​o​n​ ​p​r​o​c​e​s​s​ ​f​o​r​ ​a​n​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​r​ ​d​o​m​a​i​n​.​ ​A​m​a​z​o​n​ ​S​E​S​ ​w​i​l​l​ ​s​e​n​d​ ​a​ ​v​e​r​i​f​i​c​a​t​i​o​n​ ​e​m​a​i​l​ ​t​h​a​t​ ​m​u​s​t​ ​b​e​ ​c​l​i​c​k​e​d​ ​t​o​ ​c​o​m​p​l​e​t​e​ ​t​h​e​ ​v​e​r​i​f​i​c​a​t​i​o​n​ ​p​r​o​c​e​s​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​r​ ​S​E​S​ ​s​e​r​v​i​c​e​ ​i​s​ ​c​o​n​f​i​g​u​r​e​d​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​v​e​r​i​f​y​ ​t​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.​ ​T​h​e​ ​v​e​r​i​f​i​e​d​ ​i​d​e​n​t​i​t​y​ ​w​i​l​l​ ​b​e​ ​a​v​a​i​l​a​b​l​e​ ​i​n​ ​t​h​i​s​ ​r​e​g​i​o​n​.
+							 */
+							longDesc: string
+						}
+						email_address: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s​ ​t​o​ ​V​e​r​i​f​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​v​e​r​i​f​y​ ​f​o​r​ ​s​e​n​d​i​n​g​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​v​e​r​i​f​y​ ​a​s​ ​a​ ​s​e​n​d​i​n​g​ ​i​d​e​n​t​i​t​y​.​ ​A​m​a​z​o​n​ ​S​E​S​ ​w​i​l​l​ ​s​e​n​d​ ​a​ ​v​e​r​i​f​i​c​a​t​i​o​n​ ​e​m​a​i​l​ ​t​o​ ​t​h​i​s​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_send_statistics: {
+					/**
+					 * G​e​t​ ​S​e​n​d​ ​S​t​a​t​i​s​t​i​c​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​s​e​n​d​i​n​g​ ​s​t​a​t​i​s​t​i​c​s​ ​f​r​o​m​ ​A​m​a​z​o​n​ ​S​E​S​.
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​s​e​n​d​i​n​g​ ​s​t​a​t​i​s​t​i​c​s​ ​i​n​c​l​u​d​i​n​g​ ​d​e​l​i​v​e​r​y​ ​a​t​t​e​m​p​t​s​,​ ​b​o​u​n​c​e​s​,​ ​c​o​m​p​l​a​i​n​t​s​,​ ​a​n​d​ ​r​e​j​e​c​t​i​o​n​ ​r​a​t​e​s​.​ ​D​a​t​a​ ​i​s​ ​p​r​o​v​i​d​e​d​ ​i​n​ ​t​i​m​e​-​s​e​r​i​e​s​ ​f​o​r​m​a​t​ ​w​i​t​h​ ​c​a​l​c​u​l​a​t​e​d​ ​p​e​r​c​e​n​t​a​g​e​s​ ​a​n​d​ ​s​u​m​m​a​r​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​s​t​a​t​i​s​t​i​c​s​ ​f​r​o​m​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​s​e​n​d​i​n​g​ ​s​t​a​t​i​s​t​i​c​s​.​ ​S​t​a​t​i​s​t​i​c​s​ ​a​r​e​ ​r​e​g​i​o​n​-​s​p​e​c​i​f​i​c​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_bounce: {
+					/**
+					 * N​e​w​ ​E​m​a​i​l​ ​B​o​u​n​c​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​e​m​a​i​l​ ​b​o​u​n​c​e​s​ ​b​a​c​k​ ​f​r​o​m​ ​a​ ​r​e​c​i​p​i​e​n​t​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​f​o​r​ ​e​m​a​i​l​ ​b​o​u​n​c​e​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​e​m​a​i​l​s​ ​a​r​e​ ​r​e​j​e​c​t​e​d​ ​b​y​ ​r​e​c​i​p​i​e​n​t​ ​m​a​i​l​ ​s​e​r​v​e​r​s​.​ ​P​r​o​v​i​d​e​s​ ​d​e​t​a​i​l​e​d​ ​b​o​u​n​c​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​b​o​u​n​c​e​ ​t​y​p​e​,​ ​r​e​c​i​p​i​e​n​t​ ​d​e​t​a​i​l​s​,​ ​a​n​d​ ​d​i​a​g​n​o​s​t​i​c​ ​c​o​d​e​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​b​o​u​n​c​e​s​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​r​ ​S​E​S​ ​s​e​r​v​i​c​e​ ​i​s​ ​c​o​n​f​i​g​u​r​e​d​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​b​o​u​n​c​e​ ​e​v​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_complaint: {
+					/**
+					 * N​e​w​ ​E​m​a​i​l​ ​C​o​m​p​l​a​i​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​r​e​c​i​p​i​e​n​t​ ​m​a​r​k​s​ ​y​o​u​r​ ​e​m​a​i​l​ ​a​s​ ​s​p​a​m​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​f​o​r​ ​s​p​a​m​ ​c​o​m​p​l​a​i​n​t​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​r​e​c​i​p​i​e​n​t​s​ ​m​a​r​k​ ​y​o​u​r​ ​e​m​a​i​l​s​ ​a​s​ ​s​p​a​m​ ​o​r​ ​u​n​w​a​n​t​e​d​.​ ​H​e​l​p​s​ ​m​a​i​n​t​a​i​n​ ​g​o​o​d​ ​s​e​n​d​e​r​ ​r​e​p​u​t​a​t​i​o​n​ ​b​y​ ​t​r​a​c​k​i​n​g​ ​c​o​m​p​l​a​i​n​t​ ​r​a​t​e​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​c​o​m​p​l​a​i​n​t​s​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​r​ ​S​E​S​ ​s​e​r​v​i​c​e​ ​i​s​ ​c​o​n​f​i​g​u​r​e​d​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​c​o​m​p​l​a​i​n​t​ ​e​v​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_verified_identity: {
+					/**
+					 * N​e​w​ ​V​e​r​i​f​i​e​d​ ​I​d​e​n​t​i​t​y
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​r​ ​d​o​m​a​i​n​ ​i​s​ ​v​e​r​i​f​i​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​f​o​r​ ​n​e​w​l​y​ ​v​e​r​i​f​i​e​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​a​n​d​ ​d​o​m​a​i​n​s​ ​i​n​ ​y​o​u​r​ ​S​E​S​ ​a​c​c​o​u​n​t​.​ ​T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​t​h​e​ ​v​e​r​i​f​i​c​a​t​i​o​n​ ​p​r​o​c​e​s​s​ ​i​s​ ​c​o​m​p​l​e​t​e​d​ ​f​o​r​ ​n​e​w​ ​s​e​n​d​i​n​g​ ​i​d​e​n​t​i​t​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						region: {
+							/**
+							 * A​W​S​ ​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​v​e​r​i​f​i​e​d​ ​i​d​e​n​t​i​t​i​e​s​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​w​h​e​r​e​ ​y​o​u​r​ ​S​E​S​ ​s​e​r​v​i​c​e​ ​i​s​ ​c​o​n​f​i​g​u​r​e​d​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​v​e​r​i​f​i​e​d​ ​i​d​e​n​t​i​t​i​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Claude: {
 			/**
 			 * C​l​a​u​d​e
@@ -79330,6 +79742,418 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * The endpoint that will receive the messages. Format depends on the protocol (URL for HTTP/HTTPS, email address for email, phone number for SMS, etc.).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		AmazonSES: {
+			/**
+			 * Amazon SES
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Send emails and manage email identities with Amazon Simple Email Service.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Amazon SES integration provides comprehensive email sending capabilities, identity verification, and delivery monitoring. Manage your email campaigns, verify domains and email addresses, track sending statistics, and monitor bounces and complaints through Amazon's reliable email infrastructure.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				send_email: {
+					/**
+					 * Send Email
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send an email through Amazon SES with full customization options.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send emails with support for HTML and text content, CC/BCC recipients, reply-to addresses, custom tags for tracking, and advanced delivery options. Includes comprehensive validation and error handling for reliable email delivery.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region where your SES service is configured.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where your Amazon SES service is set up. Different regions may have different verified identities and sending limits.
+							 */
+							longDesc: () => LocalizedString
+						}
+						from_email: {
+							/**
+							 * From Email Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The verified email address to send from.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The sender email address that must be verified in your Amazon SES account. This address will appear in the From field of the email.
+							 */
+							longDesc: () => LocalizedString
+						}
+						to_emails: {
+							/**
+							 * To Email Addresses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Comma-separated list of recipient email addresses.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * One or more email addresses to send the message to. Multiple addresses should be separated by commas. All addresses must be valid email formats.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cc_emails: {
+							/**
+							 * CC Email Addresses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Comma-separated list of CC recipient email addresses.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional carbon copy recipients who will receive a copy of the email. Multiple addresses should be separated by commas.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bcc_emails: {
+							/**
+							 * BCC Email Addresses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Comma-separated list of BCC recipient email addresses.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional blind carbon copy recipients who will receive a copy without other recipients knowing. Multiple addresses should be separated by commas.
+							 */
+							longDesc: () => LocalizedString
+						}
+						reply_to_addresses: {
+							/**
+							 * Reply-To Addresses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Comma-separated list of reply-to email addresses.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional email addresses that replies should be sent to instead of the from address. Multiple addresses should be separated by commas.
+							 */
+							longDesc: () => LocalizedString
+						}
+						subject: {
+							/**
+							 * Email Subject
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The subject line of the email.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The subject line that will appear in the recipient's email client. Should be descriptive and engaging.
+							 */
+							longDesc: () => LocalizedString
+						}
+						body_text: {
+							/**
+							 * Text Body
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Plain text version of the email content.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The plain text content of the email. Either text body or HTML body must be provided. Text version ensures compatibility with all email clients.
+							 */
+							longDesc: () => LocalizedString
+						}
+						body_html: {
+							/**
+							 * HTML Body
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * HTML version of the email content.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The HTML content of the email with formatting, links, and styling. Either text body or HTML body must be provided.
+							 */
+							longDesc: () => LocalizedString
+						}
+						charset: {
+							/**
+							 * Character Encoding
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Character encoding for the email content.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The character encoding used for the email subject and body. UTF-8 is recommended for international character support.
+							 */
+							longDesc: () => LocalizedString
+						}
+						return_path: {
+							/**
+							 * Return Path
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email address for bounce notifications.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional email address where bounce notifications will be sent. Must be a verified address in your SES account.
+							 */
+							longDesc: () => LocalizedString
+						}
+						configuration_set: {
+							/**
+							 * Configuration Set
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * SES configuration set name for tracking.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional configuration set name to use for this email. Configuration sets allow you to publish email sending events to other AWS services.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Email Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Key-value pairs for email categorization and tracking.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional tags to categorize and track your emails. Tags can be used for reporting and analytics in your SES dashboard.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									name: {
+										/**
+										 * Tag Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The name of the tag.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * A descriptive name for the tag that will be used for categorization.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Tag Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value of the tag.
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value associated with this tag name.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				verify_email_address: {
+					/**
+					 * Verify Email Address
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Verify an email address for sending through Amazon SES.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Initiate the verification process for an email address or domain. Amazon SES will send a verification email that must be clicked to complete the verification process.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region where your SES service is configured.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where you want to verify the email address. The verified identity will be available in this region.
+							 */
+							longDesc: () => LocalizedString
+						}
+						email_address: {
+							/**
+							 * Email Address to Verify
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The email address you want to verify for sending.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address that you want to verify as a sending identity. Amazon SES will send a verification email to this address.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_send_statistics: {
+					/**
+					 * Get Send Statistics
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed sending statistics from Amazon SES.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get comprehensive sending statistics including delivery attempts, bounces, complaints, and rejection rates. Data is provided in time-series format with calculated percentages and summaries.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region to retrieve statistics from.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where you want to retrieve sending statistics. Statistics are region-specific.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_bounce: {
+					/**
+					 * New Email Bounce
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when an email bounces back from a recipient.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors for email bounces and triggers when emails are rejected by recipient mail servers. Provides detailed bounce information including bounce type, recipient details, and diagnostic codes.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region to monitor for bounces.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where your SES service is configured to monitor for bounce events.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_complaint: {
+					/**
+					 * New Email Complaint
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a recipient marks your email as spam.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors for spam complaints and triggers when recipients mark your emails as spam or unwanted. Helps maintain good sender reputation by tracking complaint rates.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region to monitor for complaints.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where your SES service is configured to monitor for complaint events.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_verified_identity: {
+					/**
+					 * New Verified Identity
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new email address or domain is verified.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors for newly verified email addresses and domains in your SES account. Triggers when the verification process is completed for new sending identities.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						region: {
+							/**
+							 * AWS Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The AWS region to monitor for new verified identities.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the AWS region where your SES service is configured to monitor for new verified identities.
 							 */
 							longDesc: () => LocalizedString
 						}
