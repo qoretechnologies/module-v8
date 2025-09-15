@@ -79,6 +79,7 @@ import { Debugger, DebugLevels } from '../utils/Debugger';
 import amazonSns from '../apps/amazon-sns';
 import amazonSqs from '../apps/amazon-sqs';
 import amazonCloudWatch from '../apps/amazon-cloudwatch';
+import notion from '../apps/notion';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -139,6 +140,7 @@ const NEW_APPS = {
   mailchimp,
   messenger360,
   netsuite,
+  notion,
   odoo,
   openrouter,
   outlook,
@@ -169,7 +171,7 @@ const CUSTOM_APPS: Record<string, TQoreAppWithActions> = {};
 /* Get all the default exports from the folders inside this folder */
 const appsDir = path.resolve(path.join(__dirname, '..', 'customApps'));
 
-function importIndexFilesFromDir(dir: string) {
+const importIndexFilesFromDir = (dir: string) => {
   fs.readdirSync(dir).forEach((subDir) => {
     const fullPath = path.join(dir, subDir);
     const indexPath = path.join(fullPath, 'index.js');
@@ -178,13 +180,13 @@ function importIndexFilesFromDir(dir: string) {
       CUSTOM_APPS[subDir] = require(indexPath).default;
     }
   });
-}
+};
 
 // Load our custom apps
 importIndexFilesFromDir(appsDir);
 // Load user defined custom apps
 if (process.env.CUSTOM_APPS_DIR) {
-  importIndexFilesFromDir(path.resolve(process.env.CUSTOM_APPS_DIR || ''));
+  importIndexFilesFromDir(path.resolve(process.env.CUSTOM_APPS_DIR));
 }
 
 export class ActionsCatalogue {

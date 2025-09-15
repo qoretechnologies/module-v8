@@ -1,10 +1,10 @@
 import { configDotenv } from 'dotenv';
 import {
-  appendTextToGoogleDocsDocument,
-  createGoogleDocsDocumentFromTemplate,
-  createGoogleDocsDocumentFromText,
-  getGoogleDocsDocumentById,
-  uploadGoogleDocsDocument,
+  AppendTextToGoogleDocsDocument,
+  CreateGoogleDocsDocumentFromTemplate,
+  CreateGoogleDocsDocumentFromText,
+  GetGoogleDocsDocumentById,
+  UploadGoogleDocsDocument,
 } from '../apps/google-docs/actions';
 import { getGoogleDocsDocumentIdAllowedValues } from '../apps/google-docs/helpers/get-document-id-allowed-values';
 import { getGoogleDocsTemplatePlaceholderAllowedValues } from '../apps/google-docs/helpers/get-template-placeholders';
@@ -99,7 +99,7 @@ describe('Google Docs', () => {
 
   describe('Should test google docs actions', () => {
     it('Should append text to a document', async () => {
-      const action = appendTextToGoogleDocsDocument;
+      const action = AppendTextToGoogleDocsDocument;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -124,7 +124,7 @@ describe('Google Docs', () => {
     });
 
     it('Should create a file from template', async () => {
-      const action = createGoogleDocsDocumentFromTemplate;
+      const action = CreateGoogleDocsDocumentFromTemplate;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -150,7 +150,7 @@ describe('Google Docs', () => {
     });
 
     it('Should create a file from text', async () => {
-      const action = createGoogleDocsDocumentFromText;
+      const action = CreateGoogleDocsDocumentFromText;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -172,7 +172,7 @@ describe('Google Docs', () => {
     });
 
     it('Should get file by id', async () => {
-      const action = getGoogleDocsDocumentById;
+      const action = GetGoogleDocsDocumentById;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -189,7 +189,7 @@ describe('Google Docs', () => {
     });
 
     it('Should upload a document', async () => {
-      const action = uploadGoogleDocsDocument;
+      const action = UploadGoogleDocsDocument;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 

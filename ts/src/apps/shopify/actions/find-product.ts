@@ -293,7 +293,7 @@ const findProducts = async (context: TShopifyContextWithConn, data: TFindProduct
   };
 };
 
-export const FindShopifyProduct = QoreAppCreator.createLocalizedAction<typeof options>({
+const FindShopifyProduct = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'find-product',
   app: SHOPIFY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -320,3 +320,5 @@ export const FindShopifyProduct = QoreAppCreator.createLocalizedAction<typeof op
   options,
   response_type: ShopifyFindProductResponseType,
 });
+
+export default FindShopifyProduct;

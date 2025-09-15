@@ -1,2 +1,0 @@
-export const NOTION_FETCH_DELAY = 300;
-export const NOTION_ALLOWED_VALUES_TIMEOUT = 30_000;

@@ -125,7 +125,7 @@ export const confluencePaginationResponseConverter: TQoreResponseDataConverterFu
   }
 
   return {
-    ...req.body,
+    ...req?.body,
     cursor,
   };
 };

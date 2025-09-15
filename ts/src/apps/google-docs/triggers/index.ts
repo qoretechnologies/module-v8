@@ -1,1 +1,1 @@
-export { default as googleDocsNewDocumentTrigger } from './new-document.trigger';
+export { default as NewGoogleDocsDocument } from './new-document.trigger';

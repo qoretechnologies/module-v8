@@ -349,7 +349,7 @@ const createCompany = async (context: TShopifyContextWithConn, data: TCreateComp
   return createCompanyResult.data.companyCreate;
 };
 
-export const CreateShopifyCompany = QoreAppCreator.createLocalizedAction<typeof options>({
+const CreateShopifyCompany = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'create-company',
   app: SHOPIFY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -397,3 +397,5 @@ export const CreateShopifyCompany = QoreAppCreator.createLocalizedAction<typeof 
   options,
   response_type: ShopifyCreateCompanyResponseType,
 });
+
+export default CreateShopifyCompany;

@@ -1,1 +1,1 @@
-export { default as BrowseAiNewTask } from './new-task.trigger';
+export { default as NewBrowseAiTask } from './new-task.trigger';

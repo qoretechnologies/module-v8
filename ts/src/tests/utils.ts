@@ -26,13 +26,13 @@ export const validateResponseProperties = (
     return;
   }
   if (expectedType.type !== 'hash') return;
-  const fields = expectedType?.fields;
+  const fields = expectedType.fields;
 
   forEach(fields, (fieldDefinition, key) => {
     const expectedFieldType = fieldDefinition.type || fieldDefinition;
     const actualValue = actualResponse[key];
 
-    if (fieldDefinition?.required === false) return;
+    if (fieldDefinition.required === false) return;
 
     expect(actualResponse).toHaveProperty(key);
 

@@ -26,7 +26,7 @@ export const mapGoogleFormsQuestions = (form: forms_v1.Schema$Form): TFormQuesti
 
   const questions: TFormQuestion[] = filteredQuestions.flatMap((question) => {
     if (question.questionGroupItem?.questions) {
-      const title = question?.title || 'Untitled Group';
+      const title = question.title || 'Untitled Group';
       const choices =
         question.questionGroupItem.grid?.columns?.options?.map((option) => option.value || '') ||
         [];
@@ -50,9 +50,9 @@ export const mapGoogleFormsQuestions = (form: forms_v1.Schema$Form): TFormQuesti
     }
 
     const questionItem = question.questionItem?.question;
-    const title = question?.title || 'Untitled Question';
+    const title = question.title || 'Untitled Question';
     const required = questionItem?.required || false;
-    const description = question?.description || '';
+    const description = question.description || '';
 
     const commonFields = {
       id: questionItem?.questionId || '',

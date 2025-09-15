@@ -1,10 +1,10 @@
 import {
-  getConference,
-  getConferenceParticipants,
-  getConferenceTranscript,
+  GetGoogleMeetConference,
+  GetGoogleMeetConferenceParticipants,
+  GetGoogleMeetConferenceRecordings,
+  GetGoogleMeetConferenceTranscript,
+  GetGoogleMeetConferences,
 } from '../apps/google-meet/actions';
-import getConferenceRecordings from '../apps/google-meet/actions/get-conference-recordings.action';
-import listConferences from '../apps/google-meet/actions/list-conferences.action';
 import { getGoogleMeetConferenceIdAllowedValues } from '../apps/google-meet/helpers/get-conference-id-allowed-values';
 import { getGoogleMeetConferenceTranscriptIdAllowedValues } from '../apps/google-meet/helpers/get-transcript-id-allowed-values';
 import { Debugger, DebugLevels } from '../utils/Debugger';
@@ -84,7 +84,7 @@ describe('Google Drive', () => {
 
   describe('Should test google meet actions', () => {
     it('Should get conference participants', async () => {
-      const action = getConferenceParticipants;
+      const action = GetGoogleMeetConferenceParticipants;
 
       if (!('api_function' in action)) {
         throw new Error('api_function is not defined in action');
@@ -101,7 +101,7 @@ describe('Google Drive', () => {
     });
 
     it('Should get conference recordings', async () => {
-      const action = getConferenceRecordings;
+      const action = GetGoogleMeetConferenceRecordings;
 
       if (!('api_function' in action)) {
         throw new Error('api_function is not defined in action');
@@ -118,7 +118,7 @@ describe('Google Drive', () => {
     });
 
     it('Should get conference transcript', async () => {
-      const action = getConferenceTranscript;
+      const action = GetGoogleMeetConferenceTranscript;
 
       if (!('api_function' in action)) {
         throw new Error('api_function is not defined in action');
@@ -138,7 +138,7 @@ describe('Google Drive', () => {
     });
 
     it('Should get conference', async () => {
-      const action = getConference;
+      const action = GetGoogleMeetConference;
 
       if (!('api_function' in action)) {
         throw new Error('api_function is not defined in action');
@@ -155,7 +155,7 @@ describe('Google Drive', () => {
     });
 
     it('Should list conference', async () => {
-      const action = listConferences;
+      const action = GetGoogleMeetConferences;
 
       if (!('api_function' in action)) {
         throw new Error('api_function is not defined in action');

@@ -1,2 +1,2 @@
-export { default as IntercomNewContactTrigger } from './new-contact.trigger';
-export { default as IntercomNewConversationTrigger } from './new-conversation.trigger';
+export { default as NewIntercomContact } from './new-contact.trigger';
+export { default as NewIntercomConversation } from './new-conversation.trigger';

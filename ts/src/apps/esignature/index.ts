@@ -325,7 +325,7 @@ export default (locale: Locales) =>
         code: (context): string | void => {
           // find account info in context.conn_opts.accounts
           const accounts: IEsignatureUserInfoAccount[] | undefined = context.conn_opts?.accounts;
-          const accountId = context?.opts?.accountId;
+          const accountId = context.opts?.accountId;
           if (!accounts || !accountId) {
             return;
           }

@@ -1,17 +1,17 @@
 import { configDotenv } from 'dotenv';
 import {
-  getAmazonCloudFrontDistribution,
-  getAmazonCloudFrontInvalidation,
-  invalidateAmazonCloudFrontItem,
-  listAmazonCloudFrontDistributions,
-  listAmazonCloudFrontInvalidations,
-  updateAmazonCloudFrontDistributionStatus,
+  GetAmazonCloudFrontDistribution,
+  InvalidateAmazonCloudFrontItem,
+  ListAmazonCloudFrontDistributions,
+  ListAmazonCloudFrontInvalidations,
+  UpdateAmazonCloudFrontDistributionStatus,
+  GetAmazonCloudFrontInvalidation,
 } from '../apps/amazon-cloudfront/actions';
 import { getAmazonCloudFrontDistributionAllowedValues } from '../apps/amazon-cloudfront/helpers/get-distribution-allowed-values';
 import { getAmazonCloudFrontInvalidationAllowedValues } from '../apps/amazon-cloudfront/helpers/get-invalidation-allowed-values';
 import {
-  NewAmazonCloudFrontDistributionTrigger,
-  NewAmazonCloudFrontInvalidationTrigger,
+  NewAmazonCloudFrontDistribution,
+  NewAmazonCloudFrontInvalidation,
 } from '../apps/amazon-cloudfront/triggers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 
@@ -73,7 +73,7 @@ describe('Amazon CloudFront', () => {
 
   describe('Should test actions', () => {
     it('Should list distributions', async () => {
-      const action = listAmazonCloudFrontDistributions;
+      const action = ListAmazonCloudFrontDistributions;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -93,7 +93,7 @@ describe('Amazon CloudFront', () => {
     });
 
     it('Should get distribution details if distributions exist', async () => {
-      const action = getAmazonCloudFrontDistribution;
+      const action = GetAmazonCloudFrontDistribution;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const result = await action.api_function(
@@ -112,7 +112,7 @@ describe('Amazon CloudFront', () => {
     });
 
     it('Should list invalidations if distributions exist', async () => {
-      const action = listAmazonCloudFrontInvalidations;
+      const action = ListAmazonCloudFrontInvalidations;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const result = await action.api_function(
@@ -132,7 +132,7 @@ describe('Amazon CloudFront', () => {
     });
 
     it('Should get invalidation details if distributions and invalidations exist', async () => {
-      const action = getAmazonCloudFrontInvalidation;
+      const action = GetAmazonCloudFrontInvalidation;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -157,7 +157,7 @@ describe('Amazon CloudFront', () => {
     });
 
     it('Should create invalidation if distributions exist', async () => {
-      const action = invalidateAmazonCloudFrontItem;
+      const action = InvalidateAmazonCloudFrontItem;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const result = await action.api_function(
@@ -180,10 +180,10 @@ describe('Amazon CloudFront', () => {
     });
 
     it('Should update distribution status if distributions exist', async () => {
-      const action = updateAmazonCloudFrontDistributionStatus;
+      const action = UpdateAmazonCloudFrontDistributionStatus;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
-      const getAction = getAmazonCloudFrontDistribution;
+      const getAction = GetAmazonCloudFrontDistribution;
       if (!('api_function' in getAction)) throw new Error('api_function not found in get action');
 
       const currentDistribution = await getAction.api_function(
@@ -215,7 +215,7 @@ describe('Amazon CloudFront', () => {
 
   describe('Should test triggers event example data', () => {
     it('Should get example event data for new distribution trigger', async () => {
-      const trigger = NewAmazonCloudFrontDistributionTrigger;
+      const trigger = NewAmazonCloudFrontDistribution;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');
@@ -231,7 +231,7 @@ describe('Amazon CloudFront', () => {
     });
 
     it('Should get example event data for new invalidation trigger', async () => {
-      const trigger = NewAmazonCloudFrontInvalidationTrigger;
+      const trigger = NewAmazonCloudFrontInvalidation;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');

@@ -1,2 +1,2 @@
-export { default as issueCreated } from './issue-created.trigger';
-export { default as issueUpdated } from './issue-updated.trigger';
+export { default as NewJiraIssueCreated } from './issue-created.trigger';
+export { default as NewJiraIssueUpdated } from './issue-updated.trigger';

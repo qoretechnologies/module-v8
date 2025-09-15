@@ -35,9 +35,9 @@ const mapIntercomConversationToAllowedValue = (
   const displayName =
     conversation.title || conversation.source?.subject || `Conversation ${conversation.id}`;
 
-  const subject = conversation?.source?.subject;
-  const authorName = conversation?.source?.author?.name;
-  const authorEmail = conversation?.source?.author?.email;
+  const subject = conversation.source?.subject;
+  const authorName = conversation.source?.author?.name;
+  const authorEmail = conversation.source?.author?.email;
 
   return {
     display_name: displayName,

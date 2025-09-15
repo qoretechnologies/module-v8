@@ -1,2 +1,2 @@
-export { default as NewOrUpdatedAmazonS3FileTrigger } from './new-or-updated-file.trigger';
-export { default as NewAmazonS3BucketTrigger } from './new-bucket.trigger';
+export { default as NewOrUpdatedAmazonS3File } from './new-or-updated-file.trigger';
+export { default as NewAmazonS3Bucket } from './new-bucket.trigger';

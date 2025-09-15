@@ -44,7 +44,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const SendTeamsChatMessage = QoreAppCreator.createLocalizedAction<typeof options>({
+const SendTeamsChatMessage = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'send-chat-message',
   app: TEAMS_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -93,3 +93,5 @@ export const SendTeamsChatMessage = QoreAppCreator.createLocalizedAction<typeof 
   options,
   response_type,
 });
+
+export default SendTeamsChatMessage;

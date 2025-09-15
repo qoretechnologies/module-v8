@@ -12,7 +12,7 @@ import {
 import { getGoogleChatMemberIdAllowedValues } from '../apps/google-chat/helpers/get-member-id-allowed-values';
 import { getGoogleChatMessageIdAllowedValues } from '../apps/google-chat/helpers/get-message-id-allowed-values';
 import { getGoogleChatSpaceIdAllowedValues } from '../apps/google-chat/helpers/get-space-id-allowed-values';
-import { GoogleChatNewMessageTrigger } from '../apps/google-chat/triggers';
+import { NewGoogleChatMessage } from '../apps/google-chat/triggers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 
 Debugger.level = DebugLevels.Verbose;
@@ -264,7 +264,7 @@ describe('Google Chat', () => {
     });
 
     it('Should get example event data for new message trigger', async () => {
-      const trigger = GoogleChatNewMessageTrigger;
+      const trigger = NewGoogleChatMessage;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');

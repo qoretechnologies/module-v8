@@ -1,19 +1,19 @@
 import { DeleteQueueCommand } from '@aws-sdk/client-sqs';
 import { configDotenv } from 'dotenv';
 import {
-  createAmazonSQSJSONMessage,
-  createAmazonSQSMessage,
-  createAmazonSQSQueue,
-  getAmazonSQSQueue,
-  listAmazonSQSMessages,
-  listAmazonSQSQueues,
+  CreateAmazonSQSJSONMessage,
+  CreateAmazonSQSMessage,
+  CreateAmazonSQSQueue,
+  GetAmazonSQSQueue,
+  ListAmazonSQSMessages,
+  ListAmazonSQSQueues,
 } from '../apps/amazon-sqs/actions';
 import { createSQSClient } from '../apps/amazon-sqs/helpers/constants';
 import { getAmazonSQSQueueAllowedValues } from '../apps/amazon-sqs/helpers/get-queue-allowed-values';
 import {
-  NewAmazonSQSJSONMessageTrigger,
-  NewAmazonSQSQueueTrigger,
-  NewOrUpdatedAmazonSQSMessageTrigger,
+  NewAmazonSQSJSONMessage,
+  NewAmazonSQSQueue,
+  NewOrUpdatedAmazonSQSMessage,
 } from '../apps/amazon-sqs/triggers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 
@@ -64,7 +64,7 @@ describe('Amazon SQS', () => {
 
   describe('Should test actions', () => {
     it('Should create a test queue', async () => {
-      const action = createAmazonSQSQueue;
+      const action = CreateAmazonSQSQueue;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -100,7 +100,7 @@ describe('Amazon SQS', () => {
     });
 
     it('Should list queues', async () => {
-      const action = listAmazonSQSQueues;
+      const action = ListAmazonSQSQueues;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -125,7 +125,7 @@ describe('Amazon SQS', () => {
     });
 
     it('Should get queue details if queue exists', async () => {
-      const action = getAmazonSQSQueue;
+      const action = GetAmazonSQSQueue;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const result = await action.api_function(
@@ -149,7 +149,7 @@ describe('Amazon SQS', () => {
     });
 
     it('Should create a plain text message if queue exists', async () => {
-      const action = createAmazonSQSMessage;
+      const action = CreateAmazonSQSMessage;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const testMessage = 'This is a test message from Qorus SQS integration test';
@@ -187,7 +187,7 @@ describe('Amazon SQS', () => {
     });
 
     it('Should create a JSON message if queue exists', async () => {
-      const action = createAmazonSQSJSONMessage;
+      const action = CreateAmazonSQSJSONMessage;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const testJsonMessage = {
@@ -237,7 +237,7 @@ describe('Amazon SQS', () => {
     });
 
     it('Should list messages from queue if queue exists', async () => {
-      const action = listAmazonSQSMessages;
+      const action = ListAmazonSQSMessages;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const result = await action.api_function(
@@ -277,7 +277,7 @@ describe('Amazon SQS', () => {
 
   describe('Should test triggers event example data', () => {
     it('Should get example event data for new message trigger', async () => {
-      const trigger = NewOrUpdatedAmazonSQSMessageTrigger;
+      const trigger = NewOrUpdatedAmazonSQSMessage;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');
@@ -303,7 +303,7 @@ describe('Amazon SQS', () => {
     });
 
     it('Should get example event data for new JSON message trigger', async () => {
-      const trigger = NewAmazonSQSJSONMessageTrigger;
+      const trigger = NewAmazonSQSJSONMessage;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');
@@ -331,7 +331,7 @@ describe('Amazon SQS', () => {
     });
 
     it('Should get example event data for new queue trigger', async () => {
-      const trigger = NewAmazonSQSQueueTrigger;
+      const trigger = NewAmazonSQSQueue;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');

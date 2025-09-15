@@ -52,7 +52,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const ManageOutlookEmail = QoreAppCreator.createLocalizedAction<
+const ManageOutlookEmail = QoreAppCreator.createLocalizedAction<
   typeof options & Partial<typeof additionalOptions>
 >({
   action: 'manage-email',
@@ -100,3 +100,5 @@ export const ManageOutlookEmail = QoreAppCreator.createLocalizedAction<
   options,
   response_type,
 });
+
+export default ManageOutlookEmail;

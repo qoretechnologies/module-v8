@@ -49,7 +49,7 @@ describe('Facebook', () => {
       expect(allowed_values.length).toBeGreaterThan(0);
       expect(allowed_values[0].value).toBeDefined();
 
-      pageId = allowed_values[0]?.value;
+      pageId = allowed_values[0].value;
     });
 
     it('Should get post allowed values', async () => {
@@ -62,7 +62,7 @@ describe('Facebook', () => {
       expect(allowed_values.length).toBeGreaterThan(0);
       expect(allowed_values[0].value).toBeDefined();
 
-      postId = allowed_values[0]?.value;
+      postId = allowed_values[0].value;
     });
 
     it('Should get comment allowed values', async () => {
@@ -75,7 +75,7 @@ describe('Facebook', () => {
       expect(allowed_values.length).toBeGreaterThan(0);
       expect(allowed_values[0].value).toBeDefined();
 
-      commentId = allowed_values[0]?.value;
+      commentId = allowed_values[0].value;
       expect(commentId).toBeDefined();
     });
   });

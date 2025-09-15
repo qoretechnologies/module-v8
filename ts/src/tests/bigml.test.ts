@@ -19,7 +19,7 @@ import { getBigMlEnsembleAllowedValues } from '../apps/bigml/helpers/get-ensembl
 import { getBigMlModelAllowedValues } from '../apps/bigml/helpers/get-model-allowed-values';
 import { getBigMlProjectAllowedValues } from '../apps/bigml/helpers/get-project-id-allowed-values';
 import { getBigMlTopicModelAllowedValues } from '../apps/bigml/helpers/get-topic-model-allowed-values';
-import { BigMlNewResource } from '../apps/bigml/triggers';
+import { NewBigMlResource } from '../apps/bigml/triggers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 
 configDotenv({ path: '.env' });
@@ -293,7 +293,7 @@ describe('Big Ml', () => {
     });
 
     it('Should get example event data', async () => {
-      const trigger = BigMlNewResource;
+      const trigger = NewBigMlResource;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');

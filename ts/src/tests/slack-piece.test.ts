@@ -87,7 +87,8 @@ describe('slackPieceTest', () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'send_channel_message'
     ) as IQoreAppActionWithFunction;
-    const actionFunction = action?.api_function;
+    expect(action).toBeDefined();
+    const actionFunction = action.api_function;
 
     const channelIds = await action.options!.channel.get_allowed_values!(actionContext);
     expect(channelIds).toBeDefined();
@@ -119,7 +120,9 @@ describe('slackPieceTest', () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'get_channel_history'
     ) as IQoreAppActionWithFunction;
-    const actionFunction = action?.api_function;
+
+    expect(action).toBeDefined();
+    const actionFunction = action.api_function;
 
     const channelIds = await action.options!.channel.get_allowed_values!(actionContext);
     expect(channelIds).toBeDefined();
@@ -150,7 +153,8 @@ describe('slackPieceTest', () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'slack_add_reaction_to_message'
     ) as IQoreAppActionWithFunction;
-    const actionFunction = action?.api_function;
+    expect(action).toBeDefined();
+    const actionFunction = action.api_function;
 
     const channelIds = await action.options!.channel.get_allowed_values!(actionContext);
     expect(channelIds).toBeDefined();
@@ -215,6 +219,8 @@ describe('slackPieceTest', () => {
       (action) => action.action === 'request_action_direct_message'
     ) as IQoreAppActionWithFunction;
 
+    expect(action).toBeDefined();
+
     const userIds = await action.options!.userId.get_allowed_values!(actionContext);
 
     expect(userIds).toBeDefined();
@@ -226,7 +232,7 @@ describe('slackPieceTest', () => {
       actions: [{ title: 'Test', url: 'https://example.com' }],
     };
 
-    const actionFunction = action?.api_function;
+    const actionFunction = action.api_function;
 
     expect(actionFunction).toBeDefined();
 
@@ -244,6 +250,8 @@ describe('slackPieceTest', () => {
       (action) => action.action === 'request_action_message'
     ) as IQoreAppActionWithFunction;
 
+    expect(action).toBeDefined();
+
     const channelIds = await action.options!.channel.get_allowed_values!(actionContext);
     expect(channelIds).toBeDefined();
     expect(channelIds.length).toBeGreaterThan(0);
@@ -254,7 +262,7 @@ describe('slackPieceTest', () => {
       actions: [{ title: 'Test', url: 'https://example.com' }],
     };
 
-    const actionFunction = action?.api_function;
+    const actionFunction = action.api_function;
 
     expect(actionFunction).toBeDefined();
 
@@ -330,7 +338,8 @@ describe('slackPieceTest', () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'upload_file'
     ) as IQoreAppActionWithFunction;
-    const actionFunction = action?.api_function;
+    expect(action).toBeDefined();
+    const actionFunction = action.api_function;
 
     const channelIds = await action.options!.channel.get_allowed_values!(actionContext);
     expect(channelIds).toBeDefined();
@@ -381,7 +390,8 @@ describe('slackPieceTest', () => {
       (action) => action.action === 'slack_update_profile'
     ) as IQoreAppActionWithFunction;
 
-    const actionFunction = action?.api_function;
+    expect(action).toBeDefined();
+    const actionFunction = action.api_function;
 
     expect(actionFunction).toBeDefined();
     expect(findUserActionFunction).toBeDefined();

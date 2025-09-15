@@ -1,10 +1,10 @@
 import { configDotenv } from 'dotenv';
 import {
-  getMessenger360Chats,
-  getMessenger360Contacts,
-  getMessenger360Groups,
-  sendMessenger360TextMessage,
-  sendMessenger360TextMessageToGroup,
+  GetMessenger360Chats,
+  GetMessenger360Contacts,
+  GetMessenger360Groups,
+  SendMessenger360TextMessage,
+  SendMessenger360TextMessageToGroup,
 } from '../apps/messenger360/actions';
 import { getMessenger360ContactNumberAllowedValues } from '../apps/messenger360/helpers/get-contact-number-allowed-values';
 import { getMessenger360GroupIdAllowedValues } from '../apps/messenger360/helpers/get-group-id-allowed-values';
@@ -54,7 +54,7 @@ describe('Test Messenger360 Actions', () => {
 
   describe('Should test Messenger360 actions', () => {
     it('Should get contacts', async () => {
-      const action = getMessenger360Contacts;
+      const action = GetMessenger360Contacts;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -65,7 +65,7 @@ describe('Test Messenger360 Actions', () => {
     });
 
     it('Should get chats', async () => {
-      const action = getMessenger360Chats;
+      const action = GetMessenger360Chats;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -76,7 +76,7 @@ describe('Test Messenger360 Actions', () => {
     });
 
     it('Should get groups', async () => {
-      const action = getMessenger360Groups;
+      const action = GetMessenger360Groups;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -86,7 +86,7 @@ describe('Test Messenger360 Actions', () => {
     });
 
     it('Should send text message', async () => {
-      const action = sendMessenger360TextMessage;
+      const action = SendMessenger360TextMessage;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -106,7 +106,7 @@ describe('Test Messenger360 Actions', () => {
     });
 
     it('Should send text message to group', async () => {
-      const action = sendMessenger360TextMessageToGroup;
+      const action = SendMessenger360TextMessageToGroup;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 

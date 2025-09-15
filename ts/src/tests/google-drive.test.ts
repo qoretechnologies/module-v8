@@ -1,19 +1,20 @@
 import { IQoreAppActionWithFunction } from '@qoretechnologies/ts-toolkit';
 
+import { configDotenv } from 'dotenv';
 import {
-  addFileSharingPreference,
-  copyFile,
-  createFileFromText,
-  createFolder,
-  createShortcut,
-  deleteFile,
-  findFile,
-  getFile,
-  getFolder,
-  listFiles,
-  moveFile,
-  replaceFile,
-  uploadFile,
+  AddGoogleDriveFileSharingPreference,
+  CopyGoogleDriveFile,
+  CreateGoogleDriveFileFromText,
+  CreateGoogleDriveFolder,
+  CreateGoogleDriveShortcut,
+  DeleteGoogleDriveFile,
+  FindGoogleDriveFile,
+  GetGoogleDriveFile,
+  GetGoogleDriveFolder,
+  ListGoogleDriveFiles,
+  MoveGoogleDriveFile,
+  ReplaceGoogleDriveFile,
+  UploadGoogleDriveFile,
 } from '../apps/google-drive/actions';
 import { createGoogleDriveClient } from '../apps/google-drive/helpers/constants';
 import { getGoogleDriveFileIdAllowedValues } from '../apps/google-drive/helpers/get-file-id-allowed-values';
@@ -21,7 +22,6 @@ import { getGoogleDriveFolderIdAllowedValues } from '../apps/google-drive/helper
 import { getGoogleDriveUserDomainDefaultValue } from '../apps/google-drive/helpers/get-organization-domain-default-value';
 import { delay } from '../global/helpers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import { configDotenv } from 'dotenv';
 
 Debugger.level = DebugLevels.Verbose;
 configDotenv({ path: '.env' });
@@ -112,7 +112,7 @@ describe('Google Drive', () => {
 
   describe('Should test google drive actions', () => {
     it('Should create a file from text', async () => {
-      const action = createFileFromText as IQoreAppActionWithFunction;
+      const action = CreateGoogleDriveFileFromText as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           file_name: 'test_file.txt',
@@ -130,7 +130,7 @@ describe('Google Drive', () => {
     });
 
     it('Should copy a file to folder', async () => {
-      const action = copyFile as IQoreAppActionWithFunction;
+      const action = CopyGoogleDriveFile as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           file_id: created_file_id,
@@ -147,7 +147,7 @@ describe('Google Drive', () => {
     });
 
     it('Should add file sharing preference', async () => {
-      const action = addFileSharingPreference as IQoreAppActionWithFunction;
+      const action = AddGoogleDriveFileSharingPreference as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           file_id: created_file_id,
@@ -162,7 +162,7 @@ describe('Google Drive', () => {
     });
 
     it('Should delete a file', async () => {
-      const action = deleteFile as IQoreAppActionWithFunction;
+      const action = DeleteGoogleDriveFile as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           file_id: copied_file_id,
@@ -177,7 +177,7 @@ describe('Google Drive', () => {
     });
 
     it('Should create a folder', async () => {
-      const action = createFolder as IQoreAppActionWithFunction;
+      const action = CreateGoogleDriveFolder as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           folder_name: 'Child Test Folder',
@@ -194,7 +194,7 @@ describe('Google Drive', () => {
     });
 
     it('Should create a shortcut', async () => {
-      const action = createShortcut as IQoreAppActionWithFunction;
+      const action = CreateGoogleDriveShortcut as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           file_id: created_file_id,
@@ -211,7 +211,7 @@ describe('Google Drive', () => {
     });
 
     it('Should move a file', async () => {
-      const action = moveFile as IQoreAppActionWithFunction;
+      const action = MoveGoogleDriveFile as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           file_id: created_file_id,
@@ -229,7 +229,7 @@ describe('Google Drive', () => {
     });
 
     it('Should replace a file', async () => {
-      const action = replaceFile as IQoreAppActionWithFunction;
+      const action = ReplaceGoogleDriveFile as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           file_to_replace: created_file_id,
@@ -249,7 +249,7 @@ describe('Google Drive', () => {
     });
 
     it('Should search for files', async () => {
-      const action = listFiles as IQoreAppActionWithFunction;
+      const action = ListGoogleDriveFiles as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           filename: 'report.docx',
@@ -266,7 +266,7 @@ describe('Google Drive', () => {
     });
 
     it('Should upload a file', async () => {
-      const action = uploadFile as IQoreAppActionWithFunction;
+      const action = UploadGoogleDriveFile as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           file: {
@@ -287,7 +287,7 @@ describe('Google Drive', () => {
     });
 
     it('Should find a file or create one', async () => {
-      const action = findFile as IQoreAppActionWithFunction;
+      const action = FindGoogleDriveFile as IQoreAppActionWithFunction;
 
       const result = await action.api_function(
         {
@@ -312,7 +312,7 @@ describe('Google Drive', () => {
     });
 
     it('Should get a file by id', async () => {
-      const action = getFile as IQoreAppActionWithFunction;
+      const action = GetGoogleDriveFile as IQoreAppActionWithFunction;
 
       const result = await action.api_function(
         {
@@ -328,7 +328,7 @@ describe('Google Drive', () => {
     });
 
     it('Should get a folder by id', async () => {
-      const action = getFolder as IQoreAppActionWithFunction;
+      const action = GetGoogleDriveFolder as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           folder_id: folder_id,

@@ -81,7 +81,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const CreateSharePointListItem = QoreAppCreator.createLocalizedAction<
+const CreateSharePointListItem = QoreAppCreator.createLocalizedAction<
   typeof options & Partial<typeof additionalOptions>
 >({
   action: 'create-list-item',
@@ -129,3 +129,5 @@ export const CreateSharePointListItem = QoreAppCreator.createLocalizedAction<
   options,
   response_type,
 });
+
+export default CreateSharePointListItem;

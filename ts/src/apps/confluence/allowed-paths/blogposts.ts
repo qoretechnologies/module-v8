@@ -55,7 +55,7 @@ export const CONFLUENCE_BLOG_POSTS_ALLOWED_PATHS = {
         },
       },
       request_data_converter: (req) => {
-        const id = req?.query?.id;
+        const id = req.query?.id;
 
         return {
           ...req,

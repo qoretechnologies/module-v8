@@ -1,15 +1,12 @@
 import { configDotenv } from 'dotenv';
 import {
-  describeAmazonEc2Instances,
-  describeAmazonEc2Regions,
-  rebootAmazonEc2Instance,
-  startAmazonEc2Instance,
+  DescribeAmazonEc2Instances,
+  DescribeAmazonEc2Regions,
+  RebootAmazonEc2Instance,
+  StartAmazonEc2Instance,
 } from '../apps/amazon-ec2/actions';
 import { getAmazonEc2InstanceIdAllowedValues } from '../apps/amazon-ec2/helpers/get-instance-id-allowed-values';
-import {
-  NewAmazonEc2InstanceTrigger,
-  NewAmazonEc2ScheduledEventTrigger,
-} from '../apps/amazon-ec2/triggers';
+import { NewAmazonEc2Instance, NewAmazonEc2ScheduledEvent } from '../apps/amazon-ec2/triggers';
 import { getAWSRegionAllowedValues } from '../global/helpers/get-amazon-region-allowed-values';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 
@@ -62,7 +59,7 @@ describe('Amazon EC2', () => {
 
   describe('Should test actions', () => {
     it('Should start an instance', async () => {
-      const action = startAmazonEc2Instance;
+      const action = StartAmazonEc2Instance;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
       if (!instance) throw new Error('No instance ID available');
@@ -81,7 +78,7 @@ describe('Amazon EC2', () => {
     });
 
     it('Should reboot the instance', async () => {
-      const action = rebootAmazonEc2Instance;
+      const action = RebootAmazonEc2Instance;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
       if (!instance) throw new Error('No instance ID available');
@@ -100,7 +97,7 @@ describe('Amazon EC2', () => {
     });
 
     it('Should describe regions', async () => {
-      const action = describeAmazonEc2Regions;
+      const action = DescribeAmazonEc2Regions;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -112,7 +109,7 @@ describe('Amazon EC2', () => {
     });
 
     it('Should describe instances', async () => {
-      const action = describeAmazonEc2Instances;
+      const action = DescribeAmazonEc2Instances;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -132,7 +129,7 @@ describe('Amazon EC2', () => {
 
   describe('Should test triggers event example data', () => {
     it('Should get example event data for new instance trigger', async () => {
-      const trigger = NewAmazonEc2InstanceTrigger;
+      const trigger = NewAmazonEc2Instance;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');
@@ -147,7 +144,7 @@ describe('Amazon EC2', () => {
     });
 
     it('Should get example event data for new scheduled event trigger', async () => {
-      const trigger = NewAmazonEc2ScheduledEventTrigger;
+      const trigger = NewAmazonEc2ScheduledEvent;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');

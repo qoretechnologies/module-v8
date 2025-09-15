@@ -86,9 +86,9 @@ export const pollingHelper = {
           lastItemId,
         });
 
-        const lastItemIndex = items.findIndex((f) => f.id === lastItemId);
+        const lastItemIndex = items?.findIndex((f) => f.id === lastItemId);
         let newItems = [];
-        if (isNil(lastItemId) || lastItemIndex == -1) {
+        if (isNil(lastItemId) || lastItemIndex === -1) {
           newItems = items ?? [];
         } else {
           newItems = items?.slice(0, lastItemIndex) ?? [];
@@ -98,7 +98,7 @@ export const pollingHelper = {
           // Get the last polling.maxItemsToPoll items
           newItems = newItems.slice(-maxItemsToPoll);
         }
-        const newLastItem = newItems?.[0]?.id;
+        const newLastItem = newItems[0]?.id;
         if (!isNil(newLastItem)) {
           await store.put('lastItem', newLastItem);
         }

@@ -113,7 +113,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const ExecuteSerenityAgent = QoreAppCreator.createLocalizedAction<typeof options>({
+const ExecuteSerenityAgent = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'execute-agent',
   app: SERENITY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -166,3 +166,5 @@ export const ExecuteSerenityAgent = QoreAppCreator.createLocalizedAction<typeof 
   options,
   response_type,
 });
+
+export default ExecuteSerenityAgent;

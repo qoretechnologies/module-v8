@@ -2,8 +2,6 @@ import { TQoreAppWithActions, TQoreMappedOptions } from '@qoretechnologies/ts-to
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
-import * as actions from './actions';
-import * as SHOPIFY_TRIGGERS from './triggers';
 import {
   SHOPIFY_APP_LOGO,
   SHOPIFY_APP_NAME,
@@ -12,7 +10,8 @@ import {
   SHOPIFY_SCOPES,
 } from './constants';
 
-const SHOPIFY_ACTIONS = Object.values(actions);
+import * as SHOPIFY_ACTIONS from './actions';
+import * as SHOPIFY_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
   ({

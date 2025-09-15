@@ -1,1 +1,1 @@
-export { default as GoogleFormsNewFormResponseTrigger } from './new-form-response.trigger';
+export { default as NewGoogleFormsFormResponse } from './new-form-response.trigger';

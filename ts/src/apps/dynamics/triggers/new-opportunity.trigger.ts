@@ -15,7 +15,7 @@ const DynamicsNewOpportunityTrigger = QoreAppCreator.createLocalizedTrigger({
 
   event_function: async (context, update, should_stop) => {
     const token = context.conn_opts?.token;
-    const organizationUrl = formatDynamicsUrl(context?.conn_opts?.url);
+    const organizationUrl = formatDynamicsUrl(context.conn_opts?.url);
     const condition = context.opts?.condition;
 
     const missingValues: string[] = [];

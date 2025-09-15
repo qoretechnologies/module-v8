@@ -37,7 +37,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const DeleteTeamsMeeting = QoreAppCreator.createLocalizedAction<
+const DeleteTeamsMeeting = QoreAppCreator.createLocalizedAction<
   typeof options & Partial<typeof additionalOptions>
 >({
   action: 'delete-meeting',
@@ -93,3 +93,5 @@ export const DeleteTeamsMeeting = QoreAppCreator.createLocalizedAction<
   options,
   response_type,
 });
+
+export default DeleteTeamsMeeting;
