@@ -79,6 +79,7 @@ import { Debugger, DebugLevels } from '../utils/Debugger';
 import amazonSns from '../apps/amazon-sns';
 import amazonSqs from '../apps/amazon-sqs';
 import amazonCloudWatch from '../apps/amazon-cloudwatch';
+import notion from '../apps/notion';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -139,6 +140,7 @@ const NEW_APPS = {
   mailchimp,
   messenger360,
   netsuite,
+  notion,
   odoo,
   openrouter,
   outlook,
