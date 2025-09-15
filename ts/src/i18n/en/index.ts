@@ -67,6 +67,7 @@ import AmazonCloudFront from './apps/AmazonCloudFront';
 import AmazonSNS from './apps/AmazonSNS';
 import AmazonSQS from './apps/AmazonSQS';
 import AmazonCloudWatch from './apps/AmazonCloudWatch';
+import AmazonSES from './apps/AmazonSES';
 
 const en = {
   common: {},
@@ -172,6 +173,7 @@ const en = {
     AmazonCloudFront,
     AmazonCloudWatch,
     AmazonSNS,
+    AmazonSES,
     Claude,
     AmazonSQS,
     LinkedIn,
