@@ -2,11 +2,10 @@ import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
-import * as actions from './actions';
 import { SERENITY_APP_LOGO, SERENITY_APP_NAME, SERENITY_CONN_OPTIONS } from './constants';
-import * as SERENITY_TRIGGERS from './triggers';
 
-const SERENITY_ACTIONS = Object.values(actions);
+import * as SERENITY_ACTIONS from './actions';
+import * as SERENITY_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
   ({

@@ -34592,11 +34592,11 @@ type RootTranslation = {
 			 */
 			displayName: string
 			/**
-			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​N​o​t​i​o​n​ ​A​P​I
+			 * C​o​n​n​e​c​t​ ​t​o​ ​N​o​t​i​o​n​ ​A​P​I​ ​t​o​ ​m​a​n​a​g​e​ ​p​a​g​e​s​,​ ​d​a​t​a​b​a​s​e​s​,​ ​c​o​m​m​e​n​t​s​,​ ​a​n​d​ ​d​i​s​c​u​s​s​i​o​n​s​.
 			 */
 			shortDesc: string
 			/**
-			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​N​o​t​i​o​n​ ​A​P​I
+			 * T​h​e​ ​N​o​t​i​o​n​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​N​o​t​i​o​n​ ​A​P​I​.​ ​M​a​n​a​g​e​ ​p​a​g​e​s​,​ ​d​a​t​a​b​a​s​e​s​,​ ​c​o​m​m​e​n​t​s​,​ ​d​i​s​c​u​s​s​i​o​n​s​,​ ​a​n​d​ ​u​s​e​r​s​.​ ​C​r​e​a​t​e​,​ ​r​e​a​d​,​ ​u​p​d​a​t​e​,​ ​a​n​d​ ​m​o​n​i​t​o​r​ ​c​h​a​n​g​e​s​ ​t​o​ ​y​o​u​r​ ​N​o​t​i​o​n​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​e​n​t​.
 			 */
 			longDesc: string
 			triggers: {
@@ -34606,34 +34606,42 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​t​e​m​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​d​a​t​a​b​a​s​e
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​t​e​m​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e
 					 */
 					shortDesc: string
 					/**
-					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​t​e​m​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​d​a​t​a​b​a​s​e
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​m​o​n​i​t​o​r​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​ ​a​n​d​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​t​e​m​ ​(​p​a​g​e​)​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​i​t​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​i​t​e​m​s​ ​b​a​s​e​d​ ​o​n​ ​p​r​o​p​e​r​t​y​ ​v​a​l​u​e​s​.
 					 */
 					longDesc: string
 					options: {
-						databaseId: {
+						data_source_id: {
 							/**
-							 * D​a​t​a​b​a​s​e​ ​I​D
+							 * D​a​t​a​b​a​s​e
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​a​t​a​b​a​s​e​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​n​e​w​ ​i​t​e​m​s
+							 * T​h​e​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​ ​t​o​ ​m​o​n​i​t​o​r
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​a​t​a​b​a​s​e​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​n​e​w​ ​i​t​e​m​s
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​i​t​e​m​s
 							 */
 							longDesc: string
 						}
-					}
-					event_info: {
-						/**
-						 * N​o​t​i​o​n​ ​N​e​w​ ​D​a​t​a​b​a​s​e​ ​I​t​e​m​ ​E​v​e​n​t​ ​I​n​f​o
-						 */
-						desc: string
+						filter_properties: {
+							/**
+							 * F​i​l​t​e​r​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​s​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​d​a​t​a​b​a​s​e​ ​i​t​e​m​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​p​r​o​p​e​r​t​y​ ​f​i​l​t​e​r​s​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​i​t​e​m​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a
+							 */
+							longDesc: string
+						}
 					}
 				}
 				updated_database_item: {
@@ -34642,34 +34650,42 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​i​t​e​m​ ​i​n​ ​a​ ​d​a​t​a​b​a​s​e​ ​i​s​ ​u​p​d​a​t​e​d
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​d​a​t​a​b​a​s​e​ ​i​t​e​m​ ​i​s​ ​u​p​d​a​t​e​d​ ​i​n​ ​N​o​t​i​o​n
 					 */
 					shortDesc: string
 					/**
-					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​i​t​e​m​ ​i​n​ ​a​ ​d​a​t​a​b​a​s​e​ ​i​s​ ​u​p​d​a​t​e​d
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​m​o​n​i​t​o​r​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​ ​a​n​d​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​i​t​e​m​ ​(​p​a​g​e​)​ ​i​s​ ​m​o​d​i​f​i​e​d​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​i​t​e​m​s​ ​b​a​s​e​d​ ​o​n​ ​p​r​o​p​e​r​t​y​ ​v​a​l​u​e​s​.
 					 */
 					longDesc: string
 					options: {
-						databaseId: {
+						data_source_id: {
 							/**
-							 * D​a​t​a​b​a​s​e​ ​I​D
+							 * D​a​t​a​b​a​s​e
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​a​t​a​b​a​s​e​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​u​p​d​a​t​e​s
+							 * T​h​e​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​ ​t​o​ ​m​o​n​i​t​o​r
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​a​t​a​b​a​s​e​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​u​p​d​a​t​e​s
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​u​p​d​a​t​e​d​ ​i​t​e​m​s
 							 */
 							longDesc: string
 						}
-					}
-					event_info: {
-						/**
-						 * N​o​t​i​o​n​ ​U​p​d​a​t​e​d​ ​D​a​t​a​b​a​s​e​ ​I​t​e​m​ ​E​v​e​n​t​ ​I​n​f​o
-						 */
-						desc: string
+						filter_properties: {
+							/**
+							 * F​i​l​t​e​r​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​s​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​d​a​t​a​b​a​s​e​ ​i​t​e​m​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​p​r​o​p​e​r​t​y​ ​f​i​l​t​e​r​s​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​i​t​e​m​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a
+							 */
+							longDesc: string
+						}
 					}
 				}
 				updated_page: {
@@ -34678,34 +34694,760 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​a​g​e​ ​i​s​ ​u​p​d​a​t​e​d
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​N​o​t​i​o​n​ ​p​a​g​e​ ​i​s​ ​u​p​d​a​t​e​d
 					 */
 					shortDesc: string
 					/**
-					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​a​g​e​ ​i​s​ ​u​p​d​a​t​e​d
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​m​o​n​i​t​o​r​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​N​o​t​i​o​n​ ​p​a​g​e​ ​a​n​d​ ​f​i​r​e​s​ ​w​h​e​n​ ​t​h​e​ ​p​a​g​e​ ​i​s​ ​m​o​d​i​f​i​e​d​.​ ​I​t​ ​t​r​a​c​k​s​ ​c​h​a​n​g​e​s​ ​t​o​ ​t​h​e​ ​p​a​g​e​ ​c​o​n​t​e​n​t​,​ ​p​r​o​p​e​r​t​i​e​s​,​ ​o​r​ ​m​e​t​a​d​a​t​a​.
 					 */
 					longDesc: string
 					options: {
-						pageId: {
+						page: {
 							/**
-							 * P​a​g​e​ ​I​D
+							 * P​a​g​e
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​p​a​g​e​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​u​p​d​a​t​e​s
+							 * T​h​e​ ​N​o​t​i​o​n​ ​p​a​g​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​u​p​d​a​t​e​s
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​p​a​g​e​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​u​p​d​a​t​e​s
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​N​o​t​i​o​n​ ​p​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​c​h​a​n​g​e​s​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​f​i​r​e​ ​w​h​e​n​e​v​e​r​ ​t​h​i​s​ ​p​a​g​e​ ​i​s​ ​e​d​i​t​e​d​ ​o​r​ ​u​p​d​a​t​e​d​.
 							 */
 							longDesc: string
 						}
 					}
-					event_info: {
-						/**
-						 * N​o​t​i​o​n​ ​P​a​g​e​ ​U​p​d​a​t​e​d​ ​E​v​e​n​t​ ​I​n​f​o
-						 */
-						desc: string
+				}
+			}
+			actions: {
+				add_comment_to_discussion: {
+					/**
+					 * A​d​d​ ​C​o​m​m​e​n​t​ ​t​o​ ​D​i​s​c​u​s​s​i​o​n
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​r​e​p​l​y​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​d​i​s​c​u​s​s​i​o​n​ ​t​h​r​e​a​d​ ​i​n​ ​N​o​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​p​l​y​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​d​i​s​c​u​s​s​i​o​n​ ​t​h​r​e​a​d​ ​o​n​ ​a​ ​N​o​t​i​o​n​ ​p​a​g​e​ ​o​r​ ​b​l​o​c​k​.​ ​T​h​i​s​ ​c​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​d​i​s​c​u​s​s​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						discussion_id: {
+							/**
+							 * D​i​s​c​u​s​s​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​i​s​c​u​s​s​i​o​n​ ​t​h​r​e​a​d​ ​t​o​ ​r​e​p​l​y​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​d​i​s​c​u​s​s​i​o​n​ ​t​h​r​e​a​d​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​y​o​u​r​ ​c​o​m​m​e​n​t
+							 */
+							longDesc: string
+						}
+						text: {
+							/**
+							 * C​o​m​m​e​n​t​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​y​o​u​r​ ​c​o​m​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​f​o​r​ ​y​o​u​r​ ​c​o​m​m​e​n​t​.​ ​T​h​i​s​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​ ​a​s​ ​a​ ​p​l​a​i​n​ ​t​e​x​t​ ​c​o​m​m​e​n​t​ ​t​o​ ​t​h​e​ ​d​i​s​c​u​s​s​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_comment_to_page: {
+					/**
+					 * A​d​d​ ​C​o​m​m​e​n​t​ ​t​o​ ​P​a​g​e
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​t​o​ ​a​ ​N​o​t​i​o​n​ ​p​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​o​n​ ​a​ ​N​o​t​i​o​n​ ​p​a​g​e​.​ ​T​h​i​s​ ​s​t​a​r​t​s​ ​a​ ​n​e​w​ ​d​i​s​c​u​s​s​i​o​n​ ​t​h​r​e​a​d​ ​o​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​p​a​g​e​.
+					 */
+					longDesc: string
+					options: {
+						page_id: {
+							/**
+							 * P​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​t​i​o​n​ ​p​a​g​e​ ​t​o​ ​c​o​m​m​e​n​t​ ​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​t​i​o​n​ ​p​a​g​e​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​a​ ​c​o​m​m​e​n​t
+							 */
+							longDesc: string
+						}
+						text: {
+							/**
+							 * C​o​m​m​e​n​t​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​y​o​u​r​ ​c​o​m​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​f​o​r​ ​y​o​u​r​ ​c​o​m​m​e​n​t​.​ ​T​h​i​s​ ​w​i​l​l​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​d​i​s​c​u​s​s​i​o​n​ ​o​n​ ​t​h​e​ ​p​a​g​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				append_to_page: {
+					/**
+					 * A​p​p​e​n​d​ ​t​o​ ​P​a​g​e
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​c​o​n​t​e​n​t​ ​t​o​ ​t​h​e​ ​e​n​d​ ​o​f​ ​a​ ​N​o​t​i​o​n​ ​p​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * A​p​p​e​n​d​ ​n​e​w​ ​c​o​n​t​e​n​t​ ​b​l​o​c​k​s​ ​t​o​ ​t​h​e​ ​e​n​d​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​N​o​t​i​o​n​ ​p​a​g​e​.​ ​T​h​e​ ​c​o​n​t​e​n​t​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​ ​a​s​ ​n​e​w​ ​b​l​o​c​k​s​ ​a​t​ ​t​h​e​ ​b​o​t​t​o​m​ ​o​f​ ​t​h​e​ ​p​a​g​e​.
+					 */
+					longDesc: string
+					options: {
+						page_id: {
+							/**
+							 * P​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​t​i​o​n​ ​p​a​g​e​ ​t​o​ ​a​p​p​e​n​d​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​t​i​o​n​ ​p​a​g​e​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​c​o​n​t​e​n​t
+							 */
+							longDesc: string
+						}
+						content: {
+							/**
+							 * C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​o​ ​a​p​p​e​n​d​ ​t​o​ ​t​h​e​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​p​a​g​e​.​ ​S​u​p​p​o​r​t​s​ ​m​a​r​k​d​o​w​n​ ​f​o​r​m​a​t​t​i​n​g​ ​w​h​i​c​h​ ​w​i​l​l​ ​b​e​ ​c​o​n​v​e​r​t​e​d​ ​t​o​ ​N​o​t​i​o​n​ ​b​l​o​c​k​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_database_item: {
+					/**
+					 * C​r​e​a​t​e​ ​D​a​t​a​b​a​s​e​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​i​t​e​m​ ​i​n​ ​a​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​a​g​e​ ​(​i​t​e​m​)​ ​i​n​ ​a​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​ ​w​i​t​h​ ​s​p​e​c​i​f​i​e​d​ ​p​r​o​p​e​r​t​y​ ​v​a​l​u​e​s​ ​a​n​d​ ​o​p​t​i​o​n​a​l​ ​c​o​n​t​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						data_source_id: {
+							/**
+							 * D​a​t​a​b​a​s​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​ ​t​o​ ​c​r​e​a​t​e​ ​i​t​e​m​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​i​t​e​m
+							 */
+							longDesc: string
+						}
+						properties: {
+							/**
+							 * P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * P​r​o​p​e​r​t​y​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​d​a​t​a​b​a​s​e​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​p​r​o​p​e​r​t​y​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​d​a​t​a​b​a​s​e​ ​i​t​e​m​.​ ​A​v​a​i​l​a​b​l​e​ ​p​r​o​p​e​r​t​i​e​s​ ​d​e​p​e​n​d​ ​o​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​d​a​t​a​b​a​s​e​ ​s​c​h​e​m​a​.
+							 */
+							longDesc: string
+						}
+						content: {
+							/**
+							 * P​a​g​e​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​o​n​t​e​n​t​ ​f​o​r​ ​t​h​e​ ​d​a​t​a​b​a​s​e​ ​i​t​e​m​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​ ​c​o​n​t​e​n​t​ ​t​o​ ​t​h​e​ ​d​a​t​a​b​a​s​e​ ​i​t​e​m​ ​p​a​g​e​.​ ​T​h​i​s​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​ ​a​s​ ​a​ ​p​a​r​a​g​r​a​p​h​ ​b​l​o​c​k​ ​i​n​ ​t​h​e​ ​p​a​g​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_page: {
+					/**
+					 * C​r​e​a​t​e​ ​P​a​g​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​a​g​e​ ​i​n​ ​N​o​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​a​g​e​ ​a​s​ ​a​ ​c​h​i​l​d​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​a​g​e​ ​i​n​ ​N​o​t​i​o​n​ ​w​i​t​h​ ​a​ ​t​i​t​l​e​ ​a​n​d​ ​c​o​n​t​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						page: {
+							/**
+							 * P​a​r​e​n​t​ ​P​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​a​r​e​n​t​ ​p​a​g​e​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​p​a​g​e​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​a​r​e​n​t​ ​p​a​g​e​ ​u​n​d​e​r​ ​w​h​i​c​h​ ​t​h​e​ ​n​e​w​ ​p​a​g​e​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * P​a​g​e​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​n​e​w​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​p​a​g​e
+							 */
+							longDesc: string
+						}
+						content: {
+							/**
+							 * P​a​g​e​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​i​n​i​t​i​a​l​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​n​e​w​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​i​n​i​t​i​a​l​ ​c​o​n​t​e​n​t​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​p​a​g​e​.​ ​T​h​i​s​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​ ​a​s​ ​p​a​r​a​g​r​a​p​h​ ​b​l​o​c​k​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_data_source: {
+					/**
+					 * G​e​t​ ​D​a​t​a​b​a​s​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​p​r​o​p​e​r​t​i​e​s​,​ ​t​i​t​l​e​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​a​n​d​ ​m​e​t​a​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						data_source_id: {
+							/**
+							 * D​a​t​a​b​a​s​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_database: {
+					/**
+					 * G​e​t​ ​D​a​t​a​b​a​s​e​ ​I​n​f​o
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​a​t​a​b​a​s​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​b​y​ ​I​D
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​ ​b​y​ ​p​r​o​v​i​d​i​n​g​ ​i​t​s​ ​I​D​ ​d​i​r​e​c​t​l​y​.
+					 */
+					longDesc: string
+					options: {
+						database_id: {
+							/**
+							 * D​a​t​a​b​a​s​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_page: {
+					/**
+					 * G​e​t​ ​P​a​g​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​N​o​t​i​o​n​ ​p​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​N​o​t​i​o​n​ ​p​a​g​e​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​p​r​o​p​e​r​t​i​e​s​,​ ​t​i​t​l​e​,​ ​a​n​d​ ​m​e​t​a​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						page_id: {
+							/**
+							 * P​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​t​i​o​n​ ​p​a​g​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​t​i​o​n​ ​p​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_user: {
+					/**
+					 * G​e​t​ ​U​s​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​N​o​t​i​o​n​ ​u​s​e​r
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​N​o​t​i​o​n​ ​u​s​e​r​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​i​r​ ​n​a​m​e​,​ ​t​y​p​e​,​ ​a​n​d​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						user_id: {
+							/**
+							 * U​s​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​t​i​o​n​ ​u​s​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​t​i​o​n​ ​u​s​e​r​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_comments: {
+					/**
+					 * L​i​s​t​ ​C​o​m​m​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​c​o​m​m​e​n​t​s​ ​o​n​ ​a​ ​N​o​t​i​o​n​ ​p​a​g​e​ ​o​r​ ​b​l​o​c​k
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​o​m​m​e​n​t​s​ ​o​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​N​o​t​i​o​n​ ​p​a​g​e​ ​o​r​ ​b​l​o​c​k​.​ ​R​e​t​u​r​n​s​ ​a​l​l​ ​u​n​r​e​s​o​l​v​e​d​ ​c​o​m​m​e​n​t​s​ ​w​i​t​h​ ​p​a​g​i​n​a​t​i​o​n​ ​s​u​p​p​o​r​t​.
+					 */
+					longDesc: string
+					options: {
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​c​o​m​m​e​n​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​m​m​e​n​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​ ​(​m​a​x​i​m​u​m​ ​1​0​0​)
+							 */
+							longDesc: string
+						}
+						next_cursor: {
+							/**
+							 * N​e​x​t​ ​C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​n​e​x​t​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​c​u​r​s​o​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​c​o​m​m​e​n​t​s​ ​i​n​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​r​e​s​p​o​n​s​e
+							 */
+							longDesc: string
+						}
+						block_id: {
+							/**
+							 * P​a​g​e​ ​o​r​ ​B​l​o​c​k
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​a​g​e​ ​o​r​ ​b​l​o​c​k​ ​t​o​ ​l​i​s​t​ ​c​o​m​m​e​n​t​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​t​i​o​n​ ​p​a​g​e​ ​o​r​ ​b​l​o​c​k​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​c​o​m​m​e​n​t​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_datasource_items: {
+					/**
+					 * L​i​s​t​ ​D​a​t​a​b​a​s​e​ ​I​t​e​m​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​i​t​e​m​s​ ​f​r​o​m​ ​a​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​i​t​e​m​s​ ​(​p​a​g​e​s​)​ ​f​r​o​m​ ​a​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						data_source_id: {
+							/**
+							 * D​a​t​a​b​a​s​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​ ​t​o​ ​l​i​s​t​ ​i​t​e​m​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​t​e​m​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​d​a​t​a​b​a​s​e​ ​i​t​e​m​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t
+							 */
+							longDesc: string
+						}
+						next_cursor: {
+							/**
+							 * N​e​x​t​ ​C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​n​e​x​t​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​c​u​r​s​o​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​i​t​e​m​s​ ​i​n​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​r​e​s​p​o​n​s​e
+							 */
+							longDesc: string
+						}
+						filter_properties: {
+							/**
+							 * F​i​l​t​e​r​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * P​r​o​p​e​r​t​y​ ​f​i​l​t​e​r​s​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​p​r​o​p​e​r​t​y​ ​f​i​l​t​e​r​s​ ​t​o​ ​o​n​l​y​ ​r​e​t​u​r​n​ ​i​t​e​m​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a
+							 */
+							longDesc: string
+						}
+						sorts: {
+							/**
+							 * S​o​r​t​ ​O​p​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​i​t​e​m​s
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​t​h​e​ ​d​a​t​a​b​a​s​e​ ​i​t​e​m​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​o​r​t​e​d​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_pages: {
+					/**
+					 * L​i​s​t​ ​P​a​g​e​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​a​n​d​ ​l​i​s​t​ ​N​o​t​i​o​n​ ​p​a​g​e​s
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​a​n​d​ ​r​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​N​o​t​i​o​n​ ​p​a​g​e​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​q​u​e​r​y​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​.
+					 */
+					longDesc: string
+					options: {
+						query: {
+							/**
+							 * S​e​a​r​c​h​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​i​n​ ​p​a​g​e​ ​t​i​t​l​e​s​ ​a​n​d​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​e​x​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​i​n​ ​p​a​g​e​ ​t​i​t​l​e​s​ ​a​n​d​ ​c​o​n​t​e​n​t​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​a​l​l​ ​a​c​c​e​s​s​i​b​l​e​ ​p​a​g​e​s​.
+							 */
+							longDesc: string
+						}
+						last_edited: {
+							/**
+							 * S​o​r​t​ ​b​y​ ​L​a​s​t​ ​E​d​i​t​e​d
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​o​r​t​ ​p​a​g​e​s​ ​b​y​ ​l​a​s​t​ ​e​d​i​t​e​d​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​p​a​g​e​s​ ​b​y​ ​l​a​s​t​ ​e​d​i​t​e​d​ ​t​i​m​e​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​p​a​g​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​p​e​r​ ​r​e​q​u​e​s​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​p​a​g​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t
+							 */
+							longDesc: string
+						}
+						next_cursor: {
+							/**
+							 * N​e​x​t​ ​C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​n​e​x​t​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​c​u​r​s​o​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​ ​i​n​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​r​e​s​p​o​n​s​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_datasources: {
+					/**
+					 * L​i​s​t​ ​D​a​t​a​b​a​s​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​a​c​c​e​s​s​i​b​l​e​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​s​ ​i​n​ ​y​o​u​r​ ​w​o​r​k​s​p​a​c​e​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​s​e​a​r​c​h​ ​f​i​l​t​e​r​i​n​g​.
+					 */
+					longDesc: string
+					options: {
+						query: {
+							/**
+							 * S​e​a​r​c​h​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​i​n​ ​d​a​t​a​b​a​s​e​ ​t​i​t​l​e​s
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​e​x​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​i​n​ ​d​a​t​a​b​a​s​e​ ​t​i​t​l​e​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​a​l​l​ ​a​c​c​e​s​s​i​b​l​e​ ​d​a​t​a​b​a​s​e​s​.
+							 */
+							longDesc: string
+						}
+						last_edited: {
+							/**
+							 * S​o​r​t​ ​b​y​ ​L​a​s​t​ ​E​d​i​t​e​d
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​o​r​t​ ​d​a​t​a​b​a​s​e​s​ ​b​y​ ​l​a​s​t​ ​e​d​i​t​e​d​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​d​a​t​a​b​a​s​e​s​ ​b​y​ ​l​a​s​t​ ​e​d​i​t​e​d​ ​t​i​m​e​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_users: {
+					/**
+					 * L​i​s​t​ ​U​s​e​r​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​u​s​e​r​s​ ​i​n​ ​t​h​e​ ​N​o​t​i​o​n​ ​w​o​r​k​s​p​a​c​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​u​s​e​r​s​ ​i​n​ ​t​h​e​ ​N​o​t​i​o​n​ ​w​o​r​k​s​p​a​c​e​ ​i​n​c​l​u​d​i​n​g​ ​p​e​o​p​l​e​ ​a​n​d​ ​b​o​t​s​.
+					 */
+					longDesc: string
+					options: {
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​u​s​e​r​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​s​e​r​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t
+							 */
+							longDesc: string
+						}
+						next_cursor: {
+							/**
+							 * N​e​x​t​ ​C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​n​e​x​t​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​i​s​ ​c​u​r​s​o​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​u​s​e​r​s​ ​i​n​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​r​e​s​p​o​n​s​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_database_item: {
+					/**
+					 * U​p​d​a​t​e​ ​D​a​t​a​b​a​s​e​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​i​t​e​m​ ​i​n​ ​a​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​p​r​o​p​e​r​t​y​ ​v​a​l​u​e​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​i​t​e​m​ ​(​p​a​g​e​)​ ​i​n​ ​a​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​.
+					 */
+					longDesc: string
+					options: {
+						data_source_id: {
+							/**
+							 * D​a​t​a​b​a​s​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​t​i​o​n​ ​d​a​t​a​b​a​s​e​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​i​t​e​m​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						item_id: {
+							/**
+							 * D​a​t​a​b​a​s​e​ ​I​t​e​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​a​t​a​b​a​s​e​ ​i​t​e​m​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​d​a​t​a​b​a​s​e​ ​i​t​e​m​ ​(​p​a​g​e​)​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						properties: {
+							/**
+							 * P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * P​r​o​p​e​r​t​y​ ​v​a​l​u​e​s​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​n​e​w​ ​p​r​o​p​e​r​t​y​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​d​a​t​a​b​a​s​e​ ​i​t​e​m​.​ ​O​n​l​y​ ​s​p​e​c​i​f​i​e​d​ ​p​r​o​p​e​r​t​i​e​s​ ​w​i​l​l​ ​b​e​ ​u​p​d​a​t​e​d​.
+							 */
+							longDesc: string
+						}
 					}
 				}
 			}
@@ -105151,11 +105893,11 @@ export type TranslationFunctions = {
 			 */
 			displayName: () => LocalizedString
 			/**
-			 * Collection of actions to interact with the Notion API
+			 * Connect to Notion API to manage pages, databases, comments, and discussions.
 			 */
 			shortDesc: () => LocalizedString
 			/**
-			 * Collection of actions to interact with the Notion API
+			 * The Notion integration provides comprehensive actions and triggers to interact with the Notion API. Manage pages, databases, comments, discussions, and users. Create, read, update, and monitor changes to your Notion workspace content.
 			 */
 			longDesc: () => LocalizedString
 			triggers: {
@@ -105165,34 +105907,42 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Triggers when a new item is added to a database
+					 * Triggers when a new item is created in a Notion database
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Triggers when a new item is added to a database
+					 * This trigger monitors a specific Notion database and fires when a new item (page) is added to it. You can filter items based on property values.
 					 */
 					longDesc: () => LocalizedString
 					options: {
-						databaseId: {
+						data_source_id: {
 							/**
-							 * Database ID
+							 * Database
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The ID of the database to watch for new items
+							 * The Notion database to monitor
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The ID of the database to watch for new items
+							 * Select the Notion database that you want to monitor for new items
 							 */
 							longDesc: () => LocalizedString
 						}
-					}
-					event_info: {
-						/**
-						 * Notion New Database Item Event Info
-						 */
-						desc: () => LocalizedString
+						filter_properties: {
+							/**
+							 * Filter Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional filters to apply to database items
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set property filters to only trigger for items that match specific criteria
+							 */
+							longDesc: () => LocalizedString
+						}
 					}
 				}
 				updated_database_item: {
@@ -105201,34 +105951,42 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Triggers when an item in a database is updated
+					 * Triggers when a database item is updated in Notion
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Triggers when an item in a database is updated
+					 * This trigger monitors a specific Notion database and fires when an existing item (page) is modified. You can filter items based on property values.
 					 */
 					longDesc: () => LocalizedString
 					options: {
-						databaseId: {
+						data_source_id: {
 							/**
-							 * Database ID
+							 * Database
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The ID of the database to watch for updates
+							 * The Notion database to monitor
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The ID of the database to watch for updates
+							 * Select the Notion database that you want to monitor for updated items
 							 */
 							longDesc: () => LocalizedString
 						}
-					}
-					event_info: {
-						/**
-						 * Notion Updated Database Item Event Info
-						 */
-						desc: () => LocalizedString
+						filter_properties: {
+							/**
+							 * Filter Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional filters to apply to database items
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set property filters to only trigger for items that match specific criteria
+							 */
+							longDesc: () => LocalizedString
+						}
 					}
 				}
 				updated_page: {
@@ -105237,34 +105995,760 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Triggers when a page is updated
+					 * Triggers when a specific Notion page is updated
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Triggers when a page is updated
+					 * This trigger monitors a specific Notion page and fires when the page is modified. It tracks changes to the page content, properties, or metadata.
 					 */
 					longDesc: () => LocalizedString
 					options: {
-						pageId: {
+						page: {
 							/**
-							 * Page ID
+							 * Page
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The ID of the page to watch for updates
+							 * The Notion page to monitor for updates
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The ID of the page to watch for updates
+							 * Select the specific Notion page you want to monitor for changes. The trigger will fire whenever this page is edited or updated.
 							 */
 							longDesc: () => LocalizedString
 						}
 					}
-					event_info: {
-						/**
-						 * Notion Page Updated Event Info
-						 */
-						desc: () => LocalizedString
+				}
+			}
+			actions: {
+				add_comment_to_discussion: {
+					/**
+					 * Add Comment to Discussion
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a reply to an existing discussion thread in Notion
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Reply to an existing discussion thread on a Notion page or block. This creates a new comment within the selected discussion.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						discussion_id: {
+							/**
+							 * Discussion
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The discussion thread to reply to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the discussion thread where you want to add your comment
+							 */
+							longDesc: () => LocalizedString
+						}
+						text: {
+							/**
+							 * Comment Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The text content of your comment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the text content for your comment. This will be added as a plain text comment to the discussion.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_comment_to_page: {
+					/**
+					 * Add Comment to Page
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a new comment to a Notion page
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new comment on a Notion page. This starts a new discussion thread on the selected page.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						page_id: {
+							/**
+							 * Page
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Notion page to comment on
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Notion page where you want to add a comment
+							 */
+							longDesc: () => LocalizedString
+						}
+						text: {
+							/**
+							 * Comment Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The text content of your comment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the text content for your comment. This will create a new discussion on the page.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				append_to_page: {
+					/**
+					 * Append to Page
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add content to the end of a Notion page
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Append new content blocks to the end of an existing Notion page. The content will be added as new blocks at the bottom of the page.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						page_id: {
+							/**
+							 * Page
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Notion page to append to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Notion page where you want to add content
+							 */
+							longDesc: () => LocalizedString
+						}
+						content: {
+							/**
+							 * Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content to append to the page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the content you want to add to the page. Supports markdown formatting which will be converted to Notion blocks.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_database_item: {
+					/**
+					 * Create Database Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new item in a Notion database
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new page (item) in a Notion database with specified property values and optional content.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						data_source_id: {
+							/**
+							 * Database
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Notion database to create item in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Notion database where you want to create a new item
+							 */
+							longDesc: () => LocalizedString
+						}
+						properties: {
+							/**
+							 * Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Property values for the new database item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the property values for the new database item. Available properties depend on the selected database schema.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content: {
+							/**
+							 * Page Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional content for the database item page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Add content to the database item page. This will be added as a paragraph block in the page.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_page: {
+					/**
+					 * Create Page
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new page in Notion
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new page as a child of an existing page in Notion with a title and content.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						page: {
+							/**
+							 * Parent Page
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The parent page where the new page will be created
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the parent page under which the new page will be created
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Page Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The title of the new page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the title for the new page
+							 */
+							longDesc: () => LocalizedString
+						}
+						content: {
+							/**
+							 * Page Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The initial content of the new page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the initial content for the new page. This will be added as paragraph blocks.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_data_source: {
+					/**
+					 * Get Database
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve information about a Notion database
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get detailed information about a specific Notion database including its properties, title, description, and metadata.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						data_source_id: {
+							/**
+							 * Database
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Notion database to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Notion database you want to get information about
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_database: {
+					/**
+					 * Get Database Info
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve database information by ID
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get detailed information about a Notion database by providing its ID directly.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						database_id: {
+							/**
+							 * Database ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the Notion database
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the ID of the Notion database you want to retrieve information about
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_page: {
+					/**
+					 * Get Page
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve information about a Notion page
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get detailed information about a specific Notion page including its properties, title, and metadata.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						page_id: {
+							/**
+							 * Page
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Notion page to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Notion page you want to get information about
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_user: {
+					/**
+					 * Get User
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve information about a Notion user
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get detailed information about a specific Notion user including their name, type, and contact information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						user_id: {
+							/**
+							 * User
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Notion user to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Notion user you want to get information about
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_comments: {
+					/**
+					 * List Comments
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List comments on a Notion page or block
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of comments on a specific Notion page or block. Returns all unresolved comments with pagination support.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of comments to retrieve per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the number of comments to retrieve in a single request (maximum 100)
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_cursor: {
+							/**
+							 * Next Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor for retrieving next page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this cursor to retrieve the next page of comments in a paginated response
+							 */
+							longDesc: () => LocalizedString
+						}
+						block_id: {
+							/**
+							 * Page or Block
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The page or block to list comments for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Notion page or block you want to retrieve comments from
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_datasource_items: {
+					/**
+					 * List Database Items
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List items from a Notion database
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of items (pages) from a Notion database with filtering and sorting options.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						data_source_id: {
+							/**
+							 * Database
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Notion database to list items from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Notion database you want to retrieve items from
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of items to retrieve per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the number of database items to retrieve in a single request
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_cursor: {
+							/**
+							 * Next Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor for retrieving next page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this cursor to retrieve the next page of items in a paginated response
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter_properties: {
+							/**
+							 * Filter Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Property filters to apply to the results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set property filters to only return items that match specific criteria
+							 */
+							longDesc: () => LocalizedString
+						}
+						sorts: {
+							/**
+							 * Sort Options
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to sort the returned items
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure how the database items should be sorted in the response
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_pages: {
+					/**
+					 * List Pages
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search and list Notion pages
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search for and retrieve a list of Notion pages with optional query filtering and sorting.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						query: {
+							/**
+							 * Search Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to search for in page titles and content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter text to search for in page titles and content. Leave empty to retrieve all accessible pages.
+							 */
+							longDesc: () => LocalizedString
+						}
+						last_edited: {
+							/**
+							 * Sort by Last Edited
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to sort pages by last edited time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether to sort pages by last edited time in ascending or descending order
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of pages to retrieve per request
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the number of pages to retrieve in a single request
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_cursor: {
+							/**
+							 * Next Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor for retrieving next page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this cursor to retrieve the next page of results in a paginated response
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_datasources: {
+					/**
+					 * List Databases
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all Notion databases
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all accessible Notion databases in your workspace with optional search filtering.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						query: {
+							/**
+							 * Search Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to search for in database titles
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter text to search for in database titles. Leave empty to retrieve all accessible databases.
+							 */
+							longDesc: () => LocalizedString
+						}
+						last_edited: {
+							/**
+							 * Sort by Last Edited
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to sort databases by last edited time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether to sort databases by last edited time in ascending or descending order
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_users: {
+					/**
+					 * List Users
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List users in the Notion workspace
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all users in the Notion workspace including people and bots.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of users to retrieve per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the number of users to retrieve in a single request
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_cursor: {
+							/**
+							 * Next Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor for retrieving next page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use this cursor to retrieve the next page of users in a paginated response
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_database_item: {
+					/**
+					 * Update Database Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing item in a Notion database
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the property values of an existing item (page) in a Notion database.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						data_source_id: {
+							/**
+							 * Database
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Notion database containing the item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Notion database that contains the item you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						item_id: {
+							/**
+							 * Database Item
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The database item to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific database item (page) you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						properties: {
+							/**
+							 * Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Property values to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the new property values for the database item. Only specified properties will be updated.
+							 */
+							longDesc: () => LocalizedString
+						}
 					}
 				}
 			}

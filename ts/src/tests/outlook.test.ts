@@ -1,10 +1,14 @@
 import { IQoreAppActionWithFunction } from '@qoretechnologies/ts-toolkit';
-import { CreateOutlookEvent, SearchOutlookEmails } from '../apps/outlook/actions';
-import { CreateOutlookContact } from '../apps/outlook/actions/create-contact';
-import { DeleteOutlookContact } from '../apps/outlook/actions/delete-contact';
-import { DeleteOutlookEvent } from '../apps/outlook/actions/delete-event';
-import { ListOutlookContacts } from '../apps/outlook/actions/list-contacts';
-import { UpdateOutlookContact } from '../apps/outlook/actions/update-contact';
+import {
+  CreateOutlookContact,
+  CreateOutlookEvent,
+  DeleteOutlookContact,
+  DeleteOutlookEvent,
+  ListOutlookContacts,
+  ListOutlookEvents,
+  SearchOutlookEmails,
+  UpdateOutlookContact,
+} from '../apps/outlook/actions';
 import { getOutlookCalendarIdAllowedValues } from '../apps/outlook/helpers/get-calendar-id-allowed-values';
 import { getOutlookContactIdAllowedValues } from '../apps/outlook/helpers/get-contact-id-allowed-values';
 import { getOutlookEventIdAllowedValues } from '../apps/outlook/helpers/get-event-id-allowed-values';
@@ -150,7 +154,7 @@ describe('Should test Outlook actions', () => {
 
       expect(result).toBeDefined();
       expect(result.id).toBeDefined();
-      contactId = result?.id;
+      contactId = result.id;
     });
 
     it('Should create an outlook event', async () => {
@@ -175,7 +179,7 @@ describe('Should test Outlook actions', () => {
 
       expect(result).toBeDefined();
       expect(result.id).toBeDefined();
-      eventId = result?.id;
+      eventId = result.id;
     });
 
     it('Should list Outlook contacts', async () => {
@@ -193,7 +197,7 @@ describe('Should test Outlook actions', () => {
     });
 
     it('Should list Outlook events', async () => {
-      const action = ListOutlookContacts as IQoreAppActionWithFunction;
+      const action = ListOutlookEvents as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           calendarId,

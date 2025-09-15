@@ -1,6 +1,9 @@
 import { IQoreAppActionWithFunction } from '@qoretechnologies/ts-toolkit';
-import { ExecuteSerenityAgent, ExecuteSerenityConversation } from '../apps/serenity/actions';
-import { CreateSerenityConversation } from '../apps/serenity/actions/create-conversation';
+import {
+  CreateSerenityConversation,
+  ExecuteSerenityAgent,
+  ExecuteSerenityConversation,
+} from '../apps/serenity/actions';
 import {
   getSerenityConversationAgentAllowedValues,
   getSerenitySystemAgentAllowedValues,

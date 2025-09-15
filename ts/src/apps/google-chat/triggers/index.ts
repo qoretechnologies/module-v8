@@ -1,1 +1,1 @@
-export { default as GoogleChatNewMessageTrigger } from './new-message.trigger';
+export { default as NewGoogleChatMessage } from './new-message.trigger';

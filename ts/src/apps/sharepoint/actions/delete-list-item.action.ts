@@ -28,7 +28,7 @@ const options = {
   },
 } satisfies TQoreOptions;
 
-export const DeleteSharePointListItem = QoreAppCreator.createLocalizedAction({
+const DeleteSharePointListItem = QoreAppCreator.createLocalizedAction({
   action: 'delete-list-item',
   app: SHAREPOINT_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -61,3 +61,5 @@ export const DeleteSharePointListItem = QoreAppCreator.createLocalizedAction({
   },
   options,
 });
+
+export default DeleteSharePointListItem;

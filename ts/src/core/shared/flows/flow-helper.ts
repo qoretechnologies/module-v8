@@ -1,7 +1,7 @@
 import { TypeCompiler } from '@sinclair/typebox/compiler';
 import semver from 'semver';
 import { applyFunctionToValuesSync, isNil, isString } from '../common';
-import { PiecesError, ErrorCode } from '../common/pieces-error';
+import { ErrorCode, PiecesError } from '../common/pieces-error';
 import {
   Action,
   ActionType,
@@ -659,10 +659,13 @@ function duplicateStep(stepName: string, flowVersionWithArtifacts: FlowVersion):
   const clonedStep = JSON.parse(
     JSON.stringify(flowHelper.getStep(flowVersionWithArtifacts, stepName))
   );
-  clonedStep.nextAction = undefined;
+
   if (!clonedStep) {
     throw new Error(`step with name '${stepName}' not found`);
   }
+
+  clonedStep.nextAction = undefined;
+
   const existingNames = getAllSteps(flowVersionWithArtifacts.trigger).map((step) => step.name);
   const oldStepsNameToReplace = getAllSteps(clonedStep).map((step) => step.name);
   const oldNameToNewName: Record<string, string> = {};

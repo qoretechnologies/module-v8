@@ -739,7 +739,7 @@ const createDraftOrder = async (context: TShopifyContextWithConn, data: TCreateD
   return createDraftOrderResult.data.draftOrderCreate;
 };
 
-export const CreateShopifyDraftOrder = QoreAppCreator.createLocalizedAction<typeof options>({
+const CreateShopifyDraftOrder = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'create-draft-order',
   app: SHOPIFY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -781,3 +781,5 @@ export const CreateShopifyDraftOrder = QoreAppCreator.createLocalizedAction<type
   options,
   response_type: ShopifyCreateDraftOrderResponseType,
 });
+
+export default CreateShopifyDraftOrder;

@@ -1,15 +1,15 @@
 import { configDotenv } from 'dotenv';
 import {
-  disableAmazonCloudWatchAlarmActions,
-  enableAmazonCloudWatchAlarmActions,
-  getAmazonCloudWatchAlarm,
-  listAmazonCloudWatchAlarms,
-  setAmazonCloudWatchAlarmState,
+  DisableAmazonCloudWatchAlarmActions,
+  EnableAmazonCloudWatchAlarmActions,
+  SetAmazonCloudWatchAlarmState,
+  GetAmazonCloudWatchAlarm,
+  ListAmazonCloudWatchAlarms,
 } from '../apps/amazon-cloudwatch/actions';
 import { getAmazonCloudWatchAlarmAllowedValues } from '../apps/amazon-cloudwatch/helpers/get-alarm-allowed-values';
 import {
-  AmazonCloudWatchAlarmStateChangeTrigger,
-  NewAmazonCloudWatchAlarmTrigger,
+  AmazonCloudWatchAlarmStateChange,
+  NewAmazonCloudWatchAlarm,
 } from '../apps/amazon-cloudwatch/triggers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 
@@ -59,7 +59,7 @@ describe('Amazon CloudWatch', () => {
 
   describe('Should test actions', () => {
     it('Should list alarms', async () => {
-      const action = listAmazonCloudWatchAlarms;
+      const action = ListAmazonCloudWatchAlarms;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -83,7 +83,7 @@ describe('Amazon CloudWatch', () => {
     });
 
     it('Should get alarm details if alarms exist', async () => {
-      const action = getAmazonCloudWatchAlarm;
+      const action = GetAmazonCloudWatchAlarm;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const result = await action.api_function(
@@ -107,7 +107,7 @@ describe('Amazon CloudWatch', () => {
     });
 
     it('Should disable alarm actions', async () => {
-      const action = disableAmazonCloudWatchAlarmActions;
+      const action = DisableAmazonCloudWatchAlarmActions;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -132,7 +132,7 @@ describe('Amazon CloudWatch', () => {
     });
 
     it('Should enable alarm actions', async () => {
-      const action = enableAmazonCloudWatchAlarmActions;
+      const action = EnableAmazonCloudWatchAlarmActions;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
       if (!existingAlarmName) throw new Error('No alarm available for testing');
@@ -156,7 +156,7 @@ describe('Amazon CloudWatch', () => {
     });
 
     it('Should set alarm state', async () => {
-      const action = setAmazonCloudWatchAlarmState;
+      const action = SetAmazonCloudWatchAlarmState;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -182,7 +182,7 @@ describe('Amazon CloudWatch', () => {
     });
 
     it('Should list alarms with filters', async () => {
-      const action = listAmazonCloudWatchAlarms;
+      const action = ListAmazonCloudWatchAlarms;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -211,7 +211,7 @@ describe('Amazon CloudWatch', () => {
 
   describe('Should test triggers event example data', () => {
     it('Should get example event data for new alarm trigger', async () => {
-      const trigger = NewAmazonCloudWatchAlarmTrigger;
+      const trigger = NewAmazonCloudWatchAlarm;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');
@@ -230,7 +230,7 @@ describe('Amazon CloudWatch', () => {
     });
 
     it('Should get example event data for alarm state change trigger', async () => {
-      const trigger = AmazonCloudWatchAlarmStateChangeTrigger;
+      const trigger = AmazonCloudWatchAlarmStateChange;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');

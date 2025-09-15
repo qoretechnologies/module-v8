@@ -18,7 +18,7 @@ const DynamicsNewCustomEntityTrigger = QoreAppCreator.createLocalizedTrigger({
   },
   event_function: async (context, update, should_stop) => {
     const token = context.conn_opts?.token;
-    const organizationUrl = formatDynamicsUrl(context?.conn_opts?.url);
+    const organizationUrl = formatDynamicsUrl(context.conn_opts?.url);
     const entityName = context.opts?.entityName;
 
     const missingValues: string[] = [];

@@ -128,7 +128,7 @@ export const getSheetRowsOptions: TQoreGetDependentOptionsFunction = async (cont
         }
       }
 
-      const condition = headerCell?.dataValidation?.condition;
+      const condition = headerCell.dataValidation?.condition;
       if (condition) {
         if (fieldConfig.type === 'number') {
           if (

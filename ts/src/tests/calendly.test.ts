@@ -18,10 +18,10 @@ import {
 import { getCalendlyOrganizationDefaultValue } from '../apps/calendly/helpers/get-organization-default-value';
 import { getCalendlyOrganizationMemberAllowedValues } from '../apps/calendly/helpers/get-user-organization-member-allowed-values';
 import {
-  CalendlyEventCanceledTrigger,
-  CalendlyInviteeCanceledTrigger,
-  CalendlyInviteeCreatedTrigger,
-  CalendlyInviteeNoShowCreatedTrigger,
+  CanceledCalendlyEvent,
+  CanceledCalendlyInvitee,
+  NewCalendlyInviteeCreated,
+  NewCalendlyInviteeNoShowCreated,
 } from '../apps/calendly/triggers';
 import CalendlyNewFormSubmissionCreated from '../apps/calendly/triggers/routing-form-submission-created.trigger';
 import { Debugger, DebugLevels } from '../utils/Debugger';
@@ -266,7 +266,7 @@ describe('Calendly', () => {
 
   describe('Should test Calendly triggers event example data', () => {
     it('Should get example event data for new canceled event trigger', async () => {
-      const trigger = CalendlyEventCanceledTrigger;
+      const trigger = CanceledCalendlyEvent;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');
@@ -277,7 +277,7 @@ describe('Calendly', () => {
     });
 
     it('Should get example event data for new invitee created trigger', async () => {
-      const trigger = CalendlyInviteeCreatedTrigger;
+      const trigger = NewCalendlyInviteeCreated;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');
@@ -289,7 +289,7 @@ describe('Calendly', () => {
     });
 
     it('Should get example event data for new invitee canceled trigger', async () => {
-      const trigger = CalendlyInviteeCanceledTrigger;
+      const trigger = CanceledCalendlyInvitee;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');
@@ -300,7 +300,7 @@ describe('Calendly', () => {
     });
 
     it('Should get example event data for new invitee no show created trigger', async () => {
-      const trigger = CalendlyInviteeNoShowCreatedTrigger;
+      const trigger = NewCalendlyInviteeNoShowCreated;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');

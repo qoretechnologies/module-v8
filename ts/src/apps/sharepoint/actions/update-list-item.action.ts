@@ -47,7 +47,7 @@ const response_type = {
   fields: {},
 } satisfies TQoreResponseType;
 
-export const UpdateSharePointListItem = QoreAppCreator.createLocalizedAction<
+const UpdateSharePointListItem = QoreAppCreator.createLocalizedAction<
   typeof options & Partial<typeof additionalOptions>
 >({
   action: 'update-list-item',
@@ -95,3 +95,5 @@ export const UpdateSharePointListItem = QoreAppCreator.createLocalizedAction<
   options,
   response_type,
 });
+
+export default UpdateSharePointListItem;

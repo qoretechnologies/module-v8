@@ -90,7 +90,7 @@ const listSegments = QoreAppCreator.createLocalizedAction<typeof options>({
       });
 
       return {
-        data: response.body.data.map((item) => omit(item, ['relationships', 'links'])),
+        data: response.body?.data.map((item) => omit(item, ['relationships', 'links'])),
         next: response.body?.links?.next || null,
       };
     } catch (error) {

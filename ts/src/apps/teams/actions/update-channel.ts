@@ -91,7 +91,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const UpdateTeamsChannel = QoreAppCreator.createLocalizedAction<
+const UpdateTeamsChannel = QoreAppCreator.createLocalizedAction<
   typeof options & Partial<typeof additionalOptions>
 >({
   action: 'update-channel',
@@ -194,3 +194,5 @@ export const UpdateTeamsChannel = QoreAppCreator.createLocalizedAction<
   options,
   response_type,
 });
+
+export default UpdateTeamsChannel;

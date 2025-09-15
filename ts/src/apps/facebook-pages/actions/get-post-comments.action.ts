@@ -170,7 +170,7 @@ const getPostComments = QoreAppCreator.createLocalizedAction<typeof options>({
         return formattedComment;
       });
 
-      const cursors = commentsResponse?.paging?.cursors;
+      const cursors = commentsResponse.paging?.cursors;
 
       return {
         page_id,

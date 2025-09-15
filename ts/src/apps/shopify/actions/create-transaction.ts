@@ -281,7 +281,7 @@ const createTransaction = async (
   }
 };
 
-export const CreateShopifyTransaction = QoreAppCreator.createLocalizedAction<typeof options>({
+const CreateShopifyTransaction = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'create-transaction',
   app: SHOPIFY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -317,3 +317,5 @@ export const CreateShopifyTransaction = QoreAppCreator.createLocalizedAction<typ
   options,
   response_type: ShopifyCreateTransactionResponseType,
 });
+
+export default CreateShopifyTransaction;

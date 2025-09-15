@@ -7,7 +7,7 @@ const expectWithContext = (run: () => void, ctx: string) => {
   try {
     run();
   } catch (err: any) {
-    const original = err?.message ?? '';
+    const original = err.message ?? '';
     err.message = `${ctx}\n${original}`;
     throw err;
   }
@@ -79,7 +79,7 @@ describe('Qorus Apps Catalogue tests', () => {
           } else if (action.response_type?.type === 'hash') {
             const responseTypeFields = action.response_type?.fields;
             if (responseTypeFields) {
-              forEach(action?.response_type?.fields, (responseType) => {
+              forEach(action.response_type?.fields, (responseType) => {
                 expect(responseType.type).not.toBeFalsy();
               });
             }

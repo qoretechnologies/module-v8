@@ -1,7 +1,6 @@
-import { Octokit } from '@octokit/rest';
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
-import { GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
+import { createGitHubClient, GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 const mapGithubUser = (user: {
   login?: string;
@@ -28,9 +27,7 @@ export const getGitHubAssigneesAllowedValues: TQoreGetAllowedValuesFunction = as
     );
   }
 
-  const octokit = new Octokit({
-    auth: token,
-  });
+  const octokit = await createGitHubClient(token);
 
   Debugger.log('Github Assignees allowed values opts', {
     opts: context.opts,

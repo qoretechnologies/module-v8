@@ -1,16 +1,18 @@
 import { IQoreAppActionWithFunction } from '@qoretechnologies/ts-toolkit';
-import { AddLineItemToShopifyOrder } from '../apps/shopify/actions/add-line-item-to-order';
-import { AddTagToShopifyCustomer } from '../apps/shopify/actions/add-tag-to-customer';
-import { CreateShopifyBlogEntry } from '../apps/shopify/actions/create-blog-entry';
-import { CreateShopifyCompany } from '../apps/shopify/actions/create-company';
-import { CreateShopifyCustomer } from '../apps/shopify/actions/create-customer';
-import { CreateShopifyDraftOrder } from '../apps/shopify/actions/create-draft-order';
-import { CreateShopifyFulfillment } from '../apps/shopify/actions/create-fulfillment';
-import { CreateShopifyGiftCard } from '../apps/shopify/actions/create-gift-card';
-import { FindShopifyCustomer } from '../apps/shopify/actions/find-customer';
-import { FindShopifyOrder } from '../apps/shopify/actions/find-order';
-import { FindShopifyProduct } from '../apps/shopify/actions/find-product';
-import { FindShopifyVariant } from '../apps/shopify/actions/find-variant';
+import {
+  AddLineItemToShopifyOrder,
+  AddTagToShopifyCustomer,
+  CreateShopifyBlogEntry,
+  CreateShopifyCompany,
+  CreateShopifyCustomer,
+  CreateShopifyDraftOrder,
+  CreateShopifyFulfillment,
+  CreateShopifyGiftCard,
+  FindShopifyCustomer,
+  FindShopifyOrder,
+  FindShopifyProduct,
+  FindShopifyVariant,
+} from '../apps/shopify/actions';
 import { getShopifyBlogIdAllowedValues } from '../apps/shopify/helpers/get-blog-id-allowed-values';
 import { getShopifyCurrencyAllowedValues } from '../apps/shopify/helpers/get-currency-allowed-values';
 import { getShopifyCustomerIdAllowedValues } from '../apps/shopify/helpers/get-customer-id-allowed-values';
@@ -24,8 +26,10 @@ import { getShopifyProductVariantIdAllowedValues } from '../apps/shopify/helpers
 import { getShopifyProductIdAllowedValues } from '../apps/shopify/helpers/get-shopify-product-id-allowed-values';
 import { getShopifyTaxExemptionsAllowedValues } from '../apps/shopify/helpers/get-tax-exemptions-allowed-values';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import { configDotenv } from 'dotenv';
 
 Debugger.level = DebugLevels.Verbose;
+configDotenv({ path: '.env' });
 
 describe('Should test Shopify integration', () => {
   const shopifyShop = process.env.SHOPIFY_SHOP;

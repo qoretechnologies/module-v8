@@ -17,16 +17,16 @@ import { createYouTubeClient } from '../apps/youtube/helpers/constants';
 import { getYouTubeCategoryAllowedValues } from '../apps/youtube/helpers/get-category-allowed-values';
 import { getYouTubeUserPlaylistsAllowedValues } from '../apps/youtube/helpers/get-playlist-allowed-values';
 import { getYouTubeUserChannelsAllowedValues } from '../apps/youtube/helpers/get-user-channel-allowed-values';
+import { getYouTubeUserSubscriptionsAllowedValues } from '../apps/youtube/helpers/get-user-subscriptions-allowed-values';
 import { getYouTubeUserVideosAllowedValues } from '../apps/youtube/helpers/get-user-video-allowed-values';
 import {
-  YouTubeNewChannelVideoTrigger,
-  YouTubeNewLivestreamTrigger,
-  YouTubeNewPlaylistVideoTrigger,
-  YouTubeNewVideoBySearchTrigger,
-  YouTubeNewVideoCommentTrigger,
+  NewYouTubeChannelVideo,
+  NewYouTubeLivestream,
+  NewYouTubePlaylistVideo,
+  NewYouTubeVideoBySearch,
+  NewYouTubeVideoComment,
 } from '../apps/youtube/triggers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import { getYouTubeUserSubscriptionsAllowedValues } from '../apps/youtube/helpers/get-user-subscriptions-allowed-values';
 
 configDotenv({ path: '.env' });
 Debugger.level = DebugLevels.Verbose;
@@ -348,7 +348,7 @@ describe('Google Docs', () => {
 
     describe('Should test triggers event example data', () => {
       it('Should get example event data for new channel video trigger', async () => {
-        const trigger = YouTubeNewChannelVideoTrigger;
+        const trigger = NewYouTubeChannelVideo;
 
         if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
           throw new Error('get_example_event_data not found in trigger');
@@ -363,7 +363,7 @@ describe('Google Docs', () => {
       });
 
       it('Should get example event data for new playlist video trigger', async () => {
-        const trigger = YouTubeNewPlaylistVideoTrigger;
+        const trigger = NewYouTubePlaylistVideo;
 
         if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
           throw new Error('get_example_event_data not found in trigger');
@@ -378,7 +378,7 @@ describe('Google Docs', () => {
       });
 
       it('Should get example event data for new search video trigger', async () => {
-        const trigger = YouTubeNewVideoBySearchTrigger;
+        const trigger = NewYouTubeVideoBySearch;
 
         if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
           throw new Error('get_example_event_data not found in trigger');
@@ -393,7 +393,7 @@ describe('Google Docs', () => {
       });
 
       it('Should get example event data for new video comment', async () => {
-        const trigger = YouTubeNewVideoCommentTrigger;
+        const trigger = NewYouTubeVideoComment;
 
         if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
           throw new Error('get_example_event_data not found in trigger');
@@ -408,7 +408,7 @@ describe('Google Docs', () => {
       });
 
       it('Should get example event data for new live stream', async () => {
-        const trigger = YouTubeNewLivestreamTrigger;
+        const trigger = NewYouTubeLivestream;
 
         if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
           throw new Error('get_example_event_data not found in trigger');

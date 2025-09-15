@@ -331,7 +331,7 @@ const findOrders = async (context: TShopifyContextWithConn, data: TFindOrderInpu
   };
 };
 
-export const FindShopifyOrder = QoreAppCreator.createLocalizedAction<typeof options>({
+const FindShopifyOrder = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'find-order',
   app: SHOPIFY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -358,3 +358,5 @@ export const FindShopifyOrder = QoreAppCreator.createLocalizedAction<typeof opti
   options,
   response_type: ShopifyFindOrderResponseType,
 });
+
+export default FindShopifyOrder;

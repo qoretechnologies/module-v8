@@ -36,7 +36,7 @@ interface ICustomerData {
   [key: string]: any;
 }
 
-export const AddTagToShopifyCustomer = QoreAppCreator.createLocalizedAction<typeof options>({
+const AddTagToShopifyCustomer = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'add-tag-to-customer',
   app: SHOPIFY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -127,3 +127,5 @@ export const AddTagToShopifyCustomer = QoreAppCreator.createLocalizedAction<type
   options,
   response_type: ShopifyAddTagToCustomerResponseType,
 });
+
+export default AddTagToShopifyCustomer;

@@ -121,7 +121,7 @@ const options = {
   },
 } satisfies TQoreOptions;
 
-export const SearchOutlookEmails = QoreAppCreator.createLocalizedAction<typeof options>({
+const SearchOutlookEmails = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'search-emails',
   app: OUTLOOK_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -245,3 +245,5 @@ export const SearchOutlookEmails = QoreAppCreator.createLocalizedAction<typeof o
   options,
   response_type: OutlookSearchEmailResponseType,
 });
+
+export default SearchOutlookEmails;
