@@ -302,7 +302,7 @@ const NotionAppEn = {
         },
       },
     },
-    list_sources: {
+    list_datasources: {
       displayName: 'List Databases',
       shortDesc: 'List all Notion databases',
       longDesc:

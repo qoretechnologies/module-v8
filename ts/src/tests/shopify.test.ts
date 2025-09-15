@@ -26,8 +26,10 @@ import { getShopifyProductVariantIdAllowedValues } from '../apps/shopify/helpers
 import { getShopifyProductIdAllowedValues } from '../apps/shopify/helpers/get-shopify-product-id-allowed-values';
 import { getShopifyTaxExemptionsAllowedValues } from '../apps/shopify/helpers/get-tax-exemptions-allowed-values';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import { configDotenv } from 'dotenv';
 
 Debugger.level = DebugLevels.Verbose;
+configDotenv({ path: '.env' });
 
 describe('Should test Shopify integration', () => {
   const shopifyShop = process.env.SHOPIFY_SHOP;

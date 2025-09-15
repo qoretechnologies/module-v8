@@ -34892,7 +34892,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				list_sources: {
+				list_datasources: {
 					/**
 					 * L​i​s​t​ ​D​a​t​a​b​a​s​e​s
 					 */
@@ -105781,7 +105781,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				list_sources: {
+				list_datasources: {
 					/**
 					 * List Databases
 					 */
