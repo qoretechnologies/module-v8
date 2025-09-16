@@ -36,6 +36,7 @@ const options = {
       { value: 'group', display_name: 'Group' },
     ],
     default_value: 'organization',
+    on_change: ['refetch'],
   },
 } satisfies TQoreOptions;
 

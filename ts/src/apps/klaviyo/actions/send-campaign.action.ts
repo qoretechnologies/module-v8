@@ -36,7 +36,9 @@ const sendCampaign = QoreAppCreator.createLocalizedAction<typeof options>({
         },
       });
 
-      return omit(response.body.data, ['relationships', 'links']);
+      const data = response.body.data;
+
+      return omit({ ...data, ...data.attributes }, ['relationships', 'links', 'attributes']);
     } catch (error) {
       throw new KlaviyoError(`Failed to send campaign: ${getKlaviyoErrorMessage(error)}`);
     }
@@ -46,22 +48,7 @@ const sendCampaign = QoreAppCreator.createLocalizedAction<typeof options>({
     fields: {
       type: { type: 'string' },
       id: { type: 'string' },
-      attributes: {
-        type: {
-          type: 'hash',
-          fields: {
-            status: { type: 'string' },
-          },
-        },
-      },
-      links: {
-        type: {
-          type: 'hash',
-          fields: {
-            self: { type: 'string' },
-          },
-        },
-      },
+      status: { type: 'string' },
     },
   },
 });
