@@ -81,6 +81,7 @@ import amazonSqs from '../apps/amazon-sqs';
 import amazonCloudWatch from '../apps/amazon-cloudwatch';
 import notion from '../apps/notion';
 import amazonSes from '../apps/amazon-ses';
+import activeDirectory from '../apps/active-directory';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -96,6 +97,7 @@ export interface IQoreApi {
 
 const NEW_APPS = {
   activeCampaign,
+  activeDirectory,
   airtable,
   amazonEc2,
   amazonS3,
