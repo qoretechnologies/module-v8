@@ -155,7 +155,7 @@ class _PiecesAppCatalogue {
         auth: {
           ...context.opts,
           ...context.conn_opts,
-          access_token: context?.conn_opts?.token,
+          access_token: context.conn_opts?.token,
           data: { ...context.opts, ...context.conn_opts },
         },
         ...commonActionContext,
@@ -238,7 +238,7 @@ class _PiecesAppCatalogue {
       context: TQoreAppActionFunctionContext
     ): Promise<Record<string, TQoreAppActionOption>> => {
       const pieceContext = {
-        auth: { access_token: context?.conn_opts?.token, ...context.opts },
+        auth: { access_token: context.conn_opts?.token, ...context.opts },
         ...context.opts,
       };
       const options: Record<string, TQoreAppActionOption> = {};
@@ -257,10 +257,10 @@ class _PiecesAppCatalogue {
       return {
         [propKey]: {
           ...mainProp,
-          ...(typeof mainProp.example_value === 'object' && {
+          ...(typeof mainProp?.example_value === 'object' && {
             example_value: mainProp.example_value,
           }),
-          ...(typeof mainProp.default_value === 'object' && {
+          ...(typeof mainProp?.default_value === 'object' && {
             default_value: mainProp.default_value,
           }),
           ...(mainProp?.get_allowed_values && {
@@ -343,7 +343,7 @@ class _PiecesAppCatalogue {
       } satisfies TQoreTypeObject;
     }
 
-    if (prop.type === PropertyType.DYNAMIC && prop?.refreshers?.length) {
+    if (prop.type === PropertyType.DYNAMIC && prop.refreshers?.length) {
       depends_on = prop.refreshers;
     }
 
@@ -401,7 +401,7 @@ class _PiecesAppCatalogue {
     getOptions: DynamicDropdownOptions<any>
   ): TQoreGetAllowedValuesFunction {
     return async (context: TQoreAppActionFunctionContext): Promise<IQoreAllowedValue[]> => {
-      const auth = { access_token: context?.conn_opts?.token };
+      const auth = { access_token: context.conn_opts?.token };
       const options = await getOptions({ auth, ...context.opts });
 
       return options.options.map((option) => ({

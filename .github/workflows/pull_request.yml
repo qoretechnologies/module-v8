@@ -155,7 +155,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 20.11.0
+          node-version: 20.11.1
 
       - name: Save release version to outputs
         id: save_release_version

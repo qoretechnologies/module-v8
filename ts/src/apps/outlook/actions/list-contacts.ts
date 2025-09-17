@@ -70,7 +70,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const ListOutlookContacts = QoreAppCreator.createLocalizedAction<typeof options>({
+const ListOutlookContacts = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'list-contacts',
   app: OUTLOOK_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -144,3 +144,5 @@ export const ListOutlookContacts = QoreAppCreator.createLocalizedAction<typeof o
   options,
   response_type,
 });
+
+export default ListOutlookContacts;

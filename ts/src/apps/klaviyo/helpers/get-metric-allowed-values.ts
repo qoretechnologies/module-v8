@@ -16,18 +16,26 @@ type ItemType = {
 };
 
 const mapKlaviyoItemToAllowedValue = (item: ItemType): IQoreAllowedValue<string> => {
+  const name =
+    item.attributes.name && item.attributes.integration.name
+      ? `${item.attributes.name} (${item.attributes.integration.name})`
+      : 'Unknown Metric';
+
   return {
     value: item.attributes.name!,
-    display_name:
-      `${item.attributes.name} (${item.attributes.integration.name})` || 'Unknown Metric',
+    display_name: name,
   };
 };
 
 const mapKlaviyoItemToIdAllowedValue = (item: ItemType): IQoreAllowedValue<string> => {
+  const name =
+    item.attributes.name && item.attributes.integration.name
+      ? `${item.attributes.name} (${item.attributes.integration.name})`
+      : 'Unknown Metric';
+
   return {
     value: item.id,
-    display_name:
-      `${item.attributes.name} (${item.attributes.integration.name})` || 'Unknown Metric',
+    display_name: name,
   };
 };
 

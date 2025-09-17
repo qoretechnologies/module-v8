@@ -24,7 +24,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const DeleteOutlookContact = QoreAppCreator.createLocalizedAction<typeof options>({
+const DeleteOutlookContact = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'delete-contact',
   app: OUTLOOK_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -63,3 +63,5 @@ export const DeleteOutlookContact = QoreAppCreator.createLocalizedAction<typeof 
   options,
   response_type,
 });
+
+export default DeleteOutlookContact;

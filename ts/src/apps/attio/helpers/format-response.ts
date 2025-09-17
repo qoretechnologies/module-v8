@@ -102,9 +102,9 @@ const processRecord = (
 ): TFormattedRecord => {
   let formattedRecordId: string;
 
-  if (target === 'objects' && 'record_id' in record?.id) {
+  if (target === 'objects' && 'record_id' in record.id) {
     formattedRecordId = record.id.record_id;
-  } else if (target === 'lists' && 'entry_id' in record?.id) {
+  } else if (target === 'lists' && 'entry_id' in record.id) {
     formattedRecordId = record.id.entry_id;
   }
 

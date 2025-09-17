@@ -1,29 +1,29 @@
-export { default as archivePaddleProduct } from './products/archive-product.action';
-export { default as createPaddleProduct } from './products/create-product.action';
-export { default as getPaddleProduct } from './products/get-product.action';
-export { default as listPaddleProducts } from './products/list-products.action';
-export { default as updatePaddleProduct } from './products/update-product.action';
+export { default as ArchivePaddleProduct } from './products/archive-product.action';
+export { default as CreatePaddleProduct } from './products/create-product.action';
+export { default as GetPaddleProduct } from './products/get-product.action';
+export { default as ListPaddleProducts } from './products/list-products.action';
+export { default as UpdatePaddleProduct } from './products/update-product.action';
 
-export { default as createPaddlePrice } from './prices/create-price.action';
-export { default as getPaddlePrice } from './prices/get-price.action';
-export { default as listPaddlePrices } from './prices/list-prices.action';
-export { default as updatePaddlePrice } from './prices/update-price.action';
+export { default as CreatePaddlePrice } from './prices/create-price.action';
+export { default as GetPaddlePrice } from './prices/get-price.action';
+export { default as ListPaddlePrices } from './prices/list-prices.action';
+export { default as UpdatePaddlePrice } from './prices/update-price.action';
 
-export { default as getPaddleCustomer } from './customers/get-customer.action';
-export { default as listPaddleCustomerCreditBalances } from './customers/list-customer-credit-balances.action';
-export { default as getPaddleCustomerAuthToken } from './customers/get-customer-auth-token.action';
-export { default as listPaddleCustomers } from './customers/list-customers.action';
-export { default as createPaddleCustomer } from './customers/create-customer.action';
-export { default as updatePaddleCustomer } from './customers/update-customer.action';
+export { default as GetPaddleCustomer } from './customers/get-customer.action';
+export { default as ListPaddleCustomerCreditBalances } from './customers/list-customer-credit-balances.action';
+export { default as GetPaddleCustomerAuthToken } from './customers/get-customer-auth-token.action';
+export { default as ListPaddleCustomers } from './customers/list-customers.action';
+export { default as CreatePaddleCustomer } from './customers/create-customer.action';
+export { default as UpdatePaddleCustomer } from './customers/update-customer.action';
 
-export { default as getPaddleTransaction } from './transactions/get-transaction.action';
-export { default as listPaddleTransactions } from './transactions/list-transactions.action';
-export { default as createPaddleTransaction } from './transactions/create-transaction.action';
+export { default as GetPaddleTransaction } from './transactions/get-transaction.action';
+export { default as ListPaddleTransactions } from './transactions/list-transactions.action';
+export { default as CreatePaddleTransaction } from './transactions/create-transaction.action';
 
-export { default as createPaddleReport } from './reports/create-report.action';
-export { default as getPaddleReport } from './reports/get-report.action';
-export { default as listPaddleReports } from './reports/list-reports.action';
-export { default as getPaddleReportFile } from './reports/get-report-file.action';
+export { default as CreatePaddleReport } from './reports/create-report.action';
+export { default as GetPaddleReport } from './reports/get-report.action';
+export { default as ListPaddleReports } from './reports/list-reports.action';
+export { default as GetPaddleReportFile } from './reports/get-report-file.action';
 
-export { default as getPaddleSubscription } from './subscriptions/get-subscription.action';
-export { default as listPaddleSubscriptions } from './subscriptions/list-subscriptions.action';
+export { default as GetPaddleSubscription } from './subscriptions/get-subscription.action';
+export { default as ListPaddleSubscriptions } from './subscriptions/list-subscriptions.action';

@@ -133,7 +133,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const CreateSharePointFolder = QoreAppCreator.createLocalizedAction({
+const CreateSharePointFolder = QoreAppCreator.createLocalizedAction({
   action: 'create-folder',
   app: SHAREPOINT_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -170,3 +170,5 @@ export const CreateSharePointFolder = QoreAppCreator.createLocalizedAction({
   options,
   response_type,
 });
+
+export default CreateSharePointFolder;

@@ -1,7 +1,6 @@
-import { Octokit } from '@octokit/rest';
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
-import { GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
+import { createGitHubClient, GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 export const getGitHubIssueLabelsAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
@@ -16,9 +15,7 @@ export const getGitHubIssueLabelsAllowedValues: TQoreGetAllowedValuesFunction = 
     );
   }
 
-  const octokit = new Octokit({
-    auth: token,
-  });
+  const octokit = await createGitHubClient(token);
 
   Debugger.log('Github Issue Labels allowed values opts', {
     opts: context.opts,

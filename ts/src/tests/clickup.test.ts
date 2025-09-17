@@ -31,14 +31,14 @@ import { getClickUpSpaceIdAllowedValues } from '../apps/clickup/helpers/get-spac
 import { getClickUpTaskIdAllowedValues } from '../apps/clickup/helpers/get-task-id-allowed-values';
 import { getClickUpWorkspaceIdAllowedValues } from '../apps/clickup/helpers/get-workspace-id-allowed-values';
 import { getClickUpWorkspaceMemberIdAllowedValues } from '../apps/clickup/helpers/get-workspace-member-id-allowed-values';
-import { Debugger, DebugLevels } from '../utils/Debugger';
 import {
-  ClickUpNewFolder,
-  ClickUpNewList,
-  ClickUpNewTask,
-  ClickUpNewTaskComment,
-  ClickUpTaskUpdated,
+  NewClickUpFolder,
+  NewClickUpList,
+  NewClickUpTask,
+  NewClickUpTaskComment,
+  UpdatedClickUpTask,
 } from '../apps/clickup/triggers';
+import { Debugger, DebugLevels } from '../utils/Debugger';
 
 Debugger.level = DebugLevels.Verbose;
 
@@ -528,7 +528,7 @@ describe('ClickUp', () => {
     describe('Should test new folder webhook registration', () => {
       let webhook: { id: string } | undefined;
       it('Should register the new folder webhook', async () => {
-        const trigger = ClickUpNewFolder;
+        const trigger = NewClickUpFolder;
 
         if (!('webhook_register' in trigger) || !trigger.webhook_register)
           throw new Error('webhook_register not found in trigger');
@@ -547,7 +547,7 @@ describe('ClickUp', () => {
       });
 
       it('Should deregister the webhook', async () => {
-        const trigger = ClickUpNewFolder;
+        const trigger = NewClickUpFolder;
 
         if (!('webhook_deregister' in trigger) || !trigger.webhook_deregister)
           throw new Error('webhook_deregister not found in trigger');
@@ -563,7 +563,7 @@ describe('ClickUp', () => {
     describe('Should test updated task webhook registration', () => {
       let webhook: { id: string } | undefined;
       it('Should register the new folder webhook', async () => {
-        const trigger = ClickUpTaskUpdated;
+        const trigger = UpdatedClickUpTask;
 
         if (!('webhook_register' in trigger) || !trigger.webhook_register)
           throw new Error('webhook_register not found in trigger');
@@ -582,7 +582,7 @@ describe('ClickUp', () => {
       });
 
       it('Should deregister the webhook', async () => {
-        const trigger = ClickUpTaskUpdated;
+        const trigger = UpdatedClickUpTask;
 
         if (!('webhook_deregister' in trigger) || !trigger.webhook_deregister)
           throw new Error('webhook_deregister not found in trigger');
@@ -598,7 +598,7 @@ describe('ClickUp', () => {
     describe('Should test new list webhook registration', () => {
       let webhook: { id: string } | undefined;
       it('Should register the new list webhook', async () => {
-        const trigger = ClickUpNewList;
+        const trigger = NewClickUpList;
 
         if (!('webhook_register' in trigger) || !trigger.webhook_register)
           throw new Error('webhook_register not found in trigger');
@@ -617,7 +617,7 @@ describe('ClickUp', () => {
       });
 
       it('Should deregister the webhook', async () => {
-        const trigger = ClickUpNewList;
+        const trigger = NewClickUpList;
 
         if (!('webhook_deregister' in trigger) || !trigger.webhook_deregister)
           throw new Error('webhook_deregister not found in trigger');
@@ -632,7 +632,7 @@ describe('ClickUp', () => {
     describe('Should test new task webhook registration', () => {
       let webhook: { id: string } | undefined;
       it('Should register the new task webhook', async () => {
-        const trigger = ClickUpNewTask;
+        const trigger = NewClickUpTask;
 
         if (!('webhook_register' in trigger) || !trigger.webhook_register)
           throw new Error('webhook_register not found in trigger');
@@ -652,7 +652,7 @@ describe('ClickUp', () => {
       });
 
       it('Should deregister the webhook', async () => {
-        const trigger = ClickUpNewTask;
+        const trigger = NewClickUpTask;
 
         if (!('webhook_deregister' in trigger) || !trigger.webhook_deregister)
           throw new Error('webhook_deregister not found in trigger');
@@ -667,7 +667,7 @@ describe('ClickUp', () => {
     describe('Should test new task comment webhook registration', () => {
       let webhook: { id: string } | undefined;
       it('Should register the new task comment webhook', async () => {
-        const trigger = ClickUpNewTaskComment;
+        const trigger = NewClickUpTaskComment;
 
         if (!('webhook_register' in trigger) || !trigger.webhook_register)
           throw new Error('webhook_register not found in trigger');
@@ -687,7 +687,7 @@ describe('ClickUp', () => {
       });
 
       it('Should deregister the webhook', async () => {
-        const trigger = ClickUpNewTaskComment;
+        const trigger = NewClickUpTaskComment;
 
         if (!('webhook_deregister' in trigger) || !trigger.webhook_deregister)
           throw new Error('webhook_deregister not found in trigger');

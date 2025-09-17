@@ -115,7 +115,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const SendOutlookEmail = QoreAppCreator.createLocalizedAction<typeof options>({
+const SendOutlookEmail = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'send-email',
   app: OUTLOOK_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -187,3 +187,5 @@ export const SendOutlookEmail = QoreAppCreator.createLocalizedAction<typeof opti
   options,
   response_type,
 });
+
+export default SendOutlookEmail;

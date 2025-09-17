@@ -104,7 +104,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const ListOutlookEvents = QoreAppCreator.createLocalizedAction<typeof options>({
+const ListOutlookEvents = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'list-events',
   app: OUTLOOK_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -190,3 +190,5 @@ export const ListOutlookEvents = QoreAppCreator.createLocalizedAction<typeof opt
   options,
   response_type,
 });
+
+export default ListOutlookEvents;

@@ -1,1 +1,1 @@
-export { default as getHubspotListRecords } from './get-list-records.action';
+export { default as GetHubspotListRecords } from './get-list-records.action';

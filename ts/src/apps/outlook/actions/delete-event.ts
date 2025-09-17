@@ -31,7 +31,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const DeleteOutlookEvent = QoreAppCreator.createLocalizedAction<typeof options>({
+const DeleteOutlookEvent = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'delete-event',
   app: OUTLOOK_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -72,3 +72,5 @@ export const DeleteOutlookEvent = QoreAppCreator.createLocalizedAction<typeof op
   options,
   response_type,
 });
+
+export default DeleteOutlookEvent;

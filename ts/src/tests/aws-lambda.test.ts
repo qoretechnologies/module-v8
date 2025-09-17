@@ -1,21 +1,18 @@
 import { configDotenv } from 'dotenv';
 import {
-  getAWSLambdaFunction,
-  getAWSLambdaLayerVersion,
-  invokeAWSLambdaFunction,
-  listAWSLambdaFunctions,
-  listAWSLambdaLayers,
-  listAWSLambdaLayerVersions,
+  GetAWSLambdaFunction,
+  GetAWSLambdaLayerVersion,
+  InvokeAWSLambdaFunction,
+  ListAWSLambdaFunctions,
+  ListAWSLambdaLayerVersions,
+  ListAWSLambdaLayers,
 } from '../apps/amazon-lambda/actions';
 import { getAWSLambdaFunctionAllowedValues } from '../apps/amazon-lambda/helpers/get-function-allowed-values';
 import {
   getAWSLambdaLayerAllowedValues,
   getAWSLambdaLayerVersionAllowedValues,
 } from '../apps/amazon-lambda/helpers/get-layer-allowed-values';
-import {
-  AWSLambdaNewFunctionTrigger,
-  AWSLambdaNewLayerVersionTrigger,
-} from '../apps/amazon-lambda/triggers';
+import { NewAWSLambdaFunction, NewAWSLambdaLayerVersion } from '../apps/amazon-lambda/triggers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 
 configDotenv({ path: '.env' });
@@ -99,7 +96,7 @@ describe('AWS Lambda', () => {
 
   describe('Should test actions', () => {
     it('Should list functions', async () => {
-      const action = listAWSLambdaFunctions;
+      const action = ListAWSLambdaFunctions;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -120,7 +117,7 @@ describe('AWS Lambda', () => {
     });
 
     it('Should list layers', async () => {
-      const action = listAWSLambdaLayers;
+      const action = ListAWSLambdaLayers;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
@@ -141,7 +138,7 @@ describe('AWS Lambda', () => {
     });
 
     it('Should list layer versions if layers exist', async () => {
-      const action = listAWSLambdaLayerVersions;
+      const action = ListAWSLambdaLayerVersions;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const result = await action.api_function(
@@ -162,7 +159,7 @@ describe('AWS Lambda', () => {
     });
 
     it('Should get function details if functions exist', async () => {
-      const action = getAWSLambdaFunction;
+      const action = GetAWSLambdaFunction;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const result = await action.api_function(
@@ -182,7 +179,7 @@ describe('AWS Lambda', () => {
     });
 
     it('Should get layer version details if layers exist', async () => {
-      const action = getAWSLambdaLayerVersion;
+      const action = GetAWSLambdaLayerVersion;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const result = await action.api_function(
@@ -202,7 +199,7 @@ describe('AWS Lambda', () => {
     });
 
     it('Should invoke function if functions exist', async () => {
-      const action = invokeAWSLambdaFunction;
+      const action = InvokeAWSLambdaFunction;
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const result = await action.api_function(
@@ -228,7 +225,7 @@ describe('AWS Lambda', () => {
 
   describe('Should test triggers event example data', () => {
     it('Should get example event data for new function trigger', async () => {
-      const trigger = AWSLambdaNewFunctionTrigger;
+      const trigger = NewAWSLambdaFunction;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');
@@ -244,7 +241,7 @@ describe('AWS Lambda', () => {
     });
 
     it('Should get example event data for new layer version trigger', async () => {
-      const trigger = AWSLambdaNewLayerVersionTrigger;
+      const trigger = NewAWSLambdaLayerVersion;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');

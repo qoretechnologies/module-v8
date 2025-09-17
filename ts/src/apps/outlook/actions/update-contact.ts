@@ -145,7 +145,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const UpdateOutlookContact = QoreAppCreator.createLocalizedAction<typeof options>({
+const UpdateOutlookContact = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'update-contact',
   app: OUTLOOK_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -229,3 +229,5 @@ export const UpdateOutlookContact = QoreAppCreator.createLocalizedAction<typeof 
   options,
   response_type,
 });
+
+export default UpdateOutlookContact;

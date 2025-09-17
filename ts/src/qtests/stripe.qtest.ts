@@ -346,7 +346,7 @@ describe('Tests Stripe Actions', () => {
   describe(`Should test Stripe Triggers`, () => {
     let webhook: Record<string, any>;
     it('Should register stripe webhook', async () => {
-      const trigger = STRIPE_TRIGGERS['chargeSucceeded'] as IQoreAppActionWithWebhookBase;
+      const trigger = STRIPE_TRIGGERS['StripeChargeSucceeded'] as IQoreAppActionWithWebhookBase;
       expect(trigger).toBeDefined();
       expect(trigger.webhook_register).toBeDefined();
       const result = await trigger.webhook_register(
@@ -364,7 +364,7 @@ describe('Tests Stripe Actions', () => {
     it('Should deregister stripe webhook', async () => {
       expect(webhook).toBeDefined();
 
-      const trigger = STRIPE_TRIGGERS['chargeSucceeded'] as IQoreAppActionWithWebhookBase;
+      const trigger = STRIPE_TRIGGERS['StripeChargeSucceeded'] as IQoreAppActionWithWebhookBase;
       expect(trigger).toBeDefined();
       expect(trigger.webhook_deregister).toBeDefined();
 
@@ -381,7 +381,7 @@ describe('Tests Stripe Actions', () => {
       }
     });
     it('Should get example stripe webhook data', async () => {
-      const trigger = STRIPE_TRIGGERS['chargeSucceeded'] as IQoreAppActionWithWebhookBase;
+      const trigger = STRIPE_TRIGGERS['StripeChargeSucceeded'] as IQoreAppActionWithWebhookBase;
       expect(trigger).toBeDefined();
       const getExampleData = trigger.get_example_event_data;
       expect(getExampleData).toBeDefined();

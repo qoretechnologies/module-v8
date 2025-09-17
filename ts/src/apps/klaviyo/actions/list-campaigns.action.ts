@@ -94,7 +94,7 @@ const listCampaigns = QoreAppCreator.createLocalizedAction<typeof options>({
 
       return {
         data: response.body.data.map((item) => omit(item, ['relationships', 'links'])),
-        next: response.body?.links?.next || null,
+        next: response.body.links?.next || null,
       };
     } catch (error) {
       throw new KlaviyoError(`Failed to list campaigns: ${getKlaviyoErrorMessage(error)}`);

@@ -1,1 +1,1 @@
-export { default as BigMlNewResource } from './new-resource.trigger';
+export { default as NewBigMlResource } from './new-resource.trigger';

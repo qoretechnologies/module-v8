@@ -1,8 +1,8 @@
 import { configDotenv } from 'dotenv';
 import { getBusinessCentralObjectAllowedValues } from '../apps/business-central/helpers/get-object-allowed-values';
 import {
-  BusinessCentralNewRecordTrigger,
-  BusinessCentralUpdatedRecordTrigger,
+  NewBusinessCentralRecord,
+  UpdatedBusinessCentralRecord,
 } from '../apps/business-central/triggers';
 
 configDotenv({ path: '.env' });
@@ -72,7 +72,7 @@ describe('Test Business Central Actions', () => {
 
   describe('Should test Business Central triggers event example data', () => {
     it('Should get example event data for new record', async () => {
-      const trigger = BusinessCentralNewRecordTrigger;
+      const trigger = NewBusinessCentralRecord;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');
@@ -83,7 +83,7 @@ describe('Test Business Central Actions', () => {
     });
 
     it('Should get example event data for updated record trigger', async () => {
-      const trigger = BusinessCentralUpdatedRecordTrigger;
+      const trigger = UpdatedBusinessCentralRecord;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');

@@ -281,7 +281,7 @@ export const createGetPipedriveExampleEventDataFunction = (
   return async (
     context: TQoreAppActionFunctionContext<TCustomConnOptions>
   ): Promise<Record<string, any>> => {
-    const action = context?.opts?.action as TPipedriveWebhookEventAction;
+    const action = context.opts?.action as TPipedriveWebhookEventAction;
     const token = context.conn_opts?.token;
 
     if (!token) {

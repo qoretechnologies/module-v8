@@ -2,7 +2,7 @@ import { configDotenv } from 'dotenv';
 import { ListBrowseAiRobots, ListBrowseAiTasks } from '../apps/browse-ai/actions';
 import { getBrowseAiRobotIdAllowedValues } from '../apps/browse-ai/helpers/get-robot-id-allowed-values';
 import { mapBrowseAiInputParameterToQoreOptions } from '../apps/browse-ai/helpers/get-robot-input-params';
-import { BrowseAiNewTask } from '../apps/browse-ai/triggers';
+import { NewBrowseAiTask } from '../apps/browse-ai/triggers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 
 configDotenv({ path: '.env' });
@@ -124,7 +124,7 @@ describe('Browse AI', () => {
 
   describe('Should test triggers event example data', () => {
     it('Should get example event data for new task trigger', async () => {
-      const trigger = BrowseAiNewTask;
+      const trigger = NewBrowseAiTask;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
         throw new Error('get_example_event_data not found in trigger');

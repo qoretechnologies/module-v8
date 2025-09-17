@@ -1,7 +1,7 @@
-export { default as listEntryCreated } from './list-entry-created.trigger';
-export { default as listEntryUpdated } from './list-entry-updated.trigger';
-export { default as listEntryDeleted } from './list-entry-deleted.trigger';
-export { default as objectRecordCreated } from './object-record-created.trigger';
-export { default as objectRecordUpdated } from './object-record-updated.trigger';
-export { default as objectRecordDeleted } from './object-record-deleted.trigger';
-export { default as taskCreated } from './task-created.trigger';
+export { default as NewAttioListEntryCreated } from './list-entry-created.trigger';
+export { default as DeletedAttioListEntry } from './list-entry-deleted.trigger';
+export { default as UpdatedAttioListEntry } from './list-entry-updated.trigger';
+export { default as NewAttioObjectRecordCreated } from './object-record-created.trigger';
+export { default as DeletedAttioObjectRecord } from './object-record-deleted.trigger';
+export { default as UpdatedAttioObjectRecord } from './object-record-updated.trigger';
+export { default as NewAttioTaskCreated } from './task-created.trigger';

@@ -260,7 +260,7 @@ const createFulfillment = async (
   return createFulfillmentResult.data.fulfillmentCreateV2;
 };
 
-export const CreateShopifyFulfillment = QoreAppCreator.createLocalizedAction<typeof options>({
+const CreateShopifyFulfillment = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'create-fulfillment',
   app: SHOPIFY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -331,3 +331,5 @@ export const CreateShopifyFulfillment = QoreAppCreator.createLocalizedAction<typ
   options,
   response_type: ShopifyCreateFulfillmentResponseType,
 });
+
+export default CreateShopifyFulfillment;
