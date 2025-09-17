@@ -89,9 +89,13 @@ const listSegments = QoreAppCreator.createLocalizedAction<typeof options>({
         ...(sort && { sort: `${sort?.direction === 'desc' ? '-' : ''}${sort?.field}` }),
       });
 
+      const data = response.body.data;
+
       return {
-        data: response.body?.data.map((item) => omit(item, ['relationships', 'links'])),
-        next: response.body?.links?.next || null,
+        data: data.map((item) =>
+          omit({ ...item, ...item.attributes }, ['relationships', 'links', 'attributes'])
+        ),
+        next: response.body.links?.next || null,
       };
     } catch (error) {
       throw new KlaviyoError(`Failed to list segments: ${getKlaviyoErrorMessage(error)}`);
@@ -108,114 +112,108 @@ const listSegments = QoreAppCreator.createLocalizedAction<typeof options>({
             fields: {
               type: { type: 'string' },
               id: { type: 'string' },
-              attributes: {
+
+              name: { type: 'string' },
+              definition: {
                 type: {
                   type: 'hash',
                   fields: {
-                    name: { type: 'string' },
-                    definition: {
+                    conditionGroups: {
                       type: {
-                        type: 'hash',
-                        fields: {
-                          conditionGroups: {
-                            type: {
-                              type: 'list',
-                              element_type: {
-                                type: 'hash',
-                                fields: {
-                                  conditions: {
-                                    type: {
-                                      type: 'list',
-                                      element_type: {
+                        type: 'list',
+                        element_type: {
+                          type: 'hash',
+                          fields: {
+                            conditions: {
+                              type: {
+                                type: 'list',
+                                element_type: {
+                                  type: 'hash',
+                                  fields: {
+                                    type: { type: 'string' },
+                                    groupIds: {
+                                      type: {
+                                        type: 'list',
+                                        element_type: 'string',
+                                      },
+                                    },
+                                    timeframeFilter: {
+                                      type: {
                                         type: 'hash',
                                         fields: {
                                           type: { type: 'string' },
-                                          groupIds: {
-                                            type: {
-                                              type: 'list',
-                                              element_type: 'string',
-                                            },
-                                          },
-                                          timeframeFilter: {
-                                            type: {
-                                              type: 'hash',
-                                              fields: {
-                                                type: { type: 'string' },
-                                                operator: { type: 'string' },
-                                                date: { type: 'string' },
-                                              },
-                                            },
-                                          },
-                                          metricId: { type: 'string' },
-                                          measurement: { type: 'string' },
-                                          measurementFilter: {
-                                            type: {
-                                              type: 'hash',
-                                              fields: {
-                                                type: { type: 'string' },
-                                                operator: { type: 'string' },
-                                                value: { type: 'number' },
-                                              },
-                                            },
-                                          },
-                                          metricFilters: {
-                                            type: {
-                                              type: 'list',
-                                              element_type: {
-                                                type: 'hash',
-                                                fields: {
-                                                  property: { type: 'string' },
-                                                  filter: {
-                                                    type: {
-                                                      type: 'hash',
-                                                      fields: {
-                                                        type: { type: 'string' },
-                                                        operator: { type: 'string' },
-                                                        value: { type: 'string' },
-                                                      },
-                                                    },
-                                                  },
-                                                },
-                                              },
-                                            },
-                                          },
-                                          consent: {
-                                            type: {
-                                              type: 'hash',
-                                              fields: {
-                                                channel: { type: 'string' },
-                                                consentStatus: {
-                                                  type: {
-                                                    type: 'hash',
-                                                    fields: {
-                                                      subscription: { type: 'string' },
-                                                    },
-                                                  },
-                                                },
-                                              },
-                                            },
-                                          },
-                                          countryCode: { type: 'string' },
-                                          postalCode: { type: 'string' },
-                                          unit: { type: 'string' },
-                                          filter: {
-                                            type: {
-                                              type: 'hash',
-                                              fields: {
-                                                type: { type: 'string' },
-                                                operator: { type: 'string' },
-                                                value: { type: 'number' },
-                                              },
-                                            },
-                                          },
-                                          property: { type: 'string' },
-                                          inRegion: { type: 'boolean' },
-                                          region: { type: 'string' },
-                                          dimension: { type: 'string' },
-                                          predictedChannel: { type: 'string' },
+                                          operator: { type: 'string' },
+                                          date: { type: 'string' },
                                         },
                                       },
                                     },
+                                    metricId: { type: 'string' },
+                                    measurement: { type: 'string' },
+                                    measurementFilter: {
+                                      type: {
+                                        type: 'hash',
+                                        fields: {
+                                          type: { type: 'string' },
+                                          operator: { type: 'string' },
+                                          value: { type: 'number' },
+                                        },
+                                      },
+                                    },
+                                    metricFilters: {
+                                      type: {
+                                        type: 'list',
+                                        element_type: {
+                                          type: 'hash',
+                                          fields: {
+                                            property: { type: 'string' },
+                                            filter: {
+                                              type: {
+                                                type: 'hash',
+                                                fields: {
+                                                  type: { type: 'string' },
+                                                  operator: { type: 'string' },
+                                                  value: { type: 'string' },
+                                                },
+                                              },
+                                            },
+                                          },
+                                        },
+                                      },
+                                    },
+                                    consent: {
+                                      type: {
+                                        type: 'hash',
+                                        fields: {
+                                          channel: { type: 'string' },
+                                          consentStatus: {
+                                            type: {
+                                              type: 'hash',
+                                              fields: {
+                                                subscription: { type: 'string' },
+                                              },
+                                            },
+                                          },
+                                        },
+                                      },
+                                    },
+                                    countryCode: { type: 'string' },
+                                    postalCode: { type: 'string' },
+                                    unit: { type: 'string' },
+                                    filter: {
+                                      type: {
+                                        type: 'hash',
+                                        fields: {
+                                          type: { type: 'string' },
+                                          operator: { type: 'string' },
+                                          value: { type: 'number' },
+                                        },
+                                      },
+                                    },
+                                    property: { type: 'string' },
+                                    inRegion: { type: 'boolean' },
+                                    region: { type: 'string' },
+                                    dimension: { type: 'string' },
+                                    predictedChannel: { type: 'string' },
                                   },
                                 },
                               },
@@ -224,14 +222,14 @@ const listSegments = QoreAppCreator.createLocalizedAction<typeof options>({
                         },
                       },
                     },
-                    created: { type: 'string' },
-                    updated: { type: 'string' },
-                    isActive: { type: 'boolean' },
-                    isProcessing: { type: 'boolean' },
-                    isStarred: { type: 'boolean' },
                   },
                 },
               },
+              created: { type: 'string' },
+              updated: { type: 'string' },
+              isActive: { type: 'boolean' },
+              isProcessing: { type: 'boolean' },
+              isStarred: { type: 'boolean' },
             },
           },
         },

@@ -132,9 +132,13 @@ const listProfiles = QoreAppCreator.createLocalizedAction<typeof options>({
         pageSize,
       });
 
+      const data = response.body.data;
+
       return {
-        data: response.body?.data.map((item) => omit(item, ['relationships', 'links'])),
-        next: response.body?.links?.next || null,
+        data: data.map((item) =>
+          omit({ ...item, ...item.attributes }, ['relationships', 'links', 'attributes'])
+        ),
+        next: response.body.links?.next || null,
       };
     } catch (error) {
       throw new KlaviyoError(`Failed to list profiles: ${getKlaviyoErrorMessage(error)}`);
@@ -151,84 +155,78 @@ const listProfiles = QoreAppCreator.createLocalizedAction<typeof options>({
             fields: {
               type: { type: 'string' },
               id: { type: 'string' },
-              attributes: {
+
+              email: { type: 'string' },
+              phoneNumber: { type: 'string' },
+              externalId: { type: 'string' },
+              firstName: { type: 'string' },
+              lastName: { type: 'string' },
+              organization: { type: 'string' },
+              locale: { type: 'string' },
+              title: { type: 'string' },
+              image: { type: 'string' },
+              created: { type: 'string' },
+              updated: { type: 'string' },
+              lastEventDate: { type: 'string' },
+              location: {
                 type: {
                   type: 'hash',
                   fields: {
-                    email: { type: 'string' },
-                    phoneNumber: { type: 'string' },
-                    externalId: { type: 'string' },
-                    firstName: { type: 'string' },
-                    lastName: { type: 'string' },
-                    organization: { type: 'string' },
-                    locale: { type: 'string' },
-                    title: { type: 'string' },
-                    image: { type: 'string' },
-                    created: { type: 'string' },
-                    updated: { type: 'string' },
-                    lastEventDate: { type: 'string' },
-                    location: {
+                    address1: { type: 'string' },
+                    address2: { type: 'string' },
+                    city: { type: 'string' },
+                    country: { type: 'string' },
+                    latitude: { type: 'string' },
+                    longitude: { type: 'string' },
+                    region: { type: 'string' },
+                    zip: { type: 'string' },
+                    timezone: { type: 'string' },
+                    ip: { type: 'string' },
+                  },
+                },
+              },
+              properties: { type: 'hash' },
+              subscriptions: {
+                type: {
+                  type: 'hash',
+                  fields: {
+                    email: {
                       type: {
                         type: 'hash',
                         fields: {
-                          address1: { type: 'string' },
-                          address2: { type: 'string' },
-                          city: { type: 'string' },
-                          country: { type: 'string' },
-                          latitude: { type: 'string' },
-                          longitude: { type: 'string' },
-                          region: { type: 'string' },
-                          zip: { type: 'string' },
-                          timezone: { type: 'string' },
-                          ip: { type: 'string' },
-                        },
-                      },
-                    },
-                    properties: { type: 'hash' },
-                    subscriptions: {
-                      type: {
-                        type: 'hash',
-                        fields: {
-                          email: {
+                          marketing: {
                             type: {
                               type: 'hash',
                               fields: {
-                                marketing: {
+                                canReceiveEmailMarketing: { type: 'boolean' },
+                                consent: { type: 'string' },
+                                consentTimestamp: { type: 'string' },
+                                lastUpdated: { type: 'string' },
+                                method: { type: 'string' },
+                                methodDetail: { type: 'string' },
+                                customMethodDetail: { type: 'string' },
+                                doubleOptin: { type: 'boolean' },
+                                suppression: {
                                   type: {
-                                    type: 'hash',
-                                    fields: {
-                                      canReceiveEmailMarketing: { type: 'boolean' },
-                                      consent: { type: 'string' },
-                                      consentTimestamp: { type: 'string' },
-                                      lastUpdated: { type: 'string' },
-                                      method: { type: 'string' },
-                                      methodDetail: { type: 'string' },
-                                      customMethodDetail: { type: 'string' },
-                                      doubleOptin: { type: 'boolean' },
-                                      suppression: {
-                                        type: {
-                                          type: 'list',
-                                          element_type: {
-                                            type: 'hash',
-                                            fields: {
-                                              reason: { type: 'string' },
-                                              timestamp: { type: 'string' },
-                                            },
-                                          },
-                                        },
+                                    type: 'list',
+                                    element_type: {
+                                      type: 'hash',
+                                      fields: {
+                                        reason: { type: 'string' },
+                                        timestamp: { type: 'string' },
                                       },
-                                      listSuppressions: {
-                                        type: {
-                                          type: 'list',
-                                          element_type: {
-                                            type: 'hash',
-                                            fields: {
-                                              listId: { type: 'string' },
-                                              reason: { type: 'string' },
-                                              timestamp: { type: 'string' },
-                                            },
-                                          },
-                                        },
+                                    },
+                                  },
+                                },
+                                listSuppressions: {
+                                  type: {
+                                    type: 'list',
+                                    element_type: {
+                                      type: 'hash',
+                                      fields: {
+                                        listId: { type: 'string' },
+                                        reason: { type: 'string' },
+                                        timestamp: { type: 'string' },
                                       },
                                     },
                                   },
@@ -236,75 +234,75 @@ const listProfiles = QoreAppCreator.createLocalizedAction<typeof options>({
                               },
                             },
                           },
-                          sms: {
-                            type: {
-                              type: 'hash',
-                              fields: {
-                                marketing: {
-                                  type: {
-                                    type: 'hash',
-                                    fields: {
-                                      canReceiveSmsMarketing: { type: 'boolean' },
-                                      consent: { type: 'string' },
-                                      consentTimestamp: { type: 'string' },
-                                      method: { type: 'string' },
-                                      methodDetail: { type: 'string' },
-                                      lastUpdated: { type: 'string' },
-                                    },
-                                  },
-                                },
-                                transactional: {
-                                  type: {
-                                    type: 'hash',
-                                    fields: {
-                                      canReceiveSmsTransactional: { type: 'boolean' },
-                                      consent: { type: 'string' },
-                                      consentTimestamp: { type: 'string' },
-                                      method: { type: 'string' },
-                                      methodDetail: { type: 'string' },
-                                      lastUpdated: { type: 'string' },
-                                    },
-                                  },
-                                },
-                              },
-                            },
-                          },
-                          mobilePush: {
-                            type: {
-                              type: 'hash',
-                              fields: {
-                                marketing: {
-                                  type: {
-                                    type: 'hash',
-                                    fields: {
-                                      canReceivePushMarketing: { type: 'boolean' },
-                                      consent: { type: 'string' },
-                                      consentTimestamp: { type: 'string' },
-                                    },
-                                  },
-                                },
-                              },
-                            },
-                          },
                         },
                       },
                     },
-                    predictiveAnalytics: {
+                    sms: {
                       type: {
                         type: 'hash',
                         fields: {
-                          historicClv: { type: 'number' },
-                          predictedClv: { type: 'number' },
-                          totalClv: { type: 'number' },
-                          historicNumberOfOrders: { type: 'number' },
-                          predictedNumberOfOrders: { type: 'number' },
-                          averageDaysBetweenOrders: { type: 'number' },
-                          averageOrderValue: { type: 'number' },
-                          churnProbability: { type: 'number' },
-                          expectedDateOfNextOrder: { type: 'string' },
+                          marketing: {
+                            type: {
+                              type: 'hash',
+                              fields: {
+                                canReceiveSmsMarketing: { type: 'boolean' },
+                                consent: { type: 'string' },
+                                consentTimestamp: { type: 'string' },
+                                method: { type: 'string' },
+                                methodDetail: { type: 'string' },
+                                lastUpdated: { type: 'string' },
+                              },
+                            },
+                          },
+                          transactional: {
+                            type: {
+                              type: 'hash',
+                              fields: {
+                                canReceiveSmsTransactional: { type: 'boolean' },
+                                consent: { type: 'string' },
+                                consentTimestamp: { type: 'string' },
+                                method: { type: 'string' },
+                                methodDetail: { type: 'string' },
+                                lastUpdated: { type: 'string' },
+                              },
+                            },
+                          },
                         },
                       },
                     },
+                    mobilePush: {
+                      type: {
+                        type: 'hash',
+                        fields: {
+                          marketing: {
+                            type: {
+                              type: 'hash',
+                              fields: {
+                                canReceivePushMarketing: { type: 'boolean' },
+                                consent: { type: 'string' },
+                                consentTimestamp: { type: 'string' },
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+              predictiveAnalytics: {
+                type: {
+                  type: 'hash',
+                  fields: {
+                    historicClv: { type: 'number' },
+                    predictedClv: { type: 'number' },
+                    totalClv: { type: 'number' },
+                    historicNumberOfOrders: { type: 'number' },
+                    predictedNumberOfOrders: { type: 'number' },
+                    averageDaysBetweenOrders: { type: 'number' },
+                    averageOrderValue: { type: 'number' },
+                    churnProbability: { type: 'number' },
+                    expectedDateOfNextOrder: { type: 'string' },
                   },
                 },
               },

@@ -9,6 +9,7 @@ import {
   getKlaviyoErrorMessage,
 } from '../helpers/constants';
 import { getKlaviyoMetricIdAllowedValues } from '../helpers/get-metric-allowed-values';
+import { MetricResponseObjectResource, ProfileResponseObjectResource } from 'klaviyo-api';
 
 const options = {
   metric: {
@@ -68,25 +69,19 @@ const KlaviyoNewEventTrigger = QoreAppCreator.createLocalizedTrigger({
             fields: {
               type: { type: 'string' },
               id: { type: 'string' },
-              attributes: {
+
+              name: { type: 'string' },
+              created: { type: 'string' },
+              updated: { type: 'string' },
+              integration: {
                 type: {
                   type: 'hash',
                   fields: {
+                    object: { type: 'string' },
+                    id: { type: 'string' },
+                    key: { type: 'string' },
                     name: { type: 'string' },
-                    created: { type: 'string' },
-                    updated: { type: 'string' },
-                    integration: {
-                      type: {
-                        type: 'hash',
-                        fields: {
-                          object: { type: 'string' },
-                          id: { type: 'string' },
-                          key: { type: 'string' },
-                          name: { type: 'string' },
-                          category: { type: 'string' },
-                        },
-                      },
-                    },
+                    category: { type: 'string' },
                   },
                 },
               },
@@ -100,135 +95,79 @@ const KlaviyoNewEventTrigger = QoreAppCreator.createLocalizedTrigger({
             fields: {
               type: { type: 'string' },
               id: { type: 'string' },
-              attributes: {
+
+              email: { type: 'string' },
+              phoneNumber: { type: 'string' },
+              externalId: { type: 'string' },
+              firstName: { type: 'string' },
+              lastName: { type: 'string' },
+              organization: { type: 'string' },
+              locale: { type: 'string' },
+              title: { type: 'string' },
+              image: { type: 'string' },
+              created: { type: 'string' },
+              updated: { type: 'string' },
+              lastEventDate: { type: 'string' },
+              location: {
                 type: {
                   type: 'hash',
                   fields: {
-                    email: { type: 'string' },
-                    phoneNumber: { type: 'string' },
-                    externalId: { type: 'string' },
-                    firstName: { type: 'string' },
-                    lastName: { type: 'string' },
-                    organization: { type: 'string' },
-                    locale: { type: 'string' },
-                    title: { type: 'string' },
-                    image: { type: 'string' },
-                    created: { type: 'string' },
-                    updated: { type: 'string' },
-                    lastEventDate: { type: 'string' },
-                    location: {
+                    address1: { type: 'string' },
+                    address2: { type: 'string' },
+                    city: { type: 'string' },
+                    country: { type: 'string' },
+                    latitude: { type: 'string' },
+                    longitude: { type: 'string' },
+                    region: { type: 'string' },
+                    zip: { type: 'string' },
+                    timezone: { type: 'string' },
+                    ip: { type: 'string' },
+                  },
+                },
+              },
+              properties: { type: 'hash' },
+              subscriptions: {
+                type: {
+                  type: 'hash',
+                  fields: {
+                    email: {
                       type: {
                         type: 'hash',
                         fields: {
-                          address1: { type: 'string' },
-                          address2: { type: 'string' },
-                          city: { type: 'string' },
-                          country: { type: 'string' },
-                          latitude: { type: 'string' },
-                          longitude: { type: 'string' },
-                          region: { type: 'string' },
-                          zip: { type: 'string' },
-                          timezone: { type: 'string' },
-                          ip: { type: 'string' },
-                        },
-                      },
-                    },
-                    properties: { type: 'hash' },
-                    subscriptions: {
-                      type: {
-                        type: 'hash',
-                        fields: {
-                          email: {
+                          marketing: {
                             type: {
                               type: 'hash',
                               fields: {
-                                marketing: {
+                                canReceiveEmailMarketing: { type: 'boolean' },
+                                consent: { type: 'string' },
+                                consentTimestamp: { type: 'string' },
+                                lastUpdated: { type: 'string' },
+                                method: { type: 'string' },
+                                methodDetail: { type: 'string' },
+                                customMethodDetail: { type: 'string' },
+                                doubleOptin: { type: 'boolean' },
+                                suppression: {
                                   type: {
-                                    type: 'hash',
-                                    fields: {
-                                      canReceiveEmailMarketing: { type: 'boolean' },
-                                      consent: { type: 'string' },
-                                      consentTimestamp: { type: 'string' },
-                                      lastUpdated: { type: 'string' },
-                                      method: { type: 'string' },
-                                      methodDetail: { type: 'string' },
-                                      customMethodDetail: { type: 'string' },
-                                      doubleOptin: { type: 'boolean' },
-                                      suppression: {
-                                        type: {
-                                          type: 'list',
-                                          element_type: {
-                                            type: 'hash',
-                                            fields: {
-                                              reason: { type: 'string' },
-                                              timestamp: { type: 'string' },
-                                            },
-                                          },
-                                        },
-                                      },
-                                      listSuppressions: {
-                                        type: {
-                                          type: 'list',
-                                          element_type: {
-                                            type: 'hash',
-                                            fields: {
-                                              listId: { type: 'string' },
-                                              reason: { type: 'string' },
-                                              timestamp: { type: 'string' },
-                                            },
-                                          },
-                                        },
+                                    type: 'list',
+                                    element_type: {
+                                      type: 'hash',
+                                      fields: {
+                                        reason: { type: 'string' },
+                                        timestamp: { type: 'string' },
                                       },
                                     },
                                   },
                                 },
-                              },
-                            },
-                          },
-                          sms: {
-                            type: {
-                              type: 'hash',
-                              fields: {
-                                marketing: {
+                                listSuppressions: {
                                   type: {
-                                    type: 'hash',
-                                    fields: {
-                                      canReceiveSmsMarketing: { type: 'boolean' },
-                                      consent: { type: 'string' },
-                                      consentTimestamp: { type: 'string' },
-                                      method: { type: 'string' },
-                                      methodDetail: { type: 'string' },
-                                      lastUpdated: { type: 'string' },
-                                    },
-                                  },
-                                },
-                                transactional: {
-                                  type: {
-                                    type: 'hash',
-                                    fields: {
-                                      canReceiveSmsTransactional: { type: 'boolean' },
-                                      consent: { type: 'string' },
-                                      consentTimestamp: { type: 'string' },
-                                      method: { type: 'string' },
-                                      methodDetail: { type: 'string' },
-                                      lastUpdated: { type: 'string' },
-                                    },
-                                  },
-                                },
-                              },
-                            },
-                          },
-                          mobilePush: {
-                            type: {
-                              type: 'hash',
-                              fields: {
-                                marketing: {
-                                  type: {
-                                    type: 'hash',
-                                    fields: {
-                                      canReceivePushMarketing: { type: 'boolean' },
-                                      consent: { type: 'string' },
-                                      consentTimestamp: { type: 'string' },
+                                    type: 'list',
+                                    element_type: {
+                                      type: 'hash',
+                                      fields: {
+                                        listId: { type: 'string' },
+                                        reason: { type: 'string' },
+                                        timestamp: { type: 'string' },
+                                      },
                                     },
                                   },
                                 },
@@ -238,39 +177,83 @@ const KlaviyoNewEventTrigger = QoreAppCreator.createLocalizedTrigger({
                         },
                       },
                     },
-                    predictiveAnalytics: {
+                    sms: {
                       type: {
                         type: 'hash',
                         fields: {
-                          historicClv: { type: 'number' },
-                          predictedClv: { type: 'number' },
-                          totalClv: { type: 'number' },
-                          historicNumberOfOrders: { type: 'number' },
-                          predictedNumberOfOrders: { type: 'number' },
-                          averageDaysBetweenOrders: { type: 'number' },
-                          averageOrderValue: { type: 'number' },
-                          churnProbability: { type: 'number' },
-                          expectedDateOfNextOrder: { type: 'string' },
+                          marketing: {
+                            type: {
+                              type: 'hash',
+                              fields: {
+                                canReceiveSmsMarketing: { type: 'boolean' },
+                                consent: { type: 'string' },
+                                consentTimestamp: { type: 'string' },
+                                method: { type: 'string' },
+                                methodDetail: { type: 'string' },
+                                lastUpdated: { type: 'string' },
+                              },
+                            },
+                          },
+                          transactional: {
+                            type: {
+                              type: 'hash',
+                              fields: {
+                                canReceiveSmsTransactional: { type: 'boolean' },
+                                consent: { type: 'string' },
+                                consentTimestamp: { type: 'string' },
+                                method: { type: 'string' },
+                                methodDetail: { type: 'string' },
+                                lastUpdated: { type: 'string' },
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                    mobilePush: {
+                      type: {
+                        type: 'hash',
+                        fields: {
+                          marketing: {
+                            type: {
+                              type: 'hash',
+                              fields: {
+                                canReceivePushMarketing: { type: 'boolean' },
+                                consent: { type: 'string' },
+                                consentTimestamp: { type: 'string' },
+                              },
+                            },
+                          },
                         },
                       },
                     },
                   },
                 },
               },
+              predictiveAnalytics: {
+                type: {
+                  type: 'hash',
+                  fields: {
+                    historicClv: { type: 'number' },
+                    predictedClv: { type: 'number' },
+                    totalClv: { type: 'number' },
+                    historicNumberOfOrders: { type: 'number' },
+                    predictedNumberOfOrders: { type: 'number' },
+                    averageDaysBetweenOrders: { type: 'number' },
+                    averageOrderValue: { type: 'number' },
+                    churnProbability: { type: 'number' },
+                    expectedDateOfNextOrder: { type: 'string' },
+                  },
+                },
+              },
             },
           },
         },
-        attributes: {
-          type: {
-            type: 'hash',
-            fields: {
-              timestamp: { type: 'string' },
-              datetime: { type: 'string' },
-              uuid: { type: 'string' },
-              eventProperties: { type: 'hash' },
-            },
-          },
-        },
+
+        timestamp: { type: 'string' },
+        datetime: { type: 'string' },
+        uuid: { type: 'string' },
+        eventProperties: { type: 'hash' },
       },
     },
   },
@@ -308,19 +291,19 @@ const fetchLatestEvents = async (options: { token: string; metric: string }) => 
           (includedItem) => includedItem.type === 'metric' && includedItem.id === metricId
         ),
         ['links']
-      );
+      ) as MetricResponseObjectResource;
 
       const profile = omit(
         response.body.included?.find(
           (includedItem) => includedItem.type === 'profile' && includedItem.id === profileId
         ),
         ['links']
-      );
+      ) as ProfileResponseObjectResource;
 
       return {
-        ...omit(item, ['relationships', 'links']),
-        ...(metric && { metric }),
-        ...(profile && { profile }),
+        ...omit({ ...item, ...item.attributes }, ['relationships', 'links', 'attributes']),
+        ...(metric && { metric: omit({ ...metric, ...metric.attributes }, 'attributes') }),
+        ...(profile && { profile: omit({ ...profile, ...profile.attributes }, 'attributes') }),
       };
     });
   } catch (error) {

@@ -89,8 +89,12 @@ const listLists = QoreAppCreator.createLocalizedAction<typeof options>({
         ...(sort && { sort: `${sort?.direction === 'desc' ? '-' : ''}${sort?.field}` }),
       });
 
+      const data = response.body.data;
+
       return {
-        data: response.body.data.map((item) => omit(item, ['relationships', 'links'])),
+        data: data.map((item) =>
+          omit({ ...item, ...item.attributes }, ['relationships', 'links', 'attributes'])
+        ),
         next: response.body.links?.next || null,
       };
     } catch (error) {
@@ -108,17 +112,10 @@ const listLists = QoreAppCreator.createLocalizedAction<typeof options>({
             fields: {
               type: { type: 'string' },
               id: { type: 'string' },
-              attributes: {
-                type: {
-                  type: 'hash',
-                  fields: {
-                    name: { type: 'string' },
-                    created: { type: 'string' },
-                    updated: { type: 'string' },
-                    optInProcess: { type: 'string' },
-                  },
-                },
-              },
+              name: { type: 'string' },
+              created: { type: 'string' },
+              updated: { type: 'string' },
+              optInProcess: { type: 'string' },
             },
           },
         },

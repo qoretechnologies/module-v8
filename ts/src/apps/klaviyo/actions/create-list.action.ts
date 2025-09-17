@@ -36,7 +36,18 @@ const createList = QoreAppCreator.createLocalizedAction<typeof options>({
         },
       });
 
-      return omit(response.body.data, ['relationships', 'links']);
+      const data = response.body.data;
+
+      return omit(
+        {
+          ...data,
+          name: data.attributes.name,
+          optInProcess: data.attributes.optInProcess,
+          created: data.attributes.created || null,
+          updated: data.attributes.updated || null,
+        },
+        ['relationships', 'links', 'attributes']
+      );
     } catch (error) {
       throw new KlaviyoError(`Failed to create list: ${getKlaviyoErrorMessage(error)}`);
     }
@@ -46,17 +57,10 @@ const createList = QoreAppCreator.createLocalizedAction<typeof options>({
     fields: {
       type: { type: 'string' },
       id: { type: 'string' },
-      attributes: {
-        type: {
-          type: 'hash',
-          fields: {
-            name: { type: 'string' },
-            created: { type: 'string' },
-            updated: { type: 'string' },
-            opt_in_process: { type: 'string' },
-          },
-        },
-      },
+      name: { type: 'string' },
+      created: { type: 'string' },
+      updated: { type: 'string' },
+      optInProcess: { type: 'string' },
     },
   },
 });

@@ -8,19 +8,23 @@ import { ClickUpError } from '../constants';
 import { fetchClickUpAllowedValues } from './constants';
 
 type TClickUpItem = {
-  id: number;
-  username: string;
-  email: string;
-  profilePicture: string;
-  role_key: string;
+  user: {
+    id: number;
+    username: string;
+    email: string;
+    profilePicture: string;
+    role_key: string;
+  };
 };
 
 const mapClickUpItemToAllowedValue = (item: TClickUpItem): IQoreAllowedValue<number> => {
+  const { user } = item;
+
   return {
-    value: item.id,
-    display_name: item.username,
-    desc: `Email: ${item.email}\nRole: ${item.role_key}`,
-    ...(item.profilePicture && { image: item.profilePicture }),
+    value: user.id,
+    display_name: user.username,
+    desc: `Email: ${user.email}\nRole: ${user.role_key}`,
+    ...(user.profilePicture && { image: user.profilePicture }),
   };
 };
 

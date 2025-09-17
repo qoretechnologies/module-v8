@@ -29,7 +29,11 @@ import {
 import { getKlaviyoProfileIdAllowedValues } from '../apps/klaviyo/helpers/get-profile-allowed-values';
 import { getKlaviyoSegmentIdAllowedValues } from '../apps/klaviyo/helpers/get-segment-allowed-values';
 import { getKlaviyoTagIdAllowedValues } from '../apps/klaviyo/helpers/get-tag-id-allowed-values';
-import { NewKlaviyoEvent, NewKlaviyoProfile } from '../apps/klaviyo/triggers';
+import {
+  NewKlaviyoEvent,
+  NewKlaviyoListProfile,
+  NewKlaviyoProfile,
+} from '../apps/klaviyo/triggers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 
 Debugger.level = DebugLevels.Verbose;
@@ -220,7 +224,7 @@ describe('Klaviyo', () => {
 
       expect(result).toBeDefined();
       expect(result.id).toBe(createdProfileId);
-      expect(result.attributes.firstName).toBe('Updated');
+      expect(result.firstName).toBe('Updated');
     });
 
     it('Should list campaigns', async () => {
@@ -463,6 +467,21 @@ describe('Klaviyo', () => {
         throw new Error('get_example_event_data not found in trigger');
 
       const result = await trigger.get_example_event_data(base_context);
+      expect(result).toBeDefined();
+      expect(result.id).toBeDefined();
+    });
+
+    it('Should get example event data for new profile trigger', async () => {
+      const trigger = NewKlaviyoListProfile;
+
+      if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
+        throw new Error('get_example_event_data not found in trigger');
+
+      const result = await trigger.get_example_event_data({
+        ...base_context,
+        opts: { list: 'UzYy2a' },
+      });
+
       expect(result).toBeDefined();
       expect(result.id).toBeDefined();
     });

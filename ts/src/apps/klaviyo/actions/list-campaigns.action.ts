@@ -92,8 +92,12 @@ const listCampaigns = QoreAppCreator.createLocalizedAction<typeof options>({
         ...(sort && { sort: `${sort?.direction === 'desc' ? '-' : ''}${sort?.field}` }),
       });
 
+      const data = response.body.data;
+
       return {
-        data: response.body.data.map((item) => omit(item, ['relationships', 'links'])),
+        data: data.map((item) =>
+          omit({ ...item, ...item.attributes }, ['relationships', 'links', 'attributes'])
+        ),
         next: response.body.links?.next || null,
       };
     } catch (error) {
@@ -111,87 +115,80 @@ const listCampaigns = QoreAppCreator.createLocalizedAction<typeof options>({
             fields: {
               type: { type: 'string' },
               id: { type: 'string' },
-              attributes: {
+              name: { type: 'string' },
+              status: { type: 'string' },
+              archived: { type: 'boolean' },
+              audiences: {
                 type: {
                   type: 'hash',
                   fields: {
-                    name: { type: 'string' },
-                    status: { type: 'string' },
-                    archived: { type: 'boolean' },
-                    audiences: {
+                    included: {
                       type: {
-                        type: 'hash',
-                        fields: {
-                          included: {
-                            type: {
-                              type: 'list',
-                              element_type: 'string',
-                            },
-                          },
-                          excluded: {
-                            type: {
-                              type: 'list',
-                              element_type: 'string',
-                            },
-                          },
-                        },
+                        type: 'list',
+                        element_type: 'string',
                       },
                     },
-                    sendOptions: {
+                    excluded: {
                       type: {
-                        type: 'hash',
-                        fields: {
-                          useSmartSending: { type: 'boolean' },
-                        },
+                        type: 'list',
+                        element_type: 'string',
                       },
                     },
-                    trackingOptions: {
-                      type: {
-                        type: 'hash',
-                        fields: {
-                          addTrackingParams: { type: 'boolean' },
-                          customTrackingParams: {
-                            type: {
-                              type: 'list',
-                              element_type: {
-                                type: 'hash',
-                                fields: {
-                                  type: { type: 'string' },
-                                  value: { type: 'string' },
-                                  name: { type: 'string' },
-                                },
-                              },
-                            },
-                          },
-                          isTrackingClicks: { type: 'boolean' },
-                          isTrackingOpens: { type: 'boolean' },
-                        },
-                      },
-                    },
-                    sendStrategy: {
-                      type: {
-                        type: 'hash',
-                        fields: {
-                          method: { type: 'string' },
-                          datetime: { type: 'string' },
-                          options: {
-                            type: {
-                              type: 'hash',
-                              fields: {
-                                sendPastRecipientsImmediately: { type: 'boolean' },
-                              },
-                            },
-                          },
-                        },
-                      },
-                    },
-                    createdAt: { type: 'string' },
-                    scheduledAt: { type: 'string' },
-                    updatedAt: { type: 'string' },
-                    sendTime: { type: 'string' },
                   },
                 },
               },
+              sendOptions: {
+                type: {
+                  type: 'hash',
+                  fields: {
+                    useSmartSending: { type: 'boolean' },
+                  },
+                },
+              },
+              trackingOptions: {
+                type: {
+                  type: 'hash',
+                  fields: {
+                    addTrackingParams: { type: 'boolean' },
+                    customTrackingParams: {
+                      type: {
+                        type: 'list',
+                        element_type: {
+                          type: 'hash',
+                          fields: {
+                            type: { type: 'string' },
+                            value: { type: 'string' },
+                            name: { type: 'string' },
+                          },
+                        },
+                      },
+                    },
+                    isTrackingClicks: { type: 'boolean' },
+                    isTrackingOpens: { type: 'boolean' },
+                  },
+                },
+              },
+              sendStrategy: {
+                type: {
+                  type: 'hash',
+                  fields: {
+                    method: { type: 'string' },
+                    datetime: { type: 'string' },
+                    options: {
+                      type: {
+                        type: 'hash',
+                        fields: {
+                          sendPastRecipientsImmediately: { type: 'boolean' },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+              createdAt: { type: 'string' },
+              scheduledAt: { type: 'string' },
+              updatedAt: { type: 'string' },
+              sendTime: { type: 'string' },
             },
           },
         },

@@ -20,18 +20,18 @@ const smsSubscriptionTypeOptions = {
 const options = {
   profileId: {
     type: 'string',
-    required: false,
     preselected: true,
+    required_groups: ['subscription'],
     get_allowed_values: getKlaviyoProfileIdAllowedValues,
   },
   email: {
     type: 'string',
     preselected: true,
-    required: false,
+    required_groups: ['subscription'],
   },
   phoneNumber: {
     type: 'string',
-    preselected: true,
+    required_groups: ['subscription'],
     required: false,
   },
   consentToSubscribeToChannel: {
@@ -77,11 +77,31 @@ const subscribeProfile = QoreAppCreator.createLocalizedAction<
 
     const apis = getKlaviyoApis(token);
 
-    const smsSubscriptionType = obj?.smsSubscriptionType;
-    const email = obj?.email;
-    const phoneNumber = obj?.phoneNumber;
-    const list = obj?.list;
+    let email: string | null | undefined;
+    let phoneNumber: string | null | undefined;
     const profileId = obj?.profileId;
+
+    if (profileId) {
+      const profileResponse = await apis.profilesApi.getProfile(profileId);
+      const profileData = profileResponse.body.data;
+
+      if (consentToSubscribeToChannel === 'email' || consentToSubscribeToChannel === 'both') {
+        email = obj?.email || profileData.attributes?.email;
+        if (!email) throw new KlaviyoError('Email is required to subscribe to email channel');
+      }
+
+      if (consentToSubscribeToChannel === 'sms' || consentToSubscribeToChannel === 'both') {
+        phoneNumber = obj?.phoneNumber || profileData.attributes?.phoneNumber;
+        if (!phoneNumber)
+          throw new KlaviyoError('Phone number is required to subscribe to sms channel');
+      }
+    } else {
+      email = obj?.email;
+      phoneNumber = obj?.phoneNumber;
+    }
+
+    const smsSubscriptionType = obj?.smsSubscriptionType;
+    const list = obj?.list;
 
     try {
       await apis.profilesApi.bulkSubscribeProfiles({

@@ -44,6 +44,7 @@ const options = {
   task: {
     type: 'string',
     required: true,
+    allowed_values_creatable: true,
     get_allowed_values: getClickUpTaskIdAllowedValues,
   },
   comment_text: {

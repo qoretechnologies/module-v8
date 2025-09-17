@@ -12,15 +12,17 @@ type TCalendlyItem = {
   uri: string;
   name: string;
   start_time: string;
+  event_memberships: Array<{ user_name: string; user_email: string }>;
 };
 
 const mapCalendlyItemToAllowedValue = (item: TCalendlyItem): IQoreAllowedValue<string> => {
   const uuid = last(item.uri.split('/'));
+  const members = item.event_memberships.map((m) => `- ${m.user_name} <${m.user_email}>`);
 
   return {
     value: uuid || item.uri,
     display_name: item.name,
-    desc: `Start Time: ${formatDateReadable(item.start_time)}`,
+    desc: `Start Time: ${formatDateReadable(item.start_time)}\nMembers:\n${members.join('\n')}`,
   };
 };
 

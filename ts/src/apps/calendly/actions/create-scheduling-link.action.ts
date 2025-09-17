@@ -39,7 +39,7 @@ const createSchedulingLink = QoreAppCreator.createLocalizedAction<typeof options
     try {
       const response = await QorusRequest.post<{ data: { resource: Record<string, any> } }>(
         {
-          path: `scheduling_links`,
+          path: `/scheduling_links`,
           headers: {
             Authorization: `Bearer ${token}`,
           },

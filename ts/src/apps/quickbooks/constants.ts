@@ -16,7 +16,7 @@ export const QUICKBOOKS_CONN_OPTIONS = {
     display_name: 'Instance Type',
     desc: 'Type of Quickbooks instance to connect to.',
     type: 'string',
-    default_value: 'production',
+    default_value: 'quickbooks',
     allowed_values: [
       {
         value: 'quickbooks',
