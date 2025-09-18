@@ -878,14 +878,14 @@ exports.actionsCatalogue = {
                 @note the function here will be called with no "this" context; "this" cannot be used in this function
             */
             "event_function": async function(ctx, update, should_stop) {
-                if (!ctx.opts.name) {
+                if (!ctx?.opts?.name) {
                     throw new Error("missing name");
                 }
                 var event = {
                     "name": "name-1",
                     "code": 1234,
                 };
-                if (ctx && ctx.opts && ctx.opts.extra === true) {
+                if (ctx?.opts && ctx?.opts?.extra === true) {
                     event = {...event, extra: "hi"};
                 }
                 update(event);

@@ -115,7 +115,7 @@ const createGroup = QoreAppCreator.createLocalizedAction<typeof options>({
         mailEnabled,
         mailNickname,
         securityEnabled,
-        groupTypes: groupTypes || [],
+        groupTypes,
       };
 
       if (description) {
