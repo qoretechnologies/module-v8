@@ -225,8 +225,6 @@ describe('Google Docs', () => {
           opts: { include_content: true } as any,
         });
 
-        console.dir(result, { depth: null });
-
         expect(result).toBeDefined();
         expect(result.id).toBeDefined();
       });

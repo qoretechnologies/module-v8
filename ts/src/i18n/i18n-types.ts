@@ -5262,6 +5262,1456 @@ type RootTranslation = {
 				}
 			}
 		}
+		AzureActiveDirectory: {
+			/**
+			 * A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y
+			 */
+			displayName: string
+			/**
+			 * S​e​a​m​l​e​s​s​l​y​ ​c​o​n​n​e​c​t​ ​t​o​ ​M​i​c​r​o​s​o​f​t​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​ ​t​o​ ​m​a​n​a​g​e​ ​u​s​e​r​s​,​ ​g​r​o​u​p​s​,​ ​a​n​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​a​l​ ​r​e​s​o​u​r​c​e​s​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​M​i​c​r​o​s​o​f​t​ ​G​r​a​p​h​ ​A​P​I​ ​f​o​r​ ​u​s​e​r​ ​a​n​d​ ​g​r​o​u​p​ ​m​a​n​a​g​e​m​e​n​t​.​ ​A​u​t​o​m​a​t​e​ ​u​s​e​r​ ​p​r​o​v​i​s​i​o​n​i​n​g​,​ ​g​r​o​u​p​ ​m​e​m​b​e​r​s​h​i​p​ ​m​a​n​a​g​e​m​e​n​t​,​ ​a​n​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​a​l​ ​a​d​m​i​n​i​s​t​r​a​t​i​o​n​ ​t​a​s​k​s​ ​w​i​t​h​ ​e​n​t​e​r​p​r​i​s​e​-​g​r​a​d​e​ ​s​e​c​u​r​i​t​y​ ​a​n​d​ ​c​o​m​p​l​i​a​n​c​e​.
+			 */
+			longDesc: string
+			triggers: {
+				new_user: {
+					/**
+					 * N​e​w​ ​U​s​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​u​s​e​r​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​u​s​e​r​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​c​a​n​ ​b​e​ ​f​i​l​t​e​r​e​d​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​ ​s​u​c​h​ ​a​s​ ​u​s​e​r​ ​a​t​t​r​i​b​u​t​e​s​,​ ​g​r​o​u​p​ ​m​e​m​b​e​r​s​h​i​p​,​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​a​l​ ​u​n​i​t​s​ ​t​o​ ​d​e​t​e​c​t​ ​r​e​l​e​v​a​n​t​ ​u​s​e​r​ ​a​d​d​i​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						group_id: {
+							/**
+							 * G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * M​o​n​i​t​o​r​ ​u​s​e​r​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​g​r​o​u​p​ ​i​d​e​n​t​i​f​i​e​r​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​u​s​e​r​ ​a​d​d​i​t​i​o​n​s​.​ ​W​h​e​n​ ​s​p​e​c​i​f​i​e​d​,​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​o​n​l​y​ ​f​i​r​e​ ​f​o​r​ ​u​s​e​r​s​ ​a​d​d​e​d​ ​t​o​ ​t​h​i​s​ ​p​a​r​t​i​c​u​l​a​r​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r​ ​C​r​i​t​e​r​i​a
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​s​ ​f​o​r​ ​u​s​e​r​ ​m​o​n​i​t​o​r​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o​ ​s​p​e​c​i​f​y​ ​w​h​i​c​h​ ​u​s​e​r​s​ ​s​h​o​u​l​d​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.​ ​C​o​n​f​i​g​u​r​e​ ​f​i​e​l​d​,​ ​o​p​e​r​a​t​o​r​,​ ​a​n​d​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​s​p​e​c​i​f​i​c​ ​u​s​e​r​ ​a​t​t​r​i​b​u​t​e​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * U​s​e​r​ ​a​t​t​r​i​b​u​t​e​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​u​s​e​r​ ​a​t​t​r​i​b​u​t​e​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​a​g​a​i​n​s​t​,​ ​s​u​c​h​ ​a​s​ ​d​i​s​p​l​a​y​N​a​m​e​,​ ​e​m​a​i​l​,​ ​o​r​ ​d​e​p​a​r​t​m​e​n​t​.
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * C​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​w​h​e​n​ ​e​v​a​l​u​a​t​i​n​g​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​(​e​q​u​a​l​s​,​ ​n​o​t​ ​e​q​u​a​l​s​,​ ​s​t​a​r​t​s​ ​w​i​t​h​,​ ​e​n​d​s​ ​w​i​t​h​)​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​a​g​a​i​n​s​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d​ ​u​s​i​n​g​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​o​p​e​r​a​t​o​r​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				new_group: {
+					/**
+					 * N​e​w​ ​G​r​o​u​p
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​g​r​o​u​p​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​g​r​o​u​p​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​c​a​n​ ​b​e​ ​f​i​l​t​e​r​e​d​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​ ​s​u​c​h​ ​a​s​ ​g​r​o​u​p​ ​t​y​p​e​,​ ​v​i​s​i​b​i​l​i​t​y​,​ ​o​r​ ​n​a​m​i​n​g​ ​p​a​t​t​e​r​n​s​ ​t​o​ ​d​e​t​e​c​t​ ​r​e​l​e​v​a​n​t​ ​g​r​o​u​p​ ​a​d​d​i​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						filter: {
+							/**
+							 * F​i​l​t​e​r​ ​C​r​i​t​e​r​i​a
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​s​ ​f​o​r​ ​g​r​o​u​p​ ​m​o​n​i​t​o​r​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o​ ​s​p​e​c​i​f​y​ ​w​h​i​c​h​ ​g​r​o​u​p​s​ ​s​h​o​u​l​d​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.​ ​C​o​n​f​i​g​u​r​e​ ​f​i​e​l​d​,​ ​o​p​e​r​a​t​o​r​,​ ​a​n​d​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​ ​a​t​t​r​i​b​u​t​e​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * G​r​o​u​p​ ​a​t​t​r​i​b​u​t​e​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​g​r​o​u​p​ ​a​t​t​r​i​b​u​t​e​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​a​g​a​i​n​s​t​,​ ​s​u​c​h​ ​a​s​ ​d​i​s​p​l​a​y​N​a​m​e​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​o​r​ ​g​r​o​u​p​T​y​p​e​s​.
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * C​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​w​h​e​n​ ​e​v​a​l​u​a​t​i​n​g​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​(​e​q​u​a​l​s​,​ ​n​o​t​ ​e​q​u​a​l​s​,​ ​s​t​a​r​t​s​ ​w​i​t​h​,​ ​e​n​d​s​ ​w​i​t​h​)​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​a​g​a​i​n​s​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d​ ​u​s​i​n​g​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​o​p​e​r​a​t​o​r​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			actions: {
+				create_user: {
+					/**
+					 * C​r​e​a​t​e​ ​U​s​e​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​u​s​e​r​ ​i​n​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​u​s​e​r​ ​a​c​c​o​u​n​t​ ​i​n​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​ ​w​i​t​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​p​r​o​f​i​l​e​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​s​e​c​u​r​i​t​y​ ​s​e​t​t​i​n​g​s​,​ ​a​n​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​a​l​ ​d​e​t​a​i​l​s​.​ ​S​u​p​p​o​r​t​s​ ​s​e​t​t​i​n​g​ ​p​a​s​s​w​o​r​d​s​,​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​n​d​ ​l​o​c​a​t​i​o​n​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						displayName: {
+							/**
+							 * D​i​s​p​l​a​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​u​l​l​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​u​s​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​u​l​l​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​a​s​ ​i​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​i​n​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​ ​a​n​d​ ​t​h​r​o​u​g​h​o​u​t​ ​M​i​c​r​o​s​o​f​t​ ​s​e​r​v​i​c​e​s​.
+							 */
+							longDesc: string
+						}
+						givenName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​'​s​ ​f​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​g​i​v​e​n​ ​n​a​m​e​ ​(​f​i​r​s​t​ ​n​a​m​e​)​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​f​o​r​ ​p​r​o​f​i​l​e​ ​c​o​m​p​l​e​t​i​o​n​ ​a​n​d​ ​d​i​r​e​c​t​o​r​y​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						surname: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​'​s​ ​l​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​u​r​n​a​m​e​ ​(​l​a​s​t​ ​n​a​m​e​)​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​f​o​r​ ​p​r​o​f​i​l​e​ ​c​o​m​p​l​e​t​i​o​n​ ​a​n​d​ ​d​i​r​e​c​t​o​r​y​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						mailNickname: {
+							/**
+							 * M​a​i​l​ ​N​i​c​k​n​a​m​e
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​l​i​a​s​ ​f​o​r​ ​t​h​e​ ​u​s​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​i​l​ ​n​i​c​k​n​a​m​e​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​ ​a​s​ ​p​a​r​t​ ​o​f​ ​t​h​e​ ​u​s​e​r​'​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.​ ​M​u​s​t​ ​c​o​n​t​a​i​n​ ​o​n​l​y​ ​l​e​t​t​e​r​s​,​ ​n​u​m​b​e​r​s​,​ ​p​e​r​i​o​d​s​,​ ​h​y​p​h​e​n​s​,​ ​a​n​d​ ​u​n​d​e​r​s​c​o​r​e​s​.
+							 */
+							longDesc: string
+						}
+						userPrincipalName: {
+							/**
+							 * U​s​e​r​ ​P​r​i​n​c​i​p​a​l​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * P​r​i​m​a​r​y​ ​l​o​g​i​n​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​s​e​r​ ​p​r​i​n​c​i​p​a​l​ ​n​a​m​e​ ​(​U​P​N​)​ ​t​h​a​t​ ​s​e​r​v​e​s​ ​a​s​ ​t​h​e​ ​p​r​i​m​a​r​y​ ​l​o​g​i​n​ ​i​d​e​n​t​i​f​i​e​r​.​ ​M​u​s​t​ ​b​e​ ​i​n​ ​e​m​a​i​l​ ​f​o​r​m​a​t​ ​(​u​s​e​r​@​d​o​m​a​i​n​.​c​o​m​)​.
+							 */
+							longDesc: string
+						}
+						password: {
+							/**
+							 * P​a​s​s​w​o​r​d
+							 */
+							displayName: string
+							/**
+							 * I​n​i​t​i​a​l​ ​p​a​s​s​w​o​r​d​ ​f​o​r​ ​t​h​e​ ​u​s​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​i​n​i​t​i​a​l​ ​p​a​s​s​w​o​r​d​ ​f​o​r​ ​t​h​e​ ​u​s​e​r​ ​a​c​c​o​u​n​t​.​ ​M​u​s​t​ ​m​e​e​t​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​'​s​ ​p​a​s​s​w​o​r​d​ ​c​o​m​p​l​e​x​i​t​y​ ​r​e​q​u​i​r​e​m​e​n​t​s​ ​a​n​d​ ​b​e​ ​a​t​ ​l​e​a​s​t​ ​8​ ​c​h​a​r​a​c​t​e​r​s​ ​l​o​n​g​.
+							 */
+							longDesc: string
+						}
+						forceChangePasswordNextSignIn: {
+							/**
+							 * F​o​r​c​e​ ​P​a​s​s​w​o​r​d​ ​C​h​a​n​g​e
+							 */
+							displayName: string
+							/**
+							 * R​e​q​u​i​r​e​ ​p​a​s​s​w​o​r​d​ ​c​h​a​n​g​e​ ​o​n​ ​f​i​r​s​t​ ​l​o​g​i​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​u​s​e​r​ ​w​i​l​l​ ​b​e​ ​r​e​q​u​i​r​e​d​ ​t​o​ ​c​h​a​n​g​e​ ​t​h​e​i​r​ ​p​a​s​s​w​o​r​d​ ​o​n​ ​t​h​e​i​r​ ​f​i​r​s​t​ ​s​i​g​n​-​i​n​ ​t​o​ ​t​h​e​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+						forceChangePasswordNextSignInWithMfa: {
+							/**
+							 * F​o​r​c​e​ ​P​a​s​s​w​o​r​d​ ​C​h​a​n​g​e​ ​w​i​t​h​ ​M​F​A
+							 */
+							displayName: string
+							/**
+							 * R​e​q​u​i​r​e​ ​p​a​s​s​w​o​r​d​ ​c​h​a​n​g​e​ ​w​i​t​h​ ​m​u​l​t​i​-​f​a​c​t​o​r​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​u​s​e​r​ ​w​i​l​l​ ​b​e​ ​r​e​q​u​i​r​e​d​ ​t​o​ ​c​h​a​n​g​e​ ​t​h​e​i​r​ ​p​a​s​s​w​o​r​d​ ​w​i​t​h​ ​m​u​l​t​i​-​f​a​c​t​o​r​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​o​n​ ​t​h​e​i​r​ ​f​i​r​s​t​ ​s​i​g​n​-​i​n​.
+							 */
+							longDesc: string
+						}
+						jobTitle: {
+							/**
+							 * J​o​b​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​'​s​ ​j​o​b​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​j​o​b​ ​t​i​t​l​e​ ​o​r​ ​p​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​w​i​t​h​i​n​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​f​o​r​ ​d​i​r​e​c​t​o​r​y​ ​a​n​d​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						department: {
+							/**
+							 * D​e​p​a​r​t​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​'​s​ ​d​e​p​a​r​t​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​e​p​a​r​t​m​e​n​t​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​a​l​ ​u​n​i​t​ ​t​h​e​ ​u​s​e​r​ ​b​e​l​o​n​g​s​ ​t​o​ ​w​i​t​h​i​n​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​s​t​r​u​c​t​u​r​e​.
+							 */
+							longDesc: string
+						}
+						mobilePhone: {
+							/**
+							 * M​o​b​i​l​e​ ​P​h​o​n​e
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​'​s​ ​m​o​b​i​l​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​o​b​i​l​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​u​s​e​r​,​ ​u​s​e​d​ ​f​o​r​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​n​d​ ​p​o​t​e​n​t​i​a​l​ ​m​u​l​t​i​-​f​a​c​t​o​r​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						mail: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * P​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​u​s​e​r​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​i​t​ ​m​a​y​ ​b​e​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​g​e​n​e​r​a​t​e​d​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​u​s​e​r​ ​p​r​i​n​c​i​p​a​l​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						streetAddress: {
+							/**
+							 * S​t​r​e​e​t​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * P​h​y​s​i​c​a​l​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​c​o​m​p​o​n​e​n​t​ ​o​f​ ​t​h​e​ ​u​s​e​r​'​s​ ​p​h​y​s​i​c​a​l​ ​l​o​c​a​t​i​o​n​ ​f​o​r​ ​c​o​n​t​a​c​t​ ​a​n​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​a​l​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * C​i​t​y​ ​o​f​ ​r​e​s​i​d​e​n​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​i​t​y​ ​w​h​e​r​e​ ​t​h​e​ ​u​s​e​r​ ​i​s​ ​l​o​c​a​t​e​d​ ​f​o​r​ ​c​o​n​t​a​c​t​ ​a​n​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​a​l​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						state: {
+							/**
+							 * S​t​a​t​e​/​P​r​o​v​i​n​c​e
+							 */
+							displayName: string
+							/**
+							 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​u​s​e​r​ ​i​s​ ​l​o​c​a​t​e​d​ ​f​o​r​ ​c​o​n​t​a​c​t​ ​a​n​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​a​l​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						postalCode: {
+							/**
+							 * P​o​s​t​a​l​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​r​ ​Z​I​P​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​u​s​e​r​'​s​ ​l​o​c​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						country: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * C​o​u​n​t​r​y​ ​o​f​ ​r​e​s​i​d​e​n​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​u​n​t​r​y​ ​w​h​e​r​e​ ​t​h​e​ ​u​s​e​r​ ​i​s​ ​l​o​c​a​t​e​d​ ​f​o​r​ ​c​o​n​t​a​c​t​ ​a​n​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​a​l​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						accountEnabled: {
+							/**
+							 * A​c​c​o​u​n​t​ ​E​n​a​b​l​e​d
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​ ​t​h​e​ ​u​s​e​r​ ​a​c​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​u​s​e​r​ ​a​c​c​o​u​n​t​ ​s​h​o​u​l​d​ ​b​e​ ​e​n​a​b​l​e​d​ ​a​n​d​ ​a​b​l​e​ ​t​o​ ​s​i​g​n​ ​i​n​.​ ​W​h​e​n​ ​d​i​s​a​b​l​e​d​,​ ​t​h​e​ ​u​s​e​r​ ​c​a​n​n​o​t​ ​a​c​c​e​s​s​ ​a​n​y​ ​s​e​r​v​i​c​e​s​.
+							 */
+							longDesc: string
+						}
+						usageLocation: {
+							/**
+							 * U​s​a​g​e​ ​L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​o​u​n​t​r​y​ ​c​o​d​e​ ​f​o​r​ ​l​i​c​e​n​s​e​ ​a​s​s​i​g​n​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​w​o​-​l​e​t​t​e​r​ ​c​o​u​n​t​r​y​ ​c​o​d​e​ ​(​I​S​O​ ​3​1​6​6​-​1​ ​a​l​p​h​a​-​2​)​ ​t​h​a​t​ ​r​e​p​r​e​s​e​n​t​s​ ​t​h​e​ ​u​s​e​r​'​s​ ​u​s​a​g​e​ ​l​o​c​a​t​i​o​n​.​ ​R​e​q​u​i​r​e​d​ ​f​o​r​ ​l​i​c​e​n​s​e​ ​a​s​s​i​g​n​m​e​n​t​ ​i​n​ ​s​o​m​e​ ​r​e​g​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_user: {
+					/**
+					 * U​p​d​a​t​e​ ​U​s​e​r
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​u​s​e​r​ ​i​n​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * M​o​d​i​f​y​ ​p​r​o​p​e​r​t​i​e​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​u​s​e​r​ ​a​c​c​o​u​n​t​ ​i​n​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​.​ ​U​p​d​a​t​e​ ​p​r​o​f​i​l​e​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​c​o​n​t​a​c​t​ ​d​e​t​a​i​l​s​,​ ​o​r​g​a​n​i​z​a​t​i​o​n​a​l​ ​d​a​t​a​,​ ​a​n​d​ ​a​c​c​o​u​n​t​ ​s​e​t​t​i​n​g​s​.
+					 */
+					longDesc: string
+					options: {
+						user_id: {
+							/**
+							 * U​s​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​b​e​ ​u​p​d​a​t​e​d​.​ ​S​e​l​e​c​t​ ​f​r​o​m​ ​e​x​i​s​t​i​n​g​ ​u​s​e​r​s​ ​i​n​ ​y​o​u​r​ ​d​i​r​e​c​t​o​r​y​.
+							 */
+							longDesc: string
+						}
+						displayName: {
+							/**
+							 * D​i​s​p​l​a​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​f​u​l​l​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​f​u​l​l​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​a​s​ ​i​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​i​n​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​ ​a​n​d​ ​t​h​r​o​u​g​h​o​u​t​ ​M​i​c​r​o​s​o​f​t​ ​s​e​r​v​i​c​e​s​.
+							 */
+							longDesc: string
+						}
+						givenName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​f​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​g​i​v​e​n​ ​n​a​m​e​ ​(​f​i​r​s​t​ ​n​a​m​e​)​ ​o​f​ ​t​h​e​ ​u​s​e​r​.
+							 */
+							longDesc: string
+						}
+						surname: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​l​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​u​r​n​a​m​e​ ​(​l​a​s​t​ ​n​a​m​e​)​ ​o​f​ ​t​h​e​ ​u​s​e​r​.
+							 */
+							longDesc: string
+						}
+						mailNickname: {
+							/**
+							 * M​a​i​l​ ​N​i​c​k​n​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​e​m​a​i​l​ ​a​l​i​a​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​m​a​i​l​ ​n​i​c​k​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​u​s​e​r​.​ ​M​u​s​t​ ​c​o​n​t​a​i​n​ ​o​n​l​y​ ​l​e​t​t​e​r​s​,​ ​n​u​m​b​e​r​s​,​ ​p​e​r​i​o​d​s​,​ ​h​y​p​h​e​n​s​,​ ​a​n​d​ ​u​n​d​e​r​s​c​o​r​e​s​.
+							 */
+							longDesc: string
+						}
+						jobTitle: {
+							/**
+							 * J​o​b​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​j​o​b​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​j​o​b​ ​t​i​t​l​e​ ​o​r​ ​p​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​w​i​t​h​i​n​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						department: {
+							/**
+							 * D​e​p​a​r​t​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​d​e​p​a​r​t​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​d​e​p​a​r​t​m​e​n​t​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​a​l​ ​u​n​i​t​ ​t​h​e​ ​u​s​e​r​ ​b​e​l​o​n​g​s​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						mobilePhone: {
+							/**
+							 * M​o​b​i​l​e​ ​P​h​o​n​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​m​o​b​i​l​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​m​o​b​i​l​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​u​s​e​r​.
+							 */
+							longDesc: string
+						}
+						mail: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​u​s​e​r​.
+							 */
+							longDesc: string
+						}
+						streetAddress: {
+							/**
+							 * S​t​r​e​e​t​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​c​o​m​p​o​n​e​n​t​ ​o​f​ ​t​h​e​ ​u​s​e​r​'​s​ ​p​h​y​s​i​c​a​l​ ​l​o​c​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​c​i​t​y​ ​w​h​e​r​e​ ​t​h​e​ ​u​s​e​r​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						state: {
+							/**
+							 * S​t​a​t​e​/​P​r​o​v​i​n​c​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​u​s​e​r​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						postalCode: {
+							/**
+							 * P​o​s​t​a​l​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​o​s​t​a​l​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​r​ ​Z​I​P​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​u​s​e​r​'​s​ ​l​o​c​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						country: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​o​u​n​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​c​o​u​n​t​r​y​ ​w​h​e​r​e​ ​t​h​e​ ​u​s​e​r​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						accountEnabled: {
+							/**
+							 * A​c​c​o​u​n​t​ ​E​n​a​b​l​e​d
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​ ​o​r​ ​d​i​s​a​b​l​e​ ​t​h​e​ ​a​c​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​u​s​e​r​ ​a​c​c​o​u​n​t​ ​s​h​o​u​l​d​ ​b​e​ ​e​n​a​b​l​e​d​ ​o​r​ ​d​i​s​a​b​l​e​d​.​ ​D​i​s​a​b​l​e​d​ ​a​c​c​o​u​n​t​s​ ​c​a​n​n​o​t​ ​s​i​g​n​ ​i​n​ ​t​o​ ​a​n​y​ ​s​e​r​v​i​c​e​s​.
+							 */
+							longDesc: string
+						}
+						usageLocation: {
+							/**
+							 * U​s​a​g​e​ ​L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​u​s​a​g​e​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​w​o​-​l​e​t​t​e​r​ ​c​o​u​n​t​r​y​ ​c​o​d​e​ ​r​e​p​r​e​s​e​n​t​i​n​g​ ​t​h​e​ ​u​s​e​r​'​s​ ​u​s​a​g​e​ ​l​o​c​a​t​i​o​n​ ​f​o​r​ ​l​i​c​e​n​s​e​ ​a​s​s​i​g​n​m​e​n​t​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_user: {
+					/**
+					 * G​e​t​ ​U​s​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​u​s​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​r​o​m​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​u​s​e​r​ ​f​r​o​m​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​,​ ​i​n​c​l​u​d​i​n​g​ ​p​r​o​f​i​l​e​ ​d​a​t​a​,​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​n​d​ ​a​c​c​o​u​n​t​ ​s​t​a​t​u​s​.
+					 */
+					longDesc: string
+					options: {
+						user_id: {
+							/**
+							 * U​s​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​.​ ​S​e​l​e​c​t​ ​f​r​o​m​ ​e​x​i​s​t​i​n​g​ ​u​s​e​r​s​ ​i​n​ ​y​o​u​r​ ​d​i​r​e​c​t​o​r​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_user: {
+					/**
+					 * D​e​l​e​t​e​ ​U​s​e​r
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​u​s​e​r​ ​f​r​o​m​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​ ​a​ ​u​s​e​r​ ​a​c​c​o​u​n​t​ ​f​r​o​m​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​ ​a​n​d​ ​w​i​l​l​ ​r​e​m​o​v​e​ ​a​l​l​ ​a​s​s​o​c​i​a​t​e​d​ ​d​a​t​a​ ​a​n​d​ ​a​c​c​e​s​s​ ​p​e​r​m​i​s​s​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						user_id: {
+							/**
+							 * U​s​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​b​e​ ​d​e​l​e​t​e​d​.​ ​S​e​l​e​c​t​ ​f​r​o​m​ ​e​x​i​s​t​i​n​g​ ​u​s​e​r​s​ ​i​n​ ​y​o​u​r​ ​d​i​r​e​c​t​o​r​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				disable_user: {
+					/**
+					 * D​i​s​a​b​l​e​ ​U​s​e​r
+					 */
+					displayName: string
+					/**
+					 * D​i​s​a​b​l​e​ ​a​ ​u​s​e​r​ ​a​c​c​o​u​n​t​ ​i​n​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * D​i​s​a​b​l​e​ ​a​ ​u​s​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​p​r​e​v​e​n​t​ ​s​i​g​n​-​i​n​ ​w​h​i​l​e​ ​p​r​e​s​e​r​v​i​n​g​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​a​n​d​ ​i​t​s​ ​d​a​t​a​.​ ​T​h​e​ ​u​s​e​r​ ​w​i​l​l​ ​b​e​ ​u​n​a​b​l​e​ ​t​o​ ​a​c​c​e​s​s​ ​a​n​y​ ​s​e​r​v​i​c​e​s​ ​u​n​t​i​l​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​i​s​ ​r​e​-​e​n​a​b​l​e​d​.
+					 */
+					longDesc: string
+					options: {
+						user_id: {
+							/**
+							 * U​s​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​d​i​s​a​b​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​b​e​ ​d​i​s​a​b​l​e​d​.​ ​S​e​l​e​c​t​ ​f​r​o​m​ ​e​x​i​s​t​i​n​g​ ​u​s​e​r​s​ ​i​n​ ​y​o​u​r​ ​d​i​r​e​c​t​o​r​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_users: {
+					/**
+					 * L​i​s​t​ ​U​s​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​u​s​e​r​s​ ​f​r​o​m​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​u​s​e​r​s​ ​f​r​o​m​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​g​r​o​u​p​ ​m​e​m​b​e​r​s​h​i​p​ ​c​r​i​t​e​r​i​a​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​r​e​p​o​r​t​i​n​g​ ​a​n​d​ ​b​u​l​k​ ​o​p​e​r​a​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​s​e​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​s​e​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​,​ ​w​i​t​h​ ​p​a​g​i​n​a​t​i​o​n​ ​a​v​a​i​l​a​b​l​e​ ​f​o​r​ ​l​a​r​g​e​r​ ​r​e​s​u​l​t​ ​s​e​t​s​.
+							 */
+							longDesc: string
+						}
+						next_page_token: {
+							/**
+							 * N​e​x​t​ ​P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​k​e​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.​ ​O​b​t​a​i​n​e​d​ ​f​r​o​m​ ​p​r​e​v​i​o​u​s​ ​l​i​s​t​ ​o​p​e​r​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						group_id: {
+							/**
+							 * G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​u​s​e​r​s​ ​b​y​ ​g​r​o​u​p​ ​m​e​m​b​e​r​s​h​i​p
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​g​r​o​u​p​ ​i​d​e​n​t​i​f​i​e​r​ ​t​o​ ​f​i​l​t​e​r​ ​u​s​e​r​s​ ​w​h​o​ ​a​r​e​ ​m​e​m​b​e​r​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​.​ ​W​h​e​n​ ​s​p​e​c​i​f​i​e​d​,​ ​o​n​l​y​ ​u​s​e​r​s​ ​b​e​l​o​n​g​i​n​g​ ​t​o​ ​t​h​i​s​ ​g​r​o​u​p​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r​ ​C​r​i​t​e​r​i​a
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​u​s​e​r​ ​l​i​s​t​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​a​t​t​r​i​b​u​t​e​s​ ​a​n​d​ ​c​o​n​d​i​t​i​o​n​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * U​s​e​r​ ​a​t​t​r​i​b​u​t​e​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​u​s​e​r​ ​a​t​t​r​i​b​u​t​e​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​a​g​a​i​n​s​t​.
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * C​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​w​h​e​n​ ​e​v​a​l​u​a​t​i​n​g​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​a​g​a​i​n​s​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d​ ​u​s​i​n​g​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​o​p​e​r​a​t​o​r​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				create_group: {
+					/**
+					 * C​r​e​a​t​e​ ​G​r​o​u​p
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​g​r​o​u​p​ ​i​n​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​g​r​o​u​p​ ​i​n​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​ ​w​i​t​h​ ​s​p​e​c​i​f​i​e​d​ ​p​r​o​p​e​r​t​i​e​s​,​ ​t​y​p​e​,​ ​a​n​d​ ​s​e​c​u​r​i​t​y​ ​s​e​t​t​i​n​g​s​.​ ​S​u​p​p​o​r​t​s​ ​b​o​t​h​ ​s​e​c​u​r​i​t​y​ ​g​r​o​u​p​s​ ​a​n​d​ ​M​i​c​r​o​s​o​f​t​ ​3​6​5​ ​g​r​o​u​p​s​.
+					 */
+					longDesc: string
+					options: {
+						displayName: {
+							/**
+							 * D​i​s​p​l​a​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​a​s​ ​i​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​i​n​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​ ​a​n​d​ ​t​h​r​o​u​g​h​o​u​t​ ​M​i​c​r​o​s​o​f​t​ ​s​e​r​v​i​c​e​s​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * G​r​o​u​p​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​e​x​p​l​a​i​n​i​n​g​ ​t​h​e​ ​p​u​r​p​o​s​e​ ​a​n​d​ ​s​c​o​p​e​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+						groupTypes: {
+							/**
+							 * G​r​o​u​p​ ​T​y​p​e​s
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​c​h​a​r​a​c​t​e​r​i​s​t​i​c​s​ ​o​f​ ​t​h​e​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​a​r​r​a​y​ ​s​p​e​c​i​f​y​i​n​g​ ​s​p​e​c​i​a​l​ ​c​h​a​r​a​c​t​e​r​i​s​t​i​c​s​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​,​ ​s​u​c​h​ ​a​s​ ​U​n​i​f​i​e​d​ ​(​M​i​c​r​o​s​o​f​t​ ​3​6​5​)​ ​o​r​ ​D​y​n​a​m​i​c​M​e​m​b​e​r​s​h​i​p​.
+							 */
+							longDesc: string
+						}
+						mailEnabled: {
+							/**
+							 * M​a​i​l​ ​E​n​a​b​l​e​d
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​ ​e​m​a​i​l​ ​f​u​n​c​t​i​o​n​a​l​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​g​r​o​u​p​ ​s​h​o​u​l​d​ ​b​e​ ​m​a​i​l​-​e​n​a​b​l​e​d​,​ ​a​l​l​o​w​i​n​g​ ​i​t​ ​t​o​ ​r​e​c​e​i​v​e​ ​a​n​d​ ​s​e​n​d​ ​e​m​a​i​l​s​.
+							 */
+							longDesc: string
+						}
+						mailNickname: {
+							/**
+							 * M​a​i​l​ ​N​i​c​k​n​a​m​e
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​l​i​a​s​ ​f​o​r​ ​t​h​e​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​i​l​ ​n​i​c​k​n​a​m​e​ ​u​s​e​d​ ​f​o​r​ ​t​h​e​ ​g​r​o​u​p​'​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.​ ​M​u​s​t​ ​c​o​n​t​a​i​n​ ​o​n​l​y​ ​l​e​t​t​e​r​s​,​ ​n​u​m​b​e​r​s​,​ ​p​e​r​i​o​d​s​,​ ​h​y​p​h​e​n​s​,​ ​a​n​d​ ​u​n​d​e​r​s​c​o​r​e​s​.
+							 */
+							longDesc: string
+						}
+						securityEnabled: {
+							/**
+							 * S​e​c​u​r​i​t​y​ ​E​n​a​b​l​e​d
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​ ​s​e​c​u​r​i​t​y​ ​f​u​n​c​t​i​o​n​a​l​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​g​r​o​u​p​ ​s​h​o​u​l​d​ ​b​e​ ​s​e​c​u​r​i​t​y​-​e​n​a​b​l​e​d​,​ ​a​l​l​o​w​i​n​g​ ​i​t​ ​t​o​ ​b​e​ ​a​s​s​i​g​n​e​d​ ​p​e​r​m​i​s​s​i​o​n​s​ ​a​n​d​ ​u​s​e​d​ ​f​o​r​ ​a​c​c​e​s​s​ ​c​o​n​t​r​o​l​.
+							 */
+							longDesc: string
+						}
+						isAssignableToRole: {
+							/**
+							 * A​s​s​i​g​n​a​b​l​e​ ​t​o​ ​R​o​l​e
+							 */
+							displayName: string
+							/**
+							 * A​l​l​o​w​ ​r​o​l​e​ ​a​s​s​i​g​n​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​g​r​o​u​p​ ​c​a​n​ ​b​e​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​A​z​u​r​e​ ​A​D​ ​r​o​l​e​s​.​ ​T​h​i​s​ ​s​e​t​t​i​n​g​ ​c​a​n​n​o​t​ ​b​e​ ​c​h​a​n​g​e​d​ ​a​f​t​e​r​ ​g​r​o​u​p​ ​c​r​e​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						visibility: {
+							/**
+							 * V​i​s​i​b​i​l​i​t​y
+							 */
+							displayName: string
+							/**
+							 * G​r​o​u​p​ ​v​i​s​i​b​i​l​i​t​y​ ​s​e​t​t​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​t​r​o​l​s​ ​w​h​o​ ​c​a​n​ ​s​e​e​ ​t​h​e​ ​g​r​o​u​p​ ​a​n​d​ ​i​t​s​ ​c​o​n​t​e​n​t​.​ ​O​p​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​P​u​b​l​i​c​,​ ​P​r​i​v​a​t​e​,​ ​o​r​ ​H​i​d​d​e​n​M​e​m​b​e​r​s​h​i​p​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_group: {
+					/**
+					 * U​p​d​a​t​e​ ​G​r​o​u​p
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​g​r​o​u​p​ ​i​n​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * M​o​d​i​f​y​ ​p​r​o​p​e​r​t​i​e​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​g​r​o​u​p​ ​i​n​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​,​ ​i​n​c​l​u​d​i​n​g​ ​d​i​s​p​l​a​y​ ​n​a​m​e​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​v​i​s​i​b​i​l​i​t​y​,​ ​a​n​d​ ​o​t​h​e​r​ ​c​o​n​f​i​g​u​r​a​b​l​e​ ​s​e​t​t​i​n​g​s​.
+					 */
+					longDesc: string
+					options: {
+						group_id: {
+							/**
+							 * G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​b​e​ ​u​p​d​a​t​e​d​.​ ​S​e​l​e​c​t​ ​f​r​o​m​ ​e​x​i​s​t​i​n​g​ ​g​r​o​u​p​s​ ​i​n​ ​y​o​u​r​ ​d​i​r​e​c​t​o​r​y​.
+							 */
+							longDesc: string
+						}
+						displayName: {
+							/**
+							 * D​i​s​p​l​a​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​g​r​o​u​p​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​a​s​ ​i​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​i​n​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​g​r​o​u​p​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​e​x​p​l​a​i​n​i​n​g​ ​t​h​e​ ​p​u​r​p​o​s​e​ ​a​n​d​ ​s​c​o​p​e​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+						mailNickname: {
+							/**
+							 * M​a​i​l​ ​N​i​c​k​n​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​e​m​a​i​l​ ​a​l​i​a​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​m​a​i​l​ ​n​i​c​k​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​g​r​o​u​p​.​ ​M​u​s​t​ ​c​o​n​t​a​i​n​ ​o​n​l​y​ ​l​e​t​t​e​r​s​,​ ​n​u​m​b​e​r​s​,​ ​p​e​r​i​o​d​s​,​ ​h​y​p​h​e​n​s​,​ ​a​n​d​ ​u​n​d​e​r​s​c​o​r​e​s​.
+							 */
+							longDesc: string
+						}
+						visibility: {
+							/**
+							 * V​i​s​i​b​i​l​i​t​y
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​v​i​s​i​b​i​l​i​t​y​ ​s​e​t​t​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​v​i​s​i​b​i​l​i​t​y​ ​s​e​t​t​i​n​g​ ​c​o​n​t​r​o​l​l​i​n​g​ ​w​h​o​ ​c​a​n​ ​s​e​e​ ​t​h​e​ ​g​r​o​u​p​ ​a​n​d​ ​i​t​s​ ​c​o​n​t​e​n​t​.
+							 */
+							longDesc: string
+						}
+						preferredLanguage: {
+							/**
+							 * P​r​e​f​e​r​r​e​d​ ​L​a​n​g​u​a​g​e
+							 */
+							displayName: string
+							/**
+							 * G​r​o​u​p​'​s​ ​p​r​e​f​e​r​r​e​d​ ​l​a​n​g​u​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​e​f​e​r​r​e​d​ ​l​a​n​g​u​a​g​e​ ​f​o​r​ ​t​h​e​ ​g​r​o​u​p​'​s​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​s​ ​a​n​d​ ​i​n​t​e​r​f​a​c​e​.
+							 */
+							longDesc: string
+						}
+						allowExternalSenders: {
+							/**
+							 * A​l​l​o​w​ ​E​x​t​e​r​n​a​l​ ​S​e​n​d​e​r​s
+							 */
+							displayName: string
+							/**
+							 * A​l​l​o​w​ ​e​x​t​e​r​n​a​l​ ​e​m​a​i​l​ ​s​e​n​d​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​p​e​o​p​l​e​ ​e​x​t​e​r​n​a​l​ ​t​o​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​c​a​n​ ​s​e​n​d​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​t​h​e​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+						autoSubscribeNewMembers: {
+							/**
+							 * A​u​t​o​-​S​u​b​s​c​r​i​b​e​ ​N​e​w​ ​M​e​m​b​e​r​s
+							 */
+							displayName: string
+							/**
+							 * A​u​t​o​m​a​t​i​c​a​l​l​y​ ​s​u​b​s​c​r​i​b​e​ ​n​e​w​ ​m​e​m​b​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​n​e​w​ ​m​e​m​b​e​r​s​ ​s​h​o​u​l​d​ ​b​e​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​s​u​b​s​c​r​i​b​e​d​ ​t​o​ ​r​e​c​e​i​v​e​ ​e​m​a​i​l​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​f​r​o​m​ ​t​h​e​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+						hideFromAddressLists: {
+							/**
+							 * H​i​d​e​ ​f​r​o​m​ ​A​d​d​r​e​s​s​ ​L​i​s​t​s
+							 */
+							displayName: string
+							/**
+							 * H​i​d​e​ ​g​r​o​u​p​ ​f​r​o​m​ ​a​d​d​r​e​s​s​ ​l​i​s​t​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​h​i​d​e​ ​t​h​i​s​ ​g​r​o​u​p​ ​f​r​o​m​ ​a​d​d​r​e​s​s​ ​l​i​s​t​s​ ​a​n​d​ ​d​i​r​e​c​t​o​r​y​ ​b​r​o​w​s​i​n​g​.
+							 */
+							longDesc: string
+						}
+						hideFromOutlookClients: {
+							/**
+							 * H​i​d​e​ ​f​r​o​m​ ​O​u​t​l​o​o​k​ ​C​l​i​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * H​i​d​e​ ​g​r​o​u​p​ ​f​r​o​m​ ​O​u​t​l​o​o​k​ ​c​l​i​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​h​i​d​e​ ​t​h​i​s​ ​g​r​o​u​p​ ​f​r​o​m​ ​a​p​p​e​a​r​i​n​g​ ​i​n​ ​O​u​t​l​o​o​k​ ​c​l​i​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_group: {
+					/**
+					 * G​e​t​ ​G​r​o​u​p
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​g​r​o​u​p​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​r​o​m​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​g​r​o​u​p​ ​f​r​o​m​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​,​ ​i​n​c​l​u​d​i​n​g​ ​p​r​o​p​e​r​t​i​e​s​,​ ​s​e​t​t​i​n​g​s​,​ ​a​n​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						group_id: {
+							/**
+							 * G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​.​ ​S​e​l​e​c​t​ ​f​r​o​m​ ​e​x​i​s​t​i​n​g​ ​g​r​o​u​p​s​ ​i​n​ ​y​o​u​r​ ​d​i​r​e​c​t​o​r​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_group: {
+					/**
+					 * D​e​l​e​t​e​ ​G​r​o​u​p
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​g​r​o​u​p​ ​f​r​o​m​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​ ​a​ ​g​r​o​u​p​ ​f​r​o​m​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​ ​a​n​d​ ​w​i​l​l​ ​r​e​m​o​v​e​ ​a​l​l​ ​g​r​o​u​p​ ​m​e​m​b​e​r​s​h​i​p​s​ ​a​n​d​ ​a​s​s​o​c​i​a​t​e​d​ ​p​e​r​m​i​s​s​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						group_id: {
+							/**
+							 * G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​b​e​ ​d​e​l​e​t​e​d​.​ ​S​e​l​e​c​t​ ​f​r​o​m​ ​e​x​i​s​t​i​n​g​ ​g​r​o​u​p​s​ ​i​n​ ​y​o​u​r​ ​d​i​r​e​c​t​o​r​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_groups: {
+					/**
+					 * L​i​s​t​ ​G​r​o​u​p​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​g​r​o​u​p​s​ ​f​r​o​m​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​g​r​o​u​p​s​ ​f​r​o​m​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​c​r​i​t​e​r​i​a​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​r​e​p​o​r​t​i​n​g​ ​a​n​d​ ​g​r​o​u​p​ ​m​a​n​a​g​e​m​e​n​t​ ​o​p​e​r​a​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​g​r​o​u​p​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​g​r​o​u​p​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​,​ ​w​i​t​h​ ​p​a​g​i​n​a​t​i​o​n​ ​a​v​a​i​l​a​b​l​e​ ​f​o​r​ ​l​a​r​g​e​r​ ​r​e​s​u​l​t​ ​s​e​t​s​.
+							 */
+							longDesc: string
+						}
+						next_page_token: {
+							/**
+							 * N​e​x​t​ ​P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​k​e​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.​ ​O​b​t​a​i​n​e​d​ ​f​r​o​m​ ​p​r​e​v​i​o​u​s​ ​l​i​s​t​ ​o​p​e​r​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r​ ​C​r​i​t​e​r​i​a
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​s​ ​f​o​r​ ​g​r​o​u​p​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​g​r​o​u​p​ ​l​i​s​t​ ​b​a​s​e​d​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​a​t​t​r​i​b​u​t​e​s​ ​a​n​d​ ​c​o​n​d​i​t​i​o​n​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * G​r​o​u​p​ ​a​t​t​r​i​b​u​t​e​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​g​r​o​u​p​ ​a​t​t​r​i​b​u​t​e​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​a​g​a​i​n​s​t​.
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * C​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​w​h​e​n​ ​e​v​a​l​u​a​t​i​n​g​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * V​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​a​g​a​i​n​s​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d​ ​u​s​i​n​g​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​o​p​e​r​a​t​o​r​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				add_user_to_group: {
+					/**
+					 * A​d​d​ ​U​s​e​r​ ​t​o​ ​G​r​o​u​p
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​u​s​e​r​ ​t​o​ ​a​n​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​ ​g​r​o​u​p
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​ ​a​ ​u​s​e​r​ ​a​s​ ​a​ ​m​e​m​b​e​r​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​g​r​o​u​p​ ​i​n​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​.​ ​T​h​i​s​ ​g​r​a​n​t​s​ ​t​h​e​ ​u​s​e​r​ ​a​n​y​ ​p​e​r​m​i​s​s​i​o​n​s​ ​a​n​d​ ​a​c​c​e​s​s​ ​r​i​g​h​t​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​g​r​o​u​p​.
+					 */
+					longDesc: string
+					options: {
+						user_id: {
+							/**
+							 * U​s​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​b​e​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​g​r​o​u​p​.​ ​S​e​l​e​c​t​ ​f​r​o​m​ ​e​x​i​s​t​i​n​g​ ​u​s​e​r​s​ ​i​n​ ​y​o​u​r​ ​d​i​r​e​c​t​o​r​y​.
+							 */
+							longDesc: string
+						}
+						group_id: {
+							/**
+							 * G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​a​d​d​ ​t​h​e​ ​u​s​e​r​ ​t​o​.​ ​S​e​l​e​c​t​ ​f​r​o​m​ ​e​x​i​s​t​i​n​g​ ​g​r​o​u​p​s​ ​i​n​ ​y​o​u​r​ ​d​i​r​e​c​t​o​r​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				remove_user_from_group: {
+					/**
+					 * R​e​m​o​v​e​ ​U​s​e​r​ ​f​r​o​m​ ​G​r​o​u​p
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​u​s​e​r​ ​f​r​o​m​ ​a​n​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​ ​g​r​o​u​p
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​u​s​e​r​ ​f​r​o​m​ ​m​e​m​b​e​r​s​h​i​p​ ​i​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​g​r​o​u​p​ ​i​n​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​.​ ​T​h​i​s​ ​r​e​v​o​k​e​s​ ​a​n​y​ ​p​e​r​m​i​s​s​i​o​n​s​ ​a​n​d​ ​a​c​c​e​s​s​ ​r​i​g​h​t​s​ ​t​h​e​ ​u​s​e​r​ ​h​a​d​ ​t​h​r​o​u​g​h​ ​t​h​i​s​ ​g​r​o​u​p​.
+					 */
+					longDesc: string
+					options: {
+						group_id: {
+							/**
+							 * G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * S​o​u​r​c​e​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​r​e​m​o​v​e​ ​t​h​e​ ​u​s​e​r​ ​f​r​o​m​.​ ​S​e​l​e​c​t​ ​f​r​o​m​ ​e​x​i​s​t​i​n​g​ ​g​r​o​u​p​s​ ​i​n​ ​y​o​u​r​ ​d​i​r​e​c​t​o​r​y​.
+							 */
+							longDesc: string
+						}
+						user_id: {
+							/**
+							 * U​s​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​b​e​ ​r​e​m​o​v​e​d​ ​f​r​o​m​ ​t​h​e​ ​g​r​o​u​p​.​ ​S​e​l​e​c​t​ ​f​r​o​m​ ​e​x​i​s​t​i​n​g​ ​u​s​e​r​s​ ​i​n​ ​y​o​u​r​ ​d​i​r​e​c​t​o​r​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		AmazonEC2: {
 			/**
 			 * A​W​S​ ​E​C​2
@@ -76560,6 +78010,1456 @@ export type TranslationFunctions = {
 					 * Other
 					 */
 					group: () => LocalizedString
+				}
+			}
+		}
+		AzureActiveDirectory: {
+			/**
+			 * Active Directory
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Seamlessly connect to Microsoft Active Directory to manage users, groups, and organizational resources.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Active Directory integration provides comprehensive actions and triggers to interact with Microsoft Graph API for user and group management. Automate user provisioning, group membership management, and organizational administration tasks with enterprise-grade security and compliance.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_user: {
+					/**
+					 * New User
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new user is created in Active Directory
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor Active Directory for newly created users. This trigger can be filtered by specific criteria such as user attributes, group membership, or organizational units to detect relevant user additions.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						group_id: {
+							/**
+							 * Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Monitor users added to a specific group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional group identifier to monitor for new user additions. When specified, the trigger will only fire for users added to this particular group.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter Criteria
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter conditions for user monitoring
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter criteria to specify which users should trigger the event. Configure field, operator, and value to match specific user attributes.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * User attribute to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The user attribute field to apply the filter condition against, such as displayName, email, or department.
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Comparison operator for filtering
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The comparison operator to use when evaluating the filter condition (equals, not equals, starts with, ends with).
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to match against
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against the specified field using the selected operator.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				new_group: {
+					/**
+					 * New Group
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new group is created in Active Directory
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor Active Directory for newly created groups. This trigger can be filtered by specific criteria such as group type, visibility, or naming patterns to detect relevant group additions.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						filter: {
+							/**
+							 * Filter Criteria
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter conditions for group monitoring
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter criteria to specify which groups should trigger the event. Configure field, operator, and value to match specific group attributes.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Group attribute to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The group attribute field to apply the filter condition against, such as displayName, description, or groupTypes.
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Comparison operator for filtering
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The comparison operator to use when evaluating the filter condition (equals, not equals, starts with, ends with).
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to match against
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against the specified field using the selected operator.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			actions: {
+				create_user: {
+					/**
+					 * Create User
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new user in Active Directory
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new user account in Active Directory with comprehensive profile information, security settings, and organizational details. Supports setting passwords, contact information, and location data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						displayName: {
+							/**
+							 * Display Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Full name of the user
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The full display name of the user as it will appear in Active Directory and throughout Microsoft services.
+							 */
+							longDesc: () => LocalizedString
+						}
+						givenName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User's first name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The given name (first name) of the user for profile completion and directory organization.
+							 */
+							longDesc: () => LocalizedString
+						}
+						surname: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User's last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The surname (last name) of the user for profile completion and directory organization.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mailNickname: {
+							/**
+							 * Mail Nickname
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email alias for the user
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The mail nickname that will be used as part of the user's email address. Must contain only letters, numbers, periods, hyphens, and underscores.
+							 */
+							longDesc: () => LocalizedString
+						}
+						userPrincipalName: {
+							/**
+							 * User Principal Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Primary login identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The user principal name (UPN) that serves as the primary login identifier. Must be in email format (user@domain.com).
+							 */
+							longDesc: () => LocalizedString
+						}
+						password: {
+							/**
+							 * Password
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Initial password for the user
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The initial password for the user account. Must meet your organization's password complexity requirements and be at least 8 characters long.
+							 */
+							longDesc: () => LocalizedString
+						}
+						forceChangePasswordNextSignIn: {
+							/**
+							 * Force Password Change
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Require password change on first login
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, the user will be required to change their password on their first sign-in to the account.
+							 */
+							longDesc: () => LocalizedString
+						}
+						forceChangePasswordNextSignInWithMfa: {
+							/**
+							 * Force Password Change with MFA
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Require password change with multi-factor authentication
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, the user will be required to change their password with multi-factor authentication on their first sign-in.
+							 */
+							longDesc: () => LocalizedString
+						}
+						jobTitle: {
+							/**
+							 * Job Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User's job title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The job title or position of the user within the organization for directory and contact information.
+							 */
+							longDesc: () => LocalizedString
+						}
+						department: {
+							/**
+							 * Department
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User's department
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The department or organizational unit the user belongs to within the company structure.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mobilePhone: {
+							/**
+							 * Mobile Phone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User's mobile phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The mobile phone number for the user, used for contact information and potential multi-factor authentication.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mail: {
+							/**
+							 * Email Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Primary email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The primary email address for the user. If not specified, it may be automatically generated based on the user principal name.
+							 */
+							longDesc: () => LocalizedString
+						}
+						streetAddress: {
+							/**
+							 * Street Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Physical street address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The street address component of the user's physical location for contact and organizational purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * City of residence
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The city where the user is located for contact and organizational purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						state: {
+							/**
+							 * State/Province
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * State or province
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The state or province where the user is located for contact and organizational purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						postalCode: {
+							/**
+							 * Postal Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ZIP or postal code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The postal code or ZIP code for the user's location.
+							 */
+							longDesc: () => LocalizedString
+						}
+						country: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Country of residence
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The country where the user is located for contact and organizational purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						accountEnabled: {
+							/**
+							 * Account Enabled
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable the user account
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether the user account should be enabled and able to sign in. When disabled, the user cannot access any services.
+							 */
+							longDesc: () => LocalizedString
+						}
+						usageLocation: {
+							/**
+							 * Usage Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Country code for license assignment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The two-letter country code (ISO 3166-1 alpha-2) that represents the user's usage location. Required for license assignment in some regions.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_user: {
+					/**
+					 * Update User
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing user in Active Directory
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Modify properties of an existing user account in Active Directory. Update profile information, contact details, organizational data, and account settings.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						user_id: {
+							/**
+							 * User ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Identifier of the user to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the user account to be updated. Select from existing users in your directory.
+							 */
+							longDesc: () => LocalizedString
+						}
+						displayName: {
+							/**
+							 * Display Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated full name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated full display name of the user as it will appear in Active Directory and throughout Microsoft services.
+							 */
+							longDesc: () => LocalizedString
+						}
+						givenName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated first name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated given name (first name) of the user.
+							 */
+							longDesc: () => LocalizedString
+						}
+						surname: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated surname (last name) of the user.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mailNickname: {
+							/**
+							 * Mail Nickname
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated email alias
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated mail nickname for the user. Must contain only letters, numbers, periods, hyphens, and underscores.
+							 */
+							longDesc: () => LocalizedString
+						}
+						jobTitle: {
+							/**
+							 * Job Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated job title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated job title or position of the user within the organization.
+							 */
+							longDesc: () => LocalizedString
+						}
+						department: {
+							/**
+							 * Department
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated department
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated department or organizational unit the user belongs to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mobilePhone: {
+							/**
+							 * Mobile Phone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated mobile phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated mobile phone number for the user.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mail: {
+							/**
+							 * Email Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated primary email address for the user.
+							 */
+							longDesc: () => LocalizedString
+						}
+						streetAddress: {
+							/**
+							 * Street Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated street address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated street address component of the user's physical location.
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated city
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated city where the user is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						state: {
+							/**
+							 * State/Province
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated state or province
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated state or province where the user is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						postalCode: {
+							/**
+							 * Postal Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated postal code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated postal code or ZIP code for the user's location.
+							 */
+							longDesc: () => LocalizedString
+						}
+						country: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated country
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated country where the user is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						accountEnabled: {
+							/**
+							 * Account Enabled
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable or disable the account
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether the user account should be enabled or disabled. Disabled accounts cannot sign in to any services.
+							 */
+							longDesc: () => LocalizedString
+						}
+						usageLocation: {
+							/**
+							 * Usage Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated usage location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated two-letter country code representing the user's usage location for license assignment purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_user: {
+					/**
+					 * Get User
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve user information from Active Directory
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific user from Active Directory, including profile data, contact information, and account status.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						user_id: {
+							/**
+							 * User ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Identifier of the user to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the user account to retrieve information for. Select from existing users in your directory.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_user: {
+					/**
+					 * Delete User
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a user from Active Directory
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently remove a user account from Active Directory. This action cannot be undone and will remove all associated data and access permissions.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						user_id: {
+							/**
+							 * User ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Identifier of the user to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the user account to be deleted. Select from existing users in your directory.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				disable_user: {
+					/**
+					 * Disable User
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Disable a user account in Active Directory
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Disable a user account to prevent sign-in while preserving the account and its data. The user will be unable to access any services until the account is re-enabled.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						user_id: {
+							/**
+							 * User ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Identifier of the user to disable
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the user account to be disabled. Select from existing users in your directory.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_users: {
+					/**
+					 * List Users
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of users from Active Directory
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a paginated list of users from Active Directory with optional filtering and group membership criteria. Useful for reporting and bulk operations.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of users to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of users to return in a single request. Default is 20, with pagination available for larger result sets.
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_page_token: {
+							/**
+							 * Next Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The pagination token to retrieve the next page of results. Obtained from previous list operations.
+							 */
+							longDesc: () => LocalizedString
+						}
+						group_id: {
+							/**
+							 * Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter users by group membership
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional group identifier to filter users who are members of a specific group. When specified, only users belonging to this group will be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter Criteria
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional filter conditions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter criteria to narrow down the user list based on specific attributes and conditions.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * User attribute to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The user attribute field to apply the filter condition against.
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The comparison operator to use when evaluating the filter condition.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to match against
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against the specified field using the selected operator.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				create_group: {
+					/**
+					 * Create Group
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new group in Active Directory
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new group in Active Directory with specified properties, type, and security settings. Supports both security groups and Microsoft 365 groups.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						displayName: {
+							/**
+							 * Display Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The display name of the group as it will appear in Active Directory and throughout Microsoft services.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Group description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional description explaining the purpose and scope of the group.
+							 */
+							longDesc: () => LocalizedString
+						}
+						groupTypes: {
+							/**
+							 * Group Types
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type characteristics of the group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional array specifying special characteristics of the group, such as Unified (Microsoft 365) or DynamicMembership.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mailEnabled: {
+							/**
+							 * Mail Enabled
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable email functionality
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether the group should be mail-enabled, allowing it to receive and send emails.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mailNickname: {
+							/**
+							 * Mail Nickname
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email alias for the group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The mail nickname used for the group's email address. Must contain only letters, numbers, periods, hyphens, and underscores.
+							 */
+							longDesc: () => LocalizedString
+						}
+						securityEnabled: {
+							/**
+							 * Security Enabled
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable security functionality
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether the group should be security-enabled, allowing it to be assigned permissions and used for access control.
+							 */
+							longDesc: () => LocalizedString
+						}
+						isAssignableToRole: {
+							/**
+							 * Assignable to Role
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Allow role assignment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether the group can be assigned to Azure AD roles. This setting cannot be changed after group creation.
+							 */
+							longDesc: () => LocalizedString
+						}
+						visibility: {
+							/**
+							 * Visibility
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Group visibility setting
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Controls who can see the group and its content. Options include Public, Private, or HiddenMembership.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_group: {
+					/**
+					 * Update Group
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing group in Active Directory
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Modify properties of an existing group in Active Directory, including display name, description, visibility, and other configurable settings.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						group_id: {
+							/**
+							 * Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Identifier of the group to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the group to be updated. Select from existing groups in your directory.
+							 */
+							longDesc: () => LocalizedString
+						}
+						displayName: {
+							/**
+							 * Display Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated group name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated display name of the group as it will appear in Active Directory.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated group description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated description explaining the purpose and scope of the group.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mailNickname: {
+							/**
+							 * Mail Nickname
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated email alias
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated mail nickname for the group. Must contain only letters, numbers, periods, hyphens, and underscores.
+							 */
+							longDesc: () => LocalizedString
+						}
+						visibility: {
+							/**
+							 * Visibility
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated visibility setting
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated visibility setting controlling who can see the group and its content.
+							 */
+							longDesc: () => LocalizedString
+						}
+						preferredLanguage: {
+							/**
+							 * Preferred Language
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Group's preferred language
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The preferred language for the group's communications and interface.
+							 */
+							longDesc: () => LocalizedString
+						}
+						allowExternalSenders: {
+							/**
+							 * Allow External Senders
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Allow external email senders
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether people external to the organization can send messages to the group.
+							 */
+							longDesc: () => LocalizedString
+						}
+						autoSubscribeNewMembers: {
+							/**
+							 * Auto-Subscribe New Members
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Automatically subscribe new members
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether new members should be automatically subscribed to receive email notifications from the group.
+							 */
+							longDesc: () => LocalizedString
+						}
+						hideFromAddressLists: {
+							/**
+							 * Hide from Address Lists
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Hide group from address lists
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to hide this group from address lists and directory browsing.
+							 */
+							longDesc: () => LocalizedString
+						}
+						hideFromOutlookClients: {
+							/**
+							 * Hide from Outlook Clients
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Hide group from Outlook clients
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to hide this group from appearing in Outlook clients.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_group: {
+					/**
+					 * Get Group
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve group information from Active Directory
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific group from Active Directory, including properties, settings, and configuration details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						group_id: {
+							/**
+							 * Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Identifier of the group to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the group to retrieve information for. Select from existing groups in your directory.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_group: {
+					/**
+					 * Delete Group
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a group from Active Directory
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently remove a group from Active Directory. This action cannot be undone and will remove all group memberships and associated permissions.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						group_id: {
+							/**
+							 * Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Identifier of the group to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the group to be deleted. Select from existing groups in your directory.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_groups: {
+					/**
+					 * List Groups
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of groups from Active Directory
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a paginated list of groups from Active Directory with optional filtering criteria. Useful for reporting and group management operations.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of groups to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of groups to return in a single request. Default is 20, with pagination available for larger result sets.
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_page_token: {
+							/**
+							 * Next Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The pagination token to retrieve the next page of results. Obtained from previous list operations.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter Criteria
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter conditions for groups
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter criteria to narrow down the group list based on specific attributes and conditions.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Group attribute to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The group attribute field to apply the filter condition against.
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The comparison operator to use when evaluating the filter condition.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Value to match against
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against the specified field using the selected operator.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				add_user_to_group: {
+					/**
+					 * Add User to Group
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a user to an Active Directory group
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Add a user as a member of an existing group in Active Directory. This grants the user any permissions and access rights associated with the group.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						user_id: {
+							/**
+							 * User ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User to add to the group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the user to be added to the group. Select from existing users in your directory.
+							 */
+							longDesc: () => LocalizedString
+						}
+						group_id: {
+							/**
+							 * Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the group to add the user to. Select from existing groups in your directory.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				remove_user_from_group: {
+					/**
+					 * Remove User from Group
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove a user from an Active Directory group
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Remove a user from membership in an existing group in Active Directory. This revokes any permissions and access rights the user had through this group.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						group_id: {
+							/**
+							 * Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Source group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the group to remove the user from. Select from existing groups in your directory.
+							 */
+							longDesc: () => LocalizedString
+						}
+						user_id: {
+							/**
+							 * User ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User to remove from the group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the user to be removed from the group. Select from existing users in your directory.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 			}
 		}
