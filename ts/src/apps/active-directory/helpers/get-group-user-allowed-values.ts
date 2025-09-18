@@ -38,7 +38,7 @@ export const getActiveDirectoryGroupUserAllowedValues: TQoreGetAllowedValuesFunc
 
       return {
         value: user.id,
-        displayName: `${user.displayName} (${userMail})`,
+        display_name: `${user.displayName} (${userMail})`,
       };
     });
 
