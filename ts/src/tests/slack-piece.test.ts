@@ -304,7 +304,10 @@ describe('slackPieceTest', () => {
     const action = slackApp.actions.find(
       (action) => action.action === 'update_message'
     ) as IQoreAppActionWithFunction;
-    const actionFunction = action?.api_function;
+
+    expect(action).toBeDefined();
+
+    const actionFunction = action.api_function;
 
     const channelIds = await action.options!.channel.get_allowed_values!(actionContext);
     expect(channelIds).toBeDefined();

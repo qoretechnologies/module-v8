@@ -1,6 +1,15 @@
 import type { BaseTranslation } from '../i18n-types';
 import ActiveCampaign from './apps/ActiveCampaign';
+import AzureActiveDirectory from './apps/ActiveDirectory';
 import Airtable from './apps/Airtable';
+import AmazonCloudFront from './apps/AmazonCloudFront';
+import AmazonCloudWatch from './apps/AmazonCloudWatch';
+import AmazonEC2 from './apps/AmazonEc2';
+import AmazonLambda from './apps/AmazonLambda';
+import AmazonS3 from './apps/AmazonS3';
+import AmazonSES from './apps/AmazonSES';
+import AmazonSNS from './apps/AmazonSNS';
+import AmazonSQS from './apps/AmazonSQS';
 import Asana from './apps/Asana';
 import Attio from './apps/Attio';
 import BigMl from './apps/BigMl';
@@ -60,14 +69,6 @@ import Xero from './apps/Xero';
 import YouTube from './apps/YouTube';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
-import AmazonEC2 from './apps/AmazonEc2';
-import AmazonS3 from './apps/AmazonS3';
-import AmazonLambda from './apps/AmazonLambda';
-import AmazonCloudFront from './apps/AmazonCloudFront';
-import AmazonSNS from './apps/AmazonSNS';
-import AmazonSQS from './apps/AmazonSQS';
-import AmazonCloudWatch from './apps/AmazonCloudWatch';
-import AmazonSES from './apps/AmazonSES';
 
 const en = {
   common: {},
@@ -167,6 +168,7 @@ const en = {
       },
     },
     Asana,
+    AzureActiveDirectory,
     AmazonEC2,
     AmazonS3,
     AmazonLambda,
