@@ -1,4 +1,8 @@
-import { TCustomConnOptions, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
+import {
+  IQoreAllowedValue,
+  TCustomConnOptions,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { ActiveDirectoryError } from '../constants';
 import { createActiveDirectoryClient } from './constants';
@@ -32,14 +36,16 @@ export const getActiveDirectoryUserAllowedValues: TQoreGetAllowedValuesFunction<
       .count(true)
       .get();
 
-    const allowedValues = response.value.map((user: TActiveDirectoryItem) => {
-      const userMail = user.mail || user.userPrincipalName || '';
+    const allowedValues = response.value.map(
+      (user: TActiveDirectoryItem): IQoreAllowedValue<string> => {
+        const userMail = user.mail || user.userPrincipalName || '';
 
-      return {
-        value: user.id,
-        displayName: `${user.displayName} (${userMail})`,
-      };
-    });
+        return {
+          value: user.id,
+          display_name: `${user.displayName} (${userMail})`,
+        };
+      }
+    );
 
     return allowedValues;
   } catch (error) {

@@ -33,7 +33,7 @@ export const getActiveDirectoryGroupAllowedValues: TQoreGetAllowedValuesFunction
 
     const allowedValues = response.value.map((group: TActiveDirectoryItem) => ({
       value: group.id,
-      displayName: group.displayName,
+      display_name: group.displayName,
       ...(group.description && { description: group.description }),
     }));
 
