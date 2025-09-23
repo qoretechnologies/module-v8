@@ -90,9 +90,9 @@ const NewWorkItem = QoreAppCreator.createLocalizedTrigger({
 
       const response = await QorusRequest.post<{ data: any }>(
         {
-          path: '/_apis/hooks/subscriptions',
+          path: '/_apis/hooks/testnotifications',
           params: {
-            'api-version': '7.1',
+            'api-version': '7.2-preview.1',
           },
           headers: {
             Authorization: `Bearer ${token}`,
@@ -108,6 +108,7 @@ const NewWorkItem = QoreAppCreator.createLocalizedTrigger({
               consumerId: 'webHooks',
               consumerActionId: 'httpRequest',
               publisherInputs: {
+                ...(itemType && { workItemType: itemType }),
                 projectId: project,
               },
               consumerInputs: {

@@ -13,7 +13,7 @@ import { getAzureDevOpsUserAllowedValues } from '../apps/azure-devops/helpers/ge
 import { getAzureDevOpsWorkItemAllowedValues } from '../apps/azure-devops/helpers/get-work-item-allowed-values';
 import { getAzureDevOpsWorkItemFieldOptions } from '../apps/azure-devops/helpers/get-work-item-fields';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import { NewAzureDevOpsWorkItem } from '../apps/azure-devops/triggers';
+import { NewAzureDevOpsWorkItem, UpdatedAzureDevOpsWorkItem } from '../apps/azure-devops/triggers';
 import { TQoreAppActionWithWebhook } from '@qoretechnologies/ts-toolkit';
 configDotenv({ path: '.env' });
 
@@ -70,7 +70,6 @@ describe('Should test Azure DevOps actions', () => {
   });
 
   let project: string | undefined;
-  project = '0feb5432-6b59-45d0-b315-e5f2ff2dbed8';
 
   describe('Should test allowed values', () => {
     it('Should get project allowed values', async () => {
@@ -257,30 +256,93 @@ describe('Should test Azure DevOps actions', () => {
     });
 
     describe('Should test triggers', () => {
-      let regInfo: Record<string, any> | undefined | void;
+      describe('New Work Item Trigger', () => {
+        let regInfo: Record<string, any> | undefined | void;
 
-      it('Should register New Work Item  trigger', async () => {
-        const trigger = NewAzureDevOpsWorkItem;
+        it('Should register New Work Item  trigger', async () => {
+          const trigger = NewAzureDevOpsWorkItem;
 
-        if (!('webhook_register' in trigger))
-          throw new Error('webhook_register not found in trigger');
+          if (!('webhook_register' in trigger))
+            throw new Error('webhook_register not found in trigger');
 
-        if (!project) throw new Error('Project not defined');
+          if (!project) throw new Error('Project not defined');
 
-        regInfo = await trigger.webhook_register(
-          { ...base_context, opts: { project, itemType: 'Task' } },
-          'https://webhook.site/deee24af-96cb-44ad-a37d-5e1817bcf905'
-        );
+          regInfo = await trigger.webhook_register(
+            { ...base_context, opts: { project, itemType: 'Task' } },
+            'https://webhook.site/deee24af-96cb-44ad-a37d-5e1817bcf905'
+          );
 
-        expect(regInfo).toBeDefined();
-        expect(regInfo?.subscriptionId).toBeDefined();
+          expect(regInfo).toBeDefined();
+          expect(regInfo?.subscriptionId).toBeDefined();
+        });
+
+        it('Should deregister New Work Item trigger', async () => {
+          const trigger = NewAzureDevOpsWorkItem as TQoreAppActionWithWebhook;
+          await trigger.webhook_deregister(base_context, 'https://example.com/webhook', regInfo!);
+          regInfo = undefined;
+        });
+
+        it('Should get example event data for new group trigger', async () => {
+          const trigger = NewAzureDevOpsWorkItem;
+
+          if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
+            throw new Error('get_example_event_data not found in trigger');
+
+          const result = await trigger.get_example_event_data({
+            ...base_context,
+            opts: { project } as any,
+          });
+
+          expect(result).toBeDefined();
+          expect(result.eventType).toBe('workitem.created');
+        });
       });
 
-      it('Should deregister New Work Item trigger', async () => {
-        regInfo = { subscriptionId: '51b1c557-5b2c-4d06-8f8b-194ad2e9b377' };
-        const trigger = NewAzureDevOpsWorkItem as TQoreAppActionWithWebhook;
-        await trigger.webhook_deregister(base_context, 'https://example.com/webhook', regInfo!);
-        regInfo = undefined;
+      describe('Updated Work Item Trigger', () => {
+        let regInfo: Record<string, any> | undefined | void;
+
+        it('Should register trigger', async () => {
+          const trigger = UpdatedAzureDevOpsWorkItem;
+
+          if (!('webhook_register' in trigger))
+            throw new Error('webhook_register not found in trigger');
+
+          if (!project) throw new Error('Project not defined');
+
+          regInfo = await trigger.webhook_register(
+            {
+              ...base_context,
+              opts: { project, itemType: 'Task', changedFields: ['System.Title'] },
+            },
+            'https://webhook.site/deee24af-96cb-44ad-a37d-5e1817bcf905'
+          );
+
+          expect(regInfo).toBeDefined();
+          expect(regInfo?.subscriptionId).toBeDefined();
+        });
+
+        it('Should deregister New Work Item trigger', async () => {
+          const trigger = UpdatedAzureDevOpsWorkItem as TQoreAppActionWithWebhook;
+          await trigger.webhook_deregister(base_context, 'https://example.com/webhook', regInfo!);
+          regInfo = undefined;
+        });
+
+        it('Should get example event data for new group trigger', async () => {
+          const trigger = UpdatedAzureDevOpsWorkItem;
+
+          if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
+            throw new Error('get_example_event_data not found in trigger');
+
+          if (!project) throw new Error('Project not defined');
+
+          const result = await trigger.get_example_event_data({
+            ...base_context,
+            opts: { project, itemType: 'Task', changedFields: ['System.Title'] },
+          });
+
+          expect(result).toBeDefined();
+          expect(result.eventType).toBe('workitem.updated');
+        });
       });
     });
   });

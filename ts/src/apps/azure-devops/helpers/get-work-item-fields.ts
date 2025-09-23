@@ -1,5 +1,7 @@
 import {
+  TCustomConnOptions,
   TQoreAnyType,
+  TQoreGetAllowedValuesFunction,
   TQoreGetDynamicTypeFunction,
   TQoreOptions,
   TQoreResponseType,
@@ -221,4 +223,28 @@ export const getAzureDevOpsWorkItemResponseType: TQoreGetDynamicTypeFunction = a
     type: 'hash',
     fields: qoreOptions,
   };
+};
+
+export const getAzureDevOpsWorkItemFieldAllowedValues: TQoreGetAllowedValuesFunction<
+  TCustomConnOptions,
+  string
+> = async (context) => {
+  const { token, organization, itemType, project } = getQoreContextRequiredValues({
+    context,
+    connectionFields: ['token', 'organization'],
+    optionFields: ['itemType', 'project'],
+    ErrorClass: AzureDevOpsError,
+  });
+
+  const fields = await getAzureDevOpsWorkItemFields({ token, organization, itemType, project });
+
+  const allowedValues = fields.map((field) => {
+    return {
+      display_name: field.name,
+      desc: field.helpText || field.description,
+      value: field.referenceName,
+    };
+  });
+
+  return allowedValues;
 };
