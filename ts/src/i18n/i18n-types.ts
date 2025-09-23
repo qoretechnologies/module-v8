@@ -5262,6 +5262,582 @@ type RootTranslation = {
 				}
 			}
 		}
+		AzureDevOps: {
+			/**
+			 * A​z​u​r​e​ ​D​e​v​O​p​s
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​p​r​o​j​e​c​t​ ​m​a​n​a​g​e​m​e​n​t​,​ ​c​o​d​e​ ​r​e​p​o​s​i​t​o​r​i​e​s​,​ ​a​n​d​ ​C​I​/​C​D​ ​p​i​p​e​l​i​n​e​s​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​S​e​r​v​i​c​e​s​.​ ​M​a​n​a​g​e​ ​w​o​r​k​ ​i​t​e​m​s​,​ ​r​e​p​o​s​i​t​o​r​i​e​s​,​ ​b​u​i​l​d​s​,​ ​r​e​l​e​a​s​e​s​,​ ​a​n​d​ ​t​e​a​m​ ​p​r​o​j​e​c​t​s​ ​e​f​f​i​c​i​e​n​t​l​y​.​ ​A​u​t​o​m​a​t​e​ ​y​o​u​r​ ​d​e​v​e​l​o​p​m​e​n​t​ ​w​o​r​k​f​l​o​w​ ​b​y​ ​c​o​n​n​e​c​t​i​n​g​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​w​i​t​h​ ​o​t​h​e​r​ ​t​o​o​l​s​ ​a​n​d​ ​s​e​r​v​i​c​e​s​ ​i​n​ ​y​o​u​r​ ​a​u​t​o​m​a​t​i​o​n​ ​p​i​p​e​l​i​n​e​.
+			 */
+			longDesc: string
+			actions: {
+				create_work_item: {
+					/**
+					 * C​r​e​a​t​e​ ​W​o​r​k​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​w​o​r​k​ ​i​t​e​m​ ​i​n​ ​A​z​u​r​e​ ​D​e​v​O​p​s
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​w​o​r​k​ ​i​t​e​m​ ​s​u​c​h​ ​a​s​ ​a​ ​t​a​s​k​,​ ​b​u​g​,​ ​e​p​i​c​,​ ​o​r​ ​u​s​e​r​ ​s​t​o​r​y​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​ ​w​i​t​h​ ​c​u​s​t​o​m​i​z​a​b​l​e​ ​p​r​o​p​e​r​t​i​e​s​ ​a​n​d​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​r​g​e​t​ ​p​r​o​j​e​c​t​ ​f​r​o​m​ ​y​o​u​r​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​w​o​r​k​ ​i​t​e​m​ ​s​h​o​u​l​d​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						itemType: {
+							/**
+							 * W​o​r​k​ ​I​t​e​m​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​w​o​r​k​ ​i​t​e​m​ ​t​o​ ​c​r​e​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​w​o​r​k​ ​i​t​e​m​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​,​ ​s​u​c​h​ ​a​s​ ​T​a​s​k​,​ ​B​u​g​,​ ​E​p​i​c​,​ ​U​s​e​r​ ​S​t​o​r​y​,​ ​o​r​ ​o​t​h​e​r​ ​a​v​a​i​l​a​b​l​e​ ​t​y​p​e​s​ ​i​n​ ​y​o​u​r​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						properties: {
+							/**
+							 * W​o​r​k​ ​I​t​e​m​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​s​ ​a​n​d​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​p​r​o​p​e​r​t​i​e​s​ ​a​n​d​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​,​ ​i​n​c​l​u​d​i​n​g​ ​t​i​t​l​e​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​a​n​d​ ​o​t​h​e​r​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​w​o​r​k​ ​i​t​e​m​ ​t​y​p​e​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									'System.Title': {
+										/**
+										 * T​i​t​l​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m
+										 */
+										shortDesc: string
+										/**
+										 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​t​i​t​l​e​ ​t​h​a​t​ ​s​u​m​m​a​r​i​z​e​s​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​c​o​n​t​e​n​t​.
+										 */
+										longDesc: string
+									}
+									'System.Description': {
+										/**
+										 * D​e​s​c​r​i​p​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * D​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m
+										 */
+										shortDesc: string
+										/**
+										 * A​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​e​x​p​l​a​i​n​i​n​g​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​r​e​q​u​i​r​e​m​e​n​t​s​,​ ​c​o​n​t​e​x​t​,​ ​a​n​d​ ​a​n​y​ ​r​e​l​e​v​a​n​t​ ​d​e​t​a​i​l​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				delete_work_item: {
+					/**
+					 * D​e​l​e​t​e​ ​W​o​r​k​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​w​o​r​k​ ​i​t​e​m​ ​f​r​o​m​ ​A​z​u​r​e​ ​D​e​v​O​p​s
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​ ​a​ ​w​o​r​k​ ​i​t​e​m​ ​f​r​o​m​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​t​o​ ​b​e​ ​d​e​l​e​t​e​d​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						id: {
+							/**
+							 * W​o​r​k​ ​I​t​e​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​o​r​ ​s​e​l​e​c​t​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​w​o​r​k​ ​i​t​e​m​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​p​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​f​r​o​m​ ​t​h​e​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_work_item: {
+					/**
+					 * G​e​t​ ​W​o​r​k​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​w​o​r​k​ ​i​t​e​m
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​w​o​r​k​ ​i​t​e​m​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​c​u​r​r​e​n​t​ ​s​t​a​t​e​,​ ​a​s​s​i​g​n​e​d​ ​u​s​e​r​s​,​ ​a​n​d​ ​a​l​l​ ​f​i​e​l​d​ ​v​a​l​u​e​s​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​i​s​ ​l​o​c​a​t​e​d​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​t​s​ ​d​e​t​a​i​l​s​.
+							 */
+							longDesc: string
+						}
+						id: {
+							/**
+							 * W​o​r​k​ ​I​t​e​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​o​r​ ​s​e​l​e​c​t​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​w​h​o​s​e​ ​d​e​t​a​i​l​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_projects: {
+					/**
+					 * L​i​s​t​ ​P​r​o​j​e​c​t​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​a​c​c​e​s​s​i​b​l​e​ ​p​r​o​j​e​c​t​s​ ​i​n​ ​y​o​u​r​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​r​o​j​e​c​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​r​o​j​e​c​t​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​c​o​n​t​r​o​l​ ​p​a​g​i​n​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​p​r​o​j​e​c​t​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​m​a​n​y​ ​p​r​o​j​e​c​t​s​ ​t​o​ ​s​k​i​p​ ​f​r​o​m​ ​t​h​e​ ​b​e​g​i​n​n​i​n​g​ ​o​f​ ​t​h​e​ ​l​i​s​t​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						stateFilter: {
+							/**
+							 * S​t​a​t​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​p​r​o​j​e​c​t​s​ ​b​y​ ​t​h​e​i​r​ ​c​u​r​r​e​n​t​ ​s​t​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​l​i​s​t​ ​b​a​s​e​d​ ​o​n​ ​p​r​o​j​e​c​t​ ​s​t​a​t​e​ ​s​u​c​h​ ​a​s​ ​a​c​t​i​v​e​,​ ​d​e​l​e​t​e​d​,​ ​o​r​ ​o​t​h​e​r​ ​a​v​a​i​l​a​b​l​e​ ​s​t​a​t​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_users: {
+					/**
+					 * L​i​s​t​ ​U​s​e​r​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​u​s​e​r​s​ ​i​n​ ​t​h​e​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​o​r​g​a​n​i​z​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​u​s​e​r​s​ ​w​h​o​ ​h​a​v​e​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​w​i​t​h​ ​p​a​g​i​n​a​t​i​o​n​ ​s​u​p​p​o​r​t​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​s​e​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​s​e​r​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​c​o​n​t​r​o​l​.
+							 */
+							longDesc: string
+						}
+						continuationToken: {
+							/**
+							 * C​o​n​t​i​n​u​a​t​i​o​n​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​c​o​n​t​i​n​u​a​t​i​o​n​ ​t​o​k​e​n​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​q​u​e​s​t​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​s​e​t​ ​o​f​ ​u​s​e​r​s​ ​i​n​ ​t​h​e​ ​p​a​g​i​n​a​t​e​d​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_work_items: {
+					/**
+					 * L​i​s​t​ ​W​o​r​k​ ​I​t​e​m​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​w​o​r​k​ ​i​t​e​m​s​ ​f​r​o​m​ ​a​ ​p​r​o​j​e​c​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​w​o​r​k​ ​i​t​e​m​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​p​r​o​j​e​c​t​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​o​p​t​i​o​n​s​ ​b​y​ ​t​y​p​e​,​ ​s​t​a​t​e​,​ ​t​i​t​l​e​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​s​u​p​p​o​r​t​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​w​o​r​k​ ​i​t​e​m​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​f​r​o​m​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​w​o​r​k​ ​i​t​e​m​s​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​w​o​r​k​ ​i​t​e​m​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​w​o​r​k​ ​i​t​e​m​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​f​o​r​ ​b​e​t​t​e​r​ ​p​e​r​f​o​r​m​a​n​c​e​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						itemType: {
+							/**
+							 * W​o​r​k​ ​I​t​e​m​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​w​o​r​k​ ​i​t​e​m​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​o​n​l​y​ ​w​o​r​k​ ​i​t​e​m​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​s​u​c​h​ ​a​s​ ​T​a​s​k​,​ ​B​u​g​,​ ​E​p​i​c​,​ ​o​r​ ​U​s​e​r​ ​S​t​o​r​y​.
+							 */
+							longDesc: string
+						}
+						state: {
+							/**
+							 * S​t​a​t​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​w​o​r​k​ ​i​t​e​m​ ​s​t​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​w​o​r​k​ ​i​t​e​m​s​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​i​r​ ​c​u​r​r​e​n​t​ ​s​t​a​t​e​ ​s​u​c​h​ ​a​s​ ​N​e​w​,​ ​A​c​t​i​v​e​,​ ​R​e​s​o​l​v​e​d​,​ ​o​r​ ​C​l​o​s​e​d​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​w​o​r​k​ ​i​t​e​m​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​w​o​r​k​ ​i​t​e​m​s​ ​t​h​a​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t​ ​i​n​ ​t​h​e​i​r​ ​t​i​t​l​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_work_item: {
+					/**
+					 * U​p​d​a​t​e​ ​W​o​r​k​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​w​o​r​k​ ​i​t​e​m
+					 */
+					shortDesc: string
+					/**
+					 * M​o​d​i​f​y​ ​t​h​e​ ​p​r​o​p​e​r​t​i​e​s​ ​a​n​d​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​w​o​r​k​ ​i​t​e​m​ ​i​n​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​w​i​t​h​ ​t​h​e​ ​a​b​i​l​i​t​y​ ​t​o​ ​u​p​d​a​t​e​ ​a​n​y​ ​a​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​t​o​ ​b​e​ ​u​p​d​a​t​e​d​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						itemId: {
+							/**
+							 * W​o​r​k​ ​I​t​e​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​o​r​ ​s​e​l​e​c​t​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​d​i​f​y​.
+							 */
+							longDesc: string
+						}
+						properties: {
+							/**
+							 * U​p​d​a​t​e​d​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​v​a​l​u​e​s​ ​f​o​r​ ​w​o​r​k​ ​i​t​e​m​ ​f​i​e​l​d​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​f​i​e​l​d​s​ ​a​n​d​ ​t​h​e​i​r​ ​n​e​w​ ​v​a​l​u​e​s​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​ ​i​n​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​.​ ​A​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​ ​d​e​p​e​n​d​ ​o​n​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​t​y​p​e​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									'System.Title': {
+										/**
+										 * T​i​t​l​e
+										 */
+										displayName: string
+										/**
+										 * U​p​d​a​t​e​d​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m
+										 */
+										shortDesc: string
+										/**
+										 * P​r​o​v​i​d​e​ ​a​ ​n​e​w​ ​t​i​t​l​e​ ​t​h​a​t​ ​b​e​t​t​e​r​ ​d​e​s​c​r​i​b​e​s​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​c​o​n​t​e​n​t​.
+										 */
+										longDesc: string
+									}
+									'System.Description': {
+										/**
+										 * D​e​s​c​r​i​p​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * U​p​d​a​t​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m
+										 */
+										shortDesc: string
+										/**
+										 * P​r​o​v​i​d​e​ ​a​n​ ​u​p​d​a​t​e​d​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​w​i​t​h​ ​n​e​w​ ​r​e​q​u​i​r​e​m​e​n​t​s​,​ ​c​o​n​t​e​x​t​,​ ​o​r​ ​r​e​l​e​v​a​n​t​ ​d​e​t​a​i​l​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			triggers: {
+				new_work_item: {
+					/**
+					 * N​e​w​ ​W​o​r​k​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​w​o​r​k​ ​i​t​e​m​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * R​e​c​e​i​v​e​ ​r​e​a​l​-​t​i​m​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​w​o​r​k​ ​i​t​e​m​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​,​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​w​o​r​k​ ​i​t​e​m​ ​t​y​p​e​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​w​o​r​k​ ​i​t​e​m​s​ ​b​e​i​n​g​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						itemType: {
+							/**
+							 * W​o​r​k​ ​I​t​e​m​ ​T​y​p​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​w​o​r​k​ ​i​t​e​m​ ​t​y​p​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​t​o​ ​o​n​l​y​ ​f​i​r​e​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​s​ ​o​f​ ​w​o​r​k​ ​i​t​e​m​s​ ​s​u​c​h​ ​a​s​ ​T​a​s​k​s​,​ ​B​u​g​s​,​ ​o​r​ ​U​s​e​r​ ​S​t​o​r​i​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				updated_work_item: {
+					/**
+					 * U​p​d​a​t​e​d​ ​W​o​r​k​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​w​o​r​k​ ​i​t​e​m​ ​i​s​ ​u​p​d​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * R​e​c​e​i​v​e​ ​r​e​a​l​-​t​i​m​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​w​o​r​k​ ​i​t​e​m​ ​i​s​ ​m​o​d​i​f​i​e​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​,​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​w​o​r​k​ ​i​t​e​m​ ​t​y​p​e​ ​a​n​d​ ​c​h​a​n​g​e​d​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​w​o​r​k​ ​i​t​e​m​ ​u​p​d​a​t​e​s​.
+							 */
+							longDesc: string
+						}
+						itemType: {
+							/**
+							 * W​o​r​k​ ​I​t​e​m​ ​T​y​p​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​w​o​r​k​ ​i​t​e​m​ ​t​y​p​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​t​o​ ​o​n​l​y​ ​f​i​r​e​ ​f​o​r​ ​u​p​d​a​t​e​s​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​s​ ​o​f​ ​w​o​r​k​ ​i​t​e​m​s​.
+							 */
+							longDesc: string
+						}
+						changedFields: {
+							/**
+							 * C​h​a​n​g​e​d​ ​F​i​e​l​d​s​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​c​h​a​n​g​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​s​p​e​c​i​f​y​ ​w​h​i​c​h​ ​f​i​e​l​d​ ​c​h​a​n​g​e​s​ ​s​h​o​u​l​d​ ​t​r​i​g​g​e​r​ ​t​h​i​s​ ​w​e​b​h​o​o​k​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​a​n​y​ ​f​i​e​l​d​ ​c​h​a​n​g​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		AzureActiveDirectory: {
 			/**
 			 * A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y
@@ -78010,6 +78586,582 @@ export type TranslationFunctions = {
 					 * Other
 					 */
 					group: () => LocalizedString
+				}
+			}
+		}
+		AzureDevOps: {
+			/**
+			 * Azure DevOps
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Azure DevOps to automate project management, code repositories, and CI/CD pipelines.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Azure DevOps integration provides comprehensive actions and triggers to interact with Azure DevOps Services. Manage work items, repositories, builds, releases, and team projects efficiently. Automate your development workflow by connecting Azure DevOps with other tools and services in your automation pipeline.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				create_work_item: {
+					/**
+					 * Create Work Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new work item in Azure DevOps
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new work item such as a task, bug, epic, or user story in a specified Azure DevOps project with customizable properties and fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Azure DevOps project where the work item will be created
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the target project from your Azure DevOps organization where the new work item should be created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						itemType: {
+							/**
+							 * Work Item Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The type of work item to create
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the specific type of work item you want to create, such as Task, Bug, Epic, User Story, or other available types in your project.
+							 */
+							longDesc: () => LocalizedString
+						}
+						properties: {
+							/**
+							 * Work Item Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Fields and values for the work item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure the properties and field values for the work item, including title, description, and other custom fields based on the selected work item type.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									'System.Title': {
+										/**
+										 * Title
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The title of the work item
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * A descriptive title that summarizes the work item content.
+										 */
+										longDesc: () => LocalizedString
+									}
+									'System.Description': {
+										/**
+										 * Description
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Detailed description of the work item
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * A comprehensive description explaining the work item requirements, context, and any relevant details.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				delete_work_item: {
+					/**
+					 * Delete Work Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a work item from Azure DevOps
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently remove a work item from the specified Azure DevOps project. This action cannot be undone.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Azure DevOps project containing the work item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the project where the work item to be deleted is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						id: {
+							/**
+							 * Work Item ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the work item to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter or select the ID of the specific work item you want to permanently delete from the project.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_work_item: {
+					/**
+					 * Get Work Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific work item
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch comprehensive information about a work item including its current state, assigned users, and all field values.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Azure DevOps project containing the work item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the project where the work item is located to retrieve its details.
+							 */
+							longDesc: () => LocalizedString
+						}
+						id: {
+							/**
+							 * Work Item ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the work item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter or select the ID of the work item whose details you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_projects: {
+					/**
+					 * List Projects
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get a list of Azure DevOps projects
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all accessible projects in your Azure DevOps organization with optional filtering and pagination.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of projects to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the maximum number of projects to include in the response to control pagination.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of projects to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how many projects to skip from the beginning of the list for pagination purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						stateFilter: {
+							/**
+							 * State Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter projects by their current state
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the project list based on project state such as active, deleted, or other available states.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_users: {
+					/**
+					 * List Users
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get a list of users in the Azure DevOps organization
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all users who have access to your Azure DevOps organization with pagination support.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of users to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the maximum number of users to include in the response for pagination control.
+							 */
+							longDesc: () => LocalizedString
+						}
+						continuationToken: {
+							/**
+							 * Continuation Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for retrieving the next page of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the continuation token from a previous request to get the next set of users in the paginated results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_work_items: {
+					/**
+					 * List Work Items
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get a list of work items from a project
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve work items from a specified project with filtering options by type, state, title, and pagination support.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Azure DevOps project to search for work items
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the project from which you want to retrieve work items.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of work items to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the maximum number of work items to include in the response for better performance and pagination.
+							 */
+							longDesc: () => LocalizedString
+						}
+						itemType: {
+							/**
+							 * Work Item Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by work item type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the results to include only work items of a specific type such as Task, Bug, Epic, or User Story.
+							 */
+							longDesc: () => LocalizedString
+						}
+						state: {
+							/**
+							 * State
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by work item state
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter work items based on their current state such as New, Active, Resolved, or Closed.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by work item title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for work items that contain the specified text in their title.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_work_item: {
+					/**
+					 * Update Work Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing work item
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Modify the properties and field values of an existing work item in Azure DevOps with the ability to update any available fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Azure DevOps project containing the work item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the project where the work item to be updated is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						itemId: {
+							/**
+							 * Work Item ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the work item to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter or select the ID of the work item you want to modify.
+							 */
+							longDesc: () => LocalizedString
+						}
+						properties: {
+							/**
+							 * Updated Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New values for work item fields
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the fields and their new values that you want to update in the work item. Available fields depend on the work item type.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									'System.Title': {
+										/**
+										 * Title
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Updated title for the work item
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Provide a new title that better describes the work item content.
+										 */
+										longDesc: () => LocalizedString
+									}
+									'System.Description': {
+										/**
+										 * Description
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Updated description for the work item
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Provide an updated comprehensive description with new requirements, context, or relevant details.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			triggers: {
+				new_work_item: {
+					/**
+					 * New Work Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new work item is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Receive real-time notifications whenever a new work item is created in the specified Azure DevOps project, with optional filtering by work item type.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Azure DevOps project to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the project where you want to monitor for new work items being created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						itemType: {
+							/**
+							 * Work Item Type Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by specific work item types
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter the trigger to only fire for specific types of work items such as Tasks, Bugs, or User Stories.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				updated_work_item: {
+					/**
+					 * Updated Work Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a work item is updated
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Receive real-time notifications whenever a work item is modified in the specified Azure DevOps project, with optional filtering by work item type and changed fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Azure DevOps project to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the project where you want to monitor for work item updates.
+							 */
+							longDesc: () => LocalizedString
+						}
+						itemType: {
+							/**
+							 * Work Item Type Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by specific work item types
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter the trigger to only fire for updates to specific types of work items.
+							 */
+							longDesc: () => LocalizedString
+						}
+						changedFields: {
+							/**
+							 * Changed Fields Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by specific field changes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally specify which field changes should trigger this webhook. Leave empty to trigger on any field change.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 			}
 		}
