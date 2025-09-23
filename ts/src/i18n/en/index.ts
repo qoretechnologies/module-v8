@@ -12,6 +12,7 @@ import AmazonSNS from './apps/AmazonSNS';
 import AmazonSQS from './apps/AmazonSQS';
 import Asana from './apps/Asana';
 import Attio from './apps/Attio';
+import AzureDevOps from './apps/AzureDevOps';
 import BigMl from './apps/BigMl';
 import Bitbucket from './apps/Bitbucket';
 import Brevo from './apps/Brevo';
@@ -168,6 +169,7 @@ const en = {
       },
     },
     Asana,
+    AzureDevOps,
     AzureActiveDirectory,
     AmazonEC2,
     AmazonS3,

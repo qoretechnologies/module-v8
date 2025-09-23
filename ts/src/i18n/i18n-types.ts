@@ -5262,6 +5262,20 @@ type RootTranslation = {
 				}
 			}
 		}
+		AzureDevOps: {
+			/**
+			 * A​z​u​r​e​ ​D​e​v​O​p​s
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​p​r​o​j​e​c​t​ ​m​a​n​a​g​e​m​e​n​t​,​ ​c​o​d​e​ ​r​e​p​o​s​i​t​o​r​i​e​s​,​ ​a​n​d​ ​C​I​/​C​D​ ​p​i​p​e​l​i​n​e​s​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​S​e​r​v​i​c​e​s​.​ ​M​a​n​a​g​e​ ​w​o​r​k​ ​i​t​e​m​s​,​ ​r​e​p​o​s​i​t​o​r​i​e​s​,​ ​b​u​i​l​d​s​,​ ​r​e​l​e​a​s​e​s​,​ ​a​n​d​ ​t​e​a​m​ ​p​r​o​j​e​c​t​s​ ​e​f​f​i​c​i​e​n​t​l​y​.​ ​A​u​t​o​m​a​t​e​ ​y​o​u​r​ ​d​e​v​e​l​o​p​m​e​n​t​ ​w​o​r​k​f​l​o​w​ ​b​y​ ​c​o​n​n​e​c​t​i​n​g​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​w​i​t​h​ ​o​t​h​e​r​ ​t​o​o​l​s​ ​a​n​d​ ​s​e​r​v​i​c​e​s​ ​i​n​ ​y​o​u​r​ ​a​u​t​o​m​a​t​i​o​n​ ​p​i​p​e​l​i​n​e​.
+			 */
+			longDesc: string
+		}
 		AzureActiveDirectory: {
 			/**
 			 * A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y
@@ -78012,6 +78026,20 @@ export type TranslationFunctions = {
 					group: () => LocalizedString
 				}
 			}
+		}
+		AzureDevOps: {
+			/**
+			 * Azure DevOps
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Azure DevOps to automate project management, code repositories, and CI/CD pipelines.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Azure DevOps integration provides comprehensive actions and triggers to interact with Azure DevOps Services. Manage work items, repositories, builds, releases, and team projects efficiently. Automate your development workflow by connecting Azure DevOps with other tools and services in your automation pipeline.
+			 */
+			longDesc: () => LocalizedString
 		}
 		AzureActiveDirectory: {
 			/**
