@@ -324,6 +324,8 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         }
         return {
             "url": real_url,
+            "logger": logger,
+            "update_options": update_options,
         } + opts;
     }
 
