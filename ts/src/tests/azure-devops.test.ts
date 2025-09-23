@@ -259,7 +259,7 @@ describe('Should test Azure DevOps actions', () => {
       describe('New Work Item Trigger', () => {
         let regInfo: Record<string, any> | undefined | void;
 
-        it('Should register New Work Item  trigger', async () => {
+        it('Should register New Work Item trigger', async () => {
           const trigger = NewAzureDevOpsWorkItem;
 
           if (!('webhook_register' in trigger))
