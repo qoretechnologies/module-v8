@@ -83,6 +83,7 @@ import notion from '../apps/notion';
 import amazonSes from '../apps/amazon-ses';
 import azureDevops from '../apps/azure-devops';
 import activeDirectory from '../apps/active-directory';
+import paypal from '../apps/paypal';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -151,6 +152,7 @@ const NEW_APPS = {
   openrouter,
   outlook,
   paddle,
+  paypal,
   pipedrive,
   quickbooks,
   serenity,
