@@ -81,6 +81,7 @@ import amazonSqs from '../apps/amazon-sqs';
 import amazonCloudWatch from '../apps/amazon-cloudwatch';
 import notion from '../apps/notion';
 import amazonSes from '../apps/amazon-ses';
+import azureDevops from '../apps/azure-devops';
 import activeDirectory from '../apps/active-directory';
 
 if (process.env.TS_DEBUG) {
@@ -109,6 +110,7 @@ const NEW_APPS = {
   amazonSqs,
   asana,
   attio,
+  azureDevops,
   bigml,
   bitbucket,
   brevo,
