@@ -70,6 +70,7 @@ import Xero from './apps/Xero';
 import YouTube from './apps/YouTube';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
+import PayPal from './apps/PayPal';
 
 const en = {
   common: {},
@@ -239,6 +240,7 @@ const en = {
     Telegram,
     Brevo,
     GoogleTasks,
+    PayPal,
   },
 } satisfies BaseTranslation;
 
