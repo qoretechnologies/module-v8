@@ -5262,6 +5262,582 @@ type RootTranslation = {
 				}
 			}
 		}
+		AzureDevOps: {
+			/**
+			 * A​z​u​r​e​ ​D​e​v​O​p​s
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​p​r​o​j​e​c​t​ ​m​a​n​a​g​e​m​e​n​t​,​ ​c​o​d​e​ ​r​e​p​o​s​i​t​o​r​i​e​s​,​ ​a​n​d​ ​C​I​/​C​D​ ​p​i​p​e​l​i​n​e​s​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​S​e​r​v​i​c​e​s​.​ ​M​a​n​a​g​e​ ​w​o​r​k​ ​i​t​e​m​s​,​ ​r​e​p​o​s​i​t​o​r​i​e​s​,​ ​b​u​i​l​d​s​,​ ​r​e​l​e​a​s​e​s​,​ ​a​n​d​ ​t​e​a​m​ ​p​r​o​j​e​c​t​s​ ​e​f​f​i​c​i​e​n​t​l​y​.​ ​A​u​t​o​m​a​t​e​ ​y​o​u​r​ ​d​e​v​e​l​o​p​m​e​n​t​ ​w​o​r​k​f​l​o​w​ ​b​y​ ​c​o​n​n​e​c​t​i​n​g​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​w​i​t​h​ ​o​t​h​e​r​ ​t​o​o​l​s​ ​a​n​d​ ​s​e​r​v​i​c​e​s​ ​i​n​ ​y​o​u​r​ ​a​u​t​o​m​a​t​i​o​n​ ​p​i​p​e​l​i​n​e​.
+			 */
+			longDesc: string
+			actions: {
+				create_work_item: {
+					/**
+					 * C​r​e​a​t​e​ ​W​o​r​k​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​w​o​r​k​ ​i​t​e​m​ ​i​n​ ​A​z​u​r​e​ ​D​e​v​O​p​s
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​w​o​r​k​ ​i​t​e​m​ ​s​u​c​h​ ​a​s​ ​a​ ​t​a​s​k​,​ ​b​u​g​,​ ​e​p​i​c​,​ ​o​r​ ​u​s​e​r​ ​s​t​o​r​y​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​ ​w​i​t​h​ ​c​u​s​t​o​m​i​z​a​b​l​e​ ​p​r​o​p​e​r​t​i​e​s​ ​a​n​d​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​r​g​e​t​ ​p​r​o​j​e​c​t​ ​f​r​o​m​ ​y​o​u​r​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​w​o​r​k​ ​i​t​e​m​ ​s​h​o​u​l​d​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						itemType: {
+							/**
+							 * W​o​r​k​ ​I​t​e​m​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​w​o​r​k​ ​i​t​e​m​ ​t​o​ ​c​r​e​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​o​f​ ​w​o​r​k​ ​i​t​e​m​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​,​ ​s​u​c​h​ ​a​s​ ​T​a​s​k​,​ ​B​u​g​,​ ​E​p​i​c​,​ ​U​s​e​r​ ​S​t​o​r​y​,​ ​o​r​ ​o​t​h​e​r​ ​a​v​a​i​l​a​b​l​e​ ​t​y​p​e​s​ ​i​n​ ​y​o​u​r​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						properties: {
+							/**
+							 * W​o​r​k​ ​I​t​e​m​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​s​ ​a​n​d​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​p​r​o​p​e​r​t​i​e​s​ ​a​n​d​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​,​ ​i​n​c​l​u​d​i​n​g​ ​t​i​t​l​e​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​a​n​d​ ​o​t​h​e​r​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​w​o​r​k​ ​i​t​e​m​ ​t​y​p​e​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									'System.Title': {
+										/**
+										 * T​i​t​l​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m
+										 */
+										shortDesc: string
+										/**
+										 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​t​i​t​l​e​ ​t​h​a​t​ ​s​u​m​m​a​r​i​z​e​s​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​c​o​n​t​e​n​t​.
+										 */
+										longDesc: string
+									}
+									'System.Description': {
+										/**
+										 * D​e​s​c​r​i​p​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * D​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m
+										 */
+										shortDesc: string
+										/**
+										 * A​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​e​x​p​l​a​i​n​i​n​g​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​r​e​q​u​i​r​e​m​e​n​t​s​,​ ​c​o​n​t​e​x​t​,​ ​a​n​d​ ​a​n​y​ ​r​e​l​e​v​a​n​t​ ​d​e​t​a​i​l​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				delete_work_item: {
+					/**
+					 * D​e​l​e​t​e​ ​W​o​r​k​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​w​o​r​k​ ​i​t​e​m​ ​f​r​o​m​ ​A​z​u​r​e​ ​D​e​v​O​p​s
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​ ​a​ ​w​o​r​k​ ​i​t​e​m​ ​f​r​o​m​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​t​o​ ​b​e​ ​d​e​l​e​t​e​d​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						id: {
+							/**
+							 * W​o​r​k​ ​I​t​e​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​o​r​ ​s​e​l​e​c​t​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​w​o​r​k​ ​i​t​e​m​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​p​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​f​r​o​m​ ​t​h​e​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_work_item: {
+					/**
+					 * G​e​t​ ​W​o​r​k​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​w​o​r​k​ ​i​t​e​m
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​w​o​r​k​ ​i​t​e​m​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​c​u​r​r​e​n​t​ ​s​t​a​t​e​,​ ​a​s​s​i​g​n​e​d​ ​u​s​e​r​s​,​ ​a​n​d​ ​a​l​l​ ​f​i​e​l​d​ ​v​a​l​u​e​s​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​i​s​ ​l​o​c​a​t​e​d​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​t​s​ ​d​e​t​a​i​l​s​.
+							 */
+							longDesc: string
+						}
+						id: {
+							/**
+							 * W​o​r​k​ ​I​t​e​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​o​r​ ​s​e​l​e​c​t​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​w​h​o​s​e​ ​d​e​t​a​i​l​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_projects: {
+					/**
+					 * L​i​s​t​ ​P​r​o​j​e​c​t​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​a​c​c​e​s​s​i​b​l​e​ ​p​r​o​j​e​c​t​s​ ​i​n​ ​y​o​u​r​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​r​o​j​e​c​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​r​o​j​e​c​t​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​c​o​n​t​r​o​l​ ​p​a​g​i​n​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​p​r​o​j​e​c​t​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​m​a​n​y​ ​p​r​o​j​e​c​t​s​ ​t​o​ ​s​k​i​p​ ​f​r​o​m​ ​t​h​e​ ​b​e​g​i​n​n​i​n​g​ ​o​f​ ​t​h​e​ ​l​i​s​t​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+						stateFilter: {
+							/**
+							 * S​t​a​t​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​p​r​o​j​e​c​t​s​ ​b​y​ ​t​h​e​i​r​ ​c​u​r​r​e​n​t​ ​s​t​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​l​i​s​t​ ​b​a​s​e​d​ ​o​n​ ​p​r​o​j​e​c​t​ ​s​t​a​t​e​ ​s​u​c​h​ ​a​s​ ​a​c​t​i​v​e​,​ ​d​e​l​e​t​e​d​,​ ​o​r​ ​o​t​h​e​r​ ​a​v​a​i​l​a​b​l​e​ ​s​t​a​t​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_users: {
+					/**
+					 * L​i​s​t​ ​U​s​e​r​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​u​s​e​r​s​ ​i​n​ ​t​h​e​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​o​r​g​a​n​i​z​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​u​s​e​r​s​ ​w​h​o​ ​h​a​v​e​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​w​i​t​h​ ​p​a​g​i​n​a​t​i​o​n​ ​s​u​p​p​o​r​t​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​s​e​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​s​e​r​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​c​o​n​t​r​o​l​.
+							 */
+							longDesc: string
+						}
+						continuationToken: {
+							/**
+							 * C​o​n​t​i​n​u​a​t​i​o​n​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​c​o​n​t​i​n​u​a​t​i​o​n​ ​t​o​k​e​n​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​q​u​e​s​t​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​s​e​t​ ​o​f​ ​u​s​e​r​s​ ​i​n​ ​t​h​e​ ​p​a​g​i​n​a​t​e​d​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_work_items: {
+					/**
+					 * L​i​s​t​ ​W​o​r​k​ ​I​t​e​m​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​w​o​r​k​ ​i​t​e​m​s​ ​f​r​o​m​ ​a​ ​p​r​o​j​e​c​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​w​o​r​k​ ​i​t​e​m​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​p​r​o​j​e​c​t​ ​w​i​t​h​ ​f​i​l​t​e​r​i​n​g​ ​o​p​t​i​o​n​s​ ​b​y​ ​t​y​p​e​,​ ​s​t​a​t​e​,​ ​t​i​t​l​e​,​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​s​u​p​p​o​r​t​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​w​o​r​k​ ​i​t​e​m​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​f​r​o​m​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​w​o​r​k​ ​i​t​e​m​s​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​w​o​r​k​ ​i​t​e​m​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​w​o​r​k​ ​i​t​e​m​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​f​o​r​ ​b​e​t​t​e​r​ ​p​e​r​f​o​r​m​a​n​c​e​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						itemType: {
+							/**
+							 * W​o​r​k​ ​I​t​e​m​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​w​o​r​k​ ​i​t​e​m​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​o​n​l​y​ ​w​o​r​k​ ​i​t​e​m​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​ ​s​u​c​h​ ​a​s​ ​T​a​s​k​,​ ​B​u​g​,​ ​E​p​i​c​,​ ​o​r​ ​U​s​e​r​ ​S​t​o​r​y​.
+							 */
+							longDesc: string
+						}
+						state: {
+							/**
+							 * S​t​a​t​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​w​o​r​k​ ​i​t​e​m​ ​s​t​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​w​o​r​k​ ​i​t​e​m​s​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​i​r​ ​c​u​r​r​e​n​t​ ​s​t​a​t​e​ ​s​u​c​h​ ​a​s​ ​N​e​w​,​ ​A​c​t​i​v​e​,​ ​R​e​s​o​l​v​e​d​,​ ​o​r​ ​C​l​o​s​e​d​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​w​o​r​k​ ​i​t​e​m​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​w​o​r​k​ ​i​t​e​m​s​ ​t​h​a​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t​ ​i​n​ ​t​h​e​i​r​ ​t​i​t​l​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_work_item: {
+					/**
+					 * U​p​d​a​t​e​ ​W​o​r​k​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​w​o​r​k​ ​i​t​e​m
+					 */
+					shortDesc: string
+					/**
+					 * M​o​d​i​f​y​ ​t​h​e​ ​p​r​o​p​e​r​t​i​e​s​ ​a​n​d​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​w​o​r​k​ ​i​t​e​m​ ​i​n​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​w​i​t​h​ ​t​h​e​ ​a​b​i​l​i​t​y​ ​t​o​ ​u​p​d​a​t​e​ ​a​n​y​ ​a​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​t​o​ ​b​e​ ​u​p​d​a​t​e​d​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						itemId: {
+							/**
+							 * W​o​r​k​ ​I​t​e​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​o​r​ ​s​e​l​e​c​t​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​d​i​f​y​.
+							 */
+							longDesc: string
+						}
+						properties: {
+							/**
+							 * U​p​d​a​t​e​d​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​v​a​l​u​e​s​ ​f​o​r​ ​w​o​r​k​ ​i​t​e​m​ ​f​i​e​l​d​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​f​i​e​l​d​s​ ​a​n​d​ ​t​h​e​i​r​ ​n​e​w​ ​v​a​l​u​e​s​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​ ​i​n​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​.​ ​A​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​ ​d​e​p​e​n​d​ ​o​n​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​t​y​p​e​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									'System.Title': {
+										/**
+										 * T​i​t​l​e
+										 */
+										displayName: string
+										/**
+										 * U​p​d​a​t​e​d​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m
+										 */
+										shortDesc: string
+										/**
+										 * P​r​o​v​i​d​e​ ​a​ ​n​e​w​ ​t​i​t​l​e​ ​t​h​a​t​ ​b​e​t​t​e​r​ ​d​e​s​c​r​i​b​e​s​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m​ ​c​o​n​t​e​n​t​.
+										 */
+										longDesc: string
+									}
+									'System.Description': {
+										/**
+										 * D​e​s​c​r​i​p​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * U​p​d​a​t​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​w​o​r​k​ ​i​t​e​m
+										 */
+										shortDesc: string
+										/**
+										 * P​r​o​v​i​d​e​ ​a​n​ ​u​p​d​a​t​e​d​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​w​i​t​h​ ​n​e​w​ ​r​e​q​u​i​r​e​m​e​n​t​s​,​ ​c​o​n​t​e​x​t​,​ ​o​r​ ​r​e​l​e​v​a​n​t​ ​d​e​t​a​i​l​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			triggers: {
+				new_work_item: {
+					/**
+					 * N​e​w​ ​W​o​r​k​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​w​o​r​k​ ​i​t​e​m​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * R​e​c​e​i​v​e​ ​r​e​a​l​-​t​i​m​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​w​o​r​k​ ​i​t​e​m​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​,​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​w​o​r​k​ ​i​t​e​m​ ​t​y​p​e​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​w​o​r​k​ ​i​t​e​m​s​ ​b​e​i​n​g​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						itemType: {
+							/**
+							 * W​o​r​k​ ​I​t​e​m​ ​T​y​p​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​w​o​r​k​ ​i​t​e​m​ ​t​y​p​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​t​o​ ​o​n​l​y​ ​f​i​r​e​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​s​ ​o​f​ ​w​o​r​k​ ​i​t​e​m​s​ ​s​u​c​h​ ​a​s​ ​T​a​s​k​s​,​ ​B​u​g​s​,​ ​o​r​ ​U​s​e​r​ ​S​t​o​r​i​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				updated_work_item: {
+					/**
+					 * U​p​d​a​t​e​d​ ​W​o​r​k​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​w​o​r​k​ ​i​t​e​m​ ​i​s​ ​u​p​d​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * R​e​c​e​i​v​e​ ​r​e​a​l​-​t​i​m​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​w​o​r​k​ ​i​t​e​m​ ​i​s​ ​m​o​d​i​f​i​e​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​,​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​w​o​r​k​ ​i​t​e​m​ ​t​y​p​e​ ​a​n​d​ ​c​h​a​n​g​e​d​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​A​z​u​r​e​ ​D​e​v​O​p​s​ ​p​r​o​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​w​o​r​k​ ​i​t​e​m​ ​u​p​d​a​t​e​s​.
+							 */
+							longDesc: string
+						}
+						itemType: {
+							/**
+							 * W​o​r​k​ ​I​t​e​m​ ​T​y​p​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​w​o​r​k​ ​i​t​e​m​ ​t​y​p​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​t​o​ ​o​n​l​y​ ​f​i​r​e​ ​f​o​r​ ​u​p​d​a​t​e​s​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​s​ ​o​f​ ​w​o​r​k​ ​i​t​e​m​s​.
+							 */
+							longDesc: string
+						}
+						changedFields: {
+							/**
+							 * C​h​a​n​g​e​d​ ​F​i​e​l​d​s​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​c​h​a​n​g​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​s​p​e​c​i​f​y​ ​w​h​i​c​h​ ​f​i​e​l​d​ ​c​h​a​n​g​e​s​ ​s​h​o​u​l​d​ ​t​r​i​g​g​e​r​ ​t​h​i​s​ ​w​e​b​h​o​o​k​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​a​n​y​ ​f​i​e​l​d​ ​c​h​a​n​g​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		AzureActiveDirectory: {
 			/**
 			 * A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y
@@ -72760,6 +73336,1550 @@ type RootTranslation = {
 				}
 			}
 		}
+		PayPal: {
+			/**
+			 * P​a​y​P​a​l
+			 */
+			displayName: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​P​a​y​P​a​l​ ​t​o​ ​m​a​n​a​g​e​ ​p​a​y​m​e​n​t​s​,​ ​o​r​d​e​r​s​,​ ​i​n​v​o​i​c​e​s​,​ ​d​i​s​p​u​t​e​s​,​ ​a​n​d​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​ ​t​h​r​o​u​g​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​A​P​I​s​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​P​a​y​P​a​l​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​l​e​t​e​ ​a​c​c​e​s​s​ ​t​o​ ​P​a​y​P​a​l​'​s​ ​R​E​S​T​ ​A​P​I​s​ ​f​o​r​ ​m​a​n​a​g​i​n​g​ ​e​-​c​o​m​m​e​r​c​e​ ​t​r​a​n​s​a​c​t​i​o​n​s​.​ ​C​r​e​a​t​e​ ​a​n​d​ ​c​a​p​t​u​r​e​ ​o​r​d​e​r​s​,​ ​p​r​o​c​e​s​s​ ​p​a​y​m​e​n​t​s​ ​a​n​d​ ​r​e​f​u​n​d​s​,​ ​m​a​n​a​g​e​ ​i​n​v​o​i​c​e​s​ ​a​n​d​ ​b​i​l​l​i​n​g​,​ ​h​a​n​d​l​e​ ​c​u​s​t​o​m​e​r​ ​d​i​s​p​u​t​e​s​,​ ​s​e​t​ ​u​p​ ​r​e​c​u​r​r​i​n​g​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​,​ ​a​n​d​ ​r​e​c​e​i​v​e​ ​r​e​a​l​-​t​i​m​e​ ​w​e​b​h​o​o​k​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​.​ ​P​e​r​f​e​c​t​ ​f​o​r​ ​b​u​s​i​n​e​s​s​e​s​ ​o​f​ ​a​l​l​ ​s​i​z​e​s​ ​l​o​o​k​i​n​g​ ​t​o​ ​a​c​c​e​p​t​ ​p​a​y​m​e​n​t​s​ ​s​e​c​u​r​e​l​y​ ​a​n​d​ ​e​f​f​i​c​i​e​n​t​l​y​.
+			 */
+			longDesc: string
+			actions: {
+				create_order: {
+					/**
+					 * C​r​e​a​t​e​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​a​y​m​e​n​t​ ​o​r​d​e​r​ ​w​i​t​h​ ​p​u​r​c​h​a​s​e​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​P​a​y​P​a​l​ ​o​r​d​e​r​ ​w​i​t​h​ ​s​p​e​c​i​f​i​e​d​ ​p​a​y​m​e​n​t​ ​a​m​o​u​n​t​,​ ​i​t​e​m​s​,​ ​s​h​i​p​p​i​n​g​ ​d​e​t​a​i​l​s​,​ ​a​n​d​ ​p​a​y​m​e​n​t​ ​p​r​e​f​e​r​e​n​c​e​s​.​ ​O​r​d​e​r​s​ ​r​e​p​r​e​s​e​n​t​ ​a​ ​p​a​y​m​e​n​t​ ​b​e​t​w​e​e​n​ ​t​w​o​ ​o​r​ ​m​o​r​e​ ​p​a​r​t​i​e​s​ ​a​n​d​ ​c​a​n​ ​b​e​ ​a​u​t​h​o​r​i​z​e​d​ ​i​m​m​e​d​i​a​t​e​l​y​ ​o​r​ ​c​a​p​t​u​r​e​d​ ​l​a​t​e​r​.​ ​S​u​p​p​o​r​t​s​ ​v​a​r​i​o​u​s​ ​p​a​y​m​e​n​t​ ​s​o​u​r​c​e​s​ ​i​n​c​l​u​d​i​n​g​ ​P​a​y​P​a​l​,​ ​c​a​r​d​s​,​ ​a​n​d​ ​a​l​t​e​r​n​a​t​i​v​e​ ​p​a​y​m​e​n​t​ ​m​e​t​h​o​d​s​.
+					 */
+					longDesc: string
+					options: {
+						intent: {
+							/**
+							 * P​a​y​m​e​n​t​ ​I​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​c​a​p​t​u​r​e​ ​p​a​y​m​e​n​t​ ​i​m​m​e​d​i​a​t​e​l​y​ ​o​r​ ​a​u​t​h​o​r​i​z​e​ ​f​o​r​ ​l​a​t​e​r​ ​c​a​p​t​u​r​e
+							 */
+							shortDesc: string
+							/**
+							 * D​e​t​e​r​m​i​n​e​s​ ​w​h​e​n​ ​t​h​e​ ​p​a​y​m​e​n​t​ ​w​i​l​l​ ​b​e​ ​p​r​o​c​e​s​s​e​d​.​ ​C​A​P​T​U​R​E​ ​p​r​o​c​e​s​s​e​s​ ​p​a​y​m​e​n​t​ ​i​m​m​e​d​i​a​t​e​l​y​ ​a​f​t​e​r​ ​a​p​p​r​o​v​a​l​,​ ​w​h​i​l​e​ ​A​U​T​H​O​R​I​Z​E​ ​p​l​a​c​e​s​ ​a​ ​h​o​l​d​ ​o​n​ ​f​u​n​d​s​ ​f​o​r​ ​u​p​ ​t​o​ ​2​9​ ​d​a​y​s​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​c​a​p​t​u​r​e​ ​p​a​y​m​e​n​t​ ​w​h​e​n​ ​r​e​a​d​y​ ​t​o​ ​f​u​l​f​i​l​l​ ​t​h​e​ ​o​r​d​e​r​.
+							 */
+							longDesc: string
+						}
+						currency_code: {
+							/**
+							 * C​u​r​r​e​n​c​y​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * T​h​r​e​e​-​l​e​t​t​e​r​ ​I​S​O​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​t​r​a​n​s​a​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​h​r​e​e​-​c​h​a​r​a​c​t​e​r​ ​I​S​O​-​4​2​1​7​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​t​h​a​t​ ​i​d​e​n​t​i​f​i​e​s​ ​t​h​e​ ​c​u​r​r​e​n​c​y​ ​f​o​r​ ​t​h​i​s​ ​t​r​a​n​s​a​c​t​i​o​n​.​ ​M​u​s​t​ ​b​e​ ​s​u​p​p​o​r​t​e​d​ ​b​y​ ​P​a​y​P​a​l​ ​a​n​d​ ​m​a​t​c​h​ ​y​o​u​r​ ​b​u​s​i​n​e​s​s​ ​a​c​c​o​u​n​t​ ​s​e​t​t​i​n​g​s​.
+							 */
+							longDesc: string
+						}
+						total_amount: {
+							/**
+							 * T​o​t​a​l​ ​A​m​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * T​o​t​a​l​ ​p​a​y​m​e​n​t​ ​a​m​o​u​n​t​ ​a​s​ ​a​ ​s​t​r​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​o​t​a​l​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​o​r​d​e​r​.​ ​M​u​s​t​ ​b​e​ ​a​ ​p​o​s​i​t​i​v​e​ ​n​u​m​b​e​r​ ​a​n​d​ ​m​a​t​c​h​ ​t​h​e​ ​s​u​m​ ​o​f​ ​a​l​l​ ​b​r​e​a​k​d​o​w​n​ ​c​o​m​p​o​n​e​n​t​s​ ​i​f​ ​p​r​o​v​i​d​e​d​.​ ​F​o​r​m​a​t​ ​a​s​ ​a​ ​s​t​r​i​n​g​ ​w​i​t​h​ ​a​p​p​r​o​p​r​i​a​t​e​ ​d​e​c​i​m​a​l​ ​p​r​e​c​i​s​i​o​n​ ​f​o​r​ ​t​h​e​ ​c​u​r​r​e​n​c​y​.
+							 */
+							longDesc: string
+						}
+						item_total: {
+							/**
+							 * I​t​e​m​ ​T​o​t​a​l
+							 */
+							displayName: string
+							/**
+							 * T​o​t​a​l​ ​c​o​s​t​ ​o​f​ ​a​l​l​ ​i​t​e​m​s​ ​b​e​f​o​r​e​ ​t​a​x​e​s​ ​a​n​d​ ​f​e​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​o​t​a​l​ ​c​o​s​t​ ​o​f​ ​a​l​l​ ​i​t​e​m​s​ ​i​n​ ​t​h​e​ ​o​r​d​e​r​ ​b​e​f​o​r​e​ ​a​p​p​l​y​i​n​g​ ​t​a​x​e​s​,​ ​s​h​i​p​p​i​n​g​,​ ​h​a​n​d​l​i​n​g​,​ ​i​n​s​u​r​a​n​c​e​,​ ​o​r​ ​d​i​s​c​o​u​n​t​s​.​ ​S​h​o​u​l​d​ ​e​q​u​a​l​ ​t​h​e​ ​s​u​m​ ​o​f​ ​(​q​u​a​n​t​i​t​y​ ​×​ ​u​n​i​t​_​a​m​o​u​n​t​)​ ​f​o​r​ ​a​l​l​ ​i​t​e​m​s​.
+							 */
+							longDesc: string
+						}
+						shipping_amount: {
+							/**
+							 * S​h​i​p​p​i​n​g​ ​A​m​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * C​o​s​t​ ​o​f​ ​s​h​i​p​p​i​n​g​ ​f​o​r​ ​t​h​i​s​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​h​i​p​p​i​n​g​ ​c​o​s​t​ ​f​o​r​ ​d​e​l​i​v​e​r​i​n​g​ ​t​h​e​ ​i​t​e​m​s​ ​i​n​ ​t​h​i​s​ ​o​r​d​e​r​.​ ​T​h​i​s​ ​a​m​o​u​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​t​o​t​a​l​ ​o​r​d​e​r​ ​a​m​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+						handling_amount: {
+							/**
+							 * H​a​n​d​l​i​n​g​ ​A​m​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * H​a​n​d​l​i​n​g​ ​f​e​e​ ​f​o​r​ ​p​r​o​c​e​s​s​i​n​g​ ​t​h​i​s​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​h​a​n​d​l​i​n​g​ ​f​e​e​ ​c​h​a​r​g​e​d​ ​f​o​r​ ​p​r​o​c​e​s​s​i​n​g​ ​t​h​i​s​ ​o​r​d​e​r​.​ ​T​h​i​s​ ​c​o​v​e​r​s​ ​c​o​s​t​s​ ​l​i​k​e​ ​p​a​c​k​a​g​i​n​g​ ​a​n​d​ ​o​r​d​e​r​ ​p​r​o​c​e​s​s​i​n​g​.
+							 */
+							longDesc: string
+						}
+						tax_total: {
+							/**
+							 * T​a​x​ ​T​o​t​a​l
+							 */
+							displayName: string
+							/**
+							 * T​o​t​a​l​ ​t​a​x​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​o​t​a​l​ ​t​a​x​ ​a​m​o​u​n​t​ ​f​o​r​ ​a​l​l​ ​i​t​e​m​s​ ​i​n​ ​t​h​i​s​ ​o​r​d​e​r​.​ ​T​h​i​s​ ​i​n​c​l​u​d​e​s​ ​s​a​l​e​s​ ​t​a​x​,​ ​V​A​T​,​ ​o​r​ ​o​t​h​e​r​ ​a​p​p​l​i​c​a​b​l​e​ ​t​a​x​e​s​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​ ​a​n​d​ ​l​o​c​a​l​ ​r​e​g​u​l​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						insurance_amount: {
+							/**
+							 * I​n​s​u​r​a​n​c​e​ ​A​m​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * I​n​s​u​r​a​n​c​e​ ​c​o​s​t​ ​f​o​r​ ​t​h​i​s​ ​s​h​i​p​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​i​n​s​u​r​a​n​c​e​ ​a​m​o​u​n​t​ ​t​o​ ​p​r​o​t​e​c​t​ ​t​h​e​ ​s​h​i​p​m​e​n​t​.​ ​T​h​i​s​ ​c​o​v​e​r​s​ ​t​h​e​ ​v​a​l​u​e​ ​o​f​ ​i​t​e​m​s​ ​i​n​ ​c​a​s​e​ ​o​f​ ​l​o​s​s​ ​o​r​ ​d​a​m​a​g​e​ ​d​u​r​i​n​g​ ​s​h​i​p​p​i​n​g​.
+							 */
+							longDesc: string
+						}
+						shipping_discount: {
+							/**
+							 * S​h​i​p​p​i​n​g​ ​D​i​s​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * D​i​s​c​o​u​n​t​ ​a​p​p​l​i​e​d​ ​t​o​ ​s​h​i​p​p​i​n​g​ ​c​o​s​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​n​y​ ​d​i​s​c​o​u​n​t​ ​a​p​p​l​i​e​d​ ​s​p​e​c​i​f​i​c​a​l​l​y​ ​t​o​ ​s​h​i​p​p​i​n​g​ ​c​o​s​t​s​,​ ​s​u​c​h​ ​a​s​ ​f​r​e​e​ ​s​h​i​p​p​i​n​g​ ​p​r​o​m​o​t​i​o​n​s​ ​o​r​ ​r​e​d​u​c​e​d​ ​s​h​i​p​p​i​n​g​ ​f​e​e​s​ ​f​o​r​ ​b​u​l​k​ ​o​r​d​e​r​s​.
+							 */
+							longDesc: string
+						}
+						discount_amount: {
+							/**
+							 * D​i​s​c​o​u​n​t​ ​A​m​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * T​o​t​a​l​ ​d​i​s​c​o​u​n​t​ ​a​p​p​l​i​e​d​ ​t​o​ ​t​h​e​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​o​t​a​l​ ​d​i​s​c​o​u​n​t​ ​a​m​o​u​n​t​ ​a​p​p​l​i​e​d​ ​t​o​ ​t​h​i​s​ ​o​r​d​e​r​,​ ​i​n​c​l​u​d​i​n​g​ ​c​o​u​p​o​n​ ​c​o​d​e​s​,​ ​p​r​o​m​o​t​i​o​n​s​,​ ​o​r​ ​b​u​l​k​ ​d​i​s​c​o​u​n​t​s​.​ ​T​h​i​s​ ​r​e​d​u​c​e​s​ ​t​h​e​ ​o​v​e​r​a​l​l​ ​o​r​d​e​r​ ​t​o​t​a​l​.
+							 */
+							longDesc: string
+						}
+						payee_email: {
+							/**
+							 * P​a​y​e​e​ ​E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​p​a​y​m​e​n​t​ ​r​e​c​i​p​i​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​m​e​r​c​h​a​n​t​ ​o​r​ ​s​e​l​l​e​r​ ​w​h​o​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​e​ ​p​a​y​m​e​n​t​.​ ​R​e​q​u​i​r​e​d​ ​f​o​r​ ​m​a​r​k​e​t​p​l​a​c​e​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​o​r​ ​w​h​e​n​ ​s​p​e​c​i​f​y​i​n​g​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​r​e​c​i​p​i​e​n​t​.
+							 */
+							longDesc: string
+						}
+						payee_merchant_id: {
+							/**
+							 * P​a​y​e​e​ ​M​e​r​c​h​a​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * P​a​y​P​a​l​ ​m​e​r​c​h​a​n​t​ ​I​D​ ​o​f​ ​t​h​e​ ​p​a​y​m​e​n​t​ ​r​e​c​i​p​i​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​P​a​y​P​a​l​ ​m​e​r​c​h​a​n​t​ ​I​D​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​h​a​t​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​e​ ​p​a​y​m​e​n​t​.​ ​U​s​e​d​ ​f​o​r​ ​m​a​r​k​e​t​p​l​a​c​e​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​o​r​ ​w​h​e​n​ ​r​o​u​t​i​n​g​ ​p​a​y​m​e​n​t​s​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​m​e​r​c​h​a​n​t​s​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * O​r​d​e​r​ ​D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​o​r​d​e​r​ ​o​r​ ​p​u​r​c​h​a​s​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​b​r​i​e​f​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​o​r​d​e​r​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​v​i​s​i​b​l​e​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​d​u​r​i​n​g​ ​c​h​e​c​k​o​u​t​ ​a​n​d​ ​i​n​ ​t​h​e​i​r​ ​t​r​a​n​s​a​c​t​i​o​n​ ​h​i​s​t​o​r​y​.
+							 */
+							longDesc: string
+						}
+						custom_id: {
+							/**
+							 * C​u​s​t​o​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * Y​o​u​r​ ​c​u​s​t​o​m​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​i​s​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​c​u​s​t​o​m​ ​i​d​e​n​t​i​f​i​e​r​ ​t​h​a​t​ ​y​o​u​ ​c​a​n​ ​u​s​e​ ​t​o​ ​t​r​a​c​k​ ​t​h​i​s​ ​o​r​d​e​r​ ​i​n​ ​y​o​u​r​ ​o​w​n​ ​s​y​s​t​e​m​s​.​ ​T​h​i​s​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​w​e​b​h​o​o​k​s​ ​a​n​d​ ​A​P​I​ ​r​e​s​p​o​n​s​e​s​.
+							 */
+							longDesc: string
+						}
+						invoice_id: {
+							/**
+							 * I​n​v​o​i​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​n​v​o​i​c​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​i​s​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​i​n​v​o​i​c​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​i​s​ ​o​r​d​e​r​.​ ​H​e​l​p​s​ ​m​a​t​c​h​ ​o​r​d​e​r​s​ ​w​i​t​h​ ​y​o​u​r​ ​a​c​c​o​u​n​t​i​n​g​ ​s​y​s​t​e​m​ ​a​n​d​ ​p​r​e​v​e​n​t​s​ ​d​u​p​l​i​c​a​t​e​ ​p​a​y​m​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						soft_descriptor: {
+							/**
+							 * S​o​f​t​ ​D​e​s​c​r​i​p​t​o​r
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​o​n​ ​c​u​s​t​o​m​e​r​'​s​ ​c​r​e​d​i​t​ ​c​a​r​d​ ​s​t​a​t​e​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​o​n​ ​t​h​e​ ​c​u​s​t​o​m​e​r​'​s​ ​c​r​e​d​i​t​ ​c​a​r​d​ ​o​r​ ​b​a​n​k​ ​s​t​a​t​e​m​e​n​t​.​ ​K​e​e​p​ ​i​t​ ​s​h​o​r​t​ ​a​n​d​ ​r​e​c​o​g​n​i​z​a​b​l​e​ ​t​o​ ​a​v​o​i​d​ ​c​h​a​r​g​e​b​a​c​k​s​.
+							 */
+							longDesc: string
+						}
+						items: {
+							/**
+							 * O​r​d​e​r​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​i​t​e​m​s​ ​b​e​i​n​g​ ​p​u​r​c​h​a​s​e​d
+							 */
+							shortDesc: string
+							/**
+							 * A​r​r​a​y​ ​o​f​ ​i​t​e​m​s​ ​i​n​c​l​u​d​e​d​ ​i​n​ ​t​h​i​s​ ​o​r​d​e​r​.​ ​E​a​c​h​ ​i​t​e​m​ ​s​h​o​u​l​d​ ​s​p​e​c​i​f​y​ ​n​a​m​e​,​ ​q​u​a​n​t​i​t​y​,​ ​u​n​i​t​ ​p​r​i​c​e​,​ ​a​n​d​ ​o​p​t​i​o​n​a​l​l​y​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​S​K​U​,​ ​c​a​t​e​g​o​r​y​,​ ​a​n​d​ ​t​a​x​ ​a​m​o​u​n​t​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											name: {
+												/**
+												 * I​t​e​m​ ​N​a​m​e
+												 */
+												displayName: string
+												/**
+												 * N​a​m​e​ ​o​f​ ​t​h​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​i​s​ ​i​t​e​m​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​s​h​o​w​n​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​d​u​r​i​n​g​ ​c​h​e​c​k​o​u​t​.
+												 */
+												longDesc: string
+											}
+											quantity: {
+												/**
+												 * Q​u​a​n​t​i​t​y
+												 */
+												displayName: string
+												/**
+												 * N​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​i​s​ ​i​t​e​m​ ​b​e​i​n​g​ ​p​u​r​c​h​a​s​e​d​.​ ​M​u​s​t​ ​b​e​ ​a​ ​p​o​s​i​t​i​v​e​ ​i​n​t​e​g​e​r​.
+												 */
+												longDesc: string
+											}
+											unit_price: {
+												/**
+												 * U​n​i​t​ ​P​r​i​c​e
+												 */
+												displayName: string
+												/**
+												 * P​r​i​c​e​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​i​s​ ​i​t​e​m​,​ ​b​e​f​o​r​e​ ​t​a​x​e​s​ ​a​n​d​ ​d​i​s​c​o​u​n​t​s​.
+												 */
+												longDesc: string
+											}
+											description: {
+												/**
+												 * I​t​e​m​ ​D​e​s​c​r​i​p​t​i​o​n
+												 */
+												displayName: string
+												/**
+												 * D​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * O​p​t​i​o​n​a​l​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​i​s​ ​i​t​e​m​.
+												 */
+												longDesc: string
+											}
+											sku: {
+												/**
+												 * S​K​U
+												 */
+												displayName: string
+												/**
+												 * S​t​o​c​k​ ​k​e​e​p​i​n​g​ ​u​n​i​t​ ​i​d​e​n​t​i​f​i​e​r
+												 */
+												shortDesc: string
+												/**
+												 * Y​o​u​r​ ​i​n​t​e​r​n​a​l​ ​s​t​o​c​k​ ​k​e​e​p​i​n​g​ ​u​n​i​t​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​i​n​v​e​n​t​o​r​y​ ​t​r​a​c​k​i​n​g​.
+												 */
+												longDesc: string
+											}
+											url: {
+												/**
+												 * I​t​e​m​ ​U​R​L
+												 */
+												displayName: string
+												/**
+												 * L​i​n​k​ ​t​o​ ​t​h​e​ ​i​t​e​m​ ​p​a​g​e
+												 */
+												shortDesc: string
+												/**
+												 * O​p​t​i​o​n​a​l​ ​U​R​L​ ​l​i​n​k​i​n​g​ ​t​o​ ​t​h​e​ ​p​r​o​d​u​c​t​ ​p​a​g​e​ ​w​h​e​r​e​ ​c​u​s​t​o​m​e​r​s​ ​c​a​n​ ​v​i​e​w​ ​m​o​r​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​i​s​ ​i​t​e​m​.
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * I​t​e​m​ ​C​a​t​e​g​o​r​y
+												 */
+												displayName: string
+												/**
+												 * C​a​t​e​g​o​r​y​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​f​o​r​ ​t​h​i​s​ ​i​t​e​m​,​ ​w​h​i​c​h​ ​a​f​f​e​c​t​s​ ​p​a​y​m​e​n​t​ ​p​r​o​c​e​s​s​i​n​g​ ​a​n​d​ ​c​o​m​p​l​i​a​n​c​e​ ​r​e​q​u​i​r​e​m​e​n​t​s​.
+												 */
+												longDesc: string
+											}
+											tax_amount: {
+												/**
+												 * T​a​x​ ​A​m​o​u​n​t
+												 */
+												displayName: string
+												/**
+												 * T​a​x​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​i​t​e​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​t​a​x​ ​a​m​o​u​n​t​ ​s​p​e​c​i​f​i​c​a​l​l​y​ ​f​o​r​ ​t​h​i​s​ ​i​t​e​m​,​ ​c​a​l​c​u​l​a​t​e​d​ ​b​a​s​e​d​ ​o​n​ ​q​u​a​n​t​i​t​y​ ​a​n​d​ ​a​p​p​l​i​c​a​b​l​e​ ​t​a​x​ ​r​a​t​e​s​.
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						shipping_type: {
+							/**
+							 * S​h​i​p​p​i​n​g​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * M​e​t​h​o​d​ ​o​f​ ​d​e​l​i​v​e​r​y​ ​f​o​r​ ​t​h​i​s​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​h​o​w​ ​t​h​e​ ​i​t​e​m​s​ ​w​i​l​l​ ​b​e​ ​d​e​l​i​v​e​r​e​d​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.​ ​A​f​f​e​c​t​s​ ​s​h​i​p​p​i​n​g​ ​c​o​s​t​s​ ​a​n​d​ ​d​e​l​i​v​e​r​y​ ​t​i​m​e​l​i​n​e​.
+							 */
+							longDesc: string
+						}
+						shipping_name: {
+							/**
+							 * S​h​i​p​p​i​n​g​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​u​l​l​ ​n​a​m​e​ ​f​o​r​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​l​e​t​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​e​r​s​o​n​ ​w​h​o​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​e​ ​s​h​i​p​m​e​n​t​ ​a​t​ ​t​h​e​ ​d​e​l​i​v​e​r​y​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						shipping_address_line_1: {
+							/**
+							 * S​h​i​p​p​i​n​g​ ​A​d​d​r​e​s​s​ ​L​i​n​e​ ​1
+							 */
+							displayName: string
+							/**
+							 * P​r​i​m​a​r​y​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​,​ ​t​y​p​i​c​a​l​l​y​ ​c​o​n​t​a​i​n​i​n​g​ ​s​t​r​e​e​t​ ​n​u​m​b​e​r​ ​a​n​d​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						shipping_address_line_2: {
+							/**
+							 * S​h​i​p​p​i​n​g​ ​A​d​d​r​e​s​s​ ​L​i​n​e​ ​2
+							 */
+							displayName: string
+							/**
+							 * S​e​c​o​n​d​a​r​y​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​ ​l​i​n​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​s​e​c​o​n​d​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​a​p​a​r​t​m​e​n​t​ ​n​u​m​b​e​r​s​,​ ​s​u​i​t​e​ ​n​u​m​b​e​r​s​,​ ​o​r​ ​a​d​d​i​t​i​o​n​a​l​ ​l​o​c​a​t​i​o​n​ ​d​e​t​a​i​l​s​.
+							 */
+							longDesc: string
+						}
+						shipping_city: {
+							/**
+							 * S​h​i​p​p​i​n​g​ ​C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * C​i​t​y​ ​f​o​r​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​i​t​y​ ​w​h​e​r​e​ ​t​h​e​ ​i​t​e​m​s​ ​w​i​l​l​ ​b​e​ ​d​e​l​i​v​e​r​e​d​.
+							 */
+							longDesc: string
+						}
+						shipping_state: {
+							/**
+							 * S​h​i​p​p​i​n​g​ ​S​t​a​t​e
+							 */
+							displayName: string
+							/**
+							 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​f​o​r​ ​s​h​i​p​p​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​t​e​,​ ​p​r​o​v​i​n​c​e​,​ ​o​r​ ​r​e​g​i​o​n​ ​f​o​r​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​.​ ​U​s​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​c​o​d​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​u​n​t​r​y​.
+							 */
+							longDesc: string
+						}
+						shipping_postal_code: {
+							/**
+							 * S​h​i​p​p​i​n​g​ ​P​o​s​t​a​l​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​f​o​r​ ​s​h​i​p​p​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Z​I​P​ ​c​o​d​e​,​ ​p​o​s​t​a​l​ ​c​o​d​e​,​ ​o​r​ ​e​q​u​i​v​a​l​e​n​t​ ​f​o​r​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						shipping_country_code: {
+							/**
+							 * S​h​i​p​p​i​n​g​ ​C​o​u​n​t​r​y​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * T​w​o​-​l​e​t​t​e​r​ ​c​o​u​n​t​r​y​ ​c​o​d​e​ ​f​o​r​ ​s​h​i​p​p​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​w​o​-​c​h​a​r​a​c​t​e​r​ ​I​S​O​ ​3​1​6​6​-​1​ ​c​o​u​n​t​r​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​s​h​i​p​p​i​n​g​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						platform_fees: {
+							/**
+							 * P​l​a​t​f​o​r​m​ ​F​e​e​s
+							 */
+							displayName: string
+							/**
+							 * F​e​e​s​ ​c​o​l​l​e​c​t​e​d​ ​b​y​ ​t​h​e​ ​p​l​a​t​f​o​r​m
+							 */
+							shortDesc: string
+							/**
+							 * A​r​r​a​y​ ​o​f​ ​p​l​a​t​f​o​r​m​ ​f​e​e​s​ ​t​o​ ​b​e​ ​c​o​l​l​e​c​t​e​d​ ​o​n​ ​t​h​i​s​ ​t​r​a​n​s​a​c​t​i​o​n​.​ ​U​s​e​d​ ​b​y​ ​m​a​r​k​e​t​p​l​a​c​e​s​ ​t​o​ ​c​o​l​l​e​c​t​ ​f​e​e​s​ ​f​r​o​m​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​p​r​o​c​e​s​s​e​d​ ​o​n​ ​t​h​e​i​r​ ​p​l​a​t​f​o​r​m​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											fee_amount: {
+												/**
+												 * F​e​e​ ​A​m​o​u​n​t
+												 */
+												displayName: string
+												/**
+												 * P​l​a​t​f​o​r​m​ ​f​e​e​ ​a​m​o​u​n​t
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​a​m​o​u​n​t​ ​o​f​ ​t​h​e​ ​p​l​a​t​f​o​r​m​ ​f​e​e​ ​t​o​ ​b​e​ ​c​o​l​l​e​c​t​e​d​ ​f​r​o​m​ ​t​h​i​s​ ​t​r​a​n​s​a​c​t​i​o​n​.
+												 */
+												longDesc: string
+											}
+											payee_email: {
+												/**
+												 * F​e​e​ ​R​e​c​i​p​i​e​n​t​ ​E​m​a​i​l
+												 */
+												displayName: string
+												/**
+												 * E​m​a​i​l​ ​o​f​ ​f​e​e​ ​r​e​c​i​p​i​e​n​t
+												 */
+												shortDesc: string
+												/**
+												 * E​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​h​a​t​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​e​ ​p​l​a​t​f​o​r​m​ ​f​e​e​.
+												 */
+												longDesc: string
+											}
+											payee_merchant_id: {
+												/**
+												 * F​e​e​ ​R​e​c​i​p​i​e​n​t​ ​M​e​r​c​h​a​n​t​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * M​e​r​c​h​a​n​t​ ​I​D​ ​o​f​ ​f​e​e​ ​r​e​c​i​p​i​e​n​t
+												 */
+												shortDesc: string
+												/**
+												 * P​a​y​P​a​l​ ​m​e​r​c​h​a​n​t​ ​I​D​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​h​a​t​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​e​ ​p​l​a​t​f​o​r​m​ ​f​e​e​.
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						disbursement_mode: {
+							/**
+							 * D​i​s​b​u​r​s​e​m​e​n​t​ ​M​o​d​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​o​ ​r​e​l​e​a​s​e​ ​f​u​n​d​s​ ​t​o​ ​t​h​e​ ​s​e​l​l​e​r
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​t​r​o​l​s​ ​w​h​e​n​ ​c​a​p​t​u​r​e​d​ ​f​u​n​d​s​ ​a​r​e​ ​r​e​l​e​a​s​e​d​ ​t​o​ ​t​h​e​ ​s​e​l​l​e​r​.​ ​I​N​S​T​A​N​T​ ​r​e​l​e​a​s​e​s​ ​f​u​n​d​s​ ​i​m​m​e​d​i​a​t​e​l​y​,​ ​w​h​i​l​e​ ​D​E​L​A​Y​E​D​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​h​o​l​d​ ​f​u​n​d​s​ ​f​o​r​ ​v​e​r​i​f​i​c​a​t​i​o​n​ ​b​e​f​o​r​e​ ​r​e​l​e​a​s​e​.
+							 */
+							longDesc: string
+						}
+						return_url: {
+							/**
+							 * R​e​t​u​r​n​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * U​R​L​ ​t​o​ ​r​e​d​i​r​e​c​t​ ​a​f​t​e​r​ ​s​u​c​c​e​s​s​f​u​l​ ​p​a​y​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​w​h​e​r​e​ ​c​u​s​t​o​m​e​r​s​ ​w​i​l​l​ ​b​e​ ​r​e​d​i​r​e​c​t​e​d​ ​a​f​t​e​r​ ​s​u​c​c​e​s​s​f​u​l​l​y​ ​c​o​m​p​l​e​t​i​n​g​ ​t​h​e​i​r​ ​p​a​y​m​e​n​t​.​ ​S​h​o​u​l​d​ ​b​e​ ​a​ ​p​a​g​e​ ​c​o​n​f​i​r​m​i​n​g​ ​t​h​e​ ​s​u​c​c​e​s​s​f​u​l​ ​t​r​a​n​s​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						cancel_url: {
+							/**
+							 * C​a​n​c​e​l​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * U​R​L​ ​t​o​ ​r​e​d​i​r​e​c​t​ ​i​f​ ​p​a​y​m​e​n​t​ ​i​s​ ​c​a​n​c​e​l​l​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​w​h​e​r​e​ ​c​u​s​t​o​m​e​r​s​ ​w​i​l​l​ ​b​e​ ​r​e​d​i​r​e​c​t​e​d​ ​i​f​ ​t​h​e​y​ ​c​a​n​c​e​l​ ​t​h​e​ ​p​a​y​m​e​n​t​ ​p​r​o​c​e​s​s​.​ ​S​h​o​u​l​d​ ​p​r​o​v​i​d​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​a​n​c​e​l​l​e​d​ ​t​r​a​n​s​a​c​t​i​o​n​ ​a​n​d​ ​n​e​x​t​ ​s​t​e​p​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				capture_order: {
+					/**
+					 * C​a​p​t​u​r​e​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * C​a​p​t​u​r​e​ ​p​a​y​m​e​n​t​ ​f​o​r​ ​a​n​ ​a​p​p​r​o​v​e​d​ ​o​r​d​e​r
+					 */
+					shortDesc: string
+					/**
+					 * C​a​p​t​u​r​e​s​ ​p​a​y​m​e​n​t​ ​f​o​r​ ​a​n​ ​o​r​d​e​r​ ​t​h​a​t​ ​h​a​s​ ​b​e​e​n​ ​a​p​p​r​o​v​e​d​ ​b​y​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.​ ​T​h​i​s​ ​c​o​m​p​l​e​t​e​s​ ​t​h​e​ ​p​a​y​m​e​n​t​ ​p​r​o​c​e​s​s​ ​a​n​d​ ​t​r​a​n​s​f​e​r​s​ ​f​u​n​d​s​ ​f​r​o​m​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​t​o​ ​y​o​u​r​ ​a​c​c​o​u​n​t​.​ ​S​h​o​u​l​d​ ​b​e​ ​c​a​l​l​e​d​ ​a​f​t​e​r​ ​r​e​c​e​i​v​i​n​g​ ​o​r​d​e​r​ ​a​p​p​r​o​v​a​l​ ​o​r​ ​f​o​r​ ​i​m​m​e​d​i​a​t​e​ ​c​a​p​t​u​r​e​ ​o​r​d​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						order_id: {
+							/**
+							 * O​r​d​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​a​p​p​r​o​v​e​d​ ​o​r​d​e​r​ ​t​o​ ​c​a​p​t​u​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​o​r​d​e​r​ ​t​h​a​t​ ​h​a​s​ ​b​e​e​n​ ​a​p​p​r​o​v​e​d​ ​b​y​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​a​n​d​ ​i​s​ ​r​e​a​d​y​ ​f​o​r​ ​p​a​y​m​e​n​t​ ​c​a​p​t​u​r​e​.
+							 */
+							longDesc: string
+						}
+						final_capture: {
+							/**
+							 * F​i​n​a​l​ ​C​a​p​t​u​r​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​i​s​ ​i​s​ ​t​h​e​ ​f​i​n​a​l​ ​c​a​p​t​u​r​e​ ​f​o​r​ ​t​h​e​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * I​n​d​i​c​a​t​e​s​ ​w​h​e​t​h​e​r​ ​t​h​i​s​ ​c​a​p​t​u​r​e​ ​c​o​m​p​l​e​t​e​s​ ​t​h​e​ ​p​a​y​m​e​n​t​ ​f​o​r​ ​t​h​e​ ​o​r​d​e​r​.​ ​S​e​t​ ​t​o​ ​t​r​u​e​ ​i​f​ ​t​h​i​s​ ​i​s​ ​t​h​e​ ​c​o​m​p​l​e​t​e​ ​a​m​o​u​n​t​,​ ​o​r​ ​f​a​l​s​e​ ​i​f​ ​y​o​u​ ​p​l​a​n​ ​t​o​ ​m​a​k​e​ ​a​d​d​i​t​i​o​n​a​l​ ​p​a​r​t​i​a​l​ ​c​a​p​t​u​r​e​s​.
+							 */
+							longDesc: string
+						}
+						payment_instruction: {
+							/**
+							 * P​a​y​m​e​n​t​ ​I​n​s​t​r​u​c​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​p​a​y​m​e​n​t​ ​p​r​o​c​e​s​s​i​n​g​ ​i​n​s​t​r​u​c​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​a​l​ ​i​n​s​t​r​u​c​t​i​o​n​s​ ​f​o​r​ ​p​r​o​c​e​s​s​i​n​g​ ​t​h​i​s​ ​p​a​y​m​e​n​t​,​ ​s​u​c​h​ ​a​s​ ​d​i​s​b​u​r​s​e​m​e​n​t​ ​t​i​m​i​n​g​ ​o​r​ ​p​l​a​t​f​o​r​m​ ​f​e​e​ ​c​o​l​l​e​c​t​i​o​n​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									disbursement_mode: {
+										/**
+										 * D​i​s​b​u​r​s​e​m​e​n​t​ ​M​o​d​e
+										 */
+										displayName: string
+										/**
+										 * W​h​e​n​ ​t​o​ ​d​i​s​b​u​r​s​e​ ​f​u​n​d​s
+										 */
+										shortDesc: string
+										/**
+										 * C​o​n​t​r​o​l​s​ ​w​h​e​n​ ​c​a​p​t​u​r​e​d​ ​f​u​n​d​s​ ​a​r​e​ ​d​i​s​b​u​r​s​e​d​ ​t​o​ ​t​h​e​ ​p​a​y​e​e​.​ ​U​s​e​ ​I​N​S​T​A​N​T​ ​f​o​r​ ​i​m​m​e​d​i​a​t​e​ ​d​i​s​b​u​r​s​e​m​e​n​t​ ​o​r​ ​D​E​L​A​Y​E​D​ ​t​o​ ​h​o​l​d​ ​f​u​n​d​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				authorize_order: {
+					/**
+					 * A​u​t​h​o​r​i​z​e​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * A​u​t​h​o​r​i​z​e​ ​p​a​y​m​e​n​t​ ​f​o​r​ ​a​n​ ​a​p​p​r​o​v​e​d​ ​o​r​d​e​r
+					 */
+					shortDesc: string
+					/**
+					 * A​u​t​h​o​r​i​z​e​s​ ​p​a​y​m​e​n​t​ ​f​o​r​ ​a​n​ ​o​r​d​e​r​ ​t​h​a​t​ ​h​a​s​ ​b​e​e​n​ ​a​p​p​r​o​v​e​d​ ​b​y​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.​ ​T​h​i​s​ ​p​l​a​c​e​s​ ​a​ ​h​o​l​d​ ​o​n​ ​t​h​e​ ​f​u​n​d​s​ ​w​i​t​h​o​u​t​ ​c​a​p​t​u​r​i​n​g​ ​t​h​e​m​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​c​a​p​t​u​r​e​ ​t​h​e​ ​p​a​y​m​e​n​t​ ​l​a​t​e​r​ ​w​h​e​n​ ​r​e​a​d​y​ ​t​o​ ​f​u​l​f​i​l​l​ ​t​h​e​ ​o​r​d​e​r​.​ ​A​u​t​h​o​r​i​z​a​t​i​o​n​ ​i​s​ ​v​a​l​i​d​ ​f​o​r​ ​u​p​ ​t​o​ ​2​9​ ​d​a​y​s​.
+					 */
+					longDesc: string
+					options: {
+						order_id: {
+							/**
+							 * O​r​d​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​a​p​p​r​o​v​e​d​ ​o​r​d​e​r​ ​t​o​ ​a​u​t​h​o​r​i​z​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​o​r​d​e​r​ ​t​h​a​t​ ​h​a​s​ ​b​e​e​n​ ​a​p​p​r​o​v​e​d​ ​b​y​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​a​n​d​ ​i​s​ ​r​e​a​d​y​ ​f​o​r​ ​p​a​y​m​e​n​t​ ​a​u​t​h​o​r​i​z​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_order: {
+					/**
+					 * G​e​t​ ​O​r​d​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​o​r​d​e​r​ ​d​e​t​a​i​l​s​ ​b​y​ ​I​D
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​c​o​m​p​l​e​t​e​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​a​n​ ​o​r​d​e​r​ ​b​y​ ​i​t​s​ ​I​D​,​ ​i​n​c​l​u​d​i​n​g​ ​c​u​r​r​e​n​t​ ​s​t​a​t​u​s​,​ ​p​a​y​m​e​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​c​u​s​t​o​m​e​r​ ​d​e​t​a​i​l​s​,​ ​a​n​d​ ​t​r​a​n​s​a​c​t​i​o​n​ ​h​i​s​t​o​r​y​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​c​h​e​c​k​ ​o​r​d​e​r​ ​s​t​a​t​u​s​ ​o​r​ ​r​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​ ​o​r​d​e​r​ ​m​a​n​a​g​e​m​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						order_id: {
+							/**
+							 * O​r​d​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​o​r​d​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​o​r​d​e​r​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_transactions: {
+					/**
+					 * L​i​s​t​ ​T​r​a​n​s​a​c​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​t​r​a​n​s​a​c​t​i​o​n​ ​h​i​s​t​o​r​y​ ​f​o​r​ ​y​o​u​r​ ​a​c​c​o​u​n​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​f​o​r​ ​y​o​u​r​ ​P​a​y​P​a​l​ ​a​c​c​o​u​n​t​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e​ ​r​a​n​g​e​.​ ​S​u​p​p​o​r​t​s​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​t​r​a​n​s​a​c​t​i​o​n​ ​t​y​p​e​,​ ​s​t​a​t​u​s​,​ ​a​m​o​u​n​t​ ​r​a​n​g​e​,​ ​c​u​r​r​e​n​c​y​,​ ​a​n​d​ ​p​a​y​m​e​n​t​ ​m​e​t​h​o​d​ ​t​o​ ​h​e​l​p​ ​y​o​u​ ​f​i​n​d​ ​s​p​e​c​i​f​i​c​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​o​r​ ​g​e​n​e​r​a​t​e​ ​r​e​p​o​r​t​s​.
+					 */
+					longDesc: string
+					options: {
+						start_date: {
+							/**
+							 * S​t​a​r​t​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * B​e​g​i​n​n​i​n​g​ ​d​a​t​e​ ​f​o​r​ ​t​r​a​n​s​a​c​t​i​o​n​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​a​r​l​i​e​s​t​ ​d​a​t​e​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​t​r​a​n​s​a​c​t​i​o​n​ ​s​e​a​r​c​h​.​ ​T​r​a​n​s​a​c​t​i​o​n​s​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e​ ​w​i​l​l​ ​b​e​ ​i​n​c​l​u​d​e​d​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						end_date: {
+							/**
+							 * E​n​d​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * E​n​d​i​n​g​ ​d​a​t​e​ ​f​o​r​ ​t​r​a​n​s​a​c​t​i​o​n​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​a​t​e​s​t​ ​d​a​t​e​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​t​r​a​n​s​a​c​t​i​o​n​ ​s​e​a​r​c​h​.​ ​T​r​a​n​s​a​c​t​i​o​n​s​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e​ ​w​i​l​l​ ​b​e​ ​i​n​c​l​u​d​e​d​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						transaction_type: {
+							/**
+							 * T​r​a​n​s​a​c​t​i​o​n​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​s​u​l​t​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​t​r​a​n​s​a​c​t​i​o​n​ ​t​y​p​e​s​ ​s​u​c​h​ ​a​s​ ​p​a​y​m​e​n​t​s​,​ ​r​e​f​u​n​d​s​,​ ​f​e​e​s​,​ ​o​r​ ​o​t​h​e​r​ ​t​r​a​n​s​a​c​t​i​o​n​ ​c​a​t​e​g​o​r​i​e​s​.
+							 */
+							longDesc: string
+						}
+						transaction_status: {
+							/**
+							 * T​r​a​n​s​a​c​t​i​o​n​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * S​t​a​t​u​s​ ​o​f​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​t​o​ ​i​n​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​b​y​ ​t​h​e​i​r​ ​p​r​o​c​e​s​s​i​n​g​ ​s​t​a​t​u​s​ ​s​u​c​h​ ​a​s​ ​S​u​c​c​e​s​s​,​ ​P​e​n​d​i​n​g​,​ ​D​e​n​i​e​d​,​ ​o​r​ ​R​e​f​u​n​d​e​d​.
+							 */
+							longDesc: string
+						}
+						transaction_amount: {
+							/**
+							 * T​r​a​n​s​a​c​t​i​o​n​ ​A​m​o​u​n​t​ ​R​a​n​g​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​r​a​n​s​a​c​t​i​o​n​ ​a​m​o​u​n​t​ ​r​a​n​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​a​ ​r​a​n​g​e​ ​o​f​ ​t​r​a​n​s​a​c​t​i​o​n​ ​a​m​o​u​n​t​s​ ​t​o​ ​f​i​l​t​e​r​ ​r​e​s​u​l​t​s​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​f​i​n​d​i​n​g​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​w​i​t​h​i​n​ ​s​p​e​c​i​f​i​c​ ​v​a​l​u​e​ ​r​a​n​g​e​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									from: {
+										/**
+										 * M​i​n​i​m​u​m​ ​A​m​o​u​n​t
+										 */
+										displayName: string
+										/**
+										 * M​i​n​i​m​u​m​ ​t​r​a​n​s​a​c​t​i​o​n​ ​a​m​o​u​n​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​m​i​n​i​m​u​m​ ​t​r​a​n​s​a​c​t​i​o​n​ ​a​m​o​u​n​t​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​r​e​s​u​l​t​s​.
+										 */
+										longDesc: string
+									}
+									to: {
+										/**
+										 * M​a​x​i​m​u​m​ ​A​m​o​u​n​t
+										 */
+										displayName: string
+										/**
+										 * M​a​x​i​m​u​m​ ​t​r​a​n​s​a​c​t​i​o​n​ ​a​m​o​u​n​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​m​a​x​i​m​u​m​ ​t​r​a​n​s​a​c​t​i​o​n​ ​a​m​o​u​n​t​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​r​e​s​u​l​t​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						transaction_currency: {
+							/**
+							 * T​r​a​n​s​a​c​t​i​o​n​ ​C​u​r​r​e​n​c​y
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​b​y​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​t​o​ ​s​e​e​ ​o​n​l​y​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​i​n​ ​s​p​e​c​i​f​i​c​ ​c​u​r​r​e​n​c​i​e​s​.
+							 */
+							longDesc: string
+						}
+						payment_instrument_type: {
+							/**
+							 * P​a​y​m​e​n​t​ ​M​e​t​h​o​d​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​a​y​m​e​n​t​ ​m​e​t​h​o​d​ ​u​s​e​d
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​b​y​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​p​a​y​m​e​n​t​ ​m​e​t​h​o​d​ ​u​s​e​d​,​ ​s​u​c​h​ ​a​s​ ​c​r​e​d​i​t​ ​c​a​r​d​,​ ​d​e​b​i​t​ ​c​a​r​d​,​ ​o​r​ ​b​a​n​k​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​s​p​o​n​s​e​.​ ​U​s​e​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​o​f​ ​l​a​r​g​e​ ​r​e​s​u​l​t​ ​s​e​t​s​.
+							 */
+							longDesc: string
+						}
+						page: {
+							/**
+							 * P​a​g​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​g​e​ ​n​u​m​b​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​w​h​e​n​ ​p​a​g​i​n​a​t​i​n​g​ ​t​h​r​o​u​g​h​ ​l​a​r​g​e​ ​r​e​s​u​l​t​ ​s​e​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				refund_payment: {
+					/**
+					 * R​e​f​u​n​d​ ​P​a​y​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * P​r​o​c​e​s​s​ ​a​ ​r​e​f​u​n​d​ ​f​o​r​ ​a​ ​c​a​p​t​u​r​e​d​ ​p​a​y​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * I​s​s​u​e​s​ ​a​ ​r​e​f​u​n​d​ ​f​o​r​ ​a​ ​p​r​e​v​i​o​u​s​l​y​ ​c​a​p​t​u​r​e​d​ ​p​a​y​m​e​n​t​.​ ​C​a​n​ ​p​r​o​c​e​s​s​ ​f​u​l​l​ ​o​r​ ​p​a​r​t​i​a​l​ ​r​e​f​u​n​d​s​.​ ​T​h​e​ ​r​e​f​u​n​d​e​d​ ​a​m​o​u​n​t​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​'​s​ ​o​r​i​g​i​n​a​l​ ​p​a​y​m​e​n​t​ ​m​e​t​h​o​d​ ​a​n​d​ ​d​e​d​u​c​t​e​d​ ​f​r​o​m​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​b​a​l​a​n​c​e​.
+					 */
+					longDesc: string
+					options: {
+						capture_id: {
+							/**
+							 * C​a​p​t​u​r​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​D​ ​o​f​ ​t​h​e​ ​c​a​p​t​u​r​e​d​ ​p​a​y​m​e​n​t​ ​t​o​ ​r​e​f​u​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​a​p​t​u​r​e​d​ ​p​a​y​m​e​n​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​f​u​n​d​.​ ​T​h​i​s​ ​c​a​n​ ​b​e​ ​f​o​u​n​d​ ​i​n​ ​t​h​e​ ​c​a​p​t​u​r​e​ ​r​e​s​p​o​n​s​e​ ​o​r​ ​o​r​d​e​r​ ​d​e​t​a​i​l​s​.
+							 */
+							longDesc: string
+						}
+						amount: {
+							/**
+							 * R​e​f​u​n​d​ ​A​m​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * A​m​o​u​n​t​ ​t​o​ ​r​e​f​u​n​d​ ​(​o​p​t​i​o​n​a​l​ ​f​o​r​ ​f​u​l​l​ ​r​e​f​u​n​d​)
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​a​m​o​u​n​t​ ​t​o​ ​r​e​f​u​n​d​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​t​h​e​ ​f​u​l​l​ ​c​a​p​t​u​r​e​d​ ​a​m​o​u​n​t​ ​w​i​l​l​ ​b​e​ ​r​e​f​u​n​d​e​d​.​ ​F​o​r​ ​p​a​r​t​i​a​l​ ​r​e​f​u​n​d​s​,​ ​s​p​e​c​i​f​y​ ​t​h​e​ ​c​u​r​r​e​n​c​y​ ​a​n​d​ ​a​m​o​u​n​t​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									currency_code: {
+										/**
+										 * C​u​r​r​e​n​c​y​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * C​u​r​r​e​n​c​y​ ​f​o​r​ ​t​h​e​ ​r​e​f​u​n​d​ ​a​m​o​u​n​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​t​h​r​e​e​-​c​h​a​r​a​c​t​e​r​ ​I​S​O​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​r​e​f​u​n​d​ ​a​m​o​u​n​t​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * R​e​f​u​n​d​ ​V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​r​e​f​u​n​d​ ​a​m​o​u​n​t​ ​a​s​ ​a​ ​s​t​r​i​n​g
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​a​m​o​u​n​t​ ​t​o​ ​r​e​f​u​n​d​,​ ​f​o​r​m​a​t​t​e​d​ ​a​s​ ​a​ ​s​t​r​i​n​g​ ​w​i​t​h​ ​a​p​p​r​o​p​r​i​a​t​e​ ​d​e​c​i​m​a​l​ ​p​r​e​c​i​s​i​o​n​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						note_to_payer: {
+							/**
+							 * N​o​t​e​ ​t​o​ ​P​a​y​e​r
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​o​t​e​ ​e​x​p​l​a​i​n​i​n​g​ ​t​h​e​ ​r​e​f​u​n​d
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​n​o​t​e​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​s​e​n​t​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​e​x​p​l​a​i​n​i​n​g​ ​t​h​e​ ​r​e​a​s​o​n​ ​f​o​r​ ​t​h​e​ ​r​e​f​u​n​d​.
+							 */
+							longDesc: string
+						}
+						invoice_id: {
+							/**
+							 * I​n​v​o​i​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​n​v​o​i​c​e​ ​I​D​ ​f​o​r​ ​t​h​e​ ​r​e​f​u​n​d
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​i​n​v​o​i​c​e​ ​I​D​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​w​i​t​h​ ​t​h​i​s​ ​r​e​f​u​n​d​ ​f​o​r​ ​a​c​c​o​u​n​t​i​n​g​ ​a​n​d​ ​t​r​a​c​k​i​n​g​ ​p​u​r​p​o​s​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_invoice: {
+					/**
+					 * C​r​e​a​t​e​ ​I​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​i​n​v​o​i​c​e​ ​f​o​r​ ​p​a​y​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​i​n​v​o​i​c​e​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​s​e​n​t​ ​t​o​ ​c​u​s​t​o​m​e​r​s​ ​f​o​r​ ​p​a​y​m​e​n​t​.​ ​I​n​c​l​u​d​e​s​ ​i​t​e​m​ ​d​e​t​a​i​l​s​,​ ​p​r​i​c​i​n​g​,​ ​t​a​x​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​n​d​ ​p​a​y​m​e​n​t​ ​t​e​r​m​s​.​ ​I​n​v​o​i​c​e​s​ ​c​a​n​ ​b​e​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​s​e​n​t​ ​t​o​ ​r​e​c​i​p​i​e​n​t​s​ ​o​r​ ​m​a​n​u​a​l​l​y​ ​s​h​a​r​e​d​.
+					 */
+					longDesc: string
+					options: {
+						invoice_number: {
+							/**
+							 * I​n​v​o​i​c​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * U​n​i​q​u​e​ ​i​n​v​o​i​c​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​r​a​c​k​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​i​s​ ​i​n​v​o​i​c​e​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​P​a​y​P​a​l​ ​w​i​l​l​ ​g​e​n​e​r​a​t​e​ ​o​n​e​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​.
+							 */
+							longDesc: string
+						}
+						currency_code: {
+							/**
+							 * C​u​r​r​e​n​c​y​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * C​u​r​r​e​n​c​y​ ​f​o​r​ ​t​h​e​ ​i​n​v​o​i​c​e​ ​a​m​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​h​r​e​e​-​c​h​a​r​a​c​t​e​r​ ​I​S​O​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​i​s​ ​i​n​v​o​i​c​e​.
+							 */
+							longDesc: string
+						}
+						note: {
+							/**
+							 * N​o​t​e
+							 */
+							displayName: string
+							/**
+							 * N​o​t​e​ ​o​r​ ​m​e​m​o​ ​f​o​r​ ​t​h​e​ ​i​n​v​o​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​o​t​e​ ​o​r​ ​m​e​m​o​ ​t​o​ ​i​n​c​l​u​d​e​ ​w​i​t​h​ ​t​h​e​ ​i​n​v​o​i​c​e​.​ ​V​i​s​i​b​l​e​ ​t​o​ ​t​h​e​ ​r​e​c​i​p​i​e​n​t​.
+							 */
+							longDesc: string
+						}
+						recipient_email: {
+							/**
+							 * R​e​c​i​p​i​e​n​t​ ​E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​i​n​v​o​i​c​e​ ​r​e​c​i​p​i​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​w​h​e​r​e​ ​t​h​e​ ​i​n​v​o​i​c​e​ ​w​i​l​l​ ​b​e​ ​s​e​n​t​.​ ​T​h​i​s​ ​i​s​ ​t​h​e​ ​p​r​i​m​a​r​y​ ​r​e​c​i​p​i​e​n​t​ ​w​h​o​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​p​a​y​m​e​n​t​ ​r​e​q​u​e​s​t​s​.
+							 */
+							longDesc: string
+						}
+						recipient_first_name: {
+							/**
+							 * R​e​c​i​p​i​e​n​t​ ​F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​i​n​v​o​i​c​e​ ​r​e​c​i​p​i​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​e​r​s​o​n​ ​o​r​ ​b​u​s​i​n​e​s​s​ ​c​o​n​t​a​c​t​ ​r​e​c​e​i​v​i​n​g​ ​t​h​e​ ​i​n​v​o​i​c​e​.
+							 */
+							longDesc: string
+						}
+						recipient_last_name: {
+							/**
+							 * R​e​c​i​p​i​e​n​t​ ​L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * L​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​i​n​v​o​i​c​e​ ​r​e​c​i​p​i​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​e​r​s​o​n​ ​r​e​c​e​i​v​i​n​g​ ​t​h​e​ ​i​n​v​o​i​c​e​.
+							 */
+							longDesc: string
+						}
+						item_name: {
+							/**
+							 * I​t​e​m​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​o​r​ ​s​e​r​v​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​p​r​o​d​u​c​t​ ​o​r​ ​s​e​r​v​i​c​e​ ​b​e​i​n​g​ ​i​n​v​o​i​c​e​d​.
+							 */
+							longDesc: string
+						}
+						item_description: {
+							/**
+							 * I​t​e​m​ ​D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * D​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​p​r​o​d​u​c​t​ ​o​r​ ​s​e​r​v​i​c​e​.
+							 */
+							longDesc: string
+						}
+						item_quantity: {
+							/**
+							 * I​t​e​m​ ​Q​u​a​n​t​i​t​y
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​o​r​ ​u​n​i​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​i​n​v​o​i​c​e​d​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​1​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						item_unit_price: {
+							/**
+							 * U​n​i​t​ ​P​r​i​c​e
+							 */
+							displayName: string
+							/**
+							 * P​r​i​c​e​ ​p​e​r​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​o​r​ ​s​e​r​v​i​c​e​.
+							 */
+							longDesc: string
+						}
+						tax_percent: {
+							/**
+							 * T​a​x​ ​P​e​r​c​e​n​t​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​a​x​ ​r​a​t​e​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​x​ ​r​a​t​e​ ​a​s​ ​a​ ​p​e​r​c​e​n​t​a​g​e​ ​t​o​ ​b​e​ ​a​p​p​l​i​e​d​ ​t​o​ ​t​h​e​ ​i​t​e​m​ ​a​m​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+						tax_name: {
+							/**
+							 * T​a​x​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​t​a​x​ ​(​e​.​g​.​,​ ​"​S​a​l​e​s​ ​T​a​x​"​)
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​t​a​x​ ​b​e​i​n​g​ ​a​p​p​l​i​e​d​,​ ​s​u​c​h​ ​a​s​ ​"​S​a​l​e​s​ ​T​a​x​"​,​ ​"​V​A​T​"​,​ ​o​r​ ​"​G​S​T​"​.
+							 */
+							longDesc: string
+						}
+						payment_term: {
+							/**
+							 * P​a​y​m​e​n​t​ ​T​e​r​m​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​p​a​y​m​e​n​t​ ​i​s​ ​d​u​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​w​h​e​n​ ​p​a​y​m​e​n​t​ ​i​s​ ​d​u​e​ ​f​o​r​ ​t​h​i​s​ ​i​n​v​o​i​c​e​,​ ​s​u​c​h​ ​a​s​ ​i​m​m​e​d​i​a​t​e​l​y​ ​u​p​o​n​ ​r​e​c​e​i​p​t​ ​o​r​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​n​u​m​b​e​r​ ​o​f​ ​d​a​y​s​.
+							 */
+							longDesc: string
+						}
+						send_to_recipient: {
+							/**
+							 * S​e​n​d​ ​t​o​ ​R​e​c​i​p​i​e​n​t
+							 */
+							displayName: string
+							/**
+							 * A​u​t​o​m​a​t​i​c​a​l​l​y​ ​s​e​n​d​ ​t​h​e​ ​i​n​v​o​i​c​e​ ​v​i​a​ ​e​m​a​i​l
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​t​r​u​e​,​ ​t​h​e​ ​i​n​v​o​i​c​e​ ​w​i​l​l​ ​b​e​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​s​e​n​t​ ​t​o​ ​t​h​e​ ​r​e​c​i​p​i​e​n​t​'​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.​ ​I​f​ ​f​a​l​s​e​,​ ​y​o​u​ ​c​a​n​ ​s​e​n​d​ ​i​t​ ​m​a​n​u​a​l​l​y​ ​l​a​t​e​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_invoice: {
+					/**
+					 * G​e​t​ ​I​n​v​o​i​c​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​i​n​v​o​i​c​e​ ​d​e​t​a​i​l​s​ ​b​y​ ​I​D
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​c​o​m​p​l​e​t​e​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​a​n​ ​i​n​v​o​i​c​e​ ​b​y​ ​i​t​s​ ​I​D​,​ ​i​n​c​l​u​d​i​n​g​ ​p​a​y​m​e​n​t​ ​s​t​a​t​u​s​,​ ​r​e​c​i​p​i​e​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​l​i​n​e​ ​i​t​e​m​s​,​ ​a​n​d​ ​p​a​y​m​e​n​t​ ​h​i​s​t​o​r​y​.
+					 */
+					longDesc: string
+					options: {
+						invoice_id: {
+							/**
+							 * I​n​v​o​i​c​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​n​v​o​i​c​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​n​v​o​i​c​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_invoices: {
+					/**
+					 * L​i​s​t​ ​I​n​v​o​i​c​e​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​y​o​u​r​ ​i​n​v​o​i​c​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​i​n​v​o​i​c​e​s​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​.​ ​U​s​e​ ​p​a​g​i​n​a​t​i​o​n​ ​p​a​r​a​m​e​t​e​r​s​ ​t​o​ ​n​a​v​i​g​a​t​e​ ​t​h​r​o​u​g​h​ ​l​a​r​g​e​ ​n​u​m​b​e​r​s​ ​o​f​ ​i​n​v​o​i​c​e​s​.
+					 */
+					longDesc: string
+					options: {
+						page: {
+							/**
+							 * P​a​g​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​g​e​ ​n​u​m​b​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​w​h​e​n​ ​p​a​g​i​n​a​t​i​n​g​ ​t​h​r​o​u​g​h​ ​i​n​v​o​i​c​e​s​.
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​i​n​v​o​i​c​e​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​i​n​v​o​i​c​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​s​p​o​n​s​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_disputes: {
+					/**
+					 * L​i​s​t​ ​D​i​s​p​u​t​e​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​c​u​s​t​o​m​e​r​ ​d​i​s​p​u​t​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​c​u​s​t​o​m​e​r​ ​d​i​s​p​u​t​e​s​ ​f​o​r​ ​y​o​u​r​ ​a​c​c​o​u​n​t​.​ ​D​i​s​p​u​t​e​s​ ​o​c​c​u​r​ ​w​h​e​n​ ​c​u​s​t​o​m​e​r​s​ ​c​h​a​l​l​e​n​g​e​ ​t​r​a​n​s​a​c​t​i​o​n​s​,​ ​a​n​d​ ​t​h​i​s​ ​A​P​I​ ​h​e​l​p​s​ ​y​o​u​ ​m​a​n​a​g​e​ ​a​n​d​ ​r​e​s​p​o​n​d​ ​t​o​ ​t​h​e​m​ ​e​f​f​e​c​t​i​v​e​l​y​.
+					 */
+					longDesc: string
+					options: {
+						start_time: {
+							/**
+							 * S​t​a​r​t​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * E​a​r​l​i​e​s​t​ ​d​i​s​p​u​t​e​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e​ ​t​o​ ​i​n​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​d​i​s​p​u​t​e​s​ ​c​r​e​a​t​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+						disputed_transaction_id: {
+							/**
+							 * D​i​s​p​u​t​e​d​ ​T​r​a​n​s​a​c​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​t​r​a​n​s​a​c​t​i​o​n​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * S​h​o​w​ ​o​n​l​y​ ​d​i​s​p​u​t​e​s​ ​r​e​l​a​t​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​r​a​n​s​a​c​t​i​o​n​ ​I​D​.
+							 */
+							longDesc: string
+						}
+						dispute_states: {
+							/**
+							 * D​i​s​p​u​t​e​ ​S​t​a​t​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​d​i​s​p​u​t​e​ ​s​t​a​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​d​i​s​p​u​t​e​s​ ​b​y​ ​t​h​e​i​r​ ​c​u​r​r​e​n​t​ ​s​t​a​t​e​s​,​ ​s​u​c​h​ ​a​s​ ​o​p​e​n​,​ ​u​n​d​e​r​ ​r​e​v​i​e​w​,​ ​o​r​ ​r​e​s​o​l​v​e​d​.
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​d​i​s​p​u​t​e​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​i​s​p​u​t​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​s​p​o​n​s​e​.
+							 */
+							longDesc: string
+						}
+						next_page_token: {
+							/**
+							 * N​e​x​t​ ​P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​d​i​s​p​u​t​e​s​.
+							 */
+							longDesc: string
+						}
+						update_time_before: {
+							/**
+							 * U​p​d​a​t​e​d​ ​B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​d​i​s​p​u​t​e​s​ ​u​p​d​a​t​e​d​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​d​i​s​p​u​t​e​s​ ​t​h​a​t​ ​w​e​r​e​ ​l​a​s​t​ ​u​p​d​a​t​e​d​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+						update_time_after: {
+							/**
+							 * U​p​d​a​t​e​d​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​d​i​s​p​u​t​e​s​ ​u​p​d​a​t​e​d​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​d​i​s​p​u​t​e​s​ ​t​h​a​t​ ​w​e​r​e​ ​l​a​s​t​ ​u​p​d​a​t​e​d​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				order_trigger: {
+					/**
+					 * O​r​d​e​r​ ​E​v​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​c​e​i​v​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​w​h​e​n​ ​o​r​d​e​r​ ​e​v​e​n​t​s​ ​o​c​c​u​r
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​s​p​e​c​i​f​i​c​ ​o​r​d​e​r​-​r​e​l​a​t​e​d​ ​e​v​e​n​t​s​ ​h​a​p​p​e​n​,​ ​s​u​c​h​ ​a​s​ ​w​h​e​n​ ​a​n​ ​o​r​d​e​r​ ​i​s​ ​a​p​p​r​o​v​e​d​ ​b​y​ ​t​h​e​ ​c​u​s​t​o​m​e​r​,​ ​c​o​m​p​l​e​t​e​d​,​ ​o​r​ ​w​h​e​n​ ​p​a​y​m​e​n​t​ ​a​p​p​r​o​v​a​l​ ​i​s​ ​r​e​v​e​r​s​e​d​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​o​r​d​e​r​ ​p​r​o​c​e​s​s​i​n​g​ ​w​o​r​k​f​l​o​w​s​ ​a​n​d​ ​h​a​n​d​l​e​ ​o​r​d​e​r​ ​s​t​a​t​u​s​ ​c​h​a​n​g​e​s​.
+					 */
+					longDesc: string
+					options: {
+						event_name: {
+							/**
+							 * O​r​d​e​r​ ​E​v​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​o​r​d​e​r​ ​e​v​e​n​t​ ​t​o​ ​l​i​s​t​e​n​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​o​r​d​e​r​ ​e​v​e​n​t​ ​s​h​o​u​l​d​ ​t​r​i​g​g​e​r​ ​t​h​i​s​ ​w​e​b​h​o​o​k​.​ ​E​a​c​h​ ​e​v​e​n​t​ ​r​e​p​r​e​s​e​n​t​s​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​s​t​a​g​e​ ​i​n​ ​t​h​e​ ​o​r​d​e​r​ ​l​i​f​e​c​y​c​l​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				invoice_trigger: {
+					/**
+					 * I​n​v​o​i​c​e​ ​E​v​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​c​e​i​v​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​w​h​e​n​ ​i​n​v​o​i​c​e​ ​e​v​e​n​t​s​ ​o​c​c​u​r
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​i​n​v​o​i​c​e​-​r​e​l​a​t​e​d​ ​e​v​e​n​t​s​ ​h​a​p​p​e​n​,​ ​s​u​c​h​ ​a​s​ ​w​h​e​n​ ​a​n​ ​i​n​v​o​i​c​e​ ​i​s​ ​c​r​e​a​t​e​d​,​ ​p​a​i​d​,​ ​c​a​n​c​e​l​l​e​d​,​ ​r​e​f​u​n​d​e​d​,​ ​o​r​ ​u​p​d​a​t​e​d​.​ ​E​s​s​e​n​t​i​a​l​ ​f​o​r​ ​m​a​n​a​g​i​n​g​ ​b​i​l​l​i​n​g​ ​w​o​r​k​f​l​o​w​s​ ​a​n​d​ ​k​e​e​p​i​n​g​ ​i​n​v​o​i​c​e​ ​s​t​a​t​u​s​ ​s​y​n​c​h​r​o​n​i​z​e​d​ ​w​i​t​h​ ​y​o​u​r​ ​s​y​s​t​e​m​s​.
+					 */
+					longDesc: string
+					options: {
+						event_name: {
+							/**
+							 * I​n​v​o​i​c​e​ ​E​v​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​i​n​v​o​i​c​e​ ​e​v​e​n​t​ ​t​o​ ​l​i​s​t​e​n​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​i​n​v​o​i​c​e​ ​e​v​e​n​t​ ​s​h​o​u​l​d​ ​t​r​i​g​g​e​r​ ​t​h​i​s​ ​w​e​b​h​o​o​k​.​ ​E​a​c​h​ ​e​v​e​n​t​ ​r​e​p​r​e​s​e​n​t​s​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​s​t​a​g​e​ ​i​n​ ​t​h​e​ ​i​n​v​o​i​c​e​ ​l​i​f​e​c​y​c​l​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				subscription_trigger: {
+					/**
+					 * S​u​b​s​c​r​i​p​t​i​o​n​ ​E​v​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​c​e​i​v​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​w​h​e​n​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​e​v​e​n​t​s​ ​o​c​c​u​r
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​s​u​b​s​c​r​i​p​t​i​o​n​-​r​e​l​a​t​e​d​ ​e​v​e​n​t​s​ ​h​a​p​p​e​n​,​ ​i​n​c​l​u​d​i​n​g​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​c​r​e​a​t​i​o​n​,​ ​a​c​t​i​v​a​t​i​o​n​,​ ​u​p​d​a​t​e​s​,​ ​c​a​n​c​e​l​l​a​t​i​o​n​,​ ​e​x​p​i​r​a​t​i​o​n​,​ ​o​r​ ​s​u​s​p​e​n​s​i​o​n​.​ ​C​r​i​t​i​c​a​l​ ​f​o​r​ ​m​a​n​a​g​i​n​g​ ​r​e​c​u​r​r​i​n​g​ ​b​i​l​l​i​n​g​ ​a​n​d​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​l​i​f​e​c​y​c​l​e​ ​a​u​t​o​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						event_name: {
+							/**
+							 * S​u​b​s​c​r​i​p​t​i​o​n​ ​E​v​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​e​v​e​n​t​ ​t​o​ ​l​i​s​t​e​n​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​e​v​e​n​t​ ​s​h​o​u​l​d​ ​t​r​i​g​g​e​r​ ​t​h​i​s​ ​w​e​b​h​o​o​k​.​ ​E​a​c​h​ ​e​v​e​n​t​ ​r​e​p​r​e​s​e​n​t​s​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​s​t​a​g​e​ ​i​n​ ​t​h​e​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​l​i​f​e​c​y​c​l​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				dispute_trigger: {
+					/**
+					 * D​i​s​p​u​t​e​ ​E​v​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​c​e​i​v​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​w​h​e​n​ ​d​i​s​p​u​t​e​ ​e​v​e​n​t​s​ ​o​c​c​u​r
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​c​u​s​t​o​m​e​r​ ​d​i​s​p​u​t​e​ ​e​v​e​n​t​s​ ​o​c​c​u​r​,​ ​s​u​c​h​ ​a​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​d​i​s​p​u​t​e​ ​i​s​ ​c​r​e​a​t​e​d​,​ ​u​p​d​a​t​e​d​,​ ​o​r​ ​r​e​s​o​l​v​e​d​.​ ​E​s​s​e​n​t​i​a​l​ ​f​o​r​ ​m​a​n​a​g​i​n​g​ ​c​u​s​t​o​m​e​r​ ​s​e​r​v​i​c​e​ ​w​o​r​k​f​l​o​w​s​ ​a​n​d​ ​r​e​s​p​o​n​d​i​n​g​ ​t​o​ ​p​a​y​m​e​n​t​ ​d​i​s​p​u​t​e​s​ ​p​r​o​m​p​t​l​y​.
+					 */
+					longDesc: string
+					options: {
+						event_name: {
+							/**
+							 * D​i​s​p​u​t​e​ ​E​v​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​d​i​s​p​u​t​e​ ​e​v​e​n​t​ ​t​o​ ​l​i​s​t​e​n​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​d​i​s​p​u​t​e​ ​e​v​e​n​t​ ​s​h​o​u​l​d​ ​t​r​i​g​g​e​r​ ​t​h​i​s​ ​w​e​b​h​o​o​k​.​ ​E​a​c​h​ ​e​v​e​n​t​ ​r​e​p​r​e​s​e​n​t​s​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​s​t​a​g​e​ ​i​n​ ​t​h​e​ ​d​i​s​p​u​t​e​ ​r​e​s​o​l​u​t​i​o​n​ ​p​r​o​c​e​s​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -78010,6 +80130,582 @@ export type TranslationFunctions = {
 					 * Other
 					 */
 					group: () => LocalizedString
+				}
+			}
+		}
+		AzureDevOps: {
+			/**
+			 * Azure DevOps
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Azure DevOps to automate project management, code repositories, and CI/CD pipelines.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Azure DevOps integration provides comprehensive actions and triggers to interact with Azure DevOps Services. Manage work items, repositories, builds, releases, and team projects efficiently. Automate your development workflow by connecting Azure DevOps with other tools and services in your automation pipeline.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				create_work_item: {
+					/**
+					 * Create Work Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new work item in Azure DevOps
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new work item such as a task, bug, epic, or user story in a specified Azure DevOps project with customizable properties and fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Azure DevOps project where the work item will be created
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the target project from your Azure DevOps organization where the new work item should be created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						itemType: {
+							/**
+							 * Work Item Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The type of work item to create
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the specific type of work item you want to create, such as Task, Bug, Epic, User Story, or other available types in your project.
+							 */
+							longDesc: () => LocalizedString
+						}
+						properties: {
+							/**
+							 * Work Item Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Fields and values for the work item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Configure the properties and field values for the work item, including title, description, and other custom fields based on the selected work item type.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									'System.Title': {
+										/**
+										 * Title
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The title of the work item
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * A descriptive title that summarizes the work item content.
+										 */
+										longDesc: () => LocalizedString
+									}
+									'System.Description': {
+										/**
+										 * Description
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Detailed description of the work item
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * A comprehensive description explaining the work item requirements, context, and any relevant details.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				delete_work_item: {
+					/**
+					 * Delete Work Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a work item from Azure DevOps
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently remove a work item from the specified Azure DevOps project. This action cannot be undone.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Azure DevOps project containing the work item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the project where the work item to be deleted is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						id: {
+							/**
+							 * Work Item ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the work item to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter or select the ID of the specific work item you want to permanently delete from the project.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_work_item: {
+					/**
+					 * Get Work Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific work item
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch comprehensive information about a work item including its current state, assigned users, and all field values.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Azure DevOps project containing the work item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the project where the work item is located to retrieve its details.
+							 */
+							longDesc: () => LocalizedString
+						}
+						id: {
+							/**
+							 * Work Item ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the work item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter or select the ID of the work item whose details you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_projects: {
+					/**
+					 * List Projects
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get a list of Azure DevOps projects
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all accessible projects in your Azure DevOps organization with optional filtering and pagination.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of projects to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the maximum number of projects to include in the response to control pagination.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of projects to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how many projects to skip from the beginning of the list for pagination purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						stateFilter: {
+							/**
+							 * State Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter projects by their current state
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the project list based on project state such as active, deleted, or other available states.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_users: {
+					/**
+					 * List Users
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get a list of users in the Azure DevOps organization
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all users who have access to your Azure DevOps organization with pagination support.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of users to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the maximum number of users to include in the response for pagination control.
+							 */
+							longDesc: () => LocalizedString
+						}
+						continuationToken: {
+							/**
+							 * Continuation Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for retrieving the next page of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the continuation token from a previous request to get the next set of users in the paginated results.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_work_items: {
+					/**
+					 * List Work Items
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get a list of work items from a project
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve work items from a specified project with filtering options by type, state, title, and pagination support.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Azure DevOps project to search for work items
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the project from which you want to retrieve work items.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of work items to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the maximum number of work items to include in the response for better performance and pagination.
+							 */
+							longDesc: () => LocalizedString
+						}
+						itemType: {
+							/**
+							 * Work Item Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by work item type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter the results to include only work items of a specific type such as Task, Bug, Epic, or User Story.
+							 */
+							longDesc: () => LocalizedString
+						}
+						state: {
+							/**
+							 * State
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by work item state
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter work items based on their current state such as New, Active, Resolved, or Closed.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by work item title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for work items that contain the specified text in their title.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_work_item: {
+					/**
+					 * Update Work Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing work item
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Modify the properties and field values of an existing work item in Azure DevOps with the ability to update any available fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Azure DevOps project containing the work item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the project where the work item to be updated is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						itemId: {
+							/**
+							 * Work Item ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the work item to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter or select the ID of the work item you want to modify.
+							 */
+							longDesc: () => LocalizedString
+						}
+						properties: {
+							/**
+							 * Updated Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New values for work item fields
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the fields and their new values that you want to update in the work item. Available fields depend on the work item type.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									'System.Title': {
+										/**
+										 * Title
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Updated title for the work item
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Provide a new title that better describes the work item content.
+										 */
+										longDesc: () => LocalizedString
+									}
+									'System.Description': {
+										/**
+										 * Description
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Updated description for the work item
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Provide an updated comprehensive description with new requirements, context, or relevant details.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			triggers: {
+				new_work_item: {
+					/**
+					 * New Work Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new work item is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Receive real-time notifications whenever a new work item is created in the specified Azure DevOps project, with optional filtering by work item type.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Azure DevOps project to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the project where you want to monitor for new work items being created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						itemType: {
+							/**
+							 * Work Item Type Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by specific work item types
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter the trigger to only fire for specific types of work items such as Tasks, Bugs, or User Stories.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				updated_work_item: {
+					/**
+					 * Updated Work Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a work item is updated
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Receive real-time notifications whenever a work item is modified in the specified Azure DevOps project, with optional filtering by work item type and changed fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Azure DevOps project to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the project where you want to monitor for work item updates.
+							 */
+							longDesc: () => LocalizedString
+						}
+						itemType: {
+							/**
+							 * Work Item Type Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by specific work item types
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter the trigger to only fire for updates to specific types of work items.
+							 */
+							longDesc: () => LocalizedString
+						}
+						changedFields: {
+							/**
+							 * Changed Fields Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by specific field changes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally specify which field changes should trigger this webhook. Leave empty to trigger on any field change.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 			}
 		}
@@ -145504,6 +148200,1550 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Set whether the task is incomplete (needs action) or completed.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		PayPal: {
+			/**
+			 * PayPal
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Integrate with PayPal to manage payments, orders, invoices, disputes, and subscriptions through comprehensive APIs.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The PayPal integration provides complete access to PayPal's REST APIs for managing e-commerce transactions. Create and capture orders, process payments and refunds, manage invoices and billing, handle customer disputes, set up recurring subscriptions, and receive real-time webhook notifications. Perfect for businesses of all sizes looking to accept payments securely and efficiently.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				create_order: {
+					/**
+					 * Create Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new payment order with purchase details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new PayPal order with specified payment amount, items, shipping details, and payment preferences. Orders represent a payment between two or more parties and can be authorized immediately or captured later. Supports various payment sources including PayPal, cards, and alternative payment methods.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						intent: {
+							/**
+							 * Payment Intent
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to capture payment immediately or authorize for later capture
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Determines when the payment will be processed. CAPTURE processes payment immediately after approval, while AUTHORIZE places a hold on funds for up to 29 days, allowing you to capture payment when ready to fulfill the order.
+							 */
+							longDesc: () => LocalizedString
+						}
+						currency_code: {
+							/**
+							 * Currency Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Three-letter ISO currency code for the transaction
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The three-character ISO-4217 currency code that identifies the currency for this transaction. Must be supported by PayPal and match your business account settings.
+							 */
+							longDesc: () => LocalizedString
+						}
+						total_amount: {
+							/**
+							 * Total Amount
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Total payment amount as a string
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The total amount for this order. Must be a positive number and match the sum of all breakdown components if provided. Format as a string with appropriate decimal precision for the currency.
+							 */
+							longDesc: () => LocalizedString
+						}
+						item_total: {
+							/**
+							 * Item Total
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Total cost of all items before taxes and fees
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The total cost of all items in the order before applying taxes, shipping, handling, insurance, or discounts. Should equal the sum of (quantity × unit_amount) for all items.
+							 */
+							longDesc: () => LocalizedString
+						}
+						shipping_amount: {
+							/**
+							 * Shipping Amount
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Cost of shipping for this order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The shipping cost for delivering the items in this order. This amount is added to the total order amount.
+							 */
+							longDesc: () => LocalizedString
+						}
+						handling_amount: {
+							/**
+							 * Handling Amount
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Handling fee for processing this order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional handling fee charged for processing this order. This covers costs like packaging and order processing.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tax_total: {
+							/**
+							 * Tax Total
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Total tax amount for this order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The total tax amount for all items in this order. This includes sales tax, VAT, or other applicable taxes based on the shipping address and local regulations.
+							 */
+							longDesc: () => LocalizedString
+						}
+						insurance_amount: {
+							/**
+							 * Insurance Amount
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Insurance cost for this shipment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional insurance amount to protect the shipment. This covers the value of items in case of loss or damage during shipping.
+							 */
+							longDesc: () => LocalizedString
+						}
+						shipping_discount: {
+							/**
+							 * Shipping Discount
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Discount applied to shipping costs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Any discount applied specifically to shipping costs, such as free shipping promotions or reduced shipping fees for bulk orders.
+							 */
+							longDesc: () => LocalizedString
+						}
+						discount_amount: {
+							/**
+							 * Discount Amount
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Total discount applied to the order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The total discount amount applied to this order, including coupon codes, promotions, or bulk discounts. This reduces the overall order total.
+							 */
+							longDesc: () => LocalizedString
+						}
+						payee_email: {
+							/**
+							 * Payee Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email address of the payment recipient
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address of the merchant or seller who will receive the payment. Required for marketplace transactions or when specifying a different recipient.
+							 */
+							longDesc: () => LocalizedString
+						}
+						payee_merchant_id: {
+							/**
+							 * Payee Merchant ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * PayPal merchant ID of the payment recipient
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The PayPal merchant ID of the account that will receive the payment. Used for marketplace transactions or when routing payments to specific merchants.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Order Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Description of the order or purchase
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A brief description of the order that will be visible to the customer during checkout and in their transaction history.
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_id: {
+							/**
+							 * Custom ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Your custom identifier for this order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A custom identifier that you can use to track this order in your own systems. This will be returned in webhooks and API responses.
+							 */
+							longDesc: () => LocalizedString
+						}
+						invoice_id: {
+							/**
+							 * Invoice ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Invoice number for this order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The invoice number for this order. Helps match orders with your accounting system and prevents duplicate payments.
+							 */
+							longDesc: () => LocalizedString
+						}
+						soft_descriptor: {
+							/**
+							 * Soft Descriptor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text that appears on customer's credit card statement
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text that appears on the customer's credit card or bank statement. Keep it short and recognizable to avoid chargebacks.
+							 */
+							longDesc: () => LocalizedString
+						}
+						items: {
+							/**
+							 * Order Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of items being purchased
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Array of items included in this order. Each item should specify name, quantity, unit price, and optionally description, SKU, category, and tax amount.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											name: {
+												/**
+												 * Item Name
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Name of the item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * A descriptive name for this item that will be shown to the customer during checkout.
+												 */
+												longDesc: () => LocalizedString
+											}
+											quantity: {
+												/**
+												 * Quantity
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Number of items
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The quantity of this item being purchased. Must be a positive integer.
+												 */
+												longDesc: () => LocalizedString
+											}
+											unit_price: {
+												/**
+												 * Unit Price
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Price per individual item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The cost per individual unit of this item, before taxes and discounts.
+												 */
+												longDesc: () => LocalizedString
+											}
+											description: {
+												/**
+												 * Item Description
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Detailed description of the item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Optional detailed description providing more information about this item.
+												 */
+												longDesc: () => LocalizedString
+											}
+											sku: {
+												/**
+												 * SKU
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Stock keeping unit identifier
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Your internal stock keeping unit identifier for inventory tracking.
+												 */
+												longDesc: () => LocalizedString
+											}
+											url: {
+												/**
+												 * Item URL
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Link to the item page
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Optional URL linking to the product page where customers can view more details about this item.
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Item Category
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Category type of the item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The category classification for this item, which affects payment processing and compliance requirements.
+												 */
+												longDesc: () => LocalizedString
+											}
+											tax_amount: {
+												/**
+												 * Tax Amount
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Tax amount for this item
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The tax amount specifically for this item, calculated based on quantity and applicable tax rates.
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						shipping_type: {
+							/**
+							 * Shipping Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Method of delivery for this order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies how the items will be delivered to the customer. Affects shipping costs and delivery timeline.
+							 */
+							longDesc: () => LocalizedString
+						}
+						shipping_name: {
+							/**
+							 * Shipping Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Full name for shipping address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The complete name of the person who will receive the shipment at the delivery address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						shipping_address_line_1: {
+							/**
+							 * Shipping Address Line 1
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Primary shipping address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The first line of the shipping address, typically containing street number and name.
+							 */
+							longDesc: () => LocalizedString
+						}
+						shipping_address_line_2: {
+							/**
+							 * Shipping Address Line 2
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Secondary shipping address line
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional second line of the shipping address for apartment numbers, suite numbers, or additional location details.
+							 */
+							longDesc: () => LocalizedString
+						}
+						shipping_city: {
+							/**
+							 * Shipping City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * City for shipping address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The city where the items will be delivered.
+							 */
+							longDesc: () => LocalizedString
+						}
+						shipping_state: {
+							/**
+							 * Shipping State
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * State or province for shipping
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The state, province, or region for the shipping address. Use appropriate codes for the country.
+							 */
+							longDesc: () => LocalizedString
+						}
+						shipping_postal_code: {
+							/**
+							 * Shipping Postal Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ZIP or postal code for shipping
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ZIP code, postal code, or equivalent for the shipping address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						shipping_country_code: {
+							/**
+							 * Shipping Country Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Two-letter country code for shipping
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The two-character ISO 3166-1 country code for the shipping address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						platform_fees: {
+							/**
+							 * Platform Fees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Fees collected by the platform
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Array of platform fees to be collected on this transaction. Used by marketplaces to collect fees from transactions processed on their platform.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											fee_amount: {
+												/**
+												 * Fee Amount
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Platform fee amount
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The amount of the platform fee to be collected from this transaction.
+												 */
+												longDesc: () => LocalizedString
+											}
+											payee_email: {
+												/**
+												 * Fee Recipient Email
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Email of fee recipient
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Email address of the account that will receive the platform fee.
+												 */
+												longDesc: () => LocalizedString
+											}
+											payee_merchant_id: {
+												/**
+												 * Fee Recipient Merchant ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Merchant ID of fee recipient
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * PayPal merchant ID of the account that will receive the platform fee.
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						disbursement_mode: {
+							/**
+							 * Disbursement Mode
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When to release funds to the seller
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Controls when captured funds are released to the seller. INSTANT releases funds immediately, while DELAYED allows you to hold funds for verification before release.
+							 */
+							longDesc: () => LocalizedString
+						}
+						return_url: {
+							/**
+							 * Return URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * URL to redirect after successful payment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The URL where customers will be redirected after successfully completing their payment. Should be a page confirming the successful transaction.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cancel_url: {
+							/**
+							 * Cancel URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * URL to redirect if payment is cancelled
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The URL where customers will be redirected if they cancel the payment process. Should provide information about the cancelled transaction and next steps.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				capture_order: {
+					/**
+					 * Capture Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Capture payment for an approved order
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Captures payment for an order that has been approved by the customer. This completes the payment process and transfers funds from the customer to your account. Should be called after receiving order approval or for immediate capture orders.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						order_id: {
+							/**
+							 * Order ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the approved order to capture
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the order that has been approved by the customer and is ready for payment capture.
+							 */
+							longDesc: () => LocalizedString
+						}
+						final_capture: {
+							/**
+							 * Final Capture
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether this is the final capture for the order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Indicates whether this capture completes the payment for the order. Set to true if this is the complete amount, or false if you plan to make additional partial captures.
+							 */
+							longDesc: () => LocalizedString
+						}
+						payment_instruction: {
+							/**
+							 * Payment Instructions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional payment processing instructions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Special instructions for processing this payment, such as disbursement timing or platform fee collection.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									disbursement_mode: {
+										/**
+										 * Disbursement Mode
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * When to disburse funds
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Controls when captured funds are disbursed to the payee. Use INSTANT for immediate disbursement or DELAYED to hold funds.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				authorize_order: {
+					/**
+					 * Authorize Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Authorize payment for an approved order
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Authorizes payment for an order that has been approved by the customer. This places a hold on the funds without capturing them, allowing you to capture the payment later when ready to fulfill the order. Authorization is valid for up to 29 days.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						order_id: {
+							/**
+							 * Order ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the approved order to authorize
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the order that has been approved by the customer and is ready for payment authorization.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_order: {
+					/**
+					 * Get Order
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve order details by ID
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves complete details for an order by its ID, including current status, payment information, customer details, and transaction history. Use this to check order status or retrieve information for order management.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						order_id: {
+							/**
+							 * Order ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Unique identifier of the order to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the order you want to retrieve details for.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_transactions: {
+					/**
+					 * List Transactions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get transaction history for your account
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of transactions for your PayPal account within a specified date range. Supports filtering by transaction type, status, amount range, currency, and payment method to help you find specific transactions or generate reports.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						start_date: {
+							/**
+							 * Start Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Beginning date for transaction search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The earliest date to include in the transaction search. Transactions on or after this date will be included in the results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						end_date: {
+							/**
+							 * End Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Ending date for transaction search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The latest date to include in the transaction search. Transactions on or before this date will be included in the results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						transaction_type: {
+							/**
+							 * Transaction Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of transactions to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter results by specific transaction types such as payments, refunds, fees, or other transaction categories.
+							 */
+							longDesc: () => LocalizedString
+						}
+						transaction_status: {
+							/**
+							 * Transaction Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Status of transactions to include
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter transactions by their processing status such as Success, Pending, Denied, or Refunded.
+							 */
+							longDesc: () => LocalizedString
+						}
+						transaction_amount: {
+							/**
+							 * Transaction Amount Range
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by transaction amount range
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify a range of transaction amounts to filter results. Useful for finding transactions within specific value ranges.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									from: {
+										/**
+										 * Minimum Amount
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Minimum transaction amount
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The minimum transaction amount to include in results.
+										 */
+										longDesc: () => LocalizedString
+									}
+									to: {
+										/**
+										 * Maximum Amount
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Maximum transaction amount
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The maximum transaction amount to include in results.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						transaction_currency: {
+							/**
+							 * Transaction Currency
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by currency code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter transactions by currency code to see only transactions in specific currencies.
+							 */
+							longDesc: () => LocalizedString
+						}
+						payment_instrument_type: {
+							/**
+							 * Payment Method Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by payment method used
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter transactions by the type of payment method used, such as credit card, debit card, or bank account.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of transactions per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of transactions to return in a single response. Use for pagination of large result sets.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page: {
+							/**
+							 * Page Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Page number for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The page number to retrieve when paginating through large result sets.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				refund_payment: {
+					/**
+					 * Refund Payment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Process a refund for a captured payment
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Issues a refund for a previously captured payment. Can process full or partial refunds. The refunded amount will be returned to the customer's original payment method and deducted from your account balance.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						capture_id: {
+							/**
+							 * Capture ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ID of the captured payment to refund
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the captured payment that you want to refund. This can be found in the capture response or order details.
+							 */
+							longDesc: () => LocalizedString
+						}
+						amount: {
+							/**
+							 * Refund Amount
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Amount to refund (optional for full refund)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The amount to refund. If not specified, the full captured amount will be refunded. For partial refunds, specify the currency and amount.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									currency_code: {
+										/**
+										 * Currency Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Currency for the refund amount
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The three-character ISO currency code for the refund amount.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Refund Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The refund amount as a string
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The amount to refund, formatted as a string with appropriate decimal precision.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						note_to_payer: {
+							/**
+							 * Note to Payer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional note explaining the refund
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional note that will be sent to the customer explaining the reason for the refund.
+							 */
+							longDesc: () => LocalizedString
+						}
+						invoice_id: {
+							/**
+							 * Invoice ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Invoice ID for the refund
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional invoice ID to associate with this refund for accounting and tracking purposes.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_invoice: {
+					/**
+					 * Create Invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new invoice for payment
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new invoice that can be sent to customers for payment. Includes item details, pricing, tax information, and payment terms. Invoices can be automatically sent to recipients or manually shared.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						invoice_number: {
+							/**
+							 * Invoice Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Unique invoice number for tracking
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A unique identifier for this invoice. If not provided, PayPal will generate one automatically.
+							 */
+							longDesc: () => LocalizedString
+						}
+						currency_code: {
+							/**
+							 * Currency Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Currency for the invoice amount
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The three-character ISO currency code for this invoice.
+							 */
+							longDesc: () => LocalizedString
+						}
+						note: {
+							/**
+							 * Note
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Note or memo for the invoice
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional note or memo to include with the invoice. Visible to the recipient.
+							 */
+							longDesc: () => LocalizedString
+						}
+						recipient_email: {
+							/**
+							 * Recipient Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email address of the invoice recipient
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address where the invoice will be sent. This is the primary recipient who will receive payment requests.
+							 */
+							longDesc: () => LocalizedString
+						}
+						recipient_first_name: {
+							/**
+							 * Recipient First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * First name of the invoice recipient
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The first name of the person or business contact receiving the invoice.
+							 */
+							longDesc: () => LocalizedString
+						}
+						recipient_last_name: {
+							/**
+							 * Recipient Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Last name of the invoice recipient
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The last name of the person receiving the invoice.
+							 */
+							longDesc: () => LocalizedString
+						}
+						item_name: {
+							/**
+							 * Item Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the item or service
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A descriptive name for the product or service being invoiced.
+							 */
+							longDesc: () => LocalizedString
+						}
+						item_description: {
+							/**
+							 * Item Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Detailed description of the item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional detailed description providing more information about the product or service.
+							 */
+							longDesc: () => LocalizedString
+						}
+						item_quantity: {
+							/**
+							 * Item Quantity
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of items or units
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The quantity of the item being invoiced. Defaults to 1 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						item_unit_price: {
+							/**
+							 * Unit Price
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Price per unit of the item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The cost per individual unit of the item or service.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tax_percent: {
+							/**
+							 * Tax Percentage
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tax rate to apply to the item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The tax rate as a percentage to be applied to the item amount.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tax_name: {
+							/**
+							 * Tax Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the tax (e.g., "Sales Tax")
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A descriptive name for the tax being applied, such as "Sales Tax", "VAT", or "GST".
+							 */
+							longDesc: () => LocalizedString
+						}
+						payment_term: {
+							/**
+							 * Payment Terms
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When payment is due
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies when payment is due for this invoice, such as immediately upon receipt or within a specific number of days.
+							 */
+							longDesc: () => LocalizedString
+						}
+						send_to_recipient: {
+							/**
+							 * Send to Recipient
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Automatically send the invoice via email
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If true, the invoice will be automatically sent to the recipient's email address. If false, you can send it manually later.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_invoice: {
+					/**
+					 * Get Invoice
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve invoice details by ID
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves complete details for an invoice by its ID, including payment status, recipient information, line items, and payment history.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						invoice_id: {
+							/**
+							 * Invoice ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Unique identifier of the invoice to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the invoice you want to retrieve details for.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_invoices: {
+					/**
+					 * List Invoices
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get a list of your invoices
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a paginated list of invoices in your account. Use pagination parameters to navigate through large numbers of invoices.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						page: {
+							/**
+							 * Page Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Page number for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The page number to retrieve when paginating through invoices.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of invoices per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of invoices to return in a single response.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_disputes: {
+					/**
+					 * List Disputes
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get a list of customer disputes
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of customer disputes for your account. Disputes occur when customers challenge transactions, and this API helps you manage and respond to them effectively.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						start_time: {
+							/**
+							 * Start Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Earliest dispute creation time to include
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter disputes created on or after this date and time.
+							 */
+							longDesc: () => LocalizedString
+						}
+						disputed_transaction_id: {
+							/**
+							 * Disputed Transaction ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by specific transaction ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Show only disputes related to a specific transaction ID.
+							 */
+							longDesc: () => LocalizedString
+						}
+						dispute_states: {
+							/**
+							 * Dispute States
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by dispute states
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter disputes by their current states, such as open, under review, or resolved.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of disputes per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of disputes to return in a single response.
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_page_token: {
+							/**
+							 * Next Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for retrieving the next page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Token for pagination to retrieve the next page of disputes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						update_time_before: {
+							/**
+							 * Updated Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include disputes updated before this date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter disputes that were last updated before this date and time.
+							 */
+							longDesc: () => LocalizedString
+						}
+						update_time_after: {
+							/**
+							 * Updated After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include disputes updated after this date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter disputes that were last updated after this date and time.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				order_trigger: {
+					/**
+					 * Order Events
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Receive notifications when order events occur
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when specific order-related events happen, such as when an order is approved by the customer, completed, or when payment approval is reversed. Use this to automate order processing workflows and handle order status changes.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						event_name: {
+							/**
+							 * Order Event Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific order event to listen for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which order event should trigger this webhook. Each event represents a different stage in the order lifecycle.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				invoice_trigger: {
+					/**
+					 * Invoice Events
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Receive notifications when invoice events occur
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when invoice-related events happen, such as when an invoice is created, paid, cancelled, refunded, or updated. Essential for managing billing workflows and keeping invoice status synchronized with your systems.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						event_name: {
+							/**
+							 * Invoice Event Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific invoice event to listen for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which invoice event should trigger this webhook. Each event represents a different stage in the invoice lifecycle.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				subscription_trigger: {
+					/**
+					 * Subscription Events
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Receive notifications when subscription events occur
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when subscription-related events happen, including subscription creation, activation, updates, cancellation, expiration, or suspension. Critical for managing recurring billing and subscription lifecycle automation.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						event_name: {
+							/**
+							 * Subscription Event Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific subscription event to listen for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which subscription event should trigger this webhook. Each event represents a different stage in the subscription lifecycle.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				dispute_trigger: {
+					/**
+					 * Dispute Events
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Receive notifications when dispute events occur
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when customer dispute events occur, such as when a new dispute is created, updated, or resolved. Essential for managing customer service workflows and responding to payment disputes promptly.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						event_name: {
+							/**
+							 * Dispute Event Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific dispute event to listen for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which dispute event should trigger this webhook. Each event represents a different stage in the dispute resolution process.
 							 */
 							longDesc: () => LocalizedString
 						}

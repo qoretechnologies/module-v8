@@ -12,6 +12,7 @@ import AmazonSNS from './apps/AmazonSNS';
 import AmazonSQS from './apps/AmazonSQS';
 import Asana from './apps/Asana';
 import Attio from './apps/Attio';
+import AzureDevOps from './apps/AzureDevOps';
 import BigMl from './apps/BigMl';
 import Bitbucket from './apps/Bitbucket';
 import Brevo from './apps/Brevo';
@@ -69,6 +70,7 @@ import Xero from './apps/Xero';
 import YouTube from './apps/YouTube';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
+import PayPal from './apps/PayPal';
 
 const en = {
   common: {},
@@ -168,6 +170,7 @@ const en = {
       },
     },
     Asana,
+    AzureDevOps,
     AzureActiveDirectory,
     AmazonEC2,
     AmazonS3,
@@ -237,6 +240,7 @@ const en = {
     Telegram,
     Brevo,
     GoogleTasks,
+    PayPal,
   },
 } satisfies BaseTranslation;
 
