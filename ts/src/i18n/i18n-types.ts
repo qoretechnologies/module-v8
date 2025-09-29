@@ -16,195 +16,19 @@ type RootTranslation = {
 	common: {
 	}
 	apps: {
-		_testing: {
-			triggers: {
-				_testing: {
-					options: {
-						option1: {
-							/**
-							 * O​p​t​i​o​n​ ​1
-							 */
-							displayName: string
-							/**
-							 * O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-							 */
-							shortDesc: string
-							/**
-							 * O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-							 */
-							longDesc: string
-						}
-						option2: {
-							/**
-							 * S​e​c​o​n​d​ ​O​p​t​i​o​n
-							 */
-							displayName: string
-							/**
-							 * S​e​c​o​n​d​ ​O​p​t​i​o​n​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-							 */
-							shortDesc: string
-							/**
-							 * S​e​c​o​n​d​ ​O​p​t​i​o​n​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-							 */
-							longDesc: string
-						}
-					}
-					event_info: {
-						/**
-						 * E​v​e​n​t​ ​d​a​t​a
-						 */
-						desc: string
-						type: {
-							fields: {
-								testTriggerInfo: {
-									/**
-									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o
-									 */
-									displayName: string
-									/**
-									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-									 */
-									shortDesc: string
-									/**
-									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-									 */
-									longDesc: string
-									type: {
-										fields: {
-											testTriggerInfo1: {
-												/**
-												 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1
-												 */
-												displayName: string
-												/**
-												 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-												 */
-												shortDesc: string
-												/**
-												 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-												 */
-												longDesc: string
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-			actions: {
-				test: {
-					options: {
-						option1: {
-							/**
-							 * O​p​t​i​o​n​ ​1
-							 */
-							displayName: string
-							/**
-							 * O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-							 */
-							shortDesc: string
-							/**
-							 * O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-							 */
-							longDesc: string
-							type: {
-								fields: {
-									subOption1: {
-										/**
-										 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​o​f​ ​o​p​t​i​o​n​ ​1
-										 */
-										displayName: string
-										/**
-										 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-										 */
-										shortDesc: string
-										/**
-										 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-										 */
-										longDesc: string
-									}
-									subOption2: {
-										/**
-										 * S​u​b​ ​O​p​t​i​o​n​ ​2​ ​o​f​ ​o​p​t​i​o​n​ ​1
-										 */
-										displayName: string
-										/**
-										 * S​u​b​ ​O​p​t​i​o​n​ ​2​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-										 */
-										shortDesc: string
-										/**
-										 * S​u​b​ ​O​p​t​i​o​n​ ​2​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-										 */
-										longDesc: string
-										type: {
-											fields: {
-												subSubOption1: {
-													/**
-													 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1
-													 */
-													displayName: string
-													/**
-													 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-													 */
-													shortDesc: string
-													/**
-													 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-													 */
-													longDesc: string
-												}
-											}
-										}
-									}
-									subOption3: {
-										/**
-										 * S​u​b​ ​O​p​t​i​o​n​ ​3​ ​o​f​ ​o​p​t​i​o​n​ ​1
-										 */
-										displayName: string
-										/**
-										 * S​u​b​ ​O​p​t​i​o​n​ ​3​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-										 */
-										shortDesc: string
-										/**
-										 * S​u​b​ ​O​p​t​i​o​n​ ​3​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-										 */
-										longDesc: string
-										type: {
-											element_type: {
-												type: {
-													fields: {
-														subSubOption1: {
-															/**
-															 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1
-															 */
-															displayName: string
-															/**
-															 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-															 */
-															shortDesc: string
-															/**
-															 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-															 */
-															longDesc: string
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-						option2: {
-							/**
-							 * S​e​c​o​n​d​ ​O​p​t​i​o​n
-							 */
-							displayName: string
-						}
-					}
-				}
-			}
+		Patreon: {
+			/**
+			 * P​a​t​r​e​o​n
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​P​a​t​r​e​o​n​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​c​r​e​a​t​o​r​ ​c​o​n​t​e​n​t​,​ ​m​e​m​b​e​r​s​h​i​p​s​,​ ​a​n​d​ ​p​a​t​r​o​n​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​P​a​t​r​e​o​n​ ​i​n​t​e​g​r​a​t​i​o​n​ ​e​n​a​b​l​e​s​ ​c​r​e​a​t​o​r​s​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​t​h​e​i​r​ ​p​a​t​r​o​n​ ​m​a​n​a​g​e​m​e​n​t​ ​w​o​r​k​f​l​o​w​s​.​ ​A​c​c​e​s​s​ ​p​a​t​r​o​n​ ​d​a​t​a​,​ ​m​a​n​a​g​e​ ​m​e​m​b​e​r​s​h​i​p​s​,​ ​t​r​a​c​k​ ​c​a​m​p​a​i​g​n​s​,​ ​a​n​d​ ​e​n​g​a​g​e​ ​w​i​t​h​ ​y​o​u​r​ ​c​o​m​m​u​n​i​t​y​ ​t​h​r​o​u​g​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​A​P​I​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​a​l​-​t​i​m​e​ ​t​r​i​g​g​e​r​s​ ​f​o​r​ ​p​a​t​r​o​n​ ​a​c​t​i​v​i​t​i​e​s​.
+			 */
+			longDesc: string
 		}
 		Asana: {
 			/**
@@ -74880,81 +74704,74 @@ type RootTranslation = {
 				}
 			}
 		}
-	}
-}
-
-export type TranslationFunctions = {
-	common: {
-	}
-	apps: {
 		_testing: {
 			triggers: {
 				_testing: {
 					options: {
 						option1: {
 							/**
-							 * Option 1
+							 * O​p​t​i​o​n​ ​1
 							 */
-							displayName: () => LocalizedString
+							displayName: string
 							/**
-							 * Option 1 Short Description
+							 * O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 							 */
-							shortDesc: () => LocalizedString
+							shortDesc: string
 							/**
-							 * Option 1 Long Description
+							 * O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 							 */
-							longDesc: () => LocalizedString
+							longDesc: string
 						}
 						option2: {
 							/**
-							 * Second Option
+							 * S​e​c​o​n​d​ ​O​p​t​i​o​n
 							 */
-							displayName: () => LocalizedString
+							displayName: string
 							/**
-							 * Second Option Short Description
+							 * S​e​c​o​n​d​ ​O​p​t​i​o​n​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 							 */
-							shortDesc: () => LocalizedString
+							shortDesc: string
 							/**
-							 * Second Option Long Description
+							 * S​e​c​o​n​d​ ​O​p​t​i​o​n​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 							 */
-							longDesc: () => LocalizedString
+							longDesc: string
 						}
 					}
 					event_info: {
 						/**
-						 * Event data
+						 * E​v​e​n​t​ ​d​a​t​a
 						 */
-						desc: () => LocalizedString
+						desc: string
 						type: {
 							fields: {
 								testTriggerInfo: {
 									/**
-									 * Test Trigger Info
+									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o
 									 */
-									displayName: () => LocalizedString
+									displayName: string
 									/**
-									 * Test Trigger Info Short Description
+									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 									 */
-									shortDesc: () => LocalizedString
+									shortDesc: string
 									/**
-									 * Test Trigger Info Long Description
+									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 									 */
-									longDesc: () => LocalizedString
+									longDesc: string
 									type: {
 										fields: {
 											testTriggerInfo1: {
 												/**
-												 * Test Trigger Info 1
+												 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1
 												 */
-												displayName: () => LocalizedString
+												displayName: string
 												/**
-												 * Test Trigger Info 1 Short Description
+												 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 												 */
-												shortDesc: () => LocalizedString
+												shortDesc: string
 												/**
-												 * Test Trigger Info 1 Long Description
+												 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 												 */
-												longDesc: () => LocalizedString
+												longDesc: string
 											}
 										}
 									}
@@ -74969,95 +74786,95 @@ export type TranslationFunctions = {
 					options: {
 						option1: {
 							/**
-							 * Option 1
+							 * O​p​t​i​o​n​ ​1
 							 */
-							displayName: () => LocalizedString
+							displayName: string
 							/**
-							 * Option 1 Short Description
+							 * O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 							 */
-							shortDesc: () => LocalizedString
+							shortDesc: string
 							/**
-							 * Option 1 Long Description
+							 * O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 							 */
-							longDesc: () => LocalizedString
+							longDesc: string
 							type: {
 								fields: {
 									subOption1: {
 										/**
-										 * Sub Option 1 of option 1
+										 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​o​f​ ​o​p​t​i​o​n​ ​1
 										 */
-										displayName: () => LocalizedString
+										displayName: string
 										/**
-										 * Sub Option 1 Short Description
+										 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 										 */
-										shortDesc: () => LocalizedString
+										shortDesc: string
 										/**
-										 * Sub Option 1 Long Description
+										 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 										 */
-										longDesc: () => LocalizedString
+										longDesc: string
 									}
 									subOption2: {
 										/**
-										 * Sub Option 2 of option 1
+										 * S​u​b​ ​O​p​t​i​o​n​ ​2​ ​o​f​ ​o​p​t​i​o​n​ ​1
 										 */
-										displayName: () => LocalizedString
+										displayName: string
 										/**
-										 * Sub Option 2 Short Description
+										 * S​u​b​ ​O​p​t​i​o​n​ ​2​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 										 */
-										shortDesc: () => LocalizedString
+										shortDesc: string
 										/**
-										 * Sub Option 2 Long Description
+										 * S​u​b​ ​O​p​t​i​o​n​ ​2​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 										 */
-										longDesc: () => LocalizedString
+										longDesc: string
 										type: {
 											fields: {
 												subSubOption1: {
 													/**
-													 * Sub Sub Option 1
+													 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1
 													 */
-													displayName: () => LocalizedString
+													displayName: string
 													/**
-													 * Sub Sub Option 1 Short Description
+													 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 													 */
-													shortDesc: () => LocalizedString
+													shortDesc: string
 													/**
-													 * Sub Sub Option 1 Long Description
+													 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 													 */
-													longDesc: () => LocalizedString
+													longDesc: string
 												}
 											}
 										}
 									}
 									subOption3: {
 										/**
-										 * Sub Option 3 of option 1
+										 * S​u​b​ ​O​p​t​i​o​n​ ​3​ ​o​f​ ​o​p​t​i​o​n​ ​1
 										 */
-										displayName: () => LocalizedString
+										displayName: string
 										/**
-										 * Sub Option 3 Short Description
+										 * S​u​b​ ​O​p​t​i​o​n​ ​3​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 										 */
-										shortDesc: () => LocalizedString
+										shortDesc: string
 										/**
-										 * Sub Option 3 Long Description
+										 * S​u​b​ ​O​p​t​i​o​n​ ​3​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 										 */
-										longDesc: () => LocalizedString
+										longDesc: string
 										type: {
 											element_type: {
 												type: {
 													fields: {
 														subSubOption1: {
 															/**
-															 * Sub Sub Option 1
+															 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1
 															 */
-															displayName: () => LocalizedString
+															displayName: string
 															/**
-															 * Sub Sub Option 1 Short Description
+															 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 															 */
-															shortDesc: () => LocalizedString
+															shortDesc: string
 															/**
-															 * Sub Sub Option 1 Long Description
+															 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 															 */
-															longDesc: () => LocalizedString
+															longDesc: string
 														}
 													}
 												}
@@ -75069,13 +74886,34 @@ export type TranslationFunctions = {
 						}
 						option2: {
 							/**
-							 * Second Option
+							 * S​e​c​o​n​d​ ​O​p​t​i​o​n
 							 */
-							displayName: () => LocalizedString
+							displayName: string
 						}
 					}
 				}
 			}
+		}
+	}
+}
+
+export type TranslationFunctions = {
+	common: {
+	}
+	apps: {
+		Patreon: {
+			/**
+			 * Patreon
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Patreon to manage your creator content, memberships, and patron relationships.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Patreon integration enables creators to automate their patron management workflows. Access patron data, manage memberships, track campaigns, and engage with your community through comprehensive API actions and real-time triggers for patron activities.
+			 */
+			longDesc: () => LocalizedString
 		}
 		Asana: {
 			/**
@@ -149746,6 +149584,196 @@ export type TranslationFunctions = {
 							 * Select which dispute event should trigger this webhook. Each event represents a different stage in the dispute resolution process.
 							 */
 							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		_testing: {
+			triggers: {
+				_testing: {
+					options: {
+						option1: {
+							/**
+							 * Option 1
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Option 1 Short Description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Option 1 Long Description
+							 */
+							longDesc: () => LocalizedString
+						}
+						option2: {
+							/**
+							 * Second Option
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Second Option Short Description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Second Option Long Description
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Event data
+						 */
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								testTriggerInfo: {
+									/**
+									 * Test Trigger Info
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Test Trigger Info Short Description
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Test Trigger Info Long Description
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											testTriggerInfo1: {
+												/**
+												 * Test Trigger Info 1
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Test Trigger Info 1 Short Description
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Test Trigger Info 1 Long Description
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			actions: {
+				test: {
+					options: {
+						option1: {
+							/**
+							 * Option 1
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Option 1 Short Description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Option 1 Long Description
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									subOption1: {
+										/**
+										 * Sub Option 1 of option 1
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sub Option 1 Short Description
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Sub Option 1 Long Description
+										 */
+										longDesc: () => LocalizedString
+									}
+									subOption2: {
+										/**
+										 * Sub Option 2 of option 1
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sub Option 2 Short Description
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Sub Option 2 Long Description
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											fields: {
+												subSubOption1: {
+													/**
+													 * Sub Sub Option 1
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Sub Sub Option 1 Short Description
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * Sub Sub Option 1 Long Description
+													 */
+													longDesc: () => LocalizedString
+												}
+											}
+										}
+									}
+									subOption3: {
+										/**
+										 * Sub Option 3 of option 1
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sub Option 3 Short Description
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Sub Option 3 Long Description
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											element_type: {
+												type: {
+													fields: {
+														subSubOption1: {
+															/**
+															 * Sub Sub Option 1
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Sub Sub Option 1 Short Description
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Sub Sub Option 1 Long Description
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						option2: {
+							/**
+							 * Second Option
+							 */
+							displayName: () => LocalizedString
 						}
 					}
 				}
