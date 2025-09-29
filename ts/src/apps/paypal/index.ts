@@ -23,9 +23,10 @@ export default (locale: Locales) =>
     rest: {
       url: 'https://{{environment}}.paypal.com',
       data: 'json',
-      oauth2_grant_type: 'none',
+      oauth2_grant_type: 'client_credentials',
       ping_method: 'GET',
       ping_path: '/v1/identity/oauth2/userinfo',
+      oauth2_token_url: 'https://{{environment}}.paypal.com/v1/oauth2/token',
       oauth2_token_use_basic_auth: true,
       oauth2_auth_args: {
         grant_type: 'client_credentials',
