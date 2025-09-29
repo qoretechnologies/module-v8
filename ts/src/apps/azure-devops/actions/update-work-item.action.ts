@@ -24,7 +24,6 @@ const options = {
   },
   properties: {
     required: true,
-    depends_on: ['itemType'],
     type: {
       type: 'hash',
       fields: {
