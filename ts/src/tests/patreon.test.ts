@@ -65,7 +65,7 @@ describe('Patreon', () => {
     it('Should list campaigns', async () => {
       const action = ListPatreonCampaigns;
 
-      if (!('api_function' in action) || !action?.api_function)
+      if (!('api_function' in action) || !action.api_function)
         throw new Error('No api_function found in action');
 
       const result = await action.api_function({}, undefined, baseContext);
@@ -77,7 +77,7 @@ describe('Patreon', () => {
     it('Should list campaign members', async () => {
       const action = ListPatreonCampaignMembers;
 
-      if (!('api_function' in action) || !action?.api_function)
+      if (!('api_function' in action) || !action.api_function)
         throw new Error('No api_function found in action');
 
       const result = await action.api_function(
@@ -95,7 +95,7 @@ describe('Patreon', () => {
     it('Should get a campaign', async () => {
       const action = GetPatreonCampaign;
 
-      if (!('api_function' in action) || !action?.api_function)
+      if (!('api_function' in action) || !action.api_function)
         throw new Error('No api_function found in action');
 
       const result = await action.api_function(
@@ -113,7 +113,7 @@ describe('Patreon', () => {
     it('Should list campaign posts', async () => {
       const action = ListPatreonPosts;
 
-      if (!('api_function' in action) || !action?.api_function)
+      if (!('api_function' in action) || !action.api_function)
         throw new Error('No api_function found in action');
 
       const result = await action.api_function(
