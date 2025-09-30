@@ -311,10 +311,6 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         return info;
     }
 
-    string getAuthUrl(*bool allow_relative) {
-        return getUrlOption("oauth2_auth_url", allow_relative);
-    }
-
     #! Returns options for creating a new connection
     *hash<auto> getConnectionOptions(*hash<auto> rtopts) {
         *hash<auto> opts = orig_opts + rtopts;
@@ -329,14 +325,14 @@ public class TypeScriptAppRestConnection inherits RestConnection {
         } + opts;
     }
 
-    #! Returns the value of a URL option or throws an exception if not set
-    /*  @param opt the URL option name
+    #! Returns the value of a URL option
+    /*  @param url the URL
         @param allow_relative if @ref True then a relative URL (path only) can be returned; the default (@ref False)
         is to return a full URL
     */
-    private string getUrlOption(string opt, *bool allow_relative) {
-        string url = RestConnection::getUrlOption(opt, allow_relative);
-        if (url_template_options && (opt == "oauth2_auth_url" || opt == "oauth2_token_url")) {
+    private string getUrlOptionIntern(string url, *bool allow_relative) {
+        url = RestConnection::getUrlOptionIntern(url, allow_relative);
+        if (url_template_options) {
             url = TypeScriptActionInterface::processUrl(url, getConnectionOptions(), url_template_options);
         }
         return url;
