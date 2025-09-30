@@ -16,191 +16,429 @@ type RootTranslation = {
 	common: {
 	}
 	apps: {
-		_testing: {
-			triggers: {
-				_testing: {
+		Patreon: {
+			/**
+			 * P​a​t​r​e​o​n
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​P​a​t​r​e​o​n​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​c​r​e​a​t​o​r​ ​c​o​n​t​e​n​t​,​ ​m​e​m​b​e​r​s​h​i​p​s​,​ ​a​n​d​ ​p​a​t​r​o​n​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​P​a​t​r​e​o​n​ ​i​n​t​e​g​r​a​t​i​o​n​ ​e​n​a​b​l​e​s​ ​c​r​e​a​t​o​r​s​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​t​h​e​i​r​ ​p​a​t​r​o​n​ ​m​a​n​a​g​e​m​e​n​t​ ​w​o​r​k​f​l​o​w​s​.​ ​A​c​c​e​s​s​ ​p​a​t​r​o​n​ ​d​a​t​a​,​ ​m​a​n​a​g​e​ ​m​e​m​b​e​r​s​h​i​p​s​,​ ​t​r​a​c​k​ ​c​a​m​p​a​i​g​n​s​,​ ​a​n​d​ ​e​n​g​a​g​e​ ​w​i​t​h​ ​y​o​u​r​ ​c​o​m​m​u​n​i​t​y​ ​t​h​r​o​u​g​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​A​P​I​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​a​l​-​t​i​m​e​ ​t​r​i​g​g​e​r​s​ ​f​o​r​ ​p​a​t​r​o​n​ ​a​c​t​i​v​i​t​i​e​s​.
+			 */
+			longDesc: string
+			actions: {
+				list_campaigns: {
+					/**
+					 * L​i​s​t​ ​C​a​m​p​a​i​g​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​a​m​p​a​i​g​n​s​ ​f​o​r​ ​t​h​e​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​c​r​e​a​t​o​r
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​c​a​m​p​a​i​g​n​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​P​a​t​r​e​o​n​ ​a​c​c​o​u​n​t​.​ ​R​e​t​u​r​n​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​c​a​m​p​a​i​g​n​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​p​a​t​r​o​n​ ​c​o​u​n​t​s​,​ ​s​e​t​t​i​n​g​s​,​ ​a​n​d​ ​m​e​t​a​d​a​t​a​.
+					 */
+					longDesc: string
 					options: {
-						option1: {
+						count: {
 							/**
-							 * O​p​t​i​o​n​ ​1
+							 * C​o​u​n​t
 							 */
 							displayName: string
 							/**
-							 * O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​a​m​p​a​i​g​n​s​ ​t​o​ ​r​e​t​u​r​n
 							 */
 							shortDesc: string
 							/**
-							 * O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+							 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​a​m​p​a​i​g​n​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​2​0​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
 							 */
 							longDesc: string
 						}
-						option2: {
+						cursor: {
 							/**
-							 * S​e​c​o​n​d​ ​O​p​t​i​o​n
+							 * C​u​r​s​o​r
 							 */
 							displayName: string
 							/**
-							 * S​e​c​o​n​d​ ​O​p​t​i​o​n​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​t​h​e​ ​n​e​x​t​ ​s​e​t​ ​o​f​ ​r​e​s​u​l​t​s
 							 */
 							shortDesc: string
 							/**
-							 * S​e​c​o​n​d​ ​O​p​t​i​o​n​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+							 * U​s​e​ ​t​h​e​ ​c​u​r​s​o​r​ ​r​e​t​u​r​n​e​d​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​q​u​e​s​t​ ​t​o​ ​f​e​t​c​h​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​c​a​m​p​a​i​g​n​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​f​o​r​ ​t​h​e​ ​f​i​r​s​t​ ​p​a​g​e​.
 							 */
 							longDesc: string
 						}
 					}
-					event_info: {
-						/**
-						 * E​v​e​n​t​ ​d​a​t​a
-						 */
-						desc: string
-						type: {
-							fields: {
-								testTriggerInfo: {
-									/**
-									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o
-									 */
-									displayName: string
-									/**
-									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-									 */
-									shortDesc: string
-									/**
-									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-									 */
-									longDesc: string
-									type: {
-										fields: {
-											testTriggerInfo1: {
-												/**
-												 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1
-												 */
-												displayName: string
-												/**
-												 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-												 */
-												shortDesc: string
-												/**
-												 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-												 */
-												longDesc: string
-											}
-										}
-									}
-								}
-							}
+				}
+				list_campaign_members: {
+					/**
+					 * L​i​s​t​ ​C​a​m​p​a​i​g​n​ ​M​e​m​b​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​m​e​m​b​e​r​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​m​e​m​b​e​r​s​ ​(​p​a​t​r​o​n​s​)​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​c​a​m​p​a​i​g​n​.​ ​R​e​t​u​r​n​s​ ​d​e​t​a​i​l​e​d​ ​m​e​m​b​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​p​l​e​d​g​e​ ​a​m​o​u​n​t​s​,​ ​p​a​y​m​e​n​t​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​m​e​m​b​e​r​s​h​i​p​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						campaignId: {
+							/**
+							 * C​a​m​p​a​i​g​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​m​e​m​b​e​r​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​w​h​o​s​e​ ​m​e​m​b​e​r​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​T​h​i​s​ ​i​s​ ​a​ ​r​e​q​u​i​r​e​d​ ​f​i​e​l​d​.
+							 */
+							longDesc: string
+						}
+						count: {
+							/**
+							 * C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​m​b​e​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​m​b​e​r​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​2​0​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​t​h​e​ ​n​e​x​t​ ​s​e​t​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​e​ ​c​u​r​s​o​r​ ​r​e​t​u​r​n​e​d​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​q​u​e​s​t​ ​t​o​ ​f​e​t​c​h​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​m​e​m​b​e​r​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​f​o​r​ ​t​h​e​ ​f​i​r​s​t​ ​p​a​g​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_campaign: {
+					/**
+					 * G​e​t​ ​C​a​m​p​a​i​g​n
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​a​ ​s​i​n​g​l​e​ ​c​a​m​p​a​i​g​n​ ​i​n​c​l​u​d​i​n​g​ ​s​u​m​m​a​r​y​,​ ​c​r​e​a​t​i​o​n​ ​d​e​t​a​i​l​s​,​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​i​n​t​e​g​r​a​t​i​o​n​,​ ​R​S​S​ ​f​e​e​d​ ​s​e​t​t​i​n​g​s​,​ ​a​n​d​ ​p​a​t​r​o​n​ ​s​t​a​t​i​s​t​i​c​s​.
+					 */
+					longDesc: string
+					options: {
+						campaignId: {
+							/**
+							 * C​a​m​p​a​i​g​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​.​ ​T​h​i​s​ ​i​s​ ​a​ ​r​e​q​u​i​r​e​d​ ​f​i​e​l​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_member: {
+					/**
+					 * G​e​t​ ​M​e​m​b​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​m​b​e​r
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​a​ ​s​i​n​g​l​e​ ​c​a​m​p​a​i​g​n​ ​m​e​m​b​e​r​ ​(​p​a​t​r​o​n​)​ ​i​n​c​l​u​d​i​n​g​ ​p​l​e​d​g​e​ ​a​m​o​u​n​t​s​,​ ​p​a​y​m​e​n​t​ ​h​i​s​t​o​r​y​,​ ​m​e​m​b​e​r​s​h​i​p​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​t​i​m​e​l​i​n​e​.
+					 */
+					longDesc: string
+					options: {
+						campaignId: {
+							/**
+							 * C​a​m​p​a​i​g​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​f​i​l​t​e​r​ ​m​e​m​b​e​r​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​s​e​l​e​c​t​ ​a​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​f​i​l​t​e​r​ ​t​h​e​ ​m​e​m​b​e​r​ ​s​e​l​e​c​t​i​o​n​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​m​e​m​b​e​r​ ​l​i​s​t​ ​w​h​e​n​ ​s​e​a​r​c​h​i​n​g​.
+							 */
+							longDesc: string
+						}
+						memberId: {
+							/**
+							 * M​e​m​b​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​m​e​m​b​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​m​e​m​b​e​r​ ​(​p​a​t​r​o​n​)​ ​w​h​o​s​e​ ​d​e​t​a​i​l​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​T​h​i​s​ ​i​s​ ​a​ ​r​e​q​u​i​r​e​d​ ​f​i​e​l​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_posts: {
+					/**
+					 * L​i​s​t​ ​P​o​s​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​p​o​s​t​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​p​o​s​t​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​c​a​m​p​a​i​g​n​,​ ​s​o​r​t​e​d​ ​b​y​ ​p​u​b​l​i​s​h​ ​d​a​t​e​.​ ​R​e​t​u​r​n​s​ ​p​o​s​t​ ​c​o​n​t​e​n​t​,​ ​m​e​t​a​d​a​t​a​,​ ​a​n​d​ ​e​n​g​a​g​e​m​e​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						campaignId: {
+							/**
+							 * C​a​m​p​a​i​g​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​p​o​s​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​w​h​o​s​e​ ​p​o​s​t​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​T​h​i​s​ ​i​s​ ​a​ ​r​e​q​u​i​r​e​d​ ​f​i​e​l​d​.
+							 */
+							longDesc: string
+						}
+						count: {
+							/**
+							 * C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​o​s​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​i​e​s​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​o​s​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​2​0​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​t​h​e​ ​n​e​x​t​ ​s​e​t​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​e​ ​c​u​r​s​o​r​ ​r​e​t​u​r​n​e​d​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​q​u​e​s​t​ ​t​o​ ​f​e​t​c​h​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​p​o​s​t​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​f​o​r​ ​t​h​e​ ​f​i​r​s​t​ ​p​a​g​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_post: {
+					/**
+					 * G​e​t​ ​P​o​s​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​o​s​t
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​a​ ​s​i​n​g​l​e​ ​p​o​s​t​ ​i​n​c​l​u​d​i​n​g​ ​c​o​n​t​e​n​t​,​ ​p​u​b​l​i​s​h​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​c​c​e​s​s​ ​s​e​t​t​i​n​g​s​,​ ​a​n​d​ ​e​n​g​a​g​e​m​e​n​t​ ​m​e​t​r​i​c​s​.
+					 */
+					longDesc: string
+					options: {
+						campaignId: {
+							/**
+							 * C​a​m​p​a​i​g​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​f​i​l​t​e​r​ ​p​o​s​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​s​e​l​e​c​t​ ​a​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​f​i​l​t​e​r​ ​t​h​e​ ​p​o​s​t​ ​s​e​l​e​c​t​i​o​n​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​t​h​e​ ​p​o​s​t​ ​l​i​s​t​ ​w​h​e​n​ ​s​e​a​r​c​h​i​n​g​.
+							 */
+							longDesc: string
+						}
+						postId: {
+							/**
+							 * P​o​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​p​o​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​p​o​s​t​ ​w​h​o​s​e​ ​d​e​t​a​i​l​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​T​h​i​s​ ​i​s​ ​a​ ​r​e​q​u​i​r​e​d​ ​f​i​e​l​d​.
+							 */
+							longDesc: string
 						}
 					}
 				}
 			}
-			actions: {
-				test: {
+			triggers: {
+				pledge_trigger: {
+					/**
+					 * P​l​e​d​g​e​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​l​e​d​g​e​ ​i​s​ ​c​r​e​a​t​e​d​,​ ​u​p​d​a​t​e​d​,​ ​o​r​ ​d​e​l​e​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​p​l​e​d​g​e​ ​e​v​e​n​t​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n​ ​u​s​i​n​g​ ​P​a​t​r​e​o​n​ ​w​e​b​h​o​o​k​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​m​e​m​b​e​r​ ​c​r​e​a​t​e​s​,​ ​u​p​d​a​t​e​s​,​ ​o​r​ ​d​e​l​e​t​e​s​ ​t​h​e​i​r​ ​p​l​e​d​g​e​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​w​o​r​k​f​l​o​w​s​ ​b​a​s​e​d​ ​o​n​ ​p​a​t​r​o​n​ ​p​l​e​d​g​e​ ​a​c​t​i​v​i​t​y​.
+					 */
+					longDesc: string
 					options: {
-						option1: {
+						campaignId: {
 							/**
-							 * O​p​t​i​o​n​ ​1
+							 * C​a​m​p​a​i​g​n​ ​I​D
 							 */
 							displayName: string
 							/**
-							 * O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
+							 * T​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​p​l​e​d​g​e​ ​e​v​e​n​t​s
 							 */
 							shortDesc: string
 							/**
-							 * O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​p​l​e​d​g​e​-​r​e​l​a​t​e​d​ ​e​v​e​n​t​s​.​ ​T​h​i​s​ ​i​s​ ​a​ ​r​e​q​u​i​r​e​d​ ​f​i​e​l​d​.
 							 */
 							longDesc: string
-							type: {
-								fields: {
-									subOption1: {
-										/**
-										 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​o​f​ ​o​p​t​i​o​n​ ​1
-										 */
-										displayName: string
-										/**
-										 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-										 */
-										shortDesc: string
-										/**
-										 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-										 */
-										longDesc: string
-									}
-									subOption2: {
-										/**
-										 * S​u​b​ ​O​p​t​i​o​n​ ​2​ ​o​f​ ​o​p​t​i​o​n​ ​1
-										 */
-										displayName: string
-										/**
-										 * S​u​b​ ​O​p​t​i​o​n​ ​2​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-										 */
-										shortDesc: string
-										/**
-										 * S​u​b​ ​O​p​t​i​o​n​ ​2​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-										 */
-										longDesc: string
-										type: {
-											fields: {
-												subSubOption1: {
-													/**
-													 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1
-													 */
-													displayName: string
-													/**
-													 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-													 */
-													shortDesc: string
-													/**
-													 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-													 */
-													longDesc: string
-												}
-											}
-										}
-									}
-									subOption3: {
-										/**
-										 * S​u​b​ ​O​p​t​i​o​n​ ​3​ ​o​f​ ​o​p​t​i​o​n​ ​1
-										 */
-										displayName: string
-										/**
-										 * S​u​b​ ​O​p​t​i​o​n​ ​3​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-										 */
-										shortDesc: string
-										/**
-										 * S​u​b​ ​O​p​t​i​o​n​ ​3​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-										 */
-										longDesc: string
-										type: {
-											element_type: {
-												type: {
-													fields: {
-														subSubOption1: {
-															/**
-															 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1
-															 */
-															displayName: string
-															/**
-															 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
-															 */
-															shortDesc: string
-															/**
-															 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
-															 */
-															longDesc: string
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
 						}
-						option2: {
+						trigger: {
 							/**
-							 * S​e​c​o​n​d​ ​O​p​t​i​o​n
+							 * T​r​i​g​g​e​r​ ​E​v​e​n​t
 							 */
 							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​p​l​e​d​g​e​ ​e​v​e​n​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​t​y​p​e​ ​o​f​ ​p​l​e​d​g​e​ ​e​v​e​n​t​ ​s​h​o​u​l​d​ ​t​r​i​g​g​e​r​ ​t​h​i​s​ ​w​o​r​k​f​l​o​w​.​ ​C​h​o​o​s​e​ ​f​r​o​m​ ​p​l​e​d​g​e​ ​c​r​e​a​t​i​o​n​ ​(​w​h​e​n​ ​a​ ​m​e​m​b​e​r​ ​f​i​r​s​t​ ​p​l​e​d​g​e​s​ ​o​r​ ​a​ ​f​o​l​l​o​w​e​r​ ​b​e​c​o​m​e​s​ ​a​ ​p​a​t​r​o​n​)​,​ ​p​l​e​d​g​e​ ​u​p​d​a​t​e​s​ ​(​u​p​g​r​a​d​e​s​ ​o​r​ ​d​o​w​n​g​r​a​d​e​s​)​,​ ​o​r​ ​p​l​e​d​g​e​ ​d​e​l​e​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				member_trigger: {
+					/**
+					 * M​e​m​b​e​r​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​m​e​m​b​e​r​ ​i​s​ ​c​r​e​a​t​e​d​,​ ​u​p​d​a​t​e​d​,​ ​o​r​ ​d​e​l​e​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​m​e​m​b​e​r​ ​e​v​e​n​t​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n​ ​u​s​i​n​g​ ​P​a​t​r​e​o​n​ ​w​e​b​h​o​o​k​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​m​e​m​b​e​r​ ​i​s​ ​c​r​e​a​t​e​d​,​ ​t​h​e​i​r​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​s​ ​u​p​d​a​t​e​d​ ​(​i​n​c​l​u​d​i​n​g​ ​p​a​y​m​e​n​t​ ​c​h​a​r​g​i​n​g​ ​e​v​e​n​t​s​)​,​ ​o​r​ ​t​h​e​i​r​ ​m​e​m​b​e​r​s​h​i​p​ ​i​s​ ​d​e​l​e​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						campaignId: {
+							/**
+							 * C​a​m​p​a​i​g​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​m​e​m​b​e​r​ ​e​v​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​m​e​m​b​e​r​-​r​e​l​a​t​e​d​ ​e​v​e​n​t​s​.​ ​T​h​i​s​ ​i​s​ ​a​ ​r​e​q​u​i​r​e​d​ ​f​i​e​l​d​.
+							 */
+							longDesc: string
+						}
+						trigger: {
+							/**
+							 * T​r​i​g​g​e​r​ ​E​v​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​m​e​m​b​e​r​ ​e​v​e​n​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​t​y​p​e​ ​o​f​ ​m​e​m​b​e​r​ ​e​v​e​n​t​ ​s​h​o​u​l​d​ ​t​r​i​g​g​e​r​ ​t​h​i​s​ ​w​o​r​k​f​l​o​w​.​ ​M​e​m​b​e​r​ ​c​r​e​a​t​i​o​n​ ​o​c​c​u​r​s​ ​o​n​l​y​ ​i​f​ ​t​h​e​r​e​ ​w​a​s​ ​n​o​ ​p​r​i​o​r​ ​p​a​y​m​e​n​t​ ​b​e​t​w​e​e​n​ ​p​a​t​r​o​n​ ​a​n​d​ ​c​r​e​a​t​o​r​.​ ​U​p​d​a​t​e​s​ ​i​n​c​l​u​d​e​ ​p​a​y​m​e​n​t​ ​c​h​a​r​g​i​n​g​ ​e​v​e​n​t​s​.​ ​D​e​l​e​t​i​o​n​ ​o​n​l​y​ ​o​c​c​u​r​s​ ​i​f​ ​n​o​ ​p​r​i​o​r​ ​p​a​y​m​e​n​t​ ​h​a​p​p​e​n​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				post_trigger: {
+					/**
+					 * P​o​s​t​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​p​o​s​t​ ​i​s​ ​p​u​b​l​i​s​h​e​d​,​ ​u​p​d​a​t​e​d​,​ ​o​r​ ​d​e​l​e​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​p​o​s​t​ ​e​v​e​n​t​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n​ ​u​s​i​n​g​ ​P​a​t​r​e​o​n​ ​w​e​b​h​o​o​k​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​p​o​s​t​ ​i​s​ ​p​u​b​l​i​s​h​e​d​,​ ​u​p​d​a​t​e​d​,​ ​o​r​ ​d​e​l​e​t​e​d​ ​o​n​ ​t​h​e​ ​c​a​m​p​a​i​g​n​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​c​o​n​t​e​n​t​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​a​n​d​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						campaignId: {
+							/**
+							 * C​a​m​p​a​i​g​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​p​o​s​t​ ​e​v​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​p​o​s​t​-​r​e​l​a​t​e​d​ ​e​v​e​n​t​s​.​ ​T​h​i​s​ ​i​s​ ​a​ ​r​e​q​u​i​r​e​d​ ​f​i​e​l​d​.
+							 */
+							longDesc: string
+						}
+						trigger: {
+							/**
+							 * T​r​i​g​g​e​r​ ​E​v​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​p​o​s​t​ ​e​v​e​n​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​t​y​p​e​ ​o​f​ ​p​o​s​t​ ​e​v​e​n​t​ ​s​h​o​u​l​d​ ​t​r​i​g​g​e​r​ ​t​h​i​s​ ​w​o​r​k​f​l​o​w​.​ ​C​h​o​o​s​e​ ​f​r​o​m​ ​p​o​s​t​ ​p​u​b​l​i​c​a​t​i​o​n​,​ ​p​o​s​t​ ​u​p​d​a​t​e​s​,​ ​o​r​ ​p​o​s​t​ ​d​e​l​e​t​i​o​n​ ​e​v​e​n​t​s​.
+							 */
+							longDesc: string
 						}
 					}
 				}
@@ -74880,81 +75118,74 @@ type RootTranslation = {
 				}
 			}
 		}
-	}
-}
-
-export type TranslationFunctions = {
-	common: {
-	}
-	apps: {
 		_testing: {
 			triggers: {
 				_testing: {
 					options: {
 						option1: {
 							/**
-							 * Option 1
+							 * O​p​t​i​o​n​ ​1
 							 */
-							displayName: () => LocalizedString
+							displayName: string
 							/**
-							 * Option 1 Short Description
+							 * O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 							 */
-							shortDesc: () => LocalizedString
+							shortDesc: string
 							/**
-							 * Option 1 Long Description
+							 * O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 							 */
-							longDesc: () => LocalizedString
+							longDesc: string
 						}
 						option2: {
 							/**
-							 * Second Option
+							 * S​e​c​o​n​d​ ​O​p​t​i​o​n
 							 */
-							displayName: () => LocalizedString
+							displayName: string
 							/**
-							 * Second Option Short Description
+							 * S​e​c​o​n​d​ ​O​p​t​i​o​n​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 							 */
-							shortDesc: () => LocalizedString
+							shortDesc: string
 							/**
-							 * Second Option Long Description
+							 * S​e​c​o​n​d​ ​O​p​t​i​o​n​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 							 */
-							longDesc: () => LocalizedString
+							longDesc: string
 						}
 					}
 					event_info: {
 						/**
-						 * Event data
+						 * E​v​e​n​t​ ​d​a​t​a
 						 */
-						desc: () => LocalizedString
+						desc: string
 						type: {
 							fields: {
 								testTriggerInfo: {
 									/**
-									 * Test Trigger Info
+									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o
 									 */
-									displayName: () => LocalizedString
+									displayName: string
 									/**
-									 * Test Trigger Info Short Description
+									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 									 */
-									shortDesc: () => LocalizedString
+									shortDesc: string
 									/**
-									 * Test Trigger Info Long Description
+									 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 									 */
-									longDesc: () => LocalizedString
+									longDesc: string
 									type: {
 										fields: {
 											testTriggerInfo1: {
 												/**
-												 * Test Trigger Info 1
+												 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1
 												 */
-												displayName: () => LocalizedString
+												displayName: string
 												/**
-												 * Test Trigger Info 1 Short Description
+												 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 												 */
-												shortDesc: () => LocalizedString
+												shortDesc: string
 												/**
-												 * Test Trigger Info 1 Long Description
+												 * T​e​s​t​ ​T​r​i​g​g​e​r​ ​I​n​f​o​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 												 */
-												longDesc: () => LocalizedString
+												longDesc: string
 											}
 										}
 									}
@@ -74969,95 +75200,95 @@ export type TranslationFunctions = {
 					options: {
 						option1: {
 							/**
-							 * Option 1
+							 * O​p​t​i​o​n​ ​1
 							 */
-							displayName: () => LocalizedString
+							displayName: string
 							/**
-							 * Option 1 Short Description
+							 * O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 							 */
-							shortDesc: () => LocalizedString
+							shortDesc: string
 							/**
-							 * Option 1 Long Description
+							 * O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 							 */
-							longDesc: () => LocalizedString
+							longDesc: string
 							type: {
 								fields: {
 									subOption1: {
 										/**
-										 * Sub Option 1 of option 1
+										 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​o​f​ ​o​p​t​i​o​n​ ​1
 										 */
-										displayName: () => LocalizedString
+										displayName: string
 										/**
-										 * Sub Option 1 Short Description
+										 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 										 */
-										shortDesc: () => LocalizedString
+										shortDesc: string
 										/**
-										 * Sub Option 1 Long Description
+										 * S​u​b​ ​O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 										 */
-										longDesc: () => LocalizedString
+										longDesc: string
 									}
 									subOption2: {
 										/**
-										 * Sub Option 2 of option 1
+										 * S​u​b​ ​O​p​t​i​o​n​ ​2​ ​o​f​ ​o​p​t​i​o​n​ ​1
 										 */
-										displayName: () => LocalizedString
+										displayName: string
 										/**
-										 * Sub Option 2 Short Description
+										 * S​u​b​ ​O​p​t​i​o​n​ ​2​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 										 */
-										shortDesc: () => LocalizedString
+										shortDesc: string
 										/**
-										 * Sub Option 2 Long Description
+										 * S​u​b​ ​O​p​t​i​o​n​ ​2​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 										 */
-										longDesc: () => LocalizedString
+										longDesc: string
 										type: {
 											fields: {
 												subSubOption1: {
 													/**
-													 * Sub Sub Option 1
+													 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1
 													 */
-													displayName: () => LocalizedString
+													displayName: string
 													/**
-													 * Sub Sub Option 1 Short Description
+													 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 													 */
-													shortDesc: () => LocalizedString
+													shortDesc: string
 													/**
-													 * Sub Sub Option 1 Long Description
+													 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 													 */
-													longDesc: () => LocalizedString
+													longDesc: string
 												}
 											}
 										}
 									}
 									subOption3: {
 										/**
-										 * Sub Option 3 of option 1
+										 * S​u​b​ ​O​p​t​i​o​n​ ​3​ ​o​f​ ​o​p​t​i​o​n​ ​1
 										 */
-										displayName: () => LocalizedString
+										displayName: string
 										/**
-										 * Sub Option 3 Short Description
+										 * S​u​b​ ​O​p​t​i​o​n​ ​3​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 										 */
-										shortDesc: () => LocalizedString
+										shortDesc: string
 										/**
-										 * Sub Option 3 Long Description
+										 * S​u​b​ ​O​p​t​i​o​n​ ​3​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 										 */
-										longDesc: () => LocalizedString
+										longDesc: string
 										type: {
 											element_type: {
 												type: {
 													fields: {
 														subSubOption1: {
 															/**
-															 * Sub Sub Option 1
+															 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1
 															 */
-															displayName: () => LocalizedString
+															displayName: string
 															/**
-															 * Sub Sub Option 1 Short Description
+															 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​S​h​o​r​t​ ​D​e​s​c​r​i​p​t​i​o​n
 															 */
-															shortDesc: () => LocalizedString
+															shortDesc: string
 															/**
-															 * Sub Sub Option 1 Long Description
+															 * S​u​b​ ​S​u​b​ ​O​p​t​i​o​n​ ​1​ ​L​o​n​g​ ​D​e​s​c​r​i​p​t​i​o​n
 															 */
-															longDesc: () => LocalizedString
+															longDesc: string
 														}
 													}
 												}
@@ -75069,9 +75300,444 @@ export type TranslationFunctions = {
 						}
 						option2: {
 							/**
-							 * Second Option
+							 * S​e​c​o​n​d​ ​O​p​t​i​o​n
+							 */
+							displayName: string
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+export type TranslationFunctions = {
+	common: {
+	}
+	apps: {
+		Patreon: {
+			/**
+			 * Patreon
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Patreon to manage your creator content, memberships, and patron relationships.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Patreon integration enables creators to automate their patron management workflows. Access patron data, manage memberships, track campaigns, and engage with your community through comprehensive API actions and real-time triggers for patron activities.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				list_campaigns: {
+					/**
+					 * List Campaigns
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of campaigns for the authenticated creator
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a paginated list of campaigns associated with the authenticated Patreon account. Returns comprehensive campaign information including patron counts, settings, and metadata.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						count: {
+							/**
+							 * Count
 							 */
 							displayName: () => LocalizedString
+							/**
+							 * Maximum number of campaigns to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies the maximum number of campaigns to retrieve in a single request. Defaults to 20 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor for retrieving the next set of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use the cursor returned from a previous request to fetch the next page of campaigns. Leave empty for the first page.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_campaign_members: {
+					/**
+					 * List Campaign Members
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve members of a specific campaign
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a paginated list of members (patrons) for a specified campaign. Returns detailed member information including pledge amounts, payment status, and membership details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						campaignId: {
+							/**
+							 * Campaign ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the campaign to retrieve members from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the campaign whose members you want to retrieve. This is a required field.
+							 */
+							longDesc: () => LocalizedString
+						}
+						count: {
+							/**
+							 * Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of members to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies the maximum number of members to retrieve in a single request. Defaults to 20 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor for retrieving the next set of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use the cursor returned from a previous request to fetch the next page of members. Leave empty for the first page.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_campaign: {
+					/**
+					 * Get Campaign
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific campaign
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive details about a single campaign including summary, creation details, social media integration, RSS feed settings, and patron statistics.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						campaignId: {
+							/**
+							 * Campaign ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the campaign to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the campaign you want to get detailed information about. This is a required field.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_member: {
+					/**
+					 * Get Member
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific member
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive details about a single campaign member (patron) including pledge amounts, payment history, membership status, and relationship timeline.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						campaignId: {
+							/**
+							 * Campaign ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The campaign to filter members from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally select a campaign to filter the member selection. This helps narrow down the member list when searching.
+							 */
+							longDesc: () => LocalizedString
+						}
+						memberId: {
+							/**
+							 * Member ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the member to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the member (patron) whose details you want to retrieve. This is a required field.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_posts: {
+					/**
+					 * List Posts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve posts from a specific campaign
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a paginated list of posts from a specified campaign, sorted by publish date. Returns post content, metadata, and engagement information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						campaignId: {
+							/**
+							 * Campaign ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the campaign to retrieve posts from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the campaign whose posts you want to retrieve. This is a required field.
+							 */
+							longDesc: () => LocalizedString
+						}
+						count: {
+							/**
+							 * Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of posts to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specifies the maximum number of posts to retrieve in a single request. Defaults to 20 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor for retrieving the next set of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use the cursor returned from a previous request to fetch the next page of posts. Leave empty for the first page.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_post: {
+					/**
+					 * Get Post
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific post
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive details about a single post including content, publish information, access settings, and engagement metrics.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						campaignId: {
+							/**
+							 * Campaign ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The campaign to filter posts from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally select a campaign to filter the post selection. This helps narrow down the post list when searching.
+							 */
+							longDesc: () => LocalizedString
+						}
+						postId: {
+							/**
+							 * Post ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the post to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the post whose details you want to retrieve. This is a required field.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				pledge_trigger: {
+					/**
+					 * Pledge Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a pledge is created, updated, or deleted
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors pledge events for a specific campaign using Patreon webhooks. This trigger fires when a member creates, updates, or deletes their pledge, allowing you to automate workflows based on patron pledge activity.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						campaignId: {
+							/**
+							 * Campaign ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The campaign to monitor for pledge events
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the campaign you want to monitor for pledge-related events. This is a required field.
+							 */
+							longDesc: () => LocalizedString
+						}
+						trigger: {
+							/**
+							 * Trigger Event
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific pledge event to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which type of pledge event should trigger this workflow. Choose from pledge creation (when a member first pledges or a follower becomes a patron), pledge updates (upgrades or downgrades), or pledge deletion.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				member_trigger: {
+					/**
+					 * Member Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a member is created, updated, or deleted
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors member events for a specific campaign using Patreon webhooks. This trigger fires when a member is created, their information is updated (including payment charging events), or their membership is deleted.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						campaignId: {
+							/**
+							 * Campaign ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The campaign to monitor for member events
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the campaign you want to monitor for member-related events. This is a required field.
+							 */
+							longDesc: () => LocalizedString
+						}
+						trigger: {
+							/**
+							 * Trigger Event
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific member event to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which type of member event should trigger this workflow. Member creation occurs only if there was no prior payment between patron and creator. Updates include payment charging events. Deletion only occurs if no prior payment happened.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				post_trigger: {
+					/**
+					 * Post Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a post is published, updated, or deleted
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors post events for a specific campaign using Patreon webhooks. This trigger fires when a post is published, updated, or deleted on the campaign, allowing you to automate content distribution and notifications.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						campaignId: {
+							/**
+							 * Campaign ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The campaign to monitor for post events
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the campaign you want to monitor for post-related events. This is a required field.
+							 */
+							longDesc: () => LocalizedString
+						}
+						trigger: {
+							/**
+							 * Trigger Event
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific post event to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which type of post event should trigger this workflow. Choose from post publication, post updates, or post deletion events.
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}
@@ -149746,6 +150412,196 @@ export type TranslationFunctions = {
 							 * Select which dispute event should trigger this webhook. Each event represents a different stage in the dispute resolution process.
 							 */
 							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		_testing: {
+			triggers: {
+				_testing: {
+					options: {
+						option1: {
+							/**
+							 * Option 1
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Option 1 Short Description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Option 1 Long Description
+							 */
+							longDesc: () => LocalizedString
+						}
+						option2: {
+							/**
+							 * Second Option
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Second Option Short Description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Second Option Long Description
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Event data
+						 */
+						desc: () => LocalizedString
+						type: {
+							fields: {
+								testTriggerInfo: {
+									/**
+									 * Test Trigger Info
+									 */
+									displayName: () => LocalizedString
+									/**
+									 * Test Trigger Info Short Description
+									 */
+									shortDesc: () => LocalizedString
+									/**
+									 * Test Trigger Info Long Description
+									 */
+									longDesc: () => LocalizedString
+									type: {
+										fields: {
+											testTriggerInfo1: {
+												/**
+												 * Test Trigger Info 1
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Test Trigger Info 1 Short Description
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Test Trigger Info 1 Long Description
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			actions: {
+				test: {
+					options: {
+						option1: {
+							/**
+							 * Option 1
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Option 1 Short Description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Option 1 Long Description
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									subOption1: {
+										/**
+										 * Sub Option 1 of option 1
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sub Option 1 Short Description
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Sub Option 1 Long Description
+										 */
+										longDesc: () => LocalizedString
+									}
+									subOption2: {
+										/**
+										 * Sub Option 2 of option 1
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sub Option 2 Short Description
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Sub Option 2 Long Description
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											fields: {
+												subSubOption1: {
+													/**
+													 * Sub Sub Option 1
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * Sub Sub Option 1 Short Description
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * Sub Sub Option 1 Long Description
+													 */
+													longDesc: () => LocalizedString
+												}
+											}
+										}
+									}
+									subOption3: {
+										/**
+										 * Sub Option 3 of option 1
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sub Option 3 Short Description
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Sub Option 3 Long Description
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											element_type: {
+												type: {
+													fields: {
+														subSubOption1: {
+															/**
+															 * Sub Sub Option 1
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Sub Sub Option 1 Short Description
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Sub Sub Option 1 Long Description
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						option2: {
+							/**
+							 * Second Option
+							 */
+							displayName: () => LocalizedString
 						}
 					}
 				}
