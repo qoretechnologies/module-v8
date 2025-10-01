@@ -5500,6 +5500,1172 @@ type RootTranslation = {
 				}
 			}
 		}
+		Todoist: {
+			/**
+			 * T​o​d​o​i​s​t
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​T​o​d​o​i​s​t​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​t​a​s​k​ ​a​n​d​ ​p​r​o​j​e​c​t​ ​m​a​n​a​g​e​m​e​n​t​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​T​o​d​o​i​s​t​ ​i​n​t​e​g​r​a​t​i​o​n​ ​e​n​a​b​l​e​s​ ​y​o​u​ ​t​o​ ​s​e​a​m​l​e​s​s​l​y​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​T​o​d​o​i​s​t​ ​A​P​I​ ​t​o​ ​m​a​n​a​g​e​ ​t​a​s​k​s​,​ ​p​r​o​j​e​c​t​s​,​ ​l​a​b​e​l​s​,​ ​a​n​d​ ​c​o​m​m​e​n​t​s​.​ ​A​u​t​o​m​a​t​e​ ​y​o​u​r​ ​t​a​s​k​ ​m​a​n​a​g​e​m​e​n​t​ ​w​o​r​k​f​l​o​w​s​,​ ​s​y​n​c​ ​p​r​o​j​e​c​t​ ​d​a​t​a​,​ ​a​n​d​ ​s​t​r​e​a​m​l​i​n​e​ ​t​e​a​m​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​ ​w​i​t​h​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​.
+			 */
+			longDesc: string
+			actions: {
+				add_comment_to_project: {
+					/**
+					 * A​d​d​ ​C​o​m​m​e​n​t​ ​t​o​ ​P​r​o​j​e​c​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​c​o​m​m​e​n​t​ ​t​o​ ​a​ ​T​o​d​o​i​s​t​ ​p​r​o​j​e​c​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​o​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​T​o​d​o​i​s​t​ ​p​r​o​j​e​c​t​.​ ​C​o​m​m​e​n​t​s​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​t​o​ ​p​r​o​v​i​d​e​ ​u​p​d​a​t​e​s​,​ ​n​o​t​e​s​,​ ​o​r​ ​c​o​l​l​a​b​o​r​a​t​e​ ​w​i​t​h​ ​t​e​a​m​ ​m​e​m​b​e​r​s​ ​o​n​ ​p​r​o​j​e​c​t​-​r​e​l​a​t​e​d​ ​d​i​s​c​u​s​s​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						content: {
+							/**
+							 * C​o​m​m​e​n​t​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​c​o​m​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​e​s​s​a​g​e​ ​o​r​ ​n​o​t​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​p​r​o​j​e​c​t​.​ ​S​u​p​p​o​r​t​s​ ​M​a​r​k​d​o​w​n​ ​f​o​r​m​a​t​t​i​n​g​ ​f​o​r​ ​r​i​c​h​ ​t​e​x​t​.
+							 */
+							longDesc: string
+						}
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​c​o​m​m​e​n​t​ ​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​T​o​d​o​i​s​t​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​c​o​m​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_comment_to_task: {
+					/**
+					 * A​d​d​ ​C​o​m​m​e​n​t​ ​t​o​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​c​o​m​m​e​n​t​ ​t​o​ ​a​ ​T​o​d​o​i​s​t​ ​t​a​s​k
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​o​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​T​o​d​o​i​s​t​ ​t​a​s​k​.​ ​U​s​e​ ​c​o​m​m​e​n​t​s​ ​t​o​ ​a​d​d​ ​n​o​t​e​s​,​ ​u​p​d​a​t​e​s​,​ ​o​r​ ​c​o​l​l​a​b​o​r​a​t​e​ ​w​i​t​h​ ​t​e​a​m​ ​m​e​m​b​e​r​s​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​s​.
+					 */
+					longDesc: string
+					options: {
+						content: {
+							/**
+							 * C​o​m​m​e​n​t​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​c​o​m​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​e​s​s​a​g​e​ ​o​r​ ​n​o​t​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​t​a​s​k​.​ ​S​u​p​p​o​r​t​s​ ​M​a​r​k​d​o​w​n​ ​f​o​r​m​a​t​t​i​n​g​ ​f​o​r​ ​r​i​c​h​ ​t​e​x​t​.
+							 */
+							longDesc: string
+						}
+						task_id: {
+							/**
+							 * T​a​s​k​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​c​o​m​m​e​n​t​ ​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​T​o​d​o​i​s​t​ ​t​a​s​k​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​c​o​m​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				complete_task: {
+					/**
+					 * C​o​m​p​l​e​t​e​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * M​a​r​k​ ​a​ ​T​o​d​o​i​s​t​ ​t​a​s​k​ ​a​s​ ​c​o​m​p​l​e​t​e
+					 */
+					shortDesc: string
+					/**
+					 * C​l​o​s​e​s​ ​a​ ​t​a​s​k​ ​b​y​ ​m​a​r​k​i​n​g​ ​i​t​ ​a​s​ ​c​o​m​p​l​e​t​e​d​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​m​o​v​e​s​ ​t​h​e​ ​t​a​s​k​ ​t​o​ ​t​h​e​ ​c​o​m​p​l​e​t​e​d​ ​t​a​s​k​s​ ​l​i​s​t​ ​a​n​d​ ​u​p​d​a​t​e​s​ ​i​t​s​ ​s​t​a​t​u​s​ ​a​c​c​o​r​d​i​n​g​l​y​.
+					 */
+					longDesc: string
+					options: {
+						task_id: {
+							/**
+							 * T​a​s​k​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​c​o​m​p​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​T​o​d​o​i​s​t​ ​t​a​s​k​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​a​r​k​ ​a​s​ ​c​o​m​p​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_project: {
+					/**
+					 * C​r​e​a​t​e​ ​P​r​o​j​e​c​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​T​o​d​o​i​s​t​ ​p​r​o​j​e​c​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​r​o​j​e​c​t​ ​i​n​ ​T​o​d​o​i​s​t​.​ ​P​r​o​j​e​c​t​s​ ​h​e​l​p​ ​y​o​u​ ​o​r​g​a​n​i​z​e​ ​r​e​l​a​t​e​d​ ​t​a​s​k​s​ ​a​n​d​ ​c​o​l​l​a​b​o​r​a​t​e​ ​w​i​t​h​ ​t​e​a​m​ ​m​e​m​b​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * P​r​o​j​e​c​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​r​o​j​e​c​t
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​y​o​u​r​ ​n​e​w​ ​T​o​d​o​i​s​t​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * P​r​o​j​e​c​t​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​e​x​p​l​a​i​n​i​n​g​ ​t​h​e​ ​p​u​r​p​o​s​e​ ​a​n​d​ ​s​c​o​p​e​ ​o​f​ ​t​h​e​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						color: {
+							/**
+							 * C​o​l​o​r
+							 */
+							displayName: string
+							/**
+							 * P​r​o​j​e​c​t​ ​c​o​l​o​r​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​l​o​r​ ​u​s​e​d​ ​t​o​ ​v​i​s​u​a​l​l​y​ ​i​d​e​n​t​i​f​y​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​i​n​ ​t​h​e​ ​T​o​d​o​i​s​t​ ​i​n​t​e​r​f​a​c​e​.
+							 */
+							longDesc: string
+						}
+						view_style: {
+							/**
+							 * V​i​e​w​ ​S​t​y​l​e
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​i​s​ ​d​i​s​p​l​a​y​e​d
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​h​o​w​ ​t​a​s​k​s​ ​i​n​ ​t​h​i​s​ ​p​r​o​j​e​c​t​ ​a​r​e​ ​d​i​s​p​l​a​y​e​d​:​ ​a​s​ ​a​ ​l​i​s​t​,​ ​b​o​a​r​d​ ​(​K​a​n​b​a​n​)​,​ ​o​r​ ​c​a​l​e​n​d​a​r​ ​v​i​e​w​.
+							 */
+							longDesc: string
+						}
+						is_favorite: {
+							/**
+							 * I​s​ ​F​a​v​o​r​i​t​e
+							 */
+							displayName: string
+							/**
+							 * M​a​r​k​ ​p​r​o​j​e​c​t​ ​a​s​ ​f​a​v​o​r​i​t​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​i​n​ ​y​o​u​r​ ​f​a​v​o​r​i​t​e​s​ ​s​e​c​t​i​o​n​ ​f​o​r​ ​q​u​i​c​k​ ​a​c​c​e​s​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_task: {
+					/**
+					 * C​r​e​a​t​e​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​T​o​d​o​i​s​t​ ​t​a​s​k
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​n​ ​T​o​d​o​i​s​t​.​ ​T​a​s​k​s​ ​c​a​n​ ​b​e​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​p​r​o​j​e​c​t​s​,​ ​s​e​c​t​i​o​n​s​,​ ​g​i​v​e​n​ ​l​a​b​e​l​s​,​ ​p​r​i​o​r​i​t​i​e​s​,​ ​d​u​e​ ​d​a​t​e​s​,​ ​a​n​d​ ​m​o​r​e​.
+					 */
+					longDesc: string
+					options: {
+						content: {
+							/**
+							 * T​a​s​k​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​i​n​ ​t​e​x​t​ ​d​e​s​c​r​i​b​i​n​g​ ​w​h​a​t​ ​n​e​e​d​s​ ​t​o​ ​b​e​ ​d​o​n​e​.​ ​T​h​i​s​ ​i​s​ ​t​h​e​ ​p​r​i​m​a​r​y​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​t​a​s​k​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​t​a​s​k​ ​d​e​t​a​i​l​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​n​o​t​e​s​ ​a​b​o​u​t​ ​t​h​e​ ​t​a​s​k​.​ ​S​u​p​p​o​r​t​s​ ​M​a​r​k​d​o​w​n​ ​f​o​r​m​a​t​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​f​o​r​ ​t​h​i​s​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​T​o​d​o​i​s​t​ ​p​r​o​j​e​c​t​ ​t​h​i​s​ ​t​a​s​k​ ​b​e​l​o​n​g​s​ ​t​o​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​t​h​e​ ​t​a​s​k​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​ ​t​o​ ​y​o​u​r​ ​I​n​b​o​x​.
+							 */
+							longDesc: string
+						}
+						assignee_id: {
+							/**
+							 * A​s​s​i​g​n​e​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * P​e​r​s​o​n​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * A​s​s​i​g​n​ ​t​h​e​ ​t​a​s​k​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​l​l​a​b​o​r​a​t​o​r​ ​i​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						section_id: {
+							/**
+							 * S​e​c​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​e​c​t​i​o​n​ ​w​i​t​h​i​n​ ​t​h​e​ ​p​r​o​j​e​c​t
+							 */
+							shortDesc: string
+							/**
+							 * O​r​g​a​n​i​z​e​ ​t​h​e​ ​t​a​s​k​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​e​c​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​f​o​r​ ​b​e​t​t​e​r​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						order: {
+							/**
+							 * O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​p​o​s​i​t​i​o​n​ ​i​n​ ​t​h​e​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​p​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​t​a​s​k​ ​i​n​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​o​r​ ​s​e​c​t​i​o​n​.​ ​L​o​w​e​r​ ​n​u​m​b​e​r​s​ ​a​p​p​e​a​r​ ​f​i​r​s​t​.
+							 */
+							longDesc: string
+						}
+						labels: {
+							/**
+							 * L​a​b​e​l​s
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​l​a​b​e​l​s
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​l​a​b​e​l​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​f​i​l​t​e​r​ ​t​h​e​ ​t​a​s​k​.​ ​L​a​b​e​l​s​ ​h​e​l​p​ ​w​i​t​h​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​a​n​d​ ​q​u​i​c​k​ ​f​i​l​t​e​r​i​n​g​.
+							 */
+							longDesc: string
+						}
+						priority: {
+							/**
+							 * P​r​i​o​r​i​t​y
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​p​r​i​o​r​i​t​y​ ​l​e​v​e​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​p​r​i​o​r​i​t​y​ ​l​e​v​e​l​ ​f​o​r​ ​t​h​e​ ​t​a​s​k​.​ ​H​i​g​h​e​r​ ​p​r​i​o​r​i​t​y​ ​t​a​s​k​s​ ​a​r​e​ ​d​i​s​p​l​a​y​e​d​ ​w​i​t​h​ ​c​o​l​o​r​-​c​o​d​e​d​ ​f​l​a​g​s​:​ ​1​ ​(​u​r​g​e​n​t​)​,​ ​2​ ​(​h​i​g​h​)​,​ ​3​ ​(​n​o​r​m​a​l​)​,​ ​4​ ​(​l​o​w​)​.
+							 */
+							longDesc: string
+						}
+						due_datetime: {
+							/**
+							 * D​u​e​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​h​e​ ​t​a​s​k​ ​i​s​ ​d​u​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​a​ ​d​u​e​ ​d​a​t​e​ ​a​n​d​ ​o​p​t​i​o​n​a​l​l​y​ ​a​ ​t​i​m​e​ ​f​o​r​ ​w​h​e​n​ ​t​h​e​ ​t​a​s​k​ ​s​h​o​u​l​d​ ​b​e​ ​c​o​m​p​l​e​t​e​d​.
+							 */
+							longDesc: string
+						}
+						duration: {
+							/**
+							 * D​u​r​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * E​s​t​i​m​a​t​e​d​ ​t​i​m​e​ ​t​o​ ​c​o​m​p​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​l​o​n​g​ ​y​o​u​ ​e​x​p​e​c​t​ ​t​h​e​ ​t​a​s​k​ ​t​o​ ​t​a​k​e​.​ ​U​s​e​d​ ​f​o​r​ ​t​i​m​e​ ​t​r​a​c​k​i​n​g​ ​a​n​d​ ​s​c​h​e​d​u​l​i​n​g​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									amount: {
+										/**
+										 * A​m​o​u​n​t
+										 */
+										displayName: string
+										/**
+										 * D​u​r​a​t​i​o​n​ ​v​a​l​u​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​f​o​r​ ​t​h​e​ ​d​u​r​a​t​i​o​n​.
+										 */
+										longDesc: string
+									}
+									unit: {
+										/**
+										 * U​n​i​t
+										 */
+										displayName: string
+										/**
+										 * D​u​r​a​t​i​o​n​ ​u​n​i​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​u​n​i​t​ ​o​f​ ​t​i​m​e​:​ ​m​i​n​u​t​e​s​ ​o​r​ ​d​a​y​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				delete_task: {
+					/**
+					 * D​e​l​e​t​e​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​T​o​d​o​i​s​t​ ​t​a​s​k
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​s​ ​a​ ​t​a​s​k​ ​f​r​o​m​ ​T​o​d​o​i​s​t​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.​ ​U​s​e​ ​w​i​t​h​ ​c​a​u​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						task_id: {
+							/**
+							 * T​a​s​k​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​T​o​d​o​i​s​t​ ​t​a​s​k​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​p​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_project: {
+					/**
+					 * G​e​t​ ​P​r​o​j​e​c​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​T​o​d​o​i​s​t​ ​p​r​o​j​e​c​t
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​T​o​d​o​i​s​t​ ​p​r​o​j​e​c​t​,​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​p​r​o​p​e​r​t​i​e​s​,​ ​m​e​t​a​d​a​t​a​,​ ​a​n​d​ ​s​e​t​t​i​n​g​s​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​T​o​d​o​i​s​t​ ​p​r​o​j​e​c​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_project_collaborators: {
+					/**
+					 * G​e​t​ ​P​r​o​j​e​c​t​ ​C​o​l​l​a​b​o​r​a​t​o​r​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​c​o​l​l​a​b​o​r​a​t​o​r​s​ ​i​n​ ​a​ ​p​r​o​j​e​c​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​c​o​l​l​a​b​o​r​a​t​o​r​s​ ​w​h​o​ ​h​a​v​e​ ​a​c​c​e​s​s​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​T​o​d​o​i​s​t​ ​p​r​o​j​e​c​t​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​m​a​n​a​g​i​n​g​ ​t​e​a​m​ ​a​s​s​i​g​n​m​e​n​t​s​ ​a​n​d​ ​p​e​r​m​i​s​s​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​g​e​t​ ​c​o​l​l​a​b​o​r​a​t​o​r​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​T​o​d​o​i​s​t​ ​p​r​o​j​e​c​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​c​o​l​l​a​b​o​r​a​t​o​r​s​.
+							 */
+							longDesc: string
+						}
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​d​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​c​u​r​s​o​r​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​l​l​a​b​o​r​a​t​o​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_task: {
+					/**
+					 * G​e​t​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​T​o​d​o​i​s​t​ ​t​a​s​k
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​T​o​d​o​i​s​t​ ​t​a​s​k​,​ ​i​n​c​l​u​d​i​n​g​ ​a​l​l​ ​i​t​s​ ​p​r​o​p​e​r​t​i​e​s​,​ ​l​a​b​e​l​s​,​ ​d​u​e​ ​d​a​t​e​s​,​ ​a​n​d​ ​m​e​t​a​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						task_id: {
+							/**
+							 * T​a​s​k​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​T​o​d​o​i​s​t​ ​t​a​s​k​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_tasks_by_filter: {
+					/**
+					 * G​e​t​ ​T​a​s​k​s​ ​b​y​ ​F​i​l​t​e​r
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​t​a​s​k​s​ ​u​s​i​n​g​ ​T​o​d​o​i​s​t​ ​f​i​l​t​e​r​ ​q​u​e​r​i​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​t​a​s​k​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​l​t​e​r​ ​q​u​e​r​y​.​ ​T​o​d​o​i​s​t​ ​f​i​l​t​e​r​s​ ​a​l​l​o​w​ ​p​o​w​e​r​f​u​l​ ​s​e​a​r​c​h​e​s​ ​u​s​i​n​g​ ​k​e​y​w​o​r​d​s​,​ ​d​a​t​e​s​,​ ​p​r​i​o​r​i​t​i​e​s​,​ ​l​a​b​e​l​s​,​ ​a​n​d​ ​m​o​r​e​.​ ​S​e​e​ ​T​o​d​o​i​s​t​ ​f​i​l​t​e​r​ ​d​o​c​u​m​e​n​t​a​t​i​o​n​ ​f​o​r​ ​a​d​v​a​n​c​e​d​ ​q​u​e​r​y​ ​s​y​n​t​a​x​.
+					 */
+					longDesc: string
+					options: {
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​d​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​c​u​r​s​o​r​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​a​s​k​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+						query: {
+							/**
+							 * F​i​l​t​e​r​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​t​e​r​ ​e​x​p​r​e​s​s​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​l​t​e​r​ ​q​u​e​r​y​ ​t​o​ ​u​s​e​,​ ​s​e​e​ ​[​d​o​c​u​m​e​n​t​a​t​i​o​n​]​(​h​t​t​p​s​:​/​/​w​w​w​.​t​o​d​o​i​s​t​.​c​o​m​/​h​e​l​p​/​a​r​t​i​c​l​e​s​/​i​n​t​r​o​d​u​c​t​i​o​n​-​t​o​-​f​i​l​t​e​r​s​-​V​9​8​w​I​H​)​ ​f​o​r​ ​m​o​r​e​ ​d​e​t​a​i​l​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_labels: {
+					/**
+					 * L​i​s​t​ ​L​a​b​e​l​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​T​o​d​o​i​s​t​ ​l​a​b​e​l​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​l​a​b​e​l​s​ ​i​n​ ​y​o​u​r​ ​T​o​d​o​i​s​t​ ​a​c​c​o​u​n​t​.​ ​L​a​b​e​l​s​ ​a​r​e​ ​u​s​e​d​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​f​i​l​t​e​r​ ​t​a​s​k​s​ ​a​c​r​o​s​s​ ​p​r​o​j​e​c​t​s​.
+					 */
+					longDesc: string
+					options: {
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​d​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​c​u​r​s​o​r​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​l​a​b​e​l​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_projects: {
+					/**
+					 * L​i​s​t​ ​P​r​o​j​e​c​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​T​o​d​o​i​s​t​ ​p​r​o​j​e​c​t​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​p​r​o​j​e​c​t​s​ ​i​n​ ​y​o​u​r​ ​T​o​d​o​i​s​t​ ​a​c​c​o​u​n​t​,​ ​i​n​c​l​u​d​i​n​g​ ​s​h​a​r​e​d​ ​a​n​d​ ​p​e​r​s​o​n​a​l​ ​p​r​o​j​e​c​t​s​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​d​i​s​c​o​v​e​r​ ​a​v​a​i​l​a​b​l​e​ ​p​r​o​j​e​c​t​s​ ​f​o​r​ ​t​a​s​k​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​d​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​c​u​r​s​o​r​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​r​o​j​e​c​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_sections: {
+					/**
+					 * L​i​s​t​ ​S​e​c​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​s​e​c​t​i​o​n​s​ ​f​r​o​m​ ​p​r​o​j​e​c​t​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​s​e​c​t​i​o​n​s​.​ ​S​e​c​t​i​o​n​s​ ​a​r​e​ ​u​s​e​d​ ​w​i​t​h​i​n​ ​p​r​o​j​e​c​t​s​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​t​a​s​k​s​ ​i​n​t​o​ ​l​o​g​i​c​a​l​ ​g​r​o​u​p​s​ ​o​r​ ​c​a​t​e​g​o​r​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​o​j​e​c​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​s​e​c​t​i​o​n​s​ ​t​o​ ​o​n​l​y​ ​t​h​o​s​e​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​d​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​c​u​r​s​o​r​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​s​e​c​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_tasks: {
+					/**
+					 * L​i​s​t​ ​T​a​s​k​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​T​o​d​o​i​s​t​ ​t​a​s​k​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​t​a​s​k​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​p​r​o​j​e​c​t​,​ ​s​e​c​t​i​o​n​,​ ​o​r​ ​l​a​b​e​l​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​a​s​k​s​ ​f​o​r​ ​p​r​o​c​e​s​s​i​n​g​ ​o​r​ ​d​i​s​p​l​a​y​.
+					 */
+					longDesc: string
+					options: {
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​d​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​c​u​r​s​o​r​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​g​e​t​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​a​s​k​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+						ids: {
+							/**
+							 * T​a​s​k​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​ ​I​D​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​s​p​e​c​i​f​y​ ​a​ ​l​i​s​t​ ​o​f​ ​t​a​s​k​ ​I​D​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​o​n​l​y​ ​t​h​o​s​e​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​s​.
+							 */
+							longDesc: string
+						}
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​o​j​e​c​t
+							 */
+							shortDesc: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​o​n​l​y​ ​t​a​s​k​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						section_id: {
+							/**
+							 * S​e​c​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​o​n​l​y​ ​t​a​s​k​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​e​c​t​i​o​n​ ​w​i​t​h​i​n​ ​a​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						label: {
+							/**
+							 * L​a​b​e​l
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​l​a​b​e​l
+							 */
+							shortDesc: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​o​n​l​y​ ​t​a​s​k​s​ ​t​h​a​t​ ​h​a​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​a​b​e​l​ ​a​s​s​i​g​n​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				move_task_to_section: {
+					/**
+					 * M​o​v​e​ ​T​a​s​k​ ​t​o​ ​S​e​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * M​o​v​e​ ​a​ ​t​a​s​k​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​s​e​c​t​i​o​n​ ​o​r​ ​p​r​o​j​e​c​t
+					 */
+					shortDesc: string
+					/**
+					 * M​o​v​e​s​ ​a​ ​t​a​s​k​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​s​e​c​t​i​o​n​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​a​m​e​ ​p​r​o​j​e​c​t​,​ ​o​r​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​p​r​o​j​e​c​t​ ​e​n​t​i​r​e​l​y​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​r​e​o​r​g​a​n​i​z​i​n​g​ ​t​a​s​k​s​ ​a​n​d​ ​w​o​r​k​f​l​o​w​s​.
+					 */
+					longDesc: string
+					options: {
+						task_id: {
+							/**
+							 * T​a​s​k​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​T​o​d​o​i​s​t​ ​t​a​s​k​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​v​e​.
+							 */
+							longDesc: string
+						}
+						section_id: {
+							/**
+							 * S​e​c​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * D​e​s​t​i​n​a​t​i​o​n​ ​s​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​e​c​t​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​v​e​ ​t​h​e​ ​t​a​s​k​.​ ​E​i​t​h​e​r​ ​s​e​c​t​i​o​n​_​i​d​ ​o​r​ ​p​r​o​j​e​c​t​_​i​d​ ​m​u​s​t​ ​b​e​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * D​e​s​t​i​n​a​t​i​o​n​ ​p​r​o​j​e​c​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​v​e​ ​t​h​e​ ​t​a​s​k​.​ ​E​i​t​h​e​r​ ​s​e​c​t​i​o​n​_​i​d​ ​o​r​ ​p​r​o​j​e​c​t​_​i​d​ ​m​u​s​t​ ​b​e​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_task: {
+					/**
+					 * U​p​d​a​t​e​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​T​o​d​o​i​s​t​ ​t​a​s​k
+					 */
+					shortDesc: string
+					/**
+					 * M​o​d​i​f​i​e​s​ ​t​h​e​ ​p​r​o​p​e​r​t​i​e​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​T​o​d​o​i​s​t​ ​t​a​s​k​.​ ​Y​o​u​ ​c​a​n​ ​u​p​d​a​t​e​ ​c​o​n​t​e​n​t​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​d​u​e​ ​d​a​t​e​s​,​ ​l​a​b​e​l​s​,​ ​p​r​i​o​r​i​t​y​,​ ​a​n​d​ ​m​o​r​e​.
+					 */
+					longDesc: string
+					options: {
+						task_id: {
+							/**
+							 * T​a​s​k​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​T​o​d​o​i​s​t​ ​t​a​s​k​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​d​i​f​y​.
+							 */
+							longDesc: string
+						}
+						content: {
+							/**
+							 * T​a​s​k​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​a​s​k​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​m​a​i​n​ ​t​e​x​t​ ​d​e​s​c​r​i​b​i​n​g​ ​w​h​a​t​ ​n​e​e​d​s​ ​t​o​ ​b​e​ ​d​o​n​e​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​a​s​k​ ​d​e​t​a​i​l​s
+							 */
+							shortDesc: string
+							/**
+							 * N​e​w​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​n​o​t​e​s​ ​a​b​o​u​t​ ​t​h​e​ ​t​a​s​k​.​ ​S​u​p​p​o​r​t​s​ ​M​a​r​k​d​o​w​n​ ​f​o​r​m​a​t​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * M​o​v​e​ ​t​o​ ​d​i​f​f​e​r​e​n​t​ ​p​r​o​j​e​c​t
+							 */
+							shortDesc: string
+							/**
+							 * M​o​v​e​ ​t​h​e​ ​t​a​s​k​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​T​o​d​o​i​s​t​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						section_id: {
+							/**
+							 * S​e​c​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * M​o​v​e​ ​t​o​ ​d​i​f​f​e​r​e​n​t​ ​s​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * M​o​v​e​ ​t​h​e​ ​t​a​s​k​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​s​e​c​t​i​o​n​ ​w​i​t​h​i​n​ ​t​h​e​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						order: {
+							/**
+							 * O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​t​a​s​k​ ​p​o​s​i​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * C​h​a​n​g​e​ ​t​h​e​ ​p​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​t​a​s​k​ ​i​n​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​o​r​ ​s​e​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						labels: {
+							/**
+							 * L​a​b​e​l​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​a​s​k​ ​l​a​b​e​l​s
+							 */
+							shortDesc: string
+							/**
+							 * R​e​p​l​a​c​e​ ​t​h​e​ ​t​a​s​k​'​s​ ​l​a​b​e​l​s​ ​w​i​t​h​ ​a​ ​n​e​w​ ​s​e​t​ ​o​f​ ​l​a​b​e​l​s​.
+							 */
+							longDesc: string
+						}
+						priority: {
+							/**
+							 * P​r​i​o​r​i​t​y
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​r​i​o​r​i​t​y​ ​l​e​v​e​l
+							 */
+							shortDesc: string
+							/**
+							 * C​h​a​n​g​e​ ​t​h​e​ ​p​r​i​o​r​i​t​y​ ​l​e​v​e​l​:​ ​1​ ​(​u​r​g​e​n​t​)​,​ ​2​ ​(​h​i​g​h​)​,​ ​3​ ​(​n​o​r​m​a​l​)​,​ ​4​ ​(​l​o​w​)​.
+							 */
+							longDesc: string
+						}
+						due_datetime: {
+							/**
+							 * D​u​e​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​d​u​e​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​a​n​g​e​ ​t​h​e​ ​d​u​e​ ​d​a​t​e​ ​a​n​d​ ​o​p​t​i​o​n​a​l​l​y​ ​t​h​e​ ​t​i​m​e​ ​f​o​r​ ​t​h​e​ ​t​a​s​k​.
+							 */
+							longDesc: string
+						}
+						duration: {
+							/**
+							 * D​u​r​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​e​s​t​i​m​a​t​e​d​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​a​n​g​e​ ​h​o​w​ ​l​o​n​g​ ​y​o​u​ ​e​x​p​e​c​t​ ​t​h​e​ ​t​a​s​k​ ​t​o​ ​t​a​k​e​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									amount: {
+										/**
+										 * A​m​o​u​n​t
+										 */
+										displayName: string
+										/**
+										 * D​u​r​a​t​i​o​n​ ​v​a​l​u​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​f​o​r​ ​t​h​e​ ​d​u​r​a​t​i​o​n​.
+										 */
+										longDesc: string
+									}
+									unit: {
+										/**
+										 * U​n​i​t
+										 */
+										displayName: string
+										/**
+										 * D​u​r​a​t​i​o​n​ ​u​n​i​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​u​n​i​t​ ​o​f​ ​t​i​m​e​:​ ​m​i​n​u​t​e​s​ ​o​r​ ​d​a​y​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			triggers: {
+				new_completed_task: {
+					/**
+					 * N​e​w​ ​C​o​m​p​l​e​t​e​d​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​t​a​s​k​ ​i​s​ ​c​o​m​p​l​e​t​e​d​ ​i​n​ ​T​o​d​o​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​T​o​d​o​i​s​t​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​l​y​ ​c​o​m​p​l​e​t​e​d​ ​t​a​s​k​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​n​y​ ​t​a​s​k​ ​i​s​ ​m​a​r​k​e​d​ ​a​s​ ​c​o​m​p​l​e​t​e​,​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​p​r​o​j​e​c​t​,​ ​s​e​c​t​i​o​n​,​ ​o​r​ ​c​u​s​t​o​m​ ​q​u​e​r​y​.​ ​P​e​r​f​e​c​t​ ​f​o​r​ ​t​r​a​c​k​i​n​g​ ​p​r​o​d​u​c​t​i​v​i​t​y​,​ ​l​o​g​g​i​n​g​ ​c​o​m​p​l​e​t​i​o​n​s​,​ ​o​r​ ​t​r​i​g​g​e​r​i​n​g​ ​f​o​l​l​o​w​-​u​p​ ​w​o​r​k​f​l​o​w​s​ ​b​a​s​e​d​ ​o​n​ ​t​a​s​k​ ​c​o​m​p​l​e​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​p​r​o​j​e​c​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​m​o​n​i​t​o​r​ ​o​n​l​y​ ​c​o​m​p​l​e​t​e​d​ ​t​a​s​k​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​T​o​d​o​i​s​t​ ​p​r​o​j​e​c​t​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​a​l​l​ ​c​o​m​p​l​e​t​e​d​ ​t​a​s​k​s​ ​a​c​r​o​s​s​ ​a​l​l​ ​p​r​o​j​e​c​t​s​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.
+							 */
+							longDesc: string
+						}
+						section_id: {
+							/**
+							 * S​e​c​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​s​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​m​o​n​i​t​o​r​ ​o​n​l​y​ ​c​o​m​p​l​e​t​e​d​ ​t​a​s​k​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​e​c​t​i​o​n​ ​w​i​t​h​i​n​ ​a​ ​p​r​o​j​e​c​t​.​ ​T​h​i​s​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​t​r​a​c​k​ ​c​o​m​p​l​e​t​i​o​n​s​ ​i​n​ ​s​p​e​c​i​f​i​c​ ​a​r​e​a​s​ ​o​f​ ​y​o​u​r​ ​w​o​r​k​f​l​o​w​.
+							 */
+							longDesc: string
+						}
+						query: {
+							/**
+							 * F​i​l​t​e​r​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​l​t​e​r​ ​e​x​p​r​e​s​s​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​l​t​e​r​ ​q​u​e​r​y​ ​t​o​ ​u​s​e​,​ ​s​e​e​ ​[​d​o​c​u​m​e​n​t​a​t​i​o​n​]​(​h​t​t​p​s​:​/​/​w​w​w​.​t​o​d​o​i​s​t​.​c​o​m​/​h​e​l​p​/​a​r​t​i​c​l​e​s​/​i​n​t​r​o​d​u​c​t​i​o​n​-​t​o​-​f​i​l​t​e​r​s​-​V​9​8​w​I​H​)​ ​f​o​r​ ​m​o​r​e​ ​d​e​t​a​i​l​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		AzureDevOps: {
 			/**
 			 * A​z​u​r​e​ ​D​e​v​O​p​s
@@ -80796,6 +81962,1172 @@ export type TranslationFunctions = {
 					 * Other
 					 */
 					group: () => LocalizedString
+				}
+			}
+		}
+		Todoist: {
+			/**
+			 * Todoist
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Todoist to automate task and project management workflows.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Todoist integration enables you to seamlessly interact with the Todoist API to manage tasks, projects, labels, and comments. Automate your task management workflows, sync project data, and streamline team collaboration with comprehensive actions and triggers.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				add_comment_to_project: {
+					/**
+					 * Add Comment to Project
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a comment to a Todoist project
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new comment on a specified Todoist project. Comments can be used to provide updates, notes, or collaborate with team members on project-related discussions.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						content: {
+							/**
+							 * Comment Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The text content of the comment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The message or note you want to add to the project. Supports Markdown formatting for rich text.
+							 */
+							longDesc: () => LocalizedString
+						}
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to comment on
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Todoist project where you want to add the comment.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_comment_to_task: {
+					/**
+					 * Add Comment to Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a comment to a Todoist task
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new comment on a specified Todoist task. Use comments to add notes, updates, or collaborate with team members on specific tasks.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						content: {
+							/**
+							 * Comment Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The text content of the comment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The message or note you want to add to the task. Supports Markdown formatting for rich text.
+							 */
+							longDesc: () => LocalizedString
+						}
+						task_id: {
+							/**
+							 * Task ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task to comment on
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Todoist task where you want to add the comment.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				complete_task: {
+					/**
+					 * Complete Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Mark a Todoist task as complete
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Closes a task by marking it as completed. This action moves the task to the completed tasks list and updates its status accordingly.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						task_id: {
+							/**
+							 * Task ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task to complete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Todoist task you want to mark as complete.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_project: {
+					/**
+					 * Create Project
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new Todoist project
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new project in Todoist. Projects help you organize related tasks and collaborate with team members.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Project Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the project
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A descriptive name for your new Todoist project.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Project description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional detailed description explaining the purpose and scope of the project.
+							 */
+							longDesc: () => LocalizedString
+						}
+						color: {
+							/**
+							 * Color
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Project color identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The color used to visually identify the project in the Todoist interface.
+							 */
+							longDesc: () => LocalizedString
+						}
+						view_style: {
+							/**
+							 * View Style
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How the project is displayed
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose how tasks in this project are displayed: as a list, board (Kanban), or calendar view.
+							 */
+							longDesc: () => LocalizedString
+						}
+						is_favorite: {
+							/**
+							 * Is Favorite
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Mark project as favorite
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, the project will appear in your favorites section for quick access.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_task: {
+					/**
+					 * Create Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new Todoist task
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new task in Todoist. Tasks can be assigned to projects, sections, given labels, priorities, due dates, and more.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						content: {
+							/**
+							 * Task Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The main text describing what needs to be done. This is the primary content of the task.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional task details
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional detailed description or notes about the task. Supports Markdown formatting.
+							 */
+							longDesc: () => LocalizedString
+						}
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project for this task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which Todoist project this task belongs to. If not specified, the task will be added to your Inbox.
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee_id: {
+							/**
+							 * Assignee ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Person assigned to the task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Assign the task to a specific collaborator in the selected project.
+							 */
+							longDesc: () => LocalizedString
+						}
+						section_id: {
+							/**
+							 * Section ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The section within the project
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Organize the task within a specific section of the project for better categorization.
+							 */
+							longDesc: () => LocalizedString
+						}
+						order: {
+							/**
+							 * Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task position in the list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the position of the task in the project or section. Lower numbers appear first.
+							 */
+							longDesc: () => LocalizedString
+						}
+						labels: {
+							/**
+							 * Labels
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task labels
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Add one or more labels to categorize and filter the task. Labels help with organization and quick filtering.
+							 */
+							longDesc: () => LocalizedString
+						}
+						priority: {
+							/**
+							 * Priority
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task priority level
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the priority level for the task. Higher priority tasks are displayed with color-coded flags: 1 (urgent), 2 (high), 3 (normal), 4 (low).
+							 */
+							longDesc: () => LocalizedString
+						}
+						due_datetime: {
+							/**
+							 * Due Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When the task is due
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set a due date and optionally a time for when the task should be completed.
+							 */
+							longDesc: () => LocalizedString
+						}
+						duration: {
+							/**
+							 * Duration
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Estimated time to complete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how long you expect the task to take. Used for time tracking and scheduling.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									amount: {
+										/**
+										 * Amount
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Duration value
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The numeric value for the duration.
+										 */
+										longDesc: () => LocalizedString
+									}
+									unit: {
+										/**
+										 * Unit
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Duration unit
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The unit of time: minutes or days.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				delete_task: {
+					/**
+					 * Delete Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Permanently delete a Todoist task
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently removes a task from Todoist. This action cannot be undone. Use with caution.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						task_id: {
+							/**
+							 * Task ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Todoist task you want to permanently delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_project: {
+					/**
+					 * Get Project
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a Todoist project
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information about a specific Todoist project, including its properties, metadata, and settings.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Todoist project you want to get details for.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_project_collaborators: {
+					/**
+					 * Get Project Collaborators
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List collaborators in a project
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of all collaborators who have access to a specific Todoist project. Useful for managing team assignments and permissions.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to get collaborators for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Todoist project to retrieve the list of collaborators.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Used for pagination. Provide the cursor from a previous response to get the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of collaborators to return in a single request. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_task: {
+					/**
+					 * Get Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a Todoist task
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information about a specific Todoist task, including all its properties, labels, due dates, and metadata.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						task_id: {
+							/**
+							 * Task ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Todoist task you want to get details for.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_tasks_by_filter: {
+					/**
+					 * Get Tasks by Filter
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search tasks using Todoist filter queries
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves tasks that match a specific filter query. Todoist filters allow powerful searches using keywords, dates, priorities, labels, and more. See Todoist filter documentation for advanced query syntax.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Used for pagination. Provide the cursor from a previous response to get the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of tasks to return in a single request. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+						query: {
+							/**
+							 * Filter Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The filter expression
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The filter query to use, see [documentation](https://www.todoist.com/help/articles/introduction-to-filters-V98wIH) for more details
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_labels: {
+					/**
+					 * List Labels
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve all Todoist labels
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of all labels in your Todoist account. Labels are used to categorize and filter tasks across projects.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Used for pagination. Provide the cursor from a previous response to get the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of labels to return in a single request. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_projects: {
+					/**
+					 * List Projects
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve all Todoist projects
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of all projects in your Todoist account, including shared and personal projects. Use this to discover available projects for task organization.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Used for pagination. Provide the cursor from a previous response to get the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of projects to return in a single request. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_sections: {
+					/**
+					 * List Sections
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve sections from projects
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of sections. Sections are used within projects to organize tasks into logical groups or categories.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by project
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter sections to only those within a specific project.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Used for pagination. Provide the cursor from a previous response to get the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of sections to return in a single request. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_tasks: {
+					/**
+					 * List Tasks
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve Todoist tasks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of tasks with optional filtering by project, section, or label. Use this to retrieve tasks for processing or display.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Used for pagination. Provide the cursor from a previous response to get the next page of results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of tasks to return in a single request. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ids: {
+							/**
+							 * Task IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by specific task IDs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally specify a list of task IDs to retrieve only those specific tasks.
+							 */
+							longDesc: () => LocalizedString
+						}
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by project
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Retrieve only tasks from a specific project.
+							 */
+							longDesc: () => LocalizedString
+						}
+						section_id: {
+							/**
+							 * Section ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by section
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Retrieve only tasks from a specific section within a project.
+							 */
+							longDesc: () => LocalizedString
+						}
+						label: {
+							/**
+							 * Label
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by label
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Retrieve only tasks that have a specific label assigned.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				move_task_to_section: {
+					/**
+					 * Move Task to Section
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Move a task to a different section or project
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Moves a task to a different section within the same project, or to a different project entirely. Useful for reorganizing tasks and workflows.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						task_id: {
+							/**
+							 * Task ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task to move
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Todoist task you want to move.
+							 */
+							longDesc: () => LocalizedString
+						}
+						section_id: {
+							/**
+							 * Section ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Destination section
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The section where you want to move the task. Either section_id or project_id must be specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Destination project
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The project where you want to move the task. Either section_id or project_id must be specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_task: {
+					/**
+					 * Update Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing Todoist task
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Modifies the properties of an existing Todoist task. You can update content, description, due dates, labels, priority, and more.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						task_id: {
+							/**
+							 * Task ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Todoist task you want to modify.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content: {
+							/**
+							 * Task Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated task description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new main text describing what needs to be done.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated task details
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * New detailed description or notes about the task. Supports Markdown formatting.
+							 */
+							longDesc: () => LocalizedString
+						}
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Move to different project
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Move the task to a different Todoist project.
+							 */
+							longDesc: () => LocalizedString
+						}
+						section_id: {
+							/**
+							 * Section ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Move to different section
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Move the task to a different section within the project.
+							 */
+							longDesc: () => LocalizedString
+						}
+						order: {
+							/**
+							 * Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New task position
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Change the position of the task in the project or section.
+							 */
+							longDesc: () => LocalizedString
+						}
+						labels: {
+							/**
+							 * Labels
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated task labels
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Replace the task's labels with a new set of labels.
+							 */
+							longDesc: () => LocalizedString
+						}
+						priority: {
+							/**
+							 * Priority
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated priority level
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Change the priority level: 1 (urgent), 2 (high), 3 (normal), 4 (low).
+							 */
+							longDesc: () => LocalizedString
+						}
+						due_datetime: {
+							/**
+							 * Due Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated due date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Change the due date and optionally the time for the task.
+							 */
+							longDesc: () => LocalizedString
+						}
+						duration: {
+							/**
+							 * Duration
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated estimated time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Change how long you expect the task to take.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									amount: {
+										/**
+										 * Amount
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Duration value
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The numeric value for the duration.
+										 */
+										longDesc: () => LocalizedString
+									}
+									unit: {
+										/**
+										 * Unit
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Duration unit
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The unit of time: minutes or days.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			triggers: {
+				new_completed_task: {
+					/**
+					 * New Completed Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a task is completed in Todoist
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your Todoist account for newly completed tasks. This trigger fires whenever any task is marked as complete, with optional filtering by project, section, or custom query. Perfect for tracking productivity, logging completions, or triggering follow-up workflows based on task completion.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by specific project
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally monitor only completed tasks from a specific Todoist project. If not specified, all completed tasks across all projects will trigger the event.
+							 */
+							longDesc: () => LocalizedString
+						}
+						section_id: {
+							/**
+							 * Section ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by specific section
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally monitor only completed tasks from a specific section within a project. This allows you to track completions in specific areas of your workflow.
+							 */
+							longDesc: () => LocalizedString
+						}
+						query: {
+							/**
+							 * Filter Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom filter expression
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The filter query to use, see [documentation](https://www.todoist.com/help/articles/introduction-to-filters-V98wIH) for more details
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 			}
 		}
