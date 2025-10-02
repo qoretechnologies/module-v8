@@ -72,12 +72,14 @@ import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
 import PayPal from './apps/PayPal';
 import Patreon from './apps/Patreon';
+import Todoist from './apps/Todoist';
 
 const en = {
   common: {},
   apps: {
     Patreon,
     Asana,
+    Todoist,
     AzureDevOps,
     AzureActiveDirectory,
     AmazonEC2,

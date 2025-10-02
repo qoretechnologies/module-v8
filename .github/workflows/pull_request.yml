@@ -136,6 +136,7 @@ env:
   PAYPAL_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).PAYPAL_CLIENT_ID }}
   PAYPAL_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).PAYPAL_CLIENT_SECRET }}
   PATREON_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).PATREON_TOKEN }}
+  TODOIST_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).TODOIST_TOKEN }}
 
 jobs:
   PullRequestTests:
