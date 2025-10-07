@@ -69,6 +69,7 @@ import paypal from '../apps/paypal';
 import pipedrive from '../apps/pipedrive';
 import quickbooks from '../apps/quickbooks';
 import salesforce from '../apps/salesforce';
+import sentry from '../apps/sentry';
 import serenity from '../apps/serenity';
 import sharepoint from '../apps/sharepoint';
 import shopify from '../apps/shopify';
@@ -158,6 +159,7 @@ const NEW_APPS = {
   paypal,
   pipedrive,
   quickbooks,
+  sentry,
   serenity,
   sharepoint,
   shopify,
