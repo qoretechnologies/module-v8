@@ -73,10 +73,12 @@ import Zoom from './apps/Zoom';
 import PayPal from './apps/PayPal';
 import Patreon from './apps/Patreon';
 import Todoist from './apps/Todoist';
+import Sentry from './apps/Sentry';
 
 const en = {
   common: {},
   apps: {
+    Sentry,
     Patreon,
     Asana,
     Todoist,

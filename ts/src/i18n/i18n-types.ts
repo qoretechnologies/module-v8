@@ -16,6 +16,20 @@ type RootTranslation = {
 	common: {
 	}
 	apps: {
+		Sentry: {
+			/**
+			 * S​e​n​t​r​y
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​S​e​n​t​r​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​e​r​r​o​r​s​,​ ​t​r​a​c​k​ ​i​s​s​u​e​s​,​ ​a​n​d​ ​m​a​n​a​g​e​ ​a​p​p​l​i​c​a​t​i​o​n​ ​p​e​r​f​o​r​m​a​n​c​e​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​S​e​n​t​r​y​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​e​r​r​o​r​ ​t​r​a​c​k​i​n​g​ ​a​n​d​ ​p​e​r​f​o​r​m​a​n​c​e​ ​m​o​n​i​t​o​r​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​.​ ​M​a​n​a​g​e​ ​i​s​s​u​e​s​,​ ​p​r​o​j​e​c​t​s​,​ ​o​r​g​a​n​i​z​a​t​i​o​n​s​,​ ​a​n​d​ ​r​e​l​e​a​s​e​s​ ​w​h​i​l​e​ ​a​u​t​o​m​a​t​i​n​g​ ​y​o​u​r​ ​e​r​r​o​r​ ​h​a​n​d​l​i​n​g​ ​w​o​r​k​f​l​o​w​.​ ​G​e​t​ ​r​e​a​l​-​t​i​m​e​ ​a​l​e​r​t​s​ ​w​h​e​n​ ​n​e​w​ ​i​s​s​u​e​s​ ​o​c​c​u​r​ ​a​n​d​ ​k​e​e​p​ ​y​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​s​ ​r​u​n​n​i​n​g​ ​s​m​o​o​t​h​l​y​.
+			 */
+			longDesc: string
+		}
 		Patreon: {
 			/**
 			 * P​a​t​r​e​o​n
@@ -76481,6 +76495,20 @@ export type TranslationFunctions = {
 	common: {
 	}
 	apps: {
+		Sentry: {
+			/**
+			 * Sentry
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Sentry to monitor errors, track issues, and manage application performance.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Sentry integration provides comprehensive error tracking and performance monitoring capabilities. Manage issues, projects, organizations, and releases while automating your error handling workflow. Get real-time alerts when new issues occur and keep your applications running smoothly.
+			 */
+			longDesc: () => LocalizedString
+		}
 		Patreon: {
 			/**
 			 * Patreon
