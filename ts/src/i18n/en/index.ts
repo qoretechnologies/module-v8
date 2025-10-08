@@ -55,29 +55,31 @@ import Odoo from './apps/Odoo';
 import OpenRouter from './apps/Openrouter';
 import Outlook from './apps/Outlook';
 import Paddle from './apps/Paddle';
+import Patreon from './apps/Patreon';
+import PayPal from './apps/PayPal';
 import Pipedrive from './apps/Pipedrive';
 import Quickbooks from './apps/Quickbooks';
 import Salesforce from './apps/Salesforce';
+import Sentry from './apps/Sentry';
 import Serenity from './apps/Serenity';
 import SharePoint from './apps/SharePoint';
 import Shopify from './apps/Shopify';
 import Stripe from './apps/Stripe';
+import Supabase from './apps/Supabase';
 import Teams from './apps/Teams';
 import Telegram from './apps/Telegram';
+import Todoist from './apps/Todoist';
 import Typeform from './apps/Typeform';
 import Webflow from './apps/Webflow';
 import Xero from './apps/Xero';
 import YouTube from './apps/YouTube';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
-import PayPal from './apps/PayPal';
-import Patreon from './apps/Patreon';
-import Todoist from './apps/Todoist';
-import Sentry from './apps/Sentry';
 
 const en = {
   common: {},
   apps: {
+    Supabase,
     Sentry,
     Patreon,
     Asana,
