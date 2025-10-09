@@ -16,19 +16,1317 @@ type RootTranslation = {
 	common: {
 	}
 	apps: {
+		Supabase: {
+			/**
+			 * S​u​p​a​b​a​s​e
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​S​u​p​a​b​a​s​e​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​d​a​t​a​b​a​s​e​ ​t​a​b​l​e​s​,​ ​s​t​o​r​a​g​e​ ​b​u​c​k​e​t​s​,​ ​a​n​d​ ​r​e​a​l​-​t​i​m​e​ ​d​a​t​a
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​S​u​p​a​b​a​s​e​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​S​u​p​a​b​a​s​e​ ​b​a​c​k​e​n​d​ ​s​e​r​v​i​c​e​s​.​ ​M​a​n​a​g​e​ ​d​a​t​a​b​a​s​e​ ​t​a​b​l​e​s​ ​w​i​t​h​ ​f​u​l​l​ ​C​R​U​D​ ​o​p​e​r​a​t​i​o​n​s​,​ ​m​o​n​i​t​o​r​ ​r​e​a​l​-​t​i​m​e​ ​c​h​a​n​g​e​s​ ​w​i​t​h​ ​t​r​i​g​g​e​r​s​,​ ​a​n​d​ ​h​a​n​d​l​e​ ​f​i​l​e​ ​s​t​o​r​a​g​e​ ​t​h​r​o​u​g​h​ ​b​u​c​k​e​t​s​.​ ​W​h​e​t​h​e​r​ ​y​o​u​ ​n​e​e​d​ ​t​o​ ​q​u​e​r​y​ ​d​a​t​a​,​ ​i​n​s​e​r​t​ ​r​e​c​o​r​d​s​,​ ​f​i​l​t​e​r​ ​r​e​s​u​l​t​s​,​ ​o​r​ ​t​r​a​c​k​ ​n​e​w​ ​e​n​t​r​i​e​s​,​ ​t​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​s​t​r​e​a​m​l​i​n​e​s​ ​y​o​u​r​ ​S​u​p​a​b​a​s​e​ ​w​o​r​k​f​l​o​w​ ​a​u​t​o​m​a​t​i​o​n​ ​a​n​d​ ​b​a​c​k​e​n​d​ ​m​a​n​a​g​e​m​e​n​t​.
+			 */
+			longDesc: string
+			actions: {
+				get_table: {
+					/**
+					 * G​e​t​ ​T​a​b​l​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​s​c​h​e​m​a​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​S​u​p​a​b​a​s​e​ ​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​m​e​t​a​d​a​t​a​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​b​l​e​ ​i​n​c​l​u​d​i​n​g​ ​c​o​l​u​m​n​ ​d​e​f​i​n​i​t​i​o​n​s​,​ ​d​a​t​a​ ​t​y​p​e​s​,​ ​r​e​q​u​i​r​e​d​ ​f​i​e​l​d​s​,​ ​a​n​d​ ​d​e​s​c​r​i​p​t​i​o​n​s​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​h​e​l​p​s​ ​y​o​u​ ​u​n​d​e​r​s​t​a​n​d​ ​t​h​e​ ​s​t​r​u​c​t​u​r​e​ ​o​f​ ​y​o​u​r​ ​d​a​t​a​b​a​s​e​ ​t​a​b​l​e​s​.
+					 */
+					longDesc: string
+					options: {
+						tableName: {
+							/**
+							 * T​a​b​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​t​a​b​l​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​u​p​a​b​a​s​e​ ​t​a​b​l​e​ ​w​h​o​s​e​ ​s​c​h​e​m​a​ ​i​n​f​o​r​m​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​f​e​t​c​h​.​ ​T​h​e​ ​t​a​b​l​e​ ​m​u​s​t​ ​e​x​i​s​t​ ​i​n​ ​y​o​u​r​ ​S​u​p​a​b​a​s​e​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_tables: {
+					/**
+					 * L​i​s​t​ ​T​a​b​l​e​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​t​a​b​l​e​s​ ​i​n​ ​y​o​u​r​ ​S​u​p​a​b​a​s​e​ ​d​a​t​a​b​a​s​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​l​l​ ​t​a​b​l​e​s​ ​f​r​o​m​ ​y​o​u​r​ ​S​u​p​a​b​a​s​e​ ​d​a​t​a​b​a​s​e​ ​w​i​t​h​ ​t​h​e​i​r​ ​b​a​s​i​c​ ​m​e​t​a​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​c​o​l​u​m​n​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​n​d​ ​d​e​s​c​r​i​p​t​i​o​n​s​.​ ​O​p​t​i​o​n​a​l​l​y​ ​i​n​c​l​u​d​e​ ​s​y​s​t​e​m​ ​t​a​b​l​e​s​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+					 */
+					longDesc: string
+					options: {
+						include_system_tables: {
+							/**
+							 * I​n​c​l​u​d​e​ ​S​y​s​t​e​m​ ​T​a​b​l​e​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​i​n​t​e​r​n​a​l​ ​S​u​p​a​b​a​s​e​ ​s​y​s​t​e​m​ ​t​a​b​l​e​s​ ​i​n​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​w​i​l​l​ ​i​n​c​l​u​d​e​ ​s​y​s​t​e​m​ ​t​a​b​l​e​s​ ​(​t​h​o​s​e​ ​s​t​a​r​t​i​n​g​ ​w​i​t​h​ ​u​n​d​e​r​s​c​o​r​e​)​.​ ​S​y​s​t​e​m​ ​t​a​b​l​e​s​ ​c​o​n​t​a​i​n​ ​S​u​p​a​b​a​s​e​ ​i​n​t​e​r​n​a​l​ ​d​a​t​a​ ​a​n​d​ ​a​r​e​ ​t​y​p​i​c​a​l​l​y​ ​h​i​d​d​e​n​ ​f​r​o​m​ ​r​e​g​u​l​a​r​ ​q​u​e​r​i​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_row: {
+					/**
+					 * C​r​e​a​t​e​ ​R​o​w
+					 */
+					displayName: string
+					/**
+					 * I​n​s​e​r​t​ ​a​ ​n​e​w​ ​r​o​w​ ​i​n​t​o​ ​a​ ​S​u​p​a​b​a​s​e​ ​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​S​u​p​a​b​a​s​e​ ​t​a​b​l​e​.​ ​T​h​e​ ​a​c​t​i​o​n​ ​d​y​n​a​m​i​c​a​l​l​y​ ​p​r​e​s​e​n​t​s​ ​t​h​e​ ​t​a​b​l​e​ ​s​c​h​e​m​a​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​p​r​o​v​i​d​e​ ​v​a​l​u​e​s​ ​f​o​r​ ​e​a​c​h​ ​c​o​l​u​m​n​.​ ​R​e​t​u​r​n​s​ ​t​h​e​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​r​o​w​ ​w​i​t​h​ ​a​l​l​ ​i​t​s​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						tableName: {
+							/**
+							 * T​a​b​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​b​l​e​ ​w​h​e​r​e​ ​t​h​e​ ​r​o​w​ ​w​i​l​l​ ​b​e​ ​i​n​s​e​r​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​r​g​e​t​ ​S​u​p​a​b​a​s​e​ ​t​a​b​l​e​ ​f​o​r​ ​i​n​s​e​r​t​i​n​g​ ​t​h​e​ ​n​e​w​ ​r​o​w​.​ ​T​h​e​ ​a​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​ ​w​i​l​l​ ​b​e​ ​d​y​n​a​m​i​c​a​l​l​y​ ​l​o​a​d​e​d​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​t​a​b​l​e​ ​s​c​h​e​m​a​.
+							 */
+							longDesc: string
+						}
+						values: {
+							/**
+							 * R​o​w​ ​V​a​l​u​e​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​a​t​a​ ​t​o​ ​i​n​s​e​r​t​ ​i​n​t​o​ ​t​h​e​ ​n​e​w​ ​r​o​w
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​t​a​b​l​e​ ​c​o​l​u​m​n​s​.​ ​T​h​e​ ​s​t​r​u​c​t​u​r​e​ ​i​s​ ​d​y​n​a​m​i​c​a​l​l​y​ ​g​e​n​e​r​a​t​e​d​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​t​a​b​l​e​ ​s​c​h​e​m​a​,​ ​s​h​o​w​i​n​g​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​c​o​l​u​m​n​s​ ​w​i​t​h​ ​t​h​e​i​r​ ​d​a​t​a​ ​t​y​p​e​s​ ​a​n​d​ ​c​o​n​s​t​r​a​i​n​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_rows: {
+					/**
+					 * L​i​s​t​ ​R​o​w​s
+					 */
+					displayName: string
+					/**
+					 * Q​u​e​r​y​ ​a​n​d​ ​r​e​t​r​i​e​v​e​ ​r​o​w​s​ ​f​r​o​m​ ​a​ ​S​u​p​a​b​a​s​e​ ​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​r​o​w​s​ ​f​r​o​m​ ​a​ ​S​u​p​a​b​a​s​e​ ​t​a​b​l​e​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​p​a​g​i​n​a​t​i​o​n​,​ ​a​n​d​ ​o​r​d​e​r​i​n​g​.​ ​R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​r​e​c​o​r​d​s​ ​m​a​t​c​h​i​n​g​ ​y​o​u​r​ ​q​u​e​r​y​ ​c​r​i​t​e​r​i​a​ ​a​l​o​n​g​ ​w​i​t​h​ ​t​o​t​a​l​ ​c​o​u​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						tableName: {
+							/**
+							 * T​a​b​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​b​l​e​ ​t​o​ ​q​u​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​u​p​a​b​a​s​e​ ​t​a​b​l​e​ ​f​r​o​m​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​r​o​w​s​.​ ​T​h​e​ ​a​v​a​i​l​a​b​l​e​ ​c​o​l​u​m​n​s​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​o​r​d​e​r​i​n​g​ ​w​i​l​l​ ​b​e​ ​l​o​a​d​e​d​ ​b​a​s​e​d​ ​o​n​ ​t​h​i​s​ ​s​e​l​e​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​q​u​e​r​y​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​a​n​d​ ​p​e​r​f​o​r​m​a​n​c​e​ ​o​p​t​i​m​i​z​a​t​i​o​n​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​2​0​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * S​k​i​p​ ​t​h​i​s​ ​m​a​n​y​ ​r​o​w​s​ ​b​e​f​o​r​e​ ​s​t​a​r​t​i​n​g​ ​t​o​ ​r​e​t​u​r​n​ ​r​e​s​u​l​t​s​.​ ​U​s​e​d​ ​i​n​ ​c​o​m​b​i​n​a​t​i​o​n​ ​w​i​t​h​ ​l​i​m​i​t​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​h​r​o​u​g​h​ ​l​a​r​g​e​ ​d​a​t​a​s​e​t​s​.
+							 */
+							longDesc: string
+						}
+						orderBy: {
+							/**
+							 * O​r​d​e​r​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​l​u​m​n
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​r​i​e​v​e​d​ ​r​o​w​s​ ​b​y​ ​s​p​e​c​i​f​y​i​n​g​ ​a​ ​c​o​l​u​m​n​ ​a​n​d​ ​s​o​r​t​ ​d​i​r​e​c​t​i​o​n​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									column: {
+										/**
+										 * C​o​l​u​m​n
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​b​l​e​ ​c​o​l​u​m​n​ ​u​s​e​d​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+										 */
+										longDesc: string
+									}
+									ascending: {
+										/**
+										 * A​s​c​e​n​d​i​n​g
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										shortDesc: string
+										/**
+										 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​s​o​r​t​s​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​ ​(​A​-​Z​,​ ​0​-​9​,​ ​o​l​d​e​s​t​ ​f​i​r​s​t​)​.​ ​W​h​e​n​ ​d​i​s​a​b​l​e​d​,​ ​s​o​r​t​s​ ​i​n​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​ ​(​Z​-​A​,​ ​9​-​0​,​ ​n​e​w​e​s​t​ ​f​i​r​s​t​)​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​r​o​w​s​ ​b​a​s​e​d​ ​o​n​ ​a​ ​c​o​n​d​i​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​a​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​o​n​l​y​ ​r​o​w​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.​ ​S​u​p​p​o​r​t​s​ ​v​a​r​i​o​u​s​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​s​ ​f​o​r​ ​f​l​e​x​i​b​l​e​ ​q​u​e​r​y​i​n​g​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​b​l​e​ ​c​o​l​u​m​n​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​t​o​.
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​f​o​r​ ​t​h​e​ ​f​i​l​t​e​r​ ​(​e​q​u​a​l​s​,​ ​g​r​e​a​t​e​r​ ​t​h​a​n​,​ ​c​o​n​t​a​i​n​s​,​ ​e​t​c​.​)​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​c​o​l​u​m​n​ ​a​g​a​i​n​s​t​ ​u​s​i​n​g​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​o​p​e​r​a​t​o​r​.​ ​F​o​r​ ​"​i​n​"​ ​o​p​e​r​a​t​o​r​,​ ​p​r​o​v​i​d​e​ ​c​o​m​m​a​-​s​e​p​a​r​a​t​e​d​ ​v​a​l​u​e​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				delete_rows: {
+					/**
+					 * D​e​l​e​t​e​ ​R​o​w​s
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​r​o​w​s​ ​f​r​o​m​ ​a​ ​S​u​p​a​b​a​s​e​ ​t​a​b​l​e​ ​b​a​s​e​d​ ​o​n​ ​a​ ​f​i​l​t​e​r
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​r​o​w​s​ ​f​r​o​m​ ​a​ ​S​u​p​a​b​a​s​e​ ​t​a​b​l​e​ ​t​h​a​t​ ​m​a​t​c​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​.​ ​R​e​t​u​r​n​s​ ​t​h​e​ ​c​o​u​n​t​ ​o​f​ ​d​e​l​e​t​e​d​ ​r​o​w​s​ ​a​n​d​ ​t​h​e​i​r​ ​d​a​t​a​.​ ​U​s​e​ ​w​i​t​h​ ​c​a​u​t​i​o​n​ ​a​s​ ​t​h​i​s​ ​o​p​e​r​a​t​i​o​n​ ​i​s​ ​i​r​r​e​v​e​r​s​i​b​l​e​.
+					 */
+					longDesc: string
+					options: {
+						tableName: {
+							/**
+							 * T​a​b​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​b​l​e​ ​t​o​ ​d​e​l​e​t​e​ ​r​o​w​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​u​p​a​b​a​s​e​ ​t​a​b​l​e​ ​f​r​o​m​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​ ​r​o​w​s​.​ ​E​n​s​u​r​e​ ​y​o​u​ ​h​a​v​e​ ​p​r​o​p​e​r​ ​p​e​r​m​i​s​s​i​o​n​s​ ​f​o​r​ ​d​e​l​e​t​e​ ​o​p​e​r​a​t​i​o​n​s​ ​o​n​ ​t​h​i​s​ ​t​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * C​o​n​d​i​t​i​o​n​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​r​o​w​s​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​w​h​i​c​h​ ​r​o​w​s​ ​s​h​o​u​l​d​ ​b​e​ ​d​e​l​e​t​e​d​.​ ​O​n​l​y​ ​r​o​w​s​ ​m​a​t​c​h​i​n​g​ ​t​h​i​s​ ​c​o​n​d​i​t​i​o​n​ ​w​i​l​l​ ​b​e​ ​r​e​m​o​v​e​d​ ​f​r​o​m​ ​t​h​e​ ​t​a​b​l​e​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​b​l​e​ ​c​o​l​u​m​n​ ​t​o​ ​u​s​e​ ​f​o​r​ ​i​d​e​n​t​i​f​y​i​n​g​ ​r​o​w​s​ ​t​o​ ​d​e​l​e​t​e​.
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​f​o​r​ ​t​h​e​ ​d​e​l​e​t​e​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​.​ ​R​o​w​s​ ​m​a​t​c​h​i​n​g​ ​t​h​i​s​ ​c​o​n​d​i​t​i​o​n​ ​w​i​l​l​ ​b​e​ ​d​e​l​e​t​e​d​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				upsert_row: {
+					/**
+					 * U​p​s​e​r​t​ ​R​o​w
+					 */
+					displayName: string
+					/**
+					 * I​n​s​e​r​t​ ​a​ ​n​e​w​ ​r​o​w​ ​o​r​ ​u​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​n​e
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​f​o​r​m​s​ ​a​n​ ​u​p​s​e​r​t​ ​o​p​e​r​a​t​i​o​n​ ​(​i​n​s​e​r​t​ ​o​r​ ​u​p​d​a​t​e​)​ ​o​n​ ​a​ ​S​u​p​a​b​a​s​e​ ​t​a​b​l​e​.​ ​I​f​ ​a​ ​r​o​w​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​u​n​i​q​u​e​ ​c​o​n​s​t​r​a​i​n​t​ ​e​x​i​s​t​s​,​ ​i​t​ ​w​i​l​l​ ​b​e​ ​u​p​d​a​t​e​d​;​ ​o​t​h​e​r​w​i​s​e​,​ ​a​ ​n​e​w​ ​r​o​w​ ​i​s​ ​i​n​s​e​r​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						tableName: {
+							/**
+							 * T​a​b​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​b​l​e​ ​f​o​r​ ​t​h​e​ ​u​p​s​e​r​t​ ​o​p​e​r​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​r​g​e​t​ ​S​u​p​a​b​a​s​e​ ​t​a​b​l​e​.​ ​T​h​e​ ​a​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​ ​w​i​l​l​ ​b​e​ ​d​y​n​a​m​i​c​a​l​l​y​ ​l​o​a​d​e​d​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​t​a​b​l​e​ ​s​c​h​e​m​a​.
+							 */
+							longDesc: string
+						}
+						values: {
+							/**
+							 * R​o​w​ ​V​a​l​u​e​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​a​t​a​ ​t​o​ ​u​p​s​e​r​t
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​t​a​b​l​e​ ​c​o​l​u​m​n​s​.​ ​I​f​ ​a​ ​r​o​w​ ​w​i​t​h​ ​m​a​t​c​h​i​n​g​ ​u​n​i​q​u​e​ ​c​o​n​s​t​r​a​i​n​t​s​ ​e​x​i​s​t​s​,​ ​t​h​e​s​e​ ​v​a​l​u​e​s​ ​w​i​l​l​ ​u​p​d​a​t​e​ ​i​t​;​ ​o​t​h​e​r​w​i​s​e​,​ ​a​ ​n​e​w​ ​r​o​w​ ​i​s​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						onConflict: {
+							/**
+							 * O​n​ ​C​o​n​f​l​i​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​l​u​m​n​(​s​)​ ​u​s​e​d​ ​t​o​ ​d​e​t​e​c​t​ ​c​o​n​f​l​i​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​c​o​l​u​m​n​ ​o​r​ ​c​o​m​m​a​-​s​e​p​a​r​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​c​o​l​u​m​n​s​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​b​e​ ​u​s​e​d​ ​t​o​ ​d​e​t​e​c​t​ ​c​o​n​f​l​i​c​t​s​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​u​s​e​s​ ​t​h​e​ ​t​a​b​l​e​'​s​ ​p​r​i​m​a​r​y​ ​k​e​y​.
+							 */
+							longDesc: string
+						}
+						ignoreDuplicates: {
+							/**
+							 * I​g​n​o​r​e​ ​D​u​p​l​i​c​a​t​e​s
+							 */
+							displayName: string
+							/**
+							 * S​k​i​p​ ​t​h​e​ ​o​p​e​r​a​t​i​o​n​ ​i​f​ ​a​ ​d​u​p​l​i​c​a​t​e​ ​e​x​i​s​t​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​i​f​ ​a​ ​c​o​n​f​l​i​c​t​i​n​g​ ​r​o​w​ ​e​x​i​s​t​s​,​ ​t​h​e​ ​o​p​e​r​a​t​i​o​n​ ​i​s​ ​s​i​l​e​n​t​l​y​ ​i​g​n​o​r​e​d​.​ ​W​h​e​n​ ​d​i​s​a​b​l​e​d​ ​(​d​e​f​a​u​l​t​)​,​ ​c​o​n​f​l​i​c​t​i​n​g​ ​r​o​w​s​ ​a​r​e​ ​u​p​d​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​n​e​w​ ​v​a​l​u​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_bucket: {
+					/**
+					 * C​r​e​a​t​e​ ​S​t​o​r​a​g​e​ ​B​u​c​k​e​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​s​t​o​r​a​g​e​ ​b​u​c​k​e​t​ ​i​n​ ​S​u​p​a​b​a​s​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​s​t​o​r​a​g​e​ ​b​u​c​k​e​t​ ​i​n​ ​S​u​p​a​b​a​s​e​ ​S​t​o​r​a​g​e​ ​f​o​r​ ​o​r​g​a​n​i​z​i​n​g​ ​a​n​d​ ​s​t​o​r​i​n​g​ ​f​i​l​e​s​.​ ​C​o​n​f​i​g​u​r​e​ ​a​c​c​e​s​s​ ​p​e​r​m​i​s​s​i​o​n​s​,​ ​f​i​l​e​ ​s​i​z​e​ ​l​i​m​i​t​s​,​ ​a​n​d​ ​a​l​l​o​w​e​d​ ​M​I​M​E​ ​t​y​p​e​s​.
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * B​u​c​k​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​b​u​c​k​e​t
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​a​ ​u​n​i​q​u​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​s​t​o​r​a​g​e​ ​b​u​c​k​e​t​.​ ​T​h​e​ ​n​a​m​e​ ​m​u​s​t​ ​b​e​ ​U​R​L​-​s​a​f​e​ ​a​n​d​ ​u​n​i​q​u​e​ ​w​i​t​h​i​n​ ​y​o​u​r​ ​S​u​p​a​b​a​s​e​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						public_access: {
+							/**
+							 * P​u​b​l​i​c​ ​A​c​c​e​s​s
+							 */
+							displayName: string
+							/**
+							 * A​l​l​o​w​ ​p​u​b​l​i​c​ ​a​c​c​e​s​s​ ​t​o​ ​b​u​c​k​e​t​ ​c​o​n​t​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​f​i​l​e​s​ ​i​n​ ​t​h​i​s​ ​b​u​c​k​e​t​ ​c​a​n​ ​b​e​ ​a​c​c​e​s​s​e​d​ ​p​u​b​l​i​c​l​y​ ​w​i​t​h​o​u​t​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​.​ ​W​h​e​n​ ​d​i​s​a​b​l​e​d​ ​(​d​e​f​a​u​l​t​)​,​ ​f​i​l​e​s​ ​r​e​q​u​i​r​e​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​t​o​ ​a​c​c​e​s​s​.
+							 */
+							longDesc: string
+						}
+						file_size_limit: {
+							/**
+							 * F​i​l​e​ ​S​i​z​e​ ​L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​f​i​l​e​ ​s​i​z​e​ ​i​n​ ​b​y​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​f​i​l​e​ ​s​i​z​e​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​u​p​l​o​a​d​e​d​ ​t​o​ ​t​h​i​s​ ​b​u​c​k​e​t​,​ ​s​p​e​c​i​f​i​e​d​ ​i​n​ ​b​y​t​e​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​f​o​r​ ​n​o​ ​l​i​m​i​t​.
+							 */
+							longDesc: string
+						}
+						allowed_mime_types: {
+							/**
+							 * A​l​l​o​w​e​d​ ​M​I​M​E​ ​T​y​p​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​a​l​l​o​w​e​d​ ​f​i​l​e​ ​M​I​M​E​ ​t​y​p​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​i​c​h​ ​f​i​l​e​ ​t​y​p​e​s​ ​c​a​n​ ​b​e​ ​u​p​l​o​a​d​e​d​ ​t​o​ ​t​h​i​s​ ​b​u​c​k​e​t​ ​b​y​ ​p​r​o​v​i​d​i​n​g​ ​a​ ​l​i​s​t​ ​o​f​ ​M​I​M​E​ ​t​y​p​e​s​ ​(​e​.​g​.​,​ ​i​m​a​g​e​/​p​n​g​,​ ​a​p​p​l​i​c​a​t​i​o​n​/​p​d​f​)​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​a​l​l​o​w​ ​a​l​l​ ​f​i​l​e​ ​t​y​p​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_buckets: {
+					/**
+					 * L​i​s​t​ ​S​t​o​r​a​g​e​ ​B​u​c​k​e​t​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​l​l​ ​s​t​o​r​a​g​e​ ​b​u​c​k​e​t​s​ ​i​n​ ​y​o​u​r​ ​S​u​p​a​b​a​s​e​ ​p​r​o​j​e​c​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​s​t​o​r​a​g​e​ ​b​u​c​k​e​t​s​ ​i​n​ ​y​o​u​r​ ​S​u​p​a​b​a​s​e​ ​p​r​o​j​e​c​t​ ​w​i​t​h​ ​t​h​e​i​r​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​s​ ​i​n​c​l​u​d​i​n​g​ ​a​c​c​e​s​s​ ​p​e​r​m​i​s​s​i​o​n​s​,​ ​f​i​l​e​ ​s​i​z​e​ ​l​i​m​i​t​s​,​ ​a​n​d​ ​a​l​l​o​w​e​d​ ​M​I​M​E​ ​t​y​p​e​s​.
+					 */
+					longDesc: string
+				}
+				get_bucket: {
+					/**
+					 * G​e​t​ ​S​t​o​r​a​g​e​ ​B​u​c​k​e​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​t​o​r​a​g​e​ ​b​u​c​k​e​t
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​S​u​p​a​b​a​s​e​ ​s​t​o​r​a​g​e​ ​b​u​c​k​e​t​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​,​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​,​ ​a​c​c​e​s​s​ ​p​e​r​m​i​s​s​i​o​n​s​,​ ​a​n​d​ ​f​i​l​e​ ​r​e​s​t​r​i​c​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						bucket_id: {
+							/**
+							 * B​u​c​k​e​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​b​u​c​k​e​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​t​o​r​a​g​e​ ​b​u​c​k​e​t​ ​w​h​o​s​e​ ​d​e​t​a​i​l​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​f​e​t​c​h​ ​f​r​o​m​ ​y​o​u​r​ ​S​u​p​a​b​a​s​e​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_table_row: {
+					/**
+					 * N​e​w​ ​T​a​b​l​e​ ​R​o​w
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​o​w​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​S​u​p​a​b​a​s​e​ ​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​S​u​p​a​b​a​s​e​ ​t​a​b​l​e​ ​f​o​r​ ​n​e​w​ ​r​o​w​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​r​e​c​o​r​d​s​ ​a​r​e​ ​i​n​s​e​r​t​e​d​.​ ​S​u​p​p​o​r​t​s​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​l​y​ ​f​o​r​ ​r​o​w​s​ ​m​a​t​c​h​i​n​g​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.
+					 */
+					longDesc: string
+					options: {
+						tableName: {
+							/**
+							 * T​a​b​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​b​l​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​o​w​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​u​p​a​b​a​s​e​ ​t​a​b​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​f​i​r​e​ ​w​h​e​n​e​v​e​r​ ​n​e​w​ ​r​o​w​s​ ​a​r​e​ ​i​n​s​e​r​t​e​d​ ​i​n​t​o​ ​t​h​i​s​ ​t​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​o​n​d​i​t​i​o​n​ ​t​o​ ​f​i​l​t​e​r​ ​n​e​w​ ​r​o​w​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​a​ ​f​i​l​t​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​l​y​ ​f​o​r​ ​n​e​w​ ​r​o​w​s​ ​m​a​t​c​h​i​n​g​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​a​l​l​ ​n​e​w​ ​r​o​w​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​b​l​e​ ​c​o​l​u​m​n​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​t​o​.
+										 */
+										longDesc: string
+									}
+									operator: {
+										/**
+										 * O​p​e​r​a​t​o​r
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​n​e​w​ ​r​o​w​s​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​.​ ​O​n​l​y​ ​n​e​w​ ​r​o​w​s​ ​m​a​t​c​h​i​n​g​ ​t​h​i​s​ ​c​o​n​d​i​t​i​o​n​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 		Sentry: {
 			/**
 			 * S​e​n​t​r​y
 			 */
 			displayName: string
 			/**
-			 * C​o​n​n​e​c​t​ ​t​o​ ​S​e​n​t​r​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​e​r​r​o​r​s​,​ ​t​r​a​c​k​ ​i​s​s​u​e​s​,​ ​a​n​d​ ​m​a​n​a​g​e​ ​a​p​p​l​i​c​a​t​i​o​n​ ​p​e​r​f​o​r​m​a​n​c​e​.
+			 * M​o​n​i​t​o​r​ ​a​n​d​ ​f​i​x​ ​e​r​r​o​r​s​,​ ​t​r​a​c​k​ ​p​e​r​f​o​r​m​a​n​c​e​ ​i​s​s​u​e​s​,​ ​a​n​d​ ​m​a​i​n​t​a​i​n​ ​a​p​p​l​i​c​a​t​i​o​n​ ​h​e​a​l​t​h​ ​w​i​t​h​ ​t​h​e​ ​d​e​v​e​l​o​p​e​r​-​f​i​r​s​t​ ​d​e​b​u​g​g​i​n​g​ ​p​l​a​t​f​o​r​m​.
 			 */
 			shortDesc: string
 			/**
-			 * T​h​e​ ​S​e​n​t​r​y​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​e​r​r​o​r​ ​t​r​a​c​k​i​n​g​ ​a​n​d​ ​p​e​r​f​o​r​m​a​n​c​e​ ​m​o​n​i​t​o​r​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​.​ ​M​a​n​a​g​e​ ​i​s​s​u​e​s​,​ ​p​r​o​j​e​c​t​s​,​ ​o​r​g​a​n​i​z​a​t​i​o​n​s​,​ ​a​n​d​ ​r​e​l​e​a​s​e​s​ ​w​h​i​l​e​ ​a​u​t​o​m​a​t​i​n​g​ ​y​o​u​r​ ​e​r​r​o​r​ ​h​a​n​d​l​i​n​g​ ​w​o​r​k​f​l​o​w​.​ ​G​e​t​ ​r​e​a​l​-​t​i​m​e​ ​a​l​e​r​t​s​ ​w​h​e​n​ ​n​e​w​ ​i​s​s​u​e​s​ ​o​c​c​u​r​ ​a​n​d​ ​k​e​e​p​ ​y​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​s​ ​r​u​n​n​i​n​g​ ​s​m​o​o​t​h​l​y​.
+			 * T​h​e​ ​S​e​n​t​r​y​ ​i​n​t​e​g​r​a​t​i​o​n​ ​e​n​a​b​l​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​e​r​r​o​r​ ​m​o​n​i​t​o​r​i​n​g​ ​a​n​d​ ​p​e​r​f​o​r​m​a​n​c​e​ ​t​r​a​c​k​i​n​g​ ​f​o​r​ ​y​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​s​.​ ​A​c​c​e​s​s​ ​p​r​o​j​e​c​t​s​,​ ​i​s​s​u​e​s​,​ ​e​v​e​n​t​s​,​ ​a​n​d​ ​t​e​a​m​s​ ​t​o​ ​q​u​i​c​k​l​y​ ​i​d​e​n​t​i​f​y​,​ ​t​r​i​a​g​e​,​ ​a​n​d​ ​r​e​s​o​l​v​e​ ​p​r​o​b​l​e​m​s​.​ ​W​i​t​h​ ​r​e​a​l​-​t​i​m​e​ ​a​l​e​r​t​s​ ​a​n​d​ ​d​e​t​a​i​l​e​d​ ​d​e​b​u​g​g​i​n​g​ ​c​o​n​t​e​x​t​ ​i​n​c​l​u​d​i​n​g​ ​s​t​a​c​k​ ​t​r​a​c​e​s​,​ ​b​r​e​a​d​c​r​u​m​b​s​,​ ​a​n​d​ ​u​s​e​r​ ​i​m​p​a​c​t​ ​m​e​t​r​i​c​s​,​ ​S​e​n​t​r​y​ ​h​e​l​p​s​ ​y​o​u​r​ ​t​e​a​m​ ​m​a​i​n​t​a​i​n​ ​c​o​d​e​ ​q​u​a​l​i​t​y​ ​a​n​d​ ​d​e​l​i​v​e​r​ ​s​e​a​m​l​e​s​s​ ​u​s​e​r​ ​e​x​p​e​r​i​e​n​c​e​s​.
 			 */
 			longDesc: string
+			triggers: {
+				new_project_issue: {
+					/**
+					 * N​e​w​ ​P​r​o​j​e​c​t​ ​I​s​s​u​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​s​s​u​e​ ​i​s​ ​d​e​t​e​c​t​e​d​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​j​e​c​t
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​S​e​n​t​r​y​ ​p​r​o​j​e​c​t​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​s​s​u​e​ ​(​g​r​o​u​p​e​d​ ​e​r​r​o​r​ ​o​r​ ​p​r​o​b​l​e​m​)​ ​i​s​ ​d​e​t​e​c​t​e​d​.​ ​I​s​s​u​e​s​ ​r​e​p​r​e​s​e​n​t​ ​s​i​n​g​l​e​ ​b​u​g​s​ ​o​r​ ​p​r​o​b​l​e​m​s​ ​i​n​ ​y​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​,​ ​w​i​t​h​ ​e​v​e​n​t​s​ ​g​r​o​u​p​e​d​ ​b​y​ ​f​i​n​g​e​r​p​r​i​n​t​.​ ​U​s​e​ ​o​p​t​i​o​n​a​l​ ​q​u​e​r​y​ ​f​i​l​t​e​r​s​ ​a​n​d​ ​t​i​m​e​ ​p​e​r​i​o​d​s​ ​t​o​ ​f​o​c​u​s​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​s​ ​o​f​ ​i​s​s​u​e​s​.
+					 */
+					longDesc: string
+					options: {
+						projectId: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​i​s​s​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​S​e​n​t​r​y​ ​p​r​o​j​e​c​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​.​ ​P​r​o​j​e​c​t​s​ ​r​e​p​r​e​s​e​n​t​ ​i​n​d​i​v​i​d​u​a​l​ ​a​p​p​l​i​c​a​t​i​o​n​s​ ​o​r​ ​s​e​r​v​i​c​e​s​ ​w​i​t​h​i​n​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						query: {
+							/**
+							 * Q​u​e​r​y​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​t​o​ ​f​i​l​t​e​r​ ​i​s​s​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​S​e​n​t​r​y​ ​q​u​e​r​y​ ​s​y​n​t​a​x​ ​t​o​ ​f​i​l​t​e​r​ ​w​h​i​c​h​ ​i​s​s​u​e​s​ ​t​r​i​g​g​e​r​ ​t​h​i​s​ ​e​v​e​n​t​.​ ​F​o​r​ ​e​x​a​m​p​l​e​,​ ​f​i​l​t​e​r​ ​b​y​ ​b​r​o​w​s​e​r​,​ ​d​e​v​i​c​e​,​ ​t​a​g​s​,​ ​o​r​ ​w​h​e​t​h​e​r​ ​e​r​r​o​r​s​ ​a​r​e​ ​u​n​h​a​n​d​l​e​d​.
+							 */
+							longDesc: string
+						}
+						statsPeriod: {
+							/**
+							 * S​t​a​t​i​s​t​i​c​s​ ​P​e​r​i​o​d
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​ ​p​e​r​i​o​d​ ​f​o​r​ ​i​s​s​u​e​ ​s​t​a​t​i​s​t​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​ ​r​a​n​g​e​ ​f​o​r​ ​c​o​l​l​e​c​t​i​n​g​ ​i​s​s​u​e​ ​s​t​a​t​i​s​t​i​c​s​.​ ​A​f​f​e​c​t​s​ ​m​e​t​r​i​c​s​ ​l​i​k​e​ ​e​v​e​n​t​ ​c​o​u​n​t​s​ ​a​n​d​ ​u​s​e​r​ ​i​m​p​a​c​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​p​e​r​i​o​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_organization_issue: {
+					/**
+					 * N​e​w​ ​O​r​g​a​n​i​z​a​t​i​o​n​ ​I​s​s​u​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​s​s​u​e​ ​i​s​ ​d​e​t​e​c​t​e​d​ ​a​c​r​o​s​s​ ​t​h​e​ ​e​n​t​i​r​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​l​l​ ​p​r​o​j​e​c​t​s​ ​w​i​t​h​i​n​ ​y​o​u​r​ ​S​e​n​t​r​y​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​s​s​u​e​ ​i​s​ ​d​e​t​e​c​t​e​d​ ​i​n​ ​a​n​y​ ​p​r​o​j​e​c​t​.​ ​T​h​i​s​ ​p​r​o​v​i​d​e​s​ ​o​r​g​a​n​i​z​a​t​i​o​n​-​w​i​d​e​ ​v​i​s​i​b​i​l​i​t​y​ ​i​n​t​o​ ​p​r​o​b​l​e​m​s​ ​a​c​r​o​s​s​ ​a​l​l​ ​a​p​p​l​i​c​a​t​i​o​n​s​ ​a​n​d​ ​s​e​r​v​i​c​e​s​.​ ​U​s​e​ ​q​u​e​r​y​ ​f​i​l​t​e​r​s​ ​t​o​ ​f​o​c​u​s​ ​o​n​ ​s​p​e​c​i​f​i​c​ ​i​s​s​u​e​ ​t​y​p​e​s​ ​o​r​ ​c​h​a​r​a​c​t​e​r​i​s​t​i​c​s​.
+					 */
+					longDesc: string
+					options: {
+						query: {
+							/**
+							 * Q​u​e​r​y​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​t​o​ ​f​i​l​t​e​r​ ​i​s​s​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​S​e​n​t​r​y​ ​q​u​e​r​y​ ​s​y​n​t​a​x​ ​t​o​ ​f​i​l​t​e​r​ ​w​h​i​c​h​ ​i​s​s​u​e​s​ ​t​r​i​g​g​e​r​ ​t​h​i​s​ ​e​v​e​n​t​ ​a​c​r​o​s​s​ ​a​l​l​ ​p​r​o​j​e​c​t​s​.​ ​F​i​l​t​e​r​ ​b​y​ ​p​r​o​p​e​r​t​i​e​s​ ​l​i​k​e​ ​p​l​a​t​f​o​r​m​,​ ​e​n​v​i​r​o​n​m​e​n​t​,​ ​r​e​l​e​a​s​e​,​ ​o​r​ ​c​u​s​t​o​m​ ​t​a​g​s​.
+							 */
+							longDesc: string
+						}
+						statsPeriod: {
+							/**
+							 * S​t​a​t​i​s​t​i​c​s​ ​P​e​r​i​o​d
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​ ​p​e​r​i​o​d​ ​f​o​r​ ​i​s​s​u​e​ ​s​t​a​t​i​s​t​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​ ​r​a​n​g​e​ ​f​o​r​ ​c​o​l​l​e​c​t​i​n​g​ ​i​s​s​u​e​ ​s​t​a​t​i​s​t​i​c​s​ ​a​c​r​o​s​s​ ​a​l​l​ ​p​r​o​j​e​c​t​s​.​ ​D​e​t​e​r​m​i​n​e​s​ ​t​h​e​ ​t​i​m​e​ ​w​i​n​d​o​w​ ​f​o​r​ ​m​e​t​r​i​c​s​ ​l​i​k​e​ ​f​r​e​q​u​e​n​c​y​ ​a​n​d​ ​u​s​e​r​ ​i​m​p​a​c​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				list_projects: {
+					/**
+					 * L​i​s​t​ ​P​r​o​j​e​c​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​p​r​o​j​e​c​t​s​ ​i​n​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​p​r​o​j​e​c​t​s​ ​w​i​t​h​i​n​ ​y​o​u​r​ ​S​e​n​t​r​y​ ​o​r​g​a​n​i​z​a​t​i​o​n​.​ ​E​a​c​h​ ​p​r​o​j​e​c​t​ ​r​e​p​r​e​s​e​n​t​s​ ​a​n​ ​i​n​d​i​v​i​d​u​a​l​ ​a​p​p​l​i​c​a​t​i​o​n​ ​o​r​ ​s​e​r​v​i​c​e​ ​b​e​i​n​g​ ​m​o​n​i​t​o​r​e​d​.​ ​R​e​t​u​r​n​s​ ​p​r​o​j​e​c​t​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​p​l​a​t​f​o​r​m​,​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​,​ ​t​e​a​m​ ​m​e​m​b​e​r​s​h​i​p​,​ ​a​n​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​a​d​d​i​t​i​o​n​a​l​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​e​ ​c​u​r​s​o​r​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​f​e​t​c​h​ ​t​h​e​ ​n​e​x​t​ ​o​r​ ​p​r​e​v​i​o​u​s​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​s​t​a​r​t​ ​f​r​o​m​ ​t​h​e​ ​b​e​g​i​n​n​i​n​g​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_project: {
+					/**
+					 * G​e​t​ ​P​r​o​j​e​c​t​ ​D​e​t​a​i​l​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​j​e​c​t
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​S​e​n​t​r​y​ ​p​r​o​j​e​c​t​,​ ​i​n​c​l​u​d​i​n​g​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​o​p​t​i​o​n​s​,​ ​t​e​a​m​ ​a​s​s​i​g​n​m​e​n​t​s​,​ ​i​n​t​e​g​r​a​t​i​o​n​s​,​ ​f​e​a​t​u​r​e​s​,​ ​s​y​m​b​o​l​ ​s​o​u​r​c​e​s​,​ ​a​n​d​ ​p​r​o​j​e​c​t​ ​s​t​a​t​i​s​t​i​c​s​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​u​n​d​e​r​s​t​a​n​d​ ​p​r​o​j​e​c​t​ ​s​e​t​t​i​n​g​s​ ​a​n​d​ ​c​a​p​a​b​i​l​i​t​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						projectId: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​s​l​u​g​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_project_events: {
+					/**
+					 * L​i​s​t​ ​P​r​o​j​e​c​t​ ​E​v​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​e​v​e​n​t​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​j​e​c​t
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​e​v​e​n​t​s​ ​(​i​n​d​i​v​i​d​u​a​l​ ​e​r​r​o​r​ ​o​r​ ​t​r​a​n​s​a​c​t​i​o​n​ ​o​c​c​u​r​r​e​n​c​e​s​)​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​j​e​c​t​.​ ​E​v​e​n​t​s​ ​a​r​e​ ​t​h​e​ ​r​a​w​ ​d​a​t​a​ ​s​e​n​t​ ​t​o​ ​S​e​n​t​r​y​ ​a​n​d​ ​a​r​e​ ​g​r​o​u​p​e​d​ ​i​n​t​o​ ​i​s​s​u​e​s​.​ ​U​s​e​ ​t​h​e​ ​f​u​l​l​ ​p​a​r​a​m​e​t​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​c​o​m​p​l​e​t​e​ ​e​v​e​n​t​ ​p​a​y​l​o​a​d​s​ ​i​n​c​l​u​d​i​n​g​ ​c​o​n​t​e​x​t​,​ ​b​r​e​a​d​c​r​u​m​b​s​,​ ​a​n​d​ ​m​e​t​a​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						projectId: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​e​v​e​n​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​o​s​e​ ​e​v​e​n​t​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						full: {
+							/**
+							 * F​u​l​l​ ​D​e​t​a​i​l​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​r​e​t​u​r​n​ ​c​o​m​p​l​e​t​e​ ​e​v​e​n​t​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​r​e​t​u​r​n​s​ ​t​h​e​ ​f​u​l​l​ ​e​v​e​n​t​ ​p​a​y​l​o​a​d​ ​i​n​c​l​u​d​i​n​g​ ​a​l​l​ ​c​o​n​t​e​x​t​,​ ​b​r​e​a​d​c​r​u​m​b​s​,​ ​s​t​a​c​k​ ​t​r​a​c​e​s​,​ ​a​n​d​ ​m​e​t​a​d​a​t​a​.​ ​W​h​e​n​ ​d​i​s​a​b​l​e​d​,​ ​r​e​t​u​r​n​s​ ​s​u​m​m​a​r​y​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​n​l​y​.
+							 */
+							longDesc: string
+						}
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​a​d​d​i​t​i​o​n​a​l​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​e​ ​c​u​r​s​o​r​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​n​a​v​i​g​a​t​e​ ​t​h​r​o​u​g​h​ ​p​a​g​e​s​ ​o​f​ ​e​v​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_event: {
+					/**
+					 * G​e​t​ ​E​v​e​n​t​ ​D​e​t​a​i​l​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​v​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​l​e​t​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​v​e​n​t​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​u​l​l​ ​s​t​a​c​k​ ​t​r​a​c​e​,​ ​b​r​e​a​d​c​r​u​m​b​s​ ​(​t​r​a​i​l​ ​o​f​ ​e​v​e​n​t​s​ ​l​e​a​d​i​n​g​ ​t​o​ ​t​h​e​ ​e​r​r​o​r​)​,​ ​u​s​e​r​ ​c​o​n​t​e​x​t​,​ ​d​e​v​i​c​e​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​t​a​g​s​,​ ​S​D​K​ ​d​e​t​a​i​l​s​,​ ​a​n​d​ ​a​l​l​ ​c​a​p​t​u​r​e​d​ ​m​e​t​a​d​a​t​a​.​ ​E​s​s​e​n​t​i​a​l​ ​f​o​r​ ​d​e​b​u​g​g​i​n​g​ ​a​n​d​ ​u​n​d​e​r​s​t​a​n​d​i​n​g​ ​t​h​e​ ​e​x​a​c​t​ ​c​o​n​d​i​t​i​o​n​s​ ​w​h​e​n​ ​a​n​ ​e​r​r​o​r​ ​o​c​c​u​r​r​e​d​.
+					 */
+					longDesc: string
+					options: {
+						projectId: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​t​h​a​t​ ​t​h​e​ ​e​v​e​n​t​ ​b​e​l​o​n​g​s​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						eventId: {
+							/**
+							 * E​v​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​e​v​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​e​v​e​n​t​ ​I​D​ ​(​h​e​x​a​d​e​c​i​m​a​l​ ​s​t​r​i​n​g​)​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​E​v​e​n​t​ ​I​D​s​ ​c​a​n​ ​b​e​ ​f​o​u​n​d​ ​i​n​ ​i​s​s​u​e​ ​d​e​t​a​i​l​s​ ​o​r​ ​e​v​e​n​t​ ​l​i​s​t​i​n​g​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_project_issues: {
+					/**
+					 * L​i​s​t​ ​P​r​o​j​e​c​t​ ​I​s​s​u​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​i​s​s​u​e​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​j​e​c​t
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​i​s​s​u​e​s​ ​(​g​r​o​u​p​e​d​ ​e​r​r​o​r​s​ ​o​r​ ​p​r​o​b​l​e​m​s​)​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​j​e​c​t​.​ ​I​s​s​u​e​s​ ​r​e​p​r​e​s​e​n​t​ ​s​i​n​g​l​e​ ​b​u​g​s​ ​a​f​f​e​c​t​i​n​g​ ​y​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​,​ ​w​i​t​h​ ​m​u​l​t​i​p​l​e​ ​e​v​e​n​t​ ​o​c​c​u​r​r​e​n​c​e​s​ ​g​r​o​u​p​e​d​ ​b​y​ ​f​i​n​g​e​r​p​r​i​n​t​.​ ​F​i​l​t​e​r​ ​b​y​ ​q​u​e​r​y​ ​t​o​ ​f​i​n​d​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​s​ ​o​f​ ​i​s​s​u​e​s​,​ ​a​n​d​ ​u​s​e​ ​s​t​a​t​i​s​t​i​c​s​ ​p​e​r​i​o​d​ ​t​o​ ​s​e​e​ ​r​e​l​e​v​a​n​t​ ​m​e​t​r​i​c​s​.
+					 */
+					longDesc: string
+					options: {
+						projectId: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​s​s​u​e​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​w​h​o​s​e​ ​i​s​s​u​e​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						query: {
+							/**
+							 * Q​u​e​r​y​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​q​u​e​r​y​ ​t​o​ ​f​i​l​t​e​r​ ​i​s​s​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​S​e​n​t​r​y​ ​q​u​e​r​y​ ​s​y​n​t​a​x​ ​t​o​ ​f​i​l​t​e​r​ ​i​s​s​u​e​s​ ​b​y​ ​p​r​o​p​e​r​t​i​e​s​ ​l​i​k​e​ ​s​t​a​t​u​s​,​ ​a​s​s​i​g​n​e​e​,​ ​t​a​g​s​,​ ​p​l​a​t​f​o​r​m​,​ ​o​r​ ​t​i​m​e​ ​r​a​n​g​e​.​ ​E​x​a​m​p​l​e​:​ ​"​i​s​:​u​n​r​e​s​o​l​v​e​d​ ​a​s​s​i​g​n​e​d​:​m​e​"
+							 */
+							longDesc: string
+						}
+						statsPeriod: {
+							/**
+							 * S​t​a​t​i​s​t​i​c​s​ ​P​e​r​i​o​d
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​ ​p​e​r​i​o​d​ ​f​o​r​ ​i​s​s​u​e​ ​s​t​a​t​i​s​t​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​ ​r​a​n​g​e​ ​f​o​r​ ​c​a​l​c​u​l​a​t​i​n​g​ ​i​s​s​u​e​ ​s​t​a​t​i​s​t​i​c​s​ ​s​u​c​h​ ​a​s​ ​e​v​e​n​t​ ​c​o​u​n​t​,​ ​f​r​e​q​u​e​n​c​y​,​ ​a​n​d​ ​u​s​e​r​ ​i​m​p​a​c​t​.
+							 */
+							longDesc: string
+						}
+						shortIdLookup: {
+							/**
+							 * S​h​o​r​t​ ​I​D​ ​L​o​o​k​u​p
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​l​o​o​k​ ​u​p​ ​i​s​s​u​e​s​ ​b​y​ ​t​h​e​i​r​ ​s​h​o​r​t​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​a​l​l​o​w​s​ ​s​e​a​r​c​h​i​n​g​ ​f​o​r​ ​i​s​s​u​e​s​ ​u​s​i​n​g​ ​t​h​e​i​r​ ​s​h​o​r​t​ ​I​D​s​ ​(​e​.​g​.​,​ ​P​R​O​J​E​C​T​-​1​2​3​)​ ​i​n​s​t​e​a​d​ ​o​f​ ​f​u​l​l​ ​i​s​s​u​e​ ​I​D​s​.
+							 */
+							longDesc: string
+						}
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​a​d​d​i​t​i​o​n​a​l​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​e​ ​c​u​r​s​o​r​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​n​a​v​i​g​a​t​e​ ​t​h​r​o​u​g​h​ ​p​a​g​e​s​ ​o​f​ ​i​s​s​u​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_organization_issues: {
+					/**
+					 * L​i​s​t​ ​O​r​g​a​n​i​z​a​t​i​o​n​ ​I​s​s​u​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​i​s​s​u​e​s​ ​a​c​r​o​s​s​ ​t​h​e​ ​e​n​t​i​r​e​ ​o​r​g​a​n​i​z​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​i​s​s​u​e​s​ ​f​r​o​m​ ​a​l​l​ ​p​r​o​j​e​c​t​s​ ​w​i​t​h​i​n​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​.​ ​T​h​i​s​ ​p​r​o​v​i​d​e​s​ ​o​r​g​a​n​i​z​a​t​i​o​n​-​w​i​d​e​ ​v​i​s​i​b​i​l​i​t​y​ ​i​n​t​o​ ​p​r​o​b​l​e​m​s​ ​a​c​r​o​s​s​ ​a​l​l​ ​a​p​p​l​i​c​a​t​i​o​n​s​ ​a​n​d​ ​s​e​r​v​i​c​e​s​.​ ​U​s​e​ ​q​u​e​r​y​ ​f​i​l​t​e​r​s​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​r​e​s​u​l​t​s​ ​b​y​ ​p​r​o​j​e​c​t​,​ ​p​l​a​t​f​o​r​m​,​ ​s​t​a​t​u​s​,​ ​o​r​ ​o​t​h​e​r​ ​c​r​i​t​e​r​i​a​.
+					 */
+					longDesc: string
+					options: {
+						query: {
+							/**
+							 * Q​u​e​r​y​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​q​u​e​r​y​ ​t​o​ ​f​i​l​t​e​r​ ​i​s​s​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​S​e​n​t​r​y​ ​q​u​e​r​y​ ​s​y​n​t​a​x​ ​t​o​ ​f​i​l​t​e​r​ ​i​s​s​u​e​s​ ​a​c​r​o​s​s​ ​a​l​l​ ​p​r​o​j​e​c​t​s​.​ ​F​i​l​t​e​r​ ​b​y​ ​p​r​o​j​e​c​t​,​ ​p​l​a​t​f​o​r​m​,​ ​e​n​v​i​r​o​n​m​e​n​t​,​ ​s​t​a​t​u​s​,​ ​t​a​g​s​,​ ​o​r​ ​a​n​y​ ​o​t​h​e​r​ ​i​s​s​u​e​ ​p​r​o​p​e​r​t​y​.
+							 */
+							longDesc: string
+						}
+						statsPeriod: {
+							/**
+							 * S​t​a​t​i​s​t​i​c​s​ ​P​e​r​i​o​d
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​ ​p​e​r​i​o​d​ ​f​o​r​ ​i​s​s​u​e​ ​s​t​a​t​i​s​t​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​ ​r​a​n​g​e​ ​f​o​r​ ​c​a​l​c​u​l​a​t​i​n​g​ ​i​s​s​u​e​ ​s​t​a​t​i​s​t​i​c​s​ ​a​n​d​ ​m​e​t​r​i​c​s​ ​a​c​r​o​s​s​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						shortIdLookup: {
+							/**
+							 * S​h​o​r​t​ ​I​D​ ​L​o​o​k​u​p
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​l​o​o​k​ ​u​p​ ​i​s​s​u​e​s​ ​b​y​ ​t​h​e​i​r​ ​s​h​o​r​t​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​a​l​l​o​w​s​ ​s​e​a​r​c​h​i​n​g​ ​f​o​r​ ​i​s​s​u​e​s​ ​u​s​i​n​g​ ​t​h​e​i​r​ ​s​h​o​r​t​ ​I​D​s​ ​a​c​r​o​s​s​ ​a​l​l​ ​p​r​o​j​e​c​t​s​.
+							 */
+							longDesc: string
+						}
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​a​d​d​i​t​i​o​n​a​l​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​e​ ​c​u​r​s​o​r​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​a​d​d​i​t​i​o​n​a​l​ ​p​a​g​e​s​ ​o​f​ ​o​r​g​a​n​i​z​a​t​i​o​n​-​w​i​d​e​ ​i​s​s​u​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_issue: {
+					/**
+					 * G​e​t​ ​I​s​s​u​e​ ​D​e​t​a​i​l​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​s​s​u​e
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​s​s​u​e​,​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​s​t​a​t​u​s​,​ ​m​e​t​a​d​a​t​a​,​ ​a​s​s​i​g​n​m​e​n​t​,​ ​s​t​a​t​i​s​t​i​c​s​ ​(​e​v​e​n​t​ ​c​o​u​n​t​,​ ​u​s​e​r​ ​i​m​p​a​c​t​,​ ​f​r​e​q​u​e​n​c​y​)​,​ ​p​a​r​t​i​c​i​p​a​n​t​s​,​ ​a​c​t​i​v​i​t​y​ ​h​i​s​t​o​r​y​,​ ​l​i​n​k​e​d​ ​i​n​t​e​g​r​a​t​i​o​n​s​,​ ​a​n​d​ ​t​h​e​ ​l​a​t​e​s​t​ ​e​v​e​n​t​ ​d​e​t​a​i​l​s​.​ ​E​s​s​e​n​t​i​a​l​ ​f​o​r​ ​u​n​d​e​r​s​t​a​n​d​i​n​g​ ​t​h​e​ ​f​u​l​l​ ​c​o​n​t​e​x​t​ ​a​n​d​ ​h​i​s​t​o​r​y​ ​o​f​ ​a​ ​p​r​o​b​l​e​m​.
+					 */
+					longDesc: string
+					options: {
+						issueId: {
+							/**
+							 * I​s​s​u​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​s​s​u​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​i​s​s​u​e​ ​I​D​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​I​s​s​u​e​ ​I​D​s​ ​a​r​e​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​f​o​u​n​d​ ​i​n​ ​t​h​e​ ​S​e​n​t​r​y​ ​U​I​ ​o​r​ ​f​r​o​m​ ​l​i​s​t​ ​o​p​e​r​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_issue: {
+					/**
+					 * U​p​d​a​t​e​ ​I​s​s​u​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​s​t​a​t​u​s​ ​o​r​ ​p​r​o​p​e​r​t​i​e​s​ ​o​f​ ​a​n​ ​i​s​s​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​o​d​i​f​i​e​s​ ​a​n​ ​i​s​s​u​e​'​s​ ​s​t​a​t​u​s​ ​(​r​e​s​o​l​v​e​d​,​ ​u​n​r​e​s​o​l​v​e​d​,​ ​i​g​n​o​r​e​d​)​,​ ​a​s​s​i​g​n​m​e​n​t​,​ ​b​o​o​k​m​a​r​k​e​d​ ​s​t​a​t​e​,​ ​s​u​b​s​c​r​i​p​t​i​o​n​ ​s​t​a​t​u​s​,​ ​o​r​ ​v​i​s​i​b​i​l​i​t​y​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​t​r​i​a​g​e​ ​i​s​s​u​e​s​,​ ​a​s​s​i​g​n​ ​t​h​e​m​ ​t​o​ ​t​e​a​m​ ​m​e​m​b​e​r​s​,​ ​r​e​s​o​l​v​e​ ​b​u​g​s​,​ ​o​r​ ​m​a​r​k​ ​i​s​s​u​e​s​ ​a​s​ ​i​g​n​o​r​e​d​.​ ​S​t​a​t​u​s​ ​c​h​a​n​g​e​s​ ​c​a​n​ ​t​r​i​g​g​e​r​ ​a​l​e​r​t​s​ ​a​n​d​ ​a​f​f​e​c​t​ ​i​s​s​u​e​ ​g​r​o​u​p​i​n​g​.
+					 */
+					longDesc: string
+					options: {
+						projectId: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​i​s​s​u​e​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​s​p​e​c​i​f​y​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​f​o​r​ ​c​o​n​t​e​x​t​.​ ​W​h​i​l​e​ ​i​s​s​u​e​s​ ​c​a​n​ ​b​e​ ​u​p​d​a​t​e​d​ ​b​y​ ​I​D​ ​a​l​o​n​e​,​ ​p​r​o​v​i​d​i​n​g​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​c​a​n​ ​b​e​ ​h​e​l​p​f​u​l​ ​f​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						issueId: {
+							/**
+							 * I​s​s​u​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​s​s​u​e​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​i​s​s​u​e​ ​I​D​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.​ ​Y​o​u​ ​c​a​n​ ​f​i​n​d​ ​i​s​s​u​e​ ​I​D​s​ ​i​n​ ​t​h​e​ ​S​e​n​t​r​y​ ​U​I​ ​o​r​ ​f​r​o​m​ ​l​i​s​t​/​s​e​a​r​c​h​ ​o​p​e​r​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​s​t​a​t​u​s​ ​f​o​r​ ​t​h​e​ ​i​s​s​u​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​a​n​g​e​ ​t​h​e​ ​i​s​s​u​e​ ​s​t​a​t​u​s​ ​t​o​ ​c​o​n​t​r​o​l​ ​i​t​s​ ​l​i​f​e​c​y​c​l​e​.​ ​"​R​e​s​o​l​v​e​d​"​ ​m​a​r​k​s​ ​i​t​ ​a​s​ ​f​i​x​e​d​,​ ​"​U​n​r​e​s​o​l​v​e​d​"​ ​r​e​o​p​e​n​s​ ​i​t​,​ ​"​I​g​n​o​r​e​d​"​ ​a​r​c​h​i​v​e​s​ ​i​t​ ​t​e​m​p​o​r​a​r​i​l​y​,​ ​a​n​d​ ​"​R​e​s​o​l​v​e​d​ ​i​n​ ​N​e​x​t​ ​R​e​l​e​a​s​e​"​ ​i​n​d​i​c​a​t​e​s​ ​i​t​ ​w​i​l​l​ ​b​e​ ​f​i​x​e​d​ ​i​n​ ​a​n​ ​u​p​c​o​m​i​n​g​ ​d​e​p​l​o​y​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+						assignedTo: {
+							/**
+							 * A​s​s​i​g​n​e​d​ ​T​o
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​ ​o​r​ ​t​e​a​m​ ​t​o​ ​a​s​s​i​g​n​ ​t​h​e​ ​i​s​s​u​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * A​s​s​i​g​n​ ​t​h​e​ ​i​s​s​u​e​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​u​s​e​r​ ​o​r​ ​t​e​a​m​ ​f​o​r​ ​o​w​n​e​r​s​h​i​p​ ​a​n​d​ ​a​c​c​o​u​n​t​a​b​i​l​i​t​y​.​ ​E​n​t​e​r​ ​a​ ​t​e​a​m​ ​s​l​u​g​ ​(​e​.​g​.​,​ ​"​t​e​a​m​:​b​a​c​k​e​n​d​"​)​ ​o​r​ ​u​s​e​r​ ​I​D​.
+							 */
+							longDesc: string
+						}
+						hasSeen: {
+							/**
+							 * H​a​s​ ​S​e​e​n
+							 */
+							displayName: string
+							/**
+							 * M​a​r​k​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​i​s​s​u​e​ ​h​a​s​ ​b​e​e​n​ ​v​i​e​w​e​d
+							 */
+							shortDesc: string
+							/**
+							 * M​a​r​k​ ​t​h​e​ ​i​s​s​u​e​ ​a​s​ ​s​e​e​n​ ​(​r​e​v​i​e​w​e​d​)​ ​o​r​ ​u​n​s​e​e​n​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​t​r​a​c​k​ ​w​h​i​c​h​ ​i​s​s​u​e​s​ ​h​a​v​e​ ​b​e​e​n​ ​t​r​i​a​g​e​d​ ​b​y​ ​y​o​u​r​ ​t​e​a​m​.
+							 */
+							longDesc: string
+						}
+						isBookmarked: {
+							/**
+							 * I​s​ ​B​o​o​k​m​a​r​k​e​d
+							 */
+							displayName: string
+							/**
+							 * B​o​o​k​m​a​r​k​ ​s​t​a​t​u​s​ ​f​o​r​ ​t​h​e​ ​i​s​s​u​e
+							 */
+							shortDesc: string
+							/**
+							 * B​o​o​k​m​a​r​k​ ​t​h​e​ ​i​s​s​u​e​ ​f​o​r​ ​e​a​s​y​ ​a​c​c​e​s​s​ ​a​n​d​ ​f​i​l​t​e​r​i​n​g​.​ ​B​o​o​k​m​a​r​k​e​d​ ​i​s​s​u​e​s​ ​a​p​p​e​a​r​ ​i​n​ ​y​o​u​r​ ​p​e​r​s​o​n​a​l​ ​i​s​s​u​e​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						isSubscribed: {
+							/**
+							 * I​s​ ​S​u​b​s​c​r​i​b​e​d
+							 */
+							displayName: string
+							/**
+							 * S​u​b​s​c​r​i​p​t​i​o​n​ ​s​t​a​t​u​s​ ​f​o​r​ ​n​o​t​i​f​i​c​a​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​u​b​s​c​r​i​b​e​ ​t​o​ ​o​r​ ​u​n​s​u​b​s​c​r​i​b​e​ ​f​r​o​m​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​a​b​o​u​t​ ​t​h​i​s​ ​i​s​s​u​e​.​ ​W​h​e​n​ ​s​u​b​s​c​r​i​b​e​d​,​ ​y​o​u​'​l​l​ ​r​e​c​e​i​v​e​ ​a​l​e​r​t​s​ ​w​h​e​n​ ​t​h​e​ ​i​s​s​u​e​ ​c​h​a​n​g​e​s​ ​o​r​ ​e​s​c​a​l​a​t​e​s​.
+							 */
+							longDesc: string
+						}
+						isPublic: {
+							/**
+							 * I​s​ ​P​u​b​l​i​c
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​i​s​s​u​e​ ​s​h​o​u​l​d​ ​b​e​ ​p​u​b​l​i​c​l​y​ ​a​c​c​e​s​s​i​b​l​e
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​t​r​o​l​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​i​s​s​u​e​ ​i​s​ ​p​u​b​l​i​c​l​y​ ​v​i​s​i​b​l​e​ ​v​i​a​ ​a​ ​s​h​a​r​e​ ​l​i​n​k​.​ ​P​u​b​l​i​c​ ​i​s​s​u​e​s​ ​c​a​n​ ​b​e​ ​v​i​e​w​e​d​ ​b​y​ ​a​n​y​o​n​e​ ​w​i​t​h​ ​t​h​e​ ​l​i​n​k​,​ ​e​v​e​n​ ​w​i​t​h​o​u​t​ ​S​e​n​t​r​y​ ​a​c​c​e​s​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_teams: {
+					/**
+					 * L​i​s​t​ ​T​e​a​m​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​t​e​a​m​s​ ​i​n​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​t​e​a​m​s​ ​w​i​t​h​i​n​ ​y​o​u​r​ ​S​e​n​t​r​y​ ​o​r​g​a​n​i​z​a​t​i​o​n​.​ ​T​e​a​m​s​ ​r​e​p​r​e​s​e​n​t​ ​g​r​o​u​p​s​ ​o​f​ ​d​e​v​e​l​o​p​e​r​s​ ​w​o​r​k​i​n​g​ ​t​o​g​e​t​h​e​r​ ​o​n​ ​p​r​o​j​e​c​t​s​.​ ​R​e​t​u​r​n​s​ ​t​e​a​m​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​i​n​g​ ​m​e​m​b​e​r​ ​c​o​u​n​t​,​ ​a​c​c​e​s​s​ ​p​e​r​m​i​s​s​i​o​n​s​,​ ​r​o​l​e​ ​a​s​s​i​g​n​m​e​n​t​s​,​ ​l​i​n​k​e​d​ ​p​r​o​j​e​c​t​s​,​ ​a​n​d​ ​e​x​t​e​r​n​a​l​ ​t​e​a​m​ ​i​n​t​e​g​r​a​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​a​d​d​i​t​i​o​n​a​l​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​e​ ​c​u​r​s​o​r​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​n​a​v​i​g​a​t​e​ ​t​h​r​o​u​g​h​ ​p​a​g​e​s​ ​o​f​ ​t​e​a​m​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_team: {
+					/**
+					 * G​e​t​ ​T​e​a​m​ ​D​e​t​a​i​l​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​e​a​m
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​e​a​m​,​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​m​e​m​b​e​r​s​,​ ​a​s​s​i​g​n​e​d​ ​p​r​o​j​e​c​t​s​,​ ​a​c​c​e​s​s​ ​p​e​r​m​i​s​s​i​o​n​s​,​ ​r​o​l​e​ ​s​e​t​t​i​n​g​s​,​ ​e​x​t​e​r​n​a​l​ ​i​n​t​e​g​r​a​t​i​o​n​s​ ​(​l​i​k​e​ ​S​l​a​c​k​ ​c​h​a​n​n​e​l​s​)​,​ ​a​n​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​-​l​e​v​e​l​ ​r​o​l​e​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​u​n​d​e​r​s​t​a​n​d​ ​t​e​a​m​ ​s​t​r​u​c​t​u​r​e​ ​a​n​d​ ​p​r​o​j​e​c​t​ ​o​w​n​e​r​s​h​i​p​.
+					 */
+					longDesc: string
+					options: {
+						teamId: {
+							/**
+							 * T​e​a​m​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​a​m​ ​s​l​u​g​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​t​e​a​m​ ​s​l​u​g​ ​(​U​R​L​-​f​r​i​e​n​d​l​y​ ​i​d​e​n​t​i​f​i​e​r​)​ ​o​f​ ​t​h​e​ ​t​e​a​m​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
 		}
 		Patreon: {
 			/**
@@ -76495,19 +77793,1317 @@ export type TranslationFunctions = {
 	common: {
 	}
 	apps: {
+		Supabase: {
+			/**
+			 * Supabase
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Supabase to manage your database tables, storage buckets, and real-time data
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Supabase integration provides comprehensive access to your Supabase backend services. Manage database tables with full CRUD operations, monitor real-time changes with triggers, and handle file storage through buckets. Whether you need to query data, insert records, filter results, or track new entries, this integration streamlines your Supabase workflow automation and backend management.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				get_table: {
+					/**
+					 * Get Table
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed schema information about a specific Supabase table
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive metadata for a specific table including column definitions, data types, required fields, and descriptions. This action helps you understand the structure of your database tables.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						tableName: {
+							/**
+							 * Table Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the table to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Supabase table whose schema information you want to fetch. The table must exist in your Supabase project.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_tables: {
+					/**
+					 * List Tables
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get a list of all tables in your Supabase database
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves all tables from your Supabase database with their basic metadata including column information and descriptions. Optionally include system tables in the results.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						include_system_tables: {
+							/**
+							 * Include System Tables
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include internal Supabase system tables in the results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, the response will include system tables (those starting with underscore). System tables contain Supabase internal data and are typically hidden from regular queries.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_row: {
+					/**
+					 * Create Row
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Insert a new row into a Supabase table
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new record in the specified Supabase table. The action dynamically presents the table schema, allowing you to provide values for each column. Returns the newly created row with all its data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						tableName: {
+							/**
+							 * Table Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The table where the row will be inserted
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the target Supabase table for inserting the new row. The available fields will be dynamically loaded based on the selected table schema.
+							 */
+							longDesc: () => LocalizedString
+						}
+						values: {
+							/**
+							 * Row Values
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The data to insert into the new row
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide values for the table columns. The structure is dynamically generated based on the selected table schema, showing all available columns with their data types and constraints.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_rows: {
+					/**
+					 * List Rows
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Query and retrieve rows from a Supabase table
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches rows from a Supabase table with support for filtering, sorting, pagination, and ordering. Returns a list of records matching your query criteria along with total count information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						tableName: {
+							/**
+							 * Table Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The table to query
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Supabase table from which you want to retrieve rows. The available columns for filtering and ordering will be loaded based on this selection.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of rows to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of rows to retrieve in a single query. Useful for pagination and performance optimization. Defaults to 20 if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of rows to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Skip this many rows before starting to return results. Used in combination with limit for pagination through large datasets.
+							 */
+							longDesc: () => LocalizedString
+						}
+						orderBy: {
+							/**
+							 * Order By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort the results by a specific column
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Define how to sort the retrieved rows by specifying a column and sort direction (ascending or descending).
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									column: {
+										/**
+										 * Column
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The column to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the table column used for sorting the results.
+										 */
+										longDesc: () => LocalizedString
+									}
+									ascending: {
+										/**
+										 * Ascending
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort in ascending order
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * When enabled, sorts in ascending order (A-Z, 0-9, oldest first). When disabled, sorts in descending order (Z-A, 9-0, newest first).
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter rows based on a condition
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply a filter condition to retrieve only rows that match specific criteria. Supports various comparison operators for flexible querying.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The column to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the table column to apply the filter condition to.
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose the comparison operator for the filter (equals, greater than, contains, etc.).
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to compare against
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare the column against using the selected operator. For "in" operator, provide comma-separated values.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				delete_rows: {
+					/**
+					 * Delete Rows
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete rows from a Supabase table based on a filter
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes rows from a Supabase table that match the specified filter criteria. Returns the count of deleted rows and their data. Use with caution as this operation is irreversible.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						tableName: {
+							/**
+							 * Table Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The table to delete rows from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Supabase table from which you want to delete rows. Ensure you have proper permissions for delete operations on this table.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Condition to identify rows to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Define the filter criteria to identify which rows should be deleted. Only rows matching this condition will be removed from the table.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The column to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the table column to use for identifying rows to delete.
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose the comparison operator for the delete filter condition.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to match
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against. Rows matching this condition will be deleted.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				upsert_row: {
+					/**
+					 * Upsert Row
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Insert a new row or update an existing one
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Performs an upsert operation (insert or update) on a Supabase table. If a row with the specified unique constraint exists, it will be updated; otherwise, a new row is inserted.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						tableName: {
+							/**
+							 * Table Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The table for the upsert operation
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the target Supabase table. The available fields will be dynamically loaded based on the table schema.
+							 */
+							longDesc: () => LocalizedString
+						}
+						values: {
+							/**
+							 * Row Values
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The data to upsert
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide values for the table columns. If a row with matching unique constraints exists, these values will update it; otherwise, a new row is created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						onConflict: {
+							/**
+							 * On Conflict
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The column(s) used to detect conflicts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the column or comma-separated list of columns that should be used to detect conflicts. If not specified, uses the table's primary key.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ignoreDuplicates: {
+							/**
+							 * Ignore Duplicates
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Skip the operation if a duplicate exists
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, if a conflicting row exists, the operation is silently ignored. When disabled (default), conflicting rows are updated with the new values.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_bucket: {
+					/**
+					 * Create Storage Bucket
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new storage bucket in Supabase
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new storage bucket in Supabase Storage for organizing and storing files. Configure access permissions, file size limits, and allowed MIME types.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Bucket Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name for the new bucket
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify a unique name for the storage bucket. The name must be URL-safe and unique within your Supabase project.
+							 */
+							longDesc: () => LocalizedString
+						}
+						public_access: {
+							/**
+							 * Public Access
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Allow public access to bucket contents
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, files in this bucket can be accessed publicly without authentication. When disabled (default), files require authentication to access.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_size_limit: {
+							/**
+							 * File Size Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum file size in bytes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the maximum file size that can be uploaded to this bucket, specified in bytes. Leave empty for no limit.
+							 */
+							longDesc: () => LocalizedString
+						}
+						allowed_mime_types: {
+							/**
+							 * Allowed MIME Types
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of allowed file MIME types
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify which file types can be uploaded to this bucket by providing a list of MIME types (e.g., image/png, application/pdf). Leave empty to allow all file types.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_buckets: {
+					/**
+					 * List Storage Buckets
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get all storage buckets in your Supabase project
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of all storage buckets in your Supabase project with their configurations including access permissions, file size limits, and allowed MIME types.
+					 */
+					longDesc: () => LocalizedString
+				}
+				get_bucket: {
+					/**
+					 * Get Storage Bucket
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific storage bucket
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information about a specific Supabase storage bucket including its configuration, creation date, access permissions, and file restrictions.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						bucket_id: {
+							/**
+							 * Bucket ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the bucket to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the storage bucket whose details you want to fetch from your Supabase project.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_table_row: {
+					/**
+					 * New Table Row
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new row is added to a Supabase table
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a Supabase table for new rows and triggers when new records are inserted. Supports optional filtering to trigger only for rows matching specific criteria.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						tableName: {
+							/**
+							 * Table Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The table to monitor for new rows
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Supabase table you want to monitor. The trigger will fire whenever new rows are inserted into this table.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional condition to filter new rows
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply a filter to trigger only for new rows matching specific criteria. Leave empty to trigger for all new rows.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The column to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the table column to apply the filter condition to.
+										 */
+										longDesc: () => LocalizedString
+									}
+									operator: {
+										/**
+										 * Operator
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The comparison operator
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose the comparison operator for filtering new rows.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value to match
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The value to compare against. Only new rows matching this condition will trigger the event.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 		Sentry: {
 			/**
 			 * Sentry
 			 */
 			displayName: () => LocalizedString
 			/**
-			 * Connect to Sentry to monitor errors, track issues, and manage application performance.
+			 * Monitor and fix errors, track performance issues, and maintain application health with the developer-first debugging platform.
 			 */
 			shortDesc: () => LocalizedString
 			/**
-			 * The Sentry integration provides comprehensive error tracking and performance monitoring capabilities. Manage issues, projects, organizations, and releases while automating your error handling workflow. Get real-time alerts when new issues occur and keep your applications running smoothly.
+			 * The Sentry integration enables comprehensive error monitoring and performance tracking for your applications. Access projects, issues, events, and teams to quickly identify, triage, and resolve problems. With real-time alerts and detailed debugging context including stack traces, breadcrumbs, and user impact metrics, Sentry helps your team maintain code quality and deliver seamless user experiences.
 			 */
 			longDesc: () => LocalizedString
+			triggers: {
+				new_project_issue: {
+					/**
+					 * New Project Issue
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new issue is detected in a specific project
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a specific Sentry project and triggers when a new issue (grouped error or problem) is detected. Issues represent single bugs or problems in your application, with events grouped by fingerprint. Use optional query filters and time periods to focus on specific types of issues.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						projectId: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to monitor for new issues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Sentry project you want to monitor. Projects represent individual applications or services within your organization.
+							 */
+							longDesc: () => LocalizedString
+						}
+						query: {
+							/**
+							 * Query Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional search query to filter issues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use Sentry query syntax to filter which issues trigger this event. For example, filter by browser, device, tags, or whether errors are unhandled.
+							 */
+							longDesc: () => LocalizedString
+						}
+						statsPeriod: {
+							/**
+							 * Statistics Period
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Time period for issue statistics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The time range for collecting issue statistics. Affects metrics like event counts and user impact within the selected period.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_organization_issue: {
+					/**
+					 * New Organization Issue
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new issue is detected across the entire organization
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors all projects within your Sentry organization and triggers when a new issue is detected in any project. This provides organization-wide visibility into problems across all applications and services. Use query filters to focus on specific issue types or characteristics.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						query: {
+							/**
+							 * Query Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional search query to filter issues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use Sentry query syntax to filter which issues trigger this event across all projects. Filter by properties like platform, environment, release, or custom tags.
+							 */
+							longDesc: () => LocalizedString
+						}
+						statsPeriod: {
+							/**
+							 * Statistics Period
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Time period for issue statistics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The time range for collecting issue statistics across all projects. Determines the time window for metrics like frequency and user impact.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				list_projects: {
+					/**
+					 * List Projects
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve all projects in your organization
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a paginated list of all projects within your Sentry organization. Each project represents an individual application or service being monitored. Returns project details including name, platform, creation date, team membership, and configuration.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor for retrieving additional results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use the cursor from a previous response to fetch the next or previous page of results. Leave empty to start from the beginning.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_project: {
+					/**
+					 * Get Project Details
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific project
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive details about a specific Sentry project, including configuration options, team assignments, integrations, features, symbol sources, and project statistics. Use this to understand project settings and capabilities.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						projectId: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the slug identifier of the project you want to retrieve details for.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_project_events: {
+					/**
+					 * List Project Events
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve events from a specific project
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a paginated list of events (individual error or transaction occurrences) from a specific project. Events are the raw data sent to Sentry and are grouped into issues. Use the full parameter to retrieve complete event payloads including context, breadcrumbs, and metadata.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						projectId: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to retrieve events from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the project whose events you want to list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						full: {
+							/**
+							 * Full Details
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to return complete event data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, returns the full event payload including all context, breadcrumbs, stack traces, and metadata. When disabled, returns summary information only.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor for retrieving additional results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use the cursor from a previous response to navigate through pages of events.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_event: {
+					/**
+					 * Get Event Details
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific event
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches complete details about a specific event, including the full stack trace, breadcrumbs (trail of events leading to the error), user context, device information, tags, SDK details, and all captured metadata. Essential for debugging and understanding the exact conditions when an error occurred.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						projectId: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project containing the event
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the project that the event belongs to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						eventId: {
+							/**
+							 * Event ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the event
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the event ID (hexadecimal string) you want to retrieve. Event IDs can be found in issue details or event listings.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_project_issues: {
+					/**
+					 * List Project Issues
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve issues from a specific project
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a paginated list of issues (grouped errors or problems) from a specific project. Issues represent single bugs affecting your application, with multiple event occurrences grouped by fingerprint. Filter by query to find specific types of issues, and use statistics period to see relevant metrics.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						projectId: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project to retrieve issues from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the project whose issues you want to list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						query: {
+							/**
+							 * Query Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search query to filter issues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use Sentry query syntax to filter issues by properties like status, assignee, tags, platform, or time range. Example: "is:unresolved assigned:me"
+							 */
+							longDesc: () => LocalizedString
+						}
+						statsPeriod: {
+							/**
+							 * Statistics Period
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Time period for issue statistics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The time range for calculating issue statistics such as event count, frequency, and user impact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						shortIdLookup: {
+							/**
+							 * Short ID Lookup
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to look up issues by their short ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, allows searching for issues using their short IDs (e.g., PROJECT-123) instead of full issue IDs.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor for retrieving additional results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use the cursor from a previous response to navigate through pages of issues.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_organization_issues: {
+					/**
+					 * List Organization Issues
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve issues across the entire organization
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a paginated list of issues from all projects within your organization. This provides organization-wide visibility into problems across all applications and services. Use query filters to narrow down results by project, platform, status, or other criteria.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						query: {
+							/**
+							 * Query Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search query to filter issues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use Sentry query syntax to filter issues across all projects. Filter by project, platform, environment, status, tags, or any other issue property.
+							 */
+							longDesc: () => LocalizedString
+						}
+						statsPeriod: {
+							/**
+							 * Statistics Period
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Time period for issue statistics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The time range for calculating issue statistics and metrics across the organization.
+							 */
+							longDesc: () => LocalizedString
+						}
+						shortIdLookup: {
+							/**
+							 * Short ID Lookup
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to look up issues by their short ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, allows searching for issues using their short IDs across all projects.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor for retrieving additional results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use the cursor from a previous response to retrieve additional pages of organization-wide issues.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_issue: {
+					/**
+					 * Get Issue Details
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific issue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive details about a specific issue, including its status, metadata, assignment, statistics (event count, user impact, frequency), participants, activity history, linked integrations, and the latest event details. Essential for understanding the full context and history of a problem.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						issueId: {
+							/**
+							 * Issue ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the issue
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the issue ID you want to retrieve. Issue IDs are numeric values that can be found in the Sentry UI or from list operations.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_issue: {
+					/**
+					 * Update Issue
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update the status or properties of an issue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Modifies an issue's status (resolved, unresolved, ignored), assignment, bookmarked state, subscription status, or visibility. Use this to triage issues, assign them to team members, resolve bugs, or mark issues as ignored. Status changes can trigger alerts and affect issue grouping.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						projectId: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The project containing the issue (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally specify the project for context. While issues can be updated by ID alone, providing the project can be helpful for organization.
+							 */
+							longDesc: () => LocalizedString
+						}
+						issueId: {
+							/**
+							 * Issue ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the issue to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the issue ID you want to update. You can find issue IDs in the Sentry UI or from list/search operations.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new status for the issue
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Change the issue status to control its lifecycle. "Resolved" marks it as fixed, "Unresolved" reopens it, "Ignored" archives it temporarily, and "Resolved in Next Release" indicates it will be fixed in an upcoming deployment.
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignedTo: {
+							/**
+							 * Assigned To
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User or team to assign the issue to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Assign the issue to a specific user or team for ownership and accountability. Enter a team slug (e.g., "team:backend") or user ID.
+							 */
+							longDesc: () => LocalizedString
+						}
+						hasSeen: {
+							/**
+							 * Has Seen
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Mark whether the issue has been viewed
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Mark the issue as seen (reviewed) or unseen. This helps track which issues have been triaged by your team.
+							 */
+							longDesc: () => LocalizedString
+						}
+						isBookmarked: {
+							/**
+							 * Is Bookmarked
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Bookmark status for the issue
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Bookmark the issue for easy access and filtering. Bookmarked issues appear in your personal issue list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						isSubscribed: {
+							/**
+							 * Is Subscribed
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Subscription status for notifications
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Subscribe to or unsubscribe from notifications about this issue. When subscribed, you'll receive alerts when the issue changes or escalates.
+							 */
+							longDesc: () => LocalizedString
+						}
+						isPublic: {
+							/**
+							 * Is Public
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether the issue should be publicly accessible
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Control whether the issue is publicly visible via a share link. Public issues can be viewed by anyone with the link, even without Sentry access.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_teams: {
+					/**
+					 * List Teams
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve all teams in your organization
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a paginated list of all teams within your Sentry organization. Teams represent groups of developers working together on projects. Returns team details including member count, access permissions, role assignments, linked projects, and external team integrations.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor for retrieving additional results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use the cursor from a previous response to navigate through pages of teams.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_team: {
+					/**
+					 * Get Team Details
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific team
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive details about a specific team, including its members, assigned projects, access permissions, role settings, external integrations (like Slack channels), and organization-level role. Use this to understand team structure and project ownership.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						teamId: {
+							/**
+							 * Team ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The team slug to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the team slug (URL-friendly identifier) of the team you want to retrieve details for.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
 		}
 		Patreon: {
 			/**
