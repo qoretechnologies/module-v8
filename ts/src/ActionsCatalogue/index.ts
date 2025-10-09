@@ -10,13 +10,19 @@ import {
 import fs from 'fs';
 import path from 'path';
 import activeCampaign from '../apps/active-campaign';
+import activeDirectory from '../apps/active-directory';
 import airtable from '../apps/airtable';
 import amazonCloudfront from '../apps/amazon-cloudfront';
+import amazonCloudWatch from '../apps/amazon-cloudwatch';
 import amazonEc2 from '../apps/amazon-ec2';
 import amazonLambda from '../apps/amazon-lambda';
 import amazonS3 from '../apps/amazon-s3';
+import amazonSes from '../apps/amazon-ses';
+import amazonSns from '../apps/amazon-sns';
+import amazonSqs from '../apps/amazon-sqs';
 import asana from '../apps/asana';
 import attio from '../apps/attio';
+import azureDevops from '../apps/azure-devops';
 import bigml from '../apps/bigml';
 import bitbucket from '../apps/bitbucket';
 import brevo from '../apps/brevo';
@@ -53,19 +59,24 @@ import magento from '../apps/magento';
 import mailchimp from '../apps/mailchimp';
 import messenger360 from '../apps/messenger360';
 import netsuite from '../apps/netsuite';
+import notion from '../apps/notion';
 import odoo from '../apps/odoo';
 import openrouter from '../apps/openrouter';
 import outlook from '../apps/outlook';
 import paddle from '../apps/paddle';
+import patreon from '../apps/patreon';
+import paypal from '../apps/paypal';
 import pipedrive from '../apps/pipedrive';
 import quickbooks from '../apps/quickbooks';
 import salesforce from '../apps/salesforce';
+import sentry from '../apps/sentry';
 import serenity from '../apps/serenity';
 import sharepoint from '../apps/sharepoint';
 import shopify from '../apps/shopify';
 import stripe from '../apps/stripe';
 import teams from '../apps/teams';
 import telegram from '../apps/telegram';
+import todoist from '../apps/todoist';
 import typeform from '../apps/typeform';
 import webflow from '../apps/webflow';
 import xero from '../apps/xero';
@@ -76,14 +87,7 @@ import { Log } from '../decorators/Logger';
 import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import amazonSns from '../apps/amazon-sns';
-import amazonSqs from '../apps/amazon-sqs';
-import amazonCloudWatch from '../apps/amazon-cloudwatch';
-import notion from '../apps/notion';
-import amazonSes from '../apps/amazon-ses';
-import azureDevops from '../apps/azure-devops';
-import activeDirectory from '../apps/active-directory';
-import paypal from '../apps/paypal';
+import supabase from '../apps/supabase';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -152,15 +156,19 @@ const NEW_APPS = {
   openrouter,
   outlook,
   paddle,
+  patreon,
   paypal,
   pipedrive,
   quickbooks,
+  sentry,
   serenity,
   sharepoint,
   shopify,
   stripe,
+  supabase,
   teams,
   telegram,
+  todoist,
   typeform,
   webflow,
   xero,
