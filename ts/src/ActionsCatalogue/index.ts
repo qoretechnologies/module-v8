@@ -88,6 +88,7 @@ import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import supabase from '../apps/supabase';
+import firestore from '../apps/firestore';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -129,6 +130,7 @@ const NEW_APPS = {
   esignature,
   facebookPages,
   figma,
+  firestore,
   freshdesk,
   gemini,
   github,
