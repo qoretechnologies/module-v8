@@ -194,6 +194,9 @@ public class TypeScriptActionInterface {
         #! App map for delayed initialization: app -> info
         static hash<string, hash<AppInfo>> appmap;
 
+        #! App map after app initialization: app -> info
+        static hash<string, hash<AppInfo>> initialized_appmap;
+
         #! Init map for apps already initialized
         static hash<string, bool> initmap;
 
@@ -247,6 +250,9 @@ public class TypeScriptActionInterface {
 
         #! Connection map for testing
         static hash<string, TypeScriptAppRestConnection> cmap;
+
+        #! Apps supporting tables: app -> get table list function
+        static hash<string, hash<AsyncCallInfo>> tablemap;
 
         #! Actions supporting events; app -> action -> subtype
         static hash<string, hash<string, string>> emap;
@@ -312,6 +318,7 @@ public class TypeScriptActionInterface {
         remove appcasemap{name};
         remove initmap{name};
         remove appmap{name};
+        remove initialized_appmap{name};
 
         string appname = app.name.lwr();
 
@@ -542,8 +549,71 @@ public class TypeScriptActionInterface {
             app += info;
             DynamicAppContextHelper::addApp(app.name);
         }
+        hash<AsyncCallInfo> get_table_list;
+        hash<AsyncCallInfo> begin_transaction;
+        hash<AsyncCallInfo> commit;
+        hash<AsyncCallInfo> rollback;
+        hash<AsyncCallInfo> get_record_type;
+        hash<string, hash<DataProviderExpressionInfo>> expressions;
+
+        timeout io_timeout;
+        if (app.get_table_list) {
+            io_timeout = seconds(remove app.io_timeout_secs ?? DefaultIoTimeoutSecs);
+            get_table_list = tryGetAsyncAttribute(\app, "get_table_list", "get table list", pool, io_timeout,
+                app.name);
+        }
+        code check_record_based = sub () {
+            if (!get_table_list) {
+                throw "APP-ERROR", sprintf("App %y cannot define 'begin_transaction' without also defining "
+                    "'get_table_list'", app.name);
+            }
+        };
+        if (app.begin_transaction) {
+            check_record_based();
+            begin_transaction = tryGetAsyncAttribute(\app, "begin_transaction", "begin transaction", pool, io_timeout,
+                app.name);
+        }
+        if (app.commit) {
+            check_record_based();
+            commit = tryGetAsyncAttribute(\app, "commit", "commit transaction", pool, io_timeout,
+                app.name);
+        } else if (app.begin_transaction) {
+            throw "APP-ERROR", sprintf("App %y cannot define 'begin_transaction' without also defining 'commit'",
+                app.name);
+        }
+        if (app.rollback) {
+            check_record_based();
+            rollback = tryGetAsyncAttribute(\app, "rollback", "rollback transaction", pool, io_timeout,
+                app.name);
+        } else if (app.commit) {
+            throw "APP-ERROR", sprintf("App %y cannot define 'commit' without also defining 'rollback'",
+                app.name);
+        }
+        if (app.get_record_type) {
+            check_record_based();
+            get_record_type = tryGetAsyncAttribute(\app, "get_record_type", "get record type", pool, io_timeout,
+                app.name);
+        } else if (get_table_list) {
+            throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y is missing its \"get_record_type\" attribute, but this "
+                "attribute is required for apps supporting tables", app.name);
+        }
+
+        if (*hash<auto> opts = remove app.expressions) {
+            throw "UNSUPPORTED", "custom expressions are not yet supported";
+        } else if (get_table_list) {
+            expressions = AbstractDataProvider::GenericExpressions;
+        }
+
         appmap{app.name} = <AppInfo>{
             "app": app,
+
+            "get_table_list": get_table_list,
+            "begin_transaction": begin_transaction,
+            "commit": commit,
+            "rollback": rollback,
+            "get_record_type": get_record_type,
+            "expressions": expressions,
+
             "pool": pool,
         };
 
@@ -616,6 +686,20 @@ public class TypeScriptActionInterface {
         return TypeScriptActionInterface::initAppIntern(app, do_actions);
     }
 
+    static hash<AppInfo> getInitializedRecordBasedAppInfo(string app) {
+        if (exists (*string rn = appcasemap{app})) {
+            app = rn;
+        }
+        *hash<AppInfo> info = initialized_appmap{app};
+        if (!info) {
+            throw "APP-ERROR", sprintf("No app %y has been initialized", app);
+        }
+        if (!info.get_table_list) {
+            throw "APP-ERROR", sprintf("App %y is not a record-based app", app);
+        }
+        return info;
+    }
+
     static private synchronized bool initAppIntern(string app, *bool do_actions) {
         if (initmap{app}) {
             return False;
@@ -628,6 +712,7 @@ public class TypeScriptActionInterface {
     }
 
     static private bool initAppIntern(hash<AppInfo> info, *bool do_actions) {
+        initialized_appmap{info.app.name} = info;
         initmap{info.app.name} = True;
         # change the cwd to process relative paths and restore on exit
         string cwd = getcwd();
@@ -1158,6 +1243,14 @@ public class TypeScriptActionInterface {
             schema = app_swagger_map{appname};
         }
 
+        code check_record_based_app = sub () {
+            if (!tablemap{appname}) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y action type: %y cannot be registered; "
+                    "the app does not support record-based actions; declare a \"get_table_list\" function on the "
+                    "app in order to declare record-based actions", action.app, action.action,
+                    ActionNameMap{action.action_code});
+            }
+        };
         switch (action.action_code) {
             case DPAT_API: {
                 TypeScriptActionInterface::generateApiDataProvider(app, \action, pool, schema);
@@ -1174,6 +1267,7 @@ public class TypeScriptActionInterface {
             }
 
             case DPAT_FIND: {
+                check_record_based_app();
                 TypeScriptActionInterface::generateSearchDataProvider(app, \action, pool, schema);
                 string actionname = action.action.lwr();
                 if (!smap{appname}{actionname}) {
@@ -1182,7 +1276,18 @@ public class TypeScriptActionInterface {
                 break;
             }
 
+            case DPAT_FIND_SINGLE: {
+                check_record_based_app();
+                TypeScriptActionInterface::generateSearchSingleDataProvider(app, \action, pool, schema);
+                string actionname = action.action.lwr();
+                if (!smap{appname}{actionname}) {
+                    smap{appname}{actionname} = True;
+                }
+                break;
+            }
+
             case DPAT_CREATE: {
+                check_record_based_app();
                 TypeScriptActionInterface::generateCreateDataProvider(app, \action, pool, schema);
                 string actionname = action.action.lwr();
                 if (!crmap{appname}{actionname}) {
@@ -1192,6 +1297,7 @@ public class TypeScriptActionInterface {
             }
 
             case DPAT_UPDATE: {
+                check_record_based_app();
                 TypeScriptActionInterface::generateUpdateDataProvider(app, \action, pool, schema);
                 string actionname = action.action.lwr();
                 if (!updmap{appname}{actionname}) {
@@ -1201,6 +1307,7 @@ public class TypeScriptActionInterface {
             }
 
             case DPAT_UPSERT: {
+                check_record_based_app();
                 TypeScriptActionInterface::generateUpsertDataProvider(app, \action, pool, schema);
                 string actionname = action.action.lwr();
                 if (!upsmap{appname}{actionname}) {
@@ -1210,6 +1317,7 @@ public class TypeScriptActionInterface {
             }
 
             case DPAT_DELETE: {
+                check_record_based_app();
                 TypeScriptActionInterface::generateDeleteDataProvider(app, \action, pool, schema);
                 string actionname = action.action.lwr();
                 if (!dmap{appname}{actionname}) {
@@ -1228,14 +1336,6 @@ public class TypeScriptActionInterface {
             JavaScriptProgramPool pool, *SwaggerSchema schema) {
         timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
 
-        *hash<AsyncCallInfo> get_record_type = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
-            "get_record_type", "get record type", pool, io_timeout, action.app, action.action);
-        if (!get_record_type) {
-            throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y is missing its \"get_record_type\" "
-                "attribute, but this attribute is required for actions supporting searches", action.app,
-                action.action);
-        }
-
         ActionFunctionContext fctx(app.name, action.action, pool);
         if (*hash<auto> opts = remove action.options) {
             action.options = TypeScriptActionInterface::getOptions(app, \action, opts, fctx);
@@ -1245,12 +1345,6 @@ public class TypeScriptActionInterface {
                     action.action);
             }
         }
-        *hash<AsyncCallInfo> begin_transaction = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
-            "begin_transaction", "begin transaction", pool, io_timeout, action.app, action.action);
-        *hash<AsyncCallInfo> commit = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
-            "commit", "commit", pool, io_timeout, action.app, action.action);
-        *hash<AsyncCallInfo> rollback = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
-            "rollback", "rollback", pool, io_timeout, action.app, action.action);
 
         *hash<AsyncCallInfo> search_records = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
             "search_records", "search records", pool, io_timeout, action.app, action.action);
@@ -1273,19 +1367,8 @@ public class TypeScriptActionInterface {
             search_options = AbstractDataProvider::GenericRecordSearchOptions;
         }
 
-        hash<string, hash<DataProviderExpressionInfo>> expressions;
-        if (*hash<auto> opts = remove action.expressions) {
-            if (uses_generic_search) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y cannot define \"expressions\" when "
-                    "\"uses_generic_search\" is also defined", action.app, action.action);
-            }
-            throw "UNSUPPORTED", "custom expressions are not yet supported";
-        } else {
-            expressions = AbstractDataProvider::GenericExpressions;
-        }
-
-        TypeScriptActionSearchDataProvider child(action.action, get_record_type, begin_transaction, commit, rollback,
-            search_records, search_options, expressions, !uses_generic_search, fctx);
+        TypeScriptActionSearchDataProvider child(action.app, action.action, search_records, search_options,
+            !uses_generic_search, fctx);
 
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);
         prov.registerChild(action.action, child);
@@ -1293,6 +1376,11 @@ public class TypeScriptActionInterface {
         #printf("Registered %s %s (%y)\n", action.app, action.action);
 
         action.path = action.action;
+    }
+
+    static generateSearchSingleDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
+        JavaScriptProgramPool pool, *SwaggerSchema schema) {
+        throw "UNSUPPORTED", "not yet supported";
     }
 
     static registerAppChildDataProvider(string app, AbstractDataProvider prov) {
@@ -2973,6 +3061,32 @@ hashdecl AppInfo {
 
     #! The current working directory
     string cwd = getcwd();
+
+    #! Callback to list tables for the app; required for apps that support record-based actions
+    *hash<AsyncCallInfo> get_table_list;
+
+    #! Callback to begine a transaction in the app; only supported for apps that support record-based actions
+    *hash<AsyncCallInfo> begin_transaction;
+
+    #! Callback to begin a transaction in the app; only supported for apps that support record-based actions
+    /** must be declared if the app declares a begin_transaction callback
+    */
+    *hash<AsyncCallInfo> commit;
+
+    #! Callback to roll back a transaction in the app; only supported for apps that support record-based actions
+    /** must be declared if the app declares commit or begin_transaction callbacks
+    */
+    *hash<AsyncCallInfo> rollback;
+
+    #! Callback to retrieve the record type for a given table; required for apps that support record-based actions
+    /** must be declared if the app declares a get_table_list callback
+    */
+    *hash<AsyncCallInfo> get_record_type;
+
+    #! Supported expressions with record-based options for the app
+    /** May only be declared if the app declares a get_table_list callback
+    */
+    *hash<string, hash<DataProviderExpressionInfo>> expressions;
 
     # The program pool info
     JavaScriptProgramPool pool;

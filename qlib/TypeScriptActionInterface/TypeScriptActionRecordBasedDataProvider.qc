@@ -39,19 +39,18 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         *hash<AsyncCallInfo> begin_transaction;
         *hash<AsyncCallInfo> commit;
         *hash<AsyncCallInfo> rollback;
+
+        hash<string, hash<DataProviderExpressionInfo>> expressions;
     }
 
     #! Creates the object from the arguments
-    constructor(string name, hash<AsyncCallInfo> get_record_type,
-            *hash<AsyncCallInfo> begin_transaction,
-            *hash<AsyncCallInfo> commit,
-            *hash<AsyncCallInfo> rollback,
-            ActionFunctionContext fctx)
-            : TypeScriptActionDataProviderBase(name, fctx) {
-        self.get_record_type = get_record_type;
-        self.begin_transaction = begin_transaction;
-        self.commit = commit;
-        self.rollback = rollback;
+    constructor(string app, string name, ActionFunctionContext fctx) : TypeScriptActionDataProviderBase(name, fctx) {
+        hash<AppInfo> info = TypeScriptActionInterface::getInitializedRecordBasedAppInfo(app);
+        get_record_type = info.get_record_type;
+        begin_transaction = info.begin_transaction;
+        commit = info.commit;
+        rollback = info.rollback;
+        expressions = info.expressions;
         options = DataProviderDataContextHelper::getHash();
     }
 

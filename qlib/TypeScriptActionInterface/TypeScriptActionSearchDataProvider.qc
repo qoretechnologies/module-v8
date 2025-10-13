@@ -34,25 +34,18 @@ public class TypeScriptActionSearchDataProvider inherits TypeScriptActionRecordB
     private {
         *hash<AsyncCallInfo> search_records;
         *hash<string, hash<DataProviderOptionInfo>> search_options;
-        *hash<string, hash<DataProviderExpressionInfo>> expressions;
         bool supports_native_search;
     }
 
     #! Creates the object from the arguments
-    constructor(string name, hash<AsyncCallInfo> get_record_type,
-            *hash<AsyncCallInfo> begin_transaction,
-            *hash<AsyncCallInfo> commit,
-            *hash<AsyncCallInfo> rollback,
+    constructor(string app, string name,
             hash<AsyncCallInfo> search_records,
             *hash<string, hash<DataProviderOptionInfo>> search_options,
-            *hash<string, hash<DataProviderExpressionInfo>> expressions,
             bool supports_native_search,
             ActionFunctionContext fctx)
-            : TypeScriptActionRecordBasedDataProvider(name, get_record_type, begin_transaction, commit, rollback,
-                fctx) {
+            : TypeScriptActionRecordBasedDataProvider(app, name, fctx) {
         self.search_records = search_records;
         self.search_options = search_options;
-        self.expressions = expressions;
         self.supports_native_search = supports_native_search;
     }
 
