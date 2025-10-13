@@ -1,4 +1,9 @@
-import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
+import {
+  EQoreAppActionCode,
+  QoreAppCreator,
+  TQoreAppActionOption,
+  TQoreOptions,
+} from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { FIRESTORE_APP_NAME, FirestoreError, getFirestoreErrorMessage } from '../constants';
 import {
@@ -115,7 +120,7 @@ const createDocument = QoreAppCreator.createLocalizedAction<typeof options>({
     },
   },
   get_dynamic_response_type: async (context) => {
-    const dataFields = getFirestoreCollectionFieldsResponseType(context);
+    const dataFields = await getFirestoreCollectionFieldsResponseType(context);
 
     return {
       type: 'hash',
@@ -125,7 +130,7 @@ const createDocument = QoreAppCreator.createLocalizedAction<typeof options>({
         project_id: { type: 'string' },
         path: { type: 'string' },
         created_at: { type: 'string' },
-        data: { type: 'hash', fields: dataFields },
+        data: dataFields as TQoreAppActionOption,
       },
     };
   },

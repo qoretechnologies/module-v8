@@ -1,4 +1,9 @@
-import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
+import {
+  EQoreAppActionCode,
+  QoreAppCreator,
+  TQoreAppActionOption,
+  TQoreOptions,
+} from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { FIRESTORE_APP_NAME, FirestoreError, getFirestoreErrorMessage } from '../constants';
 import {
@@ -10,6 +15,7 @@ import {
 import { getFirestoreProjectIdAllowedValues } from '../helpers/get-project-id-allowed-values';
 import { getFirestoreCollectionPathAllowedValues } from '../helpers/get-collection-path-allowed-values';
 import { getFirestoreDocumentIdAllowedValues } from '../helpers/get-document-id-allowed-values';
+import { getFirestoreCollectionFieldsResponseType } from '../helpers/get-collection-fields';
 
 const options = {
   project_id: {
@@ -92,6 +98,24 @@ const getDocument = QoreAppCreator.createLocalizedAction<typeof options>({
       read_time: { type: 'string' },
       data: { type: 'hash' },
     },
+  },
+  get_dynamic_response_type: async (context) => {
+    const dataFields = await getFirestoreCollectionFieldsResponseType(context);
+
+    return {
+      type: 'hash',
+      fields: {
+        document_id: { type: 'string' },
+        collection_path: { type: 'string' },
+        project_id: { type: 'string' },
+        path: { type: 'string' },
+        exists: { type: 'boolean' },
+        create_time: { type: 'string' },
+        update_time: { type: 'string' },
+        read_time: { type: 'string' },
+        data: dataFields as TQoreAppActionOption,
+      },
+    };
   },
 });
 

@@ -1,4 +1,9 @@
-import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
+import {
+  EQoreAppActionCode,
+  QoreAppCreator,
+  TQoreAppActionOption,
+  TQoreOptions,
+} from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { FIRESTORE_APP_NAME, FirestoreError, getFirestoreErrorMessage } from '../constants';
 import {
@@ -9,7 +14,10 @@ import {
 } from '../helpers/constants';
 import { getFirestoreProjectIdAllowedValues } from '../helpers/get-project-id-allowed-values';
 import { getFirestoreCollectionPathAllowedValues } from '../helpers/get-collection-path-allowed-values';
-import { getFirestoreCollectionFieldAllowedValues } from '../helpers/get-collection-fields';
+import {
+  getFirestoreCollectionFieldAllowedValues,
+  getFirestoreCollectionFieldsResponseType,
+} from '../helpers/get-collection-fields';
 
 const options = {
   project_id: {
@@ -150,6 +158,36 @@ const listDocuments = QoreAppCreator.createLocalizedAction<typeof options>({
         },
       },
     },
+  },
+  get_dynamic_response_type: async (context) => {
+    const dataFields = await getFirestoreCollectionFieldsResponseType(context);
+
+    return {
+      type: 'hash',
+      fields: {
+        collection_path: { type: 'string' },
+        project_id: { type: 'string' },
+        count: { type: 'integer' },
+        limit: { type: 'integer' },
+        order_by: { type: 'string' },
+        order_direction: { type: 'string' },
+        documents: {
+          type: {
+            type: 'list',
+            element_type: {
+              type: 'hash',
+              fields: {
+                document_id: { type: 'string' },
+                path: { type: 'string' },
+                create_time: { type: 'string' },
+                update_time: { type: 'string' },
+                data: dataFields as TQoreAppActionOption,
+              },
+            },
+          },
+        },
+      },
+    };
   },
 });
 

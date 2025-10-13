@@ -154,7 +154,7 @@ const buildFirestoreFieldsType = (
             type: 'list',
             element_type: {
               type: 'hash',
-              fields: Object.entries(field.elementType.fields || {}).reduce(
+              fields: Object.entries(field.elementType.fields).reduce(
                 (acc, [k, v]) => {
                   acc[k] = getType(v);
                   return acc;
