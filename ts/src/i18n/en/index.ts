@@ -75,11 +75,13 @@ import Xero from './apps/Xero';
 import YouTube from './apps/YouTube';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
+import Firestore from './apps/Firestore';
 
 const en = {
   common: {},
   apps: {
     Supabase,
+    Firestore,
     Sentry,
     Patreon,
     Asana,

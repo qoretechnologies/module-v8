@@ -670,6 +670,1036 @@ type RootTranslation = {
 				}
 			}
 		}
+		Firestore: {
+			/**
+			 * F​i​r​e​s​t​o​r​e
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​F​i​r​e​s​t​o​r​e​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​N​o​S​Q​L​ ​d​o​c​u​m​e​n​t​ ​d​a​t​a​b​a​s​e​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​F​i​r​e​s​t​o​r​e​ ​i​n​t​e​g​r​a​t​i​o​n​ ​e​n​a​b​l​e​s​ ​y​o​u​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​F​i​r​e​s​t​o​r​e​,​ ​a​ ​f​l​e​x​i​b​l​e​,​ ​s​c​a​l​a​b​l​e​ ​N​o​S​Q​L​ ​c​l​o​u​d​ ​d​a​t​a​b​a​s​e​.​ ​C​r​e​a​t​e​,​ ​r​e​a​d​,​ ​u​p​d​a​t​e​,​ ​a​n​d​ ​d​e​l​e​t​e​ ​d​o​c​u​m​e​n​t​s​,​ ​m​a​n​a​g​e​ ​c​o​l​l​e​c​t​i​o​n​s​,​ ​a​n​d​ ​e​x​e​c​u​t​e​ ​q​u​e​r​i​e​s​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​y​o​u​r​ ​d​o​c​u​m​e​n​t​ ​d​a​t​a​b​a​s​e​ ​o​p​e​r​a​t​i​o​n​s​ ​s​e​a​m​l​e​s​s​l​y​.
+			 */
+			longDesc: string
+			triggers: {
+				new_document: {
+					/**
+					 * N​e​w​ ​D​o​c​u​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​d​o​c​u​m​e​n​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​d​o​c​u​m​e​n​t​s​.​ ​D​o​c​u​m​e​n​t​s​ ​a​r​e​ ​o​r​d​e​r​e​d​ ​b​a​s​e​d​ ​o​n​ ​y​o​u​r​ ​s​p​e​c​i​f​i​e​d​ ​c​r​i​t​e​r​i​a​,​ ​a​n​d​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​n​e​w​ ​d​o​c​u​m​e​n​t​s​ ​a​p​p​e​a​r​ ​a​t​ ​t​h​e​ ​t​o​p​ ​o​f​ ​t​h​e​ ​o​r​d​e​r​e​d​ ​l​i​s​t​.​ ​Y​o​u​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​d​o​c​u​m​e​n​t​s​ ​a​n​d​ ​c​u​s​t​o​m​i​z​e​ ​t​h​e​ ​o​r​d​e​r​i​n​g​ ​t​o​ ​t​r​a​c​k​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​s​ ​o​f​ ​d​o​c​u​m​e​n​t​s​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​F​i​r​e​s​t​o​r​e​ ​d​a​t​a​b​a​s​e
+							 */
+							longDesc: string
+						}
+						collection_path: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n​ ​P​a​t​h
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​u​l​l​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​.​ ​F​o​r​ ​n​e​s​t​e​d​ ​c​o​l​l​e​c​t​i​o​n​s​,​ ​u​s​e​ ​t​h​e​ ​f​o​r​m​a​t​:​ ​p​a​r​e​n​t​_​c​o​l​l​e​c​t​i​o​n​/​p​a​r​e​n​t​_​d​o​c​_​i​d​/​n​e​s​t​e​d​_​c​o​l​l​e​c​t​i​o​n
+							 */
+							longDesc: string
+						}
+						filters: {
+							/**
+							 * F​i​l​t​e​r​s
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​s​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​d​o​c​u​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​f​i​l​t​e​r​s​ ​t​o​ ​n​a​r​r​o​w​ ​d​o​w​n​ ​w​h​i​c​h​ ​d​o​c​u​m​e​n​t​s​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.​ ​M​u​l​t​i​p​l​e​ ​f​i​l​t​e​r​s​ ​a​r​e​ ​c​o​m​b​i​n​e​d​ ​w​i​t​h​ ​A​N​D​ ​l​o​g​i​c​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * F​i​e​l​d
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​d​o​c​u​m​e​n​t​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+											 */
+											shortDesc: string
+											/**
+											 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​n​a​m​e​ ​i​n​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​f​i​l​t​e​r
+											 */
+											longDesc: string
+										}
+										operator: {
+											/**
+											 * O​p​e​r​a​t​o​r
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​i​o​n​ ​t​o​ ​p​e​r​f​o​r​m​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​a​n​d​ ​y​o​u​r​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+											 */
+											longDesc: string
+										}
+										value: {
+											/**
+											 * V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​u​s​e​ ​i​n​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​.​ ​T​h​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​c​o​n​v​e​r​t​e​d​ ​t​o​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​t​y​p​e​ ​(​s​t​r​i​n​g​,​ ​n​u​m​b​e​r​,​ ​b​o​o​l​e​a​n​,​ ​o​r​ ​n​u​l​l​)
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						order_by: {
+							/**
+							 * O​r​d​e​r​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​o​r​d​e​r​ ​d​o​c​u​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​ ​t​h​e​ ​o​r​d​e​r​i​n​g​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​d​o​c​u​m​e​n​t​s​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​a​c​t​i​v​a​t​e​ ​f​o​r​ ​d​o​c​u​m​e​n​t​s​ ​t​h​a​t​ ​a​p​p​e​a​r​ ​a​t​ ​t​h​e​ ​t​o​p​ ​o​f​ ​t​h​e​ ​o​r​d​e​r​e​d​ ​l​i​s​t​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​d​o​c​u​m​e​n​t​s​ ​a​r​e​ ​o​r​d​e​r​e​d​ ​b​y​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e​ ​i​n​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​ ​(​n​e​w​e​s​t​ ​f​i​r​s​t​)​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​o​r​d​e​r​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​o​r​d​e​r​i​n​g
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​a​s​c​e​n​d​i​n​g​ ​(​o​l​d​e​s​t​/​s​m​a​l​l​e​s​t​ ​f​i​r​s​t​)​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​(​n​e​w​e​s​t​/​l​a​r​g​e​s​t​ ​f​i​r​s​t​)​ ​o​r​d​e​r
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			actions: {
+				list_projects: {
+					/**
+					 * L​i​s​t​ ​P​r​o​j​e​c​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​s​ ​a​c​c​e​s​s​i​b​l​e​ ​w​i​t​h​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​c​r​e​d​e​n​t​i​a​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​s​ ​t​h​a​t​ ​a​r​e​ ​a​c​c​e​s​s​i​b​l​e​ ​w​i​t​h​ ​y​o​u​r​ ​c​r​e​d​e​n​t​i​a​l​s​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​p​r​o​j​e​c​t​s​ ​b​y​ ​n​a​m​e​ ​a​n​d​ ​u​s​e​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​ ​n​a​v​i​g​a​t​e​ ​t​h​r​o​u​g​h​ ​l​a​r​g​e​ ​r​e​s​u​l​t​ ​s​e​t​s​.​ ​T​h​i​s​ ​i​s​ ​u​s​e​f​u​l​ ​f​o​r​ ​d​i​s​c​o​v​e​r​i​n​g​ ​w​h​i​c​h​ ​p​r​o​j​e​c​t​s​ ​c​o​n​t​a​i​n​ ​F​i​r​e​s​t​o​r​e​ ​d​a​t​a​b​a​s​e​s​.
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * P​r​o​j​e​c​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​p​r​o​j​e​c​t​s​ ​b​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​p​r​o​j​e​c​t​s​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​i​s​ ​n​a​m​e​.​ ​T​h​e​ ​s​e​a​r​c​h​ ​i​s​ ​c​a​s​e​-​i​n​s​e​n​s​i​t​i​v​e​ ​a​n​d​ ​m​a​t​c​h​e​s​ ​p​a​r​t​i​a​l​ ​n​a​m​e​s​.
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​p​r​o​j​e​c​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​r​o​j​e​c​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.​ ​U​s​e​ ​t​h​i​s​ ​w​i​t​h​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​k​e​n​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​l​a​r​g​e​ ​r​e​s​u​l​t​ ​s​e​t​s​.
+							 */
+							longDesc: string
+						}
+						next_page_token: {
+							/**
+							 * N​e​x​t​ ​P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​t​o​k​e​n​ ​o​b​t​a​i​n​e​d​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​q​u​e​s​t​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​p​r​o​j​e​c​t​s​ ​w​h​e​n​ ​t​h​e​r​e​ ​a​r​e​ ​m​o​r​e​ ​r​e​s​u​l​t​s​ ​t​h​a​n​ ​t​h​e​ ​p​a​g​e​ ​s​i​z​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_document: {
+					/**
+					 * C​r​e​a​t​e​ ​D​o​c​u​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​d​o​c​u​m​e​n​t​ ​i​n​ ​a​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​d​o​c​u​m​e​n​t​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n​.​ ​Y​o​u​ ​c​a​n​ ​e​i​t​h​e​r​ ​l​e​t​ ​F​i​r​e​s​t​o​r​e​ ​a​u​t​o​-​g​e​n​e​r​a​t​e​ ​a​ ​d​o​c​u​m​e​n​t​ ​I​D​ ​o​r​ ​p​r​o​v​i​d​e​ ​y​o​u​r​ ​o​w​n​.​ ​T​h​e​ ​d​o​c​u​m​e​n​t​ ​d​a​t​a​ ​c​a​n​ ​b​e​ ​s​p​e​c​i​f​i​e​d​ ​t​h​r​o​u​g​h​ ​s​t​r​u​c​t​u​r​e​d​ ​f​i​e​l​d​s​ ​o​r​ ​a​s​ ​a​ ​c​u​s​t​o​m​ ​h​a​s​h​ ​o​b​j​e​c​t​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​F​i​r​e​s​t​o​r​e​ ​d​a​t​a​b​a​s​e
+							 */
+							longDesc: string
+						}
+						collection_path: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n​ ​P​a​t​h
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​u​l​l​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.​ ​F​o​r​ ​n​e​s​t​e​d​ ​c​o​l​l​e​c​t​i​o​n​s​,​ ​u​s​e​ ​t​h​e​ ​f​o​r​m​a​t​:​ ​p​a​r​e​n​t​_​c​o​l​l​e​c​t​i​o​n​/​p​a​r​e​n​t​_​d​o​c​_​i​d​/​n​e​s​t​e​d​_​c​o​l​l​e​c​t​i​o​n
+							 */
+							longDesc: string
+						}
+						document_id: {
+							/**
+							 * D​o​c​u​m​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​d​o​c​u​m​e​n​t​ ​I​D​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​d​o​c​u​m​e​n​t​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​F​i​r​e​s​t​o​r​e​ ​w​i​l​l​ ​a​u​t​o​-​g​e​n​e​r​a​t​e​ ​a​ ​u​n​i​q​u​e​ ​I​D​.​ ​D​o​c​u​m​e​n​t​ ​I​D​s​ ​m​u​s​t​ ​b​e​ ​v​a​l​i​d​ ​U​T​F​-​8​ ​s​t​r​i​n​g​s​ ​a​n​d​ ​c​a​n​n​o​t​ ​c​o​n​t​a​i​n​ ​f​o​r​w​a​r​d​ ​s​l​a​s​h​e​s​.
+							 */
+							longDesc: string
+						}
+						data: {
+							/**
+							 * D​o​c​u​m​e​n​t​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​a​t​a​ ​t​o​ ​s​t​o​r​e​ ​i​n​ ​t​h​e​ ​d​o​c​u​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​r​u​c​t​u​r​e​d​ ​d​a​t​a​ ​t​o​ ​s​t​o​r​e​ ​i​n​ ​t​h​e​ ​d​o​c​u​m​e​n​t​.​ ​T​h​i​s​ ​w​i​l​l​ ​b​e​ ​d​y​n​a​m​i​c​a​l​l​y​ ​t​y​p​e​d​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​s​c​h​e​m​a​ ​i​f​ ​a​v​a​i​l​a​b​l​e​.​ ​E​a​c​h​ ​f​i​e​l​d​ ​w​i​l​l​ ​b​e​ ​s​t​o​r​e​d​ ​w​i​t​h​ ​i​t​s​ ​a​p​p​r​o​p​r​i​a​t​e​ ​F​i​r​e​s​t​o​r​e​ ​d​a​t​a​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						additional_data: {
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​f​i​e​l​d​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​d​o​c​u​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​a​d​d​i​t​i​o​n​a​l​ ​f​i​e​l​d​s​ ​t​o​ ​m​e​r​g​e​ ​w​i​t​h​ ​t​h​e​ ​s​t​r​u​c​t​u​r​e​d​ ​d​a​t​a​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​a​d​d​ ​f​i​e​l​d​s​ ​t​h​a​t​ ​a​r​e​ ​n​o​t​ ​p​a​r​t​ ​o​f​ ​t​h​e​ ​p​r​e​d​e​f​i​n​e​d​ ​s​c​h​e​m​a​ ​o​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​d​y​n​a​m​i​c​ ​f​i​e​l​d​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_document: {
+					/**
+					 * G​e​t​ ​D​o​c​u​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​o​c​u​m​e​n​t​ ​f​r​o​m​ ​a​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​s​i​n​g​l​e​ ​d​o​c​u​m​e​n​t​ ​b​y​ ​i​t​s​ ​I​D​ ​f​r​o​m​ ​a​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n​.​ ​R​e​t​u​r​n​s​ ​t​h​e​ ​c​o​m​p​l​e​t​e​ ​d​o​c​u​m​e​n​t​ ​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​m​e​t​a​d​a​t​a​ ​s​u​c​h​ ​a​s​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e​ ​a​n​d​ ​l​a​s​t​ ​u​p​d​a​t​e​ ​t​i​m​e​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​w​i​l​l​ ​f​a​i​l​ ​i​f​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​d​o​e​s​ ​n​o​t​ ​e​x​i​s​t​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​F​i​r​e​s​t​o​r​e​ ​d​a​t​a​b​a​s​e
+							 */
+							longDesc: string
+						}
+						collection_path: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n​ ​P​a​t​h
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​u​l​l​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​d​o​c​u​m​e​n​t​.​ ​F​o​r​ ​n​e​s​t​e​d​ ​c​o​l​l​e​c​t​i​o​n​s​,​ ​u​s​e​ ​t​h​e​ ​f​o​r​m​a​t​:​ ​p​a​r​e​n​t​_​c​o​l​l​e​c​t​i​o​n​/​p​a​r​e​n​t​_​d​o​c​_​i​d​/​n​e​s​t​e​d​_​c​o​l​l​e​c​t​i​o​n
+							 */
+							longDesc: string
+						}
+						document_id: {
+							/**
+							 * D​o​c​u​m​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​T​h​i​s​ ​i​s​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​I​D​ ​t​h​a​t​ ​w​a​s​ ​e​i​t​h​e​r​ ​a​u​t​o​-​g​e​n​e​r​a​t​e​d​ ​o​r​ ​s​p​e​c​i​f​i​e​d​ ​w​h​e​n​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​w​a​s​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_document: {
+					/**
+					 * U​p​d​a​t​e​ ​D​o​c​u​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​d​o​c​u​m​e​n​t​ ​i​n​ ​a​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​d​o​c​u​m​e​n​t​ ​i​n​ ​F​i​r​e​s​t​o​r​e​ ​w​i​t​h​ ​n​e​w​ ​d​a​t​a​.​ ​Y​o​u​ ​c​a​n​ ​c​h​o​o​s​e​ ​t​o​ ​m​e​r​g​e​ ​t​h​e​ ​n​e​w​ ​d​a​t​a​ ​w​i​t​h​ ​e​x​i​s​t​i​n​g​ ​f​i​e​l​d​s​ ​o​r​ ​r​e​p​l​a​c​e​ ​t​h​e​ ​e​n​t​i​r​e​ ​d​o​c​u​m​e​n​t​.​ ​B​y​ ​d​e​f​a​u​l​t​,​ ​t​h​e​ ​u​p​d​a​t​e​ ​m​e​r​g​e​s​ ​n​e​w​ ​f​i​e​l​d​s​ ​w​h​i​l​e​ ​p​r​e​s​e​r​v​i​n​g​ ​u​n​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​F​i​r​e​s​t​o​r​e​ ​d​a​t​a​b​a​s​e
+							 */
+							longDesc: string
+						}
+						collection_path: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n​ ​P​a​t​h
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​u​l​l​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​d​o​c​u​m​e​n​t​.​ ​F​o​r​ ​n​e​s​t​e​d​ ​c​o​l​l​e​c​t​i​o​n​s​,​ ​u​s​e​ ​t​h​e​ ​f​o​r​m​a​t​:​ ​p​a​r​e​n​t​_​c​o​l​l​e​c​t​i​o​n​/​p​a​r​e​n​t​_​d​o​c​_​i​d​/​n​e​s​t​e​d​_​c​o​l​l​e​c​t​i​o​n
+							 */
+							longDesc: string
+						}
+						document_id: {
+							/**
+							 * D​o​c​u​m​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.​ ​T​h​e​ ​d​o​c​u​m​e​n​t​ ​m​u​s​t​ ​e​x​i​s​t​ ​o​r​ ​t​h​e​ ​o​p​e​r​a​t​i​o​n​ ​w​i​l​l​ ​f​a​i​l​.
+							 */
+							longDesc: string
+						}
+						data: {
+							/**
+							 * D​o​c​u​m​e​n​t​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​d​a​t​a​ ​f​o​r​ ​t​h​e​ ​d​o​c​u​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​a​ ​t​o​ ​u​p​d​a​t​e​ ​i​n​ ​t​h​e​ ​d​o​c​u​m​e​n​t​.​ ​W​h​e​n​ ​m​e​r​g​e​ ​i​s​ ​e​n​a​b​l​e​d​,​ ​o​n​l​y​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d​s​ ​w​i​l​l​ ​b​e​ ​u​p​d​a​t​e​d​.​ ​W​h​e​n​ ​m​e​r​g​e​ ​i​s​ ​d​i​s​a​b​l​e​d​,​ ​t​h​i​s​ ​d​a​t​a​ ​w​i​l​l​ ​r​e​p​l​a​c​e​ ​t​h​e​ ​e​n​t​i​r​e​ ​d​o​c​u​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+						additional_data: {
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​f​i​e​l​d​s​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​a​d​d​i​t​i​o​n​a​l​ ​f​i​e​l​d​s​ ​t​o​ ​m​e​r​g​e​ ​w​i​t​h​ ​t​h​e​ ​s​t​r​u​c​t​u​r​e​d​ ​d​a​t​a​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​u​p​d​a​t​e​ ​f​i​e​l​d​s​ ​t​h​a​t​ ​a​r​e​ ​n​o​t​ ​p​a​r​t​ ​o​f​ ​t​h​e​ ​p​r​e​d​e​f​i​n​e​d​ ​s​c​h​e​m​a​ ​o​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​d​y​n​a​m​i​c​ ​f​i​e​l​d​s​.
+							 */
+							longDesc: string
+						}
+						merge: {
+							/**
+							 * M​e​r​g​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​m​e​r​g​e​ ​w​i​t​h​ ​e​x​i​s​t​i​n​g​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​t​r​u​e​ ​(​d​e​f​a​u​l​t​)​,​ ​o​n​l​y​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d​s​ ​a​r​e​ ​u​p​d​a​t​e​d​ ​a​n​d​ ​o​t​h​e​r​ ​f​i​e​l​d​s​ ​r​e​m​a​i​n​ ​u​n​c​h​a​n​g​e​d​.​ ​W​h​e​n​ ​f​a​l​s​e​,​ ​t​h​e​ ​e​n​t​i​r​e​ ​d​o​c​u​m​e​n​t​ ​i​s​ ​r​e​p​l​a​c​e​d​ ​w​i​t​h​ ​t​h​e​ ​n​e​w​ ​d​a​t​a​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_document: {
+					/**
+					 * D​e​l​e​t​e​ ​D​o​c​u​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​d​o​c​u​m​e​n​t​ ​f​r​o​m​ ​a​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​s​ ​a​ ​d​o​c​u​m​e​n​t​ ​f​r​o​m​ ​a​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n​.​ ​T​h​i​s​ ​o​p​e​r​a​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.​ ​T​h​e​ ​d​o​c​u​m​e​n​t​ ​m​u​s​t​ ​e​x​i​s​t​ ​o​r​ ​t​h​e​ ​o​p​e​r​a​t​i​o​n​ ​w​i​l​l​ ​f​a​i​l​.​ ​A​l​l​ ​s​u​b​c​o​l​l​e​c​t​i​o​n​s​ ​u​n​d​e​r​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​w​i​l​l​ ​N​O​T​ ​b​e​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​d​e​l​e​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​F​i​r​e​s​t​o​r​e​ ​d​a​t​a​b​a​s​e
+							 */
+							longDesc: string
+						}
+						collection_path: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n​ ​P​a​t​h
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​u​l​l​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​d​o​c​u​m​e​n​t​.​ ​F​o​r​ ​n​e​s​t​e​d​ ​c​o​l​l​e​c​t​i​o​n​s​,​ ​u​s​e​ ​t​h​e​ ​f​o​r​m​a​t​:​ ​p​a​r​e​n​t​_​c​o​l​l​e​c​t​i​o​n​/​p​a​r​e​n​t​_​d​o​c​_​i​d​/​n​e​s​t​e​d​_​c​o​l​l​e​c​t​i​o​n
+							 */
+							longDesc: string
+						}
+						document_id: {
+							/**
+							 * D​o​c​u​m​e​n​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.​ ​T​h​e​ ​d​o​c​u​m​e​n​t​ ​m​u​s​t​ ​e​x​i​s​t​ ​o​r​ ​t​h​e​ ​o​p​e​r​a​t​i​o​n​ ​w​i​l​l​ ​f​a​i​l​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_documents: {
+					/**
+					 * L​i​s​t​ ​D​o​c​u​m​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​d​o​c​u​m​e​n​t​s​ ​i​n​ ​a​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​l​l​ ​d​o​c​u​m​e​n​t​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n​.​ ​Y​o​u​ ​c​a​n​ ​l​i​m​i​t​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​a​n​d​ ​s​p​e​c​i​f​y​ ​o​r​d​e​r​i​n​g​ ​c​r​i​t​e​r​i​a​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​r​e​t​u​r​n​s​ ​t​h​e​ ​c​o​m​p​l​e​t​e​ ​d​o​c​u​m​e​n​t​ ​d​a​t​a​ ​a​l​o​n​g​ ​w​i​t​h​ ​m​e​t​a​d​a​t​a​ ​f​o​r​ ​e​a​c​h​ ​d​o​c​u​m​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​F​i​r​e​s​t​o​r​e​ ​d​a​t​a​b​a​s​e
+							 */
+							longDesc: string
+						}
+						collection_path: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n​ ​P​a​t​h
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​u​l​l​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​w​h​o​s​e​ ​d​o​c​u​m​e​n​t​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t​.​ ​F​o​r​ ​n​e​s​t​e​d​ ​c​o​l​l​e​c​t​i​o​n​s​,​ ​u​s​e​ ​t​h​e​ ​f​o​r​m​a​t​:​ ​p​a​r​e​n​t​_​c​o​l​l​e​c​t​i​o​n​/​p​a​r​e​n​t​_​d​o​c​_​i​d​/​n​e​s​t​e​d​_​c​o​l​l​e​c​t​i​o​n
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​o​c​u​m​e​n​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​o​c​u​m​e​n​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​c​o​n​t​r​o​l​ ​t​h​e​ ​s​i​z​e​ ​o​f​ ​t​h​e​ ​r​e​s​u​l​t​ ​s​e​t​ ​a​n​d​ ​i​m​p​r​o​v​e​ ​p​e​r​f​o​r​m​a​n​c​e​.
+							 */
+							longDesc: string
+						}
+						order_by: {
+							/**
+							 * O​r​d​e​r​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​o​r​d​e​r​ ​d​o​c​u​m​e​n​t​s​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​e​l​d​ ​n​a​m​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​o​r​d​e​r​i​n​g​ ​t​h​e​ ​d​o​c​u​m​e​n​t​s​.​ ​T​h​e​ ​f​i​e​l​d​ ​m​u​s​t​ ​e​x​i​s​t​ ​i​n​ ​t​h​e​ ​d​o​c​u​m​e​n​t​s​ ​a​n​d​ ​b​e​ ​o​f​ ​a​ ​c​o​m​p​a​r​a​b​l​e​ ​t​y​p​e​ ​(​s​t​r​i​n​g​,​ ​n​u​m​b​e​r​,​ ​d​a​t​e​)​.
+							 */
+							longDesc: string
+						}
+						order_direction: {
+							/**
+							 * O​r​d​e​r​ ​D​i​r​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n​ ​f​o​r​ ​o​r​d​e​r​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​d​o​c​u​m​e​n​t​s​ ​w​h​e​n​ ​a​n​ ​o​r​d​e​r​_​b​y​ ​f​i​e​l​d​ ​i​s​ ​s​p​e​c​i​f​i​e​d​.​ ​C​h​o​o​s​e​ ​a​s​c​e​n​d​i​n​g​ ​f​o​r​ ​l​o​w​e​s​t​ ​t​o​ ​h​i​g​h​e​s​t​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​f​o​r​ ​h​i​g​h​e​s​t​ ​t​o​ ​l​o​w​e​s​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_collections: {
+					/**
+					 * L​i​s​t​ ​C​o​l​l​e​c​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​c​o​l​l​e​c​t​i​o​n​s​ ​i​n​ ​a​ ​F​i​r​e​s​t​o​r​e​ ​d​a​t​a​b​a​s​e​ ​o​r​ ​d​o​c​u​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​l​l​ ​c​o​l​l​e​c​t​i​o​n​ ​I​D​s​ ​a​t​ ​t​h​e​ ​r​o​o​t​ ​l​e​v​e​l​ ​o​f​ ​a​ ​F​i​r​e​s​t​o​r​e​ ​d​a​t​a​b​a​s​e​ ​o​r​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​o​c​u​m​e​n​t​.​ ​T​h​i​s​ ​i​s​ ​u​s​e​f​u​l​ ​f​o​r​ ​d​i​s​c​o​v​e​r​i​n​g​ ​t​h​e​ ​s​t​r​u​c​t​u​r​e​ ​o​f​ ​y​o​u​r​ ​F​i​r​e​s​t​o​r​e​ ​d​a​t​a​b​a​s​e​ ​a​n​d​ ​n​a​v​i​g​a​t​i​n​g​ ​n​e​s​t​e​d​ ​c​o​l​l​e​c​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​F​i​r​e​s​t​o​r​e​ ​d​a​t​a​b​a​s​e
+							 */
+							longDesc: string
+						}
+						parent_document_path: {
+							/**
+							 * P​a​r​e​n​t​ ​D​o​c​u​m​e​n​t​ ​P​a​t​h
+							 */
+							displayName: string
+							/**
+							 * P​a​t​h​ ​t​o​ ​t​h​e​ ​p​a​r​e​n​t​ ​d​o​c​u​m​e​n​t​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​a​t​h​ ​t​o​ ​a​ ​d​o​c​u​m​e​n​t​ ​w​h​o​s​e​ ​s​u​b​c​o​l​l​e​c​t​i​o​n​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​l​i​s​t​s​ ​r​o​o​t​-​l​e​v​e​l​ ​c​o​l​l​e​c​t​i​o​n​s​.​ ​F​o​r​m​a​t​:​ ​c​o​l​l​e​c​t​i​o​n​_​i​d​/​d​o​c​u​m​e​n​t​_​i​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_collection: {
+					/**
+					 * G​e​t​ ​C​o​l​l​e​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​m​e​t​a​d​a​t​a​ ​a​n​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n​.​ ​T​h​i​s​ ​i​n​c​l​u​d​e​s​ ​c​h​e​c​k​i​n​g​ ​i​f​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​e​x​i​s​t​s​,​ ​w​h​e​t​h​e​r​ ​i​t​ ​h​a​s​ ​d​o​c​u​m​e​n​t​s​,​ ​a​n​d​ ​o​p​t​i​o​n​a​l​l​y​ ​r​e​t​r​i​e​v​i​n​g​ ​s​a​m​p​l​e​ ​d​o​c​u​m​e​n​t​s​ ​f​r​o​m​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​F​i​r​e​s​t​o​r​e​ ​d​a​t​a​b​a​s​e
+							 */
+							longDesc: string
+						}
+						collection_id: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​.​ ​T​h​i​s​ ​i​s​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​n​a​m​e​ ​w​i​t​h​o​u​t​ ​a​n​y​ ​p​a​r​e​n​t​ ​p​a​t​h​.
+							 */
+							longDesc: string
+						}
+						parent_document_path: {
+							/**
+							 * P​a​r​e​n​t​ ​D​o​c​u​m​e​n​t​ ​P​a​t​h
+							 */
+							displayName: string
+							/**
+							 * P​a​t​h​ ​t​o​ ​t​h​e​ ​p​a​r​e​n​t​ ​d​o​c​u​m​e​n​t​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​p​a​r​e​n​t​ ​d​o​c​u​m​e​n​t​ ​i​f​ ​t​h​i​s​ ​i​s​ ​a​ ​s​u​b​c​o​l​l​e​c​t​i​o​n​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​a​s​s​u​m​e​s​ ​t​h​i​s​ ​i​s​ ​a​ ​r​o​o​t​-​l​e​v​e​l​ ​c​o​l​l​e​c​t​i​o​n​.​ ​F​o​r​m​a​t​:​ ​c​o​l​l​e​c​t​i​o​n​_​i​d​/​d​o​c​u​m​e​n​t​_​i​d
+							 */
+							longDesc: string
+						}
+						include_sample_documents: {
+							/**
+							 * I​n​c​l​u​d​e​ ​S​a​m​p​l​e​ ​D​o​c​u​m​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​s​a​m​p​l​e​ ​d​o​c​u​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​t​r​u​e​,​ ​i​n​c​l​u​d​e​s​ ​s​a​m​p​l​e​ ​d​o​c​u​m​e​n​t​s​ ​f​r​o​m​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​y​o​u​ ​u​n​d​e​r​s​t​a​n​d​ ​t​h​e​ ​s​t​r​u​c​t​u​r​e​ ​a​n​d​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						sample_limit: {
+							/**
+							 * S​a​m​p​l​e​ ​L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​s​a​m​p​l​e​ ​d​o​c​u​m​e​n​t​s​ ​t​o​ ​i​n​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​s​a​m​p​l​e​ ​d​o​c​u​m​e​n​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​w​h​e​n​ ​i​n​c​l​u​d​e​_​s​a​m​p​l​e​_​d​o​c​u​m​e​n​t​s​ ​i​s​ ​t​r​u​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				query_documents: {
+					/**
+					 * Q​u​e​r​y​ ​D​o​c​u​m​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * Q​u​e​r​y​ ​d​o​c​u​m​e​n​t​s​ ​i​n​ ​a​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n​ ​w​i​t​h​ ​f​i​l​t​e​r​s​ ​a​n​d​ ​o​r​d​e​r​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​f​o​r​m​s​ ​a​d​v​a​n​c​e​d​ ​q​u​e​r​i​e​s​ ​o​n​ ​a​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​m​u​l​t​i​p​l​e​ ​f​i​l​t​e​r​s​,​ ​o​r​d​e​r​i​n​g​,​ ​a​n​d​ ​l​i​m​i​t​s​.​ ​T​h​i​s​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​d​o​c​u​m​e​n​t​s​ ​b​a​s​e​d​ ​o​n​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​a​n​d​ ​r​e​t​r​i​e​v​e​ ​t​h​e​m​ ​i​n​ ​a​ ​p​a​r​t​i​c​u​l​a​r​ ​o​r​d​e​r​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​F​i​r​e​s​t​o​r​e​ ​d​a​t​a​b​a​s​e
+							 */
+							longDesc: string
+						}
+						collection_path: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n​ ​P​a​t​h
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​F​i​r​e​s​t​o​r​e​ ​c​o​l​l​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​u​l​l​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​q​u​e​r​y​.​ ​F​o​r​ ​n​e​s​t​e​d​ ​c​o​l​l​e​c​t​i​o​n​s​,​ ​u​s​e​ ​t​h​e​ ​f​o​r​m​a​t​:​ ​p​a​r​e​n​t​_​c​o​l​l​e​c​t​i​o​n​/​p​a​r​e​n​t​_​d​o​c​_​i​d​/​n​e​s​t​e​d​_​c​o​l​l​e​c​t​i​o​n
+							 */
+							longDesc: string
+						}
+						filters: {
+							/**
+							 * F​i​l​t​e​r​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​d​o​c​u​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​l​i​s​t​ ​o​f​ ​f​i​l​t​e​r​s​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​q​u​e​r​y​.​ ​M​u​l​t​i​p​l​e​ ​f​i​l​t​e​r​s​ ​a​r​e​ ​c​o​m​b​i​n​e​d​ ​w​i​t​h​ ​A​N​D​ ​l​o​g​i​c​.​ ​E​a​c​h​ ​f​i​l​t​e​r​ ​s​p​e​c​i​f​i​e​s​ ​a​ ​f​i​e​l​d​,​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​,​ ​a​n​d​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * F​i​e​l​d
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​d​o​c​u​m​e​n​t​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​n​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​t​o​ ​a​p​p​l​y​ ​t​h​e​ ​f​i​l​t​e​r​ ​t​o​.​ ​T​h​e​ ​f​i​e​l​d​ ​m​u​s​t​ ​e​x​i​s​t​ ​i​n​ ​t​h​e​ ​d​o​c​u​m​e​n​t​s​ ​b​e​i​n​g​ ​q​u​e​r​i​e​d​.
+											 */
+											longDesc: string
+										}
+										operator: {
+											/**
+											 * O​p​e​r​a​t​o​r
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​.​ ​O​p​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​e​q​u​a​l​i​t​y​,​ ​i​n​e​q​u​a​l​i​t​y​,​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​s​,​ ​a​n​d​ ​a​r​r​a​y​ ​o​p​e​r​a​t​o​r​s​.
+											 */
+											longDesc: string
+										}
+										value: {
+											/**
+											 * V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​u​s​e​ ​i​n​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​.​ ​T​h​e​ ​v​a​l​u​e​ ​t​y​p​e​ ​s​h​o​u​l​d​ ​m​a​t​c​h​ ​t​h​e​ ​f​i​e​l​d​ ​t​y​p​e​ ​i​n​ ​t​h​e​ ​d​o​c​u​m​e​n​t​s​ ​(​s​t​r​i​n​g​,​ ​n​u​m​b​e​r​,​ ​b​o​o​l​e​a​n​,​ ​e​t​c​.​)​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						order_by: {
+							/**
+							 * O​r​d​e​r​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * O​r​d​e​r​i​n​g​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​l​i​s​t​ ​o​f​ ​o​r​d​e​r​i​n​g​ ​c​r​i​t​e​r​i​a​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​q​u​e​r​y​ ​r​e​s​u​l​t​s​.​ ​D​o​c​u​m​e​n​t​s​ ​w​i​l​l​ ​b​e​ ​s​o​r​t​e​d​ ​b​y​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d​s​ ​i​n​ ​t​h​e​ ​o​r​d​e​r​ ​t​h​e​y​ ​a​r​e​ ​l​i​s​t​e​d​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * F​i​e​l​d
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​o​r​d​e​r​ ​b​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​o​r​d​e​r​i​n​g​.​ ​T​h​e​ ​f​i​e​l​d​ ​m​u​s​t​ ​e​x​i​s​t​ ​i​n​ ​t​h​e​ ​d​o​c​u​m​e​n​t​s​ ​a​n​d​ ​b​e​ ​o​f​ ​a​ ​c​o​m​p​a​r​a​b​l​e​ ​t​y​p​e​.
+											 */
+											longDesc: string
+										}
+										direction: {
+											/**
+											 * D​i​r​e​c​t​i​o​n
+											 */
+											displayName: string
+											/**
+											 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​:​ ​a​s​c​e​n​d​i​n​g​ ​(​l​o​w​e​s​t​ ​t​o​ ​h​i​g​h​e​s​t​)​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​(​h​i​g​h​e​s​t​ ​t​o​ ​l​o​w​e​s​t​)​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​o​c​u​m​e​n​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​d​o​c​u​m​e​n​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​c​o​n​t​r​o​l​ ​q​u​e​r​y​ ​p​e​r​f​o​r​m​a​n​c​e​ ​a​n​d​ ​r​e​s​u​l​t​ ​s​e​t​ ​s​i​z​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				backup_to_google_cloud_storage: {
+					/**
+					 * B​a​c​k​u​p​ ​t​o​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e
+					 */
+					displayName: string
+					/**
+					 * E​x​p​o​r​t​ ​F​i​r​e​s​t​o​r​e​ ​d​a​t​a​ ​t​o​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​b​a​c​k​u​p​ ​o​f​ ​y​o​u​r​ ​F​i​r​e​s​t​o​r​e​ ​d​a​t​a​b​a​s​e​ ​o​r​ ​s​p​e​c​i​f​i​c​ ​c​o​l​l​e​c​t​i​o​n​s​ ​b​y​ ​e​x​p​o​r​t​i​n​g​ ​t​h​e​ ​d​a​t​a​ ​t​o​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​.​ ​T​h​i​s​ ​i​s​ ​u​s​e​f​u​l​ ​f​o​r​ ​d​i​s​a​s​t​e​r​ ​r​e​c​o​v​e​r​y​,​ ​d​a​t​a​ ​m​i​g​r​a​t​i​o​n​,​ ​o​r​ ​c​r​e​a​t​i​n​g​ ​s​n​a​p​s​h​o​t​s​ ​o​f​ ​y​o​u​r​ ​d​a​t​a​b​a​s​e​ ​a​t​ ​a​ ​p​o​i​n​t​ ​i​n​ ​t​i​m​e​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​F​i​r​e​s​t​o​r​e​ ​d​a​t​a​b​a​s​e​ ​t​o​ ​b​a​c​k​u​p
+							 */
+							longDesc: string
+						}
+						output_uri_prefix: {
+							/**
+							 * O​u​t​p​u​t​ ​U​R​I​ ​P​r​e​f​i​x
+							 */
+							displayName: string
+							/**
+							 * G​C​S​ ​b​u​c​k​e​t​ ​U​R​I​ ​w​h​e​r​e​ ​b​a​c​k​u​p​ ​w​i​l​l​ ​b​e​ ​s​t​o​r​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​ ​U​R​I​ ​p​r​e​f​i​x​ ​w​h​e​r​e​ ​t​h​e​ ​b​a​c​k​u​p​ ​f​i​l​e​s​ ​w​i​l​l​ ​b​e​ ​w​r​i​t​t​e​n​.​ ​F​o​r​m​a​t​:​ ​g​s​:​/​/​b​u​c​k​e​t​-​n​a​m​e​/​p​a​t​h​/​t​o​/​b​a​c​k​u​p​.​ ​T​h​e​ ​b​u​c​k​e​t​ ​m​u​s​t​ ​a​l​r​e​a​d​y​ ​e​x​i​s​t​ ​a​n​d​ ​y​o​u​ ​m​u​s​t​ ​h​a​v​e​ ​w​r​i​t​e​ ​p​e​r​m​i​s​s​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						collection_ids: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​c​o​l​l​e​c​t​i​o​n​s​ ​t​o​ ​b​a​c​k​u​p​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​l​i​s​t​ ​o​f​ ​c​o​l​l​e​c​t​i​o​n​ ​I​D​s​ ​t​o​ ​b​a​c​k​u​p​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​t​h​e​ ​e​n​t​i​r​e​ ​d​a​t​a​b​a​s​e​ ​w​i​l​l​ ​b​e​ ​b​a​c​k​e​d​ ​u​p​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​c​r​e​a​t​e​ ​s​e​l​e​c​t​i​v​e​ ​b​a​c​k​u​p​s​ ​o​f​ ​s​p​e​c​i​f​i​c​ ​c​o​l​l​e​c​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				restore_from_google_cloud_storage: {
+					/**
+					 * R​e​s​t​o​r​e​ ​f​r​o​m​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e
+					 */
+					displayName: string
+					/**
+					 * I​m​p​o​r​t​ ​F​i​r​e​s​t​o​r​e​ ​d​a​t​a​ ​f​r​o​m​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​s​t​o​r​e​s​ ​F​i​r​e​s​t​o​r​e​ ​d​a​t​a​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​b​a​c​k​u​p​ ​s​t​o​r​e​d​ ​i​n​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​.​ ​T​h​i​s​ ​o​p​e​r​a​t​i​o​n​ ​c​a​n​ ​r​e​s​t​o​r​e​ ​t​h​e​ ​e​n​t​i​r​e​ ​d​a​t​a​b​a​s​e​ ​o​r​ ​s​p​e​c​i​f​i​c​ ​c​o​l​l​e​c​t​i​o​n​s​.​ ​W​a​r​n​i​n​g​:​ ​T​h​i​s​ ​w​i​l​l​ ​o​v​e​r​w​r​i​t​e​ ​e​x​i​s​t​i​n​g​ ​d​o​c​u​m​e​n​t​s​ ​w​i​t​h​ ​t​h​e​ ​s​a​m​e​ ​I​D​s​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​h​e​ ​d​a​t​a​ ​w​i​l​l​ ​b​e​ ​r​e​s​t​o​r​e​d
+							 */
+							longDesc: string
+						}
+						input_uri_prefix: {
+							/**
+							 * I​n​p​u​t​ ​U​R​I​ ​P​r​e​f​i​x
+							 */
+							displayName: string
+							/**
+							 * G​C​S​ ​b​u​c​k​e​t​ ​U​R​I​ ​w​h​e​r​e​ ​b​a​c​k​u​p​ ​i​s​ ​s​t​o​r​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​ ​U​R​I​ ​p​r​e​f​i​x​ ​w​h​e​r​e​ ​t​h​e​ ​b​a​c​k​u​p​ ​f​i​l​e​s​ ​a​r​e​ ​l​o​c​a​t​e​d​.​ ​T​h​i​s​ ​s​h​o​u​l​d​ ​m​a​t​c​h​ ​t​h​e​ ​o​u​t​p​u​t​_​u​r​i​_​p​r​e​f​i​x​ ​u​s​e​d​ ​w​h​e​n​ ​c​r​e​a​t​i​n​g​ ​t​h​e​ ​b​a​c​k​u​p​.​ ​F​o​r​m​a​t​:​ ​g​s​:​/​/​b​u​c​k​e​t​-​n​a​m​e​/​p​a​t​h​/​t​o​/​b​a​c​k​u​p
+							 */
+							longDesc: string
+						}
+						collection_ids: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​c​o​l​l​e​c​t​i​o​n​s​ ​t​o​ ​r​e​s​t​o​r​e​ ​(​o​p​t​i​o​n​a​l​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​l​i​s​t​ ​o​f​ ​c​o​l​l​e​c​t​i​o​n​ ​I​D​s​ ​t​o​ ​r​e​s​t​o​r​e​ ​f​r​o​m​ ​t​h​e​ ​b​a​c​k​u​p​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​a​l​l​ ​c​o​l​l​e​c​t​i​o​n​s​ ​i​n​ ​t​h​e​ ​b​a​c​k​u​p​ ​w​i​l​l​ ​b​e​ ​r​e​s​t​o​r​e​d​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​s​e​l​e​c​t​i​v​e​l​y​ ​r​e​s​t​o​r​e​ ​s​p​e​c​i​f​i​c​ ​c​o​l​l​e​c​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Sentry: {
 			/**
 			 * S​e​n​t​r​y
@@ -78442,6 +79472,1036 @@ export type TranslationFunctions = {
 									}
 								}
 							}
+						}
+					}
+				}
+			}
+		}
+		Firestore: {
+			/**
+			 * Firestore
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Google Cloud Firestore to manage your NoSQL document database.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Firestore integration enables you to interact with Google Cloud Firestore, a flexible, scalable NoSQL cloud database. Create, read, update, and delete documents, manage collections, and execute queries to automate your document database operations seamlessly.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_document: {
+					/**
+					 * New Document
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new document is created in a Firestore collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a Firestore collection for newly created documents. Documents are ordered based on your specified criteria, and the trigger activates when new documents appear at the top of the ordered list. You can optionally filter documents and customize the ordering to track specific types of documents.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Cloud project ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier for your Google Cloud project containing the Firestore database
+							 */
+							longDesc: () => LocalizedString
+						}
+						collection_path: {
+							/**
+							 * Collection Path
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The path to the Firestore collection
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The full path to the collection you want to monitor. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection
+							 */
+							longDesc: () => LocalizedString
+						}
+						filters: {
+							/**
+							 * Filters
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional filters to apply to documents
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Define one or more filters to narrow down which documents will trigger the event. Multiple filters are combined with AND logic.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * Field
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The document field to filter on
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Select the field name in the document that you want to filter
+											 */
+											longDesc: () => LocalizedString
+										}
+										operator: {
+											/**
+											 * Operator
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The comparison operator
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The comparison operation to perform between the field value and your specified value
+											 */
+											longDesc: () => LocalizedString
+										}
+										value: {
+											/**
+											 * Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The value to compare against
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The value to use in the comparison. The value will be automatically converted to the appropriate type (string, number, boolean, or null)
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						order_by: {
+							/**
+							 * Order By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specify how to order documents
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Define the ordering criteria for documents. The trigger will activate for documents that appear at the top of the ordered list. If not specified, documents are ordered by creation time in descending order (newest first).
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to order by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the document field to use for ordering
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose ascending (oldest/smallest first) or descending (newest/largest first) order
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			actions: {
+				list_projects: {
+					/**
+					 * List Projects
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all Google Cloud projects accessible with the current credentials
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of all Google Cloud projects that are accessible with your credentials. You can filter projects by name and use pagination to navigate through large result sets. This is useful for discovering which projects contain Firestore databases.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Project Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter projects by name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to search for projects containing this name. The search is case-insensitive and matches partial names.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of projects to return per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of projects to return in a single request. Default is 100. Use this with pagination tokens to retrieve large result sets.
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_page_token: {
+							/**
+							 * Next Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for retrieving the next page of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Pagination token obtained from a previous request. Use this to retrieve the next page of projects when there are more results than the page size.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_document: {
+					/**
+					 * Create Document
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new document in a Firestore collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new document in the specified Firestore collection. You can either let Firestore auto-generate a document ID or provide your own. The document data can be specified through structured fields or as a custom hash object.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Cloud project ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier for your Google Cloud project containing the Firestore database
+							 */
+							longDesc: () => LocalizedString
+						}
+						collection_path: {
+							/**
+							 * Collection Path
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The path to the Firestore collection
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The full path to the collection where the document will be created. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection
+							 */
+							longDesc: () => LocalizedString
+						}
+						document_id: {
+							/**
+							 * Document ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom document ID (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional custom identifier for the document. If not provided, Firestore will auto-generate a unique ID. Document IDs must be valid UTF-8 strings and cannot contain forward slashes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						data: {
+							/**
+							 * Document Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The data to store in the document
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The structured data to store in the document. This will be dynamically typed based on the collection schema if available. Each field will be stored with its appropriate Firestore data type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						additional_data: {
+							/**
+							 * Additional Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional fields to include in the document
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional additional fields to merge with the structured data. Use this to add fields that are not part of the predefined schema or to include dynamic fields.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_document: {
+					/**
+					 * Get Document
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific document from a Firestore collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a single document by its ID from a Firestore collection. Returns the complete document data including metadata such as creation time and last update time. This action will fail if the document does not exist.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Cloud project ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier for your Google Cloud project containing the Firestore database
+							 */
+							longDesc: () => LocalizedString
+						}
+						collection_path: {
+							/**
+							 * Collection Path
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The path to the Firestore collection
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The full path to the collection containing the document. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection
+							 */
+							longDesc: () => LocalizedString
+						}
+						document_id: {
+							/**
+							 * Document ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the document to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the document you want to retrieve. This is the document ID that was either auto-generated or specified when the document was created.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_document: {
+					/**
+					 * Update Document
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing document in a Firestore collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates an existing document in Firestore with new data. You can choose to merge the new data with existing fields or replace the entire document. By default, the update merges new fields while preserving unspecified fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Cloud project ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier for your Google Cloud project containing the Firestore database
+							 */
+							longDesc: () => LocalizedString
+						}
+						collection_path: {
+							/**
+							 * Collection Path
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The path to the Firestore collection
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The full path to the collection containing the document. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection
+							 */
+							longDesc: () => LocalizedString
+						}
+						document_id: {
+							/**
+							 * Document ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the document to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the document you want to update. The document must exist or the operation will fail.
+							 */
+							longDesc: () => LocalizedString
+						}
+						data: {
+							/**
+							 * Document Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new data for the document
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The data to update in the document. When merge is enabled, only the specified fields will be updated. When merge is disabled, this data will replace the entire document.
+							 */
+							longDesc: () => LocalizedString
+						}
+						additional_data: {
+							/**
+							 * Additional Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional fields to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional additional fields to merge with the structured data. Use this to update fields that are not part of the predefined schema or to include dynamic fields.
+							 */
+							longDesc: () => LocalizedString
+						}
+						merge: {
+							/**
+							 * Merge
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to merge with existing data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When true (default), only the specified fields are updated and other fields remain unchanged. When false, the entire document is replaced with the new data.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_document: {
+					/**
+					 * Delete Document
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a document from a Firestore collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently deletes a document from a Firestore collection. This operation cannot be undone. The document must exist or the operation will fail. All subcollections under the document will NOT be automatically deleted.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Cloud project ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier for your Google Cloud project containing the Firestore database
+							 */
+							longDesc: () => LocalizedString
+						}
+						collection_path: {
+							/**
+							 * Collection Path
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The path to the Firestore collection
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The full path to the collection containing the document. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection
+							 */
+							longDesc: () => LocalizedString
+						}
+						document_id: {
+							/**
+							 * Document ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the document to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the document you want to delete. The document must exist or the operation will fail.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_documents: {
+					/**
+					 * List Documents
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all documents in a Firestore collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves all documents from a specified Firestore collection. You can limit the number of results and specify ordering criteria. This action returns the complete document data along with metadata for each document.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Cloud project ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier for your Google Cloud project containing the Firestore database
+							 */
+							longDesc: () => LocalizedString
+						}
+						collection_path: {
+							/**
+							 * Collection Path
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The path to the Firestore collection
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The full path to the collection whose documents you want to list. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of documents to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of documents to retrieve. Default is 100. Use this to control the size of the result set and improve performance.
+							 */
+							longDesc: () => LocalizedString
+						}
+						order_by: {
+							/**
+							 * Order By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to order documents by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional field name to use for ordering the documents. The field must exist in the documents and be of a comparable type (string, number, date).
+							 */
+							longDesc: () => LocalizedString
+						}
+						order_direction: {
+							/**
+							 * Order Direction
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort direction for ordering
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The direction to sort documents when an order_by field is specified. Choose ascending for lowest to highest or descending for highest to lowest.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_collections: {
+					/**
+					 * List Collections
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all collections in a Firestore database or document
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves all collection IDs at the root level of a Firestore database or within a specific document. This is useful for discovering the structure of your Firestore database and navigating nested collections.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Cloud project ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier for your Google Cloud project containing the Firestore database
+							 */
+							longDesc: () => LocalizedString
+						}
+						parent_document_path: {
+							/**
+							 * Parent Document Path
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Path to the parent document (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional path to a document whose subcollections you want to list. If not specified, lists root-level collections. Format: collection_id/document_id
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_collection: {
+					/**
+					 * Get Collection
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get information about a Firestore collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves metadata and information about a specific Firestore collection. This includes checking if the collection exists, whether it has documents, and optionally retrieving sample documents from the collection.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Cloud project ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier for your Google Cloud project containing the Firestore database
+							 */
+							longDesc: () => LocalizedString
+						}
+						collection_id: {
+							/**
+							 * Collection ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the collection
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The identifier of the collection you want to retrieve information about. This is the collection name without any parent path.
+							 */
+							longDesc: () => LocalizedString
+						}
+						parent_document_path: {
+							/**
+							 * Parent Document Path
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Path to the parent document (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional path to the parent document if this is a subcollection. If not specified, assumes this is a root-level collection. Format: collection_id/document_id
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_sample_documents: {
+							/**
+							 * Include Sample Documents
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to include sample documents
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When true, includes sample documents from the collection in the response. This helps you understand the structure and content of the collection.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sample_limit: {
+							/**
+							 * Sample Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of sample documents to include
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of sample documents to retrieve when include_sample_documents is true. Default is 5.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				query_documents: {
+					/**
+					 * Query Documents
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Query documents in a Firestore collection with filters and ordering
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Performs advanced queries on a Firestore collection with support for multiple filters, ordering, and limits. This allows you to search for specific documents based on field values and retrieve them in a particular order.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Cloud project ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier for your Google Cloud project containing the Firestore database
+							 */
+							longDesc: () => LocalizedString
+						}
+						collection_path: {
+							/**
+							 * Collection Path
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The path to the Firestore collection
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The full path to the collection you want to query. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection
+							 */
+							longDesc: () => LocalizedString
+						}
+						filters: {
+							/**
+							 * Filters
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter criteria for documents
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional list of filters to apply to the query. Multiple filters are combined with AND logic. Each filter specifies a field, comparison operator, and value to match.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * Field
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The document field to filter on
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The name of the field in the document to apply the filter to. The field must exist in the documents being queried.
+											 */
+											longDesc: () => LocalizedString
+										}
+										operator: {
+											/**
+											 * Operator
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The comparison operator
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The comparison operator to use for filtering. Options include equality, inequality, comparison operators, and array operators.
+											 */
+											longDesc: () => LocalizedString
+										}
+										value: {
+											/**
+											 * Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The value to compare against
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The value to use in the comparison. The value type should match the field type in the documents (string, number, boolean, etc.).
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						order_by: {
+							/**
+							 * Order By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Ordering criteria for results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional list of ordering criteria to apply to the query results. Documents will be sorted by the specified fields in the order they are listed.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * Field
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The field to order by
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The name of the field to use for ordering. The field must exist in the documents and be of a comparable type.
+											 */
+											longDesc: () => LocalizedString
+										}
+										direction: {
+											/**
+											 * Direction
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Sort direction
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The direction to sort: ascending (lowest to highest) or descending (highest to lowest).
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of documents to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of documents to retrieve. Default is 100. Use this to control query performance and result set size.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				backup_to_google_cloud_storage: {
+					/**
+					 * Backup to Google Cloud Storage
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Export Firestore data to Google Cloud Storage
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a backup of your Firestore database or specific collections by exporting the data to Google Cloud Storage. This is useful for disaster recovery, data migration, or creating snapshots of your database at a point in time.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Cloud project ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier for your Google Cloud project containing the Firestore database to backup
+							 */
+							longDesc: () => LocalizedString
+						}
+						output_uri_prefix: {
+							/**
+							 * Output URI Prefix
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * GCS bucket URI where backup will be stored
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Google Cloud Storage URI prefix where the backup files will be written. Format: gs://bucket-name/path/to/backup. The bucket must already exist and you must have write permissions.
+							 */
+							longDesc: () => LocalizedString
+						}
+						collection_ids: {
+							/**
+							 * Collection IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific collections to backup (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional list of collection IDs to backup. If not specified, the entire database will be backed up. Use this to create selective backups of specific collections.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				restore_from_google_cloud_storage: {
+					/**
+					 * Restore from Google Cloud Storage
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Import Firestore data from Google Cloud Storage
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Restores Firestore data from a previous backup stored in Google Cloud Storage. This operation can restore the entire database or specific collections. Warning: This will overwrite existing documents with the same IDs.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Cloud project ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier for your Google Cloud project where the data will be restored
+							 */
+							longDesc: () => LocalizedString
+						}
+						input_uri_prefix: {
+							/**
+							 * Input URI Prefix
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * GCS bucket URI where backup is stored
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Google Cloud Storage URI prefix where the backup files are located. This should match the output_uri_prefix used when creating the backup. Format: gs://bucket-name/path/to/backup
+							 */
+							longDesc: () => LocalizedString
+						}
+						collection_ids: {
+							/**
+							 * Collection IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific collections to restore (optional)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional list of collection IDs to restore from the backup. If not specified, all collections in the backup will be restored. Use this to selectively restore specific collections.
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}

@@ -14,8 +14,10 @@ import { getFacebookCommentIdAllowedValues } from '../apps/facebook-pages/helper
 import { getFacebookPageIdAllowedValues } from '../apps/facebook-pages/helpers/get-page-id-allowed-values';
 import { getFacebookPostIdAllowedValues } from '../apps/facebook-pages/helpers/get-post-id-allowed-values';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import { configDotenv } from 'dotenv';
 
 Debugger.level = DebugLevels.Verbose;
+configDotenv({ path: '.env' });
 
 describe('Facebook', () => {
   const base_context = {

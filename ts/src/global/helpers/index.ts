@@ -323,6 +323,7 @@ export const normalizeName = (appName: string): string => {
 export const humanizeNameTitle = (normalizedName: string): string => {
   return normalizedName
     .replace(/_/g, ' ')
+    .replace(/([a-z])([A-Z])/g, '$1 $2')
     .toLowerCase()
     .replace(/\b\w/g, (l) => l.toUpperCase());
 };
