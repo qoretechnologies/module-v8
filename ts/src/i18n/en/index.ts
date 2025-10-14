@@ -76,10 +76,12 @@ import YouTube from './apps/YouTube';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
 import Firestore from './apps/Firestore';
+import Firebase from './apps/Firebase';
 
 const en = {
   common: {},
   apps: {
+    Firebase,
     Supabase,
     Firestore,
     Sentry,

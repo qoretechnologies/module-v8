@@ -16,6 +16,20 @@ type RootTranslation = {
 	common: {
 	}
 	apps: {
+		Firebase: {
+			/**
+			 * F​i​r​e​b​a​s​e
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​F​i​r​e​b​a​s​e​ ​t​o​ ​m​a​n​a​g​e​ ​u​s​e​r​s​,​ ​s​e​n​d​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​a​n​d​ ​h​a​n​d​l​e​ ​c​l​o​u​d​ ​s​t​o​r​a​g​e​ ​o​p​e​r​a​t​i​o​n​s
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​F​i​r​e​b​a​s​e​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​c​e​s​s​ ​t​o​ ​F​i​r​e​b​a​s​e​ ​s​e​r​v​i​c​e​s​ ​i​n​c​l​u​d​i​n​g​ ​A​u​t​h​e​n​t​i​c​a​t​i​o​n​,​ ​C​l​o​u​d​ ​M​e​s​s​a​g​i​n​g​,​ ​a​n​d​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​.​ ​M​a​n​a​g​e​ ​u​s​e​r​ ​a​c​c​o​u​n​t​s​,​ ​s​e​n​d​ ​p​u​s​h​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​t​o​ ​d​e​v​i​c​e​s​,​ ​o​r​g​a​n​i​z​e​ ​t​o​p​i​c​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​,​ ​a​n​d​ ​h​a​n​d​l​e​ ​f​i​l​e​ ​s​t​o​r​a​g​e​ ​o​p​e​r​a​t​i​o​n​s​ ​a​c​r​o​s​s​ ​b​u​c​k​e​t​s​.​ ​W​h​e​t​h​e​r​ ​y​o​u​ ​n​e​e​d​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​u​s​e​r​ ​d​a​t​a​,​ ​b​r​o​a​d​c​a​s​t​ ​m​e​s​s​a​g​e​s​,​ ​o​r​ ​m​a​n​a​g​e​ ​c​l​o​u​d​ ​f​i​l​e​s​,​ ​t​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​s​t​r​e​a​m​l​i​n​e​s​ ​y​o​u​r​ ​F​i​r​e​b​a​s​e​ ​w​o​r​k​f​l​o​w​ ​a​u​t​o​m​a​t​i​o​n​ ​a​n​d​ ​b​a​c​k​e​n​d​ ​m​a​n​a​g​e​m​e​n​t​.
+			 */
+			longDesc: string
+		}
 		Supabase: {
 			/**
 			 * S​u​p​a​b​a​s​e
@@ -78823,6 +78837,20 @@ export type TranslationFunctions = {
 	common: {
 	}
 	apps: {
+		Firebase: {
+			/**
+			 * Firebase
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Firebase to manage users, send notifications, and handle cloud storage operations
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Firebase integration provides comprehensive access to Firebase services including Authentication, Cloud Messaging, and Cloud Storage. Manage user accounts, send push notifications to devices, organize topic subscriptions, and handle file storage operations across buckets. Whether you need to retrieve user data, broadcast messages, or manage cloud files, this integration streamlines your Firebase workflow automation and backend management.
+			 */
+			longDesc: () => LocalizedString
+		}
 		Supabase: {
 			/**
 			 * Supabase

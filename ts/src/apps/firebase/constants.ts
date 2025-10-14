@@ -1,0 +1,32 @@
+export class FirebaseError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'FirebaseError';
+  }
+}
+
+export const FIREBASE_APP_NAME = 'Firebase';
+
+export const FIREBASE_APP_LOGO =
+  'PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDYwMCA2MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0yMTMuOTE4IDU2MC40OTlDMjM3LjE2NiA1NjkuODU2IDI2Mi4zODcgNTc1LjQwOCAyODguODcgNTc2LjMzM0MzMjQuNzEgNTc3LjU4NSAzNTguNzkyIDU3MC4xNzUgMzg5LjI2MSA1NTYuMDk5QzM1Mi43MjQgNTQxLjc0NCAzMTkuNjM0IDUyMC43NTEgMjkxLjM5MiA0OTQuNjUxQzI3My4wODYgNTIzLjk2MSAyNDYuMDEgNTQ3LjExMyAyMTMuOTE4IDU2MC40OTlaIiBmaWxsPSIjRkY5MTAwIi8+CjxwYXRoIGQ9Ik0yOTEuMzg5IDQ5NC42NkMyMjYuOTIzIDQzNS4wMzggMTg3LjgxNSAzNDguNzQzIDE5MS4xMiAyNTQuMDkyQzE5MS4yMjggMjUxLjAxOSAxOTEuMzkgMjQ3Ljk0NyAxOTEuNTggMjQ0Ljg3NkMxODAuMDM0IDI0MS44OSAxNjcuOTggMjQwLjA2OCAxNTUuNTc2IDIzOS42MzVDMTM3LjgyMSAyMzkuMDE1IDEyMC42MjYgMjQxLjIxNyAxMDQuMzkzIDI0NS43ODhDODcuMTgzOCAyNzUuOTMzIDc2Ljc5ODkgMzEwLjUyMSA3NS41MDUxIDM0Ny41NjlDNzIuMTY2MyA0NDMuMTggMTMwLjAyNyA1MjYuNzIzIDIxMy45MTQgNTYwLjUwOEMyNDYuMDA3IDU0Ny4xMjEgMjczLjA4MiA1MjMuOTk4IDI5MS4zODkgNDk0LjY2WiIgZmlsbD0iI0ZGQzQwMCIvPgo8cGF0aCBkPSJNMjkxLjM5IDQ5NC42NTdDMzA2LjM3OCA0NzAuNjcxIDMxNS40NjUgNDQyLjU1MSAzMTYuNTIzIDQxMi4yNTRDMzE5LjMwNiAzMzIuNTU5IDI2NS43MzEgMjY0LjAwMyAxOTEuNTgxIDI0NC44NzNDMTkxLjM5MSAyNDcuOTQ0IDE5MS4yMjkgMjUxLjAxNiAxOTEuMTIxIDI1NC4wODlDMTg3LjgxNiAzNDguNzQgMjI2LjkyNCA0MzUuMDM1IDI5MS4zOSA0OTQuNjU3WiIgZmlsbD0iI0ZGOTEwMCIvPgo8cGF0aCBkPSJNMzA4LjIzMSAyMC44NTg0QzI2NiA1NC42OTA4IDIzMi42NTIgOTkuMzAyIDIxMi40NzUgMTUwLjY5M0MyMDAuOTI0IDE4MC4xMjkgMTkzLjY2NSAyMTEuNzQ4IDE5MS41NDYgMjQ0Ljg5M0MyNjUuNjk2IDI2NC4wMjMgMzE5LjI3MiAzMzIuNTc5IDMxNi40ODkgNDEyLjI3M0MzMTUuNDMxIDQ0Mi41NyAzMDYuMzE3IDQ3MC42NjMgMjkxLjM1NSA0OTQuNjc3QzMxOS41OTUgNTIwLjgwNCAzNTIuNjg2IDU0MS43NyAzODkuMjIzIDU1Ni4xMjRDNDYyLjU2IDUyMi4yMjQgNTE0LjU5MyA0NDkuMjc4IDUxNy42MDYgMzYyLjk5N0M1MTkuNTU4IDMwNy4wOTYgNDk4LjA4IDI1Ny4yNzMgNDY3LjczMSAyMTUuMjE5QzQzNS42OCAxNzAuNzQyIDMwOC4yMzEgMjAuODU4NCAzMDguMjMxIDIwLjg1ODRaIiBmaWxsPSIjREQyQzAwIi8+Cjwvc3ZnPgo=';
+
+export const getFirebaseErrorMessage = (error: any) => {
+  if (!error?.message) {
+    return error?.toString() || 'An unknown error occurred';
+  }
+
+  if (error.response?.data?.error?.message) {
+    return error.response.data.error.message;
+  }
+
+  if (error.message.trim().startsWith('{')) {
+    try {
+      const errorData = JSON.parse(error.message);
+      return errorData.error?.message || error.message;
+    } catch (e) {
+      return error.message;
+    }
+  }
+
+  return error.message;
+};
