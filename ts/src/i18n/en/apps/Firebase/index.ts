@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 const FirebaseAppEn = {
   displayName: 'Firebase',
-  shortDesc: 'Connect to Firebase to manage storage, authentication, and push notifications',
+  shortDesc: 'Connect to Firebase to manage files, users and push notifications',
   longDesc:
     'The Firebase integration provides comprehensive access to Firebase services including Cloud Storage for file management, Authentication for user management, and Firebase Cloud Messaging for push notifications. Automate file uploads, user account operations, and notification delivery across your Firebase projects.',
   actions: {

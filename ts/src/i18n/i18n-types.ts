@@ -22,13 +22,581 @@ type RootTranslation = {
 			 */
 			displayName: string
 			/**
-			 * C​o​n​n​e​c​t​ ​t​o​ ​F​i​r​e​b​a​s​e​ ​t​o​ ​m​a​n​a​g​e​ ​u​s​e​r​s​,​ ​s​e​n​d​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​a​n​d​ ​h​a​n​d​l​e​ ​c​l​o​u​d​ ​s​t​o​r​a​g​e​ ​o​p​e​r​a​t​i​o​n​s
+			 * C​o​n​n​e​c​t​ ​t​o​ ​F​i​r​e​b​a​s​e​ ​t​o​ ​m​a​n​a​g​e​ ​f​i​l​e​s​,​ ​u​s​e​r​s​ ​a​n​d​ ​p​u​s​h​ ​n​o​t​i​f​i​c​a​t​i​o​n​s
 			 */
 			shortDesc: string
 			/**
-			 * T​h​e​ ​F​i​r​e​b​a​s​e​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​c​e​s​s​ ​t​o​ ​F​i​r​e​b​a​s​e​ ​s​e​r​v​i​c​e​s​ ​i​n​c​l​u​d​i​n​g​ ​A​u​t​h​e​n​t​i​c​a​t​i​o​n​,​ ​C​l​o​u​d​ ​M​e​s​s​a​g​i​n​g​,​ ​a​n​d​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​.​ ​M​a​n​a​g​e​ ​u​s​e​r​ ​a​c​c​o​u​n​t​s​,​ ​s​e​n​d​ ​p​u​s​h​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​t​o​ ​d​e​v​i​c​e​s​,​ ​o​r​g​a​n​i​z​e​ ​t​o​p​i​c​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​,​ ​a​n​d​ ​h​a​n​d​l​e​ ​f​i​l​e​ ​s​t​o​r​a​g​e​ ​o​p​e​r​a​t​i​o​n​s​ ​a​c​r​o​s​s​ ​b​u​c​k​e​t​s​.​ ​W​h​e​t​h​e​r​ ​y​o​u​ ​n​e​e​d​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​u​s​e​r​ ​d​a​t​a​,​ ​b​r​o​a​d​c​a​s​t​ ​m​e​s​s​a​g​e​s​,​ ​o​r​ ​m​a​n​a​g​e​ ​c​l​o​u​d​ ​f​i​l​e​s​,​ ​t​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​s​t​r​e​a​m​l​i​n​e​s​ ​y​o​u​r​ ​F​i​r​e​b​a​s​e​ ​w​o​r​k​f​l​o​w​ ​a​u​t​o​m​a​t​i​o​n​ ​a​n​d​ ​b​a​c​k​e​n​d​ ​m​a​n​a​g​e​m​e​n​t​.
+			 * T​h​e​ ​F​i​r​e​b​a​s​e​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​c​e​s​s​ ​t​o​ ​F​i​r​e​b​a​s​e​ ​s​e​r​v​i​c​e​s​ ​i​n​c​l​u​d​i​n​g​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​ ​f​o​r​ ​f​i​l​e​ ​m​a​n​a​g​e​m​e​n​t​,​ ​A​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​f​o​r​ ​u​s​e​r​ ​m​a​n​a​g​e​m​e​n​t​,​ ​a​n​d​ ​F​i​r​e​b​a​s​e​ ​C​l​o​u​d​ ​M​e​s​s​a​g​i​n​g​ ​f​o​r​ ​p​u​s​h​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​.​ ​A​u​t​o​m​a​t​e​ ​f​i​l​e​ ​u​p​l​o​a​d​s​,​ ​u​s​e​r​ ​a​c​c​o​u​n​t​ ​o​p​e​r​a​t​i​o​n​s​,​ ​a​n​d​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​d​e​l​i​v​e​r​y​ ​a​c​r​o​s​s​ ​y​o​u​r​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​s​.
 			 */
 			longDesc: string
+			actions: {
+				list_users: {
+					/**
+					 * L​i​s​t​ ​U​s​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​u​s​e​r​s​ ​f​r​o​m​ ​F​i​r​e​b​a​s​e​ ​A​u​t​h​e​n​t​i​c​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​u​s​e​r​s​ ​f​r​o​m​ ​F​i​r​e​b​a​s​e​ ​A​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​R​e​t​u​r​n​s​ ​u​s​e​r​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​i​n​g​ ​e​m​a​i​l​,​ ​d​i​s​p​l​a​y​ ​n​a​m​e​,​ ​v​e​r​i​f​i​c​a​t​i​o​n​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​m​e​t​a​d​a​t​a​.​ ​U​s​e​ ​p​a​g​i​n​a​t​i​o​n​ ​p​a​r​a​m​e​t​e​r​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​l​a​r​g​e​ ​u​s​e​r​ ​l​i​s​t​s​ ​e​f​f​i​c​i​e​n​t​l​y​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​q​u​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​ ​f​r​o​m​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​u​s​e​r​s​.​ ​T​h​e​ ​p​r​o​j​e​c​t​ ​m​u​s​t​ ​h​a​v​e​ ​F​i​r​e​b​a​s​e​ ​A​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​e​n​a​b​l​e​d​.
+							 */
+							longDesc: string
+						}
+						max_results: {
+							/**
+							 * M​a​x​ ​R​e​s​u​l​t​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​s​e​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​s​e​r​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​1​0​0​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.​ ​U​s​e​ ​p​a​g​i​n​a​t​i​o​n​ ​f​o​r​ ​l​a​r​g​e​r​ ​d​a​t​a​s​e​t​s​.
+							 */
+							longDesc: string
+						}
+						next_page_token: {
+							/**
+							 * N​e​x​t​ ​P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​k​e​n​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​s​e​t​ ​o​f​ ​u​s​e​r​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​f​o​r​ ​t​h​e​ ​f​i​r​s​t​ ​p​a​g​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_user: {
+					/**
+					 * G​e​t​ ​U​s​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​F​i​r​e​b​a​s​e​ ​u​s​e​r
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​u​s​e​r​ ​f​r​o​m​ ​F​i​r​e​b​a​s​e​ ​A​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​e​m​a​i​l​,​ ​d​i​s​p​l​a​y​ ​n​a​m​e​,​ ​p​h​o​t​o​ ​U​R​L​,​ ​v​e​r​i​f​i​c​a​t​i​o​n​ ​s​t​a​t​u​s​,​ ​a​c​c​o​u​n​t​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​a​t​t​r​i​b​u​t​e​s​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​u​s​e​r​ ​p​r​o​f​i​l​e​ ​l​o​o​k​u​p​s​ ​a​n​d​ ​a​c​c​o​u​n​t​ ​v​e​r​i​f​i​c​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​u​s​e​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​h​e​ ​u​s​e​r​ ​a​c​c​o​u​n​t​ ​e​x​i​s​t​s​.​ ​T​h​e​ ​p​r​o​j​e​c​t​ ​m​u​s​t​ ​h​a​v​e​ ​F​i​r​e​b​a​s​e​ ​A​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​e​n​a​b​l​e​d​.
+							 */
+							longDesc: string
+						}
+						user_id: {
+							/**
+							 * U​s​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​u​s​e​r
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​F​i​r​e​b​a​s​e​ ​u​s​e​r​ ​I​D​ ​(​l​o​c​a​l​I​d​)​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​s​e​ ​d​e​t​a​i​l​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​T​h​i​s​ ​i​s​ ​t​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​a​s​s​i​g​n​e​d​ ​b​y​ ​F​i​r​e​b​a​s​e​ ​A​u​t​h​e​n​t​i​c​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				send_push_notification: {
+					/**
+					 * S​e​n​d​ ​P​u​s​h​ ​N​o​t​i​f​i​c​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​p​u​s​h​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​v​i​a​ ​F​i​r​e​b​a​s​e​ ​C​l​o​u​d​ ​M​e​s​s​a​g​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​s​ ​p​u​s​h​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​d​e​v​i​c​e​ ​t​o​k​e​n​s​ ​o​r​ ​t​o​p​i​c​s​ ​u​s​i​n​g​ ​F​i​r​e​b​a​s​e​ ​C​l​o​u​d​ ​M​e​s​s​a​g​i​n​g​ ​(​F​C​M​)​.​ ​S​u​p​p​o​r​t​s​ ​r​i​c​h​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​w​i​t​h​ ​t​i​t​l​e​s​,​ ​b​o​d​y​ ​t​e​x​t​,​ ​i​m​a​g​e​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​d​a​t​a​ ​p​a​y​l​o​a​d​s​.​ ​C​o​n​f​i​g​u​r​e​ ​p​r​i​o​r​i​t​y​ ​l​e​v​e​l​s​ ​f​o​r​ ​A​n​d​r​o​i​d​ ​a​n​d​ ​i​O​S​ ​d​e​l​i​v​e​r​y​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​ ​f​o​r​ ​s​e​n​d​i​n​g​ ​n​o​t​i​f​i​c​a​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​ ​t​h​a​t​ ​w​i​l​l​ ​s​e​n​d​ ​t​h​e​ ​p​u​s​h​ ​n​o​t​i​f​i​c​a​t​i​o​n​.​ ​T​h​e​ ​p​r​o​j​e​c​t​ ​m​u​s​t​ ​h​a​v​e​ ​F​i​r​e​b​a​s​e​ ​C​l​o​u​d​ ​M​e​s​s​a​g​i​n​g​ ​c​o​n​f​i​g​u​r​e​d​.
+							 */
+							longDesc: string
+						}
+						token_or_topic: {
+							/**
+							 * T​o​k​e​n​ ​o​r​ ​T​o​p​i​c
+							 */
+							displayName: string
+							/**
+							 * D​e​v​i​c​e​ ​t​o​k​e​n​ ​o​r​ ​t​o​p​i​c​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​e​i​t​h​e​r​ ​a​ ​d​e​v​i​c​e​ ​r​e​g​i​s​t​r​a​t​i​o​n​ ​t​o​k​e​n​ ​f​o​r​ ​s​e​n​d​i​n​g​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​e​v​i​c​e​,​ ​o​r​ ​a​ ​t​o​p​i​c​ ​n​a​m​e​ ​(​p​r​e​f​i​x​e​d​ ​w​i​t​h​ ​/​t​o​p​i​c​s​/​)​ ​f​o​r​ ​s​e​n​d​i​n​g​ ​t​o​ ​a​l​l​ ​d​e​v​i​c​e​s​ ​s​u​b​s​c​r​i​b​e​d​ ​t​o​ ​t​h​a​t​ ​t​o​p​i​c​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * N​o​t​i​f​i​c​a​t​i​o​n​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​t​e​x​t​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​d​i​s​p​l​a​y​e​d​ ​i​n​ ​t​h​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​.​ ​K​e​e​p​ ​i​t​ ​c​o​n​c​i​s​e​ ​a​n​d​ ​i​n​f​o​r​m​a​t​i​v​e​.
+							 */
+							longDesc: string
+						}
+						body: {
+							/**
+							 * B​o​d​y
+							 */
+							displayName: string
+							/**
+							 * N​o​t​i​f​i​c​a​t​i​o​n​ ​m​e​s​s​a​g​e​ ​b​o​d​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​i​n​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​m​e​s​s​a​g​e​.​ ​T​h​i​s​ ​t​e​x​t​ ​a​p​p​e​a​r​s​ ​b​e​l​o​w​ ​t​h​e​ ​t​i​t​l​e​ ​i​n​ ​t​h​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​d​i​s​p​l​a​y​.
+							 */
+							longDesc: string
+						}
+						image: {
+							/**
+							 * I​m​a​g​e
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​i​m​a​g​e​ ​U​R​L​ ​f​o​r​ ​t​h​e​ ​n​o​t​i​f​i​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​a​ ​U​R​L​ ​t​o​ ​a​n​ ​i​m​a​g​e​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​d​i​s​p​l​a​y​e​d​ ​i​n​ ​t​h​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​.​ ​T​h​e​ ​i​m​a​g​e​ ​s​h​o​u​l​d​ ​b​e​ ​p​u​b​l​i​c​l​y​ ​a​c​c​e​s​s​i​b​l​e​ ​a​n​d​ ​i​n​ ​a​ ​s​u​p​p​o​r​t​e​d​ ​f​o​r​m​a​t​ ​(​J​P​E​G​,​ ​P​N​G​)​.
+							 */
+							longDesc: string
+						}
+						data: {
+							/**
+							 * D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​d​a​t​a​ ​p​a​y​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​w​i​t​h​ ​t​h​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​.​ ​T​h​i​s​ ​d​a​t​a​ ​c​a​n​ ​b​e​ ​a​c​c​e​s​s​e​d​ ​b​y​ ​y​o​u​r​ ​a​p​p​ ​w​h​e​n​ ​t​h​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​i​s​ ​r​e​c​e​i​v​e​d​.
+							 */
+							longDesc: string
+						}
+						priority: {
+							/**
+							 * P​r​i​o​r​i​t​y
+							 */
+							displayName: string
+							/**
+							 * N​o​t​i​f​i​c​a​t​i​o​n​ ​d​e​l​i​v​e​r​y​ ​p​r​i​o​r​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​p​r​i​o​r​i​t​y​ ​l​e​v​e​l​ ​f​o​r​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​d​e​l​i​v​e​r​y​.​ ​H​i​g​h​ ​p​r​i​o​r​i​t​y​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​a​r​e​ ​d​e​l​i​v​e​r​e​d​ ​i​m​m​e​d​i​a​t​e​l​y​ ​a​n​d​ ​m​a​y​ ​w​a​k​e​ ​t​h​e​ ​d​e​v​i​c​e​.​ ​N​o​r​m​a​l​ ​p​r​i​o​r​i​t​y​ ​a​l​l​o​w​s​ ​f​o​r​ ​m​o​r​e​ ​b​a​t​t​e​r​y​-​e​f​f​i​c​i​e​n​t​ ​d​e​l​i​v​e​r​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				upload_file: {
+					/**
+					 * U​p​l​o​a​d​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​a​ ​f​i​l​e​ ​t​o​ ​F​i​r​e​b​a​s​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​s​ ​a​ ​f​i​l​e​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​b​u​c​k​e​t​ ​i​n​ ​F​i​r​e​b​a​s​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​.​ ​R​e​t​u​r​n​s​ ​m​e​t​a​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​f​i​l​e​ ​p​a​t​h​,​ ​c​o​n​t​e​n​t​ ​t​y​p​e​,​ ​s​i​z​e​,​ ​a​n​d​ ​g​e​n​e​r​a​t​i​o​n​ ​i​n​f​o​r​m​a​t​i​o​n​.​ ​O​p​t​i​o​n​a​l​l​y​ ​i​n​c​l​u​d​e​ ​c​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​w​i​t​h​ ​t​h​e​ ​u​p​l​o​a​d​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​ ​f​o​r​ ​s​t​o​r​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​s​t​o​r​e​d​.​ ​T​h​e​ ​p​r​o​j​e​c​t​ ​m​u​s​t​ ​h​a​v​e​ ​F​i​r​e​b​a​s​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​ ​e​n​a​b​l​e​d​.
+							 */
+							longDesc: string
+						}
+						file_path: {
+							/**
+							 * F​i​l​e​ ​P​a​t​h
+							 */
+							displayName: string
+							/**
+							 * D​e​s​t​i​n​a​t​i​o​n​ ​p​a​t​h​ ​i​n​ ​s​t​o​r​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​f​u​l​l​ ​p​a​t​h​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​l​e​ ​s​h​o​u​l​d​ ​b​e​ ​s​t​o​r​e​d​ ​i​n​ ​t​h​e​ ​b​u​c​k​e​t​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​i​l​e​n​a​m​e​ ​a​n​d​ ​a​n​y​ ​d​i​r​e​c​t​o​r​y​ ​s​t​r​u​c​t​u​r​e​ ​(​e​.​g​.​,​ ​"​i​m​a​g​e​s​/​p​r​o​f​i​l​e​/​a​v​a​t​a​r​.​j​p​g​"​)​.
+							 */
+							longDesc: string
+						}
+						bucket: {
+							/**
+							 * B​u​c​k​e​t
+							 */
+							displayName: string
+							/**
+							 * S​t​o​r​a​g​e​ ​b​u​c​k​e​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​ ​b​u​c​k​e​t​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​u​p​l​o​a​d​e​d​.​ ​T​h​e​ ​b​u​c​k​e​t​ ​m​u​s​t​ ​e​x​i​s​t​ ​i​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						file: {
+							/**
+							 * F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​p​r​o​v​i​d​e​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d​.​ ​T​h​e​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​t​r​a​n​s​f​e​r​r​e​d​ ​t​o​ ​F​i​r​e​b​a​s​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​ ​a​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​p​a​t​h​.
+							 */
+							longDesc: string
+						}
+						metadata: {
+							/**
+							 * M​e​t​a​d​a​t​a
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​w​i​t​h​ ​t​h​e​ ​u​p​l​o​a​d​e​d​ ​f​i​l​e​.​ ​P​r​o​v​i​d​e​ ​a​s​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​r​e​t​r​i​e​v​e​d​ ​l​a​t​e​r​ ​w​i​t​h​ ​t​h​e​ ​f​i​l​e​ ​i​n​f​o​r​m​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_file_metadata: {
+					/**
+					 * G​e​t​ ​F​i​l​e​ ​M​e​t​a​d​a​t​a
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​m​e​t​a​d​a​t​a​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​l​e​ ​i​n​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​m​e​t​a​d​a​t​a​ ​f​o​r​ ​a​ ​f​i​l​e​ ​s​t​o​r​e​d​ ​i​n​ ​F​i​r​e​b​a​s​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​ ​i​n​c​l​u​d​i​n​g​ ​c​o​n​t​e​n​t​ ​t​y​p​e​,​ ​s​i​z​e​,​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​,​ ​u​p​d​a​t​e​ ​d​a​t​e​,​ ​M​D​5​ ​h​a​s​h​,​ ​c​u​s​t​o​m​ ​m​e​t​a​d​a​t​a​,​ ​a​n​d​ ​c​a​c​h​e​ ​c​o​n​t​r​o​l​ ​s​e​t​t​i​n​g​s​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​f​i​l​e​ ​v​e​r​i​f​i​c​a​t​i​o​n​ ​a​n​d​ ​m​a​n​a​g​e​m​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​l​e​ ​i​s​ ​s​t​o​r​e​d​.​ ​T​h​e​ ​p​r​o​j​e​c​t​ ​m​u​s​t​ ​h​a​v​e​ ​F​i​r​e​b​a​s​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​ ​e​n​a​b​l​e​d​.
+							 */
+							longDesc: string
+						}
+						bucket: {
+							/**
+							 * B​u​c​k​e​t
+							 */
+							displayName: string
+							/**
+							 * S​t​o​r​a​g​e​ ​b​u​c​k​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​ ​b​u​c​k​e​t​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​l​e​ ​i​s​ ​l​o​c​a​t​e​d​.​ ​T​h​e​ ​b​u​c​k​e​t​ ​m​u​s​t​ ​e​x​i​s​t​ ​i​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						file_path: {
+							/**
+							 * F​i​l​e​ ​P​a​t​h
+							 */
+							displayName: string
+							/**
+							 * P​a​t​h​ ​t​o​ ​t​h​e​ ​f​i​l​e​ ​i​n​ ​s​t​o​r​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​f​u​l​l​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​f​i​l​e​ ​i​n​ ​t​h​e​ ​b​u​c​k​e​t​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​i​l​e​n​a​m​e​ ​a​n​d​ ​a​n​y​ ​d​i​r​e​c​t​o​r​y​ ​s​t​r​u​c​t​u​r​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_files_in_bucket: {
+					/**
+					 * L​i​s​t​ ​F​i​l​e​s​ ​i​n​ ​B​u​c​k​e​t
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​f​i​l​e​s​ ​i​n​ ​a​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​ ​b​u​c​k​e​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​f​i​l​e​s​ ​f​r​o​m​ ​a​ ​F​i​r​e​b​a​s​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​ ​b​u​c​k​e​t​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​p​r​e​f​i​x​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​.​ ​R​e​t​u​r​n​s​ ​f​i​l​e​ ​m​e​t​a​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​p​a​t​h​s​,​ ​c​o​n​t​e​n​t​ ​t​y​p​e​s​,​ ​s​i​z​e​s​,​ ​a​n​d​ ​t​i​m​e​s​t​a​m​p​s​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​b​r​o​w​s​i​n​g​ ​a​n​d​ ​m​a​n​a​g​i​n​g​ ​s​t​o​r​e​d​ ​f​i​l​e​s​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​b​u​c​k​e​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​h​e​ ​s​t​o​r​a​g​e​ ​b​u​c​k​e​t​ ​e​x​i​s​t​s​.​ ​T​h​e​ ​p​r​o​j​e​c​t​ ​m​u​s​t​ ​h​a​v​e​ ​F​i​r​e​b​a​s​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​ ​e​n​a​b​l​e​d​.
+							 */
+							longDesc: string
+						}
+						bucket: {
+							/**
+							 * B​u​c​k​e​t
+							 */
+							displayName: string
+							/**
+							 * S​t​o​r​a​g​e​ ​b​u​c​k​e​t​ ​t​o​ ​l​i​s​t​ ​f​i​l​e​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​ ​b​u​c​k​e​t​ ​w​h​o​s​e​ ​f​i​l​e​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t​.​ ​T​h​e​ ​b​u​c​k​e​t​ ​m​u​s​t​ ​e​x​i​s​t​ ​i​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						prefix: {
+							/**
+							 * P​r​e​f​i​x
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​r​e​f​i​x​ ​t​o​ ​f​i​l​t​e​r​ ​f​i​l​e​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​s​u​l​t​s​ ​t​o​ ​o​n​l​y​ ​i​n​c​l​u​d​e​ ​f​i​l​e​s​ ​w​h​o​s​e​ ​p​a​t​h​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​t​h​i​s​ ​p​r​e​f​i​x​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​l​i​s​t​i​n​g​ ​f​i​l​e​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​i​r​e​c​t​o​r​y​ ​o​r​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​n​a​m​i​n​g​ ​p​a​t​t​e​r​n​.
+							 */
+							longDesc: string
+						}
+						max_results: {
+							/**
+							 * M​a​x​ ​R​e​s​u​l​t​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​f​i​l​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​f​i​l​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​r​e​q​u​e​s​t​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​1​0​0​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.​ ​U​s​e​ ​p​a​g​i​n​a​t​i​o​n​ ​f​o​r​ ​l​a​r​g​e​r​ ​r​e​s​u​l​t​ ​s​e​t​s​.
+							 */
+							longDesc: string
+						}
+						page_token: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​k​e​n​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​s​e​t​ ​o​f​ ​f​i​l​e​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​f​o​r​ ​t​h​e​ ​f​i​r​s​t​ ​p​a​g​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_buckets: {
+					/**
+					 * L​i​s​t​ ​B​u​c​k​e​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​ ​b​u​c​k​e​t​s​ ​i​n​ ​a​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​l​l​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​ ​b​u​c​k​e​t​s​ ​c​o​n​f​i​g​u​r​e​d​ ​f​o​r​ ​a​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​.​ ​R​e​t​u​r​n​s​ ​b​u​c​k​e​t​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​s​,​ ​l​o​c​a​t​i​o​n​s​,​ ​s​t​o​r​a​g​e​ ​c​l​a​s​s​e​s​,​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​s​,​ ​a​n​d​ ​u​p​d​a​t​e​ ​t​i​m​e​s​t​a​m​p​s​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​b​u​c​k​e​t​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​d​i​s​c​o​v​e​r​y​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​q​u​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​ ​w​h​o​s​e​ ​s​t​o​r​a​g​e​ ​b​u​c​k​e​t​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t​.​ ​T​h​e​ ​p​r​o​j​e​c​t​ ​m​u​s​t​ ​h​a​v​e​ ​F​i​r​e​b​a​s​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​ ​e​n​a​b​l​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_file: {
+					/**
+					 * D​e​l​e​t​e​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​f​i​l​e​ ​f​r​o​m​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​s​ ​a​ ​f​i​l​e​ ​f​r​o​m​ ​F​i​r​e​b​a​s​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​.​ ​T​h​i​s​ ​o​p​e​r​a​t​i​o​n​ ​i​s​ ​i​r​r​e​v​e​r​s​i​b​l​e​,​ ​s​o​ ​u​s​e​ ​w​i​t​h​ ​c​a​u​t​i​o​n​.​ ​R​e​t​u​r​n​s​ ​c​o​n​f​i​r​m​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​d​e​l​e​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​i​l​e​ ​p​a​t​h​ ​a​n​d​ ​b​u​c​k​e​t​ ​n​a​m​e​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​l​e​ ​i​s​ ​s​t​o​r​e​d​.​ ​T​h​e​ ​p​r​o​j​e​c​t​ ​m​u​s​t​ ​h​a​v​e​ ​F​i​r​e​b​a​s​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​ ​e​n​a​b​l​e​d​.
+							 */
+							longDesc: string
+						}
+						bucket: {
+							/**
+							 * B​u​c​k​e​t
+							 */
+							displayName: string
+							/**
+							 * S​t​o​r​a​g​e​ ​b​u​c​k​e​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​l​o​u​d​ ​S​t​o​r​a​g​e​ ​b​u​c​k​e​t​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​b​e​ ​d​e​l​e​t​e​d​ ​i​s​ ​l​o​c​a​t​e​d​.​ ​T​h​e​ ​b​u​c​k​e​t​ ​m​u​s​t​ ​e​x​i​s​t​ ​i​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						file_path: {
+							/**
+							 * F​i​l​e​ ​P​a​t​h
+							 */
+							displayName: string
+							/**
+							 * P​a​t​h​ ​t​o​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​f​u​l​l​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​f​i​l​e​ ​i​n​ ​t​h​e​ ​b​u​c​k​e​t​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​b​e​ ​d​e​l​e​t​e​d​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​i​l​e​n​a​m​e​ ​a​n​d​ ​a​n​y​ ​d​i​r​e​c​t​o​r​y​ ​s​t​r​u​c​t​u​r​e​.​ ​T​h​i​s​ ​o​p​e​r​a​t​i​o​n​ ​i​s​ ​p​e​r​m​a​n​e​n​t​ ​a​n​d​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_user: {
+					/**
+					 * N​e​w​ ​U​s​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​u​s​e​r​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​F​i​r​e​b​a​s​e​ ​A​u​t​h​e​n​t​i​c​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​F​i​r​e​b​a​s​e​ ​A​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​f​o​r​ ​n​e​w​ ​u​s​e​r​ ​r​e​g​i​s​t​r​a​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​a​c​c​o​u​n​t​s​ ​a​r​e​ ​c​r​e​a​t​e​d​.​ ​C​a​p​t​u​r​e​s​ ​u​s​e​r​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​i​n​g​ ​e​m​a​i​l​,​ ​d​i​s​p​l​a​y​ ​n​a​m​e​,​ ​v​e​r​i​f​i​c​a​t​i​o​n​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​p​r​o​v​i​d​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​u​s​e​r​ ​o​n​b​o​a​r​d​i​n​g​ ​w​o​r​k​f​l​o​w​s​,​ ​w​e​l​c​o​m​e​ ​e​m​a​i​l​s​,​ ​a​n​d​ ​a​c​c​o​u​n​t​ ​s​e​t​u​p​ ​a​u​t​o​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						project_id: {
+							/**
+							 * P​r​o​j​e​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​F​i​r​e​b​a​s​e​ ​p​r​o​j​e​c​t​ ​w​h​o​s​e​ ​A​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​s​e​r​v​i​c​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​u​s​e​r​ ​r​e​g​i​s​t​r​a​t​i​o​n​s​.​ ​T​h​e​ ​p​r​o​j​e​c​t​ ​m​u​s​t​ ​h​a​v​e​ ​F​i​r​e​b​a​s​e​ ​A​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​e​n​a​b​l​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
 		}
 		Supabase: {
 			/**
@@ -78843,13 +79411,581 @@ export type TranslationFunctions = {
 			 */
 			displayName: () => LocalizedString
 			/**
-			 * Connect to Firebase to manage users, send notifications, and handle cloud storage operations
+			 * Connect to Firebase to manage files, users and push notifications
 			 */
 			shortDesc: () => LocalizedString
 			/**
-			 * The Firebase integration provides comprehensive access to Firebase services including Authentication, Cloud Messaging, and Cloud Storage. Manage user accounts, send push notifications to devices, organize topic subscriptions, and handle file storage operations across buckets. Whether you need to retrieve user data, broadcast messages, or manage cloud files, this integration streamlines your Firebase workflow automation and backend management.
+			 * The Firebase integration provides comprehensive access to Firebase services including Cloud Storage for file management, Authentication for user management, and Firebase Cloud Messaging for push notifications. Automate file uploads, user account operations, and notification delivery across your Firebase projects.
 			 */
 			longDesc: () => LocalizedString
+			actions: {
+				list_users: {
+					/**
+					 * List Users
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of users from Firebase Authentication
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches users from Firebase Authentication with support for pagination. Returns user details including email, display name, verification status, and authentication metadata. Use pagination parameters to retrieve large user lists efficiently.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Firebase project to query
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Firebase project from which you want to retrieve users. The project must have Firebase Authentication enabled.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_results: {
+							/**
+							 * Max Results
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of users to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of users to retrieve in a single request. Defaults to 100 if not specified. Use pagination for larger datasets.
+							 */
+							longDesc: () => LocalizedString
+						}
+						next_page_token: {
+							/**
+							 * Next Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for retrieving the next page of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the pagination token from a previous response to retrieve the next set of users. Leave empty for the first page.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_user: {
+					/**
+					 * Get User
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific Firebase user
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive details for a specific user from Firebase Authentication including email, display name, photo URL, verification status, account creation date, and custom attributes. Useful for user profile lookups and account verification.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Firebase project containing the user
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Firebase project where the user account exists. The project must have Firebase Authentication enabled.
+							 */
+							longDesc: () => LocalizedString
+						}
+						user_id: {
+							/**
+							 * User ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the user
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the Firebase user ID (localId) of the user whose details you want to retrieve. This is the unique identifier assigned by Firebase Authentication.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				send_push_notification: {
+					/**
+					 * Send Push Notification
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a push notification via Firebase Cloud Messaging
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Sends push notifications to specific device tokens or topics using Firebase Cloud Messaging (FCM). Supports rich notifications with titles, body text, images, and custom data payloads. Configure priority levels for Android and iOS delivery.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Firebase project for sending notifications
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Firebase project that will send the push notification. The project must have Firebase Cloud Messaging configured.
+							 */
+							longDesc: () => LocalizedString
+						}
+						token_or_topic: {
+							/**
+							 * Token or Topic
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Device token or topic name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify either a device registration token for sending to a specific device, or a topic name (prefixed with /topics/) for sending to all devices subscribed to that topic.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Notification title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The title text that will be displayed in the notification. Keep it concise and informative.
+							 */
+							longDesc: () => LocalizedString
+						}
+						body: {
+							/**
+							 * Body
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Notification message body
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The main content of the notification message. This text appears below the title in the notification display.
+							 */
+							longDesc: () => LocalizedString
+						}
+						image: {
+							/**
+							 * Image
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional image URL for the notification
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide a URL to an image that will be displayed in the notification. The image should be publicly accessible and in a supported format (JPEG, PNG).
+							 */
+							longDesc: () => LocalizedString
+						}
+						data: {
+							/**
+							 * Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom data payload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional custom key-value pairs to include with the notification. This data can be accessed by your app when the notification is received.
+							 */
+							longDesc: () => LocalizedString
+						}
+						priority: {
+							/**
+							 * Priority
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Notification delivery priority
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the priority level for notification delivery. High priority notifications are delivered immediately and may wake the device. Normal priority allows for more battery-efficient delivery.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				upload_file: {
+					/**
+					 * Upload File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload a file to Firebase Cloud Storage
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Uploads a file to a specified bucket in Firebase Cloud Storage. Returns metadata including file path, content type, size, and generation information. Optionally include custom metadata key-value pairs with the upload.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Firebase project for storage
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Firebase project where the file will be stored. The project must have Firebase Cloud Storage enabled.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_path: {
+							/**
+							 * File Path
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Destination path in storage
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the full path where the file should be stored in the bucket, including the filename and any directory structure (e.g., "images/profile/avatar.jpg").
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket: {
+							/**
+							 * Bucket
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Storage bucket name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Cloud Storage bucket where the file will be uploaded. The bucket must exist in the selected Firebase project.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file: {
+							/**
+							 * File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file to upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or provide the file to upload. The file will be transferred to Firebase Cloud Storage at the specified path.
+							 */
+							longDesc: () => LocalizedString
+						}
+						metadata: {
+							/**
+							 * Metadata
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom metadata key-value pairs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional custom metadata to associate with the uploaded file. Provide as key-value pairs that can be retrieved later with the file information.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_file_metadata: {
+					/**
+					 * Get File Metadata
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve metadata for a specific file in Cloud Storage
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive metadata for a file stored in Firebase Cloud Storage including content type, size, creation date, update date, MD5 hash, custom metadata, and cache control settings. Useful for file verification and management.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Firebase project containing the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Firebase project where the file is stored. The project must have Firebase Cloud Storage enabled.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket: {
+							/**
+							 * Bucket
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Storage bucket containing the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Cloud Storage bucket where the file is located. The bucket must exist in the selected Firebase project.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_path: {
+							/**
+							 * File Path
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Path to the file in storage
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the full path to the file in the bucket, including the filename and any directory structure.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_files_in_bucket: {
+					/**
+					 * List Files in Bucket
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all files in a Cloud Storage bucket
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of files from a Firebase Cloud Storage bucket with support for filtering by prefix and pagination. Returns file metadata including paths, content types, sizes, and timestamps. Useful for browsing and managing stored files.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Firebase project containing the bucket
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Firebase project where the storage bucket exists. The project must have Firebase Cloud Storage enabled.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket: {
+							/**
+							 * Bucket
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Storage bucket to list files from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Cloud Storage bucket whose files you want to list. The bucket must exist in the selected Firebase project.
+							 */
+							longDesc: () => LocalizedString
+						}
+						prefix: {
+							/**
+							 * Prefix
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional prefix to filter files
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter results to only include files whose paths start with this prefix. Useful for listing files in a specific directory or with a specific naming pattern.
+							 */
+							longDesc: () => LocalizedString
+						}
+						max_results: {
+							/**
+							 * Max Results
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of files to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of files to retrieve in a single request. Defaults to 100 if not specified. Use pagination for larger result sets.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_token: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for retrieving the next page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the pagination token from a previous response to retrieve the next set of files. Leave empty for the first page.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_buckets: {
+					/**
+					 * List Buckets
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all Cloud Storage buckets in a Firebase project
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves all Cloud Storage buckets configured for a Firebase project. Returns bucket details including names, locations, storage classes, creation dates, and update timestamps. Useful for bucket management and discovery.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Firebase project to query
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Firebase project whose storage buckets you want to list. The project must have Firebase Cloud Storage enabled.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_file: {
+					/**
+					 * Delete File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a file from Cloud Storage
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently removes a file from Firebase Cloud Storage. This operation is irreversible, so use with caution. Returns confirmation of the deletion including the file path and bucket name.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Firebase project containing the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Firebase project where the file is stored. The project must have Firebase Cloud Storage enabled.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bucket: {
+							/**
+							 * Bucket
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Storage bucket containing the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Cloud Storage bucket where the file to be deleted is located. The bucket must exist in the selected Firebase project.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_path: {
+							/**
+							 * File Path
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Path to the file to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the full path to the file in the bucket that should be deleted, including the filename and any directory structure. This operation is permanent and cannot be undone.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_user: {
+					/**
+					 * New User
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new user is created in Firebase Authentication
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors Firebase Authentication for new user registrations and triggers when new accounts are created. Captures user details including email, display name, verification status, and authentication provider information. Useful for user onboarding workflows, welcome emails, and account setup automation.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_id: {
+							/**
+							 * Project ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Firebase project to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Firebase project whose Authentication service you want to monitor for new user registrations. The project must have Firebase Authentication enabled.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
 		}
 		Supabase: {
 			/**
