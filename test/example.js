@@ -154,6 +154,164 @@ exports.actionsCatalogue = {
                     "account_id",
                 ],
             },
+            /** "get_table_list" is required for record-based action support
+                get_table_list(ctx: object): string[] {}
+                @param ctx: object -> with the following properties:
+                - conn_name: string -> the connection name, if any is defined
+                - conn_opts: object -> connection options + processed options from the auth response + the auth
+                  response itself
+                @return a list of table names (string[])
+            */
+            "get_table_list": async function(ctx) {
+                return ["test"];
+            },
+            /** "begin_transaction" allows an explicit transaction to be started
+                begin_transaction(ctx: object): void {}
+                - conn_name: string -> the connection name, if any is defined
+                - conn_opts: object -> connection options + processed options from the auth response + the auth
+                  response itself
+            */
+            "begin_transaction": async function(ctx) {
+            },
+            /** "commit" allows a transaction to be committed
+                commit(ctx: object): void {}
+                - conn_name: string -> the connection name, if any is defined
+                - conn_opts: object -> connection options + processed options from the auth response + the auth
+                  response itself
+            */
+            "commit": async function(ctx) {
+            },
+            /** "rollback" allows a transaction to be rolled back
+                rollback(ctx: object): void {}
+                - conn_name: string -> the connection name, if any is defined
+                - conn_opts: object -> connection options + processed options from the auth response + the auth
+                  response itself
+            */
+            "rollback": async function(ctx) {
+            },
+            /** "get_record_type" is required for record-based action support
+                get_record_type(ctx: object, table_name: string): object {}
+                @param ctx: object -> with the following properties:
+                - conn_name: string -> the connection name, if any is defined
+                - conn_opts: object -> connection options + processed options from the auth response + the auth
+                  response itself
+                @param table_name: string -> the name of the table to get the record type for
+                @return the record type for the given table; must be a type hash defining a "hash" type
+            */
+            "get_record_type": async function(ctx, table_name) {
+                return {
+                    "type": "hash",
+                    "fields": {
+                        "id": {
+                            "type": "int",
+                            "display_name": "ID",
+                            "short_desc": "The ID",
+                            "desc": "The ID",
+                            "example_value": 1,
+                            "required": true,
+                        },
+                        "name": {
+                            "type": "name",
+                            "display_name": "Name",
+                            "short_desc": "A name",
+                            "desc": "A name",
+                            "example_value": "Bill",
+                            "required": true,
+                        },
+                    },
+                };
+            },
+            /** "get_expressions" defines global expressions for record-based action support
+                # the following type is used in the expression definition; "search" is for expressions that can be used
+                # in search filters, "field" is for expressions that can be used in field lists or in the value of
+                # update operations
+                type Role = 'search' | 'field';
+                # the following type describes an argument to an expression
+                type Arg = {
+                    type_code: 'any' // the argument can be an expression, an immediate value, or a field refefence
+                        | 'value',   // the argument must be an immediate value
+                        | 'field,    // the argument must be a field reference
+                    type: string | object, // the argument type
+                    display_name?: string, // the user-friendly display name for the argument
+                    short_desc?: string,   // a short plain-text description of the argument
+                    desc?: string,         // a longer description for the argument that supports markdown formatting
+                    default_value? : any,  // values must use the argument's type
+                    sensitive?: bool,      // if the argument is sensitive (password, etc)
+                    multiselect?: bool,    // can be true if the argument has a list type and allowed_values are the
+                                           // allowed values for the list
+                    allowed_values?: AllowedValues[], // an array of objects providing the only values allowed for
+                                           // the argument (or elements in case "multiselect" is true)
+                    allowed_values_creatable?: bool, // if true, then values not in allowed_values can be used
+                    element_allowed_values?: AllowedValues[], // an array of objects providing the only values allowed
+                                           // for list elements
+                    element_allowed_values_creatable?: bool, // if true, then values not in element_allowed_values can
+                                           // be used
+                    example_value?: any,   // values must use the argument's type
+                };
+                get_expressions(ctx: object): {
+                    [key: string]: {
+                        // the type of expression
+                        type: "operator" | "function",
+                        // the subtype of the expression
+                        subtype: "generic" | "logic-operator" = "generic",
+                        name: string,
+                        display_name: string,
+                        short_desc: string,
+                        desc: string,
+                        // the symbol or text to use when rendering the expression
+                        symbol: string,
+                        // the expression role code(s) which determine where the expression can be used
+                        roles: Role[],
+                        // the arguments the expression takes
+                        args: Arg[],
+                        // the return type of the expression
+                        return_type: string | object,
+                        // if true, the last argument can be repeated indefinitely
+                        varargs?: bool,
+                    },
+                } {}
+                standard operator names (keys for the get_expressions() return value):
+                - "AND": logical and
+                - "OR": logical or
+                - "regex": regular expression match
+                - "<": less than
+                - "<=": less than or equal
+                - ">": greater than
+                - ">=": greater than or equal
+                - "=": equal
+                - "!=": not equal
+                - "in": in operator
+                - "not": logical negation
+                - "like": SQL-like "like" operator with "%" as the wildcard character
+                - "between": between operator
+                @param ctx: object -> with the following properties:
+                - conn_name: string -> the connection name, if any is defined
+                - conn_opts: object -> connection options + processed options from the auth response + the auth
+                  response itself
+                @return an object defining global expressions; the format is as described above
+            */
+            "get_expressions": async function(ctx) {
+                return {
+                    "AND": {
+                        "type": "operator",
+                        "subtype": "logic-operator",
+                        "name": "AND",
+                        "display_name": "and (&&)",
+                        "short_desc": "Returns True if all arguments are True with logic short-circuiting",
+                        "desc": "Returns `True` if all arguments are `True` with logic short-circuiting",
+                        "symbol": "&&",
+                        "roles": ["search", "field"],
+                        "args": [
+                            {
+                                "type_code": "any",
+                                "type": "bool",
+                            },
+                        ],
+                        "varargs": true,
+                        "return_type": "bool",
+                    },
+                };
+            },
         });
 
         api.registerAction({
@@ -478,41 +636,6 @@ exports.actionsCatalogue = {
             "desc": "Test search",
             "action_code": 4,  // DPAT_FIND == 4 (record search)
 
-            // This means that there are no native search capabilities and also generic expressions are supported
-            /** all records are fetched and filtered after the fact by the DataProvider infrastructure
-
-                This option is meant for simple data providers providing just a record view of data
-
-                If this option is true, then no "search_options" or "expressions" can be defined
-
-                If this option is false, "search_options" must be defined and the "search_records" function must be
-                able to handle them
-            */
-            "uses_generic_search": true,
-
-            // returns the record type for the action
-            /**
-                @param ctx?: object with the following properties:
-                - conn_name?: string -> the connection name, if any is defined
-                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
-                - opts?: object -> a data object with option values set for the current action
-
-                @return the record type for the action; must be a hash (object)
-            */
-            "get_record_type": async function (ctx) {
-                return {
-                    "type": "hash",
-                    "fields": {
-                        "id": {
-                            "type": "int",
-                        },
-                        "name": {
-                            "type": "string",
-                        },
-                    },
-                };
-            },
-
             // executes the search and returns a list of the records matched
             /**
                 @param ctx?: object with the following properties:
@@ -520,45 +643,26 @@ exports.actionsCatalogue = {
                 - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
                 - opts?: object -> a data object with option values set for the current action
                 @param where_cond?: object -> the optional search expression tree
-                @param search_1opts?: object -> search options
+                @param search_opts?: object -> search options
 
-                @return a list of records (object[] | void) matching the arguments
+                @return get_record(ctx?: object, block_size: number): object -> a callable object that returns a
+                record set as an object with keys that correspond to the field names with values that are lists of
+                field values
+
+                record must be a data object that matches the record type for the table
             */
             "search_records": async function (ctx, where_cond, search_opts) {
-                return [
-                    {"id": 1, "name": "a"},
-                    {"id": 2, "name": "b"},
-                ];
-            },
-
-            /**
-                @param ctx?: object with the following properties:
-                - conn_name?: string -> the connection name, if any is defined
-                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
-                - opts?: object -> a data object with option values set for the current action
-            */
-            "begin_transaction": async function (ctx) {
-                // begin transaction code here
-            },
-
-            /**
-                @param ctx?: object with the following properties:
-                - conn_name?: string -> the connection name, if any is defined
-                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
-                - opts?: object -> a data object with option values set for the current action
-            */
-            "commit": async function (ctx) {
-                // commit transaction code here
-            },
-
-            /**
-                @param ctx?: object with the following properties:
-                - conn_name?: string -> the connection name, if any is defined
-                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
-                - opts?: object -> a data object with option values set for the current action
-            */
-            "rollback": async function (ctx) {
-                // rollback transaction code here
+                let done = false;
+                function get_records(ctx, block_size) {
+                    if (!done) {
+                        done = true;
+                        return {
+                            "id": [1, 2],
+                            "name": ["a", "b"],
+                        };
+                    }
+                }
+                return get_records;
             },
         });
 

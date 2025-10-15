@@ -509,7 +509,8 @@ var obj = {
             },
         };
         conn = new TypeScriptAppRestConnection(config);
-        prov = TypeScriptActionInterface::getDataProvider("js-test", conn).getChildProviderEx("test-api");
+        AbstractDataProvider parent = TypeScriptActionInterface::getDataProvider("js-test", conn);
+        prov = parent.getChildProviderEx("test-api");
         t = prov.getRequestTypeWithData({"key": "A"});
         assertEq(("count", "other", "key", "dyn", "list", "ax0", "ax1", "a0", "a1"), keys t.getFields());
         assertEq("TypeScriptDataField", t.getFields()."list".getType().getElementType().getFields().b.className());
@@ -529,6 +530,16 @@ var obj = {
         hash<auto> h = TestRestClient::test0(rest, {});
         assertEq("abc123", h.account_id);
         assertEq("https://www.example.com/api/abc123", rest.getURL());
+
+        prov = parent.getChildProviderEx("test-search");
+        assertTrue(prov.supportsRead());
+
+        AbstractDataProviderRecordIterator i = prov.searchRecords();
+        assertTrue(i.next());
+        assertEq({"id": 1, "name": "a"}, i.getValue());
+        assertTrue(i.next());
+        assertEq({"id": 2, "name": "b"}, i.getValue());
+        assertFalse(i.next());
     }
 }
 
