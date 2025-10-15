@@ -251,9 +251,6 @@ public class TypeScriptActionInterface {
         #! Connection map for testing
         static hash<string, TypeScriptAppRestConnection> cmap;
 
-        #! Apps supporting tables: app -> get table list function
-        static hash<string, hash<AsyncCallInfo>> tablemap;
-
         #! Actions supporting events; app -> action -> subtype
         static hash<string, hash<string, string>> emap;
 
@@ -554,7 +551,7 @@ public class TypeScriptActionInterface {
         hash<AsyncCallInfo> commit;
         hash<AsyncCallInfo> rollback;
         hash<AsyncCallInfo> get_record_type;
-        hash<string, hash<DataProviderExpressionInfo>> expressions;
+        hash<AsyncCallInfo> get_expressions;
 
         timeout io_timeout;
         if (app.get_table_list) {
@@ -598,10 +595,10 @@ public class TypeScriptActionInterface {
                 "attribute is required for apps supporting tables", app.name);
         }
 
-        if (*hash<auto> opts = remove app.expressions) {
-            throw "UNSUPPORTED", "custom expressions are not yet supported";
-        } else if (get_table_list) {
-            expressions = AbstractDataProvider::GenericExpressions;
+        if (app.get_expressions) {
+            check_record_based();
+            get_expressions = tryGetAsyncAttribute(\app, "get_expressions", "get expressions", pool, io_timeout,
+                app.name);
         }
 
         appmap{app.name} = <AppInfo>{
@@ -612,7 +609,7 @@ public class TypeScriptActionInterface {
             "commit": commit,
             "rollback": rollback,
             "get_record_type": get_record_type,
-            "expressions": expressions,
+            "get_expressions": get_expressions,
 
             "pool": pool,
         };
@@ -1244,7 +1241,7 @@ public class TypeScriptActionInterface {
         }
 
         code check_record_based_app = sub () {
-            if (!tablemap{appname}) {
+            if (!getInitializedRecordBasedAppInfo(action.app)) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y action type: %y cannot be registered; "
                     "the app does not support record-based actions; declare a \"get_table_list\" function on the "
                     "app in order to declare record-based actions", action.app, action.action,
@@ -1268,7 +1265,7 @@ public class TypeScriptActionInterface {
 
             case DPAT_FIND: {
                 check_record_based_app();
-                TypeScriptActionInterface::generateSearchDataProvider(app, \action, pool, schema);
+                TypeScriptActionInterface::generateSearchDataProvider(app, \action, pool, schema, False);
                 string actionname = action.action.lwr();
                 if (!smap{appname}{actionname}) {
                     smap{appname}{actionname} = True;
@@ -1278,7 +1275,7 @@ public class TypeScriptActionInterface {
 
             case DPAT_FIND_SINGLE: {
                 check_record_based_app();
-                TypeScriptActionInterface::generateSearchSingleDataProvider(app, \action, pool, schema);
+                TypeScriptActionInterface::generateSearchDataProvider(app, \action, pool, schema, True);
                 string actionname = action.action.lwr();
                 if (!smap{appname}{actionname}) {
                     smap{appname}{actionname} = True;
@@ -1333,7 +1330,7 @@ public class TypeScriptActionInterface {
     }
 
     static generateSearchDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
-            JavaScriptProgramPool pool, *SwaggerSchema schema) {
+            JavaScriptProgramPool pool, *SwaggerSchema schema, bool single) {
         timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
 
         ActionFunctionContext fctx(app.name, action.action, pool);
@@ -1354,9 +1351,8 @@ public class TypeScriptActionInterface {
                 action.action);
         }
 
-        bool uses_generic_search = remove action.uses_generic_search ?? False;
-
         hash<string, hash<DataProviderOptionInfo>> search_options;
+        bool uses_generic_search = !getInitializedRecordBasedAppInfo(app.name).get_expressions;
         if (*hash<auto> opts = remove action.search_options) {
             if (uses_generic_search) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y cannot define \"search_options\" when "
@@ -1367,8 +1363,7 @@ public class TypeScriptActionInterface {
             search_options = AbstractDataProvider::GenericRecordSearchOptions;
         }
 
-        TypeScriptActionSearchDataProvider child(action.app, action.action, search_records, search_options,
-            !uses_generic_search, fctx);
+        TypeScriptActionSearchDataProvider child(action.action, search_records, search_options, single, fctx);
 
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);
         prov.registerChild(action.action, child);
@@ -1376,11 +1371,6 @@ public class TypeScriptActionInterface {
         #printf("Registered %s %s (%y)\n", action.app, action.action);
 
         action.path = action.action;
-    }
-
-    static generateSearchSingleDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
-        JavaScriptProgramPool pool, *SwaggerSchema schema) {
-        throw "UNSUPPORTED", "not yet supported";
     }
 
     static registerAppChildDataProvider(string app, AbstractDataProvider prov) {
@@ -3083,10 +3073,10 @@ hashdecl AppInfo {
     */
     *hash<AsyncCallInfo> get_record_type;
 
-    #! Supported expressions with record-based options for the app
+    #! Callback to return supported expressions with record-based options for the app
     /** May only be declared if the app declares a get_table_list callback
     */
-    *hash<string, hash<DataProviderExpressionInfo>> expressions;
+    *hash<AsyncCallInfo> get_expressions;
 
     # The program pool info
     JavaScriptProgramPool pool;

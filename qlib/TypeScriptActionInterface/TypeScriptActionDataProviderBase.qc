@@ -130,7 +130,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         on_error rethrow $1.err, sprintf("%s (context: %s)", $1.desc, api.label);
 
         if (!cache_opts && !use_cache) {
-            return TypeScriptActionDataProviderBase::getAsyncValueArgsIntern(logger, api, args);
+            return TypeScriptActionDataProviderBase::execAsyncValueArgs(logger, api, args);
         }
 
         string key = TypeScriptActionDataProviderBase::getKey(api.label, cache_opts);
@@ -139,7 +139,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         CacheEntry entry = cache.get(key, \new_entry);
         if (new_entry) {
             on_error entry.cancel($1);
-            entry.setValue(TypeScriptActionDataProviderBase::getAsyncValueArgsIntern(logger, api, args));
+            entry.setValue(TypeScriptActionDataProviderBase::execAsyncValueArgs(logger, api, args));
         }
         return entry.getValue();
     }
@@ -185,8 +185,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         throw "ARG-ERROR", sprintf("Cannot calculate key value for type %y", arg.fullType());
     }
 
-    static private auto getAsyncValueArgsIntern(*LoggerInterface logger, hash<AsyncCallInfo> api,
-            *softlist<auto> args) {
+    static auto execAsyncValueArgs(*LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args) {
         if (_ts_no_io) {
             return;
         }
