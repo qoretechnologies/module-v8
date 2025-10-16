@@ -41,12 +41,18 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
 
     private {
         hash<string, AbstractDataField> record_type;
-        *hash<AsyncCallInfo> get_record_type;
+        hash<AsyncCallInfo> get_table_list;
+        hash<AsyncCallInfo> get_record_type;
 
         *hash<AsyncCallInfo> begin_transaction;
         *hash<AsyncCallInfo> commit;
         *hash<AsyncCallInfo> rollback;
         *hash<AsyncCallInfo> get_expressions;
+        *hash<AsyncCallInfo> search_records;
+        *hash<AsyncCallInfo> get_search_options;
+
+        bool have_search_options;
+        *hash<string, hash<DataProviderOptionInfo>> search_options;
 
         hash<string, hash<DataProviderExpressionInfo>> expressions;
 
@@ -57,11 +63,15 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
     #! Creates the object from the arguments
     constructor(string name, ActionFunctionContext fctx) : TypeScriptActionDataProviderBase(name, fctx) {
         hash<AppInfo> info = TypeScriptActionInterface::getInitializedRecordBasedAppInfo(fctx.app);
+        get_table_list = info.get_table_list;
         get_record_type = info.get_record_type;
         begin_transaction = info.begin_transaction;
+        omap.tables = info.get_table_list;
         commit = info.commit;
         rollback = info.rollback;
         get_expressions = info.get_expressions;
+        search_records = info.search_records;
+        get_search_options = info.search_options;
     }
 
     #! Begins a transaction with a data provider
@@ -118,12 +128,118 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         return record_type;
     }
 
+    #! Returns an iterator for zero or more records matching the search options
+    /** @param block_size the number of records in a read block; must be a positive number
+        @param where_cond the search criteria; will be processed by processSearchParameters()
+        @param search_options the search options; will be processed by validateSearchOptions()
+
+        @return a bulk record interface object that will return the records in bulk format
+
+        @throw INVALID-BLOCK-SIZE the block size must be a positive number
+        @throw INVALID-OPERATION the data provider does not support reading
+
+        @since DataProvider 2.3
+    */
+    AbstractDataProviderBulkRecordInterface searchRecordsBulk(int block_size = 1000,
+            *hash<DataProviderExpression> where_cond, *hash<auto> search_options) {
+        search_options.table = name;
+        *hash<DataContextInfo> cctx = getCallContextInfo();
+        *code get_records = getAsyncValue(search_records, cctx,
+            get_expressions ? where_cond : NOTHING, get_expressions ? search_options : NOTHING);
+        return new TypeScriptBulkRecordInterface(block_size, self, get_records, cctx,
+            get_expressions ? NOTHING : where_cond);
+    }
+
+    #! Returns an iterator for zero or more records matching the search options
+    /** @param where_cond the search criteria; after processing by processSearchParameters()
+        @param search_options the search options after processing by validateSearchOptions()
+    */
+    private AbstractDataProviderRecordIterator searchRecordsImpl(*hash<auto> where_cond,
+            *hash<auto> search_options) {
+        return searchRecordsBulk(1000, getSearchExpression(where_cond), search_options).getRecordIterator();
+    }
+
+    #! Returns a single record matching the search options
+    /** @param where_cond the search criteria
+        @param search_options the search options after processing by validateSearchOptions()
+
+        @throw MULTIPLE-RECORDS-ERROR multiple records found
+    */
+    private *hash<auto> searchSingleRecordImpl(*hash<auto> where_cond, *hash<auto> search_options) {
+        AbstractDataProviderRecordIterator i = searchRecordsBulk(2, getSearchExpression(where_cond), search_options)
+            .getRecordIterator();
+        if (!i.next()) {
+            return;
+        }
+        hash<auto> rv = i.getValue();
+        if (i.next()) {
+            error("MULTIPLE-RECORDS-ERROR", "More than one record found for single-record search: %y", where_cond);
+        }
+        return rv;
+    }
+
+    #! Returns static info about the data provider
+    private hash<DataProviderInfo> getStaticInfoImpl() {
+        hash<DataProviderInfo> rv = ProviderInfo;
+        if (commit) {
+            rv.transaction_management = True;
+        }
+        if (search_records) {
+            checkSearchOptions();
+            rv.supports_read = True,
+            rv.supports_bulk_read = True;
+            rv.supports_search_expressions = True;
+            rv.has_record = True;
+            rv.search_options = search_options;
+        }
+        if (get_expressions) {
+            rv.supports_native_search = True;
+        }
+        rv.expressions = getExpressions();
+        return rv;
+    }
+
     private synchronized checkRecordTypeIntern() {
         if (record_type) {
             return;
         }
         auto v = getAsyncValue(get_record_type, getCallContextInfo());
         record_type = TypeScriptActionInterface::getType(v).getFields();
+    }
+
+    private checkSearchOptions() {
+        if (!have_search_options) {
+            checkSearchOptionsIntern();
+        }
+    }
+
+    private synchronized checkSearchOptionsIntern() {
+        if (have_search_options) {
+            return;
+        }
+        have_search_options = True;
+        if (!get_search_options) {
+            search_options = AbstractDataProvider::GenericRecordSearchOptions;
+            return;
+        }
+        auto v = getAsyncValue(get_search_options, getCallContextInfo());
+        if (!exists v) {
+            return;
+        }
+        if (v.typeCode() != NT_HASH) {
+            throw "SEARCH-OPTIONS-TYPE-ERROR", sprintf("The 'get_search_options' function for app %y returned "
+                "type %y; expecting \"hash\"", app.name, v.fullType());
+        }
+        search_options = map {$1.key: getDataProviderOption($1.key, $1.value)}, v.pairIterator();
+    }
+
+    private hash<DataProviderOptionInfo> getDataProviderOption(string name, auto v) {
+        if (v.typeCode() != NT_HASH) {
+            throw "SEARCH-OPTION-TYPE-ERROR", sprintf("The 'get_search_options' function for app %y search option %y "
+                "returned type %y; expecting \"hash\"", app.name, name, v.fullType());
+        }
+        v.type = TypeScriptActionInterface::getType("search option " + name + " type", remove v.type);
+        return cast<hash<DataProviderOptionInfo>>(v);
     }
 
     private *hash<string, hash<DataProviderExpressionInfo>> getExpressions() {

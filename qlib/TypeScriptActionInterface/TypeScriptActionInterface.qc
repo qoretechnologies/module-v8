@@ -188,6 +188,13 @@ public class TypeScriptActionInterface {
 
         #! Default event ID
         const DefaultEventId = "event";
+
+        #! Default table path var
+        const TablePathVar = <DataProviderPathVarInfo>{
+            "display_name": "Table",
+            "desc": "The table name",
+            "short_desc": "The table name",
+        };
     }
 
     private {
@@ -552,6 +559,8 @@ public class TypeScriptActionInterface {
         hash<AsyncCallInfo> rollback;
         hash<AsyncCallInfo> get_record_type;
         hash<AsyncCallInfo> get_expressions;
+        hash<AsyncCallInfo> search_records;
+        hash<AsyncCallInfo> search_options;
 
         timeout io_timeout;
         if (app.get_table_list) {
@@ -601,6 +610,24 @@ public class TypeScriptActionInterface {
                 app.name);
         }
 
+        if (app.search_records) {
+            check_record_based();
+            search_records = tryGetAsyncAttribute(\app, "search_records", "search records", pool, io_timeout,
+                app.name);
+
+            if (app.search_options) {
+                if (!get_expressions) {
+                    throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y cannot define \"search_options\" when is uses "
+                        "generic search functionality (missing 'get_expressions()' function)", app.name);
+                }
+                search_options = tryGetAsyncAttribute(\app, "search_options", "search options", pool, io_timeout,
+                    app.name);
+            }
+        } else if (app.search_options) {
+            throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y cannot define \"search_options\" without also defining "
+                "'search_records()'", app.name);
+        }
+
         appmap{app.name} = <AppInfo>{
             "app": app,
 
@@ -610,6 +637,8 @@ public class TypeScriptActionInterface {
             "rollback": rollback,
             "get_record_type": get_record_type,
             "get_expressions": get_expressions,
+            "search_records": search_records,
+            "search_options": search_options,
 
             "pool": pool,
         };
@@ -721,6 +750,10 @@ public class TypeScriptActionInterface {
         }
 
         TypeScriptActionInterface::registerAppIntern(info.app, info.pool);
+        # always initialize record-based actions if applicable
+        if (info.get_table_list) {
+            TypeScriptActionInterface::registerRecordBasedActions(info);
+        }
 
         if (do_actions) {
             TypeScriptActionInterface::checkAppActions(info.app.name);
@@ -1131,6 +1164,45 @@ public class TypeScriptActionInterface {
         return schema_source;
     }
 
+    static registerRecordBasedActions(hash<AppInfo> info) {
+        int cnt;
+        if (info.search_records) {
+            string desc = sprintf("Search for matching records in the given table in app %y", info.app.name);
+            DataProviderActionCatalog::registerAction(<DataProviderActionInfo>{
+                "app": info.app.name,
+                "action": "search",
+                "display_name": "Search Records",
+                "short_desc": desc,
+                "desc": desc,
+                "action_code": DPAT_FIND,
+                "path": "tables/{table}/search",
+                "path_vars": {
+                    "table": TablePathVar,
+                },
+            });
+            desc = sprintf("Search for a single matching record in the given table in app %y", info.app.name);
+            DataProviderActionCatalog::registerAction(<DataProviderActionInfo>{
+                "app": info.app.name,
+                "action": "search-single",
+                "display_name": "Search Records",
+                "short_desc": desc,
+                "desc": desc,
+                "action_code": DPAT_FIND_SINGLE,
+                "path": "tables/{table}/search-single",
+                "path_vars": {
+                    "table": TablePathVar,
+                },
+            });
+            ++cnt;
+        }
+        if (!cnt) {
+            throw "APP-ERROR", sprintf("App %y is a record-based app but has no record-based actions", info.app.name);
+        }
+        ActionFunctionContext fctx(info.app.name, "tables", info.pool);
+        TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(info.app.name);
+        prov.registerChild("tables", new TypeScriptActionTablesDataProvider(fctx));
+    }
+
     static scanType(hash<auto> h, reference<hash<string, bool>> tmap, *hash<auto> definitions, *string name) {
         if (exists (*string ref = ((h."$ref" ?? h.schema."$ref" ?? h.items."$ref" ?? h.additionalProperties."$ref"
             ?? h.additionalProperties.items."$ref")
@@ -1263,155 +1335,10 @@ public class TypeScriptActionInterface {
                 break;
             }
 
-            case DPAT_FIND: {
-                check_record_based_app();
-                TypeScriptActionInterface::generateSearchDataProvider(app, \action, pool, schema, False);
-                string actionname = action.action.lwr();
-                if (!smap{appname}{actionname}) {
-                    smap{appname}{actionname} = True;
-                }
-                break;
-            }
-
-            case DPAT_FIND_SINGLE: {
-                check_record_based_app();
-                TypeScriptActionInterface::generateSearchDataProvider(app, \action, pool, schema, True);
-                string actionname = action.action.lwr();
-                if (!smap{appname}{actionname}) {
-                    smap{appname}{actionname} = True;
-                }
-                break;
-            }
-
-            case DPAT_CREATE: {
-                check_record_based_app();
-                TypeScriptActionInterface::generateCreateDataProvider(app, \action, pool, schema);
-                string actionname = action.action.lwr();
-                if (!crmap{appname}{actionname}) {
-                    crmap{appname}{actionname} = True;
-                }
-                break;
-            }
-
-            case DPAT_UPDATE: {
-                check_record_based_app();
-                TypeScriptActionInterface::generateUpdateDataProvider(app, \action, pool, schema);
-                string actionname = action.action.lwr();
-                if (!updmap{appname}{actionname}) {
-                    updmap{appname}{actionname} = True;
-                }
-                break;
-            }
-
-            case DPAT_UPSERT: {
-                check_record_based_app();
-                TypeScriptActionInterface::generateUpsertDataProvider(app, \action, pool, schema);
-                string actionname = action.action.lwr();
-                if (!upsmap{appname}{actionname}) {
-                    upsmap{appname}{actionname} = True;
-                }
-                break;
-            }
-
-            case DPAT_DELETE: {
-                check_record_based_app();
-                TypeScriptActionInterface::generateDeleteDataProvider(app, \action, pool, schema);
-                string actionname = action.action.lwr();
-                if (!dmap{appname}{actionname}) {
-                    dmap{appname}{actionname} = True;
-                }
-                break;
-            }
-
             default:
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y action_code: %y is unsupported",
                     action.app, action.action, action.action_code);
         }
-    }
-
-    static generateSearchDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
-            JavaScriptProgramPool pool, *SwaggerSchema schema, bool single) {
-        timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
-
-        ActionFunctionContext fctx(app.name, action.action, pool);
-        if (*hash<auto> opts = remove action.options) {
-            action.options = TypeScriptActionInterface::getOptions(app, \action, opts, fctx);
-            if (fctx.dmap) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"options\" "
-                    "attribute; search actions do not support get_dependent_options() callbacks", action.app,
-                    action.action);
-            }
-        }
-
-        *hash<AsyncCallInfo> search_records = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
-            "search_records", "search records", pool, io_timeout, action.app, action.action);
-        if (!search_records) {
-            throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y is missing its \"search_records\" "
-                "attribute, but this attribute is required for actions supporting searches", action.app,
-                action.action);
-        }
-
-        hash<string, hash<DataProviderOptionInfo>> search_options;
-        bool uses_generic_search = !getInitializedRecordBasedAppInfo(app.name).get_expressions;
-        if (*hash<auto> opts = remove action.search_options) {
-            if (uses_generic_search) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y cannot define \"search_options\" when "
-                    "\"uses_generic_search\" is also defined", action.app, action.action);
-            }
-            throw "UNSUPPORTED", "search options are not yet supported";
-        } else if (uses_generic_search) {
-            search_options = AbstractDataProvider::GenericRecordSearchOptions;
-        }
-
-        TypeScriptActionSearchDataProvider child(action.action, search_records, search_options, single, fctx);
-
-        TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);
-        prov.registerChild(action.action, child);
-
-        #printf("Registered %s %s (%y)\n", action.app, action.action);
-
-        action.path = action.action;
-    }
-
-    static registerAppChildDataProvider(string app, AbstractDataProvider prov) {
-        initApp(app);
-        TypeScriptActionAppDataProvider parent = TypeScriptActionInterface::getAppDataProvider(app);
-        parent.registerChild(prov.getName(), prov);
-    }
-
-    static bool tryRegisterAppChildDataProvider(string app, AbstractDataProvider prov) {
-        try {
-            registerAppChildDataProvider(app, prov);
-            return True;
-        } catch (hash<ExceptionInfo> ex) {
-            TSAI::warn("Failed to register child provider of app %y: %s: %s", app, ex.err, ex.desc);
-        }
-        return False;
-    }
-
-    static *AbstractDataProvider deregisterAppChildDataProvider(string app, string child) {
-        TypeScriptActionAppDataProvider parent = TypeScriptActionInterface::getAppDataProvider(app);
-        return parent.deregisterChild(child);
-    }
-
-    static generateCreateDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
-            JavaScriptProgramPool pool, *SwaggerSchema schema) {
-        throw "UNSUPPORTED";
-    }
-
-    static generateUpdateDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
-            JavaScriptProgramPool pool, *SwaggerSchema schema) {
-        throw "UNSUPPORTED";
-    }
-
-    static generateUpsertDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
-            JavaScriptProgramPool pool, *SwaggerSchema schema) {
-        throw "UNSUPPORTED";
-    }
-
-    static generateDeleteDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
-            JavaScriptProgramPool pool, *SwaggerSchema schema) {
-        throw "UNSUPPORTED";
     }
 
     static string generateEventDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
@@ -2747,26 +2674,6 @@ public class TypeScriptActionInterface {
             || dmap{appname};
     }
 
-    static bool appSupportsSearch(string app) {
-        return exists smap{app.lwr()};
-    }
-
-    static bool appSupportsCreate(string app) {
-        return exists crmap{app.lwr()};
-    }
-
-    static bool appSupportsUpdate(string app) {
-        return exists updmap{app.lwr()};
-    }
-
-    static bool appSupportsUpsert(string app) {
-        return exists upsmap{app.lwr()};
-    }
-
-    static bool appSupportsDelete(string app) {
-        return exists dmap{app.lwr()};
-    }
-
     static *hash<auto> getConnectionUpdateOptions(string app) {
         return app_conn_update_map{app.lwr()};
     }
@@ -3077,6 +2984,16 @@ hashdecl AppInfo {
     /** May only be declared if the app declares a get_table_list callback
     */
     *hash<AsyncCallInfo> get_expressions;
+
+    #! Callback to make native searches for the app
+    /** May only be declared if the app declares a get_table_list callback
+    */
+    *hash<AsyncCallInfo> search_records;
+
+    #! Callback to return search options for the app
+    /** May only be declared if the app declares \a get_table_list and \a search_records callbacks
+    */
+    *hash<AsyncCallInfo> search_options;
 
     # The program pool info
     JavaScriptProgramPool pool;

@@ -531,7 +531,7 @@ var obj = {
         assertEq("abc123", h.account_id);
         assertEq("https://www.example.com/api/abc123", rest.getURL());
 
-        prov = parent.getChildProviderEx("test-search");
+        prov = parent.getChildProviderPath("tables/test");
         assertTrue(prov.supportsRead());
 
         AbstractDataProviderRecordIterator i = prov.searchRecords();

@@ -312,6 +312,38 @@ exports.actionsCatalogue = {
                     },
                 };
             },
+
+            // executes the search and returns a list of the records matched
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+                @param where_cond?: object -> the optional search expression tree
+                @param search_opts?: object -> search options; the table will be provided as search_opts.table
+
+                @return get_record(ctx?: object, block_size: number): object -> a callable object that returns a
+                record set as an object with keys that correspond to the field names with values that are lists of
+                field values
+
+                record must be a data object that matches the record type for the table
+            */
+            "search_records": async function (ctx, where_cond, search_opts) {
+                if (search_opts.table != 'test') {
+                    throw new Error('Unknown table ' + search_opts.table);
+                }
+                let done = false;
+                function get_records(ctx, block_size) {
+                    if (!done) {
+                        done = true;
+                        return {
+                            "id": [1, 2],
+                            "name": ["a", "b"],
+                        };
+                    }
+                }
+                return get_records;
+            },
         });
 
         api.registerAction({
@@ -624,45 +656,6 @@ exports.actionsCatalogue = {
                         "required": true,
                     },
                 },
-            },
-        });
-
-        // NOTE: this action will be executed as a REST call, no code is necessary
-        api.registerAction({
-            "app": "js-test",
-            "action": "test-search",
-            "display_name": "Test Search",
-            "short_desc": "Test search",
-            "desc": "Test search",
-            "action_code": 4,  // DPAT_FIND == 4 (record search)
-
-            // executes the search and returns a list of the records matched
-            /**
-                @param ctx?: object with the following properties:
-                - conn_name?: string -> the connection name, if any is defined
-                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
-                - opts?: object -> a data object with option values set for the current action
-                @param where_cond?: object -> the optional search expression tree
-                @param search_opts?: object -> search options
-
-                @return get_record(ctx?: object, block_size: number): object -> a callable object that returns a
-                record set as an object with keys that correspond to the field names with values that are lists of
-                field values
-
-                record must be a data object that matches the record type for the table
-            */
-            "search_records": async function (ctx, where_cond, search_opts) {
-                let done = false;
-                function get_records(ctx, block_size) {
-                    if (!done) {
-                        done = true;
-                        return {
-                            "id": [1, 2],
-                            "name": ["a", "b"],
-                        };
-                    }
-                }
-                return get_records;
             },
         });
 
