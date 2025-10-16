@@ -176,7 +176,7 @@ describe('Canva', () => {
       const result = await action.api_function(
         {
           // eslint-disable-next-line max-len
-          url: 'https://www.huronelginwater.ca/app/uploads/2019/03/test.jpg',
+          url: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg',
           name: 'uploaded_image.jpg',
           tags: ['test', 'image'],
         },
