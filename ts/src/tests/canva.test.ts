@@ -176,7 +176,7 @@ describe('Canva', () => {
       const result = await action.api_function(
         {
           // eslint-disable-next-line max-len
-          url: 'https://alamocitygolftrail.com/wp-content/uploads/2022/11/canstockphoto22402523-arcos-creator.com_-1024x1024-1.jpg',
+          url: 'https://www.huronelginwater.ca/app/uploads/2019/03/test.jpg',
           name: 'uploaded_image.jpg',
           tags: ['test', 'image'],
         },
