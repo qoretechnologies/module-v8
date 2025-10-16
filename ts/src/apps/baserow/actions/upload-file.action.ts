@@ -2,7 +2,6 @@ import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnolog
 import axios from 'axios';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { BASEROW_APP_NAME, BaserowError } from '../constants';
-import { getBaserowTableColumnsResponseType } from '../helpers/get-table-fields';
 
 const action = 'upload_file';
 
@@ -95,7 +94,6 @@ const uploadFile = QoreAppCreator.createLocalizedAction<typeof options>({
       },
     },
   },
-  get_dynamic_response_type: getBaserowTableColumnsResponseType,
 });
 
 export default uploadFile;

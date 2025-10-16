@@ -166,8 +166,7 @@ const fetchLatestRows = async (
   let filterString: string | undefined;
 
   if (filter) {
-    const jsonString = JSON.stringify(filter);
-    filterString = encodeURIComponent(jsonString);
+    filterString = JSON.stringify(filter);
   }
 
   try {

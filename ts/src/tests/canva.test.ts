@@ -16,6 +16,7 @@ import { NewCanvaDesign, NewCanvaThreadReply } from '../apps/canva/triggers';
 import { encryptGitHubSecret } from '../qtests/utils';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import { createGitHubClient } from '../apps/github/helpers/constants';
+import { delay } from '../global/helpers';
 
 configDotenv({ path: '.env' });
 Debugger.level = DebugLevels.Verbose;
@@ -73,6 +74,10 @@ describe('Canva', () => {
     await updateCanvaRefreshTokenVariable(newRefreshToken);
 
     base_context.conn_opts.token = responseData.access_token;
+  });
+
+  afterEach(async () => {
+    await delay(200);
   });
 
   describe('Should test allowed values', () => {

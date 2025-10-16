@@ -116,8 +116,7 @@ const listRows = QoreAppCreator.createLocalizedAction<typeof options>({
     let filterString: string | undefined;
 
     if (filter) {
-      const jsonString = JSON.stringify(filter);
-      filterString = encodeURIComponent(jsonString);
+      filterString = JSON.stringify(filter);
     }
 
     if (order) {
