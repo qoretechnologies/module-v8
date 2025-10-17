@@ -1216,6 +1216,30 @@ public class TypeScriptActionInterface {
         map TypeScriptActionInterface::scanType($1, \tmap, definitions), h.properties.iterator();
     }
 
+    # Used by external code to add child data providers to an app
+    static registerAppChildDataProvider(string app, AbstractDataProvider prov) {
+        initApp(app);
+        TypeScriptActionAppDataProvider parent = TypeScriptActionInterface::getAppDataProvider(app);
+        parent.registerChild(prov.getName(), prov);
+    }
+
+    # Used by external code to add child data providers to an app
+    static bool tryRegisterAppChildDataProvider(string app, AbstractDataProvider prov) {
+        try {
+            registerAppChildDataProvider(app, prov);
+            return True;
+        } catch (hash<ExceptionInfo> ex) {
+            TSAI::warn("Failed to register child provider of app %y: %s: %s", app, ex.err, ex.desc);
+        }
+        return False;
+    }
+
+    # Used by external code to revert adding child data providers to an app
+    static *AbstractDataProvider deregisterAppChildDataProvider(string app, string child) {
+        TypeScriptActionAppDataProvider parent = TypeScriptActionInterface::getAppDataProvider(app);
+        return parent.deregisterChild(child);
+    }
+
     static addReference(string ref, reference<hash<string, bool>> tmap, *hash<auto> definitions) {
         tmap{ref} = True;
         *hash<auto> rh = definitions{ref};
