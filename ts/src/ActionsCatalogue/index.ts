@@ -90,6 +90,7 @@ import { Debugger, DebugLevels } from '../utils/Debugger';
 import supabase from '../apps/supabase';
 import firestore from '../apps/firestore';
 import firebase from '../apps/firebase';
+import baserow from '../apps/baserow';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -118,6 +119,7 @@ const NEW_APPS = {
   asana,
   attio,
   azureDevops,
+  baserow,
   bigml,
   bitbucket,
   brevo,
