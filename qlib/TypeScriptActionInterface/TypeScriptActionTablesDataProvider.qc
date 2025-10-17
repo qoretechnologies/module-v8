@@ -43,7 +43,7 @@ public class TypeScriptActionTablesDataProvider inherits TypeScriptActionRecordB
     #! Return data provider summary info
     *list<hash<DataProviderSummaryInfo>> getChildProviderSummaryInfo() {
         return map cast<hash<DataProviderSummaryInfo>>(
-            TypeScriptActionTableDataProvider::ProviderInfo{DataProviderSummaryInfoKeys}
+            TypeScriptActionRecordBasedDataProvider::ProviderInfo{DataProviderSummaryInfoKeys}
                 + {
                 "name": $1,
                 "desc": sprintf("Record-based data provider for app `%s` table `%s`", app.name, $1),
