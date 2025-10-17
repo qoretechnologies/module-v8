@@ -70,7 +70,7 @@ describe('Firestore', () => {
   });
 
   describe('Should test allowed values', () => {
-    let projectId: string | undefined;
+    const projectId = 'qorus-testing';
     let collectionPath: string | undefined;
 
     it('Should get project allowed values', async () => {
@@ -79,8 +79,6 @@ describe('Firestore', () => {
       expect(allowedValues).toBeDefined();
       expect(allowedValues.length).toBeGreaterThan(0);
       expect(allowedValues[0].value).toBeDefined();
-
-      projectId = allowedValues[0].value;
     });
 
     it('Should get collection id allowed values', async () => {
