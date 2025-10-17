@@ -1252,6 +1252,656 @@ type RootTranslation = {
 				}
 			}
 		}
+		Baserow: {
+			/**
+			 * B​a​s​e​r​o​w
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​B​a​s​e​r​o​w​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​d​a​t​a​b​a​s​e​ ​t​a​b​l​e​s​,​ ​r​o​w​s​,​ ​a​n​d​ ​f​i​l​e​s​ ​w​i​t​h​ ​p​o​w​e​r​f​u​l​ ​a​u​t​o​m​a​t​i​o​n
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​B​a​s​e​r​o​w​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​B​a​s​e​r​o​w​ ​d​a​t​a​b​a​s​e​ ​o​p​e​r​a​t​i​o​n​s​.​ ​C​r​e​a​t​e​,​ ​r​e​a​d​,​ ​u​p​d​a​t​e​,​ ​a​n​d​ ​d​e​l​e​t​e​ ​r​o​w​s​ ​i​n​ ​y​o​u​r​ ​t​a​b​l​e​s​,​ ​u​p​l​o​a​d​ ​f​i​l​e​s​,​ ​a​n​d​ ​m​o​n​i​t​o​r​ ​n​e​w​ ​e​n​t​r​i​e​s​ ​w​i​t​h​ ​r​e​a​l​-​t​i​m​e​ ​t​r​i​g​g​e​r​s​.​ ​W​h​e​t​h​e​r​ ​y​o​u​ ​n​e​e​d​ ​t​o​ ​m​a​n​a​g​e​ ​d​a​t​a​,​ ​f​i​l​t​e​r​ ​r​e​s​u​l​t​s​,​ ​o​r​ ​t​r​a​c​k​ ​n​e​w​ ​r​e​c​o​r​d​s​,​ ​t​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​s​t​r​e​a​m​l​i​n​e​s​ ​y​o​u​r​ ​B​a​s​e​r​o​w​ ​w​o​r​k​f​l​o​w​ ​a​u​t​o​m​a​t​i​o​n​ ​a​n​d​ ​d​a​t​a​b​a​s​e​ ​m​a​n​a​g​e​m​e​n​t​.
+			 */
+			longDesc: string
+			actions: {
+				create_row: {
+					/**
+					 * C​r​e​a​t​e​ ​R​o​w
+					 */
+					displayName: string
+					/**
+					 * I​n​s​e​r​t​ ​a​ ​n​e​w​ ​r​o​w​ ​i​n​t​o​ ​a​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e​.​ ​T​h​e​ ​a​c​t​i​o​n​ ​d​y​n​a​m​i​c​a​l​l​y​ ​p​r​e​s​e​n​t​s​ ​t​h​e​ ​t​a​b​l​e​ ​s​c​h​e​m​a​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​p​r​o​v​i​d​e​ ​v​a​l​u​e​s​ ​f​o​r​ ​e​a​c​h​ ​c​o​l​u​m​n​.​ ​O​p​t​i​o​n​a​l​l​y​ ​s​p​e​c​i​f​y​ ​a​ ​r​o​w​ ​I​D​ ​t​o​ ​i​n​s​e​r​t​ ​t​h​e​ ​n​e​w​ ​r​o​w​ ​b​e​f​o​r​e​ ​i​t​.​ ​R​e​t​u​r​n​s​ ​t​h​e​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​r​o​w​ ​w​i​t​h​ ​a​l​l​ ​i​t​s​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						table: {
+							/**
+							 * T​a​b​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​b​l​e​ ​w​h​e​r​e​ ​t​h​e​ ​r​o​w​ ​w​i​l​l​ ​b​e​ ​i​n​s​e​r​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​r​g​e​t​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e​ ​f​o​r​ ​i​n​s​e​r​t​i​n​g​ ​t​h​e​ ​n​e​w​ ​r​o​w​.​ ​T​h​e​ ​a​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​ ​w​i​l​l​ ​b​e​ ​d​y​n​a​m​i​c​a​l​l​y​ ​l​o​a​d​e​d​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​t​a​b​l​e​ ​s​c​h​e​m​a​.
+							 */
+							longDesc: string
+						}
+						data: {
+							/**
+							 * R​o​w​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​a​t​a​ ​t​o​ ​i​n​s​e​r​t​ ​i​n​t​o​ ​t​h​e​ ​n​e​w​ ​r​o​w
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​t​a​b​l​e​ ​c​o​l​u​m​n​s​.​ ​T​h​e​ ​s​t​r​u​c​t​u​r​e​ ​i​s​ ​d​y​n​a​m​i​c​a​l​l​y​ ​g​e​n​e​r​a​t​e​d​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​t​a​b​l​e​ ​s​c​h​e​m​a​,​ ​s​h​o​w​i​n​g​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​c​o​l​u​m​n​s​ ​w​i​t​h​ ​t​h​e​i​r​ ​d​a​t​a​ ​t​y​p​e​s​ ​a​n​d​ ​c​o​n​s​t​r​a​i​n​t​s​.
+							 */
+							longDesc: string
+						}
+						before_row_id: {
+							/**
+							 * B​e​f​o​r​e​ ​R​o​w​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * I​n​s​e​r​t​ ​t​h​e​ ​n​e​w​ ​r​o​w​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​r​o​w
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​s​p​e​c​i​f​y​ ​a​ ​r​o​w​ ​I​D​ ​t​o​ ​i​n​s​e​r​t​ ​t​h​e​ ​n​e​w​ ​r​o​w​ ​b​e​f​o​r​e​ ​i​t​ ​i​n​ ​t​h​e​ ​t​a​b​l​e​ ​o​r​d​e​r​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​a​p​p​e​n​d​ ​t​h​e​ ​r​o​w​ ​a​t​ ​t​h​e​ ​e​n​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_row: {
+					/**
+					 * D​e​l​e​t​e​ ​R​o​w
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​o​w​ ​f​r​o​m​ ​a​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​s​i​n​g​l​e​ ​r​o​w​ ​f​r​o​m​ ​a​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e​ ​b​y​ ​i​t​s​ ​I​D​.​ ​U​s​e​ ​w​i​t​h​ ​c​a​u​t​i​o​n​ ​a​s​ ​t​h​i​s​ ​o​p​e​r​a​t​i​o​n​ ​i​s​ ​i​r​r​e​v​e​r​s​i​b​l​e​ ​a​n​d​ ​p​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​o​w​.
+					 */
+					longDesc: string
+					options: {
+						table: {
+							/**
+							 * T​a​b​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​b​l​e​ ​t​o​ ​d​e​l​e​t​e​ ​t​h​e​ ​r​o​w​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e​ ​f​r​o​m​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​ ​a​ ​r​o​w​.​ ​E​n​s​u​r​e​ ​y​o​u​ ​h​a​v​e​ ​p​r​o​p​e​r​ ​p​e​r​m​i​s​s​i​o​n​s​ ​f​o​r​ ​d​e​l​e​t​e​ ​o​p​e​r​a​t​i​o​n​s​ ​o​n​ ​t​h​i​s​ ​t​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						row: {
+							/**
+							 * R​o​w
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​o​w​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​r​o​w​ ​t​o​ ​d​e​l​e​t​e​ ​f​r​o​m​ ​t​h​e​ ​t​a​b​l​e​ ​b​y​ ​i​t​s​ ​I​D​.​ ​T​h​i​s​ ​r​o​w​ ​w​i​l​l​ ​b​e​ ​p​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_table_row: {
+					/**
+					 * G​e​t​ ​T​a​b​l​e​ ​R​o​w
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​o​w​ ​f​r​o​m​ ​a​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​d​a​t​a​ ​f​o​r​ ​a​ ​s​i​n​g​l​e​ ​r​o​w​ ​i​n​ ​a​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e​ ​b​y​ ​i​t​s​ ​I​D​.​ ​R​e​t​u​r​n​s​ ​a​l​l​ ​c​o​l​u​m​n​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​o​w​ ​w​i​t​h​ ​d​y​n​a​m​i​c​a​l​l​y​ ​l​o​a​d​e​d​ ​f​i​e​l​d​ ​t​y​p​e​s​.
+					 */
+					longDesc: string
+					options: {
+						table: {
+							/**
+							 * T​a​b​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​b​l​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​r​o​w​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e​ ​f​r​o​m​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​a​ ​r​o​w​.​ ​T​h​e​ ​a​v​a​i​l​a​b​l​e​ ​r​o​w​s​ ​w​i​l​l​ ​b​e​ ​l​o​a​d​e​d​ ​b​a​s​e​d​ ​o​n​ ​t​h​i​s​ ​s​e​l​e​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						row: {
+							/**
+							 * R​o​w
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​o​w​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​r​o​w​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​t​h​e​ ​t​a​b​l​e​ ​b​y​ ​i​t​s​ ​I​D​.​ ​A​l​l​ ​d​a​t​a​ ​f​o​r​ ​t​h​i​s​ ​r​o​w​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_table_fields: {
+					/**
+					 * G​e​t​ ​T​a​b​l​e​ ​F​i​e​l​d​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​f​i​e​l​d​ ​d​e​f​i​n​i​t​i​o​n​s​ ​f​r​o​m​ ​a​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​m​e​t​a​d​a​t​a​ ​f​o​r​ ​a​l​l​ ​f​i​e​l​d​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e​ ​i​n​c​l​u​d​i​n​g​ ​f​i​e​l​d​ ​t​y​p​e​s​,​ ​o​r​d​e​r​,​ ​d​e​s​c​r​i​p​t​i​o​n​s​,​ ​d​e​f​a​u​l​t​ ​v​a​l​u​e​s​,​ ​a​n​d​ ​p​r​o​p​e​r​t​i​e​s​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​h​e​l​p​s​ ​y​o​u​ ​u​n​d​e​r​s​t​a​n​d​ ​t​h​e​ ​s​t​r​u​c​t​u​r​e​ ​a​n​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​o​f​ ​y​o​u​r​ ​d​a​t​a​b​a​s​e​ ​t​a​b​l​e​s​.
+					 */
+					longDesc: string
+					options: {
+						table: {
+							/**
+							 * T​a​b​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​b​l​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​i​e​l​d​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e​ ​w​h​o​s​e​ ​f​i​e​l​d​ ​d​e​f​i​n​i​t​i​o​n​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​f​e​t​c​h​.​ ​A​l​l​ ​f​i​e​l​d​s​ ​a​n​d​ ​t​h​e​i​r​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​s​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_rows: {
+					/**
+					 * L​i​s​t​ ​R​o​w​s
+					 */
+					displayName: string
+					/**
+					 * Q​u​e​r​y​ ​a​n​d​ ​r​e​t​r​i​e​v​e​ ​r​o​w​s​ ​f​r​o​m​ ​a​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​r​o​w​s​ ​f​r​o​m​ ​a​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​,​ ​s​o​r​t​i​n​g​,​ ​p​a​g​i​n​a​t​i​o​n​,​ ​a​n​d​ ​s​e​a​r​c​h​.​ ​R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​r​e​c​o​r​d​s​ ​m​a​t​c​h​i​n​g​ ​y​o​u​r​ ​q​u​e​r​y​ ​c​r​i​t​e​r​i​a​ ​a​l​o​n​g​ ​w​i​t​h​ ​t​o​t​a​l​ ​c​o​u​n​t​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						table: {
+							/**
+							 * T​a​b​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​b​l​e​ ​t​o​ ​q​u​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e​ ​f​r​o​m​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​r​o​w​s​.​ ​T​h​e​ ​a​v​a​i​l​a​b​l​e​ ​c​o​l​u​m​n​s​ ​f​o​r​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​o​r​d​e​r​i​n​g​ ​w​i​l​l​ ​b​e​ ​l​o​a​d​e​d​ ​b​a​s​e​d​ ​o​n​ ​t​h​i​s​ ​s​e​l​e​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						page: {
+							/**
+							 * P​a​g​e
+							 */
+							displayName: string
+							/**
+							 * P​a​g​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​i​c​h​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​U​s​e​d​ ​i​n​ ​c​o​m​b​i​n​a​t​i​o​n​ ​w​i​t​h​ ​s​i​z​e​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​h​r​o​u​g​h​ ​l​a​r​g​e​ ​d​a​t​a​s​e​t​s​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​p​a​g​e​ ​1​.
+							 */
+							longDesc: string
+						}
+						size: {
+							/**
+							 * S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​p​e​r​ ​p​a​g​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​1​0​0​ ​r​o​w​s​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						search: {
+							/**
+							 * S​e​a​r​c​h
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​r​o​w​s
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​a​ ​s​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​r​o​w​s​ ​a​c​r​o​s​s​ ​a​l​l​ ​t​e​x​t​ ​f​i​e​l​d​s​ ​i​n​ ​t​h​e​ ​t​a​b​l​e​.​ ​O​n​l​y​ ​r​o​w​s​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​i​s​ ​t​e​r​m​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+						order: {
+							/**
+							 * O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​r​i​e​v​e​d​ ​r​o​w​s​ ​b​y​ ​s​p​e​c​i​f​y​i​n​g​ ​a​ ​f​i​e​l​d​ ​a​n​d​ ​s​o​r​t​ ​d​i​r​e​c​t​i​o​n​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​b​l​e​ ​f​i​e​l​d​ ​u​s​e​d​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s​.
+										 */
+										longDesc: string
+									}
+									direction: {
+										/**
+										 * D​i​r​e​c​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​a​s​c​e​n​d​i​n​g​ ​(​+​)​ ​t​o​ ​s​o​r​t​ ​f​r​o​m​ ​l​o​w​e​s​t​ ​t​o​ ​h​i​g​h​e​s​t​,​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​(​-​)​ ​t​o​ ​s​o​r​t​ ​f​r​o​m​ ​h​i​g​h​e​s​t​ ​t​o​ ​l​o​w​e​s​t​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​r​o​w​s​ ​b​a​s​e​d​ ​o​n​ ​c​o​n​d​i​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​m​u​l​t​i​p​l​e​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​o​n​l​y​ ​r​o​w​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.​ ​S​u​p​p​o​r​t​s​ ​v​a​r​i​o​u​s​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​s​ ​a​n​d​ ​l​o​g​i​c​a​l​ ​c​o​m​b​i​n​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									filters: {
+										/**
+										 * F​i​l​t​e​r​s
+										 */
+										displayName: string
+										/**
+										 * L​i​s​t​ ​o​f​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​s
+										 */
+										shortDesc: string
+										/**
+										 * D​e​f​i​n​e​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​s​.​ ​E​a​c​h​ ​c​o​n​d​i​t​i​o​n​ ​s​p​e​c​i​f​i​e​s​ ​a​ ​f​i​e​l​d​,​ ​o​p​e​r​a​t​o​r​,​ ​a​n​d​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​a​g​a​i​n​s​t​.
+										 */
+										longDesc: string
+										type: {
+											element_type: {
+												type: {
+													fields: {
+														type: {
+															/**
+															 * T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+															 */
+															shortDesc: string
+															/**
+															 * C​h​o​o​s​e​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​f​o​r​ ​t​h​i​s​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​(​e​q​u​a​l​,​ ​c​o​n​t​a​i​n​s​,​ ​e​m​p​t​y​,​ ​e​t​c​.​)​.
+															 */
+															longDesc: string
+														}
+														field: {
+															/**
+															 * F​i​e​l​d
+															 */
+															displayName: string
+															/**
+															 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+															 */
+															shortDesc: string
+															/**
+															 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​b​l​e​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​i​s​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​t​o​.
+															 */
+															longDesc: string
+														}
+														value: {
+															/**
+															 * V​a​l​u​e
+															 */
+															displayName: string
+															/**
+															 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t​ ​u​s​i​n​g​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​o​p​e​r​a​t​o​r​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+									}
+									filter_type: {
+										/**
+										 * F​i​l​t​e​r​ ​T​y​p​e
+										 */
+										displayName: string
+										/**
+										 * L​o​g​i​c​a​l​ ​o​p​e​r​a​t​o​r​ ​f​o​r​ ​c​o​m​b​i​n​i​n​g​ ​f​i​l​t​e​r​s
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​A​N​D​ ​t​o​ ​r​e​q​u​i​r​e​ ​a​l​l​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​s​ ​t​o​ ​m​a​t​c​h​,​ ​o​r​ ​O​R​ ​t​o​ ​m​a​t​c​h​ ​a​n​y​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_tables: {
+					/**
+					 * L​i​s​t​ ​T​a​b​l​e​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​l​l​ ​t​a​b​l​e​s​ ​i​n​ ​y​o​u​r​ ​B​a​s​e​r​o​w​ ​d​a​t​a​b​a​s​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​t​a​b​l​e​s​ ​f​r​o​m​ ​y​o​u​r​ ​B​a​s​e​r​o​w​ ​d​a​t​a​b​a​s​e​ ​w​i​t​h​ ​t​h​e​i​r​ ​b​a​s​i​c​ ​m​e​t​a​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​t​a​b​l​e​ ​I​D​s​,​ ​n​a​m​e​s​,​ ​o​r​d​e​r​,​ ​a​n​d​ ​a​s​s​o​c​i​a​t​e​d​ ​d​a​t​a​b​a​s​e​ ​I​D​s​.
+					 */
+					longDesc: string
+				}
+				update_row: {
+					/**
+					 * U​p​d​a​t​e​ ​R​o​w
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​r​o​w​ ​i​n​ ​a​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​v​a​l​u​e​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​r​o​w​ ​i​n​ ​a​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e​.​ ​T​h​e​ ​a​c​t​i​o​n​ ​d​y​n​a​m​i​c​a​l​l​y​ ​p​r​e​s​e​n​t​s​ ​t​h​e​ ​t​a​b​l​e​ ​s​c​h​e​m​a​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​m​o​d​i​f​y​ ​v​a​l​u​e​s​ ​f​o​r​ ​e​a​c​h​ ​c​o​l​u​m​n​.​ ​R​e​t​u​r​n​s​ ​t​h​e​ ​u​p​d​a​t​e​d​ ​r​o​w​ ​w​i​t​h​ ​a​l​l​ ​i​t​s​ ​c​u​r​r​e​n​t​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						table: {
+							/**
+							 * T​a​b​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​b​l​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​o​w​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​o​w​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.​ ​T​h​e​ ​a​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​ ​w​i​l​l​ ​b​e​ ​d​y​n​a​m​i​c​a​l​l​y​ ​l​o​a​d​e​d​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​t​a​b​l​e​ ​s​c​h​e​m​a​.
+							 */
+							longDesc: string
+						}
+						row: {
+							/**
+							 * R​o​w
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​o​w​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​r​o​w​ ​t​o​ ​u​p​d​a​t​e​ ​b​y​ ​i​t​s​ ​I​D​.​ ​T​h​e​ ​c​u​r​r​e​n​t​ ​v​a​l​u​e​s​ ​o​f​ ​t​h​i​s​ ​r​o​w​ ​w​i​l​l​ ​b​e​ ​m​o​d​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						data: {
+							/**
+							 * R​o​w​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​d​a​t​a​ ​f​o​r​ ​t​h​e​ ​r​o​w
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​n​e​w​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​t​a​b​l​e​ ​c​o​l​u​m​n​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.​ ​T​h​e​ ​s​t​r​u​c​t​u​r​e​ ​i​s​ ​d​y​n​a​m​i​c​a​l​l​y​ ​g​e​n​e​r​a​t​e​d​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​t​a​b​l​e​ ​s​c​h​e​m​a​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				upload_file: {
+					/**
+					 * U​p​l​o​a​d​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​a​ ​f​i​l​e​ ​t​o​ ​B​a​s​e​r​o​w​ ​s​t​o​r​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​s​ ​a​ ​f​i​l​e​ ​t​o​ ​B​a​s​e​r​o​w​'​s​ ​f​i​l​e​ ​s​t​o​r​a​g​e​ ​s​y​s​t​e​m​.​ ​R​e​t​u​r​n​s​ ​t​h​e​ ​u​p​l​o​a​d​e​d​ ​f​i​l​e​'​s​ ​m​e​t​a​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​U​R​L​,​ ​s​i​z​e​,​ ​M​I​M​E​ ​t​y​p​e​,​ ​a​n​d​ ​g​e​n​e​r​a​t​e​d​ ​t​h​u​m​b​n​a​i​l​s​ ​f​o​r​ ​i​m​a​g​e​s​.​ ​T​h​e​ ​u​p​l​o​a​d​e​d​ ​f​i​l​e​ ​c​a​n​ ​t​h​e​n​ ​b​e​ ​r​e​f​e​r​e​n​c​e​d​ ​i​n​ ​f​i​l​e​ ​f​i​e​l​d​s​ ​w​i​t​h​i​n​ ​y​o​u​r​ ​t​a​b​l​e​s​.
+					 */
+					longDesc: string
+					options: {
+						file: {
+							/**
+							 * F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​p​r​o​v​i​d​e​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d​ ​t​o​ ​B​a​s​e​r​o​w​ ​s​t​o​r​a​g​e​.​ ​T​h​e​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​s​t​o​r​e​d​ ​a​n​d​ ​a​v​a​i​l​a​b​l​e​ ​f​o​r​ ​u​s​e​ ​i​n​ ​f​i​l​e​ ​f​i​e​l​d​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_document: {
+					/**
+					 * N​e​w​ ​R​o​w
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​o​w​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e​ ​f​o​r​ ​n​e​w​ ​r​o​w​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​r​e​c​o​r​d​s​ ​a​r​e​ ​i​n​s​e​r​t​e​d​.​ ​S​u​p​p​o​r​t​s​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​e​a​r​c​h​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​l​y​ ​f​o​r​ ​r​o​w​s​ ​m​a​t​c​h​i​n​g​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.
+					 */
+					longDesc: string
+					options: {
+						table: {
+							/**
+							 * T​a​b​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​b​l​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​o​w​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​B​a​s​e​r​o​w​ ​t​a​b​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​f​i​r​e​ ​w​h​e​n​e​v​e​r​ ​n​e​w​ ​r​o​w​s​ ​a​r​e​ ​i​n​s​e​r​t​e​d​ ​i​n​t​o​ ​t​h​i​s​ ​t​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						search: {
+							/**
+							 * S​e​a​r​c​h
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​s​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​n​e​w​ ​r​o​w​s
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​a​ ​s​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​l​y​ ​f​o​r​ ​n​e​w​ ​r​o​w​s​ ​t​h​a​t​ ​c​o​n​t​a​i​n​ ​t​h​i​s​ ​t​e​r​m​ ​i​n​ ​a​n​y​ ​t​e​x​t​ ​f​i​e​l​d​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​a​l​l​ ​n​e​w​ ​r​o​w​s​.
+							 */
+							longDesc: string
+						}
+						filter: {
+							/**
+							 * F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​c​o​n​d​i​t​i​o​n​s​ ​t​o​ ​f​i​l​t​e​r​ ​n​e​w​ ​r​o​w​s
+							 */
+							shortDesc: string
+							/**
+							 * A​p​p​l​y​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​s​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​l​y​ ​f​o​r​ ​n​e​w​ ​r​o​w​s​ ​m​a​t​c​h​i​n​g​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​a​l​l​ ​n​e​w​ ​r​o​w​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									filters: {
+										/**
+										 * F​i​l​t​e​r​s
+										 */
+										displayName: string
+										/**
+										 * L​i​s​t​ ​o​f​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​s
+										 */
+										shortDesc: string
+										/**
+										 * D​e​f​i​n​e​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​s​.​ ​O​n​l​y​ ​n​e​w​ ​r​o​w​s​ ​m​a​t​c​h​i​n​g​ ​t​h​e​s​e​ ​c​o​n​d​i​t​i​o​n​s​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.
+										 */
+										longDesc: string
+										type: {
+											element_type: {
+												type: {
+													fields: {
+														type: {
+															/**
+															 * T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+															 */
+															shortDesc: string
+															/**
+															 * C​h​o​o​s​e​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​f​o​r​ ​t​h​i​s​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​.
+															 */
+															longDesc: string
+														}
+														field: {
+															/**
+															 * F​i​e​l​d
+															 */
+															displayName: string
+															/**
+															 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+															 */
+															shortDesc: string
+															/**
+															 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​b​l​e​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​i​s​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​t​o​.
+															 */
+															longDesc: string
+														}
+														value: {
+															/**
+															 * V​a​l​u​e
+															 */
+															displayName: string
+															/**
+															 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​.​ ​O​n​l​y​ ​n​e​w​ ​r​o​w​s​ ​m​a​t​c​h​i​n​g​ ​t​h​i​s​ ​c​o​n​d​i​t​i​o​n​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+									}
+									filter_type: {
+										/**
+										 * F​i​l​t​e​r​ ​T​y​p​e
+										 */
+										displayName: string
+										/**
+										 * L​o​g​i​c​a​l​ ​o​p​e​r​a​t​o​r​ ​f​o​r​ ​c​o​m​b​i​n​i​n​g​ ​f​i​l​t​e​r​s
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​A​N​D​ ​t​o​ ​r​e​q​u​i​r​e​ ​a​l​l​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​s​ ​t​o​ ​m​a​t​c​h​,​ ​o​r​ ​O​R​ ​t​o​ ​m​a​t​c​h​ ​a​n​y​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 		Firestore: {
 			/**
 			 * F​i​r​e​s​t​o​r​e
@@ -80631,6 +81281,656 @@ export type TranslationFunctions = {
 										shortDesc: () => LocalizedString
 										/**
 										 * The value to compare against. Only new rows matching this condition will trigger the event.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		Baserow: {
+			/**
+			 * Baserow
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Baserow to manage your database tables, rows, and files with powerful automation
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Baserow integration provides comprehensive access to your Baserow database operations. Create, read, update, and delete rows in your tables, upload files, and monitor new entries with real-time triggers. Whether you need to manage data, filter results, or track new records, this integration streamlines your Baserow workflow automation and database management.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				create_row: {
+					/**
+					 * Create Row
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Insert a new row into a Baserow table
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new record in the specified Baserow table. The action dynamically presents the table schema, allowing you to provide values for each column. Optionally specify a row ID to insert the new row before it. Returns the newly created row with all its data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						table: {
+							/**
+							 * Table
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The table where the row will be inserted
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the target Baserow table for inserting the new row. The available fields will be dynamically loaded based on the selected table schema.
+							 */
+							longDesc: () => LocalizedString
+						}
+						data: {
+							/**
+							 * Row Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The data to insert into the new row
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide values for the table columns. The structure is dynamically generated based on the selected table schema, showing all available columns with their data types and constraints.
+							 */
+							longDesc: () => LocalizedString
+						}
+						before_row_id: {
+							/**
+							 * Before Row ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Insert the new row before this row
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally specify a row ID to insert the new row before it in the table order. Leave empty to append the row at the end.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_row: {
+					/**
+					 * Delete Row
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a specific row from a Baserow table
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes a single row from a Baserow table by its ID. Use with caution as this operation is irreversible and permanently deletes the specified row.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						table: {
+							/**
+							 * Table
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The table to delete the row from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Baserow table from which you want to delete a row. Ensure you have proper permissions for delete operations on this table.
+							 */
+							longDesc: () => LocalizedString
+						}
+						row: {
+							/**
+							 * Row
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The row to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific row to delete from the table by its ID. This row will be permanently removed.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_table_row: {
+					/**
+					 * Get Table Row
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific row from a Baserow table
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed data for a single row in a Baserow table by its ID. Returns all column values for the specified row with dynamically loaded field types.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						table: {
+							/**
+							 * Table
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The table to retrieve the row from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Baserow table from which you want to retrieve a row. The available rows will be loaded based on this selection.
+							 */
+							longDesc: () => LocalizedString
+						}
+						row: {
+							/**
+							 * Row
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The row to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific row to retrieve from the table by its ID. All data for this row will be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_table_fields: {
+					/**
+					 * Get Table Fields
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve all field definitions from a Baserow table
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive metadata for all fields in a specific Baserow table including field types, order, descriptions, default values, and properties. This action helps you understand the structure and configuration of your database tables.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						table: {
+							/**
+							 * Table
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The table to retrieve fields from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Baserow table whose field definitions you want to fetch. All fields and their configurations will be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_rows: {
+					/**
+					 * List Rows
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Query and retrieve rows from a Baserow table
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches rows from a Baserow table with support for filtering, sorting, pagination, and search. Returns a list of records matching your query criteria along with total count and pagination information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						table: {
+							/**
+							 * Table
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The table to query
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Baserow table from which you want to retrieve rows. The available columns for filtering and ordering will be loaded based on this selection.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page: {
+							/**
+							 * Page
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Page number for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify which page of results to retrieve. Used in combination with size for pagination through large datasets. Defaults to page 1.
+							 */
+							longDesc: () => LocalizedString
+						}
+						size: {
+							/**
+							 * Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of rows per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum number of rows to retrieve per page. Defaults to 100 rows if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search: {
+							/**
+							 * Search
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search term to filter rows
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide a search term to filter rows across all text fields in the table. Only rows containing this term will be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+						order: {
+							/**
+							 * Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort the results by a specific field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Define how to sort the retrieved rows by specifying a field and sort direction (ascending or descending).
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select the table field used for sorting the results.
+										 */
+										longDesc: () => LocalizedString
+									}
+									direction: {
+										/**
+										 * Direction
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort direction
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose ascending (+) to sort from lowest to highest, or descending (-) to sort from highest to lowest.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter rows based on conditions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply multiple filter conditions to retrieve only rows that match specific criteria. Supports various comparison operators and logical combinations.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									filters: {
+										/**
+										 * Filters
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * List of filter conditions
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Define one or more filter conditions. Each condition specifies a field, operator, and value to match against.
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											element_type: {
+												type: {
+													fields: {
+														type: {
+															/**
+															 * Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * The comparison operator
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Choose the comparison operator for this filter condition (equal, contains, empty, etc.).
+															 */
+															longDesc: () => LocalizedString
+														}
+														field: {
+															/**
+															 * Field
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * The field to filter on
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Select the table field to apply this filter condition to.
+															 */
+															longDesc: () => LocalizedString
+														}
+														value: {
+															/**
+															 * Value
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * The value to compare against
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The value to compare the field against using the selected operator.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
+									filter_type: {
+										/**
+										 * Filter Type
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Logical operator for combining filters
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose AND to require all filter conditions to match, or OR to match any filter condition.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_tables: {
+					/**
+					 * List Tables
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get all tables in your Baserow database
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of all tables from your Baserow database with their basic metadata including table IDs, names, order, and associated database IDs.
+					 */
+					longDesc: () => LocalizedString
+				}
+				update_row: {
+					/**
+					 * Update Row
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing row in a Baserow table
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the values of an existing row in a Baserow table. The action dynamically presents the table schema, allowing you to modify values for each column. Returns the updated row with all its current data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						table: {
+							/**
+							 * Table
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The table containing the row to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Baserow table containing the row you want to update. The available fields will be dynamically loaded based on the table schema.
+							 */
+							longDesc: () => LocalizedString
+						}
+						row: {
+							/**
+							 * Row
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The row to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific row to update by its ID. The current values of this row will be modified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						data: {
+							/**
+							 * Row Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new data for the row
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide new values for the table columns you want to update. The structure is dynamically generated based on the selected table schema.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				upload_file: {
+					/**
+					 * Upload File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload a file to Baserow storage
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Uploads a file to Baserow's file storage system. Returns the uploaded file's metadata including URL, size, MIME type, and generated thumbnails for images. The uploaded file can then be referenced in file fields within your tables.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						file: {
+							/**
+							 * File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file to upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or provide the file to upload to Baserow storage. The file will be stored and available for use in file fields.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_document: {
+					/**
+					 * New Row
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new row is added to a Baserow table
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a Baserow table for new rows and triggers when new records are inserted. Supports optional filtering and search to trigger only for rows matching specific criteria.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						table: {
+							/**
+							 * Table
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The table to monitor for new rows
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Baserow table you want to monitor. The trigger will fire whenever new rows are inserted into this table.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search: {
+							/**
+							 * Search
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional search term to filter new rows
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide a search term to trigger only for new rows that contain this term in any text field. Leave empty to trigger for all new rows.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filter: {
+							/**
+							 * Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional conditions to filter new rows
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Apply filter conditions to trigger only for new rows matching specific criteria. Leave empty to trigger for all new rows.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									filters: {
+										/**
+										 * Filters
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * List of filter conditions
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Define one or more filter conditions. Only new rows matching these conditions will trigger the event.
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											element_type: {
+												type: {
+													fields: {
+														type: {
+															/**
+															 * Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * The comparison operator
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Choose the comparison operator for this filter condition.
+															 */
+															longDesc: () => LocalizedString
+														}
+														field: {
+															/**
+															 * Field
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * The field to filter on
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Select the table field to apply this filter condition to.
+															 */
+															longDesc: () => LocalizedString
+														}
+														value: {
+															/**
+															 * Value
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * The value to match
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The value to compare against. Only new rows matching this condition will trigger the event.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+									}
+									filter_type: {
+										/**
+										 * Filter Type
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Logical operator for combining filters
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose AND to require all filter conditions to match, or OR to match any filter condition.
 										 */
 										longDesc: () => LocalizedString
 									}

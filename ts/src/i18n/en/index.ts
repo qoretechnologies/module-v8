@@ -13,6 +13,7 @@ import AmazonSQS from './apps/AmazonSQS';
 import Asana from './apps/Asana';
 import Attio from './apps/Attio';
 import AzureDevOps from './apps/AzureDevOps';
+import Baserow from './apps/Baserow';
 import BigMl from './apps/BigMl';
 import Bitbucket from './apps/Bitbucket';
 import Brevo from './apps/Brevo';
@@ -28,6 +29,8 @@ import Dropbox from './apps/Dropbox';
 import Dynamics from './apps/Dynamics';
 import FacebookPages from './apps/FacebookPages';
 import Figma from './apps/Figma';
+import Firebase from './apps/Firebase';
+import Firestore from './apps/Firestore';
 import Freshdesk from './apps/Freshdesk';
 import Gemini from './apps/Gemini';
 import Github from './apps/Github';
@@ -75,14 +78,13 @@ import Xero from './apps/Xero';
 import YouTube from './apps/YouTube';
 import Zendesk from './apps/Zendesk';
 import Zoom from './apps/Zoom';
-import Firestore from './apps/Firestore';
-import Firebase from './apps/Firebase';
 
 const en = {
   common: {},
   apps: {
     Firebase,
     Supabase,
+    Baserow,
     Firestore,
     Sentry,
     Patreon,

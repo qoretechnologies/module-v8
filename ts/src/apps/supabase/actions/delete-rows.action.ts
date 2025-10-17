@@ -23,7 +23,6 @@ const options = {
           type: 'string',
           required: true,
           get_allowed_values: getSupabaseTableColumnAllowedValues,
-          depends_on: ['tableName'],
         },
         operator: {
           type: 'string',
