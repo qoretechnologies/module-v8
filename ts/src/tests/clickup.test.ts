@@ -37,6 +37,7 @@ import {
   UpdatedClickUpTask,
 } from '../apps/clickup/triggers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import { delay } from '../global/helpers';
 
 Debugger.level = DebugLevels.Verbose;
 
@@ -59,6 +60,10 @@ describe('ClickUp', () => {
     }
 
     base_context.conn_opts.token = token;
+  });
+
+  afterEach(async () => {
+    await delay(200);
   });
 
   let workspace: string | undefined;
