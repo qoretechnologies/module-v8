@@ -100,11 +100,14 @@ public class JavaScriptThreadProcessPool {
 
     #! Releases a proxy for an API call
     release(JavaScriptProgramProxy p) {
-        string pkey = p.uniqueHash();
-
         m.lock();
         on_exit m.unlock();
 
+        releaseIntern(p);
+    }
+
+    private releaseIntern(JavaScriptProgramProxy p) {
+        string pkey = p.uniqueHash();
         hash<ProxyCacheInfo> info = remove amap{pkey};
         remove tmap{info.tid};
         remove info.tid;
@@ -112,41 +115,99 @@ public class JavaScriptThreadProcessPool {
         imap{pkey} = info;
     }
 
+    *hash<auto> searchRecords(string app, string id, int block_size, *hash<DataProviderExpression> where_cond,
+            hash<auto> search_options, *hash<DataContextInfo> options) {
+        JavaScriptProgramProxy proxy;
+        {
+            AutoLock al(m);
+            # unique proxy key
+            string pkey;
+            hash<ProxyCacheInfo> info;
+            # take a proxy from the idle map, if any
+            if (imap) {
+                # get proxy key
+                pkey = imap.firstKey();
+                # remove from inactive map
+                info = remove imap{pkey};
+                remove info.atime;
+            } else {
+                info = getProxyIntern(gettid(), \pkey);
+                # this proxy is not dedicated to any TID; it's only for bulk searches
+                remove info.tid;
+                pkey = info.p.uniqueHash();
+            }
+            # add to active map
+            amap{pkey} = info;
+            proxy = info.p;
+        }
+        on_error {
+            release(remove proxy);
+        }
+        *hash<auto> rv = proxy.searchRecords(app, id, block_size, where_cond, search_options, options);
+        if (!rv.firstValue().lsize()) {
+            release(remove proxy);
+        }
+        return {
+            "rv": rv,
+            "proxy": proxy,
+        };
+    }
+
+    #! Releases a search
+    releaseSearch(JavaScriptProgramProxy proxy, string id) {
+        proxy.releaseSearch(id);
+        AutoLock al(m);
+        string pkey = proxy.uniqueHash();
+        hash<ProxyCacheInfo> info = remove amap{pkey};
+        info.atime = now_us();
+        imap{pkey} = info;
+    }
+
     #! Sets up a proxy as an event data source
     JavaScriptProgramProxy setupEventSource(Observable observable, string app, string action, string key,
             *hash<DataContextInfo> options) {
-        AutoLock al(m);
+        JavaScriptProgramProxy proxy;
+        string pkey;
+        {
+            AutoLock al(m);
 
-        # look for a proxy already handling this exact event
-        foreach string pkey in (keys amap) {
-            if (amap{pkey}.p.supportsEvent(key)) {
-                on_success ++amap{pkey}.ecount;
-                amap{pkey}.p.addEventSourceLocked(observable, key);
-                return amap{pkey}.p;
+            # look for a proxy already handling this exact event
+            foreach string pkey in (keys amap) {
+                if (amap{pkey}.p.supportsEvent(key)) {
+                    on_success ++amap{pkey}.ecount;
+                    amap{pkey}.p.addEventSourceLocked(observable, key);
+                    return amap{pkey}.p;
+                }
+            }
+
+            # unique proxy key
+            hash<ProxyCacheInfo> info;
+            # take a proxy from the idle map, if any
+            if (imap) {
+                # get proxy key
+                pkey = imap.firstKey();
+                # remove from inactive map
+                info = remove imap{pkey};
+                remove info.atime;
+            } else {
+                info = getProxyIntern(gettid(), \pkey);
+                # this proxy is not dedicated to any TID; it's only for events
+                remove info.tid;
+                pkey = info.p.uniqueHash();
+            }
+            # add to active map
+            amap{pkey} = info;
+            ++amap{pkey}.ecount;
+            proxy = info.p;
+        }
+        on_error {
+            AutoLock al(m);
+            if (!--amap{pkey}.ecount) {
+                releaseIntern(proxy);
             }
         }
-
-        # unique proxy key
-        string pkey;
-        hash<ProxyCacheInfo> info;
-        # take a proxy from the idle map, if any
-        if (imap) {
-            # get proxy key
-            pkey = imap.firstKey();
-            # remove from inactive map
-            info = remove imap{pkey};
-            remove info.atime;
-        } else {
-            info = getProxyIntern(gettid(), \pkey);
-            # this proxy is not dedicated to any TID; it's only for events
-            remove info.tid;
-            pkey = info.p.uniqueHash();
-        }
-        # add to active map
-        amap{pkey} = info;
-        on_success ++amap{pkey}.ecount;
-        info.p.setupEventSourceLocked(observable, app, action, key, options);
-        return info.p;
+        proxy.setupEventSource(observable, app, action, key, options);
+        return proxy;
     }
 
     #! Releases a proxy as an event source

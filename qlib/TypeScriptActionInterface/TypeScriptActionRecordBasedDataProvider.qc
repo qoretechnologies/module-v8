@@ -144,10 +144,14 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             *hash<DataProviderExpression> where_cond, *hash<auto> search_options) {
         search_options.table = name;
         *hash<DataContextInfo> cctx = getCallContextInfo();
-        *code get_records = getAsyncValue(search_records, cctx,
-            get_expressions ? where_cond : NOTHING, get_expressions ? search_options : NOTHING);
-        return new TypeScriptBulkRecordInterface(block_size, self, get_records, cctx,
-            get_expressions ? NOTHING : where_cond);
+        if (TSAI::checkServer()) {
+            return new TypeScriptBulkRecordProxyInterface(block_size, self, where_cond, search_options, cctx);
+        } else {
+            *code get_records = getAsyncValue(search_records, cctx,
+                get_expressions ? where_cond : NOTHING, get_expressions ? search_options : NOTHING);
+            return new TypeScriptBulkRecordInterface(block_size, self, get_records, cctx,
+                get_expressions ? NOTHING : where_cond);
+        }
     }
 
     #! Returns an iterator for zero or more records matching the search options
