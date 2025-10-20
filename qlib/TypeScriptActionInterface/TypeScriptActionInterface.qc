@@ -560,7 +560,13 @@ public class TypeScriptActionInterface {
         hash<AsyncCallInfo> get_record_type;
         hash<AsyncCallInfo> get_expressions;
         hash<AsyncCallInfo> search_records;
-        hash<AsyncCallInfo> search_options;
+        hash<AsyncCallInfo> get_search_options;
+        hash<AsyncCallInfo> create_records;
+        hash<AsyncCallInfo> get_create_options;
+        hash<AsyncCallInfo> update_records;
+        hash<AsyncCallInfo> upsert_records;
+        hash<AsyncCallInfo> get_upsert_options;
+        hash<AsyncCallInfo> delete_records;
 
         timeout io_timeout;
         if (app.get_table_list) {
@@ -615,17 +621,53 @@ public class TypeScriptActionInterface {
             search_records = tryGetAsyncAttribute(\app, "search_records", "search records", pool, io_timeout,
                 app.name);
 
-            if (app.search_options) {
+            if (app.get_search_options) {
                 if (!get_expressions) {
-                    throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y cannot define \"search_options\" when is uses "
-                        "generic search functionality (missing 'get_expressions()' function)", app.name);
+                    throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y cannot define \"get_search_options\" when it "
+                        "uses generic search functionality (missing 'get_expressions()' function)", app.name);
                 }
-                search_options = tryGetAsyncAttribute(\app, "search_options", "search options", pool, io_timeout,
-                    app.name);
+                get_search_options = tryGetAsyncAttribute(\app, "get_search_options", "get search options", pool,
+                    io_timeout, app.name);
             }
-        } else if (app.search_options) {
-            throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y cannot define \"search_options\" without also defining "
-                "'search_records()'", app.name);
+        } else if (app.get_search_options) {
+            throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y cannot define \"get_search_options\" without also "
+                "defining 'search_records()'", app.name);
+        }
+
+        if (app.create_records) {
+            check_record_based();
+            create_records = tryGetAsyncAttribute(\app, "create_records", "create records", pool, io_timeout, app.name);
+
+            if (app.get_create_options) {
+                get_create_options = tryGetAsyncAttribute(\app, "get_create_options", "get create options", pool,
+                    io_timeout, app.name);
+            }
+        } else if (app.get_create_options) {
+            throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y cannot define \"get_create_options\" without also "
+                "defining 'create_records()'", app.name);
+        }
+
+        if (app.update_records) {
+            check_record_based();
+            update_records = tryGetAsyncAttribute(\app, "update_records", "update records", pool, io_timeout, app.name);
+        }
+
+        if (app.upsert_records) {
+            check_record_based();
+            upsert_records = tryGetAsyncAttribute(\app, "upsert_records", "upsert records", pool, io_timeout, app.name);
+
+            if (app.get_upsert_options) {
+                get_create_options = tryGetAsyncAttribute(\app, "get_upsert_options", "get upsert options", pool,
+                    io_timeout, app.name);
+            }
+        } else if (app.get_upsert_options) {
+            throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y cannot define \"get_upsert_options\" without also "
+                "defining 'upsert_records()'", app.name);
+        }
+
+        if (app.delete_records) {
+            check_record_based();
+            delete_records = tryGetAsyncAttribute(\app, "delete_records", "delete records", pool, io_timeout, app.name);
         }
 
         appmap{app.name} = <AppInfo>{
@@ -638,7 +680,13 @@ public class TypeScriptActionInterface {
             "get_record_type": get_record_type,
             "get_expressions": get_expressions,
             "search_records": search_records,
-            "search_options": search_options,
+            "get_search_options": get_search_options,
+            "create_records": create_records,
+            "get_create_options": get_create_options,
+            "update_records": update_records,
+            "upsert_records": upsert_records,
+            "get_upsert_options": get_upsert_options,
+            "delete_records": delete_records,
 
             "pool": pool,
         };
@@ -1336,14 +1384,6 @@ public class TypeScriptActionInterface {
             schema = app_swagger_map{appname};
         }
 
-        code check_record_based_app = sub () {
-            if (!getInitializedRecordBasedAppInfo(action.app)) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y action type: %y cannot be registered; "
-                    "the app does not support record-based actions; declare a \"get_table_list\" function on the "
-                    "app in order to declare record-based actions", action.app, action.action,
-                    ActionNameMap{action.action_code});
-            }
-        };
         switch (action.action_code) {
             case DPAT_API: {
                 TypeScriptActionInterface::generateApiDataProvider(app, \action, pool, schema);
@@ -3017,7 +3057,37 @@ hashdecl AppInfo {
     #! Callback to return search options for the app
     /** May only be declared if the app declares \a get_table_list and \a search_records callbacks
     */
-    *hash<AsyncCallInfo> search_options;
+    *hash<AsyncCallInfo> get_search_options;
+
+    #! Callback to create record(s) for the app
+    /** May only be declared if the app declares a get_table_list callback
+    */
+    *hash<AsyncCallInfo> create_records;
+
+    #! Callback to return create options for the app
+    /** May only be declared if the app declares \a get_table_list and \a create_records callbacks
+    */
+    *hash<AsyncCallInfo> get_create_options;
+
+    #! Callback to update record(s) for the app
+    /** May only be declared if the app declares a get_table_list callback
+    */
+    *hash<AsyncCallInfo> update_records;
+
+    #! Callback to upsert record(s) for the app
+    /** May only be declared if the app declares a get_table_list callback
+    */
+    *hash<AsyncCallInfo> upsert_records;
+
+    #! Callback to return upsert options for the app
+    /** May only be declared if the app declares \a get_table_list and \a upsert_records callbacks
+    */
+    *hash<AsyncCallInfo> get_upsert_options;
+
+    #! Callback to delete record(s) for the app
+    /** May only be declared if the app declares a get_table_list callback
+    */
+    *hash<AsyncCallInfo> delete_records;
 
     # The program pool info
     JavaScriptProgramPool pool;
