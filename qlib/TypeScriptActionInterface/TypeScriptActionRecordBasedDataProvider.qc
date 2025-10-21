@@ -198,7 +198,29 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             throw "INVALID-OPERATION", sprintf("Data provider %y does not support record creation", getName());
         }
         create_options.table = name;
-        return getAsyncValue(create_records, getCallContextInfo(), rec, create_options);
+        rec = makeBulk(rec);
+        *hash<auto> rv = getAsyncValue(create_records, getCallContextInfo(), rec, create_options);
+        foreach hash<auto> h in ((rec + rv).contextIterator()) {
+            # return the first record + any output data
+            return h;
+        }
+    }
+
+    #! Creates the given records in the data provider
+    /** @param recs a hash representing multiple input records, where the keys are record names and values are either
+        lists of record values or a single value that applies to all records
+        @param create_options the create options after processing by validateCreateOptions()
+
+        @return the data written to the data provider for each record
+    */
+    private *list<hash<auto>> createRecordsBulkImpl(hash<auto> recs, *hash<auto> create_options) {
+        if (!create_records) {
+            throw "INVALID-OPERATION", sprintf("Data provider %y does not support record creation", getName());
+        }
+        create_options.table = name;
+        recs = makeBulk(recs);
+        *hash<auto> rv = getAsyncValue(create_records, getCallContextInfo(), recs, create_options);
+        return map $1, (recs + rv).contextIterator();
     }
 
     private int updateRecordsImpl(hash<auto> set, *hash<auto> where_cond, *hash<auto> search_options) {
@@ -215,7 +237,19 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             throw "INVALID-OPERATION", sprintf("Data provider %y does not support record upserting", getName());
         }
         upsert_options.table = name;
-        return getAsyncValue(upsert_records, getCallContextInfo(), rec, upsert_options);
+        rec = makeBulk(rec);
+        *list<auto> rv = getAsyncValue(upsert_records, getCallContextInfo(), rec, upsert_options);
+        return rv[0] ?? UpsertResultVerified;
+    }
+
+    private *list<string> upsertRecordsBulkImpl(hash<auto> recs, *hash<auto> upsert_options) {
+        if (!upsert_records) {
+            throw "INVALID-OPERATION", sprintf("Data provider %y does not support record upserting", getName());
+        }
+        upsert_options.table = name;
+        recs = makeBulk(recs);
+        *list<auto> rv = getAsyncValue(upsert_records, getCallContextInfo(), recs, upsert_options);
+        return rv ?? map UpsertResultVerified, xrange(recs.firstValue().size());
     }
 
     private int deleteRecordsImpl(*hash<auto> where_cond, *hash<auto> search_options) {
@@ -224,6 +258,32 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         }
         search_options.table = name;
         return getAsyncValue(delete_records, getCallContextInfo(), getSearchExpression(where_cond), search_options);
+    }
+
+    private static hash<auto> makeBulk(hash<auto> rec) {
+        hash<auto> rv;
+        # get list size
+        int lsize;
+        foreach auto v in (rec.iterator()) {
+            if (v.typeCode() == NT_LIST) {
+                lsize = v.size();
+                break;
+            }
+        }
+        if (!exists lsize) {
+            return map {$1.key: ($1.value,)}, rec.pairIterator();
+        }
+        if (!lsize) {
+            return map {$1: ()}, keys rec;
+        }
+        foreach hash<auto> i in (rec.pairIterator()) {
+            if (i.value.typeCode() == NT_LIST) {
+                rv{i.key} = i.value;
+            } else {
+                rv{i.key} = map i.value, xrange(lsize);
+            }
+        }
+        return rv;
     }
 
     #! Returns static info about the data provider

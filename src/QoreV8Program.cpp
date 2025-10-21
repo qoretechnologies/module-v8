@@ -345,6 +345,21 @@ int QoreV8Program::checkException(ExceptionSink* xsink, const v8::TryCatch& tryC
         // convert to a string
         v8::String::Utf8Value exception(isolate, ex);
 
+        v8::Local<v8::Context> context(isolate->GetCurrentContext());
+
+        // convert to a Qore value
+        ValueHolder arg(xsink);
+        if (ex->IsObject()) {
+            v8::MaybeLocal<v8::Object> o = ex->ToObject(context);
+            assert(!o.IsEmpty());
+            ReferenceHolder<QoreV8Object> arg_obj(new QoreV8Object(const_cast<QoreV8Program*>(this),
+                o.ToLocalChecked()), xsink);
+            QoreV8ProgramHelper ph(xsink, const_cast<QoreV8Program*>(this));
+            arg = arg_obj->toData(ph);
+        } else {
+            arg = const_cast<QoreV8Program*>(this)->getQoreValue(xsink, ex);
+        }
+
         v8::Local<v8::Message> msg = tryCatch.Message();
         if (msg.IsEmpty()) {
             xsink->raiseException("JAVASCRIPT-EXCEPTION", new QoreStringNode(*exception));
@@ -352,8 +367,6 @@ int QoreV8Program::checkException(ExceptionSink* xsink, const v8::TryCatch& tryC
         }
 
         SimpleRefHolder<QoreStringNode> desc(new QoreStringNode(*exception));
-
-        v8::Local<v8::Context> context(isolate->GetCurrentContext());
 
         // add Java call stack to Qore call stack
         QoreExternalProgramLocationWrapper loc;
@@ -367,7 +380,7 @@ int QoreV8Program::checkException(ExceptionSink* xsink, const v8::TryCatch& tryC
             desc->concat(code_line);
         }
 
-        xsink->raiseExceptionArg(loc.get(), "JAVASCRIPT-EXCEPTION", QoreValue(), desc.release(), stack);
+        xsink->raiseExceptionArg(loc.get(), "JAVASCRIPT-EXCEPTION", arg.release(), desc.release(), stack);
         return -1;
     }
     return 0;

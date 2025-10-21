@@ -376,13 +376,13 @@ exports.actionsCatalogue = {
                 for the table
                 @param create_opts?: object -> create options; the table will be provided as create_opts.table
 
-                @return the created record; must be a data object that matches the record type for the table
+                @return object[]?: if any new data were generated, then an object with the keys of the generated data
+                where the values are lists of the generated data in the same order as the data submitted
             */
             "create_records": async function (ctx, record, create_opts) {
                 if (create_opts.table != 'test') {
                     throw new Error('Unknown table ' + create_opts.table);
                 }
-                return record;
             },
 
             // updates records and returns the number of records updated
@@ -411,12 +411,12 @@ exports.actionsCatalogue = {
                 - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
                 - opts?: object -> a data object with option values set for the current action
                 @param record: object -> the record to upsert; must be a data object that matches the record type
-                for the table
+                for the table; values will be lists of values to upsert per field as given by the keys
                 @param upsert_opts?: object -> upsert options; the table will be provided as upsert_opts.table
-                @return the result code of the operation:
+                @return string[]?: if known, the result code of the operation for each record upserted:
                 - inserted: record inserted
                 - updated: record updated
-                - verified: record was either inserted or updated
+                - verified: record was either inserted or updated (the default if no value is returned)
                 - unchanged: record was found and no changes were necessary
                 - deleted: record was deleted (only possible with specific upsert options)
             */
@@ -424,7 +424,6 @@ exports.actionsCatalogue = {
                 if (upsert_opts.table != 'test') {
                     throw new Error('Unknown table ' + upsert_opts.table);
                 }
-                return "verified";
             },
 
             // deletes records and returns the number of records deleted
