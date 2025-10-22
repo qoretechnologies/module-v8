@@ -24,14 +24,14 @@ describe('Google Docs', () => {
   };
 
   beforeAll(async () => {
-    const refreshToken = process.env.GOOGLE_DOCS_REFRESH_TOKEN;
-    const clientId = process.env.GOOGLE_DOCS_CLIENT_ID;
-    const clientSecret = process.env.GOOGLE_DOCS_CLIENT_SECRET;
+    const refreshToken = process.env.GOOGLE_INTEGRATIONS_REFRESH_TOKEN;
+    const clientId = process.env.GOOGLE_INTEGRATIONS_CLIENT_ID;
+    const clientSecret = process.env.GOOGLE_INTEGRATIONS_CLIENT_SECRET;
 
     if (!refreshToken || !clientId || !clientSecret) {
       throw new Error(`
-        Please set the GOOGLE_DOCS_REFRESH_TOKEN, GOOGLE_DOCS_CLIENT_ID, 
-        and GOOGLE_DOCS_CLIENT_SECRET environment variables.
+        Please set the GOOGLE_INTEGRATIONS_REFRESH_TOKEN, GOOGLE_INTEGRATIONS_CLIENT_ID, 
+        and GOOGLE_INTEGRATIONS_CLIENT_SECRET environment variables.
       `);
     }
 

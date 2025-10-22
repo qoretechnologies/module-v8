@@ -31,7 +31,7 @@ import { Debugger, DebugLevels } from '../utils/Debugger';
 configDotenv({ path: '.env' });
 Debugger.level = DebugLevels.Verbose;
 
-describe('Google Docs', () => {
+describe('YouTube', () => {
   const base_context = {
     conn_opts: {
       token: '',

@@ -25,7 +25,9 @@ import { getGoogleSheetHeadersAllowedValues } from '../apps/google-sheets/helper
 import { getGoogleSheetIdAllowedValues } from '../apps/google-sheets/helpers/get-sheet-id-allowed-values';
 import { getSheetRowsOptions } from '../apps/google-sheets/helpers/get-sheet-rows-options';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import { configDotenv } from 'dotenv';
 
+configDotenv({ path: '.env' });
 Debugger.level = DebugLevels.Verbose;
 
 describe('Google Sheets', () => {
@@ -36,15 +38,15 @@ describe('Google Sheets', () => {
   };
 
   beforeAll(async () => {
-    const refreshToken = process.env.GOOGLE_SHEETS_REFRESH_TOKEN;
-    const clientId = process.env.GOOGLE_SHEETS_CLIENT_ID;
-    const clientSecret = process.env.GOOGLE_SHEETS_CLIENT_SECRET;
+    const refreshToken = process.env.GOOGLE_INTEGRATIONS_REFRESH_TOKEN;
+    const clientId = process.env.GOOGLE_INTEGRATIONS_CLIENT_ID;
+    const clientSecret = process.env.GOOGLE_INTEGRATIONS_CLIENT_SECRET;
 
     if (!refreshToken || !clientId || !clientSecret) {
-      throw new Error(
-        `Please set the` +
-          `GOOGLE_SHEETS_REFRESH_TOKEN, GOOGLE_SHEETS_CLIENT_ID, and GOOGLE_SHEETS_CLIENT_SECRET environment variables.`
-      );
+      throw new Error(`
+        Please set the GOOGLE_INTEGRATIONS_REFRESH_TOKEN, GOOGLE_INTEGRATIONS_CLIENT_ID, 
+        and GOOGLE_INTEGRATIONS_CLIENT_SECRET environment variables.
+      `);
     }
 
     const data = {
