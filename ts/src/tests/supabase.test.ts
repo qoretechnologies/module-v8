@@ -18,7 +18,7 @@ import {
   getSupabaseTableColumnOptions,
   getSupabaseTableColumnsResponseType,
 } from '../apps/supabase/helpers/get-table-fields';
-import { createSupabaseRecord } from '../apps/supabase/helpers/record-based/create-records';
+import { createSupabaseRecords } from '../apps/supabase/helpers/record-based/create-records';
 import { deleteSupabaseRecords } from '../apps/supabase/helpers/record-based/delete-records';
 import { searchSupabaseRecords } from '../apps/supabase/helpers/record-based/search-records';
 import { updateSupabaseRecords } from '../apps/supabase/helpers/record-based/update-records';
@@ -585,29 +585,28 @@ describe('Supabase', () => {
     const updatedTitle = 'Record updated via updateSupabaseRecords';
     const upsertedTitle = 'Record upserted via upsertSupabaseRecords';
     it('Should create a record', async () => {
-      const result = await createSupabaseRecord(
+      const result = await createSupabaseRecords(
         baseContext,
         {
-          title: createdTitle,
+          title: [createdTitle],
         },
         { table }
       );
 
       expect(result).toBeDefined();
-      expect(result.title).toBe(createdTitle);
+      expect(result.title).toContain(createdTitle);
     });
 
     it('Should upsert a record', async () => {
       const result = await upsertSupabaseRecord(
         baseContext,
         {
-          title: upsertedTitle,
+          title: [upsertedTitle],
         },
         { table }
       );
 
       expect(result).toBeDefined();
-      expect(result).toBe('inserted');
     });
 
     it('Should update records', async () => {
@@ -633,6 +632,22 @@ describe('Supabase', () => {
 
       expect(result).toBeDefined();
       expect(result).toBe(2);
+    });
+
+    it('Should search records using contains expresion', async () => {
+      const getRecordsIterator = await searchSupabaseRecords(
+        baseContext,
+        {
+          exp: 'contains',
+          args: [{ field: 'arr' }, ['two']],
+        },
+        { table }
+      );
+
+      const result = await getRecordsIterator(baseContext, 10);
+
+      expect(result).toBeDefined();
+      expect(result!.id).toContain(6);
     });
   });
 });

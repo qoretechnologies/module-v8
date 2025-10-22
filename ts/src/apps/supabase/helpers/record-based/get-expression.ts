@@ -218,6 +218,18 @@ export const getSupabaseExpressionsFunction =
           ],
           return_type: 'bool',
         },
+        contains: {
+          type: 'operator',
+          subtype: 'generic',
+          name: 'contains',
+          symbol: '@>',
+          roles: ['search'],
+          args: [
+            { type_code: 'field reference', type: { type: 'list', element_type: 'any' } },
+            { type_code: 'value', type: { type: 'list', element_type: 'any' } },
+          ],
+          return_type: 'bool',
+        },
       },
       locale
     );

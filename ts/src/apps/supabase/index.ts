@@ -10,10 +10,11 @@ import { searchSupabaseRecords } from './helpers/record-based/search-records';
 
 import * as SUPABASE_TRIGGERS from './triggers';
 import * as SUPABASE_ACTIONS from './actions';
-import { createSupabaseRecord } from './helpers/record-based/create-records';
+import { createSupabaseRecords } from './helpers/record-based/create-records';
 import { upsertSupabaseRecord } from './helpers/record-based/upsert-records';
 import { updateSupabaseRecords } from './helpers/record-based/update-records';
 import { deleteSupabaseRecords } from './helpers/record-based/delete-records';
+import { getSupabaseSearchOptions } from './helpers/record-based/get-search-options';
 
 export default (locale: Locales) =>
   ({
@@ -45,8 +46,9 @@ export default (locale: Locales) =>
     get_expressions: getSupabaseExpressionsFunction(locale),
     get_record_type: getSupabaseRecordType,
     search_records: searchSupabaseRecords,
-    create_record: createSupabaseRecord,
-    upsert_record: upsertSupabaseRecord,
+    create_records: createSupabaseRecords,
+    upsert_records: upsertSupabaseRecord,
     update_records: updateSupabaseRecords,
     delete_records: deleteSupabaseRecords,
+    get_search_options: getSupabaseSearchOptions,
   }) satisfies TQoreRecordBasedApp & TQoreAppWithActions;

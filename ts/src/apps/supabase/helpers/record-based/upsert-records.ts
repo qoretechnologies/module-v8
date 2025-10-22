@@ -1,13 +1,9 @@
-import { TQoreUpsertSingleRecordsFunction } from '@qoretechnologies/ts-toolkit';
-import { getQoreContextRequiredValues } from '../../../../global/helpers';
+import { TQoreUpsertRecordsFunction } from '@qoretechnologies/ts-toolkit';
+import { getQoreContextRequiredValues, mapColumnFormatToObject } from '../../../../global/helpers';
 import { SupabaseError, SupabaseErrorCodeToQoreErrorCodeMap } from '../../constants';
 import { createSupabaseClient } from '../constants';
 
-export const upsertSupabaseRecord: TQoreUpsertSingleRecordsFunction = async (
-  context,
-  record,
-  opts
-) => {
+export const upsertSupabaseRecord: TQoreUpsertRecordsFunction = async (context, records, opts) => {
   const { projectId, token } = getQoreContextRequiredValues({
     context,
     connectionFields: ['projectId', 'token'],
@@ -20,10 +16,12 @@ export const upsertSupabaseRecord: TQoreUpsertSingleRecordsFunction = async (
     throw new SupabaseError('Table name is required');
   }
 
+  const formattedRecords = mapColumnFormatToObject(records);
+
   try {
     const client = createSupabaseClient({ projectId, token });
 
-    const { error } = await client.from(tableName).upsert(record).select();
+    const { error } = await client.from(tableName).upsert(formattedRecords).select();
 
     if (error) {
       throw new SupabaseError(
@@ -32,7 +30,7 @@ export const upsertSupabaseRecord: TQoreUpsertSingleRecordsFunction = async (
       );
     }
 
-    return 'inserted';
+    return [];
   } catch (error) {
     if (error instanceof SupabaseError) {
       throw error;

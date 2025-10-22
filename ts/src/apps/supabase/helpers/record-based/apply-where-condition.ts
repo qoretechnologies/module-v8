@@ -6,6 +6,7 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { PostgrestFilterBuilder } from '@supabase/postgrest-js';
 import { applySupabaseComparisonOperator } from './apply-comparison-operator';
+import { SupabaseError } from '../../constants';
 
 export const applySupabaseWhereCondition = (
   query: PostgrestFilterBuilder<any, any, any, any>,
@@ -71,6 +72,8 @@ export const applySupabaseWhereCondition = (
               return query.not(field, 'ilike', value);
             case 'in':
               return query.not(field, 'in', Array.isArray(value) ? value : [value]);
+            case 'contains':
+              return query.not(field, 'cs', value);
           }
         }
       }
@@ -84,6 +87,7 @@ export const applySupabaseWhereCondition = (
     case 'like':
     case 'ilike':
     case 'in':
+    case 'contains':
       return applySupabaseComparisonOperator(query, exp, args);
     default:
       return query;
@@ -149,6 +153,11 @@ const buildFilterCondition = (expr: TQoreSearchRecordsWhereConditions): string |
     case 'in':
       const inValues = Array.isArray(valueArg) ? valueArg : [valueArg];
       return `${field}.in.(${inValues.join(',')})`;
+    case 'contains':
+      if (!Array.isArray(valueArg)) {
+        throw new SupabaseError('Contains operator only works with array fields');
+      }
+      return `${field}.cs.${JSON.stringify(valueArg)}`;
     default:
       return null;
   }

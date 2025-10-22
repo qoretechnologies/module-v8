@@ -4,6 +4,7 @@ import {
   TQoreSearchRecordsValue,
 } from '@qoretechnologies/ts-toolkit';
 import { PostgrestFilterBuilder } from '@supabase/postgrest-js';
+import { SupabaseError } from '../../constants';
 
 export const applySupabaseComparisonOperator = (
   query: PostgrestFilterBuilder<any, any, any, any>,
@@ -42,6 +43,11 @@ export const applySupabaseComparisonOperator = (
     case 'in':
       const inValues = Array.isArray(value) ? value : [value];
       return query.in(field, inValues);
+    case 'contains':
+      if (!Array.isArray(valueArg)) {
+        throw new SupabaseError('Contains operator only works with array fields');
+      }
+      return query.contains(field, value);
     default:
       return query;
   }

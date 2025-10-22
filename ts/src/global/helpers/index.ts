@@ -343,6 +343,32 @@ export const mapObjectToColumnFormat = <T extends Record<string, any>>(
   return columnFormat;
 };
 
+export const mapColumnFormatToObject = <T extends Record<string, any>>(
+  columnFormat: Record<keyof T, Array<T[keyof T]>>
+): T[] => {
+  const columns = Object.keys(columnFormat) as Array<keyof T>;
+
+  if (columns.length === 0) {
+    return [];
+  }
+
+  const rowCount = columnFormat[columns[0]]?.length ?? 0;
+
+  const data: T[] = [];
+
+  for (let i = 0; i < rowCount; i++) {
+    const row = {} as T;
+
+    columns.forEach((col) => {
+      row[col] = columnFormat[col][i];
+    });
+
+    data.push(row);
+  }
+
+  return data;
+};
+
 /*
  * This function normalizes the given app name by
  * converting it to lowercase,

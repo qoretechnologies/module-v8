@@ -1,13 +1,13 @@
-import { TQoreCreateSingleRecordFunction } from '@qoretechnologies/ts-toolkit';
-import { getQoreContextRequiredValues } from '../../../../global/helpers';
+import { TQoreCreateRecordsFunction } from '@qoretechnologies/ts-toolkit';
+import {
+  getQoreContextRequiredValues,
+  mapColumnFormatToObject,
+  mapObjectToColumnFormat,
+} from '../../../../global/helpers';
 import { SupabaseError, SupabaseErrorCodeToQoreErrorCodeMap } from '../../constants';
 import { createSupabaseClient } from '../constants';
 
-export const createSupabaseRecord: TQoreCreateSingleRecordFunction = async (
-  context,
-  record,
-  opts
-) => {
+export const createSupabaseRecords: TQoreCreateRecordsFunction = async (context, records, opts) => {
   const { projectId, token } = getQoreContextRequiredValues({
     context,
     connectionFields: ['projectId', 'token'],
@@ -23,7 +23,9 @@ export const createSupabaseRecord: TQoreCreateSingleRecordFunction = async (
   try {
     const client = createSupabaseClient({ projectId, token });
 
-    const { data, error } = await client.from(tableName).insert(record).select();
+    const formattedRecords = mapColumnFormatToObject(records);
+
+    const { data, error } = await client.from(tableName).insert(formattedRecords).select();
 
     if (error) {
       throw new SupabaseError(
@@ -36,7 +38,7 @@ export const createSupabaseRecord: TQoreCreateSingleRecordFunction = async (
       throw new SupabaseError(`No record was created in table ${tableName}`);
     }
 
-    return data[0];
+    return mapObjectToColumnFormat(data);
   } catch (error) {
     if (error instanceof SupabaseError) {
       throw error;
