@@ -211,7 +211,7 @@ exports.actionsCatalogue = {
                             "required": true,
                         },
                         "name": {
-                            "type": "name",
+                            "type": "string",
                             "display_name": "Name",
                             "short_desc": "A name",
                             "desc": "A name",
@@ -310,6 +310,27 @@ exports.actionsCatalogue = {
                         "varargs": true,
                         "return_type": "bool",
                     },
+                    "=": {
+                        "type": "operator",
+                        "subtype": "logic-operator",
+                        "name": "=",
+                        "display_name": "equals (=)",
+                        "short_desc": "Returs True if the two arguments are logically equal; types are converted if necessary",
+                        "desc": "Returs `True` if the two arguments are logically equal; types are converted if necessary",
+                        "symbol": "==",
+                        "roles": ["search", "field"],
+                        "args": [
+                            {
+                                "type_code": "any",
+                                "type": "any",
+                            },
+                            {
+                                "type_code": "any",
+                                "type": "any",
+                            },
+                        ],
+                        "return_type": "bool",
+                    },
                 };
             },
 
@@ -343,6 +364,97 @@ exports.actionsCatalogue = {
                     }
                 }
                 return get_records;
+            },
+
+            // get search options
+            "get_search_options": async function (ctx) {
+                return {
+                    "for_update": {
+                        "display_name": "For Update?",
+                        "short_desc": "Should rows be locked for update?",
+                        "desc": "Should rows be locked for update?",
+                        "type": "string",
+                        "required": false,
+                        "default_value": false,
+                    },
+                };
+            },
+
+            // creates a record and returns the created record
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+                @param record: object -> the record to create; must be a data object that matches the record type
+                for the table
+                @param create_opts?: object -> create options; the table will be provided as create_opts.table
+
+                @return object[]?: if any new data were generated, then an object with the keys of the generated data
+                where the values are lists of the generated data in the same order as the data submitted
+            */
+            "create_records": async function (ctx, record, create_opts) {
+                if (create_opts.table != 'test') {
+                    throw new Error('Unknown table ' + create_opts.table);
+                }
+            },
+
+            // updates records and returns the number of records updated
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+                @param update_fields: object -> the fields to update; must resolve to a data object that matches the
+                record type for the table for the fields to be updated; values can be expressions
+                @param where_cond?: object -> the optional search expression tree
+                @param search_opts?: object -> search options; the table will be provided as search_opts.table
+                @return the number of records updated
+            */
+            "update_records": async function (ctx, update_fields, where_cond, search_opts) {
+                if (search_opts.table != 'test') {
+                    throw new Error('Unknown table ' + search_opts.table);
+                }
+                return 1;
+            },
+
+            // upserts a record and returns the result code of the operation
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+                @param record: object -> the record to upsert; must be a data object that matches the record type
+                for the table; values will be lists of values to upsert per field as given by the keys
+                @param upsert_opts?: object -> upsert options; the table will be provided as upsert_opts.table
+                @return string[]?: if known, the result code of the operation for each record upserted:
+                - inserted: record inserted
+                - updated: record updated
+                - verified: record was either inserted or updated (the default if no value is returned)
+                - unchanged: record was found and no changes were necessary
+                - deleted: record was deleted (only possible with specific upsert options)
+            */
+            "upsert_records": async function (ctx, record, upsert_opts) {
+                if (upsert_opts.table != 'test') {
+                    throw new Error('Unknown table ' + upsert_opts.table);
+                }
+            },
+
+            // deletes records and returns the number of records deleted
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+                @param where_cond?: object -> the optional search expression tree
+                @param search_opts?: object -> search options; the table will be provided as search_opts.table
+                @return the number of records deleted
+            */
+            "delete_records": async function (ctx, where_cond, search_opts) {
+                if (search_opts.table != 'test') {
+                    throw new Error('Unknown table ' + search_opts.table);
+                }
+                return 1;
             },
         });
 

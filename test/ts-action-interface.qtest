@@ -534,12 +534,21 @@ var obj = {
         prov = parent.getChildProviderPath("tables/test");
         assertTrue(prov.supportsRead());
 
+        assertFalse(prov.getSearchOptions().for_update.default_value);
+
         AbstractDataProviderRecordIterator i = prov.searchRecords();
         assertTrue(i.next());
         assertEq({"id": 1, "name": "a"}, i.getValue());
         assertTrue(i.next());
         assertEq({"id": 2, "name": "b"}, i.getValue());
         assertFalse(i.next());
+
+        hash<auto> row = {"id": 3, "name": "c"};
+        hash<auto> row0 = prov.createRecord(row);
+        assertEq(row, row0);
+        assertEq(1, prov.updateRecords({"name": "aa"}, {"id": 1}));
+        assertEq("verified", prov.upsertRecord({"id": 2, "name": "bb"}));
+        assertEq(1, prov.deleteRecords({"id": 1}));
     }
 }
 

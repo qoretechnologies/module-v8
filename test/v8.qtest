@@ -860,13 +860,13 @@ obj", "test.js");
         assertEq(6, ex.callstack[1].line);
 
         try {
-            JavaScriptProgram js("const obj = {
+            JavaScriptProgram js("var obj = {
     func: function(a) {
         return a();
     },
 };
 obj", "test.js");
-            JavaScriptObject o = js.getGlobal().obj();
+            JavaScriptObject o = js.getGlobal().obj;
             o.func.callAsFunction(o, sub () {
                 throw "ERR", "err";
             });
@@ -874,6 +874,20 @@ obj", "test.js");
         } catch (hash<ExceptionInfo> ex0) {
             ex = ex0;
         }
-        #printf("%s\n", get_exception_string(ex));
+        assertRegex("^ERR: err$", ex.desc);
+
+        try {
+            JavaScriptProgram js("function throwCustomError() {
+    const error = new Error(\"Test Error Message\");
+    error.errorCode = 'DUPLICATE-RECORD';
+    throw error;
+}", "test.js");
+            JavaScriptObject o = js.getGlobal().throwCustomError;
+            o.callAsFunction(o);
+            assertFalse(True);
+        } catch (hash<ExceptionInfo> ex0) {
+            ex = ex0;
+        }
+        assertEq("DUPLICATE-RECORD", ex.arg.errorCode);
     }
 }
