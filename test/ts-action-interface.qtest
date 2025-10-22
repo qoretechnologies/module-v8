@@ -534,6 +534,8 @@ var obj = {
         prov = parent.getChildProviderPath("tables/test");
         assertTrue(prov.supportsRead());
 
+        assertFalse(prov.getSearchOptions().for_update.default_value);
+
         AbstractDataProviderRecordIterator i = prov.searchRecords();
         assertTrue(i.next());
         assertEq({"id": 1, "name": "a"}, i.getValue());

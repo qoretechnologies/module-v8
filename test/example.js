@@ -366,6 +366,20 @@ exports.actionsCatalogue = {
                 return get_records;
             },
 
+            // get search options
+            "get_search_options": async function (ctx) {
+                return {
+                    "for_update": {
+                        "display_name": "For Update?",
+                        "short_desc": "Should rows be locked for update?",
+                        "desc": "Should rows be locked for update?",
+                        "type": "string",
+                        "required": false,
+                        "default_value": false,
+                    },
+                };
+            },
+
             // creates a record and returns the created record
             /**
                 @param ctx?: object with the following properties:
