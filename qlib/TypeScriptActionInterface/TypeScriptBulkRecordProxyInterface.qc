@@ -40,7 +40,8 @@ public class TypeScriptBulkRecordProxyInterface inherits AbstractDataProviderBul
     #! Creates the object from the arguments
     constructor(int block_size, TypeScriptActionRecordBasedDataProvider prov,
             *hash<DataProviderExpression> where_cond, hash<auto> search_options, *hash<DataContextInfo> options)
-            : AbstractDataProviderBulkRecordInterface(block_size) {
+            : AbstractDataProviderBulkRecordInterface(block_size, remove search_options.requires_result,
+                remove search_options.max_records) {
         self.prov = prov;
         # generate unique request ID
         id = UUID::get();

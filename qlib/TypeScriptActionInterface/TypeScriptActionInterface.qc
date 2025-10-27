@@ -580,6 +580,9 @@ public class TypeScriptActionInterface {
                     "'get_table_list'", app.name);
             }
         };
+# transaction management is disabled until we have a concrete use case
+# and solve transaction persistence / thread-resource issues
+%ifdef TransactionManagement
         if (app.begin_transaction) {
             check_record_based();
             begin_transaction = tryGetAsyncAttribute(\app, "begin_transaction", "begin transaction", pool, io_timeout,
@@ -601,6 +604,9 @@ public class TypeScriptActionInterface {
             throw "APP-ERROR", sprintf("App %y cannot define 'commit' without also defining 'rollback'",
                 app.name);
         }
+%else
+        app -= ("begin_transaction", "commit", "rollback");
+%endif
         if (app.get_record_type) {
             check_record_based();
             get_record_type = tryGetAsyncAttribute(\app, "get_record_type", "get record type", pool, io_timeout,

@@ -350,6 +350,9 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         }
         auto v = getAsyncValue(get_option_map{type}, getCallContextInfo());
         if (!exists v) {
+            if (type == "search") {
+                option_map{type} = GenericRecordSearchOptions{"requires_result", "max_records"};
+            }
             return;
         }
         if (v.typeCode() != NT_HASH) {
@@ -357,6 +360,9 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
                 "type %y; expecting \"hash\"", type, app.name, v.fullType());
         }
         option_map{type} = map {$1.key: getDataProviderOption($1.key, $1.value)}, v.pairIterator();
+        if (type == "search") {
+            option_map{type} = option_map{type} + GenericRecordSearchOptions{"requires_result", "max_records"};
+        }
     }
 
     private hash<DataProviderOptionInfo> getDataProviderOption(string name, auto v) {
