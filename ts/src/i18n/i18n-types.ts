@@ -42455,6 +42455,302 @@ type RootTranslation = {
 					}
 				}
 			}
+			expressions: {
+				AND: {
+					/**
+					 * a​n​d​ ​(​&​&​)
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​T​r​u​e​ ​i​f​ ​a​l​l​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​T​r​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​l​l​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
+					 */
+					longDesc: string
+				}
+				OR: {
+					/**
+					 * o​r​ ​(​|​|​)
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​T​r​u​e​ ​i​f​ ​a​n​y​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​T​r​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​n​y​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
+					 */
+					longDesc: string
+				}
+				'=': {
+					/**
+					 * e​q​u​a​l​s​ ​(​=​)
+					 */
+					displayName: string
+					/**
+					 * E​q​u​a​l​i​t​y​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​e​q​u​a​l​s​ ​t​h​e​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'!=': {
+					/**
+					 * n​o​t​ ​e​q​u​a​l​s​ ​(​!​=​)
+					 */
+					displayName: string
+					/**
+					 * I​n​e​q​u​a​l​i​t​y​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'>': {
+					/**
+					 * g​r​e​a​t​e​r​ ​t​h​a​n​ ​(​>​)
+					 */
+					displayName: string
+					/**
+					 * G​r​e​a​t​e​r​ ​t​h​a​n​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'>=': {
+					/**
+					 * g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​(​>​=​)
+					 */
+					displayName: string
+					/**
+					 * G​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'<': {
+					/**
+					 * l​e​s​s​ ​t​h​a​n​ ​(​<​)
+					 */
+					displayName: string
+					/**
+					 * L​e​s​s​ ​t​h​a​n​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'<=': {
+					/**
+					 * l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​(​<​=​)
+					 */
+					displayName: string
+					/**
+					 * L​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				contains: {
+					/**
+					 * c​o​n​t​a​i​n​s
+					 */
+					displayName: string
+					/**
+					 * C​o​n​t​a​i​n​s​ ​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 */
+					longDesc: string
+				}
+				'in': {
+					/**
+					 * i​n
+					 */
+					displayName: string
+					/**
+					 * I​n​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​i​n​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​l​i​s​t
+					 */
+					longDesc: string
+				}
+				is_empty: {
+					/**
+					 * i​s​ ​e​m​p​t​y
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​e​m​p​t​y
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​e​m​p​t​y​ ​o​r​ ​n​o​t​ ​s​e​t
+					 */
+					longDesc: string
+				}
+				is_not_empty: {
+					/**
+					 * i​s​ ​n​o​t​ ​e​m​p​t​y
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​n​o​t​ ​e​m​p​t​y
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				starts_with: {
+					/**
+					 * s​t​a​r​t​s​ ​w​i​t​h
+					 */
+					displayName: string
+					/**
+					 * S​t​a​r​t​s​ ​w​i​t​h​ ​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​s​t​a​r​t​s​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 */
+					longDesc: string
+				}
+				ends_with: {
+					/**
+					 * e​n​d​s​ ​w​i​t​h
+					 */
+					displayName: string
+					/**
+					 * E​n​d​s​ ​w​i​t​h​ ​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​e​n​d​s​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 */
+					longDesc: string
+				}
+				next_week: {
+					/**
+					 * n​e​x​t​ ​w​e​e​k
+					 */
+					displayName: string
+					/**
+					 * D​a​t​e​ ​i​s​ ​n​e​x​t​ ​w​e​e​k
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​a​l​l​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​n​e​x​t​ ​w​e​e​k
+					 */
+					longDesc: string
+				}
+				next_month: {
+					/**
+					 * n​e​x​t​ ​m​o​n​t​h
+					 */
+					displayName: string
+					/**
+					 * D​a​t​e​ ​i​s​ ​n​e​x​t​ ​m​o​n​t​h
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​a​l​l​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​n​e​x​t​ ​m​o​n​t​h
+					 */
+					longDesc: string
+				}
+				next_year: {
+					/**
+					 * n​e​x​t​ ​y​e​a​r
+					 */
+					displayName: string
+					/**
+					 * D​a​t​e​ ​i​s​ ​n​e​x​t​ ​y​e​a​r
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​a​l​l​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​n​e​x​t​ ​y​e​a​r
+					 */
+					longDesc: string
+				}
+				past_week: {
+					/**
+					 * p​a​s​t​ ​w​e​e​k
+					 */
+					displayName: string
+					/**
+					 * D​a​t​e​ ​i​s​ ​p​a​s​t​ ​w​e​e​k
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​a​l​l​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​p​a​s​t​ ​w​e​e​k
+					 */
+					longDesc: string
+				}
+				past_month: {
+					/**
+					 * p​a​s​t​ ​m​o​n​t​h
+					 */
+					displayName: string
+					/**
+					 * D​a​t​e​ ​i​s​ ​p​a​s​t​ ​m​o​n​t​h
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​a​l​l​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​p​a​s​t​ ​m​o​n​t​h
+					 */
+					longDesc: string
+				}
+				past_year: {
+					/**
+					 * p​a​s​t​ ​y​e​a​r
+					 */
+					displayName: string
+					/**
+					 * D​a​t​e​ ​i​s​ ​p​a​s​t​ ​y​e​a​r
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​a​l​l​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​p​a​s​t​ ​y​e​a​r
+					 */
+					longDesc: string
+				}
+				this_week: {
+					/**
+					 * t​h​i​s​ ​w​e​e​k
+					 */
+					displayName: string
+					/**
+					 * D​a​t​e​ ​i​s​ ​t​h​i​s​ ​w​e​e​k
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​a​l​l​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​w​e​e​k
+					 */
+					longDesc: string
+				}
+			}
 		}
 		Jira: {
 			/**
@@ -122492,6 +122788,302 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 						}
 					}
+				}
+			}
+			expressions: {
+				AND: {
+					/**
+					 * and (&&)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns True if all arguments are True
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if all arguments are `True` with logic short-circuiting
+					 */
+					longDesc: () => LocalizedString
+				}
+				OR: {
+					/**
+					 * or (||)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns True if any argument is True
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if any argument is `True` with logic short-circuiting
+					 */
+					longDesc: () => LocalizedString
+				}
+				'=': {
+					/**
+					 * equals (=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Equality comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field equals the value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'!=': {
+					/**
+					 * not equals (!=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Inequality comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field does not equal the value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'>': {
+					/**
+					 * greater than (>)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Greater than comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field is greater than the value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'>=': {
+					/**
+					 * greater than or equal (>=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Greater than or equal comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field is greater than or equal to the value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'<': {
+					/**
+					 * less than (<)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Less than comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field is less than the value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'<=': {
+					/**
+					 * less than or equal (<=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Less than or equal comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field is less than or equal to the value
+					 */
+					longDesc: () => LocalizedString
+				}
+				contains: {
+					/**
+					 * contains
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Contains text
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field contains the specified text
+					 */
+					longDesc: () => LocalizedString
+				}
+				'in': {
+					/**
+					 * in
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * In list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is in the provided list
+					 */
+					longDesc: () => LocalizedString
+				}
+				is_empty: {
+					/**
+					 * is empty
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is empty
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field is empty or not set
+					 */
+					longDesc: () => LocalizedString
+				}
+				is_not_empty: {
+					/**
+					 * is not empty
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is not empty
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field has a value
+					 */
+					longDesc: () => LocalizedString
+				}
+				starts_with: {
+					/**
+					 * starts with
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Starts with text
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field starts with the specified text
+					 */
+					longDesc: () => LocalizedString
+				}
+				ends_with: {
+					/**
+					 * ends with
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Ends with text
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field ends with the specified text
+					 */
+					longDesc: () => LocalizedString
+				}
+				next_week: {
+					/**
+					 * next week
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Date is next week
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the date falls within the next week
+					 */
+					longDesc: () => LocalizedString
+				}
+				next_month: {
+					/**
+					 * next month
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Date is next month
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the date falls within the next month
+					 */
+					longDesc: () => LocalizedString
+				}
+				next_year: {
+					/**
+					 * next year
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Date is next year
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the date falls within the next year
+					 */
+					longDesc: () => LocalizedString
+				}
+				past_week: {
+					/**
+					 * past week
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Date is past week
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the date falls within the past week
+					 */
+					longDesc: () => LocalizedString
+				}
+				past_month: {
+					/**
+					 * past month
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Date is past month
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the date falls within the past month
+					 */
+					longDesc: () => LocalizedString
+				}
+				past_year: {
+					/**
+					 * past year
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Date is past year
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the date falls within the past year
+					 */
+					longDesc: () => LocalizedString
+				}
+				this_week: {
+					/**
+					 * this week
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Date is this week
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the date falls within the current week
+					 */
+					longDesc: () => LocalizedString
 				}
 			}
 		}

@@ -21,11 +21,14 @@ import {
   TQoreAppActionWithWebhook,
   TQoreAppEventAction,
   TQoreAppNonEventAction,
+  TQoreGetExpressionsFunction,
   TQoreOptions,
   TQorePartialEventAction,
   TQorePartialNonEventAction,
   TQoreRequestDataConverterFunction,
   TQoreResponseDataConverterFunction,
+  TQoreSearchRecordsExpressionDefinition,
+  TQoreSearchRecordsExpressions,
   TQoreTypeObject,
   TStringWithFirstUpperCaseCharacter,
 } from '@qoretechnologies/ts-toolkit';
@@ -294,6 +297,76 @@ export const mapActionsToApp = (
           : undefined,
     };
   });
+};
+
+export const mapExpressionsToApp = (
+  app: keyof Translation['apps'],
+  expressions: Record<
+    string,
+    Omit<TQoreSearchRecordsExpressionDefinition, 'display_name' | 'short_desc' | 'desc'>
+  >,
+  locale: Locales
+): ReturnType<TQoreGetExpressionsFunction> => {
+  const localeExpressions: TQoreSearchRecordsExpressions = {};
+
+  Object.entries(expressions).forEach(([key, expression]) => {
+    localeExpressions[key] = {
+      ...expression,
+      display_name: get(L[locale], ['apps', app, 'expressions', key, 'displayName'])(),
+      short_desc: get(L[locale], ['apps', app, 'expressions', key, 'shortDesc'])(),
+      desc: get(L[locale], ['apps', app, 'expressions', key, 'longDesc'])(),
+    };
+  });
+
+  return localeExpressions;
+};
+
+export const mapObjectToColumnFormat = <T extends Record<string, any>>(
+  data: T[]
+): Record<keyof T, Array<T[keyof T]>> => {
+  const columnFormat = {} as Record<keyof T, Array<T[keyof T]>>;
+
+  if (data.length > 0) {
+    const columns = Object.keys(data[0]) as Array<keyof T>;
+
+    columns.forEach((col) => {
+      columnFormat[col] = [];
+    });
+
+    data.forEach((row) => {
+      columns.forEach((col) => {
+        columnFormat[col].push(row[col]);
+      });
+    });
+  }
+
+  return columnFormat;
+};
+
+export const mapColumnFormatToObject = <T extends Record<string, any>>(
+  columnFormat: Record<keyof T, Array<T[keyof T]>>
+): T[] => {
+  const columns = Object.keys(columnFormat) as Array<keyof T>;
+
+  if (columns.length === 0) {
+    return [];
+  }
+
+  const rowCount = columnFormat[columns[0]]?.length ?? 0;
+
+  const data: T[] = [];
+
+  for (let i = 0; i < rowCount; i++) {
+    const row = {} as T;
+
+    columns.forEach((col) => {
+      row[col] = columnFormat[col][i];
+    });
+
+    data.push(row);
+  }
+
+  return data;
 };
 
 /*

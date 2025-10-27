@@ -6,6 +6,7 @@ import {
   TQoreApps,
   TQoreAppWithActions,
   TQoreExistingApps,
+  TQoreRecordBasedApp,
 } from '@qoretechnologies/ts-toolkit';
 import fs from 'fs';
 import path from 'path';
@@ -91,6 +92,7 @@ import supabase from '../apps/supabase';
 import firestore from '../apps/firestore';
 import firebase from '../apps/firebase';
 import baserow from '../apps/baserow';
+import { omit } from 'lodash';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -253,13 +255,23 @@ export class ActionsCatalogue {
     }
   }
 
-  private registerAppCollection<T extends TQoreAppWithActions | IQoreExistingAppWithActions>(
+  private registerAppCollection<
+    T extends TQoreAppWithActions | IQoreExistingAppWithActions | TQoreRecordBasedApp,
+  >(
     collection: Record<string, T>,
     registerAppFn: (app: Omit<T, 'actions'>) => void,
     registerActionFn: (action: TQoreAppAction) => void
   ) {
     Object.keys(collection).forEach((appName) => {
-      const { actions, ...app } = collection[appName] as T;
+      const collectionApp = collection[appName] as T;
+      const app = omit(collectionApp, 'actions');
+
+      let actions: TQoreAppAction[] = [];
+
+      if ('actions' in collectionApp) {
+        actions = collectionApp.actions;
+      }
+
       registerAppFn(app);
       actions.forEach(registerActionFn);
     });

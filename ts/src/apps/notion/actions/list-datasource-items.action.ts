@@ -3,15 +3,19 @@ import {
   QoreAppCreator,
   TQoreOptions,
   TQoreResponseType,
+  TQoreTypeObject,
 } from '@qoretechnologies/ts-toolkit';
 import { omit } from 'lodash';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { NOTION_APP_NAME, NotionError } from '../constants';
 import { createNotionClient } from '../helpers/constants';
-import { getNotionDataSourceProperties } from '../helpers/get-data-source-properties';
-import { getNotionDataSourceAllowedValues } from '../helpers/get-datasource-allowed-values';
-import { getNotionDataSourcePropertiesAllowedValues } from '../helpers/get-data-source-properties-allowed-values';
 import { formatNotionFilterValues } from '../helpers/format-filter-values';
+import {
+  getNotionDataSourceProperties,
+  getNotionDataSourceResponseType,
+} from '../helpers/get-data-source-properties';
+import { getNotionDataSourcePropertiesAllowedValues } from '../helpers/get-data-source-properties-allowed-values';
+import { getNotionDataSourceAllowedValues } from '../helpers/get-datasource-allowed-values';
 
 type NotionSortsType = Array<
   | {
@@ -102,6 +106,160 @@ const options = {
   },
 } satisfies TQoreOptions;
 
+const elementType = {
+  type: 'hash',
+  fields: {
+    object: {
+      type: 'string',
+      example_value: 'page',
+    },
+    id: {
+      type: 'string',
+      example_value: '19fba26f-2e25-803b-805b-fa2742f17b01',
+    },
+    created_time: {
+      type: 'string',
+      example_value: '2025-02-19T17:36:00.000Z',
+    },
+    last_edited_time: {
+      type: 'string',
+      example_value: '2025-02-19T17:36:00.000Z',
+    },
+    created_by: {
+      type: {
+        type: 'hash',
+        fields: {
+          object: {
+            type: 'string',
+            example_value: 'user',
+          },
+          id: {
+            type: 'string',
+            example_value: 'fe16ba92-b9bd-41ee-9496-ff853a1cd6d2',
+          },
+        },
+      },
+    },
+    last_edited_by: {
+      type: {
+        type: 'hash',
+        fields: {
+          object: {
+            type: 'string',
+            example_value: 'user',
+          },
+          id: {
+            type: 'string',
+            example_value: 'fe16ba92-b9bd-41ee-9496-ff853a1cd6d2',
+          },
+        },
+      },
+    },
+    icon: {
+      type: {
+        type: 'hash',
+        fields: {
+          type: { type: 'string' },
+          emoji: { type: 'string' },
+          file: {
+            type: {
+              type: 'hash',
+              fields: {
+                url: { type: 'string' },
+                expiry_time: { type: 'string' },
+              },
+            },
+          },
+          custom_emoji: {
+            type: {
+              type: 'hash',
+              fields: {
+                id: { type: 'string' },
+                name: { type: 'string' },
+                url: { type: 'string' },
+              },
+            },
+          },
+          external: {
+            type: {
+              type: 'hash',
+              fields: {
+                url: { type: 'string' },
+              },
+            },
+          },
+        },
+      },
+    },
+    cover: {
+      type: {
+        type: 'hash',
+        fields: {
+          type: { type: 'string' },
+          external: {
+            type: {
+              type: 'hash',
+              fields: {
+                url: { type: 'string' },
+              },
+            },
+          },
+          file: {
+            type: {
+              type: 'hash',
+              fields: {
+                url: { type: 'string' },
+                expiry_time: { type: 'string' },
+              },
+            },
+          },
+        },
+      },
+    },
+    parent: {
+      type: {
+        type: 'hash',
+        fields: {
+          type: {
+            type: 'string',
+            example_value: 'data_source_id',
+          },
+          data_source_id: {
+            type: 'string',
+            example_value: '105ba26f-2e25-8087-9359-000b0bf6f1c3',
+          },
+          database_id: {
+            type: 'string',
+            example_value: '105ba26f-2e25-80ed-8f60-cdb2e63e740f',
+          },
+        },
+      },
+    },
+    archived: {
+      type: 'boolean',
+      example_value: false,
+    },
+    in_trash: {
+      type: 'boolean',
+      example_value: false,
+    },
+    is_locked: {
+      type: 'boolean',
+      example_value: false,
+    },
+    properties: {
+      type: 'hash',
+    },
+    url: {
+      type: 'string',
+      example_value: 'https://www.notion.so/Another-task-19fba26f2e25803b805bfa2742f17b01',
+    },
+    public_url: {
+      type: 'string',
+    },
+  },
+} satisfies TQoreTypeObject;
+
 const listDataSourceItems = QoreAppCreator.createLocalizedAction<typeof options>({
   app: NOTION_APP_NAME,
   action,
@@ -153,164 +311,34 @@ const listDataSourceItems = QoreAppCreator.createLocalizedAction<typeof options>
       results: {
         type: {
           type: 'list',
-          element_type: {
-            type: 'hash',
-            fields: {
-              object: {
-                type: 'string',
-                example_value: 'page',
-              },
-              id: {
-                type: 'string',
-                example_value: '19fba26f-2e25-803b-805b-fa2742f17b01',
-              },
-              created_time: {
-                type: 'string',
-                example_value: '2025-02-19T17:36:00.000Z',
-              },
-              last_edited_time: {
-                type: 'string',
-                example_value: '2025-02-19T17:36:00.000Z',
-              },
-              created_by: {
-                type: {
-                  type: 'hash',
-                  fields: {
-                    object: {
-                      type: 'string',
-                      example_value: 'user',
-                    },
-                    id: {
-                      type: 'string',
-                      example_value: 'fe16ba92-b9bd-41ee-9496-ff853a1cd6d2',
-                    },
-                  },
-                },
-              },
-              last_edited_by: {
-                type: {
-                  type: 'hash',
-                  fields: {
-                    object: {
-                      type: 'string',
-                      example_value: 'user',
-                    },
-                    id: {
-                      type: 'string',
-                      example_value: 'fe16ba92-b9bd-41ee-9496-ff853a1cd6d2',
-                    },
-                  },
-                },
-              },
-              icon: {
-                type: {
-                  type: 'hash',
-                  fields: {
-                    type: { type: 'string' },
-                    emoji: { type: 'string' },
-                    file: {
-                      type: {
-                        type: 'hash',
-                        fields: {
-                          url: { type: 'string' },
-                          expiry_time: { type: 'string' },
-                        },
-                      },
-                    },
-                    custom_emoji: {
-                      type: {
-                        type: 'hash',
-                        fields: {
-                          id: { type: 'string' },
-                          name: { type: 'string' },
-                          url: { type: 'string' },
-                        },
-                      },
-                    },
-                    external: {
-                      type: {
-                        type: 'hash',
-                        fields: {
-                          url: { type: 'string' },
-                        },
-                      },
-                    },
-                  },
-                },
-              },
-              cover: {
-                type: {
-                  type: 'hash',
-                  fields: {
-                    type: { type: 'string' },
-                    external: {
-                      type: {
-                        type: 'hash',
-                        fields: {
-                          url: { type: 'string' },
-                        },
-                      },
-                    },
-                    file: {
-                      type: {
-                        type: 'hash',
-                        fields: {
-                          url: { type: 'string' },
-                          expiry_time: { type: 'string' },
-                        },
-                      },
-                    },
-                  },
-                },
-              },
-              parent: {
-                type: {
-                  type: 'hash',
-                  fields: {
-                    type: {
-                      type: 'string',
-                      example_value: 'data_source_id',
-                    },
-                    data_source_id: {
-                      type: 'string',
-                      example_value: '105ba26f-2e25-8087-9359-000b0bf6f1c3',
-                    },
-                    database_id: {
-                      type: 'string',
-                      example_value: '105ba26f-2e25-80ed-8f60-cdb2e63e740f',
-                    },
-                  },
-                },
-              },
-              archived: {
-                type: 'boolean',
-                example_value: false,
-              },
-              in_trash: {
-                type: 'boolean',
-                example_value: false,
-              },
-              is_locked: {
-                type: 'boolean',
-                example_value: false,
-              },
-              properties: {
-                type: 'hash',
-              },
-              url: {
-                type: 'string',
-                example_value:
-                  'https://www.notion.so/Another-task-19fba26f2e25803b805bfa2742f17b01',
-              },
-              public_url: {
-                type: 'string',
+          element_type: elementType,
+        },
+      },
+    },
+  } satisfies TQoreResponseType,
+  get_dynamic_response_type: async (context) => {
+    const propertiesType = await getNotionDataSourceResponseType(context);
+
+    return {
+      type: 'hash',
+      fields: {
+        next_cursor: { type: 'string', example_value: 'd8f3f2c3-8b4d-4e0d-9f1b-1c3e5f6a7b8c' },
+        has_more: { type: 'boolean', example_value: false },
+        results: {
+          type: {
+            type: 'list',
+            element_type: {
+              type: 'hash',
+              fields: {
+                ...elementType.fields,
+                properties: { type: propertiesType as TQoreTypeObject },
               },
             },
           },
         },
       },
-    },
-  } satisfies TQoreResponseType,
+    };
+  },
 });
 
 export default listDataSourceItems;

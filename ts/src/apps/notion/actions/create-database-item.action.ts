@@ -1,16 +1,20 @@
+import { BlockObjectRequest } from '@notionhq/client';
 import {
   EQoreAppActionCode,
   QoreAppCreator,
   TQoreOptions,
   TQoreResponseType,
+  TQoreTypeObject,
 } from '@qoretechnologies/ts-toolkit';
+import { omit } from 'lodash';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { NOTION_APP_NAME, NotionError } from '../constants';
 import { createNotionClient, NotionFieldMapping } from '../helpers/constants';
-import { getNotionDataSourceProperties } from '../helpers/get-data-source-properties';
+import {
+  getNotionDataSourceProperties,
+  getNotionDataSourceResponseType,
+} from '../helpers/get-data-source-properties';
 import { getNotionDataSourceAllowedValues } from '../helpers/get-datasource-allowed-values';
-import { omit } from 'lodash';
-import { BlockObjectRequest } from '@notionhq/client';
 
 const action = 'create_database_item';
 
@@ -31,6 +35,110 @@ const options = {
     required: false,
   },
 } satisfies TQoreOptions;
+
+const responseType = {
+  type: 'hash',
+  fields: {
+    id: { type: 'string' },
+    created_time: { type: 'string' },
+    last_edited_time: { type: 'string' },
+    created_by: {
+      type: {
+        type: 'hash',
+        fields: {
+          object: { type: 'string' },
+          id: { type: 'string' },
+        },
+      },
+    },
+    last_edited_by: {
+      type: {
+        type: 'hash',
+        fields: {
+          object: { type: 'string' },
+          id: { type: 'string' },
+        },
+      },
+    },
+    icon: {
+      type: {
+        type: 'hash',
+        fields: {
+          type: { type: 'string' },
+          emoji: { type: 'string' },
+          file: {
+            type: {
+              type: 'hash',
+              fields: {
+                url: { type: 'string' },
+                expiry_time: { type: 'string' },
+              },
+            },
+          },
+          custom_emoji: {
+            type: {
+              type: 'hash',
+              fields: {
+                id: { type: 'string' },
+                name: { type: 'string' },
+                url: { type: 'string' },
+              },
+            },
+          },
+          external: {
+            type: {
+              type: 'hash',
+              fields: {
+                url: { type: 'string' },
+              },
+            },
+          },
+        },
+      },
+    },
+    cover: {
+      type: {
+        type: 'hash',
+        fields: {
+          type: { type: 'string' },
+          external: {
+            type: {
+              type: 'hash',
+              fields: {
+                url: { type: 'string' },
+              },
+            },
+          },
+          file: {
+            type: {
+              type: 'hash',
+              fields: {
+                url: { type: 'string' },
+                expiry_time: { type: 'string' },
+              },
+            },
+          },
+        },
+      },
+    },
+    parent: {
+      type: {
+        type: 'hash',
+        fields: {
+          type: { type: 'string' },
+          data_source_id: { type: 'string' },
+          database_id: { type: 'string' },
+        },
+      },
+    },
+    archived: { type: 'boolean' },
+    is_trash: { type: 'boolean' },
+    is_locked: { type: 'boolean' },
+    properties: { type: 'hash' },
+    url: { type: 'string' },
+    public_url: { type: 'string' },
+  },
+} satisfies TQoreResponseType;
 
 const createDatabaseItem = QoreAppCreator.createLocalizedAction<typeof options>({
   app: NOTION_APP_NAME,
@@ -93,109 +201,18 @@ const createDatabaseItem = QoreAppCreator.createLocalizedAction<typeof options>(
       throw new NotionError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
     }
   },
-  response_type: {
-    type: 'hash',
-    fields: {
-      id: { type: 'string' },
-      created_time: { type: 'string' },
-      last_edited_time: { type: 'string' },
-      created_by: {
-        type: {
-          type: 'hash',
-          fields: {
-            object: { type: 'string' },
-            id: { type: 'string' },
-          },
-        },
+  response_type: responseType,
+  get_dynamic_response_type: async (context) => {
+    const propertiesType = await getNotionDataSourceResponseType(context);
+
+    return {
+      type: 'hash',
+      fields: {
+        ...responseType.fields,
+        properties: { type: propertiesType as TQoreTypeObject },
       },
-      last_edited_by: {
-        type: {
-          type: 'hash',
-          fields: {
-            object: { type: 'string' },
-            id: { type: 'string' },
-          },
-        },
-      },
-      icon: {
-        type: {
-          type: 'hash',
-          fields: {
-            type: { type: 'string' },
-            emoji: { type: 'string' },
-            file: {
-              type: {
-                type: 'hash',
-                fields: {
-                  url: { type: 'string' },
-                  expiry_time: { type: 'string' },
-                },
-              },
-            },
-            custom_emoji: {
-              type: {
-                type: 'hash',
-                fields: {
-                  id: { type: 'string' },
-                  name: { type: 'string' },
-                  url: { type: 'string' },
-                },
-              },
-            },
-            external: {
-              type: {
-                type: 'hash',
-                fields: {
-                  url: { type: 'string' },
-                },
-              },
-            },
-          },
-        },
-      },
-      cover: {
-        type: {
-          type: 'hash',
-          fields: {
-            type: { type: 'string' },
-            external: {
-              type: {
-                type: 'hash',
-                fields: {
-                  url: { type: 'string' },
-                },
-              },
-            },
-            file: {
-              type: {
-                type: 'hash',
-                fields: {
-                  url: { type: 'string' },
-                  expiry_time: { type: 'string' },
-                },
-              },
-            },
-          },
-        },
-      },
-      parent: {
-        type: {
-          type: 'hash',
-          fields: {
-            type: { type: 'string' },
-            data_source_id: { type: 'string' },
-            database_id: { type: 'string' },
-          },
-        },
-      },
-      archived: { type: 'boolean' },
-      is_trash: { type: 'boolean' },
-      is_locked: { type: 'boolean' },
-      properties: { type: 'hash' },
-      url: { type: 'string' },
-      public_url: { type: 'string' },
-    },
-  } satisfies TQoreResponseType,
+    };
+  },
 });
 
 export default createDatabaseItem;

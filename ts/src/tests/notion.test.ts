@@ -13,28 +13,37 @@ import {
   UpdateNotionDatabaseItem,
 } from '../apps/notion/actions';
 import { getNotionDataSourceItemAllowedValues } from '../apps/notion/helpers/get-data-source-item-allowed-values';
-import { getNotionDataSourceProperties } from '../apps/notion/helpers/get-data-source-properties';
+import {
+  getNotionDataSourceProperties,
+  getNotionDataSourceResponseType,
+} from '../apps/notion/helpers/get-data-source-properties';
 import { getNotionDataSourcePropertiesAllowedValues } from '../apps/notion/helpers/get-data-source-properties-allowed-values';
 import { getNotionDataSourceAllowedValues } from '../apps/notion/helpers/get-datasource-allowed-values';
 import { getNotionDiscussionsAllowedValues } from '../apps/notion/helpers/get-discussion-allowed-values';
 import { getNotionPageAllowedValues } from '../apps/notion/helpers/get-page-allowed-values';
+import { createNotionRecords } from '../apps/notion/helpers/record-based/create-recrods';
+import { deleteNotionRecords } from '../apps/notion/helpers/record-based/delete-records';
+import { getNotionRecordType } from '../apps/notion/helpers/record-based/get-record-type';
+import { getNotionTableList } from '../apps/notion/helpers/record-based/get-table-list';
+import { searchNotionRecords } from '../apps/notion/helpers/record-based/search-records';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import { updateNotionRecords } from '../apps/notion/helpers/record-based/update-records';
 
 Debugger.level = DebugLevels.Verbose;
 configDotenv({ path: '.env' });
 
 describe('Notion', () => {
-  const base_context = {
+  const baseContext = {
     conn_opts: {
       token: '',
     },
-  };
+  } as any;
 
   beforeAll(() => {
     const token = process.env.NOTION_ACCESS_TOKEN!;
     expect(token).toBeDefined();
 
-    base_context.conn_opts.token = token;
+    baseContext.conn_opts.token = token;
   });
 
   let page_id: string | undefined;
@@ -44,7 +53,7 @@ describe('Notion', () => {
 
   describe('Should test allowed values', () => {
     it('Should get discussion allowed values', async () => {
-      const allowed_values = await getNotionDiscussionsAllowedValues(base_context);
+      const allowed_values = await getNotionDiscussionsAllowedValues(baseContext);
 
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);
@@ -54,7 +63,7 @@ describe('Notion', () => {
     });
 
     it('Should get page allowed values', async () => {
-      const allowed_values = await getNotionPageAllowedValues(base_context);
+      const allowed_values = await getNotionPageAllowedValues(baseContext);
 
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);
@@ -64,7 +73,7 @@ describe('Notion', () => {
     });
 
     it('Should get datasource allowed values', async () => {
-      const allowed_values = await getNotionDataSourceAllowedValues(base_context);
+      const allowed_values = await getNotionDataSourceAllowedValues(baseContext);
 
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);
@@ -75,7 +84,7 @@ describe('Notion', () => {
 
     it('Should get datasource item allowed values', async () => {
       const allowed_values = await getNotionDataSourceItemAllowedValues({
-        ...base_context,
+        ...baseContext,
         opts: { data_source_id },
       });
 
@@ -88,7 +97,7 @@ describe('Notion', () => {
 
     it('Should get datasource properties allowed values', async () => {
       const allowed_values = await getNotionDataSourcePropertiesAllowedValues({
-        ...base_context,
+        ...baseContext,
         opts: { data_source_id },
       });
 
@@ -104,7 +113,7 @@ describe('Notion', () => {
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
-      const result = await action.api_function(undefined, undefined, base_context);
+      const result = await action.api_function(undefined, undefined, baseContext);
 
       expect(result).toBeDefined();
       expect(Array.isArray(result)).toBe(true);
@@ -116,7 +125,7 @@ describe('Notion', () => {
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
-      const result = await action.api_function(undefined, undefined, base_context);
+      const result = await action.api_function(undefined, undefined, baseContext);
 
       expect(result).toBeDefined();
       expect(result.pages).toBeDefined();
@@ -129,7 +138,7 @@ describe('Notion', () => {
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
-      const result = await action.api_function(undefined, undefined, base_context);
+      const result = await action.api_function(undefined, undefined, baseContext);
 
       expect(result).toBeDefined();
       expect(result.results).toBeDefined();
@@ -142,7 +151,7 @@ describe('Notion', () => {
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
-      const result = await action.api_function({ data_source_id }, undefined, base_context);
+      const result = await action.api_function({ data_source_id }, undefined, baseContext);
 
       expect(result).toBeDefined();
       expect(result.id).toBe(data_source_id);
@@ -153,7 +162,7 @@ describe('Notion', () => {
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
-      const result = await action.api_function({ page_id }, undefined, base_context);
+      const result = await action.api_function({ page_id }, undefined, baseContext);
 
       expect(result).toBeDefined();
       expect(result.id).toBe(page_id);
@@ -170,7 +179,7 @@ describe('Notion', () => {
           text: `Test comment from Qore at ${new Date().toISOString()}`,
         },
         undefined,
-        base_context
+        baseContext
       );
 
       expect(result).toBeDefined();
@@ -189,7 +198,7 @@ describe('Notion', () => {
           page_size: 5,
         },
         undefined,
-        base_context
+        baseContext
       );
 
       expect(result).toBeDefined();
@@ -207,7 +216,7 @@ describe('Notion', () => {
           page_size: 5,
         },
         undefined,
-        base_context
+        baseContext
       );
 
       expect(result).toBeDefined();
@@ -216,7 +225,7 @@ describe('Notion', () => {
     it('Should get database properties dynamic type', async () => {
       const result = (await getNotionDataSourceProperties({
         opts: { data_source_id },
-        ...base_context,
+        ...baseContext,
       })) as IQoreTypeObjectNonList;
 
       expect(result).toBeDefined();
@@ -240,7 +249,7 @@ describe('Notion', () => {
           content: 'This is the content of the item created from Qore',
         },
         undefined,
-        base_context
+        baseContext
       );
 
       expect(result).toBeDefined();
@@ -263,11 +272,405 @@ describe('Notion', () => {
           },
         },
         undefined,
-        base_context
+        baseContext
       );
 
       expect(result).toBeDefined();
       expect(result.id).toBe(data_source_item_id);
+    });
+
+    it('Should get datasource properties dynamic type', async () => {
+      const result = await getNotionDataSourceResponseType({
+        ...baseContext,
+        opts: { data_source_id: '105ba26f-2e25-8087-9359-000b0bf6f1c3' },
+      });
+
+      console.dir(result, { depth: null });
+    });
+  });
+
+  describe('Should test record based helpers', () => {
+    const table = 'Tasks';
+
+    it('Should list table names', async () => {
+      const result = await getNotionTableList(baseContext);
+
+      expect(result).toBeDefined();
+      expect(Array.isArray(result)).toBe(true);
+      expect(result.length).toBeGreaterThan(0);
+    });
+
+    it('Should get record type for a table', async () => {
+      const result = await getNotionRecordType(baseContext, 'Tasks');
+
+      expect(result).toBeDefined();
+    });
+
+    const nextWeek = new Date();
+    nextWeek.setDate(nextWeek.getDate() + 7);
+    const lastWeek = new Date();
+    lastWeek.setDate(lastWeek.getDate() - 7);
+    const now = new Date().toISOString();
+
+    const names = [
+      'Task from Qore 1',
+      'Task from Qore 2',
+      'Unassigned Task',
+      'Blocked Task',
+      'Overdue Task',
+    ];
+
+    it('Should create records', async () => {
+      const result = await createNotionRecords(
+        baseContext,
+        {
+          Status: ['Done', 'In Progress', 'To Do', 'Blocked', 'In Progress'],
+          Assignee: [
+            'fe16ba92-b9bd-41ee-9496-ff853a1cd6d2',
+            'fe16ba92-b9bd-41ee-9496-ff853a1cd6d2',
+            null,
+            'fe16ba92-b9bd-41ee-9496-ff853a1cd6d2',
+            'fe16ba92-b9bd-41ee-9496-ff853a1cd6d2',
+          ],
+          'Due date': [now, now, nextWeek.toISOString(), now, lastWeek.toISOString()],
+          Name: names,
+        },
+        { table }
+      );
+
+      expect(result).toBeDefined();
+      expect(Array.isArray(result.id)).toBe(true);
+    });
+
+    describe('Should test expressions for search', () => {
+      it('Should search records with simple equality', async () => {
+        const iterator = await searchNotionRecords(
+          baseContext,
+          {
+            exp: '=',
+            args: [{ field: 'Status' }, 'Done'],
+          },
+          { table }
+        );
+
+        const result = await iterator(baseContext, 10);
+
+        expect(result).toBeDefined();
+        expect(result!.Status).toContain('Done');
+        expect(result!.Name).toContain('Task from Qore 1');
+      });
+
+      it('Should search records with nested AND/OR expression', async () => {
+        const iterator = await searchNotionRecords(
+          baseContext,
+          {
+            exp: 'AND',
+            args: [
+              {
+                exp: 'OR',
+                args: [
+                  { exp: '=', args: [{ field: 'Status' }, 'Done'] },
+                  { exp: '=', args: [{ field: 'Status' }, 'In progress'] },
+                ],
+              },
+              {
+                exp: 'is_not_empty',
+                args: [{ field: 'Assignee' }],
+              },
+            ],
+          },
+          { table }
+        );
+
+        const result = await iterator(baseContext, 10);
+
+        expect(result).toBeDefined();
+        expect(result!.id.length).toBeGreaterThan(0);
+        result!.Status.forEach((status: string) => {
+          expect(['Done', 'In progress']).toContain(status);
+        });
+        expect(result!.Assignee.every((a: any) => a && a.length > 0)).toBe(true);
+      });
+
+      it('Should search records with date comparison operators', async () => {
+        const before = '2025-10-28T00:00:00Z';
+
+        const iterator = await searchNotionRecords(
+          baseContext,
+          {
+            exp: '<=',
+            args: [{ field: 'Due date' }, before],
+          },
+          { table }
+        );
+
+        const result = (await iterator(baseContext, 10)) as {
+          'Due date': string[];
+        };
+
+        expect(result).toBeDefined();
+        expect(result['Due date']).toBeDefined();
+        result['Due date'].forEach((dueDate: string) => {
+          expect(new Date(dueDate)).toBeInstanceOf(Date);
+          expect(new Date(dueDate) <= new Date(before)).toBe(true);
+        });
+      });
+
+      it('Should search records with is_empty operator', async () => {
+        const iterator = await searchNotionRecords(
+          baseContext,
+          {
+            exp: 'is_empty',
+            args: [{ field: 'Assignee' }],
+          },
+          { table }
+        );
+
+        const result = await iterator(baseContext, 10);
+
+        if (result) {
+          expect(result).toBeDefined();
+          result!.Assignee.forEach((assignee: any) => {
+            expect(assignee).toEqual([]);
+          });
+        }
+      });
+
+      it('Should search records with starts_with operator', async () => {
+        const iterator = await searchNotionRecords(
+          baseContext,
+          {
+            exp: 'starts_with',
+            args: [{ field: 'Name' }, 'Task from'],
+          },
+          { table }
+        );
+
+        const result = await iterator(baseContext, 10);
+
+        expect(result).toBeDefined();
+        expect(result!.Name.length).toBe(2);
+        result!.Name.forEach((name: string) => {
+          expect(name.startsWith('Task from')).toBe(true);
+        });
+      });
+
+      it('Should search records with ends_with operator', async () => {
+        const iterator = await searchNotionRecords(
+          baseContext,
+          {
+            exp: 'ends_with',
+            args: [{ field: 'Name' }, '1'],
+          },
+          { table }
+        );
+
+        const result = await iterator(baseContext, 10);
+
+        expect(result).toBeDefined();
+        expect(result!.Name).toContain('Task from Qore 1');
+        expect(result!.Name).not.toContain('Task from Qore 2');
+      });
+
+      it('Should search records with date relative operators (this_week)', async () => {
+        const iterator = await searchNotionRecords(
+          baseContext,
+          {
+            exp: 'this_week',
+            args: [{ field: 'Due date' }],
+          },
+          { table }
+        );
+
+        const result = await iterator(baseContext, 10);
+
+        if (result) {
+          expect(result).toBeDefined();
+          expect(result!.id.length).toBeGreaterThan(0);
+        }
+      });
+
+      it('Should search records with contains operator', async () => {
+        const iterator = await searchNotionRecords(
+          baseContext,
+          {
+            exp: 'contains',
+            args: [{ field: 'Name' }, 'Qore'],
+          },
+          { table }
+        );
+
+        const result = await iterator(baseContext, 10);
+
+        expect(result).toBeDefined();
+        expect(result!.Name.length).toBe(2);
+        result!.Name.forEach((name: string) => {
+          expect(name).toContain('Qore');
+        });
+      });
+
+      it('Should search records with IN operator', async () => {
+        const iterator = await searchNotionRecords(
+          baseContext,
+          {
+            exp: 'in',
+            args: [{ field: 'Name' }, names],
+          },
+          { table }
+        );
+
+        const result = await iterator(baseContext, 10);
+
+        expect(result).toBeDefined();
+        expect(result!.id.length).toBe(5);
+      });
+
+      it('Should search records with complex date and status conditions', async () => {
+        const iterator = await searchNotionRecords(
+          baseContext,
+          {
+            exp: 'AND',
+            args: [
+              {
+                exp: '!=',
+                args: [{ field: 'Status' }, 'Done'],
+              },
+              {
+                exp: 'OR',
+                args: [
+                  {
+                    exp: 'this_week',
+                    args: [{ field: 'Due date' }],
+                  },
+                  {
+                    exp: 'next_week',
+                    args: [{ field: 'Due date' }],
+                  },
+                ],
+              },
+            ],
+          },
+          { table }
+        );
+
+        const result = await iterator(baseContext, 10);
+
+        if (result) {
+          expect(result).toBeDefined();
+          result!.Status.forEach((status: string) => {
+            expect(status).not.toBe('Done');
+          });
+        }
+      });
+
+      it('Should handle pagination with complex expressions', async () => {
+        const iterator = await searchNotionRecords(
+          baseContext,
+          {
+            exp: 'OR',
+            args: [
+              { exp: '=', args: [{ field: 'Status' }, 'Done'] },
+              { exp: '=', args: [{ field: 'Status' }, 'In progress'] },
+            ],
+          },
+          { table }
+        );
+
+        const firstPage = await iterator(baseContext, 1);
+        expect(firstPage).toBeDefined();
+        expect(firstPage!.id.length).toBe(1);
+
+        const secondPage = await iterator(baseContext, 1);
+        expect(secondPage).toBeDefined();
+        expect(secondPage!.id.length).toBe(1);
+
+        expect(firstPage!.id[0]).not.toBe(secondPage!.id[0]);
+      });
+
+      it('Should search with ordering by created_time descending', async () => {
+        const iterator = await searchNotionRecords(baseContext, undefined, {
+          table,
+          orderBy: {
+            column: 'created_time',
+            ascending: false,
+          },
+        });
+
+        const result = await iterator(baseContext, 10);
+
+        expect(result).toBeDefined();
+        expect(result!.id.length).toBeGreaterThan(0);
+      });
+
+      it('Should search with ordering by last_edited_time ascending', async () => {
+        const iterator = await searchNotionRecords(baseContext, undefined, {
+          table,
+          orderBy: {
+            column: 'last_edited_time',
+            ascending: true,
+          },
+        });
+
+        const result = await iterator(baseContext, 10);
+
+        expect(result).toBeDefined();
+        expect(result!.id.length).toBeGreaterThan(0);
+      });
+
+      it('Should combine timestamp filtering with ordering', async () => {
+        const iterator = await searchNotionRecords(
+          baseContext,
+          {
+            exp: '>=',
+            args: [{ field: 'created_time' }, '2025-10-27T00:00:00Z'],
+          },
+          {
+            table,
+            orderBy: {
+              column: 'created_time',
+              ascending: false,
+            },
+          }
+        );
+
+        const result = await iterator(baseContext, 10);
+
+        expect(result).toBeDefined();
+        expect(result!.id.length).toBeGreaterThan(0);
+      });
+    });
+
+    it('Should update records', async () => {
+      const result = await updateNotionRecords(
+        baseContext,
+        {
+          Status: 'Done',
+        },
+        {
+          exp: 'in',
+          args: [{ field: 'Name' }, names],
+        },
+        {
+          table,
+        }
+      );
+
+      expect(result).toBeDefined();
+      expect(result).toBe(5);
+    });
+
+    it('Should delete records', async () => {
+      const result = await deleteNotionRecords(
+        baseContext,
+        {
+          exp: 'in',
+          args: [{ field: 'Name' }, names],
+        },
+        { table: 'Tasks' }
+      );
+
+      expect(result).toBeDefined();
+      expect(result).toBe(5);
     });
   });
 });
