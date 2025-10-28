@@ -1,4 +1,4 @@
-import { Client, RichTextItemResponse } from '@notionhq/client';
+import { Client, DataSourceObjectResponse, RichTextItemResponse } from '@notionhq/client';
 import { IQoreAllowedValue, TQoreAppActionOption } from '@qoretechnologies/ts-toolkit';
 
 export const NOTION_API_VERSION = '2025-09-03';
@@ -296,13 +296,13 @@ export const NotionFieldMapping: Record<
   },
   date: {
     buildQoreType: (property) => ({
-      type: 'string',
+      type: 'date',
       ...(property.description && { desc: property.description }),
       display_name: property.name,
     }),
     buildNotionType: (property: string) => ({
       date: {
-        start: property,
+        start: formatNotionDateTime(property),
       },
     }),
   },
@@ -467,4 +467,191 @@ export const NotionFieldMapping: Record<
       people: [{ id: property }],
     }),
   },
+};
+
+export const getNotionDataSourceByTitle = async (options: {
+  token: string;
+  titleQuery: string;
+}): Promise<DataSourceObjectResponse> => {
+  const { token, titleQuery } = options;
+  const notion = createNotionClient(token);
+
+  const response = await notion.search({
+    query: titleQuery,
+    filter: {
+      property: 'object',
+      value: 'data_source',
+    },
+  });
+
+  if (!response.results.length) {
+    throw new Error('Data source not found');
+  }
+
+  return response.results[0] as DataSourceObjectResponse;
+};
+
+export const mapNotionPropertiesToSimpleObject = (
+  properties: Record<string, any>,
+  mapPeopleIntoSingleField?: 'id' | 'name' | 'email'
+): Record<string, any> => {
+  const result: Record<string, any> = {};
+
+  for (const [key, property] of Object.entries(properties)) {
+    if (!property || !property.type) {
+      result[key] = null;
+      continue;
+    }
+
+    switch (property.type) {
+      case 'title':
+        result[key] = property.title?.[0]?.plain_text || '';
+        break;
+
+      case 'rich_text':
+        result[key] = property.rich_text?.map((rt: any) => rt.plain_text).join('') || '';
+        break;
+
+      case 'number':
+        result[key] = property.number;
+        break;
+
+      case 'select':
+        result[key] = property.select?.name || null;
+        break;
+
+      case 'multi_select':
+        result[key] = property.multi_select?.map((s: any) => s.name) || [];
+        break;
+
+      case 'status':
+        result[key] = property.status?.name || null;
+        break;
+
+      case 'date':
+        result[key] = property.date?.start || null;
+        break;
+
+      case 'people':
+        result[key] =
+          property.people?.map((person: any) => {
+            const personData = {
+              id: person.id,
+              name: person.name,
+              email: person.person?.email || person.bot?.owner?.user?.person?.email || null,
+            };
+            if (mapPeopleIntoSingleField) {
+              return personData[mapPeopleIntoSingleField];
+            }
+
+            return personData;
+          }) || [];
+        break;
+
+      case 'files':
+        result[key] =
+          property.files?.map((file: any) => ({
+            name: file.name,
+            url: file.file?.url || file.external?.url,
+          })) || [];
+        break;
+
+      case 'checkbox':
+        result[key] = property.checkbox || false;
+        break;
+
+      case 'url':
+        result[key] = property.url || null;
+        break;
+
+      case 'email':
+        result[key] = property.email || null;
+        break;
+
+      case 'phone_number':
+        result[key] = property.phone_number || null;
+        break;
+
+      case 'formula':
+        result[key] = extractFormulaValue(property.formula);
+        break;
+
+      case 'relation':
+        result[key] = property.relation?.map((r: any) => r.id) || [];
+        break;
+
+      case 'rollup':
+        result[key] = extractRollupValue(property.rollup);
+        break;
+
+      case 'created_time':
+        result[key] = property.created_time;
+        break;
+
+      case 'created_by':
+        result[key] = {
+          id: property.created_by?.id,
+          name: property.created_by?.name,
+        };
+        break;
+
+      case 'last_edited_time':
+        result[key] = property.last_edited_time;
+        break;
+
+      case 'last_edited_by':
+        result[key] = {
+          id: property.last_edited_by?.id,
+          name: property.last_edited_by?.name,
+        };
+        break;
+
+      case 'id':
+        result[key] = property.id;
+        break;
+
+      default:
+        result[key] = null;
+    }
+  }
+
+  return result;
+};
+
+const extractFormulaValue = (formula: any): any => {
+  if (!formula) return null;
+
+  switch (formula.type) {
+    case 'string':
+      return formula.string;
+    case 'number':
+      return formula.number;
+    case 'boolean':
+      return formula.boolean;
+    case 'date':
+      return formula.date?.start || null;
+    default:
+      return null;
+  }
+};
+
+const extractRollupValue = (rollup: any): any => {
+  if (!rollup) return null;
+
+  switch (rollup.type) {
+    case 'number':
+      return rollup.number;
+    case 'date':
+      return rollup.date?.start || null;
+    case 'array':
+      return rollup.array || [];
+    default:
+      return null;
+  }
+};
+
+export const formatNotionDateTime = (date: Date | string): string => {
+  const d = typeof date === 'string' ? new Date(date) : date;
+
+  return d.toISOString().replace(/\.\d{3}Z$/, 'Z');
 };

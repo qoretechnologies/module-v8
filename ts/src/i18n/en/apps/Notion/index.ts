@@ -363,6 +363,114 @@ const NotionAppEn = {
       },
     },
   },
+
+  expressions: {
+    AND: {
+      displayName: 'and (&&)',
+      shortDesc: 'Returns True if all arguments are True',
+      longDesc: 'Returns `True` if all arguments are `True` with logic short-circuiting',
+    },
+    OR: {
+      displayName: 'or (||)',
+      shortDesc: 'Returns True if any argument is True',
+      longDesc: 'Returns `True` if any argument is `True` with logic short-circuiting',
+    },
+    '=': {
+      displayName: 'equals (=)',
+      shortDesc: 'Equality comparison',
+      longDesc: 'Returns `True` if the field equals the value',
+    },
+    '!=': {
+      displayName: 'not equals (!=)',
+      shortDesc: 'Inequality comparison',
+      longDesc: 'Returns `True` if the field does not equal the value',
+    },
+    '>': {
+      displayName: 'greater than (>)',
+      shortDesc: 'Greater than comparison',
+      longDesc: 'Returns `True` if the field is greater than the value',
+    },
+    '>=': {
+      displayName: 'greater than or equal (>=)',
+      shortDesc: 'Greater than or equal comparison',
+      longDesc: 'Returns `True` if the field is greater than or equal to the value',
+    },
+    '<': {
+      displayName: 'less than (<)',
+      shortDesc: 'Less than comparison',
+      longDesc: 'Returns `True` if the field is less than the value',
+    },
+    '<=': {
+      displayName: 'less than or equal (<=)',
+      shortDesc: 'Less than or equal comparison',
+      longDesc: 'Returns `True` if the field is less than or equal to the value',
+    },
+    contains: {
+      displayName: 'contains',
+      shortDesc: 'Contains text',
+      longDesc: 'Returns `True` if the field contains the specified text',
+    },
+    in: {
+      displayName: 'in',
+      shortDesc: 'In list',
+      longDesc: 'Returns `True` if the field value is in the provided list',
+    },
+    is_empty: {
+      displayName: 'is empty',
+      shortDesc: 'Field is empty',
+      longDesc: 'Returns `True` if the field is empty or not set',
+    },
+    is_not_empty: {
+      displayName: 'is not empty',
+      shortDesc: 'Field is not empty',
+      longDesc: 'Returns `True` if the field has a value',
+    },
+    starts_with: {
+      displayName: 'starts with',
+      shortDesc: 'Starts with text',
+      longDesc: 'Returns `True` if the field starts with the specified text',
+    },
+    ends_with: {
+      displayName: 'ends with',
+      shortDesc: 'Ends with text',
+      longDesc: 'Returns `True` if the field ends with the specified text',
+    },
+    next_week: {
+      displayName: 'next week',
+      shortDesc: 'Date is next week',
+      longDesc: 'Returns `True` if the date falls within the next week',
+    },
+    next_month: {
+      displayName: 'next month',
+      shortDesc: 'Date is next month',
+      longDesc: 'Returns `True` if the date falls within the next month',
+    },
+    next_year: {
+      displayName: 'next year',
+      shortDesc: 'Date is next year',
+      longDesc: 'Returns `True` if the date falls within the next year',
+    },
+    past_week: {
+      displayName: 'past week',
+      shortDesc: 'Date is past week',
+      longDesc: 'Returns `True` if the date falls within the past week',
+    },
+    past_month: {
+      displayName: 'past month',
+      shortDesc: 'Date is past month',
+      longDesc: 'Returns `True` if the date falls within the past month',
+    },
+    past_year: {
+      displayName: 'past year',
+      shortDesc: 'Date is past year',
+      longDesc: 'Returns `True` if the date falls within the past year',
+    },
+    this_week: {
+      displayName: 'this week',
+      shortDesc: 'Date is this week',
+      longDesc: 'Returns `True` if the date falls within the current week',
+    },
+  },
 };
 
 export default NotionAppEn;
