@@ -1251,6 +1251,176 @@ type RootTranslation = {
 					}
 				}
 			}
+			expressions: {
+				AND: {
+					/**
+					 * a​n​d​ ​(​&​&​)
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​T​r​u​e​ ​i​f​ ​a​l​l​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​T​r​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​l​l​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
+					 */
+					longDesc: string
+				}
+				OR: {
+					/**
+					 * o​r​ ​(​|​|​)
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​T​r​u​e​ ​i​f​ ​a​n​y​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​T​r​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​n​y​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
+					 */
+					longDesc: string
+				}
+				NOT: {
+					/**
+					 * n​o​t​ ​(​!​)
+					 */
+					displayName: string
+					/**
+					 * L​o​g​i​c​a​l​ ​n​e​g​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​t​h​e​ ​l​o​g​i​c​a​l​ ​n​e​g​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​a​r​g​u​m​e​n​t
+					 */
+					longDesc: string
+				}
+				'=': {
+					/**
+					 * e​q​u​a​l​s​ ​(​=​)
+					 */
+					displayName: string
+					/**
+					 * E​q​u​a​l​i​t​y​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​e​q​u​a​l
+					 */
+					longDesc: string
+				}
+				'!=': {
+					/**
+					 * n​o​t​ ​e​q​u​a​l​s​ ​(​!​=​)
+					 */
+					displayName: string
+					/**
+					 * I​n​e​q​u​a​l​i​t​y​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​n​o​t​ ​e​q​u​a​l
+					 */
+					longDesc: string
+				}
+				'>': {
+					/**
+					 * g​r​e​a​t​e​r​ ​t​h​a​n​ ​(​>​)
+					 */
+					displayName: string
+					/**
+					 * G​r​e​a​t​e​r​ ​t​h​a​n​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​r​s​t​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​e​c​o​n​d
+					 */
+					longDesc: string
+				}
+				'>=': {
+					/**
+					 * g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​(​>​=​)
+					 */
+					displayName: string
+					/**
+					 * G​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​r​s​t​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​e​c​o​n​d
+					 */
+					longDesc: string
+				}
+				'<': {
+					/**
+					 * l​e​s​s​ ​t​h​a​n​ ​(​<​)
+					 */
+					displayName: string
+					/**
+					 * L​e​s​s​ ​t​h​a​n​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​r​s​t​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​e​c​o​n​d
+					 */
+					longDesc: string
+				}
+				'<=': {
+					/**
+					 * l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​(​<​=​)
+					 */
+					displayName: string
+					/**
+					 * L​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​r​s​t​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​e​c​o​n​d
+					 */
+					longDesc: string
+				}
+				like: {
+					/**
+					 * l​i​k​e
+					 */
+					displayName: string
+					/**
+					 * P​a​t​t​e​r​n​ ​m​a​t​c​h​i​n​g​ ​(​c​a​s​e​-​s​e​n​s​i​t​i​v​e​)
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​m​a​t​c​h​e​s​ ​t​h​e​ ​p​a​t​t​e​r​n​ ​w​i​t​h​ ​%​ ​a​s​ ​w​i​l​d​c​a​r​d
+					 */
+					longDesc: string
+				}
+				ilike: {
+					/**
+					 * i​l​i​k​e
+					 */
+					displayName: string
+					/**
+					 * P​a​t​t​e​r​n​ ​m​a​t​c​h​i​n​g​ ​(​c​a​s​e​-​i​n​s​e​n​s​i​t​i​v​e​)
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​m​a​t​c​h​e​s​ ​t​h​e​ ​p​a​t​t​e​r​n​ ​(​c​a​s​e​-​i​n​s​e​n​s​i​t​i​v​e​)​ ​w​i​t​h​ ​%​ ​a​s​ ​w​i​l​d​c​a​r​d
+					 */
+					longDesc: string
+				}
+				'in': {
+					/**
+					 * i​n
+					 */
+					displayName: string
+					/**
+					 * I​n​ ​o​p​e​r​a​t​o​r
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​i​n​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​l​i​s​t
+					 */
+					longDesc: string
+				}
+			}
 		}
 		Baserow: {
 			/**
@@ -81584,6 +81754,176 @@ export type TranslationFunctions = {
 							}
 						}
 					}
+				}
+			}
+			expressions: {
+				AND: {
+					/**
+					 * and (&&)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns True if all arguments are True
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if all arguments are `True` with logic short-circuiting
+					 */
+					longDesc: () => LocalizedString
+				}
+				OR: {
+					/**
+					 * or (||)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns True if any argument is True
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if any argument is `True` with logic short-circuiting
+					 */
+					longDesc: () => LocalizedString
+				}
+				NOT: {
+					/**
+					 * not (!)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Logical negation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns the logical negation of the argument
+					 */
+					longDesc: () => LocalizedString
+				}
+				'=': {
+					/**
+					 * equals (=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Equality comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the arguments are equal
+					 */
+					longDesc: () => LocalizedString
+				}
+				'!=': {
+					/**
+					 * not equals (!=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Inequality comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the arguments are not equal
+					 */
+					longDesc: () => LocalizedString
+				}
+				'>': {
+					/**
+					 * greater than (>)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Greater than comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the first argument is greater than the second
+					 */
+					longDesc: () => LocalizedString
+				}
+				'>=': {
+					/**
+					 * greater than or equal (>=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Greater than or equal comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the first argument is greater than or equal to the second
+					 */
+					longDesc: () => LocalizedString
+				}
+				'<': {
+					/**
+					 * less than (<)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Less than comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the first argument is less than the second
+					 */
+					longDesc: () => LocalizedString
+				}
+				'<=': {
+					/**
+					 * less than or equal (<=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Less than or equal comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the first argument is less than or equal to the second
+					 */
+					longDesc: () => LocalizedString
+				}
+				like: {
+					/**
+					 * like
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Pattern matching (case-sensitive)
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field matches the pattern with % as wildcard
+					 */
+					longDesc: () => LocalizedString
+				}
+				ilike: {
+					/**
+					 * ilike
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Pattern matching (case-insensitive)
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field matches the pattern (case-insensitive) with % as wildcard
+					 */
+					longDesc: () => LocalizedString
+				}
+				'in': {
+					/**
+					 * in
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * In operator
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is in the provided list
+					 */
+					longDesc: () => LocalizedString
 				}
 			}
 		}

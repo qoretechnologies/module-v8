@@ -1,11 +1,28 @@
-import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
-import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers/index';
+import {
+  QorusRequest,
+  TQoreAppWithActions,
+  TQoreRecordBasedApp,
+} from '@qoretechnologies/ts-toolkit';
+import {
+  getQoreContextRequiredValues,
+  mapActionsToApp,
+  mapTriggersToApp,
+} from '../../global/helpers/index';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import { SUPABASE_APP_LOGO, SUPABASE_APP_NAME, SUPABASE_CONN_OPTIONS } from './constants';
+import { getSupabaseExpressionsFunction } from './helpers/record-based/get-expression';
+import { getSupabaseRecordType } from './helpers/record-based/get-record-type';
+import { getSupabaseTableList } from './helpers/record-based/get-table-list';
+import { searchSupabaseRecords } from './helpers/record-based/search-records';
 
-import * as SUPABASE_ACTIONS from './actions';
 import * as SUPABASE_TRIGGERS from './triggers';
+import * as SUPABASE_ACTIONS from './actions';
+import { createSupabaseRecords } from './helpers/record-based/create-records';
+import { upsertSupabaseRecord } from './helpers/record-based/upsert-records';
+import { updateSupabaseRecords } from './helpers/record-based/update-records';
+import { deleteSupabaseRecords } from './helpers/record-based/delete-records';
+import { getSupabaseSearchOptions } from './helpers/record-based/get-search-options';
 
 export default (locale: Locales) =>
   ({
@@ -32,5 +49,45 @@ export default (locale: Locales) =>
       options: SUPABASE_CONN_OPTIONS,
       required_options: 'projectId,token',
       url_template_options: ['projectId'],
+      set_options_post_auth: async (context) => {
+        const { token, projectId } = getQoreContextRequiredValues({
+          context,
+          connectionFields: ['projectId', 'token'],
+        });
+
+        const response = await QorusRequest.get<{ data: { paths: Record<string, any> } }>(
+          {
+            path: '/rest/v1/',
+            headers: {
+              apiKey: token,
+            },
+          },
+          {
+            url: `https://${projectId}.supabase.co`,
+            endpointId: SUPABASE_APP_NAME,
+          }
+        );
+
+        const data = response?.data;
+
+        if (!data) return;
+
+        const paths = Object.keys(response.data.paths || {}).filter((path) => path !== '/');
+
+        if (paths.length === 0) return;
+
+        return {
+          ping_path: `/rest/v1${paths[0]}`,
+        };
+      },
     },
-  }) satisfies TQoreAppWithActions;
+    get_table_list: getSupabaseTableList,
+    get_expressions: getSupabaseExpressionsFunction(locale),
+    get_record_type: getSupabaseRecordType,
+    search_records: searchSupabaseRecords,
+    create_records: createSupabaseRecords,
+    upsert_records: upsertSupabaseRecord,
+    update_records: updateSupabaseRecords,
+    delete_records: deleteSupabaseRecords,
+    get_search_options: getSupabaseSearchOptions,
+  }) satisfies TQoreRecordBasedApp & TQoreAppWithActions;
