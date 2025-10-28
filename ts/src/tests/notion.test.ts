@@ -18,7 +18,7 @@ import { getNotionDataSourcePropertiesAllowedValues } from '../apps/notion/helpe
 import { getNotionDataSourceAllowedValues } from '../apps/notion/helpers/get-datasource-allowed-values';
 import { getNotionDiscussionsAllowedValues } from '../apps/notion/helpers/get-discussion-allowed-values';
 import { getNotionPageAllowedValues } from '../apps/notion/helpers/get-page-allowed-values';
-import { createNotionRecords } from '../apps/notion/helpers/record-based/create-recrods';
+import { createNotionRecords } from '../apps/notion/helpers/record-based/create-records';
 import { deleteNotionRecords } from '../apps/notion/helpers/record-based/delete-records';
 import { getNotionRecordType } from '../apps/notion/helpers/record-based/get-record-type';
 import { getNotionTableList } from '../apps/notion/helpers/record-based/get-table-list';

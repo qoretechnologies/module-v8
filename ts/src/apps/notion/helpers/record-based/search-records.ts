@@ -40,10 +40,9 @@ export const searchNotionRecords: TQoreSearchRecordsFunction = async (ctx, where
     }
 
     const orderBy = opts.orderBy as { column: string; ascending?: boolean };
-    let direction = 'ascending';
 
     if (orderBy) {
-      direction = orderBy.ascending ? 'ascending' : 'descending';
+      const direction = orderBy.ascending ? 'ascending' : 'descending';
 
       queryParams.sorts = [
         {

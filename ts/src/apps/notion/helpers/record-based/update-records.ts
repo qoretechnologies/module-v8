@@ -5,7 +5,7 @@ import { Debugger } from '../../../../utils/Debugger';
 import { NotionError } from '../../constants';
 import { createNotionClient, getNotionDataSourceByTitle } from '../constants';
 import { buildNotionFilter } from './apply-where-condition';
-import { formatNotionRowProperties } from './create-recrods';
+import { formatNotionRowProperties } from './create-records';
 
 export const updateNotionRecords: TQoreUpdateRecordsFunction = async (
   context,

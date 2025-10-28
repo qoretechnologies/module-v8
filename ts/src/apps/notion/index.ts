@@ -3,7 +3,7 @@ import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import { NOTION_APP_LOGO, NOTION_APP_NAME } from './constants';
-import { createNotionRecords } from './helpers/record-based/create-recrods';
+import { createNotionRecords } from './helpers/record-based/create-records';
 import { deleteNotionRecords } from './helpers/record-based/delete-records';
 import { getNotionExpressionsFunction } from './helpers/record-based/get-expressions';
 import { getNotionRecordType } from './helpers/record-based/get-record-type';
