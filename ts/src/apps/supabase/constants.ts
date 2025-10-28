@@ -1,11 +1,24 @@
 import { TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 
 export class SupabaseError extends Error {
-  constructor(message: string) {
+  public errorCode?: string;
+
+  constructor(message: string, errorCode?: string) {
     super(message);
     this.name = 'SupabaseError';
+    this.errorCode = errorCode;
   }
 }
+
+export const EQoreRecordBasedAppErrorCodes = {
+  DUPLICATE_RECORD: 'DUPLICATE-RECORD',
+} as const;
+
+export const SUPABASE_DUPLICATE_ERROR_CODE = '23505';
+
+export const SupabaseErrorCodeToQoreErrorCodeMap: Record<string, string> = {
+  [SUPABASE_DUPLICATE_ERROR_CODE]: EQoreRecordBasedAppErrorCodes.DUPLICATE_RECORD,
+};
 
 export const SUPABASE_APP_NAME = 'Supabase';
 export const SUPABASE_APP_LOGO =

@@ -295,6 +295,69 @@ const SupabaseAppEn = {
       },
     },
   },
+  expressions: {
+    AND: {
+      displayName: 'and (&&)',
+      shortDesc: 'Returns True if all arguments are True',
+      longDesc: 'Returns `True` if all arguments are `True` with logic short-circuiting',
+    },
+    OR: {
+      displayName: 'or (||)',
+      shortDesc: 'Returns True if any argument is True',
+      longDesc: 'Returns `True` if any argument is `True` with logic short-circuiting',
+    },
+    NOT: {
+      displayName: 'not (!)',
+      shortDesc: 'Logical negation',
+      longDesc: 'Returns the logical negation of the argument',
+    },
+    '=': {
+      displayName: 'equals (=)',
+      shortDesc: 'Equality comparison',
+      longDesc: 'Returns `True` if the arguments are equal',
+    },
+    '!=': {
+      displayName: 'not equals (!=)',
+      shortDesc: 'Inequality comparison',
+      longDesc: 'Returns `True` if the arguments are not equal',
+    },
+    '>': {
+      displayName: 'greater than (>)',
+      shortDesc: 'Greater than comparison',
+      longDesc: 'Returns `True` if the first argument is greater than the second',
+    },
+    '>=': {
+      displayName: 'greater than or equal (>=)',
+      shortDesc: 'Greater than or equal comparison',
+      longDesc: 'Returns `True` if the first argument is greater than or equal to the second',
+    },
+    '<': {
+      displayName: 'less than (<)',
+      shortDesc: 'Less than comparison',
+      longDesc: 'Returns `True` if the first argument is less than the second',
+    },
+    '<=': {
+      displayName: 'less than or equal (<=)',
+      shortDesc: 'Less than or equal comparison',
+      longDesc: 'Returns `True` if the first argument is less than or equal to the second',
+    },
+    like: {
+      displayName: 'like',
+      shortDesc: 'Pattern matching (case-sensitive)',
+      longDesc: 'Returns `True` if the field matches the pattern with % as wildcard',
+    },
+    ilike: {
+      displayName: 'ilike',
+      shortDesc: 'Pattern matching (case-insensitive)',
+      longDesc:
+        'Returns `True` if the field matches the pattern (case-insensitive) with % as wildcard',
+    },
+    in: {
+      displayName: 'in',
+      shortDesc: 'In operator',
+      longDesc: 'Returns `True` if the field value is in the provided list',
+    },
+  },
 };
 
 export default SupabaseAppEn;

@@ -10,16 +10,21 @@ import {
   ListSupabaseTables,
   UpsertSupabaseRow,
 } from '../apps/supabase/actions';
+import { createSupabaseClient } from '../apps/supabase/helpers/constants';
+import { getSupabaseBucketAllowedValues } from '../apps/supabase/helpers/get-bucket-allowed-values';
 import { getSupabaseTableAllowedValues } from '../apps/supabase/helpers/get-table-allowed-values';
-import { Debugger, DebugLevels } from '../utils/Debugger';
 import {
   getSupabaseTableColumnAllowedValues,
   getSupabaseTableColumnOptions,
   getSupabaseTableColumnsResponseType,
 } from '../apps/supabase/helpers/get-table-fields';
-import { getSupabaseBucketAllowedValues } from '../apps/supabase/helpers/get-bucket-allowed-values';
-import { createSupabaseClient } from '../apps/supabase/helpers/constants';
+import { createSupabaseRecords } from '../apps/supabase/helpers/record-based/create-records';
+import { deleteSupabaseRecords } from '../apps/supabase/helpers/record-based/delete-records';
+import { searchSupabaseRecords } from '../apps/supabase/helpers/record-based/search-records';
+import { updateSupabaseRecords } from '../apps/supabase/helpers/record-based/update-records';
+import { upsertSupabaseRecord } from '../apps/supabase/helpers/record-based/upsert-records';
 import { NewSupabaseTableRow } from '../apps/supabase/triggers';
+import { Debugger, DebugLevels } from '../utils/Debugger';
 
 Debugger.level = DebugLevels.Verbose;
 configDotenv({ path: '.env' });
@@ -312,6 +317,337 @@ describe('Supabase', () => {
 
       expect(result).toBeDefined();
       expect(result.id).toBeDefined();
+    });
+  });
+
+  describe('Should test record based methods with complex expressions', () => {
+    const table = 'Test';
+
+    it('Should search records without expressions', async () => {
+      const getRecordsIterator = await searchSupabaseRecords(baseContext, undefined, {
+        table,
+      });
+
+      const result = await getRecordsIterator(baseContext, 2);
+
+      expect(result).toBeDefined();
+      expect(Object.keys(result || {}).length).toBeGreaterThan(0);
+      expect(Array.isArray(result!.id)).toBe(true);
+      expect(result!.id.length).toBeLessThanOrEqual(2);
+    });
+
+    it('Should search records with a simple AND expression', async () => {
+      const getRecordsIterator = await searchSupabaseRecords(
+        baseContext,
+        {
+          exp: 'AND',
+          args: [
+            { exp: 'in', args: [{ field: 'id' }, [1, 3]] },
+            { exp: '=', args: [{ field: 'bool' }, true] },
+          ],
+        },
+        { table }
+      );
+
+      const result = await getRecordsIterator(baseContext, 5);
+
+      expect(result).toBeDefined();
+      expect(result!.id).not.toContain(1);
+    });
+
+    it('Should search records with OR expression', async () => {
+      const getRecordsIterator = await searchSupabaseRecords(
+        baseContext,
+        {
+          exp: 'OR',
+          args: [
+            { exp: '=', args: [{ field: 'id' }, 1] },
+            { exp: '=', args: [{ field: 'id' }, 11] },
+          ],
+        },
+        { table }
+      );
+
+      const result = await getRecordsIterator(baseContext, 10);
+
+      expect(result).toBeDefined();
+      expect(result!.id).toContain(1);
+      expect(result!.id).toContain(11);
+      expect(result!.id.length).toBe(2);
+    });
+
+    it('Should search records with NOT expression', async () => {
+      const getRecordsIterator = await searchSupabaseRecords(
+        baseContext,
+        {
+          exp: 'NOT',
+          args: [{ exp: '=', args: [{ field: 'bool' }, true] }],
+        },
+        { table }
+      );
+
+      const result = await getRecordsIterator(baseContext, 10);
+
+      expect(result).toBeDefined();
+      expect(result!.id).toContain(1); // bool is false
+      expect(result!.id).not.toContain(2); // bool is true
+      expect(result!.id).not.toContain(3); // bool is true
+    });
+
+    it('Should search records with nested AND/OR expression', async () => {
+      // Find records where: (id IN [1,2,3] AND bool=true) OR (id IN [11] AND bool=true)
+      const getRecordsIterator = await searchSupabaseRecords(
+        baseContext,
+        {
+          exp: 'OR',
+          args: [
+            {
+              exp: 'AND',
+              args: [
+                { exp: 'in', args: [{ field: 'id' }, [1, 2, 3]] },
+                { exp: '=', args: [{ field: 'bool' }, true] },
+              ],
+            },
+            {
+              exp: 'AND',
+              args: [
+                { exp: '=', args: [{ field: 'id' }, 11] },
+                { exp: '=', args: [{ field: 'bool' }, true] },
+              ],
+            },
+          ],
+        },
+        { table }
+      );
+
+      const result = await getRecordsIterator(baseContext, 10);
+
+      expect(result).toBeDefined();
+      expect(result!.id).toContain(2); // id in [1,2,3] and bool=true
+      expect(result!.id).toContain(3); // id in [1,2,3] and bool=true
+      expect(result!.id).toContain(11); // id=11 and bool=true
+    });
+
+    it('Should search records with deeply nested expression (3 levels)', async () => {
+      // Complex query: ((id <= 3 OR id >= 11) AND bool = true) OR (id = 1)
+      const getRecordsIterator = await searchSupabaseRecords(
+        baseContext,
+        {
+          exp: 'OR',
+          args: [
+            {
+              exp: 'AND',
+              args: [
+                {
+                  exp: 'OR',
+                  args: [
+                    { exp: '<=', args: [{ field: 'id' }, 3] },
+                    { exp: '>=', args: [{ field: 'id' }, 11] },
+                  ],
+                },
+                { exp: '=', args: [{ field: 'bool' }, true] },
+              ],
+            },
+            { exp: '=', args: [{ field: 'id' }, 1] },
+          ],
+        },
+        { table }
+      );
+
+      const result = await getRecordsIterator(baseContext, 10);
+
+      expect(result).toBeDefined();
+      expect(result!.id).toContain(1); // Matches id=1 condition
+      expect(result!.id).toContain(2); // id<=3 AND bool=true
+      expect(result!.id).toContain(3); // id<=3 AND bool=true
+      expect(result!.id).toContain(11); // id>=11 AND bool=true
+    });
+
+    it('Should search records with comparison operators', async () => {
+      const getRecordsIterator = await searchSupabaseRecords(
+        baseContext,
+        {
+          exp: 'AND',
+          args: [
+            { exp: '>', args: [{ field: 'id' }, 2] },
+            { exp: '<', args: [{ field: 'id' }, 11] },
+          ],
+        },
+        { table }
+      );
+
+      const result = await getRecordsIterator(baseContext, 10);
+
+      expect(result).toBeDefined();
+      expect(result!.id).toContain(3);
+      expect(result!.id).not.toContain(1);
+      expect(result!.id).not.toContain(2);
+      expect(result!.id).not.toContain(11);
+    });
+
+    it('Should search records with LIKE operator', async () => {
+      const getRecordsIterator = await searchSupabaseRecords(
+        baseContext,
+        {
+          exp: 'like',
+          args: [{ field: 'title' }, '%Test%'],
+        },
+        { table }
+      );
+
+      const result = await getRecordsIterator(baseContext, 10);
+
+      expect(result).toBeDefined();
+      expect(result!.id.length).toBeGreaterThan(0);
+      result!.title.forEach((title: string) => {
+        expect(title.toLowerCase()).toContain('test');
+      });
+    });
+
+    it('Should search records with very deep nested expression (4+ levels)', async () => {
+      // (((id=1 OR id=2) AND bool=true) OR (id=3 AND NOT (bool=false))) AND id < 20
+      const getRecordsIterator = await searchSupabaseRecords(
+        baseContext,
+        {
+          exp: 'AND',
+          args: [
+            {
+              exp: 'OR',
+              args: [
+                {
+                  exp: 'AND',
+                  args: [
+                    {
+                      exp: 'OR',
+                      args: [
+                        { exp: '=', args: [{ field: 'id' }, 1] },
+                        { exp: '=', args: [{ field: 'id' }, 2] },
+                      ],
+                    },
+                    { exp: '=', args: [{ field: 'bool' }, true] },
+                  ],
+                },
+                {
+                  exp: 'AND',
+                  args: [
+                    { exp: '=', args: [{ field: 'id' }, 3] },
+                    {
+                      exp: 'NOT',
+                      args: [{ exp: '=', args: [{ field: 'bool' }, false] }],
+                    },
+                  ],
+                },
+              ],
+            },
+            { exp: '<', args: [{ field: 'id' }, 20] },
+          ],
+        },
+        { table }
+      );
+
+      const result = await getRecordsIterator(baseContext, 10);
+
+      expect(result).toBeDefined();
+      // id=2 AND bool=true matches first branch
+      expect(result!.id).toContain(2);
+      // id=3 AND bool!=false matches second branch
+      expect(result!.id).toContain(3);
+    });
+
+    it('Should handle pagination with complex expressions', async () => {
+      const getRecordsIterator = await searchSupabaseRecords(
+        baseContext,
+        {
+          exp: 'OR',
+          args: [
+            { exp: '<=', args: [{ field: 'id' }, 3] },
+            { exp: '>=', args: [{ field: 'id' }, 11] },
+          ],
+        },
+        { table }
+      );
+
+      const firstPage = await getRecordsIterator(baseContext, 2);
+      expect(firstPage).toBeDefined();
+      expect(firstPage!.id.length).toBe(2);
+
+      const secondPage = await getRecordsIterator(baseContext, 2);
+      expect(secondPage).toBeDefined();
+      expect(secondPage!.id.length).toBeGreaterThan(0);
+
+      const firstIds = new Set(firstPage!.id);
+      secondPage!.id.forEach((id: number) => {
+        expect(firstIds.has(id)).toBe(false);
+      });
+    });
+
+    const createdTitle = 'Record created via createSupabaseRecords';
+    const updatedTitle = 'Record updated via updateSupabaseRecords';
+    const upsertedTitle = 'Record upserted via upsertSupabaseRecords';
+    it('Should create a record', async () => {
+      const result = await createSupabaseRecords(
+        baseContext,
+        {
+          title: [createdTitle],
+        },
+        { table }
+      );
+
+      expect(result).toBeDefined();
+      expect(result.title).toContain(createdTitle);
+    });
+
+    it('Should upsert a record', async () => {
+      const result = await upsertSupabaseRecord(
+        baseContext,
+        {
+          title: [upsertedTitle],
+        },
+        { table }
+      );
+
+      expect(result).toBeDefined();
+    });
+
+    it('Should update records', async () => {
+      const result = await updateSupabaseRecords(
+        baseContext,
+        {
+          title: updatedTitle,
+        },
+        { exp: 'in', args: [{ field: 'title' }, [createdTitle]] },
+        { table }
+      );
+
+      expect(result).toBeDefined();
+      expect(result).toBe(1);
+    });
+
+    it('Should delete records', async () => {
+      const result = await deleteSupabaseRecords(
+        baseContext,
+        { exp: 'in', args: [{ field: 'title' }, [updatedTitle, upsertedTitle]] },
+        { table }
+      );
+
+      expect(result).toBeDefined();
+      expect(result).toBe(2);
+    });
+
+    it('Should search records using contains expression', async () => {
+      const getRecordsIterator = await searchSupabaseRecords(
+        baseContext,
+        {
+          exp: 'contains',
+          args: [{ field: 'arr' }, ['two']],
+        },
+        { table }
+      );
+
+      const result = await getRecordsIterator(baseContext, 10);
+
+      expect(result).toBeDefined();
+      expect(result!.id).toContain(6);
     });
   });
 });

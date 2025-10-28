@@ -67,22 +67,22 @@ public class TypeScriptActionEventDataProviderBase inherits TypeScriptActionData
 
     #! Returns the description of an observable event, if any with option data, if any
     /** @param event_id the event ID of the event
-        @param req example option data that can be used to determine the final type
+        @param opotions example option data that can be used to determine the final type
 
         @return the event type for this provider according to any call data passed
 
         @throw INVALID-EVENT the event_id is not valid
     */
-    private hash<DataProviderMessageInfo> getEventInfoWithDataImpl(string event_id, auto req) {
-        checkEventType(req);
+    private hash<DataProviderMessageInfo> getEventInfoWithOptionsImpl(string event_id, *hash<auto> options) {
+        checkEventType(options);
         if (event_id != self.event_id) {
             throw "INVALID-EVENT", sprintf("Provider %y (type %y) does not support event %y; supported event: %y",
                 getName(), self.className(), event_id, self.event_id);
         }
         hash<DataProviderMessageInfo> event_info = self.event_info;
-        if (dmap && req && req.typeCode() == NT_HASH) {
-            event_info.type = getDynamicDataType(PC_GET_EVENT_TYPE, event_info.type, req);
-            TypeScriptActionInterface::resolveDynamicType(self, req, event_info.type);
+        if (dmap && options.typeCode() == NT_HASH) {
+            event_info.type = getDynamicDataType(PC_GET_EVENT_TYPE, event_info.type, options);
+            TypeScriptActionInterface::resolveDynamicType(self, options, event_info.type);
         }
         return event_info;
     }
@@ -107,12 +107,12 @@ public class TypeScriptActionEventDataProviderBase inherits TypeScriptActionData
     }
 
     #! Verifies that the dynamic type has been generated
-    private checkEventType(auto req) {
+    private checkEventType(*hash<auto> options) {
         if (!event_type_info.get_dynamic_type || event_type_info.dynamic_type_done) {
             return;
         }
         event_type_info.type = event_info.type;
-        getDynamicTypeIntern("event", \event_type_info, req && req.typeCode() == NT_HASH ? req : NOTHING);
+        getDynamicTypeIntern("event", \event_type_info, options && options.typeCode() == NT_HASH ? options : NOTHING);
         event_info.type = event_type_info.type;
     }
 }

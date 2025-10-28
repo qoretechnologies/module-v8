@@ -552,7 +552,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             auto req) {
         *binary bin = sendCommandArgs(NOTHING, cmd, (app, action, conn_name, conn_opts, req));
         *HashDataType rv = bin ? Serializable::deserialize(bin) : NOTHING;
-        debug("getDynamicType(app %y action %y req %y): %y", app, action, LoggerUtil::getArgSummary(req),
+        debug("getDynamicType(app %y action %y req %y conn_opts: %y): %y", app, action,
+            LoggerUtil::getArgSummary(req), LoggerUtil::getArgSummary(conn_opts),
             LoggerUtil::getArgSummary(rv));
         return rv;
     }
