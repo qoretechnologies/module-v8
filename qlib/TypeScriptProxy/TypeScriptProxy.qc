@@ -1,7 +1,7 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 #! Qore TypeScriptProxy module definition
 
-/*  TypeScriptProxy.qc Copyright 2024 Qore Technologies, s.r.o.
+/*  TypeScriptProxy.qc Copyright 2024 - 2025 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -45,6 +45,15 @@ public const PC_GET_EVENT_TYPE = "GET-EVENT-TYPE";
 #! Proxy command "GET-DYNAMIC-OPTIONS": retrieve dynamic options based on JS calls
 public const PC_GET_DYNAMIC_OPTIONS = "GET-DYNAMIC-OPTIONS";
 
+#! Proxy command "SEARCH-RECORDS": start a bulk record search action based on JS calls
+public const PC_SEARCH_RECORDS = "SEARCH-RECORDS";
+
+#! Proxy command "GET-RECORDS": retrieve records based on JS calls
+public const PC_GET_RECORDS = "GET-RECORDS";
+
+#! Proxy command "RELEASE-SEARCH": release search based on JS calls
+public const PC_RELEASE_SEARCH = "RELEASE-SEARCH";
+
 #! Proxy command "EXIT": exit the process
 public const PC_EXIT = "EXIT";
 
@@ -57,6 +66,9 @@ public const ValidCommands = {
     PC_GET_RESPONSE_TYPE: True,
     PC_GET_EVENT_TYPE: True,
     PC_GET_DYNAMIC_OPTIONS: True,
+    PC_SEARCH_RECORDS: True,
+    PC_GET_RECORDS: True,
+    PC_RELEASE_SEARCH: True,
     PC_EXIT: True,
 };
 

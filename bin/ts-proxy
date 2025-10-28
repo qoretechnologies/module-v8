@@ -45,6 +45,8 @@ class TsProxy inherits TypeScriptProxy {
 
         # event map
         hash<EventInfo> event;
+
+        AbstractDataProviderBulkRecordInterface search;
     }
 
     constructor() : TypeScriptProxy(False) {
@@ -166,6 +168,18 @@ class TsProxy inherits TypeScriptProxy {
                         getDynamicOptions(h.args[0], h.args[1], h.args[2], h.args[3], h.args[4]);
                         break;
 
+                    case PC_SEARCH_RECORDS:
+                        searchRecords(h.args[0], h.args[1], h.args[2], h.args[3]);
+                        break;
+
+                    case PC_RELEASE_SEARCH:
+                        releaseSearch();
+                        break;
+
+                    case PC_GET_RECORDS:
+                        getRecords();
+                        break;
+
                     default:
                         throw "UNKNOWN-COMMAND", sprintf("Unknown command %y", h.cmd);
                 }
@@ -185,7 +199,57 @@ class TsProxy inherits TypeScriptProxy {
         exit(0);
     }
 
+    private searchRecords(string app, int block_size, *hash<DataProviderExpression> where_cond,
+            hash<auto> search_options) {
+        ASSERT(!event);
+        TypeScriptActionInterface::initApp(app);
+        AbstractDataProvider prov =
+            TypeScriptActionInterface::getAppDataProvider(app).getChildProviderPath("tables/" + search_options.table);
+        search = prov.searchRecordsBulk(block_size, where_cond,
+            search_options);
+        *hash<auto> rv = search.getValue();
+        if (!rv.firstValue().lsize()) {
+            remove search;
+            info("Search @%s complete -> %y", app, LoggerUtil::getArgSummary(rv));
+        } else {
+            info("Search @%s started -> %y", app, LoggerUtil::getArgSummary(rv));
+        }
+        string yaml = makeSend(CC_OK, {
+            "rv": rv,
+        });
+        sendString(yaml);
+    }
+
+    private releaseSearch() {
+        if (search) {
+            info("Releasing search");
+            remove search;
+        } else {
+            info("No active search to release");
+        }
+        string yaml = makeSend(CC_OK);
+        sendString(yaml);
+    }
+
+    private getRecords() {
+        if (!search) {
+            throw "NO-ACTIVE-SEARCH", "No active search to get records from";
+        }
+        *hash<auto> rv = search.getValue();
+        if (!rv.firstValue().lsize()) {
+            remove search;
+            info("Search complete -> %y", LoggerUtil::getArgSummary(rv));
+        } else {
+            info("Retrieved records -> %y", LoggerUtil::getArgSummary(rv));
+        }
+        string yaml = makeSend(CC_OK, {
+            "rv": rv,
+        });
+        sendString(yaml);
+    }
+
     private setupEvent(string app, string action, string key, *hash<auto> arg0) {
+        ASSERT(!search);
         TypeScriptActionInterface::initApp(app);
         TypeScriptActionInterface::initAppAction(app, action);
         if (event.running) {

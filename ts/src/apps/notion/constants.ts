@@ -1,3 +1,5 @@
+import { EQoreRecordBasedAppErrorCodes } from '@qoretechnologies/ts-toolkit';
+
 export const NOTION_APP_NAME = 'Notion';
 export const NOTION_APP_LOGO =
   'PHN2ZyB3aWR0aD0iMTI3IiBoZWlnaHQ9IjEyNyIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3Ln' +
@@ -22,8 +24,17 @@ export const NOTION_APP_LOGO =
   'lsbD0iIzAwMCIvPgo8L3N2Zz4K';
 
 export class NotionError extends Error {
-  constructor(message: string) {
+  public errorCode?: string;
+
+  constructor(message: string, errorCode?: string) {
     super(message);
     this.name = 'NotionError';
+    this.errorCode = errorCode;
   }
 }
+
+export const NOTION_DUPLICATE_ERROR_CODE = '23505';
+
+export const NotionErrorCodeToQoreErrorCodeMap: Record<string, string> = {
+  [NOTION_DUPLICATE_ERROR_CODE]: EQoreRecordBasedAppErrorCodes.DUPLICATE_RECORD,
+};

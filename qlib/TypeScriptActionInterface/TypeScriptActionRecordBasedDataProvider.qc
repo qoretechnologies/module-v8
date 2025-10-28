@@ -49,10 +49,14 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         *hash<AsyncCallInfo> rollback;
         *hash<AsyncCallInfo> get_expressions;
         *hash<AsyncCallInfo> search_records;
-        *hash<AsyncCallInfo> get_search_options;
+        *hash<AsyncCallInfo> create_records;
+        *hash<AsyncCallInfo> update_records;
+        *hash<AsyncCallInfo> upsert_records;
+        *hash<AsyncCallInfo> delete_records;
 
-        bool have_search_options;
-        *hash<string, hash<DataProviderOptionInfo>> search_options;
+        hash<string, bool> have_options;
+        *hash<string, *hash<string, hash<DataProviderOptionInfo>>> option_map;
+        *hash<string, *hash<AsyncCallInfo>> get_option_map;
 
         hash<string, hash<DataProviderExpressionInfo>> expressions;
 
@@ -71,7 +75,14 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         rollback = info.rollback;
         get_expressions = info.get_expressions;
         search_records = info.search_records;
-        get_search_options = info.search_options;
+        create_records = info.create_records;
+        update_records = info.update_records;
+        upsert_records = info.upsert_records;
+        delete_records = info.delete_records;
+
+        get_option_map.search = info.get_search_options;
+        get_option_map.create = info.get_create_options;
+        get_option_map.upsert = info.get_upsert_options;
     }
 
     #! Begins a transaction with a data provider
@@ -144,10 +155,14 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             *hash<DataProviderExpression> where_cond, *hash<auto> search_options) {
         search_options.table = name;
         *hash<DataContextInfo> cctx = getCallContextInfo();
-        *code get_records = getAsyncValue(search_records, cctx,
-            get_expressions ? where_cond : NOTHING, get_expressions ? search_options : NOTHING);
-        return new TypeScriptBulkRecordInterface(block_size, self, get_records, cctx,
-            get_expressions ? NOTHING : where_cond);
+        if (TSAI::checkServer()) {
+            return new TypeScriptBulkRecordProxyInterface(block_size, self, where_cond, search_options, cctx);
+        } else {
+            *code get_records = getAsyncValue(search_records, cctx,
+                get_expressions ? where_cond : NOTHING, get_expressions ? search_options : NOTHING);
+            return new TypeScriptBulkRecordInterface(block_size, self, get_records, cctx,
+                get_expressions ? NOTHING : where_cond);
+        }
     }
 
     #! Returns an iterator for zero or more records matching the search options
@@ -178,6 +193,99 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         return rv;
     }
 
+    private *hash<auto> createRecordImpl(hash<auto> rec, *hash<auto> create_options) {
+        if (!create_records) {
+            throw "INVALID-OPERATION", sprintf("Data provider %y does not support record creation", getName());
+        }
+        create_options.table = name;
+        rec = makeBulk(rec);
+        *hash<auto> rv = getAsyncValue(create_records, getCallContextInfo(), rec, create_options);
+        foreach hash<auto> h in ((rec + rv).contextIterator()) {
+            # return the first record + any output data
+            return h;
+        }
+    }
+
+    #! Creates the given records in the data provider
+    /** @param recs a hash representing multiple input records, where the keys are record names and values are either
+        lists of record values or a single value that applies to all records
+        @param create_options the create options after processing by validateCreateOptions()
+
+        @return the data written to the data provider for each record
+    */
+    private *list<hash<auto>> createRecordsBulkImpl(hash<auto> recs, *hash<auto> create_options) {
+        if (!create_records) {
+            throw "INVALID-OPERATION", sprintf("Data provider %y does not support record creation", getName());
+        }
+        create_options.table = name;
+        recs = makeBulk(recs);
+        *hash<auto> rv = getAsyncValue(create_records, getCallContextInfo(), recs, create_options);
+        return map $1, (recs + rv).contextIterator();
+    }
+
+    private int updateRecordsImpl(hash<auto> set, *hash<auto> where_cond, *hash<auto> search_options) {
+        if (!update_records) {
+            throw "INVALID-OPERATION", sprintf("Data provider %y does not support record updating", getName());
+        }
+        search_options.table = name;
+        return getAsyncValue(update_records, getCallContextInfo(), set, getSearchExpression(where_cond),
+            search_options);
+    }
+
+    private string upsertRecordImpl(hash<auto> rec, *hash<auto> upsert_options) {
+        if (!upsert_records) {
+            throw "INVALID-OPERATION", sprintf("Data provider %y does not support record upserting", getName());
+        }
+        upsert_options.table = name;
+        rec = makeBulk(rec);
+        *list<auto> rv = getAsyncValue(upsert_records, getCallContextInfo(), rec, upsert_options);
+        return rv[0] ?? UpsertResultVerified;
+    }
+
+    private *list<string> upsertRecordsBulkImpl(hash<auto> recs, *hash<auto> upsert_options) {
+        if (!upsert_records) {
+            throw "INVALID-OPERATION", sprintf("Data provider %y does not support record upserting", getName());
+        }
+        upsert_options.table = name;
+        recs = makeBulk(recs);
+        *list<auto> rv = getAsyncValue(upsert_records, getCallContextInfo(), recs, upsert_options);
+        return rv ?? map UpsertResultVerified, xrange(recs.firstValue().size());
+    }
+
+    private int deleteRecordsImpl(*hash<auto> where_cond, *hash<auto> search_options) {
+        if (!delete_records) {
+            throw "INVALID-OPERATION", sprintf("Data provider %y does not support record deletion", getName());
+        }
+        search_options.table = name;
+        return getAsyncValue(delete_records, getCallContextInfo(), getSearchExpression(where_cond), search_options);
+    }
+
+    private static hash<auto> makeBulk(hash<auto> rec) {
+        hash<auto> rv;
+        # get list size
+        int lsize;
+        foreach auto v in (rec.iterator()) {
+            if (v.typeCode() == NT_LIST) {
+                lsize = v.size();
+                break;
+            }
+        }
+        if (!exists lsize) {
+            return map {$1.key: ($1.value,)}, rec.pairIterator();
+        }
+        if (!lsize) {
+            return map {$1: ()}, keys rec;
+        }
+        foreach hash<auto> i in (rec.pairIterator()) {
+            if (i.value.typeCode() == NT_LIST) {
+                rv{i.key} = i.value;
+            } else {
+                rv{i.key} = map i.value, xrange(lsize);
+            }
+        }
+        return rv;
+    }
+
     #! Returns static info about the data provider
     private hash<DataProviderInfo> getStaticInfoImpl() {
         hash<DataProviderInfo> rv = ProviderInfo;
@@ -185,15 +293,31 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             rv.transaction_management = True;
         }
         if (search_records) {
-            checkSearchOptions();
+            checkOptions("search");
             rv.supports_read = True,
             rv.supports_bulk_read = True;
             rv.supports_search_expressions = True;
             rv.has_record = True;
-            rv.search_options = search_options;
+            rv.search_options = option_map.search;
         }
         if (get_expressions) {
             rv.supports_native_search = True;
+        }
+        if (create_records) {
+            checkOptions("create");
+            rv.supports_create = True;
+            rv.create_options = option_map.create;
+        }
+        if (update_records) {
+            rv.supports_update = True;
+        }
+        if (upsert_records) {
+            checkOptions("upsert");
+            rv.supports_upsert = True;
+            rv.upsert_options = option_map.upsert;
+        }
+        if (delete_records) {
+            rv.supports_delete = True;
         }
         rv.expressions = getExpressions();
         return rv;
@@ -204,33 +328,41 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             return;
         }
         auto v = getAsyncValue(get_record_type, getCallContextInfo());
-        record_type = TypeScriptActionInterface::getType(v).getFields();
+        record_type = TypeScriptActionInterface::getType("record_type", v).getFields();
     }
 
-    private checkSearchOptions() {
-        if (!have_search_options) {
-            checkSearchOptionsIntern();
+    private checkOptions(string type) {
+        if (!have_options{type}) {
+            checkOptionsIntern(type);
         }
     }
 
-    private synchronized checkSearchOptionsIntern() {
-        if (have_search_options) {
+    private synchronized checkOptionsIntern(string type) {
+        if (have_options{type}) {
             return;
         }
-        have_search_options = True;
-        if (!get_search_options) {
-            search_options = AbstractDataProvider::GenericRecordSearchOptions;
+        have_options{type} = True;
+        if (!get_option_map{type}) {
+            if (type == "search") {
+                option_map{type} = AbstractDataProvider::GenericRecordSearchOptions;
+            }
             return;
         }
-        auto v = getAsyncValue(get_search_options, getCallContextInfo());
+        auto v = getAsyncValue(get_option_map{type}, getCallContextInfo());
         if (!exists v) {
+            if (type == "search") {
+                option_map{type} = GenericRecordSearchOptions{"requires_result", "max_records"};
+            }
             return;
         }
         if (v.typeCode() != NT_HASH) {
-            throw "SEARCH-OPTIONS-TYPE-ERROR", sprintf("The 'get_search_options' function for app %y returned "
-                "type %y; expecting \"hash\"", app.name, v.fullType());
+            throw type.upr() + "-OPTIONS-TYPE-ERROR", sprintf("The 'get_%s_options' function for app %y returned "
+                "type %y; expecting \"hash\"", type, app.name, v.fullType());
         }
-        search_options = map {$1.key: getDataProviderOption($1.key, $1.value)}, v.pairIterator();
+        option_map{type} = map {$1.key: getDataProviderOption($1.key, $1.value)}, v.pairIterator();
+        if (type == "search") {
+            option_map{type} = option_map{type} + GenericRecordSearchOptions{"requires_result", "max_records"};
+        }
     }
 
     private hash<DataProviderOptionInfo> getDataProviderOption(string name, auto v) {

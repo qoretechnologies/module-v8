@@ -41,6 +41,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
         #! Event source info
         hash<EventSourceInfo> event;
+
+        #! Bulk search request ID
+        string search_id;
     }
 
     private {
@@ -78,7 +81,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         hash<auto> command_in_progress;
 
         #! Event count
-        Counter event_cnt();
+        #Counter event_cnt();
 
         #! Event socket counter
         Counter es_cnt();
@@ -228,12 +231,58 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         return event.key == key ? True : False;
     }
 
+    *hash<auto> searchRecords(string app, string id, int block_size, *hash<DataProviderExpression> where_cond,
+            hash<auto> search_options, *hash<DataContextInfo> options) {
+        ASSERT(!event && !search_id);
+        search_id = id;
+        on_error remove search_id;
+        info("Setting up search for PID %d @%s: %y", proc.id(), app, id);
+        *hash<auto> rv = sendCommandArgs(NOTHING, PC_SEARCH_RECORDS, (app, block_size, where_cond, search_options));
+        if (!rv.firstValue().lsize()) {
+            remove search_id;
+            info("Search @%s: %y complete -> %y", app, id, LoggerUtil::getArgSummary(rv));
+        } else {
+            info("Search @%s: %y started -> %y", app, id, LoggerUtil::getArgSummary(rv));
+        }
+        return rv;
+    }
+
+    releaseSearch(string id) {
+        ASSERT(!event);
+        if (search_id) {
+            ASSERT(search_id == id);
+            info("Releasing search for PID %d: %y", proc.id(), id);
+            sendCommandArgs(NOTHING, PC_RELEASE_SEARCH, NOTHING, NOTHING, True);
+            info("Search %y released", id);
+            remove search_id;
+        } else {
+            info("Search %y already released", id);
+        }
+    }
+
+    *hash<auto> getRecords(string id) {
+        if (search_id != id) {
+            throw "SEARCH-ERROR", sprintf("Search %y was interrupted due to a proxy restart", id);
+        }
+        auto rv = sendCommandArgs(NOTHING, PC_GET_RECORDS);
+        if (!rv.firstValue().lsize()) {
+            info("Search %y complete -> %y", id, LoggerUtil::getArgSummary(rv));
+            remove search_id;
+        } else {
+            info("Search %y continuing -> %y", id, LoggerUtil::getArgSummary(rv));
+        }
+        return rv;
+    }
+
     # Called with the global lock held
-    setupEventSourceLocked(TypeScriptActionEventDataProvider observable, string app, string action, string key,
+    setupEventSource(TypeScriptActionEventDataProvider observable, string app, string action, string key,
             *hash<DataContextInfo> options) {
+        ASSERT(!event && !search_id);
+        /*
         if (event) {
             throw "EVENT-ERROR", sprintf("Event key %y is already registered", event.key);
         }
+        */
         string ekey = observable.uniqueHash();
         event = <EventSourceInfo>{
             "key": key,
@@ -245,17 +294,14 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             },
         };
 
-        event_cnt.inc();
-        on_error event_cnt.dec();
-
-        global_lock.unlock();
-        on_exit global_lock.lock();
+        #event_cnt.inc();
+        #on_error event_cnt.dec();
 
         on_error removeEventSource(ekey);
-        setupEventSourceLockedIntern();
+        setupEventSourceIntern();
     }
 
-    private setupEventSourceLockedIntern() {
+    private setupEventSourceIntern() {
         info("Setting up event source for PID %d @%s/%s %y", proc.id(), event.app, event.action, event.key);
         sendCommandArgs(NOTHING, PC_SETUP_EVENT, (event.app, event.action, event.key, event.options), NOTHING, True);
         info("Event source for @%s/%s %y ready", event.app, event.action, event.key);
@@ -923,16 +969,20 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
 
         *hash<EventSourceInfo> event;
+        *string search_id;
         {
             global_lock.lock();
             on_exit global_lock.unlock();
 
             event = self.event;
+            search_id = remove self.search_id;
         }
 
         if (event) {
             info("Restarting event listener for @%s/%s %y", event.app, event.action, event.key);
-            setupEventSourceLockedIntern();
+            setupEventSourceIntern();
+        } else if (search_id.val()) {
+            info("Search %y aborted", search_id);
         }
     }
 

@@ -86,3 +86,13 @@ module TypeScriptActionInterface {
     @subsection TypeScriptActionInterface_v1_0 TypeScriptActionInterface v1.0
     - initial release of the module
 */
+
+%ifdef QoreDebug
+public sub ASSERT(*softbool b) {
+    if (!b) {
+        throw "ASSERTION-FAILED", "assertion failed";
+    }
+}
+%else
+public sub ASSERT(*softbool b) {}
+%endif

@@ -1,3 +1,4 @@
+import { configDotenv } from 'dotenv';
 import {
   GetGoogleMeetConference,
   GetGoogleMeetConferenceParticipants,
@@ -9,6 +10,7 @@ import { getGoogleMeetConferenceIdAllowedValues } from '../apps/google-meet/help
 import { getGoogleMeetConferenceTranscriptIdAllowedValues } from '../apps/google-meet/helpers/get-transcript-id-allowed-values';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 
+configDotenv({ path: '.env' });
 Debugger.level = DebugLevels.Verbose;
 
 describe('Google Drive', () => {
@@ -19,15 +21,15 @@ describe('Google Drive', () => {
   };
 
   beforeAll(async () => {
-    const refreshToken = process.env.GOOGLE_MEET_REFRESH_TOKEN;
-    const clientId = process.env.GOOGLE_MEET_CLIENT_ID;
-    const clientSecret = process.env.GOOGLE_MEET_CLIENT_SECRET;
+    const refreshToken = process.env.GOOGLE_INTEGRATIONS_REFRESH_TOKEN;
+    const clientId = process.env.GOOGLE_INTEGRATIONS_CLIENT_ID;
+    const clientSecret = process.env.GOOGLE_INTEGRATIONS_CLIENT_SECRET;
 
     if (!refreshToken || !clientId || !clientSecret) {
-      throw new Error(
-        `Please set the` +
-          `GOOGLE_MEET_REFRESH_TOKEN, GOOGLE_MEET_CLIENT_ID, and GOOGLE_MEET_CLIENT_SECRET environment variables.`
-      );
+      throw new Error(`
+        Please set the GOOGLE_INTEGRATIONS_REFRESH_TOKEN, GOOGLE_INTEGRATIONS_CLIENT_ID, 
+        and GOOGLE_INTEGRATIONS_CLIENT_SECRET environment variables.
+      `);
     }
 
     const data = {
