@@ -463,8 +463,8 @@ export const NotionFieldMapping: Record<
       display_name: property.name,
       ...(property.description && { desc: property.description }),
     }),
-    buildNotionType: (property: string) => ({
-      people: [{ id: property }],
+    buildNotionType: (property: string[]) => ({
+      people: property.map((id) => ({ id })),
     }),
   },
 };

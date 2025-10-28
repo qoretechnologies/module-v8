@@ -317,7 +317,7 @@ describe('Notion', () => {
         baseContext,
         {
           Status: ['Done', 'In Progress', 'To Do', 'Blocked', 'In Progress'],
-          Assignee: [assignee, assignee, null, assignee, assignee],
+          Assignee: [[assignee], [assignee], null, [assignee], [assignee]],
           'Due date': [now, now, nextWeek.toISOString(), now, lastWeek.toISOString()],
           Name: names,
         },
