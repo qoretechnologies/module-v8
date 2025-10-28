@@ -76,7 +76,9 @@ describe('Notion', () => {
       expect(allowed_values.length).toBeGreaterThan(0);
       expect(allowed_values[0].value).toBeDefined();
 
-      data_source_id = allowed_values[0].value;
+      data_source_id =
+        allowed_values.find((value) => value.display_name === 'Docs')?.value ||
+        allowed_values[0].value;
     });
 
     it('Should get datasource item allowed values', async () => {

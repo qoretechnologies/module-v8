@@ -97,24 +97,14 @@ export const getNotionDataSourceResponseType: TQoreGetDynamicResponseTypeFunctio
     for (const key in properties) {
       const property = properties[key];
       if (
-        [
-          'rollup',
-          'button',
-          'files',
-          'verification',
-          'formula',
-          'unique_id',
-          'relation',
-          'created_by',
-          'created_time',
-          'last_edited_by',
-          'last_edited_time',
-        ].includes(property.type)
+        ['rollup', 'button', 'files', 'verification', 'formula', 'unique_id', 'relation'].includes(
+          property.type
+        )
       ) {
         continue;
       }
 
-      if (property.type === 'people') {
+      if (['people'].includes(property.type)) {
         fields[property.name] = {
           display_name: property.name,
           required: false,
@@ -129,6 +119,25 @@ export const getNotionDataSourceResponseType: TQoreGetDynamicResponseTypeFunctio
               },
             },
           },
+        };
+      } else if (['created_by', 'last_edited_by'].includes(property.type)) {
+        fields[property.name] = {
+          display_name: property.name,
+          required: false,
+          type: {
+            type: 'hash',
+            fields: {
+              id: { type: 'string' },
+              name: { type: 'string' },
+              email: { type: 'string' },
+            },
+          },
+        };
+      } else if (['created_time', 'last_edited_time'].includes(property.type)) {
+        fields[property.name] = {
+          display_name: property.name,
+          required: false,
+          type: 'string',
         };
       } else {
         fields[property.name] = omit(NotionFieldMapping[property.type].buildQoreType(property), [

@@ -8,7 +8,7 @@ import {
 import { omit } from 'lodash';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { NOTION_APP_NAME, NotionError } from '../constants';
-import { createNotionClient } from '../helpers/constants';
+import { createNotionClient, mapNotionPropertiesToSimpleObject } from '../helpers/constants';
 import { formatNotionFilterValues } from '../helpers/format-filter-values';
 import {
   getNotionDataSourceProperties,
@@ -16,6 +16,7 @@ import {
 } from '../helpers/get-data-source-properties';
 import { getNotionDataSourcePropertiesAllowedValues } from '../helpers/get-data-source-properties-allowed-values';
 import { getNotionDataSourceAllowedValues } from '../helpers/get-datasource-allowed-values';
+import { DataSourceObjectResponse } from '@notionhq/client';
 
 type NotionSortsType = Array<
   | {
@@ -298,7 +299,12 @@ const listDataSourceItems = QoreAppCreator.createLocalizedAction<typeof options>
         }),
       });
 
-      return omit(response, ['type', 'page_or_data_source']);
+      const results = response.results.map((item: DataSourceObjectResponse) => ({
+        ...item,
+        properties: mapNotionPropertiesToSimpleObject(item.properties),
+      }));
+
+      return omit({ ...response, results }, ['type', 'page_or_data_source']);
     } catch (error) {
       throw new NotionError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
     }

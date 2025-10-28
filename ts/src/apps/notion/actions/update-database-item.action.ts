@@ -8,13 +8,18 @@ import {
 import { omit } from 'lodash';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { NOTION_APP_NAME, NotionError } from '../constants';
-import { createNotionClient, NotionFieldMapping } from '../helpers/constants';
+import {
+  createNotionClient,
+  mapNotionPropertiesToSimpleObject,
+  NotionFieldMapping,
+} from '../helpers/constants';
 import {
   getNotionDataSourceProperties,
   getNotionDataSourceResponseType,
 } from '../helpers/get-data-source-properties';
 import { getNotionDataSourceAllowedValues } from '../helpers/get-datasource-allowed-values';
 import { getNotionDataSourceItemAllowedValues } from '../helpers/get-data-source-item-allowed-values';
+import { PageObjectResponse } from '@notionhq/client';
 
 const action = 'update_database_item';
 
@@ -133,7 +138,7 @@ const responseType = {
       },
     },
     archived: { type: 'boolean' },
-    is_trash: { type: 'boolean' },
+    in_trash: { type: 'boolean' },
     is_locked: { type: 'boolean' },
     properties: { type: 'hash' },
     url: { type: 'string' },
@@ -169,12 +174,15 @@ const updateDatabaseItem = QoreAppCreator.createLocalizedAction<typeof options>(
         }
       });
 
-      const response = await client.pages.update({
+      const response = (await client.pages.update({
         page_id: item_id,
         properties: propertiesFormatted,
-      });
+      })) as PageObjectResponse;
 
-      return omit(response, ['object', 'request_id']);
+      return omit(
+        { ...response, properties: mapNotionPropertiesToSimpleObject(response.properties) },
+        ['object', 'request_id']
+      );
     } catch (error) {
       throw new NotionError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
     }
