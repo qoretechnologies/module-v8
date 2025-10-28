@@ -129,7 +129,11 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             *softlist<auto> args, *hash<auto> cache_opts, *bool use_cache) {
         on_error rethrow $1.err, sprintf("%s (context: %s)", $1.desc, api.label);
 
-        if (!cache_opts && !use_cache) {
+        TSAI::debug("TypeScriptActionDataProviderBase::getAsyncValueArgs(): api: %y args: %y cache_opts: %y "
+            "use_cache: %y _ts_no_io: %y", api.label, LoggerUtil::getArgSummary(args), LoggerUtil::getArgSummary(cache_opts),
+            use_cache, _ts_no_io);
+        if (_ts_no_io || (!cache_opts && !use_cache)) {
+            TSAI::debug("Executing; no cache");
             return TypeScriptActionDataProviderBase::execAsyncValueArgs(logger, api, args);
         }
 
@@ -139,10 +143,22 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         CacheEntry entry = cache.get(key, \new_entry);
         if (new_entry) {
             on_error entry.cancel($1);
+            TSAI::debug("Executing; cache key: %y", key);
             entry.setValue(TypeScriptActionDataProviderBase::execAsyncValueArgs(logger, api, args));
+            TSAI::debug("GOT: %N", entry.getValue());
+        } else {
+            TSAI::debug("Using cached value; cache key: %y", key);
         }
         return entry.getValue();
     }
+
+%ifdef DebugStackTrace
+    static *list<auto> getStack() {
+        *list<auto> stack = get_thread_call_stack();
+        splice stack, 0, 2;
+        return map $1.type != "new-thread" ? sprintf("%s %s()", get_ex_pos($1), $1.function) : "new-thread", stack;
+    }
+%endif
 
     static private string getKey(string label, *hash<auto> cache_opts) {
         string key = label;
@@ -438,31 +454,31 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     }
 
     #! Returns a data type for the given base type and request / option data
-    *hash<string, hash<ActionOptionInfo>> getActionOptionsWithData(hash<auto> req) {
-        *hash<auto> slice = dmap{keys req};
+    *hash<string, hash<ActionOptionInfo>> getActionOptionsWithOptions(hash<auto> options) {
+        *hash<auto> slice = dmap{keys options};
         if (!slice) {
-            TSAI::debug("getActionOptionsWithData() req: %y dmap: %y no data in slice", req, keys dmap);
+            TSAI::debug("getActionOptionsWithOptions() options: %y dmap: %y no data in slice", options, keys dmap);
             return;
         }
         # cache key (opt[|opt...]=val[|val])
-        *string ckey = getCacheKey(keys slice, req);
-        if (exists ckey && docache.hasKey(ckey)) {
+        string ckey = getCacheKey(keys slice, options);
+        if (docache.hasKey(ckey)) {
             return docache{ckey};
         }
 
         *hash<string, hash<ActionOptionInfo>> rv;
         if (TSAI::checkServer()) {
-            TSAI::debug("Starting proxy for app %y action %y: plain dynamic type with args: %y", app, action, req);
+            TSAI::debug("Starting proxy for app %y action %y: plain dynamic type with args: %y", app, action, options);
             JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
             TSAI::debug("Proxy started for app %y action %y: plain dynamic type with args", app, action);
             on_exit TypeScriptActionInterface::server.release(proxy);
-            rv = proxy.getDynamicOptions(app, action, conn.name, conn.getRealOptions(), req);
+            rv = proxy.getDynamicOptions(app, action, conn.name, conn.getRealOptions(), options);
         } else {
-            TSAI::debug("getActionOptionsWithData() exec req: %y slice: %y", req, keys slice);
-            rv = getActionOptionsWithDataIntern({
+            TSAI::debug("getActionOptionsWithOptions() exec options: %y slice: %y", options, keys slice);
+            rv = getActionOptionsWithOptionsIntern({
                 "app": app,
                 "action": action,
-            }, slice, req);
+            }, slice, options);
         }
         return exists ckey
             ? docache{ckey} = rv
@@ -470,17 +486,13 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     }
 
     #! Returns a key to the dependent type cache for the request type
-    private static *string getCacheKey(list<string> skeys, hash<auto> req) {
+    private static string getCacheKey(list<string> skeys, hash<auto> req) {
         string ckey;
         foreach string key in (skeys) {
-            auto val = req{key};
-            if (!val.strp()) {
-                return;
-            }
             if (exists ckey) {
                 ckey += "|";
             }
-            ckey += val.toString();
+            ckey += getKeyValue(req{key});
         }
         return (foldl $1 + "|" + $2, skeys) + "=" + ckey;
     }
@@ -492,11 +504,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             return rt;
         }
         # cache key (opt[|opt...]=val[|val])
-        *string ckey = getCacheKey(keys slice, req);
-        if (exists ckey) {
-            if (*AbstractDataProviderType rv = dtcache{ckey}) {
-                return rv;
-            }
+        string ckey = getCacheKey(keys slice, req);
+        if (*AbstractDataProviderType rv = dtcache{ckey}) {
+            return rv;
         }
 
         *HashDataType type;
@@ -510,10 +520,10 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         } else {
             type = getDynamicOptionTypeIntern(rt, slice, req);
         }
-        if (exists ckey) {
-            return dtcache{ckey} = type ?? rt;
-        }
-        return type ?? rt;
+        AbstractDataProviderType rv = type ?? rt;
+        return !_ts_no_io
+            ? dtcache{ckey} = rv
+            : rv;
     }
 
     private *HashDataType getDynamicOptionTypeIntern(AbstractDataProviderType rt, hash<auto> slice, hash<auto> req) {
@@ -541,16 +551,16 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         return type;
     }
 
-    private *hash<string, hash<ActionOptionInfo>> getActionOptionsWithDataIntern(hash<auto> action, hash<auto> slice,
-            hash<auto> req) {
-        DataProviderDataContextHelper dch(req);
-        *hash<DataContextInfo> cinfo = getCallContextInfo(req);
+    private *hash<string, hash<ActionOptionInfo>> getActionOptionsWithOptionsIntern(hash<auto> action,
+            hash<auto> slice, hash<auto> options) {
+        DataProviderDataContextHelper dch(options);
+        *hash<DataContextInfo> cinfo = getCallContextInfo(options);
         *hash<string, hash<ActionOptionInfo>> rv;
         foreach hash<auto> i in (slice.pairIterator()) {
-            auto val = req{i.key};
+            auto val = options{i.key};
             info("Retrieving options dependent on option %y = %y for dynamic options for data provider %y",
                 i.key, LoggerUtil::getArgSummary(val), getName());
-            auto res = getAsyncValueWithCache(i.value, req, cinfo);
+            auto res = getAsyncValueWithCache(i.value, options, cinfo);
             if (!exists res) {
                 continue;
             }
@@ -565,13 +575,13 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                 TypeScriptActionInterface::getOptionDefaultValueFunction(\action, self, j.key, \j.value);
                 rv{j.key} = TypeScriptActionInterface::getOptionInfo("option", j.value, self, True);
                 if (j.value.ref_data) {
-                    rv{j.key}.allowed_values = getReferenceDataSafe(j.value.ref_data, req);
+                    rv{j.key}.allowed_values = getReferenceDataSafe(j.value.ref_data, options);
                 }
                 if (j.value.element_ref_data) {
-                    rv{j.key}.element_allowed_values = getElementReferenceDataSafe(j.value.element_ref_data, req);
+                    rv{j.key}.element_allowed_values = getElementReferenceDataSafe(j.value.element_ref_data, options);
                 }
                 if (j.value.default_ref_data) {
-                    rv{j.key}.default_value = getReferenceDataValueSafe(j.value.default_ref_data, req);
+                    rv{j.key}.default_value = getReferenceDataValueSafe(j.value.default_ref_data, options);
                 }
             }
         }
@@ -579,20 +589,20 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     }
 
     #! Returns action options corresponding to the given option data
-    /** @param req sample option data that can be used to determine the final type
+    /** @param options sample option data that can be used to determine the final type
 
         @return action options according to the available option data
 
         @note This API is meant to provide information about options that can depend on option data
     */
-    private *hash<string, hash<ActionOptionInfo>> tryGetActionOptionsWithDataImpl(hash<DataProviderActionInfo> action,
-            auto req) {
-        if (!dmap || !req.val() || req.typeCode() != NT_HASH) {
+    private *hash<string, hash<ActionOptionInfo>> tryGetActionOptionsWithOptionsImpl(
+            hash<DataProviderActionInfo> action, *hash<auto> options) {
+        #TSAI::debug("TypeScriptActionDataProviderBase::tryGetActionOptionsWithOptionsImpl() options: %y dmap: %y",
+        #    options, keys dmap);
+        if (!dmap || (options.typeCode() != NT_HASH)) {
             return action.options;
         }
-        *hash<string, hash<ActionOptionInfo>> rv = action.options;
-        rv += getActionOptionsWithData(req);
-        return rv;
+        return action.options + getActionOptionsWithOptions(options);
     }
 
     #! Returns reference data of the given kind if available

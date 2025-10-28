@@ -1981,7 +1981,7 @@ public class TypeScriptActionInterface {
         }
     }
 
-    static getOptionFunctions(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
+    static *bool getOptionFunctions(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
             reference<hash<auto>> h, *bool keep_field_functions) {
         on_error rethrow $1.err, sprintf("%s (while processing option %y)", $1.desc, key);
         date io_timeout = seconds(remove h.io_timeout_secs ?? DefaultIoTimeoutSecs);
@@ -1990,6 +1990,7 @@ public class TypeScriptActionInterface {
         getOptionElementAllowedValuesFunction(\action, fctx, key, \h, io_timeout, keep_field_functions);
         getOptionDefaultValueFunction(\action, fctx, key, \h, io_timeout, keep_field_functions);
 
+        bool found;
         if (exists (auto rest_get_allowed_values = remove h.rest_get_allowed_values)) {
             if (rest_get_allowed_values.typeCode() != NT_HASH) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
@@ -2016,6 +2017,7 @@ public class TypeScriptActionInterface {
             h.ref_data = key;
             # remove any manual allowed values
             remove h.allowed_values;
+            found = True;
         }
         if (exists (auto rest_get_element_allowed_values = remove h.rest_get_element_allowed_values)) {
             if (rest_get_element_allowed_values.typeCode() != NT_HASH) {
@@ -2045,6 +2047,9 @@ public class TypeScriptActionInterface {
             h.element_ref_data = key;
             # remove any manual allowed values
             remove h.element_allowed_values;
+            if (!found) {
+                found = True;
+            }
         }
         if (exists (auto get_dependent_options = remove h.get_dependent_options)) {
             if (!get_dependent_options.callp()) {
@@ -2064,6 +2069,9 @@ public class TypeScriptActionInterface {
             };
             TypeScriptActionInterface::registerAsyncCall(\fctx.dmap{key}, "app", action.app, action.action, key);
             action.data_dependent_options = True;
+            if (!found) {
+                found = True;
+            }
         }
         if (exists (auto get_dependent_response_options = remove h.get_dependent_response_options)) {
             if (!get_dependent_response_options.callp()) {
@@ -2082,6 +2090,9 @@ public class TypeScriptActionInterface {
                 "to": io_timeout,
             };
             TypeScriptActionInterface::registerAsyncCall(\fctx.drmap{key}, "app", action.app, action.action, key);
+            if (!found) {
+                found = True;
+            }
         }
         if (exists (auto get_dynamic_type = h.get_dynamic_type)) {
             if (!get_dynamic_type.callp()) {
@@ -2106,10 +2117,14 @@ public class TypeScriptActionInterface {
             if (!keep_field_functions) {
                 remove h.get_dynamic_type;
             }
+            if (!found) {
+                found = True;
+            }
         }
         if (h.required && !h.preselected && !exists h.default_value) {
             h.preselected = True;
         }
+        return found;
     }
 
     static *hash<string, hash<ActionOptionInfo>> getOptions(hash<DataProviderAppInfo> app,

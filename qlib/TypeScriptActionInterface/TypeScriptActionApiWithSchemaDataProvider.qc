@@ -317,7 +317,17 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         return TypeScriptActionApiDataProvider::tryGetActionOptionsFromRequestTypeWithData(req);
     }
 
-    private overrideOptions(HashDataType type) {
+    #! Returns action options corresponding to the given option data
+    *hash<string, hash<ActionOptionInfo>> tryGetActionOptionsWithOptions(hash<DataProviderActionInfo> action,
+            *hash<auto> options) {
+        TSAI::debug("TypeScriptActionApiWithSchemaDataProvider::tryGetActionOptionsWithOptions() @%s/%s conn: %y "
+            "opts: %y", action.app, action.action, conn ? conn.getName() : "n/a", options);
+        DataProviderContextHelper apch(self);
+        return TypeScriptActionApiDataProvider::tryGetActionOptionsWithOptions(action, options);
+    }
+
+    private *bool overrideOptions(HashDataType type) {
+        *bool do_not_cache;
         *hash<string, AbstractDataField> fields = type.getFields();
         foreach hash<auto> i in (override_options_save.pairIterator()) {
             # find option to update
@@ -331,7 +341,10 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 on_error rethrow $1.err, sprintf("%s (while add new field %y in %y for type %y; existing fields: %y)",
                     $1.desc, key, i.key, type.getName(), keys fields);
 
-                TypeScriptActionInterface::getOptionFunctions(\action_save, self, i.key, \i.value, True);
+                if (TypeScriptActionInterface::getOptionFunctions(\action_save, self, i.key, \i.value, True)
+                    && !do_not_cache) {
+                    do_not_cache = True;
+                }
                 if (l.size() > 1) {
                     overrideOptionType("option", type, l, i.value, k);
                     continue;
@@ -360,9 +373,14 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                         "expecting \"QoreDataField\"", action_save.app, action_save.action, key, f.className());
                 }
                 if (l.size() == 1) {
-                    TypeScriptActionInterface::getOptionFunctions(\action_save, self, i.key, \i.value, True);
+                    if (TypeScriptActionInterface::getOptionFunctions(\action_save, self, i.key, \i.value, True)
+                        && !do_not_cache) {
+                        do_not_cache = True;
+                    }
                 }
-                overrideOptionType("option", type, l, i.value, k);
+                if (overrideOptionType("option", type, l, i.value, k) && !do_not_cache) {
+                    do_not_cache = True;
+                }
                 if (l.size() == 1 && (*list<auto> dl = i.value.depends_on)) {
                     depmap{l[0]} = map {$1: True}, dl;
                 }
@@ -370,8 +388,10 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         }
     }
 
-    private overrideOptionType(string path, AbstractDataProviderType type, list<string> l, hash<auto> type_hash, string k) {
-        TypeScriptActionApiWithSchemaDataProvider::overrideOptionType(path, action_save, type, l, type_hash, k, self);
+    private *bool overrideOptionType(string path, AbstractDataProviderType type, list<string> l, hash<auto> type_hash,
+            string k) {
+        return TypeScriptActionApiWithSchemaDataProvider::overrideOptionType(path, action_save, type, l, type_hash, k,
+            self);
     }
 
     #! Returns the request type for this API
@@ -533,6 +553,8 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             request_type_info.type = new HashDataType(AutoHashType, "RestRequestType", fields);
         }
 
+        # do not cache dynamic types (types with get_dynamic_type() functions)
+        *bool do_not_cache;
         # allow options to be updated
         if (override_options_save) {
             if (!request_type_info.type) {
@@ -548,7 +570,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 throw "ACTION-ERROR", sprintf("Cannot override options of app %y action %y with non-hash "
                     "request type %y", action_save.app, action_save.action, request_type_info.type.getName());
             }
-            overrideOptions(cast<HashDataType>(request_type_info.type));
+            do_not_cache = overrideOptions(cast<HashDataType>(request_type_info.type));
             if (!prov.op.consumes) {
                 prov.op.consumes{MimeTypeJson} = True;
             }
@@ -577,10 +599,12 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             }
         }
 
-        grtmap{request_key} = <TypeProviderInfo>{
-            "type": request_type_info.type,
-            "prov": self,
-        };
+        if (!do_not_cache) {
+            grtmap{request_key} = <TypeProviderInfo>{
+                "type": request_type_info.type,
+                "prov": self,
+            };
+        }
     }
 
     #! Creates the response type for this API
@@ -766,7 +790,7 @@ class ActionProviderContextHelper {
         if (prov && (prov instanceof TypeScriptActionDataProviderBase)) {
             return cast<TypeScriptActionDataProviderBase>(prov);
         } else if (prov) {
-            TSAI::info("IGNORING %y", prov.className());
+            TSAI::warn("IGNORING %y", prov.className());
         }
     }
 }
