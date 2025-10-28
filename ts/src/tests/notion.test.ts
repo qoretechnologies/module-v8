@@ -13,10 +13,7 @@ import {
   UpdateNotionDatabaseItem,
 } from '../apps/notion/actions';
 import { getNotionDataSourceItemAllowedValues } from '../apps/notion/helpers/get-data-source-item-allowed-values';
-import {
-  getNotionDataSourceProperties,
-  getNotionDataSourceResponseType,
-} from '../apps/notion/helpers/get-data-source-properties';
+import { getNotionDataSourceProperties } from '../apps/notion/helpers/get-data-source-properties';
 import { getNotionDataSourcePropertiesAllowedValues } from '../apps/notion/helpers/get-data-source-properties-allowed-values';
 import { getNotionDataSourceAllowedValues } from '../apps/notion/helpers/get-datasource-allowed-values';
 import { getNotionDiscussionsAllowedValues } from '../apps/notion/helpers/get-discussion-allowed-values';
@@ -26,8 +23,8 @@ import { deleteNotionRecords } from '../apps/notion/helpers/record-based/delete-
 import { getNotionRecordType } from '../apps/notion/helpers/record-based/get-record-type';
 import { getNotionTableList } from '../apps/notion/helpers/record-based/get-table-list';
 import { searchNotionRecords } from '../apps/notion/helpers/record-based/search-records';
-import { Debugger, DebugLevels } from '../utils/Debugger';
 import { updateNotionRecords } from '../apps/notion/helpers/record-based/update-records';
+import { Debugger, DebugLevels } from '../utils/Debugger';
 
 Debugger.level = DebugLevels.Verbose;
 configDotenv({ path: '.env' });
@@ -278,15 +275,6 @@ describe('Notion', () => {
       expect(result).toBeDefined();
       expect(result.id).toBe(data_source_item_id);
     });
-
-    it('Should get datasource properties dynamic type', async () => {
-      const result = await getNotionDataSourceResponseType({
-        ...baseContext,
-        opts: { data_source_id: '105ba26f-2e25-8087-9359-000b0bf6f1c3' },
-      });
-
-      console.dir(result, { depth: null });
-    });
   });
 
   describe('Should test record based helpers', () => {
@@ -320,18 +308,14 @@ describe('Notion', () => {
       'Overdue Task',
     ];
 
+    const assignee = 'fe16ba92-b9bd-41ee-9496-ff853a1cd6d2';
+
     it('Should create records', async () => {
       const result = await createNotionRecords(
         baseContext,
         {
           Status: ['Done', 'In Progress', 'To Do', 'Blocked', 'In Progress'],
-          Assignee: [
-            'fe16ba92-b9bd-41ee-9496-ff853a1cd6d2',
-            'fe16ba92-b9bd-41ee-9496-ff853a1cd6d2',
-            null,
-            'fe16ba92-b9bd-41ee-9496-ff853a1cd6d2',
-            'fe16ba92-b9bd-41ee-9496-ff853a1cd6d2',
-          ],
+          Assignee: [assignee, assignee, null, assignee, assignee],
           'Due date': [now, now, nextWeek.toISOString(), now, lastWeek.toISOString()],
           Name: names,
         },
