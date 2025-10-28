@@ -11,7 +11,7 @@ export const getSupabaseSearchOptions: TQoreGetSearchOptionsFunction = (_context
         },
         ascending: {
           type: 'bool',
-          required: true,
+          required: false,
         },
       },
     },

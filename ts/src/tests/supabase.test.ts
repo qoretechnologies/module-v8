@@ -634,7 +634,7 @@ describe('Supabase', () => {
       expect(result).toBe(2);
     });
 
-    it('Should search records using contains expresion', async () => {
+    it('Should search records using contains expression', async () => {
       const getRecordsIterator = await searchSupabaseRecords(
         baseContext,
         {
