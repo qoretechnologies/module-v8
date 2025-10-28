@@ -35,6 +35,7 @@ export default (locale: Locales) =>
       oauth2_auth_url: 'https://api.notion.com/v1/oauth/authorize',
       oauth2_token_url: 'https://api.notion.com/v1/oauth/token',
       oauth2_scopes: ['read', 'write'],
+      oauth2_token_use_basic_auth: true,
       oauth2_auth_args: {
         owner: 'user',
       },
