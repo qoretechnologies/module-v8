@@ -1,5 +1,13 @@
-import { TQoreAppWithActions, TQoreRecordBasedApp } from '@qoretechnologies/ts-toolkit';
-import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers/index';
+import {
+  QorusRequest,
+  TQoreAppWithActions,
+  TQoreRecordBasedApp,
+} from '@qoretechnologies/ts-toolkit';
+import {
+  getQoreContextRequiredValues,
+  mapActionsToApp,
+  mapTriggersToApp,
+} from '../../global/helpers/index';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import { SUPABASE_APP_LOGO, SUPABASE_APP_NAME, SUPABASE_CONN_OPTIONS } from './constants';
@@ -41,6 +49,37 @@ export default (locale: Locales) =>
       options: SUPABASE_CONN_OPTIONS,
       required_options: 'projectId,token',
       url_template_options: ['projectId'],
+      set_options_post_auth: async (context) => {
+        const { token, projectId } = getQoreContextRequiredValues({
+          context,
+          connectionFields: ['projectId', 'token'],
+        });
+
+        const response = await QorusRequest.get<{ data: { paths: Record<string, any> } }>(
+          {
+            path: '/rest/v1/',
+            headers: {
+              apiKey: token,
+            },
+          },
+          {
+            url: `https://${projectId}.supabase.co`,
+            endpointId: SUPABASE_APP_NAME,
+          }
+        );
+
+        const data = response?.data;
+
+        if (!data) return;
+
+        const paths = Object.keys(response.data.paths || {}).filter((path) => path !== '/');
+
+        if (paths.length === 0) return;
+
+        return {
+          ping_path: `/rest/v1${paths[0]}`,
+        };
+      },
     },
     get_table_list: getSupabaseTableList,
     get_expressions: getSupabaseExpressionsFunction(locale),
