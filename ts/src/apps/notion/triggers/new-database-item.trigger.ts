@@ -10,7 +10,7 @@ import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 import { NOTION_APP_NAME, NotionError } from '../constants';
-import { createNotionClient } from '../helpers/constants';
+import { createNotionClient, mapNotionPropertiesToSimpleObject } from '../helpers/constants';
 import { formatNotionFilterValues } from '../helpers/format-filter-values';
 import {
   getNotionDataSourceProperties,
@@ -295,7 +295,12 @@ const fetchLatestDataSourceItems = async (options: {
       }),
     });
 
-    return response.results as DataSourceObjectResponse[];
+    const results = response.results.map((item: DataSourceObjectResponse) => ({
+      ...item,
+      properties: mapNotionPropertiesToSimpleObject(item.properties),
+    }));
+
+    return results as DataSourceObjectResponse[];
   } catch (error) {
     throw new NotionError(`Failed to fetch latest database items: ${error.message || error}`);
   }
