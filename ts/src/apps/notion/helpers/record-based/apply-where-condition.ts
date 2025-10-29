@@ -86,7 +86,7 @@ const buildComparisonFilter = (
   if (!isQoreRecordSearchFieldReference(fieldArg)) return undefined;
 
   const field = fieldArg.field;
-  const value = valueArg as TQoreSearchRecordsValue;
+  const value = (valueArg as TQoreSearchRecordsValue).value;
   const propertyType = {
     ...properties,
     ...additionalProperties,
@@ -124,7 +124,7 @@ const buildPropertyFilter = (
   property: string,
   propertyType: string,
   condition: string,
-  value: TQoreSearchRecordsValue
+  value: TQoreSearchRecordsValue['value']
 ): any => {
   switch (propertyType) {
     case 'checkbox':
@@ -320,7 +320,7 @@ const buildTextFilter = (operator: string, args: any[], properties: Record<strin
   if (!isQoreRecordSearchFieldReference(fieldArg)) return undefined;
 
   const field = fieldArg.field;
-  const value = valueArg as TQoreSearchRecordsValue;
+  const value = (valueArg as TQoreSearchRecordsValue).value;
   const propertyType = {
     ...properties,
     ...additionalProperties,

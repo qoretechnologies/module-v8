@@ -334,7 +334,7 @@ describe('Notion', () => {
           baseContext,
           {
             exp: '=',
-            args: [{ field: 'Status' }, 'Done'],
+            args: [{ field: 'Status' }, { value: 'Done' }],
           },
           { table }
         );
@@ -355,8 +355,8 @@ describe('Notion', () => {
               {
                 exp: 'OR',
                 args: [
-                  { exp: '=', args: [{ field: 'Status' }, 'Done'] },
-                  { exp: '=', args: [{ field: 'Status' }, 'In progress'] },
+                  { exp: '=', args: [{ field: 'Status' }, { value: 'Done' }] },
+                  { exp: '=', args: [{ field: 'Status' }, { value: 'In progress' }] },
                 ],
               },
               {
@@ -385,7 +385,7 @@ describe('Notion', () => {
           baseContext,
           {
             exp: '<=',
-            args: [{ field: 'Due date' }, before],
+            args: [{ field: 'Due date' }, { value: before }],
           },
           { table }
         );
@@ -427,7 +427,7 @@ describe('Notion', () => {
           baseContext,
           {
             exp: 'starts_with',
-            args: [{ field: 'Name' }, 'Task from'],
+            args: [{ field: 'Name' }, { value: 'Task from' }],
           },
           { table }
         );
@@ -446,7 +446,7 @@ describe('Notion', () => {
           baseContext,
           {
             exp: 'ends_with',
-            args: [{ field: 'Name' }, '1'],
+            args: [{ field: 'Name' }, { value: '1' }],
           },
           { table }
         );
@@ -481,7 +481,7 @@ describe('Notion', () => {
           baseContext,
           {
             exp: 'contains',
-            args: [{ field: 'Name' }, 'Qore'],
+            args: [{ field: 'Name' }, { value: 'Qore' }],
           },
           { table }
         );
@@ -500,7 +500,7 @@ describe('Notion', () => {
           baseContext,
           {
             exp: 'in',
-            args: [{ field: 'Name' }, names],
+            args: [{ field: 'Name' }, { value: names }],
           },
           { table }
         );
@@ -519,7 +519,7 @@ describe('Notion', () => {
             args: [
               {
                 exp: '!=',
-                args: [{ field: 'Status' }, 'Done'],
+                args: [{ field: 'Status' }, { value: 'Done' }],
               },
               {
                 exp: 'OR',
@@ -555,8 +555,8 @@ describe('Notion', () => {
           {
             exp: 'OR',
             args: [
-              { exp: '=', args: [{ field: 'Status' }, 'Done'] },
-              { exp: '=', args: [{ field: 'Status' }, 'In progress'] },
+              { exp: '=', args: [{ field: 'Status' }, { value: 'Done' }] },
+              { exp: '=', args: [{ field: 'Status' }, { value: 'In progress' }] },
             ],
           },
           { table }
@@ -608,7 +608,7 @@ describe('Notion', () => {
           baseContext,
           {
             exp: '>=',
-            args: [{ field: 'created_time' }, '2025-10-27T00:00:00Z'],
+            args: [{ field: 'created_time' }, { value: '2025-10-27T00:00:00Z' }],
           },
           {
             table,
@@ -634,7 +634,7 @@ describe('Notion', () => {
         },
         {
           exp: 'in',
-          args: [{ field: 'Name' }, names],
+          args: [{ field: 'Name' }, { value: names }],
         },
         {
           table,
@@ -650,7 +650,7 @@ describe('Notion', () => {
         baseContext,
         {
           exp: 'in',
-          args: [{ field: 'Name' }, names],
+          args: [{ field: 'Name' }, { value: names }],
         },
         { table: 'Tasks' }
       );

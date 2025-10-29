@@ -6,7 +6,6 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { PostgrestFilterBuilder } from '@supabase/postgrest-js';
 import { applySupabaseComparisonOperator } from './apply-comparison-operator';
-import { SupabaseError } from '../../constants';
 
 export const applySupabaseWhereCondition = (
   query: PostgrestFilterBuilder<any, any, any, any>,
@@ -51,7 +50,7 @@ export const applySupabaseWhereCondition = (
 
         if (innerExpr.args.length >= 2 && isQoreRecordSearchFieldReference(innerExpr.args[0])) {
           const field = innerExpr.args[0].field;
-          const value = innerExpr.args[1] as TQoreSearchRecordsValue;
+          const value = (innerExpr.args[1] as TQoreSearchRecordsValue).value;
 
           switch (innerExpr.exp) {
             case '=':
@@ -127,7 +126,7 @@ const buildFilterCondition = (expr: TQoreSearchRecordsWhereConditions): string |
   if (args.length < 2) return null;
 
   const fieldArg = args[0];
-  const valueArg = args[1] as TQoreSearchRecordsValue;
+  const valueArg = (args[1] as TQoreSearchRecordsValue).value;
 
   if (!isQoreRecordSearchFieldReference(fieldArg)) return null;
 
@@ -154,10 +153,8 @@ const buildFilterCondition = (expr: TQoreSearchRecordsWhereConditions): string |
       const inValues = Array.isArray(valueArg) ? valueArg : [valueArg];
       return `${field}.in.(${inValues.join(',')})`;
     case 'contains':
-      if (!Array.isArray(valueArg)) {
-        throw new SupabaseError('Contains operator only works with array fields');
-      }
-      return `${field}.cs.${JSON.stringify(valueArg)}`;
+      const containsValues = Array.isArray(valueArg) ? valueArg : [valueArg];
+      return `${field}.cs.${JSON.stringify(containsValues)}`;
     default:
       return null;
   }

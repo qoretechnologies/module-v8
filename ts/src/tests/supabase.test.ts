@@ -342,8 +342,8 @@ describe('Supabase', () => {
         {
           exp: 'AND',
           args: [
-            { exp: 'in', args: [{ field: 'id' }, [1, 3]] },
-            { exp: '=', args: [{ field: 'bool' }, true] },
+            { exp: 'in', args: [{ field: 'id' }, { value: [1, 3] }] },
+            { exp: '=', args: [{ field: 'bool' }, { value: true }] },
           ],
         },
         { table }
@@ -361,8 +361,8 @@ describe('Supabase', () => {
         {
           exp: 'OR',
           args: [
-            { exp: '=', args: [{ field: 'id' }, 1] },
-            { exp: '=', args: [{ field: 'id' }, 11] },
+            { exp: '=', args: [{ field: 'id' }, { value: 1 }] },
+            { exp: '=', args: [{ field: 'id' }, { value: 11 }] },
           ],
         },
         { table }
@@ -381,7 +381,7 @@ describe('Supabase', () => {
         baseContext,
         {
           exp: 'NOT',
-          args: [{ exp: '=', args: [{ field: 'bool' }, true] }],
+          args: [{ exp: '=', args: [{ field: 'bool' }, { value: true }] }],
         },
         { table }
       );
@@ -404,15 +404,15 @@ describe('Supabase', () => {
             {
               exp: 'AND',
               args: [
-                { exp: 'in', args: [{ field: 'id' }, [1, 2, 3]] },
-                { exp: '=', args: [{ field: 'bool' }, true] },
+                { exp: 'in', args: [{ field: 'id' }, { value: [1, 2, 3] }] },
+                { exp: '=', args: [{ field: 'bool' }, { value: true }] },
               ],
             },
             {
               exp: 'AND',
               args: [
-                { exp: '=', args: [{ field: 'id' }, 11] },
-                { exp: '=', args: [{ field: 'bool' }, true] },
+                { exp: '=', args: [{ field: 'id' }, { value: 11 }] },
+                { exp: '=', args: [{ field: 'bool' }, { value: true }] },
               ],
             },
           ],
@@ -441,14 +441,14 @@ describe('Supabase', () => {
                 {
                   exp: 'OR',
                   args: [
-                    { exp: '<=', args: [{ field: 'id' }, 3] },
-                    { exp: '>=', args: [{ field: 'id' }, 11] },
+                    { exp: '<=', args: [{ field: 'id' }, { value: 3 }] },
+                    { exp: '>=', args: [{ field: 'id' }, { value: 11 }] },
                   ],
                 },
-                { exp: '=', args: [{ field: 'bool' }, true] },
+                { exp: '=', args: [{ field: 'bool' }, { value: true }] },
               ],
             },
-            { exp: '=', args: [{ field: 'id' }, 1] },
+            { exp: '=', args: [{ field: 'id' }, { value: 1 }] },
           ],
         },
         { table }
@@ -469,8 +469,8 @@ describe('Supabase', () => {
         {
           exp: 'AND',
           args: [
-            { exp: '>', args: [{ field: 'id' }, 2] },
-            { exp: '<', args: [{ field: 'id' }, 11] },
+            { exp: '>', args: [{ field: 'id' }, { value: 2 }] },
+            { exp: '<', args: [{ field: 'id' }, { value: 11 }] },
           ],
         },
         { table }
@@ -490,7 +490,7 @@ describe('Supabase', () => {
         baseContext,
         {
           exp: 'like',
-          args: [{ field: 'title' }, '%Test%'],
+          args: [{ field: 'title' }, { value: '%Test%' }],
         },
         { table }
       );
@@ -520,26 +520,26 @@ describe('Supabase', () => {
                     {
                       exp: 'OR',
                       args: [
-                        { exp: '=', args: [{ field: 'id' }, 1] },
-                        { exp: '=', args: [{ field: 'id' }, 2] },
+                        { exp: '=', args: [{ field: 'id' }, { value: 1 }] },
+                        { exp: '=', args: [{ field: 'id' }, { value: 2 }] },
                       ],
                     },
-                    { exp: '=', args: [{ field: 'bool' }, true] },
+                    { exp: '=', args: [{ field: 'bool' }, { value: true }] },
                   ],
                 },
                 {
                   exp: 'AND',
                   args: [
-                    { exp: '=', args: [{ field: 'id' }, 3] },
+                    { exp: '=', args: [{ field: 'id' }, { value: 3 }] },
                     {
                       exp: 'NOT',
-                      args: [{ exp: '=', args: [{ field: 'bool' }, false] }],
+                      args: [{ exp: '=', args: [{ field: 'bool' }, { value: false }] }],
                     },
                   ],
                 },
               ],
             },
-            { exp: '<', args: [{ field: 'id' }, 20] },
+            { exp: '<', args: [{ field: 'id' }, { value: 20 }] },
           ],
         },
         { table }
@@ -560,8 +560,8 @@ describe('Supabase', () => {
         {
           exp: 'OR',
           args: [
-            { exp: '<=', args: [{ field: 'id' }, 3] },
-            { exp: '>=', args: [{ field: 'id' }, 11] },
+            { exp: '<=', args: [{ field: 'id' }, { value: 3 }] },
+            { exp: '>=', args: [{ field: 'id' }, { value: 11 }] },
           ],
         },
         { table }
@@ -615,7 +615,7 @@ describe('Supabase', () => {
         {
           title: updatedTitle,
         },
-        { exp: 'in', args: [{ field: 'title' }, [createdTitle]] },
+        { exp: 'in', args: [{ field: 'title' }, { value: [createdTitle] }] },
         { table }
       );
 
@@ -626,7 +626,7 @@ describe('Supabase', () => {
     it('Should delete records', async () => {
       const result = await deleteSupabaseRecords(
         baseContext,
-        { exp: 'in', args: [{ field: 'title' }, [updatedTitle, upsertedTitle]] },
+        { exp: 'in', args: [{ field: 'title' }, { value: [updatedTitle, upsertedTitle] }] },
         { table }
       );
 
@@ -639,7 +639,7 @@ describe('Supabase', () => {
         baseContext,
         {
           exp: 'contains',
-          args: [{ field: 'arr' }, ['two']],
+          args: [{ field: 'arr' }, { value: ['two'] }],
         },
         { table }
       );
