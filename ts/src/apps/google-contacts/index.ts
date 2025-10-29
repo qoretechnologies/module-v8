@@ -20,7 +20,7 @@ export default (locale: Locales) =>
       ...mapTriggersToApp(GOOGLE_CONTACTS_APP_NAME, GOOGLE_CONTACTS_TRIGGERS, locale),
     ],
     rest: {
-      url: 'https://people.googleapis.com',
+      url: 'https://www.googleapis.com',
       data: 'json',
       oauth2_grant_type: 'authorization_code',
       oauth2_auth_url: 'https://accounts.google.com/o/oauth2/v2/auth',
@@ -28,12 +28,15 @@ export default (locale: Locales) =>
       oauth2_scopes: [
         'https://www.googleapis.com/auth/contacts',
         'https://www.googleapis.com/auth/userinfo.profile',
+        'email',
+        'profile',
+        'openid',
       ],
       oauth2_auth_args: {
         access_type: 'offline',
         prompt: 'consent',
       },
+      ping_path: '/oauth2/v3/userinfo',
       ping_method: 'GET',
-      ping_path: '/v1/people/me?personFields=names',
     },
   }) satisfies TQoreAppWithActions;

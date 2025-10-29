@@ -30,12 +30,15 @@ export default (locale: Locales) =>
         'https://www.googleapis.com/auth/meetings.space.readonly',
         'https://www.googleapis.com/auth/meetings.space.created',
         'https://www.googleapis.com/auth/drive.readonly',
+        'email',
+        'profile',
+        'openid',
       ],
       oauth2_auth_args: {
         access_type: 'offline',
         prompt: 'consent',
       },
       ping_method: 'GET',
-      ping_path: '/drive/v3/about?fields=user',
+      ping_path: '/oauth2/v3/userinfo',
     },
   }) satisfies TQoreAppWithActions;

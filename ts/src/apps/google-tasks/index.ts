@@ -26,12 +26,12 @@ export default (locale: Locales) =>
       oauth2_grant_type: 'authorization_code',
       oauth2_auth_url: 'https://accounts.google.com/o/oauth2/v2/auth',
       oauth2_token_url: 'https://oauth2.googleapis.com/token',
-      oauth2_scopes: ['https://www.googleapis.com/auth/tasks'],
+      oauth2_scopes: ['https://www.googleapis.com/auth/tasks', 'email', 'profile', 'openid'],
       oauth2_auth_args: {
         access_type: 'offline',
         prompt: 'consent',
       },
       ping_method: 'GET',
-      ping_path: '/tasks/v1/users/@me/lists',
+      ping_path: '/oauth2/v3/userinfo',
     },
   }) satisfies TQoreAppWithActions;

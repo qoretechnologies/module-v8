@@ -28,12 +28,15 @@ export default (locale: Locales) =>
       oauth2_scopes: [
         'https://www.googleapis.com/auth/forms',
         'https://www.googleapis.com/auth/drive',
+        'email',
+        'profile',
+        'openid',
       ],
       oauth2_auth_args: {
         access_type: 'offline',
         prompt: 'consent',
       },
       ping_method: 'GET',
-      ping_path: '/drive/v3/about?fields=user',
+      ping_path: '/oauth2/v3/userinfo',
     },
   }) satisfies TQoreAppWithActions;

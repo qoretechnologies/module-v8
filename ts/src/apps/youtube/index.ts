@@ -32,12 +32,15 @@ export default (locale: Locales) =>
         'https://www.googleapis.com/auth/youtube.readonly',
         'https://www.googleapis.com/auth/yt-analytics.readonly',
         'https://www.googleapis.com/auth/youtube',
+        'email',
+        'profile',
+        'openid',
       ],
       oauth2_auth_args: {
         access_type: 'offline',
         prompt: 'consent',
       },
       ping_method: 'GET',
-      ping_path: '/youtube/v3/channels?part=id&mine=true',
+      ping_path: '/oauth2/v3/userinfo',
     },
   }) satisfies TQoreAppWithActions;

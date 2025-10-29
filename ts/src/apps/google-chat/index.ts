@@ -21,7 +21,7 @@ export default (locale: Locales) =>
       ...mapTriggersToApp(GOOGLE_CHAT_APP_NAME, GOOGLE_CHAT_TRIGGERS, locale),
     ],
     rest: {
-      url: 'https://chat.googleapis.com',
+      url: 'https://www.googleapis.com',
       data: 'json',
       oauth2_grant_type: 'authorization_code',
       oauth2_auth_url: 'https://accounts.google.com/o/oauth2/v2/auth',
@@ -29,6 +29,7 @@ export default (locale: Locales) =>
       oauth2_scopes: [
         'email',
         'profile',
+        'openid',
         'https://www.googleapis.com/auth/chat.spaces.readonly',
         'https://www.googleapis.com/auth/chat.memberships.readonly',
         'https://www.googleapis.com/auth/chat.messages',
@@ -38,6 +39,6 @@ export default (locale: Locales) =>
         prompt: 'consent',
       },
       ping_method: 'GET',
-      ping_path: '/v1/spaces',
+      ping_path: '/oauth2/v3/userinfo',
     },
   }) satisfies TQoreAppWithActions;
