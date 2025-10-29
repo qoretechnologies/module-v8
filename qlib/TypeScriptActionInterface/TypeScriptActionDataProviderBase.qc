@@ -840,32 +840,51 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             }
             type_info.dynamic_type_done = True;
         }
+        bool err;
         if (!type_info.dtfields_done && dtmap) {
             foreach hash<auto> i in (dtmap.pairIterator()) {
                 debug("Retrieving dynamic %s type for option %y for data provider %y", dtype, i.key, getName());
                 # include any context data in case request-specific info needs to be returned
                 *hash<auto> opts = DataProviderDataContextHelper::get();
-                auto res = getAsyncValueArgs(self, i.value, {
-                    "conn_name": conn.name,
-                    "conn_opts": conn.getRealOptions(),
-                    "opts": opts,
-                }, {
-                    "conn_opts": conn.getRealOptions(),
-                    "opts": opts,
-                }, True);
-                if (!res) {
+
+                # check for dependencies
+                if (type_info.type && (*hash<string, AbstractDataField> fields = type_info.type.getFields())
+                    && fields{i.key} && (*softlist<string> deps = fields{i.key}.getAttributes().depends_on)
+                    && opts{deps}.size() != deps.size()) {
+                    debug("Skipping dynamic %s type for option %y for data provider %y; deps %y not satisfied (%y)",
+                        dtype, i.key, getName(), deps, opts{deps});
                     continue;
                 }
 
-                AbstractDataProviderType t = TypeScriptActionInterface::getType(dtype + " option " + i.key, res,
-                    NOTHING, NOTHING, self);
-                TypeScriptDataField field({
-                    "name": i.key,
-                    "type": t,
-                });
-                type_info.dtfields{i.key} = field;
+                try {
+                    auto res = getAsyncValueArgs(self, i.value, {
+                        "conn_name": conn.name,
+                        "conn_opts": conn.getRealOptions(),
+                        "opts": opts,
+                    }, {
+                        "conn_opts": conn.getRealOptions(),
+                        "opts": opts,
+                    }, True);
+                    if (!res) {
+                        continue;
+                    }
+
+                    AbstractDataProviderType t = TypeScriptActionInterface::getType(dtype + " option " + i.key, res,
+                        NOTHING, NOTHING, self);
+                    TypeScriptDataField field({
+                        "name": i.key,
+                        "type": t,
+                    });
+                    type_info.dtfields{i.key} = field;
+                } catch (hash<ExceptionInfo> ex) {
+                    LoggerWrapper::error("Error acquiring dynamic %s type for option %y: %s", dtype, i.key,
+                        get_exception_string(ex));
+                    err = True;
+                }
             }
-            type_info.dtfields_done = True;
+            if (!err) {
+                type_info.dtfields_done = True;
+            }
         }
         if (type_info.dtfields) {
             if (!type_info.type) {
@@ -873,8 +892,8 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             } else {
                 type_info.type = type_info.type.copy();
             }
-            map type_info.type.addField($1), type_info.dtfields.iterator();
-            debug("Added dynamic fields: %y", keys type_info.dtfields);
+            map type_info.type.addOrReplaceField($1), type_info.dtfields.iterator();
+            debug("Added / replaced dynamic fields: %y", keys type_info.dtfields);
         }
         return type_info.type;
     }

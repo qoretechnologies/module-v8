@@ -50,6 +50,7 @@ const options = {
   filter_properties: {
     type: 'hash',
     required: false,
+    depends_on: ['data_source_id'],
     get_dynamic_type: getNotionDataSourceProperties,
   },
   sorts: {
@@ -103,6 +104,7 @@ const options = {
         },
       },
     },
+    depends_on: ['data_source_id'],
     required: false,
   },
 } satisfies TQoreOptions;
