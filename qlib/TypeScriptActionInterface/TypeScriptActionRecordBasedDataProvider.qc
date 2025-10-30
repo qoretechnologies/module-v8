@@ -184,11 +184,12 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         @since DataProvider 2.3
     */
     AbstractDataProviderBulkRecordInterface searchRecordsBulk(int block_size = 1000,
-            *hash<DataProviderExpression> where_cond, *hash<auto> search_options) {
+            *hash<auto> where_cond, *hash<auto> search_options) {
         search_options.table = name;
         hash<DataContextInfo> cctx = getCallContextInfo({
             "table": name,
         });
+        where_cond = convertExpression(getSearchExpression(where_cond, search_options));
         if (TSAI::checkServer()) {
             return new TypeScriptBulkRecordProxyInterface(block_size, self, where_cond, search_options, cctx);
         } else {
@@ -197,6 +198,50 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             return new TypeScriptBulkRecordInterface(block_size, self, get_records, cctx,
                 get_expressions ? NOTHING : where_cond);
         }
+    }
+
+    #! Returns an iterator for zero or more records matching the search options
+    /** @param block_size the number of records in a read block; must be a positive number
+        @param where_cond the search criteria; will be processed by processSearchParameters()
+        @param search_options the search options; will be processed by validateSearchOptions()
+
+        @return a bulk record interface object that will return the records in bulk format
+
+        @throw INVALID-BLOCK-SIZE the block size must be a positive number
+        @throw INVALID-OPERATION the data provider does not support reading
+
+        @since DataProvider 2.3
+    */
+    AbstractDataProviderBulkRecordInterface searchRecordsBulk(int block_size = 1000,
+            *hash<DataProviderExpression> where_cond, *hash<auto> search_options) {
+        search_options.table = name;
+        hash<DataContextInfo> cctx = getCallContextInfo({
+            "table": name,
+        });
+        where_cond = convertExpression(where_cond);
+        if (TSAI::checkServer()) {
+            return new TypeScriptBulkRecordProxyInterface(block_size, self, where_cond, search_options, cctx);
+        } else {
+            *code get_records = getAsyncValue(search_records, cctx,
+                get_expressions ? where_cond : NOTHING, get_expressions ? search_options : NOTHING);
+            return new TypeScriptBulkRecordInterface(block_size, self, get_records, cctx,
+                get_expressions ? NOTHING : where_cond);
+        }
+    }
+
+    #! Converts expressions to the format required by the JS / TS code
+    private *hash<auto> convertExpression(auto exp) {
+        return {
+            "value": exp,
+        };
+    }
+
+    #! Converts expressions to the format required by the JS / TS code
+    private *hash<auto> convertExpression(hash<auto> exp) {
+        if (exp.hasKey("args")) {
+            exp.args = map convertExpression($1), exp.args;
+        }
+        return exp;
     }
 
     #! Returns an iterator for zero or more records matching the search options
