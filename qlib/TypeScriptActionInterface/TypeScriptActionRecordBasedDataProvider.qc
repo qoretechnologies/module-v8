@@ -189,7 +189,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         hash<DataContextInfo> cctx = getCallContextInfo({
             "table": name,
         });
-        where_cond = getSearchExpression(where_cond, search_options);
+        where_cond = cast<*hash<DataProviderExpression>>(getSearchExpression(where_cond, search_options));
         if (TSAI::checkServer()) {
             return new TypeScriptBulkRecordProxyInterface(block_size, self, conn.name, conn.getRealOptions(),
                 where_cond, search_options, cctx);
@@ -254,7 +254,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
     */
     private AbstractDataProviderRecordIterator searchRecordsImpl(*hash<auto> where_cond,
             *hash<auto> search_options) {
-        return searchRecordsBulk(1000, getSearchExpression(where_cond), search_options).getRecordIterator();
+        return searchRecordsBulk(1000, where_cond, search_options).getRecordIterator();
     }
 
     #! Returns a single record matching the search options
@@ -264,8 +264,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         @throw MULTIPLE-RECORDS-ERROR multiple records found
     */
     private *hash<auto> searchSingleRecordImpl(*hash<auto> where_cond, *hash<auto> search_options) {
-        AbstractDataProviderRecordIterator i = searchRecordsBulk(2, getSearchExpression(where_cond), search_options)
-            .getRecordIterator();
+        AbstractDataProviderRecordIterator i = searchRecordsBulk(2, where_cond, search_options).getRecordIterator();
         if (!i.next()) {
             return;
         }
