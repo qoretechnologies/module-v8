@@ -189,12 +189,14 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         hash<DataContextInfo> cctx = getCallContextInfo({
             "table": name,
         });
-        where_cond = convertExpression(getSearchExpression(where_cond, search_options));
+        where_cond = getSearchExpression(where_cond, search_options);
         if (TSAI::checkServer()) {
-            return new TypeScriptBulkRecordProxyInterface(block_size, self, where_cond, search_options, cctx);
+            return new TypeScriptBulkRecordProxyInterface(block_size, self, conn.name, conn.getRealOptions(),
+                where_cond, search_options, cctx);
         } else {
             *code get_records = getAsyncValue(search_records, cctx,
-                get_expressions ? where_cond : NOTHING, get_expressions ? search_options : NOTHING);
+                get_expressions ? convertExpression(where_cond) : NOTHING,
+                get_expressions ? search_options : NOTHING);
             return new TypeScriptBulkRecordInterface(block_size, self, get_records, cctx,
                 get_expressions ? NOTHING : where_cond);
         }
@@ -218,12 +220,14 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         hash<DataContextInfo> cctx = getCallContextInfo({
             "table": name,
         });
-        where_cond = convertExpression(where_cond);
+        where_cond = processSearchParameters(where_cond, search_options);
         if (TSAI::checkServer()) {
-            return new TypeScriptBulkRecordProxyInterface(block_size, self, where_cond, search_options, cctx);
+            return new TypeScriptBulkRecordProxyInterface(block_size, self, conn.name, conn.getRealOptions(),
+                where_cond, search_options, cctx);
         } else {
             *code get_records = getAsyncValue(search_records, cctx,
-                get_expressions ? where_cond : NOTHING, get_expressions ? search_options : NOTHING);
+                get_expressions ? convertExpression(where_cond) : NOTHING,
+                get_expressions ? search_options : NOTHING);
             return new TypeScriptBulkRecordInterface(block_size, self, get_records, cctx,
                 get_expressions ? NOTHING : where_cond);
         }
@@ -231,9 +235,9 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
 
     #! Converts expressions to the format required by the JS / TS code
     private *hash<auto> convertExpression(auto exp) {
-        return {
+        return exists exp ? {
             "value": exp,
-        };
+        } : NOTHING;
     }
 
     #! Converts expressions to the format required by the JS / TS code

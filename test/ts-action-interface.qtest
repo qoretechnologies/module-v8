@@ -194,7 +194,7 @@ async function runWithTimeout(promise, delay) {
             DataProviderDataContextHelper dch(opts);
             AbstractDataProvider prov =
                 TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("js-event-1");
-            AbstractDataProviderType t = prov.getEventInfoWithData("event", opts).type;
+            AbstractDataProviderType t = prov.getEventInfoWithOptions("event", opts).type;
             assertEq(3, t.getFields().size());
             assertTrue(prov.supportsObservable());
             assertEq({
@@ -511,11 +511,11 @@ var obj = {
         conn = new TypeScriptAppRestConnection(config);
         AbstractDataProvider parent = TypeScriptActionInterface::getDataProvider("js-test", conn);
         prov = parent.getChildProviderEx("test-api");
-        t = prov.getRequestTypeWithData({"key": "A"});
+        t = prov.getRequestTypeWithOptions({"key": "A"});
         assertEq(("count", "other", "key", "dyn", "list", "ax0", "ax1", "a0", "a1"), keys t.getFields());
         assertEq("TypeScriptDataField", t.getFields()."list".getType().getElementType().getFields().b.className());
         assertEq(100, t.getFields()."list".getType().getElementType().getFields().b.getDefaultValue());
-        t = prov.getRequestTypeWithData({"key": "B"});
+        t = prov.getRequestTypeWithOptions({"key": "B"});
         assertEq(("count", "other", "key", "dyn", "list", "ax0", "ax1", "b0", "b1"), keys t.getFields());
         {
             hash<auto> h = {
