@@ -1229,23 +1229,25 @@ public class TypeScriptActionInterface {
                 "short_desc": desc,
                 "desc": desc,
                 "action_code": DPAT_FIND,
-                "path": "tables/{table}/search",
+                "path": "tables/{table}",
                 "path_vars": {
                     "table": TablePathVar,
                 },
+                "data_dependent_options": True,
             });
             desc = sprintf("Search for a single matching record in the given table in app %y", info.app.name);
             DataProviderActionCatalog::registerAction(<DataProviderActionInfo>{
                 "app": info.app.name,
                 "action": "search-single",
-                "display_name": "Search Records",
+                "display_name": "Find a Single Record",
                 "short_desc": desc,
                 "desc": desc,
                 "action_code": DPAT_FIND_SINGLE,
-                "path": "tables/{table}/search-single",
+                "path": "tables/{table}",
                 "path_vars": {
                     "table": TablePathVar,
                 },
+                "data_dependent_options": True,
             });
             ++cnt;
         }

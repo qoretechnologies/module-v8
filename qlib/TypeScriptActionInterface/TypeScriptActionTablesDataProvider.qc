@@ -46,7 +46,7 @@ public class TypeScriptActionTablesDataProvider inherits TypeScriptActionRecordB
             TypeScriptActionRecordBasedDataProvider::ProviderInfo{DataProviderSummaryInfoKeys}
                 + {
                 "name": $1,
-                "desc": sprintf("Record-based data provider for app `%s` table `%s`", app.name, $1),
+                "desc": sprintf("Record-based data provider for app `%s` table `%s`", app, $1),
                 "type": "TypeScriptActionTableDataProvider",
                 "supports_children": False,
                 "children_can_support_records": False,
@@ -77,7 +77,7 @@ public class TypeScriptActionTablesDataProvider inherits TypeScriptActionRecordB
     */
     private *AbstractDataProvider getChildProviderImpl(string name) {
         try {
-            return new TypeScriptActionRecordBasedDataProvider(name, self);
+            return new TypeScriptActionRecordBasedDataProvider(name, self, conn);
         } catch (hash<ExceptionInfo> ex) {
             rethrow "CHILD-PROVIDER-ERROR", sprintf("Table %y cannot be acquired from %y: %s: %s", name, getName(),
                 ex.err, ex.desc), ex.arg;

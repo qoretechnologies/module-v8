@@ -65,7 +65,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
     }
 
     #! Creates the object from the arguments
-    constructor(string name, ActionFunctionContext fctx) : TypeScriptActionDataProviderBase(name, fctx) {
+    constructor(string name, ActionFunctionContext fctx, *RestConnection conn) : TypeScriptActionDataProviderBase(name, fctx) {
         hash<AppInfo> info = TypeScriptActionInterface::getInitializedRecordBasedAppInfo(fctx.app);
         get_table_list = info.get_table_list;
         get_record_type = info.get_record_type;
@@ -75,6 +75,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         rollback = info.rollback;
         get_expressions = info.get_expressions;
         search_records = info.search_records;
+
         create_records = info.create_records;
         update_records = info.update_records;
         upsert_records = info.upsert_records;
@@ -83,6 +84,10 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         get_option_map.search = info.get_search_options;
         get_option_map.create = info.get_create_options;
         get_option_map.upsert = info.get_upsert_options;
+
+        if (conn) {
+            setConnection(conn);
+        }
     }
 
     #! Begins a transaction with a data provider
@@ -139,6 +144,33 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         return record_type;
     }
 
+    #! Returns the description of the record type in the context of the given options
+    private *hash<string, AbstractDataField> getRecordTypeWithOptionsImpl(*hash<auto> options,
+            *hash<auto> search_options) {
+        if (!record_type) {
+            checkRecordTypeIntern(options);
+        }
+        return record_type;
+    }
+
+    #! Returns the description of the record type for creating records in the context of the given options
+    private *hash<string, AbstractDataField> getCreateRecordTypeWithOptionsImpl(*hash<auto> options,
+            *hash<auto> create_options) {
+        if (!record_type) {
+            checkRecordTypeIntern(options);
+        }
+        return record_type;
+    }
+
+    #! Returns the description of the record type for updating records in the context of the given options
+    private *hash<string, AbstractDataField> getUpdateRecordTypeWithOptionsImpl(*hash<auto> options,
+            *hash<auto> search_options) {
+        if (!record_type) {
+            checkRecordTypeIntern(options);
+        }
+        return record_type;
+    }
+
     #! Returns an iterator for zero or more records matching the search options
     /** @param block_size the number of records in a read block; must be a positive number
         @param where_cond the search criteria; will be processed by processSearchParameters()
@@ -154,7 +186,9 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
     AbstractDataProviderBulkRecordInterface searchRecordsBulk(int block_size = 1000,
             *hash<DataProviderExpression> where_cond, *hash<auto> search_options) {
         search_options.table = name;
-        *hash<DataContextInfo> cctx = getCallContextInfo();
+        hash<DataContextInfo> cctx = getCallContextInfo({
+            "table": name,
+        });
         if (TSAI::checkServer()) {
             return new TypeScriptBulkRecordProxyInterface(block_size, self, where_cond, search_options, cctx);
         } else {
@@ -323,11 +357,11 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         return rv;
     }
 
-    private synchronized checkRecordTypeIntern() {
-        if (record_type) {
+    private synchronized checkRecordTypeIntern(*hash<auto> options = DataProviderDataContextHelper::getHash()) {
+        if (record_type || !options.table.val()) {
             return;
         }
-        auto v = getAsyncValue(get_record_type, getCallContextInfo());
+        auto v = getAsyncValue(get_record_type, getCallContextInfo(options));
         record_type = TypeScriptActionInterface::getType("record_type", v).getFields();
     }
 

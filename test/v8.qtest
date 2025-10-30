@@ -888,6 +888,7 @@ obj", "test.js");
         } catch (hash<ExceptionInfo> ex0) {
             ex = ex0;
         }
+        on_error printf("exception arg: %y\n", ex.arg);
         assertEq("DUPLICATE-RECORD", ex.arg.errorCode);
     }
 }
