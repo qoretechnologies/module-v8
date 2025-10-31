@@ -26,7 +26,7 @@ public namespace TypeScriptActionInterface {
 public class TypeScriptActionTablesDataProvider inherits TypeScriptActionRecordBasedDataProvider {
     public {
         #! Provider info
-        const ProviderInfo = TypeScriptActionRecordBasedDataProvider::ProviderInfo + <DataProviderInfo>{
+        const ProviderInfo = <DataProviderInfo>{
             "name": "tables",
             "type": "TypeScriptActionTablesDataProvider",
             "supports_children": True,
@@ -36,20 +36,23 @@ public class TypeScriptActionTablesDataProvider inherits TypeScriptActionRecordB
         };
     }
 
+    private {
+        hash<DataProviderInfo> table_info;
+    }
+
     #! Creates the object from the arguments
-    constructor(ActionFunctionContext fctx) : TypeScriptActionRecordBasedDataProvider("tables", fctx) {
+    constructor(ActionFunctionContext fctx, hash<DataProviderInfo> table_info)
+            : TypeScriptActionRecordBasedDataProvider("tables", table_info, fctx) {
+        self.table_info = table_info;
     }
 
     #! Return data provider summary info
     *list<hash<DataProviderSummaryInfo>> getChildProviderSummaryInfo() {
         return map cast<hash<DataProviderSummaryInfo>>(
-            TypeScriptActionRecordBasedDataProvider::ProviderInfo{DataProviderSummaryInfoKeys}
+            info{DataProviderSummaryInfoKeys}
                 + {
                 "name": $1,
                 "desc": sprintf("Record-based data provider for app `%s` table `%s`", app, $1),
-                "type": "TypeScriptActionTableDataProvider",
-                "supports_children": False,
-                "children_can_support_records": False,
             }
         ), getChildProviderNames();
     }
@@ -77,7 +80,7 @@ public class TypeScriptActionTablesDataProvider inherits TypeScriptActionRecordB
     */
     private *AbstractDataProvider getChildProviderImpl(string name) {
         try {
-            return new TypeScriptActionRecordBasedDataProvider(name, self, conn);
+            return new TypeScriptActionRecordBasedDataProvider(name, table_info, self, conn);
         } catch (hash<ExceptionInfo> ex) {
             rethrow "CHILD-PROVIDER-ERROR", sprintf("Table %y cannot be acquired from %y: %s: %s", name, getName(),
                 ex.err, ex.desc), ex.arg;

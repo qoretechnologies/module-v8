@@ -221,7 +221,7 @@ exports.actionsCatalogue = {
                     },
                 };
             },
-            /** "get_expressions" defines global expressions for record-based action support
+            /** "expressions" defines global expressions for record-based action support
                 # the following type is used in the expression definition; "search" is for expressions that can be used
                 # in search filters, "field" is for expressions that can be used in field lists or in the value of
                 # update operations
@@ -248,7 +248,7 @@ exports.actionsCatalogue = {
                                            // be used
                     example_value?: any,   // values must use the argument's type
                 };
-                get_expressions(ctx: object): {
+                expressions: {
                     [key: string]: {
                         // the type of expression
                         type: "operator" | "function",
@@ -290,48 +290,46 @@ exports.actionsCatalogue = {
                   response itself
                 @return an object defining global expressions; the format is as described above
             */
-            "get_expressions": async function(ctx) {
-                return {
-                    "AND": {
-                        "type": "operator",
-                        "subtype": "logic-operator",
-                        "name": "AND",
-                        "display_name": "and (&&)",
-                        "short_desc": "Returns True if all arguments are True with logic short-circuiting",
-                        "desc": "Returns `True` if all arguments are `True` with logic short-circuiting",
-                        "symbol": "&&",
-                        "roles": ["search", "field"],
-                        "args": [
-                            {
-                                "type_code": "any",
-                                "type": "bool",
-                            },
-                        ],
-                        "varargs": true,
-                        "return_type": "bool",
-                    },
-                    "=": {
-                        "type": "operator",
-                        "subtype": "logic-operator",
-                        "name": "=",
-                        "display_name": "equals (=)",
-                        "short_desc": "Returs True if the two arguments are logically equal; types are converted if necessary",
-                        "desc": "Returs `True` if the two arguments are logically equal; types are converted if necessary",
-                        "symbol": "==",
-                        "roles": ["search", "field"],
-                        "args": [
-                            {
-                                "type_code": "any",
-                                "type": "any",
-                            },
-                            {
-                                "type_code": "any",
-                                "type": "any",
-                            },
-                        ],
-                        "return_type": "bool",
-                    },
-                };
+            "expressions": {
+                "AND": {
+                    "type": "operator",
+                    "subtype": "logic-operator",
+                    "name": "AND",
+                    "display_name": "and (&&)",
+                    "short_desc": "Returns True if all arguments are True with logic short-circuiting",
+                    "desc": "Returns `True` if all arguments are `True` with logic short-circuiting",
+                    "symbol": "&&",
+                    "roles": ["search", "field"],
+                    "args": [
+                        {
+                            "type_code": "any",
+                            "type": "bool",
+                        },
+                    ],
+                    "varargs": true,
+                    "return_type": "bool",
+                },
+                "=": {
+                    "type": "operator",
+                    "subtype": "logic-operator",
+                    "name": "=",
+                    "display_name": "equals (=)",
+                    "short_desc": "Returs True if the two arguments are logically equal; types are converted if necessary",
+                    "desc": "Returs `True` if the two arguments are logically equal; types are converted if necessary",
+                    "symbol": "==",
+                    "roles": ["search", "field"],
+                    "args": [
+                        {
+                            "type_code": "any",
+                            "type": "any",
+                        },
+                        {
+                            "type_code": "any",
+                            "type": "any",
+                        },
+                    ],
+                    "return_type": "bool",
+                },
             },
 
             // executes the search and returns a list of the records matched
@@ -367,17 +365,15 @@ exports.actionsCatalogue = {
             },
 
             // get search options
-            "get_search_options": async function (ctx) {
-                return {
-                    "for_update": {
-                        "display_name": "For Update?",
-                        "short_desc": "Should rows be locked for update?",
-                        "desc": "Should rows be locked for update?",
-                        "type": "string",
-                        "required": false,
-                        "default_value": false,
-                    },
-                };
+            "search_options": {
+                "for_update": {
+                    "display_name": "For Update?",
+                    "short_desc": "Should rows be locked for update?",
+                    "desc": "Should rows be locked for update?",
+                    "type": "string",
+                    "required": false,
+                    "default_value": false,
+                },
             },
 
             // creates a record and returns the created record
