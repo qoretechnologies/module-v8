@@ -1,6 +1,6 @@
-import { TQoreGetSearchOptionsFunction } from '@qoretechnologies/ts-toolkit';
+import { TQoreSearchOptions } from '@qoretechnologies/ts-toolkit';
 
-export const getNotionSearchOptions: TQoreGetSearchOptionsFunction = (_context) => ({
+export const NotionSearchOptions = {
   orderBy: {
     type: {
       type: 'hash',
@@ -16,4 +16,4 @@ export const getNotionSearchOptions: TQoreGetSearchOptionsFunction = (_context) 
       },
     },
   },
-});
+} satisfies TQoreSearchOptions;

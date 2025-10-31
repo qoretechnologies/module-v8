@@ -5,14 +5,14 @@ import { Locales } from '../../i18n/i18n-types';
 import { NOTION_APP_LOGO, NOTION_APP_NAME } from './constants';
 import { createNotionRecords } from './helpers/record-based/create-records';
 import { deleteNotionRecords } from './helpers/record-based/delete-records';
-import { getNotionExpressionsFunction } from './helpers/record-based/get-expressions';
+import { getNotionExpressions } from './helpers/record-based/get-expressions';
 import { getNotionRecordType } from './helpers/record-based/get-record-type';
-import { getNotionSearchOptions } from './helpers/record-based/get-search-options';
 import { getNotionTableList } from './helpers/record-based/get-table-list';
 import { searchNotionRecords } from './helpers/record-based/search-records';
 import { updateNotionRecords } from './helpers/record-based/update-records';
 
 import * as NOTION_ACTIONS from './actions';
+import { NotionSearchOptions } from './helpers/record-based/get-search-options';
 import * as NOTION_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
@@ -45,10 +45,10 @@ export default (locale: Locales) =>
         'Notion-Version': '2022-02-22',
       },
     },
-    get_expressions: getNotionExpressionsFunction(locale),
+    expressions: getNotionExpressions(locale),
     get_record_type: getNotionRecordType,
     get_table_list: getNotionTableList,
-    get_search_options: getNotionSearchOptions,
+    search_options: NotionSearchOptions,
     create_records: createNotionRecords,
     update_records: updateNotionRecords,
     delete_records: deleteNotionRecords,

@@ -11,18 +11,18 @@ import {
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import { SUPABASE_APP_LOGO, SUPABASE_APP_NAME, SUPABASE_CONN_OPTIONS } from './constants';
-import { getSupabaseExpressionsFunction } from './helpers/record-based/get-expression';
+import { getSupabaseExpressions } from './helpers/record-based/get-expression';
 import { getSupabaseRecordType } from './helpers/record-based/get-record-type';
 import { getSupabaseTableList } from './helpers/record-based/get-table-list';
 import { searchSupabaseRecords } from './helpers/record-based/search-records';
 
-import * as SUPABASE_TRIGGERS from './triggers';
 import * as SUPABASE_ACTIONS from './actions';
 import { createSupabaseRecords } from './helpers/record-based/create-records';
-import { upsertSupabaseRecord } from './helpers/record-based/upsert-records';
-import { updateSupabaseRecords } from './helpers/record-based/update-records';
 import { deleteSupabaseRecords } from './helpers/record-based/delete-records';
-import { getSupabaseSearchOptions } from './helpers/record-based/get-search-options';
+import { SupabaseSearchOptions } from './helpers/record-based/get-search-options';
+import { updateSupabaseRecords } from './helpers/record-based/update-records';
+import { upsertSupabaseRecord } from './helpers/record-based/upsert-records';
+import * as SUPABASE_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
   ({
@@ -82,12 +82,12 @@ export default (locale: Locales) =>
       },
     },
     get_table_list: getSupabaseTableList,
-    get_expressions: getSupabaseExpressionsFunction(locale),
+    expressions: getSupabaseExpressions(locale),
     get_record_type: getSupabaseRecordType,
     search_records: searchSupabaseRecords,
     create_records: createSupabaseRecords,
     upsert_records: upsertSupabaseRecord,
     update_records: updateSupabaseRecords,
     delete_records: deleteSupabaseRecords,
-    get_search_options: getSupabaseSearchOptions,
+    search_options: SupabaseSearchOptions,
   }) satisfies TQoreRecordBasedApp & TQoreAppWithActions;

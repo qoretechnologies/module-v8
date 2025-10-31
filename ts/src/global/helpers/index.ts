@@ -21,7 +21,6 @@ import {
   TQoreAppActionWithWebhook,
   TQoreAppEventAction,
   TQoreAppNonEventAction,
-  TQoreGetExpressionsFunction,
   TQoreOptions,
   TQorePartialEventAction,
   TQorePartialNonEventAction,
@@ -306,7 +305,7 @@ export const mapExpressionsToApp = (
     Omit<TQoreSearchRecordsExpressionDefinition, 'display_name' | 'short_desc' | 'desc'>
   >,
   locale: Locales
-): ReturnType<TQoreGetExpressionsFunction> => {
+): TQoreSearchRecordsExpressions => {
   const localeExpressions: TQoreSearchRecordsExpressions = {};
 
   Object.entries(expressions).forEach(([key, expression]) => {

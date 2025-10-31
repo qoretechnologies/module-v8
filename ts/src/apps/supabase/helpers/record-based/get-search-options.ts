@@ -1,6 +1,6 @@
-import { TQoreGetSearchOptionsFunction } from '@qoretechnologies/ts-toolkit';
+import { TQoreSearchOptions } from '@qoretechnologies/ts-toolkit';
 
-export const getSupabaseSearchOptions: TQoreGetSearchOptionsFunction = (_context) => ({
+export const SupabaseSearchOptions = {
   orderBy: {
     type: {
       type: 'hash',
@@ -16,4 +16,4 @@ export const getSupabaseSearchOptions: TQoreGetSearchOptionsFunction = (_context
       },
     },
   },
-});
+} satisfies TQoreSearchOptions;
