@@ -1,4 +1,8 @@
-import { TQoreAppActionOption, TQoreAppActionOverrideOption } from '@qoretechnologies/ts-toolkit';
+import {
+  EQoreRecordBasedAppErrorCodes,
+  TQoreAppActionOption,
+  TQoreAppActionOverrideOption,
+} from '@qoretechnologies/ts-toolkit';
 
 export const HUBSPOT_APP_NAME = 'Hubspot';
 
@@ -71,4 +75,20 @@ export const HubspotAssociationsType: TQoreAppActionOption = {
       },
     },
   },
+};
+
+export class HubspotError extends Error {
+  public errorCode?: string;
+
+  constructor(message: string, errorCode?: string) {
+    super(message);
+    this.name = 'HubspotError';
+    this.errorCode = errorCode;
+  }
+}
+
+export const HUBSPOT_DUPLICATE_ERROR_CODE = '23505';
+
+export const HubspotErrorCodeToQoreErrorCodeMap: Record<string, string> = {
+  [HUBSPOT_DUPLICATE_ERROR_CODE]: EQoreRecordBasedAppErrorCodes.DUPLICATE_RECORD,
 };
