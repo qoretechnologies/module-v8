@@ -25,10 +25,7 @@
 public namespace TypeScriptActionInterface {
 public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDataProviderBase {
     public {
-        #! Provider info
-        const ProviderInfo = <DataProviderInfo>{
-            "has_record": True,
-        };
+        hash<DataProviderInfo> info;
 
         #! Requires expression keys
         const RequiredExpressionKeys = (
@@ -47,42 +44,41 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         *hash<AsyncCallInfo> begin_transaction;
         *hash<AsyncCallInfo> commit;
         *hash<AsyncCallInfo> rollback;
-        *hash<AsyncCallInfo> get_expressions;
         *hash<AsyncCallInfo> search_records;
         *hash<AsyncCallInfo> create_records;
         *hash<AsyncCallInfo> update_records;
         *hash<AsyncCallInfo> upsert_records;
         *hash<AsyncCallInfo> delete_records;
 
-        hash<string, bool> have_options;
         *hash<string, *hash<string, hash<DataProviderOptionInfo>>> option_map;
-        *hash<string, *hash<AsyncCallInfo>> get_option_map;
-
-        hash<string, hash<DataProviderExpressionInfo>> expressions;
 
         const DataProviderArgInfoTypedHash = TypedHash::forName("DataProviderArgInfo");
         const ArgInfoMembers = map $1.getName(), DataProviderArgInfoTypedHash.getMembers();
     }
 
     #! Creates the object from the arguments
-    constructor(string name, ActionFunctionContext fctx) : TypeScriptActionDataProviderBase(name, fctx) {
-        hash<AppInfo> info = TypeScriptActionInterface::getInitializedRecordBasedAppInfo(fctx.app);
-        get_table_list = info.get_table_list;
-        get_record_type = info.get_record_type;
-        begin_transaction = info.begin_transaction;
-        omap.tables = info.get_table_list;
-        commit = info.commit;
-        rollback = info.rollback;
-        get_expressions = info.get_expressions;
-        search_records = info.search_records;
-        create_records = info.create_records;
-        update_records = info.update_records;
-        upsert_records = info.upsert_records;
-        delete_records = info.delete_records;
+    constructor(string name, hash<DataProviderInfo> info, ActionFunctionContext fctx, *RestConnection conn)
+            : TypeScriptActionDataProviderBase(name, fctx) {
+        info.name = name;
+        info.desc = sprintf("Record-based data provider for app `%s` table `%s`", app, name);
+        self.info = info;
+        hash<AppInfo> appinfo = TypeScriptActionInterface::getInitializedRecordBasedAppInfo(fctx.app);
+        get_table_list = appinfo.get_table_list;
+        get_record_type = appinfo.get_record_type;
+        begin_transaction = appinfo.begin_transaction;
+        omap.tables = appinfo.get_table_list;
+        commit = appinfo.commit;
+        rollback = appinfo.rollback;
+        search_records = appinfo.search_records;
 
-        get_option_map.search = info.get_search_options;
-        get_option_map.create = info.get_create_options;
-        get_option_map.upsert = info.get_upsert_options;
+        create_records = appinfo.create_records;
+        update_records = appinfo.update_records;
+        upsert_records = appinfo.upsert_records;
+        delete_records = appinfo.delete_records;
+
+        if (conn) {
+            setConnection(conn);
+        }
     }
 
     #! Begins a transaction with a data provider
@@ -139,6 +135,64 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         return record_type;
     }
 
+    #! Returns the description of the record type in the context of the given options
+    private *hash<string, AbstractDataField> getRecordTypeWithOptionsImpl(*hash<auto> options,
+            *hash<auto> search_options) {
+        if (!record_type) {
+            checkRecordTypeIntern(options);
+        }
+        return record_type;
+    }
+
+    #! Returns the description of the record type for creating records in the context of the given options
+    private *hash<string, AbstractDataField> getCreateRecordTypeWithOptionsImpl(*hash<auto> options,
+            *hash<auto> create_options) {
+        if (!record_type) {
+            checkRecordTypeIntern(options);
+        }
+        return record_type;
+    }
+
+    #! Returns the description of the record type for updating records in the context of the given options
+    private *hash<string, AbstractDataField> getUpdateRecordTypeWithOptionsImpl(*hash<auto> options,
+            *hash<auto> search_options) {
+        if (!record_type) {
+            checkRecordTypeIntern(options);
+        }
+        return record_type;
+    }
+
+    #! Returns an iterator for zero or more records matching the search options
+    /** @param block_size the number of records in a read block; must be a positive number
+        @param where_cond the search criteria; will be processed by processSearchParameters()
+        @param search_options the search options; will be processed by validateSearchOptions()
+
+        @return a bulk record interface object that will return the records in bulk format
+
+        @throw INVALID-BLOCK-SIZE the block size must be a positive number
+        @throw INVALID-OPERATION the data provider does not support reading
+
+        @since DataProvider 2.3
+    */
+    AbstractDataProviderBulkRecordInterface searchRecordsBulk(int block_size = 1000,
+            *hash<auto> where_cond, *hash<auto> search_options) {
+        search_options.table = name;
+        hash<DataContextInfo> cctx = getCallContextInfo({
+            "table": name,
+        });
+        where_cond = cast<*hash<DataProviderExpression>>(getSearchExpression(where_cond, search_options));
+        if (TSAI::checkServer()) {
+            return new TypeScriptBulkRecordProxyInterface(block_size, self, conn.name, conn.getRealOptions(),
+                where_cond, search_options, cctx);
+        } else {
+            *code get_records = getAsyncValue(search_records, cctx,
+                info.expressions ? convertExpression(where_cond) : NOTHING,
+                info.expressions ? search_options : NOTHING);
+            return new TypeScriptBulkRecordInterface(block_size, self, get_records, cctx,
+                info.expressions ? NOTHING : where_cond);
+        }
+    }
+
     #! Returns an iterator for zero or more records matching the search options
     /** @param block_size the number of records in a read block; must be a positive number
         @param where_cond the search criteria; will be processed by processSearchParameters()
@@ -154,15 +208,83 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
     AbstractDataProviderBulkRecordInterface searchRecordsBulk(int block_size = 1000,
             *hash<DataProviderExpression> where_cond, *hash<auto> search_options) {
         search_options.table = name;
-        *hash<DataContextInfo> cctx = getCallContextInfo();
+        hash<DataContextInfo> cctx = getCallContextInfo({
+            "table": name,
+        });
+        where_cond = processSearchParameters(where_cond, search_options);
         if (TSAI::checkServer()) {
-            return new TypeScriptBulkRecordProxyInterface(block_size, self, where_cond, search_options, cctx);
+            return new TypeScriptBulkRecordProxyInterface(block_size, self, conn.name, conn.getRealOptions(),
+                where_cond, search_options, cctx);
         } else {
             *code get_records = getAsyncValue(search_records, cctx,
-                get_expressions ? where_cond : NOTHING, get_expressions ? search_options : NOTHING);
+                info.expressions ? convertExpression(where_cond) : NOTHING,
+                info.expressions ? search_options : NOTHING);
             return new TypeScriptBulkRecordInterface(block_size, self, get_records, cctx,
-                get_expressions ? NOTHING : where_cond);
+                info.expressions ? NOTHING : where_cond);
         }
+    }
+
+    static hash<DataProviderInfo> getDataProviderInfo(hash<AppInfo> appinfo) {
+        hash<DataProviderInfo> rv = <DataProviderInfo>{
+            "type": "TypeScriptActionRecordBasedDataProvider",
+        };
+        if (appinfo.commit) {
+            rv.transaction_management = True;
+        }
+        if (appinfo.search_records) {
+            rv.supports_read = True,
+            rv.supports_bulk_read = True;
+            rv.supports_search_expressions = True;
+            rv.has_record = True;
+        }
+        if (appinfo.search_options) {
+            rv.search_options = map {$1.key: getDataProviderOption(appinfo.app.name, "search", $1.key, $1.value)},
+                appinfo.search_options.pairIterator();
+            # add in search options that are always supported
+            map rv.search_options{$1.key} = $1.value,
+                GenericRecordSearchOptions{"requires_result", "max_records"}.pairIterator(), !rv.search_options{$1.key};
+        }
+
+        if (appinfo.expressions) {
+            rv.expressions = map {$1.key: getExpression(appinfo.app.name, $1.key, $1.value)}, appinfo.expressions.pairIterator();
+            rv.supports_native_search = True;
+        }
+        if (appinfo.create_records) {
+            rv.supports_create = True;
+            if (appinfo.create_options) {
+                rv.create_options = map {$1.key: getDataProviderOption(appinfo.app.name, "create", $1.key, $1.value)},
+                    appinfo.create_options.pairIterator();
+            }
+        }
+        if (appinfo.update_records) {
+            rv.supports_update = True;
+        }
+        if (appinfo.upsert_records) {
+            rv.supports_upsert = True;
+            if (appinfo.upsert_options) {
+                rv.upsert_options = map {$1.key: getDataProviderOption(appinfo.app.name, "upsert", $1.key, $1.value)},
+                    appinfo.upsert_options.pairIterator();
+            }
+        }
+        if (appinfo.delete_records) {
+            rv.supports_delete = True;
+        }
+        return rv;
+    }
+
+    #! Converts expressions to the format required by the JS / TS code
+    private *hash<auto> convertExpression(auto exp) {
+        return exists exp ? {
+            "value": exp,
+        } : NOTHING;
+    }
+
+    #! Converts expressions to the format required by the JS / TS code
+    private *hash<auto> convertExpression(hash<auto> exp) {
+        if (exp.hasKey("args")) {
+            exp.args = map convertExpression($1), exp.args;
+        }
+        return exp;
     }
 
     #! Returns an iterator for zero or more records matching the search options
@@ -171,7 +293,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
     */
     private AbstractDataProviderRecordIterator searchRecordsImpl(*hash<auto> where_cond,
             *hash<auto> search_options) {
-        return searchRecordsBulk(1000, getSearchExpression(where_cond), search_options).getRecordIterator();
+        return searchRecordsBulk(1000, where_cond, search_options).getRecordIterator();
     }
 
     #! Returns a single record matching the search options
@@ -181,8 +303,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         @throw MULTIPLE-RECORDS-ERROR multiple records found
     */
     private *hash<auto> searchSingleRecordImpl(*hash<auto> where_cond, *hash<auto> search_options) {
-        AbstractDataProviderRecordIterator i = searchRecordsBulk(2, getSearchExpression(where_cond), search_options)
-            .getRecordIterator();
+        AbstractDataProviderRecordIterator i = searchRecordsBulk(2, where_cond, search_options).getRecordIterator();
         if (!i.next()) {
             return;
         }
@@ -288,178 +409,85 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
 
     #! Returns static info about the data provider
     private hash<DataProviderInfo> getStaticInfoImpl() {
-        hash<DataProviderInfo> rv = ProviderInfo;
-        if (commit) {
-            rv.transaction_management = True;
-        }
-        if (search_records) {
-            checkOptions("search");
-            rv.supports_read = True,
-            rv.supports_bulk_read = True;
-            rv.supports_search_expressions = True;
-            rv.has_record = True;
-            rv.search_options = option_map.search;
-        }
-        if (get_expressions) {
-            rv.supports_native_search = True;
-        }
-        if (create_records) {
-            checkOptions("create");
-            rv.supports_create = True;
-            rv.create_options = option_map.create;
-        }
-        if (update_records) {
-            rv.supports_update = True;
-        }
-        if (upsert_records) {
-            checkOptions("upsert");
-            rv.supports_upsert = True;
-            rv.upsert_options = option_map.upsert;
-        }
-        if (delete_records) {
-            rv.supports_delete = True;
-        }
-        rv.expressions = getExpressions();
-        return rv;
+        return info;
     }
 
-    private synchronized checkRecordTypeIntern() {
-        if (record_type) {
+    private synchronized checkRecordTypeIntern(*hash<auto> options = DataProviderDataContextHelper::getHash()) {
+        if (record_type || !options.table.val()) {
             return;
         }
-        auto v = getAsyncValue(get_record_type, getCallContextInfo());
+        auto v = getAsyncValue(get_record_type, getCallContextInfo(options));
         record_type = TypeScriptActionInterface::getType("record_type", v).getFields();
     }
 
-    private checkOptions(string type) {
-        if (!have_options{type}) {
-            checkOptionsIntern(type);
-        }
-    }
-
-    private synchronized checkOptionsIntern(string type) {
-        if (have_options{type}) {
-            return;
-        }
-        have_options{type} = True;
-        if (!get_option_map{type}) {
-            if (type == "search") {
-                option_map{type} = AbstractDataProvider::GenericRecordSearchOptions;
-            }
-            return;
-        }
-        auto v = getAsyncValue(get_option_map{type}, getCallContextInfo());
-        if (!exists v) {
-            if (type == "search") {
-                option_map{type} = GenericRecordSearchOptions{"requires_result", "max_records"};
-            }
-            return;
-        }
+    private static hash<DataProviderOptionInfo> getDataProviderOption(string app, string type, string name, auto v) {
         if (v.typeCode() != NT_HASH) {
-            throw type.upr() + "-OPTIONS-TYPE-ERROR", sprintf("The 'get_%s_options' function for app %y returned "
-                "type %y; expecting \"hash\"", type, app.name, v.fullType());
+            throw "SEARCH-OPTION-TYPE-ERROR", sprintf("The '%s_options' function for app %y search option %y "
+                "returned type %y; expecting \"hash\"", type, app, name, v.fullType());
         }
-        option_map{type} = map {$1.key: getDataProviderOption($1.key, $1.value)}, v.pairIterator();
-        if (type == "search") {
-            option_map{type} = option_map{type} + GenericRecordSearchOptions{"requires_result", "max_records"};
-        }
-    }
-
-    private hash<DataProviderOptionInfo> getDataProviderOption(string name, auto v) {
-        if (v.typeCode() != NT_HASH) {
-            throw "SEARCH-OPTION-TYPE-ERROR", sprintf("The 'get_search_options' function for app %y search option %y "
-                "returned type %y; expecting \"hash\"", app.name, name, v.fullType());
-        }
-        v.type = TypeScriptActionInterface::getType("search option " + name + " type", remove v.type);
+        v.type = TypeScriptActionInterface::getType(type + " option " + name + " type", remove v.type);
         return cast<hash<DataProviderOptionInfo>>(v);
     }
 
-    private *hash<string, hash<DataProviderExpressionInfo>> getExpressions() {
-        if (!expressions) {
-            checkExpressionsIntern();
-        }
-        return expressions;
-    }
-
-    private synchronized checkExpressionsIntern() {
-        if (expressions) {
-            return;
-        }
-        if (!get_expressions) {
-            expressions = GenericExpressions;
-            return;
-        }
-        auto v = getAsyncValue(get_expressions, getCallContextInfo());
-        if (!exists v) {
-            expressions = GenericExpressions;
-            return;
-        }
+    private static hash<DataProviderExpressionInfo> getExpression(string app, string name, auto v) {
         if (v.typeCode() != NT_HASH) {
-            throw "EXPRESSION-TYPE-ERROR", sprintf("The 'get_expressions' function for app %y returned type %y; "
-                "expecting \"hash\"", app.name, v.fullType());
-        }
-        expressions = map {$1.key: getExpression($1.key, $1.value)}, v.pairIterator();
-    }
-
-    private hash<DataProviderExpressionInfo> getExpression(string name, auto v) {
-        if (v.typeCode() != NT_HASH) {
-            throw "EXPRESSION-TYPE-ERROR", sprintf("The 'get_expressions' function for app %y expression %y returned "
-                "type %y; expecting \"hash\"", app.name, name, v.fullType());
+            throw "EXPRESSION-TYPE-ERROR", sprintf("The 'expressions' object for app %y expression %y is of invalid "
+                "type %y; expecting \"hash\"", app, name, v.fullType());
         }
         *int type = ExpressionTypeDescMap{v.type};
         if (!type) {
-            throw "EXPRESSION-TYPE-ERROR", sprintf("The 'get_expressions' function for app %y expression %y returned "
-                "invalid type %y; known types: %y", app.name, name, v.type, keys ExpressionTypeDescMap);
+            throw "EXPRESSION-TYPE-ERROR", sprintf("The 'expressions' object for app %y expression %y defines "
+                "invalid type %y; known types: %y", app, name, v.type, keys ExpressionTypeDescMap);
         }
         remove v.type;
         *int subtype;
         if (v.hasKey("subtype")) {
             subtype = ExpressionSubtypeDescMap{remove v.subtype};
             if (!subtype) {
-                throw "EXPRESSION-SUBTYPE-ERROR", sprintf("The 'get_expressions' function for app %y expression %y "
-                    "returned invalid subtype %y; known subtypes: %y", app.name, name, v.subtype,
+                throw "EXPRESSION-SUBTYPE-ERROR", sprintf("The 'expressions' object for app %y expression %y "
+                    "defines invalid subtype %y; known subtypes: %y", app, name, v.subtype,
                     keys ExpressionSubtypeDescMap);
             }
         } else {
             subtype = DES_Generic;
         }
         if (v.roles.typeCode() != NT_LIST) {
-            throw "EXPRESSION-ROLES-ERROR", sprintf("The 'get_expressions' function for app %y expression %y returned "
-                "invalid roles value of type %y; expecting \"list\"", app.name, name, v.roles.fullType());
+            throw "EXPRESSION-ROLES-ERROR", sprintf("The 'expressions' object for app %y expression %y defines "
+                "invalid roles value of type %y; expecting \"list\"", app, name, v.roles.fullType());
         }
         int role = foldl $1 | $2, (map getRole(name, name, $1), remove v.roles);
         softlist<hash<DataProviderSignatureTypeInfo>> args;
         *softlist<hash<DataProviderArgInfo>> arg_info;
         if (v.hasKey("args")) {
             if (v.args.typeCode() != NT_LIST) {
-                throw "EXPRESSION-ARGS-ERROR", sprintf("The 'get_expressions' function for app %y expression %y "
-                    "returned invalid args value of type %y; expecting \"list\"", app.name, name, v.args.fullType());
+                throw "EXPRESSION-ARGS-ERROR", sprintf("The 'expressions' object for app %y expression %y "
+                    "defines invalid args value of type %y; expecting \"list\"", app, name, v.args.fullType());
             }
             list<auto> arg_list = remove v.args;
             foreach auto a in (arg_list) {
                 if (a.typeCode() != NT_HASH) {
-                    throw "EXPRESSION-ARG-TYPE-ERROR", sprintf("The 'get_expressions' function for app %y "
-                        "expression %y returned an invalid arg value of type %y; expecting \"hash\"", app.name, name,
+                    throw "EXPRESSION-ARG-TYPE-ERROR", sprintf("The 'expressions' object for app %y "
+                        "expression %y defines an invalid arg value of type %y; expecting \"hash\"", app, name,
                         a.fullType());
                 }
 
                 *hash<auto> this_arg_info = remove a{ArgInfoMembers};
                 if ($#) {
                     if (this_arg_info && !arg_info) {
-                        throw "EXPRESSION-ARG-INFO-ERROR", sprintf("The 'get_expressions' function for app %y "
-                            "expression %y returned arg info with argument %d / %d; arg info must be either included "
-                            "with all arguments or with none", app.name, name, $# + 1, arg_list.size());
+                        throw "EXPRESSION-ARG-INFO-ERROR", sprintf("The 'expressions' object for app %y "
+                            "expression %y defines arg info with argument %d / %d; arg info must be either included "
+                            "with all arguments or with none", app, name, $# + 1, arg_list.size());
                     }
                     if (!this_arg_info && arg_info) {
-                        throw "EXPRESSION-ARG-INFO-ERROR", sprintf("The 'get_expressions' function for app %y "
-                            "expression %y did not return arg info with argument %d / %d; arg info must be either "
-                            "included with all arguments or with none", app.name, name, $# + 1, arg_list.size());
+                        throw "EXPRESSION-ARG-INFO-ERROR", sprintf("The 'expressions' object for app %y "
+                            "expression %y did not define arg info with argument %d / %d; arg info must be either "
+                            "included with all arguments or with none", app, name, $# + 1, arg_list.size());
                     }
                 }
                 *int type_code = SignatureTypeDescMap{a.type_code};
                 if (!type_code) {
-                    throw "EXPRESSION-TYPE-ERROR", sprintf("The 'get_expressions' function for app %y expression %y "
-                        "returned invalid type_code %y for argument %d; known type-codes: %y", app.name, name,
+                    throw "EXPRESSION-TYPE-ERROR", sprintf("The 'expressions' object for app %y expression %y "
+                        "defines invalid type_code %y for argument %d; known type-codes: %y", app, name,
                         a.type_code, $# + 1, keys SignatureTypeDescMap);
                 }
                 AbstractDataProviderType arg_type = TypeScriptActionInterface::getType("arg-" + ($# + 1), a.type);
@@ -487,15 +515,15 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         } + cast<hash<DataProviderExpressionInfo>>(v);
     }
 
-    private int getRole(string app, string exp, auto v) {
+    private static int getRole(string app, string exp, auto v) {
         if (v.typeCode() != NT_STRING) {
-            throw "EXPRESSION-ROLE-ERROR", sprintf("The 'get_expressions' function for app %y expression %y returned "
+            throw "EXPRESSION-ROLE-ERROR", sprintf("The 'expressions' object for app %y expression %y defines "
                 "invalid role %y with type %y; expecting \"string\"", app, exp, v, v.fullType());
         }
         *int role = RoleDescMap{v};
         if (!role) {
-            throw "EXPRESSION-ROLE-ERROR", sprintf("The 'get_expressions' function for app %y expression %y returned "
-                "invalid role %y; known roles: %y", app.name, v, keys RoleDescMap);
+            throw "EXPRESSION-ROLE-ERROR", sprintf("The 'expressions' object for app %y expression %y defines "
+                "invalid role %y; known roles: %y", app, v, keys RoleDescMap);
         }
         return role;
     }

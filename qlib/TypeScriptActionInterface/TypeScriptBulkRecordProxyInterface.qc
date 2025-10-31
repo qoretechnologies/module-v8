@@ -38,14 +38,15 @@ public class TypeScriptBulkRecordProxyInterface inherits AbstractDataProviderBul
     }
 
     #! Creates the object from the arguments
-    constructor(int block_size, TypeScriptActionRecordBasedDataProvider prov,
+    constructor(int block_size, TypeScriptActionRecordBasedDataProvider prov, string conn_name, hash<auto> conn_opts,
             *hash<DataProviderExpression> where_cond, hash<auto> search_options, *hash<DataContextInfo> options)
             : AbstractDataProviderBulkRecordInterface(block_size, remove search_options.requires_result,
                 remove search_options.max_records) {
         self.prov = prov;
         # generate unique request ID
         id = UUID::get();
-        hash<auto> rv = TSAI::server.searchRecords(prov.app, id, block_size, where_cond, search_options, options);
+        hash<auto> rv = TSAI::server.searchRecords(prov.app, id, conn_name, conn_opts, block_size, where_cond,
+            search_options, options);
         first_block = rv.rv;
         proxy = rv.proxy;
         have_first_block = True;

@@ -599,10 +599,10 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             hash<DataProviderActionInfo> action, *hash<auto> options) {
         #TSAI::debug("TypeScriptActionDataProviderBase::tryGetActionOptionsWithOptionsImpl() options: %y dmap: %y",
         #    options, keys dmap);
-        if (!dmap || (options.typeCode() != NT_HASH)) {
-            return action.options;
+        if (dmap && options.typeCode() == NT_HASH) {
+            action.options += getActionOptionsWithOptions(options);
         }
-        return action.options + getActionOptionsWithOptions(options);
+        return AbstractDataProvider::tryGetActionOptionsWithOptionsImpl(action, options);
     }
 
     #! Returns reference data of the given kind if available

@@ -169,7 +169,7 @@ class TsProxy inherits TypeScriptProxy {
                         break;
 
                     case PC_SEARCH_RECORDS:
-                        searchRecords(h.args[0], h.args[1], h.args[2], h.args[3]);
+                        searchRecords(h.args[0], h.args[1], h.args[2], h.args[3], h.args[4], h.args[5]);
                         break;
 
                     case PC_RELEASE_SEARCH:
@@ -199,14 +199,16 @@ class TsProxy inherits TypeScriptProxy {
         exit(0);
     }
 
-    private searchRecords(string app, int block_size, *hash<DataProviderExpression> where_cond,
+    private searchRecords(string app, string conn_name, hash<auto> conn_opts, int block_size, *hash<auto> where_cond,
             hash<auto> search_options) {
         ASSERT(!event);
         TypeScriptActionInterface::initApp(app);
-        AbstractDataProvider prov =
+        TypeScriptActionRecordBasedDataProvider prov =
             TypeScriptActionInterface::getAppDataProvider(app).getChildProviderPath("tables/" + search_options.table);
-        search = prov.searchRecordsBulk(block_size, where_cond,
-            search_options);
+        if (conn_name.val()) {
+            prov.setConnection(getRestConnection(app, conn_name, conn_opts));
+        }
+        search = prov.searchRecordsBulk(block_size, cast<*hash<DataProviderExpression>>(where_cond), search_options);
         *hash<auto> rv = search.getValue();
         if (!rv.firstValue().lsize()) {
             remove search;
@@ -403,59 +405,61 @@ class TsProxy inherits TypeScriptProxy {
         sendString(yaml);
     }
 
-    private getEventType(string app, string action, *string conn_name, *hash<auto> conn_opts, auto req) {
-        info("Get event type app: %y action: %y conn_opts: %y req: %y", app, action, LoggerUtil::getArgSummary(conn_opts),
-            LoggerUtil::getArgSummary(req));
+    private getEventType(string app, string action, *string conn_name, *hash<auto> conn_opts, *hash<auto> options) {
+        info("Get event type app: %y action: %y conn_opts: %y options: %y", app, action,
+            LoggerUtil::getArgSummary(conn_opts), LoggerUtil::getArgSummary(options));
         TypeScriptActionInterface::initApp(app);
         TypeScriptActionInterface::initAppAction(app, action);
         TypeScriptActionEventDataProviderBase prov = TypeScriptActionInterface::getAppDataProvider(app)
             .getChildProviderEx(action);
         prov.setLogger(logger);
-        DataProviderDataContextHelper dch(req);
+        DataProviderDataContextHelper dch(options);
         if (conn_name.val()) {
             prov.setConnection(getRestConnection(app, conn_name, conn_opts));
         }
-        *HashDataType type = prov.getEventInfoWithData(prov.getEventId(), req).type;
+        *HashDataType type = prov.getEventInfoWithOptions(prov.getEventId(), options).type;
         string yaml = makeSend(CC_OK, {
             "rv": type ? type.serialize() : NOTHING,
         });
         sendString(yaml);
     }
 
-    private getDynamicOptions(string app, string action, *string conn_name, *hash<auto> conn_opts, auto req) {
-        info("Get dynamic options app: %y action: %y conn_opts: %y req: %y", app, action,
-            LoggerUtil::getArgSummary(conn_opts), LoggerUtil::getArgSummary(req));
+    private getDynamicOptions(string app, string action, *string conn_name, *hash<auto> conn_opts,
+            *hash<auto> options) {
+        info("Get dynamic options app: %y action: %y conn_opts: %y options: %y", app, action,
+            LoggerUtil::getArgSummary(conn_opts), LoggerUtil::getArgSummary(options));
         TypeScriptActionInterface::initApp(app);
         TypeScriptActionInterface::initAppAction(app, action);
         TypeScriptActionDataProviderBase prov = TypeScriptActionInterface::getAppDataProvider(app)
             .getChildProviderEx(action);
         prov.setLogger(logger);
-        DataProviderDataContextHelper dch(req);
+        DataProviderDataContextHelper dch(options);
         if (conn_name.val()) {
             prov.setConnection(getRestConnection(app, conn_name, conn_opts));
         }
-        *hash<string, hash<ActionOptionInfo>> rv = prov.getActionOptionsWithData(req);
+        *hash<string, hash<ActionOptionInfo>> rv = prov.tryGetActionOptionsWithOptions(
+            DataProviderActionCatalog::getAppAction(app, action), options);
         string yaml = makeSend(CC_OK, {
             "rv": rv ? Serializable::serialize(rv) : NOTHING,
         });
         sendString(yaml);
     }
 
-    private getRequestType(string app, string action, *string conn_name, *hash<auto> conn_opts, auto req) {
-        info("Get request type app: %y action: %y conn_opts: %y req: %y", app, action,
-            LoggerUtil::getArgSummary(conn_opts), LoggerUtil::getArgSummary(req));
+    private getRequestType(string app, string action, *string conn_name, *hash<auto> conn_opts, *hash<auto> options) {
+        info("Get request type app: %y action: %y conn_opts: %y options: %y", app, action,
+            LoggerUtil::getArgSummary(conn_opts), LoggerUtil::getArgSummary(options));
         TypeScriptActionInterface::initApp(app);
         TypeScriptActionInterface::initAppAction(app, action);
         TypeScriptActionApiDataProvider prov = TypeScriptActionInterface::getAppDataProvider(app)
             .getChildProviderEx(action);
         prov.setLogger(logger);
-        DataProviderDataContextHelper dch(req);
+        DataProviderDataContextHelper dch(options);
         if (conn_name.val()) {
             prov.setConnection(getRestConnection(app, conn_name, conn_opts));
         }
-        *AbstractDataProviderType type = prov.getRequestTypeWithData(req);
+        *AbstractDataProviderType type = prov.getRequestTypeWithOptions(options);
         if (type && (type instanceof HashDataType)) {
-            TypeScriptActionInterface::resolveDynamicType(prov, req, type);
+            TypeScriptActionInterface::resolveDynamicType(prov, options, type);
         }
         string yaml = makeSend(CC_OK, {
             "rv": type ? type.serialize() : NOTHING,
@@ -463,21 +467,22 @@ class TsProxy inherits TypeScriptProxy {
         sendString(yaml);
     }
 
-    private getResponseType(string app, string action, *string conn_name, *hash<auto> conn_opts, auto req) {
-        info("Get response type app: %y action: %y conn_opts: %y req: %y", app, action,
-            LoggerUtil::getArgSummary(conn_opts), LoggerUtil::getArgSummary(req));
+    private getResponseType(string app, string action, *string conn_name, *hash<auto> conn_opts,
+            *hash<auto> options) {
+        info("Get response type app: %y action: %y conn_opts: %y options: %y", app, action,
+            LoggerUtil::getArgSummary(conn_opts), LoggerUtil::getArgSummary(options));
         TypeScriptActionInterface::initApp(app);
         TypeScriptActionInterface::initAppAction(app, action);
         TypeScriptActionApiDataProvider prov = TypeScriptActionInterface::getAppDataProvider(app)
             .getChildProviderEx(action);
         prov.setLogger(logger);
-        DataProviderDataContextHelper dch(req);
+        DataProviderDataContextHelper dch(options);
         if (conn_name.val()) {
             prov.setConnection(getRestConnection(app, conn_name, conn_opts));
         }
-        *AbstractDataProviderType type = prov.getResponseTypeWithData(req);
+        *AbstractDataProviderType type = prov.getResponseTypeWithOptions(options);
         if (type && (type instanceof HashDataType)) {
-            TypeScriptActionInterface::resolveDynamicType(prov, req, type);
+            TypeScriptActionInterface::resolveDynamicType(prov, options, type);
         }
         string yaml = makeSend(CC_OK, {
             "rv": type ? type.serialize() : NOTHING,

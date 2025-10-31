@@ -115,8 +115,8 @@ public class JavaScriptThreadProcessPool {
         imap{pkey} = info;
     }
 
-    *hash<auto> searchRecords(string app, string id, int block_size, *hash<DataProviderExpression> where_cond,
-            hash<auto> search_options, *hash<DataContextInfo> options) {
+    *hash<auto> searchRecords(string app, string id, string conn_name, hash<auto> conn_opts, int block_size,
+            *hash<DataProviderExpression> where_cond, hash<auto> search_options, *hash<DataContextInfo> options) {
         JavaScriptProgramProxy proxy;
         {
             AutoLock al(m);
@@ -143,7 +143,8 @@ public class JavaScriptThreadProcessPool {
         on_error {
             release(remove proxy);
         }
-        *hash<auto> rv = proxy.searchRecords(app, id, block_size, where_cond, search_options, options);
+        *hash<auto> rv = proxy.searchRecords(app, id, conn_name, conn_opts, block_size, where_cond, search_options,
+            options);
         if (!rv.firstValue().lsize()) {
             release(remove proxy);
         }
