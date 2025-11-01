@@ -238,7 +238,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         on_error remove search_id;
         info("Setting up search for PID %d @%s: %y", proc.id(), app, id);
         *hash<auto> rv = sendCommandArgs(NOTHING, PC_SEARCH_RECORDS, (app, conn_name, conn_opts, block_size,
-            where_cond, search_options));
+            where_cond ? Serializable::serialize(where_cond) : NOTHING, search_options));
         if (!rv.firstValue().lsize()) {
             remove search_id;
             info("Search @%s: %y complete -> %y", app, id, LoggerUtil::getArgSummary(rv));

@@ -23,7 +23,7 @@
 
 #! Main namespace for the TypeScriptActionInterface module
 public namespace TypeScriptActionInterface {
-#! The TypeScript data field
+#! The TypeScript data field class
 public class TypeScriptDataField inherits DataProvider::QoreDataField {
     #! Creates the field from the argument
     constructor(hash<auto> h, *ActionFunctionContext fctx) : QoreDataField(h) {

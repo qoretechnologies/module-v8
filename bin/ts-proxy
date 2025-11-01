@@ -199,7 +199,7 @@ class TsProxy inherits TypeScriptProxy {
         exit(0);
     }
 
-    private searchRecords(string app, string conn_name, hash<auto> conn_opts, int block_size, *hash<auto> where_cond,
+    private searchRecords(string app, string conn_name, hash<auto> conn_opts, int block_size, *binary where_cond_data,
             hash<auto> search_options) {
         ASSERT(!event);
         TypeScriptActionInterface::initApp(app);
@@ -208,7 +208,11 @@ class TsProxy inherits TypeScriptProxy {
         if (conn_name.val()) {
             prov.setConnection(getRestConnection(app, conn_name, conn_opts));
         }
-        search = prov.searchRecordsBulk(block_size, cast<*hash<DataProviderExpression>>(where_cond), search_options);
+        hash<DataProviderExpression> where_cond;
+        if (where_cond_data) {
+            where_cond = Serializable::deserialize(where_cond_data);
+        }
+        search = prov.searchRecordsBulk(block_size, where_cond, search_options);
         *hash<auto> rv = search.getValue();
         if (!rv.firstValue().lsize()) {
             remove search;
