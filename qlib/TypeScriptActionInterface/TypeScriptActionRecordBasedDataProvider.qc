@@ -252,6 +252,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         }
         if (appinfo.create_records) {
             rv.supports_create = True;
+            rv.supports_bulk_create = True;
             if (appinfo.create_options) {
                 rv.create_options = map {$1.key: getDataProviderOption(appinfo.app.name, "create", $1.key, $1.value)},
                     appinfo.create_options.pairIterator();
@@ -262,6 +263,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         }
         if (appinfo.upsert_records) {
             rv.supports_upsert = True;
+            rv.supports_bulk_upsert = True;
             if (appinfo.upsert_options) {
                 rv.upsert_options = map {$1.key: getDataProviderOption(appinfo.app.name, "upsert", $1.key, $1.value)},
                     appinfo.upsert_options.pairIterator();
@@ -335,14 +337,14 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
 
         @return the data written to the data provider for each record
     */
-    private *list<hash<auto>> createRecordsBulkImpl(hash<auto> recs, *hash<auto> create_options) {
+    private *hash<auto> createRecordsBulkImpl(hash<auto> recs, *hash<auto> create_options) {
         if (!create_records) {
             throw "INVALID-OPERATION", sprintf("Data provider %y does not support record creation", getName());
         }
         create_options.table = name;
         recs = makeBulk(recs);
         *hash<auto> rv = getAsyncValue(create_records, getCallContextInfo(), recs, create_options);
-        return map $1, (recs + rv).contextIterator();
+        return recs + rv;
     }
 
     private int updateRecordsImpl(hash<auto> set, *hash<auto> where_cond, *hash<auto> search_options) {

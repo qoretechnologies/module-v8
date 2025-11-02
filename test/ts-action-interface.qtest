@@ -557,7 +557,7 @@ var obj = {
         };
         auto x = prov.createRecordsBulk(row_data);
         row_data."new" = map "value", xrange(row_data.firstValue().size());
-        assertEq((map $1, row_data.contextIterator()), x);
+        assertEq(row_data, x);
 
         list<string> r = prov.upsertRecordsBulk(row_data);
         assertEq((map UpsertResultVerified, xrange(r.size())), r);
