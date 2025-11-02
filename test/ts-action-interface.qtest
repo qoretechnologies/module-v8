@@ -545,10 +545,28 @@ var obj = {
 
         hash<auto> row = {"id": 3, "name": "c"};
         hash<auto> row0 = prov.createRecord(row);
+        row += {"new": "value"};
         assertEq(row, row0);
         assertEq(1, prov.updateRecords({"name": "aa"}, {"id": 1}));
         assertEq("verified", prov.upsertRecord({"id": 2, "name": "bb"}));
         assertEq(1, prov.deleteRecords({"id": 1}));
+
+        hash<auto> row_data = {
+            "id": (4, 5, 6),
+            "name": ("d", "e", "f"),
+        };
+        auto x = prov.createRecordsBulk(row_data);
+        row_data."new" = map "value", xrange(row_data.firstValue().size());
+        assertEq((map $1, row_data.contextIterator()), x);
+
+        list<string> r = prov.upsertRecordsBulk(row_data);
+        assertEq((map UpsertResultVerified, xrange(r.size())), r);
+
+        int rows = prov.updateRecords({"name": "dd"}, {"id": 1});
+        assertEq(1, rows);
+
+        rows = prov.deleteRecords({"id": 4});
+        assertEq(1, rows);
     }
 }
 

@@ -376,23 +376,27 @@ exports.actionsCatalogue = {
                 },
             },
 
-            // creates a record and returns the created record
+            // creates one or more records and returns the created records
             /**
                 @param ctx?: object with the following properties:
                 - conn_name?: string -> the connection name, if any is defined
                 - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
                 - opts?: object -> a data object with option values set for the current action
-                @param record: object -> the record to create; must be a data object that matches the record type
-                for the table
+                @param records: object -> the record(s) to create; keys are field names and values are lists of values
+                to create for each field
                 @param create_opts?: object -> create options; the table will be provided as create_opts.table
 
-                @return object[]?: if any new data were generated, then an object with the keys of the generated data
-                where the values are lists of the generated data in the same order as the data submitted
+                @return object[]?: if any new record(s) were generated, then the return value must be an object with
+                the keys of the generated data where the values are lists of the generated data in the same order as
+                the data submitted
             */
-            "create_records": async function (ctx, record, create_opts) {
+            "create_records": async function (ctx, records, create_opts) {
                 if (create_opts.table != 'test') {
                     throw new Error('Unknown table ' + create_opts.table);
                 }
+                return {
+                    "new": new Array(Object.values(records)[0].length).fill("value"),
+                };
             },
 
             // updates records and returns the number of records updated
@@ -420,8 +424,8 @@ exports.actionsCatalogue = {
                 - conn_name?: string -> the connection name, if any is defined
                 - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
                 - opts?: object -> a data object with option values set for the current action
-                @param record: object -> the record to upsert; must be a data object that matches the record type
-                for the table; values will be lists of values to upsert per field as given by the keys
+                @param records: object -> the record to upsert; keys are field names and values are lists of values
+                to create for each field
                 @param upsert_opts?: object -> upsert options; the table will be provided as upsert_opts.table
                 @return string[]?: if known, the result code of the operation for each record upserted:
                 - inserted: record inserted
@@ -430,7 +434,7 @@ exports.actionsCatalogue = {
                 - unchanged: record was found and no changes were necessary
                 - deleted: record was deleted (only possible with specific upsert options)
             */
-            "upsert_records": async function (ctx, record, upsert_opts) {
+            "upsert_records": async function (ctx, records, upsert_opts) {
                 if (upsert_opts.table != 'test') {
                     throw new Error('Unknown table ' + upsert_opts.table);
                 }

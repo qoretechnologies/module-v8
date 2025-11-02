@@ -246,7 +246,8 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         }
 
         if (appinfo.expressions) {
-            rv.expressions = map {$1.key: getExpression(appinfo.app.name, $1.key, $1.value)}, appinfo.expressions.pairIterator();
+            rv.expressions = map {$1.key: getExpression(appinfo.app.name, $1.key, $1.value)},
+                appinfo.expressions.pairIterator();
             rv.supports_native_search = True;
         }
         if (appinfo.create_records) {
