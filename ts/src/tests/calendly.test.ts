@@ -24,9 +24,6 @@ import {
   NewCalendlyInviteeNoShowCreated,
 } from '../apps/calendly/triggers';
 import CalendlyNewFormSubmissionCreated from '../apps/calendly/triggers/routing-form-submission-created.trigger';
-import { Debugger, DebugLevels } from '../utils/Debugger';
-
-Debugger.level = DebugLevels.Verbose;
 
 configDotenv({ path: '.env' });
 

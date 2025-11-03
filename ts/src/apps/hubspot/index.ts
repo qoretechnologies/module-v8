@@ -1,4 +1,4 @@
-import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import { TQoreAppWithActions, TQoreRecordBasedApp } from '@qoretechnologies/ts-toolkit';
 import { actionsCatalogue } from '../../ActionsCatalogue';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
@@ -15,6 +15,16 @@ import { HUBSPOT_USERS_ACTIONS } from './allowed-paths/users';
 import { HUBSPOT_APP_NAME } from './constants';
 import * as HUBSPOT_TRIGGERS from './triggers';
 import * as HUBSPOT_ACTIONS from './actions';
+import { HubspotSearchOptions } from './helpers/record-based/get-search-options';
+import { getHubspotExpressions } from './helpers/record-based/get-expressions';
+import { getHubspotRecordType } from './helpers/record-based/get-record-type';
+import { getHubspotTableList } from './helpers/record-based/get-table-list';
+import { HubspotUpsertOptions } from './helpers/record-based/get-upsert-options';
+import { searchHubspotRecords } from './helpers/record-based/search-records';
+import { createHubspotRecords } from './helpers/record-based/create-records';
+import { updateHubspotRecords } from './helpers/record-based/update-records';
+import { deleteHubspotRecords } from './helpers/record-based/delete-records';
+import { upsertHubspotRecords } from './helpers/record-based/upsert-records';
 
 export default (locale: Locales) =>
   ({
@@ -123,4 +133,14 @@ export default (locale: Locales) =>
         swagger: 'schemas/hubspot/lists.swagger.json',
       },
     },
-  }) satisfies TQoreAppWithActions;
+    search_options: HubspotSearchOptions,
+    upsert_options: HubspotUpsertOptions,
+    expressions: getHubspotExpressions(locale),
+    get_record_type: getHubspotRecordType,
+    get_table_list: getHubspotTableList,
+    search_records: searchHubspotRecords,
+    create_records: createHubspotRecords,
+    update_records: updateHubspotRecords,
+    delete_records: deleteHubspotRecords,
+    upsert_records: upsertHubspotRecords,
+  }) satisfies TQoreAppWithActions & TQoreRecordBasedApp;
