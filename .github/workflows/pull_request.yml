@@ -193,8 +193,17 @@ jobs:
           cd ts
           yarn build:test
 
+      # Check system resources
+      - name: Check system resources
+        run: |
+          df -h
+          free -h
+          node --version
+          npm --version
+
       # Run App Catalogue unit tets
       - name: Run unit tests
+        timeout-minutes: 60
         run: |
           cd ts
           NODE_OPTIONS="--max_old_space_size=8192" yarn test:ci
