@@ -374,6 +374,52 @@ exports.actionsCatalogue = {
                     "required": false,
                     "default_value": false,
                 },
+                "isolation_level": {
+                    "display_name": "Transaction Isolation Level",
+                    "short_desc": "The transaction isolation level to use",
+                    "desc": "The transaction isolation level to use",
+                    "type": "string",
+                    "required": false,
+                    "get_allowed_values": async function(ctx) {
+                        // simulate a call where the connection info is required
+                        if (!ctx.conn_opts) {
+                            return;
+                        }
+                        return [
+                            {
+                                "display_name": "Read Uncommitted",
+                                "short_desc": "Read uncommitted",
+                                "desc": "Read uncommitted",
+                                "value": "read-uncommitted",
+                            },
+                            {
+                                "display_name": "Read Committed",
+                                "short_desc": "Read committed",
+                                "desc": "Read committed",
+                                "value": "read-committed",
+                            },
+                            {
+                                "display_name": "Repeatable Read",
+                                "short_desc": "Repeatable read",
+                                "desc": "Repeatable read",
+                                "value": "repeatable-read",
+                            },
+                            {
+                                "display_name": "Serializable",
+                                "short_desc": "Serializable",
+                                "desc": "Serializable",
+                                "value": "serializable",
+                            },
+                        ];
+                    },
+                    "get_default_value": async function(ctx) {
+                        // simulate a call where the connection info is required
+                        if (!ctx.conn_opts) {
+                            return;
+                        }
+                        return "read-committed";
+                    },
+                },
             },
 
             // creates one or more records and returns the created records

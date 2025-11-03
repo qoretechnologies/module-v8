@@ -34,6 +34,15 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             "desc",
             "symbol",
         );
+
+        #! Option functions
+        const OptionFunctions = (
+            "get_allowed_values",
+            "get_element_allowed_values",
+            "get_default_value",
+            "rest_get_allowed_values",
+            "rest_get_element_allowed_values",
+        );
     }
 
     private {
@@ -52,13 +61,16 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
 
         *hash<string, *hash<string, hash<DataProviderOptionInfo>>> option_map;
 
+        #! Option function map; type -> function map
+        *hash<string, hash<string, hash<auto>>> ofmap;
+
         const DataProviderArgInfoTypedHash = TypedHash::forName("DataProviderArgInfo");
         const ArgInfoMembers = map $1.getName(), DataProviderArgInfoTypedHash.getMembers();
     }
 
     #! Creates the object from the arguments
-    constructor(string name, hash<DataProviderInfo> info, ActionFunctionContext fctx, *RestConnection conn)
-            : TypeScriptActionDataProviderBase(name, fctx) {
+    constructor(string name, hash<DataProviderInfo> info, *hash<string, hash<string, hash<auto>>> ofmap,
+            ActionFunctionContext fctx, *RestConnection conn) : TypeScriptActionDataProviderBase(name, fctx) {
         info.name = name;
         info.desc = sprintf("Record-based data provider for app `%s` table `%s`", app, name);
         self.info = info;
@@ -76,8 +88,53 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         upsert_records = appinfo.upsert_records;
         delete_records = appinfo.delete_records;
 
+        self.ofmap = ofmap;
+
         if (conn) {
             setConnection(conn);
+        }
+    }
+
+    #! Sets the connection
+    setConnection(RestConnection conn) {
+        TypeScriptActionDataProviderBase::setConnection(conn);
+        if (!ofmap) {
+            return;
+        }
+        hash<auto> action += {
+            "app": app,
+            "action": action,
+        };
+        # evaluate / resolve options using option functions
+        foreach hash<auto> i in ((remove ofmap).pairIterator()) {
+            foreach hash<auto> j in (i.value.pairIterator()) {
+                if (!j.value) {
+                    continue;
+                }
+                try {
+                    updateOptionIntern(i.key, j.key, j.value, \action);
+                } catch (hash<ExceptionInfo> ex) {
+                    TSAI::error("Error evaluating option functions in @%s/%s for %s option %y in table %y: %s", app,
+                        action, i.key, j.key, name, get_exception_string(ex));
+                }
+            }
+        }
+    }
+
+    #! Update option from functions
+    private updateOptionIntern(string type, string option, hash<auto> fmap, reference<hash<auto>> action) {
+        type += "_options";
+        string key = type + "_" + option;
+        if (TypeScriptActionInterface::getOptionFunctions(\action, self, key, \fmap)) {
+            if (omap{key} || romap{key}) {
+                info{type}{option}.allowed_values = getReferenceDataImpl(key);
+            }
+            if (eomap{key} || reomap{key}) {
+                info{type}{option}.element_allowed_values = getElementReferenceDataImpl(key);
+            }
+            if (dvmap{key}) {
+                info{type}{option}.default_value = getReferenceDataValueImpl(key);
+            }
         }
     }
 
@@ -224,7 +281,8 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         }
     }
 
-    static hash<DataProviderInfo> getDataProviderInfo(hash<AppInfo> appinfo) {
+    static hash<DataProviderInfo> getDataProviderInfo(hash<AppInfo> appinfo,
+            reference<hash<string, hash<string, hash<auto>>>> ofmap) {
         hash<DataProviderInfo> rv = <DataProviderInfo>{
             "type": "TypeScriptActionRecordBasedDataProvider",
         };
@@ -238,11 +296,12 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             rv.has_record = True;
         }
         if (appinfo.search_options) {
-            rv.search_options = map {$1.key: getDataProviderOption(appinfo.app.name, "search", $1.key, $1.value)},
-                appinfo.search_options.pairIterator();
+            rv.search_options = map {$1.key: getDataProviderOption(appinfo.app.name, "search", $1.key, $1.value,
+                \ofmap.search{$1.key})}, appinfo.search_options.pairIterator();
             # add in search options that are always supported
             map rv.search_options{$1.key} = $1.value,
-                GenericRecordSearchOptions{"requires_result", "max_records"}.pairIterator(), !rv.search_options{$1.key};
+                GenericRecordSearchOptions{"requires_result", "max_records"}.pairIterator(),
+                    !rv.search_options{$1.key};
         }
 
         if (appinfo.expressions) {
@@ -254,8 +313,8 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             rv.supports_create = True;
             rv.supports_bulk_create = True;
             if (appinfo.create_options) {
-                rv.create_options = map {$1.key: getDataProviderOption(appinfo.app.name, "create", $1.key, $1.value)},
-                    appinfo.create_options.pairIterator();
+                rv.create_options = map {$1.key: getDataProviderOption(appinfo.app.name, "create", $1.key, $1.value,
+                    \ofmap.create{$1.key})}, appinfo.create_options.pairIterator();
             }
         }
         if (appinfo.update_records) {
@@ -265,8 +324,8 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             rv.supports_upsert = True;
             rv.supports_bulk_upsert = True;
             if (appinfo.upsert_options) {
-                rv.upsert_options = map {$1.key: getDataProviderOption(appinfo.app.name, "upsert", $1.key, $1.value)},
-                    appinfo.upsert_options.pairIterator();
+                rv.upsert_options = map {$1.key: getDataProviderOption(appinfo.app.name, "upsert", $1.key, $1.value,
+                    \ofmap.upsert{$1.key})}, appinfo.upsert_options.pairIterator();
             }
         }
         if (appinfo.delete_records) {
@@ -423,11 +482,13 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         record_type = TypeScriptActionInterface::getType("record_type", v).getFields();
     }
 
-    private static hash<DataProviderOptionInfo> getDataProviderOption(string app, string type, string name, auto v) {
+    private static hash<DataProviderOptionInfo> getDataProviderOption(string app, string type, string name, auto v,
+            reference<hash<auto>> option_functions) {
         if (v.typeCode() != NT_HASH) {
             throw "SEARCH-OPTION-TYPE-ERROR", sprintf("The '%s_options' function for app %y search option %y "
                 "returned type %y; expecting \"hash\"", type, app, name, v.fullType());
         }
+        option_functions = remove v{OptionFunctions};
         v.type = TypeScriptActionInterface::getType(type + " option " + name + " type", remove v.type);
         return cast<hash<DataProviderOptionInfo>>(v);
     }

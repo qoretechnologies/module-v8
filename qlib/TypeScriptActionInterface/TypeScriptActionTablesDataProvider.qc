@@ -36,14 +36,10 @@ public class TypeScriptActionTablesDataProvider inherits TypeScriptActionRecordB
         };
     }
 
-    private {
-        hash<DataProviderInfo> table_info;
-    }
-
     #! Creates the object from the arguments
-    constructor(ActionFunctionContext fctx, hash<DataProviderInfo> table_info)
-            : TypeScriptActionRecordBasedDataProvider("tables", table_info, fctx) {
-        self.table_info = table_info;
+    constructor(ActionFunctionContext fctx, hash<DataProviderInfo> table_info,
+            *hash<string, hash<string, hash<auto>>> ofmap)
+            : TypeScriptActionRecordBasedDataProvider("tables", table_info, ofmap, fctx) {
     }
 
     #! Return data provider summary info
@@ -80,7 +76,7 @@ public class TypeScriptActionTablesDataProvider inherits TypeScriptActionRecordB
     */
     private *AbstractDataProvider getChildProviderImpl(string name) {
         try {
-            return new TypeScriptActionRecordBasedDataProvider(name, table_info, self, conn);
+            return new TypeScriptActionRecordBasedDataProvider(name, info, ofmap, self, conn);
         } catch (hash<ExceptionInfo> ex) {
             rethrow "CHILD-PROVIDER-ERROR", sprintf("Table %y cannot be acquired from %y: %s: %s", name, getName(),
                 ex.err, ex.desc), ex.arg;

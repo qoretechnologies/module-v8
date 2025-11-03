@@ -510,6 +510,7 @@ var obj = {
         };
         conn = new TypeScriptAppRestConnection(config);
         AbstractDataProvider parent = TypeScriptActionInterface::getDataProvider("js-test", conn);
+        assertEq("TypeScriptAppRestConnection", cast<object>(parent).getConnection().className());
         prov = parent.getChildProviderEx("test-api");
         t = prov.getRequestTypeWithOptions({"key": "A"});
         assertEq(("count", "other", "key", "dyn", "list", "ax0", "ax1", "a0", "a1"), keys t.getFields());
@@ -533,8 +534,11 @@ var obj = {
 
         prov = parent.getChildProviderPath("tables/test");
         assertTrue(prov.supportsRead());
+        assertEq("TypeScriptAppRestConnection", cast<object>(prov).getConnection().className());
 
         assertFalse(prov.getSearchOptions().for_update.default_value);
+        assertEq("read-uncommitted", prov.getSearchOptions().isolation_level.allowed_values[0].value);
+        assertEq("read-committed", prov.getSearchOptions().isolation_level.default_value);
 
         AbstractDataProviderRecordIterator i = prov.searchRecords();
         assertTrue(i.next());

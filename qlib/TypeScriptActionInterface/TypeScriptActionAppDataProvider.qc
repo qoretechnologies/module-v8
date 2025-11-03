@@ -103,6 +103,11 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         }
     }
 
+    #! Retrieves the current connection
+    *RestConnection getConnection() {
+        return conn;
+    }
+
     #! Returns the data provider name
     string getName() {
         return name;

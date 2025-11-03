@@ -1220,9 +1220,9 @@ public class TypeScriptActionInterface {
 
     static registerRecordBasedActions(hash<AppInfo> info) {
         int cnt;
-
-        hash<DataProviderInfo> prov_info = TypeScriptActionRecordBasedDataProvider::getDataProviderInfo(info);
-
+        # option function map; type -> function map
+        hash<string, hash<string, hash<auto>>> ofmap;
+        hash<DataProviderInfo> prov_info = TypeScriptActionRecordBasedDataProvider::getDataProviderInfo(info, \ofmap);
         if (info.search_records) {
             string desc = sprintf("Search for matching records in the given table in app %y", info.app.name);
             DataProviderActionCatalog::registerAction(<DataProviderActionInfo>{
@@ -1261,7 +1261,7 @@ public class TypeScriptActionInterface {
         }
         ActionFunctionContext fctx(info.app.name, "tables", info.pool);
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(info.app.name);
-        prov.registerChild("tables", new TypeScriptActionTablesDataProvider(fctx, prov_info));
+        prov.registerChild("tables", new TypeScriptActionTablesDataProvider(fctx, prov_info, ofmap));
     }
 
     static scanType(hash<auto> h, reference<hash<string, bool>> tmap, *hash<auto> definitions, *string name) {
@@ -1900,7 +1900,7 @@ public class TypeScriptActionInterface {
         root.setLogger(DataProvider::getGlobalLogger());
     }
 
-    static getOptionAllowedValuesFunction(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
+    static *bool getOptionAllowedValuesFunction(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
             reference<hash<auto>> h, *date io_timeout, *bool keep_field_functions) {
         if (exists (auto get_allowed_values = remove h.get_allowed_values)) {
             if (!get_allowed_values.callp()) {
@@ -1924,12 +1924,14 @@ public class TypeScriptActionInterface {
             TypeScriptActionInterface::registerAsyncCall(\fctx.omap{key}, "app", action.app, action.action, key);
 
             h.ref_data = key;
+            action.data_dependent_options = True;
             # remove any manual allowed values
             remove h.allowed_values;
+            return True;
         }
     }
 
-    static getOptionElementAllowedValuesFunction(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
+    static *bool getOptionElementAllowedValuesFunction(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
             reference<hash<auto>> h, *date io_timeout, *bool keep_field_functions) {
         if (exists (auto get_element_allowed_values = remove h.get_element_allowed_values)) {
             if (!get_element_allowed_values.callp()) {
@@ -1953,12 +1955,14 @@ public class TypeScriptActionInterface {
             TypeScriptActionInterface::registerAsyncCall(\fctx.eomap{key}, "app", action.app, action.action, key);
 
             h.element_ref_data = key;
+            action.data_dependent_options = True;
             # remove any manual allowed values
             remove h.element_allowed_values;
+            return True;
         }
     }
 
-    static getOptionDefaultValueFunction(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
+    static *bool getOptionDefaultValueFunction(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
             reference<hash<auto>> h, *date io_timeout, *bool keep_field_functions) {
         if (exists (auto get_default_value = h.get_default_value)) {
             if (!get_default_value.callp()) {
@@ -1985,19 +1989,25 @@ public class TypeScriptActionInterface {
             if (!keep_field_functions) {
                 remove h.get_default_value;
             }
+            return True;
         }
     }
 
+    #! Returns True if any option functions were found
     static *bool getOptionFunctions(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
             reference<hash<auto>> h, *bool keep_field_functions) {
         on_error rethrow $1.err, sprintf("%s (while processing option %y)", $1.desc, key);
         date io_timeout = seconds(remove h.io_timeout_secs ?? DefaultIoTimeoutSecs);
 
-        getOptionAllowedValuesFunction(\action, fctx, key, \h, io_timeout, keep_field_functions);
-        getOptionElementAllowedValuesFunction(\action, fctx, key, \h, io_timeout, keep_field_functions);
-        getOptionDefaultValueFunction(\action, fctx, key, \h, io_timeout, keep_field_functions);
+        *bool found = getOptionAllowedValuesFunction(\action, fctx, key, \h, io_timeout, keep_field_functions);
+        if (getOptionElementAllowedValuesFunction(\action, fctx, key, \h, io_timeout, keep_field_functions)
+            && !found) {
+            found = True;
+        }
+        if (getOptionDefaultValueFunction(\action, fctx, key, \h, io_timeout, keep_field_functions) && !found) {
+            found = True;
+        }
 
-        bool found;
         if (exists (auto rest_get_allowed_values = remove h.rest_get_allowed_values)) {
             if (rest_get_allowed_values.typeCode() != NT_HASH) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
