@@ -17,7 +17,7 @@
     "build:test": "npx tsc --noEmit --p tsconfig.build.json && tsc-alias",
     "lint": "eslint \"{src,apps,libs}/**/*.ts\" --fix",
     "typesafe-i18n": "typesafe-i18n",
-    "test:ci": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --config src/jest.config.ts",
+    "test:ci": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --ci --maxWorkers=50% --config src/jest.config.ts",
     "test": "clear && yarn test:ci",
     "qtest": "clear && jest --config src/jest.config.ts --testMatch '**/?(*.)+(qtest).[tj]s?(x)' --detectOpenHandles --forceExit",
     "precheck": "yarn build:test && yarn test",
