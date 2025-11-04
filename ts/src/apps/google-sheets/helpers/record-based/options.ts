@@ -1,4 +1,4 @@
-import { TQoreSearchOptions } from '@qoretechnologies/ts-toolkit';
+import { TQoreCrudOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { Debugger } from '../../../../utils/Debugger';
 import { getGoogleSheetIdAllowedValues } from '../get-sheet-id-allowed-values';
@@ -31,7 +31,7 @@ export const GoogleSheetsUpdateOptions = {
       }
     },
   },
-} satisfies TQoreSearchOptions;
+} satisfies TQoreCrudOptions;
 
 export const GoogleSheetsCreateOptions = GoogleSheetsUpdateOptions;
 export const GoogleSheetsDeleteOptions = GoogleSheetsUpdateOptions;

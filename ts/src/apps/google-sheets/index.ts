@@ -1,10 +1,22 @@
-import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import { TQoreAppWithActions, TQoreRecordBasedApp } from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import * as GOOGLE_SHEETS_ACTIONS from './actions';
-import * as GOOGLE_SHEETS_TRIGGERS from './triggers';
 import { GOOGLE_SHEETS_APP_LOGO, GOOGLE_SHEETS_APP_NAME } from './constants';
+import { createGoogleSheetsRecords } from './helpers/record-based/create-records';
+import * as GOOGLE_SHEETS_TRIGGERS from './triggers';
+import { getGoogleSheetsExpressions } from './helpers/record-based/get-expressions';
+import {
+  GoogleSheetsCreateOptions,
+  GoogleSheetsDeleteOptions,
+  GoogleSheetsUpdateOptions,
+} from './helpers/record-based/options';
+import { deleteGoogleSheetsRecords } from './helpers/record-based/delete-records';
+import { updateGoogleSheetsRecords } from './helpers/record-based/update-records';
+import { searchGoogleSheetsRecords } from './helpers/record-based/search-records';
+import { getGoogleSheetsTableList } from './helpers/record-based/get-table-list';
+import { getGoogleSheetsRecordType } from './helpers/record-based/get-record-type';
 
 export default (locale: Locales) =>
   ({
@@ -39,4 +51,14 @@ export default (locale: Locales) =>
       ping_method: 'GET',
       ping_path: '/oauth2/v3/userinfo',
     },
-  }) satisfies TQoreAppWithActions;
+    get_table_list: getGoogleSheetsTableList,
+    get_record_type: getGoogleSheetsRecordType,
+    search_records: searchGoogleSheetsRecords,
+    create_records: createGoogleSheetsRecords,
+    update_records: updateGoogleSheetsRecords,
+    delete_records: deleteGoogleSheetsRecords,
+    expressions: getGoogleSheetsExpressions(locale),
+    create_options: GoogleSheetsCreateOptions,
+    update_options: GoogleSheetsUpdateOptions,
+    delete_options: GoogleSheetsDeleteOptions,
+  }) satisfies TQoreAppWithActions & TQoreRecordBasedApp;
