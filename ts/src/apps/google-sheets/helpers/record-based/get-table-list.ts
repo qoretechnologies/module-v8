@@ -22,7 +22,7 @@ export const getGoogleSheetsTableList: TQoreGetTableListFunction = async (contex
 
     const files = response.data.files || [];
 
-    if (!files || files.length === 0) {
+    if (!files.length) {
       return [];
     }
 

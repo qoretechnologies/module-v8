@@ -20,7 +20,7 @@ export const getGoogleSheetsTableNameToIdMap = async (
 
     const files = response.data.files || [];
 
-    if (!files || files.length === 0) {
+    if (!files.length) {
       return {};
     }
 
