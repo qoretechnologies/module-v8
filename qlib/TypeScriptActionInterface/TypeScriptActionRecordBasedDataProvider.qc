@@ -565,8 +565,10 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             }
         }
 
-        AbstractDataProviderType return_type = TypeScriptActionInterface::getType("expression " + name +
-            " return type", remove v.return_type);
+        auto rt = remove v.return_type;
+        AbstractDataProviderType return_type = rt.typeCode() == NT_STRING
+            ? AbstractDataProviderTypeMap{rt}
+            : TypeScriptActionInterface::getType("expression " + name + " return type", rt);
 
         return <DataProviderExpressionInfo>{
             "name": name,
