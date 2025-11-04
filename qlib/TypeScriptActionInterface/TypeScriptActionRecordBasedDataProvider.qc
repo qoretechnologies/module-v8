@@ -554,7 +554,13 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
                         "defines invalid type_code %y for argument %d; known type-codes: %y", app, name,
                         a.type_code, $# + 1, keys SignatureTypeDescMap);
                 }
-                AbstractDataProviderType arg_type = TypeScriptActionInterface::getType("arg-" + ($# + 1), a.type);
+                *AbstractDataProviderType arg_type = a.type.typeCode() == NT_STRING
+                    ? AbstractDataProviderTypeMap{a.type}
+                    : TypeScriptActionInterface::getType("arg-" + ($# + 1), a.type);
+                if (!arg_type) {
+                    throw "EXPRESSION-ARG-TYPE-ERROR", sprintf("The 'expressions' object for app %y expression %y "
+                        "defines unknown type %y for argument %d", app, name, a.type, $# + 1);
+                }
                 args += <DataProviderSignatureTypeInfo>{
                     "type_code": type_code,
                     "type": arg_type,
@@ -566,10 +572,13 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         }
 
         auto rt = remove v.return_type;
-        AbstractDataProviderType return_type = rt.typeCode() == NT_STRING
+        *AbstractDataProviderType return_type = rt.typeCode() == NT_STRING
             ? AbstractDataProviderTypeMap{rt}
             : TypeScriptActionInterface::getType("expression " + name + " return type", rt);
-
+        if (!return_type) {
+            throw "EXPRESSION-RETURN-TYPE-ERROR", sprintf("The 'expressions' object for app %y expression %y "
+                "defines unknown return type %y", app, name, rt);
+        }
         return <DataProviderExpressionInfo>{
             "name": name,
             "type": type,
