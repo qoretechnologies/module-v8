@@ -1,38 +1,32 @@
 import { sheets_v4 } from '@googleapis/sheets';
-import { TQoreGetDependentOptionsFunction, TQoreOptions } from '@qoretechnologies/ts-toolkit';
-import { GoogleSheetsError } from '../constants';
-import { createGoogleSheetsClient } from './constants';
-import { Debugger } from '../../../utils/Debugger';
+import {
+  IQoreTypeObjectNonList,
+  TQoreGetRecordTypeFunction,
+  TQoreOptions,
+} from '@qoretechnologies/ts-toolkit';
+import { getQoreContextRequiredValues } from '../../../../global/helpers';
+import { GoogleSheetsError } from '../../constants';
+import { createGoogleSheetsClient } from '../constants';
+import { getGoogleSheetsTableIdByName } from './constants';
 
-export const getSheetRowsOptions: TQoreGetDependentOptionsFunction = async (context) => {
-  const { conn_opts, opts } = context || {};
-
-  const token = conn_opts?.token;
-  const spreadsheet_id = opts?.spreadsheet_id;
-  const sheet_id = opts?.sheet_id;
-  const add_row_index = opts?.add_row_index;
-
-  if (!token || !spreadsheet_id || !sheet_id) {
-    return {
-      rows: {
-        required: true,
-        type: {
-          type: 'list',
-          element_type: 'hash',
-        },
-        display_name: 'Rows to Add',
-        desc:
-          `The rows to add to the worksheet.` +
-          ` Select a spreadsheet and worksheet first to see the available columns.`,
-      },
-    };
-  }
+export const getGoogleSheetsRecordType: TQoreGetRecordTypeFunction = async (context, tableName) => {
+  const { token, sheet_id } = getQoreContextRequiredValues({
+    context,
+    connectionFields: ['token'],
+    optionFields: ['sheet_id'],
+    ErrorClass: GoogleSheetsError,
+  });
 
   try {
     const sheetsClient = createGoogleSheetsClient(token);
+    const spreadsheetId = await getGoogleSheetsTableIdByName(token, tableName);
+
+    if (!spreadsheetId) {
+      throw new GoogleSheetsError(`Spreadsheet with name ${tableName} not found`);
+    }
 
     const spreadsheet = await sheetsClient.spreadsheets.get({
-      spreadsheetId: spreadsheet_id,
+      spreadsheetId,
       fields: 'sheets.properties',
     });
 
@@ -46,7 +40,7 @@ export const getSheetRowsOptions: TQoreGetDependentOptionsFunction = async (cont
     const sheetTitle = targetSheet.properties.title;
 
     const fullSheetResponse = await sheetsClient.spreadsheets.get({
-      spreadsheetId: spreadsheet_id,
+      spreadsheetId,
       ranges: [`${sheetTitle}`],
       includeGridData: true,
     });
@@ -164,58 +158,22 @@ export const getSheetRowsOptions: TQoreGetDependentOptionsFunction = async (cont
     }
 
     if (Object.keys(rowFields).length === 0) {
-      return {
-        rows: {
-          required: true,
-          type: {
-            type: 'list',
-            element_type: 'hash',
-          },
-          display_name: 'Rows to Add',
-          desc: 'No valid headers found in the first row. Please ensure the sheet has headers.',
-        },
-      };
+      throw new GoogleSheetsError('No valid headers found to construct record type fields');
     }
 
-    return {
-      rows: {
-        required: true,
-        type: {
-          type: 'list',
-          element_type: {
-            type: 'hash',
-            fields: {
-              ...rowFields,
-              ...(add_row_index
-                ? {
-                    row_index: {
-                      type: 'integer',
-                      required: true,
-                    },
-                  }
-                : {}),
-            },
-          },
-        },
-        display_name: 'Rows to Add',
-        desc: 'The rows to add to the end of the table. Each row should include values for the corresponding columns.',
+    const recordType = {
+      type: 'hash',
+      fields: {
+        ...rowFields,
       },
-    };
-  } catch (error) {
-    Debugger.log(`Error fetching sheet headers: ${error}`);
+    } satisfies IQoreTypeObjectNonList;
 
-    return {
-      rows: {
-        required: true,
-        type: {
-          type: 'list',
-          element_type: 'hash',
-        },
-        display_name: 'Rows to Add',
-        desc:
-          `Error fetching headers.` +
-          ` Please ensure the spreadsheet and worksheet exist and contain headers in the first row.`,
-      },
-    };
+    return recordType;
+  } catch (error) {
+    if (error instanceof GoogleSheetsError) {
+      throw error;
+    }
+
+    throw new GoogleSheetsError(`Failed to get record type: ${error.message || error}`);
   }
 };
