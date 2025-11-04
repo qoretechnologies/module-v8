@@ -6,6 +6,7 @@ import { getGoogleDriveFileIdAllowedValues } from '../helpers/get-drive-file-id-
 import { getGoogleSheetIdAllowedValues } from '../helpers/get-sheet-id-allowed-values';
 import { getSheetRowsOptions } from '../helpers/get-sheet-rows-options';
 import { toColumnLetter } from './constants';
+import { Debugger } from '../../../utils/Debugger';
 
 const options = {
   spreadsheet_id: {
@@ -147,7 +148,7 @@ const updateSpreadsheetRows = QoreAppCreator.createLocalizedAction<
           const headerIndex = headers.indexOf(key);
 
           if (headerIndex === -1) {
-            console.warn(`Header "${key}" not found in spreadsheet, skipping this update`);
+            Debugger.log(`Header "${key}" not found in spreadsheet, skipping this update`);
             continue;
           }
 

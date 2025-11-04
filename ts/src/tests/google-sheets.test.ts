@@ -5,6 +5,7 @@ import {
   TQoreOptions,
 } from '@qoretechnologies/ts-toolkit';
 
+import { configDotenv } from 'dotenv';
 import { createGoogleDriveClient } from '../apps/google-drive/helpers/constants';
 import {
   AddGoogleSheetsSpreadsheetRows,
@@ -24,8 +25,14 @@ import { getGoogleDriveFileIdAllowedValues } from '../apps/google-sheets/helpers
 import { getGoogleSheetHeadersAllowedValues } from '../apps/google-sheets/helpers/get-headers-allowed-values';
 import { getGoogleSheetIdAllowedValues } from '../apps/google-sheets/helpers/get-sheet-id-allowed-values';
 import { getSheetRowsOptions } from '../apps/google-sheets/helpers/get-sheet-rows-options';
+import { createGoogleSheetsRecords } from '../apps/google-sheets/helpers/record-based/create-records';
+import { getGoogleSheetsRecordType } from '../apps/google-sheets/helpers/record-based/get-record-type';
+import { getGoogleSheetsTableList } from '../apps/google-sheets/helpers/record-based/get-table-list';
+import { GoogleSheetsUpdateOptions } from '../apps/google-sheets/helpers/record-based/options';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import { configDotenv } from 'dotenv';
+import { deleteGoogleSheetsRecords } from '../apps/google-sheets/helpers/record-based/delete-records';
+import { searchGoogleSheetsRecords } from '../apps/google-sheets/helpers/record-based/search-records';
+import { updateGoogleSheetsRecords } from '../apps/google-sheets/helpers/record-based/update-records';
 
 configDotenv({ path: '.env' });
 Debugger.level = DebugLevels.Verbose;
@@ -420,6 +427,118 @@ describe('Google Sheets', () => {
           ],
         },
       });
+    });
+  });
+
+  describe('Should test record based helpers', () => {
+    const table = 'Shopify Orders and Customers';
+    const sheet = '75472539';
+
+    it('Should get tables list', async () => {
+      const result = await getGoogleSheetsTableList(base_context);
+
+      expect(result).toBeDefined();
+      expect(result.length).toBeGreaterThan(0);
+    });
+
+    it('Should get sheet id allowed values', async () => {
+      const result = await GoogleSheetsUpdateOptions.sheet_id.get_allowed_values({
+        ...base_context,
+        opts: { spreadsheet_id: spreadsheetId, table },
+      });
+
+      expect(result).toBeDefined();
+      expect(result.length).toBeGreaterThan(0);
+    });
+
+    it('Should get record type', async () => {
+      const result = await getGoogleSheetsRecordType(
+        {
+          ...base_context,
+          opts: { sheet_id: sheet },
+        },
+        table
+      );
+
+      expect(result).toBeDefined();
+      expect(result.type).toBeDefined();
+    });
+
+    it('Should create records', async () => {
+      const result = await createGoogleSheetsRecords(
+        {
+          ...base_context,
+          opts: { sheet_id: sheet },
+        },
+        {
+          'First Name': ['Isaac', 'Pam', 'Courtney'],
+          'Last Name': ['Newton', 'Anderson', 'Smith'],
+        },
+        { table }
+      );
+
+      expect(result).toBeDefined();
+      expect(result['First Name']).toBeDefined();
+      expect(Array.isArray(result['First Name'])).toBe(true);
+    });
+
+    it('Should update records', async () => {
+      const result = await updateGoogleSheetsRecords(
+        {
+          ...base_context,
+          opts: { sheet_id: sheet },
+        },
+        {
+          'First Name': 'Isaac Updated',
+        },
+        {
+          exp: 'row_ids',
+          args: [{ value: [8] }],
+        },
+        { table }
+      );
+
+      expect(result).toBe(1);
+    });
+
+    it('Should search specific customer rows', async () => {
+      const iterator = await searchGoogleSheetsRecords(
+        {
+          ...base_context,
+          opts: { sheet_id: sheet },
+        },
+        {
+          exp: 'row_ids',
+          args: [{ value: [2, 3, 4] }],
+        },
+        { table }
+      );
+
+      const result = await iterator(base_context, 100);
+
+      expect(result).toBeDefined();
+      expect(result!._rowId).toContain(2);
+      expect(result!._rowId).toContain(3);
+      expect(result!._rowId).toContain(4);
+      expect(result!['First Name']).toBeDefined();
+      expect(result!['Last Name']).toBeDefined();
+      expect(result!['Email']).toBeDefined();
+    });
+
+    it('Should delete records', async () => {
+      const result = await deleteGoogleSheetsRecords(
+        {
+          ...base_context,
+          opts: { sheet_id: sheet },
+        },
+        {
+          exp: 'row_ids',
+          args: [{ value: [8, 9, 10] }],
+        },
+        { table }
+      );
+
+      expect(result).toBe(3);
     });
   });
 });

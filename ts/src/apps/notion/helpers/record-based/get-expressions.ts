@@ -1,4 +1,4 @@
-import { TQoreSearchRecordsExpressions } from '@qoretechnologies/ts-toolkit';
+import { TQoreSearchRecordsExpressions, EQoreExpressionGroups } from '@qoretechnologies/ts-toolkit';
 import { mapExpressionsToApp } from '../../../../global/helpers';
 import { Locales } from '../../../../i18n/i18n-types';
 import { NOTION_APP_NAME } from '../../constants';
@@ -13,6 +13,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'AND',
         symbol: '&&',
         roles: ['search', 'field'],
+        group: EQoreExpressionGroups.LOGICAL,
         args: [
           {
             type_code: 'any',
@@ -28,6 +29,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'OR',
         symbol: '||',
         roles: ['search', 'field'],
+        group: EQoreExpressionGroups.LOGICAL,
         args: [
           {
             type_code: 'any',
@@ -43,6 +45,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: '=',
         symbol: '=',
         roles: ['search'],
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
@@ -61,6 +64,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: '!=',
         symbol: '!=',
         roles: ['search'],
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
@@ -79,6 +83,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: '>',
         symbol: '>',
         roles: ['search'],
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
@@ -97,6 +102,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: '>=',
         symbol: '>=',
         roles: ['search'],
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
@@ -115,6 +121,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: '<',
         symbol: '<',
         roles: ['search'],
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
@@ -133,6 +140,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: '<=',
         symbol: '<=',
         roles: ['search'],
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
@@ -151,6 +159,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'contains',
         symbol: 'contains',
         roles: ['search'],
+        group: EQoreExpressionGroups.DATA_MANIPULATION,
         args: [
           {
             type_code: 'field reference',
@@ -170,6 +179,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'in',
         symbol: 'in',
         roles: ['search'],
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
@@ -192,6 +202,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'is_empty',
         symbol: 'is_empty',
         roles: ['search'],
+        group: EQoreExpressionGroups.DATA_MANIPULATION,
         args: [
           {
             type_code: 'field reference',
@@ -206,6 +217,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'is_not_empty',
         symbol: 'is_not_empty',
         roles: ['search'],
+        group: EQoreExpressionGroups.DATA_MANIPULATION,
         args: [
           {
             type_code: 'field reference',
@@ -221,6 +233,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'starts_with',
         symbol: 'starts_with',
         roles: ['search'],
+        group: EQoreExpressionGroups.DATA_MANIPULATION,
         args: [
           {
             type_code: 'field reference',
@@ -239,6 +252,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'ends_with',
         symbol: 'ends_with',
         roles: ['search'],
+        group: EQoreExpressionGroups.DATA_MANIPULATION,
         args: [
           {
             type_code: 'field reference',
@@ -257,6 +271,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'next_week',
         symbol: 'next_week',
         roles: ['search'],
+        group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
@@ -271,6 +286,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'next_month',
         symbol: 'next_month',
         roles: ['search'],
+        group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
@@ -285,6 +301,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'next_year',
         symbol: 'next_year',
         roles: ['search'],
+        group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
@@ -299,6 +316,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'past_week',
         symbol: 'past_week',
         roles: ['search'],
+        group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
@@ -313,6 +331,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'past_month',
         symbol: 'past_month',
         roles: ['search'],
+        group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
@@ -327,6 +346,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'past_year',
         symbol: 'past_year',
         roles: ['search'],
+        group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
@@ -341,6 +361,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'this_week',
         symbol: 'this_week',
         roles: ['search'],
+        group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',

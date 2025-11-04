@@ -1,4 +1,4 @@
-import { TQoreUpsertOptions } from '@qoretechnologies/ts-toolkit';
+import { TQoreCrudOptions } from '@qoretechnologies/ts-toolkit';
 
 export const HubspotUpsertOptions = {
   idProperty: {
@@ -6,4 +6,4 @@ export const HubspotUpsertOptions = {
     required: true,
     desc: 'The unique identifier property name for upsert operations',
   },
-} satisfies TQoreUpsertOptions;
+} satisfies TQoreCrudOptions;

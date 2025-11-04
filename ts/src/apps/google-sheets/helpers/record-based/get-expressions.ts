@@ -1,0 +1,34 @@
+import { EQoreExpressionGroups, TQoreSearchRecordsExpressions } from '@qoretechnologies/ts-toolkit';
+import { Locales } from '../../../../i18n/i18n-types';
+import { mapExpressionsToApp } from '../../../../global/helpers';
+import { GOOGLE_SHEETS_APP_NAME } from '../../constants';
+
+export const getGoogleSheetsExpressions = (locale: Locales): TQoreSearchRecordsExpressions => {
+  return mapExpressionsToApp(
+    GOOGLE_SHEETS_APP_NAME,
+    {
+      row_ids: {
+        type: 'function',
+        subtype: 'generic',
+        name: 'row_ids',
+        symbol: 'row_ids',
+        group: EQoreExpressionGroups.COMPARISON,
+        roles: ['search'],
+        args: [
+          {
+            type_code: 'value',
+            type: {
+              type: 'list',
+              element_type: 'int',
+            },
+            display_name: 'Row Numbers',
+            short_desc: 'List of row numbers to target',
+            desc: 'Provide a list of row numbers (1-based index) that you want to update or delete. For example: [1, 5, 10, 23]',
+          },
+        ],
+        return_type: 'bool',
+      },
+    },
+    locale
+  );
+};

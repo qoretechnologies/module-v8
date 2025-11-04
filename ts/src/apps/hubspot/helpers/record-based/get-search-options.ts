@@ -1,4 +1,4 @@
-import { TQoreSearchOptions } from '@qoretechnologies/ts-toolkit';
+import { TQoreCrudOptions } from '@qoretechnologies/ts-toolkit';
 
 export const HubspotSearchOptions = {
   orderBy: {
@@ -16,4 +16,4 @@ export const HubspotSearchOptions = {
       },
     },
   },
-} satisfies TQoreSearchOptions;
+} satisfies TQoreCrudOptions;

@@ -1,4 +1,4 @@
-import { TQoreSearchOptions } from '@qoretechnologies/ts-toolkit';
+import { TQoreCrudOptions } from '@qoretechnologies/ts-toolkit';
 
 export const NotionSearchOptions = {
   orderBy: {
@@ -16,4 +16,4 @@ export const NotionSearchOptions = {
       },
     },
   },
-} satisfies TQoreSearchOptions;
+} satisfies TQoreCrudOptions;
