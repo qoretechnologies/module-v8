@@ -4,7 +4,7 @@ import { Debugger } from '../../../../utils/Debugger';
 import { getGoogleSheetIdAllowedValues } from '../get-sheet-id-allowed-values';
 import { getGoogleSheetsTableIdByName } from './constants';
 
-export const GoogleSheetsUpdateOptions = {
+export const GoogleSheetsSearchOptions = {
   sheet_id: {
     required: true,
     type: 'string',
@@ -32,6 +32,3 @@ export const GoogleSheetsUpdateOptions = {
     },
   },
 } satisfies TQoreCrudOptions;
-
-export const GoogleSheetsCreateOptions = GoogleSheetsUpdateOptions;
-export const GoogleSheetsDeleteOptions = GoogleSheetsUpdateOptions;

@@ -5,18 +5,14 @@ import { Locales } from '../../i18n/i18n-types';
 import * as GOOGLE_SHEETS_ACTIONS from './actions';
 import { GOOGLE_SHEETS_APP_LOGO, GOOGLE_SHEETS_APP_NAME } from './constants';
 import { createGoogleSheetsRecords } from './helpers/record-based/create-records';
-import * as GOOGLE_SHEETS_TRIGGERS from './triggers';
-import { getGoogleSheetsExpressions } from './helpers/record-based/get-expressions';
-import {
-  GoogleSheetsCreateOptions,
-  GoogleSheetsDeleteOptions,
-  GoogleSheetsUpdateOptions,
-} from './helpers/record-based/options';
 import { deleteGoogleSheetsRecords } from './helpers/record-based/delete-records';
-import { updateGoogleSheetsRecords } from './helpers/record-based/update-records';
-import { searchGoogleSheetsRecords } from './helpers/record-based/search-records';
-import { getGoogleSheetsTableList } from './helpers/record-based/get-table-list';
+import { getGoogleSheetsExpressions } from './helpers/record-based/get-expressions';
 import { getGoogleSheetsRecordType } from './helpers/record-based/get-record-type';
+import { getGoogleSheetsTableList } from './helpers/record-based/get-table-list';
+import { GoogleSheetsSearchOptions } from './helpers/record-based/options';
+import { searchGoogleSheetsRecords } from './helpers/record-based/search-records';
+import { updateGoogleSheetsRecords } from './helpers/record-based/update-records';
+import * as GOOGLE_SHEETS_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
   ({
@@ -58,7 +54,6 @@ export default (locale: Locales) =>
     update_records: updateGoogleSheetsRecords,
     delete_records: deleteGoogleSheetsRecords,
     expressions: getGoogleSheetsExpressions(locale),
-    create_options: GoogleSheetsCreateOptions,
-    update_options: GoogleSheetsUpdateOptions,
-    delete_options: GoogleSheetsDeleteOptions,
+    create_options: GoogleSheetsSearchOptions,
+    search_options: GoogleSheetsSearchOptions,
   }) satisfies TQoreAppWithActions & TQoreRecordBasedApp;
