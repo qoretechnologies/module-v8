@@ -24,9 +24,9 @@ export const buildHubspotFilter = (
   const { exp, args } = where_cond;
 
   switch (exp) {
-    case 'AND': {
+    case '&&': {
       const hasOrExpression = args.some(
-        (arg) => isQoreRecordSearchExpression(arg) && arg.exp === 'OR'
+        (arg) => isQoreRecordSearchExpression(arg) && arg.exp === '||'
       );
 
       if (hasOrExpression) {
@@ -37,7 +37,7 @@ export const buildHubspotFilter = (
 
       for (const arg of args) {
         if (isQoreRecordSearchExpression(arg)) {
-          if (arg.exp === 'AND') {
+          if (arg.exp === '&&') {
             const nestedGroups = buildHubspotFilter(arg);
             if (nestedGroups.length > 0) {
               filters.push(...nestedGroups[0].filters);
@@ -54,12 +54,12 @@ export const buildHubspotFilter = (
       return filters.length > 0 ? [{ filters }] : [];
     }
 
-    case 'OR': {
+    case '||': {
       const filterGroups: THubspotFilterGroup[] = [];
 
       for (const arg of args) {
         if (isQoreRecordSearchExpression(arg)) {
-          if (arg.exp === 'AND') {
+          if (arg.exp === '&&') {
             const andFilters: THubspotFilter[] = [];
 
             for (const andArg of arg.args) {
@@ -74,7 +74,7 @@ export const buildHubspotFilter = (
             if (andFilters.length > 0) {
               filterGroups.push({ filters: andFilters });
             }
-          } else if (arg.exp === 'OR') {
+          } else if (arg.exp === '||') {
             const nestedGroups = buildHubspotFilter(arg);
             filterGroups.push(...nestedGroups);
           } else {
@@ -102,7 +102,7 @@ const expandOrInAnd = (args: Array<TQoreRecordSearchValue>): THubspotFilterGroup
 
   for (const arg of args) {
     if (isQoreRecordSearchExpression(arg)) {
-      if (arg.exp === 'OR') {
+      if (arg.exp === '||') {
         orExpressions.push(arg);
       } else {
         otherConditions.push(arg);
@@ -138,7 +138,7 @@ const buildSingleFilter = (expr: TQoreSearchRecordsWhereConditions): THubspotFil
   const { exp, args } = expr;
 
   switch (exp) {
-    case '=':
+    case '==':
       return buildComparisonFilter('EQ', args);
     case '!=':
       return buildComparisonFilter('NEQ', args);

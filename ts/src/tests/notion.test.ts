@@ -333,7 +333,7 @@ describe('Notion', () => {
         const iterator = await searchNotionRecords(
           baseContext,
           {
-            exp: '=',
+            exp: '==',
             args: [{ field: 'Status' }, { value: 'Done' }],
           },
           { table }
@@ -350,13 +350,13 @@ describe('Notion', () => {
         const iterator = await searchNotionRecords(
           baseContext,
           {
-            exp: 'AND',
+            exp: '&&',
             args: [
               {
-                exp: 'OR',
+                exp: '||',
                 args: [
-                  { exp: '=', args: [{ field: 'Status' }, { value: 'Done' }] },
-                  { exp: '=', args: [{ field: 'Status' }, { value: 'In progress' }] },
+                  { exp: '==', args: [{ field: 'Status' }, { value: 'Done' }] },
+                  { exp: '==', args: [{ field: 'Status' }, { value: 'In progress' }] },
                 ],
               },
               {
@@ -515,14 +515,14 @@ describe('Notion', () => {
         const iterator = await searchNotionRecords(
           baseContext,
           {
-            exp: 'AND',
+            exp: '&&',
             args: [
               {
                 exp: '!=',
                 args: [{ field: 'Status' }, { value: 'Done' }],
               },
               {
-                exp: 'OR',
+                exp: '||',
                 args: [
                   {
                     exp: 'this_week',
@@ -553,10 +553,10 @@ describe('Notion', () => {
         const iterator = await searchNotionRecords(
           baseContext,
           {
-            exp: 'OR',
+            exp: '||',
             args: [
-              { exp: '=', args: [{ field: 'Status' }, { value: 'Done' }] },
-              { exp: '=', args: [{ field: 'Status' }, { value: 'In progress' }] },
+              { exp: '==', args: [{ field: 'Status' }, { value: 'Done' }] },
+              { exp: '==', args: [{ field: 'Status' }, { value: 'In progress' }] },
             ],
           },
           { table }

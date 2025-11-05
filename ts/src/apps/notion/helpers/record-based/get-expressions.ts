@@ -7,7 +7,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
   return mapExpressionsToApp(
     NOTION_APP_NAME,
     {
-      AND: {
+      '&&': {
         type: 'operator',
         subtype: 'logic-operator',
         name: 'AND',
@@ -23,7 +23,7 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         varargs: true,
         return_type: 'bool',
       },
-      OR: {
+      '||': {
         type: 'operator',
         subtype: 'logic-operator',
         name: 'OR',
@@ -39,11 +39,11 @@ export const getNotionExpressions = (locale: Locales): TQoreSearchRecordsExpress
         varargs: true,
         return_type: 'bool',
       },
-      '=': {
+      '==': {
         type: 'operator',
         subtype: 'generic',
         name: '=',
-        symbol: '=',
+        symbol: '==',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [

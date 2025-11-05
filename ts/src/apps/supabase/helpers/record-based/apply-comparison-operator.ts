@@ -21,7 +21,7 @@ export const applySupabaseComparisonOperator = (
   const value = (valueArg as TQoreSearchRecordsValue).value;
 
   switch (operator) {
-    case '=':
+    case '==':
       return query.eq(field, value);
     case '!=':
       return query.neq(field, value);

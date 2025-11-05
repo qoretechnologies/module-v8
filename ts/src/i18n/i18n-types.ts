@@ -1252,7 +1252,7 @@ type RootTranslation = {
 				}
 			}
 			expressions: {
-				AND: {
+				'&&': {
 					/**
 					 * a​n​d​ ​(​&​&​)
 					 */
@@ -1266,7 +1266,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 				}
-				OR: {
+				'||': {
 					/**
 					 * o​r​ ​(​|​|​)
 					 */
@@ -1294,7 +1294,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 				}
-				'=': {
+				'==': {
 					/**
 					 * e​q​u​a​l​s​ ​(​=​)
 					 */
@@ -42626,7 +42626,7 @@ type RootTranslation = {
 				}
 			}
 			expressions: {
-				AND: {
+				'&&': {
 					/**
 					 * a​n​d​ ​(​&​&​)
 					 */
@@ -42640,7 +42640,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 				}
-				OR: {
+				'||': {
 					/**
 					 * o​r​ ​(​|​|​)
 					 */
@@ -42654,7 +42654,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 				}
-				'=': {
+				'==': {
 					/**
 					 * e​q​u​a​l​s​ ​(​=​)
 					 */
@@ -81757,7 +81757,7 @@ export type TranslationFunctions = {
 				}
 			}
 			expressions: {
-				AND: {
+				'&&': {
 					/**
 					 * and (&&)
 					 */
@@ -81771,7 +81771,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
-				OR: {
+				'||': {
 					/**
 					 * or (||)
 					 */
@@ -81799,7 +81799,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
-				'=': {
+				'==': {
 					/**
 					 * equals (=)
 					 */
@@ -123131,7 +123131,7 @@ export type TranslationFunctions = {
 				}
 			}
 			expressions: {
-				AND: {
+				'&&': {
 					/**
 					 * and (&&)
 					 */
@@ -123145,7 +123145,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
-				OR: {
+				'||': {
 					/**
 					 * or (||)
 					 */
@@ -123159,7 +123159,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 				}
-				'=': {
+				'==': {
 					/**
 					 * equals (=)
 					 */

@@ -14,7 +14,7 @@ export const buildNotionFilter = (
   const { exp, args } = where_cond;
 
   switch (exp) {
-    case 'AND':
+    case '&&':
       const andConditions = args
         .filter(isQoreRecordSearchExpression)
         .map((arg) => buildNotionFilter(arg, properties))
@@ -25,7 +25,7 @@ export const buildNotionFilter = (
 
       return { and: andConditions };
 
-    case 'OR':
+    case '||':
       const orConditions = args
         .filter(isQoreRecordSearchExpression)
         .map((arg) => buildNotionFilter(arg, properties))
@@ -36,7 +36,7 @@ export const buildNotionFilter = (
 
       return { or: orConditions };
 
-    case '=':
+    case '==':
     case '!=':
     case '>':
     case '>=':
@@ -97,7 +97,7 @@ const buildComparisonFilter = (
   }
 
   switch (operator) {
-    case '=':
+    case '==':
       return buildPropertyFilter(field, propertyType, 'equals', value);
     case '!=':
       return buildPropertyFilter(field, propertyType, 'does_not_equal', value);

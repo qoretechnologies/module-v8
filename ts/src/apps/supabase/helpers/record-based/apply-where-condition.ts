@@ -14,7 +14,7 @@ export const applySupabaseWhereCondition = (
   const { exp, args } = where_cond;
 
   switch (exp) {
-    case 'AND':
+    case '&&':
       return args.reduce((q, arg) => {
         if (isQoreRecordSearchExpression(arg)) {
           return applySupabaseWhereCondition(q, arg);
@@ -22,15 +22,15 @@ export const applySupabaseWhereCondition = (
         return q;
       }, query);
 
-    case 'OR': {
+    case '||': {
       if (args.length === 0) return query;
 
       const orConditions = args
         .filter(isQoreRecordSearchExpression)
         .map((arg) => {
-          if (arg.exp === 'AND') {
+          if (arg.exp === '&&') {
             return buildAndCondition(arg);
-          } else if (arg.exp === 'OR') {
+          } else if (arg.exp === '||') {
             return buildOrCondition(arg);
           } else {
             return buildFilterCondition(arg);
@@ -53,7 +53,7 @@ export const applySupabaseWhereCondition = (
           const value = (innerExpr.args[1] as TQoreSearchRecordsValue).value;
 
           switch (innerExpr.exp) {
-            case '=':
+            case '==':
               return query.not(field, 'eq', value);
             case '!=':
               return query.not(field, 'neq', value);
@@ -77,7 +77,7 @@ export const applySupabaseWhereCondition = (
         }
       }
       return query;
-    case '=':
+    case '==':
     case '!=':
     case '>':
     case '>=':
@@ -97,7 +97,7 @@ const buildAndCondition = (expr: TQoreSearchRecordsWhereConditions): string | nu
   const conditions = expr.args
     .filter(isQoreRecordSearchExpression)
     .map((arg) => {
-      if (arg.exp === 'OR') {
+      if (arg.exp === '||') {
         return buildOrCondition(arg);
       }
       return buildFilterCondition(arg);
@@ -133,7 +133,7 @@ const buildFilterCondition = (expr: TQoreSearchRecordsWhereConditions): string |
   const field = fieldArg.field;
 
   switch (exp) {
-    case '=':
+    case '==':
       return `${field}.eq.${valueArg}`;
     case '!=':
       return `${field}.neq.${valueArg}`;

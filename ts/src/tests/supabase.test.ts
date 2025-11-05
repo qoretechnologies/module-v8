@@ -340,10 +340,10 @@ describe('Supabase', () => {
       const getRecordsIterator = await searchSupabaseRecords(
         baseContext,
         {
-          exp: 'AND',
+          exp: '&&',
           args: [
             { exp: 'in', args: [{ field: 'id' }, { value: [1, 3] }] },
-            { exp: '=', args: [{ field: 'bool' }, { value: true }] },
+            { exp: '==', args: [{ field: 'bool' }, { value: true }] },
           ],
         },
         { table }
@@ -359,10 +359,10 @@ describe('Supabase', () => {
       const getRecordsIterator = await searchSupabaseRecords(
         baseContext,
         {
-          exp: 'OR',
+          exp: '||',
           args: [
-            { exp: '=', args: [{ field: 'id' }, { value: 1 }] },
-            { exp: '=', args: [{ field: 'id' }, { value: 11 }] },
+            { exp: '==', args: [{ field: 'id' }, { value: 1 }] },
+            { exp: '==', args: [{ field: 'id' }, { value: 11 }] },
           ],
         },
         { table }
@@ -381,7 +381,7 @@ describe('Supabase', () => {
         baseContext,
         {
           exp: 'NOT',
-          args: [{ exp: '=', args: [{ field: 'bool' }, { value: true }] }],
+          args: [{ exp: '==', args: [{ field: 'bool' }, { value: true }] }],
         },
         { table }
       );
@@ -399,20 +399,20 @@ describe('Supabase', () => {
       const getRecordsIterator = await searchSupabaseRecords(
         baseContext,
         {
-          exp: 'OR',
+          exp: '||',
           args: [
             {
-              exp: 'AND',
+              exp: '&&',
               args: [
                 { exp: 'in', args: [{ field: 'id' }, { value: [1, 2, 3] }] },
-                { exp: '=', args: [{ field: 'bool' }, { value: true }] },
+                { exp: '==', args: [{ field: 'bool' }, { value: true }] },
               ],
             },
             {
-              exp: 'AND',
+              exp: '&&',
               args: [
-                { exp: '=', args: [{ field: 'id' }, { value: 11 }] },
-                { exp: '=', args: [{ field: 'bool' }, { value: true }] },
+                { exp: '==', args: [{ field: 'id' }, { value: 11 }] },
+                { exp: '==', args: [{ field: 'bool' }, { value: true }] },
               ],
             },
           ],
@@ -433,22 +433,22 @@ describe('Supabase', () => {
       const getRecordsIterator = await searchSupabaseRecords(
         baseContext,
         {
-          exp: 'OR',
+          exp: '||',
           args: [
             {
-              exp: 'AND',
+              exp: '&&',
               args: [
                 {
-                  exp: 'OR',
+                  exp: '||',
                   args: [
                     { exp: '<=', args: [{ field: 'id' }, { value: 3 }] },
                     { exp: '>=', args: [{ field: 'id' }, { value: 11 }] },
                   ],
                 },
-                { exp: '=', args: [{ field: 'bool' }, { value: true }] },
+                { exp: '==', args: [{ field: 'bool' }, { value: true }] },
               ],
             },
-            { exp: '=', args: [{ field: 'id' }, { value: 1 }] },
+            { exp: '==', args: [{ field: 'id' }, { value: 1 }] },
           ],
         },
         { table }
@@ -467,7 +467,7 @@ describe('Supabase', () => {
       const getRecordsIterator = await searchSupabaseRecords(
         baseContext,
         {
-          exp: 'AND',
+          exp: '&&',
           args: [
             { exp: '>', args: [{ field: 'id' }, { value: 2 }] },
             { exp: '<', args: [{ field: 'id' }, { value: 11 }] },
@@ -509,31 +509,31 @@ describe('Supabase', () => {
       const getRecordsIterator = await searchSupabaseRecords(
         baseContext,
         {
-          exp: 'AND',
+          exp: '&&',
           args: [
             {
-              exp: 'OR',
+              exp: '||',
               args: [
                 {
-                  exp: 'AND',
+                  exp: '&&',
                   args: [
                     {
-                      exp: 'OR',
+                      exp: '||',
                       args: [
-                        { exp: '=', args: [{ field: 'id' }, { value: 1 }] },
-                        { exp: '=', args: [{ field: 'id' }, { value: 2 }] },
+                        { exp: '==', args: [{ field: 'id' }, { value: 1 }] },
+                        { exp: '==', args: [{ field: 'id' }, { value: 2 }] },
                       ],
                     },
-                    { exp: '=', args: [{ field: 'bool' }, { value: true }] },
+                    { exp: '==', args: [{ field: 'bool' }, { value: true }] },
                   ],
                 },
                 {
-                  exp: 'AND',
+                  exp: '&&',
                   args: [
-                    { exp: '=', args: [{ field: 'id' }, { value: 3 }] },
+                    { exp: '==', args: [{ field: 'id' }, { value: 3 }] },
                     {
                       exp: 'NOT',
-                      args: [{ exp: '=', args: [{ field: 'bool' }, { value: false }] }],
+                      args: [{ exp: '==', args: [{ field: 'bool' }, { value: false }] }],
                     },
                   ],
                 },
@@ -558,7 +558,7 @@ describe('Supabase', () => {
       const getRecordsIterator = await searchSupabaseRecords(
         baseContext,
         {
-          exp: 'OR',
+          exp: '||',
           args: [
             { exp: '<=', args: [{ field: 'id' }, { value: 3 }] },
             { exp: '>=', args: [{ field: 'id' }, { value: 11 }] },

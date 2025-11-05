@@ -7,7 +7,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
   return mapExpressionsToApp(
     SUPABASE_APP_NAME,
     {
-      AND: {
+      '&&': {
         type: 'operator',
         subtype: 'logic-operator',
         name: 'AND',
@@ -23,7 +23,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
         varargs: true,
         return_type: 'bool',
       },
-      OR: {
+      '||': {
         type: 'operator',
         subtype: 'logic-operator',
         name: 'OR',
@@ -54,11 +54,11 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
         ],
         return_type: 'bool',
       },
-      '=': {
+      '==': {
         type: 'operator',
         subtype: 'generic',
-        name: '=',
-        symbol: '=',
+        name: '==',
+        symbol: '==',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [

@@ -1,14 +1,14 @@
 import { IQoreTypeObjectNonList } from '@qoretechnologies/ts-toolkit';
 import { configDotenv } from 'dotenv';
 import { difference } from 'lodash';
+import { createHubspotRecords } from '../apps/hubspot/helpers/record-based/create-records';
+import { deleteHubspotRecords } from '../apps/hubspot/helpers/record-based/delete-records';
 import { getHubspotRecordType } from '../apps/hubspot/helpers/record-based/get-record-type';
 import { getHubspotTableList } from '../apps/hubspot/helpers/record-based/get-table-list';
-import { Debugger, DebugLevels } from '../utils/Debugger';
-import { createHubspotRecords } from '../apps/hubspot/helpers/record-based/create-records';
-import { updateHubspotRecords } from '../apps/hubspot/helpers/record-based/update-records';
 import { searchHubspotRecords } from '../apps/hubspot/helpers/record-based/search-records';
-import { deleteHubspotRecords } from '../apps/hubspot/helpers/record-based/delete-records';
+import { updateHubspotRecords } from '../apps/hubspot/helpers/record-based/update-records';
 import { upsertHubspotRecords } from '../apps/hubspot/helpers/record-based/upsert-records';
+import { Debugger, DebugLevels } from '../utils/Debugger';
 
 Debugger.level = DebugLevels.Verbose;
 configDotenv({ path: '.env' });
@@ -230,33 +230,33 @@ describe('Should test Hubspot record based helpers', () => {
       const iterator = await searchHubspotRecords(
         baseContext,
         {
-          exp: 'AND',
+          exp: '&&',
           args: [
             {
-              exp: 'AND',
+              exp: '&&',
               args: [
                 {
-                  exp: 'OR',
+                  exp: '||',
                   args: [
                     {
-                      exp: '=',
+                      exp: '==',
                       args: [{ field: 'lifecyclestage' }, { value: 'customer' }],
                     },
                     {
-                      exp: '=',
+                      exp: '==',
                       args: [{ field: 'lifecyclestage' }, { value: 'marketingqualifiedlead' }],
                     },
                   ],
                 },
                 {
-                  exp: 'OR',
+                  exp: '||',
                   args: [
                     {
-                      exp: '=',
+                      exp: '==',
                       args: [{ field: 'hs_analytics_source' }, { value: 'ORGANIC_SEARCH' }],
                     },
                     {
-                      exp: '=',
+                      exp: '==',
                       args: [{ field: 'hs_analytics_source' }, { value: 'PAID_SEARCH' }],
                     },
                   ],
@@ -264,30 +264,30 @@ describe('Should test Hubspot record based helpers', () => {
               ],
             },
             {
-              exp: 'OR',
+              exp: '||',
               args: [
                 {
-                  exp: 'AND',
+                  exp: '&&',
                   args: [
                     {
-                      exp: '=',
+                      exp: '==',
                       args: [{ field: 'state' }, { value: 'CA' }],
                     },
                     {
-                      exp: '=',
+                      exp: '==',
                       args: [{ field: 'numemployees' }, { value: '100-500' }],
                     },
                   ],
                 },
                 {
-                  exp: 'AND',
+                  exp: '&&',
                   args: [
                     {
-                      exp: '=',
+                      exp: '==',
                       args: [{ field: 'state' }, { value: 'TX' }],
                     },
                     {
-                      exp: '=',
+                      exp: '==',
                       args: [{ field: 'numemployees' }, { value: '25-50' }],
                     },
                   ],

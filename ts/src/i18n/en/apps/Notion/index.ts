@@ -365,17 +365,17 @@ const NotionAppEn = {
   },
 
   expressions: {
-    AND: {
+    '&&': {
       displayName: 'and (&&)',
       shortDesc: 'Returns True if all arguments are True',
       longDesc: 'Returns `True` if all arguments are `True` with logic short-circuiting',
     },
-    OR: {
+    '||': {
       displayName: 'or (||)',
       shortDesc: 'Returns True if any argument is True',
       longDesc: 'Returns `True` if any argument is `True` with logic short-circuiting',
     },
-    '=': {
+    '==': {
       displayName: 'equals (=)',
       shortDesc: 'Equality comparison',
       longDesc: 'Returns `True` if the field equals the value',
