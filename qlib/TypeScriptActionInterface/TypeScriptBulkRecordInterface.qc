@@ -39,8 +39,9 @@ public class TypeScriptBulkRecordInterface inherits AbstractDataProviderBulkReco
 
     #! Creates the object from the arguments
     constructor(int block_size, TypeScriptActionRecordBasedDataProvider prov, *code get_records,
-            *hash<DataContextInfo> cctx, *hash<DataProviderExpression> where_exp)
-            : AbstractDataProviderBulkRecordInterface(block_size) {
+            *hash<DataContextInfo> cctx, *hash<DataProviderExpression> where_exp, *hash<auto> search_options)
+            : AbstractDataProviderBulkRecordInterface(block_size, search_options.requires_result,
+                search_options.max_records, search_options.limit) {
         self.prov = prov;
         if (get_records) {
             get_records_code = get_records;

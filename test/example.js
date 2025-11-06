@@ -199,6 +199,9 @@ exports.actionsCatalogue = {
                 @return the record type for the given table; must be a type hash defining a "hash" type
             */
             "get_record_type": async function(ctx, table_name) {
+                if (table_name != 'test') {
+                    throw new Error('Unknown table ' + search_opts.table);
+                }
                 return {
                     "type": "hash",
                     "fields": {
@@ -271,8 +274,8 @@ exports.actionsCatalogue = {
                     },
                 } {}
                 standard operator names (keys for the get_expressions() return value):
-                - "AND": logical and
-                - "OR": logical or
+                - "&&": logical and
+                - "||": logical or
                 - "regex": regular expression match
                 - "<": less than
                 - "<=": less than or equal
@@ -281,7 +284,7 @@ exports.actionsCatalogue = {
                 - "=": equal
                 - "!=": not equal
                 - "in": in operator
-                - "not": logical negation
+                - "!": logical negation
                 - "like": SQL-like "like" operator with "%" as the wildcard character
                 - "between": between operator
                 @param ctx: object -> with the following properties:
@@ -291,10 +294,10 @@ exports.actionsCatalogue = {
                 @return an object defining global expressions; the format is as described above
             */
             "expressions": {
-                "AND": {
+                "&&": {
                     "type": "operator",
                     "subtype": "logic-operator",
-                    "name": "AND",
+                    "name": "&&",
                     "display_name": "and (&&)",
                     "short_desc": "Returns True if all arguments are True with logic short-circuiting",
                     "desc": "Returns `True` if all arguments are `True` with logic short-circuiting",
@@ -309,11 +312,11 @@ exports.actionsCatalogue = {
                     "varargs": true,
                     "return_type": "bool",
                 },
-                "=": {
+                "==": {
                     "type": "operator",
                     "subtype": "logic-operator",
-                    "name": "=",
-                    "display_name": "equals (=)",
+                    "name": "==",
+                    "display_name": "equals (==)",
                     "short_desc": "Returs True if the two arguments are logically equal; types are converted if necessary",
                     "desc": "Returs `True` if the two arguments are logically equal; types are converted if necessary",
                     "symbol": "==",
