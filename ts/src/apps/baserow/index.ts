@@ -1,4 +1,7 @@
-import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import {
+  TQoreAppWithActions,
+  TQoreRecordBasedApp,
+} from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers/index';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
@@ -6,6 +9,14 @@ import { BASEROW_APP_LOGO, BASEROW_APP_NAME, BASEROW_CONN_OPTIONS } from './cons
 
 import * as BASEROW_ACTIONS from './actions';
 import * as BASEROW_TRIGGERS from './triggers';
+import { createBaserowRecords } from './helpers/record-based/create-records';
+import { deleteBaserowRecords } from './helpers/record-based/delete-records';
+import { getBaserowExpressions } from './helpers/record-based/get-expressions';
+import { getBaserowRecordType } from './helpers/record-based/get-record-type';
+import { BaserowSearchOptions } from './helpers/record-based/get-search-options';
+import { getBaserowTableList } from './helpers/record-based/get-table-list';
+import { searchBaserowRecords } from './helpers/record-based/search-records';
+import { updateBaserowRecords } from './helpers/record-based/update-records';
 
 export default (locale: Locales) =>
   ({
@@ -32,4 +43,12 @@ export default (locale: Locales) =>
       options: BASEROW_CONN_OPTIONS,
       required_options: 'url,token',
     },
-  }) satisfies TQoreAppWithActions;
+    get_table_list: getBaserowTableList,
+    expressions: getBaserowExpressions(locale),
+    get_record_type: getBaserowRecordType,
+    search_records: searchBaserowRecords,
+    create_records: createBaserowRecords,
+    update_records: updateBaserowRecords,
+    delete_records: deleteBaserowRecords,
+    search_options: BaserowSearchOptions,
+  }) satisfies TQoreRecordBasedApp & TQoreAppWithActions;

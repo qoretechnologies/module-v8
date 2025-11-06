@@ -7,7 +7,6 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
   return mapExpressionsToApp(
     BASEROW_APP_NAME,
     {
-      // Logical operators
       '&&': {
         type: 'operator',
         subtype: 'logic-operator',
@@ -60,7 +59,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      not_equal: {
+      '!=': {
         type: 'operator',
         subtype: 'generic',
         name: 'not_equal',
@@ -79,9 +78,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-
-      // Numeric comparison operators
-      higher_than: {
+      '>': {
         type: 'operator',
         subtype: 'generic',
         name: 'higher_than',
@@ -100,7 +97,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      higher_than_or_equal: {
+      '>=': {
         type: 'operator',
         subtype: 'generic',
         name: 'higher_than_or_equal',
@@ -119,7 +116,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      lower_than: {
+      '<': {
         type: 'operator',
         subtype: 'generic',
         name: 'lower_than',
@@ -138,7 +135,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      lower_than_or_equal: {
+      '<=': {
         type: 'operator',
         subtype: 'generic',
         name: 'lower_than_or_equal',
@@ -157,8 +154,6 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-
-      // Text/String operators
       contains: {
         type: 'operator',
         subtype: 'generic',
@@ -254,8 +249,6 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-
-      // Empty/Not Empty operators
       empty: {
         type: 'operator',
         subtype: 'generic',
@@ -286,8 +279,6 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-
-      // Date operators (current - using new format)
       date_is: {
         type: 'operator',
         subtype: 'generic',
@@ -446,8 +437,6 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-
-      // Boolean operators
       boolean: {
         type: 'operator',
         subtype: 'generic',
@@ -486,8 +475,6 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-
-      // Select operators
       single_select_equal: {
         type: 'operator',
         subtype: 'generic',
@@ -570,8 +557,6 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-
-      // Multiple select operators
       multiple_select_has: {
         type: 'operator',
         subtype: 'generic',
@@ -616,8 +601,6 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-
-      // Link/Relationship operators
       link_row_has: {
         type: 'operator',
         subtype: 'generic',
@@ -694,8 +677,6 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-
-      // File operators
       filename_contains: {
         type: 'operator',
         subtype: 'generic',
@@ -756,8 +737,6 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-
-      // User operators
       user_is: {
         type: 'operator',
         subtype: 'generic',
@@ -796,8 +775,6 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-
-      // Collaborators operators
       multiple_collaborators_has: {
         type: 'operator',
         subtype: 'generic',
@@ -836,8 +813,6 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-
-      // Additional "has_" operators for complex field types
       has_empty_value: {
         type: 'operator',
         subtype: 'generic',
@@ -1066,8 +1041,6 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-
-      // Numeric "has_" operators
       has_value_higher: {
         type: 'operator',
         subtype: 'generic',
@@ -1220,8 +1193,6 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-
-      // Date "has_" operators
       has_date_equal: {
         type: 'operator',
         subtype: 'generic',
