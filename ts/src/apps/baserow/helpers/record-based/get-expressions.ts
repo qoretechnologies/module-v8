@@ -294,9 +294,6 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
           {
             type_code: 'value',
             type: 'string',
-            display_name: 'Date',
-            short_desc: 'Date value in format UTC??today or specific date',
-            desc: 'Provide a date in format UTC??today or a specific date string',
           },
         ],
         return_type: 'bool',
@@ -430,9 +427,6 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
           {
             type_code: 'value',
             type: 'int',
-            display_name: 'Day',
-            short_desc: 'Day of month (1-31)',
-            desc: 'Specify the day of month as an integer between 1 and 31',
           },
         ],
         return_type: 'bool',
@@ -711,9 +705,6 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
           {
             type_code: 'value',
             type: 'string',
-            display_name: 'File Type',
-            short_desc: 'File type to check',
-            desc: "Specify file type: 'image' or 'document'",
           },
         ],
         return_type: 'bool',
