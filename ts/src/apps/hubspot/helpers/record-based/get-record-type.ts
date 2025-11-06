@@ -28,6 +28,10 @@ export const getHubspotRecordType: TQoreGetRecordTypeFunction = async (
     ErrorClass: HubspotError,
   });
 
+  if (!tableName) {
+    throw new HubspotError('Table name is required to get record type');
+  }
+
   try {
     let type;
 
