@@ -246,7 +246,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
                 info.expressions ? convertExpression(where_cond) : NOTHING,
                 info.expressions ? search_options : NOTHING);
             return new TypeScriptBulkRecordInterface(block_size, self, get_records, cctx,
-                info.expressions ? NOTHING : where_cond);
+                info.expressions ? NOTHING : where_cond, search_options);
         }
     }
 
@@ -277,7 +277,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
                 info.expressions ? convertExpression(where_cond) : NOTHING,
                 info.expressions ? search_options : NOTHING);
             return new TypeScriptBulkRecordInterface(block_size, self, get_records, cctx,
-                info.expressions ? NOTHING : where_cond);
+                info.expressions ? NOTHING : where_cond, search_options);
         }
     }
 
@@ -300,7 +300,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
                 \ofmap.search{$1.key})}, appinfo.search_options.pairIterator();
             # add in search options that are always supported
             map rv.search_options{$1.key} = $1.value,
-                GenericRecordSearchOptions{"requires_result", "max_records"}.pairIterator(),
+                GenericRecordSearchOptions{"requires_result", "max_records", "limit"}.pairIterator(),
                     !rv.search_options{$1.key};
         }
 
@@ -478,7 +478,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         if (record_type || !options.table.val()) {
             return;
         }
-        auto v = getAsyncValue(get_record_type, getCallContextInfo(options));
+        auto v = getAsyncValue(get_record_type, getCallContextInfo(options), options.table);
         record_type = TypeScriptActionInterface::getType("record_type", v).getFields();
     }
 

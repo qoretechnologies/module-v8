@@ -28,11 +28,11 @@ import { getSheetRowsOptions } from '../apps/google-sheets/helpers/get-sheet-row
 import { createGoogleSheetsRecords } from '../apps/google-sheets/helpers/record-based/create-records';
 import { getGoogleSheetsRecordType } from '../apps/google-sheets/helpers/record-based/get-record-type';
 import { getGoogleSheetsTableList } from '../apps/google-sheets/helpers/record-based/get-table-list';
-import { GoogleSheetsUpdateOptions } from '../apps/google-sheets/helpers/record-based/options';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import { deleteGoogleSheetsRecords } from '../apps/google-sheets/helpers/record-based/delete-records';
 import { searchGoogleSheetsRecords } from '../apps/google-sheets/helpers/record-based/search-records';
 import { updateGoogleSheetsRecords } from '../apps/google-sheets/helpers/record-based/update-records';
+import { GoogleSheetsSearchOptions } from '../apps/google-sheets/helpers/record-based/options';
 
 configDotenv({ path: '.env' });
 Debugger.level = DebugLevels.Verbose;
@@ -442,7 +442,7 @@ describe('Google Sheets', () => {
     });
 
     it('Should get sheet id allowed values', async () => {
-      const result = await GoogleSheetsUpdateOptions.sheet_id.get_allowed_values({
+      const result = await GoogleSheetsSearchOptions.sheet_id.get_allowed_values({
         ...base_context,
         opts: { spreadsheet_id: spreadsheetId, table },
       });
