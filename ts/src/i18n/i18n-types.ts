@@ -2071,6 +2071,1044 @@ type RootTranslation = {
 					}
 				}
 			}
+			expressions: {
+				'&&': {
+					/**
+					 * a​n​d​ ​(​&​&​)
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​T​r​u​e​ ​i​f​ ​a​l​l​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​T​r​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​l​l​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
+					 */
+					longDesc: string
+				}
+				'||': {
+					/**
+					 * o​r​ ​(​|​|​)
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​T​r​u​e​ ​i​f​ ​a​n​y​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​T​r​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​n​y​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
+					 */
+					longDesc: string
+				}
+				'==': {
+					/**
+					 * e​q​u​a​l​ ​(​=​=​)
+					 */
+					displayName: string
+					/**
+					 * E​q​u​a​l​i​t​y​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​e​q​u​a​l​s​ ​t​h​e​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'!=': {
+					/**
+					 * n​o​t​ ​e​q​u​a​l​ ​(​!​=​)
+					 */
+					displayName: string
+					/**
+					 * I​n​e​q​u​a​l​i​t​y​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'>': {
+					/**
+					 * h​i​g​h​e​r​ ​t​h​a​n​ ​(​>​)
+					 */
+					displayName: string
+					/**
+					 * G​r​e​a​t​e​r​ ​t​h​a​n​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'>=': {
+					/**
+					 * h​i​g​h​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​(​>​=​)
+					 */
+					displayName: string
+					/**
+					 * G​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'<': {
+					/**
+					 * l​o​w​e​r​ ​t​h​a​n​ ​(​<​)
+					 */
+					displayName: string
+					/**
+					 * L​e​s​s​ ​t​h​a​n​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'<=': {
+					/**
+					 * l​o​w​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​(​<​=​)
+					 */
+					displayName: string
+					/**
+					 * L​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				contains: {
+					/**
+					 * c​o​n​t​a​i​n​s
+					 */
+					displayName: string
+					/**
+					 * C​o​n​t​a​i​n​s​ ​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 */
+					longDesc: string
+				}
+				contains_not: {
+					/**
+					 * d​o​e​s​n​'​t​ ​c​o​n​t​a​i​n
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 */
+					longDesc: string
+				}
+				contains_word: {
+					/**
+					 * c​o​n​t​a​i​n​s​ ​w​o​r​d
+					 */
+					displayName: string
+					/**
+					 * C​o​n​t​a​i​n​s​ ​w​o​r​d
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​w​o​r​d
+					 */
+					longDesc: string
+				}
+				doesnt_contain_word: {
+					/**
+					 * d​o​e​s​n​'​t​ ​c​o​n​t​a​i​n​ ​w​o​r​d
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​w​o​r​d
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​w​o​r​d
+					 */
+					longDesc: string
+				}
+				length_is_lower_than: {
+					/**
+					 * l​e​n​g​t​h​ ​i​s​ ​l​o​w​e​r​ ​t​h​a​n
+					 */
+					displayName: string
+					/**
+					 * L​e​n​g​t​h​ ​i​s​ ​l​e​s​s​ ​t​h​a​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​l​e​n​g​t​h​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				empty: {
+					/**
+					 * i​s​ ​e​m​p​t​y
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​e​m​p​t​y
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​e​m​p​t​y​ ​o​r​ ​n​o​t​ ​s​e​t
+					 */
+					longDesc: string
+				}
+				not_empty: {
+					/**
+					 * i​s​ ​n​o​t​ ​e​m​p​t​y
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​n​o​t​ ​e​m​p​t​y
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				date_is: {
+					/**
+					 * d​a​t​e​ ​i​s
+					 */
+					displayName: string
+					/**
+					 * D​a​t​e​ ​e​q​u​a​l​s​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
+					 */
+					longDesc: string
+				}
+				date_is_not: {
+					/**
+					 * d​a​t​e​ ​i​s​ ​n​o​t
+					 */
+					displayName: string
+					/**
+					 * D​a​t​e​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
+					 */
+					longDesc: string
+				}
+				date_is_before: {
+					/**
+					 * d​a​t​e​ ​i​s​ ​b​e​f​o​r​e
+					 */
+					displayName: string
+					/**
+					 * D​a​t​e​ ​i​s​ ​b​e​f​o​r​e​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​i​s​ ​b​e​f​o​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
+					 */
+					longDesc: string
+				}
+				date_is_on_or_before: {
+					/**
+					 * d​a​t​e​ ​i​s​ ​o​n​ ​o​r​ ​b​e​f​o​r​e
+					 */
+					displayName: string
+					/**
+					 * D​a​t​e​ ​i​s​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​i​s​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
+					 */
+					longDesc: string
+				}
+				date_is_after: {
+					/**
+					 * d​a​t​e​ ​i​s​ ​a​f​t​e​r
+					 */
+					displayName: string
+					/**
+					 * D​a​t​e​ ​i​s​ ​a​f​t​e​r​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​i​s​ ​a​f​t​e​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
+					 */
+					longDesc: string
+				}
+				date_is_on_or_after: {
+					/**
+					 * d​a​t​e​ ​i​s​ ​o​n​ ​o​r​ ​a​f​t​e​r
+					 */
+					displayName: string
+					/**
+					 * D​a​t​e​ ​i​s​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​i​s​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
+					 */
+					longDesc: string
+				}
+				date_is_within: {
+					/**
+					 * d​a​t​e​ ​i​s​ ​w​i​t​h​i​n
+					 */
+					displayName: string
+					/**
+					 * D​a​t​e​ ​i​s​ ​w​i​t​h​i​n​ ​r​a​n​g​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​i​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​a​n​g​e
+					 */
+					longDesc: string
+				}
+				date_equals_day_of_month: {
+					/**
+					 * d​a​y​ ​o​f​ ​m​o​n​t​h​ ​i​s
+					 */
+					displayName: string
+					/**
+					 * D​a​y​ ​o​f​ ​m​o​n​t​h​ ​e​q​u​a​l​s​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​y​ ​o​f​ ​m​o​n​t​h​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				boolean: {
+					/**
+					 * i​s
+					 */
+					displayName: string
+					/**
+					 * B​o​o​l​e​a​n​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​b​o​o​l​e​a​n​ ​f​i​e​l​d​ ​m​a​t​c​h​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				is_even_and_whole: {
+					/**
+					 * i​s​ ​e​v​e​n​ ​a​n​d​ ​w​h​o​l​e
+					 */
+					displayName: string
+					/**
+					 * N​u​m​b​e​r​ ​i​s​ ​e​v​e​n​ ​a​n​d​ ​w​h​o​l​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​n​u​m​b​e​r​ ​i​s​ ​e​v​e​n​ ​a​n​d​ ​a​ ​w​h​o​l​e​ ​n​u​m​b​e​r
+					 */
+					longDesc: string
+				}
+				single_select_equal: {
+					/**
+					 * i​s
+					 */
+					displayName: string
+					/**
+					 * S​i​n​g​l​e​ ​s​e​l​e​c​t​ ​e​q​u​a​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​s​i​n​g​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​o​p​t​i​o​n
+					 */
+					longDesc: string
+				}
+				single_select_not_equal: {
+					/**
+					 * i​s​ ​n​o​t
+					 */
+					displayName: string
+					/**
+					 * S​i​n​g​l​e​ ​s​e​l​e​c​t​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​s​i​n​g​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​o​p​t​i​o​n
+					 */
+					longDesc: string
+				}
+				single_select_is_any_of: {
+					/**
+					 * i​s​ ​a​n​y​ ​o​f
+					 */
+					displayName: string
+					/**
+					 * S​i​n​g​l​e​ ​s​e​l​e​c​t​ ​i​s​ ​a​n​y​ ​o​f
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​s​i​n​g​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​i​s​ ​a​n​y​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​o​p​t​i​o​n​s
+					 */
+					longDesc: string
+				}
+				single_select_is_none_of: {
+					/**
+					 * i​s​ ​n​o​n​e​ ​o​f
+					 */
+					displayName: string
+					/**
+					 * S​i​n​g​l​e​ ​s​e​l​e​c​t​ ​i​s​ ​n​o​n​e​ ​o​f
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​s​i​n​g​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​i​s​ ​n​o​n​e​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​o​p​t​i​o​n​s
+					 */
+					longDesc: string
+				}
+				multiple_select_has: {
+					/**
+					 * h​a​s​ ​a​n​y​ ​o​f
+					 */
+					displayName: string
+					/**
+					 * M​u​l​t​i​p​l​e​ ​s​e​l​e​c​t​ ​h​a​s​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​m​u​l​t​i​p​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				multiple_select_has_not: {
+					/**
+					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​a​n​y​ ​o​f
+					 */
+					displayName: string
+					/**
+					 * M​u​l​t​i​p​l​e​ ​s​e​l​e​c​t​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​m​u​l​t​i​p​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				link_row_has: {
+					/**
+					 * h​a​s
+					 */
+					displayName: string
+					/**
+					 * L​i​n​k​ ​r​o​w​ ​h​a​s​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​i​n​k​ ​r​o​w​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				link_row_has_not: {
+					/**
+					 * d​o​e​s​n​'​t​ ​h​a​v​e
+					 */
+					displayName: string
+					/**
+					 * L​i​n​k​ ​r​o​w​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​i​n​k​ ​r​o​w​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				link_row_contains: {
+					/**
+					 * c​o​n​t​a​i​n​s
+					 */
+					displayName: string
+					/**
+					 * L​i​n​k​ ​r​o​w​ ​c​o​n​t​a​i​n​s​ ​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​i​n​k​ ​r​o​w​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 */
+					longDesc: string
+				}
+				link_row_not_contains: {
+					/**
+					 * d​o​e​s​n​'​t​ ​c​o​n​t​a​i​n
+					 */
+					displayName: string
+					/**
+					 * L​i​n​k​ ​r​o​w​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​i​n​k​ ​r​o​w​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 */
+					longDesc: string
+				}
+				filename_contains: {
+					/**
+					 * f​i​l​e​n​a​m​e​ ​c​o​n​t​a​i​n​s
+					 */
+					displayName: string
+					/**
+					 * F​i​l​e​n​a​m​e​ ​c​o​n​t​a​i​n​s​ ​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​l​e​n​a​m​e​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 */
+					longDesc: string
+				}
+				has_file_type: {
+					/**
+					 * h​a​s​ ​f​i​l​e​ ​t​y​p​e
+					 */
+					displayName: string
+					/**
+					 * H​a​s​ ​f​i​l​e​ ​t​y​p​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​l​e​ ​f​i​e​l​d​ ​h​a​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​l​e​ ​t​y​p​e
+					 */
+					longDesc: string
+				}
+				files_lower_than: {
+					/**
+					 * f​i​l​e​s​ ​l​o​w​e​r​ ​t​h​a​n
+					 */
+					displayName: string
+					/**
+					 * N​u​m​b​e​r​ ​o​f​ ​f​i​l​e​s​ ​i​s​ ​l​e​s​s​ ​t​h​a​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​f​i​l​e​s​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				user_is: {
+					/**
+					 * i​s
+					 */
+					displayName: string
+					/**
+					 * U​s​e​r​ ​e​q​u​a​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​u​s​e​r​ ​f​i​e​l​d​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​u​s​e​r
+					 */
+					longDesc: string
+				}
+				user_is_not: {
+					/**
+					 * i​s​ ​n​o​t
+					 */
+					displayName: string
+					/**
+					 * U​s​e​r​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​u​s​e​r​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​u​s​e​r
+					 */
+					longDesc: string
+				}
+				multiple_collaborators_has: {
+					/**
+					 * h​a​s
+					 */
+					displayName: string
+					/**
+					 * C​o​l​l​a​b​o​r​a​t​o​r​s​ ​h​a​s​ ​u​s​e​r
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​c​o​l​l​a​b​o​r​a​t​o​r​s​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​u​s​e​r
+					 */
+					longDesc: string
+				}
+				multiple_collaborators_has_not: {
+					/**
+					 * d​o​e​s​n​'​t​ ​h​a​v​e
+					 */
+					displayName: string
+					/**
+					 * C​o​l​l​a​b​o​r​a​t​o​r​s​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​u​s​e​r
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​c​o​l​l​a​b​o​r​a​t​o​r​s​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​u​s​e​r
+					 */
+					longDesc: string
+				}
+				has_empty_value: {
+					/**
+					 * h​a​s​ ​e​m​p​t​y​ ​v​a​l​u​e
+					 */
+					displayName: string
+					/**
+					 * H​a​s​ ​e​m​p​t​y​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​n​ ​e​m​p​t​y​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				has_not_empty_value: {
+					/**
+					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​e​m​p​t​y​ ​v​a​l​u​e
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​e​m​p​t​y​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​n​ ​e​m​p​t​y​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				has_value_equal: {
+					/**
+					 * h​a​s​ ​v​a​l​u​e​ ​e​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * H​a​s​ ​v​a​l​u​e​ ​e​q​u​a​l​ ​t​o
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				has_not_value_equal: {
+					/**
+					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​e​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​e​q​u​a​l​ ​t​o
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​v​a​l​u​e​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				has_value_contains: {
+					/**
+					 * h​a​s​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​s
+					 */
+					displayName: string
+					/**
+					 * H​a​s​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 */
+					longDesc: string
+				}
+				has_not_value_contains: {
+					/**
+					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​s
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 */
+					longDesc: string
+				}
+				has_value_contains_word: {
+					/**
+					 * h​a​s​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​s​ ​w​o​r​d
+					 */
+					displayName: string
+					/**
+					 * H​a​s​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​i​n​g​ ​w​o​r​d
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​w​o​r​d
+					 */
+					longDesc: string
+				}
+				has_not_value_contains_word: {
+					/**
+					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​s​ ​w​o​r​d
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​i​n​g​ ​w​o​r​d
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​w​o​r​d
+					 */
+					longDesc: string
+				}
+				has_value_length_is_lower_than: {
+					/**
+					 * h​a​s​ ​v​a​l​u​e​ ​l​e​n​g​t​h​ ​i​s​ ​l​o​w​e​r​ ​t​h​a​n
+					 */
+					displayName: string
+					/**
+					 * H​a​s​ ​v​a​l​u​e​ ​w​i​t​h​ ​l​e​n​g​t​h​ ​l​e​s​s​ ​t​h​a​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​w​i​t​h​ ​l​e​n​g​t​h​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				has_all_values_equal: {
+					/**
+					 * h​a​s​ ​a​l​l​ ​v​a​l​u​e​s​ ​e​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * A​l​l​ ​v​a​l​u​e​s​ ​e​q​u​a​l
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​l​l​ ​v​a​l​u​e​s​ ​i​n​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				has_any_select_option_equal: {
+					/**
+					 * h​a​s​ ​a​n​y​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​e​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * H​a​s​ ​a​n​y​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​e​q​u​a​l
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​n​y​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				has_none_select_option_equal: {
+					/**
+					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​e​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​e​q​u​a​l
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​n​y​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				has_value_higher: {
+					/**
+					 * h​a​s​ ​v​a​l​u​e​ ​h​i​g​h​e​r​ ​t​h​a​n
+					 */
+					displayName: string
+					/**
+					 * H​a​s​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				has_not_value_higher: {
+					/**
+					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​h​i​g​h​e​r​ ​t​h​a​n
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				has_value_higher_or_equal: {
+					/**
+					 * h​a​s​ ​v​a​l​u​e​ ​h​i​g​h​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * H​a​s​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				has_not_value_higher_or_equal: {
+					/**
+					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​h​i​g​h​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				has_value_lower: {
+					/**
+					 * h​a​s​ ​v​a​l​u​e​ ​l​o​w​e​r​ ​t​h​a​n
+					 */
+					displayName: string
+					/**
+					 * H​a​s​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				has_not_value_lower: {
+					/**
+					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​l​o​w​e​r​ ​t​h​a​n
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				has_value_lower_or_equal: {
+					/**
+					 * h​a​s​ ​v​a​l​u​e​ ​l​o​w​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * H​a​s​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				has_not_value_lower_or_equal: {
+					/**
+					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​l​o​w​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				has_date_equal: {
+					/**
+					 * h​a​s​ ​d​a​t​e​ ​e​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * H​a​s​ ​d​a​t​e​ ​e​q​u​a​l​ ​t​o
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​d​a​t​e​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
+					 */
+					longDesc: string
+				}
+				has_not_date_equal: {
+					/**
+					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​d​a​t​e​ ​e​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​d​a​t​e​ ​e​q​u​a​l​ ​t​o
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​d​a​t​e​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
+					 */
+					longDesc: string
+				}
+				has_date_before: {
+					/**
+					 * h​a​s​ ​d​a​t​e​ ​b​e​f​o​r​e
+					 */
+					displayName: string
+					/**
+					 * H​a​s​ ​d​a​t​e​ ​b​e​f​o​r​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​d​a​t​e​ ​b​e​f​o​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
+					 */
+					longDesc: string
+				}
+				has_not_date_before: {
+					/**
+					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​d​a​t​e​ ​b​e​f​o​r​e
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​d​a​t​e​ ​b​e​f​o​r​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​d​a​t​e​ ​b​e​f​o​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
+					 */
+					longDesc: string
+				}
+				has_date_on_or_before: {
+					/**
+					 * h​a​s​ ​d​a​t​e​ ​o​n​ ​o​r​ ​b​e​f​o​r​e
+					 */
+					displayName: string
+					/**
+					 * H​a​s​ ​d​a​t​e​ ​o​n​ ​o​r​ ​b​e​f​o​r​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​d​a​t​e​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
+					 */
+					longDesc: string
+				}
+				has_not_date_on_or_before: {
+					/**
+					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​d​a​t​e​ ​o​n​ ​o​r​ ​b​e​f​o​r​e
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​d​a​t​e​ ​o​n​ ​o​r​ ​b​e​f​o​r​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​d​a​t​e​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
+					 */
+					longDesc: string
+				}
+				has_date_after: {
+					/**
+					 * h​a​s​ ​d​a​t​e​ ​a​f​t​e​r
+					 */
+					displayName: string
+					/**
+					 * H​a​s​ ​d​a​t​e​ ​a​f​t​e​r
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​d​a​t​e​ ​a​f​t​e​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
+					 */
+					longDesc: string
+				}
+				has_not_date_after: {
+					/**
+					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​d​a​t​e​ ​a​f​t​e​r
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​d​a​t​e​ ​a​f​t​e​r
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​d​a​t​e​ ​a​f​t​e​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
+					 */
+					longDesc: string
+				}
+				has_date_on_or_after: {
+					/**
+					 * h​a​s​ ​d​a​t​e​ ​o​n​ ​o​r​ ​a​f​t​e​r
+					 */
+					displayName: string
+					/**
+					 * H​a​s​ ​d​a​t​e​ ​o​n​ ​o​r​ ​a​f​t​e​r
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​d​a​t​e​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
+					 */
+					longDesc: string
+				}
+				has_not_date_on_or_after: {
+					/**
+					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​d​a​t​e​ ​o​n​ ​o​r​ ​a​f​t​e​r
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​d​a​t​e​ ​o​n​ ​o​r​ ​a​f​t​e​r
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​d​a​t​e​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
+					 */
+					longDesc: string
+				}
+				has_date_within: {
+					/**
+					 * h​a​s​ ​d​a​t​e​ ​w​i​t​h​i​n
+					 */
+					displayName: string
+					/**
+					 * H​a​s​ ​d​a​t​e​ ​w​i​t​h​i​n​ ​r​a​n​g​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​d​a​t​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​a​n​g​e
+					 */
+					longDesc: string
+				}
+				has_not_date_within: {
+					/**
+					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​d​a​t​e​ ​w​i​t​h​i​n
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​d​a​t​e​ ​w​i​t​h​i​n​ ​r​a​n​g​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​d​a​t​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​a​n​g​e
+					 */
+					longDesc: string
+				}
+			}
 		}
 		Firestore: {
 			/**
@@ -82574,6 +83612,1044 @@ export type TranslationFunctions = {
 							}
 						}
 					}
+				}
+			}
+			expressions: {
+				'&&': {
+					/**
+					 * and (&&)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns True if all arguments are True
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if all arguments are `True` with logic short-circuiting
+					 */
+					longDesc: () => LocalizedString
+				}
+				'||': {
+					/**
+					 * or (||)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns True if any argument is True
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if any argument is `True` with logic short-circuiting
+					 */
+					longDesc: () => LocalizedString
+				}
+				'==': {
+					/**
+					 * equal (==)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Equality comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field equals the value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'!=': {
+					/**
+					 * not equal (!=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Inequality comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field does not equal the value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'>': {
+					/**
+					 * higher than (>)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Greater than comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field is greater than the value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'>=': {
+					/**
+					 * higher than or equal (>=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Greater than or equal comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field is greater than or equal to the value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'<': {
+					/**
+					 * lower than (<)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Less than comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field is less than the value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'<=': {
+					/**
+					 * lower than or equal (<=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Less than or equal comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field is less than or equal to the value
+					 */
+					longDesc: () => LocalizedString
+				}
+				contains: {
+					/**
+					 * contains
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Contains text
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field contains the specified text
+					 */
+					longDesc: () => LocalizedString
+				}
+				contains_not: {
+					/**
+					 * doesn't contain
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not contain text
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field does not contain the specified text
+					 */
+					longDesc: () => LocalizedString
+				}
+				contains_word: {
+					/**
+					 * contains word
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Contains word
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field contains the specified word
+					 */
+					longDesc: () => LocalizedString
+				}
+				doesnt_contain_word: {
+					/**
+					 * doesn't contain word
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not contain word
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field does not contain the specified word
+					 */
+					longDesc: () => LocalizedString
+				}
+				length_is_lower_than: {
+					/**
+					 * length is lower than
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Length is less than
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field length is less than the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				empty: {
+					/**
+					 * is empty
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is empty
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field is empty or not set
+					 */
+					longDesc: () => LocalizedString
+				}
+				not_empty: {
+					/**
+					 * is not empty
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is not empty
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field has a value
+					 */
+					longDesc: () => LocalizedString
+				}
+				date_is: {
+					/**
+					 * date is
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Date equals value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the date field equals the specified date
+					 */
+					longDesc: () => LocalizedString
+				}
+				date_is_not: {
+					/**
+					 * date is not
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Date does not equal value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the date field does not equal the specified date
+					 */
+					longDesc: () => LocalizedString
+				}
+				date_is_before: {
+					/**
+					 * date is before
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Date is before value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the date field is before the specified date
+					 */
+					longDesc: () => LocalizedString
+				}
+				date_is_on_or_before: {
+					/**
+					 * date is on or before
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Date is on or before value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the date field is on or before the specified date
+					 */
+					longDesc: () => LocalizedString
+				}
+				date_is_after: {
+					/**
+					 * date is after
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Date is after value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the date field is after the specified date
+					 */
+					longDesc: () => LocalizedString
+				}
+				date_is_on_or_after: {
+					/**
+					 * date is on or after
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Date is on or after value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the date field is on or after the specified date
+					 */
+					longDesc: () => LocalizedString
+				}
+				date_is_within: {
+					/**
+					 * date is within
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Date is within range
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the date field is within the specified range
+					 */
+					longDesc: () => LocalizedString
+				}
+				date_equals_day_of_month: {
+					/**
+					 * day of month is
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Day of month equals value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the day of month equals the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				boolean: {
+					/**
+					 * is
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Boolean comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the boolean field matches the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				is_even_and_whole: {
+					/**
+					 * is even and whole
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Number is even and whole
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the number is even and a whole number
+					 */
+					longDesc: () => LocalizedString
+				}
+				single_select_equal: {
+					/**
+					 * is
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Single select equals
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the single select field equals the specified option
+					 */
+					longDesc: () => LocalizedString
+				}
+				single_select_not_equal: {
+					/**
+					 * is not
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Single select does not equal
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the single select field does not equal the specified option
+					 */
+					longDesc: () => LocalizedString
+				}
+				single_select_is_any_of: {
+					/**
+					 * is any of
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Single select is any of
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the single select field is any of the specified options
+					 */
+					longDesc: () => LocalizedString
+				}
+				single_select_is_none_of: {
+					/**
+					 * is none of
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Single select is none of
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the single select field is none of the specified options
+					 */
+					longDesc: () => LocalizedString
+				}
+				multiple_select_has: {
+					/**
+					 * has any of
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Multiple select has value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the multiple select field contains the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				multiple_select_has_not: {
+					/**
+					 * doesn't have any of
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Multiple select does not have value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the multiple select field does not contain the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				link_row_has: {
+					/**
+					 * has
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Link row has value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the link row field contains the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				link_row_has_not: {
+					/**
+					 * doesn't have
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Link row does not have value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the link row field does not contain the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				link_row_contains: {
+					/**
+					 * contains
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Link row contains text
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the link row field contains the specified text
+					 */
+					longDesc: () => LocalizedString
+				}
+				link_row_not_contains: {
+					/**
+					 * doesn't contain
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Link row does not contain text
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the link row field does not contain the specified text
+					 */
+					longDesc: () => LocalizedString
+				}
+				filename_contains: {
+					/**
+					 * filename contains
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Filename contains text
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the filename contains the specified text
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_file_type: {
+					/**
+					 * has file type
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Has file type
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the file field has the specified file type
+					 */
+					longDesc: () => LocalizedString
+				}
+				files_lower_than: {
+					/**
+					 * files lower than
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Number of files is less than
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the number of files is less than the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				user_is: {
+					/**
+					 * is
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * User equals
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the user field equals the specified user
+					 */
+					longDesc: () => LocalizedString
+				}
+				user_is_not: {
+					/**
+					 * is not
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * User does not equal
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the user field does not equal the specified user
+					 */
+					longDesc: () => LocalizedString
+				}
+				multiple_collaborators_has: {
+					/**
+					 * has
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Collaborators has user
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the collaborators field contains the specified user
+					 */
+					longDesc: () => LocalizedString
+				}
+				multiple_collaborators_has_not: {
+					/**
+					 * doesn't have
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Collaborators does not have user
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the collaborators field does not contain the specified user
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_empty_value: {
+					/**
+					 * has empty value
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Has empty value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field has an empty value
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_not_empty_value: {
+					/**
+					 * doesn't have empty value
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not have empty value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field does not have an empty value
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_value_equal: {
+					/**
+					 * has value equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Has value equal to
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field has a value equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_not_value_equal: {
+					/**
+					 * doesn't have value equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not have value equal to
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field does not have a value equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_value_contains: {
+					/**
+					 * has value contains
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Has value containing text
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field has a value containing the specified text
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_not_value_contains: {
+					/**
+					 * doesn't have value contains
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not have value containing text
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field does not have a value containing the specified text
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_value_contains_word: {
+					/**
+					 * has value contains word
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Has value containing word
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field has a value containing the specified word
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_not_value_contains_word: {
+					/**
+					 * doesn't have value contains word
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not have value containing word
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field does not have a value containing the specified word
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_value_length_is_lower_than: {
+					/**
+					 * has value length is lower than
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Has value with length less than
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field has a value with length less than the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_all_values_equal: {
+					/**
+					 * has all values equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * All values equal
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if all values in the lookup field equal the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_any_select_option_equal: {
+					/**
+					 * has any select option equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Has any select option equal
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field has any select option equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_none_select_option_equal: {
+					/**
+					 * doesn't have select option equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not have select option equal
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field does not have any select option equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_value_higher: {
+					/**
+					 * has value higher than
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Has value greater than
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field has a value greater than the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_not_value_higher: {
+					/**
+					 * doesn't have value higher than
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not have value greater than
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field does not have a value greater than the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_value_higher_or_equal: {
+					/**
+					 * has value higher than or equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Has value greater than or equal to
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field has a value greater than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_not_value_higher_or_equal: {
+					/**
+					 * doesn't have value higher than or equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not have value greater than or equal to
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field does not have a value greater than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_value_lower: {
+					/**
+					 * has value lower than
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Has value less than
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field has a value less than the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_not_value_lower: {
+					/**
+					 * doesn't have value lower than
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not have value less than
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field does not have a value less than the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_value_lower_or_equal: {
+					/**
+					 * has value lower than or equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Has value less than or equal to
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field has a value less than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_not_value_lower_or_equal: {
+					/**
+					 * doesn't have value lower than or equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not have value less than or equal to
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field does not have a value less than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_date_equal: {
+					/**
+					 * has date equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Has date equal to
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field has a date equal to the specified date
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_not_date_equal: {
+					/**
+					 * doesn't have date equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not have date equal to
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field does not have a date equal to the specified date
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_date_before: {
+					/**
+					 * has date before
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Has date before
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field has a date before the specified date
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_not_date_before: {
+					/**
+					 * doesn't have date before
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not have date before
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field does not have a date before the specified date
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_date_on_or_before: {
+					/**
+					 * has date on or before
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Has date on or before
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field has a date on or before the specified date
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_not_date_on_or_before: {
+					/**
+					 * doesn't have date on or before
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not have date on or before
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field does not have a date on or before the specified date
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_date_after: {
+					/**
+					 * has date after
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Has date after
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field has a date after the specified date
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_not_date_after: {
+					/**
+					 * doesn't have date after
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not have date after
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field does not have a date after the specified date
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_date_on_or_after: {
+					/**
+					 * has date on or after
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Has date on or after
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field has a date on or after the specified date
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_not_date_on_or_after: {
+					/**
+					 * doesn't have date on or after
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not have date on or after
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field does not have a date on or after the specified date
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_date_within: {
+					/**
+					 * has date within
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Has date within range
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field has a date within the specified range
+					 */
+					longDesc: () => LocalizedString
+				}
+				has_not_date_within: {
+					/**
+					 * doesn't have date within
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not have date within range
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the lookup field does not have a date within the specified range
+					 */
+					longDesc: () => LocalizedString
 				}
 			}
 		}

@@ -17,6 +17,12 @@ import { getBaserowTableFieldsAllowedValues } from '../apps/baserow/helpers/get-
 import { getBaserowTableRowsAllowedValues } from '../apps/baserow/helpers/get-table-row-allowed-values';
 import { delay } from '../global/helpers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import { getBaserowTableList } from '../apps/baserow/helpers/record-based/get-table-list';
+import { getBaserowRecordType } from '../apps/baserow/helpers/record-based/get-record-type';
+import { createBaserowRecords } from '../apps/baserow/helpers/record-based/create-records';
+import { updateBaserowRecords } from '../apps/baserow/helpers/record-based/update-records';
+import { deleteBaserowRecords } from '../apps/baserow/helpers/record-based/delete-records';
+import { searchBaserowRecords } from '../apps/baserow/helpers/record-based/search-records';
 
 configDotenv({ path: '.env' });
 Debugger.level = DebugLevels.Verbose;
@@ -40,7 +46,7 @@ describe('Baserow', () => {
   });
 
   afterEach(async () => {
-    await delay(1000);
+    await delay(2000);
   });
 
   let table: number | undefined;
@@ -250,6 +256,388 @@ describe('Baserow', () => {
       );
 
       expect(result).toBeUndefined();
+    });
+  });
+
+  describe('Should test record based helpers', () => {
+    afterEach(async () => {
+      await delay(2000);
+    });
+
+    const tableName = 'Tasks';
+
+    it('Should get tables', async () => {
+      const result = await getBaserowTableList(baseContext);
+
+      expect(result).toBeDefined();
+      expect(Array.isArray(result)).toBe(true);
+    });
+
+    it('Should get record type', async () => {
+      const result = await getBaserowRecordType(baseContext, tableName);
+
+      expect(result).toBeDefined();
+    });
+
+    const emails = [
+      'alpha@testbaserow.com',
+      'beta@testbaserow.com',
+      'gamma@testbaserow.com',
+      'delta@testbaserow.com',
+    ];
+
+    it('Should create records', async () => {
+      const result = await createBaserowRecords(
+        baseContext,
+        {
+          Name: ['Task Alpha', 'Task Beta', 'Task Gamma', 'Task Delta'],
+          'Estimated days': [3, 7, 5, 10],
+          Completed: [false, true, false, true],
+          Details: [
+            'Details for task alpha',
+            'Details for task beta',
+            'Details for task gamma',
+            'Details for task delta',
+          ],
+          Duration: ['1:00:00', '3:30:00', '2:15:00', '5:45:00'],
+          Rating: [5, 9, 7, 8],
+          Email: emails,
+          Date: ['2024-01-15', '2024-02-20', '2024-03-10', '2024-04-05'],
+        },
+        { table: tableName }
+      );
+
+      expect(result).toBeDefined();
+      expect(Array.isArray(result!.Name)).toBe(true);
+      expect(result!.Name.length).toBe(4);
+    });
+
+    it('Should verify created records', async () => {
+      const iterator = await searchBaserowRecords(
+        baseContext,
+        {
+          exp: '||',
+          args: emails.map((email) => ({
+            exp: '==',
+            args: [{ field: 'Email' }, { value: email }],
+          })),
+        },
+        { table: tableName }
+      );
+
+      const result = await iterator(baseContext, 10);
+
+      expect(result).toBeDefined();
+      expect(result!.Email.length).toBe(4);
+
+      const alphaIndex = result!.Email.indexOf('alpha@testbaserow.com');
+      expect(result!.Name[alphaIndex]).toBe('Task Alpha');
+      expect(result!['Estimated days'][alphaIndex]).toBe('3');
+      expect(result!.Rating[alphaIndex]).toBe(5);
+
+      const betaIndex = result!.Email.indexOf('beta@testbaserow.com');
+      expect(result!.Name[betaIndex]).toBe('Task Beta');
+      expect(result!.Completed[betaIndex]).toBe(true);
+      expect(result!.Rating[betaIndex]).toBe(9);
+    });
+
+    it('Should search records with simple expression', async () => {
+      const iterator = await searchBaserowRecords(
+        baseContext,
+        {
+          exp: '==',
+          args: [{ field: 'Name' }, { value: 'Task Alpha' }],
+        },
+        { table: tableName }
+      );
+
+      const result = await iterator(baseContext, 10);
+
+      expect(result).toBeDefined();
+      expect(result!.Name.length).toBeGreaterThan(0);
+      expect(result!.Name[0]).toBe('Task Alpha');
+    });
+
+    it('Should search records with OR expression', async () => {
+      const iterator = await searchBaserowRecords(
+        baseContext,
+        {
+          exp: '||',
+          args: [
+            { exp: '==', args: [{ field: 'Email' }, { value: 'gamma@testbaserow.com' }] },
+            { exp: '==', args: [{ field: 'Email' }, { value: 'delta@testbaserow.com' }] },
+          ],
+        },
+        { table: tableName }
+      );
+
+      const result = await iterator(baseContext, 10);
+
+      expect(result).toBeDefined();
+      expect(result!.Email.length).toBe(2);
+      result!.Email.forEach((email: string) => {
+        expect(['gamma@testbaserow.com', 'delta@testbaserow.com']).toContain(email);
+      });
+    });
+
+    it('Should search records with AND expression', async () => {
+      const iterator = await searchBaserowRecords(
+        baseContext,
+        {
+          exp: '&&',
+          args: [
+            { exp: '==', args: [{ field: 'Completed' }, { value: true }] },
+            { exp: '>=', args: [{ field: 'Rating' }, { value: 8 }] },
+          ],
+        },
+        { table: tableName }
+      );
+
+      const result = await iterator(baseContext, 10);
+
+      expect(result).toBeDefined();
+      if (result && result.id.length > 0) {
+        result.Completed.forEach((completed: boolean) => {
+          expect(completed).toBe(true);
+        });
+        result.Rating.forEach((rating: number) => {
+          expect(rating).toBeGreaterThanOrEqual(8);
+        });
+      }
+    });
+
+    it('Should search records with comparison operators', async () => {
+      const iterator = await searchBaserowRecords(
+        baseContext,
+        {
+          exp: '&&',
+          args: [
+            { exp: '>', args: [{ field: 'Rating' }, { value: 5 }] },
+            { exp: '<', args: [{ field: 'Estimated days' }, { value: 9 }] },
+          ],
+        },
+        { table: tableName }
+      );
+
+      const result = await iterator(baseContext, 10);
+
+      expect(result).toBeDefined();
+      if (result && result.id.length > 0) {
+        result.Rating.forEach((rating: number) => {
+          expect(rating).toBeGreaterThan(5);
+        });
+        result['Estimated days'].forEach((days: number) => {
+          expect(Number(days)).toBeLessThan(9);
+        });
+      }
+    });
+
+    it('Should search records with contains expression', async () => {
+      const iterator = await searchBaserowRecords(
+        baseContext,
+        {
+          exp: 'contains',
+          args: [{ field: 'Details' }, { value: 'task' }],
+        },
+        { table: tableName }
+      );
+
+      const result = await iterator(baseContext, 10);
+
+      expect(result).toBeDefined();
+      if (result && result.id.length > 0) {
+        result.Details.forEach((detail: string) => {
+          expect(detail.toLowerCase()).toContain('task');
+        });
+      }
+    });
+
+    it('Should search records with empty/not_empty expressions', async () => {
+      const iterator = await searchBaserowRecords(
+        baseContext,
+        {
+          exp: 'not_empty',
+          args: [{ field: 'Email' }],
+        },
+        { table: tableName }
+      );
+
+      const result = await iterator(baseContext, 10);
+
+      expect(result).toBeDefined();
+      if (result && result.id.length > 0) {
+        result.Email.forEach((email: string) => {
+          expect(email).toBeTruthy();
+          expect(email.length).toBeGreaterThan(0);
+        });
+      }
+    });
+
+    it('Should search records with date comparison', async () => {
+      const iterator = await searchBaserowRecords(
+        baseContext,
+        {
+          exp: 'date_is_after',
+          args: [{ field: 'Date' }, { value: '2024-02-01' }],
+        },
+        { table: tableName }
+      );
+
+      const result = await iterator(baseContext, 10);
+
+      expect(result).toBeDefined();
+      if (result && result.id.length > 0) {
+        result.Date.forEach((date: string) => {
+          expect(new Date(date).getTime()).toBeGreaterThan(new Date('2024-02-01').getTime());
+        });
+      }
+    });
+
+    it('Should search records with deeply nested expression (3 levels)', async () => {
+      const iterator = await searchBaserowRecords(
+        baseContext,
+        {
+          exp: '&&',
+          args: [
+            {
+              exp: '||',
+              args: [
+                { exp: '==', args: [{ field: 'Name' }, { value: 'Task Alpha' }] },
+                { exp: '==', args: [{ field: 'Name' }, { value: 'Task Beta' }] },
+                { exp: '==', args: [{ field: 'Name' }, { value: 'Task Gamma' }] },
+              ],
+            },
+            {
+              exp: '||',
+              args: [
+                {
+                  exp: '&&',
+                  args: [
+                    { exp: '>=', args: [{ field: 'Rating' }, { value: 8 }] },
+                    { exp: '==', args: [{ field: 'Completed' }, { value: true }] },
+                  ],
+                },
+                {
+                  exp: '&&',
+                  args: [
+                    { exp: '<=', args: [{ field: 'Estimated days' }, { value: 5 }] },
+                    { exp: '==', args: [{ field: 'Completed' }, { value: false }] },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        { table: tableName }
+      );
+
+      const result = await iterator(baseContext, 10);
+
+      expect(result).toBeDefined();
+      if (result && result.id.length > 0) {
+        result.Name.forEach((name: string) => {
+          expect(['Task Alpha', 'Task Beta', 'Task Gamma']).toContain(name);
+        });
+
+        // Verify each record matches one of the complex conditions
+        for (let i = 0; i < result.id.length; i++) {
+          const rating = result.Rating[i];
+          const completed = result.Completed[i];
+          const estimatedDays = result['Estimated days'][i];
+
+          const matchesFirstCondition = rating >= 8 && completed === true;
+          const matchesSecondCondition = estimatedDays <= 5 && completed === false;
+
+          expect(matchesFirstCondition || matchesSecondCondition).toBe(true);
+        }
+      }
+    });
+
+    it('Should update records', async () => {
+      const result = await updateBaserowRecords(
+        baseContext,
+        {
+          Rating: 10,
+        },
+        {
+          exp: '||',
+          args: [
+            { exp: '==', args: [{ field: 'Name' }, { value: 'Task Gamma' }] },
+            { exp: '==', args: [{ field: 'Name' }, { value: 'Task Delta' }] },
+          ],
+        },
+        { table: tableName }
+      );
+
+      expect(result).toBeDefined();
+      expect(result).toBe(2);
+    });
+
+    it('Should handle pagination with filters', async () => {
+      const iterator = await searchBaserowRecords(
+        baseContext,
+        {
+          exp: 'not_empty',
+          args: [{ field: 'Email' }],
+        },
+        { table: tableName }
+      );
+
+      const firstPage = await iterator(baseContext, 2);
+
+      expect(firstPage).toBeDefined();
+      expect(firstPage!.id.length).toBeLessThanOrEqual(2);
+
+      const secondPage = await iterator(baseContext, 2);
+      if (secondPage && secondPage.id.length > 0) {
+        const firstIds = new Set(firstPage!.id);
+        secondPage.id.forEach((id: string) => {
+          expect(firstIds.has(id)).toBe(false);
+        });
+      }
+    });
+
+    it('Should combine filters with ordering', async () => {
+      const iterator = await searchBaserowRecords(
+        baseContext,
+        {
+          exp: 'not_empty',
+          args: [{ field: 'Name' }],
+        },
+        {
+          table: tableName,
+          orderBy: {
+            column: 'Rating',
+            ascending: true,
+          },
+        }
+      );
+
+      const result = await iterator(baseContext, 10);
+      expect(result).toBeDefined();
+
+      if (result && result.id.length > 1) {
+        const ratings = result.Rating;
+        for (let i = 1; i < ratings.length; i++) {
+          expect(ratings[i]).toBeGreaterThanOrEqual(ratings[i - 1]);
+        }
+      }
+    });
+
+    it('Should clean up all test records', async () => {
+      const result = await deleteBaserowRecords(
+        baseContext,
+        {
+          exp: '||',
+          args: emails.map((email) => ({
+            exp: '==',
+            args: [{ field: 'Email' }, { value: email }],
+          })),
+        },
+        { table: tableName }
+      );
+
+      expect(result).toBe(4);
     });
   });
 });

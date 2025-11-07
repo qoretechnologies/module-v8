@@ -301,6 +301,394 @@ const BaserowAppEn = {
       },
     },
   },
+  expressions: {
+    '&&': {
+      displayName: 'and (&&)',
+      shortDesc: 'Returns True if all arguments are True',
+      longDesc: 'Returns `True` if all arguments are `True` with logic short-circuiting',
+    },
+    '||': {
+      displayName: 'or (||)',
+      shortDesc: 'Returns True if any argument is True',
+      longDesc: 'Returns `True` if any argument is `True` with logic short-circuiting',
+    },
+    '==': {
+      displayName: 'equal (==)',
+      shortDesc: 'Equality comparison',
+      longDesc: 'Returns `True` if the field equals the value',
+    },
+    '!=': {
+      displayName: 'not equal (!=)',
+      shortDesc: 'Inequality comparison',
+      longDesc: 'Returns `True` if the field does not equal the value',
+    },
+    '>': {
+      displayName: 'higher than (>)',
+      shortDesc: 'Greater than comparison',
+      longDesc: 'Returns `True` if the field is greater than the value',
+    },
+    '>=': {
+      displayName: 'higher than or equal (>=)',
+      shortDesc: 'Greater than or equal comparison',
+      longDesc: 'Returns `True` if the field is greater than or equal to the value',
+    },
+    '<': {
+      displayName: 'lower than (<)',
+      shortDesc: 'Less than comparison',
+      longDesc: 'Returns `True` if the field is less than the value',
+    },
+    '<=': {
+      displayName: 'lower than or equal (<=)',
+      shortDesc: 'Less than or equal comparison',
+      longDesc: 'Returns `True` if the field is less than or equal to the value',
+    },
+    contains: {
+      displayName: 'contains',
+      shortDesc: 'Contains text',
+      longDesc: 'Returns `True` if the field contains the specified text',
+    },
+    contains_not: {
+      displayName: "doesn't contain",
+      shortDesc: 'Does not contain text',
+      longDesc: 'Returns `True` if the field does not contain the specified text',
+    },
+    contains_word: {
+      displayName: 'contains word',
+      shortDesc: 'Contains word',
+      longDesc: 'Returns `True` if the field contains the specified word',
+    },
+    doesnt_contain_word: {
+      displayName: "doesn't contain word",
+      shortDesc: 'Does not contain word',
+      longDesc: 'Returns `True` if the field does not contain the specified word',
+    },
+    length_is_lower_than: {
+      displayName: 'length is lower than',
+      shortDesc: 'Length is less than',
+      longDesc: 'Returns `True` if the field length is less than the specified value',
+    },
+    empty: {
+      displayName: 'is empty',
+      shortDesc: 'Field is empty',
+      longDesc: 'Returns `True` if the field is empty or not set',
+    },
+    not_empty: {
+      displayName: 'is not empty',
+      shortDesc: 'Field is not empty',
+      longDesc: 'Returns `True` if the field has a value',
+    },
+    date_is: {
+      displayName: 'date is',
+      shortDesc: 'Date equals value',
+      longDesc: 'Returns `True` if the date field equals the specified date',
+    },
+    date_is_not: {
+      displayName: 'date is not',
+      shortDesc: 'Date does not equal value',
+      longDesc: 'Returns `True` if the date field does not equal the specified date',
+    },
+    date_is_before: {
+      displayName: 'date is before',
+      shortDesc: 'Date is before value',
+      longDesc: 'Returns `True` if the date field is before the specified date',
+    },
+    date_is_on_or_before: {
+      displayName: 'date is on or before',
+      shortDesc: 'Date is on or before value',
+      longDesc: 'Returns `True` if the date field is on or before the specified date',
+    },
+    date_is_after: {
+      displayName: 'date is after',
+      shortDesc: 'Date is after value',
+      longDesc: 'Returns `True` if the date field is after the specified date',
+    },
+    date_is_on_or_after: {
+      displayName: 'date is on or after',
+      shortDesc: 'Date is on or after value',
+      longDesc: 'Returns `True` if the date field is on or after the specified date',
+    },
+    date_is_within: {
+      displayName: 'date is within',
+      shortDesc: 'Date is within range',
+      longDesc: 'Returns `True` if the date field is within the specified range',
+    },
+    date_equals_day_of_month: {
+      displayName: 'day of month is',
+      shortDesc: 'Day of month equals value',
+      longDesc: 'Returns `True` if the day of month equals the specified value',
+    },
+    boolean: {
+      displayName: 'is',
+      shortDesc: 'Boolean comparison',
+      longDesc: 'Returns `True` if the boolean field matches the specified value',
+    },
+    is_even_and_whole: {
+      displayName: 'is even and whole',
+      shortDesc: 'Number is even and whole',
+      longDesc: 'Returns `True` if the number is even and a whole number',
+    },
+    single_select_equal: {
+      displayName: 'is',
+      shortDesc: 'Single select equals',
+      longDesc: 'Returns `True` if the single select field equals the specified option',
+    },
+    single_select_not_equal: {
+      displayName: 'is not',
+      shortDesc: 'Single select does not equal',
+      longDesc: 'Returns `True` if the single select field does not equal the specified option',
+    },
+    single_select_is_any_of: {
+      displayName: 'is any of',
+      shortDesc: 'Single select is any of',
+      longDesc: 'Returns `True` if the single select field is any of the specified options',
+    },
+    single_select_is_none_of: {
+      displayName: 'is none of',
+      shortDesc: 'Single select is none of',
+      longDesc: 'Returns `True` if the single select field is none of the specified options',
+    },
+    multiple_select_has: {
+      displayName: 'has any of',
+      shortDesc: 'Multiple select has value',
+      longDesc: 'Returns `True` if the multiple select field contains the specified value',
+    },
+    multiple_select_has_not: {
+      displayName: "doesn't have any of",
+      shortDesc: 'Multiple select does not have value',
+      longDesc: 'Returns `True` if the multiple select field does not contain the specified value',
+    },
+    link_row_has: {
+      displayName: 'has',
+      shortDesc: 'Link row has value',
+      longDesc: 'Returns `True` if the link row field contains the specified value',
+    },
+    link_row_has_not: {
+      displayName: "doesn't have",
+      shortDesc: 'Link row does not have value',
+      longDesc: 'Returns `True` if the link row field does not contain the specified value',
+    },
+    link_row_contains: {
+      displayName: 'contains',
+      shortDesc: 'Link row contains text',
+      longDesc: 'Returns `True` if the link row field contains the specified text',
+    },
+    link_row_not_contains: {
+      displayName: "doesn't contain",
+      shortDesc: 'Link row does not contain text',
+      longDesc: 'Returns `True` if the link row field does not contain the specified text',
+    },
+    filename_contains: {
+      displayName: 'filename contains',
+      shortDesc: 'Filename contains text',
+      longDesc: 'Returns `True` if the filename contains the specified text',
+    },
+    has_file_type: {
+      displayName: 'has file type',
+      shortDesc: 'Has file type',
+      longDesc: 'Returns `True` if the file field has the specified file type',
+    },
+    files_lower_than: {
+      displayName: 'files lower than',
+      shortDesc: 'Number of files is less than',
+      longDesc: 'Returns `True` if the number of files is less than the specified value',
+    },
+    user_is: {
+      displayName: 'is',
+      shortDesc: 'User equals',
+      longDesc: 'Returns `True` if the user field equals the specified user',
+    },
+    user_is_not: {
+      displayName: 'is not',
+      shortDesc: 'User does not equal',
+      longDesc: 'Returns `True` if the user field does not equal the specified user',
+    },
+    multiple_collaborators_has: {
+      displayName: 'has',
+      shortDesc: 'Collaborators has user',
+      longDesc: 'Returns `True` if the collaborators field contains the specified user',
+    },
+    multiple_collaborators_has_not: {
+      displayName: "doesn't have",
+      shortDesc: 'Collaborators does not have user',
+      longDesc: 'Returns `True` if the collaborators field does not contain the specified user',
+    },
+    has_empty_value: {
+      displayName: 'has empty value',
+      shortDesc: 'Has empty value',
+      longDesc: 'Returns `True` if the lookup field has an empty value',
+    },
+    has_not_empty_value: {
+      displayName: "doesn't have empty value",
+      shortDesc: 'Does not have empty value',
+      longDesc: 'Returns `True` if the lookup field does not have an empty value',
+    },
+    has_value_equal: {
+      displayName: 'has value equal',
+      shortDesc: 'Has value equal to',
+      longDesc: 'Returns `True` if the lookup field has a value equal to the specified value',
+    },
+    has_not_value_equal: {
+      displayName: "doesn't have value equal",
+      shortDesc: 'Does not have value equal to',
+      longDesc:
+        'Returns `True` if the lookup field does not have a value equal to the specified value',
+    },
+    has_value_contains: {
+      displayName: 'has value contains',
+      shortDesc: 'Has value containing text',
+      longDesc: 'Returns `True` if the lookup field has a value containing the specified text',
+    },
+    has_not_value_contains: {
+      displayName: "doesn't have value contains",
+      shortDesc: 'Does not have value containing text',
+      longDesc:
+        'Returns `True` if the lookup field does not have a value containing the specified text',
+    },
+    has_value_contains_word: {
+      displayName: 'has value contains word',
+      shortDesc: 'Has value containing word',
+      longDesc: 'Returns `True` if the lookup field has a value containing the specified word',
+    },
+    has_not_value_contains_word: {
+      displayName: "doesn't have value contains word",
+      shortDesc: 'Does not have value containing word',
+      longDesc:
+        'Returns `True` if the lookup field does not have a value containing the specified word',
+    },
+    has_value_length_is_lower_than: {
+      displayName: 'has value length is lower than',
+      shortDesc: 'Has value with length less than',
+      longDesc:
+        'Returns `True` if the lookup field has a value with length less than the specified value',
+    },
+    has_all_values_equal: {
+      displayName: 'has all values equal',
+      shortDesc: 'All values equal',
+      longDesc: 'Returns `True` if all values in the lookup field equal the specified value',
+    },
+    has_any_select_option_equal: {
+      displayName: 'has any select option equal',
+      shortDesc: 'Has any select option equal',
+      longDesc:
+        'Returns `True` if the lookup field has any select option equal to the specified value',
+    },
+    has_none_select_option_equal: {
+      displayName: "doesn't have select option equal",
+      shortDesc: 'Does not have select option equal',
+      longDesc:
+        'Returns `True` if the lookup field does not have any select option equal to the specified value',
+    },
+    has_value_higher: {
+      displayName: 'has value higher than',
+      shortDesc: 'Has value greater than',
+      longDesc: 'Returns `True` if the lookup field has a value greater than the specified value',
+    },
+    has_not_value_higher: {
+      displayName: "doesn't have value higher than",
+      shortDesc: 'Does not have value greater than',
+      longDesc:
+        'Returns `True` if the lookup field does not have a value greater than the specified value',
+    },
+    has_value_higher_or_equal: {
+      displayName: 'has value higher than or equal',
+      shortDesc: 'Has value greater than or equal to',
+      longDesc:
+        'Returns `True` if the lookup field has a value greater than or equal to the specified value',
+    },
+    has_not_value_higher_or_equal: {
+      displayName: "doesn't have value higher than or equal",
+      shortDesc: 'Does not have value greater than or equal to',
+      longDesc:
+        'Returns `True` if the lookup field does not have a value greater than or equal to the specified value',
+    },
+    has_value_lower: {
+      displayName: 'has value lower than',
+      shortDesc: 'Has value less than',
+      longDesc: 'Returns `True` if the lookup field has a value less than the specified value',
+    },
+    has_not_value_lower: {
+      displayName: "doesn't have value lower than",
+      shortDesc: 'Does not have value less than',
+      longDesc:
+        'Returns `True` if the lookup field does not have a value less than the specified value',
+    },
+    has_value_lower_or_equal: {
+      displayName: 'has value lower than or equal',
+      shortDesc: 'Has value less than or equal to',
+      longDesc:
+        'Returns `True` if the lookup field has a value less than or equal to the specified value',
+    },
+    has_not_value_lower_or_equal: {
+      displayName: "doesn't have value lower than or equal",
+      shortDesc: 'Does not have value less than or equal to',
+      longDesc:
+        'Returns `True` if the lookup field does not have a value less than or equal to the specified value',
+    },
+    has_date_equal: {
+      displayName: 'has date equal',
+      shortDesc: 'Has date equal to',
+      longDesc: 'Returns `True` if the lookup field has a date equal to the specified date',
+    },
+    has_not_date_equal: {
+      displayName: "doesn't have date equal",
+      shortDesc: 'Does not have date equal to',
+      longDesc:
+        'Returns `True` if the lookup field does not have a date equal to the specified date',
+    },
+    has_date_before: {
+      displayName: 'has date before',
+      shortDesc: 'Has date before',
+      longDesc: 'Returns `True` if the lookup field has a date before the specified date',
+    },
+    has_not_date_before: {
+      displayName: "doesn't have date before",
+      shortDesc: 'Does not have date before',
+      longDesc: 'Returns `True` if the lookup field does not have a date before the specified date',
+    },
+    has_date_on_or_before: {
+      displayName: 'has date on or before',
+      shortDesc: 'Has date on or before',
+      longDesc: 'Returns `True` if the lookup field has a date on or before the specified date',
+    },
+    has_not_date_on_or_before: {
+      displayName: "doesn't have date on or before",
+      shortDesc: 'Does not have date on or before',
+      longDesc:
+        'Returns `True` if the lookup field does not have a date on or before the specified date',
+    },
+    has_date_after: {
+      displayName: 'has date after',
+      shortDesc: 'Has date after',
+      longDesc: 'Returns `True` if the lookup field has a date after the specified date',
+    },
+    has_not_date_after: {
+      displayName: "doesn't have date after",
+      shortDesc: 'Does not have date after',
+      longDesc: 'Returns `True` if the lookup field does not have a date after the specified date',
+    },
+    has_date_on_or_after: {
+      displayName: 'has date on or after',
+      shortDesc: 'Has date on or after',
+      longDesc: 'Returns `True` if the lookup field has a date on or after the specified date',
+    },
+    has_not_date_on_or_after: {
+      displayName: "doesn't have date on or after",
+      shortDesc: 'Does not have date on or after',
+      longDesc:
+        'Returns `True` if the lookup field does not have a date on or after the specified date',
+    },
+    has_date_within: {
+      displayName: 'has date within',
+      shortDesc: 'Has date within range',
+      longDesc: 'Returns `True` if the lookup field has a date within the specified range',
+    },
+    has_not_date_within: {
+      displayName: "doesn't have date within",
+      shortDesc: 'Does not have date within range',
+      longDesc:
+        'Returns `True` if the lookup field does not have a date within the specified range',
+    },
+  },
 };
 
 export default BaserowAppEn;
