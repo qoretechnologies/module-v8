@@ -306,387 +306,1262 @@ const BaserowAppEn = {
       displayName: 'and (&&)',
       shortDesc: 'Returns True if all arguments are True',
       longDesc: 'Returns `True` if all arguments are `True` with logic short-circuiting',
+      args: [
+        {
+          displayName: 'Condition',
+          shortDesc: 'Boolean condition to evaluate',
+          longDesc: 'A boolean expression or condition that evaluates to True or False',
+        },
+      ],
     },
     '||': {
       displayName: 'or (||)',
       shortDesc: 'Returns True if any argument is True',
       longDesc: 'Returns `True` if any argument is `True` with logic short-circuiting',
+      args: [
+        {
+          displayName: 'Condition',
+          shortDesc: 'Boolean condition to evaluate',
+          longDesc: 'A boolean expression or condition that evaluates to True or False',
+        },
+      ],
     },
     '==': {
       displayName: 'equal (==)',
       shortDesc: 'Equality comparison',
-      longDesc: 'Returns `True` if the field equals the value',
+      longDesc: 'Returns `True` if the field value equals the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
     },
     '!=': {
       displayName: 'not equal (!=)',
       shortDesc: 'Inequality comparison',
-      longDesc: 'Returns `True` if the field does not equal the value',
+      longDesc: 'Returns `True` if the field value does not equal the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
     },
     '>': {
       displayName: 'higher than (>)',
       shortDesc: 'Greater than comparison',
-      longDesc: 'Returns `True` if the field is greater than the value',
+      longDesc: 'Returns `True` if the field value is greater than the specified number',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Numeric field to compare',
+          longDesc: 'The numeric field whose value will be compared',
+        },
+        {
+          displayName: 'Number',
+          shortDesc: 'Number to compare against',
+          longDesc: 'The numeric value to compare the field against',
+        },
+      ],
     },
     '>=': {
       displayName: 'higher than or equal (>=)',
       shortDesc: 'Greater than or equal comparison',
-      longDesc: 'Returns `True` if the field is greater than or equal to the value',
+      longDesc:
+        'Returns `True` if the field value is greater than or equal to the specified number',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Numeric field to compare',
+          longDesc: 'The numeric field whose value will be compared',
+        },
+        {
+          displayName: 'Number',
+          shortDesc: 'Number to compare against',
+          longDesc: 'The numeric value to compare the field against',
+        },
+      ],
     },
     '<': {
       displayName: 'lower than (<)',
       shortDesc: 'Less than comparison',
-      longDesc: 'Returns `True` if the field is less than the value',
+      longDesc: 'Returns `True` if the field value is less than the specified number',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Numeric field to compare',
+          longDesc: 'The numeric field whose value will be compared',
+        },
+        {
+          displayName: 'Number',
+          shortDesc: 'Number to compare against',
+          longDesc: 'The numeric value to compare the field against',
+        },
+      ],
     },
     '<=': {
       displayName: 'lower than or equal (<=)',
       shortDesc: 'Less than or equal comparison',
-      longDesc: 'Returns `True` if the field is less than or equal to the value',
+      longDesc: 'Returns `True` if the field value is less than or equal to the specified number',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Numeric field to compare',
+          longDesc: 'The numeric field whose value will be compared',
+        },
+        {
+          displayName: 'Number',
+          shortDesc: 'Number to compare against',
+          longDesc: 'The numeric value to compare the field against',
+        },
+      ],
     },
     contains: {
       displayName: 'contains',
       shortDesc: 'Contains text',
       longDesc: 'Returns `True` if the field contains the specified text',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Text field to search',
+          longDesc: 'The text field to search within',
+        },
+        {
+          displayName: 'Text',
+          shortDesc: 'Text to search for',
+          longDesc: 'The text string to search for within the field',
+        },
+      ],
     },
     contains_not: {
       displayName: "doesn't contain",
       shortDesc: 'Does not contain text',
       longDesc: 'Returns `True` if the field does not contain the specified text',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Text field to search',
+          longDesc: 'The text field to search within',
+        },
+        {
+          displayName: 'Text',
+          shortDesc: 'Text to exclude',
+          longDesc: 'The text string that should not be present in the field',
+        },
+      ],
     },
     contains_word: {
       displayName: 'contains word',
-      shortDesc: 'Contains word',
-      longDesc: 'Returns `True` if the field contains the specified word',
+      shortDesc: 'Contains whole word',
+      longDesc: 'Returns `True` if the field contains the specified word as a complete word',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Text field to search',
+          longDesc: 'The text field to search within',
+        },
+        {
+          displayName: 'Word',
+          shortDesc: 'Word to search for',
+          longDesc: 'The complete word to search for within the field',
+        },
+      ],
     },
     doesnt_contain_word: {
       displayName: "doesn't contain word",
-      shortDesc: 'Does not contain word',
-      longDesc: 'Returns `True` if the field does not contain the specified word',
+      shortDesc: 'Does not contain whole word',
+      longDesc:
+        'Returns `True` if the field does not contain the specified word as a complete word',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Text field to search',
+          longDesc: 'The text field to search within',
+        },
+        {
+          displayName: 'Word',
+          shortDesc: 'Word to exclude',
+          longDesc: 'The complete word that should not be present in the field',
+        },
+      ],
     },
     length_is_lower_than: {
       displayName: 'length is lower than',
-      shortDesc: 'Length is less than',
-      longDesc: 'Returns `True` if the field length is less than the specified value',
+      shortDesc: 'Text length is less than',
+      longDesc: 'Returns `True` if the length of the text field is less than the specified number',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Text field to measure',
+          longDesc: 'The text field whose length will be measured',
+        },
+        {
+          displayName: 'Length',
+          shortDesc: 'Maximum length',
+          longDesc: 'The maximum length the field should be less than',
+        },
+      ],
     },
     empty: {
       displayName: 'is empty',
       shortDesc: 'Field is empty',
-      longDesc: 'Returns `True` if the field is empty or not set',
+      longDesc: 'Returns `True` if the field is empty or has no value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to check',
+          longDesc: 'The field to check for emptiness',
+        },
+      ],
     },
     not_empty: {
       displayName: 'is not empty',
       shortDesc: 'Field is not empty',
       longDesc: 'Returns `True` if the field has a value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to check',
+          longDesc: 'The field to check for a value',
+        },
+      ],
     },
     date_is: {
       displayName: 'date is',
-      shortDesc: 'Date equals value',
+      shortDesc: 'Date equals',
       longDesc: 'Returns `True` if the date field equals the specified date',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Date field to compare',
+          longDesc: 'The date field to compare',
+        },
+        {
+          displayName: 'Date',
+          shortDesc: 'Date to match',
+          longDesc: 'The date value to compare against (format: YYYY-MM-DD)',
+        },
+      ],
     },
     date_is_not: {
       displayName: 'date is not',
-      shortDesc: 'Date does not equal value',
+      shortDesc: 'Date does not equal',
       longDesc: 'Returns `True` if the date field does not equal the specified date',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Date field to compare',
+          longDesc: 'The date field to compare',
+        },
+        {
+          displayName: 'Date',
+          shortDesc: 'Date to exclude',
+          longDesc: 'The date value that should not match (format: YYYY-MM-DD)',
+        },
+      ],
     },
     date_is_before: {
       displayName: 'date is before',
-      shortDesc: 'Date is before value',
+      shortDesc: 'Date is before',
       longDesc: 'Returns `True` if the date field is before the specified date',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Date field to compare',
+          longDesc: 'The date field to compare',
+        },
+        {
+          displayName: 'Date',
+          shortDesc: 'Maximum date',
+          longDesc: 'The date that the field should be before (format: YYYY-MM-DD)',
+        },
+      ],
     },
     date_is_on_or_before: {
       displayName: 'date is on or before',
-      shortDesc: 'Date is on or before value',
+      shortDesc: 'Date is on or before',
       longDesc: 'Returns `True` if the date field is on or before the specified date',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Date field to compare',
+          longDesc: 'The date field to compare',
+        },
+        {
+          displayName: 'Date',
+          shortDesc: 'Maximum date',
+          longDesc: 'The date that the field should be on or before (format: YYYY-MM-DD)',
+        },
+      ],
     },
     date_is_after: {
       displayName: 'date is after',
-      shortDesc: 'Date is after value',
+      shortDesc: 'Date is after',
       longDesc: 'Returns `True` if the date field is after the specified date',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Date field to compare',
+          longDesc: 'The date field to compare',
+        },
+        {
+          displayName: 'Date',
+          shortDesc: 'Minimum date',
+          longDesc: 'The date that the field should be after (format: YYYY-MM-DD)',
+        },
+      ],
     },
     date_is_on_or_after: {
       displayName: 'date is on or after',
-      shortDesc: 'Date is on or after value',
+      shortDesc: 'Date is on or after',
       longDesc: 'Returns `True` if the date field is on or after the specified date',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Date field to compare',
+          longDesc: 'The date field to compare',
+        },
+        {
+          displayName: 'Date',
+          shortDesc: 'Minimum date',
+          longDesc: 'The date that the field should be on or after (format: YYYY-MM-DD)',
+        },
+      ],
     },
     date_is_within: {
       displayName: 'date is within',
-      shortDesc: 'Date is within range',
-      longDesc: 'Returns `True` if the date field is within the specified range',
+      shortDesc: 'Date is within time period',
+      longDesc: 'Returns `True` if the date field falls within the specified time period',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Date field to check',
+          longDesc: 'The date field to check',
+        },
+        {
+          displayName: 'Period',
+          shortDesc: 'Time period',
+          longDesc:
+            'The time period to check (e.g., "today", "yesterday", "this_week", "last_month")',
+        },
+      ],
     },
     date_equals_day_of_month: {
       displayName: 'day of month is',
-      shortDesc: 'Day of month equals value',
-      longDesc: 'Returns `True` if the day of month equals the specified value',
+      shortDesc: 'Day of month equals',
+      longDesc: 'Returns `True` if the day of the month equals the specified number',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Date field to check',
+          longDesc: 'The date field whose day will be checked',
+        },
+        {
+          displayName: 'Day',
+          shortDesc: 'Day number',
+          longDesc: 'The day of the month (1-31) to match',
+        },
+      ],
     },
     boolean: {
       displayName: 'is',
       shortDesc: 'Boolean comparison',
-      longDesc: 'Returns `True` if the boolean field matches the specified value',
+      longDesc: 'Returns `True` if the boolean field equals the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Boolean field to check',
+          longDesc: 'The boolean field to compare',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Boolean value',
+          longDesc: 'The boolean value (true or false) to compare against',
+        },
+      ],
     },
     is_even_and_whole: {
       displayName: 'is even and whole',
       shortDesc: 'Number is even and whole',
       longDesc: 'Returns `True` if the number is even and a whole number',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Numeric field to check',
+          longDesc: 'The numeric field to check',
+        },
+        {
+          displayName: 'Check',
+          shortDesc: 'Check value',
+          longDesc: 'Set to true to check if even and whole, false to check if not',
+        },
+      ],
     },
     single_select_equal: {
       displayName: 'is',
       shortDesc: 'Single select equals',
       longDesc: 'Returns `True` if the single select field equals the specified option',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Single select field',
+          longDesc: 'The single select field to check',
+        },
+        {
+          displayName: 'Option',
+          shortDesc: 'Option to match',
+          longDesc: 'The select option value to match',
+        },
+      ],
     },
     single_select_not_equal: {
       displayName: 'is not',
       shortDesc: 'Single select does not equal',
       longDesc: 'Returns `True` if the single select field does not equal the specified option',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Single select field',
+          longDesc: 'The single select field to check',
+        },
+        {
+          displayName: 'Option',
+          shortDesc: 'Option to exclude',
+          longDesc: 'The select option value to exclude',
+        },
+      ],
     },
     single_select_is_any_of: {
       displayName: 'is any of',
       shortDesc: 'Single select is any of',
-      longDesc: 'Returns `True` if the single select field is any of the specified options',
+      longDesc: 'Returns `True` if the single select field matches any of the specified options',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Single select field',
+          longDesc: 'The single select field to check',
+        },
+        {
+          displayName: 'Options',
+          shortDesc: 'Options list',
+          longDesc: 'List of select option values to match against',
+        },
+      ],
     },
     single_select_is_none_of: {
       displayName: 'is none of',
       shortDesc: 'Single select is none of',
-      longDesc: 'Returns `True` if the single select field is none of the specified options',
+      longDesc:
+        'Returns `True` if the single select field does not match any of the specified options',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Single select field',
+          longDesc: 'The single select field to check',
+        },
+        {
+          displayName: 'Options',
+          shortDesc: 'Options list',
+          longDesc: 'List of select option values to exclude',
+        },
+      ],
     },
     multiple_select_has: {
       displayName: 'has any of',
-      shortDesc: 'Multiple select has value',
-      longDesc: 'Returns `True` if the multiple select field contains the specified value',
+      shortDesc: 'Multiple select contains',
+      longDesc: 'Returns `True` if the multiple select field contains the specified option',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Multiple select field',
+          longDesc: 'The multiple select field to check',
+        },
+        {
+          displayName: 'Option',
+          shortDesc: 'Option to find',
+          longDesc: 'The select option value to find in the field',
+        },
+      ],
     },
     multiple_select_has_not: {
       displayName: "doesn't have any of",
-      shortDesc: 'Multiple select does not have value',
-      longDesc: 'Returns `True` if the multiple select field does not contain the specified value',
+      shortDesc: 'Multiple select does not contain',
+      longDesc: 'Returns `True` if the multiple select field does not contain the specified option',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Multiple select field',
+          longDesc: 'The multiple select field to check',
+        },
+        {
+          displayName: 'Option',
+          shortDesc: 'Option to exclude',
+          longDesc: 'The select option value that should not be in the field',
+        },
+      ],
     },
     link_row_has: {
       displayName: 'has',
-      shortDesc: 'Link row has value',
-      longDesc: 'Returns `True` if the link row field contains the specified value',
+      shortDesc: 'Link row contains',
+      longDesc: 'Returns `True` if the link row field contains the specified linked record',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Link row field',
+          longDesc: 'The link row field to check',
+        },
+        {
+          displayName: 'Record ID',
+          shortDesc: 'Linked record ID',
+          longDesc: 'The ID of the linked record to find',
+        },
+      ],
     },
     link_row_has_not: {
       displayName: "doesn't have",
-      shortDesc: 'Link row does not have value',
-      longDesc: 'Returns `True` if the link row field does not contain the specified value',
+      shortDesc: 'Link row does not contain',
+      longDesc: 'Returns `True` if the link row field does not contain the specified linked record',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Link row field',
+          longDesc: 'The link row field to check',
+        },
+        {
+          displayName: 'Record ID',
+          shortDesc: 'Linked record ID',
+          longDesc: 'The ID of the linked record that should not be present',
+        },
+      ],
     },
     link_row_contains: {
       displayName: 'contains',
-      shortDesc: 'Link row contains text',
-      longDesc: 'Returns `True` if the link row field contains the specified text',
+      shortDesc: 'Link row value contains',
+      longDesc: 'Returns `True` if any linked record value contains the specified text',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Link row field',
+          longDesc: 'The link row field to search',
+        },
+        {
+          displayName: 'Text',
+          shortDesc: 'Text to find',
+          longDesc: 'The text to search for in linked record values',
+        },
+      ],
     },
     link_row_not_contains: {
       displayName: "doesn't contain",
-      shortDesc: 'Link row does not contain text',
-      longDesc: 'Returns `True` if the link row field does not contain the specified text',
+      shortDesc: 'Link row value does not contain',
+      longDesc: 'Returns `True` if no linked record value contains the specified text',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Link row field',
+          longDesc: 'The link row field to search',
+        },
+        {
+          displayName: 'Text',
+          shortDesc: 'Text to exclude',
+          longDesc: 'The text that should not be in linked record values',
+        },
+      ],
     },
     filename_contains: {
       displayName: 'filename contains',
-      shortDesc: 'Filename contains text',
-      longDesc: 'Returns `True` if the filename contains the specified text',
+      shortDesc: 'File name contains text',
+      longDesc: 'Returns `True` if any file name contains the specified text',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'File field',
+          longDesc: 'The file field to check',
+        },
+        {
+          displayName: 'Text',
+          shortDesc: 'Text to find',
+          longDesc: 'The text to search for in file names',
+        },
+      ],
     },
     has_file_type: {
       displayName: 'has file type',
-      shortDesc: 'Has file type',
-      longDesc: 'Returns `True` if the file field has the specified file type',
+      shortDesc: 'Has file with type',
+      longDesc: 'Returns `True` if the field contains a file with the specified type',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'File field',
+          longDesc: 'The file field to check',
+        },
+        {
+          displayName: 'Type',
+          shortDesc: 'File type',
+          longDesc: 'The file type to check for (e.g., "image", "document")',
+        },
+      ],
     },
     files_lower_than: {
       displayName: 'files lower than',
-      shortDesc: 'Number of files is less than',
-      longDesc: 'Returns `True` if the number of files is less than the specified value',
+      shortDesc: 'File count is less than',
+      longDesc: 'Returns `True` if the number of files is less than the specified count',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'File field',
+          longDesc: 'The file field to count',
+        },
+        {
+          displayName: 'Count',
+          shortDesc: 'Maximum count',
+          longDesc: 'The maximum number of files',
+        },
+      ],
     },
     user_is: {
       displayName: 'is',
       shortDesc: 'User equals',
       longDesc: 'Returns `True` if the user field equals the specified user',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'User field',
+          longDesc: 'The user field to check',
+        },
+        {
+          displayName: 'User',
+          shortDesc: 'User to match',
+          longDesc: 'The user identifier to match',
+        },
+      ],
     },
     user_is_not: {
       displayName: 'is not',
       shortDesc: 'User does not equal',
       longDesc: 'Returns `True` if the user field does not equal the specified user',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'User field',
+          longDesc: 'The user field to check',
+        },
+        {
+          displayName: 'User',
+          shortDesc: 'User to exclude',
+          longDesc: 'The user identifier to exclude',
+        },
+      ],
     },
     multiple_collaborators_has: {
       displayName: 'has',
-      shortDesc: 'Collaborators has user',
-      longDesc: 'Returns `True` if the collaborators field contains the specified user',
+      shortDesc: 'Has collaborator',
+      longDesc: 'Returns `True` if the multiple collaborators field contains the specified user',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Collaborators field',
+          longDesc: 'The multiple collaborators field to check',
+        },
+        {
+          displayName: 'User',
+          shortDesc: 'User to find',
+          longDesc: 'The user identifier to find',
+        },
+      ],
     },
     multiple_collaborators_has_not: {
       displayName: "doesn't have",
-      shortDesc: 'Collaborators does not have user',
-      longDesc: 'Returns `True` if the collaborators field does not contain the specified user',
+      shortDesc: 'Does not have collaborator',
+      longDesc:
+        'Returns `True` if the multiple collaborators field does not contain the specified user',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Collaborators field',
+          longDesc: 'The multiple collaborators field to check',
+        },
+        {
+          displayName: 'User',
+          shortDesc: 'User to exclude',
+          longDesc: 'The user identifier that should not be present',
+        },
+      ],
     },
     has_empty_value: {
       displayName: 'has empty value',
-      shortDesc: 'Has empty value',
-      longDesc: 'Returns `True` if the lookup field has an empty value',
+      shortDesc: 'Lookup has empty value',
+      longDesc: 'Returns `True` if the lookup field has at least one empty value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field to check for empty values',
+        },
+        {
+          displayName: 'Subfield',
+          shortDesc: 'Subfield to check',
+          longDesc: 'The specific subfield within the lookup to check',
+        },
+      ],
     },
     has_not_empty_value: {
       displayName: "doesn't have empty value",
-      shortDesc: 'Does not have empty value',
-      longDesc: 'Returns `True` if the lookup field does not have an empty value',
+      shortDesc: 'Lookup has no empty values',
+      longDesc: 'Returns `True` if the lookup field has no empty values',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field to check',
+        },
+        {
+          displayName: 'Subfield',
+          shortDesc: 'Subfield to check',
+          longDesc: 'The specific subfield within the lookup to check',
+        },
+      ],
     },
     has_value_equal: {
       displayName: 'has value equal',
-      shortDesc: 'Has value equal to',
+      shortDesc: 'Lookup value equals',
       longDesc: 'Returns `True` if the lookup field has a value equal to the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field to check',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to match',
+          longDesc: 'The value to find in the lookup field',
+        },
+      ],
     },
     has_not_value_equal: {
       displayName: "doesn't have value equal",
-      shortDesc: 'Does not have value equal to',
+      shortDesc: 'Lookup value does not equal',
       longDesc:
         'Returns `True` if the lookup field does not have a value equal to the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field to check',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to exclude',
+          longDesc: 'The value that should not be in the lookup field',
+        },
+      ],
     },
     has_value_contains: {
       displayName: 'has value contains',
-      shortDesc: 'Has value containing text',
+      shortDesc: 'Lookup value contains',
       longDesc: 'Returns `True` if the lookup field has a value containing the specified text',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field to search',
+        },
+        {
+          displayName: 'Text',
+          shortDesc: 'Text to find',
+          longDesc: 'The text to search for in lookup values',
+        },
+      ],
     },
     has_not_value_contains: {
       displayName: "doesn't have value contains",
-      shortDesc: 'Does not have value containing text',
+      shortDesc: 'Lookup value does not contain',
       longDesc:
         'Returns `True` if the lookup field does not have a value containing the specified text',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field to search',
+        },
+        {
+          displayName: 'Text',
+          shortDesc: 'Text to exclude',
+          longDesc: 'The text that should not be in lookup values',
+        },
+      ],
     },
     has_value_contains_word: {
       displayName: 'has value contains word',
-      shortDesc: 'Has value containing word',
+      shortDesc: 'Lookup value contains word',
       longDesc: 'Returns `True` if the lookup field has a value containing the specified word',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field to search',
+        },
+        {
+          displayName: 'Word',
+          shortDesc: 'Word to find',
+          longDesc: 'The complete word to search for in lookup values',
+        },
+      ],
     },
     has_not_value_contains_word: {
       displayName: "doesn't have value contains word",
-      shortDesc: 'Does not have value containing word',
+      shortDesc: 'Lookup value does not contain word',
       longDesc:
         'Returns `True` if the lookup field does not have a value containing the specified word',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field to search',
+        },
+        {
+          displayName: 'Word',
+          shortDesc: 'Word to exclude',
+          longDesc: 'The complete word that should not be in lookup values',
+        },
+      ],
     },
     has_value_length_is_lower_than: {
       displayName: 'has value length is lower than',
-      shortDesc: 'Has value with length less than',
+      shortDesc: 'Lookup value length is less than',
       longDesc:
-        'Returns `True` if the lookup field has a value with length less than the specified value',
+        'Returns `True` if the lookup field has a value with length less than the specified number',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field to measure',
+        },
+        {
+          displayName: 'Length',
+          shortDesc: 'Maximum length',
+          longDesc: 'The maximum length for lookup values',
+        },
+      ],
     },
     has_all_values_equal: {
       displayName: 'has all values equal',
-      shortDesc: 'All values equal',
+      shortDesc: 'All lookup values equal',
       longDesc: 'Returns `True` if all values in the lookup field equal the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field to check',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to match',
+          longDesc: 'The value that all lookup values should equal',
+        },
+      ],
     },
     has_any_select_option_equal: {
       displayName: 'has any select option equal',
-      shortDesc: 'Has any select option equal',
+      shortDesc: 'Lookup has select option',
       longDesc:
         'Returns `True` if the lookup field has any select option equal to the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with select options',
+        },
+        {
+          displayName: 'Option',
+          shortDesc: 'Option to find',
+          longDesc: 'The select option value to find',
+        },
+      ],
     },
     has_none_select_option_equal: {
       displayName: "doesn't have select option equal",
-      shortDesc: 'Does not have select option equal',
+      shortDesc: 'Lookup has no select option',
       longDesc:
-        'Returns `True` if the lookup field does not have any select option equal to the specified value',
+        'Returns `True` if the lookup field has no select option equal to the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with select options',
+        },
+        {
+          displayName: 'Option',
+          shortDesc: 'Option to exclude',
+          longDesc: 'The select option value that should not be present',
+        },
+      ],
     },
     has_value_higher: {
       displayName: 'has value higher than',
-      shortDesc: 'Has value greater than',
-      longDesc: 'Returns `True` if the lookup field has a value greater than the specified value',
+      shortDesc: 'Lookup value is greater than',
+      longDesc:
+        'Returns `True` if the lookup field has a numeric value greater than the specified number',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with numeric values',
+        },
+        {
+          displayName: 'Number',
+          shortDesc: 'Minimum value',
+          longDesc: 'The number that lookup values should be greater than',
+        },
+      ],
     },
     has_not_value_higher: {
       displayName: "doesn't have value higher than",
-      shortDesc: 'Does not have value greater than',
+      shortDesc: 'Lookup value is not greater than',
       longDesc:
-        'Returns `True` if the lookup field does not have a value greater than the specified value',
+        'Returns `True` if the lookup field does not have a numeric value greater than the specified number',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with numeric values',
+        },
+        {
+          displayName: 'Number',
+          shortDesc: 'Maximum value',
+          longDesc: 'The number that lookup values should not be greater than',
+        },
+      ],
     },
     has_value_higher_or_equal: {
       displayName: 'has value higher than or equal',
-      shortDesc: 'Has value greater than or equal to',
+      shortDesc: 'Lookup value is greater than or equal',
       longDesc:
-        'Returns `True` if the lookup field has a value greater than or equal to the specified value',
+        'Returns `True` if the lookup field has a numeric value greater than or equal to the specified number',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with numeric values',
+        },
+        {
+          displayName: 'Number',
+          shortDesc: 'Minimum value',
+          longDesc: 'The number that lookup values should be greater than or equal to',
+        },
+      ],
     },
     has_not_value_higher_or_equal: {
       displayName: "doesn't have value higher than or equal",
-      shortDesc: 'Does not have value greater than or equal to',
+      shortDesc: 'Lookup value is not greater than or equal',
       longDesc:
-        'Returns `True` if the lookup field does not have a value greater than or equal to the specified value',
+        'Returns `True` if the lookup field does not have a numeric value greater than or equal to the specified number',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with numeric values',
+        },
+        {
+          displayName: 'Number',
+          shortDesc: 'Threshold value',
+          longDesc: 'The number that lookup values should not be greater than or equal to',
+        },
+      ],
     },
     has_value_lower: {
       displayName: 'has value lower than',
-      shortDesc: 'Has value less than',
-      longDesc: 'Returns `True` if the lookup field has a value less than the specified value',
+      shortDesc: 'Lookup value is less than',
+      longDesc:
+        'Returns `True` if the lookup field has a numeric value less than the specified number',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with numeric values',
+        },
+        {
+          displayName: 'Number',
+          shortDesc: 'Maximum value',
+          longDesc: 'The number that lookup values should be less than',
+        },
+      ],
     },
     has_not_value_lower: {
       displayName: "doesn't have value lower than",
-      shortDesc: 'Does not have value less than',
+      shortDesc: 'Lookup value is not less than',
       longDesc:
-        'Returns `True` if the lookup field does not have a value less than the specified value',
+        'Returns `True` if the lookup field does not have a numeric value less than the specified number',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with numeric values',
+        },
+        {
+          displayName: 'Number',
+          shortDesc: 'Minimum value',
+          longDesc: 'The number that lookup values should not be less than',
+        },
+      ],
     },
     has_value_lower_or_equal: {
       displayName: 'has value lower than or equal',
-      shortDesc: 'Has value less than or equal to',
+      shortDesc: 'Lookup value is less than or equal',
       longDesc:
-        'Returns `True` if the lookup field has a value less than or equal to the specified value',
+        'Returns `True` if the lookup field has a numeric value less than or equal to the specified number',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with numeric values',
+        },
+        {
+          displayName: 'Number',
+          shortDesc: 'Maximum value',
+          longDesc: 'The number that lookup values should be less than or equal to',
+        },
+      ],
     },
     has_not_value_lower_or_equal: {
       displayName: "doesn't have value lower than or equal",
-      shortDesc: 'Does not have value less than or equal to',
+      shortDesc: 'Lookup value is not less than or equal',
       longDesc:
-        'Returns `True` if the lookup field does not have a value less than or equal to the specified value',
+        'Returns `True` if the lookup field does not have a numeric value less than or equal to the specified number',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with numeric values',
+        },
+        {
+          displayName: 'Number',
+          shortDesc: 'Threshold value',
+          longDesc: 'The number that lookup values should not be less than or equal to',
+        },
+      ],
     },
     has_date_equal: {
       displayName: 'has date equal',
-      shortDesc: 'Has date equal to',
+      shortDesc: 'Lookup date equals',
       longDesc: 'Returns `True` if the lookup field has a date equal to the specified date',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with date values',
+        },
+        {
+          displayName: 'Date',
+          shortDesc: 'Date to match',
+          longDesc: 'The date that lookup values should equal (format: YYYY-MM-DD)',
+        },
+      ],
     },
     has_not_date_equal: {
       displayName: "doesn't have date equal",
-      shortDesc: 'Does not have date equal to',
+      shortDesc: 'Lookup date does not equal',
       longDesc:
         'Returns `True` if the lookup field does not have a date equal to the specified date',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with date values',
+        },
+        {
+          displayName: 'Date',
+          shortDesc: 'Date to exclude',
+          longDesc: 'The date that lookup values should not equal (format: YYYY-MM-DD)',
+        },
+      ],
     },
     has_date_before: {
       displayName: 'has date before',
-      shortDesc: 'Has date before',
+      shortDesc: 'Lookup date is before',
       longDesc: 'Returns `True` if the lookup field has a date before the specified date',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with date values',
+        },
+        {
+          displayName: 'Date',
+          shortDesc: 'Maximum date',
+          longDesc: 'The date that lookup values should be before (format: YYYY-MM-DD)',
+        },
+      ],
     },
     has_not_date_before: {
       displayName: "doesn't have date before",
-      shortDesc: 'Does not have date before',
+      shortDesc: 'Lookup date is not before',
       longDesc: 'Returns `True` if the lookup field does not have a date before the specified date',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with date values',
+        },
+        {
+          displayName: 'Date',
+          shortDesc: 'Threshold date',
+          longDesc: 'The date that lookup values should not be before (format: YYYY-MM-DD)',
+        },
+      ],
     },
     has_date_on_or_before: {
       displayName: 'has date on or before',
-      shortDesc: 'Has date on or before',
+      shortDesc: 'Lookup date is on or before',
       longDesc: 'Returns `True` if the lookup field has a date on or before the specified date',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with date values',
+        },
+        {
+          displayName: 'Date',
+          shortDesc: 'Maximum date',
+          longDesc: 'The date that lookup values should be on or before (format: YYYY-MM-DD)',
+        },
+      ],
     },
     has_not_date_on_or_before: {
       displayName: "doesn't have date on or before",
-      shortDesc: 'Does not have date on or before',
+      shortDesc: 'Lookup date is not on or before',
       longDesc:
         'Returns `True` if the lookup field does not have a date on or before the specified date',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with date values',
+        },
+        {
+          displayName: 'Date',
+          shortDesc: 'Threshold date',
+          longDesc: 'The date that lookup values should not be on or before (format: YYYY-MM-DD)',
+        },
+      ],
     },
     has_date_after: {
       displayName: 'has date after',
-      shortDesc: 'Has date after',
+      shortDesc: 'Lookup date is after',
       longDesc: 'Returns `True` if the lookup field has a date after the specified date',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with date values',
+        },
+        {
+          displayName: 'Date',
+          shortDesc: 'Minimum date',
+          longDesc: 'The date that lookup values should be after (format: YYYY-MM-DD)',
+        },
+      ],
     },
     has_not_date_after: {
       displayName: "doesn't have date after",
-      shortDesc: 'Does not have date after',
+      shortDesc: 'Lookup date is not after',
       longDesc: 'Returns `True` if the lookup field does not have a date after the specified date',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with date values',
+        },
+        {
+          displayName: 'Date',
+          shortDesc: 'Threshold date',
+          longDesc: 'The date that lookup values should not be after (format: YYYY-MM-DD)',
+        },
+      ],
     },
     has_date_on_or_after: {
       displayName: 'has date on or after',
-      shortDesc: 'Has date on or after',
+      shortDesc: 'Lookup date is on or after',
       longDesc: 'Returns `True` if the lookup field has a date on or after the specified date',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with date values',
+        },
+        {
+          displayName: 'Date',
+          shortDesc: 'Minimum date',
+          longDesc: 'The date that lookup values should be on or after (format: YYYY-MM-DD)',
+        },
+      ],
     },
     has_not_date_on_or_after: {
       displayName: "doesn't have date on or after",
-      shortDesc: 'Does not have date on or after',
+      shortDesc: 'Lookup date is not on or after',
       longDesc:
         'Returns `True` if the lookup field does not have a date on or after the specified date',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with date values',
+        },
+        {
+          displayName: 'Date',
+          shortDesc: 'Threshold date',
+          longDesc: 'The date that lookup values should not be on or after (format: YYYY-MM-DD)',
+        },
+      ],
     },
     has_date_within: {
       displayName: 'has date within',
-      shortDesc: 'Has date within range',
-      longDesc: 'Returns `True` if the lookup field has a date within the specified range',
+      shortDesc: 'Lookup date is within period',
+      longDesc: 'Returns `True` if the lookup field has a date within the specified time period',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with date values',
+        },
+        {
+          displayName: 'Period',
+          shortDesc: 'Time period',
+          longDesc: 'The time period to check (e.g., "today", "this_week", "last_month")',
+        },
+      ],
     },
     has_not_date_within: {
       displayName: "doesn't have date within",
-      shortDesc: 'Does not have date within range',
+      shortDesc: 'Lookup date is not within period',
       longDesc:
-        'Returns `True` if the lookup field does not have a date within the specified range',
+        'Returns `True` if the lookup field does not have a date within the specified time period',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Lookup field',
+          longDesc: 'The lookup field with date values',
+        },
+        {
+          displayName: 'Period',
+          shortDesc: 'Time period',
+          longDesc: 'The time period to exclude (e.g., "today", "this_week", "last_month")',
+        },
+      ],
     },
   },
 };

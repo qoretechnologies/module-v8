@@ -548,6 +548,20 @@ const GoogleSheetsAppEn = {
       },
     },
   },
+  expressions: {
+    row_ids: {
+      displayName: 'Row IDs',
+      shortDesc: 'List of row IDs',
+      longDesc: 'Provide a list of row IDs to target specific rows in a Google Sheets spreadsheet.',
+      args: [
+        {
+          display_name: 'Row Numbers',
+          short_desc: 'List of row numbers to target',
+          desc: 'Provide a list of row numbers (1-based index) that you want to update or delete. For example: [1, 5, 10, 23]',
+        },
+      ],
+    },
+  },
 };
 
 export default GoogleSheetsAppEn;

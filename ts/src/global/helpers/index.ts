@@ -311,6 +311,17 @@ export const mapExpressionsToApp = (
   Object.entries(expressions).forEach(([key, expression]) => {
     localeExpressions[key] = {
       ...expression,
+      args: expression.args.map((arg, index) => {
+        const argLocale = get(L[locale], ['apps', app, 'expressions', key, 'args'])?.[index];
+        if (!argLocale) return arg;
+
+        return {
+          ...arg,
+          display_name: get(argLocale, 'displayName')(),
+          short_desc: get(argLocale, 'shortDesc')(),
+          desc: get(argLocale, 'longDesc')(),
+        };
+      }),
       display_name: get(L[locale], ['apps', app, 'expressions', key, 'displayName'])(),
       short_desc: get(L[locale], ['apps', app, 'expressions', key, 'shortDesc'])(),
       desc: get(L[locale], ['apps', app, 'expressions', key, 'longDesc'])(),

@@ -380,6 +380,248 @@ const HubspotAppEn = {
       options: HubspotTriggerOptionsEn,
     },
   },
+  expressions: {
+    '&&': {
+      displayName: 'and (&&)',
+      shortDesc: 'Returns True if all arguments are True',
+      longDesc: 'Returns `True` if all arguments are `True` with logic short-circuiting',
+      args: [
+        {
+          displayName: 'Condition',
+          shortDesc: 'Boolean condition to evaluate',
+          longDesc: 'A boolean expression or condition that evaluates to True or False',
+        },
+      ],
+    },
+    '||': {
+      displayName: 'or (||)',
+      shortDesc: 'Returns True if any argument is True',
+      longDesc: 'Returns `True` if any argument is `True` with logic short-circuiting',
+      args: [
+        {
+          displayName: 'Condition',
+          shortDesc: 'Boolean condition to evaluate',
+          longDesc: 'A boolean expression or condition that evaluates to True or False',
+        },
+      ],
+    },
+    '==': {
+      displayName: 'equals (=)',
+      shortDesc: 'Equality comparison',
+      longDesc: 'Returns `True` if the field value equals the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
+    },
+    '!=': {
+      displayName: 'not equals (!=)',
+      shortDesc: 'Inequality comparison',
+      longDesc: 'Returns `True` if the field value does not equal the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
+    },
+    '>': {
+      displayName: 'greater than (>)',
+      shortDesc: 'Greater than comparison',
+      longDesc: 'Returns `True` if the field value is greater than the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
+    },
+    '>=': {
+      displayName: 'greater than or equal (>=)',
+      shortDesc: 'Greater than or equal comparison',
+      longDesc: 'Returns `True` if the field value is greater than or equal to the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
+    },
+    '<': {
+      displayName: 'less than (<)',
+      shortDesc: 'Less than comparison',
+      longDesc: 'Returns `True` if the field value is less than the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
+    },
+    '<=': {
+      displayName: 'less than or equal (<=)',
+      shortDesc: 'Less than or equal comparison',
+      longDesc: 'Returns `True` if the field value is less than or equal to the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
+    },
+    in: {
+      displayName: 'in',
+      shortDesc: 'In list',
+      longDesc: 'Returns `True` if the field value is in the provided list',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to check',
+          longDesc: 'The field whose value will be checked',
+        },
+        {
+          displayName: 'Values',
+          shortDesc: 'List of values',
+          longDesc: 'The list of values to check the field against',
+        },
+      ],
+    },
+    not_in: {
+      displayName: 'not in',
+      shortDesc: 'Not in list',
+      longDesc: 'Returns `True` if the field value is not in the provided list',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to check',
+          longDesc: 'The field whose value will be checked',
+        },
+        {
+          displayName: 'Values',
+          shortDesc: 'List of values',
+          longDesc: 'The list of values the field should not match',
+        },
+      ],
+    },
+    between: {
+      displayName: 'between',
+      shortDesc: 'Between two values',
+      longDesc: 'Returns `True` if the field value is between the two specified values',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to check',
+          longDesc: 'The field whose value will be checked',
+        },
+        {
+          displayName: 'Lower bound',
+          shortDesc: 'Minimum value',
+          longDesc: 'The lower bound of the range (inclusive)',
+        },
+        {
+          displayName: 'Upper bound',
+          shortDesc: 'Maximum value',
+          longDesc: 'The upper bound of the range (inclusive)',
+        },
+      ],
+    },
+    has_property: {
+      displayName: 'has property',
+      shortDesc: 'Field has a value',
+      longDesc: 'Returns `True` if the field has any value set (is not null or empty)',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to check',
+          longDesc: 'The field to check for a value',
+        },
+      ],
+    },
+    not_has_property: {
+      displayName: 'does not have property',
+      shortDesc: 'Field has no value',
+      longDesc: 'Returns `True` if the field has no value set (is null or empty)',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to check',
+          longDesc: 'The field to check for emptiness',
+        },
+      ],
+    },
+    contains_token: {
+      displayName: 'contains token',
+      shortDesc: 'Contains token or substring',
+      longDesc: 'Returns `True` if the field contains the specified token or substring',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Text field to search',
+          longDesc: 'The text field to search within',
+        },
+        {
+          displayName: 'Token',
+          shortDesc: 'Token to find',
+          longDesc: 'The token or substring to search for',
+        },
+      ],
+    },
+    not_contains_token: {
+      displayName: 'does not contain token',
+      shortDesc: 'Does not contain token or substring',
+      longDesc: 'Returns `True` if the field does not contain the specified token or substring',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Text field to search',
+          longDesc: 'The text field to search within',
+        },
+        {
+          displayName: 'Token',
+          shortDesc: 'Token to exclude',
+          longDesc: 'The token or substring that should not be present',
+        },
+      ],
+    },
+  },
 };
 
 export default HubspotAppEn;

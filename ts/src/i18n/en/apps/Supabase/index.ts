@@ -300,62 +300,209 @@ const SupabaseAppEn = {
       displayName: 'and (&&)',
       shortDesc: 'Returns True if all arguments are True',
       longDesc: 'Returns `True` if all arguments are `True` with logic short-circuiting',
+      args: [
+        {
+          displayName: 'Condition',
+          shortDesc: 'Boolean condition to evaluate',
+          longDesc: 'A boolean expression or condition that evaluates to True or False',
+        },
+      ],
     },
     '||': {
       displayName: 'or (||)',
       shortDesc: 'Returns True if any argument is True',
       longDesc: 'Returns `True` if any argument is `True` with logic short-circuiting',
+      args: [
+        {
+          displayName: 'Condition',
+          shortDesc: 'Boolean condition to evaluate',
+          longDesc: 'A boolean expression or condition that evaluates to True or False',
+        },
+      ],
     },
     NOT: {
       displayName: 'not (!)',
       shortDesc: 'Logical negation',
       longDesc: 'Returns the logical negation of the argument',
+      args: [
+        {
+          displayName: 'Condition',
+          shortDesc: 'Boolean condition to negate',
+          longDesc: 'A boolean expression or condition to negate',
+        },
+      ],
     },
     '==': {
-      displayName: 'equals (=)',
+      displayName: 'equals (==)',
       shortDesc: 'Equality comparison',
-      longDesc: 'Returns `True` if the arguments are equal',
+      longDesc: 'Returns `True` if the field value equals the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
     },
     '!=': {
       displayName: 'not equals (!=)',
       shortDesc: 'Inequality comparison',
-      longDesc: 'Returns `True` if the arguments are not equal',
+      longDesc: 'Returns `True` if the field value does not equal the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
     },
     '>': {
       displayName: 'greater than (>)',
       shortDesc: 'Greater than comparison',
-      longDesc: 'Returns `True` if the first argument is greater than the second',
+      longDesc: 'Returns `True` if the field value is greater than the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
     },
     '>=': {
       displayName: 'greater than or equal (>=)',
       shortDesc: 'Greater than or equal comparison',
-      longDesc: 'Returns `True` if the first argument is greater than or equal to the second',
+      longDesc: 'Returns `True` if the field value is greater than or equal to the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
     },
     '<': {
       displayName: 'less than (<)',
       shortDesc: 'Less than comparison',
-      longDesc: 'Returns `True` if the first argument is less than the second',
+      longDesc: 'Returns `True` if the field value is less than the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
     },
     '<=': {
       displayName: 'less than or equal (<=)',
       shortDesc: 'Less than or equal comparison',
-      longDesc: 'Returns `True` if the first argument is less than or equal to the second',
+      longDesc: 'Returns `True` if the field value is less than or equal to the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
     },
     like: {
       displayName: 'like',
       shortDesc: 'Pattern matching (case-sensitive)',
       longDesc: 'Returns `True` if the field matches the pattern with % as wildcard',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Text field to match',
+          longDesc: 'The text field to match against the pattern',
+        },
+        {
+          displayName: 'Pattern',
+          shortDesc: 'Pattern to match',
+          longDesc: 'The pattern to match with (use % as wildcard, e.g., "%example%")',
+        },
+      ],
     },
     ilike: {
       displayName: 'ilike',
       shortDesc: 'Pattern matching (case-insensitive)',
       longDesc:
         'Returns `True` if the field matches the pattern (case-insensitive) with % as wildcard',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Text field to match',
+          longDesc: 'The text field to match against the pattern',
+        },
+        {
+          displayName: 'Pattern',
+          shortDesc: 'Pattern to match',
+          longDesc:
+            'The pattern to match with, case-insensitive (use % as wildcard, e.g., "%example%")',
+        },
+      ],
     },
     in: {
       displayName: 'in',
-      shortDesc: 'In operator',
+      shortDesc: 'In list',
       longDesc: 'Returns `True` if the field value is in the provided list',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to check',
+          longDesc: 'The field whose value will be checked',
+        },
+        {
+          displayName: 'Values',
+          shortDesc: 'List of values',
+          longDesc: 'The list of values to check the field against',
+        },
+      ],
+    },
+    contains: {
+      displayName: 'contains (@>)',
+      shortDesc: 'Array contains elements',
+      longDesc: 'Returns `True` if the array field contains all the specified elements',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Array field to check',
+          longDesc: 'The array field to check for contained elements',
+        },
+        {
+          displayName: 'Elements',
+          shortDesc: 'Elements to find',
+          longDesc: 'The list of elements that should be contained in the array',
+        },
+      ],
     },
   },
 };

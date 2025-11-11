@@ -363,112 +363,308 @@ const NotionAppEn = {
       },
     },
   },
-
   expressions: {
     '&&': {
       displayName: 'and (&&)',
       shortDesc: 'Returns True if all arguments are True',
       longDesc: 'Returns `True` if all arguments are `True` with logic short-circuiting',
+      args: [
+        {
+          displayName: 'Condition',
+          shortDesc: 'Boolean condition to evaluate',
+          longDesc: 'A boolean expression or condition that evaluates to True or False',
+        },
+      ],
     },
     '||': {
       displayName: 'or (||)',
       shortDesc: 'Returns True if any argument is True',
       longDesc: 'Returns `True` if any argument is `True` with logic short-circuiting',
+      args: [
+        {
+          displayName: 'Condition',
+          shortDesc: 'Boolean condition to evaluate',
+          longDesc: 'A boolean expression or condition that evaluates to True or False',
+        },
+      ],
     },
     '==': {
       displayName: 'equals (=)',
       shortDesc: 'Equality comparison',
-      longDesc: 'Returns `True` if the field equals the value',
+      longDesc: 'Returns `True` if the field value equals the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
     },
     '!=': {
       displayName: 'not equals (!=)',
       shortDesc: 'Inequality comparison',
-      longDesc: 'Returns `True` if the field does not equal the value',
+      longDesc: 'Returns `True` if the field value does not equal the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
     },
     '>': {
       displayName: 'greater than (>)',
       shortDesc: 'Greater than comparison',
-      longDesc: 'Returns `True` if the field is greater than the value',
+      longDesc: 'Returns `True` if the field value is greater than the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
     },
     '>=': {
       displayName: 'greater than or equal (>=)',
       shortDesc: 'Greater than or equal comparison',
-      longDesc: 'Returns `True` if the field is greater than or equal to the value',
+      longDesc: 'Returns `True` if the field value is greater than or equal to the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
     },
     '<': {
       displayName: 'less than (<)',
       shortDesc: 'Less than comparison',
-      longDesc: 'Returns `True` if the field is less than the value',
+      longDesc: 'Returns `True` if the field value is less than the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
     },
     '<=': {
       displayName: 'less than or equal (<=)',
       shortDesc: 'Less than or equal comparison',
-      longDesc: 'Returns `True` if the field is less than or equal to the value',
+      longDesc: 'Returns `True` if the field value is less than or equal to the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
     },
     contains: {
       displayName: 'contains',
       shortDesc: 'Contains text',
       longDesc: 'Returns `True` if the field contains the specified text',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to search',
+          longDesc: 'The field to search within',
+        },
+        {
+          displayName: 'Text',
+          shortDesc: 'Text to find',
+          longDesc: 'The text string to search for',
+        },
+      ],
     },
     in: {
       displayName: 'in',
       shortDesc: 'In list',
       longDesc: 'Returns `True` if the field value is in the provided list',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to check',
+          longDesc: 'The field whose value will be checked',
+        },
+        {
+          displayName: 'Values',
+          shortDesc: 'List of values',
+          longDesc: 'The list of values to check the field against',
+        },
+      ],
     },
     is_empty: {
       displayName: 'is empty',
       shortDesc: 'Field is empty',
       longDesc: 'Returns `True` if the field is empty or not set',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to check',
+          longDesc: 'The field to check for emptiness',
+        },
+      ],
     },
     is_not_empty: {
       displayName: 'is not empty',
       shortDesc: 'Field is not empty',
       longDesc: 'Returns `True` if the field has a value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to check',
+          longDesc: 'The field to check for a value',
+        },
+      ],
     },
     starts_with: {
       displayName: 'starts with',
       shortDesc: 'Starts with text',
       longDesc: 'Returns `True` if the field starts with the specified text',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Text field to check',
+          longDesc: 'The text field to check',
+        },
+        {
+          displayName: 'Text',
+          shortDesc: 'Starting text',
+          longDesc: 'The text that the field should start with',
+        },
+      ],
     },
     ends_with: {
       displayName: 'ends with',
       shortDesc: 'Ends with text',
       longDesc: 'Returns `True` if the field ends with the specified text',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Text field to check',
+          longDesc: 'The text field to check',
+        },
+        {
+          displayName: 'Text',
+          shortDesc: 'Ending text',
+          longDesc: 'The text that the field should end with',
+        },
+      ],
     },
     next_week: {
       displayName: 'next week',
       shortDesc: 'Date is next week',
       longDesc: 'Returns `True` if the date falls within the next week',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Date field to check',
+          longDesc: 'The date field to check',
+        },
+      ],
     },
     next_month: {
       displayName: 'next month',
       shortDesc: 'Date is next month',
       longDesc: 'Returns `True` if the date falls within the next month',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Date field to check',
+          longDesc: 'The date field to check',
+        },
+      ],
     },
     next_year: {
       displayName: 'next year',
       shortDesc: 'Date is next year',
       longDesc: 'Returns `True` if the date falls within the next year',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Date field to check',
+          longDesc: 'The date field to check',
+        },
+      ],
     },
     past_week: {
       displayName: 'past week',
       shortDesc: 'Date is past week',
       longDesc: 'Returns `True` if the date falls within the past week',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Date field to check',
+          longDesc: 'The date field to check',
+        },
+      ],
     },
     past_month: {
       displayName: 'past month',
       shortDesc: 'Date is past month',
       longDesc: 'Returns `True` if the date falls within the past month',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Date field to check',
+          longDesc: 'The date field to check',
+        },
+      ],
     },
     past_year: {
       displayName: 'past year',
       shortDesc: 'Date is past year',
       longDesc: 'Returns `True` if the date falls within the past year',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Date field to check',
+          longDesc: 'The date field to check',
+        },
+      ],
     },
     this_week: {
       displayName: 'this week',
       shortDesc: 'Date is this week',
       longDesc: 'Returns `True` if the date falls within the current week',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Date field to check',
+          longDesc: 'The date field to check',
+        },
+      ],
     },
   },
 };
