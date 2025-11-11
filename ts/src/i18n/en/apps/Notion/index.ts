@@ -389,7 +389,7 @@ const NotionAppEn = {
       ],
     },
     '==': {
-      displayName: 'equals (=)',
+      displayName: 'equals (==)',
       shortDesc: 'Equality comparison',
       longDesc: 'Returns `True` if the field value equals the specified value',
       args: [

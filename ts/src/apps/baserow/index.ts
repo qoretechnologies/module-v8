@@ -1,7 +1,4 @@
-import {
-  TQoreAppWithActions,
-  TQoreRecordBasedApp,
-} from '@qoretechnologies/ts-toolkit';
+import { TQoreAppWithActions, TQoreRecordBasedApp } from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers/index';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
@@ -36,7 +33,7 @@ export default (locale: Locales) =>
       data: 'json',
       oauth2_grant_type: 'none',
       ping_method: 'GET',
-      ping_path: '/api/database/tables/all-tables',
+      ping_path: '/api/database/tables/all-tables/',
       token_type: 'Token',
     },
     rest_modifiers: {
