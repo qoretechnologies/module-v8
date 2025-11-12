@@ -35,8 +35,10 @@ export const searchSupabaseRecords: TQoreSearchRecordsFunction = async (ctx, whe
     });
   }
 
+  const maxLimit = opts.limit as number | undefined;
   let offset = 0;
   let totalCount: number | null = null;
+  let recordsReturned = 0;
 
   const get_records: TQoreSearchRecordsIterator = (_ctx, blockSize) => {
     return (async () => {
@@ -44,8 +46,16 @@ export const searchSupabaseRecords: TQoreSearchRecordsFunction = async (ctx, whe
         return null;
       }
 
+      if (maxLimit !== undefined && recordsReturned >= maxLimit) {
+        return null;
+      }
+
       try {
-        let pagedQuery = query.range(offset, offset + blockSize - 1);
+        const effectiveBlockSize = maxLimit !== undefined 
+          ? Math.min(blockSize, maxLimit - recordsReturned)
+          : blockSize;
+
+        let pagedQuery = query.range(offset, offset + effectiveBlockSize - 1);
         const { data, error, count } = await pagedQuery;
 
         if (error) {
@@ -61,6 +71,7 @@ export const searchSupabaseRecords: TQoreSearchRecordsFunction = async (ctx, whe
         }
 
         offset += data.length;
+        recordsReturned += data.length;
 
         return mapObjectToColumnFormat(data);
       } catch (error) {

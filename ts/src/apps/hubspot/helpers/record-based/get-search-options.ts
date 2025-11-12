@@ -16,4 +16,8 @@ export const HubspotSearchOptions = {
       },
     },
   },
+  limit: {
+    type: 'int',
+    required: false,
+  },
 } satisfies TQoreCrudOptions;

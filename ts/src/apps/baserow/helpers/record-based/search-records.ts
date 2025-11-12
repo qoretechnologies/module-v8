@@ -15,7 +15,9 @@ export const searchBaserowRecords: TQoreSearchRecordsFunction = async (ctx, wher
     ErrorClass: BaserowError,
   });
 
+  const MAX_PAGE_SIZE = 200;
   const tableName = opts?.table;
+  const limit = (opts?.limit as number) || MAX_PAGE_SIZE;
 
   if (!tableName) {
     throw new BaserowError('Table name is required in opts.table');
@@ -40,8 +42,6 @@ export const searchBaserowRecords: TQoreSearchRecordsFunction = async (ctx, wher
       filterParams.order_by = `${direction}${orderBy.column}`;
     }
 
-    const MAX_PAGE_SIZE = 200;
-
     let page = 1;
     let hasMore = true;
 
@@ -58,7 +58,7 @@ export const searchBaserowRecords: TQoreSearchRecordsFunction = async (ctx, wher
           params: {
             ...filterParams,
             page: String(page),
-            size: String(Math.min(blockSize, MAX_PAGE_SIZE)),
+            size: String(Math.min(blockSize, MAX_PAGE_SIZE, limit)),
           },
           maxResults: blockSize,
           object: 'results',

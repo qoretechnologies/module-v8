@@ -77,11 +77,13 @@ import Webflow from './apps/Webflow';
 import Xero from './apps/Xero';
 import YouTube from './apps/YouTube';
 import Zendesk from './apps/Zendesk';
+import ZohoCRM from './apps/ZohoCRM';
 import Zoom from './apps/Zoom';
 
 const en = {
   common: {},
   apps: {
+    ZohoCRM,
     Firebase,
     Supabase,
     Baserow,

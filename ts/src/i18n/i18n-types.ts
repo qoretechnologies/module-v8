@@ -16,6 +16,20 @@ type RootTranslation = {
 	common: {
 	}
 	apps: {
+		ZohoCRM: {
+			/**
+			 * Z​o​h​o​ ​C​R​M
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​Z​o​h​o​ ​C​R​M​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​c​u​s​t​o​m​e​r​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​m​a​n​a​g​e​m​e​n​t​ ​a​c​r​o​s​s​ ​a​l​l​ ​g​l​o​b​a​l​ ​d​a​t​a​ ​c​e​n​t​e​r​s​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​Z​o​h​o​ ​C​R​M​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​Z​o​h​o​ ​C​R​M​ ​A​P​I​ ​a​c​r​o​s​s​ ​a​l​l​ ​s​e​v​e​n​ ​g​l​o​b​a​l​ ​d​a​t​a​ ​c​e​n​t​e​r​s​ ​(​U​S​,​ ​A​U​,​ ​E​U​,​ ​I​N​,​ ​C​N​,​ ​J​P​,​ ​C​A​)​.​ ​M​a​n​a​g​e​ ​m​o​d​u​l​e​s​,​ ​r​e​c​o​r​d​s​,​ ​u​s​e​r​s​,​ ​a​n​d​ ​r​o​l​e​s​ ​e​f​f​i​c​i​e​n​t​l​y​ ​w​h​i​l​e​ ​a​u​t​o​m​a​t​i​n​g​ ​y​o​u​r​ ​C​R​M​ ​w​o​r​k​f​l​o​w​s​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​c​u​s​t​o​m​ ​m​o​d​u​l​e​s​,​ ​b​u​l​k​ ​o​p​e​r​a​t​i​o​n​s​,​ ​a​n​d​ ​r​e​a​l​-​t​i​m​e​ ​t​r​i​g​g​e​r​s​.
+			 */
+			longDesc: string
+		}
 		Firebase: {
 			/**
 			 * F​i​r​e​b​a​s​e
@@ -1265,6 +1279,22 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​l​l​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * B​o​o​l​e​a​n​ ​c​o​n​d​i​t​i​o​n​ ​t​o​ ​e​v​a​l​u​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​b​o​o​l​e​a​n​ ​e​x​p​r​e​s​s​i​o​n​ ​o​r​ ​c​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​e​v​a​l​u​a​t​e​s​ ​t​o​ ​T​r​u​e​ ​o​r​ ​F​a​l​s​e
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'||': {
 					/**
@@ -1279,6 +1309,22 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​n​y​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * B​o​o​l​e​a​n​ ​c​o​n​d​i​t​i​o​n​ ​t​o​ ​e​v​a​l​u​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​b​o​o​l​e​a​n​ ​e​x​p​r​e​s​s​i​o​n​ ​o​r​ ​c​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​e​v​a​l​u​a​t​e​s​ ​t​o​ ​T​r​u​e​ ​o​r​ ​F​a​l​s​e
+							 */
+							longDesc: string
+						}
+					}
 				}
 				NOT: {
 					/**
@@ -1293,10 +1339,26 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​t​h​e​ ​l​o​g​i​c​a​l​ ​n​e​g​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​a​r​g​u​m​e​n​t
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * B​o​o​l​e​a​n​ ​c​o​n​d​i​t​i​o​n​ ​t​o​ ​n​e​g​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​b​o​o​l​e​a​n​ ​e​x​p​r​e​s​s​i​o​n​ ​o​r​ ​c​o​n​d​i​t​i​o​n​ ​t​o​ ​n​e​g​a​t​e
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'==': {
 					/**
-					 * e​q​u​a​l​s​ ​(​=​)
+					 * e​q​u​a​l​s​ ​(​=​=​)
 					 */
 					displayName: string
 					/**
@@ -1304,9 +1366,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​e​q​u​a​l
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'!=': {
 					/**
@@ -1318,9 +1410,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​n​o​t​ ​e​q​u​a​l
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'>': {
 					/**
@@ -1332,9 +1454,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​r​s​t​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​e​c​o​n​d
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'>=': {
 					/**
@@ -1346,9 +1498,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​r​s​t​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​e​c​o​n​d
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'<': {
 					/**
@@ -1360,9 +1542,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​r​s​t​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​e​c​o​n​d
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'<=': {
 					/**
@@ -1374,9 +1586,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​r​s​t​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​e​c​o​n​d
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				like: {
 					/**
@@ -1391,6 +1633,36 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​m​a​t​c​h​e​s​ ​t​h​e​ ​p​a​t​t​e​r​n​ ​w​i​t​h​ ​%​ ​a​s​ ​w​i​l​d​c​a​r​d
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​m​a​t​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​m​a​t​c​h​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​p​a​t​t​e​r​n
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * P​a​t​t​e​r​n
+							 */
+							displayName: string
+							/**
+							 * P​a​t​t​e​r​n​ ​t​o​ ​m​a​t​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​t​t​e​r​n​ ​t​o​ ​m​a​t​c​h​ ​w​i​t​h​ ​(​u​s​e​ ​%​ ​a​s​ ​w​i​l​d​c​a​r​d​,​ ​e​.​g​.​,​ ​"​%​e​x​a​m​p​l​e​%​"​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				ilike: {
 					/**
@@ -1405,6 +1677,36 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​m​a​t​c​h​e​s​ ​t​h​e​ ​p​a​t​t​e​r​n​ ​(​c​a​s​e​-​i​n​s​e​n​s​i​t​i​v​e​)​ ​w​i​t​h​ ​%​ ​a​s​ ​w​i​l​d​c​a​r​d
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​m​a​t​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​m​a​t​c​h​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​p​a​t​t​e​r​n
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * P​a​t​t​e​r​n
+							 */
+							displayName: string
+							/**
+							 * P​a​t​t​e​r​n​ ​t​o​ ​m​a​t​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​t​t​e​r​n​ ​t​o​ ​m​a​t​c​h​ ​w​i​t​h​,​ ​c​a​s​e​-​i​n​s​e​n​s​i​t​i​v​e​ ​(​u​s​e​ ​%​ ​a​s​ ​w​i​l​d​c​a​r​d​,​ ​e​.​g​.​,​ ​"​%​e​x​a​m​p​l​e​%​"​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'in': {
 					/**
@@ -1412,13 +1714,87 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * I​n​ ​o​p​e​r​a​t​o​r
+					 * I​n​ ​l​i​s​t
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​i​n​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​l​i​s​t
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​h​e​c​k​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​o​f​ ​v​a​l​u​e​s​ ​t​o​ ​c​h​e​c​k​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				contains: {
+					/**
+					 * c​o​n​t​a​i​n​s​ ​(​@​>​)
+					 */
+					displayName: string
+					/**
+					 * A​r​r​a​y​ ​c​o​n​t​a​i​n​s​ ​e​l​e​m​e​n​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​a​r​r​a​y​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​a​l​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​e​l​e​m​e​n​t​s
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * A​r​r​a​y​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​a​r​r​a​y​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​c​o​n​t​a​i​n​e​d​ ​e​l​e​m​e​n​t​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * E​l​e​m​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * E​l​e​m​e​n​t​s​ ​t​o​ ​f​i​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​o​f​ ​e​l​e​m​e​n​t​s​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​b​e​ ​c​o​n​t​a​i​n​e​d​ ​i​n​ ​t​h​e​ ​a​r​r​a​y
+							 */
+							longDesc: string
+						}
+					}
 				}
 			}
 		}
@@ -2085,6 +2461,22 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​l​l​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * B​o​o​l​e​a​n​ ​c​o​n​d​i​t​i​o​n​ ​t​o​ ​e​v​a​l​u​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​b​o​o​l​e​a​n​ ​e​x​p​r​e​s​s​i​o​n​ ​o​r​ ​c​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​e​v​a​l​u​a​t​e​s​ ​t​o​ ​T​r​u​e​ ​o​r​ ​F​a​l​s​e
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'||': {
 					/**
@@ -2099,6 +2491,22 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​n​y​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * B​o​o​l​e​a​n​ ​c​o​n​d​i​t​i​o​n​ ​t​o​ ​e​v​a​l​u​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​b​o​o​l​e​a​n​ ​e​x​p​r​e​s​s​i​o​n​ ​o​r​ ​c​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​e​v​a​l​u​a​t​e​s​ ​t​o​ ​T​r​u​e​ ​o​r​ ​F​a​l​s​e
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'==': {
 					/**
@@ -2110,9 +2518,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​e​q​u​a​l​s​ ​t​h​e​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'!=': {
 					/**
@@ -2124,9 +2562,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'>': {
 					/**
@@ -2138,9 +2606,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​u​m​b​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * N​u​m​e​r​i​c​ ​f​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​e​r​i​c​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'>=': {
 					/**
@@ -2152,9 +2650,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​u​m​b​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * N​u​m​e​r​i​c​ ​f​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​e​r​i​c​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'<': {
 					/**
@@ -2166,9 +2694,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​u​m​b​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * N​u​m​e​r​i​c​ ​f​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​e​r​i​c​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'<=': {
 					/**
@@ -2180,9 +2738,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​u​m​b​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * N​u​m​e​r​i​c​ ​f​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​e​r​i​c​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				contains: {
 					/**
@@ -2197,6 +2785,36 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​w​i​t​h​i​n
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​s​t​r​i​n​g​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​w​i​t​h​i​n​ ​t​h​e​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+					}
 				}
 				contains_not: {
 					/**
@@ -2211,6 +2829,36 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​w​i​t​h​i​n
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​s​t​r​i​n​g​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​p​r​e​s​e​n​t​ ​i​n​ ​t​h​e​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+					}
 				}
 				contains_word: {
 					/**
@@ -2218,13 +2866,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * C​o​n​t​a​i​n​s​ ​w​o​r​d
+					 * C​o​n​t​a​i​n​s​ ​w​h​o​l​e​ ​w​o​r​d
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​w​o​r​d
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​w​o​r​d​ ​a​s​ ​a​ ​c​o​m​p​l​e​t​e​ ​w​o​r​d
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​w​i​t​h​i​n
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * W​o​r​d
+							 */
+							displayName: string
+							/**
+							 * W​o​r​d​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​l​e​t​e​ ​w​o​r​d​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​w​i​t​h​i​n​ ​t​h​e​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+					}
 				}
 				doesnt_contain_word: {
 					/**
@@ -2232,13 +2910,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​w​o​r​d
+					 * D​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​w​h​o​l​e​ ​w​o​r​d
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​w​o​r​d
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​w​o​r​d​ ​a​s​ ​a​ ​c​o​m​p​l​e​t​e​ ​w​o​r​d
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​w​i​t​h​i​n
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * W​o​r​d
+							 */
+							displayName: string
+							/**
+							 * W​o​r​d​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​l​e​t​e​ ​w​o​r​d​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​p​r​e​s​e​n​t​ ​i​n​ ​t​h​e​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+					}
 				}
 				length_is_lower_than: {
 					/**
@@ -2246,13 +2954,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * L​e​n​g​t​h​ ​i​s​ ​l​e​s​s​ ​t​h​a​n
+					 * T​e​x​t​ ​l​e​n​g​t​h​ ​i​s​ ​l​e​s​s​ ​t​h​a​n
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​l​e​n​g​t​h​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​e​n​g​t​h​ ​o​f​ ​t​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​u​m​b​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​m​e​a​s​u​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​l​e​n​g​t​h​ ​w​i​l​l​ ​b​e​ ​m​e​a​s​u​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * L​e​n​g​t​h
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​l​e​n​g​t​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​l​e​n​g​t​h​ ​t​h​e​ ​f​i​e​l​d​ ​s​h​o​u​l​d​ ​b​e​ ​l​e​s​s​ ​t​h​a​n
+							 */
+							longDesc: string
+						}
+					}
 				}
 				empty: {
 					/**
@@ -2264,9 +3002,25 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​e​m​p​t​y​ ​o​r​ ​n​o​t​ ​s​e​t
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​e​m​p​t​y​ ​o​r​ ​h​a​s​ ​n​o​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​e​m​p​t​i​n​e​s​s
+							 */
+							longDesc: string
+						}
+					}
 				}
 				not_empty: {
 					/**
@@ -2281,6 +3035,22 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​a​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+					}
 				}
 				date_is: {
 					/**
@@ -2288,13 +3058,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​a​t​e​ ​e​q​u​a​l​s​ ​v​a​l​u​e
+					 * D​a​t​e​ ​e​q​u​a​l​s
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​t​o​ ​m​a​t​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​ ​(​f​o​r​m​a​t​:​ ​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				date_is_not: {
 					/**
@@ -2302,13 +3102,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​a​t​e​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​v​a​l​u​e
+					 * D​a​t​e​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​v​a​l​u​e​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​n​o​t​ ​m​a​t​c​h​ ​(​f​o​r​m​a​t​:​ ​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				date_is_before: {
 					/**
@@ -2316,13 +3146,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​a​t​e​ ​i​s​ ​b​e​f​o​r​e​ ​v​a​l​u​e
+					 * D​a​t​e​ ​i​s​ ​b​e​f​o​r​e
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​i​s​ ​b​e​f​o​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​t​h​a​t​ ​t​h​e​ ​f​i​e​l​d​ ​s​h​o​u​l​d​ ​b​e​ ​b​e​f​o​r​e​ ​(​f​o​r​m​a​t​:​ ​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				date_is_on_or_before: {
 					/**
@@ -2330,13 +3190,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​a​t​e​ ​i​s​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​v​a​l​u​e
+					 * D​a​t​e​ ​i​s​ ​o​n​ ​o​r​ ​b​e​f​o​r​e
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​i​s​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​t​h​a​t​ ​t​h​e​ ​f​i​e​l​d​ ​s​h​o​u​l​d​ ​b​e​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​(​f​o​r​m​a​t​:​ ​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				date_is_after: {
 					/**
@@ -2344,13 +3234,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​a​t​e​ ​i​s​ ​a​f​t​e​r​ ​v​a​l​u​e
+					 * D​a​t​e​ ​i​s​ ​a​f​t​e​r
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​i​s​ ​a​f​t​e​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​t​h​a​t​ ​t​h​e​ ​f​i​e​l​d​ ​s​h​o​u​l​d​ ​b​e​ ​a​f​t​e​r​ ​(​f​o​r​m​a​t​:​ ​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				date_is_on_or_after: {
 					/**
@@ -2358,13 +3278,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​a​t​e​ ​i​s​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​v​a​l​u​e
+					 * D​a​t​e​ ​i​s​ ​o​n​ ​o​r​ ​a​f​t​e​r
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​i​s​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​t​h​a​t​ ​t​h​e​ ​f​i​e​l​d​ ​s​h​o​u​l​d​ ​b​e​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​(​f​o​r​m​a​t​:​ ​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				date_is_within: {
 					/**
@@ -2372,13 +3322,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​a​t​e​ ​i​s​ ​w​i​t​h​i​n​ ​r​a​n​g​e
+					 * D​a​t​e​ ​i​s​ ​w​i​t​h​i​n​ ​t​i​m​e​ ​p​e​r​i​o​d
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​i​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​a​n​g​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​f​a​l​l​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​i​m​e​ ​p​e​r​i​o​d
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * P​e​r​i​o​d
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​ ​p​e​r​i​o​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​ ​p​e​r​i​o​d​ ​t​o​ ​c​h​e​c​k​ ​(​e​.​g​.​,​ ​"​t​o​d​a​y​"​,​ ​"​y​e​s​t​e​r​d​a​y​"​,​ ​"​t​h​i​s​_​w​e​e​k​"​,​ ​"​l​a​s​t​_​m​o​n​t​h​"​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				date_equals_day_of_month: {
 					/**
@@ -2386,13 +3366,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​a​y​ ​o​f​ ​m​o​n​t​h​ ​e​q​u​a​l​s​ ​v​a​l​u​e
+					 * D​a​y​ ​o​f​ ​m​o​n​t​h​ ​e​q​u​a​l​s
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​y​ ​o​f​ ​m​o​n​t​h​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​y​ ​o​f​ ​t​h​e​ ​m​o​n​t​h​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​u​m​b​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​d​a​y​ ​w​i​l​l​ ​b​e​ ​c​h​e​c​k​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * D​a​y
+							 */
+							displayName: string
+							/**
+							 * D​a​y​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​y​ ​o​f​ ​t​h​e​ ​m​o​n​t​h​ ​(​1​-​3​1​)​ ​t​o​ ​m​a​t​c​h
+							 */
+							longDesc: string
+						}
+					}
 				}
 				boolean: {
 					/**
@@ -2404,9 +3414,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​b​o​o​l​e​a​n​ ​f​i​e​l​d​ ​m​a​t​c​h​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​b​o​o​l​e​a​n​ ​f​i​e​l​d​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * B​o​o​l​e​a​n​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​b​o​o​l​e​a​n​ ​f​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * B​o​o​l​e​a​n​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​b​o​o​l​e​a​n​ ​v​a​l​u​e​ ​(​t​r​u​e​ ​o​r​ ​f​a​l​s​e​)​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				is_even_and_whole: {
 					/**
@@ -2421,6 +3461,36 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​n​u​m​b​e​r​ ​i​s​ ​e​v​e​n​ ​a​n​d​ ​a​ ​w​h​o​l​e​ ​n​u​m​b​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * N​u​m​e​r​i​c​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​e​r​i​c​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * C​h​e​c​k
+							 */
+							displayName: string
+							/**
+							 * C​h​e​c​k​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​c​h​e​c​k​ ​i​f​ ​e​v​e​n​ ​a​n​d​ ​w​h​o​l​e​,​ ​f​a​l​s​e​ ​t​o​ ​c​h​e​c​k​ ​i​f​ ​n​o​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				single_select_equal: {
 					/**
@@ -2435,6 +3505,36 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​s​i​n​g​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​o​p​t​i​o​n
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * S​i​n​g​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​i​n​g​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * O​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​ ​t​o​ ​m​a​t​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h
+							 */
+							longDesc: string
+						}
+					}
 				}
 				single_select_not_equal: {
 					/**
@@ -2449,6 +3549,36 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​s​i​n​g​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​o​p​t​i​o​n
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * S​i​n​g​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​i​n​g​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * O​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​v​a​l​u​e​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							longDesc: string
+						}
+					}
 				}
 				single_select_is_any_of: {
 					/**
@@ -2460,9 +3590,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​s​i​n​g​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​i​s​ ​a​n​y​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​o​p​t​i​o​n​s
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​s​i​n​g​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​m​a​t​c​h​e​s​ ​a​n​y​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​o​p​t​i​o​n​s
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * S​i​n​g​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​i​n​g​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * O​p​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​s​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​v​a​l​u​e​s​ ​t​o​ ​m​a​t​c​h​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				single_select_is_none_of: {
 					/**
@@ -2474,9 +3634,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​s​i​n​g​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​i​s​ ​n​o​n​e​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​o​p​t​i​o​n​s
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​s​i​n​g​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​m​a​t​c​h​ ​a​n​y​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​o​p​t​i​o​n​s
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * S​i​n​g​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​i​n​g​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * O​p​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​s​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​v​a​l​u​e​s​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							longDesc: string
+						}
+					}
 				}
 				multiple_select_has: {
 					/**
@@ -2484,13 +3674,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * M​u​l​t​i​p​l​e​ ​s​e​l​e​c​t​ ​h​a​s​ ​v​a​l​u​e
+					 * M​u​l​t​i​p​l​e​ ​s​e​l​e​c​t​ ​c​o​n​t​a​i​n​s
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​m​u​l​t​i​p​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​m​u​l​t​i​p​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​o​p​t​i​o​n
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * M​u​l​t​i​p​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​u​l​t​i​p​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * O​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​ ​t​o​ ​f​i​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​v​a​l​u​e​ ​t​o​ ​f​i​n​d​ ​i​n​ ​t​h​e​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+					}
 				}
 				multiple_select_has_not: {
 					/**
@@ -2498,13 +3718,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * M​u​l​t​i​p​l​e​ ​s​e​l​e​c​t​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​v​a​l​u​e
+					 * M​u​l​t​i​p​l​e​ ​s​e​l​e​c​t​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​m​u​l​t​i​p​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​m​u​l​t​i​p​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​o​p​t​i​o​n
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * M​u​l​t​i​p​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​u​l​t​i​p​l​e​ ​s​e​l​e​c​t​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * O​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​v​a​l​u​e​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​i​n​ ​t​h​e​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+					}
 				}
 				link_row_has: {
 					/**
@@ -2512,13 +3762,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * L​i​n​k​ ​r​o​w​ ​h​a​s​ ​v​a​l​u​e
+					 * L​i​n​k​ ​r​o​w​ ​c​o​n​t​a​i​n​s
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​i​n​k​ ​r​o​w​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​i​n​k​ ​r​o​w​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​l​i​n​k​e​d​ ​r​e​c​o​r​d
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​i​n​k​ ​r​o​w​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​n​k​ ​r​o​w​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * L​i​n​k​e​d​ ​r​e​c​o​r​d​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​l​i​n​k​e​d​ ​r​e​c​o​r​d​ ​t​o​ ​f​i​n​d
+							 */
+							longDesc: string
+						}
+					}
 				}
 				link_row_has_not: {
 					/**
@@ -2526,13 +3806,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * L​i​n​k​ ​r​o​w​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​v​a​l​u​e
+					 * L​i​n​k​ ​r​o​w​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​i​n​k​ ​r​o​w​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​i​n​k​ ​r​o​w​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​l​i​n​k​e​d​ ​r​e​c​o​r​d
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​i​n​k​ ​r​o​w​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​n​k​ ​r​o​w​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * L​i​n​k​e​d​ ​r​e​c​o​r​d​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​l​i​n​k​e​d​ ​r​e​c​o​r​d​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​p​r​e​s​e​n​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				link_row_contains: {
 					/**
@@ -2540,13 +3850,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * L​i​n​k​ ​r​o​w​ ​c​o​n​t​a​i​n​s​ ​t​e​x​t
+					 * L​i​n​k​ ​r​o​w​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​s
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​i​n​k​ ​r​o​w​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​n​y​ ​l​i​n​k​e​d​ ​r​e​c​o​r​d​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​i​n​k​ ​r​o​w​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​n​k​ ​r​o​w​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​f​i​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​i​n​ ​l​i​n​k​e​d​ ​r​e​c​o​r​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+					}
 				}
 				link_row_not_contains: {
 					/**
@@ -2554,13 +3894,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * L​i​n​k​ ​r​o​w​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​e​x​t
+					 * L​i​n​k​ ​r​o​w​ ​v​a​l​u​e​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​i​n​k​ ​r​o​w​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​n​o​ ​l​i​n​k​e​d​ ​r​e​c​o​r​d​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​i​n​k​ ​r​o​w​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​n​k​ ​r​o​w​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​i​n​ ​l​i​n​k​e​d​ ​r​e​c​o​r​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+					}
 				}
 				filename_contains: {
 					/**
@@ -2568,13 +3938,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * F​i​l​e​n​a​m​e​ ​c​o​n​t​a​i​n​s​ ​t​e​x​t
+					 * F​i​l​e​ ​n​a​m​e​ ​c​o​n​t​a​i​n​s​ ​t​e​x​t
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​l​e​n​a​m​e​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​n​y​ ​f​i​l​e​ ​n​a​m​e​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​l​e​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​f​i​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​i​n​ ​f​i​l​e​ ​n​a​m​e​s
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_file_type: {
 					/**
@@ -2582,13 +3982,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * H​a​s​ ​f​i​l​e​ ​t​y​p​e
+					 * H​a​s​ ​f​i​l​e​ ​w​i​t​h​ ​t​y​p​e
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​l​e​ ​f​i​e​l​d​ ​h​a​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​l​e​ ​t​y​p​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​a​ ​f​i​l​e​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​y​p​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​l​e​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​e​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​y​p​e​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​(​e​.​g​.​,​ ​"​i​m​a​g​e​"​,​ ​"​d​o​c​u​m​e​n​t​"​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				files_lower_than: {
 					/**
@@ -2596,13 +4026,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * N​u​m​b​e​r​ ​o​f​ ​f​i​l​e​s​ ​i​s​ ​l​e​s​s​ ​t​h​a​n
+					 * F​i​l​e​ ​c​o​u​n​t​ ​i​s​ ​l​e​s​s​ ​t​h​a​n
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​f​i​l​e​s​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​f​i​l​e​s​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​o​u​n​t
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​l​e​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​f​i​e​l​d​ ​t​o​ ​c​o​u​n​t
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​f​i​l​e​s
+							 */
+							longDesc: string
+						}
+					}
 				}
 				user_is: {
 					/**
@@ -2617,6 +4077,36 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​u​s​e​r​ ​f​i​e​l​d​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​u​s​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​s​e​r​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * U​s​e​r
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​ ​t​o​ ​m​a​t​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​s​e​r​ ​i​d​e​n​t​i​f​i​e​r​ ​t​o​ ​m​a​t​c​h
+							 */
+							longDesc: string
+						}
+					}
 				}
 				user_is_not: {
 					/**
@@ -2631,6 +4121,36 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​u​s​e​r​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​u​s​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​s​e​r​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * U​s​e​r
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​s​e​r​ ​i​d​e​n​t​i​f​i​e​r​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							longDesc: string
+						}
+					}
 				}
 				multiple_collaborators_has: {
 					/**
@@ -2638,13 +4158,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * C​o​l​l​a​b​o​r​a​t​o​r​s​ ​h​a​s​ ​u​s​e​r
+					 * H​a​s​ ​c​o​l​l​a​b​o​r​a​t​o​r
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​c​o​l​l​a​b​o​r​a​t​o​r​s​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​u​s​e​r
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​m​u​l​t​i​p​l​e​ ​c​o​l​l​a​b​o​r​a​t​o​r​s​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​u​s​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * C​o​l​l​a​b​o​r​a​t​o​r​s​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​u​l​t​i​p​l​e​ ​c​o​l​l​a​b​o​r​a​t​o​r​s​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * U​s​e​r
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​ ​t​o​ ​f​i​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​s​e​r​ ​i​d​e​n​t​i​f​i​e​r​ ​t​o​ ​f​i​n​d
+							 */
+							longDesc: string
+						}
+					}
 				}
 				multiple_collaborators_has_not: {
 					/**
@@ -2652,13 +4202,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * C​o​l​l​a​b​o​r​a​t​o​r​s​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​u​s​e​r
+					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​c​o​l​l​a​b​o​r​a​t​o​r
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​c​o​l​l​a​b​o​r​a​t​o​r​s​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​u​s​e​r
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​m​u​l​t​i​p​l​e​ ​c​o​l​l​a​b​o​r​a​t​o​r​s​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​u​s​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * C​o​l​l​a​b​o​r​a​t​o​r​s​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​u​l​t​i​p​l​e​ ​c​o​l​l​a​b​o​r​a​t​o​r​s​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * U​s​e​r
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​s​e​r​ ​i​d​e​n​t​i​f​i​e​r​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​p​r​e​s​e​n​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_empty_value: {
 					/**
@@ -2666,13 +4246,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * H​a​s​ ​e​m​p​t​y​ ​v​a​l​u​e
+					 * L​o​o​k​u​p​ ​h​a​s​ ​e​m​p​t​y​ ​v​a​l​u​e
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​n​ ​e​m​p​t​y​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​t​ ​l​e​a​s​t​ ​o​n​e​ ​e​m​p​t​y​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​e​m​p​t​y​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * S​u​b​f​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * S​u​b​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​s​u​b​f​i​e​l​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​l​o​o​k​u​p​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_not_empty_value: {
 					/**
@@ -2680,13 +4290,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​e​m​p​t​y​ ​v​a​l​u​e
+					 * L​o​o​k​u​p​ ​h​a​s​ ​n​o​ ​e​m​p​t​y​ ​v​a​l​u​e​s
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​n​ ​e​m​p​t​y​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​n​o​ ​e​m​p​t​y​ ​v​a​l​u​e​s
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * S​u​b​f​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * S​u​b​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​s​u​b​f​i​e​l​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​l​o​o​k​u​p​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_value_equal: {
 					/**
@@ -2694,13 +4334,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * H​a​s​ ​v​a​l​u​e​ ​e​q​u​a​l​ ​t​o
+					 * L​o​o​k​u​p​ ​v​a​l​u​e​ ​e​q​u​a​l​s
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​m​a​t​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​n​d​ ​i​n​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_not_value_equal: {
 					/**
@@ -2708,13 +4378,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​e​q​u​a​l​ ​t​o
+					 * L​o​o​k​u​p​ ​v​a​l​u​e​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​v​a​l​u​e​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​i​n​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_value_contains: {
 					/**
@@ -2722,13 +4422,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * H​a​s​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​e​x​t
+					 * L​o​o​k​u​p​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​s
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​f​i​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​i​n​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_not_value_contains: {
 					/**
@@ -2736,13 +4466,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​e​x​t
+					 * L​o​o​k​u​p​ ​v​a​l​u​e​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​i​n​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_value_contains_word: {
 					/**
@@ -2750,13 +4510,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * H​a​s​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​i​n​g​ ​w​o​r​d
+					 * L​o​o​k​u​p​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​s​ ​w​o​r​d
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​w​o​r​d
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * W​o​r​d
+							 */
+							displayName: string
+							/**
+							 * W​o​r​d​ ​t​o​ ​f​i​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​l​e​t​e​ ​w​o​r​d​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​i​n​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_not_value_contains_word: {
 					/**
@@ -2764,13 +4554,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​i​n​g​ ​w​o​r​d
+					 * L​o​o​k​u​p​ ​v​a​l​u​e​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​w​o​r​d
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​w​o​r​d
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * W​o​r​d
+							 */
+							displayName: string
+							/**
+							 * W​o​r​d​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​l​e​t​e​ ​w​o​r​d​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​i​n​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_value_length_is_lower_than: {
 					/**
@@ -2778,13 +4598,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * H​a​s​ ​v​a​l​u​e​ ​w​i​t​h​ ​l​e​n​g​t​h​ ​l​e​s​s​ ​t​h​a​n
+					 * L​o​o​k​u​p​ ​v​a​l​u​e​ ​l​e​n​g​t​h​ ​i​s​ ​l​e​s​s​ ​t​h​a​n
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​w​i​t​h​ ​l​e​n​g​t​h​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​w​i​t​h​ ​l​e​n​g​t​h​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​u​m​b​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​t​o​ ​m​e​a​s​u​r​e
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * L​e​n​g​t​h
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​l​e​n​g​t​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​l​e​n​g​t​h​ ​f​o​r​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_all_values_equal: {
 					/**
@@ -2792,13 +4642,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * A​l​l​ ​v​a​l​u​e​s​ ​e​q​u​a​l
+					 * A​l​l​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​e​q​u​a​l
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​l​l​ ​v​a​l​u​e​s​ ​i​n​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​m​a​t​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​h​a​t​ ​a​l​l​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​e​q​u​a​l
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_any_select_option_equal: {
 					/**
@@ -2806,13 +4686,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * H​a​s​ ​a​n​y​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​e​q​u​a​l
+					 * L​o​o​k​u​p​ ​h​a​s​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​n​y​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * O​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​ ​t​o​ ​f​i​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​v​a​l​u​e​ ​t​o​ ​f​i​n​d
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_none_select_option_equal: {
 					/**
@@ -2820,13 +4730,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​e​q​u​a​l
+					 * L​o​o​k​u​p​ ​h​a​s​ ​n​o​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​n​y​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​n​o​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * O​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​v​a​l​u​e​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​p​r​e​s​e​n​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_value_higher: {
 					/**
@@ -2834,13 +4774,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * H​a​s​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n
+					 * L​o​o​k​u​p​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​u​m​b​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​t​h​a​t​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_not_value_higher: {
 					/**
@@ -2848,13 +4818,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n
+					 * L​o​o​k​u​p​ ​v​a​l​u​e​ ​i​s​ ​n​o​t​ ​g​r​e​a​t​e​r​ ​t​h​a​n
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​u​m​b​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​t​h​a​t​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_value_higher_or_equal: {
 					/**
@@ -2862,13 +4862,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * H​a​s​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o
+					 * L​o​o​k​u​p​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​u​m​b​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​t​h​a​t​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_not_value_higher_or_equal: {
 					/**
@@ -2876,13 +4906,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o
+					 * L​o​o​k​u​p​ ​v​a​l​u​e​ ​i​s​ ​n​o​t​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​u​m​b​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​r​e​s​h​o​l​d​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​t​h​a​t​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_value_lower: {
 					/**
@@ -2890,13 +4950,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * H​a​s​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n
+					 * L​o​o​k​u​p​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​u​m​b​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​t​h​a​t​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​l​e​s​s​ ​t​h​a​n
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_not_value_lower: {
 					/**
@@ -2904,13 +4994,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n
+					 * L​o​o​k​u​p​ ​v​a​l​u​e​ ​i​s​ ​n​o​t​ ​l​e​s​s​ ​t​h​a​n
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​u​m​b​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​t​h​a​t​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​l​e​s​s​ ​t​h​a​n
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_value_lower_or_equal: {
 					/**
@@ -2918,13 +5038,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * H​a​s​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o
+					 * L​o​o​k​u​p​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​u​m​b​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​t​h​a​t​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_not_value_lower_or_equal: {
 					/**
@@ -2932,13 +5082,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o
+					 * L​o​o​k​u​p​ ​v​a​l​u​e​ ​i​s​ ​n​o​t​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​u​m​b​e​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​r​e​s​h​o​l​d​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​t​h​a​t​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_date_equal: {
 					/**
@@ -2946,13 +5126,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * H​a​s​ ​d​a​t​e​ ​e​q​u​a​l​ ​t​o
+					 * L​o​o​k​u​p​ ​d​a​t​e​ ​e​q​u​a​l​s
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​d​a​t​e​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​d​a​t​e​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​t​o​ ​m​a​t​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​t​h​a​t​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​e​q​u​a​l​ ​(​f​o​r​m​a​t​:​ ​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_not_date_equal: {
 					/**
@@ -2960,13 +5170,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​d​a​t​e​ ​e​q​u​a​l​ ​t​o
+					 * L​o​o​k​u​p​ ​d​a​t​e​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​d​a​t​e​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​d​a​t​e​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​t​h​a​t​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​n​o​t​ ​e​q​u​a​l​ ​(​f​o​r​m​a​t​:​ ​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_date_before: {
 					/**
@@ -2974,13 +5214,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * H​a​s​ ​d​a​t​e​ ​b​e​f​o​r​e
+					 * L​o​o​k​u​p​ ​d​a​t​e​ ​i​s​ ​b​e​f​o​r​e
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​d​a​t​e​ ​b​e​f​o​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​d​a​t​e​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​t​h​a​t​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​b​e​f​o​r​e​ ​(​f​o​r​m​a​t​:​ ​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_not_date_before: {
 					/**
@@ -2988,13 +5258,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​d​a​t​e​ ​b​e​f​o​r​e
+					 * L​o​o​k​u​p​ ​d​a​t​e​ ​i​s​ ​n​o​t​ ​b​e​f​o​r​e
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​d​a​t​e​ ​b​e​f​o​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​d​a​t​e​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​r​e​s​h​o​l​d​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​t​h​a​t​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​b​e​f​o​r​e​ ​(​f​o​r​m​a​t​:​ ​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_date_on_or_before: {
 					/**
@@ -3002,13 +5302,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * H​a​s​ ​d​a​t​e​ ​o​n​ ​o​r​ ​b​e​f​o​r​e
+					 * L​o​o​k​u​p​ ​d​a​t​e​ ​i​s​ ​o​n​ ​o​r​ ​b​e​f​o​r​e
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​d​a​t​e​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​d​a​t​e​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​t​h​a​t​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​(​f​o​r​m​a​t​:​ ​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_not_date_on_or_before: {
 					/**
@@ -3016,13 +5346,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​d​a​t​e​ ​o​n​ ​o​r​ ​b​e​f​o​r​e
+					 * L​o​o​k​u​p​ ​d​a​t​e​ ​i​s​ ​n​o​t​ ​o​n​ ​o​r​ ​b​e​f​o​r​e
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​d​a​t​e​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​d​a​t​e​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​r​e​s​h​o​l​d​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​t​h​a​t​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​(​f​o​r​m​a​t​:​ ​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_date_after: {
 					/**
@@ -3030,13 +5390,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * H​a​s​ ​d​a​t​e​ ​a​f​t​e​r
+					 * L​o​o​k​u​p​ ​d​a​t​e​ ​i​s​ ​a​f​t​e​r
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​d​a​t​e​ ​a​f​t​e​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​d​a​t​e​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​t​h​a​t​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​a​f​t​e​r​ ​(​f​o​r​m​a​t​:​ ​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_not_date_after: {
 					/**
@@ -3044,13 +5434,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​d​a​t​e​ ​a​f​t​e​r
+					 * L​o​o​k​u​p​ ​d​a​t​e​ ​i​s​ ​n​o​t​ ​a​f​t​e​r
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​d​a​t​e​ ​a​f​t​e​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​d​a​t​e​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​r​e​s​h​o​l​d​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​t​h​a​t​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​a​f​t​e​r​ ​(​f​o​r​m​a​t​:​ ​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_date_on_or_after: {
 					/**
@@ -3058,13 +5478,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * H​a​s​ ​d​a​t​e​ ​o​n​ ​o​r​ ​a​f​t​e​r
+					 * L​o​o​k​u​p​ ​d​a​t​e​ ​i​s​ ​o​n​ ​o​r​ ​a​f​t​e​r
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​d​a​t​e​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​d​a​t​e​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​t​h​a​t​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​b​e​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​(​f​o​r​m​a​t​:​ ​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_not_date_on_or_after: {
 					/**
@@ -3072,13 +5522,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​d​a​t​e​ ​o​n​ ​o​r​ ​a​f​t​e​r
+					 * L​o​o​k​u​p​ ​d​a​t​e​ ​i​s​ ​n​o​t​ ​o​n​ ​o​r​ ​a​f​t​e​r
 					 */
 					shortDesc: string
 					/**
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​d​a​t​e​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​d​a​t​e​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​r​e​s​h​o​l​d​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​t​h​a​t​ ​l​o​o​k​u​p​ ​v​a​l​u​e​s​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​(​f​o​r​m​a​t​:​ ​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_date_within: {
 					/**
@@ -3086,13 +5566,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * H​a​s​ ​d​a​t​e​ ​w​i​t​h​i​n​ ​r​a​n​g​e
+					 * L​o​o​k​u​p​ ​d​a​t​e​ ​i​s​ ​w​i​t​h​i​n​ ​p​e​r​i​o​d
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​d​a​t​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​a​n​g​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​d​a​t​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​i​m​e​ ​p​e​r​i​o​d
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​d​a​t​e​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * P​e​r​i​o​d
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​ ​p​e​r​i​o​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​ ​p​e​r​i​o​d​ ​t​o​ ​c​h​e​c​k​ ​(​e​.​g​.​,​ ​"​t​o​d​a​y​"​,​ ​"​t​h​i​s​_​w​e​e​k​"​,​ ​"​l​a​s​t​_​m​o​n​t​h​"​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 				has_not_date_within: {
 					/**
@@ -3100,13 +5610,43 @@ type RootTranslation = {
 					 */
 					displayName: string
 					/**
-					 * D​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​d​a​t​e​ ​w​i​t​h​i​n​ ​r​a​n​g​e
+					 * L​o​o​k​u​p​ ​d​a​t​e​ ​i​s​ ​n​o​t​ ​w​i​t​h​i​n​ ​p​e​r​i​o​d
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​d​a​t​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​a​n​g​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​a​ ​d​a​t​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​i​m​e​ ​p​e​r​i​o​d
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * L​o​o​k​u​p​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​o​k​u​p​ ​f​i​e​l​d​ ​w​i​t​h​ ​d​a​t​e​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * P​e​r​i​o​d
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​ ​p​e​r​i​o​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​ ​p​e​r​i​o​d​ ​t​o​ ​e​x​c​l​u​d​e​ ​(​e​.​g​.​,​ ​"​t​o​d​a​y​"​,​ ​"​t​h​i​s​_​w​e​e​k​"​,​ ​"​l​a​s​t​_​m​o​n​t​h​"​)
+							 */
+							longDesc: string
+						}
+					}
 				}
 			}
 		}
@@ -29663,6 +32203,38 @@ type RootTranslation = {
 					}
 				}
 			}
+			expressions: {
+				row_ids: {
+					/**
+					 * R​o​w​ ​I​D​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​o​f​ ​r​o​w​ ​I​D​s
+					 */
+					shortDesc: string
+					/**
+					 * P​r​o​v​i​d​e​ ​a​ ​l​i​s​t​ ​o​f​ ​r​o​w​ ​I​D​s​ ​t​o​ ​t​a​r​g​e​t​ ​s​p​e​c​i​f​i​c​ ​r​o​w​s​ ​i​n​ ​a​ ​G​o​o​g​l​e​ ​S​h​e​e​t​s​ ​s​p​r​e​a​d​s​h​e​e​t​.
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * R​o​w​ ​N​u​m​b​e​r​s
+							 */
+							display_name: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​r​o​w​ ​n​u​m​b​e​r​s​ ​t​o​ ​t​a​r​g​e​t
+							 */
+							short_desc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​a​ ​l​i​s​t​ ​o​f​ ​r​o​w​ ​n​u​m​b​e​r​s​ ​(​1​-​b​a​s​e​d​ ​i​n​d​e​x​)​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​ ​o​r​ ​d​e​l​e​t​e​.​ ​F​o​r​ ​e​x​a​m​p​l​e​:​ ​[​1​,​ ​5​,​ ​1​0​,​ ​2​3​]
+							 */
+							desc: string
+						}
+					}
+				}
+			}
 		}
 		GoogleContacts: {
 			/**
@@ -43677,6 +46249,22 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​l​l​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * B​o​o​l​e​a​n​ ​c​o​n​d​i​t​i​o​n​ ​t​o​ ​e​v​a​l​u​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​b​o​o​l​e​a​n​ ​e​x​p​r​e​s​s​i​o​n​ ​o​r​ ​c​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​e​v​a​l​u​a​t​e​s​ ​t​o​ ​T​r​u​e​ ​o​r​ ​F​a​l​s​e
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'||': {
 					/**
@@ -43691,6 +46279,22 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​n​y​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * B​o​o​l​e​a​n​ ​c​o​n​d​i​t​i​o​n​ ​t​o​ ​e​v​a​l​u​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​b​o​o​l​e​a​n​ ​e​x​p​r​e​s​s​i​o​n​ ​o​r​ ​c​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​e​v​a​l​u​a​t​e​s​ ​t​o​ ​T​r​u​e​ ​o​r​ ​F​a​l​s​e
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'==': {
 					/**
@@ -43702,9 +46306,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​e​q​u​a​l​s​ ​t​h​e​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'!=': {
 					/**
@@ -43716,9 +46350,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'>': {
 					/**
@@ -43730,9 +46394,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'>=': {
 					/**
@@ -43744,9 +46438,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'<': {
 					/**
@@ -43758,9 +46482,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'<=': {
 					/**
@@ -43772,9 +46526,39 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​v​a​l​u​e
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				contains: {
 					/**
@@ -43789,6 +46573,36 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​w​i​t​h​i​n
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​f​i​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​s​t​r​i​n​g​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
 				}
 				'in': {
 					/**
@@ -43803,6 +46617,36 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​i​n​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​l​i​s​t
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​h​e​c​k​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​o​f​ ​v​a​l​u​e​s​ ​t​o​ ​c​h​e​c​k​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
 				}
 				is_empty: {
 					/**
@@ -43817,6 +46661,22 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​e​m​p​t​y​ ​o​r​ ​n​o​t​ ​s​e​t
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​e​m​p​t​i​n​e​s​s
+							 */
+							longDesc: string
+						}
+					}
 				}
 				is_not_empty: {
 					/**
@@ -43831,6 +46691,22 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​a​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+					}
 				}
 				starts_with: {
 					/**
@@ -43845,6 +46721,36 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​s​t​a​r​t​s​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * S​t​a​r​t​i​n​g​ ​t​e​x​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​t​h​e​ ​f​i​e​l​d​ ​s​h​o​u​l​d​ ​s​t​a​r​t​ ​w​i​t​h
+							 */
+							longDesc: string
+						}
+					}
 				}
 				ends_with: {
 					/**
@@ -43859,6 +46765,36 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​e​n​d​s​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * E​n​d​i​n​g​ ​t​e​x​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​t​h​e​ ​f​i​e​l​d​ ​s​h​o​u​l​d​ ​e​n​d​ ​w​i​t​h
+							 */
+							longDesc: string
+						}
+					}
 				}
 				next_week: {
 					/**
@@ -43873,6 +46809,22 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​a​l​l​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​n​e​x​t​ ​w​e​e​k
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+					}
 				}
 				next_month: {
 					/**
@@ -43887,6 +46839,22 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​a​l​l​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​n​e​x​t​ ​m​o​n​t​h
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+					}
 				}
 				next_year: {
 					/**
@@ -43901,6 +46869,22 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​a​l​l​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​n​e​x​t​ ​y​e​a​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+					}
 				}
 				past_week: {
 					/**
@@ -43915,6 +46899,22 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​a​l​l​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​p​a​s​t​ ​w​e​e​k
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+					}
 				}
 				past_month: {
 					/**
@@ -43929,6 +46929,22 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​a​l​l​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​p​a​s​t​ ​m​o​n​t​h
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+					}
 				}
 				past_year: {
 					/**
@@ -43943,6 +46959,22 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​a​l​l​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​p​a​s​t​ ​y​e​a​r
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+					}
 				}
 				this_week: {
 					/**
@@ -43957,6 +46989,22 @@ type RootTranslation = {
 					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​a​l​l​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​w​e​e​k
 					 */
 					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+					}
 				}
 			}
 		}
@@ -51903,6 +54951,626 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * S​e​l​e​c​t​ ​a​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​o​b​j​e​c​t​ ​d​a​t​a
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			expressions: {
+				'&&': {
+					/**
+					 * a​n​d​ ​(​&​&​)
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​T​r​u​e​ ​i​f​ ​a​l​l​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​T​r​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​l​l​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * B​o​o​l​e​a​n​ ​c​o​n​d​i​t​i​o​n​ ​t​o​ ​e​v​a​l​u​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​b​o​o​l​e​a​n​ ​e​x​p​r​e​s​s​i​o​n​ ​o​r​ ​c​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​e​v​a​l​u​a​t​e​s​ ​t​o​ ​T​r​u​e​ ​o​r​ ​F​a​l​s​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'||': {
+					/**
+					 * o​r​ ​(​|​|​)
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​T​r​u​e​ ​i​f​ ​a​n​y​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​T​r​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​n​y​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * B​o​o​l​e​a​n​ ​c​o​n​d​i​t​i​o​n​ ​t​o​ ​e​v​a​l​u​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​b​o​o​l​e​a​n​ ​e​x​p​r​e​s​s​i​o​n​ ​o​r​ ​c​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​e​v​a​l​u​a​t​e​s​ ​t​o​ ​T​r​u​e​ ​o​r​ ​F​a​l​s​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'==': {
+					/**
+					 * e​q​u​a​l​s​ ​(​=​)
+					 */
+					displayName: string
+					/**
+					 * E​q​u​a​l​i​t​y​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'!=': {
+					/**
+					 * n​o​t​ ​e​q​u​a​l​s​ ​(​!​=​)
+					 */
+					displayName: string
+					/**
+					 * I​n​e​q​u​a​l​i​t​y​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'>': {
+					/**
+					 * g​r​e​a​t​e​r​ ​t​h​a​n​ ​(​>​)
+					 */
+					displayName: string
+					/**
+					 * G​r​e​a​t​e​r​ ​t​h​a​n​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'>=': {
+					/**
+					 * g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​(​>​=​)
+					 */
+					displayName: string
+					/**
+					 * G​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'<': {
+					/**
+					 * l​e​s​s​ ​t​h​a​n​ ​(​<​)
+					 */
+					displayName: string
+					/**
+					 * L​e​s​s​ ​t​h​a​n​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'<=': {
+					/**
+					 * l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​(​<​=​)
+					 */
+					displayName: string
+					/**
+					 * L​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'in': {
+					/**
+					 * i​n
+					 */
+					displayName: string
+					/**
+					 * I​n​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​i​n​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​l​i​s​t
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​h​e​c​k​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​o​f​ ​v​a​l​u​e​s​ ​t​o​ ​c​h​e​c​k​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				not_in: {
+					/**
+					 * n​o​t​ ​i​n
+					 */
+					displayName: string
+					/**
+					 * N​o​t​ ​i​n​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​n​o​t​ ​i​n​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​l​i​s​t
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​h​e​c​k​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​o​f​ ​v​a​l​u​e​s​ ​t​h​e​ ​f​i​e​l​d​ ​s​h​o​u​l​d​ ​n​o​t​ ​m​a​t​c​h
+							 */
+							longDesc: string
+						}
+					}
+				}
+				between: {
+					/**
+					 * b​e​t​w​e​e​n
+					 */
+					displayName: string
+					/**
+					 * B​e​t​w​e​e​n​ ​t​w​o​ ​v​a​l​u​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​t​w​o​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e​s
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​h​e​c​k​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * L​o​w​e​r​ ​b​o​u​n​d
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​w​e​r​ ​b​o​u​n​d​ ​o​f​ ​t​h​e​ ​r​a​n​g​e​ ​(​i​n​c​l​u​s​i​v​e​)
+							 */
+							longDesc: string
+						}
+						'2': {
+							/**
+							 * U​p​p​e​r​ ​b​o​u​n​d
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​p​e​r​ ​b​o​u​n​d​ ​o​f​ ​t​h​e​ ​r​a​n​g​e​ ​(​i​n​c​l​u​s​i​v​e​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				has_property: {
+					/**
+					 * h​a​s​ ​p​r​o​p​e​r​t​y
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​h​a​s​ ​a​n​y​ ​v​a​l​u​e​ ​s​e​t​ ​(​i​s​ ​n​o​t​ ​n​u​l​l​ ​o​r​ ​e​m​p​t​y​)
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​a​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				not_has_property: {
+					/**
+					 * d​o​e​s​ ​n​o​t​ ​h​a​v​e​ ​p​r​o​p​e​r​t​y
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​h​a​s​ ​n​o​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​h​a​s​ ​n​o​ ​v​a​l​u​e​ ​s​e​t​ ​(​i​s​ ​n​u​l​l​ ​o​r​ ​e​m​p​t​y​)
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​e​m​p​t​i​n​e​s​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				contains_token: {
+					/**
+					 * c​o​n​t​a​i​n​s​ ​t​o​k​e​n
+					 */
+					displayName: string
+					/**
+					 * C​o​n​t​a​i​n​s​ ​t​o​k​e​n​ ​o​r​ ​s​u​b​s​t​r​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​o​k​e​n​ ​o​r​ ​s​u​b​s​t​r​i​n​g
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​w​i​t​h​i​n
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​t​o​ ​f​i​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​o​k​e​n​ ​o​r​ ​s​u​b​s​t​r​i​n​g​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				not_contains_token: {
+					/**
+					 * d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​o​k​e​n
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​o​k​e​n​ ​o​r​ ​s​u​b​s​t​r​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​o​k​e​n​ ​o​r​ ​s​u​b​s​t​r​i​n​g
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​w​i​t​h​i​n
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​o​k​e​n​ ​o​r​ ​s​u​b​s​t​r​i​n​g​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​p​r​e​s​e​n​t
 							 */
 							longDesc: string
 						}
@@ -81559,6 +85227,20 @@ export type TranslationFunctions = {
 	common: {
 	}
 	apps: {
+		ZohoCRM: {
+			/**
+			 * Zoho CRM
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Zoho CRM to automate customer relationship management across all global data centers.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Zoho CRM integration provides comprehensive actions and triggers to interact with the Zoho CRM API across all seven global data centers (US, AU, EU, IN, CN, JP, CA). Manage modules, records, users, and roles efficiently while automating your CRM workflows with support for custom modules, bulk operations, and real-time triggers.
+			 */
+			longDesc: () => LocalizedString
+		}
 		Firebase: {
 			/**
 			 * Firebase
@@ -82808,6 +86490,22 @@ export type TranslationFunctions = {
 					 * Returns `True` if all arguments are `True` with logic short-circuiting
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Boolean condition to evaluate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A boolean expression or condition that evaluates to True or False
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'||': {
 					/**
@@ -82822,6 +86520,22 @@ export type TranslationFunctions = {
 					 * Returns `True` if any argument is `True` with logic short-circuiting
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Boolean condition to evaluate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A boolean expression or condition that evaluates to True or False
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				NOT: {
 					/**
@@ -82836,10 +86550,26 @@ export type TranslationFunctions = {
 					 * Returns the logical negation of the argument
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Boolean condition to negate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A boolean expression or condition to negate
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'==': {
 					/**
-					 * equals (=)
+					 * equals (==)
 					 */
 					displayName: () => LocalizedString
 					/**
@@ -82847,9 +86577,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the arguments are equal
+					 * Returns `True` if the field value equals the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'!=': {
 					/**
@@ -82861,9 +86621,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the arguments are not equal
+					 * Returns `True` if the field value does not equal the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'>': {
 					/**
@@ -82875,9 +86665,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the first argument is greater than the second
+					 * Returns `True` if the field value is greater than the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'>=': {
 					/**
@@ -82889,9 +86709,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the first argument is greater than or equal to the second
+					 * Returns `True` if the field value is greater than or equal to the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'<': {
 					/**
@@ -82903,9 +86753,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the first argument is less than the second
+					 * Returns `True` if the field value is less than the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'<=': {
 					/**
@@ -82917,9 +86797,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the first argument is less than or equal to the second
+					 * Returns `True` if the field value is less than or equal to the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				like: {
 					/**
@@ -82934,6 +86844,36 @@ export type TranslationFunctions = {
 					 * Returns `True` if the field matches the pattern with % as wildcard
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to match
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to match against the pattern
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Pattern
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pattern to match
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The pattern to match with (use % as wildcard, e.g., "%example%")
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				ilike: {
 					/**
@@ -82948,6 +86888,36 @@ export type TranslationFunctions = {
 					 * Returns `True` if the field matches the pattern (case-insensitive) with % as wildcard
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to match
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to match against the pattern
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Pattern
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pattern to match
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The pattern to match with, case-insensitive (use % as wildcard, e.g., "%example%")
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'in': {
 					/**
@@ -82955,13 +86925,87 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * In operator
+					 * In list
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the field value is in the provided list
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be checked
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Values
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The list of values to check the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				contains: {
+					/**
+					 * contains (@>)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Array contains elements
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the array field contains all the specified elements
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Array field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The array field to check for contained elements
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Elements
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Elements to find
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The list of elements that should be contained in the array
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 			}
 		}
@@ -83628,6 +87672,22 @@ export type TranslationFunctions = {
 					 * Returns `True` if all arguments are `True` with logic short-circuiting
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Boolean condition to evaluate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A boolean expression or condition that evaluates to True or False
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'||': {
 					/**
@@ -83642,6 +87702,22 @@ export type TranslationFunctions = {
 					 * Returns `True` if any argument is `True` with logic short-circuiting
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Boolean condition to evaluate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A boolean expression or condition that evaluates to True or False
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'==': {
 					/**
@@ -83653,9 +87729,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the field equals the value
+					 * Returns `True` if the field value equals the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'!=': {
 					/**
@@ -83667,9 +87773,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the field does not equal the value
+					 * Returns `True` if the field value does not equal the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'>': {
 					/**
@@ -83681,9 +87817,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the field is greater than the value
+					 * Returns `True` if the field value is greater than the specified number
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Numeric field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The numeric field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The numeric value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'>=': {
 					/**
@@ -83695,9 +87861,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the field is greater than or equal to the value
+					 * Returns `True` if the field value is greater than or equal to the specified number
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Numeric field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The numeric field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The numeric value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'<': {
 					/**
@@ -83709,9 +87905,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the field is less than the value
+					 * Returns `True` if the field value is less than the specified number
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Numeric field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The numeric field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The numeric value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'<=': {
 					/**
@@ -83723,9 +87949,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the field is less than or equal to the value
+					 * Returns `True` if the field value is less than or equal to the specified number
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Numeric field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The numeric field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The numeric value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				contains: {
 					/**
@@ -83740,6 +87996,36 @@ export type TranslationFunctions = {
 					 * Returns `True` if the field contains the specified text
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to search within
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to search for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text string to search for within the field
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				contains_not: {
 					/**
@@ -83754,6 +88040,36 @@ export type TranslationFunctions = {
 					 * Returns `True` if the field does not contain the specified text
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to search within
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text string that should not be present in the field
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				contains_word: {
 					/**
@@ -83761,13 +88077,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Contains word
+					 * Contains whole word
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the field contains the specified word
+					 * Returns `True` if the field contains the specified word as a complete word
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to search within
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Word
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Word to search for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The complete word to search for within the field
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				doesnt_contain_word: {
 					/**
@@ -83775,13 +88121,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Does not contain word
+					 * Does not contain whole word
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the field does not contain the specified word
+					 * Returns `True` if the field does not contain the specified word as a complete word
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to search within
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Word
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Word to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The complete word that should not be present in the field
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				length_is_lower_than: {
 					/**
@@ -83789,13 +88165,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Length is less than
+					 * Text length is less than
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the field length is less than the specified value
+					 * Returns `True` if the length of the text field is less than the specified number
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to measure
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field whose length will be measured
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Length
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum length
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum length the field should be less than
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				empty: {
 					/**
@@ -83807,9 +88213,25 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the field is empty or not set
+					 * Returns `True` if the field is empty or has no value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to check for emptiness
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				not_empty: {
 					/**
@@ -83824,6 +88246,22 @@ export type TranslationFunctions = {
 					 * Returns `True` if the field has a value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to check for a value
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				date_is: {
 					/**
@@ -83831,13 +88269,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Date equals value
+					 * Date equals
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the date field equals the specified date
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date field to compare
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date to match
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date value to compare against (format: YYYY-MM-DD)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				date_is_not: {
 					/**
@@ -83845,13 +88313,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Date does not equal value
+					 * Date does not equal
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the date field does not equal the specified date
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date field to compare
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date value that should not match (format: YYYY-MM-DD)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				date_is_before: {
 					/**
@@ -83859,13 +88357,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Date is before value
+					 * Date is before
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the date field is before the specified date
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date field to compare
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date that the field should be before (format: YYYY-MM-DD)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				date_is_on_or_before: {
 					/**
@@ -83873,13 +88401,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Date is on or before value
+					 * Date is on or before
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the date field is on or before the specified date
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date field to compare
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date that the field should be on or before (format: YYYY-MM-DD)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				date_is_after: {
 					/**
@@ -83887,13 +88445,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Date is after value
+					 * Date is after
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the date field is after the specified date
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date field to compare
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date that the field should be after (format: YYYY-MM-DD)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				date_is_on_or_after: {
 					/**
@@ -83901,13 +88489,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Date is on or after value
+					 * Date is on or after
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the date field is on or after the specified date
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date field to compare
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date that the field should be on or after (format: YYYY-MM-DD)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				date_is_within: {
 					/**
@@ -83915,13 +88533,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Date is within range
+					 * Date is within time period
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the date field is within the specified range
+					 * Returns `True` if the date field falls within the specified time period
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Period
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Time period
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The time period to check (e.g., "today", "yesterday", "this_week", "last_month")
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				date_equals_day_of_month: {
 					/**
@@ -83929,13 +88577,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Day of month equals value
+					 * Day of month equals
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the day of month equals the specified value
+					 * Returns `True` if the day of the month equals the specified number
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date field whose day will be checked
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Day
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Day number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The day of the month (1-31) to match
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				boolean: {
 					/**
@@ -83947,9 +88625,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the boolean field matches the specified value
+					 * Returns `True` if the boolean field equals the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Boolean field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The boolean field to compare
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Boolean value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The boolean value (true or false) to compare against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				is_even_and_whole: {
 					/**
@@ -83964,6 +88672,36 @@ export type TranslationFunctions = {
 					 * Returns `True` if the number is even and a whole number
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Numeric field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The numeric field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Check
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Check value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to true to check if even and whole, false to check if not
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				single_select_equal: {
 					/**
@@ -83978,6 +88716,36 @@ export type TranslationFunctions = {
 					 * Returns `True` if the single select field equals the specified option
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Single select field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The single select field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Option
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Option to match
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The select option value to match
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				single_select_not_equal: {
 					/**
@@ -83992,6 +88760,36 @@ export type TranslationFunctions = {
 					 * Returns `True` if the single select field does not equal the specified option
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Single select field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The single select field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Option
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Option to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The select option value to exclude
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				single_select_is_any_of: {
 					/**
@@ -84003,9 +88801,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the single select field is any of the specified options
+					 * Returns `True` if the single select field matches any of the specified options
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Single select field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The single select field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Options
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Options list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of select option values to match against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				single_select_is_none_of: {
 					/**
@@ -84017,9 +88845,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the single select field is none of the specified options
+					 * Returns `True` if the single select field does not match any of the specified options
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Single select field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The single select field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Options
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Options list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of select option values to exclude
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				multiple_select_has: {
 					/**
@@ -84027,13 +88885,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Multiple select has value
+					 * Multiple select contains
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the multiple select field contains the specified value
+					 * Returns `True` if the multiple select field contains the specified option
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Multiple select field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The multiple select field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Option
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Option to find
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The select option value to find in the field
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				multiple_select_has_not: {
 					/**
@@ -84041,13 +88929,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Multiple select does not have value
+					 * Multiple select does not contain
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the multiple select field does not contain the specified value
+					 * Returns `True` if the multiple select field does not contain the specified option
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Multiple select field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The multiple select field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Option
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Option to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The select option value that should not be in the field
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				link_row_has: {
 					/**
@@ -84055,13 +88973,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Link row has value
+					 * Link row contains
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the link row field contains the specified value
+					 * Returns `True` if the link row field contains the specified linked record
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Link row field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The link row field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Linked record ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the linked record to find
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				link_row_has_not: {
 					/**
@@ -84069,13 +89017,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Link row does not have value
+					 * Link row does not contain
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the link row field does not contain the specified value
+					 * Returns `True` if the link row field does not contain the specified linked record
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Link row field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The link row field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Linked record ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the linked record that should not be present
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				link_row_contains: {
 					/**
@@ -84083,13 +89061,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Link row contains text
+					 * Link row value contains
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the link row field contains the specified text
+					 * Returns `True` if any linked record value contains the specified text
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Link row field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The link row field to search
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to find
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text to search for in linked record values
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				link_row_not_contains: {
 					/**
@@ -84097,13 +89105,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Link row does not contain text
+					 * Link row value does not contain
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the link row field does not contain the specified text
+					 * Returns `True` if no linked record value contains the specified text
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Link row field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The link row field to search
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text that should not be in linked record values
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				filename_contains: {
 					/**
@@ -84111,13 +89149,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Filename contains text
+					 * File name contains text
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the filename contains the specified text
+					 * Returns `True` if any file name contains the specified text
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * File field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The file field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to find
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text to search for in file names
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_file_type: {
 					/**
@@ -84125,13 +89193,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Has file type
+					 * Has file with type
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the file field has the specified file type
+					 * Returns `True` if the field contains a file with the specified type
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * File field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The file field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * File type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The file type to check for (e.g., "image", "document")
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				files_lower_than: {
 					/**
@@ -84139,13 +89237,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Number of files is less than
+					 * File count is less than
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the number of files is less than the specified value
+					 * Returns `True` if the number of files is less than the specified count
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * File field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The file field to count
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum count
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of files
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				user_is: {
 					/**
@@ -84160,6 +89288,36 @@ export type TranslationFunctions = {
 					 * Returns `True` if the user field equals the specified user
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The user field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * User
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User to match
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The user identifier to match
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				user_is_not: {
 					/**
@@ -84174,6 +89332,36 @@ export type TranslationFunctions = {
 					 * Returns `True` if the user field does not equal the specified user
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The user field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * User
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The user identifier to exclude
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				multiple_collaborators_has: {
 					/**
@@ -84181,13 +89369,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Collaborators has user
+					 * Has collaborator
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the collaborators field contains the specified user
+					 * Returns `True` if the multiple collaborators field contains the specified user
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Collaborators field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The multiple collaborators field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * User
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User to find
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The user identifier to find
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				multiple_collaborators_has_not: {
 					/**
@@ -84195,13 +89413,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Collaborators does not have user
+					 * Does not have collaborator
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the collaborators field does not contain the specified user
+					 * Returns `True` if the multiple collaborators field does not contain the specified user
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Collaborators field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The multiple collaborators field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * User
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The user identifier that should not be present
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_empty_value: {
 					/**
@@ -84209,13 +89457,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Has empty value
+					 * Lookup has empty value
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the lookup field has an empty value
+					 * Returns `True` if the lookup field has at least one empty value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field to check for empty values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Subfield
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Subfield to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific subfield within the lookup to check
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_not_empty_value: {
 					/**
@@ -84223,13 +89501,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Does not have empty value
+					 * Lookup has no empty values
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the lookup field does not have an empty value
+					 * Returns `True` if the lookup field has no empty values
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Subfield
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Subfield to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The specific subfield within the lookup to check
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_value_equal: {
 					/**
@@ -84237,13 +89545,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Has value equal to
+					 * Lookup value equals
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the lookup field has a value equal to the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to match
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to find in the lookup field
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_not_value_equal: {
 					/**
@@ -84251,13 +89589,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Does not have value equal to
+					 * Lookup value does not equal
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the lookup field does not have a value equal to the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value that should not be in the lookup field
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_value_contains: {
 					/**
@@ -84265,13 +89633,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Has value containing text
+					 * Lookup value contains
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the lookup field has a value containing the specified text
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field to search
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to find
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text to search for in lookup values
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_not_value_contains: {
 					/**
@@ -84279,13 +89677,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Does not have value containing text
+					 * Lookup value does not contain
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the lookup field does not have a value containing the specified text
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field to search
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text that should not be in lookup values
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_value_contains_word: {
 					/**
@@ -84293,13 +89721,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Has value containing word
+					 * Lookup value contains word
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the lookup field has a value containing the specified word
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field to search
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Word
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Word to find
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The complete word to search for in lookup values
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_not_value_contains_word: {
 					/**
@@ -84307,13 +89765,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Does not have value containing word
+					 * Lookup value does not contain word
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the lookup field does not have a value containing the specified word
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field to search
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Word
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Word to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The complete word that should not be in lookup values
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_value_length_is_lower_than: {
 					/**
@@ -84321,13 +89809,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Has value with length less than
+					 * Lookup value length is less than
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the lookup field has a value with length less than the specified value
+					 * Returns `True` if the lookup field has a value with length less than the specified number
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field to measure
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Length
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum length
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum length for lookup values
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_all_values_equal: {
 					/**
@@ -84335,13 +89853,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * All values equal
+					 * All lookup values equal
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if all values in the lookup field equal the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to match
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value that all lookup values should equal
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_any_select_option_equal: {
 					/**
@@ -84349,13 +89897,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Has any select option equal
+					 * Lookup has select option
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the lookup field has any select option equal to the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with select options
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Option
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Option to find
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The select option value to find
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_none_select_option_equal: {
 					/**
@@ -84363,13 +89941,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Does not have select option equal
+					 * Lookup has no select option
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the lookup field does not have any select option equal to the specified value
+					 * Returns `True` if the lookup field has no select option equal to the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with select options
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Option
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Option to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The select option value that should not be present
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_value_higher: {
 					/**
@@ -84377,13 +89985,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Has value greater than
+					 * Lookup value is greater than
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the lookup field has a value greater than the specified value
+					 * Returns `True` if the lookup field has a numeric value greater than the specified number
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with numeric values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number that lookup values should be greater than
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_not_value_higher: {
 					/**
@@ -84391,13 +90029,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Does not have value greater than
+					 * Lookup value is not greater than
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the lookup field does not have a value greater than the specified value
+					 * Returns `True` if the lookup field does not have a numeric value greater than the specified number
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with numeric values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number that lookup values should not be greater than
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_value_higher_or_equal: {
 					/**
@@ -84405,13 +90073,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Has value greater than or equal to
+					 * Lookup value is greater than or equal
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the lookup field has a value greater than or equal to the specified value
+					 * Returns `True` if the lookup field has a numeric value greater than or equal to the specified number
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with numeric values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number that lookup values should be greater than or equal to
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_not_value_higher_or_equal: {
 					/**
@@ -84419,13 +90117,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Does not have value greater than or equal to
+					 * Lookup value is not greater than or equal
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the lookup field does not have a value greater than or equal to the specified value
+					 * Returns `True` if the lookup field does not have a numeric value greater than or equal to the specified number
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with numeric values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Threshold value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number that lookup values should not be greater than or equal to
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_value_lower: {
 					/**
@@ -84433,13 +90161,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Has value less than
+					 * Lookup value is less than
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the lookup field has a value less than the specified value
+					 * Returns `True` if the lookup field has a numeric value less than the specified number
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with numeric values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number that lookup values should be less than
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_not_value_lower: {
 					/**
@@ -84447,13 +90205,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Does not have value less than
+					 * Lookup value is not less than
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the lookup field does not have a value less than the specified value
+					 * Returns `True` if the lookup field does not have a numeric value less than the specified number
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with numeric values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number that lookup values should not be less than
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_value_lower_or_equal: {
 					/**
@@ -84461,13 +90249,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Has value less than or equal to
+					 * Lookup value is less than or equal
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the lookup field has a value less than or equal to the specified value
+					 * Returns `True` if the lookup field has a numeric value less than or equal to the specified number
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with numeric values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number that lookup values should be less than or equal to
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_not_value_lower_or_equal: {
 					/**
@@ -84475,13 +90293,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Does not have value less than or equal to
+					 * Lookup value is not less than or equal
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the lookup field does not have a value less than or equal to the specified value
+					 * Returns `True` if the lookup field does not have a numeric value less than or equal to the specified number
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with numeric values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Threshold value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number that lookup values should not be less than or equal to
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_date_equal: {
 					/**
@@ -84489,13 +90337,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Has date equal to
+					 * Lookup date equals
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the lookup field has a date equal to the specified date
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with date values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date to match
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date that lookup values should equal (format: YYYY-MM-DD)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_not_date_equal: {
 					/**
@@ -84503,13 +90381,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Does not have date equal to
+					 * Lookup date does not equal
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the lookup field does not have a date equal to the specified date
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with date values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date that lookup values should not equal (format: YYYY-MM-DD)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_date_before: {
 					/**
@@ -84517,13 +90425,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Has date before
+					 * Lookup date is before
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the lookup field has a date before the specified date
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with date values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date that lookup values should be before (format: YYYY-MM-DD)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_not_date_before: {
 					/**
@@ -84531,13 +90469,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Does not have date before
+					 * Lookup date is not before
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the lookup field does not have a date before the specified date
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with date values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Threshold date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date that lookup values should not be before (format: YYYY-MM-DD)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_date_on_or_before: {
 					/**
@@ -84545,13 +90513,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Has date on or before
+					 * Lookup date is on or before
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the lookup field has a date on or before the specified date
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with date values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date that lookup values should be on or before (format: YYYY-MM-DD)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_not_date_on_or_before: {
 					/**
@@ -84559,13 +90557,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Does not have date on or before
+					 * Lookup date is not on or before
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the lookup field does not have a date on or before the specified date
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with date values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Threshold date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date that lookup values should not be on or before (format: YYYY-MM-DD)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_date_after: {
 					/**
@@ -84573,13 +90601,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Has date after
+					 * Lookup date is after
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the lookup field has a date after the specified date
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with date values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date that lookup values should be after (format: YYYY-MM-DD)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_not_date_after: {
 					/**
@@ -84587,13 +90645,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Does not have date after
+					 * Lookup date is not after
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the lookup field does not have a date after the specified date
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with date values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Threshold date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date that lookup values should not be after (format: YYYY-MM-DD)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_date_on_or_after: {
 					/**
@@ -84601,13 +90689,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Has date on or after
+					 * Lookup date is on or after
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the lookup field has a date on or after the specified date
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with date values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date that lookup values should be on or after (format: YYYY-MM-DD)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_not_date_on_or_after: {
 					/**
@@ -84615,13 +90733,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Does not have date on or after
+					 * Lookup date is not on or after
 					 */
 					shortDesc: () => LocalizedString
 					/**
 					 * Returns `True` if the lookup field does not have a date on or after the specified date
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with date values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Threshold date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date that lookup values should not be on or after (format: YYYY-MM-DD)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_date_within: {
 					/**
@@ -84629,13 +90777,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Has date within range
+					 * Lookup date is within period
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the lookup field has a date within the specified range
+					 * Returns `True` if the lookup field has a date within the specified time period
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with date values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Period
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Time period
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The time period to check (e.g., "today", "this_week", "last_month")
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				has_not_date_within: {
 					/**
@@ -84643,13 +90821,43 @@ export type TranslationFunctions = {
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Does not have date within range
+					 * Lookup date is not within period
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the lookup field does not have a date within the specified range
+					 * Returns `True` if the lookup field does not have a date within the specified time period
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lookup field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lookup field with date values
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Period
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Time period
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The time period to exclude (e.g., "today", "this_week", "last_month")
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 			}
 		}
@@ -111206,6 +117414,38 @@ export type TranslationFunctions = {
 					}
 				}
 			}
+			expressions: {
+				row_ids: {
+					/**
+					 * Row IDs
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List of row IDs
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Provide a list of row IDs to target specific rows in a Google Sheets spreadsheet.
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Row Numbers
+							 */
+							display_name: () => LocalizedString
+							/**
+							 * List of row numbers to target
+							 */
+							short_desc: () => LocalizedString
+							/**
+							 * Provide a list of row numbers (1-based index) that you want to update or delete. For example: [1, 5, 10, 23]
+							 */
+							desc: () => LocalizedString
+						}
+					}
+				}
+			}
 		}
 		GoogleContacts: {
 			/**
@@ -125220,6 +131460,22 @@ export type TranslationFunctions = {
 					 * Returns `True` if all arguments are `True` with logic short-circuiting
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Boolean condition to evaluate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A boolean expression or condition that evaluates to True or False
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'||': {
 					/**
@@ -125234,6 +131490,22 @@ export type TranslationFunctions = {
 					 * Returns `True` if any argument is `True` with logic short-circuiting
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Boolean condition to evaluate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A boolean expression or condition that evaluates to True or False
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'==': {
 					/**
@@ -125245,9 +131517,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the field equals the value
+					 * Returns `True` if the field value equals the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'!=': {
 					/**
@@ -125259,9 +131561,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the field does not equal the value
+					 * Returns `True` if the field value does not equal the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'>': {
 					/**
@@ -125273,9 +131605,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the field is greater than the value
+					 * Returns `True` if the field value is greater than the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'>=': {
 					/**
@@ -125287,9 +131649,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the field is greater than or equal to the value
+					 * Returns `True` if the field value is greater than or equal to the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'<': {
 					/**
@@ -125301,9 +131693,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the field is less than the value
+					 * Returns `True` if the field value is less than the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'<=': {
 					/**
@@ -125315,9 +131737,39 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Returns `True` if the field is less than or equal to the value
+					 * Returns `True` if the field value is less than or equal to the specified value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				contains: {
 					/**
@@ -125332,6 +131784,36 @@ export type TranslationFunctions = {
 					 * Returns `True` if the field contains the specified text
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to search within
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to find
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text string to search for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				'in': {
 					/**
@@ -125346,6 +131828,36 @@ export type TranslationFunctions = {
 					 * Returns `True` if the field value is in the provided list
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be checked
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Values
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The list of values to check the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				is_empty: {
 					/**
@@ -125360,6 +131872,22 @@ export type TranslationFunctions = {
 					 * Returns `True` if the field is empty or not set
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to check for emptiness
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				is_not_empty: {
 					/**
@@ -125374,6 +131902,22 @@ export type TranslationFunctions = {
 					 * Returns `True` if the field has a value
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to check for a value
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				starts_with: {
 					/**
@@ -125388,6 +131932,36 @@ export type TranslationFunctions = {
 					 * Returns `True` if the field starts with the specified text
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Starting text
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text that the field should start with
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				ends_with: {
 					/**
@@ -125402,6 +131976,36 @@ export type TranslationFunctions = {
 					 * Returns `True` if the field ends with the specified text
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Ending text
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text that the field should end with
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				next_week: {
 					/**
@@ -125416,6 +132020,22 @@ export type TranslationFunctions = {
 					 * Returns `True` if the date falls within the next week
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				next_month: {
 					/**
@@ -125430,6 +132050,22 @@ export type TranslationFunctions = {
 					 * Returns `True` if the date falls within the next month
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				next_year: {
 					/**
@@ -125444,6 +132080,22 @@ export type TranslationFunctions = {
 					 * Returns `True` if the date falls within the next year
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				past_week: {
 					/**
@@ -125458,6 +132110,22 @@ export type TranslationFunctions = {
 					 * Returns `True` if the date falls within the past week
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				past_month: {
 					/**
@@ -125472,6 +132140,22 @@ export type TranslationFunctions = {
 					 * Returns `True` if the date falls within the past month
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				past_year: {
 					/**
@@ -125486,6 +132170,22 @@ export type TranslationFunctions = {
 					 * Returns `True` if the date falls within the past year
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				this_week: {
 					/**
@@ -125500,6 +132200,22 @@ export type TranslationFunctions = {
 					 * Returns `True` if the date falls within the current week
 					 */
 					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 			}
 		}
@@ -133446,6 +140162,626 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Select additional properties to add to the returned object data
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			expressions: {
+				'&&': {
+					/**
+					 * and (&&)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns True if all arguments are True
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if all arguments are `True` with logic short-circuiting
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Boolean condition to evaluate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A boolean expression or condition that evaluates to True or False
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'||': {
+					/**
+					 * or (||)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns True if any argument is True
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if any argument is `True` with logic short-circuiting
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Boolean condition to evaluate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A boolean expression or condition that evaluates to True or False
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'==': {
+					/**
+					 * equals (=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Equality comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value equals the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'!=': {
+					/**
+					 * not equals (!=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Inequality comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value does not equal the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'>': {
+					/**
+					 * greater than (>)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Greater than comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is greater than the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'>=': {
+					/**
+					 * greater than or equal (>=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Greater than or equal comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is greater than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'<': {
+					/**
+					 * less than (<)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Less than comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is less than the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'<=': {
+					/**
+					 * less than or equal (<=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Less than or equal comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is less than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'in': {
+					/**
+					 * in
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * In list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is in the provided list
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be checked
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Values
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The list of values to check the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				not_in: {
+					/**
+					 * not in
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Not in list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is not in the provided list
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be checked
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Values
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The list of values the field should not match
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				between: {
+					/**
+					 * between
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Between two values
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is between the two specified values
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be checked
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Lower bound
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lower bound of the range (inclusive)
+							 */
+							longDesc: () => LocalizedString
+						}
+						'2': {
+							/**
+							 * Upper bound
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The upper bound of the range (inclusive)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				has_property: {
+					/**
+					 * has property
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field has a value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field has any value set (is not null or empty)
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to check for a value
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				not_has_property: {
+					/**
+					 * does not have property
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field has no value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field has no value set (is null or empty)
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to check for emptiness
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				contains_token: {
+					/**
+					 * contains token
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Contains token or substring
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field contains the specified token or substring
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to search within
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token to find
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The token or substring to search for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				not_contains_token: {
+					/**
+					 * does not contain token
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not contain token or substring
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field does not contain the specified token or substring
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to search within
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The token or substring that should not be present
 							 */
 							longDesc: () => LocalizedString
 						}

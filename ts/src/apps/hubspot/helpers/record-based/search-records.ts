@@ -59,13 +59,23 @@ export const searchHubspotRecords: TQoreSearchRecordsFunction = async (ctx, wher
     const recordType = (await getHubspotRecordType(ctx, tableName)) as IQoreTypeObjectNonList;
     const properties = recordType?.fields ? Object.keys(recordType.fields) : [];
 
+    const maxLimit = opts.limit as number | undefined;
     let after: string | undefined;
+    let recordsReturned = 0;
 
     const get_records: TQoreSearchRecordsIterator = (_ctx, blockSize) => {
       return (async () => {
+        if (maxLimit !== undefined && recordsReturned >= maxLimit) {
+          return null;
+        }
+
         try {
+          const effectiveBlockSize = maxLimit !== undefined
+            ? Math.min(blockSize, maxLimit - recordsReturned)
+            : blockSize;
+
           const requestBody: Record<string, any> = {
-            limit: Math.min(blockSize, 100),
+            limit: Math.min(effectiveBlockSize, 100),
           };
 
           if (filterGroups.length > 0) {
@@ -110,6 +120,8 @@ export const searchHubspotRecords: TQoreSearchRecordsFunction = async (ctx, wher
             id: record.id,
             ...record.properties,
           }));
+
+          recordsReturned += mappedData.length;
 
           return mapObjectToColumnFormat(mappedData);
         } catch (error) {

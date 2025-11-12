@@ -58,14 +58,24 @@ export const searchNotionRecords: TQoreSearchRecordsFunction = async (ctx, where
       ];
     }
 
+    const maxLimit = opts.limit as number | undefined;
     let cursor: string | undefined;
+    let recordsReturned = 0;
 
     const get_records: TQoreSearchRecordsIterator = (_ctx, blockSize) => {
       return (async () => {
+        if (maxLimit !== undefined && recordsReturned >= maxLimit) {
+          return null;
+        }
+
         try {
+          const effectiveBlockSize = maxLimit !== undefined
+            ? Math.min(blockSize, maxLimit - recordsReturned)
+            : blockSize;
+
           const pagedQueryParams = {
             ...queryParams,
-            page_size: Math.min(blockSize, 100),
+            page_size: Math.min(effectiveBlockSize, 100),
             ...(cursor && { start_cursor: cursor }),
           };
 
@@ -89,6 +99,8 @@ export const searchNotionRecords: TQoreSearchRecordsFunction = async (ctx, where
               'id'
             );
           });
+
+          recordsReturned += mappedData.length;
 
           return mapObjectToColumnFormat(mappedData);
         } catch (error) {
