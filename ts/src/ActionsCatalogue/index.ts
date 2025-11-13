@@ -93,6 +93,7 @@ import firestore from '../apps/firestore';
 import firebase from '../apps/firebase';
 import baserow from '../apps/baserow';
 import { omit } from 'lodash';
+import zohocrm from '../apps/zohocrm';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -182,6 +183,7 @@ const NEW_APPS = {
   xero,
   youtube,
   zendesk,
+  zohocrm,
   zoom,
 } as const;
 

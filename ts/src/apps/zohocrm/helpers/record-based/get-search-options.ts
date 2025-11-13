@@ -1,6 +1,6 @@
 import { TQoreCrudOptions } from '@qoretechnologies/ts-toolkit';
 
-export const HubspotSearchOptions = {
+export const ZohoCrmSearchOptions = {
   orderBy: {
     type: {
       type: 'hash',
@@ -15,9 +15,5 @@ export const HubspotSearchOptions = {
         },
       },
     },
-  },
-  limit: {
-    type: 'int',
-    required: false,
   },
 } satisfies TQoreCrudOptions;

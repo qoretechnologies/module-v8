@@ -31,4 +31,8 @@ export const GoogleSheetsSearchOptions = {
       }
     },
   },
+  limit: {
+    type: 'int',
+    required: false,
+  },
 } satisfies TQoreCrudOptions;

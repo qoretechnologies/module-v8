@@ -88,17 +88,28 @@ export const searchGoogleSheetsRecords: TQoreSearchRecordsFunction = async (
       }
     });
 
+    const maxLimit = opts.limit as number | undefined;
     let currentIndex = 0;
+    let recordsReturned = 0;
 
     const get_records: TQoreSearchRecordsIterator = async (_ctx, blockSize) => {
       if (currentIndex >= allRows.length) {
         return null;
       }
 
-      const endIndex = Math.min(currentIndex + blockSize, allRows.length);
+      if (maxLimit !== undefined && recordsReturned >= maxLimit) {
+        return null;
+      }
+
+      const effectiveBlockSize = maxLimit !== undefined
+        ? Math.min(blockSize, maxLimit - recordsReturned)
+        : blockSize;
+
+      const endIndex = Math.min(currentIndex + effectiveBlockSize, allRows.length);
       const chunk = allRows.slice(currentIndex, endIndex);
 
       currentIndex = endIndex;
+      recordsReturned += chunk.length;
 
       if (chunk.length === 0) {
         return null;

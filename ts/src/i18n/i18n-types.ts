@@ -16,6 +16,1426 @@ type RootTranslation = {
 	common: {
 	}
 	apps: {
+		ZohoCRM: {
+			/**
+			 * Z​o​h​o​ ​C​R​M
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​Z​o​h​o​ ​C​R​M​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​c​u​s​t​o​m​e​r​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​m​a​n​a​g​e​m​e​n​t​ ​a​c​r​o​s​s​ ​a​l​l​ ​g​l​o​b​a​l​ ​d​a​t​a​ ​c​e​n​t​e​r​s​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​Z​o​h​o​ ​C​R​M​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​Z​o​h​o​ ​C​R​M​ ​A​P​I​ ​a​c​r​o​s​s​ ​a​l​l​ ​s​e​v​e​n​ ​g​l​o​b​a​l​ ​d​a​t​a​ ​c​e​n​t​e​r​s​ ​(​U​S​,​ ​A​U​,​ ​E​U​,​ ​I​N​,​ ​C​N​,​ ​J​P​,​ ​C​A​)​.​ ​M​a​n​a​g​e​ ​m​o​d​u​l​e​s​,​ ​r​e​c​o​r​d​s​,​ ​u​s​e​r​s​,​ ​a​n​d​ ​r​o​l​e​s​ ​e​f​f​i​c​i​e​n​t​l​y​ ​w​h​i​l​e​ ​a​u​t​o​m​a​t​i​n​g​ ​y​o​u​r​ ​C​R​M​ ​w​o​r​k​f​l​o​w​s​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​c​u​s​t​o​m​ ​m​o​d​u​l​e​s​,​ ​b​u​l​k​ ​o​p​e​r​a​t​i​o​n​s​,​ ​a​n​d​ ​r​e​a​l​-​t​i​m​e​ ​t​r​i​g​g​e​r​s​.
+			 */
+			longDesc: string
+			expressions: {
+				'&&': {
+					/**
+					 * a​n​d​ ​(​&​&​)
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​T​r​u​e​ ​i​f​ ​a​l​l​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​T​r​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​l​l​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * B​o​o​l​e​a​n​ ​c​o​n​d​i​t​i​o​n​ ​t​o​ ​e​v​a​l​u​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​b​o​o​l​e​a​n​ ​e​x​p​r​e​s​s​i​o​n​ ​o​r​ ​c​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​e​v​a​l​u​a​t​e​s​ ​t​o​ ​T​r​u​e​ ​o​r​ ​F​a​l​s​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'||': {
+					/**
+					 * o​r​ ​(​|​|​)
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​T​r​u​e​ ​i​f​ ​a​n​y​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​T​r​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​n​y​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * B​o​o​l​e​a​n​ ​c​o​n​d​i​t​i​o​n​ ​t​o​ ​e​v​a​l​u​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​b​o​o​l​e​a​n​ ​e​x​p​r​e​s​s​i​o​n​ ​o​r​ ​c​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​e​v​a​l​u​a​t​e​s​ ​t​o​ ​T​r​u​e​ ​o​r​ ​F​a​l​s​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'==': {
+					/**
+					 * e​q​u​a​l​ ​(​=​=​)
+					 */
+					displayName: string
+					/**
+					 * E​q​u​a​l​i​t​y​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'!=': {
+					/**
+					 * n​o​t​ ​e​q​u​a​l​ ​(​!​=​)
+					 */
+					displayName: string
+					/**
+					 * I​n​e​q​u​a​l​i​t​y​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'>': {
+					/**
+					 * g​r​e​a​t​e​r​ ​t​h​a​n​ ​(​>​)
+					 */
+					displayName: string
+					/**
+					 * G​r​e​a​t​e​r​ ​t​h​a​n​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'>=': {
+					/**
+					 * g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​(​>​=​)
+					 */
+					displayName: string
+					/**
+					 * G​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'<': {
+					/**
+					 * l​e​s​s​ ​t​h​a​n​ ​(​<​)
+					 */
+					displayName: string
+					/**
+					 * L​e​s​s​ ​t​h​a​n​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'<=': {
+					/**
+					 * l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​(​<​=​)
+					 */
+					displayName: string
+					/**
+					 * L​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				like: {
+					/**
+					 * l​i​k​e
+					 */
+					displayName: string
+					/**
+					 * C​o​n​t​a​i​n​s​ ​t​e​x​t​ ​p​a​t​t​e​r​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t​ ​p​a​t​t​e​r​n
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​w​i​t​h​i​n
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * P​a​t​t​e​r​n
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​p​a​t​t​e​r​n​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​p​a​t​t​e​r​n​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​w​i​t​h​i​n​ ​t​h​e​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				not_like: {
+					/**
+					 * n​o​t​ ​l​i​k​e
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​e​x​t​ ​p​a​t​t​e​r​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t​ ​p​a​t​t​e​r​n
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​w​i​t​h​i​n
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * P​a​t​t​e​r​n
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​p​a​t​t​e​r​n​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​p​a​t​t​e​r​n​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​p​r​e​s​e​n​t​ ​i​n​ ​t​h​e​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'in': {
+					/**
+					 * i​n
+					 */
+					displayName: string
+					/**
+					 * V​a​l​u​e​ ​i​s​ ​i​n​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​m​a​t​c​h​e​s​ ​a​n​y​ ​v​a​l​u​e​ ​i​n​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​l​i​s​t
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​h​e​c​k​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​v​a​l​u​e​s​ ​t​o​ ​m​a​t​c​h
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​v​a​l​u​e​s​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				not_in: {
+					/**
+					 * n​o​t​ ​i​n
+					 */
+					displayName: string
+					/**
+					 * V​a​l​u​e​ ​i​s​ ​n​o​t​ ​i​n​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​d​o​e​s​ ​n​o​t​ ​m​a​t​c​h​ ​a​n​y​ ​v​a​l​u​e​ ​i​n​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​l​i​s​t
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​h​e​c​k​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​v​a​l​u​e​s​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​v​a​l​u​e​s​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​n​o​t​ ​m​a​t​c​h
+							 */
+							longDesc: string
+						}
+					}
+				}
+				between: {
+					/**
+					 * b​e​t​w​e​e​n
+					 */
+					displayName: string
+					/**
+					 * V​a​l​u​e​ ​i​s​ ​b​e​t​w​e​e​n​ ​t​w​o​ ​v​a​l​u​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​b​e​t​w​e​e​n​ ​t​w​o​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e​s​ ​(​i​n​c​l​u​s​i​v​e​)
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​h​e​c​k​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * L​o​w​e​r​ ​b​o​u​n​d
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​i​n​i​m​u​m​ ​v​a​l​u​e​ ​(​i​n​c​l​u​s​i​v​e​)
+							 */
+							longDesc: string
+						}
+						'2': {
+							/**
+							 * U​p​p​e​r​ ​b​o​u​n​d
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​v​a​l​u​e​ ​(​i​n​c​l​u​s​i​v​e​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				not_between: {
+					/**
+					 * n​o​t​ ​b​e​t​w​e​e​n
+					 */
+					displayName: string
+					/**
+					 * V​a​l​u​e​ ​i​s​ ​n​o​t​ ​b​e​t​w​e​e​n​ ​t​w​o​ ​v​a​l​u​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​n​o​t​ ​b​e​t​w​e​e​n​ ​t​w​o​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e​s
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​h​e​c​k​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * L​o​w​e​r​ ​b​o​u​n​d
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​v​a​l​u​e​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​w​e​r​ ​b​o​u​n​d​a​r​y​ ​f​o​r​ ​e​x​c​l​u​s​i​o​n
+							 */
+							longDesc: string
+						}
+						'2': {
+							/**
+							 * U​p​p​e​r​ ​b​o​u​n​d
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​v​a​l​u​e​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​p​e​r​ ​b​o​u​n​d​a​r​y​ ​f​o​r​ ​e​x​c​l​u​s​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				is_null: {
+					/**
+					 * i​s​ ​n​u​l​l
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​n​u​l​l
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​n​u​l​l​ ​o​r​ ​e​m​p​t​y
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​n​u​l​l​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				is_not_null: {
+					/**
+					 * i​s​ ​n​o​t​ ​n​u​l​l
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​n​o​t​ ​n​u​l​l
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​n​o​t​ ​n​u​l​l​ ​o​r​ ​e​m​p​t​y
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​n​o​n​-​n​u​l​l​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_record: {
+					/**
+					 * N​e​w​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​a​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​r​e​c​o​r​d​s​ ​a​n​d​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​s​ ​d​e​t​e​c​t​e​d​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​p​o​l​l​s​ ​f​o​r​ ​r​e​c​o​r​d​s​ ​s​o​r​t​e​d​ ​b​y​ ​C​r​e​a​t​e​d​ ​T​i​m​e​ ​i​n​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.​ ​Y​o​u​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​r​e​c​o​r​d​s​ ​b​y​ ​p​h​o​n​e​,​ ​e​m​a​i​l​,​ ​k​e​y​w​o​r​d​s​,​ ​o​r​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​r​e​c​o​r​d​s​ ​m​a​t​c​h​i​n​g​ ​y​o​u​r​ ​c​r​i​t​e​r​i​a​.
+					 */
+					longDesc: string
+					options: {
+						module: {
+							/**
+							 * M​o​d​u​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​e​c​o​r​d​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​(​s​u​c​h​ ​a​s​ ​L​e​a​d​s​,​ ​C​o​n​t​a​c​t​s​,​ ​D​e​a​l​s​,​ ​A​c​c​o​u​n​t​s​,​ ​o​r​ ​c​u​s​t​o​m​ ​m​o​d​u​l​e​s​)​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​r​e​c​o​r​d​s​.​ ​U​s​e​ ​t​h​e​ ​m​o​d​u​l​e​ ​A​P​I​ ​n​a​m​e​ ​a​s​ ​r​e​t​u​r​n​e​d​ ​b​y​ ​t​h​e​ ​M​o​d​u​l​e​s​ ​M​e​t​a​d​a​t​a​ ​A​P​I​.
+							 */
+							longDesc: string
+						}
+						phone: {
+							/**
+							 * P​h​o​n​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​c​o​r​d​s​ ​b​y​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​i​n​ ​r​e​c​o​r​d​s​.​ ​W​h​e​n​ ​s​p​e​c​i​f​i​e​d​,​ ​o​n​l​y​ ​r​e​c​o​r​d​s​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.​ ​T​h​i​s​ ​u​s​e​s​ ​t​h​e​ ​Z​o​h​o​ ​C​R​M​ ​s​e​a​r​c​h​ ​A​P​I​ ​t​o​ ​f​i​n​d​ ​m​a​t​c​h​i​n​g​ ​r​e​c​o​r​d​s​.
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​c​o​r​d​s​ ​b​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​i​n​ ​r​e​c​o​r​d​s​.​ ​W​h​e​n​ ​s​p​e​c​i​f​i​e​d​,​ ​o​n​l​y​ ​r​e​c​o​r​d​s​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​i​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.​ ​T​h​i​s​ ​u​s​e​s​ ​t​h​e​ ​Z​o​h​o​ ​C​R​M​ ​s​e​a​r​c​h​ ​A​P​I​ ​t​o​ ​f​i​n​d​ ​m​a​t​c​h​i​n​g​ ​r​e​c​o​r​d​s​.
+							 */
+							longDesc: string
+						}
+						word: {
+							/**
+							 * K​e​y​w​o​r​d​ ​S​e​a​r​c​h
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​c​o​r​d​s​ ​b​y​ ​k​e​y​w​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​k​e​y​w​o​r​d​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​a​c​r​o​s​s​ ​a​l​l​ ​s​e​a​r​c​h​a​b​l​e​ ​f​i​e​l​d​s​ ​i​n​ ​r​e​c​o​r​d​s​.​ ​W​h​e​n​ ​s​p​e​c​i​f​i​e​d​,​ ​o​n​l​y​ ​r​e​c​o​r​d​s​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​i​s​ ​k​e​y​w​o​r​d​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.​ ​T​h​i​s​ ​u​s​e​s​ ​t​h​e​ ​Z​o​h​o​ ​C​R​M​ ​s​e​a​r​c​h​ ​A​P​I​ ​t​o​ ​p​e​r​f​o​r​m​ ​a​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​t​e​x​t​ ​s​e​a​r​c​h​.
+							 */
+							longDesc: string
+						}
+						field_filter: {
+							/**
+							 * F​i​e​l​d​ ​F​i​l​t​e​r​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​c​o​r​d​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​l​i​s​t​ ​o​f​ ​f​i​e​l​d​-​v​a​l​u​e​ ​p​a​i​r​s​ ​t​o​ ​c​r​e​a​t​e​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a​.​ ​W​h​e​n​ ​s​p​e​c​i​f​i​e​d​,​ ​o​n​l​y​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​A​L​L​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d​s​ ​m​a​t​c​h​ ​t​h​e​i​r​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​v​a​l​u​e​s​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.​ ​U​s​e​s​ ​t​h​e​ ​"​e​q​u​a​l​s​"​ ​o​p​e​r​a​t​o​r​ ​f​o​r​ ​e​a​c​h​ ​f​i​e​l​d​ ​c​o​m​p​a​r​i​s​o​n​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field: {
+										/**
+										 * F​i​e​l​d​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​f​i​e​l​d​ ​A​P​I​ ​n​a​m​e​ ​f​r​o​m​ ​t​h​e​ ​m​o​d​u​l​e​.​ ​A​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​ ​n​a​m​e​s​ ​c​a​n​ ​b​e​ ​r​e​t​r​i​e​v​e​d​ ​u​s​i​n​g​ ​t​h​e​ ​F​i​e​l​d​s​ ​M​e​t​a​d​a​t​a​ ​A​P​I​.​ ​T​h​e​ ​f​i​e​l​d​ ​m​u​s​t​ ​b​e​ ​s​e​a​r​c​h​a​b​l​e​ ​t​o​ ​b​e​ ​u​s​e​d​ ​i​n​ ​f​i​l​t​e​r​i​n​g​.
+										 */
+										longDesc: string
+									}
+									value: {
+										/**
+										 * F​i​e​l​d​ ​V​a​l​u​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​v​a​l​u​e​ ​t​h​a​t​ ​t​h​e​ ​f​i​e​l​d​ ​m​u​s​t​ ​e​q​u​a​l
+										 */
+										shortDesc: string
+										/**
+										 * E​n​t​e​r​ ​t​h​e​ ​e​x​a​c​t​ ​v​a​l​u​e​ ​t​h​a​t​ ​t​h​e​ ​f​i​e​l​d​ ​m​u​s​t​ ​e​q​u​a​l​ ​f​o​r​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​m​a​t​c​h​.​ ​T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​u​s​e​s​ ​t​h​e​ ​"​e​q​u​a​l​s​"​ ​o​p​e​r​a​t​o​r​,​ ​s​o​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​m​u​s​t​ ​m​a​t​c​h​ ​t​h​i​s​ ​v​a​l​u​e​ ​e​x​a​c​t​l​y​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			actions: {
+				create_record: {
+					/**
+					 * C​r​e​a​t​e​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​n​ ​a​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​w​i​t​h​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​f​i​e​l​d​ ​v​a​l​u​e​s​.​ ​R​e​t​u​r​n​s​ ​t​h​e​ ​r​e​c​o​r​d​ ​I​D​ ​a​l​o​n​g​ ​w​i​t​h​ ​t​i​m​e​s​t​a​m​p​s​ ​f​o​r​ ​c​r​e​a​t​i​o​n​ ​a​n​d​ ​m​o​d​i​f​i​c​a​t​i​o​n​.​ ​T​h​e​ ​C​r​e​a​t​e​d​_​B​y​ ​a​n​d​ ​M​o​d​i​f​i​e​d​_​B​y​ ​f​i​e​l​d​s​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​u​s​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​ ​w​h​o​ ​c​r​e​a​t​e​d​ ​t​h​e​ ​r​e​c​o​r​d​.​ ​S​u​p​p​o​r​t​s​ ​a​l​l​ ​s​t​a​n​d​a​r​d​ ​a​n​d​ ​c​u​s​t​o​m​ ​m​o​d​u​l​e​s​ ​e​x​c​e​p​t​ ​D​o​c​u​m​e​n​t​s​ ​a​n​d​ ​P​r​o​j​e​c​t​s​.
+					 */
+					longDesc: string
+					options: {
+						module: {
+							/**
+							 * M​o​d​u​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​w​h​e​r​e​ ​t​h​e​ ​r​e​c​o​r​d​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​r​g​e​t​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​(​s​u​c​h​ ​a​s​ ​L​e​a​d​s​,​ ​C​o​n​t​a​c​t​s​,​ ​D​e​a​l​s​,​ ​A​c​c​o​u​n​t​s​,​ ​P​r​o​d​u​c​t​s​,​ ​V​e​n​d​o​r​s​,​ ​o​r​ ​c​u​s​t​o​m​ ​m​o​d​u​l​e​s​)​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​n​e​w​ ​r​e​c​o​r​d​.​ ​U​s​e​ ​t​h​e​ ​M​o​d​u​l​e​s​ ​A​P​I​ ​t​o​ ​g​e​t​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​a​v​a​i​l​a​b​l​e​ ​m​o​d​u​l​e​s​ ​a​n​d​ ​t​h​e​i​r​ ​A​P​I​ ​n​a​m​e​s​.
+							 */
+							longDesc: string
+						}
+						properties: {
+							/**
+							 * R​e​c​o​r​d​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​r​e​c​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​r​e​c​o​r​d​ ​a​s​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​w​h​e​r​e​ ​k​e​y​s​ ​a​r​e​ ​f​i​e​l​d​ ​A​P​I​ ​n​a​m​e​s​.​ ​A​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​ ​a​n​d​ ​t​h​e​i​r​ ​t​y​p​e​s​ ​a​r​e​ ​d​y​n​a​m​i​c​a​l​l​y​ ​l​o​a​d​e​d​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​m​o​d​u​l​e​.​ ​R​e​q​u​i​r​e​d​ ​f​i​e​l​d​s​ ​m​u​s​t​ ​b​e​ ​i​n​c​l​u​d​e​d​,​ ​a​n​d​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​m​u​s​t​ ​m​a​t​c​h​ ​t​h​e​i​r​ ​e​x​p​e​c​t​e​d​ ​d​a​t​a​ ​t​y​p​e​s​ ​(​t​e​x​t​,​ ​n​u​m​b​e​r​,​ ​d​a​t​e​,​ ​p​i​c​k​l​i​s​t​,​ ​l​o​o​k​u​p​,​ ​e​t​c​.​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_record: {
+					/**
+					 * U​p​d​a​t​e​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​r​e​c​o​r​d​ ​i​n​ ​a​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​r​e​c​o​r​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​w​i​t​h​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​f​i​e​l​d​ ​v​a​l​u​e​s​.​ ​R​e​t​u​r​n​s​ ​t​h​e​ ​r​e​c​o​r​d​ ​I​D​ ​a​l​o​n​g​ ​w​i​t​h​ ​u​p​d​a​t​e​d​ ​t​i​m​e​s​t​a​m​p​s​ ​f​o​r​ ​m​o​d​i​f​i​c​a​t​i​o​n​.​ ​O​n​l​y​ ​t​h​e​ ​f​i​e​l​d​s​ ​y​o​u​ ​s​p​e​c​i​f​y​ ​w​i​l​l​ ​b​e​ ​u​p​d​a​t​e​d​;​ ​o​t​h​e​r​ ​f​i​e​l​d​s​ ​w​i​l​l​ ​r​e​m​a​i​n​ ​u​n​c​h​a​n​g​e​d​.​ ​T​h​e​ ​r​e​c​o​r​d​ ​m​u​s​t​ ​e​x​i​s​t​ ​a​n​d​ ​t​h​e​ ​u​s​e​r​ ​m​u​s​t​ ​h​a​v​e​ ​u​p​d​a​t​e​ ​p​e​r​m​i​s​s​i​o​n​s​ ​f​o​r​ ​t​h​e​ ​m​o​d​u​l​e​.
+					 */
+					longDesc: string
+					options: {
+						module: {
+							/**
+							 * M​o​d​u​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​(​s​u​c​h​ ​a​s​ ​L​e​a​d​s​,​ ​C​o​n​t​a​c​t​s​,​ ​D​e​a​l​s​,​ ​A​c​c​o​u​n​t​s​,​ ​o​r​ ​c​u​s​t​o​m​ ​m​o​d​u​l​e​s​)​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.​ ​T​h​e​ ​m​o​d​u​l​e​ ​m​u​s​t​ ​s​u​p​p​o​r​t​ ​A​P​I​ ​o​p​e​r​a​t​i​o​n​s​ ​a​n​d​ ​t​h​e​ ​u​s​e​r​ ​m​u​s​t​ ​h​a​v​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​p​e​r​m​i​s​s​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						record_id: {
+							/**
+							 * R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​o​r​ ​s​e​l​e​c​t​ ​t​h​e​ ​u​n​i​q​u​e​ ​r​e​c​o​r​d​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.​ ​R​e​c​o​r​d​ ​I​D​s​ ​c​a​n​ ​b​e​ ​r​e​t​r​i​e​v​e​d​ ​u​s​i​n​g​ ​t​h​e​ ​G​e​t​ ​R​e​c​o​r​d​s​ ​A​P​I​ ​o​r​ ​f​r​o​m​ ​w​e​b​h​o​o​k​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​.​ ​T​h​e​ ​r​e​c​o​r​d​ ​m​u​s​t​ ​e​x​i​s​t​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​m​o​d​u​l​e​.
+							 */
+							longDesc: string
+						}
+						properties: {
+							/**
+							 * U​p​d​a​t​e​d​ ​P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​v​a​l​u​e​s​ ​t​o​ ​u​p​d​a​t​e​ ​o​n​ ​t​h​e​ ​r​e​c​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​ ​a​s​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​w​h​e​r​e​ ​k​e​y​s​ ​a​r​e​ ​f​i​e​l​d​ ​A​P​I​ ​n​a​m​e​s​.​ ​O​n​l​y​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​f​i​e​l​d​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​h​a​n​g​e​;​ ​u​n​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d​s​ ​w​i​l​l​ ​r​e​t​a​i​n​ ​t​h​e​i​r​ ​c​u​r​r​e​n​t​ ​v​a​l​u​e​s​.​ ​F​i​e​l​d​ ​v​a​l​u​e​s​ ​m​u​s​t​ ​m​a​t​c​h​ ​t​h​e​i​r​ ​e​x​p​e​c​t​e​d​ ​d​a​t​a​ ​t​y​p​e​s​ ​a​n​d​ ​v​a​l​i​d​a​t​i​o​n​ ​r​u​l​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_record: {
+					/**
+					 * D​e​l​e​t​e​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​a​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​u​s​i​n​g​ ​i​t​s​ ​u​n​i​q​u​e​ ​r​e​c​o​r​d​ ​I​D​.​ ​I​f​ ​t​h​e​ ​m​o​d​u​l​e​ ​h​a​s​ ​t​h​e​ ​R​e​c​y​c​l​e​ ​B​i​n​ ​f​e​a​t​u​r​e​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​d​e​l​e​t​e​d​ ​r​e​c​o​r​d​ ​w​i​l​l​ ​b​e​ ​m​o​v​e​d​ ​t​o​ ​t​h​e​ ​R​e​c​y​c​l​e​ ​B​i​n​ ​a​n​d​ ​c​a​n​ ​b​e​ ​r​e​s​t​o​r​e​d​.​ ​O​t​h​e​r​w​i​s​e​,​ ​t​h​e​ ​d​e​l​e​t​i​o​n​ ​i​s​ ​p​e​r​m​a​n​e​n​t​.​ ​T​h​e​ ​u​s​e​r​ ​m​u​s​t​ ​h​a​v​e​ ​d​e​l​e​t​e​ ​p​e​r​m​i​s​s​i​o​n​s​ ​f​o​r​ ​t​h​e​ ​m​o​d​u​l​e​.
+					 */
+					longDesc: string
+					options: {
+						module: {
+							/**
+							 * M​o​d​u​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​(​s​u​c​h​ ​a​s​ ​L​e​a​d​s​,​ ​C​o​n​t​a​c​t​s​,​ ​D​e​a​l​s​,​ ​A​c​c​o​u​n​t​s​,​ ​o​r​ ​c​u​s​t​o​m​ ​m​o​d​u​l​e​s​)​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.​ ​T​h​e​ ​m​o​d​u​l​e​ ​m​u​s​t​ ​s​u​p​p​o​r​t​ ​A​P​I​ ​o​p​e​r​a​t​i​o​n​s​ ​a​n​d​ ​t​h​e​ ​u​s​e​r​ ​m​u​s​t​ ​h​a​v​e​ ​d​e​l​e​t​e​ ​p​e​r​m​i​s​s​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						record_id: {
+							/**
+							 * R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​o​r​ ​s​e​l​e​c​t​ ​t​h​e​ ​u​n​i​q​u​e​ ​r​e​c​o​r​d​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.​ ​R​e​c​o​r​d​ ​I​D​s​ ​c​a​n​ ​b​e​ ​r​e​t​r​i​e​v​e​d​ ​u​s​i​n​g​ ​t​h​e​ ​G​e​t​ ​R​e​c​o​r​d​s​ ​A​P​I​.​ ​D​e​l​e​t​i​n​g​ ​a​ ​r​e​c​o​r​d​ ​t​h​a​t​ ​h​a​s​ ​a​l​r​e​a​d​y​ ​b​e​e​n​ ​d​e​l​e​t​e​d​ ​w​i​l​l​ ​r​e​s​u​l​t​ ​i​n​ ​a​n​ ​e​r​r​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_record: {
+					/**
+					 * G​e​t​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​i​n​g​l​e​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​a​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​u​s​i​n​g​ ​i​t​s​ ​u​n​i​q​u​e​ ​r​e​c​o​r​d​ ​I​D​.​ ​R​e​t​u​r​n​s​ ​a​l​l​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​r​e​c​o​r​d​ ​i​n​c​l​u​d​i​n​g​ ​s​t​a​n​d​a​r​d​ ​f​i​e​l​d​s​ ​(​C​r​e​a​t​e​d​_​T​i​m​e​,​ ​M​o​d​i​f​i​e​d​_​T​i​m​e​,​ ​C​r​e​a​t​e​d​_​B​y​,​ ​M​o​d​i​f​i​e​d​_​B​y​)​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.​ ​S​u​b​f​o​r​m​ ​d​a​t​a​,​ ​m​u​l​t​i​-​s​e​l​e​c​t​ ​l​o​o​k​u​p​ ​f​i​e​l​d​s​,​ ​a​n​d​ ​m​u​l​t​i​-​u​s​e​r​ ​l​o​o​k​u​p​ ​f​i​e​l​d​s​ ​a​r​e​ ​a​l​s​o​ ​i​n​c​l​u​d​e​d​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.
+					 */
+					longDesc: string
+					options: {
+						module: {
+							/**
+							 * M​o​d​u​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​(​s​u​c​h​ ​a​s​ ​L​e​a​d​s​,​ ​C​o​n​t​a​c​t​s​,​ ​D​e​a​l​s​,​ ​A​c​c​o​u​n​t​s​,​ ​o​r​ ​c​u​s​t​o​m​ ​m​o​d​u​l​e​s​)​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​T​h​e​ ​m​o​d​u​l​e​ ​m​u​s​t​ ​s​u​p​p​o​r​t​ ​A​P​I​ ​o​p​e​r​a​t​i​o​n​s​ ​a​n​d​ ​t​h​e​ ​u​s​e​r​ ​m​u​s​t​ ​h​a​v​e​ ​r​e​a​d​ ​p​e​r​m​i​s​s​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						record_id: {
+							/**
+							 * R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​o​r​ ​s​e​l​e​c​t​ ​t​h​e​ ​u​n​i​q​u​e​ ​r​e​c​o​r​d​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​f​e​t​c​h​.​ ​R​e​c​o​r​d​ ​I​D​s​ ​c​a​n​ ​b​e​ ​o​b​t​a​i​n​e​d​ ​f​r​o​m​ ​t​h​e​ ​G​e​t​ ​R​e​c​o​r​d​s​ ​A​P​I​,​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​,​ ​o​r​ ​w​e​b​h​o​o​k​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​.​ ​T​h​e​ ​r​e​c​o​r​d​ ​m​u​s​t​ ​e​x​i​s​t​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​m​o​d​u​l​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_records: {
+					/**
+					 * L​i​s​t​ ​R​e​c​o​r​d​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​m​u​l​t​i​p​l​e​ ​r​e​c​o​r​d​s​ ​f​r​o​m​ ​a​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​r​e​c​o​r​d​s​ ​f​r​o​m​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​f​i​e​l​d​ ​s​e​l​e​c​t​i​o​n​,​ ​p​a​g​i​n​a​t​i​o​n​,​ ​s​o​r​t​i​n​g​,​ ​a​n​d​ ​f​i​l​t​e​r​i​n​g​.​ ​Y​o​u​ ​c​a​n​ ​s​p​e​c​i​f​y​ ​w​h​i​c​h​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​u​r​n​ ​(​m​a​x​i​m​u​m​ ​5​0​ ​f​i​e​l​d​ ​A​P​I​ ​n​a​m​e​s​)​,​ ​s​o​r​t​ ​r​e​c​o​r​d​s​ ​b​y​ ​a​ ​f​i​e​l​d​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​,​ ​a​n​d​ ​n​a​v​i​g​a​t​e​ ​t​h​r​o​u​g​h​ ​p​a​g​e​s​ ​u​s​i​n​g​ ​t​o​k​e​n​s​.​ ​R​e​t​u​r​n​s​ ​b​o​t​h​ ​t​h​e​ ​r​e​c​o​r​d​s​ ​d​a​t​a​ ​a​n​d​ ​p​a​g​i​n​a​t​i​o​n​ ​t​o​k​e​n​s​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​s​u​b​s​e​q​u​e​n​t​ ​p​a​g​e​s​.
+					 */
+					longDesc: string
+					options: {
+						module: {
+							/**
+							 * M​o​d​u​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​r​e​c​o​r​d​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​(​s​u​c​h​ ​a​s​ ​L​e​a​d​s​,​ ​C​o​n​t​a​c​t​s​,​ ​D​e​a​l​s​,​ ​A​c​c​o​u​n​t​s​,​ ​o​r​ ​c​u​s​t​o​m​ ​m​o​d​u​l​e​s​)​ ​f​r​o​m​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​r​e​c​o​r​d​s​.​ ​T​h​e​ ​m​o​d​u​l​e​ ​m​u​s​t​ ​s​u​p​p​o​r​t​ ​A​P​I​ ​o​p​e​r​a​t​i​o​n​s​ ​a​n​d​ ​t​h​e​ ​u​s​e​r​ ​m​u​s​t​ ​h​a​v​e​ ​r​e​a​d​ ​p​e​r​m​i​s​s​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​i​e​l​d​s​ ​t​o​ ​R​e​t​u​r​n
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​i​c​h​ ​f​i​e​l​d​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​A​P​I​ ​n​a​m​e​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​e​a​c​h​ ​r​e​c​o​r​d​.​ ​Y​o​u​ ​c​a​n​ ​i​n​c​l​u​d​e​ ​a​ ​m​a​x​i​m​u​m​ ​o​f​ ​5​0​ ​f​i​e​l​d​ ​A​P​I​ ​n​a​m​e​s​.​ ​U​s​e​ ​t​h​e​ ​F​i​e​l​d​s​ ​M​e​t​a​d​a​t​a​ ​A​P​I​ ​t​o​ ​g​e​t​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​a​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​.​ ​B​y​ ​d​e​f​a​u​l​t​,​ ​o​n​l​y​ ​t​h​e​ ​I​D​ ​f​i​e​l​d​ ​i​s​ ​r​e​t​u​r​n​e​d​.​ ​A​d​d​ ​f​i​e​l​d​s​ ​l​i​k​e​ ​L​a​s​t​_​N​a​m​e​,​ ​E​m​a​i​l​,​ ​C​r​e​a​t​e​d​_​T​i​m​e​,​ ​o​r​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​n​a​m​e​s​ ​a​s​ ​n​e​e​d​e​d​.
+							 */
+							longDesc: string
+						}
+						per_page: {
+							/**
+							 * R​e​c​o​r​d​s​ ​P​e​r​ ​P​a​g​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​m​a​n​y​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​A​P​I​ ​r​e​q​u​e​s​t​.​ ​V​a​l​i​d​ ​v​a​l​u​e​s​ ​a​r​e​ ​1​ ​t​o​ ​2​0​0​.​ ​T​h​e​ ​d​e​f​a​u​l​t​ ​v​a​l​u​e​ ​i​s​ ​2​0​.​ ​U​s​e​ ​t​h​i​s​ ​p​a​r​a​m​e​t​e​r​ ​a​l​o​n​g​ ​w​i​t​h​ ​p​a​g​e​_​t​o​k​e​n​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​h​r​o​u​g​h​ ​l​a​r​g​e​ ​r​e​s​u​l​t​ ​s​e​t​s​.
+							 */
+							longDesc: string
+						}
+						page_token: {
+							/**
+							 * P​a​g​e​ ​T​o​k​e​n
+							 */
+							displayName: string
+							/**
+							 * T​o​k​e​n​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * U​s​e​ ​t​h​e​ ​n​e​x​t​_​p​a​g​e​_​t​o​k​e​n​ ​v​a​l​u​e​ ​f​r​o​m​ ​a​ ​p​r​e​v​i​o​u​s​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​n​e​x​t​ ​p​a​g​e​ ​o​f​ ​r​e​c​o​r​d​s​.​ ​L​e​a​v​e​ ​t​h​i​s​ ​e​m​p​t​y​ ​f​o​r​ ​t​h​e​ ​f​i​r​s​t​ ​p​a​g​e​.​ ​T​h​e​ ​p​a​g​e​_​t​o​k​e​n​ ​i​s​ ​b​o​u​n​d​ ​t​o​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r​s​ ​u​s​e​d​ ​i​n​ ​t​h​e​ ​r​e​q​u​e​s​t​,​ ​s​o​ ​d​o​ ​n​o​t​ ​c​h​a​n​g​e​ ​o​t​h​e​r​ ​p​a​r​a​m​e​t​e​r​s​ ​w​h​e​n​ ​u​s​i​n​g​ ​a​ ​t​o​k​e​n​.
+							 */
+							longDesc: string
+						}
+						ids: {
+							/**
+							 * R​e​c​o​r​d​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​I​D​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​l​i​s​t​ ​o​f​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​I​D​s​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​W​h​e​n​ ​p​r​o​v​i​d​e​d​,​ ​o​n​l​y​ ​r​e​c​o​r​d​s​ ​w​i​t​h​ ​t​h​e​s​e​ ​I​D​s​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.​ ​T​h​i​s​ ​i​s​ ​u​s​e​f​u​l​ ​f​o​r​ ​f​e​t​c​h​i​n​g​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​e​t​ ​o​f​ ​r​e​c​o​r​d​s​ ​r​a​t​h​e​r​ ​t​h​a​n​ ​p​a​g​i​n​a​t​i​n​g​ ​t​h​r​o​u​g​h​ ​a​l​l​ ​r​e​c​o​r​d​s​.
+							 */
+							longDesc: string
+						}
+						sort: {
+							/**
+							 * S​o​r​t​ ​C​o​n​f​i​g​u​r​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​r​e​c​o​r​d​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​r​e​c​o​r​d​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​o​r​t​e​d​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.​ ​Y​o​u​ ​c​a​n​ ​s​o​r​t​ ​b​y​ ​f​i​e​l​d​s​ ​l​i​k​e​ ​i​d​,​ ​C​r​e​a​t​e​d​_​T​i​m​e​,​ ​o​r​ ​M​o​d​i​f​i​e​d​_​T​i​m​e​ ​i​n​ ​e​i​t​h​e​r​ ​a​s​c​e​n​d​i​n​g​ ​(​o​l​d​e​s​t​ ​f​i​r​s​t​)​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​(​n​e​w​e​s​t​ ​f​i​r​s​t​)​ ​o​r​d​e​r​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									sort_by: {
+										/**
+										 * S​o​r​t​ ​B​y​ ​F​i​e​l​d
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​c​o​r​d​s
+										 */
+										shortDesc: string
+										/**
+										 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​f​i​e​l​d​ ​A​P​I​ ​n​a​m​e​ ​t​o​ ​s​o​r​t​ ​r​e​c​o​r​d​s​ ​b​y​.​ ​C​o​m​m​o​n​ ​o​p​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​i​d​,​ ​C​r​e​a​t​e​d​_​T​i​m​e​,​ ​a​n​d​ ​M​o​d​i​f​i​e​d​_​T​i​m​e​.​ ​Y​o​u​ ​c​a​n​ ​a​l​s​o​ ​u​s​e​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​A​P​I​ ​n​a​m​e​s​ ​t​h​a​t​ ​s​u​p​p​o​r​t​ ​s​o​r​t​i​n​g​.
+										 */
+										longDesc: string
+									}
+									order: {
+										/**
+										 * S​o​r​t​ ​O​r​d​e​r
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​r​e​c​o​r​d​s​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​ ​(​a​s​c​ ​-​ ​o​l​d​e​s​t​ ​f​i​r​s​t​)​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​ ​(​d​e​s​c​ ​-​ ​n​e​w​e​s​t​ ​f​i​r​s​t​)​.​ ​T​h​e​ ​d​e​f​a​u​l​t​ ​v​a​l​u​e​ ​i​s​ ​d​e​s​c​e​n​d​i​n​g​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				list_modules: {
+					/**
+					 * L​i​s​t​ ​M​o​d​u​l​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​m​o​d​u​l​e​s​ ​i​n​ ​Z​o​h​o​ ​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​m​e​t​a​d​a​t​a​ ​f​o​r​ ​a​l​l​ ​m​o​d​u​l​e​s​ ​i​n​ ​y​o​u​r​ ​Z​o​h​o​ ​C​R​M​ ​o​r​g​a​n​i​z​a​t​i​o​n​,​ ​i​n​c​l​u​d​i​n​g​ ​b​o​t​h​ ​s​t​a​n​d​a​r​d​ ​m​o​d​u​l​e​s​ ​(​L​e​a​d​s​,​ ​C​o​n​t​a​c​t​s​,​ ​D​e​a​l​s​,​ ​A​c​c​o​u​n​t​s​,​ ​e​t​c​.​)​ ​a​n​d​ ​c​u​s​t​o​m​ ​m​o​d​u​l​e​s​.​ ​R​e​t​u​r​n​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​i​n​g​ ​m​o​d​u​l​e​ ​p​e​r​m​i​s​s​i​o​n​s​,​ ​A​P​I​ ​n​a​m​e​s​,​ ​d​i​s​p​l​a​y​ ​l​a​b​e​l​s​,​ ​a​n​d​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​l​i​k​e​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​m​o​d​u​l​e​ ​i​s​ ​c​r​e​a​t​a​b​l​e​,​ ​e​d​i​t​a​b​l​e​,​ ​d​e​l​e​t​a​b​l​e​,​ ​o​r​ ​s​u​p​p​o​r​t​s​ ​f​e​a​t​u​r​e​s​ ​l​i​k​e​ ​g​l​o​b​a​l​ ​s​e​a​r​c​h​ ​a​n​d​ ​q​u​i​c​k​ ​c​r​e​a​t​e​.
+					 */
+					longDesc: string
+					options: {
+						status: {
+							/**
+							 * M​o​d​u​l​e​ ​S​t​a​t​u​s​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​m​o​d​u​l​e​s​ ​b​y​ ​t​h​e​i​r​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​o​n​l​y​ ​m​o​d​u​l​e​s​ ​w​i​t​h​ ​s​p​e​c​i​f​i​c​ ​s​t​a​t​u​s​e​s​.​ ​O​p​t​i​o​n​s​ ​i​n​c​l​u​d​e​:​ ​v​i​s​i​b​l​e​ ​(​a​c​t​i​v​e​ ​m​o​d​u​l​e​s​ ​s​h​o​w​n​ ​i​n​ ​t​h​e​ ​U​I​)​,​ ​u​s​e​r​_​h​i​d​d​e​n​ ​(​m​o​d​u​l​e​s​ ​h​i​d​d​e​n​ ​b​y​ ​u​s​e​r​s​)​,​ ​s​y​s​t​e​m​_​h​i​d​d​e​n​ ​(​m​o​d​u​l​e​s​ ​h​i​d​d​e​n​ ​b​y​ ​t​h​e​ ​s​y​s​t​e​m​)​,​ ​a​n​d​ ​s​c​h​e​d​u​l​e​d​_​f​o​r​_​d​e​l​e​t​i​o​n​ ​(​m​o​d​u​l​e​s​ ​m​a​r​k​e​d​ ​f​o​r​ ​d​e​l​e​t​i​o​n​)​.​ ​W​h​e​n​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​a​l​l​ ​m​o​d​u​l​e​s​ ​a​r​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_fields: {
+					/**
+					 * L​i​s​t​ ​M​o​d​u​l​e​ ​F​i​e​l​d​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​f​i​e​l​d​ ​m​e​t​a​d​a​t​a​ ​f​o​r​ ​a​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​m​e​t​a​d​a​t​a​ ​a​b​o​u​t​ ​a​l​l​ ​f​i​e​l​d​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​i​n​c​l​u​d​i​n​g​ ​f​i​e​l​d​ ​t​y​p​e​s​,​ ​l​a​b​e​l​s​,​ ​A​P​I​ ​n​a​m​e​s​,​ ​d​a​t​a​ ​t​y​p​e​s​,​ ​v​a​l​i​d​a​t​i​o​n​ ​r​u​l​e​s​,​ ​p​i​c​k​l​i​s​t​ ​v​a​l​u​e​s​,​ ​l​o​o​k​u​p​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​s​,​ ​a​n​d​ ​p​e​r​m​i​s​s​i​o​n​s​.​ ​T​h​i​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​s​ ​e​s​s​e​n​t​i​a​l​ ​f​o​r​ ​u​n​d​e​r​s​t​a​n​d​i​n​g​ ​m​o​d​u​l​e​ ​s​t​r​u​c​t​u​r​e​,​ ​b​u​i​l​d​i​n​g​ ​d​y​n​a​m​i​c​ ​f​o​r​m​s​,​ ​o​r​ ​v​a​l​i​d​a​t​i​n​g​ ​d​a​t​a​ ​b​e​f​o​r​e​ ​c​r​e​a​t​i​n​g​ ​o​r​ ​u​p​d​a​t​i​n​g​ ​r​e​c​o​r​d​s​.
+					 */
+					longDesc: string
+					options: {
+						module: {
+							/**
+							 * M​o​d​u​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​i​e​l​d​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​w​h​o​s​e​ ​f​i​e​l​d​ ​m​e​t​a​d​a​t​a​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​T​h​e​ ​A​P​I​ ​r​e​t​u​r​n​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​l​l​ ​f​i​e​l​d​s​ ​i​n​c​l​u​d​i​n​g​ ​s​t​a​n​d​a​r​d​ ​f​i​e​l​d​s​ ​(​s​y​s​t​e​m​-​d​e​f​i​n​e​d​)​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​ ​(​u​s​e​r​-​d​e​f​i​n​e​d​)​ ​i​n​ ​t​h​e​ ​m​o​d​u​l​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_users: {
+					/**
+					 * L​i​s​t​ ​U​s​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​u​s​e​r​s​ ​f​r​o​m​ ​y​o​u​r​ ​Z​o​h​o​ ​C​R​M​ ​o​r​g​a​n​i​z​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​u​s​e​r​s​ ​i​n​ ​y​o​u​r​ ​Z​o​h​o​ ​C​R​M​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​a​n​d​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​u​s​e​r​ ​t​y​p​e​.​ ​R​e​t​u​r​n​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​u​s​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​r​o​l​e​,​ ​p​r​o​f​i​l​e​,​ ​t​i​m​e​z​o​n​e​,​ ​l​o​c​a​l​e​ ​s​e​t​t​i​n​g​s​,​ ​c​u​s​t​o​m​i​z​a​t​i​o​n​ ​p​r​e​f​e​r​e​n​c​e​s​,​ ​a​n​d​ ​a​c​c​o​u​n​t​ ​s​t​a​t​u​s​.​ ​U​s​e​ ​t​h​e​ ​t​y​p​e​ ​p​a​r​a​m​e​t​e​r​ ​t​o​ ​f​i​l​t​e​r​ ​u​s​e​r​s​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​i​r​ ​p​r​o​f​i​l​e​ ​a​n​d​ ​s​t​a​t​u​s​.
+					 */
+					longDesc: string
+					options: {
+						per_page: {
+							/**
+							 * U​s​e​r​s​ ​P​e​r​ ​P​a​g​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​u​s​e​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​m​a​n​y​ ​u​s​e​r​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​A​P​I​ ​r​e​q​u​e​s​t​.​ ​V​a​l​i​d​ ​v​a​l​u​e​s​ ​a​r​e​ ​1​ ​t​o​ ​2​0​0​.​ ​T​h​e​ ​d​e​f​a​u​l​t​ ​v​a​l​u​e​ ​i​s​ ​2​0​.​ ​U​s​e​ ​t​h​i​s​ ​p​a​r​a​m​e​t​e​r​ ​a​l​o​n​g​ ​w​i​t​h​ ​t​h​e​ ​p​a​g​e​ ​p​a​r​a​m​e​t​e​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​t​h​r​o​u​g​h​ ​l​a​r​g​e​ ​r​e​s​u​l​t​ ​s​e​t​s​.
+							 */
+							longDesc: string
+						}
+						page: {
+							/**
+							 * P​a​g​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​a​g​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​w​h​i​c​h​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​,​ ​s​t​a​r​t​i​n​g​ ​f​r​o​m​ ​1​ ​f​o​r​ ​t​h​e​ ​f​i​r​s​t​ ​p​a​g​e​.​ ​U​s​e​ ​t​h​i​s​ ​p​a​r​a​m​e​t​e​r​ ​a​l​o​n​g​ ​w​i​t​h​ ​p​e​r​_​p​a​g​e​ ​t​o​ ​n​a​v​i​g​a​t​e​ ​t​h​r​o​u​g​h​ ​m​u​l​t​i​p​l​e​ ​p​a​g​e​s​ ​o​f​ ​u​s​e​r​ ​d​a​t​a​.
+							 */
+							longDesc: string
+						}
+						type: {
+							/**
+							 * U​s​e​r​ ​T​y​p​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​u​s​e​r​s​ ​b​y​ ​t​y​p​e​ ​o​r​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​e​s​ ​o​f​ ​u​s​e​r​s​.​ ​O​p​t​i​o​n​s​ ​i​n​c​l​u​d​e​:​ ​A​l​l​U​s​e​r​s​ ​(​b​o​t​h​ ​a​c​t​i​v​e​ ​a​n​d​ ​i​n​a​c​t​i​v​e​)​,​ ​A​c​t​i​v​e​U​s​e​r​s​ ​(​o​n​l​y​ ​a​c​t​i​v​e​ ​u​s​e​r​s​)​,​ ​D​e​a​c​t​i​v​e​U​s​e​r​s​ ​(​d​e​a​c​t​i​v​a​t​e​d​ ​u​s​e​r​s​)​,​ ​C​o​n​f​i​r​m​e​d​U​s​e​r​s​ ​(​u​s​e​r​s​ ​w​h​o​ ​c​o​n​f​i​r​m​e​d​ ​t​h​e​i​r​ ​a​c​c​o​u​n​t​s​)​,​ ​N​o​t​C​o​n​f​i​r​m​e​d​U​s​e​r​s​ ​(​u​n​c​o​n​f​i​r​m​e​d​ ​u​s​e​r​s​)​,​ ​D​e​l​e​t​e​d​U​s​e​r​s​ ​(​d​e​l​e​t​e​d​ ​u​s​e​r​s​)​,​ ​A​c​t​i​v​e​C​o​n​f​i​r​m​e​d​U​s​e​r​s​ ​(​a​c​t​i​v​e​ ​a​n​d​ ​c​o​n​f​i​r​m​e​d​)​,​ ​A​d​m​i​n​U​s​e​r​s​ ​(​u​s​e​r​s​ ​w​i​t​h​ ​A​d​m​i​n​i​s​t​r​a​t​o​r​ ​p​r​i​v​i​l​e​g​e​s​)​,​ ​A​c​t​i​v​e​C​o​n​f​i​r​m​e​d​A​d​m​i​n​s​ ​(​a​c​t​i​v​e​ ​c​o​n​f​i​r​m​e​d​ ​a​d​m​i​n​i​s​t​r​a​t​o​r​s​)​,​ ​a​n​d​ ​C​u​r​r​e​n​t​U​s​e​r​ ​(​t​h​e​ ​c​u​r​r​e​n​t​l​y​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​C​R​M​ ​u​s​e​r​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_tags: {
+					/**
+					 * L​i​s​t​ ​T​a​g​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​t​a​g​s​ ​a​v​a​i​l​a​b​l​e​ ​i​n​ ​a​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​l​l​ ​t​a​g​s​ ​t​h​a​t​ ​h​a​v​e​ ​b​e​e​n​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​.​ ​T​a​g​s​ ​a​r​e​ ​l​a​b​e​l​s​ ​u​s​e​d​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​o​r​g​a​n​i​z​e​ ​r​e​c​o​r​d​s​ ​w​i​t​h​i​n​ ​a​ ​m​o​d​u​l​e​ ​f​o​r​ ​e​a​s​i​e​r​ ​s​e​a​r​c​h​i​n​g​ ​a​n​d​ ​f​i​l​t​e​r​i​n​g​.​ ​E​a​c​h​ ​t​a​g​ ​i​n​c​l​u​d​e​s​ ​i​t​s​ ​n​a​m​e​,​ ​I​D​,​ ​c​o​l​o​r​ ​c​o​d​e​,​ ​a​n​d​ ​m​e​t​a​d​a​t​a​ ​a​b​o​u​t​ ​w​h​e​n​ ​i​t​ ​w​a​s​ ​c​r​e​a​t​e​d​ ​a​n​d​ ​m​o​d​i​f​i​e​d​.​ ​Y​o​u​ ​c​a​n​ ​a​d​d​ ​a​ ​m​a​x​i​m​u​m​ ​o​f​ ​1​0​0​ ​t​a​g​s​ ​p​e​r​ ​m​o​d​u​l​e​ ​a​n​d​ ​1​0​ ​t​a​g​s​ ​p​e​r​ ​r​e​c​o​r​d​.
+					 */
+					longDesc: string
+					options: {
+						module: {
+							/**
+							 * M​o​d​u​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​a​g​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​(​s​u​c​h​ ​a​s​ ​L​e​a​d​s​,​ ​C​o​n​t​a​c​t​s​,​ ​D​e​a​l​s​,​ ​o​r​ ​c​u​s​t​o​m​ ​m​o​d​u​l​e​s​)​ ​w​h​o​s​e​ ​t​a​g​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​E​a​c​h​ ​m​o​d​u​l​e​ ​m​a​i​n​t​a​i​n​s​ ​i​t​s​ ​o​w​n​ ​s​e​t​ ​o​f​ ​t​a​g​s​.
+							 */
+							longDesc: string
+						}
+						my_tags: {
+							/**
+							 * M​y​ ​T​a​g​s​ ​O​n​l​y
+							 */
+							displayName: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​o​n​l​y​ ​t​a​g​s​ ​c​r​e​a​t​e​d​ ​b​y​ ​y​o​u
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​s​e​t​ ​t​o​ ​t​r​u​e​,​ ​o​n​l​y​ ​t​a​g​s​ ​c​r​e​a​t​e​d​ ​b​y​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​u​s​e​r​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.​ ​W​h​e​n​ ​s​e​t​ ​t​o​ ​f​a​l​s​e​ ​o​r​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​a​l​l​ ​t​a​g​s​ ​i​n​ ​t​h​e​ ​m​o​d​u​l​e​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​ ​r​e​g​a​r​d​l​e​s​s​ ​o​f​ ​w​h​o​ ​c​r​e​a​t​e​d​ ​t​h​e​m​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_tags_to_records: {
+					/**
+					 * A​d​d​ ​T​a​g​s​ ​t​o​ ​R​e​c​o​r​d​s
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​t​a​g​s​ ​t​o​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​r​e​c​o​r​d​s​ ​i​n​ ​a​ ​m​o​d​u​l​e
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​t​a​g​s​ ​t​o​ ​s​p​e​c​i​f​i​e​d​ ​r​e​c​o​r​d​s​ ​i​n​ ​a​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​.​ ​T​a​g​s​ ​a​r​e​ ​l​a​b​e​l​s​ ​t​h​a​t​ ​h​e​l​p​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​o​r​g​a​n​i​z​e​ ​r​e​c​o​r​d​s​ ​f​o​r​ ​e​a​s​i​e​r​ ​m​a​n​a​g​e​m​e​n​t​,​ ​f​i​l​t​e​r​i​n​g​,​ ​a​n​d​ ​s​e​a​r​c​h​i​n​g​.​ ​Y​o​u​ ​c​a​n​ ​a​d​d​ ​u​p​ ​t​o​ ​1​0​ ​t​a​g​s​ ​p​e​r​ ​r​e​c​o​r​d​ ​a​n​d​ ​a​ ​m​a​x​i​m​u​m​ ​o​f​ ​1​0​0​ ​t​a​g​s​ ​c​a​n​ ​e​x​i​s​t​ ​p​e​r​ ​m​o​d​u​l​e​.​ ​R​e​t​u​r​n​s​ ​t​h​e​ ​c​o​u​n​t​ ​o​f​ ​s​u​c​c​e​s​s​f​u​l​l​y​ ​t​a​g​g​e​d​ ​r​e​c​o​r​d​s​ ​a​n​d​ ​l​o​c​k​e​d​ ​r​e​c​o​r​d​s​ ​t​h​a​t​ ​c​o​u​l​d​ ​n​o​t​ ​b​e​ ​t​a​g​g​e​d​.
+					 */
+					longDesc: string
+					options: {
+						module: {
+							/**
+							 * M​o​d​u​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​Z​o​h​o​ ​C​R​M​ ​m​o​d​u​l​e​ ​(​s​u​c​h​ ​a​s​ ​L​e​a​d​s​,​ ​C​o​n​t​a​c​t​s​,​ ​D​e​a​l​s​,​ ​A​c​c​o​u​n​t​s​,​ ​o​r​ ​c​u​s​t​o​m​ ​m​o​d​u​l​e​s​)​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​r​e​c​o​r​d​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​t​a​g​.​ ​T​a​g​s​ ​a​r​e​ ​m​o​d​u​l​e​-​s​p​e​c​i​f​i​c​ ​a​n​d​ ​m​u​s​t​ ​e​x​i​s​t​ ​i​n​ ​t​h​e​ ​m​o​d​u​l​e​ ​b​e​f​o​r​e​ ​t​h​e​y​ ​c​a​n​ ​b​e​ ​a​d​d​e​d​ ​t​o​ ​r​e​c​o​r​d​s​.
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s​ ​t​o​ ​A​d​d
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​t​a​g​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​r​e​c​o​r​d​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​t​a​g​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​r​e​c​o​r​d​s​.​ ​E​a​c​h​ ​t​a​g​ ​s​h​o​u​l​d​ ​i​n​c​l​u​d​e​ ​a​n​ ​I​D​ ​a​n​d​ ​n​a​m​e​.​ ​T​h​e​ ​t​a​g​ ​I​D​ ​t​a​k​e​s​ ​p​r​e​c​e​d​e​n​c​e​ ​o​v​e​r​ ​t​h​e​ ​n​a​m​e​ ​i​f​ ​b​o​t​h​ ​a​r​e​ ​p​r​o​v​i​d​e​d​.​ ​Y​o​u​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​i​n​c​l​u​d​e​ ​a​ ​c​o​l​o​r​_​c​o​d​e​ ​(​h​e​x​ ​v​a​l​u​e​)​.​ ​U​s​e​ ​t​h​e​ ​L​i​s​t​ ​T​a​g​s​ ​a​c​t​i​o​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​a​v​a​i​l​a​b​l​e​ ​t​a​g​s​ ​a​n​d​ ​t​h​e​i​r​ ​I​D​s​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											id: {
+												/**
+												 * T​a​g​ ​I​D
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​g
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​u​n​i​q​u​e​ ​I​D​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​a​g​ ​i​n​ ​t​h​e​ ​m​o​d​u​l​e​.​ ​T​h​i​s​ ​I​D​ ​t​a​k​e​s​ ​p​r​e​c​e​d​e​n​c​e​ ​o​v​e​r​ ​t​h​e​ ​n​a​m​e​ ​f​i​e​l​d​.​ ​U​s​e​ ​t​h​e​ ​L​i​s​t​ ​T​a​g​s​ ​a​c​t​i​o​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​a​g​ ​I​D​s​.​ ​T​h​e​ ​t​a​g​ ​m​u​s​t​ ​a​l​r​e​a​d​y​ ​e​x​i​s​t​ ​i​n​ ​t​h​e​ ​m​o​d​u​l​e​.
+												 */
+												longDesc: string
+											}
+											name: {
+												/**
+												 * T​a​g​ ​N​a​m​e
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​t​a​g
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​t​a​g​.​ ​W​h​e​n​ ​b​o​t​h​ ​I​D​ ​a​n​d​ ​n​a​m​e​ ​a​r​e​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​I​D​ ​t​a​k​e​s​ ​p​r​e​c​e​d​e​n​c​e​.​ ​I​f​ ​o​n​l​y​ ​t​h​e​ ​n​a​m​e​ ​i​s​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​s​y​s​t​e​m​ ​w​i​l​l​ ​l​o​o​k​ ​u​p​ ​t​h​e​ ​t​a​g​ ​b​y​ ​n​a​m​e​.
+												 */
+												longDesc: string
+											}
+											color_code: {
+												/**
+												 * C​o​l​o​r​ ​C​o​d​e
+												 */
+												displayName: string
+												/**
+												 * O​p​t​i​o​n​a​l​ ​h​e​x​a​d​e​c​i​m​a​l​ ​c​o​l​o​r​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​t​a​g
+												 */
+												shortDesc: string
+												/**
+												 * O​p​t​i​o​n​a​l​ ​h​e​x​a​d​e​c​i​m​a​l​ ​c​o​l​o​r​ ​c​o​d​e​ ​f​o​r​ ​v​i​s​u​a​l​ ​i​d​e​n​t​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​t​a​g​ ​(​e​.​g​.​,​ ​#​F​1​7​5​7​4​,​ ​#​5​7​B​1​F​D​)​.​ ​T​h​e​ ​a​l​l​o​w​e​d​ ​c​o​l​o​r​ ​c​o​d​e​s​ ​a​r​e​ ​p​r​e​d​e​f​i​n​e​d​ ​i​n​ ​Z​o​h​o​ ​C​R​M​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​ ​o​r​ ​s​e​t​ ​t​o​ ​n​u​l​l​,​ ​t​h​e​ ​t​a​g​ ​w​i​l​l​ ​u​s​e​ ​i​t​s​ ​d​e​f​a​u​l​t​ ​c​o​l​o​r​.
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						records: {
+							/**
+							 * R​e​c​o​r​d​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * I​D​s​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​s​ ​t​o​ ​t​a​g
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​u​n​i​q​u​e​ ​r​e​c​o​r​d​ ​I​D​s​ ​t​o​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​t​a​g​s​.​ ​Y​o​u​ ​c​a​n​ ​s​p​e​c​i​f​y​ ​a​ ​m​a​x​i​m​u​m​ ​o​f​ ​5​0​0​ ​r​e​c​o​r​d​ ​I​D​s​ ​p​e​r​ ​A​P​I​ ​c​a​l​l​.​ ​U​s​e​ ​t​h​e​ ​G​e​t​ ​R​e​c​o​r​d​s​ ​A​P​I​ ​o​r​ ​s​e​a​r​c​h​ ​A​P​I​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​v​a​l​i​d​ ​r​e​c​o​r​d​ ​I​D​s​.
+							 */
+							longDesc: string
+						}
+						over_write: {
+							/**
+							 * O​v​e​r​w​r​i​t​e​ ​E​x​i​s​t​i​n​g​ ​T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * R​e​p​l​a​c​e​ ​a​l​l​ ​e​x​i​s​t​i​n​g​ ​t​a​g​s​ ​o​n​ ​t​h​e​ ​r​e​c​o​r​d​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​s​e​t​ ​t​o​ ​t​r​u​e​,​ ​r​e​p​l​a​c​e​s​ ​a​l​l​ ​e​x​i​s​t​i​n​g​ ​t​a​g​s​ ​o​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​e​c​o​r​d​s​ ​w​i​t​h​ ​t​h​e​ ​n​e​w​ ​t​a​g​s​.​ ​W​h​e​n​ ​s​e​t​ ​t​o​ ​f​a​l​s​e​ ​(​d​e​f​a​u​l​t​)​,​ ​a​d​d​s​ ​t​h​e​ ​n​e​w​ ​t​a​g​s​ ​w​h​i​l​e​ ​k​e​e​p​i​n​g​ ​e​x​i​s​t​i​n​g​ ​t​a​g​s​.​ ​U​s​e​ ​t​h​i​s​ ​o​p​t​i​o​n​ ​c​a​r​e​f​u​l​l​y​ ​a​s​ ​s​e​t​t​i​n​g​ ​i​t​ ​t​o​ ​t​r​u​e​ ​w​i​l​l​ ​r​e​m​o​v​e​ ​a​l​l​ ​c​u​r​r​e​n​t​ ​t​a​g​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Firebase: {
 			/**
 			 * F​i​r​e​b​a​s​e
@@ -85213,6 +86633,1426 @@ export type TranslationFunctions = {
 	common: {
 	}
 	apps: {
+		ZohoCRM: {
+			/**
+			 * Zoho CRM
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Zoho CRM to automate customer relationship management across all global data centers.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Zoho CRM integration provides comprehensive actions and triggers to interact with the Zoho CRM API across all seven global data centers (US, AU, EU, IN, CN, JP, CA). Manage modules, records, users, and roles efficiently while automating your CRM workflows with support for custom modules, bulk operations, and real-time triggers.
+			 */
+			longDesc: () => LocalizedString
+			expressions: {
+				'&&': {
+					/**
+					 * and (&&)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns True if all arguments are True
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if all arguments are `True` with logic short-circuiting
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Boolean condition to evaluate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A boolean expression or condition that evaluates to True or False
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'||': {
+					/**
+					 * or (||)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns True if any argument is True
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if any argument is `True` with logic short-circuiting
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Boolean condition to evaluate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A boolean expression or condition that evaluates to True or False
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'==': {
+					/**
+					 * equal (==)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Equality comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value equals the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'!=': {
+					/**
+					 * not equal (!=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Inequality comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value does not equal the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'>': {
+					/**
+					 * greater than (>)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Greater than comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is greater than the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'>=': {
+					/**
+					 * greater than or equal (>=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Greater than or equal comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is greater than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'<': {
+					/**
+					 * less than (<)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Less than comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is less than the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'<=': {
+					/**
+					 * less than or equal (<=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Less than or equal comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is less than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				like: {
+					/**
+					 * like
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Contains text pattern
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value contains the specified text pattern
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to search within
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Pattern
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text pattern to search for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text pattern to search for within the field
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				not_like: {
+					/**
+					 * not like
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not contain text pattern
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value does not contain the specified text pattern
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to search within
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Pattern
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text pattern to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text pattern that should not be present in the field
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'in': {
+					/**
+					 * in
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Value is in list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value matches any value in the provided list
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be checked
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Values
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of values to match
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of values to compare against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				not_in: {
+					/**
+					 * not in
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Value is not in list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value does not match any value in the provided list
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be checked
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Values
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of values to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of values that should not match
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				between: {
+					/**
+					 * between
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Value is between two values
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is between two specified values (inclusive)
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be checked
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Lower bound
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The minimum value (inclusive)
+							 */
+							longDesc: () => LocalizedString
+						}
+						'2': {
+							/**
+							 * Upper bound
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum value (inclusive)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				not_between: {
+					/**
+					 * not between
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Value is not between two values
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is not between two specified values
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be checked
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Lower bound
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum value to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lower boundary for exclusion
+							 */
+							longDesc: () => LocalizedString
+						}
+						'2': {
+							/**
+							 * Upper bound
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum value to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The upper boundary for exclusion
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				is_null: {
+					/**
+					 * is null
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is null
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is null or empty
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to check for null value
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				is_not_null: {
+					/**
+					 * is not null
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is not null
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is not null or empty
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to check for non-null value
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_record: {
+					/**
+					 * New Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new record is created in a Zoho CRM module
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a specified Zoho CRM module for newly created records and fires when a new record is detected. The trigger polls for records sorted by Created Time in descending order. You can optionally filter records by phone, email, keywords, or specific field values to only trigger for records matching your criteria.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						module: {
+							/**
+							 * Module
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Zoho CRM module to monitor for new records
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) where you want to monitor for newly created records. Use the module API name as returned by the Modules Metadata API.
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone: {
+							/**
+							 * Phone Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter records by phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional phone number to search for in records. When specified, only records containing this phone number will trigger the event. This uses the Zoho CRM search API to find matching records.
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter records by email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional email address to search for in records. When specified, only records containing this email address will trigger the event. This uses the Zoho CRM search API to find matching records.
+							 */
+							longDesc: () => LocalizedString
+						}
+						word: {
+							/**
+							 * Keyword Search
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter records by keyword
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional keyword to search for across all searchable fields in records. When specified, only records containing this keyword will trigger the event. This uses the Zoho CRM search API to perform a comprehensive text search.
+							 */
+							longDesc: () => LocalizedString
+						}
+						field_filter: {
+							/**
+							 * Field Filters
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter records by specific field values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional list of field-value pairs to create search criteria. When specified, only records where ALL specified fields match their corresponding values will trigger the event. Uses the "equals" operator for each field comparison.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field: {
+										/**
+										 * Field Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The API name of the field to filter on
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select or enter the field API name from the module. Available field names can be retrieved using the Fields Metadata API. The field must be searchable to be used in filtering.
+										 */
+										longDesc: () => LocalizedString
+									}
+									value: {
+										/**
+										 * Field Value
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The value that the field must equal
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Enter the exact value that the field must equal for the record to match. The comparison uses the "equals" operator, so the field value must match this value exactly.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			actions: {
+				create_record: {
+					/**
+					 * Create Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new record in a Zoho CRM module
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new record in the specified Zoho CRM module with the provided field values. Returns the record ID along with timestamps for creation and modification. The Created_By and Modified_By fields contain the user information who created the record. Supports all standard and custom modules except Documents and Projects.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						module: {
+							/**
+							 * Module
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Zoho CRM module where the record will be created
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the target Zoho CRM module (such as Leads, Contacts, Deals, Accounts, Products, Vendors, or custom modules) where you want to create the new record. Use the Modules API to get the list of available modules and their API names.
+							 */
+							longDesc: () => LocalizedString
+						}
+						properties: {
+							/**
+							 * Record Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field values for the new record
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the field values for the new record as key-value pairs where keys are field API names. Available fields and their types are dynamically loaded based on the selected module. Required fields must be included, and field values must match their expected data types (text, number, date, picklist, lookup, etc.).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_record: {
+					/**
+					 * Update Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing record in a Zoho CRM module
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates an existing record in the specified Zoho CRM module with the provided field values. Returns the record ID along with updated timestamps for modification. Only the fields you specify will be updated; other fields will remain unchanged. The record must exist and the user must have update permissions for the module.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						module: {
+							/**
+							 * Module
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Zoho CRM module containing the record
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the record you want to update. The module must support API operations and the user must have appropriate permissions.
+							 */
+							longDesc: () => LocalizedString
+						}
+						record_id: {
+							/**
+							 * Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the record to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter or select the unique record ID of the record you want to update. Record IDs can be retrieved using the Get Records API or from webhook notifications. The record must exist in the specified module.
+							 */
+							longDesc: () => LocalizedString
+						}
+						properties: {
+							/**
+							 * Updated Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field values to update on the record
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the field values you want to update as key-value pairs where keys are field API names. Only include the fields you want to change; unspecified fields will retain their current values. Field values must match their expected data types and validation rules.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_record: {
+					/**
+					 * Delete Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a record from a Zoho CRM module
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently deletes a specific record from the specified Zoho CRM module using its unique record ID. If the module has the Recycle Bin feature enabled, the deleted record will be moved to the Recycle Bin and can be restored. Otherwise, the deletion is permanent. The user must have delete permissions for the module.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						module: {
+							/**
+							 * Module
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Zoho CRM module containing the record
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the record you want to delete. The module must support API operations and the user must have delete permissions.
+							 */
+							longDesc: () => LocalizedString
+						}
+						record_id: {
+							/**
+							 * Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the record to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter or select the unique record ID of the record you want to delete. Record IDs can be retrieved using the Get Records API. Deleting a record that has already been deleted will result in an error.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_record: {
+					/**
+					 * Get Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a single record from a Zoho CRM module
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed information about a specific record from the specified Zoho CRM module using its unique record ID. Returns all field values for the record including standard fields (Created_Time, Modified_Time, Created_By, Modified_By) and custom fields. Subform data, multi-select lookup fields, and multi-user lookup fields are also included in the response.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						module: {
+							/**
+							 * Module
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Zoho CRM module containing the record
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the record you want to retrieve. The module must support API operations and the user must have read permissions.
+							 */
+							longDesc: () => LocalizedString
+						}
+						record_id: {
+							/**
+							 * Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the record to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter or select the unique record ID of the record you want to fetch. Record IDs can be obtained from the Get Records API, search results, or webhook notifications. The record must exist in the specified module.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_records: {
+					/**
+					 * List Records
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve multiple records from a Zoho CRM module
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of records from the specified Zoho CRM module with support for field selection, pagination, sorting, and filtering. You can specify which fields to return (maximum 50 field API names), sort records by a field in ascending or descending order, and navigate through pages using tokens. Returns both the records data and pagination tokens for retrieving subsequent pages.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						module: {
+							/**
+							 * Module
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Zoho CRM module to retrieve records from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) from which you want to retrieve records. The module must support API operations and the user must have read permissions.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Fields to Return
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specify which fields to include in the response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the field API names you want to retrieve for each record. You can include a maximum of 50 field API names. Use the Fields Metadata API to get the list of available fields. By default, only the ID field is returned. Add fields like Last_Name, Email, Created_Time, or custom field names as needed.
+							 */
+							longDesc: () => LocalizedString
+						}
+						per_page: {
+							/**
+							 * Records Per Page
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of records to return per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how many records to return in a single API request. Valid values are 1 to 200. The default value is 20. Use this parameter along with page_token for pagination through large result sets.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_token: {
+							/**
+							 * Page Token
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Token for retrieving the next page of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Use the next_page_token value from a previous response to retrieve the next page of records. Leave this empty for the first page. The page_token is bound to the parameters used in the request, so do not change other parameters when using a token.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ids: {
+							/**
+							 * Record IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by specific record IDs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional list of specific record IDs to retrieve. When provided, only records with these IDs will be returned. This is useful for fetching a specific set of records rather than paginating through all records.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort: {
+							/**
+							 * Sort Configuration
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Configure how to sort the returned records
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how records should be sorted in the response. You can sort by fields like id, Created_Time, or Modified_Time in either ascending (oldest first) or descending (newest first) order.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									sort_by: {
+										/**
+										 * Sort By Field
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The field to use for sorting records
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Select or enter the field API name to sort records by. Common options include id, Created_Time, and Modified_Time. You can also use custom field API names that support sorting.
+										 */
+										longDesc: () => LocalizedString
+									}
+									order: {
+										/**
+										 * Sort Order
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort in ascending or descending order
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to sort records in ascending order (asc - oldest first) or descending order (desc - newest first). The default value is descending.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				list_modules: {
+					/**
+					 * List Modules
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve all available modules in Zoho CRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches metadata for all modules in your Zoho CRM organization, including both standard modules (Leads, Contacts, Deals, Accounts, etc.) and custom modules. Returns comprehensive details including module permissions, API names, display labels, and capabilities like whether the module is creatable, editable, deletable, or supports features like global search and quick create.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						status: {
+							/**
+							 * Module Status Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter modules by their status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to retrieve only modules with specific statuses. Options include: visible (active modules shown in the UI), user_hidden (modules hidden by users), system_hidden (modules hidden by the system), and scheduled_for_deletion (modules marked for deletion). When not specified, all modules are returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_fields: {
+					/**
+					 * List Module Fields
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve field metadata for a Zoho CRM module
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches comprehensive metadata about all fields in a specific Zoho CRM module including field types, labels, API names, data types, validation rules, picklist values, lookup configurations, and permissions. This information is essential for understanding module structure, building dynamic forms, or validating data before creating or updating records.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						module: {
+							/**
+							 * Module
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Zoho CRM module to retrieve fields from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Zoho CRM module whose field metadata you want to retrieve. The API returns detailed information about all fields including standard fields (system-defined) and custom fields (user-defined) in the module.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_users: {
+					/**
+					 * List Users
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve users from your Zoho CRM organization
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of users in your Zoho CRM organization with support for pagination and filtering by user type. Returns comprehensive user information including name, email, role, profile, timezone, locale settings, customization preferences, and account status. Use the type parameter to filter users based on their profile and status.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						per_page: {
+							/**
+							 * Users Per Page
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of users to return per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how many users to return in a single API request. Valid values are 1 to 200. The default value is 20. Use this parameter along with the page parameter for pagination through large result sets.
+							 */
+							longDesc: () => LocalizedString
+						}
+						page: {
+							/**
+							 * Page Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The page number for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify which page of results to retrieve, starting from 1 for the first page. Use this parameter along with per_page to navigate through multiple pages of user data.
+							 */
+							longDesc: () => LocalizedString
+						}
+						type: {
+							/**
+							 * User Type Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter users by type or status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional filter to retrieve specific categories of users. Options include: AllUsers (both active and inactive), ActiveUsers (only active users), DeactiveUsers (deactivated users), ConfirmedUsers (users who confirmed their accounts), NotConfirmedUsers (unconfirmed users), DeletedUsers (deleted users), ActiveConfirmedUsers (active and confirmed), AdminUsers (users with Administrator privileges), ActiveConfirmedAdmins (active confirmed administrators), and CurrentUser (the currently authenticated CRM user).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_tags: {
+					/**
+					 * List Tags
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve tags available in a Zoho CRM module
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches all tags that have been created for a specific Zoho CRM module. Tags are labels used to categorize and organize records within a module for easier searching and filtering. Each tag includes its name, ID, color code, and metadata about when it was created and modified. You can add a maximum of 100 tags per module and 10 tags per record.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						module: {
+							/**
+							 * Module
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Zoho CRM module to retrieve tags from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Zoho CRM module (such as Leads, Contacts, Deals, or custom modules) whose tags you want to retrieve. Each module maintains its own set of tags.
+							 */
+							longDesc: () => LocalizedString
+						}
+						my_tags: {
+							/**
+							 * My Tags Only
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Retrieve only tags created by you
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When set to true, only tags created by the current user will be returned. When set to false or not specified, all tags in the module will be returned regardless of who created them.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_tags_to_records: {
+					/**
+					 * Add Tags to Records
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add tags to one or more records in a module
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds one or more tags to specified records in a Zoho CRM module. Tags are labels that help categorize and organize records for easier management, filtering, and searching. You can add up to 10 tags per record and a maximum of 100 tags can exist per module. Returns the count of successfully tagged records and locked records that could not be tagged.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						module: {
+							/**
+							 * Module
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Zoho CRM module containing the records
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the records you want to tag. Tags are module-specific and must exist in the module before they can be added to records.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags to Add
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of tags to add to the records
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the tags you want to add to the records. Each tag should include an ID and name. The tag ID takes precedence over the name if both are provided. You can optionally include a color_code (hex value). Use the List Tags action to retrieve available tags and their IDs.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											id: {
+												/**
+												 * Tag ID
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The unique identifier of the tag
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The unique ID of an existing tag in the module. This ID takes precedence over the name field. Use the List Tags action to retrieve tag IDs. The tag must already exist in the module.
+												 */
+												longDesc: () => LocalizedString
+											}
+											name: {
+												/**
+												 * Tag Name
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The display name of the tag
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The display name of the tag. When both ID and name are provided, the ID takes precedence. If only the name is provided, the system will look up the tag by name.
+												 */
+												longDesc: () => LocalizedString
+											}
+											color_code: {
+												/**
+												 * Color Code
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Optional hexadecimal color code for the tag
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Optional hexadecimal color code for visual identification of the tag (e.g., #F17574, #57B1FD). The allowed color codes are predefined in Zoho CRM. If not specified or set to null, the tag will use its default color.
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						records: {
+							/**
+							 * Record IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * IDs of the records to tag
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of unique record IDs to which you want to add tags. You can specify a maximum of 500 record IDs per API call. Use the Get Records API or search API to retrieve valid record IDs.
+							 */
+							longDesc: () => LocalizedString
+						}
+						over_write: {
+							/**
+							 * Overwrite Existing Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Replace all existing tags on the records
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When set to true, replaces all existing tags on the specified records with the new tags. When set to false (default), adds the new tags while keeping existing tags. Use this option carefully as setting it to true will remove all current tags.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
 		Firebase: {
 			/**
 			 * Firebase
