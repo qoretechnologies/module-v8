@@ -10,7 +10,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
       '&&': {
         type: 'operator',
         subtype: 'logic-operator',
-        name: 'AND',
+        name: '&&',
         symbol: '&&',
         roles: ['search', 'field'],
         group: EQoreExpressionGroups.LOGICAL,
@@ -26,7 +26,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
       '||': {
         type: 'operator',
         subtype: 'logic-operator',
-        name: 'OR',
+        name: '||',
         symbol: '||',
         roles: ['search', 'field'],
         group: EQoreExpressionGroups.LOGICAL,
@@ -43,7 +43,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
       '==': {
         type: 'operator',
         subtype: 'generic',
-        name: 'equal',
+        name: '==',
         symbol: '==',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
@@ -62,7 +62,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
       '!=': {
         type: 'operator',
         subtype: 'generic',
-        name: 'not_equal',
+        name: '!=',
         symbol: '!=',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
@@ -81,7 +81,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
       '>': {
         type: 'operator',
         subtype: 'generic',
-        name: 'higher_than',
+        name: '>',
         symbol: '>',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
@@ -100,7 +100,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
       '>=': {
         type: 'operator',
         subtype: 'generic',
-        name: 'higher_than_or_equal',
+        name: '>=',
         symbol: '>=',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
@@ -119,7 +119,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
       '<': {
         type: 'operator',
         subtype: 'generic',
-        name: 'lower_than',
+        name: '<',
         symbol: '<',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
@@ -138,7 +138,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
       '<=': {
         type: 'operator',
         subtype: 'generic',
-        name: 'lower_than_or_equal',
+        name: '<=',
         symbol: '<=',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,

@@ -47704,7 +47704,7 @@ type RootTranslation = {
 				}
 				'==': {
 					/**
-					 * e​q​u​a​l​s​ ​(​=​)
+					 * e​q​u​a​l​s​ ​(​=​=​)
 					 */
 					displayName: string
 					/**
@@ -134321,7 +134321,7 @@ export type TranslationFunctions = {
 				}
 				'==': {
 					/**
-					 * equals (=)
+					 * equals (==)
 					 */
 					displayName: () => LocalizedString
 					/**

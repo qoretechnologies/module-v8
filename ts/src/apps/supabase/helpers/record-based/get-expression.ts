@@ -10,7 +10,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
       '&&': {
         type: 'operator',
         subtype: 'logic-operator',
-        name: 'AND',
+        name: '&&',
         symbol: '&&',
         roles: ['search', 'field'],
         group: EQoreExpressionGroups.LOGICAL,
@@ -26,7 +26,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
       '||': {
         type: 'operator',
         subtype: 'logic-operator',
-        name: 'OR',
+        name: '||',
         symbol: '||',
         roles: ['search', 'field'],
         group: EQoreExpressionGroups.LOGICAL,
