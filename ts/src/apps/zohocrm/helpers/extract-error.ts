@@ -55,7 +55,7 @@ const ZOHO_CRM_ERROR_CODES = {
 export const extractZohoCrmErrorMessage = (error: TZohoCrmError): string => {
   let parsedError = error;
 
-  if (error?.message && typeof error.message === 'string') {
+  if (error.message && typeof error.message === 'string') {
     const trimmedMessage = error.message.trim();
     if (trimmedMessage.startsWith('{') || trimmedMessage.startsWith('[')) {
       try {

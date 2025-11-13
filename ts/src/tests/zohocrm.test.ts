@@ -487,14 +487,12 @@ describe('Should test Zoho Crm', () => {
       const result = await getRecordsIterator(baseContext, 10);
 
       expect(result).toBeDefined();
-      if (result && result.id.length > 0) {
-        result.Last_Name.forEach((name: string) => {
-          expect(name).toBe('Brown');
-        });
-        result.First_Name.forEach((name: string) => {
-          expect(name).toBe('Will');
-        });
-      }
+      result!.Last_Name.forEach((name: string) => {
+        expect(name).toBe('Brown');
+      });
+      result!.First_Name.forEach((name: string) => {
+        expect(name).toBe('Will');
+      });
     });
 
     it('Should search records with comparison operators', async () => {
@@ -510,11 +508,9 @@ describe('Should test Zoho Crm', () => {
       const result = await getRecordsIterator(baseContext, 10);
 
       expect(result).toBeDefined();
-      if (result && result.id.length > 0) {
-        result.Email.forEach((email: string) => {
-          expect(email).toContain('@example.com');
-        });
-      }
+      result!.Email.forEach((email: string) => {
+        expect(email).toContain('@example.com');
+      });
     });
 
     it('Should search records with in operator', async () => {
@@ -533,12 +529,10 @@ describe('Should test Zoho Crm', () => {
       const result = await getRecordsIterator(baseContext, 10);
 
       expect(result).toBeDefined();
-      if (result && result.id.length > 0) {
-        expect(result.Email.length).toBe(2);
-        result.Email.forEach((email: string) => {
-          expect(['brownwill@example.com', 'robertsarah@example.com']).toContain(email);
-        });
-      }
+      expect(result!.Email.length).toBe(2);
+      result!.Email.forEach((email: string) => {
+        expect(['brownwill@example.com', 'robertsarah@example.com']).toContain(email);
+      });
     });
 
     it('Should search records with is_not_null operator', async () => {
@@ -554,11 +548,9 @@ describe('Should test Zoho Crm', () => {
       const result = await getRecordsIterator(baseContext, 10);
 
       expect(result).toBeDefined();
-      if (result && result.id.length > 0) {
-        result.Phone.forEach((phone: string) => {
-          expect(phone).toBeTruthy();
-        });
-      }
+      result!.Phone.forEach((phone: string) => {
+        expect(phone).toBeTruthy();
+      });
     });
 
     it('Should search with between operator', async () => {
@@ -574,12 +566,10 @@ describe('Should test Zoho Crm', () => {
       const result = await getRecordsIterator(baseContext, 10);
 
       expect(result).toBeDefined();
-      if (result && result.id.length > 0) {
-        result.Annual_Revenue.forEach((revenue: number) => {
-          expect(revenue).toBeGreaterThanOrEqual(500000);
-          expect(revenue).toBeLessThanOrEqual(1500000);
-        });
-      }
+      result!.Annual_Revenue.forEach((revenue: number) => {
+        expect(revenue).toBeGreaterThanOrEqual(500000);
+        expect(revenue).toBeLessThanOrEqual(1500000);
+      });
     });
 
     it('Should search records with complex nested expression (4 levels)', async () => {
@@ -646,28 +636,26 @@ describe('Should test Zoho Crm', () => {
       const result = await getRecordsIterator(baseContext, 10);
 
       expect(result).toBeDefined();
-      if (result && result.id.length > 0) {
-        for (let i = 0; i < result.id.length; i++) {
-          const email = result.Email[i];
-          const city = result.City[i];
-          const phone = result.Phone[i];
-          const company = result.Company[i];
-          const rating = result.Rating[i];
-          const revenue = result.Annual_Revenue[i];
-          const leadStatus = result.Lead_Status[i];
+      for (let i = 0; i < result!.id.length; i++) {
+        const email = result!.Email[i];
+        const city = result!.City[i];
+        const phone = result!.Phone[i];
+        const company = result!.Company[i];
+        const rating = result!.Rating[i];
+        const revenue = result!.Annual_Revenue[i];
+        const leadStatus = result!.Lead_Status[i];
 
-          const matchesFirstBranch =
-            ((email.includes('will') && city === 'New York') ||
-              (email.includes('sarah') && city === 'Los Angeles')) &&
-            phone;
+        const matchesFirstBranch =
+          ((email.includes('will') && city === 'New York') ||
+            (email.includes('sarah') && city === 'Los Angeles')) &&
+          phone;
 
-          const matchesSecondBranch =
-            ['Innovation Labs', 'Future Systems'].includes(company) &&
-            rating !== 'Cold' &&
-            (revenue > 1500000 || leadStatus === 'Qualified');
+        const matchesSecondBranch =
+          ['Innovation Labs', 'Future Systems'].includes(company) &&
+          rating !== 'Cold' &&
+          (revenue > 1500000 || leadStatus === 'Qualified');
 
-          expect(Boolean(matchesFirstBranch) || Boolean(matchesSecondBranch)).toBe(true);
-        }
+        expect(Boolean(matchesFirstBranch) || Boolean(matchesSecondBranch)).toBe(true);
       }
     });
 
@@ -704,12 +692,10 @@ describe('Should test Zoho Crm', () => {
       const result = await getRecordsIterator(baseContext, 10);
 
       expect(result).toBeDefined();
-      if (result && result.id.length > 0) {
-        expect(result.Website.length).toBeGreaterThanOrEqual(2);
-        result.Website.forEach((desc: string) => {
-          expect(desc).toBe('https://example123.com');
-        });
-      }
+      expect(result!.Website.length).toBeGreaterThanOrEqual(2);
+      result!.Website.forEach((desc: string) => {
+        expect(desc).toBe('https://example123.com');
+      });
     });
 
     it('Should delete specific records', async () => {
