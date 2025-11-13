@@ -1,4 +1,4 @@
-import { TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
+import { EQoreRecordBasedAppErrorCodes, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 
 export const ZOHO_CRM_APP_NAME = 'ZohoCRM';
 export const ZOHO_CRM_APP_LOGO =
@@ -7,11 +7,20 @@ export const ZOHO_CRM_APP_LOGO =
 export const ZOHO_CRM_API_VERSION = 'v8';
 
 export class ZohoCrmError extends Error {
-  constructor(message: string) {
+  public errorCode?: string;
+
+  constructor(message: string, errorCode?: string) {
     super(message);
     this.name = 'ZohoCrmError';
+    this.errorCode = errorCode;
   }
 }
+
+export const ZOHOCRM_DUPLICATE_ERROR_CODE = 'DUPLICATE_DATA';
+
+export const ZohoCrmErrorCodeToQoreErrorCodeMap: Record<string, string> = {
+  [ZOHOCRM_DUPLICATE_ERROR_CODE]: EQoreRecordBasedAppErrorCodes.DUPLICATE_RECORD,
+};
 
 export const ZOHO_CRM_CONN_OPTIONS = {
   domain: {

@@ -152,6 +152,19 @@ export const getZohoCrmModuleFields = async (options: {
   }
 };
 
+export const getZohoCrmModuleFieldApiNames = async (options: {
+  token: string;
+  moduleApiName: string;
+  url: string;
+}): Promise<string[]> => {
+  try {
+    const fields = await getZohoCrmModuleFields(options);
+    return fields.map((field) => field.api_name);
+  } catch (error) {
+    throw new ZohoCrmError(`Failed to get module field API names: ${error}`);
+  }
+};
+
 export const getZohoCrmFieldApiNameToIdMap = async (options: {
   token: string;
   moduleApiName: string;

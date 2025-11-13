@@ -13,7 +13,7 @@ type QorusResponse<T> = {
   data: T;
 };
 
-type TZohoCrmRequestOptions = {
+export type TZohoCrmRequestOptions = {
   token: string;
   object?: string;
   path: string;

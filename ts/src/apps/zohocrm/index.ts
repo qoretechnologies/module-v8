@@ -1,4 +1,4 @@
-import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import { TQoreAppWithActions, TQoreRecordBasedApp } from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
@@ -11,6 +11,16 @@ import {
 
 import * as ZOHO_CRM_ACTIONS from './actions';
 import * as ZOHO_CRM_TRIGGERS from './triggers';
+import { getZohoCrmExpressions } from './helpers/record-based/get-expressions';
+import { getZohoCrmRecordType } from './helpers/record-based/get-record-type';
+import { getZohoCrmTableList } from './helpers/record-based/get-table-list';
+import { ZohoCrmSearchOptions } from './helpers/record-based/get-search-options';
+import { ZohoCrmUpsertOptions } from './helpers/record-based/get-upsert-options';
+import { searchZohoCrmRecords } from './helpers/record-based/search-records';
+import { deleteZohoCrmRecords } from './helpers/record-based/delete-records';
+import { createZohoCrmRecords } from './helpers/record-based/create-records';
+import { updateZohoCrmRecords } from './helpers/record-based/update-records';
+import { upsertZohoCrmRecords } from './helpers/record-based/upsert-records';
 
 export default (locale: Locales) =>
   ({
@@ -44,6 +54,7 @@ export default (locale: Locales) =>
         'ZohoCRM.files.CREATE',
         'ZohoCRM.org.READ',
         'ZohoSearch.securesearch.READ',
+        'ZohoCRM.coql.READ',
       ],
       ping_method: 'GET',
       ping_path: `/${ZOHO_CRM_API_VERSION}/users`,
@@ -54,4 +65,14 @@ export default (locale: Locales) =>
       url_template_options: ['domain'],
       url_from_option: 'domain',
     },
-  }) satisfies TQoreAppWithActions;
+    expressions: getZohoCrmExpressions(locale),
+    get_record_type: getZohoCrmRecordType,
+    get_table_list: getZohoCrmTableList,
+    search_options: ZohoCrmSearchOptions,
+    upsert_options: ZohoCrmUpsertOptions,
+    search_records: searchZohoCrmRecords,
+    delete_records: deleteZohoCrmRecords,
+    create_records: createZohoCrmRecords,
+    update_records: updateZohoCrmRecords,
+    upsert_records: upsertZohoCrmRecords,
+  }) satisfies TQoreAppWithActions & TQoreRecordBasedApp;
