@@ -456,7 +456,7 @@ describe('Baserow', () => {
       const iterator = await searchBaserowRecords(
         baseContext,
         {
-          exp: 'not_empty',
+          exp: 'not-empty',
           args: [{ field: 'Email' }],
         },
         { table: tableName }
@@ -477,7 +477,7 @@ describe('Baserow', () => {
       const iterator = await searchBaserowRecords(
         baseContext,
         {
-          exp: 'date_is_after',
+          exp: 'date-is-after',
           args: [{ field: 'Date' }, { value: '2024-02-01' }],
         },
         { table: tableName }
@@ -539,7 +539,6 @@ describe('Baserow', () => {
           expect(['Task Alpha', 'Task Beta', 'Task Gamma']).toContain(name);
         });
 
-        // Verify each record matches one of the complex conditions
         for (let i = 0; i < result.id.length; i++) {
           const rating = result.Rating[i];
           const completed = result.Completed[i];
@@ -577,7 +576,7 @@ describe('Baserow', () => {
       const iterator = await searchBaserowRecords(
         baseContext,
         {
-          exp: 'not_empty',
+          exp: 'not-empty',
           args: [{ field: 'Email' }],
         },
         { table: tableName }
@@ -601,7 +600,7 @@ describe('Baserow', () => {
       const iterator = await searchBaserowRecords(
         baseContext,
         {
-          exp: 'not_empty',
+          exp: 'not-empty',
           args: [{ field: 'Name' }],
         },
         {

@@ -360,7 +360,7 @@ describe('Notion', () => {
                 ],
               },
               {
-                exp: 'is_not_empty',
+                exp: 'is-not-empty',
                 args: [{ field: 'Assignee' }],
               },
             ],
@@ -402,11 +402,11 @@ describe('Notion', () => {
         });
       });
 
-      it('Should search records with is_empty operator', async () => {
+      it('Should search records with is-empty operator', async () => {
         const iterator = await searchNotionRecords(
           baseContext,
           {
-            exp: 'is_empty',
+            exp: 'is-empty',
             args: [{ field: 'Assignee' }],
           },
           { table }
@@ -422,11 +422,11 @@ describe('Notion', () => {
         }
       });
 
-      it('Should search records with starts_with operator', async () => {
+      it('Should search records with starts-with operator', async () => {
         const iterator = await searchNotionRecords(
           baseContext,
           {
-            exp: 'starts_with',
+            exp: 'starts-with',
             args: [{ field: 'Name' }, { value: 'Task from' }],
           },
           { table }
@@ -441,11 +441,11 @@ describe('Notion', () => {
         });
       });
 
-      it('Should search records with ends_with operator', async () => {
+      it('Should search records with ends-with operator', async () => {
         const iterator = await searchNotionRecords(
           baseContext,
           {
-            exp: 'ends_with',
+            exp: 'ends-with',
             args: [{ field: 'Name' }, { value: '1' }],
           },
           { table }
@@ -458,11 +458,11 @@ describe('Notion', () => {
         expect(result!.Name).not.toContain('Task from Qore 2');
       });
 
-      it('Should search records with date relative operators (this_week)', async () => {
+      it('Should search records with date relative operators (this-week)', async () => {
         const iterator = await searchNotionRecords(
           baseContext,
           {
-            exp: 'this_week',
+            exp: 'this-week',
             args: [{ field: 'Due date' }],
           },
           { table }
@@ -525,11 +525,11 @@ describe('Notion', () => {
                 exp: '||',
                 args: [
                   {
-                    exp: 'this_week',
+                    exp: 'this-week',
                     args: [{ field: 'Due date' }],
                   },
                   {
-                    exp: 'next_week',
+                    exp: 'next-week',
                     args: [{ field: 'Due date' }],
                   },
                 ],

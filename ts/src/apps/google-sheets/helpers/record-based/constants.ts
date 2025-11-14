@@ -54,7 +54,7 @@ export const extractRowIds = (where?: TQoreSearchRecordsWhereConditions): number
     );
   }
 
-  if (where.exp !== 'row_ids') {
+  if (where.exp !== 'row-ids') {
     throw new GoogleSheetsError(
       `Unsupported expression "${where.exp}". ` +
         'Google Sheets only supports the "row_ids" expression for filtering. ' +

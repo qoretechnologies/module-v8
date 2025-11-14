@@ -37,7 +37,7 @@ export const searchZohoCrmRecords: TQoreSearchRecordsFunction = async (
 
   let currentOffset = 0;
   let hasMoreRecords = true;
-  const limit = Math.min((searchOptions?.limit as number) || 200, 200);
+  const limit = Math.min(searchOptions?.limit || 200, 200);
 
   const tableFields = await getZohoCrmModuleFieldApiNames({
     token,

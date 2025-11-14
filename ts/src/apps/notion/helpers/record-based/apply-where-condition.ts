@@ -46,21 +46,21 @@ export const buildNotionFilter = (
     case 'contains':
       return buildComparisonFilter(exp, args, properties);
 
-    case 'is_empty':
-    case 'is_not_empty':
+    case 'is-empty':
+    case 'is-not-empty':
       return buildEmptyFilter(exp, args, properties);
 
-    case 'starts_with':
-    case 'ends_with':
+    case 'starts-with':
+    case 'ends-with':
       return buildTextFilter(exp, args, properties);
 
-    case 'next_week':
-    case 'next_month':
-    case 'next_year':
-    case 'past_week':
-    case 'past_month':
-    case 'past_year':
-    case 'this_week':
+    case 'next-week':
+    case 'next-month':
+    case 'next-year':
+    case 'past-week':
+    case 'past-month':
+    case 'past-year':
+    case 'this-week':
       return buildDateRelativeFilter(exp, args, properties);
 
     default:
@@ -301,12 +301,23 @@ const buildEmptyFilter = (operator: string, args: any[], properties: Record<stri
     throw new NotionError(`Property "${field}" not found in data source`);
   }
 
+  let notionOperator = operator;
+
+  switch (notionOperator) {
+    case 'is-empty':
+      notionOperator = 'is_empty';
+      break;
+    case 'is-not-empty':
+      notionOperator = 'is_not_empty';
+      break;
+  }
+
   const filterKey = getFilterKeyForPropertyType(propertyType);
 
   return {
     property: field,
     [filterKey]: {
-      [operator]: true,
+      [notionOperator]: true,
     },
   };
 };
@@ -338,10 +349,21 @@ const buildTextFilter = (operator: string, args: any[], properties: Record<strin
     );
   }
 
+  let notionOperator = operator;
+
+  switch (notionOperator) {
+    case 'starts-with':
+      notionOperator = 'starts_with';
+      break;
+    case 'ends-with':
+      notionOperator = 'ends_with';
+      break;
+  }
+
   return {
     property: field,
     [propertyType]: {
-      [operator]: String(value),
+      [notionOperator]: String(value),
     },
   };
 };
@@ -375,10 +397,26 @@ const buildDateRelativeFilter = (
     );
   }
 
+  let notionOperator = operator;
+
+  if (
+    [
+      'next-week',
+      'next-month',
+      'next-year',
+      'past-week',
+      'past-month',
+      'past-year',
+      'this-week',
+    ].includes(operator)
+  ) {
+    notionOperator = operator.replace(/-/g, '_');
+  }
+
   return {
     property: field,
     date: {
-      [operator]: {},
+      [notionOperator]: {},
     },
   };
 };

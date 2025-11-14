@@ -26,6 +26,18 @@ const EXPRESSION_KEY_TO_BASEROW_TYPE: Record<string, string> = {
   '<=': 'lower_than_or_equal',
 };
 
+const kebabToSnake = (str: string): string => {
+  return str.replace(/-/g, '_');
+};
+
+const getBaserowType = (exp: string): string => {
+  if (EXPRESSION_KEY_TO_BASEROW_TYPE[exp]) {
+    return EXPRESSION_KEY_TO_BASEROW_TYPE[exp];
+  }
+
+  return kebabToSnake(exp);
+};
+
 export const buildBaserowFilter = (
   where_cond: TQoreSearchRecordsWhereConditions
 ): TBaserowFilterGroup => {
@@ -78,14 +90,14 @@ const buildSingleFilter = (expr: TQoreSearchRecordsWhereConditions): TBaserowFil
   const field = fieldArg.field;
   const rawValue = (args[1] as TQoreSearchRecordsValue)?.value;
 
-  const baserowType = EXPRESSION_KEY_TO_BASEROW_TYPE[exp] || exp;
+  const baserowType = getBaserowType(exp);
 
   const baseFilter: TBaserowFilter = {
     type: baserowType,
     field,
   };
 
-  if (exp === 'not_empty' || exp === 'empty') {
+  if (exp === 'not-empty' || exp === 'is-empty') {
     baseFilter.value = '';
   } else if (rawValue !== undefined) {
     if (typeof rawValue === 'boolean') {

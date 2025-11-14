@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 const BaserowAppEn = {
   displayName: 'Baserow',
   shortDesc:
@@ -446,7 +445,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    contains_not: {
+    'contains-not': {
       displayName: "doesn't contain",
       shortDesc: 'Does not contain text',
       longDesc: 'Returns `True` if the field does not contain the specified text',
@@ -463,7 +462,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    contains_word: {
+    'contains-word': {
       displayName: 'contains word',
       shortDesc: 'Contains whole word',
       longDesc: 'Returns `True` if the field contains the specified word as a complete word',
@@ -480,7 +479,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    doesnt_contain_word: {
+    'doesnt-contain-word': {
       displayName: "doesn't contain word",
       shortDesc: 'Does not contain whole word',
       longDesc:
@@ -498,7 +497,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    length_is_lower_than: {
+    'length-is-lower-than': {
       displayName: 'length is lower than',
       shortDesc: 'Text length is less than',
       longDesc: 'Returns `True` if the length of the text field is less than the specified number',
@@ -527,7 +526,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    not_empty: {
+    'not-empty': {
       displayName: 'is not empty',
       shortDesc: 'Field is not empty',
       longDesc: 'Returns `True` if the field has a value',
@@ -539,7 +538,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    date_is: {
+    'date-is': {
       displayName: 'date is',
       shortDesc: 'Date equals',
       longDesc: 'Returns `True` if the date field equals the specified date',
@@ -556,7 +555,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    date_is_not: {
+    'date-is-not': {
       displayName: 'date is not',
       shortDesc: 'Date does not equal',
       longDesc: 'Returns `True` if the date field does not equal the specified date',
@@ -573,7 +572,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    date_is_before: {
+    'date-is-before': {
       displayName: 'date is before',
       shortDesc: 'Date is before',
       longDesc: 'Returns `True` if the date field is before the specified date',
@@ -590,7 +589,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    date_is_on_or_before: {
+    'date-is-on-or-before': {
       displayName: 'date is on or before',
       shortDesc: 'Date is on or before',
       longDesc: 'Returns `True` if the date field is on or before the specified date',
@@ -607,7 +606,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    date_is_after: {
+    'date-is-after': {
       displayName: 'date is after',
       shortDesc: 'Date is after',
       longDesc: 'Returns `True` if the date field is after the specified date',
@@ -624,7 +623,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    date_is_on_or_after: {
+    'date-is-on-or-after': {
       displayName: 'date is on or after',
       shortDesc: 'Date is on or after',
       longDesc: 'Returns `True` if the date field is on or after the specified date',
@@ -641,7 +640,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    date_is_within: {
+    'date-is-within': {
       displayName: 'date is within',
       shortDesc: 'Date is within time period',
       longDesc: 'Returns `True` if the date field falls within the specified time period',
@@ -659,7 +658,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    date_equals_day_of_month: {
+    'date-equals-day-of-month': {
       displayName: 'day of month is',
       shortDesc: 'Day of month equals',
       longDesc: 'Returns `True` if the day of the month equals the specified number',
@@ -693,7 +692,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    is_even_and_whole: {
+    'is-even-and-whole': {
       displayName: 'is even and whole',
       shortDesc: 'Number is even and whole',
       longDesc: 'Returns `True` if the number is even and a whole number',
@@ -710,7 +709,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    single_select_equal: {
+    'single-select-equal': {
       displayName: 'is',
       shortDesc: 'Single select equals',
       longDesc: 'Returns `True` if the single select field equals the specified option',
@@ -727,7 +726,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    single_select_not_equal: {
+    'single-select-not-equal': {
       displayName: 'is not',
       shortDesc: 'Single select does not equal',
       longDesc: 'Returns `True` if the single select field does not equal the specified option',
@@ -744,7 +743,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    single_select_is_any_of: {
+    'single-select-is-any-of': {
       displayName: 'is any of',
       shortDesc: 'Single select is any of',
       longDesc: 'Returns `True` if the single select field matches any of the specified options',
@@ -761,7 +760,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    single_select_is_none_of: {
+    'single-select-is-none-of': {
       displayName: 'is none of',
       shortDesc: 'Single select is none of',
       longDesc:
@@ -779,7 +778,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    multiple_select_has: {
+    'multiple-select-has': {
       displayName: 'has any of',
       shortDesc: 'Multiple select contains',
       longDesc: 'Returns `True` if the multiple select field contains the specified option',
@@ -796,7 +795,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    multiple_select_has_not: {
+    'multiple-select-has-not': {
       displayName: "doesn't have any of",
       shortDesc: 'Multiple select does not contain',
       longDesc: 'Returns `True` if the multiple select field does not contain the specified option',
@@ -813,7 +812,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    link_row_has: {
+    'link-row-has': {
       displayName: 'has',
       shortDesc: 'Link row contains',
       longDesc: 'Returns `True` if the link row field contains the specified linked record',
@@ -830,7 +829,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    link_row_has_not: {
+    'link-row-has-not': {
       displayName: "doesn't have",
       shortDesc: 'Link row does not contain',
       longDesc: 'Returns `True` if the link row field does not contain the specified linked record',
@@ -847,7 +846,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    link_row_contains: {
+    'link-row-contains': {
       displayName: 'contains',
       shortDesc: 'Link row value contains',
       longDesc: 'Returns `True` if any linked record value contains the specified text',
@@ -864,7 +863,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    link_row_not_contains: {
+    'link-row-not-contains': {
       displayName: "doesn't contain",
       shortDesc: 'Link row value does not contain',
       longDesc: 'Returns `True` if no linked record value contains the specified text',
@@ -881,7 +880,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    filename_contains: {
+    'filename-contains': {
       displayName: 'filename contains',
       shortDesc: 'File name contains text',
       longDesc: 'Returns `True` if any file name contains the specified text',
@@ -898,7 +897,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_file_type: {
+    'has-file-type': {
       displayName: 'has file type',
       shortDesc: 'Has file with type',
       longDesc: 'Returns `True` if the field contains a file with the specified type',
@@ -915,7 +914,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    files_lower_than: {
+    'files-lower-than': {
       displayName: 'files lower than',
       shortDesc: 'File count is less than',
       longDesc: 'Returns `True` if the number of files is less than the specified count',
@@ -932,7 +931,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    user_is: {
+    'user-is': {
       displayName: 'is',
       shortDesc: 'User equals',
       longDesc: 'Returns `True` if the user field equals the specified user',
@@ -949,7 +948,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    user_is_not: {
+    'user-is-not': {
       displayName: 'is not',
       shortDesc: 'User does not equal',
       longDesc: 'Returns `True` if the user field does not equal the specified user',
@@ -966,7 +965,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    multiple_collaborators_has: {
+    'multiple-collaborators-has': {
       displayName: 'has',
       shortDesc: 'Has collaborator',
       longDesc: 'Returns `True` if the multiple collaborators field contains the specified user',
@@ -983,7 +982,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    multiple_collaborators_has_not: {
+    'multiple-collaborators-has-not': {
       displayName: "doesn't have",
       shortDesc: 'Does not have collaborator',
       longDesc:
@@ -1001,7 +1000,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_empty_value: {
+    'has-empty-value': {
       displayName: 'has empty value',
       shortDesc: 'Lookup has empty value',
       longDesc: 'Returns `True` if the lookup field has at least one empty value',
@@ -1018,7 +1017,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_not_empty_value: {
+    'has-not-empty-value': {
       displayName: "doesn't have empty value",
       shortDesc: 'Lookup has no empty values',
       longDesc: 'Returns `True` if the lookup field has no empty values',
@@ -1035,7 +1034,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_value_equal: {
+    'has-value-equal': {
       displayName: 'has value equal',
       shortDesc: 'Lookup value equals',
       longDesc: 'Returns `True` if the lookup field has a value equal to the specified value',
@@ -1052,7 +1051,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_not_value_equal: {
+    'has-not-value-equal': {
       displayName: "doesn't have value equal",
       shortDesc: 'Lookup value does not equal',
       longDesc:
@@ -1070,7 +1069,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_value_contains: {
+    'has-value-contains': {
       displayName: 'has value contains',
       shortDesc: 'Lookup value contains',
       longDesc: 'Returns `True` if the lookup field has a value containing the specified text',
@@ -1087,7 +1086,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_not_value_contains: {
+    'has-not-value-contains': {
       displayName: "doesn't have value contains",
       shortDesc: 'Lookup value does not contain',
       longDesc:
@@ -1105,7 +1104,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_value_contains_word: {
+    'has-value-contains-word': {
       displayName: 'has value contains word',
       shortDesc: 'Lookup value contains word',
       longDesc: 'Returns `True` if the lookup field has a value containing the specified word',
@@ -1122,7 +1121,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_not_value_contains_word: {
+    'has-not-value-contains-word': {
       displayName: "doesn't have value contains word",
       shortDesc: 'Lookup value does not contain word',
       longDesc:
@@ -1140,7 +1139,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_value_length_is_lower_than: {
+    'has-value-length-is-lower-than': {
       displayName: 'has value length is lower than',
       shortDesc: 'Lookup value length is less than',
       longDesc:
@@ -1158,7 +1157,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_all_values_equal: {
+    'has-all-values-equal': {
       displayName: 'has all values equal',
       shortDesc: 'All lookup values equal',
       longDesc: 'Returns `True` if all values in the lookup field equal the specified value',
@@ -1175,7 +1174,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_any_select_option_equal: {
+    'has-any-select-option-equal': {
       displayName: 'has any select option equal',
       shortDesc: 'Lookup has select option',
       longDesc:
@@ -1193,7 +1192,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_none_select_option_equal: {
+    'has-none-select-option-equal': {
       displayName: "doesn't have select option equal",
       shortDesc: 'Lookup has no select option',
       longDesc:
@@ -1211,7 +1210,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_value_higher: {
+    'has-value-higher': {
       displayName: 'has value higher than',
       shortDesc: 'Lookup value is greater than',
       longDesc:
@@ -1229,7 +1228,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_not_value_higher: {
+    'has-not-value-higher': {
       displayName: "doesn't have value higher than",
       shortDesc: 'Lookup value is not greater than',
       longDesc:
@@ -1247,7 +1246,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_value_higher_or_equal: {
+    'has-value-higher-or-equal': {
       displayName: 'has value higher than or equal',
       shortDesc: 'Lookup value is greater than or equal',
       longDesc:
@@ -1265,7 +1264,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_not_value_higher_or_equal: {
+    'has-not-value-higher-or-equal': {
       displayName: "doesn't have value higher than or equal",
       shortDesc: 'Lookup value is not greater than or equal',
       longDesc:
@@ -1283,7 +1282,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_value_lower: {
+    'has-value-lower': {
       displayName: 'has value lower than',
       shortDesc: 'Lookup value is less than',
       longDesc:
@@ -1301,7 +1300,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_not_value_lower: {
+    'has-not-value-lower': {
       displayName: "doesn't have value lower than",
       shortDesc: 'Lookup value is not less than',
       longDesc:
@@ -1319,7 +1318,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_value_lower_or_equal: {
+    'has-value-lower-or-equal': {
       displayName: 'has value lower than or equal',
       shortDesc: 'Lookup value is less than or equal',
       longDesc:
@@ -1337,7 +1336,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_not_value_lower_or_equal: {
+    'has-not-value-lower-or-equal': {
       displayName: "doesn't have value lower than or equal",
       shortDesc: 'Lookup value is not less than or equal',
       longDesc:
@@ -1355,7 +1354,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_date_equal: {
+    'has-date-equal': {
       displayName: 'has date equal',
       shortDesc: 'Lookup date equals',
       longDesc: 'Returns `True` if the lookup field has a date equal to the specified date',
@@ -1372,7 +1371,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_not_date_equal: {
+    'has-not-date-equal': {
       displayName: "doesn't have date equal",
       shortDesc: 'Lookup date does not equal',
       longDesc:
@@ -1390,7 +1389,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_date_before: {
+    'has-date-before': {
       displayName: 'has date before',
       shortDesc: 'Lookup date is before',
       longDesc: 'Returns `True` if the lookup field has a date before the specified date',
@@ -1407,7 +1406,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_not_date_before: {
+    'has-not-date-before': {
       displayName: "doesn't have date before",
       shortDesc: 'Lookup date is not before',
       longDesc: 'Returns `True` if the lookup field does not have a date before the specified date',
@@ -1424,7 +1423,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_date_on_or_before: {
+    'has-date-on-or-before': {
       displayName: 'has date on or before',
       shortDesc: 'Lookup date is on or before',
       longDesc: 'Returns `True` if the lookup field has a date on or before the specified date',
@@ -1441,7 +1440,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_not_date_on_or_before: {
+    'has-not-date-on-or-before': {
       displayName: "doesn't have date on or before",
       shortDesc: 'Lookup date is not on or before',
       longDesc:
@@ -1459,7 +1458,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_date_after: {
+    'has-date-after': {
       displayName: 'has date after',
       shortDesc: 'Lookup date is after',
       longDesc: 'Returns `True` if the lookup field has a date after the specified date',
@@ -1476,7 +1475,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_not_date_after: {
+    'has-not-date-after': {
       displayName: "doesn't have date after",
       shortDesc: 'Lookup date is not after',
       longDesc: 'Returns `True` if the lookup field does not have a date after the specified date',
@@ -1493,7 +1492,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_date_on_or_after: {
+    'has-date-on-or-after': {
       displayName: 'has date on or after',
       shortDesc: 'Lookup date is on or after',
       longDesc: 'Returns `True` if the lookup field has a date on or after the specified date',
@@ -1510,7 +1509,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_not_date_on_or_after: {
+    'has-not-date-on-or-after': {
       displayName: "doesn't have date on or after",
       shortDesc: 'Lookup date is not on or after',
       longDesc:
@@ -1528,7 +1527,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_date_within: {
+    'has-date-within': {
       displayName: 'has date within',
       shortDesc: 'Lookup date is within period',
       longDesc: 'Returns `True` if the lookup field has a date within the specified time period',
@@ -1545,7 +1544,7 @@ const BaserowAppEn = {
         },
       ],
     },
-    has_not_date_within: {
+    'has-not-date-within': {
       displayName: "doesn't have date within",
       shortDesc: 'Lookup date is not within period',
       longDesc:

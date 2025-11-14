@@ -492,7 +492,7 @@ describe('Google Sheets', () => {
           'First Name': 'Isaac Updated',
         },
         {
-          exp: 'row_ids',
+          exp: 'row-ids',
           args: [{ value: [8] }],
         },
         { table }
@@ -508,7 +508,7 @@ describe('Google Sheets', () => {
           opts: { sheet_id: sheet },
         },
         {
-          exp: 'row_ids',
+          exp: 'row-ids',
           args: [{ value: [2, 3, 4] }],
         },
         { table }
@@ -532,7 +532,7 @@ describe('Google Sheets', () => {
           opts: { sheet_id: sheet },
         },
         {
-          exp: 'row_ids',
+          exp: 'row-ids',
           args: [{ value: [8, 9, 10] }],
         },
         { table }

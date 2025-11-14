@@ -201,7 +201,7 @@ describe('Should test Hubspot record based helpers', () => {
       const iterator = await searchHubspotRecords(
         baseContext,
         {
-          exp: 'has_property',
+          exp: 'has-property',
           args: [{ field: 'email' }],
         },
         {

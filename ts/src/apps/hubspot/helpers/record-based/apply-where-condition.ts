@@ -152,17 +152,17 @@ const buildSingleFilter = (expr: TQoreSearchRecordsWhereConditions): THubspotFil
       return buildComparisonFilter('LTE', args);
     case 'in':
       return buildInFilter('IN', args);
-    case 'not_in':
+    case 'not-in':
       return buildInFilter('NOT_IN', args);
     case 'between':
       return buildBetweenFilter(args);
-    case 'has_property':
+    case 'has-property':
       return buildPropertyFilter('HAS_PROPERTY', args);
-    case 'not_has_property':
+    case 'not-has-property':
       return buildPropertyFilter('NOT_HAS_PROPERTY', args);
-    case 'contains_token':
+    case 'contains-token':
       return buildComparisonFilter('CONTAINS_TOKEN', args);
-    case 'not_contains_token':
+    case 'not-contains-token':
       return buildComparisonFilter('NOT_CONTAINS_TOKEN', args);
     default:
       return null;

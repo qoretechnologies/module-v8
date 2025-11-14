@@ -149,7 +149,7 @@ const ZohoCrmAppEn = {
         },
       ],
     },
-    not_like: {
+    'not-like': {
       displayName: 'not like',
       shortDesc: 'Does not contain text pattern',
       longDesc: 'Returns `True` if the field value does not contain the specified text pattern',
@@ -183,7 +183,7 @@ const ZohoCrmAppEn = {
         },
       ],
     },
-    not_in: {
+    'not-in': {
       displayName: 'not in',
       shortDesc: 'Value is not in list',
       longDesc: 'Returns `True` if the field value does not match any value in the provided list',
@@ -222,7 +222,7 @@ const ZohoCrmAppEn = {
         },
       ],
     },
-    not_between: {
+    'not-between': {
       displayName: 'not between',
       shortDesc: 'Value is not between two values',
       longDesc: 'Returns `True` if the field value is not between two specified values',
@@ -244,7 +244,7 @@ const ZohoCrmAppEn = {
         },
       ],
     },
-    is_null: {
+    'is-null': {
       displayName: 'is null',
       shortDesc: 'Field is null',
       longDesc: 'Returns `True` if the field value is null or empty',
@@ -256,7 +256,7 @@ const ZohoCrmAppEn = {
         },
       ],
     },
-    is_not_null: {
+    'is-not-null': {
       displayName: 'is not null',
       shortDesc: 'Field is not null',
       longDesc: 'Returns `True` if the field value is not null or empty',

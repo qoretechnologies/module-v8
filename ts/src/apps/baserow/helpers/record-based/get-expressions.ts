@@ -50,6 +50,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         args: [
           {
             type_code: 'field reference',
+            label_after: '==',
             type: 'any',
           },
           {
@@ -69,6 +70,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         args: [
           {
             type_code: 'field reference',
+            label_after: '!=',
             type: 'any',
           },
           {
@@ -88,6 +90,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         args: [
           {
             type_code: 'field reference',
+            label_after: '>',
             type: 'number',
           },
           {
@@ -107,6 +110,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         args: [
           {
             type_code: 'field reference',
+            label_after: '>=',
             type: 'number',
           },
           {
@@ -126,6 +130,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         args: [
           {
             type_code: 'field reference',
+            label_after: '<',
             type: 'number',
           },
           {
@@ -145,6 +150,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         args: [
           {
             type_code: 'field reference',
+            label_after: '<=',
             type: 'number',
           },
           {
@@ -160,10 +166,11 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'contains',
         symbol: 'contains',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'contains',
             type: 'string',
           },
           {
@@ -173,16 +180,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      contains_not: {
+      'contains-not': {
         type: 'operator',
         subtype: 'generic',
-        name: 'contains_not',
-        symbol: "doesn't contain",
+        name: 'contains-not',
+        symbol: 'containsNot',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'containsNot',
             type: 'string',
           },
           {
@@ -192,16 +200,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      contains_word: {
+      'contains-word': {
         type: 'operator',
         subtype: 'generic',
-        name: 'contains_word',
-        symbol: 'contains word',
+        name: 'contains-word',
+        symbol: 'containsWord',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'containsWord',
             type: 'string',
           },
           {
@@ -211,16 +220,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      doesnt_contain_word: {
+      'doesnt-contain-word': {
         type: 'operator',
         subtype: 'generic',
-        name: 'doesnt_contain_word',
-        symbol: "doesn't contain word",
+        name: 'doesnt-contain-word',
+        symbol: 'doesntContainWord',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'doesntContainWord',
             type: 'string',
           },
           {
@@ -230,16 +240,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      length_is_lower_than: {
+      'length-is-lower-than': {
         type: 'operator',
         subtype: 'generic',
-        name: 'length_is_lower_than',
-        symbol: 'length is lower than',
+        name: 'length-is-lower-than',
+        symbol: 'lengthIsLowerThan',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'lengthIsLowerThan',
             type: 'string',
           },
           {
@@ -249,13 +260,13 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      empty: {
+      'empty': {
         type: 'operator',
         subtype: 'generic',
         name: 'empty',
-        symbol: 'is empty',
+        symbol: 'empty',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
@@ -264,13 +275,13 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      not_empty: {
+      'not-empty': {
         type: 'operator',
         subtype: 'generic',
-        name: 'not_empty',
-        symbol: 'is not empty',
+        name: 'not-empty',
+        symbol: 'isNotEmpty',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
@@ -279,16 +290,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      date_is: {
+      'date-is': {
         type: 'operator',
         subtype: 'generic',
-        name: 'date_is',
-        symbol: 'date is',
+        name: 'date-is',
+        symbol: 'dateIs',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'dateIs',
             type: 'date',
           },
           {
@@ -298,16 +310,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      date_is_not: {
+      'date-is-not': {
         type: 'operator',
         subtype: 'generic',
-        name: 'date_is_not',
-        symbol: 'date is not',
+        name: 'date-is-not',
+        symbol: 'dateIsNot',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'dateIsNot',
             type: 'date',
           },
           {
@@ -317,16 +330,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      date_is_before: {
+      'date-is-before': {
         type: 'operator',
         subtype: 'generic',
-        name: 'date_is_before',
-        symbol: 'date is before',
+        name: 'date-is-before',
+        symbol: 'dateIsBefore',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'dateIsBefore',
             type: 'date',
           },
           {
@@ -336,16 +350,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      date_is_on_or_before: {
+      'date-is-on-or-before': {
         type: 'operator',
         subtype: 'generic',
-        name: 'date_is_on_or_before',
-        symbol: 'date is on or before',
+        name: 'date-is-on-or-before',
+        symbol: 'dateIsOnOrBefore',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'dateIsOnOrBefore',
             type: 'date',
           },
           {
@@ -355,16 +370,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      date_is_after: {
+      'date-is-after': {
         type: 'operator',
         subtype: 'generic',
-        name: 'date_is_after',
-        symbol: 'date is after',
+        name: 'date-is-after',
+        symbol: 'dateIsAfter',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'dateIsAfter',
             type: 'date',
           },
           {
@@ -374,16 +390,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      date_is_on_or_after: {
+      'date-is-on-or-after': {
         type: 'operator',
         subtype: 'generic',
-        name: 'date_is_on_or_after',
-        symbol: 'date is on or after',
+        name: 'date-is-on-or-after',
+        symbol: 'dateIsOnOrAfter',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'dateIsOnOrAfter',
             type: 'date',
           },
           {
@@ -393,16 +410,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      date_is_within: {
+      'date-is-within': {
         type: 'operator',
         subtype: 'generic',
-        name: 'date_is_within',
-        symbol: 'date is within',
+        name: 'date-is-within',
+        symbol: 'dateIsWithin',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'dateIsWithin',
             type: 'date',
           },
           {
@@ -412,16 +430,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      date_equals_day_of_month: {
+      'date-equals-day-of-month': {
         type: 'operator',
         subtype: 'generic',
-        name: 'date_equals_day_of_month',
-        symbol: 'day of month is',
+        name: 'date-equals-day-of-month',
+        symbol: 'dayOfMonthIs',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'dayOfMonthIs',
             type: 'date',
           },
           {
@@ -441,6 +460,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         args: [
           {
             type_code: 'field reference',
+            label_after: 'is',
             type: 'bool',
           },
           {
@@ -450,16 +470,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      is_even_and_whole: {
+      'is-even-and-whole': {
         type: 'operator',
         subtype: 'generic',
-        name: 'is_even_and_whole',
-        symbol: 'is even and whole',
+        name: 'is-even-and-whole',
+        symbol: 'isEvenAndWhole',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'isEvenAndWhole',
             type: 'number',
           },
           {
@@ -469,16 +490,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      single_select_equal: {
+      'single-select-equal': {
         type: 'operator',
         subtype: 'generic',
-        name: 'single_select_equal',
+        name: 'single-select-equal',
         symbol: 'is',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'is',
             type: 'string',
           },
           {
@@ -488,16 +510,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      single_select_not_equal: {
+      'single-select-not-equal': {
         type: 'operator',
         subtype: 'generic',
-        name: 'single_select_not_equal',
-        symbol: 'is not',
+        name: 'single-select-not-equal',
+        symbol: 'isNot',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'isNot',
             type: 'string',
           },
           {
@@ -507,33 +530,11 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      single_select_is_any_of: {
+      'single-select-is-any-of': {
         type: 'operator',
         subtype: 'generic',
-        name: 'single_select_is_any_of',
-        symbol: 'is any of',
-        roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
-        args: [
-          {
-            type_code: 'field reference',
-            type: 'string',
-          },
-          {
-            type_code: 'value',
-            type: {
-              type: 'list',
-              element_type: 'string',
-            },
-          },
-        ],
-        return_type: 'bool',
-      },
-      single_select_is_none_of: {
-        type: 'operator',
-        subtype: 'generic',
-        name: 'single_select_is_none_of',
-        symbol: 'is none of',
+        name: 'single-select-is-any-of',
+        symbol: 'isAnyOf',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
@@ -551,13 +552,35 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      multiple_select_has: {
+      'single-select-is-none-of': {
         type: 'operator',
         subtype: 'generic',
-        name: 'multiple_select_has',
-        symbol: 'has any of',
+        name: 'single-select-is-none-of',
+        symbol: 'isNoneOf',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
+        args: [
+          {
+            type_code: 'field reference',
+            type: 'string',
+          },
+          {
+            type_code: 'value',
+            type: {
+              type: 'list',
+              element_type: 'string',
+            },
+          },
+        ],
+        return_type: 'bool',
+      },
+      'multiple-select-has': {
+        type: 'operator',
+        subtype: 'generic',
+        name: 'multiple-select-has',
+        symbol: 'hasAnyOf',
+        roles: ['search'],
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
@@ -573,13 +596,13 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      multiple_select_has_not: {
+      'multiple-select-has-not': {
         type: 'operator',
         subtype: 'generic',
-        name: 'multiple_select_has_not',
-        symbol: "doesn't have any of",
+        name: 'multiple-select-has-not',
+        symbol: 'doesntHaveAnyOf',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
@@ -595,16 +618,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      link_row_has: {
+      'link-row-has': {
         type: 'operator',
         subtype: 'generic',
-        name: 'link_row_has',
+        name: 'link-row-has',
         symbol: 'has',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'has',
             type: 'any',
           },
           {
@@ -614,16 +638,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      link_row_has_not: {
+      'link-row-has-not': {
         type: 'operator',
         subtype: 'generic',
-        name: 'link_row_has_not',
-        symbol: "doesn't have",
+        name: 'link-row-has-not',
+        symbol: 'doesntHave',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'doesntHave',
             type: 'any',
           },
           {
@@ -633,16 +658,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      link_row_contains: {
+      'link-row-contains': {
         type: 'operator',
         subtype: 'generic',
-        name: 'link_row_contains',
+        name: 'link-row-contains',
         symbol: 'contains',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'contains',
             type: 'string',
           },
           {
@@ -652,16 +678,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      link_row_not_contains: {
+      'link-row-not-contains': {
         type: 'operator',
         subtype: 'generic',
-        name: 'link_row_not_contains',
-        symbol: "doesn't contain",
+        name: 'link-row-not-contains',
+        symbol: 'doesntContain',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'doesntContain',
             type: 'string',
           },
           {
@@ -671,16 +698,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      filename_contains: {
+      'filename-contains': {
         type: 'operator',
         subtype: 'generic',
-        name: 'filename_contains',
-        symbol: 'filename contains',
+        name: 'filename-contains',
+        symbol: 'filenameContains',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'filenameContains',
             type: 'string',
           },
           {
@@ -690,16 +718,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_file_type: {
+      'has-file-type': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_file_type',
-        symbol: 'has file type',
+        name: 'has-file-type',
+        symbol: 'hasFileType',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'hasFileType',
             type: 'string',
           },
           {
@@ -709,16 +738,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      files_lower_than: {
+      'files-lower-than': {
         type: 'operator',
         subtype: 'generic',
-        name: 'files_lower_than',
-        symbol: 'files lower than',
+        name: 'files-lower-than',
+        symbol: 'filesLowerThan',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'filesLowerThan',
             type: 'any',
           },
           {
@@ -728,16 +758,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      user_is: {
+      'user-is': {
         type: 'operator',
         subtype: 'generic',
-        name: 'user_is',
+        name: 'user-is',
         symbol: 'is',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'is',
             type: 'string',
           },
           {
@@ -747,16 +778,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      user_is_not: {
+      'user-is-not': {
         type: 'operator',
         subtype: 'generic',
-        name: 'user_is_not',
-        symbol: 'is not',
+        name: 'user-is-not',
+        symbol: 'isNot',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'isNot',
             type: 'string',
           },
           {
@@ -766,16 +798,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      multiple_collaborators_has: {
+      'multiple-collaborators-has': {
         type: 'operator',
         subtype: 'generic',
-        name: 'multiple_collaborators_has',
+        name: 'multiple-collaborators-has',
         symbol: 'has',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'has',
             type: 'any',
           },
           {
@@ -785,73 +818,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      multiple_collaborators_has_not: {
+      'multiple-collaborators-has-not': {
         type: 'operator',
         subtype: 'generic',
-        name: 'multiple_collaborators_has_not',
-        symbol: "doesn't have",
-        roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
-        args: [
-          {
-            type_code: 'field reference',
-            type: 'any',
-          },
-          {
-            type_code: 'value',
-            type: 'string',
-          },
-        ],
-        return_type: 'bool',
-      },
-      has_empty_value: {
-        type: 'operator',
-        subtype: 'generic',
-        name: 'has_empty_value',
-        symbol: 'has empty value',
-        roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
-        args: [
-          {
-            type_code: 'field reference',
-            type: 'any',
-          },
-          {
-            type_code: 'value',
-            type: 'string',
-          },
-        ],
-        return_type: 'bool',
-      },
-      has_not_empty_value: {
-        type: 'operator',
-        subtype: 'generic',
-        name: 'has_not_empty_value',
-        symbol: "doesn't have empty value",
-        roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
-        args: [
-          {
-            type_code: 'field reference',
-            type: 'any',
-          },
-          {
-            type_code: 'value',
-            type: 'string',
-          },
-        ],
-        return_type: 'bool',
-      },
-      has_value_equal: {
-        type: 'operator',
-        subtype: 'generic',
-        name: 'has_value_equal',
-        symbol: 'has value equal',
+        name: 'multiple-collaborators-has-not',
+        symbol: 'doesntHave',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'doesntHave',
             type: 'any',
           },
           {
@@ -861,16 +838,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_not_value_equal: {
+      'has-empty-value': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_not_value_equal',
-        symbol: "doesn't have value equal",
+        name: 'has-empty-value',
+        symbol: 'hasEmptyValue',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'hasEmptyValue',
             type: 'any',
           },
           {
@@ -880,16 +858,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_value_contains: {
+      'has-not-empty-value': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_value_contains',
-        symbol: 'has value contains',
+        name: 'has-not-empty-value',
+        symbol: 'doesntHaveEmptyValue',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'doesntHaveEmptyValue',
             type: 'any',
           },
           {
@@ -899,16 +878,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_not_value_contains: {
+      'has-value-equal': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_not_value_contains',
-        symbol: "doesn't have value contains",
+        name: 'has-value-equal',
+        symbol: 'hasValueEqual',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'hasValueEqual',
             type: 'any',
           },
           {
@@ -918,16 +898,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_value_contains_word: {
+      'has-not-value-equal': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_value_contains_word',
-        symbol: 'has value contains word',
+        name: 'has-not-value-equal',
+        symbol: 'doesntHaveValueEqual',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'doesntHaveValueEqual',
             type: 'any',
           },
           {
@@ -937,16 +918,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_not_value_contains_word: {
+      'has-value-contains': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_not_value_contains_word',
-        symbol: "doesn't have value contains word",
+        name: 'has-value-contains',
+        symbol: 'hasValueContains',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'hasValueContains',
             type: 'any',
           },
           {
@@ -956,16 +938,77 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_value_length_is_lower_than: {
+      'has-not-value-contains': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_value_length_is_lower_than',
-        symbol: 'has value length is lower than',
+        name: 'has-not-value-contains',
+        symbol: 'doesntHaveValueContains',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'doesntHaveValueContains',
+            type: 'any',
+          },
+          {
+            type_code: 'value',
+            type: 'string',
+          },
+        ],
+        return_type: 'bool',
+      },
+      'has-value-contains-word': {
+        type: 'operator',
+        subtype: 'generic',
+        name: 'has-value-contains-word',
+        symbol: 'hasValueContainsWord',
+        roles: ['search'],
+        group: EQoreExpressionGroups.COMPARISON,
+        args: [
+          {
+            type_code: 'field reference',
+            label_after: 'hasValueContainsWord',
+            type: 'any',
+          },
+          {
+            type_code: 'value',
+            type: 'string',
+          },
+        ],
+        return_type: 'bool',
+      },
+      'has-not-value-contains-word': {
+        type: 'operator',
+        subtype: 'generic',
+        name: 'has-not-value-contains-word',
+        symbol: 'doesntHaveValueContainsWord',
+        roles: ['search'],
+        group: EQoreExpressionGroups.COMPARISON,
+        args: [
+          {
+            type_code: 'field reference',
+            label_after: 'doesntHaveValueContainsWord',
+            type: 'any',
+          },
+          {
+            type_code: 'value',
+            type: 'string',
+          },
+        ],
+        return_type: 'bool',
+      },
+      'has-value-length-is-lower-than': {
+        type: 'operator',
+        subtype: 'generic',
+        name: 'has-value-length-is-lower-than',
+        symbol: 'hasValueLengthIsLowerThan',
+        roles: ['search'],
+        group: EQoreExpressionGroups.COMPARISON,
+        args: [
+          {
+            type_code: 'field reference',
+            label_after: 'hasValueLengthIsLowerThan',
             type: 'any',
           },
           {
@@ -975,16 +1018,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_all_values_equal: {
+      'has-all-values-equal': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_all_values_equal',
-        symbol: 'has all values equal',
+        name: 'has-all-values-equal',
+        symbol: 'hasAllValuesEqual',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'hasAllValuesEqual',
             type: 'any',
           },
           {
@@ -994,16 +1038,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_any_select_option_equal: {
+      'has-any-select-option-equal': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_any_select_option_equal',
-        symbol: 'has any select option equal',
+        name: 'has-any-select-option-equal',
+        symbol: 'hasAnySelectOptionEqual',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'hasAnySelectOptionEqual',
             type: 'any',
           },
           {
@@ -1013,16 +1058,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_none_select_option_equal: {
+      'has-none-select-option-equal': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_none_select_option_equal',
-        symbol: "doesn't have select option equal",
+        name: 'has-none-select-option-equal',
+        symbol: 'doesntHaveSelectOptionEqual',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'doesntHaveSelectOptionEqual',
             type: 'any',
           },
           {
@@ -1032,16 +1078,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_value_higher: {
+      'has-value-higher': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_value_higher',
-        symbol: 'has value higher than',
+        name: 'has-value-higher',
+        symbol: 'hasValueHigherThan',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'hasValueHigherThan',
             type: 'any',
           },
           {
@@ -1051,16 +1098,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_not_value_higher: {
+      'has-not-value-higher': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_not_value_higher',
-        symbol: "doesn't have value higher than",
+        name: 'has-not-value-higher',
+        symbol: 'doesntHaveValueHigherThan',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'doesntHaveValueHigherThan',
             type: 'any',
           },
           {
@@ -1070,16 +1118,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_value_higher_or_equal: {
+      'has-value-higher-or-equal': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_value_higher_or_equal',
-        symbol: 'has value higher than or equal',
+        name: 'has-value-higher-or-equal',
+        symbol: 'hasValueHigherThanOrEqual',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'hasValueHigherThanOrEqual',
             type: 'any',
           },
           {
@@ -1089,16 +1138,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_not_value_higher_or_equal: {
+      'has-not-value-higher-or-equal': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_not_value_higher_or_equal',
-        symbol: "doesn't have value higher than or equal",
+        name: 'has-not-value-higher-or-equal',
+        symbol: 'doesntHaveValueHigherThanOrEqual',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'doesntHaveValueHigherThanOrEqual',
             type: 'any',
           },
           {
@@ -1108,16 +1158,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_value_lower: {
+      'has-value-lower': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_value_lower',
-        symbol: 'has value lower than',
+        name: 'has-value-lower',
+        symbol: 'hasValueLowerThan',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'hasValueLowerThan',
             type: 'any',
           },
           {
@@ -1127,16 +1178,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_not_value_lower: {
+      'has-not-value-lower': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_not_value_lower',
-        symbol: "doesn't have value lower than",
+        name: 'has-not-value-lower',
+        symbol: 'doesntHaveValueLowerThan',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'doesntHaveValueLowerThan',
             type: 'any',
           },
           {
@@ -1146,16 +1198,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_value_lower_or_equal: {
+      'has-value-lower-or-equal': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_value_lower_or_equal',
-        symbol: 'has value lower than or equal',
+        name: 'has-value-lower-or-equal',
+        symbol: 'hasValueLowerThanOrEqual',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'hasValueLowerThanOrEqual',
             type: 'any',
           },
           {
@@ -1165,16 +1218,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_not_value_lower_or_equal: {
+      'has-not-value-lower-or-equal': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_not_value_lower_or_equal',
-        symbol: "doesn't have value lower than or equal",
+        name: 'has-not-value-lower-or-equal',
+        symbol: 'doesntHaveValueLowerThanOrEqual',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'doesntHaveValueLowerThanOrEqual',
             type: 'any',
           },
           {
@@ -1184,16 +1238,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_date_equal: {
+      'has-date-equal': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_date_equal',
-        symbol: 'has date equal',
+        name: 'has-date-equal',
+        symbol: 'hasDateEqual',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'hasDateEqual',
             type: 'any',
           },
           {
@@ -1203,16 +1258,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_not_date_equal: {
+      'has-not-date-equal': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_not_date_equal',
-        symbol: "doesn't have date equal",
+        name: 'has-not-date-equal',
+        symbol: 'doesntHaveDateEqual',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'doesntHaveDateEqual',
             type: 'any',
           },
           {
@@ -1222,16 +1278,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_date_before: {
+      'has-date-before': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_date_before',
-        symbol: 'has date before',
+        name: 'has-date-before',
+        symbol: 'hasDateBefore',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'hasDateBefore',
             type: 'any',
           },
           {
@@ -1241,16 +1298,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_not_date_before: {
+      'has-not-date-before': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_not_date_before',
-        symbol: "doesn't have date before",
+        name: 'has-not-date-before',
+        symbol: 'doesntHaveDateBefore',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'doesntHaveDateBefore',
             type: 'any',
           },
           {
@@ -1260,16 +1318,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_date_on_or_before: {
+      'has-date-on-or-before': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_date_on_or_before',
-        symbol: 'has date on or before',
+        name: 'has-date-on-or-before',
+        symbol: 'hasDateOnOrBefore',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'hasDateOnOrBefore',
             type: 'any',
           },
           {
@@ -1279,16 +1338,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_not_date_on_or_before: {
+      'has-not-date-on-or-before': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_not_date_on_or_before',
-        symbol: "doesn't have date on or before",
+        name: 'has-not-date-on-or-before',
+        symbol: 'doesntHaveDateOnOrBefore',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'doesntHaveDateOnOrBefore',
             type: 'any',
           },
           {
@@ -1298,16 +1358,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_date_after: {
+      'has-date-after': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_date_after',
-        symbol: 'has date after',
+        name: 'has-date-after',
+        symbol: 'hasDateAfter',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'hasDateAfter',
             type: 'any',
           },
           {
@@ -1317,16 +1378,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_not_date_after: {
+      'has-not-date-after': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_not_date_after',
-        symbol: "doesn't have date after",
+        name: 'has-not-date-after',
+        symbol: 'doesntHaveDateAfter',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'doesntHaveDateAfter',
             type: 'any',
           },
           {
@@ -1336,16 +1398,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_date_on_or_after: {
+      'has-date-on-or-after': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_date_on_or_after',
-        symbol: 'has date on or after',
+        name: 'has-date-on-or-after',
+        symbol: 'hasDateOnOrAfter',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'hasDateOnOrAfter',
             type: 'any',
           },
           {
@@ -1355,16 +1418,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_not_date_on_or_after: {
+      'has-not-date-on-or-after': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_not_date_on_or_after',
-        symbol: "doesn't have date on or after",
+        name: 'has-not-date-on-or-after',
+        symbol: 'doesntHaveDateOnOrAfter',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'doesntHaveDateOnOrAfter',
             type: 'any',
           },
           {
@@ -1374,16 +1438,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_date_within: {
+      'has-date-within': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_date_within',
-        symbol: 'has date within',
+        name: 'has-date-within',
+        symbol: 'hasDateWithin',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'hasDateWithin',
             type: 'any',
           },
           {
@@ -1393,16 +1458,17 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      has_not_date_within: {
+      'has-not-date-within': {
         type: 'operator',
         subtype: 'generic',
-        name: 'has_not_date_within',
-        symbol: "doesn't have date within",
+        name: 'has-not-date-within',
+        symbol: 'doesntHaveDateWithin',
         roles: ['search'],
         group: EQoreExpressionGroups.DATE_TIME,
         args: [
           {
             type_code: 'field reference',
+            label_after: 'doesntHaveDateWithin',
             type: 'any',
           },
           {

@@ -11,7 +11,7 @@ import {
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import { SUPABASE_APP_LOGO, SUPABASE_APP_NAME, SUPABASE_CONN_OPTIONS } from './constants';
-import { getSupabaseExpressions } from './helpers/record-based/get-expression';
+import { getSupabaseExpressions } from './helpers/record-based/get-expressions';
 import { getSupabaseRecordType } from './helpers/record-based/get-record-type';
 import { getSupabaseTableList } from './helpers/record-based/get-table-list';
 import { searchSupabaseRecords } from './helpers/record-based/search-records';
