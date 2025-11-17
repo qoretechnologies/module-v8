@@ -97,7 +97,7 @@ const buildSingleFilter = (expr: TQoreSearchRecordsWhereConditions): TBaserowFil
     field,
   };
 
-  if (exp === 'not-empty' || exp === 'is-empty') {
+  if (exp === 'not-empty' || exp === 'empty') {
     baseFilter.value = '';
   } else if (rawValue !== undefined) {
     if (typeof rawValue === 'boolean') {
