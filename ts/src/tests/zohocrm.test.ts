@@ -539,7 +539,7 @@ describe('Should test Zoho Crm', () => {
       const getRecordsIterator = await searchZohoCrmRecords(
         baseContext,
         {
-          exp: 'is_not_null',
+          exp: 'is-not-null',
           args: [{ field: 'Phone' }],
         },
         { table: module }

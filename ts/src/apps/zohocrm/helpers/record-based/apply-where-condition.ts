@@ -30,13 +30,13 @@ const buildCoqlCondition = (condition: TQoreSearchRecordsWhereConditions): strin
     case '<':
     case '<=':
     case 'like':
-    case 'not_like':
+    case 'not-like':
     case 'in':
-    case 'not_in':
+    case 'not-in':
     case 'between':
-    case 'not_between':
-    case 'is_null':
-    case 'is_not_null':
+    case 'not-between':
+    case 'is-null':
+    case 'is-not-null':
       return buildComparisonCondition(condition);
     default:
       return '';
@@ -118,19 +118,19 @@ const buildComparisonCondition = (expression: TQoreSearchRecordsWhereConditions)
       return buildLessThanOrEqualCondition(field, args[1]);
     case 'like':
       return buildLikeCondition(field, args[1]);
-    case 'not_like':
+    case 'not-like':
       return buildNotLikeCondition(field, args[1]);
     case 'in':
       return buildInCondition(field, args[1]);
-    case 'not_in':
+    case 'not-in':
       return buildNotInCondition(field, args[1]);
     case 'between':
       return buildBetweenCondition(field, args[1], args[2]);
-    case 'not_between':
+    case 'not-between':
       return buildNotBetweenCondition(field, args[1], args[2]);
-    case 'is_null':
+    case 'is-null':
       return buildIsNullCondition(field);
-    case 'is_not_null':
+    case 'is-not-null':
       return buildIsNotNullCondition(field);
     default:
       return '';

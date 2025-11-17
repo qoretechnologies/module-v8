@@ -50,6 +50,7 @@ export const getZohoCrmExpressions = (locale: Locales): TQoreSearchRecordsExpres
           {
             type_code: 'field reference',
             type: 'any',
+            label_after: '==',
           },
           {
             type_code: 'value',
@@ -69,6 +70,7 @@ export const getZohoCrmExpressions = (locale: Locales): TQoreSearchRecordsExpres
           {
             type_code: 'field reference',
             type: 'any',
+            label_after: '!=',
           },
           {
             type_code: 'value',
@@ -88,6 +90,7 @@ export const getZohoCrmExpressions = (locale: Locales): TQoreSearchRecordsExpres
           {
             type_code: 'field reference',
             type: 'any',
+            label_after: '>',
           },
           {
             type_code: 'value',
@@ -107,6 +110,7 @@ export const getZohoCrmExpressions = (locale: Locales): TQoreSearchRecordsExpres
           {
             type_code: 'field reference',
             type: 'any',
+            label_after: '>=',
           },
           {
             type_code: 'value',
@@ -126,6 +130,7 @@ export const getZohoCrmExpressions = (locale: Locales): TQoreSearchRecordsExpres
           {
             type_code: 'field reference',
             type: 'any',
+            label_after: '<',
           },
           {
             type_code: 'value',
@@ -145,6 +150,7 @@ export const getZohoCrmExpressions = (locale: Locales): TQoreSearchRecordsExpres
           {
             type_code: 'field reference',
             type: 'any',
+            label_after: '<=',
           },
           {
             type_code: 'value',
@@ -159,11 +165,12 @@ export const getZohoCrmExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'like',
         symbol: 'like',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
             type: 'string',
+            label_after: 'like',
           },
           {
             type_code: 'value',
@@ -172,17 +179,18 @@ export const getZohoCrmExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      not_like: {
+      'not-like': {
         type: 'operator',
         subtype: 'generic',
-        name: 'not like',
-        symbol: 'not_like',
+        name: 'not-like',
+        symbol: 'notLike',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
             type: 'string',
+            label_after: 'notLike',
           },
           {
             type_code: 'value',
@@ -202,6 +210,7 @@ export const getZohoCrmExpressions = (locale: Locales): TQoreSearchRecordsExpres
           {
             type_code: 'field reference',
             type: 'any',
+            label_after: 'in',
           },
           {
             type_code: 'value',
@@ -213,17 +222,18 @@ export const getZohoCrmExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      not_in: {
+      'not-in': {
         type: 'operator',
         subtype: 'generic',
-        name: 'not in',
-        symbol: 'not_in',
+        name: 'not-in',
+        symbol: 'notIn',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
           {
             type_code: 'field reference',
             type: 'any',
+            label_after: 'notIn',
           },
           {
             type_code: 'value',
@@ -246,10 +256,12 @@ export const getZohoCrmExpressions = (locale: Locales): TQoreSearchRecordsExpres
           {
             type_code: 'field reference',
             type: 'any',
+            label_after: 'between',
           },
           {
             type_code: 'value',
             type: 'any',
+            label_after: 'and',
           },
           {
             type_code: 'value',
@@ -258,11 +270,36 @@ export const getZohoCrmExpressions = (locale: Locales): TQoreSearchRecordsExpres
         ],
         return_type: 'bool',
       },
-      not_between: {
+      'not-between': {
         type: 'operator',
         subtype: 'generic',
-        name: 'not between',
-        symbol: 'not_between',
+        name: 'not-between',
+        symbol: 'notBetween',
+        roles: ['search'],
+        group: EQoreExpressionGroups.COMPARISON,
+        args: [
+          {
+            type_code: 'field reference',
+            type: 'any',
+            label_after: 'notBetween',
+          },
+          {
+            type_code: 'value',
+            type: 'any',
+            label_after: 'and',
+          },
+          {
+            type_code: 'value',
+            type: 'any',
+          },
+        ],
+        return_type: 'bool',
+      },
+      'is-null': {
+        type: 'operator',
+        subtype: 'generic',
+        name: 'is-null',
+        symbol: 'isNull',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [
@@ -270,37 +307,14 @@ export const getZohoCrmExpressions = (locale: Locales): TQoreSearchRecordsExpres
             type_code: 'field reference',
             type: 'any',
           },
-          {
-            type_code: 'value',
-            type: 'any',
-          },
-          {
-            type_code: 'value',
-            type: 'any',
-          },
         ],
         return_type: 'bool',
       },
-      is_null: {
+      'is-not-null': {
         type: 'operator',
         subtype: 'generic',
-        name: 'is null',
-        symbol: 'is_null',
-        roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
-        args: [
-          {
-            type_code: 'field reference',
-            type: 'any',
-          },
-        ],
-        return_type: 'bool',
-      },
-      is_not_null: {
-        type: 'operator',
-        subtype: 'generic',
-        name: 'is not null',
-        symbol: 'is_not_null',
+        name: 'is-not-null',
+        symbol: 'isNotNull',
         roles: ['search'],
         group: EQoreExpressionGroups.COMPARISON,
         args: [

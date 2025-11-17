@@ -549,7 +549,7 @@ const GoogleSheetsAppEn = {
     },
   },
   expressions: {
-    row_ids: {
+    'row-ids': {
       displayName: 'Row IDs',
       shortDesc: 'List of row IDs',
       longDesc: 'Provide a list of row IDs to target specific rows in a Google Sheets spreadsheet.',

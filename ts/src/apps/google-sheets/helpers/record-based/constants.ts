@@ -49,22 +49,22 @@ export const getGoogleSheetsTableIdByName = async (
 export const extractRowIds = (where?: TQoreSearchRecordsWhereConditions): number[] => {
   if (!where) {
     throw new GoogleSheetsError(
-      'Google Sheets requires row IDs to be specified using the row_ids expression. ' +
-        'Example: { exp: "row_ids", args: [{ value: [1, 5, 10] }] }'
+      'Google Sheets requires row IDs to be specified using the row-ids expression. ' +
+        'Example: { exp: "row-ids", args: [{ value: [1, 5, 10] }] }'
     );
   }
 
-  if (where.exp !== 'row_ids') {
+  if (where.exp !== 'row-ids') {
     throw new GoogleSheetsError(
       `Unsupported expression "${where.exp}". ` +
-        'Google Sheets only supports the "row_ids" expression for filtering. ' +
-        'Example: { exp: "row_ids", args: [{ value: [1, 5, 10] }] }'
+        'Google Sheets only supports the "row-ids" expression for filtering. ' +
+        'Example: { exp: "row-ids", args: [{ value: [1, 5, 10] }] }'
     );
   }
 
   if (!where.args || where.args.length === 0) {
     throw new GoogleSheetsError(
-      'The row_ids expression requires a list of row numbers as an argument'
+      'The row-ids expression requires a list of row numbers as an argument'
     );
   }
 
@@ -72,7 +72,7 @@ export const extractRowIds = (where?: TQoreSearchRecordsWhereConditions): number
 
   if (!valueArg || !('value' in valueArg)) {
     throw new GoogleSheetsError(
-      'The row_ids expression argument must be a value containing an array of row numbers'
+      'The row-ids expression argument must be a value containing an array of row numbers'
     );
   }
 
@@ -80,7 +80,7 @@ export const extractRowIds = (where?: TQoreSearchRecordsWhereConditions): number
 
   if (!Array.isArray(value)) {
     throw new GoogleSheetsError(
-      'The row_ids expression requires an array of row numbers. Example: [1, 5, 10, 23]'
+      'The row-ids expression requires an array of row numbers. Example: [1, 5, 10, 23]'
     );
   }
 
@@ -88,7 +88,7 @@ export const extractRowIds = (where?: TQoreSearchRecordsWhereConditions): number
 
   if (rowIds.length === 0) {
     throw new GoogleSheetsError(
-      'The row_ids expression requires at least one valid row number (positive integer)'
+      'The row-ids expression requires at least one valid row number (positive integer)'
     );
   }
 

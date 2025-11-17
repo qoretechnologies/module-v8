@@ -50,6 +50,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
           {
             type_code: 'any',
             type: 'bool',
+            label_before: '!',
           },
         ],
         return_type: 'bool',
@@ -65,6 +66,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
           {
             type_code: 'field reference',
             type: 'any',
+            label_after: '==',
           },
           {
             type_code: 'value',
@@ -84,6 +86,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
           {
             type_code: 'field reference',
             type: 'any',
+            label_after: '!=',
           },
           {
             type_code: 'value',
@@ -103,6 +106,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
           {
             type_code: 'field reference',
             type: 'any',
+            label_after: '>',
           },
           {
             type_code: 'value',
@@ -122,6 +126,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
           {
             type_code: 'field reference',
             type: 'any',
+            label_after: '>=',
           },
           {
             type_code: 'value',
@@ -141,6 +146,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
           {
             type_code: 'field reference',
             type: 'any',
+            label_after: '<',
           },
           {
             type_code: 'value',
@@ -160,6 +166,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
           {
             type_code: 'field reference',
             type: 'any',
+            label_after: '<=',
           },
           {
             type_code: 'value',
@@ -179,6 +186,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
           {
             type_code: 'field reference',
             type: 'string',
+            label_after: 'like',
           },
           {
             type_code: 'value',
@@ -198,6 +206,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
           {
             type_code: 'field reference',
             type: 'string',
+            label_after: 'ilike',
           },
           {
             type_code: 'value',
@@ -217,6 +226,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
           {
             type_code: 'field reference',
             type: 'any',
+            label_after: 'in',
           },
           {
             type_code: 'value',
@@ -236,8 +246,15 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
         roles: ['search'],
         group: EQoreExpressionGroups.DATA_MANIPULATION,
         args: [
-          { type_code: 'field reference', type: { type: 'list', element_type: 'any' } },
-          { type_code: 'value', type: { type: 'list', element_type: 'any' } },
+          { 
+            type_code: 'field reference', 
+            type: { type: 'list', element_type: 'any' },
+            label_after: 'contains',
+          },
+          { 
+            type_code: 'value', 
+            type: { type: 'list', element_type: 'any' } 
+          },
         ],
         return_type: 'bool',
       },

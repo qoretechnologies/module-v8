@@ -524,7 +524,7 @@ const NotionAppEn = {
         },
       ],
     },
-    is_empty: {
+    'is-empty': {
       displayName: 'is empty',
       shortDesc: 'Field is empty',
       longDesc: 'Returns `True` if the field is empty or not set',
@@ -536,7 +536,7 @@ const NotionAppEn = {
         },
       ],
     },
-    is_not_empty: {
+    'is-not-empty': {
       displayName: 'is not empty',
       shortDesc: 'Field is not empty',
       longDesc: 'Returns `True` if the field has a value',
@@ -548,7 +548,7 @@ const NotionAppEn = {
         },
       ],
     },
-    starts_with: {
+    'starts-with': {
       displayName: 'starts with',
       shortDesc: 'Starts with text',
       longDesc: 'Returns `True` if the field starts with the specified text',
@@ -565,7 +565,7 @@ const NotionAppEn = {
         },
       ],
     },
-    ends_with: {
+    'ends-with': {
       displayName: 'ends with',
       shortDesc: 'Ends with text',
       longDesc: 'Returns `True` if the field ends with the specified text',
@@ -582,7 +582,7 @@ const NotionAppEn = {
         },
       ],
     },
-    next_week: {
+    'next-week': {
       displayName: 'next week',
       shortDesc: 'Date is next week',
       longDesc: 'Returns `True` if the date falls within the next week',
@@ -594,7 +594,7 @@ const NotionAppEn = {
         },
       ],
     },
-    next_month: {
+    'next-month': {
       displayName: 'next month',
       shortDesc: 'Date is next month',
       longDesc: 'Returns `True` if the date falls within the next month',
@@ -606,7 +606,7 @@ const NotionAppEn = {
         },
       ],
     },
-    next_year: {
+    'next-year': {
       displayName: 'next year',
       shortDesc: 'Date is next year',
       longDesc: 'Returns `True` if the date falls within the next year',
@@ -618,7 +618,7 @@ const NotionAppEn = {
         },
       ],
     },
-    past_week: {
+    'past-week': {
       displayName: 'past week',
       shortDesc: 'Date is past week',
       longDesc: 'Returns `True` if the date falls within the past week',
@@ -630,7 +630,7 @@ const NotionAppEn = {
         },
       ],
     },
-    past_month: {
+    'past-month': {
       displayName: 'past month',
       shortDesc: 'Date is past month',
       longDesc: 'Returns `True` if the date falls within the past month',
@@ -642,7 +642,7 @@ const NotionAppEn = {
         },
       ],
     },
-    past_year: {
+    'past-year': {
       displayName: 'past year',
       shortDesc: 'Date is past year',
       longDesc: 'Returns `True` if the date falls within the past year',
@@ -654,7 +654,7 @@ const NotionAppEn = {
         },
       ],
     },
-    this_week: {
+    'this-week': {
       displayName: 'this week',
       shortDesc: 'Date is this week',
       longDesc: 'Returns `True` if the date falls within the current week',

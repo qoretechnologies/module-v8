@@ -398,7 +398,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				not_like: {
+				'not-like': {
 					/**
 					 * n​o​t​ ​l​i​k​e
 					 */
@@ -486,7 +486,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				not_in: {
+				'not-in': {
 					/**
 					 * n​o​t​ ​i​n
 					 */
@@ -588,7 +588,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				not_between: {
+				'not-between': {
 					/**
 					 * n​o​t​ ​b​e​t​w​e​e​n
 					 */
@@ -646,7 +646,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				is_null: {
+				'is-null': {
 					/**
 					 * i​s​ ​n​u​l​l
 					 */
@@ -676,7 +676,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				is_not_null: {
+				'is-not-null': {
 					/**
 					 * i​s​ ​n​o​t​ ​n​u​l​l
 					 */
@@ -4222,7 +4222,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				contains_not: {
+				'contains-not': {
 					/**
 					 * d​o​e​s​n​'​t​ ​c​o​n​t​a​i​n
 					 */
@@ -4266,7 +4266,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				contains_word: {
+				'contains-word': {
 					/**
 					 * c​o​n​t​a​i​n​s​ ​w​o​r​d
 					 */
@@ -4310,7 +4310,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				doesnt_contain_word: {
+				'doesnt-contain-word': {
 					/**
 					 * d​o​e​s​n​'​t​ ​c​o​n​t​a​i​n​ ​w​o​r​d
 					 */
@@ -4354,7 +4354,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				length_is_lower_than: {
+				'length-is-lower-than': {
 					/**
 					 * l​e​n​g​t​h​ ​i​s​ ​l​o​w​e​r​ ​t​h​a​n
 					 */
@@ -4428,7 +4428,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				not_empty: {
+				'not-empty': {
 					/**
 					 * i​s​ ​n​o​t​ ​e​m​p​t​y
 					 */
@@ -4458,7 +4458,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				date_is: {
+				'date-is': {
 					/**
 					 * d​a​t​e​ ​i​s
 					 */
@@ -4502,7 +4502,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				date_is_not: {
+				'date-is-not': {
 					/**
 					 * d​a​t​e​ ​i​s​ ​n​o​t
 					 */
@@ -4546,7 +4546,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				date_is_before: {
+				'date-is-before': {
 					/**
 					 * d​a​t​e​ ​i​s​ ​b​e​f​o​r​e
 					 */
@@ -4590,7 +4590,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				date_is_on_or_before: {
+				'date-is-on-or-before': {
 					/**
 					 * d​a​t​e​ ​i​s​ ​o​n​ ​o​r​ ​b​e​f​o​r​e
 					 */
@@ -4634,7 +4634,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				date_is_after: {
+				'date-is-after': {
 					/**
 					 * d​a​t​e​ ​i​s​ ​a​f​t​e​r
 					 */
@@ -4678,7 +4678,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				date_is_on_or_after: {
+				'date-is-on-or-after': {
 					/**
 					 * d​a​t​e​ ​i​s​ ​o​n​ ​o​r​ ​a​f​t​e​r
 					 */
@@ -4722,7 +4722,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				date_is_within: {
+				'date-is-within': {
 					/**
 					 * d​a​t​e​ ​i​s​ ​w​i​t​h​i​n
 					 */
@@ -4766,7 +4766,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				date_equals_day_of_month: {
+				'date-equals-day-of-month': {
 					/**
 					 * d​a​y​ ​o​f​ ​m​o​n​t​h​ ​i​s
 					 */
@@ -4854,7 +4854,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				is_even_and_whole: {
+				'is-even-and-whole': {
 					/**
 					 * i​s​ ​e​v​e​n​ ​a​n​d​ ​w​h​o​l​e
 					 */
@@ -4898,7 +4898,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				single_select_equal: {
+				'single-select-equal': {
 					/**
 					 * i​s
 					 */
@@ -4942,7 +4942,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				single_select_not_equal: {
+				'single-select-not-equal': {
 					/**
 					 * i​s​ ​n​o​t
 					 */
@@ -4986,7 +4986,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				single_select_is_any_of: {
+				'single-select-is-any-of': {
 					/**
 					 * i​s​ ​a​n​y​ ​o​f
 					 */
@@ -5030,7 +5030,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				single_select_is_none_of: {
+				'single-select-is-none-of': {
 					/**
 					 * i​s​ ​n​o​n​e​ ​o​f
 					 */
@@ -5074,7 +5074,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				multiple_select_has: {
+				'multiple-select-has': {
 					/**
 					 * h​a​s​ ​a​n​y​ ​o​f
 					 */
@@ -5118,7 +5118,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				multiple_select_has_not: {
+				'multiple-select-has-not': {
 					/**
 					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​a​n​y​ ​o​f
 					 */
@@ -5162,7 +5162,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				link_row_has: {
+				'link-row-has': {
 					/**
 					 * h​a​s
 					 */
@@ -5206,7 +5206,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				link_row_has_not: {
+				'link-row-has-not': {
 					/**
 					 * d​o​e​s​n​'​t​ ​h​a​v​e
 					 */
@@ -5250,7 +5250,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				link_row_contains: {
+				'link-row-contains': {
 					/**
 					 * c​o​n​t​a​i​n​s
 					 */
@@ -5294,7 +5294,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				link_row_not_contains: {
+				'link-row-not-contains': {
 					/**
 					 * d​o​e​s​n​'​t​ ​c​o​n​t​a​i​n
 					 */
@@ -5338,7 +5338,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				filename_contains: {
+				'filename-contains': {
 					/**
 					 * f​i​l​e​n​a​m​e​ ​c​o​n​t​a​i​n​s
 					 */
@@ -5382,7 +5382,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_file_type: {
+				'has-file-type': {
 					/**
 					 * h​a​s​ ​f​i​l​e​ ​t​y​p​e
 					 */
@@ -5426,7 +5426,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				files_lower_than: {
+				'files-lower-than': {
 					/**
 					 * f​i​l​e​s​ ​l​o​w​e​r​ ​t​h​a​n
 					 */
@@ -5470,7 +5470,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				user_is: {
+				'user-is': {
 					/**
 					 * i​s
 					 */
@@ -5514,7 +5514,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				user_is_not: {
+				'user-is-not': {
 					/**
 					 * i​s​ ​n​o​t
 					 */
@@ -5558,7 +5558,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				multiple_collaborators_has: {
+				'multiple-collaborators-has': {
 					/**
 					 * h​a​s
 					 */
@@ -5602,7 +5602,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				multiple_collaborators_has_not: {
+				'multiple-collaborators-has-not': {
 					/**
 					 * d​o​e​s​n​'​t​ ​h​a​v​e
 					 */
@@ -5646,7 +5646,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_empty_value: {
+				'has-empty-value': {
 					/**
 					 * h​a​s​ ​e​m​p​t​y​ ​v​a​l​u​e
 					 */
@@ -5690,7 +5690,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_not_empty_value: {
+				'has-not-empty-value': {
 					/**
 					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​e​m​p​t​y​ ​v​a​l​u​e
 					 */
@@ -5734,7 +5734,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_value_equal: {
+				'has-value-equal': {
 					/**
 					 * h​a​s​ ​v​a​l​u​e​ ​e​q​u​a​l
 					 */
@@ -5778,7 +5778,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_not_value_equal: {
+				'has-not-value-equal': {
 					/**
 					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​e​q​u​a​l
 					 */
@@ -5822,7 +5822,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_value_contains: {
+				'has-value-contains': {
 					/**
 					 * h​a​s​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​s
 					 */
@@ -5866,7 +5866,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_not_value_contains: {
+				'has-not-value-contains': {
 					/**
 					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​s
 					 */
@@ -5910,7 +5910,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_value_contains_word: {
+				'has-value-contains-word': {
 					/**
 					 * h​a​s​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​s​ ​w​o​r​d
 					 */
@@ -5954,7 +5954,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_not_value_contains_word: {
+				'has-not-value-contains-word': {
 					/**
 					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​c​o​n​t​a​i​n​s​ ​w​o​r​d
 					 */
@@ -5998,7 +5998,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_value_length_is_lower_than: {
+				'has-value-length-is-lower-than': {
 					/**
 					 * h​a​s​ ​v​a​l​u​e​ ​l​e​n​g​t​h​ ​i​s​ ​l​o​w​e​r​ ​t​h​a​n
 					 */
@@ -6042,7 +6042,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_all_values_equal: {
+				'has-all-values-equal': {
 					/**
 					 * h​a​s​ ​a​l​l​ ​v​a​l​u​e​s​ ​e​q​u​a​l
 					 */
@@ -6086,7 +6086,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_any_select_option_equal: {
+				'has-any-select-option-equal': {
 					/**
 					 * h​a​s​ ​a​n​y​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​e​q​u​a​l
 					 */
@@ -6130,7 +6130,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_none_select_option_equal: {
+				'has-none-select-option-equal': {
 					/**
 					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​s​e​l​e​c​t​ ​o​p​t​i​o​n​ ​e​q​u​a​l
 					 */
@@ -6174,7 +6174,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_value_higher: {
+				'has-value-higher': {
 					/**
 					 * h​a​s​ ​v​a​l​u​e​ ​h​i​g​h​e​r​ ​t​h​a​n
 					 */
@@ -6218,7 +6218,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_not_value_higher: {
+				'has-not-value-higher': {
 					/**
 					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​h​i​g​h​e​r​ ​t​h​a​n
 					 */
@@ -6262,7 +6262,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_value_higher_or_equal: {
+				'has-value-higher-or-equal': {
 					/**
 					 * h​a​s​ ​v​a​l​u​e​ ​h​i​g​h​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l
 					 */
@@ -6306,7 +6306,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_not_value_higher_or_equal: {
+				'has-not-value-higher-or-equal': {
 					/**
 					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​h​i​g​h​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l
 					 */
@@ -6350,7 +6350,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_value_lower: {
+				'has-value-lower': {
 					/**
 					 * h​a​s​ ​v​a​l​u​e​ ​l​o​w​e​r​ ​t​h​a​n
 					 */
@@ -6394,7 +6394,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_not_value_lower: {
+				'has-not-value-lower': {
 					/**
 					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​l​o​w​e​r​ ​t​h​a​n
 					 */
@@ -6438,7 +6438,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_value_lower_or_equal: {
+				'has-value-lower-or-equal': {
 					/**
 					 * h​a​s​ ​v​a​l​u​e​ ​l​o​w​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l
 					 */
@@ -6482,7 +6482,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_not_value_lower_or_equal: {
+				'has-not-value-lower-or-equal': {
 					/**
 					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​v​a​l​u​e​ ​l​o​w​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l
 					 */
@@ -6526,7 +6526,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_date_equal: {
+				'has-date-equal': {
 					/**
 					 * h​a​s​ ​d​a​t​e​ ​e​q​u​a​l
 					 */
@@ -6570,7 +6570,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_not_date_equal: {
+				'has-not-date-equal': {
 					/**
 					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​d​a​t​e​ ​e​q​u​a​l
 					 */
@@ -6614,7 +6614,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_date_before: {
+				'has-date-before': {
 					/**
 					 * h​a​s​ ​d​a​t​e​ ​b​e​f​o​r​e
 					 */
@@ -6658,7 +6658,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_not_date_before: {
+				'has-not-date-before': {
 					/**
 					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​d​a​t​e​ ​b​e​f​o​r​e
 					 */
@@ -6702,7 +6702,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_date_on_or_before: {
+				'has-date-on-or-before': {
 					/**
 					 * h​a​s​ ​d​a​t​e​ ​o​n​ ​o​r​ ​b​e​f​o​r​e
 					 */
@@ -6746,7 +6746,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_not_date_on_or_before: {
+				'has-not-date-on-or-before': {
 					/**
 					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​d​a​t​e​ ​o​n​ ​o​r​ ​b​e​f​o​r​e
 					 */
@@ -6790,7 +6790,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_date_after: {
+				'has-date-after': {
 					/**
 					 * h​a​s​ ​d​a​t​e​ ​a​f​t​e​r
 					 */
@@ -6834,7 +6834,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_not_date_after: {
+				'has-not-date-after': {
 					/**
 					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​d​a​t​e​ ​a​f​t​e​r
 					 */
@@ -6878,7 +6878,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_date_on_or_after: {
+				'has-date-on-or-after': {
 					/**
 					 * h​a​s​ ​d​a​t​e​ ​o​n​ ​o​r​ ​a​f​t​e​r
 					 */
@@ -6922,7 +6922,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_not_date_on_or_after: {
+				'has-not-date-on-or-after': {
 					/**
 					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​d​a​t​e​ ​o​n​ ​o​r​ ​a​f​t​e​r
 					 */
@@ -6966,7 +6966,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_date_within: {
+				'has-date-within': {
 					/**
 					 * h​a​s​ ​d​a​t​e​ ​w​i​t​h​i​n
 					 */
@@ -7010,7 +7010,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				has_not_date_within: {
+				'has-not-date-within': {
 					/**
 					 * d​o​e​s​n​'​t​ ​h​a​v​e​ ​d​a​t​e​ ​w​i​t​h​i​n
 					 */
@@ -33610,7 +33610,7 @@ type RootTranslation = {
 				}
 			}
 			expressions: {
-				row_ids: {
+				'row-ids': {
 					/**
 					 * R​o​w​ ​I​D​s
 					 */
@@ -48054,7 +48054,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				is_empty: {
+				'is-empty': {
 					/**
 					 * i​s​ ​e​m​p​t​y
 					 */
@@ -48084,7 +48084,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				is_not_empty: {
+				'is-not-empty': {
 					/**
 					 * i​s​ ​n​o​t​ ​e​m​p​t​y
 					 */
@@ -48114,7 +48114,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				starts_with: {
+				'starts-with': {
 					/**
 					 * s​t​a​r​t​s​ ​w​i​t​h
 					 */
@@ -48158,7 +48158,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				ends_with: {
+				'ends-with': {
 					/**
 					 * e​n​d​s​ ​w​i​t​h
 					 */
@@ -48202,7 +48202,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				next_week: {
+				'next-week': {
 					/**
 					 * n​e​x​t​ ​w​e​e​k
 					 */
@@ -48232,7 +48232,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				next_month: {
+				'next-month': {
 					/**
 					 * n​e​x​t​ ​m​o​n​t​h
 					 */
@@ -48262,7 +48262,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				next_year: {
+				'next-year': {
 					/**
 					 * n​e​x​t​ ​y​e​a​r
 					 */
@@ -48292,7 +48292,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				past_week: {
+				'past-week': {
 					/**
 					 * p​a​s​t​ ​w​e​e​k
 					 */
@@ -48322,7 +48322,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				past_month: {
+				'past-month': {
 					/**
 					 * p​a​s​t​ ​m​o​n​t​h
 					 */
@@ -48352,7 +48352,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				past_year: {
+				'past-year': {
 					/**
 					 * p​a​s​t​ ​y​e​a​r
 					 */
@@ -48382,7 +48382,7 @@ type RootTranslation = {
 						}
 					}
 				}
-				this_week: {
+				'this-week': {
 					/**
 					 * t​h​i​s​ ​w​e​e​k
 					 */
@@ -87015,7 +87015,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				not_like: {
+				'not-like': {
 					/**
 					 * not like
 					 */
@@ -87103,7 +87103,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				not_in: {
+				'not-in': {
 					/**
 					 * not in
 					 */
@@ -87205,7 +87205,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				not_between: {
+				'not-between': {
 					/**
 					 * not between
 					 */
@@ -87263,7 +87263,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				is_null: {
+				'is-null': {
 					/**
 					 * is null
 					 */
@@ -87293,7 +87293,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				is_not_null: {
+				'is-not-null': {
 					/**
 					 * is not null
 					 */
@@ -90839,7 +90839,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				contains_not: {
+				'contains-not': {
 					/**
 					 * doesn't contain
 					 */
@@ -90883,7 +90883,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				contains_word: {
+				'contains-word': {
 					/**
 					 * contains word
 					 */
@@ -90927,7 +90927,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				doesnt_contain_word: {
+				'doesnt-contain-word': {
 					/**
 					 * doesn't contain word
 					 */
@@ -90971,7 +90971,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				length_is_lower_than: {
+				'length-is-lower-than': {
 					/**
 					 * length is lower than
 					 */
@@ -91045,7 +91045,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				not_empty: {
+				'not-empty': {
 					/**
 					 * is not empty
 					 */
@@ -91075,7 +91075,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				date_is: {
+				'date-is': {
 					/**
 					 * date is
 					 */
@@ -91119,7 +91119,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				date_is_not: {
+				'date-is-not': {
 					/**
 					 * date is not
 					 */
@@ -91163,7 +91163,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				date_is_before: {
+				'date-is-before': {
 					/**
 					 * date is before
 					 */
@@ -91207,7 +91207,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				date_is_on_or_before: {
+				'date-is-on-or-before': {
 					/**
 					 * date is on or before
 					 */
@@ -91251,7 +91251,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				date_is_after: {
+				'date-is-after': {
 					/**
 					 * date is after
 					 */
@@ -91295,7 +91295,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				date_is_on_or_after: {
+				'date-is-on-or-after': {
 					/**
 					 * date is on or after
 					 */
@@ -91339,7 +91339,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				date_is_within: {
+				'date-is-within': {
 					/**
 					 * date is within
 					 */
@@ -91383,7 +91383,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				date_equals_day_of_month: {
+				'date-equals-day-of-month': {
 					/**
 					 * day of month is
 					 */
@@ -91471,7 +91471,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				is_even_and_whole: {
+				'is-even-and-whole': {
 					/**
 					 * is even and whole
 					 */
@@ -91515,7 +91515,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				single_select_equal: {
+				'single-select-equal': {
 					/**
 					 * is
 					 */
@@ -91559,7 +91559,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				single_select_not_equal: {
+				'single-select-not-equal': {
 					/**
 					 * is not
 					 */
@@ -91603,7 +91603,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				single_select_is_any_of: {
+				'single-select-is-any-of': {
 					/**
 					 * is any of
 					 */
@@ -91647,7 +91647,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				single_select_is_none_of: {
+				'single-select-is-none-of': {
 					/**
 					 * is none of
 					 */
@@ -91691,7 +91691,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				multiple_select_has: {
+				'multiple-select-has': {
 					/**
 					 * has any of
 					 */
@@ -91735,7 +91735,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				multiple_select_has_not: {
+				'multiple-select-has-not': {
 					/**
 					 * doesn't have any of
 					 */
@@ -91779,7 +91779,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				link_row_has: {
+				'link-row-has': {
 					/**
 					 * has
 					 */
@@ -91823,7 +91823,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				link_row_has_not: {
+				'link-row-has-not': {
 					/**
 					 * doesn't have
 					 */
@@ -91867,7 +91867,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				link_row_contains: {
+				'link-row-contains': {
 					/**
 					 * contains
 					 */
@@ -91911,7 +91911,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				link_row_not_contains: {
+				'link-row-not-contains': {
 					/**
 					 * doesn't contain
 					 */
@@ -91955,7 +91955,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				filename_contains: {
+				'filename-contains': {
 					/**
 					 * filename contains
 					 */
@@ -91999,7 +91999,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_file_type: {
+				'has-file-type': {
 					/**
 					 * has file type
 					 */
@@ -92043,7 +92043,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				files_lower_than: {
+				'files-lower-than': {
 					/**
 					 * files lower than
 					 */
@@ -92087,7 +92087,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				user_is: {
+				'user-is': {
 					/**
 					 * is
 					 */
@@ -92131,7 +92131,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				user_is_not: {
+				'user-is-not': {
 					/**
 					 * is not
 					 */
@@ -92175,7 +92175,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				multiple_collaborators_has: {
+				'multiple-collaborators-has': {
 					/**
 					 * has
 					 */
@@ -92219,7 +92219,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				multiple_collaborators_has_not: {
+				'multiple-collaborators-has-not': {
 					/**
 					 * doesn't have
 					 */
@@ -92263,7 +92263,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_empty_value: {
+				'has-empty-value': {
 					/**
 					 * has empty value
 					 */
@@ -92307,7 +92307,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_not_empty_value: {
+				'has-not-empty-value': {
 					/**
 					 * doesn't have empty value
 					 */
@@ -92351,7 +92351,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_value_equal: {
+				'has-value-equal': {
 					/**
 					 * has value equal
 					 */
@@ -92395,7 +92395,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_not_value_equal: {
+				'has-not-value-equal': {
 					/**
 					 * doesn't have value equal
 					 */
@@ -92439,7 +92439,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_value_contains: {
+				'has-value-contains': {
 					/**
 					 * has value contains
 					 */
@@ -92483,7 +92483,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_not_value_contains: {
+				'has-not-value-contains': {
 					/**
 					 * doesn't have value contains
 					 */
@@ -92527,7 +92527,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_value_contains_word: {
+				'has-value-contains-word': {
 					/**
 					 * has value contains word
 					 */
@@ -92571,7 +92571,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_not_value_contains_word: {
+				'has-not-value-contains-word': {
 					/**
 					 * doesn't have value contains word
 					 */
@@ -92615,7 +92615,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_value_length_is_lower_than: {
+				'has-value-length-is-lower-than': {
 					/**
 					 * has value length is lower than
 					 */
@@ -92659,7 +92659,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_all_values_equal: {
+				'has-all-values-equal': {
 					/**
 					 * has all values equal
 					 */
@@ -92703,7 +92703,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_any_select_option_equal: {
+				'has-any-select-option-equal': {
 					/**
 					 * has any select option equal
 					 */
@@ -92747,7 +92747,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_none_select_option_equal: {
+				'has-none-select-option-equal': {
 					/**
 					 * doesn't have select option equal
 					 */
@@ -92791,7 +92791,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_value_higher: {
+				'has-value-higher': {
 					/**
 					 * has value higher than
 					 */
@@ -92835,7 +92835,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_not_value_higher: {
+				'has-not-value-higher': {
 					/**
 					 * doesn't have value higher than
 					 */
@@ -92879,7 +92879,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_value_higher_or_equal: {
+				'has-value-higher-or-equal': {
 					/**
 					 * has value higher than or equal
 					 */
@@ -92923,7 +92923,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_not_value_higher_or_equal: {
+				'has-not-value-higher-or-equal': {
 					/**
 					 * doesn't have value higher than or equal
 					 */
@@ -92967,7 +92967,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_value_lower: {
+				'has-value-lower': {
 					/**
 					 * has value lower than
 					 */
@@ -93011,7 +93011,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_not_value_lower: {
+				'has-not-value-lower': {
 					/**
 					 * doesn't have value lower than
 					 */
@@ -93055,7 +93055,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_value_lower_or_equal: {
+				'has-value-lower-or-equal': {
 					/**
 					 * has value lower than or equal
 					 */
@@ -93099,7 +93099,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_not_value_lower_or_equal: {
+				'has-not-value-lower-or-equal': {
 					/**
 					 * doesn't have value lower than or equal
 					 */
@@ -93143,7 +93143,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_date_equal: {
+				'has-date-equal': {
 					/**
 					 * has date equal
 					 */
@@ -93187,7 +93187,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_not_date_equal: {
+				'has-not-date-equal': {
 					/**
 					 * doesn't have date equal
 					 */
@@ -93231,7 +93231,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_date_before: {
+				'has-date-before': {
 					/**
 					 * has date before
 					 */
@@ -93275,7 +93275,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_not_date_before: {
+				'has-not-date-before': {
 					/**
 					 * doesn't have date before
 					 */
@@ -93319,7 +93319,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_date_on_or_before: {
+				'has-date-on-or-before': {
 					/**
 					 * has date on or before
 					 */
@@ -93363,7 +93363,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_not_date_on_or_before: {
+				'has-not-date-on-or-before': {
 					/**
 					 * doesn't have date on or before
 					 */
@@ -93407,7 +93407,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_date_after: {
+				'has-date-after': {
 					/**
 					 * has date after
 					 */
@@ -93451,7 +93451,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_not_date_after: {
+				'has-not-date-after': {
 					/**
 					 * doesn't have date after
 					 */
@@ -93495,7 +93495,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_date_on_or_after: {
+				'has-date-on-or-after': {
 					/**
 					 * has date on or after
 					 */
@@ -93539,7 +93539,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_not_date_on_or_after: {
+				'has-not-date-on-or-after': {
 					/**
 					 * doesn't have date on or after
 					 */
@@ -93583,7 +93583,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_date_within: {
+				'has-date-within': {
 					/**
 					 * has date within
 					 */
@@ -93627,7 +93627,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				has_not_date_within: {
+				'has-not-date-within': {
 					/**
 					 * doesn't have date within
 					 */
@@ -120227,7 +120227,7 @@ export type TranslationFunctions = {
 				}
 			}
 			expressions: {
-				row_ids: {
+				'row-ids': {
 					/**
 					 * Row IDs
 					 */
@@ -134671,7 +134671,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				is_empty: {
+				'is-empty': {
 					/**
 					 * is empty
 					 */
@@ -134701,7 +134701,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				is_not_empty: {
+				'is-not-empty': {
 					/**
 					 * is not empty
 					 */
@@ -134731,7 +134731,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				starts_with: {
+				'starts-with': {
 					/**
 					 * starts with
 					 */
@@ -134775,7 +134775,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				ends_with: {
+				'ends-with': {
 					/**
 					 * ends with
 					 */
@@ -134819,7 +134819,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				next_week: {
+				'next-week': {
 					/**
 					 * next week
 					 */
@@ -134849,7 +134849,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				next_month: {
+				'next-month': {
 					/**
 					 * next month
 					 */
@@ -134879,7 +134879,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				next_year: {
+				'next-year': {
 					/**
 					 * next year
 					 */
@@ -134909,7 +134909,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				past_week: {
+				'past-week': {
 					/**
 					 * past week
 					 */
@@ -134939,7 +134939,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				past_month: {
+				'past-month': {
 					/**
 					 * past month
 					 */
@@ -134969,7 +134969,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				past_year: {
+				'past-year': {
 					/**
 					 * past year
 					 */
@@ -134999,7 +134999,7 @@ export type TranslationFunctions = {
 						}
 					}
 				}
-				this_week: {
+				'this-week': {
 					/**
 					 * this week
 					 */

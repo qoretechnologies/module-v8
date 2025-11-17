@@ -7,11 +7,11 @@ export const getGoogleSheetsExpressions = (locale: Locales): TQoreSearchRecordsE
   return mapExpressionsToApp(
     GOOGLE_SHEETS_APP_NAME,
     {
-      row_ids: {
+      'row-ids': {
         type: 'function',
         subtype: 'generic',
-        name: 'row_ids',
-        symbol: 'row_ids',
+        name: 'row-ids',
+        symbol: 'rowIds',
         group: EQoreExpressionGroups.COMPARISON,
         roles: ['search'],
         args: [

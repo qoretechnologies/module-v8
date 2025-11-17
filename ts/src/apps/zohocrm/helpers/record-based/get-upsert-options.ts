@@ -1,4 +1,4 @@
-import { IQoreAppActionListOption, TQoreCrudOptions } from '@qoretechnologies/ts-toolkit';
+import { TQoreCrudOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { Debugger } from '../../../../utils/Debugger';
 import { ZohoCrmError } from '../../constants';
@@ -34,6 +34,5 @@ export const ZohoCrmUpsertOptions = {
       }
     },
     required: false,
-    // TODO: remove 'as any' when ts-toolkit is updated
-  } as IQoreAppActionListOption<any>,
+  },
 } satisfies TQoreCrudOptions;
