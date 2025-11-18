@@ -3,7 +3,7 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { fetchPipedriveAllowedValues } from './constants';
+import { fetchPipedriveAllowedValues } from './client';
 
 type TPipedriveLeadLabelData = {
   id: string;
@@ -27,7 +27,7 @@ export const getPipedriveLeadLabelIdAllowedValues: TQoreGetAllowedValuesFunction
   const leadLabels = await fetchPipedriveAllowedValues<TPipedriveLeadLabelData>({
     token,
     mapItemToAllowedValue: mapPipedriveLeadLabel,
-    path: '/leadLabels',
+    path: 'v1/leadLabels',
   });
 
   return leadLabels;

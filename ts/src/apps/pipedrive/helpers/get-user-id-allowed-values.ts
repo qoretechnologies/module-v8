@@ -3,7 +3,7 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { fetchPipedriveAllowedValues } from './constants';
+import { fetchPipedriveAllowedValues } from './client';
 
 type TPipedriveUserData = {
   id: string;
@@ -30,7 +30,7 @@ export const getPipedriveUserIdAllowedValues: TQoreGetAllowedValuesFunction<
   const users = await fetchPipedriveAllowedValues<TPipedriveUserData>({
     token,
     mapItemToAllowedValue: mapPipedriveUser,
-    path: '/users',
+    path: 'v1/users',
   });
 
   return users;

@@ -3,7 +3,7 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { fetchPipedriveAllowedValues } from './constants';
+import { fetchPipedriveAllowedValues } from './client';
 
 type TPipedriveActivityTypeData = {
   id: string;
@@ -34,7 +34,7 @@ export const getPipedriveActivityTypeAllowedValues: TQoreGetAllowedValuesFunctio
   const activityTypes = await fetchPipedriveAllowedValues<TPipedriveActivityTypeData>({
     token,
     mapItemToAllowedValue: mapPipedriveActivityType,
-    path: '/activityTypes',
+    path: 'v1/activityTypes',
   });
 
   return activityTypes;
