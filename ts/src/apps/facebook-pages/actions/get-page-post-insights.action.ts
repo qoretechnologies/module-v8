@@ -26,7 +26,7 @@ const options = {
       type: 'list',
       element_type: 'string',
     },
-    default_value: ['post_impressions', 'post_clicks'],
+    default_value: ['post_clicks'],
     element_allowed_values_creatable: true,
     element_allowed_values: FacebookPostMetricsAllowedValues,
   },

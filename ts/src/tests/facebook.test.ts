@@ -92,7 +92,7 @@ describe('Facebook', () => {
         {
           page_id: pageId,
           post_id: postId,
-          metrics: ['post_impressions', 'post_clicks'],
+          metrics: ['post_media_view', 'post_clicks'],
         },
         undefined,
         base_context
