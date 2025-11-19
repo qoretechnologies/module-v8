@@ -1,4 +1,4 @@
-import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import { TQoreAppWithActions, TQoreRecordBasedApp } from '@qoretechnologies/ts-toolkit';
 import { createSwaggerPaths, mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
@@ -11,6 +11,14 @@ import {
 import { actionsCatalogue } from '../../ActionsCatalogue';
 
 import * as PIPEDRIVE_TRIGGERS from './triggers';
+import { getPipedriveRecordType } from './helpers/record-based/get-record-type';
+import { getPipedriveTableList } from './helpers/record-based/get-table-list';
+import { getPipedriveExpressions } from './helpers/record-based/get-expressions';
+import { createPipedriveRecords } from './helpers/record-based/create-records';
+import { updatePipedriveRecords } from './helpers/record-based/update-records';
+import { deletePipedriveRecords } from './helpers/record-based/delete-records';
+import { searchPipedriveRecords } from './helpers/record-based/search-records';
+import { PipedriveSearchOptions } from './helpers/record-based/get-search-options';
 
 export default (locale: Locales) =>
   ({
@@ -71,4 +79,13 @@ export default (locale: Locales) =>
     swagger_options: {
       parse_flags: -1,
     },
-  }) satisfies TQoreAppWithActions;
+    get_record_type: getPipedriveRecordType,
+    get_table_list: getPipedriveTableList,
+    expressions: getPipedriveExpressions(locale),
+    create_records: createPipedriveRecords,
+    update_records: updatePipedriveRecords,
+    delete_records: deletePipedriveRecords,
+    search_records: searchPipedriveRecords,
+    search_options: PipedriveSearchOptions,
+    
+  }) satisfies TQoreAppWithActions & TQoreRecordBasedApp;

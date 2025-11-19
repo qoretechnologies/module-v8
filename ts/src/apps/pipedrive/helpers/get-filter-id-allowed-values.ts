@@ -3,22 +3,19 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { fetchPipedriveAllowedValues } from './constants';
+import { fetchPipedriveAllowedValues } from './client';
 
 type TPipedriveFilterData = {
   id: string;
   name: string;
   type: string;
   add_time?: string;
-  updated_by_name?: string;
 };
 
 const mapPipedriveFilter = (filter: TPipedriveFilterData): IQoreAllowedValue<string> => ({
   display_name: filter.name,
   value: filter.id,
-  desc:
-    `Type: ${filter.type}\n\nCreated: ${filter.add_time}\n\n` +
-    `Updated by: ${filter.updated_by_name}`,
+  desc: `Type: ${filter.type}\n\nCreated: ${filter.add_time}\n\n`,
 });
 
 const createPipedriveFilterAllowedValuesFunction = (
@@ -35,7 +32,7 @@ const createPipedriveFilterAllowedValuesFunction = (
       token,
       mapItemToAllowedValue: mapPipedriveFilter,
       params: { type },
-      path: '/filters',
+      path: 'v1/filters',
     });
 
     return filters;

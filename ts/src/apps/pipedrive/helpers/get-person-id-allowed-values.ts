@@ -3,31 +3,27 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { fetchPipedriveAllowedValues } from './constants';
+import { fetchPipedriveAllowedValues } from './client';
 
 type TPipedrivePersonData = {
-  id: string;
+  id: number;
   name: string;
-  email?: { value: string }[];
-  phone?: { value: string }[];
-  org_name?: string;
-  owner_name?: string;
+  emails?: { value: string }[];
+  phones?: { value: string }[];
 };
 
-const mapPipedrivePerson = (person: TPipedrivePersonData): IQoreAllowedValue<string> => ({
+const mapPipedrivePerson = (person: TPipedrivePersonData): IQoreAllowedValue<number> => ({
   display_name: person.name,
   value: person.id,
   desc:
-    (person.org_name ? `Organization: ${person.org_name}\n\n` : '') +
-    (person.owner_name ? `Owner: ${person.owner_name}\n\n` : '') +
-    (person.email && person.email.length > 0 ? `Email: ${person.email[0].value}\n\n` : '') +
-    (person.phone && person.phone.length > 0 ? `Phone: ${person.phone[0].value}\n\n` : ''),
+    (person.emails?.length ? `Email: ${person.emails[0].value}\n\n` : '') +
+    (person.phones?.length ? `Phone: ${person.phones[0].value}\n\n` : ''),
 });
 
 export const getPipedrivePersonIdAllowedValues: TQoreGetAllowedValuesFunction<
   TCustomConnOptions,
-  string
-> = async (context): Promise<IQoreAllowedValue<string>[]> => {
+  number
+> = async (context): Promise<IQoreAllowedValue<number>[]> => {
   const token = context?.conn_opts?.token;
 
   if (!token) {

@@ -47,7 +47,7 @@ const activitiesOptions = {
             required: true,
           },
           person_id: {
-            type: 'string',
+            type: 'number',
             required: false,
             get_allowed_values: getPipedrivePersonIdAllowedValues,
           },
@@ -64,7 +64,7 @@ const activitiesOptions = {
         type: 'hash',
         fields: {
           person_id: {
-            type: 'string',
+            type: 'number',
             required: true,
             get_allowed_values: getPipedrivePersonIdAllowedValues,
           },

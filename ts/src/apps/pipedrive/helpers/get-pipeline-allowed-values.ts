@@ -3,18 +3,16 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { fetchPipedriveAllowedValues } from './constants';
+import { fetchPipedriveAllowedValues } from './client';
 
 type TPipedrivePipelineData = {
   id: string;
   name: string;
-  url_title?: string;
 };
 
 const mapPipedrivePipeline = (pipeline: TPipedrivePipelineData): IQoreAllowedValue<string> => ({
   display_name: pipeline.name,
   value: pipeline.id,
-  desc: `URL title: ${pipeline.url_title}`,
 });
 
 export const getPipedrivePipelineIdAllowedValues: TQoreGetAllowedValuesFunction<

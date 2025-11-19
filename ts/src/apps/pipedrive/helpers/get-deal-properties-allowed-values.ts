@@ -1,4 +1,4 @@
-import { createGetPipedriveObjectPropertyAllowedValuesFunction } from './constants';
+import { createGetPipedriveObjectPropertyAllowedValuesFunction } from './create-get-property-allowed-values';
 
 export const getPipedriveDealChannelAllowedValues =
   createGetPipedriveObjectPropertyAllowedValuesFunction('/dealFields', 'channel');

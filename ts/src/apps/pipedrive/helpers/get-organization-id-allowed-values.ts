@@ -3,28 +3,22 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { fetchPipedriveAllowedValues } from './constants';
+import { fetchPipedriveAllowedValues } from './client';
 
 type TPipedriveOrganizationData = {
-  id: string;
+  id: number;
   name: string;
-  address?: string;
-  cc_email?: string;
-  owner_name?: string;
 };
 
-const mapPipedriveOrganization = (org: TPipedriveOrganizationData): IQoreAllowedValue<string> => ({
+const mapPipedriveOrganization = (org: TPipedriveOrganizationData): IQoreAllowedValue<number> => ({
   display_name: org.name,
   value: org.id,
-  desc:
-    (org.address ? `Address: ${org.address}\n\n` : '') +
-    (org.cc_email ? `Email: ${org.cc_email}\n\n` : '') +
-    (org.owner_name ? `Owner: ${org.owner_name}` : ''),
 });
 
 export const getPipedriveOrganizationIdAllowedValues: TQoreGetAllowedValuesFunction<
-  TCustomConnOptions
-> = async (context): Promise<IQoreAllowedValue<string>[]> => {
+  TCustomConnOptions,
+  number
+> = async (context): Promise<IQoreAllowedValue<number>[]> => {
   const token = context?.conn_opts?.token;
 
   if (!token) {
@@ -34,7 +28,7 @@ export const getPipedriveOrganizationIdAllowedValues: TQoreGetAllowedValuesFunct
   const organizations = await fetchPipedriveAllowedValues<TPipedriveOrganizationData>({
     token,
     mapItemToAllowedValue: mapPipedriveOrganization,
-    path: '/organizations',
+    path: 'organizations',
   });
 
   return organizations;

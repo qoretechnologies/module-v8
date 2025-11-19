@@ -7,7 +7,7 @@ import { getPipedriveProjectIdAllowedValues } from '../helpers/get-project-id-al
 import {
   getPipedriveParentTaskIdAllowedValues,
   getPipedriveTaskIdAllowedValues,
-} from '../helpers/get-task-id-allowd-values';
+} from '../helpers/get-task-id-allowed-values';
 import { getPipedriveUserIdAllowedValues } from '../helpers/get-user-id-allowed-values';
 
 const tasksOptions = {

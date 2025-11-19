@@ -3,7 +3,7 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { fetchPipedriveAllowedValues } from './constants';
+import { fetchPipedriveAllowedValues } from './client';
 
 type TPipedriveDealData = {
   id: string;
@@ -11,18 +11,16 @@ type TPipedriveDealData = {
   value: number;
   currency: string;
   status: string;
-  org_name?: string;
-  person_name?: string;
+  probability: number;
 };
 
 const mapPipedriveDeal = (deal: TPipedriveDealData): IQoreAllowedValue<string> => ({
   display_name: deal.title,
   value: deal.id,
   desc:
-    `Value: ${deal.value} ${deal.currency}\n\n` +
-    `Organization ${deal.org_name}\n\n` +
-    `Person: ${deal.person_name}\n\n` +
-    `Status: ${deal.status}`,
+    `Value: ${deal.value} ${deal.currency}\n` +
+    `Status: ${deal.status}\n` +
+    `Probability: ${deal.probability || 'Unknown'}%\n`,
 });
 
 export const getPipedriveDealIdAllowedValues: TQoreGetAllowedValuesFunction<

@@ -31,3 +31,24 @@ export const PIPEDRIVE_ACTIONS = buildActionsFromSwaggerSchema({
   allowedPaths: PIPEDRIVE_ALLOWED_PATHS,
   app: PIPEDRIVE_APP_NAME,
 });
+
+export class PipedriveError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'PipedriveError';
+  }
+}
+
+export const extractPipedriveError = (error: any): string => {
+  if (error?.response?.data) {
+    const data = error.response.data;
+    if (typeof data.error === 'string') return data.error;
+    if (typeof data.message === 'string') return data.message;
+  }
+
+  if (error?.error && typeof error.error === 'string') return error.error;
+  if (error?.message && typeof error.message === 'string') return error.message;
+
+  if (typeof error === 'object') return JSON.stringify(error);
+  return String(error);
+};

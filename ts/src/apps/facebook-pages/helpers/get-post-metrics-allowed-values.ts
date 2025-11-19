@@ -22,29 +22,9 @@ export const FacebookPostMetricsAllowedValues = [
     desc: 'The number of reactions on your post, broken down by type (like, love, wow, haha, sorry, anger)',
   },
   {
-    value: 'post_impressions',
-    display_name: 'Post Impressions',
-    desc: 'The number of times your post was displayed',
-  },
-  {
-    value: 'post_impressions_unique',
-    display_name: 'Unique Post Impressions',
-    desc: 'The number of unique people who saw your post',
-  },
-  {
-    value: 'post_impressions_paid',
-    display_name: 'Paid Post Impressions',
-    desc: 'The number of times your post was displayed as a paid advertisement',
-  },
-  {
-    value: 'post_impressions_organic',
-    display_name: 'Organic Post Impressions',
-    desc: 'The number of times your post was displayed organically (not paid)',
-  },
-  {
-    value: 'post_impressions_fan',
-    display_name: 'Fan Post Impressions',
-    desc: 'The number of times your post was displayed to fans of your page',
+    value: 'post_media_view',
+    display_name: 'Post Media Views',
+    desc: 'The number of times your post (photo, video, or other media) was displayed, including repeat views. Replacement for post_impressions. Use parameters to filter by paid, organic, or follower views.',
   },
   {
     value: 'post_clicks',

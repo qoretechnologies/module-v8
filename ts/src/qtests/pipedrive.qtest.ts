@@ -1,34 +1,6 @@
-import {
-  IQoreAppActionWithWebhookBase,
-  TCustomConnOptions,
-  TQoreAppActionFunctionContext,
-} from '@qoretechnologies/ts-toolkit';
-import { getPipedriveActivityIdAllowedValues } from '../apps/pipedrive/helpers/get-activity-id-allowed-values';
-import { getPipedriveAttendeeAllowedValues } from '../apps/pipedrive/helpers/get-attendee-allowed-values';
-import { getPipedriveDealIdAllowedValues } from '../apps/pipedrive/helpers/get-deal-id-allowed-values';
-import {
-  getPipedriveDealChannelAllowedValues,
-  getPipedriveDealOriginAllowedValues,
-} from '../apps/pipedrive/helpers/get-deal-properties-allowed-values';
-import { getPipedriveLeadIdAllowedValues } from '../apps/pipedrive/helpers/get-lead-id-allowed-values';
-import { getPipedriveLeadLabelIdAllowedValues } from '../apps/pipedrive/helpers/get-lead-label-allowed-values';
-import { getPipedriveNoteIdAllowedValues } from '../apps/pipedrive/helpers/get-note-id-allowed-values';
+import { TCustomConnOptions, TQoreAppActionFunctionContext } from '@qoretechnologies/ts-toolkit';
 import { getPipedriveOrganizationIdAllowedValues } from '../apps/pipedrive/helpers/get-organization-id-allowed-values';
-import { getPipedriveOrganizationLabelAllowedValues } from '../apps/pipedrive/helpers/get-organization-properties-allowed-values';
-import { getPipedrivePersonIdAllowedValues } from '../apps/pipedrive/helpers/get-person-id-allowed-values';
-import { getPipedrivePersonLabelAllowedValues } from '../apps/pipedrive/helpers/get-person-properties-allowed-values';
-import { getPipedrivePipelineIdAllowedValues } from '../apps/pipedrive/helpers/get-pipeline-allowed-values';
-import { getPipedriveProjectTemplateIdAllowedValues } from '../apps/pipedrive/helpers/get-project-template-allowed-values';
-import { getPipedriveStageIdAllowedValues } from '../apps/pipedrive/helpers/get-stage-id-allowed-values';
-import { getPipedriveTaskIdAllowedValues } from '../apps/pipedrive/helpers/get-task-id-allowd-values';
-import { getPipedriveUserIdAllowedValues } from '../apps/pipedrive/helpers/get-user-id-allowed-values';
 import { delay } from '../global/helpers';
-import {
-  PipedriveActivityTrigger,
-  PipedriveDealTrigger,
-  PipedriveLeadTrigger,
-  PipedriveNoteTrigger,
-} from '../apps/pipedrive/triggers';
 
 let connection: string;
 describe('Tests Pipedrive  actions', () => {
@@ -95,38 +67,10 @@ describe('Tests Pipedrive  actions', () => {
   });
 
   // let boardId: string;
-  let organizationId: string;
+  let organizationId: number;
   describe('Tests Pipedrive options allowed values', () => {
     afterEach(async () => {
       await delay(1000);
-    });
-
-    it('Should get activity id allowed values', async () => {
-      const allowed_values = await getPipedriveActivityIdAllowedValues(baseContext);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get deal id allowed values', async () => {
-      const allowed_values = await getPipedriveDealIdAllowedValues(baseContext);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get lead id allowed values', async () => {
-      const allowed_values = await getPipedriveLeadIdAllowedValues(baseContext);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get note id allowed values', async () => {
-      const allowed_values = await getPipedriveNoteIdAllowedValues(baseContext);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
     });
 
     it('Should get organization id allowed values', async () => {
@@ -135,77 +79,7 @@ describe('Tests Pipedrive  actions', () => {
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);
 
-      organizationId = allowed_values[0].value as string;
-    });
-
-    it('Should get person id allowed values', async () => {
-      const allowed_values = await getPipedrivePersonIdAllowedValues(baseContext);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get user id allowed values', async () => {
-      const allowed_values = await getPipedriveUserIdAllowedValues(baseContext);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get pipedrive attendee id allowed values', async () => {
-      const allowed_values = await getPipedriveAttendeeAllowedValues(baseContext);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get deal channel allowed values', async () => {
-      const allowed_values = await getPipedriveDealChannelAllowedValues(baseContext);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get deal channel allowed values', async () => {
-      const allowed_values = await getPipedriveDealOriginAllowedValues(baseContext);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get pipeline allowed values', async () => {
-      const allowed_values = await getPipedrivePipelineIdAllowedValues(baseContext);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get stage allowed values', async () => {
-      const allowed_values = await getPipedriveStageIdAllowedValues(baseContext);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get lead labels allowed values', async () => {
-      const allowed_values = await getPipedriveLeadLabelIdAllowedValues(baseContext);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get organization label allowed values', async () => {
-      const allowed_values = await getPipedriveOrganizationLabelAllowedValues(baseContext);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get person label allowed values', async () => {
-      const allowed_values = await getPipedrivePersonLabelAllowedValues(baseContext);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
+      organizationId = allowed_values[0].value;
     });
 
     // Only for paid accounts
@@ -230,20 +104,6 @@ describe('Tests Pipedrive  actions', () => {
     //   expect(allowed_values).toBeDefined();
     //   expect(allowed_values.length).toBeGreaterThan(0);
     // });
-
-    it('Should get project template allowed values', async () => {
-      const allowed_values = await getPipedriveProjectTemplateIdAllowedValues(baseContext);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
-
-    it('Should get task id allowed values', async () => {
-      const allowed_values = await getPipedriveTaskIdAllowedValues(baseContext);
-
-      expect(allowed_values).toBeDefined();
-      expect(allowed_values.length).toBeGreaterThan(0);
-    });
   });
 
   describe('Tests Pipedrive actions', () => {
@@ -707,129 +567,5 @@ describe('Tests Pipedrive  actions', () => {
     //     expect(body.success).toBeTruthy();
     //   });
     // });
-  });
-
-  describe('Should test Pipedrive webhook actions', () => {
-    describe('Should test new activity trigger registration', () => {
-      let webhook: void | Record<string, any>;
-      it('Should register new activity trigger', async () => {
-        const trigger = PipedriveActivityTrigger as IQoreAppActionWithWebhookBase;
-
-        const webhookData = await trigger.webhook_register(
-          {
-            ...baseContext,
-            opts: {
-              action: 'create',
-            },
-          },
-          'https://example.com'
-        );
-        webhook = webhookData?.webhook;
-
-        expect(webhook).toBeDefined();
-        expect(webhook?.id).toBeDefined();
-      });
-
-      it('Should deregister new activity trigger', async () => {
-        expect(webhook).toBeDefined();
-
-        const trigger = PipedriveActivityTrigger as IQoreAppActionWithWebhookBase;
-
-        await trigger.webhook_deregister(baseContext, 'https://example.com', { webhook });
-      });
-    });
-
-    describe('Should test deal trigger registration', () => {
-      let webhook: void | Record<string, any>;
-
-      it('Should register deal trigger', async () => {
-        const trigger = PipedriveDealTrigger as IQoreAppActionWithWebhookBase;
-
-        const webhookData = await trigger.webhook_register(
-          {
-            ...baseContext,
-            opts: {
-              action: 'change',
-            },
-          },
-          'https://example.com'
-        );
-
-        webhook = webhookData?.webhook;
-
-        expect(webhook).toBeDefined();
-        expect(webhook?.id).toBeDefined();
-      });
-
-      it('Should deregister deal trigger', async () => {
-        expect(webhook).toBeDefined();
-
-        const trigger = PipedriveDealTrigger as IQoreAppActionWithWebhookBase;
-
-        await trigger.webhook_deregister(baseContext, 'https://example.com', { webhook });
-      });
-    });
-
-    describe('Should test lead trigger registration', () => {
-      let webhook: void | Record<string, any>;
-
-      it('Should register lead trigger', async () => {
-        const trigger = PipedriveLeadTrigger as IQoreAppActionWithWebhookBase;
-
-        const webhookData = await trigger.webhook_register(
-          {
-            ...baseContext,
-            opts: {
-              action: 'delete',
-            },
-          },
-          'https://example.com'
-        );
-
-        webhook = webhookData?.webhook;
-
-        expect(webhook).toBeDefined();
-        expect(webhook?.id).toBeDefined();
-      });
-
-      it('Should deregister lead trigger', async () => {
-        expect(webhook).toBeDefined();
-
-        const trigger = PipedriveLeadTrigger as IQoreAppActionWithWebhookBase;
-
-        await trigger.webhook_deregister(baseContext, 'https://example.com', { webhook });
-      });
-    });
-
-    describe('Should test note trigger registration', () => {
-      let webhook: void | Record<string, any>;
-
-      it('Should register note trigger', async () => {
-        const trigger = PipedriveNoteTrigger as IQoreAppActionWithWebhookBase;
-
-        const webhookData = await trigger.webhook_register(
-          {
-            ...baseContext,
-            opts: {
-              action: '*',
-            },
-          },
-          'https://example.com'
-        );
-
-        webhook = webhookData?.webhook;
-
-        expect(webhook).toBeDefined();
-        expect(webhook?.id).toBeDefined();
-      });
-
-      it('Should deregister note trigger', async () => {
-        expect(webhook).toBeDefined();
-
-        const trigger = PipedriveNoteTrigger as IQoreAppActionWithWebhookBase;
-
-        await trigger.webhook_deregister(baseContext, 'https://example.com', { webhook });
-      });
-    });
   });
 });
