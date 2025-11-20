@@ -376,6 +376,7 @@ exports.actionsCatalogue = {
                     "type": "string",
                     "required": false,
                     "default_value": false,
+                    "on_change": ["refetch"],
                 },
                 "isolation_level": {
                     "display_name": "Transaction Isolation Level",
