@@ -1,4 +1,8 @@
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
+import {
+  IQoreAllowedValue,
+  TCustomConnOptions,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
 import { createGitHubClient, GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
 
@@ -14,9 +18,10 @@ const mapGithubUser = (user: {
   image: user.avatar_url,
 });
 
-export const getGitHubAssigneesAllowedValues: TQoreGetAllowedValuesFunction = async (
-  context
-): Promise<IQoreAllowedValue[]> => {
+export const getGitHubAssigneesAllowedValues: TQoreGetAllowedValuesFunction<
+  TCustomConnOptions,
+  string
+> = async (context) => {
   const token = context?.conn_opts?.token;
   const owner = context?.opts?.owner;
   const repo = context?.opts?.repo;
@@ -34,7 +39,7 @@ export const getGitHubAssigneesAllowedValues: TQoreGetAllowedValuesFunction = as
     isTokenPresent: !!token,
   });
 
-  const assignees: IQoreAllowedValue[] = [];
+  const assignees: IQoreAllowedValue<string>[] = [];
   const startTime = Date.now();
 
   try {
