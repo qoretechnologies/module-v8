@@ -1,4 +1,4 @@
-import { TQoreCrudOptions, TQoreMappedOptions } from '@qoretechnologies/ts-toolkit';
+import { TQoreCrudOptions } from '@qoretechnologies/ts-toolkit';
 import { getGitHubOwnerAllowedValues } from '../get-owner-allowed-values';
 import { getGitHubRepositoryIdAllowedValues } from '../get-repository-id-allowed-values';
 
