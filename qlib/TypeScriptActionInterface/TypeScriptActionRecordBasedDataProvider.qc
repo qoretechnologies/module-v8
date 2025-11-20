@@ -566,7 +566,11 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
                     "type": arg_type,
                 };
                 if (this_arg_info) {
-                    arg_info += cast<hash<DataProviderArgInfo>>(this_arg_info);
+                    arg_info += cast<hash<DataProviderArgInfo>>(this_arg_info + {
+                        "allowed_values": (map cast<hash<AllowedValueInfo>>($1), this_arg_info.allowed_values),
+                        "element_allowed_values": (map cast<hash<AllowedValueInfo>>($1),
+                            this_arg_info.element_allowed_values),
+                    });
                 }
             }
         }

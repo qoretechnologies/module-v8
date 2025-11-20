@@ -317,8 +317,8 @@ exports.actionsCatalogue = {
                     "subtype": "logic-operator",
                     "name": "==",
                     "display_name": "equals (==)",
-                    "short_desc": "Returs True if the two arguments are logically equal; types are converted if necessary",
-                    "desc": "Returs `True` if the two arguments are logically equal; types are converted if necessary",
+                    "short_desc": "Returns True if the two arguments are logically equal; types are converted if necessary",
+                    "desc": "Returns `True` if the two arguments are logically equal; types are converted if necessary",
                     "symbol": "==",
                     "roles": ["search", "field"],
                     "args": [
@@ -329,6 +329,30 @@ exports.actionsCatalogue = {
                         {
                             "type_code": "any",
                             "type": "any",
+                        },
+                    ],
+                    "return_type": "bool",
+                },
+                "test": {
+                    "type": "function",
+                    "name": "test",
+                    "display_name": "test",
+                    "short_desc": "Test function",
+                    "desc": "Test function",
+                    "symbol": "test",
+                    "roles": ["search", "field"],
+                    "args": [
+                        {
+                            "type_code": "any",
+                            "type": "string",
+                            "allowed_values": [
+                                {
+                                    "display_name": "A",
+                                    "short_desc": "A",
+                                    "desc": "A",
+                                    "value": "a",
+                                },
+                            ],
                         },
                     ],
                     "return_type": "bool",
