@@ -16,6 +16,7 @@ import { getGitHubTableList } from './helpers/record-based/get-table-list';
 import { GithubCreateOptions, GithubSearchOptions } from './helpers/record-based/options';
 import { searchGitHubRecords } from './helpers/record-based/search-records';
 import * as githubTriggers from './triggers';
+import { getGitHubExpressions } from './helpers/record-based/get-expressions';
 
 export const GITHUB_ACTIONS = buildActionsFromSwaggerSchema({
   schema: github as any,
@@ -81,5 +82,5 @@ export default (locale: Locales) =>
     search_records: searchGitHubRecords,
     search_options: GithubSearchOptions,
     create_options: GithubCreateOptions,
-    expressions: {},
+    expressions: getGitHubExpressions(locale),
   }) satisfies TQoreAppWithActions & TQoreRecordBasedApp;
