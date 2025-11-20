@@ -50807,6 +50807,38 @@ type RootTranslation = {
 					group: string
 				}
 			}
+			expressions: {
+				type: {
+					/**
+					 * t​y​p​e
+					 */
+					displayName: string
+					/**
+					 * F​i​l​t​e​r​ ​b​y​ ​r​e​c​o​r​d​ ​t​y​p​e
+					 */
+					shortDesc: string
+					/**
+					 * F​i​l​t​e​r​s​ ​r​e​c​o​r​d​s​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​i​r​ ​t​y​p​e​ ​(​e​.​g​.​,​ ​p​u​b​l​i​c​/​p​r​i​v​a​t​e​ ​r​e​p​o​s​i​t​o​r​i​e​s​,​ ​o​p​e​n​/​c​l​o​s​e​d​ ​i​s​s​u​e​s​)
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​O​p​t​i​o​n​s​ ​v​a​r​y​ ​b​y​ ​t​a​b​l​e​:​ ​r​e​p​o​s​i​t​o​r​i​e​s​ ​c​a​n​ ​b​e​ ​p​u​b​l​i​c​/​p​r​i​v​a​t​e​/​a​l​l​,​ ​w​h​i​l​e​ ​i​s​s​u​e​s​ ​a​n​d​ ​p​u​l​l​ ​r​e​q​u​e​s​t​s​ ​c​a​n​ ​b​e​ ​o​p​e​n​/​c​l​o​s​e​d​/​a​l​l
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
 		}
 		Typeform: {
 			/**
@@ -137852,6 +137884,38 @@ export type TranslationFunctions = {
 					 * Search
 					 */
 					group: () => LocalizedString
+				}
+			}
+			expressions: {
+				type: {
+					/**
+					 * type
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Filter by record type
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Filters records based on their type (e.g., public/private repositories, open/closed issues)
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The type to filter by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the type of records to retrieve. Options vary by table: repositories can be public/private/all, while issues and pull requests can be open/closed/all
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 			}
 		}

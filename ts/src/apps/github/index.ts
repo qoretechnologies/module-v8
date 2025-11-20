@@ -1,16 +1,22 @@
+import { TQoreAppWithActions, TQoreRecordBasedApp } from '@qoretechnologies/ts-toolkit';
 import { actionsCatalogue } from '../../ActionsCatalogue';
 import {
   buildActionsFromSwaggerSchema,
   mapActionsToApp,
   mapTriggersToApp,
 } from '../../global/helpers';
-import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import { createSwaggerPaths } from '../../global/helpers/index';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import github from '../../schemas/github.swagger.json';
 import { GITHUB_ALLOWED_PATHS, GITHUB_APP_NAME } from './constants';
-import { createSwaggerPaths } from '../../global/helpers/index';
+import { createGitHubRecords } from './helpers/record-based/create-records';
+import { getGithubRecordType } from './helpers/record-based/get-record-type';
+import { getGitHubTableList } from './helpers/record-based/get-table-list';
+import { GithubCreateOptions, GithubSearchOptions } from './helpers/record-based/options';
+import { searchGitHubRecords } from './helpers/record-based/search-records';
 import * as githubTriggers from './triggers';
+import { getGitHubExpressions } from './helpers/record-based/get-expressions';
 
 export const GITHUB_ACTIONS = buildActionsFromSwaggerSchema({
   schema: github as any,
@@ -70,4 +76,11 @@ export default (locale: Locales) =>
       ping_method: 'GET',
       ping_path: '/user',
     },
-  }) satisfies TQoreAppWithActions;
+    get_table_list: getGitHubTableList,
+    get_record_type: getGithubRecordType,
+    create_records: createGitHubRecords,
+    search_records: searchGitHubRecords,
+    search_options: GithubSearchOptions,
+    create_options: GithubCreateOptions,
+    expressions: getGitHubExpressions(locale),
+  }) satisfies TQoreAppWithActions & TQoreRecordBasedApp;

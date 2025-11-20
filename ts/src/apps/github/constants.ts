@@ -360,3 +360,10 @@ export const GITHUB_ALLOWED_PATHS: TAllowedPaths = {
     },
   },
 };
+
+export class GitHubError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'GitHubError';
+  }
+}
