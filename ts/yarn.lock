@@ -1446,6 +1446,33 @@
     bluebird "^3.5.0"
     rewire "^7.0.0"
 
+"@gitbeaker/core@^43.8.0":
+  version "43.8.0"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/core/-/core-43.8.0.tgz#b9ff02c9c91296f5aaaa0b9c16c4396453610fca"
+  integrity sha512-H+LfKuf4dExBinb79c+CXViRBvTVQNf5BYLNSizm2SiqdED5JruhKX88payefleY0szp7G/mySlFSXPyGRH1dQ==
+  dependencies:
+    "@gitbeaker/requester-utils" "^43.8.0"
+    qs "^6.14.0"
+    xcase "^2.0.1"
+
+"@gitbeaker/requester-utils@^43.8.0":
+  version "43.8.0"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/requester-utils/-/requester-utils-43.8.0.tgz#6b9fb0cf93ce20c7a9b453161749c61a704c2849"
+  integrity sha512-d/SiJdxijc+aH5ZBQOw83XLxNSXqsBZNm5k3nPu1EHxGxK0fajXmxdMl0/vNXbKRggnIquFCxURkrQSEzfjqxQ==
+  dependencies:
+    picomatch-browser "^2.2.6"
+    qs "^6.14.0"
+    rate-limiter-flexible "^8.0.1"
+    xcase "^2.0.1"
+
+"@gitbeaker/rest@^43.8.0":
+  version "43.8.0"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/rest/-/rest-43.8.0.tgz#e7ed39a2ae0a358f9c91c02aa0f3f946cd7ced5c"
+  integrity sha512-xxqsNsUXaFang9b2e/NTIgqUeuUlifA2Opy1mOVqTDuJZZNIOTgUNyziwBJoleBhMC0XuvY3JNVMWthufcVjRw==
+  dependencies:
+    "@gitbeaker/core" "^43.8.0"
+    "@gitbeaker/requester-utils" "^43.8.0"
+
 "@google-cloud/firestore@^7.11.6":
   version "7.11.6"
   resolved "https://registry.yarnpkg.com/@google-cloud/firestore/-/firestore-7.11.6.tgz#0a2b26e215aa4f903267f82370450753b84db16a"
@@ -9998,6 +10025,11 @@ picocolors@^1.1.1:
   resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.1.1.tgz#3d321af3eab939b083c8f929a1d12cda81c26b6b"
   integrity sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==
 
+picomatch-browser@^2.2.6:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/picomatch-browser/-/picomatch-browser-2.2.6.tgz#e0626204575eb49f019f2f2feac24fc3b53e7a8a"
+  integrity sha512-0ypsOQt9D4e3hziV8O4elD9uN0z/jtUEfxVRtNaAAtXIyUx9m/SzlO020i8YNL2aL/E6blOvvHQcin6HZlFy/w==
+
 picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
@@ -10166,7 +10198,7 @@ pure-rand@^7.0.0:
   resolved "https://registry.yarnpkg.com/pure-rand/-/pure-rand-7.0.1.tgz#6f53a5a9e3e4a47445822af96821ca509ed37566"
   integrity sha512-oTUZM/NAZS8p7ANR3SHh30kXB+zK2r2BPcEn/awJIbOvq82WoMN4p62AWWp3Hhw50G0xMsw1mhIBLqHw64EcNQ==
 
-qs@6.14.0, qs@^6.10.3, qs@^6.11.2, qs@^6.13.1, qs@^6.7.0:
+qs@6.14.0, qs@^6.10.3, qs@^6.11.2, qs@^6.13.1, qs@^6.14.0, qs@^6.7.0:
   version "6.14.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.14.0.tgz#c63fa40680d2c5c941412a0e899c89af60c0a930"
   integrity sha512-YWWTjgABSKcvs/nWBi9PycY/JiPJqOD4JA6o9Sej2AtvSGarXxKC3OQSk4pAarbdQlKAh5D4FCQkJNkW+GAn3w==
@@ -10226,6 +10258,11 @@ randomfill@^1.0.4:
   dependencies:
     randombytes "^2.0.5"
     safe-buffer "^5.1.0"
+
+rate-limiter-flexible@^8.0.1:
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/rate-limiter-flexible/-/rate-limiter-flexible-8.2.1.tgz#206f4af15244b590ca4ee2b5e945ef859bb6b6ba"
+  integrity sha512-QreyZSG7jJepD7wbMVG0wvkMx8MZaCKdnpUIffoQ/xavM7PKzpSfzrs6DISVb00LXckV1lQ3NSkc4xL3ZaUVLg==
 
 re-resizable@^6.9.0:
   version "6.11.2"
@@ -12316,6 +12353,11 @@ ws@^8.18.0, ws@^8.18.2:
   version "8.18.3"
   resolved "https://registry.yarnpkg.com/ws/-/ws-8.18.3.tgz#b56b88abffde62791c639170400c93dcb0c95472"
   integrity sha512-PEIGCY5tSlUt50cqyMXfCzX+oOPqN0vuGqWzbcJ2xvnkzkq46oOpz7dQaTDBdfICb4N14+GARUDw2XV2N4tvzg==
+
+xcase@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/xcase/-/xcase-2.0.1.tgz#c7fa72caa0f440db78fd5673432038ac984450b9"
+  integrity sha512-UmFXIPU+9Eg3E9m/728Bii0lAIuoc+6nbrNUKaRPJOFp91ih44qqGlWtxMB6kXFrRD6po+86ksHM5XHCfk6iPw==
 
 xmlbuilder@8.2.x:
   version "8.2.2"

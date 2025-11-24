@@ -28844,6 +28844,764 @@ type RootTranslation = {
 				}
 			}
 		}
+		Gitlab: {
+			/**
+			 * G​i​t​L​a​b
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​G​i​t​L​a​b​ ​t​o​ ​m​a​n​a​g​e​ ​r​e​p​o​s​i​t​o​r​i​e​s​,​ ​i​s​s​u​e​s​,​ ​m​e​r​g​e​ ​r​e​q​u​e​s​t​s​,​ ​a​n​d​ ​C​I​/​C​D​ ​p​i​p​e​l​i​n​e​s
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​G​i​t​L​a​b​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​c​e​s​s​ ​t​o​ ​G​i​t​L​a​b​'​s​ ​A​P​I​ ​f​o​r​ ​m​a​n​a​g​i​n​g​ ​y​o​u​r​ ​d​e​v​e​l​o​p​m​e​n​t​ ​w​o​r​k​f​l​o​w​.​ ​A​u​t​o​m​a​t​e​ ​r​e​p​o​s​i​t​o​r​y​ ​o​p​e​r​a​t​i​o​n​s​,​ ​t​r​a​c​k​ ​i​s​s​u​e​s​ ​a​n​d​ ​m​e​r​g​e​ ​r​e​q​u​e​s​t​s​,​ ​m​a​n​a​g​e​ ​t​e​a​m​ ​m​e​m​b​e​r​s​ ​a​n​d​ ​a​c​c​e​s​s​ ​c​o​n​t​r​o​l​s​,​ ​c​o​n​f​i​g​u​r​e​ ​C​I​/​C​D​ ​v​a​r​i​a​b​l​e​s​,​ ​a​n​d​ ​m​a​i​n​t​a​i​n​ ​p​r​o​j​e​c​t​ ​d​o​c​u​m​e​n​t​a​t​i​o​n​ ​t​h​r​o​u​g​h​ ​w​i​k​i​s​.​ ​W​h​e​t​h​e​r​ ​y​o​u​'​r​e​ ​c​o​o​r​d​i​n​a​t​i​n​g​ ​a​ ​d​e​v​e​l​o​p​m​e​n​t​ ​t​e​a​m​ ​o​r​ ​a​u​t​o​m​a​t​i​n​g​ ​D​e​v​O​p​s​ ​p​r​o​c​e​s​s​e​s​,​ ​t​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​s​t​r​e​a​m​l​i​n​e​s​ ​y​o​u​r​ ​G​i​t​L​a​b​ ​o​p​e​r​a​t​i​o​n​s​.
+			 */
+			longDesc: string
+			actions: {
+				getApiV4Groups: {
+					/**
+					 * G​r​o​u​p​s
+					 */
+					group: string
+				}
+				postApiV4Groups: {
+					/**
+					 * G​r​o​u​p​s
+					 */
+					group: string
+				}
+				deleteApiV4GroupsId: {
+					/**
+					 * G​r​o​u​p​s
+					 */
+					group: string
+				}
+				getApiV4GroupsId: {
+					/**
+					 * G​r​o​u​p​s
+					 */
+					group: string
+				}
+				putApiV4GroupsId: {
+					/**
+					 * G​r​o​u​p​s
+					 */
+					group: string
+				}
+				getApiV4GroupsIdMembers: {
+					/**
+					 * G​r​o​u​p​ ​M​e​m​b​e​r​s
+					 */
+					group: string
+				}
+				postApiV4GroupsIdMembers: {
+					/**
+					 * G​r​o​u​p​ ​M​e​m​b​e​r​s
+					 */
+					group: string
+				}
+				deleteApiV4GroupsIdMembersUserId: {
+					/**
+					 * G​r​o​u​p​ ​M​e​m​b​e​r​s
+					 */
+					group: string
+				}
+				getApiV4GroupsIdMembersUserId: {
+					/**
+					 * G​r​o​u​p​ ​M​e​m​b​e​r​s
+					 */
+					group: string
+				}
+				putApiV4GroupsIdMembersUserId: {
+					/**
+					 * G​r​o​u​p​ ​M​e​m​b​e​r​s
+					 */
+					group: string
+				}
+				getApiV4GroupsIdVariables: {
+					/**
+					 * G​r​o​u​p​ ​V​a​r​i​a​b​l​e​s
+					 */
+					group: string
+				}
+				postApiV4GroupsIdVariables: {
+					/**
+					 * G​r​o​u​p​ ​V​a​r​i​a​b​l​e​s
+					 */
+					group: string
+				}
+				deleteApiV4GroupsIdVariablesKey: {
+					/**
+					 * G​r​o​u​p​ ​V​a​r​i​a​b​l​e​s
+					 */
+					group: string
+				}
+				getApiV4GroupsIdVariablesKey: {
+					/**
+					 * G​r​o​u​p​ ​V​a​r​i​a​b​l​e​s
+					 */
+					group: string
+				}
+				putApiV4GroupsIdVariablesKey: {
+					/**
+					 * G​r​o​u​p​ ​V​a​r​i​a​b​l​e​s
+					 */
+					group: string
+				}
+				getApiV4GroupsIdWikis: {
+					/**
+					 * G​r​o​u​p​ ​W​i​k​i​s
+					 */
+					group: string
+				}
+				postApiV4GroupsIdWikis: {
+					/**
+					 * G​r​o​u​p​ ​W​i​k​i​s
+					 */
+					group: string
+				}
+				deleteApiV4GroupsIdWikisSlug: {
+					/**
+					 * G​r​o​u​p​ ​W​i​k​i​s
+					 */
+					group: string
+				}
+				getApiV4GroupsIdWikisSlug: {
+					/**
+					 * G​r​o​u​p​ ​W​i​k​i​s
+					 */
+					group: string
+				}
+				putApiV4GroupsIdWikisSlug: {
+					/**
+					 * G​r​o​u​p​ ​W​i​k​i​s
+					 */
+					group: string
+				}
+				getApiV4Issues: {
+					/**
+					 * I​s​s​u​e​s
+					 */
+					group: string
+				}
+				getApiV4IssuesId: {
+					/**
+					 * I​s​s​u​e​s
+					 */
+					group: string
+				}
+				getApiV4ProjectsIdIssues: {
+					/**
+					 * I​s​s​u​e​s
+					 */
+					group: string
+				}
+				postApiV4ProjectsIdIssues: {
+					/**
+					 * I​s​s​u​e​s
+					 */
+					group: string
+				}
+				deleteApiV4ProjectsIdIssuesIssueIid: {
+					/**
+					 * I​s​s​u​e​s
+					 */
+					group: string
+				}
+				getApiV4ProjectsIdIssuesIssueIid: {
+					/**
+					 * I​s​s​u​e​s
+					 */
+					group: string
+				}
+				putApiV4ProjectsIdIssuesIssueIid: {
+					/**
+					 * I​s​s​u​e​s
+					 */
+					group: string
+				}
+				getApiV4ProjectsIdIssuesIssueIidTimeStats: {
+					/**
+					 * I​s​s​u​e​s
+					 */
+					group: string
+				}
+				getApiV4Projects: {
+					/**
+					 * P​r​o​j​e​c​t​s
+					 */
+					group: string
+				}
+				postApiV4Projects: {
+					/**
+					 * P​r​o​j​e​c​t​s
+					 */
+					group: string
+				}
+				deleteApiV4ProjectsId: {
+					/**
+					 * P​r​o​j​e​c​t​s
+					 */
+					group: string
+				}
+				getApiV4ProjectsId: {
+					/**
+					 * P​r​o​j​e​c​t​s
+					 */
+					group: string
+				}
+				putApiV4ProjectsId: {
+					/**
+					 * P​r​o​j​e​c​t​s
+					 */
+					group: string
+				}
+				get_project_id_by_url: {
+					/**
+					 * P​r​o​j​e​c​t​s
+					 */
+					group: string
+					/**
+					 * G​e​t​ ​P​r​o​j​e​c​t​ ​I​D​ ​b​y​ ​U​R​L
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​G​i​t​L​a​b​ ​p​r​o​j​e​c​t​ ​I​D​ ​a​n​d​ ​p​a​t​h​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​r​o​m​ ​a​ ​p​r​o​j​e​c​t​ ​U​R​L
+					 */
+					shortDesc: string
+					/**
+					 * E​x​t​r​a​c​t​s​ ​a​n​d​ ​r​e​t​r​i​e​v​e​s​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​I​D​,​ ​e​n​c​o​d​e​d​ ​p​a​t​h​,​ ​a​n​d​ ​f​u​l​l​ ​p​a​t​h​ ​w​i​t​h​ ​n​a​m​e​s​p​a​c​e​ ​f​r​o​m​ ​a​ ​G​i​t​L​a​b​ ​p​r​o​j​e​c​t​ ​U​R​L​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​i​s​ ​u​s​e​f​u​l​ ​w​h​e​n​ ​y​o​u​ ​h​a​v​e​ ​a​ ​p​r​o​j​e​c​t​ ​U​R​L​ ​a​n​d​ ​n​e​e​d​ ​t​o​ ​o​b​t​a​i​n​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​u​s​e​ ​i​n​ ​o​t​h​e​r​ ​G​i​t​L​a​b​ ​A​P​I​ ​o​p​e​r​a​t​i​o​n​s​.​ ​T​h​e​ ​a​c​t​i​o​n​ ​d​e​c​o​d​e​s​ ​t​h​e​ ​U​R​L​,​ ​q​u​e​r​i​e​s​ ​t​h​e​ ​G​i​t​L​a​b​ ​A​P​I​,​ ​a​n​d​ ​r​e​t​u​r​n​s​ ​b​o​t​h​ ​t​h​e​ ​n​u​m​e​r​i​c​ ​p​r​o​j​e​c​t​ ​I​D​ ​a​n​d​ ​t​h​e​ ​U​R​L​-​e​n​c​o​d​e​d​ ​p​a​t​h​ ​f​o​r​ ​c​o​n​v​e​n​i​e​n​t​ ​u​s​e​ ​i​n​ ​s​u​b​s​e​q​u​e​n​t​ ​a​c​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						project_url: {
+							/**
+							 * P​r​o​j​e​c​t​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​o​f​ ​t​h​e​ ​G​i​t​L​a​b​ ​p​r​o​j​e​c​t
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​c​o​m​p​l​e​t​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​G​i​t​L​a​b​ ​p​r​o​j​e​c​t​ ​(​e​.​g​.​,​ ​h​t​t​p​s​:​/​/​g​i​t​l​a​b​.​c​o​m​/​u​s​e​r​n​a​m​e​/​p​r​o​j​e​c​t​-​n​a​m​e​)​.​ ​T​h​e​ ​a​c​t​i​o​n​ ​w​i​l​l​ ​e​x​t​r​a​c​t​ ​t​h​e​ ​p​r​o​j​e​c​t​ ​p​a​t​h​ ​f​r​o​m​ ​t​h​i​s​ ​U​R​L​ ​a​n​d​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​p​r​o​j​e​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​n​u​m​e​r​i​c​ ​I​D​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				getApiV4ProjectsIdUsers: {
+					/**
+					 * P​r​o​j​e​c​t​s
+					 */
+					group: string
+				}
+				getApiV4ProjectsIdMembers: {
+					/**
+					 * P​r​o​j​e​c​t​ ​M​e​m​b​e​r​s
+					 */
+					group: string
+				}
+				postApiV4ProjectsIdMembers: {
+					/**
+					 * P​r​o​j​e​c​t​ ​M​e​m​b​e​r​s
+					 */
+					group: string
+				}
+				deleteApiV4ProjectsIdMembersUserId: {
+					/**
+					 * P​r​o​j​e​c​t​ ​M​e​m​b​e​r​s
+					 */
+					group: string
+				}
+				getApiV4ProjectsIdMembersUserId: {
+					/**
+					 * P​r​o​j​e​c​t​ ​M​e​m​b​e​r​s
+					 */
+					group: string
+				}
+				putApiV4ProjectsIdMembersUserId: {
+					/**
+					 * P​r​o​j​e​c​t​ ​M​e​m​b​e​r​s
+					 */
+					group: string
+				}
+				getApiV4ProjectsIdDeployKeys: {
+					/**
+					 * D​e​p​l​o​y​ ​K​e​y​s
+					 */
+					group: string
+				}
+				postApiV4ProjectsIdDeployKeys: {
+					/**
+					 * D​e​p​l​o​y​ ​K​e​y​s
+					 */
+					group: string
+				}
+				deleteApiV4ProjectsIdDeployKeysKeyId: {
+					/**
+					 * D​e​p​l​o​y​ ​K​e​y​s
+					 */
+					group: string
+				}
+				getApiV4ProjectsIdDeployKeysKeyId: {
+					/**
+					 * D​e​p​l​o​y​ ​K​e​y​s
+					 */
+					group: string
+				}
+				putApiV4ProjectsIdDeployKeysKeyId: {
+					/**
+					 * D​e​p​l​o​y​ ​K​e​y​s
+					 */
+					group: string
+				}
+				postApiV4ProjectsIdDeployKeysKeyIdEnable: {
+					/**
+					 * D​e​p​l​o​y​ ​K​e​y​s
+					 */
+					group: string
+				}
+				getApiV4ProjectsIdMergeRequests: {
+					/**
+					 * M​e​r​g​e​ ​R​e​q​u​e​s​t​s
+					 */
+					group: string
+				}
+				postApiV4ProjectsIdMergeRequests: {
+					/**
+					 * M​e​r​g​e​ ​R​e​q​u​e​s​t​s
+					 */
+					group: string
+				}
+				deleteApiV4ProjectsIdMergeRequestsMergeRequestIid: {
+					/**
+					 * M​e​r​g​e​ ​R​e​q​u​e​s​t​s
+					 */
+					group: string
+				}
+				getApiV4ProjectsIdMergeRequestsMergeRequestIid: {
+					/**
+					 * M​e​r​g​e​ ​R​e​q​u​e​s​t​s
+					 */
+					group: string
+				}
+				putApiV4ProjectsIdMergeRequestsMergeRequestIid: {
+					/**
+					 * M​e​r​g​e​ ​R​e​q​u​e​s​t​s
+					 */
+					group: string
+				}
+				postApiV4ProjectsIdMergeRequestsMergeRequestIidApprove: {
+					/**
+					 * M​e​r​g​e​ ​R​e​q​u​e​s​t​s
+					 */
+					group: string
+				}
+				postApiV4ProjectsIdMergeRequestsMergeRequestIidUnapprove: {
+					/**
+					 * M​e​r​g​e​ ​R​e​q​u​e​s​t​s
+					 */
+					group: string
+				}
+				getApiV4ProjectsIdRepositoryBranches: {
+					/**
+					 * R​e​p​o​s​i​t​o​r​y​ ​B​r​a​n​c​h​e​s
+					 */
+					group: string
+				}
+				postApiV4ProjectsIdRepositoryBranches: {
+					/**
+					 * R​e​p​o​s​i​t​o​r​y​ ​B​r​a​n​c​h​e​s
+					 */
+					group: string
+				}
+				deleteApiV4ProjectsIdRepositoryBranchesBranch: {
+					/**
+					 * R​e​p​o​s​i​t​o​r​y​ ​B​r​a​n​c​h​e​s
+					 */
+					group: string
+				}
+				getApiV4ProjectsIdRepositoryBranchesBranch: {
+					/**
+					 * R​e​p​o​s​i​t​o​r​y​ ​B​r​a​n​c​h​e​s
+					 */
+					group: string
+				}
+				deleteApiV4ProjectsIdRepositoryMergedBranches: {
+					/**
+					 * R​e​p​o​s​i​t​o​r​y​ ​B​r​a​n​c​h​e​s
+					 */
+					group: string
+				}
+				getApiV4ProjectsIdRepositoryCommits: {
+					/**
+					 * R​e​p​o​s​i​t​o​r​y​ ​C​o​m​m​i​t​s
+					 */
+					group: string
+				}
+				postApiV4ProjectsIdRepositoryCommits: {
+					/**
+					 * R​e​p​o​s​i​t​o​r​y​ ​C​o​m​m​i​t​s
+					 */
+					group: string
+				}
+				getApiV4ProjectsIdRepositoryCommitsSha: {
+					/**
+					 * R​e​p​o​s​i​t​o​r​y​ ​C​o​m​m​i​t​s
+					 */
+					group: string
+				}
+				getApiV4ProjectsIdRepositoryCommitsShaComments: {
+					/**
+					 * R​e​p​o​s​i​t​o​r​y​ ​C​o​m​m​i​t​s
+					 */
+					group: string
+				}
+				postApiV4ProjectsIdRepositoryCommitsShaComments: {
+					/**
+					 * R​e​p​o​s​i​t​o​r​y​ ​C​o​m​m​i​t​s
+					 */
+					group: string
+				}
+				getApiV4ProjectsIdVariables: {
+					/**
+					 * P​r​o​j​e​c​t​ ​V​a​r​i​a​b​l​e​s
+					 */
+					group: string
+				}
+				postApiV4ProjectsIdVariables: {
+					/**
+					 * P​r​o​j​e​c​t​ ​V​a​r​i​a​b​l​e​s
+					 */
+					group: string
+				}
+				deleteApiV4ProjectsIdVariablesKey: {
+					/**
+					 * P​r​o​j​e​c​t​ ​V​a​r​i​a​b​l​e​s
+					 */
+					group: string
+				}
+				getApiV4ProjectsIdVariablesKey: {
+					/**
+					 * P​r​o​j​e​c​t​ ​V​a​r​i​a​b​l​e​s
+					 */
+					group: string
+				}
+				putApiV4ProjectsIdVariablesKey: {
+					/**
+					 * P​r​o​j​e​c​t​ ​V​a​r​i​a​b​l​e​s
+					 */
+					group: string
+				}
+				getApiV4ProjectsIdWikis: {
+					/**
+					 * P​r​o​j​e​c​t​ ​W​i​k​i​s
+					 */
+					group: string
+				}
+				postApiV4ProjectsIdWikis: {
+					/**
+					 * P​r​o​j​e​c​t​ ​W​i​k​i​s
+					 */
+					group: string
+				}
+				deleteApiV4ProjectsIdWikisSlug: {
+					/**
+					 * P​r​o​j​e​c​t​ ​W​i​k​i​s
+					 */
+					group: string
+				}
+				getApiV4ProjectsIdWikisSlug: {
+					/**
+					 * P​r​o​j​e​c​t​ ​W​i​k​i​s
+					 */
+					group: string
+				}
+				putApiV4ProjectsIdWikisSlug: {
+					/**
+					 * P​r​o​j​e​c​t​ ​W​i​k​i​s
+					 */
+					group: string
+				}
+			}
+			triggers: {
+				new_merge_request: {
+					/**
+					 * N​e​w​ ​M​e​r​g​e​ ​R​e​q​u​e​s​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​m​e​r​g​e​ ​r​e​q​u​e​s​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​G​i​t​L​a​b
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​G​i​t​L​a​b​ ​p​r​o​j​e​c​t​s​ ​o​r​ ​g​r​o​u​p​s​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​m​e​r​g​e​ ​r​e​q​u​e​s​t​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​p​o​l​l​s​ ​f​o​r​ ​m​e​r​g​e​ ​r​e​q​u​e​s​t​s​ ​b​a​s​e​d​ ​o​n​ ​y​o​u​r​ ​s​p​e​c​i​f​i​e​d​ ​f​i​l​t​e​r​s​,​ ​i​n​c​l​u​d​i​n​g​ ​p​r​o​j​e​c​t​ ​s​c​o​p​e​,​ ​g​r​o​u​p​ ​s​c​o​p​e​,​ ​r​e​v​i​e​w​e​r​ ​a​s​s​i​g​n​m​e​n​t​s​,​ ​a​n​d​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​a​u​t​o​m​a​t​i​n​g​ ​c​o​d​e​ ​r​e​v​i​e​w​ ​w​o​r​k​f​l​o​w​s​,​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​a​n​d​ ​a​p​p​r​o​v​a​l​ ​p​r​o​c​e​s​s​e​s​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​i​t​L​a​b​ ​p​r​o​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​m​e​r​g​e​ ​r​e​q​u​e​s​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​G​i​t​L​a​b​ ​p​r​o​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​e​r​g​e​ ​r​e​q​u​e​s​t​s​.​ ​W​h​e​n​ ​s​p​e​c​i​f​i​e​d​,​ ​o​n​l​y​ ​m​e​r​g​e​ ​r​e​q​u​e​s​t​s​ ​f​r​o​m​ ​t​h​i​s​ ​p​r​o​j​e​c​t​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​p​r​o​j​e​c​t​s​ ​y​o​u​ ​h​a​v​e​ ​a​c​c​e​s​s​ ​t​o​,​ ​o​r​ ​u​s​e​ ​i​n​ ​c​o​m​b​i​n​a​t​i​o​n​ ​w​i​t​h​ ​t​h​e​ ​g​r​o​u​p​ ​f​i​l​t​e​r​.
+							 */
+							longDesc: string
+						}
+						group: {
+							/**
+							 * G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​i​t​L​a​b​ ​g​r​o​u​p​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​m​e​r​g​e​ ​r​e​q​u​e​s​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​G​i​t​L​a​b​ ​g​r​o​u​p​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​e​r​g​e​ ​r​e​q​u​e​s​t​s​ ​a​c​r​o​s​s​ ​a​l​l​ ​p​r​o​j​e​c​t​s​ ​w​i​t​h​i​n​ ​t​h​a​t​ ​g​r​o​u​p​.​ ​W​h​e​n​ ​s​p​e​c​i​f​i​e​d​,​ ​o​n​l​y​ ​m​e​r​g​e​ ​r​e​q​u​e​s​t​s​ ​f​r​o​m​ ​p​r​o​j​e​c​t​s​ ​i​n​ ​t​h​i​s​ ​g​r​o​u​p​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.​ ​T​h​i​s​ ​i​s​ ​u​s​e​f​u​l​ ​f​o​r​ ​m​o​n​i​t​o​r​i​n​g​ ​o​r​g​a​n​i​z​a​t​i​o​n​-​w​i​d​e​ ​m​e​r​g​e​ ​r​e​q​u​e​s​t​ ​a​c​t​i​v​i​t​y​.
+							 */
+							longDesc: string
+						}
+						onlyAssignedToMe: {
+							/**
+							 * O​n​l​y​ ​A​s​s​i​g​n​e​d​ ​t​o​ ​M​e
+							 */
+							displayName: string
+							/**
+							 * M​o​n​i​t​o​r​ ​o​n​l​y​ ​m​e​r​g​e​ ​r​e​q​u​e​s​t​s​ ​w​h​e​r​e​ ​y​o​u​ ​a​r​e​ ​a​ ​r​e​v​i​e​w​e​r
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​o​n​l​y​ ​f​i​r​e​ ​f​o​r​ ​m​e​r​g​e​ ​r​e​q​u​e​s​t​s​ ​w​h​e​r​e​ ​t​h​e​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​u​s​e​r​ ​i​s​ ​a​s​s​i​g​n​e​d​ ​a​s​ ​a​ ​r​e​v​i​e​w​e​r​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​f​i​l​t​e​r​ ​m​e​r​g​e​ ​r​e​q​u​e​s​t​s​ ​t​o​ ​s​h​o​w​ ​o​n​l​y​ ​t​h​o​s​e​ ​r​e​q​u​i​r​i​n​g​ ​y​o​u​r​ ​a​t​t​e​n​t​i​o​n​.​ ​W​h​e​n​ ​d​i​s​a​b​l​e​d​,​ ​a​l​l​ ​m​e​r​g​e​ ​r​e​q​u​e​s​t​s​ ​m​a​t​c​h​i​n​g​ ​o​t​h​e​r​ ​c​r​i​t​e​r​i​a​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d​.
+							 */
+							longDesc: string
+						}
+						search: {
+							/**
+							 * S​e​a​r​c​h
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​m​e​r​g​e​ ​r​e​q​u​e​s​t​s
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​a​ ​s​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​m​e​r​g​e​ ​r​e​q​u​e​s​t​s​ ​b​y​ ​t​i​t​l​e​ ​o​r​ ​d​e​s​c​r​i​p​t​i​o​n​.​ ​T​h​e​ ​s​e​a​r​c​h​ ​i​s​ ​c​a​s​e​-​i​n​s​e​n​s​i​t​i​v​e​ ​a​n​d​ ​m​a​t​c​h​e​s​ ​p​a​r​t​i​a​l​ ​s​t​r​i​n​g​s​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​m​o​n​i​t​o​r​ ​m​e​r​g​e​ ​r​e​q​u​e​s​t​s​ ​r​e​l​a​t​e​d​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​f​e​a​t​u​r​e​s​,​ ​b​u​g​ ​f​i​x​e​s​,​ ​o​r​ ​k​e​y​w​o​r​d​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_commit: {
+					/**
+					 * N​e​w​ ​C​o​m​m​i​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​i​t​ ​i​s​ ​p​u​s​h​e​d​ ​t​o​ ​a​ ​G​i​t​L​a​b​ ​p​r​o​j​e​c​t
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​G​i​t​L​a​b​ ​p​r​o​j​e​c​t​ ​f​o​r​ ​n​e​w​l​y​ ​p​u​s​h​e​d​ ​c​o​m​m​i​t​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​p​o​l​l​s​ ​f​o​r​ ​c​o​m​m​i​t​s​ ​b​a​s​e​d​ ​o​n​ ​y​o​u​r​ ​s​p​e​c​i​f​i​e​d​ ​f​i​l​t​e​r​s​,​ ​i​n​c​l​u​d​i​n​g​ ​f​i​l​e​ ​p​a​t​h​s​,​ ​c​o​m​m​i​t​ ​a​u​t​h​o​r​s​,​ ​a​n​d​ ​s​t​a​t​i​s​t​i​c​s​.​ ​I​d​e​a​l​ ​f​o​r​ ​a​u​t​o​m​a​t​i​n​g​ ​d​e​p​l​o​y​m​e​n​t​ ​p​i​p​e​l​i​n​e​s​,​ ​c​o​d​e​ ​q​u​a​l​i​t​y​ ​c​h​e​c​k​s​,​ ​a​n​d​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​w​o​r​k​f​l​o​w​s​ ​w​h​e​n​ ​n​e​w​ ​c​o​d​e​ ​i​s​ ​p​u​s​h​e​d​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​i​t​L​a​b​ ​p​r​o​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​c​o​m​m​i​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​i​t​L​a​b​ ​p​r​o​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​o​m​m​i​t​s​.​ ​T​h​i​s​ ​f​i​e​l​d​ ​i​s​ ​r​e​q​u​i​r​e​d​ ​a​s​ ​c​o​m​m​i​t​s​ ​a​r​e​ ​s​p​e​c​i​f​i​c​ ​t​o​ ​i​n​d​i​v​i​d​u​a​l​ ​p​r​o​j​e​c​t​s​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​c​h​e​c​k​ ​f​o​r​ ​n​e​w​ ​c​o​m​m​i​t​s​ ​p​u​s​h​e​d​ ​t​o​ ​a​n​y​ ​b​r​a​n​c​h​ ​i​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​p​r​o​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						withStats: {
+							/**
+							 * I​n​c​l​u​d​e​ ​S​t​a​t​i​s​t​i​c​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​c​o​m​m​i​t​ ​s​t​a​t​i​s​t​i​c​s​ ​i​n​ ​t​h​e​ ​e​v​e​n​t​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​i​n​c​l​u​d​e​ ​d​e​t​a​i​l​e​d​ ​s​t​a​t​i​s​t​i​c​s​ ​a​b​o​u​t​ ​e​a​c​h​ ​c​o​m​m​i​t​,​ ​s​u​c​h​ ​a​s​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​a​d​d​i​t​i​o​n​s​,​ ​d​e​l​e​t​i​o​n​s​,​ ​a​n​d​ ​t​o​t​a​l​ ​c​h​a​n​g​e​s​.​ ​T​h​i​s​ ​a​d​d​s​ ​p​r​o​c​e​s​s​i​n​g​ ​o​v​e​r​h​e​a​d​ ​b​u​t​ ​p​r​o​v​i​d​e​s​ ​v​a​l​u​a​b​l​e​ ​m​e​t​r​i​c​s​ ​f​o​r​ ​a​n​a​l​y​z​i​n​g​ ​c​o​m​m​i​t​ ​i​m​p​a​c​t​.​ ​W​h​e​n​ ​d​i​s​a​b​l​e​d​,​ ​o​n​l​y​ ​b​a​s​i​c​ ​c​o​m​m​i​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​s​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+						path: {
+							/**
+							 * F​i​l​e​ ​P​a​t​h
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​m​i​t​s​ ​t​h​a​t​ ​m​o​d​i​f​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​l​e​ ​o​r​ ​d​i​r​e​c​t​o​r​y
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​a​ ​f​i​l​e​ ​p​a​t​h​ ​o​r​ ​d​i​r​e​c​t​o​r​y​ ​t​o​ ​f​i​l​t​e​r​ ​c​o​m​m​i​t​s​.​ ​O​n​l​y​ ​c​o​m​m​i​t​s​ ​t​h​a​t​ ​m​o​d​i​f​y​ ​f​i​l​e​s​ ​m​a​t​c​h​i​n​g​ ​t​h​i​s​ ​p​a​t​h​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.​ ​T​h​i​s​ ​i​s​ ​u​s​e​f​u​l​ ​f​o​r​ ​m​o​n​i​t​o​r​i​n​g​ ​c​h​a​n​g​e​s​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​c​o​m​p​o​n​e​n​t​s​,​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​i​l​e​s​,​ ​o​r​ ​d​o​c​u​m​e​n​t​a​t​i​o​n​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​c​o​m​m​i​t​s​ ​r​e​g​a​r​d​l​e​s​s​ ​o​f​ ​c​h​a​n​g​e​d​ ​f​i​l​e​s​.
+							 */
+							longDesc: string
+						}
+						author: {
+							/**
+							 * A​u​t​h​o​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​m​i​t​s​ ​b​y​ ​a​u​t​h​o​r​ ​e​m​a​i​l​ ​o​r​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​a​n​ ​a​u​t​h​o​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​r​ ​n​a​m​e​ ​t​o​ ​f​i​l​t​e​r​ ​c​o​m​m​i​t​s​ ​b​y​ ​c​o​m​m​i​t​t​e​r​.​ ​O​n​l​y​ ​c​o​m​m​i​t​s​ ​a​u​t​h​o​r​e​d​ ​b​y​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​u​s​e​r​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​m​o​n​i​t​o​r​ ​c​o​n​t​r​i​b​u​t​i​o​n​s​ ​f​r​o​m​ ​s​p​e​c​i​f​i​c​ ​t​e​a​m​ ​m​e​m​b​e​r​s​ ​o​r​ ​e​x​t​e​r​n​a​l​ ​c​o​n​t​r​i​b​u​t​o​r​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​c​o​m​m​i​t​s​ ​f​r​o​m​ ​a​l​l​ ​a​u​t​h​o​r​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_commit_comment: {
+					/**
+					 * N​e​w​ ​C​o​m​m​i​t​ ​C​o​m​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​c​o​m​m​i​t
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​m​m​i​t​ ​i​n​ ​a​ ​G​i​t​L​a​b​ ​p​r​o​j​e​c​t​ ​f​o​r​ ​n​e​w​ ​c​o​m​m​e​n​t​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​p​o​l​l​s​ ​f​o​r​ ​c​o​m​m​e​n​t​s​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​o​m​m​i​t​,​ ​i​n​c​l​u​d​i​n​g​ ​i​n​l​i​n​e​ ​c​o​d​e​ ​c​o​m​m​e​n​t​s​ ​a​n​d​ ​g​e​n​e​r​a​l​ ​c​o​m​m​i​t​ ​d​i​s​c​u​s​s​i​o​n​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​t​r​a​c​k​i​n​g​ ​c​o​d​e​ ​r​e​v​i​e​w​ ​f​e​e​d​b​a​c​k​,​ ​q​u​e​s​t​i​o​n​s​,​ ​a​n​d​ ​d​i​s​c​u​s​s​i​o​n​s​ ​a​b​o​u​t​ ​s​p​e​c​i​f​i​c​ ​c​o​m​m​i​t​s​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​i​t​L​a​b​ ​p​r​o​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​o​m​m​i​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​i​t​L​a​b​ ​p​r​o​j​e​c​t​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​c​o​m​m​i​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​.​ ​T​h​i​s​ ​f​i​e​l​d​ ​i​s​ ​r​e​q​u​i​r​e​d​ ​a​s​ ​c​o​m​m​i​t​s​ ​a​r​e​ ​s​p​e​c​i​f​i​c​ ​t​o​ ​i​n​d​i​v​i​d​u​a​l​ ​p​r​o​j​e​c​t​s​.​ ​T​h​e​ ​p​r​o​j​e​c​t​ ​s​e​l​e​c​t​i​o​n​ ​d​e​t​e​r​m​i​n​e​s​ ​w​h​i​c​h​ ​c​o​m​m​i​t​s​ ​a​r​e​ ​a​v​a​i​l​a​b​l​e​ ​i​n​ ​t​h​e​ ​c​o​m​m​i​t​ ​d​r​o​p​d​o​w​n​.
+							 */
+							longDesc: string
+						}
+						commit: {
+							/**
+							 * C​o​m​m​i​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​c​o​m​m​i​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​c​o​m​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​c​o​m​m​i​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​o​m​m​e​n​t​s​.​ ​T​h​e​ ​d​r​o​p​d​o​w​n​ ​s​h​o​w​s​ ​r​e​c​e​n​t​ ​c​o​m​m​i​t​s​ ​f​r​o​m​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​p​r​o​j​e​c​t​ ​w​i​t​h​ ​t​h​e​i​r​ ​t​i​t​l​e​s​ ​a​n​d​ ​S​H​A​ ​i​d​e​n​t​i​f​i​e​r​s​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​f​i​r​e​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​t​h​i​s​ ​c​o​m​m​i​t​,​ ​w​h​e​t​h​e​r​ ​i​t​'​s​ ​a​n​ ​i​n​l​i​n​e​ ​c​o​d​e​ ​c​o​m​m​e​n​t​ ​o​r​ ​a​ ​g​e​n​e​r​a​l​ ​d​i​s​c​u​s​s​i​o​n​ ​c​o​m​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_issue: {
+					/**
+					 * N​e​w​ ​I​s​s​u​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​s​s​u​e​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​G​i​t​L​a​b
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​G​i​t​L​a​b​ ​p​r​o​j​e​c​t​s​ ​o​r​ ​g​r​o​u​p​s​ ​f​o​r​ ​n​e​w​l​y​ ​c​r​e​a​t​e​d​ ​i​s​s​u​e​s​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​ ​p​o​l​l​s​ ​f​o​r​ ​i​s​s​u​e​s​ ​b​a​s​e​d​ ​o​n​ ​y​o​u​r​ ​s​p​e​c​i​f​i​e​d​ ​f​i​l​t​e​r​s​,​ ​i​n​c​l​u​d​i​n​g​ ​p​r​o​j​e​c​t​ ​s​c​o​p​e​,​ ​g​r​o​u​p​ ​s​c​o​p​e​,​ ​a​s​s​i​g​n​e​e​,​ ​m​i​l​e​s​t​o​n​e​,​ ​a​n​d​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a​.​ ​P​e​r​f​e​c​t​ ​f​o​r​ ​a​u​t​o​m​a​t​i​n​g​ ​i​s​s​u​e​ ​t​r​a​c​k​i​n​g​ ​w​o​r​k​f​l​o​w​s​,​ ​t​e​a​m​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​a​n​d​ ​p​r​o​j​e​c​t​ ​m​a​n​a​g​e​m​e​n​t​ ​i​n​t​e​g​r​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						project: {
+							/**
+							 * P​r​o​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​i​t​L​a​b​ ​p​r​o​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​i​s​s​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​G​i​t​L​a​b​ ​p​r​o​j​e​c​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​i​s​s​u​e​s​.​ ​W​h​e​n​ ​s​p​e​c​i​f​i​e​d​,​ ​o​n​l​y​ ​i​s​s​u​e​s​ ​f​r​o​m​ ​t​h​i​s​ ​p​r​o​j​e​c​t​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​p​r​o​j​e​c​t​s​ ​y​o​u​ ​h​a​v​e​ ​a​c​c​e​s​s​ ​t​o​,​ ​o​r​ ​u​s​e​ ​i​n​ ​c​o​m​b​i​n​a​t​i​o​n​ ​w​i​t​h​ ​t​h​e​ ​g​r​o​u​p​ ​f​i​l​t​e​r​ ​f​o​r​ ​b​r​o​a​d​e​r​ ​m​o​n​i​t​o​r​i​n​g​.
+							 */
+							longDesc: string
+						}
+						group: {
+							/**
+							 * G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​i​t​L​a​b​ ​g​r​o​u​p​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​i​s​s​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​G​i​t​L​a​b​ ​g​r​o​u​p​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​i​s​s​u​e​s​ ​a​c​r​o​s​s​ ​a​l​l​ ​p​r​o​j​e​c​t​s​ ​w​i​t​h​i​n​ ​t​h​a​t​ ​g​r​o​u​p​.​ ​W​h​e​n​ ​s​p​e​c​i​f​i​e​d​,​ ​o​n​l​y​ ​i​s​s​u​e​s​ ​f​r​o​m​ ​p​r​o​j​e​c​t​s​ ​i​n​ ​t​h​i​s​ ​g​r​o​u​p​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.​ ​T​h​i​s​ ​i​s​ ​u​s​e​f​u​l​ ​f​o​r​ ​m​o​n​i​t​o​r​i​n​g​ ​o​r​g​a​n​i​z​a​t​i​o​n​-​w​i​d​e​ ​i​s​s​u​e​ ​a​c​t​i​v​i​t​y​ ​a​n​d​ ​c​r​o​s​s​-​p​r​o​j​e​c​t​ ​t​r​a​c​k​i​n​g​.
+							 */
+							longDesc: string
+						}
+						onlyAssignedToMe: {
+							/**
+							 * O​n​l​y​ ​A​s​s​i​g​n​e​d​ ​t​o​ ​M​e
+							 */
+							displayName: string
+							/**
+							 * M​o​n​i​t​o​r​ ​o​n​l​y​ ​i​s​s​u​e​s​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​y​o​u
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​o​n​l​y​ ​f​i​r​e​ ​f​o​r​ ​i​s​s​u​e​s​ ​w​h​e​r​e​ ​t​h​e​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​u​s​e​r​ ​i​s​ ​t​h​e​ ​a​s​s​i​g​n​e​e​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​f​i​l​t​e​r​ ​i​s​s​u​e​s​ ​t​o​ ​s​h​o​w​ ​o​n​l​y​ ​t​h​o​s​e​ ​r​e​q​u​i​r​i​n​g​ ​y​o​u​r​ ​a​t​t​e​n​t​i​o​n​ ​o​r​ ​a​c​t​i​o​n​.​ ​W​h​e​n​ ​d​i​s​a​b​l​e​d​,​ ​a​l​l​ ​i​s​s​u​e​s​ ​m​a​t​c​h​i​n​g​ ​o​t​h​e​r​ ​c​r​i​t​e​r​i​a​ ​w​i​l​l​ ​b​e​ ​m​o​n​i​t​o​r​e​d​ ​r​e​g​a​r​d​l​e​s​s​ ​o​f​ ​a​s​s​i​g​n​e​e​.
+							 */
+							longDesc: string
+						}
+						search: {
+							/**
+							 * S​e​a​r​c​h
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​i​s​s​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​a​ ​s​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​i​s​s​u​e​s​ ​b​y​ ​t​i​t​l​e​ ​o​r​ ​d​e​s​c​r​i​p​t​i​o​n​.​ ​T​h​e​ ​s​e​a​r​c​h​ ​i​s​ ​c​a​s​e​-​i​n​s​e​n​s​i​t​i​v​e​ ​a​n​d​ ​m​a​t​c​h​e​s​ ​p​a​r​t​i​a​l​ ​s​t​r​i​n​g​s​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​m​o​n​i​t​o​r​ ​i​s​s​u​e​s​ ​r​e​l​a​t​e​d​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​f​e​a​t​u​r​e​s​,​ ​b​u​g​s​,​ ​o​r​ ​t​o​p​i​c​s​ ​o​f​ ​i​n​t​e​r​e​s​t​.
+							 */
+							longDesc: string
+						}
+						milestone: {
+							/**
+							 * M​i​l​e​s​t​o​n​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​i​s​s​u​e​s​ ​b​y​ ​m​i​l​e​s​t​o​n​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​a​ ​m​i​l​e​s​t​o​n​e​ ​t​i​t​l​e​ ​t​o​ ​f​i​l​t​e​r​ ​i​s​s​u​e​s​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​i​l​e​s​t​o​n​e​.​ ​O​n​l​y​ ​i​s​s​u​e​s​ ​t​a​g​g​e​d​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​m​i​l​e​s​t​o​n​e​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.​ ​T​h​i​s​ ​i​s​ ​u​s​e​f​u​l​ ​f​o​r​ ​t​r​a​c​k​i​n​g​ ​i​s​s​u​e​s​ ​w​i​t​h​i​n​ ​s​p​e​c​i​f​i​c​ ​r​e​l​e​a​s​e​ ​c​y​c​l​e​s​,​ ​s​p​r​i​n​t​s​,​ ​o​r​ ​p​r​o​j​e​c​t​ ​p​h​a​s​e​s​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​i​s​s​u​e​s​ ​a​c​r​o​s​s​ ​a​l​l​ ​m​i​l​e​s​t​o​n​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		OpenRouter: {
 			/**
 			 * O​p​e​n​R​o​u​t​e​r
@@ -115916,6 +116674,764 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Set the policy for generating images with people. Choose to allow all people, only adults, or no people in the generated images.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Gitlab: {
+			/**
+			 * GitLab
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to GitLab to manage repositories, issues, merge requests, and CI/CD pipelines
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The GitLab integration provides comprehensive access to GitLab's API for managing your development workflow. Automate repository operations, track issues and merge requests, manage team members and access controls, configure CI/CD variables, and maintain project documentation through wikis. Whether you're coordinating a development team or automating DevOps processes, this integration streamlines your GitLab operations.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				getApiV4Groups: {
+					/**
+					 * Groups
+					 */
+					group: () => LocalizedString
+				}
+				postApiV4Groups: {
+					/**
+					 * Groups
+					 */
+					group: () => LocalizedString
+				}
+				deleteApiV4GroupsId: {
+					/**
+					 * Groups
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4GroupsId: {
+					/**
+					 * Groups
+					 */
+					group: () => LocalizedString
+				}
+				putApiV4GroupsId: {
+					/**
+					 * Groups
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4GroupsIdMembers: {
+					/**
+					 * Group Members
+					 */
+					group: () => LocalizedString
+				}
+				postApiV4GroupsIdMembers: {
+					/**
+					 * Group Members
+					 */
+					group: () => LocalizedString
+				}
+				deleteApiV4GroupsIdMembersUserId: {
+					/**
+					 * Group Members
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4GroupsIdMembersUserId: {
+					/**
+					 * Group Members
+					 */
+					group: () => LocalizedString
+				}
+				putApiV4GroupsIdMembersUserId: {
+					/**
+					 * Group Members
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4GroupsIdVariables: {
+					/**
+					 * Group Variables
+					 */
+					group: () => LocalizedString
+				}
+				postApiV4GroupsIdVariables: {
+					/**
+					 * Group Variables
+					 */
+					group: () => LocalizedString
+				}
+				deleteApiV4GroupsIdVariablesKey: {
+					/**
+					 * Group Variables
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4GroupsIdVariablesKey: {
+					/**
+					 * Group Variables
+					 */
+					group: () => LocalizedString
+				}
+				putApiV4GroupsIdVariablesKey: {
+					/**
+					 * Group Variables
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4GroupsIdWikis: {
+					/**
+					 * Group Wikis
+					 */
+					group: () => LocalizedString
+				}
+				postApiV4GroupsIdWikis: {
+					/**
+					 * Group Wikis
+					 */
+					group: () => LocalizedString
+				}
+				deleteApiV4GroupsIdWikisSlug: {
+					/**
+					 * Group Wikis
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4GroupsIdWikisSlug: {
+					/**
+					 * Group Wikis
+					 */
+					group: () => LocalizedString
+				}
+				putApiV4GroupsIdWikisSlug: {
+					/**
+					 * Group Wikis
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4Issues: {
+					/**
+					 * Issues
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4IssuesId: {
+					/**
+					 * Issues
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4ProjectsIdIssues: {
+					/**
+					 * Issues
+					 */
+					group: () => LocalizedString
+				}
+				postApiV4ProjectsIdIssues: {
+					/**
+					 * Issues
+					 */
+					group: () => LocalizedString
+				}
+				deleteApiV4ProjectsIdIssuesIssueIid: {
+					/**
+					 * Issues
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4ProjectsIdIssuesIssueIid: {
+					/**
+					 * Issues
+					 */
+					group: () => LocalizedString
+				}
+				putApiV4ProjectsIdIssuesIssueIid: {
+					/**
+					 * Issues
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4ProjectsIdIssuesIssueIidTimeStats: {
+					/**
+					 * Issues
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4Projects: {
+					/**
+					 * Projects
+					 */
+					group: () => LocalizedString
+				}
+				postApiV4Projects: {
+					/**
+					 * Projects
+					 */
+					group: () => LocalizedString
+				}
+				deleteApiV4ProjectsId: {
+					/**
+					 * Projects
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4ProjectsId: {
+					/**
+					 * Projects
+					 */
+					group: () => LocalizedString
+				}
+				putApiV4ProjectsId: {
+					/**
+					 * Projects
+					 */
+					group: () => LocalizedString
+				}
+				get_project_id_by_url: {
+					/**
+					 * Projects
+					 */
+					group: () => LocalizedString
+					/**
+					 * Get Project ID by URL
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a GitLab project ID and path information from a project URL
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Extracts and retrieves the project ID, encoded path, and full path with namespace from a GitLab project URL. This action is useful when you have a project URL and need to obtain the project identifier for use in other GitLab API operations. The action decodes the URL, queries the GitLab API, and returns both the numeric project ID and the URL-encoded path for convenient use in subsequent actions.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project_url: {
+							/**
+							 * Project URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The full URL of the GitLab project
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the complete URL of the GitLab project (e.g., https://gitlab.com/username/project-name). The action will extract the project path from this URL and retrieve the corresponding project information including the numeric ID.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				getApiV4ProjectsIdUsers: {
+					/**
+					 * Projects
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4ProjectsIdMembers: {
+					/**
+					 * Project Members
+					 */
+					group: () => LocalizedString
+				}
+				postApiV4ProjectsIdMembers: {
+					/**
+					 * Project Members
+					 */
+					group: () => LocalizedString
+				}
+				deleteApiV4ProjectsIdMembersUserId: {
+					/**
+					 * Project Members
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4ProjectsIdMembersUserId: {
+					/**
+					 * Project Members
+					 */
+					group: () => LocalizedString
+				}
+				putApiV4ProjectsIdMembersUserId: {
+					/**
+					 * Project Members
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4ProjectsIdDeployKeys: {
+					/**
+					 * Deploy Keys
+					 */
+					group: () => LocalizedString
+				}
+				postApiV4ProjectsIdDeployKeys: {
+					/**
+					 * Deploy Keys
+					 */
+					group: () => LocalizedString
+				}
+				deleteApiV4ProjectsIdDeployKeysKeyId: {
+					/**
+					 * Deploy Keys
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4ProjectsIdDeployKeysKeyId: {
+					/**
+					 * Deploy Keys
+					 */
+					group: () => LocalizedString
+				}
+				putApiV4ProjectsIdDeployKeysKeyId: {
+					/**
+					 * Deploy Keys
+					 */
+					group: () => LocalizedString
+				}
+				postApiV4ProjectsIdDeployKeysKeyIdEnable: {
+					/**
+					 * Deploy Keys
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4ProjectsIdMergeRequests: {
+					/**
+					 * Merge Requests
+					 */
+					group: () => LocalizedString
+				}
+				postApiV4ProjectsIdMergeRequests: {
+					/**
+					 * Merge Requests
+					 */
+					group: () => LocalizedString
+				}
+				deleteApiV4ProjectsIdMergeRequestsMergeRequestIid: {
+					/**
+					 * Merge Requests
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4ProjectsIdMergeRequestsMergeRequestIid: {
+					/**
+					 * Merge Requests
+					 */
+					group: () => LocalizedString
+				}
+				putApiV4ProjectsIdMergeRequestsMergeRequestIid: {
+					/**
+					 * Merge Requests
+					 */
+					group: () => LocalizedString
+				}
+				postApiV4ProjectsIdMergeRequestsMergeRequestIidApprove: {
+					/**
+					 * Merge Requests
+					 */
+					group: () => LocalizedString
+				}
+				postApiV4ProjectsIdMergeRequestsMergeRequestIidUnapprove: {
+					/**
+					 * Merge Requests
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4ProjectsIdRepositoryBranches: {
+					/**
+					 * Repository Branches
+					 */
+					group: () => LocalizedString
+				}
+				postApiV4ProjectsIdRepositoryBranches: {
+					/**
+					 * Repository Branches
+					 */
+					group: () => LocalizedString
+				}
+				deleteApiV4ProjectsIdRepositoryBranchesBranch: {
+					/**
+					 * Repository Branches
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4ProjectsIdRepositoryBranchesBranch: {
+					/**
+					 * Repository Branches
+					 */
+					group: () => LocalizedString
+				}
+				deleteApiV4ProjectsIdRepositoryMergedBranches: {
+					/**
+					 * Repository Branches
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4ProjectsIdRepositoryCommits: {
+					/**
+					 * Repository Commits
+					 */
+					group: () => LocalizedString
+				}
+				postApiV4ProjectsIdRepositoryCommits: {
+					/**
+					 * Repository Commits
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4ProjectsIdRepositoryCommitsSha: {
+					/**
+					 * Repository Commits
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4ProjectsIdRepositoryCommitsShaComments: {
+					/**
+					 * Repository Commits
+					 */
+					group: () => LocalizedString
+				}
+				postApiV4ProjectsIdRepositoryCommitsShaComments: {
+					/**
+					 * Repository Commits
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4ProjectsIdVariables: {
+					/**
+					 * Project Variables
+					 */
+					group: () => LocalizedString
+				}
+				postApiV4ProjectsIdVariables: {
+					/**
+					 * Project Variables
+					 */
+					group: () => LocalizedString
+				}
+				deleteApiV4ProjectsIdVariablesKey: {
+					/**
+					 * Project Variables
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4ProjectsIdVariablesKey: {
+					/**
+					 * Project Variables
+					 */
+					group: () => LocalizedString
+				}
+				putApiV4ProjectsIdVariablesKey: {
+					/**
+					 * Project Variables
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4ProjectsIdWikis: {
+					/**
+					 * Project Wikis
+					 */
+					group: () => LocalizedString
+				}
+				postApiV4ProjectsIdWikis: {
+					/**
+					 * Project Wikis
+					 */
+					group: () => LocalizedString
+				}
+				deleteApiV4ProjectsIdWikisSlug: {
+					/**
+					 * Project Wikis
+					 */
+					group: () => LocalizedString
+				}
+				getApiV4ProjectsIdWikisSlug: {
+					/**
+					 * Project Wikis
+					 */
+					group: () => LocalizedString
+				}
+				putApiV4ProjectsIdWikisSlug: {
+					/**
+					 * Project Wikis
+					 */
+					group: () => LocalizedString
+				}
+			}
+			triggers: {
+				new_merge_request: {
+					/**
+					 * New Merge Request
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new merge request is created in GitLab
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors GitLab projects or groups for newly created merge requests. This trigger polls for merge requests based on your specified filters, including project scope, group scope, reviewer assignments, and search criteria. Useful for automating code review workflows, notifications, and approval processes.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The GitLab project to monitor for merge requests
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select a specific GitLab project to monitor for new merge requests. When specified, only merge requests from this project will trigger the event. Leave empty to monitor all projects you have access to, or use in combination with the group filter.
+							 */
+							longDesc: () => LocalizedString
+						}
+						group: {
+							/**
+							 * Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The GitLab group to monitor for merge requests
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select a specific GitLab group to monitor for new merge requests across all projects within that group. When specified, only merge requests from projects in this group will trigger the event. This is useful for monitoring organization-wide merge request activity.
+							 */
+							longDesc: () => LocalizedString
+						}
+						onlyAssignedToMe: {
+							/**
+							 * Only Assigned to Me
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Monitor only merge requests where you are a reviewer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, the trigger will only fire for merge requests where the authenticated user is assigned as a reviewer. This helps filter merge requests to show only those requiring your attention. When disabled, all merge requests matching other criteria will be monitored.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search: {
+							/**
+							 * Search
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search term to filter merge requests
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter a search term to filter merge requests by title or description. The search is case-insensitive and matches partial strings. Use this to monitor merge requests related to specific features, bug fixes, or keywords.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_commit: {
+					/**
+					 * New Commit
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new commit is pushed to a GitLab project
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a GitLab project for newly pushed commits. This trigger polls for commits based on your specified filters, including file paths, commit authors, and statistics. Ideal for automating deployment pipelines, code quality checks, and notification workflows when new code is pushed.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The GitLab project to monitor for commits
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the GitLab project to monitor for new commits. This field is required as commits are specific to individual projects. The trigger will check for new commits pushed to any branch in the selected project.
+							 */
+							longDesc: () => LocalizedString
+						}
+						withStats: {
+							/**
+							 * Include Statistics
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include commit statistics in the event data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, the trigger will include detailed statistics about each commit, such as the number of additions, deletions, and total changes. This adds processing overhead but provides valuable metrics for analyzing commit impact. When disabled, only basic commit information is returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+						path: {
+							/**
+							 * File Path
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter commits that modify a specific file or directory
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify a file path or directory to filter commits. Only commits that modify files matching this path will trigger the event. This is useful for monitoring changes to specific components, configuration files, or documentation. Leave empty to monitor all commits regardless of changed files.
+							 */
+							longDesc: () => LocalizedString
+						}
+						author: {
+							/**
+							 * Author
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter commits by author email or name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter an author email address or name to filter commits by committer. Only commits authored by the specified user will trigger the event. This helps monitor contributions from specific team members or external contributors. Leave empty to monitor commits from all authors.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_commit_comment: {
+					/**
+					 * New Commit Comment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new comment is added to a commit
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a specific commit in a GitLab project for new comments. This trigger polls for comments added to the specified commit, including inline code comments and general commit discussion. Useful for tracking code review feedback, questions, and discussions about specific commits.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The GitLab project containing the commit
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the GitLab project that contains the commit you want to monitor. This field is required as commits are specific to individual projects. The project selection determines which commits are available in the commit dropdown.
+							 */
+							longDesc: () => LocalizedString
+						}
+						commit: {
+							/**
+							 * Commit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific commit to monitor for comments
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific commit to monitor for new comments. The dropdown shows recent commits from the selected project with their titles and SHA identifiers. The trigger will fire whenever a new comment is added to this commit, whether it's an inline code comment or a general discussion comment.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_issue: {
+					/**
+					 * New Issue
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new issue is created in GitLab
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors GitLab projects or groups for newly created issues. This trigger polls for issues based on your specified filters, including project scope, group scope, assignee, milestone, and search criteria. Perfect for automating issue tracking workflows, team notifications, and project management integration.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						project: {
+							/**
+							 * Project
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The GitLab project to monitor for issues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select a specific GitLab project to monitor for new issues. When specified, only issues from this project will trigger the event. Leave empty to monitor all projects you have access to, or use in combination with the group filter for broader monitoring.
+							 */
+							longDesc: () => LocalizedString
+						}
+						group: {
+							/**
+							 * Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The GitLab group to monitor for issues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select a specific GitLab group to monitor for new issues across all projects within that group. When specified, only issues from projects in this group will trigger the event. This is useful for monitoring organization-wide issue activity and cross-project tracking.
+							 */
+							longDesc: () => LocalizedString
+						}
+						onlyAssignedToMe: {
+							/**
+							 * Only Assigned to Me
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Monitor only issues assigned to you
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, the trigger will only fire for issues where the authenticated user is the assignee. This helps filter issues to show only those requiring your attention or action. When disabled, all issues matching other criteria will be monitored regardless of assignee.
+							 */
+							longDesc: () => LocalizedString
+						}
+						search: {
+							/**
+							 * Search
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search term to filter issues
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter a search term to filter issues by title or description. The search is case-insensitive and matches partial strings. Use this to monitor issues related to specific features, bugs, or topics of interest.
+							 */
+							longDesc: () => LocalizedString
+						}
+						milestone: {
+							/**
+							 * Milestone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter issues by milestone
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter a milestone title to filter issues assigned to a specific milestone. Only issues tagged with the specified milestone will trigger the event. This is useful for tracking issues within specific release cycles, sprints, or project phases. Leave empty to monitor issues across all milestones.
 							 */
 							longDesc: () => LocalizedString
 						}

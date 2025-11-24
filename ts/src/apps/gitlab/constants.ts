@@ -1,0 +1,36 @@
+import { TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
+
+export const GITLAB_APP_NAME = 'Gitlab';
+export const GITLAB_APP_LOGO = 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzODAiIGhlaWdodD0iMzgwIiB2aWV3Qm94PSIwIDAgMzgwIDM4MCI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogI2ZjYTMyNjsKICAgICAgfQoKICAgICAgLmNscy0yIHsKICAgICAgICBmaWxsOiAjZmM2ZDI2OwogICAgICB9CgogICAgICAuY2xzLTMgewogICAgICAgIGZpbGw6ICNlMjQzMjk7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTI2NS4yNjQxNiwxNzQuMzcyNDNsLS4yMTM0LS41NTgyMi0yMS4xOTg5OS01NS4zMDkwOGMtLjQyMzYtMS4wODM1OS0xLjE4NTQyLTEuOTk2NDItMi4xNzY5OS0yLjYyNjg5LS45ODgzNy0uNjMzNzMtMi4xNDc0OS0uOTMyNTMtMy4zMjMwNS0uODcwMTQtMS4xNjg5LjA2MjM5LTIuMjkxOTUuNDg5MjUtMy4yMDgwOSwxLjIxODIxLS45MDk1Ny43MzU1NC0xLjU2NjI5LDEuNzMwNDctMS44NzQ5MywyLjg1MzQ2bC0xNC4zMTMyNyw0My44MDY2MmgtNTcuOTA5NjVsLTE0LjMxMzI3LTQzLjgwNjYyYy0uMzA4NjQtMS4xMjI5OS0uOTY1MzYtMi4xMTc5MS0xLjg3NDkzLTIuODUzNDYtLjkxNjE0LS43Mjg5NS0yLjAzOTExLTEuMTU1ODItMy4yMDgwOS0xLjIxODIxLTEuMTc1NDgtLjA2MjM5LTIuMzM0NjguMjM2NDEtMy4zMjI5Ny44NzAxNC0uOTkxNjYuNjMwNDctMS43NTM0OCwxLjU0MzMtMi4xNzcwNywyLjYyNjg5bC0yMS4xOTg5MSw1NS4zMTIzNy0uMjEzNDguNTU0OTNjLTYuMjgxNTgsMTYuMzg1MjEtLjkyOTI5LDM0LjkwODAzLDEzLjA1ODkxLDQ1LjQ4NzgyLjAyNjIxLjAxNjQxLjA0OTIyLjAzNjExLjA3NTUyLjA1NTgybC4xODcxOS4xNDExOSwzMi4yOTA5NCwyNC4xNzM5MiwxNS45NzE1MSwxMi4wOTAyNCw5LjcxOTUxLDcuMzQ4NzFjMi4zNDExNywxLjc3MzE2LDUuNTc4NzcsMS43NzMxNiw3LjkyMDAyLDBsOS43MTk0My03LjM0ODcxLDE1Ljk2ODIyLTEyLjA5MDI0LDMyLjQ4MTQyLTI0LjMxNTExYy4wMjk1OC0uMDIyOTkuMDU1ODgtLjA0MjY5LjA4NTM4LS4wNjU2OCwxMy45NzgzNC0xMC41Nzk3NywxOS4zMjczNS0yOS4wOTYwNCwxMy4wNDkwNS00NS40Nzc5NloiLz4KICA8cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik0yNjUuMjY0MTYsMTc0LjM3MjQzbC0uMjEzNC0uNTU4MjJjLTEwLjUxNzQsMi4xNjA2Mi0yMC4yMDQwNSw2LjYwOTktMjguNDk4NDQsMTIuODE1OTMtLjEzNDYuMDk4NS0yNS4yMDQ5NywxOS4wNTgwNS00Ni41NTE3MSwzNS4xOTY5OSwxNS44NDk5OCwxMS45ODUxNywyOS42NDc3LDIyLjQwNDA1LDI5LjY0NzcsMjIuNDA0MDVsMzIuNDgxNDItMjQuMzE1MTFjLjAyOTU4LS4wMjI5OS4wNTU4OC0uMDQyNjkuMDg1MzgtLjA2NTY4LDEzLjk3ODM0LTEwLjU3OTc3LDE5LjMyNzM1LTI5LjA5NjA0LDEzLjA0OTA1LTQ1LjQ3Nzk2WiIvPgogIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTE2MC4zNDk2MiwyNDQuMjMxMTdsMTUuOTcxNTEsMTIuMDkwMjQsOS43MTk1MSw3LjM0ODcxYzIuMzQxMTcsMS43NzMxNiw1LjU3ODc3LDEuNzczMTYsNy45MjAwMiwwbDkuNzE5NDMtNy4zNDg3MSwxNS45NjgyMi0xMi4wOTAyNHMtMTMuNzk3NzItMTAuNDE4ODgtMjkuNjQ3Ny0yMi40MDQwNWMtMTUuODUzMjcsMTEuOTg1MTctMjkuNjUwOTksMjIuNDA0MDUtMjkuNjUwOTksMjIuNDA0MDVaIi8+CiAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTQzLjQ0NTYxLDE4Ni42MzAxNGMtOC4yOTExMS02LjIwMjc0LTE3Ljk3NDQ2LTEwLjY1NTMxLTI4LjQ5NTA3LTEyLjgxMjY0bC0uMjEzNDguNTU0OTNjLTYuMjgxNTgsMTYuMzg1MjEtLjkyOTI5LDM0LjkwODAzLDEzLjA1ODkxLDQ1LjQ4NzgyLjAyNjIxLjAxNjQxLjA0OTIyLjAzNjExLjA3NTUyLjA1NTgybC4xODcxOS4xNDExOSwzMi4yOTA5NCwyNC4xNzM5MnMxMy43OTc3Mi0xMC40MTg4OCwyOS42NTA5OS0yMi40MDQwNWMtMjEuMzQ2NzMtMTYuMTM4OTQtNDYuNDIwMzEtMzUuMDk4NDgtNDYuNTU0OTktMzUuMTk2OTlaIi8+Cjwvc3ZnPg==';
+
+export class GitLabError extends Error {
+  public errorCode?: string;
+
+  constructor(message: string, errorCode?: string) {
+    super(message);
+    this.name = 'GitLabError';
+    this.errorCode = errorCode;
+  }
+}
+
+export const GITLAB_CONN_OPTIONS = {
+  hostname: {
+    display_name: 'GitLab Hostname',
+    short_desc:
+      'The base URL of your GitLab instance (e.g., https://gitlab.com or https://gitlab.yourdomain.com)',
+    type: 'string',
+    default_value: 'https://gitlab.com',
+  },
+  client_id: {
+    display_name: 'Client ID',
+    short_desc: 'The Client ID of your GitLab OAuth application.',
+    desc: 'Only needed for self-managed GitLab instances. Create an OAuth application in your GitLab instance to get the Client ID. Use https://api.qoretechnologies.com/qorus-oauth2-redirect as the redirect URI.',
+    type: 'string',
+  },
+  client_secret: {
+    display_name: 'Client Secret',
+    short_desc: 'The Client Secret of your GitLab OAuth application.',
+    desc: 'Only needed for self-managed GitLab instances. Create an OAuth application in your GitLab instance to get the Client Secret. Use https://api.qoretechnologies.com/qorus-oauth2-redirect as the redirect URI.',
+    type: 'string',
+  },
+} satisfies TCustomConnOptions;

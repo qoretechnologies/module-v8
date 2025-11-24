@@ -34,6 +34,7 @@ import Firestore from './apps/Firestore';
 import Freshdesk from './apps/Freshdesk';
 import Gemini from './apps/Gemini';
 import Github from './apps/Github';
+import Gitlab from './apps/Gitlab';
 import GoogleChat from './apps/GoogleChat';
 import GoogleContacts from './apps/GoogleContacts';
 import GoogleDocs from './apps/GoogleDocs';
@@ -109,6 +110,7 @@ const en = {
     Calendly,
     ClickUp,
     Gemini,
+    Gitlab,
     OpenRouter,
     GoogleDocs,
     GoogleMeet,
