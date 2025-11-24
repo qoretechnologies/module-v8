@@ -131,7 +131,7 @@ public class TypeScriptActionInterface {
         static JavaScriptThreadProcessPool server;
 
         const TypeKeys = (
-            "name", "display_name", "short_desc", "desc", "example_value", "default_value", "multiselect",
+            "name", "display_name", "short_desc", "desc", "example_value", "default_value",
             "type", "allowed_values", "allowed_values_creatable",
             "get_allowed_values",
             "element_type", "element_allowed_values", "element_allowed_values_creatable",
@@ -2439,11 +2439,6 @@ public class TypeScriptActionInterface {
             "type": type,
         };
 
-        # turn on multiselect for all list types
-        if (type.getBaseTypeCode() == NT_LIST) {
-            info.multiselect = True;
-        }
-
         if (req) {
             if (!type.isMandatory()) {
                 info.type = type.getMandatoryType();
@@ -2486,9 +2481,6 @@ public class TypeScriptActionInterface {
         }
         if (exists (auto v = remove type_hash.on_change)) {
             info.attr.on_change = v;
-        }
-        if (remove type_hash.multiselect) {
-            info.multiselect = True;
         }
         if (auto v = remove type_hash.allowed_values) {
             info.allowed_values = v;
