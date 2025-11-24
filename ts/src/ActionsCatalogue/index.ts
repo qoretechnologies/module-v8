@@ -9,6 +9,7 @@ import {
   TQoreRecordBasedApp,
 } from '@qoretechnologies/ts-toolkit';
 import fs from 'fs';
+import { omit } from 'lodash';
 import path from 'path';
 import activeCampaign from '../apps/active-campaign';
 import activeDirectory from '../apps/active-directory';
@@ -24,6 +25,7 @@ import amazonSqs from '../apps/amazon-sqs';
 import asana from '../apps/asana';
 import attio from '../apps/attio';
 import azureDevops from '../apps/azure-devops';
+import baserow from '../apps/baserow';
 import bigml from '../apps/bigml';
 import bitbucket from '../apps/bitbucket';
 import brevo from '../apps/brevo';
@@ -38,6 +40,8 @@ import dynamics from '../apps/dynamics';
 import esignature from '../apps/esignature';
 import facebookPages from '../apps/facebook-pages';
 import figma from '../apps/figma';
+import firebase from '../apps/firebase';
+import firestore from '../apps/firestore';
 import freshdesk from '../apps/freshdesk';
 import gemini from '../apps/gemini';
 import github from '../apps/github';
@@ -75,6 +79,7 @@ import serenity from '../apps/serenity';
 import sharepoint from '../apps/sharepoint';
 import shopify from '../apps/shopify';
 import stripe from '../apps/stripe';
+import supabase from '../apps/supabase';
 import teams from '../apps/teams';
 import telegram from '../apps/telegram';
 import todoist from '../apps/todoist';
@@ -83,17 +88,13 @@ import webflow from '../apps/webflow';
 import xero from '../apps/xero';
 import youtube from '../apps/youtube';
 import zendesk from '../apps/zendesk';
+import zohocrm from '../apps/zohocrm';
 import zoom from '../apps/zoom';
 import { Log } from '../decorators/Logger';
 import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import supabase from '../apps/supabase';
-import firestore from '../apps/firestore';
-import firebase from '../apps/firebase';
-import baserow from '../apps/baserow';
-import { omit } from 'lodash';
-import zohocrm from '../apps/zohocrm';
+import gitlab from '../apps/gitlab';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -141,6 +142,7 @@ const NEW_APPS = {
   freshdesk,
   gemini,
   github,
+  gitlab,
   googleChat,
   googleContacts,
   googleDocs,
