@@ -137,7 +137,7 @@ const fetchLatestCommits = async (
 
     return comments.data as CommitCommentSchema[];
   } catch (error) {
-    throw new GitLabError(`Failed to fetch latest commits: ${error?.message || error}`);
+    throw new GitLabError(`Failed to fetch latest commit comments: ${error?.message || error}`);
   }
 };
 

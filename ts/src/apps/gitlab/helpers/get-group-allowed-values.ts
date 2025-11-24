@@ -35,8 +35,6 @@ export const getGitlabGroupAllowedValues: TQoreGetAllowedValuesFunction<
 
     return data.map(mapGitLabItemToAllowedValue);
   } catch (error) {
-    throw new GitLabError(
-      `Failed to fetch Gitlab deploy key allowed values: ${error.message || error}`
-    );
+    throw new GitLabError(`Failed to fetch Gitlab group allowed values: ${error.message || error}`);
   }
 };
