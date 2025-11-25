@@ -2741,8 +2741,17 @@ public class TypeScriptActionInterface {
     }
 
     static string processUrl(string url, hash<auto> opts, hash<string, bool> url_template_options) {
+        foreach string pat in (keys url_template_options) {
+            if (opts{pat} =~ /^https?:\/\//) {
+                url = regex_subst(url, "^https?://.*{{" + pat + "}}", opts{pat});
+            } else {
+                url = replace(url, "{{" + pat + "}}", opts{pat});
+            }
+        }
+        /*
         map url = replace(url, "{{" + $1 + "}}", opts{$1}), keys url_template_options,
             opts{$1}.typeCode() == NT_STRING && opts{$1}.val();
+        */
         return url;
     }
 
