@@ -27,13 +27,11 @@ export const GITLAB_CONN_OPTIONS = {
     short_desc: 'The Client ID of your GitLab OAuth application.',
     desc: 'Only needed for self-managed GitLab instances. Create an OAuth application in your GitLab instance to get the Client ID. Use https://api.qoretechnologies.com/qorus-oauth2-redirect as the redirect URI.',
     type: 'string',
-    preselected: true,
   },
   client_secret: {
     display_name: 'Client Secret',
     short_desc: 'The Client Secret of your GitLab OAuth application.',
     desc: 'Only needed for self-managed GitLab instances. Create an OAuth application in your GitLab instance to get the Client Secret. Use https://api.qoretechnologies.com/qorus-oauth2-redirect as the redirect URI.',
     type: 'string',
-    preselected: true,
   },
 } satisfies TCustomConnOptions;
