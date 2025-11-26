@@ -2748,10 +2748,6 @@ public class TypeScriptActionInterface {
                 url = replace(url, "{{" + pat + "}}", opts{pat});
             }
         }
-        /*
-        map url = replace(url, "{{" + $1 + "}}", opts{$1}), keys url_template_options,
-            opts{$1}.typeCode() == NT_STRING && opts{$1}.val();
-        */
         return url;
     }
 

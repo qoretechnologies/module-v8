@@ -458,7 +458,7 @@ exports.actionsCatalogue = {
                 to create for each field
                 @param create_opts?: object -> create options; the table will be provided as create_opts.table
 
-                @return object[]?: if any new record(s) were generated, then the return value must be an object with
+                @return object?: if any new record(s) were generated, then the return value must be an object with
                 the keys of the generated data where the values are lists of the generated data in the same order as
                 the data submitted
             */
