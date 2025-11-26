@@ -9,6 +9,7 @@ import { searchHubspotRecords } from '../apps/hubspot/helpers/record-based/searc
 import { updateHubspotRecords } from '../apps/hubspot/helpers/record-based/update-records';
 import { upsertHubspotRecords } from '../apps/hubspot/helpers/record-based/upsert-records';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import { delay } from '../global/helpers';
 
 Debugger.level = DebugLevels.Verbose;
 configDotenv({ path: '.env' });
@@ -28,6 +29,10 @@ describe('Should test Hubspot record based helpers', () => {
     }
 
     baseContext.conn_opts.token = token;
+  });
+
+  afterEach(async () => {
+    await delay(3000);
   });
 
   describe('Should test base helpers', () => {
@@ -102,6 +107,26 @@ describe('Should test Hubspot record based helpers', () => {
       expect(result.filter((r) => r === 'inserted').length).toBe(1);
     });
 
+    const expression = {
+      exp: 'in',
+      args: [
+        { field: 'email' },
+        {
+          value: ['john.doe@upserttest.com', 'jane.smith@upserttest.com'],
+        },
+      ],
+    };
+
+    it('Should search records', async () => {
+      const iterator = await searchHubspotRecords(baseContext, expression, { table });
+
+      const result = await iterator(baseContext, 10);
+
+      expect(result).toBeDefined();
+      expect(Array.isArray(result!.firstname)).toBe(true);
+      expect(result!.firstname.length).toBe(2);
+    });
+
     it('Should verify upserted records', async () => {
       const iterator = await searchHubspotRecords(
         baseContext,
@@ -138,26 +163,6 @@ describe('Should test Hubspot record based helpers', () => {
       expect(result!.firstname[bobIndex]).toBe('Bob');
       expect(result!.lastname[bobIndex]).toBe('Wilson');
       expect(result!.company[bobIndex]).toBe('NewCo');
-    });
-
-    const expression = {
-      exp: 'in',
-      args: [
-        { field: 'email' },
-        {
-          value: ['john.doe@upserttest.com', 'jane.smith@upserttest.com'],
-        },
-      ],
-    };
-
-    it('Should search records', async () => {
-      const iterator = await searchHubspotRecords(baseContext, expression, { table });
-
-      const result = await iterator(baseContext, 10);
-
-      expect(result).toBeDefined();
-      expect(Array.isArray(result!.firstname)).toBe(true);
-      expect(result!.firstname.length).toBe(2);
     });
 
     it('Should update records', async () => {
