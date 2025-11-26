@@ -16,6 +16,1548 @@ type RootTranslation = {
 	common: {
 	}
 	apps: {
+		Monday: {
+			/**
+			 * M​o​n​d​a​y​.​c​o​m
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​M​o​n​d​a​y​.​c​o​m​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​w​o​r​k​ ​m​a​n​a​g​e​m​e​n​t​ ​w​i​t​h​ ​b​o​a​r​d​s​,​ ​i​t​e​m​s​,​ ​c​o​l​u​m​n​s​,​ ​a​n​d​ ​u​p​d​a​t​e​s​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​M​o​n​d​a​y​.​c​o​m​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​w​o​r​k​ ​o​p​e​r​a​t​i​n​g​ ​s​y​s​t​e​m​.​ ​C​r​e​a​t​e​ ​a​n​d​ ​m​a​n​a​g​e​ ​b​o​a​r​d​s​,​ ​i​t​e​m​s​,​ ​g​r​o​u​p​s​,​ ​a​n​d​ ​c​o​l​u​m​n​s​.​ ​T​r​a​c​k​ ​w​o​r​k​ ​p​r​o​g​r​e​s​s​,​ ​u​p​d​a​t​e​ ​i​t​e​m​ ​s​t​a​t​u​s​e​s​,​ ​m​a​n​a​g​e​ ​c​o​l​u​m​n​ ​v​a​l​u​e​s​,​ ​a​n​d​ ​m​o​n​i​t​o​r​ ​b​o​a​r​d​ ​c​h​a​n​g​e​s​.​ ​A​u​t​o​m​a​t​e​ ​w​o​r​k​f​l​o​w​s​ ​b​y​ ​c​r​e​a​t​i​n​g​ ​i​t​e​m​s​,​ ​u​p​d​a​t​i​n​g​ ​r​e​c​o​r​d​s​,​ ​m​o​v​i​n​g​ ​i​t​e​m​s​ ​b​e​t​w​e​e​n​ ​g​r​o​u​p​s​,​ ​a​n​d​ ​r​e​c​e​i​v​i​n​g​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​w​h​e​n​ ​b​o​a​r​d​s​ ​o​r​ ​i​t​e​m​s​ ​a​r​e​ ​m​o​d​i​f​i​e​d​.​ ​P​e​r​f​e​c​t​ ​f​o​r​ ​p​r​o​j​e​c​t​ ​m​a​n​a​g​e​m​e​n​t​,​ ​t​a​s​k​ ​t​r​a​c​k​i​n​g​,​ ​t​e​a​m​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​,​ ​a​n​d​ ​w​o​r​k​f​l​o​w​ ​a​u​t​o​m​a​t​i​o​n​ ​a​c​r​o​s​s​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+			 */
+			longDesc: string
+			actions: {
+				archive_record: {
+					/**
+					 * A​r​c​h​i​v​e​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * M​o​v​e​ ​a​ ​r​e​c​o​r​d​ ​t​o​ ​t​h​e​ ​a​r​c​h​i​v​e​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​a​c​t​i​o​n​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​a​r​c​h​i​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​(​i​t​e​m​)​ ​o​n​ ​a​ ​M​o​n​d​a​y​.​c​o​m​ ​b​o​a​r​d​,​ ​h​e​l​p​i​n​g​ ​y​o​u​ ​k​e​e​p​ ​y​o​u​r​ ​w​o​r​k​s​p​a​c​e​ ​o​r​g​a​n​i​z​e​d​ ​b​y​ ​r​e​m​o​v​i​n​g​ ​c​o​m​p​l​e​t​e​d​ ​o​r​ ​i​n​a​c​t​i​v​e​ ​i​t​e​m​s​ ​f​r​o​m​ ​v​i​e​w​ ​w​i​t​h​o​u​t​ ​p​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​i​n​g​ ​t​h​e​m​.
+					 */
+					longDesc: string
+					options: {
+						board_id: {
+							/**
+							 * B​o​a​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​a​r​c​h​i​v​e​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​r​c​h​i​v​e​.
+							 */
+							longDesc: string
+						}
+						record_id: {
+							/**
+							 * R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​a​r​c​h​i​v​e​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​r​c​h​i​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				clear_column_value: {
+					/**
+					 * C​l​e​a​r​ ​C​o​l​u​m​n​ ​V​a​l​u​e
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​d​a​t​a​ ​f​r​o​m​ ​a​ ​c​o​l​u​m​n​ ​i​n​ ​a​ ​r​e​c​o​r​d​.
+					 */
+					shortDesc: string
+					/**
+					 * U​s​e​ ​t​h​i​s​ ​a​c​t​i​o​n​ ​t​o​ ​c​l​e​a​r​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​c​o​l​u​m​n​ ​w​i​t​h​i​n​ ​a​ ​r​e​c​o​r​d​,​ ​r​e​s​e​t​t​i​n​g​ ​i​t​s​ ​v​a​l​u​e​ ​t​o​ ​e​m​p​t​y​.
+					 */
+					longDesc: string
+					options: {
+						board_id: {
+							/**
+							 * B​o​a​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​d​i​f​y​.
+							 */
+							longDesc: string
+						}
+						record_id: {
+							/**
+							 * R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​m​o​d​i​f​y​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​d​i​f​y​.
+							 */
+							longDesc: string
+						}
+						column_id: {
+							/**
+							 * C​o​l​u​m​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​c​l​e​a​r​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​l​e​a​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_record: {
+					/**
+					 * C​r​e​a​t​e​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​t​o​ ​a​ ​b​o​a​r​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​a​c​t​i​o​n​ ​e​n​a​b​l​e​s​ ​y​o​u​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​(​i​t​e​m​)​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​b​o​a​r​d​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​d​e​f​i​n​e​ ​i​n​i​t​i​a​l​ ​c​o​l​u​m​n​ ​v​a​l​u​e​s​ ​u​p​o​n​ ​c​r​e​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						board_id: {
+							/**
+							 * B​o​a​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​w​h​e​r​e​ ​t​h​e​ ​r​e​c​o​r​d​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​.
+							 */
+							longDesc: string
+						}
+						group_id: {
+							/**
+							 * G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​w​h​e​r​e​ ​t​h​e​ ​r​e​c​o​r​d​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​.
+							 */
+							longDesc: string
+						}
+						item_name: {
+							/**
+							 * I​t​e​m​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​n​e​w​ ​r​e​c​o​r​d​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​n​e​w​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​.
+							 */
+							longDesc: string
+						}
+						column_values: {
+							/**
+							 * C​o​l​u​m​n​ ​V​a​l​u​e​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​s​ ​t​o​ ​s​e​t​ ​f​o​r​ ​t​h​e​ ​r​e​c​o​r​d​ ​c​o​l​u​m​n​s​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​s​ ​t​o​ ​s​e​t​ ​f​o​r​ ​t​h​e​ ​c​o​l​u​m​n​s​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				custom_action: {
+					/**
+					 * C​u​s​t​o​m​ ​A​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * P​e​r​f​o​r​m​ ​a​ ​u​s​e​r​-​d​e​f​i​n​e​d​ ​o​p​e​r​a​t​i​o​n​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​a​c​t​i​o​n​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​e​x​e​c​u​t​e​ ​a​ ​c​u​s​t​o​m​ ​o​p​e​r​a​t​i​o​n​ ​d​e​f​i​n​e​d​ ​b​y​ ​y​o​u​r​ ​i​n​t​e​g​r​a​t​i​o​n​ ​o​r​ ​a​u​t​o​m​a​t​i​o​n​ ​s​e​t​u​p​,​ ​p​r​o​v​i​d​i​n​g​ ​f​l​e​x​i​b​i​l​i​t​y​ ​f​o​r​ ​v​a​r​i​o​u​s​ ​t​a​s​k​s​.
+					 */
+					longDesc: string
+					options: {
+						payload: {
+							/**
+							 * P​a​y​l​o​a​d
+							 */
+							displayName: string
+							/**
+							 * P​a​y​l​o​a​d​ ​f​o​r​ ​y​o​u​r​ ​c​u​s​t​o​m​ ​a​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​y​l​o​a​d​ ​f​o​r​ ​y​o​u​r​ ​c​u​s​t​o​m​ ​a​c​t​i​o​n
+							 */
+							longDesc: string
+						}
+						actionName: {
+							/**
+							 * A​c​t​i​o​n​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​ ​a​c​t​i​o​n​ ​t​o​ ​e​x​e​c​u​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​ ​a​c​t​i​o​n​ ​t​o​ ​e​x​e​c​u​t​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_record: {
+					/**
+					 * D​e​l​e​t​e​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​ ​a​ ​r​e​c​o​r​d​.
+					 */
+					shortDesc: string
+					/**
+					 * U​s​e​ ​t​h​i​s​ ​a​c​t​i​o​n​ ​t​o​ ​p​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​a​ ​b​o​a​r​d​,​ ​r​e​m​o​v​i​n​g​ ​a​l​l​ ​a​s​s​o​c​i​a​t​e​d​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						board_id: {
+							/**
+							 * B​o​a​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+						record_id: {
+							/**
+							 * R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_record: {
+					/**
+					 * G​e​t​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​a​c​t​i​o​n​ ​f​e​t​c​h​e​s​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​r​e​c​o​r​d​,​ ​i​n​c​l​u​d​i​n​g​ ​a​l​l​ ​c​o​l​u​m​n​ ​v​a​l​u​e​s​ ​a​n​d​ ​a​s​s​o​c​i​a​t​e​d​ ​m​e​t​a​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						board_id: {
+							/**
+							 * B​o​a​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​g​e​t​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​.
+							 */
+							longDesc: string
+						}
+						record_id: {
+							/**
+							 * R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​g​e​t​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				move_record: {
+					/**
+					 * M​o​v​e​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * T​r​a​n​s​f​e​r​ ​a​ ​r​e​c​o​r​d​ ​t​o​ ​a​n​o​t​h​e​r​ ​g​r​o​u​p​ ​o​r​ ​b​o​a​r​d​.
+					 */
+					shortDesc: string
+					/**
+					 * U​s​e​ ​t​h​i​s​ ​a​c​t​i​o​n​ ​t​o​ ​m​o​v​e​ ​a​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​i​t​s​ ​c​u​r​r​e​n​t​ ​g​r​o​u​p​ ​o​r​ ​b​o​a​r​d​ ​t​o​ ​a​n​o​t​h​e​r​ ​s​p​e​c​i​f​i​e​d​ ​g​r​o​u​p​ ​o​r​ ​b​o​a​r​d​,​ ​m​a​i​n​t​a​i​n​i​n​g​ ​i​t​s​ ​d​a​t​a​ ​a​n​d​ ​h​i​s​t​o​r​y​.
+					 */
+					longDesc: string
+					options: {
+						board_id: {
+							/**
+							 * B​o​a​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​m​o​v​e​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​v​e​.
+							 */
+							longDesc: string
+						}
+						record_id: {
+							/**
+							 * R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​m​o​v​e​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​v​e​.
+							 */
+							longDesc: string
+						}
+						destination_group_id: {
+							/**
+							 * D​e​s​t​i​n​a​t​i​o​n​ ​G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​m​o​v​e​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​v​e​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				search_records: {
+					/**
+					 * S​e​a​r​c​h​ ​R​e​c​o​r​d​s
+					 */
+					displayName: string
+					/**
+					 * F​i​n​d​ ​r​e​c​o​r​d​s​ ​m​a​t​c​h​i​n​g​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​a​c​t​i​o​n​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​r​e​c​o​r​d​s​ ​t​h​a​t​ ​m​e​e​t​ ​d​e​f​i​n​e​d​ ​c​r​i​t​e​r​i​a​,​ ​s​u​c​h​ ​a​s​ ​s​p​e​c​i​f​i​c​ ​c​o​l​u​m​n​ ​v​a​l​u​e​s​ ​o​r​ ​s​t​a​t​u​s​e​s​,​ ​a​n​d​ ​r​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​m​a​t​c​h​i​n​g​ ​r​e​c​o​r​d​s​.
+					 */
+					longDesc: string
+					options: {
+						board_id: {
+							/**
+							 * B​o​a​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​r​e​c​o​r​d​s​ ​i​n​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+						query_text: {
+							/**
+							 * Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​t​o​ ​u​s​e​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​t​o​ ​u​s​e​ ​t​o​ ​f​i​n​d​ ​r​e​c​o​r​d​s​.
+							 */
+							longDesc: string
+						}
+						columnId: {
+							/**
+							 * C​o​l​u​m​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​s​e​a​r​c​h​ ​i​n​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​s​e​a​r​c​h​ ​i​n​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.
+							 */
+							longDesc: string
+						}
+						cursor: {
+							/**
+							 * C​u​r​s​o​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​r​s​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​r​s​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_record: {
+					/**
+					 * U​p​d​a​t​e​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * M​o​d​i​f​y​ ​t​h​e​ ​v​a​l​u​e​s​ ​o​f​ ​a​ ​r​e​c​o​r​d​'​s​ ​c​o​l​u​m​n​s​.
+					 */
+					shortDesc: string
+					/**
+					 * U​s​e​ ​t​h​i​s​ ​a​c​t​i​o​n​ ​t​o​ ​u​p​d​a​t​e​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​c​o​l​u​m​n​ ​v​a​l​u​e​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​c​h​a​n​g​e​ ​i​t​s​ ​d​a​t​a​ ​a​s​ ​n​e​e​d​e​d​.
+					 */
+					longDesc: string
+					options: {
+						board_id: {
+							/**
+							 * B​o​a​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						record_id: {
+							/**
+							 * R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						column_values: {
+							/**
+							 * C​o​l​u​m​n​ ​V​a​l​u​e​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​s​ ​t​o​ ​s​e​t​ ​f​o​r​ ​t​h​e​ ​r​e​c​o​r​d​ ​c​o​l​u​m​n​s​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​s​ ​t​o​ ​s​e​t​ ​f​o​r​ ​t​h​e​ ​c​o​l​u​m​n​s​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_record: {
+					/**
+					 * N​e​w​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​t​e​m​ ​i​s​ ​c​r​e​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						board_id: {
+							/**
+							 * B​o​a​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​n​e​w​ ​r​e​c​o​r​d​s​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​b​e​ ​c​h​e​c​k​e​d​ ​f​o​r​ ​n​e​w​ ​r​e​c​o​r​d​s​.
+							 */
+							longDesc: string
+						}
+						group_id: {
+							/**
+							 * G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​n​e​w​ ​r​e​c​o​r​d​s​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​n​e​w​ ​r​e​c​o​r​d​s​ ​i​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_record_moved_to_group: {
+					/**
+					 * N​e​w​ ​R​e​c​o​r​d​ ​M​o​v​e​d​ ​T​o​ ​G​r​o​u​p
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​n​ ​i​t​e​m​ ​w​a​s​ ​m​o​v​e​d​ ​t​o​ ​a​ ​g​r​o​u​p​.
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​i​s​ ​c​r​e​a​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						board_id: {
+							/**
+							 * B​o​a​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​n​e​w​ ​r​e​c​o​r​d​s​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​b​e​ ​c​h​e​c​k​e​d​ ​f​o​r​ ​n​e​w​ ​r​e​c​o​r​d​s​.
+							 */
+							longDesc: string
+						}
+						group_id: {
+							/**
+							 * G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​n​e​w​ ​r​e​c​o​r​d​s​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​n​e​w​ ​r​e​c​o​r​d​s​ ​i​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				record_column_value_updated: {
+					/**
+					 * R​e​c​o​r​d​ ​C​o​l​u​m​n​ ​V​a​l​u​e​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​r​e​c​o​r​d​ ​c​o​l​u​m​n​ ​v​a​l​u​e​ ​i​s​ ​u​p​d​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​r​e​c​o​r​d​ ​c​o​l​u​m​n​ ​v​a​l​u​e​ ​i​s​ ​u​p​d​a​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						board_id: {
+							/**
+							 * B​o​a​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​r​e​c​o​r​d​ ​f​i​e​l​d​ ​u​p​d​a​t​e​s​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​b​e​ ​c​h​e​c​k​e​d​ ​f​o​r​ ​r​e​c​o​r​d​ ​f​i​e​l​d​ ​u​p​d​a​t​e​s​.
+							 */
+							longDesc: string
+						}
+						column_id: {
+							/**
+							 * C​o​l​u​m​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​n​e​w​ ​v​a​l​u​e​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​b​e​ ​c​h​e​c​k​e​d​ ​f​o​r​ ​n​e​w​ ​v​a​l​u​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				updated_record: {
+					/**
+					 * U​p​d​a​t​e​d​ ​R​e​c​o​r​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​n​ ​i​t​e​m​ ​i​s​ ​u​p​d​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​n​ ​i​t​e​m​ ​o​n​ ​t​h​e​ ​b​o​a​r​d​ ​i​s​ ​u​p​d​a​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						board_id: {
+							/**
+							 * B​o​a​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​u​p​d​a​t​e​d​ ​r​e​c​o​r​d​s​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​b​o​a​r​d​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​b​e​ ​c​h​e​c​k​e​d​ ​f​o​r​ ​u​p​d​a​t​e​d​ ​r​e​c​o​r​d​s​.
+							 */
+							longDesc: string
+						}
+						group_id: {
+							/**
+							 * G​r​o​u​p​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​n​e​w​ ​r​e​c​o​r​d​s​.
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​g​r​o​u​p​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​n​e​w​ ​r​e​c​o​r​d​s​ ​i​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			expressions: {
+				'&&': {
+					/**
+					 * a​n​d​ ​(​&​&​)
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​T​r​u​e​ ​i​f​ ​a​l​l​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​T​r​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​l​l​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * B​o​o​l​e​a​n​ ​c​o​n​d​i​t​i​o​n​ ​t​o​ ​e​v​a​l​u​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​b​o​o​l​e​a​n​ ​e​x​p​r​e​s​s​i​o​n​ ​o​r​ ​c​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​e​v​a​l​u​a​t​e​s​ ​t​o​ ​T​r​u​e​ ​o​r​ ​F​a​l​s​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'||': {
+					/**
+					 * o​r​ ​(​|​|​)
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​T​r​u​e​ ​i​f​ ​a​n​y​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​T​r​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​n​y​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * B​o​o​l​e​a​n​ ​c​o​n​d​i​t​i​o​n​ ​t​o​ ​e​v​a​l​u​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​b​o​o​l​e​a​n​ ​e​x​p​r​e​s​s​i​o​n​ ​o​r​ ​c​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​e​v​a​l​u​a​t​e​s​ ​t​o​ ​T​r​u​e​ ​o​r​ ​F​a​l​s​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'==': {
+					/**
+					 * e​q​u​a​l​ ​(​=​=​)
+					 */
+					displayName: string
+					/**
+					 * E​q​u​a​l​i​t​y​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'!=': {
+					/**
+					 * n​o​t​ ​e​q​u​a​l​ ​(​!​=​)
+					 */
+					displayName: string
+					/**
+					 * I​n​e​q​u​a​l​i​t​y​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'>': {
+					/**
+					 * h​i​g​h​e​r​ ​t​h​a​n​ ​(​>​)
+					 */
+					displayName: string
+					/**
+					 * G​r​e​a​t​e​r​ ​t​h​a​n​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'>=': {
+					/**
+					 * h​i​g​h​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​(​>​=​)
+					 */
+					displayName: string
+					/**
+					 * G​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'<': {
+					/**
+					 * l​o​w​e​r​ ​t​h​a​n​ ​(​<​)
+					 */
+					displayName: string
+					/**
+					 * L​e​s​s​ ​t​h​a​n​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'<=': {
+					/**
+					 * l​o​w​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​(​<​=​)
+					 */
+					displayName: string
+					/**
+					 * L​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'in': {
+					/**
+					 * i​n
+					 */
+					displayName: string
+					/**
+					 * V​a​l​u​e​ ​i​s​ ​i​n​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​l​i​s​t​ ​o​f​ ​v​a​l​u​e​s
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​h​e​c​k​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​o​f​ ​v​a​l​u​e​s​ ​t​o​ ​c​h​e​c​k​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'not-in': {
+					/**
+					 * n​o​t​ ​i​n
+					 */
+					displayName: string
+					/**
+					 * V​a​l​u​e​ ​i​s​ ​n​o​t​ ​i​n​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​n​o​t​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​l​i​s​t​ ​o​f​ ​v​a​l​u​e​s
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​h​e​c​k​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​o​f​ ​v​a​l​u​e​s​ ​t​o​ ​c​h​e​c​k​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'is-empty': {
+					/**
+					 * i​s​ ​e​m​p​t​y
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​e​m​p​t​y
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​e​m​p​t​y​ ​o​r​ ​h​a​s​ ​n​o​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​e​m​p​t​i​n​e​s​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'is-not-empty': {
+					/**
+					 * i​s​ ​n​o​t​ ​e​m​p​t​y
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​n​o​t​ ​e​m​p​t​y
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​a​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				between: {
+					/**
+					 * b​e​t​w​e​e​n
+					 */
+					displayName: string
+					/**
+					 * V​a​l​u​e​ ​i​s​ ​b​e​t​w​e​e​n​ ​t​w​o​ ​v​a​l​u​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​b​e​t​w​e​e​n​ ​t​w​o​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e​s​ ​(​i​n​c​l​u​s​i​v​e​)
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​h​e​c​k​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * L​o​w​e​r​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * L​o​w​e​r​ ​b​o​u​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​o​w​e​r​ ​b​o​u​n​d​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						'2': {
+							/**
+							 * U​p​p​e​r​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * U​p​p​e​r​ ​b​o​u​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​p​e​r​ ​b​o​u​n​d​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'contains-text': {
+					/**
+					 * c​o​n​t​a​i​n​s​ ​t​e​x​t
+					 */
+					displayName: string
+					/**
+					 * C​o​n​t​a​i​n​s​ ​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​w​i​t​h​i​n
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​s​t​r​i​n​g​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​w​i​t​h​i​n​ ​t​h​e​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'not-contains-text': {
+					/**
+					 * d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​e​x​t
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​w​i​t​h​i​n
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​s​t​r​i​n​g​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​p​r​e​s​e​n​t​ ​i​n​ ​t​h​e​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'contains-terms': {
+					/**
+					 * c​o​n​t​a​i​n​s​ ​t​e​r​m​s
+					 */
+					displayName: string
+					/**
+					 * C​o​n​t​a​i​n​s​ ​s​e​a​r​c​h​ ​t​e​r​m​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​a​n​y​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​e​a​r​c​h​ ​t​e​r​m​s
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​w​i​t​h​i​n
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​e​r​m​s
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​t​e​r​m​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​e​a​r​c​h​ ​t​e​r​m​s​ ​t​o​ ​l​o​o​k​ ​f​o​r​ ​w​i​t​h​i​n​ ​t​h​e​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'starts-with': {
+					/**
+					 * s​t​a​r​t​s​ ​w​i​t​h
+					 */
+					displayName: string
+					/**
+					 * S​t​a​r​t​s​ ​w​i​t​h​ ​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​s​t​a​r​t​s​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * S​t​a​r​t​i​n​g​ ​t​e​x​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​t​h​e​ ​f​i​e​l​d​ ​s​h​o​u​l​d​ ​s​t​a​r​t​ ​w​i​t​h
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'ends-with': {
+					/**
+					 * e​n​d​s​ ​w​i​t​h
+					 */
+					displayName: string
+					/**
+					 * E​n​d​s​ ​w​i​t​h​ ​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​e​n​d​s​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * E​n​d​i​n​g​ ​t​e​x​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​t​h​e​ ​f​i​e​l​d​ ​s​h​o​u​l​d​ ​e​n​d​ ​w​i​t​h
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'within-the-next': {
+					/**
+					 * w​i​t​h​i​n​ ​t​h​e​ ​n​e​x​t
+					 */
+					displayName: string
+					/**
+					 * D​a​t​e​ ​i​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​n​e​x​t​ ​N​ ​d​a​y​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​f​a​l​l​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​u​m​b​e​r​ ​o​f​ ​d​a​y​s​ ​i​n​ ​t​h​e​ ​f​u​t​u​r​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * D​a​y​s
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​d​a​y​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​d​a​y​s​ ​i​n​ ​t​h​e​ ​f​u​t​u​r​e​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'within-the-last': {
+					/**
+					 * w​i​t​h​i​n​ ​t​h​e​ ​l​a​s​t
+					 */
+					displayName: string
+					/**
+					 * D​a​t​e​ ​i​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​l​a​s​t​ ​N​ ​d​a​y​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​f​a​l​l​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​u​m​b​e​r​ ​o​f​ ​d​a​y​s​ ​i​n​ ​t​h​e​ ​p​a​s​t
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * D​a​y​s
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​d​a​y​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​d​a​y​s​ ​i​n​ ​t​h​e​ ​p​a​s​t​ ​t​o​ ​c​h​e​c​k
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		ZohoCRM: {
 			/**
 			 * Z​o​h​o​ ​C​R​M
@@ -87853,6 +89395,1548 @@ export type TranslationFunctions = {
 	common: {
 	}
 	apps: {
+		Monday: {
+			/**
+			 * Monday.com
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Monday.com to automate work management with boards, items, columns, and updates.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The Monday.com integration provides comprehensive access to your work operating system. Create and manage boards, items, groups, and columns. Track work progress, update item statuses, manage column values, and monitor board changes. Automate workflows by creating items, updating records, moving items between groups, and receiving notifications when boards or items are modified. Perfect for project management, task tracking, team collaboration, and workflow automation across your organization.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				archive_record: {
+					/**
+					 * Archive Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Move a record to the archive.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This action allows you to archive a specific record (item) on a Monday.com board, helping you keep your workspace organized by removing completed or inactive items from view without permanently deleting them.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						board_id: {
+							/**
+							 * Board ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the board containing the record to archive.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the board containing the record you want to archive.
+							 */
+							longDesc: () => LocalizedString
+						}
+						record_id: {
+							/**
+							 * Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the record to archive.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the record you want to archive.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				clear_column_value: {
+					/**
+					 * Clear Column Value
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove data from a column in a record.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Use this action to clear the content of a specified column within a record, resetting its value to empty.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						board_id: {
+							/**
+							 * Board ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the board containing the record.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the board containing the record you want to modify.
+							 */
+							longDesc: () => LocalizedString
+						}
+						record_id: {
+							/**
+							 * Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the record to modify.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the record you want to modify.
+							 */
+							longDesc: () => LocalizedString
+						}
+						column_id: {
+							/**
+							 * Column ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the column to clear.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the column you want to clear.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_record: {
+					/**
+					 * Create Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a new record to a board.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This action enables you to create a new record (item) in a specified board, allowing you to define initial column values upon creation.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						board_id: {
+							/**
+							 * Board ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the board where the record will be created.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the board where you want to create a new record.
+							 */
+							longDesc: () => LocalizedString
+						}
+						group_id: {
+							/**
+							 * Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the group where the record will be created.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the group where you want to create a new record.
+							 */
+							longDesc: () => LocalizedString
+						}
+						item_name: {
+							/**
+							 * Item Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the new record.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the new record you want to create.
+							 */
+							longDesc: () => LocalizedString
+						}
+						column_values: {
+							/**
+							 * Column Values
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The values to set for the record columns.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The values to set for the columns of the record you want to create.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				custom_action: {
+					/**
+					 * Custom Action
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Perform a user-defined operation.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This action allows you to execute a custom operation defined by your integration or automation setup, providing flexibility for various tasks.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						payload: {
+							/**
+							 * Payload
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Payload for your custom action
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The payload for your custom action
+							 */
+							longDesc: () => LocalizedString
+						}
+						actionName: {
+							/**
+							 * Action Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the custom action to execute
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the custom action to execute
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_record: {
+					/**
+					 * Delete Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Permanently remove a record.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Use this action to permanently delete a specific record from a board, removing all associated data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						board_id: {
+							/**
+							 * Board ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the board containing the record to delete.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the board containing the record you want to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+						record_id: {
+							/**
+							 * Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the record to delete.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the record you want to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_record: {
+					/**
+					 * Get Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific record.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This action fetches the details of a specified record, including all column values and associated metadata.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						board_id: {
+							/**
+							 * Board ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the board containing the record to get.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the board containing the record you want to get.
+							 */
+							longDesc: () => LocalizedString
+						}
+						record_id: {
+							/**
+							 * Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the record to get.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the record you want to get.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				move_record: {
+					/**
+					 * Move Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Transfer a record to another group or board.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Use this action to move a record from its current group or board to another specified group or board, maintaining its data and history.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						board_id: {
+							/**
+							 * Board ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the board containing the record to move.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the board containing the record you want to move.
+							 */
+							longDesc: () => LocalizedString
+						}
+						record_id: {
+							/**
+							 * Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the record to move.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the record you want to move.
+							 */
+							longDesc: () => LocalizedString
+						}
+						destination_group_id: {
+							/**
+							 * Destination Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the group to move the record to.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the group you want to move the record to.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				search_records: {
+					/**
+					 * Search Records
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Find records matching specific criteria.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This action allows you to search for records that meet defined criteria, such as specific column values or statuses, and returns a list of matching records.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						board_id: {
+							/**
+							 * Board ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the board to search for records in.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the board containing the records you want to search for.
+							 */
+							longDesc: () => LocalizedString
+						}
+						query_text: {
+							/**
+							 * Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The search query to use.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The search query to use to find records.
+							 */
+							longDesc: () => LocalizedString
+						}
+						columnId: {
+							/**
+							 * Column ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the column to search in.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the column to search in.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The maximum number of records to return.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of records to return.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cursor: {
+							/**
+							 * Cursor
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The cursor to use for pagination.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The cursor to use for pagination.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_record: {
+					/**
+					 * Update Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Modify the values of a record's columns.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Use this action to update one or more column values of a specific record, allowing you to change its data as needed.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						board_id: {
+							/**
+							 * Board ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the board containing the record to update.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the board containing the record you want to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						record_id: {
+							/**
+							 * Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the record to update.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the record you want to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						column_values: {
+							/**
+							 * Column Values
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The values to set for the record columns.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The values to set for the columns of the record you want to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_record: {
+					/**
+					 * New Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new item is created.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggered when a new record is created.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						board_id: {
+							/**
+							 * Board ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the board to check for new records.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the board that should be checked for new records.
+							 */
+							longDesc: () => LocalizedString
+						}
+						group_id: {
+							/**
+							 * Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the group to check for new records.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the group you want to check for new records in.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_record_moved_to_group: {
+					/**
+					 * New Record Moved To Group
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when an item was moved to a group.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggered when a new record is created.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						board_id: {
+							/**
+							 * Board ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the board to check for new records.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the board that should be checked for new records.
+							 */
+							longDesc: () => LocalizedString
+						}
+						group_id: {
+							/**
+							 * Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the group to check for new records.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the group you want to check for new records in.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				record_column_value_updated: {
+					/**
+					 * Record Column Value Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a record column value is updated.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggered when a record column value is updated.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						board_id: {
+							/**
+							 * Board ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the board to check for record field updates.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the board that should be checked for record field updates.
+							 */
+							longDesc: () => LocalizedString
+						}
+						column_id: {
+							/**
+							 * Column ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the column to check for new value.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the column that should be checked for new value.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				updated_record: {
+					/**
+					 * Updated Record
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when an item is updated.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggered when an item on the board is updated.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						board_id: {
+							/**
+							 * Board ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the board to check for updated records.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the board that should be checked for updated records.
+							 */
+							longDesc: () => LocalizedString
+						}
+						group_id: {
+							/**
+							 * Group ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the group to check for new records.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the group you want to check for new records in.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			expressions: {
+				'&&': {
+					/**
+					 * and (&&)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns True if all arguments are True
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if all arguments are `True` with logic short-circuiting
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Boolean condition to evaluate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A boolean expression or condition that evaluates to True or False
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'||': {
+					/**
+					 * or (||)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns True if any argument is True
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if any argument is `True` with logic short-circuiting
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Boolean condition to evaluate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A boolean expression or condition that evaluates to True or False
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'==': {
+					/**
+					 * equal (==)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Equality comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value equals the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'!=': {
+					/**
+					 * not equal (!=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Inequality comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value does not equal the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'>': {
+					/**
+					 * higher than (>)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Greater than comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is greater than the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'>=': {
+					/**
+					 * higher than or equal (>=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Greater than or equal comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is greater than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'<': {
+					/**
+					 * lower than (<)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Less than comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is less than the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'<=': {
+					/**
+					 * lower than or equal (<=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Less than or equal comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is less than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'in': {
+					/**
+					 * in
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Value is in list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is in the specified list of values
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be checked
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Values
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The list of values to check against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'not-in': {
+					/**
+					 * not in
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Value is not in list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is not in the specified list of values
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be checked
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Values
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The list of values to check against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'is-empty': {
+					/**
+					 * is empty
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is empty
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field is empty or has no value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to check for emptiness
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'is-not-empty': {
+					/**
+					 * is not empty
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is not empty
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field has a value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to check for a value
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				between: {
+					/**
+					 * between
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Value is between two values
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is between two specified values (inclusive)
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be checked
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Lower Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lower bound
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The lower bound value
+							 */
+							longDesc: () => LocalizedString
+						}
+						'2': {
+							/**
+							 * Upper Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Upper bound
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The upper bound value
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'contains-text': {
+					/**
+					 * contains text
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Contains text
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field contains the specified text
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to search within
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to search for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text string to search for within the field
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'not-contains-text': {
+					/**
+					 * does not contain text
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not contain text
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field does not contain the specified text
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to search within
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text string that should not be present in the field
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'contains-terms': {
+					/**
+					 * contains terms
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Contains search terms
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field contains any of the specified search terms
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to search within
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Terms
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search terms
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The search terms to look for within the field
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'starts-with': {
+					/**
+					 * starts with
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Starts with text
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field starts with the specified text
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Starting text
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text that the field should start with
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'ends-with': {
+					/**
+					 * ends with
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Ends with text
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field ends with the specified text
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Ending text
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text that the field should end with
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'within-the-next': {
+					/**
+					 * within the next
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Date is within the next N days
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the date field falls within the specified number of days in the future
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Days
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of days
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of days in the future to check
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'within-the-last': {
+					/**
+					 * within the last
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Date is within the last N days
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the date field falls within the specified number of days in the past
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date field to check
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Days
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of days
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of days in the past to check
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
 		ZohoCRM: {
 			/**
 			 * Zoho CRM
