@@ -2743,7 +2743,7 @@ public class TypeScriptActionInterface {
     static string processUrl(string url, hash<auto> opts, hash<string, bool> url_template_options) {
         foreach string pat in (keys url_template_options) {
             if (opts{pat} =~ /^https?:\/\//) {
-                url = regex_subst(url, "^https?://.*{{" + pat + "}}", opts{pat});
+                url = regex_subst(url, "^(https?://)?.*{{" + pat + "}}", opts{pat});
             } else {
                 url = replace(url, "{{" + pat + "}}", opts{pat});
             }

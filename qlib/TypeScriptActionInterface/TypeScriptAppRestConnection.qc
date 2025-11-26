@@ -45,6 +45,13 @@ public class TypeScriptAppRestClient inherits RestClient {
         }
     }
 
+    #! Return OAuth2 options
+    /** @return a hash of OAuth2 options
+    */
+    hash<auto> getOAuth2Options() {
+        return conn.getOAuth2Options();
+    }
+
     #! Returns options to update after an OAuth2 login
     private *hash<auto> getUpdateOptionsAfterLogin(hash<auto> h, *bool refresh) {
         *hash<auto> rv = RestClient::getUpdateOptionsAfterLogin(h, refresh);
