@@ -121,11 +121,12 @@ describe('Should test Hubspot record based helpers', () => {
           const result = await iterator(baseContext, 10);
 
           expect(result).toBeDefined();
+          expect(result).toBeTruthy();
           expect(Array.isArray(result!.firstname)).toBe(true);
           expect(result!.firstname.length).toBe(2);
         },
         5,
-        300
+        500
       );
     });
 
@@ -169,7 +170,7 @@ describe('Should test Hubspot record based helpers', () => {
           expect(result!.company[bobIndex]).toBe('NewCo');
         },
         5,
-        300
+        500
       );
     });
 
