@@ -27,8 +27,10 @@ import attioObjectRecordUpdatedTrigger from '../apps/attio/triggers/object-recor
 import attioTaskCreatedTrigger from '../apps/attio/triggers/task-created.trigger';
 import { delay } from '../global/helpers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import { configDotenv } from 'dotenv';
 
 Debugger.level = DebugLevels.Verbose;
+configDotenv({ path: '.env' });
 
 describe('Should test attio actions', () => {
   const token = process.env.ATTIO_TOKEN!;

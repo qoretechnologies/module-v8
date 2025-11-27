@@ -53,6 +53,7 @@ import LinkedInOrganizations from './apps/LinkedInOrganizations';
 import Magento from './apps/Magento';
 import Mailchimp from './apps/Mailchimp';
 import Messenger360 from './apps/Messenger360';
+import Monday from './apps/Monday';
 import NetSuite from './apps/NetSuite';
 import Notion from './apps/Notion';
 import Odoo from './apps/Odoo';
@@ -84,6 +85,7 @@ import Zoom from './apps/Zoom';
 const en = {
   common: {},
   apps: {
+    Monday,
     ZohoCRM,
     Firebase,
     Supabase,

@@ -9,6 +9,7 @@ import { searchHubspotRecords } from '../apps/hubspot/helpers/record-based/searc
 import { updateHubspotRecords } from '../apps/hubspot/helpers/record-based/update-records';
 import { upsertHubspotRecords } from '../apps/hubspot/helpers/record-based/upsert-records';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import { retry } from './utils';
 
 Debugger.level = DebugLevels.Verbose;
 configDotenv({ path: '.env' });
@@ -102,44 +103,6 @@ describe('Should test Hubspot record based helpers', () => {
       expect(result.filter((r) => r === 'inserted').length).toBe(1);
     });
 
-    it('Should verify upserted records', async () => {
-      const iterator = await searchHubspotRecords(
-        baseContext,
-        {
-          exp: 'in',
-          args: [
-            { field: 'email' },
-            {
-              value: [
-                'john.doe@upserttest.com',
-                'jane.smith@upserttest.com',
-                'bob.wilson@upserttest.com',
-              ],
-            },
-          ],
-        },
-        { table }
-      );
-
-      const result = await iterator(baseContext, 10);
-
-      expect(result).toBeDefined();
-      expect(result!.email.length).toBe(3);
-
-      const johnIndex = result!.email.indexOf('john.doe@upserttest.com');
-      expect(result!.firstname[johnIndex]).toBe('Johnny');
-      expect(result!.company[johnIndex]).toBe('Acme Corp Updated');
-
-      const janeIndex = result!.email.indexOf('jane.smith@upserttest.com');
-      expect(result!.lastname[janeIndex]).toBe('Smith-Updated');
-      expect(result!.company[janeIndex]).toBe('Globex Inc Updated');
-
-      const bobIndex = result!.email.indexOf('bob.wilson@upserttest.com');
-      expect(result!.firstname[bobIndex]).toBe('Bob');
-      expect(result!.lastname[bobIndex]).toBe('Wilson');
-      expect(result!.company[bobIndex]).toBe('NewCo');
-    });
-
     const expression = {
       exp: 'in',
       args: [
@@ -151,13 +114,64 @@ describe('Should test Hubspot record based helpers', () => {
     };
 
     it('Should search records', async () => {
-      const iterator = await searchHubspotRecords(baseContext, expression, { table });
+      await retry(
+        async () => {
+          const iterator = await searchHubspotRecords(baseContext, expression, { table });
 
-      const result = await iterator(baseContext, 10);
+          const result = await iterator(baseContext, 10);
 
-      expect(result).toBeDefined();
-      expect(Array.isArray(result!.firstname)).toBe(true);
-      expect(result!.firstname.length).toBe(2);
+          expect(result).toBeDefined();
+          expect(result).toBeTruthy();
+          expect(Array.isArray(result!.firstname)).toBe(true);
+          expect(result!.firstname.length).toBe(2);
+        },
+        5,
+        500
+      );
+    });
+
+    it('Should verify upserted records', async () => {
+      await retry(
+        async () => {
+          const iterator = await searchHubspotRecords(
+            baseContext,
+            {
+              exp: 'in',
+              args: [
+                { field: 'email' },
+                {
+                  value: [
+                    'john.doe@upserttest.com',
+                    'jane.smith@upserttest.com',
+                    'bob.wilson@upserttest.com',
+                  ],
+                },
+              ],
+            },
+            { table }
+          );
+
+          const result = await iterator(baseContext, 10);
+
+          expect(result).toBeDefined();
+          expect(result!.email.length).toBe(3);
+
+          const johnIndex = result!.email.indexOf('john.doe@upserttest.com');
+          expect(result!.firstname[johnIndex]).toBe('Johnny');
+          expect(result!.company[johnIndex]).toBe('Acme Corp Updated');
+
+          const janeIndex = result!.email.indexOf('jane.smith@upserttest.com');
+          expect(result!.lastname[janeIndex]).toBe('Smith-Updated');
+          expect(result!.company[janeIndex]).toBe('Globex Inc Updated');
+
+          const bobIndex = result!.email.indexOf('bob.wilson@upserttest.com');
+          expect(result!.firstname[bobIndex]).toBe('Bob');
+          expect(result!.lastname[bobIndex]).toBe('Wilson');
+          expect(result!.company[bobIndex]).toBe('NewCo');
+        },
+        5,
+        500
+      );
     });
 
     it('Should update records', async () => {
