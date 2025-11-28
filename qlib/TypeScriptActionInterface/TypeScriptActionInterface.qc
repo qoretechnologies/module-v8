@@ -2745,7 +2745,7 @@ public class TypeScriptActionInterface {
             if (opts{pat} =~ /^https?:\/\//) {
                 url = regex_subst(url, "^(https?://)?.*{{" + pat + "}}", opts{pat});
             } else {
-                url = replace(url, "{{" + pat + "}}", opts{pat});
+                url = replace(url, "{{" + pat + "}}", opts{pat} ?? "");
             }
         }
         return url;

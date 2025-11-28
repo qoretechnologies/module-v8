@@ -143,6 +143,7 @@ exports.actionsCatalogue = {
                         "short_desc": "The account ID for the connection",
                         "desc": "The account ID for the connection",
                         "type": "string",
+                        "preselected": true,
                     },
                 },
                 "set_options_post_auth": async function (ctx) {
