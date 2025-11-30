@@ -16,6 +16,7038 @@ type RootTranslation = {
 	common: {
 	}
 	apps: {
+		CopperCrm: {
+			/**
+			 * C​o​p​p​e​r​C​R​M
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​C​o​p​p​e​r​C​R​M​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​s​a​l​e​s​ ​p​i​p​e​l​i​n​e​,​ ​c​o​n​t​a​c​t​s​,​ ​a​n​d​ ​c​u​s​t​o​m​e​r​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​.
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​C​o​p​p​e​r​C​R​M​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​C​R​M​ ​d​a​t​a​ ​w​i​t​h​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​f​o​r​ ​m​a​n​a​g​i​n​g​ ​l​e​a​d​s​,​ ​p​e​o​p​l​e​,​ ​c​o​m​p​a​n​i​e​s​,​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​,​ ​a​n​d​ ​t​a​s​k​s​.​ ​B​u​i​l​t​ ​s​p​e​c​i​f​i​c​a​l​l​y​ ​f​o​r​ ​G​o​o​g​l​e​ ​W​o​r​k​s​p​a​c​e​ ​u​s​e​r​s​,​ ​C​o​p​p​e​r​C​R​M​ ​h​e​l​p​s​ ​y​o​u​ ​t​r​a​c​k​ ​c​u​s​t​o​m​e​r​ ​i​n​t​e​r​a​c​t​i​o​n​s​,​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​s​a​l​e​s​ ​p​i​p​e​l​i​n​e​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​y​o​u​r​ ​w​o​r​k​f​l​o​w​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​e​n​a​b​l​e​s​ ​y​o​u​ ​t​o​ ​c​r​e​a​t​e​,​ ​r​e​t​r​i​e​v​e​,​ ​u​p​d​a​t​e​,​ ​d​e​l​e​t​e​,​ ​a​n​d​ ​s​e​a​r​c​h​ ​a​c​r​o​s​s​ ​a​l​l​ ​m​a​j​o​r​ ​C​o​p​p​e​r​C​R​M​ ​e​n​t​i​t​i​e​s​,​ ​w​h​i​l​e​ ​t​r​i​g​g​e​r​s​ ​k​e​e​p​ ​y​o​u​ ​i​n​f​o​r​m​e​d​ ​o​f​ ​n​e​w​ ​r​e​c​o​r​d​s​ ​a​s​ ​t​h​e​y​ ​a​r​e​ ​c​r​e​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​C​R​M​.
+			 */
+			longDesc: string
+			actions: {
+				create_company: {
+					/**
+					 * C​r​e​a​t​e​ ​C​o​m​p​a​n​y
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​m​p​a​n​y​ ​i​n​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​m​p​a​n​y​ ​r​e​c​o​r​d​ ​i​n​ ​C​o​p​p​e​r​C​R​M​ ​w​i​t​h​ ​d​e​t​a​i​l​s​ ​l​i​k​e​ ​n​a​m​e​,​ ​a​d​d​r​e​s​s​,​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.​ ​C​o​m​p​a​n​i​e​s​ ​r​e​p​r​e​s​e​n​t​ ​o​r​g​a​n​i​z​a​t​i​o​n​s​ ​i​n​ ​y​o​u​r​ ​C​R​M​.
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * C​o​m​p​a​n​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​o​f​f​i​c​i​a​l​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​i​n​ ​C​o​p​p​e​r​C​R​M
+							 */
+							longDesc: string
+						}
+						address: {
+							/**
+							 * A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​y​ ​a​d​d​r​e​s​s​ ​d​e​t​a​i​l​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​y​s​i​c​a​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​i​n​c​l​u​d​i​n​g​ ​s​t​r​e​e​t​,​ ​c​i​t​y​,​ ​s​t​a​t​e​,​ ​p​o​s​t​a​l​ ​c​o​d​e​,​ ​a​n​d​ ​c​o​u​n​t​r​y
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									street: {
+										/**
+										 * S​t​r​e​e​t
+										 */
+										displayName: string
+										/**
+										 * S​t​r​e​e​t​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y
+										 */
+										longDesc: string
+									}
+									city: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * C​i​t​y​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​i​s​ ​l​o​c​a​t​e​d
+										 */
+										longDesc: string
+									}
+									state: {
+										/**
+										 * S​t​a​t​e
+										 */
+										displayName: string
+										/**
+										 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​i​s​ ​l​o​c​a​t​e​d
+										 */
+										longDesc: string
+									}
+									postal_code: {
+										/**
+										 * P​o​s​t​a​l​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​r​ ​Z​I​P​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​a​d​d​r​e​s​s
+										 */
+										longDesc: string
+									}
+									country: {
+										/**
+										 * C​o​u​n​t​r​y
+										 */
+										displayName: string
+										/**
+										 * C​o​u​n​t​r​y​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​i​s​ ​l​o​c​a​t​e​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						assignee_id: {
+							/**
+							 * A​s​s​i​g​n​e​e
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​i​s​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​o​p​p​e​r​C​R​M​ ​u​s​e​r​ ​w​h​o​ ​w​i​l​l​ ​b​e​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​m​a​n​a​g​e​ ​t​h​i​s​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+						contact_type_id: {
+							/**
+							 * C​o​n​t​a​c​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​c​o​n​t​a​c​t​ ​r​e​l​a​t​i​o​n​s​h​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​c​o​n​t​a​c​t​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​t​h​i​s​ ​c​o​m​p​a​n​y​ ​h​a​s​ ​w​i​t​h​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						details: {
+							/**
+							 * D​e​t​a​i​l​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s​ ​o​r​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​o​r​ ​i​m​p​o​r​t​a​n​t​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+						email_domain: {
+							/**
+							 * E​m​a​i​l​ ​D​o​m​a​i​n
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​y​ ​e​m​a​i​l​ ​d​o​m​a​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​e​m​a​i​l​ ​d​o​m​a​i​n​ ​u​s​e​d​ ​b​y​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​(​e​.​g​.​,​ ​e​x​a​m​p​l​e​.​c​o​m​)
+							 */
+							longDesc: string
+						}
+						phone_numbers: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r​s
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​y​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											number: {
+												/**
+												 * P​h​o​n​e​ ​N​u​m​b​e​r
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​ ​a​n​y​ ​f​o​r​m​a​t
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * C​a​t​e​g​o​r​y
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​(​w​o​r​k​,​ ​m​o​b​i​l​e​,​ ​h​o​m​e​,​ ​o​r​ ​o​t​h​e​r​)
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						primary_contact_id: {
+							/**
+							 * P​r​i​m​a​r​y​ ​C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * M​a​i​n​ ​c​o​n​t​a​c​t​ ​p​e​r​s​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​c​o​n​t​a​c​t​ ​p​e​r​s​o​n​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+						socials: {
+							/**
+							 * S​o​c​i​a​l​ ​M​e​d​i​a
+							 */
+							displayName: string
+							/**
+							 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * U​R​L
+												 */
+												displayName: string
+												/**
+												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​ ​U​R​L
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​t​o​ ​t​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * P​l​a​t​f​o​r​m
+												 */
+												displayName: string
+												/**
+												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m​ ​(​L​i​n​k​e​d​I​n​,​ ​T​w​i​t​t​e​r​,​ ​F​a​c​e​b​o​o​k​,​ ​Y​o​u​T​u​b​e​,​ ​Q​u​o​r​a​,​ ​I​n​s​t​a​g​r​a​m​,​ ​P​i​n​t​e​r​e​s​t​,​ ​o​r​ ​O​t​h​e​r​)
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​y​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * T​a​g​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​o​r​g​a​n​i​z​e​ ​t​h​e​ ​c​o​m​p​a​n​y​.​ ​Y​o​u​ ​c​a​n​ ​c​r​e​a​t​e​ ​n​e​w​ ​t​a​g​s​ ​o​r​ ​s​e​l​e​c​t​ ​f​r​o​m​ ​e​x​i​s​t​i​n​g​ ​o​n​e​s​.
+							 */
+							longDesc: string
+						}
+						websites: {
+							/**
+							 * W​e​b​s​i​t​e​s
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​y​ ​w​e​b​s​i​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​w​e​b​s​i​t​e​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * U​R​L
+												 */
+												displayName: string
+												/**
+												 * W​e​b​s​i​t​e​ ​U​R​L
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​o​f​ ​t​h​e​ ​w​e​b​s​i​t​e
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * C​a​t​e​g​o​r​y
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​w​e​b​s​i​t​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​i​s​ ​w​e​b​s​i​t​e​ ​(​w​o​r​k​,​ ​p​e​r​s​o​n​a​l​,​ ​o​r​ ​o​t​h​e​r​)
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						custom_fields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​s​p​e​c​i​f​i​c​ ​t​o​ ​y​o​u​r​ ​C​o​p​p​e​r​C​R​M​ ​c​o​m​p​a​n​y​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_lead: {
+					/**
+					 * C​r​e​a​t​e​ ​L​e​a​d
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​l​e​a​d​ ​i​n​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​l​e​a​d​ ​r​e​c​o​r​d​ ​i​n​ ​C​o​p​p​e​r​C​R​M​ ​w​i​t​h​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​n​d​ ​d​e​t​a​i​l​s​.​ ​L​e​a​d​s​ ​r​e​p​r​e​s​e​n​t​ ​p​o​t​e​n​t​i​a​l​ ​c​u​s​t​o​m​e​r​s​ ​w​h​o​ ​h​a​v​e​ ​s​h​o​w​n​ ​i​n​t​e​r​e​s​t​ ​i​n​ ​y​o​u​r​ ​p​r​o​d​u​c​t​s​ ​o​r​ ​s​e​r​v​i​c​e​s​.
+					 */
+					longDesc: string
+					options: {
+						first_name: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * L​e​a​d​'​s​ ​f​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​l​e​a​d
+							 */
+							longDesc: string
+						}
+						last_name: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * L​e​a​d​'​s​ ​l​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​l​e​a​d
+							 */
+							longDesc: string
+						}
+						middle_name: {
+							/**
+							 * M​i​d​d​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * L​e​a​d​'​s​ ​m​i​d​d​l​e​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​i​d​d​l​e​ ​n​a​m​e​ ​o​r​ ​i​n​i​t​i​a​l​ ​o​f​ ​t​h​e​ ​l​e​a​d
+							 */
+							longDesc: string
+						}
+						suffix: {
+							/**
+							 * S​u​f​f​i​x
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​s​u​f​f​i​x
+							 */
+							shortDesc: string
+							/**
+							 * N​a​m​e​ ​s​u​f​f​i​x​ ​s​u​c​h​ ​a​s​ ​J​r​.​,​ ​S​r​.​,​ ​I​I​I​,​ ​e​t​c​.
+							 */
+							longDesc: string
+						}
+						assignee_id: {
+							/**
+							 * A​s​s​i​g​n​e​e
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​i​s​ ​l​e​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​o​p​p​e​r​C​R​M​ ​u​s​e​r​ ​w​h​o​ ​w​i​l​l​ ​b​e​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​m​a​n​a​g​e​ ​t​h​i​s​ ​l​e​a​d
+							 */
+							longDesc: string
+						}
+						company_name: {
+							/**
+							 * C​o​m​p​a​n​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * L​e​a​d​'​s​ ​c​o​m​p​a​n​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​w​h​e​r​e​ ​t​h​e​ ​l​e​a​d​ ​w​o​r​k​s
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * L​e​a​d​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * T​a​g​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​o​r​g​a​n​i​z​e​ ​t​h​e​ ​l​e​a​d​.​ ​Y​o​u​ ​c​a​n​ ​c​r​e​a​t​e​ ​n​e​w​ ​t​a​g​s​ ​o​r​ ​s​e​l​e​c​t​ ​f​r​o​m​ ​e​x​i​s​t​i​n​g​ ​o​n​e​s​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * J​o​b​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​j​o​b​ ​t​i​t​l​e​ ​o​r​ ​p​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​l​e​a​d
+							 */
+							longDesc: string
+						}
+						details: {
+							/**
+							 * D​e​t​a​i​l​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​o​r​ ​i​m​p​o​r​t​a​n​t​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​l​e​a​d
+							 */
+							longDesc: string
+						}
+						websites: {
+							/**
+							 * W​e​b​s​i​t​e​s
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​w​e​b​s​i​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​w​e​b​s​i​t​e​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​l​e​a​d
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * U​R​L
+												 */
+												displayName: string
+												/**
+												 * W​e​b​s​i​t​e​ ​U​R​L
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​o​f​ ​t​h​e​ ​w​e​b​s​i​t​e
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * C​a​t​e​g​o​r​y
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​w​e​b​s​i​t​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​i​s​ ​w​e​b​s​i​t​e​ ​(​w​o​r​k​,​ ​p​e​r​s​o​n​a​l​,​ ​o​r​ ​o​t​h​e​r​)
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						socials: {
+							/**
+							 * S​o​c​i​a​l​ ​M​e​d​i​a
+							 */
+							displayName: string
+							/**
+							 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​s​ ​f​o​r​ ​t​h​e​ ​l​e​a​d
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * U​R​L
+												 */
+												displayName: string
+												/**
+												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​ ​U​R​L
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​t​o​ ​t​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * P​l​a​t​f​o​r​m
+												 */
+												displayName: string
+												/**
+												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m​ ​(​L​i​n​k​e​d​I​n​,​ ​T​w​i​t​t​e​r​,​ ​F​a​c​e​b​o​o​k​,​ ​Y​o​u​T​u​b​e​,​ ​Q​u​o​r​a​,​ ​I​n​s​t​a​g​r​a​m​,​ ​P​i​n​t​e​r​e​s​t​,​ ​o​r​ ​O​t​h​e​r​)
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​l​e​a​d
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									email: {
+										/**
+										 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​l​e​a​d
+										 */
+										longDesc: string
+									}
+									category: {
+										/**
+										 * C​a​t​e​g​o​r​y
+										 */
+										displayName: string
+										/**
+										 * T​y​p​e​ ​o​f​ ​e​m​a​i​l
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​e​m​a​i​l​ ​(​w​o​r​k​,​ ​p​e​r​s​o​n​a​l​,​ ​o​r​ ​o​t​h​e​r​)
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						phone_numbers: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r​s
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​ ​f​o​r​ ​t​h​e​ ​l​e​a​d
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											number: {
+												/**
+												 * P​h​o​n​e​ ​N​u​m​b​e​r
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​ ​a​n​y​ ​f​o​r​m​a​t
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * C​a​t​e​g​o​r​y
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						address: {
+							/**
+							 * A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​y​s​i​c​a​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​l​e​a​d​ ​i​n​c​l​u​d​i​n​g​ ​s​t​r​e​e​t​,​ ​c​i​t​y​,​ ​s​t​a​t​e​,​ ​p​o​s​t​a​l​ ​c​o​d​e​,​ ​a​n​d​ ​c​o​u​n​t​r​y
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									street: {
+										/**
+										 * S​t​r​e​e​t
+										 */
+										displayName: string
+										/**
+										 * S​t​r​e​e​t​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s
+										 */
+										longDesc: string
+									}
+									city: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * C​i​t​y​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​w​h​e​r​e​ ​t​h​e​ ​l​e​a​d​ ​i​s​ ​l​o​c​a​t​e​d
+										 */
+										longDesc: string
+									}
+									state: {
+										/**
+										 * S​t​a​t​e
+										 */
+										displayName: string
+										/**
+										 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+										 */
+										longDesc: string
+									}
+									postal_code: {
+										/**
+										 * P​o​s​t​a​l​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​r​ ​Z​I​P​ ​c​o​d​e
+										 */
+										longDesc: string
+									}
+									country: {
+										/**
+										 * C​o​u​n​t​r​y
+										 */
+										displayName: string
+										/**
+										 * C​o​u​n​t​r​y​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						customer_source_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​S​o​u​r​c​e
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​h​e​ ​l​e​a​d​ ​w​a​s​ ​a​c​q​u​i​r​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​o​u​r​c​e​ ​o​r​ ​c​h​a​n​n​e​l​ ​t​h​r​o​u​g​h​ ​w​h​i​c​h​ ​t​h​i​s​ ​l​e​a​d​ ​w​a​s​ ​a​c​q​u​i​r​e​d
+							 */
+							longDesc: string
+						}
+						custom_fields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​s​p​e​c​i​f​i​c​ ​t​o​ ​y​o​u​r​ ​C​o​p​p​e​r​C​R​M​ ​l​e​a​d​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_opportunity: {
+					/**
+					 * C​r​e​a​t​e​ ​O​p​p​o​r​t​u​n​i​t​y
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​o​p​p​o​r​t​u​n​i​t​y​ ​i​n​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​s​a​l​e​s​ ​o​p​p​o​r​t​u​n​i​t​y​ ​i​n​ ​C​o​p​p​e​r​C​R​M​ ​w​i​t​h​ ​d​e​t​a​i​l​s​ ​l​i​k​e​ ​v​a​l​u​e​,​ ​s​t​a​g​e​,​ ​a​n​d​ ​a​s​s​o​c​i​a​t​e​d​ ​c​o​n​t​a​c​t​s​.​ ​O​p​p​o​r​t​u​n​i​t​i​e​s​ ​r​e​p​r​e​s​e​n​t​ ​p​o​t​e​n​t​i​a​l​ ​d​e​a​l​s​ ​i​n​ ​y​o​u​r​ ​s​a​l​e​s​ ​p​i​p​e​l​i​n​e​.
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * O​p​p​o​r​t​u​n​i​t​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​o​p​p​o​r​t​u​n​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​s​a​l​e​s​ ​o​p​p​o​r​t​u​n​i​t​y
+							 */
+							longDesc: string
+						}
+						primary_contact_id: {
+							/**
+							 * P​r​i​m​a​r​y​ ​C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * M​a​i​n​ ​c​o​n​t​a​c​t​ ​p​e​r​s​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​c​o​n​t​a​c​t​ ​p​e​r​s​o​n​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​o​p​p​o​r​t​u​n​i​t​y
+							 */
+							longDesc: string
+						}
+						assignee_id: {
+							/**
+							 * A​s​s​i​g​n​e​e
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​i​s​ ​o​p​p​o​r​t​u​n​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​o​p​p​e​r​C​R​M​ ​u​s​e​r​ ​w​h​o​ ​w​i​l​l​ ​b​e​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​m​a​n​a​g​e​ ​t​h​i​s​ ​o​p​p​o​r​t​u​n​i​t​y
+							 */
+							longDesc: string
+						}
+						close_date: {
+							/**
+							 * C​l​o​s​e​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * E​x​p​e​c​t​e​d​ ​c​l​o​s​e​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​x​p​e​c​t​e​d​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​i​s​ ​o​p​p​o​r​t​u​n​i​t​y​ ​w​i​l​l​ ​b​e​ ​c​l​o​s​e​d​ ​o​r​ ​w​o​n
+							 */
+							longDesc: string
+						}
+						company_id: {
+							/**
+							 * C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​a​n​y​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​o​p​p​o​r​t​u​n​i​t​y
+							 */
+							longDesc: string
+						}
+						customer_source_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​S​o​u​r​c​e
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​h​e​ ​o​p​p​o​r​t​u​n​i​t​y​ ​w​a​s​ ​a​c​q​u​i​r​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​o​u​r​c​e​ ​o​r​ ​c​h​a​n​n​e​l​ ​t​h​r​o​u​g​h​ ​w​h​i​c​h​ ​t​h​i​s​ ​o​p​p​o​r​t​u​n​i​t​y​ ​w​a​s​ ​a​c​q​u​i​r​e​d
+							 */
+							longDesc: string
+						}
+						details: {
+							/**
+							 * D​e​t​a​i​l​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​o​r​ ​i​m​p​o​r​t​a​n​t​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​o​p​p​o​r​t​u​n​i​t​y
+							 */
+							longDesc: string
+						}
+						loss_reason_id: {
+							/**
+							 * L​o​s​s​ ​R​e​a​s​o​n
+							 */
+							displayName: string
+							/**
+							 * R​e​a​s​o​n​ ​f​o​r​ ​l​o​s​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​r​e​a​s​o​n​ ​w​h​y​ ​t​h​i​s​ ​o​p​p​o​r​t​u​n​i​t​y​ ​w​a​s​ ​l​o​s​t​ ​(​i​f​ ​a​p​p​l​i​c​a​b​l​e​)
+							 */
+							longDesc: string
+						}
+						monetary_value: {
+							/**
+							 * M​o​n​e​t​a​r​y​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * D​e​a​l​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​o​p​p​o​r​t​u​n​i​t​y​ ​i​n​ ​y​o​u​r​ ​d​e​f​a​u​l​t​ ​c​u​r​r​e​n​c​y
+							 */
+							longDesc: string
+						}
+						pipeline_id: {
+							/**
+							 * P​i​p​e​l​i​n​e
+							 */
+							displayName: string
+							/**
+							 * S​a​l​e​s​ ​p​i​p​e​l​i​n​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​a​l​e​s​ ​p​i​p​e​l​i​n​e​ ​t​h​i​s​ ​o​p​p​o​r​t​u​n​i​t​y​ ​b​e​l​o​n​g​s​ ​t​o
+							 */
+							longDesc: string
+						}
+						pipeline_stage_id: {
+							/**
+							 * P​i​p​e​l​i​n​e​ ​S​t​a​g​e
+							 */
+							displayName: string
+							/**
+							 * C​u​r​r​e​n​t​ ​s​t​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​r​r​e​n​t​ ​s​t​a​g​e​ ​o​f​ ​t​h​e​ ​o​p​p​o​r​t​u​n​i​t​y​ ​i​n​ ​t​h​e​ ​s​a​l​e​s​ ​p​i​p​e​l​i​n​e
+							 */
+							longDesc: string
+						}
+						priority: {
+							/**
+							 * P​r​i​o​r​i​t​y
+							 */
+							displayName: string
+							/**
+							 * O​p​p​o​r​t​u​n​i​t​y​ ​p​r​i​o​r​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​i​o​r​i​t​y​ ​l​e​v​e​l​ ​o​f​ ​t​h​i​s​ ​o​p​p​o​r​t​u​n​i​t​y​ ​(​N​o​n​e​,​ ​L​o​w​,​ ​M​e​d​i​u​m​,​ ​o​r​ ​H​i​g​h​)
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * O​p​p​o​r​t​u​n​i​t​y​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​r​r​e​n​t​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​o​p​p​o​r​t​u​n​i​t​y​ ​(​O​p​e​n​,​ ​W​o​n​,​ ​L​o​s​t​,​ ​o​r​ ​A​b​a​n​d​o​n​e​d​)
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * O​p​p​o​r​t​u​n​i​t​y​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * T​a​g​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​o​r​g​a​n​i​z​e​ ​t​h​e​ ​o​p​p​o​r​t​u​n​i​t​y​.​ ​Y​o​u​ ​c​a​n​ ​c​r​e​a​t​e​ ​n​e​w​ ​t​a​g​s​ ​o​r​ ​s​e​l​e​c​t​ ​f​r​o​m​ ​e​x​i​s​t​i​n​g​ ​o​n​e​s​.
+							 */
+							longDesc: string
+						}
+						win_probability: {
+							/**
+							 * W​i​n​ ​P​r​o​b​a​b​i​l​i​t​y
+							 */
+							displayName: string
+							/**
+							 * P​r​o​b​a​b​i​l​i​t​y​ ​o​f​ ​w​i​n​n​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​s​t​i​m​a​t​e​d​ ​p​r​o​b​a​b​i​l​i​t​y​ ​(​0​-​1​0​0​)​ ​o​f​ ​w​i​n​n​i​n​g​ ​t​h​i​s​ ​o​p​p​o​r​t​u​n​i​t​y
+							 */
+							longDesc: string
+						}
+						custom_fields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​s​p​e​c​i​f​i​c​ ​t​o​ ​y​o​u​r​ ​C​o​p​p​e​r​C​R​M​ ​o​p​p​o​r​t​u​n​i​t​y​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_person: {
+					/**
+					 * C​r​e​a​t​e​ ​P​e​r​s​o​n
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​e​r​s​o​n​ ​c​o​n​t​a​c​t​ ​i​n​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​e​r​s​o​n​ ​c​o​n​t​a​c​t​ ​i​n​ ​C​o​p​p​e​r​C​R​M​ ​w​i​t​h​ ​c​o​m​p​l​e​t​e​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​.​ ​P​e​o​p​l​e​ ​r​e​p​r​e​s​e​n​t​ ​i​n​d​i​v​i​d​u​a​l​ ​c​o​n​t​a​c​t​s​ ​i​n​ ​y​o​u​r​ ​C​R​M​.
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​u​l​l​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​e​r​s​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​u​l​l​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​e​r​s​o​n​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						prefix: {
+							/**
+							 * P​r​e​f​i​x
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​p​r​e​f​i​x
+							 */
+							shortDesc: string
+							/**
+							 * N​a​m​e​ ​p​r​e​f​i​x​ ​s​u​c​h​ ​a​s​ ​M​r​.​,​ ​M​r​s​.​,​ ​D​r​.​,​ ​e​t​c​.
+							 */
+							longDesc: string
+						}
+						first_name: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​e​r​s​o​n
+							 */
+							longDesc: string
+						}
+						middle_name: {
+							/**
+							 * M​i​d​d​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * M​i​d​d​l​e​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​i​d​d​l​e​ ​n​a​m​e​ ​o​r​ ​i​n​i​t​i​a​l​ ​o​f​ ​t​h​e​ ​p​e​r​s​o​n
+							 */
+							longDesc: string
+						}
+						last_name: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * L​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​e​r​s​o​n
+							 */
+							longDesc: string
+						}
+						suffix: {
+							/**
+							 * S​u​f​f​i​x
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​s​u​f​f​i​x
+							 */
+							shortDesc: string
+							/**
+							 * N​a​m​e​ ​s​u​f​f​i​x​ ​s​u​c​h​ ​a​s​ ​J​r​.​,​ ​S​r​.​,​ ​I​I​I​,​ ​e​t​c​.
+							 */
+							longDesc: string
+						}
+						street: {
+							/**
+							 * S​t​r​e​e​t
+							 */
+							displayName: string
+							/**
+							 * S​t​r​e​e​t​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​p​e​r​s​o​n
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * C​i​t​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​i​t​y​ ​w​h​e​r​e​ ​t​h​e​ ​p​e​r​s​o​n​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						state: {
+							/**
+							 * S​t​a​t​e
+							 */
+							displayName: string
+							/**
+							 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+							 */
+							longDesc: string
+						}
+						postal_code: {
+							/**
+							 * P​o​s​t​a​l​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​r​ ​Z​I​P​ ​c​o​d​e
+							 */
+							longDesc: string
+						}
+						country: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * C​o​u​n​t​r​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​u​n​t​r​y
+							 */
+							longDesc: string
+						}
+						assignee_id: {
+							/**
+							 * A​s​s​i​g​n​e​e
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​i​s​ ​p​e​r​s​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​o​p​p​e​r​C​R​M​ ​u​s​e​r​ ​w​h​o​ ​w​i​l​l​ ​b​e​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​m​a​n​a​g​e​ ​t​h​i​s​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						company_id: {
+							/**
+							 * C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​a​n​y​ ​w​h​e​r​e​ ​t​h​i​s​ ​p​e​r​s​o​n​ ​w​o​r​k​s
+							 */
+							longDesc: string
+						}
+						contact_type_id: {
+							/**
+							 * C​o​n​t​a​c​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​c​o​n​t​a​c​t​ ​r​e​l​a​t​i​o​n​s​h​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​c​o​n​t​a​c​t​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​t​h​i​s​ ​p​e​r​s​o​n​ ​h​a​s​ ​w​i​t​h​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						details: {
+							/**
+							 * D​e​t​a​i​l​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​o​r​ ​i​m​p​o​r​t​a​n​t​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​p​e​r​s​o​n
+							 */
+							longDesc: string
+						}
+						emails: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s​e​s
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​o​r​ ​t​h​e​ ​p​e​r​s​o​n
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											email: {
+												/**
+												 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+												 */
+												shortDesc: string
+												/**
+												 * E​m​a​i​l​ ​a​d​d​r​e​s​s
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * C​a​t​e​g​o​r​y
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​e​m​a​i​l
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​e​m​a​i​l​ ​(​w​o​r​k​,​ ​p​e​r​s​o​n​a​l​,​ ​o​r​ ​o​t​h​e​r​)
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						phone_numbers: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r​s
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​ ​f​o​r​ ​t​h​e​ ​p​e​r​s​o​n
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											number: {
+												/**
+												 * P​h​o​n​e​ ​N​u​m​b​e​r
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+												 */
+												shortDesc: string
+												/**
+												 * P​h​o​n​e​ ​n​u​m​b​e​r
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * C​a​t​e​g​o​r​y
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​(​w​o​r​k​,​ ​m​o​b​i​l​e​,​ ​h​o​m​e​,​ ​o​r​ ​o​t​h​e​r​)
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						socials: {
+							/**
+							 * S​o​c​i​a​l​ ​M​e​d​i​a
+							 */
+							displayName: string
+							/**
+							 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​s​ ​f​o​r​ ​t​h​e​ ​p​e​r​s​o​n
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * U​R​L
+												 */
+												displayName: string
+												/**
+												 * S​o​c​i​a​l​ ​p​r​o​f​i​l​e​ ​U​R​L
+												 */
+												shortDesc: string
+												/**
+												 * S​o​c​i​a​l​ ​p​r​o​f​i​l​e​ ​U​R​L
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * P​l​a​t​f​o​r​m
+												 */
+												displayName: string
+												/**
+												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
+												 */
+												shortDesc: string
+												/**
+												 * S​o​c​i​a​l​ ​p​l​a​t​f​o​r​m
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * P​e​r​s​o​n​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * T​a​g​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​o​r​g​a​n​i​z​e​ ​t​h​e​ ​p​e​r​s​o​n​.​ ​Y​o​u​ ​c​a​n​ ​c​r​e​a​t​e​ ​n​e​w​ ​t​a​g​s​ ​o​r​ ​s​e​l​e​c​t​ ​f​r​o​m​ ​e​x​i​s​t​i​n​g​ ​o​n​e​s​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * J​o​b​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​j​o​b​ ​t​i​t​l​e​ ​o​r​ ​p​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​p​e​r​s​o​n
+							 */
+							longDesc: string
+						}
+						websites: {
+							/**
+							 * W​e​b​s​i​t​e​s
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​w​e​b​s​i​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​w​e​b​s​i​t​e​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​p​e​r​s​o​n
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * U​R​L
+												 */
+												displayName: string
+												/**
+												 * W​e​b​s​i​t​e​ ​U​R​L
+												 */
+												shortDesc: string
+												/**
+												 * W​e​b​s​i​t​e​ ​U​R​L
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * C​a​t​e​g​o​r​y
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​w​e​b​s​i​t​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​i​s​ ​w​e​b​s​i​t​e​ ​(​w​o​r​k​,​ ​p​e​r​s​o​n​a​l​,​ ​o​r​ ​o​t​h​e​r​)
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						custom_fields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​s​p​e​c​i​f​i​c​ ​t​o​ ​y​o​u​r​ ​C​o​p​p​e​r​C​R​M​ ​p​e​r​s​o​n​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_task: {
+					/**
+					 * C​r​e​a​t​e​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​n​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​n​ ​C​o​p​p​e​r​C​R​M​ ​w​i​t​h​ ​d​e​t​a​i​l​s​,​ ​d​u​e​ ​d​a​t​e​s​,​ ​a​n​d​ ​a​s​s​i​g​n​m​e​n​t​s​.​ ​T​a​s​k​s​ ​h​e​l​p​ ​y​o​u​ ​t​r​a​c​k​ ​a​c​t​i​o​n​ ​i​t​e​m​s​ ​a​n​d​ ​f​o​l​l​o​w​-​u​p​s​.
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * T​a​s​k​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						related_resource: {
+							/**
+							 * R​e​l​a​t​e​d​ ​R​e​s​o​u​r​c​e
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​r​e​c​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​R​M​ ​r​e​c​o​r​d​ ​(​l​e​a​d​,​ ​p​e​r​s​o​n​,​ ​c​o​m​p​a​n​y​,​ ​o​p​p​o​r​t​u​n​i​t​y​,​ ​o​r​ ​p​r​o​j​e​c​t​)​ ​t​h​i​s​ ​t​a​s​k​ ​i​s​ ​r​e​l​a​t​e​d​ ​t​o
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									id: {
+										/**
+										 * R​e​s​o​u​r​c​e​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * I​D​ ​o​f​ ​t​h​e​ ​r​e​l​a​t​e​d​ ​r​e​c​o​r​d
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​l​a​t​e​d​ ​C​R​M​ ​r​e​c​o​r​d
+										 */
+										longDesc: string
+									}
+									type: {
+										/**
+										 * R​e​s​o​u​r​c​e​ ​T​y​p​e
+										 */
+										displayName: string
+										/**
+										 * T​y​p​e​ ​o​f​ ​r​e​l​a​t​e​d​ ​r​e​c​o​r​d
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​t​y​p​e​ ​o​f​ ​C​R​M​ ​r​e​c​o​r​d​ ​t​h​i​s​ ​t​a​s​k​ ​i​s​ ​r​e​l​a​t​e​d​ ​t​o​ ​(​l​e​a​d​,​ ​p​e​r​s​o​n​,​ ​c​o​m​p​a​n​y​,​ ​o​p​p​o​r​t​u​n​i​t​y​,​ ​o​r​ ​p​r​o​j​e​c​t​)
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						assignee_id: {
+							/**
+							 * A​s​s​i​g​n​e​e
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​i​s​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​C​o​p​p​e​r​C​R​M​ ​u​s​e​r​ ​w​h​o​ ​w​i​l​l​ ​b​e​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​c​o​m​p​l​e​t​e​ ​t​h​i​s​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						due_date: {
+							/**
+							 * D​u​e​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​h​e​ ​t​a​s​k​ ​i​s​ ​d​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​i​s​ ​t​a​s​k​ ​s​h​o​u​l​d​ ​b​e​ ​c​o​m​p​l​e​t​e​d
+							 */
+							longDesc: string
+						}
+						reminder_date: {
+							/**
+							 * R​e​m​i​n​d​e​r​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​o​ ​s​e​n​d​ ​r​e​m​i​n​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​w​h​e​n​ ​a​ ​r​e​m​i​n​d​e​r​ ​s​h​o​u​l​d​ ​b​e​ ​s​e​n​t​ ​f​o​r​ ​t​h​i​s​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						priority: {
+							/**
+							 * P​r​i​o​r​i​t​y
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​p​r​i​o​r​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​i​o​r​i​t​y​ ​l​e​v​e​l​ ​o​f​ ​t​h​i​s​ ​t​a​s​k​ ​(​N​o​n​e​,​ ​L​o​w​,​ ​M​e​d​i​u​m​,​ ​o​r​ ​H​i​g​h​)
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​r​r​e​n​t​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​t​a​s​k​ ​(​O​p​e​n​ ​o​r​ ​C​o​m​p​l​e​t​e​d​)
+							 */
+							longDesc: string
+						}
+						details: {
+							/**
+							 * D​e​t​a​i​l​s
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​d​e​t​a​i​l​s​ ​o​r​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​w​h​a​t​ ​n​e​e​d​s​ ​t​o​ ​b​e​ ​d​o​n​e
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * T​a​g​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​o​r​g​a​n​i​z​e​ ​t​h​e​ ​t​a​s​k​.​ ​Y​o​u​ ​c​a​n​ ​c​r​e​a​t​e​ ​n​e​w​ ​t​a​g​s​ ​o​r​ ​s​e​l​e​c​t​ ​f​r​o​m​ ​e​x​i​s​t​i​n​g​ ​o​n​e​s​.
+							 */
+							longDesc: string
+						}
+						custom_fields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​s​p​e​c​i​f​i​c​ ​t​o​ ​y​o​u​r​ ​C​o​p​p​e​r​C​R​M​ ​t​a​s​k​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_company: {
+					/**
+					 * D​e​l​e​t​e​ ​C​o​m​p​a​n​y
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​c​o​m​p​a​n​y​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​c​o​m​p​a​n​y​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.
+					 */
+					longDesc: string
+					options: {
+						company_id: {
+							/**
+							 * C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​y​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_lead: {
+					/**
+					 * D​e​l​e​t​e​ ​L​e​a​d
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​l​e​a​d​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​l​e​a​d​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.
+					 */
+					longDesc: string
+					options: {
+						lead_id: {
+							/**
+							 * L​e​a​d
+							 */
+							displayName: string
+							/**
+							 * L​e​a​d​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​l​e​a​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_opportunity: {
+					/**
+					 * D​e​l​e​t​e​ ​O​p​p​o​r​t​u​n​i​t​y
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​n​ ​o​p​p​o​r​t​u​n​i​t​y​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​n​ ​o​p​p​o​r​t​u​n​i​t​y​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.
+					 */
+					longDesc: string
+					options: {
+						opportunity_id: {
+							/**
+							 * O​p​p​o​r​t​u​n​i​t​y
+							 */
+							displayName: string
+							/**
+							 * O​p​p​o​r​t​u​n​i​t​y​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​o​p​p​o​r​t​u​n​i​t​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_person: {
+					/**
+					 * D​e​l​e​t​e​ ​P​e​r​s​o​n
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​p​e​r​s​o​n​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​p​e​r​s​o​n​ ​c​o​n​t​a​c​t​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.
+					 */
+					longDesc: string
+					options: {
+						person_id: {
+							/**
+							 * P​e​r​s​o​n
+							 */
+							displayName: string
+							/**
+							 * P​e​r​s​o​n​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​e​r​s​o​n​ ​c​o​n​t​a​c​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_task: {
+					/**
+					 * D​e​l​e​t​e​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​t​a​s​k​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​t​a​s​k​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.
+					 */
+					longDesc: string
+					options: {
+						task_id: {
+							/**
+							 * T​a​s​k
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​s​k​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_company: {
+					/**
+					 * G​e​t​ ​C​o​m​p​a​n​y
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​c​o​m​p​a​n​y​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​m​p​a​n​y​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M​ ​i​n​c​l​u​d​i​n​g​ ​a​l​l​ ​f​i​e​l​d​s​ ​a​n​d​ ​c​u​s​t​o​m​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						company_id: {
+							/**
+							 * C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​y​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_lead: {
+					/**
+					 * G​e​t​ ​L​e​a​d
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​e​a​d​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​e​a​d​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M​ ​i​n​c​l​u​d​i​n​g​ ​a​l​l​ ​f​i​e​l​d​s​ ​a​n​d​ ​c​u​s​t​o​m​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						lead_id: {
+							/**
+							 * L​e​a​d
+							 */
+							displayName: string
+							/**
+							 * L​e​a​d​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​l​e​a​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_opportunity: {
+					/**
+					 * G​e​t​ ​O​p​p​o​r​t​u​n​i​t​y
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​n​ ​o​p​p​o​r​t​u​n​i​t​y​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​o​p​p​o​r​t​u​n​i​t​y​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M​ ​i​n​c​l​u​d​i​n​g​ ​a​l​l​ ​f​i​e​l​d​s​ ​a​n​d​ ​c​u​s​t​o​m​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						opportunity_id: {
+							/**
+							 * O​p​p​o​r​t​u​n​i​t​y
+							 */
+							displayName: string
+							/**
+							 * O​p​p​o​r​t​u​n​i​t​y​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​o​p​p​o​r​t​u​n​i​t​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_person: {
+					/**
+					 * G​e​t​ ​P​e​r​s​o​n
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​e​r​s​o​n​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​e​r​s​o​n​ ​c​o​n​t​a​c​t​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M​ ​i​n​c​l​u​d​i​n​g​ ​a​l​l​ ​f​i​e​l​d​s​ ​a​n​d​ ​c​u​s​t​o​m​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						person_id: {
+							/**
+							 * P​e​r​s​o​n
+							 */
+							displayName: string
+							/**
+							 * P​e​r​s​o​n​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​e​r​s​o​n​ ​c​o​n​t​a​c​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_task: {
+					/**
+					 * G​e​t​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​t​a​s​k​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M​ ​i​n​c​l​u​d​i​n​g​ ​a​l​l​ ​f​i​e​l​d​s​ ​a​n​d​ ​c​u​s​t​o​m​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						task_id: {
+							/**
+							 * T​a​s​k
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​s​k​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​C​o​p​p​e​r​C​R​M
+							 */
+							longDesc: string
+						}
+					}
+				}
+				search_companies: {
+					/**
+					 * S​e​a​r​c​h​ ​C​o​m​p​a​n​i​e​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​c​o​m​p​a​n​i​e​s​ ​i​n​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​a​n​d​ ​f​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​i​n​ ​C​o​p​p​e​r​C​R​M​ ​u​s​i​n​g​ ​v​a​r​i​o​u​s​ ​c​r​i​t​e​r​i​a​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​l​o​c​a​t​i​o​n​,​ ​t​a​g​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.​ ​R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​m​a​t​c​h​i​n​g​ ​c​o​m​p​a​n​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						ids: {
+							/**
+							 * C​o​m​p​a​n​y​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​c​o​m​p​a​n​i​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​s​p​e​c​i​f​i​c​ ​c​o​m​p​a​n​y​ ​I​D​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+						page_number: {
+							/**
+							 * P​a​g​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * W​h​i​c​h​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​g​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * R​e​s​u​l​t​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							longDesc: string
+						}
+						sort_by: {
+							/**
+							 * S​o​r​t​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						sort_direction: {
+							/**
+							 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​y​ ​n​a​m​e​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​c​o​m​p​a​n​i​e​s​ ​w​i​t​h​ ​n​a​m​e​s​ ​m​a​t​c​h​i​n​g​ ​t​h​i​s​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						assignee_ids: {
+							/**
+							 * A​s​s​i​g​n​e​e​s
+							 */
+							displayName: string
+							/**
+							 * A​s​s​i​g​n​e​d​ ​u​s​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​b​y​ ​a​s​s​i​g​n​e​d​ ​u​s​e​r​s
+							 */
+							longDesc: string
+						}
+						contact_type_ids: {
+							/**
+							 * C​o​n​t​a​c​t​ ​T​y​p​e​s
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​ ​t​y​p​e​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​b​y​ ​c​o​n​t​a​c​t​ ​t​y​p​e
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * C​i​t​y​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​b​y​ ​c​i​t​y
+							 */
+							longDesc: string
+						}
+						state: {
+							/**
+							 * S​t​a​t​e
+							 */
+							displayName: string
+							/**
+							 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​b​y​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+							 */
+							longDesc: string
+						}
+						postal_code: {
+							/**
+							 * P​o​s​t​a​l​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​b​y​ ​p​o​s​t​a​l​ ​c​o​d​e
+							 */
+							longDesc: string
+						}
+						country: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * C​o​u​n​t​r​y​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​b​y​ ​c​o​u​n​t​r​y
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​t​h​a​t​ ​h​a​v​e​ ​a​n​y​ ​o​f​ ​t​h​e​s​e​ ​t​a​g​s
+							 */
+							longDesc: string
+						}
+						socials: {
+							/**
+							 * S​o​c​i​a​l​ ​M​e​d​i​a
+							 */
+							displayName: string
+							/**
+							 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​b​y​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​s
+							 */
+							longDesc: string
+						}
+						followed: {
+							/**
+							 * F​o​l​l​o​w​e​d
+							 */
+							displayName: string
+							/**
+							 * F​o​l​l​o​w​i​n​g​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​b​y​ ​w​h​e​t​h​e​r​ ​t​h​e​y​ ​a​r​e​ ​f​o​l​l​o​w​e​d​ ​o​r​ ​n​o​t
+							 */
+							longDesc: string
+						}
+						minimum_interaction_count: {
+							/**
+							 * M​i​n​i​m​u​m​ ​I​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​i​n​t​e​r​a​c​t​i​o​n​ ​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​w​i​t​h​ ​a​t​ ​l​e​a​s​t​ ​t​h​i​s​ ​m​a​n​y​ ​i​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						maximum_interaction_count: {
+							/**
+							 * M​a​x​i​m​u​m​ ​I​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​i​n​t​e​r​a​c​t​i​o​n​ ​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​w​i​t​h​ ​n​o​ ​m​o​r​e​ ​t​h​a​n​ ​t​h​i​s​ ​m​a​n​y​ ​i​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						minimum_inactive_days: {
+							/**
+							 * M​i​n​i​m​u​m​ ​I​n​a​c​t​i​v​e​ ​D​a​y​s
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​d​a​y​s​ ​i​n​a​c​t​i​v​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​i​n​a​c​t​i​v​e​ ​f​o​r​ ​a​t​ ​l​e​a​s​t​ ​t​h​i​s​ ​m​a​n​y​ ​d​a​y​s
+							 */
+							longDesc: string
+						}
+						maximum_inactive_days: {
+							/**
+							 * M​a​x​i​m​u​m​ ​I​n​a​c​t​i​v​e​ ​D​a​y​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​d​a​y​s​ ​i​n​a​c​t​i​v​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​i​n​a​c​t​i​v​e​ ​f​o​r​ ​n​o​ ​m​o​r​e​ ​t​h​a​n​ ​t​h​i​s​ ​m​a​n​y​ ​d​a​y​s
+							 */
+							longDesc: string
+						}
+						minimum_created_date: {
+							/**
+							 * C​r​e​a​t​e​d​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * E​a​r​l​i​e​s​t​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​c​r​e​a​t​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						maximum_created_date: {
+							/**
+							 * C​r​e​a​t​e​d​ ​B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * L​a​t​e​s​t​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​c​r​e​a​t​e​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						minimum_modified_date: {
+							/**
+							 * M​o​d​i​f​i​e​d​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * E​a​r​l​i​e​s​t​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​m​o​d​i​f​i​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						maximum_modified_date: {
+							/**
+							 * M​o​d​i​f​i​e​d​ ​B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * L​a​t​e​s​t​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s​ ​m​o​d​i​f​i​e​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				search_leads: {
+					/**
+					 * S​e​a​r​c​h​ ​L​e​a​d​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​l​e​a​d​s​ ​i​n​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​a​n​d​ ​f​i​l​t​e​r​ ​l​e​a​d​s​ ​i​n​ ​C​o​p​p​e​r​C​R​M​ ​u​s​i​n​g​ ​v​a​r​i​o​u​s​ ​c​r​i​t​e​r​i​a​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​p​h​o​n​e​,​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.​ ​R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​m​a​t​c​h​i​n​g​ ​l​e​a​d​s​.
+					 */
+					longDesc: string
+					options: {
+						ids: {
+							/**
+							 * L​e​a​d​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​l​e​a​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​s​p​e​c​i​f​i​c​ ​l​e​a​d​ ​I​D​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+						page_number: {
+							/**
+							 * P​a​g​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * W​h​i​c​h​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​g​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * R​e​s​u​l​t​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							longDesc: string
+						}
+						sort_by: {
+							/**
+							 * S​o​r​t​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						sort_direction: {
+							/**
+							 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * L​e​a​d​ ​n​a​m​e​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​l​e​a​d​s​ ​w​i​t​h​ ​n​a​m​e​s​ ​m​a​t​c​h​i​n​g​ ​t​h​i​s​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						phone_number: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * P​h​o​n​e​ ​n​u​m​b​e​r​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​l​e​a​d​s​ ​w​i​t​h​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							longDesc: string
+						}
+						emails: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​l​e​a​d​s​ ​w​i​t​h​ ​t​h​i​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							longDesc: string
+						}
+						assignee_ids: {
+							/**
+							 * A​s​s​i​g​n​e​e​s
+							 */
+							displayName: string
+							/**
+							 * A​s​s​i​g​n​e​d​ ​u​s​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​l​e​a​d​s​ ​b​y​ ​a​s​s​i​g​n​e​d​ ​u​s​e​r​s
+							 */
+							longDesc: string
+						}
+						status_ids: {
+							/**
+							 * S​t​a​t​u​s​e​s
+							 */
+							displayName: string
+							/**
+							 * L​e​a​d​ ​s​t​a​t​u​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​l​e​a​d​s​ ​b​y​ ​s​t​a​t​u​s
+							 */
+							longDesc: string
+						}
+						customer_source_ids: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​S​o​u​r​c​e​s
+							 */
+							displayName: string
+							/**
+							 * L​e​a​d​ ​s​o​u​r​c​e​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​l​e​a​d​s​ ​b​y​ ​c​u​s​t​o​m​e​r​ ​s​o​u​r​c​e
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * C​i​t​y​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​l​e​a​d​s​ ​b​y​ ​c​i​t​y
+							 */
+							longDesc: string
+						}
+						state: {
+							/**
+							 * S​t​a​t​e
+							 */
+							displayName: string
+							/**
+							 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​l​e​a​d​s​ ​b​y​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+							 */
+							longDesc: string
+						}
+						postal_code: {
+							/**
+							 * P​o​s​t​a​l​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​l​e​a​d​s​ ​b​y​ ​p​o​s​t​a​l​ ​c​o​d​e
+							 */
+							longDesc: string
+						}
+						country: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * C​o​u​n​t​r​y​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​l​e​a​d​s​ ​b​y​ ​c​o​u​n​t​r​y
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​l​e​a​d​s​ ​t​h​a​t​ ​h​a​v​e​ ​a​n​y​ ​o​f​ ​t​h​e​s​e​ ​t​a​g​s
+							 */
+							longDesc: string
+						}
+						socials: {
+							/**
+							 * S​o​c​i​a​l​ ​M​e​d​i​a
+							 */
+							displayName: string
+							/**
+							 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​l​e​a​d​s​ ​b​y​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​s
+							 */
+							longDesc: string
+						}
+						followed: {
+							/**
+							 * F​o​l​l​o​w​e​d
+							 */
+							displayName: string
+							/**
+							 * F​o​l​l​o​w​i​n​g​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​l​e​a​d​s​ ​b​y​ ​w​h​e​t​h​e​r​ ​t​h​e​y​ ​a​r​e​ ​f​o​l​l​o​w​e​d​ ​o​r​ ​n​o​t
+							 */
+							longDesc: string
+						}
+						age: {
+							/**
+							 * A​g​e
+							 */
+							displayName: string
+							/**
+							 * L​e​a​d​ ​a​g​e​ ​i​n​ ​d​a​y​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​l​e​a​d​s​ ​b​y​ ​t​h​e​i​r​ ​a​g​e​ ​i​n​ ​d​a​y​s
+							 */
+							longDesc: string
+						}
+						minimum_monetary_value: {
+							/**
+							 * M​i​n​i​m​u​m​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​l​e​a​d​s​ ​w​i​t​h​ ​a​t​ ​l​e​a​s​t​ ​t​h​i​s​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						maximum_monetary_value: {
+							/**
+							 * M​a​x​i​m​u​m​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​l​e​a​d​s​ ​w​i​t​h​ ​n​o​ ​m​o​r​e​ ​t​h​a​n​ ​t​h​i​s​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						minimum_interaction_count: {
+							/**
+							 * M​i​n​i​m​u​m​ ​I​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​i​n​t​e​r​a​c​t​i​o​n​ ​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​l​e​a​d​s​ ​w​i​t​h​ ​a​t​ ​l​e​a​s​t​ ​t​h​i​s​ ​m​a​n​y​ ​i​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						maximum_interaction_count: {
+							/**
+							 * M​a​x​i​m​u​m​ ​I​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​i​n​t​e​r​a​c​t​i​o​n​ ​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​l​e​a​d​s​ ​w​i​t​h​ ​n​o​ ​m​o​r​e​ ​t​h​a​n​ ​t​h​i​s​ ​m​a​n​y​ ​i​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						include_converted_leads: {
+							/**
+							 * I​n​c​l​u​d​e​ ​C​o​n​v​e​r​t​e​d​ ​L​e​a​d​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​c​o​n​v​e​r​t​e​d​ ​l​e​a​d​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​l​e​a​d​s​ ​t​h​a​t​ ​h​a​v​e​ ​b​e​e​n​ ​c​o​n​v​e​r​t​e​d​ ​t​o​ ​o​p​p​o​r​t​u​n​i​t​i​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				search_opportunities: {
+					/**
+					 * S​e​a​r​c​h​ ​O​p​p​o​r​t​u​n​i​t​i​e​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​i​n​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​a​n​d​ ​f​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​i​n​ ​C​o​p​p​e​r​C​R​M​ ​u​s​i​n​g​ ​v​a​r​i​o​u​s​ ​c​r​i​t​e​r​i​a​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​p​i​p​e​l​i​n​e​,​ ​s​t​a​t​u​s​,​ ​v​a​l​u​e​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.​ ​R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​m​a​t​c​h​i​n​g​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						ids: {
+							/**
+							 * O​p​p​o​r​t​u​n​i​t​y​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​s​p​e​c​i​f​i​c​ ​o​p​p​o​r​t​u​n​i​t​y​ ​I​D​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+						page_number: {
+							/**
+							 * P​a​g​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * W​h​i​c​h​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​g​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * R​e​s​u​l​t​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							longDesc: string
+						}
+						sort_by: {
+							/**
+							 * S​o​r​t​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						sort_direction: {
+							/**
+							 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * O​p​p​o​r​t​u​n​i​t​y​ ​n​a​m​e​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​n​a​m​e​s​ ​m​a​t​c​h​i​n​g​ ​t​h​i​s​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						assignee_ids: {
+							/**
+							 * A​s​s​i​g​n​e​e​s
+							 */
+							displayName: string
+							/**
+							 * A​s​s​i​g​n​e​d​ ​u​s​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​b​y​ ​a​s​s​i​g​n​e​d​ ​u​s​e​r​s
+							 */
+							longDesc: string
+						}
+						company_ids: {
+							/**
+							 * C​o​m​p​a​n​i​e​s
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​c​o​m​p​a​n​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​b​y​ ​a​s​s​o​c​i​a​t​e​d​ ​c​o​m​p​a​n​i​e​s
+							 */
+							longDesc: string
+						}
+						customer_source_ids: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​S​o​u​r​c​e​s
+							 */
+							displayName: string
+							/**
+							 * O​p​p​o​r​t​u​n​i​t​y​ ​s​o​u​r​c​e​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​b​y​ ​c​u​s​t​o​m​e​r​ ​s​o​u​r​c​e
+							 */
+							longDesc: string
+						}
+						loss_reason_ids: {
+							/**
+							 * L​o​s​s​ ​R​e​a​s​o​n​s
+							 */
+							displayName: string
+							/**
+							 * R​e​a​s​o​n​s​ ​f​o​r​ ​l​o​s​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​b​y​ ​l​o​s​s​ ​r​e​a​s​o​n
+							 */
+							longDesc: string
+						}
+						pipeline_ids: {
+							/**
+							 * P​i​p​e​l​i​n​e​s
+							 */
+							displayName: string
+							/**
+							 * S​a​l​e​s​ ​p​i​p​e​l​i​n​e​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​b​y​ ​p​i​p​e​l​i​n​e
+							 */
+							longDesc: string
+						}
+						pipeline_stage_ids: {
+							/**
+							 * P​i​p​e​l​i​n​e​ ​S​t​a​g​e​s
+							 */
+							displayName: string
+							/**
+							 * C​u​r​r​e​n​t​ ​s​t​a​g​e​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​b​y​ ​p​i​p​e​l​i​n​e​ ​s​t​a​g​e
+							 */
+							longDesc: string
+						}
+						primary_contact_ids: {
+							/**
+							 * P​r​i​m​a​r​y​ ​C​o​n​t​a​c​t​s
+							 */
+							displayName: string
+							/**
+							 * M​a​i​n​ ​c​o​n​t​a​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​b​y​ ​p​r​i​m​a​r​y​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						priorities: {
+							/**
+							 * P​r​i​o​r​i​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * P​r​i​o​r​i​t​y​ ​l​e​v​e​l​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​b​y​ ​p​r​i​o​r​i​t​y​ ​l​e​v​e​l
+							 */
+							longDesc: string
+						}
+						statuses: {
+							/**
+							 * S​t​a​t​u​s​e​s
+							 */
+							displayName: string
+							/**
+							 * O​p​p​o​r​t​u​n​i​t​y​ ​s​t​a​t​u​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​b​y​ ​s​t​a​t​u​s​ ​(​O​p​e​n​,​ ​W​o​n​,​ ​L​o​s​t​,​ ​A​b​a​n​d​o​n​e​d​)
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​t​h​a​t​ ​h​a​v​e​ ​a​n​y​ ​o​f​ ​t​h​e​s​e​ ​t​a​g​s
+							 */
+							longDesc: string
+						}
+						followed: {
+							/**
+							 * F​o​l​l​o​w​e​d
+							 */
+							displayName: string
+							/**
+							 * F​o​l​l​o​w​i​n​g​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​b​y​ ​w​h​e​t​h​e​r​ ​t​h​e​y​ ​a​r​e​ ​f​o​l​l​o​w​e​d​ ​o​r​ ​n​o​t
+							 */
+							longDesc: string
+						}
+						minimum_monetary_value: {
+							/**
+							 * M​i​n​i​m​u​m​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​d​e​a​l​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​a​t​ ​l​e​a​s​t​ ​t​h​i​s​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						maximum_monetary_value: {
+							/**
+							 * M​a​x​i​m​u​m​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​d​e​a​l​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​n​o​ ​m​o​r​e​ ​t​h​a​n​ ​t​h​i​s​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						minimum_win_probability: {
+							/**
+							 * M​i​n​i​m​u​m​ ​W​i​n​ ​P​r​o​b​a​b​i​l​i​t​y
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​w​i​n​ ​c​h​a​n​c​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​a​t​ ​l​e​a​s​t​ ​t​h​i​s​ ​w​i​n​ ​p​r​o​b​a​b​i​l​i​t​y
+							 */
+							longDesc: string
+						}
+						maximum_win_probability: {
+							/**
+							 * M​a​x​i​m​u​m​ ​W​i​n​ ​P​r​o​b​a​b​i​l​i​t​y
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​w​i​n​ ​c​h​a​n​c​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​n​o​ ​m​o​r​e​ ​t​h​a​n​ ​t​h​i​s​ ​w​i​n​ ​p​r​o​b​a​b​i​l​i​t​y
+							 */
+							longDesc: string
+						}
+						minimum_interaction_count: {
+							/**
+							 * M​i​n​i​m​u​m​ ​I​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​i​n​t​e​r​a​c​t​i​o​n​ ​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​a​t​ ​l​e​a​s​t​ ​t​h​i​s​ ​m​a​n​y​ ​i​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						maximum_interaction_count: {
+							/**
+							 * M​a​x​i​m​u​m​ ​I​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​i​n​t​e​r​a​c​t​i​o​n​ ​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​n​o​ ​m​o​r​e​ ​t​h​a​n​ ​t​h​i​s​ ​m​a​n​y​ ​i​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						minimum_close_date: {
+							/**
+							 * C​l​o​s​e​ ​D​a​t​e​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * E​a​r​l​i​e​s​t​ ​c​l​o​s​e​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​c​l​o​s​e​ ​d​a​t​e​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						maximum_close_date: {
+							/**
+							 * C​l​o​s​e​ ​D​a​t​e​ ​B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * L​a​t​e​s​t​ ​c​l​o​s​e​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​c​l​o​s​e​ ​d​a​t​e​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						minimum_created_date: {
+							/**
+							 * C​r​e​a​t​e​d​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * E​a​r​l​i​e​s​t​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​c​r​e​a​t​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						maximum_created_date: {
+							/**
+							 * C​r​e​a​t​e​d​ ​B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * L​a​t​e​s​t​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​c​r​e​a​t​e​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						minimum_modified_date: {
+							/**
+							 * M​o​d​i​f​i​e​d​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * E​a​r​l​i​e​s​t​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​m​o​d​i​f​i​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						maximum_modified_date: {
+							/**
+							 * M​o​d​i​f​i​e​d​ ​B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * L​a​t​e​s​t​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​m​o​d​i​f​i​e​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						minimum_stage_change_date: {
+							/**
+							 * S​t​a​g​e​ ​C​h​a​n​g​e​d​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * E​a​r​l​i​e​s​t​ ​s​t​a​g​e​ ​c​h​a​n​g​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​s​t​a​g​e​ ​c​h​a​n​g​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						maximum_stage_change_date: {
+							/**
+							 * S​t​a​g​e​ ​C​h​a​n​g​e​d​ ​B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * L​a​t​e​s​t​ ​s​t​a​g​e​ ​c​h​a​n​g​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​s​t​a​g​e​ ​c​h​a​n​g​e​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				search_people: {
+					/**
+					 * S​e​a​r​c​h​ ​P​e​o​p​l​e
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​p​e​r​s​o​n​ ​c​o​n​t​a​c​t​s​ ​i​n​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​a​n​d​ ​f​i​l​t​e​r​ ​p​e​o​p​l​e​ ​i​n​ ​C​o​p​p​e​r​C​R​M​ ​u​s​i​n​g​ ​v​a​r​i​o​u​s​ ​c​r​i​t​e​r​i​a​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​p​h​o​n​e​,​ ​c​o​m​p​a​n​y​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.​ ​R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​m​a​t​c​h​i​n​g​ ​p​e​r​s​o​n​ ​c​o​n​t​a​c​t​s​.
+					 */
+					longDesc: string
+					options: {
+						ids: {
+							/**
+							 * P​e​r​s​o​n​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​p​e​o​p​l​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​s​p​e​c​i​f​i​c​ ​p​e​r​s​o​n​ ​I​D​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * P​e​r​s​o​n​ ​n​a​m​e​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​p​e​o​p​l​e​ ​w​i​t​h​ ​n​a​m​e​s​ ​m​a​t​c​h​i​n​g​ ​t​h​i​s​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * J​o​b​ ​t​i​t​l​e​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​p​e​o​p​l​e​ ​w​i​t​h​ ​t​h​i​s​ ​j​o​b​ ​t​i​t​l​e
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​p​e​o​p​l​e​ ​w​i​t​h​ ​t​h​i​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							longDesc: string
+						}
+						phone: {
+							/**
+							 * P​h​o​n​e
+							 */
+							displayName: string
+							/**
+							 * P​h​o​n​e​ ​n​u​m​b​e​r​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​p​e​o​p​l​e​ ​w​i​t​h​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * C​i​t​y​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​e​o​p​l​e​ ​b​y​ ​c​i​t​y
+							 */
+							longDesc: string
+						}
+						state: {
+							/**
+							 * S​t​a​t​e
+							 */
+							displayName: string
+							/**
+							 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​e​o​p​l​e​ ​b​y​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+							 */
+							longDesc: string
+						}
+						postal_code: {
+							/**
+							 * P​o​s​t​a​l​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​e​o​p​l​e​ ​b​y​ ​p​o​s​t​a​l​ ​c​o​d​e
+							 */
+							longDesc: string
+						}
+						country: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * C​o​u​n​t​r​y​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​e​o​p​l​e​ ​b​y​ ​c​o​u​n​t​r​y
+							 */
+							longDesc: string
+						}
+						assignee_ids: {
+							/**
+							 * A​s​s​i​g​n​e​e​s
+							 */
+							displayName: string
+							/**
+							 * A​s​s​i​g​n​e​d​ ​u​s​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​e​o​p​l​e​ ​b​y​ ​a​s​s​i​g​n​e​d​ ​u​s​e​r​s
+							 */
+							longDesc: string
+						}
+						contact_type_ids: {
+							/**
+							 * C​o​n​t​a​c​t​ ​T​y​p​e​s
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​ ​t​y​p​e​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​e​o​p​l​e​ ​b​y​ ​c​o​n​t​a​c​t​ ​t​y​p​e
+							 */
+							longDesc: string
+						}
+						company_ids: {
+							/**
+							 * C​o​m​p​a​n​i​e​s
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​c​o​m​p​a​n​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​e​o​p​l​e​ ​b​y​ ​a​s​s​o​c​i​a​t​e​d​ ​c​o​m​p​a​n​i​e​s
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​e​o​p​l​e​ ​t​h​a​t​ ​h​a​v​e​ ​a​n​y​ ​o​f​ ​t​h​e​s​e​ ​t​a​g​s
+							 */
+							longDesc: string
+						}
+						socials: {
+							/**
+							 * S​o​c​i​a​l​ ​M​e​d​i​a
+							 */
+							displayName: string
+							/**
+							 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​e​o​p​l​e​ ​b​y​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​s
+							 */
+							longDesc: string
+						}
+						minimum_interaction_count: {
+							/**
+							 * M​i​n​i​m​u​m​ ​I​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​i​n​t​e​r​a​c​t​i​o​n​ ​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​e​o​p​l​e​ ​w​i​t​h​ ​a​t​ ​l​e​a​s​t​ ​t​h​i​s​ ​m​a​n​y​ ​i​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						maximum_interaction_count: {
+							/**
+							 * M​a​x​i​m​u​m​ ​I​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​i​n​t​e​r​a​c​t​i​o​n​ ​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​e​o​p​l​e​ ​w​i​t​h​ ​n​o​ ​m​o​r​e​ ​t​h​a​n​ ​t​h​i​s​ ​m​a​n​y​ ​i​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						minimum_created_date: {
+							/**
+							 * C​r​e​a​t​e​d​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * E​a​r​l​i​e​s​t​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​e​o​p​l​e​ ​c​r​e​a​t​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						maximum_created_date: {
+							/**
+							 * C​r​e​a​t​e​d​ ​B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * L​a​t​e​s​t​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​e​o​p​l​e​ ​c​r​e​a​t​e​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						minimum_modified_date: {
+							/**
+							 * M​o​d​i​f​i​e​d​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * E​a​r​l​i​e​s​t​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​e​o​p​l​e​ ​m​o​d​i​f​i​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						maximum_modified_date: {
+							/**
+							 * M​o​d​i​f​i​e​d​ ​B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * L​a​t​e​s​t​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​p​e​o​p​l​e​ ​m​o​d​i​f​i​e​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						sort_by: {
+							/**
+							 * S​o​r​t​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y
+							 */
+							longDesc: string
+						}
+						sort_direction: {
+							/**
+							 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+							 */
+							longDesc: string
+						}
+						page_number: {
+							/**
+							 * P​a​g​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * W​h​i​c​h​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​g​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * R​e​s​u​l​t​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				search_tasks: {
+					/**
+					 * S​e​a​r​c​h​ ​T​a​s​k​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​t​a​s​k​s​ ​i​n​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​a​n​d​ ​f​i​l​t​e​r​ ​t​a​s​k​s​ ​i​n​ ​C​o​p​p​e​r​C​R​M​ ​u​s​i​n​g​ ​v​a​r​i​o​u​s​ ​c​r​i​t​e​r​i​a​ ​i​n​c​l​u​d​i​n​g​ ​a​s​s​i​g​n​e​e​,​ ​s​t​a​t​u​s​,​ ​p​r​i​o​r​i​t​y​,​ ​d​u​e​ ​d​a​t​e​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.​ ​R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​m​a​t​c​h​i​n​g​ ​t​a​s​k​s​.
+					 */
+					longDesc: string
+					options: {
+						ids: {
+							/**
+							 * T​a​s​k​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​t​a​s​k​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​ ​I​D​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+						page_number: {
+							/**
+							 * P​a​g​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * W​h​i​c​h​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​g​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * R​e​s​u​l​t​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							longDesc: string
+						}
+						sort_by: {
+							/**
+							 * S​o​r​t​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						sort_direction: {
+							/**
+							 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+							 */
+							longDesc: string
+						}
+						assignee_ids: {
+							/**
+							 * A​s​s​i​g​n​e​e​s
+							 */
+							displayName: string
+							/**
+							 * A​s​s​i​g​n​e​d​ ​u​s​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​b​y​ ​a​s​s​i​g​n​e​d​ ​u​s​e​r​s
+							 */
+							longDesc: string
+						}
+						statuses: {
+							/**
+							 * S​t​a​t​u​s​e​s
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​s​t​a​t​u​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​b​y​ ​s​t​a​t​u​s​ ​(​O​p​e​n​ ​o​r​ ​C​o​m​p​l​e​t​e​d​)
+							 */
+							longDesc: string
+						}
+						priorities: {
+							/**
+							 * P​r​i​o​r​i​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * P​r​i​o​r​i​t​y​ ​l​e​v​e​l​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​b​y​ ​p​r​i​o​r​i​t​y​ ​l​e​v​e​l
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​t​h​a​t​ ​h​a​v​e​ ​a​n​y​ ​o​f​ ​t​h​e​s​e​ ​t​a​g​s
+							 */
+							longDesc: string
+						}
+						followed: {
+							/**
+							 * F​o​l​l​o​w​e​d
+							 */
+							displayName: string
+							/**
+							 * F​o​l​l​o​w​i​n​g​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​b​y​ ​w​h​e​t​h​e​r​ ​t​h​e​y​ ​a​r​e​ ​f​o​l​l​o​w​e​d​ ​o​r​ ​n​o​t
+							 */
+							longDesc: string
+						}
+						minimum_due_date: {
+							/**
+							 * D​u​e​ ​D​a​t​e​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * E​a​r​l​i​e​s​t​ ​d​u​e​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​w​i​t​h​ ​d​u​e​ ​d​a​t​e​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						maximum_due_date: {
+							/**
+							 * D​u​e​ ​D​a​t​e​ ​B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * L​a​t​e​s​t​ ​d​u​e​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​w​i​t​h​ ​d​u​e​ ​d​a​t​e​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						minimum_reminder_date: {
+							/**
+							 * R​e​m​i​n​d​e​r​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * E​a​r​l​i​e​s​t​ ​r​e​m​i​n​d​e​r​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​w​i​t​h​ ​r​e​m​i​n​d​e​r​ ​d​a​t​e​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						maximum_reminder_date: {
+							/**
+							 * R​e​m​i​n​d​e​r​ ​B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * L​a​t​e​s​t​ ​r​e​m​i​n​d​e​r​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​w​i​t​h​ ​r​e​m​i​n​d​e​r​ ​d​a​t​e​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						minimum_completed_date: {
+							/**
+							 * C​o​m​p​l​e​t​e​d​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * E​a​r​l​i​e​s​t​ ​c​o​m​p​l​e​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​c​o​m​p​l​e​t​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						maximum_completed_date: {
+							/**
+							 * C​o​m​p​l​e​t​e​d​ ​B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * L​a​t​e​s​t​ ​c​o​m​p​l​e​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​c​o​m​p​l​e​t​e​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						minimum_created_date: {
+							/**
+							 * C​r​e​a​t​e​d​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * E​a​r​l​i​e​s​t​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​c​r​e​a​t​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						maximum_created_date: {
+							/**
+							 * C​r​e​a​t​e​d​ ​B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * L​a​t​e​s​t​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​c​r​e​a​t​e​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						minimum_modified_date: {
+							/**
+							 * M​o​d​i​f​i​e​d​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * E​a​r​l​i​e​s​t​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​m​o​d​i​f​i​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						maximum_modified_date: {
+							/**
+							 * M​o​d​i​f​i​e​d​ ​B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * L​a​t​e​s​t​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​m​o​d​i​f​i​e​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_company: {
+					/**
+					 * U​p​d​a​t​e​ ​C​o​m​p​a​n​y
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​m​p​a​n​y​ ​i​n​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​m​p​a​n​y​ ​r​e​c​o​r​d​ ​i​n​ ​C​o​p​p​e​r​C​R​M​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​a​d​d​r​e​s​s​,​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						company_id: {
+							/**
+							 * C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​y​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * C​o​m​p​a​n​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​o​m​p​a​n​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+						address: {
+							/**
+							 * A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​h​y​s​i​c​a​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									street: {
+										/**
+										 * S​t​r​e​e​t
+										 */
+										displayName: string
+										/**
+										 * S​t​r​e​e​t​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y
+										 */
+										longDesc: string
+									}
+									city: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * C​i​t​y​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​i​t​y​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​i​s​ ​l​o​c​a​t​e​d
+										 */
+										longDesc: string
+									}
+									state: {
+										/**
+										 * S​t​a​t​e
+										 */
+										displayName: string
+										/**
+										 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​i​s​ ​l​o​c​a​t​e​d
+										 */
+										longDesc: string
+									}
+									postal_code: {
+										/**
+										 * P​o​s​t​a​l​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​r​ ​Z​I​P​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​a​d​d​r​e​s​s
+										 */
+										longDesc: string
+									}
+									country: {
+										/**
+										 * C​o​u​n​t​r​y
+										 */
+										displayName: string
+										/**
+										 * C​o​u​n​t​r​y​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​i​s​ ​l​o​c​a​t​e​d
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						assignee_id: {
+							/**
+							 * A​s​s​i​g​n​e​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​a​s​s​i​g​n​e​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​C​o​p​p​e​r​C​R​M​ ​u​s​e​r​ ​t​o​ ​a​s​s​i​g​n​ ​t​o​ ​t​h​i​s​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+						contact_type_id: {
+							/**
+							 * C​o​n​t​a​c​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​o​n​t​a​c​t​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​y​p​e​ ​o​f​ ​c​o​n​t​a​c​t​ ​r​e​l​a​t​i​o​n​s​h​i​p
+							 */
+							longDesc: string
+						}
+						details: {
+							/**
+							 * D​e​t​a​i​l​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​n​o​t​e​s​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​o​r​ ​i​m​p​o​r​t​a​n​t​ ​d​e​t​a​i​l​s
+							 */
+							longDesc: string
+						}
+						email_domain: {
+							/**
+							 * E​m​a​i​l​ ​D​o​m​a​i​n
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​e​m​a​i​l​ ​d​o​m​a​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​r​i​m​a​r​y​ ​e​m​a​i​l​ ​d​o​m​a​i​n
+							 */
+							longDesc: string
+						}
+						phone_numbers: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											number: {
+												/**
+												 * P​h​o​n​e​ ​N​u​m​b​e​r
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​ ​a​n​y​ ​f​o​r​m​a​t
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * C​a​t​e​g​o​r​y
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						primary_contact_id: {
+							/**
+							 * P​r​i​m​a​r​y​ ​C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​r​i​m​a​r​y​ ​c​o​n​t​a​c​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​p​r​i​m​a​r​y​ ​c​o​n​t​a​c​t​ ​p​e​r​s​o​n​ ​f​o​r​ ​t​h​i​s​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+						socials: {
+							/**
+							 * S​o​c​i​a​l​ ​M​e​d​i​a
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​s​o​c​i​a​l​ ​p​r​o​f​i​l​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​s
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * U​R​L
+												 */
+												displayName: string
+												/**
+												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​ ​U​R​L
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​t​o​ ​t​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * P​l​a​t​f​o​r​m
+												 */
+												displayName: string
+												/**
+												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​a​g​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​o​r​g​a​n​i​z​e​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+						websites: {
+							/**
+							 * W​e​b​s​i​t​e​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​w​e​b​s​i​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​w​e​b​s​i​t​e​s
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * U​R​L
+												 */
+												displayName: string
+												/**
+												 * W​e​b​s​i​t​e​ ​U​R​L
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​o​f​ ​t​h​e​ ​w​e​b​s​i​t​e
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * C​a​t​e​g​o​r​y
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​w​e​b​s​i​t​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​i​s​ ​w​e​b​s​i​t​e
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						custom_fields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_lead: {
+					/**
+					 * U​p​d​a​t​e​ ​L​e​a​d
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​l​e​a​d​ ​i​n​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​l​e​a​d​ ​r​e​c​o​r​d​ ​i​n​ ​C​o​p​p​e​r​C​R​M​ ​i​n​c​l​u​d​i​n​g​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						lead_id: {
+							/**
+							 * L​e​a​d
+							 */
+							displayName: string
+							/**
+							 * L​e​a​d​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​l​e​a​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						first_name: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​f​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​l​e​a​d
+							 */
+							longDesc: string
+						}
+						last_name: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​l​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​l​e​a​d
+							 */
+							longDesc: string
+						}
+						middle_name: {
+							/**
+							 * M​i​d​d​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​m​i​d​d​l​e​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​m​i​d​d​l​e​ ​n​a​m​e​ ​o​r​ ​i​n​i​t​i​a​l
+							 */
+							longDesc: string
+						}
+						suffix: {
+							/**
+							 * S​u​f​f​i​x
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​s​u​f​f​i​x
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​n​a​m​e​ ​s​u​f​f​i​x
+							 */
+							longDesc: string
+						}
+						assignee_id: {
+							/**
+							 * A​s​s​i​g​n​e​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​a​s​s​i​g​n​e​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​C​o​p​p​e​r​C​R​M​ ​u​s​e​r​ ​t​o​ ​a​s​s​i​g​n​ ​t​o​ ​t​h​i​s​ ​l​e​a​d
+							 */
+							longDesc: string
+						}
+						company_name: {
+							/**
+							 * C​o​m​p​a​n​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​o​m​p​a​n​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​c​o​m​p​a​n​y​ ​n​a​m​e​ ​w​h​e​r​e​ ​t​h​e​ ​l​e​a​d​ ​w​o​r​k​s
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​a​g​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​o​r​g​a​n​i​z​e​ ​t​h​e​ ​l​e​a​d
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​j​o​b​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​j​o​b​ ​t​i​t​l​e​ ​o​r​ ​p​o​s​i​t​i​o​n
+							 */
+							longDesc: string
+						}
+						details: {
+							/**
+							 * D​e​t​a​i​l​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​n​o​t​e​s​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​o​r​ ​i​m​p​o​r​t​a​n​t​ ​d​e​t​a​i​l​s
+							 */
+							longDesc: string
+						}
+						websites: {
+							/**
+							 * W​e​b​s​i​t​e​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​w​e​b​s​i​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​a​s​s​o​c​i​a​t​e​d​ ​w​e​b​s​i​t​e​s
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * U​R​L
+												 */
+												displayName: string
+												/**
+												 * W​e​b​s​i​t​e​ ​U​R​L
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​o​f​ ​t​h​e​ ​w​e​b​s​i​t​e
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * C​a​t​e​g​o​r​y
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​w​e​b​s​i​t​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​i​s​ ​w​e​b​s​i​t​e
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						socials: {
+							/**
+							 * S​o​c​i​a​l​ ​M​e​d​i​a
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​s​o​c​i​a​l​ ​p​r​o​f​i​l​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​s
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * U​R​L
+												 */
+												displayName: string
+												/**
+												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​ ​U​R​L
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​t​o​ ​t​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * P​l​a​t​f​o​r​m
+												 */
+												displayName: string
+												/**
+												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​e​m​a​i​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									email: {
+										/**
+										 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​l​e​a​d
+										 */
+										longDesc: string
+									}
+									category: {
+										/**
+										 * C​a​t​e​g​o​r​y
+										 */
+										displayName: string
+										/**
+										 * T​y​p​e​ ​o​f​ ​e​m​a​i​l
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​e​m​a​i​l
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						phone_numbers: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											number: {
+												/**
+												 * P​h​o​n​e​ ​N​u​m​b​e​r
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​ ​a​n​y​ ​f​o​r​m​a​t
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * C​a​t​e​g​o​r​y
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						address: {
+							/**
+							 * A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​h​y​s​i​c​a​l​ ​a​d​d​r​e​s​s
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									street: {
+										/**
+										 * S​t​r​e​e​t
+										 */
+										displayName: string
+										/**
+										 * S​t​r​e​e​t​ ​a​d​d​r​e​s​s
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s
+										 */
+										longDesc: string
+									}
+									city: {
+										/**
+										 * C​i​t​y
+										 */
+										displayName: string
+										/**
+										 * C​i​t​y​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​i​t​y
+										 */
+										longDesc: string
+									}
+									state: {
+										/**
+										 * S​t​a​t​e
+										 */
+										displayName: string
+										/**
+										 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+										 */
+										longDesc: string
+									}
+									postal_code: {
+										/**
+										 * P​o​s​t​a​l​ ​C​o​d​e
+										 */
+										displayName: string
+										/**
+										 * Z​I​P​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​r​ ​Z​I​P​ ​c​o​d​e
+										 */
+										longDesc: string
+									}
+									country: {
+										/**
+										 * C​o​u​n​t​r​y
+										 */
+										displayName: string
+										/**
+										 * C​o​u​n​t​r​y​ ​n​a​m​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​c​o​u​n​t​r​y
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						customer_source_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​S​o​u​r​c​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​s​o​u​r​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​o​u​r​c​e​ ​o​r​ ​c​h​a​n​n​e​l
+							 */
+							longDesc: string
+						}
+						custom_fields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_opportunity: {
+					/**
+					 * U​p​d​a​t​e​ ​O​p​p​o​r​t​u​n​i​t​y
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​p​p​o​r​t​u​n​i​t​y​ ​i​n​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​s​a​l​e​s​ ​o​p​p​o​r​t​u​n​i​t​y​ ​i​n​ ​C​o​p​p​e​r​C​R​M​ ​i​n​c​l​u​d​i​n​g​ ​v​a​l​u​e​,​ ​s​t​a​g​e​,​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						opportunity_id: {
+							/**
+							 * O​p​p​o​r​t​u​n​i​t​y
+							 */
+							displayName: string
+							/**
+							 * O​p​p​o​r​t​u​n​i​t​y​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​o​p​p​o​r​t​u​n​i​t​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * O​p​p​o​r​t​u​n​i​t​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​o​p​p​o​r​t​u​n​i​t​y
+							 */
+							longDesc: string
+						}
+						primary_contact_id: {
+							/**
+							 * P​r​i​m​a​r​y​ ​C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​r​i​m​a​r​y​ ​c​o​n​t​a​c​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​r​i​m​a​r​y​ ​c​o​n​t​a​c​t​ ​p​e​r​s​o​n
+							 */
+							longDesc: string
+						}
+						assignee_id: {
+							/**
+							 * A​s​s​i​g​n​e​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​a​s​s​i​g​n​e​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​C​o​p​p​e​r​C​R​M​ ​u​s​e​r​ ​t​o​ ​a​s​s​i​g​n​ ​t​o​ ​t​h​i​s​ ​o​p​p​o​r​t​u​n​i​t​y
+							 */
+							longDesc: string
+						}
+						close_date: {
+							/**
+							 * C​l​o​s​e​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​l​o​s​e​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​e​x​p​e​c​t​e​d​ ​c​l​o​s​e​ ​d​a​t​e
+							 */
+							longDesc: string
+						}
+						company_id: {
+							/**
+							 * C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​a​s​s​o​c​i​a​t​e​d​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+						customer_source_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​S​o​u​r​c​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​s​o​u​r​c​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​o​u​r​c​e​ ​o​r​ ​c​h​a​n​n​e​l
+							 */
+							longDesc: string
+						}
+						details: {
+							/**
+							 * D​e​t​a​i​l​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​n​o​t​e​s​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​o​r​ ​i​m​p​o​r​t​a​n​t​ ​d​e​t​a​i​l​s
+							 */
+							longDesc: string
+						}
+						loss_reason_id: {
+							/**
+							 * L​o​s​s​ ​R​e​a​s​o​n
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​l​o​s​s​ ​r​e​a​s​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​r​e​a​s​o​n​ ​f​o​r​ ​l​o​s​i​n​g
+							 */
+							longDesc: string
+						}
+						monetary_value: {
+							/**
+							 * M​o​n​e​t​a​r​y​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						pipeline_id: {
+							/**
+							 * P​i​p​e​l​i​n​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​i​p​e​l​i​n​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​a​l​e​s​ ​p​i​p​e​l​i​n​e
+							 */
+							longDesc: string
+						}
+						pipeline_stage_id: {
+							/**
+							 * P​i​p​e​l​i​n​e​ ​S​t​a​g​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​s​t​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​c​u​r​r​e​n​t​ ​s​t​a​g​e
+							 */
+							longDesc: string
+						}
+						priority: {
+							/**
+							 * P​r​i​o​r​i​t​y
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​r​i​o​r​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​r​i​o​r​i​t​y​ ​l​e​v​e​l
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​o​p​p​o​r​t​u​n​i​t​y​ ​s​t​a​t​u​s
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​a​g​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​o​r​g​a​n​i​z​e​ ​t​h​e​ ​o​p​p​o​r​t​u​n​i​t​y
+							 */
+							longDesc: string
+						}
+						win_probability: {
+							/**
+							 * W​i​n​ ​P​r​o​b​a​b​i​l​i​t​y
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​w​i​n​ ​p​r​o​b​a​b​i​l​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​e​s​t​i​m​a​t​e​d​ ​p​r​o​b​a​b​i​l​i​t​y​ ​o​f​ ​w​i​n​n​i​n​g
+							 */
+							longDesc: string
+						}
+						custom_fields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_person: {
+					/**
+					 * U​p​d​a​t​e​ ​P​e​r​s​o​n
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​e​r​s​o​n​ ​c​o​n​t​a​c​t​ ​i​n​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​e​r​s​o​n​ ​c​o​n​t​a​c​t​ ​i​n​ ​C​o​p​p​e​r​C​R​M​ ​i​n​c​l​u​d​i​n​g​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​c​o​m​p​a​n​y​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						person_id: {
+							/**
+							 * P​e​r​s​o​n
+							 */
+							displayName: string
+							/**
+							 * P​e​r​s​o​n​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​p​e​r​s​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​f​u​l​l​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​f​u​l​l​ ​n​a​m​e
+							 */
+							longDesc: string
+						}
+						prefix: {
+							/**
+							 * P​r​e​f​i​x
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​r​e​f​i​x
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​n​a​m​e​ ​p​r​e​f​i​x
+							 */
+							longDesc: string
+						}
+						first_name: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​f​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​f​i​r​s​t​ ​n​a​m​e
+							 */
+							longDesc: string
+						}
+						middle_name: {
+							/**
+							 * M​i​d​d​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​m​i​d​d​l​e​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​m​i​d​d​l​e​ ​n​a​m​e​ ​o​r​ ​i​n​i​t​i​a​l
+							 */
+							longDesc: string
+						}
+						last_name: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​l​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​l​a​s​t​ ​n​a​m​e
+							 */
+							longDesc: string
+						}
+						suffix: {
+							/**
+							 * S​u​f​f​i​x
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​s​u​f​f​i​x
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​n​a​m​e​ ​s​u​f​f​i​x
+							 */
+							longDesc: string
+						}
+						street: {
+							/**
+							 * S​t​r​e​e​t
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​s​t​r​e​e​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​c​i​t​y
+							 */
+							longDesc: string
+						}
+						state: {
+							/**
+							 * S​t​a​t​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​s​t​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+							 */
+							longDesc: string
+						}
+						postal_code: {
+							/**
+							 * P​o​s​t​a​l​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​o​s​t​a​l​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​o​r​ ​Z​I​P​ ​c​o​d​e
+							 */
+							longDesc: string
+						}
+						country: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​o​u​n​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​c​o​u​n​t​r​y
+							 */
+							longDesc: string
+						}
+						assignee_id: {
+							/**
+							 * A​s​s​i​g​n​e​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​a​s​s​i​g​n​e​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​C​o​p​p​e​r​C​R​M​ ​u​s​e​r​ ​t​o​ ​a​s​s​i​g​n​ ​t​o​ ​t​h​i​s​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						company_id: {
+							/**
+							 * C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​c​o​m​p​a​n​y​ ​w​h​e​r​e​ ​t​h​i​s​ ​p​e​r​s​o​n​ ​w​o​r​k​s
+							 */
+							longDesc: string
+						}
+						contact_type_id: {
+							/**
+							 * C​o​n​t​a​c​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​o​n​t​a​c​t​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​y​p​e​ ​o​f​ ​c​o​n​t​a​c​t​ ​r​e​l​a​t​i​o​n​s​h​i​p
+							 */
+							longDesc: string
+						}
+						details: {
+							/**
+							 * D​e​t​a​i​l​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​n​o​t​e​s​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​o​r​ ​i​m​p​o​r​t​a​n​t​ ​d​e​t​a​i​l​s
+							 */
+							longDesc: string
+						}
+						emails: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s​e​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​e​m​a​i​l​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											email: {
+												/**
+												 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+												 */
+												shortDesc: string
+												/**
+												 * E​m​a​i​l​ ​a​d​d​r​e​s​s
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * C​a​t​e​g​o​r​y
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​e​m​a​i​l
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​e​m​a​i​l
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						phone_numbers: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											number: {
+												/**
+												 * P​h​o​n​e​ ​N​u​m​b​e​r
+												 */
+												displayName: string
+												/**
+												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+												 */
+												shortDesc: string
+												/**
+												 * P​h​o​n​e​ ​n​u​m​b​e​r
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * C​a​t​e​g​o​r​y
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						socials: {
+							/**
+							 * S​o​c​i​a​l​ ​M​e​d​i​a
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​s​o​c​i​a​l​ ​p​r​o​f​i​l​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​s
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * U​R​L
+												 */
+												displayName: string
+												/**
+												 * S​o​c​i​a​l​ ​p​r​o​f​i​l​e​ ​U​R​L
+												 */
+												shortDesc: string
+												/**
+												 * S​o​c​i​a​l​ ​p​r​o​f​i​l​e​ ​U​R​L
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * P​l​a​t​f​o​r​m
+												 */
+												displayName: string
+												/**
+												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
+												 */
+												shortDesc: string
+												/**
+												 * S​o​c​i​a​l​ ​p​l​a​t​f​o​r​m
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​a​g​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​o​r​g​a​n​i​z​e​ ​t​h​e​ ​p​e​r​s​o​n
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​j​o​b​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​j​o​b​ ​t​i​t​l​e​ ​o​r​ ​p​o​s​i​t​i​o​n
+							 */
+							longDesc: string
+						}
+						websites: {
+							/**
+							 * W​e​b​s​i​t​e​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​w​e​b​s​i​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​a​s​s​o​c​i​a​t​e​d​ ​w​e​b​s​i​t​e​s
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * U​R​L
+												 */
+												displayName: string
+												/**
+												 * W​e​b​s​i​t​e​ ​U​R​L
+												 */
+												shortDesc: string
+												/**
+												 * W​e​b​s​i​t​e​ ​U​R​L
+												 */
+												longDesc: string
+											}
+											category: {
+												/**
+												 * C​a​t​e​g​o​r​y
+												 */
+												displayName: string
+												/**
+												 * T​y​p​e​ ​o​f​ ​w​e​b​s​i​t​e
+												 */
+												shortDesc: string
+												/**
+												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​i​s​ ​w​e​b​s​i​t​e
+												 */
+												longDesc: string
+											}
+										}
+									}
+								}
+							}
+						}
+						custom_fields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_task: {
+					/**
+					 * U​p​d​a​t​e​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​a​s​k​ ​i​n​ ​C​o​p​p​e​r​C​R​M
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​a​s​k​ ​i​n​ ​C​o​p​p​e​r​C​R​M​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​d​u​e​ ​d​a​t​e​s​,​ ​s​t​a​t​u​s​,​ ​p​r​i​o​r​i​t​y​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						task_id: {
+							/**
+							 * T​a​s​k
+							 */
+							displayName: string
+							/**
+							 * T​a​s​k​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​s​k​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * T​a​s​k​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						related_resource: {
+							/**
+							 * R​e​l​a​t​e​d​ ​R​e​s​o​u​r​c​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​r​e​l​a​t​e​d​ ​r​e​c​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​C​R​M​ ​r​e​c​o​r​d​ ​t​h​i​s​ ​t​a​s​k​ ​i​s​ ​r​e​l​a​t​e​d​ ​t​o
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									id: {
+										/**
+										 * R​e​s​o​u​r​c​e​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * I​D​ ​o​f​ ​t​h​e​ ​r​e​l​a​t​e​d​ ​r​e​c​o​r​d
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​l​a​t​e​d​ ​C​R​M​ ​r​e​c​o​r​d
+										 */
+										longDesc: string
+									}
+									type: {
+										/**
+										 * R​e​s​o​u​r​c​e​ ​T​y​p​e
+										 */
+										displayName: string
+										/**
+										 * T​y​p​e​ ​o​f​ ​r​e​l​a​t​e​d​ ​r​e​c​o​r​d
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​t​y​p​e​ ​o​f​ ​C​R​M​ ​r​e​c​o​r​d​ ​t​h​i​s​ ​t​a​s​k​ ​i​s​ ​r​e​l​a​t​e​d​ ​t​o
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						assignee_id: {
+							/**
+							 * A​s​s​i​g​n​e​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​a​s​s​i​g​n​e​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​C​o​p​p​e​r​C​R​M​ ​u​s​e​r​ ​t​o​ ​a​s​s​i​g​n​ ​t​o​ ​t​h​i​s​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						due_date: {
+							/**
+							 * D​u​e​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​d​u​e​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​i​s​ ​t​a​s​k​ ​s​h​o​u​l​d​ ​b​e​ ​c​o​m​p​l​e​t​e​d
+							 */
+							longDesc: string
+						}
+						reminder_date: {
+							/**
+							 * R​e​m​i​n​d​e​r​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​r​e​m​i​n​d​e​r​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​d​a​t​e​ ​w​h​e​n​ ​a​ ​r​e​m​i​n​d​e​r​ ​s​h​o​u​l​d​ ​b​e​ ​s​e​n​t
+							 */
+							longDesc: string
+						}
+						priority: {
+							/**
+							 * P​r​i​o​r​i​t​y
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​r​i​o​r​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​r​i​o​r​i​t​y​ ​l​e​v​e​l
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​a​s​k​ ​s​t​a​t​u​s
+							 */
+							longDesc: string
+						}
+						details: {
+							/**
+							 * D​e​t​a​i​l​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​d​e​t​a​i​l​s​ ​o​r​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​w​h​a​t​ ​n​e​e​d​s​ ​t​o​ ​b​e​ ​d​o​n​e
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​a​g​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​o​r​g​a​n​i​z​e​ ​t​h​e​ ​t​a​s​k
+							 */
+							longDesc: string
+						}
+						custom_fields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_company: {
+					/**
+					 * N​e​w​ ​C​o​m​p​a​n​y
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​p​a​n​y​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​p​a​n​y​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​C​o​p​p​e​r​C​R​M​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​w​h​i​c​h​ ​c​o​m​p​a​n​i​e​s​ ​t​r​i​g​g​e​r​ ​t​h​i​s​ ​e​v​e​n​t​ ​u​s​i​n​g​ ​v​a​r​i​o​u​s​ ​c​r​i​t​e​r​i​a​ ​l​i​k​e​ ​a​s​s​i​g​n​e​e​,​ ​l​o​c​a​t​i​o​n​,​ ​t​a​g​s​,​ ​a​n​d​ ​m​o​r​e​.
+					 */
+					longDesc: string
+					options: {
+						ids: {
+							/**
+							 * C​o​m​p​a​n​y​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​c​o​m​p​a​n​i​e​s​ ​t​o​ ​w​a​t​c​h
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​h​e​s​e​ ​s​p​e​c​i​f​i​c​ ​c​o​m​p​a​n​y​ ​I​D​s
+							 */
+							longDesc: string
+						}
+						page_number: {
+							/**
+							 * P​a​g​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * W​h​i​c​h​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​g​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * R​e​s​u​l​t​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							longDesc: string
+						}
+						sort_by: {
+							/**
+							 * S​o​r​t​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						sort_direction: {
+							/**
+							 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * C​o​m​p​a​n​y​ ​n​a​m​e​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​p​a​n​i​e​s​ ​w​i​t​h​ ​n​a​m​e​s​ ​m​a​t​c​h​i​n​g​ ​t​h​i​s​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						assignee_ids: {
+							/**
+							 * A​s​s​i​g​n​e​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​s​s​i​g​n​e​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​p​a​n​i​e​s​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​s​e​ ​u​s​e​r​s
+							 */
+							longDesc: string
+						}
+						contact_type_ids: {
+							/**
+							 * C​o​n​t​a​c​t​ ​T​y​p​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​n​t​a​c​t​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​p​a​n​i​e​s​ ​w​i​t​h​ ​t​h​e​s​e​ ​c​o​n​t​a​c​t​ ​t​y​p​e​s
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * C​i​t​y​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​p​a​n​i​e​s​ ​i​n​ ​t​h​i​s​ ​c​i​t​y
+							 */
+							longDesc: string
+						}
+						state: {
+							/**
+							 * S​t​a​t​e
+							 */
+							displayName: string
+							/**
+							 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​p​a​n​i​e​s​ ​i​n​ ​t​h​i​s​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+							 */
+							longDesc: string
+						}
+						postal_code: {
+							/**
+							 * P​o​s​t​a​l​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * P​o​s​t​a​l​ ​c​o​d​e​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​p​a​n​i​e​s​ ​w​i​t​h​ ​t​h​i​s​ ​p​o​s​t​a​l​ ​c​o​d​e
+							 */
+							longDesc: string
+						}
+						country: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * C​o​u​n​t​r​y​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​p​a​n​i​e​s​ ​i​n​ ​t​h​i​s​ ​c​o​u​n​t​r​y
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​p​a​n​i​e​s​ ​t​h​a​t​ ​h​a​v​e​ ​a​n​y​ ​o​f​ ​t​h​e​s​e​ ​t​a​g​s
+							 */
+							longDesc: string
+						}
+						socials: {
+							/**
+							 * S​o​c​i​a​l​ ​M​e​d​i​a
+							 */
+							displayName: string
+							/**
+							 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​p​a​n​i​e​s​ ​w​i​t​h​ ​m​a​t​c​h​i​n​g​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​s
+							 */
+							longDesc: string
+						}
+						followed: {
+							/**
+							 * F​o​l​l​o​w​e​d
+							 */
+							displayName: string
+							/**
+							 * F​o​l​l​o​w​i​n​g​ ​s​t​a​t​u​s​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​p​a​n​i​e​s​ ​t​h​a​t​ ​a​r​e​ ​f​o​l​l​o​w​e​d​ ​o​r​ ​n​o​t​ ​f​o​l​l​o​w​e​d
+							 */
+							longDesc: string
+						}
+						minimum_interaction_count: {
+							/**
+							 * M​i​n​i​m​u​m​ ​I​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​i​n​t​e​r​a​c​t​i​o​n​ ​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​p​a​n​i​e​s​ ​w​i​t​h​ ​a​t​ ​l​e​a​s​t​ ​t​h​i​s​ ​m​a​n​y​ ​i​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						maximum_interaction_count: {
+							/**
+							 * M​a​x​i​m​u​m​ ​I​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​i​n​t​e​r​a​c​t​i​o​n​ ​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​p​a​n​i​e​s​ ​w​i​t​h​ ​n​o​ ​m​o​r​e​ ​t​h​a​n​ ​t​h​i​s​ ​m​a​n​y​ ​i​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						minimum_inactive_days: {
+							/**
+							 * M​i​n​i​m​u​m​ ​I​n​a​c​t​i​v​e​ ​D​a​y​s
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​d​a​y​s​ ​i​n​a​c​t​i​v​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​p​a​n​i​e​s​ ​i​n​a​c​t​i​v​e​ ​f​o​r​ ​a​t​ ​l​e​a​s​t​ ​t​h​i​s​ ​m​a​n​y​ ​d​a​y​s
+							 */
+							longDesc: string
+						}
+						maximum_inactive_days: {
+							/**
+							 * M​a​x​i​m​u​m​ ​I​n​a​c​t​i​v​e​ ​D​a​y​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​d​a​y​s​ ​i​n​a​c​t​i​v​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​m​p​a​n​i​e​s​ ​i​n​a​c​t​i​v​e​ ​f​o​r​ ​n​o​ ​m​o​r​e​ ​t​h​a​n​ ​t​h​i​s​ ​m​a​n​y​ ​d​a​y​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_lead: {
+					/**
+					 * N​e​w​ ​L​e​a​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​l​e​a​d​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​l​e​a​d​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​C​o​p​p​e​r​C​R​M​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​w​h​i​c​h​ ​l​e​a​d​s​ ​t​r​i​g​g​e​r​ ​t​h​i​s​ ​e​v​e​n​t​ ​u​s​i​n​g​ ​v​a​r​i​o​u​s​ ​c​r​i​t​e​r​i​a​ ​l​i​k​e​ ​a​s​s​i​g​n​e​e​,​ ​s​t​a​t​u​s​,​ ​l​o​c​a​t​i​o​n​,​ ​a​n​d​ ​m​o​r​e​.
+					 */
+					longDesc: string
+					options: {
+						ids: {
+							/**
+							 * L​e​a​d​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​l​e​a​d​s​ ​t​o​ ​w​a​t​c​h
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​h​e​s​e​ ​s​p​e​c​i​f​i​c​ ​l​e​a​d​ ​I​D​s
+							 */
+							longDesc: string
+						}
+						page_number: {
+							/**
+							 * P​a​g​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * W​h​i​c​h​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​g​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * R​e​s​u​l​t​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							longDesc: string
+						}
+						sort_by: {
+							/**
+							 * S​o​r​t​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						sort_direction: {
+							/**
+							 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * L​e​a​d​ ​n​a​m​e​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​w​i​t​h​ ​n​a​m​e​s​ ​m​a​t​c​h​i​n​g​ ​t​h​i​s​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						phone_number: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * P​h​o​n​e​ ​n​u​m​b​e​r​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​w​i​t​h​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							longDesc: string
+						}
+						emails: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​w​i​t​h​ ​t​h​i​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							longDesc: string
+						}
+						assignee_ids: {
+							/**
+							 * A​s​s​i​g​n​e​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​s​s​i​g​n​e​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​s​e​ ​u​s​e​r​s
+							 */
+							longDesc: string
+						}
+						status_ids: {
+							/**
+							 * S​t​a​t​u​s​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​w​i​t​h​ ​t​h​e​s​e​ ​s​t​a​t​u​s​e​s
+							 */
+							longDesc: string
+						}
+						customer_source_ids: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​S​o​u​r​c​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​o​u​r​c​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​f​r​o​m​ ​t​h​e​s​e​ ​c​u​s​t​o​m​e​r​ ​s​o​u​r​c​e​s
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * C​i​t​y​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​i​n​ ​t​h​i​s​ ​c​i​t​y
+							 */
+							longDesc: string
+						}
+						state: {
+							/**
+							 * S​t​a​t​e
+							 */
+							displayName: string
+							/**
+							 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​i​n​ ​t​h​i​s​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+							 */
+							longDesc: string
+						}
+						postal_code: {
+							/**
+							 * P​o​s​t​a​l​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * P​o​s​t​a​l​ ​c​o​d​e​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​w​i​t​h​ ​t​h​i​s​ ​p​o​s​t​a​l​ ​c​o​d​e
+							 */
+							longDesc: string
+						}
+						country: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * C​o​u​n​t​r​y​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​i​n​ ​t​h​i​s​ ​c​o​u​n​t​r​y
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​t​h​a​t​ ​h​a​v​e​ ​a​n​y​ ​o​f​ ​t​h​e​s​e​ ​t​a​g​s
+							 */
+							longDesc: string
+						}
+						socials: {
+							/**
+							 * S​o​c​i​a​l​ ​M​e​d​i​a
+							 */
+							displayName: string
+							/**
+							 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​w​i​t​h​ ​m​a​t​c​h​i​n​g​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​s
+							 */
+							longDesc: string
+						}
+						followed: {
+							/**
+							 * F​o​l​l​o​w​e​d
+							 */
+							displayName: string
+							/**
+							 * F​o​l​l​o​w​i​n​g​ ​s​t​a​t​u​s​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​t​h​a​t​ ​a​r​e​ ​f​o​l​l​o​w​e​d​ ​o​r​ ​n​o​t​ ​f​o​l​l​o​w​e​d
+							 */
+							longDesc: string
+						}
+						age: {
+							/**
+							 * A​g​e
+							 */
+							displayName: string
+							/**
+							 * L​e​a​d​ ​a​g​e​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​o​f​ ​t​h​i​s​ ​a​g​e​ ​i​n​ ​d​a​y​s
+							 */
+							longDesc: string
+						}
+						minimum_monetary_value: {
+							/**
+							 * M​i​n​i​m​u​m​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​w​i​t​h​ ​a​t​ ​l​e​a​s​t​ ​t​h​i​s​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						maximum_monetary_value: {
+							/**
+							 * M​a​x​i​m​u​m​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​w​i​t​h​ ​n​o​ ​m​o​r​e​ ​t​h​a​n​ ​t​h​i​s​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						minimum_interaction_count: {
+							/**
+							 * M​i​n​i​m​u​m​ ​I​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​i​n​t​e​r​a​c​t​i​o​n​ ​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​w​i​t​h​ ​a​t​ ​l​e​a​s​t​ ​t​h​i​s​ ​m​a​n​y​ ​i​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						maximum_interaction_count: {
+							/**
+							 * M​a​x​i​m​u​m​ ​I​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​i​n​t​e​r​a​c​t​i​o​n​ ​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​w​i​t​h​ ​n​o​ ​m​o​r​e​ ​t​h​a​n​ ​t​h​i​s​ ​m​a​n​y​ ​i​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						include_converted_leads: {
+							/**
+							 * I​n​c​l​u​d​e​ ​C​o​n​v​e​r​t​e​d​ ​L​e​a​d​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​c​o​n​v​e​r​t​e​d​ ​l​e​a​d​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​s​ ​t​h​a​t​ ​h​a​v​e​ ​b​e​e​n​ ​c​o​n​v​e​r​t​e​d​ ​t​o​ ​o​p​p​o​r​t​u​n​i​t​i​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_opportunity: {
+					/**
+					 * N​e​w​ ​O​p​p​o​r​t​u​n​i​t​y
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​p​p​o​r​t​u​n​i​t​y​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​p​p​o​r​t​u​n​i​t​y​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​C​o​p​p​e​r​C​R​M​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​w​h​i​c​h​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​t​r​i​g​g​e​r​ ​t​h​i​s​ ​e​v​e​n​t​ ​u​s​i​n​g​ ​v​a​r​i​o​u​s​ ​c​r​i​t​e​r​i​a​ ​l​i​k​e​ ​p​i​p​e​l​i​n​e​,​ ​s​t​a​g​e​,​ ​s​t​a​t​u​s​,​ ​v​a​l​u​e​,​ ​a​n​d​ ​m​o​r​e​.
+					 */
+					longDesc: string
+					options: {
+						ids: {
+							/**
+							 * O​p​p​o​r​t​u​n​i​t​y​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​t​o​ ​w​a​t​c​h
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​h​e​s​e​ ​s​p​e​c​i​f​i​c​ ​o​p​p​o​r​t​u​n​i​t​y​ ​I​D​s
+							 */
+							longDesc: string
+						}
+						page_number: {
+							/**
+							 * P​a​g​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * W​h​i​c​h​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​g​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * R​e​s​u​l​t​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							longDesc: string
+						}
+						sort_by: {
+							/**
+							 * S​o​r​t​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						sort_direction: {
+							/**
+							 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * O​p​p​o​r​t​u​n​i​t​y​ ​n​a​m​e​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​n​a​m​e​s​ ​m​a​t​c​h​i​n​g​ ​t​h​i​s​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						assignee_ids: {
+							/**
+							 * A​s​s​i​g​n​e​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​s​s​i​g​n​e​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​s​e​ ​u​s​e​r​s
+							 */
+							longDesc: string
+						}
+						company_ids: {
+							/**
+							 * C​o​m​p​a​n​i​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​s​e​ ​c​o​m​p​a​n​i​e​s
+							 */
+							longDesc: string
+						}
+						customer_source_ids: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​S​o​u​r​c​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​o​u​r​c​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​f​r​o​m​ ​t​h​e​s​e​ ​c​u​s​t​o​m​e​r​ ​s​o​u​r​c​e​s
+							 */
+							longDesc: string
+						}
+						loss_reason_ids: {
+							/**
+							 * L​o​s​s​ ​R​e​a​s​o​n​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​l​o​s​s​ ​r​e​a​s​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​t​h​e​s​e​ ​l​o​s​s​ ​r​e​a​s​o​n​s
+							 */
+							longDesc: string
+						}
+						pipeline_ids: {
+							/**
+							 * P​i​p​e​l​i​n​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​i​p​e​l​i​n​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​i​n​ ​t​h​e​s​e​ ​p​i​p​e​l​i​n​e​s
+							 */
+							longDesc: string
+						}
+						pipeline_stage_ids: {
+							/**
+							 * P​i​p​e​l​i​n​e​ ​S​t​a​g​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​t​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​i​n​ ​t​h​e​s​e​ ​p​i​p​e​l​i​n​e​ ​s​t​a​g​e​s
+							 */
+							longDesc: string
+						}
+						primary_contact_ids: {
+							/**
+							 * P​r​i​m​a​r​y​ ​C​o​n​t​a​c​t​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​i​m​a​r​y​ ​c​o​n​t​a​c​t
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​t​h​e​s​e​ ​p​r​i​m​a​r​y​ ​c​o​n​t​a​c​t​s
+							 */
+							longDesc: string
+						}
+						priorities: {
+							/**
+							 * P​r​i​o​r​i​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​i​o​r​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​t​h​e​s​e​ ​p​r​i​o​r​i​t​y​ ​l​e​v​e​l​s
+							 */
+							longDesc: string
+						}
+						statuses: {
+							/**
+							 * S​t​a​t​u​s​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​t​h​e​s​e​ ​s​t​a​t​u​s​e​s
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​t​h​a​t​ ​h​a​v​e​ ​a​n​y​ ​o​f​ ​t​h​e​s​e​ ​t​a​g​s
+							 */
+							longDesc: string
+						}
+						followed: {
+							/**
+							 * F​o​l​l​o​w​e​d
+							 */
+							displayName: string
+							/**
+							 * F​o​l​l​o​w​i​n​g​ ​s​t​a​t​u​s​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​t​h​a​t​ ​a​r​e​ ​f​o​l​l​o​w​e​d​ ​o​r​ ​n​o​t​ ​f​o​l​l​o​w​e​d
+							 */
+							longDesc: string
+						}
+						minimum_monetary_value: {
+							/**
+							 * M​i​n​i​m​u​m​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​d​e​a​l​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​a​t​ ​l​e​a​s​t​ ​t​h​i​s​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						maximum_monetary_value: {
+							/**
+							 * M​a​x​i​m​u​m​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​d​e​a​l​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​n​o​ ​m​o​r​e​ ​t​h​a​n​ ​t​h​i​s​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						minimum_win_probability: {
+							/**
+							 * M​i​n​i​m​u​m​ ​W​i​n​ ​P​r​o​b​a​b​i​l​i​t​y
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​w​i​n​ ​c​h​a​n​c​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​a​t​ ​l​e​a​s​t​ ​t​h​i​s​ ​w​i​n​ ​p​r​o​b​a​b​i​l​i​t​y
+							 */
+							longDesc: string
+						}
+						maximum_win_probability: {
+							/**
+							 * M​a​x​i​m​u​m​ ​W​i​n​ ​P​r​o​b​a​b​i​l​i​t​y
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​w​i​n​ ​c​h​a​n​c​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​n​o​ ​m​o​r​e​ ​t​h​a​n​ ​t​h​i​s​ ​w​i​n​ ​p​r​o​b​a​b​i​l​i​t​y
+							 */
+							longDesc: string
+						}
+						minimum_interaction_count: {
+							/**
+							 * M​i​n​i​m​u​m​ ​I​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​i​n​t​e​r​a​c​t​i​o​n​ ​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​a​t​ ​l​e​a​s​t​ ​t​h​i​s​ ​m​a​n​y​ ​i​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						maximum_interaction_count: {
+							/**
+							 * M​a​x​i​m​u​m​ ​I​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​i​n​t​e​r​a​c​t​i​o​n​ ​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​ ​w​i​t​h​ ​n​o​ ​m​o​r​e​ ​t​h​a​n​ ​t​h​i​s​ ​m​a​n​y​ ​i​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_person: {
+					/**
+					 * N​e​w​ ​P​e​r​s​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​e​r​s​o​n​ ​c​o​n​t​a​c​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​e​r​s​o​n​ ​c​o​n​t​a​c​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​C​o​p​p​e​r​C​R​M​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​w​h​i​c​h​ ​p​e​o​p​l​e​ ​t​r​i​g​g​e​r​ ​t​h​i​s​ ​e​v​e​n​t​ ​u​s​i​n​g​ ​v​a​r​i​o​u​s​ ​c​r​i​t​e​r​i​a​ ​l​i​k​e​ ​a​s​s​i​g​n​e​e​,​ ​c​o​m​p​a​n​y​,​ ​l​o​c​a​t​i​o​n​,​ ​a​n​d​ ​m​o​r​e​.
+					 */
+					longDesc: string
+					options: {
+						ids: {
+							/**
+							 * P​e​r​s​o​n​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​p​e​o​p​l​e​ ​t​o​ ​w​a​t​c​h
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​h​e​s​e​ ​s​p​e​c​i​f​i​c​ ​p​e​r​s​o​n​ ​I​D​s
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * P​e​r​s​o​n​ ​n​a​m​e​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​e​o​p​l​e​ ​w​i​t​h​ ​n​a​m​e​s​ ​m​a​t​c​h​i​n​g​ ​t​h​i​s​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * J​o​b​ ​t​i​t​l​e​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​e​o​p​l​e​ ​w​i​t​h​ ​t​h​i​s​ ​j​o​b​ ​t​i​t​l​e
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​e​o​p​l​e​ ​w​i​t​h​ ​t​h​i​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							longDesc: string
+						}
+						phone: {
+							/**
+							 * P​h​o​n​e
+							 */
+							displayName: string
+							/**
+							 * P​h​o​n​e​ ​n​u​m​b​e​r​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​e​o​p​l​e​ ​w​i​t​h​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * C​i​t​y​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​e​o​p​l​e​ ​i​n​ ​t​h​i​s​ ​c​i​t​y
+							 */
+							longDesc: string
+						}
+						state: {
+							/**
+							 * S​t​a​t​e
+							 */
+							displayName: string
+							/**
+							 * S​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​e​o​p​l​e​ ​i​n​ ​t​h​i​s​ ​s​t​a​t​e​ ​o​r​ ​p​r​o​v​i​n​c​e
+							 */
+							longDesc: string
+						}
+						postal_code: {
+							/**
+							 * P​o​s​t​a​l​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * P​o​s​t​a​l​ ​c​o​d​e​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​e​o​p​l​e​ ​w​i​t​h​ ​t​h​i​s​ ​p​o​s​t​a​l​ ​c​o​d​e
+							 */
+							longDesc: string
+						}
+						country: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * C​o​u​n​t​r​y​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​e​o​p​l​e​ ​i​n​ ​t​h​i​s​ ​c​o​u​n​t​r​y
+							 */
+							longDesc: string
+						}
+						assignee_ids: {
+							/**
+							 * A​s​s​i​g​n​e​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​s​s​i​g​n​e​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​e​o​p​l​e​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​s​e​ ​u​s​e​r​s
+							 */
+							longDesc: string
+						}
+						contact_type_ids: {
+							/**
+							 * C​o​n​t​a​c​t​ ​T​y​p​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​n​t​a​c​t​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​e​o​p​l​e​ ​w​i​t​h​ ​t​h​e​s​e​ ​c​o​n​t​a​c​t​ ​t​y​p​e​s
+							 */
+							longDesc: string
+						}
+						company_ids: {
+							/**
+							 * C​o​m​p​a​n​i​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​e​o​p​l​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​s​e​ ​c​o​m​p​a​n​i​e​s
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​e​o​p​l​e​ ​t​h​a​t​ ​h​a​v​e​ ​a​n​y​ ​o​f​ ​t​h​e​s​e​ ​t​a​g​s
+							 */
+							longDesc: string
+						}
+						socials: {
+							/**
+							 * S​o​c​i​a​l​ ​M​e​d​i​a
+							 */
+							displayName: string
+							/**
+							 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​e​o​p​l​e​ ​w​i​t​h​ ​t​h​e​s​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​s
+							 */
+							longDesc: string
+						}
+						minimum_interaction_count: {
+							/**
+							 * M​i​n​i​m​u​m​ ​I​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * M​i​n​i​m​u​m​ ​i​n​t​e​r​a​c​t​i​o​n​ ​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​e​o​p​l​e​ ​w​i​t​h​ ​a​t​ ​l​e​a​s​t​ ​t​h​i​s​ ​m​a​n​y​ ​i​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						maximum_interaction_count: {
+							/**
+							 * M​a​x​i​m​u​m​ ​I​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​i​n​t​e​r​a​c​t​i​o​n​ ​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​p​e​o​p​l​e​ ​w​i​t​h​ ​n​o​ ​m​o​r​e​ ​t​h​a​n​ ​t​h​i​s​ ​m​a​n​y​ ​i​n​t​e​r​a​c​t​i​o​n​s
+							 */
+							longDesc: string
+						}
+						page_number: {
+							/**
+							 * P​a​g​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * W​h​i​c​h​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​g​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * R​e​s​u​l​t​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							longDesc: string
+						}
+						sort_by: {
+							/**
+							 * S​o​r​t​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						sort_direction: {
+							/**
+							 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_task: {
+					/**
+					 * N​e​w​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​e​d​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​C​o​p​p​e​r​C​R​M​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​w​h​i​c​h​ ​t​a​s​k​s​ ​t​r​i​g​g​e​r​ ​t​h​i​s​ ​e​v​e​n​t​ ​u​s​i​n​g​ ​v​a​r​i​o​u​s​ ​c​r​i​t​e​r​i​a​ ​l​i​k​e​ ​a​s​s​i​g​n​e​e​,​ ​s​t​a​t​u​s​,​ ​p​r​i​o​r​i​t​y​,​ ​a​n​d​ ​m​o​r​e​.
+					 */
+					longDesc: string
+					options: {
+						ids: {
+							/**
+							 * T​a​s​k​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​t​a​s​k​s​ ​t​o​ ​w​a​t​c​h
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​h​e​s​e​ ​s​p​e​c​i​f​i​c​ ​t​a​s​k​ ​I​D​s
+							 */
+							longDesc: string
+						}
+						page_number: {
+							/**
+							 * P​a​g​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * W​h​i​c​h​ ​p​a​g​e​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​g​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						page_size: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * R​e​s​u​l​t​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e
+							 */
+							longDesc: string
+						}
+						sort_by: {
+							/**
+							 * S​o​r​t​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						sort_direction: {
+							/**
+							 * S​o​r​t​ ​D​i​r​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​r​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+							 */
+							longDesc: string
+						}
+						assignee_ids: {
+							/**
+							 * A​s​s​i​g​n​e​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​s​s​i​g​n​e​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​a​s​k​s​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​s​e​ ​u​s​e​r​s
+							 */
+							longDesc: string
+						}
+						statuses: {
+							/**
+							 * S​t​a​t​u​s​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​a​s​k​s​ ​w​i​t​h​ ​t​h​e​s​e​ ​s​t​a​t​u​s​e​s
+							 */
+							longDesc: string
+						}
+						priorities: {
+							/**
+							 * P​r​i​o​r​i​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​p​r​i​o​r​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​a​s​k​s​ ​w​i​t​h​ ​t​h​e​s​e​ ​p​r​i​o​r​i​t​y​ ​l​e​v​e​l​s
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​g​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​a​s​k​s​ ​t​h​a​t​ ​h​a​v​e​ ​a​n​y​ ​o​f​ ​t​h​e​s​e​ ​t​a​g​s
+							 */
+							longDesc: string
+						}
+						followed: {
+							/**
+							 * F​o​l​l​o​w​e​d
+							 */
+							displayName: string
+							/**
+							 * F​o​l​l​o​w​i​n​g​ ​s​t​a​t​u​s​ ​f​i​l​t​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​a​s​k​s​ ​t​h​a​t​ ​a​r​e​ ​f​o​l​l​o​w​e​d​ ​o​r​ ​n​o​t​ ​f​o​l​l​o​w​e​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Monday: {
 			/**
 			 * M​o​n​d​a​y​.​c​o​m
@@ -89395,6 +96427,7038 @@ export type TranslationFunctions = {
 	common: {
 	}
 	apps: {
+		CopperCrm: {
+			/**
+			 * CopperCRM
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to CopperCRM to manage your sales pipeline, contacts, and customer relationships.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The CopperCRM integration provides comprehensive access to your CRM data with actions and triggers for managing leads, people, companies, opportunities, and tasks. Built specifically for Google Workspace users, CopperCRM helps you track customer interactions, manage your sales pipeline, and automate your workflow. This integration enables you to create, retrieve, update, delete, and search across all major CopperCRM entities, while triggers keep you informed of new records as they are created in your CRM.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				create_company: {
+					/**
+					 * Create Company
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new company in CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new company record in CopperCRM with details like name, address, contact information, and custom fields. Companies represent organizations in your CRM.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Company Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The official name of the company you want to create in CopperCRM
+							 */
+							longDesc: () => LocalizedString
+						}
+						address: {
+							/**
+							 * Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Company address details
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The physical address of the company including street, city, state, postal code, and country
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									street: {
+										/**
+										 * Street
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Street address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The street address of the company
+										 */
+										longDesc: () => LocalizedString
+									}
+									city: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * City name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The city where the company is located
+										 */
+										longDesc: () => LocalizedString
+									}
+									state: {
+										/**
+										 * State
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * State or province
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The state or province where the company is located
+										 */
+										longDesc: () => LocalizedString
+									}
+									postal_code: {
+										/**
+										 * Postal Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * ZIP or postal code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The postal code or ZIP code of the company address
+										 */
+										longDesc: () => LocalizedString
+									}
+									country: {
+										/**
+										 * Country
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Country name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The country where the company is located
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						assignee_id: {
+							/**
+							 * Assignee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User assigned to this company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The CopperCRM user who will be assigned to manage this company
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact_type_id: {
+							/**
+							 * Contact Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of contact relationship
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of contact relationship this company has with your organization
+							 */
+							longDesc: () => LocalizedString
+						}
+						details: {
+							/**
+							 * Details
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional notes or description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional notes, description, or important details about the company
+							 */
+							longDesc: () => LocalizedString
+						}
+						email_domain: {
+							/**
+							 * Email Domain
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Company email domain
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The primary email domain used by the company (e.g., example.com)
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone_numbers: {
+							/**
+							 * Phone Numbers
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Company phone numbers
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of phone numbers associated with the company
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											number: {
+												/**
+												 * Phone Number
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The phone number
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The phone number in any format
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Category
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of phone number
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The category or type of this phone number (work, mobile, home, or other)
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						primary_contact_id: {
+							/**
+							 * Primary Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Main contact person
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The primary contact person associated with this company
+							 */
+							longDesc: () => LocalizedString
+						}
+						socials: {
+							/**
+							 * Social Media
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Social media profiles
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of social media profiles for the company
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * URL
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Social media profile URL
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The full URL to the social media profile
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Platform
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Social media platform
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The social media platform (LinkedIn, Twitter, Facebook, YouTube, Quora, Instagram, Pinterest, or Other)
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Company tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Tags to categorize and organize the company. You can create new tags or select from existing ones.
+							 */
+							longDesc: () => LocalizedString
+						}
+						websites: {
+							/**
+							 * Websites
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Company websites
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of websites associated with the company
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * URL
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Website URL
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The full URL of the website
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Category
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of website
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The category or purpose of this website (work, personal, or other)
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						custom_fields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom field values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom field values specific to your CopperCRM company configuration
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_lead: {
+					/**
+					 * Create Lead
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new lead in CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new lead record in CopperCRM with contact information and details. Leads represent potential customers who have shown interest in your products or services.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						first_name: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lead's first name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The first name of the lead
+							 */
+							longDesc: () => LocalizedString
+						}
+						last_name: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lead's last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The last name of the lead
+							 */
+							longDesc: () => LocalizedString
+						}
+						middle_name: {
+							/**
+							 * Middle Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lead's middle name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The middle name or initial of the lead
+							 */
+							longDesc: () => LocalizedString
+						}
+						suffix: {
+							/**
+							 * Suffix
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name suffix
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Name suffix such as Jr., Sr., III, etc.
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee_id: {
+							/**
+							 * Assignee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User assigned to this lead
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The CopperCRM user who will be assigned to manage this lead
+							 */
+							longDesc: () => LocalizedString
+						}
+						company_name: {
+							/**
+							 * Company Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lead's company name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the company where the lead works
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lead tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Tags to categorize and organize the lead. You can create new tags or select from existing ones.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Job title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The job title or position of the lead
+							 */
+							longDesc: () => LocalizedString
+						}
+						details: {
+							/**
+							 * Details
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional notes, description, or important details about the lead
+							 */
+							longDesc: () => LocalizedString
+						}
+						websites: {
+							/**
+							 * Websites
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated websites
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of websites associated with the lead
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * URL
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Website URL
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The full URL of the website
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Category
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of website
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The category or purpose of this website (work, personal, or other)
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						socials: {
+							/**
+							 * Social Media
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Social media profiles
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of social media profiles for the lead
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * URL
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Social media profile URL
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The full URL to the social media profile
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Platform
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Social media platform
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The social media platform (LinkedIn, Twitter, Facebook, YouTube, Quora, Instagram, Pinterest, or Other)
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address of the lead
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									email: {
+										/**
+										 * Email Address
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The email address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The email address of the lead
+										 */
+										longDesc: () => LocalizedString
+									}
+									category: {
+										/**
+										 * Category
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Type of email
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The category or type of this email (work, personal, or other)
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						phone_numbers: {
+							/**
+							 * Phone Numbers
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact phone numbers
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of phone numbers for the lead
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											number: {
+												/**
+												 * Phone Number
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The phone number
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The phone number in any format
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Category
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of phone number
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The category or type of this phone number
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						address: {
+							/**
+							 * Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The physical address of the lead including street, city, state, postal code, and country
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									street: {
+										/**
+										 * Street
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Street address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The street address
+										 */
+										longDesc: () => LocalizedString
+									}
+									city: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * City name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The city where the lead is located
+										 */
+										longDesc: () => LocalizedString
+									}
+									state: {
+										/**
+										 * State
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * State or province
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The state or province
+										 */
+										longDesc: () => LocalizedString
+									}
+									postal_code: {
+										/**
+										 * Postal Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * ZIP or postal code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The postal code or ZIP code
+										 */
+										longDesc: () => LocalizedString
+									}
+									country: {
+										/**
+										 * Country
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Country name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The country
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						customer_source_id: {
+							/**
+							 * Customer Source
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How the lead was acquired
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The source or channel through which this lead was acquired
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_fields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom field values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom field values specific to your CopperCRM lead configuration
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_opportunity: {
+					/**
+					 * Create Opportunity
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new opportunity in CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new sales opportunity in CopperCRM with details like value, stage, and associated contacts. Opportunities represent potential deals in your sales pipeline.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Opportunity Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the opportunity
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A descriptive name for the sales opportunity
+							 */
+							longDesc: () => LocalizedString
+						}
+						primary_contact_id: {
+							/**
+							 * Primary Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Main contact person
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The primary contact person associated with this opportunity
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee_id: {
+							/**
+							 * Assignee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User assigned to this opportunity
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The CopperCRM user who will be assigned to manage this opportunity
+							 */
+							longDesc: () => LocalizedString
+						}
+						close_date: {
+							/**
+							 * Close Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Expected close date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The expected date when this opportunity will be closed or won
+							 */
+							longDesc: () => LocalizedString
+						}
+						company_id: {
+							/**
+							 * Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The company associated with this opportunity
+							 */
+							longDesc: () => LocalizedString
+						}
+						customer_source_id: {
+							/**
+							 * Customer Source
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How the opportunity was acquired
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The source or channel through which this opportunity was acquired
+							 */
+							longDesc: () => LocalizedString
+						}
+						details: {
+							/**
+							 * Details
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional notes, description, or important details about the opportunity
+							 */
+							longDesc: () => LocalizedString
+						}
+						loss_reason_id: {
+							/**
+							 * Loss Reason
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Reason for losing
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The reason why this opportunity was lost (if applicable)
+							 */
+							longDesc: () => LocalizedString
+						}
+						monetary_value: {
+							/**
+							 * Monetary Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Deal value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The monetary value of the opportunity in your default currency
+							 */
+							longDesc: () => LocalizedString
+						}
+						pipeline_id: {
+							/**
+							 * Pipeline
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sales pipeline
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The sales pipeline this opportunity belongs to
+							 */
+							longDesc: () => LocalizedString
+						}
+						pipeline_stage_id: {
+							/**
+							 * Pipeline Stage
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Current stage
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The current stage of the opportunity in the sales pipeline
+							 */
+							longDesc: () => LocalizedString
+						}
+						priority: {
+							/**
+							 * Priority
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Opportunity priority
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The priority level of this opportunity (None, Low, Medium, or High)
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Opportunity status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The current status of the opportunity (Open, Won, Lost, or Abandoned)
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Opportunity tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Tags to categorize and organize the opportunity. You can create new tags or select from existing ones.
+							 */
+							longDesc: () => LocalizedString
+						}
+						win_probability: {
+							/**
+							 * Win Probability
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Probability of winning
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The estimated probability (0-100) of winning this opportunity
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_fields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom field values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom field values specific to your CopperCRM opportunity configuration
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_person: {
+					/**
+					 * Create Person
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new person contact in CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new person contact in CopperCRM with complete contact information. People represent individual contacts in your CRM.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Full name of the person
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The full name of the person contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						prefix: {
+							/**
+							 * Prefix
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name prefix
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Name prefix such as Mr., Mrs., Dr., etc.
+							 */
+							longDesc: () => LocalizedString
+						}
+						first_name: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * First name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The first name of the person
+							 */
+							longDesc: () => LocalizedString
+						}
+						middle_name: {
+							/**
+							 * Middle Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Middle name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The middle name or initial of the person
+							 */
+							longDesc: () => LocalizedString
+						}
+						last_name: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The last name of the person
+							 */
+							longDesc: () => LocalizedString
+						}
+						suffix: {
+							/**
+							 * Suffix
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name suffix
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Name suffix such as Jr., Sr., III, etc.
+							 */
+							longDesc: () => LocalizedString
+						}
+						street: {
+							/**
+							 * Street
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Street address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The street address of the person
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * City name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The city where the person is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						state: {
+							/**
+							 * State
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * State or province
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The state or province
+							 */
+							longDesc: () => LocalizedString
+						}
+						postal_code: {
+							/**
+							 * Postal Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ZIP or postal code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The postal code or ZIP code
+							 */
+							longDesc: () => LocalizedString
+						}
+						country: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Country name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The country
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee_id: {
+							/**
+							 * Assignee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User assigned to this person
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The CopperCRM user who will be assigned to manage this contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						company_id: {
+							/**
+							 * Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The company where this person works
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact_type_id: {
+							/**
+							 * Contact Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of contact relationship
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of contact relationship this person has with your organization
+							 */
+							longDesc: () => LocalizedString
+						}
+						details: {
+							/**
+							 * Details
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional notes, description, or important details about the person
+							 */
+							longDesc: () => LocalizedString
+						}
+						emails: {
+							/**
+							 * Email Addresses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email addresses
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of email addresses for the person
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											email: {
+												/**
+												 * Email Address
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The email address
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Email address
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Category
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of email
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The category or type of this email (work, personal, or other)
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						phone_numbers: {
+							/**
+							 * Phone Numbers
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact phone numbers
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of phone numbers for the person
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											number: {
+												/**
+												 * Phone Number
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The phone number
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Phone number
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Category
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of phone number
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The category or type of this phone number (work, mobile, home, or other)
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						socials: {
+							/**
+							 * Social Media
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Social media profiles
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of social media profiles for the person
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * URL
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Social profile URL
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Social profile URL
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Platform
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Social media platform
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Social platform
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Person tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Tags to categorize and organize the person. You can create new tags or select from existing ones.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Job title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The job title or position of the person
+							 */
+							longDesc: () => LocalizedString
+						}
+						websites: {
+							/**
+							 * Websites
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated websites
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of websites associated with the person
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * URL
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Website URL
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Website URL
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Category
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of website
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The category or purpose of this website (work, personal, or other)
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						custom_fields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom field values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom field values specific to your CopperCRM person configuration
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_task: {
+					/**
+					 * Create Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new task in CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new task in CopperCRM with details, due dates, and assignments. Tasks help you track action items and follow-ups.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Task Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name of the task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A descriptive name for the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						related_resource: {
+							/**
+							 * Related Resource
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated record
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The CRM record (lead, person, company, opportunity, or project) this task is related to
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									id: {
+										/**
+										 * Resource ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * ID of the related record
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ID of the related CRM record
+										 */
+										longDesc: () => LocalizedString
+									}
+									type: {
+										/**
+										 * Resource Type
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Type of related record
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The type of CRM record this task is related to (lead, person, company, opportunity, or project)
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						assignee_id: {
+							/**
+							 * Assignee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User assigned to this task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The CopperCRM user who will be assigned to complete this task
+							 */
+							longDesc: () => LocalizedString
+						}
+						due_date: {
+							/**
+							 * Due Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When the task is due
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date when this task should be completed
+							 */
+							longDesc: () => LocalizedString
+						}
+						reminder_date: {
+							/**
+							 * Reminder Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When to send reminder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date when a reminder should be sent for this task
+							 */
+							longDesc: () => LocalizedString
+						}
+						priority: {
+							/**
+							 * Priority
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task priority
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The priority level of this task (None, Low, Medium, or High)
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The current status of the task (Open or Completed)
+							 */
+							longDesc: () => LocalizedString
+						}
+						details: {
+							/**
+							 * Details
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional details or description of what needs to be done
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Tags to categorize and organize the task. You can create new tags or select from existing ones.
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_fields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom field values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom field values specific to your CopperCRM task configuration
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_company: {
+					/**
+					 * Delete Company
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a company from CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently delete a company record from CopperCRM. This action cannot be undone.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						company_id: {
+							/**
+							 * Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Company to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the company you want to delete from CopperCRM
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_lead: {
+					/**
+					 * Delete Lead
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a lead from CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently delete a lead record from CopperCRM. This action cannot be undone.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						lead_id: {
+							/**
+							 * Lead
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lead to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the lead you want to delete from CopperCRM
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_opportunity: {
+					/**
+					 * Delete Opportunity
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete an opportunity from CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently delete an opportunity record from CopperCRM. This action cannot be undone.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						opportunity_id: {
+							/**
+							 * Opportunity
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Opportunity to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the opportunity you want to delete from CopperCRM
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_person: {
+					/**
+					 * Delete Person
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a person contact from CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently delete a person contact record from CopperCRM. This action cannot be undone.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						person_id: {
+							/**
+							 * Person
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Person to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the person contact you want to delete from CopperCRM
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_task: {
+					/**
+					 * Delete Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a task from CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently delete a task from CopperCRM. This action cannot be undone.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						task_id: {
+							/**
+							 * Task
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the task you want to delete from CopperCRM
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_company: {
+					/**
+					 * Get Company
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a company from CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific company record from CopperCRM including all fields and custom data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						company_id: {
+							/**
+							 * Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Company to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the company you want to retrieve from CopperCRM
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_lead: {
+					/**
+					 * Get Lead
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a lead from CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific lead record from CopperCRM including all fields and custom data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						lead_id: {
+							/**
+							 * Lead
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lead to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the lead you want to retrieve from CopperCRM
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_opportunity: {
+					/**
+					 * Get Opportunity
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve an opportunity from CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific opportunity record from CopperCRM including all fields and custom data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						opportunity_id: {
+							/**
+							 * Opportunity
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Opportunity to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the opportunity you want to retrieve from CopperCRM
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_person: {
+					/**
+					 * Get Person
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a person contact from CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific person contact record from CopperCRM including all fields and custom data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						person_id: {
+							/**
+							 * Person
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Person to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the person contact you want to retrieve from CopperCRM
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_task: {
+					/**
+					 * Get Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a task from CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific task from CopperCRM including all fields and custom data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						task_id: {
+							/**
+							 * Task
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the task you want to retrieve from CopperCRM
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				search_companies: {
+					/**
+					 * Search Companies
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for companies in CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search and filter companies in CopperCRM using various criteria including name, location, tags, and custom fields. Returns a list of matching companies.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						ids: {
+							/**
+							 * Company IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific companies to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of specific company IDs to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_number: {
+							/**
+							 * Page Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Which page of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The page number of results to retrieve for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Results per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of results to return per page
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_by: {
+							/**
+							 * Sort By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to sort by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to use for sorting the results
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_direction: {
+							/**
+							 * Sort Direction
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The direction to sort results (ascending or descending)
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Company name to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for companies with names matching this value
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee_ids: {
+							/**
+							 * Assignees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Assigned users
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies by assigned users
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact_type_ids: {
+							/**
+							 * Contact Types
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact type filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies by contact type
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * City location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies by city
+							 */
+							longDesc: () => LocalizedString
+						}
+						state: {
+							/**
+							 * State
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * State or province
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies by state or province
+							 */
+							longDesc: () => LocalizedString
+						}
+						postal_code: {
+							/**
+							 * Postal Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ZIP or postal code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies by postal code
+							 */
+							longDesc: () => LocalizedString
+						}
+						country: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Country location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies by country
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies that have any of these tags
+							 */
+							longDesc: () => LocalizedString
+						}
+						socials: {
+							/**
+							 * Social Media
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Social media filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies by social media profiles
+							 */
+							longDesc: () => LocalizedString
+						}
+						followed: {
+							/**
+							 * Followed
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Following status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies by whether they are followed or not
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_interaction_count: {
+							/**
+							 * Minimum Interactions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum interaction count
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies with at least this many interactions
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_interaction_count: {
+							/**
+							 * Maximum Interactions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum interaction count
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies with no more than this many interactions
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_inactive_days: {
+							/**
+							 * Minimum Inactive Days
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum days inactive
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies inactive for at least this many days
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_inactive_days: {
+							/**
+							 * Maximum Inactive Days
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum days inactive
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies inactive for no more than this many days
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_created_date: {
+							/**
+							 * Created After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Earliest creation date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies created on or after this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_created_date: {
+							/**
+							 * Created Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Latest creation date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies created on or before this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_modified_date: {
+							/**
+							 * Modified After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Earliest modification date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies modified on or after this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_modified_date: {
+							/**
+							 * Modified Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Latest modification date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter companies modified on or before this date
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				search_leads: {
+					/**
+					 * Search Leads
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for leads in CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search and filter leads in CopperCRM using various criteria including name, email, phone, status, and custom fields. Returns a list of matching leads.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						ids: {
+							/**
+							 * Lead IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific leads to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of specific lead IDs to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_number: {
+							/**
+							 * Page Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Which page of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The page number of results to retrieve for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Results per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of results to return per page
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_by: {
+							/**
+							 * Sort By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to sort by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to use for sorting the results
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_direction: {
+							/**
+							 * Sort Direction
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The direction to sort results (ascending or descending)
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lead name to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for leads with names matching this value
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone_number: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Phone number to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for leads with this phone number
+							 */
+							longDesc: () => LocalizedString
+						}
+						emails: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for leads with this email address
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee_ids: {
+							/**
+							 * Assignees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Assigned users
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter leads by assigned users
+							 */
+							longDesc: () => LocalizedString
+						}
+						status_ids: {
+							/**
+							 * Statuses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lead statuses
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter leads by status
+							 */
+							longDesc: () => LocalizedString
+						}
+						customer_source_ids: {
+							/**
+							 * Customer Sources
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lead sources
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter leads by customer source
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * City location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter leads by city
+							 */
+							longDesc: () => LocalizedString
+						}
+						state: {
+							/**
+							 * State
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * State or province
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter leads by state or province
+							 */
+							longDesc: () => LocalizedString
+						}
+						postal_code: {
+							/**
+							 * Postal Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ZIP or postal code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter leads by postal code
+							 */
+							longDesc: () => LocalizedString
+						}
+						country: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Country location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter leads by country
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter leads that have any of these tags
+							 */
+							longDesc: () => LocalizedString
+						}
+						socials: {
+							/**
+							 * Social Media
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Social media filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter leads by social media profiles
+							 */
+							longDesc: () => LocalizedString
+						}
+						followed: {
+							/**
+							 * Followed
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Following status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter leads by whether they are followed or not
+							 */
+							longDesc: () => LocalizedString
+						}
+						age: {
+							/**
+							 * Age
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lead age in days
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter leads by their age in days
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_monetary_value: {
+							/**
+							 * Minimum Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum monetary value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter leads with at least this monetary value
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_monetary_value: {
+							/**
+							 * Maximum Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum monetary value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter leads with no more than this monetary value
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_interaction_count: {
+							/**
+							 * Minimum Interactions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum interaction count
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter leads with at least this many interactions
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_interaction_count: {
+							/**
+							 * Maximum Interactions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum interaction count
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter leads with no more than this many interactions
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_converted_leads: {
+							/**
+							 * Include Converted Leads
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include converted leads
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include leads that have been converted to opportunities
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				search_opportunities: {
+					/**
+					 * Search Opportunities
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for opportunities in CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search and filter opportunities in CopperCRM using various criteria including name, pipeline, status, value, and custom fields. Returns a list of matching opportunities.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						ids: {
+							/**
+							 * Opportunity IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific opportunities to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of specific opportunity IDs to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_number: {
+							/**
+							 * Page Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Which page of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The page number of results to retrieve for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Results per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of results to return per page
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_by: {
+							/**
+							 * Sort By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to sort by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to use for sorting the results
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_direction: {
+							/**
+							 * Sort Direction
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The direction to sort results (ascending or descending)
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Opportunity name to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for opportunities with names matching this value
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee_ids: {
+							/**
+							 * Assignees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Assigned users
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities by assigned users
+							 */
+							longDesc: () => LocalizedString
+						}
+						company_ids: {
+							/**
+							 * Companies
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated companies
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities by associated companies
+							 */
+							longDesc: () => LocalizedString
+						}
+						customer_source_ids: {
+							/**
+							 * Customer Sources
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Opportunity sources
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities by customer source
+							 */
+							longDesc: () => LocalizedString
+						}
+						loss_reason_ids: {
+							/**
+							 * Loss Reasons
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Reasons for loss
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities by loss reason
+							 */
+							longDesc: () => LocalizedString
+						}
+						pipeline_ids: {
+							/**
+							 * Pipelines
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sales pipelines
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities by pipeline
+							 */
+							longDesc: () => LocalizedString
+						}
+						pipeline_stage_ids: {
+							/**
+							 * Pipeline Stages
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Current stages
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities by pipeline stage
+							 */
+							longDesc: () => LocalizedString
+						}
+						primary_contact_ids: {
+							/**
+							 * Primary Contacts
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Main contacts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities by primary contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						priorities: {
+							/**
+							 * Priorities
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Priority levels
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities by priority level
+							 */
+							longDesc: () => LocalizedString
+						}
+						statuses: {
+							/**
+							 * Statuses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Opportunity statuses
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities by status (Open, Won, Lost, Abandoned)
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities that have any of these tags
+							 */
+							longDesc: () => LocalizedString
+						}
+						followed: {
+							/**
+							 * Followed
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Following status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities by whether they are followed or not
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_monetary_value: {
+							/**
+							 * Minimum Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum deal value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities with at least this monetary value
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_monetary_value: {
+							/**
+							 * Maximum Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum deal value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities with no more than this monetary value
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_win_probability: {
+							/**
+							 * Minimum Win Probability
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum win chance
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities with at least this win probability
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_win_probability: {
+							/**
+							 * Maximum Win Probability
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum win chance
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities with no more than this win probability
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_interaction_count: {
+							/**
+							 * Minimum Interactions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum interaction count
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities with at least this many interactions
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_interaction_count: {
+							/**
+							 * Maximum Interactions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum interaction count
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities with no more than this many interactions
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_close_date: {
+							/**
+							 * Close Date After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Earliest close date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities with close date on or after this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_close_date: {
+							/**
+							 * Close Date Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Latest close date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities with close date on or before this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_created_date: {
+							/**
+							 * Created After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Earliest creation date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities created on or after this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_created_date: {
+							/**
+							 * Created Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Latest creation date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities created on or before this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_modified_date: {
+							/**
+							 * Modified After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Earliest modification date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities modified on or after this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_modified_date: {
+							/**
+							 * Modified Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Latest modification date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities modified on or before this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_stage_change_date: {
+							/**
+							 * Stage Changed After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Earliest stage change
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities with stage changed on or after this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_stage_change_date: {
+							/**
+							 * Stage Changed Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Latest stage change
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter opportunities with stage changed on or before this date
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				search_people: {
+					/**
+					 * Search People
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for person contacts in CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search and filter people in CopperCRM using various criteria including name, email, phone, company, and custom fields. Returns a list of matching person contacts.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						ids: {
+							/**
+							 * Person IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific people to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of specific person IDs to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Person name to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for people with names matching this value
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Job title to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for people with this job title
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for people with this email address
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone: {
+							/**
+							 * Phone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Phone number to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for people with this phone number
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * City location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter people by city
+							 */
+							longDesc: () => LocalizedString
+						}
+						state: {
+							/**
+							 * State
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * State or province
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter people by state or province
+							 */
+							longDesc: () => LocalizedString
+						}
+						postal_code: {
+							/**
+							 * Postal Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ZIP or postal code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter people by postal code
+							 */
+							longDesc: () => LocalizedString
+						}
+						country: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Country location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter people by country
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee_ids: {
+							/**
+							 * Assignees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Assigned users
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter people by assigned users
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact_type_ids: {
+							/**
+							 * Contact Types
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact type filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter people by contact type
+							 */
+							longDesc: () => LocalizedString
+						}
+						company_ids: {
+							/**
+							 * Companies
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated companies
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter people by associated companies
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter people that have any of these tags
+							 */
+							longDesc: () => LocalizedString
+						}
+						socials: {
+							/**
+							 * Social Media
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Social media profiles
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter people by social media profiles
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_interaction_count: {
+							/**
+							 * Minimum Interactions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum interaction count
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter people with at least this many interactions
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_interaction_count: {
+							/**
+							 * Maximum Interactions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum interaction count
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter people with no more than this many interactions
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_created_date: {
+							/**
+							 * Created After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Earliest creation date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter people created on or after this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_created_date: {
+							/**
+							 * Created Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Latest creation date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter people created on or before this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_modified_date: {
+							/**
+							 * Modified After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Earliest modification date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter people modified on or after this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_modified_date: {
+							/**
+							 * Modified Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Latest modification date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter people modified on or before this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_by: {
+							/**
+							 * Sort By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to sort by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Field to sort results by
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_direction: {
+							/**
+							 * Sort Direction
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The direction to sort results (ascending or descending)
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_number: {
+							/**
+							 * Page Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Which page of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The page number of results to retrieve for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Results per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of results to return per page
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				search_tasks: {
+					/**
+					 * Search Tasks
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for tasks in CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search and filter tasks in CopperCRM using various criteria including assignee, status, priority, due date, and custom fields. Returns a list of matching tasks.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						ids: {
+							/**
+							 * Task IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific tasks to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of specific task IDs to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_number: {
+							/**
+							 * Page Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Which page of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The page number of results to retrieve for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Results per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of results to return per page
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_by: {
+							/**
+							 * Sort By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to sort by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to use for sorting the results
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_direction: {
+							/**
+							 * Sort Direction
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The direction to sort results (ascending or descending)
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee_ids: {
+							/**
+							 * Assignees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Assigned users
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks by assigned users
+							 */
+							longDesc: () => LocalizedString
+						}
+						statuses: {
+							/**
+							 * Statuses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task statuses
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks by status (Open or Completed)
+							 */
+							longDesc: () => LocalizedString
+						}
+						priorities: {
+							/**
+							 * Priorities
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Priority levels
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks by priority level
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks that have any of these tags
+							 */
+							longDesc: () => LocalizedString
+						}
+						followed: {
+							/**
+							 * Followed
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Following status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks by whether they are followed or not
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_due_date: {
+							/**
+							 * Due Date After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Earliest due date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks with due date on or after this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_due_date: {
+							/**
+							 * Due Date Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Latest due date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks with due date on or before this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_reminder_date: {
+							/**
+							 * Reminder After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Earliest reminder date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks with reminder date on or after this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_reminder_date: {
+							/**
+							 * Reminder Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Latest reminder date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks with reminder date on or before this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_completed_date: {
+							/**
+							 * Completed After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Earliest completion date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks completed on or after this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_completed_date: {
+							/**
+							 * Completed Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Latest completion date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks completed on or before this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_created_date: {
+							/**
+							 * Created After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Earliest creation date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks created on or after this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_created_date: {
+							/**
+							 * Created Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Latest creation date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks created on or before this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_modified_date: {
+							/**
+							 * Modified After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Earliest modification date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks modified on or after this date
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_modified_date: {
+							/**
+							 * Modified Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Latest modification date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks modified on or before this date
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_company: {
+					/**
+					 * Update Company
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing company in CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the details of an existing company record in CopperCRM including name, address, contact information, and custom fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						company_id: {
+							/**
+							 * Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Company to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the company you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Company Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated company name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new name for the company
+							 */
+							longDesc: () => LocalizedString
+						}
+						address: {
+							/**
+							 * Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated physical address of the company
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									street: {
+										/**
+										 * Street
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Street address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The street address of the company
+										 */
+										longDesc: () => LocalizedString
+									}
+									city: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * City name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The city where the company is located
+										 */
+										longDesc: () => LocalizedString
+									}
+									state: {
+										/**
+										 * State
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * State or province
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The state or province where the company is located
+										 */
+										longDesc: () => LocalizedString
+									}
+									postal_code: {
+										/**
+										 * Postal Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * ZIP or postal code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The postal code or ZIP code of the company address
+										 */
+										longDesc: () => LocalizedString
+									}
+									country: {
+										/**
+										 * Country
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Country name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The country where the company is located
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						assignee_id: {
+							/**
+							 * Assignee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated assignee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new CopperCRM user to assign to this company
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact_type_id: {
+							/**
+							 * Contact Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated contact type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated type of contact relationship
+							 */
+							longDesc: () => LocalizedString
+						}
+						details: {
+							/**
+							 * Details
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated notes, description, or important details
+							 */
+							longDesc: () => LocalizedString
+						}
+						email_domain: {
+							/**
+							 * Email Domain
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated email domain
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated primary email domain
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone_numbers: {
+							/**
+							 * Phone Numbers
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated phone numbers
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated list of phone numbers
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											number: {
+												/**
+												 * Phone Number
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The phone number
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The phone number in any format
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Category
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of phone number
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The category or type of this phone number
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						primary_contact_id: {
+							/**
+							 * Primary Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated primary contact
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new primary contact person for this company
+							 */
+							longDesc: () => LocalizedString
+						}
+						socials: {
+							/**
+							 * Social Media
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated social profiles
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated list of social media profiles
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * URL
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Social media profile URL
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The full URL to the social media profile
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Platform
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Social media platform
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The social media platform
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated tags to categorize and organize the company
+							 */
+							longDesc: () => LocalizedString
+						}
+						websites: {
+							/**
+							 * Websites
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated websites
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated list of websites
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * URL
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Website URL
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The full URL of the website
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Category
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of website
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The category or purpose of this website
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						custom_fields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated custom fields
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated custom field values
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_lead: {
+					/**
+					 * Update Lead
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing lead in CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the details of an existing lead record in CopperCRM including contact information, status, and custom fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						lead_id: {
+							/**
+							 * Lead
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lead to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the lead you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						first_name: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated first name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated first name of the lead
+							 */
+							longDesc: () => LocalizedString
+						}
+						last_name: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated last name of the lead
+							 */
+							longDesc: () => LocalizedString
+						}
+						middle_name: {
+							/**
+							 * Middle Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated middle name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated middle name or initial
+							 */
+							longDesc: () => LocalizedString
+						}
+						suffix: {
+							/**
+							 * Suffix
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated suffix
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated name suffix
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee_id: {
+							/**
+							 * Assignee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated assignee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new CopperCRM user to assign to this lead
+							 */
+							longDesc: () => LocalizedString
+						}
+						company_name: {
+							/**
+							 * Company Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated company name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated company name where the lead works
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated tags to categorize and organize the lead
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated job title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated job title or position
+							 */
+							longDesc: () => LocalizedString
+						}
+						details: {
+							/**
+							 * Details
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated notes, description, or important details
+							 */
+							longDesc: () => LocalizedString
+						}
+						websites: {
+							/**
+							 * Websites
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated websites
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated list of associated websites
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * URL
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Website URL
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The full URL of the website
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Category
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of website
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The category or purpose of this website
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						socials: {
+							/**
+							 * Social Media
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated social profiles
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated list of social media profiles
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * URL
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Social media profile URL
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The full URL to the social media profile
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Platform
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Social media platform
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The social media platform
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated email
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated email address
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									email: {
+										/**
+										 * Email Address
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The email address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The email address of the lead
+										 */
+										longDesc: () => LocalizedString
+									}
+									category: {
+										/**
+										 * Category
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Type of email
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The category or type of this email
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						phone_numbers: {
+							/**
+							 * Phone Numbers
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated phone numbers
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated list of phone numbers
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											number: {
+												/**
+												 * Phone Number
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The phone number
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The phone number in any format
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Category
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of phone number
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The category or type of this phone number
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						address: {
+							/**
+							 * Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated physical address
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									street: {
+										/**
+										 * Street
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Street address
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The street address
+										 */
+										longDesc: () => LocalizedString
+									}
+									city: {
+										/**
+										 * City
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * City name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The city
+										 */
+										longDesc: () => LocalizedString
+									}
+									state: {
+										/**
+										 * State
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * State or province
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The state or province
+										 */
+										longDesc: () => LocalizedString
+									}
+									postal_code: {
+										/**
+										 * Postal Code
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * ZIP or postal code
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The postal code or ZIP code
+										 */
+										longDesc: () => LocalizedString
+									}
+									country: {
+										/**
+										 * Country
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Country name
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The country
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						customer_source_id: {
+							/**
+							 * Customer Source
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated source
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated source or channel
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_fields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated custom fields
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated custom field values
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_opportunity: {
+					/**
+					 * Update Opportunity
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing opportunity in CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the details of an existing sales opportunity in CopperCRM including value, stage, status, and custom fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						opportunity_id: {
+							/**
+							 * Opportunity
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Opportunity to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the opportunity you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Opportunity Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated name for the opportunity
+							 */
+							longDesc: () => LocalizedString
+						}
+						primary_contact_id: {
+							/**
+							 * Primary Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated primary contact
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated primary contact person
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee_id: {
+							/**
+							 * Assignee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated assignee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new CopperCRM user to assign to this opportunity
+							 */
+							longDesc: () => LocalizedString
+						}
+						close_date: {
+							/**
+							 * Close Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated close date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated expected close date
+							 */
+							longDesc: () => LocalizedString
+						}
+						company_id: {
+							/**
+							 * Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated associated company
+							 */
+							longDesc: () => LocalizedString
+						}
+						customer_source_id: {
+							/**
+							 * Customer Source
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated source
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated source or channel
+							 */
+							longDesc: () => LocalizedString
+						}
+						details: {
+							/**
+							 * Details
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated notes, description, or important details
+							 */
+							longDesc: () => LocalizedString
+						}
+						loss_reason_id: {
+							/**
+							 * Loss Reason
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated loss reason
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated reason for losing
+							 */
+							longDesc: () => LocalizedString
+						}
+						monetary_value: {
+							/**
+							 * Monetary Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated monetary value
+							 */
+							longDesc: () => LocalizedString
+						}
+						pipeline_id: {
+							/**
+							 * Pipeline
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated pipeline
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated sales pipeline
+							 */
+							longDesc: () => LocalizedString
+						}
+						pipeline_stage_id: {
+							/**
+							 * Pipeline Stage
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated stage
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated current stage
+							 */
+							longDesc: () => LocalizedString
+						}
+						priority: {
+							/**
+							 * Priority
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated priority
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated priority level
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated opportunity status
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated tags to categorize and organize the opportunity
+							 */
+							longDesc: () => LocalizedString
+						}
+						win_probability: {
+							/**
+							 * Win Probability
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated win probability
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated estimated probability of winning
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_fields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated custom fields
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated custom field values
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_person: {
+					/**
+					 * Update Person
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing person contact in CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the details of an existing person contact in CopperCRM including contact information, company, and custom fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						person_id: {
+							/**
+							 * Person
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Person to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the person you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated full name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated full name
+							 */
+							longDesc: () => LocalizedString
+						}
+						prefix: {
+							/**
+							 * Prefix
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated prefix
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated name prefix
+							 */
+							longDesc: () => LocalizedString
+						}
+						first_name: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated first name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated first name
+							 */
+							longDesc: () => LocalizedString
+						}
+						middle_name: {
+							/**
+							 * Middle Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated middle name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated middle name or initial
+							 */
+							longDesc: () => LocalizedString
+						}
+						last_name: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated last name
+							 */
+							longDesc: () => LocalizedString
+						}
+						suffix: {
+							/**
+							 * Suffix
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated suffix
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated name suffix
+							 */
+							longDesc: () => LocalizedString
+						}
+						street: {
+							/**
+							 * Street
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated street
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated street address
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated city
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated city
+							 */
+							longDesc: () => LocalizedString
+						}
+						state: {
+							/**
+							 * State
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated state
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated state or province
+							 */
+							longDesc: () => LocalizedString
+						}
+						postal_code: {
+							/**
+							 * Postal Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated postal code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated postal code or ZIP code
+							 */
+							longDesc: () => LocalizedString
+						}
+						country: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated country
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated country
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee_id: {
+							/**
+							 * Assignee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated assignee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new CopperCRM user to assign to this contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						company_id: {
+							/**
+							 * Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated company where this person works
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact_type_id: {
+							/**
+							 * Contact Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated contact type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated type of contact relationship
+							 */
+							longDesc: () => LocalizedString
+						}
+						details: {
+							/**
+							 * Details
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated notes, description, or important details
+							 */
+							longDesc: () => LocalizedString
+						}
+						emails: {
+							/**
+							 * Email Addresses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated emails
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated list of email addresses
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											email: {
+												/**
+												 * Email Address
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The email address
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Email address
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Category
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of email
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The category or type of this email
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						phone_numbers: {
+							/**
+							 * Phone Numbers
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated phone numbers
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated list of phone numbers
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											number: {
+												/**
+												 * Phone Number
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * The phone number
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Phone number
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Category
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of phone number
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The category or type of this phone number
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						socials: {
+							/**
+							 * Social Media
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated social profiles
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated list of social media profiles
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * URL
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Social profile URL
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Social profile URL
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Platform
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Social media platform
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Social platform
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated tags to categorize and organize the person
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated job title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated job title or position
+							 */
+							longDesc: () => LocalizedString
+						}
+						websites: {
+							/**
+							 * Websites
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated websites
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated list of associated websites
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									type: {
+										fields: {
+											url: {
+												/**
+												 * URL
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Website URL
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * Website URL
+												 */
+												longDesc: () => LocalizedString
+											}
+											category: {
+												/**
+												 * Category
+												 */
+												displayName: () => LocalizedString
+												/**
+												 * Type of website
+												 */
+												shortDesc: () => LocalizedString
+												/**
+												 * The category or purpose of this website
+												 */
+												longDesc: () => LocalizedString
+											}
+										}
+									}
+								}
+							}
+						}
+						custom_fields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated custom fields
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated custom field values
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_task: {
+					/**
+					 * Update Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing task in CopperCRM
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the details of an existing task in CopperCRM including name, due dates, status, priority, and custom fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						task_id: {
+							/**
+							 * Task
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Task to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the task you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Task Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated name for the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						related_resource: {
+							/**
+							 * Related Resource
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated related record
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated CRM record this task is related to
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									id: {
+										/**
+										 * Resource ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * ID of the related record
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The ID of the related CRM record
+										 */
+										longDesc: () => LocalizedString
+									}
+									type: {
+										/**
+										 * Resource Type
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Type of related record
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The type of CRM record this task is related to
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						assignee_id: {
+							/**
+							 * Assignee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated assignee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new CopperCRM user to assign to this task
+							 */
+							longDesc: () => LocalizedString
+						}
+						due_date: {
+							/**
+							 * Due Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated due date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated date when this task should be completed
+							 */
+							longDesc: () => LocalizedString
+						}
+						reminder_date: {
+							/**
+							 * Reminder Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated reminder date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated date when a reminder should be sent
+							 */
+							longDesc: () => LocalizedString
+						}
+						priority: {
+							/**
+							 * Priority
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated priority
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated priority level
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated task status
+							 */
+							longDesc: () => LocalizedString
+						}
+						details: {
+							/**
+							 * Details
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated details or description of what needs to be done
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated tags to categorize and organize the task
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_fields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated custom fields
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated custom field values
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_company: {
+					/**
+					 * New Company
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new company is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new company is created in CopperCRM. You can filter which companies trigger this event using various criteria like assignee, location, tags, and more.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						ids: {
+							/**
+							 * Company IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific companies to watch
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for these specific company IDs
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_number: {
+							/**
+							 * Page Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Which page of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The page number of results to retrieve for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Results per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of results to return per page
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_by: {
+							/**
+							 * Sort By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to sort by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to use for sorting the results
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_direction: {
+							/**
+							 * Sort Direction
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The direction to sort results (ascending or descending)
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Company name filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for companies with names matching this value
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee_ids: {
+							/**
+							 * Assignees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by assignee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for companies assigned to these users
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact_type_ids: {
+							/**
+							 * Contact Types
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by contact type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for companies with these contact types
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * City filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for companies in this city
+							 */
+							longDesc: () => LocalizedString
+						}
+						state: {
+							/**
+							 * State
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * State or province filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for companies in this state or province
+							 */
+							longDesc: () => LocalizedString
+						}
+						postal_code: {
+							/**
+							 * Postal Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Postal code filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for companies with this postal code
+							 */
+							longDesc: () => LocalizedString
+						}
+						country: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Country filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for companies in this country
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for companies that have any of these tags
+							 */
+							longDesc: () => LocalizedString
+						}
+						socials: {
+							/**
+							 * Social Media
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Social media filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for companies with matching social media profiles
+							 */
+							longDesc: () => LocalizedString
+						}
+						followed: {
+							/**
+							 * Followed
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Following status filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for companies that are followed or not followed
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_interaction_count: {
+							/**
+							 * Minimum Interactions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum interaction count
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for companies with at least this many interactions
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_interaction_count: {
+							/**
+							 * Maximum Interactions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum interaction count
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for companies with no more than this many interactions
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_inactive_days: {
+							/**
+							 * Minimum Inactive Days
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum days inactive
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for companies inactive for at least this many days
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_inactive_days: {
+							/**
+							 * Maximum Inactive Days
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum days inactive
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for companies inactive for no more than this many days
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_lead: {
+					/**
+					 * New Lead
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new lead is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new lead is created in CopperCRM. You can filter which leads trigger this event using various criteria like assignee, status, location, and more.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						ids: {
+							/**
+							 * Lead IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific leads to watch
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for these specific lead IDs
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_number: {
+							/**
+							 * Page Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Which page of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The page number of results to retrieve for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Results per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of results to return per page
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_by: {
+							/**
+							 * Sort By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to sort by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to use for sorting the results
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_direction: {
+							/**
+							 * Sort Direction
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The direction to sort results (ascending or descending)
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lead name filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads with names matching this value
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone_number: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Phone number filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads with this phone number
+							 */
+							longDesc: () => LocalizedString
+						}
+						emails: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads with this email address
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee_ids: {
+							/**
+							 * Assignees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by assignee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads assigned to these users
+							 */
+							longDesc: () => LocalizedString
+						}
+						status_ids: {
+							/**
+							 * Statuses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads with these statuses
+							 */
+							longDesc: () => LocalizedString
+						}
+						customer_source_ids: {
+							/**
+							 * Customer Sources
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by source
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads from these customer sources
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * City filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads in this city
+							 */
+							longDesc: () => LocalizedString
+						}
+						state: {
+							/**
+							 * State
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * State or province filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads in this state or province
+							 */
+							longDesc: () => LocalizedString
+						}
+						postal_code: {
+							/**
+							 * Postal Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Postal code filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads with this postal code
+							 */
+							longDesc: () => LocalizedString
+						}
+						country: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Country filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads in this country
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads that have any of these tags
+							 */
+							longDesc: () => LocalizedString
+						}
+						socials: {
+							/**
+							 * Social Media
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Social media filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads with matching social media profiles
+							 */
+							longDesc: () => LocalizedString
+						}
+						followed: {
+							/**
+							 * Followed
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Following status filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads that are followed or not followed
+							 */
+							longDesc: () => LocalizedString
+						}
+						age: {
+							/**
+							 * Age
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lead age filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads of this age in days
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_monetary_value: {
+							/**
+							 * Minimum Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum monetary value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads with at least this monetary value
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_monetary_value: {
+							/**
+							 * Maximum Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum monetary value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads with no more than this monetary value
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_interaction_count: {
+							/**
+							 * Minimum Interactions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum interaction count
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads with at least this many interactions
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_interaction_count: {
+							/**
+							 * Maximum Interactions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum interaction count
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for leads with no more than this many interactions
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_converted_leads: {
+							/**
+							 * Include Converted Leads
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include converted leads
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to trigger for leads that have been converted to opportunities
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_opportunity: {
+					/**
+					 * New Opportunity
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new opportunity is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new opportunity is created in CopperCRM. You can filter which opportunities trigger this event using various criteria like pipeline, stage, status, value, and more.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						ids: {
+							/**
+							 * Opportunity IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific opportunities to watch
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for these specific opportunity IDs
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_number: {
+							/**
+							 * Page Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Which page of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The page number of results to retrieve for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Results per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of results to return per page
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_by: {
+							/**
+							 * Sort By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to sort by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to use for sorting the results
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_direction: {
+							/**
+							 * Sort Direction
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The direction to sort results (ascending or descending)
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Opportunity name filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for opportunities with names matching this value
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee_ids: {
+							/**
+							 * Assignees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by assignee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for opportunities assigned to these users
+							 */
+							longDesc: () => LocalizedString
+						}
+						company_ids: {
+							/**
+							 * Companies
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for opportunities associated with these companies
+							 */
+							longDesc: () => LocalizedString
+						}
+						customer_source_ids: {
+							/**
+							 * Customer Sources
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by source
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for opportunities from these customer sources
+							 */
+							longDesc: () => LocalizedString
+						}
+						loss_reason_ids: {
+							/**
+							 * Loss Reasons
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by loss reason
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for opportunities with these loss reasons
+							 */
+							longDesc: () => LocalizedString
+						}
+						pipeline_ids: {
+							/**
+							 * Pipelines
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by pipeline
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for opportunities in these pipelines
+							 */
+							longDesc: () => LocalizedString
+						}
+						pipeline_stage_ids: {
+							/**
+							 * Pipeline Stages
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by stage
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for opportunities in these pipeline stages
+							 */
+							longDesc: () => LocalizedString
+						}
+						primary_contact_ids: {
+							/**
+							 * Primary Contacts
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by primary contact
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for opportunities with these primary contacts
+							 */
+							longDesc: () => LocalizedString
+						}
+						priorities: {
+							/**
+							 * Priorities
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by priority
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for opportunities with these priority levels
+							 */
+							longDesc: () => LocalizedString
+						}
+						statuses: {
+							/**
+							 * Statuses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for opportunities with these statuses
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for opportunities that have any of these tags
+							 */
+							longDesc: () => LocalizedString
+						}
+						followed: {
+							/**
+							 * Followed
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Following status filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for opportunities that are followed or not followed
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_monetary_value: {
+							/**
+							 * Minimum Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum deal value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for opportunities with at least this monetary value
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_monetary_value: {
+							/**
+							 * Maximum Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum deal value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for opportunities with no more than this monetary value
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_win_probability: {
+							/**
+							 * Minimum Win Probability
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum win chance
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for opportunities with at least this win probability
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_win_probability: {
+							/**
+							 * Maximum Win Probability
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum win chance
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for opportunities with no more than this win probability
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_interaction_count: {
+							/**
+							 * Minimum Interactions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum interaction count
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for opportunities with at least this many interactions
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_interaction_count: {
+							/**
+							 * Maximum Interactions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum interaction count
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for opportunities with no more than this many interactions
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_person: {
+					/**
+					 * New Person
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new person contact is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new person contact is created in CopperCRM. You can filter which people trigger this event using various criteria like assignee, company, location, and more.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						ids: {
+							/**
+							 * Person IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific people to watch
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for these specific person IDs
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Person name filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for people with names matching this value
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Job title filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for people with this job title
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for people with this email address
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone: {
+							/**
+							 * Phone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Phone number filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for people with this phone number
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * City filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for people in this city
+							 */
+							longDesc: () => LocalizedString
+						}
+						state: {
+							/**
+							 * State
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * State or province filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for people in this state or province
+							 */
+							longDesc: () => LocalizedString
+						}
+						postal_code: {
+							/**
+							 * Postal Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Postal code filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for people with this postal code
+							 */
+							longDesc: () => LocalizedString
+						}
+						country: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Country filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for people in this country
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee_ids: {
+							/**
+							 * Assignees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by assignee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for people assigned to these users
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact_type_ids: {
+							/**
+							 * Contact Types
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by contact type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for people with these contact types
+							 */
+							longDesc: () => LocalizedString
+						}
+						company_ids: {
+							/**
+							 * Companies
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for people associated with these companies
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for people that have any of these tags
+							 */
+							longDesc: () => LocalizedString
+						}
+						socials: {
+							/**
+							 * Social Media
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Social media filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for people with these social media profiles
+							 */
+							longDesc: () => LocalizedString
+						}
+						minimum_interaction_count: {
+							/**
+							 * Minimum Interactions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Minimum interaction count
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for people with at least this many interactions
+							 */
+							longDesc: () => LocalizedString
+						}
+						maximum_interaction_count: {
+							/**
+							 * Maximum Interactions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum interaction count
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for people with no more than this many interactions
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_number: {
+							/**
+							 * Page Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Which page of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The page number of results to retrieve for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Results per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of results to return per page
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_by: {
+							/**
+							 * Sort By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to sort by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to use for sorting the results
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_direction: {
+							/**
+							 * Sort Direction
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The direction to sort results (ascending or descending)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_task: {
+					/**
+					 * New Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggered when a new task is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Triggers when a new task is created in CopperCRM. You can filter which tasks trigger this event using various criteria like assignee, status, priority, and more.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						ids: {
+							/**
+							 * Task IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific tasks to watch
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for these specific task IDs
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_number: {
+							/**
+							 * Page Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Which page of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The page number of results to retrieve for pagination
+							 */
+							longDesc: () => LocalizedString
+						}
+						page_size: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Results per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of results to return per page
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_by: {
+							/**
+							 * Sort By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to sort by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to use for sorting the results
+							 */
+							longDesc: () => LocalizedString
+						}
+						sort_direction: {
+							/**
+							 * Sort Direction
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort order
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The direction to sort results (ascending or descending)
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignee_ids: {
+							/**
+							 * Assignees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by assignee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for tasks assigned to these users
+							 */
+							longDesc: () => LocalizedString
+						}
+						statuses: {
+							/**
+							 * Statuses
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for tasks with these statuses
+							 */
+							longDesc: () => LocalizedString
+						}
+						priorities: {
+							/**
+							 * Priorities
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by priority
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for tasks with these priority levels
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by tags
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for tasks that have any of these tags
+							 */
+							longDesc: () => LocalizedString
+						}
+						followed: {
+							/**
+							 * Followed
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Following status filter
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for tasks that are followed or not followed
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
 		Monday: {
 			/**
 			 * Monday.com

@@ -96,6 +96,7 @@ import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import gitlab from '../apps/gitlab';
 import monday from '../apps/monday';
+import coppercrm from '../apps/coppercrm';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -135,6 +136,7 @@ const NEW_APPS = {
   claude,
   clickup,
   confluence,
+  coppercrm,
   esignature,
   facebookPages,
   figma,

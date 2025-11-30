@@ -81,10 +81,12 @@ import YouTube from './apps/YouTube';
 import Zendesk from './apps/Zendesk';
 import ZohoCRM from './apps/ZohoCRM';
 import Zoom from './apps/Zoom';
+import CopperCrm from './apps/CopperCrm';
 
 const en = {
   common: {},
   apps: {
+    CopperCrm,
     Monday,
     ZohoCRM,
     Firebase,
