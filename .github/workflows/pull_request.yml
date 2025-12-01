@@ -307,7 +307,7 @@ jobs:
       - name: Test catalogue actions
         run: |
           cd ts
-          yarn test-build && NODE_OPTIONS="--max_old_space_size=8192" QORE_TYPESCRIPT_ACTION_SCRIPTS=./dist/index.js QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS=./dist/index.js qore -l TypeScriptActionInterface -nX 1
+          NODE_OPTIONS="--max_old_space_size=8192" yarn test-build && NODE_OPTIONS="--max_old_space_size=8192" QORE_TYPESCRIPT_ACTION_SCRIPTS=./dist/index.js QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS=./dist/index.js qore -l TypeScriptActionInterface -nX 1
 
       # Notify Discord if Success
       - name: Discord notification success
