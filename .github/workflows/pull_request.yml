@@ -154,6 +154,8 @@ env:
   ZOHO_CRM_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).ZOHO_CRM_CLIENT_ID }}
   ZOHO_CRM_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).ZOHO_CRM_REFRESH_TOKEN }}
   GITLAB_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).GITLAB_TOKEN }}
+  COPPER_CRM_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).COPPER_CRM_TOKEN }}
+  COPPER_CRM_EMAIL: ${{ fromJson(secrets.TEST_VARIABLES).COPPER_CRM_EMAIL }}
 
 jobs:
   PullRequestTests:
@@ -305,7 +307,7 @@ jobs:
       - name: Test catalogue actions
         run: |
           cd ts
-          yarn test-build && QORE_TYPESCRIPT_ACTION_SCRIPTS=./dist/index.js QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS=./dist/index.js qore -l TypeScriptActionInterface -nX 1
+          NODE_OPTIONS="--max_old_space_size=8192" yarn test-build && NODE_OPTIONS="--max_old_space_size=8192" QORE_TYPESCRIPT_ACTION_SCRIPTS=./dist/index.js QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS=./dist/index.js qore -l TypeScriptActionInterface -nX 1
 
       # Notify Discord if Success
       - name: Discord notification success
