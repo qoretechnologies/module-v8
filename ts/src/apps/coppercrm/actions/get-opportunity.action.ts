@@ -39,9 +39,9 @@ const GetOpportunity = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { token, email, opportunity_id } = getQoreContextRequiredValues({
+    const { token, opportunity_id } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },
-      connectionFields: ['email', 'token'],
+      connectionFields: ['token'],
       optionFields: ['opportunity_id'],
       ErrorClass: CopperCrmError,
     });
@@ -51,7 +51,6 @@ const GetOpportunity = QoreAppCreator.createLocalizedAction<typeof options>({
         path: `opportunities/${opportunity_id}`,
         method: 'GET',
         token,
-        email,
       });
 
       const { custom_fields, ...restResponse } = response;
@@ -59,7 +58,6 @@ const GetOpportunity = QoreAppCreator.createLocalizedAction<typeof options>({
       const formattedCustomFields = custom_fields
         ? await mapCopperCrmCustomFieldsResponseArrayToObject({
             token,
-            email,
             customFieldsArray: custom_fields,
           })
         : {};

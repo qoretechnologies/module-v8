@@ -22,9 +22,9 @@ export const getCopperCrmLossReasonAllowedValues: TQoreGetAllowedValuesFunction<
   number
 > = async (context) => {
   try {
-    const { token, email } = getQoreContextRequiredValues({
+    const { token } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['token', 'email'],
+      connectionFields: ['token'],
       ErrorClass: CopperCrmError,
     });
 
@@ -32,7 +32,6 @@ export const getCopperCrmLossReasonAllowedValues: TQoreGetAllowedValuesFunction<
       path: `loss_reasons`,
       method: 'GET',
       token,
-      email,
     });
 
     return lossReasons.map(mapItemToAllowedValue);

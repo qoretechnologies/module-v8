@@ -44,15 +44,14 @@ export const getCopperCrmLeadAllowedValues: TQoreGetAllowedValuesFunction<
   number
 > = async (context) => {
   try {
-    const { token, email } = getQoreContextRequiredValues({
+    const { token } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['token', 'email'],
+      connectionFields: ['token'],
       ErrorClass: CopperCrmError,
     });
 
     return await fetchCopperCrmAllowedValues({
       token,
-      email,
       mapItemToAllowedValue: mapLeadToAllowedValue,
       path: 'leads/search',
     });

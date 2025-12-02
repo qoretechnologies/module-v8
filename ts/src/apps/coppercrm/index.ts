@@ -2,7 +2,7 @@ import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
-import { COPPER_CRM_APP_LOGO, COPPER_CRM_APP_NAME, COPPER_CRM_CONN_OPTIONS } from './constants';
+import { COPPER_CRM_APP_LOGO, COPPER_CRM_APP_NAME } from './constants';
 
 import * as COPPER_CRM_ACTIONS from './actions';
 import * as COPPER_CRM_TRIGGERS from './triggers';
@@ -23,12 +23,12 @@ export default (locale: Locales) =>
     rest: {
       url: 'https://api.copper.com',
       data: 'json',
-      oauth2_grant_type: 'none',
+      oauth2_grant_type: 'authorization_code',
+      oauth2_auth_url: 'https://app.copper.com/oauth/authorize',
+      oauth2_token_url: 'https://app.copper.com/oauth/token',
+      oauth2_scopes: ['developer/v1/all'],
       ping_method: 'GET',
       ping_path: `/developer_api/v1/users/me`,
-    },
-    rest_modifiers: {
-      options: COPPER_CRM_CONN_OPTIONS,
-      required_options: 'token,email',
+      oauth2_auto_refresh: false,
     },
   }) satisfies TQoreAppWithActions;

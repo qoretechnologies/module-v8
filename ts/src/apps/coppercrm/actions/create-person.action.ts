@@ -200,12 +200,12 @@ const CreatePerson = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { email, token } = getQoreContextRequiredValues({
+    const { token } = getQoreContextRequiredValues({
       context: {
         ...context,
         opts: obj,
       },
-      connectionFields: ['token', 'email'],
+      connectionFields: ['token'],
       optionFields: ['name'],
     });
 
@@ -225,7 +225,6 @@ const CreatePerson = QoreAppCreator.createLocalizedAction<typeof options>({
         path: `people`,
         method: 'POST',
         token,
-        email,
         body,
       });
 
@@ -234,7 +233,6 @@ const CreatePerson = QoreAppCreator.createLocalizedAction<typeof options>({
       const formattedCustomFields = custom_fields
         ? await mapCopperCrmCustomFieldsResponseArrayToObject({
             token,
-            email,
             customFieldsArray: custom_fields,
           })
         : {};

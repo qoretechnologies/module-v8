@@ -25,9 +25,9 @@ const DeleteOpportunity = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { token, email, opportunity_id } = getQoreContextRequiredValues({
+    const { token, opportunity_id } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },
-      connectionFields: ['email', 'token'],
+      connectionFields: ['token'],
       optionFields: ['opportunity_id'],
       ErrorClass: CopperCrmError,
     });
@@ -37,7 +37,6 @@ const DeleteOpportunity = QoreAppCreator.createLocalizedAction<typeof options>({
         path: `opportunities/${opportunity_id}`,
         method: 'DELETE',
         token,
-        email,
       });
 
       return response;

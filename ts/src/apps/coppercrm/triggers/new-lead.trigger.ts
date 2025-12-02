@@ -136,9 +136,9 @@ const NewLead = QoreAppCreator.createLocalizedTrigger({
   action_code: EQoreAppActionCode.EVENT,
   options,
   event_function: async (context, update, should_stop) => {
-    const { token, email } = getQoreContextRequiredValues({
+    const { token } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['token', 'email'],
+      connectionFields: ['token'],
       ErrorClass: CopperCrmError,
     });
 
@@ -147,7 +147,6 @@ const NewLead = QoreAppCreator.createLocalizedTrigger({
     const getItems = () => {
       return fetchLatestRecords({
         token,
-        email,
         filters: opts,
       });
     };
@@ -161,15 +160,14 @@ const NewLead = QoreAppCreator.createLocalizedTrigger({
     });
   },
   get_example_event_data: async (context) => {
-    const { token, email } = getQoreContextRequiredValues({
+    const { token } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['token', 'email'],
+      connectionFields: ['token'],
       ErrorClass: CopperCrmError,
     });
 
     const records = await fetchLatestRecords({
       token,
-      email,
       filters: context.opts || {},
     });
 
@@ -198,7 +196,6 @@ export default NewLead;
 
 type TFetchRowsOptions = {
   token: string;
-  email: string;
   filters?: Record<string, any>;
 };
 
@@ -207,7 +204,7 @@ type TRecordsResponse = {
 };
 
 const fetchLatestRecords = async (options: TFetchRowsOptions): Promise<Record<string, any>[]> => {
-  const { token, email, filters } = options;
+  const { token, filters } = options;
   const limit = 20;
 
   try {
@@ -215,7 +212,6 @@ const fetchLatestRecords = async (options: TFetchRowsOptions): Promise<Record<st
       path: `leads/search`,
       method: 'POST',
       token,
-      email,
       body: {
         ...filters,
         page_size: limit,
@@ -227,7 +223,6 @@ const fetchLatestRecords = async (options: TFetchRowsOptions): Promise<Record<st
 
     const formattedLeads = await mapCopperCrmRecordsCustomFieldsResponseArray({
       token,
-      email,
       records: response.results,
     });
 

@@ -25,9 +25,9 @@ const DeleteLead = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { token, email, lead_id } = getQoreContextRequiredValues({
+    const { token, lead_id } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },
-      connectionFields: ['email', 'token'],
+      connectionFields: ['token'],
       optionFields: ['lead_id'],
       ErrorClass: CopperCrmError,
     });
@@ -37,7 +37,6 @@ const DeleteLead = QoreAppCreator.createLocalizedAction<typeof options>({
         path: `leads/${lead_id}`,
         method: 'DELETE',
         token,
-        email,
       });
 
       return response;

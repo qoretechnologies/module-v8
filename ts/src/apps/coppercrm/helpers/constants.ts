@@ -18,8 +18,6 @@ export type TCopperCrmRequestOptions = {
   token: string;
   object?: string;
   path: string;
-  email?: string;
-  useApiToken?: boolean;
   method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
   params?: Record<string, string>;
   body?: Record<string, any>;
@@ -60,7 +58,7 @@ const formatPath = (path: string): string => {
 export const copperCrmApiClient = async <ResponseType = unknown>(
   options: TCopperCrmRequestOptions
 ): Promise<ResponseType> => {
-  const { token, path, object, method = 'GET', email, body, params, useApiToken = true } = options;
+  const { token, path, object, method = 'GET', body, params } = options;
 
   const formattedPath = formatPath(path);
 
@@ -72,15 +70,9 @@ export const copperCrmApiClient = async <ResponseType = unknown>(
   try {
     let response: QorusResponse<ResponseType> | undefined;
 
-    const oauthHeaders: Record<string, string> = useApiToken
-      ? {
-          'X-PW-AccessToken': token,
-          'X-PW-Application': 'developer_api',
-          'X-PW-UserEmail': email as string,
-        }
-      : {
-          Authorization: `Bearer ${token}`,
-        };
+    const oauthHeaders: Record<string, string> = {
+      Authorization: `Bearer ${token}`,
+    };
 
     const requestConfig = {
       headers: {
@@ -198,8 +190,6 @@ export const fetchCopperCrmPaginatedRecords = async <
     token,
     object = 'results',
     method = 'POST',
-    email,
-    useApiToken,
     path,
     maxResults = 500,
     limit = COPPER_CRM_PER_PAGE,
@@ -240,8 +230,6 @@ export const fetchCopperCrmPaginatedRecords = async <
         token,
         path,
         method,
-        email,
-        useApiToken,
         params,
         body,
       });

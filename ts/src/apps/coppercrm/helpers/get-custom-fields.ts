@@ -38,7 +38,6 @@ type TCopperCrmCustomField = {
 
 export const getCopperCrmCustomFields = async (options: {
   token: string;
-  email: string;
   availableOn?: TCopperCrmAvailableOn[];
   isFilterable?: boolean;
 }): Promise<Array<TCopperCrmCustomField>> => {
@@ -160,16 +159,15 @@ export const mapCopperCrmCustomFieldToQoreOption = (
 export const getCopperCrmCustomFieldDynamicTypeFunction =
   (availableOn: TCopperCrmAvailableOn[]): TQoreGetDynamicTypeFunction =>
   async (context) => {
-    const { token, email } = getQoreContextRequiredValues({
+    const { token } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['token', 'email'],
+      connectionFields: ['token'],
       ErrorClass: CopperCrmError,
     });
 
     try {
       const customFields = await getCopperCrmCustomFields({
         token,
-        email,
         availableOn,
       });
 
@@ -195,16 +193,15 @@ export const getCopperCrmCustomFieldDynamicTypeFunction =
 export const getCopperCrmCustomFieldDynamicResponseTypeFunction =
   (availableOn: TCopperCrmAvailableOn[]): TQoreGetDynamicTypeFunction =>
   async (context) => {
-    const { token, email } = getQoreContextRequiredValues({
+    const { token } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['token', 'email'],
+      connectionFields: ['token'],
       ErrorClass: CopperCrmError,
     });
 
     try {
       const customFields = await getCopperCrmCustomFields({
         token,
-        email,
         availableOn,
       });
 
@@ -230,7 +227,6 @@ export const getCopperCrmCustomFieldDynamicResponseTypeFunction =
 
 export const getCopperCrmCustomFieldIdToFieldNameMap = async (options: {
   token: string;
-  email: string;
 }): Promise<Record<number, string>> => {
   try {
     const customFields = await getCopperCrmCustomFields(options);
@@ -264,15 +260,13 @@ export const mapCopperCrmCustomFieldsObjectToArray = (
 
 export const mapCopperCrmCustomFieldsResponseArrayToObject = async (options: {
   token: string;
-  email: string;
   customFieldsArray: Array<TCopperCrmCustomFieldValue>;
 }): Promise<Record<string, any>> => {
-  const { token, email, customFieldsArray } = options;
+  const { token, customFieldsArray } = options;
 
   try {
     const fieldIdToNameMap = await getCopperCrmCustomFieldIdToFieldNameMap({
       token,
-      email,
     });
 
     const customFieldsObject: Record<string, any> = {};
@@ -293,7 +287,6 @@ export const mapCopperCrmCustomFieldsResponseArrayToObject = async (options: {
 
 export const mapCopperCrmRecordsCustomFieldsResponseArray = async (options: {
   token: string;
-  email: string;
   records: Array<{
     [key: string]: any;
     custom_fields?: Array<TCopperCrmCustomFieldValue>;
@@ -304,10 +297,9 @@ export const mapCopperCrmRecordsCustomFieldsResponseArray = async (options: {
     custom_fields?: Record<string, any>;
   }>
 > => {
-  const { token, email, records } = options;
+  const { token, records } = options;
   const fieldIdToNameMap = await getCopperCrmCustomFieldIdToFieldNameMap({
     token,
-    email,
   });
 
   return records.map((record) => {
