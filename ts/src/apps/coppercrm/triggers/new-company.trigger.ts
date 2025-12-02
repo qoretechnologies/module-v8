@@ -157,7 +157,7 @@ const NewCompany = QoreAppCreator.createLocalizedTrigger({
     desc: 'Copper CRM New Company Trigger Event Info',
     type: CopperCrmCompanyResponseType,
   },
-  get_dynamic_response_type: async (context) => {
+  get_dynamic_type: async (context) => {
     const customFields = await getCopperCrmCustomFieldDynamicResponseTypeFunction(['company'])(
       context
     );

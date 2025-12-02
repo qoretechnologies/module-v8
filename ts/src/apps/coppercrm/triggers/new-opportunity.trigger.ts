@@ -112,7 +112,7 @@ const options = {
       type: 'list',
       element_type: { type: 'string' },
     },
-    allowed_values: [
+    element_allowed_values: [
       { value: 'None', display_name: 'None' },
       { value: 'Low', display_name: 'Low' },
       { value: 'Medium', display_name: 'Medium' },
@@ -124,7 +124,7 @@ const options = {
       type: 'list',
       element_type: { type: 'string' },
     },
-    allowed_values: [
+    element_allowed_values: [
       { value: 'Open', display_name: 'Open' },
       { value: 'Won', display_name: 'Won' },
       { value: 'Lost', display_name: 'Lost' },
@@ -213,7 +213,7 @@ const NewOpportunity = QoreAppCreator.createLocalizedTrigger({
     desc: 'Copper CRM New Opportunity Trigger Event Info',
     type: CopperCrmOpportunityResponseType,
   },
-  get_dynamic_response_type: async (context) => {
+  get_dynamic_type: async (context) => {
     const customFields = await getCopperCrmCustomFieldDynamicResponseTypeFunction(['opportunity'])(
       context
     );

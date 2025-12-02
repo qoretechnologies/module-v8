@@ -84,7 +84,7 @@ const options = {
       type: 'list',
       element_type: { type: 'string' },
     },
-    allowed_values: [
+    element_allowed_values: [
       { value: 'Open', display_name: 'Open' },
       { value: 'Completed', display_name: 'Completed' },
     ],
@@ -94,7 +94,7 @@ const options = {
       type: 'list',
       element_type: { type: 'string' },
     },
-    allowed_values: [
+    element_allowed_values: [
       { value: 'None', display_name: 'None' },
       { value: 'Low', display_name: 'Low' },
       { value: 'Medium', display_name: 'Medium' },

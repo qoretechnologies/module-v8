@@ -177,7 +177,7 @@ const NewLead = QoreAppCreator.createLocalizedTrigger({
     desc: 'Copper Crm New Lead Trigger Event Info',
     type: CopperCrmLeadResponseType,
   },
-  get_dynamic_response_type: async (context) => {
+  get_dynamic_type: async (context) => {
     const customFields = await getCopperCrmCustomFieldDynamicResponseTypeFunction(['lead'])(
       context
     );

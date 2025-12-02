@@ -170,7 +170,7 @@ const NewPerson = QoreAppCreator.createLocalizedTrigger({
     desc: 'Copper CRM New Person Trigger Event Info',
     type: CopperCrmPersonResponseType,
   },
-  get_dynamic_response_type: async (context) => {
+  get_dynamic_type: async (context) => {
     const customFields = await getCopperCrmCustomFieldDynamicResponseTypeFunction(['person'])(
       context
     );

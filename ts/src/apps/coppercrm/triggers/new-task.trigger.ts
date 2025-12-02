@@ -60,7 +60,7 @@ const options = {
       type: 'list',
       element_type: { type: 'string' },
     },
-    allowed_values: [
+    element_allowed_values: [
       { value: 'Open', display_name: 'Open' },
       { value: 'Completed', display_name: 'Completed' },
     ],
@@ -70,7 +70,7 @@ const options = {
       type: 'list',
       element_type: { type: 'string' },
     },
-    allowed_values: [
+    element_allowed_values: [
       { value: 'None', display_name: 'None' },
       { value: 'Low', display_name: 'Low' },
       { value: 'Medium', display_name: 'Medium' },
@@ -141,7 +141,7 @@ const NewTask = QoreAppCreator.createLocalizedTrigger({
     desc: 'Copper CRM New Task Trigger Event Info',
     type: CopperCrmTaskResponseType,
   },
-  get_dynamic_response_type: async (context) => {
+  get_dynamic_type: async (context) => {
     const customFields = await getCopperCrmCustomFieldDynamicResponseTypeFunction(['task'])(
       context
     );
