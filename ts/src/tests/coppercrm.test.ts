@@ -68,24 +68,17 @@ describe('CopperCRM', () => {
   const baseContext = {
     conn_opts: {
       token: '',
-      email: '',
     },
   } as any;
 
   beforeAll(() => {
     const token = process.env.COPPER_CRM_TOKEN;
-    const email = process.env.COPPER_CRM_EMAIL;
 
     if (!token) {
       throw new Error('COPPER_CRM_TOKEN is not set in environment variables');
     }
 
-    if (!email) {
-      throw new Error('COPPER_CRM_EMAIL is not set in environment variables');
-    }
-
     baseContext.conn_opts.token = token;
-    baseContext.conn_opts.email = email;
   });
 
   let pipelineId: number;

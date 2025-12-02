@@ -158,9 +158,9 @@ const UpdateCompany = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { token, email, company_id } = getQoreContextRequiredValues({
+    const { token, company_id } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },
-      connectionFields: ['email', 'token'],
+      connectionFields: ['token'],
       optionFields: ['company_id'],
       ErrorClass: CopperCrmError,
     });
@@ -181,7 +181,6 @@ const UpdateCompany = QoreAppCreator.createLocalizedAction<typeof options>({
         path: `companies/${company_id}`,
         method: 'PUT',
         token,
-        email,
         body,
       });
 
@@ -190,7 +189,6 @@ const UpdateCompany = QoreAppCreator.createLocalizedAction<typeof options>({
       const formattedCustomFields = custom_fields
         ? await mapCopperCrmCustomFieldsResponseArrayToObject({
             token,
-            email,
             customFieldsArray: custom_fields,
           })
         : {};

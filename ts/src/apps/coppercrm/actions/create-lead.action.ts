@@ -174,9 +174,9 @@ const CreateLead = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { token, email } = getQoreContextRequiredValues({
+    const { token } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },
-      connectionFields: ['email', 'token'],
+      connectionFields: ['token'],
       optionFields: ['first_name'],
       ErrorClass: CopperCrmError,
     });
@@ -197,7 +197,6 @@ const CreateLead = QoreAppCreator.createLocalizedAction<typeof options>({
         path: `leads`,
         method: 'POST',
         token,
-        email,
         body,
       });
 
@@ -206,7 +205,6 @@ const CreateLead = QoreAppCreator.createLocalizedAction<typeof options>({
       const formattedCustomFields = custom_fields
         ? await mapCopperCrmCustomFieldsResponseArrayToObject({
             token,
-            email,
             customFieldsArray: custom_fields,
           })
         : {};

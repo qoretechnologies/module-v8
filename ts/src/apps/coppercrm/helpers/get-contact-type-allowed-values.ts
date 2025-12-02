@@ -22,9 +22,9 @@ export const getCopperCrmContactTypeAllowedValues: TQoreGetAllowedValuesFunction
   number
 > = async (context) => {
   try {
-    const { token, email } = getQoreContextRequiredValues({
+    const { token } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['token', 'email'],
+      connectionFields: ['token'],
       ErrorClass: CopperCrmError,
     });
 
@@ -32,7 +32,6 @@ export const getCopperCrmContactTypeAllowedValues: TQoreGetAllowedValuesFunction
       path: `contact_types`,
       method: 'GET',
       token,
-      email,
     });
 
     return contactTypes.map(mapItemToAllowedValue);

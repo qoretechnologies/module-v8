@@ -154,9 +154,9 @@ const SearchCompanies = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { token, email } = getQoreContextRequiredValues({
+    const { token } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },
-      connectionFields: ['email', 'token'],
+      connectionFields: ['token'],
       ErrorClass: CopperCrmError,
     });
 
@@ -174,7 +174,6 @@ const SearchCompanies = QoreAppCreator.createLocalizedAction<typeof options>({
         path: `companies/search`,
         method: 'POST',
         token,
-        email,
         body: formattedObj,
       });
 
@@ -182,7 +181,6 @@ const SearchCompanies = QoreAppCreator.createLocalizedAction<typeof options>({
 
       const formattedCompanies = await mapCopperCrmRecordsCustomFieldsResponseArray({
         token,
-        email,
         records: results,
       });
 

@@ -27,16 +27,16 @@ export const getCopperCrmPipelineStageAllowedValues: TQoreGetAllowedValuesFuncti
   number
 > = async (context) => {
   try {
-    const { token, email, pipeline_id } = getQoreContextRequiredValues({
+    const { token, pipeline_id } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['token', 'email'],
+      connectionFields: ['token'],
       optionFields: ['pipeline_id'],
       ErrorClass: CopperCrmError,
     });
 
     return await fetchCopperCrmAllowedValues({
       token,
-      email,
+      
       method: 'GET',
       mapItemToAllowedValue: mapPipelineStageToAllowedValue,
       path: `pipeline_stages/pipeline/${pipeline_id}`,

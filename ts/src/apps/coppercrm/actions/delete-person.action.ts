@@ -25,9 +25,9 @@ const DeletePerson = QoreAppCreator.createLocalizedAction({
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { token, email, person_id } = getQoreContextRequiredValues({
+    const { token, person_id } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },
-      connectionFields: ['email', 'token'],
+      connectionFields: ['token'],
       optionFields: ['person_id'],
       ErrorClass: CopperCrmError,
     });
@@ -37,7 +37,6 @@ const DeletePerson = QoreAppCreator.createLocalizedAction({
         path: `people/${person_id}`,
         method: 'DELETE',
         token,
-        email,
       });
 
       return response;
