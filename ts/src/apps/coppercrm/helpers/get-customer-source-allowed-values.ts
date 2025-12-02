@@ -30,7 +30,6 @@ export const getCopperCrmCustomerSourceAllowedValues: TQoreGetAllowedValuesFunct
 
     return await fetchCopperCrmAllowedValues({
       token,
-      
       method: 'GET',
       mapItemToAllowedValue,
       path: `customer_sources`,

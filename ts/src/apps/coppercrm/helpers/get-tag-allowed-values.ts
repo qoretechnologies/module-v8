@@ -33,7 +33,6 @@ export const getCopperCrmTagAllowedValues: TQoreGetAllowedValuesFunction<
 
     return await fetchCopperCrmAllowedValues({
       token,
-      
       method: 'GET',
       mapItemToAllowedValue: mapTagToAllowedValue,
       path: 'tags',

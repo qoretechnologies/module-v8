@@ -32,7 +32,6 @@ export const getCopperCrmLeadStatusAllowedValues: TQoreGetAllowedValuesFunction<
 
     return await fetchCopperCrmAllowedValues({
       token,
-      
       method: 'GET',
       mapItemToAllowedValue: mapLeadStatusToAllowedValue,
       path: 'lead_statuses',

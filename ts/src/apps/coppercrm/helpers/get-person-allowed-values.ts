@@ -54,7 +54,6 @@ export const getCopperCrmPersonAllowedValues: TQoreGetAllowedValuesFunction<
 
     return await fetchCopperCrmAllowedValues({
       token,
-      
       mapItemToAllowedValue: mapPersonToAllowedValue,
       path: 'people/search',
     });

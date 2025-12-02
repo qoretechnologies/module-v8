@@ -58,7 +58,6 @@ export const getCopperCrmOpportunityAllowedValues: TQoreGetAllowedValuesFunction
 
     return await fetchCopperCrmAllowedValues({
       token,
-      
       mapItemToAllowedValue: mapOpportunityToAllowedValue,
       path: 'opportunities/search',
     });

@@ -32,7 +32,6 @@ export const getCopperCrmLossReasonAllowedValues: TQoreGetAllowedValuesFunction<
       path: `loss_reasons`,
       method: 'GET',
       token,
-      
     });
 
     return lossReasons.map(mapItemToAllowedValue);

@@ -248,7 +248,6 @@ const fetchLatestRecords = async (options: TFetchRowsOptions): Promise<Record<st
       path: `opportunities/search`,
       method: 'POST',
       token,
-
       body: {
         ...filters,
         page_size: limit,
@@ -260,7 +259,6 @@ const fetchLatestRecords = async (options: TFetchRowsOptions): Promise<Record<st
 
     const formattedOpportunities = await mapCopperCrmRecordsCustomFieldsResponseArray({
       token,
-
       records: response.results,
     });
 

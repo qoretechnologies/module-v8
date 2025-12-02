@@ -147,7 +147,6 @@ const NewLead = QoreAppCreator.createLocalizedTrigger({
     const getItems = () => {
       return fetchLatestRecords({
         token,
-
         filters: opts,
       });
     };
@@ -169,7 +168,6 @@ const NewLead = QoreAppCreator.createLocalizedTrigger({
 
     const records = await fetchLatestRecords({
       token,
-
       filters: context.opts || {},
     });
 
@@ -214,7 +212,6 @@ const fetchLatestRecords = async (options: TFetchRowsOptions): Promise<Record<st
       path: `leads/search`,
       method: 'POST',
       token,
-
       body: {
         ...filters,
         page_size: limit,
@@ -226,7 +223,6 @@ const fetchLatestRecords = async (options: TFetchRowsOptions): Promise<Record<st
 
     const formattedLeads = await mapCopperCrmRecordsCustomFieldsResponseArray({
       token,
-
       records: response.results,
     });
 

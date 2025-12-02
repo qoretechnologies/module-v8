@@ -52,7 +52,6 @@ export const getCopperCrmLeadAllowedValues: TQoreGetAllowedValuesFunction<
 
     return await fetchCopperCrmAllowedValues({
       token,
-      
       mapItemToAllowedValue: mapLeadToAllowedValue,
       path: 'leads/search',
     });

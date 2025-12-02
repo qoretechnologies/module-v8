@@ -148,7 +148,6 @@ const NewCompany = QoreAppCreator.createLocalizedTrigger({
 
     const records = await fetchLatestRecords({
       token,
-
       filters: context.opts || {},
     });
 
@@ -193,7 +192,6 @@ const fetchLatestRecords = async (options: TFetchRowsOptions): Promise<Record<st
       path: `companies/search`,
       method: 'POST',
       token,
-
       body: {
         ...filters,
         page_size: limit,
@@ -205,7 +203,6 @@ const fetchLatestRecords = async (options: TFetchRowsOptions): Promise<Record<st
 
     const formattedCompanies = await mapCopperCrmRecordsCustomFieldsResponseArray({
       token,
-
       records: response.results,
     });
 

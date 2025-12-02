@@ -32,7 +32,6 @@ export const getCopperCrmTaskAllowedValues: TQoreGetAllowedValuesFunction<
 
     return await fetchCopperCrmAllowedValues({
       token,
-      
       mapItemToAllowedValue,
       path: `tasks/search`,
     });

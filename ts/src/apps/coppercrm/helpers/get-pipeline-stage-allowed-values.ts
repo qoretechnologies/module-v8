@@ -36,7 +36,6 @@ export const getCopperCrmPipelineStageAllowedValues: TQoreGetAllowedValuesFuncti
 
     return await fetchCopperCrmAllowedValues({
       token,
-      
       method: 'GET',
       mapItemToAllowedValue: mapPipelineStageToAllowedValue,
       path: `pipeline_stages/pipeline/${pipeline_id}`,
