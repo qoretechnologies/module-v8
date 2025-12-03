@@ -387,7 +387,7 @@ describe('Should test Intercom integration', () => {
 
       const response = await testApi.execAppAction('intercom', action!.action, connection, {
         body: {
-          event_name: `test_event_${timestamp}`,
+          event_name: `Test`,
           id: contactId,
         },
       });
