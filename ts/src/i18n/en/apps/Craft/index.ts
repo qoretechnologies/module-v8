@@ -253,9 +253,9 @@ const CraftAppEn = {
           longDesc: `
           The Markdown content to insert. Separate each paragraph and heading with two newlines. Separate each list item with one newline. The first item in any list cannot be empty. Craft-specific tokens are HTML tags.:\n\n
 
-          - for callouts. Can be used to wrap multiple paragraphs/images/etc.\n
-          - for caption text style. Can be used to wrap a paragraph.\n
-          - for highlights - color is optional. Can only be used inline.
+          - <callout> for callouts. Can be used to wrap multiple paragraphs/images/etc.\n
+          - <caption> for caption text style. Can be used to wrap a paragraph.\n
+          - <highlight color=''> for highlights - color is optional. Can only be used inline.
           `,
         },
         position: {

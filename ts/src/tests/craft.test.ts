@@ -178,16 +178,7 @@ describe('Craft', () => {
         if (!('api_function' in action) || !action.api_function)
           throw new Error('Action does not have an api_function');
 
-        const result = await action.api_function(
-          {
-            documentIds: [
-              'f7871886-0bcd-a468-fc01-e3e95694888d',
-              '360706f4-d401-4187-ba54-9a579e0611d8',
-            ],
-          },
-          undefined,
-          baseContext
-        );
+        const result = await action.api_function({}, undefined, baseContext);
         expect(result).toBeDefined();
         expect(Array.isArray(result)).toBe(true);
         expect(result.length).toBeGreaterThan(0);

@@ -1,8 +1,8 @@
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
+import axios from 'axios';
 import { get } from 'lodash';
 import { Debugger } from '../../../utils/Debugger';
 import { CRAFT_APP_NAME } from '../constants';
-import axios from 'axios';
 
 type QorusResponse<T> = {
   data: T;
@@ -142,7 +142,7 @@ export const fetchCraftPaginatedRecords = async <
       items.push(...objectData);
     }
   } catch (error) {
-    Debugger.log(`Error fetching paginated zoho crm records for ${object}`, error);
+    Debugger.log(`Error fetching paginated craft records for ${object}`, error);
 
     return items;
   }
@@ -235,7 +235,7 @@ export const extractCraftBlockContent = (
       break;
 
     default:
-      console.warn(`Unknown Craft block type: ${block.blockType}`);
+      Debugger.log(`Unknown Craft block type: ${block.type}`);
       break;
   }
 

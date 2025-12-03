@@ -7612,11 +7612,11 @@ type RootTranslation = {
 						​
 						​
 						​
-						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​-​ ​f​o​r​ ​c​a​l​l​o​u​t​s​.​ ​C​a​n​ ​b​e​ ​u​s​e​d​ ​t​o​ ​w​r​a​p​ ​m​u​l​t​i​p​l​e​ ​p​a​r​a​g​r​a​p​h​s​/​i​m​a​g​e​s​/​e​t​c​.​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​-​ ​<​c​a​l​l​o​u​t​>​ ​f​o​r​ ​c​a​l​l​o​u​t​s​.​ ​C​a​n​ ​b​e​ ​u​s​e​d​ ​t​o​ ​w​r​a​p​ ​m​u​l​t​i​p​l​e​ ​p​a​r​a​g​r​a​p​h​s​/​i​m​a​g​e​s​/​e​t​c​.​
 						​
-						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​-​ ​f​o​r​ ​c​a​p​t​i​o​n​ ​t​e​x​t​ ​s​t​y​l​e​.​ ​C​a​n​ ​b​e​ ​u​s​e​d​ ​t​o​ ​w​r​a​p​ ​a​ ​p​a​r​a​g​r​a​p​h​.​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​-​ ​<​c​a​p​t​i​o​n​>​ ​f​o​r​ ​c​a​p​t​i​o​n​ ​t​e​x​t​ ​s​t​y​l​e​.​ ​C​a​n​ ​b​e​ ​u​s​e​d​ ​t​o​ ​w​r​a​p​ ​a​ ​p​a​r​a​g​r​a​p​h​.​
 						​
-						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​-​ ​f​o​r​ ​h​i​g​h​l​i​g​h​t​s​ ​-​ ​c​o​l​o​r​ ​i​s​ ​o​p​t​i​o​n​a​l​.​ ​C​a​n​ ​o​n​l​y​ ​b​e​ ​u​s​e​d​ ​i​n​l​i​n​e​.​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​-​ ​<​h​i​g​h​l​i​g​h​t​ ​c​o​l​o​r​=​'​'​>​ ​f​o​r​ ​h​i​g​h​l​i​g​h​t​s​ ​-​ ​c​o​l​o​r​ ​i​s​ ​o​p​t​i​o​n​a​l​.​ ​C​a​n​ ​o​n​l​y​ ​b​e​ ​u​s​e​d​ ​i​n​l​i​n​e​.​
 						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ 
 							 */
 							longDesc: string
@@ -104978,11 +104978,11 @@ export type TranslationFunctions = {
 					
 					
 					
-						          - for callouts. Can be used to wrap multiple paragraphs/images/etc.
+						          - <callout> for callouts. Can be used to wrap multiple paragraphs/images/etc.
 					
-						          - for caption text style. Can be used to wrap a paragraph.
+						          - <caption> for caption text style. Can be used to wrap a paragraph.
 					
-						          - for highlights - color is optional. Can only be used inline.
+						          - <highlight color=''> for highlights - color is optional. Can only be used inline.
 						          
 							 */
 							longDesc: () => LocalizedString
