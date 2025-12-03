@@ -583,6 +583,9 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             throw "EXPRESSION-RETURN-TYPE-ERROR", sprintf("The 'expressions' object for app %y expression %y "
                 "defines unknown return type %y", app, name, rt);
         }
+        if (v.hasKey("group")) {
+            v.groups = remove v.group;
+        }
         return <DataProviderExpressionInfo>{
             "name": name,
             "type": type,

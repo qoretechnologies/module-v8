@@ -674,7 +674,9 @@ public class TypeScriptActionInterface {
             }
             search_options = remove app.search_options;
         }
-
+        if (app.hasKey("group")) {
+            app.groups = remove app.group;
+        }
         appmap{app.name} = <AppInfo>{
             "app": app,
 
@@ -734,6 +736,10 @@ public class TypeScriptActionInterface {
 
         # load the referenced module immediately
         load_module(app."module");
+
+        if (app.hasKey("group")) {
+            app.groups = remove app.group;
+        }
 
         hash<AppInfo> info = <AppInfo>{
             "app": app,
@@ -1236,6 +1242,7 @@ public class TypeScriptActionInterface {
                 "path_vars": {
                     "table": TablePathVar,
                 },
+                "groups": ("Record-Based",),
                 "data_dependent_options": True,
                 "data_provider_info": prov_info,
             });
@@ -1251,6 +1258,83 @@ public class TypeScriptActionInterface {
                 "path_vars": {
                     "table": TablePathVar,
                 },
+                "groups": ("Record-Based",),
+                "data_dependent_options": True,
+                "data_provider_info": prov_info,
+            });
+            ++cnt;
+        }
+        if (info.create_records) {
+            string desc = sprintf("Create new records in the given table in app %y", info.app.name);
+            DataProviderActionCatalog::registerAction(<DataProviderActionInfo>{
+                "app": info.app.name,
+                "action": "create",
+                "display_name": "Create Records",
+                "short_desc": desc,
+                "desc": desc,
+                "action_code": DPAT_CREATE,
+                "path": "tables/{table}",
+                "path_vars": {
+                    "table": TablePathVar,
+                },
+                "groups": ("Record-Based",),
+                "data_dependent_options": True,
+                "data_provider_info": prov_info,
+            });
+            ++cnt;
+        }
+        if (info.update_records) {
+            string desc = sprintf("Update existing records in the given table in app %y", info.app.name);
+            DataProviderActionCatalog::registerAction(<DataProviderActionInfo>{
+                "app": info.app.name,
+                "action": "update",
+                "display_name": "Update Records",
+                "short_desc": desc,
+                "desc": desc,
+                "action_code": DPAT_UPDATE,
+                "path": "tables/{table}",
+                "path_vars": {
+                    "table": TablePathVar,
+                },
+                "groups": ("Record-Based",),
+                "data_dependent_options": True,
+                "data_provider_info": prov_info,
+            });
+            ++cnt;
+        }
+        if (info.upsert_records) {
+            string desc = sprintf("Upsert records in the given table in app %y", info.app.name);
+            DataProviderActionCatalog::registerAction(<DataProviderActionInfo>{
+                "app": info.app.name,
+                "action": "upsert",
+                "display_name": "Upsert Records",
+                "short_desc": desc,
+                "desc": desc,
+                "action_code": DPAT_UPSERT,
+                "path": "tables/{table}",
+                "path_vars": {
+                    "table": TablePathVar,
+                },
+                "groups": ("Record-Based",),
+                "data_dependent_options": True,
+                "data_provider_info": prov_info,
+            });
+            ++cnt;
+        }
+        if (info.delete_records) {
+            string desc = sprintf("Delete records from the given table in app %y", info.app.name);
+            DataProviderActionCatalog::registerAction(<DataProviderActionInfo>{
+                "app": info.app.name,
+                "action": "delete",
+                "display_name": "Delete Records",
+                "short_desc": desc,
+                "desc": desc,
+                "action_code": DPAT_DELETE,
+                "path": "tables/{table}",
+                "path_vars": {
+                    "table": TablePathVar,
+                },
+                "groups": ("Record-Based",),
                 "data_dependent_options": True,
                 "data_provider_info": prov_info,
             });
@@ -1368,6 +1452,9 @@ public class TypeScriptActionInterface {
         on_error rethrow $1.err, sprintf("%s (while registering action %y for app %y)", $1.desc, action.action,
             action.app);
         TypeScriptActionInterface::generateDataProvider(\action, pool);
+        if (action.hasKey("group")) {
+            action.groups = remove action.group;
+        }
         DataProviderActionCatalog::registerAction(cast<hash<DataProviderActionInfo>>(action));
     }
 
