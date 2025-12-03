@@ -157,7 +157,7 @@ const SearchLeads = QoreAppCreator.createLocalizedAction<typeof options>({
         path: `leads/search`,
         method: 'POST',
         token,
-        body: obj,
+        ...(obj && { body: obj }),
       });
 
       const formattedLeads = await mapCopperCrmRecordsCustomFieldsResponseArray({

@@ -171,7 +171,7 @@ const SearchPeople = QoreAppCreator.createLocalizedAction<typeof options>({
         path: `people/search`,
         method: 'POST',
         token,
-        body: obj,
+        ...(obj && { body: obj }),
       });
 
       const results = response.results || [];
