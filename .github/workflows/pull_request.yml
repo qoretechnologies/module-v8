@@ -155,6 +155,7 @@ env:
   ZOHO_CRM_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).ZOHO_CRM_REFRESH_TOKEN }}
   GITLAB_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).GITLAB_TOKEN }}
   COPPER_CRM_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).COPPER_CRM_TOKEN }}
+  CRAFT_URL: ${{ fromJson(secrets.TEST_VARIABLES).CRAFT_URL }}
 
 jobs:
   PullRequestTests:

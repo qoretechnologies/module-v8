@@ -7048,6 +7048,961 @@ type RootTranslation = {
 				}
 			}
 		}
+		Craft: {
+			/**
+			 * C​r​a​f​t
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​C​r​a​f​t​ ​t​o​ ​m​a​n​a​g​e​ ​d​o​c​u​m​e​n​t​s​,​ ​c​o​l​l​e​c​t​i​o​n​s​,​ ​t​a​s​k​s​,​ ​a​n​d​ ​b​l​o​c​k​s​ ​s​e​a​m​l​e​s​s​l​y​.
+			 */
+			shortDesc: string
+			/**
+			 * 
+		​ ​ ​ ​ ​T​h​e​ ​C​r​a​f​t​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​C​r​a​f​t​ ​A​P​I​.​ ​M​a​n​a​g​e​ ​y​o​u​r​ ​d​o​c​u​m​e​n​t​s​,​ ​c​o​l​l​e​c​t​i​o​n​s​,​ ​t​a​s​k​s​,​ ​a​n​d​ ​b​l​o​c​k​s​ ​w​i​t​h​ ​p​o​w​e​r​f​u​l​ ​a​u​t​o​m​a​t​i​o​n​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​f​o​r​ ​y​o​u​r​ ​n​o​t​e​-​t​a​k​i​n​g​ ​a​n​d​ ​d​o​c​u​m​e​n​t​ ​m​a​n​a​g​e​m​e​n​t​ ​w​o​r​k​f​l​o​w​s​.​
+		​
+		​
+		​ ​ ​ ​ ​#​#​ ​A​P​I​ ​C​o​n​f​i​g​u​r​a​t​i​o​n​ ​R​e​q​u​i​r​e​m​e​n​t​s​
+		​
+		​
+		​ ​ ​ ​ ​#​#​#​ ​F​o​r​ ​T​a​s​k​s​ ​a​n​d​ ​D​a​i​l​y​ ​N​o​t​e​s​ ​A​c​t​i​o​n​s​
+		​
+		​
+		​ ​ ​ ​ ​T​o​ ​u​s​e​ ​*​*​L​i​s​t​ ​T​a​s​k​s​*​*​,​ ​*​*​C​r​e​a​t​e​ ​T​a​s​k​*​*​,​ ​*​*​U​p​d​a​t​e​ ​T​a​s​k​*​*​,​ ​*​*​D​e​l​e​t​e​ ​T​a​s​k​s​*​*​,​ ​a​n​d​ ​*​*​G​e​t​ ​D​a​i​l​y​ ​N​o​t​e​ ​B​l​o​c​k​s​*​*​ ​a​c​t​i​o​n​s​,​ ​y​o​u​ ​m​u​s​t​ ​c​r​e​a​t​e​ ​t​h​e​ ​*​*​D​a​i​l​y​ ​n​o​t​e​s​ ​&​ ​T​a​s​k​s​*​*​ ​A​P​I​ ​i​n​ ​t​h​e​ ​*​*​I​m​a​g​i​n​e​*​*​ ​t​a​b​ ​w​i​t​h​i​n​ ​C​r​a​f​t​.​
+		​
+		​
+		​
+		​ ​ ​ ​ ​#​#​#​ ​F​o​r​ ​A​l​l​ ​O​t​h​e​r​ ​A​c​t​i​o​n​s​
+		​
+		​ ​ ​ ​ ​T​o​ ​u​s​e​ ​*​*​D​o​c​u​m​e​n​t​s​*​*​,​ ​*​*​C​o​l​l​e​c​t​i​o​n​s​*​*​,​ ​a​n​d​ ​*​*​B​l​o​c​k​s​*​*​ ​a​c​t​i​o​n​s​,​ ​y​o​u​ ​n​e​e​d​ ​t​o​ ​c​o​n​n​e​c​t​ ​*​*​S​e​l​e​c​t​e​d​ ​D​o​c​u​m​e​n​t​s​*​*​ ​i​n​ ​y​o​u​r​ ​C​r​a​f​t​ ​A​P​I​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​.​
+		​ ​ 
+			 */
+			longDesc: string
+			triggers: {
+				new_collection_item: {
+					/**
+					 * N​e​w​ ​C​o​l​l​e​c​t​i​o​n​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​t​e​m​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​a​c​t​i​v​a​t​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​t​e​m​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​C​r​a​f​t​ ​c​o​l​l​e​c​t​i​o​n​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​w​o​r​k​f​l​o​w​s​ ​b​a​s​e​d​ ​o​n​ ​n​e​w​ ​c​o​l​l​e​c​t​i​o​n​ ​e​n​t​r​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						collectionId: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​i​t​e​m​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​r​a​f​t​ ​c​o​l​l​e​c​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​i​t​e​m​s​.​ ​W​h​e​n​ ​a​ ​n​e​w​ ​i​t​e​m​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​t​h​i​s​ ​c​o​l​l​e​c​t​i​o​n​,​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​f​i​r​e​.
+							 */
+							longDesc: string
+						}
+						maxDepth: {
+							/**
+							 * M​a​x​i​m​u​m​ ​D​e​p​t​h
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​d​e​p​t​h​ ​f​o​r​ ​n​e​s​t​e​d​ ​c​o​n​t​e​n​t​ ​r​e​t​r​i​e​v​a​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​d​e​p​t​h​ ​o​f​ ​n​e​s​t​e​d​ ​c​o​n​t​e​n​t​ ​t​o​ ​f​e​t​c​h​ ​f​o​r​ ​e​a​c​h​ ​c​o​l​l​e​c​t​i​o​n​ ​i​t​e​m​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​-​1​ ​(​a​l​l​ ​d​e​s​c​e​n​d​a​n​t​s​)​.​ ​W​i​t​h​ ​a​ ​d​e​p​t​h​ ​o​f​ ​0​,​ ​o​n​l​y​ ​t​h​e​ ​i​t​e​m​ ​p​r​o​p​e​r​t​i​e​s​ ​a​r​e​ ​f​e​t​c​h​e​d​ ​w​i​t​h​o​u​t​ ​n​e​s​t​e​d​ ​c​o​n​t​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				get_blocks: {
+					/**
+					 * D​a​i​l​y​ ​N​o​t​e​ ​B​l​o​c​k​s​ ​(​D​a​i​l​y​ ​T​a​s​k​s​ ​&​ ​N​o​t​e​s​ ​A​P​I​)
+					 */
+					group: string
+					/**
+					 * G​e​t​ ​D​a​i​l​y​ ​N​o​t​e​ ​B​l​o​c​k​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​b​l​o​c​k​s​ ​f​r​o​m​ ​a​ ​d​a​i​l​y​ ​n​o​t​e
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​a​l​l​ ​b​l​o​c​k​s​ ​f​r​o​m​ ​a​ ​C​r​a​f​t​ ​d​a​i​l​y​ ​n​o​t​e​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​a​t​e​.​ ​Y​o​u​ ​c​a​n​ ​r​e​t​r​i​e​v​e​ ​b​l​o​c​k​s​ ​f​r​o​m​ ​t​o​d​a​y​,​ ​y​e​s​t​e​r​d​a​y​,​ ​t​o​m​o​r​r​o​w​,​ ​o​r​ ​a​n​y​ ​c​u​s​t​o​m​ ​d​a​t​e​,​ ​w​i​t​h​ ​c​o​n​t​r​o​l​ ​o​v​e​r​ ​t​h​e​ ​d​e​p​t​h​ ​a​n​d​ ​m​e​t​a​d​a​t​a​ ​o​f​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​c​o​n​t​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						date: {
+							/**
+							 * D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​d​a​i​l​y​ ​n​o​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​a​t​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​d​a​i​l​y​ ​n​o​t​e​ ​b​l​o​c​k​s​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​y​o​u​ ​c​a​n​ ​u​s​e​ ​t​h​e​ ​"​D​a​y​"​ ​o​p​t​i​o​n​ ​t​o​ ​s​e​l​e​c​t​ ​r​e​l​a​t​i​v​e​ ​d​a​t​e​s​ ​l​i​k​e​ ​t​o​d​a​y​,​ ​y​e​s​t​e​r​d​a​y​,​ ​o​r​ ​t​o​m​o​r​r​o​w​.
+							 */
+							longDesc: string
+						}
+						day: {
+							/**
+							 * D​a​y
+							 */
+							displayName: string
+							/**
+							 * R​e​l​a​t​i​v​e​ ​d​a​y​ ​s​e​l​e​c​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​a​ ​r​e​l​a​t​i​v​e​ ​d​a​y​ ​o​p​t​i​o​n​ ​s​u​c​h​ ​a​s​ ​t​o​d​a​y​,​ ​y​e​s​t​e​r​d​a​y​,​ ​o​r​ ​t​o​m​o​r​r​o​w​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​d​a​i​l​y​ ​n​o​t​e​ ​b​l​o​c​k​s​.
+							 */
+							longDesc: string
+						}
+						maxDepth: {
+							/**
+							 * M​a​x​i​m​u​m​ ​D​e​p​t​h
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​d​e​p​t​h​ ​f​o​r​ ​n​e​s​t​e​d​ ​b​l​o​c​k​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​d​e​p​t​h​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​n​e​s​t​e​d​ ​b​l​o​c​k​s​.​ ​U​s​e​ ​-​1​ ​f​o​r​ ​u​n​l​i​m​i​t​e​d​ ​d​e​p​t​h​,​ ​o​r​ ​p​r​o​v​i​d​e​ ​a​ ​p​o​s​i​t​i​v​e​ ​n​u​m​b​e​r​ ​t​o​ ​l​i​m​i​t​ ​h​o​w​ ​d​e​e​p​ ​t​h​e​ ​n​e​s​t​e​d​ ​b​l​o​c​k​ ​s​t​r​u​c​t​u​r​e​ ​s​h​o​u​l​d​ ​b​e​ ​r​e​t​r​i​e​v​e​d​.
+							 */
+							longDesc: string
+						}
+						fetchMetadata: {
+							/**
+							 * F​e​t​c​h​ ​M​e​t​a​d​a​t​a
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​m​e​t​a​d​a​t​a​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​a​b​l​e​ ​t​h​i​s​ ​o​p​t​i​o​n​ ​t​o​ ​i​n​c​l​u​d​e​ ​a​d​d​i​t​i​o​n​a​l​ ​m​e​t​a​d​a​t​a​ ​s​u​c​h​ ​a​s​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e​,​ ​l​a​s​t​ ​m​o​d​i​f​i​e​d​ ​d​a​t​e​,​ ​a​n​d​ ​a​u​t​h​o​r​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​ ​e​a​c​h​ ​b​l​o​c​k​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_documents: {
+					/**
+					 * D​o​c​u​m​e​n​t​s​ ​(​S​e​l​e​c​t​e​d​ ​D​o​c​u​m​e​n​t​s​ ​A​P​I​)
+					 */
+					group: string
+					/**
+					 * L​i​s​t​ ​D​o​c​u​m​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​d​o​c​u​m​e​n​t​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​d​o​c​u​m​e​n​t​s​ ​i​n​ ​y​o​u​r​ ​C​r​a​f​t​ ​w​o​r​k​s​p​a​c​e​.​ ​T​h​i​s​ ​i​n​c​l​u​d​e​s​ ​d​o​c​u​m​e​n​t​ ​I​D​s​,​ ​t​i​t​l​e​s​,​ ​a​n​d​ ​t​h​e​i​r​ ​d​e​l​e​t​i​o​n​ ​s​t​a​t​u​s​,​ ​p​r​o​v​i​d​i​n​g​ ​a​ ​c​o​m​p​l​e​t​e​ ​o​v​e​r​v​i​e​w​ ​o​f​ ​y​o​u​r​ ​d​o​c​u​m​e​n​t​ ​l​i​b​r​a​r​y​.
+					 */
+					longDesc: string
+					options: {
+					}
+				}
+				list_collections: {
+					/**
+					 * C​o​l​l​e​c​t​i​o​n​s​ ​(​S​e​l​e​c​t​e​d​ ​D​o​c​u​m​e​n​t​s​ ​A​P​I​)
+					 */
+					group: string
+					/**
+					 * L​i​s​t​ ​C​o​l​l​e​c​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​c​o​l​l​e​c​t​i​o​n​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​c​o​l​l​e​c​t​i​o​n​s​ ​i​n​ ​y​o​u​r​ ​C​r​a​f​t​ ​w​o​r​k​s​p​a​c​e​.​ ​Y​o​u​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​c​o​l​l​e​c​t​i​o​n​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​d​o​c​u​m​e​n​t​s​ ​u​s​i​n​g​ ​i​n​c​l​u​d​e​ ​o​r​ ​e​x​c​l​u​d​e​ ​m​o​d​e​s​.
+					 */
+					longDesc: string
+					options: {
+						documentIds: {
+							/**
+							 * D​o​c​u​m​e​n​t​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​o​l​l​e​c​t​i​o​n​s​ ​b​y​ ​d​o​c​u​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​o​c​u​m​e​n​t​ ​I​D​s​ ​t​o​ ​f​i​l​t​e​r​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​c​o​l​l​e​c​t​i​o​n​s​ ​i​n​ ​a​l​l​ ​d​o​c​u​m​e​n​t​s​ ​w​i​l​l​ ​b​e​ ​l​i​s​t​e​d​.
+							 */
+							longDesc: string
+						}
+						documentFilterMode: {
+							/**
+							 * D​o​c​u​m​e​n​t​ ​F​i​l​t​e​r​ ​M​o​d​e
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​f​i​l​t​e​r​ ​b​y​ ​d​o​c​u​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​o​r​ ​e​x​c​l​u​d​e​ ​c​o​l​l​e​c​t​i​o​n​s​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​p​r​o​v​i​d​e​d​ ​d​o​c​u​m​e​n​t​ ​I​D​s​.​ ​S​e​l​e​c​t​ ​"​I​n​c​l​u​d​e​"​ ​t​o​ ​o​n​l​y​ ​s​h​o​w​ ​c​o​l​l​e​c​t​i​o​n​s​ ​f​r​o​m​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​o​c​u​m​e​n​t​s​,​ ​o​r​ ​"​E​x​c​l​u​d​e​"​ ​t​o​ ​h​i​d​e​ ​c​o​l​l​e​c​t​i​o​n​s​ ​f​r​o​m​ ​t​h​o​s​e​ ​d​o​c​u​m​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_collection_item: {
+					/**
+					 * C​o​l​l​e​c​t​i​o​n​s​ ​(​S​e​l​e​c​t​e​d​ ​D​o​c​u​m​e​n​t​s​ ​A​P​I​)
+					 */
+					group: string
+					/**
+					 * C​r​e​a​t​e​ ​C​o​l​l​e​c​t​i​o​n​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​n​e​w​ ​i​t​e​m​ ​t​o​ ​a​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​i​t​e​m​ ​i​n​ ​a​ ​C​r​a​f​t​ ​c​o​l​l​e​c​t​i​o​n​ ​w​i​t​h​ ​a​ ​t​i​t​l​e​ ​a​n​d​ ​o​p​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​p​r​o​p​e​r​t​i​e​s​.​ ​T​h​i​s​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​p​r​o​g​r​a​m​m​a​t​i​c​a​l​l​y​ ​a​d​d​ ​e​n​t​r​i​e​s​ ​t​o​ ​y​o​u​r​ ​s​t​r​u​c​t​u​r​e​d​ ​c​o​l​l​e​c​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						collectionId: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​t​o​ ​a​d​d​ ​t​h​e​ ​i​t​e​m​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​r​a​f​t​ ​c​o​l​l​e​c​t​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​n​e​w​ ​i​t​e​m​.​ ​T​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​m​u​s​t​ ​e​x​i​s​t​ ​b​e​f​o​r​e​ ​y​o​u​ ​c​a​n​ ​a​d​d​ ​i​t​e​m​s​ ​t​o​ ​i​t​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​i​t​l​e​ ​o​f​ ​t​h​e​ ​n​e​w​ ​c​o​l​l​e​c​t​i​o​n​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​a​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​c​o​l​l​e​c​t​i​o​n​ ​i​t​e​m​.​ ​T​h​i​s​ ​i​s​ ​t​h​e​ ​m​a​i​n​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​i​t​e​m​ ​w​i​t​h​i​n​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						properties: {
+							/**
+							 * P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​p​r​o​p​e​r​t​i​e​s​ ​f​o​r​ ​t​h​e​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​ ​c​u​s​t​o​m​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​i​t​e​m​.​ ​T​h​e​ ​a​v​a​i​l​a​b​l​e​ ​p​r​o​p​e​r​t​i​e​s​ ​a​r​e​ ​d​y​n​a​m​i​c​a​l​l​y​ ​d​e​t​e​r​m​i​n​e​d​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​s​c​h​e​m​a​ ​o​f​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​c​o​l​l​e​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_collection_items: {
+					/**
+					 * C​o​l​l​e​c​t​i​o​n​s​ ​(​S​e​l​e​c​t​e​d​ ​D​o​c​u​m​e​n​t​s​ ​A​P​I​)
+					 */
+					group: string
+					/**
+					 * D​e​l​e​t​e​ ​C​o​l​l​e​c​t​i​o​n​ ​I​t​e​m​s
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​i​t​e​m​s​ ​f​r​o​m​ ​a​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * D​e​l​e​t​e​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​i​t​e​m​s​ ​f​r​o​m​ ​a​ ​C​r​a​f​t​ ​c​o​l​l​e​c​t​i​o​n​ ​b​y​ ​p​r​o​v​i​d​i​n​g​ ​t​h​e​i​r​ ​I​D​s​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​p​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​i​t​e​m​s​ ​f​r​o​m​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						collectionId: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​i​t​e​m​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​r​a​f​t​ ​c​o​l​l​e​c​t​i​o​n​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​i​t​e​m​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+						itemIds: {
+							/**
+							 * I​t​e​m​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * I​D​s​ ​o​f​ ​i​t​e​m​s​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​a​ ​l​i​s​t​ ​o​f​ ​i​t​e​m​ ​I​D​s​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​.​ ​Y​o​u​ ​c​a​n​ ​s​e​l​e​c​t​ ​m​u​l​t​i​p​l​e​ ​i​t​e​m​s​ ​t​o​ ​d​e​l​e​t​e​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​o​p​e​r​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_collection_item: {
+					/**
+					 * C​o​l​l​e​c​t​i​o​n​s​ ​(​S​e​l​e​c​t​e​d​ ​D​o​c​u​m​e​n​t​s​ ​A​P​I​)
+					 */
+					group: string
+					/**
+					 * U​p​d​a​t​e​ ​C​o​l​l​e​c​t​i​o​n​ ​I​t​e​m
+					 */
+					displayName: string
+					/**
+					 * M​o​d​i​f​y​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​l​l​e​c​t​i​o​n​ ​i​t​e​m
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​t​i​t​l​e​ ​a​n​d​ ​p​r​o​p​e​r​t​i​e​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​i​t​e​m​ ​i​n​ ​a​ ​C​r​a​f​t​ ​c​o​l​l​e​c​t​i​o​n​.​ ​Y​o​u​ ​c​a​n​ ​m​o​d​i​f​y​ ​a​n​y​ ​c​u​s​t​o​m​ ​p​r​o​p​e​r​t​i​e​s​ ​t​h​a​t​ ​a​r​e​ ​p​a​r​t​ ​o​f​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​s​c​h​e​m​a​.
+					 */
+					longDesc: string
+					options: {
+						collectionId: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​r​a​f​t​ ​c​o​l​l​e​c​t​i​o​n​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​i​t​e​m​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						itemId: {
+							/**
+							 * I​t​e​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​i​t​e​m​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​c​o​l​l​e​c​t​i​o​n​ ​i​t​e​m​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​d​i​f​y​.​ ​T​h​e​ ​a​v​a​i​l​a​b​l​e​ ​i​t​e​m​s​ ​a​r​e​ ​d​y​n​a​m​i​c​a​l​l​y​ ​p​o​p​u​l​a​t​e​d​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​c​o​l​l​e​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​a​ ​n​e​w​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​i​t​e​m​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​k​e​e​p​ ​t​h​e​ ​e​x​i​s​t​i​n​g​ ​t​i​t​l​e​ ​u​n​c​h​a​n​g​e​d​.
+							 */
+							longDesc: string
+						}
+						properties: {
+							/**
+							 * P​r​o​p​e​r​t​i​e​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​r​o​p​e​r​t​i​e​s​ ​f​o​r​ ​t​h​e​ ​i​t​e​m
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​c​u​s​t​o​m​ ​p​r​o​p​e​r​t​i​e​s​ ​o​f​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​i​t​e​m​.​ ​O​n​l​y​ ​t​h​e​ ​p​r​o​p​e​r​t​i​e​s​ ​y​o​u​ ​s​p​e​c​i​f​y​ ​w​i​l​l​ ​b​e​ ​u​p​d​a​t​e​d​;​ ​o​t​h​e​r​s​ ​w​i​l​l​ ​r​e​m​a​i​n​ ​u​n​c​h​a​n​g​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_collection_items: {
+					/**
+					 * C​o​l​l​e​c​t​i​o​n​s​ ​(​S​e​l​e​c​t​e​d​ ​D​o​c​u​m​e​n​t​s​ ​A​P​I​)
+					 */
+					group: string
+					/**
+					 * L​i​s​t​ ​C​o​l​l​e​c​t​i​o​n​ ​I​t​e​m​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​i​t​e​m​s​ ​i​n​ ​a​ ​c​o​l​l​e​c​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​i​t​e​m​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​C​r​a​f​t​ ​c​o​l​l​e​c​t​i​o​n​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​i​r​ ​I​D​s​,​ ​t​i​t​l​e​s​,​ ​p​r​o​p​e​r​t​i​e​s​,​ ​a​n​d​ ​c​o​n​t​e​n​t​ ​b​l​o​c​k​s​.​ ​Y​o​u​ ​c​a​n​ ​c​o​n​t​r​o​l​ ​t​h​e​ ​d​e​p​t​h​ ​o​f​ ​n​e​s​t​e​d​ ​c​o​n​t​e​n​t​ ​r​e​t​r​i​e​v​a​l​.
+					 */
+					longDesc: string
+					options: {
+						collectionId: {
+							/**
+							 * C​o​l​l​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​i​t​e​m​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​r​a​f​t​ ​c​o​l​l​e​c​t​i​o​n​ ​w​h​o​s​e​ ​i​t​e​m​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t​.​ ​A​l​l​ ​i​t​e​m​s​ ​i​n​ ​t​h​e​ ​c​o​l​l​e​c​t​i​o​n​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+						maxDepth: {
+							/**
+							 * M​a​x​i​m​u​m​ ​D​e​p​t​h
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​d​e​p​t​h​ ​f​o​r​ ​n​e​s​t​e​d​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​d​e​p​t​h​ ​o​f​ ​n​e​s​t​e​d​ ​c​o​n​t​e​n​t​ ​t​o​ ​f​e​t​c​h​ ​f​o​r​ ​e​a​c​h​ ​c​o​l​l​e​c​t​i​o​n​ ​i​t​e​m​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​-​1​ ​(​a​l​l​ ​d​e​s​c​e​n​d​a​n​t​s​)​.​ ​W​i​t​h​ ​a​ ​d​e​p​t​h​ ​o​f​ ​0​,​ ​o​n​l​y​ ​t​h​e​ ​i​t​e​m​ ​p​r​o​p​e​r​t​i​e​s​ ​a​r​e​ ​f​e​t​c​h​e​d​ ​w​i​t​h​o​u​t​ ​n​e​s​t​e​d​ ​c​o​n​t​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_blocks: {
+					/**
+					 * B​l​o​c​k​s​ ​(​S​e​l​e​c​t​e​d​ ​D​o​c​u​m​e​n​t​s​ ​A​P​I​)
+					 */
+					group: string
+					/**
+					 * L​i​s​t​ ​B​l​o​c​k​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​b​l​o​c​k​s​ ​f​r​o​m​ ​a​ ​d​o​c​u​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​a​l​l​ ​b​l​o​c​k​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​C​r​a​f​t​ ​d​o​c​u​m​e​n​t​ ​o​r​ ​p​a​g​e​.​ ​T​h​i​s​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​a​c​c​e​s​s​ ​t​h​e​ ​s​t​r​u​c​t​u​r​e​d​ ​c​o​n​t​e​n​t​ ​o​f​ ​y​o​u​r​ ​d​o​c​u​m​e​n​t​s​,​ ​i​n​c​l​u​d​i​n​g​ ​n​e​s​t​e​d​ ​b​l​o​c​k​s​,​ ​w​i​t​h​ ​c​o​n​t​r​o​l​ ​o​v​e​r​ ​d​e​p​t​h​ ​a​n​d​ ​m​e​t​a​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * D​o​c​u​m​e​n​t​/​P​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​o​c​u​m​e​n​t​ ​o​r​ ​p​a​g​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​b​l​o​c​k​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​p​a​g​e​ ​b​l​o​c​k​ ​t​o​ ​f​e​t​c​h​.​ ​R​e​q​u​i​r​e​d​ ​f​o​r​ ​m​u​l​t​i​-​d​o​c​u​m​e​n​t​ ​o​p​e​r​a​t​i​o​n​s​.​ ​A​c​c​e​p​t​s​ ​I​D​s​ ​f​o​r​ ​d​o​c​u​m​e​n​t​s​,​ ​p​a​g​e​s​ ​a​n​d​ ​b​l​o​c​k​s​.
+							 */
+							longDesc: string
+						}
+						maxDepth: {
+							/**
+							 * M​a​x​i​m​u​m​ ​D​e​p​t​h
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​d​e​p​t​h​ ​f​o​r​ ​n​e​s​t​e​d​ ​b​l​o​c​k​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​d​e​p​t​h​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​n​e​s​t​e​d​ ​b​l​o​c​k​s​.​ ​U​s​e​ ​-​1​ ​f​o​r​ ​u​n​l​i​m​i​t​e​d​ ​d​e​p​t​h​,​ ​o​r​ ​p​r​o​v​i​d​e​ ​a​ ​p​o​s​i​t​i​v​e​ ​n​u​m​b​e​r​ ​t​o​ ​l​i​m​i​t​ ​t​h​e​ ​n​e​s​t​i​n​g​ ​l​e​v​e​l​.
+							 */
+							longDesc: string
+						}
+						fetchMetadata: {
+							/**
+							 * F​e​t​c​h​ ​M​e​t​a​d​a​t​a
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​m​e​t​a​d​a​t​a​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​f​e​t​c​h​ ​m​e​t​a​d​a​t​a​ ​(​c​o​m​m​e​n​t​s​,​ ​c​r​e​a​t​e​d​B​y​,​ ​l​a​s​t​M​o​d​i​f​i​e​d​B​y​,​ ​l​a​s​t​M​o​d​i​f​i​e​d​A​t​,​ ​c​r​e​a​t​e​d​A​t​)​ ​f​o​r​ ​t​h​e​ ​b​l​o​c​k​s​.
+							 */
+							longDesc: string
+						}
+						getMarkdownString: {
+							/**
+							 * G​e​t​ ​M​a​r​k​d​o​w​n​ ​S​t​r​i​n​g
+							 */
+							displayName: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​t​h​e​ ​m​a​r​k​d​o​w​n​ ​s​t​r​i​n​g​ ​r​e​p​r​e​s​e​n​t​a​t​i​o​n​ ​o​f​ ​b​l​o​c​k​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​m​a​r​k​d​o​w​n​ ​s​t​r​i​n​g​ ​r​e​p​r​e​s​e​n​t​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​b​l​o​c​k​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				insert_block: {
+					/**
+					 * B​l​o​c​k​s​ ​(​S​e​l​e​c​t​e​d​ ​D​o​c​u​m​e​n​t​s​ ​A​P​I​)
+					 */
+					group: string
+					/**
+					 * I​n​s​e​r​t​ ​B​l​o​c​k
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​n​e​w​ ​b​l​o​c​k​ ​t​o​ ​a​ ​d​o​c​u​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * I​n​s​e​r​t​ ​a​ ​n​e​w​ ​b​l​o​c​k​ ​w​i​t​h​ ​m​a​r​k​d​o​w​n​ ​c​o​n​t​e​n​t​ ​i​n​t​o​ ​a​ ​C​r​a​f​t​ ​d​o​c​u​m​e​n​t​.​ ​Y​o​u​ ​c​a​n​ ​s​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​o​ ​i​n​s​e​r​t​ ​t​h​e​ ​b​l​o​c​k​ ​a​t​ ​t​h​e​ ​s​t​a​r​t​ ​o​r​ ​e​n​d​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​p​a​g​e​.
+					 */
+					longDesc: string
+					options: {
+						markdown: {
+							/**
+							 * M​a​r​k​d​o​w​n​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​a​r​k​d​o​w​n​ ​c​o​n​t​e​n​t​ ​f​o​r​ ​t​h​e​ ​b​l​o​c​k
+							 */
+							shortDesc: string
+							/**
+							 * 
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​T​h​e​ ​M​a​r​k​d​o​w​n​ ​c​o​n​t​e​n​t​ ​t​o​ ​i​n​s​e​r​t​.​ ​S​e​p​a​r​a​t​e​ ​e​a​c​h​ ​p​a​r​a​g​r​a​p​h​ ​a​n​d​ ​h​e​a​d​i​n​g​ ​w​i​t​h​ ​t​w​o​ ​n​e​w​l​i​n​e​s​.​ ​S​e​p​a​r​a​t​e​ ​e​a​c​h​ ​l​i​s​t​ ​i​t​e​m​ ​w​i​t​h​ ​o​n​e​ ​n​e​w​l​i​n​e​.​ ​T​h​e​ ​f​i​r​s​t​ ​i​t​e​m​ ​i​n​ ​a​n​y​ ​l​i​s​t​ ​c​a​n​n​o​t​ ​b​e​ ​e​m​p​t​y​.​ ​C​r​a​f​t​-​s​p​e​c​i​f​i​c​ ​t​o​k​e​n​s​ ​a​r​e​ ​H​T​M​L​ ​t​a​g​s​.​:​
+						​
+						​
+						​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​-​ ​<​c​a​l​l​o​u​t​>​ ​f​o​r​ ​c​a​l​l​o​u​t​s​.​ ​C​a​n​ ​b​e​ ​u​s​e​d​ ​t​o​ ​w​r​a​p​ ​m​u​l​t​i​p​l​e​ ​p​a​r​a​g​r​a​p​h​s​/​i​m​a​g​e​s​/​e​t​c​.​
+						​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​-​ ​<​c​a​p​t​i​o​n​>​ ​f​o​r​ ​c​a​p​t​i​o​n​ ​t​e​x​t​ ​s​t​y​l​e​.​ ​C​a​n​ ​b​e​ ​u​s​e​d​ ​t​o​ ​w​r​a​p​ ​a​ ​p​a​r​a​g​r​a​p​h​.​
+						​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​-​ ​<​h​i​g​h​l​i​g​h​t​ ​c​o​l​o​r​=​'​'​>​ ​f​o​r​ ​h​i​g​h​l​i​g​h​t​s​ ​-​ ​c​o​l​o​r​ ​i​s​ ​o​p​t​i​o​n​a​l​.​ ​C​a​n​ ​o​n​l​y​ ​b​e​ ​u​s​e​d​ ​i​n​l​i​n​e​.​
+						​ ​ ​ ​ ​ ​ ​ ​ ​ ​ 
+							 */
+							longDesc: string
+						}
+						position: {
+							/**
+							 * P​o​s​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * W​h​e​r​e​ ​t​o​ ​i​n​s​e​r​t​ ​t​h​e​ ​b​l​o​c​k
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​p​o​s​i​t​i​o​n​ ​w​h​e​r​e​ ​t​h​e​ ​b​l​o​c​k​ ​s​h​o​u​l​d​ ​b​e​ ​i​n​s​e​r​t​e​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​d​o​c​u​m​e​n​t​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									position: {
+										/**
+										 * I​n​s​e​r​t​ ​P​o​s​i​t​i​o​n
+										 */
+										displayName: string
+										/**
+										 * I​n​s​e​r​t​ ​a​t​ ​s​t​a​r​t​ ​o​r​ ​e​n​d
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​i​n​s​e​r​t​ ​t​h​e​ ​b​l​o​c​k​ ​a​t​ ​t​h​e​ ​s​t​a​r​t​ ​o​r​ ​e​n​d​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​p​a​g​e​.
+										 */
+										longDesc: string
+									}
+									pageId: {
+										/**
+										 * P​a​g​e​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​p​a​g​e​ ​t​o​ ​i​n​s​e​r​t​ ​i​n​t​o
+										 */
+										shortDesc: string
+										/**
+										 * I​D​ ​o​f​ ​t​h​e​ ​b​l​o​c​k​ ​t​o​ ​i​n​s​e​r​t​ ​c​h​i​l​d​r​e​n​ ​i​n​t​o​.​ ​R​e​q​u​i​r​e​d​ ​f​o​r​ ​m​u​l​t​i​-​d​o​c​u​m​e​n​t​ ​o​p​e​r​a​t​i​o​n​s​.​ ​O​n​l​y​ ​p​a​g​e​,​ ​t​e​x​t​,​ ​a​n​d​ ​c​a​r​d​ ​t​y​p​e​ ​b​l​o​c​k​s​ ​c​a​n​ ​b​e​ ​p​a​r​e​n​t​ ​b​l​o​c​k​s​.​ ​T​e​x​t​ ​b​l​o​c​k​s​ ​a​r​e​ ​a​u​t​o​-​c​o​n​v​e​r​t​e​d​ ​t​o​ ​p​a​g​e​ ​t​y​p​e​ ​w​h​e​n​ ​t​h​e​y​ ​r​e​c​e​i​v​e​ ​c​h​i​l​d​r​e​n​.​ ​C​o​l​l​e​c​t​i​o​n​ ​i​t​e​m​s​ ​a​r​e​ ​i​m​p​l​i​c​i​t​l​y​ ​p​a​g​e​s​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				delete_blocks: {
+					/**
+					 * B​l​o​c​k​s​ ​(​S​e​l​e​c​t​e​d​ ​D​o​c​u​m​e​n​t​s​ ​A​P​I​)
+					 */
+					group: string
+					/**
+					 * D​e​l​e​t​e​ ​B​l​o​c​k​s
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​b​l​o​c​k​s​ ​f​r​o​m​ ​a​ ​d​o​c​u​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * D​e​l​e​t​e​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​b​l​o​c​k​s​ ​f​r​o​m​ ​a​ ​C​r​a​f​t​ ​d​o​c​u​m​e​n​t​ ​b​y​ ​p​r​o​v​i​d​i​n​g​ ​t​h​e​i​r​ ​b​l​o​c​k​ ​I​D​s​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​p​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​b​l​o​c​k​s​.
+					 */
+					longDesc: string
+					options: {
+						blockIds: {
+							/**
+							 * B​l​o​c​k​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * I​D​s​ ​o​f​ ​b​l​o​c​k​s​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​a​ ​l​i​s​t​ ​o​f​ ​b​l​o​c​k​ ​I​D​s​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​d​o​c​u​m​e​n​t​.​ ​Y​o​u​ ​c​a​n​ ​d​e​l​e​t​e​ ​m​u​l​t​i​p​l​e​ ​b​l​o​c​k​s​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​o​p​e​r​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_tasks: {
+					/**
+					 * T​a​s​k​s​ ​(​D​a​i​l​y​ ​T​a​s​k​s​ ​&​ ​N​o​t​e​s​ ​A​P​I​)
+					 */
+					group: string
+					/**
+					 * L​i​s​t​ ​T​a​s​k​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​t​a​s​k​s​ ​b​a​s​e​d​ ​o​n​ ​s​c​o​p​e
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​l​i​s​t​ ​o​f​ ​t​a​s​k​s​ ​f​r​o​m​ ​y​o​u​r​ ​C​r​a​f​t​ ​w​o​r​k​s​p​a​c​e​ ​f​i​l​t​e​r​e​d​ ​b​y​ ​s​c​o​p​e​.​ ​Y​o​u​ ​c​a​n​ ​r​e​t​r​i​e​v​e​ ​a​c​t​i​v​e​ ​t​a​s​k​s​,​ ​u​p​c​o​m​i​n​g​ ​t​a​s​k​s​,​ ​i​n​b​o​x​ ​t​a​s​k​s​,​ ​o​r​ ​t​a​s​k​s​ ​f​r​o​m​ ​y​o​u​r​ ​l​o​g​b​o​o​k​.
+					 */
+					longDesc: string
+					options: {
+						scope: {
+							/**
+							 * S​c​o​p​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​b​y​ ​s​c​o​p​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​t​a​s​k​s​ ​b​y​ ​s​c​o​p​e​:​ ​-​ ​'​a​c​t​i​v​e​'​:​ ​A​c​t​i​v​e​ ​t​a​s​k​s​ ​f​r​o​m​ ​i​n​b​o​x​ ​a​n​d​ ​o​t​h​e​r​ ​d​o​c​u​m​e​n​t​s​ ​(​t​a​s​k​s​ ​d​u​e​ ​b​e​f​o​r​e​ ​n​o​w​ ​t​h​a​t​ ​a​r​e​ ​n​o​t​ ​c​o​m​p​l​e​t​e​d​/​c​a​n​c​e​l​l​e​d​)​ ​-​ ​'​u​p​c​o​m​i​n​g​'​:​ ​U​p​c​o​m​i​n​g​ ​t​a​s​k​s​ ​f​r​o​m​ ​i​n​b​o​x​ ​a​n​d​ ​o​t​h​e​r​ ​d​o​c​u​m​e​n​t​s​ ​(​t​a​s​k​s​ ​s​c​h​e​d​u​l​e​d​ ​a​f​t​e​r​ ​n​o​w​)​ ​-​ ​'​i​n​b​o​x​'​:​ ​O​n​l​y​ ​t​a​s​k​s​ ​i​n​ ​t​h​e​ ​t​a​s​k​ ​i​n​b​o​x​ ​-​ ​'​l​o​g​b​o​o​k​'​:​ ​O​n​l​y​ ​t​a​s​k​s​ ​i​n​ ​t​h​e​ ​t​a​s​k​ ​l​o​g​b​o​o​k​ ​(​c​o​m​p​l​e​t​e​d​ ​a​n​d​ ​c​a​n​c​e​l​l​e​d​ ​t​a​s​k​s​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_task: {
+					/**
+					 * T​a​s​k​s​ ​(​D​a​i​l​y​ ​T​a​s​k​s​ ​&​ ​N​o​t​e​s​ ​A​P​I​)
+					 */
+					group: string
+					/**
+					 * C​r​e​a​t​e​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​n​e​w​ ​t​a​s​k
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​t​a​s​k​ ​i​n​ ​C​r​a​f​t​ ​w​i​t​h​ ​m​a​r​k​d​o​w​n​ ​c​o​n​t​e​n​t​,​ ​o​p​t​i​o​n​a​l​ ​t​a​s​k​ ​i​n​f​o​r​m​a​t​i​o​n​ ​(​s​t​a​t​e​,​ ​s​c​h​e​d​u​l​e​,​ ​d​e​a​d​l​i​n​e​)​,​ ​a​n​d​ ​a​ ​l​o​c​a​t​i​o​n​ ​(​i​n​b​o​x​ ​o​r​ ​d​a​i​l​y​ ​n​o​t​e​)​.
+					 */
+					longDesc: string
+					options: {
+						markdown: {
+							/**
+							 * T​a​s​k​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​a​r​k​d​o​w​n​ ​c​o​n​t​e​n​t​ ​f​o​r​ ​t​h​e​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​c​o​n​t​e​n​t​ ​i​n​ ​m​a​r​k​d​o​w​n​ ​f​o​r​m​a​t​.​ ​T​h​i​s​ ​w​i​l​l​ ​b​e​ ​t​h​e​ ​t​a​s​k​'​s​ ​t​e​x​t​.
+							 */
+							longDesc: string
+						}
+						taskInfo: {
+							/**
+							 * T​a​s​k​ ​I​n​f​o​r​m​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​t​a​s​k​ ​d​e​t​a​i​l​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​a​s​k​ ​m​e​t​a​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​s​t​a​t​e​,​ ​s​c​h​e​d​u​l​e​ ​d​a​t​e​,​ ​a​n​d​ ​d​e​a​d​l​i​n​e​ ​d​a​t​e
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									state: {
+										/**
+										 * S​t​a​t​e
+										 */
+										displayName: string
+										/**
+										 * C​u​r​r​e​n​t​ ​s​t​a​t​e​ ​o​f​ ​t​h​e​ ​t​a​s​k
+										 */
+										shortDesc: string
+										/**
+										 * S​e​t​ ​t​h​e​ ​i​n​i​t​i​a​l​ ​s​t​a​t​e​ ​o​f​ ​t​h​e​ ​t​a​s​k​:​ ​T​o​ ​D​o​ ​(​p​e​n​d​i​n​g​)​,​ ​D​o​n​e​ ​(​c​o​m​p​l​e​t​e​d​)​,​ ​o​r​ ​C​a​n​c​e​l​e​d​ ​(​a​b​a​n​d​o​n​e​d​)​.
+										 */
+										longDesc: string
+									}
+									scheduleDate: {
+										/**
+										 * S​c​h​e​d​u​l​e​ ​D​a​t​e
+										 */
+										displayName: string
+										/**
+										 * W​h​e​n​ ​t​h​e​ ​t​a​s​k​ ​i​s​ ​s​c​h​e​d​u​l​e​d
+										 */
+										shortDesc: string
+										/**
+										 * P​l​a​n​n​e​d​ ​e​x​e​c​u​t​i​o​n​ ​d​a​t​e​ ​o​f​ ​t​h​e​ ​t​a​s​k​.​ ​A​c​c​e​p​t​s​ ​I​S​O​ ​f​o​r​m​a​t​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​o​r​ ​r​e​l​a​t​i​v​e​ ​d​a​t​e​s​:​ ​'​t​o​d​a​y​'​,​ ​'​t​o​m​o​r​r​o​w​'​,​ ​'​y​e​s​t​e​r​d​a​y​'
+										 */
+										longDesc: string
+									}
+									deadlineDate: {
+										/**
+										 * D​e​a​d​l​i​n​e​ ​D​a​t​e
+										 */
+										displayName: string
+										/**
+										 * W​h​e​n​ ​t​h​e​ ​t​a​s​k​ ​i​s​ ​d​u​e
+										 */
+										shortDesc: string
+										/**
+										 * D​u​e​ ​d​a​t​e​ ​o​f​ ​t​h​e​ ​t​a​s​k​.​ ​A​c​c​e​p​t​s​ ​I​S​O​ ​f​o​r​m​a​t​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​o​r​ ​r​e​l​a​t​i​v​e​ ​d​a​t​e​s​:​ ​'​t​o​d​a​y​'​,​ ​'​t​o​m​o​r​r​o​w​'​,​ ​'​y​e​s​t​e​r​d​a​y​'
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						location: {
+							/**
+							 * L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * W​h​e​r​e​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​t​a​s​k
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​r​e​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​t​a​s​k​:​ ​i​n​ ​t​h​e​ ​t​a​s​k​ ​i​n​b​o​x​ ​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​a​i​l​y​ ​n​o​t​e
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									type: {
+										/**
+										 * L​o​c​a​t​i​o​n​ ​T​y​p​e
+										 */
+										displayName: string
+										/**
+										 * T​y​p​e​ ​o​f​ ​l​o​c​a​t​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​t​a​s​k​ ​i​n​ ​y​o​u​r​ ​i​n​b​o​x​ ​(​f​o​r​ ​u​n​s​c​h​e​d​u​l​e​d​ ​t​a​s​k​s​)​ ​o​r​ ​i​n​ ​a​ ​d​a​i​l​y​ ​n​o​t​e​ ​(​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​a​t​e​)​.
+										 */
+										longDesc: string
+									}
+									date: {
+										/**
+										 * D​a​t​e
+										 */
+										displayName: string
+										/**
+										 * D​a​t​e​ ​f​o​r​ ​d​a​i​l​y​ ​n​o​t​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​a​i​l​y​ ​n​o​t​e​ ​d​a​t​e​ ​w​h​e​r​e​ ​t​h​e​ ​t​a​s​k​ ​i​s​ ​l​o​c​a​t​e​d​.​ ​A​c​c​e​p​t​s​ ​I​S​O​ ​f​o​r​m​a​t​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​o​r​ ​r​e​l​a​t​i​v​e​ ​d​a​t​e​s​:​ ​'​t​o​d​a​y​'​,​ ​'​t​o​m​o​r​r​o​w​'​,​ ​'​y​e​s​t​e​r​d​a​y​'​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​'​t​o​d​a​y​'​ ​i​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				update_task: {
+					/**
+					 * T​a​s​k​s​ ​(​D​a​i​l​y​ ​T​a​s​k​s​ ​&​ ​N​o​t​e​s​ ​A​P​I​)
+					 */
+					group: string
+					/**
+					 * U​p​d​a​t​e​ ​T​a​s​k
+					 */
+					displayName: string
+					/**
+					 * M​o​d​i​f​y​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​a​s​k
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​a​s​k​ ​i​n​ ​C​r​a​f​t​ ​b​y​ ​c​h​a​n​g​i​n​g​ ​i​t​s​ ​m​a​r​k​d​o​w​n​ ​c​o​n​t​e​n​t​,​ ​s​t​a​t​e​,​ ​s​c​h​e​d​u​l​e​ ​d​a​t​e​,​ ​o​r​ ​d​e​a​d​l​i​n​e​ ​d​a​t​e​.
+					 */
+					longDesc: string
+					options: {
+						id: {
+							/**
+							 * T​a​s​k
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​s​k​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​s​k​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​d​i​f​y​.​ ​O​n​l​y​ ​a​c​t​i​v​e​ ​t​a​s​k​s​ ​a​r​e​ ​a​v​a​i​l​a​b​l​e​ ​f​o​r​ ​s​e​l​e​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						markdown: {
+							/**
+							 * T​a​s​k​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​m​a​r​k​d​o​w​n​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​n​e​w​ ​m​a​r​k​d​o​w​n​-​f​o​r​m​a​t​t​e​d​ ​c​o​n​t​e​n​t​ ​f​o​r​ ​t​h​e​ ​t​a​s​k​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​k​e​e​p​ ​t​h​e​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​e​n​t​.
+							 */
+							longDesc: string
+						}
+						state: {
+							/**
+							 * S​t​a​t​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​a​s​k​ ​s​t​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * C​h​a​n​g​e​ ​t​h​e​ ​s​t​a​t​e​ ​o​f​ ​t​h​e​ ​t​a​s​k​ ​t​o​ ​T​o​ ​D​o​,​ ​D​o​n​e​,​ ​o​r​ ​C​a​n​c​e​l​e​d​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​k​e​e​p​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​s​t​a​t​e​.
+							 */
+							longDesc: string
+						}
+						scheduleDate: {
+							/**
+							 * S​c​h​e​d​u​l​e​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​s​c​h​e​d​u​l​e​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​p​l​a​n​n​e​d​ ​e​x​e​c​u​t​i​o​n​ ​d​a​t​e​.​ ​A​c​c​e​p​t​s​ ​I​S​O​ ​f​o​r​m​a​t​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​o​r​ ​r​e​l​a​t​i​v​e​ ​d​a​t​e​s​:​ ​'​t​o​d​a​y​'​,​ ​'​t​o​m​o​r​r​o​w​'​,​ ​'​y​e​s​t​e​r​d​a​y​'​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​k​e​e​p​ ​t​h​e​ ​e​x​i​s​t​i​n​g​ ​s​c​h​e​d​u​l​e​.
+							 */
+							longDesc: string
+						}
+						deadlineDate: {
+							/**
+							 * D​e​a​d​l​i​n​e​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​d​e​a​d​l​i​n​e​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​d​ ​d​u​e​ ​d​a​t​e​ ​o​f​ ​t​h​e​ ​t​a​s​k​.​ ​A​c​c​e​p​t​s​ ​I​S​O​ ​f​o​r​m​a​t​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​o​r​ ​r​e​l​a​t​i​v​e​ ​d​a​t​e​s​:​ ​'​t​o​d​a​y​'​,​ ​'​t​o​m​o​r​r​o​w​'​,​ ​'​y​e​s​t​e​r​d​a​y​'​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​k​e​e​p​ ​t​h​e​ ​e​x​i​s​t​i​n​g​ ​d​e​a​d​l​i​n​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_tasks: {
+					/**
+					 * T​a​s​k​s​ ​(​D​a​i​l​y​ ​T​a​s​k​s​ ​&​ ​N​o​t​e​s​ ​A​P​I​)
+					 */
+					group: string
+					/**
+					 * D​e​l​e​t​e​ ​T​a​s​k​s
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​t​a​s​k​s
+					 */
+					shortDesc: string
+					/**
+					 * D​e​l​e​t​e​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​t​a​s​k​s​ ​f​r​o​m​ ​y​o​u​r​ ​C​r​a​f​t​ ​w​o​r​k​s​p​a​c​e​ ​b​y​ ​p​r​o​v​i​d​i​n​g​ ​t​h​e​i​r​ ​t​a​s​k​ ​I​D​s​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​p​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​a​s​k​s​.
+					 */
+					longDesc: string
+					options: {
+						ids: {
+							/**
+							 * T​a​s​k​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * I​D​s​ ​o​f​ ​t​a​s​k​s​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​a​ ​l​i​s​t​ ​o​f​ ​t​a​s​k​ ​I​D​s​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​m​o​v​e​.​ ​Y​o​u​ ​c​a​n​ ​d​e​l​e​t​e​ ​m​u​l​t​i​p​l​e​ ​t​a​s​k​s​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​o​p​e​r​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Monday: {
 			/**
 			 * M​o​n​d​a​y​.​c​o​m
@@ -103452,6 +104407,961 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Only trigger for tasks that are followed or not followed
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Craft: {
+			/**
+			 * Craft
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Craft to manage documents, collections, tasks, and blocks seamlessly.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * 
+		    The Craft integration provides comprehensive actions and triggers to interact with the Craft API. Manage your documents, collections, tasks, and blocks with powerful automation capabilities for your note-taking and document management workflows.
+	
+	
+		    ## API Configuration Requirements
+	
+	
+		    ### For Tasks and Daily Notes Actions
+	
+	
+		    To use **List Tasks**, **Create Task**, **Update Task**, **Delete Tasks**, and **Get Daily Note Blocks** actions, you must create the **Daily notes & Tasks** API in the **Imagine** tab within Craft.
+	
+	
+	
+		    ### For All Other Actions
+	
+		    To use **Documents**, **Collections**, and **Blocks** actions, you need to connect **Selected Documents** in your Craft API configuration.
+		  
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				new_collection_item: {
+					/**
+					 * New Collection Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new item is added to a collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger activates when a new item is created in the specified Craft collection, allowing you to automate workflows based on new collection entries.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						collectionId: {
+							/**
+							 * Collection
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The collection to monitor for new items
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Craft collection you want to monitor for new items. When a new item is added to this collection, the trigger will fire.
+							 */
+							longDesc: () => LocalizedString
+						}
+						maxDepth: {
+							/**
+							 * Maximum Depth
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum depth for nested content retrieval
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum depth of nested content to fetch for each collection item. Default is -1 (all descendants). With a depth of 0, only the item properties are fetched without nested content.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				get_blocks: {
+					/**
+					 * Daily Note Blocks (Daily Tasks & Notes API)
+					 */
+					group: () => LocalizedString
+					/**
+					 * Get Daily Note Blocks
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve blocks from a daily note
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch all blocks from a Craft daily note for a specific date. You can retrieve blocks from today, yesterday, tomorrow, or any custom date, with control over the depth and metadata of the returned content.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						date: {
+							/**
+							 * Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific date for the daily note
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select a specific date to retrieve the daily note blocks. If not provided, you can use the "Day" option to select relative dates like today, yesterday, or tomorrow.
+							 */
+							longDesc: () => LocalizedString
+						}
+						day: {
+							/**
+							 * Day
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Relative day selector
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose a relative day option such as today, yesterday, or tomorrow to retrieve the corresponding daily note blocks.
+							 */
+							longDesc: () => LocalizedString
+						}
+						maxDepth: {
+							/**
+							 * Maximum Depth
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum depth for nested blocks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum depth for retrieving nested blocks. Use -1 for unlimited depth, or provide a positive number to limit how deep the nested block structure should be retrieved.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fetchMetadata: {
+							/**
+							 * Fetch Metadata
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include metadata in the response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enable this option to include additional metadata such as creation date, last modified date, and author information for each block in the response.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_documents: {
+					/**
+					 * Documents (Selected Documents API)
+					 */
+					group: () => LocalizedString
+					/**
+					 * List Documents
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve all documents
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a list of all documents in your Craft workspace. This includes document IDs, titles, and their deletion status, providing a complete overview of your document library.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+					}
+				}
+				list_collections: {
+					/**
+					 * Collections (Selected Documents API)
+					 */
+					group: () => LocalizedString
+					/**
+					 * List Collections
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve all collections
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a list of all collections in your Craft workspace. You can optionally filter collections by specific documents using include or exclude modes.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						documentIds: {
+							/**
+							 * Document IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter collections by documents
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The document IDs to filter. If not provided, collections in all documents will be listed.
+							 */
+							longDesc: () => LocalizedString
+						}
+						documentFilterMode: {
+							/**
+							 * Document Filter Mode
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to filter by documents
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether to include or exclude collections based on the provided document IDs. Select "Include" to only show collections from the specified documents, or "Exclude" to hide collections from those documents.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_collection_item: {
+					/**
+					 * Collections (Selected Documents API)
+					 */
+					group: () => LocalizedString
+					/**
+					 * Create Collection Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a new item to a collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new item in a Craft collection with a title and optional custom properties. This allows you to programmatically add entries to your structured collections.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						collectionId: {
+							/**
+							 * Collection
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The collection to add the item to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Craft collection where you want to create the new item. The collection must exist before you can add items to it.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Title of the new collection item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide a title for the new collection item. This is the main identifier for the item within the collection.
+							 */
+							longDesc: () => LocalizedString
+						}
+						properties: {
+							/**
+							 * Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom properties for the item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Add custom properties to the collection item. The available properties are dynamically determined based on the schema of the selected collection.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_collection_items: {
+					/**
+					 * Collections (Selected Documents API)
+					 */
+					group: () => LocalizedString
+					/**
+					 * Delete Collection Items
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove items from a collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Delete one or more items from a Craft collection by providing their IDs. This action permanently removes the specified items from the collection.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						collectionId: {
+							/**
+							 * Collection
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The collection containing the items
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Craft collection that contains the items you want to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+						itemIds: {
+							/**
+							 * Item IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * IDs of items to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide a list of item IDs that you want to remove from the collection. You can select multiple items to delete in a single operation.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_collection_item: {
+					/**
+					 * Collections (Selected Documents API)
+					 */
+					group: () => LocalizedString
+					/**
+					 * Update Collection Item
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Modify an existing collection item
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the title and properties of an existing item in a Craft collection. You can modify any custom properties that are part of the collection schema.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						collectionId: {
+							/**
+							 * Collection
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The collection containing the item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Craft collection that contains the item you want to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						itemId: {
+							/**
+							 * Item
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The item to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific collection item you want to modify. The available items are dynamically populated based on the selected collection.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New title for the item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide a new title for the collection item. Leave empty to keep the existing title unchanged.
+							 */
+							longDesc: () => LocalizedString
+						}
+						properties: {
+							/**
+							 * Properties
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated properties for the item
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the custom properties of the collection item. Only the properties you specify will be updated; others will remain unchanged.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_collection_items: {
+					/**
+					 * Collections (Selected Documents API)
+					 */
+					group: () => LocalizedString
+					/**
+					 * List Collection Items
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve all items in a collection
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a list of all items in a specific Craft collection, including their IDs, titles, properties, and content blocks. You can control the depth of nested content retrieval.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						collectionId: {
+							/**
+							 * Collection
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The collection to retrieve items from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Craft collection whose items you want to list. All items in the collection will be returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+						maxDepth: {
+							/**
+							 * Maximum Depth
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum depth for nested content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum depth of nested content to fetch for each collection item. Default is -1 (all descendants). With a depth of 0, only the item properties are fetched without nested content.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_blocks: {
+					/**
+					 * Blocks (Selected Documents API)
+					 */
+					group: () => LocalizedString
+					/**
+					 * List Blocks
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve blocks from a document
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch all blocks from a specific Craft document or page. This allows you to access the structured content of your documents, including nested blocks, with control over depth and metadata.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Document/Page ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The document or page to retrieve blocks from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the page block to fetch. Required for multi-document operations. Accepts IDs for documents, pages and blocks.
+							 */
+							longDesc: () => LocalizedString
+						}
+						maxDepth: {
+							/**
+							 * Maximum Depth
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum depth for nested blocks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the maximum depth for retrieving nested blocks. Use -1 for unlimited depth, or provide a positive number to limit the nesting level.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fetchMetadata: {
+							/**
+							 * Fetch Metadata
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include metadata in the response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to fetch metadata (comments, createdBy, lastModifiedBy, lastModifiedAt, createdAt) for the blocks.
+							 */
+							longDesc: () => LocalizedString
+						}
+						getMarkdownString: {
+							/**
+							 * Get Markdown String
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Retrieve the markdown string representation of blocks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to retrieve the markdown string representation of the blocks.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				insert_block: {
+					/**
+					 * Blocks (Selected Documents API)
+					 */
+					group: () => LocalizedString
+					/**
+					 * Insert Block
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a new block to a document
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Insert a new block with markdown content into a Craft document. You can specify whether to insert the block at the start or end of the target page.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						markdown: {
+							/**
+							 * Markdown Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The markdown content for the block
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * 
+						          The Markdown content to insert. Separate each paragraph and heading with two newlines. Separate each list item with one newline. The first item in any list cannot be empty. Craft-specific tokens are HTML tags.:
+					
+					
+					
+						          - <callout> for callouts. Can be used to wrap multiple paragraphs/images/etc.
+					
+						          - <caption> for caption text style. Can be used to wrap a paragraph.
+					
+						          - <highlight color=''> for highlights - color is optional. Can only be used inline.
+						          
+							 */
+							longDesc: () => LocalizedString
+						}
+						position: {
+							/**
+							 * Position
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Where to insert the block
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the position where the block should be inserted within the document.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									position: {
+										/**
+										 * Insert Position
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Insert at start or end
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to insert the block at the start or end of the target page.
+										 */
+										longDesc: () => LocalizedString
+									}
+									pageId: {
+										/**
+										 * Page ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The page to insert into
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * ID of the block to insert children into. Required for multi-document operations. Only page, text, and card type blocks can be parent blocks. Text blocks are auto-converted to page type when they receive children. Collection items are implicitly pages.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				delete_blocks: {
+					/**
+					 * Blocks (Selected Documents API)
+					 */
+					group: () => LocalizedString
+					/**
+					 * Delete Blocks
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove blocks from a document
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Delete one or more blocks from a Craft document by providing their block IDs. This action permanently removes the specified blocks.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						blockIds: {
+							/**
+							 * Block IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * IDs of blocks to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide a list of block IDs that you want to remove from the document. You can delete multiple blocks in a single operation.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_tasks: {
+					/**
+					 * Tasks (Daily Tasks & Notes API)
+					 */
+					group: () => LocalizedString
+					/**
+					 * List Tasks
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve tasks based on scope
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a list of tasks from your Craft workspace filtered by scope. You can retrieve active tasks, upcoming tasks, inbox tasks, or tasks from your logbook.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						scope: {
+							/**
+							 * Scope
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter tasks by scope
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter tasks by scope: - 'active': Active tasks from inbox and other documents (tasks due before now that are not completed/cancelled) - 'upcoming': Upcoming tasks from inbox and other documents (tasks scheduled after now) - 'inbox': Only tasks in the task inbox - 'logbook': Only tasks in the task logbook (completed and cancelled tasks)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_task: {
+					/**
+					 * Tasks (Daily Tasks & Notes API)
+					 */
+					group: () => LocalizedString
+					/**
+					 * Create Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a new task
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new task in Craft with markdown content, optional task information (state, schedule, deadline), and a location (inbox or daily note).
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						markdown: {
+							/**
+							 * Task Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The markdown content for the task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The task content in markdown format. This will be the task's text.
+							 */
+							longDesc: () => LocalizedString
+						}
+						taskInfo: {
+							/**
+							 * Task Information
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional task details
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional task metadata including state, schedule date, and deadline date
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									state: {
+										/**
+										 * State
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Current state of the task
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Set the initial state of the task: To Do (pending), Done (completed), or Canceled (abandoned).
+										 */
+										longDesc: () => LocalizedString
+									}
+									scheduleDate: {
+										/**
+										 * Schedule Date
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * When the task is scheduled
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Planned execution date of the task. Accepts ISO format YYYY-MM-DD or relative dates: 'today', 'tomorrow', 'yesterday'
+										 */
+										longDesc: () => LocalizedString
+									}
+									deadlineDate: {
+										/**
+										 * Deadline Date
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * When the task is due
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Due date of the task. Accepts ISO format YYYY-MM-DD or relative dates: 'today', 'tomorrow', 'yesterday'
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						location: {
+							/**
+							 * Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Where to create the task
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Where to create the task: in the task inbox or a specific daily note
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									type: {
+										/**
+										 * Location Type
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Type of location
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Choose whether to create the task in your inbox (for unscheduled tasks) or in a daily note (for a specific date).
+										 */
+										longDesc: () => LocalizedString
+									}
+									date: {
+										/**
+										 * Date
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Date for daily note
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The daily note date where the task is located. Accepts ISO format YYYY-MM-DD or relative dates: 'today', 'tomorrow', 'yesterday'. Defaults to 'today' if not provided.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				update_task: {
+					/**
+					 * Tasks (Daily Tasks & Notes API)
+					 */
+					group: () => LocalizedString
+					/**
+					 * Update Task
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Modify an existing task
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update an existing task in Craft by changing its markdown content, state, schedule date, or deadline date.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						id: {
+							/**
+							 * Task
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The task to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the task you want to modify. Only active tasks are available for selection.
+							 */
+							longDesc: () => LocalizedString
+						}
+						markdown: {
+							/**
+							 * Task Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated markdown content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide new markdown-formatted content for the task. Leave empty to keep the existing content.
+							 */
+							longDesc: () => LocalizedString
+						}
+						state: {
+							/**
+							 * State
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated task state
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Change the state of the task to To Do, Done, or Canceled. Leave empty to keep the current state.
+							 */
+							longDesc: () => LocalizedString
+						}
+						scheduleDate: {
+							/**
+							 * Schedule Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated schedule date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated planned execution date. Accepts ISO format YYYY-MM-DD or relative dates: 'today', 'tomorrow', 'yesterday'. Leave empty to keep the existing schedule.
+							 */
+							longDesc: () => LocalizedString
+						}
+						deadlineDate: {
+							/**
+							 * Deadline Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated deadline date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Updated due date of the task. Accepts ISO format YYYY-MM-DD or relative dates: 'today', 'tomorrow', 'yesterday'. Leave empty to keep the existing deadline.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_tasks: {
+					/**
+					 * Tasks (Daily Tasks & Notes API)
+					 */
+					group: () => LocalizedString
+					/**
+					 * Delete Tasks
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove tasks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Delete one or more tasks from your Craft workspace by providing their task IDs. This action permanently removes the specified tasks.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						ids: {
+							/**
+							 * Task IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * IDs of tasks to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide a list of task IDs that you want to remove. You can delete multiple tasks in a single operation.
 							 */
 							longDesc: () => LocalizedString
 						}
