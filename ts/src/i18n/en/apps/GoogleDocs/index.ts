@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const GoogleDocsAppEn = {
   displayName: 'Google Docs',
+  groups: ['Documents & Documentation', 'Google Workspace Suite'],
   shortDesc: 'Connect with Google Docs to manage your documents',
   longDesc:
     'Integrate with Google Docs to create, update, and manage your documents. This integration allows you to perform actions and respond to events in your Google Docs account, enabling you to automate document management and collaboration workflows.',

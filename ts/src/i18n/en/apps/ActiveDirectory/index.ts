@@ -1,5 +1,6 @@
 const ActiveDirectoryEn = {
   displayName: 'Active Directory',
+  groups: ['DevOps & Cloud Infrastructure'],
   shortDesc:
     'Seamlessly connect to Microsoft Active Directory to manage users, groups, and organizational resources.',
   longDesc:

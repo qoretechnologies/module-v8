@@ -1,6 +1,7 @@
 
 
 const DynamicsAppEn = {
+  groups: ['CRM & Sales Management', 'Accounting & ERP'],
   triggers: {
     'new-or-updated-account': {
       displayName: 'New or Updated Account',

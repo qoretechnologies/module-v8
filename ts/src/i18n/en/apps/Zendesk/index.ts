@@ -1,7 +1,6 @@
-
-
 const ZendeskAppEn = {
   displayName: 'Zendesk',
+  groups: ['Customer Support & Helpdesk'],
   shortDesc: 'Collection of actions to interact with the Zendesk API',
   longDesc: 'Collection of actions to interact with the Zendesk API',
   triggers: {
@@ -281,7 +280,17 @@ const ZendeskAppEn = {
     },
   },
   actions: {
+    ShowAccountSettings: {
+      groups: ['Settings'],
+    },
+    ShowAttachment: {
+      groups: ['Attachments'],
+    },
+    ListGroups: {
+      groups: ['Groups'],
+    },
     CreateGroup: {
+      groups: ['Groups'],
       options: {
         group: {
           displayName: 'Group',
@@ -303,7 +312,7 @@ const ZendeskAppEn = {
                 displayName: 'Default',
                 shortDesc: 'Default group assignment for team members in Zendesk.',
                 longDesc:
-                  'Team members will automatically be assigned to this group when they’re added to Zendesk. There can only be one default group.',
+                  "Team members will automatically be assigned to this group when they're added to Zendesk. There can only be one default group.",
               },
               is_public: {
                 displayName: 'Public',
@@ -320,7 +329,14 @@ const ZendeskAppEn = {
         },
       },
     },
+    DeleteGroup: {
+      groups: ['Groups'],
+    },
+    ShowGroupById: {
+      groups: ['Groups'],
+    },
     UpdateGroup: {
+      groups: ['Groups'],
       options: {
         group_id: {
           displayName: 'Group ID',
@@ -347,7 +363,7 @@ const ZendeskAppEn = {
                 displayName: 'Default',
                 shortDesc: 'Default group assignment',
                 longDesc:
-                  'Team members will automatically be assigned to this group when they’re added to Zendesk. There can only be one default group.',
+                  "Team members will automatically be assigned to this group when they're added to Zendesk. There can only be one default group.",
               },
               is_public: {
                 displayName: 'Public',
@@ -364,7 +380,78 @@ const ZendeskAppEn = {
         },
       },
     },
+    ListOrganizations: {
+      groups: ['Organizations'],
+    },
+    CreateOrganization: {
+      groups: ['Organizations'],
+    },
+    DeleteOrganization: {
+      groups: ['Organizations'],
+    },
+    ShowOrganization: {
+      groups: ['Organizations'],
+    },
+    UpdateOrganization: {
+      groups: ['Organizations'],
+      options: {
+        name: {
+          displayName: 'Name',
+          shortDesc: 'Organization name',
+          longDesc: 'Organization name',
+        },
+        group_id: {
+          displayName: 'Group ID',
+          shortDesc: 'Group ID',
+          longDesc: 'Group ID',
+        },
+        notes: {
+          displayName: 'Notes',
+          shortDesc: 'Notes about the organization',
+          longDesc: 'Notes about the organization',
+        },
+        details: {
+          displayName: 'Details',
+          shortDesc: 'Details',
+          longDesc: 'Details',
+        },
+      },
+    },
+    ListSearchResults: {
+      groups: ['Search'],
+    },
+    ListTickets: {
+      groups: ['Tickets'],
+    },
+    CreateTicket: {
+      groups: ['Tickets'],
+    },
+    CountTickets: {
+      groups: ['Tickets'],
+    },
+    DeleteTicket: {
+      groups: ['Tickets'],
+    },
+    ShowTicket: {
+      groups: ['Tickets'],
+    },
+    UpdateTicket: {
+      groups: ['Tickets'],
+    },
+    ListTicketMetrics: {
+      groups: ['Ticket Metrics'],
+    },
+    ShowTicketMetrics: {
+      groups: ['Ticket Metrics'],
+    },
+    DeleteUpload: {
+      groups: ['Uploads'],
+    },
+    ListUsers: {
+      groups: ['Users'],
+    },
     CreateUser: {
+      groups: ['Users'],
       options: {
         user: {
           displayName: 'User',
@@ -412,7 +499,14 @@ const ZendeskAppEn = {
         },
       },
     },
+    DeleteUser: {
+      groups: ['Users'],
+    },
+    ShowUser: {
+      groups: ['Users'],
+    },
     UpdateUser: {
+      groups: ['Users'],
       options: {
         user: {
           displayName: 'User',
@@ -457,30 +551,6 @@ const ZendeskAppEn = {
               },
             },
           },
-        },
-      },
-    },
-    UpdateOrganization: {
-      options: {
-        name: {
-          displayName: 'Name',
-          shortDesc: 'Organization name',
-          longDesc: 'Organization name',
-        },
-        group_id: {
-          displayName: 'Group ID',
-          shortDesc: 'Group ID',
-          longDesc: 'Group ID',
-        },
-        notes: {
-          displayName: 'Notes',
-          shortDesc: 'Notes about the organization',
-          longDesc: 'Notes about the organization',
-        },
-        details: {
-          displayName: 'Details',
-          shortDesc: 'Details',
-          longDesc: 'Details',
         },
       },
     },

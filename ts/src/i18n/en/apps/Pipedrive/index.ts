@@ -2,6 +2,7 @@
 
 const PipedriveAppEn = {
   displayName: 'Pipedrive',
+  groups: ['CRM & Sales Management'],
   shortDesc: 'Manage your sales pipeline and customer relationships with Pipedrive.',
   longDesc:
     'Pipedrive is a sales management tool designed to help small sales teams manage intricate or lengthy sales processes.',

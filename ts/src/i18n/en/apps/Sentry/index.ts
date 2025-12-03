@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
-const SentryEn = {
+const SentryAppEn = {
   displayName: 'Sentry',
+  groups: ['DevOps & Cloud Infrastructure'],
   shortDesc:
     'Monitor and fix errors, track performance issues, and maintain application health with the developer-first debugging platform.',
   longDesc:
@@ -295,4 +296,4 @@ const SentryEn = {
   },
 };
 
-export default SentryEn;
+export default SentryAppEn;

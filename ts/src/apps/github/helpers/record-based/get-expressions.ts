@@ -12,7 +12,7 @@ export const getGitHubExpressions = (locale: Locales): TQoreSearchRecordsExpress
         subtype: 'generic',
         name: 'type',
         symbol: 'type',
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         roles: ['search'],
         args: [
           {

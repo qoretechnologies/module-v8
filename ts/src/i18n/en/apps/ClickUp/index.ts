@@ -1,11 +1,13 @@
 /* eslint-disable max-len */
 const ClickUpAppEn = {
   displayName: 'ClickUp',
+  groups: ['Project & Task Management'],
   shortDesc:
     'ClickUp is a productivity platform that allows teams to manage tasks, projects, and workflows in one place.',
   longDesc: `ClickUp is a comprehensive productivity platform designed to help teams streamline their workflows, manage tasks, and collaborate effectively. It offers a wide range of features including task management, time tracking, goal setting, and document sharing, all within a customizable interface. ClickUp aims to enhance team productivity by providing tools that adapt to various work styles and project requirements.`,
   actions: {
     list_lists: {
+      groups: ['Lists'],
       displayName: 'List Lists',
       shortDesc: 'List ClickUp lists within a folder',
       longDesc:
@@ -34,6 +36,7 @@ const ClickUpAppEn = {
       },
     },
     get_folder: {
+      groups: ['Folders'],
       displayName: 'Get Folder',
       shortDesc: 'Retrieve ClickUp folder details',
       longDesc:
@@ -57,6 +60,7 @@ const ClickUpAppEn = {
       },
     },
     get_lists: {
+      groups: ['Lists'],
       displayName: 'Get List',
       shortDesc: 'Retrieve ClickUp list details',
       longDesc:
@@ -85,6 +89,7 @@ const ClickUpAppEn = {
       },
     },
     list_folders: {
+      groups: ['Folders'],
       displayName: 'List Folders',
       shortDesc: 'List ClickUp folders within a space',
       longDesc:
@@ -108,6 +113,7 @@ const ClickUpAppEn = {
       },
     },
     create_task_comment: {
+      groups: ['Tasks'],
       displayName: 'Add Task Comment',
       shortDesc: 'Add a comment to a ClickUp task',
       longDesc:
@@ -161,6 +167,7 @@ const ClickUpAppEn = {
       },
     },
     create_document: {
+      groups: ['Documents'],
       displayName: 'Create Document',
       shortDesc: 'Create a new ClickUp document',
       longDesc:
@@ -210,6 +217,7 @@ const ClickUpAppEn = {
       },
     },
     create_document_page: {
+      groups: ['Documents'],
       displayName: 'Create Document Page',
       shortDesc: 'Create a page within a ClickUp document',
       longDesc:
@@ -248,6 +256,7 @@ const ClickUpAppEn = {
       },
     },
     create_folder: {
+      groups: ['Folders'],
       displayName: 'Create Folder',
       shortDesc: 'Create a new ClickUp folder',
       longDesc: 'Create a new folder within a ClickUp space to organize lists and tasks',
@@ -270,6 +279,7 @@ const ClickUpAppEn = {
       },
     },
     create_list: {
+      groups: ['Lists'],
       displayName: 'Create List',
       shortDesc: 'Create a new ClickUp list',
       longDesc:
@@ -323,6 +333,7 @@ const ClickUpAppEn = {
       },
     },
     create_task: {
+      groups: ['Tasks'],
       displayName: 'Create Task',
       shortDesc: 'Create a new ClickUp task',
       longDesc:
@@ -459,6 +470,7 @@ const ClickUpAppEn = {
       },
     },
     delete_task: {
+      groups: ['Tasks'],
       displayName: 'Delete Task',
       shortDesc: 'Delete a ClickUp task',
       longDesc: 'Permanently delete a specific ClickUp task from your workspace',
@@ -491,6 +503,7 @@ const ClickUpAppEn = {
       },
     },
     get_document: {
+      groups: ['Documents'],
       displayName: 'Get Document',
       shortDesc: 'Retrieve a ClickUp document',
       longDesc: 'Fetch details and content of a specific ClickUp document',
@@ -508,6 +521,7 @@ const ClickUpAppEn = {
       },
     },
     get_task: {
+      groups: ['Tasks'],
       displayName: 'Get Task',
       shortDesc: 'Retrieve a ClickUp task',
       longDesc:
@@ -551,6 +565,7 @@ const ClickUpAppEn = {
       },
     },
     get_workspace: {
+      groups: ['Workspaces'],
       displayName: 'Get Workspace',
       shortDesc: 'Retrieve ClickUp workspace details',
       longDesc:
@@ -564,7 +579,7 @@ const ClickUpAppEn = {
       },
     },
     list_channels: {
-      displayName: 'List Channels',
+      groups: ['Channels'],
       shortDesc: 'List ClickUp chat channels',
       longDesc: 'Retrieve a list of chat channels in a ClickUp workspace with filtering options',
       options: {
@@ -606,6 +621,7 @@ const ClickUpAppEn = {
       },
     },
     list_custom_fields: {
+      groups: ['Workspaces'],
       displayName: 'List Custom Fields',
       shortDesc: 'List ClickUp custom fields',
       longDesc: 'Retrieve all custom fields defined in a ClickUp workspace',
@@ -618,6 +634,7 @@ const ClickUpAppEn = {
       },
     },
     list_documents: {
+      groups: ['Documents'],
       displayName: 'List Documents',
       shortDesc: 'List ClickUp documents',
       longDesc:
@@ -666,6 +683,7 @@ const ClickUpAppEn = {
       },
     },
     list_groups: {
+      groups: ['Groups'],
       displayName: 'List Groups',
       shortDesc: 'List ClickUp groups',
       longDesc: 'Retrieve groups from a ClickUp workspace with optional filtering',
@@ -683,6 +701,7 @@ const ClickUpAppEn = {
       },
     },
     list_tasks: {
+      groups: ['Tasks'],
       displayName: 'List Tasks',
       shortDesc: 'List ClickUp tasks',
       longDesc:
@@ -751,11 +770,13 @@ const ClickUpAppEn = {
       },
     },
     list_workspaces: {
+      groups: ['Workspaces'],
       displayName: 'List Workspaces',
       shortDesc: 'List ClickUp workspaces',
       longDesc: 'Retrieve all ClickUp workspaces accessible to the authenticated user',
     },
     send_channel_message: {
+      groups: ['Channels'],
       displayName: 'Send Channel Message',
       shortDesc: 'Send a message to a ClickUp channel',
       longDesc:
@@ -804,6 +825,7 @@ const ClickUpAppEn = {
       },
     },
     update_task: {
+      groups: ['Tasks'],
       displayName: 'Update Task',
       shortDesc: 'Update a ClickUp task',
       longDesc:

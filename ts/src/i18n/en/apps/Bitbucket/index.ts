@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const BitbucketAppEn = {
   displayName: 'Bitbucket',
+  groups: ['Version Control & Code Repositories'],
   shortDesc: 'Bitbucket is a Git repository management solution designed for professional teams.',
   longDesc:
     'Bitbucket is a Git repository management solution designed for professional teams. It provides features such as pull requests, code reviews, and continuous integration to help teams collaborate on code effectively.',

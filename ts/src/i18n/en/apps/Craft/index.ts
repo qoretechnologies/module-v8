@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 const CraftAppEn = {
+  groups: ['Documents & Documentation', 'Project & Task Management'],
   displayName: 'Craft',
   shortDesc: 'Connect to Craft to manage documents, collections, tasks, and blocks seamlessly.',
   longDesc: `
@@ -37,7 +38,7 @@ const CraftAppEn = {
   actions: {
     // Daily Note Blocks
     get_blocks: {
-      group: 'Daily Note Blocks (Daily Tasks & Notes API)',
+      groups: ['Daily Note Blocks (Daily Tasks & Notes API)'],
       displayName: 'Get Daily Note Blocks',
       shortDesc: 'Retrieve blocks from a daily note',
       longDesc:
@@ -72,7 +73,7 @@ const CraftAppEn = {
 
     // Documents
     list_documents: {
-      group: 'Documents (Selected Documents API)',
+      groups: ['Documents (Selected Documents API)'],
       displayName: 'List Documents',
       shortDesc: 'Retrieve all documents',
       longDesc:
@@ -82,7 +83,7 @@ const CraftAppEn = {
 
     // Collections
     list_collections: {
-      group: 'Collections (Selected Documents API)',
+      groups: ['Collections (Selected Documents API)'],
       displayName: 'List Collections',
       shortDesc: 'Retrieve all collections',
       longDesc:
@@ -104,7 +105,7 @@ const CraftAppEn = {
     },
 
     create_collection_item: {
-      group: 'Collections (Selected Documents API)',
+      groups: ['Collections (Selected Documents API)'],
       displayName: 'Create Collection Item',
       shortDesc: 'Add a new item to a collection',
       longDesc:
@@ -132,7 +133,7 @@ const CraftAppEn = {
     },
 
     delete_collection_items: {
-      group: 'Collections (Selected Documents API)',
+      groups: ['Collections (Selected Documents API)'],
       displayName: 'Delete Collection Items',
       shortDesc: 'Remove items from a collection',
       longDesc:
@@ -153,7 +154,7 @@ const CraftAppEn = {
     },
 
     update_collection_item: {
-      group: 'Collections (Selected Documents API)',
+      groups: ['Collections (Selected Documents API)'],
       displayName: 'Update Collection Item',
       shortDesc: 'Modify an existing collection item',
       longDesc:
@@ -186,7 +187,7 @@ const CraftAppEn = {
     },
 
     list_collection_items: {
-      group: 'Collections (Selected Documents API)',
+      groups: ['Collections (Selected Documents API)'],
       displayName: 'List Collection Items',
       shortDesc: 'Retrieve all items in a collection',
       longDesc:
@@ -209,7 +210,7 @@ const CraftAppEn = {
 
     // Blocks
     list_blocks: {
-      group: 'Blocks (Selected Documents API)',
+      groups: ['Blocks (Selected Documents API)'],
       displayName: 'List Blocks',
       shortDesc: 'Retrieve blocks from a document',
       longDesc:
@@ -241,7 +242,7 @@ const CraftAppEn = {
     },
 
     insert_block: {
-      group: 'Blocks (Selected Documents API)',
+      groups: ['Blocks (Selected Documents API)'],
       displayName: 'Insert Block',
       shortDesc: 'Add a new block to a document',
       longDesc:
@@ -283,7 +284,7 @@ const CraftAppEn = {
     },
 
     delete_blocks: {
-      group: 'Blocks (Selected Documents API)',
+      groups: ['Blocks (Selected Documents API)'],
       displayName: 'Delete Blocks',
       shortDesc: 'Remove blocks from a document',
       longDesc:
@@ -300,7 +301,7 @@ const CraftAppEn = {
 
     // Tasks
     list_tasks: {
-      group: 'Tasks (Daily Tasks & Notes API)',
+      groups: ['Tasks (Daily Tasks & Notes API)'],
       displayName: 'List Tasks',
       shortDesc: 'Retrieve tasks based on scope',
       longDesc:
@@ -315,7 +316,7 @@ const CraftAppEn = {
     },
 
     create_task: {
-      group: 'Tasks (Daily Tasks & Notes API)',
+      groups: ['Tasks (Daily Tasks & Notes API)'],
       displayName: 'Create Task',
       shortDesc: 'Add a new task',
       longDesc:
@@ -378,7 +379,7 @@ const CraftAppEn = {
     },
 
     update_task: {
-      group: 'Tasks (Daily Tasks & Notes API)',
+      groups: ['Tasks (Daily Tasks & Notes API)'],
       displayName: 'Update Task',
       shortDesc: 'Modify an existing task',
       longDesc:
@@ -418,7 +419,7 @@ const CraftAppEn = {
     },
 
     delete_tasks: {
-      group: 'Tasks (Daily Tasks & Notes API)',
+      groups: ['Tasks (Daily Tasks & Notes API)'],
       displayName: 'Delete Tasks',
       shortDesc: 'Remove tasks',
       longDesc:

@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
-const businessCentralAppEn = {
+const BusinessCentralAppEn = {
   displayName: 'Microsoft Dynamics 365 Business Central',
+  groups: ['Accounting & ERP'],
   shortDesc:
     'Comprehensive cloud-based ERP solution for managing finances, operations, sales, and customer relationships.',
   longDesc:
@@ -90,4 +91,4 @@ const businessCentralAppEn = {
   },
 };
 
-export default businessCentralAppEn;
+export default BusinessCentralAppEn;

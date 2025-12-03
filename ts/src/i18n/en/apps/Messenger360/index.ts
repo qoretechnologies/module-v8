@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const Messenger360AppEn = {
   displayName: '360 Messenger for WhatsApp',
+  groups: ['Messaging & Real-time Communication'],
   shortDesc: 'Automate and send personalized WhatsApp messages using 360 Messenger.',
   longDesc:
     '360 Messenger for WhatsApp enables you to send automated and personalized messages directly through WhatsApp Business accounts. Ideal for customer engagement, notifications, and support workflows, this integration ensures fast and reliable communication at scale via WhatsApp.',

@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const ConfluenceAppEn = {
   displayName: 'Confluence',
+  groups: ['Documents & Documentation'],
   shortDesc:
     'Confluence is a collaboration tool used to help teams collaborate and share knowledge efficiently.',
   longDesc:

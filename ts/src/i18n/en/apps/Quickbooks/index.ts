@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const QuickbooksAppEn = {
   displayName: 'QuickBooks',
+  groups: ['Accounting & ERP'],
   shortDesc: 'Integrate with QuickBooks Online for accounting and financial management',
   longDesc:
     'Connect to QuickBooks Online to manage customers, vendors, items, invoices, payments, and financial reports. Automate your accounting workflows and keep your financial data synchronized.',

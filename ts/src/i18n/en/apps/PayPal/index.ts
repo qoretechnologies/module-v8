@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const PayPalAppEn = {
   displayName: 'PayPal',
+  groups: ['Payment Processing'],
   shortDesc:
     'Integrate with PayPal to manage payments, orders, invoices, disputes, and subscriptions through comprehensive APIs.',
   longDesc:

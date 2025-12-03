@@ -2,6 +2,7 @@
 
 const DropboxAppEn = {
   displayName: 'Dropbox',
+  groups: ['Cloud Storage & File Management'],
   shortDesc:
     'A cloud storage service that lets you save files online and sync them to your devices.',
   longDesc:

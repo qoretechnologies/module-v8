@@ -1,11 +1,13 @@
 /* eslint-disable max-len */
 const YouTubeAppEn = {
   displayName: 'YouTube',
+  groups: ['Social Media Management'],
   shortDesc: 'Connect and interact with YouTube',
   longDesc:
     'YouTube integration allows you to manage videos, playlists, channels, and interact with the YouTube platform programmatically.',
   actions: {
     list_user_subscriptions: {
+      groups: ['Subscriptions'],
       displayName: 'List User Subscriptions',
       shortDesc: 'Get a list of YouTube channel subscriptions for the authenticated user',
       longDesc:
@@ -26,6 +28,7 @@ const YouTubeAppEn = {
       },
     },
     get_channel_id_from_url: {
+      groups: ['Channels'],
       displayName: 'Get Channel ID from URL',
       shortDesc: 'Extract YouTube channel ID from various URL formats',
       longDesc:
@@ -40,6 +43,7 @@ const YouTubeAppEn = {
       },
     },
     add_video_to_playlist: {
+      groups: ['Playlist Items'],
       displayName: 'Add Video to Playlist',
       shortDesc: 'Add a video to an existing YouTube playlist',
       longDesc:
@@ -64,6 +68,7 @@ const YouTubeAppEn = {
       },
     },
     create_playlist: {
+      groups: ['Playlists'],
       displayName: 'Create Playlist',
       shortDesc: 'Create a new YouTube playlist',
       longDesc:
@@ -100,6 +105,7 @@ const YouTubeAppEn = {
       },
     },
     search_videos: {
+      groups: ['Videos'],
       displayName: 'Search Videos',
       shortDesc: 'Search for YouTube videos',
       longDesc:
@@ -192,6 +198,7 @@ const YouTubeAppEn = {
       },
     },
     get_report: {
+      groups: ['Analytics'],
       displayName: 'Get Analytics Report',
       shortDesc: 'Get YouTube Analytics report data',
       longDesc:
@@ -226,12 +233,14 @@ const YouTubeAppEn = {
       },
     },
     list_categories: {
+      groups: ['Videos'],
       displayName: 'List Video Categories',
       shortDesc: 'Get list of YouTube video categories',
       longDesc:
         'Retrieve the list of available YouTube video categories that can be assigned to videos',
     },
     list_user_channels: {
+      groups: ['Channels'],
       displayName: 'List User Channels',
       shortDesc: "Get list of authenticated user's YouTube channels",
       longDesc:
@@ -250,6 +259,7 @@ const YouTubeAppEn = {
       },
     },
     list_video_comments: {
+      groups: ['Comments'],
       displayName: 'List Video Comments',
       shortDesc: 'Get comments for a YouTube video',
       longDesc:
@@ -289,6 +299,7 @@ const YouTubeAppEn = {
       },
     },
     list_user_videos: {
+      groups: ['Videos'],
       displayName: 'List User Videos',
       shortDesc: "Get list of authenticated user's YouTube videos",
       longDesc:
@@ -307,6 +318,7 @@ const YouTubeAppEn = {
       },
     },
     reply_to_comment: {
+      groups: ['Comments'],
       displayName: 'Create or Reply to Comment',
       shortDesc: 'Reply to a YouTube comment or create one',
       longDesc: 'Post a reply to an existing comment or create a new one on a YouTube video',
@@ -324,6 +336,7 @@ const YouTubeAppEn = {
       },
     },
     update_video_details: {
+      groups: ['Videos'],
       displayName: 'Update Video Details',
       shortDesc: 'Update details of a YouTube video',
       longDesc:
@@ -368,6 +381,7 @@ const YouTubeAppEn = {
       },
     },
     upload_video: {
+      groups: ['Videos'],
       displayName: 'Upload Video',
       shortDesc: 'Upload a video to YouTube',
       longDesc:
@@ -414,7 +428,6 @@ const YouTubeAppEn = {
       },
     },
   },
-
   triggers: {
     new_channel_video: {
       displayName: 'New Channel Video',

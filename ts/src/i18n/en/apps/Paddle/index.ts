@@ -1,11 +1,13 @@
 /* eslint-disable max-len */
 const PaddleAppEn = {
   displayName: 'Paddle',
+  groups: ['Payment Processing'],
   shortDesc: 'Payment processing and subscription management platform',
   longDesc:
     'Integrate with Paddle to handle payments, subscriptions, and billing. Supports one-time payments, recurring subscriptions, tax calculations, and customer management across multiple currencies and regions.',
   actions: {
     archive_product: {
+      groups: ['Products'],
       displayName: 'Archive Product',
       shortDesc: 'Archive a product in Paddle',
       longDesc:
@@ -20,6 +22,7 @@ const PaddleAppEn = {
     },
 
     create_product: {
+      groups: ['Products'],
       displayName: 'Create Product',
       shortDesc: 'Create a new product in Paddle',
       longDesc:
@@ -59,6 +62,7 @@ const PaddleAppEn = {
     },
 
     get_product: {
+      groups: ['Products'],
       displayName: 'Get Product',
       shortDesc: 'Retrieve a product from Paddle',
       longDesc:
@@ -78,6 +82,7 @@ const PaddleAppEn = {
     },
 
     list_products: {
+      groups: ['Products'],
       displayName: 'List Products',
       shortDesc: 'List products from Paddle',
       longDesc:
@@ -142,6 +147,7 @@ const PaddleAppEn = {
     },
 
     update_product: {
+      groups: ['Products'],
       displayName: 'Update Product',
       shortDesc: 'Update a product in Paddle',
       longDesc:
@@ -192,6 +198,7 @@ const PaddleAppEn = {
     },
 
     create_price: {
+      groups: ['Prices'],
       displayName: 'Create Price',
       shortDesc: 'Create a new price for a product in Paddle',
       longDesc:
@@ -341,6 +348,7 @@ const PaddleAppEn = {
     },
 
     get_price: {
+      groups: ['Prices'],
       displayName: 'Get Price',
       shortDesc: 'Retrieve a price from Paddle',
       longDesc:
@@ -360,6 +368,7 @@ const PaddleAppEn = {
     },
 
     list_prices: {
+      groups: ['Prices'],
       displayName: 'List Prices',
       shortDesc: 'List prices from Paddle',
       longDesc:
@@ -431,6 +440,7 @@ const PaddleAppEn = {
     },
 
     update_price: {
+      groups: ['Prices'],
       displayName: 'Update Price',
       shortDesc: 'Update a price in Paddle',
       longDesc:
@@ -585,6 +595,7 @@ const PaddleAppEn = {
     },
 
     create_customer: {
+      groups: ['Customers'],
       displayName: 'Create Customer',
       shortDesc: 'Create a new customer in Paddle',
       longDesc:
@@ -631,6 +642,7 @@ const PaddleAppEn = {
     },
 
     get_customer: {
+      groups: ['Customers'],
       displayName: 'Get Customer',
       shortDesc: 'Retrieve customer details by ID',
       longDesc:
@@ -645,6 +657,7 @@ const PaddleAppEn = {
     },
 
     get_customer_auth_token: {
+      groups: ['Customers'],
       displayName: 'Get Customer Auth Token',
       shortDesc: 'Generate authentication token for customer',
       longDesc:
@@ -660,6 +673,7 @@ const PaddleAppEn = {
     },
 
     list_customer_credit_balances: {
+      groups: ['Customers'],
       displayName: 'List Customer Credit Balances',
       shortDesc: 'Get customer credit balances',
       longDesc:
@@ -681,6 +695,7 @@ const PaddleAppEn = {
     },
 
     list_customers: {
+      groups: ['Customers'],
       displayName: 'List Customers',
       shortDesc: 'Retrieve a list of customers',
       longDesc:
@@ -741,6 +756,7 @@ const PaddleAppEn = {
     },
 
     update_customer: {
+      groups: ['Customers'],
       displayName: 'Update Customer',
       shortDesc: 'Update customer information',
       longDesc:
@@ -795,6 +811,7 @@ const PaddleAppEn = {
     },
 
     get_report: {
+      groups: ['Reports'],
       displayName: 'Get Report',
       shortDesc: 'Retrieve a specific report by ID',
       longDesc:
@@ -809,6 +826,7 @@ const PaddleAppEn = {
     },
 
     get_report_file: {
+      groups: ['Reports'],
       displayName: 'Get Report File',
       shortDesc: 'Download a report file as CSV',
       longDesc:
@@ -823,6 +841,7 @@ const PaddleAppEn = {
     },
 
     list_reports: {
+      groups: ['Reports'],
       displayName: 'List Reports',
       shortDesc: 'List all reports with filtering and pagination',
       longDesc:
@@ -867,6 +886,7 @@ const PaddleAppEn = {
     },
 
     create_report: {
+      groups: ['Reports'],
       displayName: 'Create Report',
       shortDesc: 'Create a new report with optional filters',
       longDesc:
@@ -907,6 +927,7 @@ const PaddleAppEn = {
     },
 
     get_subscription: {
+      groups: ['Subscriptions'],
       displayName: 'Get Subscription',
       shortDesc: 'Retrieve a specific subscription by ID',
       longDesc:
@@ -927,6 +948,7 @@ const PaddleAppEn = {
     },
 
     list_subscriptions: {
+      groups: ['Subscriptions'],
       displayName: 'List Subscriptions',
       shortDesc: 'List subscriptions with filtering and pagination',
       longDesc:
@@ -1008,6 +1030,7 @@ const PaddleAppEn = {
     },
 
     create_transaction: {
+      groups: ['Transactions'],
       displayName: 'Create Transaction',
       shortDesc: 'Create a new transaction with items and billing details',
       longDesc:
@@ -1152,6 +1175,7 @@ const PaddleAppEn = {
     },
 
     get_transaction: {
+      groups: ['Transactions'],
       displayName: 'Get Transaction',
       shortDesc: 'Retrieve a specific transaction by ID',
       longDesc:
@@ -1171,6 +1195,7 @@ const PaddleAppEn = {
     },
 
     list_transactions: {
+      groups: ['Transactions'],
       displayName: 'List Transactions',
       shortDesc: 'List transactions with filtering and pagination',
       longDesc:

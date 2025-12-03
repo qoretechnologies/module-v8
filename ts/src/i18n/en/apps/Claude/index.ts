@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const ClaudeAppEn = {
   displayName: 'Claude',
+  groups: ['AI & Language Models'],
   shortDesc: 'AI assistant for conversations, analysis, and content creation',
   longDesc: `Connect to Claude, Anthropic's AI assistant, to leverage advanced language understanding and generation capabilities. Use Claude for intelligent conversations, content creation, data analysis, code assistance, research support, and complex reasoning tasks. Claude can help automate workflows that require natural language processing, creative writing, technical documentation, and analytical thinking.`,
   actions: {

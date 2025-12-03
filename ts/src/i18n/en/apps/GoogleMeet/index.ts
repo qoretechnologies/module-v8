@@ -2,6 +2,7 @@ import { BaseTranslation } from '../../../i18n-types';
 
 const GoogleMeetAppEn = {
   displayName: 'Google Meet',
+  groups: ['Video Conferencing & Meetings', 'Google Workspace Suite'],
   shortDesc: 'Connect with Google Meet to manage your meetings and events',
   longDesc:
     'Integrate with Google Meet to manage your meetings and events. This integration allows you to perform actions and respond to events in your Google Meet account, enabling you to automate meeting management and scheduling workflows.',

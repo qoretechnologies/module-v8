@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const FirestoreAppEn = {
   displayName: 'Firestore',
+  groups: ['Databases & Backend Services'],
   shortDesc: 'Connect to Google Cloud Firestore to manage your NoSQL document database.',
   longDesc:
     'The Firestore integration enables you to interact with Google Cloud Firestore, a flexible, scalable NoSQL cloud database. Create, read, update, and delete documents, manage collections, and execute queries to automate your document database operations seamlessly.',
@@ -104,6 +105,7 @@ const FirestoreAppEn = {
       },
     },
     create_document: {
+      groups: ['Documents'],
       displayName: 'Create Document',
       shortDesc: 'Create a new document in a Firestore collection',
       longDesc:
@@ -142,6 +144,7 @@ const FirestoreAppEn = {
       },
     },
     get_document: {
+      groups: ['Documents'],
       displayName: 'Get Document',
       shortDesc: 'Retrieve a specific document from a Firestore collection',
       longDesc:
@@ -168,6 +171,7 @@ const FirestoreAppEn = {
       },
     },
     update_document: {
+      groups: ['Documents'],
       displayName: 'Update Document',
       shortDesc: 'Update an existing document in a Firestore collection',
       longDesc:
@@ -212,6 +216,7 @@ const FirestoreAppEn = {
       },
     },
     delete_document: {
+      groups: ['Documents'],
       displayName: 'Delete Document',
       shortDesc: 'Delete a document from a Firestore collection',
       longDesc:
@@ -238,6 +243,7 @@ const FirestoreAppEn = {
       },
     },
     list_documents: {
+      groups: ['Documents'],
       displayName: 'List Documents',
       shortDesc: 'List all documents in a Firestore collection',
       longDesc:
@@ -276,6 +282,7 @@ const FirestoreAppEn = {
       },
     },
     list_collections: {
+      groups: ['Collections'],
       displayName: 'List Collections',
       shortDesc: 'List all collections in a Firestore database or document',
       longDesc:

@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const TypeformAppEn = {
   displayName: 'Typeform',
+  groups: ['Forms, Surveys & Scheduling'],
   shortDesc: 'Create and manage interactive forms, surveys, and quizzes with Typeform.',
   longDesc:
     'Typeform is a versatile form builder that allows you to create engaging, conversational forms, surveys, quizzes, and polls. With its intuitive interface and powerful features, you can collect responses, analyze data, and integrate with other tools to streamline your workflow. Perfect for lead generation, customer feedback, event registration, and market research.',

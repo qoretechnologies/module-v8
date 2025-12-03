@@ -2,6 +2,7 @@
 
 const JiraAppEn = {
   displayName: 'Jira',
+  groups: ['Project & Task Management'],
   shortDesc: 'Collection of actions to interact with the Jira API',
   longDesc: 'Collection of actions to interact with the Jira API',
   triggers: {

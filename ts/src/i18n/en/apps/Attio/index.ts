@@ -2,6 +2,7 @@
 
 const AttioAppEn = {
   displayName: 'Attio',
+  groups: ['CRM & Sales Management'],
   shortDesc: 'Connect with Attio to manage your contacts and data',
   longDesc:
     'Integrate with Attio to manage your contacts, companies, and data. This integration allows you to perform actions and respond to events in your Attio workspace, enabling you to automate workflows and enhance your productivity.',
@@ -93,6 +94,7 @@ const AttioAppEn = {
   },
   actions: {
     create_note: {
+      groups: ['Notes'],
       displayName: 'Create Note',
       shortDesc: 'Creates a new note attached to a specific record in Attio.',
       longDesc:
@@ -131,6 +133,7 @@ const AttioAppEn = {
       },
     },
     create_task: {
+      groups: ['Tasks'],
       displayName: 'Create Task',
       shortDesc: 'Creates a new task in Attio with specified details.',
       longDesc:
@@ -163,6 +166,7 @@ const AttioAppEn = {
       },
     },
     get_tasks: {
+      groups: ['Tasks'],
       displayName: 'List Tasks',
       shortDesc: 'Retrieves a list of tasks from Attio with filtering options.',
       longDesc:
@@ -212,6 +216,7 @@ const AttioAppEn = {
       },
     },
     get_notes: {
+      groups: ['Notes'],
       displayName: 'Get Notes',
       shortDesc: 'Retrieves Notes from Attio.',
       longDesc: 'Retrieve Notes from your Attio workspace. ',
@@ -243,6 +248,7 @@ const AttioAppEn = {
       },
     },
     get_task: {
+      groups: ['Tasks'],
       displayName: 'Get Task',
       shortDesc: 'Retrieves a specific task from Attio by its ID.',
       longDesc:
@@ -257,6 +263,7 @@ const AttioAppEn = {
       },
     },
     get_object_record: {
+      groups: ['Object Records'],
       displayName: 'Get Single Object Record',
       shortDesc: 'Retrieves a specific record from an Attio object.',
       longDesc:
@@ -277,6 +284,7 @@ const AttioAppEn = {
       },
     },
     get_list_entry: {
+      groups: ['List Entries'],
       displayName: 'Get Single List Entry',
       shortDesc: 'Retrieves a specific entry from an Attio list.',
       longDesc:
@@ -297,6 +305,7 @@ const AttioAppEn = {
       },
     },
     find_list_entries: {
+      groups: ['List Entries'],
       displayName: 'Find List Entries',
       shortDesc: 'Search for entries in an Attio list with filtering and sorting options.',
       longDesc:
@@ -351,6 +360,7 @@ const AttioAppEn = {
       },
     },
     update_list_entry: {
+      groups: ['List Entries'],
       displayName: 'Update List Entry',
       shortDesc: 'Update an existing entry in an Attio list.',
       longDesc:
@@ -374,6 +384,7 @@ const AttioAppEn = {
       },
     },
     create_list_entry: {
+      groups: ['List Entries'],
       displayName: 'Create List Entry',
       shortDesc: 'Create a new entry in an Attio list.',
       longDesc:
@@ -403,6 +414,7 @@ const AttioAppEn = {
       },
     },
     update_object_record: {
+      groups: ['Object Records'],
       displayName: 'Update Object Record',
       shortDesc: 'Update an existing record in an Attio object.',
       longDesc:
@@ -426,6 +438,7 @@ const AttioAppEn = {
       },
     },
     find_object_records: {
+      groups: ['Object Records'],
       displayName: 'Find Object Records',
       shortDesc: 'Search for records in an Attio object with filtering and sorting options.',
       longDesc:
@@ -480,6 +493,7 @@ const AttioAppEn = {
       },
     },
     create_object_record: {
+      groups: ['Object Records'],
       displayName: 'Create Object Record',
       shortDesc: 'Create a new record in a specified object',
       longDesc:

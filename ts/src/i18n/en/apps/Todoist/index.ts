@@ -1,11 +1,13 @@
 /* eslint-disable max-len */
 const TodoistAppEn = {
   displayName: 'Todoist',
+  groups: ['Project & Task Management'],
   shortDesc: 'Connect to Todoist to automate task and project management workflows.',
   longDesc:
     'The Todoist integration enables you to seamlessly interact with the Todoist API to manage tasks, projects, labels, and comments. Automate your task management workflows, sync project data, and streamline team collaboration with comprehensive actions and triggers.',
   actions: {
     add_comment_to_project: {
+      groups: ['Comments'],
       displayName: 'Add Comment to Project',
       shortDesc: 'Add a comment to a Todoist project',
       longDesc:
@@ -25,6 +27,7 @@ const TodoistAppEn = {
       },
     },
     add_comment_to_task: {
+      groups: ['Comments'],
       displayName: 'Add Comment to Task',
       shortDesc: 'Add a comment to a Todoist task',
       longDesc:
@@ -44,6 +47,7 @@ const TodoistAppEn = {
       },
     },
     complete_task: {
+      groups: ['Tasks'],
       displayName: 'Complete Task',
       shortDesc: 'Mark a Todoist task as complete',
       longDesc:
@@ -57,6 +61,7 @@ const TodoistAppEn = {
       },
     },
     create_project: {
+      groups: ['Projects'],
       displayName: 'Create Project',
       shortDesc: 'Create a new Todoist project',
       longDesc:
@@ -93,6 +98,7 @@ const TodoistAppEn = {
       },
     },
     create_task: {
+      groups: ['Tasks'],
       displayName: 'Create Task',
       shortDesc: 'Create a new Todoist task',
       longDesc:
@@ -173,6 +179,7 @@ const TodoistAppEn = {
       },
     },
     delete_task: {
+      groups: ['Tasks'],
       displayName: 'Delete Task',
       shortDesc: 'Permanently delete a Todoist task',
       longDesc:
@@ -186,6 +193,7 @@ const TodoistAppEn = {
       },
     },
     get_project: {
+      groups: ['Projects'],
       displayName: 'Get Project',
       shortDesc: 'Retrieve details of a Todoist project',
       longDesc:
@@ -199,6 +207,7 @@ const TodoistAppEn = {
       },
     },
     get_project_collaborators: {
+      groups: ['Projects'],
       displayName: 'Get Project Collaborators',
       shortDesc: 'List collaborators in a project',
       longDesc:
@@ -224,6 +233,7 @@ const TodoistAppEn = {
       },
     },
     get_task: {
+      groups: ['Tasks'],
       displayName: 'Get Task',
       shortDesc: 'Retrieve details of a Todoist task',
       longDesc:
@@ -237,6 +247,7 @@ const TodoistAppEn = {
       },
     },
     get_tasks_by_filter: {
+      groups: ['Tasks'],
       displayName: 'Get Tasks by Filter',
       shortDesc: 'Search tasks using Todoist filter queries',
       longDesc:
@@ -262,6 +273,7 @@ const TodoistAppEn = {
       },
     },
     list_labels: {
+      groups: ['Labels'],
       displayName: 'List Labels',
       shortDesc: 'Retrieve all Todoist labels',
       longDesc:
@@ -281,6 +293,7 @@ const TodoistAppEn = {
       },
     },
     list_projects: {
+      groups: ['Projects'],
       displayName: 'List Projects',
       shortDesc: 'Retrieve all Todoist projects',
       longDesc:
@@ -300,6 +313,7 @@ const TodoistAppEn = {
       },
     },
     list_sections: {
+      groups: ['Sections'],
       displayName: 'List Sections',
       shortDesc: 'Retrieve sections from projects',
       longDesc:
@@ -324,6 +338,7 @@ const TodoistAppEn = {
       },
     },
     list_tasks: {
+      groups: ['Tasks'],
       displayName: 'List Tasks',
       shortDesc: 'Retrieve Todoist tasks',
       longDesc:
@@ -363,6 +378,7 @@ const TodoistAppEn = {
       },
     },
     move_task_to_section: {
+      groups: ['Tasks'],
       displayName: 'Move Task to Section',
       shortDesc: 'Move a task to a different section or project',
       longDesc:
@@ -388,6 +404,7 @@ const TodoistAppEn = {
       },
     },
     update_task: {
+      groups: ['Tasks'],
       displayName: 'Update Task',
       shortDesc: 'Update an existing Todoist task',
       longDesc:

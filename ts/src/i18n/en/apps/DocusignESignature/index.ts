@@ -1,60 +1,76 @@
-
-
 const DocusignESignatureAppEn = {
   displayName: 'Docusign eSignature',
+  groups: ['Document Signing & Contracts'],
   shortDesc: 'Collection of actions to interact with the Docusign eSignature API',
   longDesc: 'Collection of actions to interact with the Docusign eSignature API',
   actions: {
     Brands_GetBrands: {
       displayName: 'Get Brands',
+      groups: ['Brands'],
     },
     Brands_PostBrands: {
       displayName: 'Create Brand',
+      groups: ['Brands'],
     },
     Brands_DeleteBrands: {
       displayName: 'Delete Brand',
+      groups: ['Brands'],
     },
     Envelopes_GetEnvelopes: {
       displayName: 'Get Envelopes',
+      groups: ['Envelopes'],
     },
     Envelopes_PostEnvelopes: {
       displayName: 'Create Envelopes',
+      groups: ['Envelopes'],
     },
     Envelopes_GetEnvelope: {
       displayName: 'Get Envelope',
+      groups: ['Envelopes'],
     },
     Envelopes_PutEnvelope: {
       displayName: 'Update Envelope',
+      groups: ['Envelopes'],
     },
     Documents_GetDocuments: {
       displayName: 'Get Documents',
+      groups: ['Documents'],
     },
     Documents_PutDocuments: {
       displayName: 'Update Documents',
+      groups: ['Documents'],
     },
     Documents_DeleteDocuments: {
       displayName: 'Delete Documents',
+      groups: ['Documents'],
     },
     Documents_GetDocument: {
       displayName: 'Get Document',
+      groups: ['Documents'],
     },
     Documents_PutDocument: {
       displayName: 'Update Document',
+      groups: ['Documents'],
     },
     Recipients_GetRecipients: {
       displayName: 'Get Recipients',
+      groups: ['Recipients'],
     },
     Recipients_PutRecipients: {
       displayName: 'Update Recipients',
+      groups: ['Recipients'],
     },
     Recipients_PostRecipients: {
       displayName: 'Add Recipients',
+      groups: ['Recipients'],
     },
     Recipients_DeleteRecipients: {
       displayName: 'Delete Recipients',
+      groups: ['Recipients'],
     },
     Views_PostEnvelopeRecipientView: {
       displayName: 'Create Recipient View',
+      groups: ['Views'],
     },
   },
   triggers: {

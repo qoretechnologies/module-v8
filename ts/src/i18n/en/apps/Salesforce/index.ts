@@ -1,6 +1,5 @@
-
-
 const SalesforceAppEn = {
+  groups: ['CRM & Sales Management'],
   triggers: {
     new_record_trigger: {
       displayName: 'New Record',

@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const LinkedInOrganizationsAppEn = {
   displayName: 'LinkedIn Organizations',
+  groups: ['Social Media Management'],
   shortDesc: 'Manage and analyze LinkedIn organization content and statistics',
   longDesc:
     "Connect to LinkedIn Organizations to manage, and monitor posts, analyze follower engagement, track page performance, and gather comprehensive statistics about your organization's LinkedIn presence.",

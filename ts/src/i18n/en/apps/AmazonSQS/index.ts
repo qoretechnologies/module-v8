@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const AmazonSQSAppEn = {
   displayName: 'AWS SQS',
+  groups: ['DevOps & Cloud Infrastructure', 'Messaging & Real-time Communication'],
   shortDesc:
     'Connect to Amazon Simple Queue Service to manage message queues and automate message processing workflows.',
   longDesc:

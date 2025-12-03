@@ -2,6 +2,7 @@ import { BaseTranslation } from '../../../i18n-types';
 
 const GoogleDriveAppEn = {
   displayName: 'Google Drive',
+  groups: ['Cloud Storage & File Management', 'Google Workspace Suite'],
   shortDesc: 'Connect with Google Drive to manage your files and folders',
   longDesc:
     'Integrate with Google Drive to manage your files and folders. This integration allows you to perform actions and respond to events in your Google Drive account, enabling you to automate file management and sharing workflows.',

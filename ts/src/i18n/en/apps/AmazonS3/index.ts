@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const AmazonS3AppEn = {
   displayName: 'AWS S3',
+  groups: ['Cloud Storage & File Management', 'DevOps & Cloud Infrastructure'],
   shortDesc:
     'Seamlessly connect to Amazon S3 to manage buckets, upload files, and automate your cloud storage workflows.',
   longDesc:

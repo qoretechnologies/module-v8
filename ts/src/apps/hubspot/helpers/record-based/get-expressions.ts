@@ -13,7 +13,7 @@ export const getHubspotExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: '&&',
         symbol: '&&',
         roles: ['search', 'field'],
-        group: EQoreExpressionGroups.LOGICAL,
+        groups: [EQoreExpressionGroups.LOGICAL],
         args: [
           {
             type_code: 'any',
@@ -29,7 +29,7 @@ export const getHubspotExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: '||',
         symbol: '||',
         roles: ['search', 'field'],
-        group: EQoreExpressionGroups.LOGICAL,
+        groups: [EQoreExpressionGroups.LOGICAL],
         args: [
           {
             type_code: 'any',
@@ -45,7 +45,7 @@ export const getHubspotExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: '==',
         symbol: '==',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -65,7 +65,7 @@ export const getHubspotExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: '!=',
         symbol: '!=',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -85,7 +85,7 @@ export const getHubspotExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: '>',
         symbol: '>',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -105,7 +105,7 @@ export const getHubspotExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: '>=',
         symbol: '>=',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -125,7 +125,7 @@ export const getHubspotExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: '<',
         symbol: '<',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -145,7 +145,7 @@ export const getHubspotExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: '<=',
         symbol: '<=',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -165,7 +165,7 @@ export const getHubspotExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'in',
         symbol: 'in',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -188,7 +188,7 @@ export const getHubspotExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'not-in',
         symbol: 'notIn',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -211,7 +211,7 @@ export const getHubspotExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'between',
         symbol: 'between',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -236,7 +236,7 @@ export const getHubspotExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-property',
         symbol: 'hasProperty',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -251,7 +251,7 @@ export const getHubspotExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'not-has-property',
         symbol: 'notHasProperty',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -266,7 +266,7 @@ export const getHubspotExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'contains-token',
         symbol: 'containsToken',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -286,7 +286,7 @@ export const getHubspotExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'not-contains-token',
         symbol: 'notContainsToken',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',

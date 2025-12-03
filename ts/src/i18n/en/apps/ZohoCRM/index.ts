@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
-const ZohoCrmAppEn = {
+const ZohoCRMAppEn = {
   displayName: 'Zoho CRM',
+  groups: ['CRM & Sales Management'],
   shortDesc:
     'Connect to Zoho CRM to automate customer relationship management across all global data centers.',
   longDesc:
@@ -607,4 +608,4 @@ const ZohoCrmAppEn = {
   },
 };
 
-export default ZohoCrmAppEn;
+export default ZohoCRMAppEn;

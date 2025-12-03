@@ -1,11 +1,13 @@
 /* eslint-disable max-len */
 const WebflowAppEn = {
   displayName: 'Webflow',
+  groups: ['E-commerce Platforms', 'Design & Creative Tools'],
   shortDesc:
     'Webflow is a web design tool, CMS, and hosting platform that allows users to build responsive websites visually.',
   longDesc: `Webflow is a powerful web design tool that combines the flexibility of a CMS with the ease of use of a visual editor. It allows users to create responsive websites without writing code, making it accessible for designers and developers alike. With Webflow, you can design, build, and launch websites all in one platform, streamlining the web development process.`,
   actions: {
     create_item: {
+      groups: ['Collections'],
       displayName: 'Create Item',
       shortDesc: 'Create a new item in a Webflow collection',
       longDesc:
@@ -39,6 +41,7 @@ const WebflowAppEn = {
       },
     },
     delete_item: {
+      groups: ['Collections'],
       displayName: 'Delete Item',
       shortDesc: 'Delete an item from a Webflow collection',
       longDesc:
@@ -62,6 +65,7 @@ const WebflowAppEn = {
       },
     },
     get_collection: {
+      groups: ['Collections'],
       displayName: 'Get Collection',
       shortDesc: 'Retrieve information about a Webflow collection',
       longDesc:
@@ -80,6 +84,7 @@ const WebflowAppEn = {
       },
     },
     get_item: {
+      groups: ['Collections'],
       displayName: 'Get Item',
       shortDesc: 'Retrieve a specific item from a Webflow collection',
       longDesc:
@@ -108,6 +113,7 @@ const WebflowAppEn = {
       },
     },
     get_order: {
+      groups: ['Orders'],
       displayName: 'Get Order',
       shortDesc: 'Retrieve a specific order from Webflow',
       longDesc:
@@ -126,6 +132,7 @@ const WebflowAppEn = {
       },
     },
     get_site: {
+      groups: ['Sites'],
       displayName: 'Get Site',
       shortDesc: 'Retrieve information about a Webflow site',
       longDesc:
@@ -139,6 +146,7 @@ const WebflowAppEn = {
       },
     },
     list_collections: {
+      groups: ['Collections'],
       displayName: 'List Collections',
       shortDesc: 'List all collections from a Webflow site',
       longDesc:
@@ -152,6 +160,7 @@ const WebflowAppEn = {
       },
     },
     list_custom_domains: {
+      groups: ['Sites'],
       displayName: 'List Custom Domains',
       shortDesc: 'List custom domains for a Webflow site',
       longDesc: 'Retrieve a list of all custom domains configured for a specified Webflow site.',
@@ -164,6 +173,7 @@ const WebflowAppEn = {
       },
     },
     list_items: {
+      groups: ['Collections'],
       displayName: 'List Items',
       shortDesc: 'List items from a Webflow collection',
       longDesc:
@@ -236,6 +246,7 @@ const WebflowAppEn = {
       },
     },
     list_orders: {
+      groups: ['Orders'],
       displayName: 'List Orders',
       shortDesc: 'List orders from a Webflow site',
       longDesc:
@@ -264,12 +275,14 @@ const WebflowAppEn = {
       },
     },
     list_sites: {
+      groups: ['Sites'],
       displayName: 'List Sites',
       shortDesc: 'List all Webflow sites',
       longDesc:
         'Retrieve a list of all Webflow sites accessible with the current authentication token.',
     },
     mark_order_status: {
+      groups: ['Orders'],
       displayName: 'Mark Order Status',
       shortDesc: 'Update the status of a Webflow order',
       longDesc:
@@ -303,6 +316,7 @@ const WebflowAppEn = {
       },
     },
     publish_item: {
+      groups: ['Collections'],
       displayName: 'Publish Item',
       shortDesc: 'Publish items from a Webflow collection',
       longDesc:
@@ -326,6 +340,7 @@ const WebflowAppEn = {
       },
     },
     publish_site: {
+      groups: ['Sites'],
       displayName: 'Publish Site',
       shortDesc: 'Publish a Webflow site',
       longDesc:
@@ -349,6 +364,7 @@ const WebflowAppEn = {
       },
     },
     update_item: {
+      groups: ['Collections'],
       displayName: 'Update Item',
       shortDesc: 'Update an existing item in a Webflow collection',
       longDesc: 'Update the field data and settings of an existing item in a Webflow collection.',

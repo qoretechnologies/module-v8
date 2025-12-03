@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const TelegramAppEn = {
   displayName: 'Telegram',
+  groups: ['Team Communication & Chat'],
   shortDesc: 'Connect and interact with Telegram via a bot',
   longDesc:
     'Connect a Telegram Bot using its Bot Token to send messages and handle incoming updates. Authentication is done solely with the Bot Token issued by @BotFather; no user login is required.',
@@ -10,7 +11,7 @@ const TelegramAppEn = {
       shortDesc: 'Send a text message to a chat',
       longDesc:
         'Send a text message with optional formatting to any chat, group, or channel accessible by your bot',
-      group: 'Messaging',
+      groups: ['Messaging'],
       options: {
         chat: {
           displayName: 'Chat',
@@ -46,7 +47,7 @@ const TelegramAppEn = {
       shortDesc: 'Send a photo with optional caption to a chat',
       longDesc:
         'Upload and send an image file to any chat, group, or channel with optional caption and formatting',
-      group: 'Messaging',
+      groups: ['Messaging'],
       options: {
         chat: {
           displayName: 'Chat',
@@ -85,7 +86,7 @@ const TelegramAppEn = {
       shortDesc: 'Create and send a poll or quiz to a chat',
       longDesc:
         'Create interactive polls or quizzes with multiple answer options, perfect for gathering feedback or testing knowledge',
-      group: 'Messaging',
+      groups: ['Messaging'],
       options: {
         chat: {
           displayName: 'Chat',
@@ -167,7 +168,7 @@ const TelegramAppEn = {
       shortDesc: 'Edit the text of a previously sent message',
       longDesc:
         'Modify the text content of a message that was previously sent by the bot. Only works with text messages sent by the bot.',
-      group: 'Message Management',
+      groups: ['Message Management'],
       options: {
         chat: {
           displayName: 'Chat',
@@ -202,7 +203,7 @@ const TelegramAppEn = {
       shortDesc: 'Pin a message in a group or channel',
       longDesc:
         'Pin an important message to the top of a group or channel chat for all members to see',
-      group: 'Message Management',
+      groups: ['Message Management'],
       options: {
         chat: {
           displayName: 'Chat',
@@ -227,7 +228,7 @@ const TelegramAppEn = {
       shortDesc: 'Unpin a specific message or all pinned messages',
       longDesc:
         'Remove a pinned message from a group or channel, or unpin all currently pinned messages',
-      group: 'Message Management',
+      groups: ['Message Management'],
       options: {
         chat: {
           displayName: 'Chat',
@@ -247,7 +248,7 @@ const TelegramAppEn = {
       shortDesc: 'Delete a specific message from a chat',
       longDesc:
         'Remove a message from the chat. The bot can delete its own messages and messages from other users if it has admin privileges.',
-      group: 'Message Management',
+      groups: ['Message Management'],
       options: {
         chat: {
           displayName: 'Chat',
@@ -266,7 +267,7 @@ const TelegramAppEn = {
       shortDesc: 'Get a list of recent chats the bot has interacted with',
       longDesc:
         'Retrieve a list of chats, groups, and channels where the bot has recently received messages or interactions',
-      group: 'Chat Information',
+      groups: ['Chat Information'],
       options: {
         limit: {
           displayName: 'Limit',
