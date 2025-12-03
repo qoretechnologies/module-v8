@@ -1,10 +1,72 @@
 /* eslint-disable max-len */
 const ZoomAppEn = {
   displayName: 'Zoom',
+  groups: ['Video Conferencing & Meetings'],
   shortDesc: 'Video conferencing and online meeting platform',
   longDesc:
     'Zoom is a video conferencing and online meeting platform that allows users to host and join virtual meetings, webinars, and video conferences. It offers features such as screen sharing, recording, and chat functionalities to enhance collaboration and communication among participants.',
-  actions: {},
+  actions: {
+    meetingDelete: {
+      groups: ['Meetings'],
+    },
+    meeting: {
+      groups: ['Meetings'],
+    },
+    meetingUpdate: {
+      groups: ['Meetings'],
+    },
+    meetings: {
+      groups: ['Meetings'],
+    },
+    meetingCreate: {
+      groups: ['Meetings'],
+    },
+    Getameetingsummary: {
+      groups: ['Meetings'],
+    },
+    meetingRegistrants: {
+      groups: ['Meeting Registrants'],
+    },
+    meetingRegistrantCreate: {
+      groups: ['Meeting Registrants'],
+    },
+    pastMeetingParticipants: {
+      groups: ['Meeting Participants'],
+    },
+    recordingDelete: {
+      groups: ['Recordings'],
+    },
+    recordingGet: {
+      groups: ['Recordings'],
+    },
+    recordingsList: {
+      groups: ['Recordings'],
+    },
+    webinars: {
+      groups: ['Webinars'],
+    },
+    webinarCreate: {
+      groups: ['Webinars'],
+    },
+    webinarDelete: {
+      groups: ['Webinars'],
+    },
+    webinar: {
+      groups: ['Webinars'],
+    },
+    webinarUpdate: {
+      groups: ['Webinars'],
+    },
+    webinarRegistrants: {
+      groups: ['Webinar Registrants'],
+    },
+    webinarRegistrantCreate: {
+      groups: ['Webinar Registrants'],
+    },
+    listWebinarParticipants: {
+      groups: ['Webinar Participants'],
+    },
+  },
   triggers: {
     new_meeting: {
       displayName: 'New Meeting',

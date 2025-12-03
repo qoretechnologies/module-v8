@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const AmazonLambdaAppEn = {
   displayName: 'AWS Lambda',
+  groups: ['DevOps & Cloud Infrastructure'],
   shortDesc: 'Serverless compute service that runs code without provisioning or managing servers.',
   longDesc:
     'Amazon Lambda is a serverless compute service that lets you run code without provisioning or managing servers. This integration provides comprehensive actions and triggers to manage Lambda functions, layers, and invocations. You can list functions, invoke them, manage layers, and monitor new function and layer version creation.',

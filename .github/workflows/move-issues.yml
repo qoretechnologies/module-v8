@@ -148,6 +148,33 @@ jobs:
                     try {
                       console.log(`  Processing project "${projectItem.project.title}"`);
                       
+                      if (projectItem.isArchived) {
+                        console.log(`    ⚠️  Item is archived, unarchiving...`);
+                        
+                        const unarchiveMutation = `
+                          mutation($projectId: ID!, $itemId: ID!) {
+                            unarchiveProjectV2Item(
+                              input: {
+                                projectId: $projectId
+                                itemId: $itemId
+                              }
+                            ) {
+                              item {
+                                id
+                                isArchived
+                              }
+                            }
+                          }
+                        `;
+                        
+                        await github.graphql(unarchiveMutation, {
+                          projectId: projectItem.project.id,
+                          itemId: projectItem.id
+                        });
+                        
+                        console.log(`    ✅ Unarchived successfully`);
+                      }
+
                       const projectFieldsQuery = `
                         query($projectId: ID!) {
                           node(id: $projectId) {

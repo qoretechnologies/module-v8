@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const BrowseAiAppEn = {
   displayName: 'Browse AI',
+  groups: ['Web Scraping & Automation'],
   shortDesc: 'Web scraping and data extraction automation platform',
   longDesc: `Connect your Browse AI account to automate web scraping and data extraction workflows. Create custom robots to monitor websites, extract structured data, track changes, and collect information from any website without coding. Set up automated data collection schedules, receive alerts on website changes, and integrate extracted data directly into your Qore workflows.`,
   actions: {

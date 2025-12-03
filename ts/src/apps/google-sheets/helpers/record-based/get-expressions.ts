@@ -12,7 +12,7 @@ export const getGoogleSheetsExpressions = (locale: Locales): TQoreSearchRecordsE
         subtype: 'generic',
         name: 'row-ids',
         symbol: 'rowIds',
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         roles: ['search'],
         args: [
           {

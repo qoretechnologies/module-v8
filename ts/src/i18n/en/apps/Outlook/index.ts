@@ -2,6 +2,7 @@
 
 const OutlookAppEn = {
   displayName: 'Microsoft Outlook',
+  groups: ['Email & Email Marketing'],
   shortDesc: 'Get access to your calendar events, contacts, and emails in Microsoft Outlook.',
   longDesc:
     'Microsoft Outlook is a personal information manager software system from Microsoft, available as a part of the Microsoft Office suite. Primarily an email application, it also includes a calendar, task manager, contact manager, note taking, journal, and web browsing. Connect your Outlook account to create and manage contacts, calendar events, and send emails.',

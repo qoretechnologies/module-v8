@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const FacebookPagesAppEn = {
   displayName: 'Facebook Pages',
+  groups: ['Social Media Management'],
   shortDesc: 'Manage your Facebook pages and posts',
   longDesc: `Connect your Facebook account to manage your pages, posts, and comments directly from Qore. You can create, read, update, and delete posts on your Facebook pages, as well as manage comments and reactions.`,
   actions: {

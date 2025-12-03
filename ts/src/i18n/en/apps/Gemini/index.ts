@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const GeminiAppEn = {
   displayName: 'Gemini',
+  groups: ['AI & Language Models'],
   shortDesc: "Google's advanced AI model for multimodal understanding and generation",
   longDesc: `Connect to Google's Gemini AI to leverage state-of-the-art multimodal capabilities including text generation, image analysis, code assistance, and reasoning tasks. Gemini excels at understanding and generating content across text, images, and code, making it ideal for complex workflows requiring advanced AI reasoning, creative content generation, data analysis, and intelligent automation within your Qore applications.`,
   actions: {

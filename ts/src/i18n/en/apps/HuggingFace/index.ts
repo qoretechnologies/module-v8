@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const HuggingFaceAppEn = {
   displayName: 'Hugging Face',
+  groups: ['AI & Language Models'],
   shortDesc: 'AI models and datasets platform',
   longDesc:
     'Access and deploy machine learning models, datasets, and spaces from Hugging Face Hub for natural language processing, computer vision, and other AI tasks',

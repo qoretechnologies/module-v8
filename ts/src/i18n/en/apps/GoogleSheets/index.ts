@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const GoogleSheetsAppEn = {
   displayName: 'Google Sheets',
+  groups: ['Spreadsheets & Data Tables', 'Google Workspace Suite'],
   shortDesc: 'Connect with Google Sheets to manage your spreadsheets',
   longDesc:
     'Integrate with Google Sheets to create, update, and manage your spreadsheets. This integration allows you to perform actions and respond to events in your Google Sheets account, enabling you to automate data management and reporting workflows.',

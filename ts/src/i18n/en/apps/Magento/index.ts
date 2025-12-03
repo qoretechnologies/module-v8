@@ -4,30 +4,35 @@ import { MagentoSearchOptionsEn } from './search-options';
 
 const MagentoAppEn = {
   displayName: 'Magento',
+  groups: ['E-commerce Platforms'],
   shortDesc:
     'E-commerce platform for building online stores and managing customers, products, and orders',
   longDesc:
     'Magento is a flexible e-commerce platform that provides businesses with a complete solution for building and managing online stores. This integration allows you to automate workflows when customer, product, order, invoice, or shipment events occur in your Magento store.',
   actions: {
     customerCustomerRepositoryV1GetByIdGet: {
+      groups: ['Customers'],
       displayName: 'Get Customer by ID',
       shortDesc: 'Retrieve a specific customer account by ID',
       longDesc:
         'Retrieves detailed information about a customer account using the customer ID. Returns all customer attributes including address information, account status, and custom attributes.',
     },
     customerCustomerRepositoryV1SavePut: {
+      groups: ['Customers'],
       displayName: 'Update Customer',
       shortDesc: 'Update an existing customer account',
       longDesc:
         'Updates customer information for an existing account. This endpoint allows modification of personal information, addresses, custom attributes, and other account details. The customer ID must be included in the request.',
     },
     customerCustomerRepositoryV1DeleteByIdDelete: {
+      groups: ['Customers'],
       displayName: 'Delete Customer',
       shortDesc: 'Remove a customer account by ID',
       longDesc:
         'Permanently deletes a customer account from the system. This operation cannot be undone and will remove all customer data associated with the specified ID, including addresses and order history references.',
     },
     customerCustomerRepositoryV1GetListGet: {
+      groups: ['Customers'],
       displayName: 'List Customers',
       shortDesc: 'Retrieve a list of customer accounts',
       longDesc:
@@ -35,18 +40,21 @@ const MagentoAppEn = {
       options: MagentoSearchOptionsEn,
     },
     customerAccountManagementV1CreateAccountPost: {
+      groups: ['Customers'],
       displayName: 'Create Customer Account',
       shortDesc: 'Register a new customer account',
       longDesc:
         'Creates a new customer account with the provided information. Required fields include email, password, and first/last name. Optional details include addresses, date of birth, and custom attributes. Returns the newly created customer ID upon success.',
     },
     catalogProductRepositoryV1SavePost: {
+      groups: ['Products'],
       displayName: 'Create Product',
       shortDesc: 'Add a new product to the catalog',
       longDesc:
         'Creates a new product in the catalog with specified attributes, pricing, and inventory information. Products can be simple, configurable, bundled, grouped, virtual, or downloadable. Media gallery entries, tier prices, and custom options can also be defined.',
     },
     catalogProductRepositoryV1GetListGet: {
+      groups: ['Products'],
       displayName: 'List Products',
       shortDesc: 'Retrieve a list of products from the catalog',
       longDesc:
@@ -54,6 +62,7 @@ const MagentoAppEn = {
       options: MagentoSearchOptionsEn,
     },
     catalogProductRepositoryV1SavePut: {
+      groups: ['Products'],
       displayName: 'Update Product',
       shortDesc: 'Modify an existing product',
       longDesc:
@@ -68,6 +77,7 @@ const MagentoAppEn = {
       },
     },
     catalogProductRepositoryV1DeleteByIdDelete: {
+      groups: ['Products'],
       displayName: 'Delete Product',
       shortDesc: 'Remove a product from the catalog',
       longDesc:
@@ -82,6 +92,7 @@ const MagentoAppEn = {
       },
     },
     catalogProductRepositoryV1GetGet: {
+      groups: ['Products'],
       displayName: 'Get Product Details',
       shortDesc: 'Retrieve detailed information about a specific product',
       longDesc:
@@ -96,6 +107,7 @@ const MagentoAppEn = {
       },
     },
     quoteCartRepositoryV1GetListGet: {
+      groups: ['Shopping Carts'],
       displayName: 'List Shopping Carts',
       shortDesc: 'Retrieve a list of active shopping carts',
       longDesc:
@@ -103,12 +115,14 @@ const MagentoAppEn = {
       options: MagentoSearchOptionsEn,
     },
     salesOrderRepositoryV1GetGet: {
+      groups: ['Orders'],
       displayName: 'Get Order Details',
       shortDesc: 'Retrieve detailed information about a specific order',
       longDesc:
         'Retrieves comprehensive information about a specific order by ID. Includes order items, billing and shipping addresses, payment information, applied discounts, and order status history. Useful for order processing and customer service inquiries.',
     },
     salesOrderRepositoryV1GetListGet: {
+      groups: ['Orders'],
       displayName: 'List Orders',
       shortDesc: 'Retrieve a list of orders based on search criteria',
       longDesc:
@@ -116,24 +130,28 @@ const MagentoAppEn = {
       options: MagentoSearchOptionsEn,
     },
     salesShipmentRepositoryV1SavePost: {
+      groups: ['Shipments'],
       displayName: 'Create Shipment',
       shortDesc: 'Creates a new shipment for an order',
       longDesc:
         'Creates a new shipment record for an existing order, allowing you to document and track the physical sending of order items to the customer. Includes options for specifying tracking numbers, shipping carriers, and shipped items with their quantities.',
     },
     salesInvoiceRepositoryV1SavePost: {
+      groups: ['Invoices'],
       displayName: 'Create Invoice',
       shortDesc: 'Creates a new invoice for an order',
       longDesc:
         "Creates a new invoice record for an existing order, documenting the financial transaction and payment request. Allows for specifying line items to be invoiced, payment details, and comments that will appear on the customer's invoice.",
     },
     salesOrderRepositoryV1SavePut: {
+      groups: ['Orders'],
       displayName: 'Create Order',
       shortDesc: 'Persists order information to the system',
       longDesc:
         'Performs persist operations for a specified order. Saves the order data to the database, including customer information, line items, payment details, shipping information, and other relevant order metadata.',
     },
     salesOrderManagementV1AddCommentPost: {
+      groups: ['Orders'],
       displayName: 'Add Order Comment',
       shortDesc: 'Append a comment to an existing order',
       longDesc:
@@ -147,12 +165,14 @@ const MagentoAppEn = {
       },
     },
     salesOrderManagementV1GetCommentsListGet: {
+      groups: ['Orders'],
       displayName: 'Get Order Comments',
       shortDesc: 'Retrieve the comment history for an order',
       longDesc:
         'Returns the complete comment history for a specific order. Results include comment text, timestamp, author information, and visibility status (customer-visible or admin-only). Comments are returned in chronological order.',
     },
     salesInvoiceRepositoryV1GetListGet: {
+      groups: ['Invoices'],
       displayName: 'List Invoices',
       shortDesc: 'Retrieve a collection of invoices',
       longDesc:
@@ -160,6 +180,7 @@ const MagentoAppEn = {
       options: MagentoSearchOptionsEn,
     },
     salesShipmentRepositoryV1GetListGet: {
+      groups: ['Shipments'],
       displayName: 'List Shipments',
       shortDesc: 'Retrieve a collection of order shipments',
       longDesc:
@@ -167,6 +188,7 @@ const MagentoAppEn = {
       options: MagentoSearchOptionsEn,
     },
     salesTransactionRepositoryV1GetListGet: {
+      groups: ['Payments'],
       displayName: 'List Payment Transactions',
       shortDesc: 'Retrieve a collection of payment transactions',
       longDesc:
@@ -174,18 +196,21 @@ const MagentoAppEn = {
       options: MagentoSearchOptionsEn,
     },
     rmaRmaRepositoryV1DeleteDelete: {
+      groups: ['Returns & RMAs'],
       displayName: 'Delete Return Request',
       shortDesc: 'Remove a Return Merchandise Authorization (RMA)',
       longDesc:
         'Permanently deletes a Return Merchandise Authorization (RMA) request from the system. This operation cannot be undone and removes all associated return information including submitted items, reason codes, and processing history.',
     },
     rmaRmaManagementV1SaveRmaPost: {
+      groups: ['Returns & RMAs'],
       displayName: 'Create Return Request',
       shortDesc: 'Submit a new Return Merchandise Authorization (RMA)',
       longDesc:
         'Creates a new Return Merchandise Authorization (RMA) request for an existing order. The request includes items to be returned, quantities, reason codes, and customer comments. Additional documentation such as images can be attached to support the return request.',
     },
     rmaRmaManagementV1SearchGet: {
+      groups: ['Returns & RMAs'],
       displayName: 'Search Return Requests',
       shortDesc: 'Find Return Merchandise Authorizations (RMAs)',
       longDesc:

@@ -2,6 +2,7 @@
 
 const XeroAppEn = {
   displayName: 'Xero',
+  groups: ['Accounting & ERP'],
   shortDesc: `Seamlessly interact with Xero's API`,
   longDesc: 'Connect, manage, and automate tasks via the Xero API',
   triggers: {
@@ -178,18 +179,23 @@ const XeroAppEn = {
   },
   actions: {
     getProjects: {
+      groups: ['Projects'],
       displayName: 'Find Projects',
     },
     createProject: {
+      groups: ['Projects'],
       displayName: 'Create Project',
     },
     getTasks: {
+      groups: ['Tasks'],
       displayName: 'Find Tasks',
     },
     createTask: {
+      groups: ['Tasks'],
       displayName: 'Create Task',
     },
     getProjectUsers: {
+      groups: ['Users'],
       displayName: 'Find Project Users',
     },
     uploadFile: {
@@ -203,18 +209,22 @@ const XeroAppEn = {
       },
     },
     updateOrCreateBankTransactions: {
+      groups: ['Bank Transactions'],
       displayName: 'Create Bank Transaction',
     },
     getContacts: {
+      groups: ['Contacts'],
       displayName: 'Find Contacts',
     },
     updateOrCreateContacts: {
+      groups: ['Contacts'],
       displayName: 'Create or Update Contacts',
     },
     updateOrCreateCreditNotes: {
       displayName: 'Create Credit Note',
     },
     createCreditNoteAllocation: {
+      groups: ['Credit Notes'],
       displayName: 'Allocate Credit Note to Invoice',
       options: {
         InvoiceID: {
@@ -230,27 +240,34 @@ const XeroAppEn = {
       },
     },
     getEmployees: {
+      groups: ['Employees'],
       displayName: 'Find Employees',
     },
     updateOrCreateEmployees: {
+      groups: ['Employees'],
       displayName: 'Create/Update Employee',
     },
     getInvoices: {
+      groups: ['Invoices'],
       displayName: 'Find Invoices',
     },
     updateOrCreateInvoices: {
+      groups: ['Invoices'],
       displayName: 'Create Sales Invoice',
     },
     updateInvoice: {
       displayName: 'Update Sales Invoice',
     },
     emailInvoice: {
+      groups: ['Invoices'],
       displayName: 'Send Sales Invoice by Email',
     },
     getInvoiceHistory: {
+      groups: ['Invoices'],
       displayName: 'Get Invoice History',
     },
     createInvoiceHistory: {
+      groups: ['Invoices'],
       displayName: 'Add Note to Invoice',
       options: {
         note: {
@@ -261,15 +278,19 @@ const XeroAppEn = {
       },
     },
     getItems: {
+      groups: ['Items'],
       displayName: 'Find Items',
     },
     updateOrCreateItems: {
+      groups: ['Items'],
       displayName: 'Add or Update Stock Items',
     },
     createPayment: {
+      groups: ['Payments'],
       displayName: 'Create Payment',
     },
     getPurchaseOrders: {
+      groups: ['Purchase Orders'],
       displayName: 'Find Purchase Orders',
     },
     updateOrCreatePurchaseOrders: {
@@ -279,9 +300,11 @@ const XeroAppEn = {
       displayName: 'Update Purchase Order',
     },
     updateOrCreateQuotes: {
+      groups: ['Quotes'],
       displayName: 'Create New Quote Draft',
     },
     updateOrCreateRepeatingInvoices: {
+      groups: ['Invoices'],
       displayName: 'Create Repeating Sales Invoice',
     },
   },

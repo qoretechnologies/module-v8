@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const GoogleTasksAppEn = {
   displayName: 'Google Tasks',
+  groups: ['Project & Task Management', 'Google Workspace Suite'],
   shortDesc: 'Connect to Google Tasks API to manage your task lists and tasks efficiently.',
   longDesc:
     'The Google Tasks integration provides comprehensive actions and triggers to interact with the Google Tasks API. Manage task lists, create and update tasks, set due dates, and organize your productivity workflow with seamless automation capabilities.',
@@ -51,7 +52,7 @@ const GoogleTasksAppEn = {
       displayName: 'Create Task List',
       shortDesc: 'Create a new task list in Google Tasks',
       longDesc: 'Creates a new task list in your Google Tasks account with the specified title.',
-      group: 'Task Lists',
+      groups: ['Task Lists'],
       options: {
         title: {
           displayName: 'Title',
@@ -66,7 +67,7 @@ const GoogleTasksAppEn = {
       shortDesc: 'Delete a task list from Google Tasks',
       longDesc:
         'Permanently deletes the specified task list and all tasks within it from your Google Tasks account.',
-      group: 'Task Lists',
+      groups: ['Task Lists'],
       options: {
         id: {
           displayName: 'Task List',
@@ -80,7 +81,7 @@ const GoogleTasksAppEn = {
       shortDesc: 'Get all task lists from Google Tasks',
       longDesc:
         'Retrieves a list of all task lists in your Google Tasks account with optional pagination.',
-      group: 'Task Lists',
+      groups: ['Task Lists'],
       options: {
         maxResults: {
           displayName: 'Max Results',
@@ -100,7 +101,7 @@ const GoogleTasksAppEn = {
       displayName: 'Update Task List',
       shortDesc: 'Update an existing task list in Google Tasks',
       longDesc: 'Updates the title of an existing task list in your Google Tasks account.',
-      group: 'Task Lists',
+      groups: ['Task Lists'],
       options: {
         id: {
           displayName: 'Task List',
@@ -119,7 +120,7 @@ const GoogleTasksAppEn = {
       shortDesc: 'Clear all completed tasks from a task list',
       longDesc:
         'Removes all completed tasks from the specified task list, helping to keep your lists clean and organized.',
-      group: 'Tasks',
+      groups: ['Tasks'],
       options: {
         taskList: {
           displayName: 'Task List',
@@ -133,7 +134,7 @@ const GoogleTasksAppEn = {
       shortDesc: 'Create a new task in Google Tasks',
       longDesc:
         'Creates a new task in the specified task list with optional details like notes, due date, and hierarchical positioning.',
-      group: 'Tasks',
+      groups: ['Tasks'],
       options: {
         taskList: {
           displayName: 'Task List',
@@ -172,7 +173,7 @@ const GoogleTasksAppEn = {
       displayName: 'Delete Task',
       shortDesc: 'Delete a task from Google Tasks',
       longDesc: 'Permanently deletes the specified task from the selected task list.',
-      group: 'Tasks',
+      groups: ['Tasks'],
       options: {
         taskList: {
           displayName: 'Task List',
@@ -190,7 +191,7 @@ const GoogleTasksAppEn = {
       displayName: 'Get Task',
       shortDesc: 'Retrieve details of a specific task',
       longDesc: 'Retrieves detailed information about a specific task from the selected task list.',
-      group: 'Tasks',
+      groups: ['Tasks'],
       options: {
         taskList: {
           displayName: 'Task List',
@@ -209,7 +210,7 @@ const GoogleTasksAppEn = {
       shortDesc: 'Get all tasks from a task list',
       longDesc:
         'Retrieves a list of tasks from the specified task list with various filtering options like due dates, completion status, and more.',
-      group: 'Tasks',
+      groups: ['Tasks'],
       options: {
         taskList: {
           displayName: 'Task List',
@@ -279,7 +280,7 @@ const GoogleTasksAppEn = {
       shortDesc: 'Update an existing task in Google Tasks',
       longDesc:
         'Updates the details of an existing task including its title, notes, due date, completion status, and hierarchical positioning.',
-      group: 'Tasks',
+      groups: ['Tasks'],
       options: {
         taskList: {
           displayName: 'Task List',

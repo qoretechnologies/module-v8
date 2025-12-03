@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const FigmaAppEn = {
   displayName: 'Figma',
+  groups: ['Design & Creative Tools'],
   shortDesc: 'Design and prototyping platform for teams',
   longDesc:
     'Figma is a collaborative interface design tool that allows teams to create, prototype, and collaborate on digital designs in real-time. Connect to access files, comments, projects, and team data.',

@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const BigMlAppEn = {
   displayName: 'BigML',
+  groups: ['AI & Language Models'],
   shortDesc: 'Machine learning platform for predictive analytics',
   longDesc: `Connect your BigML account to build, evaluate, and deploy machine learning models at scale. Create datasets, build predictive models, perform anomaly detection, cluster analysis, and time series forecasting. Automate your machine learning workflows and integrate predictive analytics into your applications with BigML's comprehensive machine learning platform.`,
   actions: {

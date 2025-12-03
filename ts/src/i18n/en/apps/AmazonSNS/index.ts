@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const AmazonSNSAppEn = {
   displayName: 'AWS SNS',
+  groups: ['DevOps & Cloud Infrastructure', 'Messaging & Real-time Communication'],
   shortDesc: 'Send notifications and messages through Amazon Simple Notification Service.',
   longDesc:
     'The Amazon SNS integration enables you to create topics, send messages, manage subscribers, and monitor notifications through Amazon Simple Notification Service. Perfect for building scalable messaging systems, sending alerts, and coordinating distributed applications with reliable message delivery.',

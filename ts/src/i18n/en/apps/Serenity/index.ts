@@ -2,6 +2,7 @@
 
 const SerenityAppEn = {
   displayName: 'Serenity',
+  groups: ['AI & Language Models'],
   shortDesc: 'Create conversations, execute agents and manage interactions with Serenity AI Hub.',
   longDesc:
     'Enterprise AI ecosystem that enables businesses to create, manage, and scale AI agents effortlessly, enhancing productivity and innovation across various processes.',

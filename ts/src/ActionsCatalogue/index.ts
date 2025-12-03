@@ -98,6 +98,7 @@ import gitlab from '../apps/gitlab';
 import monday from '../apps/monday';
 import coppercrm from '../apps/coppercrm';
 import craft from '../apps/craft';
+import L from '../i18n/i18n-node';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -292,9 +293,20 @@ export class ActionsCatalogue {
       this.apps[appName] = appDef;
     });
 
-    Object.entries(NEW_APPS).forEach(([appName, getApp]) => {
-      this.apps[appName] = getApp(this.locale);
-    });
+    Object.entries(NEW_APPS).forEach(
+      ([appName, getApp]: [string, (locale: Locales) => TQoreAppWithActions]) => {
+        const app = getApp(this.locale);
+        const localeGroups = (L[this.locale].apps as any)[app.name]?.groups;
+        const groups = localeGroups
+          ? Object.values(localeGroups).map((fn: any) => fn())
+          : ['Other'];
+
+        this.apps[appName] = {
+          ...app,
+          groups,
+        };
+      }
+    );
 
     Object.entries(CUSTOM_APPS).forEach(([appName, customApp]) => {
       this.apps[appName] = customApp;

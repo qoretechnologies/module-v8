@@ -13,7 +13,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: '&&',
         symbol: '&&',
         roles: ['search', 'field'],
-        group: EQoreExpressionGroups.LOGICAL,
+        groups: [EQoreExpressionGroups.LOGICAL],
         args: [
           {
             type_code: 'any',
@@ -29,7 +29,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: '||',
         symbol: '||',
         roles: ['search', 'field'],
-        group: EQoreExpressionGroups.LOGICAL,
+        groups: [EQoreExpressionGroups.LOGICAL],
         args: [
           {
             type_code: 'any',
@@ -46,7 +46,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: '==',
         symbol: '==',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -66,7 +66,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: '!=',
         symbol: '!=',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -86,7 +86,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: '>',
         symbol: '>',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -106,7 +106,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: '>=',
         symbol: '>=',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -126,7 +126,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: '<',
         symbol: '<',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -146,7 +146,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: '<=',
         symbol: '<=',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -166,7 +166,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'contains',
         symbol: 'contains',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -186,7 +186,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'contains-not',
         symbol: 'containsNot',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -206,7 +206,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'contains-word',
         symbol: 'containsWord',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -226,7 +226,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'doesnt-contain-word',
         symbol: 'doesntContainWord',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -246,7 +246,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'length-is-lower-than',
         symbol: 'lengthIsLowerThan',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -266,7 +266,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'empty',
         symbol: 'empty',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -281,7 +281,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'not-empty',
         symbol: 'isNotEmpty',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -296,7 +296,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'date-is',
         symbol: 'dateIs',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -316,7 +316,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'date-is-not',
         symbol: 'dateIsNot',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -336,7 +336,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'date-is-before',
         symbol: 'dateIsBefore',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -356,7 +356,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'date-is-on-or-before',
         symbol: 'dateIsOnOrBefore',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -376,7 +376,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'date-is-after',
         symbol: 'dateIsAfter',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -396,7 +396,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'date-is-on-or-after',
         symbol: 'dateIsOnOrAfter',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -416,7 +416,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'date-is-within',
         symbol: 'dateIsWithin',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -436,7 +436,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'date-equals-day-of-month',
         symbol: 'dayOfMonthIs',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -456,7 +456,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'boolean',
         symbol: 'is',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -476,7 +476,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'is-even-and-whole',
         symbol: 'isEvenAndWhole',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -496,7 +496,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'single-select-equal',
         symbol: 'is',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -516,7 +516,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'single-select-not-equal',
         symbol: 'isNot',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -536,7 +536,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'single-select-is-any-of',
         symbol: 'isAnyOf',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -558,7 +558,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'single-select-is-none-of',
         symbol: 'isNoneOf',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -580,7 +580,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'multiple-select-has',
         symbol: 'hasAnyOf',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -602,7 +602,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'multiple-select-has-not',
         symbol: 'doesntHaveAnyOf',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -624,7 +624,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'link-row-has',
         symbol: 'has',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -644,7 +644,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'link-row-has-not',
         symbol: 'doesntHave',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -664,7 +664,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'link-row-contains',
         symbol: 'contains',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -684,7 +684,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'link-row-not-contains',
         symbol: 'doesntContain',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -704,7 +704,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'filename-contains',
         symbol: 'filenameContains',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -724,7 +724,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-file-type',
         symbol: 'hasFileType',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -744,7 +744,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'files-lower-than',
         symbol: 'filesLowerThan',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -764,7 +764,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'user-is',
         symbol: 'is',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -784,7 +784,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'user-is-not',
         symbol: 'isNot',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -804,7 +804,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'multiple-collaborators-has',
         symbol: 'has',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -824,7 +824,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'multiple-collaborators-has-not',
         symbol: 'doesntHave',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -844,7 +844,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-empty-value',
         symbol: 'hasEmptyValue',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -864,7 +864,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-not-empty-value',
         symbol: 'doesntHaveEmptyValue',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -884,7 +884,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-value-equal',
         symbol: 'hasValueEqual',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -904,7 +904,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-not-value-equal',
         symbol: 'doesntHaveValueEqual',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -924,7 +924,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-value-contains',
         symbol: 'hasValueContains',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -944,7 +944,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-not-value-contains',
         symbol: 'doesntHaveValueContains',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -964,7 +964,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-value-contains-word',
         symbol: 'hasValueContainsWord',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -984,7 +984,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-not-value-contains-word',
         symbol: 'doesntHaveValueContainsWord',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -1004,7 +1004,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-value-length-is-lower-than',
         symbol: 'hasValueLengthIsLowerThan',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -1024,7 +1024,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-all-values-equal',
         symbol: 'hasAllValuesEqual',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -1044,7 +1044,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-any-select-option-equal',
         symbol: 'hasAnySelectOptionEqual',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -1064,7 +1064,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-none-select-option-equal',
         symbol: 'doesntHaveSelectOptionEqual',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -1084,7 +1084,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-value-higher',
         symbol: 'hasValueHigherThan',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -1104,7 +1104,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-not-value-higher',
         symbol: 'doesntHaveValueHigherThan',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -1124,7 +1124,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-value-higher-or-equal',
         symbol: 'hasValueHigherThanOrEqual',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -1144,7 +1144,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-not-value-higher-or-equal',
         symbol: 'doesntHaveValueHigherThanOrEqual',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -1164,7 +1164,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-value-lower',
         symbol: 'hasValueLowerThan',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -1184,7 +1184,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-not-value-lower',
         symbol: 'doesntHaveValueLowerThan',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -1204,7 +1204,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-value-lower-or-equal',
         symbol: 'hasValueLowerThanOrEqual',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -1224,7 +1224,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-not-value-lower-or-equal',
         symbol: 'doesntHaveValueLowerThanOrEqual',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -1244,7 +1244,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-date-equal',
         symbol: 'hasDateEqual',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -1264,7 +1264,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-not-date-equal',
         symbol: 'doesntHaveDateEqual',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -1284,7 +1284,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-date-before',
         symbol: 'hasDateBefore',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -1304,7 +1304,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-not-date-before',
         symbol: 'doesntHaveDateBefore',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -1324,7 +1324,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-date-on-or-before',
         symbol: 'hasDateOnOrBefore',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -1344,7 +1344,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-not-date-on-or-before',
         symbol: 'doesntHaveDateOnOrBefore',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -1364,7 +1364,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-date-after',
         symbol: 'hasDateAfter',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -1384,7 +1384,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-not-date-after',
         symbol: 'doesntHaveDateAfter',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -1404,7 +1404,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-date-on-or-after',
         symbol: 'hasDateOnOrAfter',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -1424,7 +1424,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-not-date-on-or-after',
         symbol: 'doesntHaveDateOnOrAfter',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -1444,7 +1444,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-date-within',
         symbol: 'hasDateWithin',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -1464,7 +1464,7 @@ export const getBaserowExpressions = (locale: Locales): TQoreSearchRecordsExpres
         name: 'has-not-date-within',
         symbol: 'doesntHaveDateWithin',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',

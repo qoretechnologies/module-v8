@@ -13,7 +13,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
         name: '&&',
         symbol: '&&',
         roles: ['search', 'field'],
-        group: EQoreExpressionGroups.LOGICAL,
+        groups: [EQoreExpressionGroups.LOGICAL],
         args: [
           {
             type_code: 'any',
@@ -29,7 +29,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
         name: '||',
         symbol: '||',
         roles: ['search', 'field'],
-        group: EQoreExpressionGroups.LOGICAL,
+        groups: [EQoreExpressionGroups.LOGICAL],
         args: [
           {
             type_code: 'any',
@@ -45,7 +45,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
         name: 'NOT',
         symbol: '!',
         roles: ['search', 'field'],
-        group: EQoreExpressionGroups.LOGICAL,
+        groups: [EQoreExpressionGroups.LOGICAL],
         args: [
           {
             type_code: 'any',
@@ -61,7 +61,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
         name: '==',
         symbol: '==',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -81,7 +81,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
         name: '!=',
         symbol: '!=',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -101,7 +101,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
         name: '>',
         symbol: '>',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -121,7 +121,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
         name: '>=',
         symbol: '>=',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -141,7 +141,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
         name: '<',
         symbol: '<',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -161,7 +161,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
         name: '<=',
         symbol: '<=',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -181,7 +181,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
         name: 'like',
         symbol: 'like',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -201,7 +201,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
         name: 'ilike',
         symbol: 'ilike',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -221,7 +221,7 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
         name: 'in',
         symbol: 'in',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -242,18 +242,18 @@ export const getSupabaseExpressions = (locale: Locales): TQoreSearchRecordsExpre
         type: 'operator',
         subtype: 'generic',
         name: 'contains',
-        symbol: '@>',
+        symbol: 'contains',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
-          { 
-            type_code: 'field reference', 
+          {
+            type_code: 'field reference',
             type: { type: 'list', element_type: 'any' },
             label_after: 'contains',
           },
-          { 
-            type_code: 'value', 
-            type: { type: 'list', element_type: 'any' } 
+          {
+            type_code: 'value',
+            type: { type: 'list', element_type: 'any' },
           },
         ],
         return_type: 'bool',

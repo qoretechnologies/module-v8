@@ -1,12 +1,14 @@
 /* eslint-disable max-len */
 const SupabaseAppEn = {
   displayName: 'Supabase',
+  groups: ['Databases & Backend Services'],
   shortDesc:
     'Connect to Supabase to manage your database tables, storage buckets, and real-time data',
   longDesc:
     'The Supabase integration provides comprehensive access to your Supabase backend services. Manage database tables with full CRUD operations, monitor real-time changes with triggers, and handle file storage through buckets. Whether you need to query data, insert records, filter results, or track new entries, this integration streamlines your Supabase workflow automation and backend management.',
   actions: {
     get_table: {
+      groups: ['Tables'],
       displayName: 'Get Table',
       shortDesc: 'Retrieve detailed schema information about a specific Supabase table',
       longDesc:
@@ -21,6 +23,7 @@ const SupabaseAppEn = {
       },
     },
     list_tables: {
+      groups: ['Tables'],
       displayName: 'List Tables',
       shortDesc: 'Get a list of all tables in your Supabase database',
       longDesc:
@@ -35,6 +38,7 @@ const SupabaseAppEn = {
       },
     },
     create_row: {
+      groups: ['Rows'],
       displayName: 'Create Row',
       shortDesc: 'Insert a new row into a Supabase table',
       longDesc:
@@ -55,6 +59,7 @@ const SupabaseAppEn = {
       },
     },
     list_rows: {
+      groups: ['Rows'],
       displayName: 'List Rows',
       shortDesc: 'Query and retrieve rows from a Supabase table',
       longDesc:
@@ -129,6 +134,7 @@ const SupabaseAppEn = {
       },
     },
     delete_rows: {
+      groups: ['Rows'],
       displayName: 'Delete Rows',
       shortDesc: 'Delete rows from a Supabase table based on a filter',
       longDesc:
@@ -169,6 +175,7 @@ const SupabaseAppEn = {
       },
     },
     upsert_row: {
+      groups: ['Rows'],
       displayName: 'Upsert Row',
       shortDesc: 'Insert a new row or update an existing one',
       longDesc:
@@ -201,6 +208,7 @@ const SupabaseAppEn = {
       },
     },
     create_bucket: {
+      groups: ['Storage'],
       displayName: 'Create Storage Bucket',
       shortDesc: 'Create a new storage bucket in Supabase',
       longDesc:
@@ -233,12 +241,14 @@ const SupabaseAppEn = {
       },
     },
     list_buckets: {
+      groups: ['Storage'],
       displayName: 'List Storage Buckets',
       shortDesc: 'Get all storage buckets in your Supabase project',
       longDesc:
         'Retrieves a list of all storage buckets in your Supabase project with their configurations including access permissions, file size limits, and allowed MIME types.',
     },
     get_bucket: {
+      groups: ['Storage'],
       displayName: 'Get Storage Bucket',
       shortDesc: 'Retrieve details of a specific storage bucket',
       longDesc:

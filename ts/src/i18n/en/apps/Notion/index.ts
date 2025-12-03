@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const NotionAppEn = {
   displayName: 'Notion',
+  groups: ['Documents & Documentation', 'Project & Task Management'],
   shortDesc: 'Connect to Notion API to manage pages, databases, comments, and discussions.',
   longDesc:
     'The Notion integration provides comprehensive actions and triggers to interact with the Notion API. Manage pages, databases, comments, discussions, and users. Create, read, update, and monitor changes to your Notion workspace content.',
@@ -60,6 +61,7 @@ const NotionAppEn = {
 
   actions: {
     add_comment_to_discussion: {
+      groups: ['Comments'],
       displayName: 'Add Comment to Discussion',
       shortDesc: 'Add a reply to an existing discussion thread in Notion',
       longDesc:
@@ -79,6 +81,7 @@ const NotionAppEn = {
       },
     },
     add_comment_to_page: {
+      groups: ['Comments'],
       displayName: 'Add Comment to Page',
       shortDesc: 'Add a new comment to a Notion page',
       longDesc:
@@ -98,6 +101,7 @@ const NotionAppEn = {
       },
     },
     append_to_page: {
+      groups: ['Pages'],
       displayName: 'Append to Page',
       shortDesc: 'Add content to the end of a Notion page',
       longDesc:
@@ -117,6 +121,7 @@ const NotionAppEn = {
       },
     },
     create_database_item: {
+      groups: ['Databases'],
       displayName: 'Create Database Item',
       shortDesc: 'Create a new item in a Notion database',
       longDesc:
@@ -142,6 +147,7 @@ const NotionAppEn = {
       },
     },
     create_page: {
+      groups: ['Pages'],
       displayName: 'Create Page',
       shortDesc: 'Create a new page in Notion',
       longDesc:
@@ -166,6 +172,7 @@ const NotionAppEn = {
       },
     },
     get_data_source: {
+      groups: ['Databases'],
       displayName: 'Get Database',
       shortDesc: 'Retrieve information about a Notion database',
       longDesc:
@@ -179,6 +186,7 @@ const NotionAppEn = {
       },
     },
     get_database: {
+      groups: ['Databases'],
       displayName: 'Get Database Info',
       shortDesc: 'Retrieve database information by ID',
       longDesc: 'Get detailed information about a Notion database by providing its ID directly.',
@@ -191,6 +199,7 @@ const NotionAppEn = {
       },
     },
     get_page: {
+      groups: ['Pages'],
       displayName: 'Get Page',
       shortDesc: 'Retrieve information about a Notion page',
       longDesc:
@@ -204,6 +213,7 @@ const NotionAppEn = {
       },
     },
     get_user: {
+      groups: ['Users'],
       displayName: 'Get User',
       shortDesc: 'Retrieve information about a Notion user',
       longDesc:
@@ -217,6 +227,7 @@ const NotionAppEn = {
       },
     },
     list_comments: {
+      groups: ['Comments'],
       displayName: 'List Comments',
       shortDesc: 'List comments on a Notion page or block',
       longDesc:
@@ -240,6 +251,7 @@ const NotionAppEn = {
       },
     },
     list_datasource_items: {
+      groups: ['Databases'],
       displayName: 'List Database Items',
       shortDesc: 'List items from a Notion database',
       longDesc:
@@ -273,6 +285,7 @@ const NotionAppEn = {
       },
     },
     list_pages: {
+      groups: ['Pages'],
       displayName: 'List Pages',
       shortDesc: 'Search and list Notion pages',
       longDesc:
@@ -303,6 +316,7 @@ const NotionAppEn = {
       },
     },
     list_datasources: {
+      groups: ['Databases'],
       displayName: 'List Databases',
       shortDesc: 'List all Notion databases',
       longDesc:
@@ -323,6 +337,7 @@ const NotionAppEn = {
       },
     },
     list_users: {
+      groups: ['Users'],
       displayName: 'List Users',
       shortDesc: 'List users in the Notion workspace',
       longDesc: 'Retrieve a list of all users in the Notion workspace including people and bots.',
@@ -340,6 +355,7 @@ const NotionAppEn = {
       },
     },
     update_database_item: {
+      groups: ['Databases'],
       displayName: 'Update Database Item',
       shortDesc: 'Update an existing item in a Notion database',
       longDesc: 'Update the property values of an existing item (page) in a Notion database.',

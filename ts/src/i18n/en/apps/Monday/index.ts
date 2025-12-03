@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const MondayAppEn = {
   displayName: 'Monday.com',
+  groups: ['Project & Task Management'],
   shortDesc:
     'Connect to Monday.com to automate work management with boards, items, columns, and updates.',
   longDesc:

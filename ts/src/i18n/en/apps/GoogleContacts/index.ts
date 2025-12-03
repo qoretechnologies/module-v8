@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const GoogleContactsAppEn = {
   displayName: 'Google Contacts',
+  groups: ['Google Workspace Suite'],
   shortDesc: 'Manage your Google Contacts',
   longDesc:
     'Connect to Google Contacts to manage your contacts directly from your application. Create, update, and delete contacts seamlessly.',

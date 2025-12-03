@@ -1,7 +1,8 @@
 
 
-const SharepointAppEn = {
+const SharePointAppEn = {
   displayName: 'Microsoft SharePoint',
+  groups: ['Documents & Documentation', 'Cloud Storage & File Management'],
   shortDesc: 'Connect, automate, and manage your SharePoint Online workflows with ease.',
   longDesc:
     'Integrate your Microsoft 365 environment to quickly create, update, and synchronize documents, lists, and other assets—all from one secure, user-friendly app.',
@@ -185,4 +186,4 @@ const SharepointAppEn = {
   },
 };
 
-export default SharepointAppEn;
+export default SharePointAppEn;

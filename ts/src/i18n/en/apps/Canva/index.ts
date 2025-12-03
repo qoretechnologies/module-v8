@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const CanvaAppEn = {
   displayName: 'Canva',
+  groups: ['Design & Creative Tools'],
   shortDesc: 'Design platform for creating graphics, presentations, and visual content',
   longDesc:
     'Canva is a graphic design platform that allows users to create social media graphics, presentations, posters, documents and other visual content. It provides a drag-and-drop interface and access to millions of photographs, graphics and fonts.',

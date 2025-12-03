@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const AmazonCloudWatchAppEn = {
   displayName: 'Amazon CloudWatch',
+  groups: ['DevOps & Cloud Infrastructure'],
   shortDesc:
     'Monitor AWS resources and applications with comprehensive alarm management and real-time state tracking.',
   longDesc:

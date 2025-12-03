@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const AmazonSESAppEn = {
   displayName: 'Amazon SES',
+  groups: ['Email & Email Marketing', 'DevOps & Cloud Infrastructure'],
   shortDesc: 'Send emails and manage email identities with Amazon Simple Email Service.',
   longDesc:
     "The Amazon SES integration provides comprehensive email sending capabilities, identity verification, and delivery monitoring. Manage your email campaigns, verify domains and email addresses, track sending statistics, and monitor bounces and complaints through Amazon's reliable email infrastructure.",

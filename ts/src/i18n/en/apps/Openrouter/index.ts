@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
-const OpenRouterAppEn = {
+const OpenrouterAppEn = {
   displayName: 'OpenRouter',
+  groups: ['AI & Language Models'],
   shortDesc: 'Access multiple AI models through a unified API',
   longDesc:
     'OpenRouter provides a unified interface to access and compare multiple AI models from different providers. Route your requests to the best model for your specific use case, with support for text generation, chat completion, and other AI capabilities from leading providers like OpenAI, Anthropic, Google, and more.',
@@ -142,4 +143,4 @@ const OpenRouterAppEn = {
   },
 };
 
-export default OpenRouterAppEn;
+export default OpenrouterAppEn;

@@ -2,6 +2,7 @@
 
 const FreshdeskAppEn = {
   displayName: 'Freshdesk',
+  groups: ['Customer Support & Helpdesk'],
   shortDesc: 'Cloud-based customer support software',
   longDesc:
     'Freshdesk is a cloud-based customer support platform that was founded with the mission of enabling companies of all sizes to provide great customer service. Our goal is simple: make it easy for brands to talk to their customers and make it easy for users to get in touch with businesses.',

@@ -1,11 +1,13 @@
 const CopperCrmAppEn = {
   displayName: 'CopperCRM',
+  groups: ['CRM & Sales Management'],
   shortDesc:
     'Connect to CopperCRM to manage your sales pipeline, contacts, and customer relationships.',
   longDesc:
     'The CopperCRM integration provides comprehensive access to your CRM data with actions and triggers for managing leads, people, companies, opportunities, and tasks. Built specifically for Google Workspace users, CopperCRM helps you track customer interactions, manage your sales pipeline, and automate your workflow. This integration enables you to create, retrieve, update, delete, and search across all major CopperCRM entities, while triggers keep you informed of new records as they are created in your CRM.',
   actions: {
     create_company: {
+      groups: ['Companies'],
       displayName: 'Create Company',
       shortDesc: 'Create a new company in CopperCRM',
       longDesc:
@@ -161,6 +163,7 @@ const CopperCrmAppEn = {
       },
     },
     create_lead: {
+      groups: ['Leads'],
       displayName: 'Create Lead',
       shortDesc: 'Create a new lead in CopperCRM',
       longDesc:
@@ -349,6 +352,7 @@ const CopperCrmAppEn = {
       },
     },
     create_opportunity: {
+      groups: ['Opportunities'],
       displayName: 'Create Opportunity',
       shortDesc: 'Create a new opportunity in CopperCRM',
       longDesc:
@@ -438,6 +442,7 @@ const CopperCrmAppEn = {
       },
     },
     create_person: {
+      groups: ['People'],
       displayName: 'Create Person',
       shortDesc: 'Create a new person contact in CopperCRM',
       longDesc:
@@ -630,6 +635,7 @@ const CopperCrmAppEn = {
       },
     },
     create_task: {
+      groups: ['Tasks'],
       displayName: 'Create Task',
       shortDesc: 'Create a new task in CopperCRM',
       longDesc:
@@ -705,6 +711,7 @@ const CopperCrmAppEn = {
       },
     },
     delete_company: {
+      groups: ['Companies'],
       displayName: 'Delete Company',
       shortDesc: 'Delete a company from CopperCRM',
       longDesc: 'Permanently delete a company record from CopperCRM. This action cannot be undone.',
@@ -717,6 +724,7 @@ const CopperCrmAppEn = {
       },
     },
     delete_lead: {
+      groups: ['Leads'],
       displayName: 'Delete Lead',
       shortDesc: 'Delete a lead from CopperCRM',
       longDesc: 'Permanently delete a lead record from CopperCRM. This action cannot be undone.',
@@ -729,6 +737,7 @@ const CopperCrmAppEn = {
       },
     },
     delete_opportunity: {
+      groups: ['Opportunities'],
       displayName: 'Delete Opportunity',
       shortDesc: 'Delete an opportunity from CopperCRM',
       longDesc:
@@ -742,6 +751,7 @@ const CopperCrmAppEn = {
       },
     },
     delete_person: {
+      groups: ['People'],
       displayName: 'Delete Person',
       shortDesc: 'Delete a person contact from CopperCRM',
       longDesc:
@@ -755,6 +765,7 @@ const CopperCrmAppEn = {
       },
     },
     delete_task: {
+      groups: ['Tasks'],
       displayName: 'Delete Task',
       shortDesc: 'Delete a task from CopperCRM',
       longDesc: 'Permanently delete a task from CopperCRM. This action cannot be undone.',
@@ -767,6 +778,7 @@ const CopperCrmAppEn = {
       },
     },
     get_company: {
+      groups: ['Companies'],
       displayName: 'Get Company',
       shortDesc: 'Retrieve a company from CopperCRM',
       longDesc:
@@ -780,6 +792,7 @@ const CopperCrmAppEn = {
       },
     },
     get_lead: {
+      groups: ['Leads'],
       displayName: 'Get Lead',
       shortDesc: 'Retrieve a lead from CopperCRM',
       longDesc:
@@ -793,6 +806,7 @@ const CopperCrmAppEn = {
       },
     },
     get_opportunity: {
+      groups: ['Opportunities'],
       displayName: 'Get Opportunity',
       shortDesc: 'Retrieve an opportunity from CopperCRM',
       longDesc:
@@ -806,6 +820,7 @@ const CopperCrmAppEn = {
       },
     },
     get_person: {
+      groups: ['People'],
       displayName: 'Get Person',
       shortDesc: 'Retrieve a person contact from CopperCRM',
       longDesc:
@@ -819,6 +834,7 @@ const CopperCrmAppEn = {
       },
     },
     get_task: {
+      groups: ['Tasks'],
       displayName: 'Get Task',
       shortDesc: 'Retrieve a task from CopperCRM',
       longDesc:
@@ -832,6 +848,7 @@ const CopperCrmAppEn = {
       },
     },
     search_companies: {
+      groups: ['Companies'],
       displayName: 'Search Companies',
       shortDesc: 'Search for companies in CopperCRM',
       longDesc:
@@ -955,6 +972,7 @@ const CopperCrmAppEn = {
       },
     },
     search_leads: {
+      groups: ['Leads'],
       displayName: 'Search Leads',
       shortDesc: 'Search for leads in CopperCRM',
       longDesc:
@@ -1083,6 +1101,7 @@ const CopperCrmAppEn = {
       },
     },
     search_opportunities: {
+      groups: ['Opportunities'],
       displayName: 'Search Opportunities',
       shortDesc: 'Search for opportunities in CopperCRM',
       longDesc:
@@ -1246,6 +1265,7 @@ const CopperCrmAppEn = {
       },
     },
     search_people: {
+      groups: ['People'],
       displayName: 'Search People',
       shortDesc: 'Search for person contacts in CopperCRM',
       longDesc:
@@ -1374,6 +1394,7 @@ const CopperCrmAppEn = {
       },
     },
     search_tasks: {
+      groups: ['Tasks'],
       displayName: 'Search Tasks',
       shortDesc: 'Search for tasks in CopperCRM',
       longDesc:
@@ -1482,6 +1503,7 @@ const CopperCrmAppEn = {
       },
     },
     update_company: {
+      groups: ['Companies'],
       displayName: 'Update Company',
       shortDesc: 'Update an existing company in CopperCRM',
       longDesc:
@@ -1638,6 +1660,7 @@ const CopperCrmAppEn = {
       },
     },
     update_lead: {
+      groups: ['Leads'],
       displayName: 'Update Lead',
       shortDesc: 'Update an existing lead in CopperCRM',
       longDesc:
@@ -1828,6 +1851,7 @@ const CopperCrmAppEn = {
       },
     },
     update_opportunity: {
+      groups: ['Opportunities'],
       displayName: 'Update Opportunity',
       shortDesc: 'Update an existing opportunity in CopperCRM',
       longDesc:
@@ -1921,6 +1945,7 @@ const CopperCrmAppEn = {
       },
     },
     update_person: {
+      groups: ['People'],
       displayName: 'Update Person',
       shortDesc: 'Update an existing person contact in CopperCRM',
       longDesc:
@@ -2116,6 +2141,7 @@ const CopperCrmAppEn = {
       },
     },
     update_task: {
+      groups: ['Tasks'],
       displayName: 'Update Task',
       shortDesc: 'Update an existing task in CopperCRM',
       longDesc:

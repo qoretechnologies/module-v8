@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const ShopifyAppEn = {
   displayName: 'Shopify',
+  groups: ['E-commerce Platforms'],
   shortDesc: 'E-commerce platform for online stores and retail point of sale',
   longDesc:
     'Shopify is a comprehensive commerce platform that allows businesses to start, grow, and manage an online store, sell in multiple places, and synchronize online and in-person sales.',

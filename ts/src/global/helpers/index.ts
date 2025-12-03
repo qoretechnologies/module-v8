@@ -224,18 +224,18 @@ export const getLocaleField = (
   app: string,
   locale: Locales,
   action: TQorePartialEventAction | TQorePartialNonEventAction,
-  fieldName: 'display_name' | 'short_desc' | 'desc' | 'group'
+  fieldName: 'display_name' | 'short_desc' | 'desc' | 'groups'
 ) => {
   const fieldValue = action[fieldName];
   if (fieldValue) {
-    return fieldName === 'display_name' ? toTitleCase(fieldValue) : fieldValue;
+    return fieldName === 'display_name' ? toTitleCase(fieldValue as string) : fieldValue;
   }
 
   const fieldNameToLocaleName = {
     display_name: 'displayName',
     short_desc: 'shortDesc',
     desc: 'longDesc',
-    group: 'group',
+    groups: 'groups',
   };
 
   const localeField = get(L[locale], [
@@ -250,7 +250,7 @@ export const getLocaleField = (
     return localeField;
   }
 
-  if (fieldName === 'group' && !localeField) {
+  if (fieldName === 'groups' && !localeField) {
     return undefined;
   }
 
@@ -272,14 +272,14 @@ export const mapActionsToApp = (
   locale: Locales
 ): TQoreAppNonEventAction[] => {
   return Object.entries(actions).map(([_a, action]) => {
-    const group = getLocaleField(app, locale, action, 'group');
+    const groups = getLocaleField(app, locale, action, 'groups');
 
     return {
       ...action,
       display_name: getLocaleField(app, locale, action, 'display_name'),
       short_desc: getLocaleField(app, locale, action, 'short_desc'),
       desc: getLocaleField(app, locale, action, 'desc'),
-      ...(group && { group }),
+      ...(groups && { groups }),
       app,
       options:
         'options' in action && action.options
@@ -433,7 +433,7 @@ export const mapTriggersToApp = (
       : undefined;
 
     // Base trigger with common fields
-    const group = getLocaleField(app, locale, trigger, 'group');
+    const groups = getLocaleField(app, locale, trigger, 'groups');
 
     const baseAction = {
       ...omit(trigger, OMMITTED_FIELDS),
@@ -442,7 +442,7 @@ export const mapTriggersToApp = (
       display_name: getLocaleField(app, locale, trigger, 'display_name'),
       short_desc: getLocaleField(app, locale, trigger, 'short_desc'),
       desc: getLocaleField(app, locale, trigger, 'desc'),
-      ...(group && { group }),
+      ...(groups && { groups }),
       app,
       options: trigger.options ? fixOptions(trigger, trigger.options, app, locale) : undefined,
       event_info: eventInfo || { desc: '', type: { type: 'hash' } },

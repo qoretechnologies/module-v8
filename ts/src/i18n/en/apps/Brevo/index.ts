@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const BrevoAppEn = {
   displayName: 'Brevo',
+  groups: ['Email & Email Marketing'],
   shortDesc: 'Brevo is a marketing platform for email, SMS, and automation campaigns.',
   longDesc: `Brevo (formerly Sendinblue) is a marketing automation platform that enables businesses to communicate with customers through email, SMS, chat, and more. It offers tools for campaign management, contact segmentation, transactional emails, and customer relationship management. Brevo helps businesses build stronger relationships with their audience by providing scalable communication and automation solutions.`,
   actions: {
@@ -9,7 +10,7 @@ const BrevoAppEn = {
       shortDesc: 'Retrieve a contact by identifier',
       longDesc:
         'Get detailed information about a specific contact. You can identify contacts using email address, contact ID, phone number, external ID, WhatsApp ID, or landline number.',
-      group: 'Contacts',
+      groups: ['Contacts'],
       options: {
         identifier: {
           displayName: 'Contact Identifier',
@@ -24,7 +25,7 @@ const BrevoAppEn = {
       shortDesc: 'Create a new contact',
       longDesc:
         'Create a new contact in Brevo. Contacts can be created with email address, phone number (with country code), or external ID. Custom attributes and list assignments can be included.',
-      group: 'Contacts',
+      groups: ['Contacts'],
       options: {
         email: {
           displayName: 'Email Address',
@@ -64,7 +65,7 @@ const BrevoAppEn = {
       shortDesc: 'Update an existing contact',
       longDesc:
         'Update contact information including attributes, email preferences, list memberships, and custom data. Contact can be identified by email, ID, or other identifiers.',
-      group: 'Contacts',
+      groups: ['Contacts'],
       options: {
         identifier: {
           displayName: 'Contact Identifier',
@@ -115,7 +116,7 @@ const BrevoAppEn = {
       shortDesc: 'Get all contacts with filtering',
       longDesc:
         'Retrieve a list of all contacts in your account with pagination, sorting, and filtering options. Filter by lists, attributes, or other criteria.',
-      group: 'Contacts',
+      groups: ['Contacts'],
       options: {
         limit: {
           displayName: 'Results Limit',
@@ -165,7 +166,7 @@ const BrevoAppEn = {
       shortDesc: 'Retrieve list details',
       longDesc:
         'Get detailed information about a specific contact list including subscriber counts, campaign statistics, and folder information.',
-      group: 'Lists',
+      groups: ['Lists'],
       options: {
         listId: {
           displayName: 'List ID',
@@ -179,7 +180,7 @@ const BrevoAppEn = {
       shortDesc: 'Create a new contact list',
       longDesc:
         'Create a new contact list in a specified folder. Lists are used to organize and segment your contacts for targeted campaigns.',
-      group: 'Lists',
+      groups: ['Lists'],
       options: {
         name: {
           displayName: 'List Name',
@@ -197,7 +198,7 @@ const BrevoAppEn = {
       displayName: 'Update List',
       shortDesc: 'Update list details',
       longDesc: 'Update the name or folder of an existing contact list.',
-      group: 'Lists',
+      groups: ['Lists'],
       options: {
         listId: {
           displayName: 'List ID',
@@ -221,7 +222,7 @@ const BrevoAppEn = {
       shortDesc: 'Delete a contact list',
       longDesc:
         'Permanently delete a contact list. This action cannot be undone. Contacts in the list will remain in your account.',
-      group: 'Lists',
+      groups: ['Lists'],
       options: {
         listId: {
           displayName: 'List ID',
@@ -235,7 +236,7 @@ const BrevoAppEn = {
       shortDesc: 'Get all contact lists',
       longDesc:
         'Retrieve all contact lists in your account with pagination and sorting options. Includes subscriber counts and creation dates.',
-      group: 'Lists',
+      groups: ['Lists'],
       options: {
         limit: {
           displayName: 'Results Limit',
@@ -259,7 +260,7 @@ const BrevoAppEn = {
       shortDesc: 'Get all list folders',
       longDesc:
         'Retrieve all folders used to organize contact lists with subscriber counts and creation information.',
-      group: 'Lists',
+      groups: ['Lists'],
       options: {
         limit: {
           displayName: 'Results Limit',
@@ -283,7 +284,7 @@ const BrevoAppEn = {
       shortDesc: 'Add contacts to a list',
       longDesc:
         'Add existing contacts to a contact list by email addresses or contact IDs. Contacts must already exist in your account.',
-      group: 'Lists',
+      groups: ['Lists'],
       options: {
         listId: {
           displayName: 'List ID',
@@ -307,7 +308,7 @@ const BrevoAppEn = {
       shortDesc: 'Remove contacts from a list',
       longDesc:
         'Remove contacts from a contact list by email addresses, contact IDs, or remove all contacts from the list.',
-      group: 'Lists',
+      groups: ['Lists'],
       options: {
         listId: {
           displayName: 'List ID',
@@ -337,7 +338,7 @@ const BrevoAppEn = {
       shortDesc: 'Retrieve company details',
       longDesc:
         'Get detailed information about a specific company including custom attributes and associated contacts and deals.',
-      group: 'Companies',
+      groups: ['Companies'],
       options: {
         companyId: {
           displayName: 'Company ID',
@@ -351,7 +352,7 @@ const BrevoAppEn = {
       shortDesc: 'Create a new company',
       longDesc:
         'Create a new company record with custom attributes and optional associations to existing contacts and deals.',
-      group: 'Companies',
+      groups: ['Companies'],
       options: {
         name: {
           displayName: 'Company Name',
@@ -390,7 +391,7 @@ const BrevoAppEn = {
       shortDesc: 'Update company information',
       longDesc:
         'Update company details including name, custom attributes, and associations with contacts and deals.',
-      group: 'Companies',
+      groups: ['Companies'],
       options: {
         companyId: {
           displayName: 'Company ID',
@@ -427,7 +428,7 @@ const BrevoAppEn = {
       shortDesc: 'Get all companies with filtering',
       longDesc:
         'Retrieve a list of all companies with pagination, sorting, and filtering options. Filter by associated contacts, deals, or custom attributes.',
-      group: 'Companies',
+      groups: ['Companies'],
       options: {
         limit: {
           displayName: 'Results Limit',
@@ -486,7 +487,7 @@ const BrevoAppEn = {
       shortDesc: 'Retrieve deal details',
       longDesc:
         'Get detailed information about a specific deal including custom attributes and associated contacts and companies.',
-      group: 'Deals',
+      groups: ['Deals'],
       options: {
         dealId: {
           displayName: 'Deal ID',
@@ -500,7 +501,7 @@ const BrevoAppEn = {
       shortDesc: 'Create a new deal',
       longDesc:
         'Create a new deal in your sales pipeline with custom attributes and optional associations to existing contacts and companies.',
-      group: 'Deals',
+      groups: ['Deals'],
       options: {
         name: {
           displayName: 'Deal Name',
@@ -530,7 +531,7 @@ const BrevoAppEn = {
       shortDesc: 'Update deal information',
       longDesc:
         'Update deal details including name, custom attributes, and associations with contacts and companies.',
-      group: 'Deals',
+      groups: ['Deals'],
       options: {
         dealId: {
           displayName: 'Deal ID',
@@ -567,7 +568,7 @@ const BrevoAppEn = {
       shortDesc: 'Get all deals with filtering',
       longDesc:
         'Retrieve a list of all deals in your pipeline with pagination, sorting, and filtering options. Filter by associated contacts, companies, or deal name.',
-      group: 'Deals',
+      groups: ['Deals'],
       options: {
         limit: {
           displayName: 'Results Limit',
@@ -606,7 +607,7 @@ const BrevoAppEn = {
       shortDesc: 'Permanently delete a contact',
       longDesc:
         'Permanently delete a contact from your Brevo account. This action cannot be undone. The contact will be removed from all lists and campaigns.',
-      group: 'Contacts',
+      groups: ['Contacts'],
       options: {
         identifier: {
           displayName: 'Contact Identifier',
@@ -622,7 +623,7 @@ const BrevoAppEn = {
       shortDesc: 'Permanently delete a company',
       longDesc:
         'Permanently delete a company from your Brevo account. This action cannot be undone. All associations with contacts and deals will be removed.',
-      group: 'Companies',
+      groups: ['Companies'],
       options: {
         companyId: {
           displayName: 'Company ID',
@@ -637,7 +638,7 @@ const BrevoAppEn = {
       shortDesc: 'Permanently delete a deal',
       longDesc:
         'Permanently delete a deal from your sales pipeline. This action cannot be undone. All associations with contacts and companies will be removed.',
-      group: 'Deals',
+      groups: ['Deals'],
       options: {
         dealId: {
           displayName: 'Deal ID',

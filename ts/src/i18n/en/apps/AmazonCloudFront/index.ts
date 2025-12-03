@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const AmazonCloudFrontAppEn = {
   displayName: 'CloudFront',
+  groups: ['DevOps & Cloud Infrastructure'],
   shortDesc:
     'Connect to Amazon CloudFront to manage CDN distributions, cache invalidations, and content delivery.',
   longDesc:

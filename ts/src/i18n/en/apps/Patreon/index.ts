@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const PatreonAppEn = {
   displayName: 'Patreon',
+  groups: ['Social Media Management'],
   shortDesc:
     'Connect to Patreon to manage your creator content, memberships, and patron relationships.',
   longDesc:

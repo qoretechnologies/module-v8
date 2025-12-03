@@ -13,7 +13,7 @@ export const getPipedriveExpressions = (locale: Locales): TQoreSearchRecordsExpr
         name: '&&',
         symbol: '&&',
         roles: ['search', 'field'],
-        group: EQoreExpressionGroups.LOGICAL,
+        groups: [EQoreExpressionGroups.LOGICAL],
         args: [
           {
             type_code: 'any',
@@ -29,7 +29,7 @@ export const getPipedriveExpressions = (locale: Locales): TQoreSearchRecordsExpr
         name: '||',
         symbol: '||',
         roles: ['search', 'field'],
-        group: EQoreExpressionGroups.LOGICAL,
+        groups: [EQoreExpressionGroups.LOGICAL],
         args: [
           {
             type_code: 'any',
@@ -45,7 +45,7 @@ export const getPipedriveExpressions = (locale: Locales): TQoreSearchRecordsExpr
         name: '==',
         symbol: '==',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -65,7 +65,7 @@ export const getPipedriveExpressions = (locale: Locales): TQoreSearchRecordsExpr
         name: '!=',
         symbol: '!=',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -85,7 +85,7 @@ export const getPipedriveExpressions = (locale: Locales): TQoreSearchRecordsExpr
         name: '>',
         symbol: '>',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -105,7 +105,7 @@ export const getPipedriveExpressions = (locale: Locales): TQoreSearchRecordsExpr
         name: '>=',
         symbol: '>=',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -125,7 +125,7 @@ export const getPipedriveExpressions = (locale: Locales): TQoreSearchRecordsExpr
         name: '<',
         symbol: '<',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -145,7 +145,7 @@ export const getPipedriveExpressions = (locale: Locales): TQoreSearchRecordsExpr
         name: '<=',
         symbol: '<=',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -165,7 +165,7 @@ export const getPipedriveExpressions = (locale: Locales): TQoreSearchRecordsExpr
         name: 'like',
         symbol: 'like',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -185,7 +185,7 @@ export const getPipedriveExpressions = (locale: Locales): TQoreSearchRecordsExpr
         name: 'isNull',
         symbol: 'is-null',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -200,7 +200,7 @@ export const getPipedriveExpressions = (locale: Locales): TQoreSearchRecordsExpr
         name: 'isNotNull',
         symbol: 'is-not-null',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',

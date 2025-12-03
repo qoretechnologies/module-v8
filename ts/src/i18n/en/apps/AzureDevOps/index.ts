@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const AzureDevOpsAppEn = {
   displayName: 'Azure DevOps',
+  groups: ['DevOps & Cloud Infrastructure', 'Version Control & Code Repositories'],
   shortDesc:
     'Connect to Azure DevOps to automate project management, code repositories, and CI/CD pipelines.',
   longDesc:

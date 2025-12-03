@@ -30,6 +30,5 @@ export default (locale: Locales) =>
     rest_modifiers: {
       options: CRAFT_CONN_OPTIONS,
       required_options: 'url',
-      url_from_option: 'url',
     },
   }) satisfies TQoreAppWithActions;

@@ -2,6 +2,7 @@
 
 const GoogleFormsAppEn = {
   displayName: 'Google Forms',
+  groups: ['Forms, Surveys & Scheduling', 'Google Workspace Suite'],
   shortDesc: 'Connect with Google Forms to manage your forms and responses',
   longDesc:
     'Integrate with Google Forms to create, update, and manage your forms and responses. This integration allows you to perform actions and respond to events in your Google Forms account, enabling you to automate form management and data collection workflows.',

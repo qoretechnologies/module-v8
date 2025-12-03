@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const AirtableAppEn = {
   displayName: 'Airtable',
+  groups: ['Spreadsheets & Data Tables', 'Project & Task Management'],
   shortDesc: 'Cloud-based database and collaboration platform',
   longDesc:
     'Airtable combines the simplicity of a spreadsheet with the power of a database. Create and manage bases, tables, and records with ease. Perfect for project management, CRM, content planning, and team collaboration.',

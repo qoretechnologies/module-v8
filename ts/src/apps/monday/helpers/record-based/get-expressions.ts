@@ -13,7 +13,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: '&&',
         symbol: '&&',
         roles: ['search', 'field'],
-        group: EQoreExpressionGroups.LOGICAL,
+        groups: [EQoreExpressionGroups.LOGICAL],
         args: [
           {
             type_code: 'any',
@@ -29,7 +29,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: '||',
         symbol: '||',
         roles: ['search', 'field'],
-        group: EQoreExpressionGroups.LOGICAL,
+        groups: [EQoreExpressionGroups.LOGICAL],
         args: [
           {
             type_code: 'any',
@@ -45,7 +45,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: '==',
         symbol: '==',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -65,7 +65,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: '!=',
         symbol: '!=',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -85,7 +85,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: '>',
         symbol: '>',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -105,7 +105,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: '>=',
         symbol: '>=',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -125,7 +125,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: '<',
         symbol: '<',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -145,7 +145,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: '<=',
         symbol: '<=',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -165,7 +165,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'in',
         symbol: 'in',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -188,7 +188,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'not-in',
         symbol: 'not in',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -211,7 +211,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'is-empty',
         symbol: 'is empty',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -226,7 +226,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'is-not-empty',
         symbol: 'is not empty',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -241,7 +241,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'between',
         symbol: 'between',
         roles: ['search'],
-        group: EQoreExpressionGroups.COMPARISON,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -266,7 +266,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'contains-text',
         symbol: 'contains text',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -286,7 +286,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'not-contains-text',
         symbol: 'not contains text',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -306,7 +306,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'contains-terms',
         symbol: 'contains terms',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -326,7 +326,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'starts-with',
         symbol: 'starts with',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -346,7 +346,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'ends-with',
         symbol: 'ends with',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATA_MANIPULATION,
+        groups: [EQoreExpressionGroups.COMPARISON],
         args: [
           {
             type_code: 'field reference',
@@ -366,7 +366,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'within-the-next',
         symbol: 'within the next',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',
@@ -390,7 +390,7 @@ export const getMondayExpressions = (locale: Locales): TQoreSearchRecordsExpress
         name: 'within-the-last',
         symbol: 'within the last',
         roles: ['search'],
-        group: EQoreExpressionGroups.DATE_TIME,
+        groups: [EQoreExpressionGroups.DATE_TIME],
         args: [
           {
             type_code: 'field reference',

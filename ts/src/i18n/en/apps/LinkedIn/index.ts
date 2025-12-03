@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const LinkedInAppEn = {
   displayName: 'LinkedIn',
+  groups: ['Social Media Management'],
   shortDesc: 'Professional networking and career development platform',
   longDesc:
     "LinkedIn is the world's largest professional networking platform that connects professionals, enables career development, and facilitates business networking. It allows users to build professional profiles, connect with colleagues, share industry insights, and discover career opportunities.",

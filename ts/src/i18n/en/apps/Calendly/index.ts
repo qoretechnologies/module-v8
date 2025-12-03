@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 const CalendlyAppEn = {
   displayName: 'Calendly',
+  groups: ['Forms, Surveys & Scheduling', 'Video Conferencing & Meetings'],
   shortDesc: 'Schedule meetings and manage appointments with Calendly integration',
   longDesc:
     'Connect to Calendly to automate scheduling workflows, manage event types, and sync calendar data with your automation processes.',

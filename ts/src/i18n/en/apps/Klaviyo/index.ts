@@ -1,11 +1,13 @@
 /* eslint-disable max-len */
 const KlaviyoAppEn = {
   displayName: 'Klaviyo',
+  groups: ['Email & Email Marketing'],
   shortDesc: 'Email and SMS marketing automation platform',
   longDesc:
     'Klaviyo is a unified customer platform that gives online brands direct ownership of their consumer data and interactions, empowering them to turn transactions with customers into productive long-term relationships.',
   actions: {
     get_profile: {
+      groups: ['Profiles'],
       displayName: 'Get Profile',
       shortDesc: 'Retrieves a specific profile',
       longDesc: 'Retrieves detailed information about a specific profile by its ID',
@@ -23,6 +25,7 @@ const KlaviyoAppEn = {
       },
     },
     list_campaigns: {
+      groups: ['Campaigns'],
       displayName: 'List Campaigns',
       shortDesc: 'Lists campaigns',
       longDesc: 'Retrieves a list of campaigns with optional filtering and sorting',
@@ -69,6 +72,7 @@ const KlaviyoAppEn = {
       },
     },
     list_lists: {
+      groups: ['Lists'],
       displayName: 'List Lists',
       shortDesc: 'Lists all lists',
       longDesc: 'Retrieves a list of all lists with optional filtering and sorting',
@@ -119,6 +123,7 @@ const KlaviyoAppEn = {
       },
     },
     list_profiles: {
+      groups: ['Profiles'],
       displayName: 'List Profiles',
       shortDesc: 'Lists profiles',
       longDesc: 'Retrieves a list of profiles with optional filtering and sorting',
@@ -189,6 +194,7 @@ const KlaviyoAppEn = {
       },
     },
     list_segments: {
+      groups: ['Segments'],
       displayName: 'List Segments',
       shortDesc: 'Lists segments',
       longDesc: 'Retrieves a list of segments with optional filtering and sorting',
@@ -239,6 +245,7 @@ const KlaviyoAppEn = {
       },
     },
     list_tags: {
+      groups: ['Tags'],
       displayName: 'List Tags',
       shortDesc: 'Lists tags',
       longDesc: 'Retrieves a list of tags with optional filtering and sorting',
@@ -284,6 +291,7 @@ const KlaviyoAppEn = {
       },
     },
     remove_profile_from_list: {
+      groups: ['Lists'],
       displayName: 'Remove Profile from List',
       shortDesc: 'Removes a profile from a list',
       longDesc: 'Removes a specified profile from a specified list in Klaviyo',
@@ -301,6 +309,7 @@ const KlaviyoAppEn = {
       },
     },
     remove_tag_from_list: {
+      groups: ['Tags', 'Lists'],
       displayName: 'Remove Tag from List',
       shortDesc: 'Removes a tag from a list',
       longDesc: 'Removes a specified tag from a specified list in Klaviyo',
@@ -318,6 +327,7 @@ const KlaviyoAppEn = {
       },
     },
     remove_tag_from_segment: {
+      groups: ['Tags', 'Segments'],
       displayName: 'Remove Tag from Segment',
       shortDesc: 'Removes a tag from a segment',
       longDesc: 'Removes a specified tag from a specified segment in Klaviyo',
@@ -335,6 +345,7 @@ const KlaviyoAppEn = {
       },
     },
     send_campaign: {
+      groups: ['Campaigns'],
       displayName: 'Send Campaign',
       shortDesc: 'Sends a campaign',
       longDesc: 'Sends a draft campaign immediately to its target audience',
@@ -347,6 +358,7 @@ const KlaviyoAppEn = {
       },
     },
     subscribe_profile: {
+      groups: ['Profiles'],
       displayName: 'Subscribe Profile',
       shortDesc: 'Subscribes a profile to marketing channels',
       longDesc: 'Subscribes a profile to email marketing, SMS marketing, or both channels',
@@ -384,6 +396,7 @@ const KlaviyoAppEn = {
       },
     },
     unsubscribe_profile: {
+      groups: ['Profiles'],
       displayName: 'Unsubscribe Profile',
       shortDesc: 'Unsubscribes a profile from marketing channels',
       longDesc:
@@ -407,6 +420,7 @@ const KlaviyoAppEn = {
       },
     },
     update_profile: {
+      groups: ['Profiles'],
       displayName: 'Update Profile',
       shortDesc: 'Updates an existing profile',
       longDesc:
@@ -485,6 +499,7 @@ const KlaviyoAppEn = {
       },
     },
     add_tag_to_list: {
+      groups: ['Tags', 'Lists'],
       displayName: 'Add Tag to List',
       shortDesc: 'Adds an existing tag to a list',
       longDesc: 'Associates an existing tag with a specified list in Klaviyo',
@@ -502,6 +517,7 @@ const KlaviyoAppEn = {
       },
     },
     add_tag_to_segment: {
+      groups: ['Tags', 'Segments'],
       displayName: 'Add Tag to Segment',
       shortDesc: 'Adds an existing tag to a segment',
       longDesc: 'Associates an existing tag with a specified segment in Klaviyo',
@@ -519,6 +535,7 @@ const KlaviyoAppEn = {
       },
     },
     create_event: {
+      groups: ['Events'],
       displayName: 'Create Event',
       shortDesc: 'Creates a new event',
       longDesc: 'Creates a new event for a specific metric in Klaviyo',
@@ -561,6 +578,7 @@ const KlaviyoAppEn = {
       },
     },
     create_list: {
+      groups: ['Lists'],
       displayName: 'Create List',
       shortDesc: 'Creates a new list',
       longDesc: 'Creates a new list in Klaviyo with the specified configuration',
@@ -573,6 +591,7 @@ const KlaviyoAppEn = {
       },
     },
     create_or_update_profile: {
+      groups: ['Profiles'],
       displayName: 'Create Or Update Profile',
       shortDesc: 'Creates a new profile or updates an existing one',
       longDesc:
@@ -651,6 +670,7 @@ const KlaviyoAppEn = {
       },
     },
     create_profile: {
+      groups: ['Profiles'],
       displayName: 'Create Profile',
       shortDesc: 'Creates a new profile',
       longDesc: 'Creates a new profile in Klaviyo with the specified information',
@@ -723,6 +743,7 @@ const KlaviyoAppEn = {
       },
     },
     get_campaign: {
+      groups: ['Campaigns'],
       displayName: 'Get Campaign',
       shortDesc: 'Retrieves a specific campaign',
       longDesc: 'Retrieves detailed information about a specific campaign by its ID',
@@ -735,6 +756,7 @@ const KlaviyoAppEn = {
       },
     },
     add_profile_to_list: {
+      groups: ['Lists'],
       displayName: 'Add Profile to List',
       shortDesc: 'Adds an existing profile to a list',
       longDesc: 'Adds an existing profile to a specified list in Klaviyo',

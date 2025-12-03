@@ -1,5 +1,6 @@
 const BaserowAppEn = {
   displayName: 'Baserow',
+  groups: ['Spreadsheets & Data Tables', 'Databases & Backend Services'],
   shortDesc:
     'Connect to Baserow to manage your database tables, rows, and files with powerful automation',
   longDesc:
