@@ -82,11 +82,13 @@ import Zendesk from './apps/Zendesk';
 import ZohoCRM from './apps/ZohoCRM';
 import Zoom from './apps/Zoom';
 import CopperCrm from './apps/CopperCrm';
+import Craft from './apps/Craft';
 
 const en = {
   common: {},
   apps: {
     CopperCrm,
+    Craft,
     Monday,
     ZohoCRM,
     Firebase,
