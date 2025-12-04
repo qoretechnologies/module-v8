@@ -21,7 +21,7 @@ export default (locale: Locales) =>
       ...mapTriggersToApp(CRAFT_APP_NAME, CRAFT_TRIGGERS, locale),
     ],
     rest: {
-      url: 'auto',
+      url: 'https://connect.craft.do',
       data: 'json',
       oauth2_grant_type: 'none',
       ping_method: 'GET',
