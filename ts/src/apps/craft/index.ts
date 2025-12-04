@@ -21,7 +21,6 @@ export default (locale: Locales) =>
       ...mapTriggersToApp(CRAFT_APP_NAME, CRAFT_TRIGGERS, locale),
     ],
     rest: {
-      url: 'https://connect.craft.do',
       data: 'json',
       oauth2_grant_type: 'none',
       ping_method: 'GET',
@@ -29,6 +28,5 @@ export default (locale: Locales) =>
     },
     rest_modifiers: {
       options: CRAFT_CONN_OPTIONS,
-      required_options: 'url',
     },
   }) satisfies TQoreAppWithActions;

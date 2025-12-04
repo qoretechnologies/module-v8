@@ -674,9 +674,6 @@ public class TypeScriptActionInterface {
             }
             search_options = remove app.search_options;
         }
-        if (app.hasKey("group")) {
-            app.groups = remove app.group;
-        }
         appmap{app.name} = <AppInfo>{
             "app": app,
 
@@ -736,10 +733,6 @@ public class TypeScriptActionInterface {
 
         # load the referenced module immediately
         load_module(app."module");
-
-        if (app.hasKey("group")) {
-            app.groups = remove app.group;
-        }
 
         hash<AppInfo> info = <AppInfo>{
             "app": app,
@@ -1452,9 +1445,6 @@ public class TypeScriptActionInterface {
         on_error rethrow $1.err, sprintf("%s (while registering action %y for app %y)", $1.desc, action.action,
             action.app);
         TypeScriptActionInterface::generateDataProvider(\action, pool);
-        if (action.hasKey("group")) {
-            action.groups = remove action.group;
-        }
         DataProviderActionCatalog::registerAction(cast<hash<DataProviderActionInfo>>(action));
     }
 
