@@ -42,7 +42,6 @@ export default (locale: Locales) =>
       oauth2_auth_url: 'https://accounts.zoho.com/oauth/v2/auth',
       oauth2_token_url: '{{domain}}/oauth/v2/token',
       oauth2_auth_args: {
-        response_type: 'code',
         access_type: 'offline',
       },
       oauth2_scopes: [

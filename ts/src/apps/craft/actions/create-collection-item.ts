@@ -31,6 +31,7 @@ const options = {
     required: false,
     preselected: true,
     get_dynamic_type: getCraftCollectionPropertiesDynamicType,
+    depends_on: ['collectionId'],
   },
 } satisfies TQoreOptions;
 

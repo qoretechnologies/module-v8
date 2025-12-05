@@ -6,7 +6,7 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { CRAFT_APP_NAME, CraftError } from '../constants';
-import { craftApiClient } from '../helpers/constants';
+import { craftApiClient, extractCraftBlockContent } from '../helpers/constants';
 import { getCraftCollectionAllowedValues } from '../helpers/get-collection-allowed-values';
 import { getCraftCollectionPropertiesDynamicResponseType } from '../helpers/get-collection-fields';
 import { CraftBlockResponseType } from '../response-types/block';
@@ -69,6 +69,7 @@ const ListCollectionItems = QoreAppCreator.createLocalizedAction<typeof options>
           id: item.id,
           item_title: item.title,
           item_content: item.content,
+          item_content_string: extractCraftBlockContent({ ...item, type: 'collectionItem' }),
           ...itemProperties,
         };
       });
@@ -87,6 +88,7 @@ const ListCollectionItems = QoreAppCreator.createLocalizedAction<typeof options>
       fields: {
         id: { type: 'string' },
         item_title: { type: 'string' },
+        item_content_string: { type: 'string' },
         item_content: {
           type: {
             type: 'list',
@@ -108,6 +110,7 @@ const ListCollectionItems = QoreAppCreator.createLocalizedAction<typeof options>
         fields: {
           id: { type: 'string' },
           item_title: { type: 'string' },
+          item_content_string: { type: 'string' },
           ...propertiesResponseType.fields,
           item_content: {
             type: {

@@ -7,7 +7,7 @@ import {
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 import { CRAFT_APP_NAME, CraftError } from '../constants';
-import { craftApiClient } from '../helpers/constants';
+import { craftApiClient, extractCraftBlockContent } from '../helpers/constants';
 import { getCraftCollectionAllowedValues } from '../helpers/get-collection-allowed-values';
 import { getCraftCollectionPropertiesDynamicResponseType } from '../helpers/get-collection-fields';
 import { CraftBlockResponseType } from '../response-types/block';
@@ -89,6 +89,7 @@ const NewCollectionItem = QoreAppCreator.createLocalizedTrigger({
       fields: {
         id: { type: 'string' },
         item_title: { type: 'string' },
+        item_content_string: { type: 'string' },
         item_content: {
           type: {
             type: 'list',
@@ -109,6 +110,7 @@ const NewCollectionItem = QoreAppCreator.createLocalizedTrigger({
         id: { type: 'string' },
         item_title: { type: 'string' },
         ...propertiesResponseType.fields,
+        item_content_string: { type: 'string' },
         item_content: {
           type: {
             type: 'list',
@@ -159,6 +161,7 @@ const fetchLatestItems = async (options: TFetchItemsOptions): Promise<Record<str
         id: item.id,
         item_title: item.title,
         item_content: item.content,
+        item_content_string: extractCraftBlockContent({ ...item, type: 'collectionItem' }),
         ...itemProperties,
       };
     });
