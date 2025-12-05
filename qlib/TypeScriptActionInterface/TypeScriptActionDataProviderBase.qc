@@ -121,7 +121,9 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
     auto getAsyncValueWithCache(hash<AsyncCallInfo> api, *hash<auto> cache_opts, ...) {
         return getAsyncValueArgs(self, api, argv, cache_opts + {
-            "conn_opts": conn.getRealOptions(),
+            "conn_opts": conn.getRealOptions() + {
+                "url": conn.real_url,
+            },
         }, True);
     }
 
@@ -813,10 +815,14 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         if (type_info.get_dynamic_type && !type_info.dynamic_type_done) {
             auto res = getAsyncValueArgs(self, type_info.get_dynamic_type, {
                 "conn_name": conn.name,
-                "conn_opts": conn.getRealOptions(),
+                "conn_opts": conn.getRealOptions() + {
+                    "url": conn.real_url,
+                },
                 "opts": opts,
             }, {
-                "conn_opts": conn.getRealOptions(),
+                "conn_opts": conn.getRealOptions() + {
+                   "url": conn.real_url,
+                },
                 "opts": opts,
             }, True);
             if (res) {
@@ -859,10 +865,14 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                 try {
                     auto res = getAsyncValueArgs(self, i.value, {
                         "conn_name": conn.name,
-                        "conn_opts": conn.getRealOptions(),
+                        "conn_opts": conn.getRealOptions() + {
+                            "url": conn.real_url,
+                        },
                         "opts": opts,
                     }, {
-                        "conn_opts": conn.getRealOptions(),
+                        "conn_opts": conn.getRealOptions() + {
+                            "url": conn.real_url,
+                        },
                         "opts": opts,
                     }, True);
                     if (!res) {
