@@ -4,7 +4,8 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { AttioError } from '../constants';
-import { getAttioAllowedValues, getAttioTokenRequired } from './constants';
+import { fetchAttioAllowedValues } from './client';
+import { getAttioTokenRequired } from './constants';
 import { TAttioAttribute } from './get-object-properties';
 
 const mapAttioListAttributeToAllowedValue = (item: TAttioAttribute): IQoreAllowedValue<string> => {
@@ -31,7 +32,7 @@ export const getAttioListAttributesAllowedValues: TQoreGetAllowedValuesFunction<
       throw new AttioError('List is required to get allowed values for attributes');
     }
 
-    return await getAttioAllowedValues<TAttioAttribute, string>({
+    return await fetchAttioAllowedValues<TAttioAttribute>({
       token,
       path: `lists/${list}/attributes`,
       method: 'GET',

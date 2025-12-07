@@ -6,12 +6,12 @@ export const ATTIO_APP_LOGO =
 export const ATTIO_APP_API_URL = 'https://api.attio.com';
 
 export class AttioError extends Error {
-  constructor(
-    message: string,
-    public originalError?: any
-  ) {
+  public errorCode?: string;
+
+  constructor(message: string, errorCode?: string) {
     super(message);
     this.name = 'AttioError';
+    this.errorCode = errorCode;
   }
 }
 
@@ -19,3 +19,24 @@ export const AttioEndpointData = {
   url: ATTIO_APP_API_URL,
   endpointId: ATTIO_APP_NAME,
 } satisfies IEndpoint;
+
+export const extractAttioErrorMessage = (error: any): string => {
+  let errorMessage = error?.message || error;
+
+  try {
+    const parsedError = JSON.parse(errorMessage);
+    if (parsedError?.message) {
+      errorMessage = parsedError.message;
+    }
+  } catch (e) {}
+  return errorMessage;
+};
+
+export const isAttioDuplicateError = (error: any): boolean => {
+  try {
+    const parsedError = JSON.parse(error.message);
+
+    if (parsedError.code === 'uniqueness_conflict') return true;
+  } catch (e) {}
+  return false;
+};

@@ -6,7 +6,7 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { AttioError } from '../../constants';
-import { fetchAttioData } from '../../helpers/constants';
+import { attioApiClient } from '../../helpers/client';
 
 export type TAttioListEntry = {
   id: {
@@ -76,9 +76,10 @@ export const createAttioListEntryExampleEventData =
     });
 
     try {
-      const entries = await fetchAttioData<TAttioListEntry>({
+      const entries = await attioApiClient<TAttioListEntry[]>({
         path: `lists/${list}/entries/query`,
         method: 'POST',
+        object: 'data',
         token,
         body: {
           limit: 1,
@@ -91,8 +92,9 @@ export const createAttioListEntryExampleEventData =
         throw new Error('No entries found for the specified list');
       }
 
-      const object = await fetchAttioData<TAttioObject, TAttioObject>({
+      const object = await attioApiClient<TAttioObject>({
         path: `objects/${entry.parent_object}`,
+        object: 'data',
         method: 'GET',
         token,
       });

@@ -4,7 +4,8 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { AttioError } from '../constants';
-import { getAttioAllowedValues, getAttioTokenRequired } from './constants';
+import { fetchAttioAllowedValues } from './client';
+import { getAttioTokenRequired } from './constants';
 
 interface AttioList {
   id: {
@@ -47,7 +48,7 @@ export const getAttioListApiSlugAllowedValues: TQoreGetAllowedValuesFunction<
   try {
     const token = getAttioTokenRequired(context);
 
-    return await getAttioAllowedValues<AttioList, string>({
+    return await fetchAttioAllowedValues<AttioList>({
       token,
       path: 'lists',
       method: 'GET',
@@ -65,7 +66,7 @@ export const getAttioListIdAllowedValues: TQoreGetAllowedValuesFunction<
   try {
     const token = getAttioTokenRequired(context);
 
-    return await getAttioAllowedValues<AttioList, string>({
+    return await fetchAttioAllowedValues<AttioList>({
       token,
       path: 'lists',
       method: 'GET',

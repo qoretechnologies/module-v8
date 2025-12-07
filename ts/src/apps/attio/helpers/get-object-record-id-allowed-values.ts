@@ -4,7 +4,8 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { AttioError } from '../constants';
-import { getAttioAllowedValues, getAttioTokenRequired } from './constants';
+import { fetchAttioAllowedValues } from './client';
+import { getAttioTokenRequired } from './constants';
 
 interface TAttioObjectRecord {
   values: {
@@ -39,7 +40,7 @@ export const getAttioObjectRecordIdAllowedValues: TQoreGetAllowedValuesFunction<
       throw new Error('Object is required to get allowed values for records');
     }
 
-    return await getAttioAllowedValues<TAttioObjectRecord, string>({
+    return await fetchAttioAllowedValues<TAttioObjectRecord>({
       path: `objects/${object}/records/query`,
       token,
       method: 'POST',

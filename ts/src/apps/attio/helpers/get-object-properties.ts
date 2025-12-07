@@ -1,15 +1,17 @@
 import {
-  TCustomConnOptions,
+  IQoreAllowedValue,
+  IQoreTypeObjectList,
   TQoreAnyType,
   TQoreAppActionOption,
-  TQoreGetAllowedValuesFunction,
   TQoreOptions,
   TQoreType,
   TQoreTypeObject,
 } from '@qoretechnologies/ts-toolkit';
 import { AttioError } from '../constants';
 import { ATTIO_TO_QORUS_TYPE_MAP } from './attio-types-map';
-import { fetchAttioData, getAttioAllowedValues } from './constants';
+import { fetchAttioAllowedValues, fetchAttioPaginatedRecords } from './client';
+import { getReferenceAllowedValuesFunction } from './get-reference-allowed-values';
+import { getStatusAttributeAllowedValuesFunction } from './get-status-attribute-allowed-values';
 import { getAttioWorkspaceMemberEmailAllowedValues } from './get-workspace-member-allowed-values';
 
 export type TAttioAttribute = {
@@ -34,6 +36,7 @@ export type TAttioAttribute = {
     id: {
       object_id: string;
     };
+    object_slug: string;
   };
   config: {
     record_reference: {
@@ -54,32 +57,14 @@ export type TAttioTargetRecord = {
   };
 };
 
-const getAllowedValuesConfig = (
-  type: TQoreType | TQoreAnyType,
-  get_allowed_values: TQoreGetAllowedValuesFunction<TCustomConnOptions, string>
-) => {
-  const isListType = type === 'list' || (typeof type === 'object' && type.type === 'list');
-
-  if (isListType) {
-    return {
-      get_element_allowed_values: get_allowed_values,
-      element_allowed_values_creatable: true,
-    };
-  }
-
-  return {
-    get_allowed_values: get_allowed_values,
-    allowed_values_creatable: true,
-  };
-};
-
 export const getAttioObjectAttributes = async (
   object: string,
   token: string
 ): Promise<TAttioAttribute[]> => {
-  const attributes = await fetchAttioData<TAttioAttribute>({
+  const attributes = await fetchAttioPaginatedRecords<TAttioAttribute[], TAttioAttribute>({
     path: `objects/${object}/attributes`,
     token,
+    object: 'data',
   });
 
   if (!attributes || !attributes.length) {
@@ -93,8 +78,9 @@ export const getAttioListAttributes = async (
   list: string,
   token: string
 ): Promise<TAttioAttribute[]> => {
-  const attributes = await fetchAttioData<TAttioAttribute>({
+  const attributes = await fetchAttioPaginatedRecords<TAttioAttribute[], TAttioAttribute>({
     path: `lists/${list}/attributes`,
+    object: 'data',
     token,
   });
 
@@ -122,7 +108,7 @@ export const getAttioAttributesAsQoreOptions = async (
   const qoreOptions: TQoreOptions = {};
 
   filteredAttributes.forEach((attribute) => {
-    qoreOptions[attribute.api_slug] = mapAttioAttributeToQoreOption(attribute, token);
+    qoreOptions[attribute.api_slug] = mapAttioAttributeToQoreOption(attribute, token, target);
   });
 
   return qoreOptions;
@@ -130,10 +116,11 @@ export const getAttioAttributesAsQoreOptions = async (
 
 export const mapAttioAttributeToQoreOption = (
   attribute: TAttioAttribute,
-  token: string
+  token: string,
+  target: 'objects' | 'lists' = 'objects'
 ): TQoreAppActionOption => {
   const { title, description, type, is_required } = attribute;
-  let get_allowed_values: TQoreGetAllowedValuesFunction<TCustomConnOptions, string> | undefined;
+  let allowedValuesFields = {};
 
   const qorusType = ATTIO_TO_QORUS_TYPE_MAP[type] || 'any';
   let qorusFixedType: TQoreType | TQoreTypeObject = qorusType;
@@ -148,53 +135,69 @@ export const mapAttioAttributeToQoreOption = (
     };
   }
 
+  const get_allowed_values = async () => {
+    return await fetchAttioAllowedValues<{
+      id: { option_id: string };
+      title: string;
+      is_archived: boolean;
+    }>({
+      token,
+      path: `${target}/${attribute.id.object_id}/attributes/${attribute.id.attribute_id}/options`,
+      mapItemToAllowedValue: (item) => ({
+        display_name: item.title,
+        value: item.id.option_id,
+      }),
+    });
+  };
+
   if (attribute.is_multiselect) {
     qorusFixedType = {
       type: 'list',
       element_type: qorusFixedType,
     };
+
+    allowedValuesFields = {
+      get_element_allowed_values: get_allowed_values,
+    };
   }
 
   if (attribute.type === 'select') {
-    get_allowed_values = async () => {
-      return await getAttioAllowedValues<
-        {
-          id: { option_id: string };
-          title: string;
-          is_archived: boolean;
-        },
-        string
-      >({
-        token,
-        path: `objects/${attribute.id.object_id}/attributes/${attribute.id.attribute_id}/options`,
-        mapItemToAllowedValue: (item) => ({
-          display_name: item.title,
-          value: item.id.option_id,
-        }),
-      });
+    allowedValuesFields = {
+      get_allowed_values,
+    };
+  }
+
+  if (attribute.type === 'status') {
+    allowedValuesFields = {
+      get_allowed_values: getStatusAttributeAllowedValuesFunction({
+        type: target,
+        target: attribute.id.object_id,
+        attribute: attribute.id.attribute_id,
+      }),
     };
   }
 
   if (type === 'record-reference') {
-    const targetAllowedValuesFunction: TQoreGetAllowedValuesFunction<
-      TCustomConnOptions,
-      string
-    > = async () => {
-      return await getAttioAllowedValues<TAttioTargetRecord, string>({
-        path: `objects/${attribute.relationship.id.object_id}/records/query`,
-        token,
-        method: 'POST',
-        mapItemToAllowedValue: (item) => {
-          return {
-            display_name:
-              item.values.name?.[0]?.value ||
-              item.values.name?.[0]?.full_name ||
-              item.values.record_id[0]?.value,
-            value: item.values.record_id[0]?.value,
-          };
-        },
+    const relationship = attribute.relationship;
+    const config = attribute.config;
+    const targetObject =
+      relationship?.id?.object_id || config?.record_reference?.allowed_object_ids?.[0];
+    const getReferenceAllowedValues = targetObject
+      ? getReferenceAllowedValuesFunction(targetObject)
+      : undefined;
+    let targetObjectAllowedValues: IQoreAllowedValue<string>[] = [];
+
+    if (relationship?.id?.object_id) {
+      targetObjectAllowedValues.push({
+        value: relationship.id.object_id,
+        display_name: relationship.object_slug,
       });
-    };
+    } else if (config?.record_reference?.allowed_object_ids?.length) {
+      targetObjectAllowedValues = config.record_reference.allowed_object_ids.map((objectId) => ({
+        value: objectId,
+        display_name: objectId,
+      }));
+    }
 
     const referenceFields = {
       target_object: {
@@ -202,15 +205,14 @@ export const mapAttioAttributeToQoreOption = (
         on_change: ['refetch'],
         type: 'string',
         required: true,
-        allowed_values_creatable: true,
-        default_value: attribute.relationship.id.object_id,
+        allowed_values_creatable: false,
+        allowed_values: targetObjectAllowedValues,
       },
       target_record_id: {
         display_name: 'Target Record ID',
         type: 'string',
         required: true,
         allowed_values_creatable: true,
-        get_allowed_values: targetAllowedValuesFunction,
       },
     } satisfies TQoreOptions;
 
@@ -221,38 +223,34 @@ export const mapAttioAttributeToQoreOption = (
           type: 'hash',
           fields: referenceFields,
         },
-      };
+        get_element_allowed_values: getReferenceAllowedValues,
+      } as IQoreTypeObjectList;
     } else {
       qorusFixedType = {
         type: 'hash',
         fields: referenceFields,
-      };
+        get_allowed_values: getReferenceAllowedValues,
+      } as TQoreTypeObject;
     }
   }
 
   if (type === 'actor-reference') {
-    const referenceFields = {
-      workspace_member_email_address: {
-        display_name: 'Workspace Member Email Address',
-        type: 'string',
-        required: true,
-        allowed_values_creatable: true,
-        get_allowed_values: getAttioWorkspaceMemberEmailAllowedValues,
-      },
-    } satisfies TQoreOptions;
-
     if (attribute.is_multiselect) {
       qorusFixedType = {
         type: 'list',
-        element_type: {
-          type: 'hash',
-          fields: referenceFields,
-        },
+        element_type: 'string',
+      };
+      allowedValuesFields = {
+        element_allowed_values_creatable: true,
+        get_element_allowed_values: getAttioWorkspaceMemberEmailAllowedValues,
       };
     } else {
       qorusFixedType = {
-        type: 'hash',
-        fields: referenceFields,
+        type: 'string',
+      };
+      allowedValuesFields = {
+        allowed_values_creatable: true,
+        get_allowed_values: getAttioWorkspaceMemberEmailAllowedValues,
       };
     }
   }
@@ -262,10 +260,8 @@ export const mapAttioAttributeToQoreOption = (
     short_desc: description || title,
     required: is_required,
     type: qorusFixedType as TQoreAnyType,
+    ...allowedValuesFields,
   };
-
-  if (get_allowed_values)
-    Object.assign(result, getAllowedValuesConfig(qorusFixedType, get_allowed_values));
 
   return result;
 };
