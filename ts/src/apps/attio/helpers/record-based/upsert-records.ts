@@ -65,8 +65,7 @@ export const upsertAttioRecords: TQoreUpsertRecordsFunction = async (context, re
       throw error;
     }
     throw new AttioError(
-      `Failed to upsert records in table ${tableName}: ${error?.message || error}`,
-      error
+      `Failed to upsert records in table ${tableName}: ${error?.message || error}`
     );
   }
 };

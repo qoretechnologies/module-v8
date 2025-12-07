@@ -42,8 +42,7 @@ export const getReferenceAllowedValuesFunction = (
       throw new AttioError(
         `Failed to fetch allowed values for reference to object ${targetObject}: ${
           error?.message || error
-        }`,
-        error
+        }`
       );
     }
   };

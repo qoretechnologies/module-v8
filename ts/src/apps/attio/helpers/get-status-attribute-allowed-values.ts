@@ -42,8 +42,7 @@ export const getStatusAttributeAllowedValuesFunction = (options: {
       throw new AttioError(
         `Failed to fetch allowed values for status attribute ${options.target}: ${
           error?.message || error
-        }`,
-        error
+        }`
       );
     }
   };

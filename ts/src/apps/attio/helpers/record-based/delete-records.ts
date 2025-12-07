@@ -4,16 +4,14 @@ import { AttioError } from '../../constants';
 import { buildAttioFilter } from './apply-where-condition';
 import { attioApiClient } from '../client';
 
-type TAttioRecordQueryResponse = {
-  data: Array<{
-    id: {
-      record_id: string;
-      object_id: string;
-      workspace_id: string;
-    };
-    values: Record<string, any>;
-  }>;
-};
+type TAttioRecordQueryResponse = Array<{
+  id: {
+    record_id: string;
+    object_id: string;
+    workspace_id: string;
+  };
+  values: Record<string, any>;
+}>;
 
 export const deleteAttioRecords: TQoreDeleteRecordsFunction = async (context, where, opts) => {
   const { token } = getQoreContextRequiredValues({
@@ -49,11 +47,12 @@ export const deleteAttioRecords: TQoreDeleteRecordsFunction = async (context, wh
       const response = await attioApiClient<TAttioRecordQueryResponse>({
         path: `/v2/objects/${tableName}/records/query`,
         method: 'POST',
+        object: 'data',
         token,
         body: requestBody,
       });
 
-      const records = response?.data || [];
+      const records = response || [];
 
       if (records.length === 0) {
         hasMore = false;
@@ -88,8 +87,7 @@ export const deleteAttioRecords: TQoreDeleteRecordsFunction = async (context, wh
       throw error;
     }
     throw new AttioError(
-      `Failed to delete records in table ${tableName}: ${error?.message || error}`,
-      error
+      `Failed to delete records in table ${tableName}: ${error?.message || error}`
     );
   }
 };

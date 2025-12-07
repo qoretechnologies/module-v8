@@ -30,8 +30,7 @@ export const getAttioRecordType: TQoreGetRecordTypeFunction = async (context, ta
     }
 
     throw new AttioError(
-      `Failed to fetch Attio record type for table ${tableName}: ${error?.message || error}`,
-      error
+      `Failed to fetch Attio record type for table ${tableName}: ${error?.message || error}`
     );
   }
 };

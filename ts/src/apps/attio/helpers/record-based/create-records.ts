@@ -78,8 +78,7 @@ export const createAttioRecords: TQoreCreateRecordsFunction = async (context, re
       throw error;
     }
     throw new AttioError(
-      `Failed to create records in table ${tableName}: ${extractAttioErrorMessage(error)}`,
-      error
+      `Failed to create records in table ${tableName}: ${extractAttioErrorMessage(error)}`
     );
   }
 };

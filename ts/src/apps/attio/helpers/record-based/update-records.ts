@@ -101,8 +101,7 @@ export const updateAttioRecords: TQoreUpdateRecordsFunction = async (
       throw error;
     }
     throw new AttioError(
-      `Failed to update records in table ${tableName}: ${error?.message || error}`,
-      error
+      `Failed to update records in table ${tableName}: ${error?.message || error}`
     );
   }
 };
