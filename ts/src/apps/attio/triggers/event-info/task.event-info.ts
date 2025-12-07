@@ -6,7 +6,7 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { AttioError } from '../../constants';
-import { fetchAttioData } from '../../helpers/constants';
+import { attioApiClient } from '../../helpers/client';
 
 export type TAttioTask = {
   id: {
@@ -57,9 +57,10 @@ export const getAttioTaskCreatedEventDataExample: (
   });
 
   try {
-    const tasks = await fetchAttioData<TAttioTask>({
+    const tasks = await attioApiClient<TAttioTask[]>({
       path: `tasks`,
       method: 'GET',
+      object: 'data',
       token,
       params: {
         limit: '1',

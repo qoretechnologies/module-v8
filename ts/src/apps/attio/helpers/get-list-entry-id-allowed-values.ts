@@ -4,7 +4,8 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { AttioError } from '../constants';
-import { getAttioAllowedValues, getAttioTokenRequired } from './constants';
+import { fetchAttioAllowedValues } from './client';
+import { getAttioTokenRequired } from './constants';
 
 interface TAttioListEntry {
   entry_values: {
@@ -36,7 +37,7 @@ export const getAttioListEntryIdAllowedValues: TQoreGetAllowedValuesFunction<
       throw new Error('List is required to get allowed values for entries');
     }
 
-    return await getAttioAllowedValues<TAttioListEntry, string>({
+    return await fetchAttioAllowedValues<TAttioListEntry>({
       path: `lists/${list}/entries/query`,
       token,
       method: 'POST',

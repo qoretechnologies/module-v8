@@ -67,21 +67,21 @@ export const ATTIO_TO_QORUS_TYPE_MAP: Record<string, TQoreTypeObject | TQoreType
 
 export const ATTIO_TO_QORUS_RESPONSE_TYPE_MAP: Record<string, TQoreTypeObject | TQoreType> = {
   date: 'string',
-  status: {
-    type: 'hash',
-    fields: {
-      status_id: { type: 'string' },
-      title: { type: 'string' },
-      celebration_enabled: { type: 'boolean' },
-    },
-  },
-  timestamp: { type: 'string' },
+  status: 'string',
+  timestamp: 'string',
   'personal-name': {
     type: 'hash',
     fields: {
       first_name: { type: 'string' },
       last_name: { type: 'string' },
       full_name: { type: 'string' },
+    },
+  },
+  currency: {
+    type: 'hash',
+    fields: {
+      currency_code: { type: 'string' },
+      currency_value: { type: 'number' },
     },
   },
   'email-address': {
@@ -101,21 +101,8 @@ export const ATTIO_TO_QORUS_RESPONSE_TYPE_MAP: Record<string, TQoreTypeObject | 
       target_object_id: { type: 'string' },
     },
   },
-  'actor-reference': {
-    type: 'hash',
-    fields: {
-      referenced_actor_type: { type: 'string' },
-      referenced_actor_id: { type: 'string' },
-    },
-  },
-  'phone-number': {
-    type: 'hash',
-    fields: {
-      phone_number: { type: 'string' },
-      country_code: { type: 'string' },
-      original_phone_number: { type: 'string' },
-    },
-  },
+  'actor-reference': 'string',
+  'phone-number': 'string',
   domain: {
     type: 'hash',
     fields: {
@@ -123,13 +110,7 @@ export const ATTIO_TO_QORUS_RESPONSE_TYPE_MAP: Record<string, TQoreTypeObject | 
       root_domain: { type: 'string' },
     },
   },
-  select: {
-    type: 'hash',
-    fields: {
-      id: { type: 'string' },
-      title: { type: 'string' },
-    },
-  },
+  select: 'string',
   interaction: {
     type: 'hash',
     fields: {

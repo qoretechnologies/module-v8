@@ -51954,6 +51954,686 @@ type RootTranslation = {
 			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​A​t​t​i​o​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​c​o​n​t​a​c​t​s​,​ ​c​o​m​p​a​n​i​e​s​,​ ​a​n​d​ ​d​a​t​a​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​p​e​r​f​o​r​m​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​r​e​s​p​o​n​d​ ​t​o​ ​e​v​e​n​t​s​ ​i​n​ ​y​o​u​r​ ​A​t​t​i​o​ ​w​o​r​k​s​p​a​c​e​,​ ​e​n​a​b​l​i​n​g​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​w​o​r​k​f​l​o​w​s​ ​a​n​d​ ​e​n​h​a​n​c​e​ ​y​o​u​r​ ​p​r​o​d​u​c​t​i​v​i​t​y​.
 			 */
 			longDesc: string
+			expressions: {
+				'&&': {
+					/**
+					 * a​n​d​ ​(​&​&​)
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​T​r​u​e​ ​i​f​ ​a​l​l​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​T​r​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​l​l​ ​a​r​g​u​m​e​n​t​s​ ​a​r​e​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * B​o​o​l​e​a​n​ ​c​o​n​d​i​t​i​o​n​ ​t​o​ ​e​v​a​l​u​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​b​o​o​l​e​a​n​ ​e​x​p​r​e​s​s​i​o​n​ ​o​r​ ​c​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​e​v​a​l​u​a​t​e​s​ ​t​o​ ​T​r​u​e​ ​o​r​ ​F​a​l​s​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'||': {
+					/**
+					 * o​r​ ​(​|​|​)
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​T​r​u​e​ ​i​f​ ​a​n​y​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​T​r​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​a​n​y​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​`​T​r​u​e​`​ ​w​i​t​h​ ​l​o​g​i​c​ ​s​h​o​r​t​-​c​i​r​c​u​i​t​i​n​g
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * B​o​o​l​e​a​n​ ​c​o​n​d​i​t​i​o​n​ ​t​o​ ​e​v​a​l​u​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​b​o​o​l​e​a​n​ ​e​x​p​r​e​s​s​i​o​n​ ​o​r​ ​c​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​e​v​a​l​u​a​t​e​s​ ​t​o​ ​T​r​u​e​ ​o​r​ ​F​a​l​s​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				not: {
+					/**
+					 * n​o​t​ ​(​!​)
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​t​h​e​ ​o​p​p​o​s​i​t​e​ ​b​o​o​l​e​a​n​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​`​F​a​l​s​e​`​,​ ​a​n​d​ ​`​F​a​l​s​e​`​ ​i​f​ ​t​h​e​ ​a​r​g​u​m​e​n​t​ ​i​s​ ​`​T​r​u​e​`
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * C​o​n​d​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * B​o​o​l​e​a​n​ ​c​o​n​d​i​t​i​o​n​ ​t​o​ ​n​e​g​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​b​o​o​l​e​a​n​ ​e​x​p​r​e​s​s​i​o​n​ ​o​r​ ​c​o​n​d​i​t​i​o​n​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​i​n​v​e​r​t​e​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'==': {
+					/**
+					 * e​q​u​a​l​ ​(​=​=​)
+					 */
+					displayName: string
+					/**
+					 * E​q​u​a​l​i​t​y​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'!=': {
+					/**
+					 * n​o​t​ ​e​q​u​a​l​ ​(​!​=​)
+					 */
+					displayName: string
+					/**
+					 * I​n​e​q​u​a​l​i​t​y​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'>': {
+					/**
+					 * g​r​e​a​t​e​r​ ​t​h​a​n​ ​(​>​)
+					 */
+					displayName: string
+					/**
+					 * G​r​e​a​t​e​r​ ​t​h​a​n​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'>=': {
+					/**
+					 * g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​(​>​=​)
+					 */
+					displayName: string
+					/**
+					 * G​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'<': {
+					/**
+					 * l​e​s​s​ ​t​h​a​n​ ​(​<​)
+					 */
+					displayName: string
+					/**
+					 * L​e​s​s​ ​t​h​a​n​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'<=': {
+					/**
+					 * l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​(​<​=​)
+					 */
+					displayName: string
+					/**
+					 * L​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​c​o​m​p​a​r​i​s​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​o​m​p​a​r​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​o​m​p​a​r​e​d
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'in': {
+					/**
+					 * i​n
+					 */
+					displayName: string
+					/**
+					 * V​a​l​u​e​ ​i​s​ ​i​n​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​f​o​u​n​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​l​i​s​t​ ​o​f​ ​v​a​l​u​e​s
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​h​e​c​k​e​d​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​o​f​ ​v​a​l​u​e​s​ ​t​o​ ​c​h​e​c​k​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				not_in: {
+					/**
+					 * n​o​t​ ​i​n
+					 */
+					displayName: string
+					/**
+					 * V​a​l​u​e​ ​i​s​ ​n​o​t​ ​i​n​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​n​o​t​ ​f​o​u​n​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​l​i​s​t​ ​o​f​ ​v​a​l​u​e​s
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​v​a​l​u​e​ ​w​i​l​l​ ​b​e​ ​c​h​e​c​k​e​d​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​o​f​ ​v​a​l​u​e​s​ ​t​o​ ​c​h​e​c​k​ ​a​g​a​i​n​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				contains: {
+					/**
+					 * c​o​n​t​a​i​n​s
+					 */
+					displayName: string
+					/**
+					 * C​o​n​t​a​i​n​s​ ​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​w​i​t​h​i​n
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​s​t​r​i​n​g​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​w​i​t​h​i​n​ ​t​h​e​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				not_contains: {
+					/**
+					 * n​o​t​ ​c​o​n​t​a​i​n​s
+					 */
+					displayName: string
+					/**
+					 * D​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​c​o​n​t​a​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​w​i​t​h​i​n
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​e​x​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​s​t​r​i​n​g​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​n​o​t​ ​b​e​ ​p​r​e​s​e​n​t​ ​i​n​ ​t​h​e​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				starts_with: {
+					/**
+					 * s​t​a​r​t​s​ ​w​i​t​h
+					 */
+					displayName: string
+					/**
+					 * S​t​a​r​t​s​ ​w​i​t​h​ ​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​s​t​a​r​t​s​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k​ ​t​h​e​ ​b​e​g​i​n​n​i​n​g​ ​o​f
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​m​a​t​c​h​ ​a​t​ ​s​t​a​r​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​a​p​p​e​a​r​ ​a​t​ ​t​h​e​ ​b​e​g​i​n​n​i​n​g​ ​o​f​ ​t​h​e​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				ends_with: {
+					/**
+					 * e​n​d​s​ ​w​i​t​h
+					 */
+					displayName: string
+					/**
+					 * E​n​d​s​ ​w​i​t​h​ ​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​e​n​d​s​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​t​e​x​t
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k​ ​t​h​e​ ​e​n​d​ ​o​f
+							 */
+							longDesc: string
+						}
+						'1': {
+							/**
+							 * T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​t​o​ ​m​a​t​c​h​ ​a​t​ ​e​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​s​h​o​u​l​d​ ​a​p​p​e​a​r​ ​a​t​ ​t​h​e​ ​e​n​d​ ​o​f​ ​t​h​e​ ​f​i​e​l​d
+							 */
+							longDesc: string
+						}
+					}
+				}
+				empty: {
+					/**
+					 * i​s​ ​e​m​p​t​y
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​e​m​p​t​y
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​e​m​p​t​y​ ​o​r​ ​h​a​s​ ​n​o​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​e​m​p​t​i​n​e​s​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				not_empty: {
+					/**
+					 * i​s​ ​n​o​t​ ​e​m​p​t​y
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​n​o​t​ ​e​m​p​t​y
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​`​T​r​u​e​`​ ​i​f​ ​t​h​e​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e
+					 */
+					longDesc: string
+					args: {
+						'0': {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​a​ ​v​a​l​u​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
 			triggers: {
 				list_entry_created: {
 					/**
@@ -153106,6 +153786,686 @@ export type TranslationFunctions = {
 			 * Integrate with Attio to manage your contacts, companies, and data. This integration allows you to perform actions and respond to events in your Attio workspace, enabling you to automate workflows and enhance your productivity.
 			 */
 			longDesc: () => LocalizedString
+			expressions: {
+				'&&': {
+					/**
+					 * and (&&)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns True if all arguments are True
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if all arguments are `True` with logic short-circuiting
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Boolean condition to evaluate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A boolean expression or condition that evaluates to True or False
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'||': {
+					/**
+					 * or (||)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns True if any argument is True
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if any argument is `True` with logic short-circuiting
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Boolean condition to evaluate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A boolean expression or condition that evaluates to True or False
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				not: {
+					/**
+					 * not (!)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns the opposite boolean value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the argument is `False`, and `False` if the argument is `True`
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Condition
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Boolean condition to negate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A boolean expression or condition whose value will be inverted
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'==': {
+					/**
+					 * equal (==)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Equality comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value equals the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'!=': {
+					/**
+					 * not equal (!=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Inequality comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value does not equal the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'>': {
+					/**
+					 * greater than (>)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Greater than comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is greater than the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'>=': {
+					/**
+					 * greater than or equal (>=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Greater than or equal comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is greater than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'<': {
+					/**
+					 * less than (<)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Less than comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is less than the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'<=': {
+					/**
+					 * less than or equal (<=)
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Less than or equal comparison
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is less than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to compare
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be compared
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Value to compare against
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to compare the field against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'in': {
+					/**
+					 * in
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Value is in list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is found in the specified list of values
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be checked against the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The list of values to check against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				not_in: {
+					/**
+					 * not in
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Value is not in list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field value is not found in the specified list of values
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field whose value will be checked against the list
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The list of values to check against
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				contains: {
+					/**
+					 * contains
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Contains text
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field contains the specified text
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to search within
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to search for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text string to search for within the field
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				not_contains: {
+					/**
+					 * not contains
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Does not contain text
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field does not contain the specified text
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to search within
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to exclude
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text string that should not be present in the field
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				starts_with: {
+					/**
+					 * starts with
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Starts with text
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field starts with the specified text
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to check the beginning of
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to match at start
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text that should appear at the beginning of the field
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				ends_with: {
+					/**
+					 * ends with
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Ends with text
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field ends with the specified text
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text field to check the end of
+							 */
+							longDesc: () => LocalizedString
+						}
+						'1': {
+							/**
+							 * Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text to match at end
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text that should appear at the end of the field
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				empty: {
+					/**
+					 * is empty
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is empty
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field is empty or has no value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to check for emptiness
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				not_empty: {
+					/**
+					 * is not empty
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is not empty
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns `True` if the field has a value
+					 */
+					longDesc: () => LocalizedString
+					args: {
+						'0': {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to check for a value
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
 			triggers: {
 				list_entry_created: {
 					/**

@@ -1,11 +1,275 @@
-
-
 const AttioAppEn = {
   displayName: 'Attio',
   groups: ['CRM & Sales Management'],
   shortDesc: 'Connect with Attio to manage your contacts and data',
   longDesc:
     'Integrate with Attio to manage your contacts, companies, and data. This integration allows you to perform actions and respond to events in your Attio workspace, enabling you to automate workflows and enhance your productivity.',
+  expressions: {
+    '&&': {
+      displayName: 'and (&&)',
+      shortDesc: 'Returns True if all arguments are True',
+      longDesc: 'Returns `True` if all arguments are `True` with logic short-circuiting',
+      args: [
+        {
+          displayName: 'Condition',
+          shortDesc: 'Boolean condition to evaluate',
+          longDesc: 'A boolean expression or condition that evaluates to True or False',
+        },
+      ],
+    },
+    '||': {
+      displayName: 'or (||)',
+      shortDesc: 'Returns True if any argument is True',
+      longDesc: 'Returns `True` if any argument is `True` with logic short-circuiting',
+      args: [
+        {
+          displayName: 'Condition',
+          shortDesc: 'Boolean condition to evaluate',
+          longDesc: 'A boolean expression or condition that evaluates to True or False',
+        },
+      ],
+    },
+    not: {
+      displayName: 'not (!)',
+      shortDesc: 'Returns the opposite boolean value',
+      longDesc: 'Returns `True` if the argument is `False`, and `False` if the argument is `True`',
+      args: [
+        {
+          displayName: 'Condition',
+          shortDesc: 'Boolean condition to negate',
+          longDesc: 'A boolean expression or condition whose value will be inverted',
+        },
+      ],
+    },
+    '==': {
+      displayName: 'equal (==)',
+      shortDesc: 'Equality comparison',
+      longDesc: 'Returns `True` if the field value equals the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
+    },
+    '!=': {
+      displayName: 'not equal (!=)',
+      shortDesc: 'Inequality comparison',
+      longDesc: 'Returns `True` if the field value does not equal the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
+    },
+    '>': {
+      displayName: 'greater than (>)',
+      shortDesc: 'Greater than comparison',
+      longDesc: 'Returns `True` if the field value is greater than the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
+    },
+    '>=': {
+      displayName: 'greater than or equal (>=)',
+      shortDesc: 'Greater than or equal comparison',
+      longDesc: 'Returns `True` if the field value is greater than or equal to the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
+    },
+    '<': {
+      displayName: 'less than (<)',
+      shortDesc: 'Less than comparison',
+      longDesc: 'Returns `True` if the field value is less than the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
+    },
+    '<=': {
+      displayName: 'less than or equal (<=)',
+      shortDesc: 'Less than or equal comparison',
+      longDesc: 'Returns `True` if the field value is less than or equal to the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
+    },
+    in: {
+      displayName: 'in',
+      shortDesc: 'Value is in list',
+      longDesc: 'Returns `True` if the field value is found in the specified list of values',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to check',
+          longDesc: 'The field whose value will be checked against the list',
+        },
+        {
+          displayName: 'List',
+          shortDesc: 'List of values',
+          longDesc: 'The list of values to check against',
+        },
+      ],
+    },
+    not_in: {
+      displayName: 'not in',
+      shortDesc: 'Value is not in list',
+      longDesc: 'Returns `True` if the field value is not found in the specified list of values',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to check',
+          longDesc: 'The field whose value will be checked against the list',
+        },
+        {
+          displayName: 'List',
+          shortDesc: 'List of values',
+          longDesc: 'The list of values to check against',
+        },
+      ],
+    },
+    contains: {
+      displayName: 'contains',
+      shortDesc: 'Contains text',
+      longDesc: 'Returns `True` if the field contains the specified text',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Text field to search',
+          longDesc: 'The text field to search within',
+        },
+        {
+          displayName: 'Text',
+          shortDesc: 'Text to search for',
+          longDesc: 'The text string to search for within the field',
+        },
+      ],
+    },
+    not_contains: {
+      displayName: 'not contains',
+      shortDesc: 'Does not contain text',
+      longDesc: 'Returns `True` if the field does not contain the specified text',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Text field to search',
+          longDesc: 'The text field to search within',
+        },
+        {
+          displayName: 'Text',
+          shortDesc: 'Text to exclude',
+          longDesc: 'The text string that should not be present in the field',
+        },
+      ],
+    },
+    starts_with: {
+      displayName: 'starts with',
+      shortDesc: 'Starts with text',
+      longDesc: 'Returns `True` if the field starts with the specified text',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Text field to check',
+          longDesc: 'The text field to check the beginning of',
+        },
+        {
+          displayName: 'Text',
+          shortDesc: 'Text to match at start',
+          longDesc: 'The text that should appear at the beginning of the field',
+        },
+      ],
+    },
+    ends_with: {
+      displayName: 'ends with',
+      shortDesc: 'Ends with text',
+      longDesc: 'Returns `True` if the field ends with the specified text',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Text field to check',
+          longDesc: 'The text field to check the end of',
+        },
+        {
+          displayName: 'Text',
+          shortDesc: 'Text to match at end',
+          longDesc: 'The text that should appear at the end of the field',
+        },
+      ],
+    },
+    empty: {
+      displayName: 'is empty',
+      shortDesc: 'Field is empty',
+      longDesc: 'Returns `True` if the field is empty or has no value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to check',
+          longDesc: 'The field to check for emptiness',
+        },
+      ],
+    },
+    not_empty: {
+      displayName: 'is not empty',
+      shortDesc: 'Field is not empty',
+      longDesc: 'Returns `True` if the field has a value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to check',
+          longDesc: 'The field to check for a value',
+        },
+      ],
+    },
+  },
   triggers: {
     list_entry_created: {
       displayName: 'New List Entry Created',
