@@ -1,4 +1,9 @@
-import { EQoreRecordBasedAppErrorCodes, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
+import {
+  EQoreRecordBasedAppErrorCodes,
+  IQoreRestConnectionModifiers,
+  TCustomConnOptions,
+} from '@qoretechnologies/ts-toolkit';
+import { getQoreContextRequiredValues } from '../../global/helpers';
 
 export const ZOHO_CRM_APP_NAME = 'ZohoCRM';
 export const ZOHO_CRM_APP_LOGO =
@@ -23,19 +28,25 @@ export const ZohoCrmErrorCodeToQoreErrorCodeMap: Record<string, string> = {
 };
 
 export const ZOHO_CRM_CONN_OPTIONS = {
-  domain: {
-    display_name: 'Zoho Domain',
-    short_desc: 'Your Zoho CRM data center domain. Choose the domain based on your location.',
+  location: {
     type: 'string',
-    allowed_values: [
-      { value: 'https://www.zohoapis.com.au', display_name: 'zoho.com.au' },
-      { value: 'https://www.zohoapis.ca', display_name: 'zoho.ca' },
-      { value: 'https://www.zohoapis.com.cn', display_name: 'zoho.com.cn' },
-      { value: 'https://www.zohoapis.com', display_name: 'zoho.com' },
-      { value: 'https://www.zohoapis.eu', display_name: 'zoho.eu' },
-      { value: 'https://www.zohoapis.in', display_name: 'zoho.in' },
-      { value: 'https://www.zohoapis.jp', display_name: 'zoho.jp' },
-      { value: 'https://www.zohoapis.sa', display_name: 'zoho.sa' },
-    ],
+  },
+  'accounts-server': {
+    type: 'string',
   },
 } satisfies TCustomConnOptions;
+
+export const setZohoCrmOptionsPostAuth: IQoreRestConnectionModifiers['set_options_post_auth'] = (
+  context
+) => {
+  const { 'accounts-server': accountsServer, location } = getQoreContextRequiredValues({
+    context,
+    connectionFields: ['accounts-server', 'location'],
+  });
+
+  return {
+    url: `https://www.zohoapis.${location}`,
+    'accounts-server': accountsServer,
+    location,
+  };
+};
