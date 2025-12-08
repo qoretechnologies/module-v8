@@ -383,7 +383,7 @@ class TsProxy inherits TypeScriptProxy {
     }
 
     private doAsyncCall(string app, *string action, string key, auto args) {
-        TypeScriptActionInterface::initApp(app);
+        TypeScriptActionInterface::initApp(app, NOTHING, args[2].dynamic_path);
         if (action) {
             TypeScriptActionInterface::initAppAction(app, action);
         }

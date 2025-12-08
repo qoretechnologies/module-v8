@@ -36,6 +36,9 @@ public hashdecl DataContextInfo {
 
     #! User-defined information
     *hash<auto> info;
+
+    #! Path to any dynamic app source
+    *string dynamic_path;
 }
 
 #! Base class for TypeScript action data provider classes
@@ -447,6 +450,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                     "url": conn.real_url,
                 },
                 "opts": action_opts,
+                "dynamic_path": TypeScriptActionInterface::getDynamicAppPath(conn.getAppName()),
             };
         } else if (action_opts) {
             return <DataContextInfo>{

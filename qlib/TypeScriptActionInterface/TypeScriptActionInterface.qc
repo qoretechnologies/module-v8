@@ -552,6 +552,7 @@ public class TypeScriptActionInterface {
         if (*hash<auto> info = DynamicAppContextHelper::get(app.name)) {
             app += info;
             DynamicAppContextHelper::addApp(app.name);
+            TSAI::info("Registering dynamic app with info: %N", info);
         }
         hash<AsyncCallInfo> get_table_list;
         hash<AsyncCallInfo> begin_transaction;
@@ -626,12 +627,12 @@ public class TypeScriptActionInterface {
             check_record_based();
             search_records = tryGetAsyncAttribute(\app, "search_records", "search records", pool, io_timeout,
                 app.name);
-
         }
 
         if (app.create_records) {
             check_record_based();
-            create_records = tryGetAsyncAttribute(\app, "create_records", "create records", pool, io_timeout, app.name);
+            create_records = tryGetAsyncAttribute(\app, "create_records", "create records", pool, io_timeout,
+                app.name);
 
             if (app.create_options) {
                 create_options = remove app.create_options;
@@ -643,12 +644,14 @@ public class TypeScriptActionInterface {
 
         if (app.update_records) {
             check_record_based();
-            update_records = tryGetAsyncAttribute(\app, "update_records", "update records", pool, io_timeout, app.name);
+            update_records = tryGetAsyncAttribute(\app, "update_records", "update records", pool, io_timeout,
+                app.name);
         }
 
         if (app.upsert_records) {
             check_record_based();
-            upsert_records = tryGetAsyncAttribute(\app, "upsert_records", "upsert records", pool, io_timeout, app.name);
+            upsert_records = tryGetAsyncAttribute(\app, "upsert_records", "upsert records", pool, io_timeout,
+                app.name);
 
             if (app.upsert_options) {
                 upsert_options = remove app.upsert_options;
@@ -660,7 +663,8 @@ public class TypeScriptActionInterface {
 
         if (app.delete_records) {
             check_record_based();
-            delete_records = tryGetAsyncAttribute(\app, "delete_records", "delete records", pool, io_timeout, app.name);
+            delete_records = tryGetAsyncAttribute(\app, "delete_records", "delete records", pool, io_timeout,
+                app.name);
         }
 
         if (app.search_options) {
@@ -670,7 +674,8 @@ public class TypeScriptActionInterface {
             }
             if (!search_records && !update_records && !delete_records) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y cannot define \"search_options\" without also "
-                    "defining at least one of 'search_records()', 'update_records()', or 'delete_records()'", app.name);
+                    "defining at least one of 'search_records()', 'update_records()', or 'delete_records()'",
+                    app.name);
             }
             search_options = remove app.search_options;
         }
@@ -707,6 +712,7 @@ public class TypeScriptActionInterface {
         DataProviderActionCatalog::registerPendingApp(app.name, sub () {
             TypeScriptActionInterface::initApp(app.name);
         });
+        TSAI::info("Registered TypeScript app %y -> %y", app.name, app.info);
         TSAI::debug("Registered TypeScript app %y", app.name);
     }
 
@@ -758,11 +764,11 @@ public class TypeScriptActionInterface {
         return False;
     }
 
-    static bool initApp(string app, *bool do_actions) {
+    static bool initApp(string app, *bool do_actions, *string dynamic_path) {
         if (exists (*string rn = appcasemap{app})) {
             app = rn;
         }
-        return TypeScriptActionInterface::initAppIntern(app, do_actions);
+        return TypeScriptActionInterface::initAppIntern(app, do_actions, dynamic_path);
     }
 
     static hash<AppInfo> getInitializedRecordBasedAppInfo(string app) {
@@ -779,12 +785,23 @@ public class TypeScriptActionInterface {
         return info;
     }
 
-    static private synchronized bool initAppIntern(string app, *bool do_actions) {
+    static private synchronized bool initAppIntern(string app, *bool do_actions, *string dynamic_path) {
         if (initmap{app}) {
             return False;
         }
         if (*hash<AppInfo> info = remove appmap{app}) {
             return TypeScriptActionInterface::initAppIntern(info, do_actions);
+        }
+        if (dynamic_path) {
+            string fname = sprintf("%s/index.js", dynamic_path);
+            if (is_readable(fname)) {
+                TSAI::debug("Loading dynamic app %y from path %y", app, fname);
+                # try to load the dynamic app from the given path
+                if (*list<string> apps = TypeScriptActionInterface::registerDynamicAppsFromJavaScript(
+                    dynamic_path, File::readTextFile(fname))) {
+                    return TypeScriptActionInterface::initAppIntern(app, do_actions);
+                }
+            }
         }
         throw "APP-ERROR", sprintf("No app %y has been registered for deferred initialization by the "
             "TypeScriptActionInterface module", app);
@@ -2826,6 +2843,10 @@ public class TypeScriptActionInterface {
             }
         }
         return url;
+    }
+
+    static *string getDynamicAppPath(*string app) {
+        return initialized_appmap{app}.app.info.path ?? appmap{app}.app.info.path;
     }
 
     static *string getUrlOptionForApp(string app) {
