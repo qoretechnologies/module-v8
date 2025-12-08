@@ -46,6 +46,7 @@ export const setZohoCrmOptionsPostAuth: IQoreRestConnectionModifiers['set_option
 
   return {
     url: `https://www.zohoapis.${location}`,
+    oauth2_token_url: `${accountsServer}/oauth/v2/token`,
     'accounts-server': accountsServer,
     location,
   };

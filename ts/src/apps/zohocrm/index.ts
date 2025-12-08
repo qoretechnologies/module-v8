@@ -37,7 +37,7 @@ export default (locale: Locales) =>
       ...mapTriggersToApp(ZOHO_CRM_APP_NAME, ZOHO_CRM_TRIGGERS, locale),
     ],
     rest: {
-      url: 'auto',
+      url: 'https://www.zohoapis.{{location}}',
       data: 'json',
       oauth2_grant_type: 'authorization_code',
       oauth2_auth_url: 'https://accounts.zoho.com/oauth/v2/auth',
@@ -60,6 +60,7 @@ export default (locale: Locales) =>
     },
     rest_modifiers: {
       options: ZOHO_CRM_CONN_OPTIONS,
+      url_template_options: ['location', 'accounts-server'],
       set_options_post_auth: setZohoCrmOptionsPostAuth,
       set_options_post_auth_code: setZohoCrmOptionsPostAuth,
     },
