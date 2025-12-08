@@ -54,7 +54,7 @@ const options = {
   },
   merge: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: true,
   },
 } satisfies TQoreOptions;
@@ -149,7 +149,7 @@ const updateDocument = QoreAppCreator.createLocalizedAction<typeof options>({
       collection_path: { type: 'string' },
       project_id: { type: 'string' },
       path: { type: 'string' },
-      merge: { type: 'boolean' },
+      merge: { type: 'bool' },
       update_time: { type: 'string' },
       data: { type: 'hash' },
     },
@@ -165,7 +165,7 @@ const updateDocument = QoreAppCreator.createLocalizedAction<typeof options>({
         collection_path: { type: 'string' },
         project_id: { type: 'string' },
         path: { type: 'string' },
-        merge: { type: 'boolean' },
+        merge: { type: 'bool' },
         update_time: { type: 'string' },
         data: dataFields as TQoreAppActionOption,
       },

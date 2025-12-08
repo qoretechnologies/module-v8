@@ -73,7 +73,7 @@ const NewRecordMovedToGroup = QoreAppCreator.createLocalizedTrigger({
                 type: 'number',
               },
               isRetry: {
-                type: 'boolean',
+                type: 'bool',
               },
               userId: {
                 type: 'number',
@@ -104,7 +104,7 @@ const NewRecordMovedToGroup = QoreAppCreator.createLocalizedTrigger({
                       type: 'string',
                     },
                     is_top_group: {
-                      type: 'boolean',
+                      type: 'bool',
                     },
                   },
                 },

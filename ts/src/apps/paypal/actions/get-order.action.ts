@@ -277,7 +277,7 @@ const getOrder = QoreAppCreator.createLocalizedAction<typeof options>({
                                 },
                               },
                             },
-                            final_capture: { type: 'boolean' },
+                            final_capture: { type: 'bool' },
                             seller_protection: {
                               type: {
                                 type: 'hash',

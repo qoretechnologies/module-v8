@@ -118,11 +118,11 @@ const githubNewReleaseTrigger = QoreAppCreator.createLocalizedTrigger({
                 example_value: 'Description of the release.',
               },
               draft: {
-                type: 'boolean',
+                type: 'bool',
                 example_value: false,
               },
               prerelease: {
-                type: 'boolean',
+                type: 'bool',
                 example_value: false,
               },
               created_at: {

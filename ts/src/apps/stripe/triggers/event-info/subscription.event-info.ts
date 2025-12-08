@@ -16,7 +16,7 @@ export const stripeSubscriptionEventInfoType = {
               type: 'hash',
               fields: {
                 disabled_reason: { type: 'string' },
-                enabled: { type: 'boolean' },
+                enabled: { type: 'bool' },
                 liability: { type: 'string' },
               },
             },
@@ -25,7 +25,7 @@ export const stripeSubscriptionEventInfoType = {
           billing_cycle_anchor_config: { type: 'string' },
           billing_thresholds: { type: 'string' },
           cancel_at: { type: 'string' },
-          cancel_at_period_end: { type: 'boolean' },
+          cancel_at_period_end: { type: 'bool' },
           canceled_at: { type: 'number' },
           cancellation_details: {
             type: {
@@ -107,7 +107,7 @@ export const stripeSubscriptionEventInfoType = {
                             fields: {
                               id: { type: 'string' },
                               object: { type: 'string' },
-                              active: { type: 'boolean' },
+                              active: { type: 'bool' },
                               aggregate_usage: { type: 'string' },
                               amount: { type: 'number' },
                               amount_decimal: { type: 'string' },
@@ -116,7 +116,7 @@ export const stripeSubscriptionEventInfoType = {
                               currency: { type: 'string' },
                               interval: { type: 'string' },
                               interval_count: { type: 'number' },
-                              livemode: { type: 'boolean' },
+                              livemode: { type: 'bool' },
                               metadata: {
                                 type: 'hash',
                               },
@@ -136,12 +136,12 @@ export const stripeSubscriptionEventInfoType = {
                             fields: {
                               id: { type: 'string' },
                               object: { type: 'string' },
-                              active: { type: 'boolean' },
+                              active: { type: 'bool' },
                               billing_scheme: { type: 'string' },
                               created: { type: 'number' },
                               currency: { type: 'string' },
                               custom_unit_amount: { type: 'string' },
-                              livemode: { type: 'boolean' },
+                              livemode: { type: 'bool' },
                               lookup_key: { type: 'string' },
                               metadata: {
                                 type: 'hash',
@@ -182,14 +182,14 @@ export const stripeSubscriptionEventInfoType = {
                     },
                   },
                 },
-                has_more: { type: 'boolean' },
+                has_more: { type: 'bool' },
                 total_count: { type: 'number' },
                 url: { type: 'string' },
               },
             },
           },
           latest_invoice: { type: 'string' },
-          livemode: { type: 'boolean' },
+          livemode: { type: 'bool' },
           metadata: {
             type: 'hash',
           },
@@ -215,7 +215,7 @@ export const stripeSubscriptionEventInfoType = {
               fields: {
                 id: { type: 'string' },
                 object: { type: 'string' },
-                active: { type: 'boolean' },
+                active: { type: 'bool' },
                 aggregate_usage: { type: 'string' },
                 amount: { type: 'number' },
                 amount_decimal: { type: 'string' },
@@ -224,7 +224,7 @@ export const stripeSubscriptionEventInfoType = {
                 currency: { type: 'string' },
                 interval: { type: 'string' },
                 interval_count: { type: 'number' },
-                livemode: { type: 'boolean' },
+                livemode: { type: 'bool' },
                 metadata: {
                   type: 'hash',
                 },

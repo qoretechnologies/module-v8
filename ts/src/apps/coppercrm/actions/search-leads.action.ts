@@ -125,7 +125,7 @@ const options = {
     type: 'number',
   },
   include_converted_leads: {
-    type: 'boolean',
+    type: 'bool',
   },
 } satisfies TQoreOptions;
 

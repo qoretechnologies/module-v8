@@ -20,7 +20,7 @@ const options = {
   },
   is_completed: {
     required: true,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   assignees: {
@@ -93,7 +93,7 @@ const createAttioTask = QoreAppCreator.createLocalizedAction<typeof options>({
         },
       },
       content_plaintext: { type: 'string' },
-      is_completed: { type: 'boolean' },
+      is_completed: { type: 'bool' },
       deadline_at: { type: 'string' },
       linked_records: {
         type: {

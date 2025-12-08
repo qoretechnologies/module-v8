@@ -23,7 +23,7 @@ const options = {
     required: true,
   },
   parse_html: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: true,
     preselected: true,
@@ -56,7 +56,7 @@ const response_type = {
       type: 'string',
     },
     success: {
-      type: 'boolean',
+      type: 'bool',
     },
     message: {
       type: 'string',

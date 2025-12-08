@@ -57,10 +57,10 @@ const response_type = {
             type: 'string',
           },
           hidden: {
-            type: 'boolean',
+            type: 'bool',
           },
           contentTypesEnabled: {
-            type: 'boolean',
+            type: 'bool',
           },
         },
       },

@@ -161,7 +161,7 @@ const listAlarms = QoreAppCreator.createLocalizedAction<typeof options>({
               alarm_name: { type: 'string' },
               alarm_description: { type: 'string' },
               alarm_arn: { type: 'string' },
-              actions_enabled: { type: 'boolean' },
+              actions_enabled: { type: 'bool' },
               state_value: { type: 'string' },
               state_reason: { type: 'string' },
               state_updated_timestamp: { type: 'string' },

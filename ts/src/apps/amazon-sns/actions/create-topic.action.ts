@@ -39,12 +39,12 @@ const options = {
   },
   fifo_topic: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   content_based_deduplication: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
 } satisfies TQoreOptions;
@@ -145,8 +145,8 @@ const createTopic = QoreAppCreator.createLocalizedAction<typeof options>({
       topic_name: { type: 'string' },
       region: { type: 'string' },
       console_url: { type: 'string' },
-      fifo_topic: { type: 'boolean' },
-      content_based_deduplication: { type: 'boolean' },
+      fifo_topic: { type: 'bool' },
+      content_based_deduplication: { type: 'bool' },
       display_name: { type: 'string' },
       created_at: { type: 'string' },
       attributes: {
@@ -157,8 +157,8 @@ const createTopic = QoreAppCreator.createLocalizedAction<typeof options>({
             delivery_policy: { type: 'string' },
             policy: { type: 'string' },
             kms_master_key_id: { type: 'string' },
-            fifo_topic: { type: 'boolean' },
-            content_based_deduplication: { type: 'boolean' },
+            fifo_topic: { type: 'bool' },
+            content_based_deduplication: { type: 'bool' },
           },
         },
       },

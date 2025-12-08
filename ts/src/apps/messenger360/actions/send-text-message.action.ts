@@ -63,7 +63,7 @@ const sendTextMessage = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       statusCode: { type: 'string' },
       timestamp: { type: 'string' },
       data: {

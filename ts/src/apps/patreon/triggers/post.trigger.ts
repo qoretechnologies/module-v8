@@ -106,8 +106,8 @@ const PostTrigger = QoreAppCreator.createLocalizedTrigger({
                     content: { type: 'string' },
                     embed_data: { type: 'string' },
                     embed_url: { type: 'string' },
-                    is_paid: { type: 'boolean' },
-                    is_public: { type: 'boolean' },
+                    is_paid: { type: 'bool' },
+                    is_public: { type: 'bool' },
                     published_at: { type: 'string' },
                     tiers: {
                       type: {

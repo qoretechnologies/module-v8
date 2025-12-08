@@ -20,7 +20,7 @@ const options = {
   },
   include_location: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: true,
   },
 } satisfies TQoreOptions;
@@ -134,7 +134,7 @@ const listBuckets = QoreAppCreator.createLocalizedAction<typeof options>({
           },
         },
       },
-      include_location: { type: 'boolean' },
+      include_location: { type: 'bool' },
       retrieved_at: { type: 'string' },
     },
   },

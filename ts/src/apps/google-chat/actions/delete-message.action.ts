@@ -24,7 +24,7 @@ const options = {
     allowed_values_creatable: true,
   },
   force: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
 } satisfies TQoreOptions;

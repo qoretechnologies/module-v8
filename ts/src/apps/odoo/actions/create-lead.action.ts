@@ -168,7 +168,7 @@ const options = {
   },
 
   active: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: true,
   },

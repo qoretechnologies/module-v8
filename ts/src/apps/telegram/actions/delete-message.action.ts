@@ -50,10 +50,10 @@ const deleteMessage = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       chat_id: { type: 'number' },
       message_id: { type: 'integer' },
-      deleted: { type: 'boolean' },
+      deleted: { type: 'bool' },
     },
   },
 });

@@ -28,7 +28,7 @@ const stripePaymentLinkCreatedTrigger = QoreAppCreator.createLocalizedTrigger({
             fields: {
               id: { type: 'string' },
               object: { type: 'string' },
-              active: { type: 'boolean' },
+              active: { type: 'bool' },
               after_completion: {
                 type: {
                   type: 'hash',
@@ -45,7 +45,7 @@ const stripePaymentLinkCreatedTrigger = QoreAppCreator.createLocalizedTrigger({
                   },
                 },
               },
-              allow_promotion_codes: { type: 'boolean' },
+              allow_promotion_codes: { type: 'bool' },
               application: { type: 'string' },
               application_fee_amount: { type: 'string' },
               application_fee_percent: { type: 'string' },
@@ -53,7 +53,7 @@ const stripePaymentLinkCreatedTrigger = QoreAppCreator.createLocalizedTrigger({
                 type: {
                   type: 'hash',
                   fields: {
-                    enabled: { type: 'boolean' },
+                    enabled: { type: 'bool' },
                     liability: { type: 'string' },
                   },
                 },
@@ -87,7 +87,7 @@ const stripePaymentLinkCreatedTrigger = QoreAppCreator.createLocalizedTrigger({
                 type: {
                   type: 'hash',
                   fields: {
-                    enabled: { type: 'boolean' },
+                    enabled: { type: 'bool' },
                     invoice_data: {
                       type: {
                         type: 'hash',
@@ -110,7 +110,7 @@ const stripePaymentLinkCreatedTrigger = QoreAppCreator.createLocalizedTrigger({
                   },
                 },
               },
-              livemode: { type: 'boolean' },
+              livemode: { type: 'bool' },
               metadata: {
                 type: {
                   type: 'hash',
@@ -125,7 +125,7 @@ const stripePaymentLinkCreatedTrigger = QoreAppCreator.createLocalizedTrigger({
                 type: {
                   type: 'hash',
                   fields: {
-                    enabled: { type: 'boolean' },
+                    enabled: { type: 'bool' },
                   },
                 },
               },
@@ -190,7 +190,7 @@ const stripePaymentLinkCreatedTrigger = QoreAppCreator.createLocalizedTrigger({
                 type: {
                   type: 'hash',
                   fields: {
-                    enabled: { type: 'boolean' },
+                    enabled: { type: 'bool' },
                     required: { type: 'string' },
                   },
                 },

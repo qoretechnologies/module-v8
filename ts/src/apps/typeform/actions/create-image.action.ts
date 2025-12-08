@@ -59,7 +59,7 @@ const createImage = QoreAppCreator.createLocalizedAction<typeof options>({
       width: { type: 'integer' },
       height: { type: 'integer' },
       media_type: { type: 'string' },
-      has_alpha: { type: 'boolean' },
+      has_alpha: { type: 'bool' },
       avg_color: { type: 'string' },
     },
   },

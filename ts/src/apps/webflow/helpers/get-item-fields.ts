@@ -23,7 +23,7 @@ export const CUSTOM_TYPE_TO_QORE_TYPE_MAP: Record<
   PlainText: 'string',
   Reference: 'string',
   RichText: 'string',
-  Switch: 'boolean',
+  Switch: 'bool',
   VideoLink: 'string',
 
   SkuValues: {

@@ -27,7 +27,7 @@ const options = {
   },
   is_anonymous: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: true,
   },
   poll_type: {
@@ -41,7 +41,7 @@ const options = {
   },
   allows_multiple_answers: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   correct_option_id: {
@@ -73,17 +73,17 @@ const options = {
   },
   is_closed: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   disable_notification: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   protect_content: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
 } satisfies TQoreOptions;
@@ -170,7 +170,7 @@ const sendPoll = QoreAppCreator.createLocalizedAction<typeof options>({
           type: 'hash',
           fields: {
             id: { type: 'integer' },
-            is_bot: { type: 'boolean' },
+            is_bot: { type: 'bool' },
             first_name: { type: 'string' },
             username: { type: 'string' },
           },
@@ -210,10 +210,10 @@ const sendPoll = QoreAppCreator.createLocalizedAction<typeof options>({
             total_voter_count: { type: 'integer' },
             open_period: { type: 'integer' },
             close_date: { type: 'integer' },
-            is_closed: { type: 'boolean' },
-            is_anonymous: { type: 'boolean' },
+            is_closed: { type: 'bool' },
+            is_anonymous: { type: 'bool' },
             type: { type: 'string' },
-            allows_multiple_answers: { type: 'boolean' },
+            allows_multiple_answers: { type: 'bool' },
             correct_option_id: { type: 'integer' },
             explanation: { type: 'string' },
             explanation_entities: {
@@ -232,7 +232,7 @@ const sendPoll = QoreAppCreator.createLocalizedAction<typeof options>({
           },
         },
       },
-      has_protected_content: { type: 'boolean' },
+      has_protected_content: { type: 'bool' },
     },
   },
 });

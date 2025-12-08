@@ -18,7 +18,7 @@ const options = {
   },
   overwrite_existing: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   headers: {
@@ -174,7 +174,7 @@ const createWorksheet = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       spreadsheet_id: { type: 'string' },
       sheet_id: { type: 'string' },
       title: { type: 'string' },
@@ -185,7 +185,7 @@ const createWorksheet = QoreAppCreator.createLocalizedAction<typeof options>({
         },
       },
       sheet_index: { type: 'integer' },
-      overwritten: { type: 'boolean' },
+      overwritten: { type: 'bool' },
     },
   },
 });

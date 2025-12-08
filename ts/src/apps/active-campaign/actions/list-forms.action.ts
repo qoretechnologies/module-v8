@@ -99,7 +99,7 @@ const listForms = QoreAppCreator.createLocalizedAction<typeof options>({
                   type: 'hash',
                   fields: {
                     background: { type: 'string' },
-                    dark: { type: 'boolean' },
+                    dark: { type: 'bool' },
                     fontcolor: { type: 'string' },
                     layout: { type: 'string' },
                     border: {
@@ -114,7 +114,7 @@ const listForms = QoreAppCreator.createLocalizedAction<typeof options>({
                       },
                     },
                     width: { type: 'number' },
-                    ac_branding: { type: 'boolean' },
+                    ac_branding: { type: 'bool' },
                     button: {
                       type: {
                         type: 'hash',
@@ -143,11 +143,11 @@ const listForms = QoreAppCreator.createLocalizedAction<typeof options>({
                 type: {
                   type: 'hash',
                   fields: {
-                    blanks_overwrite: { type: 'boolean' },
+                    blanks_overwrite: { type: 'bool' },
                     confaction: { type: 'string' },
-                    sendoptin: { type: 'boolean' },
+                    sendoptin: { type: 'bool' },
                     optin_id: { type: 'number' },
-                    optin_created: { type: 'boolean' },
+                    optin_created: { type: 'bool' },
                     confform: { type: 'string' },
                   },
                 },
@@ -163,7 +163,7 @@ const listForms = QoreAppCreator.createLocalizedAction<typeof options>({
                       class: { type: 'string' },
                       html: { type: 'string' },
                       default_text: { type: 'string' },
-                      required: { type: 'boolean' },
+                      required: { type: 'bool' },
                     },
                   },
                 },

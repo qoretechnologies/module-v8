@@ -56,7 +56,7 @@ export const ShopifyFindVariantResponseType = {
               desc: 'The total sellable quantity of the variant for online channels',
             },
             availableForSale: {
-              type: 'boolean',
+              type: 'bool',
               desc: 'Whether the product variant is available for sale',
             },
             position: {
@@ -64,11 +64,11 @@ export const ShopifyFindVariantResponseType = {
               desc: 'The order of the product variant in the list of product variants',
             },
             requiresComponents: {
-              type: 'boolean',
+              type: 'bool',
               desc: 'Whether a product variant requires components',
             },
             taxable: {
-              type: 'boolean',
+              type: 'bool',
               desc: 'Whether a tax is charged when the product variant is sold',
             },
             taxCode: {
@@ -174,7 +174,7 @@ export const ShopifyFindVariantResponseType = {
         type: 'hash',
         fields: {
           hasNextPage: {
-            type: 'boolean',
+            type: 'bool',
           },
           endCursor: {
             type: 'string',

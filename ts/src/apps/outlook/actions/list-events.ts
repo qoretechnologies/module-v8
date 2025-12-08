@@ -79,9 +79,9 @@ const response_type = {
           },
         },
       },
-      isAllDay: { type: 'boolean' },
-      isCancelled: { type: 'boolean' },
-      isOnlineMeeting: { type: 'boolean' },
+      isAllDay: { type: 'bool' },
+      isCancelled: { type: 'bool' },
+      isOnlineMeeting: { type: 'bool' },
       onlineMeetingUrl: { type: 'string' },
       organizer: {
         type: {

@@ -81,7 +81,7 @@ const verifyEmailAddress = QoreAppCreator.createLocalizedAction<typeof options>(
       verification_status: { type: 'string' },
       verification_initiated_at: { type: 'string' },
       region: { type: 'string' },
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       message: { type: 'string' },
       next_steps: {
         type: {

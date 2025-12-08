@@ -26,7 +26,7 @@ const options = {
     default_value: -1,
   },
   fetchMetadata: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
 } satisfies TQoreOptions;

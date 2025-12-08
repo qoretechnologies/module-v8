@@ -20,12 +20,12 @@ const options = {
     default_value: -1,
   },
   fetchMetadata: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: true,
   },
   getMarkdownString: {
-    type: 'boolean',
+    type: 'bool',
     preselected: true,
   },
 } satisfies TQoreOptions;

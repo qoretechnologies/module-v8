@@ -286,7 +286,7 @@ export const NotionFieldMapping: Record<
 > = {
   checkbox: {
     buildQoreType: (property) => ({
-      type: 'boolean',
+      type: 'bool',
       display_name: property.name,
       ...(property.description && { desc: property.description }),
     }),

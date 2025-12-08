@@ -55,7 +55,7 @@ const options = {
     },
   },
   includeRetried: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   fromDate: {
@@ -113,7 +113,7 @@ const listTasks = QoreAppCreator.createLocalizedAction<typeof options>({
     fields: {
       totalCount: { type: 'integer' },
       pageNumber: { type: 'integer' },
-      hasMore: { type: 'boolean' },
+      hasMore: { type: 'bool' },
       items: {
         type: {
           type: 'list',
@@ -127,12 +127,12 @@ const listTasks = QoreAppCreator.createLocalizedAction<typeof options>({
               runByUserId: { type: 'string' },
               robotBulkRunId: { type: 'string' },
               runByTaskMonitorId: { type: 'string' },
-              runByAPI: { type: 'boolean' },
+              runByAPI: { type: 'bool' },
               createdAt: { type: 'number' },
               startedAt: { type: 'number' },
               finishedAt: { type: 'number' },
               userFriendlyError: { type: 'string' },
-              triedRecordingVideo: { type: 'boolean' },
+              triedRecordingVideo: { type: 'bool' },
               videoUrl: { type: 'string' },
               videoRemovedAt: { type: 'number' },
               retriedOriginalTaskId: { type: 'string' },

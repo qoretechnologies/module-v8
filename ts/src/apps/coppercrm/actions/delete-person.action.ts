@@ -55,7 +55,7 @@ const DeletePerson = QoreAppCreator.createLocalizedAction({
         type: 'string',
       },
       is_deleted: {
-        type: 'boolean',
+        type: 'bool',
       },
     },
   },

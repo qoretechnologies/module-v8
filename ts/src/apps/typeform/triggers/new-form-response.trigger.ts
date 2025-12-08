@@ -284,7 +284,7 @@ const newFormResponse = QoreAppCreator.createLocalizedTrigger({
           },
         },
         {
-          type: 'boolean',
+          type: 'bool',
           boolean: true,
           field: {
             id: 'gFFf3xAkJKsr',
@@ -304,7 +304,7 @@ const newFormResponse = QoreAppCreator.createLocalizedTrigger({
           },
         },
         {
-          type: 'boolean',
+          type: 'bool',
           boolean: false,
           field: {
             id: 'RUqkXSeXBXSd',
@@ -409,8 +409,8 @@ const newFormResponse = QoreAppCreator.createLocalizedTrigger({
                             title: { type: 'string' },
                             type: { type: 'string' },
                             ref: { type: 'string' },
-                            allow_multiple_selections: { type: 'boolean' },
-                            allow_other_choice: { type: 'boolean' },
+                            allow_multiple_selections: { type: 'bool' },
+                            allow_other_choice: { type: 'bool' },
                             properties: {
                               type: {
                                 type: 'hash',
@@ -448,8 +448,8 @@ const newFormResponse = QoreAppCreator.createLocalizedTrigger({
                                 type: 'hash',
                                 fields: {
                                   button_text: { type: 'string' },
-                                  show_button: { type: 'boolean' },
-                                  share_icons: { type: 'boolean' },
+                                  show_button: { type: 'bool' },
+                                  share_icons: { type: 'bool' },
                                   button_mode: { type: 'string' },
                                 },
                               },
@@ -472,7 +472,7 @@ const newFormResponse = QoreAppCreator.createLocalizedTrigger({
                       email: { type: 'string' },
                       date: { type: 'string' },
                       number: { type: 'number' },
-                      boolean: { type: 'boolean' },
+                      boolean: { type: 'bool' },
                       url: { type: 'string' },
                       field: {
                         type: {

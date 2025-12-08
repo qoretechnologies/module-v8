@@ -15,7 +15,7 @@ const PaddleNewProductTrigger = QoreAppCreator.createLocalizedTrigger({
   action_code: EQoreAppActionCode.EVENT,
   options: {
     include_prices: {
-      type: 'boolean',
+      type: 'bool',
       default_value: false,
     },
     status: {
@@ -123,7 +123,7 @@ const PaddleNewProductTrigger = QoreAppCreator.createLocalizedTrigger({
                     fields: {
                       interval: { type: 'string' },
                       frequency: { type: 'integer' },
-                      requiresPaymentMethod: { type: 'boolean' },
+                      requiresPaymentMethod: { type: 'bool' },
                     },
                   },
                 },

@@ -29,7 +29,7 @@ const options = {
   },
   include_attributes: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: true,
   },
 } satisfies TQoreOptions;
@@ -145,7 +145,7 @@ const listQueues = QoreAppCreator.createLocalizedAction<typeof options>({
       queue_count: { type: 'integer' },
       queue_name_prefix: { type: 'string' },
       region: { type: 'string' },
-      include_attributes: { type: 'boolean' },
+      include_attributes: { type: 'bool' },
       queues: {
         type: {
           type: 'list',
@@ -166,8 +166,8 @@ const listQueues = QoreAppCreator.createLocalizedAction<typeof options>({
               approximate_number_of_messages_delayed: { type: 'integer' },
               policy: { type: 'string' },
               redrive_policy: { type: 'string' },
-              fifo_queue: { type: 'boolean' },
-              content_based_deduplication: { type: 'boolean' },
+              fifo_queue: { type: 'bool' },
+              content_based_deduplication: { type: 'bool' },
               kms_master_key_id: { type: 'string' },
               kms_data_key_reuse_period_seconds: { type: 'integer' },
               deduplication_scope: { type: 'string' },

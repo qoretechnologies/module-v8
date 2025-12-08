@@ -24,7 +24,7 @@ const FirestoreTypeToQoreTypeMap: Record<string, TQoreType> = {
   stringValue: 'string',
   integerValue: 'integer',
   doubleValue: 'number',
-  booleanValue: 'boolean',
+  booleanValue: 'bool',
   timestampValue: 'date',
   nullValue: 'string',
   bytesValue: 'string',

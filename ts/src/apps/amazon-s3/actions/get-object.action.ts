@@ -37,7 +37,7 @@ const options = {
   },
   include_content: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: true,
   },
   version_id: {

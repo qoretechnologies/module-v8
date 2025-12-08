@@ -65,10 +65,10 @@ const response_type = {
     fields: {
       id: { type: 'string' },
       name: { type: 'string' },
-      private: { type: 'boolean' },
+      private: { type: 'bool' },
       task: { type: 'string' },
       downloads: { type: 'integer' },
-      gated: { type: 'boolean' },
+      gated: { type: 'bool' },
       likes: { type: 'integer' },
       updatedAt: { type: 'string' },
     },

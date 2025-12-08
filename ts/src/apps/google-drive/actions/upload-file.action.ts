@@ -27,7 +27,7 @@ const options = {
   },
   convert_to_document: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   file_name: {
@@ -141,7 +141,7 @@ const uploadFile = QoreAppCreator.createLocalizedAction<typeof options>({
       web_content_link: { type: 'string' },
       size: { type: 'string' },
       last_modified: { type: 'string' },
-      converted_to_document: { type: 'boolean' },
+      converted_to_document: { type: 'bool' },
       message: { type: 'string' },
     },
   },

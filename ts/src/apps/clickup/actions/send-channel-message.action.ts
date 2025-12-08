@@ -124,7 +124,7 @@ const sendChannelMessage = QoreAppCreator.createLocalizedAction<typeof options>(
       id: { type: 'string' },
       parent_channel: { type: 'string' },
       parent_message: { type: 'string' },
-      resolved: { type: 'boolean' },
+      resolved: { type: 'bool' },
       resolved_by: { type: 'string' },
       triaged_action: { type: 'number' },
       triaged_object_id: { type: 'string' },

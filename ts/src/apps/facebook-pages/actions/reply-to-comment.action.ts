@@ -142,7 +142,7 @@ const replyToComment = QoreAppCreator.createLocalizedAction<typeof options>({
     type: 'hash',
     fields: {
       success: {
-        type: 'boolean',
+        type: 'bool',
         display_name: 'Success',
         short_desc: 'Whether the request was successful',
       },

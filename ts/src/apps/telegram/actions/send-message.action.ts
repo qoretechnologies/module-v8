@@ -31,11 +31,11 @@ const options = {
   },
   disable_link_preview: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
   },
   disable_notification: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
   },
 } satisfies TQoreOptions;
 
@@ -81,7 +81,7 @@ const sendMessage = QoreAppCreator.createLocalizedAction<typeof options>({
           type: 'hash',
           fields: {
             id: { type: 'number' },
-            is_bot: { type: 'boolean' },
+            is_bot: { type: 'bool' },
             first_name: { type: 'string' },
             username: { type: 'string' },
           },

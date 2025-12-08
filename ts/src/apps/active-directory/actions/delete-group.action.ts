@@ -44,7 +44,7 @@ const deleteGroup = QoreAppCreator.createLocalizedAction<typeof options>({
     type: 'hash',
     fields: {
       id: { type: 'string' },
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
     },
   },
 });

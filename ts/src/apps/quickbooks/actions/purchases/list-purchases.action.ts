@@ -7,7 +7,7 @@ import { QuickBooksPurchaseFieldsAllowedValues } from '../../helpers/get-purchas
 
 const options = {
   fetchAll: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },
@@ -164,9 +164,9 @@ const listPurchases = QoreAppCreator.createLocalizedAction<typeof options>({
                                 },
                               },
                             },
-                            nil: { type: 'boolean' },
-                            globalScope: { type: 'boolean' },
-                            typeSubstituted: { type: 'boolean' },
+                            nil: { type: 'bool' },
+                            globalScope: { type: 'bool' },
+                            typeSubstituted: { type: 'bool' },
                           },
                         },
                       },
@@ -175,7 +175,7 @@ const listPurchases = QoreAppCreator.createLocalizedAction<typeof options>({
                 },
               },
               domain: { type: 'string' },
-              sparse: { type: 'boolean' },
+              sparse: { type: 'bool' },
               Id: { type: 'string' },
               SyncToken: { type: 'string' },
               MetaData: {

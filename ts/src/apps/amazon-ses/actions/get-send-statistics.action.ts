@@ -143,7 +143,7 @@ const getSendStatistics = QoreAppCreator.createLocalizedAction<typeof options>({
         },
       },
       retrieved_at: { type: 'string' },
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
     },
   },
 });

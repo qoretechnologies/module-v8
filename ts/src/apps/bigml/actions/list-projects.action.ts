@@ -124,7 +124,7 @@ const listProjects = QoreAppCreator.createLocalizedAction<typeof options>({
         category: { type: 'integer' },
         code: { type: 'integer' },
         configuration: { type: 'string' },
-        configuration_status: { type: 'boolean' },
+        configuration_status: { type: 'bool' },
         created: { type: 'string' },
         creator: { type: 'string' },
         description: { type: 'string' },
@@ -138,7 +138,7 @@ const listProjects = QoreAppCreator.createLocalizedAction<typeof options>({
         },
         name: { type: 'string' },
         name_options: { type: 'string' },
-        private: { type: 'boolean' },
+        private: { type: 'bool' },
         resource: { type: 'string' },
         stats: {
           type: {

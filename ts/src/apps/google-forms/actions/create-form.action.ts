@@ -37,7 +37,7 @@ const options = {
         },
         is_quiz: {
           required: false,
-          type: 'boolean',
+          type: 'bool',
           default_value: false,
         },
       },
@@ -61,7 +61,7 @@ const options = {
           },
           required: {
             required: false,
-            type: 'boolean',
+            type: 'bool',
             default_value: false,
             preselected: true,
           },
@@ -110,7 +110,7 @@ const options = {
           },
           shuffle_choices: {
             required: false,
-            type: 'boolean',
+            type: 'bool',
             default_value: false,
           },
         },
@@ -231,7 +231,7 @@ const createForm = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       form_id: { type: 'string' },
       title: { type: 'string' },
       description: { type: 'string' },

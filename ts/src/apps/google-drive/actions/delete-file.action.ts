@@ -13,7 +13,7 @@ const options = {
   },
   permanently_delete: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
 } satisfies TQoreOptions;
@@ -97,7 +97,7 @@ const deleteFile = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       file_id: { type: 'string' },
       file_name: { type: 'string' },
       message: { type: 'string' },

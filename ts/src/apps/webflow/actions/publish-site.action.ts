@@ -20,7 +20,7 @@ const options = {
     },
   },
   publishToWebflowSubdomain: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     preselected: true,
   },
@@ -71,7 +71,7 @@ const publishSite = QoreAppCreator.createLocalizedAction<typeof options>({
         },
       },
       publishToWebflowSubdomain: {
-        type: 'boolean',
+        type: 'bool',
       },
     },
   },

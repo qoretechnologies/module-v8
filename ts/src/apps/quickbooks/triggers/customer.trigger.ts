@@ -81,7 +81,7 @@ const QuickbooksCustomerTrigger = QoreAppCreator.createLocalizedTrigger({
     type: {
       type: 'hash',
       fields: {
-        Taxable: { type: 'boolean' },
+        Taxable: { type: 'bool' },
         BillAddr: {
           type: {
             type: 'hash',
@@ -110,8 +110,8 @@ const QuickbooksCustomerTrigger = QoreAppCreator.createLocalizedTrigger({
             },
           },
         },
-        Job: { type: 'boolean' },
-        BillWithParent: { type: 'boolean' },
+        Job: { type: 'bool' },
+        BillWithParent: { type: 'bool' },
         Balance: { type: 'number' },
         BalanceWithJobs: { type: 'number' },
         CurrencyRef: {
@@ -124,10 +124,10 @@ const QuickbooksCustomerTrigger = QoreAppCreator.createLocalizedTrigger({
           },
         },
         PreferredDeliveryMethod: { type: 'string' },
-        IsProject: { type: 'boolean' },
+        IsProject: { type: 'bool' },
         ClientEntityId: { type: 'string' },
         domain: { type: 'string' },
-        sparse: { type: 'boolean' },
+        sparse: { type: 'bool' },
         Id: { type: 'string' },
         SyncToken: { type: 'string' },
         MetaData: {
@@ -145,7 +145,7 @@ const QuickbooksCustomerTrigger = QoreAppCreator.createLocalizedTrigger({
         CompanyName: { type: 'string' },
         DisplayName: { type: 'string' },
         PrintOnCheckName: { type: 'string' },
-        Active: { type: 'boolean' },
+        Active: { type: 'bool' },
         V4IDPseudonym: { type: 'string' },
         PrimaryPhone: {
           type: {

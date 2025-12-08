@@ -12,7 +12,7 @@ const options = {
     preselected: true,
   },
   count_deals: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   limit: {

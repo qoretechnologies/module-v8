@@ -106,7 +106,7 @@ const hubspotCustomObjectCreatedOrUpdatedTrigger = QoreAppCreator.createLocalize
         id: { type: 'string' },
         createdAt: { type: 'string' },
         updatedAt: { type: 'string' },
-        archived: { type: 'boolean' },
+        archived: { type: 'bool' },
         properties: {
           type: {
             type: 'hash',

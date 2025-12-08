@@ -183,7 +183,7 @@ const createContact = QoreAppCreator.createLocalizedAction<typeof options>({
         },
       },
       id: { type: 'string' },
-      isDisabled: { type: 'boolean' },
+      isDisabled: { type: 'bool' },
       account: { type: 'number' },
       customerAccount: { type: 'number' },
     },

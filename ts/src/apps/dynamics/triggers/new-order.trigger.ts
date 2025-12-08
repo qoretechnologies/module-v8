@@ -138,8 +138,8 @@ const DynamicsNewOrderTrigger = QoreAppCreator.createLocalizedTrigger({
         paymenttermscode: { type: 'number' },
         shippingmethodcode: { type: 'number' },
 
-        willcall: { type: 'boolean' },
-        ispricelocked: { type: 'boolean' },
+        willcall: { type: 'bool' },
+        ispricelocked: { type: 'bool' },
         lastbackofficesubmit: { type: 'string' },
         submitstatus: { type: 'number' },
 

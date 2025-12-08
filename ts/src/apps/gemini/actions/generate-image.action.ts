@@ -117,7 +117,7 @@ const generateImage = QoreAppCreator.createLocalizedAction<typeof options>({
         },
       },
       success: {
-        type: 'boolean',
+        type: 'bool',
       },
       generated_at: {
         type: 'string',

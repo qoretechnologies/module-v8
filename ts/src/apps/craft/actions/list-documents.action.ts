@@ -53,7 +53,7 @@ const ListDocuments = QoreAppCreator.createLocalizedAction<typeof options>({
       fields: {
         id: { type: 'string' },
         title: { type: 'string' },
-        isDeleted: { type: 'boolean' },
+        isDeleted: { type: 'bool' },
       },
     },
   },

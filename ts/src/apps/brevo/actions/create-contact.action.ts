@@ -26,11 +26,11 @@ const options = {
     required: false,
   },
   emailBlacklisted: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   smsBlacklisted: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   attributes: {

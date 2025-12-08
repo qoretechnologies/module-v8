@@ -55,7 +55,7 @@ export const paddleSubscriptionResponseType = {
           fields: {
             status: { type: 'string' },
             quantity: { type: 'integer' },
-            recurring: { type: 'boolean' },
+            recurring: { type: 'bool' },
             createdAt: { type: 'string' },
             updatedAt: { type: 'string' },
             previouslyBilledAt: { type: 'string' },

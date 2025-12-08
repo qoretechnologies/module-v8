@@ -16,7 +16,7 @@ import { PaddleTypeAllowedValues } from '../../helpers/get-type-allowed-values';
 
 const options = {
   include_product: {
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   after: {
@@ -50,7 +50,7 @@ const options = {
     required: false,
   },
   recurring: {
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
     required: false,
   },
@@ -148,7 +148,7 @@ const listPrices = QoreAppCreator.createLocalizedAction<typeof options>({
             fields: {
               interval: { type: 'string' },
               frequency: { type: 'integer' },
-              requiresPaymentMethod: { type: 'boolean' },
+              requiresPaymentMethod: { type: 'bool' },
             },
           },
         },

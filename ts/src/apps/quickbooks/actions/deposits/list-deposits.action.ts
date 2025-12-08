@@ -7,7 +7,7 @@ import { QuickBooksDepositFieldsAllowedValues } from '../../helpers/get-deposit-
 
 const options = {
   fetchAll: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },
@@ -149,7 +149,7 @@ const listDeposits = QoreAppCreator.createLocalizedAction<typeof options>({
               },
               TotalAmt: { type: 'number' },
               domain: { type: 'string' },
-              sparse: { type: 'boolean' },
+              sparse: { type: 'bool' },
               Id: { type: 'string' },
               SyncToken: { type: 'string' },
               MetaData: {

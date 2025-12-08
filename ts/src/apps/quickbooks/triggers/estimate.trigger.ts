@@ -82,7 +82,7 @@ const QuickbooksEstimateTrigger = QoreAppCreator.createLocalizedTrigger({
       type: 'hash',
       fields: {
         domain: { type: 'string' },
-        sparse: { type: 'boolean' },
+        sparse: { type: 'bool' },
         Id: { type: 'string' },
         SyncToken: { type: 'string' },
         MetaData: {
@@ -211,7 +211,7 @@ const QuickbooksEstimateTrigger = QoreAppCreator.createLocalizedTrigger({
                                 },
                               },
                             },
-                            PercentBased: { type: 'boolean' },
+                            PercentBased: { type: 'bool' },
                             TaxPercent: { type: 'number' },
                             NetAmountTaxable: { type: 'number' },
                           },
@@ -269,9 +269,9 @@ const QuickbooksEstimateTrigger = QoreAppCreator.createLocalizedTrigger({
             },
           },
         },
-        FreeFormAddress: { type: 'boolean' },
+        FreeFormAddress: { type: 'bool' },
         TotalAmt: { type: 'number' },
-        ApplyTaxAfterDiscount: { type: 'boolean' },
+        ApplyTaxAfterDiscount: { type: 'bool' },
         PrintStatus: { type: 'string' },
         EmailStatus: { type: 'string' },
         BillEmail: {

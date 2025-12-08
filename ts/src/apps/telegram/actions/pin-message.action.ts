@@ -19,7 +19,7 @@ const options = {
   },
   disable_notification: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
 } satisfies TQoreOptions;
@@ -59,10 +59,10 @@ const pinChatMessage = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       chat_id: { type: 'number' },
       message_id: { type: 'integer' },
-      pinned: { type: 'boolean' },
+      pinned: { type: 'bool' },
     },
   },
 });

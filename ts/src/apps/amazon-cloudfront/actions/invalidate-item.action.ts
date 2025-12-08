@@ -118,7 +118,7 @@ const invalidateItem = QoreAppCreator.createLocalizedAction<typeof options>({
       location: { type: 'string' },
       console_url: { type: 'string' },
       created_at: { type: 'string' },
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       message: { type: 'string' },
     },
   },

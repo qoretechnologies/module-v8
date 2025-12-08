@@ -69,7 +69,7 @@ const options = {
   },
   include_replies: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
 } satisfies TQoreOptions;
@@ -252,7 +252,7 @@ const getPostComments = QoreAppCreator.createLocalizedAction<typeof options>({
                   },
                 },
               },
-              has_attachment: { type: 'boolean' },
+              has_attachment: { type: 'bool' },
               attachment_type: { type: 'string' },
               replies: {
                 type: {
@@ -291,7 +291,7 @@ const getPostComments = QoreAppCreator.createLocalizedAction<typeof options>({
             limit: { type: 'integer' },
             order: { type: 'string' },
             filter: { type: 'string' },
-            include_replies: { type: 'boolean' },
+            include_replies: { type: 'bool' },
             fields_requested: {
               type: {
                 type: 'list',

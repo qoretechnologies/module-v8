@@ -65,15 +65,15 @@ const options = {
     },
   },
   showGroups: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   showInvited: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   useAdminAccess: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
 } satisfies TQoreOptions;

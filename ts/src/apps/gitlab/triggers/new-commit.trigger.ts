@@ -15,7 +15,7 @@ const options = {
     get_allowed_values: getGitlabProjectAllowedValues,
   },
   withStats: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },

@@ -119,7 +119,7 @@ const BitbucketNewPullRequestTrigger = QoreAppCreator.createLocalizedTrigger({
             },
           },
         },
-        close_source_branch: { type: 'boolean' },
+        close_source_branch: { type: 'bool' },
         closed_by: {
           type: {
             type: 'hash',
@@ -358,7 +358,7 @@ const BitbucketNewPullRequestTrigger = QoreAppCreator.createLocalizedTrigger({
                   },
                 },
                 role: { type: 'string' },
-                approved: { type: 'boolean' },
+                approved: { type: 'bool' },
                 state: { type: 'string' },
                 participated_on: { type: 'string' },
               },
@@ -384,7 +384,7 @@ const BitbucketNewPullRequestTrigger = QoreAppCreator.createLocalizedTrigger({
                   },
                 },
                 role: { type: 'string' },
-                approved: { type: 'boolean' },
+                approved: { type: 'bool' },
                 state: { type: 'string' },
                 participated_on: { type: 'string' },
               },

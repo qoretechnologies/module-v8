@@ -125,10 +125,10 @@ const getTable = QoreAppCreator.createLocalizedAction<typeof options>({
                 type: 'string',
               },
               is_required: {
-                type: 'boolean',
+                type: 'bool',
               },
               is_nullable: {
-                type: 'boolean',
+                type: 'bool',
               },
               default_value: {
                 type: 'string',

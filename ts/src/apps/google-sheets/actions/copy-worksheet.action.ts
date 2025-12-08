@@ -172,7 +172,7 @@ const copyWorksheet = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       source_spreadsheet_id: { type: 'string' },
       source_sheet_id: { type: 'string' },
       source_sheet_title: { type: 'string' },

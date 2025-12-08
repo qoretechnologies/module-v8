@@ -19,7 +19,7 @@ const options = {
 const response_type = {
   type: 'hash',
   fields: {
-    success: { type: 'boolean' },
+    success: { type: 'bool' },
     message: { type: 'string' },
   },
 } satisfies TQoreResponseType;

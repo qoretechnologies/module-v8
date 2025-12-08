@@ -16,7 +16,7 @@ import { PaddleProductOrderByFieldAllowedValues } from '../../helpers/get-produc
 
 const options = {
   include_prices: {
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   after: {
@@ -153,7 +153,7 @@ const listProducts = QoreAppCreator.createLocalizedAction<typeof options>({
                     fields: {
                       interval: { type: 'string' },
                       frequency: { type: 'integer' },
-                      requiresPaymentMethod: { type: 'boolean' },
+                      requiresPaymentMethod: { type: 'bool' },
                     },
                   },
                 },

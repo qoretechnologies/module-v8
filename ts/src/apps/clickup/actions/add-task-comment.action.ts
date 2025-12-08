@@ -52,7 +52,7 @@ const options = {
     type: 'string',
   },
   notify_all: {
-    type: 'boolean',
+    type: 'bool',
     required: true,
   },
   assignee: {

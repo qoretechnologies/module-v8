@@ -109,7 +109,7 @@ export const response_type = {
       display_name: 'Has More',
       short_desc: 'Whether there are more results',
       desc: 'Whether there are more results',
-      type: 'boolean',
+      type: 'bool',
     },
     items: {
       display_name: 'Items',

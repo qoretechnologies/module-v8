@@ -124,7 +124,7 @@ const options = {
           },
         },
         enable_checkout: {
-          type: 'boolean',
+          type: 'bool',
           required: false,
         },
         purchase_order_number: {

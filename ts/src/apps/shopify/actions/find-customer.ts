@@ -60,7 +60,7 @@ const options = {
     desc: 'Field to sort customers by',
   },
   reverse: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: true,
   },

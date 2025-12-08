@@ -27,7 +27,7 @@ const options = {
     ],
   },
   shortIdLookup: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },
@@ -98,7 +98,7 @@ const listProjectIssues = QoreAppCreator.createLocalizedAction<typeof options>({
               level: { type: 'string' },
               status: { type: 'string' },
               statusDetails: { type: 'hash' },
-              isPublic: { type: 'boolean' },
+              isPublic: { type: 'bool' },
               platform: { type: 'string' },
               project: {
                 type: {
@@ -124,17 +124,17 @@ const listProjectIssues = QoreAppCreator.createLocalizedAction<typeof options>({
                   },
                 },
               },
-              isBookmarked: { type: 'boolean' },
-              isSubscribed: { type: 'boolean' },
+              isBookmarked: { type: 'bool' },
+              isSubscribed: { type: 'bool' },
               subscriptionDetails: { type: 'hash' },
-              hasSeen: { type: 'boolean' },
+              hasSeen: { type: 'bool' },
               annotations: {
                 type: {
                   type: 'list',
                   element_type: 'string',
                 },
               },
-              isUnhandled: { type: 'boolean' },
+              isUnhandled: { type: 'bool' },
               count: { type: 'string' },
               userCount: { type: 'integer' },
               firstSeen: { type: 'string' },

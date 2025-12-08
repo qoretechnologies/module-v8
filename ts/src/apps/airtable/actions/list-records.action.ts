@@ -102,7 +102,7 @@ const options = {
     },
   },
   return_fields_by_field_id: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },

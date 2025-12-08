@@ -37,11 +37,11 @@ const options = {
     get_allowed_values: getClickUpListIdAllowedValues,
   },
   archived: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   include_markdown_description: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   page: {
@@ -59,15 +59,15 @@ const options = {
     ],
   },
   reverse: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   subtasks: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   include_closed: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   status: {
@@ -231,7 +231,7 @@ const listTasks = QoreAppCreator.createLocalizedAction<typeof options>({
           },
         },
       },
-      last_page: { type: 'boolean' },
+      last_page: { type: 'bool' },
     },
   },
 });

@@ -123,12 +123,12 @@ const DynamicsNewContactTrigger = QoreAppCreator.createLocalizedTrigger({
         _owninguser_value: { type: 'string' },
         _owningteam_value: { type: 'string' },
 
-        donotphone: { type: 'boolean' },
-        donotemail: { type: 'boolean' },
-        donotfax: { type: 'boolean' },
-        donotpostalmail: { type: 'boolean' },
-        donotbulkemail: { type: 'boolean' },
-        donotbulkpostalmail: { type: 'boolean' },
+        donotphone: { type: 'bool' },
+        donotemail: { type: 'bool' },
+        donotfax: { type: 'bool' },
+        donotpostalmail: { type: 'bool' },
+        donotbulkemail: { type: 'bool' },
+        donotbulkpostalmail: { type: 'bool' },
 
         gendercode: { type: 'number' },
         birthdate: { type: 'string' },

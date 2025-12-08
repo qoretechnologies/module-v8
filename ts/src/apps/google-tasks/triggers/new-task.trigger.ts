@@ -17,7 +17,7 @@ const options = {
     get_allowed_values: getGoogleTasksListAllowedValues,
   },
   includeAssigned: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
 } satisfies TQoreOptions;

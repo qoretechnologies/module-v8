@@ -60,8 +60,8 @@ const BrevoNewContactTrigger = QoreAppCreator.createLocalizedTrigger({
       fields: {
         id: { type: 'number' },
         email: { type: 'string' },
-        emailBlacklisted: { type: 'boolean' },
-        smsBlacklisted: { type: 'boolean' },
+        emailBlacklisted: { type: 'bool' },
+        smsBlacklisted: { type: 'bool' },
         createdAt: { type: 'string' },
         modifiedAt: { type: 'string' },
         listIds: {

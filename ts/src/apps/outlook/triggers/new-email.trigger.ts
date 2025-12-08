@@ -19,11 +19,11 @@ const options = {
     required: false,
   },
   hasAttachments: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   includeAttachmentData: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },
@@ -158,9 +158,9 @@ const OutlookNewEmailTrigger = QoreAppCreator.createLocalizedTrigger<
         subject: { type: 'string' },
         bodyPreview: { type: 'string' },
         importance: { type: 'string' },
-        hasAttachments: { type: 'boolean' },
-        isRead: { type: 'boolean' },
-        isDraft: { type: 'boolean' },
+        hasAttachments: { type: 'bool' },
+        isRead: { type: 'bool' },
+        isDraft: { type: 'bool' },
         attachments: {
           type: {
             type: 'list',

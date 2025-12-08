@@ -164,15 +164,15 @@ const eventInfoType = {
       },
     },
     archived: {
-      type: 'boolean',
+      type: 'bool',
       example_value: false,
     },
     in_trash: {
-      type: 'boolean',
+      type: 'bool',
       example_value: false,
     },
     is_locked: {
-      type: 'boolean',
+      type: 'bool',
       example_value: false,
     },
     properties: {

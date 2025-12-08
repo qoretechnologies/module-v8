@@ -60,7 +60,7 @@ const options = {
     ],
   },
   completed: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   order: {

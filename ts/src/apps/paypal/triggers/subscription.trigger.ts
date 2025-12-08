@@ -225,7 +225,7 @@ const SubscriptionTrigger = QoreAppCreator.createLocalizedTrigger({
               },
               id: { type: 'string' },
               plan_id: { type: 'string' },
-              auto_renewal: { type: 'boolean' },
+              auto_renewal: { type: 'bool' },
               status: { type: 'string' },
               status_update_time: { type: 'string' },
             },

@@ -50,7 +50,7 @@ const deleteLead = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       lead_id: { type: 'number' },
     },
   } satisfies TQoreResponseType,

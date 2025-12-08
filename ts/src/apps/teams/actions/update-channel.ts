@@ -69,7 +69,7 @@ const response_type = {
       type: 'string',
     },
     success: {
-      type: 'boolean',
+      type: 'bool',
     },
     addedMembers: {
       type: {

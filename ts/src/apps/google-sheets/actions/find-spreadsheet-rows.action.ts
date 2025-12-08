@@ -36,7 +36,7 @@ const options = {
   },
   search_from_last_row: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   max_rows_to_search: {

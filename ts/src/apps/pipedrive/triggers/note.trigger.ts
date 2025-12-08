@@ -49,7 +49,7 @@ export const pipedriveNoteDataType = {
         type: 'number',
       },
       active_flag: {
-        type: 'boolean',
+        type: 'bool',
       },
       content: {
         type: 'string',
@@ -61,13 +61,13 @@ export const pipedriveNoteDataType = {
         type: 'string',
       },
       pinned_to_deal_flag: {
-        type: 'boolean',
+        type: 'bool',
       },
       pinned_to_person_flag: {
-        type: 'boolean',
+        type: 'bool',
       },
       pinned_to_organization_flag: {
-        type: 'boolean',
+        type: 'bool',
       },
     },
   },

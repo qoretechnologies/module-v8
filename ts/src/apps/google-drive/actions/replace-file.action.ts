@@ -150,7 +150,7 @@ const replaceFile = QoreAppCreator.createLocalizedAction<typeof options>({
       size: { type: 'string' },
       last_modified: { type: 'string' },
       original_file_name: { type: 'string' },
-      converted_to_document: { type: 'boolean' },
+      converted_to_document: { type: 'bool' },
       message: { type: 'string' },
     },
   },

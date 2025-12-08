@@ -11,7 +11,7 @@ const options = {
     desc: 'The ID of the approved order to capture',
   },
   final_capture: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: true,
     desc: 'Whether this is the final capture for the order',
@@ -518,7 +518,7 @@ const captureOrder = QoreAppCreator.createLocalizedAction<typeof options>({
                                 },
                               },
                             },
-                            final_capture: { type: 'boolean' },
+                            final_capture: { type: 'bool' },
                             disbursement_mode: { type: 'string' },
                             seller_protection: {
                               type: {

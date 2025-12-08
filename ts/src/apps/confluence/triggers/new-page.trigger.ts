@@ -173,7 +173,7 @@ const ConfluenceNewPageTrigger = QoreAppCreator.createLocalizedTrigger({
             fields: {
               number: { type: 'number' },
               message: { type: 'string' },
-              minorEdit: { type: 'boolean' },
+              minorEdit: { type: 'bool' },
               authorId: { type: 'string' },
               createdAt: { type: 'string' },
               nscStepVersion: { type: 'number' },

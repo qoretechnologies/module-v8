@@ -51,7 +51,7 @@ export const HuggingFaceModelFieldsResponseType = {
     },
   },
   createdAt: { type: 'string' },
-  disabled: { type: 'boolean' },
+  disabled: { type: 'bool' },
   downloadsAllTime: { type: 'integer' },
   inferenceProviderMapping: {
     type: {
@@ -68,8 +68,8 @@ export const HuggingFaceModelFieldsResponseType = {
             type: {
               type: 'hash',
               fields: {
-                structuredOutput: { type: 'boolean' },
-                toolCalling: { type: 'boolean' },
+                structuredOutput: { type: 'bool' },
+                toolCalling: { type: 'bool' },
               },
             },
           },
@@ -142,5 +142,5 @@ export const HuggingFaceModelFieldsResponseType = {
       },
     },
   },
-  xetEnabled: { type: 'boolean' },
+  xetEnabled: { type: 'bool' },
 } satisfies Record<string, TQoreAppActionOption>;

@@ -9,7 +9,7 @@ export const BigMlFieldTypeToQoreType: Record<string, TQoreType> = {
   double: 'number',
   float: 'number',
   string: 'string',
-  boolean: 'boolean',
+  boolean: 'bool',
   datetime: 'string',
   time: 'string',
   categorical: 'string',

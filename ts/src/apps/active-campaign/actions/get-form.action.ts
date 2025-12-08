@@ -89,7 +89,7 @@ const getForm = QoreAppCreator.createLocalizedAction<typeof options>({
           type: 'hash',
           fields: {
             background: { type: 'string' },
-            dark: { type: 'boolean' },
+            dark: { type: 'bool' },
             fontcolor: { type: 'string' },
             layout: { type: 'string' },
             border: {
@@ -104,7 +104,7 @@ const getForm = QoreAppCreator.createLocalizedAction<typeof options>({
               },
             },
             width: { type: 'number' },
-            ac_branding: { type: 'boolean' },
+            ac_branding: { type: 'bool' },
             button: {
               type: {
                 type: 'hash',
@@ -134,7 +134,7 @@ const getForm = QoreAppCreator.createLocalizedAction<typeof options>({
         type: {
           type: 'hash',
           fields: {
-            blanks_overwrite: { type: 'boolean' },
+            blanks_overwrite: { type: 'bool' },
             confaction: { type: 'string' },
           },
         },
@@ -151,7 +151,7 @@ const getForm = QoreAppCreator.createLocalizedAction<typeof options>({
               required_options: { type: 'hash' },
               html: { type: 'string' },
               default_text: { type: 'string' },
-              required: { type: 'boolean' },
+              required: { type: 'bool' },
               id: { type: 'string' },
             },
           },

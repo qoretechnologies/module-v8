@@ -96,8 +96,8 @@ const GoogleDriveNewFolderTrigger = QoreAppCreator.createLocalizedTrigger({
             element_type: 'string',
           },
         },
-        shared: { type: 'boolean' },
-        trashed: { type: 'boolean' },
+        shared: { type: 'bool' },
+        trashed: { type: 'bool' },
         description: { type: 'string' },
         owner_names: {
           type: {

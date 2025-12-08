@@ -52,7 +52,7 @@ const listBuckets = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       total_buckets: { type: 'integer' },
       buckets: {
         type: {
@@ -63,7 +63,7 @@ const listBuckets = QoreAppCreator.createLocalizedAction<typeof options>({
               id: { type: 'string' },
               name: { type: 'string' },
               owner: { type: 'string' },
-              public: { type: 'boolean' },
+              public: { type: 'bool' },
               created_at: { type: 'string' },
               updated_at: { type: 'string' },
               file_size_limit: { type: 'integer' },

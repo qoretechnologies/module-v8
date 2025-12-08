@@ -33,7 +33,7 @@ const getCurrentUser = QoreAppCreator.createLocalizedAction({
     type: 'hash',
     fields: {
       sub: { type: 'string' },
-      email_verified: { type: 'boolean' },
+      email_verified: { type: 'bool' },
       name: { type: 'string' },
       given_name: { type: 'string' },
       family_name: { type: 'string' },

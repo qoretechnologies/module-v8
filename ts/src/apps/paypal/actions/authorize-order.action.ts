@@ -491,7 +491,7 @@ const authorizeOrder = QoreAppCreator.createLocalizedAction<typeof options>({
                                 },
                               },
                             },
-                            final_capture: { type: 'boolean' },
+                            final_capture: { type: 'bool' },
                             disbursement_mode: { type: 'string' },
                             seller_protection: {
                               type: {

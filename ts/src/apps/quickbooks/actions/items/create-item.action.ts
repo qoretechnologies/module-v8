@@ -20,7 +20,7 @@ const invenotyItemOptions = {
     required: true,
   },
   track_quantity_on_hand: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   inventory_start_date: {
@@ -57,7 +57,7 @@ const options = {
             required: true,
           },
           track_quantity_on_hand: {
-            type: 'boolean',
+            type: 'bool',
             required: false,
           },
           inventory_start_date: {
@@ -140,9 +140,9 @@ const createItem = QoreAppCreator.createLocalizedAction<
     type: 'hash',
     fields: {
       Name: { type: 'string' },
-      Active: { type: 'boolean' },
+      Active: { type: 'bool' },
       FullyQualifiedName: { type: 'string' },
-      Taxable: { type: 'boolean' },
+      Taxable: { type: 'bool' },
       UnitPrice: { type: 'number' },
       Type: { type: 'string' },
       IncomeAccountRef: {
@@ -155,9 +155,9 @@ const createItem = QoreAppCreator.createLocalizedAction<
         },
       },
       PurchaseCost: { type: 'number' },
-      TrackQtyOnHand: { type: 'boolean' },
+      TrackQtyOnHand: { type: 'bool' },
       domain: { type: 'string' },
-      sparse: { type: 'boolean' },
+      sparse: { type: 'bool' },
       Id: { type: 'string' },
       SyncToken: { type: 'string' },
       MetaData: {

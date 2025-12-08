@@ -20,7 +20,7 @@ export const paddleTransactionResponseType = {
       type: {
         type: 'hash',
         fields: {
-          enableCheckout: { type: 'boolean' },
+          enableCheckout: { type: 'bool' },
           purchaseOrderNumber: { type: 'string' },
           additionalInformation: { type: 'string' },
           paymentTerms: {
@@ -274,13 +274,13 @@ export const paddleDiscountResponseType = {
         id: { type: 'string' },
         status: { type: 'string' },
         description: { type: 'string' },
-        enabledForCheckout: { type: 'boolean' },
+        enabledForCheckout: { type: 'bool' },
         code: { type: 'string' },
         mode: { type: 'string' },
         type: { type: 'string' },
         amount: { type: 'string' },
         currencyCode: { type: 'string' },
-        recur: { type: 'boolean' },
+        recur: { type: 'bool' },
         maximumRecurringIntervals: { type: 'integer' },
         usageLimit: { type: 'integer' },
         restrictTo: { type: 'hash' },
@@ -303,7 +303,7 @@ export const paddleCustomerResponseType = {
         id: { type: 'string' },
         name: { type: 'string' },
         email: { type: 'string' },
-        marketingConsent: { type: 'boolean' },
+        marketingConsent: { type: 'bool' },
         status: { type: 'string' },
         customData: { type: 'hash' },
         locale: { type: 'string' },

@@ -134,7 +134,7 @@ const listObjects = QoreAppCreator.createLocalizedAction<typeof options>({
       bucket_name: { type: 'string' },
       prefix: { type: 'string' },
       max_keys: { type: 'integer' },
-      is_truncated: { type: 'boolean' },
+      is_truncated: { type: 'bool' },
       key_count: { type: 'integer' },
       continuation_token: { type: 'string' },
       next_continuation_token: { type: 'string' },

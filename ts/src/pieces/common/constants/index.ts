@@ -13,7 +13,7 @@ export const piecePropTypeToQoreOptionTypeIndex: {
   [PropertyType.DROPDOWN]: 'string',
   [PropertyType.STATIC_DROPDOWN]: 'string',
   [PropertyType.NUMBER]: 'number',
-  [PropertyType.CHECKBOX]: 'boolean',
+  [PropertyType.CHECKBOX]: 'bool',
   [PropertyType.OAUTH2]: 'string',
   [PropertyType.SECRET_TEXT]: 'string',
   [PropertyType.ARRAY]: 'list',

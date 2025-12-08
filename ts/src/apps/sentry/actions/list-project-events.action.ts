@@ -13,7 +13,7 @@ const options = {
     get_allowed_values: getSentryProjectAllowedValues,
   },
   full: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },

@@ -275,7 +275,7 @@ const sendEmail = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       sent_at: { type: 'string' },
       region: { type: 'string' },
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
     },
   },
 });

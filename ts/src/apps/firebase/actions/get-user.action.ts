@@ -72,10 +72,10 @@ const getUser = QoreAppCreator.createLocalizedAction<typeof options>({
     fields: {
       user_id: { type: 'string' },
       email: { type: 'string' },
-      email_verified: { type: 'boolean' },
+      email_verified: { type: 'bool' },
       display_name: { type: 'string' },
       photo_url: { type: 'string' },
-      disabled: { type: 'boolean' },
+      disabled: { type: 'bool' },
       created_at: { type: 'string' },
       last_login_at: { type: 'string' },
       custom_attributes: { type: 'string' },

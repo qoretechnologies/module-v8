@@ -125,7 +125,7 @@ const AmazonSQSNewJSONMessageTrigger = QoreAppCreator.createLocalizedTrigger({
         approximate_first_receive_timestamp: { type: 'string' },
         sent_timestamp: { type: 'string' },
         sender_id: { type: 'string' },
-        is_valid_json: { type: 'boolean' },
+        is_valid_json: { type: 'bool' },
       },
     },
   },

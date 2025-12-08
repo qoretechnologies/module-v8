@@ -42,10 +42,10 @@ const getJournalEntry = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      Adjustment: { type: 'boolean' },
+      Adjustment: { type: 'bool' },
       TotalAmt: { type: 'number' },
       domain: { type: 'string' },
-      sparse: { type: 'boolean' },
+      sparse: { type: 'bool' },
       Id: { type: 'string' },
       SyncToken: { type: 'string' },
       MetaData: {

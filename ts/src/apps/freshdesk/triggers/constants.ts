@@ -10,7 +10,7 @@ export const FreshdeskContactEventInfo = {
     type: 'hash',
     fields: {
       active: {
-        type: 'boolean',
+        type: 'bool',
       },
       address: {
         type: 'string',
@@ -127,10 +127,10 @@ export const FreshdeskTicketEventInfo = {
         },
       },
       fr_escalated: {
-        type: 'boolean',
+        type: 'bool',
       },
       spam: {
-        type: 'boolean',
+        type: 'bool',
       },
       email_config_id: {
         type: 'number',
@@ -187,7 +187,7 @@ export const FreshdeskTicketEventInfo = {
         type: 'string',
       },
       is_escalated: {
-        type: 'boolean',
+        type: 'bool',
       },
       custom_fields: {
         type: 'hash',
@@ -220,7 +220,7 @@ export const FreshdeskTicketEventInfo = {
         type: 'string',
       },
       nr_escalated: {
-        type: 'boolean',
+        type: 'bool',
       },
     },
   },

@@ -13,9 +13,9 @@ export const OutlookSearchEmailResponseType = {
       subject: { type: 'string' },
       bodyPreview: { type: 'string' },
       importance: { type: 'string' },
-      hasAttachments: { type: 'boolean' },
-      isRead: { type: 'boolean' },
-      isDraft: { type: 'boolean' },
+      hasAttachments: { type: 'bool' },
+      isRead: { type: 'bool' },
+      isDraft: { type: 'bool' },
       body: {
         type: {
           type: 'hash',
@@ -108,7 +108,7 @@ export const OutlookSearchEmailResponseType = {
               name: { type: 'string' },
               contentType: { type: 'string' },
               size: { type: 'number' },
-              isInline: { type: 'boolean' },
+              isInline: { type: 'bool' },
               contentBytes: { type: 'string' },
             },
           },

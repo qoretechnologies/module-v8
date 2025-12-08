@@ -63,7 +63,7 @@ const addCommentToTask = QoreAppCreator.createLocalizedAction<typeof options>({
           element_type: 'string',
         },
       },
-      is_deleted: { type: 'boolean' },
+      is_deleted: { type: 'bool' },
       posted_at: { type: 'string' },
       reactions: { type: 'hash' },
     },

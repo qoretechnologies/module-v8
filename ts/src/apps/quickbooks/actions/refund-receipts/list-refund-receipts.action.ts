@@ -7,7 +7,7 @@ import { QuickBooksRefundReceiptFieldsAllowedValues } from '../../helpers/get-re
 
 const options = {
   fetchAll: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },
@@ -123,7 +123,7 @@ const listRefundReceipts = QoreAppCreator.createLocalizedAction<typeof options>(
             type: 'hash',
             fields: {
               domain: { type: 'string' },
-              sparse: { type: 'boolean' },
+              sparse: { type: 'bool' },
               Id: { type: 'string' },
               SyncToken: { type: 'string' },
               MetaData: {
@@ -245,9 +245,9 @@ const listRefundReceipts = QoreAppCreator.createLocalizedAction<typeof options>(
                   },
                 },
               },
-              FreeFormAddress: { type: 'boolean' },
+              FreeFormAddress: { type: 'bool' },
               TotalAmt: { type: 'number' },
-              ApplyTaxAfterDiscount: { type: 'boolean' },
+              ApplyTaxAfterDiscount: { type: 'bool' },
               PrintStatus: { type: 'string' },
               BillEmail: {
                 type: {

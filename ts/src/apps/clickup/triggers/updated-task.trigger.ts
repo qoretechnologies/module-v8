@@ -153,7 +153,7 @@ const ClickUpTaskUpdated = QoreAppCreator.createLocalizedTrigger<typeof options>
                           fields: {
                             default: { type: 'any' },
                             placeholder: { type: 'string' },
-                            new_drop_down: { type: 'boolean' },
+                            new_drop_down: { type: 'bool' },
                             options: {
                               type: {
                                 type: 'list',

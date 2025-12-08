@@ -95,7 +95,7 @@ const options = {
     ],
   },
   saveToSentItems: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: true,
   },
@@ -110,7 +110,7 @@ const options = {
 const response_type = {
   type: 'hash',
   fields: {
-    success: { type: 'boolean' },
+    success: { type: 'bool' },
     message: { type: 'string' },
   },
 } satisfies TQoreResponseType;

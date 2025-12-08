@@ -89,14 +89,14 @@ const KlaviyoNewProfileTrigger = QoreAppCreator.createLocalizedTrigger({
                       type: {
                         type: 'hash',
                         fields: {
-                          canReceiveEmailMarketing: { type: 'boolean' },
+                          canReceiveEmailMarketing: { type: 'bool' },
                           consent: { type: 'string' },
                           consentTimestamp: { type: 'string' },
                           lastUpdated: { type: 'string' },
                           method: { type: 'string' },
                           methodDetail: { type: 'string' },
                           customMethodDetail: { type: 'string' },
-                          doubleOptin: { type: 'boolean' },
+                          doubleOptin: { type: 'bool' },
                           suppression: {
                             type: {
                               type: 'list',
@@ -136,7 +136,7 @@ const KlaviyoNewProfileTrigger = QoreAppCreator.createLocalizedTrigger({
                       type: {
                         type: 'hash',
                         fields: {
-                          canReceiveSmsMarketing: { type: 'boolean' },
+                          canReceiveSmsMarketing: { type: 'bool' },
                           consent: { type: 'string' },
                           consentTimestamp: { type: 'string' },
                           method: { type: 'string' },
@@ -149,7 +149,7 @@ const KlaviyoNewProfileTrigger = QoreAppCreator.createLocalizedTrigger({
                       type: {
                         type: 'hash',
                         fields: {
-                          canReceiveSmsTransactional: { type: 'boolean' },
+                          canReceiveSmsTransactional: { type: 'bool' },
                           consent: { type: 'string' },
                           consentTimestamp: { type: 'string' },
                           method: { type: 'string' },
@@ -169,7 +169,7 @@ const KlaviyoNewProfileTrigger = QoreAppCreator.createLocalizedTrigger({
                       type: {
                         type: 'hash',
                         fields: {
-                          canReceivePushMarketing: { type: 'boolean' },
+                          canReceivePushMarketing: { type: 'bool' },
                           consent: { type: 'string' },
                           consentTimestamp: { type: 'string' },
                         },

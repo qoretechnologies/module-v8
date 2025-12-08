@@ -117,7 +117,7 @@ const createPage = QoreAppCreator.createLocalizedAction<typeof options>({
         },
       },
       archived: {
-        type: 'boolean',
+        type: 'bool',
         example_value: false,
       },
       url: {

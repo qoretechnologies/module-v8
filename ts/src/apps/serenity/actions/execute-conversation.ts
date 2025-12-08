@@ -90,7 +90,7 @@ const response_type = {
               type: 'number',
             },
             success: {
-              type: 'boolean',
+              type: 'bool',
             },
           },
         },

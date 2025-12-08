@@ -82,7 +82,7 @@ const listDistributions = QoreAppCreator.createLocalizedAction<typeof options>({
     type: 'hash',
     fields: {
       distribution_count: { type: 'integer' },
-      is_truncated: { type: 'boolean' },
+      is_truncated: { type: 'bool' },
       max_items: { type: 'integer' },
       next_marker: { type: 'string' },
       distributions: {
@@ -96,7 +96,7 @@ const listDistributions = QoreAppCreator.createLocalizedAction<typeof options>({
               domain_name: { type: 'string' },
               comment: { type: 'string' },
               status: { type: 'string' },
-              enabled: { type: 'boolean' },
+              enabled: { type: 'bool' },
               last_modified_time: { type: 'string' },
               price_class: { type: 'string' },
               http_version: { type: 'string' },

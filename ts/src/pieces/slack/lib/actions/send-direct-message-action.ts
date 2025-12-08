@@ -9,7 +9,7 @@ const slackSendDirectMessageResponseType = {
   type: 'hash',
   fields: {
     ok: {
-      type: 'boolean',
+      type: 'bool',
       display_name: 'Success',
       short_desc: 'Indicates if the message was sent successfully',
       desc: 'Indicates if the message was sent successfully',

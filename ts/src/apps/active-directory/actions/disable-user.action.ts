@@ -65,7 +65,7 @@ const disableUserAction = QoreAppCreator.createLocalizedAction<typeof disableUse
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       message: { type: 'string' },
       user: {
         type: {
@@ -74,7 +74,7 @@ const disableUserAction = QoreAppCreator.createLocalizedAction<typeof disableUse
             id: { type: 'string' },
             displayName: { type: 'string' },
             userPrincipalName: { type: 'string' },
-            accountEnabled: { type: 'boolean' },
+            accountEnabled: { type: 'bool' },
           },
         },
       },

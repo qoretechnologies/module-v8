@@ -72,7 +72,7 @@ const options = {
             required: true,
           },
           match_case: {
-            type: 'boolean',
+            type: 'bool',
             required: false,
             default_value: false,
           },
@@ -84,10 +84,10 @@ const options = {
   remove_unused_fields: {
     required: true,
     default_value: true,
-    type: 'boolean',
+    type: 'bool',
   },
   share_with_template_collaborators: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },
@@ -151,7 +151,7 @@ const response_type = {
       type: 'string',
     },
     success: {
-      type: 'boolean',
+      type: 'bool',
     },
     message: {
       type: 'string',

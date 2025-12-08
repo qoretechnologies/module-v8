@@ -7,7 +7,7 @@ import { QuickBooksPaymentFieldsAllowedValues } from '../../helpers/get-payment-
 
 const options = {
   fetchAll: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },
@@ -148,9 +148,9 @@ const listPayments = QoreAppCreator.createLocalizedAction<typeof options>({
               PaymentRefNum: { type: 'string' },
               TotalAmt: { type: 'number' },
               UnappliedAmt: { type: 'number' },
-              ProcessPayment: { type: 'boolean' },
+              ProcessPayment: { type: 'bool' },
               domain: { type: 'string' },
-              sparse: { type: 'boolean' },
+              sparse: { type: 'bool' },
               Id: { type: 'string' },
               SyncToken: { type: 'string' },
               MetaData: {
@@ -213,9 +213,9 @@ const listPayments = QoreAppCreator.createLocalizedAction<typeof options>({
                                         },
                                       },
                                     },
-                                    nil: { type: 'boolean' },
-                                    globalScope: { type: 'boolean' },
-                                    typeSubstituted: { type: 'boolean' },
+                                    nil: { type: 'bool' },
+                                    globalScope: { type: 'bool' },
+                                    typeSubstituted: { type: 'bool' },
                                   },
                                 },
                               },

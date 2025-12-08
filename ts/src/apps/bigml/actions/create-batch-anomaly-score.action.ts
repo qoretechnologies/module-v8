@@ -80,18 +80,18 @@ const createBatchAnomalyScore = QoreAppCreator.createLocalizedAction<typeof opti
   response_type: {
     type: 'hash',
     fields: {
-      all_fields: { type: 'boolean' },
+      all_fields: { type: 'bool' },
       anomaly: { type: 'string' },
-      anomaly_status: { type: 'boolean' },
+      anomaly_status: { type: 'bool' },
       anomaly_type: { type: 'integer' },
       category: { type: 'integer' },
       code: { type: 'integer' },
       configuration: { type: 'string' },
-      configuration_status: { type: 'boolean' },
+      configuration_status: { type: 'bool' },
       created: { type: 'string' },
       creator: { type: 'string' },
       dataset: { type: 'string' },
-      dataset_status: { type: 'boolean' },
+      dataset_status: { type: 'bool' },
       description: { type: 'string' },
       excluded_fields: {
         type: {
@@ -100,8 +100,8 @@ const createBatchAnomalyScore = QoreAppCreator.createLocalizedAction<typeof opti
         },
       },
       fields_map: { type: 'hash' },
-      header: { type: 'boolean' },
-      importance: { type: 'boolean' },
+      header: { type: 'bool' },
+      importance: { type: 'bool' },
       input_fields: {
         type: {
           type: 'list',
@@ -112,25 +112,25 @@ const createBatchAnomalyScore = QoreAppCreator.createLocalizedAction<typeof opti
       name: { type: 'string' },
       name_options: { type: 'string' },
       newline: { type: 'string' },
-      output_dataset: { type: 'boolean' },
+      output_dataset: { type: 'bool' },
       output_dataset_resource: { type: 'string' },
-      output_dataset_status: { type: 'boolean' },
+      output_dataset_status: { type: 'bool' },
       output_fields: {
         type: {
           type: 'list',
           element_type: 'string',
         },
       },
-      private: { type: 'boolean' },
+      private: { type: 'bool' },
       project: { type: 'string' },
       resource: { type: 'string' },
       rows: { type: 'integer' },
       score_name: { type: 'string' },
       separator: { type: 'string' },
-      shared: { type: 'boolean' },
+      shared: { type: 'bool' },
       size: { type: 'integer' },
       source: { type: 'string' },
-      source_status: { type: 'boolean' },
+      source_status: { type: 'bool' },
       status: {
         type: {
           type: 'hash',
@@ -141,7 +141,7 @@ const createBatchAnomalyScore = QoreAppCreator.createLocalizedAction<typeof opti
           },
         },
       },
-      subscription: { type: 'boolean' },
+      subscription: { type: 'bool' },
       tags: {
         type: {
           type: 'list',

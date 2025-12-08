@@ -29,7 +29,7 @@ const options = {
     get_element_allowed_values: getBrevoContactAllowedValues,
   },
   all: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
 } satisfies TQoreOptions;

@@ -73,7 +73,7 @@ const options = {
     ],
   },
   send_to_recipient: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },
@@ -217,7 +217,7 @@ const createInvoice = QoreAppCreator.createLocalizedAction<typeof options>({
       due_amount: { type: 'string' },
       recipient_email: { type: 'string' },
       invoice_url: { type: 'string' },
-      sent_to_recipient: { type: 'boolean' },
+      sent_to_recipient: { type: 'bool' },
       create_time: { type: 'string' },
     },
   },

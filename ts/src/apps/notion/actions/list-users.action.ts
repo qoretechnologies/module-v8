@@ -121,7 +121,7 @@ const listUsers = QoreAppCreator.createLocalizedAction<typeof options>({
         example_value: 'd8f3f8c2-1dd2-4e9f-9a4d-3c8e4e5f6b7a',
       },
       has_more: {
-        type: 'boolean',
+        type: 'bool',
         example_value: false,
       },
     },

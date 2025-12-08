@@ -64,7 +64,7 @@ const salesforceNewContactTrigger = QoreAppCreator.createLocalizedTrigger({
           type: 'string',
         },
         IsDeleted: {
-          type: 'boolean',
+          type: 'bool',
         },
         MasterRecordId: {
           type: 'string',
@@ -184,7 +184,7 @@ const salesforceNewContactTrigger = QoreAppCreator.createLocalizedTrigger({
           type: 'string',
         },
         HasOptedOutOfEmail: {
-          type: 'boolean',
+          type: 'bool',
         },
         ActionCadenceId: {
           type: 'string',
@@ -238,7 +238,7 @@ const salesforceNewContactTrigger = QoreAppCreator.createLocalizedTrigger({
           type: 'string',
         },
         IsEmailBounced: {
-          type: 'boolean',
+          type: 'bool',
         },
         PhotoUrl: {
           type: 'string',

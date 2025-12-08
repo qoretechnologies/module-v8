@@ -40,7 +40,7 @@ const BaserowTypeToQoreTypeMap: Record<string, TQoreType> = {
   text: 'string',
   long_text: 'string',
   number: 'number',
-  boolean: 'boolean',
+  boolean: 'bool',
   date: 'date',
   last_modified: 'date',
   created_on: 'date',
@@ -147,7 +147,7 @@ const getQoreTypeForBaserowField = (field: TBaserowField): TQoreType => {
       case 'number':
         return 'number';
       case 'boolean':
-        return 'boolean';
+        return 'bool';
       case 'date':
         return 'date';
       case 'array':

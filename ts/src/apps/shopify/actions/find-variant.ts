@@ -81,7 +81,7 @@ const options = {
     required: false,
   },
   taxable: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     allowed_values: [
       { value: true, display_name: 'Taxable' },
@@ -112,7 +112,7 @@ const options = {
     ],
   },
   reverse: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },

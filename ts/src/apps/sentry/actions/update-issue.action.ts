@@ -38,19 +38,19 @@ const options = {
     get_allowed_values: getSentryTeamAllowedValues,
   },
   hasSeen: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   isBookmarked: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   isSubscribed: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   isPublic: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
 } satisfies TQoreOptions;
@@ -110,7 +110,7 @@ const updateIssue = QoreAppCreator.createLocalizedAction<typeof options>({
       status: { type: 'string' },
       statusDetails: { type: 'hash' },
       substatus: { type: 'string' },
-      isPublic: { type: 'boolean' },
+      isPublic: { type: 'bool' },
       platform: { type: 'string' },
       project: {
         type: {
@@ -137,8 +137,8 @@ const updateIssue = QoreAppCreator.createLocalizedAction<typeof options>({
           },
         },
       },
-      isBookmarked: { type: 'boolean' },
-      isSubscribed: { type: 'boolean' },
+      isBookmarked: { type: 'bool' },
+      isSubscribed: { type: 'bool' },
       subscriptionDetails: {
         type: {
           type: 'hash',
@@ -147,7 +147,7 @@ const updateIssue = QoreAppCreator.createLocalizedAction<typeof options>({
           },
         },
       },
-      hasSeen: { type: 'boolean' },
+      hasSeen: { type: 'bool' },
       annotations: {
         type: {
           type: 'list',
@@ -158,7 +158,7 @@ const updateIssue = QoreAppCreator.createLocalizedAction<typeof options>({
       issueCategory: { type: 'string' },
       priority: { type: 'string' },
       priorityLockedAt: { type: 'string' },
-      isUnhandled: { type: 'boolean' },
+      isUnhandled: { type: 'bool' },
       count: { type: 'string' },
       userCount: { type: 'integer' },
       firstSeen: { type: 'string' },

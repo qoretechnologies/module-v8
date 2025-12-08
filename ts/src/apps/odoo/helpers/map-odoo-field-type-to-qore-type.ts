@@ -10,7 +10,7 @@ export const ODOO_TO_QORE_TYPE_MAPPING: Record<string, TQoreType> = {
   float: 'float',
   monetary: 'float',
 
-  boolean: 'boolean',
+  boolean: 'bool',
 
   date: 'date',
   datetime: 'date',

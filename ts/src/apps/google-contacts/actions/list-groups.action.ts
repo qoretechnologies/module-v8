@@ -30,7 +30,7 @@ const options = {
 const response_type = {
   type: 'hash',
   fields: {
-    success: { type: 'boolean' },
+    success: { type: 'bool' },
     totalGroups: { type: 'number' },
     systemGroups: { type: 'number' },
     userGroups: { type: 'number' },
@@ -51,7 +51,7 @@ const response_type = {
                 type: 'hash',
                 fields: {
                   updateTime: { type: 'string' },
-                  deleted: { type: 'boolean' },
+                  deleted: { type: 'bool' },
                 },
               },
             },

@@ -42,22 +42,22 @@ const options = {
   },
   bold: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   italic: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   strikethrough: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   underline: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   horizontal_alignment: {
@@ -85,7 +85,7 @@ const options = {
   },
   wrap_text: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
     desc: 'Whether to wrap text in cells',
   },
@@ -249,7 +249,7 @@ const formatSpreadsheetRows = QoreAppCreator.createLocalizedAction<typeof option
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       spreadsheet_id: { type: 'string' },
       sheet_id: { type: 'string' },
       sheet_title: { type: 'string' },
@@ -266,14 +266,14 @@ const formatSpreadsheetRows = QoreAppCreator.createLocalizedAction<typeof option
           fields: {
             background_color: { type: 'string' },
             text_color: { type: 'string' },
-            bold: { type: 'boolean' },
-            italic: { type: 'boolean' },
-            strikethrough: { type: 'boolean' },
-            underline: { type: 'boolean' },
+            bold: { type: 'bool' },
+            italic: { type: 'bool' },
+            strikethrough: { type: 'bool' },
+            underline: { type: 'bool' },
             horizontal_alignment: { type: 'string' },
             vertical_alignment: { type: 'string' },
             font_size: { type: 'number' },
-            wrap_text: { type: 'boolean' },
+            wrap_text: { type: 'bool' },
           },
         },
       },

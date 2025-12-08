@@ -37,7 +37,7 @@ const options = {
     depends_on: ['linked_object'],
   },
   is_completed: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },
@@ -126,7 +126,7 @@ const getAttioTasks = QoreAppCreator.createLocalizedAction<typeof options>({
           },
         },
         content_plaintext: { type: 'string' },
-        is_completed: { type: 'boolean' },
+        is_completed: { type: 'bool' },
         deadline_at: { type: 'string' },
         linked_records: {
           type: {

@@ -60,11 +60,11 @@ const unpinChatMessage = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       chat_id: { type: 'number' },
       message_id: { type: 'integer' },
-      unpinned: { type: 'boolean' },
-      all_messages: { type: 'boolean' },
+      unpinned: { type: 'bool' },
+      all_messages: { type: 'bool' },
     },
   },
 });

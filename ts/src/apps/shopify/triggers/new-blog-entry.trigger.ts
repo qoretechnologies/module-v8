@@ -36,7 +36,7 @@ const shopifyBlogEntryType = {
       desc: 'The date and time when the article became or will become visible',
     },
     isPublished: {
-      type: 'boolean',
+      type: 'bool',
       desc: 'Whether or not the article is visible',
     },
     createdAt: {

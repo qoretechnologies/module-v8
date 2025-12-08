@@ -29,8 +29,8 @@ const response_type = {
               type: {
                 type: 'hash',
                 fields: {
-                  is_public: { type: 'boolean' },
-                  is_trial: { type: 'boolean' },
+                  is_public: { type: 'bool' },
+                  is_trial: { type: 'bool' },
                 },
               },
             },

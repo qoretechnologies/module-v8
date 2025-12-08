@@ -97,7 +97,7 @@ const QuickbooksVendorTrigger = QoreAppCreator.createLocalizedTrigger({
         },
         Balance: { type: 'number' },
         AcctNum: { type: 'string' },
-        Vendor1099: { type: 'boolean' },
+        Vendor1099: { type: 'bool' },
         CurrencyRef: {
           type: {
             type: 'hash',
@@ -108,7 +108,7 @@ const QuickbooksVendorTrigger = QoreAppCreator.createLocalizedTrigger({
           },
         },
         domain: { type: 'string' },
-        sparse: { type: 'boolean' },
+        sparse: { type: 'bool' },
         Id: { type: 'string' },
         SyncToken: { type: 'string' },
         MetaData: {
@@ -125,7 +125,7 @@ const QuickbooksVendorTrigger = QoreAppCreator.createLocalizedTrigger({
         CompanyName: { type: 'string' },
         DisplayName: { type: 'string' },
         PrintOnCheckName: { type: 'string' },
-        Active: { type: 'boolean' },
+        Active: { type: 'bool' },
         V4IDPseudonym: { type: 'string' },
         PrimaryPhone: {
           type: {

@@ -97,7 +97,7 @@ const shopifyOrderType = {
       desc: 'The reason provided when the order was canceled',
     },
     closed: {
-      type: 'boolean',
+      type: 'bool',
       desc: 'Whether the order is closed',
     },
     closedAt: {
@@ -105,7 +105,7 @@ const shopifyOrderType = {
       desc: 'The date and time when the order was closed',
     },
     confirmed: {
-      type: 'boolean',
+      type: 'bool',
       desc: 'Whether inventory has been reserved for the order',
     },
     currencyCode: {
@@ -113,15 +113,15 @@ const shopifyOrderType = {
       desc: 'The shop currency when the order was placed',
     },
     fullyPaid: {
-      type: 'boolean',
+      type: 'bool',
       desc: 'Whether the order has been paid in full',
     },
     unpaid: {
-      type: 'boolean',
+      type: 'bool',
       desc: 'Whether no payments have been made for the order',
     },
     fulfillable: {
-      type: 'boolean',
+      type: 'bool',
       desc: 'Whether there are line items that can be fulfilled',
     },
     note: {
@@ -138,15 +138,15 @@ const shopifyOrderType = {
       },
     },
     taxesIncluded: {
-      type: 'boolean',
+      type: 'bool',
       desc: 'Whether taxes are included in the subtotal price of the order',
     },
     taxExempt: {
-      type: 'boolean',
+      type: 'bool',
       desc: 'Whether taxes are exempt on the order',
     },
     test: {
-      type: 'boolean',
+      type: 'bool',
       desc: 'Whether the order is a test',
     },
     totalPrice: {

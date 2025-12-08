@@ -142,7 +142,7 @@ const xeroNewCreditNoteTrigger = QoreAppCreator.createLocalizedTrigger({
           },
         },
         ID: { type: 'string' },
-        HasErrors: { type: 'boolean' },
+        HasErrors: { type: 'bool' },
         InvoiceAddresses: {
           type: {
             type: 'list',
@@ -192,14 +192,14 @@ const xeroNewCreditNoteTrigger = QoreAppCreator.createLocalizedTrigger({
                           element_type: { type: 'hash' },
                         },
                       },
-                      IsDiscounted: { type: 'boolean' },
+                      IsDiscounted: { type: 'bool' },
                       InvoiceAddresses: {
                         type: {
                           type: 'list',
                           element_type: { type: 'hash' },
                         },
                       },
-                      HasErrors: { type: 'boolean' },
+                      HasErrors: { type: 'bool' },
                       InvoicePaymentServices: {
                         type: {
                           type: 'list',
@@ -219,7 +219,7 @@ const xeroNewCreditNoteTrigger = QoreAppCreator.createLocalizedTrigger({
             },
           },
         },
-        HasAttachments: { type: 'boolean' },
+        HasAttachments: { type: 'bool' },
         Contact: {
           type: {
             type: 'hash',
@@ -250,7 +250,7 @@ const xeroNewCreditNoteTrigger = QoreAppCreator.createLocalizedTrigger({
                   element_type: { type: 'hash' },
                 },
               },
-              HasValidationErrors: { type: 'boolean' },
+              HasValidationErrors: { type: 'bool' },
             },
           },
         },
@@ -301,7 +301,7 @@ const xeroNewCreditNoteTrigger = QoreAppCreator.createLocalizedTrigger({
         UpdatedDateUTC: { type: 'string' },
         CurrencyCode: { type: 'string' },
         FullyPaidOnDate: { type: 'string' },
-        SentToContact: { type: 'boolean' },
+        SentToContact: { type: 'bool' },
         AppliedAmount: { type: 'number' },
       },
     },

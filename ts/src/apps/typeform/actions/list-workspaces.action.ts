@@ -20,7 +20,7 @@ const response_type = {
           type: 'hash',
           fields: {
             id: { type: 'string' },
-            default: { type: 'boolean' },
+            default: { type: 'bool' },
             forms: {
               type: {
                 type: 'hash',
@@ -40,7 +40,7 @@ const response_type = {
                 },
               },
             },
-            shared: { type: 'boolean' },
+            shared: { type: 'bool' },
           },
         },
       },

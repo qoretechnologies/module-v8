@@ -23,12 +23,12 @@ const options = {
   },
   fifo_queue: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   content_based_deduplication: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   visibility_timeout: {
@@ -173,8 +173,8 @@ const createQueue = QoreAppCreator.createLocalizedAction<typeof options>({
       queue_url: { type: 'string' },
       queue_name: { type: 'string' },
       region: { type: 'string' },
-      fifo_queue: { type: 'boolean' },
-      content_based_deduplication: { type: 'boolean' },
+      fifo_queue: { type: 'bool' },
+      content_based_deduplication: { type: 'bool' },
       visibility_timeout: { type: 'integer' },
       message_retention_period: { type: 'integer' },
       delay_seconds: { type: 'integer' },
@@ -184,7 +184,7 @@ const createQueue = QoreAppCreator.createLocalizedAction<typeof options>({
       kms_master_key_id: { type: 'string' },
       kms_data_key_reuse_period_seconds: { type: 'integer' },
       created_at: { type: 'string' },
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
     },
   },
 });

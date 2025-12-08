@@ -56,7 +56,7 @@ export const getSharepointListDependentOptions: TQoreGetDependentOptionsFunction
       required: false,
     } satisfies Partial<TQoreAppActionOption>;
     if (column.boolean) {
-      columnValuesFields[column.name!] = { ...params, type: 'boolean' };
+      columnValuesFields[column.name!] = { ...params, type: 'bool' };
     } else if (column.text) {
       columnValuesFields[column.name!] = { ...params, type: 'string' };
     } else if (column.dateTime) {

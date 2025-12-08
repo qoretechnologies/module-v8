@@ -59,7 +59,7 @@ const options = {
     required: false,
   },
   isOnlineMeeting: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   timeZone: {
@@ -89,7 +89,7 @@ const response_type = {
       },
     },
     success: {
-      type: 'boolean',
+      type: 'bool',
     },
     error: {
       type: 'string',

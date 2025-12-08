@@ -65,7 +65,7 @@ const listLabels = QoreAppCreator.createLocalizedAction<typeof options>({
               name: { type: 'string' },
               order: { type: 'integer' },
               color: { type: 'string' },
-              is_favorite: { type: 'boolean' },
+              is_favorite: { type: 'bool' },
             },
           },
         },

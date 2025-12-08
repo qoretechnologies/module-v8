@@ -46,13 +46,13 @@ const getTeam = QoreAppCreator.createLocalizedAction<typeof options>({
       slug: { type: 'string' },
       name: { type: 'string' },
       dateCreated: { type: 'string' },
-      isMember: { type: 'boolean' },
+      isMember: { type: 'bool' },
       teamRole: { type: 'string' },
       flags: {
         type: {
           type: 'hash',
           fields: {
-            'idp:provisioned': { type: 'boolean' },
+            'idp:provisioned': { type: 'bool' },
           },
         },
       },
@@ -62,8 +62,8 @@ const getTeam = QoreAppCreator.createLocalizedAction<typeof options>({
           element_type: 'string',
         },
       },
-      hasAccess: { type: 'boolean' },
-      isPending: { type: 'boolean' },
+      hasAccess: { type: 'bool' },
+      isPending: { type: 'bool' },
       memberCount: { type: 'integer' },
       avatar: {
         type: {
@@ -93,8 +93,8 @@ const getTeam = QoreAppCreator.createLocalizedAction<typeof options>({
             },
             name: { type: 'string' },
             dateCreated: { type: 'string' },
-            isEarlyAdopter: { type: 'boolean' },
-            require2FA: { type: 'boolean' },
+            isEarlyAdopter: { type: 'bool' },
+            require2FA: { type: 'bool' },
             avatar: {
               type: {
                 type: 'hash',

@@ -299,7 +299,7 @@ const listInvoices = QoreAppCreator.createLocalizedAction<typeof options>({
                       type: {
                         type: 'hash',
                         fields: {
-                          allow_partial_payment: { type: 'boolean' },
+                          allow_partial_payment: { type: 'bool' },
                           minimum_amount_due: {
                             type: {
                               type: 'hash',
@@ -312,9 +312,9 @@ const listInvoices = QoreAppCreator.createLocalizedAction<typeof options>({
                         },
                       },
                     },
-                    allow_tip: { type: 'boolean' },
-                    tax_calculated_after_discount: { type: 'boolean' },
-                    tax_inclusive: { type: 'boolean' },
+                    allow_tip: { type: 'bool' },
+                    tax_calculated_after_discount: { type: 'bool' },
+                    tax_inclusive: { type: 'bool' },
                     template_id: { type: 'string' },
                   },
                 },

@@ -62,7 +62,7 @@ const getAttioTask = QoreAppCreator.createLocalizedAction<typeof options>({
         },
       },
       content_plaintext: { type: 'string' },
-      is_completed: { type: 'boolean' },
+      is_completed: { type: 'bool' },
       deadline_at: { type: 'string' },
       linked_records: {
         type: {

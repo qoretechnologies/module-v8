@@ -132,12 +132,12 @@ const DynamicsNewAccountTrigger = QoreAppCreator.createLocalizedTrigger({
         _parentaccountid_value: { type: 'string' },
         _transactioncurrencyid_value: { type: 'string' },
 
-        donotphone: { type: 'boolean' },
-        donotemail: { type: 'boolean' },
-        donotfax: { type: 'boolean' },
-        donotpostalmail: { type: 'boolean' },
-        donotbulkemail: { type: 'boolean' },
-        donotbulkpostalmail: { type: 'boolean' },
+        donotphone: { type: 'bool' },
+        donotemail: { type: 'bool' },
+        donotfax: { type: 'bool' },
+        donotpostalmail: { type: 'bool' },
+        donotbulkemail: { type: 'bool' },
+        donotbulkpostalmail: { type: 'bool' },
 
         versionnumber: { type: 'number' },
         exchangerate: { type: 'number' },
@@ -145,7 +145,7 @@ const DynamicsNewAccountTrigger = QoreAppCreator.createLocalizedTrigger({
         customersizecode: { type: 'number' },
         openrevenue: { type: 'number' },
         opendeals: { type: 'number' },
-        merged: { type: 'boolean' },
+        merged: { type: 'bool' },
 
         _createdby_value: { type: 'string' },
         _modifiedby_value: { type: 'string' },

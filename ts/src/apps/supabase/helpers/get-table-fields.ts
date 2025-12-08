@@ -29,7 +29,7 @@ const SupabaseTypeToQoreTypeMap: Record<string, TQoreSimpleType> = {
   json: 'string',
   number: 'number',
   jsonb: 'string',
-  boolean: 'boolean',
+  boolean: 'bool',
 };
 
 const dateFormats = ['date', 'date-time', 'timestamp without time zone'];
