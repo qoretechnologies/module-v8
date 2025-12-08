@@ -4,7 +4,8 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { AttioError } from '../constants';
-import { getAttioAllowedValues, getAttioTokenRequired } from './constants';
+import { fetchAttioAllowedValues } from './client';
+import { getAttioTokenRequired } from './constants';
 
 interface AttioObject {
   id: {
@@ -38,7 +39,7 @@ export const getAttioObjectApiSlugAllowedValues: TQoreGetAllowedValuesFunction<
   try {
     const token = getAttioTokenRequired(context);
 
-    return await getAttioAllowedValues<AttioObject, string>({
+    return await fetchAttioAllowedValues<AttioObject>({
       token,
       path: 'objects',
       method: 'GET',
@@ -56,7 +57,7 @@ export const getAttioObjectIdAllowedValues: TQoreGetAllowedValuesFunction<
   try {
     const token = getAttioTokenRequired(context);
 
-    return await getAttioAllowedValues<AttioObject, string>({
+    return await fetchAttioAllowedValues<AttioObject>({
       token,
       path: 'objects',
       method: 'GET',

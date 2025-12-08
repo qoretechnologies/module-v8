@@ -4,7 +4,8 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { AttioError } from '../constants';
-import { getAttioAllowedValues, getAttioTokenRequired } from './constants';
+import { fetchAttioAllowedValues } from './client';
+import { getAttioTokenRequired } from './constants';
 
 interface TAttioWorkspaceMember {
   id: {
@@ -34,7 +35,7 @@ export const getAttioWorkspaceMemberIdAllowedValues: TQoreGetAllowedValuesFuncti
   try {
     const token = getAttioTokenRequired(context);
 
-    return await getAttioAllowedValues<TAttioWorkspaceMember, string>({
+    return await fetchAttioAllowedValues<TAttioWorkspaceMember>({
       path: `workspace_members`,
       token,
       mapItemToAllowedValue: createAttioWorkspaceMemberToAllowedValueMapFunction('id'),
@@ -51,7 +52,7 @@ export const getAttioWorkspaceMemberEmailAllowedValues: TQoreGetAllowedValuesFun
   try {
     const token = getAttioTokenRequired(context);
 
-    return await getAttioAllowedValues<TAttioWorkspaceMember, string>({
+    return await fetchAttioAllowedValues<TAttioWorkspaceMember>({
       path: `workspace_members`,
       token,
       mapItemToAllowedValue: createAttioWorkspaceMemberToAllowedValueMapFunction('email'),

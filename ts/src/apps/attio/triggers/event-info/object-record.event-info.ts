@@ -6,7 +6,7 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { AttioError } from '../../constants';
-import { fetchAttioData } from '../../helpers/constants';
+import { attioApiClient } from '../../helpers/client';
 
 export type TAttioObjectRecord = {
   id: {
@@ -70,9 +70,10 @@ export const createAttioObjectRecordExampleEventData =
     });
 
     try {
-      const records = await fetchAttioData<TAttioObjectRecord>({
+      const records = await attioApiClient<TAttioObjectRecord[]>({
         path: `objects/${object}/records/query`,
         method: 'POST',
+        object: 'data',
         token,
         body: {
           limit: 1,

@@ -4,7 +4,8 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { AttioError } from '../constants';
-import { getAttioAllowedValues, getAttioTokenRequired } from './constants';
+import { fetchAttioAllowedValues } from './client';
+import { getAttioTokenRequired } from './constants';
 
 interface TAttioTask {
   id: {
@@ -41,7 +42,7 @@ export const getAttioTaskIdAllowedValues: TQoreGetAllowedValuesFunction<
   try {
     const token = getAttioTokenRequired(context);
 
-    return await getAttioAllowedValues<TAttioTask, string>({
+    return await fetchAttioAllowedValues<TAttioTask>({
       path: `tasks`,
       token,
       mapItemToAllowedValue: mapAttioTaskToAllowedValue,

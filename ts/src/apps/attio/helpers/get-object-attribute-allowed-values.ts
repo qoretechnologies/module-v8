@@ -4,8 +4,9 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { AttioError } from '../constants';
-import { getAttioAllowedValues, getAttioTokenRequired } from './constants';
 import { TAttioAttribute } from './get-object-properties';
+import { getQoreContextRequiredValues } from '../../../global/helpers';
+import { fetchAttioAllowedValues } from './client';
 
 const mapAttioObjectToAllowedValue = (item: TAttioAttribute): IQoreAllowedValue<string> => {
   return {
@@ -24,17 +25,41 @@ export const getAttioObjectAttributesAllowedValues: TQoreGetAllowedValuesFunctio
   string
 > = async (context) => {
   try {
-    const token = getAttioTokenRequired(context);
+    const { token } = getQoreContextRequiredValues({
+      context,
+      connectionFields: ['token'],
+      ErrorClass: AttioError,
+    });
     const object = context?.opts?.object;
 
-    if (!object) {
-      throw new AttioError('Object is required to get allowed values for attributes');
-    }
-
-    return await getAttioAllowedValues<TAttioAttribute, string>({
+    return await fetchAttioAllowedValues<TAttioAttribute>({
       token,
       path: `objects/${object}/attributes`,
       method: 'GET',
+      mapItemToAllowedValue: mapAttioObjectToAllowedValue,
+    });
+  } catch (error) {
+    throw new AttioError(`Failed to get Attio objects allowed values: ${error}`);
+  }
+};
+
+export const getAttioObjectUniqueAttributesAllowedValues: TQoreGetAllowedValuesFunction<
+  TCustomConnOptions,
+  string
+> = async (context) => {
+  try {
+    const { token } = getQoreContextRequiredValues({
+      context,
+      connectionFields: ['token'],
+      ErrorClass: AttioError,
+    });
+    const object = context?.opts?.object;
+
+    return await fetchAttioAllowedValues<TAttioAttribute>({
+      token,
+      path: `objects/${object}/attributes`,
+      method: 'GET',
+      filterItems: (item) => item.is_unique,
       mapItemToAllowedValue: mapAttioObjectToAllowedValue,
     });
   } catch (error) {

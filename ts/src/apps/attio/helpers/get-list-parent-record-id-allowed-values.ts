@@ -4,7 +4,8 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { AttioError } from '../constants';
-import { getAttioAllowedValues, getAttioTokenRequired } from './constants';
+import { fetchAttioAllowedValues } from './client';
+import { getAttioTokenRequired } from './constants';
 import { getListParentObjectDefaultValue } from './get-list-parent-object-default-value';
 
 interface TAttioObjectRecord {
@@ -42,7 +43,7 @@ export const getAttioListParentRecordIdAllowedValues: TQoreGetAllowedValuesFunct
     const parentObject =
       context?.opts?.parent_object || (await getListParentObjectDefaultValue(context));
 
-    return await getAttioAllowedValues<TAttioObjectRecord, string>({
+    return await fetchAttioAllowedValues<TAttioObjectRecord>({
       path: `objects/${parentObject}/records/query`,
       token,
       method: 'POST',

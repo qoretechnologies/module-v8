@@ -1,5 +1,5 @@
 import { omit } from 'lodash';
-import { fetchAttioData } from './constants';
+import { fetchAttioPaginatedRecords } from './client';
 import { TAttioAttribute } from './get-object-properties';
 
 type TAttioAttributeValue = {
@@ -23,10 +23,12 @@ type TAttioAttributeValue = {
     title: string;
     celebration_enabled: boolean;
   };
+  phone_number?: string;
   attribute_type: string;
+  referenced_actor_id?: string;
 };
 
-type TAttioRecordAttributes = {
+export type TAttioRecordAttributes = {
   id: {
     workspace_id: string;
     object_id: string;
@@ -48,7 +50,7 @@ type TAttioEntryAttributes = {
   entry_values: Record<string, TAttioAttributeValue[]>;
 };
 
-type TAttioResponse = {
+export type TAttioResponse = {
   data:
     | TAttioRecordAttributes
     | TAttioRecordAttributes[]
@@ -68,23 +70,24 @@ const sanitizeAttributeValue = (attributeValue: TAttioAttributeValue | undefined
     return null;
   }
 
-  if (attributeValue.value) {
+  if ('value' in attributeValue) {
     return attributeValue.value;
   }
 
   if (attributeValue.option) {
-    return {
-      id: attributeValue.option.id.option_id,
-      title: attributeValue.option.title,
-    };
+    return attributeValue.option.title;
   }
 
   if (attributeValue.status) {
-    return {
-      status_id: attributeValue.status.id.status_id,
-      title: attributeValue.status.title,
-      celebration_enabled: attributeValue.status.celebration_enabled,
-    };
+    return attributeValue.status.title;
+  }
+
+  if (attributeValue.phone_number) {
+    return attributeValue.phone_number;
+  }
+
+  if (attributeValue.attribute_type === 'actor-reference') {
+    return attributeValue.referenced_actor_id;
   }
 
   return omit(attributeValue, [
@@ -148,8 +151,9 @@ export const formatAttioResponse = async (
   targetId: string,
   token: string
 ): Promise<TFormattedRecord | TFormattedRecord[]> => {
-  const objectAttributes = await fetchAttioData<TAttioAttribute>({
+  const objectAttributes = await fetchAttioPaginatedRecords<TAttioAttribute[], TAttioAttribute>({
     path: `${target}/${targetId}/attributes`,
+    object: 'data',
     token,
   });
 
