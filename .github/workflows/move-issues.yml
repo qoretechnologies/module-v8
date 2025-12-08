@@ -119,6 +119,7 @@ jobs:
                           projectItems(first: 10) {
                             nodes {
                               id
+                              isArchived
                               project {
                                 id
                                 title
