@@ -17,7 +17,7 @@ export const CopperCrmOpportunityResponseType = {
     converted_value: { type: 'number' },
     converted_unit: { type: 'string' },
     pipeline_id: { type: 'integer' },
-    pipeline_is_revenue: { type: 'boolean' },
+    pipeline_is_revenue: { type: 'bool' },
     pipeline_stage_id: { type: 'integer' },
     pipeline_type: { type: 'string' },
     primary_contact_id: { type: 'integer' },

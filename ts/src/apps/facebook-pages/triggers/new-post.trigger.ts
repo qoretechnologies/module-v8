@@ -71,8 +71,8 @@ const postFields = {
   created_time: { type: 'string' },
   permalink_url: { type: 'string' },
   full_picture: { type: 'string' },
-  is_published: { type: 'boolean' },
-  is_hidden: { type: 'boolean' },
+  is_published: { type: 'bool' },
+  is_hidden: { type: 'bool' },
   story: { type: 'string' },
   updated_time: { type: 'string' },
   type: { type: 'string' },
@@ -135,8 +135,8 @@ const defaultEventInfoType = {
     created_time: { type: 'string' },
     permalink_url: { type: 'string' },
     full_picture: { type: 'string' },
-    is_published: { type: 'boolean' },
-    is_hidden: { type: 'boolean' },
+    is_published: { type: 'bool' },
+    is_hidden: { type: 'bool' },
   },
 } satisfies TQoreTypeObject;
 
@@ -160,7 +160,7 @@ const FacebookPagesNewPostTrigger = QoreAppCreator.createLocalizedTrigger({
       element_allowed_values: FacebookPostFieldsAllowedValues,
     },
     include_hidden: {
-      type: 'boolean',
+      type: 'bool',
       required: false,
       default_value: false,
     },

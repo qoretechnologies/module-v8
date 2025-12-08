@@ -71,7 +71,7 @@ const getDeposit = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       TotalAmt: { type: 'number' },
       domain: { type: 'string' },
-      sparse: { type: 'boolean' },
+      sparse: { type: 'bool' },
       Id: { type: 'string' },
       SyncToken: { type: 'string' },
       MetaData: {

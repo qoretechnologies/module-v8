@@ -18,8 +18,8 @@ const response_type = {
   fields: {
     email: { type: 'string' },
     id: { type: 'integer' },
-    emailBlacklisted: { type: 'boolean' },
-    smsBlacklisted: { type: 'boolean' },
+    emailBlacklisted: { type: 'bool' },
+    smsBlacklisted: { type: 'bool' },
     createdAt: { type: 'string' },
     modifiedAt: { type: 'string' },
     attributes: {

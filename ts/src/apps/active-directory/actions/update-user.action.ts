@@ -74,7 +74,7 @@ const options = {
     required: false,
   },
   accountEnabled: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     preselected: true,
   },
@@ -210,7 +210,7 @@ const updateUser = QoreAppCreator.createLocalizedAction<typeof options>({
       preferredLanguage: { type: 'string' },
       userPrincipalName: { type: 'string' },
       mailNickname: { type: 'string' },
-      accountEnabled: { type: 'boolean' },
+      accountEnabled: { type: 'bool' },
       createdDateTime: { type: 'string' },
       lastPasswordChangeDateTime: { type: 'string' },
       usageLocation: { type: 'string' },

@@ -152,7 +152,7 @@ const addFileSharingPreference = QoreAppCreator.createLocalizedAction<
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       file_id: { type: 'string' },
       sharing_preference: { type: 'string' },
       organization_domain: { type: 'string' },

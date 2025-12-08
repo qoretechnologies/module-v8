@@ -29,7 +29,7 @@ const options = {
   },
   is_favorite: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
   },
 } satisfies TQoreOptions;
 
@@ -74,15 +74,15 @@ const createProject = QoreAppCreator.createLocalizedAction<typeof options>({
     type: 'hash',
     fields: {
       id: { type: 'string' },
-      can_assign_tasks: { type: 'boolean' },
+      can_assign_tasks: { type: 'bool' },
       child_order: { type: 'integer' },
       color: { type: 'string' },
       creator_uid: { type: 'string' },
       created_at: { type: 'string' },
-      is_archived: { type: 'boolean' },
-      is_deleted: { type: 'boolean' },
-      is_favorite: { type: 'boolean' },
-      is_frozen: { type: 'boolean' },
+      is_archived: { type: 'bool' },
+      is_deleted: { type: 'bool' },
+      is_favorite: { type: 'bool' },
+      is_frozen: { type: 'bool' },
       name: { type: 'string' },
       updated_at: { type: 'string' },
       view_style: { type: 'string' },
@@ -100,9 +100,9 @@ const createProject = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       role: { type: 'string' },
       parent_id: { type: 'string' },
-      inbox_project: { type: 'boolean' },
-      is_collapsed: { type: 'boolean' },
-      is_shared: { type: 'boolean' },
+      inbox_project: { type: 'bool' },
+      is_collapsed: { type: 'bool' },
+      is_shared: { type: 'bool' },
     },
   },
 });

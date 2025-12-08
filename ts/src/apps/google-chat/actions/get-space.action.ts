@@ -52,7 +52,7 @@ const getSpace = QoreAppCreator.createLocalizedAction<typeof options>({
       name: { type: 'string' },
       type: { type: 'string' },
       displayName: { type: 'string' },
-      externalUserAllowed: { type: 'boolean' },
+      externalUserAllowed: { type: 'bool' },
       spaceThreadingState: { type: 'string' },
       spaceType: { type: 'string' },
       spaceHistoryState: { type: 'string' },
@@ -83,8 +83,8 @@ const getSpace = QoreAppCreator.createLocalizedAction<typeof options>({
               type: {
                 type: 'hash',
                 fields: {
-                  managersAllowed: { type: 'boolean' },
-                  membersAllowed: { type: 'boolean' },
+                  managersAllowed: { type: 'bool' },
+                  membersAllowed: { type: 'bool' },
                 },
               },
             },
@@ -92,8 +92,8 @@ const getSpace = QoreAppCreator.createLocalizedAction<typeof options>({
               type: {
                 type: 'hash',
                 fields: {
-                  managersAllowed: { type: 'boolean' },
-                  membersAllowed: { type: 'boolean' },
+                  managersAllowed: { type: 'bool' },
+                  membersAllowed: { type: 'bool' },
                 },
               },
             },
@@ -101,8 +101,8 @@ const getSpace = QoreAppCreator.createLocalizedAction<typeof options>({
               type: {
                 type: 'hash',
                 fields: {
-                  managersAllowed: { type: 'boolean' },
-                  membersAllowed: { type: 'boolean' },
+                  managersAllowed: { type: 'bool' },
+                  membersAllowed: { type: 'bool' },
                 },
               },
             },
@@ -110,8 +110,8 @@ const getSpace = QoreAppCreator.createLocalizedAction<typeof options>({
               type: {
                 type: 'hash',
                 fields: {
-                  managersAllowed: { type: 'boolean' },
-                  membersAllowed: { type: 'boolean' },
+                  managersAllowed: { type: 'bool' },
+                  membersAllowed: { type: 'bool' },
                 },
               },
             },
@@ -119,8 +119,8 @@ const getSpace = QoreAppCreator.createLocalizedAction<typeof options>({
               type: {
                 type: 'hash',
                 fields: {
-                  managersAllowed: { type: 'boolean' },
-                  membersAllowed: { type: 'boolean' },
+                  managersAllowed: { type: 'bool' },
+                  membersAllowed: { type: 'bool' },
                 },
               },
             },
@@ -128,8 +128,8 @@ const getSpace = QoreAppCreator.createLocalizedAction<typeof options>({
               type: {
                 type: 'hash',
                 fields: {
-                  managersAllowed: { type: 'boolean' },
-                  membersAllowed: { type: 'boolean' },
+                  managersAllowed: { type: 'bool' },
+                  membersAllowed: { type: 'bool' },
                 },
               },
             },
@@ -137,8 +137,8 @@ const getSpace = QoreAppCreator.createLocalizedAction<typeof options>({
               type: {
                 type: 'hash',
                 fields: {
-                  managersAllowed: { type: 'boolean' },
-                  membersAllowed: { type: 'boolean' },
+                  managersAllowed: { type: 'bool' },
+                  membersAllowed: { type: 'bool' },
                 },
               },
             },
@@ -146,8 +146,8 @@ const getSpace = QoreAppCreator.createLocalizedAction<typeof options>({
               type: {
                 type: 'hash',
                 fields: {
-                  managersAllowed: { type: 'boolean' },
-                  membersAllowed: { type: 'boolean' },
+                  managersAllowed: { type: 'bool' },
+                  membersAllowed: { type: 'bool' },
                 },
               },
             },

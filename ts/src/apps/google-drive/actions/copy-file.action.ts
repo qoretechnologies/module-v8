@@ -18,7 +18,7 @@ const options = {
   },
   convert_to_document: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   folder_id: {

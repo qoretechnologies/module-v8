@@ -80,7 +80,7 @@ const listInvalidations = QoreAppCreator.createLocalizedAction<typeof options>({
     fields: {
       distribution_id: { type: 'string' },
       invalidation_count: { type: 'integer' },
-      is_truncated: { type: 'boolean' },
+      is_truncated: { type: 'bool' },
       max_items: { type: 'integer' },
       next_marker: { type: 'string' },
       invalidations: {

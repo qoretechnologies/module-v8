@@ -63,19 +63,19 @@ const ListFields = QoreAppCreator.createLocalizedAction<typeof options>({
             },
           },
         },
-        webhook: { type: 'boolean' },
+        webhook: { type: 'bool' },
         operation_type: {
           type: {
             type: 'hash',
             fields: {
-              web_update: { type: 'boolean' },
-              api_create: { type: 'boolean' },
-              web_create: { type: 'boolean' },
-              api_update: { type: 'boolean' },
+              web_update: { type: 'bool' },
+              api_create: { type: 'bool' },
+              web_create: { type: 'bool' },
+              api_update: { type: 'bool' },
             },
           },
         },
-        colour_code_enabled_by_system: { type: 'boolean' },
+        colour_code_enabled_by_system: { type: 'bool' },
         field_label: { type: 'string' },
         tooltip: { type: 'string' },
         textarea: {
@@ -87,7 +87,7 @@ const ListFields = QoreAppCreator.createLocalizedAction<typeof options>({
           },
         },
         type: { type: 'string' },
-        field_read_only: { type: 'boolean' },
+        field_read_only: { type: 'bool' },
         customizable_properties: {
           type: {
             type: 'list',
@@ -95,8 +95,8 @@ const ListFields = QoreAppCreator.createLocalizedAction<typeof options>({
           },
         },
         display_label: { type: 'string' },
-        read_only: { type: 'boolean' },
-        businesscard_supported: { type: 'boolean' },
+        read_only: { type: 'bool' },
+        businesscard_supported: { type: 'bool' },
         multi_module_lookup: {
           type: {
             type: 'hash',
@@ -105,8 +105,8 @@ const ListFields = QoreAppCreator.createLocalizedAction<typeof options>({
         },
         id: { type: 'string' },
         created_time: { type: 'string' },
-        filterable: { type: 'boolean' },
-        visible: { type: 'boolean' },
+        filterable: { type: 'bool' },
+        visible: { type: 'bool' },
         profiles: {
           type: {
             type: 'list',
@@ -124,26 +124,26 @@ const ListFields = QoreAppCreator.createLocalizedAction<typeof options>({
           type: {
             type: 'hash',
             fields: {
-              view: { type: 'boolean' },
-              edit: { type: 'boolean' },
-              quick_create: { type: 'boolean' },
-              create: { type: 'boolean' },
+              view: { type: 'bool' },
+              edit: { type: 'bool' },
+              quick_create: { type: 'bool' },
+              create: { type: 'bool' },
             },
           },
         },
-        separator: { type: 'boolean' },
-        searchable: { type: 'boolean' },
-        history_tracking_enabled: { type: 'boolean' },
+        separator: { type: 'bool' },
+        searchable: { type: 'bool' },
+        history_tracking_enabled: { type: 'bool' },
         api_name: { type: 'string' },
         unique: {
           type: {
             type: 'hash',
             fields: {
-              case_sensitive: { type: 'boolean' },
+              case_sensitive: { type: 'bool' },
             },
           },
         },
-        enable_colour_code: { type: 'boolean' },
+        enable_colour_code: { type: 'bool' },
         pick_list_values: {
           type: {
             type: 'list',
@@ -161,8 +161,8 @@ const ListFields = QoreAppCreator.createLocalizedAction<typeof options>({
             },
           },
         },
-        system_mandatory: { type: 'boolean' },
-        virtual_field: { type: 'boolean' },
+        system_mandatory: { type: 'bool' },
+        virtual_field: { type: 'bool' },
         json_type: { type: 'string' },
         created_source: { type: 'string' },
         display_type: { type: 'integer' },
@@ -173,8 +173,8 @@ const ListFields = QoreAppCreator.createLocalizedAction<typeof options>({
           type: {
             type: 'hash',
             fields: {
-              fields_update_supported: { type: 'boolean' },
-              record_operations_supported: { type: 'boolean' },
+              fields_update_supported: { type: 'bool' },
+              record_operations_supported: { type: 'bool' },
             },
           },
         },
@@ -187,20 +187,20 @@ const ListFields = QoreAppCreator.createLocalizedAction<typeof options>({
             },
           },
         },
-        custom_field: { type: 'boolean' },
+        custom_field: { type: 'bool' },
         lookup: {
           type: {
             type: 'hash',
             fields: {
               display_label: { type: 'string' },
-              revalidate_filter_during_edit: { type: 'boolean' },
+              revalidate_filter_during_edit: { type: 'bool' },
               api_name: { type: 'string' },
               module: {
                 type: {
                   type: 'hash',
                   fields: {
                     api_name: { type: 'string' },
-                    crypt: { type: 'boolean' },
+                    crypt: { type: 'bool' },
                     id: { type: 'string' },
                   },
                 },
@@ -218,8 +218,8 @@ const ListFields = QoreAppCreator.createLocalizedAction<typeof options>({
           type: {
             type: 'hash',
             fields: {
-              restricted_in_export: { type: 'boolean' },
-              restricted: { type: 'boolean' },
+              restricted_in_export: { type: 'bool' },
+              restricted: { type: 'bool' },
             },
           },
         },
@@ -240,9 +240,9 @@ const ListFields = QoreAppCreator.createLocalizedAction<typeof options>({
           },
         },
         length: { type: 'integer' },
-        display_field: { type: 'boolean' },
-        pick_list_values_sorted_lexically: { type: 'boolean' },
-        sortable: { type: 'boolean' },
+        display_field: { type: 'bool' },
+        pick_list_values_sorted_lexically: { type: 'bool' },
+        sortable: { type: 'bool' },
         layout_associations: {
           type: {
             type: 'list',
@@ -311,10 +311,10 @@ const ListFields = QoreAppCreator.createLocalizedAction<typeof options>({
             fields: {},
           },
         },
-        hipaa_compliance_enabled: { type: 'boolean' },
+        hipaa_compliance_enabled: { type: 'bool' },
         decimal_place: { type: 'integer' },
-        mass_update: { type: 'boolean' },
-        blueprint_supported: { type: 'boolean' },
+        mass_update: { type: 'bool' },
+        blueprint_supported: { type: 'bool' },
         multiselectlookup: {
           type: {
             type: 'hash',

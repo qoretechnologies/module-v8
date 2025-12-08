@@ -11,7 +11,7 @@ const options = {
     required: true,
   },
   public_access: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },

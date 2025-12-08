@@ -153,8 +153,8 @@ const getPage = QoreAppCreator.createLocalizedAction<typeof options>({
             link: { type: 'string' },
             username: { type: 'string' },
             verification_status: { type: 'string' },
-            is_verified: { type: 'boolean' },
-            is_published: { type: 'boolean' },
+            is_verified: { type: 'bool' },
+            is_published: { type: 'bool' },
             profile_picture_url: { type: 'string' },
             cover_photo_url: { type: 'string' },
             location: {
@@ -180,9 +180,9 @@ const getPage = QoreAppCreator.createLocalizedAction<typeof options>({
               type: {
                 type: 'hash',
                 fields: {
-                  lot: { type: 'boolean' },
-                  street: { type: 'boolean' },
-                  valet: { type: 'boolean' },
+                  lot: { type: 'bool' },
+                  street: { type: 'bool' },
+                  valet: { type: 'bool' },
                 },
               },
             },
@@ -190,11 +190,11 @@ const getPage = QoreAppCreator.createLocalizedAction<typeof options>({
               type: {
                 type: 'hash',
                 fields: {
-                  amex: { type: 'boolean' },
-                  cash_only: { type: 'boolean' },
-                  discover: { type: 'boolean' },
-                  mastercard: { type: 'boolean' },
-                  visa: { type: 'boolean' },
+                  amex: { type: 'bool' },
+                  cash_only: { type: 'bool' },
+                  discover: { type: 'bool' },
+                  mastercard: { type: 'bool' },
+                  visa: { type: 'bool' },
                 },
               },
             },

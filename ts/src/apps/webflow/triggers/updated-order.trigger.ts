@@ -277,12 +277,12 @@ const WebflowUpdatedOrder = QoreAppCreator.createLocalizedTrigger<typeof options
           type: {
             type: 'hash',
             fields: {
-              isBuyNow: { type: 'boolean' },
+              isBuyNow: { type: 'bool' },
             },
           },
         },
-        isCustomerDeleted: { type: 'boolean' },
-        isShippingRequired: { type: 'boolean' },
+        isCustomerDeleted: { type: 'bool' },
+        isShippingRequired: { type: 'bool' },
         totals: {
           type: {
             type: 'hash',

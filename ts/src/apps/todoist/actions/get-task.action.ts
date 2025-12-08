@@ -77,8 +77,8 @@ const getTask = QoreAppCreator.createLocalizedAction<typeof options>({
           },
         },
       },
-      checked: { type: 'boolean' },
-      is_deleted: { type: 'boolean' },
+      checked: { type: 'bool' },
+      is_deleted: { type: 'bool' },
       added_at: { type: 'string' },
       completed_at: { type: 'string' },
       updated_at: { type: 'string' },
@@ -88,7 +88,7 @@ const getTask = QoreAppCreator.createLocalizedAction<typeof options>({
           fields: {
             date: { type: 'string' },
             datetime: { type: 'string' },
-            is_recurring: { type: 'boolean' },
+            is_recurring: { type: 'bool' },
             lang: { type: 'string' },
             string: { type: 'string' },
             timezone: { type: 'string' },
@@ -101,7 +101,7 @@ const getTask = QoreAppCreator.createLocalizedAction<typeof options>({
       description: { type: 'string' },
       note_count: { type: 'integer' },
       day_order: { type: 'integer' },
-      is_collapsed: { type: 'boolean' },
+      is_collapsed: { type: 'bool' },
     },
   },
 });

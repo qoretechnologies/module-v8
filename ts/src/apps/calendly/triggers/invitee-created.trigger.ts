@@ -188,7 +188,7 @@ const CalendlyInviteeCreated = QoreAppCreator.createLocalizedTrigger<
               },
               reconfirmation: { type: 'string' },
               reschedule_url: { type: 'string' },
-              rescheduled: { type: 'boolean' },
+              rescheduled: { type: 'bool' },
               routing_form_submission: { type: 'string' },
               scheduled_event: {
                 type: {

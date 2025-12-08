@@ -204,7 +204,7 @@ const createSpreadsheet = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       spreadsheet_id: { type: 'string' },
       title: { type: 'string' },
       sheet_id: { type: 'string', desc: 'ID of the first sheet' },
@@ -220,11 +220,11 @@ const createSpreadsheet = QoreAppCreator.createLocalizedAction<typeof options>({
         desc: 'ID of the source spreadsheet (if copied)',
       },
       copied: {
-        type: 'boolean',
+        type: 'bool',
         desc: 'Whether the spreadsheet was created by copying an existing one',
       },
       created_from_scratch: {
-        type: 'boolean',
+        type: 'bool',
         desc: 'Whether the spreadsheet was created from scratch',
       },
     },

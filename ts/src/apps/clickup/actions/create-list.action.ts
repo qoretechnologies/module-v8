@@ -109,7 +109,7 @@ const createList = QoreAppCreator.createLocalizedAction<typeof options>({
           fields: {
             status: { type: 'string' },
             color: { type: 'string' },
-            hide_label: { type: 'boolean' },
+            hide_label: { type: 'bool' },
           },
         },
       },
@@ -136,7 +136,7 @@ const createList = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       task_count: { type: 'string' },
       due_date: { type: 'string' },
-      due_date_time: { type: 'boolean' },
+      due_date_time: { type: 'bool' },
       start_date: { type: 'string' },
       start_date_time: { type: 'string' },
       folder: {
@@ -145,8 +145,8 @@ const createList = QoreAppCreator.createLocalizedAction<typeof options>({
           fields: {
             id: { type: 'string' },
             name: { type: 'string' },
-            hidden: { type: 'boolean' },
-            access: { type: 'boolean' },
+            hidden: { type: 'bool' },
+            access: { type: 'bool' },
           },
         },
       },
@@ -156,7 +156,7 @@ const createList = QoreAppCreator.createLocalizedAction<typeof options>({
           fields: {
             id: { type: 'string' },
             name: { type: 'string' },
-            access: { type: 'boolean' },
+            access: { type: 'bool' },
           },
         },
       },

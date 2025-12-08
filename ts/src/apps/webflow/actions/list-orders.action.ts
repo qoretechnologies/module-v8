@@ -272,14 +272,14 @@ const listOrders = QoreAppCreator.createLocalizedAction<typeof options>({
                 type: {
                   type: 'hash',
                   fields: {
-                    isBuyNow: { type: 'boolean' },
+                    isBuyNow: { type: 'bool' },
                   },
                 },
               },
-              hasDownloads: { type: 'boolean' },
+              hasDownloads: { type: 'bool' },
               paymentProcessor: { type: 'string' },
-              isCustomerDeleted: { type: 'boolean' },
-              isShippingRequired: { type: 'boolean' },
+              isCustomerDeleted: { type: 'bool' },
+              isShippingRequired: { type: 'bool' },
               totals: {
                 type: {
                   type: 'hash',

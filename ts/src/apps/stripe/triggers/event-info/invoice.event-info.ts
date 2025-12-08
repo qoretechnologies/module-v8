@@ -21,14 +21,14 @@ export const stripeInvoiceEventInfoType = {
           application: { type: 'string' },
           application_fee_amount: { type: 'string' },
           attempt_count: { type: 'number' },
-          attempted: { type: 'boolean' },
-          auto_advance: { type: 'boolean' },
+          attempted: { type: 'bool' },
+          auto_advance: { type: 'bool' },
           automatic_tax: {
             type: {
               type: 'hash',
               fields: {
                 disabled_reason: { type: 'string' },
-                enabled: { type: 'boolean' },
+                enabled: { type: 'bool' },
                 liability: { type: 'string' },
                 status: { type: 'string' },
               },
@@ -126,7 +126,7 @@ export const stripeInvoiceEventInfoType = {
                             element_type: { type: 'string' },
                           },
                         },
-                        discountable: { type: 'boolean' },
+                        discountable: { type: 'bool' },
                         discounts: {
                           type: {
                             type: 'list',
@@ -135,7 +135,7 @@ export const stripeInvoiceEventInfoType = {
                         },
                         invoice: { type: 'string' },
                         invoice_item: { type: 'string' },
-                        livemode: { type: 'boolean' },
+                        livemode: { type: 'bool' },
                         metadata: {
                           type: 'hash',
                         },
@@ -161,12 +161,12 @@ export const stripeInvoiceEventInfoType = {
                             fields: {
                               id: { type: 'string' },
                               object: { type: 'string' },
-                              active: { type: 'boolean' },
+                              active: { type: 'bool' },
                               billing_scheme: { type: 'string' },
                               created: { type: 'number' },
                               currency: { type: 'string' },
                               custom_unit_amount: { type: 'string' },
-                              livemode: { type: 'boolean' },
+                              livemode: { type: 'bool' },
                               lookup_key: { type: 'string' },
                               metadata: {
                                 type: 'hash',
@@ -183,7 +183,7 @@ export const stripeInvoiceEventInfoType = {
                             },
                           },
                         },
-                        proration: { type: 'boolean' },
+                        proration: { type: 'bool' },
                         proration_details: {
                           type: {
                             type: 'hash',
@@ -212,21 +212,21 @@ export const stripeInvoiceEventInfoType = {
                     },
                   },
                 },
-                has_more: { type: 'boolean' },
+                has_more: { type: 'bool' },
                 total_count: { type: 'number' },
                 url: { type: 'string' },
               },
             },
           },
-          livemode: { type: 'boolean' },
+          livemode: { type: 'bool' },
           metadata: {
             type: 'hash',
           },
           next_payment_attempt: { type: 'string' },
           number: { type: 'string' },
           on_behalf_of: { type: 'string' },
-          paid: { type: 'boolean' },
-          paid_out_of_band: { type: 'boolean' },
+          paid: { type: 'bool' },
+          paid_out_of_band: { type: 'bool' },
           payment_intent: { type: 'string' },
           payment_settings: {
             type: {

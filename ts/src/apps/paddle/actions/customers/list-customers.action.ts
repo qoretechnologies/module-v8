@@ -116,7 +116,7 @@ const listCustomers = QoreAppCreator.createLocalizedAction<typeof options>({
         id: { type: 'string' },
         name: { type: 'string' },
         email: { type: 'string' },
-        marketingConsent: { type: 'boolean' },
+        marketingConsent: { type: 'bool' },
         status: { type: 'string' },
         customData: { type: 'hash' },
         locale: { type: 'string' },

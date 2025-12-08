@@ -46,7 +46,7 @@ const options = {
     required: true,
   },
   over_write: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
 } satisfies TQoreOptions;

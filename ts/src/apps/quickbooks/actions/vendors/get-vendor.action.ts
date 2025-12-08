@@ -58,7 +58,7 @@ const getVendor = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       Balance: { type: 'number' },
       AcctNum: { type: 'string' },
-      Vendor1099: { type: 'boolean' },
+      Vendor1099: { type: 'bool' },
       CurrencyRef: {
         type: {
           type: 'hash',
@@ -69,7 +69,7 @@ const getVendor = QoreAppCreator.createLocalizedAction<typeof options>({
         },
       },
       domain: { type: 'string' },
-      sparse: { type: 'boolean' },
+      sparse: { type: 'bool' },
       Id: { type: 'string' },
       SyncToken: { type: 'string' },
       MetaData: {
@@ -86,7 +86,7 @@ const getVendor = QoreAppCreator.createLocalizedAction<typeof options>({
       CompanyName: { type: 'string' },
       DisplayName: { type: 'string' },
       PrintOnCheckName: { type: 'string' },
-      Active: { type: 'boolean' },
+      Active: { type: 'bool' },
       V4IDPseudonym: { type: 'string' },
       PrimaryPhone: {
         type: {

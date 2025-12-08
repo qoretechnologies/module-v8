@@ -35,7 +35,7 @@ const options = {
   },
   disable_web_page_preview: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
 } satisfies TQoreOptions;
@@ -86,7 +86,7 @@ const editMessageText = QoreAppCreator.createLocalizedAction<typeof options>({
           type: 'hash',
           fields: {
             id: { type: 'integer' },
-            is_bot: { type: 'boolean' },
+            is_bot: { type: 'bool' },
             first_name: { type: 'string' },
             username: { type: 'string' },
           },

@@ -44,7 +44,7 @@ const options = {
     required: false,
   },
   add_line_break: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: true,
   },
@@ -53,15 +53,15 @@ const options = {
       type: 'hash',
       fields: {
         bold: {
-          type: 'boolean',
+          type: 'bool',
           required: false,
         },
         italic: {
-          type: 'boolean',
+          type: 'bool',
           required: false,
         },
         underline: {
-          type: 'boolean',
+          type: 'bool',
           required: false,
         },
         font_size: {
@@ -94,7 +94,7 @@ const response_type = {
       type: 'integer',
     },
     success: {
-      type: 'boolean',
+      type: 'bool',
     },
     message: {
       type: 'string',

@@ -21,7 +21,7 @@ const options = {
     required: true,
   },
   is_company: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },
@@ -133,7 +133,7 @@ const options = {
   },
 
   active: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: true,
   },
@@ -276,7 +276,7 @@ const createPartner = QoreAppCreator.createLocalizedAction<typeof options>({
             display_name: { type: 'string' },
             email: { type: 'string' },
             phone: { type: 'string' },
-            is_company: { type: 'boolean' },
+            is_company: { type: 'bool' },
             create_date: { type: 'string' },
             country_id: { type: 'list' },
             state_id: { type: 'list' },

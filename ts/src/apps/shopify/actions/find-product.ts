@@ -88,7 +88,7 @@ const options = {
     ],
   },
   reverse: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },

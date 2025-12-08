@@ -74,7 +74,7 @@ const getPurchaseOrder = QoreAppCreator.createLocalizedAction<typeof options>({
       EmailStatus: { type: 'string' },
       POStatus: { type: 'string' },
       domain: { type: 'string' },
-      sparse: { type: 'boolean' },
+      sparse: { type: 'bool' },
       Id: { type: 'string' },
       SyncToken: { type: 'string' },
       MetaData: {

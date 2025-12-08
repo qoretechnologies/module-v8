@@ -58,15 +58,15 @@ const createFolder = QoreAppCreator.createLocalizedAction<typeof options>({
       id: { type: 'string' },
       name: { type: 'string' },
       orderindex: { type: 'number' },
-      override_statuses: { type: 'boolean' },
-      hidden: { type: 'boolean' },
+      override_statuses: { type: 'bool' },
+      hidden: { type: 'bool' },
       space: {
         type: {
           type: 'hash',
           fields: {
             id: { type: 'string' },
             name: { type: 'string' },
-            access: { type: 'boolean' },
+            access: { type: 'bool' },
           },
         },
       },

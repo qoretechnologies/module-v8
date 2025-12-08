@@ -58,10 +58,10 @@ const getCollection = QoreAppCreator.createLocalizedAction<typeof options>({
             type: 'hash',
             fields: {
               id: { type: 'string' },
-              isRequired: { type: 'boolean' },
+              isRequired: { type: 'bool' },
               type: { type: 'string' },
               displayName: { type: 'string' },
-              isEditable: { type: 'boolean' },
+              isEditable: { type: 'bool' },
               slug: { type: 'string' },
               helpText: { type: 'string' },
               validations: { type: 'hash' },

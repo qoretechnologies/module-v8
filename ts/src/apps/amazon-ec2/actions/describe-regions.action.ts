@@ -7,7 +7,7 @@ import { createEC2Client } from '../helpers/constants';
 const options = {
   all_regions: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
 } satisfies TQoreOptions;

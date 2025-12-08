@@ -34,7 +34,7 @@ const options = {
   },
   object_lock_enabled: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
 } satisfies TQoreOptions;
@@ -99,7 +99,7 @@ const createBucket = QoreAppCreator.createLocalizedAction<typeof options>({
       s3_url: { type: 'string' },
       console_url: { type: 'string' },
       acl: { type: 'string' },
-      object_lock_enabled: { type: 'boolean' },
+      object_lock_enabled: { type: 'bool' },
       created_at: { type: 'string' },
     },
   },

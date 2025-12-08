@@ -50,7 +50,7 @@ const BrevoNewListTrigger = QoreAppCreator.createLocalizedTrigger({
         totalSubscribers: { type: 'number' },
         folderId: { type: 'number' },
         createdAt: { type: 'string' },
-        dynamicList: { type: 'boolean' },
+        dynamicList: { type: 'bool' },
       },
     },
   },

@@ -32,7 +32,7 @@ const stripeCheckoutSessionCompletedTrigger = QoreAppCreator.createLocalizedTrig
                 type: {
                   type: 'hash',
                   fields: {
-                    enabled: { type: 'boolean' },
+                    enabled: { type: 'bool' },
                   },
                 },
               },
@@ -44,7 +44,7 @@ const stripeCheckoutSessionCompletedTrigger = QoreAppCreator.createLocalizedTrig
                 type: {
                   type: 'hash',
                   fields: {
-                    enabled: { type: 'boolean' },
+                    enabled: { type: 'bool' },
                     liability: { type: 'hash' },
                     status: { type: 'hash' },
                   },
@@ -118,7 +118,7 @@ const stripeCheckoutSessionCompletedTrigger = QoreAppCreator.createLocalizedTrig
                 type: {
                   type: 'hash',
                   fields: {
-                    enabled: { type: 'boolean' },
+                    enabled: { type: 'bool' },
                     invoice_data: {
                       type: {
                         type: 'hash',
@@ -141,7 +141,7 @@ const stripeCheckoutSessionCompletedTrigger = QoreAppCreator.createLocalizedTrig
                   },
                 },
               },
-              livemode: { type: 'boolean' },
+              livemode: { type: 'bool' },
               locale: { type: 'string' },
               metadata: {
                 type: {
@@ -188,7 +188,7 @@ const stripeCheckoutSessionCompletedTrigger = QoreAppCreator.createLocalizedTrig
                 type: {
                   type: 'hash',
                   fields: {
-                    enabled: { type: 'boolean' },
+                    enabled: { type: 'bool' },
                   },
                 },
               },

@@ -82,7 +82,7 @@ const getWorkspace = QoreAppCreator.createLocalizedAction<typeof options>({
             fields: {
               id: { type: 'number' },
               name: { type: 'string' },
-              custom: { type: 'boolean' },
+              custom: { type: 'bool' },
             },
           },
         },

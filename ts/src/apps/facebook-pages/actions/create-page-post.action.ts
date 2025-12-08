@@ -27,7 +27,7 @@ const options = {
   },
   published: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: true,
   },
   scheduled_publish_time: {
@@ -205,7 +205,7 @@ const createPagePost = QoreAppCreator.createLocalizedAction<typeof options>({
     type: 'hash',
     fields: {
       success: {
-        type: 'boolean',
+        type: 'bool',
         display_name: 'Success',
         short_desc: 'Whether the request was successful',
       },
@@ -233,7 +233,7 @@ const createPagePost = QoreAppCreator.createLocalizedAction<typeof options>({
             story: { type: 'string' },
             created_time: { type: 'string' },
             permalink_url: { type: 'string' },
-            is_published: { type: 'boolean' },
+            is_published: { type: 'bool' },
             scheduled_publish_time: { type: 'string' },
             full_picture: { type: 'string' },
             status_type: { type: 'string' },
@@ -248,7 +248,7 @@ const createPagePost = QoreAppCreator.createLocalizedAction<typeof options>({
         short_desc: 'The permanent URL of the created post',
       },
       is_published: {
-        type: 'boolean',
+        type: 'bool',
         display_name: 'Is Published',
         short_desc: 'Whether the post is currently published',
       },

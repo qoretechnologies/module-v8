@@ -155,7 +155,7 @@ const createSpreadsheetColumn = QoreAppCreator.createLocalizedAction<typeof opti
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       spreadsheet_id: { type: 'string' },
       sheet_id: { type: 'string' },
       sheet_title: { type: 'string' },

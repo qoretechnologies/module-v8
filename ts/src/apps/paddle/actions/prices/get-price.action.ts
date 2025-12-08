@@ -16,7 +16,7 @@ const options = {
     get_allowed_values: getPaddlePriceIdAllowedValues,
   },
   include_product: {
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
 } satisfies TQoreOptions;
@@ -71,7 +71,7 @@ const getPrice = QoreAppCreator.createLocalizedAction<typeof options>({
           fields: {
             interval: { type: 'string' },
             frequency: { type: 'integer' },
-            requiresPaymentMethod: { type: 'boolean' },
+            requiresPaymentMethod: { type: 'bool' },
           },
         },
       },

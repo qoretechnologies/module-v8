@@ -62,7 +62,7 @@ const deleteFile = QoreAppCreator.createLocalizedAction<typeof options>({
     fields: {
       file_path: { type: 'string' },
       bucket: { type: 'string' },
-      deleted: { type: 'boolean' },
+      deleted: { type: 'bool' },
       message: { type: 'string' },
     },
   },

@@ -7,7 +7,7 @@ import { QuickBooksJournalEntryFieldsAllowedValues } from '../../helpers/get-jou
 
 const options = {
   fetchAll: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },
@@ -122,10 +122,10 @@ const listJournalEntries = QoreAppCreator.createLocalizedAction<typeof options>(
           element_type: {
             type: 'hash',
             fields: {
-              Adjustment: { type: 'boolean' },
+              Adjustment: { type: 'bool' },
               TotalAmt: { type: 'number' },
               domain: { type: 'string' },
-              sparse: { type: 'boolean' },
+              sparse: { type: 'bool' },
               Id: { type: 'string' },
               SyncToken: { type: 'string' },
               MetaData: {

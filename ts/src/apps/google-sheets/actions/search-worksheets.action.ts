@@ -17,7 +17,7 @@ const options = {
   },
   exact_match: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
 } satisfies TQoreOptions;
@@ -162,12 +162,12 @@ const searchWorksheets = QoreAppCreator.createLocalizedAction<typeof options>({
                 short_desc: 'The number of frozen columns in the sheet',
               },
               is_hidden: {
-                type: 'boolean',
+                type: 'bool',
                 display_name: 'Is Hidden',
                 short_desc: 'Whether the sheet is hidden',
               },
               is_tab_color_set: {
-                type: 'boolean',
+                type: 'bool',
                 display_name: 'Has Tab Color',
                 short_desc: 'Whether the sheet has a tab color set',
               },

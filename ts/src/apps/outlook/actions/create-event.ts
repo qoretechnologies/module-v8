@@ -80,7 +80,7 @@ const options = {
     ],
   },
   isOnlineMeeting: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },
@@ -157,7 +157,7 @@ const response_type = {
         },
       },
     },
-    isOnlineMeeting: { type: 'boolean' },
+    isOnlineMeeting: { type: 'bool' },
     onlineMeetingProvider: { type: 'string' },
     body: {
       type: {

@@ -31,7 +31,7 @@ const options = {
   },
   force: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
 } satisfies TQoreOptions;
@@ -101,7 +101,7 @@ const stopInstance = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       region: { type: 'string' },
       action: { type: 'string' },
-      force: { type: 'boolean' },
+      force: { type: 'bool' },
       message: { type: 'string' },
       stopping_instances: {
         type: {

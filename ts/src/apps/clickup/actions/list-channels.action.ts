@@ -30,11 +30,11 @@ const options = {
     default_value: 50,
   },
   is_follower: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   include_hidden: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
 
@@ -113,17 +113,17 @@ const listChannels = QoreAppCreator.createLocalizedAction<typeof options>({
               creator: { type: 'string' },
               created_at: { type: 'string' },
               workspace_id: { type: 'string' },
-              archived: { type: 'boolean' },
+              archived: { type: 'bool' },
               latest_comment_at: { type: 'string' },
-              is_canonical_channel: { type: 'boolean' },
-              is_hidden: { type: 'boolean' },
+              is_canonical_channel: { type: 'bool' },
+              is_hidden: { type: 'bool' },
               default_view: {
                 type: {
                   type: 'hash',
                   fields: {
                     type: { type: 'number' },
                     view_id: { type: 'string' },
-                    standard: { type: 'boolean' },
+                    standard: { type: 'bool' },
                   },
                 },
               },
@@ -138,7 +138,7 @@ const listChannels = QoreAppCreator.createLocalizedAction<typeof options>({
                     root_parent_type: { type: 'string' },
                     date: { type: 'number' },
                     version: { type: 'number' },
-                    has_unread: { type: 'boolean' },
+                    has_unread: { type: 'bool' },
                     num_unread: { type: 'number' },
                     latest_comment_at: { type: 'number' },
                     badge_count: { type: 'number' },

@@ -64,7 +64,7 @@ const listLists = QoreAppCreator.createLocalizedAction<typeof options>({
               totalSubscribers: { type: 'number' },
               folderId: { type: 'number' },
               createdAt: { type: 'string' },
-              dynamicList: { type: 'boolean' },
+              dynamicList: { type: 'bool' },
             },
           },
         },

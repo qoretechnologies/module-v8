@@ -92,12 +92,12 @@ const createInvoice = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      AllowIPNPayment: { type: 'boolean' },
-      AllowOnlinePayment: { type: 'boolean' },
-      AllowOnlineCreditCardPayment: { type: 'boolean' },
-      AllowOnlineACHPayment: { type: 'boolean' },
+      AllowIPNPayment: { type: 'bool' },
+      AllowOnlinePayment: { type: 'bool' },
+      AllowOnlineCreditCardPayment: { type: 'bool' },
+      AllowOnlineACHPayment: { type: 'bool' },
       domain: { type: 'string' },
-      sparse: { type: 'boolean' },
+      sparse: { type: 'bool' },
       Id: { type: 'string' },
       SyncToken: { type: 'string' },
       MetaData: {
@@ -234,7 +234,7 @@ const createInvoice = QoreAppCreator.createLocalizedAction<typeof options>({
                               },
                             },
                           },
-                          PercentBased: { type: 'boolean' },
+                          PercentBased: { type: 'bool' },
                           TaxPercent: { type: 'number' },
                           NetAmountTaxable: { type: 'number' },
                         },
@@ -292,7 +292,7 @@ const createInvoice = QoreAppCreator.createLocalizedAction<typeof options>({
           },
         },
       },
-      FreeFormAddress: { type: 'boolean' },
+      FreeFormAddress: { type: 'bool' },
       SalesTermRef: {
         type: {
           type: 'hash',
@@ -304,7 +304,7 @@ const createInvoice = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       DueDate: { type: 'string' },
       TotalAmt: { type: 'number' },
-      ApplyTaxAfterDiscount: { type: 'boolean' },
+      ApplyTaxAfterDiscount: { type: 'bool' },
       PrintStatus: { type: 'string' },
       EmailStatus: { type: 'string' },
       BillEmail: {

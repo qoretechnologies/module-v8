@@ -45,11 +45,11 @@ const options = {
     required: false,
   },
   emailBlacklisted: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   smsBlacklisted: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   attributes: {
@@ -97,7 +97,7 @@ const updateContact = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
     },
   },
 });

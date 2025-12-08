@@ -113,7 +113,7 @@ const DynamicsNewOpportunityTrigger = QoreAppCreator.createLocalizedTrigger({
         _campaignid_value: { type: 'string' },
         _originatingleadid_value: { type: 'string' },
 
-        isrevenuesystemcalculated: { type: 'boolean' },
+        isrevenuesystemcalculated: { type: 'bool' },
         pricingpercentage: { type: 'number' },
         discountpercentage: { type: 'number' },
         discountamount: { type: 'number' },
@@ -128,7 +128,7 @@ const DynamicsNewOpportunityTrigger = QoreAppCreator.createLocalizedTrigger({
         totalamountlessfreight: { type: 'number' },
         totalamountlessfreight_base: { type: 'number' },
 
-        participatesinworkflow: { type: 'boolean' },
+        participatesinworkflow: { type: 'bool' },
         processid: { type: 'string' },
         stageid: { type: 'string' },
 

@@ -67,7 +67,7 @@ const options = {
   },
   archived: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
   },
   group_assignees: {
     type: {
@@ -98,7 +98,7 @@ const options = {
     required: false,
   },
   notify_all: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   parent: {
@@ -116,7 +116,7 @@ const options = {
     get_allowed_values: getClickUpTaskIdAllowedValues,
   },
   check_required_custom_fields: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   custom_fields: {
@@ -247,7 +247,7 @@ const updateTask = QoreAppCreator.createLocalizedAction<typeof options>({
           element_type: 'hash',
         },
       },
-      archived: { type: 'boolean' },
+      archived: { type: 'bool' },
       group_assignees: {
         type: {
           type: 'list',
@@ -300,9 +300,9 @@ const updateTask = QoreAppCreator.createLocalizedAction<typeof options>({
               type: { type: 'string' },
               type_config: { type: 'hash' },
               date_created: { type: 'string' },
-              hide_from_guests: { type: 'boolean' },
+              hide_from_guests: { type: 'bool' },
               value: { type: 'hash' },
-              required: { type: 'boolean' },
+              required: { type: 'bool' },
             },
           },
         },

@@ -67,7 +67,7 @@ const getMessage = QoreAppCreator.createLocalizedAction<typeof options>({
             displayName: { type: 'string' },
             domainId: { type: 'string' },
             type: { type: 'string' },
-            isAnonymous: { type: 'boolean' },
+            isAnonymous: { type: 'bool' },
           },
         },
       },
@@ -128,7 +128,7 @@ const getMessage = QoreAppCreator.createLocalizedAction<typeof options>({
       matchedUrl: {
         type: 'hash',
       },
-      threadReply: { type: 'boolean' },
+      threadReply: { type: 'bool' },
       clientAssignedMessageId: { type: 'string' },
       emojiReactionSummaries: {
         type: {
@@ -144,7 +144,7 @@ const getMessage = QoreAppCreator.createLocalizedAction<typeof options>({
             displayName: { type: 'string' },
             domainId: { type: 'string' },
             type: { type: 'string' },
-            isAnonymous: { type: 'boolean' },
+            isAnonymous: { type: 'bool' },
           },
         },
       },

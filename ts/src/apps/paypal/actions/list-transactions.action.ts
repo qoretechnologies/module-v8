@@ -460,7 +460,7 @@ const listTransactions = QoreAppCreator.createLocalizedAction<typeof options>({
                         },
                       },
                     },
-                    tax_inclusive: { type: 'boolean' },
+                    tax_inclusive: { type: 'bool' },
                     paypal_invoice_id: { type: 'string' },
                   },
                 },

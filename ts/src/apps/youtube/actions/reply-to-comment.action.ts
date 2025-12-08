@@ -75,7 +75,7 @@ const replyToComment = QoreAppCreator.createLocalizedAction<typeof options>({
                 },
               },
             },
-            canRate: { type: 'boolean' },
+            canRate: { type: 'bool' },
             viewerRating: { type: 'string' },
             likeCount: { type: 'integer' },
             publishedAt: { type: 'string' },

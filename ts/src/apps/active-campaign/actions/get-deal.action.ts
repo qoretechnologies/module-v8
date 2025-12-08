@@ -87,7 +87,7 @@ const getDeal = QoreAppCreator.createLocalizedAction<typeof options>({
         },
       },
       id: { type: 'string' },
-      isDisabled: { type: 'boolean' },
+      isDisabled: { type: 'bool' },
       account: { type: 'string' },
       customerAccount: { type: 'string' },
     },

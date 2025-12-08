@@ -31,7 +31,7 @@ const options = {
 
   include_hidden: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   fields: {
@@ -163,7 +163,7 @@ const searchPagePosts = QoreAppCreator.createLocalizedAction<typeof options>({
     type: 'hash',
     fields: {
       success: {
-        type: 'boolean',
+        type: 'bool',
         display_name: 'Success',
         short_desc: 'Whether the request was successful',
       },
@@ -195,9 +195,9 @@ const searchPagePosts = QoreAppCreator.createLocalizedAction<typeof options>({
               updated_time: { type: 'string' },
               permalink_url: { type: 'string' },
               full_picture: { type: 'string' },
-              is_published: { type: 'boolean' },
-              is_hidden: { type: 'boolean' },
-              is_popular: { type: 'boolean' },
+              is_published: { type: 'bool' },
+              is_hidden: { type: 'bool' },
+              is_popular: { type: 'bool' },
               status_type: { type: 'string' },
               type: { type: 'string' },
               likes_count: { type: 'integer' },
@@ -217,7 +217,7 @@ const searchPagePosts = QoreAppCreator.createLocalizedAction<typeof options>({
             since: { type: 'string' },
             until: { type: 'string' },
             search_text: { type: 'string' },
-            include_hidden: { type: 'boolean' },
+            include_hidden: { type: 'bool' },
             fields_requested: {
               type: {
                 type: 'list',

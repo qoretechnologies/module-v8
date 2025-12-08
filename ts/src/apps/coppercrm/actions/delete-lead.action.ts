@@ -55,7 +55,7 @@ const DeleteLead = QoreAppCreator.createLocalizedAction<typeof options>({
         type: 'string',
       },
       is_deleted: {
-        type: 'boolean',
+        type: 'bool',
       },
     },
   },

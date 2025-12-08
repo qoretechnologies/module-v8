@@ -46,11 +46,11 @@ const options = {
     required: false,
   },
   hasAttachments: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   isRead: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   attachmentNames: {
@@ -86,7 +86,7 @@ const options = {
     required: false,
   },
   includeAttachments: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },

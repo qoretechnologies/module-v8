@@ -239,15 +239,15 @@ const elementType = {
       },
     },
     archived: {
-      type: 'boolean',
+      type: 'bool',
       example_value: false,
     },
     in_trash: {
-      type: 'boolean',
+      type: 'bool',
       example_value: false,
     },
     is_locked: {
-      type: 'boolean',
+      type: 'bool',
       example_value: false,
     },
     properties: {
@@ -315,7 +315,7 @@ const listDataSourceItems = QoreAppCreator.createLocalizedAction<typeof options>
     type: 'hash',
     fields: {
       next_cursor: { type: 'string', example_value: 'd8f3f2c3-8b4d-4e0d-9f1b-1c3e5f6a7b8c' },
-      has_more: { type: 'boolean', example_value: false },
+      has_more: { type: 'bool', example_value: false },
       results: {
         type: {
           type: 'list',
@@ -331,7 +331,7 @@ const listDataSourceItems = QoreAppCreator.createLocalizedAction<typeof options>
       type: 'hash',
       fields: {
         next_cursor: { type: 'string', example_value: 'd8f3f2c3-8b4d-4e0d-9f1b-1c3e5f6a7b8c' },
-        has_more: { type: 'boolean', example_value: false },
+        has_more: { type: 'bool', example_value: false },
         results: {
           type: {
             type: 'list',

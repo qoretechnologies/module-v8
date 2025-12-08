@@ -59,7 +59,7 @@ const getBill = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       Balance: { type: 'number' },
       domain: { type: 'string' },
-      sparse: { type: 'boolean' },
+      sparse: { type: 'bool' },
       Id: { type: 'string' },
       SyncToken: { type: 'string' },
       MetaData: {

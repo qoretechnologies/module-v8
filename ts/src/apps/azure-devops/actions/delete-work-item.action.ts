@@ -57,7 +57,7 @@ const DeleteWorkItem = QoreAppCreator.createLocalizedAction<typeof options>({
     fields: {
       id: { type: 'number' },
       project: { type: 'string' },
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
     },
   },
 });

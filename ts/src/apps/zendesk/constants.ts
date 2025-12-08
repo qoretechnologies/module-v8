@@ -40,7 +40,7 @@ export const ZENDESK_ALLOWED_PATHS = {
                 required: false,
               },
               public: {
-                type: 'boolean',
+                type: 'bool',
                 required: false,
               },
             },
@@ -89,7 +89,7 @@ export const ZENDESK_ALLOWED_PATHS = {
                 required: false,
               },
               public: {
-                type: 'boolean',
+                type: 'bool',
                 required: false,
               },
             },
@@ -155,11 +155,11 @@ export const ZENDESK_ALLOWED_PATHS = {
                 required: false,
               },
               default: {
-                type: 'boolean',
+                type: 'bool',
                 required: false,
               },
               is_public: {
-                type: 'boolean',
+                type: 'bool',
                 required: false,
               },
               user_ids: {
@@ -195,11 +195,11 @@ export const ZENDESK_ALLOWED_PATHS = {
                 required: false,
               },
               default: {
-                type: 'boolean',
+                type: 'bool',
                 required: false,
               },
               is_public: {
-                type: 'boolean',
+                type: 'bool',
                 required: false,
               },
               user_ids: {

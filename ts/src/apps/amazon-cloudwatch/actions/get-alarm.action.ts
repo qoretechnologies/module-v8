@@ -106,7 +106,7 @@ const getAlarm = QoreAppCreator.createLocalizedAction<typeof options>({
       alarm_name: { type: 'string' },
       alarm_description: { type: 'string' },
       alarm_arn: { type: 'string' },
-      actions_enabled: { type: 'boolean' },
+      actions_enabled: { type: 'bool' },
       ok_actions: {
         type: {
           type: 'list',

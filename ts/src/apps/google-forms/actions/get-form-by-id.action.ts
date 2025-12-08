@@ -21,7 +21,7 @@ const options = {
   },
   include_questions: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: true,
   },
 } satisfies TQoreOptions;
@@ -33,8 +33,8 @@ const response_type = {
     title: { type: 'string' },
     description: { type: 'string' },
     document_title: { type: 'string' },
-    is_accepting_responses: { type: 'boolean' },
-    is_published: { type: 'boolean' },
+    is_accepting_responses: { type: 'bool' },
+    is_published: { type: 'bool' },
     linked_sheet_id: { type: 'string' },
     edit_url: { type: 'string' },
     view_url: { type: 'string' },
@@ -43,7 +43,7 @@ const response_type = {
         type: 'hash',
         fields: {
           email_collection: { type: 'string' },
-          is_quiz: { type: 'boolean' },
+          is_quiz: { type: 'bool' },
         },
       },
     },
@@ -57,7 +57,7 @@ const response_type = {
             title: { type: 'string' },
             type: { type: 'string' },
             help_text: { type: 'string' },
-            required: { type: 'boolean' },
+            required: { type: 'bool' },
             choices: {
               type: {
                 type: 'list',
@@ -71,7 +71,7 @@ const response_type = {
             correct_answer: { type: 'string' },
             points: { type: 'number' },
             feedback: { type: 'string' },
-            shuffle_choices: { type: 'boolean' },
+            shuffle_choices: { type: 'bool' },
           },
         },
       },

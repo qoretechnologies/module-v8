@@ -218,7 +218,7 @@ const updatePrice = QoreAppCreator.createLocalizedAction<typeof options>({
           fields: {
             interval: { type: 'string' },
             frequency: { type: 'integer' },
-            requiresPaymentMethod: { type: 'boolean' },
+            requiresPaymentMethod: { type: 'bool' },
           },
         },
       },

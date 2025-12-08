@@ -161,7 +161,7 @@ const dropboxNewFileInFolderTrigger = QoreAppCreator.createLocalizedTrigger({
           type: 'number',
         },
         is_downloadable: {
-          type: 'boolean',
+          type: 'bool',
         },
         content_hash: {
           type: 'string',

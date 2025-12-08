@@ -41,7 +41,7 @@ const options = {
   },
   bypass_governance_retention: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
 } satisfies TQoreOptions;
@@ -104,10 +104,10 @@ const deleteObject = QoreAppCreator.createLocalizedAction<typeof options>({
       object_key: { type: 'string' },
       s3_url: { type: 'string' },
       version_id: { type: 'string' },
-      delete_marker: { type: 'boolean' },
+      delete_marker: { type: 'bool' },
       request_charged: { type: 'string' },
       deleted_at: { type: 'string' },
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       message: { type: 'string' },
     },
   },

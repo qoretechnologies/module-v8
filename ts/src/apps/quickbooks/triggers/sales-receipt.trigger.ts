@@ -82,7 +82,7 @@ const QuickbooksSalesReceiptTrigger = QoreAppCreator.createLocalizedTrigger({
       type: 'hash',
       fields: {
         domain: { type: 'string' },
-        sparse: { type: 'boolean' },
+        sparse: { type: 'bool' },
         Id: { type: 'string' },
         SyncToken: { type: 'string' },
         MetaData: {
@@ -201,9 +201,9 @@ const QuickbooksSalesReceiptTrigger = QoreAppCreator.createLocalizedTrigger({
             },
           },
         },
-        FreeFormAddress: { type: 'boolean' },
+        FreeFormAddress: { type: 'bool' },
         TotalAmt: { type: 'number' },
-        ApplyTaxAfterDiscount: { type: 'boolean' },
+        ApplyTaxAfterDiscount: { type: 'bool' },
         PrintStatus: { type: 'string' },
         EmailStatus: { type: 'string' },
         Balance: { type: 'number' },

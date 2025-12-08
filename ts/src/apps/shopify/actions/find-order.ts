@@ -109,7 +109,7 @@ const options = {
   },
 
   test: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   location_id: {
@@ -155,7 +155,7 @@ const options = {
     ],
   },
   reverse: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: true,
   },

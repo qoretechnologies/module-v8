@@ -47,7 +47,7 @@ export const pipedrivePersonDataType = {
                 type: 'string',
               },
               primary: {
-                type: 'boolean',
+                type: 'bool',
               },
             },
           },
@@ -87,7 +87,7 @@ export const pipedrivePersonDataType = {
                 type: 'string',
               },
               primary: {
-                type: 'boolean',
+                type: 'bool',
               },
             },
           },

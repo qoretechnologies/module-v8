@@ -12,7 +12,7 @@ const action = 'list_tables';
 
 const options = {
   include_system_tables: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },

@@ -97,7 +97,7 @@ const NewCommitComment = QoreAppCreator.createLocalizedTrigger({
                 },
               },
               id: { type: 'integer' },
-              locked: { type: 'boolean' },
+              locked: { type: 'bool' },
               name: { type: 'string' },
               public_email: { type: 'string' },
               state: { type: 'string' },

@@ -23,7 +23,7 @@ const refundOrderOptions = {
 
 const fullfillOrderOptions = {
   sendOrderFulfilledEmail: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     preselected: true,
   },
@@ -305,12 +305,12 @@ const markOrderStatus = QoreAppCreator.createLocalizedAction<
         type: {
           type: 'hash',
           fields: {
-            isBuyNow: { type: 'boolean' },
+            isBuyNow: { type: 'bool' },
           },
         },
       },
-      isCustomerDeleted: { type: 'boolean' },
-      isShippingRequired: { type: 'boolean' },
+      isCustomerDeleted: { type: 'bool' },
+      isShippingRequired: { type: 'bool' },
       totals: {
         type: {
           type: 'hash',

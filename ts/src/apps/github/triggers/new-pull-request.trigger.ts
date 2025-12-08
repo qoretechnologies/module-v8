@@ -113,7 +113,7 @@ const githubNewPullRequestTrigger = QoreAppCreator.createLocalizedTrigger({
                 example_value: 'open',
               },
               locked: {
-                type: 'boolean',
+                type: 'bool',
                 example_value: false,
               },
               title: {

@@ -55,7 +55,7 @@ const options = {
     required: false,
   },
   isOnlineMeeting: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: true,
   },
@@ -87,7 +87,7 @@ const response_type = {
       },
     },
     success: {
-      type: 'boolean',
+      type: 'bool',
     },
     error: {
       type: 'string',

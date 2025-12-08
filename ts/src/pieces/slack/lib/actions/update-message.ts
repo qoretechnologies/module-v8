@@ -9,7 +9,7 @@ const updateMessageResponseType = {
   type: 'hash',
   fields: {
     ok: {
-      type: 'boolean',
+      type: 'bool',
       display_name: 'Success',
       short_desc: 'Indicates if the message was updated successfully',
       desc: 'Indicates if the message was updated successfully',

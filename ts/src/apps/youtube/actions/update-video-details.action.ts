@@ -36,7 +36,7 @@ const options = {
     required: false,
   },
   forKids: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   tags: {

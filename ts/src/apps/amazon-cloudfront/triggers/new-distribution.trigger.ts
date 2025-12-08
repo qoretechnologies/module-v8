@@ -59,7 +59,7 @@ const AmazonCloudFrontNewDistributionTrigger = QoreAppCreator.createLocalizedTri
         domain_name: { type: 'string' },
         comment: { type: 'string' },
         status: { type: 'string' },
-        enabled: { type: 'boolean' },
+        enabled: { type: 'bool' },
         last_modified_time: { type: 'string' },
         price_class: { type: 'string' },
         origins_count: { type: 'integer' },

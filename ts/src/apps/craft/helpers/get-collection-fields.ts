@@ -110,7 +110,7 @@ export const mapCraftCollectionFieldToQoreOption = (
       };
     case 'boolean':
       return {
-        type: 'boolean',
+        type: 'bool',
         display_name,
       };
     case 'number':

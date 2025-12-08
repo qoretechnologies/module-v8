@@ -91,19 +91,19 @@ export const response_type = {
                 type: 'hash',
                 fields: {
                   bold: {
-                    type: 'boolean',
+                    type: 'bool',
                   },
                   italic: {
-                    type: 'boolean',
+                    type: 'bool',
                   },
                   strikethrough: {
-                    type: 'boolean',
+                    type: 'bool',
                   },
                   underline: {
-                    type: 'boolean',
+                    type: 'bool',
                   },
                   code: {
-                    type: 'boolean',
+                    type: 'bool',
                   },
                   color: {
                     type: 'string',

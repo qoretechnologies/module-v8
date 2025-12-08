@@ -71,8 +71,8 @@ const listUserOrganizations = QoreAppCreator.createLocalizedAction({
         organizationType: { type: 'string' },
         entityStatus: { type: 'string' },
         organizationStatus: { type: 'string' },
-        autoCreated: { type: 'boolean' },
-        parentCareersUsed: { type: 'boolean' },
+        autoCreated: { type: 'bool' },
+        parentCareersUsed: { type: 'bool' },
         foundedOn: {
           type: {
             type: 'hash',
@@ -192,7 +192,7 @@ const listUserOrganizations = QoreAppCreator.createLocalizedAction({
           type: {
             type: 'hash',
             fields: {
-              active: { type: 'boolean' },
+              active: { type: 'bool' },
               redirectUrl: { type: 'string' },
               ctaType: { type: 'string' },
             },

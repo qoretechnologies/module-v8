@@ -199,7 +199,7 @@ const mailchimpNewSubscriberTrigger = QoreAppCreator.createLocalizedTrigger({
                 },
               },
               member_rating: { type: 'number' },
-              vip: { type: 'boolean' },
+              vip: { type: 'bool' },
               location: {
                 type: {
                   type: 'hash',

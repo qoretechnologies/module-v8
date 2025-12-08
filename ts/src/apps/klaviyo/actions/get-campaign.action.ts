@@ -46,7 +46,7 @@ const getCampaign = QoreAppCreator.createLocalizedAction<typeof options>({
 
       name: { type: 'string' },
       status: { type: 'string' },
-      archived: { type: 'boolean' },
+      archived: { type: 'bool' },
       audiences: {
         type: {
           type: 'hash',
@@ -70,7 +70,7 @@ const getCampaign = QoreAppCreator.createLocalizedAction<typeof options>({
         type: {
           type: 'hash',
           fields: {
-            useSmartSending: { type: 'boolean' },
+            useSmartSending: { type: 'bool' },
           },
         },
       },
@@ -78,7 +78,7 @@ const getCampaign = QoreAppCreator.createLocalizedAction<typeof options>({
         type: {
           type: 'hash',
           fields: {
-            addTrackingParams: { type: 'boolean' },
+            addTrackingParams: { type: 'bool' },
             customTrackingParams: {
               type: {
                 type: 'list',
@@ -92,8 +92,8 @@ const getCampaign = QoreAppCreator.createLocalizedAction<typeof options>({
                 },
               },
             },
-            isTrackingClicks: { type: 'boolean' },
-            isTrackingOpens: { type: 'boolean' },
+            isTrackingClicks: { type: 'bool' },
+            isTrackingOpens: { type: 'bool' },
           },
         },
       },
@@ -107,7 +107,7 @@ const getCampaign = QoreAppCreator.createLocalizedAction<typeof options>({
               type: {
                 type: 'hash',
                 fields: {
-                  sendPastRecipientsImmediately: { type: 'boolean' },
+                  sendPastRecipientsImmediately: { type: 'bool' },
                 },
               },
             },

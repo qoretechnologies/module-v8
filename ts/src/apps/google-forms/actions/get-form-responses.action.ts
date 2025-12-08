@@ -71,12 +71,12 @@ const options = {
   },
   include_questions: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   include_answers: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
 } satisfies TQoreOptions;
@@ -89,7 +89,7 @@ const response_type = {
     description: { type: 'string' },
     document_title: { type: 'string' },
     responder_uri: { type: 'string' },
-    is_quiz: { type: 'boolean' },
+    is_quiz: { type: 'bool' },
     responses: {
       type: {
         type: 'list',
@@ -111,7 +111,7 @@ const response_type = {
                     question_type: { type: 'string' },
                     text_value: { type: 'string' },
                     grade: { type: 'number' },
-                    correct_answer: { type: 'boolean' },
+                    correct_answer: { type: 'bool' },
                     feedback: { type: 'string' },
                   },
                 },
@@ -131,7 +131,7 @@ const response_type = {
             title: { type: 'string' },
             type: { type: 'string' },
             help_text: { type: 'string' },
-            required: { type: 'boolean' },
+            required: { type: 'bool' },
             choices: {
               type: {
                 type: 'list',
@@ -145,14 +145,14 @@ const response_type = {
             correct_answer: { type: 'string' },
             points: { type: 'number' },
             feedback: { type: 'string' },
-            shuffle_choices: { type: 'boolean' },
+            shuffle_choices: { type: 'bool' },
           },
         },
       },
     },
     count: { type: 'number' },
     next_page_token: { type: 'string' },
-    has_more: { type: 'boolean' },
+    has_more: { type: 'bool' },
   },
 } satisfies TQoreResponseType;
 

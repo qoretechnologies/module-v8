@@ -108,7 +108,7 @@ const DisputeTrigger = QoreAppCreator.createLocalizedTrigger({
                           element_type: 'hash',
                         },
                       },
-                      seller_protection_eligible: { type: 'boolean' },
+                      seller_protection_eligible: { type: 'bool' },
                     },
                   },
                 },

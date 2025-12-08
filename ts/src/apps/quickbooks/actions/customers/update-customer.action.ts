@@ -126,7 +126,7 @@ const updateCustomer = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      Taxable: { type: 'boolean' },
+      Taxable: { type: 'bool' },
       BillAddr: {
         type: {
           type: 'hash',
@@ -155,8 +155,8 @@ const updateCustomer = QoreAppCreator.createLocalizedAction<typeof options>({
           },
         },
       },
-      Job: { type: 'boolean' },
-      BillWithParent: { type: 'boolean' },
+      Job: { type: 'bool' },
+      BillWithParent: { type: 'bool' },
       Balance: { type: 'number' },
       BalanceWithJobs: { type: 'number' },
       CurrencyRef: {
@@ -169,10 +169,10 @@ const updateCustomer = QoreAppCreator.createLocalizedAction<typeof options>({
         },
       },
       PreferredDeliveryMethod: { type: 'string' },
-      IsProject: { type: 'boolean' },
+      IsProject: { type: 'bool' },
       ClientEntityId: { type: 'string' },
       domain: { type: 'string' },
-      sparse: { type: 'boolean' },
+      sparse: { type: 'bool' },
       Id: { type: 'string' },
       SyncToken: { type: 'string' },
       MetaData: {
@@ -190,7 +190,7 @@ const updateCustomer = QoreAppCreator.createLocalizedAction<typeof options>({
       CompanyName: { type: 'string' },
       DisplayName: { type: 'string' },
       PrintOnCheckName: { type: 'string' },
-      Active: { type: 'boolean' },
+      Active: { type: 'bool' },
       V4IDPseudonym: { type: 'string' },
       PrimaryPhone: {
         type: {

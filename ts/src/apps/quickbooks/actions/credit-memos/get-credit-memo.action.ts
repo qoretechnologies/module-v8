@@ -44,7 +44,7 @@ const getCreditMemo = QoreAppCreator.createLocalizedAction<typeof options>({
     fields: {
       RemainingCredit: { type: 'number' },
       domain: { type: 'string' },
-      sparse: { type: 'boolean' },
+      sparse: { type: 'bool' },
       Id: { type: 'string' },
       SyncToken: { type: 'string' },
       MetaData: {
@@ -180,9 +180,9 @@ const getCreditMemo = QoreAppCreator.createLocalizedAction<typeof options>({
           },
         },
       },
-      FreeFormAddress: { type: 'boolean' },
+      FreeFormAddress: { type: 'bool' },
       TotalAmt: { type: 'number' },
-      ApplyTaxAfterDiscount: { type: 'boolean' },
+      ApplyTaxAfterDiscount: { type: 'bool' },
       PrintStatus: { type: 'string' },
       EmailStatus: { type: 'string' },
       BillEmail: {

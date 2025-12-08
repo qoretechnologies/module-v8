@@ -89,7 +89,7 @@ const getPartner = QoreAppCreator.createLocalizedAction<typeof options>({
       display_name: { type: 'string' },
       email: { type: 'string' },
       phone: { type: 'string' },
-      is_company: { type: 'boolean' },
+      is_company: { type: 'bool' },
     },
   } satisfies TQoreResponseType,
 });

@@ -24,7 +24,7 @@ export const issueEventInfoType = {
             },
           },
           displayName: { type: 'string' },
-          active: { type: 'boolean' },
+          active: { type: 'bool' },
           timeZone: { type: 'string' },
           accountType: { type: 'string' },
         },
@@ -51,7 +51,7 @@ export const issueEventInfoType = {
                       description: { type: 'string' },
                       iconUrl: { type: 'string' },
                       name: { type: 'string' },
-                      subtask: { type: 'boolean' },
+                      subtask: { type: 'bool' },
                       avatarId: { type: 'number' },
                       entityId: { type: 'string' },
                       hierarchyLevel: { type: 'number' },
@@ -69,7 +69,7 @@ export const issueEventInfoType = {
                       key: { type: 'string' },
                       name: { type: 'string' },
                       projectTypeKey: { type: 'string' },
-                      simplified: { type: 'boolean' },
+                      simplified: { type: 'bool' },
                       avatarUrls: {
                         type: {
                           type: 'hash',
@@ -113,7 +113,7 @@ export const issueEventInfoType = {
                           fields: {},
                         },
                       },
-                      shouldDisplay: { type: 'boolean' },
+                      shouldDisplay: { type: 'bool' },
                     },
                   },
                 },
@@ -124,7 +124,7 @@ export const issueEventInfoType = {
                     fields: {
                       self: { type: 'string' },
                       watchCount: { type: 'number' },
-                      isWatching: { type: 'boolean' },
+                      isWatching: { type: 'bool' },
                     },
                   },
                 },
@@ -159,8 +159,8 @@ export const issueEventInfoType = {
                   type: {
                     type: 'hash',
                     fields: {
-                      hasEpicLinkFieldDependency: { type: 'boolean' },
-                      showField: { type: 'boolean' },
+                      hasEpicLinkFieldDependency: { type: 'bool' },
+                      showField: { type: 'bool' },
                       nonEditableReason: {
                         type: {
                           type: 'hash',
@@ -275,7 +275,7 @@ export const issueEventInfoType = {
                         },
                       },
                       displayName: { type: 'string' },
-                      active: { type: 'boolean' },
+                      active: { type: 'bool' },
                       timeZone: { type: 'string' },
                       accountType: { type: 'string' },
                     },
@@ -310,7 +310,7 @@ export const issueEventInfoType = {
                         },
                       },
                       displayName: { type: 'string' },
-                      active: { type: 'boolean' },
+                      active: { type: 'bool' },
                       timeZone: { type: 'string' },
                       accountType: { type: 'string' },
                     },
@@ -358,7 +358,7 @@ export const issueEventInfoType = {
                     fields: {
                       self: { type: 'string' },
                       votes: { type: 'number' },
-                      hasVoted: { type: 'boolean' },
+                      hasVoted: { type: 'bool' },
                     },
                   },
                 },

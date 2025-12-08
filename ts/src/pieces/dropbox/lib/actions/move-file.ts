@@ -73,7 +73,7 @@ const dropboxMoveFileResponseType = {
             display_name: 'Is Downloadable',
             desc: 'Whether the file can be downloaded',
             short_desc: 'Whether the file can be downloaded',
-            type: 'boolean',
+            type: 'bool',
             example_value: true,
           },
           content_hash: {

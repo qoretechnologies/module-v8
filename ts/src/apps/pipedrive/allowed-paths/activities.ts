@@ -69,7 +69,7 @@ const activitiesOptions = {
             get_allowed_values: getPipedrivePersonIdAllowedValues,
           },
           primary_flag: {
-            type: 'boolean',
+            type: 'bool',
             required: true,
             default_value: false,
           },

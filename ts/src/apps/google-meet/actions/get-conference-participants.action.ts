@@ -20,7 +20,7 @@ const options = {
     required: false,
   },
   include_time_spent: {
-    type: 'boolean',
+    type: 'bool',
     preselected: true,
     required: false,
     default_value: true,

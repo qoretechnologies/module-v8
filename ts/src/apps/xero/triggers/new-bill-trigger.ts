@@ -158,15 +158,15 @@ const xeroNewBillTrigger = QoreAppCreator.createLocalizedTrigger({
         AmountPaid: { type: 'number' },
         AmountCredited: { type: 'number' },
         CurrencyRate: { type: 'number' },
-        IsDiscounted: { type: 'boolean' },
-        HasAttachments: { type: 'boolean' },
+        IsDiscounted: { type: 'bool' },
+        HasAttachments: { type: 'bool' },
         InvoiceAddresses: {
           type: {
             type: 'list',
             element_type: { type: 'hash' },
           },
         },
-        HasErrors: { type: 'boolean' },
+        HasErrors: { type: 'bool' },
         InvoicePaymentServices: {
           type: {
             type: 'list',
@@ -203,7 +203,7 @@ const xeroNewBillTrigger = QoreAppCreator.createLocalizedTrigger({
                   element_type: { type: 'hash' },
                 },
               },
-              HasValidationErrors: { type: 'boolean' },
+              HasValidationErrors: { type: 'bool' },
             },
           },
         },

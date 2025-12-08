@@ -91,7 +91,7 @@ const sendMessage = QoreAppCreator.createLocalizedAction<typeof options>({
             displayName: { type: 'string' },
             domainId: { type: 'string' },
             type: { type: 'string' },
-            isAnonymous: { type: 'boolean' },
+            isAnonymous: { type: 'bool' },
           },
         },
       },

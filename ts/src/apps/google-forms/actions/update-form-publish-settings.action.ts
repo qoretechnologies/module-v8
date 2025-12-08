@@ -15,12 +15,12 @@ const options = {
   },
   is_accepting_responses: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     required_groups: ['publish_settings'],
   },
   is_published: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     required_groups: ['publish_settings'],
   },
 } satisfies TQoreOptions;
@@ -102,9 +102,9 @@ const updateFormPublishSettings = QoreAppCreator.createLocalizedAction<typeof op
     type: 'hash',
     fields: {
       form_id: { type: 'string' },
-      success: { type: 'boolean' },
-      isAcceptingResponses: { type: 'boolean' },
-      isPublished: { type: 'boolean' },
+      success: { type: 'bool' },
+      isAcceptingResponses: { type: 'bool' },
+      isPublished: { type: 'bool' },
       updated_settings: {
         type: {
           type: 'list',

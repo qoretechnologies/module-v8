@@ -130,7 +130,7 @@ const createMessage = QoreAppCreator.createLocalizedAction<typeof options>({
       message_group_id: { type: 'string' },
       message_deduplication_id: { type: 'string' },
       sent_at: { type: 'string' },
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
     },
   },
 });

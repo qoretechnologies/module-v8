@@ -82,9 +82,9 @@ const QuickbooksItemTrigger = QoreAppCreator.createLocalizedTrigger({
       type: 'hash',
       fields: {
         Name: { type: 'string' },
-        Active: { type: 'boolean' },
+        Active: { type: 'bool' },
         FullyQualifiedName: { type: 'string' },
-        Taxable: { type: 'boolean' },
+        Taxable: { type: 'bool' },
         UnitPrice: { type: 'number' },
         Type: { type: 'string' },
         IncomeAccountRef: {
@@ -97,9 +97,9 @@ const QuickbooksItemTrigger = QoreAppCreator.createLocalizedTrigger({
           },
         },
         PurchaseCost: { type: 'number' },
-        TrackQtyOnHand: { type: 'boolean' },
+        TrackQtyOnHand: { type: 'bool' },
         domain: { type: 'string' },
-        sparse: { type: 'boolean' },
+        sparse: { type: 'bool' },
         Id: { type: 'string' },
         SyncToken: { type: 'string' },
         MetaData: {

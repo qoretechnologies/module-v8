@@ -32,8 +32,8 @@ export const getWebflowItemFieldsResponseType: TQoreGetDynamicResponseTypeFuncti
         },
       },
       cmsLocaleId: { type: 'string' },
-      isArchived: { type: 'boolean' },
-      isDraft: { type: 'boolean' },
+      isArchived: { type: 'bool' },
+      isDraft: { type: 'bool' },
     },
   };
 };

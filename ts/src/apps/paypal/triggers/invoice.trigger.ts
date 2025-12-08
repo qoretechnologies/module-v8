@@ -101,7 +101,7 @@ const InvoiceTrigger = QoreAppCreator.createLocalizedTrigger({
           type: {
             type: 'hash',
             fields: {
-              tax_calculated_after_discount: { type: 'boolean' },
+              tax_calculated_after_discount: { type: 'bool' },
               metadata: {
                 type: {
                   type: 'hash',
@@ -122,7 +122,7 @@ const InvoiceTrigger = QoreAppCreator.createLocalizedTrigger({
                   },
                 },
               },
-              tax_inclusive: { type: 'boolean' },
+              tax_inclusive: { type: 'bool' },
               merchant_info: {
                 type: {
                   type: 'hash',

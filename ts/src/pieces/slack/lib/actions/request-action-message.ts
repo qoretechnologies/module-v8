@@ -9,7 +9,7 @@ const requestMessageActionResponseType = {
   type: 'hash',
   fields: {
     ok: {
-      type: 'boolean',
+      type: 'bool',
       display_name: 'Success',
       short_desc: 'Indicates if the action was successfully requested',
       desc: 'Indicates if the action was successfully requested',
@@ -114,7 +114,7 @@ const requestMessageActionResponseType = {
                   example_value: 'bot',
                 },
                 deleted: {
-                  type: 'boolean',
+                  type: 'bool',
                   display_name: 'Deleted',
                   short_desc: 'Indicates if the bot is deleted',
                   desc: 'Indicates if the bot is deleted',

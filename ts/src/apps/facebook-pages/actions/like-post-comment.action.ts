@@ -209,17 +209,17 @@ const likeComment = QoreAppCreator.createLocalizedAction<typeof options>({
         short_desc: 'Number of likes after the action',
       },
       user_likes: {
-        type: 'boolean',
+        type: 'bool',
         display_name: 'User Likes',
         short_desc: 'Whether the current user likes this comment after the action',
       },
       already_liked: {
-        type: 'boolean',
+        type: 'bool',
         display_name: 'Already Liked',
         short_desc: 'Whether the comment was already liked (when trying to like)',
       },
       already_unliked: {
-        type: 'boolean',
+        type: 'bool',
         display_name: 'Already Unliked',
         short_desc: 'Whether the comment was already not liked (when trying to unlike)',
       },

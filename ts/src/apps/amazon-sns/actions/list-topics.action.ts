@@ -19,7 +19,7 @@ const options = {
   },
   include_attributes: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: true,
   },
   next_token: {
@@ -143,8 +143,8 @@ const listTopics = QoreAppCreator.createLocalizedAction<typeof options>({
                     subscriptions_pending: { type: 'integer' },
                     subscriptions_deleted: { type: 'integer' },
                     effective_delivery_policy: { type: 'string' },
-                    fifo_topic: { type: 'boolean' },
-                    content_based_deduplication: { type: 'boolean' },
+                    fifo_topic: { type: 'bool' },
+                    content_based_deduplication: { type: 'bool' },
                     kms_master_key_id: { type: 'string' },
                   },
                 },
@@ -155,7 +155,7 @@ const listTopics = QoreAppCreator.createLocalizedAction<typeof options>({
         },
       },
       next_token: { type: 'string' },
-      include_attributes: { type: 'boolean' },
+      include_attributes: { type: 'bool' },
       region: { type: 'string' },
       retrieved_at: { type: 'string' },
     },

@@ -107,7 +107,7 @@ const listProjects = QoreAppCreator.createLocalizedAction<typeof options>({
     fields: {
       count: { type: 'integer' },
       next_page_token: { type: 'string' },
-      has_more: { type: 'boolean' },
+      has_more: { type: 'bool' },
       projects: {
         type: {
           type: 'list',

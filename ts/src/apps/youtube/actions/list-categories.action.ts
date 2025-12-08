@@ -43,7 +43,7 @@ const listCategories = QoreAppCreator.createLocalizedAction({
             fields: {
               title: { type: 'string' },
               assignable: {
-                type: 'boolean',
+                type: 'bool',
               },
               channelId: { type: 'string' },
             },

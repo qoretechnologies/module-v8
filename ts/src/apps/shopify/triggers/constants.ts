@@ -80,11 +80,11 @@ export const ShopifyCustomerType = {
       desc: 'The date and time when the customer was last updated',
     },
     verifiedEmail: {
-      type: 'boolean',
+      type: 'bool',
       desc: 'Whether the customer has verified their email address',
     },
     taxExempt: {
-      type: 'boolean',
+      type: 'bool',
       desc: 'Whether the customer is exempt from being charged taxes on their orders',
     },
     tags: {

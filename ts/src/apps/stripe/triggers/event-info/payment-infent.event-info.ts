@@ -117,7 +117,7 @@ export const stripePaymentIntentEventInfoType = {
                               type: {
                                 type: 'hash',
                                 fields: {
-                                  supported: { type: 'boolean' },
+                                  supported: { type: 'bool' },
                                 },
                               },
                             },
@@ -127,7 +127,7 @@ export const stripePaymentIntentEventInfoType = {
                       },
                       created: { type: 'number' },
                       customer: { type: 'string' },
-                      livemode: { type: 'boolean' },
+                      livemode: { type: 'bool' },
                       metadata: {
                         type: 'hash',
                       },
@@ -140,7 +140,7 @@ export const stripePaymentIntentEventInfoType = {
             },
           },
           latest_charge: { type: 'string' },
-          livemode: { type: 'boolean' },
+          livemode: { type: 'bool' },
           metadata: {
             type: 'hash',
           },

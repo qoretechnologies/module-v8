@@ -26,11 +26,11 @@ const options = {
     get_dependent_options: getWebflowItemCreationOptions,
   },
   isArchived: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   isDraft: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   cmsLocaleId: {
@@ -97,8 +97,8 @@ const createItem = QoreAppCreator.createLocalizedAction<typeof options>({
         },
       },
       cmsLocaleId: { type: 'string' },
-      isArchived: { type: 'boolean' },
-      isDraft: { type: 'boolean' },
+      isArchived: { type: 'bool' },
+      isDraft: { type: 'bool' },
     },
   },
   get_dynamic_response_type: getWebflowItemFieldsResponseType,

@@ -92,7 +92,7 @@ const setAlarmState = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       region: { type: 'string' },
       alarm_name: { type: 'string' },
       state_value: { type: 'string' },

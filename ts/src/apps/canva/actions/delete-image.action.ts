@@ -38,7 +38,7 @@ const deleteImage = QoreAppCreator.createLocalizedAction<typeof options>({
     type: 'hash',
     fields: {
       id: { type: 'string' },
-      deleted: { type: 'boolean' },
+      deleted: { type: 'bool' },
     },
   },
 });

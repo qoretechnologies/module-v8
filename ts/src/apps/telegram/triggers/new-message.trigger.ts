@@ -71,7 +71,7 @@ const NewMessage = QoreAppCreator.createLocalizedTrigger({
             type: 'hash',
             fields: {
               id: { type: 'integer' },
-              is_bot: { type: 'boolean' },
+              is_bot: { type: 'bool' },
               first_name: { type: 'string' },
               last_name: { type: 'string' },
               username: { type: 'string' },

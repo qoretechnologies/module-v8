@@ -27,7 +27,7 @@ const options = {
   },
   insert_at_start: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     preselected: true,
     default_value: false,
   },
@@ -185,7 +185,7 @@ const addSpreadsheetRows = QoreAppCreator.createLocalizedAction<
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       spreadsheet_id: { type: 'string' },
       sheet_id: { type: 'string' },
       sheet_title: { type: 'string' },

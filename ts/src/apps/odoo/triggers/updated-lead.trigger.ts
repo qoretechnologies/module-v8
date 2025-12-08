@@ -213,7 +213,7 @@ const OdooUpdatedLeadTrigger = QoreAppCreator.createLocalizedTrigger({
         probability: { type: 'float' },
         date_deadline: { type: 'string' },
         description: { type: 'string' },
-        active: { type: 'boolean' },
+        active: { type: 'bool' },
         color: { type: 'integer' },
         referred: { type: 'string' },
         email_cc: { type: 'string' },

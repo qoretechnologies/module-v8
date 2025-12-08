@@ -110,7 +110,7 @@ export const mapCopperCrmCustomFieldToQoreOption = (
       };
     case 'Checkbox':
       return {
-        type: 'boolean',
+        type: 'bool',
         display_name,
       };
     case 'Float':

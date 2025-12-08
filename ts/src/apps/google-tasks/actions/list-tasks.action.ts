@@ -39,15 +39,15 @@ const options = {
     required: false,
   },
   showCompleted: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   showDeleted: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   showHidden: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   updateMin: {
@@ -55,7 +55,7 @@ const options = {
     required: false,
   },
   showAssigned: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
 } satisfies TQoreOptions;

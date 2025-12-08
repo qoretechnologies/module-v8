@@ -52,7 +52,7 @@ const AzureDevOpsTypeToQoreTypeMap: Record<string, TQoreSimpleType> = {
   History: 'string',
   Double: 'number',
   Guid: 'string',
-  Boolean: 'boolean',
+  Boolean: 'bool',
   Identity: 'string',
   PicklistString: 'string',
   PicklistInteger: 'integer',

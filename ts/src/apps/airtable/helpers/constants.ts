@@ -76,7 +76,7 @@ export const AirtableReadTypeToQoreTypeMap: Record<string, TQoreType> = {
       url: { type: 'string' },
     },
   },
-  checkbox: 'boolean',
+  checkbox: 'bool',
   singleCollaborator: {
     type: 'hash',
     fields: {
@@ -181,7 +181,7 @@ export const AirtableWriteTypeToQoreTypeMap: Record<string, TQoreType> = {
       text: { type: 'string', required: true },
     },
   },
-  checkbox: 'boolean',
+  checkbox: 'bool',
   singleCollaborator: {
     type: 'hash',
     fields: {

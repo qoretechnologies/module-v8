@@ -39,10 +39,10 @@ const zendeskNewOrganizationTrigger = QoreAppCreator.createLocalizedTrigger({
                 type: 'softstring',
               },
               shared_comments: {
-                type: 'boolean',
+                type: 'bool',
               },
               shared_tickets: {
-                type: 'boolean',
+                type: 'bool',
               },
               updated_at: {
                 type: 'softdate',

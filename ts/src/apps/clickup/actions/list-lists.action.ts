@@ -28,7 +28,7 @@ const options = {
     get_allowed_values: getClickUpFolderIdAllowedValues,
   },
   archived: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
 } satisfies TQoreOptions;
@@ -79,7 +79,7 @@ const listLists = QoreAppCreator.createLocalizedAction<typeof options>({
                   fields: {
                     status: { type: 'string' },
                     color: { type: 'string' },
-                    hide_label: { type: 'boolean' },
+                    hide_label: { type: 'bool' },
                   },
                 },
               },
@@ -102,8 +102,8 @@ const listLists = QoreAppCreator.createLocalizedAction<typeof options>({
                   fields: {
                     id: { type: 'string' },
                     name: { type: 'string' },
-                    hidden: { type: 'boolean' },
-                    access: { type: 'boolean' },
+                    hidden: { type: 'bool' },
+                    access: { type: 'bool' },
                   },
                 },
               },
@@ -113,12 +113,12 @@ const listLists = QoreAppCreator.createLocalizedAction<typeof options>({
                   fields: {
                     id: { type: 'string' },
                     name: { type: 'string' },
-                    access: { type: 'boolean' },
+                    access: { type: 'bool' },
                   },
                 },
               },
-              archived: { type: 'boolean' },
-              override_statuses: { type: 'boolean' },
+              archived: { type: 'bool' },
+              override_statuses: { type: 'bool' },
               permission_level: { type: 'string' },
             },
           },

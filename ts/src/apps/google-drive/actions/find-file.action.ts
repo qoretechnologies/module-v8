@@ -43,7 +43,7 @@ const baseOptions = {
   },
   create_if_not_exists: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
     on_change: ['refetch'],
     get_dependent_options: (context) => {
@@ -61,7 +61,7 @@ export const createFileOptions = {
   },
   convert_to_document: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   file_extension: {
@@ -252,8 +252,8 @@ const findOrCreateFile = QoreAppCreator.createLocalizedAction<
   response_type: {
     type: 'hash',
     fields: {
-      found: { type: 'boolean' },
-      created: { type: 'boolean' },
+      found: { type: 'bool' },
+      created: { type: 'bool' },
       file: {
         type: {
           type: 'hash',
@@ -272,9 +272,9 @@ const findOrCreateFile = QoreAppCreator.createLocalizedAction<
                 element_type: 'string',
               },
             },
-            shared: { type: 'boolean' },
-            is_folder: { type: 'boolean' },
-            converted_to_document: { type: 'boolean' },
+            shared: { type: 'bool' },
+            is_folder: { type: 'bool' },
+            converted_to_document: { type: 'bool' },
             title: { type: 'string' },
             owner_names: {
               type: {
@@ -298,7 +298,7 @@ const findOrCreateFile = QoreAppCreator.createLocalizedAction<
                   fields: {
                     display_name: { type: 'string' },
                     email_address: { type: 'string' },
-                    is_authenticated_user: { type: 'boolean' },
+                    is_authenticated_user: { type: 'bool' },
                     permission_id: { type: 'string' },
                     picture_url: { type: 'string' },
                   },

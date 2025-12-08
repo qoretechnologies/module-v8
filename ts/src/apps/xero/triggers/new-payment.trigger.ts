@@ -193,14 +193,14 @@ const xeroNewPaymentTrigger = QoreAppCreator.createLocalizedTrigger({
                   element_type: { type: 'hash' },
                 },
               },
-              IsDiscounted: { type: 'boolean' },
+              IsDiscounted: { type: 'bool' },
               InvoiceAddresses: {
                 type: {
                   type: 'list',
                   element_type: { type: 'hash' },
                 },
               },
-              HasErrors: { type: 'boolean' },
+              HasErrors: { type: 'bool' },
               InvoicePaymentServices: {
                 type: {
                   type: 'list',
@@ -237,7 +237,7 @@ const xeroNewPaymentTrigger = QoreAppCreator.createLocalizedTrigger({
                         element_type: { type: 'hash' },
                       },
                     },
-                    HasValidationErrors: { type: 'boolean' },
+                    HasValidationErrors: { type: 'bool' },
                   },
                 },
               },
@@ -269,9 +269,9 @@ const xeroNewPaymentTrigger = QoreAppCreator.createLocalizedTrigger({
             },
           },
         },
-        IsReconciled: { type: 'boolean' },
-        HasAccount: { type: 'boolean' },
-        HasValidationErrors: { type: 'boolean' },
+        IsReconciled: { type: 'bool' },
+        HasAccount: { type: 'bool' },
+        HasValidationErrors: { type: 'bool' },
       },
     },
   },

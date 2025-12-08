@@ -40,7 +40,7 @@ export const PipedriveProductFields = {
     desc: 'The ID of the user who will be marked as the owner of this product. When omitted, the authorized user ID will be used',
   },
   is_linkable: {
-    type: 'boolean',
+    type: 'bool',
     desc: 'Whether this product can be added to a deal or not',
   },
   visible_to: {

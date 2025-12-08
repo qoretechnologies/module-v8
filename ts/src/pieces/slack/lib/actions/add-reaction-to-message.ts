@@ -10,7 +10,7 @@ const addReactionToMessageResponseType = {
   type: 'hash',
   fields: {
     ok: {
-      type: 'boolean',
+      type: 'bool',
       display_name: 'Success',
       short_desc: 'Indicates if the reaction was successfully added',
       desc: 'Indicates if the reaction was successfully added',

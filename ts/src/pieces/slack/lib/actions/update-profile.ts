@@ -7,7 +7,7 @@ const updateProfileResponseType = {
   type: 'hash',
   fields: {
     ok: {
-      type: 'boolean',
+      type: 'bool',
       display_name: 'Success',
       short_desc: 'Indicates if the profile was successfully updated',
       desc: 'Indicates if the reaction was successfully added',

@@ -89,8 +89,8 @@ const ZohoCrmDataTypeToQoreTypeMap: Record<string, TQoreType> = {
   double: 'number',
   percent: 'number',
   currency: 'number',
-  boolean: 'boolean',
-  checkbox: 'boolean',
+  boolean: 'bool',
+  checkbox: 'bool',
   date: 'date',
   datetime: 'date',
   picklist: 'softstring',
@@ -194,7 +194,7 @@ const getQoreTypeForZohoCrmField = (field: TZohoCrmField): TQoreType => {
       case 'percent':
         return 'number';
       case 'boolean':
-        return 'boolean';
+        return 'bool';
       case 'date':
       case 'datetime':
         return 'date';

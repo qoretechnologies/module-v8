@@ -21,7 +21,7 @@ const options = {
     on_change: ['refetch'],
   },
   archived: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
 } satisfies TQoreOptions;
@@ -65,8 +65,8 @@ const listFolders = QoreAppCreator.createLocalizedAction<typeof options>({
               id: { type: 'string' },
               name: { type: 'string' },
               orderindex: { type: 'number' },
-              override_statuses: { type: 'boolean' },
-              hidden: { type: 'boolean' },
+              override_statuses: { type: 'bool' },
+              hidden: { type: 'bool' },
               space: {
                 type: {
                   type: 'hash',
@@ -77,7 +77,7 @@ const listFolders = QoreAppCreator.createLocalizedAction<typeof options>({
                 },
               },
               task_count: { type: 'string' },
-              archived: { type: 'boolean' },
+              archived: { type: 'bool' },
               statuses: {
                 type: {
                   type: 'list',
@@ -105,11 +105,11 @@ const listFolders = QoreAppCreator.createLocalizedAction<typeof options>({
                           fields: {
                             id: { type: 'string' },
                             name: { type: 'string' },
-                            access: { type: 'boolean' },
+                            access: { type: 'bool' },
                           },
                         },
                       },
-                      archived: { type: 'boolean' },
+                      archived: { type: 'bool' },
                       override_statuses: { type: 'string' },
                       statuses: {
                         type: {

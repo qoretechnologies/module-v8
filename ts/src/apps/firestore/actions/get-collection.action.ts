@@ -34,7 +34,7 @@ const options = {
   },
   include_sample_documents: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
   sample_limit: {
@@ -138,7 +138,7 @@ const getCollection = QoreAppCreator.createLocalizedAction<typeof options>({
         type: 'string',
       },
       has_documents: {
-        type: 'boolean',
+        type: 'bool',
       },
       sample_documents: {
         type: {
@@ -175,7 +175,7 @@ const getCollection = QoreAppCreator.createLocalizedAction<typeof options>({
           type: 'string',
         },
         has_documents: {
-          type: 'boolean',
+          type: 'bool',
         },
         sample_documents: {
           type: {

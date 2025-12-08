@@ -469,7 +469,7 @@ const listDisputes = QoreAppCreator.createLocalizedAction<typeof options>({
                 type: {
                   type: 'hash',
                   fields: {
-                    merchant_contacted: { type: 'boolean' },
+                    merchant_contacted: { type: 'bool' },
                     merchant_contacted_outcome: { type: 'string' },
                     merchant_contacted_time: { type: 'string' },
                     merchant_contacted_mode: { type: 'string' },

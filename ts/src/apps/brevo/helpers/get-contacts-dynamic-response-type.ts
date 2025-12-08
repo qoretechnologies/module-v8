@@ -21,8 +21,8 @@ export const defaultBrevoContactsListResponseType = {
           type: 'hash',
           fields: {
             id: { type: 'number' },
-            emailBlacklisted: { type: 'boolean' },
-            smsBlacklisted: { type: 'boolean' },
+            emailBlacklisted: { type: 'bool' },
+            smsBlacklisted: { type: 'bool' },
             createdAt: { type: 'string' },
             modifiedAt: { type: 'string' },
             listIds: {

@@ -73,7 +73,7 @@ const options = {
     ],
   },
   trigger_on_subscriber: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: true,
   },
@@ -238,7 +238,7 @@ const mailchimpEmailOpenedTrigger = QoreAppCreator.createLocalizedTrigger<
               contact_status: { type: 'string' },
               merge_fields: { type: 'auto' },
               opens_count: { type: 'number' },
-              vip: { type: 'boolean' },
+              vip: { type: 'bool' },
               opens: {
                 type: {
                   type: 'list',
@@ -246,7 +246,7 @@ const mailchimpEmailOpenedTrigger = QoreAppCreator.createLocalizedTrigger<
                     type: 'hash',
                     fields: {
                       timestamp: { type: 'string' },
-                      is_proxy_open: { type: 'boolean' },
+                      is_proxy_open: { type: 'bool' },
                     },
                   },
                 },

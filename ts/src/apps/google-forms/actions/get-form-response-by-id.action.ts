@@ -25,7 +25,7 @@ const options = {
   },
   include_questions: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
 } satisfies TQoreOptions;
@@ -131,7 +131,7 @@ const getFormResponse = QoreAppCreator.createLocalizedAction<typeof options>({
       description: { type: 'string' },
       document_title: { type: 'string' },
       responder_uri: { type: 'string' },
-      is_quiz: { type: 'boolean' },
+      is_quiz: { type: 'bool' },
       response: {
         type: {
           type: 'hash',
@@ -151,7 +151,7 @@ const getFormResponse = QoreAppCreator.createLocalizedAction<typeof options>({
                     question_type: { type: 'string' },
                     text_value: { type: 'string' },
                     grade: { type: 'number' },
-                    correct_answer: { type: 'boolean' },
+                    correct_answer: { type: 'bool' },
                     feedback: { type: 'string' },
                   },
                 },
@@ -170,7 +170,7 @@ const getFormResponse = QoreAppCreator.createLocalizedAction<typeof options>({
               title: { type: 'string' },
               type: { type: 'string' },
               help_text: { type: 'string' },
-              required: { type: 'boolean' },
+              required: { type: 'bool' },
               choices: {
                 type: {
                   type: 'list',
@@ -184,7 +184,7 @@ const getFormResponse = QoreAppCreator.createLocalizedAction<typeof options>({
               correct_answer: { type: 'string' },
               points: { type: 'number' },
               feedback: { type: 'string' },
-              shuffle_choices: { type: 'boolean' },
+              shuffle_choices: { type: 'bool' },
             },
           },
         },

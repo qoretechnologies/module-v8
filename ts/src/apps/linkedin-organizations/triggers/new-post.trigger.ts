@@ -67,7 +67,7 @@ const newPost = QoreAppCreator.createLocalizedTrigger<typeof options>({
         lifecycleState: { type: 'string' },
         visibility: { type: 'string' },
         publishedAt: { type: 'number' },
-        isReshareDisabledByAuthor: { type: 'boolean' },
+        isReshareDisabledByAuthor: { type: 'bool' },
         commentary: { type: 'string' },
         created: {
           type: {
@@ -292,7 +292,7 @@ const newPost = QoreAppCreator.createLocalizedTrigger<typeof options>({
           type: {
             type: 'hash',
             fields: {
-              isEditedByAuthor: { type: 'boolean' },
+              isEditedByAuthor: { type: 'bool' },
             },
           },
         },

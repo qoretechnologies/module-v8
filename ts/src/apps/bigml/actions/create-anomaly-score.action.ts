@@ -116,16 +116,16 @@ const createAnomalyScore = QoreAppCreator.createLocalizedAction<typeof options>(
     type: 'hash',
     fields: {
       anomaly: { type: 'string' },
-      anomaly_status: { type: 'boolean' },
+      anomaly_status: { type: 'bool' },
       anomaly_type: { type: 'integer' },
       category: { type: 'integer' },
       code: { type: 'integer' },
       configuration: { type: 'string' },
-      configuration_status: { type: 'boolean' },
+      configuration_status: { type: 'bool' },
       created: { type: 'string' },
       creator: { type: 'string' },
       dataset: { type: 'string' },
-      dataset_status: { type: 'boolean' },
+      dataset_status: { type: 'bool' },
       description: { type: 'string' },
       expanded_input_data: { type: 'hash' },
       fields: {
@@ -138,14 +138,14 @@ const createAnomalyScore = QoreAppCreator.createLocalizedAction<typeof options>(
       locale: { type: 'string' },
       name: { type: 'string' },
       name_options: { type: 'string' },
-      private: { type: 'boolean' },
+      private: { type: 'bool' },
       project: { type: 'string' },
       query_string: { type: 'string' },
       resource: { type: 'string' },
       score: { type: 'number' },
-      shared: { type: 'boolean' },
+      shared: { type: 'bool' },
       source: { type: 'string' },
-      source_status: { type: 'boolean' },
+      source_status: { type: 'bool' },
       status: {
         type: {
           type: 'hash',
@@ -157,7 +157,7 @@ const createAnomalyScore = QoreAppCreator.createLocalizedAction<typeof options>(
           },
         },
       },
-      subscription: { type: 'boolean' },
+      subscription: { type: 'bool' },
       tags: {
         type: {
           type: 'list',

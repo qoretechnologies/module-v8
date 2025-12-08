@@ -156,7 +156,7 @@ const listUserChannels = QoreAppCreator.createLocalizedAction<typeof options>({
                   fields: {
                     viewCount: { type: 'string' },
                     subscriberCount: { type: 'string' },
-                    hiddenSubscriberCount: { type: 'boolean' },
+                    hiddenSubscriberCount: { type: 'bool' },
                     videoCount: { type: 'string' },
                   },
                 },

@@ -30,7 +30,7 @@ export const BrevoAttributeTypeToQoreTypeMap: Record<string, TQoreType> = {
   float: 'float',
   id: 'number',
   number: 'number',
-  boolean: 'boolean',
+  boolean: 'bool',
   'multiple-choice': { type: 'list', element_type: 'string' },
   user: { type: 'string' },
 } as const;

@@ -10,7 +10,7 @@ const dropboxSearchResponseType = {
       display_name: 'Has More',
       desc: 'Indicates whether there are more search results.',
       short_desc: 'Indicates whether there are more search results.',
-      type: 'boolean',
+      type: 'bool',
       example_value: true,
     },
     matches: {

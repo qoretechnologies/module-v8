@@ -131,18 +131,18 @@ const createPrediction = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      boosted_ensemble: { type: 'boolean' },
+      boosted_ensemble: { type: 'bool' },
       category: { type: 'integer' },
       code: { type: 'integer' },
       combiner: { type: 'string' },
       confidence: { type: 'number' },
       confidence_bounds: { type: 'hash' },
       configuration: { type: 'string' },
-      configuration_status: { type: 'boolean' },
+      configuration_status: { type: 'bool' },
       created: { type: 'string' },
       creator: { type: 'string' },
       dataset: { type: 'string' },
-      dataset_status: { type: 'boolean' },
+      dataset_status: { type: 'bool' },
       description: { type: 'string' },
       ensemble: { type: 'string' },
       error_predictions: { type: 'integer' },
@@ -155,7 +155,7 @@ const createPrediction = QoreAppCreator.createLocalizedAction<typeof options>({
       locale: { type: 'string' },
       missing_strategy: { type: 'integer' },
       model: { type: 'string' },
-      model_status: { type: 'boolean' },
+      model_status: { type: 'bool' },
       model_type: { type: 'integer' },
       models: {
         type: {
@@ -205,13 +205,13 @@ const createPrediction = QoreAppCreator.createLocalizedAction<typeof options>({
           },
         },
       },
-      private: { type: 'boolean' },
+      private: { type: 'bool' },
       project: { type: 'string' },
       query_string: { type: 'string' },
       resource: { type: 'string' },
-      shared: { type: 'boolean' },
+      shared: { type: 'bool' },
       source: { type: 'string' },
-      source_status: { type: 'boolean' },
+      source_status: { type: 'bool' },
       status: {
         type: {
           type: 'hash',
@@ -223,7 +223,7 @@ const createPrediction = QoreAppCreator.createLocalizedAction<typeof options>({
           },
         },
       },
-      subscription: { type: 'boolean' },
+      subscription: { type: 'bool' },
       tags: {
         type: {
           type: 'list',

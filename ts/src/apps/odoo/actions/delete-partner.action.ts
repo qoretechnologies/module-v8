@@ -50,7 +50,7 @@ const deletePartner = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       partner_id: { type: 'number' },
     },
   } satisfies TQoreResponseType,

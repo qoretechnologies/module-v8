@@ -7,7 +7,7 @@ import { QuickBooksOperatorsAllowedValues } from '../../helpers/get-filter-opera
 
 const options = {
   fetchAll: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },
@@ -121,9 +121,9 @@ const listAccounts = QoreAppCreator.createLocalizedAction<typeof options>({
             type: 'hash',
             fields: {
               Name: { type: 'string' },
-              SubAccount: { type: 'boolean' },
+              SubAccount: { type: 'bool' },
               FullyQualifiedName: { type: 'string' },
-              Active: { type: 'boolean' },
+              Active: { type: 'bool' },
               Classification: { type: 'string' },
               AccountType: { type: 'string' },
               AccountSubType: { type: 'string' },
@@ -139,7 +139,7 @@ const listAccounts = QoreAppCreator.createLocalizedAction<typeof options>({
                 },
               },
               domain: { type: 'string' },
-              sparse: { type: 'boolean' },
+              sparse: { type: 'bool' },
               Id: { type: 'string' },
               SyncToken: { type: 'string' },
               MetaData: {

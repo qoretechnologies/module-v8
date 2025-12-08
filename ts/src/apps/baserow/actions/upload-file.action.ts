@@ -48,7 +48,7 @@ const uploadFile = QoreAppCreator.createLocalizedAction<typeof options>({
     fields: {
       size: { type: 'number' },
       mime_type: { type: 'string' },
-      is_image: { type: 'boolean' },
+      is_image: { type: 'bool' },
       image_width: { type: 'number' },
       image_height: { type: 'number' },
       uploaded_at: { type: 'string' },

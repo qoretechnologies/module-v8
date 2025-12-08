@@ -64,7 +64,7 @@ const salesforceNewLeadTrigger = QoreAppCreator.createLocalizedTrigger({
           type: 'string',
         },
         IsDeleted: {
-          type: 'boolean',
+          type: 'bool',
         },
         MasterRecordId: {
           type: 'string',
@@ -151,10 +151,10 @@ const salesforceNewLeadTrigger = QoreAppCreator.createLocalizedTrigger({
           type: 'string',
         },
         HasOptedOutOfEmail: {
-          type: 'boolean',
+          type: 'bool',
         },
         IsConverted: {
-          type: 'boolean',
+          type: 'bool',
         },
         ConvertedDate: {
           type: 'string',
@@ -169,7 +169,7 @@ const salesforceNewLeadTrigger = QoreAppCreator.createLocalizedTrigger({
           type: 'string',
         },
         IsUnreadByOwner: {
-          type: 'boolean',
+          type: 'bool',
         },
         CreatedDate: {
           type: 'string',

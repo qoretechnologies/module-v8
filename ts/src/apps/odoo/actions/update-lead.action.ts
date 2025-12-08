@@ -174,7 +174,7 @@ const options = {
   },
 
   active: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: true,
   },
@@ -331,7 +331,7 @@ const updateLead = QoreAppCreator.createLocalizedAction<typeof options>({
     type: 'hash',
     fields: {
       success: {
-        type: 'boolean',
+        type: 'bool',
       },
       lead_id: {
         type: 'integer',

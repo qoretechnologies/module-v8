@@ -172,7 +172,7 @@ const listDataSources = QoreAppCreator.createLocalizedAction<typeof options>({
       last_edited_time: { type: 'string' },
       title: { type: 'string' },
       description: { type: 'string' },
-      is_inline: { type: 'boolean' },
+      is_inline: { type: 'bool' },
       properties: { type: 'hash' },
       parent: {
         type: {
@@ -195,8 +195,8 @@ const listDataSources = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       url: { type: 'string' },
       public_url: { type: 'string' },
-      archived: { type: 'boolean' },
-      in_trash: { type: 'boolean' },
+      archived: { type: 'bool' },
+      in_trash: { type: 'bool' },
     },
   } satisfies TQoreResponseType,
 });

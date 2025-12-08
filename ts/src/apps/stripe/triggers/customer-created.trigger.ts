@@ -33,7 +33,7 @@ const stripeCustomerCreatedTrigger = QoreAppCreator.createLocalizedTrigger({
               created: { type: 'number' },
               currency: { type: 'string' },
               default_source: { type: 'string' },
-              delinquent: { type: 'boolean' },
+              delinquent: { type: 'bool' },
               description: { type: 'string' },
               discount: { type: 'hash' },
               email: { type: 'string' },
@@ -49,7 +49,7 @@ const stripeCustomerCreatedTrigger = QoreAppCreator.createLocalizedTrigger({
                   },
                 },
               },
-              livemode: { type: 'boolean' },
+              livemode: { type: 'bool' },
               metadata: {
                 type: 'hash',
               },

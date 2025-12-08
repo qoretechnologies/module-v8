@@ -12,7 +12,7 @@ export const ATTIO_TO_QORUS_TYPE_MAP: Record<string, TQoreTypeObject | TQoreType
   timestamp: 'date',
   number: 'number',
   currency: 'number',
-  checkbox: 'boolean',
+  checkbox: 'bool',
   'multi-select': 'list',
   'record-reference': 'hash',
   'actor-reference': 'hash',

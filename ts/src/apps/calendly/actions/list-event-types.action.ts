@@ -60,11 +60,11 @@ const options = {
     get_allowed_values: getCalendlyOrganizationMemberAllowedValues,
   },
   admin_managed: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   active: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   user_availability_schedule: {
@@ -131,7 +131,7 @@ const listEventTypes = QoreAppCreator.createLocalizedAction<typeof options>({
             fields: {
               uri: { type: 'string' },
               name: { type: 'string' },
-              active: { type: 'boolean' },
+              active: { type: 'bool' },
               booking_method: { type: 'string' },
               slug: { type: 'string' },
               scheduling_url: { type: 'string' },
@@ -161,9 +161,9 @@ const listEventTypes = QoreAppCreator.createLocalizedAction<typeof options>({
                   },
                 },
               },
-              secret: { type: 'boolean' },
+              secret: { type: 'bool' },
               deleted_at: { type: 'string' },
-              admin_managed: { type: 'boolean' },
+              admin_managed: { type: 'bool' },
               locations: {
                 type: {
                   type: 'list',
@@ -187,15 +187,15 @@ const listEventTypes = QoreAppCreator.createLocalizedAction<typeof options>({
                       name: { type: 'string' },
                       type: { type: 'string' },
                       position: { type: 'number' },
-                      enabled: { type: 'boolean' },
-                      required: { type: 'boolean' },
+                      enabled: { type: 'bool' },
+                      required: { type: 'bool' },
                       answer_choices: {
                         type: {
                           type: 'list',
                           element_type: 'string',
                         },
                       },
-                      include_other: { type: 'boolean' },
+                      include_other: { type: 'bool' },
                     },
                   },
                 },

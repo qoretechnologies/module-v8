@@ -37,7 +37,7 @@ const options = {
           get_allowed_values: getSupabaseTableColumnAllowedValues,
         },
         ascending: {
-          type: 'boolean',
+          type: 'bool',
           required: false,
           default_value: true,
         },

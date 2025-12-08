@@ -14,7 +14,7 @@ const options = {
     get_allowed_values: getZohoCRMModuleApiNameAllowedValues,
   },
   my_tags: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
 } satisfies TQoreOptions;

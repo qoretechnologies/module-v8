@@ -194,9 +194,9 @@ const OutlookEmailAttachmentTrigger = QoreAppCreator.createLocalizedTrigger<
         subject: { type: 'string' },
         bodyPreview: { type: 'string' },
         importance: { type: 'string' },
-        hasAttachments: { type: 'boolean' },
-        isRead: { type: 'boolean' },
-        isDraft: { type: 'boolean' },
+        hasAttachments: { type: 'bool' },
+        isRead: { type: 'bool' },
+        isDraft: { type: 'bool' },
         attachment: {
           type: {
             type: 'hash',

@@ -63,7 +63,7 @@ const MondayFieldTypeToQoreTypeMap: Record<string, TQoreType> = {
   creation_log: 'date',
   last_updated: 'date',
 
-  checkbox: 'boolean',
+  checkbox: 'bool',
   vote: 'integer',
 
   status: 'string',
@@ -129,7 +129,7 @@ const MondayFieldTypeToQoreTypeMap: Record<string, TQoreType> = {
   time_tracking: {
     type: 'hash',
     fields: {
-      running: { type: 'boolean' },
+      running: { type: 'bool' },
       duration: { type: 'integer' },
       additional_value: { type: 'string' },
     },

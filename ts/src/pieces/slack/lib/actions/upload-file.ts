@@ -8,7 +8,7 @@ const uploadFileResponseType = {
   type: 'hash',
   fields: {
     ok: {
-      type: 'boolean',
+      type: 'bool',
       display_name: 'Success',
       short_desc: 'Indicates if the file was uploaded successfully',
       desc: 'Indicates if the file was uploaded successfully',
@@ -24,7 +24,7 @@ const uploadFileResponseType = {
           type: 'hash',
           fields: {
             ok: {
-              type: 'boolean',
+              type: 'bool',
             },
             files: {
               type: {
@@ -69,7 +69,7 @@ const uploadFileResponseType = {
                       example_value: 'U1234567890',
                     },
                     editable: {
-                      type: 'boolean',
+                      type: 'bool',
                     },
                     size: {
                       type: 'integer',
@@ -80,19 +80,19 @@ const uploadFileResponseType = {
                       example_value: 'snippet',
                     },
                     is_external: {
-                      type: 'boolean',
+                      type: 'bool',
                     },
                     external_type: {
                       type: 'string',
                     },
                     is_public: {
-                      type: 'boolean',
+                      type: 'bool',
                     },
                     public_url_shared: {
-                      type: 'boolean',
+                      type: 'bool',
                     },
                     display_as_bot: {
-                      type: 'boolean',
+                      type: 'bool',
                     },
                     username: {
                       type: 'string',
@@ -118,7 +118,7 @@ const uploadFileResponseType = {
                         'https://your-workspace.slack.com/files-pri/T12345678-F12345678/example.txt',
                     },
                     is_starred: {
-                      type: 'boolean',
+                      type: 'bool',
                     },
                   },
                 },

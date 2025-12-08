@@ -179,7 +179,7 @@ export const getPipedriveEventInfoType = (
                 type: 'string',
               },
               is_bulk_edit: {
-                type: 'boolean',
+                type: 'bool',
               },
               timestamp: {
                 type: 'string',

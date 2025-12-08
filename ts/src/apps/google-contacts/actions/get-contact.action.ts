@@ -139,7 +139,7 @@ const getContact = QoreAppCreator.createLocalizedAction<typeof options>({
   response_type: {
     type: 'hash',
     fields: {
-      success: { type: 'boolean' },
+      success: { type: 'bool' },
       contact: {
         type: {
           type: 'hash',
@@ -214,7 +214,7 @@ const getContact = QoreAppCreator.createLocalizedAction<typeof options>({
                     jobDescription: { type: 'string' },
                     startDate: { type: 'hash' },
                     endDate: { type: 'hash' },
-                    current: { type: 'boolean' },
+                    current: { type: 'bool' },
                     type: { type: 'string' },
                     formattedType: { type: 'string' },
                     metadata: { type: 'hash' },
@@ -305,7 +305,7 @@ const getContact = QoreAppCreator.createLocalizedAction<typeof options>({
                   type: 'hash',
                   fields: {
                     url: { type: 'string' },
-                    default: { type: 'boolean' },
+                    default: { type: 'bool' },
                     metadata: { type: 'hash' },
                   },
                 },
@@ -438,7 +438,7 @@ const getContact = QoreAppCreator.createLocalizedAction<typeof options>({
                   sources: { type: 'list' },
                   previousResourceNames: { type: 'list' },
                   linkedPeopleResourceNames: { type: 'list' },
-                  deleted: { type: 'boolean' },
+                  deleted: { type: 'bool' },
                   objectType: { type: 'string' },
                 },
               },

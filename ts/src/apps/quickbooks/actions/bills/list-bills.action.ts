@@ -7,7 +7,7 @@ import { QuickBooksOperatorsAllowedValues } from '../../helpers/get-filter-opera
 
 const options = {
   fetchAll: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },
@@ -137,7 +137,7 @@ const listBills = QoreAppCreator.createLocalizedAction<typeof options>({
               },
               Balance: { type: 'number' },
               domain: { type: 'string' },
-              sparse: { type: 'boolean' },
+              sparse: { type: 'bool' },
               Id: { type: 'string' },
               SyncToken: { type: 'string' },
               MetaData: {

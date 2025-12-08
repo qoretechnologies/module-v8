@@ -90,7 +90,7 @@ const listModels = QoreAppCreator.createLocalizedAction<typeof options>({
             fields: {
               context_length: { type: 'integer' },
               max_completion_tokens: { type: 'integer' },
-              is_moderated: { type: 'boolean' },
+              is_moderated: { type: 'bool' },
             },
           },
         },

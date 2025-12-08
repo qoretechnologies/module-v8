@@ -65,10 +65,10 @@ const FirebaseNewUserTrigger = QoreAppCreator.createLocalizedTrigger({
       fields: {
         localId: { type: 'string' },
         email: { type: 'string' },
-        emailVerified: { type: 'boolean' },
+        emailVerified: { type: 'bool' },
         displayName: { type: 'string' },
         photoUrl: { type: 'string' },
-        disabled: { type: 'boolean' },
+        disabled: { type: 'bool' },
         createdAt: { type: 'string' },
         lastLoginAt: { type: 'string' },
         customAttributes: { type: 'string' },

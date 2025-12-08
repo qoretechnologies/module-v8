@@ -28,7 +28,7 @@ const options = {
     required: false,
   },
   ignoreDuplicates: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },

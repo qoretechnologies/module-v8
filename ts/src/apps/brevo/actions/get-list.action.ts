@@ -76,7 +76,7 @@ const getList = QoreAppCreator.createLocalizedAction<typeof options>({
           },
         },
       },
-      dynamicList: { type: 'boolean' },
+      dynamicList: { type: 'bool' },
     },
   },
 });

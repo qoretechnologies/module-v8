@@ -29,7 +29,7 @@ const response_type = {
   type: 'hash',
   fields: {
     success: {
-      type: 'boolean',
+      type: 'bool',
     },
     error: {
       type: 'string',

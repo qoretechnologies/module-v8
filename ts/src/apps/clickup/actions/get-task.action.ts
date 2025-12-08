@@ -46,11 +46,11 @@ const options = {
     get_allowed_values: getClickUpTaskIdAllowedValues,
   },
   include_markdown_description: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   subtasks: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
 } satisfies TQoreOptions;
@@ -174,7 +174,7 @@ const getTask = QoreAppCreator.createLocalizedAction<typeof options>({
                 },
               },
               date_created: { type: 'string' },
-              hide_from_guests: { type: 'boolean' },
+              hide_from_guests: { type: 'bool' },
               value: {
                 type: {
                   type: 'hash',
@@ -190,7 +190,7 @@ const getTask = QoreAppCreator.createLocalizedAction<typeof options>({
               },
               value_richtext: { type: 'string' },
               value_markdown: { type: 'string' },
-              required: { type: 'boolean' },
+              required: { type: 'bool' },
             },
           },
         },
@@ -237,9 +237,9 @@ const getTask = QoreAppCreator.createLocalizedAction<typeof options>({
               thumbnail_small: { type: 'string' },
               thumbnail_medium: { type: 'string' },
               thumbnail_large: { type: 'string' },
-              is_folder: { type: 'boolean' },
+              is_folder: { type: 'bool' },
               mimetype: { type: 'string' },
-              hidden: { type: 'boolean' },
+              hidden: { type: 'bool' },
               parent_id: { type: 'string' },
               size: { type: 'number' },
               total_comments: { type: 'number' },
@@ -257,7 +257,7 @@ const getTask = QoreAppCreator.createLocalizedAction<typeof options>({
                   },
                 },
               },
-              deleted: { type: 'boolean' },
+              deleted: { type: 'bool' },
               orientation: { type: 'string' },
               url: { type: 'string' },
               email_data: {

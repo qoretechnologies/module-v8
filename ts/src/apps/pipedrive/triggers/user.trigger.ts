@@ -50,7 +50,7 @@ const pipedriveUserDataType = {
         type: 'string',
       },
       active_flag: {
-        type: 'boolean',
+        type: 'bool',
       },
       last_login: {
         type: 'string',

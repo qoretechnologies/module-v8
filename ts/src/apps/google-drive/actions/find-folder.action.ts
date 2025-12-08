@@ -26,7 +26,7 @@ const options = {
   },
   create_if_not_exists: {
     required: false,
-    type: 'boolean',
+    type: 'bool',
     default_value: false,
   },
 } satisfies TQoreOptions;
@@ -146,8 +146,8 @@ const findOrCreateFolder = QoreAppCreator.createLocalizedAction<typeof options>(
   response_type: {
     type: 'hash',
     fields: {
-      found: { type: 'boolean' },
-      created: { type: 'boolean' },
+      found: { type: 'bool' },
+      created: { type: 'bool' },
       folder: {
         type: {
           type: 'hash',
@@ -164,7 +164,7 @@ const findOrCreateFolder = QoreAppCreator.createLocalizedAction<typeof options>(
                 element_type: 'string',
               },
             },
-            shared: { type: 'boolean' },
+            shared: { type: 'bool' },
           },
         },
       },
