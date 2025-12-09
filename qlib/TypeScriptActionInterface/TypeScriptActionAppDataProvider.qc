@@ -147,6 +147,9 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
     *list<hash<DataProviderSummaryInfo>> getChildProviderSummaryInfo() {
         TypeScriptActionInterface::checkAppActions(name);
         *hash<string, DataProvider::AbstractDataProvider> childMap = self.childMap ?? parent.childMap;
+        *RestConnection conn_save = _thread_conn;
+        _thread_conn = conn;
+        on_exit _thread_conn = conn_save;
         *list<hash<DataProviderSummaryInfo>> rv =
             map cast<hash<DataProviderSummaryInfo>>($1.getInfo(){DataProviderSummaryInfoKeys}), childMap.iterator();
         if (google_api_provider && (*list<hash<DataProviderSummaryInfo>> l =
@@ -287,4 +290,8 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         return rv;
     }
 }
+}
+
+namespace Priv {
+thread_local *RestConnection _thread_conn;
 }

@@ -2297,6 +2297,9 @@ public class TypeScriptActionInterface {
         if (opt.required_groups) {
             opt.required_groups = cast<list<string>>(opt.required_groups);
         }
+        if (opt.messages) {
+            opt.messages = map cast<hash<UiMessageInfo>>($1), opt.messages;
+        }
         return opt;
     }
 

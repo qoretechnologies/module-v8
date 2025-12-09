@@ -443,6 +443,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
     #! Returns call context info
     *hash<DataContextInfo> getCallContextInfo(*hash<auto> action_opts) {
+        *RestConnection conn = self.conn ?? _thread_conn;
         if (conn) {
             return <DataContextInfo>{
                 "conn_name": conn.name,
@@ -817,6 +818,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         on_error LoggerWrapper::error("Error acquiring dynamic %s type: %s", dtype, get_exception_string($1));
         bool new_type;
         if (type_info.get_dynamic_type && !type_info.dynamic_type_done) {
+            *RestConnection conn = self.conn ?? _thread_conn;
             auto res = getAsyncValueArgs(self, type_info.get_dynamic_type, {
                 "conn_name": conn.name,
                 "conn_opts": conn.getRealOptions() + {
