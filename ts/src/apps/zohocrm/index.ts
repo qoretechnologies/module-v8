@@ -60,7 +60,7 @@ export default (locale: Locales) =>
     },
     rest_modifiers: {
       options: ZOHO_CRM_CONN_OPTIONS,
-      url_template_options: ['location', 'accounts-server'],
+      url_template_options: ['location'],
       set_options_post_auth: setZohoCrmOptionsPostAuth,
       set_options_post_auth_code: setZohoCrmOptionsPostAuth,
     },
