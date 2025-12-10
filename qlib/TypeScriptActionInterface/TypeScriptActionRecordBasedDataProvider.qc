@@ -475,10 +475,10 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
     }
 
     private synchronized checkRecordTypeIntern(*hash<auto> options = DataProviderDataContextHelper::getHash()) {
-        if (record_type || !options.table.val()) {
+        if (record_type) {
             return;
         }
-        auto v = getAsyncValue(get_record_type, getCallContextInfo(options), options.table);
+        auto v = getAsyncValue(get_record_type, getCallContextInfo(options), name);
         record_type = TypeScriptActionInterface::getType("record_type", v).getFields();
     }
 
