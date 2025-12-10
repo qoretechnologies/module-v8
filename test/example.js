@@ -109,6 +109,8 @@ exports.actionsCatalogue = {
                   the connection option will be used as the value of the given action option in each call where the
                   option is present
                 - io_timeout_secs?: int -> provides the I/O timeout in seconds (NOTE: not yet implemented)
+                - messages?: UiMessageInfo[] -> an optional list of UI message info hashes that will be shown in the
+                  UI when a new connection is created
                 - options?: object -> describes connection options supported by connections for this application; keys
                   are option names; values are converted to option hashes described by the COnnectionOptionInfo
                   hashdecl: https://qoretechnologies.com/manual/qorus/gitlab-docs/develop/qore/modules/ConnectionProvider/html/struct_connection_provider_1_1_connection_option_info.html
@@ -137,6 +139,12 @@ exports.actionsCatalogue = {
                   URLs; the URL should contain strings like '{{option_name}}'
             */
             "rest_modifiers": {
+                "messages": [{
+                    "title": "Required Options",
+                    "intent": "warning",
+                    "content": "The 'Account ID' connection option is required to connect to the application but is "
+                        + "set automatically by the authentication process",
+                }],
                 "options": {
                     "account_id": {
                         "display_name": "Account ID",

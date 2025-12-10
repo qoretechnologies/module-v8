@@ -527,6 +527,9 @@ var obj = {
             assertEq(h, t.acceptsValue(h));
         }
 
+        scheme = ConnectionSchemeCache::getSchemeEx("tsrest-js-test");
+        assertEq(Type::List, scheme.messages.type());
+
         TypeScriptAppRestClient rest = conn.get(False);
         hash<auto> h = TestRestClient::test0(rest, {});
         assertEq("abc123", h.account_id);

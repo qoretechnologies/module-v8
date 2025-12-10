@@ -956,6 +956,7 @@ public class TypeScriptActionInterface {
             hash<auto> conn_update;
             hash<string, string> conn_opt_map;
             string url_from_option;
+            *softlist<hash<UiMessageInfo>> messages;
             if (*hash<auto> rest_modifiers = remove app0.rest_modifiers) {
                 foreach hash<auto> i in (rest_modifiers.options.pairIterator()) {
                     if (i.value.allowed_values) {
@@ -982,6 +983,14 @@ public class TypeScriptActionInterface {
                     }
                 } else if (aws_service) {
                     required_options = "region,access_key_id,secret_access_key";
+                }
+                if (rest_modifiers.messages) {
+                    try {
+                        messages = map cast<hash<UiMessageInfo>>($1), rest_modifiers.messages;
+                    } catch (hash<ExceptionInfo> ex) {
+                        throw "REST-MODIFIER-ERROR", sprintf("The 'messages' REST modifier option must be a list of "
+                            "UI message info hashes; got %y -> %s", rest_modifiers.messages, ex.desc);
+                    }
                 }
                 if (rest_modifiers.set_options_post_auth.val()) {
                     if (!rest_modifiers.set_options_post_auth.callp()) {
@@ -1066,6 +1075,7 @@ public class TypeScriptActionInterface {
                 "options": opts,
                 "required_options": required_options,
                 "auto_url": exists url,
+                "messages": messages,
             };
             ConnectionSchemeCache::registerScheme(sname, scheme);
             samap{sname} = app.name;
