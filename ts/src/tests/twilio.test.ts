@@ -120,7 +120,6 @@ describe('Should test Twilio app', () => {
       });
 
       checkAllowedValues(allowedValues, {
-        logSingleValue: true,
         checkNonEmpty: false,
       });
     });
@@ -147,8 +146,6 @@ describe('Should test Twilio app', () => {
         undefined,
         baseContext
       );
-
-      console.log('List Messages Result:', result?.length, 'messages');
 
       expect(result).toBeDefined();
       expect(Array.isArray(result)).toBe(true);
@@ -231,8 +228,6 @@ describe('Should test Twilio app', () => {
         undefined,
         baseContext
       );
-
-      console.log('List Calls Result:', result?.length, 'calls');
 
       expect(result).toBeDefined();
       expect(Array.isArray(result)).toBe(true);
