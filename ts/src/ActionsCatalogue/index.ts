@@ -36,6 +36,8 @@ import canva from '../apps/canva';
 import claude from '../apps/claude';
 import clickup from '../apps/clickup';
 import confluence from '../apps/confluence';
+import coppercrm from '../apps/coppercrm';
+import craft from '../apps/craft';
 import dynamics from '../apps/dynamics';
 import esignature from '../apps/esignature';
 import facebookPages from '../apps/facebook-pages';
@@ -45,6 +47,7 @@ import firestore from '../apps/firestore';
 import freshdesk from '../apps/freshdesk';
 import gemini from '../apps/gemini';
 import github from '../apps/github';
+import gitlab from '../apps/gitlab';
 import googleChat from '../apps/google-chat';
 import googleContacts from '../apps/google-contacts';
 import googleDocs from '../apps/google-docs';
@@ -63,6 +66,7 @@ import linkedinOrganizations from '../apps/linkedin-organizations';
 import magento from '../apps/magento';
 import mailchimp from '../apps/mailchimp';
 import messenger360 from '../apps/messenger360';
+import monday from '../apps/monday';
 import netsuite from '../apps/netsuite';
 import notion from '../apps/notion';
 import odoo from '../apps/odoo';
@@ -83,6 +87,7 @@ import supabase from '../apps/supabase';
 import teams from '../apps/teams';
 import telegram from '../apps/telegram';
 import todoist from '../apps/todoist';
+import twilio from '../apps/twilio';
 import typeform from '../apps/typeform';
 import webflow from '../apps/webflow';
 import xero from '../apps/xero';
@@ -91,14 +96,10 @@ import zendesk from '../apps/zendesk';
 import zohocrm from '../apps/zohocrm';
 import zoom from '../apps/zoom';
 import { Log } from '../decorators/Logger';
+import L from '../i18n/i18n-node';
 import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import gitlab from '../apps/gitlab';
-import monday from '../apps/monday';
-import coppercrm from '../apps/coppercrm';
-import craft from '../apps/craft';
-import L from '../i18n/i18n-node';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -187,6 +188,7 @@ const NEW_APPS = {
   teams,
   telegram,
   todoist,
+  twilio,
   typeform,
   webflow,
   xero,
@@ -297,6 +299,14 @@ export class ActionsCatalogue {
       ([appName, getApp]: [string, (locale: Locales) => TQoreAppWithActions]) => {
         const app = getApp(this.locale);
         const localeGroups = (L[this.locale].apps as any)[app.name]?.groups;
+        const localeConnectionMessage = (L[this.locale].apps as any)[app.name]?.connectionMessage;
+        const connectionMessageTitle = localeConnectionMessage
+          ? localeConnectionMessage.title()
+          : undefined;
+        const connectionMessageContent = localeConnectionMessage
+          ? localeConnectionMessage.content()
+          : undefined;
+
         const groups = localeGroups
           ? Object.values(localeGroups).map((fn: any) => fn())
           : ['Other'];
@@ -304,6 +314,19 @@ export class ActionsCatalogue {
         this.apps[appName] = {
           ...app,
           groups,
+          ...(connectionMessageTitle &&
+            connectionMessageContent && {
+              rest_modifiers: {
+                ...(app.rest_modifiers || {}),
+                messages: [
+                  {
+                    intent: 'info',
+                    title: connectionMessageTitle,
+                    content: connectionMessageContent,
+                  },
+                ],
+              },
+            }),
         };
       }
     );

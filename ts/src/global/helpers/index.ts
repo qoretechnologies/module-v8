@@ -238,19 +238,37 @@ export const getLocaleField = (
     groups: 'groups',
   };
 
-  const localeField = get(L[locale], [
+  const localeFieldFunc = get(L[locale], [
     'apps',
     app,
     QoreAppActionCodeToLocale[action.action_code],
     action.action,
     fieldNameToLocaleName[fieldName],
-  ])();
+  ]);
+
+  const keys = Object.keys(localeFieldFunc);
+  const isArrayLike =
+    typeof localeFieldFunc === 'function' &&
+    keys.length > 0 &&
+    keys.every((k) => !isNaN(Number(k)));
+
+  let localeField: any;
+
+  if (isArrayLike) {
+    localeField = Object.keys(localeFieldFunc)
+      .sort((a, b) => Number(a) - Number(b))
+      .map((k) => localeFieldFunc[k]);
+  } else if (typeof localeFieldFunc === 'function') {
+    localeField = localeFieldFunc();
+  } else {
+    localeField = localeFieldFunc;
+  }
 
   if (localeField) {
     return localeField;
   }
 
-  if (fieldName === 'groups' && !localeField) {
+  if (fieldName === 'groups') {
     return undefined;
   }
 
@@ -272,14 +290,15 @@ export const mapActionsToApp = (
   locale: Locales
 ): TQoreAppNonEventAction[] => {
   return Object.entries(actions).map(([_a, action]) => {
-    const groups = getLocaleField(app, locale, action, 'groups');
+    const localeGroups = getLocaleField(app, locale, action, 'groups');
+    const groups = localeGroups ? Object.values(localeGroups).map((fn: any) => fn()) : undefined;
 
     return {
       ...action,
       display_name: getLocaleField(app, locale, action, 'display_name'),
       short_desc: getLocaleField(app, locale, action, 'short_desc'),
       desc: getLocaleField(app, locale, action, 'desc'),
-      ...(groups && { groups }),
+      ...(groups?.length && { groups }),
       app,
       options:
         'options' in action && action.options
@@ -433,7 +452,8 @@ export const mapTriggersToApp = (
       : undefined;
 
     // Base trigger with common fields
-    const groups = getLocaleField(app, locale, trigger, 'groups');
+    const localeGroups = getLocaleField(app, locale, trigger, 'groups');
+    const groups = localeGroups ? Object.values(localeGroups).map((fn: any) => fn()) : undefined;
 
     const baseAction = {
       ...omit(trigger, OMMITTED_FIELDS),
