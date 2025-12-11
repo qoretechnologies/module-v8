@@ -47,7 +47,7 @@ const options = {
       element_type: 'string',
     },
     required: false,
-    allowed_values: [
+    element_allowed_values: [
       { display_name: 'Initiated', value: 'initiated' },
       { display_name: 'Ringing', value: 'ringing' },
       { display_name: 'Answered', value: 'answered' },
