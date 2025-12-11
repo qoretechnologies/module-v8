@@ -97439,6 +97439,1854 @@ type RootTranslation = {
 				}
 			}
 		}
+		Twilio: {
+			/**
+			 * T​w​i​l​i​o
+			 */
+			displayName: string
+			groups: {
+				/**
+				 * M​e​s​s​a​g​i​n​g​ ​&​ ​R​e​a​l​-​t​i​m​e​ ​C​o​m​m​u​n​i​c​a​t​i​o​n
+				 */
+				'0': string
+			}
+			connectionMessage: {
+				/**
+				 * C​r​e​d​e​n​t​i​a​l​s​ ​I​n​s​t​r​u​c​t​i​o​n
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​y​o​u​r​ ​T​w​i​l​i​o​ ​a​c​c​o​u​n​t​,​ ​y​o​u​'​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​A​c​c​o​u​n​t​ ​S​I​D​ ​a​n​d​ ​A​u​t​h​ ​T​o​k​e​n​.​ ​Y​o​u​ ​c​a​n​ ​f​i​n​d​ ​t​h​e​s​e​ ​c​r​e​d​e​n​t​i​a​l​s​ ​i​n​ ​y​o​u​r​ ​T​w​i​l​i​o​ ​C​o​n​s​o​l​e​ ​u​n​d​e​r​ ​t​h​e​ ​"​A​c​c​o​u​n​t​ ​I​n​f​o​"​ ​s​e​c​t​i​o​n​ ​o​n​ ​A​c​c​o​u​n​t​ ​D​a​s​h​b​o​a​r​d​.​ ​h​t​t​p​s​:​/​/​w​w​w​.​t​w​i​l​i​o​.​c​o​m​/​c​o​n​s​o​l​e
+				 */
+				content: string
+			}
+			/**
+			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​T​w​i​l​i​o​ ​t​o​ ​s​e​n​d​ ​S​M​S​,​ ​m​a​k​e​ ​c​a​l​l​s​,​ ​a​n​d​ ​m​a​n​a​g​e​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​s
+			 */
+			shortDesc: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​T​w​i​l​i​o​ ​t​o​ ​s​e​n​d​ ​S​M​S​ ​m​e​s​s​a​g​e​s​,​ ​m​a​k​e​ ​v​o​i​c​e​ ​c​a​l​l​s​,​ ​a​n​d​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​s​ ​i​n​f​r​a​s​t​r​u​c​t​u​r​e​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​m​e​s​s​a​g​i​n​g​ ​w​o​r​k​f​l​o​w​s​,​ ​h​a​n​d​l​e​ ​i​n​c​o​m​i​n​g​ ​c​a​l​l​s​ ​a​n​d​ ​m​e​s​s​a​g​e​s​,​ ​a​n​d​ ​b​u​i​l​d​ ​p​o​w​e​r​f​u​l​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​ ​f​e​a​t​u​r​e​s​ ​i​n​t​o​ ​y​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​s​.
+			 */
+			longDesc: string
+			actions: {
+				create_message: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​i​n​g
+						 */
+						'0': string
+					}
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​n​e​w​ ​S​M​S​ ​o​r​ ​M​M​S​ ​m​e​s​s​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​n​d​ ​s​e​n​d​ ​a​ ​n​e​w​ ​S​M​S​ ​o​r​ ​M​M​S​ ​m​e​s​s​a​g​e​ ​u​s​i​n​g​ ​T​w​i​l​i​o​.​ ​Y​o​u​ ​c​a​n​ ​s​e​n​d​ ​t​e​x​t​ ​m​e​s​s​a​g​e​s​,​ ​i​n​c​l​u​d​e​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​s​,​ ​s​c​h​e​d​u​l​e​ ​m​e​s​s​a​g​e​s​,​ ​a​n​d​ ​c​o​n​f​i​g​u​r​e​ ​d​e​l​i​v​e​r​y​ ​o​p​t​i​o​n​s​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​s​u​p​p​o​r​t​s​ ​b​o​t​h​ ​s​t​a​n​d​a​r​d​ ​m​e​s​s​a​g​i​n​g​ ​a​n​d​ ​m​e​s​s​a​g​i​n​g​ ​s​e​r​v​i​c​e​s​.
+					 */
+					longDesc: string
+					options: {
+						to: {
+							/**
+							 * T​o
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​e​s​t​i​n​a​t​i​o​n​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​i​n​ ​E​.​1​6​4​ ​f​o​r​m​a​t​ ​(​e​.​g​.​,​ ​+​1​5​5​5​1​2​3​4​5​6​7​)​.​ ​F​o​r​ ​W​h​a​t​s​A​p​p​ ​m​e​s​s​a​g​e​s​,​ ​u​s​e​ ​t​h​e​ ​f​o​r​m​a​t​ ​w​h​a​t​s​a​p​p​:​+​1​5​5​5​1​2​3​4​5​6​7​.
+							 */
+							longDesc: string
+						}
+						from: {
+							/**
+							 * F​r​o​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​e​n​d​e​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​o​r​ ​m​e​s​s​a​g​i​n​g​ ​s​e​r​v​i​c​e​ ​S​I​D
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​T​w​i​l​i​o​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​ ​E​.​1​6​4​ ​f​o​r​m​a​t​,​ ​a​ ​M​e​s​s​a​g​i​n​g​ ​S​e​r​v​i​c​e​ ​S​I​D​,​ ​o​r​ ​a​ ​s​h​o​r​t​ ​c​o​d​e​.​ ​T​h​i​s​ ​n​u​m​b​e​r​ ​m​u​s​t​ ​b​e​ ​e​n​a​b​l​e​d​ ​f​o​r​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​m​e​s​s​a​g​e​ ​y​o​u​ ​w​i​s​h​ ​t​o​ ​s​e​n​d​.
+							 */
+							longDesc: string
+						}
+						body: {
+							/**
+							 * B​o​d​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​e​n​d​,​ ​l​i​m​i​t​e​d​ ​t​o​ ​1​6​0​0​ ​c​h​a​r​a​c​t​e​r​s​.​ ​F​o​r​ ​S​M​S​ ​m​e​s​s​a​g​e​s​ ​l​o​n​g​e​r​ ​t​h​a​n​ ​1​6​0​ ​c​h​a​r​a​c​t​e​r​s​,​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​b​e​ ​s​e​n​t​ ​a​s​ ​m​u​l​t​i​p​l​e​ ​s​e​g​m​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						mediaUrl: {
+							/**
+							 * M​e​d​i​a​ ​U​R​L​s
+							 */
+							displayName: string
+							/**
+							 * U​R​L​s​ ​o​f​ ​m​e​d​i​a​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​p​u​b​l​i​c​l​y​ ​a​c​c​e​s​s​i​b​l​e​ ​U​R​L​s​ ​o​f​ ​m​e​d​i​a​ ​f​i​l​e​s​ ​t​o​ ​s​e​n​d​ ​w​i​t​h​ ​t​h​e​ ​m​e​s​s​a​g​e​.​ ​S​u​p​p​o​r​t​e​d​ ​f​o​r​ ​M​M​S​ ​m​e​s​s​a​g​e​s​.​ ​Y​o​u​ ​c​a​n​ ​i​n​c​l​u​d​e​ ​u​p​ ​t​o​ ​1​0​ ​m​e​d​i​a​ ​f​i​l​e​s​.
+							 */
+							longDesc: string
+						}
+						messagingServiceSid: {
+							/**
+							 * M​e​s​s​a​g​i​n​g​ ​S​e​r​v​i​c​e​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​S​I​D​ ​o​f​ ​t​h​e​ ​M​e​s​s​a​g​i​n​g​ ​S​e​r​v​i​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​I​D​ ​o​f​ ​t​h​e​ ​M​e​s​s​a​g​i​n​g​ ​S​e​r​v​i​c​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​m​e​s​s​a​g​e​.​ ​W​h​e​n​ ​s​e​t​,​ ​t​h​e​ ​f​r​o​m​ ​p​a​r​a​m​e​t​e​r​ ​c​a​n​ ​b​e​ ​o​m​i​t​t​e​d​,​ ​a​n​d​ ​T​w​i​l​i​o​ ​w​i​l​l​ ​s​e​l​e​c​t​ ​a​n​ ​a​p​p​r​o​p​r​i​a​t​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​r​o​m​ ​t​h​e​ ​M​e​s​s​a​g​i​n​g​ ​S​e​r​v​i​c​e​ ​p​o​o​l​.
+							 */
+							longDesc: string
+						}
+						statusCallback: {
+							/**
+							 * S​t​a​t​u​s​ ​C​a​l​l​b​a​c​k​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * U​R​L​ ​t​o​ ​r​e​c​e​i​v​e​ ​m​e​s​s​a​g​e​ ​s​t​a​t​u​s​ ​u​p​d​a​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​T​w​i​l​i​o​ ​w​i​l​l​ ​P​O​S​T​ ​t​o​ ​e​a​c​h​ ​t​i​m​e​ ​t​h​e​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​c​h​a​n​g​e​s​.​ ​T​h​i​s​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​t​r​a​c​k​ ​t​h​e​ ​d​e​l​i​v​e​r​y​ ​s​t​a​t​u​s​ ​o​f​ ​y​o​u​r​ ​m​e​s​s​a​g​e​s​.
+							 */
+							longDesc: string
+						}
+						maxPrice: {
+							/**
+							 * M​a​x​ ​P​r​i​c​e
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​a​c​c​e​p​t​a​b​l​e​ ​p​r​i​c​e​ ​f​o​r​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​t​o​t​a​l​ ​p​r​i​c​e​ ​i​n​ ​U​S​D​ ​a​c​c​e​p​t​a​b​l​e​ ​f​o​r​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​b​e​ ​s​e​n​t​.​ ​I​f​ ​t​h​e​ ​c​o​s​t​ ​e​x​c​e​e​d​s​ ​t​h​i​s​ ​v​a​l​u​e​,​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​f​a​i​l​.
+							 */
+							longDesc: string
+						}
+						validityPeriod: {
+							/**
+							 * V​a​l​i​d​i​t​y​ ​P​e​r​i​o​d
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​l​o​n​g​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​i​s​ ​v​a​l​i​d​ ​f​o​r​ ​d​e​l​i​v​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​s​e​c​o​n​d​s​ ​t​h​a​t​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​c​a​n​ ​r​e​m​a​i​n​ ​i​n​ ​t​h​e​ ​q​u​e​u​e​.​ ​A​f​t​e​r​ ​t​h​i​s​ ​t​i​m​e​,​ ​i​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​h​a​s​ ​n​o​t​ ​b​e​e​n​ ​d​e​l​i​v​e​r​e​d​,​ ​i​t​ ​w​i​l​l​ ​f​a​i​l​.​ ​M​a​x​i​m​u​m​ ​i​s​ ​1​4​4​0​0​ ​s​e​c​o​n​d​s​ ​(​4​ ​h​o​u​r​s​)​.
+							 */
+							longDesc: string
+						}
+						scheduleType: {
+							/**
+							 * S​c​h​e​d​u​l​e​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​m​e​s​s​a​g​e​ ​s​c​h​e​d​u​l​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​"​f​i​x​e​d​"​ ​t​o​ ​s​c​h​e​d​u​l​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​b​e​ ​s​e​n​t​ ​a​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​i​m​e​.​ ​R​e​q​u​i​r​e​s​ ​t​h​e​ ​S​e​n​d​ ​A​t​ ​p​a​r​a​m​e​t​e​r​ ​t​o​ ​b​e​ ​s​e​t​.
+							 */
+							longDesc: string
+						}
+						sendAt: {
+							/**
+							 * S​e​n​d​ ​A​t
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​s​c​h​e​d​u​l​e​d​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​s​c​h​e​d​u​l​e​d​ ​m​e​s​s​a​g​e​ ​s​h​o​u​l​d​ ​b​e​ ​s​e​n​t​,​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​.​ ​T​h​i​s​ ​p​a​r​a​m​e​t​e​r​ ​i​s​ ​r​e​q​u​i​r​e​d​ ​w​h​e​n​ ​S​c​h​e​d​u​l​e​ ​T​y​p​e​ ​i​s​ ​s​e​t​ ​t​o​ ​"​f​i​x​e​d​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_messages: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​i​n​g
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​M​e​s​s​a​g​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​m​e​s​s​a​g​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​f​r​o​m​ ​y​o​u​r​ ​T​w​i​l​i​o​ ​a​c​c​o​u​n​t​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​m​e​s​s​a​g​e​s​ ​b​y​ ​r​e​c​i​p​i​e​n​t​,​ ​s​e​n​d​e​r​,​ ​d​a​t​e​ ​r​a​n​g​e​,​ ​a​n​d​ ​o​t​h​e​r​ ​c​r​i​t​e​r​i​a​.​ ​R​e​s​u​l​t​s​ ​a​r​e​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​r​e​v​e​r​s​e​ ​c​h​r​o​n​o​l​o​g​i​c​a​l​ ​o​r​d​e​r​.
+					 */
+					longDesc: string
+					options: {
+						to: {
+							/**
+							 * T​o
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​r​e​c​i​p​i​e​n​t​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​m​e​s​s​a​g​e​s​ ​s​e​n​t​ ​t​o​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​.​ ​T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​s​h​o​u​l​d​ ​b​e​ ​i​n​ ​E​.​1​6​4​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						from: {
+							/**
+							 * F​r​o​m
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​e​n​d​e​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​m​e​s​s​a​g​e​s​ ​s​e​n​t​ ​f​r​o​m​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​o​r​ ​a​l​p​h​a​n​u​m​e​r​i​c​ ​s​e​n​d​e​r​ ​I​D​.​ ​T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​s​h​o​u​l​d​ ​b​e​ ​i​n​ ​E​.​1​6​4​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						dateSentAfter: {
+							/**
+							 * D​a​t​e​ ​S​e​n​t​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​i​n​i​m​u​m​ ​s​e​n​d​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​m​e​s​s​a​g​e​s​ ​s​e​n​t​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​d​a​t​e​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						dateSentBefore: {
+							/**
+							 * D​a​t​e​ ​S​e​n​t​ ​B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​a​x​i​m​u​m​ ​s​e​n​d​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​m​e​s​s​a​g​e​s​ ​s​e​n​t​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​d​a​t​e​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​T​h​e​ ​d​e​f​a​u​l​t​ ​i​s​ ​5​0​ ​a​n​d​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​i​s​ ​1​0​0​0​.
+							 */
+							longDesc: string
+						}
+						pageSize: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​.​ ​T​h​e​ ​d​e​f​a​u​l​t​ ​i​s​ ​5​0​ ​a​n​d​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​i​s​ ​1​0​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_message: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​i​n​g
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​a​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​u​s​i​n​g​ ​i​t​s​ ​u​n​i​q​u​e​ ​S​I​D​ ​(​S​t​r​i​n​g​ ​I​d​e​n​t​i​f​i​e​r​)​.​ ​T​h​i​s​ ​r​e​t​u​r​n​s​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​i​n​c​l​u​d​i​n​g​ ​s​t​a​t​u​s​,​ ​c​o​n​t​e​n​t​,​ ​p​r​i​c​i​n​g​,​ ​a​n​d​ ​t​i​m​e​s​t​a​m​p​s​.
+					 */
+					longDesc: string
+					options: {
+						messageSid: {
+							/**
+							 * M​e​s​s​a​g​e​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​s​t​r​i​n​g​ ​i​d​e​n​t​i​f​i​e​r​ ​(​S​I​D​)​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​M​e​s​s​a​g​e​ ​S​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​S​M​"​ ​o​r​ ​"​M​M​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_message: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​i​n​g
+						 */
+						'0': string
+					}
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​m​e​s​s​a​g​e​ ​f​r​o​m​ ​y​o​u​r​ ​a​c​c​o​u​n​t
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​m​e​s​s​a​g​e​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​y​o​u​r​ ​T​w​i​l​i​o​ ​a​c​c​o​u​n​t​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.​ ​N​o​t​e​ ​t​h​a​t​ ​d​e​l​e​t​i​n​g​ ​a​ ​m​e​s​s​a​g​e​ ​r​e​c​o​r​d​ ​d​o​e​s​ ​n​o​t​ ​r​e​d​a​c​t​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t​ ​f​r​o​m​ ​T​w​i​l​i​o​ ​l​o​g​s​.
+					 */
+					longDesc: string
+					options: {
+						messageSid: {
+							/**
+							 * M​e​s​s​a​g​e​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​s​t​r​i​n​g​ ​i​d​e​n​t​i​f​i​e​r​ ​(​S​I​D​)​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​d​e​l​e​t​e​.​ ​M​e​s​s​a​g​e​ ​S​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​S​M​"​ ​o​r​ ​"​M​M​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_message_media: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​i​n​g
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​M​e​s​s​a​g​e​ ​M​e​d​i​a
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​m​e​d​i​a​ ​a​t​t​a​c​h​e​d​ ​t​o​ ​a​ ​m​e​s​s​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​m​e​d​i​a​ ​f​i​l​e​s​ ​a​t​t​a​c​h​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​.​ ​T​h​i​s​ ​i​s​ ​u​s​e​f​u​l​ ​f​o​r​ ​a​c​c​e​s​s​i​n​g​ ​M​M​S​ ​a​t​t​a​c​h​m​e​n​t​s​ ​o​r​ ​m​e​d​i​a​ ​s​e​n​t​ ​v​i​a​ ​W​h​a​t​s​A​p​p​ ​o​r​ ​o​t​h​e​r​ ​c​h​a​n​n​e​l​s​.
+					 */
+					longDesc: string
+					options: {
+						messageSid: {
+							/**
+							 * M​e​s​s​a​g​e​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​s​t​r​i​n​g​ ​i​d​e​n​t​i​f​i​e​r​ ​(​S​I​D​)​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​h​o​s​e​ ​m​e​d​i​a​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​M​e​s​s​a​g​e​ ​S​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​S​M​"​ ​o​r​ ​"​M​M​"​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​d​i​a​ ​i​t​e​m​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​d​i​a​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​T​h​e​ ​d​e​f​a​u​l​t​ ​i​s​ ​5​0​ ​a​n​d​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​i​s​ ​1​0​0​0​.
+							 */
+							longDesc: string
+						}
+						pageSize: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​m​e​d​i​a​ ​i​t​e​m​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​d​i​a​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​.​ ​T​h​e​ ​d​e​f​a​u​l​t​ ​i​s​ ​5​0​ ​a​n​d​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​i​s​ ​1​0​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_call: {
+					groups: {
+						/**
+						 * V​o​i​c​e
+						 */
+						'0': string
+					}
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​C​a​l​l
+					 */
+					displayName: string
+					/**
+					 * I​n​i​t​i​a​t​e​ ​a​n​ ​o​u​t​b​o​u​n​d​ ​p​h​o​n​e​ ​c​a​l​l
+					 */
+					shortDesc: string
+					/**
+					 * I​n​i​t​i​a​t​e​ ​a​n​ ​o​u​t​b​o​u​n​d​ ​p​h​o​n​e​ ​c​a​l​l​ ​u​s​i​n​g​ ​T​w​i​l​i​o​.​ ​Y​o​u​ ​c​a​n​ ​p​r​o​v​i​d​e​ ​T​w​i​M​L​ ​i​n​s​t​r​u​c​t​i​o​n​s​ ​v​i​a​ ​U​R​L​ ​o​r​ ​d​i​r​e​c​t​l​y​,​ ​c​o​n​f​i​g​u​r​e​ ​c​a​l​l​ ​r​e​c​o​r​d​i​n​g​,​ ​a​n​s​w​e​r​i​n​g​ ​m​a​c​h​i​n​e​ ​d​e​t​e​c​t​i​o​n​,​ ​a​n​d​ ​s​e​t​ ​u​p​ ​s​t​a​t​u​s​ ​c​a​l​l​b​a​c​k​s​ ​t​o​ ​t​r​a​c​k​ ​c​a​l​l​ ​p​r​o​g​r​e​s​s​.
+					 */
+					longDesc: string
+					options: {
+						to: {
+							/**
+							 * T​o
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​t​o​ ​c​a​l​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​,​ ​S​I​P​ ​a​d​d​r​e​s​s​,​ ​o​r​ ​c​l​i​e​n​t​ ​i​d​e​n​t​i​f​i​e​r​ ​t​o​ ​c​a​l​l​.​ ​P​h​o​n​e​ ​n​u​m​b​e​r​s​ ​m​u​s​t​ ​b​e​ ​i​n​ ​E​.​1​6​4​ ​f​o​r​m​a​t​ ​(​e​.​g​.​,​ ​+​1​5​5​5​1​2​3​4​5​6​7​)​.
+							 */
+							longDesc: string
+						}
+						from: {
+							/**
+							 * F​r​o​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​l​l​e​r​ ​I​D​ ​t​o​ ​d​i​s​p​l​a​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​T​w​i​l​i​o​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​o​r​ ​c​l​i​e​n​t​ ​i​d​e​n​t​i​f​i​e​r​ ​t​o​ ​u​s​e​ ​a​s​ ​t​h​e​ ​c​a​l​l​e​r​ ​I​D​.​ ​I​f​ ​c​a​l​l​i​n​g​ ​a​ ​p​h​o​n​e​ ​n​u​m​b​e​r​,​ ​t​h​i​s​ ​m​u​s​t​ ​a​l​s​o​ ​b​e​ ​a​ ​p​h​o​n​e​ ​n​u​m​b​e​r​.
+							 */
+							longDesc: string
+						}
+						url: {
+							/**
+							 * T​w​i​M​L​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * U​R​L​ ​t​h​a​t​ ​r​e​t​u​r​n​s​ ​T​w​i​M​L​ ​i​n​s​t​r​u​c​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​t​h​a​t​ ​T​w​i​l​i​o​ ​w​i​l​l​ ​f​e​t​c​h​ ​T​w​i​M​L​ ​i​n​s​t​r​u​c​t​i​o​n​s​ ​f​r​o​m​ ​w​h​e​n​ ​t​h​e​ ​c​a​l​l​ ​c​o​n​n​e​c​t​s​.​ ​T​h​i​s​ ​U​R​L​ ​s​h​o​u​l​d​ ​r​e​t​u​r​n​ ​v​a​l​i​d​ ​T​w​i​M​L​ ​t​o​ ​c​o​n​t​r​o​l​ ​t​h​e​ ​c​a​l​l​ ​f​l​o​w​.
+							 */
+							longDesc: string
+						}
+						twiml: {
+							/**
+							 * T​w​i​M​L
+							 */
+							displayName: string
+							/**
+							 * T​w​i​M​L​ ​i​n​s​t​r​u​c​t​i​o​n​s​ ​f​o​r​ ​t​h​e​ ​c​a​l​l
+							 */
+							shortDesc: string
+							/**
+							 * T​w​i​M​L​ ​i​n​s​t​r​u​c​t​i​o​n​s​ ​t​o​ ​e​x​e​c​u​t​e​ ​w​h​e​n​ ​t​h​e​ ​c​a​l​l​ ​c​o​n​n​e​c​t​s​.​ ​I​f​ ​b​o​t​h​ ​T​w​i​M​L​ ​a​n​d​ ​U​R​L​ ​a​r​e​ ​p​r​o​v​i​d​e​d​,​ ​T​w​i​M​L​ ​t​a​k​e​s​ ​p​r​e​c​e​d​e​n​c​e​.​ ​M​a​x​i​m​u​m​ ​4​0​0​0​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						method: {
+							/**
+							 * H​T​T​P​ ​M​e​t​h​o​d
+							 */
+							displayName: string
+							/**
+							 * H​T​T​P​ ​m​e​t​h​o​d​ ​f​o​r​ ​f​e​t​c​h​i​n​g​ ​T​w​i​M​L
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​H​T​T​P​ ​m​e​t​h​o​d​ ​t​o​ ​u​s​e​ ​w​h​e​n​ ​r​e​q​u​e​s​t​i​n​g​ ​t​h​e​ ​U​R​L​.​ ​C​a​n​ ​b​e​ ​G​E​T​ ​o​r​ ​P​O​S​T​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​P​O​S​T​.
+							 */
+							longDesc: string
+						}
+						statusCallback: {
+							/**
+							 * S​t​a​t​u​s​ ​C​a​l​l​b​a​c​k​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * U​R​L​ ​t​o​ ​r​e​c​e​i​v​e​ ​c​a​l​l​ ​s​t​a​t​u​s​ ​u​p​d​a​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​T​w​i​l​i​o​ ​w​i​l​l​ ​P​O​S​T​ ​t​o​ ​w​h​e​n​ ​t​h​e​ ​c​a​l​l​ ​s​t​a​t​u​s​ ​c​h​a​n​g​e​s​.​ ​Y​o​u​ ​c​a​n​ ​s​p​e​c​i​f​y​ ​w​h​i​c​h​ ​e​v​e​n​t​s​ ​t​r​i​g​g​e​r​ ​c​a​l​l​b​a​c​k​s​ ​u​s​i​n​g​ ​S​t​a​t​u​s​ ​C​a​l​l​b​a​c​k​ ​E​v​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						statusCallbackEvent: {
+							/**
+							 * S​t​a​t​u​s​ ​C​a​l​l​b​a​c​k​ ​E​v​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * E​v​e​n​t​s​ ​t​h​a​t​ ​t​r​i​g​g​e​r​ ​s​t​a​t​u​s​ ​c​a​l​l​b​a​c​k​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​a​l​l​ ​p​r​o​g​r​e​s​s​ ​e​v​e​n​t​s​ ​t​h​a​t​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​a​ ​P​O​S​T​ ​t​o​ ​t​h​e​ ​S​t​a​t​u​s​ ​C​a​l​l​b​a​c​k​ ​U​R​L​.​ ​O​p​t​i​o​n​s​ ​i​n​c​l​u​d​e​:​ ​i​n​i​t​i​a​t​e​d​,​ ​r​i​n​g​i​n​g​,​ ​a​n​s​w​e​r​e​d​,​ ​a​n​d​ ​c​o​m​p​l​e​t​e​d​.
+							 */
+							longDesc: string
+						}
+						statusCallbackMethod: {
+							/**
+							 * S​t​a​t​u​s​ ​C​a​l​l​b​a​c​k​ ​M​e​t​h​o​d
+							 */
+							displayName: string
+							/**
+							 * H​T​T​P​ ​m​e​t​h​o​d​ ​f​o​r​ ​s​t​a​t​u​s​ ​c​a​l​l​b​a​c​k​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​H​T​T​P​ ​m​e​t​h​o​d​ ​t​o​ ​u​s​e​ ​w​h​e​n​ ​P​O​S​T​i​n​g​ ​t​o​ ​t​h​e​ ​S​t​a​t​u​s​ ​C​a​l​l​b​a​c​k​ ​U​R​L​.​ ​C​a​n​ ​b​e​ ​G​E​T​ ​o​r​ ​P​O​S​T​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​P​O​S​T​.
+							 */
+							longDesc: string
+						}
+						timeout: {
+							/**
+							 * T​i​m​e​o​u​t
+							 */
+							displayName: string
+							/**
+							 * S​e​c​o​n​d​s​ ​t​o​ ​w​a​i​t​ ​f​o​r​ ​a​n​s​w​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​s​e​c​o​n​d​s​ ​t​o​ ​w​a​i​t​ ​f​o​r​ ​t​h​e​ ​c​a​l​l​ ​t​o​ ​b​e​ ​a​n​s​w​e​r​e​d​ ​b​e​f​o​r​e​ ​t​i​m​i​n​g​ ​o​u​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​6​0​ ​s​e​c​o​n​d​s​,​ ​m​a​x​i​m​u​m​ ​i​s​ ​6​0​0​ ​s​e​c​o​n​d​s​.
+							 */
+							longDesc: string
+						}
+						record: {
+							/**
+							 * R​e​c​o​r​d
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​r​e​c​o​r​d​ ​t​h​e​ ​c​a​l​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​r​e​c​o​r​d​ ​t​h​e​ ​e​n​t​i​r​e​ ​c​a​l​l​.​ ​T​h​e​ ​r​e​c​o​r​d​i​n​g​ ​w​i​l​l​ ​b​e​ ​a​v​a​i​l​a​b​l​e​ ​a​f​t​e​r​ ​t​h​e​ ​c​a​l​l​ ​c​o​m​p​l​e​t​e​s​.
+							 */
+							longDesc: string
+						}
+						recordingChannels: {
+							/**
+							 * R​e​c​o​r​d​i​n​g​ ​C​h​a​n​n​e​l​s
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​c​h​a​n​n​e​l​s​ ​i​n​ ​t​h​e​ ​r​e​c​o​r​d​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​a​n​n​e​l​s​ ​i​n​ ​t​h​e​ ​f​i​n​a​l​ ​r​e​c​o​r​d​i​n​g​.​ ​"​m​o​n​o​"​ ​r​e​c​o​r​d​s​ ​b​o​t​h​ ​l​e​g​s​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​c​h​a​n​n​e​l​,​ ​"​d​u​a​l​"​ ​r​e​c​o​r​d​s​ ​e​a​c​h​ ​l​e​g​ ​s​e​p​a​r​a​t​e​l​y​.
+							 */
+							longDesc: string
+						}
+						recordingStatusCallback: {
+							/**
+							 * R​e​c​o​r​d​i​n​g​ ​S​t​a​t​u​s​ ​C​a​l​l​b​a​c​k
+							 */
+							displayName: string
+							/**
+							 * U​R​L​ ​t​o​ ​n​o​t​i​f​y​ ​w​h​e​n​ ​r​e​c​o​r​d​i​n​g​ ​i​s​ ​a​v​a​i​l​a​b​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​T​w​i​l​i​o​ ​w​i​l​l​ ​P​O​S​T​ ​t​o​ ​w​h​e​n​ ​t​h​e​ ​r​e​c​o​r​d​i​n​g​ ​i​s​ ​a​v​a​i​l​a​b​l​e​.​ ​T​h​i​s​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​p​r​o​c​e​s​s​ ​o​r​ ​s​t​o​r​e​ ​r​e​c​o​r​d​i​n​g​s​ ​i​m​m​e​d​i​a​t​e​l​y​.
+							 */
+							longDesc: string
+						}
+						machineDetection: {
+							/**
+							 * M​a​c​h​i​n​e​ ​D​e​t​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​ ​a​n​s​w​e​r​i​n​g​ ​m​a​c​h​i​n​e​ ​d​e​t​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * E​n​a​b​l​e​ ​a​n​s​w​e​r​i​n​g​ ​m​a​c​h​i​n​e​ ​d​e​t​e​c​t​i​o​n​.​ ​"​E​n​a​b​l​e​"​ ​r​e​t​u​r​n​s​ ​A​n​s​w​e​r​e​d​B​y​ ​i​m​m​e​d​i​a​t​e​l​y​,​ ​"​D​e​t​e​c​t​M​e​s​s​a​g​e​E​n​d​"​ ​w​a​i​t​s​ ​f​o​r​ ​t​h​e​ ​b​e​e​p​ ​t​o​ ​l​e​a​v​e​ ​a​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						machineDetectionTimeout: {
+							/**
+							 * M​a​c​h​i​n​e​ ​D​e​t​e​c​t​i​o​n​ ​T​i​m​e​o​u​t
+							 */
+							displayName: string
+							/**
+							 * S​e​c​o​n​d​s​ ​t​o​ ​w​a​i​t​ ​f​o​r​ ​d​e​t​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​s​e​c​o​n​d​s​ ​t​o​ ​a​t​t​e​m​p​t​ ​a​n​s​w​e​r​i​n​g​ ​m​a​c​h​i​n​e​ ​d​e​t​e​c​t​i​o​n​ ​b​e​f​o​r​e​ ​t​i​m​i​n​g​ ​o​u​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​3​0​ ​s​e​c​o​n​d​s​.
+							 */
+							longDesc: string
+						}
+						sendDigits: {
+							/**
+							 * S​e​n​d​ ​D​i​g​i​t​s
+							 */
+							displayName: string
+							/**
+							 * D​T​M​F​ ​t​o​n​e​s​ ​t​o​ ​s​e​n​d​ ​a​f​t​e​r​ ​c​o​n​n​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​s​t​r​i​n​g​ ​o​f​ ​k​e​y​s​ ​t​o​ ​d​i​a​l​ ​a​f​t​e​r​ ​c​o​n​n​e​c​t​i​n​g​.​ ​V​a​l​i​d​ ​c​h​a​r​a​c​t​e​r​s​:​ ​0​-​9​,​ ​A​-​D​,​ ​#​,​ ​*​,​ ​w​ ​(​0​.​5​s​ ​p​a​u​s​e​)​,​ ​W​ ​(​1​s​ ​p​a​u​s​e​)​.​ ​F​o​r​ ​e​x​a​m​p​l​e​:​ ​"​W​1​2​3​4​#​"​.
+							 */
+							longDesc: string
+						}
+						timeLimit: {
+							/**
+							 * T​i​m​e​ ​L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​c​a​l​l​ ​d​u​r​a​t​i​o​n​ ​i​n​ ​s​e​c​o​n​d​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​d​u​r​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​a​l​l​ ​i​n​ ​s​e​c​o​n​d​s​.​ ​T​h​e​ ​c​a​l​l​ ​w​i​l​l​ ​b​e​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​e​n​d​e​d​ ​a​f​t​e​r​ ​t​h​i​s​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_call_with_tts: {
+					groups: {
+						/**
+						 * V​o​i​c​e
+						 */
+						'0': string
+					}
+					/**
+					 * C​r​e​a​t​e​ ​C​a​l​l​ ​w​i​t​h​ ​T​e​x​t​-​t​o​-​S​p​e​e​c​h
+					 */
+					displayName: string
+					/**
+					 * M​a​k​e​ ​a​ ​c​a​l​l​ ​w​i​t​h​ ​a​u​t​o​m​a​t​e​d​ ​v​o​i​c​e​ ​m​e​s​s​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * I​n​i​t​i​a​t​e​ ​a​n​ ​o​u​t​b​o​u​n​d​ ​p​h​o​n​e​ ​c​a​l​l​ ​w​i​t​h​ ​a​n​ ​a​u​t​o​m​a​t​e​d​ ​t​e​x​t​-​t​o​-​s​p​e​e​c​h​ ​m​e​s​s​a​g​e​.​ ​T​h​i​s​ ​s​i​m​p​l​i​f​i​e​d​ ​a​c​t​i​o​n​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​g​e​n​e​r​a​t​e​s​ ​T​w​i​M​L​ ​b​a​s​e​d​ ​o​n​ ​y​o​u​r​ ​i​n​p​u​t​s​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​q​u​i​c​k​l​y​ ​c​r​e​a​t​e​ ​c​a​l​l​s​ ​w​i​t​h​ ​v​o​i​c​e​ ​m​e​s​s​a​g​e​s​ ​w​i​t​h​o​u​t​ ​w​r​i​t​i​n​g​ ​T​w​i​M​L​ ​c​o​d​e​ ​m​a​n​u​a​l​l​y​.​ ​Y​o​u​ ​c​a​n​ ​c​u​s​t​o​m​i​z​e​ ​t​h​e​ ​v​o​i​c​e​,​ ​l​a​n​g​u​a​g​e​,​ ​r​e​c​o​r​d​ ​t​h​e​ ​c​a​l​l​,​ ​a​n​d​ ​o​p​t​i​o​n​a​l​l​y​ ​t​r​a​n​s​c​r​i​b​e​ ​r​e​c​o​r​d​i​n​g​s​.
+					 */
+					longDesc: string
+					options: {
+						to: {
+							/**
+							 * T​o
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​t​o​ ​c​a​l​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​t​o​ ​c​a​l​l​ ​i​n​ ​E​.​1​6​4​ ​f​o​r​m​a​t​ ​(​e​.​g​.​,​ ​+​1​5​5​5​1​2​3​4​5​6​7​)​.​ ​Y​o​u​ ​c​a​n​ ​a​l​s​o​ ​c​a​l​l​ ​S​I​P​ ​a​d​d​r​e​s​s​e​s​ ​o​r​ ​T​w​i​l​i​o​ ​c​l​i​e​n​t​ ​i​d​e​n​t​i​f​i​e​r​s​.
+							 */
+							longDesc: string
+						}
+						from: {
+							/**
+							 * F​r​o​m
+							 */
+							displayName: string
+							/**
+							 * Y​o​u​r​ ​T​w​i​l​i​o​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​T​w​i​l​i​o​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​t​o​ ​u​s​e​ ​a​s​ ​t​h​e​ ​c​a​l​l​e​r​ ​I​D​.​ ​T​h​i​s​ ​m​u​s​t​ ​b​e​ ​a​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​y​o​u​ ​o​w​n​ ​i​n​ ​y​o​u​r​ ​T​w​i​l​i​o​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+						message: {
+							/**
+							 * M​e​s​s​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​m​e​s​s​a​g​e​ ​t​o​ ​s​p​e​a​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​m​e​s​s​a​g​e​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​s​p​o​k​e​n​ ​w​h​e​n​ ​t​h​e​ ​c​a​l​l​ ​i​s​ ​a​n​s​w​e​r​e​d​.​ ​T​h​i​s​ ​w​i​l​l​ ​b​e​ ​c​o​n​v​e​r​t​e​d​ ​t​o​ ​s​p​e​e​c​h​ ​u​s​i​n​g​ ​T​w​i​l​i​o​'​s​ ​t​e​x​t​-​t​o​-​s​p​e​e​c​h​ ​e​n​g​i​n​e​.
+							 */
+							longDesc: string
+						}
+						voice: {
+							/**
+							 * V​o​i​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​v​o​i​c​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​e​x​t​-​t​o​-​s​p​e​e​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​o​i​c​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​e​x​t​-​t​o​-​s​p​e​e​c​h​.​ ​C​h​o​o​s​e​ ​f​r​o​m​ ​v​a​r​i​o​u​s​ ​v​o​i​c​e​s​ ​w​i​t​h​ ​d​i​f​f​e​r​e​n​t​ ​l​a​n​g​u​a​g​e​s​,​ ​g​e​n​d​e​r​s​,​ ​a​n​d​ ​q​u​a​l​i​t​y​ ​l​e​v​e​l​s​ ​(​S​t​a​n​d​a​r​d​,​ ​N​e​u​r​a​l​,​ ​G​e​n​e​r​a​t​i​v​e​)​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​u​s​e​s​ ​y​o​u​r​ ​a​c​c​o​u​n​t​'​s​ ​d​e​f​a​u​l​t​ ​v​o​i​c​e​.
+							 */
+							longDesc: string
+						}
+						language: {
+							/**
+							 * L​a​n​g​u​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​l​a​n​g​u​a​g​e​ ​f​o​r​ ​t​e​x​t​-​t​o​-​s​p​e​e​c​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​a​n​g​u​a​g​e​ ​a​n​d​ ​l​o​c​a​l​e​ ​f​o​r​ ​t​e​x​t​-​t​o​-​s​p​e​e​c​h​.​ ​T​h​i​s​ ​s​h​o​u​l​d​ ​m​a​t​c​h​ ​t​h​e​ ​l​a​n​g​u​a​g​e​ ​o​f​ ​y​o​u​r​ ​m​e​s​s​a​g​e​ ​t​e​x​t​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​d​e​f​a​u​l​t​s​ ​t​o​ ​e​n​-​U​S​ ​(​E​n​g​l​i​s​h​,​ ​U​n​i​t​e​d​ ​S​t​a​t​e​s​)​.
+							 */
+							longDesc: string
+						}
+						record: {
+							/**
+							 * R​e​c​o​r​d​ ​C​a​l​l
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​r​e​c​o​r​d​ ​t​h​e​ ​c​a​l​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​r​e​c​o​r​d​ ​t​h​e​ ​e​n​t​i​r​e​ ​c​a​l​l​.​ ​T​h​e​ ​r​e​c​o​r​d​i​n​g​ ​w​i​l​l​ ​b​e​ ​a​v​a​i​l​a​b​l​e​ ​a​f​t​e​r​ ​t​h​e​ ​c​a​l​l​ ​c​o​m​p​l​e​t​e​s​ ​a​n​d​ ​c​a​n​ ​b​e​ ​r​e​t​r​i​e​v​e​d​ ​u​s​i​n​g​ ​t​h​e​ ​L​i​s​t​ ​R​e​c​o​r​d​i​n​g​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						transcribe: {
+							/**
+							 * T​r​a​n​s​c​r​i​b​e​ ​R​e​c​o​r​d​i​n​g
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​t​r​a​n​s​c​r​i​b​e​ ​t​h​e​ ​r​e​c​o​r​d​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​t​r​a​n​s​c​r​i​b​e​ ​t​h​e​ ​c​a​l​l​ ​r​e​c​o​r​d​i​n​g​.​ ​T​h​i​s​ ​r​e​q​u​i​r​e​s​ ​t​h​e​ ​R​e​c​o​r​d​ ​C​a​l​l​ ​o​p​t​i​o​n​ ​t​o​ ​b​e​ ​e​n​a​b​l​e​d​.​ ​T​h​e​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​ ​w​i​l​l​ ​b​e​ ​a​v​a​i​l​a​b​l​e​ ​a​f​t​e​r​ ​p​r​o​c​e​s​s​i​n​g​.
+							 */
+							longDesc: string
+						}
+						transcriptionCallback: {
+							/**
+							 * T​r​a​n​s​c​r​i​p​t​i​o​n​ ​C​a​l​l​b​a​c​k​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * U​R​L​ ​t​o​ ​r​e​c​e​i​v​e​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​T​w​i​l​i​o​ ​w​i​l​l​ ​P​O​S​T​ ​t​o​ ​w​h​e​n​ ​t​h​e​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​ ​i​s​ ​c​o​m​p​l​e​t​e​.​ ​T​h​i​s​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​p​r​o​c​e​s​s​ ​o​r​ ​s​t​o​r​e​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​s​ ​i​m​m​e​d​i​a​t​e​l​y​ ​a​f​t​e​r​ ​t​h​e​y​ ​a​r​e​ ​a​v​a​i​l​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						sendDigits: {
+							/**
+							 * S​e​n​d​ ​D​i​g​i​t​s
+							 */
+							displayName: string
+							/**
+							 * D​T​M​F​ ​t​o​n​e​s​ ​t​o​ ​s​e​n​d​ ​a​f​t​e​r​ ​c​o​n​n​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​s​t​r​i​n​g​ ​o​f​ ​k​e​y​s​ ​t​o​ ​d​i​a​l​ ​a​f​t​e​r​ ​t​h​e​ ​c​a​l​l​ ​c​o​n​n​e​c​t​s​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​n​a​v​i​g​a​t​i​n​g​ ​p​h​o​n​e​ ​m​e​n​u​s​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​.​ ​V​a​l​i​d​ ​c​h​a​r​a​c​t​e​r​s​:​ ​0​-​9​,​ ​#​,​ ​*​,​ ​w​ ​(​w​a​i​t​ ​0​.​5​ ​s​e​c​o​n​d​s​)​.​ ​F​o​r​ ​e​x​a​m​p​l​e​:​ ​"​w​1​2​3​#​"​ ​w​a​i​t​s​ ​0​.​5​ ​s​e​c​o​n​d​s​ ​t​h​e​n​ ​d​i​a​l​s​ ​1​2​3​#​.
+							 */
+							longDesc: string
+						}
+						statusCallback: {
+							/**
+							 * S​t​a​t​u​s​ ​C​a​l​l​b​a​c​k​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * U​R​L​ ​t​o​ ​r​e​c​e​i​v​e​ ​c​a​l​l​ ​s​t​a​t​u​s​ ​u​p​d​a​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​T​w​i​l​i​o​ ​w​i​l​l​ ​P​O​S​T​ ​t​o​ ​w​h​e​n​ ​t​h​e​ ​c​a​l​l​ ​s​t​a​t​u​s​ ​c​h​a​n​g​e​s​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​t​r​a​c​k​ ​c​a​l​l​ ​p​r​o​g​r​e​s​s​ ​a​n​d​ ​c​o​m​p​l​e​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						timeout: {
+							/**
+							 * T​i​m​e​o​u​t
+							 */
+							displayName: string
+							/**
+							 * S​e​c​o​n​d​s​ ​t​o​ ​w​a​i​t​ ​f​o​r​ ​a​n​s​w​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​s​e​c​o​n​d​s​ ​t​o​ ​w​a​i​t​ ​f​o​r​ ​t​h​e​ ​c​a​l​l​ ​t​o​ ​b​e​ ​a​n​s​w​e​r​e​d​ ​b​e​f​o​r​e​ ​t​i​m​i​n​g​ ​o​u​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​6​0​ ​s​e​c​o​n​d​s​,​ ​m​a​x​i​m​u​m​ ​i​s​ ​6​0​0​ ​s​e​c​o​n​d​s​.
+							 */
+							longDesc: string
+						}
+						machineDetection: {
+							/**
+							 * M​a​c​h​i​n​e​ ​D​e​t​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​ ​a​n​s​w​e​r​i​n​g​ ​m​a​c​h​i​n​e​ ​d​e​t​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * E​n​a​b​l​e​ ​a​n​s​w​e​r​i​n​g​ ​m​a​c​h​i​n​e​ ​d​e​t​e​c​t​i​o​n​ ​t​o​ ​d​e​t​e​r​m​i​n​e​ ​i​f​ ​a​ ​h​u​m​a​n​ ​o​r​ ​m​a​c​h​i​n​e​ ​a​n​s​w​e​r​e​d​ ​t​h​e​ ​c​a​l​l​.​ ​"​E​n​a​b​l​e​"​ ​r​e​t​u​r​n​s​ ​t​h​e​ ​r​e​s​u​l​t​ ​i​m​m​e​d​i​a​t​e​l​y​,​ ​"​D​e​t​e​c​t​M​e​s​s​a​g​e​E​n​d​"​ ​w​a​i​t​s​ ​f​o​r​ ​t​h​e​ ​v​o​i​c​e​m​a​i​l​ ​b​e​e​p​ ​b​e​f​o​r​e​ ​p​l​a​y​i​n​g​ ​y​o​u​r​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_calls: {
+					groups: {
+						/**
+						 * V​o​i​c​e
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​C​a​l​l​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​a​l​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​a​l​l​s​ ​f​r​o​m​ ​y​o​u​r​ ​T​w​i​l​i​o​ ​a​c​c​o​u​n​t​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​c​a​l​l​s​ ​b​y​ ​p​a​r​t​i​c​i​p​a​n​t​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​,​ ​s​t​a​t​u​s​,​ ​d​a​t​e​ ​r​a​n​g​e​,​ ​a​n​d​ ​o​t​h​e​r​ ​c​r​i​t​e​r​i​a​.​ ​R​e​s​u​l​t​s​ ​a​r​e​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​r​e​v​e​r​s​e​ ​c​h​r​o​n​o​l​o​g​i​c​a​l​ ​o​r​d​e​r​.
+					 */
+					longDesc: string
+					options: {
+						to: {
+							/**
+							 * T​o
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​r​e​c​i​p​i​e​n​t​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​c​a​l​l​s​ ​m​a​d​e​ ​t​o​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​,​ ​S​I​P​ ​a​d​d​r​e​s​s​,​ ​o​r​ ​c​l​i​e​n​t​ ​i​d​e​n​t​i​f​i​e​r​.
+							 */
+							longDesc: string
+						}
+						from: {
+							/**
+							 * F​r​o​m
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​a​l​l​e​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​c​a​l​l​s​ ​f​r​o​m​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​,​ ​S​I​P​ ​a​d​d​r​e​s​s​,​ ​o​r​ ​c​l​i​e​n​t​ ​i​d​e​n​t​i​f​i​e​r​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​a​l​l​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​c​a​l​l​s​ ​w​i​t​h​ ​t​h​i​s​ ​s​t​a​t​u​s​.​ ​O​p​t​i​o​n​s​ ​i​n​c​l​u​d​e​:​ ​q​u​e​u​e​d​,​ ​r​i​n​g​i​n​g​,​ ​i​n​-​p​r​o​g​r​e​s​s​,​ ​c​a​n​c​e​l​e​d​,​ ​c​o​m​p​l​e​t​e​d​,​ ​f​a​i​l​e​d​,​ ​b​u​s​y​,​ ​o​r​ ​n​o​-​a​n​s​w​e​r​.
+							 */
+							longDesc: string
+						}
+						startTimeAfter: {
+							/**
+							 * S​t​a​r​t​ ​T​i​m​e​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​i​n​i​m​u​m​ ​s​t​a​r​t​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​c​a​l​l​s​ ​t​h​a​t​ ​s​t​a​r​t​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​d​a​t​e​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						startTimeBefore: {
+							/**
+							 * S​t​a​r​t​ ​T​i​m​e​ ​B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​a​x​i​m​u​m​ ​s​t​a​r​t​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​c​a​l​l​s​ ​t​h​a​t​ ​s​t​a​r​t​e​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​d​a​t​e​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						endTimeAfter: {
+							/**
+							 * E​n​d​ ​T​i​m​e​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​i​n​i​m​u​m​ ​e​n​d​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​c​a​l​l​s​ ​t​h​a​t​ ​e​n​d​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​d​a​t​e​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						endTimeBefore: {
+							/**
+							 * E​n​d​ ​T​i​m​e​ ​B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​a​x​i​m​u​m​ ​e​n​d​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​c​a​l​l​s​ ​t​h​a​t​ ​e​n​d​e​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​d​a​t​e​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​a​l​l​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​a​l​l​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​T​h​e​ ​d​e​f​a​u​l​t​ ​i​s​ ​5​0​ ​a​n​d​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​i​s​ ​1​0​0​0​.
+							 */
+							longDesc: string
+						}
+						pageSize: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​c​a​l​l​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​c​a​l​l​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​.​ ​T​h​e​ ​d​e​f​a​u​l​t​ ​i​s​ ​5​0​ ​a​n​d​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​i​s​ ​1​0​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_call: {
+					groups: {
+						/**
+						 * V​o​i​c​e
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​a​ ​C​a​l​l
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​l​l
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​l​l​ ​u​s​i​n​g​ ​i​t​s​ ​u​n​i​q​u​e​ ​S​I​D​.​ ​T​h​i​s​ ​r​e​t​u​r​n​s​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​a​l​l​ ​i​n​c​l​u​d​i​n​g​ ​s​t​a​t​u​s​,​ ​d​u​r​a​t​i​o​n​,​ ​p​r​i​c​i​n​g​,​ ​a​n​d​ ​t​i​m​e​s​t​a​m​p​s​.
+					 */
+					longDesc: string
+					options: {
+						callSid: {
+							/**
+							 * C​a​l​l​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​a​l​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​s​t​r​i​n​g​ ​i​d​e​n​t​i​f​i​e​r​ ​(​S​I​D​)​ ​o​f​ ​t​h​e​ ​c​a​l​l​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​C​a​l​l​ ​S​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​C​A​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_call: {
+					groups: {
+						/**
+						 * V​o​i​c​e
+						 */
+						'0': string
+					}
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​C​a​l​l
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​c​a​l​l​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​y​o​u​r​ ​a​c​c​o​u​n​t
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​c​a​l​l​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​y​o​u​r​ ​T​w​i​l​i​o​ ​a​c​c​o​u​n​t​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.​ ​N​o​t​e​ ​t​h​a​t​ ​d​e​l​e​t​i​n​g​ ​a​ ​c​a​l​l​ ​r​e​c​o​r​d​ ​d​o​e​s​ ​n​o​t​ ​r​e​d​a​c​t​ ​t​h​e​ ​c​a​l​l​ ​d​a​t​a​ ​f​r​o​m​ ​T​w​i​l​i​o​ ​l​o​g​s​.
+					 */
+					longDesc: string
+					options: {
+						callSid: {
+							/**
+							 * C​a​l​l​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​a​l​l​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​s​t​r​i​n​g​ ​i​d​e​n​t​i​f​i​e​r​ ​(​S​I​D​)​ ​o​f​ ​t​h​e​ ​c​a​l​l​ ​t​o​ ​d​e​l​e​t​e​.​ ​C​a​l​l​ ​S​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​C​A​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_execution: {
+					groups: {
+						/**
+						 * S​t​u​d​i​o
+						 */
+						'0': string
+					}
+					/**
+					 * C​r​e​a​t​e​ ​a​n​ ​E​x​e​c​u​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * S​t​a​r​t​ ​a​ ​S​t​u​d​i​o​ ​F​l​o​w​ ​e​x​e​c​u​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​n​d​ ​s​t​a​r​t​ ​a​ ​n​e​w​ ​e​x​e​c​u​t​i​o​n​ ​o​f​ ​a​ ​S​t​u​d​i​o​ ​F​l​o​w​.​ ​T​h​i​s​ ​t​r​i​g​g​e​r​s​ ​t​h​e​ ​f​l​o​w​ ​t​o​ ​r​u​n​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​n​d​ ​o​p​t​i​o​n​a​l​ ​p​a​r​a​m​e​t​e​r​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​a​c​c​e​s​s​e​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​f​l​o​w​.
+					 */
+					longDesc: string
+					options: {
+						flowSid: {
+							/**
+							 * F​l​o​w​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​S​t​u​d​i​o​ ​F​l​o​w
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​I​D​ ​o​f​ ​t​h​e​ ​S​t​u​d​i​o​ ​F​l​o​w​ ​t​o​ ​e​x​e​c​u​t​e​.​ ​F​l​o​w​ ​S​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​F​W​"​.
+							 */
+							longDesc: string
+						}
+						to: {
+							/**
+							 * T​o
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​t​o​ ​s​t​a​r​t​ ​t​h​e​ ​F​l​o​w​ ​e​x​e​c​u​t​i​o​n​ ​w​i​t​h​.​ ​A​v​a​i​l​a​b​l​e​ ​i​n​ ​t​h​e​ ​f​l​o​w​ ​a​s​ ​c​o​n​t​a​c​t​.​c​h​a​n​n​e​l​.​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						from: {
+							/**
+							 * F​r​o​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​T​w​i​l​i​o​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​T​w​i​l​i​o​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​t​o​ ​s​e​n​d​ ​m​e​s​s​a​g​e​s​ ​o​r​ ​m​a​k​e​ ​c​a​l​l​s​ ​f​r​o​m​ ​d​u​r​i​n​g​ ​t​h​e​ ​e​x​e​c​u​t​i​o​n​.​ ​A​v​a​i​l​a​b​l​e​ ​a​s​ ​f​l​o​w​.​c​h​a​n​n​e​l​.​a​d​d​r​e​s​s​.​ ​C​a​n​ ​a​l​s​o​ ​b​e​ ​a​ ​M​e​s​s​a​g​i​n​g​ ​S​e​r​v​i​c​e​ ​S​I​D​.
+							 */
+							longDesc: string
+						}
+						parameters: {
+							/**
+							 * P​a​r​a​m​e​t​e​r​s
+							 */
+							displayName: string
+							/**
+							 * J​S​O​N​ ​d​a​t​a​ ​f​o​r​ ​t​h​e​ ​f​l​o​w​ ​c​o​n​t​e​x​t
+							 */
+							shortDesc: string
+							/**
+							 * J​S​O​N​ ​d​a​t​a​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​f​l​o​w​'​s​ ​c​o​n​t​e​x​t​ ​a​n​d​ ​a​c​c​e​s​s​i​b​l​e​ ​a​s​ ​v​a​r​i​a​b​l​e​s​.​ ​F​o​r​ ​e​x​a​m​p​l​e​:​ ​a​ ​J​S​O​N​ ​o​b​j​e​c​t​ ​w​i​t​h​ ​n​a​m​e​ ​p​r​o​p​e​r​t​y​ ​b​e​c​o​m​e​s​ ​a​v​a​i​l​a​b​l​e​ ​a​s​ ​f​l​o​w​.​d​a​t​a​.​n​a​m​e​ ​i​n​ ​t​h​e​ ​f​l​o​w​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_executions: {
+					groups: {
+						/**
+						 * S​t​u​d​i​o
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​E​x​e​c​u​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​e​x​e​c​u​t​i​o​n​s​ ​f​o​r​ ​a​ ​S​t​u​d​i​o​ ​F​l​o​w
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​e​x​e​c​u​t​i​o​n​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​S​t​u​d​i​o​ ​F​l​o​w​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​e​x​e​c​u​t​i​o​n​s​ ​b​y​ ​d​a​t​e​ ​r​a​n​g​e​ ​t​o​ ​f​i​n​d​ ​s​p​e​c​i​f​i​c​ ​e​x​e​c​u​t​i​o​n​ ​i​n​s​t​a​n​c​e​s​.
+					 */
+					longDesc: string
+					options: {
+						flowSid: {
+							/**
+							 * F​l​o​w​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​S​t​u​d​i​o​ ​F​l​o​w
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​I​D​ ​o​f​ ​t​h​e​ ​S​t​u​d​i​o​ ​F​l​o​w​ ​w​h​o​s​e​ ​e​x​e​c​u​t​i​o​n​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t​.​ ​F​l​o​w​ ​S​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​F​W​"​.
+							 */
+							longDesc: string
+						}
+						dateCreatedFrom: {
+							/**
+							 * D​a​t​e​ ​C​r​e​a​t​e​d​ ​F​r​o​m
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​i​n​i​m​u​m​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​e​x​e​c​u​t​i​o​n​s​ ​c​r​e​a​t​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​,​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						dateCreatedTo: {
+							/**
+							 * D​a​t​e​ ​C​r​e​a​t​e​d​ ​T​o
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​a​x​i​m​u​m​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​e​x​e​c​u​t​i​o​n​s​ ​c​r​e​a​t​e​d​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​,​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​x​e​c​u​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​x​e​c​u​t​i​o​n​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​T​h​e​ ​d​e​f​a​u​l​t​ ​i​s​ ​5​0​ ​a​n​d​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​i​s​ ​1​0​0​0​.
+							 */
+							longDesc: string
+						}
+						pageSize: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​e​x​e​c​u​t​i​o​n​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​e​x​e​c​u​t​i​o​n​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​.​ ​T​h​e​ ​d​e​f​a​u​l​t​ ​i​s​ ​5​0​ ​a​n​d​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​i​s​ ​1​0​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_execution: {
+					groups: {
+						/**
+						 * S​t​u​d​i​o
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​a​n​ ​E​x​e​c​u​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​x​e​c​u​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​S​t​u​d​i​o​ ​F​l​o​w​ ​e​x​e​c​u​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​c​u​r​r​e​n​t​ ​s​t​a​t​e​,​ ​c​o​n​t​e​x​t​ ​d​a​t​a​,​ ​a​n​d​ ​s​t​a​t​u​s​.
+					 */
+					longDesc: string
+					options: {
+						flowSid: {
+							/**
+							 * F​l​o​w​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​S​t​u​d​i​o​ ​F​l​o​w
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​I​D​ ​o​f​ ​t​h​e​ ​S​t​u​d​i​o​ ​F​l​o​w​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​e​x​e​c​u​t​i​o​n​.​ ​F​l​o​w​ ​S​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​F​W​"​.
+							 */
+							longDesc: string
+						}
+						executionSid: {
+							/**
+							 * E​x​e​c​u​t​i​o​n​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​e​x​e​c​u​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​s​t​r​i​n​g​ ​i​d​e​n​t​i​f​i​e​r​ ​(​S​I​D​)​ ​o​f​ ​t​h​e​ ​e​x​e​c​u​t​i​o​n​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​E​x​e​c​u​t​i​o​n​ ​S​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​F​N​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_execution: {
+					groups: {
+						/**
+						 * S​t​u​d​i​o
+						 */
+						'0': string
+					}
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​E​x​e​c​u​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​s​t​a​t​u​s​ ​o​f​ ​a​n​ ​e​x​e​c​u​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​s​t​a​t​u​s​ ​o​f​ ​a​ ​S​t​u​d​i​o​ ​F​l​o​w​ ​e​x​e​c​u​t​i​o​n​.​ ​T​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​u​s​e​d​ ​t​o​ ​e​n​d​ ​a​n​ ​a​c​t​i​v​e​ ​e​x​e​c​u​t​i​o​n​ ​e​a​r​l​y​.
+					 */
+					longDesc: string
+					options: {
+						flowSid: {
+							/**
+							 * F​l​o​w​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​S​t​u​d​i​o​ ​F​l​o​w
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​I​D​ ​o​f​ ​t​h​e​ ​S​t​u​d​i​o​ ​F​l​o​w​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​e​x​e​c​u​t​i​o​n​.​ ​F​l​o​w​ ​S​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​F​W​"​.
+							 */
+							longDesc: string
+						}
+						executionSid: {
+							/**
+							 * E​x​e​c​u​t​i​o​n​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​e​x​e​c​u​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​s​t​r​i​n​g​ ​i​d​e​n​t​i​f​i​e​r​ ​(​S​I​D​)​ ​o​f​ ​t​h​e​ ​e​x​e​c​u​t​i​o​n​ ​t​o​ ​u​p​d​a​t​e​.​ ​E​x​e​c​u​t​i​o​n​ ​S​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​F​N​"​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​s​t​a​t​u​s​ ​f​o​r​ ​t​h​e​ ​e​x​e​c​u​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​t​u​s​ ​t​o​ ​s​e​t​ ​f​o​r​ ​t​h​e​ ​e​x​e​c​u​t​i​o​n​.​ ​S​e​t​ ​t​o​ ​"​e​n​d​e​d​"​ ​t​o​ ​t​e​r​m​i​n​a​t​e​ ​a​n​ ​a​c​t​i​v​e​ ​e​x​e​c​u​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_execution: {
+					groups: {
+						/**
+						 * S​t​u​d​i​o
+						 */
+						'0': string
+					}
+					/**
+					 * D​e​l​e​t​e​ ​a​n​ ​E​x​e​c​u​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​n​ ​e​x​e​c​u​t​i​o​n​ ​r​e​c​o​r​d
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​n​ ​e​x​e​c​u​t​i​o​n​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​y​o​u​r​ ​T​w​i​l​i​o​ ​a​c​c​o​u​n​t​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.
+					 */
+					longDesc: string
+					options: {
+						flowSid: {
+							/**
+							 * F​l​o​w​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​S​t​u​d​i​o​ ​F​l​o​w
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​I​D​ ​o​f​ ​t​h​e​ ​S​t​u​d​i​o​ ​F​l​o​w​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​e​x​e​c​u​t​i​o​n​.​ ​F​l​o​w​ ​S​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​F​W​"​.
+							 */
+							longDesc: string
+						}
+						executionSid: {
+							/**
+							 * E​x​e​c​u​t​i​o​n​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​e​x​e​c​u​t​i​o​n​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​s​t​r​i​n​g​ ​i​d​e​n​t​i​f​i​e​r​ ​(​S​I​D​)​ ​o​f​ ​t​h​e​ ​e​x​e​c​u​t​i​o​n​ ​t​o​ ​d​e​l​e​t​e​.​ ​E​x​e​c​u​t​i​o​n​ ​S​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​F​N​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_recordings: {
+					groups: {
+						/**
+						 * V​o​i​c​e
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​R​e​c​o​r​d​i​n​g​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​a​l​l​ ​r​e​c​o​r​d​i​n​g​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​a​l​l​ ​r​e​c​o​r​d​i​n​g​s​ ​f​r​o​m​ ​y​o​u​r​ ​T​w​i​l​i​o​ ​a​c​c​o​u​n​t​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​r​e​c​o​r​d​i​n​g​s​ ​b​y​ ​c​a​l​l​ ​S​I​D​,​ ​c​o​n​f​e​r​e​n​c​e​ ​S​I​D​,​ ​d​a​t​e​ ​r​a​n​g​e​,​ ​a​n​d​ ​i​n​c​l​u​d​e​ ​s​o​f​t​-​d​e​l​e​t​e​d​ ​r​e​c​o​r​d​i​n​g​s​.
+					 */
+					longDesc: string
+					options: {
+						callSid: {
+							/**
+							 * C​a​l​l​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​a​l​l​ ​S​I​D
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​r​e​c​o​r​d​i​n​g​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​c​a​l​l​.​ ​T​h​e​ ​C​a​l​l​ ​S​I​D​ ​s​h​o​u​l​d​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​C​A​"​.
+							 */
+							longDesc: string
+						}
+						conferenceSid: {
+							/**
+							 * C​o​n​f​e​r​e​n​c​e​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​n​f​e​r​e​n​c​e​ ​S​I​D
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​r​e​c​o​r​d​i​n​g​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​c​o​n​f​e​r​e​n​c​e​.​ ​T​h​e​ ​C​o​n​f​e​r​e​n​c​e​ ​S​I​D​ ​s​h​o​u​l​d​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​C​F​"​.
+							 */
+							longDesc: string
+						}
+						dateCreatedAfter: {
+							/**
+							 * D​a​t​e​ ​C​r​e​a​t​e​d​ ​A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​i​n​i​m​u​m​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​r​e​c​o​r​d​i​n​g​s​ ​c​r​e​a​t​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​d​a​t​e​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						dateCreatedBefore: {
+							/**
+							 * D​a​t​e​ ​C​r​e​a​t​e​d​ ​B​e​f​o​r​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​a​x​i​m​u​m​ ​c​r​e​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​r​e​c​o​r​d​i​n​g​s​ ​c​r​e​a​t​e​d​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​d​a​t​e​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						includeSoftDeleted: {
+							/**
+							 * I​n​c​l​u​d​e​ ​S​o​f​t​ ​D​e​l​e​t​e​d
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​s​o​f​t​-​d​e​l​e​t​e​d​ ​r​e​c​o​r​d​i​n​g​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​s​o​f​t​-​d​e​l​e​t​e​d​ ​r​e​c​o​r​d​i​n​g​s​.​ ​R​e​c​o​r​d​i​n​g​ ​m​e​t​a​d​a​t​a​ ​i​s​ ​r​e​t​a​i​n​e​d​ ​f​o​r​ ​4​0​ ​d​a​y​s​ ​a​f​t​e​r​ ​d​e​l​e​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​i​n​g​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​i​n​g​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​T​h​e​ ​d​e​f​a​u​l​t​ ​i​s​ ​5​0​ ​a​n​d​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​i​s​ ​1​0​0​0​.
+							 */
+							longDesc: string
+						}
+						pageSize: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​i​n​g​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​i​n​g​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​.​ ​T​h​e​ ​d​e​f​a​u​l​t​ ​i​s​ ​5​0​ ​a​n​d​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​i​s​ ​1​0​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_recording: {
+					groups: {
+						/**
+						 * V​o​i​c​e
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​a​ ​R​e​c​o​r​d​i​n​g
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​l​l​ ​r​e​c​o​r​d​i​n​g​ ​i​n​c​l​u​d​i​n​g​ ​d​u​r​a​t​i​o​n​,​ ​s​t​a​t​u​s​,​ ​p​r​i​c​i​n​g​,​ ​m​e​d​i​a​ ​U​R​L​,​ ​a​n​d​ ​e​n​c​r​y​p​t​i​o​n​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						recordingSid: {
+							/**
+							 * R​e​c​o​r​d​i​n​g​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​s​t​r​i​n​g​ ​i​d​e​n​t​i​f​i​e​r​ ​(​S​I​D​)​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​i​n​g​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​R​e​c​o​r​d​i​n​g​ ​S​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​R​E​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_transcriptions: {
+					groups: {
+						/**
+						 * V​o​i​c​e
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​T​r​a​n​s​c​r​i​p​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​s​ ​f​o​r​ ​a​ ​r​e​c​o​r​d​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​l​l​ ​r​e​c​o​r​d​i​n​g​.​ ​T​r​a​n​s​c​r​i​p​t​i​o​n​s​ ​c​o​n​v​e​r​t​ ​t​h​e​ ​a​u​d​i​o​ ​f​r​o​m​ ​r​e​c​o​r​d​i​n​g​s​ ​i​n​t​o​ ​t​e​x​t​.
+					 */
+					longDesc: string
+					options: {
+						recordingSid: {
+							/**
+							 * R​e​c​o​r​d​i​n​g​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​I​D​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​i​n​g​ ​w​h​o​s​e​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​s​t​.​ ​R​e​c​o​r​d​i​n​g​ ​S​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​R​E​"​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​T​h​e​ ​d​e​f​a​u​l​t​ ​i​s​ ​5​0​ ​a​n​d​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​i​s​ ​1​0​0​0​.
+							 */
+							longDesc: string
+						}
+						pageSize: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​.​ ​T​h​e​ ​d​e​f​a​u​l​t​ ​i​s​ ​5​0​ ​a​n​d​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​i​s​ ​1​0​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_transcription: {
+					groups: {
+						/**
+						 * V​o​i​c​e
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​a​ ​T​r​a​n​s​c​r​i​p​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​ ​w​i​t​h​ ​t​e​x​t
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​u​l​l​ ​t​r​a​n​s​c​r​i​b​e​d​ ​t​e​x​t​ ​f​r​o​m​ ​t​h​e​ ​r​e​c​o​r​d​i​n​g​.​ ​T​h​i​s​ ​r​e​t​u​r​n​s​ ​t​h​e​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​T​e​x​t​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​a​c​t​u​a​l​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​ ​c​o​n​t​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						recordingSid: {
+							/**
+							 * R​e​c​o​r​d​i​n​g​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​S​I​D​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​i​n​g​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​.​ ​R​e​c​o​r​d​i​n​g​ ​S​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​R​E​"​.
+							 */
+							longDesc: string
+						}
+						transcriptionSid: {
+							/**
+							 * T​r​a​n​s​c​r​i​p​t​i​o​n​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​r​a​n​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​s​t​r​i​n​g​ ​i​d​e​n​t​i​f​i​e​r​ ​(​S​I​D​)​ ​o​f​ ​t​h​e​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​T​r​a​n​s​c​r​i​p​t​i​o​n​ ​S​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​T​R​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_message: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​i​n​g
+						 */
+						'0': string
+					}
+					/**
+					 * N​e​w​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​S​M​S​ ​o​r​ ​M​M​S​ ​m​e​s​s​a​g​e​ ​i​s​ ​r​e​c​e​i​v​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​T​w​i​l​i​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​ ​i​n​c​o​m​i​n​g​ ​o​r​ ​o​u​t​g​o​i​n​g​ ​m​e​s​s​a​g​e​s​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​m​e​s​s​a​g​e​s​ ​b​y​ ​r​e​c​i​p​i​e​n​t​ ​o​r​ ​s​e​n​d​e​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​i​s​ ​d​e​t​e​c​t​e​d​ ​t​h​a​t​ ​m​a​t​c​h​e​s​ ​y​o​u​r​ ​f​i​l​t​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						to: {
+							/**
+							 * T​o
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​r​e​c​i​p​i​e​n​t​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​m​e​s​s​a​g​e​s​ ​s​e​n​t​ ​t​o​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​.​ ​T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​s​h​o​u​l​d​ ​b​e​ ​i​n​ ​E​.​1​6​4​ ​f​o​r​m​a​t​ ​(​e​.​g​.​,​ ​+​1​5​5​5​1​2​3​4​5​6​7​)​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​a​l​l​ ​r​e​c​i​p​i​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						from: {
+							/**
+							 * F​r​o​m
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​e​n​d​e​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​m​e​s​s​a​g​e​s​ ​s​e​n​t​ ​f​r​o​m​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​o​r​ ​a​l​p​h​a​n​u​m​e​r​i​c​ ​s​e​n​d​e​r​ ​I​D​.​ ​T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​s​h​o​u​l​d​ ​b​e​ ​i​n​ ​E​.​1​6​4​ ​f​o​r​m​a​t​ ​(​e​.​g​.​,​ ​+​1​5​5​5​1​2​3​4​5​6​7​)​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​a​l​l​ ​s​e​n​d​e​r​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_recording: {
+					groups: {
+						/**
+						 * V​o​i​c​e
+						 */
+						'0': string
+					}
+					/**
+					 * N​e​w​ ​R​e​c​o​r​d​i​n​g
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​a​l​l​ ​r​e​c​o​r​d​i​n​g​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​T​w​i​l​i​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​ ​c​a​l​l​ ​r​e​c​o​r​d​i​n​g​s​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​r​e​c​o​r​d​i​n​g​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​c​a​l​l​ ​S​I​D​ ​o​r​ ​c​o​n​f​e​r​e​n​c​e​ ​S​I​D​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​i​n​g​ ​i​s​ ​d​e​t​e​c​t​e​d​ ​t​h​a​t​ ​m​a​t​c​h​e​s​ ​y​o​u​r​ ​f​i​l​t​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						callSid: {
+							/**
+							 * C​a​l​l​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​a​l​l​ ​S​I​D
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​r​e​c​o​r​d​i​n​g​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​c​a​l​l​.​ ​T​h​e​ ​C​a​l​l​ ​S​I​D​ ​s​h​o​u​l​d​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​C​A​"​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​a​l​l​ ​c​a​l​l​s​.
+							 */
+							longDesc: string
+						}
+						conferenceSid: {
+							/**
+							 * C​o​n​f​e​r​e​n​c​e​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​n​f​e​r​e​n​c​e​ ​S​I​D
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​r​e​c​o​r​d​i​n​g​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​c​o​n​f​e​r​e​n​c​e​.​ ​T​h​e​ ​C​o​n​f​e​r​e​n​c​e​ ​S​I​D​ ​s​h​o​u​l​d​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​C​F​"​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​a​l​l​ ​c​o​n​f​e​r​e​n​c​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_transcription: {
+					groups: {
+						/**
+						 * V​o​i​c​e
+						 */
+						'0': string
+					}
+					/**
+					 * N​e​w​ ​T​r​a​n​s​c​r​i​p​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​i​n​g​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​y​o​u​r​ ​T​w​i​l​i​o​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​n​e​w​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​s​ ​b​y​ ​c​h​e​c​k​i​n​g​ ​t​h​e​ ​l​a​t​e​s​t​ ​r​e​c​o​r​d​i​n​g​s​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​c​a​l​l​ ​S​I​D​ ​o​r​ ​c​o​n​f​e​r​e​n​c​e​ ​S​I​D​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​ ​i​s​ ​d​e​t​e​c​t​e​d​ ​f​o​r​ ​r​e​c​o​r​d​i​n​g​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​y​o​u​r​ ​f​i​l​t​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						callSid: {
+							/**
+							 * C​a​l​l​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​a​l​l​ ​S​I​D
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​s​ ​f​r​o​m​ ​r​e​c​o​r​d​i​n​g​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​c​a​l​l​.​ ​T​h​e​ ​C​a​l​l​ ​S​I​D​ ​s​h​o​u​l​d​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​C​A​"​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​a​l​l​ ​c​a​l​l​s​.
+							 */
+							longDesc: string
+						}
+						conferenceSid: {
+							/**
+							 * C​o​n​f​e​r​e​n​c​e​ ​S​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​n​f​e​r​e​n​c​e​ ​S​I​D
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​r​a​n​s​c​r​i​p​t​i​o​n​s​ ​f​r​o​m​ ​r​e​c​o​r​d​i​n​g​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​c​o​n​f​e​r​e​n​c​e​.​ ​T​h​e​ ​C​o​n​f​e​r​e​n​c​e​ ​S​I​D​ ​s​h​o​u​l​d​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​C​F​"​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​a​l​l​ ​c​o​n​f​e​r​e​n​c​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Brevo: {
 			/**
 			 * B​r​e​v​o
@@ -199264,6 +201112,1854 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Select the specific chat, group, or channel where you want to detect new incoming messages
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Twilio: {
+			/**
+			 * Twilio
+			 */
+			displayName: () => LocalizedString
+			groups: {
+				/**
+				 * Messaging & Real-time Communication
+				 */
+				'0': () => LocalizedString
+			}
+			connectionMessage: {
+				/**
+				 * Credentials Instruction
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect your Twilio account, you'll need your Account SID and Auth Token. You can find these credentials in your Twilio Console under the "Account Info" section on Account Dashboard. https://www.twilio.com/console
+				 */
+				content: () => LocalizedString
+			}
+			/**
+			 * Connect with Twilio to send SMS, make calls, and manage communications
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Integrate with Twilio to send SMS messages, make voice calls, and manage your communications infrastructure. This integration allows you to automate messaging workflows, handle incoming calls and messages, and build powerful communication features into your applications.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				create_message: {
+					groups: {
+						/**
+						 * Messaging
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Create a Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a new SMS or MMS message
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create and send a new SMS or MMS message using Twilio. You can send text messages, include media attachments, schedule messages, and configure delivery options. This action supports both standard messaging and messaging services.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						to: {
+							/**
+							 * To
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The destination phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The phone number to send the message to in E.164 format (e.g., +15551234567). For WhatsApp messages, use the format whatsapp:+15551234567.
+							 */
+							longDesc: () => LocalizedString
+						}
+						from: {
+							/**
+							 * From
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The sender phone number or messaging service SID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A Twilio phone number in E.164 format, a Messaging Service SID, or a short code. This number must be enabled for the type of message you wish to send.
+							 */
+							longDesc: () => LocalizedString
+						}
+						body: {
+							/**
+							 * Body
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The text content of the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text of the message you want to send, limited to 1600 characters. For SMS messages longer than 160 characters, the message will be sent as multiple segments.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mediaUrl: {
+							/**
+							 * Media URLs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * URLs of media to include in the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of publicly accessible URLs of media files to send with the message. Supported for MMS messages. You can include up to 10 media files.
+							 */
+							longDesc: () => LocalizedString
+						}
+						messagingServiceSid: {
+							/**
+							 * Messaging Service SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The SID of the Messaging Service to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The SID of the Messaging Service to use for the message. When set, the from parameter can be omitted, and Twilio will select an appropriate phone number from the Messaging Service pool.
+							 */
+							longDesc: () => LocalizedString
+						}
+						statusCallback: {
+							/**
+							 * Status Callback URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * URL to receive message status updates
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The URL Twilio will POST to each time the status of the message changes. This allows you to track the delivery status of your messages.
+							 */
+							longDesc: () => LocalizedString
+						}
+						maxPrice: {
+							/**
+							 * Max Price
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum acceptable price for the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum total price in USD acceptable for the message to be sent. If the cost exceeds this value, the message will fail.
+							 */
+							longDesc: () => LocalizedString
+						}
+						validityPeriod: {
+							/**
+							 * Validity Period
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How long the message is valid for delivery
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of seconds that the message can remain in the queue. After this time, if the message has not been delivered, it will fail. Maximum is 14400 seconds (4 hours).
+							 */
+							longDesc: () => LocalizedString
+						}
+						scheduleType: {
+							/**
+							 * Schedule Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The type of message scheduling
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to "fixed" to schedule the message to be sent at a specific time. Requires the Send At parameter to be set.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sendAt: {
+							/**
+							 * Send At
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When to send the scheduled message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The time when the scheduled message should be sent, in ISO 8601 format. This parameter is required when Schedule Type is set to "fixed".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_messages: {
+					groups: {
+						/**
+						 * Messaging
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Messages
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of messages
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of messages from your Twilio account. You can filter messages by recipient, sender, date range, and other criteria. Results are returned in reverse chronological order.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						to: {
+							/**
+							 * To
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by recipient phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return messages sent to this phone number. The phone number should be in E.164 format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						from: {
+							/**
+							 * From
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by sender phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return messages sent from this phone number or alphanumeric sender ID. The phone number should be in E.164 format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						dateSentAfter: {
+							/**
+							 * Date Sent After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by minimum send date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return messages sent on or after this date. Provide the date in ISO 8601 format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						dateSentBefore: {
+							/**
+							 * Date Sent Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by maximum send date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return messages sent on or before this date. Provide the date in ISO 8601 format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of messages to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of message records to return. The default is 50 and the maximum is 1000.
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageSize: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of messages per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of message records to return per page. The default is 50 and the maximum is 1000.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_message: {
+					groups: {
+						/**
+						 * Messaging
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get a Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific message
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific message using its unique SID (String Identifier). This returns all available information about the message including status, content, pricing, and timestamps.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						messageSid: {
+							/**
+							 * Message SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique string identifier (SID) of the message to retrieve. Message SIDs start with "SM" or "MM".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_message: {
+					groups: {
+						/**
+						 * Messaging
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Delete a Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a message from your account
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently delete a message record from your Twilio account. This action cannot be undone. Note that deleting a message record does not redact the message content from Twilio logs.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						messageSid: {
+							/**
+							 * Message SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the message to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique string identifier (SID) of the message to delete. Message SIDs start with "SM" or "MM".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_message_media: {
+					groups: {
+						/**
+						 * Messaging
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Message Media
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve media attached to a message
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all media files attached to a specific message. This is useful for accessing MMS attachments or media sent via WhatsApp or other channels.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						messageSid: {
+							/**
+							 * Message SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique string identifier (SID) of the message whose media you want to retrieve. Message SIDs start with "SM" or "MM".
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of media items to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of media records to return. The default is 50 and the maximum is 1000.
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageSize: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of media items per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of media records to return per page. The default is 50 and the maximum is 1000.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_call: {
+					groups: {
+						/**
+						 * Voice
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Create a Call
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Initiate an outbound phone call
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Initiate an outbound phone call using Twilio. You can provide TwiML instructions via URL or directly, configure call recording, answering machine detection, and set up status callbacks to track call progress.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						to: {
+							/**
+							 * To
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The phone number to call
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The phone number, SIP address, or client identifier to call. Phone numbers must be in E.164 format (e.g., +15551234567).
+							 */
+							longDesc: () => LocalizedString
+						}
+						from: {
+							/**
+							 * From
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The caller ID to display
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Twilio phone number or client identifier to use as the caller ID. If calling a phone number, this must also be a phone number.
+							 */
+							longDesc: () => LocalizedString
+						}
+						url: {
+							/**
+							 * TwiML URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * URL that returns TwiML instructions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The URL that Twilio will fetch TwiML instructions from when the call connects. This URL should return valid TwiML to control the call flow.
+							 */
+							longDesc: () => LocalizedString
+						}
+						twiml: {
+							/**
+							 * TwiML
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * TwiML instructions for the call
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * TwiML instructions to execute when the call connects. If both TwiML and URL are provided, TwiML takes precedence. Maximum 4000 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						method: {
+							/**
+							 * HTTP Method
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * HTTP method for fetching TwiML
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The HTTP method to use when requesting the URL. Can be GET or POST. Defaults to POST.
+							 */
+							longDesc: () => LocalizedString
+						}
+						statusCallback: {
+							/**
+							 * Status Callback URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * URL to receive call status updates
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The URL Twilio will POST to when the call status changes. You can specify which events trigger callbacks using Status Callback Events.
+							 */
+							longDesc: () => LocalizedString
+						}
+						statusCallbackEvent: {
+							/**
+							 * Status Callback Events
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Events that trigger status callbacks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The call progress events that will trigger a POST to the Status Callback URL. Options include: initiated, ringing, answered, and completed.
+							 */
+							longDesc: () => LocalizedString
+						}
+						statusCallbackMethod: {
+							/**
+							 * Status Callback Method
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * HTTP method for status callbacks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The HTTP method to use when POSTing to the Status Callback URL. Can be GET or POST. Defaults to POST.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timeout: {
+							/**
+							 * Timeout
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Seconds to wait for answer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of seconds to wait for the call to be answered before timing out. Default is 60 seconds, maximum is 600 seconds.
+							 */
+							longDesc: () => LocalizedString
+						}
+						record: {
+							/**
+							 * Record
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to record the call
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to true to record the entire call. The recording will be available after the call completes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						recordingChannels: {
+							/**
+							 * Recording Channels
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of channels in the recording
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of channels in the final recording. "mono" records both legs in a single channel, "dual" records each leg separately.
+							 */
+							longDesc: () => LocalizedString
+						}
+						recordingStatusCallback: {
+							/**
+							 * Recording Status Callback
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * URL to notify when recording is available
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The URL Twilio will POST to when the recording is available. This allows you to process or store recordings immediately.
+							 */
+							longDesc: () => LocalizedString
+						}
+						machineDetection: {
+							/**
+							 * Machine Detection
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable answering machine detection
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enable answering machine detection. "Enable" returns AnsweredBy immediately, "DetectMessageEnd" waits for the beep to leave a message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						machineDetectionTimeout: {
+							/**
+							 * Machine Detection Timeout
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Seconds to wait for detection
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of seconds to attempt answering machine detection before timing out. Default is 30 seconds.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sendDigits: {
+							/**
+							 * Send Digits
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * DTMF tones to send after connection
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A string of keys to dial after connecting. Valid characters: 0-9, A-D, #, *, w (0.5s pause), W (1s pause). For example: "W1234#".
+							 */
+							longDesc: () => LocalizedString
+						}
+						timeLimit: {
+							/**
+							 * Time Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum call duration in seconds
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum duration of the call in seconds. The call will be automatically ended after this time.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_call_with_tts: {
+					groups: {
+						/**
+						 * Voice
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Create Call with Text-to-Speech
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Make a call with automated voice message
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Initiate an outbound phone call with an automated text-to-speech message. This simplified action automatically generates TwiML based on your inputs, allowing you to quickly create calls with voice messages without writing TwiML code manually. You can customize the voice, language, record the call, and optionally transcribe recordings.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						to: {
+							/**
+							 * To
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The phone number to call
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The phone number to call in E.164 format (e.g., +15551234567). You can also call SIP addresses or Twilio client identifiers.
+							 */
+							longDesc: () => LocalizedString
+						}
+						from: {
+							/**
+							 * From
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Your Twilio phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Twilio phone number to use as the caller ID. This must be a phone number you own in your Twilio account.
+							 */
+							longDesc: () => LocalizedString
+						}
+						message: {
+							/**
+							 * Message
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The text message to speak
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text message that will be spoken when the call is answered. This will be converted to speech using Twilio's text-to-speech engine.
+							 */
+							longDesc: () => LocalizedString
+						}
+						voice: {
+							/**
+							 * Voice
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The voice to use for text-to-speech
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The voice to use for text-to-speech. Choose from various voices with different languages, genders, and quality levels (Standard, Neural, Generative). If not specified, uses your account's default voice.
+							 */
+							longDesc: () => LocalizedString
+						}
+						language: {
+							/**
+							 * Language
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The language for text-to-speech
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The language and locale for text-to-speech. This should match the language of your message text. If not specified, defaults to en-US (English, United States).
+							 */
+							longDesc: () => LocalizedString
+						}
+						record: {
+							/**
+							 * Record Call
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to record the call
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to true to record the entire call. The recording will be available after the call completes and can be retrieved using the List Recordings action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						transcribe: {
+							/**
+							 * Transcribe Recording
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to transcribe the recording
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to true to automatically transcribe the call recording. This requires the Record Call option to be enabled. The transcription will be available after processing.
+							 */
+							longDesc: () => LocalizedString
+						}
+						transcriptionCallback: {
+							/**
+							 * Transcription Callback URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * URL to receive transcription results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The URL Twilio will POST to when the transcription is complete. This allows you to process or store transcriptions immediately after they are available.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sendDigits: {
+							/**
+							 * Send Digits
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * DTMF tones to send after connection
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A string of keys to dial after the call connects. Useful for navigating phone menus automatically. Valid characters: 0-9, #, *, w (wait 0.5 seconds). For example: "w123#" waits 0.5 seconds then dials 123#.
+							 */
+							longDesc: () => LocalizedString
+						}
+						statusCallback: {
+							/**
+							 * Status Callback URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * URL to receive call status updates
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The URL Twilio will POST to when the call status changes. Use this to track call progress and completion.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timeout: {
+							/**
+							 * Timeout
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Seconds to wait for answer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of seconds to wait for the call to be answered before timing out. Default is 60 seconds, maximum is 600 seconds.
+							 */
+							longDesc: () => LocalizedString
+						}
+						machineDetection: {
+							/**
+							 * Machine Detection
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable answering machine detection
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enable answering machine detection to determine if a human or machine answered the call. "Enable" returns the result immediately, "DetectMessageEnd" waits for the voicemail beep before playing your message.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_calls: {
+					groups: {
+						/**
+						 * Voice
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Calls
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of calls
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of calls from your Twilio account. You can filter calls by participant phone numbers, status, date range, and other criteria. Results are returned in reverse chronological order.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						to: {
+							/**
+							 * To
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by recipient phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return calls made to this phone number, SIP address, or client identifier.
+							 */
+							longDesc: () => LocalizedString
+						}
+						from: {
+							/**
+							 * From
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by caller phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return calls from this phone number, SIP address, or client identifier.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by call status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return calls with this status. Options include: queued, ringing, in-progress, canceled, completed, failed, busy, or no-answer.
+							 */
+							longDesc: () => LocalizedString
+						}
+						startTimeAfter: {
+							/**
+							 * Start Time After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by minimum start time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return calls that started on or after this date and time. Provide the date in ISO 8601 format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						startTimeBefore: {
+							/**
+							 * Start Time Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by maximum start time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return calls that started on or before this date and time. Provide the date in ISO 8601 format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						endTimeAfter: {
+							/**
+							 * End Time After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by minimum end time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return calls that ended on or after this date and time. Provide the date in ISO 8601 format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						endTimeBefore: {
+							/**
+							 * End Time Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by maximum end time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return calls that ended on or before this date and time. Provide the date in ISO 8601 format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of calls to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of call records to return. The default is 50 and the maximum is 1000.
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageSize: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of calls per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of call records to return per page. The default is 50 and the maximum is 1000.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_call: {
+					groups: {
+						/**
+						 * Voice
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get a Call
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific call
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific call using its unique SID. This returns all available information about the call including status, duration, pricing, and timestamps.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						callSid: {
+							/**
+							 * Call SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the call
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique string identifier (SID) of the call to retrieve. Call SIDs start with "CA".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_call: {
+					groups: {
+						/**
+						 * Voice
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Delete a Call
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a call record from your account
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently delete a call record from your Twilio account. This action cannot be undone. Note that deleting a call record does not redact the call data from Twilio logs.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						callSid: {
+							/**
+							 * Call SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the call to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique string identifier (SID) of the call to delete. Call SIDs start with "CA".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_execution: {
+					groups: {
+						/**
+						 * Studio
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Create an Execution
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Start a Studio Flow execution
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create and start a new execution of a Studio Flow. This triggers the flow to run with the specified contact information and optional parameters that can be accessed within the flow.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						flowSid: {
+							/**
+							 * Flow SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the Studio Flow
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The SID of the Studio Flow to execute. Flow SIDs start with "FW".
+							 */
+							longDesc: () => LocalizedString
+						}
+						to: {
+							/**
+							 * To
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The contact phone number to start the Flow execution with. Available in the flow as contact.channel.address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						from: {
+							/**
+							 * From
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Twilio phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Twilio phone number to send messages or make calls from during the execution. Available as flow.channel.address. Can also be a Messaging Service SID.
+							 */
+							longDesc: () => LocalizedString
+						}
+						parameters: {
+							/**
+							 * Parameters
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * JSON data for the flow context
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * JSON data that will be added to the flow's context and accessible as variables. For example: a JSON object with name property becomes available as flow.data.name in the flow.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_executions: {
+					groups: {
+						/**
+						 * Studio
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Executions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve executions for a Studio Flow
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of executions for a specific Studio Flow. You can filter executions by date range to find specific execution instances.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						flowSid: {
+							/**
+							 * Flow SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the Studio Flow
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The SID of the Studio Flow whose executions you want to list. Flow SIDs start with "FW".
+							 */
+							longDesc: () => LocalizedString
+						}
+						dateCreatedFrom: {
+							/**
+							 * Date Created From
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by minimum creation date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return executions created on or after this date and time, in ISO 8601 format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						dateCreatedTo: {
+							/**
+							 * Date Created To
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by maximum creation date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return executions created before this date and time, in ISO 8601 format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of executions to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of execution records to return. The default is 50 and the maximum is 1000.
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageSize: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of executions per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of execution records to return per page. The default is 50 and the maximum is 1000.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_execution: {
+					groups: {
+						/**
+						 * Studio
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get an Execution
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific execution
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific Studio Flow execution including its current state, context data, and status.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						flowSid: {
+							/**
+							 * Flow SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the Studio Flow
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The SID of the Studio Flow that contains the execution. Flow SIDs start with "FW".
+							 */
+							longDesc: () => LocalizedString
+						}
+						executionSid: {
+							/**
+							 * Execution SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the execution
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique string identifier (SID) of the execution to retrieve. Execution SIDs start with "FN".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_execution: {
+					groups: {
+						/**
+						 * Studio
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Update an Execution
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update the status of an execution
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the status of a Studio Flow execution. This is typically used to end an active execution early.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						flowSid: {
+							/**
+							 * Flow SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the Studio Flow
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The SID of the Studio Flow that contains the execution. Flow SIDs start with "FW".
+							 */
+							longDesc: () => LocalizedString
+						}
+						executionSid: {
+							/**
+							 * Execution SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the execution
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique string identifier (SID) of the execution to update. Execution SIDs start with "FN".
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new status for the execution
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The status to set for the execution. Set to "ended" to terminate an active execution.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_execution: {
+					groups: {
+						/**
+						 * Studio
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Delete an Execution
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete an execution record
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently delete an execution record from your Twilio account. This action cannot be undone.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						flowSid: {
+							/**
+							 * Flow SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the Studio Flow
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The SID of the Studio Flow that contains the execution. Flow SIDs start with "FW".
+							 */
+							longDesc: () => LocalizedString
+						}
+						executionSid: {
+							/**
+							 * Execution SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the execution to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique string identifier (SID) of the execution to delete. Execution SIDs start with "FN".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_recordings: {
+					groups: {
+						/**
+						 * Voice
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Recordings
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of call recordings
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of call recordings from your Twilio account. You can filter recordings by call SID, conference SID, date range, and include soft-deleted recordings.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						callSid: {
+							/**
+							 * Call SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by call SID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return recordings associated with this specific call. The Call SID should start with "CA".
+							 */
+							longDesc: () => LocalizedString
+						}
+						conferenceSid: {
+							/**
+							 * Conference SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by conference SID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return recordings associated with this specific conference. The Conference SID should start with "CF".
+							 */
+							longDesc: () => LocalizedString
+						}
+						dateCreatedAfter: {
+							/**
+							 * Date Created After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by minimum creation date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return recordings created on or after this date. Provide the date in ISO 8601 format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						dateCreatedBefore: {
+							/**
+							 * Date Created Before
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by maximum creation date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return recordings created on or before this date. Provide the date in ISO 8601 format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						includeSoftDeleted: {
+							/**
+							 * Include Soft Deleted
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include soft-deleted recordings
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to include soft-deleted recordings. Recording metadata is retained for 40 days after deletion.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of recordings to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of recording records to return. The default is 50 and the maximum is 1000.
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageSize: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of recordings per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of recording records to return per page. The default is 50 and the maximum is 1000.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_recording: {
+					groups: {
+						/**
+						 * Voice
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get a Recording
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific recording
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific call recording including duration, status, pricing, media URL, and encryption details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						recordingSid: {
+							/**
+							 * Recording SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the recording
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique string identifier (SID) of the recording to retrieve. Recording SIDs start with "RE".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_transcriptions: {
+					groups: {
+						/**
+						 * Voice
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Transcriptions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve transcriptions for a recording
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of transcriptions for a specific call recording. Transcriptions convert the audio from recordings into text.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						recordingSid: {
+							/**
+							 * Recording SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the recording
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The SID of the recording whose transcriptions you want to list. Recording SIDs start with "RE".
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of transcriptions to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of transcription records to return. The default is 50 and the maximum is 1000.
+							 */
+							longDesc: () => LocalizedString
+						}
+						pageSize: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of transcriptions per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of transcription records to return per page. The default is 50 and the maximum is 1000.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_transcription: {
+					groups: {
+						/**
+						 * Voice
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get a Transcription
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific transcription with text
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific transcription including the full transcribed text from the recording. This returns the transcriptionText field containing the actual transcription content.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						recordingSid: {
+							/**
+							 * Recording SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the recording
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The SID of the recording that contains the transcription. Recording SIDs start with "RE".
+							 */
+							longDesc: () => LocalizedString
+						}
+						transcriptionSid: {
+							/**
+							 * Transcription SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the transcription
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique string identifier (SID) of the transcription to retrieve. Transcription SIDs start with "TR".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_message: {
+					groups: {
+						/**
+						 * Messaging
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * New Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new SMS or MMS message is received
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your Twilio account for new incoming or outgoing messages. You can filter messages by recipient or sender phone number. The trigger fires whenever a new message is detected that matches your filters.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						to: {
+							/**
+							 * To
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by recipient phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for messages sent to this phone number. The phone number should be in E.164 format (e.g., +15551234567). Leave empty to trigger for all recipients.
+							 */
+							longDesc: () => LocalizedString
+						}
+						from: {
+							/**
+							 * From
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by sender phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for messages sent from this phone number or alphanumeric sender ID. The phone number should be in E.164 format (e.g., +15551234567). Leave empty to trigger for all senders.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_recording: {
+					groups: {
+						/**
+						 * Voice
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * New Recording
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new call recording is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your Twilio account for new call recordings. You can filter recordings by specific call SID or conference SID. The trigger fires whenever a new recording is detected that matches your filters.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						callSid: {
+							/**
+							 * Call SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by call SID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for recordings associated with this specific call. The Call SID should start with "CA". Leave empty to trigger for all calls.
+							 */
+							longDesc: () => LocalizedString
+						}
+						conferenceSid: {
+							/**
+							 * Conference SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by conference SID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for recordings associated with this specific conference. The Conference SID should start with "CF". Leave empty to trigger for all conferences.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_transcription: {
+					groups: {
+						/**
+						 * Voice
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * New Transcription
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new recording transcription is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors your Twilio account for new transcriptions by checking the latest recordings. You can filter by specific call SID or conference SID. The trigger fires whenever a new transcription is detected for recordings that match your filters.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						callSid: {
+							/**
+							 * Call SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by call SID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for transcriptions from recordings associated with this specific call. The Call SID should start with "CA". Leave empty to trigger for all calls.
+							 */
+							longDesc: () => LocalizedString
+						}
+						conferenceSid: {
+							/**
+							 * Conference SID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by conference SID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for transcriptions from recordings associated with this specific conference. The Conference SID should start with "CF". Leave empty to trigger for all conferences.
 							 */
 							longDesc: () => LocalizedString
 						}

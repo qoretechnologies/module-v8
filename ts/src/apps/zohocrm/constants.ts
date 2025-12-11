@@ -29,9 +29,15 @@ export const ZohoCrmErrorCodeToQoreErrorCodeMap: Record<string, string> = {
 
 export const ZOHO_CRM_CONN_OPTIONS = {
   location: {
+    display_name: 'Location',
+    short_desc: 'Data Center Location',
+    desc: 'The data center location for your Zoho CRM account (e.g., com, eu, in, cn, au)',
     type: 'string',
   },
   'accounts-server': {
+    display_name: 'Accounts Server',
+    short_desc: 'Accounts Server URL (used for OAuth2)',
+    desc: 'The accounts server URL for your Zoho CRM account (e.g., https://accounts.zoho.eu)',
     type: 'string',
   },
 } satisfies TCustomConnOptions;

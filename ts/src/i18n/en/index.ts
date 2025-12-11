@@ -73,6 +73,7 @@ import Stripe from './apps/Stripe';
 import Supabase from './apps/Supabase';
 import Teams from './apps/Teams';
 import Telegram from './apps/Telegram';
+import Twilio from './apps/Twilio';
 import Todoist from './apps/Todoist';
 import Typeform from './apps/Typeform';
 import Webflow from './apps/Webflow';
@@ -168,6 +169,7 @@ const en = {
     Figma,
     LinkedInOrganizations,
     Telegram,
+    Twilio,
     Brevo,
     GoogleTasks,
     PayPal,

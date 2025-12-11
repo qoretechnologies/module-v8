@@ -1,0 +1,31 @@
+import { TQoreResponseType } from '@qoretechnologies/ts-toolkit';
+
+export const TwilioCallResponseType = {
+  type: 'hash',
+  fields: {
+    sid: { type: 'string' },
+    dateCreated: { type: 'string' },
+    dateUpdated: { type: 'string' },
+    parentCallSid: { type: 'string' },
+    accountSid: { type: 'string' },
+    to: { type: 'string' },
+    toFormatted: { type: 'string' },
+    from: { type: 'string' },
+    fromFormatted: { type: 'string' },
+    phoneNumberSid: { type: 'string' },
+    status: { type: 'string' },
+    startTime: { type: 'string' },
+    endTime: { type: 'string' },
+    duration: { type: 'string' },
+    price: { type: 'string' },
+    priceUnit: { type: 'string' },
+    direction: { type: 'string' },
+    answeredBy: { type: 'string' },
+    apiVersion: { type: 'string' },
+    forwardedFrom: { type: 'string' },
+    groupSid: { type: 'string' },
+    callerName: { type: 'string' },
+    queueTime: { type: 'string' },
+    uri: { type: 'string' },
+  },
+} satisfies TQoreResponseType;

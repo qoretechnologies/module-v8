@@ -1,0 +1,32 @@
+import { TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
+
+export const TWILIO_APP_NAME = 'Twilio';
+export const TWILIO_APP_LOGO =
+  'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCEtLSBVcGxvYWRlZCB0bzogU1ZHIFJlcG8sIHd3dy5zdmdyZXBvLmNvbSwgR2VuZXJhdG9yOiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAyNTYgMjU2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIj4KICAgIDxnPgogICAgICAgIDxwYXRoIGQ9Ik0xMjgsMCBDMTk4LjY1NiwwIDI1Niw1Ny4zNDQgMjU2LDEyOCBDMjU2LDE5OC42NTYgMTk4LjY1NiwyNTYgMTI4LDI1NiBDNTcuMzQ0LDI1NiAwLDE5OC42NTYgMCwxMjggQzAsNTcuMzQ0IDU3LjM0NCwwIDEyOCwwIFogTTEyOCwzMy43OTIgQzc1Ljc3NiwzMy43OTIgMzMuNzkyLDc1Ljc3NiAzMy43OTIsMTI4IEMzMy43OTIsMTgwLjIyNCA3NS43NzYsMjIyLjIwOCAxMjgsMjIyLjIwOCBDMTgwLjIyNCwyMjIuMjA4IDIyMi4yMDgsMTgwLjIyNCAyMjIuMjA4LDEyOCBDMjIyLjIwOCw3NS43NzYgMTgwLjIyNCwzMy43OTIgMTI4LDMzLjc5MiBaIE0xNTkuNzQ0LDEzMy4xMiBDMTc0LjQ0ODAyOSwxMzMuMTIgMTg2LjM2OCwxNDUuMDM5OTcxIDE4Ni4zNjgsMTU5Ljc0NCBDMTg2LjM2OCwxNzQuNDQ4MDI5IDE3NC40NDgwMjksMTg2LjM2OCAxNTkuNzQ0LDE4Ni4zNjggQzE0NS4wMzk5NzEsMTg2LjM2OCAxMzMuMTIsMTc0LjQ0ODAyOSAxMzMuMTIsMTU5Ljc0NCBDMTMzLjEyLDE0NS4wMzk5NzEgMTQ1LjAzOTk3MSwxMzMuMTIgMTU5Ljc0NCwxMzMuMTIgWiBNOTYuMjU2LDEzMy4xMiBDMTEwLjk2MDAyOSwxMzMuMTIgMTIyLjg4LDE0NS4wMzk5NzEgMTIyLjg4LDE1OS43NDQgQzEyMi44OCwxNzQuNDQ4MDI5IDExMC45NjAwMjksMTg2LjM2OCA5Ni4yNTYsMTg2LjM2OCBDODEuNTUxOTcwOCwxODYuMzY4IDY5LjYzMiwxNzQuNDQ4MDI5IDY5LjYzMiwxNTkuNzQ0IEM2OS42MzIsMTQ1LjAzOTk3MSA4MS41NTE5NzA4LDEzMy4xMiA5Ni4yNTYsMTMzLjEyIFogTTE1OS43NDQsNjkuNjMyIEMxNzQuNDQ4MDI5LDY5LjYzMiAxODYuMzY4LDgxLjU1MTk3MDggMTg2LjM2OCw5Ni4yNTYgQzE4Ni4zNjgsMTEwLjk2MDAyOSAxNzQuNDQ4MDI5LDEyMi44OCAxNTkuNzQ0LDEyMi44OCBDMTQ1LjAzOTk3MSwxMjIuODggMTMzLjEyLDExMC45NjAwMjkgMTMzLjEyLDk2LjI1NiBDMTMzLjEyLDgxLjU1MTk3MDggMTQ1LjAzOTk3MSw2OS42MzIgMTU5Ljc0NCw2OS42MzIgWiBNOTYuMjU2LDY5LjYzMiBDMTEwLjk2MDAyOSw2OS42MzIgMTIyLjg4LDgxLjU1MTk3MDggMTIyLjg4LDk2LjI1NiBDMTIyLjg4LDExMC45NjAwMjkgMTEwLjk2MDAyOSwxMjIuODggOTYuMjU2LDEyMi44OCBDODEuNTUxOTcwOCwxMjIuODggNjkuNjMyLDExMC45NjAwMjkgNjkuNjMyLDk2LjI1NiBDNjkuNjMyLDgxLjU1MTk3MDggODEuNTUxOTcwOCw2OS42MzIgOTYuMjU2LDY5LjYzMiBaIiBmaWxsPSIjRjEyRTQ1Ij4KDTwvcGF0aD4KICAgIDwvZz4KPC9zdmc+';
+
+export class TwilioError extends Error {
+  public errorCode?: string;
+
+  constructor(message: string, errorCode?: string) {
+    super(message);
+    this.name = 'TwilioError';
+    this.errorCode = errorCode;
+  }
+}
+
+export const TWILIO_API_VERSION = '2010-04-01';
+
+export const TWILIO_CONN_OPTIONS = {
+  username: {
+    display_name: 'Account SID',
+    short_desc: 'The Account SID for your Twilio account.',
+    desc: 'Log into your Twilio account and find "API Credentials" on this page https://www.twilio.com/console',
+    type: 'string',
+  },
+  password: {
+    display_name: 'Auth Token',
+    short_desc: 'Found directly below your Account SID.',
+    desc: 'Log into your Twilio account and find "API Credentials" on this page https://www.twilio.com/console',
+    type: 'string',
+  },
+} satisfies TCustomConnOptions;

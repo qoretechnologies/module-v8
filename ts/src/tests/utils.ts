@@ -1,5 +1,5 @@
 import { forEach } from 'lodash';
-import { TQoreTypeObject } from '@qoretechnologies/ts-toolkit';
+import { IQoreAllowedValue, TQoreTypeObject } from '@qoretechnologies/ts-toolkit';
 
 export const responseHasCorrectStructure = (
   response: Record<string, unknown>,
@@ -70,4 +70,43 @@ export const retry = async <T>(
     }
   }
   throw new Error('Max retries reached');
+};
+
+export const checkAllowedValues = <T>(
+  allowedValues: IQoreAllowedValue<T>[],
+  options?: {
+    logAllValues?: boolean;
+    logSingleValue?: boolean;
+    checkNonEmpty?: boolean;
+  }
+) => {
+  const { logAllValues = false, logSingleValue = false, checkNonEmpty = true } = options || {};
+
+  if (logAllValues) {
+    console.log(getJestTestName());
+    console.dir(allowedValues, { depth: null });
+  } else if (logSingleValue && allowedValues.length > 0) {
+    console.log(getJestTestName());
+    console.dir(allowedValues[0], { depth: null });
+  }
+
+  expect(allowedValues).toBeDefined();
+
+  if (checkNonEmpty) {
+    expect(allowedValues.length).toBeGreaterThan(0);
+    expect(allowedValues[0]).toHaveProperty('display_name');
+    expect(allowedValues[0]).toHaveProperty('value');
+    expect(allowedValues[0].value).toBeDefined();
+    expect(allowedValues[0].display_name).toBeDefined();
+  }
+};
+
+export const getJestTestName = (): string => {
+  try {
+    const state = expect.getState();
+    if (state.currentTestName) {
+      return state.currentTestName;
+    }
+  } catch {}
+  return 'Unknown Test';
 };

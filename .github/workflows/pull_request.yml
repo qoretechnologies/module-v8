@@ -156,6 +156,8 @@ env:
   GITLAB_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).GITLAB_TOKEN }}
   COPPER_CRM_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).COPPER_CRM_TOKEN }}
   CRAFT_URL: ${{ fromJson(secrets.TEST_VARIABLES).CRAFT_URL }}
+  TWILIO_ACCOUNT_SID: ${{ fromJson(secrets.TEST_VARIABLES).TWILIO_ACCOUNT_SID }}
+  TWILIO_AUTH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).TWILIO_AUTH_TOKEN }}
 
 jobs:
   PullRequestTests:
