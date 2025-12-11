@@ -31,6 +31,7 @@ export default (locale: Locales) =>
       oauth2_grant_type: 'none',
       ping_method: 'GET',
       ping_path: `/${TWILIO_API_VERSION}/Accounts.json`,
+      token_type: 'basic',
     },
     rest_modifiers: {
       options: TWILIO_CONN_OPTIONS,
