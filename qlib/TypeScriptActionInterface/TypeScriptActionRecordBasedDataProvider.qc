@@ -479,7 +479,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             return;
         }
         auto v = getAsyncValue(get_record_type, getCallContextInfo(options), name);
-        record_type = TypeScriptActionInterface::getType("record_type", v).getFields();
+        record_type = TypeScriptActionInterface::getType("record_type", v, NOTHING, NOTHING, self).getFields();
     }
 
     private static hash<DataProviderOptionInfo> getDataProviderOption(string app, string type, string name, auto v,
