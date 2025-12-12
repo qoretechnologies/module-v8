@@ -223,14 +223,20 @@ export const mapAttioAttributeToQoreOption = (
           type: 'hash',
           fields: referenceFields,
         },
-        get_element_allowed_values: getReferenceAllowedValues,
       } as IQoreTypeObjectList;
+      allowedValuesFields = {
+        element_allowed_values_creatable: true,
+        get_element_allowed_values: getReferenceAllowedValues,
+      };
     } else {
       qorusFixedType = {
         type: 'hash',
         fields: referenceFields,
-        get_allowed_values: getReferenceAllowedValues,
       } as TQoreTypeObject;
+      allowedValuesFields = {
+        allowed_values_creatable: true,
+        get_allowed_values: getReferenceAllowedValues,
+      };
     }
   }
 
