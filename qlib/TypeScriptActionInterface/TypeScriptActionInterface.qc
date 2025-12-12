@@ -2434,18 +2434,11 @@ public class TypeScriptActionInterface {
             }
             rv = ht;
         } else if (orig.type == "list") {
-            AbstractDataProviderType et;
-            if (auto t = (remove h.element_type ?? element_type)) {
-                et = TypeScriptActionInterface::getType(path, t, NOTHING, NOTHING, fctx, ignore_dup, resolve_dynamic);
-            }
-            rv = new ListDataType(et ?? AutoType, !orig.required, NOTHING, tags, default_value, attr);
+            rv = getListType(path, \h, orig.required, element_type, fctx, ignore_dup, tags, default_value, attr,
+                resolve_dynamic);
         } else if (orig.type == "softlist") {
-            AbstractDataProviderType et;
-            if (auto t = (remove h.element_type ?? element_type)) {
-                et = TypeScriptActionInterface::getType(path + "-element", t, NOTHING, NOTHING, fctx, ignore_dup,
-                    resolve_dynamic);
-            }
-            rv = new SoftListDataType(et ?? AutoType, !orig.required, NOTHING, tags, default_value, attr);
+            rv = getListType(path, \h, orig.required, element_type, fctx, ignore_dup, tags, default_value, attr,
+                resolve_dynamic, True);
         } else {
             if (*hash<auto> f = remove h.fields) {
                 throw "TYPE-ERROR", sprintf("Type %y cannot support fields; use type \"hash\" with fields",
@@ -2457,9 +2450,70 @@ public class TypeScriptActionInterface {
             rv = new QoreDataType(type, NOTHING, tags, default_value, attr);
         }
         if (h) {
-            throw "TYPE-ERROR", sprintf("Type description has unknown keys: %y", keys h);
+            throw "TYPE-ERROR", sprintf("Type description at path %y has unknown keys: %y", path, keys h);
         }
         return rv;
+    }
+
+    static AbstractDataProviderType getListType(string path, reference<hash<auto>> h, *bool required,
+            auto element_type, *ActionFunctionContext fctx, *bool ignore_dup, *hash<auto> tags,
+            auto default_value, hash<NameDescInfo> attr, *bool resolve_dynamic, *bool soft) {
+        AbstractDataProviderType et;
+        if (auto t = (remove h.element_type ?? element_type)) {
+            et = TypeScriptActionInterface::getType(path + "-element", t, NOTHING, NOTHING, fctx, ignore_dup,
+                resolve_dynamic);
+            if (!required) {
+                et = et.getOrNothingType();
+            }
+        }
+        if (fctx) {
+            if (exists (*code c = remove h.get_element_allowed_values)) {
+                string key = sprintf("%s-%s", path, attr.name);
+                fctx.eomap{key} = <AsyncCallInfo>{
+                    "key": key,
+                    "app": fctx.app,
+                    "action": fctx.action,
+                    "type": "get_element_allowed_values",
+                    "label": sprintf("Element reference data function for app %y action %y option %y", fctx.app,
+                        fctx.action, key),
+                    "pool": fctx.pool,
+                    "async_call": c,
+                    "to": fctx.io_timeout,
+                };
+                TypeScriptActionInterface::registerAsyncCall(ignore_dup, \fctx.eomap{key}, "app", fctx.app,
+                    fctx.action, key);
+
+                # remove any manual allowed values
+                remove h.element_allowed_values;
+                if (resolve_dynamic) {
+                    throw "ALLOWED-VALUES-ERROR", sprintf("Cannot define element allowed values directly on type at "
+                        "path %y; must be defined on a field", path);
+                } else {
+                    tags.element_ref_data = key;
+                    tags.dynamic = True;
+                }
+            }
+        }
+        hash<QoreTypeInfo> info = <QoreTypeInfo>{
+            "type": required ? AutoListType : AutoListOrNothingType,
+            "name": attr.name,
+            "display_name": attr.display_name,
+            "short_desc": attr.short_desc,
+            "desc": attr.desc,
+            "tags": tags,
+            "default_value": default_value,
+        };
+        if (soft) {
+            return new SoftListDataType(info, et ?? AutoType);
+        }
+        return new ListDataType(info, et ?? AutoType);
+
+        /*
+        if (soft) {
+            return new SoftListDataType(et ?? AutoType, !required, NOTHING, tags, default_value, attr);
+        }
+        return new ListDataType(et ?? AutoType, !required, NOTHING, tags, default_value, attr);
+        */
     }
 
     static HashDataType getHashType(string path, hash<auto> h, *bool required, *ActionFunctionContext fctx,
