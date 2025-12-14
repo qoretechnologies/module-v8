@@ -2466,34 +2466,6 @@ public class TypeScriptActionInterface {
                 et = et.getOrNothingType();
             }
         }
-        if (fctx) {
-            if (exists (*code c = remove h.get_element_allowed_values)) {
-                string key = sprintf("%s-%s", path, attr.name);
-                fctx.eomap{key} = <AsyncCallInfo>{
-                    "key": key,
-                    "app": fctx.app,
-                    "action": fctx.action,
-                    "type": "get_element_allowed_values",
-                    "label": sprintf("Element reference data function for app %y action %y option %y", fctx.app,
-                        fctx.action, key),
-                    "pool": fctx.pool,
-                    "async_call": c,
-                    "to": fctx.io_timeout,
-                };
-                TypeScriptActionInterface::registerAsyncCall(ignore_dup, \fctx.eomap{key}, "app", fctx.app,
-                    fctx.action, key);
-
-                # remove any manual allowed values
-                remove h.element_allowed_values;
-                if (resolve_dynamic) {
-                    throw "ALLOWED-VALUES-ERROR", sprintf("Cannot define element allowed values directly on type at "
-                        "path %y; must be defined on a field", path);
-                } else {
-                    tags.element_ref_data = key;
-                    tags.dynamic = True;
-                }
-            }
-        }
         hash<QoreTypeInfo> info = <QoreTypeInfo>{
             "type": required ? AutoListType : AutoListOrNothingType,
             "name": attr.name,
@@ -2507,13 +2479,6 @@ public class TypeScriptActionInterface {
             return new SoftListDataType(info, et ?? AutoType);
         }
         return new ListDataType(info, et ?? AutoType);
-
-        /*
-        if (soft) {
-            return new SoftListDataType(et ?? AutoType, !required, NOTHING, tags, default_value, attr);
-        }
-        return new ListDataType(et ?? AutoType, !required, NOTHING, tags, default_value, attr);
-        */
     }
 
     static HashDataType getHashType(string path, hash<auto> h, *bool required, *ActionFunctionContext fctx,
@@ -2545,7 +2510,7 @@ public class TypeScriptActionInterface {
 
     static TypeScriptDataField getField(string path, string name, string type, *ActionFunctionContext fctx,
             *bool ignore_dup, *bool resolve_dynamic) {
-        on_error rethrow $1.err, sprintf("%s (field: %y)", $1.desc, type);
+        on_error rethrow $1.err, sprintf("%s (field: %N)", $1.desc, type);
         bool req;
         if (type =~ /^\*/) {
             type = type[1..];
@@ -2563,7 +2528,7 @@ public class TypeScriptActionInterface {
         hash<auto> rv;
         {
             hash<auto> orig = h;
-            on_error rethrow $1.err, sprintf("%s (field: %y)", $1.desc, orig);
+            on_error rethrow $1.err, sprintf("%s (field: %N)", $1.desc, orig);
             *bool req = remove h.required;
             path += "-" + name;
             AbstractDataProviderType type = TypeScriptActionInterface::getType(path, remove h.type, req,
