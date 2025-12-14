@@ -1,5 +1,6 @@
 import {
   IQoreAllowedValue,
+  IQoreAppActionListOption,
   IQoreTypeObjectList,
   TQoreAnyType,
   TQoreAppActionOption,
@@ -43,6 +44,19 @@ export type TAttioAttribute = {
       allowed_object_ids: string[];
     };
   };
+};
+
+type TAllowedValuesConfig = Partial<
+  Pick<TQoreAppActionOption, 'get_allowed_values' | 'allowed_values_creatable'> &
+    Pick<
+      IQoreAppActionListOption<any>,
+      'get_element_allowed_values' | 'element_allowed_values_creatable'
+    >
+>;
+
+type TTypeAndAllowedValues = {
+  type: TQoreType | TQoreTypeObject | IQoreTypeObjectList;
+  allowedValuesConfig: TAllowedValuesConfig;
 };
 
 export type TAttioTargetRecord = {
@@ -114,29 +128,27 @@ export const getAttioAttributesAsQoreOptions = async (
   return qoreOptions;
 };
 
-export const mapAttioAttributeToQoreOption = (
-  attribute: TAttioAttribute,
-  token: string,
-  target: 'objects' | 'lists' = 'objects'
-): TQoreAppActionOption => {
-  const { title, description, type, is_required } = attribute;
-  let allowedValuesFields = {};
-
+const getBaseType = (type: string): TQoreType | TQoreTypeObject => {
   const qorusType = ATTIO_TO_QORUS_TYPE_MAP[type] || 'any';
-  let qorusFixedType: TQoreType | TQoreTypeObject = qorusType;
+
   if (qorusType === 'hash') {
-    qorusFixedType = {
-      type: 'hash',
-    };
-  } else if (qorusType === 'list') {
-    qorusFixedType = {
-      type: 'list',
-      element_type: 'any',
-    };
+    return { type: 'hash' };
   }
 
-  const get_allowed_values = async () => {
-    return await fetchAttioAllowedValues<{
+  if (qorusType === 'list') {
+    return { type: 'list', element_type: 'any' };
+  }
+
+  return qorusType;
+};
+
+const createSelectAllowedValuesFetcher = (
+  token: string,
+  target: 'objects' | 'lists',
+  attribute: TAttioAttribute
+) => {
+  return async () => {
+    return fetchAttioAllowedValues<{
       id: { option_id: string };
       title: string;
       is_archived: boolean;
@@ -149,125 +161,203 @@ export const mapAttioAttributeToQoreOption = (
       }),
     });
   };
+};
+
+const buildSelectTypeConfig = (
+  attribute: TAttioAttribute,
+  token: string,
+  target: 'objects' | 'lists'
+): TTypeAndAllowedValues => {
+  const baseType = getBaseType(attribute.type);
+  const getAllowedValues = createSelectAllowedValuesFetcher(token, target, attribute);
 
   if (attribute.is_multiselect) {
-    qorusFixedType = {
-      type: 'list',
-      element_type: qorusFixedType,
-    };
-
-    allowedValuesFields = {
-      get_element_allowed_values: get_allowed_values,
+    return {
+      type: { type: 'list', element_type: baseType },
+      allowedValuesConfig: { get_element_allowed_values: getAllowedValues },
     };
   }
 
-  if (attribute.type === 'select') {
-    allowedValuesFields = {
-      get_allowed_values,
+  return {
+    type: baseType,
+    allowedValuesConfig: { get_allowed_values: getAllowedValues },
+  };
+};
+
+const buildStatusTypeConfig = (
+  attribute: TAttioAttribute,
+  target: 'objects' | 'lists'
+): TTypeAndAllowedValues => {
+  const baseType = getBaseType(attribute.type);
+
+  if (attribute.is_multiselect) {
+    return {
+      type: { type: 'list', element_type: baseType },
+      allowedValuesConfig: {
+        get_element_allowed_values: getStatusAttributeAllowedValuesFunction({
+          type: target,
+          target: attribute.id.object_id,
+          attribute: attribute.id.attribute_id,
+        }),
+      },
     };
   }
 
-  if (attribute.type === 'status') {
-    allowedValuesFields = {
+  return {
+    type: baseType,
+    allowedValuesConfig: {
       get_allowed_values: getStatusAttributeAllowedValuesFunction({
         type: target,
         target: attribute.id.object_id,
         attribute: attribute.id.attribute_id,
       }),
+    },
+  };
+};
+
+const buildRecordReferenceTypeConfig = (attribute: TAttioAttribute): TTypeAndAllowedValues => {
+  const { relationship, config } = attribute;
+  const targetObject =
+    relationship?.id?.object_id || config?.record_reference?.allowed_object_ids?.[0];
+  const getReferenceAllowedValues = targetObject
+    ? getReferenceAllowedValuesFunction(targetObject)
+    : undefined;
+
+  const targetObjectAllowedValues = buildTargetObjectAllowedValues(relationship, config);
+  const referenceFields = buildReferenceFields(targetObjectAllowedValues);
+
+  if (attribute.is_multiselect) {
+    return {
+      type: {
+        type: 'list',
+        element_type: { type: 'hash', fields: referenceFields },
+      } as IQoreTypeObjectList,
+      allowedValuesConfig: {
+        element_allowed_values_creatable: true,
+        get_element_allowed_values: getReferenceAllowedValues,
+      },
     };
   }
 
-  if (type === 'record-reference') {
-    const relationship = attribute.relationship;
-    const config = attribute.config;
-    const targetObject =
-      relationship?.id?.object_id || config?.record_reference?.allowed_object_ids?.[0];
-    const getReferenceAllowedValues = targetObject
-      ? getReferenceAllowedValuesFunction(targetObject)
-      : undefined;
-    let targetObjectAllowedValues: IQoreAllowedValue<string>[] = [];
+  return {
+    type: { type: 'hash', fields: referenceFields } as TQoreTypeObject,
+    allowedValuesConfig: {
+      allowed_values_creatable: true,
+      get_allowed_values: getReferenceAllowedValues,
+    },
+  };
+};
 
-    if (relationship?.id?.object_id) {
-      targetObjectAllowedValues.push({
+const buildTargetObjectAllowedValues = (
+  relationship: TAttioAttribute['relationship'],
+  config: TAttioAttribute['config']
+): IQoreAllowedValue<string>[] => {
+  if (relationship?.id?.object_id) {
+    return [
+      {
         value: relationship.id.object_id,
         display_name: relationship.object_slug,
-      });
-    } else if (config?.record_reference?.allowed_object_ids?.length) {
-      targetObjectAllowedValues = config.record_reference.allowed_object_ids.map((objectId) => ({
-        value: objectId,
-        display_name: objectId,
-      }));
-    }
-
-    const referenceFields = {
-      target_object: {
-        display_name: 'Target Object',
-        on_change: ['refetch'],
-        type: 'string',
-        required: true,
-        allowed_values_creatable: false,
-        allowed_values: targetObjectAllowedValues,
       },
-      target_record_id: {
-        display_name: 'Target Record ID',
-        type: 'string',
-        required: true,
-        allowed_values_creatable: true,
-      },
-    } satisfies TQoreOptions;
-
-    if (attribute.is_multiselect) {
-      qorusFixedType = {
-        type: 'list',
-        element_type: {
-          type: 'hash',
-          fields: referenceFields,
-        },
-      } as IQoreTypeObjectList;
-      allowedValuesFields = {
-        element_allowed_values_creatable: true,
-        get_element_allowed_values: getReferenceAllowedValues,
-      };
-    } else {
-      qorusFixedType = {
-        type: 'hash',
-        fields: referenceFields,
-      } as TQoreTypeObject;
-      allowedValuesFields = {
-        allowed_values_creatable: true,
-        get_allowed_values: getReferenceAllowedValues,
-      };
-    }
+    ];
   }
 
-  if (type === 'actor-reference') {
-    if (attribute.is_multiselect) {
-      qorusFixedType = {
-        type: 'list',
-        element_type: 'string',
-      };
-      allowedValuesFields = {
+  if (config?.record_reference?.allowed_object_ids?.length) {
+    return config.record_reference.allowed_object_ids.map((objectId) => ({
+      value: objectId,
+      display_name: objectId,
+    }));
+  }
+
+  return [];
+};
+
+const buildReferenceFields = (
+  targetObjectAllowedValues: IQoreAllowedValue<string>[]
+): TQoreOptions => ({
+  target_object: {
+    display_name: 'Target Object',
+    on_change: ['refetch'],
+    type: 'string',
+    required: true,
+    allowed_values_creatable: false,
+    allowed_values: targetObjectAllowedValues,
+  },
+  target_record_id: {
+    display_name: 'Target Record ID',
+    type: 'string',
+    required: true,
+    allowed_values_creatable: true,
+  },
+});
+
+const buildActorReferenceTypeConfig = (attribute: TAttioAttribute): TTypeAndAllowedValues => {
+  if (attribute.is_multiselect) {
+    return {
+      type: { type: 'list', element_type: 'string' },
+      allowedValuesConfig: {
         element_allowed_values_creatable: true,
         get_element_allowed_values: getAttioWorkspaceMemberEmailAllowedValues,
-      };
-    } else {
-      qorusFixedType = {
-        type: 'string',
-      };
-      allowedValuesFields = {
-        allowed_values_creatable: true,
-        get_allowed_values: getAttioWorkspaceMemberEmailAllowedValues,
-      };
-    }
+      },
+    };
   }
 
-  const result = {
+  return {
+    type: 'string',
+    allowedValuesConfig: {
+      allowed_values_creatable: true,
+      get_allowed_values: getAttioWorkspaceMemberEmailAllowedValues,
+    },
+  };
+};
+
+const buildDefaultTypeConfig = (attribute: TAttioAttribute): TTypeAndAllowedValues => {
+  const baseType = getBaseType(attribute.type);
+
+  if (attribute.is_multiselect) {
+    return {
+      type: { type: 'list', element_type: baseType },
+      allowedValuesConfig: {},
+    };
+  }
+
+  return {
+    type: baseType,
+    allowedValuesConfig: {},
+  };
+};
+
+const getTypeAndAllowedValuesConfig = (
+  attribute: TAttioAttribute,
+  token: string,
+  target: 'objects' | 'lists'
+): TTypeAndAllowedValues => {
+  switch (attribute.type) {
+    case 'select':
+      return buildSelectTypeConfig(attribute, token, target);
+    case 'status':
+      return buildStatusTypeConfig(attribute, target);
+    case 'record-reference':
+      return buildRecordReferenceTypeConfig(attribute);
+    case 'actor-reference':
+      return buildActorReferenceTypeConfig(attribute);
+    default:
+      return buildDefaultTypeConfig(attribute);
+  }
+};
+
+export const mapAttioAttributeToQoreOption = (
+  attribute: TAttioAttribute,
+  token: string,
+  target: 'objects' | 'lists' = 'objects'
+): TQoreAppActionOption => {
+  const { title, description, is_required } = attribute;
+  const { type, allowedValuesConfig } = getTypeAndAllowedValuesConfig(attribute, token, target);
+
+  return {
     display_name: title,
     short_desc: description || title,
     required: is_required,
-    type: qorusFixedType as TQoreAnyType,
-    ...allowedValuesFields,
+    type: type as TQoreAnyType,
+    ...allowedValuesConfig,
   };
-
-  return result;
 };
