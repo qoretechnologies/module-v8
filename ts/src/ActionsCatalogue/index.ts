@@ -100,6 +100,7 @@ import L from '../i18n/i18n-node';
 import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import sendgrid from '../apps/sendgrid';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -179,6 +180,7 @@ const NEW_APPS = {
   paypal,
   pipedrive,
   quickbooks,
+  sendgrid,
   sentry,
   serenity,
   sharepoint,
