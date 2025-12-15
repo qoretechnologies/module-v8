@@ -99300,7 +99300,7 @@ type RootTranslation = {
 			}
 			connectionMessage: {
 				/**
-				 * A​P​I​ ​K​e​y​ ​I​n​s​t​r​u​c​t​i​o​n
+				 * A​P​I​ ​K​e​y​ ​I​n​s​t​r​u​c​t​i​o​n​s
 				 */
 				title: string
 				/**
@@ -100365,15 +100365,15 @@ type RootTranslation = {
 						'0': string
 					}
 					/**
-					 * S​e​n​d​ ​E​m​a​i​l
+					 * S​e​n​d​ ​T​e​m​p​l​a​t​e​ ​E​m​a​i​l
 					 */
 					displayName: string
 					/**
-					 * S​e​n​d​ ​a​n​ ​e​m​a​i​l​ ​m​e​s​s​a​g​e
+					 * S​e​n​d​ ​a​n​ ​e​m​a​i​l​ ​m​e​s​s​a​g​e​ ​u​s​i​n​g​ ​a​ ​S​e​n​d​G​r​i​d​ ​t​e​m​p​l​a​t​e
 					 */
 					shortDesc: string
 					/**
-					 * S​e​n​d​ ​a​ ​t​r​a​n​s​a​c​t​i​o​n​a​l​ ​e​m​a​i​l​ ​t​o​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​r​e​c​i​p​i​e​n​t​s​.​ ​Y​o​u​ ​c​a​n​ ​s​e​n​d​ ​p​l​a​i​n​ ​t​e​x​t​,​ ​H​T​M​L​,​ ​o​r​ ​b​o​t​h​.​ ​S​u​p​p​o​r​t​s​ ​C​C​,​ ​B​C​C​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​r​e​p​l​y​-​t​o​ ​a​d​d​r​e​s​s​e​s​.
+					 * S​e​n​d​ ​a​ ​t​r​a​n​s​a​c​t​i​o​n​a​l​ ​e​m​a​i​l​ ​u​s​i​n​g​ ​a​ ​p​r​e​d​e​f​i​n​e​d​ ​S​e​n​d​G​r​i​d​ ​d​y​n​a​m​i​c​ ​t​e​m​p​l​a​t​e​.​ ​C​u​s​t​o​m​i​z​e​ ​t​h​e​ ​e​m​a​i​l​ ​c​o​n​t​e​n​t​ ​b​y​ ​p​r​o​v​i​d​i​n​g​ ​d​y​n​a​m​i​c​ ​t​e​m​p​l​a​t​e​ ​d​a​t​a​ ​f​o​r​ ​p​e​r​s​o​n​a​l​i​z​a​t​i​o​n​.
 					 */
 					longDesc: string
 					options: {
@@ -100433,48 +100433,6 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						subject: {
-							/**
-							 * S​u​b​j​e​c​t
-							 */
-							displayName: string
-							/**
-							 * T​h​e​ ​e​m​a​i​l​ ​s​u​b​j​e​c​t​ ​l​i​n​e
-							 */
-							shortDesc: string
-							/**
-							 * T​h​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
-							 */
-							longDesc: string
-						}
-						textContent: {
-							/**
-							 * T​e​x​t​ ​C​o​n​t​e​n​t
-							 */
-							displayName: string
-							/**
-							 * P​l​a​i​n​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​e​m​a​i​l
-							 */
-							shortDesc: string
-							/**
-							 * T​h​e​ ​p​l​a​i​n​ ​t​e​x​t​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​ ​c​o​n​t​e​n​t​.​ ​E​i​t​h​e​r​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​r​ ​H​T​M​L​ ​c​o​n​t​e​n​t​ ​(​o​r​ ​b​o​t​h​)​ ​m​u​s​t​ ​b​e​ ​p​r​o​v​i​d​e​d​.
-							 */
-							longDesc: string
-						}
-						htmlContent: {
-							/**
-							 * H​T​M​L​ ​C​o​n​t​e​n​t
-							 */
-							displayName: string
-							/**
-							 * H​T​M​L​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​e​m​a​i​l
-							 */
-							shortDesc: string
-							/**
-							 * T​h​e​ ​H​T​M​L​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​ ​c​o​n​t​e​n​t​.​ ​E​i​t​h​e​r​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​r​ ​H​T​M​L​ ​c​o​n​t​e​n​t​ ​(​o​r​ ​b​o​t​h​)​ ​m​u​s​t​ ​b​e​ ​p​r​o​v​i​d​e​d​.
-							 */
-							longDesc: string
-						}
 						replyToEmail: {
 							/**
 							 * R​e​p​l​y​-​T​o​ ​E​m​a​i​l
@@ -100528,6 +100486,34 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * A​n​ ​a​r​r​a​y​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​a​s​ ​B​C​C​ ​r​e​c​i​p​i​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						templateId: {
+							/**
+							 * T​e​m​p​l​a​t​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​S​e​n​d​G​r​i​d​ ​t​e​m​p​l​a​t​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​d​y​n​a​m​i​c​ ​t​e​m​p​l​a​t​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​i​s​ ​e​m​a​i​l​.​ ​T​h​e​ ​t​e​m​p​l​a​t​e​ ​m​u​s​t​ ​b​e​ ​c​r​e​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​S​e​n​d​G​r​i​d​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+						values: {
+							/**
+							 * T​e​m​p​l​a​t​e​ ​V​a​l​u​e​s
+							 */
+							displayName: string
+							/**
+							 * D​y​n​a​m​i​c​ ​d​a​t​a​ ​f​o​r​ ​t​e​m​p​l​a​t​e​ ​p​e​r​s​o​n​a​l​i​z​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​J​S​O​N​ ​o​b​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​k​e​y​-​v​a​l​u​e​ ​p​a​i​r​s​ ​f​o​r​ ​d​y​n​a​m​i​c​ ​t​e​m​p​l​a​t​e​ ​d​a​t​a​.​ ​T​h​e​s​e​ ​v​a​l​u​e​s​ ​w​i​l​l​ ​r​e​p​l​a​c​e​ ​t​h​e​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​p​l​a​c​e​h​o​l​d​e​r​s​ ​i​n​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​t​e​m​p​l​a​t​e​.
 							 */
 							longDesc: string
 						}
@@ -204228,7 +204214,7 @@ export type TranslationFunctions = {
 			}
 			connectionMessage: {
 				/**
-				 * API Key Instruction
+				 * API Key Instructions
 				 */
 				title: () => LocalizedString
 				/**
@@ -205293,15 +205279,15 @@ export type TranslationFunctions = {
 						'0': () => LocalizedString
 					}
 					/**
-					 * Send Email
+					 * Send Template Email
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Send an email message
+					 * Send an email message using a SendGrid template
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Send a transactional email to one or more recipients. You can send plain text, HTML, or both. Supports CC, BCC, and custom reply-to addresses.
+					 * Send a transactional email using a predefined SendGrid dynamic template. Customize the email content by providing dynamic template data for personalization.
 					 */
 					longDesc: () => LocalizedString
 					options: {
@@ -205361,48 +205347,6 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						subject: {
-							/**
-							 * Subject
-							 */
-							displayName: () => LocalizedString
-							/**
-							 * The email subject line
-							 */
-							shortDesc: () => LocalizedString
-							/**
-							 * The subject line of the email.
-							 */
-							longDesc: () => LocalizedString
-						}
-						textContent: {
-							/**
-							 * Text Content
-							 */
-							displayName: () => LocalizedString
-							/**
-							 * Plain text content of the email
-							 */
-							shortDesc: () => LocalizedString
-							/**
-							 * The plain text version of the email content. Either text content or HTML content (or both) must be provided.
-							 */
-							longDesc: () => LocalizedString
-						}
-						htmlContent: {
-							/**
-							 * HTML Content
-							 */
-							displayName: () => LocalizedString
-							/**
-							 * HTML content of the email
-							 */
-							shortDesc: () => LocalizedString
-							/**
-							 * The HTML version of the email content. Either text content or HTML content (or both) must be provided.
-							 */
-							longDesc: () => LocalizedString
-						}
 						replyToEmail: {
 							/**
 							 * Reply-To Email
@@ -205456,6 +205400,34 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * An array of email addresses to include as BCC recipients.
+							 */
+							longDesc: () => LocalizedString
+						}
+						templateId: {
+							/**
+							 * Template ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The SendGrid template to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the dynamic template to use for this email. The template must be created in your SendGrid account.
+							 */
+							longDesc: () => LocalizedString
+						}
+						values: {
+							/**
+							 * Template Values
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Dynamic data for template personalization
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A JSON object containing key-value pairs for dynamic template data. These values will replace the corresponding placeholders in the selected template.
 							 */
 							longDesc: () => LocalizedString
 						}

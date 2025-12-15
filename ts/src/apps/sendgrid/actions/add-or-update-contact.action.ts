@@ -115,20 +115,22 @@ const addOrUpdateSendGridContact = QoreAppCreator.createLocalizedAction<typeof o
       if (listIds && listIds.length > 0 && result.persisted_recipients?.length > 0) {
         const recipientId = result.persisted_recipients[0];
 
-        for (const listId of listIds) {
-          try {
-            await client.request({
+        const addToListPromises = listIds.map(async (listId) =>
+          client
+            .request({
               url: `/v3/contactdb/lists/${listId}/recipients/${recipientId}`,
               method: 'POST',
-            });
-          } catch (listError: any) {
-            Debugger.log(`Failed to add contact to list ${listId}: ${listError.message}`);
-          }
-        }
+            })
+            .catch(async (listError) => {
+              Debugger.log(`Failed to add contact to list ${listId}: ${listError.message}`);
+            })
+        );
+
+        await Promise.all(addToListPromises);
       }
 
       return result;
-    } catch (error: any) {
+    } catch (error) {
       throw new SendGridError(`Failed to ${humanizeNameTitle(action)}: ${error.message || error}`);
     }
   },

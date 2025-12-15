@@ -2,7 +2,7 @@ const SendGridAppEn = {
   displayName: 'SendGrid',
   groups: ['Email & Communication'],
   connectionMessage: {
-    title: 'API Key Instruction',
+    title: 'API Key Instructions',
     content: `To connect your SendGrid account, you'll need an API key. You can create one in your SendGrid dashboard at https://app.sendgrid.com/settings/api_keys. Ensure your API key has the appropriate permissions for the features you want to use: Mail Send for sending emails, Email Validation for deliverability checks, Suppressions for managing blocks/bounces/unsubscribes, and Marketing for contact management.`,
   },
   shortDesc: 'Connect with SendGrid to send emails, manage contacts, and handle suppressions',

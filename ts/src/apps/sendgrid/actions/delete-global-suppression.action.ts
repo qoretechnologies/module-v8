@@ -53,7 +53,7 @@ const deleteSendGridGlobalSuppression = QoreAppCreator.createLocalizedAction<typ
         success: true,
         email,
       };
-    } catch (error: any) {
+    } catch (error) {
       throw new SendGridError(`Failed to ${humanizeNameTitle(action)}: ${error.message || error}`);
     }
   },

@@ -50,7 +50,7 @@ export const getSendGridTemplateAllowedValues: TQoreGetAllowedValuesFunction<
     const data = response.body as ISendGridTemplatesResponse;
 
     return (data.templates || []).map(mapTemplateToAllowedValue);
-  } catch (error: any) {
+  } catch (error) {
     throw new SendGridError(
       `Failed to fetch allowed values for templates: ${error.message || error}`
     );

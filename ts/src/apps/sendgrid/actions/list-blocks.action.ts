@@ -83,7 +83,7 @@ const listSendGridBlocks = QoreAppCreator.createLocalizedAction<typeof options>(
       });
 
       return response.body as ISendGridBlock[];
-    } catch (error: any) {
+    } catch (error) {
       throw new SendGridError(
         `Failed to ${humanizeNameTitle(action)}: ${error.message || error}`
       );

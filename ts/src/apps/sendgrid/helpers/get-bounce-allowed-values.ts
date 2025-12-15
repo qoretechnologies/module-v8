@@ -40,7 +40,7 @@ export const getSendGridBounceAllowedValues: TQoreGetAllowedValuesFunction<
 
     const bounces = response.body as ISendGridBounce[];
     return bounces.map(mapBounceToAllowedValue);
-  } catch (error: any) {
+  } catch (error) {
     throw new SendGridError(
       `Failed to fetch allowed values for bounces: ${error.message || error}`
     );

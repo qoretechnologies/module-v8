@@ -62,7 +62,7 @@ const deleteSendGridList = QoreAppCreator.createLocalizedAction<typeof options>(
         listId,
         contactsDeleted: deleteContacts || false,
       };
-    } catch (error: any) {
+    } catch (error) {
       throw new SendGridError(`Failed to ${humanizeNameTitle(action)}: ${error.message || error}`);
     }
   },

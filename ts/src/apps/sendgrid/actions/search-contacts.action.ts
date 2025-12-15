@@ -62,7 +62,7 @@ const searchSendGridContacts = QoreAppCreator.createLocalizedAction<typeof optio
 
       const data = response.body as { recipients: ISendGridContact[] };
       return data.recipients || [];
-    } catch (error: any) {
+    } catch (error) {
       throw new SendGridError(`Failed to ${humanizeNameTitle(action)}: ${error.message || error}`);
     }
   },

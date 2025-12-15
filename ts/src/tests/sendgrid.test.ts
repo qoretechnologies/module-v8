@@ -325,7 +325,7 @@ describe('Should test SendGrid app', () => {
 
         const result = await action.api_function(
           {
-            toEmail: 'myckmazurenko@gmail.com',
+            toEmail: 'test@example.com',
             fromEmail: senders[0].value,
             subject: 'Test Email from SendGrid Tests',
             textContent: 'This is a test email sent from automated tests.',
@@ -362,7 +362,7 @@ describe('Should test SendGrid app', () => {
 
         const result = await action.api_function(
           {
-            toEmail: 'myckmazurenko@gmail.com',
+            toEmail: 'test@example.com',
             fromEmail: senders[0].value,
             templateId: templates[0].value,
             values: {

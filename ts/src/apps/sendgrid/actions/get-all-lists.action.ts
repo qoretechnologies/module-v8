@@ -47,7 +47,7 @@ const getAllSendGridLists = QoreAppCreator.createLocalizedAction<typeof options>
 
       const data = response.body as { lists: ISendGridList[] };
       return data.lists || [];
-    } catch (error: any) {
+    } catch (error) {
       throw new SendGridError(`Failed to ${humanizeNameTitle(action)}: ${error.message || error}`);
     }
   },

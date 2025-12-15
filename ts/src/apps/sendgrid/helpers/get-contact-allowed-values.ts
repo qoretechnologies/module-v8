@@ -42,7 +42,7 @@ export const getSendGridContactAllowedValues: TQoreGetAllowedValuesFunction<
     const data = response.body as { recipients: ISendGridContact[] };
     const contacts = data.recipients || [];
     return contacts.map(mapContactToAllowedValue);
-  } catch (error: any) {
+  } catch (error) {
     throw new SendGridError(
       `Failed to fetch allowed values for contacts: ${error.message || error}`
     );

@@ -171,7 +171,7 @@ const sendSendGridEmail = QoreAppCreator.createLocalizedAction<typeof options>({
         statusCode: response.statusCode,
         messageId,
       };
-    } catch (error: any) {
+    } catch (error) {
       throw new SendGridError(`Failed to ${humanizeNameTitle(action)}: ${error.message || error}`);
     }
   },

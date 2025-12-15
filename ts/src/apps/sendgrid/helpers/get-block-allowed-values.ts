@@ -39,7 +39,7 @@ export const getSendGridBlockAllowedValues: TQoreGetAllowedValuesFunction<
 
     const blocks = response.body as ISendGridBlock[];
     return blocks.map(mapBlockToAllowedValue);
-  } catch (error: any) {
+  } catch (error) {
     throw new SendGridError(`Failed to fetch allowed values for blocks: ${error.message || error}`);
   }
 };

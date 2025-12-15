@@ -73,7 +73,7 @@ const removeSendGridContactsFromList = QoreAppCreator.createLocalizedAction<type
             method: 'DELETE',
           });
           removedIds.push(contactId);
-        } catch (error: any) {
+        } catch (error) {
           errors.push(`Contact ${contactId}: ${error.message || error}`);
         }
       }
@@ -87,7 +87,7 @@ const removeSendGridContactsFromList = QoreAppCreator.createLocalizedAction<type
         listId,
         removedContactIds: removedIds,
       };
-    } catch (error: any) {
+    } catch (error) {
       if (error instanceof SendGridError) throw error;
       throw new SendGridError(`Failed to ${humanizeNameTitle(action)}: ${error.message || error}`);
     }

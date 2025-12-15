@@ -38,7 +38,7 @@ export const getSendGridListAllowedValues: TQoreGetAllowedValuesFunction<
     const data = response.body as { lists: ISendGridList[] };
     const lists = data.lists || [];
     return lists.map(mapListToAllowedValue);
-  } catch (error: any) {
+  } catch (error) {
     throw new SendGridError(`Failed to fetch allowed values for lists: ${error.message || error}`);
   }
 };

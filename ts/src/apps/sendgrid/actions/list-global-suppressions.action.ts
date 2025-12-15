@@ -82,7 +82,7 @@ const listSendGridGlobalSuppressions = QoreAppCreator.createLocalizedAction<type
       });
 
       return response.body as ISendGridGlobalSuppression[];
-    } catch (error: any) {
+    } catch (error) {
       throw new SendGridError(`Failed to ${humanizeNameTitle(action)}: ${error.message || error}`);
     }
   },

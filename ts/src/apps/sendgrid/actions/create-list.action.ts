@@ -39,7 +39,7 @@ const createSendGridList = QoreAppCreator.createLocalizedAction<typeof options>(
       });
 
       return response.body;
-    } catch (error: any) {
+    } catch (error) {
       throw new SendGridError(`Failed to ${humanizeNameTitle(action)}: ${error.message || error}`);
     }
   },

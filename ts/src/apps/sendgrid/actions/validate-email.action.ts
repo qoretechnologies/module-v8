@@ -127,7 +127,7 @@ const validateSendGridEmail = QoreAppCreator.createLocalizedAction<typeof option
 
       const data = response.body as ISendGridEmailValidation;
       return data.result;
-    } catch (error: any) {
+    } catch (error) {
       throw new SendGridError(`Failed to ${humanizeNameTitle(action)}: ${error.message || error}`);
     }
   },

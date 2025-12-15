@@ -55,7 +55,7 @@ export const getSendGridSenderAllowedValues: TQoreGetAllowedValuesFunction<
     const data = response.body as TSendGridSendersResponse;
 
     return data.map(mapSenderToAllowedValue);
-  } catch (error: any) {
+  } catch (error) {
     throw new SendGridError(
       `Failed to fetch allowed values for senders: ${error.message || error}`
     );

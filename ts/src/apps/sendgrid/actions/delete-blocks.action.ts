@@ -85,7 +85,7 @@ const deleteSendGridBlocks = QoreAppCreator.createLocalizedAction<typeof options
         deletedEmails: deleteAll ? [] : emails || [],
         deleteAll: deleteAll || false,
       };
-    } catch (error: any) {
+    } catch (error) {
       throw new SendGridError(
         `Failed to ${humanizeNameTitle(action)}: ${error.message || error}`
       );

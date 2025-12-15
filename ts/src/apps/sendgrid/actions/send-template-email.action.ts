@@ -46,7 +46,7 @@ const getTemplateValues: TQoreGetDynamicTypeFunction = async (context) => {
     }
 
     const regex = /\{\{\{?\s*([^{}\s]+)\s*\}?\}\}/g;
-    const fields = [...version.plain_content.matchAll(regex)].map((m) => m[1]);
+    const fields = Array.from(new Set([...version.plain_content.matchAll(regex)].map((m) => m[1])));
 
     const fieldsOptions: TQoreOptions = {};
 
@@ -207,7 +207,7 @@ const sendSendGridTemplateEmail = QoreAppCreator.createLocalizedAction<typeof op
         statusCode: response.statusCode,
         messageId,
       };
-    } catch (error: any) {
+    } catch (error) {
       throw new SendGridError(`Failed to ${humanizeNameTitle(action)}: ${error.message || error}`);
     }
   },

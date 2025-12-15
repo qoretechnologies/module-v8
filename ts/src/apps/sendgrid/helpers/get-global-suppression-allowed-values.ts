@@ -40,7 +40,7 @@ export const getSendGridGlobalSuppressionAllowedValues: TQoreGetAllowedValuesFun
 
     const suppressions = response.body as ISendGridGlobalSuppression[];
     return suppressions.map(mapSuppressionToAllowedValue);
-  } catch (error: any) {
+  } catch (error) {
     throw new SendGridError(
       `Failed to fetch allowed values for global suppressions: ${error.message || error}`
     );

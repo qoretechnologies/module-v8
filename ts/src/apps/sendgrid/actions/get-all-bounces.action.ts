@@ -84,7 +84,7 @@ const getAllSendGridBounces = QoreAppCreator.createLocalizedAction<typeof option
       });
 
       return response.body as ISendGridBounce[];
-    } catch (error: any) {
+    } catch (error) {
       throw new SendGridError(`Failed to ${humanizeNameTitle(action)}: ${error.message || error}`);
     }
   },
