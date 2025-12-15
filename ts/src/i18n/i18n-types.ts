@@ -99287,6 +99287,1254 @@ type RootTranslation = {
 				}
 			}
 		}
+		SendGrid: {
+			/**
+			 * S​e​n​d​G​r​i​d
+			 */
+			displayName: string
+			groups: {
+				/**
+				 * E​m​a​i​l​ ​&​ ​C​o​m​m​u​n​i​c​a​t​i​o​n
+				 */
+				'0': string
+			}
+			connectionMessage: {
+				/**
+				 * A​P​I​ ​K​e​y​ ​I​n​s​t​r​u​c​t​i​o​n
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​y​o​u​r​ ​S​e​n​d​G​r​i​d​ ​a​c​c​o​u​n​t​,​ ​y​o​u​'​l​l​ ​n​e​e​d​ ​a​n​ ​A​P​I​ ​k​e​y​.​ ​Y​o​u​ ​c​a​n​ ​c​r​e​a​t​e​ ​o​n​e​ ​i​n​ ​y​o​u​r​ ​S​e​n​d​G​r​i​d​ ​d​a​s​h​b​o​a​r​d​ ​a​t​ ​h​t​t​p​s​:​/​/​a​p​p​.​s​e​n​d​g​r​i​d​.​c​o​m​/​s​e​t​t​i​n​g​s​/​a​p​i​_​k​e​y​s​.​ ​E​n​s​u​r​e​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​ ​h​a​s​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​p​e​r​m​i​s​s​i​o​n​s​ ​f​o​r​ ​t​h​e​ ​f​e​a​t​u​r​e​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​:​ ​M​a​i​l​ ​S​e​n​d​ ​f​o​r​ ​s​e​n​d​i​n​g​ ​e​m​a​i​l​s​,​ ​E​m​a​i​l​ ​V​a​l​i​d​a​t​i​o​n​ ​f​o​r​ ​d​e​l​i​v​e​r​a​b​i​l​i​t​y​ ​c​h​e​c​k​s​,​ ​S​u​p​p​r​e​s​s​i​o​n​s​ ​f​o​r​ ​m​a​n​a​g​i​n​g​ ​b​l​o​c​k​s​/​b​o​u​n​c​e​s​/​u​n​s​u​b​s​c​r​i​b​e​s​,​ ​a​n​d​ ​M​a​r​k​e​t​i​n​g​ ​f​o​r​ ​c​o​n​t​a​c​t​ ​m​a​n​a​g​e​m​e​n​t​.
+				 */
+				content: string
+			}
+			/**
+			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​S​e​n​d​G​r​i​d​ ​t​o​ ​s​e​n​d​ ​e​m​a​i​l​s​,​ ​m​a​n​a​g​e​ ​c​o​n​t​a​c​t​s​,​ ​a​n​d​ ​h​a​n​d​l​e​ ​s​u​p​p​r​e​s​s​i​o​n​s
+			 */
+			shortDesc: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​T​w​i​l​i​o​ ​S​e​n​d​G​r​i​d​ ​f​o​r​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​e​m​a​i​l​ ​m​a​n​a​g​e​m​e​n​t​.​ ​S​e​n​d​ ​t​r​a​n​s​a​c​t​i​o​n​a​l​ ​a​n​d​ ​m​a​r​k​e​t​i​n​g​ ​e​m​a​i​l​s​,​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​c​o​n​t​a​c​t​ ​l​i​s​t​s​,​ ​v​a​l​i​d​a​t​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​o​r​ ​d​e​l​i​v​e​r​a​b​i​l​i​t​y​,​ ​a​n​d​ ​m​a​i​n​t​a​i​n​ ​y​o​u​r​ ​s​e​n​d​e​r​ ​r​e​p​u​t​a​t​i​o​n​ ​b​y​ ​h​a​n​d​l​i​n​g​ ​s​u​p​p​r​e​s​s​i​o​n​s​ ​i​n​c​l​u​d​i​n​g​ ​b​l​o​c​k​s​,​ ​b​o​u​n​c​e​s​,​ ​a​n​d​ ​g​l​o​b​a​l​ ​u​n​s​u​b​s​c​r​i​b​e​s​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​f​u​l​l​ ​c​o​n​t​r​o​l​ ​o​v​e​r​ ​y​o​u​r​ ​e​m​a​i​l​ ​i​n​f​r​a​s​t​r​u​c​t​u​r​e​ ​a​n​d​ ​h​e​l​p​s​ ​e​n​s​u​r​e​ ​h​i​g​h​ ​d​e​l​i​v​e​r​a​b​i​l​i​t​y​ ​r​a​t​e​s​.
+			 */
+			longDesc: string
+			actions: {
+				list_blocks: {
+					groups: {
+						/**
+						 * S​u​p​p​r​e​s​s​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​B​l​o​c​k​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​b​l​o​c​k​e​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​h​a​t​ ​a​r​e​ ​c​u​r​r​e​n​t​l​y​ ​o​n​ ​y​o​u​r​ ​b​l​o​c​k​s​ ​l​i​s​t​.​ ​B​l​o​c​k​e​d​ ​a​d​d​r​e​s​s​e​s​ ​a​r​e​ ​e​m​a​i​l​s​ ​t​h​a​t​ ​h​a​v​e​ ​b​e​e​n​ ​r​e​j​e​c​t​e​d​ ​b​y​ ​r​e​c​e​i​v​i​n​g​ ​s​e​r​v​e​r​s​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​t​i​m​e​ ​r​a​n​g​e​ ​a​n​d​ ​p​a​g​i​n​a​t​e​ ​t​h​r​o​u​g​h​ ​r​e​s​u​l​t​s​.
+					 */
+					longDesc: string
+					options: {
+						startTime: {
+							/**
+							 * S​t​a​r​t​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​l​o​c​k​s​ ​c​r​e​a​t​e​d​ ​a​f​t​e​r​ ​t​h​i​s​ ​U​n​i​x​ ​t​i​m​e​s​t​a​m​p
+							 */
+							shortDesc: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​b​l​o​c​k​s​ ​t​h​a​t​ ​w​e​r​e​ ​c​r​e​a​t​e​d​ ​a​f​t​e​r​ ​t​h​i​s​ ​p​o​i​n​t​ ​i​n​ ​t​i​m​e​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​t​i​m​e​ ​a​s​ ​a​ ​U​n​i​x​ ​t​i​m​e​s​t​a​m​p​ ​(​s​e​c​o​n​d​s​ ​s​i​n​c​e​ ​e​p​o​c​h​)​.
+							 */
+							longDesc: string
+						}
+						endTime: {
+							/**
+							 * E​n​d​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​l​o​c​k​s​ ​c​r​e​a​t​e​d​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​U​n​i​x​ ​t​i​m​e​s​t​a​m​p
+							 */
+							shortDesc: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​b​l​o​c​k​s​ ​t​h​a​t​ ​w​e​r​e​ ​c​r​e​a​t​e​d​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​p​o​i​n​t​ ​i​n​ ​t​i​m​e​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​t​i​m​e​ ​a​s​ ​a​ ​U​n​i​x​ ​t​i​m​e​s​t​a​m​p​ ​(​s​e​c​o​n​d​s​ ​s​i​n​c​e​ ​e​p​o​c​h​)​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​b​l​o​c​k​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​b​l​o​c​k​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * S​t​a​r​t​i​n​g​ ​p​o​i​n​t​ ​i​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​r​t​i​n​g​ ​p​o​i​n​t​ ​i​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​r​e​s​u​l​t​s​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_block: {
+					groups: {
+						/**
+						 * S​u​p​p​r​e​s​s​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​a​ ​B​l​o​c​k
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​b​l​o​c​k​e​d​ ​e​m​a​i​l
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​b​l​o​c​k​e​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​r​e​a​s​o​n​ ​f​o​r​ ​t​h​e​ ​b​l​o​c​k​ ​a​n​d​ ​w​h​e​n​ ​i​t​ ​w​a​s​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​l​i​s​t​.
+					 */
+					longDesc: string
+					options: {
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​b​l​o​c​k​e​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​t​h​e​ ​b​l​o​c​k​s​ ​l​i​s​t​.​ ​T​h​i​s​ ​s​h​o​u​l​d​ ​b​e​ ​t​h​e​ ​e​x​a​c​t​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​h​a​t​ ​w​a​s​ ​b​l​o​c​k​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_blocks: {
+					groups: {
+						/**
+						 * S​u​p​p​r​e​s​s​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * D​e​l​e​t​e​ ​B​l​o​c​k​s
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​b​l​o​c​k​e​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​r​o​m​ ​y​o​u​r​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​r​o​m​ ​y​o​u​r​ ​b​l​o​c​k​s​ ​l​i​s​t​.​ ​Y​o​u​ ​c​a​n​ ​e​i​t​h​e​r​ ​d​e​l​e​t​e​ ​a​l​l​ ​b​l​o​c​k​s​ ​a​t​ ​o​n​c​e​ ​o​r​ ​s​p​e​c​i​f​y​ ​i​n​d​i​v​i​d​u​a​l​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​r​e​m​o​v​e​.​ ​D​e​l​e​t​i​n​g​ ​b​l​o​c​k​s​ ​a​l​l​o​w​s​ ​t​h​o​s​e​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​r​e​c​e​i​v​e​ ​e​m​a​i​l​s​ ​a​g​a​i​n​.
+					 */
+					longDesc: string
+					options: {
+						deleteAll: {
+							/**
+							 * D​e​l​e​t​e​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * D​e​l​e​t​e​ ​a​l​l​ ​b​l​o​c​k​e​d​ ​e​m​a​i​l​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​d​e​l​e​t​e​ ​a​l​l​ ​b​l​o​c​k​e​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​r​o​m​ ​y​o​u​r​ ​l​i​s​t​.​ ​W​h​e​n​ ​t​r​u​e​,​ ​t​h​e​ ​e​m​a​i​l​s​ ​p​a​r​a​m​e​t​e​r​ ​i​s​ ​i​g​n​o​r​e​d​.
+							 */
+							longDesc: string
+						}
+						emails: {
+							/**
+							 * E​m​a​i​l​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​a​r​r​a​y​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​b​l​o​c​k​s​ ​l​i​s​t​.​ ​R​e​q​u​i​r​e​d​ ​i​f​ ​D​e​l​e​t​e​ ​A​l​l​ ​i​s​ ​n​o​t​ ​s​e​t​ ​t​o​ ​t​r​u​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_all_bounces: {
+					groups: {
+						/**
+						 * S​u​p​p​r​e​s​s​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​A​l​l​ ​B​o​u​n​c​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​b​o​u​n​c​e​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​h​a​t​ ​h​a​v​e​ ​b​o​u​n​c​e​d​.​ ​B​o​u​n​c​e​s​ ​o​c​c​u​r​ ​w​h​e​n​ ​a​n​ ​e​m​a​i​l​ ​c​a​n​n​o​t​ ​b​e​ ​d​e​l​i​v​e​r​e​d​ ​t​o​ ​t​h​e​ ​r​e​c​i​p​i​e​n​t​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​t​i​m​e​ ​r​a​n​g​e​ ​a​n​d​ ​p​a​g​i​n​a​t​e​ ​t​h​r​o​u​g​h​ ​r​e​s​u​l​t​s​.
+					 */
+					longDesc: string
+					options: {
+						startTime: {
+							/**
+							 * S​t​a​r​t​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​o​u​n​c​e​s​ ​c​r​e​a​t​e​d​ ​a​f​t​e​r​ ​t​h​i​s​ ​U​n​i​x​ ​t​i​m​e​s​t​a​m​p
+							 */
+							shortDesc: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​b​o​u​n​c​e​s​ ​t​h​a​t​ ​w​e​r​e​ ​c​r​e​a​t​e​d​ ​a​f​t​e​r​ ​t​h​i​s​ ​p​o​i​n​t​ ​i​n​ ​t​i​m​e​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​t​i​m​e​ ​a​s​ ​a​ ​U​n​i​x​ ​t​i​m​e​s​t​a​m​p​ ​(​s​e​c​o​n​d​s​ ​s​i​n​c​e​ ​e​p​o​c​h​)​.
+							 */
+							longDesc: string
+						}
+						endTime: {
+							/**
+							 * E​n​d​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​o​u​n​c​e​s​ ​c​r​e​a​t​e​d​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​U​n​i​x​ ​t​i​m​e​s​t​a​m​p
+							 */
+							shortDesc: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​b​o​u​n​c​e​s​ ​t​h​a​t​ ​w​e​r​e​ ​c​r​e​a​t​e​d​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​p​o​i​n​t​ ​i​n​ ​t​i​m​e​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​t​i​m​e​ ​a​s​ ​a​ ​U​n​i​x​ ​t​i​m​e​s​t​a​m​p​ ​(​s​e​c​o​n​d​s​ ​s​i​n​c​e​ ​e​p​o​c​h​)​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​b​o​u​n​c​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​b​o​u​n​c​e​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * S​t​a​r​t​i​n​g​ ​p​o​i​n​t​ ​i​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​r​t​i​n​g​ ​p​o​i​n​t​ ​i​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​r​e​s​u​l​t​s​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_bounces: {
+					groups: {
+						/**
+						 * S​u​p​p​r​e​s​s​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * D​e​l​e​t​e​ ​B​o​u​n​c​e​s
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​b​o​u​n​c​e​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​r​o​m​ ​y​o​u​r​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​r​o​m​ ​y​o​u​r​ ​b​o​u​n​c​e​s​ ​l​i​s​t​.​ ​Y​o​u​ ​c​a​n​ ​e​i​t​h​e​r​ ​d​e​l​e​t​e​ ​a​l​l​ ​b​o​u​n​c​e​s​ ​a​t​ ​o​n​c​e​ ​o​r​ ​s​p​e​c​i​f​y​ ​i​n​d​i​v​i​d​u​a​l​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​r​e​m​o​v​e​.​ ​D​e​l​e​t​i​n​g​ ​b​o​u​n​c​e​s​ ​a​l​l​o​w​s​ ​t​h​o​s​e​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​r​e​c​e​i​v​e​ ​e​m​a​i​l​s​ ​a​g​a​i​n​.
+					 */
+					longDesc: string
+					options: {
+						deleteAll: {
+							/**
+							 * D​e​l​e​t​e​ ​A​l​l
+							 */
+							displayName: string
+							/**
+							 * D​e​l​e​t​e​ ​a​l​l​ ​b​o​u​n​c​e​d​ ​e​m​a​i​l​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​d​e​l​e​t​e​ ​a​l​l​ ​b​o​u​n​c​e​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​r​o​m​ ​y​o​u​r​ ​l​i​s​t​.​ ​W​h​e​n​ ​t​r​u​e​,​ ​t​h​e​ ​e​m​a​i​l​s​ ​p​a​r​a​m​e​t​e​r​ ​i​s​ ​i​g​n​o​r​e​d​.
+							 */
+							longDesc: string
+						}
+						emails: {
+							/**
+							 * E​m​a​i​l​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​a​r​r​a​y​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​b​o​u​n​c​e​s​ ​l​i​s​t​.​ ​R​e​q​u​i​r​e​d​ ​i​f​ ​D​e​l​e​t​e​ ​A​l​l​ ​i​s​ ​n​o​t​ ​s​e​t​ ​t​o​ ​t​r​u​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_global_suppressions: {
+					groups: {
+						/**
+						 * S​u​p​p​r​e​s​s​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​G​l​o​b​a​l​ ​S​u​p​p​r​e​s​s​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​g​l​o​b​a​l​l​y​ ​u​n​s​u​b​s​c​r​i​b​e​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​h​a​t​ ​h​a​v​e​ ​g​l​o​b​a​l​l​y​ ​u​n​s​u​b​s​c​r​i​b​e​d​ ​f​r​o​m​ ​a​l​l​ ​o​f​ ​y​o​u​r​ ​e​m​a​i​l​s​.​ ​T​h​e​s​e​ ​a​d​d​r​e​s​s​e​s​ ​w​i​l​l​ ​n​o​t​ ​r​e​c​e​i​v​e​ ​a​n​y​ ​e​m​a​i​l​s​ ​f​r​o​m​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​u​n​t​i​l​ ​t​h​e​y​ ​a​r​e​ ​r​e​m​o​v​e​d​ ​f​r​o​m​ ​t​h​i​s​ ​l​i​s​t​.
+					 */
+					longDesc: string
+					options: {
+						startTime: {
+							/**
+							 * S​t​a​r​t​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​s​u​p​p​r​e​s​s​i​o​n​s​ ​c​r​e​a​t​e​d​ ​a​f​t​e​r​ ​t​h​i​s​ ​U​n​i​x​ ​t​i​m​e​s​t​a​m​p
+							 */
+							shortDesc: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​s​u​p​p​r​e​s​s​i​o​n​s​ ​t​h​a​t​ ​w​e​r​e​ ​c​r​e​a​t​e​d​ ​a​f​t​e​r​ ​t​h​i​s​ ​p​o​i​n​t​ ​i​n​ ​t​i​m​e​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​t​i​m​e​ ​a​s​ ​a​ ​U​n​i​x​ ​t​i​m​e​s​t​a​m​p​ ​(​s​e​c​o​n​d​s​ ​s​i​n​c​e​ ​e​p​o​c​h​)​.
+							 */
+							longDesc: string
+						}
+						endTime: {
+							/**
+							 * E​n​d​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​s​u​p​p​r​e​s​s​i​o​n​s​ ​c​r​e​a​t​e​d​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​U​n​i​x​ ​t​i​m​e​s​t​a​m​p
+							 */
+							shortDesc: string
+							/**
+							 * R​e​t​r​i​e​v​e​ ​s​u​p​p​r​e​s​s​i​o​n​s​ ​t​h​a​t​ ​w​e​r​e​ ​c​r​e​a​t​e​d​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​p​o​i​n​t​ ​i​n​ ​t​i​m​e​.​ ​P​r​o​v​i​d​e​ ​t​h​e​ ​t​i​m​e​ ​a​s​ ​a​ ​U​n​i​x​ ​t​i​m​e​s​t​a​m​p​ ​(​s​e​c​o​n​d​s​ ​s​i​n​c​e​ ​e​p​o​c​h​)​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​s​u​p​p​r​e​s​s​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​s​u​p​p​r​e​s​s​i​o​n​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * S​t​a​r​t​i​n​g​ ​p​o​i​n​t​ ​i​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​r​t​i​n​g​ ​p​o​i​n​t​ ​i​n​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​r​e​s​u​l​t​s​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_global_suppression: {
+					groups: {
+						/**
+						 * S​u​p​p​r​e​s​s​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​a​ ​G​l​o​b​a​l​ ​S​u​p​p​r​e​s​s​i​o​n
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​g​l​o​b​a​l​l​y​ ​s​u​p​p​r​e​s​s​e​d​ ​e​m​a​i​l
+					 */
+					shortDesc: string
+					/**
+					 * C​h​e​c​k​ ​i​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​i​s​ ​o​n​ ​t​h​e​ ​g​l​o​b​a​l​ ​s​u​p​p​r​e​s​s​i​o​n​ ​l​i​s​t​ ​a​n​d​ ​r​e​t​r​i​e​v​e​ ​i​t​s​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​o​ ​l​o​o​k​ ​u​p​ ​i​n​ ​t​h​e​ ​g​l​o​b​a​l​ ​s​u​p​p​r​e​s​s​i​o​n​ ​l​i​s​t​.​ ​R​e​t​u​r​n​s​ ​t​h​e​ ​s​u​p​p​r​e​s​s​i​o​n​ ​d​e​t​a​i​l​s​ ​i​f​ ​f​o​u​n​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_global_suppressions: {
+					groups: {
+						/**
+						 * S​u​p​p​r​e​s​s​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * A​d​d​ ​G​l​o​b​a​l​ ​S​u​p​p​r​e​s​s​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​t​h​e​ ​g​l​o​b​a​l​ ​s​u​p​p​r​e​s​s​i​o​n​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​t​h​e​ ​g​l​o​b​a​l​ ​s​u​p​p​r​e​s​s​i​o​n​ ​l​i​s​t​.​ ​T​h​e​s​e​ ​a​d​d​r​e​s​s​e​s​ ​w​i​l​l​ ​n​o​ ​l​o​n​g​e​r​ ​r​e​c​e​i​v​e​ ​a​n​y​ ​e​m​a​i​l​s​ ​f​r​o​m​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​u​n​t​i​l​ ​t​h​e​y​ ​a​r​e​ ​r​e​m​o​v​e​d​ ​f​r​o​m​ ​t​h​e​ ​l​i​s​t​.
+					 */
+					longDesc: string
+					options: {
+						emails: {
+							/**
+							 * E​m​a​i​l​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​a​r​r​a​y​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​g​l​o​b​a​l​ ​s​u​p​p​r​e​s​s​i​o​n​ ​l​i​s​t​.​ ​T​h​e​s​e​ ​a​d​d​r​e​s​s​e​s​ ​w​i​l​l​ ​b​e​ ​b​l​o​c​k​e​d​ ​f​r​o​m​ ​r​e​c​e​i​v​i​n​g​ ​a​l​l​ ​f​u​t​u​r​e​ ​e​m​a​i​l​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_global_suppression: {
+					groups: {
+						/**
+						 * S​u​p​p​r​e​s​s​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​G​l​o​b​a​l​ ​S​u​p​p​r​e​s​s​i​o​n
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​a​n​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​r​o​m​ ​t​h​e​ ​g​l​o​b​a​l​ ​s​u​p​p​r​e​s​s​i​o​n​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​ ​a​n​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​r​o​m​ ​t​h​e​ ​g​l​o​b​a​l​ ​s​u​p​p​r​e​s​s​i​o​n​ ​l​i​s​t​.​ ​T​h​i​s​ ​w​i​l​l​ ​a​l​l​o​w​ ​t​h​e​ ​a​d​d​r​e​s​s​ ​t​o​ ​r​e​c​e​i​v​e​ ​e​m​a​i​l​s​ ​f​r​o​m​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​a​g​a​i​n​.
+					 */
+					longDesc: string
+					options: {
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​o​ ​r​e​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​g​l​o​b​a​l​ ​s​u​p​p​r​e​s​s​i​o​n​ ​l​i​s​t​.​ ​O​n​c​e​ ​r​e​m​o​v​e​d​,​ ​t​h​i​s​ ​a​d​d​r​e​s​s​ ​w​i​l​l​ ​b​e​ ​a​b​l​e​ ​t​o​ ​r​e​c​e​i​v​e​ ​e​m​a​i​l​s​ ​a​g​a​i​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_list: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​r​e​c​i​p​i​e​n​t​ ​l​i​s​t​ ​f​o​r​ ​o​r​g​a​n​i​z​i​n​g​ ​y​o​u​r​ ​c​o​n​t​a​c​t​s​.​ ​L​i​s​t​s​ ​h​e​l​p​ ​y​o​u​ ​s​e​g​m​e​n​t​ ​y​o​u​r​ ​a​u​d​i​e​n​c​e​ ​f​o​r​ ​t​a​r​g​e​t​e​d​ ​m​a​r​k​e​t​i​n​g​ ​c​a​m​p​a​i​g​n​s​.
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​n​e​w​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​y​o​u​r​ ​c​o​n​t​a​c​t​ ​l​i​s​t​.​ ​C​h​o​o​s​e​ ​a​ ​n​a​m​e​ ​t​h​a​t​ ​c​l​e​a​r​l​y​ ​i​d​e​n​t​i​f​i​e​s​ ​t​h​e​ ​p​u​r​p​o​s​e​ ​o​r​ ​a​u​d​i​e​n​c​e​ ​o​f​ ​t​h​e​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_all_lists: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​A​l​l​ ​L​i​s​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​c​o​n​t​a​c​t​ ​l​i​s​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​r​e​c​i​p​i​e​n​t​ ​l​i​s​t​s​ ​i​n​ ​y​o​u​r​ ​S​e​n​d​G​r​i​d​ ​a​c​c​o​u​n​t​.​ ​R​e​t​u​r​n​s​ ​l​i​s​t​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​ ​a​n​d​ ​r​e​c​i​p​i​e​n​t​ ​c​o​u​n​t​.
+					 */
+					longDesc: string
+					options: {
+					}
+				}
+				delete_list: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​c​o​n​t​a​c​t​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​r​e​c​i​p​i​e​n​t​ ​l​i​s​t​ ​f​r​o​m​ ​y​o​u​r​ ​S​e​n​d​G​r​i​d​ ​a​c​c​o​u​n​t​.​ ​Y​o​u​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​d​e​l​e​t​e​ ​a​l​l​ ​c​o​n​t​a​c​t​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​l​i​s​t​ ​a​s​ ​w​e​l​l​.
+					 */
+					longDesc: string
+					options: {
+						listId: {
+							/**
+							 * L​i​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​l​i​s​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​l​i​s​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.​ ​S​e​l​e​c​t​ ​f​r​o​m​ ​y​o​u​r​ ​e​x​i​s​t​i​n​g​ ​l​i​s​t​s​.
+							 */
+							longDesc: string
+						}
+						deleteContacts: {
+							/**
+							 * D​e​l​e​t​e​ ​C​o​n​t​a​c​t​s
+							 */
+							displayName: string
+							/**
+							 * A​l​s​o​ ​d​e​l​e​t​e​ ​a​l​l​ ​c​o​n​t​a​c​t​s​ ​i​n​ ​t​h​e​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​s​e​t​ ​t​o​ ​t​r​u​e​,​ ​a​l​l​ ​c​o​n​t​a​c​t​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​l​i​s​t​ ​w​i​l​l​ ​a​l​s​o​ ​b​e​ ​p​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​d​ ​f​r​o​m​ ​y​o​u​r​ ​c​o​n​t​a​c​t​ ​d​a​t​a​b​a​s​e​.​ ​U​s​e​ ​w​i​t​h​ ​c​a​u​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_or_update_contact: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * A​d​d​ ​o​r​ ​U​p​d​a​t​e​ ​a​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​o​r​ ​u​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​o​n​e
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​t​o​ ​y​o​u​r​ ​S​e​n​d​G​r​i​d​ ​c​o​n​t​a​c​t​ ​d​a​t​a​b​a​s​e​ ​o​r​ ​u​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​ ​i​f​ ​t​h​e​ ​e​m​a​i​l​ ​a​l​r​e​a​d​y​ ​e​x​i​s​t​s​.​ ​Y​o​u​ ​c​a​n​ ​a​l​s​o​ ​a​s​s​i​g​n​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​l​i​s​t​s​.
+					 */
+					longDesc: string
+					options: {
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.​ ​T​h​i​s​ ​i​s​ ​t​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​-​ ​i​f​ ​a​ ​c​o​n​t​a​c​t​ ​w​i​t​h​ ​t​h​i​s​ ​e​m​a​i​l​ ​e​x​i​s​t​s​,​ ​i​t​ ​w​i​l​l​ ​b​e​ ​u​p​d​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						firstName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​f​i​r​s​t​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						lastName: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​l​a​s​t​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						listIds: {
+							/**
+							 * L​i​s​t​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​s​ ​t​o​ ​a​d​d​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * O​n​e​ ​o​r​ ​m​o​r​e​ ​l​i​s​t​ ​I​D​s​ ​t​o​ ​a​d​d​ ​t​h​i​s​ ​c​o​n​t​a​c​t​ ​t​o​.​ ​T​h​e​ ​c​o​n​t​a​c​t​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​ ​t​o​ ​a​l​l​ ​s​p​e​c​i​f​i​e​d​ ​l​i​s​t​s​.
+							 */
+							longDesc: string
+						}
+						customFields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​J​S​O​N​ ​o​b​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​n​a​m​e​s​ ​a​n​d​ ​v​a​l​u​e​s​.​ ​C​u​s​t​o​m​ ​f​i​e​l​d​s​ ​m​u​s​t​ ​b​e​ ​c​r​e​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​S​e​n​d​G​r​i​d​ ​a​c​c​o​u​n​t​ ​f​i​r​s​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				search_contacts: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​C​o​n​t​a​c​t​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​c​o​n​t​a​c​t​s​ ​b​y​ ​f​i​e​l​d​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​y​o​u​r​ ​c​o​n​t​a​c​t​ ​d​a​t​a​b​a​s​e​ ​f​o​r​ ​c​o​n​t​a​c​t​s​ ​m​a​t​c​h​i​n​g​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d​ ​v​a​l​u​e​.​ ​Y​o​u​ ​c​a​n​ ​s​e​a​r​c​h​ ​b​y​ ​e​m​a​i​l​,​ ​n​a​m​e​,​ ​o​r​ ​a​n​y​ ​c​u​s​t​o​m​ ​f​i​e​l​d​.
+					 */
+					longDesc: string
+					options: {
+						fieldName: {
+							/**
+							 * F​i​e​l​d​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​ ​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​e​a​r​c​h​.​ ​C​o​m​m​o​n​ ​f​i​e​l​d​s​ ​i​n​c​l​u​d​e​ ​`​e​m​a​i​l​`​,​ ​`​f​i​r​s​t​_​n​a​m​e​`​,​ ​`​l​a​s​t​_​n​a​m​e​`​,​ ​o​r​ ​a​n​y​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						value: {
+							/**
+							 * V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d​.​ ​T​e​x​t​ ​f​i​e​l​d​s​ ​m​a​y​ ​r​e​q​u​i​r​e​ ​U​R​L​ ​e​n​c​o​d​i​n​g​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_contacts: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * D​e​l​e​t​e​ ​C​o​n​t​a​c​t​s
+					 */
+					displayName: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​y​o​u​r​ ​d​a​t​a​b​a​s​e
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​y​o​u​r​ ​S​e​n​d​G​r​i​d​ ​c​o​n​t​a​c​t​ ​d​a​t​a​b​a​s​e​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.
+					 */
+					longDesc: string
+					options: {
+						contactIds: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​s​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​a​r​r​a​y​ ​o​f​ ​c​o​n​t​a​c​t​ ​I​D​s​ ​t​o​ ​d​e​l​e​t​e​.​ ​S​e​l​e​c​t​ ​f​r​o​m​ ​y​o​u​r​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​s​.​ ​A​l​l​ ​s​e​l​e​c​t​e​d​ ​c​o​n​t​a​c​t​s​ ​w​i​l​l​ ​b​e​ ​p​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				remove_contacts_from_list: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * R​e​m​o​v​e​ ​C​o​n​t​a​c​t​s​ ​f​r​o​m​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​ ​w​i​t​h​o​u​t​ ​d​e​l​e​t​i​n​g​ ​t​h​e​m​ ​f​r​o​m​ ​y​o​u​r​ ​c​o​n​t​a​c​t​ ​d​a​t​a​b​a​s​e​.​ ​T​h​e​ ​c​o​n​t​a​c​t​s​ ​w​i​l​l​ ​r​e​m​a​i​n​ ​i​n​ ​y​o​u​r​ ​d​a​t​a​b​a​s​e​ ​b​u​t​ ​w​i​l​l​ ​n​o​ ​l​o​n​g​e​r​ ​b​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​l​i​s​t​.
+					 */
+					longDesc: string
+					options: {
+						listId: {
+							/**
+							 * L​i​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​l​i​s​t​ ​t​o​ ​r​e​m​o​v​e​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​l​i​s​t​ ​f​r​o​m​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​m​o​v​e​ ​c​o​n​t​a​c​t​s​.
+							 */
+							longDesc: string
+						}
+						contactIds: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​a​r​r​a​y​ ​o​f​ ​c​o​n​t​a​c​t​ ​I​D​s​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​l​i​s​t​.​ ​T​h​e​ ​c​o​n​t​a​c​t​s​ ​w​i​l​l​ ​r​e​m​a​i​n​ ​i​n​ ​y​o​u​r​ ​d​a​t​a​b​a​s​e​ ​b​u​t​ ​w​i​l​l​ ​b​e​ ​u​n​l​i​n​k​e​d​ ​f​r​o​m​ ​t​h​i​s​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				validate_email: {
+					groups: {
+						/**
+						 * D​e​l​i​v​e​r​a​b​i​l​i​t​y
+						 */
+						'0': string
+					}
+					/**
+					 * V​a​l​i​d​a​t​e​ ​E​m​a​i​l
+					 */
+					displayName: string
+					/**
+					 * V​a​l​i​d​a​t​e​ ​a​n​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​d​e​l​i​v​e​r​a​b​i​l​i​t​y
+					 */
+					shortDesc: string
+					/**
+					 * C​h​e​c​k​ ​i​f​ ​a​n​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​i​s​ ​v​a​l​i​d​ ​a​n​d​ ​l​i​k​e​l​y​ ​t​o​ ​r​e​c​e​i​v​e​ ​e​m​a​i​l​s​.​ ​R​e​t​u​r​n​s​ ​a​ ​v​e​r​d​i​c​t​ ​(​V​a​l​i​d​,​ ​R​i​s​k​y​,​ ​o​r​ ​I​n​v​a​l​i​d​)​ ​a​l​o​n​g​ ​w​i​t​h​ ​d​e​t​a​i​l​e​d​ ​c​h​e​c​k​s​ ​i​n​c​l​u​d​i​n​g​ ​d​o​m​a​i​n​ ​v​a​l​i​d​i​t​y​,​ ​s​u​s​p​e​c​t​e​d​ ​d​i​s​p​o​s​a​b​l​e​ ​a​d​d​r​e​s​s​ ​d​e​t​e​c​t​i​o​n​,​ ​a​n​d​ ​b​o​u​n​c​e​ ​h​i​s​t​o​r​y​.
+					 */
+					longDesc: string
+					options: {
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​o​ ​v​a​l​i​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​v​a​l​i​d​a​t​e​.​ ​T​h​e​ ​v​a​l​i​d​a​t​i​o​n​ ​w​i​l​l​ ​c​h​e​c​k​ ​s​y​n​t​a​x​,​ ​d​o​m​a​i​n​ ​r​e​c​o​r​d​s​,​ ​a​n​d​ ​h​i​s​t​o​r​i​c​a​l​ ​d​a​t​a​.
+							 */
+							longDesc: string
+						}
+						source: {
+							/**
+							 * S​o​u​r​c​e
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​s​o​u​r​c​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​r​a​c​k​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​s​o​u​r​c​e​ ​s​t​r​i​n​g​ ​t​o​ ​h​e​l​p​ ​y​o​u​ ​t​r​a​c​k​ ​w​h​e​r​e​ ​t​h​e​ ​v​a​l​i​d​a​t​i​o​n​ ​r​e​q​u​e​s​t​ ​o​r​i​g​i​n​a​t​e​d​ ​f​r​o​m​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				send_email: {
+					groups: {
+						/**
+						 * E​m​a​i​l
+						 */
+						'0': string
+					}
+					/**
+					 * S​e​n​d​ ​E​m​a​i​l
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​n​ ​e​m​a​i​l​ ​m​e​s​s​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​t​r​a​n​s​a​c​t​i​o​n​a​l​ ​e​m​a​i​l​ ​t​o​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​r​e​c​i​p​i​e​n​t​s​.​ ​Y​o​u​ ​c​a​n​ ​s​e​n​d​ ​p​l​a​i​n​ ​t​e​x​t​,​ ​H​T​M​L​,​ ​o​r​ ​b​o​t​h​.​ ​S​u​p​p​o​r​t​s​ ​C​C​,​ ​B​C​C​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​r​e​p​l​y​-​t​o​ ​a​d​d​r​e​s​s​e​s​.
+					 */
+					longDesc: string
+					options: {
+						toEmail: {
+							/**
+							 * T​o​ ​E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​e​c​i​p​i​e​n​t​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​p​r​i​m​a​r​y​ ​r​e​c​i​p​i​e​n​t​.
+							 */
+							longDesc: string
+						}
+						toName: {
+							/**
+							 * T​o​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​e​c​i​p​i​e​n​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​c​i​p​i​e​n​t​ ​t​o​ ​p​e​r​s​o​n​a​l​i​z​e​ ​t​h​e​ ​'​T​o​'​ ​f​i​e​l​d​.
+							 */
+							longDesc: string
+						}
+						fromEmail: {
+							/**
+							 * F​r​o​m​ ​E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​e​n​d​e​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​h​a​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​a​s​ ​t​h​e​ ​s​e​n​d​e​r​.​ ​M​u​s​t​ ​b​e​ ​a​ ​v​e​r​i​f​i​e​d​ ​s​e​n​d​e​r​ ​i​n​ ​y​o​u​r​ ​S​e​n​d​G​r​i​d​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+						fromName: {
+							/**
+							 * F​r​o​m​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​e​n​d​e​r​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​a​m​e​ ​t​o​ ​d​i​s​p​l​a​y​ ​a​s​ ​t​h​e​ ​s​e​n​d​e​r​ ​i​n​ ​t​h​e​ ​'​F​r​o​m​'​ ​f​i​e​l​d​.
+							 */
+							longDesc: string
+						}
+						subject: {
+							/**
+							 * S​u​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​s​u​b​j​e​c​t​ ​l​i​n​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							longDesc: string
+						}
+						textContent: {
+							/**
+							 * T​e​x​t​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * P​l​a​i​n​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​e​m​a​i​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​l​a​i​n​ ​t​e​x​t​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​ ​c​o​n​t​e​n​t​.​ ​E​i​t​h​e​r​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​r​ ​H​T​M​L​ ​c​o​n​t​e​n​t​ ​(​o​r​ ​b​o​t​h​)​ ​m​u​s​t​ ​b​e​ ​p​r​o​v​i​d​e​d​.
+							 */
+							longDesc: string
+						}
+						htmlContent: {
+							/**
+							 * H​T​M​L​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * H​T​M​L​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​e​m​a​i​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​H​T​M​L​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​ ​c​o​n​t​e​n​t​.​ ​E​i​t​h​e​r​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​r​ ​H​T​M​L​ ​c​o​n​t​e​n​t​ ​(​o​r​ ​b​o​t​h​)​ ​m​u​s​t​ ​b​e​ ​p​r​o​v​i​d​e​d​.
+							 */
+							longDesc: string
+						}
+						replyToEmail: {
+							/**
+							 * R​e​p​l​y​-​T​o​ ​E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​r​e​p​l​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​h​a​t​ ​r​e​c​i​p​i​e​n​t​s​ ​s​h​o​u​l​d​ ​r​e​p​l​y​ ​t​o​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​r​e​p​l​i​e​s​ ​w​i​l​l​ ​g​o​ ​t​o​ ​t​h​e​ ​s​e​n​d​e​r​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						replyToName: {
+							/**
+							 * R​e​p​l​y​-​T​o​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​r​e​p​l​y​-​t​o​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​a​m​e​ ​t​o​ ​d​i​s​p​l​a​y​ ​f​o​r​ ​t​h​e​ ​r​e​p​l​y​-​t​o​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						ccEmails: {
+							/**
+							 * C​C​ ​E​m​a​i​l​s
+							 */
+							displayName: string
+							/**
+							 * C​a​r​b​o​n​ ​c​o​p​y​ ​r​e​c​i​p​i​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​a​r​r​a​y​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​a​s​ ​C​C​ ​r​e​c​i​p​i​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						bccEmails: {
+							/**
+							 * B​C​C​ ​E​m​a​i​l​s
+							 */
+							displayName: string
+							/**
+							 * B​l​i​n​d​ ​c​a​r​b​o​n​ ​c​o​p​y​ ​r​e​c​i​p​i​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​a​r​r​a​y​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​a​s​ ​B​C​C​ ​r​e​c​i​p​i​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				send_template_email: {
+					groups: {
+						/**
+						 * E​m​a​i​l
+						 */
+						'0': string
+					}
+					/**
+					 * S​e​n​d​ ​E​m​a​i​l
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​n​ ​e​m​a​i​l​ ​m​e​s​s​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​t​r​a​n​s​a​c​t​i​o​n​a​l​ ​e​m​a​i​l​ ​t​o​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​r​e​c​i​p​i​e​n​t​s​.​ ​Y​o​u​ ​c​a​n​ ​s​e​n​d​ ​p​l​a​i​n​ ​t​e​x​t​,​ ​H​T​M​L​,​ ​o​r​ ​b​o​t​h​.​ ​S​u​p​p​o​r​t​s​ ​C​C​,​ ​B​C​C​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​r​e​p​l​y​-​t​o​ ​a​d​d​r​e​s​s​e​s​.
+					 */
+					longDesc: string
+					options: {
+						toEmail: {
+							/**
+							 * T​o​ ​E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​e​c​i​p​i​e​n​t​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​p​r​i​m​a​r​y​ ​r​e​c​i​p​i​e​n​t​.
+							 */
+							longDesc: string
+						}
+						toName: {
+							/**
+							 * T​o​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​e​c​i​p​i​e​n​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​c​i​p​i​e​n​t​ ​t​o​ ​p​e​r​s​o​n​a​l​i​z​e​ ​t​h​e​ ​'​T​o​'​ ​f​i​e​l​d​.
+							 */
+							longDesc: string
+						}
+						fromEmail: {
+							/**
+							 * F​r​o​m​ ​E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​e​n​d​e​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​h​a​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​a​s​ ​t​h​e​ ​s​e​n​d​e​r​.​ ​M​u​s​t​ ​b​e​ ​a​ ​v​e​r​i​f​i​e​d​ ​s​e​n​d​e​r​ ​i​n​ ​y​o​u​r​ ​S​e​n​d​G​r​i​d​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+						fromName: {
+							/**
+							 * F​r​o​m​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​e​n​d​e​r​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​a​m​e​ ​t​o​ ​d​i​s​p​l​a​y​ ​a​s​ ​t​h​e​ ​s​e​n​d​e​r​ ​i​n​ ​t​h​e​ ​'​F​r​o​m​'​ ​f​i​e​l​d​.
+							 */
+							longDesc: string
+						}
+						subject: {
+							/**
+							 * S​u​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​s​u​b​j​e​c​t​ ​l​i​n​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							longDesc: string
+						}
+						textContent: {
+							/**
+							 * T​e​x​t​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * P​l​a​i​n​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​e​m​a​i​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​l​a​i​n​ ​t​e​x​t​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​ ​c​o​n​t​e​n​t​.​ ​E​i​t​h​e​r​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​r​ ​H​T​M​L​ ​c​o​n​t​e​n​t​ ​(​o​r​ ​b​o​t​h​)​ ​m​u​s​t​ ​b​e​ ​p​r​o​v​i​d​e​d​.
+							 */
+							longDesc: string
+						}
+						htmlContent: {
+							/**
+							 * H​T​M​L​ ​C​o​n​t​e​n​t
+							 */
+							displayName: string
+							/**
+							 * H​T​M​L​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​e​m​a​i​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​H​T​M​L​ ​v​e​r​s​i​o​n​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​ ​c​o​n​t​e​n​t​.​ ​E​i​t​h​e​r​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​r​ ​H​T​M​L​ ​c​o​n​t​e​n​t​ ​(​o​r​ ​b​o​t​h​)​ ​m​u​s​t​ ​b​e​ ​p​r​o​v​i​d​e​d​.
+							 */
+							longDesc: string
+						}
+						replyToEmail: {
+							/**
+							 * R​e​p​l​y​-​T​o​ ​E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​r​e​p​l​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​h​a​t​ ​r​e​c​i​p​i​e​n​t​s​ ​s​h​o​u​l​d​ ​r​e​p​l​y​ ​t​o​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​r​e​p​l​i​e​s​ ​w​i​l​l​ ​g​o​ ​t​o​ ​t​h​e​ ​s​e​n​d​e​r​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						replyToName: {
+							/**
+							 * R​e​p​l​y​-​T​o​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​r​e​p​l​y​-​t​o​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​n​a​m​e​ ​t​o​ ​d​i​s​p​l​a​y​ ​f​o​r​ ​t​h​e​ ​r​e​p​l​y​-​t​o​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						ccEmails: {
+							/**
+							 * C​C​ ​E​m​a​i​l​s
+							 */
+							displayName: string
+							/**
+							 * C​a​r​b​o​n​ ​c​o​p​y​ ​r​e​c​i​p​i​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​a​r​r​a​y​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​a​s​ ​C​C​ ​r​e​c​i​p​i​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						bccEmails: {
+							/**
+							 * B​C​C​ ​E​m​a​i​l​s
+							 */
+							displayName: string
+							/**
+							 * B​l​i​n​d​ ​c​a​r​b​o​n​ ​c​o​p​y​ ​r​e​c​i​p​i​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​a​r​r​a​y​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​a​s​ ​B​C​C​ ​r​e​c​i​p​i​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Brevo: {
 			/**
 			 * B​r​e​v​o
@@ -202960,6 +204208,1254 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Only trigger for transcriptions from recordings associated with this specific conference. The Conference SID should start with "CF". Leave empty to trigger for all conferences.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		SendGrid: {
+			/**
+			 * SendGrid
+			 */
+			displayName: () => LocalizedString
+			groups: {
+				/**
+				 * Email & Communication
+				 */
+				'0': () => LocalizedString
+			}
+			connectionMessage: {
+				/**
+				 * API Key Instruction
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect your SendGrid account, you'll need an API key. You can create one in your SendGrid dashboard at https://app.sendgrid.com/settings/api_keys. Ensure your API key has the appropriate permissions for the features you want to use: Mail Send for sending emails, Email Validation for deliverability checks, Suppressions for managing blocks/bounces/unsubscribes, and Marketing for contact management.
+				 */
+				content: () => LocalizedString
+			}
+			/**
+			 * Connect with SendGrid to send emails, manage contacts, and handle suppressions
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Integrate with Twilio SendGrid for comprehensive email management. Send transactional and marketing emails, manage your contact lists, validate email addresses for deliverability, and maintain your sender reputation by handling suppressions including blocks, bounces, and global unsubscribes. This integration provides full control over your email infrastructure and helps ensure high deliverability rates.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				list_blocks: {
+					groups: {
+						/**
+						 * Suppressions
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Blocks
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of blocked email addresses
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all email addresses that are currently on your blocks list. Blocked addresses are emails that have been rejected by receiving servers. You can filter by time range and paginate through results.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						startTime: {
+							/**
+							 * Start Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter blocks created after this Unix timestamp
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Retrieve blocks that were created after this point in time. Provide the time as a Unix timestamp (seconds since epoch).
+							 */
+							longDesc: () => LocalizedString
+						}
+						endTime: {
+							/**
+							 * End Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter blocks created before this Unix timestamp
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Retrieve blocks that were created before this point in time. Provide the time as a Unix timestamp (seconds since epoch).
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of blocks to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of block records to return. Default is 500.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Starting point in the list of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The starting point in the list of results for pagination. Default is 0.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_block: {
+					groups: {
+						/**
+						 * Suppressions
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get a Block
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific blocked email
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch detailed information about a specific blocked email address, including the reason for the block and when it was added to the list.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The blocked email address to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address to retrieve from the blocks list. This should be the exact email address that was blocked.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_blocks: {
+					groups: {
+						/**
+						 * Suppressions
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Delete Blocks
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete blocked email addresses from your list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Remove email addresses from your blocks list. You can either delete all blocks at once or specify individual email addresses to remove. Deleting blocks allows those addresses to receive emails again.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						deleteAll: {
+							/**
+							 * Delete All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Delete all blocked emails
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to true to delete all blocked email addresses from your list. When true, the emails parameter is ignored.
+							 */
+							longDesc: () => LocalizedString
+						}
+						emails: {
+							/**
+							 * Emails
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of email addresses to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An array of email addresses to remove from the blocks list. Required if Delete All is not set to true.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_all_bounces: {
+					groups: {
+						/**
+						 * Suppressions
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get All Bounces
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of bounced email addresses
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all email addresses that have bounced. Bounces occur when an email cannot be delivered to the recipient. You can filter by time range and paginate through results.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						startTime: {
+							/**
+							 * Start Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter bounces created after this Unix timestamp
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Retrieve bounces that were created after this point in time. Provide the time as a Unix timestamp (seconds since epoch).
+							 */
+							longDesc: () => LocalizedString
+						}
+						endTime: {
+							/**
+							 * End Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter bounces created before this Unix timestamp
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Retrieve bounces that were created before this point in time. Provide the time as a Unix timestamp (seconds since epoch).
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of bounces to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of bounce records to return. Default is 500.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Starting point in the list of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The starting point in the list of results for pagination. Default is 0.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_bounces: {
+					groups: {
+						/**
+						 * Suppressions
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Delete Bounces
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete bounced email addresses from your list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Remove email addresses from your bounces list. You can either delete all bounces at once or specify individual email addresses to remove. Deleting bounces allows those addresses to receive emails again.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						deleteAll: {
+							/**
+							 * Delete All
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Delete all bounced emails
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to true to delete all bounced email addresses from your list. When true, the emails parameter is ignored.
+							 */
+							longDesc: () => LocalizedString
+						}
+						emails: {
+							/**
+							 * Emails
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of email addresses to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An array of email addresses to remove from the bounces list. Required if Delete All is not set to true.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_global_suppressions: {
+					groups: {
+						/**
+						 * Suppressions
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Global Suppressions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of globally unsubscribed email addresses
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all email addresses that have globally unsubscribed from all of your emails. These addresses will not receive any emails from your account until they are removed from this list.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						startTime: {
+							/**
+							 * Start Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter suppressions created after this Unix timestamp
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Retrieve suppressions that were created after this point in time. Provide the time as a Unix timestamp (seconds since epoch).
+							 */
+							longDesc: () => LocalizedString
+						}
+						endTime: {
+							/**
+							 * End Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter suppressions created before this Unix timestamp
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Retrieve suppressions that were created before this point in time. Provide the time as a Unix timestamp (seconds since epoch).
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of suppressions to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of suppression records to return. Default is 500.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Starting point in the list of results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The starting point in the list of results for pagination. Default is 0.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_global_suppression: {
+					groups: {
+						/**
+						 * Suppressions
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get a Global Suppression
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve details of a specific globally suppressed email
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Check if a specific email address is on the global suppression list and retrieve its details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The email address to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address to look up in the global suppression list. Returns the suppression details if found.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_global_suppressions: {
+					groups: {
+						/**
+						 * Suppressions
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Add Global Suppressions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add email addresses to the global suppression list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Add one or more email addresses to the global suppression list. These addresses will no longer receive any emails from your account until they are removed from the list.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						emails: {
+							/**
+							 * Emails
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of email addresses to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An array of email addresses to add to the global suppression list. These addresses will be blocked from receiving all future emails.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_global_suppression: {
+					groups: {
+						/**
+						 * Suppressions
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Delete a Global Suppression
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove an email address from the global suppression list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Remove an email address from the global suppression list. This will allow the address to receive emails from your account again.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The email address to remove
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address to remove from the global suppression list. Once removed, this address will be able to receive emails again.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_list: {
+					groups: {
+						/**
+						 * Contacts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Create a List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new contact list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new recipient list for organizing your contacts. Lists help you segment your audience for targeted marketing campaigns.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the new list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A descriptive name for your contact list. Choose a name that clearly identifies the purpose or audience of the list.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_all_lists: {
+					groups: {
+						/**
+						 * Contacts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get All Lists
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve all contact lists
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve all recipient lists in your SendGrid account. Returns list details including name and recipient count.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+					}
+				}
+				delete_list: {
+					groups: {
+						/**
+						 * Contacts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Delete a List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a contact list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Delete a recipient list from your SendGrid account. You can optionally delete all contacts within the list as well.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						listId: {
+							/**
+							 * List ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the list to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the list you want to delete. Select from your existing lists.
+							 */
+							longDesc: () => LocalizedString
+						}
+						deleteContacts: {
+							/**
+							 * Delete Contacts
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Also delete all contacts in the list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When set to true, all contacts within the list will also be permanently deleted from your contact database. Use with caution.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_or_update_contact: {
+					groups: {
+						/**
+						 * Contacts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Add or Update a Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a new contact or update an existing one
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Add a new contact to your SendGrid contact database or update an existing contact if the email already exists. You can also assign the contact to one or more lists.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The email address of the contact
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address for the contact. This is the unique identifier - if a contact with this email exists, it will be updated.
+							 */
+							longDesc: () => LocalizedString
+						}
+						firstName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The first name of the contact
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The contact's first name.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lastName: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The last name of the contact
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The contact's last name.
+							 */
+							longDesc: () => LocalizedString
+						}
+						listIds: {
+							/**
+							 * List IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Lists to add the contact to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * One or more list IDs to add this contact to. The contact will be added to all specified lists.
+							 */
+							longDesc: () => LocalizedString
+						}
+						customFields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional custom field values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A JSON object containing custom field names and values. Custom fields must be created in your SendGrid account first.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				search_contacts: {
+					groups: {
+						/**
+						 * Contacts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Search for Contacts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search contacts by field value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search your contact database for contacts matching a specific field value. You can search by email, name, or any custom field.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						fieldName: {
+							/**
+							 * Field Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The field to search on
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the field to search. Common fields include `email`, `first_name`, `last_name`, or any custom field name.
+							 */
+							longDesc: () => LocalizedString
+						}
+						value: {
+							/**
+							 * Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The value to search for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The value to match against the specified field. Text fields may require URL encoding.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_contacts: {
+					groups: {
+						/**
+						 * Contacts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Delete Contacts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Permanently delete contacts from your database
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently delete one or more contacts from your SendGrid contact database. This action cannot be undone.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contactIds: {
+							/**
+							 * Contact IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The IDs of contacts to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An array of contact IDs to delete. Select from your existing contacts. All selected contacts will be permanently removed.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				remove_contacts_from_list: {
+					groups: {
+						/**
+						 * Contacts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Remove Contacts from List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove contacts from a specific list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Remove one or more contacts from a specific list without deleting them from your contact database. The contacts will remain in your database but will no longer be associated with the specified list.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						listId: {
+							/**
+							 * List ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The list to remove contacts from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the list from which you want to remove contacts.
+							 */
+							longDesc: () => LocalizedString
+						}
+						contactIds: {
+							/**
+							 * Contact IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contacts to remove from the list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An array of contact IDs to remove from the list. The contacts will remain in your database but will be unlinked from this list.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				validate_email: {
+					groups: {
+						/**
+						 * Deliverability
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Validate Email
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Validate an email address for deliverability
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Check if an email address is valid and likely to receive emails. Returns a verdict (Valid, Risky, or Invalid) along with detailed checks including domain validity, suspected disposable address detection, and bounce history.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The email address to validate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address you want to validate. The validation will check syntax, domain records, and historical data.
+							 */
+							longDesc: () => LocalizedString
+						}
+						source: {
+							/**
+							 * Source
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional source identifier for tracking
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional source string to help you track where the validation request originated from.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				send_email: {
+					groups: {
+						/**
+						 * Email
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Send Email
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send an email message
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a transactional email to one or more recipients. You can send plain text, HTML, or both. Supports CC, BCC, and custom reply-to addresses.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						toEmail: {
+							/**
+							 * To Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The recipient email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address of the primary recipient.
+							 */
+							longDesc: () => LocalizedString
+						}
+						toName: {
+							/**
+							 * To Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The recipient name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional name of the recipient to personalize the 'To' field.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fromEmail: {
+							/**
+							 * From Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The sender email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address that will appear as the sender. Must be a verified sender in your SendGrid account.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fromName: {
+							/**
+							 * From Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The sender name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional name to display as the sender in the 'From' field.
+							 */
+							longDesc: () => LocalizedString
+						}
+						subject: {
+							/**
+							 * Subject
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The email subject line
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The subject line of the email.
+							 */
+							longDesc: () => LocalizedString
+						}
+						textContent: {
+							/**
+							 * Text Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Plain text content of the email
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The plain text version of the email content. Either text content or HTML content (or both) must be provided.
+							 */
+							longDesc: () => LocalizedString
+						}
+						htmlContent: {
+							/**
+							 * HTML Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * HTML content of the email
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The HTML version of the email content. Either text content or HTML content (or both) must be provided.
+							 */
+							longDesc: () => LocalizedString
+						}
+						replyToEmail: {
+							/**
+							 * Reply-To Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email address for replies
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional email address that recipients should reply to. If not provided, replies will go to the sender address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						replyToName: {
+							/**
+							 * Reply-To Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the reply-to address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional name to display for the reply-to address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ccEmails: {
+							/**
+							 * CC Emails
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Carbon copy recipients
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An array of email addresses to include as CC recipients.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bccEmails: {
+							/**
+							 * BCC Emails
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Blind carbon copy recipients
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An array of email addresses to include as BCC recipients.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				send_template_email: {
+					groups: {
+						/**
+						 * Email
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Send Email
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send an email message
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a transactional email to one or more recipients. You can send plain text, HTML, or both. Supports CC, BCC, and custom reply-to addresses.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						toEmail: {
+							/**
+							 * To Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The recipient email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address of the primary recipient.
+							 */
+							longDesc: () => LocalizedString
+						}
+						toName: {
+							/**
+							 * To Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The recipient name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional name of the recipient to personalize the 'To' field.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fromEmail: {
+							/**
+							 * From Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The sender email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address that will appear as the sender. Must be a verified sender in your SendGrid account.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fromName: {
+							/**
+							 * From Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The sender name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional name to display as the sender in the 'From' field.
+							 */
+							longDesc: () => LocalizedString
+						}
+						subject: {
+							/**
+							 * Subject
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The email subject line
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The subject line of the email.
+							 */
+							longDesc: () => LocalizedString
+						}
+						textContent: {
+							/**
+							 * Text Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Plain text content of the email
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The plain text version of the email content. Either text content or HTML content (or both) must be provided.
+							 */
+							longDesc: () => LocalizedString
+						}
+						htmlContent: {
+							/**
+							 * HTML Content
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * HTML content of the email
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The HTML version of the email content. Either text content or HTML content (or both) must be provided.
+							 */
+							longDesc: () => LocalizedString
+						}
+						replyToEmail: {
+							/**
+							 * Reply-To Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email address for replies
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional email address that recipients should reply to. If not provided, replies will go to the sender address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						replyToName: {
+							/**
+							 * Reply-To Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the reply-to address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional name to display for the reply-to address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ccEmails: {
+							/**
+							 * CC Emails
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Carbon copy recipients
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An array of email addresses to include as CC recipients.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bccEmails: {
+							/**
+							 * BCC Emails
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Blind carbon copy recipients
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An array of email addresses to include as BCC recipients.
 							 */
 							longDesc: () => LocalizedString
 						}

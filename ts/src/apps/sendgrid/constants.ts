@@ -1,0 +1,27 @@
+import { TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
+
+export const SENDGRID_APP_NAME = 'SendGrid';
+export const SENDGRID_APP_LOGO =
+  'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCEtLSBVcGxvYWRlZCB0bzogU1ZHIFJlcG8sIHd3dy5zdmdyZXBvLmNvbSwgR2VuZXJhdG9yOiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAyNTYgMjU2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIj4KICAgIDxnPgogICAgICAgIDxwYXRoIGQ9Ik0yNTYuMDAwNDA1LDAgTDI1Ni4wMDA0MDUsMTcwLjY2NjkzNiBMMTcwLjY2NjkzNiwxNzAuNjY2OTM2IEwxNzAuNjY2OTM2LDI1NS45OTYzODIgTDAuMDAyMDEwOTY5MDUsMjU1Ljk5NjM4MiBMMC4wMDIsMTcwLjY2NiBMMCwxNzAuNjY2OTM2IEwwLDg1LjMzMTQ1NjkgTDg1LjMzMzQ2ODEsODUuMzMxNDU2OSBMODUuMzMzNDY4MSwwIEwyNTYuMDAwNDA1LDAgWiIgZmlsbD0iIzlERDZFMyI+Cg08L3BhdGg+CiAgICAgICAgPHBvbHlnb24gZmlsbD0iIzNGNzJBQiIgcG9pbnRzPSIwLjAwMjAxMDk2OTA1IDI1NS45OTYzODIgODUuMzM1NDc5MSAyNTUuOTk2MzgyIDg1LjMzNTQ3OTEgMTcwLjY2MjkxNSAwLjAwMjAxMDk2OTA1IDE3MC42NjI5MTUiPgoNPC9wb2x5Z29uPgogICAgICAgIDxwb2x5Z29uIGZpbGw9IiMwMEE5RDEiIHBvaW50cz0iMTcwLjY2NjkzNiAxNzAuNjY2OTM2IDI1Ni4wMDA0MDUgMTcwLjY2NjkzNiAyNTYuMDAwNDA1IDg1LjMzMTQ1NjkgMTcwLjY2NjkzNiA4NS4zMzE0NTY5Ij4KDTwvcG9seWdvbj4KICAgICAgICA8cG9seWdvbiBmaWxsPSIjMDBBOUQxIiBwb2ludHM9Ijg1LjMzMzQ2ODEgODUuMzMzNDY3OSAxNzAuNjY2OTM2IDg1LjMzMzQ2NzkgMTcwLjY2NjkzNiAwIDg1LjMzMzQ2ODEgMCI+Cg08L3BvbHlnb24+CiAgICAgICAgPHBvbHlnb24gZmlsbD0iIzIxOTFDNCIgcG9pbnRzPSI4NS4zMzM0NjgxIDE3MC42NjQ5MjUgMTcwLjY2NjkzNiAxNzAuNjY0OTI1IDE3MC42NjY5MzYgODUuMzMxNDU2OSA4NS4zMzM0NjgxIDg1LjMzMTQ1NjkiPgoNPC9wb2x5Z29uPgogICAgICAgIDxwb2x5Z29uIGZpbGw9IiMzRjcyQUIiIHBvaW50cz0iMTcwLjY2NjkzNiA4NS4zMzM0Njc5IDI1Ni4wMDA0MDUgODUuMzMzNDY3OSAyNTYuMDAwNDA1IDAgMTcwLjY2NjkzNiAwIj4KDTwvcG9seWdvbj4KICAgIDwvZz4KPC9zdmc+';
+
+export class SendGridError extends Error {
+  public errorCode?: string;
+
+  constructor(message: string, errorCode?: string) {
+    super(message);
+    this.name = 'SendGridError';
+    this.errorCode = errorCode;
+  }
+}
+
+export const SENDGRID_API_VERSION = 'v3';
+
+export const SENDGRID_CONN_OPTIONS = {
+  token: {
+    display_name: 'API Key',
+    short_desc: 'Your SendGrid API key.',
+    desc: 'Log into your SendGrid account and create an API key at https://app.sendgrid.com/settings/api_keys. Make sure to give it the appropriate permissions for the operations you want to perform.',
+    type: 'string',
+    sensitive: true,
+  },
+} satisfies TCustomConnOptions;
