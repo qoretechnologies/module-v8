@@ -158,6 +158,7 @@ env:
   CRAFT_URL: ${{ fromJson(secrets.TEST_VARIABLES).CRAFT_URL }}
   TWILIO_ACCOUNT_SID: ${{ fromJson(secrets.TEST_VARIABLES).TWILIO_ACCOUNT_SID }}
   TWILIO_AUTH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).TWILIO_AUTH_TOKEN }}
+  SENDGRID_API_KEY: ${{ fromJson(secrets.TEST_VARIABLES).SENDGRID_API_KEY }}
 
 jobs:
   PullRequestTests:

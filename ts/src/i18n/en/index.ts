@@ -74,6 +74,7 @@ import Supabase from './apps/Supabase';
 import Teams from './apps/Teams';
 import Telegram from './apps/Telegram';
 import Twilio from './apps/Twilio';
+import SendGrid from './apps/SendGrid';
 import Todoist from './apps/Todoist';
 import Typeform from './apps/Typeform';
 import Webflow from './apps/Webflow';
@@ -170,6 +171,7 @@ const en = {
     LinkedInOrganizations,
     Telegram,
     Twilio,
+    SendGrid,
     Brevo,
     GoogleTasks,
     PayPal,
