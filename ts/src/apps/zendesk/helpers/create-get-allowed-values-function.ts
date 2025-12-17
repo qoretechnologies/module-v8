@@ -3,22 +3,21 @@ import {
   QorusRequest,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { ZENDESK_CONN_OPTIONS } from '..';
+import { ZENDESK_CONN_OPTIONS } from '../app-constants';
 import { delay } from '../../../global/helpers';
 import { Debugger } from '../../../utils/Debugger';
 import { ZENDESK_ALLOWED_VALUES_FETCH_DELAY, ZENDESK_ALLOWED_VALUES_TIMEOUT } from './constants';
 
-interface IEntityData {
+type TEntityData = {
   [displayNameField: string]: string;
-  id: string;
-}
+} & { id: number };
 
 interface IZendeskResponseBase {
   next_page: string;
 }
 
 type IZendeskResponseData = IZendeskResponseBase & {
-  [entity: string]: IEntityData[];
+  [entity: string]: TEntityData[];
 };
 
 export const CreateZendeskGetAllowedValuesFunction = (
@@ -26,8 +25,8 @@ export const CreateZendeskGetAllowedValuesFunction = (
   displayNameField = 'name',
   additionalParams: Record<string, string> = {},
   composeDescription?: (entity: unknown) => string
-): TQoreGetAllowedValuesFunction<typeof ZENDESK_CONN_OPTIONS, string> => {
-  return async (context): Promise<IQoreAllowedValue<string>[]> => {
+): TQoreGetAllowedValuesFunction<typeof ZENDESK_CONN_OPTIONS, number> => {
+  return async (context): Promise<IQoreAllowedValue<number>[]> => {
     const token = context?.conn_opts?.token;
     const subdomain = context?.conn_opts?.subdomain;
 
@@ -35,7 +34,7 @@ export const CreateZendeskGetAllowedValuesFunction = (
       throw new Error('The token and subdomain are required to get Zendesk allowed values');
     }
 
-    const values: IQoreAllowedValue<string>[] = [];
+    const values: IQoreAllowedValue<number>[] = [];
     const startTime = Date.now();
     let page: string | null = null;
 
@@ -71,9 +70,9 @@ export const CreateZendeskGetAllowedValuesFunction = (
           break;
         }
 
-        const additionalValues: IQoreAllowedValue<string>[] = responseData[entity].map(
-          (entity: { [x: string]: string; id: string }): IQoreAllowedValue<string> => ({
-            value: entity.id.toString(),
+        const additionalValues: IQoreAllowedValue<number>[] = responseData[entity].map(
+          (entity: TEntityData): IQoreAllowedValue<number> => ({
+            value: entity.id,
             display_name: entity[displayNameField],
             ...(composeDescription && { desc: composeDescription(entity) }),
           })
