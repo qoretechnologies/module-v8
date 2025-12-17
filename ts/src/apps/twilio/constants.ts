@@ -28,5 +28,6 @@ export const TWILIO_CONN_OPTIONS = {
     short_desc: 'Found directly below your Account SID.',
     desc: 'Log into your Twilio account and find "API Credentials" on this page https://www.twilio.com/console',
     type: 'string',
+    sensitive: true,
   },
 } satisfies TCustomConnOptions;
