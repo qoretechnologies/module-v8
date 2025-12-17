@@ -3,6 +3,134 @@ const ZendeskAppEn = {
   groups: ['Customer Support & Helpdesk'],
   shortDesc: 'Collection of actions to interact with the Zendesk API',
   longDesc: 'Collection of actions to interact with the Zendesk API',
+  expressions: {
+    '&&': {
+      displayName: 'and (&&)',
+      shortDesc: 'Returns True if all arguments are True',
+      longDesc: 'Returns `True` if all arguments are `True` with logic short-circuiting',
+      args: [
+        {
+          displayName: 'Condition',
+          shortDesc: 'Boolean condition to evaluate',
+          longDesc: 'A boolean expression or condition that evaluates to True or False',
+        },
+      ],
+    },
+    '||': {
+      displayName: 'or (||)',
+      shortDesc: 'Returns True if any argument is True',
+      longDesc: 'Returns `True` if any argument is `True` with logic short-circuiting',
+      args: [
+        {
+          displayName: 'Condition',
+          shortDesc: 'Boolean condition to evaluate',
+          longDesc: 'A boolean expression or condition that evaluates to True or False',
+        },
+      ],
+    },
+    '==': {
+      displayName: 'equal (==)',
+      shortDesc: 'Equality comparison',
+      longDesc: 'Returns `True` if the field value equals the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
+    },
+    '!=': {
+      displayName: 'not equal (!=)',
+      shortDesc: 'Inequality comparison',
+      longDesc: 'Returns `True` if the field value does not equal the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
+    },
+    '>': {
+      displayName: 'greater than (>)',
+      shortDesc: 'Greater than comparison',
+      longDesc: 'Returns `True` if the field value is greater than the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
+    },
+    '>=': {
+      displayName: 'greater than or equal (>=)',
+      shortDesc: 'Greater than or equal comparison',
+      longDesc: 'Returns `True` if the field value is greater than or equal to the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
+    },
+    '<': {
+      displayName: 'less than (<)',
+      shortDesc: 'Less than comparison',
+      longDesc: 'Returns `True` if the field value is less than the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
+    },
+    '<=': {
+      displayName: 'less than or equal (<=)',
+      shortDesc: 'Less than or equal comparison',
+      longDesc: 'Returns `True` if the field value is less than or equal to the specified value',
+      args: [
+        {
+          displayName: 'Field',
+          shortDesc: 'Field to compare',
+          longDesc: 'The field whose value will be compared',
+        },
+        {
+          displayName: 'Value',
+          shortDesc: 'Value to compare against',
+          longDesc: 'The value to compare the field against',
+        },
+      ],
+    },
+  },
   triggers: {
     new_user: {
       displayName: 'New User',
@@ -273,6 +401,50 @@ const ZendeskAppEn = {
               displayName: 'Zendesk Event Version',
               shortDesc: 'Event version',
               longDesc: 'Version of the Zendesk event format',
+            },
+          },
+        },
+      },
+    },
+    new_custom_object_record: {
+      displayName: 'New Custom Object Record',
+      shortDesc: 'Triggers when a new custom object record is created',
+      longDesc: 'Triggers when a new custom object record is created in Zendesk',
+      options: {
+        custom_object: {
+          displayName: 'Custom Object',
+          shortDesc: 'The custom object to monitor for new records',
+          longDesc: 'Select the custom object type to monitor for new records',
+        },
+      },
+      event_info: {
+        desc: 'Zendesk Custom Object Record Event Data',
+        type: {
+          fields: {
+            id: {
+              displayName: 'Record ID',
+              shortDesc: 'Record ID',
+              longDesc: 'Unique identifier for the custom object record',
+            },
+            name: {
+              displayName: 'Name',
+              shortDesc: 'Record name',
+              longDesc: 'The name of the custom object record',
+            },
+            external_id: {
+              displayName: 'External ID',
+              shortDesc: 'External ID',
+              longDesc: 'External identifier for the record',
+            },
+            created_at: {
+              displayName: 'Created At',
+              shortDesc: 'Record creation time',
+              longDesc: 'Timestamp of record creation',
+            },
+            updated_at: {
+              displayName: 'Updated At',
+              shortDesc: 'Record update time',
+              longDesc: 'Last update timestamp for the record',
             },
           },
         },
