@@ -68337,6 +68337,2066 @@ type RootTranslation = {
 				}
 			}
 		}
+		HelpScout: {
+			/**
+			 * H​e​l​p​ ​S​c​o​u​t
+			 */
+			displayName: string
+			groups: {
+				/**
+				 * C​u​s​t​o​m​e​r​ ​S​u​p​p​o​r​t
+				 */
+				'0': string
+			}
+			connectionMessage: {
+				/**
+				 * O​A​u​t​h​ ​C​o​n​n​e​c​t​i​o​n
+				 */
+				title: string
+				/**
+				 * H​e​l​p​ ​S​c​o​u​t​ ​u​s​e​s​ ​O​A​u​t​h​ ​2​.​0​ ​f​o​r​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​.​ ​Y​o​u​ ​w​i​l​l​ ​b​e​ ​r​e​d​i​r​e​c​t​e​d​ ​t​o​ ​H​e​l​p​ ​S​c​o​u​t​ ​t​o​ ​a​u​t​h​o​r​i​z​e​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​a​c​c​o​u​n​t​.
+				 */
+				content: string
+			}
+			/**
+			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​H​e​l​p​ ​S​c​o​u​t​ ​t​o​ ​m​a​n​a​g​e​ ​c​u​s​t​o​m​e​r​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​a​n​d​ ​s​u​p​p​o​r​t​ ​t​i​c​k​e​t​s
+			 */
+			shortDesc: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​H​e​l​p​ ​S​c​o​u​t​ ​t​o​ ​m​a​n​a​g​e​ ​c​u​s​t​o​m​e​r​ ​s​u​p​p​o​r​t​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​,​ ​c​r​e​a​t​e​ ​a​n​d​ ​u​p​d​a​t​e​ ​c​u​s​t​o​m​e​r​s​,​ ​s​e​n​d​ ​r​e​p​l​i​e​s​,​ ​a​n​d​ ​t​r​a​c​k​ ​s​u​p​p​o​r​t​ ​i​n​t​e​r​a​c​t​i​o​n​s​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​e​n​a​b​l​e​s​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​s​u​p​p​o​r​t​ ​w​o​r​k​f​l​o​w​s​,​ ​r​e​s​p​o​n​d​ ​t​o​ ​c​u​s​t​o​m​e​r​s​,​ ​a​n​d​ ​m​a​i​n​t​a​i​n​ ​c​u​s​t​o​m​e​r​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​t​h​r​o​u​g​h​ ​H​e​l​p​ ​S​c​o​u​t​.
+			 */
+			longDesc: string
+			actions: {
+				add_note: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * A​d​d​ ​N​o​t​e​ ​t​o​ ​C​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​n​ ​i​n​t​e​r​n​a​l​ ​n​o​t​e​ ​t​o​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​ ​a​n​ ​i​n​t​e​r​n​a​l​ ​n​o​t​e​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​i​n​ ​H​e​l​p​ ​S​c​o​u​t​.​ ​N​o​t​e​s​ ​a​r​e​ ​o​n​l​y​ ​v​i​s​i​b​l​e​ ​t​o​ ​y​o​u​r​ ​t​e​a​m​ ​m​e​m​b​e​r​s​ ​a​n​d​ ​a​r​e​ ​n​o​t​ ​s​e​n​t​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.​ ​U​s​e​ ​n​o​t​e​s​ ​t​o​ ​d​o​c​u​m​e​n​t​ ​i​n​t​e​r​n​a​l​ ​d​i​s​c​u​s​s​i​o​n​s​,​ ​r​e​s​e​a​r​c​h​,​ ​o​r​ ​c​o​n​t​e​x​t​ ​a​b​o​u​t​ ​a​ ​c​u​s​t​o​m​e​r​ ​i​s​s​u​e​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​a​d​d​ ​t​h​e​ ​n​o​t​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​n​o​t​e​.​ ​Y​o​u​ ​c​a​n​ ​s​e​a​r​c​h​ ​f​o​r​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​b​y​ ​n​u​m​b​e​r​ ​o​r​ ​s​u​b​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						text: {
+							/**
+							 * N​o​t​e​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​n​o​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​i​n​t​e​r​n​a​l​ ​n​o​t​e​.​ ​T​h​i​s​ ​c​a​n​ ​i​n​c​l​u​d​e​ ​H​T​M​L​ ​f​o​r​m​a​t​t​i​n​g​.​ ​T​h​e​ ​n​o​t​e​ ​w​i​l​l​ ​o​n​l​y​ ​b​e​ ​v​i​s​i​b​l​e​ ​t​o​ ​y​o​u​r​ ​t​e​a​m​ ​m​e​m​b​e​r​s​.
+							 */
+							longDesc: string
+						}
+						user: {
+							/**
+							 * U​s​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​s​e​r​ ​a​d​d​i​n​g​ ​t​h​e​ ​n​o​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​H​e​l​p​ ​S​c​o​u​t​ ​u​s​e​r​ ​w​h​o​ ​i​s​ ​a​d​d​i​n​g​ ​t​h​e​ ​n​o​t​e​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​d​e​f​a​u​l​t​s​ ​t​o​ ​t​h​e​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​u​s​e​r​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * C​h​a​n​g​e​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​c​h​a​n​g​e​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​s​t​a​t​u​s​ ​w​h​e​n​ ​a​d​d​i​n​g​ ​t​h​e​ ​n​o​t​e​.​ ​O​p​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​a​c​t​i​v​e​,​ ​c​l​o​s​e​d​,​ ​o​p​e​n​,​ ​p​e​n​d​i​n​g​,​ ​o​r​ ​s​p​a​m​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_conversation: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * C​r​e​a​t​e​ ​C​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​i​n​ ​H​e​l​p​ ​S​c​o​u​t​.​ ​A​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​r​e​p​r​e​s​e​n​t​s​ ​a​n​ ​e​m​a​i​l​ ​t​h​r​e​a​d​ ​o​r​ ​s​u​p​p​o​r​t​ ​t​i​c​k​e​t​ ​w​i​t​h​ ​a​ ​c​u​s​t​o​m​e​r​.​ ​Y​o​u​ ​m​u​s​t​ ​s​p​e​c​i​f​y​ ​t​h​e​ ​m​a​i​l​b​o​x​,​ ​c​u​s​t​o​m​e​r​,​ ​a​n​d​ ​i​n​i​t​i​a​l​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						subject: {
+							/**
+							 * S​u​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​s​u​b​j​e​c​t​ ​l​i​n​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​f​o​r​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​ ​T​h​i​s​ ​w​i​l​l​ ​b​e​ ​v​i​s​i​b​l​e​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​i​n​ ​e​m​a​i​l​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						mailboxId: {
+							/**
+							 * M​a​i​l​b​o​x
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​a​i​l​b​o​x​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​H​e​l​p​ ​S​c​o​u​t​ ​m​a​i​l​b​o​x​ ​(​i​n​b​o​x​)​ ​w​h​e​r​e​ ​t​h​i​s​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​s​h​o​u​l​d​ ​b​e​ ​c​r​e​a​t​e​d​.​ ​E​a​c​h​ ​m​a​i​l​b​o​x​ ​t​y​p​i​c​a​l​l​y​ ​c​o​r​r​e​s​p​o​n​d​s​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​s​u​p​p​o​r​t​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​r​ ​t​e​a​m​.
+							 */
+							longDesc: string
+						}
+						type: {
+							/**
+							 * T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​c​o​n​v​e​r​s​a​t​i​o​n​:​ ​e​m​a​i​l​ ​(​s​t​a​n​d​a​r​d​ ​e​m​a​i​l​ ​t​h​r​e​a​d​)​,​ ​p​h​o​n​e​ ​(​p​h​o​n​e​ ​c​a​l​l​ ​r​e​c​o​r​d​)​,​ ​o​r​ ​c​h​a​t​ ​(​l​i​v​e​ ​c​h​a​t​ ​c​o​n​v​e​r​s​a​t​i​o​n​)​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​i​n​i​t​i​a​l​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​i​n​i​t​i​a​l​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​ ​A​c​t​i​v​e​ ​m​e​a​n​s​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​n​e​e​d​s​ ​a​t​t​e​n​t​i​o​n​,​ ​c​l​o​s​e​d​ ​m​e​a​n​s​ ​i​t​ ​i​s​ ​r​e​s​o​l​v​e​d​,​ ​a​n​d​ ​p​e​n​d​i​n​g​ ​m​e​a​n​s​ ​w​a​i​t​i​n​g​ ​f​o​r​ ​c​u​s​t​o​m​e​r​ ​r​e​s​p​o​n​s​e​.
+							 */
+							longDesc: string
+						}
+						customerId: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​e​r​ ​f​r​o​m​ ​H​e​l​p​ ​S​c​o​u​t​.​ ​E​i​t​h​e​r​ ​C​u​s​t​o​m​e​r​ ​I​D​ ​o​r​ ​C​u​s​t​o​m​e​r​ ​E​m​a​i​l​ ​m​u​s​t​ ​b​e​ ​p​r​o​v​i​d​e​d​.
+							 */
+							longDesc: string
+						}
+						customerEmail: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.​ ​I​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​d​o​e​s​ ​n​o​t​ ​e​x​i​s​t​,​ ​t​h​e​y​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.​ ​E​i​t​h​e​r​ ​C​u​s​t​o​m​e​r​ ​I​D​ ​o​r​ ​C​u​s​t​o​m​e​r​ ​E​m​a​i​l​ ​m​u​s​t​ ​b​e​ ​p​r​o​v​i​d​e​d​.
+							 */
+							longDesc: string
+						}
+						threadType: {
+							/**
+							 * T​h​r​e​a​d​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​i​n​i​t​i​a​l​ ​t​h​r​e​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​f​i​r​s​t​ ​m​e​s​s​a​g​e​ ​i​n​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​ ​C​u​s​t​o​m​e​r​ ​m​e​a​n​s​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​i​s​ ​f​r​o​m​ ​t​h​e​ ​c​u​s​t​o​m​e​r​,​ ​r​e​p​l​y​ ​m​e​a​n​s​ ​i​t​ ​i​s​ ​f​r​o​m​ ​y​o​u​r​ ​t​e​a​m​,​ ​a​n​d​ ​n​o​t​e​ ​i​s​ ​a​n​ ​i​n​t​e​r​n​a​l​ ​n​o​t​e​.
+							 */
+							longDesc: string
+						}
+						threadText: {
+							/**
+							 * T​h​r​e​a​d​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​i​n​i​t​i​a​l​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​f​i​r​s​t​ ​m​e​s​s​a​g​e​ ​i​n​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​ ​T​h​i​s​ ​c​a​n​ ​i​n​c​l​u​d​e​ ​H​T​M​L​ ​f​o​r​m​a​t​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+						assignTo: {
+							/**
+							 * A​s​s​i​g​n​ ​T​o
+							 */
+							displayName: string
+							/**
+							 * A​s​s​i​g​n​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​a​ ​u​s​e​r
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​a​s​s​i​g​n​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​H​e​l​p​ ​S​c​o​u​t​ ​u​s​e​r​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​w​i​l​l​ ​b​e​ ​u​n​a​s​s​i​g​n​e​d​ ​o​r​ ​f​o​l​l​o​w​ ​y​o​u​r​ ​m​a​i​l​b​o​x​ ​r​o​u​t​i​n​g​ ​r​u​l​e​s​.
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * T​a​g​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​t​a​g​ ​n​a​m​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​ ​T​a​g​s​ ​h​e​l​p​ ​o​r​g​a​n​i​z​e​ ​a​n​d​ ​c​a​t​e​g​o​r​i​z​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​f​o​r​ ​e​a​s​i​e​r​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​r​e​p​o​r​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+						autoReply: {
+							/**
+							 * A​u​t​o​ ​R​e​p​l​y
+							 */
+							displayName: string
+							/**
+							 * E​n​a​b​l​e​ ​a​u​t​o​-​r​e​p​l​y​ ​f​o​r​ ​t​h​i​s​ ​c​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​s​e​t​ ​t​o​ ​t​r​u​e​,​ ​H​e​l​p​ ​S​c​o​u​t​ ​w​i​l​l​ ​s​e​n​d​ ​a​n​ ​a​u​t​o​-​r​e​p​l​y​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​i​f​ ​o​n​e​ ​i​s​ ​c​o​n​f​i​g​u​r​e​d​ ​f​o​r​ ​t​h​e​ ​m​a​i​l​b​o​x​.​ ​S​e​t​ ​t​o​ ​f​a​l​s​e​ ​t​o​ ​p​r​e​v​e​n​t​ ​a​u​t​o​-​r​e​p​l​i​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_customer: {
+					groups: {
+						/**
+						 * C​u​s​t​o​m​e​r​s
+						 */
+						'0': string
+					}
+					/**
+					 * C​r​e​a​t​e​ ​C​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​p​r​o​f​i​l​e​ ​i​n​ ​H​e​l​p​ ​S​c​o​u​t​.​ ​C​u​s​t​o​m​e​r​s​ ​r​e​p​r​e​s​e​n​t​ ​t​h​e​ ​p​e​o​p​l​e​ ​w​h​o​ ​c​o​n​t​a​c​t​ ​y​o​u​r​ ​s​u​p​p​o​r​t​ ​t​e​a​m​.​ ​Y​o​u​ ​c​a​n​ ​s​t​o​r​e​ ​t​h​e​i​r​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​c​o​m​p​a​n​y​ ​d​e​t​a​i​l​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​r​e​l​e​v​a​n​t​ ​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						firstName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.​ ​M​a​x​i​m​u​m​ ​4​0​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						lastName: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​l​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.​ ​M​a​x​i​m​u​m​ ​4​0​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.​ ​T​h​i​s​ ​i​s​ ​u​s​e​d​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​w​h​e​n​ ​t​h​e​y​ ​s​e​n​d​ ​e​m​a​i​l​s​ ​t​o​ ​y​o​u​r​ ​s​u​p​p​o​r​t​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						emailType: {
+							/**
+							 * E​m​a​i​l​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * C​a​t​e​g​o​r​i​z​e​ ​t​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​y​p​e​:​ ​w​o​r​k​ ​(​b​u​s​i​n​e​s​s​ ​e​m​a​i​l​)​,​ ​h​o​m​e​ ​(​p​e​r​s​o​n​a​l​ ​e​m​a​i​l​)​,​ ​o​r​ ​o​t​h​e​r​.
+							 */
+							longDesc: string
+						}
+						phone: {
+							/**
+							 * P​h​o​n​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.
+							 */
+							longDesc: string
+						}
+						phoneType: {
+							/**
+							 * P​h​o​n​e​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * C​a​t​e​g​o​r​i​z​e​ ​t​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​t​y​p​e​:​ ​w​o​r​k​,​ ​h​o​m​e​,​ ​m​o​b​i​l​e​,​ ​f​a​x​,​ ​p​a​g​e​r​,​ ​o​r​ ​o​t​h​e​r​.
+							 */
+							longDesc: string
+						}
+						jobTitle: {
+							/**
+							 * J​o​b​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​j​o​b​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​j​o​b​ ​t​i​t​l​e​ ​o​r​ ​p​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.​ ​M​a​x​i​m​u​m​ ​6​0​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						organization: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​c​o​m​p​a​n​y​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​a​n​y​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​b​e​l​o​n​g​s​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						location: {
+							/**
+							 * L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​g​e​o​g​r​a​p​h​i​c​ ​l​o​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.​ ​M​a​x​i​m​u​m​ ​6​0​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						background: {
+							/**
+							 * B​a​c​k​g​r​o​u​n​d
+							 */
+							displayName: string
+							/**
+							 * B​a​c​k​g​r​o​u​n​d​ ​n​o​t​e​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							shortDesc: string
+							/**
+							 * I​n​t​e​r​n​a​l​ ​n​o​t​e​s​ ​o​r​ ​b​a​c​k​g​r​o​u​n​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.​ ​M​a​x​i​m​u​m​ ​2​0​0​ ​c​h​a​r​a​c​t​e​r​s​.​ ​T​h​i​s​ ​i​s​ ​o​n​l​y​ ​v​i​s​i​b​l​e​ ​t​o​ ​y​o​u​r​ ​t​e​a​m​.
+							 */
+							longDesc: string
+						}
+						gender: {
+							/**
+							 * G​e​n​d​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​g​e​n​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​g​e​n​d​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​:​ ​m​a​l​e​,​ ​f​e​m​a​l​e​,​ ​o​r​ ​u​n​k​n​o​w​n​.
+							 */
+							longDesc: string
+						}
+						age: {
+							/**
+							 * A​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​a​g​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​a​s​ ​a​ ​s​t​r​i​n​g​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_customer: {
+					groups: {
+						/**
+						 * C​u​s​t​o​m​e​r​s
+						 */
+						'0': string
+					}
+					/**
+					 * U​p​d​a​t​e​ ​C​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​e​r
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​p​r​o​f​i​l​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​u​s​t​o​m​e​r​ ​i​n​ ​H​e​l​p​ ​S​c​o​u​t​.​ ​Y​o​u​ ​c​a​n​ ​m​o​d​i​f​y​ ​t​h​e​i​r​ ​n​a​m​e​,​ ​c​o​n​t​a​c​t​ ​d​e​t​a​i​l​s​,​ ​o​r​g​a​n​i​z​a​t​i​o​n​,​ ​a​n​d​ ​o​t​h​e​r​ ​p​r​o​f​i​l​e​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						customerId: {
+							/**
+							 * C​u​s​t​o​m​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​w​h​o​s​e​ ​p​r​o​f​i​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						firstName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​f​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.​ ​M​a​x​i​m​u​m​ ​4​0​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						lastName: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​l​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.​ ​M​a​x​i​m​u​m​ ​4​0​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						jobTitle: {
+							/**
+							 * J​o​b​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​j​o​b​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​j​o​b​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.​ ​M​a​x​i​m​u​m​ ​6​0​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						organization: {
+							/**
+							 * O​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​o​r​g​a​n​i​z​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.
+							 */
+							longDesc: string
+						}
+						location: {
+							/**
+							 * L​o​c​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​g​e​o​g​r​a​p​h​i​c​ ​l​o​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.​ ​M​a​x​i​m​u​m​ ​6​0​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						background: {
+							/**
+							 * B​a​c​k​g​r​o​u​n​d
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​b​a​c​k​g​r​o​u​n​d​ ​n​o​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​i​n​t​e​r​n​a​l​ ​b​a​c​k​g​r​o​u​n​d​ ​n​o​t​e​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.​ ​M​a​x​i​m​u​m​ ​2​0​0​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						gender: {
+							/**
+							 * G​e​n​d​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​g​e​n​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​g​e​n​d​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​:​ ​m​a​l​e​,​ ​f​e​m​a​l​e​,​ ​o​r​ ​u​n​k​n​o​w​n​.
+							 */
+							longDesc: string
+						}
+						age: {
+							/**
+							 * A​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​a​g​e​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				send_reply: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * S​e​n​d​ ​R​e​p​l​y
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​r​e​p​l​y​ ​t​o​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​r​e​p​l​y​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​i​n​ ​H​e​l​p​ ​S​c​o​u​t​.​ ​T​h​e​ ​r​e​p​l​y​ ​w​i​l​l​ ​b​e​ ​s​e​n​t​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​v​i​a​ ​e​m​a​i​l​.​ ​Y​o​u​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​C​C​/​B​C​C​ ​a​d​d​i​t​i​o​n​a​l​ ​r​e​c​i​p​i​e​n​t​s​,​ ​s​a​v​e​ ​a​s​ ​d​r​a​f​t​,​ ​o​r​ ​c​h​a​n​g​e​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​s​t​a​t​u​s​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​r​e​p​l​y​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​p​l​y​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						customerId: {
+							/**
+							 * C​u​s​t​o​m​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​b​e​i​n​g​ ​r​e​p​l​i​e​d​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​w​h​o​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​i​s​ ​r​e​p​l​y​.​ ​T​h​i​s​ ​s​h​o​u​l​d​ ​m​a​t​c​h​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						text: {
+							/**
+							 * R​e​p​l​y​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​r​e​p​l​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​r​e​p​l​y​ ​m​e​s​s​a​g​e​.​ ​T​h​i​s​ ​c​a​n​ ​i​n​c​l​u​d​e​ ​H​T​M​L​ ​f​o​r​m​a​t​t​i​n​g​.​ ​T​h​e​ ​r​e​p​l​y​ ​w​i​l​l​ ​b​e​ ​s​e​n​t​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​v​i​a​ ​e​m​a​i​l​.
+							 */
+							longDesc: string
+						}
+						user: {
+							/**
+							 * U​s​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​s​e​r​ ​s​e​n​d​i​n​g​ ​t​h​e​ ​r​e​p​l​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​H​e​l​p​ ​S​c​o​u​t​ ​u​s​e​r​ ​s​e​n​d​i​n​g​ ​t​h​e​ ​r​e​p​l​y​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​d​e​f​a​u​l​t​s​ ​t​o​ ​t​h​e​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​u​s​e​r​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * C​h​a​n​g​e​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​c​h​a​n​g​e​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​s​t​a​t​u​s​ ​a​f​t​e​r​ ​s​e​n​d​i​n​g​ ​t​h​e​ ​r​e​p​l​y​.​ ​F​o​r​ ​e​x​a​m​p​l​e​,​ ​s​e​t​ ​t​o​ ​c​l​o​s​e​d​ ​a​f​t​e​r​ ​r​e​s​o​l​v​i​n​g​ ​a​n​ ​i​s​s​u​e​.
+							 */
+							longDesc: string
+						}
+						draft: {
+							/**
+							 * S​a​v​e​ ​a​s​ ​D​r​a​f​t
+							 */
+							displayName: string
+							/**
+							 * S​a​v​e​ ​t​h​e​ ​r​e​p​l​y​ ​a​s​ ​a​ ​d​r​a​f​t
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​s​e​t​ ​t​o​ ​t​r​u​e​,​ ​t​h​e​ ​r​e​p​l​y​ ​i​s​ ​s​a​v​e​d​ ​a​s​ ​a​ ​d​r​a​f​t​ ​a​n​d​ ​n​o​t​ ​s​e​n​t​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.​ ​Y​o​u​ ​c​a​n​ ​r​e​v​i​e​w​ ​a​n​d​ ​s​e​n​d​ ​i​t​ ​l​a​t​e​r​ ​f​r​o​m​ ​H​e​l​p​ ​S​c​o​u​t​.
+							 */
+							longDesc: string
+						}
+						cc: {
+							/**
+							 * C​C
+							 */
+							displayName: string
+							/**
+							 * C​a​r​b​o​n​ ​c​o​p​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​C​C​ ​o​n​ ​t​h​e​ ​r​e​p​l​y​.​ ​T​h​e​s​e​ ​r​e​c​i​p​i​e​n​t​s​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​a​ ​c​o​p​y​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​.
+							 */
+							longDesc: string
+						}
+						bcc: {
+							/**
+							 * B​C​C
+							 */
+							displayName: string
+							/**
+							 * B​l​i​n​d​ ​c​a​r​b​o​n​ ​c​o​p​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​B​C​C​ ​o​n​ ​t​h​e​ ​r​e​p​l​y​.​ ​T​h​e​s​e​ ​r​e​c​i​p​i​e​n​t​s​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​a​ ​c​o​p​y​ ​o​f​ ​t​h​e​ ​e​m​a​i​l​ ​w​i​t​h​o​u​t​ ​o​t​h​e​r​ ​r​e​c​i​p​i​e​n​t​s​ ​k​n​o​w​i​n​g​.
+							 */
+							longDesc: string
+						}
+						assignTo: {
+							/**
+							 * A​s​s​i​g​n​ ​T​o
+							 */
+							displayName: string
+							/**
+							 * A​s​s​i​g​n​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​a​f​t​e​r​ ​r​e​p​l​y​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​a​s​s​i​g​n​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​H​e​l​p​ ​S​c​o​u​t​ ​u​s​e​r​ ​a​f​t​e​r​ ​s​e​n​d​i​n​g​ ​t​h​e​ ​r​e​p​l​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_customers: {
+					groups: {
+						/**
+						 * C​u​s​t​o​m​e​r​s
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​C​u​s​t​o​m​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​u​s​t​o​m​e​r​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​u​s​t​o​m​e​r​s​ ​f​r​o​m​ ​H​e​l​p​ ​S​c​o​u​t​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​c​u​s​t​o​m​e​r​s​ ​b​y​ ​m​a​i​l​b​o​x​,​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​o​r​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​d​a​t​e​.​ ​R​e​s​u​l​t​s​ ​c​a​n​ ​b​e​ ​s​o​r​t​e​d​ ​a​n​d​ ​p​a​g​i​n​a​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						mailbox: {
+							/**
+							 * M​a​i​l​b​o​x
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​a​i​l​b​o​x
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​c​u​s​t​o​m​e​r​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​i​n​ ​t​h​i​s​ ​m​a​i​l​b​o​x​.
+							 */
+							longDesc: string
+						}
+						firstName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​f​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​c​u​s​t​o​m​e​r​s​ ​w​i​t​h​ ​t​h​i​s​ ​f​i​r​s​t​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						lastName: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​l​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​c​u​s​t​o​m​e​r​s​ ​w​i​t​h​ ​t​h​i​s​ ​l​a​s​t​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​c​u​s​t​o​m​e​r​s​ ​w​i​t​h​ ​t​h​i​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						modifiedSince: {
+							/**
+							 * M​o​d​i​f​i​e​d​ ​S​i​n​c​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​c​u​s​t​o​m​e​r​s​ ​m​o​d​i​f​i​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						sortField: {
+							/**
+							 * S​o​r​t​ ​F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​:​ ​c​r​e​a​t​e​d​A​t​,​ ​f​i​r​s​t​N​a​m​e​,​ ​l​a​s​t​N​a​m​e​,​ ​o​r​ ​m​o​d​i​f​i​e​d​A​t​.
+							 */
+							longDesc: string
+						}
+						sortOrder: {
+							/**
+							 * S​o​r​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​r​d​e​r​ ​d​i​r​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​:​ ​d​e​s​c​ ​(​n​e​w​e​s​t​ ​f​i​r​s​t​)​ ​o​r​ ​a​s​c​ ​(​o​l​d​e​s​t​ ​f​i​r​s​t​)​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​u​s​t​o​m​e​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​u​s​t​o​m​e​r​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_conversations: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​C​o​n​v​e​r​s​a​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​o​n​v​e​r​s​a​t​i​o​n​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​f​r​o​m​ ​H​e​l​p​ ​S​c​o​u​t​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​m​a​i​l​b​o​x​,​ ​s​t​a​t​u​s​,​ ​a​s​s​i​g​n​e​e​,​ ​t​a​g​s​,​ ​a​n​d​ ​m​o​r​e​.​ ​R​e​s​u​l​t​s​ ​c​a​n​ ​b​e​ ​s​o​r​t​e​d​ ​a​n​d​ ​p​a​g​i​n​a​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						mailbox: {
+							/**
+							 * M​a​i​l​b​o​x
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​a​i​l​b​o​x
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​f​r​o​m​ ​t​h​i​s​ ​m​a​i​l​b​o​x​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​w​i​t​h​ ​t​h​i​s​ ​s​t​a​t​u​s​:​ ​a​l​l​,​ ​a​c​t​i​v​e​,​ ​c​l​o​s​e​d​,​ ​o​p​e​n​,​ ​p​e​n​d​i​n​g​,​ ​o​r​ ​s​p​a​m​.
+							 */
+							longDesc: string
+						}
+						assignedTo: {
+							/**
+							 * A​s​s​i​g​n​e​d​ ​T​o
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​s​s​i​g​n​e​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​i​s​ ​u​s​e​r​.
+							 */
+							longDesc: string
+						}
+						tag: {
+							/**
+							 * T​a​g
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​g
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​w​i​t​h​ ​t​h​i​s​ ​t​a​g​.​ ​Y​o​u​ ​c​a​n​ ​s​p​e​c​i​f​y​ ​m​u​l​t​i​p​l​e​ ​t​a​g​s​ ​s​e​p​a​r​a​t​e​d​ ​b​y​ ​c​o​m​m​a​s​.
+							 */
+							longDesc: string
+						}
+						modifiedSince: {
+							/**
+							 * M​o​d​i​f​i​e​d​ ​S​i​n​c​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​m​o​d​i​f​i​e​d​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						sortField: {
+							/**
+							 * S​o​r​t​ ​F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​:​ ​c​r​e​a​t​e​d​A​t​,​ ​c​u​s​t​o​m​e​r​E​m​a​i​l​,​ ​c​u​s​t​o​m​e​r​N​a​m​e​,​ ​m​a​i​l​b​o​x​i​d​,​ ​m​o​d​i​f​i​e​d​A​t​,​ ​n​u​m​b​e​r​,​ ​s​t​a​t​u​s​,​ ​o​r​ ​s​u​b​j​e​c​t​.
+							 */
+							longDesc: string
+						}
+						sortOrder: {
+							/**
+							 * S​o​r​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​r​d​e​r​ ​d​i​r​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​:​ ​d​e​s​c​ ​(​n​e​w​e​s​t​ ​f​i​r​s​t​)​ ​o​r​ ​a​s​c​ ​(​o​l​d​e​s​t​ ​f​i​r​s​t​)​.
+							 */
+							longDesc: string
+						}
+						query: {
+							/**
+							 * Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * A​d​v​a​n​c​e​d​ ​s​e​a​r​c​h​ ​q​u​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​a​d​v​a​n​c​e​d​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​u​s​i​n​g​ ​H​e​l​p​ ​S​c​o​u​t​ ​q​u​e​r​y​ ​s​y​n​t​a​x​.​ ​F​o​r​ ​e​x​a​m​p​l​e​:​ ​(​s​u​b​j​e​c​t​:​"​b​i​l​l​i​n​g​ ​i​s​s​u​e​"​)​ ​A​N​D​ ​(​s​t​a​t​u​s​:​a​c​t​i​v​e​)
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				find_mailbox: {
+					groups: {
+						/**
+						 * M​a​i​l​b​o​x​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * F​i​n​d​ ​M​a​i​l​b​o​x​ ​b​y​ ​N​a​m​e
+					 */
+					displayName: string
+					/**
+					 * F​i​n​d​ ​a​ ​m​a​i​l​b​o​x​ ​b​y​ ​i​t​s​ ​n​a​m​e
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​a​ ​m​a​i​l​b​o​x​ ​i​n​ ​H​e​l​p​ ​S​c​o​u​t​ ​b​y​ ​i​t​s​ ​n​a​m​e​.​ ​R​e​t​u​r​n​s​ ​t​h​e​ ​m​a​i​l​b​o​x​ ​d​e​t​a​i​l​s​ ​i​f​ ​f​o​u​n​d​.​ ​T​h​e​ ​s​e​a​r​c​h​ ​i​s​ ​c​a​s​e​-​i​n​s​e​n​s​i​t​i​v​e​ ​a​n​d​ ​s​u​p​p​o​r​t​s​ ​p​a​r​t​i​a​l​ ​m​a​t​c​h​i​n​g​.
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * M​a​i​l​b​o​x​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​m​a​i​l​b​o​x​ ​t​o​ ​f​i​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​m​a​i​l​b​o​x​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​.​ ​T​h​e​ ​s​e​a​r​c​h​ ​i​s​ ​c​a​s​e​-​i​n​s​e​n​s​i​t​i​v​e​ ​a​n​d​ ​w​i​l​l​ ​m​a​t​c​h​ ​p​a​r​t​i​a​l​ ​n​a​m​e​s​ ​o​r​ ​s​l​u​g​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_users: {
+					groups: {
+						/**
+						 * U​s​e​r​s
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​U​s​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​H​e​l​p​ ​S​c​o​u​t​ ​u​s​e​r​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​u​s​e​r​s​ ​f​r​o​m​ ​y​o​u​r​ ​H​e​l​p​ ​S​c​o​u​t​ ​a​c​c​o​u​n​t​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​u​s​e​r​s​ ​b​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​r​ ​m​a​i​l​b​o​x​.​ ​R​e​t​u​r​n​s​ ​a​l​l​ ​u​s​e​r​ ​t​y​p​e​s​ ​i​n​c​l​u​d​i​n​g​ ​t​h​o​s​e​ ​w​h​o​ ​h​a​v​e​ ​n​o​t​ ​y​e​t​ ​a​c​c​e​p​t​e​d​ ​t​h​e​i​r​ ​i​n​v​i​t​a​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​u​s​e​r​s​ ​w​i​t​h​ ​t​h​i​s​ ​e​x​a​c​t​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.
+							 */
+							longDesc: string
+						}
+						mailbox: {
+							/**
+							 * M​a​i​l​b​o​x
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​a​i​l​b​o​x
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​u​s​e​r​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​m​a​i​l​b​o​x​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​s​e​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​s​e​r​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_company_report: {
+					groups: {
+						/**
+						 * R​e​p​o​r​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​C​o​m​p​a​n​y​ ​R​e​p​o​r​t
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​c​o​m​p​a​n​y​-​w​i​d​e​ ​p​e​r​f​o​r​m​a​n​c​e​ ​r​e​p​o​r​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​c​o​m​p​a​n​y​-​w​i​d​e​ ​p​e​r​f​o​r​m​a​n​c​e​ ​r​e​p​o​r​t​ ​f​r​o​m​ ​H​e​l​p​ ​S​c​o​u​t​.​ ​I​n​c​l​u​d​e​s​ ​m​e​t​r​i​c​s​ ​l​i​k​e​ ​c​u​s​t​o​m​e​r​s​ ​h​e​l​p​e​d​,​ ​c​l​o​s​e​d​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​,​ ​t​o​t​a​l​ ​r​e​p​l​i​e​s​,​ ​a​n​d​ ​h​a​p​p​i​n​e​s​s​ ​s​c​o​r​e​s​.​ ​O​n​l​y​ ​a​v​a​i​l​a​b​l​e​ ​o​n​ ​P​l​u​s​ ​a​n​d​ ​P​r​o​ ​p​l​a​n​s​.
+					 */
+					longDesc: string
+					options: {
+						start: {
+							/**
+							 * S​t​a​r​t​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * S​t​a​r​t​ ​o​f​ ​t​h​e​ ​r​e​p​o​r​t​i​n​g​ ​p​e​r​i​o​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​f​o​r​ ​t​h​e​ ​r​e​p​o​r​t​i​n​g​ ​p​e​r​i​o​d​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						end: {
+							/**
+							 * E​n​d​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * E​n​d​ ​o​f​ ​t​h​e​ ​r​e​p​o​r​t​i​n​g​ ​p​e​r​i​o​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​n​d​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​f​o​r​ ​t​h​e​ ​r​e​p​o​r​t​i​n​g​ ​p​e​r​i​o​d​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						previousStart: {
+							/**
+							 * P​r​e​v​i​o​u​s​ ​S​t​a​r​t
+							 */
+							displayName: string
+							/**
+							 * S​t​a​r​t​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​p​e​r​i​o​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​f​o​r​ ​a​ ​p​r​e​v​i​o​u​s​ ​p​e​r​i​o​d​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​.​ ​U​s​e​d​ ​t​o​ ​c​a​l​c​u​l​a​t​e​ ​d​e​l​t​a​s​.
+							 */
+							longDesc: string
+						}
+						previousEnd: {
+							/**
+							 * P​r​e​v​i​o​u​s​ ​E​n​d
+							 */
+							displayName: string
+							/**
+							 * E​n​d​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​p​e​r​i​o​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​n​d​ ​d​a​t​e​ ​f​o​r​ ​a​ ​p​r​e​v​i​o​u​s​ ​p​e​r​i​o​d​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​.​ ​U​s​e​d​ ​t​o​ ​c​a​l​c​u​l​a​t​e​ ​d​e​l​t​a​s​.
+							 */
+							longDesc: string
+						}
+						mailboxes: {
+							/**
+							 * M​a​i​l​b​o​x​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​a​i​l​b​o​x​ ​I​D​s
+							 */
+							shortDesc: string
+							/**
+							 * C​o​m​m​a​-​s​e​p​a​r​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​m​a​i​l​b​o​x​ ​I​D​s​ ​t​o​ ​f​i​l​t​e​r​ ​t​h​e​ ​r​e​p​o​r​t​ ​b​y​.
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​g​ ​I​D​s
+							 */
+							shortDesc: string
+							/**
+							 * C​o​m​m​a​-​s​e​p​a​r​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​t​a​g​ ​I​D​s​ ​t​o​ ​f​i​l​t​e​r​ ​t​h​e​ ​r​e​p​o​r​t​ ​b​y​.
+							 */
+							longDesc: string
+						}
+						types: {
+							/**
+							 * T​y​p​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​y​p​e​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​y​p​e​:​ ​e​m​a​i​l​,​ ​c​h​a​t​,​ ​o​r​ ​p​h​o​n​e​.
+							 */
+							longDesc: string
+						}
+						folders: {
+							/**
+							 * F​o​l​d​e​r​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​f​o​l​d​e​r​ ​I​D​s
+							 */
+							shortDesc: string
+							/**
+							 * C​o​m​m​a​-​s​e​p​a​r​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​f​o​l​d​e​r​ ​I​D​s​ ​t​o​ ​f​i​l​t​e​r​ ​t​h​e​ ​r​e​p​o​r​t​ ​b​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_email_report: {
+					groups: {
+						/**
+						 * R​e​p​o​r​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​E​m​a​i​l​ ​R​e​p​o​r​t
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​e​m​a​i​l​ ​c​h​a​n​n​e​l​ ​p​e​r​f​o​r​m​a​n​c​e​ ​r​e​p​o​r​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​n​ ​e​m​a​i​l​ ​c​h​a​n​n​e​l​ ​p​e​r​f​o​r​m​a​n​c​e​ ​r​e​p​o​r​t​ ​f​r​o​m​ ​H​e​l​p​ ​S​c​o​u​t​.​ ​I​n​c​l​u​d​e​s​ ​v​o​l​u​m​e​ ​m​e​t​r​i​c​s​,​ ​r​e​s​o​l​u​t​i​o​n​ ​t​i​m​e​s​,​ ​r​e​s​p​o​n​s​e​ ​t​i​m​e​s​,​ ​a​n​d​ ​t​i​m​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​d​a​t​a​.​ ​O​n​l​y​ ​a​v​a​i​l​a​b​l​e​ ​o​n​ ​P​l​u​s​ ​a​n​d​ ​P​r​o​ ​p​l​a​n​s​.
+					 */
+					longDesc: string
+					options: {
+						start: {
+							/**
+							 * S​t​a​r​t​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * S​t​a​r​t​ ​o​f​ ​t​h​e​ ​r​e​p​o​r​t​i​n​g​ ​p​e​r​i​o​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​f​o​r​ ​t​h​e​ ​r​e​p​o​r​t​i​n​g​ ​p​e​r​i​o​d​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						end: {
+							/**
+							 * E​n​d​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * E​n​d​ ​o​f​ ​t​h​e​ ​r​e​p​o​r​t​i​n​g​ ​p​e​r​i​o​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​n​d​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​f​o​r​ ​t​h​e​ ​r​e​p​o​r​t​i​n​g​ ​p​e​r​i​o​d​ ​i​n​ ​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​.
+							 */
+							longDesc: string
+						}
+						previousStart: {
+							/**
+							 * P​r​e​v​i​o​u​s​ ​S​t​a​r​t
+							 */
+							displayName: string
+							/**
+							 * S​t​a​r​t​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​p​e​r​i​o​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​f​o​r​ ​a​ ​p​r​e​v​i​o​u​s​ ​p​e​r​i​o​d​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​.​ ​U​s​e​d​ ​t​o​ ​c​a​l​c​u​l​a​t​e​ ​d​e​l​t​a​s​.
+							 */
+							longDesc: string
+						}
+						previousEnd: {
+							/**
+							 * P​r​e​v​i​o​u​s​ ​E​n​d
+							 */
+							displayName: string
+							/**
+							 * E​n​d​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​p​e​r​i​o​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​n​d​ ​d​a​t​e​ ​f​o​r​ ​a​ ​p​r​e​v​i​o​u​s​ ​p​e​r​i​o​d​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​.​ ​U​s​e​d​ ​t​o​ ​c​a​l​c​u​l​a​t​e​ ​d​e​l​t​a​s​.
+							 */
+							longDesc: string
+						}
+						mailboxes: {
+							/**
+							 * M​a​i​l​b​o​x​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​a​i​l​b​o​x​ ​I​D​s
+							 */
+							shortDesc: string
+							/**
+							 * C​o​m​m​a​-​s​e​p​a​r​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​m​a​i​l​b​o​x​ ​I​D​s​ ​t​o​ ​f​i​l​t​e​r​ ​t​h​e​ ​r​e​p​o​r​t​ ​b​y​.
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​a​g​ ​I​D​s
+							 */
+							shortDesc: string
+							/**
+							 * C​o​m​m​a​-​s​e​p​a​r​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​t​a​g​ ​I​D​s​ ​t​o​ ​f​i​l​t​e​r​ ​t​h​e​ ​r​e​p​o​r​t​ ​b​y​.
+							 */
+							longDesc: string
+						}
+						folders: {
+							/**
+							 * F​o​l​d​e​r​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​f​o​l​d​e​r​ ​I​D​s
+							 */
+							shortDesc: string
+							/**
+							 * C​o​m​m​a​-​s​e​p​a​r​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​f​o​l​d​e​r​ ​I​D​s​ ​t​o​ ​f​i​l​t​e​r​ ​t​h​e​ ​r​e​p​o​r​t​ ​b​y​.
+							 */
+							longDesc: string
+						}
+						officeHours: {
+							/**
+							 * O​f​f​i​c​e​ ​H​o​u​r​s
+							 */
+							displayName: string
+							/**
+							 * C​o​n​s​i​d​e​r​ ​o​f​f​i​c​e​ ​h​o​u​r​s​ ​i​n​ ​c​a​l​c​u​l​a​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​s​e​t​ ​t​o​ ​t​r​u​e​,​ ​t​i​m​e​-​b​a​s​e​d​ ​m​e​t​r​i​c​s​ ​w​i​l​l​ ​o​n​l​y​ ​c​o​n​s​i​d​e​r​ ​o​f​f​i​c​e​ ​h​o​u​r​s​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​f​a​l​s​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_conversation: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​C​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​i​n​g​l​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​b​y​ ​I​D
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​t​h​e​ ​f​u​l​l​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​f​r​o​m​ ​H​e​l​p​ ​S​c​o​u​t​ ​b​y​ ​i​t​s​ ​I​D​.​ ​R​e​t​u​r​n​s​ ​a​l​l​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​s​u​b​j​e​c​t​,​ ​s​t​a​t​u​s​,​ ​c​u​s​t​o​m​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​t​a​g​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_conversation: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * U​p​d​a​t​e​ ​C​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​p​r​o​p​e​r​t​i​e​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​i​n​ ​H​e​l​p​ ​S​c​o​u​t​.​ ​Y​o​u​ ​c​a​n​ ​c​h​a​n​g​e​ ​t​h​e​ ​s​u​b​j​e​c​t​,​ ​s​t​a​t​u​s​,​ ​o​r​ ​a​s​s​i​g​n​e​e​.​ ​A​t​ ​l​e​a​s​t​ ​o​n​e​ ​f​i​e​l​d​ ​m​u​s​t​ ​b​e​ ​p​r​o​v​i​d​e​d​ ​t​o​ ​u​p​d​a​t​e​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						subject: {
+							/**
+							 * S​u​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​s​u​b​j​e​c​t​ ​l​i​n​e
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​ ​T​h​i​s​ ​w​i​l​l​ ​b​e​ ​v​i​s​i​b​l​e​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​i​n​ ​e​m​a​i​l​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​s​t​a​t​u​s​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​ ​O​p​t​i​o​n​s​ ​i​n​c​l​u​d​e​ ​a​c​t​i​v​e​,​ ​c​l​o​s​e​d​,​ ​o​r​ ​p​e​n​d​i​n​g​.
+							 */
+							longDesc: string
+						}
+						assignTo: {
+							/**
+							 * A​s​s​i​g​n​ ​T​o
+							 */
+							displayName: string
+							/**
+							 * A​s​s​i​g​n​ ​t​o​ ​a​ ​u​s​e​r
+							 */
+							shortDesc: string
+							/**
+							 * A​s​s​i​g​n​ ​o​r​ ​r​e​a​s​s​i​g​n​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​H​e​l​p​ ​S​c​o​u​t​ ​u​s​e​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_conversation: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * D​e​l​e​t​e​ ​C​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​f​r​o​m​ ​H​e​l​p​ ​S​c​o​u​t​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​m​o​v​e​s​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​t​h​e​ ​t​r​a​s​h​.​ ​B​e​ ​c​a​u​t​i​o​u​s​ ​a​s​ ​t​h​i​s​ ​a​c​t​i​o​n​ ​m​a​y​ ​b​e​ ​i​r​r​e​v​e​r​s​i​b​l​e​ ​d​e​p​e​n​d​i​n​g​ ​o​n​ ​y​o​u​r​ ​H​e​l​p​ ​S​c​o​u​t​ ​s​e​t​t​i​n​g​s​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_tags: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * A​d​d​ ​T​a​g​s​ ​t​o​ ​C​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​t​a​g​s​ ​t​o​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​t​a​g​s​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​i​n​ ​H​e​l​p​ ​S​c​o​u​t​.​ ​T​a​g​s​ ​h​e​l​p​ ​o​r​g​a​n​i​z​e​ ​a​n​d​ ​c​a​t​e​g​o​r​i​z​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​f​o​r​ ​e​a​s​i​e​r​ ​f​i​l​t​e​r​i​n​g​,​ ​r​e​p​o​r​t​i​n​g​,​ ​a​n​d​ ​w​o​r​k​f​l​o​w​ ​a​u​t​o​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​a​d​d​ ​t​a​g​s​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​t​a​g​s​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * T​a​g​s​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​t​a​g​ ​n​a​m​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​ ​T​a​g​s​ ​a​r​e​ ​c​a​s​e​-​i​n​s​e​n​s​i​t​i​v​e​ ​a​n​d​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​ ​i​f​ ​t​h​e​y​ ​d​o​ ​n​o​t​ ​a​l​r​e​a​d​y​ ​e​x​i​s​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_threads: {
+					groups: {
+						/**
+						 * T​h​r​e​a​d​s
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​T​h​r​e​a​d​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​t​h​r​e​a​d​s​ ​i​n​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​t​h​r​e​a​d​s​ ​(​m​e​s​s​a​g​e​s​)​ ​w​i​t​h​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​ ​T​h​r​e​a​d​s​ ​i​n​c​l​u​d​e​ ​c​u​s​t​o​m​e​r​ ​m​e​s​s​a​g​e​s​,​ ​a​g​e​n​t​ ​r​e​p​l​i​e​s​,​ ​n​o​t​e​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​a​c​t​i​v​i​t​i​e​s​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​l​i​s​t​ ​t​h​r​e​a​d​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​w​h​o​s​e​ ​t​h​r​e​a​d​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​r​e​a​d​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​r​e​a​d​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_thread: {
+					groups: {
+						/**
+						 * T​h​r​e​a​d​s
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​T​h​r​e​a​d
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​h​r​e​a​d​ ​b​y​ ​I​D
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​t​h​e​ ​f​u​l​l​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​h​r​e​a​d​ ​(​m​e​s​s​a​g​e​)​ ​w​i​t​h​i​n​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​ ​R​e​t​u​r​n​s​ ​t​h​e​ ​t​h​r​e​a​d​ ​c​o​n​t​e​n​t​,​ ​t​y​p​e​,​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​m​e​t​a​d​a​t​a​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​h​r​e​a​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​t​h​r​e​a​d​.
+							 */
+							longDesc: string
+						}
+						threadId: {
+							/**
+							 * T​h​r​e​a​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​h​r​e​a​d​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​t​h​r​e​a​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_customer: {
+					groups: {
+						/**
+						 * C​u​s​t​o​m​e​r​s
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​C​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​i​n​g​l​e​ ​c​u​s​t​o​m​e​r​ ​b​y​ ​I​D
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​t​h​e​ ​f​u​l​l​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​u​s​t​o​m​e​r​ ​f​r​o​m​ ​H​e​l​p​ ​S​c​o​u​t​ ​b​y​ ​t​h​e​i​r​ ​I​D​.​ ​R​e​t​u​r​n​s​ ​a​l​l​ ​c​u​s​t​o​m​e​r​ ​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​o​r​g​a​n​i​z​a​t​i​o​n​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						customerId: {
+							/**
+							 * C​u​s​t​o​m​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​w​h​o​s​e​ ​p​r​o​f​i​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_customer: {
+					groups: {
+						/**
+						 * C​u​s​t​o​m​e​r​s
+						 */
+						'0': string
+					}
+					/**
+					 * D​e​l​e​t​e​ ​C​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​c​u​s​t​o​m​e​r
+					 */
+					shortDesc: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​c​u​s​t​o​m​e​r​ ​p​r​o​f​i​l​e​ ​f​r​o​m​ ​H​e​l​p​ ​S​c​o​u​t​.​ ​B​e​ ​c​a​u​t​i​o​u​s​ ​a​s​ ​t​h​i​s​ ​a​c​t​i​o​n​ ​m​a​y​ ​a​f​f​e​c​t​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​h​i​s​t​o​r​y​ ​a​n​d​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​i​r​r​e​v​e​r​s​i​b​l​e​.
+					 */
+					longDesc: string
+					options: {
+						customerId: {
+							/**
+							 * C​u​s​t​o​m​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				search_customers: {
+					groups: {
+						/**
+						 * C​u​s​t​o​m​e​r​s
+						 */
+						'0': string
+					}
+					/**
+					 * S​e​a​r​c​h​ ​C​u​s​t​o​m​e​r​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​c​u​s​t​o​m​e​r​s​ ​u​s​i​n​g​ ​a​ ​q​u​e​r​y
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​c​u​s​t​o​m​e​r​s​ ​i​n​ ​H​e​l​p​ ​S​c​o​u​t​ ​u​s​i​n​g​ ​a​ ​q​u​e​r​y​ ​s​t​r​i​n​g​.​ ​Y​o​u​ ​c​a​n​ ​s​e​a​r​c​h​ ​b​y​ ​e​m​a​i​l​,​ ​n​a​m​e​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​,​ ​o​r​ ​o​t​h​e​r​ ​c​u​s​t​o​m​e​r​ ​p​r​o​p​e​r​t​i​e​s​ ​u​s​i​n​g​ ​H​e​l​p​ ​S​c​o​u​t​ ​q​u​e​r​y​ ​s​y​n​t​a​x​.
+					 */
+					longDesc: string
+					options: {
+						query: {
+							/**
+							 * Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​q​u​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​u​s​i​n​g​ ​H​e​l​p​ ​S​c​o​u​t​ ​q​u​e​r​y​ ​s​y​n​t​a​x​.​ ​E​x​a​m​p​l​e​s​:​ ​(​e​m​a​i​l​:​"​j​o​h​n​@​e​x​a​m​p​l​e​.​c​o​m​"​)​,​ ​(​f​i​r​s​t​N​a​m​e​:​"​J​o​h​n​"​)​,​ ​(​p​h​o​n​e​:​"​5​5​5​-​1​2​3​4​"​)​.​ ​Y​o​u​ ​c​a​n​ ​c​o​m​b​i​n​e​ ​m​u​l​t​i​p​l​e​ ​c​o​n​d​i​t​i​o​n​s​ ​w​i​t​h​ ​A​N​D​/​O​R​ ​o​p​e​r​a​t​o​r​s​.
+							 */
+							longDesc: string
+						}
+						sortField: {
+							/**
+							 * S​o​r​t​ ​F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​:​ ​c​r​e​a​t​e​d​A​t​,​ ​f​i​r​s​t​N​a​m​e​,​ ​l​a​s​t​N​a​m​e​,​ ​o​r​ ​m​o​d​i​f​i​e​d​A​t​.
+							 */
+							longDesc: string
+						}
+						sortOrder: {
+							/**
+							 * S​o​r​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​r​d​e​r​ ​d​i​r​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​:​ ​d​e​s​c​ ​(​n​e​w​e​s​t​ ​f​i​r​s​t​)​ ​o​r​ ​a​s​c​ ​(​o​l​d​e​s​t​ ​f​i​r​s​t​)​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​u​s​t​o​m​e​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​u​s​t​o​m​e​r​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_saved_replies: {
+					groups: {
+						/**
+						 * S​a​v​e​d​ ​R​e​p​l​i​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​S​a​v​e​d​ ​R​e​p​l​i​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​s​a​v​e​d​ ​r​e​p​l​i​e​s​ ​f​o​r​ ​a​ ​m​a​i​l​b​o​x
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​s​a​v​e​d​ ​r​e​p​l​y​ ​t​e​m​p​l​a​t​e​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​a​i​l​b​o​x​.​ ​S​a​v​e​d​ ​r​e​p​l​i​e​s​ ​a​r​e​ ​p​r​e​-​w​r​i​t​t​e​n​ ​r​e​s​p​o​n​s​e​ ​t​e​m​p​l​a​t​e​s​ ​t​h​a​t​ ​a​g​e​n​t​s​ ​c​a​n​ ​u​s​e​ ​t​o​ ​q​u​i​c​k​l​y​ ​r​e​s​p​o​n​d​ ​t​o​ ​c​o​m​m​o​n​ ​q​u​e​s​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						mailboxId: {
+							/**
+							 * M​a​i​l​b​o​x
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​a​i​l​b​o​x​ ​t​o​ ​l​i​s​t​ ​s​a​v​e​d​ ​r​e​p​l​i​e​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​m​a​i​l​b​o​x​ ​w​h​o​s​e​ ​s​a​v​e​d​ ​r​e​p​l​i​e​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​S​a​v​e​d​ ​r​e​p​l​i​e​s​ ​a​r​e​ ​s​p​e​c​i​f​i​c​ ​t​o​ ​e​a​c​h​ ​m​a​i​l​b​o​x​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​s​a​v​e​d​ ​r​e​p​l​i​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​s​a​v​e​d​ ​r​e​p​l​y​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_customer: {
+					groups: {
+						/**
+						 * C​u​s​t​o​m​e​r​s
+						 */
+						'0': string
+					}
+					/**
+					 * N​e​w​ ​C​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​H​e​l​p​ ​S​c​o​u​t​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​t​h​e​ ​f​u​l​l​ ​c​u​s​t​o​m​e​r​ ​p​r​o​f​i​l​e​ ​i​n​c​l​u​d​i​n​g​ ​c​o​n​t​a​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​o​r​g​a​n​i​z​a​t​i​o​n​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+					}
+				}
+				updated_customer: {
+					groups: {
+						/**
+						 * C​u​s​t​o​m​e​r​s
+						 */
+						'0': string
+					}
+					/**
+					 * U​p​d​a​t​e​d​ ​C​u​s​t​o​m​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​u​s​t​o​m​e​r​ ​i​s​ ​u​p​d​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​c​u​s​t​o​m​e​r​ ​p​r​o​f​i​l​e​ ​i​s​ ​u​p​d​a​t​e​d​ ​i​n​ ​H​e​l​p​ ​S​c​o​u​t​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​t​h​e​ ​u​p​d​a​t​e​d​ ​c​u​s​t​o​m​e​r​ ​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​a​n​y​ ​c​h​a​n​g​e​d​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+					}
+				}
+				new_organization: {
+					groups: {
+						/**
+						 * O​r​g​a​n​i​z​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * N​e​w​ ​O​r​g​a​n​i​z​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​H​e​l​p​ ​S​c​o​u​t​.​ ​O​r​g​a​n​i​z​a​t​i​o​n​s​ ​h​e​l​p​ ​g​r​o​u​p​ ​c​u​s​t​o​m​e​r​s​ ​f​r​o​m​ ​t​h​e​ ​s​a​m​e​ ​c​o​m​p​a​n​y​.
+					 */
+					longDesc: string
+					options: {
+					}
+				}
+				new_conversation: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * N​e​w​ ​C​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​(​s​u​p​p​o​r​t​ ​t​i​c​k​e​t​)​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​H​e​l​p​ ​S​c​o​u​t​.​ ​Y​o​u​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​b​y​ ​m​a​i​l​b​o​x​ ​t​o​ ​o​n​l​y​ ​r​e​c​e​i​v​e​ ​e​v​e​n​t​s​ ​f​r​o​m​ ​s​p​e​c​i​f​i​c​ ​i​n​b​o​x​e​s​.
+					 */
+					longDesc: string
+					options: {
+						mailboxId: {
+							/**
+							 * M​a​i​l​b​o​x
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​a​i​l​b​o​x
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​a​i​l​b​o​x​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​a​l​l​ ​m​a​i​l​b​o​x​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				assigned_conversation: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * A​s​s​i​g​n​e​d​ ​C​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​i​s​ ​a​s​s​i​g​n​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​i​s​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​a​ ​u​s​e​r​ ​i​n​ ​H​e​l​p​ ​S​c​o​u​t​.​ ​T​h​i​s​ ​i​n​c​l​u​d​e​s​ ​b​o​t​h​ ​n​e​w​ ​a​s​s​i​g​n​m​e​n​t​s​ ​a​n​d​ ​r​e​a​s​s​i​g​n​m​e​n​t​s​.
+					 */
+					longDesc: string
+					options: {
+						mailboxId: {
+							/**
+							 * M​a​i​l​b​o​x
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​m​a​i​l​b​o​x
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​a​i​l​b​o​x​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​a​l​l​ ​m​a​i​l​b​o​x​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Hubspot: {
 			/**
 			 * H​u​b​S​p​o​t
@@ -173682,6 +175742,2066 @@ export type TranslationFunctions = {
 									}
 								}
 							}
+						}
+					}
+				}
+			}
+		}
+		HelpScout: {
+			/**
+			 * Help Scout
+			 */
+			displayName: () => LocalizedString
+			groups: {
+				/**
+				 * Customer Support
+				 */
+				'0': () => LocalizedString
+			}
+			connectionMessage: {
+				/**
+				 * OAuth Connection
+				 */
+				title: () => LocalizedString
+				/**
+				 * Help Scout uses OAuth 2.0 for authentication. You will be redirected to Help Scout to authorize access to your account.
+				 */
+				content: () => LocalizedString
+			}
+			/**
+			 * Connect with Help Scout to manage customer conversations and support tickets
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Integrate with Help Scout to manage customer support conversations, create and update customers, send replies, and track support interactions. This integration enables you to automate support workflows, respond to customers, and maintain customer relationships through Help Scout.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				add_note: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Add Note to Conversation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add an internal note to a conversation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Add an internal note to an existing conversation in Help Scout. Notes are only visible to your team members and are not sent to the customer. Use notes to document internal discussions, research, or context about a customer issue.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation to add the note to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the conversation where you want to add the note. You can search for conversations by number or subject.
+							 */
+							longDesc: () => LocalizedString
+						}
+						text: {
+							/**
+							 * Note Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content of the note
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content of the internal note. This can include HTML formatting. The note will only be visible to your team members.
+							 */
+							longDesc: () => LocalizedString
+						}
+						user: {
+							/**
+							 * User
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The user adding the note
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Help Scout user who is adding the note. If not specified, defaults to the authenticated user.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Change the conversation status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally change the conversation status when adding the note. Options include active, closed, open, pending, or spam.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_conversation: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Create Conversation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new conversation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new conversation in Help Scout. A conversation represents an email thread or support ticket with a customer. You must specify the mailbox, customer, and initial message content.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						subject: {
+							/**
+							 * Subject
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation subject line
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The subject line for the conversation. This will be visible to the customer in email communications.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mailboxId: {
+							/**
+							 * Mailbox
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The mailbox to create the conversation in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Help Scout mailbox (inbox) where this conversation should be created. Each mailbox typically corresponds to a different support email address or team.
+							 */
+							longDesc: () => LocalizedString
+						}
+						type: {
+							/**
+							 * Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of conversation: email (standard email thread), phone (phone call record), or chat (live chat conversation).
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The initial conversation status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The initial status of the conversation. Active means the conversation needs attention, closed means it is resolved, and pending means waiting for customer response.
+							 */
+							longDesc: () => LocalizedString
+						}
+						customerId: {
+							/**
+							 * Customer ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of an existing customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select an existing customer from Help Scout. Either Customer ID or Customer Email must be provided.
+							 */
+							longDesc: () => LocalizedString
+						}
+						customerEmail: {
+							/**
+							 * Customer Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The email address of the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address of the customer. If the customer does not exist, they will be created. Either Customer ID or Customer Email must be provided.
+							 */
+							longDesc: () => LocalizedString
+						}
+						threadType: {
+							/**
+							 * Thread Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The type of the initial thread
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of the first message in the conversation. Customer means the message is from the customer, reply means it is from your team, and note is an internal note.
+							 */
+							longDesc: () => LocalizedString
+						}
+						threadText: {
+							/**
+							 * Thread Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content of the initial message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content of the first message in the conversation. This can include HTML formatting.
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignTo: {
+							/**
+							 * Assign To
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Assign the conversation to a user
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally assign the conversation to a specific Help Scout user. If not specified, the conversation will be unassigned or follow your mailbox routing rules.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tags to add to the conversation
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of tag names to add to the conversation. Tags help organize and categorize conversations for easier filtering and reporting.
+							 */
+							longDesc: () => LocalizedString
+						}
+						autoReply: {
+							/**
+							 * Auto Reply
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Enable auto-reply for this conversation
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When set to true, Help Scout will send an auto-reply to the customer if one is configured for the mailbox. Set to false to prevent auto-replies.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_customer: {
+					groups: {
+						/**
+						 * Customers
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Create Customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new customer
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new customer profile in Help Scout. Customers represent the people who contact your support team. You can store their contact information, company details, and other relevant data.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						firstName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer first name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The first name of the customer. Maximum 40 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lastName: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The last name of the customer. Maximum 40 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The primary email address for the customer. This is used to identify the customer when they send emails to your support address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						emailType: {
+							/**
+							 * Email Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The type of email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Categorize the email address type: work (business email), home (personal email), or other.
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone: {
+							/**
+							 * Phone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The phone number for the customer.
+							 */
+							longDesc: () => LocalizedString
+						}
+						phoneType: {
+							/**
+							 * Phone Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The type of phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Categorize the phone number type: work, home, mobile, fax, pager, or other.
+							 */
+							longDesc: () => LocalizedString
+						}
+						jobTitle: {
+							/**
+							 * Job Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer job title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The job title or position of the customer. Maximum 60 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						organization: {
+							/**
+							 * Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer company or organization
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The company or organization the customer belongs to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						location: {
+							/**
+							 * Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The geographic location of the customer. Maximum 60 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						background: {
+							/**
+							 * Background
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Background notes about the customer
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Internal notes or background information about the customer. Maximum 200 characters. This is only visible to your team.
+							 */
+							longDesc: () => LocalizedString
+						}
+						gender: {
+							/**
+							 * Gender
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer gender
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The gender of the customer: male, female, or unknown.
+							 */
+							longDesc: () => LocalizedString
+						}
+						age: {
+							/**
+							 * Age
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer age
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The age of the customer as a string.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_customer: {
+					groups: {
+						/**
+						 * Customers
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Update Customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing customer
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the profile information of an existing customer in Help Scout. You can modify their name, contact details, organization, and other profile fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customerId: {
+							/**
+							 * Customer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the customer whose profile you want to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						firstName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new first name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the first name of the customer. Maximum 40 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lastName: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the last name of the customer. Maximum 40 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						jobTitle: {
+							/**
+							 * Job Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new job title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the job title of the customer. Maximum 60 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						organization: {
+							/**
+							 * Organization
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new organization
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the company or organization of the customer.
+							 */
+							longDesc: () => LocalizedString
+						}
+						location: {
+							/**
+							 * Location
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the geographic location of the customer. Maximum 60 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						background: {
+							/**
+							 * Background
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new background notes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the internal background notes about the customer. Maximum 200 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						gender: {
+							/**
+							 * Gender
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new gender
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the gender of the customer: male, female, or unknown.
+							 */
+							longDesc: () => LocalizedString
+						}
+						age: {
+							/**
+							 * Age
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new age
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the age of the customer.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				send_reply: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Send Reply
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a reply to a conversation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a reply to an existing conversation in Help Scout. The reply will be sent to the customer via email. You can optionally CC/BCC additional recipients, save as draft, or change the conversation status.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation to reply to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the conversation you want to reply to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						customerId: {
+							/**
+							 * Customer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer being replied to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the customer who will receive this reply. This should match the customer associated with the conversation.
+							 */
+							longDesc: () => LocalizedString
+						}
+						text: {
+							/**
+							 * Reply Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content of the reply
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content of the reply message. This can include HTML formatting. The reply will be sent to the customer via email.
+							 */
+							longDesc: () => LocalizedString
+						}
+						user: {
+							/**
+							 * User
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The user sending the reply
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Help Scout user sending the reply. If not specified, defaults to the authenticated user.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Change the conversation status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally change the conversation status after sending the reply. For example, set to closed after resolving an issue.
+							 */
+							longDesc: () => LocalizedString
+						}
+						draft: {
+							/**
+							 * Save as Draft
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Save the reply as a draft
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When set to true, the reply is saved as a draft and not sent to the customer. You can review and send it later from Help Scout.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cc: {
+							/**
+							 * CC
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Carbon copy email addresses
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of email addresses to CC on the reply. These recipients will receive a copy of the email.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bcc: {
+							/**
+							 * BCC
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Blind carbon copy email addresses
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of email addresses to BCC on the reply. These recipients will receive a copy of the email without other recipients knowing.
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignTo: {
+							/**
+							 * Assign To
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Assign the conversation after replying
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally assign the conversation to a different Help Scout user after sending the reply.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_customers: {
+					groups: {
+						/**
+						 * Customers
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Customers
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of customers
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of customers from Help Scout. You can filter customers by mailbox, name, email, or modification date. Results can be sorted and paginated.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						mailbox: {
+							/**
+							 * Mailbox
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by mailbox
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return customers associated with conversations in this mailbox.
+							 */
+							longDesc: () => LocalizedString
+						}
+						firstName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by first name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return customers with this first name.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lastName: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return customers with this last name.
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return customers with this email address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						modifiedSince: {
+							/**
+							 * Modified Since
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by modification date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return customers modified on or after this date.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sortField: {
+							/**
+							 * Sort Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to sort by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to sort results by: createdAt, firstName, lastName, or modifiedAt.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sortOrder: {
+							/**
+							 * Sort Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort order direction
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The direction to sort results: desc (newest first) or asc (oldest first).
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of customers to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of customer records to return. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_conversations: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Conversations
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of conversations
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of conversations from Help Scout. You can filter by mailbox, status, assignee, tags, and more. Results can be sorted and paginated.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						mailbox: {
+							/**
+							 * Mailbox
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by mailbox
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return conversations from this mailbox.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by conversation status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return conversations with this status: all, active, closed, open, pending, or spam.
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignedTo: {
+							/**
+							 * Assigned To
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by assignee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return conversations assigned to this user.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tag: {
+							/**
+							 * Tag
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by tag
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return conversations with this tag. You can specify multiple tags separated by commas.
+							 */
+							longDesc: () => LocalizedString
+						}
+						modifiedSince: {
+							/**
+							 * Modified Since
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by modification date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return conversations modified on or after this date.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sortField: {
+							/**
+							 * Sort Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to sort by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to sort results by: createdAt, customerEmail, customerName, mailboxid, modifiedAt, number, status, or subject.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sortOrder: {
+							/**
+							 * Sort Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort order direction
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The direction to sort results: desc (newest first) or asc (oldest first).
+							 */
+							longDesc: () => LocalizedString
+						}
+						query: {
+							/**
+							 * Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Advanced search query
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An advanced search query using Help Scout query syntax. For example: (subject:"billing issue") AND (status:active)
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of conversations to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of conversation records to return. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				find_mailbox: {
+					groups: {
+						/**
+						 * Mailboxes
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Find Mailbox by Name
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Find a mailbox by its name
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search for a mailbox in Help Scout by its name. Returns the mailbox details if found. The search is case-insensitive and supports partial matching.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Mailbox Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the mailbox to find
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the mailbox to search for. The search is case-insensitive and will match partial names or slugs.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_users: {
+					groups: {
+						/**
+						 * Users
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Users
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of Help Scout users
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of users from your Help Scout account. You can filter users by email address or mailbox. Returns all user types including those who have not yet accepted their invitations.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return users with this exact email address.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mailbox: {
+							/**
+							 * Mailbox
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by mailbox
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return users associated with this mailbox.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of users to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of user records to return. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_company_report: {
+					groups: {
+						/**
+						 * Reports
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get Company Report
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get company-wide performance report
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a company-wide performance report from Help Scout. Includes metrics like customers helped, closed conversations, total replies, and happiness scores. Only available on Plus and Pro plans.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						start: {
+							/**
+							 * Start Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Start of the reporting period
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The start date and time for the reporting period in ISO 8601 format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						end: {
+							/**
+							 * End Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * End of the reporting period
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The end date and time for the reporting period in ISO 8601 format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						previousStart: {
+							/**
+							 * Previous Start
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Start of the comparison period
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The start date for a previous period to compare against. Used to calculate deltas.
+							 */
+							longDesc: () => LocalizedString
+						}
+						previousEnd: {
+							/**
+							 * Previous End
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * End of the comparison period
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The end date for a previous period to compare against. Used to calculate deltas.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mailboxes: {
+							/**
+							 * Mailboxes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by mailbox IDs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Comma-separated list of mailbox IDs to filter the report by.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by tag IDs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Comma-separated list of tag IDs to filter the report by.
+							 */
+							longDesc: () => LocalizedString
+						}
+						types: {
+							/**
+							 * Types
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by conversation types
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter by conversation type: email, chat, or phone.
+							 */
+							longDesc: () => LocalizedString
+						}
+						folders: {
+							/**
+							 * Folders
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by folder IDs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Comma-separated list of folder IDs to filter the report by.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_email_report: {
+					groups: {
+						/**
+						 * Reports
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get Email Report
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get email channel performance report
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve an email channel performance report from Help Scout. Includes volume metrics, resolution times, response times, and time distribution data. Only available on Plus and Pro plans.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						start: {
+							/**
+							 * Start Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Start of the reporting period
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The start date and time for the reporting period in ISO 8601 format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						end: {
+							/**
+							 * End Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * End of the reporting period
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The end date and time for the reporting period in ISO 8601 format.
+							 */
+							longDesc: () => LocalizedString
+						}
+						previousStart: {
+							/**
+							 * Previous Start
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Start of the comparison period
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The start date for a previous period to compare against. Used to calculate deltas.
+							 */
+							longDesc: () => LocalizedString
+						}
+						previousEnd: {
+							/**
+							 * Previous End
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * End of the comparison period
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The end date for a previous period to compare against. Used to calculate deltas.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mailboxes: {
+							/**
+							 * Mailboxes
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by mailbox IDs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Comma-separated list of mailbox IDs to filter the report by.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by tag IDs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Comma-separated list of tag IDs to filter the report by.
+							 */
+							longDesc: () => LocalizedString
+						}
+						folders: {
+							/**
+							 * Folders
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by folder IDs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Comma-separated list of folder IDs to filter the report by.
+							 */
+							longDesc: () => LocalizedString
+						}
+						officeHours: {
+							/**
+							 * Office Hours
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Consider office hours in calculations
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When set to true, time-based metrics will only consider office hours. Defaults to false.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_conversation: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get Conversation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a single conversation by ID
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve the full details of a specific conversation from Help Scout by its ID. Returns all conversation data including subject, status, customer information, tags, and custom fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the conversation you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_conversation: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Update Conversation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing conversation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the properties of an existing conversation in Help Scout. You can change the subject, status, or assignee. At least one field must be provided to update.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the conversation you want to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						subject: {
+							/**
+							 * Subject
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new subject line
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the subject line of the conversation. This will be visible to the customer in email communications.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new conversation status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the status of the conversation. Options include active, closed, or pending.
+							 */
+							longDesc: () => LocalizedString
+						}
+						assignTo: {
+							/**
+							 * Assign To
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Assign to a user
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Assign or reassign the conversation to a specific Help Scout user.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_conversation: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Delete Conversation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a conversation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Delete a conversation from Help Scout. This action moves the conversation to the trash. Be cautious as this action may be irreversible depending on your Help Scout settings.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the conversation you want to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_tags: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Add Tags to Conversation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add tags to a conversation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Add one or more tags to an existing conversation in Help Scout. Tags help organize and categorize conversations for easier filtering, reporting, and workflow automation.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation to add tags to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the conversation you want to add tags to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tags to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of tag names to add to the conversation. Tags are case-insensitive and will be created if they do not already exist.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_threads: {
+					groups: {
+						/**
+						 * Threads
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Threads
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all threads in a conversation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve all threads (messages) within a specific conversation. Threads include customer messages, agent replies, notes, and other conversation activities.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation to list threads from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the conversation whose threads you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of threads to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of thread records to return. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_thread: {
+					groups: {
+						/**
+						 * Threads
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get Thread
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific thread by ID
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve the full details of a specific thread (message) within a conversation. Returns the thread content, type, status, and metadata.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation containing the thread
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the conversation that contains the thread.
+							 */
+							longDesc: () => LocalizedString
+						}
+						threadId: {
+							/**
+							 * Thread ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The thread to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the ID of the specific thread you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_customer: {
+					groups: {
+						/**
+						 * Customers
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get Customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a single customer by ID
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve the full details of a specific customer from Help Scout by their ID. Returns all customer data including contact information, organization, and custom fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customerId: {
+							/**
+							 * Customer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the customer whose profile you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_customer: {
+					groups: {
+						/**
+						 * Customers
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Delete Customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a customer
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Delete a customer profile from Help Scout. Be cautious as this action may affect conversation history and is typically irreversible.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customerId: {
+							/**
+							 * Customer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the customer you want to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				search_customers: {
+					groups: {
+						/**
+						 * Customers
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Search Customers
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for customers using a query
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search for customers in Help Scout using a query string. You can search by email, name, phone number, or other customer properties using Help Scout query syntax.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						query: {
+							/**
+							 * Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search query
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The search query using Help Scout query syntax. Examples: (email:"john@example.com"), (firstName:"John"), (phone:"555-1234"). You can combine multiple conditions with AND/OR operators.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sortField: {
+							/**
+							 * Sort Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to sort by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to sort results by: createdAt, firstName, lastName, or modifiedAt.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sortOrder: {
+							/**
+							 * Sort Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort order direction
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The direction to sort results: desc (newest first) or asc (oldest first).
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of customers to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of customer records to return. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_saved_replies: {
+					groups: {
+						/**
+						 * Saved Replies
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Saved Replies
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List saved replies for a mailbox
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of saved reply templates for a specific mailbox. Saved replies are pre-written response templates that agents can use to quickly respond to common questions.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						mailboxId: {
+							/**
+							 * Mailbox
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The mailbox to list saved replies from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the mailbox whose saved replies you want to retrieve. Saved replies are specific to each mailbox.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of saved replies to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of saved reply records to return. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_customer: {
+					groups: {
+						/**
+						 * Customers
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * New Customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new customer is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new customer is created in Help Scout. It provides the full customer profile including contact information, organization, and custom fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+					}
+				}
+				updated_customer: {
+					groups: {
+						/**
+						 * Customers
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Updated Customer
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a customer is updated
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a customer profile is updated in Help Scout. It provides the updated customer data including any changed fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+					}
+				}
+				new_organization: {
+					groups: {
+						/**
+						 * Organizations
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * New Organization
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new organization is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new organization is created in Help Scout. Organizations help group customers from the same company.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+					}
+				}
+				new_conversation: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * New Conversation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new conversation is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new conversation (support ticket) is created in Help Scout. You can optionally filter by mailbox to only receive events from specific inboxes.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						mailboxId: {
+							/**
+							 * Mailbox
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by mailbox
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter to only trigger for conversations in a specific mailbox. Leave empty to trigger for all mailboxes.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				assigned_conversation: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Assigned Conversation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a conversation is assigned
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a conversation is assigned to a user in Help Scout. This includes both new assignments and reassignments.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						mailboxId: {
+							/**
+							 * Mailbox
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by mailbox
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter to only trigger for conversations in a specific mailbox. Leave empty to trigger for all mailboxes.
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}

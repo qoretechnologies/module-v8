@@ -43,6 +43,7 @@ import GoogleForms from './apps/GoogleForms';
 import GoogleMeet from './apps/GoogleMeet';
 import GoogleSheets from './apps/GoogleSheets';
 import GoogleTasks from './apps/GoogleTasks';
+import HelpScout from './apps/HelpScout';
 import Hubspot from './apps/Hubspot';
 import HuggingFace from './apps/HuggingFace';
 import Intercom from './apps/Intercom';
@@ -143,6 +144,7 @@ const en = {
     Typeform,
     DocusignESignature,
     Zendesk,
+    HelpScout,
     Hubspot,
     Dropbox,
     NetSuite,
