@@ -1,7 +1,12 @@
 import { TQoreAppActionOption, TQoreGetRecordTypeFunction } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { NotionError } from '../../constants';
-import { createNotionClient, getNotionDataSourceByTitle, NotionFieldMapping } from '../constants';
+import {
+  createNotionClient,
+  DatabasePropertyConfigResponse,
+  getNotionDataSourceByTitle,
+  NotionFieldMapping,
+} from '../constants';
 
 export const getNotionRecordType: TQoreGetRecordTypeFunction = async (context, tableName) => {
   const { token } = getQoreContextRequiredValues({
@@ -56,7 +61,9 @@ export const getNotionRecordType: TQoreGetRecordTypeFunction = async (context, t
             }),
         };
       } else {
-        fields[property.name] = NotionFieldMapping[property.type].buildQoreType(property);
+        fields[property.name] = NotionFieldMapping[property.type].buildQoreType(
+          property as DatabasePropertyConfigResponse
+        );
       }
     }
 

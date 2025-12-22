@@ -6,7 +6,11 @@ import {
 import { omit } from 'lodash';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { NotionError } from '../constants';
-import { createNotionClient, NotionFieldMapping } from './constants';
+import {
+  createNotionClient,
+  DatabasePropertyConfigResponse,
+  NotionFieldMapping,
+} from './constants';
 
 export const getNotionDataSourceProperties: TQoreGetDynamicTypeFunction = async (context) => {
   const { token, data_source_id } = getQoreContextRequiredValues({
@@ -65,7 +69,9 @@ export const getNotionDataSourceProperties: TQoreGetDynamicTypeFunction = async 
             }),
         };
       } else {
-        fields[property.name] = NotionFieldMapping[property.type].buildQoreType(property);
+        fields[property.name] = NotionFieldMapping[property.type].buildQoreType(
+          property as DatabasePropertyConfigResponse
+        );
       }
     }
 
@@ -140,9 +146,12 @@ export const getNotionDataSourceResponseType: TQoreGetDynamicResponseTypeFunctio
           type: 'string',
         };
       } else {
-        fields[property.name] = omit(NotionFieldMapping[property.type].buildQoreType(property), [
-          'allowed_values',
-        ]) as TQoreAppActionOption;
+        fields[property.name] = omit(
+          NotionFieldMapping[property.type].buildQoreType(
+            property as DatabasePropertyConfigResponse
+          ),
+          ['allowed_values']
+        ) as TQoreAppActionOption;
       }
     }
 

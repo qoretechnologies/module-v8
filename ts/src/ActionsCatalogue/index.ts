@@ -101,6 +101,7 @@ import { Locales } from '../i18n/i18n-types';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import sendgrid from '../apps/sendgrid';
+import helpscout from '../apps/helpscout';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -159,6 +160,7 @@ const NEW_APPS = {
   googleMeet,
   googleSheets,
   googleTasks,
+  helpscout,
   hubspot,
   huggingFace,
   intercom,

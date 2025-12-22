@@ -252,7 +252,7 @@ type DatabasePropertyConfigResponseCommon = {
   name: string;
   description: string | null;
 };
-type DatabasePropertyConfigResponse = DatabasePropertyConfigResponseCommon &
+export type DatabasePropertyConfigResponse = DatabasePropertyConfigResponseCommon &
   (
     | NumberDatabasePropertyConfigResponse
     | FormulaDatabasePropertyConfigResponse
