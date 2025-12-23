@@ -155,8 +155,7 @@ const HelpScoutAppEn = {
         phoneType: {
           displayName: 'Phone Type',
           shortDesc: 'The type of phone number',
-          longDesc:
-            'Categorize the phone number type: work, home, mobile, fax, pager, or other.',
+          longDesc: 'Categorize the phone number type: work, home, mobile, fax, pager, or other.',
         },
         jobTitle: {
           displayName: 'Job Title',
@@ -231,7 +230,8 @@ const HelpScoutAppEn = {
         background: {
           displayName: 'Background',
           shortDesc: 'The new background notes',
-          longDesc: 'Update the internal background notes about the customer. Maximum 200 characters.',
+          longDesc:
+            'Update the internal background notes about the customer. Maximum 200 characters.',
         },
         gender: {
           displayName: 'Gender',
@@ -255,8 +255,7 @@ const HelpScoutAppEn = {
         conversationId: {
           displayName: 'Conversation',
           shortDesc: 'The conversation to reply to',
-          longDesc:
-            'Select or enter the ID of the conversation you want to reply to.',
+          longDesc: 'Select or enter the ID of the conversation you want to reply to.',
         },
         customerId: {
           displayName: 'Customer',
@@ -318,50 +317,42 @@ const HelpScoutAppEn = {
         mailbox: {
           displayName: 'Mailbox',
           shortDesc: 'Filter by mailbox',
-          longDesc:
-            'Only return customers associated with conversations in this mailbox.',
+          longDesc: 'Only return customers associated with conversations in this mailbox.',
         },
         firstName: {
           displayName: 'First Name',
           shortDesc: 'Filter by first name',
-          longDesc:
-            'Only return customers with this first name.',
+          longDesc: 'Only return customers with this first name.',
         },
         lastName: {
           displayName: 'Last Name',
           shortDesc: 'Filter by last name',
-          longDesc:
-            'Only return customers with this last name.',
+          longDesc: 'Only return customers with this last name.',
         },
         email: {
           displayName: 'Email',
           shortDesc: 'Filter by email address',
-          longDesc:
-            'Only return customers with this email address.',
+          longDesc: 'Only return customers with this email address.',
         },
         modifiedSince: {
           displayName: 'Modified Since',
           shortDesc: 'Filter by modification date',
-          longDesc:
-            'Only return customers modified on or after this date.',
+          longDesc: 'Only return customers modified on or after this date.',
         },
         sortField: {
           displayName: 'Sort Field',
           shortDesc: 'Field to sort by',
-          longDesc:
-            'The field to sort results by: createdAt, firstName, lastName, or modifiedAt.',
+          longDesc: 'The field to sort results by: createdAt, firstName, lastName, or modifiedAt.',
         },
         sortOrder: {
           displayName: 'Sort Order',
           shortDesc: 'Sort order direction',
-          longDesc:
-            'The direction to sort results: desc (newest first) or asc (oldest first).',
+          longDesc: 'The direction to sort results: desc (newest first) or asc (oldest first).',
         },
         limit: {
           displayName: 'Limit',
           shortDesc: 'Maximum number of customers to return',
-          longDesc:
-            'The maximum number of customer records to return. Default is 50.',
+          longDesc: 'The maximum number of customer records to return. Default is 50.',
         },
       },
     },
@@ -375,8 +366,7 @@ const HelpScoutAppEn = {
         mailbox: {
           displayName: 'Mailbox',
           shortDesc: 'Filter by mailbox',
-          longDesc:
-            'Only return conversations from this mailbox.',
+          longDesc: 'Only return conversations from this mailbox.',
         },
         status: {
           displayName: 'Status',
@@ -387,8 +377,7 @@ const HelpScoutAppEn = {
         assignedTo: {
           displayName: 'Assigned To',
           shortDesc: 'Filter by assignee',
-          longDesc:
-            'Only return conversations assigned to this user.',
+          longDesc: 'Only return conversations assigned to this user.',
         },
         tag: {
           displayName: 'Tag',
@@ -399,8 +388,7 @@ const HelpScoutAppEn = {
         modifiedSince: {
           displayName: 'Modified Since',
           shortDesc: 'Filter by modification date',
-          longDesc:
-            'Only return conversations modified on or after this date.',
+          longDesc: 'Only return conversations modified on or after this date.',
         },
         sortField: {
           displayName: 'Sort Field',
@@ -411,8 +399,7 @@ const HelpScoutAppEn = {
         sortOrder: {
           displayName: 'Sort Order',
           shortDesc: 'Sort order direction',
-          longDesc:
-            'The direction to sort results: desc (newest first) or asc (oldest first).',
+          longDesc: 'The direction to sort results: desc (newest first) or asc (oldest first).',
         },
         query: {
           displayName: 'Query',
@@ -423,8 +410,7 @@ const HelpScoutAppEn = {
         limit: {
           displayName: 'Limit',
           shortDesc: 'Maximum number of conversations to return',
-          longDesc:
-            'The maximum number of conversation records to return. Default is 50.',
+          longDesc: 'The maximum number of conversation records to return. Default is 50.',
         },
       },
     },
@@ -453,20 +439,17 @@ const HelpScoutAppEn = {
         email: {
           displayName: 'Email',
           shortDesc: 'Filter by email address',
-          longDesc:
-            'Only return users with this exact email address.',
+          longDesc: 'Only return users with this exact email address.',
         },
         mailbox: {
           displayName: 'Mailbox',
           shortDesc: 'Filter by mailbox',
-          longDesc:
-            'Only return users associated with this mailbox.',
+          longDesc: 'Only return users associated with this mailbox.',
         },
         limit: {
           displayName: 'Limit',
           shortDesc: 'Maximum number of users to return',
-          longDesc:
-            'The maximum number of user records to return. Default is 50.',
+          longDesc: 'The maximum number of user records to return. Default is 50.',
         },
       },
     },
@@ -480,14 +463,12 @@ const HelpScoutAppEn = {
         start: {
           displayName: 'Start Date',
           shortDesc: 'Start of the reporting period',
-          longDesc:
-            'The start date and time for the reporting period in ISO 8601 format.',
+          longDesc: 'The start date and time for the reporting period in ISO 8601 format.',
         },
         end: {
           displayName: 'End Date',
           shortDesc: 'End of the reporting period',
-          longDesc:
-            'The end date and time for the reporting period in ISO 8601 format.',
+          longDesc: 'The end date and time for the reporting period in ISO 8601 format.',
         },
         previousStart: {
           displayName: 'Previous Start',
@@ -504,26 +485,22 @@ const HelpScoutAppEn = {
         mailboxes: {
           displayName: 'Mailboxes',
           shortDesc: 'Filter by mailbox IDs',
-          longDesc:
-            'Comma-separated list of mailbox IDs to filter the report by.',
+          longDesc: 'Comma-separated list of mailbox IDs to filter the report by.',
         },
         tags: {
           displayName: 'Tags',
           shortDesc: 'Filter by tag IDs',
-          longDesc:
-            'Comma-separated list of tag IDs to filter the report by.',
+          longDesc: 'Comma-separated list of tag IDs to filter the report by.',
         },
         types: {
           displayName: 'Types',
           shortDesc: 'Filter by conversation types',
-          longDesc:
-            'Filter by conversation type: email, chat, or phone.',
+          longDesc: 'Filter by conversation type: email, chat, or phone.',
         },
         folders: {
           displayName: 'Folders',
           shortDesc: 'Filter by folder IDs',
-          longDesc:
-            'Comma-separated list of folder IDs to filter the report by.',
+          longDesc: 'Comma-separated list of folder IDs to filter the report by.',
         },
       },
     },
@@ -537,14 +514,12 @@ const HelpScoutAppEn = {
         start: {
           displayName: 'Start Date',
           shortDesc: 'Start of the reporting period',
-          longDesc:
-            'The start date and time for the reporting period in ISO 8601 format.',
+          longDesc: 'The start date and time for the reporting period in ISO 8601 format.',
         },
         end: {
           displayName: 'End Date',
           shortDesc: 'End of the reporting period',
-          longDesc:
-            'The end date and time for the reporting period in ISO 8601 format.',
+          longDesc: 'The end date and time for the reporting period in ISO 8601 format.',
         },
         previousStart: {
           displayName: 'Previous Start',
@@ -561,20 +536,17 @@ const HelpScoutAppEn = {
         mailboxes: {
           displayName: 'Mailboxes',
           shortDesc: 'Filter by mailbox IDs',
-          longDesc:
-            'Comma-separated list of mailbox IDs to filter the report by.',
+          longDesc: 'Comma-separated list of mailbox IDs to filter the report by.',
         },
         tags: {
           displayName: 'Tags',
           shortDesc: 'Filter by tag IDs',
-          longDesc:
-            'Comma-separated list of tag IDs to filter the report by.',
+          longDesc: 'Comma-separated list of tag IDs to filter the report by.',
         },
         folders: {
           displayName: 'Folders',
           shortDesc: 'Filter by folder IDs',
-          longDesc:
-            'Comma-separated list of folder IDs to filter the report by.',
+          longDesc: 'Comma-separated list of folder IDs to filter the report by.',
         },
         officeHours: {
           displayName: 'Office Hours',
@@ -594,8 +566,7 @@ const HelpScoutAppEn = {
         conversationId: {
           displayName: 'Conversation',
           shortDesc: 'The conversation to retrieve',
-          longDesc:
-            'Select or enter the ID of the conversation you want to retrieve.',
+          longDesc: 'Select or enter the ID of the conversation you want to retrieve.',
         },
       },
     },
@@ -609,8 +580,7 @@ const HelpScoutAppEn = {
         conversationId: {
           displayName: 'Conversation',
           shortDesc: 'The conversation to update',
-          longDesc:
-            'Select or enter the ID of the conversation you want to update.',
+          longDesc: 'Select or enter the ID of the conversation you want to update.',
         },
         subject: {
           displayName: 'Subject',
@@ -627,8 +597,7 @@ const HelpScoutAppEn = {
         assignTo: {
           displayName: 'Assign To',
           shortDesc: 'Assign to a user',
-          longDesc:
-            'Assign or reassign the conversation to a specific Help Scout user.',
+          longDesc: 'Assign or reassign the conversation to a specific Help Scout user.',
         },
       },
     },
@@ -642,8 +611,7 @@ const HelpScoutAppEn = {
         conversationId: {
           displayName: 'Conversation',
           shortDesc: 'The conversation to delete',
-          longDesc:
-            'Select or enter the ID of the conversation you want to delete.',
+          longDesc: 'Select or enter the ID of the conversation you want to delete.',
         },
       },
     },
@@ -657,8 +625,7 @@ const HelpScoutAppEn = {
         conversationId: {
           displayName: 'Conversation',
           shortDesc: 'The conversation to add tags to',
-          longDesc:
-            'Select or enter the ID of the conversation you want to add tags to.',
+          longDesc: 'Select or enter the ID of the conversation you want to add tags to.',
         },
         tags: {
           displayName: 'Tags',
@@ -684,8 +651,7 @@ const HelpScoutAppEn = {
         limit: {
           displayName: 'Limit',
           shortDesc: 'Maximum number of threads to return',
-          longDesc:
-            'The maximum number of thread records to return. Default is 50.',
+          longDesc: 'The maximum number of thread records to return. Default is 50.',
         },
       },
     },
@@ -699,14 +665,12 @@ const HelpScoutAppEn = {
         conversationId: {
           displayName: 'Conversation',
           shortDesc: 'The conversation containing the thread',
-          longDesc:
-            'Select or enter the ID of the conversation that contains the thread.',
+          longDesc: 'Select or enter the ID of the conversation that contains the thread.',
         },
         threadId: {
           displayName: 'Thread ID',
           shortDesc: 'The thread to retrieve',
-          longDesc:
-            'Enter the ID of the specific thread you want to retrieve.',
+          longDesc: 'Enter the ID of the specific thread you want to retrieve.',
         },
       },
     },
@@ -720,8 +684,7 @@ const HelpScoutAppEn = {
         customerId: {
           displayName: 'Customer',
           shortDesc: 'The customer to retrieve',
-          longDesc:
-            'Select or enter the ID of the customer whose profile you want to retrieve.',
+          longDesc: 'Select or enter the ID of the customer whose profile you want to retrieve.',
         },
       },
     },
@@ -735,8 +698,7 @@ const HelpScoutAppEn = {
         customerId: {
           displayName: 'Customer',
           shortDesc: 'The customer to delete',
-          longDesc:
-            'Select or enter the ID of the customer you want to delete.',
+          longDesc: 'Select or enter the ID of the customer you want to delete.',
         },
       },
     },
@@ -756,20 +718,17 @@ const HelpScoutAppEn = {
         sortField: {
           displayName: 'Sort Field',
           shortDesc: 'Field to sort by',
-          longDesc:
-            'The field to sort results by: createdAt, firstName, lastName, or modifiedAt.',
+          longDesc: 'The field to sort results by: createdAt, firstName, lastName, or modifiedAt.',
         },
         sortOrder: {
           displayName: 'Sort Order',
           shortDesc: 'Sort order direction',
-          longDesc:
-            'The direction to sort results: desc (newest first) or asc (oldest first).',
+          longDesc: 'The direction to sort results: desc (newest first) or asc (oldest first).',
         },
         limit: {
           displayName: 'Limit',
           shortDesc: 'Maximum number of customers to return',
-          longDesc:
-            'The maximum number of customer records to return. Default is 50.',
+          longDesc: 'The maximum number of customer records to return. Default is 50.',
         },
       },
     },
@@ -789,11 +748,12 @@ const HelpScoutAppEn = {
         limit: {
           displayName: 'Limit',
           shortDesc: 'Maximum number of saved replies to return',
-          longDesc:
-            'The maximum number of saved reply records to return. Default is 50.',
+          longDesc: 'The maximum number of saved reply records to return. Default is 50.',
         },
       },
     },
+  },
+  triggers: {
     new_customer: {
       groups: ['Customers'],
       displayName: 'New Customer',

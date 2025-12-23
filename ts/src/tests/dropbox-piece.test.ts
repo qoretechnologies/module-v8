@@ -7,6 +7,9 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { validateResponseProperties } from './utils';
+import { configDotenv } from 'dotenv';
+
+configDotenv({ path: '.env' });
 
 describe('DropboxPieceTest', () => {
   let dropboxApp: TQoreAppWithActions | null = null;
@@ -386,7 +389,11 @@ describe('DropboxPieceTest', () => {
 
     if (actionFunction && folder) {
       try {
-        const result = await actionFunction({ query: folder.name }, undefined, actionContext);
+        const result = await actionFunction(
+          { query: folder.name, max_results: 10 },
+          undefined,
+          actionContext
+        );
         expect(result).toBeTruthy();
         const expectedResponseType = action.response_type;
 

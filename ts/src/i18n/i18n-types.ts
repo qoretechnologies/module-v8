@@ -71723,6 +71723,8 @@ type RootTranslation = {
 						}
 					}
 				}
+			}
+			triggers: {
 				new_customer: {
 					groups: {
 						/**
@@ -180599,6 +180601,8 @@ export type TranslationFunctions = {
 						}
 					}
 				}
+			}
+			triggers: {
 				new_customer: {
 					groups: {
 						/**
