@@ -7,6 +7,7 @@ import { AIRTABLE_APP_LOGO, AIRTABLE_APP_NAME } from './constants';
 import * as AIRTABLE_ACTIONS from './actions';
 import * as AIRTABLE_TRIGGERS from './triggers';
 import {
+  AirtableSearchOptions,
   createAirtableRecords,
   deleteAirtableRecords,
   getAirtableExpressions,
@@ -57,4 +58,5 @@ export default (locale: Locales) =>
     update_records: updateAirtableRecords,
     delete_records: deleteAirtableRecords,
     search_records: searchAirtableRecords,
+    search_options: AirtableSearchOptions,
   }) satisfies TQoreAppWithActions & TQoreRecordBasedApp;

@@ -30,7 +30,6 @@ export const deleteAirtableRecords: TQoreDeleteRecordsFunction = async (context,
   });
 
   const tableName = opts?.table;
-  const baseId = (opts?.baseId || opts?.base_id) as string | undefined;
 
   if (!tableName) {
     throw new AirtableError('Table name is required');
@@ -40,7 +39,6 @@ export const deleteAirtableRecords: TQoreDeleteRecordsFunction = async (context,
     const { baseId: resolvedBaseId, tableId } = await parseTableIdentifier({
       token,
       tableName,
-      baseId,
     });
 
     const params: Record<string, string> = {};

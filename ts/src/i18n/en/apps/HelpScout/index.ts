@@ -163,7 +163,7 @@ const HelpScoutAppEn = {
           shortDesc: 'The customer job title',
           longDesc: 'The job title or position of the customer. Maximum 60 characters.',
         },
-        organization: {
+        organizationId: {
           displayName: 'Organization',
           shortDesc: 'The customer company or organization',
           longDesc: 'The company or organization the customer belongs to.',

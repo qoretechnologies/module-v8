@@ -35,7 +35,6 @@ export const updateAirtableRecords: TQoreUpdateRecordsFunction = async (
   });
 
   const tableName = opts?.table;
-  const baseId = (opts?.baseId || opts?.base_id) as string | undefined;
 
   if (!tableName) {
     throw new AirtableError('Table name is required');
@@ -45,7 +44,6 @@ export const updateAirtableRecords: TQoreUpdateRecordsFunction = async (
     const { baseId: resolvedBaseId, tableId } = await parseTableIdentifier({
       token,
       tableName,
-      baseId,
     });
 
     const params: Record<string, string> = {};

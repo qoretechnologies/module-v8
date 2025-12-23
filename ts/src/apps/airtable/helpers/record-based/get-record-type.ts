@@ -11,13 +11,10 @@ export const getAirtableRecordType: TQoreGetRecordTypeFunction = async (context,
     ErrorClass: AirtableError,
   });
 
-  const baseId = context?.opts?.baseId || context?.opts?.base_id;
-
   try {
     const { table, baseId: resolvedBaseId } = await resolveTableWithMetadata({
       token,
       tableName,
-      baseId,
     });
 
     const fields = mapTableFieldsToOptions({

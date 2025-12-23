@@ -70205,7 +70205,7 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						organization: {
+						organizationId: {
 							/**
 							 * O​r​g​a​n​i​z​a​t​i​o​n
 							 */
@@ -179081,7 +179081,7 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						organization: {
+						organizationId: {
 							/**
 							 * Organization
 							 */

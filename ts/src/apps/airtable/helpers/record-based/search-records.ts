@@ -27,7 +27,6 @@ export const searchAirtableRecords: TQoreSearchRecordsFunction = async (ctx, whe
 
   const tableName = opts?.table;
   const limit = (opts?.limit as number) || AIRTABLE_MAX_PAGE_SIZE;
-  const baseId = (opts?.baseId || opts?.base_id) as string | undefined;
 
   if (!tableName) {
     throw new AirtableError('Table name is required in opts.table');
@@ -37,7 +36,6 @@ export const searchAirtableRecords: TQoreSearchRecordsFunction = async (ctx, whe
     const { baseId: resolvedBaseId, tableId } = await parseTableIdentifier({
       token,
       tableName,
-      baseId,
     });
 
     let filterByFormula: string | undefined;
