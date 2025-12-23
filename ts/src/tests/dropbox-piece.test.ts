@@ -6,7 +6,10 @@ import {
   TQoreFile,
 } from '@qoretechnologies/ts-toolkit';
 import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
-import { validateResponseProperties } from './utils';
+import { retry, validateResponseProperties } from './utils';
+import { configDotenv } from 'dotenv';
+
+configDotenv({ path: '.env' });
 
 describe('DropboxPieceTest', () => {
   let dropboxApp: TQoreAppWithActions | null = null;
@@ -378,28 +381,34 @@ describe('DropboxPieceTest', () => {
   });
 
   it('should search', async () => {
-    const action = dropboxApp!.actions.find(
-      (action) => action.action === 'search_dropbox'
-    ) as IQoreAppActionWithFunction;
+    retry(async () => {
+      const action = dropboxApp!.actions.find(
+        (action) => action.action === 'search_dropbox'
+      ) as IQoreAppActionWithFunction;
 
-    const actionFunction = action?.api_function;
+      const actionFunction = action?.api_function;
 
-    if (actionFunction && folder) {
-      try {
-        const result = await actionFunction({ query: folder.name }, undefined, actionContext);
-        expect(result).toBeTruthy();
-        const expectedResponseType = action.response_type;
+      if (actionFunction && folder) {
+        try {
+          const result = await actionFunction(
+            { query: folder.name, max_results: 10 },
+            undefined,
+            actionContext
+          );
+          expect(result).toBeTruthy();
+          const expectedResponseType = action.response_type;
 
-        if (expectedResponseType) {
-          validateResponseProperties(expectedResponseType, result);
+          if (expectedResponseType) {
+            validateResponseProperties(expectedResponseType, result);
+          }
+        } catch (error) {
+          console.error('Error searching', error);
+          throw error;
         }
-      } catch (error) {
-        console.error('Error searching', error);
-        throw error;
+      } else {
+        throw new Error('Action function not found');
       }
-    } else {
-      throw new Error('Action function not found');
-    }
+    });
   });
 
   it('should delete folder', async () => {

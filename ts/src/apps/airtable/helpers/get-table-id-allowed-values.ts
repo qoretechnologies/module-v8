@@ -6,6 +6,7 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { AIRTABLE_APP_NAME, AirtableError } from '../constants';
+import { Debugger } from '../../../utils/Debugger';
 
 type Table = {
   id: string;
@@ -48,7 +49,7 @@ export const getAirtableTableIdAllowedValues: TQoreGetAllowedValuesFunction<
       ...(response?.data.tables || []).map((table) => mapAirtableItemToAllowedValue(table))
     );
   } catch (error) {
-    console.error(`Failed to fetch tables: ${error}`);
+    Debugger.log(`Failed to fetch tables: ${error}`);
   }
 
   return items;

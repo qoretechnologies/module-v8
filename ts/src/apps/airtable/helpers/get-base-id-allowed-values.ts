@@ -5,6 +5,7 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
+import { Debugger } from '../../../utils/Debugger';
 import { AIRTABLE_APP_NAME, AirtableError } from '../constants';
 
 type Base = {
@@ -47,7 +48,8 @@ export const getAirtableBaseIdAllowedValues: TQoreGetAllowedValuesFunction<
 
     items.push(...(response?.data.bases || []).map((base) => mapAirtableItemToAllowedValue(base)));
   } catch (error) {
-    console.error(`Failed to fetch bases: ${error}`);
+
+    Debugger.log(`Failed to fetch bases: ${error}`);
   }
 
   return items;
