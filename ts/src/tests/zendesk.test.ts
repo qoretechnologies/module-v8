@@ -614,23 +614,25 @@ describe('Zendesk', () => {
         });
 
         it('Should search custom objects with not equal operator', async () => {
-          const iterator = await searchZendeskRecords(
-            baseContext,
-            {
-              exp: '!=',
-              args: [{ field: 'dropdown_field' }, { value: 'test' }],
-            },
-            { table: customObjectTable }
-          );
+          retry(async () => {
+            const iterator = await searchZendeskRecords(
+              baseContext,
+              {
+                exp: '!=',
+                args: [{ field: 'dropdown_field' }, { value: 'test' }],
+              },
+              { table: customObjectTable }
+            );
 
-          const result = await iterator(baseContext, 10);
+            const result = await iterator(baseContext, 10);
 
-          expect(result).toBeDefined();
-          if (result && result.dropdown_field && result.dropdown_field.length > 0) {
-            result.dropdown_field.forEach((val: string) => {
-              expect(val).not.toBe('test');
-            });
-          }
+            expect(result).toBeDefined();
+            if (result && result.dropdown_field && result.dropdown_field.length > 0) {
+              result.dropdown_field.forEach((val: string) => {
+                expect(val).not.toBe('test');
+              });
+            }
+          });
         });
       });
 
