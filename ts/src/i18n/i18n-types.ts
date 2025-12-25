@@ -76355,6 +76355,2188 @@ type RootTranslation = {
 				}
 			}
 		}
+		Front: {
+			/**
+			 * F​r​o​n​t
+			 */
+			displayName: string
+			groups: {
+				/**
+				 * C​u​s​t​o​m​e​r​ ​S​u​p​p​o​r​t
+				 */
+				'0': string
+				/**
+				 * C​o​m​m​u​n​i​c​a​t​i​o​n
+				 */
+				'1': string
+			}
+			connectionMessage: {
+				/**
+				 * O​A​u​t​h​ ​C​o​n​n​e​c​t​i​o​n
+				 */
+				title: string
+				/**
+				 * F​r​o​n​t​ ​u​s​e​s​ ​O​A​u​t​h​ ​2​.​0​ ​f​o​r​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​.​ ​Y​o​u​ ​w​i​l​l​ ​b​e​ ​r​e​d​i​r​e​c​t​e​d​ ​t​o​ ​F​r​o​n​t​ ​t​o​ ​a​u​t​h​o​r​i​z​e​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​a​c​c​o​u​n​t​.
+				 */
+				content: string
+			}
+			/**
+			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​F​r​o​n​t​ ​t​o​ ​m​a​n​a​g​e​ ​s​h​a​r​e​d​ ​i​n​b​o​x​e​s​,​ ​c​o​n​t​a​c​t​s​,​ ​a​n​d​ ​c​u​s​t​o​m​e​r​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​s
+			 */
+			shortDesc: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​F​r​o​n​t​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​t​e​a​m​ ​s​h​a​r​e​d​ ​i​n​b​o​x​e​s​,​ ​c​o​n​t​a​c​t​s​,​ ​a​c​c​o​u​n​t​s​,​ ​a​n​d​ ​c​u​s​t​o​m​e​r​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​.​ ​F​r​o​n​t​ ​i​s​ ​a​ ​c​u​s​t​o​m​e​r​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​ ​p​l​a​t​f​o​r​m​ ​t​h​a​t​ ​b​r​i​n​g​s​ ​e​m​a​i​l​ ​a​n​d​ ​m​e​s​s​a​g​i​n​g​ ​i​n​t​o​ ​a​ ​s​h​a​r​e​d​ ​i​n​b​o​x​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​e​n​a​b​l​e​s​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​c​o​n​t​a​c​t​ ​m​a​n​a​g​e​m​e​n​t​,​ ​o​r​g​a​n​i​z​e​ ​a​c​c​o​u​n​t​s​,​ ​a​n​d​ ​s​t​r​e​a​m​l​i​n​e​ ​t​e​a​m​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​.
+			 */
+			longDesc: string
+			actions: {
+				list_accounts: {
+					groups: {
+						/**
+						 * A​c​c​o​u​n​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​A​c​c​o​u​n​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​c​c​o​u​n​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​a​c​c​o​u​n​t​s​ ​i​n​ ​y​o​u​r​ ​F​r​o​n​t​ ​w​o​r​k​s​p​a​c​e​.​ ​A​c​c​o​u​n​t​s​ ​r​e​p​r​e​s​e​n​t​ ​c​o​m​p​a​n​i​e​s​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​s​ ​t​h​a​t​ ​y​o​u​r​ ​c​o​n​t​a​c​t​s​ ​b​e​l​o​n​g​ ​t​o​.​ ​U​s​e​ ​a​c​c​o​u​n​t​s​ ​t​o​ ​g​r​o​u​p​ ​c​o​n​t​a​c​t​s​ ​a​n​d​ ​t​r​a​c​k​ ​i​n​t​e​r​a​c​t​i​o​n​s​ ​a​t​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​l​e​v​e​l​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​a​c​c​o​u​n​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​a​c​c​o​u​n​t​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.​ ​U​s​e​ ​p​a​g​i​n​a​t​i​o​n​ ​f​o​r​ ​l​a​r​g​e​r​ ​d​a​t​a​s​e​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_account: {
+					groups: {
+						/**
+						 * A​c​c​o​u​n​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​A​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​i​n​g​l​e​ ​a​c​c​o​u​n​t​ ​b​y​ ​I​D
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​t​h​e​ ​f​u​l​l​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​a​c​c​o​u​n​t​ ​f​r​o​m​ ​F​r​o​n​t​ ​b​y​ ​i​t​s​ ​I​D​.​ ​R​e​t​u​r​n​s​ ​a​l​l​ ​a​c​c​o​u​n​t​ ​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​d​o​m​a​i​n​s​,​ ​e​x​t​e​r​n​a​l​ ​I​D​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						accountId: {
+							/**
+							 * A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​c​c​o​u​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​A​c​c​o​u​n​t​ ​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​a​c​c​_​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_account: {
+					groups: {
+						/**
+						 * A​c​c​o​u​n​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * C​r​e​a​t​e​ ​A​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​a​c​c​o​u​n​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​a​c​c​o​u​n​t​ ​i​n​ ​F​r​o​n​t​.​ ​A​c​c​o​u​n​t​s​ ​r​e​p​r​e​s​e​n​t​ ​c​o​m​p​a​n​i​e​s​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​s​ ​a​n​d​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​t​o​ ​g​r​o​u​p​ ​r​e​l​a​t​e​d​ ​c​o​n​t​a​c​t​s​ ​t​o​g​e​t​h​e​r​.​ ​Y​o​u​ ​c​a​n​ ​a​s​s​o​c​i​a​t​e​ ​d​o​m​a​i​n​s​ ​w​i​t​h​ ​a​c​c​o​u​n​t​s​ ​t​o​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​l​i​n​k​ ​c​o​n​t​a​c​t​s​.
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​c​c​o​u​n​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​,​ ​t​y​p​i​c​a​l​l​y​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e​.​ ​T​h​i​s​ ​i​s​ ​a​ ​r​e​q​u​i​r​e​d​ ​f​i​e​l​d​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​p​r​o​v​i​d​i​n​g​ ​a​d​d​i​t​i​o​n​a​l​ ​c​o​n​t​e​x​t​ ​a​b​o​u​t​ ​t​h​e​ ​a​c​c​o​u​n​t​,​ ​s​u​c​h​ ​a​s​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​b​u​s​i​n​e​s​s​ ​o​r​ ​r​e​l​a​t​i​o​n​s​h​i​p​.
+							 */
+							longDesc: string
+						}
+						domains: {
+							/**
+							 * D​o​m​a​i​n​s
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​d​o​m​a​i​n​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​a​c​c​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​d​o​m​a​i​n​s​ ​(​e​.​g​.​,​ ​"​e​x​a​m​p​l​e​.​c​o​m​"​)​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​a​c​c​o​u​n​t​.​ ​C​o​n​t​a​c​t​s​ ​w​i​t​h​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​f​r​o​m​ ​t​h​e​s​e​ ​d​o​m​a​i​n​s​ ​c​a​n​ ​b​e​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​l​i​n​k​e​d​ ​t​o​ ​t​h​e​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+						externalId: {
+							/**
+							 * E​x​t​e​r​n​a​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * E​x​t​e​r​n​a​l​ ​s​y​s​t​e​m​ ​i​d​e​n​t​i​f​i​e​r
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​e​x​t​e​r​n​a​l​ ​I​D​ ​t​o​ ​l​i​n​k​ ​t​h​i​s​ ​a​c​c​o​u​n​t​ ​t​o​ ​a​ ​r​e​c​o​r​d​ ​i​n​ ​a​n​o​t​h​e​r​ ​s​y​s​t​e​m​,​ ​s​u​c​h​ ​a​s​ ​a​ ​C​R​M​ ​o​r​ ​b​i​l​l​i​n​g​ ​p​l​a​t​f​o​r​m​.
+							 */
+							longDesc: string
+						}
+						customFields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​b​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​a​c​c​o​u​n​t​.​ ​T​h​e​ ​k​e​y​s​ ​s​h​o​u​l​d​ ​m​a​t​c​h​ ​y​o​u​r​ ​c​o​n​f​i​g​u​r​e​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​n​a​m​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_account: {
+					groups: {
+						/**
+						 * A​c​c​o​u​n​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * U​p​d​a​t​e​ ​A​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​a​c​c​o​u​n​t
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​p​r​o​p​e​r​t​i​e​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​a​c​c​o​u​n​t​ ​i​n​ ​F​r​o​n​t​.​ ​Y​o​u​ ​c​a​n​ ​m​o​d​i​f​y​ ​t​h​e​ ​n​a​m​e​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​d​o​m​a​i​n​s​,​ ​e​x​t​e​r​n​a​l​ ​I​D​,​ ​o​r​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.​ ​A​t​ ​l​e​a​s​t​ ​o​n​e​ ​f​i​e​l​d​ ​m​u​s​t​ ​b​e​ ​p​r​o​v​i​d​e​d​ ​t​o​ ​u​p​d​a​t​e​.
+					 */
+					longDesc: string
+					options: {
+						accountId: {
+							/**
+							 * A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​a​c​c​o​u​n​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+						domains: {
+							/**
+							 * D​o​m​a​i​n​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​l​i​s​t​ ​o​f​ ​d​o​m​a​i​n​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​d​o​m​a​i​n​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​a​c​c​o​u​n​t​.​ ​T​h​i​s​ ​w​i​l​l​ ​r​e​p​l​a​c​e​ ​t​h​e​ ​e​x​i​s​t​i​n​g​ ​d​o​m​a​i​n​s​.
+							 */
+							longDesc: string
+						}
+						externalId: {
+							/**
+							 * E​x​t​e​r​n​a​l​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​e​x​t​e​r​n​a​l​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​e​x​t​e​r​n​a​l​ ​s​y​s​t​e​m​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​i​s​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+						customFields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_account: {
+					groups: {
+						/**
+						 * A​c​c​o​u​n​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * D​e​l​e​t​e​ ​A​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​n​ ​a​c​c​o​u​n​t
+					 */
+					shortDesc: string
+					/**
+					 * D​e​l​e​t​e​ ​a​n​ ​a​c​c​o​u​n​t​ ​f​r​o​m​ ​F​r​o​n​t​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​i​s​ ​p​e​r​m​a​n​e​n​t​.​ ​C​o​n​t​a​c​t​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​w​i​l​l​ ​n​o​t​ ​b​e​ ​d​e​l​e​t​e​d​ ​b​u​t​ ​w​i​l​l​ ​n​o​ ​l​o​n​g​e​r​ ​b​e​ ​l​i​n​k​e​d​ ​t​o​ ​t​h​i​s​ ​a​c​c​o​u​n​t​.
+					 */
+					longDesc: string
+					options: {
+						accountId: {
+							/**
+							 * A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​c​c​o​u​n​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_account_contacts: {
+					groups: {
+						/**
+						 * A​c​c​o​u​n​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​A​c​c​o​u​n​t​ ​C​o​n​t​a​c​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​c​o​n​t​a​c​t​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​n​ ​a​c​c​o​u​n​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​c​o​n​t​a​c​t​s​ ​t​h​a​t​ ​a​r​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​a​c​c​o​u​n​t​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​y​o​u​ ​s​e​e​ ​a​l​l​ ​t​h​e​ ​p​e​o​p​l​e​ ​f​r​o​m​ ​a​ ​p​a​r​t​i​c​u​l​a​r​ ​c​o​m​p​a​n​y​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						accountId: {
+							/**
+							 * A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​c​c​o​u​n​t​ ​t​o​ ​l​i​s​t​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​w​h​o​s​e​ ​c​o​n​t​a​c​t​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_contact_to_account: {
+					groups: {
+						/**
+						 * A​c​c​o​u​n​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * A​d​d​ ​C​o​n​t​a​c​t​ ​t​o​ ​A​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​a​n​ ​a​c​c​o​u​n​t
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​a​n​ ​a​c​c​o​u​n​t​ ​i​n​ ​F​r​o​n​t​.​ ​T​h​i​s​ ​c​r​e​a​t​e​s​ ​a​n​ ​a​s​s​o​c​i​a​t​i​o​n​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​c​o​n​t​a​c​t​s​ ​a​n​d​ ​t​h​e​ ​a​c​c​o​u​n​t​,​ ​h​e​l​p​i​n​g​ ​y​o​u​ ​o​r​g​a​n​i​z​e​ ​c​o​n​t​a​c​t​s​ ​b​y​ ​c​o​m​p​a​n​y​ ​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						accountId: {
+							/**
+							 * A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​c​c​o​u​n​t​ ​t​o​ ​a​d​d​ ​c​o​n​t​a​c​t​s​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​c​o​n​t​a​c​t​s​.
+							 */
+							longDesc: string
+						}
+						contactIds: {
+							/**
+							 * C​o​n​t​a​c​t​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​a​c​c​o​u​n​t​.​ ​C​o​n​t​a​c​t​ ​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​c​r​d​_​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				remove_contact_from_account: {
+					groups: {
+						/**
+						 * A​c​c​o​u​n​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * R​e​m​o​v​e​ ​C​o​n​t​a​c​t​ ​f​r​o​m​ ​A​c​c​o​u​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​a​n​ ​a​c​c​o​u​n​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​a​n​ ​a​c​c​o​u​n​t​ ​i​n​ ​F​r​o​n​t​.​ ​T​h​i​s​ ​r​e​m​o​v​e​s​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​c​o​n​t​a​c​t​s​ ​a​n​d​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​b​u​t​ ​d​o​e​s​ ​n​o​t​ ​d​e​l​e​t​e​ ​t​h​e​ ​c​o​n​t​a​c​t​s​ ​t​h​e​m​s​e​l​v​e​s​.
+					 */
+					longDesc: string
+					options: {
+						accountId: {
+							/**
+							 * A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​c​c​o​u​n​t​ ​t​o​ ​r​e​m​o​v​e​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​f​r​o​m​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​m​o​v​e​ ​c​o​n​t​a​c​t​s​.
+							 */
+							longDesc: string
+						}
+						contactIds: {
+							/**
+							 * C​o​n​t​a​c​t​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_contacts: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​C​o​n​t​a​c​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​c​o​n​t​a​c​t​s​ ​i​n​ ​y​o​u​r​ ​F​r​o​n​t​ ​w​o​r​k​s​p​a​c​e​.​ ​C​o​n​t​a​c​t​s​ ​r​e​p​r​e​s​e​n​t​ ​t​h​e​ ​p​e​o​p​l​e​ ​y​o​u​ ​c​o​m​m​u​n​i​c​a​t​e​ ​w​i​t​h​.​ ​R​e​s​u​l​t​s​ ​c​a​n​ ​b​e​ ​s​o​r​t​e​d​ ​b​y​ ​c​r​e​a​t​i​o​n​ ​o​r​ ​u​p​d​a​t​e​ ​d​a​t​e​.
+					 */
+					longDesc: string
+					options: {
+						sortBy: {
+							/**
+							 * S​o​r​t​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​:​ ​c​r​e​a​t​e​d​_​a​t​ ​o​r​ ​u​p​d​a​t​e​d​_​a​t​.
+							 */
+							longDesc: string
+						}
+						sortOrder: {
+							/**
+							 * S​o​r​t​ ​O​r​d​e​r
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​r​d​e​r​ ​d​i​r​e​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​:​ ​d​e​s​c​ ​(​n​e​w​e​s​t​ ​f​i​r​s​t​)​ ​o​r​ ​a​s​c​ ​(​o​l​d​e​s​t​ ​f​i​r​s​t​)​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_contact: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​i​n​g​l​e​ ​c​o​n​t​a​c​t​ ​b​y​ ​I​D
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​t​h​e​ ​f​u​l​l​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​F​r​o​n​t​ ​b​y​ ​t​h​e​i​r​ ​I​D​.​ ​R​e​t​u​r​n​s​ ​a​l​l​ ​c​o​n​t​a​c​t​ ​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​h​a​n​d​l​e​s​ ​(​e​m​a​i​l​,​ ​p​h​o​n​e​,​ ​e​t​c​.​)​,​ ​g​r​o​u​p​s​,​ ​l​i​n​k​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						contactId: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​C​o​n​t​a​c​t​ ​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​c​r​d​_​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_contact: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * C​r​e​a​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​n​ ​F​r​o​n​t​.​ ​C​o​n​t​a​c​t​s​ ​r​e​p​r​e​s​e​n​t​ ​t​h​e​ ​p​e​o​p​l​e​ ​y​o​u​ ​c​o​m​m​u​n​i​c​a​t​e​ ​w​i​t​h​.​ ​A​ ​c​o​n​t​a​c​t​ ​m​u​s​t​ ​h​a​v​e​ ​a​t​ ​l​e​a​s​t​ ​o​n​e​ ​h​a​n​d​l​e​ ​(​e​m​a​i​l​,​ ​p​h​o​n​e​,​ ​e​t​c​.​)​ ​t​o​ ​b​e​ ​c​r​e​a​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.​ ​T​h​i​s​ ​i​s​ ​o​p​t​i​o​n​a​l​ ​b​u​t​ ​r​e​c​o​m​m​e​n​d​e​d​ ​f​o​r​ ​e​a​s​i​e​r​ ​i​d​e​n​t​i​f​i​c​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​n​o​t​e​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​o​n​t​a​c​t​.​ ​T​h​i​s​ ​c​a​n​ ​i​n​c​l​u​d​e​ ​a​n​y​ ​r​e​l​e​v​a​n​t​ ​c​o​n​t​e​x​t​ ​a​b​o​u​t​ ​t​h​e​ ​p​e​r​s​o​n​.
+							 */
+							longDesc: string
+						}
+						handles: {
+							/**
+							 * H​a​n​d​l​e​s
+							 */
+							displayName: string
+							/**
+							 * C​o​n​t​a​c​t​ ​h​a​n​d​l​e​s​ ​(​e​m​a​i​l​,​ ​p​h​o​n​e​,​ ​e​t​c​.​)
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​h​a​n​d​l​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.​ ​E​a​c​h​ ​h​a​n​d​l​e​ ​c​o​n​s​i​s​t​s​ ​o​f​ ​a​ ​h​a​n​d​l​e​ ​v​a​l​u​e​ ​(​e​.​g​.​,​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​)​ ​a​n​d​ ​a​ ​s​o​u​r​c​e​ ​t​y​p​e​ ​(​e​m​a​i​l​,​ ​p​h​o​n​e​,​ ​t​w​i​t​t​e​r​,​ ​e​t​c​.​)​.​ ​A​t​ ​l​e​a​s​t​ ​o​n​e​ ​h​a​n​d​l​e​ ​i​s​ ​r​e​q​u​i​r​e​d​.
+							 */
+							longDesc: string
+						}
+						links: {
+							/**
+							 * L​i​n​k​s
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​U​R​L​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​U​R​L​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​c​o​n​t​a​c​t​,​ ​s​u​c​h​ ​a​s​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​s​ ​o​r​ ​c​o​m​p​a​n​y​ ​w​e​b​s​i​t​e​s​.
+							 */
+							longDesc: string
+						}
+						groupNames: {
+							/**
+							 * G​r​o​u​p​ ​N​a​m​e​s
+							 */
+							displayName: string
+							/**
+							 * G​r​o​u​p​s​ ​t​o​ ​a​d​d​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​g​r​o​u​p​ ​n​a​m​e​s​ ​t​o​ ​a​d​d​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o​.​ ​G​r​o​u​p​s​ ​h​e​l​p​ ​o​r​g​a​n​i​z​e​ ​c​o​n​t​a​c​t​s​ ​i​n​t​o​ ​c​a​t​e​g​o​r​i​e​s​.
+							 */
+							longDesc: string
+						}
+						customFields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​b​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.​ ​T​h​e​ ​k​e​y​s​ ​s​h​o​u​l​d​ ​m​a​t​c​h​ ​y​o​u​r​ ​c​o​n​f​i​g​u​r​e​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​n​a​m​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_contact: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * U​p​d​a​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​p​r​o​p​e​r​t​i​e​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​ ​i​n​ ​F​r​o​n​t​.​ ​Y​o​u​ ​c​a​n​ ​m​o​d​i​f​y​ ​t​h​e​ ​n​a​m​e​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​l​i​n​k​s​,​ ​o​r​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.​ ​A​t​ ​l​e​a​s​t​ ​o​n​e​ ​f​i​e​l​d​ ​m​u​s​t​ ​b​e​ ​p​r​o​v​i​d​e​d​ ​t​o​ ​u​p​d​a​t​e​.
+					 */
+					longDesc: string
+					options: {
+						contactId: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​n​o​t​e​s​ ​a​b​o​u​t​ ​t​h​e​ ​c​o​n​t​a​c​t​.​ ​T​h​i​s​ ​c​a​n​ ​i​n​c​l​u​d​e​ ​a​n​y​ ​r​e​l​e​v​a​n​t​ ​c​o​n​t​e​x​t​ ​a​b​o​u​t​ ​t​h​e​ ​p​e​r​s​o​n​.
+							 */
+							longDesc: string
+						}
+						links: {
+							/**
+							 * L​i​n​k​s
+							 */
+							displayName: string
+							/**
+							 * A​s​s​o​c​i​a​t​e​d​ ​U​R​L​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​U​R​L​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​c​o​n​t​a​c​t​,​ ​s​u​c​h​ ​a​s​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​s​ ​o​r​ ​c​o​m​p​a​n​y​ ​w​e​b​s​i​t​e​s​.
+							 */
+							longDesc: string
+						}
+						customFields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_contact: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * D​e​l​e​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​F​r​o​n​t​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​i​s​ ​p​e​r​m​a​n​e​n​t​ ​a​n​d​ ​w​i​l​l​ ​r​e​m​o​v​e​ ​a​l​l​ ​a​s​s​o​c​i​a​t​e​d​ ​d​a​t​a​.​ ​C​o​n​v​e​r​s​a​t​i​o​n​s​ ​w​i​t​h​ ​t​h​i​s​ ​c​o​n​t​a​c​t​ ​w​i​l​l​ ​r​e​m​a​i​n​ ​b​u​t​ ​w​i​l​l​ ​n​o​ ​l​o​n​g​e​r​ ​b​e​ ​l​i​n​k​e​d​ ​t​o​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+					 */
+					longDesc: string
+					options: {
+						contactId: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_contact_conversations: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​C​o​n​t​a​c​t​ ​C​o​n​v​e​r​s​a​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​f​o​r​ ​a​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​.​ ​C​o​n​v​e​r​s​a​t​i​o​n​s​ ​a​r​e​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​r​e​v​e​r​s​e​ ​c​h​r​o​n​o​l​o​g​i​c​a​l​ ​o​r​d​e​r​ ​(​n​e​w​e​s​t​ ​f​i​r​s​t​)​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​y​o​u​ ​s​e​e​ ​t​h​e​ ​f​u​l​l​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​ ​h​i​s​t​o​r​y​ ​w​i​t​h​ ​a​ ​c​o​n​t​a​c​t​.
+					 */
+					longDesc: string
+					options: {
+						contactId: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​l​i​s​t​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​h​o​s​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_contact_notes: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​s
+						 */
+						'0': string
+						/**
+						 * N​o​t​e​s
+						 */
+						'1': string
+					}
+					/**
+					 * L​i​s​t​ ​C​o​n​t​a​c​t​ ​N​o​t​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​n​o​t​e​s​ ​f​o​r​ ​a​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​n​o​t​e​s​ ​t​h​a​t​ ​h​a​v​e​ ​b​e​e​n​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​.​ ​N​o​t​e​s​ ​a​r​e​ ​i​n​t​e​r​n​a​l​ ​a​n​n​o​t​a​t​i​o​n​s​ ​v​i​s​i​b​l​e​ ​o​n​l​y​ ​t​o​ ​y​o​u​r​ ​t​e​a​m​,​ ​u​s​e​f​u​l​ ​f​o​r​ ​d​o​c​u​m​e​n​t​i​n​g​ ​i​m​p​o​r​t​a​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​c​o​n​t​a​c​t​s​.
+					 */
+					longDesc: string
+					options: {
+						contactId: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​l​i​s​t​ ​n​o​t​e​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​h​o​s​e​ ​n​o​t​e​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​n​o​t​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​n​o​t​e​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_contact_note: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​s
+						 */
+						'0': string
+						/**
+						 * N​o​t​e​s
+						 */
+						'1': string
+					}
+					/**
+					 * A​d​d​ ​N​o​t​e​ ​t​o​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​n​o​t​e​ ​t​o​ ​a​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​ ​a​ ​n​e​w​ ​n​o​t​e​ ​t​o​ ​a​ ​c​o​n​t​a​c​t​ ​i​n​ ​F​r​o​n​t​.​ ​N​o​t​e​s​ ​a​r​e​ ​i​n​t​e​r​n​a​l​ ​a​n​n​o​t​a​t​i​o​n​s​ ​t​h​a​t​ ​a​r​e​ ​o​n​l​y​ ​v​i​s​i​b​l​e​ ​t​o​ ​y​o​u​r​ ​t​e​a​m​ ​m​e​m​b​e​r​s​.​ ​U​s​e​ ​n​o​t​e​s​ ​t​o​ ​d​o​c​u​m​e​n​t​ ​i​m​p​o​r​t​a​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​c​o​n​t​e​x​t​,​ ​o​r​ ​r​e​m​i​n​d​e​r​s​ ​a​b​o​u​t​ ​a​ ​c​o​n​t​a​c​t​.
+					 */
+					longDesc: string
+					options: {
+						contactId: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​n​o​t​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​a​ ​n​o​t​e​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						body: {
+							/**
+							 * N​o​t​e​ ​B​o​d​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​n​o​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​n​o​t​e​.​ ​T​h​i​s​ ​w​i​l​l​ ​b​e​ ​v​i​s​i​b​l​e​ ​t​o​ ​a​l​l​ ​t​e​a​m​ ​m​e​m​b​e​r​s​ ​w​h​o​ ​c​a​n​ ​a​c​c​e​s​s​ ​t​h​e​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+						authorId: {
+							/**
+							 * A​u​t​h​o​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​a​m​m​a​t​e​ ​w​h​o​ ​a​u​t​h​o​r​e​d​ ​t​h​e​ ​n​o​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​e​a​m​m​a​t​e​ ​w​h​o​ ​w​i​l​l​ ​b​e​ ​r​e​c​o​r​d​e​d​ ​a​s​ ​t​h​e​ ​a​u​t​h​o​r​ ​o​f​ ​t​h​i​s​ ​n​o​t​e​.​ ​T​h​i​s​ ​i​s​ ​a​ ​r​e​q​u​i​r​e​d​ ​f​i​e​l​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_contact_lists: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​ ​L​i​s​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​C​o​n​t​a​c​t​ ​L​i​s​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​c​o​n​t​a​c​t​ ​l​i​s​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​c​o​n​t​a​c​t​ ​l​i​s​t​s​ ​i​n​ ​y​o​u​r​ ​F​r​o​n​t​ ​w​o​r​k​s​p​a​c​e​.​ ​C​o​n​t​a​c​t​ ​l​i​s​t​s​ ​a​r​e​ ​u​s​e​d​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​c​o​n​t​a​c​t​s​ ​i​n​t​o​ ​g​r​o​u​p​s​ ​f​o​r​ ​e​a​s​i​e​r​ ​m​a​n​a​g​e​m​e​n​t​,​ ​s​u​c​h​ ​a​s​ ​f​o​r​ ​m​a​r​k​e​t​i​n​g​ ​c​a​m​p​a​i​g​n​s​ ​o​r​ ​c​u​s​t​o​m​e​r​ ​s​e​g​m​e​n​t​s​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​ ​l​i​s​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_contact_list: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​ ​L​i​s​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * C​r​e​a​t​e​ ​C​o​n​t​a​c​t​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​i​n​ ​F​r​o​n​t​.​ ​C​o​n​t​a​c​t​ ​l​i​s​t​s​ ​h​e​l​p​ ​y​o​u​ ​o​r​g​a​n​i​z​e​ ​c​o​n​t​a​c​t​s​ ​i​n​t​o​ ​l​o​g​i​c​a​l​ ​g​r​o​u​p​s​.​ ​T​h​e​ ​l​i​s​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​ ​i​n​ ​t​h​e​ ​o​l​d​e​s​t​ ​a​c​t​i​v​e​ ​w​o​r​k​s​p​a​c​e​ ​t​h​a​t​ ​y​o​u​r​ ​t​o​k​e​n​ ​h​a​s​ ​a​c​c​e​s​s​ ​t​o​.
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​.​ ​C​h​o​o​s​e​ ​a​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​t​h​a​t​ ​c​l​e​a​r​l​y​ ​i​d​e​n​t​i​f​i​e​s​ ​t​h​e​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​e​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​e​x​p​l​a​i​n​i​n​g​ ​t​h​e​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​o​r​ ​t​h​e​ ​c​r​i​t​e​r​i​a​ ​f​o​r​ ​c​o​n​t​a​c​t​s​ ​i​n​ ​i​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_contact_list: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​ ​L​i​s​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * D​e​l​e​t​e​ ​C​o​n​t​a​c​t​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​c​o​n​t​a​c​t​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​f​r​o​m​ ​F​r​o​n​t​.​ ​T​h​i​s​ ​r​e​m​o​v​e​s​ ​t​h​e​ ​l​i​s​t​ ​b​u​t​ ​d​o​e​s​ ​n​o​t​ ​d​e​l​e​t​e​ ​t​h​e​ ​c​o​n​t​a​c​t​s​ ​t​h​a​t​ ​w​e​r​e​ ​i​n​ ​i​t​.​ ​T​h​e​ ​c​o​n​t​a​c​t​s​ ​w​i​l​l​ ​r​e​m​a​i​n​ ​i​n​ ​y​o​u​r​ ​w​o​r​k​s​p​a​c​e​.
+					 */
+					longDesc: string
+					options: {
+						contactListId: {
+							/**
+							 * C​o​n​t​a​c​t​ ​L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_contacts_in_contact_list: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​ ​L​i​s​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​C​o​n​t​a​c​t​s​ ​i​n​ ​C​o​n​t​a​c​t​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​c​o​n​t​a​c​t​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​c​o​n​t​a​c​t​s​ ​t​h​a​t​ ​b​e​l​o​n​g​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​ ​l​i​s​t​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​y​o​u​ ​s​e​e​ ​w​h​i​c​h​ ​c​o​n​t​a​c​t​s​ ​a​r​e​ ​i​n​c​l​u​d​e​d​ ​i​n​ ​a​ ​p​a​r​t​i​c​u​l​a​r​ ​l​i​s​t​ ​o​r​ ​s​e​g​m​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						contactListId: {
+							/**
+							 * C​o​n​t​a​c​t​ ​L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​w​h​o​s​e​ ​c​o​n​t​a​c​t​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​e​e​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_contacts_to_contact_list: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​ ​L​i​s​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * A​d​d​ ​C​o​n​t​a​c​t​s​ ​t​o​ ​C​o​n​t​a​c​t​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​a​ ​c​o​n​t​a​c​t​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​a​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​i​n​ ​F​r​o​n​t​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​y​o​u​ ​o​r​g​a​n​i​z​e​ ​c​o​n​t​a​c​t​s​ ​i​n​t​o​ ​l​o​g​i​c​a​l​ ​g​r​o​u​p​s​ ​f​o​r​ ​e​a​s​i​e​r​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​t​a​r​g​e​t​e​d​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						contactListId: {
+							/**
+							 * C​o​n​t​a​c​t​ ​L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​t​o​ ​a​d​d​ ​c​o​n​t​a​c​t​s​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​c​o​n​t​a​c​t​s​.
+							 */
+							longDesc: string
+						}
+						contactIds: {
+							/**
+							 * C​o​n​t​a​c​t​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				remove_contacts_from_contact_list: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​ ​L​i​s​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * R​e​m​o​v​e​ ​C​o​n​t​a​c​t​s​ ​f​r​o​m​ ​C​o​n​t​a​c​t​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​a​ ​c​o​n​t​a​c​t​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​a​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​i​n​ ​F​r​o​n​t​.​ ​T​h​i​s​ ​r​e​m​o​v​e​s​ ​t​h​e​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​t​h​e​ ​l​i​s​t​ ​b​u​t​ ​d​o​e​s​ ​n​o​t​ ​d​e​l​e​t​e​ ​t​h​e​ ​c​o​n​t​a​c​t​s​ ​t​h​e​m​s​e​l​v​e​s​.
+					 */
+					longDesc: string
+					options: {
+						contactListId: {
+							/**
+							 * C​o​n​t​a​c​t​ ​L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​t​o​ ​r​e​m​o​v​e​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​f​r​o​m​ ​w​h​i​c​h​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​m​o​v​e​ ​c​o​n​t​a​c​t​s​.
+							 */
+							longDesc: string
+						}
+						contactIds: {
+							/**
+							 * C​o​n​t​a​c​t​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_conversations: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​C​o​n​v​e​r​s​a​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​o​n​v​e​r​s​a​t​i​o​n​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​i​n​ ​y​o​u​r​ ​F​r​o​n​t​ ​w​o​r​k​s​p​a​c​e​.​ ​C​o​n​v​e​r​s​a​t​i​o​n​s​ ​a​r​e​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​r​e​v​e​r​s​e​ ​c​h​r​o​n​o​l​o​g​i​c​a​l​ ​o​r​d​e​r​ ​(​m​o​s​t​ ​r​e​c​e​n​t​l​y​ ​u​p​d​a​t​e​d​ ​f​i​r​s​t​)​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​i​n​b​o​x​ ​o​r​ ​s​t​a​t​u​s​.
+					 */
+					longDesc: string
+					options: {
+						inboxId: {
+							/**
+							 * I​n​b​o​x
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​i​n​b​o​x
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​n​b​o​x​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​f​r​o​m​ ​a​l​l​ ​i​n​b​o​x​e​s​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​b​y​ ​t​h​e​i​r​ ​s​t​a​t​u​s​:​ ​o​p​e​n​,​ ​a​r​c​h​i​v​e​d​,​ ​d​e​l​e​t​e​d​,​ ​o​r​ ​s​p​a​m​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_conversation: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​C​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​i​n​g​l​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​b​y​ ​I​D
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​t​h​e​ ​f​u​l​l​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​f​r​o​m​ ​F​r​o​n​t​ ​b​y​ ​i​t​s​ ​I​D​.​ ​R​e​t​u​r​n​s​ ​a​l​l​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​s​u​b​j​e​c​t​,​ ​s​t​a​t​u​s​,​ ​a​s​s​i​g​n​e​e​,​ ​t​a​g​s​,​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​C​o​n​v​e​r​s​a​t​i​o​n​ ​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​c​n​v​_​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				search_conversations: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * S​e​a​r​c​h​ ​C​o​n​v​e​r​s​a​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​c​o​n​v​e​r​s​a​t​i​o​n​s
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​i​n​ ​F​r​o​n​t​ ​u​s​i​n​g​ ​a​ ​s​e​a​r​c​h​ ​q​u​e​r​y​.​ ​R​e​t​u​r​n​s​ ​m​a​t​c​h​i​n​g​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​i​n​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​ ​b​y​ ​l​a​s​t​ ​a​c​t​i​v​i​t​y​ ​a​l​o​n​g​ ​w​i​t​h​ ​a​ ​c​o​u​n​t​ ​o​f​ ​t​o​t​a​l​ ​m​a​t​c​h​e​s​.
+					 */
+					longDesc: string
+					options: {
+						query: {
+							/**
+							 * S​e​a​r​c​h​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​e​a​r​c​h​ ​q​u​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​t​o​ ​f​i​n​d​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​.​ ​Y​o​u​ ​c​a​n​ ​s​e​a​r​c​h​ ​b​y​ ​k​e​y​w​o​r​d​s​,​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​,​ ​o​r​ ​u​s​e​ ​F​r​o​n​t​ ​s​e​a​r​c​h​ ​s​y​n​t​a​x​ ​f​o​r​ ​a​d​v​a​n​c​e​d​ ​q​u​e​r​i​e​s​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​5​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_conversation: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * U​p​d​a​t​e​ ​C​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​p​r​o​p​e​r​t​i​e​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​i​n​ ​F​r​o​n​t​.​ ​Y​o​u​ ​c​a​n​ ​c​h​a​n​g​e​ ​t​h​e​ ​s​t​a​t​u​s​,​ ​m​o​v​e​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​i​n​b​o​x​,​ ​o​r​ ​u​p​d​a​t​e​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​s​t​a​t​u​s​ ​t​o​ ​o​p​e​n​,​ ​a​r​c​h​i​v​e​d​,​ ​d​e​l​e​t​e​d​,​ ​o​r​ ​s​p​a​m​.
+							 */
+							longDesc: string
+						}
+						inboxId: {
+							/**
+							 * I​n​b​o​x
+							 */
+							displayName: string
+							/**
+							 * M​o​v​e​ ​t​o​ ​i​n​b​o​x
+							 */
+							shortDesc: string
+							/**
+							 * M​o​v​e​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​i​n​b​o​x​.
+							 */
+							longDesc: string
+						}
+						customFields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_conversation_assignee: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * U​p​d​a​t​e​ ​C​o​n​v​e​r​s​a​t​i​o​n​ ​A​s​s​i​g​n​e​e
+					 */
+					displayName: string
+					/**
+					 * A​s​s​i​g​n​ ​o​r​ ​u​n​a​s​s​i​g​n​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * A​s​s​i​g​n​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​a​ ​t​e​a​m​m​a​t​e​ ​o​r​ ​u​n​a​s​s​i​g​n​ ​i​t​.​ ​A​s​s​i​g​n​i​n​g​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​h​e​l​p​s​ ​r​o​u​t​e​ ​w​o​r​k​ ​t​o​ ​t​h​e​ ​r​i​g​h​t​ ​t​e​a​m​ ​m​e​m​b​e​r​s​ ​a​n​d​ ​t​r​a​c​k​ ​o​w​n​e​r​s​h​i​p​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​s​s​i​g​n​.
+							 */
+							longDesc: string
+						}
+						assigneeId: {
+							/**
+							 * A​s​s​i​g​n​e​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​a​m​m​a​t​e​ ​t​o​ ​a​s​s​i​g​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​ ​t​e​a​m​m​a​t​e​ ​t​o​ ​a​s​s​i​g​n​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​u​n​a​s​s​i​g​n​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_conversation_tag: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+						/**
+						 * T​a​g​s
+						 */
+						'1': string
+					}
+					/**
+					 * A​d​d​ ​T​a​g​ ​t​o​ ​C​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​t​a​g​s​ ​t​o​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​t​a​g​s​ ​t​o​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​i​n​ ​F​r​o​n​t​.​ ​T​a​g​s​ ​h​e​l​p​ ​c​a​t​e​g​o​r​i​z​e​ ​a​n​d​ ​o​r​g​a​n​i​z​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​f​o​r​ ​e​a​s​i​e​r​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​r​e​p​o​r​t​i​n​g​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​t​a​g
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​t​a​g​s​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						tagIds: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​g​s​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​t​a​g​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				remove_conversation_tag: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+						/**
+						 * T​a​g​s
+						 */
+						'1': string
+					}
+					/**
+					 * R​e​m​o​v​e​ ​T​a​g​ ​f​r​o​m​ ​C​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​t​a​g​s​ ​f​r​o​m​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​t​a​g​s​ ​f​r​o​m​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​i​n​ ​F​r​o​n​t​.​ ​T​h​i​s​ ​r​e​m​o​v​e​s​ ​t​h​e​ ​t​a​g​ ​a​s​s​o​c​i​a​t​i​o​n​ ​b​u​t​ ​d​o​e​s​ ​n​o​t​ ​d​e​l​e​t​e​ ​t​h​e​ ​t​a​g​s​ ​t​h​e​m​s​e​l​v​e​s​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​r​e​m​o​v​e​ ​t​a​g​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​m​o​v​e​ ​t​a​g​s​ ​f​r​o​m​.
+							 */
+							longDesc: string
+						}
+						tagIds: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​g​s​ ​t​o​ ​r​e​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​t​a​g​s​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_conversation_followers: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * A​d​d​ ​C​o​n​v​e​r​s​a​t​i​o​n​ ​F​o​l​l​o​w​e​r​s
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​f​o​l​l​o​w​e​r​s​ ​t​o​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​ ​t​e​a​m​m​a​t​e​s​ ​a​s​ ​f​o​l​l​o​w​e​r​s​ ​t​o​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​ ​F​o​l​l​o​w​e​r​s​ ​r​e​c​e​i​v​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​a​b​o​u​t​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​u​p​d​a​t​e​s​ ​w​i​t​h​o​u​t​ ​b​e​i​n​g​ ​t​h​e​ ​a​s​s​i​g​n​e​e​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​a​d​d​ ​f​o​l​l​o​w​e​r​s​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​f​o​l​l​o​w​e​r​s​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						teammateIds: {
+							/**
+							 * T​e​a​m​m​a​t​e​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​a​m​m​a​t​e​s​ ​t​o​ ​a​d​d​ ​a​s​ ​f​o​l​l​o​w​e​r​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​t​e​a​m​m​a​t​e​s​ ​t​o​ ​a​d​d​ ​a​s​ ​f​o​l​l​o​w​e​r​s​ ​t​o​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_message: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​i​n​g​l​e​ ​m​e​s​s​a​g​e​ ​b​y​ ​I​D
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​t​h​e​ ​f​u​l​l​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​f​r​o​m​ ​F​r​o​n​t​ ​b​y​ ​i​t​s​ ​I​D​.​ ​R​e​t​u​r​n​s​ ​a​l​l​ ​m​e​s​s​a​g​e​ ​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​c​o​n​t​e​n​t​,​ ​a​u​t​h​o​r​,​ ​r​e​c​i​p​i​e​n​t​s​,​ ​a​n​d​ ​a​t​t​a​c​h​m​e​n​t​s​.
+					 */
+					longDesc: string
+					options: {
+						messageId: {
+							/**
+							 * M​e​s​s​a​g​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​M​e​s​s​a​g​e​ ​I​D​s​ ​s​t​a​r​t​ ​w​i​t​h​ ​"​m​s​g​_​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_conversation_messages: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+						/**
+						 * M​e​s​s​a​g​e​s
+						 */
+						'1': string
+					}
+					/**
+					 * L​i​s​t​ ​C​o​n​v​e​r​s​a​t​i​o​n​ ​M​e​s​s​a​g​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​m​e​s​s​a​g​e​s​ ​i​n​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​m​e​s​s​a​g​e​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​ ​M​e​s​s​a​g​e​s​ ​a​r​e​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​r​e​v​e​r​s​e​ ​c​h​r​o​n​o​l​o​g​i​c​a​l​ ​o​r​d​e​r​ ​(​n​e​w​e​s​t​ ​f​i​r​s​t​)​.​ ​T​h​i​s​ ​p​r​o​v​i​d​e​s​ ​t​h​e​ ​f​u​l​l​ ​m​e​s​s​a​g​e​ ​h​i​s​t​o​r​y​ ​o​f​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​l​i​s​t​ ​m​e​s​s​a​g​e​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​w​h​o​s​e​ ​m​e​s​s​a​g​e​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_message_reply: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+						/**
+						 * M​e​s​s​a​g​e​s
+						 */
+						'1': string
+					}
+					/**
+					 * R​e​p​l​y​ ​t​o​ ​C​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​r​e​p​l​y​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​p​l​y​ ​t​o​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​b​y​ ​s​e​n​d​i​n​g​ ​a​ ​m​e​s​s​a​g​e​.​ ​T​h​e​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​b​e​ ​a​p​p​e​n​d​e​d​ ​t​o​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​a​n​d​ ​s​e​n​t​ ​t​o​ ​t​h​e​ ​r​e​c​i​p​i​e​n​t​s​.​ ​Y​o​u​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​s​a​v​e​ ​i​t​ ​a​s​ ​a​ ​d​r​a​f​t​ ​i​n​s​t​e​a​d​ ​o​f​ ​s​e​n​d​i​n​g​ ​i​m​m​e​d​i​a​t​e​l​y​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​r​e​p​l​y​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​p​l​y​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						body: {
+							/**
+							 * M​e​s​s​a​g​e​ ​B​o​d​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​r​e​p​l​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​H​T​M​L​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​r​e​p​l​y​ ​m​e​s​s​a​g​e​.​ ​T​h​i​s​ ​i​s​ ​t​h​e​ ​m​a​i​n​ ​b​o​d​y​ ​t​e​x​t​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​s​e​n​t​ ​t​o​ ​r​e​c​i​p​i​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						subject: {
+							/**
+							 * S​u​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​s​u​b​j​e​c​t​ ​l​i​n​e
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​f​o​r​ ​t​h​e​ ​r​e​p​l​y​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​s​u​b​j​e​c​t​ ​m​a​y​ ​b​e​ ​u​s​e​d​.
+							 */
+							longDesc: string
+						}
+						to: {
+							/**
+							 * T​o
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​r​e​c​i​p​i​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​r​e​p​l​y​ ​t​o​.​ ​T​h​e​s​e​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​t​h​e​ ​e​x​i​s​t​i​n​g​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​r​e​c​i​p​i​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						cc: {
+							/**
+							 * C​C
+							 */
+							displayName: string
+							/**
+							 * C​C​ ​r​e​c​i​p​i​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​C​C​ ​o​n​ ​t​h​e​ ​r​e​p​l​y​.
+							 */
+							longDesc: string
+						}
+						bcc: {
+							/**
+							 * B​C​C
+							 */
+							displayName: string
+							/**
+							 * B​C​C​ ​r​e​c​i​p​i​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​B​C​C​ ​o​n​ ​t​h​e​ ​r​e​p​l​y​.
+							 */
+							longDesc: string
+						}
+						isDraft: {
+							/**
+							 * S​a​v​e​ ​a​s​ ​D​r​a​f​t
+							 */
+							displayName: string
+							/**
+							 * S​a​v​e​ ​a​s​ ​d​r​a​f​t​ ​i​n​s​t​e​a​d​ ​o​f​ ​s​e​n​d​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​t​r​u​e​,​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​i​l​l​ ​b​e​ ​s​a​v​e​d​ ​a​s​ ​a​ ​d​r​a​f​t​ ​i​n​s​t​e​a​d​ ​o​f​ ​b​e​i​n​g​ ​s​e​n​t​ ​i​m​m​e​d​i​a​t​e​l​y​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​f​a​l​s​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_conversation_comment: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+						/**
+						 * C​o​m​m​e​n​t​s
+						 */
+						'1': string
+					}
+					/**
+					 * A​d​d​ ​C​o​m​m​e​n​t​ ​t​o​ ​C​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​n​ ​i​n​t​e​r​n​a​l​ ​c​o​m​m​e​n​t​ ​t​o​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​ ​a​n​ ​i​n​t​e​r​n​a​l​ ​c​o​m​m​e​n​t​ ​t​o​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​i​n​ ​F​r​o​n​t​.​ ​C​o​m​m​e​n​t​s​ ​a​r​e​ ​p​r​i​v​a​t​e​ ​m​e​s​s​a​g​e​s​ ​v​i​s​i​b​l​e​ ​o​n​l​y​ ​t​o​ ​y​o​u​r​ ​t​e​a​m​m​a​t​e​s​ ​a​n​d​ ​a​r​e​ ​n​e​v​e​r​ ​s​e​n​t​ ​t​o​ ​e​x​t​e​r​n​a​l​ ​c​o​n​t​a​c​t​s​.​ ​U​s​e​ ​c​o​m​m​e​n​t​s​ ​f​o​r​ ​i​n​t​e​r​n​a​l​ ​n​o​t​e​s​,​ ​d​i​s​c​u​s​s​i​o​n​s​,​ ​o​r​ ​c​o​n​t​e​x​t​ ​s​h​a​r​i​n​g​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​a​d​d​ ​a​ ​c​o​m​m​e​n​t​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​a​ ​c​o​m​m​e​n​t​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						body: {
+							/**
+							 * C​o​m​m​e​n​t​ ​B​o​d​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​c​o​m​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​i​n​t​e​r​n​a​l​ ​c​o​m​m​e​n​t​.​ ​T​h​i​s​ ​w​i​l​l​ ​b​e​ ​v​i​s​i​b​l​e​ ​t​o​ ​a​l​l​ ​t​e​a​m​m​a​t​e​s​ ​w​h​o​ ​c​a​n​ ​a​c​c​e​s​s​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_conversation_comments: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+						/**
+						 * C​o​m​m​e​n​t​s
+						 */
+						'1': string
+					}
+					/**
+					 * L​i​s​t​ ​C​o​n​v​e​r​s​a​t​i​o​n​ ​C​o​m​m​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​c​o​m​m​e​n​t​s​ ​i​n​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​i​n​t​e​r​n​a​l​ ​c​o​m​m​e​n​t​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​v​e​r​s​a​t​i​o​n​.​ ​C​o​m​m​e​n​t​s​ ​a​r​e​ ​r​e​t​u​r​n​e​d​ ​i​n​ ​r​e​v​e​r​s​e​ ​c​h​r​o​n​o​l​o​g​i​c​a​l​ ​o​r​d​e​r​ ​(​n​e​w​e​s​t​ ​f​i​r​s​t​)​.​ ​T​h​i​s​ ​p​r​o​v​i​d​e​s​ ​t​h​e​ ​f​u​l​l​ ​i​n​t​e​r​n​a​l​ ​d​i​s​c​u​s​s​i​o​n​ ​h​i​s​t​o​r​y​ ​o​f​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​l​i​s​t​ ​c​o​m​m​e​n​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​w​h​o​s​e​ ​c​o​m​m​e​n​t​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​m​m​e​n​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​m​m​e​n​t​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​5​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_conversation: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * N​e​w​ ​C​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​F​r​o​n​t​.​ ​Y​o​u​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​b​y​ ​i​n​b​o​x​ ​o​r​ ​s​t​a​t​u​s​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​s​ ​o​f​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						inboxId: {
+							/**
+							 * I​n​b​o​x
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​i​n​b​o​x
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​n​b​o​x​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​a​l​l​ ​i​n​b​o​x​e​s​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​t​a​t​u​s​:​ ​o​p​e​n​,​ ​a​r​c​h​i​v​e​d​,​ ​d​e​l​e​t​e​d​,​ ​o​r​ ​s​p​a​m​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_contact: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​s
+						 */
+						'0': string
+					}
+					/**
+					 * N​e​w​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​F​r​o​n​t​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​w​o​r​k​f​l​o​w​s​ ​w​h​e​n​ ​n​e​w​ ​c​o​n​t​a​c​t​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​y​o​u​r​ ​w​o​r​k​s​p​a​c​e​.
+					 */
+					longDesc: string
+					options: {
+					}
+				}
+				new_contact_note: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​s
+						 */
+						'0': string
+						/**
+						 * N​o​t​e​s
+						 */
+						'1': string
+					}
+					/**
+					 * N​e​w​ ​C​o​n​t​a​c​t​ ​N​o​t​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​n​o​t​e​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​n​o​t​e​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​ ​i​n​ ​F​r​o​n​t​.​ ​Y​o​u​ ​m​u​s​t​ ​s​p​e​c​i​f​y​ ​w​h​i​c​h​ ​c​o​n​t​a​c​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​n​o​t​e​s​.
+					 */
+					longDesc: string
+					options: {
+						contactId: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​n​o​t​e​s​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​f​i​r​e​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​n​o​t​e​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​t​h​i​s​ ​c​o​n​t​a​c​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_comment: {
+					groups: {
+						/**
+						 * C​o​n​v​e​r​s​a​t​i​o​n​s
+						 */
+						'0': string
+						/**
+						 * C​o​m​m​e​n​t​s
+						 */
+						'1': string
+					}
+					/**
+					 * N​e​w​ ​C​o​m​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​c​o​n​v​e​r​s​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​i​n​t​e​r​n​a​l​ ​c​o​m​m​e​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​i​n​ ​F​r​o​n​t​.​ ​C​o​m​m​e​n​t​s​ ​a​r​e​ ​p​r​i​v​a​t​e​ ​m​e​s​s​a​g​e​s​ ​v​i​s​i​b​l​e​ ​o​n​l​y​ ​t​o​ ​t​e​a​m​m​a​t​e​s​.​ ​Y​o​u​ ​m​u​s​t​ ​s​p​e​c​i​f​y​ ​w​h​i​c​h​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​o​m​m​e​n​t​s​.
+					 */
+					longDesc: string
+					options: {
+						conversationId: {
+							/**
+							 * C​o​n​v​e​r​s​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​o​m​m​e​n​t​s​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​f​i​r​e​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​t​h​i​s​ ​c​o​n​v​e​r​s​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		SharePoint: {
 			/**
 			 * M​i​c​r​o​s​o​f​t​ ​S​h​a​r​e​P​o​i​n​t
@@ -185229,6 +187411,2188 @@ export type TranslationFunctions = {
 						 * Structure and types for Freshdesk’s updated contact data payload.
 						 */
 						desc: () => LocalizedString
+					}
+				}
+			}
+		}
+		Front: {
+			/**
+			 * Front
+			 */
+			displayName: () => LocalizedString
+			groups: {
+				/**
+				 * Customer Support
+				 */
+				'0': () => LocalizedString
+				/**
+				 * Communication
+				 */
+				'1': () => LocalizedString
+			}
+			connectionMessage: {
+				/**
+				 * OAuth Connection
+				 */
+				title: () => LocalizedString
+				/**
+				 * Front uses OAuth 2.0 for authentication. You will be redirected to Front to authorize access to your account.
+				 */
+				content: () => LocalizedString
+			}
+			/**
+			 * Connect with Front to manage shared inboxes, contacts, and customer communications
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Integrate with Front to manage your team shared inboxes, contacts, accounts, and customer conversations. Front is a customer communication platform that brings email and messaging into a shared inbox. This integration enables you to automate contact management, organize accounts, and streamline team collaboration.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				list_accounts: {
+					groups: {
+						/**
+						 * Accounts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Accounts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of accounts
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all accounts in your Front workspace. Accounts represent companies or organizations that your contacts belong to. Use accounts to group contacts and track interactions at the company level.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of accounts to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of account records to return. Default is 50. Use pagination for larger datasets.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_account: {
+					groups: {
+						/**
+						 * Accounts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get Account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a single account by ID
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve the full details of a specific account from Front by its ID. Returns all account data including name, description, domains, external ID, and custom fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						accountId: {
+							/**
+							 * Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The account to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the account you want to retrieve. Account IDs start with "acc_".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_account: {
+					groups: {
+						/**
+						 * Accounts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Create Account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new account
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new account in Front. Accounts represent companies or organizations and can be used to group related contacts together. You can associate domains with accounts to automatically link contacts.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The account name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the account, typically the company or organization name. This is a required field.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * A description of the account
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional description providing additional context about the account, such as the type of business or relationship.
+							 */
+							longDesc: () => LocalizedString
+						}
+						domains: {
+							/**
+							 * Domains
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email domains associated with the account
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of email domains (e.g., "example.com") associated with this account. Contacts with email addresses from these domains can be automatically linked to the account.
+							 */
+							longDesc: () => LocalizedString
+						}
+						externalId: {
+							/**
+							 * External ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * External system identifier
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional external ID to link this account to a record in another system, such as a CRM or billing platform.
+							 */
+							longDesc: () => LocalizedString
+						}
+						customFields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom field values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An object containing custom field values for the account. The keys should match your configured custom field names.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_account: {
+					groups: {
+						/**
+						 * Accounts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Update Account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing account
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the properties of an existing account in Front. You can modify the name, description, domains, external ID, or custom fields. At least one field must be provided to update.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						accountId: {
+							/**
+							 * Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The account to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the account you want to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new account name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the name of the account.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the description of the account.
+							 */
+							longDesc: () => LocalizedString
+						}
+						domains: {
+							/**
+							 * Domains
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new list of domains
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the list of email domains associated with this account. This will replace the existing domains.
+							 */
+							longDesc: () => LocalizedString
+						}
+						externalId: {
+							/**
+							 * External ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new external ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the external system identifier for this account.
+							 */
+							longDesc: () => LocalizedString
+						}
+						customFields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated custom field values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update custom field values for the account.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_account: {
+					groups: {
+						/**
+						 * Accounts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Delete Account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete an account
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Delete an account from Front. This action is permanent. Contacts associated with the account will not be deleted but will no longer be linked to this account.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						accountId: {
+							/**
+							 * Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The account to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the account you want to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_account_contacts: {
+					groups: {
+						/**
+						 * Accounts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Account Contacts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List contacts associated with an account
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all contacts that are associated with a specific account. This helps you see all the people from a particular company or organization.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						accountId: {
+							/**
+							 * Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The account to list contacts from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the account whose contacts you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of contacts to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of contact records to return. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_contact_to_account: {
+					groups: {
+						/**
+						 * Accounts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Add Contact to Account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add contacts to an account
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Add one or more contacts to an account in Front. This creates an association between the contacts and the account, helping you organize contacts by company or organization.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						accountId: {
+							/**
+							 * Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The account to add contacts to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the account where you want to add contacts.
+							 */
+							longDesc: () => LocalizedString
+						}
+						contactIds: {
+							/**
+							 * Contacts
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contacts to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select one or more contacts to add to the account. Contact IDs start with "crd_".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				remove_contact_from_account: {
+					groups: {
+						/**
+						 * Accounts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Remove Contact from Account
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove contacts from an account
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Remove one or more contacts from an account in Front. This removes the association between the contacts and the account but does not delete the contacts themselves.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						accountId: {
+							/**
+							 * Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The account to remove contacts from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the account from which you want to remove contacts.
+							 */
+							longDesc: () => LocalizedString
+						}
+						contactIds: {
+							/**
+							 * Contacts
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contacts to remove
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select one or more contacts to remove from the account.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_contacts: {
+					groups: {
+						/**
+						 * Contacts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Contacts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of contacts
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all contacts in your Front workspace. Contacts represent the people you communicate with. Results can be sorted by creation or update date.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						sortBy: {
+							/**
+							 * Sort By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to sort by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to sort results by: created_at or updated_at.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sortOrder: {
+							/**
+							 * Sort Order
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort order direction
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The direction to sort results: desc (newest first) or asc (oldest first).
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of contacts to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of contact records to return. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_contact: {
+					groups: {
+						/**
+						 * Contacts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a single contact by ID
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve the full details of a specific contact from Front by their ID. Returns all contact data including name, handles (email, phone, etc.), groups, links, and custom fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contactId: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the contact you want to retrieve. Contact IDs start with "crd_".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_contact: {
+					groups: {
+						/**
+						 * Contacts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Create Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new contact in Front. Contacts represent the people you communicate with. A contact must have at least one handle (email, phone, etc.) to be created.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The display name of the contact. This is optional but recommended for easier identification.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * A description of the contact
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional description or notes about the contact. This can include any relevant context about the person.
+							 */
+							longDesc: () => LocalizedString
+						}
+						handles: {
+							/**
+							 * Handles
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Contact handles (email, phone, etc.)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of handles for the contact. Each handle consists of a handle value (e.g., email address) and a source type (email, phone, twitter, etc.). At least one handle is required.
+							 */
+							longDesc: () => LocalizedString
+						}
+						links: {
+							/**
+							 * Links
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated URLs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of URLs associated with this contact, such as social media profiles or company websites.
+							 */
+							longDesc: () => LocalizedString
+						}
+						groupNames: {
+							/**
+							 * Group Names
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Groups to add the contact to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of group names to add the contact to. Groups help organize contacts into categories.
+							 */
+							longDesc: () => LocalizedString
+						}
+						customFields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom field values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An object containing custom field values for the contact. The keys should match your configured custom field names.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_contact: {
+					groups: {
+						/**
+						 * Contacts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Update Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the properties of an existing contact in Front. You can modify the name, description, links, or custom fields. At least one field must be provided to update.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contactId: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the contact you want to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new contact name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the display name of the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the description or notes about the contact. This can include any relevant context about the person.
+							 */
+							longDesc: () => LocalizedString
+						}
+						links: {
+							/**
+							 * Links
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Associated URLs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of URLs associated with this contact, such as social media profiles or company websites.
+							 */
+							longDesc: () => LocalizedString
+						}
+						customFields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated custom field values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update custom field values for the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_contact: {
+					groups: {
+						/**
+						 * Contacts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Delete Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Delete a contact from Front. This action is permanent and will remove all associated data. Conversations with this contact will remain but will no longer be linked to the contact.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contactId: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the contact you want to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_contact_conversations: {
+					groups: {
+						/**
+						 * Contacts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Contact Conversations
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List conversations for a contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all conversations associated with a specific contact. Conversations are returned in reverse chronological order (newest first). This helps you see the full communication history with a contact.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contactId: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to list conversations for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the contact whose conversations you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of conversations to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of conversation records to return. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_contact_notes: {
+					groups: {
+						/**
+						 * Contacts
+						 */
+						'0': () => LocalizedString
+						/**
+						 * Notes
+						 */
+						'1': () => LocalizedString
+					}
+					/**
+					 * List Contact Notes
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List notes for a contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve all notes that have been added to a specific contact. Notes are internal annotations visible only to your team, useful for documenting important information about contacts.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contactId: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to list notes for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the contact whose notes you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of notes to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of note records to return. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_contact_note: {
+					groups: {
+						/**
+						 * Contacts
+						 */
+						'0': () => LocalizedString
+						/**
+						 * Notes
+						 */
+						'1': () => LocalizedString
+					}
+					/**
+					 * Add Note to Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a note to a contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Add a new note to a contact in Front. Notes are internal annotations that are only visible to your team members. Use notes to document important information, context, or reminders about a contact.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contactId: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to add the note to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the contact you want to add a note to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						body: {
+							/**
+							 * Note Body
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content of the note
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content of the note. This will be visible to all team members who can access the contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+						authorId: {
+							/**
+							 * Author
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The teammate who authored the note
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the teammate who will be recorded as the author of this note. This is a required field.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_contact_lists: {
+					groups: {
+						/**
+						 * Contact Lists
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Contact Lists
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve all contact lists
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all contact lists in your Front workspace. Contact lists are used to organize contacts into groups for easier management, such as for marketing campaigns or customer segments.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of contact lists to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of contact list records to return. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_contact_list: {
+					groups: {
+						/**
+						 * Contact Lists
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Create Contact List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new contact list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new contact list in Front. Contact lists help you organize contacts into logical groups. The list will be created in the oldest active workspace that your token has access to.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact list name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the contact list. Choose a descriptive name that clearly identifies the purpose of the list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * A description of the contact list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional description explaining the purpose of the contact list or the criteria for contacts in it.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_contact_list: {
+					groups: {
+						/**
+						 * Contact Lists
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Delete Contact List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a contact list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Delete a contact list from Front. This removes the list but does not delete the contacts that were in it. The contacts will remain in your workspace.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contactListId: {
+							/**
+							 * Contact List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact list to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the contact list you want to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_contacts_in_contact_list: {
+					groups: {
+						/**
+						 * Contact Lists
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Contacts in Contact List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List contacts in a specific contact list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve all contacts that belong to a specific contact list. This helps you see which contacts are included in a particular list or segment.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contactListId: {
+							/**
+							 * Contact List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact list to retrieve contacts from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the contact list whose contacts you want to see.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of contacts to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of contact records to return. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_contacts_to_contact_list: {
+					groups: {
+						/**
+						 * Contact Lists
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Add Contacts to Contact List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add contacts to a contact list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Add one or more contacts to a contact list in Front. This helps you organize contacts into logical groups for easier management and targeted communication.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contactListId: {
+							/**
+							 * Contact List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact list to add contacts to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the contact list where you want to add contacts.
+							 */
+							longDesc: () => LocalizedString
+						}
+						contactIds: {
+							/**
+							 * Contacts
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contacts to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select one or more contacts to add to the contact list.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				remove_contacts_from_contact_list: {
+					groups: {
+						/**
+						 * Contact Lists
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Remove Contacts from Contact List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove contacts from a contact list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Remove one or more contacts from a contact list in Front. This removes the contacts from the list but does not delete the contacts themselves.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contactListId: {
+							/**
+							 * Contact List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact list to remove contacts from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the contact list from which you want to remove contacts.
+							 */
+							longDesc: () => LocalizedString
+						}
+						contactIds: {
+							/**
+							 * Contacts
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contacts to remove
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select one or more contacts to remove from the contact list.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_conversations: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Conversations
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of conversations
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of conversations in your Front workspace. Conversations are returned in reverse chronological order (most recently updated first). You can filter by inbox or status.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						inboxId: {
+							/**
+							 * Inbox
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by inbox
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter conversations to a specific inbox. Leave empty to retrieve conversations from all inboxes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by conversation status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter conversations by their status: open, archived, deleted, or spam.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of conversations to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of conversation records to return. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_conversation: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get Conversation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a single conversation by ID
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve the full details of a specific conversation from Front by its ID. Returns all conversation data including subject, status, assignee, tags, and custom fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the conversation you want to retrieve. Conversation IDs start with "cnv_".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				search_conversations: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Search Conversations
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for conversations
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search for conversations in Front using a search query. Returns matching conversations in descending order by last activity along with a count of total matches.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						query: {
+							/**
+							 * Search Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The search query
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The search query to find conversations. You can search by keywords, email addresses, or use Front search syntax for advanced queries.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of conversations to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of conversation records to return. Default is 25.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_conversation: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Update Conversation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update a conversation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the properties of an existing conversation in Front. You can change the status, move to a different inbox, or update custom fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the conversation you want to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The new status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update the conversation status to open, archived, deleted, or spam.
+							 */
+							longDesc: () => LocalizedString
+						}
+						inboxId: {
+							/**
+							 * Inbox
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Move to inbox
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Move the conversation to a different inbox.
+							 */
+							longDesc: () => LocalizedString
+						}
+						customFields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated custom field values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update custom field values for the conversation.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_conversation_assignee: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Update Conversation Assignee
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Assign or unassign a conversation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Assign a conversation to a teammate or unassign it. Assigning conversations helps route work to the right team members and track ownership.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the conversation you want to assign.
+							 */
+							longDesc: () => LocalizedString
+						}
+						assigneeId: {
+							/**
+							 * Assignee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The teammate to assign
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select a teammate to assign the conversation to. Leave empty to unassign the conversation.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_conversation_tag: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+						/**
+						 * Tags
+						 */
+						'1': () => LocalizedString
+					}
+					/**
+					 * Add Tag to Conversation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add tags to a conversation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Add one or more tags to a conversation in Front. Tags help categorize and organize conversations for easier filtering and reporting.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation to tag
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the conversation you want to add tags to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tagIds: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The tags to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select one or more tags to add to the conversation.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				remove_conversation_tag: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+						/**
+						 * Tags
+						 */
+						'1': () => LocalizedString
+					}
+					/**
+					 * Remove Tag from Conversation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove tags from a conversation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Remove one or more tags from a conversation in Front. This removes the tag association but does not delete the tags themselves.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation to remove tags from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the conversation you want to remove tags from.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tagIds: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The tags to remove
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select one or more tags to remove from the conversation.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_conversation_followers: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Add Conversation Followers
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add followers to a conversation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Add teammates as followers to a conversation. Followers receive notifications about conversation updates without being the assignee.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation to add followers to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the conversation you want to add followers to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						teammateIds: {
+							/**
+							 * Teammates
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The teammates to add as followers
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select one or more teammates to add as followers to the conversation.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_message: {
+					groups: {
+						/**
+						 * Messages
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a single message by ID
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve the full details of a specific message from Front by its ID. Returns all message data including content, author, recipients, and attachments.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						messageId: {
+							/**
+							 * Message ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The message to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the ID of the message you want to retrieve. Message IDs start with "msg_".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_conversation_messages: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+						/**
+						 * Messages
+						 */
+						'1': () => LocalizedString
+					}
+					/**
+					 * List Conversation Messages
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List messages in a conversation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all messages in a specific conversation. Messages are returned in reverse chronological order (newest first). This provides the full message history of a conversation.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation to list messages from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the conversation whose messages you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of messages to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of message records to return. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_message_reply: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+						/**
+						 * Messages
+						 */
+						'1': () => LocalizedString
+					}
+					/**
+					 * Reply to Conversation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a reply message to a conversation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Reply to a conversation by sending a message. The message will be appended to the conversation and sent to the recipients. You can optionally save it as a draft instead of sending immediately.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation to reply to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the conversation you want to reply to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						body: {
+							/**
+							 * Message Body
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content of the reply
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The HTML content of the reply message. This is the main body text that will be sent to recipients.
+							 */
+							longDesc: () => LocalizedString
+						}
+						subject: {
+							/**
+							 * Subject
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional subject line
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional subject line for the reply. If not provided, the original conversation subject may be used.
+							 */
+							longDesc: () => LocalizedString
+						}
+						to: {
+							/**
+							 * To
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional recipients
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of email addresses to send the reply to. These are added to the existing conversation recipients.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cc: {
+							/**
+							 * CC
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * CC recipients
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of email addresses to CC on the reply.
+							 */
+							longDesc: () => LocalizedString
+						}
+						bcc: {
+							/**
+							 * BCC
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * BCC recipients
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of email addresses to BCC on the reply.
+							 */
+							longDesc: () => LocalizedString
+						}
+						isDraft: {
+							/**
+							 * Save as Draft
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Save as draft instead of sending
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If true, the message will be saved as a draft instead of being sent immediately. Default is false.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_conversation_comment: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+						/**
+						 * Comments
+						 */
+						'1': () => LocalizedString
+					}
+					/**
+					 * Add Comment to Conversation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add an internal comment to a conversation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Add an internal comment to a conversation in Front. Comments are private messages visible only to your teammates and are never sent to external contacts. Use comments for internal notes, discussions, or context sharing.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation to add a comment to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the conversation you want to add a comment to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						body: {
+							/**
+							 * Comment Body
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content of the comment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content of the internal comment. This will be visible to all teammates who can access the conversation.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_conversation_comments: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+						/**
+						 * Comments
+						 */
+						'1': () => LocalizedString
+					}
+					/**
+					 * List Conversation Comments
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List comments in a conversation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all internal comments in a specific conversation. Comments are returned in reverse chronological order (newest first). This provides the full internal discussion history of a conversation.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation to list comments from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the conversation whose comments you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of comments to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of comment records to return. Default is 50.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_conversation: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * New Conversation
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new conversation is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new conversation is created in Front. You can optionally filter by inbox or status to only trigger for specific types of conversations.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						inboxId: {
+							/**
+							 * Inbox
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by inbox
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter to only trigger for conversations in a specific inbox. Leave empty to trigger for all inboxes.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by conversation status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter to only trigger for conversations with a specific status: open, archived, deleted, or spam.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_contact: {
+					groups: {
+						/**
+						 * Contacts
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * New Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new contact is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new contact is created in Front. Use this to automate workflows when new contacts are added to your workspace.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+					}
+				}
+				new_contact_note: {
+					groups: {
+						/**
+						 * Contacts
+						 */
+						'0': () => LocalizedString
+						/**
+						 * Notes
+						 */
+						'1': () => LocalizedString
+					}
+					/**
+					 * New Contact Note
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new note is added to a contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new note is added to a specific contact in Front. You must specify which contact to monitor for new notes.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contactId: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the contact you want to monitor for new notes. The trigger will fire whenever a new note is added to this contact.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_comment: {
+					groups: {
+						/**
+						 * Conversations
+						 */
+						'0': () => LocalizedString
+						/**
+						 * Comments
+						 */
+						'1': () => LocalizedString
+					}
+					/**
+					 * New Comment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new comment is added to a conversation
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new internal comment is added to a specific conversation in Front. Comments are private messages visible only to teammates. You must specify which conversation to monitor for new comments.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						conversationId: {
+							/**
+							 * Conversation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversation to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the conversation you want to monitor for new comments. The trigger will fire whenever a new comment is added to this conversation.
+							 */
+							longDesc: () => LocalizedString
+						}
 					}
 				}
 			}
