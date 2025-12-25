@@ -102,6 +102,7 @@ import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import sendgrid from '../apps/sendgrid';
 import helpscout from '../apps/helpscout';
+import front from '../apps/front';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -200,6 +201,7 @@ const NEW_APPS = {
   zendesk,
   zohocrm,
   zoom,
+  front,
 } as const;
 
 const EXISTING_APPS = {

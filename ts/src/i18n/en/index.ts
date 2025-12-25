@@ -32,6 +32,7 @@ import Figma from './apps/Figma';
 import Firebase from './apps/Firebase';
 import Firestore from './apps/Firestore';
 import Freshdesk from './apps/Freshdesk';
+import Front from './apps/Front';
 import Gemini from './apps/Gemini';
 import Github from './apps/Github';
 import Gitlab from './apps/Gitlab';
@@ -150,6 +151,7 @@ const en = {
     NetSuite,
     Salesforce,
     Freshdesk,
+    Front,
     SharePoint,
     Klaviyo,
     Outlook,
