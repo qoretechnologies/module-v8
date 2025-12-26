@@ -1,6 +1,9 @@
 
 
 const DynamicsAppEn = {
+  displayName: 'Microsoft Dynamics 365',
+  shortDesc: 'Connect to Microsoft Dynamics 365 CRM and ERP',
+  longDesc: 'Microsoft Dynamics 365 is a suite of enterprise resource planning (ERP) and customer relationship management (CRM) applications. This integration enables you to automate workflows triggered by Dynamics 365 events such as new accounts, contacts, leads, opportunities, and orders.',
   groups: ['CRM & Sales Management', 'Accounting & ERP'],
   triggers: {
     'new-or-updated-account': {
