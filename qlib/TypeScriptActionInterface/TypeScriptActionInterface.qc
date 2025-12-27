@@ -1196,16 +1196,8 @@ public class TypeScriptActionInterface {
             }
         }
 
-        # Auto-detect schema type from content
-        AbstractRestSchemaValidator schema;
-        if (schema_source =~ /^openapi\s*[:\"\']?\s*[:\"\']?3/
-            || schema_source =~ /"openapi"\s*:\s*"3/) {
-            # OpenAPI 3.0/3.1
-            schema = OpenApi3Loader::fromString(schema_source, NOTHING, schema_opts);
-        } else {
-            # Swagger 2.0 (default)
-            schema = SwaggerLoader::fromString(schema_source, NOTHING, schema_opts);
-        }
+        # Auto-detect schema type (Swagger 2.0 vs OpenAPI 3.0) and format (JSON vs YAML)
+        AbstractRestSchemaValidator schema = RestSchemaLoader::fromString(schema_source, NOTHING, schema_opts);
 
         if (store_in_cache) {
             TypeScriptActionInterface::cacheSchema(filename, schema_source);
