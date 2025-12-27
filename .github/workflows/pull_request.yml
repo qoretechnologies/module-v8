@@ -249,7 +249,7 @@ jobs:
       # Clone the Qore repository and build it
       - name: Clone and Build Qore
         run: |
-          git clone https://github.com/qorelanguage/qore.git
+          git clone --branch develop https://github.com/qoretechnologies/qore.git
           cd qore
           mkdir build
           cd build
@@ -269,7 +269,7 @@ jobs:
       # Clone and build yaml-module
       - name: Clone and build yaml module
         run: |
-          git clone https://github.com/qorelanguage/module-yaml.git
+          git clone https://github.com/qoretechnologies/module-yaml.git
           cd module-yaml
           mkdir build
           cd build
@@ -279,7 +279,7 @@ jobs:
       # Clone and build uuid-module
       - name: Clone and build uuid module
         run: |
-          git clone https://github.com/qorelanguage/module-uuid.git
+          git clone https://github.com/qoretechnologies/module-uuid.git
           cd module-uuid
           mkdir build
           cd build
@@ -289,7 +289,7 @@ jobs:
       # Clone and build json-module
       - name: Clone and build json-module
         run: |
-          git clone https://github.com/qorelanguage/module-json.git
+          git clone https://github.com/qoretechnologies/module-json.git
           cd module-json
           mkdir build
           cd build
@@ -299,7 +299,7 @@ jobs:
       # Clone and build process-module
       - name: Clone and build process-module
         run: |
-          git clone https://github.com/qorelanguage/module-process.git
+          git clone https://github.com/qoretechnologies/module-process.git
           cd module-process
           mkdir build
           cd build
@@ -313,6 +313,15 @@ jobs:
           cd build
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
           make && sudo make install
+
+      # Install RestSchemaDataProvider module (not yet in Qore's CMakeLists.txt)
+      - name: Install RestSchemaDataProvider module
+        run: |
+          echo "Installing RestSchemaDataProvider from qore source..."
+          sudo cp -r qore/qlib/RestSchemaDataProvider /usr/local/share/qore-modules/
+          echo "Verifying installation..."
+          ls -la /usr/local/share/qore-modules/RestSchemaDataProvider/
+          qore -ne '%requires RestSchemaDataProvider'
 
       # Test catalogue actions made with schema
       - name: Test catalogue actions

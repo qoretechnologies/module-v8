@@ -140,28 +140,28 @@ async function runWithTimeout(promise, delay) {
     }
 
     private jsEventTest() {
-        hash<DataProviderAppInfo> appinfo = DataProviderActionCatalog::getAppEx("js-swagger-test");
-        assertEq("js-swagger-test", appinfo.name);
+        hash<DataProviderAppInfo> appinfo = DataProviderActionCatalog::getAppEx("js-openapi-test");
+        assertEq("js-openapi-test", appinfo.name);
 
-        hash<DataProviderActionInfo> actioninfo = DataProviderActionCatalog::getAppActionEx("js-swagger-test",
+        hash<DataProviderActionInfo> actioninfo = DataProviderActionCatalog::getAppActionEx("js-openapi-test",
             "js-event-1");
         assertEq("js-event-1", actioninfo.action);
 
         hash<auto> config = {
             "name": "test",
-            "url": "tsrest-js-swagger-test://",
+            "url": "tsrest-js-openapi-test://",
             "opts": {
                 "subdomain": "test",
                 "token": "x",
             },
         };
         TypeScriptAppRestConnection conn(config);
-        assertEq("tsrest-js-swagger-test://test.example.com/api", conn.getUrl());
+        assertEq("tsrest-js-openapi-test://test.example.com/api", conn.getUrl());
 
         {
             DataProviderDataContextHelper dch({"name": "Fred"});
             AbstractDataProvider prov =
-                TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("js-event-1");
+                TypeScriptActionInterface::getDataProvider("js-openapi-test", conn).getChildProviderEx("js-event-1");
             AbstractDataProviderType t = prov.getEventTypes().event.type;
             assertEq(2, t.getFields().size());
             assertTrue(prov.supportsObservable());
@@ -193,7 +193,7 @@ async function runWithTimeout(promise, delay) {
             };
             DataProviderDataContextHelper dch(opts);
             AbstractDataProvider prov =
-                TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("js-event-1");
+                TypeScriptActionInterface::getDataProvider("js-openapi-test", conn).getChildProviderEx("js-event-1");
             AbstractDataProviderType t = prov.getEventInfoWithOptions("event", opts).type;
             assertEq(3, t.getFields().size());
             assertTrue(prov.supportsObservable());
@@ -234,27 +234,27 @@ async function runWithTimeout(promise, delay) {
 
         TypeScriptActionInterface::registerWebhookCreateDestroyApis(get_webhook, delete_webhook);
 
-        hash<DataProviderAppInfo> appinfo = DataProviderActionCatalog::getAppEx("js-swagger-test");
-        assertEq("js-swagger-test", appinfo.name);
+        hash<DataProviderAppInfo> appinfo = DataProviderActionCatalog::getAppEx("js-openapi-test");
+        assertEq("js-openapi-test", appinfo.name);
 
-        hash<DataProviderActionInfo> actioninfo = DataProviderActionCatalog::getAppActionEx("js-swagger-test",
+        hash<DataProviderActionInfo> actioninfo = DataProviderActionCatalog::getAppActionEx("js-openapi-test",
             "webhook-event-1");
         assertEq("webhook-event-1", actioninfo.action);
 
         hash<auto> config = {
             "name": "test",
-            "url": "tsrest-js-swagger-test://",
+            "url": "tsrest-js-openapi-test://",
             "opts": {
                 "subdomain": "test",
                 "token": "x",
             },
         };
         TypeScriptAppRestConnection conn(config);
-        assertEq("tsrest-js-swagger-test://test.example.com/api", conn.getUrl());
+        assertEq("tsrest-js-openapi-test://test.example.com/api", conn.getUrl());
 
         {
             AbstractDataProvider prov =
-                TypeScriptActionInterface::getDataProvider("js-swagger-test", conn)
+                TypeScriptActionInterface::getDataProvider("js-openapi-test", conn)
                     .getChildProviderEx("webhook-event-1");
             MyObserver o();
             cast<Observable>(prov).registerObserver(o);
@@ -267,7 +267,7 @@ async function runWithTimeout(promise, delay) {
 
         DataProviderDataContextHelper dch({"name": "Fred"});
         AbstractDataProvider prov =
-            TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("webhook-event-1");
+            TypeScriptActionInterface::getDataProvider("js-openapi-test", conn).getChildProviderEx("webhook-event-1");
         AbstractDataProviderType t = prov.getEventTypes().event.type;
         assertEq(2, t.getFields().size());
         assertTrue(prov.supportsObservable());
@@ -421,22 +421,22 @@ var obj = {
         assertTrue(actioninfo.data_dependent_options);
         assertTrue(actioninfo.options.key.structural_determinate);
 
-        appinfo = DataProviderActionCatalog::getAppEx("js-swagger-test");
-        assertEq("js-swagger-test", appinfo.name);
+        appinfo = DataProviderActionCatalog::getAppEx("js-openapi-test");
+        assertEq("js-openapi-test", appinfo.name);
 
-        actioninfo = DataProviderActionCatalog::getAppActionEx("js-swagger-test", "create-pet");
+        actioninfo = DataProviderActionCatalog::getAppActionEx("js-openapi-test", "create-pet");
         assertEq("create-pet", actioninfo.action);
 
         hash<auto> config = {
             "name": "test",
-            "url": "tsrest-js-swagger-test://",
+            "url": "tsrest-js-openapi-test://",
             "opts": {
                 "subdomain": "test",
                 "token": "x",
             },
         };
         TypeScriptAppRestConnection conn(config);
-        assertEq("tsrest-js-swagger-test://test.example.com/api", conn.getUrl());
+        assertEq("tsrest-js-openapi-test://test.example.com/api", conn.getUrl());
         assertEq("https://{{subdomain}}.example.com/oauth2/auth", conn.getRealOptions().oauth2_auth_url);
         assertEq("https://test.example.com/oauth2/auth", conn.getAuthUrl());
         assertEq("https://test.example.com/oauth2/auth?scope=&redirect_uri=auto&client_id=x&response_type=code",
@@ -444,9 +444,9 @@ var obj = {
         assertEq("https://test.example.com/oauth2/auth", conn.getOAuth2Options().oauth2_auth_url);
         assertEq("https://{{subdomain}}.example.com/oauth2/auth", conn.orig_opts.oauth2_auth_url);
 
-        hash<ConnectionSchemeInfo> scheme = ConnectionSchemeCache::getSchemeEx("tsrest-js-swagger-test");
+        hash<ConnectionSchemeInfo> scheme = ConnectionSchemeCache::getSchemeEx("tsrest-js-openapi-test");
         conn = scheme.cls.newObject(config);
-        assertEq("tsrest-js-swagger-test://test.example.com/api", conn.getUrl());
+        assertEq("tsrest-js-openapi-test://test.example.com/api", conn.getUrl());
         assertEq("https://{{subdomain}}.example.com/oauth2/auth", conn.getRealOptions().oauth2_auth_url);
         assertEq("https://test.example.com/oauth2/auth", conn.getAuthUrl());
         assertEq("https://test.example.com/oauth2/auth?scope=&redirect_uri=auto&client_id=x&response_type=code",
@@ -461,7 +461,7 @@ var obj = {
         }
 
         AbstractDataProvider prov =
-            TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("create-pet");
+            TypeScriptActionInterface::getDataProvider("js-openapi-test", conn).getChildProviderEx("create-pet");
         AbstractDataProviderType t = prov.getRequestType();
         *hash<string, AbstractDataField> fields = t.getFields();
         {
@@ -471,7 +471,7 @@ var obj = {
             assertEq(("a",), keys fields.new1.getType().getFields());
         }
 
-        prov = TypeScriptActionInterface::getDataProvider("js-swagger-test", conn).getChildProviderEx("get-pet");
+        prov = TypeScriptActionInterface::getDataProvider("js-openapi-test", conn).getChildProviderEx("get-pet");
         t = prov.getRequestType();
         fields = t.getFields();
         {
@@ -481,7 +481,7 @@ var obj = {
             assertTrue(exists f);
         }
 
-        actioninfo = DataProviderActionCatalog::checkAppActionOptions("js-swagger-test", "get-pet");
+        actioninfo = DataProviderActionCatalog::checkAppActionOptions("js-openapi-test", "get-pet");
         assertEq("get-pet", actioninfo.action);
         {
             on_error printf("options: %N\n", actioninfo.options);
@@ -489,7 +489,7 @@ var obj = {
         }
         assertEq((1, 2), (map $1.value, prov.getReferenceData("id")));
 
-        string cname = TypeScriptActionInterface::createConnection("js-swagger-test", {} + {
+        string cname = TypeScriptActionInterface::createConnection("js-openapi-test", {} + {
             "opts": {
                 "subdomain": "test",
                 "username": "x",
@@ -574,6 +574,53 @@ var obj = {
 
         rows = prov.deleteRecords({"id": 4});
         assertEq(1, rows);
+
+        # Test OpenAPI 3.0 schema support
+        appinfo = DataProviderActionCatalog::getAppEx("js-openapi3-test");
+        assertEq("js-openapi3-test", appinfo.name);
+
+        actioninfo = DataProviderActionCatalog::getAppActionEx("js-openapi3-test", "create-pet");
+        assertEq("create-pet", actioninfo.action);
+
+        actioninfo = DataProviderActionCatalog::getAppActionEx("js-openapi3-test", "get-pet");
+        assertEq("get-pet", actioninfo.action);
+
+        config = {
+            "name": "test",
+            "url": "tsrest-js-openapi3-test://",
+            "opts": {
+                "subdomain": "test",
+                "token": "x",
+            },
+        };
+        conn = new TypeScriptAppRestConnection(config);
+        assertEq("tsrest-js-openapi3-test://test.example.com/api", conn.getUrl());
+
+        scheme = ConnectionSchemeCache::getSchemeEx("tsrest-js-openapi3-test");
+        conn = scheme.cls.newObject(config);
+        assertEq("tsrest-js-openapi3-test://test.example.com/api", conn.getUrl());
+
+        # Test that we can get the data provider for OpenAPI 3.0 actions
+        parent = TypeScriptActionInterface::getDataProvider("js-openapi3-test", conn);
+        prov = parent.getChildProviderEx("create-pet");
+        assertTrue(exists prov);
+        t = prov.getRequestType();
+        assertTrue(exists t);
+        # OpenAPI 3.0 uses "requestBody" which gets flattened, should have pet properties
+        {
+            hash<string, AbstractDataField> oa3_fields = t.getFields();
+            assertTrue(exists oa3_fields);
+        }
+
+        prov = parent.getChildProviderEx("get-pet");
+        assertTrue(exists prov);
+        t = prov.getRequestType();
+        assertTrue(exists t);
+        {
+            hash<string, AbstractDataField> oa3_fields = t.getFields();
+            # OpenAPI 3.0 path parameter
+            assertTrue(exists oa3_fields.petId);
+        }
     }
 }
 

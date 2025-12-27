@@ -2,23 +2,28 @@ exports.actionsCatalogue = {
     registerAppActions: function(api) {
         /** registerApp() takes the same arguments as DataProviderActionCatalog::registerApp() plus:
             - rest?: object -> documented below
-            - swagger?: string -> a location to a Swagger 2.0 schema = OpenAPI 2.0
-            - swagger_options?: object -> an optional hash of swagger parsing options - the main option is
+            - openapi?: string -> a location to an OpenAPI schema (supports Swagger 2.0, OpenAPI 3.0/3.1 with
+              auto-detection); alias: "swagger"
+            - openapi_options?: object -> an optional hash of schema parsing options - the main option is
               - "parse_flags": -1 -> this will turn on all lax parsing options - or you can use 128
                 (LM_ACCEPT_QUERY_OBJECTS = accept "object" as a valid type for query parameters like OpenAPI 3.0)
-            - swagger_paths?: string[] -> a list of swagger paths to build an optimized schema
-            - swagger_type_overrides?: object -> an object keyed by Swagger type (in dot notation), values are applied
-              to override the given types
-            - swagger_schema_map?: object -> keyed by swagger scheme label, values are:
-              - swagger?: string -> a location to a Swagger 2.0 schema = OpenAPI 2.0
-              - swagger_options?: object -> an optional hash of swagger parsing options - the main option is
+              alias: "swagger_options"
+            - openapi_paths?: string[] -> a list of schema paths to build an optimized schema; alias: "swagger_paths"
+            - openapi_type_overrides?: object -> an object keyed by schema type (in dot notation), values are applied
+              to override the given types; alias: "swagger_type_overrides"
+            - openapi_schema_map?: object -> keyed by schema label, values are:
+              - openapi?: string -> a location to an OpenAPI schema (supports Swagger 2.0, OpenAPI 3.0/3.1 with
+                auto-detection); alias: "swagger"
+              - openapi_options?: object -> an optional hash of schema parsing options - the main option is
                 - "parse_flags"?: int -1 -> this will turn on all lax parsing options - or you can use 128
                   (LM_ACCEPT_QUERY_OBJECTS = accept "object" as a valid type for query parameters like OpenAPI 3.0)
-                - utc_dates?: boolean -> if date/time values should be serialized in UTC as Swagger query args
-                - query_date_format?: string -> the date format to use when serializing Swagger query date args
-              - swagger_paths?: string[] -> a list of swagger paths to build an optimized schema
-              - swagger_type_overrides?: object -> an object keyed by Swagger type (in dot notation), values are
-                applied to override the given types
+                - utc_dates?: boolean -> if date/time values should be serialized in UTC as query args
+                - query_date_format?: string -> the date format to use when serializing query date args
+                alias: "swagger_options"
+              - openapi_paths?: string[] -> a list of schema paths to build an optimized schema; alias: "swagger_paths"
+              - openapi_type_overrides?: object -> an object keyed by schema type (in dot notation), values are
+                applied to override the given types; alias: "swagger_type_overrides"
+              alias: "swagger_schema_map"
         */
         api.registerApp({
             "name": "js-test",
@@ -848,8 +853,8 @@ exports.actionsCatalogue = {
         });
 
         api.registerApp({
-            "name": "js-swagger-test",
-            "display_name": "JavaScript Swagger Test",
+            "name": "js-openapi-test",
+            "display_name": "JavaScript OpenAPI Test",
             "short_desc": "Test",
             "desc": "Test",
             // "logo" is a base64-encoded string
@@ -868,9 +873,9 @@ exports.actionsCatalogue = {
                 'LjU3M0w1NC4xNzEsNDUuMzA3TDU0LjE3MSw1OC43NzZMNDUuMjEzLDYzLjk0OEw1OS41NjUsNzIuMDVMNjUuNzY4LDY4LjQ2OU' +
                 'M2NS43NjksNjguNDY4IDY4LjM2Myw2Ni45NyA2OC4zNjMsNjMuOTczIiBzdHlsZT0iZmlsbDpyZ2IoMCwyMzEsMjU1KTtmaWxs' +
                 'LXJ1bGU6bm9uemVybzsiLz4KICAgIDwvZz4KPC9zdmc+Cg==',
-            "logo_file_name": "test-swagger.svg",
+            "logo_file_name": "test-openapi.svg",
             "logo_mime_type": "image/svg+xml",
-            "swagger": "PetStore.swagger.yaml",
+            "openapi": "PetStore.swagger.yaml",
             "rest": {
                 "data": "json",
                 "oauth2_auth_url":  "https://{{subdomain}}.example.com/oauth2/auth",
@@ -898,13 +903,13 @@ exports.actionsCatalogue = {
 
         // NOTE: this action will be executed as a REST call, no code is necessary
         api.registerAction({
-            "app": "js-swagger-test",
+            "app": "js-openapi-test",
             "action": "create-pet",
             "display_name": "Create Pet",
             "short_desc": "Create pet",
             "desc": "Create pet",
             "action_code": 2,  // DPAT_API == 2
-            "swagger_path": "pet/POST",
+            "openapi_path": "pet/POST",  // alias: "swagger_path"
             /** ignore_options?: string[] -> ignores options given in the request type
             */
             /** override_options?: object -> allows options to be overridden; keys are non-optimized request property
@@ -946,13 +951,13 @@ exports.actionsCatalogue = {
 
         // NOTE: this action will be executed as a REST call, no code is necessary
         api.registerAction({
-            "app": "js-swagger-test",
+            "app": "js-openapi-test",
             "action": "get-pet",
             "display_name": "Get Pet",
             "short_desc": "Get pet",
             "desc": "Get pet",
             "action_code": 2,  // DPAT_API == 2
-            "swagger_path": "pet/{id}/GET",
+            "openapi_path": "pet/{id}/GET",  // alias: "swagger_path"
             /** override_options?: object -> allows options to be overridden; keys are non-optimized request property
                 paths and must refer to a property that will be presented as an action option after flattening /
                 optimization. The attributes of the object are handled like action option attributes
@@ -981,7 +986,7 @@ exports.actionsCatalogue = {
 
         api.registerAction({
             // app: string
-            "app": "js-swagger-test",
+            "app": "js-openapi-test",
             // action: string
             "action": "webhook-event-1",
             // display_name: string
@@ -1118,7 +1123,7 @@ exports.actionsCatalogue = {
         });
 
         api.registerAction({
-            "app": "js-swagger-test",
+            "app": "js-openapi-test",
             "action": "js-event-1",
             "display_name": "JavaScript Event",
             "short_desc": "JavaScript event example action",
@@ -1237,6 +1242,76 @@ exports.actionsCatalogue = {
                     };
                 }
             },
+        });
+
+        // OpenAPI 3.0 test app
+        api.registerApp({
+            "name": "js-openapi3-test",
+            "display_name": "JavaScript OpenAPI 3.0 Test",
+            "short_desc": "OpenAPI 3.0 Test",
+            "desc": "Test app using OpenAPI 3.0 schema",
+            "logo": 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUF' +
+                'VCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2' +
+                'ZzExLmR0ZCI+Cjxzdmcgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDUyIDYzIiB2ZXJzaW9uPSIxLj' +
+                'EiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkv' +
+                'eGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zOnNlcmlmPSJodHRwOi8vd3d3LnNlcmlmLmNvbS8iIHN0eWxlPSJmaW' +
+                'xsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6' +
+                'MjsiPgogICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwtMTYuNjUsLTIzLjAxNzIpIj4KICAgICAgICA8cGF0aCBkPS' +
+                'JNNjguMzYzLDYzLjk3M0w2OC4zNjMsNDAuMTA5QzY4LjM2Myw0MC4xMDkgNjguMzYzLDM3LjExMyA2NS43NjgsMzUuNjE1TDQ1' +
+                'LjEwMiwyMy42ODNDNDUuMTAyLDIzLjY4MyA0Mi41MDcsMjIuMTg1IDM5LjkxMiwyMy42ODNMMTkuMjQ1LDM1LjYxNUMxOS4yND' +
+                'UsMzUuNjE1IDE2LjY1LDM3LjExMyAxNi42NSw0MC4xMDlMMTYuNjUsNjMuOTczQzE2LjY1LDYzLjk3MyAxNi42NSw2Ni45Njkg' +
+                'MTkuMjQ1LDY4LjQ2N0w0Ny44MzksODQuODIyQzQ3LjgzOSw4NC44MjIgNTAuNDM0LDg2LjM2OCA1My4wMjksODQuODdMNjQuNj' +
+                'UyLDc4LjExMkw0Mi41Miw2NS41MDNMNDIuNTA3LDY1LjUxMUwzMC44NDMsNTguNzc2TDMwLjg0Myw0NS4zMDdMNDIuNTA3LDM4' +
+                'LjU3M0w1NC4xNzEsNDUuMzA3TDU0LjE3MSw1OC43NzZMNDUuMjEzLDYzLjk0OEw1OS41NjUsNzIuMDVMNjUuNzY4LDY4LjQ2OU' +
+                'M2NS43NjksNjguNDY4IDY4LjM2Myw2Ni45NyA2OC4zNjMsNjMuOTczIiBzdHlsZT0iZmlsbDpyZ2IoMCwxOTIsMCk7ZmlsbC1y' +
+                'dWxlOm5vbnplcm87Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=',
+            "logo_file_name": "test-openapi3.svg",
+            "logo_mime_type": "image/svg+xml",
+            "openapi": "PetStore.openapi3.yaml",
+            "rest": {
+                "data": "json",
+                "oauth2_auth_url":  "https://{{subdomain}}.example.com/oauth2/auth",
+                "oauth2_client_id": "x",
+                "oauth2_client_secret": "y",
+                "oauth2_grant_type": "authorization_code",
+                "oauth2_token_url": "https://{{subdomain}}.example.com/token",
+                "url": "https://{{subdomain}}.example.com/api",
+            },
+            "rest_modifiers": {
+                "options": {
+                    "subdomain": {
+                        "display_name": "Subdomain",
+                        "short_desc": "The subdomain for the URL",
+                        "desc": "The subdomain for the URL",
+                        "type": "string",
+                    },
+                },
+                "required_options": "subdomain",
+                "url_template_options": [
+                    "subdomain",
+                ],
+            },
+        });
+
+        // OpenAPI 3.0 action using openapi_path
+        api.registerAction({
+            "app": "js-openapi3-test",
+            "action": "create-pet",
+            "display_name": "Create Pet (OpenAPI 3.0)",
+            "short_desc": "Create pet using OpenAPI 3.0",
+            "desc": "Create pet using OpenAPI 3.0 schema",
+            "action_code": 2,  // DPAT_API == 2
+            "openapi_path": "pet/POST",
+        });
+
+        api.registerAction({
+            "app": "js-openapi3-test",
+            "action": "get-pet",
+            "display_name": "Get Pet (OpenAPI 3.0)",
+            "short_desc": "Get pet using OpenAPI 3.0",
+            "desc": "Get pet using OpenAPI 3.0 schema",
+            "action_code": 2,  // DPAT_API == 2
+            "openapi_path": "pet/{petId}/GET",
         });
 
         // this will add actions to discord

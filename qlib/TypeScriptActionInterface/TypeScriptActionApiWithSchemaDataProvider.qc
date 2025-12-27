@@ -24,7 +24,7 @@
 
 #! Main namespace for the TypeScriptActionInterface module
 public namespace TypeScriptActionInterface {
-#! Generic API data provider for TypeScript actions based on a Swagger schema
+#! Generic API data provider for TypeScript actions based on a REST schema (Swagger 2.0 or OpenAPI 3.0/3.1)
 public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiDataProvider {
     public {
         #! Provider info
@@ -40,14 +40,14 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
     }
 
     private {
-        #! Optional Swagger schema label
-        *string swagger_schema;
+        #! Optional REST schema label
+        *string rest_schema;
 
-        #! Swagger path
-        string swagger_path;
+        #! REST schema path
+        string schema_path;
 
         #! API data provider
-        SwaggerRequestDataProvider prov;
+        RestSchemaRequestDataProvider prov;
 
         #! Path vars
         *hash<string, bool> path_vars;
@@ -61,7 +61,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         #! If the response only has a body key
         bool res_only_body;
 
-        #! Connection to Swagger path option map
+        #! Connection to REST schema path option map
         *hash<string, string> conn_opt_map;
 
         #! Query option set
@@ -105,7 +105,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
     }
 
     #! Creates the object from the arguments
-    constructor(reference<hash<auto>> action, string swagger_path, *hash<AsyncCallInfo> api,
+    constructor(reference<hash<auto>> action, string schema_path, *hash<AsyncCallInfo> api,
             *hash<string, bool> path_vars, *hash<string, bool> independent_path_vars,
             *hash<string, string> conn_opt_map, *hash<auto> override_options, *softlist<auto> ignore_options,
             ActionFunctionContext fctx, *hash<AsyncCallInfo> get_dynamic_request_type,
@@ -114,9 +114,9 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             *AbstractDataProviderType response_type)
             : TypeScriptActionApiDataProvider(action.action, api, fctx, get_dynamic_request_type,
             get_dynamic_response_type) {
-        self.swagger_schema = remove action.swagger_schema;
-        swagger_path =~ s/^\///;
-        self.swagger_path = swagger_path;
+        self.rest_schema = remove action.openapi_schema;
+        schema_path =~ s/^\///;
+        self.schema_path = schema_path;
         self.path_vars = path_vars;
         self.conn_opt_map = conn_opt_map;
         self.request_data_converter = request_data_converter;
@@ -357,7 +357,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 if (i.value_depends_on) {
                     depmap{key} = map {$1: True}, i.value.depends_on;
                 }
-                if (prov.op.method != "GET") {
+                if (prov.getName() != "GET") {
                     reqmap{request_key}{key} = ("body",);
                     rreqmap{request_key}{"body." + key} = key;
                 } else {
@@ -571,8 +571,9 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                     "request type %y", action_save.app, action_save.action, request_type_info.type.getName());
             }
             do_not_cache = overrideOptions(cast<HashDataType>(request_type_info.type));
-            if (!prov.op.consumes) {
-                prov.op.consumes{MimeTypeJson} = True;
+            # Set JSON as accepted content type if not already set
+            if (!prov.getConsumes()) {
+                prov.setConsumes(MimeTypeJson);
             }
             prov.disableRequestTypeCheck();
         }
@@ -624,16 +625,16 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
 
     AbstractDataProvider checkDataProvider() {
         if (!prov) {
-            on_error rethrow $1.err, sprintf("Error setting data provider from app %y action %y: %s (Swagger "
-                "path: %y)", app, action, $1.desc, swagger_path);
+            on_error rethrow $1.err, sprintf("Error setting data provider from app %y action %y: %s (REST schema "
+                "path: %y)", app, action, $1.desc, schema_path);
 
-            AbstractDataProvider p = TypeScriptActionInterface::getSwaggerDataProvider(app, swagger_schema)
-                .getChildProviderPath(swagger_path);
-            if (!(p instanceof SwaggerRequestDataProvider)) {
-                throw "ACTION-ERROR", sprintf("App %y action %y: Swagger path %y is not an API endpoint (%s -> %y)", app,
-                    action, swagger_path, p.className(), p.getChildProviderNames());
+            AbstractDataProvider p = TypeScriptActionInterface::getSchemaDataProvider(app, rest_schema)
+                .getChildProviderPath(schema_path);
+            if (!(p instanceof RestSchemaRequestDataProvider)) {
+                throw "ACTION-ERROR", sprintf("App %y action %y: REST schema path %y is not an API endpoint (%s -> %y)", app,
+                    action, schema_path, p.className(), p.getChildProviderNames());
             }
-            prov = cast<SwaggerRequestDataProvider>(p);
+            prov = cast<RestSchemaRequestDataProvider>(p);
         }
         return prov;
     }
@@ -685,7 +686,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
     private auto doRequestImpl(auto req, *hash<auto> request_options) {
         on_error rethrow $1.err, sprintf("%s (req: %y request_options: %y)", $1.desc, req, request_options);
         if (!api) {
-            return makeSwaggerRequest(req, request_options);
+            return makeSchemaRequest(req, request_options);
         }
         if (path_vars) {
             request_options.path_vars = remove req{keys path_vars};
@@ -706,14 +707,14 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
 
         @return the response to the request
     */
-    private auto makeSwaggerRequest(auto req, *hash<auto> request_options) {
+    private auto makeSchemaRequest(auto req, *hash<auto> request_options) {
         checkDataProvider();
         # *always* replace the RestClient with each call; it can have outdated auth info
         prov.setRestClient(rest = conn.get());
         if (req && req.typeCode() == NT_HASH) {
             checkUpdateRestOptions(rest, req);
         }
-        if (exists (*string base_path = conn.orig_opts.swagger_base_path)) {
+        if (exists (*string base_path = conn.orig_opts.openapi_base_path ?? conn.orig_opts.swagger_base_path)) {
             request_options.base_path = base_path;
         }
         if (path_vars) {
