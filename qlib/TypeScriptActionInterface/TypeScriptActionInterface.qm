@@ -40,7 +40,8 @@
 %requires ConnectionProvider
 %requires RestClient
 %requires Swagger
-%requires SwaggerDataProvider
+%requires OpenApi3
+%requires RestSchemaDataProvider
 %requires FileLocationHandler
 %requires FsUtil
 %requires Util

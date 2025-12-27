@@ -216,17 +216,17 @@ public class TypeScriptActionInterface {
         #! Maps from app names to REST getOptions
         static hash<string, hash<auto>> armap;
 
-        #! Maps from app names to Swagger schemas
-        static hash<string, SwaggerSchema> app_swagger_map;
+        #! Maps from app names to REST schemas (Swagger 2.0 or OpenAPI 3.0/3.1)
+        static hash<string, AbstractRestSchemaValidator> app_schema_map;
 
-        #! Maps from app names to SwaggerDataProvider objects
-        static hash<string, SwaggerDataProvider> app_swagger_dp;
+        #! Maps from app names to RestSchemaDataProvider objects
+        static hash<string, RestSchemaDataProvider> app_schema_dp;
 
-        #! Maps from app and schema names to Swagger schemas
-        static hash<string, hash<string, SwaggerSchema>> app_swagger_schema_map;
+        #! Maps from app and schema names to REST schemas (Swagger 2.0 or OpenAPI 3.0/3.1)
+        static hash<string, hash<string, AbstractRestSchemaValidator>> app_schema_schema_map;
 
-        #! Maps from app and schema names to SwaggerDataProvider objects
-        static hash<string, hash<string, SwaggerDataProvider>> app_swagger_schema_dp;
+        #! Maps from app and schema names to RestSchemaDataProvider objects
+        static hash<string, hash<string, RestSchemaDataProvider>> app_schema_schema_dp;
 
         #! Maps from lower-case app names to Google app definitions
         static hash<string, hash<GoogleAppInfo>> google_app_map;
@@ -246,7 +246,7 @@ public class TypeScriptActionInterface {
         #! Maps from app names to connection update info
         static hash<string, hash<auto>> app_conn_update_map;
 
-        #! Maps from app names to connection -> Swagger path option maps
+        #! Maps from app names to connection -> REST schema path option maps
         static hash<string, hash<string, string>> app_conn_opt_map;
 
         #! Maps from app names to URL option names
@@ -338,8 +338,8 @@ public class TypeScriptActionInterface {
         remove app_conn_opt_map{appname};
         remove app_url_option_map{appname};
         remove aws_app_map{appname};
-        remove app_swagger_map{appname};
-        remove app_swagger_schema_map{appname};
+        remove app_schema_map{appname};
+        remove app_schema_schema_map{appname};
         remove google_app_map{appname};
         remove atmap{appname};
         ConnectionSchemeCache::deregisterScheme(sname);
@@ -863,23 +863,40 @@ public class TypeScriptActionInterface {
         on_success TSAI::debug("TypeScriptActionInterface: registered app %y", app.name);
         on_error TSAI::error("%s", get_exception_string($1));
         string appname = app.name.lwr();
-        SwaggerSchema schema;
-        hash<string, SwaggerSchema> swagger_schema_map;
+        AbstractRestSchemaValidator schema;
+        hash<string, AbstractRestSchemaValidator> schema_schema_map;
+        # Handle swagger property (with auto-detection for OpenAPI 3.0 content)
         if ((*string swagger_loc = remove app.swagger).val()) {
             on_error rethrow $1.err, sprintf("%s (while loading app %y)", $1.desc, app.name);
-            if (app.swagger_schema_map) {
-                throw "APP-ERROR", "Invalid 'swagger_schema_map' property; this property cannot be given if "
-                    "`swagger` is provided";
+            if (app.swagger_schema_map || app.openapi_schema_map) {
+                throw "APP-ERROR", "Invalid 'swagger_schema_map' or 'openapi_schema_map' property; this property "
+                    "cannot be given if `swagger` is provided";
             }
-            schema = TypeScriptActionInterface::getSwaggerSchema(appname, swagger_loc, remove app.swagger_options,
+            schema = TypeScriptActionInterface::getRestSchema(appname, swagger_loc, remove app.swagger_options,
                 remove app.swagger_paths, remove app.swagger_type_overrides);
-        } else if (*hash<auto> schema_map = remove app.swagger_schema_map) {
-            *hash<auto> swagger_options = remove app.swagger_options;
-            foreach hash<auto> i in (schema_map.pairIterator()) {
+        # Handle explicit openapi property
+        } else if ((*string openapi_loc = remove app.openapi).val()) {
+            on_error rethrow $1.err, sprintf("%s (while loading app %y)", $1.desc, app.name);
+            if (app.swagger_schema_map || app.openapi_schema_map) {
+                throw "APP-ERROR", "Invalid 'swagger_schema_map' or 'openapi_schema_map' property; this property "
+                    "cannot be given if `openapi` is provided";
+            }
+            schema = TypeScriptActionInterface::getRestSchema(appname, openapi_loc, remove app.swagger_options,
+                remove app.swagger_paths, remove app.swagger_type_overrides);
+        # Handle schema map variants
+        } else if (*hash<auto> smap = remove app.swagger_schema_map ?? remove app.openapi_schema_map) {
+            *hash<auto> schema_options = remove app.swagger_options;
+            foreach hash<auto> i in (smap.pairIterator()) {
                 on_error rethrow $1.err, sprintf("%s (while creating schema for app %y schema %y): %y", $1.desc,
                     app.name, i.key, i.value);
-                swagger_schema_map{i.key} = TypeScriptActionInterface::getSwaggerSchema(appname, i.value.swagger,
-                    remove i.value.swagger_options ?? swagger_options,
+                # Support both swagger and openapi keys in the map entries
+                string schema_loc = i.value.swagger ?? i.value.openapi;
+                if (!schema_loc) {
+                    throw "APP-ERROR", sprintf("Schema map entry %y must have either 'swagger' or 'openapi' key",
+                        i.key);
+                }
+                schema_schema_map{i.key} = TypeScriptActionInterface::getRestSchema(appname, schema_loc,
+                    remove i.value.swagger_options ?? schema_options,
                     remove i.value.swagger_paths, remove i.value.swagger_type_overrides);
             }
         }
@@ -891,12 +908,12 @@ public class TypeScriptActionInterface {
         hash<GoogleAppInfo> google_app;
         if (exists (*hash<auto> h = remove app0.google_app)) {
             if (schema) {
-                throw "APP-ERROR", sprintf("App %y cannot define both the \"google_app\" (%y) and \"swagger\" "
+                throw "APP-ERROR", sprintf("App %y cannot define both the \"google_app\" (%y) and \"swagger\"/\"openapi\" "
                     "attributes", app.name, google_app);
             }
-            if (swagger_schema_map) {
+            if (schema_schema_map) {
                 throw "APP-ERROR", sprintf("App %y cannot define both the \"google_app\" (%y) and "
-                    "\"swagger_schema_map\" attributes", app.name, google_app);
+                    "\"swagger_schema_map\"/\"openapi_schema_map\" attributes", app.name, google_app);
             }
             if (h.api.typeCode() != NT_STRING) {
                 throw "APP-ERROR", sprintf("App %y google_app.api must be a string; got type %y instead",
@@ -1118,10 +1135,10 @@ public class TypeScriptActionInterface {
         }
 
         if (schema) {
-            app_swagger_map{appname} = schema;
+            app_schema_map{appname} = schema;
         }
-        if (swagger_schema_map) {
-            app_swagger_schema_map{appname} = swagger_schema_map;
+        if (schema_schema_map) {
+            app_schema_schema_map{appname} = schema_schema_map;
         }
         if (url_template_options) {
             atmap{appname} = url_template_options;
@@ -1138,8 +1155,8 @@ public class TypeScriptActionInterface {
         root.registerChild(appname, prov);
     }
 
-    static SwaggerSchema getSwaggerSchema(string appname, string swagger_loc, *hash<auto> swagger_opts,
-            *list<auto> paths, *hash<auto> swagger_type_overrides) {
+    static AbstractRestSchemaValidator getRestSchema(string appname, string schema_loc, *hash<auto> schema_opts,
+            *list<auto> paths, *hash<auto> type_overrides) {
         # first check cache
         string path_sha512;
         if (paths) {
@@ -1147,21 +1164,33 @@ public class TypeScriptActionInterface {
         } else {
             path_sha512 = "none";
         }
-        string filename = sprintf("swagger-%s-%s.yaml", encode_url(swagger_loc, True), path_sha512);
+        string filename = sprintf("schema-%s-%s.yaml", encode_url(schema_loc, True), path_sha512);
         bool store_in_cache;
         *string schema_source = TypeScriptActionInterface::getCachedSchema(\store_in_cache, filename);
         if (!schema_source) {
-            schema_source = FileLocationHandler::getTextFileFromLocation(swagger_loc);
+            schema_source = FileLocationHandler::getTextFileFromLocation(schema_loc);
             if (paths) {
+                # Note: path optimization currently only works for Swagger 2.0 schemas
                 schema_source = TypeScriptActionInterface::getOptimizedSchema(appname, schema_source, paths);
             }
         }
-        SwaggerSchema schema = SwaggerLoader::fromString(schema_source, NOTHING, swagger_opts);
+
+        # Auto-detect schema type from content
+        AbstractRestSchemaValidator schema;
+        if (schema_source =~ /^openapi\s*[:\"\']?\s*[:\"\']?3/
+            || schema_source =~ /"openapi"\s*:\s*"3/) {
+            # OpenAPI 3.0/3.1
+            schema = OpenApi3Loader::fromString(schema_source, NOTHING, schema_opts);
+        } else {
+            # Swagger 2.0 (default)
+            schema = SwaggerLoader::fromString(schema_source, NOTHING, schema_opts);
+        }
+
         if (store_in_cache) {
             TypeScriptActionInterface::cacheSchema(filename, schema_source);
         }
-        if (swagger_type_overrides) {
-            TypeScriptActionInterface::overrideTypes(appname, schema, swagger_type_overrides);
+        if (type_overrides) {
+            TypeScriptActionInterface::overrideTypes(appname, schema, type_overrides);
         }
         return schema;
     }
@@ -1177,9 +1206,9 @@ public class TypeScriptActionInterface {
             string m;
             if (l.size() == 2) {
                 m = (pop l).upr();
-                if (!SwaggerDataProvider::HttpMethods{m}) {
+                if (!RestSchemaDataProvider::HttpMethods{m}) {
                     throw "INVALID-HTTP-METHOD", sprintf("Method %y is unknown; expecting one of: %y", m,
-                        keys SwaggerDataProvider::HttpMethods);
+                        keys RestSchemaDataProvider::HttpMethods);
                 }
             }
             string p = l.join("/");
@@ -1484,21 +1513,21 @@ public class TypeScriptActionInterface {
             app = DataProviderActionCatalog::getAppEx(action.app);
         }
         string appname = action.app.lwr();
-        *SwaggerSchema schema;
-        if (exists (*string swagger_schema = action.swagger_schema)) {
-            schema = app_swagger_schema_map{appname}{swagger_schema};
+        *AbstractRestSchemaValidator schema;
+        if (exists (*string rest_schema = action.swagger_schema)) {
+            schema = app_schema_schema_map{appname}{rest_schema};
             if (!schema) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y refers to unknown Swagger schema %y; "
-                    "known schemas for this app: %y", app.name, action.action, swagger_schema,
-                    keys app_swagger_schema_map{appname});
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y refers to unknown REST schema %y; "
+                    "known schemas for this app: %y", app.name, action.action, rest_schema,
+                    keys app_schema_schema_map{appname});
             }
         } else {
-            if ((action.action_code == DPAT_API) && !action.api_function && app_swagger_schema_map{appname}) {
+            if ((action.action_code == DPAT_API) && !action.api_function && app_schema_schema_map{appname}) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y API action %y has no 'api_function' attribute and "
                     "is missing the \"swagger_schema\" attribute; known schemas for this app: %y", app.name,
-                    action.action, keys app_swagger_schema_map{appname});
+                    action.action, keys app_schema_schema_map{appname});
             }
-            schema = app_swagger_map{appname};
+            schema = app_schema_map{appname};
         }
 
         switch (action.action_code) {
@@ -1523,7 +1552,7 @@ public class TypeScriptActionInterface {
     }
 
     static string generateEventDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
-            JavaScriptProgramPool pool, *SwaggerSchema schema) {
+            JavaScriptProgramPool pool, *AbstractRestSchemaValidator schema) {
         ActionFunctionContext fctx(app.name, action.action, pool);
         # get event info
         string event_id;
@@ -1770,7 +1799,7 @@ public class TypeScriptActionInterface {
     }
 
     static generateApiDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
-            JavaScriptProgramPool pool, *SwaggerSchema schema) {
+            JavaScriptProgramPool pool, *AbstractRestSchemaValidator schema) {
         string appname = app.name.lwr();
         hash<auto> google_action;
         if (auto h = remove action.google_action) {
@@ -1930,7 +1959,7 @@ public class TypeScriptActionInterface {
         if ((*string swagger_path = remove action.swagger_path).val()) {
             if (!schema) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"swagger_path\" "
-                    "attribute %y; this attribute can only been used when the application declares a Swagger schema",
+                    "attribute %y; this attribute can only be used when the application declares a REST schema",
                     action.app, action.action, swagger_path);
             }
             if (remove action.options) {
@@ -2963,27 +2992,28 @@ public class TypeScriptActionInterface {
         TypeScriptActionInterface::WebhookDelete(info);
     }
 
-    #! Returns a Swagger data provider for the given app
-    static SwaggerDataProvider getSwaggerDataProvider(string app, *string swagger_schema) {
+    #! Returns a REST schema data provider for the given app (supports Swagger 2.0 and OpenAPI 3.0/3.1)
+    static RestSchemaDataProvider getSchemaDataProvider(string app, *string schema_name) {
         string appname = app.lwr();
-        *SwaggerDataProvider rv = exists swagger_schema
-            ? app_swagger_schema_dp{appname}{swagger_schema}
-            : app_swagger_dp{appname};
+        *RestSchemaDataProvider rv = exists schema_name
+            ? app_schema_schema_dp{appname}{schema_name}
+            : app_schema_dp{appname};
         if (!rv) {
-            *SwaggerSchema schema = exists swagger_schema
-                ? app_swagger_schema_map{appname}{swagger_schema}
-                : app_swagger_map{appname};
+            *AbstractRestSchemaValidator schema = exists schema_name
+                ? app_schema_schema_map{appname}{schema_name}
+                : app_schema_map{appname};
             if (!schema) {
-                if (exists swagger_schema) {
-                    throw "APP-ERROR", sprintf("App %y has no Swagger schema %y", app, swagger_schema);
+                if (exists schema_name) {
+                    throw "APP-ERROR", sprintf("App %y has no REST schema %y", app, schema_name);
                 } else {
-                    throw "APP-ERROR", sprintf("App %y has no Swagger schema", app);
+                    throw "APP-ERROR", sprintf("App %y has no REST schema", app);
                 }
             }
-            if (exists swagger_schema) {
-                app_swagger_schema_dp{appname}{swagger_schema} = rv = new SwaggerDataProvider(schema);
+            rv = new RestSchemaDataProvider(schema);
+            if (exists schema_name) {
+                app_schema_schema_dp{appname}{schema_name} = rv;
             } else {
-                app_swagger_dp{appname} = rv = new SwaggerDataProvider(schema);
+                app_schema_dp{appname} = rv;
             }
         }
         return rv;
@@ -3083,8 +3113,8 @@ public class TypeScriptActionInterface {
         }
     }
 
-    static private overrideTypes(string app, SwaggerSchema schema, hash<auto> swagger_type_overrides) {
-        foreach hash<auto> i in (swagger_type_overrides.pairIterator()) {
+    static private overrideTypes(string app, AbstractRestSchemaValidator schema, hash<auto> type_overrides) {
+        foreach hash<auto> i in (type_overrides.pairIterator()) {
             list<string> l = i.key.split(".");
             string n = shift l;
             AbstractDataProviderType t = schema.getTypeForReference(n);
@@ -3093,7 +3123,7 @@ public class TypeScriptActionInterface {
                 t = TypeScriptActionInterface::getModifiedType(app, n, t, i.value);
                 schema.replaceCachedTypeForReference(n, t);
             } else {
-                TypeScriptActionApiWithSchemaDataProvider::overrideOptionType("swagger-" + i.key, {
+                TypeScriptActionApiWithSchemaDataProvider::overrideOptionType("schema-" + i.key, {
                     "app": app,
                     "action": "<all>",
                 }, t, l, i.value, i.key);
@@ -3128,7 +3158,7 @@ public class TypeScriptActionInterface {
             (remove h{"name", "display_name", "desc", "short_desc", "default_value"}).pairIterator();
 
         if (h) {
-            throw "APP-ERROR", sprintf("App %y: cannot update the following attributes on Swagger types: %y", app, h);
+            throw "APP-ERROR", sprintf("App %y: cannot update the following attributes on REST schema types: %y", app, h);
         }
 
         return rv;
