@@ -114,7 +114,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             *AbstractDataProviderType response_type)
             : TypeScriptActionApiDataProvider(action.action, api, fctx, get_dynamic_request_type,
             get_dynamic_response_type) {
-        self.rest_schema = remove action.swagger_schema;
+        self.rest_schema = remove action.openapi_schema;
         schema_path =~ s/^\///;
         self.schema_path = schema_path;
         self.path_vars = path_vars;
