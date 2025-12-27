@@ -714,7 +714,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         if (req && req.typeCode() == NT_HASH) {
             checkUpdateRestOptions(rest, req);
         }
-        if (exists (*string base_path = conn.orig_opts.swagger_base_path)) {
+        if (exists (*string base_path = conn.orig_opts.openapi_base_path ?? conn.orig_opts.swagger_base_path)) {
             request_options.base_path = base_path;
         }
         if (path_vars) {
