@@ -314,16 +314,13 @@ jobs:
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
           make && sudo make install
 
-      # Verify Qore user modules are installed (RestSchemaDataProvider, etc.)
-      - name: Verify Qore user modules
+      # Install RestSchemaDataProvider module (not yet in Qore's CMakeLists.txt)
+      - name: Install RestSchemaDataProvider module
         run: |
-          echo "Checking installed user modules in /usr/local/share/qore-modules/..."
-          ls -la /usr/local/share/qore-modules/ || true
-          echo "Checking installed user modules in /usr/local/share/qore-modules/2.3.0/..."
-          ls -la /usr/local/share/qore-modules/2.3.0/ || true
-          echo "Checking if RestSchemaDataProvider exists in qore source..."
-          ls -la qore/qlib/ | grep -i rest || true
-          echo "Testing RestSchemaDataProvider..."
+          echo "Installing RestSchemaDataProvider from qore source..."
+          sudo cp -r qore/qlib/RestSchemaDataProvider /usr/local/share/qore-modules/
+          echo "Verifying installation..."
+          ls -la /usr/local/share/qore-modules/RestSchemaDataProvider/
           qore -ne '%requires RestSchemaDataProvider'
 
       # Test catalogue actions made with schema
