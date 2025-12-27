@@ -136,7 +136,6 @@ const NEW_APPS = {
   bitbucket,
   brevo,
   browserAi,
-  businessCentral,
   calendly,
   canva,
   claude,
@@ -207,6 +206,7 @@ const NEW_APPS = {
 const EXISTING_APPS = {
   salesforce,
   dynamics,
+  businessCentral,
 } as const;
 
 const CUSTOM_APPS: Record<string, TQoreAppWithActions> = {};
