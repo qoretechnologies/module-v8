@@ -88,9 +88,7 @@ async function runWithTimeout(promise, delay) {
   });
 }\n" + File::readTextFile("example.js"), "example.js",
             sub (JavaScriptProgram pgm) {});
-        JavaScriptProgram pgm = pool.get();
-        on_exit pool.release(pgm);
-        JavaScriptObject obj = pgm.getGlobal().exports;
+        JavaScriptObject obj = pool.getProgram().getGlobal().exports;
 
         obj.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
     }
@@ -315,9 +313,7 @@ async function runWithTimeout(promise, delay) {
   });
 }\n" + File::readTextFile("test.js"), "test.js",
             sub (JavaScriptProgram pgm) {});
-        JavaScriptProgram pgm = pool.get();
-        on_exit pool.release(pgm);
-        code run = pgm.getGlobal().exports.qtester.toData().run;
+        code run = pool.getProgram().getGlobal().exports.qtester.toData().run;
         assertThrows("JAVASCRIPT-EXCEPTION", "authorization_code", run, TypeScriptActionInterface::TestApi);
     }
 
@@ -373,9 +369,7 @@ var obj = {
             pgm.getGlobal().obj.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
         });
 
-        JavaScriptProgram js = pool.get();
-        on_exit pool.release(js);
-        JavaScriptObject obj = js.getGlobal().getProperty("obj");
+        JavaScriptObject obj = pool.getProgram().getGlobal().getProperty("obj");
 
         AbstractDataProvider prov = TypeScriptActionInterface::getAppDataProvider("TestApp").
             getChildProviderEx("test-api");

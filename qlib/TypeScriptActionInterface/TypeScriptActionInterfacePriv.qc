@@ -174,9 +174,7 @@ function setenv(vr, value) {
             on_error remove_path(dir);
 
             DynamicAppContextHelper dach(base_dir, replace);
-            JavaScriptProgram js = master.get();
-            on_exit master.release(js);
-            JavaScriptObject global = js.getGlobal();
+            JavaScriptObject global = master.getProgram().getGlobal();
             #global.setenv("CUSTOM_APPS_DIR", base_dir);
             # call the master app's dynamic registration method
             global.exports.actionsCatalogue.registerCustomApp(

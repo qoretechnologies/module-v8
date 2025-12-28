@@ -154,7 +154,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         on_error {
             global_lock.lock();
             on_exit global_lock.unlock();
-            cmap{uh} = self;
+            remove cmap{uh};
         }
 
         startChildProcess();
@@ -1006,7 +1006,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             str = pfx + str;
             str = replace(str, "\n", "\n" + pfx);
             error("Child error output follows:\n%s", str);
-            rv."stdout" = str;
+            rv."stderr" = str;
         }
         if (always_output && !rv) {
             info("child has no output");
@@ -1080,7 +1080,7 @@ class RetryCounter {
         TSAI::error("Not retrying cmd: %y args: %y that has failed %d times", command_in_progress.cmd,
             command_in_progress.args, MaxRetries);
 %else
-        if (command_in_progress.out =~ /EPIPE/) {
+        if (ex.desc =~ /EPIPE/) {
             return True;
         }
         return False;

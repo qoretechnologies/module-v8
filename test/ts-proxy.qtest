@@ -1,0 +1,145 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+
+%require-types
+%enable-all-warnings
+%new-style
+%strict-args
+
+%requires QUnit
+%requires ../qlib/TypeScriptActionInterface
+%requires v8
+
+%exec-class TsProxyTest
+
+public class TsProxyTest inherits QUnit::Test {
+    private {
+        Logger logger;
+        bool env_ready = False;
+        string skip_reason;
+    }
+
+    constructor() : Test("TsProxyTest", "1.0") {
+        setupLogger();
+        checkEnvironment();
+
+        addTestCase("proxy tests", \proxyTests());
+
+        set_return_value(main());
+    }
+
+    private setupLogger() {
+        LoggerLevel level;
+        if (m_options.verbose > 3) {
+            level = LoggerLevel::getLevelDebug();
+        } else if (m_options.verbose > 2) {
+            level = LoggerLevel::getLevelInfo();
+        } else {
+            level = LoggerLevel::getLevelError();
+        }
+        logger = new Logger("console", level);
+        logger.addAppender(new StdoutAppender());
+        DataProvider::setGlobalLogger(logger);
+    }
+
+    private checkEnvironment() {
+        # Check if ts-proxy binary is available
+        try {
+            string path = trim(`which ts-proxy 2>/dev/null`);
+            if (!path.val()) {
+                skip_reason = "ts-proxy binary not found in PATH; ensure module-v8/bin is in PATH";
+                return;
+            }
+        } catch (hash<ExceptionInfo> ex) {
+            skip_reason = sprintf("Cannot locate ts-proxy: %s", ex.desc);
+            return;
+        }
+
+        # Check if we can create UNIX sockets in tmp
+        try {
+            string test_path = sprintf("%s/ts-proxy-test-%d.sock", tmp_location(), getpid());
+            Socket s();
+            s.bindUNIX(test_path);
+            s.close();
+            unlink(test_path);
+        } catch (hash<ExceptionInfo> ex) {
+            skip_reason = sprintf("Cannot create UNIX sockets in tmp: %s", ex.desc);
+            return;
+        }
+
+        env_ready = True;
+    }
+
+    private skipIfNotReady() {
+        if (!env_ready) {
+            testSkip(skip_reason);
+        }
+    }
+
+    # All proxy tests run in a single test case to share the proxy infrastructure
+    private proxyTests() {
+        skipIfNotReady();
+
+        # Initialize the proxy pool once for all tests
+        JavaScriptProgramProxy::init(new Mutex());
+        on_exit JavaScriptProgramProxy::shutdown();
+
+        # Test 1: Proxy lifecycle
+        {
+            JavaScriptProgramProxy proxy();
+
+            # Verify the proxy has valid info
+            hash<auto> info = proxy.getInfo();
+            assertTrue(info."proxy-pid" > 0, "proxy should have a valid PID");
+
+            # Verify we can get the unique hash
+            string uh = proxy.uniqueHash();
+            assertTrue(uh.val(), "proxy should have a unique hash");
+
+            if (m_options.verbose > 1) {
+                printf("Proxy lifecycle test passed - PID: %d\n", info."proxy-pid");
+            }
+        }
+
+        # Test 2: Multiple proxies can be created
+        {
+            JavaScriptProgramProxy proxy1();
+            JavaScriptProgramProxy proxy2();
+
+            hash<auto> info1 = proxy1.getInfo();
+            hash<auto> info2 = proxy2.getInfo();
+
+            assertTrue(info1."proxy-pid" > 0, "proxy1 should be running");
+            assertTrue(info2."proxy-pid" > 0, "proxy2 should be running");
+            assertTrue(info1."proxy-pid" != info2."proxy-pid", "proxies should have different PIDs");
+
+            if (m_options.verbose > 1) {
+                printf("Multiple proxy test passed - PIDs: %d, %d\n", info1."proxy-pid", info2."proxy-pid");
+            }
+        }
+
+        # Test 3: Proxy restart after child kill
+        {
+            JavaScriptProgramProxy proxy();
+            hash<auto> info = proxy.getInfo();
+            int original_pid = info."proxy-pid";
+            assertTrue(original_pid > 0, "proxy should have original PID");
+
+            # Kill the child process to trigger restart logic
+            try {
+                system(sprintf("kill -9 %d 2>/dev/null", original_pid));
+                usleep(100ms);
+            } catch (hash<ExceptionInfo> ex) {
+                # Ignore - process may already be gone
+            }
+
+            # The restart happens lazily on next command
+            # We just verify the proxy object is still valid
+            assertTrue(proxy.uniqueHash().val(), "proxy should still have valid hash after child kill");
+
+            if (m_options.verbose > 1) {
+                printf("Proxy restart test passed - original PID: %d\n", original_pid);
+            }
+        }
+    }
+}
