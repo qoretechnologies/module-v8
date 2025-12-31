@@ -155,6 +155,7 @@ protected:
     QoreString label;
 
     v8::Global<v8::Object> global;
+    v8::Global<v8::Context> ctx;
 
     QoreObject* self = nullptr;
     QoreProgram* qpgm = getProgram();
@@ -234,7 +235,7 @@ public:
             handle_scope(pgm->isolate),
             tryCatch(pgm->isolate),
             //origin(pgm->isolate, pgm->label.Get(pgm->isolate)),
-            context(pgm->setup->context()),
+            context(pgm->ctx.Get(pgm->isolate)),
             context_scope(context) {
         AutoLocker al(pgm->m);
         if (!pgm->valid) {

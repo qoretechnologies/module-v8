@@ -216,6 +216,7 @@ int QoreV8Program::init(ExceptionSink* xsink) {
             return -1;
         }
 
+        ctx.Reset(isolate, setup->context());
         global.Reset(isolate, setup->context()->Global());
     }
 
@@ -257,6 +258,7 @@ void QoreV8Program::deleteIntern(ExceptionSink* xsink) {
         node::Stop(env);
         env = nullptr;
     }
+    ctx.Reset();
     global.Reset();
 }
 
@@ -387,7 +389,7 @@ int QoreV8Program::checkException(ExceptionSink* xsink, const v8::TryCatch& tryC
 }
 
 QoreValue QoreV8Program::getQoreValue(ExceptionSink* xsink, v8::Local<v8::Value> val) {
-    v8::Local<v8::Context> context = setup->context(); //this->context.Get(isolate);
+    v8::Local<v8::Context> context = ctx.Get(isolate);
 
     const v8::TryCatch tryCatch(isolate);
     if (val->IsInt32() || val->IsUint32()) {
@@ -719,7 +721,7 @@ v8::Local<v8::Value> QoreV8Program::getV8Value(const QoreValue val, ExceptionSin
 
         case NT_HASH: {
             const QoreHashNode* h = val.get<const QoreHashNode>();
-            v8::Local<v8::Context> context = setup->context(); //this->context.Get(isolate);
+            v8::Local<v8::Context> context = ctx.Get(isolate);
             v8::Local<v8::Object> obj = v8::Object::New(isolate);
             ConstHashIterator i(h);
             while (i.next()) {
@@ -789,7 +791,7 @@ v8::MaybeLocal<v8::Function> QoreV8Program::getV8Function(ExceptionSink* xsink, 
     gext.SetWeak(cbinfo, deref_callref, v8::WeakCallbackType::kParameter);
 #endif
 
-    v8::Local<v8::Context> context = setup->context();
+    v8::Local<v8::Context> context = ctx.Get(isolate);
     v8::MaybeLocal<v8::Function> func = v8::Function::New(context, call_callref, ext);
     if (func.IsEmpty()) {
         //printd(5, "call: %p -> func empty\n", call);
