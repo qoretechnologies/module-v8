@@ -74655,6 +74655,20 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
+						mute: {
+							/**
+							 * M​u​t​e
+							 */
+							displayName: string
+							/**
+							 * S​u​p​p​r​e​s​s​ ​c​h​a​n​g​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​u​s​e​r​s​ ​w​i​l​l​ ​n​o​t​ ​r​e​c​e​i​v​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​a​b​o​u​t​ ​t​h​i​s​ ​f​i​l​e​ ​b​e​i​n​g​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
 					}
 				}
 				upload_file: {
@@ -74691,7 +74705,7 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						content: {
+						fileContent: {
 							/**
 							 * F​i​l​e​ ​C​o​n​t​e​n​t
 							 */
@@ -74701,7 +74715,7 @@ type RootTranslation = {
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​b​i​n​a​r​y​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d​.
+							 * T​h​e​ ​b​i​n​a​r​y​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d​.​ ​C​a​n​ ​b​e​ ​b​a​s​e​6​4​-​e​n​c​o​d​e​d​ ​o​r​ ​i​n​c​l​u​d​e​ ​a​ ​d​a​t​a​ ​U​R​L​ ​p​r​e​f​i​x​.
 							 */
 							longDesc: string
 						}
@@ -74716,6 +74730,34 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * I​f​ ​e​n​a​b​l​e​d​ ​a​n​d​ ​a​ ​f​i​l​e​ ​w​i​t​h​ ​t​h​e​ ​s​a​m​e​ ​n​a​m​e​ ​e​x​i​s​t​s​,​ ​D​r​o​p​b​o​x​ ​w​i​l​l​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​g​e​n​e​r​a​t​e​ ​a​ ​n​e​w​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						mute: {
+							/**
+							 * M​u​t​e
+							 */
+							displayName: string
+							/**
+							 * S​u​p​p​r​e​s​s​ ​c​h​a​n​g​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​u​s​e​r​s​ ​w​i​l​l​ ​n​o​t​ ​r​e​c​e​i​v​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​a​b​o​u​t​ ​t​h​i​s​ ​f​i​l​e​ ​b​e​i​n​g​ ​u​p​l​o​a​d​e​d​.
+							 */
+							longDesc: string
+						}
+						strictConflict: {
+							/**
+							 * S​t​r​i​c​t​ ​C​o​n​f​l​i​c​t
+							 */
+							displayName: string
+							/**
+							 * F​a​i​l​ ​o​n​ ​c​o​n​f​l​i​c​t​ ​i​n​s​t​e​a​d​ ​o​f​ ​r​e​n​a​m​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​u​p​l​o​a​d​ ​w​i​l​l​ ​f​a​i​l​ ​i​f​ ​a​ ​f​i​l​e​ ​w​i​t​h​ ​t​h​e​ ​s​a​m​e​ ​n​a​m​e​ ​e​x​i​s​t​s​,​ ​e​v​e​n​ ​i​f​ ​a​u​t​o​r​e​n​a​m​e​ ​i​s​ ​e​n​a​b​l​e​d​.
 							 */
 							longDesc: string
 						}
@@ -74849,7 +74891,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 					options: {
-						from_path: {
+						fromPath: {
 							/**
 							 * S​o​u​r​c​e​ ​P​a​t​h
 							 */
@@ -74863,7 +74905,7 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						to_path: {
+						toPath: {
 							/**
 							 * D​e​s​t​i​n​a​t​i​o​n​ ​P​a​t​h
 							 */
@@ -74891,6 +74933,20 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
+						allowOwnershipTransfer: {
+							/**
+							 * A​l​l​o​w​ ​O​w​n​e​r​s​h​i​p​ ​T​r​a​n​s​f​e​r
+							 */
+							displayName: string
+							/**
+							 * A​l​l​o​w​ ​o​w​n​e​r​s​h​i​p​ ​t​r​a​n​s​f​e​r​ ​f​o​r​ ​s​h​a​r​e​d​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​a​l​l​o​w​s​ ​t​h​e​ ​c​o​p​y​ ​o​p​e​r​a​t​i​o​n​ ​t​o​ ​t​r​a​n​s​f​e​r​ ​o​w​n​e​r​s​h​i​p​ ​o​f​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​i​f​ ​n​e​e​d​e​d​.
+							 */
+							longDesc: string
+						}
 					}
 				}
 				move_file: {
@@ -74913,7 +74969,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 					options: {
-						from_path: {
+						fromPath: {
 							/**
 							 * S​o​u​r​c​e​ ​P​a​t​h
 							 */
@@ -74927,7 +74983,7 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						to_path: {
+						toPath: {
 							/**
 							 * D​e​s​t​i​n​a​t​i​o​n​ ​P​a​t​h
 							 */
@@ -74952,6 +75008,20 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * I​f​ ​e​n​a​b​l​e​d​ ​a​n​d​ ​a​ ​f​i​l​e​ ​e​x​i​s​t​s​ ​a​t​ ​t​h​e​ ​d​e​s​t​i​n​a​t​i​o​n​,​ ​g​e​n​e​r​a​t​e​ ​a​ ​n​e​w​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						allowOwnershipTransfer: {
+							/**
+							 * A​l​l​o​w​ ​O​w​n​e​r​s​h​i​p​ ​T​r​a​n​s​f​e​r
+							 */
+							displayName: string
+							/**
+							 * A​l​l​o​w​ ​o​w​n​e​r​s​h​i​p​ ​t​r​a​n​s​f​e​r​ ​f​o​r​ ​s​h​a​r​e​d​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​a​l​l​o​w​s​ ​t​h​e​ ​m​o​v​e​ ​o​p​e​r​a​t​i​o​n​ ​t​o​ ​t​r​a​n​s​f​e​r​ ​o​w​n​e​r​s​h​i​p​ ​o​f​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​i​f​ ​n​e​e​d​e​d​.
 							 */
 							longDesc: string
 						}
@@ -75063,7 +75133,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 					options: {
-						from_path: {
+						fromPath: {
 							/**
 							 * S​o​u​r​c​e​ ​P​a​t​h
 							 */
@@ -75077,7 +75147,7 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						to_path: {
+						toPath: {
 							/**
 							 * D​e​s​t​i​n​a​t​i​o​n​ ​P​a​t​h
 							 */
@@ -75105,6 +75175,20 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
+						allowOwnershipTransfer: {
+							/**
+							 * A​l​l​o​w​ ​O​w​n​e​r​s​h​i​p​ ​T​r​a​n​s​f​e​r
+							 */
+							displayName: string
+							/**
+							 * A​l​l​o​w​ ​o​w​n​e​r​s​h​i​p​ ​t​r​a​n​s​f​e​r​ ​f​o​r​ ​s​h​a​r​e​d​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​a​l​l​o​w​s​ ​t​h​e​ ​c​o​p​y​ ​o​p​e​r​a​t​i​o​n​ ​t​o​ ​t​r​a​n​s​f​e​r​ ​o​w​n​e​r​s​h​i​p​ ​o​f​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​i​f​ ​n​e​e​d​e​d​.
+							 */
+							longDesc: string
+						}
 					}
 				}
 				move_folder: {
@@ -75127,7 +75211,7 @@ type RootTranslation = {
 					 */
 					longDesc: string
 					options: {
-						from_path: {
+						fromPath: {
 							/**
 							 * S​o​u​r​c​e​ ​P​a​t​h
 							 */
@@ -75141,7 +75225,7 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						to_path: {
+						toPath: {
 							/**
 							 * D​e​s​t​i​n​a​t​i​o​n​ ​P​a​t​h
 							 */
@@ -75166,6 +75250,20 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * I​f​ ​e​n​a​b​l​e​d​ ​a​n​d​ ​a​ ​f​o​l​d​e​r​ ​e​x​i​s​t​s​ ​a​t​ ​t​h​e​ ​d​e​s​t​i​n​a​t​i​o​n​,​ ​g​e​n​e​r​a​t​e​ ​a​ ​n​e​w​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						allowOwnershipTransfer: {
+							/**
+							 * A​l​l​o​w​ ​O​w​n​e​r​s​h​i​p​ ​T​r​a​n​s​f​e​r
+							 */
+							displayName: string
+							/**
+							 * A​l​l​o​w​ ​o​w​n​e​r​s​h​i​p​ ​t​r​a​n​s​f​e​r​ ​f​o​r​ ​s​h​a​r​e​d​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​a​l​l​o​w​s​ ​t​h​e​ ​m​o​v​e​ ​o​p​e​r​a​t​i​o​n​ ​t​o​ ​t​r​a​n​s​f​e​r​ ​o​w​n​e​r​s​h​i​p​ ​o​f​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​i​f​ ​n​e​e​d​e​d​.
 							 */
 							longDesc: string
 						}
@@ -75283,7 +75381,7 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						max_results: {
+						maxResults: {
 							/**
 							 * M​a​x​ ​R​e​s​u​l​t​s
 							 */
@@ -75294,6 +75392,76 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+						orderBy: {
+							/**
+							 * O​r​d​e​r​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​o​r​d​e​r​ ​f​o​r​ ​r​e​s​u​l​t​s
+							 */
+							shortDesc: string
+							/**
+							 * H​o​w​ ​t​o​ ​o​r​d​e​r​ ​t​h​e​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​:​ ​b​y​ ​r​e​l​e​v​a​n​c​e​ ​o​r​ ​b​y​ ​m​o​d​i​f​i​e​d​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+						fileStatus: {
+							/**
+							 * F​i​l​e​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​f​i​l​e​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s​ ​b​y​ ​f​i​l​e​ ​s​t​a​t​u​s​:​ ​a​c​t​i​v​e​ ​(​e​x​i​s​t​i​n​g​ ​f​i​l​e​s​)​ ​o​r​ ​d​e​l​e​t​e​d​ ​(​r​e​m​o​v​e​d​ ​f​i​l​e​s​)​.
+							 */
+							longDesc: string
+						}
+						filenameOnly: {
+							/**
+							 * F​i​l​e​n​a​m​e​ ​O​n​l​y
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​o​n​l​y​ ​i​n​ ​f​i​l​e​ ​n​a​m​e​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​s​e​a​r​c​h​ ​w​i​l​l​ ​o​n​l​y​ ​m​a​t​c​h​ ​f​i​l​e​ ​n​a​m​e​s​,​ ​n​o​t​ ​f​i​l​e​ ​c​o​n​t​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						fileExtensions: {
+							/**
+							 * F​i​l​e​ ​E​x​t​e​n​s​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​f​i​l​e​ ​e​x​t​e​n​s​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * C​o​m​m​a​-​s​e​p​a​r​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​f​i​l​e​ ​e​x​t​e​n​s​i​o​n​s​ ​t​o​ ​f​i​l​t​e​r​ ​b​y​ ​(​e​.​g​.​,​ ​"​p​d​f​,​d​o​c​,​t​x​t​"​)​.
+							 */
+							longDesc: string
+						}
+						fileCategories: {
+							/**
+							 * F​i​l​e​ ​C​a​t​e​g​o​r​i​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​f​i​l​e​ ​c​a​t​e​g​o​r​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * C​o​m​m​a​-​s​e​p​a​r​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​f​i​l​e​ ​c​a​t​e​g​o​r​i​e​s​ ​t​o​ ​f​i​l​t​e​r​ ​b​y​ ​(​e​.​g​.​,​ ​"​i​m​a​g​e​,​d​o​c​u​m​e​n​t​,​v​i​d​e​o​"​)​.
 							 */
 							longDesc: string
 						}
@@ -188546,6 +188714,20 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
+						mute: {
+							/**
+							 * Mute
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Suppress change notifications
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, users will not receive notifications about this file being created.
+							 */
+							longDesc: () => LocalizedString
+						}
 					}
 				}
 				upload_file: {
@@ -188582,7 +188764,7 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						content: {
+						fileContent: {
 							/**
 							 * File Content
 							 */
@@ -188592,7 +188774,7 @@ export type TranslationFunctions = {
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The binary content of the file to upload.
+							 * The binary content of the file to upload. Can be base64-encoded or include a data URL prefix.
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -188607,6 +188789,34 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * If enabled and a file with the same name exists, Dropbox will automatically generate a new name.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mute: {
+							/**
+							 * Mute
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Suppress change notifications
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, users will not receive notifications about this file being uploaded.
+							 */
+							longDesc: () => LocalizedString
+						}
+						strictConflict: {
+							/**
+							 * Strict Conflict
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Fail on conflict instead of renaming
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, the upload will fail if a file with the same name exists, even if autorename is enabled.
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -188740,7 +188950,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 					options: {
-						from_path: {
+						fromPath: {
 							/**
 							 * Source Path
 							 */
@@ -188754,7 +188964,7 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						to_path: {
+						toPath: {
 							/**
 							 * Destination Path
 							 */
@@ -188782,6 +188992,20 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
+						allowOwnershipTransfer: {
+							/**
+							 * Allow Ownership Transfer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Allow ownership transfer for shared content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, allows the copy operation to transfer ownership of the content if needed.
+							 */
+							longDesc: () => LocalizedString
+						}
 					}
 				}
 				move_file: {
@@ -188804,7 +189028,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 					options: {
-						from_path: {
+						fromPath: {
 							/**
 							 * Source Path
 							 */
@@ -188818,7 +189042,7 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						to_path: {
+						toPath: {
 							/**
 							 * Destination Path
 							 */
@@ -188843,6 +189067,20 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * If enabled and a file exists at the destination, generate a new name.
+							 */
+							longDesc: () => LocalizedString
+						}
+						allowOwnershipTransfer: {
+							/**
+							 * Allow Ownership Transfer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Allow ownership transfer for shared content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, allows the move operation to transfer ownership of the content if needed.
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -188954,7 +189192,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 					options: {
-						from_path: {
+						fromPath: {
 							/**
 							 * Source Path
 							 */
@@ -188968,7 +189206,7 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						to_path: {
+						toPath: {
 							/**
 							 * Destination Path
 							 */
@@ -188996,6 +189234,20 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
+						allowOwnershipTransfer: {
+							/**
+							 * Allow Ownership Transfer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Allow ownership transfer for shared content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, allows the copy operation to transfer ownership of the content if needed.
+							 */
+							longDesc: () => LocalizedString
+						}
 					}
 				}
 				move_folder: {
@@ -189018,7 +189270,7 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 					options: {
-						from_path: {
+						fromPath: {
 							/**
 							 * Source Path
 							 */
@@ -189032,7 +189284,7 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						to_path: {
+						toPath: {
 							/**
 							 * Destination Path
 							 */
@@ -189057,6 +189309,20 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * If enabled and a folder exists at the destination, generate a new name.
+							 */
+							longDesc: () => LocalizedString
+						}
+						allowOwnershipTransfer: {
+							/**
+							 * Allow Ownership Transfer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Allow ownership transfer for shared content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, allows the move operation to transfer ownership of the content if needed.
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -189174,7 +189440,7 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						max_results: {
+						maxResults: {
 							/**
 							 * Max Results
 							 */
@@ -189185,6 +189451,76 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * The maximum number of search results to return. Default is 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+						orderBy: {
+							/**
+							 * Order By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort order for results
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * How to order the search results: by relevance or by modified time.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fileStatus: {
+							/**
+							 * File Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by file status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter search results by file status: active (existing files) or deleted (removed files).
+							 */
+							longDesc: () => LocalizedString
+						}
+						filenameOnly: {
+							/**
+							 * Filename Only
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search only in file names
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, search will only match file names, not file contents.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fileExtensions: {
+							/**
+							 * File Extensions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by file extensions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Comma-separated list of file extensions to filter by (e.g., "pdf,doc,txt").
+							 */
+							longDesc: () => LocalizedString
+						}
+						fileCategories: {
+							/**
+							 * File Categories
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by file categories
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Comma-separated list of file categories to filter by (e.g., "image,document,video").
 							 */
 							longDesc: () => LocalizedString
 						}

@@ -36,6 +36,12 @@ const DropboxAppEn = {
           longDesc:
             'If enabled and a file with the same name exists, Dropbox will automatically generate a new name.',
         },
+        mute: {
+          displayName: 'Mute',
+          shortDesc: 'Suppress change notifications',
+          longDesc:
+            'If enabled, users will not receive notifications about this file being created.',
+        },
       },
     },
     upload_file: {
@@ -51,16 +57,29 @@ const DropboxAppEn = {
           longDesc:
             'The full path where the file should be uploaded, including the filename (e.g., "/Documents/report.pdf").',
         },
-        content: {
+        fileContent: {
           displayName: 'File Content',
           shortDesc: 'Binary content of the file',
-          longDesc: 'The binary content of the file to upload.',
+          longDesc:
+            'The binary content of the file to upload. Can be base64-encoded or include a data URL prefix.',
         },
         autorename: {
           displayName: 'Auto Rename',
           shortDesc: 'Automatically rename if file exists',
           longDesc:
             'If enabled and a file with the same name exists, Dropbox will automatically generate a new name.',
+        },
+        mute: {
+          displayName: 'Mute',
+          shortDesc: 'Suppress change notifications',
+          longDesc:
+            'If enabled, users will not receive notifications about this file being uploaded.',
+        },
+        strictConflict: {
+          displayName: 'Strict Conflict',
+          shortDesc: 'Fail on conflict instead of renaming',
+          longDesc:
+            'If enabled, the upload will fail if a file with the same name exists, even if autorename is enabled.',
         },
       },
     },
@@ -114,12 +133,12 @@ const DropboxAppEn = {
       longDesc:
         'Copy a file from one location to another within your Dropbox. The original file remains unchanged.',
       options: {
-        from_path: {
+        fromPath: {
           displayName: 'Source Path',
           shortDesc: 'Path to the file to copy',
           longDesc: 'The full path to the source file.',
         },
-        to_path: {
+        toPath: {
           displayName: 'Destination Path',
           shortDesc: 'Path for the copied file',
           longDesc: 'The full path where the file should be copied to.',
@@ -129,6 +148,12 @@ const DropboxAppEn = {
           shortDesc: 'Automatically rename if destination exists',
           longDesc: 'If enabled and a file exists at the destination, generate a new name.',
         },
+        allowOwnershipTransfer: {
+          displayName: 'Allow Ownership Transfer',
+          shortDesc: 'Allow ownership transfer for shared content',
+          longDesc:
+            'If enabled, allows the copy operation to transfer ownership of the content if needed.',
+        },
       },
     },
     move_file: {
@@ -137,12 +162,12 @@ const DropboxAppEn = {
       shortDesc: 'Move a file to a new location',
       longDesc: 'Move a file from one location to another within your Dropbox.',
       options: {
-        from_path: {
+        fromPath: {
           displayName: 'Source Path',
           shortDesc: 'Path to the file to move',
           longDesc: 'The full path to the source file.',
         },
-        to_path: {
+        toPath: {
           displayName: 'Destination Path',
           shortDesc: 'Path for the moved file',
           longDesc: 'The full path where the file should be moved to.',
@@ -151,6 +176,12 @@ const DropboxAppEn = {
           displayName: 'Auto Rename',
           shortDesc: 'Automatically rename if destination exists',
           longDesc: 'If enabled and a file exists at the destination, generate a new name.',
+        },
+        allowOwnershipTransfer: {
+          displayName: 'Allow Ownership Transfer',
+          shortDesc: 'Allow ownership transfer for shared content',
+          longDesc:
+            'If enabled, allows the move operation to transfer ownership of the content if needed.',
         },
       },
     },
@@ -195,12 +226,12 @@ const DropboxAppEn = {
       longDesc:
         'Copy a folder and all its contents from one location to another within your Dropbox.',
       options: {
-        from_path: {
+        fromPath: {
           displayName: 'Source Path',
           shortDesc: 'Path to the folder to copy',
           longDesc: 'The full path to the source folder.',
         },
-        to_path: {
+        toPath: {
           displayName: 'Destination Path',
           shortDesc: 'Path for the copied folder',
           longDesc: 'The full path where the folder should be copied to.',
@@ -210,6 +241,12 @@ const DropboxAppEn = {
           shortDesc: 'Automatically rename if destination exists',
           longDesc: 'If enabled and a folder exists at the destination, generate a new name.',
         },
+        allowOwnershipTransfer: {
+          displayName: 'Allow Ownership Transfer',
+          shortDesc: 'Allow ownership transfer for shared content',
+          longDesc:
+            'If enabled, allows the copy operation to transfer ownership of the content if needed.',
+        },
       },
     },
     move_folder: {
@@ -218,12 +255,12 @@ const DropboxAppEn = {
       shortDesc: 'Move a folder to a new location',
       longDesc: 'Move a folder and all its contents from one location to another within your Dropbox.',
       options: {
-        from_path: {
+        fromPath: {
           displayName: 'Source Path',
           shortDesc: 'Path to the folder to move',
           longDesc: 'The full path to the source folder.',
         },
-        to_path: {
+        toPath: {
           displayName: 'Destination Path',
           shortDesc: 'Path for the moved folder',
           longDesc: 'The full path where the folder should be moved to.',
@@ -232,6 +269,12 @@ const DropboxAppEn = {
           displayName: 'Auto Rename',
           shortDesc: 'Automatically rename if destination exists',
           longDesc: 'If enabled and a folder exists at the destination, generate a new name.',
+        },
+        allowOwnershipTransfer: {
+          displayName: 'Allow Ownership Transfer',
+          shortDesc: 'Allow ownership transfer for shared content',
+          longDesc:
+            'If enabled, allows the move operation to transfer ownership of the content if needed.',
         },
       },
     },
@@ -280,10 +323,40 @@ const DropboxAppEn = {
           longDesc:
             'Optionally limit the search to a specific folder path. Leave empty to search all of Dropbox.',
         },
-        max_results: {
+        maxResults: {
           displayName: 'Max Results',
           shortDesc: 'Maximum number of results',
           longDesc: 'The maximum number of search results to return. Default is 100.',
+        },
+        orderBy: {
+          displayName: 'Order By',
+          shortDesc: 'Sort order for results',
+          longDesc:
+            'How to order the search results: by relevance or by modified time.',
+        },
+        fileStatus: {
+          displayName: 'File Status',
+          shortDesc: 'Filter by file status',
+          longDesc:
+            'Filter search results by file status: active (existing files) or deleted (removed files).',
+        },
+        filenameOnly: {
+          displayName: 'Filename Only',
+          shortDesc: 'Search only in file names',
+          longDesc:
+            'If enabled, search will only match file names, not file contents.',
+        },
+        fileExtensions: {
+          displayName: 'File Extensions',
+          shortDesc: 'Filter by file extensions',
+          longDesc:
+            'Comma-separated list of file extensions to filter by (e.g., "pdf,doc,txt").',
+        },
+        fileCategories: {
+          displayName: 'File Categories',
+          shortDesc: 'Filter by file categories',
+          longDesc:
+            'Comma-separated list of file categories to filter by (e.g., "image,document,video").',
         },
       },
     },
