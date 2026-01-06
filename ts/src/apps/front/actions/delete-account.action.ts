@@ -5,8 +5,8 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { frontApiClient } from '../helpers/constants';
 import { getFrontAccountAllowedValues } from '../helpers/get-account-allowed-values';
 
 const action = 'delete_account';
@@ -42,11 +42,7 @@ const deleteFrontAccount = QoreAppCreator.createLocalizedAction<typeof options>(
     });
 
     try {
-      await frontApiClient({
-        token,
-        path: `accounts/${accountId}`,
-        method: 'DELETE',
-      });
+      await frontClient.delete(`accounts/${accountId}`, { token });
 
       return {
         success: true,

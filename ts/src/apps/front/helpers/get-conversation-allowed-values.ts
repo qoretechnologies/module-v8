@@ -4,8 +4,8 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { extractFrontErrorMessage, FrontError } from '../constants';
-import { fetchFrontAllowedValues } from './constants';
 
 type TFrontConversation = {
   id: string;
@@ -39,11 +39,10 @@ export const getFrontConversationAllowedValues: TQoreGetAllowedValuesFunction<
       ErrorClass: FrontError,
     });
 
-    return await fetchFrontAllowedValues({
-      token,
-      method: 'GET',
-      mapItemToAllowedValue,
+    return await frontClient.fetchAllowedValues<TFrontConversation>({
       path: 'conversations',
+      token,
+      mapItemToAllowedValue,
     });
   } catch (error) {
     if (error instanceof FrontError) {

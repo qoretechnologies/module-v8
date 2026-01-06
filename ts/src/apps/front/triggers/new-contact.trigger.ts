@@ -6,8 +6,8 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { fetchFrontPaginatedRecords } from '../helpers/constants';
 import { formatFrontResponse } from '../helpers/format-response';
 import { getFrontContactCustomFieldDynamicResponseType } from '../helpers/get-custom-fields';
 import { FrontContactResponseType } from '../response-types/contact';
@@ -79,10 +79,9 @@ const fetchLatestRecords = async (options: TFetchRowsOptions): Promise<Record<st
   const limit = 20;
 
   try {
-    const contacts = await fetchFrontPaginatedRecords<any, Record<string, any>>({
-      token,
+    const contacts = await frontClient.fetchPaginated<Record<string, any>>({
       path: 'contacts',
-      method: 'GET',
+      token,
       maxResults: limit,
       params: {
         sort_by: 'created_at',

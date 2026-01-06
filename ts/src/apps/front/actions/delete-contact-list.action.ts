@@ -5,8 +5,8 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { frontApiClient } from '../helpers/constants';
 import { getFrontContactListAllowedValues } from '../helpers/get-contact-list-allowed-values';
 
 const action = 'delete_contact_list';
@@ -42,11 +42,7 @@ const deleteFrontContactList = QoreAppCreator.createLocalizedAction<typeof optio
     });
 
     try {
-      await frontApiClient({
-        token,
-        path: `contact_lists/${contactListId}`,
-        method: 'DELETE',
-      });
+      await frontClient.delete(`contact_lists/${contactListId}`, { token });
 
       return {
         success: true,

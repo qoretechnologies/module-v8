@@ -5,8 +5,8 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { frontApiClient } from '../helpers/constants';
 import { getFrontContactAllowedValues } from '../helpers/get-contact-allowed-values';
 import { getFrontContactListAllowedValues } from '../helpers/get-contact-list-allowed-values';
 
@@ -49,14 +49,11 @@ const addFrontContactsToContactList = QoreAppCreator.createLocalizedAction<typeo
     });
 
     try {
-      await frontApiClient({
-        token,
-        path: `contact_lists/${contactListId}/contacts`,
-        method: 'POST',
-        body: {
-          contact_ids: contactIds,
-        },
-      });
+      await frontClient.post(
+        `contact_lists/${contactListId}/contacts`,
+        { contact_ids: contactIds },
+        { token }
+      );
 
       return {
         success: true,

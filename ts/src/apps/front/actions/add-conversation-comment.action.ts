@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { frontApiClient } from '../helpers/constants';
 import { formatFrontResponse } from '../helpers/format-response';
 import { getFrontConversationAllowedValues } from '../helpers/get-conversation-allowed-values';
 import { FrontCommentResponseType } from '../response-types/comment';
@@ -37,16 +37,11 @@ const addFrontConversationComment = QoreAppCreator.createLocalizedAction<typeof 
     });
 
     try {
-      const requestBody = {
-        body,
-      };
-
-      const comment = await frontApiClient<Record<string, any>>({
-        token,
-        path: `conversations/${conversationId}/comments`,
-        method: 'POST',
-        body: requestBody,
-      });
+      const comment = await frontClient.post<Record<string, any>>(
+        `conversations/${conversationId}/comments`,
+        { body },
+        { token }
+      );
 
       return formatFrontResponse(comment);
     } catch (error) {

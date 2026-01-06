@@ -5,8 +5,8 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { fetchFrontPaginatedRecords } from '../helpers/constants';
 import { formatFrontResponse } from '../helpers/format-response';
 import { getFrontInboxAllowedValues } from '../helpers/get-inbox-allowed-values';
 import { FrontConversationResponseType } from '../response-types/conversation';
@@ -64,10 +64,9 @@ const listFrontConversations = QoreAppCreator.createLocalizedAction<typeof optio
         params.q = `[{"and":[{"field":"statuses","match":"any","values":["${status}"]}]}]`;
       }
 
-      const conversations = await fetchFrontPaginatedRecords<any, Record<string, any>>({
-        token,
+      const conversations = await frontClient.fetchPaginated<Record<string, any>>({
         path,
-        method: 'GET',
+        token,
         maxResults: limit || 50,
         params,
       });

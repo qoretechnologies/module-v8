@@ -4,8 +4,8 @@ import {
   TQoreOptions,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { frontApiClient } from '../helpers/constants';
 import { formatFrontResponse } from '../helpers/format-response';
 import { FrontContactListResponseType } from '../response-types/contact-list';
 
@@ -47,11 +47,8 @@ const createFrontContactList = QoreAppCreator.createLocalizedAction<typeof optio
         ...(description && { description }),
       };
 
-      const contactList = await frontApiClient<Record<string, any>>({
+      const contactList = await frontClient.post<Record<string, any>>('contact_lists', body, {
         token,
-        path: 'contact_lists',
-        method: 'POST',
-        body,
       });
 
       return formatFrontResponse(contactList);

@@ -5,8 +5,8 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { frontApiClient } from '../helpers/constants';
 import { formatFrontResponse } from '../helpers/format-response';
 import { FrontConversationResponseType } from '../response-types/conversation';
 
@@ -50,13 +50,11 @@ const searchFrontConversations = QoreAppCreator.createLocalizedAction<typeof opt
 
     try {
       const encodedQuery = encodeURIComponent(query);
-      const response = await frontApiClient<{
+      const response = await frontClient.get<{
         _total: number;
         _results: Record<string, any>[];
-      }>({
+      }>(`conversations/search/${encodedQuery}`, {
         token,
-        path: `conversations/search/${encodedQuery}`,
-        method: 'GET',
         params: {
           limit: limit || 25,
         },

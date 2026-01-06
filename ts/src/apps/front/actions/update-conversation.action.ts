@@ -5,8 +5,8 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { frontApiClient } from '../helpers/constants';
 import { getFrontConversationAllowedValues } from '../helpers/get-conversation-allowed-values';
 import { getFrontConversationCustomFieldDynamicType } from '../helpers/get-custom-fields';
 import { getFrontInboxAllowedValues } from '../helpers/get-inbox-allowed-values';
@@ -76,12 +76,7 @@ const updateFrontConversation = QoreAppCreator.createLocalizedAction<typeof opti
         throw new FrontError('At least one field must be provided to update');
       }
 
-      await frontApiClient({
-        token,
-        path: `conversations/${conversationId}`,
-        method: 'PATCH',
-        body,
-      });
+      await frontClient.patch(`conversations/${conversationId}`, body, { token });
 
       return {
         success: true,

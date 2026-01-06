@@ -1,8 +1,8 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { fetchFrontPaginatedRecords } from '../helpers/constants';
 import { formatFrontResponse } from '../helpers/format-response';
 import { getFrontConversationAllowedValues } from '../helpers/get-conversation-allowed-values';
 import { FrontCommentResponseType } from '../response-types/comment';
@@ -72,10 +72,9 @@ const fetchLatestRecords = async (options: TFetchRowsOptions): Promise<Record<st
   const limit = 20;
 
   try {
-    const comments = await fetchFrontPaginatedRecords<any, Record<string, any>>({
-      token,
+    const comments = await frontClient.fetchPaginated<Record<string, any>>({
       path: `conversations/${conversationId}/comments`,
-      method: 'GET',
+      token,
       maxResults: limit,
     });
 

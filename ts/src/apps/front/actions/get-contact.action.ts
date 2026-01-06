@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { frontApiClient } from '../helpers/constants';
 import { formatFrontResponse } from '../helpers/format-response';
 import { getFrontContactAllowedValues } from '../helpers/get-contact-allowed-values';
 import { FrontContactResponseType } from '../response-types/contact';
@@ -33,11 +33,7 @@ const getFrontContact = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      const contact = await frontApiClient<Record<string, any>>({
-        token,
-        path: `contacts/${contactId}`,
-        method: 'GET',
-      });
+      const contact = await frontClient.get<Record<string, any>>(`contacts/${contactId}`, { token });
 
       return formatFrontResponse(contact);
     } catch (error) {

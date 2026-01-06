@@ -5,8 +5,8 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { frontApiClient } from '../helpers/constants';
 import { formatFrontResponse } from '../helpers/format-response';
 import { getFrontConversationAllowedValues } from '../helpers/get-conversation-allowed-values';
 import { FrontMessageResponseType } from '../response-types/message';
@@ -75,12 +75,11 @@ const createFrontMessageReply = QoreAppCreator.createLocalizedAction<typeof opti
       if (bcc !== undefined && bcc.length > 0) requestBody.bcc = bcc;
       if (isDraft !== undefined) requestBody.options = { ...requestBody.options, draft: isDraft };
 
-      const message = await frontApiClient<Record<string, any>>({
-        token,
-        path: `conversations/${conversationId}/messages`,
-        method: 'POST',
-        body: requestBody,
-      });
+      const message = await frontClient.post<Record<string, any>>(
+        `conversations/${conversationId}/messages`,
+        requestBody,
+        { token }
+      );
 
       return formatFrontResponse(message);
     } catch (error) {

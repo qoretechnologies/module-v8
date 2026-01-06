@@ -4,8 +4,8 @@ import {
   TQoreGetDynamicTypeFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { extractFrontErrorMessage, FrontError } from '../constants';
-import { frontApiClient } from './constants';
 
 type TFrontCustomFieldType =
   | 'string'
@@ -65,11 +65,7 @@ export const getFrontCustomFields = async (options: {
   try {
     const endpoint = RESOURCE_TO_ENDPOINT[resource];
 
-    const response = await frontApiClient<TFrontCustomFieldsResponse>({
-      token,
-      path: endpoint,
-      method: 'GET',
-    });
+    const response = await frontClient.get<TFrontCustomFieldsResponse>(endpoint, { token });
 
     return response._results || [];
   } catch (error) {

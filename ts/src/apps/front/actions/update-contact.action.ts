@@ -5,8 +5,8 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { frontApiClient } from '../helpers/constants';
 import { getFrontContactAllowedValues } from '../helpers/get-contact-allowed-values';
 import { getFrontContactCustomFieldDynamicType } from '../helpers/get-custom-fields';
 
@@ -73,12 +73,7 @@ const updateFrontContact = QoreAppCreator.createLocalizedAction<typeof options>(
         throw new FrontError('At least one field must be provided to update');
       }
 
-      await frontApiClient({
-        token,
-        path: `contacts/${contactId}`,
-        method: 'PATCH',
-        body,
-      });
+      await frontClient.patch(`contacts/${contactId}`, body, { token });
 
       return {
         success: true,
