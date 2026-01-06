@@ -1,7 +1,8 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_APP_NAME, ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient } from '../helpers/constants';
+import { activeCampaignClient } from '../helpers/constants';
+import { DealListItemResponseType } from '../response-types';
 
 const action = 'list_deals';
 
@@ -54,21 +55,15 @@ const listDeals = QoreAppCreator.createLocalizedAction<typeof options>({
     const { limit = 20, offset = 0, search } = obj || {};
 
     try {
-      const response = await activeCampaignApiClient({
+      const response = await activeCampaignClient.get(`deals`, {
         token,
-        url: instance_url,
-        method: 'GET',
+        baseUrl: instance_url,
         params: {
-          limit: limit.toString(),
-          offset: offset.toString(),
-          ...(search && {
-            'filters[search]': search.value,
-            'filters[search_field]': search.field,
-          }),
+          limit,
+          offset,
+          search,
         },
-        path: `deals`,
       });
-
       return response;
     } catch (error) {
       throw new ActiveCampaignError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
@@ -80,58 +75,7 @@ const listDeals = QoreAppCreator.createLocalizedAction<typeof options>({
       deals: {
         type: {
           type: 'list',
-          element_type: {
-            type: 'hash',
-            fields: {
-              owner: { type: 'string' },
-              contact: { type: 'string' },
-              organization: { type: 'string' },
-              group: { type: 'string' },
-              stage: { type: 'string' },
-              title: { type: 'string' },
-              description: { type: 'string' },
-              percent: { type: 'string' },
-              cdate: { type: 'string' },
-              mdate: { type: 'string' },
-              nextdate: { type: 'string' },
-              nexttaskid: { type: 'string' },
-              value: { type: 'string' },
-              currency: { type: 'string' },
-              winProbability: { type: 'number' },
-              winProbabilityMdate: { type: 'string' },
-              status: { type: 'string' },
-              activitycount: { type: 'string' },
-              nextdealid: { type: 'string' },
-              edate: { type: 'string' },
-              links: {
-                type: {
-                  type: 'hash',
-                  fields: {
-                    dealActivities: { type: 'string' },
-                    contact: { type: 'string' },
-                    contactDeals: { type: 'string' },
-                    group: { type: 'string' },
-                    nextTask: { type: 'string' },
-                    notes: { type: 'string' },
-                    account: { type: 'string' },
-                    customerAccount: { type: 'string' },
-                    organization: { type: 'string' },
-                    owner: { type: 'string' },
-                    scoreValues: { type: 'string' },
-                    stage: { type: 'string' },
-                    tasks: { type: 'string' },
-                    dealCustomFieldData: { type: 'string' },
-                  },
-                },
-              },
-              id: { type: 'string' },
-              isDisabled: { type: 'bool' },
-              account: { type: 'string' },
-              customerAccount: { type: 'string' },
-              hash: { type: 'string' },
-              nextTask: { type: 'string' },
-            },
-          },
+          element_type: DealListItemResponseType,
         },
       },
       meta: {

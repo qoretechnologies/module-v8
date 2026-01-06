@@ -1,8 +1,9 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_APP_NAME, ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient } from '../helpers/constants';
+import { activeCampaignClient } from '../helpers/constants';
 import { getActiveCampaignDealAllowedValues } from '../helpers/get-deal-id-allowed-values';
+import { DealNoteResponseType } from '../response-types';
 
 const action = 'add_deal_note';
 
@@ -32,16 +33,13 @@ const addDealNote = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      const response = await activeCampaignApiClient<{ note: Record<string, any> }>({
-        token,
-        url: instance_url,
-        method: 'POST',
-        path: `deals/${deal}/notes`,
-        body: {
-          note: {
-            note,
-          },
+      const response = await activeCampaignClient.post<{ note: Record<string, any> }>(`deals/${deal}/notes`, {
+        note: {
+          note,
         },
+      }, {
+        token,
+        baseUrl: instance_url,
       });
 
       return response.note;
@@ -49,40 +47,7 @@ const addDealNote = QoreAppCreator.createLocalizedAction<typeof options>({
       throw new ActiveCampaignError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
     }
   },
-  response_type: {
-    type: 'hash',
-    fields: {
-      cdate: { type: 'string' },
-      id: { type: 'string' },
-      links: {
-        type: {
-          type: 'hash',
-          fields: {
-            activities: { type: 'string' },
-            mentions: { type: 'string' },
-            notes: { type: 'string' },
-            owner: { type: 'string' },
-            user: { type: 'string' },
-          },
-        },
-      },
-      mdate: { type: 'string' },
-      note: { type: 'string' },
-      owner: {
-        type: {
-          type: 'hash',
-          fields: {
-            id: { type: 'string' },
-            type: { type: 'string' },
-          },
-        },
-      },
-      relid: { type: 'string' },
-      reltype: { type: 'string' },
-      user: { type: 'string' },
-      userid: { type: 'string' },
-    },
-  },
+  response_type: DealNoteResponseType,
 });
 
 export default addDealNote;

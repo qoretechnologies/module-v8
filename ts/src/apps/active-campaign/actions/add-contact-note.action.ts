@@ -1,8 +1,9 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_APP_NAME, ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient } from '../helpers/constants';
+import { activeCampaignClient } from '../helpers/constants';
 import { getActiveCampaignContactAllowedValues } from '../helpers/get-contact-id-allowed-values';
+import { ContactNoteResponseType } from '../response-types';
 
 const action = 'add_contact_note';
 
@@ -32,18 +33,15 @@ const addContactNote = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      const response = await activeCampaignApiClient<{ note: Record<string, any> }>({
-        token,
-        url: instance_url,
-        method: 'POST',
-        path: `notes`,
-        body: {
-          note: {
-            reltype: 'Subscriber',
-            note,
-            relid: contact,
-          },
+      const response = await activeCampaignClient.post<{ note: Record<string, any> }>(`notes`, {
+        note: {
+          reltype: 'Subscriber',
+          note,
+          relid: contact,
         },
+      }, {
+        token,
+        baseUrl: instance_url,
       });
 
       return response.note;
@@ -51,41 +49,7 @@ const addContactNote = QoreAppCreator.createLocalizedAction<typeof options>({
       throw new ActiveCampaignError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
     }
   },
-  response_type: {
-    type: 'hash',
-    fields: {
-      note: { type: 'string' },
-      cdate: { type: 'string' },
-      mdate: { type: 'string' },
-      reltype: { type: 'string' },
-      relid: { type: 'string' },
-      userid: { type: 'string' },
-      links: {
-        type: {
-          type: 'hash',
-          fields: {
-            activities: { type: 'string' },
-            user: { type: 'string' },
-            mentions: { type: 'string' },
-            notes: { type: 'string' },
-            owner: { type: 'string' },
-          },
-        },
-      },
-      owner: {
-        type: {
-          type: 'hash',
-          fields: {
-            type: { type: 'string' },
-            id: { type: 'string' },
-          },
-        },
-      },
-      is_draft: { type: 'string' },
-      id: { type: 'string' },
-      user: { type: 'string' },
-    },
-  },
+  response_type: ContactNoteResponseType,
 });
 
 export default addContactNote;

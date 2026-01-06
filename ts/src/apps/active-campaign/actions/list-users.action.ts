@@ -1,7 +1,8 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_APP_NAME, ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient } from '../helpers/constants';
+import { activeCampaignClient } from '../helpers/constants';
+import { UserResponseType } from '../response-types';
 
 const action = 'list_users';
 
@@ -32,17 +33,14 @@ const listUsers = QoreAppCreator.createLocalizedAction<typeof options>({
     const { limit = 20, offset = 0 } = obj || {};
 
     try {
-      const response = await activeCampaignApiClient({
+      const response = await activeCampaignClient.get(`users`, {
         token,
-        url: instance_url,
-        method: 'GET',
+        baseUrl: instance_url,
         params: {
-          limit: limit.toString(),
-          offset: offset.toString(),
+          limit,
+          offset,
         },
-        path: `users`,
       });
-
       return response;
     } catch (error) {
       throw new ActiveCampaignError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
@@ -54,30 +52,7 @@ const listUsers = QoreAppCreator.createLocalizedAction<typeof options>({
       users: {
         type: {
           type: 'list',
-          element_type: {
-            type: 'hash',
-            fields: {
-              username: { type: 'string' },
-              firstName: { type: 'string' },
-              lastName: { type: 'string' },
-              email: { type: 'string' },
-              phone: { type: 'string' },
-              signature: { type: 'string' },
-              links: {
-                type: {
-                  type: 'hash',
-                  fields: {
-                    lists: { type: 'string' },
-                    userGroup: { type: 'string' },
-                    dealGroupTotals: { type: 'string' },
-                    dealGroupUsers: { type: 'string' },
-                    configs: { type: 'string' },
-                  },
-                },
-              },
-              id: { type: 'string' },
-            },
-          },
+          element_type: UserResponseType,
         },
       },
       meta: {

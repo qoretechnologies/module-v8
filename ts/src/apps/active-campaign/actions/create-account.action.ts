@@ -1,9 +1,10 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_APP_NAME, ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient } from '../helpers/constants';
+import { activeCampaignClient } from '../helpers/constants';
 import { mapActiveCampaignAccountCustomFieldsToQoreOptions } from '../helpers/get-custom-field-type';
 import { getActiveCampaignUserAllowedValues } from '../helpers/get-user-id-allowed-values';
+import { AccountResponseType } from '../response-types';
 
 const action = 'create_account';
 
@@ -68,19 +69,16 @@ const createAccount = QoreAppCreator.createLocalizedAction<typeof options>({
     }));
 
     try {
-      const response = await activeCampaignApiClient<{ account: Record<string, any> }>({
-        token,
-        url: instance_url,
-        method: 'POST',
-        path: `accounts`,
-        body: {
-          account: {
-            name,
-            ...(accountUrl && { accountUrl }),
-            ...(owner && { owner }),
-            ...(fields?.length && { fields }),
-          },
+      const response = await activeCampaignClient.post<{ account: Record<string, any> }>(`accounts`, {
+        account: {
+          name,
+          ...(accountUrl && { accountUrl }),
+          ...(owner && { owner }),
+          ...(fields?.length && { fields }),
         },
+      }, {
+        token,
+        baseUrl: instance_url,
       });
 
       return response.account;
@@ -88,22 +86,7 @@ const createAccount = QoreAppCreator.createLocalizedAction<typeof options>({
       throw new ActiveCampaignError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
     }
   },
-  response_type: {
-    type: 'hash',
-    fields: {
-      name: { type: 'string' },
-      accountUrl: { type: 'string' },
-      createdTimestamp: { type: 'string' },
-      updatedTimestamp: { type: 'string' },
-      links: {
-        type: {
-          type: 'list',
-          element_type: { type: 'string' },
-        },
-      },
-      id: { type: 'string' },
-    },
-  },
+  response_type: AccountResponseType,
 });
 
 export default createAccount;

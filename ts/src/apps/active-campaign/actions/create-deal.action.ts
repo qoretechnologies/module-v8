@@ -1,12 +1,13 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_APP_NAME, ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient } from '../helpers/constants';
+import { activeCampaignClient } from '../helpers/constants';
 import { getActiveCampaignAccountAllowedValues } from '../helpers/get-account-id-allowed-values';
 import { getActiveCampaignContactAllowedValues } from '../helpers/get-contact-id-allowed-values';
 import { getActiveCampaignGroupAllowedValues } from '../helpers/get-group-allowed-values';
 import { getActiveCampaignDealStageAllowedValues } from '../helpers/get-stage-id-allowed-values';
 import { getActiveCampaignUserAllowedValues } from '../helpers/get-user-id-allowed-values';
+import { CreateUpdateDealResponseType } from '../response-types';
 
 const action = 'create_deal';
 
@@ -98,28 +99,25 @@ const createContact = QoreAppCreator.createLocalizedAction<typeof options>({
     const { account, contact, stage, group, owner, percent, description, status } = obj || {};
 
     try {
-      const response = await activeCampaignApiClient<{
+      const response = await activeCampaignClient.post<{
         deal: Record<string, any>[];
-      }>({
-        token,
-        url: instance_url,
-        method: 'POST',
-        path: `deals`,
-        body: {
-          deal: {
-            title,
-            value,
-            currency,
-            ...(account && { account }),
-            ...(contact && { contact }),
-            ...(stage && { stage }),
-            ...(group && { group }),
-            ...(owner && { owner }),
-            ...(percent && { percent }),
-            ...(description && { description }),
-            ...(status && { status }),
-          },
+      }>(`deals`, {
+        deal: {
+          title,
+          value,
+          currency,
+          ...(account && { account }),
+          ...(contact && { contact }),
+          ...(stage && { stage }),
+          ...(group && { group }),
+          ...(owner && { owner }),
+          ...(percent && { percent }),
+          ...(description && { description }),
+          ...(status && { status }),
         },
+      }, {
+        token,
+        baseUrl: instance_url,
       });
 
       return response.deal;
@@ -127,67 +125,7 @@ const createContact = QoreAppCreator.createLocalizedAction<typeof options>({
       throw new ActiveCampaignError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
     }
   },
-  response_type: {
-    type: 'hash',
-    fields: {
-      description: { type: 'string' },
-      currency: { type: 'string' },
-      percent: { type: 'string' },
-      status: { type: 'number' },
-      title: { type: 'string' },
-      value: { type: 'number' },
-      organization: { type: 'number' },
-      contact: { type: 'number' },
-      group: { type: 'string' },
-      owner: { type: 'string' },
-      stage: { type: 'string' },
-      cdate: { type: 'string' },
-      mdate: { type: 'string' },
-      nextdate: { type: 'string' },
-      hash: { type: 'string' },
-      winProbability: { type: 'string' },
-      winProbabilityMdate: { type: 'string' },
-      links: {
-        type: {
-          type: 'hash',
-          fields: {
-            dealActivities: { type: 'string' },
-            contact: { type: 'string' },
-            contactDeals: { type: 'string' },
-            group: { type: 'string' },
-            nextTask: { type: 'string' },
-            notes: { type: 'string' },
-            account: { type: 'string' },
-            customerAccount: { type: 'string' },
-            organization: { type: 'string' },
-            owner: { type: 'string' },
-            scoreValues: { type: 'string' },
-            stage: { type: 'string' },
-            tasks: { type: 'string' },
-            dealCustomFieldData: { type: 'string' },
-          },
-        },
-      },
-      fields: {
-        type: {
-          type: 'list',
-          element_type: {
-            type: 'hash',
-            fields: {
-              customFieldId: { type: 'number' },
-              fieldValue: { type: 'string' },
-              dealId: { type: 'string' },
-              fieldCurrency: { type: 'string' },
-            },
-          },
-        },
-      },
-      id: { type: 'string' },
-      isDisabled: { type: 'bool' },
-      account: { type: 'number' },
-      customerAccount: { type: 'number' },
-    },
-  },
+  response_type: CreateUpdateDealResponseType,
 });
 
 export default createContact;

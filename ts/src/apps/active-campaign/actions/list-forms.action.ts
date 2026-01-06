@@ -1,7 +1,8 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_APP_NAME, ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient } from '../helpers/constants';
+import { activeCampaignClient } from '../helpers/constants';
+import { FormResponseType } from '../response-types';
 
 const action = 'list_forms';
 
@@ -32,17 +33,14 @@ const listForms = QoreAppCreator.createLocalizedAction<typeof options>({
     const { limit = 20, offset = 0 } = obj || {};
 
     try {
-      const response = await activeCampaignApiClient({
+      const response = await activeCampaignClient.get(`forms`, {
         token,
-        url: instance_url,
-        method: 'GET',
+        baseUrl: instance_url,
         params: {
-          limit: limit.toString(),
-          offset: offset.toString(),
+          limit,
+          offset,
         },
-        path: `forms`,
       });
-
       return response;
     } catch (error) {
       throw new ActiveCampaignError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
@@ -54,148 +52,7 @@ const listForms = QoreAppCreator.createLocalizedAction<typeof options>({
       forms: {
         type: {
           type: 'list',
-          element_type: {
-            type: 'hash',
-            fields: {
-              name: { type: 'string' },
-              action: { type: 'string' },
-              actiondata: {
-                type: {
-                  type: 'hash',
-                  fields: {
-                    actions: {
-                      type: {
-                        type: 'list',
-                        element_type: {
-                          type: 'hash',
-                          fields: {
-                            type: { type: 'string' },
-                            email: { type: 'string' },
-                            list: { type: 'string' },
-                          },
-                        },
-                      },
-                    },
-                  },
-                },
-              },
-              submit: { type: 'string' },
-              submitdata: {
-                type: {
-                  type: 'hash',
-                  fields: {
-                    url: { type: 'string' },
-                  },
-                },
-              },
-              url: { type: 'string' },
-              layout: { type: 'string' },
-              title: { type: 'string' },
-              body: { type: 'string' },
-              button: { type: 'string' },
-              thanks: { type: 'string' },
-              style: {
-                type: {
-                  type: 'hash',
-                  fields: {
-                    background: { type: 'string' },
-                    dark: { type: 'bool' },
-                    fontcolor: { type: 'string' },
-                    layout: { type: 'string' },
-                    border: {
-                      type: {
-                        type: 'hash',
-                        fields: {
-                          width: { type: 'number' },
-                          style: { type: 'string' },
-                          color: { type: 'string' },
-                          radius: { type: 'number' },
-                        },
-                      },
-                    },
-                    width: { type: 'number' },
-                    ac_branding: { type: 'bool' },
-                    button: {
-                      type: {
-                        type: 'hash',
-                        fields: {
-                          padding: { type: 'number' },
-                          background: { type: 'string' },
-                          fontcolor: { type: 'string' },
-                          border: {
-                            type: {
-                              type: 'hash',
-                              fields: {
-                                radius: { type: 'number' },
-                                color: { type: 'string' },
-                                style: { type: 'string' },
-                                width: { type: 'number' },
-                              },
-                            },
-                          },
-                        },
-                      },
-                    },
-                  },
-                },
-              },
-              options: {
-                type: {
-                  type: 'hash',
-                  fields: {
-                    blanks_overwrite: { type: 'bool' },
-                    confaction: { type: 'string' },
-                    sendoptin: { type: 'bool' },
-                    optin_id: { type: 'number' },
-                    optin_created: { type: 'bool' },
-                    confform: { type: 'string' },
-                  },
-                },
-              },
-              cfields: {
-                type: {
-                  type: 'list',
-                  element_type: {
-                    type: 'hash',
-                    fields: {
-                      type: { type: 'string' },
-                      header: { type: 'string' },
-                      class: { type: 'string' },
-                      html: { type: 'string' },
-                      default_text: { type: 'string' },
-                      required: { type: 'bool' },
-                    },
-                  },
-                },
-              },
-              parentformid: { type: 'string' },
-              userid: { type: 'string' },
-              addressid: { type: 'string' },
-              cdate: { type: 'string' },
-              udate: { type: 'string' },
-              entries: { type: 'string' },
-              aid: { type: 'string' },
-              defaultscreenshot: { type: 'string' },
-              recent: {
-                type: {
-                  type: 'list',
-                  element_type: { type: 'hash' },
-                },
-              },
-              contacts: { type: 'number' },
-              deals: { type: 'number' },
-              links: {
-                type: {
-                  type: 'hash',
-                  fields: {
-                    address: { type: 'string' },
-                  },
-                },
-              },
-              id: { type: 'string' },
-              address: { type: 'string' },
-            },
-          },
+          element_type: FormResponseType,
         },
       },
       meta: {

@@ -1,9 +1,10 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_APP_NAME, ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient } from '../helpers/constants';
+import { activeCampaignClient } from '../helpers/constants';
 import { getActiveCampaignContactAllowedValues } from '../helpers/get-contact-id-allowed-values';
 import { getActiveCampaignAccountAllowedValues } from '../helpers/get-account-id-allowed-values';
+import { AccountContactResponseType } from '../response-types';
 
 const action = 'add_contact_to_account';
 
@@ -41,18 +42,15 @@ const addContactToAccount = QoreAppCreator.createLocalizedAction<typeof options>
     const jobTitle = obj?.jobTitle;
 
     try {
-      const response = await activeCampaignApiClient<{ accountContact: Record<string, any> }>({
-        token,
-        url: instance_url,
-        method: 'POST',
-        path: `accountContacts`,
-        body: {
-          accountContact: {
-            account,
-            contact,
-            ...(jobTitle && { jobTitle }),
-          },
+      const response = await activeCampaignClient.post<{ accountContact: Record<string, any> }>(`accountContacts`, {
+        accountContact: {
+          account,
+          contact,
+          ...(jobTitle && { jobTitle }),
         },
+      }, {
+        token,
+        baseUrl: instance_url,
       });
 
       return response.accountContact;
@@ -60,26 +58,7 @@ const addContactToAccount = QoreAppCreator.createLocalizedAction<typeof options>
       throw new ActiveCampaignError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
     }
   },
-  response_type: {
-    type: 'hash',
-    fields: {
-      account: { type: 'number' },
-      contact: { type: 'number' },
-      jobTitle: { type: 'string' },
-      createdTimestamp: { type: 'string' },
-      updatedTimestamp: { type: 'string' },
-      links: {
-        type: {
-          type: 'hash',
-          fields: {
-            account: { type: 'string' },
-            contact: { type: 'string' },
-          },
-        },
-      },
-      id: { type: 'string' },
-    },
-  },
+  response_type: AccountContactResponseType,
 });
 
 export default addContactToAccount;

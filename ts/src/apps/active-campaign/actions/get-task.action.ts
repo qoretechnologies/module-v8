@@ -1,8 +1,9 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_APP_NAME, ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient } from '../helpers/constants';
+import { activeCampaignClient } from '../helpers/constants';
 import { getActiveCampaignTaskAllowedValues } from '../helpers/get-task-id-allowed-values';
+import { TaskResponseType } from '../response-types';
 
 const action = 'get_task';
 
@@ -28,11 +29,9 @@ const getTask = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      const response = await activeCampaignApiClient<{ dealTask: Record<string, any> }>({
+      const response = await activeCampaignClient.get<{ dealTask: Record<string, any> }>(`dealTasks/${id}`, {
         token,
-        url: instance_url,
-        method: 'GET',
-        path: `dealTasks/${id}`,
+        baseUrl: instance_url,
       });
 
       return response.dealTask;
@@ -40,55 +39,7 @@ const getTask = QoreAppCreator.createLocalizedAction<typeof options>({
       throw new ActiveCampaignError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
     }
   },
-  response_type: {
-    type: 'hash',
-    fields: {
-      relid: { type: 'string' },
-      reltype: { type: 'string' },
-      dealTasktype: { type: 'string' },
-      user: { type: 'string' },
-      assignee: { type: 'string' },
-      automation: { type: 'string' },
-      cdate: { type: 'string' },
-      duedate: { type: 'string' },
-      edate: { type: 'string' },
-      duration: { type: 'string' },
-      status: { type: 'string' },
-      title: { type: 'string' },
-      note: { type: 'string' },
-      donedate: { type: 'string' },
-      doneAutomation: { type: 'string' },
-      udate: { type: 'string' },
-      owner: {
-        type: {
-          type: 'hash',
-          fields: {
-            type: { type: 'string' },
-            id: { type: 'string' },
-          },
-        },
-      },
-      id: { type: 'string' },
-      outcomeId: { type: 'number' },
-      outcomeInfo: { type: 'string' },
-      links: {
-        type: {
-          type: 'hash',
-          fields: {
-            activities: { type: 'string' },
-            automation: { type: 'string' },
-            dealTasktype: { type: 'string' },
-            doneAutomation: { type: 'string' },
-            notes: { type: 'string' },
-            owner: { type: 'string' },
-            taskNotifications: { type: 'string' },
-            user: { type: 'string' },
-            assignee: { type: 'string' },
-          },
-        },
-      },
-    },
-  },
+  response_type: TaskResponseType,
 });
 
 export default getTask;

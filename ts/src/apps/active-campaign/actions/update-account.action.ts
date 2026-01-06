@@ -1,10 +1,11 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_APP_NAME, ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient } from '../helpers/constants';
+import { activeCampaignClient } from '../helpers/constants';
 import { getActiveCampaignAccountAllowedValues } from '../helpers/get-account-id-allowed-values';
 import { mapActiveCampaignAccountCustomFieldsToQoreOptions } from '../helpers/get-custom-field-type';
 import { getActiveCampaignUserAllowedValues } from '../helpers/get-user-id-allowed-values';
+import { AccountResponseType } from '../response-types';
 
 const action = 'update_account';
 
@@ -74,19 +75,16 @@ const updateAccount = QoreAppCreator.createLocalizedAction<typeof options>({
     }));
 
     try {
-      const response = await activeCampaignApiClient<{ account: Record<string, any> }>({
-        token,
-        url: instance_url,
-        method: 'PUT',
-        path: `accounts/${id}`,
-        body: {
-          account: {
-            ...(name && { name }),
-            ...(accountUrl && { accountUrl }),
-            ...(owner && { owner }),
-            ...(fields?.length && { fields }),
-          },
+      const response = await activeCampaignClient.put<{ account: Record<string, any> }>(`accounts/${id}`, {
+        account: {
+          ...(name && { name }),
+          ...(accountUrl && { accountUrl }),
+          ...(owner && { owner }),
+          ...(fields?.length && { fields }),
         },
+      }, {
+        token,
+        baseUrl: instance_url,
       });
 
       return response.account;
@@ -94,22 +92,7 @@ const updateAccount = QoreAppCreator.createLocalizedAction<typeof options>({
       throw new ActiveCampaignError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
     }
   },
-  response_type: {
-    type: 'hash',
-    fields: {
-      name: { type: 'string' },
-      accountUrl: { type: 'string' },
-      createdTimestamp: { type: 'string' },
-      updatedTimestamp: { type: 'string' },
-      links: {
-        type: {
-          type: 'list',
-          element_type: { type: 'string' },
-        },
-      },
-      id: { type: 'string' },
-    },
-  },
+  response_type: AccountResponseType,
 });
 
 export default updateAccount;

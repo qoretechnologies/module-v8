@@ -1,7 +1,8 @@
 import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_APP_NAME, ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient } from '../helpers/constants';
+import { activeCampaignClient } from '../helpers/constants';
+import { CampaignReplyEventResponseType } from '../response-types/webhook-events';
 
 const trigger = 'new_campaign_reply';
 
@@ -17,19 +18,15 @@ const ActiveCampaignNewCampaignReply = QoreAppCreator.createLocalizedTrigger({
       ErrorClass: ActiveCampaignError,
     });
 
-    const response = await activeCampaignApiClient<{ webhook: { id: string } }>({
-      method: 'POST',
-      token,
-      url: instance_url,
-      path: 'webhooks',
-      body: {
-        name: `Qorus ${humanizeNameTitle(trigger)} Webhook ${new Date().getTime()}`,
-        url,
-        events: ['reply'],
-        sources: ['public', 'admin', 'api', 'system'],
-      },
-    });
-
+    const response = await activeCampaignClient.post<{ webhook: { id: string } }>('webhooks', {
+          name: `Qorus ${humanizeNameTitle(trigger)} Webhook ${new Date().getTime()}`,
+          url,
+          events: ['reply'],
+          sources: ['public', 'admin', 'api', 'system'],
+          }, {
+        token,
+        baseUrl: instance_url,
+      });
     return response;
   },
   webhook_deregister: async (context, _url, regInfo) => {
@@ -44,60 +41,14 @@ const ActiveCampaignNewCampaignReply = QoreAppCreator.createLocalizedTrigger({
       throw new ActiveCampaignError('Webhook ID is required for deregistration.');
     }
 
-    await activeCampaignApiClient({
-      method: 'DELETE',
-      token,
-      url: instance_url,
-      path: `webhooks/${webhookId}`,
-    });
+    await activeCampaignClient.delete(`webhooks/${webhookId}`, {
+        token,
+        baseUrl: instance_url,
+      });
   },
   event_info: {
     desc: 'Reply Webhook Event Info',
-    type: {
-      type: 'hash',
-      fields: {
-        url: { type: 'string' },
-        type: { type: 'string' },
-        date_time: { type: 'string' },
-        initiated_by: { type: 'string' },
-        list: { type: 'string' },
-        campaign: {
-          type: {
-            type: 'hash',
-            fields: {
-              id: { type: 'string' },
-            },
-          },
-        },
-        result: { type: 'string' },
-        message: { type: 'string' },
-        contact: {
-          type: {
-            type: 'hash',
-            fields: {
-              id: { type: 'string' },
-              email: { type: 'string' },
-              first_name: { type: 'string' },
-              last_name: { type: 'string' },
-              phone: { type: 'string' },
-              tags: {
-                type: {
-                  type: 'list',
-                  element_type: 'string',
-                },
-              },
-              orgname: { type: 'string' },
-              ip: { type: 'string' },
-              fields: {
-                type: {
-                  type: 'hash',
-                },
-              },
-            },
-          },
-        },
-      },
-    },
+    type: CampaignReplyEventResponseType,
   },
 });
 

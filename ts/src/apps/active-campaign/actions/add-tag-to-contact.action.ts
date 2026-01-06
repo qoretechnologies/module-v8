@@ -1,9 +1,10 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_APP_NAME, ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient } from '../helpers/constants';
+import { activeCampaignClient } from '../helpers/constants';
 import { getActiveCampaignContactAllowedValues } from '../helpers/get-contact-id-allowed-values';
 import { getActiveCampaignTagAllowedValues } from '../helpers/get-tag-allowed-values';
+import { ContactTagResponseType } from '../response-types';
 
 const action = 'add_tag_to_contact';
 
@@ -34,17 +35,14 @@ const addTagToContact = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      const response = await activeCampaignApiClient<{ contactTag: Record<string, any> }>({
-        token,
-        url: instance_url,
-        method: 'POST',
-        path: `contactTags`,
-        body: {
-          contactTag: {
-            contact,
-            tag,
-          },
+      const response = await activeCampaignClient.post<{ contactTag: Record<string, any> }>(`contactTags`, {
+        contactTag: {
+          contact,
+          tag,
         },
+      }, {
+        token,
+        baseUrl: instance_url,
       });
 
       return response.contactTag;
@@ -52,24 +50,7 @@ const addTagToContact = QoreAppCreator.createLocalizedAction<typeof options>({
       throw new ActiveCampaignError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
     }
   },
-  response_type: {
-    type: 'hash',
-    fields: {
-      cdate: { type: 'string' },
-      contact: { type: 'string' },
-      id: { type: 'string' },
-      links: {
-        type: {
-          type: 'hash',
-          fields: {
-            contact: { type: 'string' },
-            tag: { type: 'string' },
-          },
-        },
-      },
-      tag: { type: 'string' },
-    },
-  },
+  response_type: ContactTagResponseType,
 });
 
 export default addTagToContact;
