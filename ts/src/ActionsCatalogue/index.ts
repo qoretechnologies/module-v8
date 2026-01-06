@@ -102,6 +102,7 @@ import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import sendgrid from '../apps/sendgrid';
 import helpscout from '../apps/helpscout';
+import dropbox from '../apps/dropbox';
 import front from '../apps/front';
 import surveyMonkey from '../apps/survey-monkey';
 
@@ -144,6 +145,7 @@ const NEW_APPS = {
   confluence,
   coppercrm,
   craft,
+  dropbox,
   esignature,
   facebookPages,
   figma,
