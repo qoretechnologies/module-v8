@@ -1,7 +1,7 @@
 import { TQoreDeleteRecordsFunction } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
+import { baserowClient } from '../../client';
 import { BaserowError } from '../../constants';
-import { baserowApiClient, fetchBaserowPaginatedRecords } from '../constants';
 import { buildBaserowFilter } from './apply-where-condition';
 import { getBaserowTableIdByName } from './constants';
 
@@ -30,15 +30,12 @@ export const deleteBaserowRecords: TQoreDeleteRecordsFunction = async (context, 
       filterParams.filters = JSON.stringify(filterGroup);
     }
 
-    const recordsToDelete = await fetchBaserowPaginatedRecords<
-      any,
-      { id: number; [key: string]: any }
-    >({
-      token,
-      url,
+    const recordsToDelete = await baserowClient.fetchPaginated<{ id: number; [key: string]: any }>({
       path: `database/rows/table/${tableId}`,
+      token,
+      connectionOptions: { url },
       params: filterParams,
-      object: 'results',
+      itemsPath: 'results',
     });
 
     if (!recordsToDelete || recordsToDelete.length === 0) {
@@ -47,18 +44,17 @@ export const deleteBaserowRecords: TQoreDeleteRecordsFunction = async (context, 
 
     const items = recordsToDelete.map((record) => record.id);
 
-    await baserowApiClient({
-      token,
-      url,
-      path: `database/rows/table/${tableId}/batch-delete`,
-      method: 'POST',
-      params: {
-        user_field_names: 'true',
-      },
-      body: {
-        items,
-      },
-    });
+    await baserowClient.post(
+      `database/rows/table/${tableId}/batch-delete`,
+      { items },
+      {
+        token,
+        connectionOptions: { url },
+        params: {
+          user_field_names: 'true',
+        },
+      }
+    );
 
     return recordsToDelete.length;
   } catch (error) {

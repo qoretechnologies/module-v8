@@ -3,8 +3,8 @@ import {
   TQoreSearchRecordsIterator,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, mapObjectToColumnFormat } from '../../../../global/helpers';
+import { baserowClient } from '../../client';
 import { BaserowError } from '../../constants';
-import { fetchBaserowPaginatedRecords } from '../constants';
 import { buildBaserowFilter } from './apply-where-condition';
 import { getBaserowTableIdByName } from './constants';
 
@@ -51,17 +51,17 @@ export const searchBaserowRecords: TQoreSearchRecordsFunction = async (ctx, wher
       }
 
       try {
-        const records = await fetchBaserowPaginatedRecords<any, Record<string, any>>({
-          token,
-          url,
+        const records = await baserowClient.fetchPaginated<Record<string, any>>({
           path: `database/rows/table/${tableId}`,
+          token,
+          connectionOptions: { url },
           params: {
             ...filterParams,
             page: String(page),
             size: String(Math.min(blockSize, MAX_PAGE_SIZE, limit)),
           },
           maxResults: blockSize,
-          object: 'results',
+          itemsPath: 'results',
         });
 
         if (!records || records.length === 0) {

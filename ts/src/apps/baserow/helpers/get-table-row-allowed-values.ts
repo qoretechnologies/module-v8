@@ -4,8 +4,8 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
+import { baserowClient } from '../client';
 import { BaserowError } from '../constants';
-import { fetchBaserowAllowedValues } from './constants';
 
 type BaserowItem = {
   id: number;
@@ -41,14 +41,13 @@ export const getBaserowTableRowsAllowedValues: TQoreGetAllowedValuesFunction<
     ErrorClass: BaserowError,
   });
 
-  return await fetchBaserowAllowedValues<BaserowItem>({
+  return await baserowClient.fetchAllowedValues<BaserowItem>({
     path: `database/rows/table/${table}`,
-    method: 'GET',
+    token,
+    connectionOptions: { url },
     params: {
       user_field_names: 'true',
     },
-    token,
-    url,
     mapItemToAllowedValue: mapBaserowItemToAllowedValue,
   });
 };

@@ -1,7 +1,7 @@
 import { TQoreGetTableListFunction } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
+import { baserowClient } from '../../client';
 import { BaserowError } from '../../constants';
-import { fetchBaserowPaginatedRecords } from '../constants';
 
 export const getBaserowTableList: TQoreGetTableListFunction = async (context) => {
   const { token, url } = getQoreContextRequiredValues({
@@ -11,10 +11,10 @@ export const getBaserowTableList: TQoreGetTableListFunction = async (context) =>
   });
 
   try {
-    const tables = await fetchBaserowPaginatedRecords<any, { id: number; name: string }>({
-      url,
+    const tables = await baserowClient.fetchPaginated<{ id: number; name: string }>({
+      path: 'database/tables/all-tables',
       token,
-      path: `database/tables/all-tables`,
+      connectionOptions: { url },
     });
 
     return tables.map((table) => table.name);

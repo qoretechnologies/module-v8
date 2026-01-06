@@ -1,8 +1,8 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { omit } from 'lodash';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { baserowClient } from '../client';
 import { BASEROW_APP_NAME, BaserowError } from '../constants';
-import { baserowApiClient } from '../helpers/constants';
 import { getBaserowTableAllowedValues } from '../helpers/get-table-allowed-values';
 import { getBaserowTableColumnsResponseType } from '../helpers/get-table-fields';
 import { getBaserowTableFieldNamesAllowedValues } from '../helpers/get-table-fields-allowed-values';
@@ -125,9 +125,9 @@ const listRows = QoreAppCreator.createLocalizedAction<typeof options>({
     }
 
     try {
-      const response = await baserowApiClient<{ id: string }[]>({
-        path: `database/rows/table/${table}`,
-        method: 'GET',
+      const response = await baserowClient.get<{ id: string }[]>(`database/rows/table/${table}`, {
+        token,
+        connectionOptions: { url },
         params: {
           size: String(size),
           page: String(page),
@@ -136,8 +136,6 @@ const listRows = QoreAppCreator.createLocalizedAction<typeof options>({
           ...(filterString && { filter: filterString }),
           ...(search && { search }),
         },
-        token,
-        url,
       });
 
       return { ...omit(response, ['next', 'previous']), current_page: page };

@@ -1,5 +1,5 @@
+import { baserowClient } from '../../client';
 import { BaserowError } from '../../constants';
-import { fetchBaserowPaginatedRecords } from '../constants';
 
 export const getBaserowTableNameToIdMap = async (options: {
   token: string;
@@ -8,10 +8,10 @@ export const getBaserowTableNameToIdMap = async (options: {
   try {
     const { token, url } = options;
 
-    const tables = await fetchBaserowPaginatedRecords<any, { id: number; name: string }>({
-      url,
+    const tables = await baserowClient.fetchPaginated<{ id: number; name: string }>({
+      path: 'database/tables/all-tables',
       token,
-      path: `database/tables/all-tables`,
+      connectionOptions: { url },
     });
 
     const map: Record<string, number> = {};

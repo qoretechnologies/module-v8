@@ -1,8 +1,8 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
+import { baserowClient } from '../client';
 import { BASEROW_APP_NAME, BaserowError } from '../constants';
-import { baserowApiClient } from '../helpers/constants';
 import { getBaserowTableColumnsResponseType } from '../helpers/get-table-fields';
 import { getBaserowTableFieldNamesAllowedValues } from '../helpers/get-table-fields-allowed-values';
 import { getBaserowTableAllowedValues } from '../helpers/get-table-allowed-values';
@@ -178,19 +178,20 @@ const fetchLatestRows = async (
 
     const page = Math.ceil(count / limit);
 
-    const response = await baserowApiClient<{ results: ReturnType<typeof fetchLatestRows> }>({
-      path: `database/rows/table/${table}`,
-      method: 'GET',
-      params: {
-        size: String(limit),
-        page: String(page),
-        user_field_names: 'true',
-        ...(filterString && { filter: filterString }),
-        ...(search && { search }),
-      },
-      token,
-      url,
-    });
+    const response = await baserowClient.get<{ results: ReturnType<typeof fetchLatestRows> }>(
+      `database/rows/table/${table}`,
+      {
+        token,
+        connectionOptions: { url },
+        params: {
+          size: String(limit),
+          page: String(page),
+          user_field_names: 'true',
+          ...(filterString && { filter: filterString }),
+          ...(search && { search }),
+        },
+      }
+    );
 
     return response.results || [];
   } catch (error) {
@@ -202,16 +203,17 @@ const getBaserowRowCount = async (options: TFetchRowsOptions): Promise<number> =
   const { token, table, url, filter, search } = options;
 
   try {
-    const response = await baserowApiClient<{ count: number }>({
-      path: `database/rows/table/${table}/count`,
-      method: 'GET',
-      params: {
-        ...(filter && { filter: JSON.stringify(filter) }),
-        ...(search && { search }),
-      },
-      token,
-      url,
-    });
+    const response = await baserowClient.get<{ count: number }>(
+      `database/rows/table/${table}/count`,
+      {
+        token,
+        connectionOptions: { url },
+        params: {
+          ...(filter && { filter: JSON.stringify(filter) }),
+          ...(search && { search }),
+        },
+      }
+    );
 
     return response.count || 0;
   } catch (error) {

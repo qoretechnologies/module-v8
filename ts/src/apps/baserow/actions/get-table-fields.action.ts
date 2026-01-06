@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { baserowClient } from '../client';
 import { BASEROW_APP_NAME, BaserowError } from '../constants';
-import { baserowApiClient } from '../helpers/constants';
 import { getBaserowTableAllowedValues } from '../helpers/get-table-allowed-values';
 
 const action = 'get_table_fields';
@@ -28,11 +28,9 @@ const getTableFields = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      const response = await baserowApiClient<{ id: string }[]>({
-        path: `database/fields/table/${table}`,
-        method: 'GET',
+      const response = await baserowClient.get<{ id: string }[]>(`database/fields/table/${table}`, {
         token,
-        url,
+        connectionOptions: { url },
       });
 
       return response;

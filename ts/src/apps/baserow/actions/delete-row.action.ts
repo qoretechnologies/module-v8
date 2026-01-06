@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { baserowClient } from '../client';
 import { BASEROW_APP_NAME, BaserowError } from '../constants';
-import { baserowApiClient } from '../helpers/constants';
 import { getBaserowTableAllowedValues } from '../helpers/get-table-allowed-values';
 import { getBaserowTableRowsAllowedValues } from '../helpers/get-table-row-allowed-values';
 
@@ -36,11 +36,9 @@ const deleteTableRow = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      await baserowApiClient<{ id: string }>({
-        path: `database/rows/table/${table}/${row}`,
-        method: 'DELETE',
+      await baserowClient.delete(`database/rows/table/${table}/${row}`, {
         token,
-        url,
+        connectionOptions: { url },
       });
     } catch (error) {
       throw new BaserowError(`Failed to ${humanizeNameTitle(action)}: ${error}`);

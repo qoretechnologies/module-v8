@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { baserowClient } from '../client';
 import { BASEROW_APP_NAME, BaserowError } from '../constants';
-import { baserowApiClient } from '../helpers/constants';
 import { getBaserowTableAllowedValues } from '../helpers/get-table-allowed-values';
 import {
   getBaserowTableColumnOptions,
@@ -49,16 +49,13 @@ const createRow = QoreAppCreator.createLocalizedAction<typeof options>({
     const before = obj?.before_row_id ? String(obj.before_row_id) : undefined;
 
     try {
-      const response = await baserowApiClient<{ id: string }>({
-        path: `database/rows/table/${table}`,
-        method: 'POST',
+      const response = await baserowClient.post<{ id: string }>(`database/rows/table/${table}`, data, {
         token,
-        url,
+        connectionOptions: { url },
         params: {
           user_field_names: 'true',
           ...(before && { before }),
         },
-        body: data,
       });
 
       return response;
