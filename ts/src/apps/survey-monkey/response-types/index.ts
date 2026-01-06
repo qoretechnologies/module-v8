@@ -3,3 +3,8 @@ export * from './survey';
 export * from './collector';
 export * from './response';
 export * from './webhook-events';
+export * from './common';
+export * from './contact-list';
+export * from './survey-folder';
+export * from './survey-rollup';
+export * from './user';

@@ -110994,6 +110994,96 @@ type RootTranslation = {
 						}
 					}
 				}
+				response_disqualified: {
+					/**
+					 * R​e​s​p​o​n​s​e​ ​D​i​s​q​u​a​l​i​f​i​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​r​e​s​p​o​n​d​e​n​t​ ​i​s​ ​d​i​s​q​u​a​l​i​f​i​e​d​ ​f​r​o​m​ ​a​ ​s​u​r​v​e​y
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​r​e​s​p​o​n​d​e​n​t​ ​i​s​ ​s​c​r​e​e​n​e​d​ ​o​u​t​ ​o​r​ ​d​i​s​q​u​a​l​i​f​i​e​d​ ​f​r​o​m​ ​a​ ​s​u​r​v​e​y​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​i​r​ ​a​n​s​w​e​r​s​ ​t​o​ ​q​u​a​l​i​f​y​i​n​g​ ​q​u​e​s​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						survey_id: {
+							/**
+							 * S​u​r​v​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​r​v​e​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​d​i​s​q​u​a​l​i​f​i​e​d​ ​r​e​s​p​o​n​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​s​u​r​v​e​y​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​d​i​s​q​u​a​l​i​f​i​e​d​ ​r​e​s​p​o​n​s​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				response_updated: {
+					/**
+					 * R​e​s​p​o​n​s​e​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​s​u​r​v​e​y​ ​r​e​s​p​o​n​s​e​ ​i​s​ ​u​p​d​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​s​u​r​v​e​y​ ​r​e​s​p​o​n​s​e​ ​i​s​ ​m​o​d​i​f​i​e​d​ ​o​r​ ​u​p​d​a​t​e​d​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​t​r​a​c​k​i​n​g​ ​p​a​r​t​i​a​l​ ​r​e​s​p​o​n​s​e​s​ ​o​r​ ​r​e​s​p​o​n​s​e​ ​e​d​i​t​s​.
+					 */
+					longDesc: string
+					options: {
+						survey_id: {
+							/**
+							 * S​u​r​v​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​r​v​e​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​u​p​d​a​t​e​d​ ​r​e​s​p​o​n​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​s​u​r​v​e​y​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​u​p​d​a​t​e​d​ ​r​e​s​p​o​n​s​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				collector_updated: {
+					/**
+					 * C​o​l​l​e​c​t​o​r​ ​U​p​d​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​o​l​l​e​c​t​o​r​ ​i​s​ ​u​p​d​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​c​o​l​l​e​c​t​o​r​ ​(​d​i​s​t​r​i​b​u​t​i​o​n​ ​m​e​t​h​o​d​)​ ​f​o​r​ ​a​ ​s​u​r​v​e​y​ ​i​s​ ​m​o​d​i​f​i​e​d​,​ ​s​u​c​h​ ​a​s​ ​s​t​a​t​u​s​ ​c​h​a​n​g​e​s​ ​o​r​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​u​p​d​a​t​e​s​.
+					 */
+					longDesc: string
+					options: {
+						survey_id: {
+							/**
+							 * S​u​r​v​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​r​v​e​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​c​o​l​l​e​c​t​o​r​ ​u​p​d​a​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​s​u​r​v​e​y​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​c​o​l​l​e​c​t​o​r​ ​c​h​a​n​g​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
 			}
 			actions: {
 				create_contact: {
@@ -111575,6 +111665,734 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * A​ ​l​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​s​u​r​v​e​y​ ​i​n​v​i​t​a​t​i​o​n​ ​t​o
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_survey: {
+					groups: {
+						/**
+						 * S​u​r​v​e​y​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * C​r​e​a​t​e​ ​S​u​r​v​e​y
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​s​u​r​v​e​y
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​s​u​r​v​e​y​ ​i​n​ ​S​u​r​v​e​y​M​o​n​k​e​y​ ​f​r​o​m​ ​s​c​r​a​t​c​h​ ​o​r​ ​f​r​o​m​ ​a​ ​t​e​m​p​l​a​t​e
+					 */
+					longDesc: string
+					options: {
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​s​u​r​v​e​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​d​i​s​p​l​a​y​e​d​ ​f​o​r​ ​t​h​e​ ​s​u​r​v​e​y
+							 */
+							longDesc: string
+						}
+						nickname: {
+							/**
+							 * N​i​c​k​n​a​m​e
+							 */
+							displayName: string
+							/**
+							 * I​n​t​e​r​n​a​l​ ​n​i​c​k​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​s​u​r​v​e​y
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​i​n​t​e​r​n​a​l​ ​n​i​c​k​n​a​m​e​ ​t​o​ ​h​e​l​p​ ​i​d​e​n​t​i​f​y​ ​t​h​e​ ​s​u​r​v​e​y
+							 */
+							longDesc: string
+						}
+						language: {
+							/**
+							 * L​a​n​g​u​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​l​a​n​g​u​a​g​e​ ​o​f​ ​t​h​e​ ​s​u​r​v​e​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​a​n​g​u​a​g​e​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​s​u​r​v​e​y​ ​(​e​.​g​.​,​ ​e​n​,​ ​e​s​,​ ​f​r​)​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​e​n​.
+							 */
+							longDesc: string
+						}
+						folder_id: {
+							/**
+							 * F​o​l​d​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​o​l​d​e​r​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​s​u​r​v​e​y​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​f​o​l​d​e​r​ ​w​h​e​r​e​ ​t​h​e​ ​s​u​r​v​e​y​ ​s​h​o​u​l​d​ ​b​e​ ​c​r​e​a​t​e​d
+							 */
+							longDesc: string
+						}
+						from_template_id: {
+							/**
+							 * T​e​m​p​l​a​t​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​e​m​p​l​a​t​e​ ​t​o​ ​c​r​e​a​t​e​ ​s​u​r​v​e​y​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​a​ ​t​e​m​p​l​a​t​e​ ​t​o​ ​u​s​e​ ​a​s​ ​t​h​e​ ​b​a​s​i​s​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​s​u​r​v​e​y
+							 */
+							longDesc: string
+						}
+					}
+				}
+				copy_survey: {
+					groups: {
+						/**
+						 * S​u​r​v​e​y​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * C​o​p​y​ ​S​u​r​v​e​y
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​c​o​p​y​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​s​u​r​v​e​y
+					 */
+					shortDesc: string
+					/**
+					 * C​l​o​n​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​s​u​r​v​e​y​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​s​u​r​v​e​y​ ​w​i​t​h​ ​t​h​e​ ​s​a​m​e​ ​s​t​r​u​c​t​u​r​e​ ​a​n​d​ ​q​u​e​s​t​i​o​n​s
+					 */
+					longDesc: string
+					options: {
+						survey_id: {
+							/**
+							 * S​u​r​v​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​r​v​e​y​ ​t​o​ ​c​o​p​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​u​r​v​e​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​c​o​p​y​ ​o​f
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​s​u​r​v​e​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​d​i​s​p​l​a​y​e​d​ ​f​o​r​ ​t​h​e​ ​c​o​p​i​e​d​ ​s​u​r​v​e​y
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_collector: {
+					groups: {
+						/**
+						 * S​u​r​v​e​y​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * U​p​d​a​t​e​ ​C​o​l​l​e​c​t​o​r
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​c​o​l​l​e​c​t​o​r​ ​s​e​t​t​i​n​g​s
+					 */
+					shortDesc: string
+					/**
+					 * M​o​d​i​f​y​ ​t​h​e​ ​s​e​t​t​i​n​g​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​l​l​e​c​t​o​r​ ​s​u​c​h​ ​a​s​ ​s​t​a​t​u​s​,​ ​c​l​o​s​e​ ​d​a​t​e​,​ ​o​r​ ​r​e​d​i​r​e​c​t​ ​U​R​L
+					 */
+					longDesc: string
+					options: {
+						survey_id: {
+							/**
+							 * S​u​r​v​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​r​v​e​y​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​o​l​l​e​c​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​u​r​v​e​y​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​c​o​l​l​e​c​t​o​r
+							 */
+							longDesc: string
+						}
+						collector_id: {
+							/**
+							 * C​o​l​l​e​c​t​o​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​l​l​e​c​t​o​r​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​l​l​e​c​t​o​r​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​d​i​f​y
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​o​l​l​e​c​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​n​e​w​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​o​l​l​e​c​t​o​r
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​l​l​e​c​t​o​r​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​c​o​l​l​e​c​t​o​r​ ​t​o​ ​o​p​e​n​ ​o​r​ ​c​l​o​s​e​d
+							 */
+							longDesc: string
+						}
+						close_date: {
+							/**
+							 * C​l​o​s​e​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​o​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​c​l​o​s​e​ ​t​h​e​ ​c​o​l​l​e​c​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​c​o​l​l​e​c​t​o​r​ ​s​h​o​u​l​d​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​c​l​o​s​e​ ​(​I​S​O​ ​8​6​0​1​ ​f​o​r​m​a​t​)
+							 */
+							longDesc: string
+						}
+						redirect_url: {
+							/**
+							 * R​e​d​i​r​e​c​t​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * U​R​L​ ​t​o​ ​r​e​d​i​r​e​c​t​ ​r​e​s​p​o​n​d​e​n​t​s​ ​a​f​t​e​r​ ​c​o​m​p​l​e​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​w​h​e​r​e​ ​r​e​s​p​o​n​d​e​n​t​s​ ​w​i​l​l​ ​b​e​ ​r​e​d​i​r​e​c​t​e​d​ ​a​f​t​e​r​ ​c​o​m​p​l​e​t​i​n​g​ ​t​h​e​ ​s​u​r​v​e​y
+							 */
+							longDesc: string
+						}
+						response_limit: {
+							/**
+							 * R​e​s​p​o​n​s​e​ ​L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​p​o​n​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​p​o​n​s​e​s​ ​t​o​ ​a​c​c​e​p​t​ ​b​e​f​o​r​e​ ​c​l​o​s​i​n​g​ ​t​h​e​ ​c​o​l​l​e​c​t​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_collector: {
+					groups: {
+						/**
+						 * S​u​r​v​e​y​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * D​e​l​e​t​e​ ​C​o​l​l​e​c​t​o​r
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​c​o​l​l​e​c​t​o​r​ ​f​r​o​m​ ​a​ ​s​u​r​v​e​y
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​ ​a​ ​c​o​l​l​e​c​t​o​r​ ​f​r​o​m​ ​a​ ​s​u​r​v​e​y​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.
+					 */
+					longDesc: string
+					options: {
+						survey_id: {
+							/**
+							 * S​u​r​v​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​r​v​e​y​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​o​l​l​e​c​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​u​r​v​e​y​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​c​o​l​l​e​c​t​o​r
+							 */
+							longDesc: string
+						}
+						collector_id: {
+							/**
+							 * C​o​l​l​e​c​t​o​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​l​l​e​c​t​o​r​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​l​l​e​c​t​o​r​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​p​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_response_counts: {
+					groups: {
+						/**
+						 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​R​e​s​p​o​n​s​e​ ​C​o​u​n​t​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​t​o​t​a​l​ ​r​e​s​p​o​n​s​e​ ​c​o​u​n​t​ ​f​o​r​ ​a​ ​s​u​r​v​e​y
+					 */
+					shortDesc: string
+					/**
+					 * Q​u​i​c​k​l​y​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​t​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​p​o​n​s​e​s​ ​f​o​r​ ​a​ ​s​u​r​v​e​y​ ​w​i​t​h​o​u​t​ ​f​e​t​c​h​i​n​g​ ​a​l​l​ ​r​e​s​p​o​n​s​e​ ​d​a​t​a
+					 */
+					longDesc: string
+					options: {
+						survey_id: {
+							/**
+							 * S​u​r​v​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​r​v​e​y​ ​t​o​ ​g​e​t​ ​c​o​u​n​t​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​u​r​v​e​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​r​e​s​p​o​n​s​e​ ​c​o​u​n​t​s​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_contact: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * U​p​d​a​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * M​o​d​i​f​y​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​ ​i​n​ ​S​u​r​v​e​y​M​o​n​k​e​y
+					 */
+					longDesc: string
+					options: {
+						contact_id: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						first_name: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​f​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​f​i​r​s​t​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						last_name: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​l​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​l​a​s​t​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						phone_number: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_contact: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * D​e​l​e​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​ ​a​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​S​u​r​v​e​y​M​o​n​k​e​y​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.
+					 */
+					longDesc: string
+					options: {
+						contact_id: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_contact_lists: {
+					groups: {
+						/**
+						 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​C​o​n​t​a​c​t​ ​L​i​s​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​c​o​n​t​a​c​t​ ​l​i​s​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​c​o​n​t​a​c​t​ ​l​i​s​t​s​ ​i​n​ ​y​o​u​r​ ​S​u​r​v​e​y​M​o​n​k​e​y​ ​a​c​c​o​u​n​t
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​l​i​s​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​t​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​ ​l​i​s​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​(​d​e​f​a​u​l​t​:​ ​5​0​0​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_contact_list: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * C​r​e​a​t​e​ ​C​o​n​t​a​c​t​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​f​o​r​ ​o​r​g​a​n​i​z​i​n​g​ ​c​o​n​t​a​c​t​s​ ​i​n​ ​S​u​r​v​e​y​M​o​n​k​e​y
+					 */
+					longDesc: string
+					options: {
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_contacts_to_list: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * A​d​d​ ​C​o​n​t​a​c​t​s​ ​t​o​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​a​ ​c​o​n​t​a​c​t​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​a​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​i​n​ ​b​u​l​k
+					 */
+					longDesc: string
+					options: {
+						contact_list_id: {
+							/**
+							 * C​o​n​t​a​c​t​ ​L​i​s​t​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​t​o​ ​a​d​d​ ​c​o​n​t​a​c​t​s​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​ ​w​h​e​r​e​ ​c​o​n​t​a​c​t​s​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d
+							 */
+							longDesc: string
+						}
+						contact_ids: {
+							/**
+							 * C​o​n​t​a​c​t​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​ ​I​D​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_survey_rollup: {
+					groups: {
+						/**
+						 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​S​u​r​v​e​y​ ​R​o​l​l​u​p
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​g​g​r​e​g​a​t​e​d​ ​s​u​r​v​e​y​ ​s​t​a​t​i​s​t​i​c​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​g​g​r​e​g​a​t​e​d​ ​r​e​s​p​o​n​s​e​ ​s​t​a​t​i​s​t​i​c​s​ ​f​o​r​ ​a​ ​s​u​r​v​e​y​ ​i​n​c​l​u​d​i​n​g​ ​q​u​e​s​t​i​o​n​-​l​e​v​e​l​ ​s​u​m​m​a​r​i​e​s
+					 */
+					longDesc: string
+					options: {
+						survey_id: {
+							/**
+							 * S​u​r​v​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​r​v​e​y​ ​t​o​ ​g​e​t​ ​s​t​a​t​i​s​t​i​c​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​u​r​v​e​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​a​g​g​r​e​g​a​t​e​d​ ​s​t​a​t​i​s​t​i​c​s​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_user_details: {
+					groups: {
+						/**
+						 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​U​s​e​r​ ​D​e​t​a​i​l​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​u​s​e​r​ ​i​n​f​o​r​m​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​S​u​r​v​e​y​M​o​n​k​e​y​ ​u​s​e​r​ ​i​n​c​l​u​d​i​n​g​ ​a​c​c​o​u​n​t​ ​t​y​p​e​ ​a​n​d​ ​p​e​r​m​i​s​s​i​o​n​s
+					 */
+					longDesc: string
+					options: {
+					}
+				}
+				list_survey_folders: {
+					groups: {
+						/**
+						 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​S​u​r​v​e​y​ ​F​o​l​d​e​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​l​l​ ​s​u​r​v​e​y​ ​f​o​l​d​e​r​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​s​u​r​v​e​y​ ​f​o​l​d​e​r​s​ ​i​n​ ​y​o​u​r​ ​S​u​r​v​e​y​M​o​n​k​e​y​ ​a​c​c​o​u​n​t
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​f​o​l​d​e​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​t​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​s​u​r​v​e​y​ ​f​o​l​d​e​r​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​(​d​e​f​a​u​l​t​:​ ​5​0​0​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_survey_folder: {
+					groups: {
+						/**
+						 * S​u​r​v​e​y​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * C​r​e​a​t​e​ ​S​u​r​v​e​y​ ​F​o​l​d​e​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​s​u​r​v​e​y​ ​f​o​l​d​e​r
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​f​o​l​d​e​r​ ​t​o​ ​o​r​g​a​n​i​z​e​ ​y​o​u​r​ ​s​u​r​v​e​y​s​ ​i​n​ ​S​u​r​v​e​y​M​o​n​k​e​y
+					 */
+					longDesc: string
+					options: {
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​f​o​l​d​e​r
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​s​u​r​v​e​y​ ​f​o​l​d​e​r
 							 */
 							longDesc: string
 						}
@@ -222757,6 +223575,96 @@ export type TranslationFunctions = {
 						}
 					}
 				}
+				response_disqualified: {
+					/**
+					 * Response Disqualified
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a respondent is disqualified from a survey
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a respondent is screened out or disqualified from a survey based on their answers to qualifying questions.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						survey_id: {
+							/**
+							 * Survey
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The survey to monitor for disqualified responses
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific survey that you want to monitor for disqualified responses
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				response_updated: {
+					/**
+					 * Response Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a survey response is updated
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when an existing survey response is modified or updated. Useful for tracking partial responses or response edits.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						survey_id: {
+							/**
+							 * Survey
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The survey to monitor for updated responses
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific survey that you want to monitor for updated responses
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				collector_updated: {
+					/**
+					 * Collector Updated
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a collector is updated
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a collector (distribution method) for a survey is modified, such as status changes or configuration updates.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						survey_id: {
+							/**
+							 * Survey
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The survey to monitor for collector updates
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific survey that you want to monitor for collector changes
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 			}
 			actions: {
 				create_contact: {
@@ -223338,6 +224246,734 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * A list of email addresses to send the survey invitation to
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_survey: {
+					groups: {
+						/**
+						 * Survey Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Create Survey
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new survey
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new survey in SurveyMonkey from scratch or from a template
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The title of the survey
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The title that will be displayed for the survey
+							 */
+							longDesc: () => LocalizedString
+						}
+						nickname: {
+							/**
+							 * Nickname
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Internal nickname for the survey
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional internal nickname to help identify the survey
+							 */
+							longDesc: () => LocalizedString
+						}
+						language: {
+							/**
+							 * Language
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The language of the survey
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The language code for the survey (e.g., en, es, fr). Defaults to en.
+							 */
+							longDesc: () => LocalizedString
+						}
+						folder_id: {
+							/**
+							 * Folder ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The folder to create the survey in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the folder where the survey should be created
+							 */
+							longDesc: () => LocalizedString
+						}
+						from_template_id: {
+							/**
+							 * Template ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Template to create survey from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of a template to use as the basis for the new survey
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				copy_survey: {
+					groups: {
+						/**
+						 * Survey Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Copy Survey
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a copy of an existing survey
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Clone an existing survey to create a new survey with the same structure and questions
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						survey_id: {
+							/**
+							 * Survey
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The survey to copy
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the survey you want to create a copy of
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The title for the new survey
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The title that will be displayed for the copied survey
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_collector: {
+					groups: {
+						/**
+						 * Survey Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Update Collector
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update collector settings
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Modify the settings of an existing collector such as status, close date, or redirect URL
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						survey_id: {
+							/**
+							 * Survey
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The survey containing the collector
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the survey that contains the collector
+							 */
+							longDesc: () => LocalizedString
+						}
+						collector_id: {
+							/**
+							 * Collector
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The collector to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the collector you want to modify
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New name for the collector
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A new descriptive name for the collector
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The collector status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the collector to open or closed
+							 */
+							longDesc: () => LocalizedString
+						}
+						close_date: {
+							/**
+							 * Close Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When to automatically close the collector
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date and time when the collector should automatically close (ISO 8601 format)
+							 */
+							longDesc: () => LocalizedString
+						}
+						redirect_url: {
+							/**
+							 * Redirect URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * URL to redirect respondents after completion
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The URL where respondents will be redirected after completing the survey
+							 */
+							longDesc: () => LocalizedString
+						}
+						response_limit: {
+							/**
+							 * Response Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of responses
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of responses to accept before closing the collector
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_collector: {
+					groups: {
+						/**
+						 * Survey Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Delete Collector
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a collector from a survey
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently remove a collector from a survey. This action cannot be undone.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						survey_id: {
+							/**
+							 * Survey
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The survey containing the collector
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the survey that contains the collector
+							 */
+							longDesc: () => LocalizedString
+						}
+						collector_id: {
+							/**
+							 * Collector
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The collector to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the collector you want to permanently delete
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_response_counts: {
+					groups: {
+						/**
+						 * Data Retrieval
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get Response Counts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get total response count for a survey
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Quickly retrieve the total number of responses for a survey without fetching all response data
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						survey_id: {
+							/**
+							 * Survey
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The survey to get counts for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the survey you want to get response counts for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_contact: {
+					groups: {
+						/**
+						 * Contact Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Update Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Modify the details of an existing contact in SurveyMonkey
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contact_id: {
+							/**
+							 * Contact ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the contact to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the contact you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						first_name: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's first name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new first name for the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						last_name: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new last name for the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new email address for the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone_number: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new phone number for the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_contact: {
+					groups: {
+						/**
+						 * Contact Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Delete Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently remove a contact from SurveyMonkey. This action cannot be undone.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contact_id: {
+							/**
+							 * Contact ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the contact to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the contact you want to delete
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_contact_lists: {
+					groups: {
+						/**
+						 * Data Retrieval
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Contact Lists
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve all contact lists
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all contact lists in your SurveyMonkey account
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of lists to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum total number of contact lists to retrieve (default: 500)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_contact_list: {
+					groups: {
+						/**
+						 * Contact Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Create Contact List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new contact list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new contact list for organizing contacts in SurveyMonkey
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the contact list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A descriptive name for the new contact list
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_contacts_to_list: {
+					groups: {
+						/**
+						 * Contact Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Add Contacts to List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add contacts to a contact list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Add one or more existing contacts to a contact list in bulk
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contact_list_id: {
+							/**
+							 * Contact List ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact list to add contacts to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the contact list where contacts will be added
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact_ids: {
+							/**
+							 * Contact IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contacts to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of contact IDs to add to the contact list
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_survey_rollup: {
+					groups: {
+						/**
+						 * Data Retrieval
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get Survey Rollup
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get aggregated survey statistics
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve aggregated response statistics for a survey including question-level summaries
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						survey_id: {
+							/**
+							 * Survey
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The survey to get statistics for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the survey you want to get aggregated statistics for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_user_details: {
+					groups: {
+						/**
+						 * Data Retrieval
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get User Details
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get authenticated user information
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve details about the authenticated SurveyMonkey user including account type and permissions
+					 */
+					longDesc: () => LocalizedString
+					options: {
+					}
+				}
+				list_survey_folders: {
+					groups: {
+						/**
+						 * Data Retrieval
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Survey Folders
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve all survey folders
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of all survey folders in your SurveyMonkey account
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of folders to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum total number of survey folders to retrieve (default: 500)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_survey_folder: {
+					groups: {
+						/**
+						 * Survey Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Create Survey Folder
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new survey folder
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new folder to organize your surveys in SurveyMonkey
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The title of the folder
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A descriptive title for the new survey folder
 							 */
 							longDesc: () => LocalizedString
 						}

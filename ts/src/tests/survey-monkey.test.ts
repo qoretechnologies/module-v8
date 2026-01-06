@@ -10,10 +10,25 @@ import {
   list_responses,
   list_surveys,
   send_survey,
+  update_collector,
+  delete_collector,
+  get_response_counts,
+  update_contact,
+  delete_contact,
+  list_contact_lists,
+  add_contacts_to_list,
+  get_survey_rollup,
+  get_user_details,
+  list_survey_folders,
 } from '../apps/survey-monkey/actions';
 import { getSurveyMonkeyCollectorAllowedValues } from '../apps/survey-monkey/helpers/get-collector-allowed-values';
 import { getSurveyMonkeySurveyAllowedValues } from '../apps/survey-monkey/helpers/get-survey-allowed-values';
-import { new_response } from '../apps/survey-monkey/triggers';
+import {
+  new_response,
+  response_disqualified,
+  response_updated,
+  collector_updated,
+} from '../apps/survey-monkey/triggers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import { checkAllowedValues } from './utils';
 
@@ -41,6 +56,42 @@ describe('SurveyMonkey Integration Tests', () => {
   beforeAll(async () => {
     if (!token) {
       throw new Error('SURVEYMONKEY_TOKEN is not set in environment variables');
+    }
+  });
+
+  afterAll(async () => {
+    // Cleanup created resources to avoid test pollution
+    if (sharedTestValues.createdContactId) {
+      try {
+        if ('api_function' in delete_contact) {
+          await delete_contact.api_function(
+            { contact_id: sharedTestValues.createdContactId },
+            undefined,
+            baseContext
+          );
+          console.log(`Cleaned up contact: ${sharedTestValues.createdContactId}`);
+        }
+      } catch (error: any) {
+        console.warn(`Failed to cleanup contact ${sharedTestValues.createdContactId}: ${error.message}`);
+      }
+    }
+
+    if (sharedTestValues.createdCollectorId && sharedTestValues.surveyId) {
+      try {
+        if ('api_function' in delete_collector) {
+          await delete_collector.api_function(
+            {
+              survey_id: sharedTestValues.surveyId,
+              collector_id: sharedTestValues.createdCollectorId,
+            },
+            undefined,
+            baseContext
+          );
+          console.log(`Cleaned up collector: ${sharedTestValues.createdCollectorId}`);
+        }
+      } catch (error: any) {
+        console.warn(`Failed to cleanup collector ${sharedTestValues.createdCollectorId}: ${error.message}`);
+      }
     }
   });
 
@@ -199,7 +250,7 @@ describe('SurveyMonkey Integration Tests', () => {
       }
     });
 
-    it.skip('Should create a collector', async () => {
+    it('Should create a collector', async () => {
       if (!sharedTestValues.surveyId) {
         console.log('No survey found, skipping create collector test');
         return;
@@ -394,6 +445,241 @@ describe('SurveyMonkey Integration Tests', () => {
         expect(result.object_id).toBe(sharedTestValues.surveyId);
         expect(result.resources).toBeDefined();
         expect(result.resources.survey_id).toBe(sharedTestValues.surveyId);
+      }
+    });
+  });
+
+  // New action tests
+  describe('Should test new Survey Management actions', () => {
+    it('Should get response counts', async () => {
+      if (!sharedTestValues.surveyId) {
+        console.log('No survey found, skipping get response counts test');
+        return;
+      }
+
+      const action = get_response_counts;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      const result = await action.api_function(
+        {
+          survey_id: sharedTestValues.surveyId,
+        },
+        undefined,
+        baseContext
+      );
+
+      expect(result).toBeDefined();
+      expect(result.survey_id).toBe(sharedTestValues.surveyId);
+      expect(typeof result.total_responses).toBe('number');
+    });
+
+    it('Should get survey rollup', async () => {
+      if (!sharedTestValues.surveyId) {
+        console.log('No survey found, skipping get survey rollup test');
+        return;
+      }
+
+      const action = get_survey_rollup;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      const result = await action.api_function(
+        {
+          survey_id: sharedTestValues.surveyId,
+        },
+        undefined,
+        baseContext
+      );
+
+      expect(result).toBeDefined();
+      expect(result.survey_id).toBe(sharedTestValues.surveyId);
+    });
+  });
+
+  describe('Should test Collector Management actions', () => {
+    it('Should update a collector', async () => {
+      const collectorIdToUpdate = sharedTestValues.createdCollectorId || sharedTestValues.collectorId;
+
+      if (!sharedTestValues.surveyId || !collectorIdToUpdate) {
+        console.log('No survey or collector found, skipping update collector test');
+        return;
+      }
+
+      const action = update_collector;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      const result = await action.api_function(
+        {
+          survey_id: sharedTestValues.surveyId,
+          collector_id: collectorIdToUpdate,
+          name: `Updated Collector ${Date.now()}`,
+        },
+        undefined,
+        baseContext
+      );
+
+      expect(result).toBeDefined();
+      expect(result.id).toBe(collectorIdToUpdate);
+    });
+  });
+
+  describe('Should test Contact Management actions', () => {
+    it('Should update a contact', async () => {
+      if (!sharedTestValues.createdContactId) {
+        console.log('No created contact found, skipping update contact test');
+        return;
+      }
+
+      const action = update_contact;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      const result = await action.api_function(
+        {
+          contact_id: sharedTestValues.createdContactId,
+          first_name: 'Updated',
+          last_name: 'Contact',
+        },
+        undefined,
+        baseContext
+      );
+
+      expect(result).toBeDefined();
+      expect(result.id).toBe(sharedTestValues.createdContactId);
+      expect(result.first_name).toBe('Updated');
+    });
+  });
+
+  describe('Should test Contact List actions', () => {
+    it('Should list contact lists', async () => {
+      const action = list_contact_lists;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      const result = await action.api_function(
+        {
+          limit: 10,
+        },
+        undefined,
+        baseContext
+      );
+
+      expect(result).toBeDefined();
+      expect(Array.isArray(result)).toBe(true);
+    });
+
+    it('Should have add_contacts_to_list action with api_function', async () => {
+      const action = add_contacts_to_list;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      expect(action.api_function).toBeDefined();
+    });
+  });
+
+  describe('Should test User and Organization actions', () => {
+    it('Should get user details', async () => {
+      const action = get_user_details;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      const result = await action.api_function({}, undefined, baseContext);
+
+      expect(result).toBeDefined();
+      expect(result.id).toBeDefined();
+      expect(result.email).toBeDefined();
+    });
+
+    it('Should list survey folders', async () => {
+      const action = list_survey_folders;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      const result = await action.api_function(
+        {
+          limit: 10,
+        },
+        undefined,
+        baseContext
+      );
+
+      expect(result).toBeDefined();
+      expect(Array.isArray(result)).toBe(true);
+    });
+  });
+
+  describe('Should test new triggers', () => {
+    it('Should have response_disqualified trigger with required functions', async () => {
+      const trigger = response_disqualified;
+
+      expect('webhook_register' in trigger).toBe(true);
+      expect('webhook_deregister' in trigger).toBe(true);
+      expect('get_example_event_data' in trigger).toBe(true);
+    });
+
+    it('Should have response_updated trigger with required functions', async () => {
+      const trigger = response_updated;
+
+      expect('webhook_register' in trigger).toBe(true);
+      expect('webhook_deregister' in trigger).toBe(true);
+      expect('get_example_event_data' in trigger).toBe(true);
+    });
+
+    it('Should have collector_updated trigger with required functions', async () => {
+      const trigger = collector_updated;
+
+      expect('webhook_register' in trigger).toBe(true);
+      expect('webhook_deregister' in trigger).toBe(true);
+      expect('get_example_event_data' in trigger).toBe(true);
+    });
+
+    it('Should get example event data for response_updated trigger', async () => {
+      if (!sharedTestValues.surveyId) {
+        console.log('No survey found, skipping example event data test');
+        return;
+      }
+
+      const trigger = response_updated;
+
+      if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
+        throw new Error('get_example_event_data not found in trigger');
+
+      const result = await trigger.get_example_event_data({
+        ...baseContext,
+        opts: { survey_id: sharedTestValues.surveyId },
+      });
+
+      // Result can be null if no responses exist
+      if (result) {
+        expect(result.event_type).toBe('response_updated');
+        expect(result.object_type).toBe('survey');
+        expect(result.object_id).toBe(sharedTestValues.surveyId);
+      }
+    });
+
+    it('Should get example event data for collector_updated trigger', async () => {
+      if (!sharedTestValues.surveyId) {
+        console.log('No survey found, skipping example event data test');
+        return;
+      }
+
+      const trigger = collector_updated;
+
+      if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
+        throw new Error('get_example_event_data not found in trigger');
+
+      const result = await trigger.get_example_event_data({
+        ...baseContext,
+        opts: { survey_id: sharedTestValues.surveyId },
+      });
+
+      // Result can be null if no collectors exist
+      if (result) {
+        expect(result.event_type).toBe('collector_updated');
+        expect(result.object_type).toBe('survey');
+        expect(result.object_id).toBe(sharedTestValues.surveyId);
       }
     });
   });

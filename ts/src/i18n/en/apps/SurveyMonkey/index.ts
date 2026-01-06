@@ -37,6 +37,45 @@ const SurveyMonkeyAppEn = {
         },
       },
     },
+    response_disqualified: {
+      displayName: 'Response Disqualified',
+      shortDesc: 'Triggers when a respondent is disqualified from a survey',
+      longDesc:
+        'This trigger fires when a respondent is screened out or disqualified from a survey based on their answers to qualifying questions.',
+      options: {
+        survey_id: {
+          displayName: 'Survey',
+          shortDesc: 'The survey to monitor for disqualified responses',
+          longDesc: 'Select the specific survey that you want to monitor for disqualified responses',
+        },
+      },
+    },
+    response_updated: {
+      displayName: 'Response Updated',
+      shortDesc: 'Triggers when a survey response is updated',
+      longDesc:
+        'This trigger fires when an existing survey response is modified or updated. Useful for tracking partial responses or response edits.',
+      options: {
+        survey_id: {
+          displayName: 'Survey',
+          shortDesc: 'The survey to monitor for updated responses',
+          longDesc: 'Select the specific survey that you want to monitor for updated responses',
+        },
+      },
+    },
+    collector_updated: {
+      displayName: 'Collector Updated',
+      shortDesc: 'Triggers when a collector is updated',
+      longDesc:
+        'This trigger fires when a collector (distribution method) for a survey is modified, such as status changes or configuration updates.',
+      options: {
+        survey_id: {
+          displayName: 'Survey',
+          shortDesc: 'The survey to monitor for collector updates',
+          longDesc: 'Select the specific survey that you want to monitor for collector changes',
+        },
+      },
+    },
   },
   actions: {
     create_contact: {
@@ -249,6 +288,267 @@ const SurveyMonkeyAppEn = {
           displayName: 'Recipient Emails',
           shortDesc: 'List of recipient email addresses',
           longDesc: 'A list of email addresses to send the survey invitation to',
+        },
+      },
+    },
+    create_survey: {
+      groups: ['Survey Management'],
+      displayName: 'Create Survey',
+      shortDesc: 'Create a new survey',
+      longDesc: 'Create a new survey in SurveyMonkey from scratch or from a template',
+      options: {
+        title: {
+          displayName: 'Title',
+          shortDesc: 'The title of the survey',
+          longDesc: 'The title that will be displayed for the survey',
+        },
+        nickname: {
+          displayName: 'Nickname',
+          shortDesc: 'Internal nickname for the survey',
+          longDesc: 'An optional internal nickname to help identify the survey',
+        },
+        language: {
+          displayName: 'Language',
+          shortDesc: 'The language of the survey',
+          longDesc: 'The language code for the survey (e.g., en, es, fr). Defaults to en.',
+        },
+        folder_id: {
+          displayName: 'Folder ID',
+          shortDesc: 'The folder to create the survey in',
+          longDesc: 'The ID of the folder where the survey should be created',
+        },
+        from_template_id: {
+          displayName: 'Template ID',
+          shortDesc: 'Template to create survey from',
+          longDesc: 'The ID of a template to use as the basis for the new survey',
+        },
+      },
+    },
+    copy_survey: {
+      groups: ['Survey Management'],
+      displayName: 'Copy Survey',
+      shortDesc: 'Create a copy of an existing survey',
+      longDesc: 'Clone an existing survey to create a new survey with the same structure and questions',
+      options: {
+        survey_id: {
+          displayName: 'Survey',
+          shortDesc: 'The survey to copy',
+          longDesc: 'Select the survey you want to create a copy of',
+        },
+        title: {
+          displayName: 'Title',
+          shortDesc: 'The title for the new survey',
+          longDesc: 'The title that will be displayed for the copied survey',
+        },
+      },
+    },
+    update_collector: {
+      groups: ['Survey Management'],
+      displayName: 'Update Collector',
+      shortDesc: 'Update collector settings',
+      longDesc: 'Modify the settings of an existing collector such as status, close date, or redirect URL',
+      options: {
+        survey_id: {
+          displayName: 'Survey',
+          shortDesc: 'The survey containing the collector',
+          longDesc: 'Select the survey that contains the collector',
+        },
+        collector_id: {
+          displayName: 'Collector',
+          shortDesc: 'The collector to update',
+          longDesc: 'Select the collector you want to modify',
+        },
+        name: {
+          displayName: 'Name',
+          shortDesc: 'New name for the collector',
+          longDesc: 'A new descriptive name for the collector',
+        },
+        status: {
+          displayName: 'Status',
+          shortDesc: 'The collector status',
+          longDesc: 'Set the collector to open or closed',
+        },
+        close_date: {
+          displayName: 'Close Date',
+          shortDesc: 'When to automatically close the collector',
+          longDesc: 'The date and time when the collector should automatically close (ISO 8601 format)',
+        },
+        redirect_url: {
+          displayName: 'Redirect URL',
+          shortDesc: 'URL to redirect respondents after completion',
+          longDesc: 'The URL where respondents will be redirected after completing the survey',
+        },
+        response_limit: {
+          displayName: 'Response Limit',
+          shortDesc: 'Maximum number of responses',
+          longDesc: 'The maximum number of responses to accept before closing the collector',
+        },
+      },
+    },
+    delete_collector: {
+      groups: ['Survey Management'],
+      displayName: 'Delete Collector',
+      shortDesc: 'Delete a collector from a survey',
+      longDesc: 'Permanently remove a collector from a survey. This action cannot be undone.',
+      options: {
+        survey_id: {
+          displayName: 'Survey',
+          shortDesc: 'The survey containing the collector',
+          longDesc: 'Select the survey that contains the collector',
+        },
+        collector_id: {
+          displayName: 'Collector',
+          shortDesc: 'The collector to delete',
+          longDesc: 'Select the collector you want to permanently delete',
+        },
+      },
+    },
+    get_response_counts: {
+      groups: ['Data Retrieval'],
+      displayName: 'Get Response Counts',
+      shortDesc: 'Get total response count for a survey',
+      longDesc: 'Quickly retrieve the total number of responses for a survey without fetching all response data',
+      options: {
+        survey_id: {
+          displayName: 'Survey',
+          shortDesc: 'The survey to get counts for',
+          longDesc: 'Select the survey you want to get response counts for',
+        },
+      },
+    },
+    update_contact: {
+      groups: ['Contact Management'],
+      displayName: 'Update Contact',
+      shortDesc: 'Update an existing contact',
+      longDesc: 'Modify the details of an existing contact in SurveyMonkey',
+      options: {
+        contact_id: {
+          displayName: 'Contact ID',
+          shortDesc: 'The ID of the contact to update',
+          longDesc: 'The unique identifier of the contact you want to update',
+        },
+        first_name: {
+          displayName: 'First Name',
+          shortDesc: "The contact's first name",
+          longDesc: 'The new first name for the contact',
+        },
+        last_name: {
+          displayName: 'Last Name',
+          shortDesc: "The contact's last name",
+          longDesc: 'The new last name for the contact',
+        },
+        email: {
+          displayName: 'Email',
+          shortDesc: "The contact's email address",
+          longDesc: 'The new email address for the contact',
+        },
+        phone_number: {
+          displayName: 'Phone Number',
+          shortDesc: "The contact's phone number",
+          longDesc: 'The new phone number for the contact',
+        },
+      },
+    },
+    delete_contact: {
+      groups: ['Contact Management'],
+      displayName: 'Delete Contact',
+      shortDesc: 'Delete a contact',
+      longDesc: 'Permanently remove a contact from SurveyMonkey. This action cannot be undone.',
+      options: {
+        contact_id: {
+          displayName: 'Contact ID',
+          shortDesc: 'The ID of the contact to delete',
+          longDesc: 'The unique identifier of the contact you want to delete',
+        },
+      },
+    },
+    list_contact_lists: {
+      groups: ['Data Retrieval'],
+      displayName: 'List Contact Lists',
+      shortDesc: 'Retrieve all contact lists',
+      longDesc: 'Retrieve a list of all contact lists in your SurveyMonkey account',
+      options: {
+        limit: {
+          displayName: 'Limit',
+          shortDesc: 'Maximum number of lists to return',
+          longDesc: 'The maximum total number of contact lists to retrieve (default: 500)',
+        },
+      },
+    },
+    create_contact_list: {
+      groups: ['Contact Management'],
+      displayName: 'Create Contact List',
+      shortDesc: 'Create a new contact list',
+      longDesc: 'Create a new contact list for organizing contacts in SurveyMonkey',
+      options: {
+        name: {
+          displayName: 'Name',
+          shortDesc: 'The name of the contact list',
+          longDesc: 'A descriptive name for the new contact list',
+        },
+      },
+    },
+    add_contacts_to_list: {
+      groups: ['Contact Management'],
+      displayName: 'Add Contacts to List',
+      shortDesc: 'Add contacts to a contact list',
+      longDesc: 'Add one or more existing contacts to a contact list in bulk',
+      options: {
+        contact_list_id: {
+          displayName: 'Contact List ID',
+          shortDesc: 'The contact list to add contacts to',
+          longDesc: 'The ID of the contact list where contacts will be added',
+        },
+        contact_ids: {
+          displayName: 'Contact IDs',
+          shortDesc: 'The contacts to add',
+          longDesc: 'A list of contact IDs to add to the contact list',
+        },
+      },
+    },
+    get_survey_rollup: {
+      groups: ['Data Retrieval'],
+      displayName: 'Get Survey Rollup',
+      shortDesc: 'Get aggregated survey statistics',
+      longDesc: 'Retrieve aggregated response statistics for a survey including question-level summaries',
+      options: {
+        survey_id: {
+          displayName: 'Survey',
+          shortDesc: 'The survey to get statistics for',
+          longDesc: 'Select the survey you want to get aggregated statistics for',
+        },
+      },
+    },
+    get_user_details: {
+      groups: ['Data Retrieval'],
+      displayName: 'Get User Details',
+      shortDesc: 'Get authenticated user information',
+      longDesc: 'Retrieve details about the authenticated SurveyMonkey user including account type and permissions',
+      options: {},
+    },
+    list_survey_folders: {
+      groups: ['Data Retrieval'],
+      displayName: 'List Survey Folders',
+      shortDesc: 'Retrieve all survey folders',
+      longDesc: 'Retrieve a list of all survey folders in your SurveyMonkey account',
+      options: {
+        limit: {
+          displayName: 'Limit',
+          shortDesc: 'Maximum number of folders to return',
+          longDesc: 'The maximum total number of survey folders to retrieve (default: 500)',
+        },
+      },
+    },
+    create_survey_folder: {
+      groups: ['Survey Management'],
+      displayName: 'Create Survey Folder',
+      shortDesc: 'Create a new survey folder',
+      longDesc: 'Create a new folder to organize your surveys in SurveyMonkey',
+      options: {
+        title: {
+          displayName: 'Title',
+          shortDesc: 'The title of the folder',
+          longDesc: 'A descriptive title for the new survey folder',
         },
       },
     },
