@@ -474,26 +474,4 @@ describe('QoreApiClient', () => {
     const client = new NestedItemsClient();
     expect(client).toBeDefined();
   });
-
-  it('Should make an actual request and fail with 403', async () => {
-    class SimpleClient extends QoreApiClient {
-      constructor() {
-        super({
-          baseUrl: 'https://qoretechnologies59848.activehosted.com',
-          appName: 'SimpleTest',
-        });
-      }
-    }
-
-    const client = new SimpleClient();
-
-    try {
-      const response = await client.get('api/3/tags');
-
-      console.dir({ response }, { depth: null });
-    } catch (error) {
-      console.dir({ error }, { depth: null });
-      throw error;
-    }
-  });
 });

@@ -345,7 +345,7 @@ describe('SurveyMonkey Integration Tests', () => {
         expect(regInfo?.id).toBeDefined();
       } catch (error: any) {
         // SurveyMonkey validates URL reachability - skip if URL is not reachable
-        if (error.message?.includes('Unable to connect to to subscription url')) {
+        if (error.message?.includes('Unable to connect to subscription url')) {
           console.log(
             'SurveyMonkey requires a reachable webhook URL. Set SURVEYMONKEY_WEBHOOK_URL to a real endpoint.'
           );
