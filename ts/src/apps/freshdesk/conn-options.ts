@@ -16,7 +16,7 @@ export const FRESHDESK_CONN_OPTIONS = {
     desc:
       `To get your API key:\n\n` +
       `- Go to your Freshdesk account\n\n` +
-      `- On top right corder press on your profile icon\n\n` +
+      `- On top right corner press on your profile icon\n\n` +
       `- Go to Profile settings\n\n` +
       `- Press View Api Key\n\n` +
       `- Copy your API key`,
