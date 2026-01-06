@@ -4,7 +4,7 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
-import { ESIGNATURE_CONN_OPTIONS } from '../constants';
+import { ESIGNATURE_CONN_OPTIONS } from '../conn-options';
 
 export const getEsignatureRecipientIdAllowedValues: TQoreGetAllowedValuesFunction<
   typeof ESIGNATURE_CONN_OPTIONS,

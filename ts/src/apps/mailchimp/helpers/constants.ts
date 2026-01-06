@@ -1,6 +1,6 @@
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { get } from 'lodash';
-import { MailchimpError } from '../constants';
+import { MailchimpError } from '../error';
 
 interface IFetchMailchimpDataOptions {
   token: string;

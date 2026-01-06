@@ -4,11 +4,10 @@ import {
   GitHubPullRequestRecordType,
   GitHubReleaseRecordType,
   GitHubRepositoryRecordType,
+  type TGitHubTable,
 } from './get-record-type';
 
-export const GitHubTables = ['issues', 'pulls', 'releases', 'repositories'] as const;
-
-export type TGitHubTable = (typeof GitHubTables)[number];
+export { GitHubTables, type TGitHubTable } from './get-record-type';
 
 export const needsRepoAndOwner = (tableName: string): boolean => {
   return ['issues', 'pulls', 'releases'].includes(tableName);

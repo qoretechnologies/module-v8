@@ -3,7 +3,7 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { MailchimpError } from '../constants';
+import { MailchimpError } from '../error';
 import { fetchMailchimpData } from './constants';
 
 type TMailchimpMember = {

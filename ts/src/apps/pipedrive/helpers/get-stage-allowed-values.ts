@@ -4,7 +4,7 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { PipedriveError } from '../constants';
+import { PipedriveError } from '../base-constants';
 import { fetchPipedriveAllowedValues } from './client';
 
 type TPipedriveStageData = {

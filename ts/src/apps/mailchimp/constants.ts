@@ -1,4 +1,4 @@
-import { TAllowedPaths, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
+import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
 import { omit } from 'lodash';
 import { OpenAPIV2 } from 'openapi-types';
 import { buildActionsFromSwaggerSchema } from '../../global/helpers';
@@ -25,24 +25,9 @@ export const MAILCHIMP_APP_NAME = 'Mailchimp';
 export const MAILCHIMP_APP_LOGO =
   'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKYXJpYS1sYWJlbD0iTWFpbGNoaW1wIiByb2xlPSJpbWciCnZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdApyeD0iMTUlIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIKZmlsbD0iI2ZkMiIvPjxwYXRoIGZpbGw9IiMyMjIiIGQ9Ik00MTggMzA2bC02LTE3czI1LTM4LTM3LTUxYzAgMCA0LTQ3LTE4LTY5IDQ4LTQ3IDM3LTExOC03Mi03Mi01Ni0xMDctMjcyIDE0NC0xODIgMTg0LTkgMTItOSA3MiA1MyA3OCA0MiA5MCAxNDQgOTYgMjAzIDY5czkzLTExMyA1OS0xMjJ6bS0yNjMgNDBjLTUxLTUtNTYtNzUtMTItODJzNTUgODYgMTIgODJ6bS0xNS05NWMtMTQgMC0zMSAxOS0zMSAxOS02OC0zMyAxMjMtMjUyIDE2NC0xNjcgMCAwLTEwMCA0OC0xMzMgMTQ4em0yMDAgODVjMC00LTIxIDYtNTktNyAzLTIxIDQ4IDE4IDEyMy0zM2w2IDIxYzI4LTUgMCA5MC05MCA4OS03My0xLTk2LTc2LTU2LTExNyA4LTgtMjktMjQtMjItNTkgMy0xNSAxNi0zNyA0OS0zMXM0MC0yNCA2Mi0xMyA5IDUzIDEyIDU5IDM1IDcgNDEgMjQtNDEgNTQtMTE0IDQ0Yy0xNy0yLTI3IDIwLTE2IDM0IDIyIDMyIDExMiAxMSAxMjctMjAtMzggMjktMTE2IDQwLTEyMiA5IDIyIDEwIDU5IDQgNTkgMHptLTEzMS0xNThjMjItMjcgNTEtNDMgNTEtNDNsLTYgMTVzMjEtMTYgNDQtMTZsLTggOGMyNiAxIDM3IDExIDM3IDExcy02MS0xOC0xMTggMjV6bTEzNSAzOWMxMy0xIDkgMjkgOSAyOWgtOHMtMTQtMjgtMS0yOXptLTU5IDMzYy05IDEtMTkgNi0xOCAyIDQtMTYgNDEtMTIgNDAgMnMtOS02LTIyLTR6bTIxIDEyYzEgMi03IDAtMTMgMXMtMTIgNC0xMiAyIDIzLTExIDI1LTN6bTIwIDNjMy02IDE1IDAgMTIgNnMtMTUgMC0xMi02em0yNSAyYy02IDAtNi0xMyAwLTEzczYgMTQgMCAxNHptLTE4MCA1M2MzIDMtNiA5LTEzIDRzOC0yOS0xMC0zNS0xMyAxNy0xOCAxNCA3LTM1IDI4LTIyLTYgMzMgNiAzOSA1LTIgNyAweiIvPjwvc3ZnPg==';
 
-export class MailchimpError extends Error {
-  constructor(message: string) {
-    super(message);
-    this.name = 'MailchimpError';
-  }
-}
+export { MailchimpError } from './error';
 
-export const MAILCHIMP_CONN_OPTIONS = {
-  datacenter: {
-    type: 'string',
-    display_name: 'Datacenter',
-    short_desc: 'Datacenter',
-    desc: 'Datacenter',
-  },
-  url: {
-    type: 'string',
-  },
-} satisfies TCustomConnOptions;
+export { MAILCHIMP_CONN_OPTIONS } from './conn-options';
 
 export const MAILCHIMP_ALLOWED_PATHS = {
   '/lists/{list_id}/members/{subscriber_hash}/notes': {

@@ -5,7 +5,7 @@ import {
   TQoreGetDynamicTypeFunction,
   TQoreType,
 } from '@qoretechnologies/ts-toolkit';
-import { ZENDESK_CONN_OPTIONS } from '..';
+import { ZENDESK_CONN_OPTIONS } from '../conn-options';
 import { getQoreContextRequiredValues, normalizeName } from '../../../global/helpers';
 import { ZendeskError } from '../constants';
 import { fetchZendeskPaginatedRecords } from './constants';
@@ -14,8 +14,7 @@ import { getGroupIdAllowedValues } from './get-group-id-allowed-values';
 import { getOrganizationIdAllowedValues } from './get-organization-id-allowed-values';
 import { getTicketIdAllowedValues } from './get-ticket-id-allowed-values';
 import { getUserIdAllowedValues } from './get-user-id-allowed-values';
-import { isCustomZendeskObject } from './record-based/constants';
-import { TZendeskTable } from './record-based/get-table-list';
+import { isCustomZendeskObject, TZendeskTable } from './record-based/get-table-list';
 
 const defaultFields = [
   'subject',

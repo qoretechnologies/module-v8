@@ -1,12 +1,10 @@
 import { omit } from 'lodash';
 import { getZendeskFieldToIdToNameMap } from '../get-object-custom-fields';
-import { TZendeskTable, ZENDESK_SUPPORTED_TABLES } from './get-table-list';
+import { isCustomZendeskObject, TZendeskTable } from './get-table-list';
 import { ZendeskError } from '../../constants';
 import { zendeskApiClient } from '../constants';
 
-export const isCustomZendeskObject = (tableName: TZendeskTable): boolean => {
-  return ZENDESK_SUPPORTED_TABLES.includes(tableName as any) === false;
-};
+export { isCustomZendeskObject };
 
 export const formatZendeskRecordsResponse = async (options: {
   records: Record<string, any>[];

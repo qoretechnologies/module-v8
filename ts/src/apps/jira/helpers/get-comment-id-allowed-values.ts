@@ -1,6 +1,6 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
-import { JIRA_CONN_OPTIONS } from '../constants';
+import { JIRA_CONN_OPTIONS } from '../conn-options';
 import { Debugger } from '../../../utils/Debugger';
 import { delay } from '../../../global/helpers';
 import { JIRA_ALLOWED_VALUES_FETCH_DELAY, JIRA_ALLOWED_VALUES_TIMEOUT } from './constants';

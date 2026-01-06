@@ -4,7 +4,7 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { capitalize } from 'lodash';
-import { MailchimpError } from '../constants';
+import { MailchimpError } from '../error';
 import { fetchMailchimpData } from './constants';
 
 type TMailchimpAutomation = {

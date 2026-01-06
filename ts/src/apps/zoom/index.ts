@@ -1,5 +1,5 @@
 import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
-import { actionsCatalogue } from '../../ActionsCatalogue';
+import { getOauth2ClientSecret } from '../../utils/oauth2-client-secret';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
@@ -24,7 +24,7 @@ export default (locale: Locales) =>
       url: 'https://api.zoom.us/v2',
       data: 'json',
       oauth2_grant_type: 'authorization_code',
-      oauth2_client_secret: actionsCatalogue.getOauth2ClientSecret(ZOOM_APP_NAME),
+      oauth2_client_secret: getOauth2ClientSecret(ZOOM_APP_NAME),
       oauth2_auth_url: 'https://zoom.us/oauth/authorize',
       oauth2_token_url: 'https://zoom.us/oauth/token',
       oauth2_scopes: [],

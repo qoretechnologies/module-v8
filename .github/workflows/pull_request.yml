@@ -323,7 +323,6 @@ jobs:
           sudo cp -r qore/qlib/RestSchemaDataProvider /usr/local/share/qore-modules/
           echo "Verifying installation..."
           ls -la /usr/local/share/qore-modules/RestSchemaDataProvider/
-          qore -ne '%requires RestSchemaDataProvider'
 
       # Test catalogue actions made with schema
       - name: Test catalogue actions

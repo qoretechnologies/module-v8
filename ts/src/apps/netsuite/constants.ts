@@ -1,4 +1,4 @@
-import { TAllowedPaths, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
+import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
 import { buildActionsFromSwaggerSchema } from '../../global/helpers';
 import netsuite from '../../schemas/netsuite.swagger.json';
 import { NETSUITE_ACCOUNT_ALLOWED_PATHS } from './allowed-paths/account';
@@ -15,26 +15,7 @@ import { NETSUITE_VENDOR_ALLOWED_PATHS } from './allowed-paths/vendor';
 
 export const NETSUITE_APP_NAME = 'NetSuite';
 
-export const NETSUITE_CONN_OPTIONS = {
-  account_id: {
-    display_name: 'Account ID',
-    short_desc: 'The account ID',
-    desc: 'The account ID',
-    type: 'string',
-  },
-  company: {
-    display_name: 'Company',
-    short_desc: 'The company',
-    desc: 'The company',
-    type: 'string',
-  },
-  oauth2_token_url: {
-    display_name: 'OAuth2 Token URL',
-    short_desc: 'The custom OAuth2 token URL',
-    desc: 'The OAuth2 token URL',
-    type: 'string',
-  },
-} satisfies TCustomConnOptions;
+export { NETSUITE_CONN_OPTIONS } from './conn-options';
 
 export const NETSUITE_ALLOWED_PATHS = {
   ...NETSUITE_ACCOUNT_ALLOWED_PATHS,

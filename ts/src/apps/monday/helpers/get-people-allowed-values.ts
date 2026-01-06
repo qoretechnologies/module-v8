@@ -3,7 +3,7 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { callMondayAPI } from './constants';
+import { callMondayAPI } from './client';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { MondayError } from '../constants';
 

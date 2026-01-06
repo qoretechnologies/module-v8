@@ -4,7 +4,8 @@ import {
   QoreAppCreator,
   QorusRequest,
 } from '@qoretechnologies/ts-toolkit';
-import { ZENDESK_APP_NAME, ZENDESK_CONN_OPTIONS } from '..';
+import { ZENDESK_APP_NAME } from '../app-constants';
+import { ZENDESK_CONN_OPTIONS } from '../conn-options';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { ZendeskError } from '../constants';
 import { zendeskApiClient } from '../helpers/constants';

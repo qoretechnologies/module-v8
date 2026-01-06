@@ -3,7 +3,7 @@ import {
   TCustomConnOptions,
   TQoreAppActionOverrideOption,
 } from '@qoretechnologies/ts-toolkit';
-import { NETSUITE_CONN_OPTIONS } from '../constants';
+import { NETSUITE_CONN_OPTIONS } from '../conn-options';
 import { getNetsuiteContactIdAllowedValues } from '../helpers/get-contact-id-allowed-values';
 import { getNetsuiteCurrencyObjectAllowedValues } from '../helpers/get-currency-id-allowed-values';
 import { getNetsuiteCustomerIdAllowedValues } from '../helpers/get-customer-id-allowed-values';

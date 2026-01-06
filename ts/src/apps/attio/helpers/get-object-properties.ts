@@ -59,17 +59,7 @@ type TTypeAndAllowedValues = {
   allowedValuesConfig: TAllowedValuesConfig;
 };
 
-export type TAttioTargetRecord = {
-  values: {
-    record_id: {
-      value: string;
-    }[];
-    name?: {
-      value?: string;
-      full_name?: string;
-    }[];
-  };
-};
+export type { TAttioTargetRecord } from './types';
 
 export const getAttioObjectAttributes = async (
   object: string,

@@ -1,5 +1,5 @@
 import { TQoreAppWithActions, TQoreRecordBasedApp } from '@qoretechnologies/ts-toolkit';
-import { actionsCatalogue } from '../../ActionsCatalogue';
+import { getOauth2ClientSecret } from '../../utils/oauth2-client-secret';
 import {
   buildActionsFromSwaggerSchema,
   mapActionsToApp,
@@ -69,7 +69,7 @@ export default (locale: Locales) =>
       },
       oauth2_grant_type: 'authorization_code',
       oauth2_client_id: 'Ov23liR886f3UxFr2NVK',
-      oauth2_client_secret: actionsCatalogue.getOauth2ClientSecret(GITHUB_APP_NAME),
+      oauth2_client_secret: getOauth2ClientSecret(GITHUB_APP_NAME),
       oauth2_auth_url: 'https://github.com/login/oauth/authorize',
       oauth2_token_url: 'https://github.com/login/oauth/access_token',
       oauth2_scopes: ['repo', 'user', 'public_repo'],

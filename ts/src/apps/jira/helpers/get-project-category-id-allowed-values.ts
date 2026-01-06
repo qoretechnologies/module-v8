@@ -3,7 +3,7 @@ import {
   QorusRequest,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { JIRA_CONN_OPTIONS } from '../constants';
+import { JIRA_CONN_OPTIONS } from '../conn-options';
 
 export const getJiraProjectCategoryIdAllowedValues: TQoreGetAllowedValuesFunction<
   typeof JIRA_CONN_OPTIONS,

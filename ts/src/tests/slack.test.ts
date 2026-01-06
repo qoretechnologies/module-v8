@@ -45,12 +45,12 @@ describe('Should test Slack', () => {
   };
 
   beforeAll(async () => {
-    const slackBotToken = process.env.SLACK_BOT_TOKEN;
-    const slackUserToken = process.env.SLACK_USER_TOKEN;
+    const slackBotToken = process.env.SLACK_ACCESS_TOKEN;
+    const slackUserToken = process.env.SLACK_USER_ACCESS_TOKEN;
     const slackTestChannel = process.env.SLACK_TEST_CHANNEL;
 
     if (!slackBotToken) {
-      throw new Error('SLACK_BOT_TOKEN must be set in environment variables');
+      throw new Error('SLACK_ACCESS_TOKEN must be set in environment variables');
     }
 
     baseContext.conn_opts.token = slackBotToken;
@@ -69,7 +69,7 @@ describe('Should test Slack', () => {
     try {
       const response = (await QorusRequest.post(
         {
-          body: {},
+          data: {},
           path: '/users.list',
           headers: {
             Authorization: `Bearer ${slackBotToken}`,
@@ -97,7 +97,7 @@ describe('Should test Slack', () => {
       try {
         await QorusRequest.post(
           {
-            body: { channel: testChannelId },
+            data: { channel: testChannelId },
             path: '/conversations.archive',
             headers: {
               Authorization: `Bearer ${baseContext.conn_opts.token}`,

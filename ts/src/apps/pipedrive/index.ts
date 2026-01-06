@@ -8,7 +8,7 @@ import {
   PIPEDRIVE_APP_LOGO,
   PIPEDRIVE_APP_NAME,
 } from './constants';
-import { actionsCatalogue } from '../../ActionsCatalogue';
+import { getOauth2ClientSecret } from '../../utils/oauth2-client-secret';
 
 import * as PIPEDRIVE_TRIGGERS from './triggers';
 import { getPipedriveRecordType } from './helpers/record-based/get-record-type';
@@ -38,7 +38,7 @@ export default (locale: Locales) =>
       data: 'json',
       oauth2_grant_type: 'authorization_code',
       oauth2_client_id: '145b10fac80be7a2',
-      oauth2_client_secret: actionsCatalogue.getOauth2ClientSecret(PIPEDRIVE_APP_NAME),
+      oauth2_client_secret: getOauth2ClientSecret(PIPEDRIVE_APP_NAME),
       oauth2_auth_url: 'https://oauth.pipedrive.com/oauth/authorize',
       oauth2_token_url: 'https://oauth.pipedrive.com/oauth/token',
       oauth2_token_use_basic_auth: true,

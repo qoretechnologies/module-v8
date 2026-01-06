@@ -1,40 +1,17 @@
-import {
-  TAllowedPaths,
-  TCustomConnOptions,
-  TQoreAppActionOverrideOption,
-  TQoreFile,
-} from '@qoretechnologies/ts-toolkit';
+import { TAllowedPaths, TQoreAppActionOverrideOption, TQoreFile } from '@qoretechnologies/ts-toolkit';
 import { OpenAPIV2 } from 'openapi-types';
 import { buildActionsFromSwaggerSchema } from '../../global/helpers';
 import eSignature from '../../schemas/esignature.swagger.json';
+import { ESIGNATURE_CONN_OPTIONS } from './conn-options';
 import { getEsignatureDocumentIdAllowedValues } from './helpers/get-document-id-allowed-values';
 import { getEsignatureEnvelopeIdAllowedValues } from './helpers/get-envelope-id-allowed-values';
 import { getEsignatureFolderIdAllowedValues } from './helpers/get-folder-id-allowed-values';
 import { getEsignatureRecipientIdAllowedValues } from './helpers/get-recipient-id-allowed-values';
 import * as mime from 'mime-types';
 
-export const ESIGNATURE_APP_NAME = 'DocusignESignature';
+export { ESIGNATURE_CONN_OPTIONS } from './conn-options';
 
-export const ESIGNATURE_CONN_OPTIONS = {
-  accounts: {
-    display_name: 'Account Info',
-    short_desc: 'Account info set when the connection is authorized',
-    desc: 'Account info set when the connection is authorized',
-    type: 'list',
-  },
-  account_id: {
-    display_name: 'Default Account ID',
-    short_desc: 'The default account ID set when the connection is authorized',
-    desc: 'The default account ID set when the connection is authorized',
-    type: 'string',
-  },
-  base_uri: {
-    display_name: 'Default Base URI',
-    short_desc: 'The default base URI set when the connection is authorized',
-    desc: 'The default base URI set when the connection is authorized',
-    type: 'string',
-  },
-} satisfies TCustomConnOptions;
+export const ESIGNATURE_APP_NAME = 'DocusignESignature';
 
 export const GetAccountIdConfig = {
   get_allowed_values: function (ctx) {

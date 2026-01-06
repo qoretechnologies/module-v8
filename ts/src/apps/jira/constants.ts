@@ -1,4 +1,4 @@
-import { TAllowedPaths, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
+import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
 import { getJiraCommentIdAllowedValues } from './helpers/get-comment-id-allowed-values';
 import { getJiraIssueDescriptionDefaultValue } from './helpers/get-default-description-value';
 import { getJiraFieldIdAllowedValues } from './helpers/get-field-id-allowed-values';
@@ -430,23 +430,4 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
 
 export const JIRA_SWAGGER_API_PATH = '/rest/api/3/';
 
-export const JIRA_CONN_OPTIONS = {
-  cloud_id: {
-    display_name: 'Cloud ID',
-    short_desc: 'The cloud ID',
-    desc: 'The cloud ID',
-    type: 'string',
-  },
-  ping_path: {
-    display_name: 'Ping Path',
-    short_desc: 'The custom ping path for oauth',
-    desc: 'The path to ping',
-    type: 'string',
-  },
-  swagger_base_path: {
-    display_name: 'Swagger Base Path',
-    short_desc: 'The custom base path for swagger',
-    desc: 'The base path for swagger',
-    type: 'string',
-  },
-} satisfies TCustomConnOptions;
+export { JIRA_CONN_OPTIONS } from './conn-options';
