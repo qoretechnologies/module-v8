@@ -111979,6 +111979,1074 @@ type RootTranslation = {
 				}
 			}
 		}
+		Slack: {
+			/**
+			 * S​l​a​c​k
+			 */
+			displayName: string
+			groups: {
+				/**
+				 * C​o​m​m​u​n​i​c​a​t​i​o​n
+				 */
+				'0': string
+				/**
+				 * T​e​a​m​ ​C​o​l​l​a​b​o​r​a​t​i​o​n
+				 */
+				'1': string
+			}
+			connectionMessage: {
+				/**
+				 * O​A​u​t​h​ ​C​o​n​n​e​c​t​i​o​n
+				 */
+				title: string
+				/**
+				 * S​l​a​c​k​ ​u​s​e​s​ ​O​A​u​t​h​ ​2​.​0​ ​f​o​r​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​.​ ​Y​o​u​ ​w​i​l​l​ ​b​e​ ​r​e​d​i​r​e​c​t​e​d​ ​t​o​ ​S​l​a​c​k​ ​t​o​ ​a​u​t​h​o​r​i​z​e​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​w​o​r​k​s​p​a​c​e​.​ ​B​o​t​h​ ​b​o​t​ ​a​n​d​ ​u​s​e​r​ ​s​c​o​p​e​s​ ​a​r​e​ ​r​e​q​u​e​s​t​e​d​ ​f​o​r​ ​f​u​l​l​ ​f​u​n​c​t​i​o​n​a​l​i​t​y​.
+				 */
+				content: string
+			}
+			/**
+			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​S​l​a​c​k​ ​t​o​ ​s​e​n​d​ ​m​e​s​s​a​g​e​s​,​ ​m​a​n​a​g​e​ ​c​h​a​n​n​e​l​s​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​t​e​a​m​ ​c​o​m​m​u​n​i​c​a​t​i​o​n
+			 */
+			shortDesc: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​S​l​a​c​k​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​t​e​a​m​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​ ​a​n​d​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​.​ ​S​l​a​c​k​ ​i​s​ ​a​ ​c​h​a​n​n​e​l​-​b​a​s​e​d​ ​m​e​s​s​a​g​i​n​g​ ​p​l​a​t​f​o​r​m​ ​t​h​a​t​ ​b​r​i​n​g​s​ ​t​e​a​m​s​ ​t​o​g​e​t​h​e​r​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​e​n​a​b​l​e​s​ ​y​o​u​ ​t​o​ ​s​e​n​d​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​c​h​a​n​n​e​l​s​ ​a​n​d​ ​u​s​e​r​s​,​ ​c​r​e​a​t​e​ ​c​h​a​n​n​e​l​s​,​ ​m​a​n​a​g​e​ ​r​e​a​c​t​i​o​n​s​,​ ​u​p​l​o​a​d​ ​f​i​l​e​s​,​ ​s​e​a​r​c​h​ ​m​e​s​s​a​g​e​s​,​ ​a​n​d​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​e​s​s​a​g​e​s​ ​a​n​d​ ​e​v​e​n​t​s​.
+			 */
+			longDesc: string
+			actions: {
+				send_message: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * S​e​n​d​ ​M​e​s​s​a​g​e​ ​t​o​ ​C​h​a​n​n​e​l
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​S​l​a​c​k​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * P​o​s​t​ ​a​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​h​a​n​n​e​l​ ​i​n​ ​y​o​u​r​ ​S​l​a​c​k​ ​w​o​r​k​s​p​a​c​e​.​ ​S​u​p​p​o​r​t​s​ ​t​e​x​t​,​ ​a​t​t​a​c​h​m​e​n​t​s​,​ ​a​n​d​ ​B​l​o​c​k​ ​K​i​t​ ​b​l​o​c​k​s​ ​f​o​r​ ​r​i​c​h​ ​f​o​r​m​a​t​t​i​n​g​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​p​o​s​t​ ​t​h​e​ ​m​e​s​s​a​g​e​.​ ​M​a​k​e​ ​s​u​r​e​ ​t​h​e​ ​b​o​t​ ​i​s​ ​a​ ​m​e​m​b​e​r​ ​o​f​ ​t​h​e​ ​c​h​a​n​n​e​l​.
+							 */
+							longDesc: string
+						}
+						text: {
+							/**
+							 * M​e​s​s​a​g​e​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​i​n​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​y​o​u​r​ ​m​e​s​s​a​g​e​.​ ​S​u​p​p​o​r​t​s​ ​S​l​a​c​k​ ​m​a​r​k​d​o​w​n​ ​f​o​r​m​a​t​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+						username: {
+							/**
+							 * B​o​t​ ​U​s​e​r​n​a​m​e
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​u​s​e​r​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​b​o​t
+							 */
+							shortDesc: string
+							/**
+							 * O​v​e​r​r​i​d​e​ ​t​h​e​ ​d​e​f​a​u​l​t​ ​b​o​t​ ​u​s​e​r​n​a​m​e​ ​f​o​r​ ​t​h​i​s​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						iconUrl: {
+							/**
+							 * I​c​o​n​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​i​c​o​n​ ​U​R​L​ ​f​o​r​ ​t​h​e​ ​b​o​t
+							 */
+							shortDesc: string
+							/**
+							 * O​v​e​r​r​i​d​e​ ​t​h​e​ ​d​e​f​a​u​l​t​ ​b​o​t​ ​i​c​o​n​ ​w​i​t​h​ ​a​ ​c​u​s​t​o​m​ ​i​m​a​g​e​ ​U​R​L​.
+							 */
+							longDesc: string
+						}
+						threadTs: {
+							/**
+							 * T​h​r​e​a​d​ ​T​i​m​e​s​t​a​m​p
+							 */
+							displayName: string
+							/**
+							 * R​e​p​l​y​ ​t​o​ ​a​ ​t​h​r​e​a​d
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​t​i​m​e​s​t​a​m​p​ ​o​f​ ​a​ ​p​a​r​e​n​t​ ​m​e​s​s​a​g​e​ ​t​o​ ​p​o​s​t​ ​t​h​i​s​ ​m​e​s​s​a​g​e​ ​a​s​ ​a​ ​r​e​p​l​y​ ​i​n​ ​a​ ​t​h​r​e​a​d​.
+							 */
+							longDesc: string
+						}
+						blocks: {
+							/**
+							 * B​l​o​c​k​s
+							 */
+							displayName: string
+							/**
+							 * B​l​o​c​k​ ​K​i​t​ ​b​l​o​c​k​s​ ​f​o​r​ ​r​i​c​h​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​ ​B​l​o​c​k​ ​K​i​t​ ​b​l​o​c​k​s​ ​f​o​r​ ​r​i​c​h​,​ ​i​n​t​e​r​a​c​t​i​v​e​ ​c​o​n​t​e​n​t​.​ ​S​e​e​ ​h​t​t​p​s​:​/​/​a​p​i​.​s​l​a​c​k​.​c​o​m​/​b​l​o​c​k​-​k​i​t​ ​f​o​r​ ​s​p​e​c​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				send_direct_message: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * S​e​n​d​ ​D​i​r​e​c​t​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​d​i​r​e​c​t​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​u​s​e​r
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​p​r​i​v​a​t​e​ ​m​e​s​s​a​g​e​ ​d​i​r​e​c​t​l​y​ ​t​o​ ​a​ ​u​s​e​r​ ​i​n​ ​y​o​u​r​ ​S​l​a​c​k​ ​w​o​r​k​s​p​a​c​e​.
+					 */
+					longDesc: string
+					options: {
+						userId: {
+							/**
+							 * U​s​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​s​e​r​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​s​h​o​u​l​d​ ​r​e​c​e​i​v​e​ ​t​h​e​ ​d​i​r​e​c​t​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						text: {
+							/**
+							 * M​e​s​s​a​g​e​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​i​n​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​o​f​ ​y​o​u​r​ ​d​i​r​e​c​t​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						username: {
+							/**
+							 * B​o​t​ ​U​s​e​r​n​a​m​e
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​u​s​e​r​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​b​o​t
+							 */
+							shortDesc: string
+							/**
+							 * O​v​e​r​r​i​d​e​ ​t​h​e​ ​d​e​f​a​u​l​t​ ​b​o​t​ ​u​s​e​r​n​a​m​e​ ​f​o​r​ ​t​h​i​s​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						iconUrl: {
+							/**
+							 * I​c​o​n​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​i​c​o​n​ ​U​R​L​ ​f​o​r​ ​t​h​e​ ​b​o​t
+							 */
+							shortDesc: string
+							/**
+							 * O​v​e​r​r​i​d​e​ ​t​h​e​ ​d​e​f​a​u​l​t​ ​b​o​t​ ​i​c​o​n​ ​w​i​t​h​ ​a​ ​c​u​s​t​o​m​ ​i​m​a​g​e​ ​U​R​L​.
+							 */
+							longDesc: string
+						}
+						blocks: {
+							/**
+							 * B​l​o​c​k​s
+							 */
+							displayName: string
+							/**
+							 * B​l​o​c​k​ ​K​i​t​ ​b​l​o​c​k​s​ ​f​o​r​ ​r​i​c​h​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​ ​B​l​o​c​k​ ​K​i​t​ ​b​l​o​c​k​s​ ​f​o​r​ ​r​i​c​h​,​ ​i​n​t​e​r​a​c​t​i​v​e​ ​c​o​n​t​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_message: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * U​p​d​a​t​e​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​m​e​s​s​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​m​e​s​s​a​g​e​ ​i​n​ ​a​ ​c​h​a​n​n​e​l​.​ ​Y​o​u​ ​n​e​e​d​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​i​m​e​s​t​a​m​p​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​w​h​i​c​h​ ​m​e​s​s​a​g​e​ ​t​o​ ​u​p​d​a​t​e​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​n​n​e​l​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​a​s​ ​p​o​s​t​e​d​.
+							 */
+							longDesc: string
+						}
+						timestamp: {
+							/**
+							 * M​e​s​s​a​g​e​ ​T​i​m​e​s​t​a​m​p
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​(​t​s​)​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.​ ​Y​o​u​ ​c​a​n​ ​a​l​s​o​ ​p​a​s​t​e​ ​a​ ​S​l​a​c​k​ ​m​e​s​s​a​g​e​ ​l​i​n​k​.
+							 */
+							longDesc: string
+						}
+						text: {
+							/**
+							 * N​e​w​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​m​e​s​s​a​g​e​ ​t​e​x​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​f​o​r​ ​t​h​e​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						blocks: {
+							/**
+							 * B​l​o​c​k​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​B​l​o​c​k​ ​K​i​t​ ​b​l​o​c​k​s
+							 */
+							shortDesc: string
+							/**
+							 * N​e​w​ ​B​l​o​c​k​ ​K​i​t​ ​b​l​o​c​k​s​ ​f​o​r​ ​t​h​e​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_channel_history: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​C​h​a​n​n​e​l​ ​H​i​s​t​o​r​y
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​m​e​s​s​a​g​e​s​ ​f​r​o​m​ ​a​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​h​i​s​t​o​r​y​ ​o​f​ ​a​ ​c​h​a​n​n​e​l​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​t​i​m​e​ ​r​a​n​g​e​ ​a​n​d​ ​c​o​n​t​r​o​l​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​r​e​t​u​r​n​e​d​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​g​e​t​ ​h​i​s​t​o​r​y​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​m​e​s​s​a​g​e​s​ ​f​r​o​m​.
+							 */
+							longDesc: string
+						}
+						oldest: {
+							/**
+							 * O​l​d​e​s​t​ ​T​i​m​e​s​t​a​m​p
+							 */
+							displayName: string
+							/**
+							 * O​n​l​y​ ​m​e​s​s​a​g​e​s​ ​a​f​t​e​r​ ​t​h​i​s​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​x​ ​t​i​m​e​s​t​a​m​p​.​ ​O​n​l​y​ ​m​e​s​s​a​g​e​s​ ​a​f​t​e​r​ ​t​h​i​s​ ​t​i​m​e​ ​w​i​l​l​ ​b​e​ ​i​n​c​l​u​d​e​d​.
+							 */
+							longDesc: string
+						}
+						latest: {
+							/**
+							 * L​a​t​e​s​t​ ​T​i​m​e​s​t​a​m​p
+							 */
+							displayName: string
+							/**
+							 * O​n​l​y​ ​m​e​s​s​a​g​e​s​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​t​i​m​e
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​x​ ​t​i​m​e​s​t​a​m​p​.​ ​O​n​l​y​ ​m​e​s​s​a​g​e​s​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​t​i​m​e​ ​w​i​l​l​ ​b​e​ ​i​n​c​l​u​d​e​d​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​c​u​r​r​e​n​t​ ​t​i​m​e​.
+							 */
+							longDesc: string
+						}
+						inclusive: {
+							/**
+							 * I​n​c​l​u​s​i​v​e
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​b​o​u​n​d​a​r​y​ ​t​i​m​e​s​t​a​m​p​s
+							 */
+							shortDesc: string
+							/**
+							 * I​n​c​l​u​d​e​ ​m​e​s​s​a​g​e​s​ ​w​i​t​h​ ​o​l​d​e​s​t​ ​o​r​ ​l​a​t​e​s​t​ ​t​i​m​e​s​t​a​m​p​s​ ​i​n​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+						}
+						includeAllMetadata: {
+							/**
+							 * I​n​c​l​u​d​e​ ​A​l​l​ ​M​e​t​a​d​a​t​a
+							 */
+							displayName: string
+							/**
+							 * R​e​t​u​r​n​ ​f​u​l​l​ ​m​e​s​s​a​g​e​ ​m​e​t​a​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * R​e​t​u​r​n​ ​a​l​l​ ​m​e​t​a​d​a​t​a​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​e​a​c​h​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​m​e​s​s​a​g​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				search_messages: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * S​e​a​r​c​h​ ​M​e​s​s​a​g​e​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​m​e​s​s​a​g​e​s​ ​i​n​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​ ​f​o​r​ ​m​e​s​s​a​g​e​s​ ​m​a​t​c​h​i​n​g​ ​a​ ​q​u​e​r​y​ ​a​c​r​o​s​s​ ​y​o​u​r​ ​S​l​a​c​k​ ​w​o​r​k​s​p​a​c​e​.​ ​R​e​q​u​i​r​e​s​ ​u​s​e​r​ ​t​o​k​e​n​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						query: {
+							/**
+							 * S​e​a​r​c​h​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​e​a​r​c​h​ ​q​u​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​y​o​u​r​ ​s​e​a​r​c​h​ ​q​u​e​r​y​.​ ​S​u​p​p​o​r​t​s​ ​S​l​a​c​k​ ​s​e​a​r​c​h​ ​o​p​e​r​a​t​o​r​s​ ​l​i​k​e​ ​"​f​r​o​m​:​"​,​ ​"​i​n​:​"​,​ ​e​t​c​.
+							 */
+							longDesc: string
+						}
+						count: {
+							/**
+							 * C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * R​e​s​u​l​t​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_channel: {
+					groups: {
+						/**
+						 * C​h​a​n​n​e​l​s
+						 */
+						'0': string
+					}
+					/**
+					 * C​r​e​a​t​e​ ​C​h​a​n​n​e​l
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​S​l​a​c​k​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​u​b​l​i​c​ ​o​r​ ​p​r​i​v​a​t​e​ ​c​h​a​n​n​e​l​ ​i​n​ ​y​o​u​r​ ​S​l​a​c​k​ ​w​o​r​k​s​p​a​c​e​.
+					 */
+					longDesc: string
+					options: {
+						channelName: {
+							/**
+							 * C​h​a​n​n​e​l​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​c​h​a​n​n​e​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​c​h​a​n​n​e​l​.​ ​M​u​s​t​ ​b​e​ ​u​n​i​q​u​e​ ​a​n​d​ ​f​o​l​l​o​w​ ​S​l​a​c​k​ ​n​a​m​i​n​g​ ​r​u​l​e​s​ ​(​l​o​w​e​r​c​a​s​e​,​ ​n​o​ ​s​p​a​c​e​s​)​.
+							 */
+							longDesc: string
+						}
+						isPrivate: {
+							/**
+							 * P​r​i​v​a​t​e​ ​C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * M​a​k​e​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​p​r​i​v​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​c​r​e​a​t​e​ ​a​ ​p​r​i​v​a​t​e​ ​c​h​a​n​n​e​l​ ​i​n​s​t​e​a​d​ ​o​f​ ​a​ ​p​u​b​l​i​c​ ​o​n​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_reaction: {
+					groups: {
+						/**
+						 * R​e​a​c​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * A​d​d​ ​R​e​a​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​n​ ​e​m​o​j​i​ ​r​e​a​c​t​i​o​n​ ​t​o​ ​a​ ​m​e​s​s​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​ ​a​n​ ​e​m​o​j​i​ ​r​e​a​c​t​i​o​n​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​i​n​ ​a​ ​c​h​a​n​n​e​l​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​n​n​e​l​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						timestamp: {
+							/**
+							 * M​e​s​s​a​g​e​ ​T​i​m​e​s​t​a​m​p
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​(​t​s​)​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​r​e​a​c​t​ ​t​o​.​ ​Y​o​u​ ​c​a​n​ ​a​l​s​o​ ​p​a​s​t​e​ ​a​ ​S​l​a​c​k​ ​m​e​s​s​a​g​e​ ​l​i​n​k​.
+							 */
+							longDesc: string
+						}
+						reaction: {
+							/**
+							 * R​e​a​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * E​m​o​j​i​ ​n​a​m​e​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​o​j​i​ ​n​a​m​e​ ​w​i​t​h​o​u​t​ ​c​o​l​o​n​s​ ​(​e​.​g​.​,​ ​"​t​h​u​m​b​s​u​p​"​,​ ​"​f​i​r​e​"​,​ ​"​s​m​i​l​e​"​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				find_user_by_email: {
+					groups: {
+						/**
+						 * U​s​e​r​s
+						 */
+						'0': string
+					}
+					/**
+					 * F​i​n​d​ ​U​s​e​r​ ​b​y​ ​E​m​a​i​l
+					 */
+					displayName: string
+					/**
+					 * F​i​n​d​ ​a​ ​S​l​a​c​k​ ​u​s​e​r​ ​b​y​ ​t​h​e​i​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+					 */
+					shortDesc: string
+					/**
+					 * L​o​o​k​ ​u​p​ ​a​ ​S​l​a​c​k​ ​u​s​e​r​ ​u​s​i​n​g​ ​t​h​e​i​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.​ ​R​e​t​u​r​n​s​ ​t​h​e​ ​u​s​e​r​ ​p​r​o​f​i​l​e​ ​i​f​ ​f​o​u​n​d​.
+					 */
+					longDesc: string
+					options: {
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * E​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​f​i​n​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_profile: {
+					groups: {
+						/**
+						 * U​s​e​r​s
+						 */
+						'0': string
+					}
+					/**
+					 * U​p​d​a​t​e​ ​P​r​o​f​i​l​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​u​s​e​r​ ​p​r​o​f​i​l​e​ ​i​n​f​o​r​m​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​b​a​s​i​c​ ​p​r​o​f​i​l​e​ ​f​i​e​l​d​s​ ​s​u​c​h​ ​a​s​ ​n​a​m​e​ ​o​r​ ​t​i​t​l​e​.​ ​R​e​q​u​i​r​e​s​ ​u​s​e​r​ ​t​o​k​e​n​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						firstName: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​ ​f​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​t​o​ ​s​e​t​ ​i​n​ ​t​h​e​ ​p​r​o​f​i​l​e​.
+							 */
+							longDesc: string
+						}
+						lastName: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​ ​l​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​t​o​ ​s​e​t​ ​i​n​ ​t​h​e​ ​p​r​o​f​i​l​e​.
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * U​s​e​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​o​ ​s​e​t​.​ ​C​h​a​n​g​i​n​g​ ​e​m​a​i​l​ ​w​i​l​l​ ​s​e​n​d​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​t​o​ ​b​o​t​h​ ​o​l​d​ ​a​n​d​ ​n​e​w​ ​a​d​d​r​e​s​s​e​s​.
+							 */
+							longDesc: string
+						}
+						userId: {
+							/**
+							 * U​s​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​u​s​e​r​ ​(​a​d​m​i​n​ ​o​n​l​y​)
+							 */
+							shortDesc: string
+							/**
+							 * I​D​ ​o​f​ ​u​s​e​r​ ​t​o​ ​u​p​d​a​t​e​.​ ​O​n​l​y​ ​a​d​m​i​n​s​ ​o​n​ ​p​a​i​d​ ​t​e​a​m​s​ ​c​a​n​ ​u​p​d​a​t​e​ ​o​t​h​e​r​ ​u​s​e​r​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				upload_file: {
+					groups: {
+						/**
+						 * F​i​l​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * U​p​l​o​a​d​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​a​ ​f​i​l​e​ ​t​o​ ​S​l​a​c​k
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​ ​a​ ​f​i​l​e​ ​t​o​ ​a​ ​S​l​a​c​k​ ​c​h​a​n​n​e​l​.​ ​S​u​p​p​o​r​t​s​ ​v​a​r​i​o​u​s​ ​f​i​l​e​ ​t​y​p​e​s​ ​a​n​d​ ​o​p​t​i​o​n​a​l​ ​i​n​i​t​i​a​l​ ​c​o​m​m​e​n​t​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * C​h​a​n​n​e​l​ ​t​o​ ​u​p​l​o​a​d​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​l​e​ ​s​h​o​u​l​d​ ​b​e​ ​u​p​l​o​a​d​e​d​.
+							 */
+							longDesc: string
+						}
+						fileData: {
+							/**
+							 * F​i​l​e​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * B​i​n​a​r​y​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d​.
+							 */
+							longDesc: string
+						}
+						filename: {
+							/**
+							 * F​i​l​e​n​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​l​e​n​a​m​e​ ​t​o​ ​u​s​e​ ​w​h​e​n​ ​u​p​l​o​a​d​i​n​g​.
+							 */
+							longDesc: string
+						}
+						comment: {
+							/**
+							 * I​n​i​t​i​a​l​ ​C​o​m​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * C​o​m​m​e​n​t​ ​w​i​t​h​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​c​o​m​m​e​n​t​ ​t​o​ ​i​n​c​l​u​d​e​ ​w​h​e​n​ ​s​h​a​r​i​n​g​ ​t​h​e​ ​f​i​l​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				request_action_message: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * S​e​n​d​ ​A​c​t​i​o​n​ ​M​e​s​s​a​g​e​ ​t​o​ ​C​h​a​n​n​e​l
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​m​e​s​s​a​g​e​ ​w​i​t​h​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​s
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​c​h​a​n​n​e​l​ ​w​i​t​h​ ​i​n​t​e​r​a​c​t​i​v​e​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​s​ ​t​h​a​t​ ​l​i​n​k​ ​t​o​ ​U​R​L​s​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​s​e​n​d​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​t​h​e​ ​a​c​t​i​o​n​ ​m​e​s​s​a​g​e​ ​s​h​o​u​l​d​ ​b​e​ ​p​o​s​t​e​d​.
+							 */
+							longDesc: string
+						}
+						text: {
+							/**
+							 * M​e​s​s​a​g​e​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​d​i​s​p​l​a​y​e​d​ ​a​b​o​v​e​ ​t​h​e​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​s​.
+							 */
+							longDesc: string
+						}
+						actions: {
+							/**
+							 * A​c​t​i​o​n​ ​B​u​t​t​o​n​s
+							 */
+							displayName: string
+							/**
+							 * B​u​t​t​o​n​s​ ​t​o​ ​d​i​s​p​l​a​y
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​ ​t​h​e​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​s​ ​w​i​t​h​ ​t​i​t​l​e​s​ ​a​n​d​ ​U​R​L​s​.​ ​E​a​c​h​ ​b​u​t​t​o​n​ ​l​i​n​k​s​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​U​R​L​ ​w​h​e​n​ ​c​l​i​c​k​e​d​.
+							 */
+							longDesc: string
+						}
+						username: {
+							/**
+							 * B​o​t​ ​U​s​e​r​n​a​m​e
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​b​o​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * O​v​e​r​r​i​d​e​ ​t​h​e​ ​d​e​f​a​u​l​t​ ​b​o​t​ ​u​s​e​r​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						iconUrl: {
+							/**
+							 * I​c​o​n​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​b​o​t​ ​i​c​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​v​e​r​r​i​d​e​ ​t​h​e​ ​d​e​f​a​u​l​t​ ​b​o​t​ ​i​c​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				request_action_dm: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * S​e​n​d​ ​A​c​t​i​o​n​ ​M​e​s​s​a​g​e​ ​t​o​ ​U​s​e​r
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​d​i​r​e​c​t​ ​m​e​s​s​a​g​e​ ​w​i​t​h​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​s
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​d​i​r​e​c​t​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​u​s​e​r​ ​w​i​t​h​ ​i​n​t​e​r​a​c​t​i​v​e​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​s​ ​t​h​a​t​ ​l​i​n​k​ ​t​o​ ​U​R​L​s​.
+					 */
+					longDesc: string
+					options: {
+						userId: {
+							/**
+							 * U​s​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​s​e​r​ ​t​o​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​u​s​e​r​ ​t​o​ ​r​e​c​e​i​v​e​ ​t​h​e​ ​a​c​t​i​o​n​ ​m​e​s​s​a​g​e​.
+							 */
+							longDesc: string
+						}
+						text: {
+							/**
+							 * M​e​s​s​a​g​e​ ​T​e​x​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​e​x​t​ ​c​o​n​t​e​n​t​ ​d​i​s​p​l​a​y​e​d​ ​a​b​o​v​e​ ​t​h​e​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​s​.
+							 */
+							longDesc: string
+						}
+						actions: {
+							/**
+							 * A​c​t​i​o​n​ ​B​u​t​t​o​n​s
+							 */
+							displayName: string
+							/**
+							 * B​u​t​t​o​n​s​ ​t​o​ ​d​i​s​p​l​a​y
+							 */
+							shortDesc: string
+							/**
+							 * D​e​f​i​n​e​ ​t​h​e​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​s​ ​w​i​t​h​ ​t​i​t​l​e​s​ ​a​n​d​ ​U​R​L​s​.
+							 */
+							longDesc: string
+						}
+						username: {
+							/**
+							 * B​o​t​ ​U​s​e​r​n​a​m​e
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​b​o​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * O​v​e​r​r​i​d​e​ ​t​h​e​ ​d​e​f​a​u​l​t​ ​b​o​t​ ​u​s​e​r​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						iconUrl: {
+							/**
+							 * I​c​o​n​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​b​o​t​ ​i​c​o​n
+							 */
+							shortDesc: string
+							/**
+							 * O​v​e​r​r​i​d​e​ ​t​h​e​ ​d​e​f​a​u​l​t​ ​b​o​t​ ​i​c​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_message: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * N​e​w​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​i​s​ ​p​o​s​t​e​d​ ​t​o​ ​a​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​m​e​s​s​a​g​e​ ​i​s​ ​p​o​s​t​e​d​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​h​a​n​n​e​l​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​r​e​a​c​t​ ​t​o​ ​i​n​c​o​m​i​n​g​ ​m​e​s​s​a​g​e​s​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​e​s​s​a​g​e​s​.​ ​M​a​k​e​ ​s​u​r​e​ ​t​h​e​ ​b​o​t​ ​i​s​ ​a​ ​m​e​m​b​e​r​ ​o​f​ ​t​h​e​ ​c​h​a​n​n​e​l​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_reaction: {
+					groups: {
+						/**
+						 * R​e​a​c​t​i​o​n​s
+						 */
+						'0': string
+					}
+					/**
+					 * N​e​w​ ​R​e​a​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​r​e​a​c​t​i​o​n​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​m​e​s​s​a​g​e
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​r​e​a​c​t​i​o​n​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​n​y​ ​m​e​s​s​a​g​e​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​e​m​o​j​i​s​ ​o​r​ ​c​h​a​n​n​e​l​s​.
+					 */
+					longDesc: string
+					options: {
+						emojis: {
+							/**
+							 * E​m​o​j​i​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​e​m​o​j​i​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​s​p​e​c​i​f​y​ ​e​m​o​j​i​ ​n​a​m​e​s​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​(​e​.​g​.​,​ ​"​f​i​r​e​"​,​ ​"​t​h​u​m​b​s​u​p​"​)​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​f​o​r​ ​a​l​l​ ​r​e​a​c​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​h​a​n​n​e​l
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​s​e​l​e​c​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​c​h​a​n​n​e​l​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				channel_created: {
+					groups: {
+						/**
+						 * C​h​a​n​n​e​l​s
+						 */
+						'0': string
+					}
+					/**
+					 * C​h​a​n​n​e​l​ ​C​r​e​a​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​h​a​n​n​e​l​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​ ​n​e​w​ ​p​u​b​l​i​c​ ​o​r​ ​p​r​i​v​a​t​e​ ​c​h​a​n​n​e​l​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e​.
+					 */
+					longDesc: string
+					options: {
+					}
+				}
+			}
+		}
 		SurveyMonkey: {
 			/**
 			 * S​u​r​v​e​y​M​o​n​k​e​y
@@ -224798,6 +225866,1074 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
+					}
+				}
+			}
+		}
+		Slack: {
+			/**
+			 * Slack
+			 */
+			displayName: () => LocalizedString
+			groups: {
+				/**
+				 * Communication
+				 */
+				'0': () => LocalizedString
+				/**
+				 * Team Collaboration
+				 */
+				'1': () => LocalizedString
+			}
+			connectionMessage: {
+				/**
+				 * OAuth Connection
+				 */
+				title: () => LocalizedString
+				/**
+				 * Slack uses OAuth 2.0 for authentication. You will be redirected to Slack to authorize access to your workspace. Both bot and user scopes are requested for full functionality.
+				 */
+				content: () => LocalizedString
+			}
+			/**
+			 * Connect with Slack to send messages, manage channels, and automate team communication
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Integrate with Slack to automate team communication and collaboration. Slack is a channel-based messaging platform that brings teams together. This integration enables you to send messages to channels and users, create channels, manage reactions, upload files, search messages, and monitor for new messages and events.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				send_message: {
+					groups: {
+						/**
+						 * Messages
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Send Message to Channel
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a message to a Slack channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Post a message to a specific channel in your Slack workspace. Supports text, attachments, and Block Kit blocks for rich formatting.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The channel to send the message to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the channel where you want to post the message. Make sure the bot is a member of the channel.
+							 */
+							longDesc: () => LocalizedString
+						}
+						text: {
+							/**
+							 * Message Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The text content of the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The main text content of your message. Supports Slack markdown formatting.
+							 */
+							longDesc: () => LocalizedString
+						}
+						username: {
+							/**
+							 * Bot Username
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom username for the bot
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Override the default bot username for this message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						iconUrl: {
+							/**
+							 * Icon URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom icon URL for the bot
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Override the default bot icon with a custom image URL.
+							 */
+							longDesc: () => LocalizedString
+						}
+						threadTs: {
+							/**
+							 * Thread Timestamp
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Reply to a thread
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the timestamp of a parent message to post this message as a reply in a thread.
+							 */
+							longDesc: () => LocalizedString
+						}
+						blocks: {
+							/**
+							 * Blocks
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Block Kit blocks for rich content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Add Block Kit blocks for rich, interactive content. See https://api.slack.com/block-kit for specs.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				send_direct_message: {
+					groups: {
+						/**
+						 * Messages
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Send Direct Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a direct message to a user
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a private message directly to a user in your Slack workspace.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						userId: {
+							/**
+							 * User
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The user to send the message to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the user who should receive the direct message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						text: {
+							/**
+							 * Message Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The text content of the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The main text content of your direct message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						username: {
+							/**
+							 * Bot Username
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom username for the bot
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Override the default bot username for this message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						iconUrl: {
+							/**
+							 * Icon URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom icon URL for the bot
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Override the default bot icon with a custom image URL.
+							 */
+							longDesc: () => LocalizedString
+						}
+						blocks: {
+							/**
+							 * Blocks
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Block Kit blocks for rich content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Add Block Kit blocks for rich, interactive content.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_message: {
+					groups: {
+						/**
+						 * Messages
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Update Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing message
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the content of an existing message in a channel. You need the message timestamp to identify which message to update.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The channel containing the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the channel where the message was posted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timestamp: {
+							/**
+							 * Message Timestamp
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Timestamp of the message to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The timestamp (ts) of the message you want to update. You can also paste a Slack message link.
+							 */
+							longDesc: () => LocalizedString
+						}
+						text: {
+							/**
+							 * New Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated message text
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new text content for the message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						blocks: {
+							/**
+							 * Blocks
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated Block Kit blocks
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * New Block Kit blocks for the message.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_channel_history: {
+					groups: {
+						/**
+						 * Messages
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get Channel History
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve messages from a channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetch the message history of a channel. You can filter by time range and control the number of messages returned.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The channel to get history from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the channel to retrieve messages from.
+							 */
+							longDesc: () => LocalizedString
+						}
+						oldest: {
+							/**
+							 * Oldest Timestamp
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Only messages after this time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unix timestamp. Only messages after this time will be included.
+							 */
+							longDesc: () => LocalizedString
+						}
+						latest: {
+							/**
+							 * Latest Timestamp
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Only messages before this time
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unix timestamp. Only messages before this time will be included. Default is current time.
+							 */
+							longDesc: () => LocalizedString
+						}
+						inclusive: {
+							/**
+							 * Inclusive
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include boundary timestamps
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Include messages with oldest or latest timestamps in results.
+							 */
+							longDesc: () => LocalizedString
+						}
+						includeAllMetadata: {
+							/**
+							 * Include All Metadata
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Return full message metadata
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Return all metadata associated with each message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum messages to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of messages to retrieve. Default is 200.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				search_messages: {
+					groups: {
+						/**
+						 * Messages
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Search Messages
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search for messages in the workspace
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Search for messages matching a query across your Slack workspace. Requires user token authentication.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						query: {
+							/**
+							 * Search Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The search query
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter your search query. Supports Slack search operators like "from:", "in:", etc.
+							 */
+							longDesc: () => LocalizedString
+						}
+						count: {
+							/**
+							 * Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Results per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Number of results to return per page. Default is 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_channel: {
+					groups: {
+						/**
+						 * Channels
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Create Channel
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new Slack channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new public or private channel in your Slack workspace.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channelName: {
+							/**
+							 * Channel Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the new channel
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name for the new channel. Must be unique and follow Slack naming rules (lowercase, no spaces).
+							 */
+							longDesc: () => LocalizedString
+						}
+						isPrivate: {
+							/**
+							 * Private Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Make the channel private
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, create a private channel instead of a public one.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_reaction: {
+					groups: {
+						/**
+						 * Reactions
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Add Reaction
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add an emoji reaction to a message
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Add an emoji reaction to a specific message in a channel.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The channel containing the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the channel where the message is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timestamp: {
+							/**
+							 * Message Timestamp
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Timestamp of the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The timestamp (ts) of the message to react to. You can also paste a Slack message link.
+							 */
+							longDesc: () => LocalizedString
+						}
+						reaction: {
+							/**
+							 * Reaction
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Emoji name to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The emoji name without colons (e.g., "thumbsup", "fire", "smile").
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				find_user_by_email: {
+					groups: {
+						/**
+						 * Users
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Find User by Email
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Find a Slack user by their email address
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Look up a Slack user using their email address. Returns the user profile if found.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Email address to search for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address of the user you want to find.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_profile: {
+					groups: {
+						/**
+						 * Users
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Update Profile
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update user profile information
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update basic profile fields such as name or title. Requires user token authentication.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						firstName: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User first name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The first name to set in the profile.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lastName: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The last name to set in the profile.
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * User email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address to set. Changing email will send notifications to both old and new addresses.
+							 */
+							longDesc: () => LocalizedString
+						}
+						userId: {
+							/**
+							 * User ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target user (admin only)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * ID of user to update. Only admins on paid teams can update other users.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				upload_file: {
+					groups: {
+						/**
+						 * Files
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Upload File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload a file to Slack
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Upload a file to a Slack channel. Supports various file types and optional initial comment.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Channel to upload to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the channel where the file should be uploaded.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fileData: {
+							/**
+							 * File Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Binary content of the file to upload.
+							 */
+							longDesc: () => LocalizedString
+						}
+						filename: {
+							/**
+							 * Filename
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The filename to use when uploading.
+							 */
+							longDesc: () => LocalizedString
+						}
+						comment: {
+							/**
+							 * Initial Comment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Comment with the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional comment to include when sharing the file.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				request_action_message: {
+					groups: {
+						/**
+						 * Messages
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Send Action Message to Channel
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a message with action buttons
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a message to a channel with interactive action buttons that link to URLs.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The channel to send to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the channel where the action message should be posted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						text: {
+							/**
+							 * Message Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The message content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content displayed above the action buttons.
+							 */
+							longDesc: () => LocalizedString
+						}
+						actions: {
+							/**
+							 * Action Buttons
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Buttons to display
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Define the action buttons with titles and URLs. Each button links to a specific URL when clicked.
+							 */
+							longDesc: () => LocalizedString
+						}
+						username: {
+							/**
+							 * Bot Username
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom bot name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Override the default bot username.
+							 */
+							longDesc: () => LocalizedString
+						}
+						iconUrl: {
+							/**
+							 * Icon URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom bot icon
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Override the default bot icon.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				request_action_dm: {
+					groups: {
+						/**
+						 * Messages
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Send Action Message to User
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a direct message with action buttons
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a direct message to a user with interactive action buttons that link to URLs.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						userId: {
+							/**
+							 * User
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The user to message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the user to receive the action message.
+							 */
+							longDesc: () => LocalizedString
+						}
+						text: {
+							/**
+							 * Message Text
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The message content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The text content displayed above the action buttons.
+							 */
+							longDesc: () => LocalizedString
+						}
+						actions: {
+							/**
+							 * Action Buttons
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Buttons to display
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Define the action buttons with titles and URLs.
+							 */
+							longDesc: () => LocalizedString
+						}
+						username: {
+							/**
+							 * Bot Username
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom bot name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Override the default bot username.
+							 */
+							longDesc: () => LocalizedString
+						}
+						iconUrl: {
+							/**
+							 * Icon URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom bot icon
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Override the default bot icon.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_message: {
+					groups: {
+						/**
+						 * Messages
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * New Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new message is posted to a channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new message is posted to the specified channel. Use this to react to incoming messages.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The channel to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the channel to monitor for new messages. Make sure the bot is a member of the channel.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_reaction: {
+					groups: {
+						/**
+						 * Reactions
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * New Reaction
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a reaction is added to a message
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a reaction is added to any message. You can filter by specific emojis or channels.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						emojis: {
+							/**
+							 * Emojis
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by specific emojis
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally specify emoji names to trigger on (e.g., "fire", "thumbsup"). Leave empty for all reactions.
+							 */
+							longDesc: () => LocalizedString
+						}
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by channel
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally select a specific channel to monitor. Leave empty to monitor all channels.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				channel_created: {
+					groups: {
+						/**
+						 * Channels
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Channel Created
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new channel is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever a new public or private channel is created in the workspace.
+					 */
+					longDesc: () => LocalizedString
+					options: {
 					}
 				}
 			}
