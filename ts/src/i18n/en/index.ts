@@ -87,6 +87,7 @@ import ZohoCRM from './apps/ZohoCRM';
 import Zoom from './apps/Zoom';
 import CopperCrm from './apps/CopperCrm';
 import Craft from './apps/Craft';
+import SurveyMonkey from './apps/SurveyMonkey';
 
 const en = {
   common: {},
@@ -179,6 +180,7 @@ const en = {
     Brevo,
     GoogleTasks,
     PayPal,
+    SurveyMonkey,
     _testing: {
       triggers: {
         _testing: {

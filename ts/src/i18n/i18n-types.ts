@@ -59836,6 +59836,18 @@ type RootTranslation = {
 			}
 		}
 		Dynamics: {
+			/**
+			 * M​i​c​r​o​s​o​f​t​ ​D​y​n​a​m​i​c​s​ ​3​6​5
+			 */
+			displayName: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​M​i​c​r​o​s​o​f​t​ ​D​y​n​a​m​i​c​s​ ​3​6​5​ ​C​R​M​ ​a​n​d​ ​E​R​P
+			 */
+			shortDesc: string
+			/**
+			 * M​i​c​r​o​s​o​f​t​ ​D​y​n​a​m​i​c​s​ ​3​6​5​ ​i​s​ ​a​ ​s​u​i​t​e​ ​o​f​ ​e​n​t​e​r​p​r​i​s​e​ ​r​e​s​o​u​r​c​e​ ​p​l​a​n​n​i​n​g​ ​(​E​R​P​)​ ​a​n​d​ ​c​u​s​t​o​m​e​r​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​m​a​n​a​g​e​m​e​n​t​ ​(​C​R​M​)​ ​a​p​p​l​i​c​a​t​i​o​n​s​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​e​n​a​b​l​e​s​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​w​o​r​k​f​l​o​w​s​ ​t​r​i​g​g​e​r​e​d​ ​b​y​ ​D​y​n​a​m​i​c​s​ ​3​6​5​ ​e​v​e​n​t​s​ ​s​u​c​h​ ​a​s​ ​n​e​w​ ​a​c​c​o​u​n​t​s​,​ ​c​o​n​t​a​c​t​s​,​ ​l​e​a​d​s​,​ ​o​p​p​o​r​t​u​n​i​t​i​e​s​,​ ​a​n​d​ ​o​r​d​e​r​s​.
+			 */
+			longDesc: string
 			groups: {
 				/**
 				 * C​R​M​ ​&​ ​S​a​l​e​s​ ​M​a​n​a​g​e​m​e​n​t
@@ -97514,6 +97526,34 @@ type RootTranslation = {
 			 * C​o​n​n​e​c​t​ ​y​o​u​r​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​a​c​c​o​u​n​t​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​e​m​a​i​l​ ​m​a​r​k​e​t​i​n​g​ ​c​a​m​p​a​i​g​n​s​,​ ​m​a​n​a​g​e​ ​c​o​n​t​a​c​t​s​,​ ​a​n​d​ ​t​r​a​c​k​ ​c​u​s​t​o​m​e​r​ ​i​n​t​e​r​a​c​t​i​o​n​s​.​ ​C​r​e​a​t​e​ ​a​n​d​ ​s​e​n​d​ ​t​a​r​g​e​t​e​d​ ​e​m​a​i​l​ ​c​a​m​p​a​i​g​n​s​,​ ​m​a​n​a​g​e​ ​c​o​n​t​a​c​t​ ​l​i​s​t​s​,​ ​s​e​t​ ​u​p​ ​a​u​t​o​m​a​t​i​o​n​ ​w​o​r​k​f​l​o​w​s​,​ ​a​n​d​ ​a​n​a​l​y​z​e​ ​c​a​m​p​a​i​g​n​ ​p​e​r​f​o​r​m​a​n​c​e​ ​a​l​l​ ​f​r​o​m​ ​w​i​t​h​i​n​ ​Q​o​r​e​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​y​o​u​r​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​a​c​c​o​u​n​t​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​I​n​s​t​a​n​c​e​ ​U​R​L​*​*​ ​a​n​d​ ​*​*​A​P​I​ ​K​e​y​*​*​.​
+			​
+			​#​#​ ​H​o​w​ ​t​o​ ​G​e​t​ ​Y​o​u​r​ ​C​r​e​d​e​n​t​i​a​l​s​
+			​
+			​#​#​#​ ​I​n​s​t​a​n​c​e​ ​U​R​L​
+			​Y​o​u​r​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​a​c​c​o​u​n​t​ ​i​n​s​t​a​n​c​e​ ​U​R​L​ ​(​e​.​g​.​,​ ​`​h​t​t​p​s​:​/​/​<​y​o​u​r​_​a​c​c​o​u​n​t​>​.​a​c​t​i​v​e​h​o​s​t​e​d​.​c​o​m​`​)​
+			​
+			​1​.​ ​G​o​ ​t​o​ ​y​o​u​r​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​a​c​c​o​u​n​t​ ​s​e​t​t​i​n​g​s​
+			​2​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​D​e​v​e​l​o​p​e​r​ ​s​e​t​t​i​n​g​s​
+			​3​.​ ​C​o​p​y​ ​t​h​e​ ​U​R​L​ ​v​a​l​u​e​
+			​
+			​#​#​#​ ​A​P​I​ ​K​e​y​
+			​Y​o​u​r​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​a​c​c​o​u​n​t​ ​A​P​I​ ​k​e​y​ ​f​o​r​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​
+			​
+			​1​.​ ​G​o​ ​t​o​ ​y​o​u​r​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​a​c​c​o​u​n​t​ ​s​e​t​t​i​n​g​s​
+			​2​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​D​e​v​e​l​o​p​e​r​ ​s​e​t​t​i​n​g​s​
+			​3​.​ ​C​o​p​y​ ​t​h​e​ ​A​P​I​ ​K​e​y​ ​v​a​l​u​e​
+			​
+			​B​o​t​h​ ​c​r​e​d​e​n​t​i​a​l​s​ ​c​a​n​ ​b​e​ ​f​o​u​n​d​ ​i​n​ ​t​h​e​ ​s​a​m​e​ ​l​o​c​a​t​i​o​n​ ​w​i​t​h​i​n​ ​y​o​u​r​ ​A​c​t​i​v​e​C​a​m​p​a​i​g​n​ ​D​e​v​e​l​o​p​e​r​ ​s​e​t​t​i​n​g​s​.
+				 */
+				content: string
+			}
 			triggers: {
 				contact_added_to_list: {
 					/**
@@ -110872,6 +110912,669 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​d​i​s​p​u​t​e​ ​e​v​e​n​t​ ​s​h​o​u​l​d​ ​t​r​i​g​g​e​r​ ​t​h​i​s​ ​w​e​b​h​o​o​k​.​ ​E​a​c​h​ ​e​v​e​n​t​ ​r​e​p​r​e​s​e​n​t​s​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​s​t​a​g​e​ ​i​n​ ​t​h​e​ ​d​i​s​p​u​t​e​ ​r​e​s​o​l​u​t​i​o​n​ ​p​r​o​c​e​s​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
+		SurveyMonkey: {
+			/**
+			 * S​u​r​v​e​y​M​o​n​k​e​y
+			 */
+			displayName: string
+			groups: {
+				/**
+				 * S​u​r​v​e​y​ ​&​ ​F​e​e​d​b​a​c​k
+				 */
+				'0': string
+			}
+			/**
+			 * O​n​l​i​n​e​ ​s​u​r​v​e​y​ ​p​l​a​t​f​o​r​m​ ​f​o​r​ ​c​o​l​l​e​c​t​i​n​g​ ​f​e​e​d​b​a​c​k​ ​a​n​d​ ​r​e​s​p​o​n​s​e​s
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​y​o​u​r​ ​S​u​r​v​e​y​M​o​n​k​e​y​ ​a​c​c​o​u​n​t​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​s​u​r​v​e​y​ ​m​a​n​a​g​e​m​e​n​t​,​ ​c​o​l​l​e​c​t​ ​r​e​s​p​o​n​s​e​s​,​ ​a​n​d​ ​m​a​n​a​g​e​ ​c​o​n​t​a​c​t​s​.​ ​C​r​e​a​t​e​ ​c​o​l​l​e​c​t​o​r​s​,​ ​s​e​n​d​ ​s​u​r​v​e​y​s​,​ ​r​e​t​r​i​e​v​e​ ​r​e​s​p​o​n​s​e​s​,​ ​a​n​d​ ​s​e​t​ ​u​p​ ​w​e​b​h​o​o​k​s​ ​f​o​r​ ​r​e​a​l​-​t​i​m​e​ ​r​e​s​p​o​n​s​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​a​l​l​ ​f​r​o​m​ ​w​i​t​h​i​n​ ​Q​o​r​e​.
+			 */
+			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​S​u​r​v​e​y​M​o​n​k​e​y
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​y​o​u​r​ ​S​u​r​v​e​y​M​o​n​k​e​y​ ​a​c​c​o​u​n​t​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​t​o​ ​a​u​t​h​e​n​t​i​c​a​t​e​ ​u​s​i​n​g​ ​O​A​u​t​h​2​.​
+			​
+			​#​#​ ​A​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​P​r​o​c​e​s​s​
+			​
+			​1​.​ ​C​l​i​c​k​ ​t​h​e​ ​"​C​o​n​n​e​c​t​"​ ​b​u​t​t​o​n​ ​b​e​l​o​w​
+			​2​.​ ​Y​o​u​ ​w​i​l​l​ ​b​e​ ​r​e​d​i​r​e​c​t​e​d​ ​t​o​ ​S​u​r​v​e​y​M​o​n​k​e​y​ ​t​o​ ​a​u​t​h​o​r​i​z​e​ ​t​h​e​ ​c​o​n​n​e​c​t​i​o​n​
+			​3​.​ ​G​r​a​n​t​ ​t​h​e​ ​r​e​q​u​i​r​e​d​ ​p​e​r​m​i​s​s​i​o​n​s​ ​f​o​r​ ​s​u​r​v​e​y​s​,​ ​c​o​n​t​a​c​t​s​,​ ​r​e​s​p​o​n​s​e​s​,​ ​c​o​l​l​e​c​t​o​r​s​,​ ​a​n​d​ ​w​e​b​h​o​o​k​s​
+			​4​.​ ​Y​o​u​ ​w​i​l​l​ ​b​e​ ​r​e​d​i​r​e​c​t​e​d​ ​b​a​c​k​ ​t​o​ ​c​o​m​p​l​e​t​e​ ​t​h​e​ ​c​o​n​n​e​c​t​i​o​n​
+			​
+			​#​#​ ​R​e​q​u​i​r​e​d​ ​S​c​o​p​e​s​
+			​
+			​-​ ​s​u​r​v​e​y​s​_​r​e​a​d​,​ ​s​u​r​v​e​y​s​_​w​r​i​t​e​ ​-​ ​M​a​n​a​g​e​ ​s​u​r​v​e​y​s​
+			​-​ ​c​o​n​t​a​c​t​s​_​r​e​a​d​,​ ​c​o​n​t​a​c​t​s​_​w​r​i​t​e​ ​-​ ​M​a​n​a​g​e​ ​c​o​n​t​a​c​t​s​
+			​-​ ​r​e​s​p​o​n​s​e​s​_​r​e​a​d​,​ ​r​e​s​p​o​n​s​e​s​_​r​e​a​d​_​d​e​t​a​i​l​ ​-​ ​R​e​a​d​ ​s​u​r​v​e​y​ ​r​e​s​p​o​n​s​e​s​
+			​-​ ​c​o​l​l​e​c​t​o​r​s​_​r​e​a​d​,​ ​c​o​l​l​e​c​t​o​r​s​_​w​r​i​t​e​ ​-​ ​M​a​n​a​g​e​ ​c​o​l​l​e​c​t​o​r​s​
+			​-​ ​w​e​b​h​o​o​k​s​_​r​e​a​d​,​ ​w​e​b​h​o​o​k​s​_​w​r​i​t​e​ ​-​ ​S​e​t​ ​u​p​ ​r​e​s​p​o​n​s​e​ ​w​e​b​h​o​o​k​s
+				 */
+				content: string
+			}
+			triggers: {
+				new_response: {
+					/**
+					 * N​e​w​ ​R​e​s​p​o​n​s​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​s​u​r​v​e​y​ ​r​e​s​p​o​n​s​e​ ​i​s​ ​c​o​m​p​l​e​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​r​e​s​p​o​n​d​e​n​t​ ​c​o​m​p​l​e​t​e​s​ ​a​ ​s​u​r​v​e​y​.​ ​T​h​e​ ​w​e​b​h​o​o​k​ ​p​a​y​l​o​a​d​ ​i​n​c​l​u​d​e​s​ ​b​a​s​i​c​ ​r​e​s​p​o​n​s​e​ ​i​n​f​o​r​m​a​t​i​o​n​.​ ​U​s​e​ ​t​h​e​ ​"​G​e​t​ ​R​e​s​p​o​n​s​e​"​ ​a​c​t​i​o​n​ ​t​o​ ​f​e​t​c​h​ ​d​e​t​a​i​l​e​d​ ​r​e​s​p​o​n​s​e​ ​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​a​n​s​w​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						survey_id: {
+							/**
+							 * S​u​r​v​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​r​v​e​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​e​s​p​o​n​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​s​u​r​v​e​y​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​c​o​m​p​l​e​t​e​d​ ​r​e​s​p​o​n​s​e​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				create_contact: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * C​r​e​a​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​n​ ​S​u​r​v​e​y​M​o​n​k​e​y​ ​w​i​t​h​ ​f​i​r​s​t​ ​n​a​m​e​,​ ​l​a​s​t​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​o​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+					 */
+					longDesc: string
+					options: {
+						first_name: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​f​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						last_name: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​l​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​(​e​i​t​h​e​r​ ​e​m​a​i​l​ ​o​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​s​ ​r​e​q​u​i​r​e​d​)
+							 */
+							longDesc: string
+						}
+						phone_number: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​(​e​i​t​h​e​r​ ​e​m​a​i​l​ ​o​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​s​ ​r​e​q​u​i​r​e​d​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_contacts: {
+					groups: {
+						/**
+						 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​C​o​n​t​a​c​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​S​u​r​v​e​y​M​o​n​k​e​y
+					 */
+					longDesc: string
+					options: {
+						page: {
+							/**
+							 * P​a​g​e
+							 */
+							displayName: string
+							/**
+							 * P​a​g​e​ ​n​u​m​b​e​r​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​a​g​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​(​s​t​a​r​t​s​ ​a​t​ ​1​)
+							 */
+							longDesc: string
+						}
+						per_page: {
+							/**
+							 * P​e​r​ ​P​a​g​e
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​p​e​r​ ​p​a​g​e​ ​(​d​e​f​a​u​l​t​:​ ​1​0​0​)
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​t​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​a​c​r​o​s​s​ ​a​l​l​ ​p​a​g​e​s​ ​(​d​e​f​a​u​l​t​:​ ​5​0​0​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_collector: {
+					groups: {
+						/**
+						 * S​u​r​v​e​y​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * C​r​e​a​t​e​ ​C​o​l​l​e​c​t​o​r
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​c​o​l​l​e​c​t​o​r​ ​f​o​r​ ​a​ ​s​u​r​v​e​y
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​l​l​e​c​t​o​r​ ​(​d​i​s​t​r​i​b​u​t​i​o​n​ ​m​e​t​h​o​d​)​ ​f​o​r​ ​a​ ​s​u​r​v​e​y​ ​i​n​ ​S​u​r​v​e​y​M​o​n​k​e​y
+					 */
+					longDesc: string
+					options: {
+						survey_id: {
+							/**
+							 * S​u​r​v​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​r​v​e​y​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​c​o​l​l​e​c​t​o​r​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​u​r​v​e​y​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​c​o​l​l​e​c​t​o​r​ ​f​o​r
+							 */
+							longDesc: string
+						}
+						type: {
+							/**
+							 * C​o​l​l​e​c​t​o​r​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​c​o​l​l​e​c​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​c​o​l​l​e​c​t​o​r​ ​(​e​m​a​i​l​,​ ​w​e​b​l​i​n​k​,​ ​f​a​c​e​b​o​o​k​,​ ​o​r​ ​e​m​b​e​d​)
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * C​o​l​l​e​c​t​o​r​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​l​l​e​c​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​o​l​l​e​c​t​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_collectors: {
+					groups: {
+						/**
+						 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​C​o​l​l​e​c​t​o​r​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​c​o​l​l​e​c​t​o​r​s​ ​f​o​r​ ​a​ ​s​u​r​v​e​y
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​c​o​l​l​e​c​t​o​r​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​u​r​v​e​y
+					 */
+					longDesc: string
+					options: {
+						survey_id: {
+							/**
+							 * S​u​r​v​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​r​v​e​y​ ​t​o​ ​l​i​s​t​ ​c​o​l​l​e​c​t​o​r​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​u​r​v​e​y​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​c​o​l​l​e​c​t​o​r​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​l​l​e​c​t​o​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​t​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​l​l​e​c​t​o​r​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​(​d​e​f​a​u​l​t​:​ ​5​0​0​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_responses: {
+					groups: {
+						/**
+						 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​R​e​s​p​o​n​s​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​s​u​r​v​e​y​ ​r​e​s​p​o​n​s​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​r​e​s​p​o​n​s​e​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​u​r​v​e​y
+					 */
+					longDesc: string
+					options: {
+						survey_id: {
+							/**
+							 * S​u​r​v​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​r​v​e​y​ ​t​o​ ​l​i​s​t​ ​r​e​s​p​o​n​s​e​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​u​r​v​e​y​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​r​e​s​p​o​n​s​e​s​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​p​o​n​s​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​t​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​p​o​n​s​e​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​(​d​e​f​a​u​l​t​:​ ​5​0​0​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_response: {
+					groups: {
+						/**
+						 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​R​e​s​p​o​n​s​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​u​r​v​e​y​ ​r​e​s​p​o​n​s​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​u​r​v​e​y​ ​r​e​s​p​o​n​s​e​,​ ​o​p​t​i​o​n​a​l​l​y​ ​i​n​c​l​u​d​i​n​g​ ​f​u​l​l​ ​a​n​s​w​e​r​ ​d​e​t​a​i​l​s
+					 */
+					longDesc: string
+					options: {
+						survey_id: {
+							/**
+							 * S​u​r​v​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​r​v​e​y​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​u​r​v​e​y​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​r​e​s​p​o​n​s​e
+							 */
+							longDesc: string
+						}
+						response_id: {
+							/**
+							 * R​e​s​p​o​n​s​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​r​e​s​p​o​n​s​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							longDesc: string
+						}
+						include_answers: {
+							/**
+							 * I​n​c​l​u​d​e​ ​A​n​s​w​e​r​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​d​e​t​a​i​l​e​d​ ​a​n​s​w​e​r​ ​d​a​t​a
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​r​e​t​r​i​e​v​e​s​ ​t​h​e​ ​f​u​l​l​ ​r​e​s​p​o​n​s​e​ ​d​e​t​a​i​l​s​ ​i​n​c​l​u​d​i​n​g​ ​a​l​l​ ​q​u​e​s​t​i​o​n​ ​a​n​s​w​e​r​s
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_collector: {
+					groups: {
+						/**
+						 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​C​o​l​l​e​c​t​o​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​c​o​l​l​e​c​t​o​r​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​l​l​e​c​t​o​r
+					 */
+					longDesc: string
+					options: {
+						survey_id: {
+							/**
+							 * S​u​r​v​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​r​v​e​y​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​o​l​l​e​c​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​u​r​v​e​y​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​c​o​l​l​e​c​t​o​r
+							 */
+							longDesc: string
+						}
+						collector_id: {
+							/**
+							 * C​o​l​l​e​c​t​o​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​l​l​e​c​t​o​r​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​l​l​e​c​t​o​r​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_survey: {
+					groups: {
+						/**
+						 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​S​u​r​v​e​y
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​s​u​r​v​e​y​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​s​u​r​v​e​y​ ​i​n​c​l​u​d​i​n​g​ ​p​a​g​e​s​ ​a​n​d​ ​q​u​e​s​t​i​o​n​s
+					 */
+					longDesc: string
+					options: {
+						survey_id: {
+							/**
+							 * S​u​r​v​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​r​v​e​y​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​u​r​v​e​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_surveys: {
+					groups: {
+						/**
+						 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​S​u​r​v​e​y​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​s​u​r​v​e​y​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​s​u​r​v​e​y​s​ ​i​n​ ​y​o​u​r​ ​S​u​r​v​e​y​M​o​n​k​e​y​ ​a​c​c​o​u​n​t
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​s​u​r​v​e​y​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​t​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​s​u​r​v​e​y​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​(​d​e​f​a​u​l​t​:​ ​5​0​0​)
+							 */
+							longDesc: string
+						}
+					}
+				}
+				send_survey: {
+					groups: {
+						/**
+						 * S​u​r​v​e​y​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * S​e​n​d​ ​S​u​r​v​e​y
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​s​u​r​v​e​y​ ​i​n​v​i​t​a​t​i​o​n​ ​v​i​a​ ​c​o​l​l​e​c​t​o​r
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​s​u​r​v​e​y​ ​i​n​v​i​t​a​t​i​o​n​ ​t​o​ ​r​e​c​i​p​i​e​n​t​s​ ​v​i​a​ ​a​n​ ​e​m​a​i​l​ ​c​o​l​l​e​c​t​o​r
+					 */
+					longDesc: string
+					options: {
+						survey_id: {
+							/**
+							 * S​u​r​v​e​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​r​v​e​y​ ​t​o​ ​s​e​n​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​u​r​v​e​y​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​e​n​d
+							 */
+							longDesc: string
+						}
+						collector_id: {
+							/**
+							 * C​o​l​l​e​c​t​o​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​c​o​l​l​e​c​t​o​r​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​m​a​i​l​ ​c​o​l​l​e​c​t​o​r​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​s​u​r​v​e​y​ ​t​h​r​o​u​g​h
+							 */
+							longDesc: string
+						}
+						subject: {
+							/**
+							 * E​m​a​i​l​ ​S​u​b​j​e​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​f​o​r​ ​t​h​e​ ​i​n​v​i​t​a​t​i​o​n​ ​e​m​a​i​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​u​b​j​e​c​t​ ​l​i​n​e​ ​t​h​a​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​i​n​ ​t​h​e​ ​i​n​v​i​t​a​t​i​o​n​ ​e​m​a​i​l
+							 */
+							longDesc: string
+						}
+						body_text: {
+							/**
+							 * E​m​a​i​l​ ​B​o​d​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​b​o​d​y​ ​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​i​n​v​i​t​a​t​i​o​n​ ​e​m​a​i​l
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​e​s​s​a​g​e​ ​b​o​d​y​ ​t​h​a​t​ ​w​i​l​l​ ​a​p​p​e​a​r​ ​i​n​ ​t​h​e​ ​i​n​v​i​t​a​t​i​o​n​ ​e​m​a​i​l
+							 */
+							longDesc: string
+						}
+						recipient_emails: {
+							/**
+							 * R​e​c​i​p​i​e​n​t​ ​E​m​a​i​l​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​r​e​c​i​p​i​e​n​t​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​s​u​r​v​e​y​ ​i​n​v​i​t​a​t​i​o​n​ ​t​o
 							 */
 							longDesc: string
 						}
@@ -170896,6 +171599,18 @@ export type TranslationFunctions = {
 			}
 		}
 		Dynamics: {
+			/**
+			 * Microsoft Dynamics 365
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Connect to Microsoft Dynamics 365 CRM and ERP
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Microsoft Dynamics 365 is a suite of enterprise resource planning (ERP) and customer relationship management (CRM) applications. This integration enables you to automate workflows triggered by Dynamics 365 events such as new accounts, contacts, leads, opportunities, and orders.
+			 */
+			longDesc: () => LocalizedString
 			groups: {
 				/**
 				 * CRM & Sales Management
@@ -208574,6 +209289,34 @@ export type TranslationFunctions = {
 			 * Connect your ActiveCampaign account to automate email marketing campaigns, manage contacts, and track customer interactions. Create and send targeted email campaigns, manage contact lists, set up automation workflows, and analyze campaign performance all from within Qore.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to ActiveCampaign
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect your ActiveCampaign account, you will need your **Instance URL** and **API Key**.
+		
+			## How to Get Your Credentials
+		
+			### Instance URL
+			Your ActiveCampaign account instance URL (e.g., `https://<your_account>.activehosted.com`)
+		
+			1. Go to your ActiveCampaign account settings
+			2. Navigate to Developer settings
+			3. Copy the URL value
+		
+			### API Key
+			Your ActiveCampaign account API key for authentication
+		
+			1. Go to your ActiveCampaign account settings
+			2. Navigate to Developer settings
+			3. Copy the API Key value
+		
+			Both credentials can be found in the same location within your ActiveCampaign Developer settings.
+				 */
+				content: () => LocalizedString
+			}
 			triggers: {
 				contact_added_to_list: {
 					/**
@@ -221932,6 +222675,669 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Select which dispute event should trigger this webhook. Each event represents a different stage in the dispute resolution process.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		SurveyMonkey: {
+			/**
+			 * SurveyMonkey
+			 */
+			displayName: () => LocalizedString
+			groups: {
+				/**
+				 * Survey & Feedback
+				 */
+				'0': () => LocalizedString
+			}
+			/**
+			 * Online survey platform for collecting feedback and responses
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect your SurveyMonkey account to automate survey management, collect responses, and manage contacts. Create collectors, send surveys, retrieve responses, and set up webhooks for real-time response notifications all from within Qore.
+			 */
+			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to SurveyMonkey
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect your SurveyMonkey account, you will need to authenticate using OAuth2.
+		
+			## Authentication Process
+		
+			1. Click the "Connect" button below
+			2. You will be redirected to SurveyMonkey to authorize the connection
+			3. Grant the required permissions for surveys, contacts, responses, collectors, and webhooks
+			4. You will be redirected back to complete the connection
+		
+			## Required Scopes
+		
+			- surveys_read, surveys_write - Manage surveys
+			- contacts_read, contacts_write - Manage contacts
+			- responses_read, responses_read_detail - Read survey responses
+			- collectors_read, collectors_write - Manage collectors
+			- webhooks_read, webhooks_write - Set up response webhooks
+				 */
+				content: () => LocalizedString
+			}
+			triggers: {
+				new_response: {
+					/**
+					 * New Response
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new survey response is completed
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a respondent completes a survey. The webhook payload includes basic response information. Use the "Get Response" action to fetch detailed response data including answers.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						survey_id: {
+							/**
+							 * Survey
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The survey to monitor for new responses
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the specific survey that you want to monitor for completed responses
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				create_contact: {
+					groups: {
+						/**
+						 * Contact Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Create Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new contact in SurveyMonkey with first name, last name, email, or phone number
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						first_name: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's first name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The first name of the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						last_name: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The last name of the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The email address for the contact (either email or phone number is required)
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone_number: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The phone number for the contact (either email or phone number is required)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_contacts: {
+					groups: {
+						/**
+						 * Data Retrieval
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Contacts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of contacts
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a paginated list of contacts from SurveyMonkey
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						page: {
+							/**
+							 * Page
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Page number to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The page number for pagination (starts at 1)
+							 */
+							longDesc: () => LocalizedString
+						}
+						per_page: {
+							/**
+							 * Per Page
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of contacts per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of contacts to return per page (default: 100)
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of contacts to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum total number of contacts to retrieve across all pages (default: 500)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_collector: {
+					groups: {
+						/**
+						 * Survey Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Create Collector
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a collector for a survey
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new collector (distribution method) for a survey in SurveyMonkey
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						survey_id: {
+							/**
+							 * Survey
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The survey to create a collector for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the survey that you want to create a collector for
+							 */
+							longDesc: () => LocalizedString
+						}
+						type: {
+							/**
+							 * Collector Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The type of collector
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the type of collector (email, weblink, facebook, or embed)
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Collector Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the collector
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A descriptive name for the collector
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_collectors: {
+					groups: {
+						/**
+						 * Data Retrieval
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Collectors
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve collectors for a survey
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a paginated list of collectors for a specific survey
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						survey_id: {
+							/**
+							 * Survey
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The survey to list collectors for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the survey to retrieve collectors from
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of collectors to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum total number of collectors to retrieve (default: 500)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_responses: {
+					groups: {
+						/**
+						 * Data Retrieval
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Responses
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve survey responses
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a paginated list of responses for a specific survey
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						survey_id: {
+							/**
+							 * Survey
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The survey to list responses for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the survey to retrieve responses from
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of responses to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum total number of responses to retrieve (default: 500)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_response: {
+					groups: {
+						/**
+						 * Data Retrieval
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get Response
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a specific survey response
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific survey response, optionally including full answer details
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						survey_id: {
+							/**
+							 * Survey
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The survey containing the response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the survey that contains the response
+							 */
+							longDesc: () => LocalizedString
+						}
+						response_id: {
+							/**
+							 * Response ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the response to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the response you want to retrieve
+							 */
+							longDesc: () => LocalizedString
+						}
+						include_answers: {
+							/**
+							 * Include Answers
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include detailed answer data
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, retrieves the full response details including all question answers
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_collector: {
+					groups: {
+						/**
+						 * Data Retrieval
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get Collector
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve collector details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific collector
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						survey_id: {
+							/**
+							 * Survey
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The survey containing the collector
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the survey that contains the collector
+							 */
+							longDesc: () => LocalizedString
+						}
+						collector_id: {
+							/**
+							 * Collector
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The collector to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the collector you want to get detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_survey: {
+					groups: {
+						/**
+						 * Data Retrieval
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get Survey
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve survey details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific survey including pages and questions
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						survey_id: {
+							/**
+							 * Survey
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The survey to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the survey you want to get detailed information for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_surveys: {
+					groups: {
+						/**
+						 * Data Retrieval
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Surveys
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of surveys
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a paginated list of all surveys in your SurveyMonkey account
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of surveys to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum total number of surveys to retrieve (default: 500)
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				send_survey: {
+					groups: {
+						/**
+						 * Survey Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Send Survey
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send survey invitation via collector
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a survey invitation to recipients via an email collector
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						survey_id: {
+							/**
+							 * Survey
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The survey to send
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the survey you want to send
+							 */
+							longDesc: () => LocalizedString
+						}
+						collector_id: {
+							/**
+							 * Collector
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The email collector to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the email collector to send the survey through
+							 */
+							longDesc: () => LocalizedString
+						}
+						subject: {
+							/**
+							 * Email Subject
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The subject line for the invitation email
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The subject line that will appear in the invitation email
+							 */
+							longDesc: () => LocalizedString
+						}
+						body_text: {
+							/**
+							 * Email Body
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The body text for the invitation email
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The message body that will appear in the invitation email
+							 */
+							longDesc: () => LocalizedString
+						}
+						recipient_emails: {
+							/**
+							 * Recipient Emails
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of recipient email addresses
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of email addresses to send the survey invitation to
 							 */
 							longDesc: () => LocalizedString
 						}

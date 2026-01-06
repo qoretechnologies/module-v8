@@ -103,6 +103,7 @@ import { Debugger, DebugLevels } from '../utils/Debugger';
 import sendgrid from '../apps/sendgrid';
 import helpscout from '../apps/helpscout';
 import front from '../apps/front';
+import surveyMonkey from '../apps/survey-monkey';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -201,6 +202,7 @@ const NEW_APPS = {
   zohocrm,
   zoom,
   front,
+  surveyMonkey,
 } as const;
 
 const EXISTING_APPS = {
