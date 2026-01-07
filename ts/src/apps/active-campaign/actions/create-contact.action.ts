@@ -1,9 +1,10 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_APP_NAME, ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient } from '../helpers/constants';
+import { activeCampaignClient } from '../helpers/constants';
 import { omit } from 'lodash';
 import { mapActiveCampaignContactCustomFieldsToQoreOptions } from '../helpers/get-custom-field-type';
+import { CreateUpdateContactResponseType } from '../response-types';
 
 const action = 'create_contact';
 
@@ -72,23 +73,20 @@ const createContact = QoreAppCreator.createLocalizedAction<typeof options>({
     }));
 
     try {
-      const response = await activeCampaignApiClient<{
+      const response = await activeCampaignClient.post<{
         fieldValues: Record<string, any>[];
         contact: { links: Record<string, any> };
-      }>({
-        token,
-        url: instance_url,
-        method: 'POST',
-        path: `contacts`,
-        body: {
-          contact: {
-            email,
-            ...(firstName && { firstName }),
-            ...(lastName && { lastName }),
-            ...(phone && { phone }),
-            ...(fields?.length && { fields }),
-          },
+      }>(`contacts`, {
+        contact: {
+          email,
+          ...(firstName && { firstName }),
+          ...(lastName && { lastName }),
+          ...(phone && { phone }),
+          ...(fields?.length && { fields }),
         },
+      }, {
+        token,
+        baseUrl: instance_url,
       });
 
       return {
@@ -99,50 +97,7 @@ const createContact = QoreAppCreator.createLocalizedAction<typeof options>({
       throw new ActiveCampaignError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
     }
   },
-  response_type: {
-    type: 'hash',
-    fields: {
-      fieldValues: {
-        type: {
-          type: 'list',
-          element_type: {
-            type: 'hash',
-            fields: {
-              contact: { type: 'string' },
-              field: { type: 'string' },
-              value: { type: 'string' },
-              cdate: { type: 'string' },
-              udate: { type: 'string' },
-              links: {
-                type: {
-                  type: 'hash',
-                  fields: {
-                    owner: { type: 'string' },
-                    field: { type: 'string' },
-                  },
-                },
-              },
-              id: { type: 'string' },
-              owner: { type: 'string' },
-            },
-          },
-        },
-      },
-      contact: {
-        type: {
-          type: 'hash',
-          fields: {
-            email: { type: 'string' },
-            cdate: { type: 'string' },
-            udate: { type: 'string' },
-            orgid: { type: 'string' },
-            id: { type: 'string' },
-            organization: { type: 'string' },
-          },
-        },
-      },
-    },
-  },
+  response_type: CreateUpdateContactResponseType,
 });
 
 export default createContact;

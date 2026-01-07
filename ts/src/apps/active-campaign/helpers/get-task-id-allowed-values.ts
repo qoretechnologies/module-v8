@@ -1,7 +1,7 @@
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_CONN_OPTIONS } from '../constants';
-import { fetchActiveCampaignAllowedValues } from './constants';
+import { activeCampaignClient } from './constants';
 type ActiveCampaignItem = {
   id: string;
   title: string;
@@ -27,11 +27,11 @@ export const getActiveCampaignTaskAllowedValues: TQoreGetAllowedValuesFunction<
     connectionFields: ['token', 'instance_url'],
   });
 
-  return await fetchActiveCampaignAllowedValues<ActiveCampaignItem>({
-    token,
-    url: instance_url,
+  return await activeCampaignClient.fetchAllowedValues<ActiveCampaignItem>({
     path: 'dealTasks',
-    object: 'dealTasks',
+    token,
+    baseUrl: instance_url,
+    itemsPath: 'dealTasks',
     mapItemToAllowedValue: mapActiveCampaignItemToAllowedValue,
   });
 };

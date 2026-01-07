@@ -3,7 +3,7 @@ import axios from 'axios';
 import { get } from 'lodash';
 import { delay } from '../../../global/helpers';
 import { Debugger } from '../../../utils/Debugger';
-import { PIPEDRIVE_APP_NAME } from '../constants';
+import { PIPEDRIVE_APP_NAME } from '../base-constants';
 
 export const PIPEDRIVE_ALLOWED_VALUES_TIMEOUT = 60_000;
 export const PIPEDRIVE_ALLOWED_VALUES_FETCH_DELAY = 300;

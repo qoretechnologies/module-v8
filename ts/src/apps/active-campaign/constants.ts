@@ -1,9 +1,12 @@
 import { TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 
 export class ActiveCampaignError extends Error {
-  constructor(message: string) {
+  public errorCode?: string;
+
+  constructor(message: string, errorCode?: string) {
     super(message);
     this.name = 'ActiveCampaignError';
+    this.errorCode = errorCode;
   }
 }
 

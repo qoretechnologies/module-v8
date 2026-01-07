@@ -1,8 +1,9 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_APP_NAME, ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient } from '../helpers/constants';
+import { activeCampaignClient } from '../helpers/constants';
 import { getActiveCampaignDealAllowedValues } from '../helpers/get-deal-id-allowed-values';
+import { DealResponseType } from '../response-types';
 
 const action = 'get_deal';
 
@@ -28,13 +29,11 @@ const getDeal = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      const response = await activeCampaignApiClient<{
+      const response = await activeCampaignClient.get<{
         deal: Record<string, any>;
-      }>({
+      }>(`deals/${id}`, {
         token,
-        url: instance_url,
-        method: 'GET',
-        path: `deals/${id}`,
+        baseUrl: instance_url,
       });
 
       return response.deal;
@@ -42,56 +41,7 @@ const getDeal = QoreAppCreator.createLocalizedAction<typeof options>({
       throw new ActiveCampaignError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
     }
   },
-  response_type: {
-    type: 'hash',
-    fields: {
-      owner: { type: 'string' },
-      contact: { type: 'string' },
-      organization: { type: 'string' },
-      group: { type: 'string' },
-      stage: { type: 'string' },
-      title: { type: 'string' },
-      description: { type: 'string' },
-      percent: { type: 'string' },
-      cdate: { type: 'string' },
-      mdate: { type: 'string' },
-      nextdate: { type: 'string' },
-      nexttaskid: { type: 'string' },
-      value: { type: 'string' },
-      currency: { type: 'string' },
-      winProbability: { type: 'number' },
-      winProbabilityMdate: { type: 'string' },
-      status: { type: 'string' },
-      activitycount: { type: 'string' },
-      nextdealid: { type: 'string' },
-      edate: { type: 'string' },
-      links: {
-        type: {
-          type: 'hash',
-          fields: {
-            dealActivities: { type: 'string' },
-            contact: { type: 'string' },
-            contactDeals: { type: 'string' },
-            group: { type: 'string' },
-            nextTask: { type: 'string' },
-            notes: { type: 'string' },
-            account: { type: 'string' },
-            customerAccount: { type: 'string' },
-            organization: { type: 'string' },
-            owner: { type: 'string' },
-            scoreValues: { type: 'string' },
-            stage: { type: 'string' },
-            tasks: { type: 'string' },
-            dealCustomFieldData: { type: 'string' },
-          },
-        },
-      },
-      id: { type: 'string' },
-      isDisabled: { type: 'bool' },
-      account: { type: 'string' },
-      customerAccount: { type: 'string' },
-    },
-  },
+  response_type: DealResponseType,
 });
 
 export default getDeal;

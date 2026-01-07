@@ -1,5 +1,5 @@
 import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
-import { ZENDESK_APP_NAME } from '..';
+import { ZENDESK_APP_NAME } from '../app-constants';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { ZendeskError } from '../constants';
 import { zendeskApiClient } from '../helpers/constants';

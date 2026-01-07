@@ -1,7 +1,7 @@
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_CONN_OPTIONS, ActiveCampaignError } from '../constants';
-import { fetchActiveCampaignAllowedValues } from './constants';
+import { activeCampaignClient } from './constants';
 type ActiveCampaignItem = {
   id: string;
   tag: string;
@@ -36,11 +36,11 @@ export const getActiveCampaignTagAllowedValues: TQoreGetAllowedValuesFunction<
     connectionFields: ['token', 'instance_url'],
   });
 
-  return await fetchActiveCampaignAllowedValues<ActiveCampaignItem>({
-    token,
-    url: instance_url,
+  return await activeCampaignClient.fetchAllowedValues<ActiveCampaignItem>({
     path: 'tags',
-    object: 'tags',
+    token,
+    baseUrl: instance_url,
+    itemsPath: 'tags',
     mapItemToAllowedValue: mapActiveCampaignItemToAllowedValue,
   });
 };
@@ -58,12 +58,11 @@ export const getActiveCampaignContactTagAllowedValues: TQoreGetAllowedValuesFunc
 
   const allTags = await getActiveCampaignTagAllowedValues(context);
 
-  return await fetchActiveCampaignAllowedValues<ActiveCampaignItem>({
-    token,
-    url: instance_url,
+  return await activeCampaignClient.fetchAllowedValues<ActiveCampaignItem>({
     path: `contacts/${contact}/contactTags`,
-    object: 'contactTags',
-
+    token,
+    baseUrl: instance_url,
+    itemsPath: 'contactTags',
     mapItemToAllowedValue: mapActiveCampaignContactTagToAllowedValue(allTags),
   });
 };

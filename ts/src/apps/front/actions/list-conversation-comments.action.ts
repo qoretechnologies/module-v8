@@ -5,8 +5,8 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { fetchFrontPaginatedRecords } from '../helpers/constants';
 import { formatFrontResponse } from '../helpers/format-response';
 import { getFrontConversationAllowedValues } from '../helpers/get-conversation-allowed-values';
 import { FrontCommentResponseType } from '../response-types/comment';
@@ -48,10 +48,9 @@ const listFrontConversationComments = QoreAppCreator.createLocalizedAction<typeo
     const { limit } = obj || {};
 
     try {
-      const comments = await fetchFrontPaginatedRecords<any, Record<string, any>>({
-        token,
+      const comments = await frontClient.fetchPaginated<Record<string, any>>({
         path: `conversations/${conversationId}/comments`,
-        method: 'GET',
+        token,
         maxResults: limit || 50,
       });
 

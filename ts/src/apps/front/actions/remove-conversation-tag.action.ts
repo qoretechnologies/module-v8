@@ -5,8 +5,8 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { frontApiClient } from '../helpers/constants';
 import { getFrontConversationAllowedValues } from '../helpers/get-conversation-allowed-values';
 import { getFrontTagAllowedValues } from '../helpers/get-tag-allowed-values';
 
@@ -49,15 +49,9 @@ const removeFrontConversationTag = QoreAppCreator.createLocalizedAction<typeof o
     });
 
     try {
-      const body = {
-        tag_ids: tagIds,
-      };
-
-      await frontApiClient({
+      await frontClient.delete(`conversations/${conversationId}/tags`, {
         token,
-        path: `conversations/${conversationId}/tags`,
-        method: 'DELETE',
-        body,
+        body: { tag_ids: tagIds },
       });
 
       return {

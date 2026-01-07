@@ -1,7 +1,8 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_APP_NAME, ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient } from '../helpers/constants';
+import { activeCampaignClient } from '../helpers/constants';
+import { TagResponseType } from '../response-types';
 
 const action = 'list_tags';
 
@@ -36,18 +37,15 @@ const listTags = QoreAppCreator.createLocalizedAction<typeof options>({
     const { limit = 20, offset = 0, search } = obj || {};
 
     try {
-      const response = await activeCampaignApiClient({
+      const response = await activeCampaignClient.get(`tags`, {
         token,
-        url: instance_url,
-        method: 'GET',
+        baseUrl: instance_url,
         params: {
           limit: limit.toString(),
           offset: offset.toString(),
           ...(search && { search }),
         },
-        path: `tags`,
       });
-
       return response;
     } catch (error) {
       throw new ActiveCampaignError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
@@ -59,24 +57,7 @@ const listTags = QoreAppCreator.createLocalizedAction<typeof options>({
       tags: {
         type: {
           type: 'list',
-          element_type: {
-            type: 'hash',
-            fields: {
-              tagType: { type: 'string' },
-              tag: { type: 'string' },
-              description: { type: 'string' },
-              cdate: { type: 'string' },
-              links: {
-                type: {
-                  type: 'hash',
-                  fields: {
-                    contactGoalTags: { type: 'string' },
-                  },
-                },
-              },
-              id: { type: 'string' },
-            },
-          },
+          element_type: TagResponseType,
         },
       },
       meta: {

@@ -1,8 +1,9 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_APP_NAME, ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient } from '../helpers/constants';
+import { activeCampaignClient } from '../helpers/constants';
 import { getActiveCampaignAccountAllowedValues } from '../helpers/get-account-id-allowed-values';
+import { AccountResponseType } from '../response-types';
 
 const action = 'get_account';
 
@@ -28,11 +29,9 @@ const getAccount = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      const response = await activeCampaignApiClient<{ account: Record<string, any> }>({
+      const response = await activeCampaignClient.get<{ account: Record<string, any> }>(`accounts/${id}`, {
         token,
-        url: instance_url,
-        method: 'GET',
-        path: `accounts/${id}`,
+        baseUrl: instance_url,
       });
 
       return response.account;
@@ -40,22 +39,7 @@ const getAccount = QoreAppCreator.createLocalizedAction<typeof options>({
       throw new ActiveCampaignError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
     }
   },
-  response_type: {
-    type: 'hash',
-    fields: {
-      name: { type: 'string' },
-      accountUrl: { type: 'string' },
-      createdTimestamp: { type: 'string' },
-      updatedTimestamp: { type: 'string' },
-      links: {
-        type: {
-          type: 'list',
-          element_type: { type: 'string' },
-        },
-      },
-      id: { type: 'string' },
-    },
-  },
+  response_type: AccountResponseType,
 });
 
 export default getAccount;

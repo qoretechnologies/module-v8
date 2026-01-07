@@ -5,8 +5,8 @@ import {
   TQoreType,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
+import { baserowClient } from '../client';
 import { BaserowError } from '../constants';
-import { baserowApiClient } from './constants';
 
 type TBaserowField = {
   id: number;
@@ -76,11 +76,9 @@ export const getBaserowTableFields = async (options: {
   try {
     const { tableId, token, url } = options;
 
-    const response = await baserowApiClient<TBaserowField[]>({
-      path: `database/fields/table/${tableId}`,
-      method: 'GET',
+    const response = await baserowClient.get<TBaserowField[]>(`database/fields/table/${tableId}`, {
       token,
-      url,
+      connectionOptions: { url },
     });
 
     return response;

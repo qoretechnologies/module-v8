@@ -3,7 +3,7 @@ import {
   TQoreAppWithActions,
   TQoreMappedOptions,
 } from '@qoretechnologies/ts-toolkit';
-import { actionsCatalogue } from '../../ActionsCatalogue';
+import { getOauth2ClientSecret } from '../../utils/oauth2-client-secret';
 import {
   buildActionsFromSwaggerSchema,
   mapActionsToApp,
@@ -67,7 +67,7 @@ export default (locale: Locales) =>
       data: 'json',
       oauth2_grant_type: 'authorization_code',
       oauth2_client_id: 'kmvUW6HHUljPnUfYqeRfy1c1AWcE3IqY',
-      oauth2_client_secret: actionsCatalogue.getOauth2ClientSecret(JIRA_APP_NAME),
+      oauth2_client_secret: getOauth2ClientSecret(JIRA_APP_NAME),
       oauth2_auth_url: 'https://auth.atlassian.com/authorize',
       oauth2_token_url: 'https://auth.atlassian.com/oauth/token',
       oauth2_auth_args: {

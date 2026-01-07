@@ -6,6 +6,10 @@ import { fetchZendeskPaginatedRecords } from '../constants';
 export const ZENDESK_SUPPORTED_TABLES = ['tickets', 'users', 'organizations'] as const;
 export type TZendeskTable = (typeof ZENDESK_SUPPORTED_TABLES)[number] | string;
 
+export const isCustomZendeskObject = (tableName: TZendeskTable): boolean => {
+  return ZENDESK_SUPPORTED_TABLES.includes(tableName as any) === false;
+};
+
 export const getZendeskTableList: TQoreGetTableListFunction = async (context) => {
   const { token, url } = getQoreContextRequiredValues({
     context,

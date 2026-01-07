@@ -5,8 +5,8 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { frontApiClient } from '../helpers/constants';
 import { getFrontConversationAllowedValues } from '../helpers/get-conversation-allowed-values';
 import { getFrontTeammateAllowedValues } from '../helpers/get-teammate-allowed-values';
 
@@ -49,16 +49,11 @@ const addFrontConversationFollowers = QoreAppCreator.createLocalizedAction<typeo
     });
 
     try {
-      const body = {
-        teammate_ids: teammateIds,
-      };
-
-      await frontApiClient({
-        token,
-        path: `conversations/${conversationId}/followers`,
-        method: 'POST',
-        body,
-      });
+      await frontClient.post(
+        `conversations/${conversationId}/followers`,
+        { teammate_ids: teammateIds },
+        { token }
+      );
 
       return {
         success: true,

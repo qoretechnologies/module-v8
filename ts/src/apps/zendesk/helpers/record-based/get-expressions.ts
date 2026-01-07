@@ -1,7 +1,7 @@
 import { TQoreSearchRecordsExpressions, EQoreExpressionGroups } from '@qoretechnologies/ts-toolkit';
 import { mapExpressionsToApp } from '../../../../global/helpers';
 import { Locales } from '../../../../i18n/i18n-types';
-import { ZENDESK_APP_NAME } from '../../index';
+import { ZENDESK_APP_NAME } from '../../app-constants';
 
 export const getZendeskExpressions = (locale: Locales): TQoreSearchRecordsExpressions => {
   return mapExpressionsToApp(

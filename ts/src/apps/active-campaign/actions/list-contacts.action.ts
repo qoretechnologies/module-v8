@@ -1,9 +1,10 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_APP_NAME, ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient } from '../helpers/constants';
+import { activeCampaignClient } from '../helpers/constants';
 import { getActiveCampaignFormAllowedValues } from '../helpers/get-form-id-allowed-values';
 import { getActiveCampaignListAllowedValues } from '../helpers/get-list-id-allowed-values';
+import { ContactListItemResponseType, MetaResponseType } from '../response-types';
 
 const action = 'list_contacts';
 
@@ -110,10 +111,9 @@ const listContacts = QoreAppCreator.createLocalizedAction<typeof options>({
     } = obj || {};
 
     try {
-      const response = await activeCampaignApiClient({
+      const response = await activeCampaignClient.get(`contacts`, {
         token,
-        url: instance_url,
-        method: 'GET',
+        baseUrl: instance_url,
         params: {
           limit: limit.toString(),
           offset: offset.toString(),
@@ -124,11 +124,9 @@ const listContacts = QoreAppCreator.createLocalizedAction<typeof options>({
           ...(listid && { listid }),
           ...(phone && { phone }),
           ...(search && { search }),
-          ...(status !== undefined && { status: status.toString() }),
+          ...(status !== undefined && { status }),
         },
-        path: `contacts`,
       });
-
       return response;
     } catch (error) {
       throw new ActiveCampaignError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
@@ -140,101 +138,10 @@ const listContacts = QoreAppCreator.createLocalizedAction<typeof options>({
       contacts: {
         type: {
           type: 'list',
-          element_type: {
-            type: 'hash',
-            fields: {
-              cdate: { type: 'string' },
-              email: { type: 'string' },
-              phone: { type: 'string' },
-              firstName: { type: 'string' },
-              lastName: { type: 'string' },
-              orgid: { type: 'string' },
-              segmentio_id: { type: 'string' },
-              bounced_hard: { type: 'string' },
-              bounced_soft: { type: 'string' },
-              bounced_date: { type: 'string' },
-              ip: { type: 'string' },
-              ua: { type: 'string' },
-              hash: { type: 'string' },
-              socialdata_lastcheck: { type: 'string' },
-              email_local: { type: 'string' },
-              email_domain: { type: 'string' },
-              sentcnt: { type: 'string' },
-              rating_tstamp: { type: 'string' },
-              gravatar: { type: 'string' },
-              deleted: { type: 'string' },
-              adate: { type: 'string' },
-              udate: { type: 'string' },
-              edate: { type: 'string' },
-              scoreValues: {
-                type: {
-                  type: 'list',
-                  element_type: { type: 'hash' },
-                },
-              },
-              accountContacts: {
-                type: {
-                  type: 'list',
-                  element_type: 'string',
-                },
-              },
-              links: {
-                type: {
-                  type: 'hash',
-                  fields: {
-                    bounceLogs: { type: 'string' },
-                    contactAutomations: { type: 'string' },
-                    contactData: { type: 'string' },
-                    contactGoals: { type: 'string' },
-                    contactLists: { type: 'string' },
-                    contactLogs: { type: 'string' },
-                    contactTags: { type: 'string' },
-                    contactDeals: { type: 'string' },
-                    deals: { type: 'string' },
-                    fieldValues: { type: 'string' },
-                    geoIps: { type: 'string' },
-                    notes: { type: 'string' },
-                    organization: { type: 'string' },
-                    plusAppend: { type: 'string' },
-                    trackingLogs: { type: 'string' },
-                    scoreValues: { type: 'string' },
-                  },
-                },
-              },
-              id: { type: 'string' },
-              organization: { type: 'string' },
-            },
-          },
+          element_type: ContactListItemResponseType,
         },
       },
-      meta: {
-        type: {
-          type: 'hash',
-          fields: {
-            total: { type: 'string' },
-            page_input: {
-              type: {
-                type: 'hash',
-                fields: {
-                  segmentid: { type: 'string' },
-                  formid: { type: 'number' },
-                  listid: { type: 'number' },
-                  tagid: { type: 'number' },
-                  limit: { type: 'number' },
-                  offset: { type: 'number' },
-                  search: { type: 'string' },
-                  sort: { type: 'string' },
-                  seriesid: { type: 'number' },
-                  waitid: { type: 'number' },
-                  status: { type: 'number' },
-                  forceQuery: { type: 'number' },
-                  cacheid: { type: 'string' },
-                },
-              },
-            },
-          },
-        },
-      },
+      meta: { type: MetaResponseType },
     },
   },
 });

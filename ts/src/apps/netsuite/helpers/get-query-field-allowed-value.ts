@@ -1,5 +1,5 @@
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
-import { NETSUITE_CONN_OPTIONS } from '../constants';
+import { NETSUITE_CONN_OPTIONS } from '../conn-options';
 import { fetchSuiteQlData } from './constants';
 import { normalizeName } from '../../../global/helpers';
 

@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_APP_NAME, ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient } from '../helpers/constants';
+import { activeCampaignClient } from '../helpers/constants';
 import { getActiveCampaignContactAllowedValues } from '../helpers/get-contact-id-allowed-values';
 import { getActiveCampaignContactTagAllowedValues } from '../helpers/get-tag-allowed-values';
 
@@ -36,11 +36,9 @@ const removeTagFromContact = QoreAppCreator.createLocalizedAction<typeof options
     });
 
     try {
-      const response = await activeCampaignApiClient({
-        token,
-        url: instance_url,
-        method: 'DELETE',
-        path: `contactTags/${tag}`,
+      const response = await activeCampaignClient.delete(`contactTags/${tag}`, {
+token,
+        baseUrl: instance_url
       });
 
       return response;

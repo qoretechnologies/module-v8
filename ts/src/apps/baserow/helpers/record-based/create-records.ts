@@ -4,8 +4,8 @@ import {
   mapColumnFormatToObject,
   mapObjectToColumnFormat,
 } from '../../../../global/helpers';
+import { baserowClient } from '../../client';
 import { BaserowError } from '../../constants';
-import { baserowApiClient } from '../constants';
 import { getBaserowTableIdByName } from './constants';
 
 export const createBaserowRecords: TQoreCreateRecordsFunction = async (
@@ -29,18 +29,17 @@ export const createBaserowRecords: TQoreCreateRecordsFunction = async (
     const tableId = await getBaserowTableIdByName({ token, url, tableName: table });
     const items = mapColumnFormatToObject(records);
 
-    const createdRecords = await baserowApiClient<{ items: Record<string, any>[] }>({
-      path: `database/rows/table/${tableId}/batch`,
-      method: 'POST',
-      token,
-      url,
-      params: {
-        user_field_names: 'true',
-      },
-      body: {
-        items,
-      },
-    });
+    const createdRecords = await baserowClient.post<{ items: Record<string, any>[] }>(
+      `database/rows/table/${tableId}/batch`,
+      { items },
+      {
+        token,
+        connectionOptions: { url },
+        params: {
+          user_field_names: 'true',
+        },
+      }
+    );
 
     return mapObjectToColumnFormat(createdRecords.items);
   } catch (error) {

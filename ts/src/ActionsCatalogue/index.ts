@@ -98,18 +98,17 @@ import zoom from '../apps/zoom';
 import { Log } from '../decorators/Logger';
 import L from '../i18n/i18n-node';
 import { Locales } from '../i18n/i18n-types';
-import { PiecesAppCatalogue } from '../pieces/piecesCatalogue';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import sendgrid from '../apps/sendgrid';
 import helpscout from '../apps/helpscout';
+import dropbox from '../apps/dropbox';
 import front from '../apps/front';
+import slack from '../apps/slack';
 import surveyMonkey from '../apps/survey-monkey';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
 }
-
-PiecesAppCatalogue.registerApps();
 
 export interface IQoreApi {
   registerApp: (app: IQoreApp) => void;
@@ -144,6 +143,7 @@ const NEW_APPS = {
   confluence,
   coppercrm,
   craft,
+  dropbox,
   esignature,
   facebookPages,
   figma,
@@ -202,6 +202,7 @@ const NEW_APPS = {
   zohocrm,
   zoom,
   front,
+  slack,
   surveyMonkey,
 } as const;
 
@@ -299,10 +300,6 @@ export class ActionsCatalogue {
   }
 
   public initializeCatalogue() {
-    Object.entries(PiecesAppCatalogue.apps).forEach(([appName, appDef]) => {
-      this.apps[appName] = appDef;
-    });
-
     Object.entries(NEW_APPS).forEach(
       ([appName, getApp]: [string, (locale: Locales) => TQoreAppWithActions]) => {
         const app = getApp(this.locale);

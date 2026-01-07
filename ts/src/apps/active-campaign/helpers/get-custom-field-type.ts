@@ -5,7 +5,7 @@ import {
   TQoreType,
 } from '@qoretechnologies/ts-toolkit';
 import { ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient, fetchActiveCampaignPaginatedRecords } from './constants';
+import { activeCampaignClient } from './constants';
 
 type TCustomField = {
   id: string;
@@ -60,20 +60,12 @@ export const fetchActiveCampaignAccountCustomFields = async (options: {
   url: string;
 }) => {
   try {
-    const fields = await fetchActiveCampaignPaginatedRecords<
-      {
-        accountCustomFieldMeta: TCustomField[];
-        meta: {
-          total: number;
-        };
-      },
-      TCustomField
-    >({
-      ...options,
-      method: 'GET',
-      maxResults: 500,
-      object: 'accountCustomFieldMeta',
+    const fields = await activeCampaignClient.fetchPaginated<TCustomField>({
       path: 'accountCustomFieldMeta',
+      token: options.token,
+      baseUrl: options.url,
+      itemsPath: 'accountCustomFieldMeta',
+      maxResults: 500,
     });
 
     return fields;
@@ -87,11 +79,9 @@ export const fetchActiveCampaignContactCustomFields = async (options: {
   url: string;
 }): Promise<TContactCustomFieldsResponse> => {
   try {
-    const fields = await activeCampaignApiClient<TContactCustomFieldsResponse>({
-      ...options,
-      method: 'GET',
-      path: 'fields',
-    });
+    const fields = await activeCampaignClient.get<TContactCustomFieldsResponse>('fields', {
+...options
+      });
 
     return fields;
   } catch (error) {

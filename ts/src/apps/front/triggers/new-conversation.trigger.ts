@@ -6,8 +6,8 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { fetchFrontPaginatedRecords } from '../helpers/constants';
 import { formatFrontResponse } from '../helpers/format-response';
 import { getFrontConversationCustomFieldDynamicResponseType } from '../helpers/get-custom-fields';
 import { getFrontInboxAllowedValues } from '../helpers/get-inbox-allowed-values';
@@ -116,10 +116,9 @@ const fetchLatestRecords = async (options: TFetchRowsOptions): Promise<Record<st
       params.q = `[{"and":[{"field":"statuses","match":"any","values":["${status}"]}]}]`;
     }
 
-    const conversations = await fetchFrontPaginatedRecords<any, Record<string, any>>({
-      token,
+    const conversations = await frontClient.fetchPaginated<Record<string, any>>({
       path,
-      method: 'GET',
+      token,
       maxResults: limit,
       params,
     });

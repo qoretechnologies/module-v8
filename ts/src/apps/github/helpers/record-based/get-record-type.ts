@@ -6,7 +6,9 @@ import {
 import { GitHubError } from '../../constants';
 import { getGitHubAssigneesAllowedValues } from '../get-assignee-allowed-values';
 import { getGitHubIssueLabelsAllowedValues } from '../get-issue-label-allowed-values';
-import { TGitHubTable } from './constants';
+
+export const GitHubTables = ['issues', 'pulls', 'releases', 'repositories'] as const;
+export type TGitHubTable = (typeof GitHubTables)[number];
 
 const commonFields = {
   id: {

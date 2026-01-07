@@ -2,7 +2,7 @@ import { TCustomConnOptions, TQoreGetAllowedValuesFunction } from '@qoretechnolo
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { AttioError } from '../constants';
 import { fetchAttioAllowedValues } from './client';
-import { TAttioTargetRecord } from './get-object-properties';
+import { TAttioTargetRecord } from './types';
 
 export const getReferenceAllowedValuesFunction = (
   targetObject: string

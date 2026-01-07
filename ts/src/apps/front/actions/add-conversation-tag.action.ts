@@ -5,8 +5,8 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { frontApiClient } from '../helpers/constants';
 import { getFrontConversationAllowedValues } from '../helpers/get-conversation-allowed-values';
 import { getFrontTagAllowedValues } from '../helpers/get-tag-allowed-values';
 
@@ -49,16 +49,7 @@ const addFrontConversationTag = QoreAppCreator.createLocalizedAction<typeof opti
     });
 
     try {
-      const body = {
-        tag_ids: tagIds,
-      };
-
-      await frontApiClient({
-        token,
-        path: `conversations/${conversationId}/tags`,
-        method: 'POST',
-        body,
-      });
+      await frontClient.post(`conversations/${conversationId}/tags`, { tag_ids: tagIds }, { token });
 
       return {
         success: true,

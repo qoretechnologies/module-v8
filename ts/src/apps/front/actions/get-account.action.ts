@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { frontApiClient } from '../helpers/constants';
 import { formatFrontResponse } from '../helpers/format-response';
 import { getFrontAccountAllowedValues } from '../helpers/get-account-allowed-values';
 import { FrontAccountResponseType } from '../response-types/account';
@@ -33,11 +33,7 @@ const getFrontAccount = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      const account = await frontApiClient<Record<string, any>>({
-        token,
-        path: `accounts/${accountId}`,
-        method: 'GET',
-      });
+      const account = await frontClient.get<Record<string, any>>(`accounts/${accountId}`, { token });
 
       return formatFrontResponse(account);
     } catch (error) {

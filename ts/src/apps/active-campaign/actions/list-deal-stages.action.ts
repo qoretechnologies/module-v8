@@ -1,7 +1,8 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
 import { ACTIVE_CAMPAIGN_APP_NAME, ActiveCampaignError } from '../constants';
-import { activeCampaignApiClient } from '../helpers/constants';
+import { activeCampaignClient } from '../helpers/constants';
+import { StageResponseType } from '../response-types';
 
 const action = 'list_deal_stages';
 
@@ -36,18 +37,15 @@ const listDealStages = QoreAppCreator.createLocalizedAction<typeof options>({
     const { limit = 20, offset = 0, title } = obj || {};
 
     try {
-      const response = await activeCampaignApiClient({
+      const response = await activeCampaignClient.get(`dealStages`, {
         token,
-        url: instance_url,
-        method: 'GET',
+        baseUrl: instance_url,
         params: {
-          limit: limit.toString(),
-          offset: offset.toString(),
+          limit,
+          offset,
           ...(title && { ['filters[title]']: title }),
         },
-        path: `dealStages`,
       });
-
       return response;
     } catch (error) {
       throw new ActiveCampaignError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
@@ -59,33 +57,7 @@ const listDealStages = QoreAppCreator.createLocalizedAction<typeof options>({
       dealStages: {
         type: {
           type: 'list',
-          element_type: {
-            type: 'hash',
-            fields: {
-              cardRegion1: { type: 'string' },
-              cardRegion2: { type: 'string' },
-              cardRegion3: { type: 'string' },
-              cardRegion4: { type: 'string' },
-              cardRegion5: { type: 'string' },
-              cdate: { type: 'string' },
-              color: { type: 'string' },
-              dealOrder: { type: 'string' },
-              group: { type: 'string' },
-              id: { type: 'string' },
-              links: {
-                type: {
-                  type: 'hash',
-                  fields: {
-                    group: { type: 'string' },
-                  },
-                },
-              },
-              order: { type: 'string' },
-              title: { type: 'string' },
-              udate: { type: 'string' },
-              width: { type: 'string' },
-            },
-          },
+          element_type: StageResponseType,
         },
       },
       meta: {

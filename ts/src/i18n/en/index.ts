@@ -87,6 +87,7 @@ import ZohoCRM from './apps/ZohoCRM';
 import Zoom from './apps/Zoom';
 import CopperCrm from './apps/CopperCrm';
 import Craft from './apps/Craft';
+import Slack from './apps/Slack';
 import SurveyMonkey from './apps/SurveyMonkey';
 
 const en = {
@@ -180,6 +181,7 @@ const en = {
     Brevo,
     GoogleTasks,
     PayPal,
+    Slack,
     SurveyMonkey,
     _testing: {
       triggers: {

@@ -5,7 +5,7 @@ import {
   TQoreAppWithActions,
   TQoreMappedOptions,
 } from '@qoretechnologies/ts-toolkit';
-import { actionsCatalogue } from '../../ActionsCatalogue';
+import { getOauth2ClientSecret } from '../../utils/oauth2-client-secret';
 import { createSwaggerPaths, mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
@@ -261,7 +261,7 @@ export default (locale: Locales) =>
       data: 'json',
       oauth2_grant_type: 'authorization_code',
       oauth2_client_id: 'a7aaad55-1fc1-4a14-90cd-d4a27cb84d32',
-      oauth2_client_secret: actionsCatalogue.getOauth2ClientSecret(ESIGNATURE_APP_NAME),
+      oauth2_client_secret: getOauth2ClientSecret(ESIGNATURE_APP_NAME),
       oauth2_auth_url: 'https://account-d.docusign.com/oauth/auth',
       oauth2_token_url: 'https://account-d.docusign.com/oauth/token',
       oauth2_scopes: ['impersonation', 'signature'],

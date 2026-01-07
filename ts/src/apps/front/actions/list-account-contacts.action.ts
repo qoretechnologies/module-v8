@@ -5,8 +5,8 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { fetchFrontPaginatedRecords } from '../helpers/constants';
 import { formatFrontResponse } from '../helpers/format-response';
 import { getFrontAccountAllowedValues } from '../helpers/get-account-allowed-values';
 import { FrontContactResponseType } from '../response-types/contact';
@@ -48,10 +48,9 @@ const listFrontAccountContacts = QoreAppCreator.createLocalizedAction<typeof opt
     const { limit } = obj || {};
 
     try {
-      const contacts = await fetchFrontPaginatedRecords<any, Record<string, any>>({
-        token,
+      const contacts = await frontClient.fetchPaginated<Record<string, any>>({
         path: `accounts/${accountId}/contacts`,
-        method: 'GET',
+        token,
         maxResults: limit || 50,
       });
 

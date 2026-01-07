@@ -41,7 +41,7 @@ export default (locale: Locales) =>
         const instance_url = context.conn_opts?.instance_url;
 
         return {
-          url: instance_url,
+          baseUrl: instance_url,
         };
       },
       url_from_option: 'instance_url',

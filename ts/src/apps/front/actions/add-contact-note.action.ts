@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { frontApiClient } from '../helpers/constants';
 import { formatFrontResponse } from '../helpers/format-response';
 import { getFrontContactAllowedValues } from '../helpers/get-contact-allowed-values';
 import { FrontContactNoteResponseType } from '../response-types/contact-note';
@@ -43,15 +43,14 @@ const addFrontContactNote = QoreAppCreator.createLocalizedAction<typeof options>
     });
 
     try {
-      const note = await frontApiClient<Record<string, any>>({
-        token,
-        path: `contacts/${contactId}/notes`,
-        method: 'POST',
-        body: {
+      const note = await frontClient.post<Record<string, any>>(
+        `contacts/${contactId}/notes`,
+        {
           body,
           author_id: authorId,
         },
-      });
+        { token }
+      );
 
       return formatFrontResponse(note);
     } catch (error) {

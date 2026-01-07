@@ -5,8 +5,8 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { frontApiClient } from '../helpers/constants';
 import { getFrontConversationAllowedValues } from '../helpers/get-conversation-allowed-values';
 import { getFrontTeammateAllowedValues } from '../helpers/get-teammate-allowed-values';
 
@@ -55,12 +55,7 @@ const updateFrontConversationAssignee = QoreAppCreator.createLocalizedAction<typ
         assignee_id: assigneeId || null,
       };
 
-      await frontApiClient({
-        token,
-        path: `conversations/${conversationId}/assignee`,
-        method: 'PUT',
-        body,
-      });
+      await frontClient.put(`conversations/${conversationId}/assignee`, body, { token });
 
       return {
         success: true,

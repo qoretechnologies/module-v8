@@ -1,5 +1,5 @@
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
-import { FRESHDESK_CONN_OPTIONS } from '../constants';
+import { FRESHDESK_CONN_OPTIONS } from '../conn-options';
 import { fetchFreshdeskAllowedValues } from './constants';
 
 type TFreshdeskAgent = {

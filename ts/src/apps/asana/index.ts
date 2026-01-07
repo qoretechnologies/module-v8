@@ -1,5 +1,4 @@
 import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
-import { actionsCatalogue } from '../../ActionsCatalogue';
 import {
   buildActionsFromSwaggerSchema,
   mapActionsToApp,
@@ -56,8 +55,6 @@ export default (locale: Locales) =>
       url: 'https://app.asana.com',
       data: 'json',
       oauth2_grant_type: 'authorization_code',
-      oauth2_client_id: '1208416840087775',
-      oauth2_client_secret: actionsCatalogue.getOauth2ClientSecret(ASANA_APP_NAME),
       oauth2_auth_url: 'https://app.asana.com/-/oauth_authorize',
       oauth2_token_url: 'https://app.asana.com/-/oauth_token',
       oauth2_scopes: ['default'],

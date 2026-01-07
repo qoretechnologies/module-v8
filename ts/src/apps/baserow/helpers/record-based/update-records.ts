@@ -1,7 +1,7 @@
 import { TQoreUpdateRecordsFunction } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
+import { baserowClient } from '../../client';
 import { BaserowError } from '../../constants';
-import { baserowApiClient, fetchBaserowPaginatedRecords } from '../constants';
 import { buildBaserowFilter } from './apply-where-condition';
 import { getBaserowTableIdByName } from './constants';
 
@@ -35,15 +35,12 @@ export const updateBaserowRecords: TQoreUpdateRecordsFunction = async (
       filterParams.filters = JSON.stringify(filterGroup);
     }
 
-    const recordsToUpdate = await fetchBaserowPaginatedRecords<
-      any,
-      { id: number; [key: string]: any }
-    >({
-      token,
-      url,
+    const recordsToUpdate = await baserowClient.fetchPaginated<{ id: number; [key: string]: any }>({
       path: `database/rows/table/${tableId}`,
+      token,
+      connectionOptions: { url },
       params: filterParams,
-      object: 'results',
+      itemsPath: 'results',
     });
 
     if (!recordsToUpdate || recordsToUpdate.length === 0) {
@@ -55,18 +52,17 @@ export const updateBaserowRecords: TQoreUpdateRecordsFunction = async (
       ...fields,
     }));
 
-    await baserowApiClient({
-      token,
-      url,
-      path: `database/rows/table/${tableId}/batch`,
-      method: 'PATCH',
-      params: {
-        user_field_names: 'true',
-      },
-      body: {
-        items,
-      },
-    });
+    await baserowClient.patch(
+      `database/rows/table/${tableId}/batch`,
+      { items },
+      {
+        token,
+        connectionOptions: { url },
+        params: {
+          user_field_names: 'true',
+        },
+      }
+    );
 
     return recordsToUpdate.length;
   } catch (error) {

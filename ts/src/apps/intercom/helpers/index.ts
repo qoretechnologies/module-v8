@@ -1,5 +1,5 @@
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { IntercomError } from '../constants';
+import { IntercomError } from '../error';
 
 export interface IFetchIntercomDataOptions {
   token: string;

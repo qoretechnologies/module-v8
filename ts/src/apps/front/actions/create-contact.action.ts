@@ -4,8 +4,8 @@ import {
   TQoreOptions,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { frontApiClient } from '../helpers/constants';
 import { formatFrontResponse } from '../helpers/format-response';
 import { getFrontContactCustomFieldDynamicType } from '../helpers/get-custom-fields';
 import { FrontContactResponseType } from '../response-types/contact';
@@ -89,12 +89,7 @@ const createFrontContact = QoreAppCreator.createLocalizedAction<typeof options>(
         ...(customFields && { custom_fields: customFields }),
       };
 
-      const contact = await frontApiClient<Record<string, any>>({
-        token,
-        path: 'contacts',
-        method: 'POST',
-        body,
-      });
+      const contact = await frontClient.post<Record<string, any>>('contacts', body, { token });
 
       return formatFrontResponse(contact);
     } catch (error) {

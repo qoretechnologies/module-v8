@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { frontApiClient } from '../helpers/constants';
 import { formatFrontResponse } from '../helpers/format-response';
 import { FrontMessageResponseType } from '../response-types/message';
 
@@ -31,11 +31,7 @@ const getFrontMessage = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      const message = await frontApiClient<Record<string, any>>({
-        token,
-        path: `messages/${messageId}`,
-        method: 'GET',
-      });
+      const message = await frontClient.get<Record<string, any>>(`messages/${messageId}`, { token });
 
       return formatFrontResponse(message);
     } catch (error) {

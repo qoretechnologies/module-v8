@@ -277,7 +277,7 @@ export abstract class QoreApiClient {
    */
   async delete<ResponseType = unknown>(
     path: string,
-    options?: BaseRequestOptions
+    options?: RequestOptionsWithBody
   ): Promise<ResponseType> {
     return this.request<ResponseType>({
       ...options,

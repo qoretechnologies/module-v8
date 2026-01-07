@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { baserowClient } from '../client';
 import { BASEROW_APP_NAME, BaserowError } from '../constants';
-import { baserowApiClient } from '../helpers/constants';
 
 const action = 'list_tables';
 
@@ -20,11 +20,9 @@ const listTables = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      const response = await baserowApiClient<{ id: string }[]>({
-        path: `database/tables/all-tables`,
-        method: 'GET',
+      const response = await baserowClient.get<{ id: string }[]>(`database/tables/all-tables`, {
         token,
-        url,
+        connectionOptions: { url },
       });
 
       return response;

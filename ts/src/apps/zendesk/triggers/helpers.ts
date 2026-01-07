@@ -1,5 +1,5 @@
 import { IQoreAppActionWithWebhookBase, QorusRequest } from '@qoretechnologies/ts-toolkit';
-import { ZENDESK_CONN_OPTIONS } from '..';
+import { ZENDESK_CONN_OPTIONS } from '../conn-options';
 
 export const createZendeskWebhookRegistrar = (
   webhookName: string,

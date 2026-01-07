@@ -5,8 +5,8 @@ import {
   TQoreResponseType,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { frontClient } from '../client';
 import { FRONT_APP_NAME, FrontError } from '../constants';
-import { frontApiClient } from '../helpers/constants';
 import { getFrontAccountAllowedValues } from '../helpers/get-account-allowed-values';
 import { getFrontContactAllowedValues } from '../helpers/get-contact-allowed-values';
 
@@ -49,14 +49,7 @@ const addFrontContactToAccount = QoreAppCreator.createLocalizedAction<typeof opt
     });
 
     try {
-      await frontApiClient({
-        token,
-        path: `accounts/${accountId}/contacts`,
-        method: 'POST',
-        body: {
-          contact_ids: contactIds,
-        },
-      });
+      await frontClient.post(`accounts/${accountId}/contacts`, { contact_ids: contactIds }, { token });
 
       return {
         success: true,

@@ -4,7 +4,7 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { PipedriveError } from '../constants';
+import { PipedriveError } from '../base-constants';
 import { getPipedriveObjectFields } from './get-object-fields';
 
 export const createGetPipedriveObjectPropertyAllowedValuesFunction = (
