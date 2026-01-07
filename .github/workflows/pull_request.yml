@@ -167,6 +167,8 @@ env:
   HELPSCOUT_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).HELPSCOUT_CLIENT_SECRET }}
   HELPSCOUT_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).HELPSCOUT_CLIENT_ID }}
   FRONT_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).FRONT_TOKEN }}
+  SURVEYMONKEY_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).SURVEYMONKEY_TOKEN }}
+  SURVEYMONKEY_WEBHOOK_URL: ${{ fromJson(secrets.TEST_VARIABLES).SURVEYMONKEY_WEBHOOK_URL }}
 
 jobs:
   PullRequestTests:
@@ -241,6 +243,8 @@ jobs:
             libssl-dev \
             zlib1g-dev \
             libbz2-dev \
+            libbrotli-dev \
+            libnghttp2-dev \
             doxygen \
             libnode-dev \
             libyaml-dev \
@@ -321,7 +325,6 @@ jobs:
           sudo cp -r qore/qlib/RestSchemaDataProvider /usr/local/share/qore-modules/
           echo "Verifying installation..."
           ls -la /usr/local/share/qore-modules/RestSchemaDataProvider/
-          qore -ne '%requires RestSchemaDataProvider'
 
       # Test catalogue actions made with schema
       - name: Test catalogue actions

@@ -4,6 +4,28 @@ const ActiveCampaignAppEn = {
   groups: ['Email & Email Marketing'],
   shortDesc: 'Email marketing automation and CRM platform',
   longDesc: `Connect your ActiveCampaign account to automate email marketing campaigns, manage contacts, and track customer interactions. Create and send targeted email campaigns, manage contact lists, set up automation workflows, and analyze campaign performance all from within Qore.`,
+  connectionMessage: {
+    title: 'Connect to ActiveCampaign',
+    content: `To connect your ActiveCampaign account, you will need your **Instance URL** and **API Key**.
+
+## How to Get Your Credentials
+
+### Instance URL
+Your ActiveCampaign account instance URL (e.g., \`https://<your_account>.activehosted.com\`)
+
+1. Go to your ActiveCampaign account settings
+2. Navigate to Developer settings
+3. Copy the URL value
+
+### API Key
+Your ActiveCampaign account API key for authentication
+
+1. Go to your ActiveCampaign account settings
+2. Navigate to Developer settings
+3. Copy the API Key value
+
+Both credentials can be found in the same location within your ActiveCampaign Developer settings.`,
+  },
   triggers: {
     contact_added_to_list: {
       displayName: 'Contact Added to List',

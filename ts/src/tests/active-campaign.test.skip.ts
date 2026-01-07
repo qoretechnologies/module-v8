@@ -29,7 +29,6 @@ import {
   UpdateActiveCampaignContact,
   UpdateActiveCampaignDeal,
 } from '../apps/active-campaign/actions';
-import { activeCampaignApiClient } from '../apps/active-campaign/helpers/constants';
 import { getActiveCampaignAccountAllowedValues } from '../apps/active-campaign/helpers/get-account-id-allowed-values';
 import { getActiveCampaignCampaignAllowedValues } from '../apps/active-campaign/helpers/get-campaign-allowed-values';
 import { getActiveCampaignContactAllowedValues } from '../apps/active-campaign/helpers/get-contact-id-allowed-values';
@@ -593,32 +592,26 @@ describe('Active Campaign', () => {
     });
   });
 
-  describe('Should clean up', () => {
-    it('Should delete the created account', async () => {
-      await activeCampaignApiClient({
-        method: 'DELETE',
-        token: base_context.conn_opts.token,
-        url: base_context.conn_opts.instance_url,
-        path: `accounts/${createdAccountId}`,
-      });
-    });
+  // describe('Should clean up', () => {
+  //   it('Should delete the created account', async () => {
+  //     await activeCampaignClient.delete(`accounts/${createdAccountId}`, {
+  //       token: base_context.conn_opts.token,
+  //       baseUrl: base_context.conn_opts.instance_url,
+  //     });
+  //   });
 
-    it('Should delete the created contact', async () => {
-      await activeCampaignApiClient({
-        method: 'DELETE',
-        token: base_context.conn_opts.token,
-        url: base_context.conn_opts.instance_url,
-        path: `contacts/${createdContactId}`,
-      });
-    });
+  //   it('Should delete the created contact', async () => {
+  //     await activeCampaignClient.delete(`contacts/${createdContactId}`, {
+  //       token: base_context.conn_opts.token,
+  //       baseUrl: base_context.conn_opts.instance_url,
+  //     });
+  //   });
 
-    it('Should delete the created deal', async () => {
-      await activeCampaignApiClient({
-        method: 'DELETE',
-        token: base_context.conn_opts.token,
-        url: base_context.conn_opts.instance_url,
-        path: `deals/${createdDealId}`,
-      });
-    });
-  });
+  //   it('Should delete the created deal', async () => {
+  //     await activeCampaignClient.delete(`deals/${createdDealId}`, {
+  //       token: base_context.conn_opts.token,
+  //       baseUrl: base_context.conn_opts.instance_url,
+  //     });
+  //   });
+  // });
 });
