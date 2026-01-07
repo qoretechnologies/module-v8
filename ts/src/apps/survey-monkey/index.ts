@@ -27,6 +27,6 @@ export default (locale: Locales) =>
       oauth2_auth_url: 'https://api.surveymonkey.com/oauth/authorize',
       oauth2_token_url: 'https://api.surveymonkey.com/oauth/token',
       ping_method: 'GET',
-      ping_path: '/users/me',
+      ping_path: 'users/me',
     },
   }) satisfies TQoreAppWithActions;
