@@ -1,0 +1,12 @@
+export class GoogleAnalyticsError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'GoogleAnalyticsError';
+  }
+}
+
+export const GOOGLE_ANALYTICS_APP_NAME = 'GoogleAnalytics';
+
+// Google Analytics logo - orange/yellow chart icon
+export const GOOGLE_ANALYTICS_APP_LOGO =
+  'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgPHBhdGggZmlsbD0iI0Y5QUIwMCIgZD0iTTU0IDMyYzAgMi4yMS0xLjc5IDQtNCA0cy00LTEuNzktNC00VjEyYzAtMi4yMSAxLjc5LTQgNC00czQgMS43OSA0IDR2MjB6Ii8+CiAgICA8cGF0aCBmaWxsPSIjRTM3NDAwIiBkPSJNMzYgNTJjMCAyLjIxLTEuNzkgNC00IDRzLTQtMS43OS00LTRWMTJjMC0yLjIxIDEuNzktNCA0LTRzNCAxLjc5IDQgNHY0MHoiLz4KICAgIDxwYXRoIGZpbGw9IiNFMzc0MDAiIGQ9Ik0xOCA1MmMwIDIuMjEtMS43OSA0LTQgNHMtNC0xLjc5LTQtNHYtMTJjMC0yLjIxIDEuNzktNCA0LTRzNCAxLjc5IDQgNHYxMnoiLz4KICA8L2c+Cjwvc3ZnPg==';

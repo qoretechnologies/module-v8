@@ -36,6 +36,7 @@ import Front from './apps/Front';
 import Gemini from './apps/Gemini';
 import Github from './apps/Github';
 import Gitlab from './apps/Gitlab';
+import GoogleAnalytics from './apps/GoogleAnalytics';
 import GoogleChat from './apps/GoogleChat';
 import GoogleContacts from './apps/GoogleContacts';
 import GoogleDocs from './apps/GoogleDocs';
@@ -124,6 +125,7 @@ const en = {
     Gemini,
     Gitlab,
     OpenRouter,
+    GoogleAnalytics,
     GoogleDocs,
     GoogleMeet,
     GoogleForms,
