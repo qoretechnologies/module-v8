@@ -96,9 +96,11 @@ describe('Google Analytics', () => {
 
       expect(result).toBeDefined();
       expect(result.row_count).toBeDefined();
-      expect(result.metric_headers).toBeDefined();
-      // metric_headers may be empty if no data, but should be an array
-      expect(Array.isArray(result.metric_headers)).toBe(true);
+      expect(Array.isArray(result.rows)).toBe(true);
+      // If there's data, rows should have named metric fields
+      if (result.rows.length > 0) {
+        expect(result.rows[0].activeUsers).toBeDefined();
+      }
     });
 
     it('Should run a report with dimensions', async () => {
@@ -120,9 +122,12 @@ describe('Google Analytics', () => {
       );
 
       expect(result).toBeDefined();
-      expect(result.dimension_headers).toBeDefined();
-      expect(result.dimension_headers.length).toBe(1);
-      expect(result.dimension_headers[0].name).toBe('country');
+      expect(Array.isArray(result.rows)).toBe(true);
+      // If there's data, rows should have named dimension and metric fields
+      if (result.rows.length > 0) {
+        expect(result.rows[0].country).toBeDefined();
+        expect(result.rows[0].activeUsers).toBeDefined();
+      }
     });
 
     it('Should run a report with limit and offset', async () => {
@@ -163,8 +168,12 @@ describe('Google Analytics', () => {
       );
 
       expect(result).toBeDefined();
-      expect(result.metric_headers).toBeDefined();
-      expect(result.metric_headers.length).toBe(1);
+      expect(result.row_count).toBeDefined();
+      expect(Array.isArray(result.rows)).toBe(true);
+      // If there are active users, rows should have the named metric field
+      if (result.rows.length > 0) {
+        expect(typeof result.rows[0].activeUsers).toBe('number');
+      }
     });
 
     it('Should support custom minute ranges', async () => {
@@ -186,7 +195,8 @@ describe('Google Analytics', () => {
       );
 
       expect(result).toBeDefined();
-      expect(result.metric_headers).toBeDefined();
+      expect(result.row_count).toBeDefined();
+      expect(Array.isArray(result.rows)).toBe(true);
     });
   });
 
@@ -258,6 +268,80 @@ describe('Google Analytics', () => {
       // API may return more dimensions/metrics than requested (all compatible ones)
       expect(result.summary.total_dimensions).toBeGreaterThanOrEqual(2);
       expect(result.summary.total_metrics).toBeGreaterThanOrEqual(2);
+    });
+  });
+
+  describe('Should test get_dynamic_response_type', () => {
+    it('Should return correct response type for run-report with metrics only', async () => {
+      const action = runReport as IQoreAppActionWithFunction;
+      expect(action.get_dynamic_response_type).toBeDefined();
+
+      const responseType = (await action.get_dynamic_response_type!({
+        opts: {
+          metrics: [{ name: 'activeUsers' }, { name: 'sessions' }],
+        },
+      })) as any;
+
+      expect(responseType).toBeDefined();
+      expect(responseType.type).toBe('hash');
+      expect(responseType.fields).toBeDefined();
+      expect(responseType.fields.row_count).toEqual({ type: 'integer' });
+      expect(responseType.fields.rows).toBeDefined();
+
+      // Check that rows element_type has the metric fields
+      const rowsType = responseType.fields.rows.type;
+      expect(rowsType.type).toBe('list');
+      expect(rowsType.element_type.type).toBe('hash');
+      expect(rowsType.element_type.fields.activeUsers).toEqual({ type: 'number' });
+      expect(rowsType.element_type.fields.sessions).toEqual({ type: 'number' });
+    });
+
+    it('Should return correct response type for run-report with dimensions and metrics', async () => {
+      const action = runReport as IQoreAppActionWithFunction;
+
+      const responseType = (await action.get_dynamic_response_type!({
+        opts: {
+          metrics: [{ name: 'activeUsers' }],
+          dimensions: [{ name: 'country' }, { name: 'city' }],
+        },
+      })) as any;
+
+      const rowsType = responseType.fields.rows.type;
+      expect(rowsType.element_type.fields.country).toEqual({ type: 'string' });
+      expect(rowsType.element_type.fields.city).toEqual({ type: 'string' });
+      expect(rowsType.element_type.fields.activeUsers).toEqual({ type: 'number' });
+    });
+
+    it('Should return correct response type for run-realtime-report', async () => {
+      const action = runRealtimeReport as IQoreAppActionWithFunction;
+      expect(action.get_dynamic_response_type).toBeDefined();
+
+      const responseType = (await action.get_dynamic_response_type!({
+        opts: {
+          metrics: [{ name: 'activeUsers' }],
+          dimensions: [{ name: 'country' }],
+        },
+      })) as any;
+
+      expect(responseType).toBeDefined();
+      expect(responseType.type).toBe('hash');
+      expect(responseType.fields.row_count).toEqual({ type: 'integer' });
+
+      const rowsType = responseType.fields.rows.type;
+      expect(rowsType.element_type.fields.country).toEqual({ type: 'string' });
+      expect(rowsType.element_type.fields.activeUsers).toEqual({ type: 'number' });
+    });
+
+    it('Should handle empty metrics/dimensions gracefully', async () => {
+      const action = runReport as IQoreAppActionWithFunction;
+
+      const responseType = (await action.get_dynamic_response_type!({
+        opts: {},
+      })) as any;
+
+      expect(responseType).toBeDefined();
+      const rowsType = responseType.fields.rows.type;
+      expect(rowsType.element_type.fields).toEqual({});
     });
   });
 });

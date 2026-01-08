@@ -1,12 +1,5 @@
-export interface IGoogleAnalyticsReportRow {
-  dimension_values: { value: string }[];
-  metric_values: { value: string }[];
-}
-
-export interface IGoogleAnalyticsReportHeader {
-  name: string;
-  type?: string;
-}
+/** Dynamic row with dimension and metric names as keys */
+export type IGoogleAnalyticsReportRow = Record<string, string | number>;
 
 export interface IGoogleAnalyticsReportMetadata {
   currency_code?: string;
@@ -22,11 +15,14 @@ export interface IGoogleAnalyticsPropertyQuota {
 
 export interface IGoogleAnalyticsRunReportResponse {
   row_count: number;
-  dimension_headers: IGoogleAnalyticsReportHeader[];
-  metric_headers: IGoogleAnalyticsReportHeader[];
   rows: IGoogleAnalyticsReportRow[];
   metadata?: IGoogleAnalyticsReportMetadata;
   property_quota?: IGoogleAnalyticsPropertyQuota;
+}
+
+export interface IGoogleAnalyticsRunRealtimeReportResponse {
+  row_count: number;
+  rows: IGoogleAnalyticsReportRow[];
 }
 
 export interface IGoogleAnalyticsDimensionMetadata {
