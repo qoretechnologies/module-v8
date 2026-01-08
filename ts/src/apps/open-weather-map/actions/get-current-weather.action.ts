@@ -138,7 +138,8 @@ const getCurrentWeather = QoreAppCreator.createLocalizedAction<
 
       return result;
     } catch (error) {
-      throw new OpenWeatherMapError(`Failed to get current weather: ${error.message || error}`);
+      const message = error instanceof Error ? error.message : String(error);
+      throw new OpenWeatherMapError(`Failed to get current weather: ${message}`);
     }
   },
 });

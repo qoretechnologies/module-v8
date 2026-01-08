@@ -146,7 +146,8 @@ const getForecast = QoreAppCreator.createLocalizedAction<
 
       return result;
     } catch (error) {
-      throw new OpenWeatherMapError(`Failed to get weather forecast: ${error.message || error}`);
+      const message = error instanceof Error ? error.message : String(error);
+      throw new OpenWeatherMapError(`Failed to get weather forecast: ${message}`);
     }
   },
 });

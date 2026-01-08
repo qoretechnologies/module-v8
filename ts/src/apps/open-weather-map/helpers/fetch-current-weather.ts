@@ -77,6 +77,7 @@ export const fetchCurrentWeather = async (
 
     return result;
   } catch (error) {
-    throw new OpenWeatherMapError(`Failed to fetch current weather: ${error.message || error}`);
+    const message = error instanceof Error ? error.message : String(error);
+    throw new OpenWeatherMapError(`Failed to fetch current weather: ${message}`);
   }
 };

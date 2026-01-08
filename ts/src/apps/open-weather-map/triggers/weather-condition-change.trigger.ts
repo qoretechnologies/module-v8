@@ -178,6 +178,12 @@ const WeatherConditionChange = QoreAppCreator.createLocalizedTrigger<
 
         const currentCondition = weather.weather[0]?.main;
 
+        // Skip if no weather condition data available
+        if (!currentCondition) {
+          await delayOrCancel(DEFAULT_TRIGGER_POLLING_INTERVAL, should_stop);
+          continue;
+        }
+
         // Only fire on condition change (not on initial poll)
         if (previousCondition !== null && currentCondition !== previousCondition) {
           // Apply filter if specified
