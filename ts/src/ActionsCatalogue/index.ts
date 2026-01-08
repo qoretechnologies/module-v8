@@ -72,6 +72,7 @@ import netsuite from '../apps/netsuite';
 import notion from '../apps/notion';
 import odoo from '../apps/odoo';
 import openrouter from '../apps/openrouter';
+import openWeatherMap from '../apps/open-weather-map';
 import outlook from '../apps/outlook';
 import paddle from '../apps/paddle';
 import patreon from '../apps/patreon';
@@ -179,6 +180,7 @@ const NEW_APPS = {
   notion,
   odoo,
   openrouter,
+  openWeatherMap,
   outlook,
   paddle,
   patreon,

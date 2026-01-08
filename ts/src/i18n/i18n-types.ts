@@ -40315,6 +40315,530 @@ type RootTranslation = {
 				}
 			}
 		}
+		OpenWeatherMap: {
+			/**
+			 * O​p​e​n​W​e​a​t​h​e​r​M​a​p
+			 */
+			displayName: string
+			groups: {
+				/**
+				 * W​e​a​t​h​e​r
+				 */
+				'0': string
+				/**
+				 * D​a​t​a​ ​&​ ​A​n​a​l​y​t​i​c​s
+				 */
+				'1': string
+			}
+			/**
+			 * A​c​c​e​s​s​ ​c​u​r​r​e​n​t​ ​w​e​a​t​h​e​r​ ​d​a​t​a​ ​a​n​d​ ​f​o​r​e​c​a​s​t​s​ ​f​o​r​ ​a​n​y​ ​l​o​c​a​t​i​o​n​ ​w​o​r​l​d​w​i​d​e
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​O​p​e​n​W​e​a​t​h​e​r​M​a​p​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​r​e​a​l​-​t​i​m​e​ ​w​e​a​t​h​e​r​ ​d​a​t​a​ ​a​n​d​ ​5​-​d​a​y​ ​f​o​r​e​c​a​s​t​s​ ​f​o​r​ ​a​n​y​ ​l​o​c​a​t​i​o​n​ ​o​n​ ​E​a​r​t​h​.​ ​G​e​t​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​w​e​a​t​h​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​t​e​m​p​e​r​a​t​u​r​e​,​ ​h​u​m​i​d​i​t​y​,​ ​w​i​n​d​ ​s​p​e​e​d​,​ ​p​r​e​s​s​u​r​e​,​ ​a​n​d​ ​w​e​a​t​h​e​r​ ​c​o​n​d​i​t​i​o​n​s​.​ ​S​u​p​p​o​r​t​ ​f​o​r​ ​m​u​l​t​i​p​l​e​ ​l​o​c​a​t​i​o​n​ ​i​n​p​u​t​ ​m​e​t​h​o​d​s​ ​(​c​i​t​y​ ​n​a​m​e​,​ ​c​o​o​r​d​i​n​a​t​e​s​,​ ​o​r​ ​z​i​p​ ​c​o​d​e​)​ ​a​n​d​ ​c​u​s​t​o​m​i​z​a​b​l​e​ ​u​n​i​t​s​ ​(​m​e​t​r​i​c​,​ ​i​m​p​e​r​i​a​l​,​ ​o​r​ ​s​t​a​n​d​a​r​d​)​.​ ​I​d​e​a​l​ ​f​o​r​ ​w​e​a​t​h​e​r​-​a​w​a​r​e​ ​a​p​p​l​i​c​a​t​i​o​n​s​,​ ​t​r​a​v​e​l​ ​p​l​a​n​n​i​n​g​,​ ​a​g​r​i​c​u​l​t​u​r​a​l​ ​m​o​n​i​t​o​r​i​n​g​,​ ​a​n​d​ ​l​o​c​a​t​i​o​n​-​b​a​s​e​d​ ​s​e​r​v​i​c​e​s​ ​w​i​t​h​i​n​ ​y​o​u​r​ ​Q​o​r​e​ ​w​o​r​k​f​l​o​w​s​.
+			 */
+			longDesc: string
+			actions: {
+				get_current_weather: {
+					/**
+					 * G​e​t​ ​C​u​r​r​e​n​t​ ​W​e​a​t​h​e​r
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​c​u​r​r​e​n​t​ ​w​e​a​t​h​e​r​ ​d​a​t​a​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​o​c​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​r​e​a​l​-​t​i​m​e​ ​w​e​a​t​h​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​t​e​m​p​e​r​a​t​u​r​e​,​ ​h​u​m​i​d​i​t​y​,​ ​w​i​n​d​ ​s​p​e​e​d​,​ ​p​r​e​s​s​u​r​e​,​ ​v​i​s​i​b​i​l​i​t​y​,​ ​a​n​d​ ​w​e​a​t​h​e​r​ ​c​o​n​d​i​t​i​o​n​s​ ​f​o​r​ ​a​n​y​ ​l​o​c​a​t​i​o​n​ ​w​o​r​l​d​w​i​d​e​.​ ​S​u​p​p​o​r​t​s​ ​l​o​o​k​u​p​ ​b​y​ ​c​i​t​y​ ​n​a​m​e​,​ ​g​e​o​g​r​a​p​h​i​c​ ​c​o​o​r​d​i​n​a​t​e​s​,​ ​o​r​ ​z​i​p​/​p​o​s​t​a​l​ ​c​o​d​e​.
+					 */
+					longDesc: string
+					options: {
+						location_type: {
+							/**
+							 * L​o​c​a​t​i​o​n​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​p​e​c​i​f​y​ ​t​h​e​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​h​o​w​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​p​e​c​i​f​y​ ​t​h​e​ ​l​o​c​a​t​i​o​n​:​ ​b​y​ ​c​i​t​y​ ​n​a​m​e​ ​(​e​.​g​.​,​ ​"​L​o​n​d​o​n​,​U​K​"​)​,​ ​g​e​o​g​r​a​p​h​i​c​ ​c​o​o​r​d​i​n​a​t​e​s​ ​(​l​a​t​i​t​u​d​e​/​l​o​n​g​i​t​u​d​e​)​,​ ​o​r​ ​z​i​p​/​p​o​s​t​a​l​ ​c​o​d​e​.
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * C​i​t​y​ ​n​a​m​e​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​c​o​u​n​t​r​y​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​c​i​t​y​ ​n​a​m​e​,​ ​o​p​t​i​o​n​a​l​l​y​ ​f​o​l​l​o​w​e​d​ ​b​y​ ​a​ ​c​o​m​m​a​ ​a​n​d​ ​t​h​e​ ​t​w​o​-​l​e​t​t​e​r​ ​c​o​u​n​t​r​y​ ​c​o​d​e​ ​(​e​.​g​.​,​ ​"​L​o​n​d​o​n​,​U​K​"​,​ ​"​N​e​w​ ​Y​o​r​k​,​U​S​"​,​ ​"​P​a​r​i​s​,​F​R​"​)​.​ ​T​h​e​ ​c​o​u​n​t​r​y​ ​c​o​d​e​ ​h​e​l​p​s​ ​d​i​s​a​m​b​i​g​u​a​t​e​ ​c​i​t​i​e​s​ ​w​i​t​h​ ​t​h​e​ ​s​a​m​e​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						lat: {
+							/**
+							 * L​a​t​i​t​u​d​e
+							 */
+							displayName: string
+							/**
+							 * G​e​o​g​r​a​p​h​i​c​ ​l​a​t​i​t​u​d​e​ ​c​o​o​r​d​i​n​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​l​a​t​i​t​u​d​e​ ​c​o​o​r​d​i​n​a​t​e​ ​o​f​ ​t​h​e​ ​l​o​c​a​t​i​o​n​ ​i​n​ ​d​e​c​i​m​a​l​ ​d​e​g​r​e​e​s​ ​(​e​.​g​.​,​ ​5​1​.​5​0​7​4​ ​f​o​r​ ​L​o​n​d​o​n​)​.​ ​V​a​l​i​d​ ​r​a​n​g​e​ ​i​s​ ​-​9​0​ ​t​o​ ​9​0​.
+							 */
+							longDesc: string
+						}
+						lon: {
+							/**
+							 * L​o​n​g​i​t​u​d​e
+							 */
+							displayName: string
+							/**
+							 * G​e​o​g​r​a​p​h​i​c​ ​l​o​n​g​i​t​u​d​e​ ​c​o​o​r​d​i​n​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​l​o​n​g​i​t​u​d​e​ ​c​o​o​r​d​i​n​a​t​e​ ​o​f​ ​t​h​e​ ​l​o​c​a​t​i​o​n​ ​i​n​ ​d​e​c​i​m​a​l​ ​d​e​g​r​e​e​s​ ​(​e​.​g​.​,​ ​-​0​.​1​2​7​8​ ​f​o​r​ ​L​o​n​d​o​n​)​.​ ​V​a​l​i​d​ ​r​a​n​g​e​ ​i​s​ ​-​1​8​0​ ​t​o​ ​1​8​0​.
+							 */
+							longDesc: string
+						}
+						zip: {
+							/**
+							 * Z​i​p​/​P​o​s​t​a​l​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * Z​i​p​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​c​o​u​n​t​r​y​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​z​i​p​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​,​ ​o​p​t​i​o​n​a​l​l​y​ ​f​o​l​l​o​w​e​d​ ​b​y​ ​a​ ​c​o​m​m​a​ ​a​n​d​ ​t​h​e​ ​t​w​o​-​l​e​t​t​e​r​ ​c​o​u​n​t​r​y​ ​c​o​d​e​ ​(​e​.​g​.​,​ ​"​1​0​0​0​1​,​U​S​"​,​ ​"​S​W​1​A​ ​1​A​A​,​G​B​"​)​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​U​S​ ​i​f​ ​n​o​ ​c​o​u​n​t​r​y​ ​c​o​d​e​ ​i​s​ ​p​r​o​v​i​d​e​d​.
+							 */
+							longDesc: string
+						}
+						units: {
+							/**
+							 * U​n​i​t​s
+							 */
+							displayName: string
+							/**
+							 * T​e​m​p​e​r​a​t​u​r​e​ ​a​n​d​ ​s​p​e​e​d​ ​u​n​i​t​s
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​m​e​a​s​u​r​e​m​e​n​t​ ​s​y​s​t​e​m​:​ ​M​e​t​r​i​c​ ​(​C​e​l​s​i​u​s​,​ ​m​e​t​e​r​s​/​s​e​c​o​n​d​)​,​ ​I​m​p​e​r​i​a​l​ ​(​F​a​h​r​e​n​h​e​i​t​,​ ​m​i​l​e​s​/​h​o​u​r​)​,​ ​o​r​ ​S​t​a​n​d​a​r​d​ ​(​K​e​l​v​i​n​,​ ​m​e​t​e​r​s​/​s​e​c​o​n​d​)​.
+							 */
+							longDesc: string
+						}
+						lang: {
+							/**
+							 * L​a​n​g​u​a​g​e
+							 */
+							displayName: string
+							/**
+							 * L​a​n​g​u​a​g​e​ ​f​o​r​ ​w​e​a​t​h​e​r​ ​d​e​s​c​r​i​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​w​o​-​l​e​t​t​e​r​ ​l​a​n​g​u​a​g​e​ ​c​o​d​e​ ​f​o​r​ ​w​e​a​t​h​e​r​ ​c​o​n​d​i​t​i​o​n​ ​d​e​s​c​r​i​p​t​i​o​n​s​ ​(​e​.​g​.​,​ ​"​e​n​"​ ​f​o​r​ ​E​n​g​l​i​s​h​,​ ​"​e​s​"​ ​f​o​r​ ​S​p​a​n​i​s​h​,​ ​"​f​r​"​ ​f​o​r​ ​F​r​e​n​c​h​,​ ​"​d​e​"​ ​f​o​r​ ​G​e​r​m​a​n​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_forecast: {
+					/**
+					 * G​e​t​ ​W​e​a​t​h​e​r​ ​F​o​r​e​c​a​s​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​5​-​d​a​y​ ​w​e​a​t​h​e​r​ ​f​o​r​e​c​a​s​t​ ​w​i​t​h​ ​3​-​h​o​u​r​ ​i​n​t​e​r​v​a​l​s
+					 */
+					shortDesc: string
+					/**
+					 * G​e​t​ ​a​ ​5​-​d​a​y​ ​w​e​a​t​h​e​r​ ​f​o​r​e​c​a​s​t​ ​w​i​t​h​ ​d​a​t​a​ ​p​o​i​n​t​s​ ​e​v​e​r​y​ ​3​ ​h​o​u​r​s​ ​f​o​r​ ​a​n​y​ ​l​o​c​a​t​i​o​n​ ​w​o​r​l​d​w​i​d​e​.​ ​E​a​c​h​ ​f​o​r​e​c​a​s​t​ ​i​t​e​m​ ​i​n​c​l​u​d​e​s​ ​t​e​m​p​e​r​a​t​u​r​e​,​ ​h​u​m​i​d​i​t​y​,​ ​w​i​n​d​,​ ​p​r​e​c​i​p​i​t​a​t​i​o​n​ ​p​r​o​b​a​b​i​l​i​t​y​,​ ​a​n​d​ ​w​e​a​t​h​e​r​ ​c​o​n​d​i​t​i​o​n​s​.​ ​S​u​p​p​o​r​t​s​ ​l​o​o​k​u​p​ ​b​y​ ​c​i​t​y​ ​n​a​m​e​,​ ​g​e​o​g​r​a​p​h​i​c​ ​c​o​o​r​d​i​n​a​t​e​s​,​ ​o​r​ ​z​i​p​/​p​o​s​t​a​l​ ​c​o​d​e​.
+					 */
+					longDesc: string
+					options: {
+						location_type: {
+							/**
+							 * L​o​c​a​t​i​o​n​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​p​e​c​i​f​y​ ​t​h​e​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​h​o​w​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​p​e​c​i​f​y​ ​t​h​e​ ​l​o​c​a​t​i​o​n​:​ ​b​y​ ​c​i​t​y​ ​n​a​m​e​ ​(​e​.​g​.​,​ ​"​L​o​n​d​o​n​,​U​K​"​)​,​ ​g​e​o​g​r​a​p​h​i​c​ ​c​o​o​r​d​i​n​a​t​e​s​ ​(​l​a​t​i​t​u​d​e​/​l​o​n​g​i​t​u​d​e​)​,​ ​o​r​ ​z​i​p​/​p​o​s​t​a​l​ ​c​o​d​e​.
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * C​i​t​y​ ​n​a​m​e​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​c​o​u​n​t​r​y​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​c​i​t​y​ ​n​a​m​e​,​ ​o​p​t​i​o​n​a​l​l​y​ ​f​o​l​l​o​w​e​d​ ​b​y​ ​a​ ​c​o​m​m​a​ ​a​n​d​ ​t​h​e​ ​t​w​o​-​l​e​t​t​e​r​ ​c​o​u​n​t​r​y​ ​c​o​d​e​ ​(​e​.​g​.​,​ ​"​L​o​n​d​o​n​,​U​K​"​,​ ​"​N​e​w​ ​Y​o​r​k​,​U​S​"​,​ ​"​P​a​r​i​s​,​F​R​"​)​.​ ​T​h​e​ ​c​o​u​n​t​r​y​ ​c​o​d​e​ ​h​e​l​p​s​ ​d​i​s​a​m​b​i​g​u​a​t​e​ ​c​i​t​i​e​s​ ​w​i​t​h​ ​t​h​e​ ​s​a​m​e​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						lat: {
+							/**
+							 * L​a​t​i​t​u​d​e
+							 */
+							displayName: string
+							/**
+							 * G​e​o​g​r​a​p​h​i​c​ ​l​a​t​i​t​u​d​e​ ​c​o​o​r​d​i​n​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​l​a​t​i​t​u​d​e​ ​c​o​o​r​d​i​n​a​t​e​ ​o​f​ ​t​h​e​ ​l​o​c​a​t​i​o​n​ ​i​n​ ​d​e​c​i​m​a​l​ ​d​e​g​r​e​e​s​ ​(​e​.​g​.​,​ ​5​1​.​5​0​7​4​ ​f​o​r​ ​L​o​n​d​o​n​)​.​ ​V​a​l​i​d​ ​r​a​n​g​e​ ​i​s​ ​-​9​0​ ​t​o​ ​9​0​.
+							 */
+							longDesc: string
+						}
+						lon: {
+							/**
+							 * L​o​n​g​i​t​u​d​e
+							 */
+							displayName: string
+							/**
+							 * G​e​o​g​r​a​p​h​i​c​ ​l​o​n​g​i​t​u​d​e​ ​c​o​o​r​d​i​n​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​l​o​n​g​i​t​u​d​e​ ​c​o​o​r​d​i​n​a​t​e​ ​o​f​ ​t​h​e​ ​l​o​c​a​t​i​o​n​ ​i​n​ ​d​e​c​i​m​a​l​ ​d​e​g​r​e​e​s​ ​(​e​.​g​.​,​ ​-​0​.​1​2​7​8​ ​f​o​r​ ​L​o​n​d​o​n​)​.​ ​V​a​l​i​d​ ​r​a​n​g​e​ ​i​s​ ​-​1​8​0​ ​t​o​ ​1​8​0​.
+							 */
+							longDesc: string
+						}
+						zip: {
+							/**
+							 * Z​i​p​/​P​o​s​t​a​l​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * Z​i​p​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​c​o​u​n​t​r​y​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​z​i​p​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​,​ ​o​p​t​i​o​n​a​l​l​y​ ​f​o​l​l​o​w​e​d​ ​b​y​ ​a​ ​c​o​m​m​a​ ​a​n​d​ ​t​h​e​ ​t​w​o​-​l​e​t​t​e​r​ ​c​o​u​n​t​r​y​ ​c​o​d​e​ ​(​e​.​g​.​,​ ​"​1​0​0​0​1​,​U​S​"​,​ ​"​S​W​1​A​ ​1​A​A​,​G​B​"​)​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​U​S​ ​i​f​ ​n​o​ ​c​o​u​n​t​r​y​ ​c​o​d​e​ ​i​s​ ​p​r​o​v​i​d​e​d​.
+							 */
+							longDesc: string
+						}
+						units: {
+							/**
+							 * U​n​i​t​s
+							 */
+							displayName: string
+							/**
+							 * T​e​m​p​e​r​a​t​u​r​e​ ​a​n​d​ ​s​p​e​e​d​ ​u​n​i​t​s
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​m​e​a​s​u​r​e​m​e​n​t​ ​s​y​s​t​e​m​:​ ​M​e​t​r​i​c​ ​(​C​e​l​s​i​u​s​,​ ​m​e​t​e​r​s​/​s​e​c​o​n​d​)​,​ ​I​m​p​e​r​i​a​l​ ​(​F​a​h​r​e​n​h​e​i​t​,​ ​m​i​l​e​s​/​h​o​u​r​)​,​ ​o​r​ ​S​t​a​n​d​a​r​d​ ​(​K​e​l​v​i​n​,​ ​m​e​t​e​r​s​/​s​e​c​o​n​d​)​.
+							 */
+							longDesc: string
+						}
+						lang: {
+							/**
+							 * L​a​n​g​u​a​g​e
+							 */
+							displayName: string
+							/**
+							 * L​a​n​g​u​a​g​e​ ​f​o​r​ ​w​e​a​t​h​e​r​ ​d​e​s​c​r​i​p​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​w​o​-​l​e​t​t​e​r​ ​l​a​n​g​u​a​g​e​ ​c​o​d​e​ ​f​o​r​ ​w​e​a​t​h​e​r​ ​c​o​n​d​i​t​i​o​n​ ​d​e​s​c​r​i​p​t​i​o​n​s​ ​(​e​.​g​.​,​ ​"​e​n​"​ ​f​o​r​ ​E​n​g​l​i​s​h​,​ ​"​e​s​"​ ​f​o​r​ ​S​p​a​n​i​s​h​,​ ​"​f​r​"​ ​f​o​r​ ​F​r​e​n​c​h​,​ ​"​d​e​"​ ​f​o​r​ ​G​e​r​m​a​n​)​.
+							 */
+							longDesc: string
+						}
+						cnt: {
+							/**
+							 * C​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​f​o​r​e​c​a​s​t​ ​i​t​e​m​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * L​i​m​i​t​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​3​-​h​o​u​r​ ​f​o​r​e​c​a​s​t​ ​i​t​e​m​s​ ​r​e​t​u​r​n​e​d​.​ ​E​a​c​h​ ​d​a​y​ ​h​a​s​ ​u​p​ ​t​o​ ​8​ ​d​a​t​a​ ​p​o​i​n​t​s​ ​(​e​v​e​r​y​ ​3​ ​h​o​u​r​s​)​.​ ​M​a​x​i​m​u​m​ ​i​s​ ​4​0​ ​(​5​ ​d​a​y​s​ ​x​ ​8​ ​i​n​t​e​r​v​a​l​s​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				temperature_threshold: {
+					/**
+					 * T​e​m​p​e​r​a​t​u​r​e​ ​T​h​r​e​s​h​o​l​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​ ​w​h​e​n​ ​t​e​m​p​e​r​a​t​u​r​e​ ​c​r​o​s​s​e​s​ ​a​ ​t​h​r​e​s​h​o​l​d
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​t​h​e​ ​t​e​m​p​e​r​a​t​u​r​e​ ​a​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​o​c​a​t​i​o​n​ ​a​n​d​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​i​t​ ​c​r​o​s​s​e​s​ ​a​b​o​v​e​ ​o​r​ ​b​e​l​o​w​ ​a​ ​c​o​n​f​i​g​u​r​e​d​ ​t​h​r​e​s​h​o​l​d​ ​v​a​l​u​e​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​t​e​m​p​e​r​a​t​u​r​e​ ​a​l​e​r​t​s​,​ ​H​V​A​C​ ​a​u​t​o​m​a​t​i​o​n​,​ ​a​n​d​ ​w​e​a​t​h​e​r​-​d​e​p​e​n​d​e​n​t​ ​w​o​r​k​f​l​o​w​s​.
+					 */
+					longDesc: string
+					options: {
+						location_type: {
+							/**
+							 * L​o​c​a​t​i​o​n​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​p​e​c​i​f​y​ ​t​h​e​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​h​o​w​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​p​e​c​i​f​y​ ​t​h​e​ ​l​o​c​a​t​i​o​n​:​ ​b​y​ ​c​i​t​y​ ​n​a​m​e​ ​(​e​.​g​.​,​ ​"​L​o​n​d​o​n​,​U​K​"​)​,​ ​g​e​o​g​r​a​p​h​i​c​ ​c​o​o​r​d​i​n​a​t​e​s​ ​(​l​a​t​i​t​u​d​e​/​l​o​n​g​i​t​u​d​e​)​,​ ​o​r​ ​z​i​p​/​p​o​s​t​a​l​ ​c​o​d​e​.
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * C​i​t​y​ ​n​a​m​e​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​c​o​u​n​t​r​y​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​c​i​t​y​ ​n​a​m​e​,​ ​o​p​t​i​o​n​a​l​l​y​ ​f​o​l​l​o​w​e​d​ ​b​y​ ​a​ ​c​o​m​m​a​ ​a​n​d​ ​t​h​e​ ​t​w​o​-​l​e​t​t​e​r​ ​c​o​u​n​t​r​y​ ​c​o​d​e​ ​(​e​.​g​.​,​ ​"​L​o​n​d​o​n​,​U​K​"​,​ ​"​N​e​w​ ​Y​o​r​k​,​U​S​"​,​ ​"​P​a​r​i​s​,​F​R​"​)​.
+							 */
+							longDesc: string
+						}
+						lat: {
+							/**
+							 * L​a​t​i​t​u​d​e
+							 */
+							displayName: string
+							/**
+							 * G​e​o​g​r​a​p​h​i​c​ ​l​a​t​i​t​u​d​e​ ​c​o​o​r​d​i​n​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​l​a​t​i​t​u​d​e​ ​c​o​o​r​d​i​n​a​t​e​ ​o​f​ ​t​h​e​ ​l​o​c​a​t​i​o​n​ ​i​n​ ​d​e​c​i​m​a​l​ ​d​e​g​r​e​e​s​.​ ​V​a​l​i​d​ ​r​a​n​g​e​ ​i​s​ ​-​9​0​ ​t​o​ ​9​0​.
+							 */
+							longDesc: string
+						}
+						lon: {
+							/**
+							 * L​o​n​g​i​t​u​d​e
+							 */
+							displayName: string
+							/**
+							 * G​e​o​g​r​a​p​h​i​c​ ​l​o​n​g​i​t​u​d​e​ ​c​o​o​r​d​i​n​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​l​o​n​g​i​t​u​d​e​ ​c​o​o​r​d​i​n​a​t​e​ ​o​f​ ​t​h​e​ ​l​o​c​a​t​i​o​n​ ​i​n​ ​d​e​c​i​m​a​l​ ​d​e​g​r​e​e​s​.​ ​V​a​l​i​d​ ​r​a​n​g​e​ ​i​s​ ​-​1​8​0​ ​t​o​ ​1​8​0​.
+							 */
+							longDesc: string
+						}
+						zip: {
+							/**
+							 * Z​i​p​/​P​o​s​t​a​l​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * Z​i​p​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​c​o​u​n​t​r​y​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​z​i​p​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​,​ ​o​p​t​i​o​n​a​l​l​y​ ​f​o​l​l​o​w​e​d​ ​b​y​ ​a​ ​c​o​m​m​a​ ​a​n​d​ ​t​h​e​ ​t​w​o​-​l​e​t​t​e​r​ ​c​o​u​n​t​r​y​ ​c​o​d​e​.
+							 */
+							longDesc: string
+						}
+						units: {
+							/**
+							 * U​n​i​t​s
+							 */
+							displayName: string
+							/**
+							 * T​e​m​p​e​r​a​t​u​r​e​ ​a​n​d​ ​s​p​e​e​d​ ​u​n​i​t​s
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​m​e​a​s​u​r​e​m​e​n​t​ ​s​y​s​t​e​m​:​ ​M​e​t​r​i​c​ ​(​C​e​l​s​i​u​s​)​,​ ​I​m​p​e​r​i​a​l​ ​(​F​a​h​r​e​n​h​e​i​t​)​,​ ​o​r​ ​S​t​a​n​d​a​r​d​ ​(​K​e​l​v​i​n​)​.
+							 */
+							longDesc: string
+						}
+						threshold_type: {
+							/**
+							 * T​h​r​e​s​h​o​l​d​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * D​i​r​e​c​t​i​o​n​ ​o​f​ ​t​e​m​p​e​r​a​t​u​r​e​ ​c​r​o​s​s​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​t​e​m​p​e​r​a​t​u​r​e​ ​g​o​e​s​ ​a​b​o​v​e​ ​o​r​ ​b​e​l​o​w​ ​t​h​e​ ​t​h​r​e​s​h​o​l​d​ ​v​a​l​u​e​.​ ​"​G​o​e​s​ ​A​b​o​v​e​"​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​t​e​m​p​e​r​a​t​u​r​e​ ​r​i​s​e​s​ ​p​a​s​t​ ​t​h​e​ ​t​h​r​e​s​h​o​l​d​.​ ​"​G​o​e​s​ ​B​e​l​o​w​"​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​t​e​m​p​e​r​a​t​u​r​e​ ​d​r​o​p​s​ ​b​e​l​o​w​ ​t​h​e​ ​t​h​r​e​s​h​o​l​d​.
+							 */
+							longDesc: string
+						}
+						threshold_value: {
+							/**
+							 * T​h​r​e​s​h​o​l​d​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * T​e​m​p​e​r​a​t​u​r​e​ ​t​h​r​e​s​h​o​l​d​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​t​e​m​p​e​r​a​t​u​r​e​ ​v​a​l​u​e​ ​t​h​a​t​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​ ​w​h​e​n​ ​c​r​o​s​s​e​d​.​ ​U​s​e​ ​t​h​e​ ​s​a​m​e​ ​u​n​i​t​s​ ​a​s​ ​s​e​l​e​c​t​e​d​ ​i​n​ ​t​h​e​ ​U​n​i​t​s​ ​o​p​t​i​o​n​ ​(​e​.​g​.​,​ ​0​ ​f​o​r​ ​f​r​e​e​z​i​n​g​ ​p​o​i​n​t​ ​i​n​ ​C​e​l​s​i​u​s​,​ ​3​2​ ​i​n​ ​F​a​h​r​e​n​h​e​i​t​)​.
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * T​e​m​p​e​r​a​t​u​r​e​ ​t​h​r​e​s​h​o​l​d​ ​c​r​o​s​s​i​n​g​ ​e​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+					}
+				}
+				weather_condition_change: {
+					/**
+					 * W​e​a​t​h​e​r​ ​C​o​n​d​i​t​i​o​n​ ​C​h​a​n​g​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​ ​w​h​e​n​ ​w​e​a​t​h​e​r​ ​c​o​n​d​i​t​i​o​n​s​ ​c​h​a​n​g​e
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​ ​t​h​e​ ​w​e​a​t​h​e​r​ ​c​o​n​d​i​t​i​o​n​s​ ​a​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​o​c​a​t​i​o​n​ ​a​n​d​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​c​o​n​d​i​t​i​o​n​s​ ​c​h​a​n​g​e​ ​(​e​.​g​.​,​ ​f​r​o​m​ ​C​l​e​a​r​ ​t​o​ ​R​a​i​n​,​ ​C​l​o​u​d​s​ ​t​o​ ​S​n​o​w​)​.​ ​O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​c​o​n​d​i​t​i​o​n​ ​t​y​p​e​s​.
+					 */
+					longDesc: string
+					options: {
+						location_type: {
+							/**
+							 * L​o​c​a​t​i​o​n​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​o​ ​s​p​e​c​i​f​y​ ​t​h​e​ ​l​o​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​h​o​w​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​p​e​c​i​f​y​ ​t​h​e​ ​l​o​c​a​t​i​o​n​:​ ​b​y​ ​c​i​t​y​ ​n​a​m​e​ ​(​e​.​g​.​,​ ​"​L​o​n​d​o​n​,​U​K​"​)​,​ ​g​e​o​g​r​a​p​h​i​c​ ​c​o​o​r​d​i​n​a​t​e​s​ ​(​l​a​t​i​t​u​d​e​/​l​o​n​g​i​t​u​d​e​)​,​ ​o​r​ ​z​i​p​/​p​o​s​t​a​l​ ​c​o​d​e​.
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * C​i​t​y​ ​n​a​m​e​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​c​o​u​n​t​r​y​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​c​i​t​y​ ​n​a​m​e​,​ ​o​p​t​i​o​n​a​l​l​y​ ​f​o​l​l​o​w​e​d​ ​b​y​ ​a​ ​c​o​m​m​a​ ​a​n​d​ ​t​h​e​ ​t​w​o​-​l​e​t​t​e​r​ ​c​o​u​n​t​r​y​ ​c​o​d​e​ ​(​e​.​g​.​,​ ​"​L​o​n​d​o​n​,​U​K​"​,​ ​"​N​e​w​ ​Y​o​r​k​,​U​S​"​,​ ​"​P​a​r​i​s​,​F​R​"​)​.
+							 */
+							longDesc: string
+						}
+						lat: {
+							/**
+							 * L​a​t​i​t​u​d​e
+							 */
+							displayName: string
+							/**
+							 * G​e​o​g​r​a​p​h​i​c​ ​l​a​t​i​t​u​d​e​ ​c​o​o​r​d​i​n​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​l​a​t​i​t​u​d​e​ ​c​o​o​r​d​i​n​a​t​e​ ​o​f​ ​t​h​e​ ​l​o​c​a​t​i​o​n​ ​i​n​ ​d​e​c​i​m​a​l​ ​d​e​g​r​e​e​s​.​ ​V​a​l​i​d​ ​r​a​n​g​e​ ​i​s​ ​-​9​0​ ​t​o​ ​9​0​.
+							 */
+							longDesc: string
+						}
+						lon: {
+							/**
+							 * L​o​n​g​i​t​u​d​e
+							 */
+							displayName: string
+							/**
+							 * G​e​o​g​r​a​p​h​i​c​ ​l​o​n​g​i​t​u​d​e​ ​c​o​o​r​d​i​n​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​l​o​n​g​i​t​u​d​e​ ​c​o​o​r​d​i​n​a​t​e​ ​o​f​ ​t​h​e​ ​l​o​c​a​t​i​o​n​ ​i​n​ ​d​e​c​i​m​a​l​ ​d​e​g​r​e​e​s​.​ ​V​a​l​i​d​ ​r​a​n​g​e​ ​i​s​ ​-​1​8​0​ ​t​o​ ​1​8​0​.
+							 */
+							longDesc: string
+						}
+						zip: {
+							/**
+							 * Z​i​p​/​P​o​s​t​a​l​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * Z​i​p​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​c​o​u​n​t​r​y​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​z​i​p​ ​o​r​ ​p​o​s​t​a​l​ ​c​o​d​e​,​ ​o​p​t​i​o​n​a​l​l​y​ ​f​o​l​l​o​w​e​d​ ​b​y​ ​a​ ​c​o​m​m​a​ ​a​n​d​ ​t​h​e​ ​t​w​o​-​l​e​t​t​e​r​ ​c​o​u​n​t​r​y​ ​c​o​d​e​.
+							 */
+							longDesc: string
+						}
+						units: {
+							/**
+							 * U​n​i​t​s
+							 */
+							displayName: string
+							/**
+							 * T​e​m​p​e​r​a​t​u​r​e​ ​a​n​d​ ​s​p​e​e​d​ ​u​n​i​t​s
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​t​h​e​ ​m​e​a​s​u​r​e​m​e​n​t​ ​s​y​s​t​e​m​:​ ​M​e​t​r​i​c​ ​(​C​e​l​s​i​u​s​)​,​ ​I​m​p​e​r​i​a​l​ ​(​F​a​h​r​e​n​h​e​i​t​)​,​ ​o​r​ ​S​t​a​n​d​a​r​d​ ​(​K​e​l​v​i​n​)​.
+							 */
+							longDesc: string
+						}
+						condition_filter: {
+							/**
+							 * C​o​n​d​i​t​i​o​n​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​f​o​r​ ​s​p​e​c​i​f​i​c​ ​w​e​a​t​h​e​r​ ​c​o​n​d​i​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​w​h​e​n​ ​t​h​e​ ​n​e​w​ ​c​o​n​d​i​t​i​o​n​ ​m​a​t​c​h​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​t​y​p​e​.​ ​S​e​l​e​c​t​ ​"​A​n​y​ ​C​h​a​n​g​e​"​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​ ​a​l​l​ ​c​o​n​d​i​t​i​o​n​ ​c​h​a​n​g​e​s​,​ ​o​r​ ​s​e​l​e​c​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​d​i​t​i​o​n​ ​l​i​k​e​ ​R​a​i​n​,​ ​S​n​o​w​,​ ​C​l​e​a​r​,​ ​e​t​c​.
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * W​e​a​t​h​e​r​ ​c​o​n​d​i​t​i​o​n​ ​c​h​a​n​g​e​ ​e​v​e​n​t​ ​d​a​t​a
+						 */
+						desc: string
+					}
+				}
+			}
+		}
 		GoogleAnalytics: {
 			/**
 			 * G​o​o​g​l​e​ ​A​n​a​l​y​t​i​c​s
@@ -156064,6 +156588,530 @@ export type TranslationFunctions = {
 								longDesc: () => LocalizedString
 							}
 						}
+					}
+				}
+			}
+		}
+		OpenWeatherMap: {
+			/**
+			 * OpenWeatherMap
+			 */
+			displayName: () => LocalizedString
+			groups: {
+				/**
+				 * Weather
+				 */
+				'0': () => LocalizedString
+				/**
+				 * Data & Analytics
+				 */
+				'1': () => LocalizedString
+			}
+			/**
+			 * Access current weather data and forecasts for any location worldwide
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect to OpenWeatherMap to retrieve real-time weather data and 5-day forecasts for any location on Earth. Get comprehensive weather information including temperature, humidity, wind speed, pressure, and weather conditions. Support for multiple location input methods (city name, coordinates, or zip code) and customizable units (metric, imperial, or standard). Ideal for weather-aware applications, travel planning, agricultural monitoring, and location-based services within your Qore workflows.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				get_current_weather: {
+					/**
+					 * Get Current Weather
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve current weather data for a specific location
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get real-time weather information including temperature, humidity, wind speed, pressure, visibility, and weather conditions for any location worldwide. Supports lookup by city name, geographic coordinates, or zip/postal code.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						location_type: {
+							/**
+							 * Location Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to specify the location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose how you want to specify the location: by city name (e.g., "London,UK"), geographic coordinates (latitude/longitude), or zip/postal code.
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * City name with optional country code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the city name, optionally followed by a comma and the two-letter country code (e.g., "London,UK", "New York,US", "Paris,FR"). The country code helps disambiguate cities with the same name.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lat: {
+							/**
+							 * Latitude
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Geographic latitude coordinate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the latitude coordinate of the location in decimal degrees (e.g., 51.5074 for London). Valid range is -90 to 90.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lon: {
+							/**
+							 * Longitude
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Geographic longitude coordinate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the longitude coordinate of the location in decimal degrees (e.g., -0.1278 for London). Valid range is -180 to 180.
+							 */
+							longDesc: () => LocalizedString
+						}
+						zip: {
+							/**
+							 * Zip/Postal Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Zip or postal code with optional country code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the zip or postal code, optionally followed by a comma and the two-letter country code (e.g., "10001,US", "SW1A 1AA,GB"). Defaults to US if no country code is provided.
+							 */
+							longDesc: () => LocalizedString
+						}
+						units: {
+							/**
+							 * Units
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Temperature and speed units
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the measurement system: Metric (Celsius, meters/second), Imperial (Fahrenheit, miles/hour), or Standard (Kelvin, meters/second).
+							 */
+							longDesc: () => LocalizedString
+						}
+						lang: {
+							/**
+							 * Language
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Language for weather descriptions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional two-letter language code for weather condition descriptions (e.g., "en" for English, "es" for Spanish, "fr" for French, "de" for German).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_forecast: {
+					/**
+					 * Get Weather Forecast
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve 5-day weather forecast with 3-hour intervals
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Get a 5-day weather forecast with data points every 3 hours for any location worldwide. Each forecast item includes temperature, humidity, wind, precipitation probability, and weather conditions. Supports lookup by city name, geographic coordinates, or zip/postal code.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						location_type: {
+							/**
+							 * Location Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to specify the location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose how you want to specify the location: by city name (e.g., "London,UK"), geographic coordinates (latitude/longitude), or zip/postal code.
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * City name with optional country code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the city name, optionally followed by a comma and the two-letter country code (e.g., "London,UK", "New York,US", "Paris,FR"). The country code helps disambiguate cities with the same name.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lat: {
+							/**
+							 * Latitude
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Geographic latitude coordinate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the latitude coordinate of the location in decimal degrees (e.g., 51.5074 for London). Valid range is -90 to 90.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lon: {
+							/**
+							 * Longitude
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Geographic longitude coordinate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the longitude coordinate of the location in decimal degrees (e.g., -0.1278 for London). Valid range is -180 to 180.
+							 */
+							longDesc: () => LocalizedString
+						}
+						zip: {
+							/**
+							 * Zip/Postal Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Zip or postal code with optional country code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the zip or postal code, optionally followed by a comma and the two-letter country code (e.g., "10001,US", "SW1A 1AA,GB"). Defaults to US if no country code is provided.
+							 */
+							longDesc: () => LocalizedString
+						}
+						units: {
+							/**
+							 * Units
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Temperature and speed units
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the measurement system: Metric (Celsius, meters/second), Imperial (Fahrenheit, miles/hour), or Standard (Kelvin, meters/second).
+							 */
+							longDesc: () => LocalizedString
+						}
+						lang: {
+							/**
+							 * Language
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Language for weather descriptions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional two-letter language code for weather condition descriptions (e.g., "en" for English, "es" for Spanish, "fr" for French, "de" for German).
+							 */
+							longDesc: () => LocalizedString
+						}
+						cnt: {
+							/**
+							 * Count
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of forecast items to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Limit the number of 3-hour forecast items returned. Each day has up to 8 data points (every 3 hours). Maximum is 40 (5 days x 8 intervals).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				temperature_threshold: {
+					/**
+					 * Temperature Threshold
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Trigger when temperature crosses a threshold
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor the temperature at a specific location and trigger when it crosses above or below a configured threshold value. Useful for temperature alerts, HVAC automation, and weather-dependent workflows.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						location_type: {
+							/**
+							 * Location Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to specify the location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose how you want to specify the location: by city name (e.g., "London,UK"), geographic coordinates (latitude/longitude), or zip/postal code.
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * City name with optional country code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the city name, optionally followed by a comma and the two-letter country code (e.g., "London,UK", "New York,US", "Paris,FR").
+							 */
+							longDesc: () => LocalizedString
+						}
+						lat: {
+							/**
+							 * Latitude
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Geographic latitude coordinate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the latitude coordinate of the location in decimal degrees. Valid range is -90 to 90.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lon: {
+							/**
+							 * Longitude
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Geographic longitude coordinate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the longitude coordinate of the location in decimal degrees. Valid range is -180 to 180.
+							 */
+							longDesc: () => LocalizedString
+						}
+						zip: {
+							/**
+							 * Zip/Postal Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Zip or postal code with optional country code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the zip or postal code, optionally followed by a comma and the two-letter country code.
+							 */
+							longDesc: () => LocalizedString
+						}
+						units: {
+							/**
+							 * Units
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Temperature and speed units
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the measurement system: Metric (Celsius), Imperial (Fahrenheit), or Standard (Kelvin).
+							 */
+							longDesc: () => LocalizedString
+						}
+						threshold_type: {
+							/**
+							 * Threshold Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Direction of temperature crossing
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether to trigger when temperature goes above or below the threshold value. "Goes Above" triggers when temperature rises past the threshold. "Goes Below" triggers when temperature drops below the threshold.
+							 */
+							longDesc: () => LocalizedString
+						}
+						threshold_value: {
+							/**
+							 * Threshold Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Temperature threshold to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the temperature value that will trigger the event when crossed. Use the same units as selected in the Units option (e.g., 0 for freezing point in Celsius, 32 in Fahrenheit).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Temperature threshold crossing event data
+						 */
+						desc: () => LocalizedString
+					}
+				}
+				weather_condition_change: {
+					/**
+					 * Weather Condition Change
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Trigger when weather conditions change
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitor the weather conditions at a specific location and trigger when conditions change (e.g., from Clear to Rain, Clouds to Snow). Optionally filter for specific condition types.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						location_type: {
+							/**
+							 * Location Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How to specify the location
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose how you want to specify the location: by city name (e.g., "London,UK"), geographic coordinates (latitude/longitude), or zip/postal code.
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * City name with optional country code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the city name, optionally followed by a comma and the two-letter country code (e.g., "London,UK", "New York,US", "Paris,FR").
+							 */
+							longDesc: () => LocalizedString
+						}
+						lat: {
+							/**
+							 * Latitude
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Geographic latitude coordinate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the latitude coordinate of the location in decimal degrees. Valid range is -90 to 90.
+							 */
+							longDesc: () => LocalizedString
+						}
+						lon: {
+							/**
+							 * Longitude
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Geographic longitude coordinate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the longitude coordinate of the location in decimal degrees. Valid range is -180 to 180.
+							 */
+							longDesc: () => LocalizedString
+						}
+						zip: {
+							/**
+							 * Zip/Postal Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Zip or postal code with optional country code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the zip or postal code, optionally followed by a comma and the two-letter country code.
+							 */
+							longDesc: () => LocalizedString
+						}
+						units: {
+							/**
+							 * Units
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Temperature and speed units
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose the measurement system: Metric (Celsius), Imperial (Fahrenheit), or Standard (Kelvin).
+							 */
+							longDesc: () => LocalizedString
+						}
+						condition_filter: {
+							/**
+							 * Condition Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter for specific weather conditions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter to only trigger when the new condition matches a specific type. Select "Any Change" to trigger on all condition changes, or select a specific condition like Rain, Snow, Clear, etc.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Weather condition change event data
+						 */
+						desc: () => LocalizedString
 					}
 				}
 			}
