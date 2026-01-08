@@ -48,6 +48,7 @@ import freshdesk from '../apps/freshdesk';
 import gemini from '../apps/gemini';
 import github from '../apps/github';
 import gitlab from '../apps/gitlab';
+import googleAnalytics from '../apps/google-analytics';
 import googleChat from '../apps/google-chat';
 import googleContacts from '../apps/google-contacts';
 import googleDocs from '../apps/google-docs';
@@ -153,6 +154,7 @@ const NEW_APPS = {
   gemini,
   github,
   gitlab,
+  googleAnalytics,
   googleChat,
   googleContacts,
   googleDocs,

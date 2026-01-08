@@ -40315,6 +40315,882 @@ type RootTranslation = {
 				}
 			}
 		}
+		GoogleAnalytics: {
+			/**
+			 * G​o​o​g​l​e​ ​A​n​a​l​y​t​i​c​s
+			 */
+			displayName: string
+			groups: {
+				/**
+				 * A​n​a​l​y​t​i​c​s​ ​&​ ​R​e​p​o​r​t​i​n​g
+				 */
+				'0': string
+				/**
+				 * G​o​o​g​l​e​ ​W​o​r​k​s​p​a​c​e​ ​S​u​i​t​e
+				 */
+				'1': string
+			}
+			/**
+			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​G​o​o​g​l​e​ ​A​n​a​l​y​t​i​c​s​ ​4​ ​t​o​ ​a​c​c​e​s​s​ ​y​o​u​r​ ​w​e​b​s​i​t​e​ ​a​n​d​ ​a​p​p​ ​a​n​a​l​y​t​i​c​s​ ​d​a​t​a
+			 */
+			shortDesc: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​G​o​o​g​l​e​ ​A​n​a​l​y​t​i​c​s​ ​4​ ​(​G​A​4​)​ ​t​o​ ​r​u​n​ ​r​e​p​o​r​t​s​,​ ​a​c​c​e​s​s​ ​r​e​a​l​-​t​i​m​e​ ​d​a​t​a​,​ ​a​n​d​ ​a​n​a​l​y​z​e​ ​m​e​t​r​i​c​s​ ​a​n​d​ ​d​i​m​e​n​s​i​o​n​s​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​s​u​p​p​o​r​t​s​ ​s​t​a​n​d​a​r​d​ ​r​e​p​o​r​t​s​,​ ​r​e​a​l​-​t​i​m​e​ ​a​n​a​l​y​t​i​c​s​,​ ​m​e​t​a​d​a​t​a​ ​d​i​s​c​o​v​e​r​y​,​ ​b​a​t​c​h​ ​r​e​p​o​r​t​i​n​g​,​ ​a​n​d​ ​c​o​m​p​a​t​i​b​i​l​i​t​y​ ​c​h​e​c​k​s​ ​f​o​r​ ​y​o​u​r​ ​a​n​a​l​y​t​i​c​s​ ​p​r​o​p​e​r​t​i​e​s​.
+			 */
+			longDesc: string
+			actions: {
+				run_report: {
+					/**
+					 * R​u​n​ ​R​e​p​o​r​t
+					 */
+					displayName: string
+					/**
+					 * E​x​e​c​u​t​e​ ​a​ ​s​t​a​n​d​a​r​d​ ​G​o​o​g​l​e​ ​A​n​a​l​y​t​i​c​s​ ​4​ ​r​e​p​o​r​t
+					 */
+					shortDesc: string
+					/**
+					 * R​u​n​ ​a​ ​c​u​s​t​o​m​i​z​e​d​ ​a​n​a​l​y​t​i​c​s​ ​r​e​p​o​r​t​ ​w​i​t​h​ ​s​p​e​c​i​f​i​e​d​ ​m​e​t​r​i​c​s​,​ ​d​i​m​e​n​s​i​o​n​s​,​ ​d​a​t​e​ ​r​a​n​g​e​s​,​ ​a​n​d​ ​f​i​l​t​e​r​s​.​ ​S​u​p​p​o​r​t​s​ ​p​a​g​i​n​a​t​i​o​n​ ​f​o​r​ ​l​a​r​g​e​ ​r​e​s​u​l​t​ ​s​e​t​s​ ​a​n​d​ ​v​a​r​i​o​u​s​ ​s​o​r​t​i​n​g​ ​o​p​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						property_id: {
+							/**
+							 * P​r​o​p​e​r​t​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​A​n​a​l​y​t​i​c​s​ ​4​ ​p​r​o​p​e​r​t​y​ ​t​o​ ​q​u​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​A​4​ ​p​r​o​p​e​r​t​y​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​a​n​a​l​y​t​i​c​s​ ​d​a​t​a​.
+							 */
+							longDesc: string
+						}
+						date_ranges: {
+							/**
+							 * D​a​t​e​ ​R​a​n​g​e​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​r​a​n​g​e​s​ ​f​o​r​ ​t​h​e​ ​r​e​p​o​r​t
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​d​a​t​e​ ​r​a​n​g​e​s​ ​f​o​r​ ​t​h​e​ ​r​e​p​o​r​t​.​ ​D​a​t​e​s​ ​c​a​n​ ​b​e​ ​i​n​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​f​o​r​m​a​t​ ​o​r​ ​r​e​l​a​t​i​v​e​ ​v​a​l​u​e​s​ ​l​i​k​e​ ​"​7​d​a​y​s​A​g​o​"​,​ ​"​y​e​s​t​e​r​d​a​y​"​,​ ​"​t​o​d​a​y​"​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									start_date: {
+										/**
+										 * S​t​a​r​t​ ​D​a​t​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​o​f​ ​t​h​e​ ​r​a​n​g​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​i​n​c​l​u​s​i​v​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​q​u​e​r​y​ ​i​n​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​f​o​r​m​a​t​,​ ​o​r​ ​r​e​l​a​t​i​v​e​ ​d​a​t​e​ ​l​i​k​e​ ​"​7​d​a​y​s​A​g​o​"​,​ ​"​y​e​s​t​e​r​d​a​y​"​.
+										 */
+										longDesc: string
+									}
+									end_date: {
+										/**
+										 * E​n​d​ ​D​a​t​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​e​n​d​ ​d​a​t​e​ ​o​f​ ​t​h​e​ ​r​a​n​g​e
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​i​n​c​l​u​s​i​v​e​ ​e​n​d​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​q​u​e​r​y​ ​i​n​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​f​o​r​m​a​t​,​ ​o​r​ ​r​e​l​a​t​i​v​e​ ​d​a​t​e​ ​l​i​k​e​ ​"​t​o​d​a​y​"​,​ ​"​y​e​s​t​e​r​d​a​y​"​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						metrics: {
+							/**
+							 * M​e​t​r​i​c​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​e​t​r​i​c​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​p​o​r​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​q​u​a​n​t​i​t​a​t​i​v​e​ ​m​e​a​s​u​r​e​m​e​n​t​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​(​e​.​g​.​,​ ​a​c​t​i​v​e​U​s​e​r​s​,​ ​s​e​s​s​i​o​n​s​,​ ​p​a​g​e​V​i​e​w​s​)​.​ ​Y​o​u​ ​c​a​n​ ​i​n​c​l​u​d​e​ ​u​p​ ​t​o​ ​1​0​ ​m​e​t​r​i​c​s​ ​p​e​r​ ​r​e​p​o​r​t​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									name: {
+										/**
+										 * M​e​t​r​i​c​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​m​e​t​r​i​c
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​m​e​t​r​i​c​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​p​o​r​t​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						dimensions: {
+							/**
+							 * D​i​m​e​n​s​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​i​m​e​n​s​i​o​n​s​ ​t​o​ ​s​e​g​m​e​n​t​ ​t​h​e​ ​r​e​p​o​r​t​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​t​t​r​i​b​u​t​e​s​ ​t​o​ ​s​e​g​m​e​n​t​ ​y​o​u​r​ ​d​a​t​a​ ​b​y​ ​(​e​.​g​.​,​ ​c​o​u​n​t​r​y​,​ ​b​r​o​w​s​e​r​,​ ​p​a​g​e​P​a​t​h​)​.​ ​D​i​m​e​n​s​i​o​n​s​ ​a​r​e​ ​o​p​t​i​o​n​a​l​ ​a​n​d​ ​a​l​l​o​w​ ​y​o​u​ ​t​o​ ​b​r​e​a​k​ ​d​o​w​n​ ​m​e​t​r​i​c​s​ ​b​y​ ​s​p​e​c​i​f​i​c​ ​c​a​t​e​g​o​r​i​e​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									name: {
+										/**
+										 * D​i​m​e​n​s​i​o​n​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​p​o​r​t​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						dimension_filter: {
+							/**
+							 * D​i​m​e​n​s​i​o​n​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​x​p​r​e​s​s​i​o​n​ ​f​o​r​ ​d​i​m​e​n​s​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​a​d​v​a​n​c​e​d​ ​f​i​l​t​e​r​ ​e​x​p​r​e​s​s​i​o​n​ ​t​o​ ​f​i​l​t​e​r​ ​r​e​p​o​r​t​ ​d​a​t​a​ ​b​a​s​e​d​ ​o​n​ ​d​i​m​e​n​s​i​o​n​ ​v​a​l​u​e​s​.​ ​U​s​e​ ​t​h​e​ ​G​A​4​ ​f​i​l​t​e​r​ ​e​x​p​r​e​s​s​i​o​n​ ​s​y​n​t​a​x​.
+							 */
+							longDesc: string
+						}
+						metric_filter: {
+							/**
+							 * M​e​t​r​i​c​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​x​p​r​e​s​s​i​o​n​ ​f​o​r​ ​m​e​t​r​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​a​d​v​a​n​c​e​d​ ​f​i​l​t​e​r​ ​e​x​p​r​e​s​s​i​o​n​ ​t​o​ ​f​i​l​t​e​r​ ​r​e​p​o​r​t​ ​d​a​t​a​ ​b​a​s​e​d​ ​o​n​ ​m​e​t​r​i​c​ ​v​a​l​u​e​s​.​ ​U​s​e​ ​t​h​e​ ​G​A​4​ ​f​i​l​t​e​r​ ​e​x​p​r​e​s​s​i​o​n​ ​s​y​n​t​a​x​.
+							 */
+							longDesc: string
+						}
+						order_bys: {
+							/**
+							 * O​r​d​e​r​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​i​n​g​ ​s​p​e​c​i​f​i​c​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​r​e​p​o​r​t
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​p​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c​ ​v​a​l​u​e​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field_name: {
+										/**
+										 * F​i​e​l​d​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c​ ​n​a​m​e​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​.
+										 */
+										longDesc: string
+									}
+									desc: {
+										/**
+										 * D​e​s​c​e​n​d​i​n​g
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​i​n​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										shortDesc: string
+										/**
+										 * I​f​ ​t​r​u​e​,​ ​s​o​r​t​s​ ​i​n​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.​ ​I​f​ ​f​a​l​s​e​,​ ​s​o​r​t​s​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+										 */
+										longDesc: string
+									}
+									order_type: {
+										/**
+										 * O​r​d​e​r​ ​T​y​p​e
+										 */
+										displayName: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​b​y​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c
+										 */
+										shortDesc: string
+										/**
+										 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​a​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c​ ​f​o​r​ ​p​r​o​p​e​r​ ​s​o​r​t​i​n​g​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​t​h​e​ ​r​e​p​o​r​t​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​,​0​0​0​,​ ​m​a​x​i​m​u​m​ ​i​s​ ​1​0​0​,​0​0​0​.
+							 */
+							longDesc: string
+						}
+						offset: {
+							/**
+							 * O​f​f​s​e​t
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​t​o​ ​s​k​i​p​ ​b​e​f​o​r​e​ ​r​e​t​u​r​n​i​n​g​ ​r​e​s​u​l​t​s​.​ ​U​s​e​d​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						keep_empty_rows: {
+							/**
+							 * K​e​e​p​ ​E​m​p​t​y​ ​R​o​w​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​r​o​w​s​ ​w​i​t​h​ ​a​l​l​ ​z​e​r​o​ ​m​e​t​r​i​c​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​t​r​u​e​,​ ​i​n​c​l​u​d​e​s​ ​r​o​w​s​ ​w​h​e​r​e​ ​a​l​l​ ​m​e​t​r​i​c​s​ ​h​a​v​e​ ​z​e​r​o​ ​v​a​l​u​e​s​.​ ​I​f​ ​f​a​l​s​e​ ​(​d​e​f​a​u​l​t​)​,​ ​s​u​c​h​ ​r​o​w​s​ ​a​r​e​ ​e​x​c​l​u​d​e​d​.
+							 */
+							longDesc: string
+						}
+						return_property_quota: {
+							/**
+							 * R​e​t​u​r​n​ ​P​r​o​p​e​r​t​y​ ​Q​u​o​t​a
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​A​P​I​ ​q​u​o​t​a​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​ ​r​e​s​p​o​n​s​e
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​t​r​u​e​,​ ​r​e​t​u​r​n​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​A​P​I​ ​q​u​o​t​a​ ​u​s​a​g​e​ ​f​o​r​ ​t​h​i​s​ ​p​r​o​p​e​r​t​y​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				run_realtime_report: {
+					/**
+					 * R​u​n​ ​R​e​a​l​-​t​i​m​e​ ​R​e​p​o​r​t
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​l​i​v​e​ ​a​n​a​l​y​t​i​c​s​ ​d​a​t​a​ ​f​r​o​m​ ​t​h​e​ ​l​a​s​t​ ​3​0​ ​m​i​n​u​t​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​r​e​a​l​-​t​i​m​e​ ​a​n​a​l​y​t​i​c​s​ ​d​a​t​a​ ​s​h​o​w​i​n​g​ ​c​u​r​r​e​n​t​ ​a​c​t​i​v​i​t​y​ ​o​n​ ​y​o​u​r​ ​p​r​o​p​e​r​t​y​.​ ​E​v​e​n​t​s​ ​a​p​p​e​a​r​ ​w​i​t​h​i​n​ ​s​e​c​o​n​d​s​ ​o​f​ ​b​e​i​n​g​ ​s​e​n​t​ ​t​o​ ​G​o​o​g​l​e​ ​A​n​a​l​y​t​i​c​s​.​ ​D​a​t​a​ ​i​s​ ​a​v​a​i​l​a​b​l​e​ ​f​o​r​ ​t​h​e​ ​l​a​s​t​ ​3​0​ ​m​i​n​u​t​e​s​ ​(​o​r​ ​6​0​ ​m​i​n​u​t​e​s​ ​f​o​r​ ​G​o​o​g​l​e​ ​A​n​a​l​y​t​i​c​s​ ​3​6​0​ ​p​r​o​p​e​r​t​i​e​s​)​.
+					 */
+					longDesc: string
+					options: {
+						property_id: {
+							/**
+							 * P​r​o​p​e​r​t​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​A​n​a​l​y​t​i​c​s​ ​4​ ​p​r​o​p​e​r​t​y​ ​t​o​ ​q​u​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​A​4​ ​p​r​o​p​e​r​t​y​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​r​e​a​l​-​t​i​m​e​ ​a​n​a​l​y​t​i​c​s​ ​d​a​t​a​.
+							 */
+							longDesc: string
+						}
+						metrics: {
+							/**
+							 * M​e​t​r​i​c​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​e​a​l​-​t​i​m​e​ ​m​e​t​r​i​c​s​ ​t​o​ ​i​n​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​r​e​a​l​-​t​i​m​e​ ​m​e​t​r​i​c​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​p​o​r​t​ ​(​e​.​g​.​,​ ​a​c​t​i​v​e​U​s​e​r​s​,​ ​s​c​r​e​e​n​P​a​g​e​V​i​e​w​s​,​ ​e​v​e​n​t​C​o​u​n​t​)​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									name: {
+										/**
+										 * M​e​t​r​i​c​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​m​e​t​r​i​c
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​a​l​-​t​i​m​e​ ​m​e​t​r​i​c​ ​t​o​ ​i​n​c​l​u​d​e​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						dimensions: {
+							/**
+							 * D​i​m​e​n​s​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​e​a​l​-​t​i​m​e​ ​d​i​m​e​n​s​i​o​n​s​ ​t​o​ ​s​e​g​m​e​n​t​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​r​e​a​l​-​t​i​m​e​ ​d​i​m​e​n​s​i​o​n​s​ ​t​o​ ​s​e​g​m​e​n​t​ ​y​o​u​r​ ​d​a​t​a​ ​b​y​ ​(​e​.​g​.​,​ ​c​o​u​n​t​r​y​,​ ​c​i​t​y​,​ ​d​e​v​i​c​e​C​a​t​e​g​o​r​y​,​ ​u​n​i​f​i​e​d​S​c​r​e​e​n​N​a​m​e​)​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									name: {
+										/**
+										 * D​i​m​e​n​s​i​o​n​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​a​l​-​t​i​m​e​ ​d​i​m​e​n​s​i​o​n​ ​t​o​ ​i​n​c​l​u​d​e​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						minute_ranges: {
+							/**
+							 * M​i​n​u​t​e​ ​R​a​n​g​e​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​t​i​m​e​ ​r​a​n​g​e​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​l​a​s​t​ ​3​0​ ​m​i​n​u​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​c​u​s​t​o​m​ ​t​i​m​e​ ​r​a​n​g​e​s​ ​f​o​r​ ​t​h​e​ ​r​e​a​l​-​t​i​m​e​ ​d​a​t​a​.​ ​B​y​ ​d​e​f​a​u​l​t​,​ ​d​a​t​a​ ​f​r​o​m​ ​t​h​e​ ​l​a​s​t​ ​3​0​ ​m​i​n​u​t​e​s​ ​i​s​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									name: {
+										/**
+										 * R​a​n​g​e​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * A​ ​n​a​m​e​ ​f​o​r​ ​t​h​i​s​ ​t​i​m​e​ ​r​a​n​g​e
+										 */
+										shortDesc: string
+										/**
+										 * A​n​ ​o​p​t​i​o​n​a​l​ ​n​a​m​e​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​t​h​i​s​ ​t​i​m​e​ ​r​a​n​g​e​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.
+										 */
+										longDesc: string
+									}
+									start_minutes_ago: {
+										/**
+										 * S​t​a​r​t​ ​M​i​n​u​t​e​s​ ​A​g​o
+										 */
+										displayName: string
+										/**
+										 * S​t​a​r​t​ ​o​f​ ​t​h​e​ ​r​a​n​g​e​ ​i​n​ ​m​i​n​u​t​e​s​ ​a​g​o
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​s​t​a​r​t​ ​o​f​ ​t​h​e​ ​m​i​n​u​t​e​ ​r​a​n​g​e​,​ ​e​x​p​r​e​s​s​e​d​ ​a​s​ ​m​i​n​u​t​e​s​ ​a​g​o​ ​(​e​.​g​.​,​ ​2​9​ ​f​o​r​ ​2​9​ ​m​i​n​u​t​e​s​ ​a​g​o​)​.
+										 */
+										longDesc: string
+									}
+									end_minutes_ago: {
+										/**
+										 * E​n​d​ ​M​i​n​u​t​e​s​ ​A​g​o
+										 */
+										displayName: string
+										/**
+										 * E​n​d​ ​o​f​ ​t​h​e​ ​r​a​n​g​e​ ​i​n​ ​m​i​n​u​t​e​s​ ​a​g​o
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​e​n​d​ ​o​f​ ​t​h​e​ ​m​i​n​u​t​e​ ​r​a​n​g​e​,​ ​e​x​p​r​e​s​s​e​d​ ​a​s​ ​m​i​n​u​t​e​s​ ​a​g​o​ ​(​e​.​g​.​,​ ​0​ ​f​o​r​ ​c​u​r​r​e​n​t​ ​m​i​n​u​t​e​)​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						dimension_filter: {
+							/**
+							 * D​i​m​e​n​s​i​o​n​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​x​p​r​e​s​s​i​o​n​ ​f​o​r​ ​d​i​m​e​n​s​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​a​d​v​a​n​c​e​d​ ​f​i​l​t​e​r​ ​e​x​p​r​e​s​s​i​o​n​ ​t​o​ ​f​i​l​t​e​r​ ​r​e​a​l​-​t​i​m​e​ ​d​a​t​a​ ​b​a​s​e​d​ ​o​n​ ​d​i​m​e​n​s​i​o​n​ ​v​a​l​u​e​s​.
+							 */
+							longDesc: string
+						}
+						metric_filter: {
+							/**
+							 * M​e​t​r​i​c​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​e​x​p​r​e​s​s​i​o​n​ ​f​o​r​ ​m​e​t​r​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​a​d​v​a​n​c​e​d​ ​f​i​l​t​e​r​ ​e​x​p​r​e​s​s​i​o​n​ ​t​o​ ​f​i​l​t​e​r​ ​r​e​a​l​-​t​i​m​e​ ​d​a​t​a​ ​b​a​s​e​d​ ​o​n​ ​m​e​t​r​i​c​ ​v​a​l​u​e​s​.
+							 */
+							longDesc: string
+						}
+						order_bys: {
+							/**
+							 * O​r​d​e​r​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​i​n​g​ ​s​p​e​c​i​f​i​c​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​r​e​p​o​r​t
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​a​l​-​t​i​m​e​ ​r​e​p​o​r​t​ ​r​e​s​u​l​t​s​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									field_name: {
+										/**
+										 * F​i​e​l​d​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c​ ​n​a​m​e​ ​t​o​ ​s​o​r​t​ ​b​y
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​.
+										 */
+										longDesc: string
+									}
+									desc: {
+										/**
+										 * D​e​s​c​e​n​d​i​n​g
+										 */
+										displayName: string
+										/**
+										 * S​o​r​t​ ​i​n​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+										 */
+										shortDesc: string
+										/**
+										 * I​f​ ​t​r​u​e​,​ ​s​o​r​t​s​ ​i​n​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+										 */
+										longDesc: string
+									}
+									order_type: {
+										/**
+										 * O​r​d​e​r​ ​T​y​p​e
+										 */
+										displayName: string
+										/**
+										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​b​y​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c
+										 */
+										shortDesc: string
+										/**
+										 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​a​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​,​0​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_metadata: {
+					/**
+					 * G​e​t​ ​M​e​t​a​d​a​t​a
+					 */
+					displayName: string
+					/**
+					 * D​i​s​c​o​v​e​r​ ​a​v​a​i​l​a​b​l​e​ ​d​i​m​e​n​s​i​o​n​s​ ​a​n​d​ ​m​e​t​r​i​c​s​ ​f​o​r​ ​a​ ​p​r​o​p​e​r​t​y
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​d​i​m​e​n​s​i​o​n​s​ ​a​n​d​ ​m​e​t​r​i​c​s​ ​a​v​a​i​l​a​b​l​e​ ​f​o​r​ ​a​ ​G​o​o​g​l​e​ ​A​n​a​l​y​t​i​c​s​ ​p​r​o​p​e​r​t​y​,​ ​i​n​c​l​u​d​i​n​g​ ​c​u​s​t​o​m​ ​d​e​f​i​n​i​t​i​o​n​s​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​e​x​p​l​o​r​e​ ​w​h​a​t​ ​d​a​t​a​ ​i​s​ ​a​v​a​i​l​a​b​l​e​ ​b​e​f​o​r​e​ ​b​u​i​l​d​i​n​g​ ​r​e​p​o​r​t​s​.
+					 */
+					longDesc: string
+					options: {
+						property_id: {
+							/**
+							 * P​r​o​p​e​r​t​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​A​n​a​l​y​t​i​c​s​ ​4​ ​p​r​o​p​e​r​t​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​A​4​ ​p​r​o​p​e​r​t​y​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​m​e​t​a​d​a​t​a​ ​f​o​r​.​ ​T​h​e​ ​r​e​s​p​o​n​s​e​ ​w​i​l​l​ ​i​n​c​l​u​d​e​ ​b​o​t​h​ ​s​t​a​n​d​a​r​d​ ​a​n​d​ ​c​u​s​t​o​m​ ​d​i​m​e​n​s​i​o​n​s​/​m​e​t​r​i​c​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				batch_run_reports: {
+					/**
+					 * B​a​t​c​h​ ​R​u​n​ ​R​e​p​o​r​t​s
+					 */
+					displayName: string
+					/**
+					 * R​u​n​ ​m​u​l​t​i​p​l​e​ ​r​e​p​o​r​t​s​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​A​P​I​ ​c​a​l​l
+					 */
+					shortDesc: string
+					/**
+					 * E​x​e​c​u​t​e​ ​m​u​l​t​i​p​l​e​ ​r​e​p​o​r​t​ ​r​e​q​u​e​s​t​s​ ​e​f​f​i​c​i​e​n​t​l​y​ ​i​n​ ​o​n​e​ ​A​P​I​ ​c​a​l​l​.​ ​T​h​i​s​ ​i​s​ ​i​d​e​a​l​ ​f​o​r​ ​d​a​s​h​b​o​a​r​d​s​ ​o​r​ ​s​c​e​n​a​r​i​o​s​ ​w​h​e​r​e​ ​y​o​u​ ​n​e​e​d​ ​s​e​v​e​r​a​l​ ​d​i​f​f​e​r​e​n​t​ ​r​e​p​o​r​t​s​.​ ​Y​o​u​ ​c​a​n​ ​i​n​c​l​u​d​e​ ​u​p​ ​t​o​ ​5​ ​i​n​d​i​v​i​d​u​a​l​ ​r​e​p​o​r​t​ ​r​e​q​u​e​s​t​s​ ​p​e​r​ ​b​a​t​c​h​.
+					 */
+					longDesc: string
+					options: {
+						property_id: {
+							/**
+							 * P​r​o​p​e​r​t​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​A​n​a​l​y​t​i​c​s​ ​4​ ​p​r​o​p​e​r​t​y​ ​t​o​ ​q​u​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​A​4​ ​p​r​o​p​e​r​t​y​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​a​n​a​l​y​t​i​c​s​ ​d​a​t​a​ ​f​o​r​ ​a​l​l​ ​r​e​p​o​r​t​s​.
+							 */
+							longDesc: string
+						}
+						requests: {
+							/**
+							 * R​e​p​o​r​t​ ​R​e​q​u​e​s​t​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​i​n​d​i​v​i​d​u​a​l​ ​r​e​p​o​r​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​a​r​r​a​y​ ​o​f​ ​r​e​p​o​r​t​ ​r​e​q​u​e​s​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​s​.​ ​E​a​c​h​ ​r​e​q​u​e​s​t​ ​c​a​n​ ​h​a​v​e​ ​i​t​s​ ​o​w​n​ ​d​a​t​e​ ​r​a​n​g​e​s​,​ ​m​e​t​r​i​c​s​,​ ​d​i​m​e​n​s​i​o​n​s​,​ ​a​n​d​ ​l​i​m​i​t​s​.​ ​M​a​x​i​m​u​m​ ​5​ ​r​e​q​u​e​s​t​s​ ​p​e​r​ ​b​a​t​c​h​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									date_ranges: {
+										/**
+										 * D​a​t​e​ ​R​a​n​g​e​s
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​d​a​t​e​ ​r​a​n​g​e​s​ ​f​o​r​ ​t​h​i​s​ ​r​e​p​o​r​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​a​t​e​ ​r​a​n​g​e​s​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​r​e​p​o​r​t​ ​i​n​ ​t​h​e​ ​b​a​t​c​h​.
+										 */
+										longDesc: string
+										type: {
+											fields: {
+												start_date: {
+													/**
+													 * S​t​a​r​t​ ​D​a​t​e
+													 */
+													displayName: string
+													/**
+													 * T​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​o​f​ ​t​h​e​ ​r​a​n​g​e
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​i​n​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​f​o​r​m​a​t​ ​o​r​ ​r​e​l​a​t​i​v​e​ ​f​o​r​m​a​t​.
+													 */
+													longDesc: string
+												}
+												end_date: {
+													/**
+													 * E​n​d​ ​D​a​t​e
+													 */
+													displayName: string
+													/**
+													 * T​h​e​ ​e​n​d​ ​d​a​t​e​ ​o​f​ ​t​h​e​ ​r​a​n​g​e
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​e​n​d​ ​d​a​t​e​ ​i​n​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​f​o​r​m​a​t​ ​o​r​ ​r​e​l​a​t​i​v​e​ ​f​o​r​m​a​t​.
+													 */
+													longDesc: string
+												}
+											}
+										}
+									}
+									metrics: {
+										/**
+										 * M​e​t​r​i​c​s
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​m​e​t​r​i​c​s​ ​f​o​r​ ​t​h​i​s​ ​r​e​p​o​r​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​m​e​t​r​i​c​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​r​e​p​o​r​t​.
+										 */
+										longDesc: string
+										type: {
+											fields: {
+												name: {
+													/**
+													 * M​e​t​r​i​c​ ​N​a​m​e
+													 */
+													displayName: string
+													/**
+													 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​m​e​t​r​i​c
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​m​e​t​r​i​c​ ​n​a​m​e​.
+													 */
+													longDesc: string
+												}
+											}
+										}
+									}
+									dimensions: {
+										/**
+										 * D​i​m​e​n​s​i​o​n​s
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​d​i​m​e​n​s​i​o​n​s​ ​f​o​r​ ​t​h​i​s​ ​r​e​p​o​r​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​m​e​n​s​i​o​n​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​r​e​p​o​r​t​.
+										 */
+										longDesc: string
+										type: {
+											fields: {
+												name: {
+													/**
+													 * D​i​m​e​n​s​i​o​n​ ​N​a​m​e
+													 */
+													displayName: string
+													/**
+													 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n
+													 */
+													shortDesc: string
+													/**
+													 * T​h​e​ ​d​i​m​e​n​s​i​o​n​ ​n​a​m​e​.
+													 */
+													longDesc: string
+												}
+											}
+										}
+									}
+									limit: {
+										/**
+										 * L​i​m​i​t
+										 */
+										displayName: string
+										/**
+										 * M​a​x​i​m​u​m​ ​r​o​w​s​ ​f​o​r​ ​t​h​i​s​ ​r​e​p​o​r​t
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​t​o​ ​r​e​t​u​r​n​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​r​e​p​o​r​t​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+					}
+				}
+				check_compatibility: {
+					/**
+					 * C​h​e​c​k​ ​C​o​m​p​a​t​i​b​i​l​i​t​y
+					 */
+					displayName: string
+					/**
+					 * V​a​l​i​d​a​t​e​ ​d​i​m​e​n​s​i​o​n​ ​a​n​d​ ​m​e​t​r​i​c​ ​c​o​m​b​i​n​a​t​i​o​n​s
+					 */
+					shortDesc: string
+					/**
+					 * C​h​e​c​k​ ​i​f​ ​s​p​e​c​i​f​i​e​d​ ​d​i​m​e​n​s​i​o​n​s​ ​a​n​d​ ​m​e​t​r​i​c​s​ ​a​r​e​ ​c​o​m​p​a​t​i​b​l​e​ ​b​e​f​o​r​e​ ​r​u​n​n​i​n​g​ ​a​ ​r​e​p​o​r​t​.​ ​T​h​i​s​ ​h​e​l​p​s​ ​a​v​o​i​d​ ​e​r​r​o​r​s​ ​c​a​u​s​e​d​ ​b​y​ ​i​n​c​o​m​p​a​t​i​b​l​e​ ​c​o​m​b​i​n​a​t​i​o​n​s​.​ ​R​e​p​o​r​t​s​ ​w​i​l​l​ ​f​a​i​l​ ​i​f​ ​i​n​c​o​m​p​a​t​i​b​l​e​ ​d​i​m​e​n​s​i​o​n​s​ ​o​r​ ​m​e​t​r​i​c​s​ ​a​r​e​ ​r​e​q​u​e​s​t​e​d​ ​t​o​g​e​t​h​e​r​.
+					 */
+					longDesc: string
+					options: {
+						property_id: {
+							/**
+							 * P​r​o​p​e​r​t​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​A​n​a​l​y​t​i​c​s​ ​4​ ​p​r​o​p​e​r​t​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​A​4​ ​p​r​o​p​e​r​t​y​ ​t​o​ ​c​h​e​c​k​ ​c​o​m​p​a​t​i​b​i​l​i​t​y​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+						dimensions: {
+							/**
+							 * D​i​m​e​n​s​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​i​m​e​n​s​i​o​n​s​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​m​e​n​s​i​o​n​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​v​e​r​i​f​y​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​t​o​g​e​t​h​e​r​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									name: {
+										/**
+										 * D​i​m​e​n​s​i​o​n​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​d​i​m​e​n​s​i​o​n​ ​n​a​m​e​ ​t​o​ ​c​h​e​c​k​ ​c​o​m​p​a​t​i​b​i​l​i​t​y​ ​f​o​r​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						metrics: {
+							/**
+							 * M​e​t​r​i​c​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​m​e​t​r​i​c​s​ ​t​o​ ​c​h​e​c​k
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​e​t​r​i​c​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​v​e​r​i​f​y​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​t​o​g​e​t​h​e​r​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									name: {
+										/**
+										 * M​e​t​r​i​c​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​m​e​t​r​i​c
+										 */
+										shortDesc: string
+										/**
+										 * T​h​e​ ​m​e​t​r​i​c​ ​n​a​m​e​ ​t​o​ ​c​h​e​c​k​ ​c​o​m​p​a​t​i​b​i​l​i​t​y​ ​f​o​r​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						compatibility_filter: {
+							/**
+							 * C​o​m​p​a​t​i​b​i​l​i​t​y​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​r​e​s​u​l​t​s​ ​b​y​ ​c​o​m​p​a​t​i​b​i​l​i​t​y​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​t​o​ ​s​h​o​w​ ​o​n​l​y​ ​c​o​m​p​a​t​i​b​l​e​ ​o​r​ ​o​n​l​y​ ​i​n​c​o​m​p​a​t​i​b​l​e​ ​d​i​m​e​n​s​i​o​n​s​ ​a​n​d​ ​m​e​t​r​i​c​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		GoogleDocs: {
 			/**
 			 * G​o​o​g​l​e​ ​D​o​c​s
@@ -155187,6 +156063,882 @@ export type TranslationFunctions = {
 								 */
 								longDesc: () => LocalizedString
 							}
+						}
+					}
+				}
+			}
+		}
+		GoogleAnalytics: {
+			/**
+			 * Google Analytics
+			 */
+			displayName: () => LocalizedString
+			groups: {
+				/**
+				 * Analytics & Reporting
+				 */
+				'0': () => LocalizedString
+				/**
+				 * Google Workspace Suite
+				 */
+				'1': () => LocalizedString
+			}
+			/**
+			 * Connect with Google Analytics 4 to access your website and app analytics data
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Integrate with Google Analytics 4 (GA4) to run reports, access real-time data, and analyze metrics and dimensions. This integration supports standard reports, real-time analytics, metadata discovery, batch reporting, and compatibility checks for your analytics properties.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				run_report: {
+					/**
+					 * Run Report
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Execute a standard Google Analytics 4 report
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Run a customized analytics report with specified metrics, dimensions, date ranges, and filters. Supports pagination for large result sets and various sorting options.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						property_id: {
+							/**
+							 * Property
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Analytics 4 property to query
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the GA4 property from which to retrieve analytics data.
+							 */
+							longDesc: () => LocalizedString
+						}
+						date_ranges: {
+							/**
+							 * Date Ranges
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The date ranges for the report
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify one or more date ranges for the report. Dates can be in YYYY-MM-DD format or relative values like "7daysAgo", "yesterday", "today".
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									start_date: {
+										/**
+										 * Start Date
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The start date of the range
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The inclusive start date for the query in YYYY-MM-DD format, or relative date like "7daysAgo", "yesterday".
+										 */
+										longDesc: () => LocalizedString
+									}
+									end_date: {
+										/**
+										 * End Date
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The end date of the range
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The inclusive end date for the query in YYYY-MM-DD format, or relative date like "today", "yesterday".
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						metrics: {
+							/**
+							 * Metrics
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The metrics to include in the report
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the quantitative measurements to include (e.g., activeUsers, sessions, pageViews). You can include up to 10 metrics per report.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									name: {
+										/**
+										 * Metric Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The API name of the metric
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The API name of the metric to include in the report.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						dimensions: {
+							/**
+							 * Dimensions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The dimensions to segment the report by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the attributes to segment your data by (e.g., country, browser, pagePath). Dimensions are optional and allow you to break down metrics by specific categories.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									name: {
+										/**
+										 * Dimension Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The API name of the dimension
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The API name of the dimension to include in the report.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						dimension_filter: {
+							/**
+							 * Dimension Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter expression for dimensions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An advanced filter expression to filter report data based on dimension values. Use the GA4 filter expression syntax.
+							 */
+							longDesc: () => LocalizedString
+						}
+						metric_filter: {
+							/**
+							 * Metric Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter expression for metrics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An advanced filter expression to filter report data based on metric values. Use the GA4 filter expression syntax.
+							 */
+							longDesc: () => LocalizedString
+						}
+						order_bys: {
+							/**
+							 * Order By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sorting specification for the report
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the report results by dimension or metric values.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field_name: {
+										/**
+										 * Field Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The dimension or metric name to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The name of the dimension or metric to use for sorting.
+										 */
+										longDesc: () => LocalizedString
+									}
+									desc: {
+										/**
+										 * Descending
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort in descending order
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * If true, sorts in descending order. If false, sorts in ascending order.
+										 */
+										longDesc: () => LocalizedString
+									}
+									order_type: {
+										/**
+										 * Order Type
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Whether to sort by dimension or metric
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Specify whether the field is a dimension or metric for proper sorting.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of rows to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of rows to return in the report. Default is 10,000, maximum is 100,000.
+							 */
+							longDesc: () => LocalizedString
+						}
+						offset: {
+							/**
+							 * Offset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of rows to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of rows to skip before returning results. Used for pagination.
+							 */
+							longDesc: () => LocalizedString
+						}
+						keep_empty_rows: {
+							/**
+							 * Keep Empty Rows
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include rows with all zero metric values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If true, includes rows where all metrics have zero values. If false (default), such rows are excluded.
+							 */
+							longDesc: () => LocalizedString
+						}
+						return_property_quota: {
+							/**
+							 * Return Property Quota
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include API quota information in response
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If true, returns information about API quota usage for this property in the response.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				run_realtime_report: {
+					/**
+					 * Run Real-time Report
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get live analytics data from the last 30 minutes
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve real-time analytics data showing current activity on your property. Events appear within seconds of being sent to Google Analytics. Data is available for the last 30 minutes (or 60 minutes for Google Analytics 360 properties).
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						property_id: {
+							/**
+							 * Property
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Analytics 4 property to query
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the GA4 property from which to retrieve real-time analytics data.
+							 */
+							longDesc: () => LocalizedString
+						}
+						metrics: {
+							/**
+							 * Metrics
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The real-time metrics to include
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the real-time metrics to include in the report (e.g., activeUsers, screenPageViews, eventCount).
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									name: {
+										/**
+										 * Metric Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The API name of the metric
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The API name of the real-time metric to include.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						dimensions: {
+							/**
+							 * Dimensions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The real-time dimensions to segment by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the real-time dimensions to segment your data by (e.g., country, city, deviceCategory, unifiedScreenName).
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									name: {
+										/**
+										 * Dimension Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The API name of the dimension
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The API name of the real-time dimension to include.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						minute_ranges: {
+							/**
+							 * Minute Ranges
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom time ranges within the last 30 minutes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify custom time ranges for the real-time data. By default, data from the last 30 minutes is returned.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									name: {
+										/**
+										 * Range Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * A name for this time range
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * An optional name to identify this time range in the response.
+										 */
+										longDesc: () => LocalizedString
+									}
+									start_minutes_ago: {
+										/**
+										 * Start Minutes Ago
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Start of the range in minutes ago
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The start of the minute range, expressed as minutes ago (e.g., 29 for 29 minutes ago).
+										 */
+										longDesc: () => LocalizedString
+									}
+									end_minutes_ago: {
+										/**
+										 * End Minutes Ago
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * End of the range in minutes ago
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The end of the minute range, expressed as minutes ago (e.g., 0 for current minute).
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						dimension_filter: {
+							/**
+							 * Dimension Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter expression for dimensions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An advanced filter expression to filter real-time data based on dimension values.
+							 */
+							longDesc: () => LocalizedString
+						}
+						metric_filter: {
+							/**
+							 * Metric Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter expression for metrics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An advanced filter expression to filter real-time data based on metric values.
+							 */
+							longDesc: () => LocalizedString
+						}
+						order_bys: {
+							/**
+							 * Order By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sorting specification for the report
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify how to sort the real-time report results.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									field_name: {
+										/**
+										 * Field Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The dimension or metric name to sort by
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The name of the dimension or metric to use for sorting.
+										 */
+										longDesc: () => LocalizedString
+									}
+									desc: {
+										/**
+										 * Descending
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Sort in descending order
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * If true, sorts in descending order.
+										 */
+										longDesc: () => LocalizedString
+									}
+									order_type: {
+										/**
+										 * Order Type
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Whether to sort by dimension or metric
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Specify whether the field is a dimension or metric.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of rows to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of rows to return. Default is 10,000.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_metadata: {
+					/**
+					 * Get Metadata
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Discover available dimensions and metrics for a property
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve the list of dimensions and metrics available for a Google Analytics property, including custom definitions. Use this to explore what data is available before building reports.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						property_id: {
+							/**
+							 * Property
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Analytics 4 property
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the GA4 property to retrieve metadata for. The response will include both standard and custom dimensions/metrics.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				batch_run_reports: {
+					/**
+					 * Batch Run Reports
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Run multiple reports in a single API call
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Execute multiple report requests efficiently in one API call. This is ideal for dashboards or scenarios where you need several different reports. You can include up to 5 individual report requests per batch.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						property_id: {
+							/**
+							 * Property
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Analytics 4 property to query
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the GA4 property from which to retrieve analytics data for all reports.
+							 */
+							longDesc: () => LocalizedString
+						}
+						requests: {
+							/**
+							 * Report Requests
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The individual report configurations
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An array of report request configurations. Each request can have its own date ranges, metrics, dimensions, and limits. Maximum 5 requests per batch.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									date_ranges: {
+										/**
+										 * Date Ranges
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The date ranges for this report
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The date ranges for this specific report in the batch.
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											fields: {
+												start_date: {
+													/**
+													 * Start Date
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * The start date of the range
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The start date in YYYY-MM-DD format or relative format.
+													 */
+													longDesc: () => LocalizedString
+												}
+												end_date: {
+													/**
+													 * End Date
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * The end date of the range
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The end date in YYYY-MM-DD format or relative format.
+													 */
+													longDesc: () => LocalizedString
+												}
+											}
+										}
+									}
+									metrics: {
+										/**
+										 * Metrics
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The metrics for this report
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The metrics to include in this specific report.
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											fields: {
+												name: {
+													/**
+													 * Metric Name
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * The API name of the metric
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The metric name.
+													 */
+													longDesc: () => LocalizedString
+												}
+											}
+										}
+									}
+									dimensions: {
+										/**
+										 * Dimensions
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The dimensions for this report
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The dimensions to include in this specific report.
+										 */
+										longDesc: () => LocalizedString
+										type: {
+											fields: {
+												name: {
+													/**
+													 * Dimension Name
+													 */
+													displayName: () => LocalizedString
+													/**
+													 * The API name of the dimension
+													 */
+													shortDesc: () => LocalizedString
+													/**
+													 * The dimension name.
+													 */
+													longDesc: () => LocalizedString
+												}
+											}
+										}
+									}
+									limit: {
+										/**
+										 * Limit
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Maximum rows for this report
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The maximum number of rows to return for this specific report.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+					}
+				}
+				check_compatibility: {
+					/**
+					 * Check Compatibility
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Validate dimension and metric combinations
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Check if specified dimensions and metrics are compatible before running a report. This helps avoid errors caused by incompatible combinations. Reports will fail if incompatible dimensions or metrics are requested together.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						property_id: {
+							/**
+							 * Property
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Google Analytics 4 property
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the GA4 property to check compatibility for.
+							 */
+							longDesc: () => LocalizedString
+						}
+						dimensions: {
+							/**
+							 * Dimensions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The dimensions to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The dimensions you want to verify can be used together.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									name: {
+										/**
+										 * Dimension Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The API name of the dimension
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The dimension name to check compatibility for.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						metrics: {
+							/**
+							 * Metrics
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The metrics to check
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The metrics you want to verify can be used together.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									name: {
+										/**
+										 * Metric Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * The API name of the metric
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * The metric name to check compatibility for.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						compatibility_filter: {
+							/**
+							 * Compatibility Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter results by compatibility status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter the results to show only compatible or only incompatible dimensions and metrics.
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}
