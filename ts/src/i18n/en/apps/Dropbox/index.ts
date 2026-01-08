@@ -55,13 +55,12 @@ const DropboxAppEn = {
           displayName: 'Destination Path',
           shortDesc: 'Full path for the uploaded file',
           longDesc:
-            'The full path where the file should be uploaded, including the filename (e.g., "/Documents/report.pdf").',
+            'The full path where the file should be uploaded, including the filename (e.g., "/Documents/report.pdf"). If not provided, the file will be uploaded to the root folder with its original name.',
         },
-        fileContent: {
-          displayName: 'File Content',
-          shortDesc: 'Binary content of the file',
-          longDesc:
-            'The binary content of the file to upload. Can be base64-encoded or include a data URL prefix.',
+        file: {
+          displayName: 'File',
+          shortDesc: 'The file to upload',
+          longDesc: 'The file to upload to Dropbox.',
         },
         autorename: {
           displayName: 'Auto Rename',

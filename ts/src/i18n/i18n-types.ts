@@ -75577,21 +75577,21 @@ type RootTranslation = {
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​f​u​l​l​ ​p​a​t​h​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​l​e​ ​s​h​o​u​l​d​ ​b​e​ ​u​p​l​o​a​d​e​d​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​i​l​e​n​a​m​e​ ​(​e​.​g​.​,​ ​"​/​D​o​c​u​m​e​n​t​s​/​r​e​p​o​r​t​.​p​d​f​"​)​.
+							 * T​h​e​ ​f​u​l​l​ ​p​a​t​h​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​l​e​ ​s​h​o​u​l​d​ ​b​e​ ​u​p​l​o​a​d​e​d​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​f​i​l​e​n​a​m​e​ ​(​e​.​g​.​,​ ​"​/​D​o​c​u​m​e​n​t​s​/​r​e​p​o​r​t​.​p​d​f​"​)​.​ ​I​f​ ​n​o​t​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​u​p​l​o​a​d​e​d​ ​t​o​ ​t​h​e​ ​r​o​o​t​ ​f​o​l​d​e​r​ ​w​i​t​h​ ​i​t​s​ ​o​r​i​g​i​n​a​l​ ​n​a​m​e​.
 							 */
 							longDesc: string
 						}
-						fileContent: {
+						file: {
 							/**
-							 * F​i​l​e​ ​C​o​n​t​e​n​t
+							 * F​i​l​e
 							 */
 							displayName: string
 							/**
-							 * B​i​n​a​r​y​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​f​i​l​e
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d
 							 */
 							shortDesc: string
 							/**
-							 * T​h​e​ ​b​i​n​a​r​y​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d​.​ ​C​a​n​ ​b​e​ ​b​a​s​e​6​4​-​e​n​c​o​d​e​d​ ​o​r​ ​i​n​c​l​u​d​e​ ​a​ ​d​a​t​a​ ​U​R​L​ ​p​r​e​f​i​x​.
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d​ ​t​o​ ​D​r​o​p​b​o​x​.
 							 */
 							longDesc: string
 						}
@@ -113751,17 +113751,17 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
-						fileData: {
+						file: {
 							/**
-							 * F​i​l​e​ ​D​a​t​a
+							 * F​i​l​e
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​f​i​l​e​ ​c​o​n​t​e​n​t
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d
 							 */
 							shortDesc: string
 							/**
-							 * B​i​n​a​r​y​ ​c​o​n​t​e​n​t​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d​.
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d​ ​t​o​ ​t​h​e​ ​S​l​a​c​k​ ​c​h​a​n​n​e​l​.
 							 */
 							longDesc: string
 						}
@@ -191330,21 +191330,21 @@ export type TranslationFunctions = {
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The full path where the file should be uploaded, including the filename (e.g., "/Documents/report.pdf").
+							 * The full path where the file should be uploaded, including the filename (e.g., "/Documents/report.pdf"). If not provided, the file will be uploaded to the root folder with its original name.
 							 */
 							longDesc: () => LocalizedString
 						}
-						fileContent: {
+						file: {
 							/**
-							 * File Content
+							 * File
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * Binary content of the file
+							 * The file to upload
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * The binary content of the file to upload. Can be base64-encoded or include a data URL prefix.
+							 * The file to upload to Dropbox.
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -229504,17 +229504,17 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
-						fileData: {
+						file: {
 							/**
-							 * File Data
+							 * File
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The file content
+							 * The file to upload
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * Binary content of the file to upload.
+							 * The file to upload to the Slack channel.
 							 */
 							longDesc: () => LocalizedString
 						}

@@ -8,6 +8,7 @@ import {
   SendDirectMessage,
   SendMessage,
   UpdateMessage,
+  UploadFile,
 } from '../apps/slack/actions';
 import { getSlackChannelsAllowedValues } from '../apps/slack/helpers/get-channels-allowed-values';
 import { getSlackUsersAllowedValues } from '../apps/slack/helpers/get-users-allowed-values';
@@ -92,8 +93,8 @@ describe('Should test Slack', () => {
   });
 
   afterAll(async () => {
-    // Archive test channel if created
-    if (testChannelId) {
+    // Archive test channel if created (skip if SLACK_SKIP_CLEANUP is set)
+    if (testChannelId && !process.env.SLACK_SKIP_CLEANUP) {
       try {
         await QorusRequest.post(
           {
@@ -280,6 +281,44 @@ describe('Should test Slack', () => {
 
       expect(result).toBeDefined();
       expect(result.ok).toBe(true);
+    });
+  });
+
+  describe('Should test File actions', () => {
+    it('Should upload a file to a channel', async () => {
+      const channelToUse = testChannelId || sharedTestValues.channelId;
+
+      // Skip if no channel available
+      if (!channelToUse) {
+        console.log('Skipping upload file test - no channel available');
+        return;
+      }
+
+      const action = UploadFile;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      const fileContent = Buffer.from('Test file content from Qore integration test').toString('base64');
+
+      const result = await action.api_function(
+        {
+          channel: channelToUse,
+          file: {
+            name: 'qore-test-file.txt',
+            mime_type: 'text/plain',
+            content: fileContent,
+          },
+          filename: 'qore-test-upload.txt',
+          comment: 'Test file upload from Qore',
+        },
+        undefined,
+        baseContext
+      );
+
+      expect(result).toBeDefined();
+      expect(result.ok).toBe(true);
+      expect(result.files).toBeDefined();
+      expect(Array.isArray(result.files)).toBe(true);
     });
   });
 

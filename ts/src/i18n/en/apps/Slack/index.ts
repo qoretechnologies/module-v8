@@ -284,10 +284,10 @@ const SlackAppEn = {
           shortDesc: 'Channel to upload to',
           longDesc: 'Select the channel where the file should be uploaded.',
         },
-        fileData: {
-          displayName: 'File Data',
-          shortDesc: 'The file content',
-          longDesc: 'Binary content of the file to upload.',
+        file: {
+          displayName: 'File',
+          shortDesc: 'The file to upload',
+          longDesc: 'The file to upload to the Slack channel.',
         },
         filename: {
           displayName: 'Filename',

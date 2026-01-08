@@ -1,6 +1,7 @@
 import {
   EQoreAppActionCode,
   QoreAppCreator,
+  TQoreFile,
   TQoreOptions,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
@@ -13,10 +14,10 @@ const action = 'upload_file';
 const options = {
   path: {
     type: 'string',
-    required: true,
+    required: false,
   },
-  fileContent: {
-    type: 'string',
+  file: {
+    type: 'file',
     required: true,
   },
   autorename: {
@@ -43,25 +44,25 @@ const UploadFile = QoreAppCreator.createLocalizedAction<typeof options>({
   options,
   response_type: DropboxFileMetadataResponseType,
   api_function: async (obj, _opts, context) => {
-    const { token, path, fileContent } = getQoreContextRequiredValues({
+    const { token, file } = getQoreContextRequiredValues<{
+      token: string;
+      file: TQoreFile;
+    }>({
       context: { ...context, opts: obj },
-      optionFields: ['path', 'fileContent'],
+      optionFields: ['file'],
       connectionFields: ['token'],
       ErrorClass: DropboxError,
     });
 
+    // Use provided path or default to root with filename from file
+    const path = obj?.path || `/${file.name}`;
     const autorename = obj?.autorename ?? false;
     const mute = obj?.mute ?? false;
     const strictConflict = obj?.strictConflict ?? false;
 
     try {
-      // Handle base64 content (with or without data URL prefix)
-      let base64Content = fileContent;
-      if (fileContent.includes('base64,')) {
-        base64Content = fileContent.split('base64,')[1];
-      }
-
-      const fileBuffer = Buffer.from(base64Content, 'base64');
+      // Decode base64 content to get the actual file buffer
+      const fileBuffer = Buffer.from(file.content, 'base64');
 
       const result = await dropboxClient.uploadContent<Record<string, any>>('files/upload', fileBuffer, {
         token,

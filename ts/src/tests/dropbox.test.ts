@@ -280,12 +280,16 @@ describe('Should test Dropbox', () => {
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
       const uploadPath = `${testFolderPath}/uploaded-file.txt`;
-      const binaryContent = Buffer.from('Uploaded content from test').toString('base64');
+      const fileContent = Buffer.from('Uploaded content from test').toString('base64');
 
       const result = await action.api_function(
         {
           path: uploadPath,
-          fileContent: binaryContent,
+          file: {
+            name: 'uploaded-file.txt',
+            mime_type: 'text/plain',
+            content: fileContent,
+          },
           autorename: true,
         },
         undefined,

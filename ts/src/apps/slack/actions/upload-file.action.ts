@@ -1,11 +1,12 @@
 import {
   EQoreAppActionCode,
   QoreAppCreator,
+  QorusRequest,
+  TQoreFile,
   TQoreOptions,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { slackClient } from '../client';
-import { SLACK_APP_NAME, SlackError } from '../constants';
+import { SLACK_API_URL, SLACK_APP_NAME, SlackError } from '../constants';
 import { getSlackChannelsAllowedValues } from '../helpers';
 import { SlackUploadFileResponseType } from '../response-types';
 
@@ -17,8 +18,8 @@ const options = {
     required: true,
     get_allowed_values: getSlackChannelsAllowedValues,
   },
-  fileData: {
-    type: 'data',
+  file: {
+    type: 'file',
     required: true,
   },
   filename: {
@@ -38,58 +39,64 @@ const UploadFile = QoreAppCreator.createLocalizedAction<typeof options>({
   options,
   response_type: SlackUploadFileResponseType,
   api_function: async (obj, _opts, context) => {
-    const { token, channel, fileData } = getQoreContextRequiredValues({
+    const { token, channel, file } = getQoreContextRequiredValues<{
+      token: string;
+      channel: string;
+      file: TQoreFile;
+    }>({
       context: { ...context, opts: obj },
-      optionFields: ['channel', 'fileData'],
+      optionFields: ['channel', 'file'],
       connectionFields: ['token'],
       ErrorClass: SlackError,
     });
 
-    const filename = obj?.filename || 'file';
+    const filename = obj?.filename || file.name || 'file';
     const comment = obj?.comment;
 
-    try {
-      // Slack files.uploadV2 endpoint requires multipart form data
-      // For this implementation, we'll use the files.getUploadURLExternal + complete flow
-      // or a direct POST if the client supports it
+    // Decode base64 content to get the actual file buffer
+    const fileBuffer = Buffer.from(file.content, 'base64');
 
-      // First get the upload URL
-      const getUrlResponse = await slackClient.post<{
-        ok: boolean;
-        upload_url: string;
-        file_id: string;
+    try {
+      // Step 1: Get upload URL from Slack
+      const getUrlResponse = await QorusRequest.get<{
+        data: { ok: boolean; upload_url: string; file_id: string; error?: string };
       }>(
-        'files.getUploadURLExternal',
         {
-          filename,
-          length: fileData.length,
+          path: '/files.getUploadURLExternal',
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+          params: {
+            filename,
+            length: fileBuffer.length,
+          },
         },
-        { token }
+        { url: SLACK_API_URL, endpointId: SLACK_APP_NAME }
       );
 
-      if (!getUrlResponse.upload_url) {
-        throw new SlackError('Failed to get upload URL from Slack');
+      if (!getUrlResponse.data?.ok || !getUrlResponse.data?.upload_url) {
+        throw new SlackError(
+          `Failed to get upload URL: ${getUrlResponse.data?.error || 'Unknown error'}`
+        );
       }
 
-      // Upload the file to the external URL
-      // This requires a PUT request to the upload URL with the file content
-      const uploadUrl = getUrlResponse.upload_url;
-      const fileId = getUrlResponse.file_id;
+      const uploadUrl = getUrlResponse.data.upload_url;
+      const fileId = getUrlResponse.data.file_id;
 
-      // We need to manually upload to the external URL
-      const { QorusRequest } = await import('@qoretechnologies/ts-toolkit');
-      await QorusRequest.put(
+      // Step 2: Upload file content to the external URL
+      await QorusRequest.post(
         {
           headers: {
-            'Content-Type': 'application/octet-stream',
+            'Content-Type': file.mime_type || 'application/octet-stream',
           },
           path: '',
-          data: fileData,
+          data: fileBuffer,
         },
         { url: uploadUrl, endpointId: SLACK_APP_NAME }
       );
 
-      // Complete the upload
+      // Step 3: Complete the upload and share to channel
+      // This endpoint expects JSON body
       const completeBody: Record<string, any> = {
         files: [{ id: fileId, title: filename }],
         channel_id: channel,
@@ -99,13 +106,25 @@ const UploadFile = QoreAppCreator.createLocalizedAction<typeof options>({
         completeBody.initial_comment = comment;
       }
 
-      const result = await slackClient.post<{ ok: boolean; files: any[] }>(
-        'files.completeUploadExternal',
-        completeBody,
-        { token }
+      const result = await QorusRequest.post<{
+        data: { ok: boolean; files: any[]; error?: string };
+      }>(
+        {
+          path: '/files.completeUploadExternal',
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json',
+          },
+          data: completeBody,
+        },
+        { url: SLACK_API_URL, endpointId: SLACK_APP_NAME }
       );
 
-      return result;
+      if (!result.data?.ok) {
+        throw new SlackError(`Failed to complete upload: ${result.data?.error || 'Unknown error'}`);
+      }
+
+      return result.data;
     } catch (error) {
       throw new SlackError(`Failed to upload file: ${error.message || error}`);
     }
