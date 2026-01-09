@@ -339,7 +339,7 @@ export abstract class QoreApiClient {
       // OVERRIDABLE: Extract and transform response
       return this.processResponse(response, options);
     } catch (error) {
-      console.dir({ error }, { depth: null });
+      Debugger.log(`Error in ${method} ${formattedPath}`, error);
 
       // OVERRIDABLE: Handle errors
       throw this.handleError(error, context);

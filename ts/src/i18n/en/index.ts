@@ -61,6 +61,7 @@ import NetSuite from './apps/NetSuite';
 import Notion from './apps/Notion';
 import Odoo from './apps/Odoo';
 import OpenRouter from './apps/Openrouter';
+import OpenWeatherMap from './apps/OpenWeatherMap';
 import Outlook from './apps/Outlook';
 import Paddle from './apps/Paddle';
 import Patreon from './apps/Patreon';
@@ -125,6 +126,7 @@ const en = {
     Gemini,
     Gitlab,
     OpenRouter,
+    OpenWeatherMap,
     GoogleAnalytics,
     GoogleDocs,
     GoogleMeet,

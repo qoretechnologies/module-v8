@@ -1,4 +1,9 @@
-import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
+import {
+  EQoreAppActionCode,
+  QoreAppCreator,
+  TQoreAppActionOption,
+  TQoreOptions,
+} from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { GOOGLE_ANALYTICS_APP_NAME, GoogleAnalyticsError } from '../constants';
 import { createGoogleAnalyticsDataClient } from '../helpers/constants';
@@ -171,109 +176,96 @@ const runRealtimeReport = QoreAppCreator.createLocalizedAction<typeof options>({
         limit: obj.limit || 10000,
       });
 
-      const dimensionHeaders =
-        response.dimensionHeaders?.map((header) => ({
-          name: header.name,
-        })) || [];
+      // Build dimension and metric header maps for name lookup
+      const dimHeaders = response.dimensionHeaders || dimensions.map((d) => ({ name: d.name }));
+      const metHeaders =
+        response.metricHeaders || metrics.map((m) => ({ name: m.name, type: 'TYPE_INTEGER' }));
 
-      const metricHeaders =
-        response.metricHeaders?.map((header) => ({
-          name: header.name,
-          type: header.type,
-        })) || [];
-
+      // Transform rows to user-friendly objects with named fields
       const rows =
-        response.rows?.map((row) => ({
-          dimension_values: row.dimensionValues?.map((dv) => ({ value: dv.value })) || [],
-          metric_values: row.metricValues?.map((mv) => ({ value: mv.value })) || [],
-        })) || [];
+        response.rows?.map((row) => {
+          const rowObj: Record<string, string | number> = {};
 
-      return {
-        row_count: response.rowCount || 0,
-        dimension_headers: dimensionHeaders,
-        metric_headers: metricHeaders,
-        rows,
-        property_quota: response.propertyQuota
-          ? {
-              tokens_per_day: response.propertyQuota.tokensPerDay,
-              tokens_per_hour: response.propertyQuota.tokensPerHour,
-              concurrent_requests: response.propertyQuota.concurrentRequests,
-              server_errors_per_project_per_hour: response.propertyQuota.serverErrorsPerProjectPerHour,
+          // Add dimensions as named fields
+          row.dimensionValues?.forEach((dv, i) => {
+            const name = dimHeaders[i]?.name;
+            if (name) {
+              rowObj[name] = dv.value || '';
             }
-          : undefined,
+          });
+
+          // Add metrics as named fields with type conversion
+          row.metricValues?.forEach((mv, i) => {
+            const header = metHeaders[i];
+            const name = header?.name;
+            if (name) {
+              // Convert to number for integer/float types
+              const type = String(header?.type || 'TYPE_INTEGER');
+              rowObj[name] =
+                type.includes('INTEGER') || type.includes('FLOAT')
+                  ? Number(mv.value)
+                  : mv.value || '';
+            }
+          });
+
+          return rowObj;
+        }) || [];
+
+      const result = {
+        row_count: response.rowCount || 0,
+        rows,
       };
+
+      return result;
     } catch (error) {
-      throw new GoogleAnalyticsError(`Failed to run real-time report: ${error.message || error}`);
+      const message = error instanceof Error ? error.message : String(error);
+      throw new GoogleAnalyticsError(`Failed to run real-time report: ${message}`);
     }
+  },
+  get_dynamic_response_type: async (context) => {
+    const metrics = (context?.opts?.metrics as Array<{ name: string }>) || [];
+    const dimensions = (context?.opts?.dimensions as Array<{ name: string }>) || [];
+
+    const rowFields: Record<string, TQoreAppActionOption> = {};
+
+    // Add dimension fields as strings
+    dimensions.forEach((dim) => {
+      if (dim.name) {
+        rowFields[dim.name] = { type: 'string' };
+      }
+    });
+
+    // Add metric fields as numbers
+    metrics.forEach((metric) => {
+      if (metric.name) {
+        rowFields[metric.name] = { type: 'number' };
+      }
+    });
+
+    return {
+      type: 'hash',
+      fields: {
+        row_count: { type: 'integer' },
+        rows: {
+          type: {
+            type: 'list',
+            element_type: {
+              type: 'hash',
+              fields: rowFields,
+            },
+          },
+        },
+      },
+    };
   },
   response_type: {
     type: 'hash',
     fields: {
       row_count: { type: 'integer' },
-      dimension_headers: {
-        type: {
-          type: 'list',
-          element_type: {
-            type: 'hash',
-            fields: {
-              name: { type: 'string' },
-            },
-          },
-        },
-      },
-      metric_headers: {
-        type: {
-          type: 'list',
-          element_type: {
-            type: 'hash',
-            fields: {
-              name: { type: 'string' },
-              type: { type: 'string' },
-            },
-          },
-        },
-      },
       rows: {
         type: {
           type: 'list',
-          element_type: {
-            type: 'hash',
-            fields: {
-              dimension_values: {
-                type: {
-                  type: 'list',
-                  element_type: {
-                    type: 'hash',
-                    fields: {
-                      value: { type: 'string' },
-                    },
-                  },
-                },
-              },
-              metric_values: {
-                type: {
-                  type: 'list',
-                  element_type: {
-                    type: 'hash',
-                    fields: {
-                      value: { type: 'string' },
-                    },
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
-      property_quota: {
-        type: {
-          type: 'hash',
-          fields: {
-            tokens_per_day: { type: 'auto' },
-            tokens_per_hour: { type: 'auto' },
-            concurrent_requests: { type: 'auto' },
-            server_errors_per_project_per_hour: { type: 'auto' },
-          },
+          element_type: 'auto',
         },
       },
     },
