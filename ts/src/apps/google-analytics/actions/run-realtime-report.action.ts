@@ -176,14 +176,6 @@ const runRealtimeReport = QoreAppCreator.createLocalizedAction<typeof options>({
         limit: obj.limit || 10000,
       });
 
-      console.log('run_realtime_report - Raw API response:');
-      console.dir({
-        rowCount: response.rowCount,
-        dimensionHeaders: response.dimensionHeaders,
-        metricHeaders: response.metricHeaders,
-        rows: response.rows,
-      }, { depth: null });
-
       // Build dimension and metric header maps for name lookup
       const dimHeaders = response.dimensionHeaders || dimensions.map((d) => ({ name: d.name }));
       const metHeaders =
@@ -223,9 +215,6 @@ const runRealtimeReport = QoreAppCreator.createLocalizedAction<typeof options>({
         row_count: response.rowCount || 0,
         rows,
       };
-
-      console.log('run_realtime_report - Transformed result:');
-      console.dir(result, { depth: null });
 
       return result;
     } catch (error) {
