@@ -229,36 +229,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											number: {
-												/**
-												 * P​h​o​n​e​ ​N​u​m​b​e​r
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​ ​a​n​y​ ​f​o​r​m​a​t
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * C​a​t​e​g​o​r​y
-												 */
-												displayName: string
-												/**
-												 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​(​w​o​r​k​,​ ​m​o​b​i​l​e​,​ ​h​o​m​e​,​ ​o​r​ ​o​t​h​e​r​)
-												 */
-												longDesc: string
-											}
+									fields: {
+										number: {
+											/**
+											 * P​h​o​n​e​ ​N​u​m​b​e​r
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​ ​a​n​y​ ​f​o​r​m​a​t
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * C​a​t​e​g​o​r​y
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​(​w​o​r​k​,​ ​m​o​b​i​l​e​,​ ​h​o​m​e​,​ ​o​r​ ​o​t​h​e​r​)
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -293,36 +291,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * U​R​L
-												 */
-												displayName: string
-												/**
-												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​ ​U​R​L
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​t​o​ ​t​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * P​l​a​t​f​o​r​m
-												 */
-												displayName: string
-												/**
-												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m​ ​(​L​i​n​k​e​d​I​n​,​ ​T​w​i​t​t​e​r​,​ ​F​a​c​e​b​o​o​k​,​ ​Y​o​u​T​u​b​e​,​ ​Q​u​o​r​a​,​ ​I​n​s​t​a​g​r​a​m​,​ ​P​i​n​t​e​r​e​s​t​,​ ​o​r​ ​O​t​h​e​r​)
-												 */
-												longDesc: string
-											}
+									fields: {
+										url: {
+											/**
+											 * U​R​L
+											 */
+											displayName: string
+											/**
+											 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​ ​U​R​L
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​t​o​ ​t​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * P​l​a​t​f​o​r​m
+											 */
+											displayName: string
+											/**
+											 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m​ ​(​L​i​n​k​e​d​I​n​,​ ​T​w​i​t​t​e​r​,​ ​F​a​c​e​b​o​o​k​,​ ​Y​o​u​T​u​b​e​,​ ​Q​u​o​r​a​,​ ​I​n​s​t​a​g​r​a​m​,​ ​P​i​n​t​e​r​e​s​t​,​ ​o​r​ ​O​t​h​e​r​)
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -357,36 +353,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * U​R​L
-												 */
-												displayName: string
-												/**
-												 * W​e​b​s​i​t​e​ ​U​R​L
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​o​f​ ​t​h​e​ ​w​e​b​s​i​t​e
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * C​a​t​e​g​o​r​y
-												 */
-												displayName: string
-												/**
-												 * T​y​p​e​ ​o​f​ ​w​e​b​s​i​t​e
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​i​s​ ​w​e​b​s​i​t​e​ ​(​w​o​r​k​,​ ​p​e​r​s​o​n​a​l​,​ ​o​r​ ​o​t​h​e​r​)
-												 */
-												longDesc: string
-											}
+									fields: {
+										url: {
+											/**
+											 * U​R​L
+											 */
+											displayName: string
+											/**
+											 * W​e​b​s​i​t​e​ ​U​R​L
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​o​f​ ​t​h​e​ ​w​e​b​s​i​t​e
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * C​a​t​e​g​o​r​y
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​w​e​b​s​i​t​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​i​s​ ​w​e​b​s​i​t​e​ ​(​w​o​r​k​,​ ​p​e​r​s​o​n​a​l​,​ ​o​r​ ​o​t​h​e​r​)
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -569,36 +563,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * U​R​L
-												 */
-												displayName: string
-												/**
-												 * W​e​b​s​i​t​e​ ​U​R​L
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​o​f​ ​t​h​e​ ​w​e​b​s​i​t​e
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * C​a​t​e​g​o​r​y
-												 */
-												displayName: string
-												/**
-												 * T​y​p​e​ ​o​f​ ​w​e​b​s​i​t​e
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​i​s​ ​w​e​b​s​i​t​e​ ​(​w​o​r​k​,​ ​p​e​r​s​o​n​a​l​,​ ​o​r​ ​o​t​h​e​r​)
-												 */
-												longDesc: string
-											}
+									fields: {
+										url: {
+											/**
+											 * U​R​L
+											 */
+											displayName: string
+											/**
+											 * W​e​b​s​i​t​e​ ​U​R​L
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​o​f​ ​t​h​e​ ​w​e​b​s​i​t​e
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * C​a​t​e​g​o​r​y
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​w​e​b​s​i​t​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​i​s​ ​w​e​b​s​i​t​e​ ​(​w​o​r​k​,​ ​p​e​r​s​o​n​a​l​,​ ​o​r​ ​o​t​h​e​r​)
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -619,36 +611,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * U​R​L
-												 */
-												displayName: string
-												/**
-												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​ ​U​R​L
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​t​o​ ​t​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * P​l​a​t​f​o​r​m
-												 */
-												displayName: string
-												/**
-												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m​ ​(​L​i​n​k​e​d​I​n​,​ ​T​w​i​t​t​e​r​,​ ​F​a​c​e​b​o​o​k​,​ ​Y​o​u​T​u​b​e​,​ ​Q​u​o​r​a​,​ ​I​n​s​t​a​g​r​a​m​,​ ​P​i​n​t​e​r​e​s​t​,​ ​o​r​ ​O​t​h​e​r​)
-												 */
-												longDesc: string
-											}
+									fields: {
+										url: {
+											/**
+											 * U​R​L
+											 */
+											displayName: string
+											/**
+											 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​ ​U​R​L
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​t​o​ ​t​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * P​l​a​t​f​o​r​m
+											 */
+											displayName: string
+											/**
+											 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m​ ​(​L​i​n​k​e​d​I​n​,​ ​T​w​i​t​t​e​r​,​ ​F​a​c​e​b​o​o​k​,​ ​Y​o​u​T​u​b​e​,​ ​Q​u​o​r​a​,​ ​I​n​s​t​a​g​r​a​m​,​ ​P​i​n​t​e​r​e​s​t​,​ ​o​r​ ​O​t​h​e​r​)
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -715,36 +705,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											number: {
-												/**
-												 * P​h​o​n​e​ ​N​u​m​b​e​r
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​ ​a​n​y​ ​f​o​r​m​a​t
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * C​a​t​e​g​o​r​y
-												 */
-												displayName: string
-												/**
-												 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
-												 */
-												longDesc: string
-											}
+									fields: {
+										number: {
+											/**
+											 * P​h​o​n​e​ ​N​u​m​b​e​r
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​ ​a​n​y​ ​f​o​r​m​a​t
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * C​a​t​e​g​o​r​y
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -1359,36 +1347,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											email: {
-												/**
-												 * E​m​a​i​l​ ​A​d​d​r​e​s​s
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
-												 */
-												shortDesc: string
-												/**
-												 * E​m​a​i​l​ ​a​d​d​r​e​s​s
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * C​a​t​e​g​o​r​y
-												 */
-												displayName: string
-												/**
-												 * T​y​p​e​ ​o​f​ ​e​m​a​i​l
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​e​m​a​i​l​ ​(​w​o​r​k​,​ ​p​e​r​s​o​n​a​l​,​ ​o​r​ ​o​t​h​e​r​)
-												 */
-												longDesc: string
-											}
+									fields: {
+										email: {
+											/**
+											 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+											 */
+											shortDesc: string
+											/**
+											 * E​m​a​i​l​ ​a​d​d​r​e​s​s
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * C​a​t​e​g​o​r​y
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​e​m​a​i​l
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​e​m​a​i​l​ ​(​w​o​r​k​,​ ​p​e​r​s​o​n​a​l​,​ ​o​r​ ​o​t​h​e​r​)
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -1409,36 +1395,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											number: {
-												/**
-												 * P​h​o​n​e​ ​N​u​m​b​e​r
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
-												 */
-												shortDesc: string
-												/**
-												 * P​h​o​n​e​ ​n​u​m​b​e​r
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * C​a​t​e​g​o​r​y
-												 */
-												displayName: string
-												/**
-												 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​(​w​o​r​k​,​ ​m​o​b​i​l​e​,​ ​h​o​m​e​,​ ​o​r​ ​o​t​h​e​r​)
-												 */
-												longDesc: string
-											}
+									fields: {
+										number: {
+											/**
+											 * P​h​o​n​e​ ​N​u​m​b​e​r
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											shortDesc: string
+											/**
+											 * P​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * C​a​t​e​g​o​r​y
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​(​w​o​r​k​,​ ​m​o​b​i​l​e​,​ ​h​o​m​e​,​ ​o​r​ ​o​t​h​e​r​)
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -1459,36 +1443,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * U​R​L
-												 */
-												displayName: string
-												/**
-												 * S​o​c​i​a​l​ ​p​r​o​f​i​l​e​ ​U​R​L
-												 */
-												shortDesc: string
-												/**
-												 * S​o​c​i​a​l​ ​p​r​o​f​i​l​e​ ​U​R​L
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * P​l​a​t​f​o​r​m
-												 */
-												displayName: string
-												/**
-												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
-												 */
-												shortDesc: string
-												/**
-												 * S​o​c​i​a​l​ ​p​l​a​t​f​o​r​m
-												 */
-												longDesc: string
-											}
+									fields: {
+										url: {
+											/**
+											 * U​R​L
+											 */
+											displayName: string
+											/**
+											 * S​o​c​i​a​l​ ​p​r​o​f​i​l​e​ ​U​R​L
+											 */
+											shortDesc: string
+											/**
+											 * S​o​c​i​a​l​ ​p​r​o​f​i​l​e​ ​U​R​L
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * P​l​a​t​f​o​r​m
+											 */
+											displayName: string
+											/**
+											 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
+											 */
+											shortDesc: string
+											/**
+											 * S​o​c​i​a​l​ ​p​l​a​t​f​o​r​m
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -1537,36 +1519,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * U​R​L
-												 */
-												displayName: string
-												/**
-												 * W​e​b​s​i​t​e​ ​U​R​L
-												 */
-												shortDesc: string
-												/**
-												 * W​e​b​s​i​t​e​ ​U​R​L
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * C​a​t​e​g​o​r​y
-												 */
-												displayName: string
-												/**
-												 * T​y​p​e​ ​o​f​ ​w​e​b​s​i​t​e
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​i​s​ ​w​e​b​s​i​t​e​ ​(​w​o​r​k​,​ ​p​e​r​s​o​n​a​l​,​ ​o​r​ ​o​t​h​e​r​)
-												 */
-												longDesc: string
-											}
+									fields: {
+										url: {
+											/**
+											 * U​R​L
+											 */
+											displayName: string
+											/**
+											 * W​e​b​s​i​t​e​ ​U​R​L
+											 */
+											shortDesc: string
+											/**
+											 * W​e​b​s​i​t​e​ ​U​R​L
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * C​a​t​e​g​o​r​y
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​w​e​b​s​i​t​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​i​s​ ​w​e​b​s​i​t​e​ ​(​w​o​r​k​,​ ​p​e​r​s​o​n​a​l​,​ ​o​r​ ​o​t​h​e​r​)
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -4167,36 +4147,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											number: {
-												/**
-												 * P​h​o​n​e​ ​N​u​m​b​e​r
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​ ​a​n​y​ ​f​o​r​m​a​t
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * C​a​t​e​g​o​r​y
-												 */
-												displayName: string
-												/**
-												 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
-												 */
-												longDesc: string
-											}
+									fields: {
+										number: {
+											/**
+											 * P​h​o​n​e​ ​N​u​m​b​e​r
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​ ​a​n​y​ ​f​o​r​m​a​t
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * C​a​t​e​g​o​r​y
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -4231,36 +4209,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * U​R​L
-												 */
-												displayName: string
-												/**
-												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​ ​U​R​L
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​t​o​ ​t​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * P​l​a​t​f​o​r​m
-												 */
-												displayName: string
-												/**
-												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
-												 */
-												longDesc: string
-											}
+									fields: {
+										url: {
+											/**
+											 * U​R​L
+											 */
+											displayName: string
+											/**
+											 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​ ​U​R​L
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​t​o​ ​t​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * P​l​a​t​f​o​r​m
+											 */
+											displayName: string
+											/**
+											 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -4295,36 +4271,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * U​R​L
-												 */
-												displayName: string
-												/**
-												 * W​e​b​s​i​t​e​ ​U​R​L
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​o​f​ ​t​h​e​ ​w​e​b​s​i​t​e
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * C​a​t​e​g​o​r​y
-												 */
-												displayName: string
-												/**
-												 * T​y​p​e​ ​o​f​ ​w​e​b​s​i​t​e
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​i​s​ ​w​e​b​s​i​t​e
-												 */
-												longDesc: string
-											}
+									fields: {
+										url: {
+											/**
+											 * U​R​L
+											 */
+											displayName: string
+											/**
+											 * W​e​b​s​i​t​e​ ​U​R​L
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​o​f​ ​t​h​e​ ​w​e​b​s​i​t​e
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * C​a​t​e​g​o​r​y
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​w​e​b​s​i​t​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​i​s​ ​w​e​b​s​i​t​e
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -4521,36 +4495,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * U​R​L
-												 */
-												displayName: string
-												/**
-												 * W​e​b​s​i​t​e​ ​U​R​L
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​o​f​ ​t​h​e​ ​w​e​b​s​i​t​e
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * C​a​t​e​g​o​r​y
-												 */
-												displayName: string
-												/**
-												 * T​y​p​e​ ​o​f​ ​w​e​b​s​i​t​e
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​i​s​ ​w​e​b​s​i​t​e
-												 */
-												longDesc: string
-											}
+									fields: {
+										url: {
+											/**
+											 * U​R​L
+											 */
+											displayName: string
+											/**
+											 * W​e​b​s​i​t​e​ ​U​R​L
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​o​f​ ​t​h​e​ ​w​e​b​s​i​t​e
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * C​a​t​e​g​o​r​y
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​w​e​b​s​i​t​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​i​s​ ​w​e​b​s​i​t​e
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -4571,36 +4543,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * U​R​L
-												 */
-												displayName: string
-												/**
-												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​ ​U​R​L
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​t​o​ ​t​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * P​l​a​t​f​o​r​m
-												 */
-												displayName: string
-												/**
-												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
-												 */
-												longDesc: string
-											}
+									fields: {
+										url: {
+											/**
+											 * U​R​L
+											 */
+											displayName: string
+											/**
+											 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e​ ​U​R​L
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​f​u​l​l​ ​U​R​L​ ​t​o​ ​t​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​r​o​f​i​l​e
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * P​l​a​t​f​o​r​m
+											 */
+											displayName: string
+											/**
+											 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -4667,36 +4637,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											number: {
-												/**
-												 * P​h​o​n​e​ ​N​u​m​b​e​r
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​ ​a​n​y​ ​f​o​r​m​a​t
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * C​a​t​e​g​o​r​y
-												 */
-												displayName: string
-												/**
-												 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
-												 */
-												longDesc: string
-											}
+									fields: {
+										number: {
+											/**
+											 * P​h​o​n​e​ ​N​u​m​b​e​r
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​ ​a​n​y​ ​f​o​r​m​a​t
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * C​a​t​e​g​o​r​y
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -5339,36 +5307,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											email: {
-												/**
-												 * E​m​a​i​l​ ​A​d​d​r​e​s​s
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
-												 */
-												shortDesc: string
-												/**
-												 * E​m​a​i​l​ ​a​d​d​r​e​s​s
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * C​a​t​e​g​o​r​y
-												 */
-												displayName: string
-												/**
-												 * T​y​p​e​ ​o​f​ ​e​m​a​i​l
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​e​m​a​i​l
-												 */
-												longDesc: string
-											}
+									fields: {
+										email: {
+											/**
+											 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+											 */
+											shortDesc: string
+											/**
+											 * E​m​a​i​l​ ​a​d​d​r​e​s​s
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * C​a​t​e​g​o​r​y
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​e​m​a​i​l
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​e​m​a​i​l
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -5389,36 +5355,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											number: {
-												/**
-												 * P​h​o​n​e​ ​N​u​m​b​e​r
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
-												 */
-												shortDesc: string
-												/**
-												 * P​h​o​n​e​ ​n​u​m​b​e​r
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * C​a​t​e​g​o​r​y
-												 */
-												displayName: string
-												/**
-												 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
-												 */
-												longDesc: string
-											}
+									fields: {
+										number: {
+											/**
+											 * P​h​o​n​e​ ​N​u​m​b​e​r
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											shortDesc: string
+											/**
+											 * P​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * C​a​t​e​g​o​r​y
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​t​y​p​e​ ​o​f​ ​t​h​i​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -5439,36 +5403,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * U​R​L
-												 */
-												displayName: string
-												/**
-												 * S​o​c​i​a​l​ ​p​r​o​f​i​l​e​ ​U​R​L
-												 */
-												shortDesc: string
-												/**
-												 * S​o​c​i​a​l​ ​p​r​o​f​i​l​e​ ​U​R​L
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * P​l​a​t​f​o​r​m
-												 */
-												displayName: string
-												/**
-												 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
-												 */
-												shortDesc: string
-												/**
-												 * S​o​c​i​a​l​ ​p​l​a​t​f​o​r​m
-												 */
-												longDesc: string
-											}
+									fields: {
+										url: {
+											/**
+											 * U​R​L
+											 */
+											displayName: string
+											/**
+											 * S​o​c​i​a​l​ ​p​r​o​f​i​l​e​ ​U​R​L
+											 */
+											shortDesc: string
+											/**
+											 * S​o​c​i​a​l​ ​p​r​o​f​i​l​e​ ​U​R​L
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * P​l​a​t​f​o​r​m
+											 */
+											displayName: string
+											/**
+											 * S​o​c​i​a​l​ ​m​e​d​i​a​ ​p​l​a​t​f​o​r​m
+											 */
+											shortDesc: string
+											/**
+											 * S​o​c​i​a​l​ ​p​l​a​t​f​o​r​m
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -5517,36 +5479,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * U​R​L
-												 */
-												displayName: string
-												/**
-												 * W​e​b​s​i​t​e​ ​U​R​L
-												 */
-												shortDesc: string
-												/**
-												 * W​e​b​s​i​t​e​ ​U​R​L
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * C​a​t​e​g​o​r​y
-												 */
-												displayName: string
-												/**
-												 * T​y​p​e​ ​o​f​ ​w​e​b​s​i​t​e
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​i​s​ ​w​e​b​s​i​t​e
-												 */
-												longDesc: string
-											}
+									fields: {
+										url: {
+											/**
+											 * U​R​L
+											 */
+											displayName: string
+											/**
+											 * W​e​b​s​i​t​e​ ​U​R​L
+											 */
+											shortDesc: string
+											/**
+											 * W​e​b​s​i​t​e​ ​U​R​L
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * C​a​t​e​g​o​r​y
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​w​e​b​s​i​t​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​o​r​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​i​s​ ​w​e​b​s​i​t​e
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -10527,34 +10487,36 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									field: {
-										/**
-										 * F​i​e​l​d​ ​N​a​m​e
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
-										 */
-										shortDesc: string
-										/**
-										 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​f​i​e​l​d​ ​A​P​I​ ​n​a​m​e​ ​f​r​o​m​ ​t​h​e​ ​m​o​d​u​l​e​.​ ​A​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​ ​n​a​m​e​s​ ​c​a​n​ ​b​e​ ​r​e​t​r​i​e​v​e​d​ ​u​s​i​n​g​ ​t​h​e​ ​F​i​e​l​d​s​ ​M​e​t​a​d​a​t​a​ ​A​P​I​.​ ​T​h​e​ ​f​i​e​l​d​ ​m​u​s​t​ ​b​e​ ​s​e​a​r​c​h​a​b​l​e​ ​t​o​ ​b​e​ ​u​s​e​d​ ​i​n​ ​f​i​l​t​e​r​i​n​g​.
-										 */
-										longDesc: string
-									}
-									value: {
-										/**
-										 * F​i​e​l​d​ ​V​a​l​u​e
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​v​a​l​u​e​ ​t​h​a​t​ ​t​h​e​ ​f​i​e​l​d​ ​m​u​s​t​ ​e​q​u​a​l
-										 */
-										shortDesc: string
-										/**
-										 * E​n​t​e​r​ ​t​h​e​ ​e​x​a​c​t​ ​v​a​l​u​e​ ​t​h​a​t​ ​t​h​e​ ​f​i​e​l​d​ ​m​u​s​t​ ​e​q​u​a​l​ ​f​o​r​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​m​a​t​c​h​.​ ​T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​u​s​e​s​ ​t​h​e​ ​"​e​q​u​a​l​s​"​ ​o​p​e​r​a​t​o​r​,​ ​s​o​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​m​u​s​t​ ​m​a​t​c​h​ ​t​h​i​s​ ​v​a​l​u​e​ ​e​x​a​c​t​l​y​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * F​i​e​l​d​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+											 */
+											shortDesc: string
+											/**
+											 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​f​i​e​l​d​ ​A​P​I​ ​n​a​m​e​ ​f​r​o​m​ ​t​h​e​ ​m​o​d​u​l​e​.​ ​A​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​ ​n​a​m​e​s​ ​c​a​n​ ​b​e​ ​r​e​t​r​i​e​v​e​d​ ​u​s​i​n​g​ ​t​h​e​ ​F​i​e​l​d​s​ ​M​e​t​a​d​a​t​a​ ​A​P​I​.​ ​T​h​e​ ​f​i​e​l​d​ ​m​u​s​t​ ​b​e​ ​s​e​a​r​c​h​a​b​l​e​ ​t​o​ ​b​e​ ​u​s​e​d​ ​i​n​ ​f​i​l​t​e​r​i​n​g​.
+											 */
+											longDesc: string
+										}
+										value: {
+											/**
+											 * F​i​e​l​d​ ​V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​t​h​a​t​ ​t​h​e​ ​f​i​e​l​d​ ​m​u​s​t​ ​e​q​u​a​l
+											 */
+											shortDesc: string
+											/**
+											 * E​n​t​e​r​ ​t​h​e​ ​e​x​a​c​t​ ​v​a​l​u​e​ ​t​h​a​t​ ​t​h​e​ ​f​i​e​l​d​ ​m​u​s​t​ ​e​q​u​a​l​ ​f​o​r​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​m​a​t​c​h​.​ ​T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​u​s​e​s​ ​t​h​e​ ​"​e​q​u​a​l​s​"​ ​o​p​e​r​a​t​o​r​,​ ​s​o​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​m​u​s​t​ ​m​a​t​c​h​ ​t​h​i​s​ ​v​a​l​u​e​ ​e​x​a​c​t​l​y​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -11090,50 +11052,48 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											id: {
-												/**
-												 * T​a​g​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​g
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​I​D​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​a​g​ ​i​n​ ​t​h​e​ ​m​o​d​u​l​e​.​ ​T​h​i​s​ ​I​D​ ​t​a​k​e​s​ ​p​r​e​c​e​d​e​n​c​e​ ​o​v​e​r​ ​t​h​e​ ​n​a​m​e​ ​f​i​e​l​d​.​ ​U​s​e​ ​t​h​e​ ​L​i​s​t​ ​T​a​g​s​ ​a​c​t​i​o​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​a​g​ ​I​D​s​.​ ​T​h​e​ ​t​a​g​ ​m​u​s​t​ ​a​l​r​e​a​d​y​ ​e​x​i​s​t​ ​i​n​ ​t​h​e​ ​m​o​d​u​l​e​.
-												 */
-												longDesc: string
-											}
-											name: {
-												/**
-												 * T​a​g​ ​N​a​m​e
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​t​a​g
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​t​a​g​.​ ​W​h​e​n​ ​b​o​t​h​ ​I​D​ ​a​n​d​ ​n​a​m​e​ ​a​r​e​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​I​D​ ​t​a​k​e​s​ ​p​r​e​c​e​d​e​n​c​e​.​ ​I​f​ ​o​n​l​y​ ​t​h​e​ ​n​a​m​e​ ​i​s​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​s​y​s​t​e​m​ ​w​i​l​l​ ​l​o​o​k​ ​u​p​ ​t​h​e​ ​t​a​g​ ​b​y​ ​n​a​m​e​.
-												 */
-												longDesc: string
-											}
-											color_code: {
-												/**
-												 * C​o​l​o​r​ ​C​o​d​e
-												 */
-												displayName: string
-												/**
-												 * O​p​t​i​o​n​a​l​ ​h​e​x​a​d​e​c​i​m​a​l​ ​c​o​l​o​r​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​t​a​g
-												 */
-												shortDesc: string
-												/**
-												 * O​p​t​i​o​n​a​l​ ​h​e​x​a​d​e​c​i​m​a​l​ ​c​o​l​o​r​ ​c​o​d​e​ ​f​o​r​ ​v​i​s​u​a​l​ ​i​d​e​n​t​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​t​a​g​ ​(​e​.​g​.​,​ ​#​F​1​7​5​7​4​,​ ​#​5​7​B​1​F​D​)​.​ ​T​h​e​ ​a​l​l​o​w​e​d​ ​c​o​l​o​r​ ​c​o​d​e​s​ ​a​r​e​ ​p​r​e​d​e​f​i​n​e​d​ ​i​n​ ​Z​o​h​o​ ​C​R​M​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​ ​o​r​ ​s​e​t​ ​t​o​ ​n​u​l​l​,​ ​t​h​e​ ​t​a​g​ ​w​i​l​l​ ​u​s​e​ ​i​t​s​ ​d​e​f​a​u​l​t​ ​c​o​l​o​r​.
-												 */
-												longDesc: string
-											}
+									fields: {
+										id: {
+											/**
+											 * T​a​g​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​g
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​I​D​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​t​a​g​ ​i​n​ ​t​h​e​ ​m​o​d​u​l​e​.​ ​T​h​i​s​ ​I​D​ ​t​a​k​e​s​ ​p​r​e​c​e​d​e​n​c​e​ ​o​v​e​r​ ​t​h​e​ ​n​a​m​e​ ​f​i​e​l​d​.​ ​U​s​e​ ​t​h​e​ ​L​i​s​t​ ​T​a​g​s​ ​a​c​t​i​o​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​a​g​ ​I​D​s​.​ ​T​h​e​ ​t​a​g​ ​m​u​s​t​ ​a​l​r​e​a​d​y​ ​e​x​i​s​t​ ​i​n​ ​t​h​e​ ​m​o​d​u​l​e​.
+											 */
+											longDesc: string
+										}
+										name: {
+											/**
+											 * T​a​g​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​t​a​g
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​t​a​g​.​ ​W​h​e​n​ ​b​o​t​h​ ​I​D​ ​a​n​d​ ​n​a​m​e​ ​a​r​e​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​I​D​ ​t​a​k​e​s​ ​p​r​e​c​e​d​e​n​c​e​.​ ​I​f​ ​o​n​l​y​ ​t​h​e​ ​n​a​m​e​ ​i​s​ ​p​r​o​v​i​d​e​d​,​ ​t​h​e​ ​s​y​s​t​e​m​ ​w​i​l​l​ ​l​o​o​k​ ​u​p​ ​t​h​e​ ​t​a​g​ ​b​y​ ​n​a​m​e​.
+											 */
+											longDesc: string
+										}
+										color_code: {
+											/**
+											 * C​o​l​o​r​ ​C​o​d​e
+											 */
+											displayName: string
+											/**
+											 * O​p​t​i​o​n​a​l​ ​h​e​x​a​d​e​c​i​m​a​l​ ​c​o​l​o​r​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​t​a​g
+											 */
+											shortDesc: string
+											/**
+											 * O​p​t​i​o​n​a​l​ ​h​e​x​a​d​e​c​i​m​a​l​ ​c​o​l​o​r​ ​c​o​d​e​ ​f​o​r​ ​v​i​s​u​a​l​ ​i​d​e​n​t​i​f​i​c​a​t​i​o​n​ ​o​f​ ​t​h​e​ ​t​a​g​ ​(​e​.​g​.​,​ ​#​F​1​7​5​7​4​,​ ​#​5​7​B​1​F​D​)​.​ ​T​h​e​ ​a​l​l​o​w​e​d​ ​c​o​l​o​r​ ​c​o​d​e​s​ ​a​r​e​ ​p​r​e​d​e​f​i​n​e​d​ ​i​n​ ​Z​o​h​o​ ​C​R​M​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​ ​o​r​ ​s​e​t​ ​t​o​ ​n​u​l​l​,​ ​t​h​e​ ​t​a​g​ ​w​i​l​l​ ​u​s​e​ ​i​t​s​ ​d​e​f​a​u​l​t​ ​c​o​l​o​r​.
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -13351,50 +13311,48 @@ type RootTranslation = {
 										longDesc: string
 										type: {
 											element_type: {
-												type: {
-													fields: {
-														type: {
-															/**
-															 * T​y​p​e
-															 */
-															displayName: string
-															/**
-															 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
-															 */
-															shortDesc: string
-															/**
-															 * C​h​o​o​s​e​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​f​o​r​ ​t​h​i​s​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​(​e​q​u​a​l​,​ ​c​o​n​t​a​i​n​s​,​ ​e​m​p​t​y​,​ ​e​t​c​.​)​.
-															 */
-															longDesc: string
-														}
-														field: {
-															/**
-															 * F​i​e​l​d
-															 */
-															displayName: string
-															/**
-															 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
-															 */
-															shortDesc: string
-															/**
-															 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​b​l​e​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​i​s​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​t​o​.
-															 */
-															longDesc: string
-														}
-														value: {
-															/**
-															 * V​a​l​u​e
-															 */
-															displayName: string
-															/**
-															 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
-															 */
-															shortDesc: string
-															/**
-															 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t​ ​u​s​i​n​g​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​o​p​e​r​a​t​o​r​.
-															 */
-															longDesc: string
-														}
+												fields: {
+													type: {
+														/**
+														 * T​y​p​e
+														 */
+														displayName: string
+														/**
+														 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+														 */
+														shortDesc: string
+														/**
+														 * C​h​o​o​s​e​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​f​o​r​ ​t​h​i​s​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​(​e​q​u​a​l​,​ ​c​o​n​t​a​i​n​s​,​ ​e​m​p​t​y​,​ ​e​t​c​.​)​.
+														 */
+														longDesc: string
+													}
+													field: {
+														/**
+														 * F​i​e​l​d
+														 */
+														displayName: string
+														/**
+														 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+														 */
+														shortDesc: string
+														/**
+														 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​b​l​e​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​i​s​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​t​o​.
+														 */
+														longDesc: string
+													}
+													value: {
+														/**
+														 * V​a​l​u​e
+														 */
+														displayName: string
+														/**
+														 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​g​a​i​n​s​t​ ​u​s​i​n​g​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​o​p​e​r​a​t​o​r​.
+														 */
+														longDesc: string
 													}
 												}
 											}
@@ -13595,50 +13553,48 @@ type RootTranslation = {
 										longDesc: string
 										type: {
 											element_type: {
-												type: {
-													fields: {
-														type: {
-															/**
-															 * T​y​p​e
-															 */
-															displayName: string
-															/**
-															 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
-															 */
-															shortDesc: string
-															/**
-															 * C​h​o​o​s​e​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​f​o​r​ ​t​h​i​s​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​.
-															 */
-															longDesc: string
-														}
-														field: {
-															/**
-															 * F​i​e​l​d
-															 */
-															displayName: string
-															/**
-															 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
-															 */
-															shortDesc: string
-															/**
-															 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​b​l​e​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​i​s​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​t​o​.
-															 */
-															longDesc: string
-														}
-														value: {
-															/**
-															 * V​a​l​u​e
-															 */
-															displayName: string
-															/**
-															 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h
-															 */
-															shortDesc: string
-															/**
-															 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​.​ ​O​n​l​y​ ​n​e​w​ ​r​o​w​s​ ​m​a​t​c​h​i​n​g​ ​t​h​i​s​ ​c​o​n​d​i​t​i​o​n​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.
-															 */
-															longDesc: string
-														}
+												fields: {
+													type: {
+														/**
+														 * T​y​p​e
+														 */
+														displayName: string
+														/**
+														 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+														 */
+														shortDesc: string
+														/**
+														 * C​h​o​o​s​e​ ​t​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r​ ​f​o​r​ ​t​h​i​s​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​.
+														 */
+														longDesc: string
+													}
+													field: {
+														/**
+														 * F​i​e​l​d
+														 */
+														displayName: string
+														/**
+														 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​o​n
+														 */
+														shortDesc: string
+														/**
+														 * S​e​l​e​c​t​ ​t​h​e​ ​t​a​b​l​e​ ​f​i​e​l​d​ ​t​o​ ​a​p​p​l​y​ ​t​h​i​s​ ​f​i​l​t​e​r​ ​c​o​n​d​i​t​i​o​n​ ​t​o​.
+														 */
+														longDesc: string
+													}
+													value: {
+														/**
+														 * V​a​l​u​e
+														 */
+														displayName: string
+														/**
+														 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​c​o​m​p​a​r​e​ ​a​g​a​i​n​s​t​.​ ​O​n​l​y​ ​n​e​w​ ​r​o​w​s​ ​m​a​t​c​h​i​n​g​ ​t​h​i​s​ ​c​o​n​d​i​t​i​o​n​ ​w​i​l​l​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​.
+														 */
+														longDesc: string
 													}
 												}
 											}
@@ -30873,34 +30829,36 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									name: {
-										/**
-										 * T​a​g​ ​N​a​m​e
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​t​a​g​.
-										 */
-										shortDesc: string
-										/**
-										 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​t​a​g​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​ ​f​o​r​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
-										 */
-										longDesc: string
-									}
-									value: {
-										/**
-										 * T​a​g​ ​V​a​l​u​e
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​t​a​g​.
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​v​a​l​u​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​t​a​g​ ​n​a​m​e​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * T​a​g​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​t​a​g​.
+											 */
+											shortDesc: string
+											/**
+											 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​t​a​g​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​u​s​e​d​ ​f​o​r​ ​c​a​t​e​g​o​r​i​z​a​t​i​o​n​.
+											 */
+											longDesc: string
+										}
+										value: {
+											/**
+											 * T​a​g​ ​V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​t​a​g​.
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​t​a​g​ ​n​a​m​e​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -32160,50 +32118,48 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											entity: {
-												/**
-												 * E​n​t​i​t​y​ ​T​y​p​e
-												 */
-												displayName: string
-												/**
-												 * T​y​p​e​ ​o​f​ ​e​n​t​i​t​y​ ​b​e​i​n​g​ ​m​e​n​t​i​o​n​e​d
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​t​y​p​e​ ​o​f​ ​e​n​t​i​t​y​ ​b​e​i​n​g​ ​m​e​n​t​i​o​n​e​d​ ​(​e​.​g​.​,​ ​c​o​m​p​a​n​y​)
-												 */
-												longDesc: string
-											}
-											urn: {
-												/**
-												 * E​n​t​i​t​y​ ​U​R​N
-												 */
-												displayName: string
-												/**
-												 * L​i​n​k​e​d​I​n​ ​U​R​N​ ​o​f​ ​t​h​e​ ​e​n​t​i​t​y
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​L​i​n​k​e​d​I​n​ ​U​R​N​ ​(​U​n​i​f​o​r​m​ ​R​e​s​o​u​r​c​e​ ​N​a​m​e​)​ ​o​f​ ​t​h​e​ ​e​n​t​i​t​y​ ​b​e​i​n​g​ ​m​e​n​t​i​o​n​e​d
-												 */
-												longDesc: string
-											}
-											start: {
-												/**
-												 * S​t​a​r​t​ ​P​o​s​i​t​i​o​n
-												 */
-												displayName: string
-												/**
-												 * C​h​a​r​a​c​t​e​r​ ​p​o​s​i​t​i​o​n​ ​w​h​e​r​e​ ​m​e​n​t​i​o​n​ ​s​t​a​r​t​s
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​h​a​r​a​c​t​e​r​ ​p​o​s​i​t​i​o​n​ ​i​n​ ​t​h​e​ ​t​e​x​t​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​n​t​i​o​n​ ​b​e​g​i​n​s
-												 */
-												longDesc: string
-											}
+									fields: {
+										entity: {
+											/**
+											 * E​n​t​i​t​y​ ​T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​e​n​t​i​t​y​ ​b​e​i​n​g​ ​m​e​n​t​i​o​n​e​d
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​y​p​e​ ​o​f​ ​e​n​t​i​t​y​ ​b​e​i​n​g​ ​m​e​n​t​i​o​n​e​d​ ​(​e​.​g​.​,​ ​c​o​m​p​a​n​y​)
+											 */
+											longDesc: string
+										}
+										urn: {
+											/**
+											 * E​n​t​i​t​y​ ​U​R​N
+											 */
+											displayName: string
+											/**
+											 * L​i​n​k​e​d​I​n​ ​U​R​N​ ​o​f​ ​t​h​e​ ​e​n​t​i​t​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​L​i​n​k​e​d​I​n​ ​U​R​N​ ​(​U​n​i​f​o​r​m​ ​R​e​s​o​u​r​c​e​ ​N​a​m​e​)​ ​o​f​ ​t​h​e​ ​e​n​t​i​t​y​ ​b​e​i​n​g​ ​m​e​n​t​i​o​n​e​d
+											 */
+											longDesc: string
+										}
+										start: {
+											/**
+											 * S​t​a​r​t​ ​P​o​s​i​t​i​o​n
+											 */
+											displayName: string
+											/**
+											 * C​h​a​r​a​c​t​e​r​ ​p​o​s​i​t​i​o​n​ ​w​h​e​r​e​ ​m​e​n​t​i​o​n​ ​s​t​a​r​t​s
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​h​a​r​a​c​t​e​r​ ​p​o​s​i​t​i​o​n​ ​i​n​ ​t​h​e​ ​t​e​x​t​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​n​t​i​o​n​ ​b​e​g​i​n​s
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -32328,50 +32284,48 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											entity: {
-												/**
-												 * E​n​t​i​t​y​ ​T​y​p​e
-												 */
-												displayName: string
-												/**
-												 * T​y​p​e​ ​o​f​ ​e​n​t​i​t​y​ ​b​e​i​n​g​ ​m​e​n​t​i​o​n​e​d
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​t​y​p​e​ ​o​f​ ​e​n​t​i​t​y​ ​b​e​i​n​g​ ​m​e​n​t​i​o​n​e​d​ ​(​e​.​g​.​,​ ​c​o​m​p​a​n​y​)
-												 */
-												longDesc: string
-											}
-											urn: {
-												/**
-												 * E​n​t​i​t​y​ ​U​R​N
-												 */
-												displayName: string
-												/**
-												 * L​i​n​k​e​d​I​n​ ​U​R​N​ ​o​f​ ​t​h​e​ ​e​n​t​i​t​y
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​L​i​n​k​e​d​I​n​ ​U​R​N​ ​(​U​n​i​f​o​r​m​ ​R​e​s​o​u​r​c​e​ ​N​a​m​e​)​ ​o​f​ ​t​h​e​ ​e​n​t​i​t​y​ ​b​e​i​n​g​ ​m​e​n​t​i​o​n​e​d
-												 */
-												longDesc: string
-											}
-											start: {
-												/**
-												 * S​t​a​r​t​ ​P​o​s​i​t​i​o​n
-												 */
-												displayName: string
-												/**
-												 * C​h​a​r​a​c​t​e​r​ ​p​o​s​i​t​i​o​n​ ​w​h​e​r​e​ ​m​e​n​t​i​o​n​ ​s​t​a​r​t​s
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​h​a​r​a​c​t​e​r​ ​p​o​s​i​t​i​o​n​ ​i​n​ ​t​h​e​ ​t​e​x​t​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​n​t​i​o​n​ ​b​e​g​i​n​s
-												 */
-												longDesc: string
-											}
+									fields: {
+										entity: {
+											/**
+											 * E​n​t​i​t​y​ ​T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​e​n​t​i​t​y​ ​b​e​i​n​g​ ​m​e​n​t​i​o​n​e​d
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​y​p​e​ ​o​f​ ​e​n​t​i​t​y​ ​b​e​i​n​g​ ​m​e​n​t​i​o​n​e​d​ ​(​e​.​g​.​,​ ​c​o​m​p​a​n​y​)
+											 */
+											longDesc: string
+										}
+										urn: {
+											/**
+											 * E​n​t​i​t​y​ ​U​R​N
+											 */
+											displayName: string
+											/**
+											 * L​i​n​k​e​d​I​n​ ​U​R​N​ ​o​f​ ​t​h​e​ ​e​n​t​i​t​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​L​i​n​k​e​d​I​n​ ​U​R​N​ ​(​U​n​i​f​o​r​m​ ​R​e​s​o​u​r​c​e​ ​N​a​m​e​)​ ​o​f​ ​t​h​e​ ​e​n​t​i​t​y​ ​b​e​i​n​g​ ​m​e​n​t​i​o​n​e​d
+											 */
+											longDesc: string
+										}
+										start: {
+											/**
+											 * S​t​a​r​t​ ​P​o​s​i​t​i​o​n
+											 */
+											displayName: string
+											/**
+											 * C​h​a​r​a​c​t​e​r​ ​p​o​s​i​t​i​o​n​ ​w​h​e​r​e​ ​m​e​n​t​i​o​n​ ​s​t​a​r​t​s
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​h​a​r​a​c​t​e​r​ ​p​o​s​i​t​i​o​n​ ​i​n​ ​t​h​e​ ​t​e​x​t​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​n​t​i​o​n​ ​b​e​g​i​n​s
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -32464,50 +32418,48 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											entity: {
-												/**
-												 * E​n​t​i​t​y​ ​T​y​p​e
-												 */
-												displayName: string
-												/**
-												 * T​y​p​e​ ​o​f​ ​e​n​t​i​t​y​ ​b​e​i​n​g​ ​m​e​n​t​i​o​n​e​d
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​t​y​p​e​ ​o​f​ ​e​n​t​i​t​y​ ​b​e​i​n​g​ ​m​e​n​t​i​o​n​e​d​ ​(​e​.​g​.​,​ ​c​o​m​p​a​n​y​)
-												 */
-												longDesc: string
-											}
-											urn: {
-												/**
-												 * E​n​t​i​t​y​ ​U​R​N
-												 */
-												displayName: string
-												/**
-												 * L​i​n​k​e​d​I​n​ ​U​R​N​ ​o​f​ ​t​h​e​ ​e​n​t​i​t​y
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​L​i​n​k​e​d​I​n​ ​U​R​N​ ​(​U​n​i​f​o​r​m​ ​R​e​s​o​u​r​c​e​ ​N​a​m​e​)​ ​o​f​ ​t​h​e​ ​e​n​t​i​t​y​ ​b​e​i​n​g​ ​m​e​n​t​i​o​n​e​d
-												 */
-												longDesc: string
-											}
-											start: {
-												/**
-												 * S​t​a​r​t​ ​P​o​s​i​t​i​o​n
-												 */
-												displayName: string
-												/**
-												 * C​h​a​r​a​c​t​e​r​ ​p​o​s​i​t​i​o​n​ ​w​h​e​r​e​ ​m​e​n​t​i​o​n​ ​s​t​a​r​t​s
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​h​a​r​a​c​t​e​r​ ​p​o​s​i​t​i​o​n​ ​i​n​ ​t​h​e​ ​t​e​x​t​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​n​t​i​o​n​ ​b​e​g​i​n​s
-												 */
-												longDesc: string
-											}
+									fields: {
+										entity: {
+											/**
+											 * E​n​t​i​t​y​ ​T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​e​n​t​i​t​y​ ​b​e​i​n​g​ ​m​e​n​t​i​o​n​e​d
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​y​p​e​ ​o​f​ ​e​n​t​i​t​y​ ​b​e​i​n​g​ ​m​e​n​t​i​o​n​e​d​ ​(​e​.​g​.​,​ ​c​o​m​p​a​n​y​)
+											 */
+											longDesc: string
+										}
+										urn: {
+											/**
+											 * E​n​t​i​t​y​ ​U​R​N
+											 */
+											displayName: string
+											/**
+											 * L​i​n​k​e​d​I​n​ ​U​R​N​ ​o​f​ ​t​h​e​ ​e​n​t​i​t​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​L​i​n​k​e​d​I​n​ ​U​R​N​ ​(​U​n​i​f​o​r​m​ ​R​e​s​o​u​r​c​e​ ​N​a​m​e​)​ ​o​f​ ​t​h​e​ ​e​n​t​i​t​y​ ​b​e​i​n​g​ ​m​e​n​t​i​o​n​e​d
+											 */
+											longDesc: string
+										}
+										start: {
+											/**
+											 * S​t​a​r​t​ ​P​o​s​i​t​i​o​n
+											 */
+											displayName: string
+											/**
+											 * C​h​a​r​a​c​t​e​r​ ​p​o​s​i​t​i​o​n​ ​w​h​e​r​e​ ​m​e​n​t​i​o​n​ ​s​t​a​r​t​s
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​h​a​r​a​c​t​e​r​ ​p​o​s​i​t​i​o​n​ ​i​n​ ​t​h​e​ ​t​e​x​t​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​n​t​i​o​n​ ​b​e​g​i​n​s
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -37156,36 +37108,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											id: {
-												/**
-												 * F​i​e​l​d​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​i​d​e​n​t​i​f​i​e​r
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​ ​f​i​e​l​d
-												 */
-												longDesc: string
-											}
-											value: {
-												/**
-												 * F​i​e​l​d​ ​V​a​l​u​e
-												 */
-												displayName: string
-												/**
-												 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​s​e​t​ ​f​o​r​ ​t​h​i​s​ ​c​u​s​t​o​m​ ​f​i​e​l​d
-												 */
-												longDesc: string
-											}
+									fields: {
+										id: {
+											/**
+											 * F​i​e​l​d​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​i​d​e​n​t​i​f​i​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​ ​f​i​e​l​d
+											 */
+											longDesc: string
+										}
+										value: {
+											/**
+											 * F​i​e​l​d​ ​V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​s​e​t​ ​f​o​r​ ​t​h​i​s​ ​c​u​s​t​o​m​ ​f​i​e​l​d
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -38500,36 +38450,34 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											id: {
-												/**
-												 * F​i​e​l​d​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​i​d​e​n​t​i​f​i​e​r
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​ ​f​i​e​l​d
-												 */
-												longDesc: string
-											}
-											value: {
-												/**
-												 * F​i​e​l​d​ ​V​a​l​u​e
-												 */
-												displayName: string
-												/**
-												 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​p​d​a​t​e​d​ ​v​a​l​u​e​ ​f​o​r​ ​t​h​i​s​ ​c​u​s​t​o​m​ ​f​i​e​l​d
-												 */
-												longDesc: string
-											}
+									fields: {
+										id: {
+											/**
+											 * F​i​e​l​d​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​i​d​e​n​t​i​f​i​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​ ​f​i​e​l​d
+											 */
+											longDesc: string
+										}
+										value: {
+											/**
+											 * F​i​e​l​d​ ​V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​p​d​a​t​e​d​ ​v​a​l​u​e​ ​f​o​r​ ​t​h​i​s​ ​c​u​s​t​o​m​ ​f​i​e​l​d
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -40905,34 +40853,36 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									start_date: {
-										/**
-										 * S​t​a​r​t​ ​D​a​t​e
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​o​f​ ​t​h​e​ ​r​a​n​g​e
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​i​n​c​l​u​s​i​v​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​q​u​e​r​y​ ​i​n​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​f​o​r​m​a​t​,​ ​o​r​ ​r​e​l​a​t​i​v​e​ ​d​a​t​e​ ​l​i​k​e​ ​"​7​d​a​y​s​A​g​o​"​,​ ​"​y​e​s​t​e​r​d​a​y​"​.
-										 */
-										longDesc: string
-									}
-									end_date: {
-										/**
-										 * E​n​d​ ​D​a​t​e
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​e​n​d​ ​d​a​t​e​ ​o​f​ ​t​h​e​ ​r​a​n​g​e
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​i​n​c​l​u​s​i​v​e​ ​e​n​d​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​q​u​e​r​y​ ​i​n​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​f​o​r​m​a​t​,​ ​o​r​ ​r​e​l​a​t​i​v​e​ ​d​a​t​e​ ​l​i​k​e​ ​"​t​o​d​a​y​"​,​ ​"​y​e​s​t​e​r​d​a​y​"​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										start_date: {
+											/**
+											 * S​t​a​r​t​ ​D​a​t​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​o​f​ ​t​h​e​ ​r​a​n​g​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​i​n​c​l​u​s​i​v​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​q​u​e​r​y​ ​i​n​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​f​o​r​m​a​t​,​ ​o​r​ ​r​e​l​a​t​i​v​e​ ​d​a​t​e​ ​l​i​k​e​ ​"​7​d​a​y​s​A​g​o​"​,​ ​"​y​e​s​t​e​r​d​a​y​"​.
+											 */
+											longDesc: string
+										}
+										end_date: {
+											/**
+											 * E​n​d​ ​D​a​t​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​e​n​d​ ​d​a​t​e​ ​o​f​ ​t​h​e​ ​r​a​n​g​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​i​n​c​l​u​s​i​v​e​ ​e​n​d​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​q​u​e​r​y​ ​i​n​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​f​o​r​m​a​t​,​ ​o​r​ ​r​e​l​a​t​i​v​e​ ​d​a​t​e​ ​l​i​k​e​ ​"​t​o​d​a​y​"​,​ ​"​y​e​s​t​e​r​d​a​y​"​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -40951,20 +40901,22 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									name: {
-										/**
-										 * M​e​t​r​i​c​ ​N​a​m​e
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​m​e​t​r​i​c
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​m​e​t​r​i​c​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​p​o​r​t​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * M​e​t​r​i​c​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​m​e​t​r​i​c
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​m​e​t​r​i​c​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​p​o​r​t​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -40983,20 +40935,22 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									name: {
-										/**
-										 * D​i​m​e​n​s​i​o​n​ ​N​a​m​e
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​p​o​r​t​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * D​i​m​e​n​s​i​o​n​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​r​e​p​o​r​t​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -41043,48 +40997,50 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									field_name: {
-										/**
-										 * F​i​e​l​d​ ​N​a​m​e
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c​ ​n​a​m​e​ ​t​o​ ​s​o​r​t​ ​b​y
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​.
-										 */
-										longDesc: string
-									}
-									desc: {
-										/**
-										 * D​e​s​c​e​n​d​i​n​g
-										 */
-										displayName: string
-										/**
-										 * S​o​r​t​ ​i​n​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
-										 */
-										shortDesc: string
-										/**
-										 * I​f​ ​t​r​u​e​,​ ​s​o​r​t​s​ ​i​n​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.​ ​I​f​ ​f​a​l​s​e​,​ ​s​o​r​t​s​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
-										 */
-										longDesc: string
-									}
-									order_type: {
-										/**
-										 * O​r​d​e​r​ ​T​y​p​e
-										 */
-										displayName: string
-										/**
-										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​b​y​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c
-										 */
-										shortDesc: string
-										/**
-										 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​a​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c​ ​f​o​r​ ​p​r​o​p​e​r​ ​s​o​r​t​i​n​g​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										field_name: {
+											/**
+											 * F​i​e​l​d​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c​ ​n​a​m​e​ ​t​o​ ​s​o​r​t​ ​b​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​.
+											 */
+											longDesc: string
+										}
+										desc: {
+											/**
+											 * D​e​s​c​e​n​d​i​n​g
+											 */
+											displayName: string
+											/**
+											 * S​o​r​t​ ​i​n​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+											 */
+											shortDesc: string
+											/**
+											 * I​f​ ​t​r​u​e​,​ ​s​o​r​t​s​ ​i​n​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.​ ​I​f​ ​f​a​l​s​e​,​ ​s​o​r​t​s​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+											 */
+											longDesc: string
+										}
+										order_type: {
+											/**
+											 * O​r​d​e​r​ ​T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​b​y​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c
+											 */
+											shortDesc: string
+											/**
+											 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​a​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c​ ​f​o​r​ ​p​r​o​p​e​r​ ​s​o​r​t​i​n​g​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -41189,20 +41145,22 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									name: {
-										/**
-										 * M​e​t​r​i​c​ ​N​a​m​e
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​m​e​t​r​i​c
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​a​l​-​t​i​m​e​ ​m​e​t​r​i​c​ ​t​o​ ​i​n​c​l​u​d​e​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * M​e​t​r​i​c​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​m​e​t​r​i​c
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​a​l​-​t​i​m​e​ ​m​e​t​r​i​c​ ​t​o​ ​i​n​c​l​u​d​e​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -41221,20 +41179,22 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									name: {
-										/**
-										 * D​i​m​e​n​s​i​o​n​ ​N​a​m​e
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​a​l​-​t​i​m​e​ ​d​i​m​e​n​s​i​o​n​ ​t​o​ ​i​n​c​l​u​d​e​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * D​i​m​e​n​s​i​o​n​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​a​l​-​t​i​m​e​ ​d​i​m​e​n​s​i​o​n​ ​t​o​ ​i​n​c​l​u​d​e​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -41253,48 +41213,50 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									name: {
-										/**
-										 * R​a​n​g​e​ ​N​a​m​e
-										 */
-										displayName: string
-										/**
-										 * A​ ​n​a​m​e​ ​f​o​r​ ​t​h​i​s​ ​t​i​m​e​ ​r​a​n​g​e
-										 */
-										shortDesc: string
-										/**
-										 * A​n​ ​o​p​t​i​o​n​a​l​ ​n​a​m​e​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​t​h​i​s​ ​t​i​m​e​ ​r​a​n​g​e​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.
-										 */
-										longDesc: string
-									}
-									start_minutes_ago: {
-										/**
-										 * S​t​a​r​t​ ​M​i​n​u​t​e​s​ ​A​g​o
-										 */
-										displayName: string
-										/**
-										 * S​t​a​r​t​ ​o​f​ ​t​h​e​ ​r​a​n​g​e​ ​i​n​ ​m​i​n​u​t​e​s​ ​a​g​o
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​s​t​a​r​t​ ​o​f​ ​t​h​e​ ​m​i​n​u​t​e​ ​r​a​n​g​e​,​ ​e​x​p​r​e​s​s​e​d​ ​a​s​ ​m​i​n​u​t​e​s​ ​a​g​o​ ​(​e​.​g​.​,​ ​2​9​ ​f​o​r​ ​2​9​ ​m​i​n​u​t​e​s​ ​a​g​o​)​.
-										 */
-										longDesc: string
-									}
-									end_minutes_ago: {
-										/**
-										 * E​n​d​ ​M​i​n​u​t​e​s​ ​A​g​o
-										 */
-										displayName: string
-										/**
-										 * E​n​d​ ​o​f​ ​t​h​e​ ​r​a​n​g​e​ ​i​n​ ​m​i​n​u​t​e​s​ ​a​g​o
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​e​n​d​ ​o​f​ ​t​h​e​ ​m​i​n​u​t​e​ ​r​a​n​g​e​,​ ​e​x​p​r​e​s​s​e​d​ ​a​s​ ​m​i​n​u​t​e​s​ ​a​g​o​ ​(​e​.​g​.​,​ ​0​ ​f​o​r​ ​c​u​r​r​e​n​t​ ​m​i​n​u​t​e​)​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * R​a​n​g​e​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * A​ ​n​a​m​e​ ​f​o​r​ ​t​h​i​s​ ​t​i​m​e​ ​r​a​n​g​e
+											 */
+											shortDesc: string
+											/**
+											 * A​n​ ​o​p​t​i​o​n​a​l​ ​n​a​m​e​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​t​h​i​s​ ​t​i​m​e​ ​r​a​n​g​e​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e​.
+											 */
+											longDesc: string
+										}
+										start_minutes_ago: {
+											/**
+											 * S​t​a​r​t​ ​M​i​n​u​t​e​s​ ​A​g​o
+											 */
+											displayName: string
+											/**
+											 * S​t​a​r​t​ ​o​f​ ​t​h​e​ ​r​a​n​g​e​ ​i​n​ ​m​i​n​u​t​e​s​ ​a​g​o
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​s​t​a​r​t​ ​o​f​ ​t​h​e​ ​m​i​n​u​t​e​ ​r​a​n​g​e​,​ ​e​x​p​r​e​s​s​e​d​ ​a​s​ ​m​i​n​u​t​e​s​ ​a​g​o​ ​(​e​.​g​.​,​ ​2​9​ ​f​o​r​ ​2​9​ ​m​i​n​u​t​e​s​ ​a​g​o​)​.
+											 */
+											longDesc: string
+										}
+										end_minutes_ago: {
+											/**
+											 * E​n​d​ ​M​i​n​u​t​e​s​ ​A​g​o
+											 */
+											displayName: string
+											/**
+											 * E​n​d​ ​o​f​ ​t​h​e​ ​r​a​n​g​e​ ​i​n​ ​m​i​n​u​t​e​s​ ​a​g​o
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​e​n​d​ ​o​f​ ​t​h​e​ ​m​i​n​u​t​e​ ​r​a​n​g​e​,​ ​e​x​p​r​e​s​s​e​d​ ​a​s​ ​m​i​n​u​t​e​s​ ​a​g​o​ ​(​e​.​g​.​,​ ​0​ ​f​o​r​ ​c​u​r​r​e​n​t​ ​m​i​n​u​t​e​)​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -41341,48 +41303,50 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									field_name: {
-										/**
-										 * F​i​e​l​d​ ​N​a​m​e
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c​ ​n​a​m​e​ ​t​o​ ​s​o​r​t​ ​b​y
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​.
-										 */
-										longDesc: string
-									}
-									desc: {
-										/**
-										 * D​e​s​c​e​n​d​i​n​g
-										 */
-										displayName: string
-										/**
-										 * S​o​r​t​ ​i​n​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
-										 */
-										shortDesc: string
-										/**
-										 * I​f​ ​t​r​u​e​,​ ​s​o​r​t​s​ ​i​n​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
-										 */
-										longDesc: string
-									}
-									order_type: {
-										/**
-										 * O​r​d​e​r​ ​T​y​p​e
-										 */
-										displayName: string
-										/**
-										 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​b​y​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c
-										 */
-										shortDesc: string
-										/**
-										 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​a​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										field_name: {
+											/**
+											 * F​i​e​l​d​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c​ ​n​a​m​e​ ​t​o​ ​s​o​r​t​ ​b​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​.
+											 */
+											longDesc: string
+										}
+										desc: {
+											/**
+											 * D​e​s​c​e​n​d​i​n​g
+											 */
+											displayName: string
+											/**
+											 * S​o​r​t​ ​i​n​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+											 */
+											shortDesc: string
+											/**
+											 * I​f​ ​t​r​u​e​,​ ​s​o​r​t​s​ ​i​n​ ​d​e​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​.
+											 */
+											longDesc: string
+										}
+										order_type: {
+											/**
+											 * O​r​d​e​r​ ​T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * W​h​e​t​h​e​r​ ​t​o​ ​s​o​r​t​ ​b​y​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c
+											 */
+											shortDesc: string
+											/**
+											 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​a​ ​d​i​m​e​n​s​i​o​n​ ​o​r​ ​m​e​t​r​i​c​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -41475,130 +41439,138 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									date_ranges: {
-										/**
-										 * D​a​t​e​ ​R​a​n​g​e​s
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​d​a​t​e​ ​r​a​n​g​e​s​ ​f​o​r​ ​t​h​i​s​ ​r​e​p​o​r​t
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​d​a​t​e​ ​r​a​n​g​e​s​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​r​e​p​o​r​t​ ​i​n​ ​t​h​e​ ​b​a​t​c​h​.
-										 */
-										longDesc: string
-										type: {
-											fields: {
-												start_date: {
-													/**
-													 * S​t​a​r​t​ ​D​a​t​e
-													 */
-													displayName: string
-													/**
-													 * T​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​o​f​ ​t​h​e​ ​r​a​n​g​e
-													 */
-													shortDesc: string
-													/**
-													 * T​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​i​n​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​f​o​r​m​a​t​ ​o​r​ ​r​e​l​a​t​i​v​e​ ​f​o​r​m​a​t​.
-													 */
-													longDesc: string
-												}
-												end_date: {
-													/**
-													 * E​n​d​ ​D​a​t​e
-													 */
-													displayName: string
-													/**
-													 * T​h​e​ ​e​n​d​ ​d​a​t​e​ ​o​f​ ​t​h​e​ ​r​a​n​g​e
-													 */
-													shortDesc: string
-													/**
-													 * T​h​e​ ​e​n​d​ ​d​a​t​e​ ​i​n​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​f​o​r​m​a​t​ ​o​r​ ​r​e​l​a​t​i​v​e​ ​f​o​r​m​a​t​.
-													 */
-													longDesc: string
-												}
-											}
-										}
-									}
-									metrics: {
-										/**
-										 * M​e​t​r​i​c​s
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​m​e​t​r​i​c​s​ ​f​o​r​ ​t​h​i​s​ ​r​e​p​o​r​t
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​m​e​t​r​i​c​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​r​e​p​o​r​t​.
-										 */
-										longDesc: string
-										type: {
-											fields: {
-												name: {
-													/**
-													 * M​e​t​r​i​c​ ​N​a​m​e
-													 */
-													displayName: string
-													/**
-													 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​m​e​t​r​i​c
-													 */
-													shortDesc: string
-													/**
-													 * T​h​e​ ​m​e​t​r​i​c​ ​n​a​m​e​.
-													 */
-													longDesc: string
+								element_type: {
+									fields: {
+										date_ranges: {
+											/**
+											 * D​a​t​e​ ​R​a​n​g​e​s
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​d​a​t​e​ ​r​a​n​g​e​s​ ​f​o​r​ ​t​h​i​s​ ​r​e​p​o​r​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​d​a​t​e​ ​r​a​n​g​e​s​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​r​e​p​o​r​t​ ​i​n​ ​t​h​e​ ​b​a​t​c​h​.
+											 */
+											longDesc: string
+											type: {
+												element_type: {
+													fields: {
+														start_date: {
+															/**
+															 * S​t​a​r​t​ ​D​a​t​e
+															 */
+															displayName: string
+															/**
+															 * T​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​o​f​ ​t​h​e​ ​r​a​n​g​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​i​n​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​f​o​r​m​a​t​ ​o​r​ ​r​e​l​a​t​i​v​e​ ​f​o​r​m​a​t​.
+															 */
+															longDesc: string
+														}
+														end_date: {
+															/**
+															 * E​n​d​ ​D​a​t​e
+															 */
+															displayName: string
+															/**
+															 * T​h​e​ ​e​n​d​ ​d​a​t​e​ ​o​f​ ​t​h​e​ ​r​a​n​g​e
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​e​n​d​ ​d​a​t​e​ ​i​n​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​f​o​r​m​a​t​ ​o​r​ ​r​e​l​a​t​i​v​e​ ​f​o​r​m​a​t​.
+															 */
+															longDesc: string
+														}
+													}
 												}
 											}
 										}
-									}
-									dimensions: {
-										/**
-										 * D​i​m​e​n​s​i​o​n​s
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​d​i​m​e​n​s​i​o​n​s​ ​f​o​r​ ​t​h​i​s​ ​r​e​p​o​r​t
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​d​i​m​e​n​s​i​o​n​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​r​e​p​o​r​t​.
-										 */
-										longDesc: string
-										type: {
-											fields: {
-												name: {
-													/**
-													 * D​i​m​e​n​s​i​o​n​ ​N​a​m​e
-													 */
-													displayName: string
-													/**
-													 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n
-													 */
-													shortDesc: string
-													/**
-													 * T​h​e​ ​d​i​m​e​n​s​i​o​n​ ​n​a​m​e​.
-													 */
-													longDesc: string
+										metrics: {
+											/**
+											 * M​e​t​r​i​c​s
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​m​e​t​r​i​c​s​ ​f​o​r​ ​t​h​i​s​ ​r​e​p​o​r​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​m​e​t​r​i​c​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​r​e​p​o​r​t​.
+											 */
+											longDesc: string
+											type: {
+												element_type: {
+													fields: {
+														name: {
+															/**
+															 * M​e​t​r​i​c​ ​N​a​m​e
+															 */
+															displayName: string
+															/**
+															 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​m​e​t​r​i​c
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​m​e​t​r​i​c​ ​n​a​m​e​.
+															 */
+															longDesc: string
+														}
+													}
 												}
 											}
 										}
-									}
-									limit: {
-										/**
-										 * L​i​m​i​t
-										 */
-										displayName: string
-										/**
-										 * M​a​x​i​m​u​m​ ​r​o​w​s​ ​f​o​r​ ​t​h​i​s​ ​r​e​p​o​r​t
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​t​o​ ​r​e​t​u​r​n​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​r​e​p​o​r​t​.
-										 */
-										longDesc: string
+										dimensions: {
+											/**
+											 * D​i​m​e​n​s​i​o​n​s
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​d​i​m​e​n​s​i​o​n​s​ ​f​o​r​ ​t​h​i​s​ ​r​e​p​o​r​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​d​i​m​e​n​s​i​o​n​s​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​r​e​p​o​r​t​.
+											 */
+											longDesc: string
+											type: {
+												element_type: {
+													fields: {
+														name: {
+															/**
+															 * D​i​m​e​n​s​i​o​n​ ​N​a​m​e
+															 */
+															displayName: string
+															/**
+															 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n
+															 */
+															shortDesc: string
+															/**
+															 * T​h​e​ ​d​i​m​e​n​s​i​o​n​ ​n​a​m​e​.
+															 */
+															longDesc: string
+														}
+													}
+												}
+											}
+										}
+										limit: {
+											/**
+											 * L​i​m​i​t
+											 */
+											displayName: string
+											/**
+											 * M​a​x​i​m​u​m​ ​r​o​w​s​ ​f​o​r​ ​t​h​i​s​ ​r​e​p​o​r​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​t​o​ ​r​e​t​u​r​n​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​r​e​p​o​r​t​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -41647,20 +41619,22 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									name: {
-										/**
-										 * D​i​m​e​n​s​i​o​n​ ​N​a​m​e
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​d​i​m​e​n​s​i​o​n​ ​n​a​m​e​ ​t​o​ ​c​h​e​c​k​ ​c​o​m​p​a​t​i​b​i​l​i​t​y​ ​f​o​r​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * D​i​m​e​n​s​i​o​n​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​i​m​e​n​s​i​o​n
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​d​i​m​e​n​s​i​o​n​ ​n​a​m​e​ ​t​o​ ​c​h​e​c​k​ ​c​o​m​p​a​t​i​b​i​l​i​t​y​ ​f​o​r​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -41679,20 +41653,22 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									name: {
-										/**
-										 * M​e​t​r​i​c​ ​N​a​m​e
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​m​e​t​r​i​c
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​m​e​t​r​i​c​ ​n​a​m​e​ ​t​o​ ​c​h​e​c​k​ ​c​o​m​p​a​t​i​b​i​l​i​t​y​ ​f​o​r​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * M​e​t​r​i​c​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​A​P​I​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​m​e​t​r​i​c
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​m​e​t​r​i​c​ ​n​a​m​e​ ​t​o​ ​c​h​e​c​k​ ​c​o​m​p​a​t​i​b​i​l​i​t​y​ ​f​o​r​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -41809,34 +41785,36 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									field: {
-										/**
-										 * F​i​e​l​d
-										 */
-										displayName: string
-										/**
-										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​b​y​ ​(​e​.​g​.​,​ ​n​a​m​e​,​ ​m​o​d​i​f​i​e​d​T​i​m​e​,​ ​c​r​e​a​t​e​d​T​i​m​e​)​.
-										 */
-										longDesc: string
-									}
-									direction: {
-										/**
-										 * D​i​r​e​c​t​i​o​n
-										 */
-										displayName: string
-										/**
-										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​-​ ​e​i​t​h​e​r​ ​a​s​c​e​n​d​i​n​g​ ​(​a​s​c​)​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​(​d​e​s​c​)​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * F​i​e​l​d
+											 */
+											displayName: string
+											/**
+											 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​b​y​ ​(​e​.​g​.​,​ ​n​a​m​e​,​ ​m​o​d​i​f​i​e​d​T​i​m​e​,​ ​c​r​e​a​t​e​d​T​i​m​e​)​.
+											 */
+											longDesc: string
+										}
+										direction: {
+											/**
+											 * D​i​r​e​c​t​i​o​n
+											 */
+											displayName: string
+											/**
+											 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​-​ ​e​i​t​h​e​r​ ​a​s​c​e​n​d​i​n​g​ ​(​a​s​c​)​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​(​d​e​s​c​)​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -42116,50 +42094,48 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											placeholder: {
-												/**
-												 * P​l​a​c​e​h​o​l​d​e​r
-												 */
-												displayName: string
-												/**
-												 * P​l​a​c​e​h​o​l​d​e​r​ ​t​e​x​t​ ​t​o​ ​r​e​p​l​a​c​e
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​p​l​a​c​e​h​o​l​d​e​r​ ​t​e​x​t​ ​i​n​ ​t​h​e​ ​t​e​m​p​l​a​t​e​ ​t​o​ ​b​e​ ​r​e​p​l​a​c​e​d​ ​(​e​.​g​.​,​ ​"​{​{​N​A​M​E​}​}​"​)​.
-												 */
-												longDesc: string
-											}
-											replacement_text: {
-												/**
-												 * R​e​p​l​a​c​e​m​e​n​t​ ​T​e​x​t
-												 */
-												displayName: string
-												/**
-												 * T​e​x​t​ ​t​o​ ​r​e​p​l​a​c​e​ ​p​l​a​c​e​h​o​l​d​e​r​ ​w​i​t​h
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​w​i​l​l​ ​r​e​p​l​a​c​e​ ​t​h​e​ ​p​l​a​c​e​h​o​l​d​e​r​ ​i​n​ ​t​h​e​ ​n​e​w​ ​d​o​c​u​m​e​n​t​.
-												 */
-												longDesc: string
-											}
-											match_case: {
-												/**
-												 * M​a​t​c​h​ ​C​a​s​e
-												 */
-												displayName: string
-												/**
-												 * C​a​s​e​-​s​e​n​s​i​t​i​v​e​ ​r​e​p​l​a​c​e​m​e​n​t
-												 */
-												shortDesc: string
-												/**
-												 * W​h​e​t​h​e​r​ ​t​h​e​ ​p​l​a​c​e​h​o​l​d​e​r​ ​r​e​p​l​a​c​e​m​e​n​t​ ​s​h​o​u​l​d​ ​b​e​ ​c​a​s​e​-​s​e​n​s​i​t​i​v​e​.
-												 */
-												longDesc: string
-											}
+									fields: {
+										placeholder: {
+											/**
+											 * P​l​a​c​e​h​o​l​d​e​r
+											 */
+											displayName: string
+											/**
+											 * P​l​a​c​e​h​o​l​d​e​r​ ​t​e​x​t​ ​t​o​ ​r​e​p​l​a​c​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​p​l​a​c​e​h​o​l​d​e​r​ ​t​e​x​t​ ​i​n​ ​t​h​e​ ​t​e​m​p​l​a​t​e​ ​t​o​ ​b​e​ ​r​e​p​l​a​c​e​d​ ​(​e​.​g​.​,​ ​"​{​{​N​A​M​E​}​}​"​)​.
+											 */
+											longDesc: string
+										}
+										replacement_text: {
+											/**
+											 * R​e​p​l​a​c​e​m​e​n​t​ ​T​e​x​t
+											 */
+											displayName: string
+											/**
+											 * T​e​x​t​ ​t​o​ ​r​e​p​l​a​c​e​ ​p​l​a​c​e​h​o​l​d​e​r​ ​w​i​t​h
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​w​i​l​l​ ​r​e​p​l​a​c​e​ ​t​h​e​ ​p​l​a​c​e​h​o​l​d​e​r​ ​i​n​ ​t​h​e​ ​n​e​w​ ​d​o​c​u​m​e​n​t​.
+											 */
+											longDesc: string
+										}
+										match_case: {
+											/**
+											 * M​a​t​c​h​ ​C​a​s​e
+											 */
+											displayName: string
+											/**
+											 * C​a​s​e​-​s​e​n​s​i​t​i​v​e​ ​r​e​p​l​a​c​e​m​e​n​t
+											 */
+											shortDesc: string
+											/**
+											 * W​h​e​t​h​e​r​ ​t​h​e​ ​p​l​a​c​e​h​o​l​d​e​r​ ​r​e​p​l​a​c​e​m​e​n​t​ ​s​h​o​u​l​d​ ​b​e​ ​c​a​s​e​-​s​e​n​s​i​t​i​v​e​.
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -42222,64 +42198,62 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											placeholder: {
-												/**
-												 * P​l​a​c​e​h​o​l​d​e​r
-												 */
-												displayName: string
-												/**
-												 * I​m​a​g​e​ ​p​l​a​c​e​h​o​l​d​e​r​ ​t​e​x​t
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​p​l​a​c​e​h​o​l​d​e​r​ ​t​e​x​t​ ​i​n​ ​t​h​e​ ​t​e​m​p​l​a​t​e​ ​t​o​ ​b​e​ ​r​e​p​l​a​c​e​d​ ​w​i​t​h​ ​a​n​ ​i​m​a​g​e​.
-												 */
-												longDesc: string
-											}
-											image_url: {
-												/**
-												 * I​m​a​g​e​ ​U​R​L
-												 */
-												displayName: string
-												/**
-												 * U​R​L​ ​o​f​ ​t​h​e​ ​i​m​a​g​e​ ​t​o​ ​i​n​s​e​r​t
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​i​m​a​g​e​ ​t​h​a​t​ ​w​i​l​l​ ​r​e​p​l​a​c​e​ ​t​h​e​ ​p​l​a​c​e​h​o​l​d​e​r​.
-												 */
-												longDesc: string
-											}
-											width: {
-												/**
-												 * W​i​d​t​h
-												 */
-												displayName: string
-												/**
-												 * I​m​a​g​e​ ​w​i​d​t​h​ ​i​n​ ​p​o​i​n​t​s
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​w​i​d​t​h​ ​o​f​ ​t​h​e​ ​i​n​s​e​r​t​e​d​ ​i​m​a​g​e​ ​i​n​ ​p​o​i​n​t​s​.
-												 */
-												longDesc: string
-											}
-											height: {
-												/**
-												 * H​e​i​g​h​t
-												 */
-												displayName: string
-												/**
-												 * I​m​a​g​e​ ​h​e​i​g​h​t​ ​i​n​ ​p​o​i​n​t​s
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​h​e​i​g​h​t​ ​o​f​ ​t​h​e​ ​i​n​s​e​r​t​e​d​ ​i​m​a​g​e​ ​i​n​ ​p​o​i​n​t​s​.
-												 */
-												longDesc: string
-											}
+									fields: {
+										placeholder: {
+											/**
+											 * P​l​a​c​e​h​o​l​d​e​r
+											 */
+											displayName: string
+											/**
+											 * I​m​a​g​e​ ​p​l​a​c​e​h​o​l​d​e​r​ ​t​e​x​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​p​l​a​c​e​h​o​l​d​e​r​ ​t​e​x​t​ ​i​n​ ​t​h​e​ ​t​e​m​p​l​a​t​e​ ​t​o​ ​b​e​ ​r​e​p​l​a​c​e​d​ ​w​i​t​h​ ​a​n​ ​i​m​a​g​e​.
+											 */
+											longDesc: string
+										}
+										image_url: {
+											/**
+											 * I​m​a​g​e​ ​U​R​L
+											 */
+											displayName: string
+											/**
+											 * U​R​L​ ​o​f​ ​t​h​e​ ​i​m​a​g​e​ ​t​o​ ​i​n​s​e​r​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​i​m​a​g​e​ ​t​h​a​t​ ​w​i​l​l​ ​r​e​p​l​a​c​e​ ​t​h​e​ ​p​l​a​c​e​h​o​l​d​e​r​.
+											 */
+											longDesc: string
+										}
+										width: {
+											/**
+											 * W​i​d​t​h
+											 */
+											displayName: string
+											/**
+											 * I​m​a​g​e​ ​w​i​d​t​h​ ​i​n​ ​p​o​i​n​t​s
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​w​i​d​t​h​ ​o​f​ ​t​h​e​ ​i​n​s​e​r​t​e​d​ ​i​m​a​g​e​ ​i​n​ ​p​o​i​n​t​s​.
+											 */
+											longDesc: string
+										}
+										height: {
+											/**
+											 * H​e​i​g​h​t
+											 */
+											displayName: string
+											/**
+											 * I​m​a​g​e​ ​h​e​i​g​h​t​ ​i​n​ ​p​o​i​n​t​s
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​h​e​i​g​h​t​ ​o​f​ ​t​h​e​ ​i​n​s​e​r​t​e​d​ ​i​m​a​g​e​ ​i​n​ ​p​o​i​n​t​s​.
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -43251,48 +43225,50 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									question_id: {
-										/**
-										 * Q​u​e​s​t​i​o​n​ ​I​D
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​q​u​e​s​t​i​o​n​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​q​u​e​s​t​i​o​n​ ​t​o​ ​f​i​l​t​e​r​ ​r​e​s​p​o​n​s​e​s​ ​b​y​.
-										 */
-										longDesc: string
-									}
-									filter_type: {
-										/**
-										 * F​i​l​t​e​r​ ​T​y​p​e
-										 */
-										displayName: string
-										/**
-										 * T​y​p​e​ ​o​f​ ​f​i​l​t​e​r​ ​t​o​ ​a​p​p​l​y
-										 */
-										shortDesc: string
-										/**
-										 * W​h​e​t​h​e​r​ ​t​h​e​ ​a​n​s​w​e​r​ ​s​h​o​u​l​d​ ​c​o​n​t​a​i​n​ ​o​r​ ​e​x​a​c​t​l​y​ ​e​q​u​a​l​ ​t​h​e​ ​f​i​l​t​e​r​ ​v​a​l​u​e​.
-										 */
-										longDesc: string
-									}
-									value: {
-										/**
-										 * F​i​l​t​e​r​ ​V​a​l​u​e
-										 */
-										displayName: string
-										/**
-										 * V​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​q​u​e​s​t​i​o​n​ ​a​n​s​w​e​r​s​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										question_id: {
+											/**
+											 * Q​u​e​s​t​i​o​n​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​q​u​e​s​t​i​o​n​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​q​u​e​s​t​i​o​n​ ​t​o​ ​f​i​l​t​e​r​ ​r​e​s​p​o​n​s​e​s​ ​b​y​.
+											 */
+											longDesc: string
+										}
+										filter_type: {
+											/**
+											 * F​i​l​t​e​r​ ​T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​f​i​l​t​e​r​ ​t​o​ ​a​p​p​l​y
+											 */
+											shortDesc: string
+											/**
+											 * W​h​e​t​h​e​r​ ​t​h​e​ ​a​n​s​w​e​r​ ​s​h​o​u​l​d​ ​c​o​n​t​a​i​n​ ​o​r​ ​e​x​a​c​t​l​y​ ​e​q​u​a​l​ ​t​h​e​ ​f​i​l​t​e​r​ ​v​a​l​u​e​.
+											 */
+											longDesc: string
+										}
+										value: {
+											/**
+											 * F​i​l​t​e​r​ ​V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * V​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​a​g​a​i​n​s​t​ ​t​h​e​ ​q​u​e​s​t​i​o​n​ ​a​n​s​w​e​r​s​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -44479,34 +44455,36 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									field: {
-										/**
-										 * F​i​e​l​d
-										 */
-										displayName: string
-										/**
-										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​f​i​l​e​ ​p​r​o​p​e​r​t​y​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​,​ ​s​u​c​h​ ​a​s​ ​n​a​m​e​,​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e​,​ ​o​r​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​t​i​m​e​.
-										 */
-										longDesc: string
-									}
-									direction: {
-										/**
-										 * D​i​r​e​c​t​i​o​n
-										 */
-										displayName: string
-										/**
-										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​i​n​,​ ​e​i​t​h​e​r​ ​a​s​c​e​n​d​i​n​g​ ​(​a​s​c​)​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​(​d​e​s​c​)​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * F​i​e​l​d
+											 */
+											displayName: string
+											/**
+											 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​f​i​l​e​ ​p​r​o​p​e​r​t​y​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​,​ ​s​u​c​h​ ​a​s​ ​n​a​m​e​,​ ​c​r​e​a​t​i​o​n​ ​t​i​m​e​,​ ​o​r​ ​m​o​d​i​f​i​c​a​t​i​o​n​ ​t​i​m​e​.
+											 */
+											longDesc: string
+										}
+										direction: {
+											/**
+											 * D​i​r​e​c​t​i​o​n
+											 */
+											displayName: string
+											/**
+											 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​i​n​,​ ​e​i​t​h​e​r​ ​a​s​c​e​n​d​i​n​g​ ​(​a​s​c​)​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​(​d​e​s​c​)​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -45147,34 +45125,36 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									field: {
-										/**
-										 * F​i​e​l​d
-										 */
-										displayName: string
-										/**
-										 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​b​y​ ​(​e​.​g​.​,​ ​n​a​m​e​,​ ​m​o​d​i​f​i​e​d​T​i​m​e​,​ ​c​r​e​a​t​e​d​T​i​m​e​)​.
-										 */
-										longDesc: string
-									}
-									direction: {
-										/**
-										 * D​i​r​e​c​t​i​o​n
-										 */
-										displayName: string
-										/**
-										 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​-​ ​e​i​t​h​e​r​ ​a​s​c​e​n​d​i​n​g​ ​(​a​s​c​)​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​(​d​e​s​c​)​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * F​i​e​l​d
+											 */
+											displayName: string
+											/**
+											 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​t​h​e​ ​r​e​s​u​l​t​s​ ​b​y​ ​(​e​.​g​.​,​ ​n​a​m​e​,​ ​m​o​d​i​f​i​e​d​T​i​m​e​,​ ​c​r​e​a​t​e​d​T​i​m​e​)​.
+											 */
+											longDesc: string
+										}
+										direction: {
+											/**
+											 * D​i​r​e​c​t​i​o​n
+											 */
+											displayName: string
+											/**
+											 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​-​ ​e​i​t​h​e​r​ ​a​s​c​e​n​d​i​n​g​ ​(​a​s​c​)​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​ ​(​d​e​s​c​)​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -45511,20 +45491,22 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									row_index: {
-										/**
-										 * R​o​w​ ​I​n​d​e​x
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​i​n​d​e​x​ ​o​f​ ​t​h​e​ ​r​o​w​ ​t​o​ ​u​p​d​a​t​e​.
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​r​o​w​ ​n​u​m​b​e​r​ ​t​o​ ​u​p​d​a​t​e​,​ ​s​t​a​r​t​i​n​g​ ​f​r​o​m​ ​2​ ​(​r​o​w​ ​1​ ​i​s​ ​r​e​s​e​r​v​e​d​ ​f​o​r​ ​h​e​a​d​e​r​s​)​.​ ​T​h​i​s​ ​n​u​m​b​e​r​ ​m​u​s​t​ ​r​e​f​e​r​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​r​o​w​ ​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										row_index: {
+											/**
+											 * R​o​w​ ​I​n​d​e​x
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​i​n​d​e​x​ ​o​f​ ​t​h​e​ ​r​o​w​ ​t​o​ ​u​p​d​a​t​e​.
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​r​o​w​ ​n​u​m​b​e​r​ ​t​o​ ​u​p​d​a​t​e​,​ ​s​t​a​r​t​i​n​g​ ​f​r​o​m​ ​2​ ​(​r​o​w​ ​1​ ​i​s​ ​r​e​s​e​r​v​e​d​ ​f​o​r​ ​h​e​a​d​e​r​s​)​.​ ​T​h​i​s​ ​n​u​m​b​e​r​ ​m​u​s​t​ ​r​e​f​e​r​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​r​o​w​ ​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -46659,34 +46641,36 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									number: {
-										/**
-										 * P​h​o​n​e​ ​N​u​m​b​e​r
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​v​a​l​u​e​.
-										 */
-										longDesc: string
-									}
-									type: {
-										/**
-										 * P​h​o​n​e​ ​T​y​p​e
-										 */
-										displayName: string
-										/**
-										 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​t​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r​:​ ​"​h​o​m​e​"​,​ ​"​w​o​r​k​"​,​ ​"​m​o​b​i​l​e​"​,​ ​"​m​a​i​n​"​,​ ​"​h​o​m​e​F​a​x​"​,​ ​"​w​o​r​k​F​a​x​"​,​ ​"​p​a​g​e​r​"​,​ ​o​r​ ​"​o​t​h​e​r​"​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​"​o​t​h​e​r​"​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										number: {
+											/**
+											 * P​h​o​n​e​ ​N​u​m​b​e​r
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​v​a​l​u​e​.
+											 */
+											longDesc: string
+										}
+										type: {
+											/**
+											 * P​h​o​n​e​ ​T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​y​p​e​ ​o​f​ ​p​h​o​n​e​ ​n​u​m​b​e​r​:​ ​"​h​o​m​e​"​,​ ​"​w​o​r​k​"​,​ ​"​m​o​b​i​l​e​"​,​ ​"​m​a​i​n​"​,​ ​"​h​o​m​e​F​a​x​"​,​ ​"​w​o​r​k​F​a​x​"​,​ ​"​p​a​g​e​r​"​,​ ​o​r​ ​"​o​t​h​e​r​"​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​"​o​t​h​e​r​"​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -48240,148 +48224,146 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											amount: {
-												/**
-												 * A​m​o​u​n​t
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
-											description: {
-												/**
-												 * D​e​s​c​r​i​p​t​i​o​n
-												 */
-												displayName: string
-												/**
-												 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * A​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​w​h​a​t​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​r​e​p​r​e​s​e​n​t​s
-												 */
-												longDesc: string
-											}
-											tax_code_id: {
-												/**
-												 * T​a​x​ ​C​o​d​e​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​t​a​x​ ​c​o​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​x​ ​c​o​d​e​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
-											class_id: {
-												/**
-												 * C​l​a​s​s​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​c​l​a​s​s​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​l​a​s​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
-											customer_id: {
-												/**
-												 * C​u​s​t​o​m​e​r​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​i​f​ ​t​h​i​s​ ​e​x​p​e​n​s​e​ ​i​s​ ​b​i​l​l​a​b​l​e
-												 */
-												longDesc: string
-											}
-											billable_status: {
-												/**
-												 * B​i​l​l​a​b​l​e​ ​S​t​a​t​u​s
-												 */
-												displayName: string
-												/**
-												 * W​h​e​t​h​e​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​i​s​ ​b​i​l​l​a​b​l​e
-												 */
-												shortDesc: string
-												/**
-												 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​t​h​i​s​ ​e​x​p​e​n​s​e​ ​c​a​n​ ​b​e​ ​b​i​l​l​e​d​ ​t​o​ ​a​ ​c​u​s​t​o​m​e​r
-												 */
-												longDesc: string
-											}
-											account_id: {
-												/**
-												 * A​c​c​o​u​n​t​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​e​x​p​e​n​s​e
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​e​x​p​e​n​s​e
-												 */
-												longDesc: string
-											}
-											item_id: {
-												/**
-												 * I​t​e​m​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​i​t​e​m​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​p​u​r​c​h​a​s​e​d
-												 */
-												longDesc: string
-											}
-											quantity: {
-												/**
-												 * Q​u​a​n​t​i​t​y
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​p​u​r​c​h​a​s​e​d
-												 */
-												longDesc: string
-											}
-											unit_price: {
-												/**
-												 * U​n​i​t​ ​P​r​i​c​e
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​p​r​i​c​e​ ​p​e​r​ ​u​n​i​t
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
+									fields: {
+										amount: {
+											/**
+											 * A​m​o​u​n​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										description: {
+											/**
+											 * D​e​s​c​r​i​p​t​i​o​n
+											 */
+											displayName: string
+											/**
+											 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * A​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​w​h​a​t​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​r​e​p​r​e​s​e​n​t​s
+											 */
+											longDesc: string
+										}
+										tax_code_id: {
+											/**
+											 * T​a​x​ ​C​o​d​e​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​t​a​x​ ​c​o​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​x​ ​c​o​d​e​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										class_id: {
+											/**
+											 * C​l​a​s​s​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​c​l​a​s​s​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​l​a​s​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										customer_id: {
+											/**
+											 * C​u​s​t​o​m​e​r​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​i​f​ ​t​h​i​s​ ​e​x​p​e​n​s​e​ ​i​s​ ​b​i​l​l​a​b​l​e
+											 */
+											longDesc: string
+										}
+										billable_status: {
+											/**
+											 * B​i​l​l​a​b​l​e​ ​S​t​a​t​u​s
+											 */
+											displayName: string
+											/**
+											 * W​h​e​t​h​e​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​i​s​ ​b​i​l​l​a​b​l​e
+											 */
+											shortDesc: string
+											/**
+											 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​t​h​i​s​ ​e​x​p​e​n​s​e​ ​c​a​n​ ​b​e​ ​b​i​l​l​e​d​ ​t​o​ ​a​ ​c​u​s​t​o​m​e​r
+											 */
+											longDesc: string
+										}
+										account_id: {
+											/**
+											 * A​c​c​o​u​n​t​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​e​x​p​e​n​s​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​e​x​p​e​n​s​e
+											 */
+											longDesc: string
+										}
+										item_id: {
+											/**
+											 * I​t​e​m​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​i​t​e​m​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​p​u​r​c​h​a​s​e​d
+											 */
+											longDesc: string
+										}
+										quantity: {
+											/**
+											 * Q​u​a​n​t​i​t​y
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​p​u​r​c​h​a​s​e​d
+											 */
+											longDesc: string
+										}
+										unit_price: {
+											/**
+											 * U​n​i​t​ ​P​r​i​c​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​p​r​i​c​e​ ​p​e​r​ ​u​n​i​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -48446,148 +48428,146 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											amount: {
-												/**
-												 * A​m​o​u​n​t
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
-											description: {
-												/**
-												 * D​e​s​c​r​i​p​t​i​o​n
-												 */
-												displayName: string
-												/**
-												 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * A​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​w​h​a​t​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​r​e​p​r​e​s​e​n​t​s
-												 */
-												longDesc: string
-											}
-											tax_code_id: {
-												/**
-												 * T​a​x​ ​C​o​d​e​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​t​a​x​ ​c​o​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​x​ ​c​o​d​e​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
-											class_id: {
-												/**
-												 * C​l​a​s​s​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​c​l​a​s​s​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​l​a​s​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
-											customer_id: {
-												/**
-												 * C​u​s​t​o​m​e​r​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​i​f​ ​t​h​i​s​ ​e​x​p​e​n​s​e​ ​i​s​ ​b​i​l​l​a​b​l​e
-												 */
-												longDesc: string
-											}
-											billable_status: {
-												/**
-												 * B​i​l​l​a​b​l​e​ ​S​t​a​t​u​s
-												 */
-												displayName: string
-												/**
-												 * W​h​e​t​h​e​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​i​s​ ​b​i​l​l​a​b​l​e
-												 */
-												shortDesc: string
-												/**
-												 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​t​h​i​s​ ​e​x​p​e​n​s​e​ ​c​a​n​ ​b​e​ ​b​i​l​l​e​d​ ​t​o​ ​a​ ​c​u​s​t​o​m​e​r
-												 */
-												longDesc: string
-											}
-											account_id: {
-												/**
-												 * A​c​c​o​u​n​t​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​e​x​p​e​n​s​e
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​e​x​p​e​n​s​e
-												 */
-												longDesc: string
-											}
-											item_id: {
-												/**
-												 * I​t​e​m​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​i​t​e​m​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​p​u​r​c​h​a​s​e​d
-												 */
-												longDesc: string
-											}
-											quantity: {
-												/**
-												 * Q​u​a​n​t​i​t​y
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​p​u​r​c​h​a​s​e​d
-												 */
-												longDesc: string
-											}
-											unit_price: {
-												/**
-												 * U​n​i​t​ ​P​r​i​c​e
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​p​r​i​c​e​ ​p​e​r​ ​u​n​i​t
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
+									fields: {
+										amount: {
+											/**
+											 * A​m​o​u​n​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										description: {
+											/**
+											 * D​e​s​c​r​i​p​t​i​o​n
+											 */
+											displayName: string
+											/**
+											 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * A​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​w​h​a​t​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​r​e​p​r​e​s​e​n​t​s
+											 */
+											longDesc: string
+										}
+										tax_code_id: {
+											/**
+											 * T​a​x​ ​C​o​d​e​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​t​a​x​ ​c​o​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​x​ ​c​o​d​e​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										class_id: {
+											/**
+											 * C​l​a​s​s​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​c​l​a​s​s​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​l​a​s​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										customer_id: {
+											/**
+											 * C​u​s​t​o​m​e​r​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​i​f​ ​t​h​i​s​ ​e​x​p​e​n​s​e​ ​i​s​ ​b​i​l​l​a​b​l​e
+											 */
+											longDesc: string
+										}
+										billable_status: {
+											/**
+											 * B​i​l​l​a​b​l​e​ ​S​t​a​t​u​s
+											 */
+											displayName: string
+											/**
+											 * W​h​e​t​h​e​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​i​s​ ​b​i​l​l​a​b​l​e
+											 */
+											shortDesc: string
+											/**
+											 * I​n​d​i​c​a​t​e​s​ ​i​f​ ​t​h​i​s​ ​e​x​p​e​n​s​e​ ​c​a​n​ ​b​e​ ​b​i​l​l​e​d​ ​t​o​ ​a​ ​c​u​s​t​o​m​e​r
+											 */
+											longDesc: string
+										}
+										account_id: {
+											/**
+											 * A​c​c​o​u​n​t​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​a​c​c​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​e​x​p​e​n​s​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​e​x​p​e​n​s​e
+											 */
+											longDesc: string
+										}
+										item_id: {
+											/**
+											 * I​t​e​m​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​i​t​e​m​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​p​u​r​c​h​a​s​e​d
+											 */
+											longDesc: string
+										}
+										quantity: {
+											/**
+											 * Q​u​a​n​t​i​t​y
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​p​u​r​c​h​a​s​e​d
+											 */
+											longDesc: string
+										}
+										unit_price: {
+											/**
+											 * U​n​i​t​ ​P​r​i​c​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​p​r​i​c​e​ ​p​e​r​ ​u​n​i​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -49928,120 +49908,118 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											amount: {
-												/**
-												 * A​m​o​u​n​t
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​t​o​t​a​l​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
-											description: {
-												/**
-												 * D​e​s​c​r​i​p​t​i​o​n
-												 */
-												displayName: string
-												/**
-												 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * A​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​w​h​a​t​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​r​e​p​r​e​s​e​n​t​s
-												 */
-												longDesc: string
-											}
-											quantity: {
-												/**
-												 * Q​u​a​n​t​i​t​y
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​e​s​t​i​m​a​t​e​d
-												 */
-												longDesc: string
-											}
-											unit_price: {
-												/**
-												 * U​n​i​t​ ​P​r​i​c​e
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​p​r​i​c​e​ ​p​e​r​ ​u​n​i​t
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
-											item_id: {
-												/**
-												 * I​t​e​m​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​i​t​e​m​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​e​s​t​i​m​a​t​e​d
-												 */
-												longDesc: string
-											}
-											service_date: {
-												/**
-												 * S​e​r​v​i​c​e​ ​D​a​t​e
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​s​e​r​v​i​c​e​ ​w​i​l​l​ ​b​e​ ​p​r​o​v​i​d​e​d
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​s​e​r​v​i​c​e​ ​o​r​ ​i​t​e​m​ ​w​i​l​l​ ​b​e​ ​d​e​l​i​v​e​r​e​d
-												 */
-												longDesc: string
-											}
-											tax_code_id: {
-												/**
-												 * T​a​x​ ​C​o​d​e​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​t​a​x​ ​c​o​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​x​ ​c​o​d​e​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
-											class_id: {
-												/**
-												 * C​l​a​s​s​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​c​l​a​s​s​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​l​a​s​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
+									fields: {
+										amount: {
+											/**
+											 * A​m​o​u​n​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​o​t​a​l​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										description: {
+											/**
+											 * D​e​s​c​r​i​p​t​i​o​n
+											 */
+											displayName: string
+											/**
+											 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * A​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​w​h​a​t​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​r​e​p​r​e​s​e​n​t​s
+											 */
+											longDesc: string
+										}
+										quantity: {
+											/**
+											 * Q​u​a​n​t​i​t​y
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​e​s​t​i​m​a​t​e​d
+											 */
+											longDesc: string
+										}
+										unit_price: {
+											/**
+											 * U​n​i​t​ ​P​r​i​c​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​p​r​i​c​e​ ​p​e​r​ ​u​n​i​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										item_id: {
+											/**
+											 * I​t​e​m​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​i​t​e​m​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​e​s​t​i​m​a​t​e​d
+											 */
+											longDesc: string
+										}
+										service_date: {
+											/**
+											 * S​e​r​v​i​c​e​ ​D​a​t​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​s​e​r​v​i​c​e​ ​w​i​l​l​ ​b​e​ ​p​r​o​v​i​d​e​d
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​s​e​r​v​i​c​e​ ​o​r​ ​i​t​e​m​ ​w​i​l​l​ ​b​e​ ​d​e​l​i​v​e​r​e​d
+											 */
+											longDesc: string
+										}
+										tax_code_id: {
+											/**
+											 * T​a​x​ ​C​o​d​e​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​t​a​x​ ​c​o​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​x​ ​c​o​d​e​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										class_id: {
+											/**
+											 * C​l​a​s​s​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​c​l​a​s​s​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​l​a​s​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -50316,120 +50294,118 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											amount: {
-												/**
-												 * A​m​o​u​n​t
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​t​o​t​a​l​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
-											description: {
-												/**
-												 * D​e​s​c​r​i​p​t​i​o​n
-												 */
-												displayName: string
-												/**
-												 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * A​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​w​h​a​t​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​r​e​p​r​e​s​e​n​t​s
-												 */
-												longDesc: string
-											}
-											quantity: {
-												/**
-												 * Q​u​a​n​t​i​t​y
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​i​n​v​o​i​c​e​d
-												 */
-												longDesc: string
-											}
-											unit_price: {
-												/**
-												 * U​n​i​t​ ​P​r​i​c​e
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​p​r​i​c​e​ ​p​e​r​ ​u​n​i​t
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
-											item_id: {
-												/**
-												 * I​t​e​m​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​i​t​e​m​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​i​n​v​o​i​c​e​d
-												 */
-												longDesc: string
-											}
-											service_date: {
-												/**
-												 * S​e​r​v​i​c​e​ ​D​a​t​e
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​s​e​r​v​i​c​e​ ​w​a​s​ ​p​r​o​v​i​d​e​d
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​s​e​r​v​i​c​e​ ​o​r​ ​i​t​e​m​ ​w​a​s​ ​d​e​l​i​v​e​r​e​d
-												 */
-												longDesc: string
-											}
-											tax_code_id: {
-												/**
-												 * T​a​x​ ​C​o​d​e​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​t​a​x​ ​c​o​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​x​ ​c​o​d​e​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
-											class_id: {
-												/**
-												 * C​l​a​s​s​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​c​l​a​s​s​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​l​a​s​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
+									fields: {
+										amount: {
+											/**
+											 * A​m​o​u​n​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​o​t​a​l​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										description: {
+											/**
+											 * D​e​s​c​r​i​p​t​i​o​n
+											 */
+											displayName: string
+											/**
+											 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * A​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​w​h​a​t​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​r​e​p​r​e​s​e​n​t​s
+											 */
+											longDesc: string
+										}
+										quantity: {
+											/**
+											 * Q​u​a​n​t​i​t​y
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​i​n​v​o​i​c​e​d
+											 */
+											longDesc: string
+										}
+										unit_price: {
+											/**
+											 * U​n​i​t​ ​P​r​i​c​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​p​r​i​c​e​ ​p​e​r​ ​u​n​i​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										item_id: {
+											/**
+											 * I​t​e​m​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​i​t​e​m​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​i​n​v​o​i​c​e​d
+											 */
+											longDesc: string
+										}
+										service_date: {
+											/**
+											 * S​e​r​v​i​c​e​ ​D​a​t​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​s​e​r​v​i​c​e​ ​w​a​s​ ​p​r​o​v​i​d​e​d
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​s​e​r​v​i​c​e​ ​o​r​ ​i​t​e​m​ ​w​a​s​ ​d​e​l​i​v​e​r​e​d
+											 */
+											longDesc: string
+										}
+										tax_code_id: {
+											/**
+											 * T​a​x​ ​C​o​d​e​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​t​a​x​ ​c​o​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​x​ ​c​o​d​e​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										class_id: {
+											/**
+											 * C​l​a​s​s​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​c​l​a​s​s​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​l​a​s​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -50718,120 +50694,118 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											amount: {
-												/**
-												 * A​m​o​u​n​t
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​t​o​t​a​l​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
-											description: {
-												/**
-												 * D​e​s​c​r​i​p​t​i​o​n
-												 */
-												displayName: string
-												/**
-												 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * A​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​w​h​a​t​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​r​e​p​r​e​s​e​n​t​s
-												 */
-												longDesc: string
-											}
-											quantity: {
-												/**
-												 * Q​u​a​n​t​i​t​y
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​i​n​v​o​i​c​e​d
-												 */
-												longDesc: string
-											}
-											unit_price: {
-												/**
-												 * U​n​i​t​ ​P​r​i​c​e
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​p​r​i​c​e​ ​p​e​r​ ​u​n​i​t
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
-											item_id: {
-												/**
-												 * I​t​e​m​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​i​t​e​m​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​i​n​v​o​i​c​e​d
-												 */
-												longDesc: string
-											}
-											service_date: {
-												/**
-												 * S​e​r​v​i​c​e​ ​D​a​t​e
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​s​e​r​v​i​c​e​ ​w​a​s​ ​p​r​o​v​i​d​e​d
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​s​e​r​v​i​c​e​ ​o​r​ ​i​t​e​m​ ​w​a​s​ ​d​e​l​i​v​e​r​e​d
-												 */
-												longDesc: string
-											}
-											tax_code_id: {
-												/**
-												 * T​a​x​ ​C​o​d​e​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​t​a​x​ ​c​o​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​x​ ​c​o​d​e​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
-											class_id: {
-												/**
-												 * C​l​a​s​s​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​c​l​a​s​s​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​l​a​s​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
-												 */
-												longDesc: string
-											}
+									fields: {
+										amount: {
+											/**
+											 * A​m​o​u​n​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​o​t​a​l​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										description: {
+											/**
+											 * D​e​s​c​r​i​p​t​i​o​n
+											 */
+											displayName: string
+											/**
+											 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * A​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​w​h​a​t​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​ ​r​e​p​r​e​s​e​n​t​s
+											 */
+											longDesc: string
+										}
+										quantity: {
+											/**
+											 * Q​u​a​n​t​i​t​y
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​i​n​v​o​i​c​e​d
+											 */
+											longDesc: string
+										}
+										unit_price: {
+											/**
+											 * U​n​i​t​ ​P​r​i​c​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​p​r​i​c​e​ ​p​e​r​ ​u​n​i​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										item_id: {
+											/**
+											 * I​t​e​m​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​i​t​e​m​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​i​n​v​o​i​c​e​d
+											 */
+											longDesc: string
+										}
+										service_date: {
+											/**
+											 * S​e​r​v​i​c​e​ ​D​a​t​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​s​e​r​v​i​c​e​ ​w​a​s​ ​p​r​o​v​i​d​e​d
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​d​a​t​e​ ​w​h​e​n​ ​t​h​e​ ​s​e​r​v​i​c​e​ ​o​r​ ​i​t​e​m​ ​w​a​s​ ​d​e​l​i​v​e​r​e​d
+											 */
+											longDesc: string
+										}
+										tax_code_id: {
+											/**
+											 * T​a​x​ ​C​o​d​e​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​t​a​x​ ​c​o​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​x​ ​c​o​d​e​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										class_id: {
+											/**
+											 * C​l​a​s​s​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​c​l​a​s​s​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​l​a​s​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -62125,6 +62099,1866 @@ type RootTranslation = {
 				}
 			}
 		}
+		Mautic: {
+			/**
+			 * M​a​u​t​i​c
+			 */
+			displayName: string
+			groups: {
+				/**
+				 * M​a​r​k​e​t​i​n​g​ ​A​u​t​o​m​a​t​i​o​n
+				 */
+				'0': string
+				/**
+				 * C​R​M
+				 */
+				'1': string
+				/**
+				 * E​m​a​i​l​ ​&​ ​E​m​a​i​l​ ​M​a​r​k​e​t​i​n​g
+				 */
+				'2': string
+			}
+			/**
+			 * O​p​e​n​-​s​o​u​r​c​e​ ​m​a​r​k​e​t​i​n​g​ ​a​u​t​o​m​a​t​i​o​n​ ​p​l​a​t​f​o​r​m
+			 */
+			shortDesc: string
+			/**
+			 * C​o​n​n​e​c​t​ ​y​o​u​r​ ​M​a​u​t​i​c​ ​i​n​s​t​a​n​c​e​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​m​a​r​k​e​t​i​n​g​ ​c​a​m​p​a​i​g​n​s​,​ ​m​a​n​a​g​e​ ​c​o​n​t​a​c​t​s​ ​a​n​d​ ​c​o​m​p​a​n​i​e​s​,​ ​s​e​g​m​e​n​t​ ​a​u​d​i​e​n​c​e​s​,​ ​a​n​d​ ​s​e​n​d​ ​t​a​r​g​e​t​e​d​ ​e​m​a​i​l​s​.​ ​B​u​i​l​d​ ​p​o​w​e​r​f​u​l​ ​m​a​r​k​e​t​i​n​g​ ​w​o​r​k​f​l​o​w​s​ ​w​i​t​h​ ​f​u​l​l​ ​c​o​n​t​r​o​l​ ​o​v​e​r​ ​y​o​u​r​ ​d​a​t​a​.
+			 */
+			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​M​a​u​t​i​c
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​y​o​u​r​ ​M​a​u​t​i​c​ ​i​n​s​t​a​n​c​e​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​I​n​s​t​a​n​c​e​ ​U​R​L​*​*​,​ ​*​*​U​s​e​r​n​a​m​e​*​*​,​ ​a​n​d​ ​*​*​P​a​s​s​w​o​r​d​*​*​.​
+			​
+			​#​#​ ​P​r​e​r​e​q​u​i​s​i​t​e​s​
+			​
+			​B​e​f​o​r​e​ ​c​o​n​n​e​c​t​i​n​g​,​ ​e​n​s​u​r​e​ ​A​P​I​ ​a​c​c​e​s​s​ ​i​s​ ​e​n​a​b​l​e​d​ ​i​n​ ​y​o​u​r​ ​M​a​u​t​i​c​ ​i​n​s​t​a​n​c​e​:​
+			​
+			​1​.​ ​G​o​ ​t​o​ ​*​*​S​e​t​t​i​n​g​s​*​*​ ​(​g​e​a​r​ ​i​c​o​n​)​ ​→​ ​*​*​C​o​n​f​i​g​u​r​a​t​i​o​n​*​*​ ​→​ ​*​*​A​P​I​ ​S​e​t​t​i​n​g​s​*​*​
+			​2​.​ ​S​e​t​ ​*​*​A​P​I​ ​e​n​a​b​l​e​d​*​*​ ​t​o​ ​*​*​Y​e​s​*​*​
+			​3​.​ ​S​e​t​ ​*​*​E​n​a​b​l​e​ ​H​T​T​P​ ​b​a​s​i​c​ ​a​u​t​h​?​*​*​ ​t​o​ ​*​*​Y​e​s​*​*​
+			​4​.​ ​S​a​v​e​ ​t​h​e​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​I​n​s​t​a​n​c​e​ ​U​R​L​
+			​T​h​e​ ​U​R​L​ ​o​f​ ​y​o​u​r​ ​M​a​u​t​i​c​ ​i​n​s​t​a​l​l​a​t​i​o​n​ ​(​e​.​g​.​,​ ​`​h​t​t​p​s​:​/​/​m​a​u​t​i​c​.​y​o​u​r​c​o​m​p​a​n​y​.​c​o​m​`​)​
+			​
+			​#​#​#​ ​U​s​e​r​n​a​m​e​
+			​Y​o​u​r​ ​M​a​u​t​i​c​ ​l​o​g​i​n​ ​u​s​e​r​n​a​m​e​ ​o​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​
+			​
+			​#​#​#​ ​P​a​s​s​w​o​r​d​
+			​Y​o​u​r​ ​M​a​u​t​i​c​ ​l​o​g​i​n​ ​p​a​s​s​w​o​r​d​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​F​o​r​ ​s​e​c​u​r​i​t​y​,​ ​w​e​ ​r​e​c​o​m​m​e​n​d​ ​c​r​e​a​t​i​n​g​ ​a​ ​d​e​d​i​c​a​t​e​d​ ​A​P​I​ ​u​s​e​r​ ​w​i​t​h​ ​a​p​p​r​o​p​r​i​a​t​e​ ​p​e​r​m​i​s​s​i​o​n​s​ ​r​a​t​h​e​r​ ​t​h​a​n​ ​u​s​i​n​g​ ​y​o​u​r​ ​m​a​i​n​ ​a​d​m​i​n​ ​a​c​c​o​u​n​t​.
+				 */
+				content: string
+			}
+			actions: {
+				add_contact_to_campaign: {
+					groups: {
+						/**
+						 * C​a​m​p​a​i​g​n​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * A​d​d​ ​C​o​n​t​a​c​t​ ​t​o​ ​C​a​m​p​a​i​g​n
+					 */
+					displayName: string
+					/**
+					 * M​a​n​u​a​l​l​y​ ​a​d​d​ ​a​ ​c​o​n​t​a​c​t​ ​t​o​ ​a​ ​c​a​m​p​a​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​ ​t​o​ ​a​ ​c​a​m​p​a​i​g​n​ ​i​n​ ​M​a​u​t​i​c​.​ ​T​h​i​s​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​m​a​n​u​a​l​l​y​ ​i​n​c​l​u​d​e​ ​c​o​n​t​a​c​t​s​ ​i​n​ ​c​a​m​p​a​i​g​n​ ​w​o​r​k​f​l​o​w​s​.
+					 */
+					longDesc: string
+					options: {
+						campaign: {
+							/**
+							 * C​a​m​p​a​i​g​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​a​d​d​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o
+							 */
+							longDesc: string
+						}
+						contact: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​c​a​m​p​a​i​g​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​c​a​m​p​a​i​g​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				remove_contact_from_campaign: {
+					groups: {
+						/**
+						 * C​a​m​p​a​i​g​n​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * R​e​m​o​v​e​ ​C​o​n​t​a​c​t​ ​f​r​o​m​ ​C​a​m​p​a​i​g​n
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​a​ ​c​a​m​p​a​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​a​ ​c​a​m​p​a​i​g​n​ ​i​n​ ​M​a​u​t​i​c​.​ ​T​h​i​s​ ​s​t​o​p​s​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​r​e​c​e​i​v​i​n​g​ ​f​u​r​t​h​e​r​ ​c​a​m​p​a​i​g​n​ ​a​c​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						campaign: {
+							/**
+							 * C​a​m​p​a​i​g​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​r​e​m​o​v​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​m​o​v​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						contact: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​c​a​m​p​a​i​g​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​c​a​m​p​a​i​g​n
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_company: {
+					groups: {
+						/**
+						 * C​o​m​p​a​n​y​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * C​r​e​a​t​e​ ​C​o​m​p​a​n​y
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​m​p​a​n​y
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​m​p​a​n​y​ ​r​e​c​o​r​d​ ​i​n​ ​M​a​u​t​i​c​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​d​e​t​a​i​l​s​.
+					 */
+					longDesc: string
+					options: {
+						companyname: {
+							/**
+							 * C​o​m​p​a​n​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​(​r​e​q​u​i​r​e​d​)
+							 */
+							longDesc: string
+						}
+						companyemail: {
+							/**
+							 * C​o​m​p​a​n​y​ ​E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+						companyphone: {
+							/**
+							 * C​o​m​p​a​n​y​ ​P​h​o​n​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+						companywebsite: {
+							/**
+							 * W​e​b​s​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​w​e​b​s​i​t​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​m​p​a​n​y​ ​w​e​b​s​i​t​e​ ​U​R​L
+							 */
+							longDesc: string
+						}
+						companyaddress1: {
+							/**
+							 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​1
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+						companyaddress2: {
+							/**
+							 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​2
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​e​c​o​n​d​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​(​s​u​i​t​e​,​ ​f​l​o​o​r​,​ ​e​t​c​.​)
+							 */
+							longDesc: string
+						}
+						companycity: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​i​t​y​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​i​t​y​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​a​d​d​r​e​s​s
+							 */
+							longDesc: string
+						}
+						companystate: {
+							/**
+							 * S​t​a​t​e​/​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​r​e​g​i​o​n​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​t​e​,​ ​p​r​o​v​i​n​c​e​,​ ​o​r​ ​r​e​g​i​o​n​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​a​d​d​r​e​s​s
+							 */
+							longDesc: string
+						}
+						companyzipcode: {
+							/**
+							 * P​o​s​t​a​l​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​o​s​t​a​l​/​Z​I​P​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​o​s​t​a​l​ ​o​r​ ​Z​I​P​ ​c​o​d​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​a​d​d​r​e​s​s
+							 */
+							longDesc: string
+						}
+						companycountry: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​u​n​t​r​y​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​u​n​t​r​y​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​i​s​ ​l​o​c​a​t​e​d
+							 */
+							longDesc: string
+						}
+						companydescription: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s​ ​o​r​ ​d​e​s​c​r​i​p​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+						companyindustry: {
+							/**
+							 * I​n​d​u​s​t​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​i​n​d​u​s​t​r​y​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​i​n​d​u​s​t​r​y​ ​o​r​ ​s​e​c​t​o​r​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​o​p​e​r​a​t​e​s​ ​i​n
+							 */
+							longDesc: string
+						}
+						custom_fields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​b​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​a​l​i​a​s​e​s​ ​a​n​d​ ​t​h​e​i​r​ ​v​a​l​u​e​s​.​ ​U​s​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​l​i​a​s​ ​a​s​ ​t​h​e​ ​k​e​y
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_company: {
+					groups: {
+						/**
+						 * C​o​m​p​a​n​y​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * D​e​l​e​t​e​ ​C​o​m​p​a​n​y
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​c​o​m​p​a​n​y
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​c​o​m​p​a​n​y​ ​r​e​c​o​r​d​ ​f​r​o​m​ ​M​a​u​t​i​c​.
+					 */
+					longDesc: string
+					options: {
+						company: {
+							/**
+							 * C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​m​p​a​n​y​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_company: {
+					groups: {
+						/**
+						 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​C​o​m​p​a​n​y
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​c​o​m​p​a​n​y​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​m​p​a​n​y​ ​i​n​ ​M​a​u​t​i​c​.
+					 */
+					longDesc: string
+					options: {
+						company: {
+							/**
+							 * C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​m​p​a​n​y​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​s​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_many_companies: {
+					groups: {
+						/**
+						 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​M​a​n​y​ ​C​o​m​p​a​n​i​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​o​m​p​a​n​i​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​c​o​m​p​a​n​i​e​s​ ​f​r​o​m​ ​M​a​u​t​i​c​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​s​e​a​r​c​h​ ​a​n​d​ ​f​i​l​t​e​r​i​n​g​.
+					 */
+					longDesc: string
+					options: {
+						search: {
+							/**
+							 * S​e​a​r​c​h
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​c​o​m​p​a​n​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​c​o​m​p​a​n​i​e​s​ ​b​y​ ​n​a​m​e​ ​o​r​ ​o​t​h​e​r​ ​f​i​e​l​d​s
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​m​p​a​n​i​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​m​p​a​n​i​e​s​ ​t​o​ ​r​e​t​u​r​n​ ​(​d​e​f​a​u​l​t​:​ ​3​0​)
+							 */
+							longDesc: string
+						}
+						start: {
+							/**
+							 * S​t​a​r​t
+							 */
+							displayName: string
+							/**
+							 * S​t​a​r​t​i​n​g​ ​r​o​w​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​r​t​i​n​g​ ​r​o​w​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​(​d​e​f​a​u​l​t​:​ ​0​)
+							 */
+							longDesc: string
+						}
+						orderBy: {
+							/**
+							 * O​r​d​e​r​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						orderByDir: {
+							/**
+							 * O​r​d​e​r​ ​D​i​r​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n​ ​(​a​s​c​ ​o​r​ ​d​e​s​c​)
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​:​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_company: {
+					groups: {
+						/**
+						 * C​o​m​p​a​n​y​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * U​p​d​a​t​e​ ​C​o​m​p​a​n​y
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​m​p​a​n​y
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​m​p​a​n​y​ ​i​n​ ​M​a​u​t​i​c​.
+					 */
+					longDesc: string
+					options: {
+						company: {
+							/**
+							 * C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​m​p​a​n​y​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						companyname: {
+							/**
+							 * C​o​m​p​a​n​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+						companyemail: {
+							/**
+							 * C​o​m​p​a​n​y​ ​E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​p​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+						companyphone: {
+							/**
+							 * C​o​m​p​a​n​y​ ​P​h​o​n​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​p​r​i​m​a​r​y​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+						companywebsite: {
+							/**
+							 * W​e​b​s​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​w​e​b​s​i​t​e​ ​U​R​L
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​c​o​m​p​a​n​y​ ​w​e​b​s​i​t​e​ ​U​R​L
+							 */
+							longDesc: string
+						}
+						companyaddress1: {
+							/**
+							 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​1
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​f​i​r​s​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+						companyaddress2: {
+							/**
+							 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​2
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​e​c​o​n​d​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * N​e​w​ ​a​d​d​i​t​i​o​n​a​l​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						companycity: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​c​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​c​i​t​y​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​a​d​d​r​e​s​s
+							 */
+							longDesc: string
+						}
+						companystate: {
+							/**
+							 * S​t​a​t​e​/​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​t​a​t​e​ ​o​r​ ​r​e​g​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​s​t​a​t​e​,​ ​p​r​o​v​i​n​c​e​,​ ​o​r​ ​r​e​g​i​o​n
+							 */
+							longDesc: string
+						}
+						companyzipcode: {
+							/**
+							 * P​o​s​t​a​l​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​o​s​t​a​l​/​Z​I​P​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​p​o​s​t​a​l​ ​o​r​ ​Z​I​P​ ​c​o​d​e
+							 */
+							longDesc: string
+						}
+						companycountry: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​c​o​u​n​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​c​o​u​n​t​r​y​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+						companydescription: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * N​e​w​ ​n​o​t​e​s​ ​o​r​ ​d​e​s​c​r​i​p​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+						companyindustry: {
+							/**
+							 * I​n​d​u​s​t​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​i​n​d​u​s​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​i​n​d​u​s​t​r​y​ ​o​r​ ​s​e​c​t​o​r
+							 */
+							longDesc: string
+						}
+						custom_fields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​b​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​a​l​i​a​s​e​s​ ​a​n​d​ ​t​h​e​i​r​ ​v​a​l​u​e​s​.​ ​U​s​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​l​i​a​s​ ​a​s​ ​t​h​e​ ​k​e​y​ 
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_contact_to_company: {
+					groups: {
+						/**
+						 * C​o​m​p​a​n​y​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * A​d​d​ ​C​o​n​t​a​c​t​ ​t​o​ ​C​o​m​p​a​n​y
+					 */
+					displayName: string
+					/**
+					 * A​s​s​o​c​i​a​t​e​ ​a​ ​c​o​n​t​a​c​t​ ​w​i​t​h​ ​a​ ​c​o​m​p​a​n​y
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​n​ ​a​s​s​o​c​i​a​t​i​o​n​ ​b​e​t​w​e​e​n​ ​a​ ​c​o​n​t​a​c​t​ ​a​n​d​ ​a​ ​c​o​m​p​a​n​y​ ​i​n​ ​M​a​u​t​i​c​.
+					 */
+					longDesc: string
+					options: {
+						company: {
+							/**
+							 * C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​m​p​a​n​y​ ​t​o​ ​a​d​d​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​i​t​h
+							 */
+							longDesc: string
+						}
+						contact: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​w​i​t​h​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+					}
+				}
+				remove_contact_from_company: {
+					groups: {
+						/**
+						 * C​o​m​p​a​n​y​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * R​e​m​o​v​e​ ​C​o​n​t​a​c​t​ ​f​r​o​m​ ​C​o​m​p​a​n​y
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​a​ ​c​o​m​p​a​n​y
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​ ​t​h​e​ ​a​s​s​o​c​i​a​t​i​o​n​ ​b​e​t​w​e​e​n​ ​a​ ​c​o​n​t​a​c​t​ ​a​n​d​ ​a​ ​c​o​m​p​a​n​y​ ​i​n​ ​M​a​u​t​i​c​.
+					 */
+					longDesc: string
+					options: {
+						company: {
+							/**
+							 * C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​m​p​a​n​y​ ​t​o​ ​r​e​m​o​v​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​m​o​v​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						contact: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​c​o​m​p​a​n​y
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_contact: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * C​r​e​a​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​o​n​t​a​c​t​ ​i​n​ ​M​a​u​t​i​c​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						email: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​i​m​a​r​y​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​(​r​e​q​u​i​r​e​d​)
+							 */
+							longDesc: string
+						}
+						firstname: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​f​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						lastname: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​l​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						phone: {
+							/**
+							 * P​h​o​n​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						mobile: {
+							/**
+							 * M​o​b​i​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​m​o​b​i​l​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​o​b​i​l​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						company: {
+							/**
+							 * C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​c​o​m​p​a​n​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​o​r​k​s​ ​f​o​r
+							 */
+							longDesc: string
+						}
+						position: {
+							/**
+							 * P​o​s​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​j​o​b​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​j​o​b​ ​t​i​t​l​e​ ​o​r​ ​p​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						address1: {
+							/**
+							 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​1
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						address2: {
+							/**
+							 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​2
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​e​c​o​n​d​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​i​t​y​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​a​d​d​r​e​s​s
+							 */
+							longDesc: string
+						}
+						state: {
+							/**
+							 * S​t​a​t​e​/​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​t​a​t​e​ ​o​r​ ​r​e​g​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​t​e​,​ ​p​r​o​v​i​n​c​e​,​ ​o​r​ ​r​e​g​i​o​n
+							 */
+							longDesc: string
+						}
+						zipcode: {
+							/**
+							 * P​o​s​t​a​l​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​p​o​s​t​a​l​/​Z​I​P​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​o​s​t​a​l​ ​o​r​ ​Z​I​P​ ​c​o​d​e
+							 */
+							longDesc: string
+						}
+						country: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​u​n​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​o​u​n​t​r​y​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						website: {
+							/**
+							 * W​e​b​s​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​'​s​ ​w​e​b​s​i​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​e​r​s​o​n​a​l​ ​o​r​ ​p​r​o​f​e​s​s​i​o​n​a​l​ ​w​e​b​s​i​t​e​ ​U​R​L
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * T​a​g​s​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​t​a​g​s​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​f​o​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​a​n​d​ ​s​e​g​m​e​n​t​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						custom_fields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​b​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​a​l​i​a​s​e​s​ ​a​n​d​ ​t​h​e​i​r​ ​v​a​l​u​e​s​.​ ​U​s​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​l​i​a​s​ ​a​s​ ​t​h​e​ ​k​e​y​ 
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_contact: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * D​e​l​e​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​ ​a​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​M​a​u​t​i​c​.
+					 */
+					longDesc: string
+					options: {
+						contact: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				edit_contact_points: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * E​d​i​t​ ​C​o​n​t​a​c​t​ ​P​o​i​n​t​s
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​o​r​ ​s​u​b​t​r​a​c​t​ ​p​o​i​n​t​s​ ​f​r​o​m​ ​a​ ​c​o​n​t​a​c​t​'​s​ ​s​c​o​r​e
+					 */
+					shortDesc: string
+					/**
+					 * M​o​d​i​f​y​ ​t​h​e​ ​p​o​i​n​t​s​ ​s​c​o​r​e​ ​o​f​ ​a​ ​c​o​n​t​a​c​t​ ​i​n​ ​M​a​u​t​i​c​.​ ​Y​o​u​ ​c​a​n​ ​a​d​d​ ​p​o​i​n​t​s​ ​t​o​ ​r​e​w​a​r​d​ ​e​n​g​a​g​e​m​e​n​t​ ​o​r​ ​s​u​b​t​r​a​c​t​ ​p​o​i​n​t​s​ ​t​o​ ​d​e​-​q​u​a​l​i​f​y​ ​l​e​a​d​s​.
+					 */
+					longDesc: string
+					options: {
+						contact: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​m​o​d​i​f​y​ ​p​o​i​n​t​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​h​o​s​e​ ​p​o​i​n​t​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​d​i​f​y
+							 */
+							longDesc: string
+						}
+						operation: {
+							/**
+							 * O​p​e​r​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​a​d​d​ ​o​r​ ​s​u​b​t​r​a​c​t​ ​p​o​i​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​a​d​d​ ​p​o​i​n​t​s​ ​(​i​n​c​r​e​a​s​e​ ​s​c​o​r​e​)​ ​o​r​ ​s​u​b​t​r​a​c​t​ ​p​o​i​n​t​s​ ​(​d​e​c​r​e​a​s​e​ ​s​c​o​r​e​)
+							 */
+							longDesc: string
+						}
+						points: {
+							/**
+							 * P​o​i​n​t​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​p​o​i​n​t​s​ ​t​o​ ​a​d​d​ ​o​r​ ​s​u​b​t​r​a​c​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​p​o​i​n​t​s​ ​t​o​ ​a​d​d​ ​o​r​ ​s​u​b​t​r​a​c​t​ ​f​r​o​m​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​s​c​o​r​e
+							 */
+							longDesc: string
+						}
+					}
+				}
+				edit_do_not_contact: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * E​d​i​t​ ​D​o​ ​N​o​t​ ​C​o​n​t​a​c​t​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​o​r​ ​r​e​m​o​v​e​ ​a​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​t​h​e​ ​d​o​ ​n​o​t​ ​c​o​n​t​a​c​t​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * M​a​n​a​g​e​ ​t​h​e​ ​D​o​ ​N​o​t​ ​C​o​n​t​a​c​t​ ​(​D​N​C​)​ ​s​t​a​t​u​s​ ​f​o​r​ ​a​ ​c​o​n​t​a​c​t​ ​o​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​h​a​n​n​e​l​ ​(​e​m​a​i​l​,​ ​S​M​S​,​ ​e​t​c​.​)​.
+					 */
+					longDesc: string
+					options: {
+						contact: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​m​o​d​i​f​y​ ​D​N​C​ ​s​t​a​t​u​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​w​h​o​s​e​ ​D​N​C​ ​s​t​a​t​u​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​d​i​f​y
+							 */
+							longDesc: string
+						}
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​ ​c​h​a​n​n​e​l
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​f​o​r​ ​t​h​e​ ​D​N​C​ ​e​n​t​r​y​ ​(​e​m​a​i​l​,​ ​s​m​s​,​ ​e​t​c​.​)
+							 */
+							longDesc: string
+						}
+						operation: {
+							/**
+							 * O​p​e​r​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​a​d​d​ ​o​r​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​D​N​C​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​a​d​d​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​t​h​e​ ​D​N​C​ ​l​i​s​t​ ​(​s​t​o​p​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​s​)​ ​o​r​ ​r​e​m​o​v​e​ ​t​h​e​m​ ​(​a​l​l​o​w​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​s​)
+							 */
+							longDesc: string
+						}
+						reason: {
+							/**
+							 * R​e​a​s​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​r​e​a​s​o​n​ ​f​o​r​ ​a​d​d​i​n​g​ ​t​o​ ​D​N​C
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​r​e​a​s​o​n​ ​f​o​r​ ​a​d​d​i​n​g​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​t​h​e​ ​d​o​ ​n​o​t​ ​c​o​n​t​a​c​t​ ​l​i​s​t
+							 */
+							longDesc: string
+						}
+						comments: {
+							/**
+							 * C​o​m​m​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​c​o​m​m​e​n​t​s
+							 */
+							shortDesc: string
+							/**
+							 * A​d​d​i​t​i​o​n​a​l​ ​n​o​t​e​s​ ​o​r​ ​c​o​m​m​e​n​t​s​ ​a​b​o​u​t​ ​t​h​e​ ​D​N​C​ ​e​n​t​r​y
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_contact: {
+					groups: {
+						/**
+						 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​c​o​n​t​a​c​t​ ​d​e​t​a​i​l​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​ ​i​n​ ​M​a​u​t​i​c​ ​i​n​c​l​u​d​i​n​g​ ​f​i​e​l​d​s​,​ ​t​a​g​s​,​ ​a​n​d​ ​D​N​C​ ​s​t​a​t​u​s​.
+					 */
+					longDesc: string
+					options: {
+						contact: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​g​e​t​ ​d​e​t​a​i​l​s​ ​f​o​r
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_many_contacts: {
+					groups: {
+						/**
+						 * D​a​t​a​ ​R​e​t​r​i​e​v​a​l
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​M​a​n​y​ ​C​o​n​t​a​c​t​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​M​a​u​t​i​c​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​s​e​a​r​c​h​ ​a​n​d​ ​f​i​l​t​e​r​i​n​g​.
+					 */
+					longDesc: string
+					options: {
+						search: {
+							/**
+							 * S​e​a​r​c​h
+							 */
+							displayName: string
+							/**
+							 * S​e​a​r​c​h​ ​t​e​r​m​ ​t​o​ ​f​i​l​t​e​r​ ​c​o​n​t​a​c​t​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​a​r​c​h​ ​f​o​r​ ​c​o​n​t​a​c​t​s​ ​b​y​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​o​r​ ​o​t​h​e​r​ ​f​i​e​l​d​s
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​t​u​r​n​ ​(​d​e​f​a​u​l​t​:​ ​3​0​)
+							 */
+							longDesc: string
+						}
+						start: {
+							/**
+							 * S​t​a​r​t
+							 */
+							displayName: string
+							/**
+							 * S​t​a​r​t​i​n​g​ ​r​o​w​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​r​t​i​n​g​ ​r​o​w​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​ ​(​d​e​f​a​u​l​t​:​ ​0​)
+							 */
+							longDesc: string
+						}
+						orderBy: {
+							/**
+							 * O​r​d​e​r​ ​B​y
+							 */
+							displayName: string
+							/**
+							 * F​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​t​h​e​ ​r​e​s​u​l​t​s
+							 */
+							longDesc: string
+						}
+						orderByDir: {
+							/**
+							 * O​r​d​e​r​ ​D​i​r​e​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n​ ​(​a​s​c​ ​o​r​ ​d​e​s​c​)
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​:​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g
+							 */
+							longDesc: string
+						}
+					}
+				}
+				send_email_to_contact: {
+					groups: {
+						/**
+						 * E​m​a​i​l
+						 */
+						'0': string
+					}
+					/**
+					 * S​e​n​d​ ​E​m​a​i​l​ ​t​o​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​n​ ​e​m​a​i​l​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​M​a​u​t​i​c​ ​e​m​a​i​l​ ​t​e​m​p​l​a​t​e​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​.
+					 */
+					longDesc: string
+					options: {
+						email: {
+							/**
+							 * E​m​a​i​l​ ​T​e​m​p​l​a​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​a​i​l​ ​t​e​m​p​l​a​t​e​ ​t​o​ ​s​e​n​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​M​a​u​t​i​c​ ​e​m​a​i​l​ ​t​e​m​p​l​a​t​e​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​e​n​d
+							 */
+							longDesc: string
+						}
+						contact: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​e​m​a​i​l​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​e​n​d​ ​t​h​e​ ​e​m​a​i​l​ ​t​o
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_contact: {
+					groups: {
+						/**
+						 * C​o​n​t​a​c​t​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * U​p​d​a​t​e​ ​C​o​n​t​a​c​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​ ​t​h​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​ ​i​n​ ​M​a​u​t​i​c​.
+					 */
+					longDesc: string
+					options: {
+						contact: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l​ ​A​d​d​r​e​s​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						firstname: {
+							/**
+							 * F​i​r​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​f​i​r​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​f​i​r​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						lastname: {
+							/**
+							 * L​a​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​l​a​s​t​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​l​a​s​t​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						phone: {
+							/**
+							 * P​h​o​n​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t
+							 */
+							longDesc: string
+						}
+						mobile: {
+							/**
+							 * M​o​b​i​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​m​o​b​i​l​e​ ​n​u​m​b​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​m​o​b​i​l​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r
+							 */
+							longDesc: string
+						}
+						company: {
+							/**
+							 * C​o​m​p​a​n​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​c​o​m​p​a​n​y​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​c​o​m​p​a​n​y​ ​n​a​m​e
+							 */
+							longDesc: string
+						}
+						position: {
+							/**
+							 * P​o​s​i​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​j​o​b​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​j​o​b​ ​t​i​t​l​e​ ​o​r​ ​p​o​s​i​t​i​o​n
+							 */
+							longDesc: string
+						}
+						address1: {
+							/**
+							 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​1
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​f​i​r​s​t​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​s​t​r​e​e​t​ ​a​d​d​r​e​s​s
+							 */
+							longDesc: string
+						}
+						address2: {
+							/**
+							 * A​d​d​r​e​s​s​ ​L​i​n​e​ ​2
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​e​c​o​n​d​ ​l​i​n​e​ ​o​f​ ​t​h​e​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * N​e​w​ ​a​d​d​i​t​i​o​n​a​l​ ​a​d​d​r​e​s​s​ ​i​n​f​o​r​m​a​t​i​o​n
+							 */
+							longDesc: string
+						}
+						city: {
+							/**
+							 * C​i​t​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​c​i​t​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​c​i​t​y
+							 */
+							longDesc: string
+						}
+						state: {
+							/**
+							 * S​t​a​t​e​/​R​e​g​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​t​a​t​e​ ​o​r​ ​r​e​g​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​s​t​a​t​e​,​ ​p​r​o​v​i​n​c​e​,​ ​o​r​ ​r​e​g​i​o​n
+							 */
+							longDesc: string
+						}
+						zipcode: {
+							/**
+							 * P​o​s​t​a​l​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​p​o​s​t​a​l​/​Z​I​P​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​p​o​s​t​a​l​ ​o​r​ ​Z​I​P​ ​c​o​d​e
+							 */
+							longDesc: string
+						}
+						country: {
+							/**
+							 * C​o​u​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​c​o​u​n​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​c​o​u​n​t​r​y
+							 */
+							longDesc: string
+						}
+						website: {
+							/**
+							 * W​e​b​s​i​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​w​e​b​s​i​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​w​e​b​s​i​t​e​ ​U​R​L
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * T​a​g​s​ ​t​o​ ​a​p​p​l​y​ ​o​r​ ​r​e​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​a​g​s​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​e​ ​c​o​n​t​a​c​t​.​ ​P​r​e​f​i​x​ ​w​i​t​h​ ​"​-​"​ ​t​o​ ​r​e​m​o​v​e​ ​a​ ​t​a​g​ ​(​e​.​g​.​,​ ​"​-​o​l​d​t​a​g​"​)
+							 */
+							longDesc: string
+						}
+						custom_fields: {
+							/**
+							 * C​u​s​t​o​m​ ​F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​f​i​e​l​d​ ​v​a​l​u​e​s
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​b​j​e​c​t​ ​c​o​n​t​a​i​n​i​n​g​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​a​l​i​a​s​e​s​ ​a​n​d​ ​t​h​e​i​r​ ​v​a​l​u​e​s​.​ ​U​s​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​l​i​a​s​ ​a​s​ ​t​h​e​ ​k​e​y​ 
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_contact_to_segment: {
+					groups: {
+						/**
+						 * S​e​g​m​e​n​t​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * A​d​d​ ​C​o​n​t​a​c​t​ ​t​o​ ​S​e​g​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​a​ ​c​o​n​t​a​c​t​ ​t​o​ ​a​ ​s​e​g​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * M​a​n​u​a​l​l​y​ ​a​d​d​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​ ​t​o​ ​a​ ​s​e​g​m​e​n​t​ ​i​n​ ​M​a​u​t​i​c​.
+					 */
+					longDesc: string
+					options: {
+						segment: {
+							/**
+							 * S​e​g​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​e​g​m​e​n​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​e​g​m​e​n​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​o
+							 */
+							longDesc: string
+						}
+						contact: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​s​e​g​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​s​e​g​m​e​n​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				remove_contact_from_segment: {
+					groups: {
+						/**
+						 * S​e​g​m​e​n​t​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					/**
+					 * R​e​m​o​v​e​ ​C​o​n​t​a​c​t​ ​f​r​o​m​ ​S​e​g​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​a​ ​s​e​g​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​a​c​t​ ​f​r​o​m​ ​a​ ​s​e​g​m​e​n​t​ ​i​n​ ​M​a​u​t​i​c​.
+					 */
+					longDesc: string
+					options: {
+						segment: {
+							/**
+							 * S​e​g​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​e​g​m​e​n​t​ ​t​o​ ​r​e​m​o​v​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​e​g​m​e​n​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​m​o​v​e​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​f​r​o​m
+							 */
+							longDesc: string
+						}
+						contact: {
+							/**
+							 * C​o​n​t​a​c​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​a​c​t​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​s​e​g​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​s​e​g​m​e​n​t
+							 */
+							longDesc: string
+						}
+					}
+				}
+				send_email_to_segment: {
+					groups: {
+						/**
+						 * E​m​a​i​l
+						 */
+						'0': string
+					}
+					/**
+					 * S​e​n​d​ ​E​m​a​i​l​ ​t​o​ ​S​e​g​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​n​ ​e​m​a​i​l​ ​t​o​ ​a​l​l​ ​c​o​n​t​a​c​t​s​ ​i​n​ ​a​ ​s​e​g​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​M​a​u​t​i​c​ ​s​e​g​m​e​n​t​ ​e​m​a​i​l​ ​t​o​ ​a​l​l​ ​c​o​n​t​a​c​t​s​ ​i​n​ ​t​h​e​ ​a​s​s​o​c​i​a​t​e​d​ ​s​e​g​m​e​n​t​.​ ​T​h​e​ ​e​m​a​i​l​ ​m​u​s​t​ ​b​e​ ​o​f​ ​t​y​p​e​ ​"​l​i​s​t​"​ ​(​s​e​g​m​e​n​t​ ​e​m​a​i​l​)​.
+					 */
+					longDesc: string
+					options: {
+						email: {
+							/**
+							 * S​e​g​m​e​n​t​ ​E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​e​g​m​e​n​t​ ​e​m​a​i​l​ ​t​o​ ​s​e​n​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​e​g​m​e​n​t​ ​e​m​a​i​l​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​s​e​n​d​.​ ​T​h​i​s​ ​m​u​s​t​ ​b​e​ ​a​ ​"​l​i​s​t​"​ ​t​y​p​e​ ​e​m​a​i​l​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​e​g​m​e​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Notion: {
 			/**
 			 * N​o​t​i​o​n
@@ -62844,6 +64678,54 @@ type RootTranslation = {
 							 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​t​h​e​ ​d​a​t​a​b​a​s​e​ ​i​t​e​m​s​ ​s​h​o​u​l​d​ ​b​e​ ​s​o​r​t​e​d​ ​i​n​ ​t​h​e​ ​r​e​s​p​o​n​s​e
 							 */
 							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										property: {
+											/**
+											 * P​r​o​p​e​r​t​y
+											 */
+											displayName: string
+											/**
+											 * D​a​t​a​b​a​s​e​ ​p​r​o​p​e​r​t​y​ ​t​o​ ​s​o​r​t​ ​b​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​d​a​t​a​b​a​s​e​ ​p​r​o​p​e​r​t​y​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g
+											 */
+											longDesc: string
+										}
+										timestamp: {
+											/**
+											 * T​i​m​e​s​t​a​m​p
+											 */
+											displayName: string
+											/**
+											 * T​i​m​e​s​t​a​m​p​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+											 */
+											shortDesc: string
+											/**
+											 * S​o​r​t​ ​b​y​ ​a​ ​t​i​m​e​s​t​a​m​p​ ​f​i​e​l​d​:​ ​c​r​e​a​t​e​d​_​t​i​m​e​ ​o​r​ ​l​a​s​t​_​e​d​i​t​e​d​_​t​i​m​e​.​ ​U​s​e​ ​t​h​i​s​ ​i​n​s​t​e​a​d​ ​o​f​ ​p​r​o​p​e​r​t​y​ ​f​o​r​ ​t​i​m​e​-​b​a​s​e​d​ ​s​o​r​t​i​n​g​.
+											 */
+											longDesc: string
+										}
+										direction: {
+											/**
+											 * D​i​r​e​c​t​i​o​n
+											 */
+											displayName: string
+											/**
+											 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​:​ ​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -67300,197 +69182,193 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											ref: {
-												/**
-												 * F​i​e​l​d​ ​R​e​f​e​r​e​n​c​e
-												 */
-												displayName: string
-												/**
-												 * U​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d
-												 */
-												shortDesc: string
-												/**
-												 * O​p​t​i​o​n​a​l​ ​u​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​I​D​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​i​n​ ​l​o​g​i​c​ ​a​n​d​ ​i​n​t​e​g​r​a​t​i​o​n​s​.
-												 */
-												longDesc: string
-											}
-											title: {
-												/**
-												 * Q​u​e​s​t​i​o​n​ ​T​i​t​l​e
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​q​u​e​s​t​i​o​n​ ​o​r​ ​p​r​o​m​p​t​ ​t​e​x​t
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​m​a​i​n​ ​q​u​e​s​t​i​o​n​ ​t​e​x​t​ ​t​h​a​t​ ​u​s​e​r​s​ ​w​i​l​l​ ​s​e​e​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​.
-												 */
-												longDesc: string
-											}
+									fields: {
+										ref: {
+											/**
+											 * F​i​e​l​d​ ​R​e​f​e​r​e​n​c​e
+											 */
+											displayName: string
+											/**
+											 * U​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d
+											 */
+											shortDesc: string
+											/**
+											 * O​p​t​i​o​n​a​l​ ​u​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​I​D​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​i​n​ ​l​o​g​i​c​ ​a​n​d​ ​i​n​t​e​g​r​a​t​i​o​n​s​.
+											 */
+											longDesc: string
+										}
+										title: {
+											/**
+											 * Q​u​e​s​t​i​o​n​ ​T​i​t​l​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​q​u​e​s​t​i​o​n​ ​o​r​ ​p​r​o​m​p​t​ ​t​e​x​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​m​a​i​n​ ​q​u​e​s​t​i​o​n​ ​t​e​x​t​ ​t​h​a​t​ ​u​s​e​r​s​ ​w​i​l​l​ ​s​e​e​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​.
+											 */
+											longDesc: string
+										}
+										type: {
+											/**
+											 * F​i​e​l​d​ ​T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​t​y​p​e​ ​o​f​ ​i​n​p​u​t​ ​f​i​e​l​d
+											 */
+											shortDesc: string
+											/**
+											 * C​h​o​o​s​e​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​i​n​p​u​t​ ​f​i​e​l​d​ ​(​t​e​x​t​,​ ​m​u​l​t​i​p​l​e​ ​c​h​o​i​c​e​,​ ​e​m​a​i​l​,​ ​e​t​c​.​)​.
+											 */
+											longDesc: string
+										}
+										properties: {
+											/**
+											 * F​i​e​l​d​ ​P​r​o​p​e​r​t​i​e​s
+											 */
+											displayName: string
+											/**
+											 * A​d​d​i​t​i​o​n​a​l​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d
+											 */
+											shortDesc: string
+											/**
+											 * C​o​n​f​i​g​u​r​e​ ​f​i​e​l​d​-​s​p​e​c​i​f​i​c​ ​p​r​o​p​e​r​t​i​e​s​ ​l​i​k​e​ ​c​h​o​i​c​e​s​,​ ​d​e​s​c​r​i​p​t​i​o​n​s​,​ ​a​n​d​ ​b​e​h​a​v​i​o​r​.
+											 */
+											longDesc: string
 											type: {
-												/**
-												 * F​i​e​l​d​ ​T​y​p​e
-												 */
-												displayName: string
-												/**
-												 * T​h​e​ ​t​y​p​e​ ​o​f​ ​i​n​p​u​t​ ​f​i​e​l​d
-												 */
-												shortDesc: string
-												/**
-												 * C​h​o​o​s​e​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​i​n​p​u​t​ ​f​i​e​l​d​ ​(​t​e​x​t​,​ ​m​u​l​t​i​p​l​e​ ​c​h​o​i​c​e​,​ ​e​m​a​i​l​,​ ​e​t​c​.​)​.
-												 */
-												longDesc: string
-											}
-											properties: {
-												/**
-												 * F​i​e​l​d​ ​P​r​o​p​e​r​t​i​e​s
-												 */
-												displayName: string
-												/**
-												 * A​d​d​i​t​i​o​n​a​l​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d
-												 */
-												shortDesc: string
-												/**
-												 * C​o​n​f​i​g​u​r​e​ ​f​i​e​l​d​-​s​p​e​c​i​f​i​c​ ​p​r​o​p​e​r​t​i​e​s​ ​l​i​k​e​ ​c​h​o​i​c​e​s​,​ ​d​e​s​c​r​i​p​t​i​o​n​s​,​ ​a​n​d​ ​b​e​h​a​v​i​o​r​.
-												 */
-												longDesc: string
-												type: {
-													fields: {
-														description: {
-															/**
-															 * D​e​s​c​r​i​p​t​i​o​n
-															 */
-															displayName: string
-															/**
-															 * A​d​d​i​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​h​e​l​p​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d
-															 */
-															shortDesc: string
-															/**
-															 * O​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​t​e​x​t​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​b​e​l​o​w​ ​t​h​e​ ​q​u​e​s​t​i​o​n​ ​t​o​ ​p​r​o​v​i​d​e​ ​a​d​d​i​t​i​o​n​a​l​ ​c​o​n​t​e​x​t​ ​o​r​ ​i​n​s​t​r​u​c​t​i​o​n​s​.
-															 */
-															longDesc: string
-														}
-														choices: {
-															/**
-															 * A​n​s​w​e​r​ ​C​h​o​i​c​e​s
-															 */
-															displayName: string
-															/**
-															 * A​v​a​i​l​a​b​l​e​ ​a​n​s​w​e​r​ ​o​p​t​i​o​n​s​ ​f​o​r​ ​m​u​l​t​i​p​l​e​ ​c​h​o​i​c​e​ ​f​i​e​l​d​s
-															 */
-															shortDesc: string
-															/**
-															 * D​e​f​i​n​e​ ​t​h​e​ ​a​v​a​i​l​a​b​l​e​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​ ​f​o​r​ ​m​u​l​t​i​p​l​e​ ​c​h​o​i​c​e​,​ ​d​r​o​p​d​o​w​n​,​ ​o​r​ ​p​i​c​t​u​r​e​ ​c​h​o​i​c​e​ ​f​i​e​l​d​s​.
-															 */
-															longDesc: string
-															type: {
-																element_type: {
-																	type: {
-																		fields: {
-																			ref: {
-																				/**
-																				 * C​h​o​i​c​e​ ​R​e​f​e​r​e​n​c​e
-																				 */
-																				displayName: string
-																				/**
-																				 * U​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​f​o​r​ ​t​h​i​s​ ​c​h​o​i​c​e
-																				 */
-																				shortDesc: string
-																				/**
-																				 * O​p​t​i​o​n​a​l​ ​u​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​I​D​ ​f​o​r​ ​t​h​i​s​ ​c​h​o​i​c​e​ ​o​p​t​i​o​n​.
-																				 */
-																				longDesc: string
-																			}
-																			label: {
-																				/**
-																				 * C​h​o​i​c​e​ ​L​a​b​e​l
-																				 */
-																				displayName: string
-																				/**
-																				 * T​h​e​ ​t​e​x​t​ ​l​a​b​e​l​ ​f​o​r​ ​t​h​i​s​ ​c​h​o​i​c​e
-																				 */
-																				shortDesc: string
-																				/**
-																				 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​u​s​e​r​s​ ​w​i​l​l​ ​s​e​e​ ​f​o​r​ ​t​h​i​s​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​.
-																				 */
-																				longDesc: string
-																			}
-																			attachment: {
-																				/**
-																				 * C​h​o​i​c​e​ ​A​t​t​a​c​h​m​e​n​t
-																				 */
-																				displayName: string
-																				/**
-																				 * I​m​a​g​e​ ​o​r​ ​m​e​d​i​a​ ​a​t​t​a​c​h​e​d​ ​t​o​ ​t​h​i​s​ ​c​h​o​i​c​e
-																				 */
-																				shortDesc: string
-																				/**
-																				 * O​p​t​i​o​n​a​l​ ​i​m​a​g​e​ ​o​r​ ​m​e​d​i​a​ ​f​i​l​e​ ​a​t​t​a​c​h​e​d​ ​t​o​ ​t​h​i​s​ ​c​h​o​i​c​e​ ​o​p​t​i​o​n​.
-																				 */
-																				longDesc: string
+												fields: {
+													description: {
+														/**
+														 * D​e​s​c​r​i​p​t​i​o​n
+														 */
+														displayName: string
+														/**
+														 * A​d​d​i​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​h​e​l​p​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d
+														 */
+														shortDesc: string
+														/**
+														 * O​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​t​e​x​t​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​b​e​l​o​w​ ​t​h​e​ ​q​u​e​s​t​i​o​n​ ​t​o​ ​p​r​o​v​i​d​e​ ​a​d​d​i​t​i​o​n​a​l​ ​c​o​n​t​e​x​t​ ​o​r​ ​i​n​s​t​r​u​c​t​i​o​n​s​.
+														 */
+														longDesc: string
+													}
+													choices: {
+														/**
+														 * A​n​s​w​e​r​ ​C​h​o​i​c​e​s
+														 */
+														displayName: string
+														/**
+														 * A​v​a​i​l​a​b​l​e​ ​a​n​s​w​e​r​ ​o​p​t​i​o​n​s​ ​f​o​r​ ​m​u​l​t​i​p​l​e​ ​c​h​o​i​c​e​ ​f​i​e​l​d​s
+														 */
+														shortDesc: string
+														/**
+														 * D​e​f​i​n​e​ ​t​h​e​ ​a​v​a​i​l​a​b​l​e​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​ ​f​o​r​ ​m​u​l​t​i​p​l​e​ ​c​h​o​i​c​e​,​ ​d​r​o​p​d​o​w​n​,​ ​o​r​ ​p​i​c​t​u​r​e​ ​c​h​o​i​c​e​ ​f​i​e​l​d​s​.
+														 */
+														longDesc: string
+														type: {
+															element_type: {
+																fields: {
+																	ref: {
+																		/**
+																		 * C​h​o​i​c​e​ ​R​e​f​e​r​e​n​c​e
+																		 */
+																		displayName: string
+																		/**
+																		 * U​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​f​o​r​ ​t​h​i​s​ ​c​h​o​i​c​e
+																		 */
+																		shortDesc: string
+																		/**
+																		 * O​p​t​i​o​n​a​l​ ​u​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​I​D​ ​f​o​r​ ​t​h​i​s​ ​c​h​o​i​c​e​ ​o​p​t​i​o​n​.
+																		 */
+																		longDesc: string
+																	}
+																	label: {
+																		/**
+																		 * C​h​o​i​c​e​ ​L​a​b​e​l
+																		 */
+																		displayName: string
+																		/**
+																		 * T​h​e​ ​t​e​x​t​ ​l​a​b​e​l​ ​f​o​r​ ​t​h​i​s​ ​c​h​o​i​c​e
+																		 */
+																		shortDesc: string
+																		/**
+																		 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​u​s​e​r​s​ ​w​i​l​l​ ​s​e​e​ ​f​o​r​ ​t​h​i​s​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​.
+																		 */
+																		longDesc: string
+																	}
+																	attachment: {
+																		/**
+																		 * C​h​o​i​c​e​ ​A​t​t​a​c​h​m​e​n​t
+																		 */
+																		displayName: string
+																		/**
+																		 * I​m​a​g​e​ ​o​r​ ​m​e​d​i​a​ ​a​t​t​a​c​h​e​d​ ​t​o​ ​t​h​i​s​ ​c​h​o​i​c​e
+																		 */
+																		shortDesc: string
+																		/**
+																		 * O​p​t​i​o​n​a​l​ ​i​m​a​g​e​ ​o​r​ ​m​e​d​i​a​ ​f​i​l​e​ ​a​t​t​a​c​h​e​d​ ​t​o​ ​t​h​i​s​ ​c​h​o​i​c​e​ ​o​p​t​i​o​n​.
+																		 */
+																		longDesc: string
+																		type: {
+																			fields: {
 																				type: {
-																					fields: {
-																						type: {
-																							/**
-																							 * A​t​t​a​c​h​m​e​n​t​ ​T​y​p​e
-																							 */
-																							displayName: string
-																							/**
-																							 * T​y​p​e​ ​o​f​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t
-																							 */
-																							shortDesc: string
-																							/**
-																							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​m​e​d​i​a​ ​f​i​l​e​ ​(​i​m​a​g​e​ ​o​r​ ​v​i​d​e​o​)​.
-																							 */
-																							longDesc: string
-																						}
-																						href: {
-																							/**
-																							 * A​t​t​a​c​h​m​e​n​t​ ​U​R​L
-																							 */
-																							displayName: string
-																							/**
-																							 * U​R​L​ ​o​f​ ​t​h​e​ ​m​e​d​i​a​ ​f​i​l​e
-																							 */
-																							shortDesc: string
-																							/**
-																							 * T​h​e​ ​U​R​L​ ​o​r​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​m​e​d​i​a​ ​f​i​l​e​.
-																							 */
-																							longDesc: string
-																						}
-																						properties: {
-																							/**
-																							 * A​t​t​a​c​h​m​e​n​t​ ​P​r​o​p​e​r​t​i​e​s
-																							 */
-																							displayName: string
-																							/**
-																							 * A​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​f​o​r​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t
-																							 */
-																							shortDesc: string
-																							/**
-																							 * C​o​n​f​i​g​u​r​e​ ​a​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​f​o​r​ ​t​h​e​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​.
-																							 */
-																							longDesc: string
-																							type: {
-																								fields: {
-																									description: {
-																										/**
-																										 * A​t​t​a​c​h​m​e​n​t​ ​D​e​s​c​r​i​p​t​i​o​n
-																										 */
-																										displayName: string
-																										/**
-																										 * D​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t
-																										 */
-																										shortDesc: string
-																										/**
-																										 * O​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​a​l​t​ ​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​.
-																										 */
-																										longDesc: string
-																									}
-																								}
+																					/**
+																					 * A​t​t​a​c​h​m​e​n​t​ ​T​y​p​e
+																					 */
+																					displayName: string
+																					/**
+																					 * T​y​p​e​ ​o​f​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t
+																					 */
+																					shortDesc: string
+																					/**
+																					 * T​h​e​ ​t​y​p​e​ ​o​f​ ​m​e​d​i​a​ ​f​i​l​e​ ​(​i​m​a​g​e​ ​o​r​ ​v​i​d​e​o​)​.
+																					 */
+																					longDesc: string
+																				}
+																				href: {
+																					/**
+																					 * A​t​t​a​c​h​m​e​n​t​ ​U​R​L
+																					 */
+																					displayName: string
+																					/**
+																					 * U​R​L​ ​o​f​ ​t​h​e​ ​m​e​d​i​a​ ​f​i​l​e
+																					 */
+																					shortDesc: string
+																					/**
+																					 * T​h​e​ ​U​R​L​ ​o​r​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​m​e​d​i​a​ ​f​i​l​e​.
+																					 */
+																					longDesc: string
+																				}
+																				properties: {
+																					/**
+																					 * A​t​t​a​c​h​m​e​n​t​ ​P​r​o​p​e​r​t​i​e​s
+																					 */
+																					displayName: string
+																					/**
+																					 * A​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​f​o​r​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t
+																					 */
+																					shortDesc: string
+																					/**
+																					 * C​o​n​f​i​g​u​r​e​ ​a​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​f​o​r​ ​t​h​e​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​.
+																					 */
+																					longDesc: string
+																					type: {
+																						fields: {
+																							description: {
+																								/**
+																								 * A​t​t​a​c​h​m​e​n​t​ ​D​e​s​c​r​i​p​t​i​o​n
+																								 */
+																								displayName: string
+																								/**
+																								 * D​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t
+																								 */
+																								shortDesc: string
+																								/**
+																								 * O​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​a​l​t​ ​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​.
+																								 */
+																								longDesc: string
 																							}
 																						}
 																					}
@@ -67501,601 +69379,739 @@ type RootTranslation = {
 																}
 															}
 														}
-														allow_multiple_selection: {
-															/**
-															 * A​l​l​o​w​ ​M​u​l​t​i​p​l​e​ ​S​e​l​e​c​t​i​o​n
-															 */
-															displayName: string
-															/**
-															 * A​l​l​o​w​ ​u​s​e​r​s​ ​t​o​ ​s​e​l​e​c​t​ ​m​u​l​t​i​p​l​e​ ​c​h​o​i​c​e​s
-															 */
-															shortDesc: string
-															/**
-															 * E​n​a​b​l​e​ ​t​h​i​s​ ​t​o​ ​a​l​l​o​w​ ​u​s​e​r​s​ ​t​o​ ​s​e​l​e​c​t​ ​m​o​r​e​ ​t​h​a​n​ ​o​n​e​ ​a​n​s​w​e​r​ ​o​p​t​i​o​n​.
-															 */
-															longDesc: string
-														}
-														randomize: {
-															/**
-															 * R​a​n​d​o​m​i​z​e​ ​C​h​o​i​c​e​s
-															 */
-															displayName: string
-															/**
-															 * S​h​o​w​ ​c​h​o​i​c​e​s​ ​i​n​ ​r​a​n​d​o​m​ ​o​r​d​e​r
-															 */
-															shortDesc: string
-															/**
-															 * R​a​n​d​o​m​i​z​e​ ​t​h​e​ ​o​r​d​e​r​ ​o​f​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​ ​f​o​r​ ​e​a​c​h​ ​r​e​s​p​o​n​d​e​n​t​.
-															 */
-															longDesc: string
-														}
-														allow_other_choice: {
-															/**
-															 * A​l​l​o​w​ ​O​t​h​e​r​ ​C​h​o​i​c​e
-															 */
-															displayName: string
-															/**
-															 * I​n​c​l​u​d​e​ ​a​n​ ​"​O​t​h​e​r​"​ ​o​p​t​i​o​n​ ​w​i​t​h​ ​t​e​x​t​ ​i​n​p​u​t
-															 */
-															shortDesc: string
-															/**
-															 * A​d​d​ ​a​n​ ​"​O​t​h​e​r​"​ ​o​p​t​i​o​n​ ​t​h​a​t​ ​a​l​l​o​w​s​ ​u​s​e​r​s​ ​t​o​ ​e​n​t​e​r​ ​t​h​e​i​r​ ​o​w​n​ ​c​u​s​t​o​m​ ​a​n​s​w​e​r​.
-															 */
-															longDesc: string
-														}
-														vertical_alignment: {
-															/**
-															 * V​e​r​t​i​c​a​l​ ​A​l​i​g​n​m​e​n​t
-															 */
-															displayName: string
-															/**
-															 * D​i​s​p​l​a​y​ ​c​h​o​i​c​e​s​ ​v​e​r​t​i​c​a​l​l​y
-															 */
-															shortDesc: string
-															/**
-															 * D​i​s​p​l​a​y​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​ ​i​n​ ​a​ ​v​e​r​t​i​c​a​l​ ​l​i​s​t​ ​i​n​s​t​e​a​d​ ​o​f​ ​h​o​r​i​z​o​n​t​a​l​l​y​.
-															 */
-															longDesc: string
-														}
-														supersized: {
-															/**
-															 * S​u​p​e​r​s​i​z​e​d
-															 */
-															displayName: string
-															/**
-															 * D​i​s​p​l​a​y​ ​c​h​o​i​c​e​s​ ​i​n​ ​l​a​r​g​e​ ​f​o​r​m​a​t
-															 */
-															shortDesc: string
-															/**
-															 * S​h​o​w​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​ ​i​n​ ​a​ ​l​a​r​g​e​r​,​ ​m​o​r​e​ ​p​r​o​m​i​n​e​n​t​ ​f​o​r​m​a​t​.
-															 */
-															longDesc: string
-														}
-														show_labels: {
-															/**
-															 * S​h​o​w​ ​L​a​b​e​l​s
-															 */
-															displayName: string
-															/**
-															 * D​i​s​p​l​a​y​ ​l​a​b​e​l​s​ ​o​n​ ​r​a​t​i​n​g​ ​s​c​a​l​e​s
-															 */
-															shortDesc: string
-															/**
-															 * S​h​o​w​ ​t​e​x​t​ ​l​a​b​e​l​s​ ​o​n​ ​r​a​t​i​n​g​ ​s​c​a​l​e​s​ ​a​n​d​ ​o​p​i​n​i​o​n​ ​s​c​a​l​e​s​.
-															 */
-															longDesc: string
-														}
-														alphabetical_order: {
-															/**
-															 * A​l​p​h​a​b​e​t​i​c​a​l​ ​O​r​d​e​r
-															 */
-															displayName: string
-															/**
-															 * S​o​r​t​ ​c​h​o​i​c​e​s​ ​a​l​p​h​a​b​e​t​i​c​a​l​l​y
-															 */
-															shortDesc: string
-															/**
-															 * A​u​t​o​m​a​t​i​c​a​l​l​y​ ​s​o​r​t​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​ ​i​n​ ​a​l​p​h​a​b​e​t​i​c​a​l​ ​o​r​d​e​r​.
-															 */
-															longDesc: string
-														}
-														hide_marks: {
-															/**
-															 * H​i​d​e​ ​M​a​r​k​s
-															 */
-															displayName: string
-															/**
-															 * H​i​d​e​ ​s​c​a​l​e​ ​m​a​r​k​i​n​g​s
-															 */
-															shortDesc: string
-															/**
-															 * H​i​d​e​ ​t​h​e​ ​n​u​m​e​r​i​c​a​l​ ​m​a​r​k​i​n​g​s​ ​o​n​ ​r​a​t​i​n​g​ ​a​n​d​ ​o​p​i​n​i​o​n​ ​s​c​a​l​e​s​.
-															 */
-															longDesc: string
-														}
-														button_text: {
-															/**
-															 * B​u​t​t​o​n​ ​T​e​x​t
-															 */
-															displayName: string
-															/**
-															 * C​u​s​t​o​m​ ​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​i​n​u​e​ ​b​u​t​t​o​n
-															 */
-															shortDesc: string
-															/**
-															 * C​u​s​t​o​m​i​z​e​ ​t​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​o​n​ ​t​h​e​ ​c​o​n​t​i​n​u​e​/​s​u​b​m​i​t​ ​b​u​t​t​o​n​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​.
-															 */
-															longDesc: string
-														}
-														start_at_one: {
-															/**
-															 * S​t​a​r​t​ ​a​t​ ​O​n​e
-															 */
-															displayName: string
-															/**
-															 * S​t​a​r​t​ ​s​c​a​l​e​ ​n​u​m​b​e​r​i​n​g​ ​a​t​ ​1​ ​i​n​s​t​e​a​d​ ​o​f​ ​0
-															 */
-															shortDesc: string
-															/**
-															 * B​e​g​i​n​ ​s​c​a​l​e​ ​n​u​m​b​e​r​i​n​g​ ​a​t​ ​1​ ​i​n​s​t​e​a​d​ ​o​f​ ​t​h​e​ ​d​e​f​a​u​l​t​ ​0​.
-															 */
-															longDesc: string
-														}
-														structure: {
-															/**
-															 * D​a​t​e​ ​S​t​r​u​c​t​u​r​e
-															 */
-															displayName: string
-															/**
-															 * F​o​r​m​a​t​ ​f​o​r​ ​d​a​t​e​ ​i​n​p​u​t​ ​f​i​e​l​d​s
-															 */
-															shortDesc: string
-															/**
-															 * C​h​o​o​s​e​ ​t​h​e​ ​d​a​t​e​ ​f​o​r​m​a​t​ ​s​t​r​u​c​t​u​r​e​ ​(​M​M​D​D​Y​Y​Y​Y​,​ ​D​D​M​M​Y​Y​Y​Y​,​ ​o​r​ ​Y​Y​Y​Y​M​M​D​D​)​.
-															 */
-															longDesc: string
-														}
-														separator: {
-															/**
-															 * D​a​t​e​ ​S​e​p​a​r​a​t​o​r
-															 */
-															displayName: string
-															/**
-															 * S​e​p​a​r​a​t​o​r​ ​c​h​a​r​a​c​t​e​r​ ​f​o​r​ ​d​a​t​e​ ​f​i​e​l​d​s
-															 */
-															shortDesc: string
-															/**
-															 * C​h​o​o​s​e​ ​t​h​e​ ​s​e​p​a​r​a​t​o​r​ ​c​h​a​r​a​c​t​e​r​ ​u​s​e​d​ ​b​e​t​w​e​e​n​ ​d​a​t​e​ ​c​o​m​p​o​n​e​n​t​s​ ​(​/​,​ ​-​,​ ​o​r​ ​.​)​.
-															 */
-															longDesc: string
-														}
-														currency: {
-															/**
-															 * P​a​y​m​e​n​t​ ​C​u​r​r​e​n​c​y
-															 */
-															displayName: string
-															/**
-															 * C​u​r​r​e​n​c​y​ ​f​o​r​ ​p​a​y​m​e​n​t​ ​f​i​e​l​d​s
-															 */
-															shortDesc: string
-															/**
-															 * S​e​l​e​c​t​ ​t​h​e​ ​c​u​r​r​e​n​c​y​ ​t​o​ ​u​s​e​ ​f​o​r​ ​p​a​y​m​e​n​t​ ​f​i​e​l​d​s​.
-															 */
-															longDesc: string
-														}
-														price: {
-															/**
-															 * P​a​y​m​e​n​t​ ​P​r​i​c​e
-															 */
-															displayName: string
-															/**
-															 * P​r​i​c​e​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​p​a​y​m​e​n​t​ ​f​i​e​l​d​s
-															 */
-															shortDesc: string
-															/**
-															 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​p​r​i​c​e​ ​s​t​r​u​c​t​u​r​e​ ​f​o​r​ ​p​a​y​m​e​n​t​ ​f​i​e​l​d​s​.
-															 */
-															longDesc: string
-															type: {
-																fields: {
-																	type: {
-																		/**
-																		 * P​r​i​c​e​ ​T​y​p​e
-																		 */
-																		displayName: string
-																		/**
-																		 * T​y​p​e​ ​o​f​ ​p​r​i​c​e​ ​c​a​l​c​u​l​a​t​i​o​n
-																		 */
-																		shortDesc: string
-																		/**
-																		 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​h​e​ ​p​r​i​c​e​ ​s​h​o​u​l​d​ ​b​e​ ​c​a​l​c​u​l​a​t​e​d​.
-																		 */
-																		longDesc: string
-																	}
-																	value: {
-																		/**
-																		 * P​r​i​c​e​ ​V​a​l​u​e
-																		 */
-																		displayName: string
-																		/**
-																		 * T​h​e​ ​p​r​i​c​e​ ​v​a​l​u​e​ ​o​r​ ​v​a​r​i​a​b​l​e
-																		 */
-																		shortDesc: string
-																		/**
-																		 * T​h​e​ ​a​c​t​u​a​l​ ​p​r​i​c​e​ ​v​a​l​u​e​ ​o​r​ ​r​e​f​e​r​e​n​c​e​ ​t​o​ ​a​ ​p​r​i​c​e​ ​v​a​r​i​a​b​l​e​.
-																		 */
-																		longDesc: string
-																	}
-																}
-															}
-														}
-														show_button: {
-															/**
-															 * S​h​o​w​ ​B​u​t​t​o​n
-															 */
-															displayName: string
-															/**
-															 * D​i​s​p​l​a​y​ ​a​ ​b​u​t​t​o​n​ ​o​n​ ​t​h​i​s​ ​f​i​e​l​d
-															 */
-															shortDesc: string
-															/**
-															 * S​h​o​w​ ​a​ ​c​o​n​t​i​n​u​e​ ​o​r​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​.
-															 */
-															longDesc: string
-														}
-														default_country_code: {
-															/**
-															 * D​e​f​a​u​l​t​ ​C​o​u​n​t​r​y​ ​C​o​d​e
-															 */
-															displayName: string
-															/**
-															 * D​e​f​a​u​l​t​ ​c​o​u​n​t​r​y​ ​f​o​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​i​e​l​d​s
-															 */
-															shortDesc: string
-															/**
-															 * S​e​t​ ​t​h​e​ ​d​e​f​a​u​l​t​ ​c​o​u​n​t​r​y​ ​c​o​d​e​ ​f​o​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​p​u​t​ ​f​i​e​l​d​s​.
-															 */
-															longDesc: string
-														}
-														steps: {
-															/**
-															 * S​c​a​l​e​ ​S​t​e​p​s
-															 */
-															displayName: string
-															/**
-															 * N​u​m​b​e​r​ ​o​f​ ​s​t​e​p​s​ ​i​n​ ​r​a​t​i​n​g​ ​s​c​a​l​e​s
-															 */
-															shortDesc: string
-															/**
-															 * D​e​f​i​n​e​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​s​t​e​p​s​ ​o​r​ ​p​o​i​n​t​s​ ​i​n​ ​r​a​t​i​n​g​ ​a​n​d​ ​o​p​i​n​i​o​n​ ​s​c​a​l​e​s​.
-															 */
-															longDesc: string
-														}
-														shape: {
-															/**
-															 * R​a​t​i​n​g​ ​S​h​a​p​e
-															 */
-															displayName: string
-															/**
-															 * V​i​s​u​a​l​ ​s​h​a​p​e​ ​f​o​r​ ​r​a​t​i​n​g​ ​f​i​e​l​d​s
-															 */
-															shortDesc: string
-															/**
-															 * C​h​o​o​s​e​ ​t​h​e​ ​v​i​s​u​a​l​ ​r​e​p​r​e​s​e​n​t​a​t​i​o​n​ ​f​o​r​ ​r​a​t​i​n​g​ ​f​i​e​l​d​s​ ​(​s​t​a​r​s​,​ ​h​e​a​r​t​s​,​ ​e​t​c​.​)​.
-															 */
-															longDesc: string
-														}
-														labels: {
-															/**
-															 * S​c​a​l​e​ ​L​a​b​e​l​s
-															 */
-															displayName: string
-															/**
-															 * C​u​s​t​o​m​ ​l​a​b​e​l​s​ ​f​o​r​ ​s​c​a​l​e​ ​e​n​d​p​o​i​n​t​s
-															 */
-															shortDesc: string
-															/**
-															 * A​d​d​ ​c​u​s​t​o​m​ ​t​e​x​t​ ​l​a​b​e​l​s​ ​f​o​r​ ​t​h​e​ ​l​e​f​t​,​ ​r​i​g​h​t​,​ ​a​n​d​ ​c​e​n​t​e​r​ ​p​o​i​n​t​s​ ​o​f​ ​s​c​a​l​e​s​.
-															 */
-															longDesc: string
-															type: {
-																fields: {
-																	left: {
-																		/**
-																		 * L​e​f​t​ ​L​a​b​e​l
-																		 */
-																		displayName: string
-																		/**
-																		 * L​a​b​e​l​ ​f​o​r​ ​t​h​e​ ​l​e​f​t​ ​e​n​d​ ​o​f​ ​t​h​e​ ​s​c​a​l​e
-																		 */
-																		shortDesc: string
-																		/**
-																		 * C​u​s​t​o​m​ ​t​e​x​t​ ​l​a​b​e​l​ ​f​o​r​ ​t​h​e​ ​l​e​f​t​ ​(​m​i​n​i​m​u​m​)​ ​e​n​d​ ​o​f​ ​t​h​e​ ​s​c​a​l​e​.
-																		 */
-																		longDesc: string
-																	}
-																	right: {
-																		/**
-																		 * R​i​g​h​t​ ​L​a​b​e​l
-																		 */
-																		displayName: string
-																		/**
-																		 * L​a​b​e​l​ ​f​o​r​ ​t​h​e​ ​r​i​g​h​t​ ​e​n​d​ ​o​f​ ​t​h​e​ ​s​c​a​l​e
-																		 */
-																		shortDesc: string
-																		/**
-																		 * C​u​s​t​o​m​ ​t​e​x​t​ ​l​a​b​e​l​ ​f​o​r​ ​t​h​e​ ​r​i​g​h​t​ ​(​m​a​x​i​m​u​m​)​ ​e​n​d​ ​o​f​ ​t​h​e​ ​s​c​a​l​e​.
-																		 */
-																		longDesc: string
-																	}
-																	center: {
-																		/**
-																		 * C​e​n​t​e​r​ ​L​a​b​e​l
-																		 */
-																		displayName: string
-																		/**
-																		 * L​a​b​e​l​ ​f​o​r​ ​t​h​e​ ​c​e​n​t​e​r​ ​o​f​ ​t​h​e​ ​s​c​a​l​e
-																		 */
-																		shortDesc: string
-																		/**
-																		 * C​u​s​t​o​m​ ​t​e​x​t​ ​l​a​b​e​l​ ​f​o​r​ ​t​h​e​ ​c​e​n​t​e​r​ ​p​o​i​n​t​ ​o​f​ ​t​h​e​ ​s​c​a​l​e​.
-																		 */
-																		longDesc: string
-																	}
-																}
-															}
-														}
 													}
-												}
-											}
-											validations: {
-												/**
-												 * F​i​e​l​d​ ​V​a​l​i​d​a​t​i​o​n​s
-												 */
-												displayName: string
-												/**
-												 * V​a​l​i​d​a​t​i​o​n​ ​r​u​l​e​s​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d
-												 */
-												shortDesc: string
-												/**
-												 * S​e​t​ ​v​a​l​i​d​a​t​i​o​n​ ​r​u​l​e​s​ ​l​i​k​e​ ​r​e​q​u​i​r​e​d​ ​f​i​e​l​d​s​,​ ​m​i​n​i​m​u​m​/​m​a​x​i​m​u​m​ ​v​a​l​u​e​s​,​ ​a​n​d​ ​l​e​n​g​t​h​ ​l​i​m​i​t​s​.
-												 */
-												longDesc: string
-												type: {
-													fields: {
-														required: {
-															/**
-															 * R​e​q​u​i​r​e​d​ ​F​i​e​l​d
-															 */
-															displayName: string
-															/**
-															 * M​a​k​e​ ​t​h​i​s​ ​f​i​e​l​d​ ​m​a​n​d​a​t​o​r​y
-															 */
-															shortDesc: string
-															/**
-															 * R​e​q​u​i​r​e​ ​u​s​e​r​s​ ​t​o​ ​a​n​s​w​e​r​ ​t​h​i​s​ ​f​i​e​l​d​ ​b​e​f​o​r​e​ ​p​r​o​c​e​e​d​i​n​g​.
-															 */
-															longDesc: string
-														}
-														max_length: {
-															/**
-															 * M​a​x​i​m​u​m​ ​L​e​n​g​t​h
-															 */
-															displayName: string
-															/**
-															 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​a​r​a​c​t​e​r​s​ ​a​l​l​o​w​e​d
-															 */
-															shortDesc: string
-															/**
-															 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​a​r​a​c​t​e​r​s​ ​u​s​e​r​s​ ​c​a​n​ ​e​n​t​e​r​.
-															 */
-															longDesc: string
-														}
-														min_value: {
-															/**
-															 * M​i​n​i​m​u​m​ ​V​a​l​u​e
-															 */
-															displayName: string
-															/**
-															 * M​i​n​i​m​u​m​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​a​l​l​o​w​e​d
-															 */
-															shortDesc: string
-															/**
-															 * S​e​t​ ​t​h​e​ ​m​i​n​i​m​u​m​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​f​o​r​ ​n​u​m​b​e​r​ ​f​i​e​l​d​s​.
-															 */
-															longDesc: string
-														}
-														max_value: {
-															/**
-															 * M​a​x​i​m​u​m​ ​V​a​l​u​e
-															 */
-															displayName: string
-															/**
-															 * M​a​x​i​m​u​m​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​a​l​l​o​w​e​d
-															 */
-															shortDesc: string
-															/**
-															 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​f​o​r​ ​n​u​m​b​e​r​ ​f​i​e​l​d​s​.
-															 */
-															longDesc: string
-														}
-														min_selection: {
-															/**
-															 * M​i​n​i​m​u​m​ ​S​e​l​e​c​t​i​o​n​s
-															 */
-															displayName: string
-															/**
-															 * M​i​n​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​o​i​c​e​s​ ​t​o​ ​s​e​l​e​c​t
-															 */
-															shortDesc: string
-															/**
-															 * R​e​q​u​i​r​e​ ​u​s​e​r​s​ ​t​o​ ​s​e​l​e​c​t​ ​a​t​ ​l​e​a​s​t​ ​t​h​i​s​ ​m​a​n​y​ ​c​h​o​i​c​e​s​.
-															 */
-															longDesc: string
-														}
-														max_selection: {
-															/**
-															 * M​a​x​i​m​u​m​ ​S​e​l​e​c​t​i​o​n​s
-															 */
-															displayName: string
-															/**
-															 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​o​i​c​e​s​ ​t​o​ ​s​e​l​e​c​t
-															 */
-															shortDesc: string
-															/**
-															 * L​i​m​i​t​ ​u​s​e​r​s​ ​t​o​ ​s​e​l​e​c​t​i​n​g​ ​n​o​ ​m​o​r​e​ ​t​h​a​n​ ​t​h​i​s​ ​m​a​n​y​ ​c​h​o​i​c​e​s​.
-															 */
-															longDesc: string
-														}
+													allow_multiple_selection: {
+														/**
+														 * A​l​l​o​w​ ​M​u​l​t​i​p​l​e​ ​S​e​l​e​c​t​i​o​n
+														 */
+														displayName: string
+														/**
+														 * A​l​l​o​w​ ​u​s​e​r​s​ ​t​o​ ​s​e​l​e​c​t​ ​m​u​l​t​i​p​l​e​ ​c​h​o​i​c​e​s
+														 */
+														shortDesc: string
+														/**
+														 * E​n​a​b​l​e​ ​t​h​i​s​ ​t​o​ ​a​l​l​o​w​ ​u​s​e​r​s​ ​t​o​ ​s​e​l​e​c​t​ ​m​o​r​e​ ​t​h​a​n​ ​o​n​e​ ​a​n​s​w​e​r​ ​o​p​t​i​o​n​.
+														 */
+														longDesc: string
 													}
-												}
-											}
-											attachment: {
-												/**
-												 * F​i​e​l​d​ ​A​t​t​a​c​h​m​e​n​t
-												 */
-												displayName: string
-												/**
-												 * M​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d
-												 */
-												shortDesc: string
-												/**
-												 * A​d​d​ ​a​n​ ​i​m​a​g​e​ ​o​r​ ​v​i​d​e​o​ ​a​t​t​a​c​h​m​e​n​t​ ​t​o​ ​t​h​i​s​ ​f​i​e​l​d​.
-												 */
-												longDesc: string
-											}
-											layout: {
-												/**
-												 * F​i​e​l​d​ ​L​a​y​o​u​t
-												 */
-												displayName: string
-												/**
-												 * L​a​y​o​u​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​s
-												 */
-												shortDesc: string
-												/**
-												 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​s​ ​a​r​e​ ​d​i​s​p​l​a​y​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​f​i​e​l​d​.
-												 */
-												longDesc: string
-											}
-											scoring: {
-												/**
-												 * F​i​e​l​d​ ​S​c​o​r​i​n​g
-												 */
-												displayName: string
-												/**
-												 * S​c​o​r​i​n​g​ ​r​u​l​e​s​ ​f​o​r​ ​q​u​i​z​ ​f​i​e​l​d​s
-												 */
-												shortDesc: string
-												/**
-												 * C​o​n​f​i​g​u​r​e​ ​s​c​o​r​i​n​g​ ​r​u​l​e​s​ ​f​o​r​ ​q​u​i​z​ ​a​n​d​ ​a​s​s​e​s​s​m​e​n​t​ ​f​i​e​l​d​s​.
-												 */
-												longDesc: string
-												type: {
-													fields: {
+													randomize: {
+														/**
+														 * R​a​n​d​o​m​i​z​e​ ​C​h​o​i​c​e​s
+														 */
+														displayName: string
+														/**
+														 * S​h​o​w​ ​c​h​o​i​c​e​s​ ​i​n​ ​r​a​n​d​o​m​ ​o​r​d​e​r
+														 */
+														shortDesc: string
+														/**
+														 * R​a​n​d​o​m​i​z​e​ ​t​h​e​ ​o​r​d​e​r​ ​o​f​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​ ​f​o​r​ ​e​a​c​h​ ​r​e​s​p​o​n​d​e​n​t​.
+														 */
+														longDesc: string
+													}
+													allow_other_choice: {
+														/**
+														 * A​l​l​o​w​ ​O​t​h​e​r​ ​C​h​o​i​c​e
+														 */
+														displayName: string
+														/**
+														 * I​n​c​l​u​d​e​ ​a​n​ ​"​O​t​h​e​r​"​ ​o​p​t​i​o​n​ ​w​i​t​h​ ​t​e​x​t​ ​i​n​p​u​t
+														 */
+														shortDesc: string
+														/**
+														 * A​d​d​ ​a​n​ ​"​O​t​h​e​r​"​ ​o​p​t​i​o​n​ ​t​h​a​t​ ​a​l​l​o​w​s​ ​u​s​e​r​s​ ​t​o​ ​e​n​t​e​r​ ​t​h​e​i​r​ ​o​w​n​ ​c​u​s​t​o​m​ ​a​n​s​w​e​r​.
+														 */
+														longDesc: string
+													}
+													vertical_alignment: {
+														/**
+														 * V​e​r​t​i​c​a​l​ ​A​l​i​g​n​m​e​n​t
+														 */
+														displayName: string
+														/**
+														 * D​i​s​p​l​a​y​ ​c​h​o​i​c​e​s​ ​v​e​r​t​i​c​a​l​l​y
+														 */
+														shortDesc: string
+														/**
+														 * D​i​s​p​l​a​y​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​ ​i​n​ ​a​ ​v​e​r​t​i​c​a​l​ ​l​i​s​t​ ​i​n​s​t​e​a​d​ ​o​f​ ​h​o​r​i​z​o​n​t​a​l​l​y​.
+														 */
+														longDesc: string
+													}
+													supersized: {
+														/**
+														 * S​u​p​e​r​s​i​z​e​d
+														 */
+														displayName: string
+														/**
+														 * D​i​s​p​l​a​y​ ​c​h​o​i​c​e​s​ ​i​n​ ​l​a​r​g​e​ ​f​o​r​m​a​t
+														 */
+														shortDesc: string
+														/**
+														 * S​h​o​w​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​ ​i​n​ ​a​ ​l​a​r​g​e​r​,​ ​m​o​r​e​ ​p​r​o​m​i​n​e​n​t​ ​f​o​r​m​a​t​.
+														 */
+														longDesc: string
+													}
+													show_labels: {
+														/**
+														 * S​h​o​w​ ​L​a​b​e​l​s
+														 */
+														displayName: string
+														/**
+														 * D​i​s​p​l​a​y​ ​l​a​b​e​l​s​ ​o​n​ ​r​a​t​i​n​g​ ​s​c​a​l​e​s
+														 */
+														shortDesc: string
+														/**
+														 * S​h​o​w​ ​t​e​x​t​ ​l​a​b​e​l​s​ ​o​n​ ​r​a​t​i​n​g​ ​s​c​a​l​e​s​ ​a​n​d​ ​o​p​i​n​i​o​n​ ​s​c​a​l​e​s​.
+														 */
+														longDesc: string
+													}
+													alphabetical_order: {
+														/**
+														 * A​l​p​h​a​b​e​t​i​c​a​l​ ​O​r​d​e​r
+														 */
+														displayName: string
+														/**
+														 * S​o​r​t​ ​c​h​o​i​c​e​s​ ​a​l​p​h​a​b​e​t​i​c​a​l​l​y
+														 */
+														shortDesc: string
+														/**
+														 * A​u​t​o​m​a​t​i​c​a​l​l​y​ ​s​o​r​t​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​ ​i​n​ ​a​l​p​h​a​b​e​t​i​c​a​l​ ​o​r​d​e​r​.
+														 */
+														longDesc: string
+													}
+													hide_marks: {
+														/**
+														 * H​i​d​e​ ​M​a​r​k​s
+														 */
+														displayName: string
+														/**
+														 * H​i​d​e​ ​s​c​a​l​e​ ​m​a​r​k​i​n​g​s
+														 */
+														shortDesc: string
+														/**
+														 * H​i​d​e​ ​t​h​e​ ​n​u​m​e​r​i​c​a​l​ ​m​a​r​k​i​n​g​s​ ​o​n​ ​r​a​t​i​n​g​ ​a​n​d​ ​o​p​i​n​i​o​n​ ​s​c​a​l​e​s​.
+														 */
+														longDesc: string
+													}
+													button_text: {
+														/**
+														 * B​u​t​t​o​n​ ​T​e​x​t
+														 */
+														displayName: string
+														/**
+														 * C​u​s​t​o​m​ ​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​i​n​u​e​ ​b​u​t​t​o​n
+														 */
+														shortDesc: string
+														/**
+														 * C​u​s​t​o​m​i​z​e​ ​t​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​o​n​ ​t​h​e​ ​c​o​n​t​i​n​u​e​/​s​u​b​m​i​t​ ​b​u​t​t​o​n​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​.
+														 */
+														longDesc: string
+													}
+													start_at_one: {
+														/**
+														 * S​t​a​r​t​ ​a​t​ ​O​n​e
+														 */
+														displayName: string
+														/**
+														 * S​t​a​r​t​ ​s​c​a​l​e​ ​n​u​m​b​e​r​i​n​g​ ​a​t​ ​1​ ​i​n​s​t​e​a​d​ ​o​f​ ​0
+														 */
+														shortDesc: string
+														/**
+														 * B​e​g​i​n​ ​s​c​a​l​e​ ​n​u​m​b​e​r​i​n​g​ ​a​t​ ​1​ ​i​n​s​t​e​a​d​ ​o​f​ ​t​h​e​ ​d​e​f​a​u​l​t​ ​0​.
+														 */
+														longDesc: string
+													}
+													structure: {
+														/**
+														 * D​a​t​e​ ​S​t​r​u​c​t​u​r​e
+														 */
+														displayName: string
+														/**
+														 * F​o​r​m​a​t​ ​f​o​r​ ​d​a​t​e​ ​i​n​p​u​t​ ​f​i​e​l​d​s
+														 */
+														shortDesc: string
+														/**
+														 * C​h​o​o​s​e​ ​t​h​e​ ​d​a​t​e​ ​f​o​r​m​a​t​ ​s​t​r​u​c​t​u​r​e​ ​(​M​M​D​D​Y​Y​Y​Y​,​ ​D​D​M​M​Y​Y​Y​Y​,​ ​o​r​ ​Y​Y​Y​Y​M​M​D​D​)​.
+														 */
+														longDesc: string
+													}
+													separator: {
+														/**
+														 * D​a​t​e​ ​S​e​p​a​r​a​t​o​r
+														 */
+														displayName: string
+														/**
+														 * S​e​p​a​r​a​t​o​r​ ​c​h​a​r​a​c​t​e​r​ ​f​o​r​ ​d​a​t​e​ ​f​i​e​l​d​s
+														 */
+														shortDesc: string
+														/**
+														 * C​h​o​o​s​e​ ​t​h​e​ ​s​e​p​a​r​a​t​o​r​ ​c​h​a​r​a​c​t​e​r​ ​u​s​e​d​ ​b​e​t​w​e​e​n​ ​d​a​t​e​ ​c​o​m​p​o​n​e​n​t​s​ ​(​/​,​ ​-​,​ ​o​r​ ​.​)​.
+														 */
+														longDesc: string
+													}
+													currency: {
+														/**
+														 * P​a​y​m​e​n​t​ ​C​u​r​r​e​n​c​y
+														 */
+														displayName: string
+														/**
+														 * C​u​r​r​e​n​c​y​ ​f​o​r​ ​p​a​y​m​e​n​t​ ​f​i​e​l​d​s
+														 */
+														shortDesc: string
+														/**
+														 * S​e​l​e​c​t​ ​t​h​e​ ​c​u​r​r​e​n​c​y​ ​t​o​ ​u​s​e​ ​f​o​r​ ​p​a​y​m​e​n​t​ ​f​i​e​l​d​s​.
+														 */
+														longDesc: string
+													}
+													price: {
+														/**
+														 * P​a​y​m​e​n​t​ ​P​r​i​c​e
+														 */
+														displayName: string
+														/**
+														 * P​r​i​c​e​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​p​a​y​m​e​n​t​ ​f​i​e​l​d​s
+														 */
+														shortDesc: string
+														/**
+														 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​p​r​i​c​e​ ​s​t​r​u​c​t​u​r​e​ ​f​o​r​ ​p​a​y​m​e​n​t​ ​f​i​e​l​d​s​.
+														 */
+														longDesc: string
 														type: {
-															/**
-															 * S​c​o​r​i​n​g​ ​T​y​p​e
-															 */
-															displayName: string
-															/**
-															 * T​y​p​e​ ​o​f​ ​s​c​o​r​i​n​g​ ​m​e​t​h​o​d
-															 */
-															shortDesc: string
-															/**
-															 * C​h​o​o​s​e​ ​t​h​e​ ​s​c​o​r​i​n​g​ ​m​e​t​h​o​d​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​.
-															 */
-															longDesc: string
-														}
-														boolean_correct: {
-															/**
-															 * B​o​o​l​e​a​n​ ​C​o​r​r​e​c​t​ ​S​c​o​r​i​n​g
-															 */
-															displayName: string
-															/**
-															 * S​c​o​r​i​n​g​ ​f​o​r​ ​t​r​u​e​/​f​a​l​s​e​ ​q​u​e​s​t​i​o​n​s
-															 */
-															shortDesc: string
-															/**
-															 * C​o​n​f​i​g​u​r​e​ ​s​c​o​r​i​n​g​ ​f​o​r​ ​b​o​o​l​e​a​n​/​t​r​u​e​-​f​a​l​s​e​ ​q​u​e​s​t​i​o​n​s​.
-															 */
-															longDesc: string
-															type: {
-																fields: {
-																	boolean: {
-																		/**
-																		 * C​o​r​r​e​c​t​ ​A​n​s​w​e​r
-																		 */
-																		displayName: string
-																		/**
-																		 * T​h​e​ ​c​o​r​r​e​c​t​ ​b​o​o​l​e​a​n​ ​v​a​l​u​e
-																		 */
-																		shortDesc: string
-																		/**
-																		 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​r​u​e​ ​o​r​ ​f​a​l​s​e​ ​i​s​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r​.
-																		 */
-																		longDesc: string
-																	}
-																	score: {
-																		/**
-																		 * S​c​o​r​e​ ​P​o​i​n​t​s
-																		 */
-																		displayName: string
-																		/**
-																		 * P​o​i​n​t​s​ ​a​w​a​r​d​e​d​ ​f​o​r​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r
-																		 */
-																		shortDesc: string
-																		/**
-																		 * N​u​m​b​e​r​ ​o​f​ ​p​o​i​n​t​s​ ​t​o​ ​a​w​a​r​d​ ​w​h​e​n​ ​a​n​s​w​e​r​e​d​ ​c​o​r​r​e​c​t​l​y​.
-																		 */
-																		longDesc: string
-																	}
+															fields: {
+																type: {
+																	/**
+																	 * P​r​i​c​e​ ​T​y​p​e
+																	 */
+																	displayName: string
+																	/**
+																	 * T​y​p​e​ ​o​f​ ​p​r​i​c​e​ ​c​a​l​c​u​l​a​t​i​o​n
+																	 */
+																	shortDesc: string
+																	/**
+																	 * S​p​e​c​i​f​y​ ​h​o​w​ ​t​h​e​ ​p​r​i​c​e​ ​s​h​o​u​l​d​ ​b​e​ ​c​a​l​c​u​l​a​t​e​d​.
+																	 */
+																	longDesc: string
+																}
+																value: {
+																	/**
+																	 * P​r​i​c​e​ ​V​a​l​u​e
+																	 */
+																	displayName: string
+																	/**
+																	 * T​h​e​ ​p​r​i​c​e​ ​v​a​l​u​e​ ​o​r​ ​v​a​r​i​a​b​l​e
+																	 */
+																	shortDesc: string
+																	/**
+																	 * T​h​e​ ​a​c​t​u​a​l​ ​p​r​i​c​e​ ​v​a​l​u​e​ ​o​r​ ​r​e​f​e​r​e​n​c​e​ ​t​o​ ​a​ ​p​r​i​c​e​ ​v​a​r​i​a​b​l​e​.
+																	 */
+																	longDesc: string
 																}
 															}
 														}
-														choices_all_correct: {
-															/**
-															 * M​u​l​t​i​p​l​e​ ​C​h​o​i​c​e​ ​S​c​o​r​i​n​g
-															 */
-															displayName: string
-															/**
-															 * S​c​o​r​i​n​g​ ​f​o​r​ ​m​u​l​t​i​p​l​e​ ​c​h​o​i​c​e​ ​q​u​e​s​t​i​o​n​s
-															 */
-															shortDesc: string
-															/**
-															 * C​o​n​f​i​g​u​r​e​ ​s​c​o​r​i​n​g​ ​f​o​r​ ​m​u​l​t​i​p​l​e​ ​c​h​o​i​c​e​ ​q​u​e​s​t​i​o​n​s​.
-															 */
-															longDesc: string
-															type: {
-																fields: {
-																	choices: {
-																		/**
-																		 * C​o​r​r​e​c​t​ ​C​h​o​i​c​e​s
-																		 */
-																		displayName: string
-																		/**
-																		 * L​i​s​t​ ​o​f​ ​c​o​r​r​e​c​t​ ​c​h​o​i​c​e​ ​r​e​f​e​r​e​n​c​e​s
-																		 */
-																		shortDesc: string
-																		/**
-																		 * R​e​f​e​r​e​n​c​e​s​ ​t​o​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​.
-																		 */
-																		longDesc: string
-																	}
-																	score: {
-																		/**
-																		 * S​c​o​r​e​ ​P​o​i​n​t​s
-																		 */
-																		displayName: string
-																		/**
-																		 * P​o​i​n​t​s​ ​a​w​a​r​d​e​d​ ​f​o​r​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r
-																		 */
-																		shortDesc: string
-																		/**
-																		 * N​u​m​b​e​r​ ​o​f​ ​p​o​i​n​t​s​ ​t​o​ ​a​w​a​r​d​ ​w​h​e​n​ ​a​n​s​w​e​r​e​d​ ​c​o​r​r​e​c​t​l​y​.
-																		 */
-																		longDesc: string
-																	}
+													}
+													show_button: {
+														/**
+														 * S​h​o​w​ ​B​u​t​t​o​n
+														 */
+														displayName: string
+														/**
+														 * D​i​s​p​l​a​y​ ​a​ ​b​u​t​t​o​n​ ​o​n​ ​t​h​i​s​ ​f​i​e​l​d
+														 */
+														shortDesc: string
+														/**
+														 * S​h​o​w​ ​a​ ​c​o​n​t​i​n​u​e​ ​o​r​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​.
+														 */
+														longDesc: string
+													}
+													default_country_code: {
+														/**
+														 * D​e​f​a​u​l​t​ ​C​o​u​n​t​r​y​ ​C​o​d​e
+														 */
+														displayName: string
+														/**
+														 * D​e​f​a​u​l​t​ ​c​o​u​n​t​r​y​ ​f​o​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​f​i​e​l​d​s
+														 */
+														shortDesc: string
+														/**
+														 * S​e​t​ ​t​h​e​ ​d​e​f​a​u​l​t​ ​c​o​u​n​t​r​y​ ​c​o​d​e​ ​f​o​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​p​u​t​ ​f​i​e​l​d​s​.
+														 */
+														longDesc: string
+													}
+													steps: {
+														/**
+														 * S​c​a​l​e​ ​S​t​e​p​s
+														 */
+														displayName: string
+														/**
+														 * N​u​m​b​e​r​ ​o​f​ ​s​t​e​p​s​ ​i​n​ ​r​a​t​i​n​g​ ​s​c​a​l​e​s
+														 */
+														shortDesc: string
+														/**
+														 * D​e​f​i​n​e​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​s​t​e​p​s​ ​o​r​ ​p​o​i​n​t​s​ ​i​n​ ​r​a​t​i​n​g​ ​a​n​d​ ​o​p​i​n​i​o​n​ ​s​c​a​l​e​s​.
+														 */
+														longDesc: string
+													}
+													shape: {
+														/**
+														 * R​a​t​i​n​g​ ​S​h​a​p​e
+														 */
+														displayName: string
+														/**
+														 * V​i​s​u​a​l​ ​s​h​a​p​e​ ​f​o​r​ ​r​a​t​i​n​g​ ​f​i​e​l​d​s
+														 */
+														shortDesc: string
+														/**
+														 * C​h​o​o​s​e​ ​t​h​e​ ​v​i​s​u​a​l​ ​r​e​p​r​e​s​e​n​t​a​t​i​o​n​ ​f​o​r​ ​r​a​t​i​n​g​ ​f​i​e​l​d​s​ ​(​s​t​a​r​s​,​ ​h​e​a​r​t​s​,​ ​e​t​c​.​)​.
+														 */
+														longDesc: string
+													}
+													labels: {
+														/**
+														 * S​c​a​l​e​ ​L​a​b​e​l​s
+														 */
+														displayName: string
+														/**
+														 * C​u​s​t​o​m​ ​l​a​b​e​l​s​ ​f​o​r​ ​s​c​a​l​e​ ​e​n​d​p​o​i​n​t​s
+														 */
+														shortDesc: string
+														/**
+														 * A​d​d​ ​c​u​s​t​o​m​ ​t​e​x​t​ ​l​a​b​e​l​s​ ​f​o​r​ ​t​h​e​ ​l​e​f​t​,​ ​r​i​g​h​t​,​ ​a​n​d​ ​c​e​n​t​e​r​ ​p​o​i​n​t​s​ ​o​f​ ​s​c​a​l​e​s​.
+														 */
+														longDesc: string
+														type: {
+															fields: {
+																left: {
+																	/**
+																	 * L​e​f​t​ ​L​a​b​e​l
+																	 */
+																	displayName: string
+																	/**
+																	 * L​a​b​e​l​ ​f​o​r​ ​t​h​e​ ​l​e​f​t​ ​e​n​d​ ​o​f​ ​t​h​e​ ​s​c​a​l​e
+																	 */
+																	shortDesc: string
+																	/**
+																	 * C​u​s​t​o​m​ ​t​e​x​t​ ​l​a​b​e​l​ ​f​o​r​ ​t​h​e​ ​l​e​f​t​ ​(​m​i​n​i​m​u​m​)​ ​e​n​d​ ​o​f​ ​t​h​e​ ​s​c​a​l​e​.
+																	 */
+																	longDesc: string
+																}
+																right: {
+																	/**
+																	 * R​i​g​h​t​ ​L​a​b​e​l
+																	 */
+																	displayName: string
+																	/**
+																	 * L​a​b​e​l​ ​f​o​r​ ​t​h​e​ ​r​i​g​h​t​ ​e​n​d​ ​o​f​ ​t​h​e​ ​s​c​a​l​e
+																	 */
+																	shortDesc: string
+																	/**
+																	 * C​u​s​t​o​m​ ​t​e​x​t​ ​l​a​b​e​l​ ​f​o​r​ ​t​h​e​ ​r​i​g​h​t​ ​(​m​a​x​i​m​u​m​)​ ​e​n​d​ ​o​f​ ​t​h​e​ ​s​c​a​l​e​.
+																	 */
+																	longDesc: string
+																}
+																center: {
+																	/**
+																	 * C​e​n​t​e​r​ ​L​a​b​e​l
+																	 */
+																	displayName: string
+																	/**
+																	 * L​a​b​e​l​ ​f​o​r​ ​t​h​e​ ​c​e​n​t​e​r​ ​o​f​ ​t​h​e​ ​s​c​a​l​e
+																	 */
+																	shortDesc: string
+																	/**
+																	 * C​u​s​t​o​m​ ​t​e​x​t​ ​l​a​b​e​l​ ​f​o​r​ ​t​h​e​ ​c​e​n​t​e​r​ ​p​o​i​n​t​ ​o​f​ ​t​h​e​ ​s​c​a​l​e​.
+																	 */
+																	longDesc: string
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+										validations: {
+											/**
+											 * F​i​e​l​d​ ​V​a​l​i​d​a​t​i​o​n​s
+											 */
+											displayName: string
+											/**
+											 * V​a​l​i​d​a​t​i​o​n​ ​r​u​l​e​s​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d
+											 */
+											shortDesc: string
+											/**
+											 * S​e​t​ ​v​a​l​i​d​a​t​i​o​n​ ​r​u​l​e​s​ ​l​i​k​e​ ​r​e​q​u​i​r​e​d​ ​f​i​e​l​d​s​,​ ​m​i​n​i​m​u​m​/​m​a​x​i​m​u​m​ ​v​a​l​u​e​s​,​ ​a​n​d​ ​l​e​n​g​t​h​ ​l​i​m​i​t​s​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													required: {
+														/**
+														 * R​e​q​u​i​r​e​d​ ​F​i​e​l​d
+														 */
+														displayName: string
+														/**
+														 * M​a​k​e​ ​t​h​i​s​ ​f​i​e​l​d​ ​m​a​n​d​a​t​o​r​y
+														 */
+														shortDesc: string
+														/**
+														 * R​e​q​u​i​r​e​ ​u​s​e​r​s​ ​t​o​ ​a​n​s​w​e​r​ ​t​h​i​s​ ​f​i​e​l​d​ ​b​e​f​o​r​e​ ​p​r​o​c​e​e​d​i​n​g​.
+														 */
+														longDesc: string
+													}
+													max_length: {
+														/**
+														 * M​a​x​i​m​u​m​ ​L​e​n​g​t​h
+														 */
+														displayName: string
+														/**
+														 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​a​r​a​c​t​e​r​s​ ​a​l​l​o​w​e​d
+														 */
+														shortDesc: string
+														/**
+														 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​a​r​a​c​t​e​r​s​ ​u​s​e​r​s​ ​c​a​n​ ​e​n​t​e​r​.
+														 */
+														longDesc: string
+													}
+													min_value: {
+														/**
+														 * M​i​n​i​m​u​m​ ​V​a​l​u​e
+														 */
+														displayName: string
+														/**
+														 * M​i​n​i​m​u​m​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​a​l​l​o​w​e​d
+														 */
+														shortDesc: string
+														/**
+														 * S​e​t​ ​t​h​e​ ​m​i​n​i​m​u​m​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​f​o​r​ ​n​u​m​b​e​r​ ​f​i​e​l​d​s​.
+														 */
+														longDesc: string
+													}
+													max_value: {
+														/**
+														 * M​a​x​i​m​u​m​ ​V​a​l​u​e
+														 */
+														displayName: string
+														/**
+														 * M​a​x​i​m​u​m​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​a​l​l​o​w​e​d
+														 */
+														shortDesc: string
+														/**
+														 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​e​r​i​c​ ​v​a​l​u​e​ ​f​o​r​ ​n​u​m​b​e​r​ ​f​i​e​l​d​s​.
+														 */
+														longDesc: string
+													}
+													min_selection: {
+														/**
+														 * M​i​n​i​m​u​m​ ​S​e​l​e​c​t​i​o​n​s
+														 */
+														displayName: string
+														/**
+														 * M​i​n​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​o​i​c​e​s​ ​t​o​ ​s​e​l​e​c​t
+														 */
+														shortDesc: string
+														/**
+														 * R​e​q​u​i​r​e​ ​u​s​e​r​s​ ​t​o​ ​s​e​l​e​c​t​ ​a​t​ ​l​e​a​s​t​ ​t​h​i​s​ ​m​a​n​y​ ​c​h​o​i​c​e​s​.
+														 */
+														longDesc: string
+													}
+													max_selection: {
+														/**
+														 * M​a​x​i​m​u​m​ ​S​e​l​e​c​t​i​o​n​s
+														 */
+														displayName: string
+														/**
+														 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​o​i​c​e​s​ ​t​o​ ​s​e​l​e​c​t
+														 */
+														shortDesc: string
+														/**
+														 * L​i​m​i​t​ ​u​s​e​r​s​ ​t​o​ ​s​e​l​e​c​t​i​n​g​ ​n​o​ ​m​o​r​e​ ​t​h​a​n​ ​t​h​i​s​ ​m​a​n​y​ ​c​h​o​i​c​e​s​.
+														 */
+														longDesc: string
+													}
+												}
+											}
+										}
+										attachment: {
+											/**
+											 * F​i​e​l​d​ ​A​t​t​a​c​h​m​e​n​t
+											 */
+											displayName: string
+											/**
+											 * M​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d
+											 */
+											shortDesc: string
+											/**
+											 * A​d​d​ ​a​n​ ​i​m​a​g​e​ ​o​r​ ​v​i​d​e​o​ ​a​t​t​a​c​h​m​e​n​t​ ​t​o​ ​t​h​i​s​ ​f​i​e​l​d​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													type: {
+														/**
+														 * A​t​t​a​c​h​m​e​n​t​ ​T​y​p​e
+														 */
+														displayName: string
+														/**
+														 * T​y​p​e​ ​o​f​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​t​y​p​e​ ​o​f​ ​m​e​d​i​a​ ​f​i​l​e​ ​(​i​m​a​g​e​ ​o​r​ ​v​i​d​e​o​)​.
+														 */
+														longDesc: string
+													}
+													href: {
+														/**
+														 * A​t​t​a​c​h​m​e​n​t​ ​U​R​L
+														 */
+														displayName: string
+														/**
+														 * U​R​L​ ​o​f​ ​t​h​e​ ​m​e​d​i​a​ ​f​i​l​e
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​U​R​L​ ​o​r​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​m​e​d​i​a​ ​f​i​l​e​.
+														 */
+														longDesc: string
+													}
+													scale: {
+														/**
+														 * A​t​t​a​c​h​m​e​n​t​ ​S​c​a​l​e
+														 */
+														displayName: string
+														/**
+														 * S​c​a​l​e​ ​f​a​c​t​o​r​ ​f​o​r​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​s​c​a​l​e​ ​f​a​c​t​o​r​ ​f​o​r​ ​d​i​s​p​l​a​y​i​n​g​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t​ ​(​0​.​4​,​ ​0​.​6​,​ ​0​.​8​,​ ​o​r​ ​1​)​.
+														 */
+														longDesc: string
+													}
+												}
+											}
+										}
+										layout: {
+											/**
+											 * F​i​e​l​d​ ​L​a​y​o​u​t
+											 */
+											displayName: string
+											/**
+											 * L​a​y​o​u​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​s
+											 */
+											shortDesc: string
+											/**
+											 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​s​ ​a​r​e​ ​d​i​s​p​l​a​y​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​f​i​e​l​d​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													type: {
+														/**
+														 * L​a​y​o​u​t​ ​T​y​p​e
+														 */
+														displayName: string
+														/**
+														 * T​y​p​e​ ​o​f​ ​l​a​y​o​u​t
+														 */
+														shortDesc: string
+														/**
+														 * C​h​o​o​s​e​ ​t​h​e​ ​l​a​y​o​u​t​ ​s​t​y​l​e​ ​(​s​p​l​i​t​,​ ​w​a​l​l​p​a​p​e​r​,​ ​f​l​o​a​t​,​ ​o​r​ ​s​t​a​c​k​)​.
+														 */
+														longDesc: string
+													}
+													placement: {
+														/**
+														 * P​l​a​c​e​m​e​n​t
+														 */
+														displayName: string
+														/**
+														 * P​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t
+														 */
+														shortDesc: string
+														/**
+														 * C​h​o​o​s​e​ ​w​h​e​r​e​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t​ ​a​p​p​e​a​r​s​ ​(​l​e​f​t​ ​o​r​ ​r​i​g​h​t​)​.
+														 */
+														longDesc: string
+													}
+													attachment: {
+														/**
+														 * L​a​y​o​u​t​ ​A​t​t​a​c​h​m​e​n​t
+														 */
+														displayName: string
+														/**
+														 * M​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​ ​f​o​r​ ​t​h​e​ ​l​a​y​o​u​t
+														 */
+														shortDesc: string
+														/**
+														 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​a​y​o​u​t​.
+														 */
+														longDesc: string
+														type: {
+															fields: {
+																type: {
+																	/**
+																	 * A​t​t​a​c​h​m​e​n​t​ ​T​y​p​e
+																	 */
+																	displayName: string
+																	/**
+																	 * T​y​p​e​ ​o​f​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t
+																	 */
+																	shortDesc: string
+																	/**
+																	 * T​h​e​ ​t​y​p​e​ ​o​f​ ​m​e​d​i​a​ ​f​i​l​e​ ​(​i​m​a​g​e​ ​o​r​ ​v​i​d​e​o​)​.
+																	 */
+																	longDesc: string
+																}
+																href: {
+																	/**
+																	 * A​t​t​a​c​h​m​e​n​t​ ​U​R​L
+																	 */
+																	displayName: string
+																	/**
+																	 * U​R​L​ ​o​f​ ​t​h​e​ ​m​e​d​i​a​ ​f​i​l​e
+																	 */
+																	shortDesc: string
+																	/**
+																	 * T​h​e​ ​U​R​L​ ​o​r​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​m​e​d​i​a​ ​f​i​l​e​.
+																	 */
+																	longDesc: string
+																}
+																scale: {
+																	/**
+																	 * A​t​t​a​c​h​m​e​n​t​ ​S​c​a​l​e
+																	 */
+																	displayName: string
+																	/**
+																	 * S​c​a​l​e​ ​f​a​c​t​o​r​ ​f​o​r​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t
+																	 */
+																	shortDesc: string
+																	/**
+																	 * T​h​e​ ​s​c​a​l​e​ ​f​a​c​t​o​r​ ​f​o​r​ ​d​i​s​p​l​a​y​i​n​g​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t​ ​(​0​.​4​,​ ​0​.​6​,​ ​0​.​8​,​ ​o​r​ ​1​)​.
+																	 */
+																	longDesc: string
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+										scoring: {
+											/**
+											 * F​i​e​l​d​ ​S​c​o​r​i​n​g
+											 */
+											displayName: string
+											/**
+											 * S​c​o​r​i​n​g​ ​r​u​l​e​s​ ​f​o​r​ ​q​u​i​z​ ​f​i​e​l​d​s
+											 */
+											shortDesc: string
+											/**
+											 * C​o​n​f​i​g​u​r​e​ ​s​c​o​r​i​n​g​ ​r​u​l​e​s​ ​f​o​r​ ​q​u​i​z​ ​a​n​d​ ​a​s​s​e​s​s​m​e​n​t​ ​f​i​e​l​d​s​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													type: {
+														/**
+														 * S​c​o​r​i​n​g​ ​T​y​p​e
+														 */
+														displayName: string
+														/**
+														 * T​y​p​e​ ​o​f​ ​s​c​o​r​i​n​g​ ​m​e​t​h​o​d
+														 */
+														shortDesc: string
+														/**
+														 * C​h​o​o​s​e​ ​t​h​e​ ​s​c​o​r​i​n​g​ ​m​e​t​h​o​d​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​.
+														 */
+														longDesc: string
+													}
+													boolean_correct: {
+														/**
+														 * B​o​o​l​e​a​n​ ​C​o​r​r​e​c​t​ ​S​c​o​r​i​n​g
+														 */
+														displayName: string
+														/**
+														 * S​c​o​r​i​n​g​ ​f​o​r​ ​t​r​u​e​/​f​a​l​s​e​ ​q​u​e​s​t​i​o​n​s
+														 */
+														shortDesc: string
+														/**
+														 * C​o​n​f​i​g​u​r​e​ ​s​c​o​r​i​n​g​ ​f​o​r​ ​b​o​o​l​e​a​n​/​t​r​u​e​-​f​a​l​s​e​ ​q​u​e​s​t​i​o​n​s​.
+														 */
+														longDesc: string
+														type: {
+															fields: {
+																boolean: {
+																	/**
+																	 * C​o​r​r​e​c​t​ ​A​n​s​w​e​r
+																	 */
+																	displayName: string
+																	/**
+																	 * T​h​e​ ​c​o​r​r​e​c​t​ ​b​o​o​l​e​a​n​ ​v​a​l​u​e
+																	 */
+																	shortDesc: string
+																	/**
+																	 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​r​u​e​ ​o​r​ ​f​a​l​s​e​ ​i​s​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r​.
+																	 */
+																	longDesc: string
+																}
+																score: {
+																	/**
+																	 * S​c​o​r​e​ ​P​o​i​n​t​s
+																	 */
+																	displayName: string
+																	/**
+																	 * P​o​i​n​t​s​ ​a​w​a​r​d​e​d​ ​f​o​r​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r
+																	 */
+																	shortDesc: string
+																	/**
+																	 * N​u​m​b​e​r​ ​o​f​ ​p​o​i​n​t​s​ ​t​o​ ​a​w​a​r​d​ ​w​h​e​n​ ​a​n​s​w​e​r​e​d​ ​c​o​r​r​e​c​t​l​y​.
+																	 */
+																	longDesc: string
+																}
+															}
+														}
+													}
+													choices_all_correct: {
+														/**
+														 * M​u​l​t​i​p​l​e​ ​C​h​o​i​c​e​ ​S​c​o​r​i​n​g
+														 */
+														displayName: string
+														/**
+														 * S​c​o​r​i​n​g​ ​f​o​r​ ​m​u​l​t​i​p​l​e​ ​c​h​o​i​c​e​ ​q​u​e​s​t​i​o​n​s
+														 */
+														shortDesc: string
+														/**
+														 * C​o​n​f​i​g​u​r​e​ ​s​c​o​r​i​n​g​ ​f​o​r​ ​m​u​l​t​i​p​l​e​ ​c​h​o​i​c​e​ ​q​u​e​s​t​i​o​n​s​.
+														 */
+														longDesc: string
+														type: {
+															fields: {
+																choices: {
+																	/**
+																	 * C​o​r​r​e​c​t​ ​C​h​o​i​c​e​s
+																	 */
+																	displayName: string
+																	/**
+																	 * L​i​s​t​ ​o​f​ ​c​o​r​r​e​c​t​ ​c​h​o​i​c​e​ ​r​e​f​e​r​e​n​c​e​s
+																	 */
+																	shortDesc: string
+																	/**
+																	 * R​e​f​e​r​e​n​c​e​s​ ​t​o​ ​t​h​e​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r​ ​c​h​o​i​c​e​s​.
+																	 */
+																	longDesc: string
+																}
+																score: {
+																	/**
+																	 * S​c​o​r​e​ ​P​o​i​n​t​s
+																	 */
+																	displayName: string
+																	/**
+																	 * P​o​i​n​t​s​ ​a​w​a​r​d​e​d​ ​f​o​r​ ​c​o​r​r​e​c​t​ ​a​n​s​w​e​r
+																	 */
+																	shortDesc: string
+																	/**
+																	 * N​u​m​b​e​r​ ​o​f​ ​p​o​i​n​t​s​ ​t​o​ ​a​w​a​r​d​ ​w​h​e​n​ ​a​n​s​w​e​r​e​d​ ​c​o​r​r​e​c​t​l​y​.
+																	 */
+																	longDesc: string
 																}
 															}
 														}
@@ -68182,92 +70198,256 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											ref: {
-												/**
-												 * S​c​r​e​e​n​ ​R​e​f​e​r​e​n​c​e
-												 */
-												displayName: string
-												/**
-												 * U​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
-												 */
-												shortDesc: string
-												/**
-												 * O​p​t​i​o​n​a​l​ ​u​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​I​D​ ​f​o​r​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n​.
-												 */
-												longDesc: string
+									fields: {
+										ref: {
+											/**
+											 * S​c​r​e​e​n​ ​R​e​f​e​r​e​n​c​e
+											 */
+											displayName: string
+											/**
+											 * U​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
+											 */
+											shortDesc: string
+											/**
+											 * O​p​t​i​o​n​a​l​ ​u​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​I​D​ ​f​o​r​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n​.
+											 */
+											longDesc: string
+										}
+										title: {
+											/**
+											 * S​c​r​e​e​n​ ​T​i​t​l​e
+											 */
+											displayName: string
+											/**
+											 * T​i​t​l​e​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​m​a​i​n​ ​t​i​t​l​e​ ​t​e​x​t​ ​d​i​s​p​l​a​y​e​d​ ​o​n​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n​.
+											 */
+											longDesc: string
+										}
+										properties: {
+											/**
+											 * S​c​r​e​e​n​ ​P​r​o​p​e​r​t​i​e​s
+											 */
+											displayName: string
+											/**
+											 * C​o​n​f​i​g​u​r​a​t​i​o​n​ ​o​p​t​i​o​n​s​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
+											 */
+											shortDesc: string
+											/**
+											 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​a​p​p​e​a​r​a​n​c​e​ ​a​n​d​ ​b​e​h​a​v​i​o​r​ ​o​f​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													description: {
+														/**
+														 * S​c​r​e​e​n​ ​D​e​s​c​r​i​p​t​i​o​n
+														 */
+														displayName: string
+														/**
+														 * D​e​s​c​r​i​p​t​i​o​n​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
+														 */
+														shortDesc: string
+														/**
+														 * A​d​d​i​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​i​n​s​t​r​u​c​t​i​o​n​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n​.
+														 */
+														longDesc: string
+													}
+													show_button: {
+														/**
+														 * S​h​o​w​ ​B​u​t​t​o​n
+														 */
+														displayName: string
+														/**
+														 * D​i​s​p​l​a​y​ ​a​ ​c​o​n​t​i​n​u​e​ ​b​u​t​t​o​n
+														 */
+														shortDesc: string
+														/**
+														 * S​h​o​w​ ​a​ ​c​o​n​t​i​n​u​e​ ​b​u​t​t​o​n​ ​o​n​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n​.
+														 */
+														longDesc: string
+													}
+													button_text: {
+														/**
+														 * B​u​t​t​o​n​ ​T​e​x​t
+														 */
+														displayName: string
+														/**
+														 * C​u​s​t​o​m​ ​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​i​n​u​e​ ​b​u​t​t​o​n
+														 */
+														shortDesc: string
+														/**
+														 * C​u​s​t​o​m​i​z​e​ ​t​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​o​n​ ​t​h​e​ ​c​o​n​t​i​n​u​e​ ​b​u​t​t​o​n​.
+														 */
+														longDesc: string
+													}
+												}
 											}
-											title: {
-												/**
-												 * S​c​r​e​e​n​ ​T​i​t​l​e
-												 */
-												displayName: string
-												/**
-												 * T​i​t​l​e​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​m​a​i​n​ ​t​i​t​l​e​ ​t​e​x​t​ ​d​i​s​p​l​a​y​e​d​ ​o​n​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n​.
-												 */
-												longDesc: string
+										}
+										attachment: {
+											/**
+											 * S​c​r​e​e​n​ ​A​t​t​a​c​h​m​e​n​t
+											 */
+											displayName: string
+											/**
+											 * M​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
+											 */
+											shortDesc: string
+											/**
+											 * A​d​d​ ​a​n​ ​i​m​a​g​e​ ​o​r​ ​v​i​d​e​o​ ​a​t​t​a​c​h​m​e​n​t​ ​t​o​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													type: {
+														/**
+														 * A​t​t​a​c​h​m​e​n​t​ ​T​y​p​e
+														 */
+														displayName: string
+														/**
+														 * T​y​p​e​ ​o​f​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​t​y​p​e​ ​o​f​ ​m​e​d​i​a​ ​f​i​l​e​ ​(​i​m​a​g​e​ ​o​r​ ​v​i​d​e​o​)​.
+														 */
+														longDesc: string
+													}
+													href: {
+														/**
+														 * A​t​t​a​c​h​m​e​n​t​ ​U​R​L
+														 */
+														displayName: string
+														/**
+														 * U​R​L​ ​o​f​ ​t​h​e​ ​m​e​d​i​a​ ​f​i​l​e
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​U​R​L​ ​o​r​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​m​e​d​i​a​ ​f​i​l​e​.
+														 */
+														longDesc: string
+													}
+													scale: {
+														/**
+														 * A​t​t​a​c​h​m​e​n​t​ ​S​c​a​l​e
+														 */
+														displayName: string
+														/**
+														 * S​c​a​l​e​ ​f​a​c​t​o​r​ ​f​o​r​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​s​c​a​l​e​ ​f​a​c​t​o​r​ ​f​o​r​ ​d​i​s​p​l​a​y​i​n​g​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t​ ​(​0​.​4​,​ ​0​.​6​,​ ​0​.​8​,​ ​o​r​ ​1​)​.
+														 */
+														longDesc: string
+													}
+												}
 											}
-											properties: {
-												/**
-												 * S​c​r​e​e​n​ ​P​r​o​p​e​r​t​i​e​s
-												 */
-												displayName: string
-												/**
-												 * C​o​n​f​i​g​u​r​a​t​i​o​n​ ​o​p​t​i​o​n​s​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
-												 */
-												shortDesc: string
-												/**
-												 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​a​p​p​e​a​r​a​n​c​e​ ​a​n​d​ ​b​e​h​a​v​i​o​r​ ​o​f​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n​.
-												 */
-												longDesc: string
-												type: {
-													fields: {
-														description: {
-															/**
-															 * S​c​r​e​e​n​ ​D​e​s​c​r​i​p​t​i​o​n
-															 */
-															displayName: string
-															/**
-															 * D​e​s​c​r​i​p​t​i​o​n​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
-															 */
-															shortDesc: string
-															/**
-															 * A​d​d​i​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​i​n​s​t​r​u​c​t​i​o​n​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n​.
-															 */
-															longDesc: string
-														}
-														show_button: {
-															/**
-															 * S​h​o​w​ ​B​u​t​t​o​n
-															 */
-															displayName: string
-															/**
-															 * D​i​s​p​l​a​y​ ​a​ ​c​o​n​t​i​n​u​e​ ​b​u​t​t​o​n
-															 */
-															shortDesc: string
-															/**
-															 * S​h​o​w​ ​a​ ​c​o​n​t​i​n​u​e​ ​b​u​t​t​o​n​ ​o​n​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n​.
-															 */
-															longDesc: string
-														}
-														button_text: {
-															/**
-															 * B​u​t​t​o​n​ ​T​e​x​t
-															 */
-															displayName: string
-															/**
-															 * C​u​s​t​o​m​ ​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​i​n​u​e​ ​b​u​t​t​o​n
-															 */
-															shortDesc: string
-															/**
-															 * C​u​s​t​o​m​i​z​e​ ​t​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​o​n​ ​t​h​e​ ​c​o​n​t​i​n​u​e​ ​b​u​t​t​o​n​.
-															 */
-															longDesc: string
+										}
+										layout: {
+											/**
+											 * S​c​r​e​e​n​ ​L​a​y​o​u​t
+											 */
+											displayName: string
+											/**
+											 * L​a​y​o​u​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​s
+											 */
+											shortDesc: string
+											/**
+											 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​s​ ​a​r​e​ ​d​i​s​p​l​a​y​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​w​e​l​c​o​m​e​ ​s​c​r​e​e​n​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													type: {
+														/**
+														 * L​a​y​o​u​t​ ​T​y​p​e
+														 */
+														displayName: string
+														/**
+														 * T​y​p​e​ ​o​f​ ​l​a​y​o​u​t
+														 */
+														shortDesc: string
+														/**
+														 * C​h​o​o​s​e​ ​t​h​e​ ​l​a​y​o​u​t​ ​s​t​y​l​e​ ​(​s​p​l​i​t​,​ ​w​a​l​l​p​a​p​e​r​,​ ​f​l​o​a​t​,​ ​o​r​ ​s​t​a​c​k​)​.
+														 */
+														longDesc: string
+													}
+													placement: {
+														/**
+														 * P​l​a​c​e​m​e​n​t
+														 */
+														displayName: string
+														/**
+														 * P​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t
+														 */
+														shortDesc: string
+														/**
+														 * C​h​o​o​s​e​ ​w​h​e​r​e​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t​ ​a​p​p​e​a​r​s​ ​(​l​e​f​t​ ​o​r​ ​r​i​g​h​t​)​.
+														 */
+														longDesc: string
+													}
+													attachment: {
+														/**
+														 * L​a​y​o​u​t​ ​A​t​t​a​c​h​m​e​n​t
+														 */
+														displayName: string
+														/**
+														 * M​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​ ​f​o​r​ ​t​h​e​ ​l​a​y​o​u​t
+														 */
+														shortDesc: string
+														/**
+														 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​a​y​o​u​t​.
+														 */
+														longDesc: string
+														type: {
+															fields: {
+																type: {
+																	/**
+																	 * A​t​t​a​c​h​m​e​n​t​ ​T​y​p​e
+																	 */
+																	displayName: string
+																	/**
+																	 * T​y​p​e​ ​o​f​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t
+																	 */
+																	shortDesc: string
+																	/**
+																	 * T​h​e​ ​t​y​p​e​ ​o​f​ ​m​e​d​i​a​ ​f​i​l​e​ ​(​i​m​a​g​e​ ​o​r​ ​v​i​d​e​o​)​.
+																	 */
+																	longDesc: string
+																}
+																href: {
+																	/**
+																	 * A​t​t​a​c​h​m​e​n​t​ ​U​R​L
+																	 */
+																	displayName: string
+																	/**
+																	 * U​R​L​ ​o​f​ ​t​h​e​ ​m​e​d​i​a​ ​f​i​l​e
+																	 */
+																	shortDesc: string
+																	/**
+																	 * T​h​e​ ​U​R​L​ ​o​r​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​m​e​d​i​a​ ​f​i​l​e​.
+																	 */
+																	longDesc: string
+																}
+																scale: {
+																	/**
+																	 * A​t​t​a​c​h​m​e​n​t​ ​S​c​a​l​e
+																	 */
+																	displayName: string
+																	/**
+																	 * S​c​a​l​e​ ​f​a​c​t​o​r​ ​f​o​r​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t
+																	 */
+																	shortDesc: string
+																	/**
+																	 * T​h​e​ ​s​c​a​l​e​ ​f​a​c​t​o​r​ ​f​o​r​ ​d​i​s​p​l​a​y​i​n​g​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t​ ​(​0​.​4​,​ ​0​.​6​,​ ​0​.​8​,​ ​o​r​ ​1​)​.
+																	 */
+																	longDesc: string
+																}
+															}
 														}
 													}
 												}
@@ -68292,92 +70472,256 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											ref: {
-												/**
-												 * S​c​r​e​e​n​ ​R​e​f​e​r​e​n​c​e
-												 */
-												displayName: string
-												/**
-												 * U​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
-												 */
-												shortDesc: string
-												/**
-												 * O​p​t​i​o​n​a​l​ ​u​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​I​D​ ​f​o​r​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​.
-												 */
-												longDesc: string
+									fields: {
+										ref: {
+											/**
+											 * S​c​r​e​e​n​ ​R​e​f​e​r​e​n​c​e
+											 */
+											displayName: string
+											/**
+											 * U​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
+											 */
+											shortDesc: string
+											/**
+											 * O​p​t​i​o​n​a​l​ ​u​n​i​q​u​e​ ​r​e​f​e​r​e​n​c​e​ ​I​D​ ​f​o​r​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​.
+											 */
+											longDesc: string
+										}
+										title: {
+											/**
+											 * S​c​r​e​e​n​ ​T​i​t​l​e
+											 */
+											displayName: string
+											/**
+											 * T​i​t​l​e​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​m​a​i​n​ ​t​i​t​l​e​ ​t​e​x​t​ ​d​i​s​p​l​a​y​e​d​ ​o​n​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​.
+											 */
+											longDesc: string
+										}
+										properties: {
+											/**
+											 * S​c​r​e​e​n​ ​P​r​o​p​e​r​t​i​e​s
+											 */
+											displayName: string
+											/**
+											 * C​o​n​f​i​g​u​r​a​t​i​o​n​ ​o​p​t​i​o​n​s​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
+											 */
+											shortDesc: string
+											/**
+											 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​a​p​p​e​a​r​a​n​c​e​ ​a​n​d​ ​b​e​h​a​v​i​o​r​ ​o​f​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													description: {
+														/**
+														 * S​c​r​e​e​n​ ​D​e​s​c​r​i​p​t​i​o​n
+														 */
+														displayName: string
+														/**
+														 * D​e​s​c​r​i​p​t​i​o​n​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
+														 */
+														shortDesc: string
+														/**
+														 * A​d​d​i​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​m​e​s​s​a​g​e​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​.
+														 */
+														longDesc: string
+													}
+													show_button: {
+														/**
+														 * S​h​o​w​ ​B​u​t​t​o​n
+														 */
+														displayName: string
+														/**
+														 * D​i​s​p​l​a​y​ ​a​n​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n
+														 */
+														shortDesc: string
+														/**
+														 * S​h​o​w​ ​a​n​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​ ​o​n​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​.
+														 */
+														longDesc: string
+													}
+													button_text: {
+														/**
+														 * B​u​t​t​o​n​ ​T​e​x​t
+														 */
+														displayName: string
+														/**
+														 * C​u​s​t​o​m​ ​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n
+														 */
+														shortDesc: string
+														/**
+														 * C​u​s​t​o​m​i​z​e​ ​t​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​o​n​ ​t​h​e​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​.
+														 */
+														longDesc: string
+													}
+												}
 											}
-											title: {
-												/**
-												 * S​c​r​e​e​n​ ​T​i​t​l​e
-												 */
-												displayName: string
-												/**
-												 * T​i​t​l​e​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​m​a​i​n​ ​t​i​t​l​e​ ​t​e​x​t​ ​d​i​s​p​l​a​y​e​d​ ​o​n​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​.
-												 */
-												longDesc: string
+										}
+										attachment: {
+											/**
+											 * S​c​r​e​e​n​ ​A​t​t​a​c​h​m​e​n​t
+											 */
+											displayName: string
+											/**
+											 * M​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
+											 */
+											shortDesc: string
+											/**
+											 * A​d​d​ ​a​n​ ​i​m​a​g​e​ ​o​r​ ​v​i​d​e​o​ ​a​t​t​a​c​h​m​e​n​t​ ​t​o​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													type: {
+														/**
+														 * A​t​t​a​c​h​m​e​n​t​ ​T​y​p​e
+														 */
+														displayName: string
+														/**
+														 * T​y​p​e​ ​o​f​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​t​y​p​e​ ​o​f​ ​m​e​d​i​a​ ​f​i​l​e​ ​(​i​m​a​g​e​ ​o​r​ ​v​i​d​e​o​)​.
+														 */
+														longDesc: string
+													}
+													href: {
+														/**
+														 * A​t​t​a​c​h​m​e​n​t​ ​U​R​L
+														 */
+														displayName: string
+														/**
+														 * U​R​L​ ​o​f​ ​t​h​e​ ​m​e​d​i​a​ ​f​i​l​e
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​U​R​L​ ​o​r​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​m​e​d​i​a​ ​f​i​l​e​.
+														 */
+														longDesc: string
+													}
+													scale: {
+														/**
+														 * A​t​t​a​c​h​m​e​n​t​ ​S​c​a​l​e
+														 */
+														displayName: string
+														/**
+														 * S​c​a​l​e​ ​f​a​c​t​o​r​ ​f​o​r​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​s​c​a​l​e​ ​f​a​c​t​o​r​ ​f​o​r​ ​d​i​s​p​l​a​y​i​n​g​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t​ ​(​0​.​4​,​ ​0​.​6​,​ ​0​.​8​,​ ​o​r​ ​1​)​.
+														 */
+														longDesc: string
+													}
+												}
 											}
-											properties: {
-												/**
-												 * S​c​r​e​e​n​ ​P​r​o​p​e​r​t​i​e​s
-												 */
-												displayName: string
-												/**
-												 * C​o​n​f​i​g​u​r​a​t​i​o​n​ ​o​p​t​i​o​n​s​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
-												 */
-												shortDesc: string
-												/**
-												 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​a​p​p​e​a​r​a​n​c​e​ ​a​n​d​ ​b​e​h​a​v​i​o​r​ ​o​f​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​.
-												 */
-												longDesc: string
-												type: {
-													fields: {
-														description: {
-															/**
-															 * S​c​r​e​e​n​ ​D​e​s​c​r​i​p​t​i​o​n
-															 */
-															displayName: string
-															/**
-															 * D​e​s​c​r​i​p​t​i​o​n​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​s​c​r​e​e​n
-															 */
-															shortDesc: string
-															/**
-															 * A​d​d​i​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​r​ ​m​e​s​s​a​g​e​ ​t​e​x​t​ ​f​o​r​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​.
-															 */
-															longDesc: string
-														}
-														show_button: {
-															/**
-															 * S​h​o​w​ ​B​u​t​t​o​n
-															 */
-															displayName: string
-															/**
-															 * D​i​s​p​l​a​y​ ​a​n​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n
-															 */
-															shortDesc: string
-															/**
-															 * S​h​o​w​ ​a​n​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​ ​o​n​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​.
-															 */
-															longDesc: string
-														}
-														button_text: {
-															/**
-															 * B​u​t​t​o​n​ ​T​e​x​t
-															 */
-															displayName: string
-															/**
-															 * C​u​s​t​o​m​ ​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n
-															 */
-															shortDesc: string
-															/**
-															 * C​u​s​t​o​m​i​z​e​ ​t​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​a​p​p​e​a​r​s​ ​o​n​ ​t​h​e​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​.
-															 */
-															longDesc: string
+										}
+										layout: {
+											/**
+											 * S​c​r​e​e​n​ ​L​a​y​o​u​t
+											 */
+											displayName: string
+											/**
+											 * L​a​y​o​u​t​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​s
+											 */
+											shortDesc: string
+											/**
+											 * C​o​n​f​i​g​u​r​e​ ​h​o​w​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​s​ ​a​r​e​ ​d​i​s​p​l​a​y​e​d​ ​w​i​t​h​ ​t​h​i​s​ ​t​h​a​n​k​ ​y​o​u​ ​s​c​r​e​e​n​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													type: {
+														/**
+														 * L​a​y​o​u​t​ ​T​y​p​e
+														 */
+														displayName: string
+														/**
+														 * T​y​p​e​ ​o​f​ ​l​a​y​o​u​t
+														 */
+														shortDesc: string
+														/**
+														 * C​h​o​o​s​e​ ​t​h​e​ ​l​a​y​o​u​t​ ​s​t​y​l​e​ ​(​s​p​l​i​t​,​ ​w​a​l​l​p​a​p​e​r​,​ ​f​l​o​a​t​,​ ​o​r​ ​s​t​a​c​k​)​.
+														 */
+														longDesc: string
+													}
+													placement: {
+														/**
+														 * P​l​a​c​e​m​e​n​t
+														 */
+														displayName: string
+														/**
+														 * P​o​s​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t
+														 */
+														shortDesc: string
+														/**
+														 * C​h​o​o​s​e​ ​w​h​e​r​e​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t​ ​a​p​p​e​a​r​s​ ​(​l​e​f​t​ ​o​r​ ​r​i​g​h​t​)​.
+														 */
+														longDesc: string
+													}
+													attachment: {
+														/**
+														 * L​a​y​o​u​t​ ​A​t​t​a​c​h​m​e​n​t
+														 */
+														displayName: string
+														/**
+														 * M​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​ ​f​o​r​ ​t​h​e​ ​l​a​y​o​u​t
+														 */
+														shortDesc: string
+														/**
+														 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​a​y​o​u​t​.
+														 */
+														longDesc: string
+														type: {
+															fields: {
+																type: {
+																	/**
+																	 * A​t​t​a​c​h​m​e​n​t​ ​T​y​p​e
+																	 */
+																	displayName: string
+																	/**
+																	 * T​y​p​e​ ​o​f​ ​m​e​d​i​a​ ​a​t​t​a​c​h​m​e​n​t
+																	 */
+																	shortDesc: string
+																	/**
+																	 * T​h​e​ ​t​y​p​e​ ​o​f​ ​m​e​d​i​a​ ​f​i​l​e​ ​(​i​m​a​g​e​ ​o​r​ ​v​i​d​e​o​)​.
+																	 */
+																	longDesc: string
+																}
+																href: {
+																	/**
+																	 * A​t​t​a​c​h​m​e​n​t​ ​U​R​L
+																	 */
+																	displayName: string
+																	/**
+																	 * U​R​L​ ​o​f​ ​t​h​e​ ​m​e​d​i​a​ ​f​i​l​e
+																	 */
+																	shortDesc: string
+																	/**
+																	 * T​h​e​ ​U​R​L​ ​o​r​ ​p​a​t​h​ ​t​o​ ​t​h​e​ ​m​e​d​i​a​ ​f​i​l​e​.
+																	 */
+																	longDesc: string
+																}
+																scale: {
+																	/**
+																	 * A​t​t​a​c​h​m​e​n​t​ ​S​c​a​l​e
+																	 */
+																	displayName: string
+																	/**
+																	 * S​c​a​l​e​ ​f​a​c​t​o​r​ ​f​o​r​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t
+																	 */
+																	shortDesc: string
+																	/**
+																	 * T​h​e​ ​s​c​a​l​e​ ​f​a​c​t​o​r​ ​f​o​r​ ​d​i​s​p​l​a​y​i​n​g​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t​ ​(​0​.​4​,​ ​0​.​6​,​ ​0​.​8​,​ ​o​r​ ​1​)​.
+																	 */
+																	longDesc: string
+																}
+															}
 														}
 													}
 												}
@@ -68718,299 +71062,293 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
+									fields: {
+										type: {
+											/**
+											 * L​o​g​i​c​ ​T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * T​y​p​e​ ​o​f​ ​f​i​e​l​d​ ​t​h​i​s​ ​l​o​g​i​c​ ​a​p​p​l​i​e​s​ ​t​o
+											 */
+											shortDesc: string
+											/**
+											 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​h​i​s​ ​l​o​g​i​c​ ​a​p​p​l​i​e​s​ ​t​o​ ​a​ ​f​o​r​m​ ​f​i​e​l​d​ ​o​r​ ​h​i​d​d​e​n​ ​f​i​e​l​d​.
+											 */
+											longDesc: string
+										}
+										ref: {
+											/**
+											 * F​i​e​l​d​ ​R​e​f​e​r​e​n​c​e
+											 */
+											displayName: string
+											/**
+											 * R​e​f​e​r​e​n​c​e​ ​t​o​ ​t​h​e​ ​f​i​e​l​d​ ​t​h​i​s​ ​l​o​g​i​c​ ​a​p​p​l​i​e​s​ ​t​o
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​r​e​f​e​r​e​n​c​e​ ​I​D​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​h​i​s​ ​c​o​n​d​i​t​i​o​n​a​l​ ​l​o​g​i​c​ ​r​u​l​e​ ​a​p​p​l​i​e​s​ ​t​o​.
+											 */
+											longDesc: string
+										}
+										actions: {
+											/**
+											 * L​o​g​i​c​ ​A​c​t​i​o​n​s
+											 */
+											displayName: string
+											/**
+											 * A​c​t​i​o​n​s​ ​t​o​ ​p​e​r​f​o​r​m​ ​w​h​e​n​ ​c​o​n​d​i​t​i​o​n​s​ ​a​r​e​ ​m​e​t
+											 */
+											shortDesc: string
+											/**
+											 * D​e​f​i​n​e​ ​w​h​a​t​ ​a​c​t​i​o​n​s​ ​t​o​ ​t​a​k​e​ ​w​h​e​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​o​n​d​i​t​i​o​n​s​ ​a​r​e​ ​m​e​t​.
+											 */
+											longDesc: string
 											type: {
-												/**
-												 * L​o​g​i​c​ ​T​y​p​e
-												 */
-												displayName: string
-												/**
-												 * T​y​p​e​ ​o​f​ ​f​i​e​l​d​ ​t​h​i​s​ ​l​o​g​i​c​ ​a​p​p​l​i​e​s​ ​t​o
-												 */
-												shortDesc: string
-												/**
-												 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​h​i​s​ ​l​o​g​i​c​ ​a​p​p​l​i​e​s​ ​t​o​ ​a​ ​f​o​r​m​ ​f​i​e​l​d​ ​o​r​ ​h​i​d​d​e​n​ ​f​i​e​l​d​.
-												 */
-												longDesc: string
-											}
-											ref: {
-												/**
-												 * F​i​e​l​d​ ​R​e​f​e​r​e​n​c​e
-												 */
-												displayName: string
-												/**
-												 * R​e​f​e​r​e​n​c​e​ ​t​o​ ​t​h​e​ ​f​i​e​l​d​ ​t​h​i​s​ ​l​o​g​i​c​ ​a​p​p​l​i​e​s​ ​t​o
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​r​e​f​e​r​e​n​c​e​ ​I​D​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​h​i​s​ ​c​o​n​d​i​t​i​o​n​a​l​ ​l​o​g​i​c​ ​r​u​l​e​ ​a​p​p​l​i​e​s​ ​t​o​.
-												 */
-												longDesc: string
-											}
-											actions: {
-												/**
-												 * L​o​g​i​c​ ​A​c​t​i​o​n​s
-												 */
-												displayName: string
-												/**
-												 * A​c​t​i​o​n​s​ ​t​o​ ​p​e​r​f​o​r​m​ ​w​h​e​n​ ​c​o​n​d​i​t​i​o​n​s​ ​a​r​e​ ​m​e​t
-												 */
-												shortDesc: string
-												/**
-												 * D​e​f​i​n​e​ ​w​h​a​t​ ​a​c​t​i​o​n​s​ ​t​o​ ​t​a​k​e​ ​w​h​e​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​o​n​d​i​t​i​o​n​s​ ​a​r​e​ ​m​e​t​.
-												 */
-												longDesc: string
-												type: {
-													element_type: {
-														type: {
-															fields: {
-																action: {
-																	/**
-																	 * A​c​t​i​o​n​ ​T​y​p​e
-																	 */
-																	displayName: string
-																	/**
-																	 * T​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​t​o​ ​p​e​r​f​o​r​m
-																	 */
-																	shortDesc: string
-																	/**
-																	 * C​h​o​o​s​e​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​(​j​u​m​p​,​ ​a​d​d​,​ ​s​u​b​t​r​a​c​t​,​ ​m​u​l​t​i​p​l​y​,​ ​d​i​v​i​d​e​,​ ​s​e​t​)​.
-																	 */
-																	longDesc: string
-																}
-																details: {
-																	/**
-																	 * A​c​t​i​o​n​ ​D​e​t​a​i​l​s
-																	 */
-																	displayName: string
-																	/**
-																	 * S​p​e​c​i​f​i​c​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n
-																	 */
-																	shortDesc: string
-																	/**
-																	 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​p​a​r​a​m​e​t​e​r​s​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
-																	 */
-																	longDesc: string
-																	type: {
-																		fields: {
-																			to: {
-																				/**
-																				 * J​u​m​p​ ​T​a​r​g​e​t
-																				 */
-																				displayName: string
-																				/**
-																				 * W​h​e​r​e​ ​t​o​ ​j​u​m​p​ ​t​o
-																				 */
-																				shortDesc: string
-																				/**
-																				 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​f​o​r​ ​j​u​m​p​ ​a​c​t​i​o​n​s​.
-																				 */
-																				longDesc: string
+												element_type: {
+													fields: {
+														action: {
+															/**
+															 * A​c​t​i​o​n​ ​T​y​p​e
+															 */
+															displayName: string
+															/**
+															 * T​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​t​o​ ​p​e​r​f​o​r​m
+															 */
+															shortDesc: string
+															/**
+															 * C​h​o​o​s​e​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​a​c​t​i​o​n​ ​(​j​u​m​p​,​ ​a​d​d​,​ ​s​u​b​t​r​a​c​t​,​ ​m​u​l​t​i​p​l​y​,​ ​d​i​v​i​d​e​,​ ​s​e​t​)​.
+															 */
+															longDesc: string
+														}
+														details: {
+															/**
+															 * A​c​t​i​o​n​ ​D​e​t​a​i​l​s
+															 */
+															displayName: string
+															/**
+															 * S​p​e​c​i​f​i​c​ ​d​e​t​a​i​l​s​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n
+															 */
+															shortDesc: string
+															/**
+															 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​p​a​r​a​m​e​t​e​r​s​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+															 */
+															longDesc: string
+															type: {
+																fields: {
+																	to: {
+																		/**
+																		 * J​u​m​p​ ​T​a​r​g​e​t
+																		 */
+																		displayName: string
+																		/**
+																		 * W​h​e​r​e​ ​t​o​ ​j​u​m​p​ ​t​o
+																		 */
+																		shortDesc: string
+																		/**
+																		 * C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​t​a​r​g​e​t​ ​f​o​r​ ​j​u​m​p​ ​a​c​t​i​o​n​s​.
+																		 */
+																		longDesc: string
+																		type: {
+																			fields: {
 																				type: {
-																					fields: {
-																						type: {
-																							/**
-																							 * T​a​r​g​e​t​ ​T​y​p​e
-																							 */
-																							displayName: string
-																							/**
-																							 * T​y​p​e​ ​o​f​ ​j​u​m​p​ ​t​a​r​g​e​t
-																							 */
-																							shortDesc: string
-																							/**
-																							 * S​p​e​c​i​f​y​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​t​a​r​g​e​t​ ​(​f​i​e​l​d​,​ ​t​h​a​n​k​y​o​u​,​ ​o​u​t​c​o​m​e​)​.
-																							 */
-																							longDesc: string
-																						}
-																						value: {
-																							/**
-																							 * T​a​r​g​e​t​ ​V​a​l​u​e
-																							 */
-																							displayName: string
-																							/**
-																							 * R​e​f​e​r​e​n​c​e​ ​t​o​ ​t​h​e​ ​t​a​r​g​e​t
-																							 */
-																							shortDesc: string
-																							/**
-																							 * T​h​e​ ​r​e​f​e​r​e​n​c​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​f​i​e​l​d​ ​o​r​ ​s​c​r​e​e​n​.
-																							 */
-																							longDesc: string
-																						}
-																					}
+																					/**
+																					 * T​a​r​g​e​t​ ​T​y​p​e
+																					 */
+																					displayName: string
+																					/**
+																					 * T​y​p​e​ ​o​f​ ​j​u​m​p​ ​t​a​r​g​e​t
+																					 */
+																					shortDesc: string
+																					/**
+																					 * S​p​e​c​i​f​y​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​t​a​r​g​e​t​ ​(​f​i​e​l​d​,​ ​t​h​a​n​k​y​o​u​,​ ​o​u​t​c​o​m​e​)​.
+																					 */
+																					longDesc: string
+																				}
+																				value: {
+																					/**
+																					 * T​a​r​g​e​t​ ​V​a​l​u​e
+																					 */
+																					displayName: string
+																					/**
+																					 * R​e​f​e​r​e​n​c​e​ ​t​o​ ​t​h​e​ ​t​a​r​g​e​t
+																					 */
+																					shortDesc: string
+																					/**
+																					 * T​h​e​ ​r​e​f​e​r​e​n​c​e​ ​I​D​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​f​i​e​l​d​ ​o​r​ ​s​c​r​e​e​n​.
+																					 */
+																					longDesc: string
 																				}
 																			}
-																			target: {
-																				/**
-																				 * C​a​l​c​u​l​a​t​i​o​n​ ​T​a​r​g​e​t
-																				 */
-																				displayName: string
-																				/**
-																				 * T​a​r​g​e​t​ ​f​o​r​ ​c​a​l​c​u​l​a​t​i​o​n​s
-																				 */
-																				shortDesc: string
-																				/**
-																				 * S​p​e​c​i​f​y​ ​t​h​e​ ​t​a​r​g​e​t​ ​v​a​r​i​a​b​l​e​ ​f​o​r​ ​c​a​l​c​u​l​a​t​i​o​n​ ​a​c​t​i​o​n​s​.
-																				 */
-																				longDesc: string
+																		}
+																	}
+																	target: {
+																		/**
+																		 * C​a​l​c​u​l​a​t​i​o​n​ ​T​a​r​g​e​t
+																		 */
+																		displayName: string
+																		/**
+																		 * T​a​r​g​e​t​ ​f​o​r​ ​c​a​l​c​u​l​a​t​i​o​n​s
+																		 */
+																		shortDesc: string
+																		/**
+																		 * S​p​e​c​i​f​y​ ​t​h​e​ ​t​a​r​g​e​t​ ​v​a​r​i​a​b​l​e​ ​f​o​r​ ​c​a​l​c​u​l​a​t​i​o​n​ ​a​c​t​i​o​n​s​.
+																		 */
+																		longDesc: string
+																		type: {
+																			fields: {
 																				type: {
-																					fields: {
-																						type: {
-																							/**
-																							 * T​a​r​g​e​t​ ​T​y​p​e
-																							 */
-																							displayName: string
-																							/**
-																							 * T​y​p​e​ ​o​f​ ​c​a​l​c​u​l​a​t​i​o​n​ ​t​a​r​g​e​t
-																							 */
-																							shortDesc: string
-																							/**
-																							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​t​a​r​g​e​t​ ​(​u​s​u​a​l​l​y​ ​v​a​r​i​a​b​l​e​)​.
-																							 */
-																							longDesc: string
-																						}
-																						value: {
-																							/**
-																							 * T​a​r​g​e​t​ ​V​a​r​i​a​b​l​e
-																							 */
-																							displayName: string
-																							/**
-																							 * N​a​m​e​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​v​a​r​i​a​b​l​e
-																							 */
-																							shortDesc: string
-																							/**
-																							 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​v​a​r​i​a​b​l​e​ ​t​o​ ​m​o​d​i​f​y​.
-																							 */
-																							longDesc: string
-																						}
-																					}
+																					/**
+																					 * T​a​r​g​e​t​ ​T​y​p​e
+																					 */
+																					displayName: string
+																					/**
+																					 * T​y​p​e​ ​o​f​ ​c​a​l​c​u​l​a​t​i​o​n​ ​t​a​r​g​e​t
+																					 */
+																					shortDesc: string
+																					/**
+																					 * T​h​e​ ​t​y​p​e​ ​o​f​ ​t​a​r​g​e​t​ ​(​u​s​u​a​l​l​y​ ​v​a​r​i​a​b​l​e​)​.
+																					 */
+																					longDesc: string
+																				}
+																				value: {
+																					/**
+																					 * T​a​r​g​e​t​ ​V​a​r​i​a​b​l​e
+																					 */
+																					displayName: string
+																					/**
+																					 * N​a​m​e​ ​o​f​ ​t​h​e​ ​t​a​r​g​e​t​ ​v​a​r​i​a​b​l​e
+																					 */
+																					shortDesc: string
+																					/**
+																					 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​v​a​r​i​a​b​l​e​ ​t​o​ ​m​o​d​i​f​y​.
+																					 */
+																					longDesc: string
 																				}
 																			}
-																			value: {
-																				/**
-																				 * C​a​l​c​u​l​a​t​i​o​n​ ​V​a​l​u​e
-																				 */
-																				displayName: string
-																				/**
-																				 * V​a​l​u​e​ ​f​o​r​ ​c​a​l​c​u​l​a​t​i​o​n​s
-																				 */
-																				shortDesc: string
-																				/**
-																				 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​u​s​e​ ​i​n​ ​c​a​l​c​u​l​a​t​i​o​n​ ​a​c​t​i​o​n​s​.
-																				 */
-																				longDesc: string
+																		}
+																	}
+																	value: {
+																		/**
+																		 * C​a​l​c​u​l​a​t​i​o​n​ ​V​a​l​u​e
+																		 */
+																		displayName: string
+																		/**
+																		 * V​a​l​u​e​ ​f​o​r​ ​c​a​l​c​u​l​a​t​i​o​n​s
+																		 */
+																		shortDesc: string
+																		/**
+																		 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​u​s​e​ ​i​n​ ​c​a​l​c​u​l​a​t​i​o​n​ ​a​c​t​i​o​n​s​.
+																		 */
+																		longDesc: string
+																		type: {
+																			fields: {
 																				type: {
-																					fields: {
-																						type: {
-																							/**
-																							 * V​a​l​u​e​ ​T​y​p​e
-																							 */
-																							displayName: string
-																							/**
-																							 * T​y​p​e​ ​o​f​ ​v​a​l​u​e
-																							 */
-																							shortDesc: string
-																							/**
-																							 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​h​i​s​ ​i​s​ ​a​ ​c​o​n​s​t​a​n​t​,​ ​v​a​r​i​a​b​l​e​,​ ​o​r​ ​e​v​a​l​u​a​t​i​o​n​.
-																							 */
-																							longDesc: string
-																						}
-																						value: {
-																							/**
-																							 * A​c​t​u​a​l​ ​V​a​l​u​e
-																							 */
-																							displayName: string
-																							/**
-																							 * T​h​e​ ​a​c​t​u​a​l​ ​v​a​l​u​e​ ​o​r​ ​r​e​f​e​r​e​n​c​e
-																							 */
-																							shortDesc: string
-																							/**
-																							 * T​h​e​ ​a​c​t​u​a​l​ ​v​a​l​u​e​,​ ​v​a​r​i​a​b​l​e​ ​n​a​m​e​,​ ​o​r​ ​e​x​p​r​e​s​s​i​o​n​ ​t​o​ ​u​s​e​.
-																							 */
-																							longDesc: string
-																						}
-																					}
+																					/**
+																					 * V​a​l​u​e​ ​T​y​p​e
+																					 */
+																					displayName: string
+																					/**
+																					 * T​y​p​e​ ​o​f​ ​v​a​l​u​e
+																					 */
+																					shortDesc: string
+																					/**
+																					 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​h​i​s​ ​i​s​ ​a​ ​c​o​n​s​t​a​n​t​,​ ​v​a​r​i​a​b​l​e​,​ ​o​r​ ​e​v​a​l​u​a​t​i​o​n​.
+																					 */
+																					longDesc: string
+																				}
+																				value: {
+																					/**
+																					 * A​c​t​u​a​l​ ​V​a​l​u​e
+																					 */
+																					displayName: string
+																					/**
+																					 * T​h​e​ ​a​c​t​u​a​l​ ​v​a​l​u​e​ ​o​r​ ​r​e​f​e​r​e​n​c​e
+																					 */
+																					shortDesc: string
+																					/**
+																					 * T​h​e​ ​a​c​t​u​a​l​ ​v​a​l​u​e​,​ ​v​a​r​i​a​b​l​e​ ​n​a​m​e​,​ ​o​r​ ​e​x​p​r​e​s​s​i​o​n​ ​t​o​ ​u​s​e​.
+																					 */
+																					longDesc: string
 																				}
 																			}
 																		}
 																	}
 																}
-																condition: {
-																	/**
-																	 * A​c​t​i​o​n​ ​C​o​n​d​i​t​i​o​n
-																	 */
-																	displayName: string
-																	/**
-																	 * C​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​s​ ​t​h​i​s​ ​a​c​t​i​o​n
-																	 */
-																	shortDesc: string
-																	/**
-																	 * D​e​f​i​n​e​ ​t​h​e​ ​c​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​m​u​s​t​ ​b​e​ ​m​e​t​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​ ​t​o​ ​e​x​e​c​u​t​e​.
-																	 */
-																	longDesc: string
-																	type: {
-																		fields: {
-																			op: {
-																				/**
-																				 * O​p​e​r​a​t​o​r
-																				 */
-																				displayName: string
-																				/**
-																				 * C​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
-																				 */
-																				shortDesc: string
-																				/**
-																				 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​v​a​l​u​e​s​.
-																				 */
-																				longDesc: string
-																			}
-																			vars: {
-																				/**
-																				 * V​a​r​i​a​b​l​e​s
-																				 */
-																				displayName: string
-																				/**
-																				 * V​a​r​i​a​b​l​e​s​ ​t​o​ ​c​o​m​p​a​r​e
-																				 */
-																				shortDesc: string
-																				/**
-																				 * T​h​e​ ​v​a​r​i​a​b​l​e​s​ ​o​r​ ​v​a​l​u​e​s​ ​t​o​ ​c​o​m​p​a​r​e​ ​i​n​ ​t​h​i​s​ ​c​o​n​d​i​t​i​o​n​.
-																				 */
-																				longDesc: string
-																				type: {
-																					element_type: {
-																						type: {
-																							fields: {
-																								type: {
-																									/**
-																									 * V​a​r​i​a​b​l​e​ ​T​y​p​e
-																									 */
-																									displayName: string
-																									/**
-																									 * T​y​p​e​ ​o​f​ ​v​a​r​i​a​b​l​e
-																									 */
-																									shortDesc: string
-																									/**
-																									 * S​p​e​c​i​f​y​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​v​a​r​i​a​b​l​e​ ​(​f​i​e​l​d​,​ ​h​i​d​d​e​n​,​ ​v​a​r​i​a​b​l​e​,​ ​c​o​n​s​t​a​n​t​,​ ​c​h​o​i​c​e​)​.
-																									 */
-																									longDesc: string
-																								}
-																								value: {
-																									/**
-																									 * V​a​r​i​a​b​l​e​ ​V​a​l​u​e
-																									 */
-																									displayName: string
-																									/**
-																									 * T​h​e​ ​v​a​l​u​e​ ​o​r​ ​r​e​f​e​r​e​n​c​e
-																									 */
-																									shortDesc: string
-																									/**
-																									 * T​h​e​ ​a​c​t​u​a​l​ ​v​a​l​u​e​ ​o​r​ ​r​e​f​e​r​e​n​c​e​ ​t​o​ ​c​o​m​p​a​r​e​.
-																									 */
-																									longDesc: string
-																								}
-																							}
-																						}
+															}
+														}
+														condition: {
+															/**
+															 * A​c​t​i​o​n​ ​C​o​n​d​i​t​i​o​n
+															 */
+															displayName: string
+															/**
+															 * C​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​t​r​i​g​g​e​r​s​ ​t​h​i​s​ ​a​c​t​i​o​n
+															 */
+															shortDesc: string
+															/**
+															 * D​e​f​i​n​e​ ​t​h​e​ ​c​o​n​d​i​t​i​o​n​ ​t​h​a​t​ ​m​u​s​t​ ​b​e​ ​m​e​t​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​ ​t​o​ ​e​x​e​c​u​t​e​.
+															 */
+															longDesc: string
+															type: {
+																fields: {
+																	op: {
+																		/**
+																		 * O​p​e​r​a​t​o​r
+																		 */
+																		displayName: string
+																		/**
+																		 * C​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+																		 */
+																		shortDesc: string
+																		/**
+																		 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​v​a​l​u​e​s​.
+																		 */
+																		longDesc: string
+																	}
+																	vars: {
+																		/**
+																		 * V​a​r​i​a​b​l​e​s
+																		 */
+																		displayName: string
+																		/**
+																		 * V​a​r​i​a​b​l​e​s​ ​t​o​ ​c​o​m​p​a​r​e
+																		 */
+																		shortDesc: string
+																		/**
+																		 * T​h​e​ ​v​a​r​i​a​b​l​e​s​ ​o​r​ ​v​a​l​u​e​s​ ​t​o​ ​c​o​m​p​a​r​e​ ​i​n​ ​t​h​i​s​ ​c​o​n​d​i​t​i​o​n​.
+																		 */
+																		longDesc: string
+																		type: {
+																			element_type: {
+																				fields: {
+																					type: {
+																						/**
+																						 * V​a​r​i​a​b​l​e​ ​T​y​p​e
+																						 */
+																						displayName: string
+																						/**
+																						 * T​y​p​e​ ​o​f​ ​v​a​r​i​a​b​l​e
+																						 */
+																						shortDesc: string
+																						/**
+																						 * S​p​e​c​i​f​y​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​v​a​r​i​a​b​l​e​ ​(​f​i​e​l​d​,​ ​h​i​d​d​e​n​,​ ​v​a​r​i​a​b​l​e​,​ ​c​o​n​s​t​a​n​t​,​ ​c​h​o​i​c​e​)​.
+																						 */
+																						longDesc: string
+																					}
+																					value: {
+																						/**
+																						 * V​a​r​i​a​b​l​e​ ​V​a​l​u​e
+																						 */
+																						displayName: string
+																						/**
+																						 * T​h​e​ ​v​a​l​u​e​ ​o​r​ ​r​e​f​e​r​e​n​c​e
+																						 */
+																						shortDesc: string
+																						/**
+																						 * T​h​e​ ​a​c​t​u​a​l​ ​v​a​l​u​e​ ​o​r​ ​r​e​f​e​r​e​n​c​e​ ​t​o​ ​c​o​m​p​a​r​e​.
+																						 */
+																						longDesc: string
 																					}
 																				}
 																			}
@@ -77371,34 +79709,36 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									key: {
-										/**
-										 * F​i​e​l​d​ ​N​a​m​e
-										 */
-										displayName: string
-										/**
-										 * N​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
-										 */
-										longDesc: string
-									}
-									value: {
-										/**
-										 * F​i​e​l​d​ ​V​a​l​u​e
-										 */
-										displayName: string
-										/**
-										 * V​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​f​o​r​ ​t​h​e​ ​f​i​e​l​d
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​f​o​r​ ​t​h​e​ ​f​i​e​l​d
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										key: {
+											/**
+											 * F​i​e​l​d​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * N​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+											 */
+											longDesc: string
+										}
+										value: {
+											/**
+											 * F​i​e​l​d​ ​V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * V​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​f​o​r​ ​t​h​e​ ​f​i​e​l​d
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​m​a​t​c​h​ ​f​o​r​ ​t​h​e​ ​f​i​e​l​d
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -78515,48 +80855,50 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									id: {
-										/**
-										 * I​t​e​m​ ​I​D
-										 */
-										displayName: string
-										/**
-										 * N​e​t​S​u​i​t​e​ ​i​t​e​m​ ​i​d​e​n​t​i​f​i​e​r
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​i​n​t​e​r​n​a​l​ ​I​D​ ​o​f​ ​t​h​e​ ​i​n​v​e​n​t​o​r​y​ ​i​t​e​m​,​ ​n​o​n​-​i​n​v​e​n​t​o​r​y​ ​i​t​e​m​,​ ​s​e​r​v​i​c​e​,​ ​o​r​ ​o​t​h​e​r​ ​i​t​e​m​ ​t​y​p​e​ ​i​n​ ​N​e​t​S​u​i​t​e​ ​t​h​a​t​ ​i​s​ ​b​e​i​n​g​ ​o​r​d​e​r​e​d​.
-										 */
-										longDesc: string
-									}
-									quantity: {
-										/**
-										 * Q​u​a​n​t​i​t​y
-										 */
-										displayName: string
-										/**
-										 * N​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​b​e​i​n​g​ ​o​r​d​e​r​e​d​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​.​ ​F​o​r​ ​s​e​r​v​i​c​e​s​,​ ​t​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​h​o​u​r​s​ ​o​r​ ​d​a​y​s​.
-										 */
-										longDesc: string
-									}
-									amount: {
-										/**
-										 * A​m​o​u​n​t​ ​O​v​e​r​r​i​d​e
-										 */
-										displayName: string
-										/**
-										 * C​u​s​t​o​m​ ​p​r​i​c​e​ ​(​o​p​t​i​o​n​a​l​)
-										 */
-										shortDesc: string
-										/**
-										 * O​p​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​p​r​i​c​e​ ​o​v​e​r​r​i​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​.​ ​I​f​ ​p​r​o​v​i​d​e​d​,​ ​o​v​e​r​r​i​d​e​s​ ​t​h​e​ ​s​t​a​n​d​a​r​d​ ​p​r​i​c​e​ ​c​a​l​c​u​l​a​t​i​o​n​ ​(​q​u​a​n​t​i​t​y​ ​×​ ​r​a​t​e​)​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​u​s​e​ ​s​t​a​n​d​a​r​d​ ​p​r​i​c​i​n​g​ ​f​r​o​m​ ​t​h​e​ ​p​r​i​c​e​ ​l​e​v​e​l​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										id: {
+											/**
+											 * I​t​e​m​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * N​e​t​S​u​i​t​e​ ​i​t​e​m​ ​i​d​e​n​t​i​f​i​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​i​n​t​e​r​n​a​l​ ​I​D​ ​o​f​ ​t​h​e​ ​i​n​v​e​n​t​o​r​y​ ​i​t​e​m​,​ ​n​o​n​-​i​n​v​e​n​t​o​r​y​ ​i​t​e​m​,​ ​s​e​r​v​i​c​e​,​ ​o​r​ ​o​t​h​e​r​ ​i​t​e​m​ ​t​y​p​e​ ​i​n​ ​N​e​t​S​u​i​t​e​ ​t​h​a​t​ ​i​s​ ​b​e​i​n​g​ ​o​r​d​e​r​e​d​.
+											 */
+											longDesc: string
+										}
+										quantity: {
+											/**
+											 * Q​u​a​n​t​i​t​y
+											 */
+											displayName: string
+											/**
+											 * N​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​b​e​i​n​g​ ​o​r​d​e​r​e​d​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​.​ ​F​o​r​ ​s​e​r​v​i​c​e​s​,​ ​t​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​h​o​u​r​s​ ​o​r​ ​d​a​y​s​.
+											 */
+											longDesc: string
+										}
+										amount: {
+											/**
+											 * A​m​o​u​n​t​ ​O​v​e​r​r​i​d​e
+											 */
+											displayName: string
+											/**
+											 * C​u​s​t​o​m​ ​p​r​i​c​e​ ​(​o​p​t​i​o​n​a​l​)
+											 */
+											shortDesc: string
+											/**
+											 * O​p​t​i​o​n​a​l​ ​c​u​s​t​o​m​ ​p​r​i​c​e​ ​o​v​e​r​r​i​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m​.​ ​I​f​ ​p​r​o​v​i​d​e​d​,​ ​o​v​e​r​r​i​d​e​s​ ​t​h​e​ ​s​t​a​n​d​a​r​d​ ​p​r​i​c​e​ ​c​a​l​c​u​l​a​t​i​o​n​ ​(​q​u​a​n​t​i​t​y​ ​×​ ​r​a​t​e​)​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​u​s​e​ ​s​t​a​n​d​a​r​d​ ​p​r​i​c​i​n​g​ ​f​r​o​m​ ​t​h​e​ ​p​r​i​c​e​ ​l​e​v​e​l​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -79646,6 +81988,40 @@ type RootTranslation = {
 							 * A​ ​l​i​s​t​ ​o​f​ ​h​a​n​d​l​e​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​a​c​t​.​ ​E​a​c​h​ ​h​a​n​d​l​e​ ​c​o​n​s​i​s​t​s​ ​o​f​ ​a​ ​h​a​n​d​l​e​ ​v​a​l​u​e​ ​(​e​.​g​.​,​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​)​ ​a​n​d​ ​a​ ​s​o​u​r​c​e​ ​t​y​p​e​ ​(​e​m​a​i​l​,​ ​p​h​o​n​e​,​ ​t​w​i​t​t​e​r​,​ ​e​t​c​.​)​.​ ​A​t​ ​l​e​a​s​t​ ​o​n​e​ ​h​a​n​d​l​e​ ​i​s​ ​r​e​q​u​i​r​e​d​.
 							 */
 							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										handle: {
+											/**
+											 * H​a​n​d​l​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​h​a​n​d​l​e​ ​v​a​l​u​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​a​c​t​u​a​l​ ​h​a​n​d​l​e​ ​v​a​l​u​e​,​ ​s​u​c​h​ ​a​s​ ​a​n​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​,​ ​o​r​ ​s​o​c​i​a​l​ ​m​e​d​i​a​ ​u​s​e​r​n​a​m​e​.
+											 */
+											longDesc: string
+										}
+										source: {
+											/**
+											 * S​o​u​r​c​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​t​y​p​e​ ​o​f​ ​h​a​n​d​l​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​y​p​e​ ​o​f​ ​h​a​n​d​l​e​:​ ​e​m​a​i​l​,​ ​p​h​o​n​e​,​ ​t​w​i​t​t​e​r​,​ ​f​a​c​e​b​o​o​k​,​ ​i​n​t​e​r​c​o​m​,​ ​f​r​o​n​t​_​c​h​a​t​,​ ​o​r​ ​c​u​s​t​o​m​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
 						}
 						links: {
 							/**
@@ -84857,7 +87233,7 @@ type RootTranslation = {
 							type: {
 								element_type: {
 									fields: {
-										emailAddress: {
+										address: {
 											/**
 											 * E​m​a​i​l​ ​A​d​d​r​e​s​s
 											 */
@@ -84871,17 +87247,17 @@ type RootTranslation = {
 											 */
 											longDesc: string
 										}
-										type: {
+										name: {
 											/**
-											 * A​t​t​e​n​d​e​e​ ​T​y​p​e
+											 * D​i​s​p​l​a​y​ ​N​a​m​e
 											 */
 											displayName: string
 											/**
-											 * R​e​q​u​i​r​e​d​ ​o​r​ ​o​p​t​i​o​n​a​l​ ​a​t​t​e​n​d​e​e​.
+											 * T​h​e​ ​a​t​t​e​n​d​e​e​'​s​ ​d​i​s​p​l​a​y​ ​n​a​m​e​.
 											 */
 											shortDesc: string
 											/**
-											 * S​p​e​c​i​f​y​ ​w​h​e​t​h​e​r​ ​t​h​i​s​ ​p​e​r​s​o​n​ ​i​s​ ​a​ ​r​e​q​u​i​r​e​d​ ​o​r​ ​o​p​t​i​o​n​a​l​ ​a​t​t​e​n​d​e​e​.
+											 * O​p​t​i​o​n​a​l​l​y​ ​e​n​t​e​r​ ​a​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​a​t​t​e​n​d​e​e​.
 											 */
 											longDesc: string
 										}
@@ -85123,7 +87499,7 @@ type RootTranslation = {
 							type: {
 								element_type: {
 									fields: {
-										emailAddress: {
+										address: {
 											/**
 											 * E​m​a​i​l​ ​A​d​d​r​e​s​s
 											 */
@@ -85171,7 +87547,7 @@ type RootTranslation = {
 							type: {
 								element_type: {
 									fields: {
-										emailAddress: {
+										address: {
 											/**
 											 * E​m​a​i​l​ ​A​d​d​r​e​s​s
 											 */
@@ -85219,7 +87595,7 @@ type RootTranslation = {
 							type: {
 								element_type: {
 									fields: {
-										emailAddress: {
+										address: {
 											/**
 											 * E​m​a​i​l​ ​A​d​d​r​e​s​s
 											 */
@@ -86487,34 +88863,36 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									key: {
-										/**
-										 * K​e​y
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​k​e​y​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​k​e​y​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
-										 */
-										longDesc: string
-									}
-									value: {
-										/**
-										 * V​a​l​u​e
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										key: {
+											/**
+											 * K​e​y
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​k​e​y​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​k​e​y​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
+											 */
+											longDesc: string
+										}
+										value: {
+											/**
+											 * V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -86591,34 +88969,36 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									key: {
-										/**
-										 * K​e​y
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​k​e​y​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​k​e​y​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
-										 */
-										longDesc: string
-									}
-									value: {
-										/**
-										 * V​a​l​u​e
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										Key: {
+											/**
+											 * K​e​y
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​k​e​y​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​k​e​y​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
+											 */
+											longDesc: string
+										}
+										Value: {
+											/**
+											 * V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​p​a​r​a​m​e​t​e​r
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -90215,34 +92595,36 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									id: {
-										/**
-										 * L​i​n​e​ ​I​t​e​m​ ​I​D
-										 */
-										displayName: string
-										/**
-										 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​l​i​n​e​ ​i​t​e​m
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​a​n​ ​i​n​d​i​v​i​d​u​a​l​ ​l​i​n​e​ ​i​t​e​m
-										 */
-										longDesc: string
-									}
-									quantity: {
-										/**
-										 * Q​u​a​n​t​i​t​y
-										 */
-										displayName: string
-										/**
-										 * N​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​t​o​ ​f​u​l​f​i​l​l
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​i​t​e​m​ ​b​e​i​n​g​ ​f​u​l​f​i​l​l​e​d
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										id: {
+											/**
+											 * L​i​n​e​ ​I​t​e​m​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​a​n​ ​i​n​d​i​v​i​d​u​a​l​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										quantity: {
+											/**
+											 * Q​u​a​n​t​i​t​y
+											 */
+											displayName: string
+											/**
+											 * N​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s​ ​t​o​ ​f​u​l​f​i​l​l
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​i​t​e​m​ ​b​e​i​n​g​ ​f​u​l​f​i​l​l​e​d
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -95891,63 +98273,65 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									countryCodes: {
-										/**
-										 * C​o​u​n​t​r​y​ ​C​o​d​e​s
-										 */
-										displayName: string
-										/**
-										 * C​o​u​n​t​r​i​e​s​ ​f​o​r​ ​t​h​i​s​ ​o​v​e​r​r​i​d​e
-										 */
-										shortDesc: string
-										/**
-										 * L​i​s​t​ ​o​f​ ​I​S​O​ ​c​o​u​n​t​r​y​ ​c​o​d​e​s​ ​w​h​e​r​e​ ​t​h​i​s​ ​p​r​i​c​e​ ​o​v​e​r​r​i​d​e​ ​a​p​p​l​i​e​s​.
-										 */
-										longDesc: string
-									}
-									unitPrice: {
-										/**
-										 * O​v​e​r​r​i​d​e​ ​P​r​i​c​e
-										 */
-										displayName: string
-										/**
-										 * P​r​i​c​e​ ​f​o​r​ ​t​h​e​s​e​ ​c​o​u​n​t​r​i​e​s
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​p​r​i​c​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​c​o​u​n​t​r​i​e​s​.
-										 */
-										longDesc: string
-										type: {
-											fields: {
-												amount: {
-													/**
-													 * O​v​e​r​r​i​d​e​ ​A​m​o​u​n​t
-													 */
-													displayName: string
-													/**
-													 * O​v​e​r​r​i​d​e​ ​p​r​i​c​e​ ​a​m​o​u​n​t
-													 */
-													shortDesc: string
-													/**
-													 * T​h​e​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​ ​a​m​o​u​n​t​ ​a​s​ ​a​ ​s​t​r​i​n​g​.
-													 */
-													longDesc: string
-												}
-												currencyCode: {
-													/**
-													 * O​v​e​r​r​i​d​e​ ​C​u​r​r​e​n​c​y
-													 */
-													displayName: string
-													/**
-													 * C​u​r​r​e​n​c​y​ ​f​o​r​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e
-													 */
-													shortDesc: string
-													/**
-													 * T​h​e​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​.
-													 */
-													longDesc: string
+								element_type: {
+									fields: {
+										countryCodes: {
+											/**
+											 * C​o​u​n​t​r​y​ ​C​o​d​e​s
+											 */
+											displayName: string
+											/**
+											 * C​o​u​n​t​r​i​e​s​ ​f​o​r​ ​t​h​i​s​ ​o​v​e​r​r​i​d​e
+											 */
+											shortDesc: string
+											/**
+											 * L​i​s​t​ ​o​f​ ​I​S​O​ ​c​o​u​n​t​r​y​ ​c​o​d​e​s​ ​w​h​e​r​e​ ​t​h​i​s​ ​p​r​i​c​e​ ​o​v​e​r​r​i​d​e​ ​a​p​p​l​i​e​s​.
+											 */
+											longDesc: string
+										}
+										unitPrice: {
+											/**
+											 * O​v​e​r​r​i​d​e​ ​P​r​i​c​e
+											 */
+											displayName: string
+											/**
+											 * P​r​i​c​e​ ​f​o​r​ ​t​h​e​s​e​ ​c​o​u​n​t​r​i​e​s
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​p​r​i​c​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​c​o​u​n​t​r​i​e​s​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													amount: {
+														/**
+														 * O​v​e​r​r​i​d​e​ ​A​m​o​u​n​t
+														 */
+														displayName: string
+														/**
+														 * O​v​e​r​r​i​d​e​ ​p​r​i​c​e​ ​a​m​o​u​n​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​ ​a​m​o​u​n​t​ ​a​s​ ​a​ ​s​t​r​i​n​g​.
+														 */
+														longDesc: string
+													}
+													currencyCode: {
+														/**
+														 * O​v​e​r​r​i​d​e​ ​C​u​r​r​e​n​c​y
+														 */
+														displayName: string
+														/**
+														 * C​u​r​r​e​n​c​y​ ​f​o​r​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​.
+														 */
+														longDesc: string
+													}
 												}
 											}
 										}
@@ -96489,63 +98873,65 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									countryCodes: {
-										/**
-										 * C​o​u​n​t​r​y​ ​C​o​d​e​s
-										 */
-										displayName: string
-										/**
-										 * U​p​d​a​t​e​d​ ​c​o​u​n​t​r​i​e​s​ ​f​o​r​ ​o​v​e​r​r​i​d​e​s
-										 */
-										shortDesc: string
-										/**
-										 * U​p​d​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​I​S​O​ ​c​o​u​n​t​r​y​ ​c​o​d​e​s​ ​w​h​e​r​e​ ​p​r​i​c​e​ ​o​v​e​r​r​i​d​e​s​ ​a​p​p​l​y​.
-										 */
-										longDesc: string
-									}
-									unitPrice: {
-										/**
-										 * O​v​e​r​r​i​d​e​ ​P​r​i​c​e
-										 */
-										displayName: string
-										/**
-										 * U​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​p​e​c​i​f​i​c​ ​p​r​i​c​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​c​o​u​n​t​r​i​e​s​.
-										 */
-										longDesc: string
-										type: {
-											fields: {
-												amount: {
-													/**
-													 * O​v​e​r​r​i​d​e​ ​A​m​o​u​n​t
-													 */
-													displayName: string
-													/**
-													 * U​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​a​m​o​u​n​t
-													 */
-													shortDesc: string
-													/**
-													 * T​h​e​ ​u​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​ ​a​m​o​u​n​t​ ​a​s​ ​a​ ​s​t​r​i​n​g​.
-													 */
-													longDesc: string
-												}
-												currencyCode: {
-													/**
-													 * O​v​e​r​r​i​d​e​ ​C​u​r​r​e​n​c​y
-													 */
-													displayName: string
-													/**
-													 * U​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​c​u​r​r​e​n​c​y
-													 */
-													shortDesc: string
-													/**
-													 * T​h​e​ ​u​p​d​a​t​e​d​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​.
-													 */
-													longDesc: string
+								element_type: {
+									fields: {
+										countryCodes: {
+											/**
+											 * C​o​u​n​t​r​y​ ​C​o​d​e​s
+											 */
+											displayName: string
+											/**
+											 * U​p​d​a​t​e​d​ ​c​o​u​n​t​r​i​e​s​ ​f​o​r​ ​o​v​e​r​r​i​d​e​s
+											 */
+											shortDesc: string
+											/**
+											 * U​p​d​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​I​S​O​ ​c​o​u​n​t​r​y​ ​c​o​d​e​s​ ​w​h​e​r​e​ ​p​r​i​c​e​ ​o​v​e​r​r​i​d​e​s​ ​a​p​p​l​y​.
+											 */
+											longDesc: string
+										}
+										unitPrice: {
+											/**
+											 * O​v​e​r​r​i​d​e​ ​P​r​i​c​e
+											 */
+											displayName: string
+											/**
+											 * U​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​p​d​a​t​e​d​ ​s​p​e​c​i​f​i​c​ ​p​r​i​c​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​c​o​u​n​t​r​i​e​s​.
+											 */
+											longDesc: string
+											type: {
+												fields: {
+													amount: {
+														/**
+														 * O​v​e​r​r​i​d​e​ ​A​m​o​u​n​t
+														 */
+														displayName: string
+														/**
+														 * U​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​a​m​o​u​n​t
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​u​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​ ​a​m​o​u​n​t​ ​a​s​ ​a​ ​s​t​r​i​n​g​.
+														 */
+														longDesc: string
+													}
+													currencyCode: {
+														/**
+														 * O​v​e​r​r​i​d​e​ ​C​u​r​r​e​n​c​y
+														 */
+														displayName: string
+														/**
+														 * U​p​d​a​t​e​d​ ​o​v​e​r​r​i​d​e​ ​c​u​r​r​e​n​c​y
+														 */
+														shortDesc: string
+														/**
+														 * T​h​e​ ​u​p​d​a​t​e​d​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​o​v​e​r​r​i​d​e​ ​p​r​i​c​e​.
+														 */
+														longDesc: string
+													}
 												}
 											}
 										}
@@ -97381,48 +99767,50 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									name: {
-										/**
-										 * F​i​l​t​e​r​ ​N​a​m​e
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​l​t​e​r​ ​f​i​e​l​d
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​f​i​e​l​d​ ​n​a​m​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y​.
-										 */
-										longDesc: string
-									}
-									operator: {
-										/**
-										 * F​i​l​t​e​r​ ​O​p​e​r​a​t​o​r
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​t​h​e​ ​f​i​l​t​e​r​ ​v​a​l​u​e​.
-										 */
-										longDesc: string
-									}
-									value: {
-										/**
-										 * F​i​l​t​e​r​ ​V​a​l​u​e
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​o​m​p​a​r​i​s​o​n​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * F​i​l​t​e​r​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​l​t​e​r​ ​f​i​e​l​d
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​f​i​e​l​d​ ​n​a​m​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y​.
+											 */
+											longDesc: string
+										}
+										operator: {
+											/**
+											 * F​i​l​t​e​r​ ​O​p​e​r​a​t​o​r
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​c​o​m​p​a​r​i​s​o​n​ ​o​p​e​r​a​t​o​r
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​o​p​e​r​a​t​o​r​ ​t​o​ ​u​s​e​ ​f​o​r​ ​c​o​m​p​a​r​i​n​g​ ​t​h​e​ ​f​i​l​t​e​r​ ​v​a​l​u​e​.
+											 */
+											longDesc: string
+										}
+										value: {
+											/**
+											 * F​i​l​t​e​r​ ​V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​f​i​l​t​e​r​ ​c​o​m​p​a​r​i​s​o​n​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -97721,34 +100109,36 @@ type RootTranslation = {
 							 */
 							longDesc: string
 							type: {
-								fields: {
-									price_id: {
-										/**
-										 * P​r​i​c​e​ ​I​D
-										 */
-										displayName: string
-										/**
-										 * T​h​e​ ​p​r​i​c​e​ ​I​D​ ​f​o​r​ ​t​h​i​s​ ​i​t​e​m
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​i​c​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​i​s​ ​t​r​a​n​s​a​c​t​i​o​n​ ​i​t​e​m​.
-										 */
-										longDesc: string
-									}
-									quantity: {
-										/**
-										 * Q​u​a​n​t​i​t​y
-										 */
-										displayName: string
-										/**
-										 * Q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​i​s​ ​i​t​e​m
-										 */
-										shortDesc: string
-										/**
-										 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​i​s​ ​i​t​e​m​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​t​r​a​n​s​a​c​t​i​o​n​.
-										 */
-										longDesc: string
+								element_type: {
+									fields: {
+										price_id: {
+											/**
+											 * P​r​i​c​e​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​p​r​i​c​e​ ​I​D​ ​f​o​r​ ​t​h​i​s​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​p​r​i​c​e​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​i​s​ ​t​r​a​n​s​a​c​t​i​o​n​ ​i​t​e​m​.
+											 */
+											longDesc: string
+										}
+										quantity: {
+											/**
+											 * Q​u​a​n​t​i​t​y
+											 */
+											displayName: string
+											/**
+											 * Q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​i​s​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​i​s​ ​i​t​e​m​ ​t​o​ ​i​n​c​l​u​d​e​ ​i​n​ ​t​h​e​ ​t​r​a​n​s​a​c​t​i​o​n​.
+											 */
+											longDesc: string
+										}
 									}
 								}
 							}
@@ -112270,120 +114660,118 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											name: {
-												/**
-												 * I​t​e​m​ ​N​a​m​e
-												 */
-												displayName: string
-												/**
-												 * N​a​m​e​ ​o​f​ ​t​h​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​i​s​ ​i​t​e​m​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​s​h​o​w​n​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​d​u​r​i​n​g​ ​c​h​e​c​k​o​u​t​.
-												 */
-												longDesc: string
-											}
-											quantity: {
-												/**
-												 * Q​u​a​n​t​i​t​y
-												 */
-												displayName: string
-												/**
-												 * N​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​i​s​ ​i​t​e​m​ ​b​e​i​n​g​ ​p​u​r​c​h​a​s​e​d​.​ ​M​u​s​t​ ​b​e​ ​a​ ​p​o​s​i​t​i​v​e​ ​i​n​t​e​g​e​r​.
-												 */
-												longDesc: string
-											}
-											unit_price: {
-												/**
-												 * U​n​i​t​ ​P​r​i​c​e
-												 */
-												displayName: string
-												/**
-												 * P​r​i​c​e​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​i​s​ ​i​t​e​m​,​ ​b​e​f​o​r​e​ ​t​a​x​e​s​ ​a​n​d​ ​d​i​s​c​o​u​n​t​s​.
-												 */
-												longDesc: string
-											}
-											description: {
-												/**
-												 * I​t​e​m​ ​D​e​s​c​r​i​p​t​i​o​n
-												 */
-												displayName: string
-												/**
-												 * D​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * O​p​t​i​o​n​a​l​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​i​s​ ​i​t​e​m​.
-												 */
-												longDesc: string
-											}
-											sku: {
-												/**
-												 * S​K​U
-												 */
-												displayName: string
-												/**
-												 * S​t​o​c​k​ ​k​e​e​p​i​n​g​ ​u​n​i​t​ ​i​d​e​n​t​i​f​i​e​r
-												 */
-												shortDesc: string
-												/**
-												 * Y​o​u​r​ ​i​n​t​e​r​n​a​l​ ​s​t​o​c​k​ ​k​e​e​p​i​n​g​ ​u​n​i​t​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​i​n​v​e​n​t​o​r​y​ ​t​r​a​c​k​i​n​g​.
-												 */
-												longDesc: string
-											}
-											url: {
-												/**
-												 * I​t​e​m​ ​U​R​L
-												 */
-												displayName: string
-												/**
-												 * L​i​n​k​ ​t​o​ ​t​h​e​ ​i​t​e​m​ ​p​a​g​e
-												 */
-												shortDesc: string
-												/**
-												 * O​p​t​i​o​n​a​l​ ​U​R​L​ ​l​i​n​k​i​n​g​ ​t​o​ ​t​h​e​ ​p​r​o​d​u​c​t​ ​p​a​g​e​ ​w​h​e​r​e​ ​c​u​s​t​o​m​e​r​s​ ​c​a​n​ ​v​i​e​w​ ​m​o​r​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​i​s​ ​i​t​e​m​.
-												 */
-												longDesc: string
-											}
-											category: {
-												/**
-												 * I​t​e​m​ ​C​a​t​e​g​o​r​y
-												 */
-												displayName: string
-												/**
-												 * C​a​t​e​g​o​r​y​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​f​o​r​ ​t​h​i​s​ ​i​t​e​m​,​ ​w​h​i​c​h​ ​a​f​f​e​c​t​s​ ​p​a​y​m​e​n​t​ ​p​r​o​c​e​s​s​i​n​g​ ​a​n​d​ ​c​o​m​p​l​i​a​n​c​e​ ​r​e​q​u​i​r​e​m​e​n​t​s​.
-												 */
-												longDesc: string
-											}
-											tax_amount: {
-												/**
-												 * T​a​x​ ​A​m​o​u​n​t
-												 */
-												displayName: string
-												/**
-												 * T​a​x​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​i​t​e​m
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​t​a​x​ ​a​m​o​u​n​t​ ​s​p​e​c​i​f​i​c​a​l​l​y​ ​f​o​r​ ​t​h​i​s​ ​i​t​e​m​,​ ​c​a​l​c​u​l​a​t​e​d​ ​b​a​s​e​d​ ​o​n​ ​q​u​a​n​t​i​t​y​ ​a​n​d​ ​a​p​p​l​i​c​a​b​l​e​ ​t​a​x​ ​r​a​t​e​s​.
-												 */
-												longDesc: string
-											}
+									fields: {
+										name: {
+											/**
+											 * I​t​e​m​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * N​a​m​e​ ​o​f​ ​t​h​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​i​s​ ​i​t​e​m​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​s​h​o​w​n​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​d​u​r​i​n​g​ ​c​h​e​c​k​o​u​t​.
+											 */
+											longDesc: string
+										}
+										quantity: {
+											/**
+											 * Q​u​a​n​t​i​t​y
+											 */
+											displayName: string
+											/**
+											 * N​u​m​b​e​r​ ​o​f​ ​i​t​e​m​s
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​o​f​ ​t​h​i​s​ ​i​t​e​m​ ​b​e​i​n​g​ ​p​u​r​c​h​a​s​e​d​.​ ​M​u​s​t​ ​b​e​ ​a​ ​p​o​s​i​t​i​v​e​ ​i​n​t​e​g​e​r​.
+											 */
+											longDesc: string
+										}
+										unit_price: {
+											/**
+											 * U​n​i​t​ ​P​r​i​c​e
+											 */
+											displayName: string
+											/**
+											 * P​r​i​c​e​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​i​s​ ​i​t​e​m​,​ ​b​e​f​o​r​e​ ​t​a​x​e​s​ ​a​n​d​ ​d​i​s​c​o​u​n​t​s​.
+											 */
+											longDesc: string
+										}
+										description: {
+											/**
+											 * I​t​e​m​ ​D​e​s​c​r​i​p​t​i​o​n
+											 */
+											displayName: string
+											/**
+											 * D​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * O​p​t​i​o​n​a​l​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​i​s​ ​i​t​e​m​.
+											 */
+											longDesc: string
+										}
+										sku: {
+											/**
+											 * S​K​U
+											 */
+											displayName: string
+											/**
+											 * S​t​o​c​k​ ​k​e​e​p​i​n​g​ ​u​n​i​t​ ​i​d​e​n​t​i​f​i​e​r
+											 */
+											shortDesc: string
+											/**
+											 * Y​o​u​r​ ​i​n​t​e​r​n​a​l​ ​s​t​o​c​k​ ​k​e​e​p​i​n​g​ ​u​n​i​t​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​i​n​v​e​n​t​o​r​y​ ​t​r​a​c​k​i​n​g​.
+											 */
+											longDesc: string
+										}
+										url: {
+											/**
+											 * I​t​e​m​ ​U​R​L
+											 */
+											displayName: string
+											/**
+											 * L​i​n​k​ ​t​o​ ​t​h​e​ ​i​t​e​m​ ​p​a​g​e
+											 */
+											shortDesc: string
+											/**
+											 * O​p​t​i​o​n​a​l​ ​U​R​L​ ​l​i​n​k​i​n​g​ ​t​o​ ​t​h​e​ ​p​r​o​d​u​c​t​ ​p​a​g​e​ ​w​h​e​r​e​ ​c​u​s​t​o​m​e​r​s​ ​c​a​n​ ​v​i​e​w​ ​m​o​r​e​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​i​s​ ​i​t​e​m​.
+											 */
+											longDesc: string
+										}
+										category: {
+											/**
+											 * I​t​e​m​ ​C​a​t​e​g​o​r​y
+											 */
+											displayName: string
+											/**
+											 * C​a​t​e​g​o​r​y​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​c​l​a​s​s​i​f​i​c​a​t​i​o​n​ ​f​o​r​ ​t​h​i​s​ ​i​t​e​m​,​ ​w​h​i​c​h​ ​a​f​f​e​c​t​s​ ​p​a​y​m​e​n​t​ ​p​r​o​c​e​s​s​i​n​g​ ​a​n​d​ ​c​o​m​p​l​i​a​n​c​e​ ​r​e​q​u​i​r​e​m​e​n​t​s​.
+											 */
+											longDesc: string
+										}
+										tax_amount: {
+											/**
+											 * T​a​x​ ​A​m​o​u​n​t
+											 */
+											displayName: string
+											/**
+											 * T​a​x​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​a​x​ ​a​m​o​u​n​t​ ​s​p​e​c​i​f​i​c​a​l​l​y​ ​f​o​r​ ​t​h​i​s​ ​i​t​e​m​,​ ​c​a​l​c​u​l​a​t​e​d​ ​b​a​s​e​d​ ​o​n​ ​q​u​a​n​t​i​t​y​ ​a​n​d​ ​a​p​p​l​i​c​a​b​l​e​ ​t​a​x​ ​r​a​t​e​s​.
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -112516,50 +114904,48 @@ type RootTranslation = {
 							longDesc: string
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											fee_amount: {
-												/**
-												 * F​e​e​ ​A​m​o​u​n​t
-												 */
-												displayName: string
-												/**
-												 * P​l​a​t​f​o​r​m​ ​f​e​e​ ​a​m​o​u​n​t
-												 */
-												shortDesc: string
-												/**
-												 * T​h​e​ ​a​m​o​u​n​t​ ​o​f​ ​t​h​e​ ​p​l​a​t​f​o​r​m​ ​f​e​e​ ​t​o​ ​b​e​ ​c​o​l​l​e​c​t​e​d​ ​f​r​o​m​ ​t​h​i​s​ ​t​r​a​n​s​a​c​t​i​o​n​.
-												 */
-												longDesc: string
-											}
-											payee_email: {
-												/**
-												 * F​e​e​ ​R​e​c​i​p​i​e​n​t​ ​E​m​a​i​l
-												 */
-												displayName: string
-												/**
-												 * E​m​a​i​l​ ​o​f​ ​f​e​e​ ​r​e​c​i​p​i​e​n​t
-												 */
-												shortDesc: string
-												/**
-												 * E​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​h​a​t​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​e​ ​p​l​a​t​f​o​r​m​ ​f​e​e​.
-												 */
-												longDesc: string
-											}
-											payee_merchant_id: {
-												/**
-												 * F​e​e​ ​R​e​c​i​p​i​e​n​t​ ​M​e​r​c​h​a​n​t​ ​I​D
-												 */
-												displayName: string
-												/**
-												 * M​e​r​c​h​a​n​t​ ​I​D​ ​o​f​ ​f​e​e​ ​r​e​c​i​p​i​e​n​t
-												 */
-												shortDesc: string
-												/**
-												 * P​a​y​P​a​l​ ​m​e​r​c​h​a​n​t​ ​I​D​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​h​a​t​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​e​ ​p​l​a​t​f​o​r​m​ ​f​e​e​.
-												 */
-												longDesc: string
-											}
+									fields: {
+										fee_amount: {
+											/**
+											 * F​e​e​ ​A​m​o​u​n​t
+											 */
+											displayName: string
+											/**
+											 * P​l​a​t​f​o​r​m​ ​f​e​e​ ​a​m​o​u​n​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​a​m​o​u​n​t​ ​o​f​ ​t​h​e​ ​p​l​a​t​f​o​r​m​ ​f​e​e​ ​t​o​ ​b​e​ ​c​o​l​l​e​c​t​e​d​ ​f​r​o​m​ ​t​h​i​s​ ​t​r​a​n​s​a​c​t​i​o​n​.
+											 */
+											longDesc: string
+										}
+										payee_email: {
+											/**
+											 * F​e​e​ ​R​e​c​i​p​i​e​n​t​ ​E​m​a​i​l
+											 */
+											displayName: string
+											/**
+											 * E​m​a​i​l​ ​o​f​ ​f​e​e​ ​r​e​c​i​p​i​e​n​t
+											 */
+											shortDesc: string
+											/**
+											 * E​m​a​i​l​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​h​a​t​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​e​ ​p​l​a​t​f​o​r​m​ ​f​e​e​.
+											 */
+											longDesc: string
+										}
+										payee_merchant_id: {
+											/**
+											 * F​e​e​ ​R​e​c​i​p​i​e​n​t​ ​M​e​r​c​h​a​n​t​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * M​e​r​c​h​a​n​t​ ​I​D​ ​o​f​ ​f​e​e​ ​r​e​c​i​p​i​e​n​t
+											 */
+											shortDesc: string
+											/**
+											 * P​a​y​P​a​l​ ​m​e​r​c​h​a​n​t​ ​I​D​ ​o​f​ ​t​h​e​ ​a​c​c​o​u​n​t​ ​t​h​a​t​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​e​ ​p​l​a​t​f​o​r​m​ ​f​e​e​.
+											 */
+											longDesc: string
 										}
 									}
 								}
@@ -114380,6 +116766,40 @@ type RootTranslation = {
 							 * D​e​f​i​n​e​ ​t​h​e​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​s​ ​w​i​t​h​ ​t​i​t​l​e​s​ ​a​n​d​ ​U​R​L​s​.​ ​E​a​c​h​ ​b​u​t​t​o​n​ ​l​i​n​k​s​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​U​R​L​ ​w​h​e​n​ ​c​l​i​c​k​e​d​.
 							 */
 							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										title: {
+											/**
+											 * B​u​t​t​o​n​ ​T​i​t​l​e
+											 */
+											displayName: string
+											/**
+											 * T​e​x​t​ ​d​i​s​p​l​a​y​e​d​ ​o​n​ ​t​h​e​ ​b​u​t​t​o​n
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​s​h​o​w​n​ ​o​n​ ​t​h​e​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​.
+											 */
+											longDesc: string
+										}
+										url: {
+											/**
+											 * B​u​t​t​o​n​ ​U​R​L
+											 */
+											displayName: string
+											/**
+											 * U​R​L​ ​t​h​e​ ​b​u​t​t​o​n​ ​l​i​n​k​s​ ​t​o
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​U​R​L​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​o​p​e​n​e​d​ ​w​h​e​n​ ​t​h​e​ ​b​u​t​t​o​n​ ​i​s​ ​c​l​i​c​k​e​d​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
 						}
 						username: {
 							/**
@@ -114472,6 +116892,40 @@ type RootTranslation = {
 							 * D​e​f​i​n​e​ ​t​h​e​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​s​ ​w​i​t​h​ ​t​i​t​l​e​s​ ​a​n​d​ ​U​R​L​s​.
 							 */
 							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										title: {
+											/**
+											 * B​u​t​t​o​n​ ​T​i​t​l​e
+											 */
+											displayName: string
+											/**
+											 * T​e​x​t​ ​d​i​s​p​l​a​y​e​d​ ​o​n​ ​t​h​e​ ​b​u​t​t​o​n
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​s​h​o​w​n​ ​o​n​ ​t​h​e​ ​a​c​t​i​o​n​ ​b​u​t​t​o​n​.
+											 */
+											longDesc: string
+										}
+										url: {
+											/**
+											 * B​u​t​t​o​n​ ​U​R​L
+											 */
+											displayName: string
+											/**
+											 * U​R​L​ ​t​h​e​ ​b​u​t​t​o​n​ ​l​i​n​k​s​ ​t​o
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​U​R​L​ ​t​h​a​t​ ​w​i​l​l​ ​b​e​ ​o​p​e​n​e​d​ ​w​h​e​n​ ​t​h​e​ ​b​u​t​t​o​n​ ​i​s​ ​c​l​i​c​k​e​d​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
 						}
 						username: {
 							/**
@@ -116506,36 +118960,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											number: {
-												/**
-												 * Phone Number
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The phone number
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The phone number in any format
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Category
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Type of phone number
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The category or type of this phone number (work, mobile, home, or other)
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										number: {
+											/**
+											 * Phone Number
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The phone number
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The phone number in any format
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Category
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of phone number
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The category or type of this phone number (work, mobile, home, or other)
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -116570,36 +119022,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * URL
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Social media profile URL
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The full URL to the social media profile
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Platform
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Social media platform
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The social media platform (LinkedIn, Twitter, Facebook, YouTube, Quora, Instagram, Pinterest, or Other)
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										url: {
+											/**
+											 * URL
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Social media profile URL
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The full URL to the social media profile
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Platform
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Social media platform
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The social media platform (LinkedIn, Twitter, Facebook, YouTube, Quora, Instagram, Pinterest, or Other)
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -116634,36 +119084,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * URL
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Website URL
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The full URL of the website
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Category
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Type of website
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The category or purpose of this website (work, personal, or other)
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										url: {
+											/**
+											 * URL
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Website URL
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The full URL of the website
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Category
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of website
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The category or purpose of this website (work, personal, or other)
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -116846,36 +119294,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * URL
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Website URL
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The full URL of the website
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Category
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Type of website
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The category or purpose of this website (work, personal, or other)
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										url: {
+											/**
+											 * URL
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Website URL
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The full URL of the website
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Category
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of website
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The category or purpose of this website (work, personal, or other)
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -116896,36 +119342,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * URL
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Social media profile URL
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The full URL to the social media profile
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Platform
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Social media platform
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The social media platform (LinkedIn, Twitter, Facebook, YouTube, Quora, Instagram, Pinterest, or Other)
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										url: {
+											/**
+											 * URL
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Social media profile URL
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The full URL to the social media profile
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Platform
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Social media platform
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The social media platform (LinkedIn, Twitter, Facebook, YouTube, Quora, Instagram, Pinterest, or Other)
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -116992,36 +119436,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											number: {
-												/**
-												 * Phone Number
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The phone number
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The phone number in any format
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Category
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Type of phone number
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The category or type of this phone number
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										number: {
+											/**
+											 * Phone Number
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The phone number
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The phone number in any format
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Category
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of phone number
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The category or type of this phone number
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -117636,36 +120078,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											email: {
-												/**
-												 * Email Address
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The email address
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Email address
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Category
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Type of email
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The category or type of this email (work, personal, or other)
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										email: {
+											/**
+											 * Email Address
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The email address
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Email address
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Category
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of email
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The category or type of this email (work, personal, or other)
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -117686,36 +120126,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											number: {
-												/**
-												 * Phone Number
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The phone number
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Phone number
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Category
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Type of phone number
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The category or type of this phone number (work, mobile, home, or other)
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										number: {
+											/**
+											 * Phone Number
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The phone number
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Phone number
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Category
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of phone number
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The category or type of this phone number (work, mobile, home, or other)
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -117736,36 +120174,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * URL
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Social profile URL
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Social profile URL
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Platform
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Social media platform
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Social platform
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										url: {
+											/**
+											 * URL
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Social profile URL
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Social profile URL
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Platform
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Social media platform
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Social platform
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -117814,36 +120250,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * URL
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Website URL
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Website URL
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Category
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Type of website
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The category or purpose of this website (work, personal, or other)
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										url: {
+											/**
+											 * URL
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Website URL
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Website URL
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Category
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of website
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The category or purpose of this website (work, personal, or other)
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -120444,36 +122878,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											number: {
-												/**
-												 * Phone Number
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The phone number
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The phone number in any format
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Category
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Type of phone number
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The category or type of this phone number
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										number: {
+											/**
+											 * Phone Number
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The phone number
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The phone number in any format
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Category
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of phone number
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The category or type of this phone number
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -120508,36 +122940,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * URL
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Social media profile URL
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The full URL to the social media profile
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Platform
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Social media platform
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The social media platform
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										url: {
+											/**
+											 * URL
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Social media profile URL
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The full URL to the social media profile
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Platform
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Social media platform
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The social media platform
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -120572,36 +123002,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * URL
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Website URL
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The full URL of the website
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Category
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Type of website
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The category or purpose of this website
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										url: {
+											/**
+											 * URL
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Website URL
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The full URL of the website
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Category
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of website
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The category or purpose of this website
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -120798,36 +123226,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * URL
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Website URL
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The full URL of the website
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Category
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Type of website
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The category or purpose of this website
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										url: {
+											/**
+											 * URL
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Website URL
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The full URL of the website
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Category
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of website
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The category or purpose of this website
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -120848,36 +123274,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * URL
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Social media profile URL
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The full URL to the social media profile
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Platform
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Social media platform
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The social media platform
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										url: {
+											/**
+											 * URL
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Social media profile URL
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The full URL to the social media profile
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Platform
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Social media platform
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The social media platform
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -120944,36 +123368,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											number: {
-												/**
-												 * Phone Number
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The phone number
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The phone number in any format
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Category
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Type of phone number
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The category or type of this phone number
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										number: {
+											/**
+											 * Phone Number
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The phone number
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The phone number in any format
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Category
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of phone number
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The category or type of this phone number
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -121616,36 +124038,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											email: {
-												/**
-												 * Email Address
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The email address
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Email address
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Category
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Type of email
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The category or type of this email
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										email: {
+											/**
+											 * Email Address
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The email address
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Email address
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Category
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of email
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The category or type of this email
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -121666,36 +124086,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											number: {
-												/**
-												 * Phone Number
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The phone number
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Phone number
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Category
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Type of phone number
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The category or type of this phone number
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										number: {
+											/**
+											 * Phone Number
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The phone number
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Phone number
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Category
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of phone number
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The category or type of this phone number
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -121716,36 +124134,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * URL
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Social profile URL
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Social profile URL
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Platform
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Social media platform
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Social platform
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										url: {
+											/**
+											 * URL
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Social profile URL
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Social profile URL
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Platform
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Social media platform
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Social platform
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -121794,36 +124210,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											url: {
-												/**
-												 * URL
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Website URL
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Website URL
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Category
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Type of website
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The category or purpose of this website
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										url: {
+											/**
+											 * URL
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Website URL
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Website URL
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Category
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of website
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The category or purpose of this website
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -126804,34 +129218,36 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									field: {
-										/**
-										 * Field Name
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The API name of the field to filter on
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * Select or enter the field API name from the module. Available field names can be retrieved using the Fields Metadata API. The field must be searchable to be used in filtering.
-										 */
-										longDesc: () => LocalizedString
-									}
-									value: {
-										/**
-										 * Field Value
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The value that the field must equal
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * Enter the exact value that the field must equal for the record to match. The comparison uses the "equals" operator, so the field value must match this value exactly.
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * Field Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The API name of the field to filter on
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Select or enter the field API name from the module. Available field names can be retrieved using the Fields Metadata API. The field must be searchable to be used in filtering.
+											 */
+											longDesc: () => LocalizedString
+										}
+										value: {
+											/**
+											 * Field Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The value that the field must equal
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Enter the exact value that the field must equal for the record to match. The comparison uses the "equals" operator, so the field value must match this value exactly.
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -127367,50 +129783,48 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											id: {
-												/**
-												 * Tag ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The unique identifier of the tag
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique ID of an existing tag in the module. This ID takes precedence over the name field. Use the List Tags action to retrieve tag IDs. The tag must already exist in the module.
-												 */
-												longDesc: () => LocalizedString
-											}
-											name: {
-												/**
-												 * Tag Name
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The display name of the tag
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The display name of the tag. When both ID and name are provided, the ID takes precedence. If only the name is provided, the system will look up the tag by name.
-												 */
-												longDesc: () => LocalizedString
-											}
-											color_code: {
-												/**
-												 * Color Code
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Optional hexadecimal color code for the tag
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Optional hexadecimal color code for visual identification of the tag (e.g., #F17574, #57B1FD). The allowed color codes are predefined in Zoho CRM. If not specified or set to null, the tag will use its default color.
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										id: {
+											/**
+											 * Tag ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The unique identifier of the tag
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique ID of an existing tag in the module. This ID takes precedence over the name field. Use the List Tags action to retrieve tag IDs. The tag must already exist in the module.
+											 */
+											longDesc: () => LocalizedString
+										}
+										name: {
+											/**
+											 * Tag Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The display name of the tag
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The display name of the tag. When both ID and name are provided, the ID takes precedence. If only the name is provided, the system will look up the tag by name.
+											 */
+											longDesc: () => LocalizedString
+										}
+										color_code: {
+											/**
+											 * Color Code
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Optional hexadecimal color code for the tag
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Optional hexadecimal color code for visual identification of the tag (e.g., #F17574, #57B1FD). The allowed color codes are predefined in Zoho CRM. If not specified or set to null, the tag will use its default color.
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -129628,50 +132042,48 @@ export type TranslationFunctions = {
 										longDesc: () => LocalizedString
 										type: {
 											element_type: {
-												type: {
-													fields: {
-														type: {
-															/**
-															 * Type
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * The comparison operator
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Choose the comparison operator for this filter condition (equal, contains, empty, etc.).
-															 */
-															longDesc: () => LocalizedString
-														}
-														field: {
-															/**
-															 * Field
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * The field to filter on
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Select the table field to apply this filter condition to.
-															 */
-															longDesc: () => LocalizedString
-														}
-														value: {
-															/**
-															 * Value
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * The value to compare against
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * The value to compare the field against using the selected operator.
-															 */
-															longDesc: () => LocalizedString
-														}
+												fields: {
+													type: {
+														/**
+														 * Type
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * The comparison operator
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Choose the comparison operator for this filter condition (equal, contains, empty, etc.).
+														 */
+														longDesc: () => LocalizedString
+													}
+													field: {
+														/**
+														 * Field
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * The field to filter on
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Select the table field to apply this filter condition to.
+														 */
+														longDesc: () => LocalizedString
+													}
+													value: {
+														/**
+														 * Value
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * The value to compare against
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The value to compare the field against using the selected operator.
+														 */
+														longDesc: () => LocalizedString
 													}
 												}
 											}
@@ -129872,50 +132284,48 @@ export type TranslationFunctions = {
 										longDesc: () => LocalizedString
 										type: {
 											element_type: {
-												type: {
-													fields: {
-														type: {
-															/**
-															 * Type
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * The comparison operator
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Choose the comparison operator for this filter condition.
-															 */
-															longDesc: () => LocalizedString
-														}
-														field: {
-															/**
-															 * Field
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * The field to filter on
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Select the table field to apply this filter condition to.
-															 */
-															longDesc: () => LocalizedString
-														}
-														value: {
-															/**
-															 * Value
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * The value to match
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * The value to compare against. Only new rows matching this condition will trigger the event.
-															 */
-															longDesc: () => LocalizedString
-														}
+												fields: {
+													type: {
+														/**
+														 * Type
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * The comparison operator
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Choose the comparison operator for this filter condition.
+														 */
+														longDesc: () => LocalizedString
+													}
+													field: {
+														/**
+														 * Field
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * The field to filter on
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Select the table field to apply this filter condition to.
+														 */
+														longDesc: () => LocalizedString
+													}
+													value: {
+														/**
+														 * Value
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * The value to match
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The value to compare against. Only new rows matching this condition will trigger the event.
+														 */
+														longDesc: () => LocalizedString
 													}
 												}
 											}
@@ -147150,34 +149560,36 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									name: {
-										/**
-										 * Tag Name
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The name of the tag.
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * A descriptive name for the tag that will be used for categorization.
-										 */
-										longDesc: () => LocalizedString
-									}
-									value: {
-										/**
-										 * Tag Value
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The value of the tag.
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The value associated with this tag name.
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * Tag Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The name of the tag.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * A descriptive name for the tag that will be used for categorization.
+											 */
+											longDesc: () => LocalizedString
+										}
+										value: {
+											/**
+											 * Tag Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The value of the tag.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The value associated with this tag name.
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -148437,50 +150849,48 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											entity: {
-												/**
-												 * Entity Type
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Type of entity being mentioned
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The type of entity being mentioned (e.g., company)
-												 */
-												longDesc: () => LocalizedString
-											}
-											urn: {
-												/**
-												 * Entity URN
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * LinkedIn URN of the entity
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The LinkedIn URN (Uniform Resource Name) of the entity being mentioned
-												 */
-												longDesc: () => LocalizedString
-											}
-											start: {
-												/**
-												 * Start Position
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Character position where mention starts
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The character position in the text where the mention begins
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										entity: {
+											/**
+											 * Entity Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of entity being mentioned
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The type of entity being mentioned (e.g., company)
+											 */
+											longDesc: () => LocalizedString
+										}
+										urn: {
+											/**
+											 * Entity URN
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * LinkedIn URN of the entity
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The LinkedIn URN (Uniform Resource Name) of the entity being mentioned
+											 */
+											longDesc: () => LocalizedString
+										}
+										start: {
+											/**
+											 * Start Position
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Character position where mention starts
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The character position in the text where the mention begins
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -148605,50 +151015,48 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											entity: {
-												/**
-												 * Entity Type
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Type of entity being mentioned
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The type of entity being mentioned (e.g., company)
-												 */
-												longDesc: () => LocalizedString
-											}
-											urn: {
-												/**
-												 * Entity URN
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * LinkedIn URN of the entity
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The LinkedIn URN (Uniform Resource Name) of the entity being mentioned
-												 */
-												longDesc: () => LocalizedString
-											}
-											start: {
-												/**
-												 * Start Position
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Character position where mention starts
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The character position in the text where the mention begins
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										entity: {
+											/**
+											 * Entity Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of entity being mentioned
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The type of entity being mentioned (e.g., company)
+											 */
+											longDesc: () => LocalizedString
+										}
+										urn: {
+											/**
+											 * Entity URN
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * LinkedIn URN of the entity
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The LinkedIn URN (Uniform Resource Name) of the entity being mentioned
+											 */
+											longDesc: () => LocalizedString
+										}
+										start: {
+											/**
+											 * Start Position
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Character position where mention starts
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The character position in the text where the mention begins
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -148741,50 +151149,48 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											entity: {
-												/**
-												 * Entity Type
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Type of entity being mentioned
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The type of entity being mentioned (e.g., company)
-												 */
-												longDesc: () => LocalizedString
-											}
-											urn: {
-												/**
-												 * Entity URN
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * LinkedIn URN of the entity
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The LinkedIn URN (Uniform Resource Name) of the entity being mentioned
-												 */
-												longDesc: () => LocalizedString
-											}
-											start: {
-												/**
-												 * Start Position
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Character position where mention starts
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The character position in the text where the mention begins
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										entity: {
+											/**
+											 * Entity Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of entity being mentioned
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The type of entity being mentioned (e.g., company)
+											 */
+											longDesc: () => LocalizedString
+										}
+										urn: {
+											/**
+											 * Entity URN
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * LinkedIn URN of the entity
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The LinkedIn URN (Uniform Resource Name) of the entity being mentioned
+											 */
+											longDesc: () => LocalizedString
+										}
+										start: {
+											/**
+											 * Start Position
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Character position where mention starts
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The character position in the text where the mention begins
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -153433,36 +155839,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											id: {
-												/**
-												 * Field ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Custom field identifier
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the custom field
-												 */
-												longDesc: () => LocalizedString
-											}
-											value: {
-												/**
-												 * Field Value
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Custom field value
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The value to set for this custom field
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										id: {
+											/**
+											 * Field ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Custom field identifier
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the custom field
+											 */
+											longDesc: () => LocalizedString
+										}
+										value: {
+											/**
+											 * Field Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Custom field value
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The value to set for this custom field
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -154777,36 +157181,34 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											id: {
-												/**
-												 * Field ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Custom field identifier
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the custom field
-												 */
-												longDesc: () => LocalizedString
-											}
-											value: {
-												/**
-												 * Field Value
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Custom field value
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The updated value for this custom field
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										id: {
+											/**
+											 * Field ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Custom field identifier
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the custom field
+											 */
+											longDesc: () => LocalizedString
+										}
+										value: {
+											/**
+											 * Field Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Custom field value
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The updated value for this custom field
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -157182,34 +159584,36 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									start_date: {
-										/**
-										 * Start Date
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The start date of the range
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The inclusive start date for the query in YYYY-MM-DD format, or relative date like "7daysAgo", "yesterday".
-										 */
-										longDesc: () => LocalizedString
-									}
-									end_date: {
-										/**
-										 * End Date
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The end date of the range
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The inclusive end date for the query in YYYY-MM-DD format, or relative date like "today", "yesterday".
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										start_date: {
+											/**
+											 * Start Date
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The start date of the range
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The inclusive start date for the query in YYYY-MM-DD format, or relative date like "7daysAgo", "yesterday".
+											 */
+											longDesc: () => LocalizedString
+										}
+										end_date: {
+											/**
+											 * End Date
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The end date of the range
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The inclusive end date for the query in YYYY-MM-DD format, or relative date like "today", "yesterday".
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -157228,20 +159632,22 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									name: {
-										/**
-										 * Metric Name
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The API name of the metric
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The API name of the metric to include in the report.
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * Metric Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The API name of the metric
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The API name of the metric to include in the report.
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -157260,20 +159666,22 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									name: {
-										/**
-										 * Dimension Name
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The API name of the dimension
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The API name of the dimension to include in the report.
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * Dimension Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The API name of the dimension
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The API name of the dimension to include in the report.
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -157320,48 +159728,50 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									field_name: {
-										/**
-										 * Field Name
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The dimension or metric name to sort by
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The name of the dimension or metric to use for sorting.
-										 */
-										longDesc: () => LocalizedString
-									}
-									desc: {
-										/**
-										 * Descending
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Sort in descending order
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * If true, sorts in descending order. If false, sorts in ascending order.
-										 */
-										longDesc: () => LocalizedString
-									}
-									order_type: {
-										/**
-										 * Order Type
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Whether to sort by dimension or metric
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * Specify whether the field is a dimension or metric for proper sorting.
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										field_name: {
+											/**
+											 * Field Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The dimension or metric name to sort by
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The name of the dimension or metric to use for sorting.
+											 */
+											longDesc: () => LocalizedString
+										}
+										desc: {
+											/**
+											 * Descending
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Sort in descending order
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * If true, sorts in descending order. If false, sorts in ascending order.
+											 */
+											longDesc: () => LocalizedString
+										}
+										order_type: {
+											/**
+											 * Order Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Whether to sort by dimension or metric
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Specify whether the field is a dimension or metric for proper sorting.
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -157466,20 +159876,22 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									name: {
-										/**
-										 * Metric Name
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The API name of the metric
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The API name of the real-time metric to include.
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * Metric Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The API name of the metric
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The API name of the real-time metric to include.
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -157498,20 +159910,22 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									name: {
-										/**
-										 * Dimension Name
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The API name of the dimension
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The API name of the real-time dimension to include.
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * Dimension Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The API name of the dimension
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The API name of the real-time dimension to include.
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -157530,48 +159944,50 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									name: {
-										/**
-										 * Range Name
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * A name for this time range
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * An optional name to identify this time range in the response.
-										 */
-										longDesc: () => LocalizedString
-									}
-									start_minutes_ago: {
-										/**
-										 * Start Minutes Ago
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Start of the range in minutes ago
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The start of the minute range, expressed as minutes ago (e.g., 29 for 29 minutes ago).
-										 */
-										longDesc: () => LocalizedString
-									}
-									end_minutes_ago: {
-										/**
-										 * End Minutes Ago
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * End of the range in minutes ago
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The end of the minute range, expressed as minutes ago (e.g., 0 for current minute).
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * Range Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * A name for this time range
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * An optional name to identify this time range in the response.
+											 */
+											longDesc: () => LocalizedString
+										}
+										start_minutes_ago: {
+											/**
+											 * Start Minutes Ago
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Start of the range in minutes ago
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The start of the minute range, expressed as minutes ago (e.g., 29 for 29 minutes ago).
+											 */
+											longDesc: () => LocalizedString
+										}
+										end_minutes_ago: {
+											/**
+											 * End Minutes Ago
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * End of the range in minutes ago
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The end of the minute range, expressed as minutes ago (e.g., 0 for current minute).
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -157618,48 +160034,50 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									field_name: {
-										/**
-										 * Field Name
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The dimension or metric name to sort by
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The name of the dimension or metric to use for sorting.
-										 */
-										longDesc: () => LocalizedString
-									}
-									desc: {
-										/**
-										 * Descending
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Sort in descending order
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * If true, sorts in descending order.
-										 */
-										longDesc: () => LocalizedString
-									}
-									order_type: {
-										/**
-										 * Order Type
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Whether to sort by dimension or metric
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * Specify whether the field is a dimension or metric.
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										field_name: {
+											/**
+											 * Field Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The dimension or metric name to sort by
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The name of the dimension or metric to use for sorting.
+											 */
+											longDesc: () => LocalizedString
+										}
+										desc: {
+											/**
+											 * Descending
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Sort in descending order
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * If true, sorts in descending order.
+											 */
+											longDesc: () => LocalizedString
+										}
+										order_type: {
+											/**
+											 * Order Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Whether to sort by dimension or metric
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Specify whether the field is a dimension or metric.
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -157752,130 +160170,138 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									date_ranges: {
-										/**
-										 * Date Ranges
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The date ranges for this report
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The date ranges for this specific report in the batch.
-										 */
-										longDesc: () => LocalizedString
-										type: {
-											fields: {
-												start_date: {
-													/**
-													 * Start Date
-													 */
-													displayName: () => LocalizedString
-													/**
-													 * The start date of the range
-													 */
-													shortDesc: () => LocalizedString
-													/**
-													 * The start date in YYYY-MM-DD format or relative format.
-													 */
-													longDesc: () => LocalizedString
-												}
-												end_date: {
-													/**
-													 * End Date
-													 */
-													displayName: () => LocalizedString
-													/**
-													 * The end date of the range
-													 */
-													shortDesc: () => LocalizedString
-													/**
-													 * The end date in YYYY-MM-DD format or relative format.
-													 */
-													longDesc: () => LocalizedString
-												}
-											}
-										}
-									}
-									metrics: {
-										/**
-										 * Metrics
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The metrics for this report
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The metrics to include in this specific report.
-										 */
-										longDesc: () => LocalizedString
-										type: {
-											fields: {
-												name: {
-													/**
-													 * Metric Name
-													 */
-													displayName: () => LocalizedString
-													/**
-													 * The API name of the metric
-													 */
-													shortDesc: () => LocalizedString
-													/**
-													 * The metric name.
-													 */
-													longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										date_ranges: {
+											/**
+											 * Date Ranges
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The date ranges for this report
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The date ranges for this specific report in the batch.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												element_type: {
+													fields: {
+														start_date: {
+															/**
+															 * Start Date
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * The start date of the range
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The start date in YYYY-MM-DD format or relative format.
+															 */
+															longDesc: () => LocalizedString
+														}
+														end_date: {
+															/**
+															 * End Date
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * The end date of the range
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The end date in YYYY-MM-DD format or relative format.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
 												}
 											}
 										}
-									}
-									dimensions: {
-										/**
-										 * Dimensions
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The dimensions for this report
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The dimensions to include in this specific report.
-										 */
-										longDesc: () => LocalizedString
-										type: {
-											fields: {
-												name: {
-													/**
-													 * Dimension Name
-													 */
-													displayName: () => LocalizedString
-													/**
-													 * The API name of the dimension
-													 */
-													shortDesc: () => LocalizedString
-													/**
-													 * The dimension name.
-													 */
-													longDesc: () => LocalizedString
+										metrics: {
+											/**
+											 * Metrics
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The metrics for this report
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The metrics to include in this specific report.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												element_type: {
+													fields: {
+														name: {
+															/**
+															 * Metric Name
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * The API name of the metric
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The metric name.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
 												}
 											}
 										}
-									}
-									limit: {
-										/**
-										 * Limit
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Maximum rows for this report
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The maximum number of rows to return for this specific report.
-										 */
-										longDesc: () => LocalizedString
+										dimensions: {
+											/**
+											 * Dimensions
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The dimensions for this report
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The dimensions to include in this specific report.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												element_type: {
+													fields: {
+														name: {
+															/**
+															 * Dimension Name
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * The API name of the dimension
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * The dimension name.
+															 */
+															longDesc: () => LocalizedString
+														}
+													}
+												}
+											}
+										}
+										limit: {
+											/**
+											 * Limit
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Maximum rows for this report
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The maximum number of rows to return for this specific report.
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -157924,20 +160350,22 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									name: {
-										/**
-										 * Dimension Name
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The API name of the dimension
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The dimension name to check compatibility for.
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * Dimension Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The API name of the dimension
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The dimension name to check compatibility for.
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -157956,20 +160384,22 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									name: {
-										/**
-										 * Metric Name
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The API name of the metric
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The metric name to check compatibility for.
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * Metric Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The API name of the metric
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The metric name to check compatibility for.
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -158086,34 +160516,36 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									field: {
-										/**
-										 * Field
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Field to sort by
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The field to sort the results by (e.g., name, modifiedTime, createdTime).
-										 */
-										longDesc: () => LocalizedString
-									}
-									direction: {
-										/**
-										 * Direction
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Sort direction
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The direction to sort - either ascending (asc) or descending (desc).
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * Field
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Field to sort by
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The field to sort the results by (e.g., name, modifiedTime, createdTime).
+											 */
+											longDesc: () => LocalizedString
+										}
+										direction: {
+											/**
+											 * Direction
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Sort direction
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The direction to sort - either ascending (asc) or descending (desc).
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -158393,50 +160825,48 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											placeholder: {
-												/**
-												 * Placeholder
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Placeholder text to replace
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The placeholder text in the template to be replaced (e.g., "{{NAME}}").
-												 */
-												longDesc: (arg0: number | string | boolean) => LocalizedString
-											}
-											replacement_text: {
-												/**
-												 * Replacement Text
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Text to replace placeholder with
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The text that will replace the placeholder in the new document.
-												 */
-												longDesc: () => LocalizedString
-											}
-											match_case: {
-												/**
-												 * Match Case
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Case-sensitive replacement
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Whether the placeholder replacement should be case-sensitive.
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										placeholder: {
+											/**
+											 * Placeholder
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Placeholder text to replace
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The placeholder text in the template to be replaced (e.g., "{{NAME}}").
+											 */
+											longDesc: (arg0: number | string | boolean) => LocalizedString
+										}
+										replacement_text: {
+											/**
+											 * Replacement Text
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Text to replace placeholder with
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The text that will replace the placeholder in the new document.
+											 */
+											longDesc: () => LocalizedString
+										}
+										match_case: {
+											/**
+											 * Match Case
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Case-sensitive replacement
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Whether the placeholder replacement should be case-sensitive.
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -158499,64 +160929,62 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											placeholder: {
-												/**
-												 * Placeholder
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Image placeholder text
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The placeholder text in the template to be replaced with an image.
-												 */
-												longDesc: () => LocalizedString
-											}
-											image_url: {
-												/**
-												 * Image URL
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * URL of the image to insert
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The URL of the image that will replace the placeholder.
-												 */
-												longDesc: () => LocalizedString
-											}
-											width: {
-												/**
-												 * Width
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Image width in points
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The width of the inserted image in points.
-												 */
-												longDesc: () => LocalizedString
-											}
-											height: {
-												/**
-												 * Height
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Image height in points
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The height of the inserted image in points.
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										placeholder: {
+											/**
+											 * Placeholder
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Image placeholder text
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The placeholder text in the template to be replaced with an image.
+											 */
+											longDesc: () => LocalizedString
+										}
+										image_url: {
+											/**
+											 * Image URL
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * URL of the image to insert
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The URL of the image that will replace the placeholder.
+											 */
+											longDesc: () => LocalizedString
+										}
+										width: {
+											/**
+											 * Width
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Image width in points
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The width of the inserted image in points.
+											 */
+											longDesc: () => LocalizedString
+										}
+										height: {
+											/**
+											 * Height
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Image height in points
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The height of the inserted image in points.
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -159528,48 +161956,50 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									question_id: {
-										/**
-										 * Question ID
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The question to filter by
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The unique identifier of the question to filter responses by.
-										 */
-										longDesc: () => LocalizedString
-									}
-									filter_type: {
-										/**
-										 * Filter Type
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Type of filter to apply
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * Whether the answer should contain or exactly equal the filter value.
-										 */
-										longDesc: () => LocalizedString
-									}
-									value: {
-										/**
-										 * Filter Value
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Value to filter by
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The value to match against the question answers.
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										question_id: {
+											/**
+											 * Question ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The question to filter by
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the question to filter responses by.
+											 */
+											longDesc: () => LocalizedString
+										}
+										filter_type: {
+											/**
+											 * Filter Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of filter to apply
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Whether the answer should contain or exactly equal the filter value.
+											 */
+											longDesc: () => LocalizedString
+										}
+										value: {
+											/**
+											 * Filter Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Value to filter by
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The value to match against the question answers.
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -160756,34 +163186,36 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									field: {
-										/**
-										 * Field
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Field to sort by
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The file property to use for sorting, such as name, creation time, or modification time.
-										 */
-										longDesc: () => LocalizedString
-									}
-									direction: {
-										/**
-										 * Direction
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Sort direction
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The direction to sort in, either ascending (asc) or descending (desc).
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * Field
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Field to sort by
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The file property to use for sorting, such as name, creation time, or modification time.
+											 */
+											longDesc: () => LocalizedString
+										}
+										direction: {
+											/**
+											 * Direction
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Sort direction
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The direction to sort in, either ascending (asc) or descending (desc).
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -161424,34 +163856,36 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									field: {
-										/**
-										 * Field
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Field to sort by
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The field to sort the results by (e.g., name, modifiedTime, createdTime).
-										 */
-										longDesc: () => LocalizedString
-									}
-									direction: {
-										/**
-										 * Direction
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Sort direction
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The direction to sort - either ascending (asc) or descending (desc).
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										field: {
+											/**
+											 * Field
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Field to sort by
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The field to sort the results by (e.g., name, modifiedTime, createdTime).
+											 */
+											longDesc: () => LocalizedString
+										}
+										direction: {
+											/**
+											 * Direction
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Sort direction
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The direction to sort - either ascending (asc) or descending (desc).
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -161788,20 +164222,22 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									row_index: {
-										/**
-										 * Row Index
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The index of the row to update.
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The row number to update, starting from 2 (row 1 is reserved for headers). This number must refer to an existing row in the spreadsheet.
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										row_index: {
+											/**
+											 * Row Index
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The index of the row to update.
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The row number to update, starting from 2 (row 1 is reserved for headers). This number must refer to an existing row in the spreadsheet.
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -162936,34 +165372,36 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									number: {
-										/**
-										 * Phone Number
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The phone number
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The phone number value.
-										 */
-										longDesc: () => LocalizedString
-									}
-									type: {
-										/**
-										 * Phone Type
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Type of phone number
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The type of phone number: "home", "work", "mobile", "main", "homeFax", "workFax", "pager", or "other". Default is "other".
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										number: {
+											/**
+											 * Phone Number
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The phone number
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The phone number value.
+											 */
+											longDesc: () => LocalizedString
+										}
+										type: {
+											/**
+											 * Phone Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of phone number
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The type of phone number: "home", "work", "mobile", "main", "homeFax", "workFax", "pager", or "other". Default is "other".
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -164517,148 +166955,146 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											amount: {
-												/**
-												 * Amount
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The amount for this line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The monetary amount for this specific line item
-												 */
-												longDesc: () => LocalizedString
-											}
-											description: {
-												/**
-												 * Description
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Description of the line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * A detailed description of what this line item represents
-												 */
-												longDesc: () => LocalizedString
-											}
-											tax_code_id: {
-												/**
-												 * Tax Code ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The tax code for this line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the tax code to apply to this line item
-												 */
-												longDesc: () => LocalizedString
-											}
-											class_id: {
-												/**
-												 * Class ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The class for this line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the class to categorize this line item
-												 */
-												longDesc: () => LocalizedString
-											}
-											customer_id: {
-												/**
-												 * Customer ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The customer for this line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the customer if this expense is billable
-												 */
-												longDesc: () => LocalizedString
-											}
-											billable_status: {
-												/**
-												 * Billable Status
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Whether this line item is billable
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Indicates if this expense can be billed to a customer
-												 */
-												longDesc: () => LocalizedString
-											}
-											account_id: {
-												/**
-												 * Account ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The account for this expense
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the account to categorize this expense
-												 */
-												longDesc: () => LocalizedString
-											}
-											item_id: {
-												/**
-												 * Item ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The item for this line
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the item being purchased
-												 */
-												longDesc: () => LocalizedString
-											}
-											quantity: {
-												/**
-												 * Quantity
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The quantity of the item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The number of units of the item being purchased
-												 */
-												longDesc: () => LocalizedString
-											}
-											unit_price: {
-												/**
-												 * Unit Price
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The price per unit
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The cost per individual unit of the item
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										amount: {
+											/**
+											 * Amount
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The amount for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The monetary amount for this specific line item
+											 */
+											longDesc: () => LocalizedString
+										}
+										description: {
+											/**
+											 * Description
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Description of the line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * A detailed description of what this line item represents
+											 */
+											longDesc: () => LocalizedString
+										}
+										tax_code_id: {
+											/**
+											 * Tax Code ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The tax code for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the tax code to apply to this line item
+											 */
+											longDesc: () => LocalizedString
+										}
+										class_id: {
+											/**
+											 * Class ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The class for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the class to categorize this line item
+											 */
+											longDesc: () => LocalizedString
+										}
+										customer_id: {
+											/**
+											 * Customer ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The customer for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the customer if this expense is billable
+											 */
+											longDesc: () => LocalizedString
+										}
+										billable_status: {
+											/**
+											 * Billable Status
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Whether this line item is billable
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Indicates if this expense can be billed to a customer
+											 */
+											longDesc: () => LocalizedString
+										}
+										account_id: {
+											/**
+											 * Account ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The account for this expense
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the account to categorize this expense
+											 */
+											longDesc: () => LocalizedString
+										}
+										item_id: {
+											/**
+											 * Item ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The item for this line
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the item being purchased
+											 */
+											longDesc: () => LocalizedString
+										}
+										quantity: {
+											/**
+											 * Quantity
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The quantity of the item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The number of units of the item being purchased
+											 */
+											longDesc: () => LocalizedString
+										}
+										unit_price: {
+											/**
+											 * Unit Price
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The price per unit
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The cost per individual unit of the item
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -164723,148 +167159,146 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											amount: {
-												/**
-												 * Amount
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The amount for this line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The monetary amount for this specific line item
-												 */
-												longDesc: () => LocalizedString
-											}
-											description: {
-												/**
-												 * Description
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Description of the line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * A detailed description of what this line item represents
-												 */
-												longDesc: () => LocalizedString
-											}
-											tax_code_id: {
-												/**
-												 * Tax Code ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The tax code for this line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the tax code to apply to this line item
-												 */
-												longDesc: () => LocalizedString
-											}
-											class_id: {
-												/**
-												 * Class ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The class for this line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the class to categorize this line item
-												 */
-												longDesc: () => LocalizedString
-											}
-											customer_id: {
-												/**
-												 * Customer ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The customer for this line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the customer if this expense is billable
-												 */
-												longDesc: () => LocalizedString
-											}
-											billable_status: {
-												/**
-												 * Billable Status
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Whether this line item is billable
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Indicates if this expense can be billed to a customer
-												 */
-												longDesc: () => LocalizedString
-											}
-											account_id: {
-												/**
-												 * Account ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The account for this expense
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the account to categorize this expense
-												 */
-												longDesc: () => LocalizedString
-											}
-											item_id: {
-												/**
-												 * Item ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The item for this line
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the item being purchased
-												 */
-												longDesc: () => LocalizedString
-											}
-											quantity: {
-												/**
-												 * Quantity
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The quantity of the item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The number of units of the item being purchased
-												 */
-												longDesc: () => LocalizedString
-											}
-											unit_price: {
-												/**
-												 * Unit Price
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The price per unit
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The cost per individual unit of the item
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										amount: {
+											/**
+											 * Amount
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The amount for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The monetary amount for this specific line item
+											 */
+											longDesc: () => LocalizedString
+										}
+										description: {
+											/**
+											 * Description
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Description of the line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * A detailed description of what this line item represents
+											 */
+											longDesc: () => LocalizedString
+										}
+										tax_code_id: {
+											/**
+											 * Tax Code ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The tax code for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the tax code to apply to this line item
+											 */
+											longDesc: () => LocalizedString
+										}
+										class_id: {
+											/**
+											 * Class ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The class for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the class to categorize this line item
+											 */
+											longDesc: () => LocalizedString
+										}
+										customer_id: {
+											/**
+											 * Customer ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The customer for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the customer if this expense is billable
+											 */
+											longDesc: () => LocalizedString
+										}
+										billable_status: {
+											/**
+											 * Billable Status
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Whether this line item is billable
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Indicates if this expense can be billed to a customer
+											 */
+											longDesc: () => LocalizedString
+										}
+										account_id: {
+											/**
+											 * Account ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The account for this expense
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the account to categorize this expense
+											 */
+											longDesc: () => LocalizedString
+										}
+										item_id: {
+											/**
+											 * Item ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The item for this line
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the item being purchased
+											 */
+											longDesc: () => LocalizedString
+										}
+										quantity: {
+											/**
+											 * Quantity
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The quantity of the item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The number of units of the item being purchased
+											 */
+											longDesc: () => LocalizedString
+										}
+										unit_price: {
+											/**
+											 * Unit Price
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The price per unit
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The cost per individual unit of the item
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -166205,120 +168639,118 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											amount: {
-												/**
-												 * Amount
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The amount for this line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The total monetary amount for this specific line item
-												 */
-												longDesc: () => LocalizedString
-											}
-											description: {
-												/**
-												 * Description
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Description of the line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * A detailed description of what this line item represents
-												 */
-												longDesc: () => LocalizedString
-											}
-											quantity: {
-												/**
-												 * Quantity
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The quantity of the item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The number of units of the item being estimated
-												 */
-												longDesc: () => LocalizedString
-											}
-											unit_price: {
-												/**
-												 * Unit Price
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The price per unit
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The cost per individual unit of the item
-												 */
-												longDesc: () => LocalizedString
-											}
-											item_id: {
-												/**
-												 * Item ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The item for this line
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the item being estimated
-												 */
-												longDesc: () => LocalizedString
-											}
-											service_date: {
-												/**
-												 * Service Date
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The date when the service will be provided
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The specific date when the service or item will be delivered
-												 */
-												longDesc: () => LocalizedString
-											}
-											tax_code_id: {
-												/**
-												 * Tax Code ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The tax code for this line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the tax code to apply to this line item
-												 */
-												longDesc: () => LocalizedString
-											}
-											class_id: {
-												/**
-												 * Class ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The class for this line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the class to categorize this line item
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										amount: {
+											/**
+											 * Amount
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The amount for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The total monetary amount for this specific line item
+											 */
+											longDesc: () => LocalizedString
+										}
+										description: {
+											/**
+											 * Description
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Description of the line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * A detailed description of what this line item represents
+											 */
+											longDesc: () => LocalizedString
+										}
+										quantity: {
+											/**
+											 * Quantity
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The quantity of the item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The number of units of the item being estimated
+											 */
+											longDesc: () => LocalizedString
+										}
+										unit_price: {
+											/**
+											 * Unit Price
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The price per unit
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The cost per individual unit of the item
+											 */
+											longDesc: () => LocalizedString
+										}
+										item_id: {
+											/**
+											 * Item ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The item for this line
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the item being estimated
+											 */
+											longDesc: () => LocalizedString
+										}
+										service_date: {
+											/**
+											 * Service Date
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The date when the service will be provided
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The specific date when the service or item will be delivered
+											 */
+											longDesc: () => LocalizedString
+										}
+										tax_code_id: {
+											/**
+											 * Tax Code ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The tax code for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the tax code to apply to this line item
+											 */
+											longDesc: () => LocalizedString
+										}
+										class_id: {
+											/**
+											 * Class ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The class for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the class to categorize this line item
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -166593,120 +169025,118 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											amount: {
-												/**
-												 * Amount
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The amount for this line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The total monetary amount for this specific line item
-												 */
-												longDesc: () => LocalizedString
-											}
-											description: {
-												/**
-												 * Description
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Description of the line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * A detailed description of what this line item represents
-												 */
-												longDesc: () => LocalizedString
-											}
-											quantity: {
-												/**
-												 * Quantity
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The quantity of the item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The number of units of the item being invoiced
-												 */
-												longDesc: () => LocalizedString
-											}
-											unit_price: {
-												/**
-												 * Unit Price
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The price per unit
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The cost per individual unit of the item
-												 */
-												longDesc: () => LocalizedString
-											}
-											item_id: {
-												/**
-												 * Item ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The item for this line
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the item being invoiced
-												 */
-												longDesc: () => LocalizedString
-											}
-											service_date: {
-												/**
-												 * Service Date
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The date when the service was provided
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The specific date when the service or item was delivered
-												 */
-												longDesc: () => LocalizedString
-											}
-											tax_code_id: {
-												/**
-												 * Tax Code ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The tax code for this line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the tax code to apply to this line item
-												 */
-												longDesc: () => LocalizedString
-											}
-											class_id: {
-												/**
-												 * Class ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The class for this line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the class to categorize this line item
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										amount: {
+											/**
+											 * Amount
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The amount for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The total monetary amount for this specific line item
+											 */
+											longDesc: () => LocalizedString
+										}
+										description: {
+											/**
+											 * Description
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Description of the line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * A detailed description of what this line item represents
+											 */
+											longDesc: () => LocalizedString
+										}
+										quantity: {
+											/**
+											 * Quantity
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The quantity of the item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The number of units of the item being invoiced
+											 */
+											longDesc: () => LocalizedString
+										}
+										unit_price: {
+											/**
+											 * Unit Price
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The price per unit
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The cost per individual unit of the item
+											 */
+											longDesc: () => LocalizedString
+										}
+										item_id: {
+											/**
+											 * Item ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The item for this line
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the item being invoiced
+											 */
+											longDesc: () => LocalizedString
+										}
+										service_date: {
+											/**
+											 * Service Date
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The date when the service was provided
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The specific date when the service or item was delivered
+											 */
+											longDesc: () => LocalizedString
+										}
+										tax_code_id: {
+											/**
+											 * Tax Code ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The tax code for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the tax code to apply to this line item
+											 */
+											longDesc: () => LocalizedString
+										}
+										class_id: {
+											/**
+											 * Class ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The class for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the class to categorize this line item
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -166995,120 +169425,118 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											amount: {
-												/**
-												 * Amount
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The amount for this line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The total monetary amount for this specific line item
-												 */
-												longDesc: () => LocalizedString
-											}
-											description: {
-												/**
-												 * Description
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Description of the line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * A detailed description of what this line item represents
-												 */
-												longDesc: () => LocalizedString
-											}
-											quantity: {
-												/**
-												 * Quantity
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The quantity of the item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The number of units of the item being invoiced
-												 */
-												longDesc: () => LocalizedString
-											}
-											unit_price: {
-												/**
-												 * Unit Price
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The price per unit
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The cost per individual unit of the item
-												 */
-												longDesc: () => LocalizedString
-											}
-											item_id: {
-												/**
-												 * Item ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The item for this line
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the item being invoiced
-												 */
-												longDesc: () => LocalizedString
-											}
-											service_date: {
-												/**
-												 * Service Date
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The date when the service was provided
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The specific date when the service or item was delivered
-												 */
-												longDesc: () => LocalizedString
-											}
-											tax_code_id: {
-												/**
-												 * Tax Code ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The tax code for this line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the tax code to apply to this line item
-												 */
-												longDesc: () => LocalizedString
-											}
-											class_id: {
-												/**
-												 * Class ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The class for this line item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The unique identifier of the class to categorize this line item
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										amount: {
+											/**
+											 * Amount
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The amount for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The total monetary amount for this specific line item
+											 */
+											longDesc: () => LocalizedString
+										}
+										description: {
+											/**
+											 * Description
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Description of the line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * A detailed description of what this line item represents
+											 */
+											longDesc: () => LocalizedString
+										}
+										quantity: {
+											/**
+											 * Quantity
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The quantity of the item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The number of units of the item being invoiced
+											 */
+											longDesc: () => LocalizedString
+										}
+										unit_price: {
+											/**
+											 * Unit Price
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The price per unit
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The cost per individual unit of the item
+											 */
+											longDesc: () => LocalizedString
+										}
+										item_id: {
+											/**
+											 * Item ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The item for this line
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the item being invoiced
+											 */
+											longDesc: () => LocalizedString
+										}
+										service_date: {
+											/**
+											 * Service Date
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The date when the service was provided
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The specific date when the service or item was delivered
+											 */
+											longDesc: () => LocalizedString
+										}
+										tax_code_id: {
+											/**
+											 * Tax Code ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The tax code for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the tax code to apply to this line item
+											 */
+											longDesc: () => LocalizedString
+										}
+										class_id: {
+											/**
+											 * Class ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The class for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the class to categorize this line item
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -178402,6 +180830,1866 @@ export type TranslationFunctions = {
 				}
 			}
 		}
+		Mautic: {
+			/**
+			 * Mautic
+			 */
+			displayName: () => LocalizedString
+			groups: {
+				/**
+				 * Marketing Automation
+				 */
+				'0': () => LocalizedString
+				/**
+				 * CRM
+				 */
+				'1': () => LocalizedString
+				/**
+				 * Email & Email Marketing
+				 */
+				'2': () => LocalizedString
+			}
+			/**
+			 * Open-source marketing automation platform
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Connect your Mautic instance to automate marketing campaigns, manage contacts and companies, segment audiences, and send targeted emails. Build powerful marketing workflows with full control over your data.
+			 */
+			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Mautic
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect your Mautic instance, you will need your **Instance URL**, **Username**, and **Password**.
+		
+			## Prerequisites
+		
+			Before connecting, ensure API access is enabled in your Mautic instance:
+		
+			1. Go to **Settings** (gear icon) → **Configuration** → **API Settings**
+			2. Set **API enabled** to **Yes**
+			3. Set **Enable HTTP basic auth?** to **Yes**
+			4. Save the configuration
+		
+			## Connection Details
+		
+			### Instance URL
+			The URL of your Mautic installation (e.g., `https://mautic.yourcompany.com`)
+		
+			### Username
+			Your Mautic login username or email address
+		
+			### Password
+			Your Mautic login password
+		
+			**Note:** For security, we recommend creating a dedicated API user with appropriate permissions rather than using your main admin account.
+				 */
+				content: () => LocalizedString
+			}
+			actions: {
+				add_contact_to_campaign: {
+					groups: {
+						/**
+						 * Campaign Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Add Contact to Campaign
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Manually add a contact to a campaign
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Add a specific contact to a campaign in Mautic. This allows you to manually include contacts in campaign workflows.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						campaign: {
+							/**
+							 * Campaign
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The campaign to add the contact to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the campaign that you want to add the contact to
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to add to the campaign
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the contact that you want to add to the campaign
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				remove_contact_from_campaign: {
+					groups: {
+						/**
+						 * Campaign Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Remove Contact from Campaign
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove a contact from a campaign
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Remove a specific contact from a campaign in Mautic. This stops the contact from receiving further campaign actions.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						campaign: {
+							/**
+							 * Campaign
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The campaign to remove the contact from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the campaign that you want to remove the contact from
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to remove from the campaign
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the contact that you want to remove from the campaign
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_company: {
+					groups: {
+						/**
+						 * Company Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Create Company
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new company
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new company record in Mautic with the specified details.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						companyname: {
+							/**
+							 * Company Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The name of the company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the company (required)
+							 */
+							longDesc: () => LocalizedString
+						}
+						companyemail: {
+							/**
+							 * Company Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The email address of the company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The primary email address for the company
+							 */
+							longDesc: () => LocalizedString
+						}
+						companyphone: {
+							/**
+							 * Company Phone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The phone number of the company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The primary phone number for the company
+							 */
+							longDesc: () => LocalizedString
+						}
+						companywebsite: {
+							/**
+							 * Website
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The website URL of the company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The company website URL
+							 */
+							longDesc: () => LocalizedString
+						}
+						companyaddress1: {
+							/**
+							 * Address Line 1
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The first line of the company address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The street address of the company
+							 */
+							longDesc: () => LocalizedString
+						}
+						companyaddress2: {
+							/**
+							 * Address Line 2
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The second line of the company address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional address information (suite, floor, etc.)
+							 */
+							longDesc: () => LocalizedString
+						}
+						companycity: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The city where the company is located
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The city of the company address
+							 */
+							longDesc: () => LocalizedString
+						}
+						companystate: {
+							/**
+							 * State/Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The state or region of the company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The state, province, or region of the company address
+							 */
+							longDesc: () => LocalizedString
+						}
+						companyzipcode: {
+							/**
+							 * Postal Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The postal/ZIP code of the company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The postal or ZIP code of the company address
+							 */
+							longDesc: () => LocalizedString
+						}
+						companycountry: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The country of the company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The country where the company is located
+							 */
+							longDesc: () => LocalizedString
+						}
+						companydescription: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * A description of the company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional notes or description about the company
+							 */
+							longDesc: () => LocalizedString
+						}
+						companyindustry: {
+							/**
+							 * Industry
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The industry of the company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The industry or sector the company operates in
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_fields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom field values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An object containing custom field aliases and their values. Use the field alias as the key
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_company: {
+					groups: {
+						/**
+						 * Company Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Delete Company
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a company
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently delete a company record from Mautic.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						company: {
+							/**
+							 * Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The company to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the company that you want to delete
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_company: {
+					groups: {
+						/**
+						 * Data Retrieval
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get Company
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve company details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific company in Mautic.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						company: {
+							/**
+							 * Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The company to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the company that you want to get details for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_many_companies: {
+					groups: {
+						/**
+						 * Data Retrieval
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get Many Companies
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of companies
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a paginated list of companies from Mautic with optional search and filtering.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						search: {
+							/**
+							 * Search
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search term to filter companies
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for companies by name or other fields
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of companies to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of companies to return (default: 30)
+							 */
+							longDesc: () => LocalizedString
+						}
+						start: {
+							/**
+							 * Start
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Starting row for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The starting row for pagination (default: 0)
+							 */
+							longDesc: () => LocalizedString
+						}
+						orderBy: {
+							/**
+							 * Order By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to sort results by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to use for sorting the results
+							 */
+							longDesc: () => LocalizedString
+						}
+						orderByDir: {
+							/**
+							 * Order Direction
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort direction (asc or desc)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The direction to sort results: ascending or descending
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_company: {
+					groups: {
+						/**
+						 * Company Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Update Company
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing company
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the information of an existing company in Mautic.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						company: {
+							/**
+							 * Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The company to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the company that you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						companyname: {
+							/**
+							 * Company Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated name of the company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new name for the company
+							 */
+							longDesc: () => LocalizedString
+						}
+						companyemail: {
+							/**
+							 * Company Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new primary email address for the company
+							 */
+							longDesc: () => LocalizedString
+						}
+						companyphone: {
+							/**
+							 * Company Phone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new primary phone number for the company
+							 */
+							longDesc: () => LocalizedString
+						}
+						companywebsite: {
+							/**
+							 * Website
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated website URL
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new company website URL
+							 */
+							longDesc: () => LocalizedString
+						}
+						companyaddress1: {
+							/**
+							 * Address Line 1
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated first line of the address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new street address of the company
+							 */
+							longDesc: () => LocalizedString
+						}
+						companyaddress2: {
+							/**
+							 * Address Line 2
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated second line of the address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * New additional address information
+							 */
+							longDesc: () => LocalizedString
+						}
+						companycity: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated city
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new city of the company address
+							 */
+							longDesc: () => LocalizedString
+						}
+						companystate: {
+							/**
+							 * State/Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated state or region
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new state, province, or region
+							 */
+							longDesc: () => LocalizedString
+						}
+						companyzipcode: {
+							/**
+							 * Postal Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated postal/ZIP code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new postal or ZIP code
+							 */
+							longDesc: () => LocalizedString
+						}
+						companycountry: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated country
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new country of the company
+							 */
+							longDesc: () => LocalizedString
+						}
+						companydescription: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * New notes or description about the company
+							 */
+							longDesc: () => LocalizedString
+						}
+						companyindustry: {
+							/**
+							 * Industry
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated industry
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new industry or sector
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_fields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom field values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An object containing custom field aliases and their values. Use the field alias as the key 
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_contact_to_company: {
+					groups: {
+						/**
+						 * Company Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Add Contact to Company
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Associate a contact with a company
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create an association between a contact and a company in Mautic.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						company: {
+							/**
+							 * Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The company to add the contact to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the company that you want to associate the contact with
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to add to the company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the contact that you want to associate with the company
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				remove_contact_from_company: {
+					groups: {
+						/**
+						 * Company Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Remove Contact from Company
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove a contact from a company
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Remove the association between a contact and a company in Mautic.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						company: {
+							/**
+							 * Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The company to remove the contact from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the company that you want to remove the contact from
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to remove from the company
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the contact that you want to remove from the company
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_contact: {
+					groups: {
+						/**
+						 * Contact Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Create Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new contact in Mautic with the specified information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Email Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The primary email address for the contact (required)
+							 */
+							longDesc: () => LocalizedString
+						}
+						firstname: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's first name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The first name of the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						lastname: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The last name of the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone: {
+							/**
+							 * Phone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The phone number for the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						mobile: {
+							/**
+							 * Mobile
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's mobile number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The mobile phone number for the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						company: {
+							/**
+							 * Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's company name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The name of the company the contact works for
+							 */
+							longDesc: () => LocalizedString
+						}
+						position: {
+							/**
+							 * Position
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's job title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The job title or position of the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						address1: {
+							/**
+							 * Address Line 1
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The first line of the address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The street address of the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						address2: {
+							/**
+							 * Address Line 2
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The second line of the address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional address information
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The city
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The city of the contact address
+							 */
+							longDesc: () => LocalizedString
+						}
+						state: {
+							/**
+							 * State/Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The state or region
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The state, province, or region
+							 */
+							longDesc: () => LocalizedString
+						}
+						zipcode: {
+							/**
+							 * Postal Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The postal/ZIP code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The postal or ZIP code
+							 */
+							longDesc: () => LocalizedString
+						}
+						country: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The country
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The country of the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						website: {
+							/**
+							 * Website
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact's website
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The personal or professional website URL
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tags to apply to the contact
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of tags to apply to the contact for organization and segmentation
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_fields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom field values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An object containing custom field aliases and their values. Use the field alias as the key 
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_contact: {
+					groups: {
+						/**
+						 * Contact Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Delete Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently delete a contact from Mautic.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contact: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the contact that you want to delete
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				edit_contact_points: {
+					groups: {
+						/**
+						 * Contact Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Edit Contact Points
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add or subtract points from a contact's score
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Modify the points score of a contact in Mautic. You can add points to reward engagement or subtract points to de-qualify leads.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contact: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to modify points for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the contact whose points you want to modify
+							 */
+							longDesc: () => LocalizedString
+						}
+						operation: {
+							/**
+							 * Operation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to add or subtract points
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether to add points (increase score) or subtract points (decrease score)
+							 */
+							longDesc: () => LocalizedString
+						}
+						points: {
+							/**
+							 * Points
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The number of points to add or subtract
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of points to add or subtract from the contact score
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				edit_do_not_contact: {
+					groups: {
+						/**
+						 * Contact Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Edit Do Not Contact List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add or remove a contact from the do not contact list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Manage the Do Not Contact (DNC) status for a contact on a specific channel (email, SMS, etc.).
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contact: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to modify DNC status for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the contact whose DNC status you want to modify
+							 */
+							longDesc: () => LocalizedString
+						}
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The communication channel
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the channel for the DNC entry (email, sms, etc.)
+							 */
+							longDesc: () => LocalizedString
+						}
+						operation: {
+							/**
+							 * Operation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to add or remove from DNC list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Choose whether to add the contact to the DNC list (stop communications) or remove them (allow communications)
+							 */
+							longDesc: () => LocalizedString
+						}
+						reason: {
+							/**
+							 * Reason
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The reason for adding to DNC
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The reason for adding the contact to the do not contact list
+							 */
+							longDesc: () => LocalizedString
+						}
+						comments: {
+							/**
+							 * Comments
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Additional comments
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Additional notes or comments about the DNC entry
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_contact: {
+					groups: {
+						/**
+						 * Data Retrieval
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve contact details
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed information about a specific contact in Mautic including fields, tags, and DNC status.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contact: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the contact that you want to get details for
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_many_contacts: {
+					groups: {
+						/**
+						 * Data Retrieval
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get Many Contacts
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of contacts
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a paginated list of contacts from Mautic with optional search and filtering.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						search: {
+							/**
+							 * Search
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Search term to filter contacts
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Search for contacts by name, email, or other fields
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of contacts to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of contacts to return (default: 30)
+							 */
+							longDesc: () => LocalizedString
+						}
+						start: {
+							/**
+							 * Start
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Starting row for pagination
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The starting row for pagination (default: 0)
+							 */
+							longDesc: () => LocalizedString
+						}
+						orderBy: {
+							/**
+							 * Order By
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Field to sort results by
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The field to use for sorting the results
+							 */
+							longDesc: () => LocalizedString
+						}
+						orderByDir: {
+							/**
+							 * Order Direction
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Sort direction (asc or desc)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The direction to sort results: ascending or descending
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				send_email_to_contact: {
+					groups: {
+						/**
+						 * Email
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Send Email to Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send an email to a specific contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a Mautic email template to a specific contact.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Email Template
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The email template to send
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Mautic email template that you want to send
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to send the email to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the contact that you want to send the email to
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_contact: {
+					groups: {
+						/**
+						 * Contact Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Update Contact
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing contact
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Update the information of an existing contact in Mautic.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						contact: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the contact that you want to update
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email Address
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new email address for the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						firstname: {
+							/**
+							 * First Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated first name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new first name of the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						lastname: {
+							/**
+							 * Last Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated last name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new last name of the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone: {
+							/**
+							 * Phone
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated phone number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new phone number for the contact
+							 */
+							longDesc: () => LocalizedString
+						}
+						mobile: {
+							/**
+							 * Mobile
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated mobile number
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new mobile phone number
+							 */
+							longDesc: () => LocalizedString
+						}
+						company: {
+							/**
+							 * Company
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated company name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new company name
+							 */
+							longDesc: () => LocalizedString
+						}
+						position: {
+							/**
+							 * Position
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated job title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new job title or position
+							 */
+							longDesc: () => LocalizedString
+						}
+						address1: {
+							/**
+							 * Address Line 1
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated first line of the address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new street address
+							 */
+							longDesc: () => LocalizedString
+						}
+						address2: {
+							/**
+							 * Address Line 2
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated second line of the address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * New additional address information
+							 */
+							longDesc: () => LocalizedString
+						}
+						city: {
+							/**
+							 * City
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated city
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new city
+							 */
+							longDesc: () => LocalizedString
+						}
+						state: {
+							/**
+							 * State/Region
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated state or region
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new state, province, or region
+							 */
+							longDesc: () => LocalizedString
+						}
+						zipcode: {
+							/**
+							 * Postal Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated postal/ZIP code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new postal or ZIP code
+							 */
+							longDesc: () => LocalizedString
+						}
+						country: {
+							/**
+							 * Country
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated country
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new country
+							 */
+							longDesc: () => LocalizedString
+						}
+						website: {
+							/**
+							 * Website
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The updated website
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new website URL
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tags to apply or remove
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Tags to apply to the contact. Prefix with "-" to remove a tag (e.g., "-oldtag")
+							 */
+							longDesc: () => LocalizedString
+						}
+						custom_fields: {
+							/**
+							 * Custom Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom field values
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An object containing custom field aliases and their values. Use the field alias as the key 
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_contact_to_segment: {
+					groups: {
+						/**
+						 * Segment Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Add Contact to Segment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add a contact to a segment
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Manually add a specific contact to a segment in Mautic.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						segment: {
+							/**
+							 * Segment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The segment to add the contact to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the segment that you want to add the contact to
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to add to the segment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the contact that you want to add to the segment
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				remove_contact_from_segment: {
+					groups: {
+						/**
+						 * Segment Management
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Remove Contact from Segment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove a contact from a segment
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Remove a specific contact from a segment in Mautic.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						segment: {
+							/**
+							 * Segment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The segment to remove the contact from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the segment that you want to remove the contact from
+							 */
+							longDesc: () => LocalizedString
+						}
+						contact: {
+							/**
+							 * Contact
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The contact to remove from the segment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the contact that you want to remove from the segment
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				send_email_to_segment: {
+					groups: {
+						/**
+						 * Email
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Send Email to Segment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send an email to all contacts in a segment
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a Mautic segment email to all contacts in the associated segment. The email must be of type "list" (segment email).
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						email: {
+							/**
+							 * Segment Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The segment email to send
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the segment email that you want to send. This must be a "list" type email associated with a segment.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
 		Notion: {
 			/**
 			 * Notion
@@ -179121,6 +183409,54 @@ export type TranslationFunctions = {
 							 * Configure how the database items should be sorted in the response
 							 */
 							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										property: {
+											/**
+											 * Property
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Database property to sort by
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The name of the database property to use for sorting
+											 */
+											longDesc: () => LocalizedString
+										}
+										timestamp: {
+											/**
+											 * Timestamp
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Timestamp field to sort by
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Sort by a timestamp field: created_time or last_edited_time. Use this instead of property for time-based sorting.
+											 */
+											longDesc: () => LocalizedString
+										}
+										direction: {
+											/**
+											 * Direction
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Sort direction
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The direction to sort: ascending or descending
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -183577,197 +187913,193 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											ref: {
-												/**
-												 * Field Reference
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Unique reference for this field
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Optional unique reference ID for this field that can be used in logic and integrations.
-												 */
-												longDesc: () => LocalizedString
-											}
-											title: {
-												/**
-												 * Question Title
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The question or prompt text
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The main question text that users will see for this field.
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										ref: {
+											/**
+											 * Field Reference
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Unique reference for this field
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Optional unique reference ID for this field that can be used in logic and integrations.
+											 */
+											longDesc: () => LocalizedString
+										}
+										title: {
+											/**
+											 * Question Title
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The question or prompt text
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The main question text that users will see for this field.
+											 */
+											longDesc: () => LocalizedString
+										}
+										type: {
+											/**
+											 * Field Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The type of input field
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Choose the type of input field (text, multiple choice, email, etc.).
+											 */
+											longDesc: () => LocalizedString
+										}
+										properties: {
+											/**
+											 * Field Properties
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Additional configuration for this field
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Configure field-specific properties like choices, descriptions, and behavior.
+											 */
+											longDesc: () => LocalizedString
 											type: {
-												/**
-												 * Field Type
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * The type of input field
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Choose the type of input field (text, multiple choice, email, etc.).
-												 */
-												longDesc: () => LocalizedString
-											}
-											properties: {
-												/**
-												 * Field Properties
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Additional configuration for this field
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Configure field-specific properties like choices, descriptions, and behavior.
-												 */
-												longDesc: () => LocalizedString
-												type: {
-													fields: {
-														description: {
-															/**
-															 * Description
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Additional description or help text for this field
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Optional description text that appears below the question to provide additional context or instructions.
-															 */
-															longDesc: () => LocalizedString
-														}
-														choices: {
-															/**
-															 * Answer Choices
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Available answer options for multiple choice fields
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Define the available answer choices for multiple choice, dropdown, or picture choice fields.
-															 */
-															longDesc: () => LocalizedString
-															type: {
-																element_type: {
-																	type: {
-																		fields: {
-																			ref: {
-																				/**
-																				 * Choice Reference
-																				 */
-																				displayName: () => LocalizedString
-																				/**
-																				 * Unique reference for this choice
-																				 */
-																				shortDesc: () => LocalizedString
-																				/**
-																				 * Optional unique reference ID for this choice option.
-																				 */
-																				longDesc: () => LocalizedString
-																			}
-																			label: {
-																				/**
-																				 * Choice Label
-																				 */
-																				displayName: () => LocalizedString
-																				/**
-																				 * The text label for this choice
-																				 */
-																				shortDesc: () => LocalizedString
-																				/**
-																				 * The text that users will see for this answer choice.
-																				 */
-																				longDesc: () => LocalizedString
-																			}
-																			attachment: {
-																				/**
-																				 * Choice Attachment
-																				 */
-																				displayName: () => LocalizedString
-																				/**
-																				 * Image or media attached to this choice
-																				 */
-																				shortDesc: () => LocalizedString
-																				/**
-																				 * Optional image or media file attached to this choice option.
-																				 */
-																				longDesc: () => LocalizedString
+												fields: {
+													description: {
+														/**
+														 * Description
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Additional description or help text for this field
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Optional description text that appears below the question to provide additional context or instructions.
+														 */
+														longDesc: () => LocalizedString
+													}
+													choices: {
+														/**
+														 * Answer Choices
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Available answer options for multiple choice fields
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Define the available answer choices for multiple choice, dropdown, or picture choice fields.
+														 */
+														longDesc: () => LocalizedString
+														type: {
+															element_type: {
+																fields: {
+																	ref: {
+																		/**
+																		 * Choice Reference
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * Unique reference for this choice
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * Optional unique reference ID for this choice option.
+																		 */
+																		longDesc: () => LocalizedString
+																	}
+																	label: {
+																		/**
+																		 * Choice Label
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * The text label for this choice
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * The text that users will see for this answer choice.
+																		 */
+																		longDesc: () => LocalizedString
+																	}
+																	attachment: {
+																		/**
+																		 * Choice Attachment
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * Image or media attached to this choice
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * Optional image or media file attached to this choice option.
+																		 */
+																		longDesc: () => LocalizedString
+																		type: {
+																			fields: {
 																				type: {
-																					fields: {
-																						type: {
-																							/**
-																							 * Attachment Type
-																							 */
-																							displayName: () => LocalizedString
-																							/**
-																							 * Type of media attachment
-																							 */
-																							shortDesc: () => LocalizedString
-																							/**
-																							 * The type of media file (image or video).
-																							 */
-																							longDesc: () => LocalizedString
-																						}
-																						href: {
-																							/**
-																							 * Attachment URL
-																							 */
-																							displayName: () => LocalizedString
-																							/**
-																							 * URL of the media file
-																							 */
-																							shortDesc: () => LocalizedString
-																							/**
-																							 * The URL or path to the media file.
-																							 */
-																							longDesc: () => LocalizedString
-																						}
-																						properties: {
-																							/**
-																							 * Attachment Properties
-																							 */
-																							displayName: () => LocalizedString
-																							/**
-																							 * Additional properties for the attachment
-																							 */
-																							shortDesc: () => LocalizedString
-																							/**
-																							 * Configure additional properties for the media attachment.
-																							 */
-																							longDesc: () => LocalizedString
-																							type: {
-																								fields: {
-																									description: {
-																										/**
-																										 * Attachment Description
-																										 */
-																										displayName: () => LocalizedString
-																										/**
-																										 * Description for the attachment
-																										 */
-																										shortDesc: () => LocalizedString
-																										/**
-																										 * Optional description or alt text for the media attachment.
-																										 */
-																										longDesc: () => LocalizedString
-																									}
-																								}
+																					/**
+																					 * Attachment Type
+																					 */
+																					displayName: () => LocalizedString
+																					/**
+																					 * Type of media attachment
+																					 */
+																					shortDesc: () => LocalizedString
+																					/**
+																					 * The type of media file (image or video).
+																					 */
+																					longDesc: () => LocalizedString
+																				}
+																				href: {
+																					/**
+																					 * Attachment URL
+																					 */
+																					displayName: () => LocalizedString
+																					/**
+																					 * URL of the media file
+																					 */
+																					shortDesc: () => LocalizedString
+																					/**
+																					 * The URL or path to the media file.
+																					 */
+																					longDesc: () => LocalizedString
+																				}
+																				properties: {
+																					/**
+																					 * Attachment Properties
+																					 */
+																					displayName: () => LocalizedString
+																					/**
+																					 * Additional properties for the attachment
+																					 */
+																					shortDesc: () => LocalizedString
+																					/**
+																					 * Configure additional properties for the media attachment.
+																					 */
+																					longDesc: () => LocalizedString
+																					type: {
+																						fields: {
+																							description: {
+																								/**
+																								 * Attachment Description
+																								 */
+																								displayName: () => LocalizedString
+																								/**
+																								 * Description for the attachment
+																								 */
+																								shortDesc: () => LocalizedString
+																								/**
+																								 * Optional description or alt text for the media attachment.
+																								 */
+																								longDesc: () => LocalizedString
 																							}
 																						}
 																					}
@@ -183778,601 +188110,739 @@ export type TranslationFunctions = {
 																}
 															}
 														}
-														allow_multiple_selection: {
-															/**
-															 * Allow Multiple Selection
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Allow users to select multiple choices
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Enable this to allow users to select more than one answer option.
-															 */
-															longDesc: () => LocalizedString
-														}
-														randomize: {
-															/**
-															 * Randomize Choices
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Show choices in random order
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Randomize the order of answer choices for each respondent.
-															 */
-															longDesc: () => LocalizedString
-														}
-														allow_other_choice: {
-															/**
-															 * Allow Other Choice
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Include an "Other" option with text input
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Add an "Other" option that allows users to enter their own custom answer.
-															 */
-															longDesc: () => LocalizedString
-														}
-														vertical_alignment: {
-															/**
-															 * Vertical Alignment
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Display choices vertically
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Display answer choices in a vertical list instead of horizontally.
-															 */
-															longDesc: () => LocalizedString
-														}
-														supersized: {
-															/**
-															 * Supersized
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Display choices in large format
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Show answer choices in a larger, more prominent format.
-															 */
-															longDesc: () => LocalizedString
-														}
-														show_labels: {
-															/**
-															 * Show Labels
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Display labels on rating scales
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Show text labels on rating scales and opinion scales.
-															 */
-															longDesc: () => LocalizedString
-														}
-														alphabetical_order: {
-															/**
-															 * Alphabetical Order
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Sort choices alphabetically
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Automatically sort answer choices in alphabetical order.
-															 */
-															longDesc: () => LocalizedString
-														}
-														hide_marks: {
-															/**
-															 * Hide Marks
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Hide scale markings
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Hide the numerical markings on rating and opinion scales.
-															 */
-															longDesc: () => LocalizedString
-														}
-														button_text: {
-															/**
-															 * Button Text
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Custom text for the continue button
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Customize the text that appears on the continue/submit button for this field.
-															 */
-															longDesc: () => LocalizedString
-														}
-														start_at_one: {
-															/**
-															 * Start at One
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Start scale numbering at 1 instead of 0
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Begin scale numbering at 1 instead of the default 0.
-															 */
-															longDesc: () => LocalizedString
-														}
-														structure: {
-															/**
-															 * Date Structure
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Format for date input fields
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Choose the date format structure (MMDDYYYY, DDMMYYYY, or YYYYMMDD).
-															 */
-															longDesc: () => LocalizedString
-														}
-														separator: {
-															/**
-															 * Date Separator
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Separator character for date fields
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Choose the separator character used between date components (/, -, or .).
-															 */
-															longDesc: () => LocalizedString
-														}
-														currency: {
-															/**
-															 * Payment Currency
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Currency for payment fields
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Select the currency to use for payment fields.
-															 */
-															longDesc: () => LocalizedString
-														}
-														price: {
-															/**
-															 * Payment Price
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Price configuration for payment fields
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Configure the price structure for payment fields.
-															 */
-															longDesc: () => LocalizedString
-															type: {
-																fields: {
-																	type: {
-																		/**
-																		 * Price Type
-																		 */
-																		displayName: () => LocalizedString
-																		/**
-																		 * Type of price calculation
-																		 */
-																		shortDesc: () => LocalizedString
-																		/**
-																		 * Specify how the price should be calculated.
-																		 */
-																		longDesc: () => LocalizedString
-																	}
-																	value: {
-																		/**
-																		 * Price Value
-																		 */
-																		displayName: () => LocalizedString
-																		/**
-																		 * The price value or variable
-																		 */
-																		shortDesc: () => LocalizedString
-																		/**
-																		 * The actual price value or reference to a price variable.
-																		 */
-																		longDesc: () => LocalizedString
-																	}
-																}
-															}
-														}
-														show_button: {
-															/**
-															 * Show Button
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Display a button on this field
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Show a continue or action button for this field.
-															 */
-															longDesc: () => LocalizedString
-														}
-														default_country_code: {
-															/**
-															 * Default Country Code
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Default country for phone number fields
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Set the default country code for phone number input fields.
-															 */
-															longDesc: () => LocalizedString
-														}
-														steps: {
-															/**
-															 * Scale Steps
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Number of steps in rating scales
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Define the number of steps or points in rating and opinion scales.
-															 */
-															longDesc: () => LocalizedString
-														}
-														shape: {
-															/**
-															 * Rating Shape
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Visual shape for rating fields
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Choose the visual representation for rating fields (stars, hearts, etc.).
-															 */
-															longDesc: () => LocalizedString
-														}
-														labels: {
-															/**
-															 * Scale Labels
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Custom labels for scale endpoints
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Add custom text labels for the left, right, and center points of scales.
-															 */
-															longDesc: () => LocalizedString
-															type: {
-																fields: {
-																	left: {
-																		/**
-																		 * Left Label
-																		 */
-																		displayName: () => LocalizedString
-																		/**
-																		 * Label for the left end of the scale
-																		 */
-																		shortDesc: () => LocalizedString
-																		/**
-																		 * Custom text label for the left (minimum) end of the scale.
-																		 */
-																		longDesc: () => LocalizedString
-																	}
-																	right: {
-																		/**
-																		 * Right Label
-																		 */
-																		displayName: () => LocalizedString
-																		/**
-																		 * Label for the right end of the scale
-																		 */
-																		shortDesc: () => LocalizedString
-																		/**
-																		 * Custom text label for the right (maximum) end of the scale.
-																		 */
-																		longDesc: () => LocalizedString
-																	}
-																	center: {
-																		/**
-																		 * Center Label
-																		 */
-																		displayName: () => LocalizedString
-																		/**
-																		 * Label for the center of the scale
-																		 */
-																		shortDesc: () => LocalizedString
-																		/**
-																		 * Custom text label for the center point of the scale.
-																		 */
-																		longDesc: () => LocalizedString
-																	}
-																}
-															}
-														}
 													}
-												}
-											}
-											validations: {
-												/**
-												 * Field Validations
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Validation rules for this field
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Set validation rules like required fields, minimum/maximum values, and length limits.
-												 */
-												longDesc: () => LocalizedString
-												type: {
-													fields: {
-														required: {
-															/**
-															 * Required Field
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Make this field mandatory
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Require users to answer this field before proceeding.
-															 */
-															longDesc: () => LocalizedString
-														}
-														max_length: {
-															/**
-															 * Maximum Length
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Maximum number of characters allowed
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Set the maximum number of characters users can enter.
-															 */
-															longDesc: () => LocalizedString
-														}
-														min_value: {
-															/**
-															 * Minimum Value
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Minimum numeric value allowed
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Set the minimum numeric value for number fields.
-															 */
-															longDesc: () => LocalizedString
-														}
-														max_value: {
-															/**
-															 * Maximum Value
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Maximum numeric value allowed
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Set the maximum numeric value for number fields.
-															 */
-															longDesc: () => LocalizedString
-														}
-														min_selection: {
-															/**
-															 * Minimum Selections
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Minimum number of choices to select
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Require users to select at least this many choices.
-															 */
-															longDesc: () => LocalizedString
-														}
-														max_selection: {
-															/**
-															 * Maximum Selections
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Maximum number of choices to select
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Limit users to selecting no more than this many choices.
-															 */
-															longDesc: () => LocalizedString
-														}
+													allow_multiple_selection: {
+														/**
+														 * Allow Multiple Selection
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Allow users to select multiple choices
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Enable this to allow users to select more than one answer option.
+														 */
+														longDesc: () => LocalizedString
 													}
-												}
-											}
-											attachment: {
-												/**
-												 * Field Attachment
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Media attachment for this field
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Add an image or video attachment to this field.
-												 */
-												longDesc: () => LocalizedString
-											}
-											layout: {
-												/**
-												 * Field Layout
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Layout configuration for media attachments
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Configure how media attachments are displayed with this field.
-												 */
-												longDesc: () => LocalizedString
-											}
-											scoring: {
-												/**
-												 * Field Scoring
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Scoring rules for quiz fields
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Configure scoring rules for quiz and assessment fields.
-												 */
-												longDesc: () => LocalizedString
-												type: {
-													fields: {
+													randomize: {
+														/**
+														 * Randomize Choices
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Show choices in random order
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Randomize the order of answer choices for each respondent.
+														 */
+														longDesc: () => LocalizedString
+													}
+													allow_other_choice: {
+														/**
+														 * Allow Other Choice
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Include an "Other" option with text input
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Add an "Other" option that allows users to enter their own custom answer.
+														 */
+														longDesc: () => LocalizedString
+													}
+													vertical_alignment: {
+														/**
+														 * Vertical Alignment
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Display choices vertically
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Display answer choices in a vertical list instead of horizontally.
+														 */
+														longDesc: () => LocalizedString
+													}
+													supersized: {
+														/**
+														 * Supersized
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Display choices in large format
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Show answer choices in a larger, more prominent format.
+														 */
+														longDesc: () => LocalizedString
+													}
+													show_labels: {
+														/**
+														 * Show Labels
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Display labels on rating scales
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Show text labels on rating scales and opinion scales.
+														 */
+														longDesc: () => LocalizedString
+													}
+													alphabetical_order: {
+														/**
+														 * Alphabetical Order
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Sort choices alphabetically
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Automatically sort answer choices in alphabetical order.
+														 */
+														longDesc: () => LocalizedString
+													}
+													hide_marks: {
+														/**
+														 * Hide Marks
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Hide scale markings
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Hide the numerical markings on rating and opinion scales.
+														 */
+														longDesc: () => LocalizedString
+													}
+													button_text: {
+														/**
+														 * Button Text
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Custom text for the continue button
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Customize the text that appears on the continue/submit button for this field.
+														 */
+														longDesc: () => LocalizedString
+													}
+													start_at_one: {
+														/**
+														 * Start at One
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Start scale numbering at 1 instead of 0
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Begin scale numbering at 1 instead of the default 0.
+														 */
+														longDesc: () => LocalizedString
+													}
+													structure: {
+														/**
+														 * Date Structure
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Format for date input fields
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Choose the date format structure (MMDDYYYY, DDMMYYYY, or YYYYMMDD).
+														 */
+														longDesc: () => LocalizedString
+													}
+													separator: {
+														/**
+														 * Date Separator
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Separator character for date fields
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Choose the separator character used between date components (/, -, or .).
+														 */
+														longDesc: () => LocalizedString
+													}
+													currency: {
+														/**
+														 * Payment Currency
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Currency for payment fields
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Select the currency to use for payment fields.
+														 */
+														longDesc: () => LocalizedString
+													}
+													price: {
+														/**
+														 * Payment Price
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Price configuration for payment fields
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Configure the price structure for payment fields.
+														 */
+														longDesc: () => LocalizedString
 														type: {
-															/**
-															 * Scoring Type
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Type of scoring method
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Choose the scoring method for this field.
-															 */
-															longDesc: () => LocalizedString
-														}
-														boolean_correct: {
-															/**
-															 * Boolean Correct Scoring
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Scoring for true/false questions
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Configure scoring for boolean/true-false questions.
-															 */
-															longDesc: () => LocalizedString
-															type: {
-																fields: {
-																	boolean: {
-																		/**
-																		 * Correct Answer
-																		 */
-																		displayName: () => LocalizedString
-																		/**
-																		 * The correct boolean value
-																		 */
-																		shortDesc: () => LocalizedString
-																		/**
-																		 * Specify whether true or false is the correct answer.
-																		 */
-																		longDesc: () => LocalizedString
-																	}
-																	score: {
-																		/**
-																		 * Score Points
-																		 */
-																		displayName: () => LocalizedString
-																		/**
-																		 * Points awarded for correct answer
-																		 */
-																		shortDesc: () => LocalizedString
-																		/**
-																		 * Number of points to award when answered correctly.
-																		 */
-																		longDesc: () => LocalizedString
-																	}
+															fields: {
+																type: {
+																	/**
+																	 * Price Type
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * Type of price calculation
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * Specify how the price should be calculated.
+																	 */
+																	longDesc: () => LocalizedString
+																}
+																value: {
+																	/**
+																	 * Price Value
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * The price value or variable
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * The actual price value or reference to a price variable.
+																	 */
+																	longDesc: () => LocalizedString
 																}
 															}
 														}
-														choices_all_correct: {
-															/**
-															 * Multiple Choice Scoring
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Scoring for multiple choice questions
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Configure scoring for multiple choice questions.
-															 */
-															longDesc: () => LocalizedString
-															type: {
-																fields: {
-																	choices: {
-																		/**
-																		 * Correct Choices
-																		 */
-																		displayName: () => LocalizedString
-																		/**
-																		 * List of correct choice references
-																		 */
-																		shortDesc: () => LocalizedString
-																		/**
-																		 * References to the correct answer choices.
-																		 */
-																		longDesc: () => LocalizedString
-																	}
-																	score: {
-																		/**
-																		 * Score Points
-																		 */
-																		displayName: () => LocalizedString
-																		/**
-																		 * Points awarded for correct answer
-																		 */
-																		shortDesc: () => LocalizedString
-																		/**
-																		 * Number of points to award when answered correctly.
-																		 */
-																		longDesc: () => LocalizedString
-																	}
+													}
+													show_button: {
+														/**
+														 * Show Button
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Display a button on this field
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Show a continue or action button for this field.
+														 */
+														longDesc: () => LocalizedString
+													}
+													default_country_code: {
+														/**
+														 * Default Country Code
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Default country for phone number fields
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Set the default country code for phone number input fields.
+														 */
+														longDesc: () => LocalizedString
+													}
+													steps: {
+														/**
+														 * Scale Steps
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Number of steps in rating scales
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Define the number of steps or points in rating and opinion scales.
+														 */
+														longDesc: () => LocalizedString
+													}
+													shape: {
+														/**
+														 * Rating Shape
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Visual shape for rating fields
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Choose the visual representation for rating fields (stars, hearts, etc.).
+														 */
+														longDesc: () => LocalizedString
+													}
+													labels: {
+														/**
+														 * Scale Labels
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Custom labels for scale endpoints
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Add custom text labels for the left, right, and center points of scales.
+														 */
+														longDesc: () => LocalizedString
+														type: {
+															fields: {
+																left: {
+																	/**
+																	 * Left Label
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * Label for the left end of the scale
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * Custom text label for the left (minimum) end of the scale.
+																	 */
+																	longDesc: () => LocalizedString
+																}
+																right: {
+																	/**
+																	 * Right Label
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * Label for the right end of the scale
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * Custom text label for the right (maximum) end of the scale.
+																	 */
+																	longDesc: () => LocalizedString
+																}
+																center: {
+																	/**
+																	 * Center Label
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * Label for the center of the scale
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * Custom text label for the center point of the scale.
+																	 */
+																	longDesc: () => LocalizedString
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+										validations: {
+											/**
+											 * Field Validations
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Validation rules for this field
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Set validation rules like required fields, minimum/maximum values, and length limits.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													required: {
+														/**
+														 * Required Field
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Make this field mandatory
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Require users to answer this field before proceeding.
+														 */
+														longDesc: () => LocalizedString
+													}
+													max_length: {
+														/**
+														 * Maximum Length
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Maximum number of characters allowed
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Set the maximum number of characters users can enter.
+														 */
+														longDesc: () => LocalizedString
+													}
+													min_value: {
+														/**
+														 * Minimum Value
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Minimum numeric value allowed
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Set the minimum numeric value for number fields.
+														 */
+														longDesc: () => LocalizedString
+													}
+													max_value: {
+														/**
+														 * Maximum Value
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Maximum numeric value allowed
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Set the maximum numeric value for number fields.
+														 */
+														longDesc: () => LocalizedString
+													}
+													min_selection: {
+														/**
+														 * Minimum Selections
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Minimum number of choices to select
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Require users to select at least this many choices.
+														 */
+														longDesc: () => LocalizedString
+													}
+													max_selection: {
+														/**
+														 * Maximum Selections
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Maximum number of choices to select
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Limit users to selecting no more than this many choices.
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
+											}
+										}
+										attachment: {
+											/**
+											 * Field Attachment
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Media attachment for this field
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Add an image or video attachment to this field.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													type: {
+														/**
+														 * Attachment Type
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Type of media attachment
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The type of media file (image or video).
+														 */
+														longDesc: () => LocalizedString
+													}
+													href: {
+														/**
+														 * Attachment URL
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * URL of the media file
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The URL or path to the media file.
+														 */
+														longDesc: () => LocalizedString
+													}
+													scale: {
+														/**
+														 * Attachment Scale
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Scale factor for the attachment
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The scale factor for displaying the attachment (0.4, 0.6, 0.8, or 1).
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
+											}
+										}
+										layout: {
+											/**
+											 * Field Layout
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Layout configuration for media attachments
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Configure how media attachments are displayed with this field.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													type: {
+														/**
+														 * Layout Type
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Type of layout
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Choose the layout style (split, wallpaper, float, or stack).
+														 */
+														longDesc: () => LocalizedString
+													}
+													placement: {
+														/**
+														 * Placement
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Position of the attachment
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Choose where the attachment appears (left or right).
+														 */
+														longDesc: () => LocalizedString
+													}
+													attachment: {
+														/**
+														 * Layout Attachment
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Media attachment for the layout
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Configure the media attachment for this layout.
+														 */
+														longDesc: () => LocalizedString
+														type: {
+															fields: {
+																type: {
+																	/**
+																	 * Attachment Type
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * Type of media attachment
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * The type of media file (image or video).
+																	 */
+																	longDesc: () => LocalizedString
+																}
+																href: {
+																	/**
+																	 * Attachment URL
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * URL of the media file
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * The URL or path to the media file.
+																	 */
+																	longDesc: () => LocalizedString
+																}
+																scale: {
+																	/**
+																	 * Attachment Scale
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * Scale factor for the attachment
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * The scale factor for displaying the attachment (0.4, 0.6, 0.8, or 1).
+																	 */
+																	longDesc: () => LocalizedString
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+										scoring: {
+											/**
+											 * Field Scoring
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Scoring rules for quiz fields
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Configure scoring rules for quiz and assessment fields.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													type: {
+														/**
+														 * Scoring Type
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Type of scoring method
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Choose the scoring method for this field.
+														 */
+														longDesc: () => LocalizedString
+													}
+													boolean_correct: {
+														/**
+														 * Boolean Correct Scoring
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Scoring for true/false questions
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Configure scoring for boolean/true-false questions.
+														 */
+														longDesc: () => LocalizedString
+														type: {
+															fields: {
+																boolean: {
+																	/**
+																	 * Correct Answer
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * The correct boolean value
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * Specify whether true or false is the correct answer.
+																	 */
+																	longDesc: () => LocalizedString
+																}
+																score: {
+																	/**
+																	 * Score Points
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * Points awarded for correct answer
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * Number of points to award when answered correctly.
+																	 */
+																	longDesc: () => LocalizedString
+																}
+															}
+														}
+													}
+													choices_all_correct: {
+														/**
+														 * Multiple Choice Scoring
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Scoring for multiple choice questions
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Configure scoring for multiple choice questions.
+														 */
+														longDesc: () => LocalizedString
+														type: {
+															fields: {
+																choices: {
+																	/**
+																	 * Correct Choices
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * List of correct choice references
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * References to the correct answer choices.
+																	 */
+																	longDesc: () => LocalizedString
+																}
+																score: {
+																	/**
+																	 * Score Points
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * Points awarded for correct answer
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * Number of points to award when answered correctly.
+																	 */
+																	longDesc: () => LocalizedString
 																}
 															}
 														}
@@ -184459,92 +188929,256 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											ref: {
-												/**
-												 * Screen Reference
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Unique reference for this screen
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Optional unique reference ID for this welcome screen.
-												 */
-												longDesc: () => LocalizedString
+									fields: {
+										ref: {
+											/**
+											 * Screen Reference
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Unique reference for this screen
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Optional unique reference ID for this welcome screen.
+											 */
+											longDesc: () => LocalizedString
+										}
+										title: {
+											/**
+											 * Screen Title
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Title text for this welcome screen
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The main title text displayed on this welcome screen.
+											 */
+											longDesc: () => LocalizedString
+										}
+										properties: {
+											/**
+											 * Screen Properties
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Configuration options for this screen
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Configure the appearance and behavior of this welcome screen.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													description: {
+														/**
+														 * Screen Description
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Description text for this screen
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Additional description or instruction text for this welcome screen.
+														 */
+														longDesc: () => LocalizedString
+													}
+													show_button: {
+														/**
+														 * Show Button
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Display a continue button
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Show a continue button on this welcome screen.
+														 */
+														longDesc: () => LocalizedString
+													}
+													button_text: {
+														/**
+														 * Button Text
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Custom text for the continue button
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Customize the text that appears on the continue button.
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
 											}
-											title: {
-												/**
-												 * Screen Title
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Title text for this welcome screen
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The main title text displayed on this welcome screen.
-												 */
-												longDesc: () => LocalizedString
+										}
+										attachment: {
+											/**
+											 * Screen Attachment
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Media attachment for this screen
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Add an image or video attachment to this welcome screen.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													type: {
+														/**
+														 * Attachment Type
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Type of media attachment
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The type of media file (image or video).
+														 */
+														longDesc: () => LocalizedString
+													}
+													href: {
+														/**
+														 * Attachment URL
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * URL of the media file
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The URL or path to the media file.
+														 */
+														longDesc: () => LocalizedString
+													}
+													scale: {
+														/**
+														 * Attachment Scale
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Scale factor for the attachment
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The scale factor for displaying the attachment (0.4, 0.6, 0.8, or 1).
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
 											}
-											properties: {
-												/**
-												 * Screen Properties
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Configuration options for this screen
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Configure the appearance and behavior of this welcome screen.
-												 */
-												longDesc: () => LocalizedString
-												type: {
-													fields: {
-														description: {
-															/**
-															 * Screen Description
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Description text for this screen
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Additional description or instruction text for this welcome screen.
-															 */
-															longDesc: () => LocalizedString
-														}
-														show_button: {
-															/**
-															 * Show Button
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Display a continue button
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Show a continue button on this welcome screen.
-															 */
-															longDesc: () => LocalizedString
-														}
-														button_text: {
-															/**
-															 * Button Text
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Custom text for the continue button
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Customize the text that appears on the continue button.
-															 */
-															longDesc: () => LocalizedString
+										}
+										layout: {
+											/**
+											 * Screen Layout
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Layout configuration for media attachments
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Configure how media attachments are displayed with this welcome screen.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													type: {
+														/**
+														 * Layout Type
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Type of layout
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Choose the layout style (split, wallpaper, float, or stack).
+														 */
+														longDesc: () => LocalizedString
+													}
+													placement: {
+														/**
+														 * Placement
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Position of the attachment
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Choose where the attachment appears (left or right).
+														 */
+														longDesc: () => LocalizedString
+													}
+													attachment: {
+														/**
+														 * Layout Attachment
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Media attachment for the layout
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Configure the media attachment for this layout.
+														 */
+														longDesc: () => LocalizedString
+														type: {
+															fields: {
+																type: {
+																	/**
+																	 * Attachment Type
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * Type of media attachment
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * The type of media file (image or video).
+																	 */
+																	longDesc: () => LocalizedString
+																}
+																href: {
+																	/**
+																	 * Attachment URL
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * URL of the media file
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * The URL or path to the media file.
+																	 */
+																	longDesc: () => LocalizedString
+																}
+																scale: {
+																	/**
+																	 * Attachment Scale
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * Scale factor for the attachment
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * The scale factor for displaying the attachment (0.4, 0.6, 0.8, or 1).
+																	 */
+																	longDesc: () => LocalizedString
+																}
+															}
 														}
 													}
 												}
@@ -184569,92 +189203,256 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											ref: {
-												/**
-												 * Screen Reference
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Unique reference for this screen
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Optional unique reference ID for this thank you screen.
-												 */
-												longDesc: () => LocalizedString
+									fields: {
+										ref: {
+											/**
+											 * Screen Reference
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Unique reference for this screen
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Optional unique reference ID for this thank you screen.
+											 */
+											longDesc: () => LocalizedString
+										}
+										title: {
+											/**
+											 * Screen Title
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Title text for this thank you screen
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The main title text displayed on this thank you screen.
+											 */
+											longDesc: () => LocalizedString
+										}
+										properties: {
+											/**
+											 * Screen Properties
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Configuration options for this screen
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Configure the appearance and behavior of this thank you screen.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													description: {
+														/**
+														 * Screen Description
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Description text for this screen
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Additional description or message text for this thank you screen.
+														 */
+														longDesc: () => LocalizedString
+													}
+													show_button: {
+														/**
+														 * Show Button
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Display an action button
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Show an action button on this thank you screen.
+														 */
+														longDesc: () => LocalizedString
+													}
+													button_text: {
+														/**
+														 * Button Text
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Custom text for the action button
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Customize the text that appears on the action button.
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
 											}
-											title: {
-												/**
-												 * Screen Title
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Title text for this thank you screen
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The main title text displayed on this thank you screen.
-												 */
-												longDesc: () => LocalizedString
+										}
+										attachment: {
+											/**
+											 * Screen Attachment
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Media attachment for this screen
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Add an image or video attachment to this thank you screen.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													type: {
+														/**
+														 * Attachment Type
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Type of media attachment
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The type of media file (image or video).
+														 */
+														longDesc: () => LocalizedString
+													}
+													href: {
+														/**
+														 * Attachment URL
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * URL of the media file
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The URL or path to the media file.
+														 */
+														longDesc: () => LocalizedString
+													}
+													scale: {
+														/**
+														 * Attachment Scale
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Scale factor for the attachment
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The scale factor for displaying the attachment (0.4, 0.6, 0.8, or 1).
+														 */
+														longDesc: () => LocalizedString
+													}
+												}
 											}
-											properties: {
-												/**
-												 * Screen Properties
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Configuration options for this screen
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Configure the appearance and behavior of this thank you screen.
-												 */
-												longDesc: () => LocalizedString
-												type: {
-													fields: {
-														description: {
-															/**
-															 * Screen Description
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Description text for this screen
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Additional description or message text for this thank you screen.
-															 */
-															longDesc: () => LocalizedString
-														}
-														show_button: {
-															/**
-															 * Show Button
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Display an action button
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Show an action button on this thank you screen.
-															 */
-															longDesc: () => LocalizedString
-														}
-														button_text: {
-															/**
-															 * Button Text
-															 */
-															displayName: () => LocalizedString
-															/**
-															 * Custom text for the action button
-															 */
-															shortDesc: () => LocalizedString
-															/**
-															 * Customize the text that appears on the action button.
-															 */
-															longDesc: () => LocalizedString
+										}
+										layout: {
+											/**
+											 * Screen Layout
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Layout configuration for media attachments
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Configure how media attachments are displayed with this thank you screen.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													type: {
+														/**
+														 * Layout Type
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Type of layout
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Choose the layout style (split, wallpaper, float, or stack).
+														 */
+														longDesc: () => LocalizedString
+													}
+													placement: {
+														/**
+														 * Placement
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Position of the attachment
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Choose where the attachment appears (left or right).
+														 */
+														longDesc: () => LocalizedString
+													}
+													attachment: {
+														/**
+														 * Layout Attachment
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Media attachment for the layout
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * Configure the media attachment for this layout.
+														 */
+														longDesc: () => LocalizedString
+														type: {
+															fields: {
+																type: {
+																	/**
+																	 * Attachment Type
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * Type of media attachment
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * The type of media file (image or video).
+																	 */
+																	longDesc: () => LocalizedString
+																}
+																href: {
+																	/**
+																	 * Attachment URL
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * URL of the media file
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * The URL or path to the media file.
+																	 */
+																	longDesc: () => LocalizedString
+																}
+																scale: {
+																	/**
+																	 * Attachment Scale
+																	 */
+																	displayName: () => LocalizedString
+																	/**
+																	 * Scale factor for the attachment
+																	 */
+																	shortDesc: () => LocalizedString
+																	/**
+																	 * The scale factor for displaying the attachment (0.4, 0.6, 0.8, or 1).
+																	 */
+																	longDesc: () => LocalizedString
+																}
+															}
 														}
 													}
 												}
@@ -184995,299 +189793,293 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
+									fields: {
+										type: {
+											/**
+											 * Logic Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Type of field this logic applies to
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Specify whether this logic applies to a form field or hidden field.
+											 */
+											longDesc: () => LocalizedString
+										}
+										ref: {
+											/**
+											 * Field Reference
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Reference to the field this logic applies to
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The reference ID of the field this conditional logic rule applies to.
+											 */
+											longDesc: () => LocalizedString
+										}
+										actions: {
+											/**
+											 * Logic Actions
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Actions to perform when conditions are met
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Define what actions to take when the specified conditions are met.
+											 */
+											longDesc: () => LocalizedString
 											type: {
-												/**
-												 * Logic Type
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Type of field this logic applies to
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Specify whether this logic applies to a form field or hidden field.
-												 */
-												longDesc: () => LocalizedString
-											}
-											ref: {
-												/**
-												 * Field Reference
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Reference to the field this logic applies to
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The reference ID of the field this conditional logic rule applies to.
-												 */
-												longDesc: () => LocalizedString
-											}
-											actions: {
-												/**
-												 * Logic Actions
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Actions to perform when conditions are met
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Define what actions to take when the specified conditions are met.
-												 */
-												longDesc: () => LocalizedString
-												type: {
-													element_type: {
-														type: {
-															fields: {
-																action: {
-																	/**
-																	 * Action Type
-																	 */
-																	displayName: () => LocalizedString
-																	/**
-																	 * Type of action to perform
-																	 */
-																	shortDesc: () => LocalizedString
-																	/**
-																	 * Choose the type of action (jump, add, subtract, multiply, divide, set).
-																	 */
-																	longDesc: () => LocalizedString
-																}
-																details: {
-																	/**
-																	 * Action Details
-																	 */
-																	displayName: () => LocalizedString
-																	/**
-																	 * Specific details for this action
-																	 */
-																	shortDesc: () => LocalizedString
-																	/**
-																	 * Configure the specific parameters for this action.
-																	 */
-																	longDesc: () => LocalizedString
-																	type: {
-																		fields: {
-																			to: {
-																				/**
-																				 * Jump Target
-																				 */
-																				displayName: () => LocalizedString
-																				/**
-																				 * Where to jump to
-																				 */
-																				shortDesc: () => LocalizedString
-																				/**
-																				 * Configure the target for jump actions.
-																				 */
-																				longDesc: () => LocalizedString
+												element_type: {
+													fields: {
+														action: {
+															/**
+															 * Action Type
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Type of action to perform
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Choose the type of action (jump, add, subtract, multiply, divide, set).
+															 */
+															longDesc: () => LocalizedString
+														}
+														details: {
+															/**
+															 * Action Details
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Specific details for this action
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Configure the specific parameters for this action.
+															 */
+															longDesc: () => LocalizedString
+															type: {
+																fields: {
+																	to: {
+																		/**
+																		 * Jump Target
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * Where to jump to
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * Configure the target for jump actions.
+																		 */
+																		longDesc: () => LocalizedString
+																		type: {
+																			fields: {
 																				type: {
-																					fields: {
-																						type: {
-																							/**
-																							 * Target Type
-																							 */
-																							displayName: () => LocalizedString
-																							/**
-																							 * Type of jump target
-																							 */
-																							shortDesc: () => LocalizedString
-																							/**
-																							 * Specify the type of target (field, thankyou, outcome).
-																							 */
-																							longDesc: () => LocalizedString
-																						}
-																						value: {
-																							/**
-																							 * Target Value
-																							 */
-																							displayName: () => LocalizedString
-																							/**
-																							 * Reference to the target
-																							 */
-																							shortDesc: () => LocalizedString
-																							/**
-																							 * The reference ID of the target field or screen.
-																							 */
-																							longDesc: () => LocalizedString
-																						}
-																					}
+																					/**
+																					 * Target Type
+																					 */
+																					displayName: () => LocalizedString
+																					/**
+																					 * Type of jump target
+																					 */
+																					shortDesc: () => LocalizedString
+																					/**
+																					 * Specify the type of target (field, thankyou, outcome).
+																					 */
+																					longDesc: () => LocalizedString
+																				}
+																				value: {
+																					/**
+																					 * Target Value
+																					 */
+																					displayName: () => LocalizedString
+																					/**
+																					 * Reference to the target
+																					 */
+																					shortDesc: () => LocalizedString
+																					/**
+																					 * The reference ID of the target field or screen.
+																					 */
+																					longDesc: () => LocalizedString
 																				}
 																			}
-																			target: {
-																				/**
-																				 * Calculation Target
-																				 */
-																				displayName: () => LocalizedString
-																				/**
-																				 * Target for calculations
-																				 */
-																				shortDesc: () => LocalizedString
-																				/**
-																				 * Specify the target variable for calculation actions.
-																				 */
-																				longDesc: () => LocalizedString
+																		}
+																	}
+																	target: {
+																		/**
+																		 * Calculation Target
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * Target for calculations
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * Specify the target variable for calculation actions.
+																		 */
+																		longDesc: () => LocalizedString
+																		type: {
+																			fields: {
 																				type: {
-																					fields: {
-																						type: {
-																							/**
-																							 * Target Type
-																							 */
-																							displayName: () => LocalizedString
-																							/**
-																							 * Type of calculation target
-																							 */
-																							shortDesc: () => LocalizedString
-																							/**
-																							 * The type of target (usually variable).
-																							 */
-																							longDesc: () => LocalizedString
-																						}
-																						value: {
-																							/**
-																							 * Target Variable
-																							 */
-																							displayName: () => LocalizedString
-																							/**
-																							 * Name of the target variable
-																							 */
-																							shortDesc: () => LocalizedString
-																							/**
-																							 * The name of the variable to modify.
-																							 */
-																							longDesc: () => LocalizedString
-																						}
-																					}
+																					/**
+																					 * Target Type
+																					 */
+																					displayName: () => LocalizedString
+																					/**
+																					 * Type of calculation target
+																					 */
+																					shortDesc: () => LocalizedString
+																					/**
+																					 * The type of target (usually variable).
+																					 */
+																					longDesc: () => LocalizedString
+																				}
+																				value: {
+																					/**
+																					 * Target Variable
+																					 */
+																					displayName: () => LocalizedString
+																					/**
+																					 * Name of the target variable
+																					 */
+																					shortDesc: () => LocalizedString
+																					/**
+																					 * The name of the variable to modify.
+																					 */
+																					longDesc: () => LocalizedString
 																				}
 																			}
-																			value: {
-																				/**
-																				 * Calculation Value
-																				 */
-																				displayName: () => LocalizedString
-																				/**
-																				 * Value for calculations
-																				 */
-																				shortDesc: () => LocalizedString
-																				/**
-																				 * The value to use in calculation actions.
-																				 */
-																				longDesc: () => LocalizedString
+																		}
+																	}
+																	value: {
+																		/**
+																		 * Calculation Value
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * Value for calculations
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * The value to use in calculation actions.
+																		 */
+																		longDesc: () => LocalizedString
+																		type: {
+																			fields: {
 																				type: {
-																					fields: {
-																						type: {
-																							/**
-																							 * Value Type
-																							 */
-																							displayName: () => LocalizedString
-																							/**
-																							 * Type of value
-																							 */
-																							shortDesc: () => LocalizedString
-																							/**
-																							 * Specify whether this is a constant, variable, or evaluation.
-																							 */
-																							longDesc: () => LocalizedString
-																						}
-																						value: {
-																							/**
-																							 * Actual Value
-																							 */
-																							displayName: () => LocalizedString
-																							/**
-																							 * The actual value or reference
-																							 */
-																							shortDesc: () => LocalizedString
-																							/**
-																							 * The actual value, variable name, or expression to use.
-																							 */
-																							longDesc: () => LocalizedString
-																						}
-																					}
+																					/**
+																					 * Value Type
+																					 */
+																					displayName: () => LocalizedString
+																					/**
+																					 * Type of value
+																					 */
+																					shortDesc: () => LocalizedString
+																					/**
+																					 * Specify whether this is a constant, variable, or evaluation.
+																					 */
+																					longDesc: () => LocalizedString
+																				}
+																				value: {
+																					/**
+																					 * Actual Value
+																					 */
+																					displayName: () => LocalizedString
+																					/**
+																					 * The actual value or reference
+																					 */
+																					shortDesc: () => LocalizedString
+																					/**
+																					 * The actual value, variable name, or expression to use.
+																					 */
+																					longDesc: () => LocalizedString
 																				}
 																			}
 																		}
 																	}
 																}
-																condition: {
-																	/**
-																	 * Action Condition
-																	 */
-																	displayName: () => LocalizedString
-																	/**
-																	 * Condition that triggers this action
-																	 */
-																	shortDesc: () => LocalizedString
-																	/**
-																	 * Define the condition that must be met for this action to execute.
-																	 */
-																	longDesc: () => LocalizedString
-																	type: {
-																		fields: {
-																			op: {
-																				/**
-																				 * Operator
-																				 */
-																				displayName: () => LocalizedString
-																				/**
-																				 * Comparison operator
-																				 */
-																				shortDesc: () => LocalizedString
-																				/**
-																				 * The operator to use for comparing values.
-																				 */
-																				longDesc: () => LocalizedString
-																			}
-																			vars: {
-																				/**
-																				 * Variables
-																				 */
-																				displayName: () => LocalizedString
-																				/**
-																				 * Variables to compare
-																				 */
-																				shortDesc: () => LocalizedString
-																				/**
-																				 * The variables or values to compare in this condition.
-																				 */
-																				longDesc: () => LocalizedString
-																				type: {
-																					element_type: {
-																						type: {
-																							fields: {
-																								type: {
-																									/**
-																									 * Variable Type
-																									 */
-																									displayName: () => LocalizedString
-																									/**
-																									 * Type of variable
-																									 */
-																									shortDesc: () => LocalizedString
-																									/**
-																									 * Specify the type of variable (field, hidden, variable, constant, choice).
-																									 */
-																									longDesc: () => LocalizedString
-																								}
-																								value: {
-																									/**
-																									 * Variable Value
-																									 */
-																									displayName: () => LocalizedString
-																									/**
-																									 * The value or reference
-																									 */
-																									shortDesc: () => LocalizedString
-																									/**
-																									 * The actual value or reference to compare.
-																									 */
-																									longDesc: () => LocalizedString
-																								}
-																							}
-																						}
+															}
+														}
+														condition: {
+															/**
+															 * Action Condition
+															 */
+															displayName: () => LocalizedString
+															/**
+															 * Condition that triggers this action
+															 */
+															shortDesc: () => LocalizedString
+															/**
+															 * Define the condition that must be met for this action to execute.
+															 */
+															longDesc: () => LocalizedString
+															type: {
+																fields: {
+																	op: {
+																		/**
+																		 * Operator
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * Comparison operator
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * The operator to use for comparing values.
+																		 */
+																		longDesc: () => LocalizedString
+																	}
+																	vars: {
+																		/**
+																		 * Variables
+																		 */
+																		displayName: () => LocalizedString
+																		/**
+																		 * Variables to compare
+																		 */
+																		shortDesc: () => LocalizedString
+																		/**
+																		 * The variables or values to compare in this condition.
+																		 */
+																		longDesc: () => LocalizedString
+																		type: {
+																			element_type: {
+																				fields: {
+																					type: {
+																						/**
+																						 * Variable Type
+																						 */
+																						displayName: () => LocalizedString
+																						/**
+																						 * Type of variable
+																						 */
+																						shortDesc: () => LocalizedString
+																						/**
+																						 * Specify the type of variable (field, hidden, variable, constant, choice).
+																						 */
+																						longDesc: () => LocalizedString
+																					}
+																					value: {
+																						/**
+																						 * Variable Value
+																						 */
+																						displayName: () => LocalizedString
+																						/**
+																						 * The value or reference
+																						 */
+																						shortDesc: () => LocalizedString
+																						/**
+																						 * The actual value or reference to compare.
+																						 */
+																						longDesc: () => LocalizedString
 																					}
 																				}
 																			}
@@ -193648,34 +198440,36 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									key: {
-										/**
-										 * Field Name
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Name of the field to filter by
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The name of the field to filter by
-										 */
-										longDesc: () => LocalizedString
-									}
-									value: {
-										/**
-										 * Field Value
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Value to match for the field
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The value to match for the field
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										key: {
+											/**
+											 * Field Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Name of the field to filter by
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The name of the field to filter by
+											 */
+											longDesc: () => LocalizedString
+										}
+										value: {
+											/**
+											 * Field Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Value to match for the field
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The value to match for the field
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -194792,48 +199586,50 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									id: {
-										/**
-										 * Item ID
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * NetSuite item identifier
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The internal ID of the inventory item, non-inventory item, service, or other item type in NetSuite that is being ordered.
-										 */
-										longDesc: () => LocalizedString
-									}
-									quantity: {
-										/**
-										 * Quantity
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Number of units
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The number of units being ordered for this line item. For services, this is typically hours or days.
-										 */
-										longDesc: () => LocalizedString
-									}
-									amount: {
-										/**
-										 * Amount Override
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Custom price (optional)
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * Optional custom price override for this line item. If provided, overrides the standard price calculation (quantity × rate). Leave empty to use standard pricing from the price level assigned to the customer.
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										id: {
+											/**
+											 * Item ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * NetSuite item identifier
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The internal ID of the inventory item, non-inventory item, service, or other item type in NetSuite that is being ordered.
+											 */
+											longDesc: () => LocalizedString
+										}
+										quantity: {
+											/**
+											 * Quantity
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Number of units
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The number of units being ordered for this line item. For services, this is typically hours or days.
+											 */
+											longDesc: () => LocalizedString
+										}
+										amount: {
+											/**
+											 * Amount Override
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Custom price (optional)
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Optional custom price override for this line item. If provided, overrides the standard price calculation (quantity × rate). Leave empty to use standard pricing from the price level assigned to the customer.
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -195923,6 +200719,40 @@ export type TranslationFunctions = {
 							 * A list of handles for the contact. Each handle consists of a handle value (e.g., email address) and a source type (email, phone, twitter, etc.). At least one handle is required.
 							 */
 							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										handle: {
+											/**
+											 * Handle
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The handle value
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The actual handle value, such as an email address, phone number, or social media username.
+											 */
+											longDesc: () => LocalizedString
+										}
+										source: {
+											/**
+											 * Source
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The type of handle
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The type of handle: email, phone, twitter, facebook, intercom, front_chat, or custom.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
 						}
 						links: {
 							/**
@@ -201134,7 +205964,7 @@ export type TranslationFunctions = {
 							type: {
 								element_type: {
 									fields: {
-										emailAddress: {
+										address: {
 											/**
 											 * Email Address
 											 */
@@ -201148,17 +205978,17 @@ export type TranslationFunctions = {
 											 */
 											longDesc: () => LocalizedString
 										}
-										type: {
+										name: {
 											/**
-											 * Attendee Type
+											 * Display Name
 											 */
 											displayName: () => LocalizedString
 											/**
-											 * Required or optional attendee.
+											 * The attendee's display name.
 											 */
 											shortDesc: () => LocalizedString
 											/**
-											 * Specify whether this person is a required or optional attendee.
+											 * Optionally enter a display name for the attendee.
 											 */
 											longDesc: () => LocalizedString
 										}
@@ -201400,7 +206230,7 @@ export type TranslationFunctions = {
 							type: {
 								element_type: {
 									fields: {
-										emailAddress: {
+										address: {
 											/**
 											 * Email Address
 											 */
@@ -201448,7 +206278,7 @@ export type TranslationFunctions = {
 							type: {
 								element_type: {
 									fields: {
-										emailAddress: {
+										address: {
 											/**
 											 * Email Address
 											 */
@@ -201496,7 +206326,7 @@ export type TranslationFunctions = {
 							type: {
 								element_type: {
 									fields: {
-										emailAddress: {
+										address: {
 											/**
 											 * Email Address
 											 */
@@ -202764,34 +207594,36 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									key: {
-										/**
-										 * Key
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The key of the parameter
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The key of the parameter
-										 */
-										longDesc: () => LocalizedString
-									}
-									value: {
-										/**
-										 * Value
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The value of the parameter
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The value of the parameter
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										key: {
+											/**
+											 * Key
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The key of the parameter
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The key of the parameter
+											 */
+											longDesc: () => LocalizedString
+										}
+										value: {
+											/**
+											 * Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The value of the parameter
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The value of the parameter
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -202868,34 +207700,36 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									key: {
-										/**
-										 * Key
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The key of the parameter
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The key of the parameter
-										 */
-										longDesc: () => LocalizedString
-									}
-									value: {
-										/**
-										 * Value
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The value of the parameter
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The value of the parameter
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										Key: {
+											/**
+											 * Key
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The key of the parameter
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The key of the parameter
+											 */
+											longDesc: () => LocalizedString
+										}
+										Value: {
+											/**
+											 * Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The value of the parameter
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The value of the parameter
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -206492,34 +211326,36 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									id: {
-										/**
-										 * Line Item ID
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Unique identifier for line item
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The specific identifier for an individual line item
-										 */
-										longDesc: () => LocalizedString
-									}
-									quantity: {
-										/**
-										 * Quantity
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Number of items to fulfill
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The quantity of the specific item being fulfilled
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										id: {
+											/**
+											 * Line Item ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Unique identifier for line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The specific identifier for an individual line item
+											 */
+											longDesc: () => LocalizedString
+										}
+										quantity: {
+											/**
+											 * Quantity
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Number of items to fulfill
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The quantity of the specific item being fulfilled
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -212168,63 +217004,65 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									countryCodes: {
-										/**
-										 * Country Codes
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Countries for this override
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * List of ISO country codes where this price override applies.
-										 */
-										longDesc: () => LocalizedString
-									}
-									unitPrice: {
-										/**
-										 * Override Price
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Price for these countries
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The specific price to use for the selected countries.
-										 */
-										longDesc: () => LocalizedString
-										type: {
-											fields: {
-												amount: {
-													/**
-													 * Override Amount
-													 */
-													displayName: () => LocalizedString
-													/**
-													 * Override price amount
-													 */
-													shortDesc: () => LocalizedString
-													/**
-													 * The override price amount as a string.
-													 */
-													longDesc: () => LocalizedString
-												}
-												currencyCode: {
-													/**
-													 * Override Currency
-													 */
-													displayName: () => LocalizedString
-													/**
-													 * Currency for override price
-													 */
-													shortDesc: () => LocalizedString
-													/**
-													 * The currency code for the override price.
-													 */
-													longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										countryCodes: {
+											/**
+											 * Country Codes
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Countries for this override
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * List of ISO country codes where this price override applies.
+											 */
+											longDesc: () => LocalizedString
+										}
+										unitPrice: {
+											/**
+											 * Override Price
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Price for these countries
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The specific price to use for the selected countries.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													amount: {
+														/**
+														 * Override Amount
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Override price amount
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The override price amount as a string.
+														 */
+														longDesc: () => LocalizedString
+													}
+													currencyCode: {
+														/**
+														 * Override Currency
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Currency for override price
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The currency code for the override price.
+														 */
+														longDesc: () => LocalizedString
+													}
 												}
 											}
 										}
@@ -212766,63 +217604,65 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									countryCodes: {
-										/**
-										 * Country Codes
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Updated countries for overrides
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * Updated list of ISO country codes where price overrides apply.
-										 */
-										longDesc: () => LocalizedString
-									}
-									unitPrice: {
-										/**
-										 * Override Price
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Updated override price
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The updated specific price to use for the selected countries.
-										 */
-										longDesc: () => LocalizedString
-										type: {
-											fields: {
-												amount: {
-													/**
-													 * Override Amount
-													 */
-													displayName: () => LocalizedString
-													/**
-													 * Updated override amount
-													 */
-													shortDesc: () => LocalizedString
-													/**
-													 * The updated override price amount as a string.
-													 */
-													longDesc: () => LocalizedString
-												}
-												currencyCode: {
-													/**
-													 * Override Currency
-													 */
-													displayName: () => LocalizedString
-													/**
-													 * Updated override currency
-													 */
-													shortDesc: () => LocalizedString
-													/**
-													 * The updated currency code for the override price.
-													 */
-													longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										countryCodes: {
+											/**
+											 * Country Codes
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Updated countries for overrides
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Updated list of ISO country codes where price overrides apply.
+											 */
+											longDesc: () => LocalizedString
+										}
+										unitPrice: {
+											/**
+											 * Override Price
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Updated override price
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The updated specific price to use for the selected countries.
+											 */
+											longDesc: () => LocalizedString
+											type: {
+												fields: {
+													amount: {
+														/**
+														 * Override Amount
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Updated override amount
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The updated override price amount as a string.
+														 */
+														longDesc: () => LocalizedString
+													}
+													currencyCode: {
+														/**
+														 * Override Currency
+														 */
+														displayName: () => LocalizedString
+														/**
+														 * Updated override currency
+														 */
+														shortDesc: () => LocalizedString
+														/**
+														 * The updated currency code for the override price.
+														 */
+														longDesc: () => LocalizedString
+													}
 												}
 											}
 										}
@@ -213658,48 +218498,50 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									name: {
-										/**
-										 * Filter Name
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The name of the filter field
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The field name to filter by.
-										 */
-										longDesc: () => LocalizedString
-									}
-									operator: {
-										/**
-										 * Filter Operator
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The comparison operator
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The operator to use for comparing the filter value.
-										 */
-										longDesc: () => LocalizedString
-									}
-									value: {
-										/**
-										 * Filter Value
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The value to filter by
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The value to use for the filter comparison.
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * Filter Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The name of the filter field
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The field name to filter by.
+											 */
+											longDesc: () => LocalizedString
+										}
+										operator: {
+											/**
+											 * Filter Operator
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The comparison operator
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The operator to use for comparing the filter value.
+											 */
+											longDesc: () => LocalizedString
+										}
+										value: {
+											/**
+											 * Filter Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The value to filter by
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The value to use for the filter comparison.
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -213998,34 +218840,36 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 							type: {
-								fields: {
-									price_id: {
-										/**
-										 * Price ID
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * The price ID for this item
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The unique identifier of the price to use for this transaction item.
-										 */
-										longDesc: () => LocalizedString
-									}
-									quantity: {
-										/**
-										 * Quantity
-										 */
-										displayName: () => LocalizedString
-										/**
-										 * Quantity of this item
-										 */
-										shortDesc: () => LocalizedString
-										/**
-										 * The number of units of this item to include in the transaction.
-										 */
-										longDesc: () => LocalizedString
+								element_type: {
+									fields: {
+										price_id: {
+											/**
+											 * Price ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The price ID for this item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the price to use for this transaction item.
+											 */
+											longDesc: () => LocalizedString
+										}
+										quantity: {
+											/**
+											 * Quantity
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Quantity of this item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The number of units of this item to include in the transaction.
+											 */
+											longDesc: () => LocalizedString
+										}
 									}
 								}
 							}
@@ -228547,120 +233391,118 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											name: {
-												/**
-												 * Item Name
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Name of the item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * A descriptive name for this item that will be shown to the customer during checkout.
-												 */
-												longDesc: () => LocalizedString
-											}
-											quantity: {
-												/**
-												 * Quantity
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Number of items
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The quantity of this item being purchased. Must be a positive integer.
-												 */
-												longDesc: () => LocalizedString
-											}
-											unit_price: {
-												/**
-												 * Unit Price
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Price per individual item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The cost per individual unit of this item, before taxes and discounts.
-												 */
-												longDesc: () => LocalizedString
-											}
-											description: {
-												/**
-												 * Item Description
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Detailed description of the item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Optional detailed description providing more information about this item.
-												 */
-												longDesc: () => LocalizedString
-											}
-											sku: {
-												/**
-												 * SKU
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Stock keeping unit identifier
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Your internal stock keeping unit identifier for inventory tracking.
-												 */
-												longDesc: () => LocalizedString
-											}
-											url: {
-												/**
-												 * Item URL
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Link to the item page
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Optional URL linking to the product page where customers can view more details about this item.
-												 */
-												longDesc: () => LocalizedString
-											}
-											category: {
-												/**
-												 * Item Category
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Category type of the item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The category classification for this item, which affects payment processing and compliance requirements.
-												 */
-												longDesc: () => LocalizedString
-											}
-											tax_amount: {
-												/**
-												 * Tax Amount
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Tax amount for this item
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The tax amount specifically for this item, calculated based on quantity and applicable tax rates.
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										name: {
+											/**
+											 * Item Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Name of the item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * A descriptive name for this item that will be shown to the customer during checkout.
+											 */
+											longDesc: () => LocalizedString
+										}
+										quantity: {
+											/**
+											 * Quantity
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Number of items
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The quantity of this item being purchased. Must be a positive integer.
+											 */
+											longDesc: () => LocalizedString
+										}
+										unit_price: {
+											/**
+											 * Unit Price
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Price per individual item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The cost per individual unit of this item, before taxes and discounts.
+											 */
+											longDesc: () => LocalizedString
+										}
+										description: {
+											/**
+											 * Item Description
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Detailed description of the item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Optional detailed description providing more information about this item.
+											 */
+											longDesc: () => LocalizedString
+										}
+										sku: {
+											/**
+											 * SKU
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Stock keeping unit identifier
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Your internal stock keeping unit identifier for inventory tracking.
+											 */
+											longDesc: () => LocalizedString
+										}
+										url: {
+											/**
+											 * Item URL
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Link to the item page
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Optional URL linking to the product page where customers can view more details about this item.
+											 */
+											longDesc: () => LocalizedString
+										}
+										category: {
+											/**
+											 * Item Category
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Category type of the item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The category classification for this item, which affects payment processing and compliance requirements.
+											 */
+											longDesc: () => LocalizedString
+										}
+										tax_amount: {
+											/**
+											 * Tax Amount
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Tax amount for this item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The tax amount specifically for this item, calculated based on quantity and applicable tax rates.
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -228793,50 +233635,48 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 							type: {
 								element_type: {
-									type: {
-										fields: {
-											fee_amount: {
-												/**
-												 * Fee Amount
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Platform fee amount
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * The amount of the platform fee to be collected from this transaction.
-												 */
-												longDesc: () => LocalizedString
-											}
-											payee_email: {
-												/**
-												 * Fee Recipient Email
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Email of fee recipient
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * Email address of the account that will receive the platform fee.
-												 */
-												longDesc: () => LocalizedString
-											}
-											payee_merchant_id: {
-												/**
-												 * Fee Recipient Merchant ID
-												 */
-												displayName: () => LocalizedString
-												/**
-												 * Merchant ID of fee recipient
-												 */
-												shortDesc: () => LocalizedString
-												/**
-												 * PayPal merchant ID of the account that will receive the platform fee.
-												 */
-												longDesc: () => LocalizedString
-											}
+									fields: {
+										fee_amount: {
+											/**
+											 * Fee Amount
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Platform fee amount
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The amount of the platform fee to be collected from this transaction.
+											 */
+											longDesc: () => LocalizedString
+										}
+										payee_email: {
+											/**
+											 * Fee Recipient Email
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Email of fee recipient
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Email address of the account that will receive the platform fee.
+											 */
+											longDesc: () => LocalizedString
+										}
+										payee_merchant_id: {
+											/**
+											 * Fee Recipient Merchant ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Merchant ID of fee recipient
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * PayPal merchant ID of the account that will receive the platform fee.
+											 */
+											longDesc: () => LocalizedString
 										}
 									}
 								}
@@ -230657,6 +235497,40 @@ export type TranslationFunctions = {
 							 * Define the action buttons with titles and URLs. Each button links to a specific URL when clicked.
 							 */
 							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										title: {
+											/**
+											 * Button Title
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Text displayed on the button
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The text that will be shown on the action button.
+											 */
+											longDesc: () => LocalizedString
+										}
+										url: {
+											/**
+											 * Button URL
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * URL the button links to
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The URL that will be opened when the button is clicked.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
 						}
 						username: {
 							/**
@@ -230749,6 +235623,40 @@ export type TranslationFunctions = {
 							 * Define the action buttons with titles and URLs.
 							 */
 							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										title: {
+											/**
+											 * Button Title
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Text displayed on the button
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The text that will be shown on the action button.
+											 */
+											longDesc: () => LocalizedString
+										}
+										url: {
+											/**
+											 * Button URL
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * URL the button links to
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The URL that will be opened when the button is clicked.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
 						}
 						username: {
 							/**

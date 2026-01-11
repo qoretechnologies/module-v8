@@ -281,6 +281,28 @@ const NotionAppEn = {
           displayName: 'Sort Options',
           shortDesc: 'How to sort the returned items',
           longDesc: 'Configure how the database items should be sorted in the response',
+          type: {
+            element_type: {
+              fields: {
+                property: {
+                  displayName: 'Property',
+                  shortDesc: 'Database property to sort by',
+                  longDesc: 'The name of the database property to use for sorting',
+                },
+                timestamp: {
+                  displayName: 'Timestamp',
+                  shortDesc: 'Timestamp field to sort by',
+                  longDesc:
+                    'Sort by a timestamp field: created_time or last_edited_time. Use this instead of property for time-based sorting.',
+                },
+                direction: {
+                  displayName: 'Direction',
+                  shortDesc: 'Sort direction',
+                  longDesc: 'The direction to sort: ascending or descending',
+                },
+              },
+            },
+          },
         },
       },
     },

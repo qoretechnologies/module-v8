@@ -23,24 +23,22 @@ const LinkedInAppEn = {
             'A list of companies or other entities to mention in the post with their position and URN',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  entity: {
-                    displayName: 'Entity Type',
-                    shortDesc: 'Type of entity being mentioned',
-                    longDesc: 'The type of entity being mentioned (e.g., company)',
-                  },
-                  urn: {
-                    displayName: 'Entity URN',
-                    shortDesc: 'LinkedIn URN of the entity',
-                    longDesc:
-                      'The LinkedIn URN (Uniform Resource Name) of the entity being mentioned',
-                  },
-                  start: {
-                    displayName: 'Start Position',
-                    shortDesc: 'Character position where mention starts',
-                    longDesc: 'The character position in the text where the mention begins',
-                  },
+              fields: {
+                entity: {
+                  displayName: 'Entity Type',
+                  shortDesc: 'Type of entity being mentioned',
+                  longDesc: 'The type of entity being mentioned (e.g., company)',
+                },
+                urn: {
+                  displayName: 'Entity URN',
+                  shortDesc: 'LinkedIn URN of the entity',
+                  longDesc:
+                    'The LinkedIn URN (Uniform Resource Name) of the entity being mentioned',
+                },
+                start: {
+                  displayName: 'Start Position',
+                  shortDesc: 'Character position where mention starts',
+                  longDesc: 'The character position in the text where the mention begins',
                 },
               },
             },
@@ -94,24 +92,22 @@ const LinkedInAppEn = {
             'A list of companies or other entities to mention in the post with their position and URN',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  entity: {
-                    displayName: 'Entity Type',
-                    shortDesc: 'Type of entity being mentioned',
-                    longDesc: 'The type of entity being mentioned (e.g., company)',
-                  },
-                  urn: {
-                    displayName: 'Entity URN',
-                    shortDesc: 'LinkedIn URN of the entity',
-                    longDesc:
-                      'The LinkedIn URN (Uniform Resource Name) of the entity being mentioned',
-                  },
-                  start: {
-                    displayName: 'Start Position',
-                    shortDesc: 'Character position where mention starts',
-                    longDesc: 'The character position in the text where the mention begins',
-                  },
+              fields: {
+                entity: {
+                  displayName: 'Entity Type',
+                  shortDesc: 'Type of entity being mentioned',
+                  longDesc: 'The type of entity being mentioned (e.g., company)',
+                },
+                urn: {
+                  displayName: 'Entity URN',
+                  shortDesc: 'LinkedIn URN of the entity',
+                  longDesc:
+                    'The LinkedIn URN (Uniform Resource Name) of the entity being mentioned',
+                },
+                start: {
+                  displayName: 'Start Position',
+                  shortDesc: 'Character position where mention starts',
+                  longDesc: 'The character position in the text where the mention begins',
                 },
               },
             },
@@ -151,24 +147,22 @@ const LinkedInAppEn = {
             'A list of companies or other entities to mention in the post with their position and URN',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  entity: {
-                    displayName: 'Entity Type',
-                    shortDesc: 'Type of entity being mentioned',
-                    longDesc: 'The type of entity being mentioned (e.g., company)',
-                  },
-                  urn: {
-                    displayName: 'Entity URN',
-                    shortDesc: 'LinkedIn URN of the entity',
-                    longDesc:
-                      'The LinkedIn URN (Uniform Resource Name) of the entity being mentioned',
-                  },
-                  start: {
-                    displayName: 'Start Position',
-                    shortDesc: 'Character position where mention starts',
-                    longDesc: 'The character position in the text where the mention begins',
-                  },
+              fields: {
+                entity: {
+                  displayName: 'Entity Type',
+                  shortDesc: 'Type of entity being mentioned',
+                  longDesc: 'The type of entity being mentioned (e.g., company)',
+                },
+                urn: {
+                  displayName: 'Entity URN',
+                  shortDesc: 'LinkedIn URN of the entity',
+                  longDesc:
+                    'The LinkedIn URN (Uniform Resource Name) of the entity being mentioned',
+                },
+                start: {
+                  displayName: 'Start Position',
+                  shortDesc: 'Character position where mention starts',
+                  longDesc: 'The character position in the text where the mention begins',
                 },
               },
             },

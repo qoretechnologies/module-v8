@@ -35,17 +35,19 @@ const GoogleDocsAppEn = {
           longDesc:
             'List of sorting criteria to apply to the search results. Each item specifies a field and direction.',
           type: {
-            fields: {
-              field: {
-                displayName: 'Field',
-                shortDesc: 'Field to sort by',
-                longDesc:
-                  'The field to sort the results by (e.g., name, modifiedTime, createdTime).',
-              },
-              direction: {
-                displayName: 'Direction',
-                shortDesc: 'Sort direction',
-                longDesc: 'The direction to sort - either ascending (asc) or descending (desc).',
+            element_type: {
+              fields: {
+                field: {
+                  displayName: 'Field',
+                  shortDesc: 'Field to sort by',
+                  longDesc:
+                    'The field to sort the results by (e.g., name, modifiedTime, createdTime).',
+                },
+                direction: {
+                  displayName: 'Direction',
+                  shortDesc: 'Sort direction',
+                  longDesc: 'The direction to sort - either ascending (asc) or descending (desc).',
+                },
               },
             },
           },
@@ -165,24 +167,22 @@ const GoogleDocsAppEn = {
           longDesc: 'List of placeholder text replacements to make in the template.',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  placeholder: {
-                    displayName: 'Placeholder',
-                    shortDesc: 'Placeholder text to replace',
-                    longDesc:
-                      'The placeholder text in the template to be replaced (e.g., "{{NAME}}").',
-                  },
-                  replacement_text: {
-                    displayName: 'Replacement Text',
-                    shortDesc: 'Text to replace placeholder with',
-                    longDesc: 'The text that will replace the placeholder in the new document.',
-                  },
-                  match_case: {
-                    displayName: 'Match Case',
-                    shortDesc: 'Case-sensitive replacement',
-                    longDesc: 'Whether the placeholder replacement should be case-sensitive.',
-                  },
+              fields: {
+                placeholder: {
+                  displayName: 'Placeholder',
+                  shortDesc: 'Placeholder text to replace',
+                  longDesc:
+                    'The placeholder text in the template to be replaced (e.g., "{{NAME}}").',
+                },
+                replacement_text: {
+                  displayName: 'Replacement Text',
+                  shortDesc: 'Text to replace placeholder with',
+                  longDesc: 'The text that will replace the placeholder in the new document.',
+                },
+                match_case: {
+                  displayName: 'Match Case',
+                  shortDesc: 'Case-sensitive replacement',
+                  longDesc: 'Whether the placeholder replacement should be case-sensitive.',
                 },
               },
             },
@@ -210,28 +210,26 @@ const GoogleDocsAppEn = {
           longDesc: 'List of placeholder image replacements to make in the template.',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  placeholder: {
-                    displayName: 'Placeholder',
-                    shortDesc: 'Image placeholder text',
-                    longDesc: 'The placeholder text in the template to be replaced with an image.',
-                  },
-                  image_url: {
-                    displayName: 'Image URL',
-                    shortDesc: 'URL of the image to insert',
-                    longDesc: 'The URL of the image that will replace the placeholder.',
-                  },
-                  width: {
-                    displayName: 'Width',
-                    shortDesc: 'Image width in points',
-                    longDesc: 'The width of the inserted image in points.',
-                  },
-                  height: {
-                    displayName: 'Height',
-                    shortDesc: 'Image height in points',
-                    longDesc: 'The height of the inserted image in points.',
-                  },
+              fields: {
+                placeholder: {
+                  displayName: 'Placeholder',
+                  shortDesc: 'Image placeholder text',
+                  longDesc: 'The placeholder text in the template to be replaced with an image.',
+                },
+                image_url: {
+                  displayName: 'Image URL',
+                  shortDesc: 'URL of the image to insert',
+                  longDesc: 'The URL of the image that will replace the placeholder.',
+                },
+                width: {
+                  displayName: 'Width',
+                  shortDesc: 'Image width in points',
+                  longDesc: 'The width of the inserted image in points.',
+                },
+                height: {
+                  displayName: 'Height',
+                  shortDesc: 'Image height in points',
+                  longDesc: 'The height of the inserted image in points.',
                 },
               },
             },

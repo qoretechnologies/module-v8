@@ -90,16 +90,18 @@ const AmazonSESAppEn = {
           longDesc:
             'Optional tags to categorize and track your emails. Tags can be used for reporting and analytics in your SES dashboard.',
           type: {
-            fields: {
-              name: {
-                displayName: 'Tag Name',
-                shortDesc: 'The name of the tag.',
-                longDesc: 'A descriptive name for the tag that will be used for categorization.',
-              },
-              value: {
-                displayName: 'Tag Value',
-                shortDesc: 'The value of the tag.',
-                longDesc: 'The value associated with this tag name.',
+            element_type: {
+              fields: {
+                name: {
+                  displayName: 'Tag Name',
+                  shortDesc: 'The name of the tag.',
+                  longDesc: 'A descriptive name for the tag that will be used for categorization.',
+                },
+                value: {
+                  displayName: 'Tag Value',
+                  shortDesc: 'The value of the tag.',
+                  longDesc: 'The value associated with this tag name.',
+                },
               },
             },
           },

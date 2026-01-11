@@ -117,55 +117,53 @@ const PayPalAppEn = {
             'Array of items included in this order. Each item should specify name, quantity, unit price, and optionally description, SKU, category, and tax amount.',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  name: {
-                    displayName: 'Item Name',
-                    shortDesc: 'Name of the item',
-                    longDesc:
-                      'A descriptive name for this item that will be shown to the customer during checkout.',
-                  },
-                  quantity: {
-                    displayName: 'Quantity',
-                    shortDesc: 'Number of items',
-                    longDesc:
-                      'The quantity of this item being purchased. Must be a positive integer.',
-                  },
-                  unit_price: {
-                    displayName: 'Unit Price',
-                    shortDesc: 'Price per individual item',
-                    longDesc:
-                      'The cost per individual unit of this item, before taxes and discounts.',
-                  },
-                  description: {
-                    displayName: 'Item Description',
-                    shortDesc: 'Detailed description of the item',
-                    longDesc:
-                      'Optional detailed description providing more information about this item.',
-                  },
-                  sku: {
-                    displayName: 'SKU',
-                    shortDesc: 'Stock keeping unit identifier',
-                    longDesc: 'Your internal stock keeping unit identifier for inventory tracking.',
-                  },
-                  url: {
-                    displayName: 'Item URL',
-                    shortDesc: 'Link to the item page',
-                    longDesc:
-                      'Optional URL linking to the product page where customers can view more details about this item.',
-                  },
-                  category: {
-                    displayName: 'Item Category',
-                    shortDesc: 'Category type of the item',
-                    longDesc:
-                      'The category classification for this item, which affects payment processing and compliance requirements.',
-                  },
-                  tax_amount: {
-                    displayName: 'Tax Amount',
-                    shortDesc: 'Tax amount for this item',
-                    longDesc:
-                      'The tax amount specifically for this item, calculated based on quantity and applicable tax rates.',
-                  },
+              fields: {
+                name: {
+                  displayName: 'Item Name',
+                  shortDesc: 'Name of the item',
+                  longDesc:
+                    'A descriptive name for this item that will be shown to the customer during checkout.',
+                },
+                quantity: {
+                  displayName: 'Quantity',
+                  shortDesc: 'Number of items',
+                  longDesc:
+                    'The quantity of this item being purchased. Must be a positive integer.',
+                },
+                unit_price: {
+                  displayName: 'Unit Price',
+                  shortDesc: 'Price per individual item',
+                  longDesc:
+                    'The cost per individual unit of this item, before taxes and discounts.',
+                },
+                description: {
+                  displayName: 'Item Description',
+                  shortDesc: 'Detailed description of the item',
+                  longDesc:
+                    'Optional detailed description providing more information about this item.',
+                },
+                sku: {
+                  displayName: 'SKU',
+                  shortDesc: 'Stock keeping unit identifier',
+                  longDesc: 'Your internal stock keeping unit identifier for inventory tracking.',
+                },
+                url: {
+                  displayName: 'Item URL',
+                  shortDesc: 'Link to the item page',
+                  longDesc:
+                    'Optional URL linking to the product page where customers can view more details about this item.',
+                },
+                category: {
+                  displayName: 'Item Category',
+                  shortDesc: 'Category type of the item',
+                  longDesc:
+                    'The category classification for this item, which affects payment processing and compliance requirements.',
+                },
+                tax_amount: {
+                  displayName: 'Tax Amount',
+                  shortDesc: 'Tax amount for this item',
+                  longDesc:
+                    'The tax amount specifically for this item, calculated based on quantity and applicable tax rates.',
                 },
               },
             },
@@ -223,25 +221,23 @@ const PayPalAppEn = {
             'Array of platform fees to be collected on this transaction. Used by marketplaces to collect fees from transactions processed on their platform.',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  fee_amount: {
-                    displayName: 'Fee Amount',
-                    shortDesc: 'Platform fee amount',
-                    longDesc:
-                      'The amount of the platform fee to be collected from this transaction.',
-                  },
-                  payee_email: {
-                    displayName: 'Fee Recipient Email',
-                    shortDesc: 'Email of fee recipient',
-                    longDesc: 'Email address of the account that will receive the platform fee.',
-                  },
-                  payee_merchant_id: {
-                    displayName: 'Fee Recipient Merchant ID',
-                    shortDesc: 'Merchant ID of fee recipient',
-                    longDesc:
-                      'PayPal merchant ID of the account that will receive the platform fee.',
-                  },
+              fields: {
+                fee_amount: {
+                  displayName: 'Fee Amount',
+                  shortDesc: 'Platform fee amount',
+                  longDesc:
+                    'The amount of the platform fee to be collected from this transaction.',
+                },
+                payee_email: {
+                  displayName: 'Fee Recipient Email',
+                  shortDesc: 'Email of fee recipient',
+                  longDesc: 'Email address of the account that will receive the platform fee.',
+                },
+                payee_merchant_id: {
+                  displayName: 'Fee Recipient Merchant ID',
+                  shortDesc: 'Merchant ID of fee recipient',
+                  longDesc:
+                    'PayPal merchant ID of the account that will receive the platform fee.',
                 },
               },
             },

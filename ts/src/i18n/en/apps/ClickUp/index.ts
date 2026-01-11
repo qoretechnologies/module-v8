@@ -445,18 +445,16 @@ const ClickUpAppEn = {
           longDesc: 'Values for custom fields defined in the workspace',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  id: {
-                    displayName: 'Field ID',
-                    shortDesc: 'Custom field identifier',
-                    longDesc: 'The unique identifier of the custom field',
-                  },
-                  value: {
-                    displayName: 'Field Value',
-                    shortDesc: 'Custom field value',
-                    longDesc: 'The value to set for this custom field',
-                  },
+              fields: {
+                id: {
+                  displayName: 'Field ID',
+                  shortDesc: 'Custom field identifier',
+                  longDesc: 'The unique identifier of the custom field',
+                },
+                value: {
+                  displayName: 'Field Value',
+                  shortDesc: 'Custom field value',
+                  longDesc: 'The value to set for this custom field',
                 },
               },
             },
@@ -937,18 +935,16 @@ const ClickUpAppEn = {
           longDesc: 'Updated values for custom fields',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  id: {
-                    displayName: 'Field ID',
-                    shortDesc: 'Custom field identifier',
-                    longDesc: 'The unique identifier of the custom field',
-                  },
-                  value: {
-                    displayName: 'Field Value',
-                    shortDesc: 'Custom field value',
-                    longDesc: 'The updated value for this custom field',
-                  },
+              fields: {
+                id: {
+                  displayName: 'Field ID',
+                  shortDesc: 'Custom field identifier',
+                  longDesc: 'The unique identifier of the custom field',
+                },
+                value: {
+                  displayName: 'Field Value',
+                  shortDesc: 'Custom field value',
+                  longDesc: 'The updated value for this custom field',
                 },
               },
             },

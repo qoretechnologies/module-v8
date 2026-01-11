@@ -292,27 +292,29 @@ const PaddleAppEn = {
           shortDesc: 'Country-specific pricing',
           longDesc: 'Override the base price for specific countries or regions.',
           type: {
-            fields: {
-              countryCodes: {
-                displayName: 'Country Codes',
-                shortDesc: 'Countries for this override',
-                longDesc: 'List of ISO country codes where this price override applies.',
-              },
-              unitPrice: {
-                displayName: 'Override Price',
-                shortDesc: 'Price for these countries',
-                longDesc: 'The specific price to use for the selected countries.',
-                type: {
-                  fields: {
-                    amount: {
-                      displayName: 'Override Amount',
-                      shortDesc: 'Override price amount',
-                      longDesc: 'The override price amount as a string.',
-                    },
-                    currencyCode: {
-                      displayName: 'Override Currency',
-                      shortDesc: 'Currency for override price',
-                      longDesc: 'The currency code for the override price.',
+            element_type: {
+              fields: {
+                countryCodes: {
+                  displayName: 'Country Codes',
+                  shortDesc: 'Countries for this override',
+                  longDesc: 'List of ISO country codes where this price override applies.',
+                },
+                unitPrice: {
+                  displayName: 'Override Price',
+                  shortDesc: 'Price for these countries',
+                  longDesc: 'The specific price to use for the selected countries.',
+                  type: {
+                    fields: {
+                      amount: {
+                        displayName: 'Override Amount',
+                        shortDesc: 'Override price amount',
+                        longDesc: 'The override price amount as a string.',
+                      },
+                      currencyCode: {
+                        displayName: 'Override Currency',
+                        shortDesc: 'Currency for override price',
+                        longDesc: 'The currency code for the override price.',
+                      },
                     },
                   },
                 },
@@ -534,27 +536,29 @@ const PaddleAppEn = {
           shortDesc: 'Updated country-specific pricing',
           longDesc: 'Updated price overrides for specific countries or regions.',
           type: {
-            fields: {
-              countryCodes: {
-                displayName: 'Country Codes',
-                shortDesc: 'Updated countries for overrides',
-                longDesc: 'Updated list of ISO country codes where price overrides apply.',
-              },
-              unitPrice: {
-                displayName: 'Override Price',
-                shortDesc: 'Updated override price',
-                longDesc: 'The updated specific price to use for the selected countries.',
-                type: {
-                  fields: {
-                    amount: {
-                      displayName: 'Override Amount',
-                      shortDesc: 'Updated override amount',
-                      longDesc: 'The updated override price amount as a string.',
-                    },
-                    currencyCode: {
-                      displayName: 'Override Currency',
-                      shortDesc: 'Updated override currency',
-                      longDesc: 'The updated currency code for the override price.',
+            element_type: {
+              fields: {
+                countryCodes: {
+                  displayName: 'Country Codes',
+                  shortDesc: 'Updated countries for overrides',
+                  longDesc: 'Updated list of ISO country codes where price overrides apply.',
+                },
+                unitPrice: {
+                  displayName: 'Override Price',
+                  shortDesc: 'Updated override price',
+                  longDesc: 'The updated specific price to use for the selected countries.',
+                  type: {
+                    fields: {
+                      amount: {
+                        displayName: 'Override Amount',
+                        shortDesc: 'Updated override amount',
+                        longDesc: 'The updated override price amount as a string.',
+                      },
+                      currencyCode: {
+                        displayName: 'Override Currency',
+                        shortDesc: 'Updated override currency',
+                        longDesc: 'The updated currency code for the override price.',
+                      },
                     },
                   },
                 },
@@ -904,21 +908,23 @@ const PaddleAppEn = {
           longDesc:
             'Apply filters to limit the data included in the report based on specific criteria.',
           type: {
-            fields: {
-              name: {
-                displayName: 'Filter Name',
-                shortDesc: 'The name of the filter field',
-                longDesc: 'The field name to filter by.',
-              },
-              operator: {
-                displayName: 'Filter Operator',
-                shortDesc: 'The comparison operator',
-                longDesc: 'The operator to use for comparing the filter value.',
-              },
-              value: {
-                displayName: 'Filter Value',
-                shortDesc: 'The value to filter by',
-                longDesc: 'The value to use for the filter comparison.',
+            element_type: {
+              fields: {
+                name: {
+                  displayName: 'Filter Name',
+                  shortDesc: 'The name of the filter field',
+                  longDesc: 'The field name to filter by.',
+                },
+                operator: {
+                  displayName: 'Filter Operator',
+                  shortDesc: 'The comparison operator',
+                  longDesc: 'The operator to use for comparing the filter value.',
+                },
+                value: {
+                  displayName: 'Filter Value',
+                  shortDesc: 'The value to filter by',
+                  longDesc: 'The value to use for the filter comparison.',
+                },
               },
             },
           },
@@ -1047,16 +1053,18 @@ const PaddleAppEn = {
           longDesc:
             'List of items to include in the transaction, each with a price ID and quantity.',
           type: {
-            fields: {
-              price_id: {
-                displayName: 'Price ID',
-                shortDesc: 'The price ID for this item',
-                longDesc: 'The unique identifier of the price to use for this transaction item.',
-              },
-              quantity: {
-                displayName: 'Quantity',
-                shortDesc: 'Quantity of this item',
-                longDesc: 'The number of units of this item to include in the transaction.',
+            element_type: {
+              fields: {
+                price_id: {
+                  displayName: 'Price ID',
+                  shortDesc: 'The price ID for this item',
+                  longDesc: 'The unique identifier of the price to use for this transaction item.',
+                },
+                quantity: {
+                  displayName: 'Quantity',
+                  shortDesc: 'Quantity of this item',
+                  longDesc: 'The number of units of this item to include in the transaction.',
+                },
               },
             },
           },

@@ -289,90 +289,86 @@ const TypeformAppEn = {
             'Add questions and input fields to your form. Each field can be customized with different types, properties, validations, and scoring options.',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  ref: {
-                    displayName: 'Field Reference',
-                    shortDesc: 'Unique reference for this field',
-                    longDesc:
-                      'Optional unique reference ID for this field that can be used in logic and integrations.',
-                  },
-                  title: {
-                    displayName: 'Question Title',
-                    shortDesc: 'The question or prompt text',
-                    longDesc: 'The main question text that users will see for this field.',
-                  },
+              fields: {
+                ref: {
+                  displayName: 'Field Reference',
+                  shortDesc: 'Unique reference for this field',
+                  longDesc:
+                    'Optional unique reference ID for this field that can be used in logic and integrations.',
+                },
+                title: {
+                  displayName: 'Question Title',
+                  shortDesc: 'The question or prompt text',
+                  longDesc: 'The main question text that users will see for this field.',
+                },
+                type: {
+                  displayName: 'Field Type',
+                  shortDesc: 'The type of input field',
+                  longDesc:
+                    'Choose the type of input field (text, multiple choice, email, etc.).',
+                },
+                properties: {
+                  displayName: 'Field Properties',
+                  shortDesc: 'Additional configuration for this field',
+                  longDesc:
+                    'Configure field-specific properties like choices, descriptions, and behavior.',
                   type: {
-                    displayName: 'Field Type',
-                    shortDesc: 'The type of input field',
-                    longDesc:
-                      'Choose the type of input field (text, multiple choice, email, etc.).',
-                  },
-                  properties: {
-                    displayName: 'Field Properties',
-                    shortDesc: 'Additional configuration for this field',
-                    longDesc:
-                      'Configure field-specific properties like choices, descriptions, and behavior.',
-                    type: {
-                      fields: {
-                        description: {
-                          displayName: 'Description',
-                          shortDesc: 'Additional description or help text for this field',
-                          longDesc:
-                            'Optional description text that appears below the question to provide additional context or instructions.',
-                        },
-                        choices: {
-                          displayName: 'Answer Choices',
-                          shortDesc: 'Available answer options for multiple choice fields',
-                          longDesc:
-                            'Define the available answer choices for multiple choice, dropdown, or picture choice fields.',
-                          type: {
-                            element_type: {
-                              type: {
-                                fields: {
-                                  ref: {
-                                    displayName: 'Choice Reference',
-                                    shortDesc: 'Unique reference for this choice',
-                                    longDesc:
-                                      'Optional unique reference ID for this choice option.',
-                                  },
-                                  label: {
-                                    displayName: 'Choice Label',
-                                    shortDesc: 'The text label for this choice',
-                                    longDesc:
-                                      'The text that users will see for this answer choice.',
-                                  },
-                                  attachment: {
-                                    displayName: 'Choice Attachment',
-                                    shortDesc: 'Image or media attached to this choice',
-                                    longDesc:
-                                      'Optional image or media file attached to this choice option.',
+                    fields: {
+                      description: {
+                        displayName: 'Description',
+                        shortDesc: 'Additional description or help text for this field',
+                        longDesc:
+                          'Optional description text that appears below the question to provide additional context or instructions.',
+                      },
+                      choices: {
+                        displayName: 'Answer Choices',
+                        shortDesc: 'Available answer options for multiple choice fields',
+                        longDesc:
+                          'Define the available answer choices for multiple choice, dropdown, or picture choice fields.',
+                        type: {
+                          element_type: {
+                            fields: {
+                              ref: {
+                                displayName: 'Choice Reference',
+                                shortDesc: 'Unique reference for this choice',
+                                longDesc:
+                                  'Optional unique reference ID for this choice option.',
+                              },
+                              label: {
+                                displayName: 'Choice Label',
+                                shortDesc: 'The text label for this choice',
+                                longDesc:
+                                  'The text that users will see for this answer choice.',
+                              },
+                              attachment: {
+                                displayName: 'Choice Attachment',
+                                shortDesc: 'Image or media attached to this choice',
+                                longDesc:
+                                  'Optional image or media file attached to this choice option.',
+                                type: {
+                                  fields: {
                                     type: {
-                                      fields: {
-                                        type: {
-                                          displayName: 'Attachment Type',
-                                          shortDesc: 'Type of media attachment',
-                                          longDesc: 'The type of media file (image or video).',
-                                        },
-                                        href: {
-                                          displayName: 'Attachment URL',
-                                          shortDesc: 'URL of the media file',
-                                          longDesc: 'The URL or path to the media file.',
-                                        },
-                                        properties: {
-                                          displayName: 'Attachment Properties',
-                                          shortDesc: 'Additional properties for the attachment',
-                                          longDesc:
-                                            'Configure additional properties for the media attachment.',
-                                          type: {
-                                            fields: {
-                                              description: {
-                                                displayName: 'Attachment Description',
-                                                shortDesc: 'Description for the attachment',
-                                                longDesc:
-                                                  'Optional description or alt text for the media attachment.',
-                                              },
-                                            },
+                                      displayName: 'Attachment Type',
+                                      shortDesc: 'Type of media attachment',
+                                      longDesc: 'The type of media file (image or video).',
+                                    },
+                                    href: {
+                                      displayName: 'Attachment URL',
+                                      shortDesc: 'URL of the media file',
+                                      longDesc: 'The URL or path to the media file.',
+                                    },
+                                    properties: {
+                                      displayName: 'Attachment Properties',
+                                      shortDesc: 'Additional properties for the attachment',
+                                      longDesc:
+                                        'Configure additional properties for the media attachment.',
+                                      type: {
+                                        fields: {
+                                          description: {
+                                            displayName: 'Attachment Description',
+                                            shortDesc: 'Description for the attachment',
+                                            longDesc:
+                                              'Optional description or alt text for the media attachment.',
                                           },
                                         },
                                       },
@@ -383,245 +379,303 @@ const TypeformAppEn = {
                             },
                           },
                         },
-                        allow_multiple_selection: {
-                          displayName: 'Allow Multiple Selection',
-                          shortDesc: 'Allow users to select multiple choices',
-                          longDesc:
-                            'Enable this to allow users to select more than one answer option.',
-                        },
-                        randomize: {
-                          displayName: 'Randomize Choices',
-                          shortDesc: 'Show choices in random order',
-                          longDesc: 'Randomize the order of answer choices for each respondent.',
-                        },
-                        allow_other_choice: {
-                          displayName: 'Allow Other Choice',
-                          shortDesc: 'Include an "Other" option with text input',
-                          longDesc:
-                            'Add an "Other" option that allows users to enter their own custom answer.',
-                        },
-                        vertical_alignment: {
-                          displayName: 'Vertical Alignment',
-                          shortDesc: 'Display choices vertically',
-                          longDesc:
-                            'Display answer choices in a vertical list instead of horizontally.',
-                        },
-                        supersized: {
-                          displayName: 'Supersized',
-                          shortDesc: 'Display choices in large format',
-                          longDesc: 'Show answer choices in a larger, more prominent format.',
-                        },
-                        show_labels: {
-                          displayName: 'Show Labels',
-                          shortDesc: 'Display labels on rating scales',
-                          longDesc: 'Show text labels on rating scales and opinion scales.',
-                        },
-                        alphabetical_order: {
-                          displayName: 'Alphabetical Order',
-                          shortDesc: 'Sort choices alphabetically',
-                          longDesc: 'Automatically sort answer choices in alphabetical order.',
-                        },
-                        hide_marks: {
-                          displayName: 'Hide Marks',
-                          shortDesc: 'Hide scale markings',
-                          longDesc: 'Hide the numerical markings on rating and opinion scales.',
-                        },
-                        button_text: {
-                          displayName: 'Button Text',
-                          shortDesc: 'Custom text for the continue button',
-                          longDesc:
-                            'Customize the text that appears on the continue/submit button for this field.',
-                        },
-                        start_at_one: {
-                          displayName: 'Start at One',
-                          shortDesc: 'Start scale numbering at 1 instead of 0',
-                          longDesc: 'Begin scale numbering at 1 instead of the default 0.',
-                        },
-                        structure: {
-                          displayName: 'Date Structure',
-                          shortDesc: 'Format for date input fields',
-                          longDesc:
-                            'Choose the date format structure (MMDDYYYY, DDMMYYYY, or YYYYMMDD).',
-                        },
-                        separator: {
-                          displayName: 'Date Separator',
-                          shortDesc: 'Separator character for date fields',
-                          longDesc:
-                            'Choose the separator character used between date components (/, -, or .).',
-                        },
-                        currency: {
-                          displayName: 'Payment Currency',
-                          shortDesc: 'Currency for payment fields',
-                          longDesc: 'Select the currency to use for payment fields.',
-                        },
-                        price: {
-                          displayName: 'Payment Price',
-                          shortDesc: 'Price configuration for payment fields',
-                          longDesc: 'Configure the price structure for payment fields.',
-                          type: {
-                            fields: {
-                              type: {
-                                displayName: 'Price Type',
-                                shortDesc: 'Type of price calculation',
-                                longDesc: 'Specify how the price should be calculated.',
-                              },
-                              value: {
-                                displayName: 'Price Value',
-                                shortDesc: 'The price value or variable',
-                                longDesc:
-                                  'The actual price value or reference to a price variable.',
-                              },
-                            },
-                          },
-                        },
-                        show_button: {
-                          displayName: 'Show Button',
-                          shortDesc: 'Display a button on this field',
-                          longDesc: 'Show a continue or action button for this field.',
-                        },
-                        default_country_code: {
-                          displayName: 'Default Country Code',
-                          shortDesc: 'Default country for phone number fields',
-                          longDesc: 'Set the default country code for phone number input fields.',
-                        },
-                        steps: {
-                          displayName: 'Scale Steps',
-                          shortDesc: 'Number of steps in rating scales',
-                          longDesc:
-                            'Define the number of steps or points in rating and opinion scales.',
-                        },
-                        shape: {
-                          displayName: 'Rating Shape',
-                          shortDesc: 'Visual shape for rating fields',
-                          longDesc:
-                            'Choose the visual representation for rating fields (stars, hearts, etc.).',
-                        },
-                        labels: {
-                          displayName: 'Scale Labels',
-                          shortDesc: 'Custom labels for scale endpoints',
-                          longDesc:
-                            'Add custom text labels for the left, right, and center points of scales.',
-                          type: {
-                            fields: {
-                              left: {
-                                displayName: 'Left Label',
-                                shortDesc: 'Label for the left end of the scale',
-                                longDesc:
-                                  'Custom text label for the left (minimum) end of the scale.',
-                              },
-                              right: {
-                                displayName: 'Right Label',
-                                shortDesc: 'Label for the right end of the scale',
-                                longDesc:
-                                  'Custom text label for the right (maximum) end of the scale.',
-                              },
-                              center: {
-                                displayName: 'Center Label',
-                                shortDesc: 'Label for the center of the scale',
-                                longDesc: 'Custom text label for the center point of the scale.',
-                              },
-                            },
-                          },
-                        },
                       },
-                    },
-                  },
-                  validations: {
-                    displayName: 'Field Validations',
-                    shortDesc: 'Validation rules for this field',
-                    longDesc:
-                      'Set validation rules like required fields, minimum/maximum values, and length limits.',
-                    type: {
-                      fields: {
-                        required: {
-                          displayName: 'Required Field',
-                          shortDesc: 'Make this field mandatory',
-                          longDesc: 'Require users to answer this field before proceeding.',
-                        },
-                        max_length: {
-                          displayName: 'Maximum Length',
-                          shortDesc: 'Maximum number of characters allowed',
-                          longDesc: 'Set the maximum number of characters users can enter.',
-                        },
-                        min_value: {
-                          displayName: 'Minimum Value',
-                          shortDesc: 'Minimum numeric value allowed',
-                          longDesc: 'Set the minimum numeric value for number fields.',
-                        },
-                        max_value: {
-                          displayName: 'Maximum Value',
-                          shortDesc: 'Maximum numeric value allowed',
-                          longDesc: 'Set the maximum numeric value for number fields.',
-                        },
-                        min_selection: {
-                          displayName: 'Minimum Selections',
-                          shortDesc: 'Minimum number of choices to select',
-                          longDesc: 'Require users to select at least this many choices.',
-                        },
-                        max_selection: {
-                          displayName: 'Maximum Selections',
-                          shortDesc: 'Maximum number of choices to select',
-                          longDesc: 'Limit users to selecting no more than this many choices.',
-                        },
+                      allow_multiple_selection: {
+                        displayName: 'Allow Multiple Selection',
+                        shortDesc: 'Allow users to select multiple choices',
+                        longDesc:
+                          'Enable this to allow users to select more than one answer option.',
                       },
-                    },
-                  },
-                  attachment: {
-                    displayName: 'Field Attachment',
-                    shortDesc: 'Media attachment for this field',
-                    longDesc: 'Add an image or video attachment to this field.',
-                  },
-                  layout: {
-                    displayName: 'Field Layout',
-                    shortDesc: 'Layout configuration for media attachments',
-                    longDesc: 'Configure how media attachments are displayed with this field.',
-                  },
-                  scoring: {
-                    displayName: 'Field Scoring',
-                    shortDesc: 'Scoring rules for quiz fields',
-                    longDesc: 'Configure scoring rules for quiz and assessment fields.',
-                    type: {
-                      fields: {
+                      randomize: {
+                        displayName: 'Randomize Choices',
+                        shortDesc: 'Show choices in random order',
+                        longDesc: 'Randomize the order of answer choices for each respondent.',
+                      },
+                      allow_other_choice: {
+                        displayName: 'Allow Other Choice',
+                        shortDesc: 'Include an "Other" option with text input',
+                        longDesc:
+                          'Add an "Other" option that allows users to enter their own custom answer.',
+                      },
+                      vertical_alignment: {
+                        displayName: 'Vertical Alignment',
+                        shortDesc: 'Display choices vertically',
+                        longDesc:
+                          'Display answer choices in a vertical list instead of horizontally.',
+                      },
+                      supersized: {
+                        displayName: 'Supersized',
+                        shortDesc: 'Display choices in large format',
+                        longDesc: 'Show answer choices in a larger, more prominent format.',
+                      },
+                      show_labels: {
+                        displayName: 'Show Labels',
+                        shortDesc: 'Display labels on rating scales',
+                        longDesc: 'Show text labels on rating scales and opinion scales.',
+                      },
+                      alphabetical_order: {
+                        displayName: 'Alphabetical Order',
+                        shortDesc: 'Sort choices alphabetically',
+                        longDesc: 'Automatically sort answer choices in alphabetical order.',
+                      },
+                      hide_marks: {
+                        displayName: 'Hide Marks',
+                        shortDesc: 'Hide scale markings',
+                        longDesc: 'Hide the numerical markings on rating and opinion scales.',
+                      },
+                      button_text: {
+                        displayName: 'Button Text',
+                        shortDesc: 'Custom text for the continue button',
+                        longDesc:
+                          'Customize the text that appears on the continue/submit button for this field.',
+                      },
+                      start_at_one: {
+                        displayName: 'Start at One',
+                        shortDesc: 'Start scale numbering at 1 instead of 0',
+                        longDesc: 'Begin scale numbering at 1 instead of the default 0.',
+                      },
+                      structure: {
+                        displayName: 'Date Structure',
+                        shortDesc: 'Format for date input fields',
+                        longDesc:
+                          'Choose the date format structure (MMDDYYYY, DDMMYYYY, or YYYYMMDD).',
+                      },
+                      separator: {
+                        displayName: 'Date Separator',
+                        shortDesc: 'Separator character for date fields',
+                        longDesc:
+                          'Choose the separator character used between date components (/, -, or .).',
+                      },
+                      currency: {
+                        displayName: 'Payment Currency',
+                        shortDesc: 'Currency for payment fields',
+                        longDesc: 'Select the currency to use for payment fields.',
+                      },
+                      price: {
+                        displayName: 'Payment Price',
+                        shortDesc: 'Price configuration for payment fields',
+                        longDesc: 'Configure the price structure for payment fields.',
                         type: {
-                          displayName: 'Scoring Type',
-                          shortDesc: 'Type of scoring method',
-                          longDesc: 'Choose the scoring method for this field.',
-                        },
-                        boolean_correct: {
-                          displayName: 'Boolean Correct Scoring',
-                          shortDesc: 'Scoring for true/false questions',
-                          longDesc: 'Configure scoring for boolean/true-false questions.',
-                          type: {
-                            fields: {
-                              boolean: {
-                                displayName: 'Correct Answer',
-                                shortDesc: 'The correct boolean value',
-                                longDesc: 'Specify whether true or false is the correct answer.',
-                              },
-                              score: {
-                                displayName: 'Score Points',
-                                shortDesc: 'Points awarded for correct answer',
-                                longDesc: 'Number of points to award when answered correctly.',
-                              },
+                          fields: {
+                            type: {
+                              displayName: 'Price Type',
+                              shortDesc: 'Type of price calculation',
+                              longDesc: 'Specify how the price should be calculated.',
+                            },
+                            value: {
+                              displayName: 'Price Value',
+                              shortDesc: 'The price value or variable',
+                              longDesc:
+                                'The actual price value or reference to a price variable.',
                             },
                           },
                         },
-                        choices_all_correct: {
-                          displayName: 'Multiple Choice Scoring',
-                          shortDesc: 'Scoring for multiple choice questions',
-                          longDesc: 'Configure scoring for multiple choice questions.',
-                          type: {
-                            fields: {
-                              choices: {
-                                displayName: 'Correct Choices',
-                                shortDesc: 'List of correct choice references',
-                                longDesc: 'References to the correct answer choices.',
-                              },
-                              score: {
-                                displayName: 'Score Points',
-                                shortDesc: 'Points awarded for correct answer',
-                                longDesc: 'Number of points to award when answered correctly.',
-                              },
+                      },
+                      show_button: {
+                        displayName: 'Show Button',
+                        shortDesc: 'Display a button on this field',
+                        longDesc: 'Show a continue or action button for this field.',
+                      },
+                      default_country_code: {
+                        displayName: 'Default Country Code',
+                        shortDesc: 'Default country for phone number fields',
+                        longDesc: 'Set the default country code for phone number input fields.',
+                      },
+                      steps: {
+                        displayName: 'Scale Steps',
+                        shortDesc: 'Number of steps in rating scales',
+                        longDesc:
+                          'Define the number of steps or points in rating and opinion scales.',
+                      },
+                      shape: {
+                        displayName: 'Rating Shape',
+                        shortDesc: 'Visual shape for rating fields',
+                        longDesc:
+                          'Choose the visual representation for rating fields (stars, hearts, etc.).',
+                      },
+                      labels: {
+                        displayName: 'Scale Labels',
+                        shortDesc: 'Custom labels for scale endpoints',
+                        longDesc:
+                          'Add custom text labels for the left, right, and center points of scales.',
+                        type: {
+                          fields: {
+                            left: {
+                              displayName: 'Left Label',
+                              shortDesc: 'Label for the left end of the scale',
+                              longDesc:
+                                'Custom text label for the left (minimum) end of the scale.',
+                            },
+                            right: {
+                              displayName: 'Right Label',
+                              shortDesc: 'Label for the right end of the scale',
+                              longDesc:
+                                'Custom text label for the right (maximum) end of the scale.',
+                            },
+                            center: {
+                              displayName: 'Center Label',
+                              shortDesc: 'Label for the center of the scale',
+                              longDesc: 'Custom text label for the center point of the scale.',
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+                validations: {
+                  displayName: 'Field Validations',
+                  shortDesc: 'Validation rules for this field',
+                  longDesc:
+                    'Set validation rules like required fields, minimum/maximum values, and length limits.',
+                  type: {
+                    fields: {
+                      required: {
+                        displayName: 'Required Field',
+                        shortDesc: 'Make this field mandatory',
+                        longDesc: 'Require users to answer this field before proceeding.',
+                      },
+                      max_length: {
+                        displayName: 'Maximum Length',
+                        shortDesc: 'Maximum number of characters allowed',
+                        longDesc: 'Set the maximum number of characters users can enter.',
+                      },
+                      min_value: {
+                        displayName: 'Minimum Value',
+                        shortDesc: 'Minimum numeric value allowed',
+                        longDesc: 'Set the minimum numeric value for number fields.',
+                      },
+                      max_value: {
+                        displayName: 'Maximum Value',
+                        shortDesc: 'Maximum numeric value allowed',
+                        longDesc: 'Set the maximum numeric value for number fields.',
+                      },
+                      min_selection: {
+                        displayName: 'Minimum Selections',
+                        shortDesc: 'Minimum number of choices to select',
+                        longDesc: 'Require users to select at least this many choices.',
+                      },
+                      max_selection: {
+                        displayName: 'Maximum Selections',
+                        shortDesc: 'Maximum number of choices to select',
+                        longDesc: 'Limit users to selecting no more than this many choices.',
+                      },
+                    },
+                  },
+                },
+                attachment: {
+                  displayName: 'Field Attachment',
+                  shortDesc: 'Media attachment for this field',
+                  longDesc: 'Add an image or video attachment to this field.',
+                  type: {
+                    fields: {
+                      type: {
+                        displayName: 'Attachment Type',
+                        shortDesc: 'Type of media attachment',
+                        longDesc: 'The type of media file (image or video).',
+                      },
+                      href: {
+                        displayName: 'Attachment URL',
+                        shortDesc: 'URL of the media file',
+                        longDesc: 'The URL or path to the media file.',
+                      },
+                      scale: {
+                        displayName: 'Attachment Scale',
+                        shortDesc: 'Scale factor for the attachment',
+                        longDesc: 'The scale factor for displaying the attachment (0.4, 0.6, 0.8, or 1).',
+                      },
+                    },
+                  },
+                },
+                layout: {
+                  displayName: 'Field Layout',
+                  shortDesc: 'Layout configuration for media attachments',
+                  longDesc: 'Configure how media attachments are displayed with this field.',
+                  type: {
+                    fields: {
+                      type: {
+                        displayName: 'Layout Type',
+                        shortDesc: 'Type of layout',
+                        longDesc: 'Choose the layout style (split, wallpaper, float, or stack).',
+                      },
+                      placement: {
+                        displayName: 'Placement',
+                        shortDesc: 'Position of the attachment',
+                        longDesc: 'Choose where the attachment appears (left or right).',
+                      },
+                      attachment: {
+                        displayName: 'Layout Attachment',
+                        shortDesc: 'Media attachment for the layout',
+                        longDesc: 'Configure the media attachment for this layout.',
+                        type: {
+                          fields: {
+                            type: {
+                              displayName: 'Attachment Type',
+                              shortDesc: 'Type of media attachment',
+                              longDesc: 'The type of media file (image or video).',
+                            },
+                            href: {
+                              displayName: 'Attachment URL',
+                              shortDesc: 'URL of the media file',
+                              longDesc: 'The URL or path to the media file.',
+                            },
+                            scale: {
+                              displayName: 'Attachment Scale',
+                              shortDesc: 'Scale factor for the attachment',
+                              longDesc:
+                                'The scale factor for displaying the attachment (0.4, 0.6, 0.8, or 1).',
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+                scoring: {
+                  displayName: 'Field Scoring',
+                  shortDesc: 'Scoring rules for quiz fields',
+                  longDesc: 'Configure scoring rules for quiz and assessment fields.',
+                  type: {
+                    fields: {
+                      type: {
+                        displayName: 'Scoring Type',
+                        shortDesc: 'Type of scoring method',
+                        longDesc: 'Choose the scoring method for this field.',
+                      },
+                      boolean_correct: {
+                        displayName: 'Boolean Correct Scoring',
+                        shortDesc: 'Scoring for true/false questions',
+                        longDesc: 'Configure scoring for boolean/true-false questions.',
+                        type: {
+                          fields: {
+                            boolean: {
+                              displayName: 'Correct Answer',
+                              shortDesc: 'The correct boolean value',
+                              longDesc: 'Specify whether true or false is the correct answer.',
+                            },
+                            score: {
+                              displayName: 'Score Points',
+                              shortDesc: 'Points awarded for correct answer',
+                              longDesc: 'Number of points to award when answered correctly.',
+                            },
+                          },
+                        },
+                      },
+                      choices_all_correct: {
+                        displayName: 'Multiple Choice Scoring',
+                        shortDesc: 'Scoring for multiple choice questions',
+                        longDesc: 'Configure scoring for multiple choice questions.',
+                        type: {
+                          fields: {
+                            choices: {
+                              displayName: 'Correct Choices',
+                              shortDesc: 'List of correct choice references',
+                              longDesc: 'References to the correct answer choices.',
+                            },
+                            score: {
+                              displayName: 'Score Points',
+                              shortDesc: 'Points awarded for correct answer',
+                              longDesc: 'Number of points to award when answered correctly.',
                             },
                           },
                         },
@@ -666,39 +720,105 @@ const TypeformAppEn = {
             'Create welcome screens to introduce your form, explain its purpose, or provide instructions.',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  ref: {
-                    displayName: 'Screen Reference',
-                    shortDesc: 'Unique reference for this screen',
-                    longDesc: 'Optional unique reference ID for this welcome screen.',
+              fields: {
+                ref: {
+                  displayName: 'Screen Reference',
+                  shortDesc: 'Unique reference for this screen',
+                  longDesc: 'Optional unique reference ID for this welcome screen.',
+                },
+                title: {
+                  displayName: 'Screen Title',
+                  shortDesc: 'Title text for this welcome screen',
+                  longDesc: 'The main title text displayed on this welcome screen.',
+                },
+                properties: {
+                  displayName: 'Screen Properties',
+                  shortDesc: 'Configuration options for this screen',
+                  longDesc: 'Configure the appearance and behavior of this welcome screen.',
+                  type: {
+                    fields: {
+                      description: {
+                        displayName: 'Screen Description',
+                        shortDesc: 'Description text for this screen',
+                        longDesc:
+                          'Additional description or instruction text for this welcome screen.',
+                      },
+                      show_button: {
+                        displayName: 'Show Button',
+                        shortDesc: 'Display a continue button',
+                        longDesc: 'Show a continue button on this welcome screen.',
+                      },
+                      button_text: {
+                        displayName: 'Button Text',
+                        shortDesc: 'Custom text for the continue button',
+                        longDesc: 'Customize the text that appears on the continue button.',
+                      },
+                    },
                   },
-                  title: {
-                    displayName: 'Screen Title',
-                    shortDesc: 'Title text for this welcome screen',
-                    longDesc: 'The main title text displayed on this welcome screen.',
+                },
+                attachment: {
+                  displayName: 'Screen Attachment',
+                  shortDesc: 'Media attachment for this screen',
+                  longDesc: 'Add an image or video attachment to this welcome screen.',
+                  type: {
+                    fields: {
+                      type: {
+                        displayName: 'Attachment Type',
+                        shortDesc: 'Type of media attachment',
+                        longDesc: 'The type of media file (image or video).',
+                      },
+                      href: {
+                        displayName: 'Attachment URL',
+                        shortDesc: 'URL of the media file',
+                        longDesc: 'The URL or path to the media file.',
+                      },
+                      scale: {
+                        displayName: 'Attachment Scale',
+                        shortDesc: 'Scale factor for the attachment',
+                        longDesc: 'The scale factor for displaying the attachment (0.4, 0.6, 0.8, or 1).',
+                      },
+                    },
                   },
-                  properties: {
-                    displayName: 'Screen Properties',
-                    shortDesc: 'Configuration options for this screen',
-                    longDesc: 'Configure the appearance and behavior of this welcome screen.',
-                    type: {
-                      fields: {
-                        description: {
-                          displayName: 'Screen Description',
-                          shortDesc: 'Description text for this screen',
-                          longDesc:
-                            'Additional description or instruction text for this welcome screen.',
-                        },
-                        show_button: {
-                          displayName: 'Show Button',
-                          shortDesc: 'Display a continue button',
-                          longDesc: 'Show a continue button on this welcome screen.',
-                        },
-                        button_text: {
-                          displayName: 'Button Text',
-                          shortDesc: 'Custom text for the continue button',
-                          longDesc: 'Customize the text that appears on the continue button.',
+                },
+                layout: {
+                  displayName: 'Screen Layout',
+                  shortDesc: 'Layout configuration for media attachments',
+                  longDesc: 'Configure how media attachments are displayed with this welcome screen.',
+                  type: {
+                    fields: {
+                      type: {
+                        displayName: 'Layout Type',
+                        shortDesc: 'Type of layout',
+                        longDesc: 'Choose the layout style (split, wallpaper, float, or stack).',
+                      },
+                      placement: {
+                        displayName: 'Placement',
+                        shortDesc: 'Position of the attachment',
+                        longDesc: 'Choose where the attachment appears (left or right).',
+                      },
+                      attachment: {
+                        displayName: 'Layout Attachment',
+                        shortDesc: 'Media attachment for the layout',
+                        longDesc: 'Configure the media attachment for this layout.',
+                        type: {
+                          fields: {
+                            type: {
+                              displayName: 'Attachment Type',
+                              shortDesc: 'Type of media attachment',
+                              longDesc: 'The type of media file (image or video).',
+                            },
+                            href: {
+                              displayName: 'Attachment URL',
+                              shortDesc: 'URL of the media file',
+                              longDesc: 'The URL or path to the media file.',
+                            },
+                            scale: {
+                              displayName: 'Attachment Scale',
+                              shortDesc: 'Scale factor for the attachment',
+                              longDesc:
+                                'The scale factor for displaying the attachment (0.4, 0.6, 0.8, or 1).',
+                            },
+                          },
                         },
                       },
                     },
@@ -715,39 +835,105 @@ const TypeformAppEn = {
             'Create custom thank you screens to show appreciation, provide next steps, or display results.',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  ref: {
-                    displayName: 'Screen Reference',
-                    shortDesc: 'Unique reference for this screen',
-                    longDesc: 'Optional unique reference ID for this thank you screen.',
+              fields: {
+                ref: {
+                  displayName: 'Screen Reference',
+                  shortDesc: 'Unique reference for this screen',
+                  longDesc: 'Optional unique reference ID for this thank you screen.',
+                },
+                title: {
+                  displayName: 'Screen Title',
+                  shortDesc: 'Title text for this thank you screen',
+                  longDesc: 'The main title text displayed on this thank you screen.',
+                },
+                properties: {
+                  displayName: 'Screen Properties',
+                  shortDesc: 'Configuration options for this screen',
+                  longDesc: 'Configure the appearance and behavior of this thank you screen.',
+                  type: {
+                    fields: {
+                      description: {
+                        displayName: 'Screen Description',
+                        shortDesc: 'Description text for this screen',
+                        longDesc:
+                          'Additional description or message text for this thank you screen.',
+                      },
+                      show_button: {
+                        displayName: 'Show Button',
+                        shortDesc: 'Display an action button',
+                        longDesc: 'Show an action button on this thank you screen.',
+                      },
+                      button_text: {
+                        displayName: 'Button Text',
+                        shortDesc: 'Custom text for the action button',
+                        longDesc: 'Customize the text that appears on the action button.',
+                      },
+                    },
                   },
-                  title: {
-                    displayName: 'Screen Title',
-                    shortDesc: 'Title text for this thank you screen',
-                    longDesc: 'The main title text displayed on this thank you screen.',
+                },
+                attachment: {
+                  displayName: 'Screen Attachment',
+                  shortDesc: 'Media attachment for this screen',
+                  longDesc: 'Add an image or video attachment to this thank you screen.',
+                  type: {
+                    fields: {
+                      type: {
+                        displayName: 'Attachment Type',
+                        shortDesc: 'Type of media attachment',
+                        longDesc: 'The type of media file (image or video).',
+                      },
+                      href: {
+                        displayName: 'Attachment URL',
+                        shortDesc: 'URL of the media file',
+                        longDesc: 'The URL or path to the media file.',
+                      },
+                      scale: {
+                        displayName: 'Attachment Scale',
+                        shortDesc: 'Scale factor for the attachment',
+                        longDesc: 'The scale factor for displaying the attachment (0.4, 0.6, 0.8, or 1).',
+                      },
+                    },
                   },
-                  properties: {
-                    displayName: 'Screen Properties',
-                    shortDesc: 'Configuration options for this screen',
-                    longDesc: 'Configure the appearance and behavior of this thank you screen.',
-                    type: {
-                      fields: {
-                        description: {
-                          displayName: 'Screen Description',
-                          shortDesc: 'Description text for this screen',
-                          longDesc:
-                            'Additional description or message text for this thank you screen.',
-                        },
-                        show_button: {
-                          displayName: 'Show Button',
-                          shortDesc: 'Display an action button',
-                          longDesc: 'Show an action button on this thank you screen.',
-                        },
-                        button_text: {
-                          displayName: 'Button Text',
-                          shortDesc: 'Custom text for the action button',
-                          longDesc: 'Customize the text that appears on the action button.',
+                },
+                layout: {
+                  displayName: 'Screen Layout',
+                  shortDesc: 'Layout configuration for media attachments',
+                  longDesc: 'Configure how media attachments are displayed with this thank you screen.',
+                  type: {
+                    fields: {
+                      type: {
+                        displayName: 'Layout Type',
+                        shortDesc: 'Type of layout',
+                        longDesc: 'Choose the layout style (split, wallpaper, float, or stack).',
+                      },
+                      placement: {
+                        displayName: 'Placement',
+                        shortDesc: 'Position of the attachment',
+                        longDesc: 'Choose where the attachment appears (left or right).',
+                      },
+                      attachment: {
+                        displayName: 'Layout Attachment',
+                        shortDesc: 'Media attachment for the layout',
+                        longDesc: 'Configure the media attachment for this layout.',
+                        type: {
+                          fields: {
+                            type: {
+                              displayName: 'Attachment Type',
+                              shortDesc: 'Type of media attachment',
+                              longDesc: 'The type of media file (image or video).',
+                            },
+                            href: {
+                              displayName: 'Attachment URL',
+                              shortDesc: 'URL of the media file',
+                              longDesc: 'The URL or path to the media file.',
+                            },
+                            scale: {
+                              displayName: 'Attachment Scale',
+                              shortDesc: 'Scale factor for the attachment',
+                              longDesc:
+                                'The scale factor for displaying the attachment (0.4, 0.6, 0.8, or 1).',
+                            },
+                          },
                         },
                       },
                     },
@@ -884,138 +1070,132 @@ const TypeformAppEn = {
             'Create conditional logic rules to show/hide fields, jump to different sections, or perform calculations based on user responses.',
           type: {
             element_type: {
-              type: {
-                fields: {
+              fields: {
+                type: {
+                  displayName: 'Logic Type',
+                  shortDesc: 'Type of field this logic applies to',
+                  longDesc: 'Specify whether this logic applies to a form field or hidden field.',
+                },
+                ref: {
+                  displayName: 'Field Reference',
+                  shortDesc: 'Reference to the field this logic applies to',
+                  longDesc:
+                    'The reference ID of the field this conditional logic rule applies to.',
+                },
+                actions: {
+                  displayName: 'Logic Actions',
+                  shortDesc: 'Actions to perform when conditions are met',
+                  longDesc: 'Define what actions to take when the specified conditions are met.',
                   type: {
-                    displayName: 'Logic Type',
-                    shortDesc: 'Type of field this logic applies to',
-                    longDesc: 'Specify whether this logic applies to a form field or hidden field.',
-                  },
-                  ref: {
-                    displayName: 'Field Reference',
-                    shortDesc: 'Reference to the field this logic applies to',
-                    longDesc:
-                      'The reference ID of the field this conditional logic rule applies to.',
-                  },
-                  actions: {
-                    displayName: 'Logic Actions',
-                    shortDesc: 'Actions to perform when conditions are met',
-                    longDesc: 'Define what actions to take when the specified conditions are met.',
-                    type: {
-                      element_type: {
-                        type: {
-                          fields: {
-                            action: {
-                              displayName: 'Action Type',
-                              shortDesc: 'Type of action to perform',
-                              longDesc:
-                                'Choose the type of action (jump, add, subtract, multiply, divide, set).',
-                            },
-                            details: {
-                              displayName: 'Action Details',
-                              shortDesc: 'Specific details for this action',
-                              longDesc: 'Configure the specific parameters for this action.',
-                              type: {
-                                fields: {
-                                  to: {
-                                    displayName: 'Jump Target',
-                                    shortDesc: 'Where to jump to',
-                                    longDesc: 'Configure the target for jump actions.',
+                    element_type: {
+                      fields: {
+                        action: {
+                          displayName: 'Action Type',
+                          shortDesc: 'Type of action to perform',
+                          longDesc:
+                            'Choose the type of action (jump, add, subtract, multiply, divide, set).',
+                        },
+                        details: {
+                          displayName: 'Action Details',
+                          shortDesc: 'Specific details for this action',
+                          longDesc: 'Configure the specific parameters for this action.',
+                          type: {
+                            fields: {
+                              to: {
+                                displayName: 'Jump Target',
+                                shortDesc: 'Where to jump to',
+                                longDesc: 'Configure the target for jump actions.',
+                                type: {
+                                  fields: {
                                     type: {
-                                      fields: {
-                                        type: {
-                                          displayName: 'Target Type',
-                                          shortDesc: 'Type of jump target',
-                                          longDesc:
-                                            'Specify the type of target (field, thankyou, outcome).',
-                                        },
-                                        value: {
-                                          displayName: 'Target Value',
-                                          shortDesc: 'Reference to the target',
-                                          longDesc:
-                                            'The reference ID of the target field or screen.',
-                                        },
-                                      },
+                                      displayName: 'Target Type',
+                                      shortDesc: 'Type of jump target',
+                                      longDesc:
+                                        'Specify the type of target (field, thankyou, outcome).',
+                                    },
+                                    value: {
+                                      displayName: 'Target Value',
+                                      shortDesc: 'Reference to the target',
+                                      longDesc:
+                                        'The reference ID of the target field or screen.',
                                     },
                                   },
-                                  target: {
-                                    displayName: 'Calculation Target',
-                                    shortDesc: 'Target for calculations',
-                                    longDesc:
-                                      'Specify the target variable for calculation actions.',
+                                },
+                              },
+                              target: {
+                                displayName: 'Calculation Target',
+                                shortDesc: 'Target for calculations',
+                                longDesc:
+                                  'Specify the target variable for calculation actions.',
+                                type: {
+                                  fields: {
                                     type: {
-                                      fields: {
-                                        type: {
-                                          displayName: 'Target Type',
-                                          shortDesc: 'Type of calculation target',
-                                          longDesc: 'The type of target (usually variable).',
-                                        },
-                                        value: {
-                                          displayName: 'Target Variable',
-                                          shortDesc: 'Name of the target variable',
-                                          longDesc: 'The name of the variable to modify.',
-                                        },
-                                      },
+                                      displayName: 'Target Type',
+                                      shortDesc: 'Type of calculation target',
+                                      longDesc: 'The type of target (usually variable).',
+                                    },
+                                    value: {
+                                      displayName: 'Target Variable',
+                                      shortDesc: 'Name of the target variable',
+                                      longDesc: 'The name of the variable to modify.',
                                     },
                                   },
-                                  value: {
-                                    displayName: 'Calculation Value',
-                                    shortDesc: 'Value for calculations',
-                                    longDesc: 'The value to use in calculation actions.',
+                                },
+                              },
+                              value: {
+                                displayName: 'Calculation Value',
+                                shortDesc: 'Value for calculations',
+                                longDesc: 'The value to use in calculation actions.',
+                                type: {
+                                  fields: {
                                     type: {
-                                      fields: {
-                                        type: {
-                                          displayName: 'Value Type',
-                                          shortDesc: 'Type of value',
-                                          longDesc:
-                                            'Specify whether this is a constant, variable, or evaluation.',
-                                        },
-                                        value: {
-                                          displayName: 'Actual Value',
-                                          shortDesc: 'The actual value or reference',
-                                          longDesc:
-                                            'The actual value, variable name, or expression to use.',
-                                        },
-                                      },
+                                      displayName: 'Value Type',
+                                      shortDesc: 'Type of value',
+                                      longDesc:
+                                        'Specify whether this is a constant, variable, or evaluation.',
+                                    },
+                                    value: {
+                                      displayName: 'Actual Value',
+                                      shortDesc: 'The actual value or reference',
+                                      longDesc:
+                                        'The actual value, variable name, or expression to use.',
                                     },
                                   },
                                 },
                               },
                             },
-                            condition: {
-                              displayName: 'Action Condition',
-                              shortDesc: 'Condition that triggers this action',
-                              longDesc:
-                                'Define the condition that must be met for this action to execute.',
-                              type: {
-                                fields: {
-                                  op: {
-                                    displayName: 'Operator',
-                                    shortDesc: 'Comparison operator',
-                                    longDesc: 'The operator to use for comparing values.',
-                                  },
-                                  vars: {
-                                    displayName: 'Variables',
-                                    shortDesc: 'Variables to compare',
-                                    longDesc:
-                                      'The variables or values to compare in this condition.',
-                                    type: {
-                                      element_type: {
-                                        type: {
-                                          fields: {
-                                            type: {
-                                              displayName: 'Variable Type',
-                                              shortDesc: 'Type of variable',
-                                              longDesc:
-                                                'Specify the type of variable (field, hidden, variable, constant, choice).',
-                                            },
-                                            value: {
-                                              displayName: 'Variable Value',
-                                              shortDesc: 'The value or reference',
-                                              longDesc: 'The actual value or reference to compare.',
-                                            },
-                                          },
-                                        },
+                          },
+                        },
+                        condition: {
+                          displayName: 'Action Condition',
+                          shortDesc: 'Condition that triggers this action',
+                          longDesc:
+                            'Define the condition that must be met for this action to execute.',
+                          type: {
+                            fields: {
+                              op: {
+                                displayName: 'Operator',
+                                shortDesc: 'Comparison operator',
+                                longDesc: 'The operator to use for comparing values.',
+                              },
+                              vars: {
+                                displayName: 'Variables',
+                                shortDesc: 'Variables to compare',
+                                longDesc:
+                                  'The variables or values to compare in this condition.',
+                                type: {
+                                  element_type: {
+                                    fields: {
+                                      type: {
+                                        displayName: 'Variable Type',
+                                        shortDesc: 'Type of variable',
+                                        longDesc:
+                                          'Specify the type of variable (field, hidden, variable, constant, choice).',
+                                      },
+                                      value: {
+                                        displayName: 'Variable Value',
+                                        shortDesc: 'The value or reference',
+                                        longDesc: 'The actual value or reference to compare.',
                                       },
                                     },
                                   },
