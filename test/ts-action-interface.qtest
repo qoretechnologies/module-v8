@@ -17,6 +17,18 @@
 public class TypeScriptActionInterfaceTest inherits QUnit::Test {
     private {
         Logger logger;
+        #! The last webhook callback captured during webhook registration
+        static code last_webhook_callback;
+    }
+
+    #! Returns the last captured webhook callback
+    static code get_last_webhook_callback() {
+        return last_webhook_callback;
+    }
+
+    #! Sets the last captured webhook callback
+    static set_last_webhook_callback(code callback) {
+        last_webhook_callback = callback;
     }
 
     constructor() : Test("TypeScriptActionInterfaceTest", "1.0") {
@@ -25,6 +37,8 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
         addTestCase("js event extension", \jsEventExtensionTest());
         addTestCase("js events", \jsEventTest());
         addTestCase("webhook events", \webhookEventTest());
+        addTestCase("webhook format_event_data transform", \webhookFormatEventDataTransformTest());
+        addTestCase("webhook format_event_data filter", \webhookFormatEventDataFilterTest());
         addTestCase("pool", \poolTest());
         addTestCase("sanity", \sanityTest());
         addTestCase("js", \jsTest());
@@ -223,6 +237,8 @@ async function runWithTimeout(promise, delay) {
         code webhook_callback;
         code get_webhook = hash<auto> sub (hash<auto> h) {
             webhook_callback = h.callback;
+            # Also store in class variable for use by subsequent tests
+            TypeScriptActionInterfaceTest::set_last_webhook_callback(h.callback);
             return {
                 "url": "https://localhost:8011/webhooks/abc",
             };
@@ -288,6 +304,124 @@ async function runWithTimeout(promise, delay) {
 
         assertEq(1, o.l.size());
         assertEq({"event_id": "event", "data": event}, o.l[0]);
+    }
+
+    private webhookFormatEventDataTransformTest() {
+        # Note: webhook APIs are already registered from webhookEventTest()
+        # We capture the callback via the hash returned by createWebhook
+
+        hash<DataProviderAppInfo> appinfo = DataProviderActionCatalog::getAppEx("js-openapi-test");
+        assertEq("js-openapi-test", appinfo.name);
+
+        hash<DataProviderActionInfo> actioninfo = DataProviderActionCatalog::getAppActionEx("js-openapi-test",
+            "webhook-format-transform");
+        assertEq("webhook-format-transform", actioninfo.action);
+
+        hash<auto> config = {
+            "name": "test",
+            "url": "tsrest-js-openapi-test://",
+            "opts": {
+                "subdomain": "test",
+                "token": "x",
+            },
+        };
+        TypeScriptAppRestConnection conn(config);
+
+        DataProviderDataContextHelper dch({"name": "TestName"});
+        AbstractDataProvider prov =
+            TypeScriptActionInterface::getDataProvider("js-openapi-test", conn)
+                .getChildProviderEx("webhook-format-transform");
+        assertTrue(prov.supportsObservable());
+
+        MyObserver o();
+        cast<Observable>(prov).registerObserver(o);
+        cast<DelayedObservable>(prov).observersReady();
+        on_exit cast<DelayedObservable>(prov).stopEvents();
+
+        # Get the callback that was captured during observersReady()
+        code webhook_callback = get_last_webhook_callback();
+        assertTrue(exists webhook_callback);
+
+        # Send raw event data - format_event_data should transform it
+        hash<auto> raw_event = {
+            "name": "original-name",
+            "code": 5678,
+        };
+        webhook_callback(raw_event);
+
+        # Verify the event was transformed by format_event_data
+        assertEq(1, o.l.size());
+        hash<auto> received = o.l[0];
+        assertEq("event", received.event_id);
+        assertEq("original-name", received.data.original_name);
+        assertTrue(received.data.transformed);
+        assertEq("added by format_event_data", received.data.extra_field);
+    }
+
+    private webhookFormatEventDataFilterTest() {
+        # Note: webhook APIs are already registered from webhookEventTest()
+
+        hash<DataProviderAppInfo> appinfo = DataProviderActionCatalog::getAppEx("js-openapi-test");
+        assertEq("js-openapi-test", appinfo.name);
+
+        hash<DataProviderActionInfo> actioninfo = DataProviderActionCatalog::getAppActionEx("js-openapi-test",
+            "webhook-format-filter");
+        assertEq("webhook-format-filter", actioninfo.action);
+
+        hash<auto> config = {
+            "name": "test",
+            "url": "tsrest-js-openapi-test://",
+            "opts": {
+                "subdomain": "test",
+                "token": "x",
+            },
+        };
+        TypeScriptAppRestConnection conn(config);
+
+        DataProviderDataContextHelper dch({"name": "TestName"});
+        AbstractDataProvider prov =
+            TypeScriptActionInterface::getDataProvider("js-openapi-test", conn)
+                .getChildProviderEx("webhook-format-filter");
+        assertTrue(prov.supportsObservable());
+
+        MyObserver o();
+        cast<Observable>(prov).registerObserver(o);
+        cast<DelayedObservable>(prov).observersReady();
+        on_exit cast<DelayedObservable>(prov).stopEvents();
+
+        # Get the callback that was captured during observersReady()
+        code webhook_callback = get_last_webhook_callback();
+        assertTrue(exists webhook_callback);
+
+        # Send event that should be skipped (skip=true)
+        hash<auto> skip_event = {
+            "name": "skipped",
+            "code": 1111,
+            "skip": True,
+        };
+        webhook_callback(skip_event);
+
+        # Send event that should pass through
+        hash<auto> pass_event = {
+            "name": "passed",
+            "code": 2222,
+        };
+        webhook_callback(pass_event);
+
+        # Send another event that should be skipped
+        hash<auto> skip_event2 = {
+            "name": "skipped2",
+            "code": 3333,
+            "skip": True,
+        };
+        webhook_callback(skip_event2);
+
+        # Only the pass_event should have been received
+        assertEq(1, o.l.size());
+        hash<auto> received = o.l[0];
+        assertEq("event", received.event_id);
+        assertEq("passed", received.data.name);
+        assertEq(2222, received.data.code);
     }
 
     private testApi() {

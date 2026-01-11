@@ -1741,14 +1741,19 @@ public class TypeScriptActionInterface {
                     "attribute; got type %y; expecting \"string\"", action.app, action.action,
                     webhook_assume_json.fullType());
             }
+            *hash<AsyncCallInfo> format_event_data = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
+                "format_event_data", "format event data", pool, io_timeout, action.app, action.action);
             TypeScriptActionInterface::registerAsyncCall(\webhook_register, "app", app.name, action.action);
             TypeScriptActionInterface::registerAsyncCall(\webhook_deregister, "app", app.name, action.action);
+            if (format_event_data) {
+                TypeScriptActionInterface::registerAsyncCall(\format_event_data, "app", app.name, action.action);
+            }
 
             child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info,
                 get_example_event_data, get_dynamic_type, fctx, method, webhook_register, webhook_deregister,
                 webhook_auth, webhook_perms, webhook_event_loc, webhook_echo_header, webhook_echo_body_keys,
                 webhook_confirmation_key_loc, webhook_confirmation_value, webhook_confirmation_url_loc,
-                webhook_confirmation_method, webhook_assume_json);
+                webhook_confirmation_method, webhook_assume_json, format_event_data);
             rv = AES_WH_EVENT;
         } else {
             auto event_function = remove action.event_function;

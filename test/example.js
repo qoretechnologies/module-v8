@@ -1314,6 +1314,123 @@ exports.actionsCatalogue = {
             "openapi_path": "pet/{petId}/GET",
         });
 
+        // Test webhook trigger with format_event_data for transformation
+        api.registerAction({
+            "app": "js-openapi-test",
+            "action": "webhook-format-transform",
+            "display_name": "Webhook Format Transform Test",
+            "short_desc": "Test webhook with format_event_data transformation",
+            "desc": "Test webhook with format_event_data transformation",
+            "action_code": 1,  // DPAT_EVENT == 1
+            "options": {
+                "name": {
+                    "type": "string",
+                    "display_name": "Name",
+                    "short_desc": "A name",
+                    "desc": "A name",
+                    "required": true,
+                    "preselected": true,
+                },
+            },
+            "webhook_method": "POST",
+            "webhook_auth": 0,
+            "webhook_register": async function(ctx, url) {
+                if (!ctx || !ctx.opts || !ctx.opts.name) {
+                    throw new Error("missing name");
+                }
+            },
+            "webhook_deregister": async function(ctx, url, reginfo) {
+            },
+            "event_info": {
+                "desc": "Transformed data event",
+                "type": {
+                    "type": "hash",
+                    "fields": {
+                        "original_name": {
+                            "type": "string",
+                        },
+                        "transformed": {
+                            "type": "bool",
+                        },
+                        "extra_field": {
+                            "type": "string",
+                        },
+                    },
+                },
+            },
+            "get_example_event_data": async function(ctx) {
+                return {
+                    "original_name": "example",
+                    "transformed": true,
+                    "extra_field": "added by format_event_data",
+                };
+            },
+            // format_event_data transforms the incoming webhook data
+            "format_event_data": async function(ctx, eventData) {
+                return {
+                    "original_name": eventData.name,
+                    "transformed": true,
+                    "extra_field": "added by format_event_data",
+                };
+            },
+        });
+
+        // Test webhook trigger with format_event_data for filtering (skip events)
+        api.registerAction({
+            "app": "js-openapi-test",
+            "action": "webhook-format-filter",
+            "display_name": "Webhook Format Filter Test",
+            "short_desc": "Test webhook with format_event_data filtering",
+            "desc": "Test webhook with format_event_data filtering",
+            "action_code": 1,  // DPAT_EVENT == 1
+            "options": {
+                "name": {
+                    "type": "string",
+                    "display_name": "Name",
+                    "short_desc": "A name",
+                    "desc": "A name",
+                    "required": true,
+                    "preselected": true,
+                },
+            },
+            "webhook_method": "POST",
+            "webhook_auth": 0,
+            "webhook_register": async function(ctx, url) {
+                if (!ctx || !ctx.opts || !ctx.opts.name) {
+                    throw new Error("missing name");
+                }
+            },
+            "webhook_deregister": async function(ctx, url, reginfo) {
+            },
+            "event_info": {
+                "desc": "Filtered data event",
+                "type": {
+                    "type": "hash",
+                    "fields": {
+                        "name": {
+                            "type": "string",
+                        },
+                        "code": {
+                            "type": "int",
+                        },
+                    },
+                },
+            },
+            "get_example_event_data": async function(ctx) {
+                return {
+                    "name": "example",
+                    "code": 1234,
+                };
+            },
+            // format_event_data filters events - returns null to skip events with skip=true
+            "format_event_data": async function(ctx, eventData) {
+                if (eventData.skip === true) {
+                    return null;  // Skip this event
+                }
+                return eventData;
+            },
+        });
+
         // this will add actions to discord
         api.registerExistingApp({
             "name": "Discord",
