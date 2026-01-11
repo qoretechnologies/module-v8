@@ -87,17 +87,19 @@ const GoogleSheetsAppEn = {
           longDesc:
             'List of sorting criteria to apply to the search results. Each item specifies a field and direction.',
           type: {
-            fields: {
-              field: {
-                displayName: 'Field',
-                shortDesc: 'Field to sort by',
-                longDesc:
-                  'The field to sort the results by (e.g., name, modifiedTime, createdTime).',
-              },
-              direction: {
-                displayName: 'Direction',
-                shortDesc: 'Sort direction',
-                longDesc: 'The direction to sort - either ascending (asc) or descending (desc).',
+            element_type: {
+              fields: {
+                field: {
+                  displayName: 'Field',
+                  shortDesc: 'Field to sort by',
+                  longDesc:
+                    'The field to sort the results by (e.g., name, modifiedTime, createdTime).',
+                },
+                direction: {
+                  displayName: 'Direction',
+                  shortDesc: 'Sort direction',
+                  longDesc: 'The direction to sort - either ascending (asc) or descending (desc).',
+                },
               },
             },
           },
@@ -248,12 +250,14 @@ const GoogleSheetsAppEn = {
           longDesc:
             'A list of rows to update, each containing a row index (starting from 2, as row 1 contains headers) and the data to update in that row. The data should match the headers in the spreadsheet.',
           type: {
-            fields: {
-              row_index: {
-                displayName: 'Row Index',
-                shortDesc: 'The index of the row to update.',
-                longDesc:
-                  'The row number to update, starting from 2 (row 1 is reserved for headers). This number must refer to an existing row in the spreadsheet.',
+            element_type: {
+              fields: {
+                row_index: {
+                  displayName: 'Row Index',
+                  shortDesc: 'The index of the row to update.',
+                  longDesc:
+                    'The row number to update, starting from 2 (row 1 is reserved for headers). This number must refer to an existing row in the spreadsheet.',
+                },
               },
             },
           },

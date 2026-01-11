@@ -79,19 +79,17 @@ const CopperCrmAppEn = {
           longDesc: 'List of phone numbers associated with the company',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  number: {
-                    displayName: 'Phone Number',
-                    shortDesc: 'The phone number',
-                    longDesc: 'The phone number in any format',
-                  },
-                  category: {
-                    displayName: 'Category',
-                    shortDesc: 'Type of phone number',
-                    longDesc:
-                      'The category or type of this phone number (work, mobile, home, or other)',
-                  },
+              fields: {
+                number: {
+                  displayName: 'Phone Number',
+                  shortDesc: 'The phone number',
+                  longDesc: 'The phone number in any format',
+                },
+                category: {
+                  displayName: 'Category',
+                  shortDesc: 'Type of phone number',
+                  longDesc:
+                    'The category or type of this phone number (work, mobile, home, or other)',
                 },
               },
             },
@@ -108,19 +106,17 @@ const CopperCrmAppEn = {
           longDesc: 'List of social media profiles for the company',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  url: {
-                    displayName: 'URL',
-                    shortDesc: 'Social media profile URL',
-                    longDesc: 'The full URL to the social media profile',
-                  },
-                  category: {
-                    displayName: 'Platform',
-                    shortDesc: 'Social media platform',
-                    longDesc:
-                      'The social media platform (LinkedIn, Twitter, Facebook, YouTube, Quora, Instagram, Pinterest, or Other)',
-                  },
+              fields: {
+                url: {
+                  displayName: 'URL',
+                  shortDesc: 'Social media profile URL',
+                  longDesc: 'The full URL to the social media profile',
+                },
+                category: {
+                  displayName: 'Platform',
+                  shortDesc: 'Social media platform',
+                  longDesc:
+                    'The social media platform (LinkedIn, Twitter, Facebook, YouTube, Quora, Instagram, Pinterest, or Other)',
                 },
               },
             },
@@ -138,18 +134,16 @@ const CopperCrmAppEn = {
           longDesc: 'List of websites associated with the company',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  url: {
-                    displayName: 'URL',
-                    shortDesc: 'Website URL',
-                    longDesc: 'The full URL of the website',
-                  },
-                  category: {
-                    displayName: 'Category',
-                    shortDesc: 'Type of website',
-                    longDesc: 'The category or purpose of this website (work, personal, or other)',
-                  },
+              fields: {
+                url: {
+                  displayName: 'URL',
+                  shortDesc: 'Website URL',
+                  longDesc: 'The full URL of the website',
+                },
+                category: {
+                  displayName: 'Category',
+                  shortDesc: 'Type of website',
+                  longDesc: 'The category or purpose of this website (work, personal, or other)',
                 },
               },
             },
@@ -221,18 +215,16 @@ const CopperCrmAppEn = {
           longDesc: 'List of websites associated with the lead',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  url: {
-                    displayName: 'URL',
-                    shortDesc: 'Website URL',
-                    longDesc: 'The full URL of the website',
-                  },
-                  category: {
-                    displayName: 'Category',
-                    shortDesc: 'Type of website',
-                    longDesc: 'The category or purpose of this website (work, personal, or other)',
-                  },
+              fields: {
+                url: {
+                  displayName: 'URL',
+                  shortDesc: 'Website URL',
+                  longDesc: 'The full URL of the website',
+                },
+                category: {
+                  displayName: 'Category',
+                  shortDesc: 'Type of website',
+                  longDesc: 'The category or purpose of this website (work, personal, or other)',
                 },
               },
             },
@@ -244,19 +236,17 @@ const CopperCrmAppEn = {
           longDesc: 'List of social media profiles for the lead',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  url: {
-                    displayName: 'URL',
-                    shortDesc: 'Social media profile URL',
-                    longDesc: 'The full URL to the social media profile',
-                  },
-                  category: {
-                    displayName: 'Platform',
-                    shortDesc: 'Social media platform',
-                    longDesc:
-                      'The social media platform (LinkedIn, Twitter, Facebook, YouTube, Quora, Instagram, Pinterest, or Other)',
-                  },
+              fields: {
+                url: {
+                  displayName: 'URL',
+                  shortDesc: 'Social media profile URL',
+                  longDesc: 'The full URL to the social media profile',
+                },
+                category: {
+                  displayName: 'Platform',
+                  shortDesc: 'Social media platform',
+                  longDesc:
+                    'The social media platform (LinkedIn, Twitter, Facebook, YouTube, Quora, Instagram, Pinterest, or Other)',
                 },
               },
             },
@@ -287,18 +277,16 @@ const CopperCrmAppEn = {
           longDesc: 'List of phone numbers for the lead',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  number: {
-                    displayName: 'Phone Number',
-                    shortDesc: 'The phone number',
-                    longDesc: 'The phone number in any format',
-                  },
-                  category: {
-                    displayName: 'Category',
-                    shortDesc: 'Type of phone number',
-                    longDesc: 'The category or type of this phone number',
-                  },
+              fields: {
+                number: {
+                  displayName: 'Phone Number',
+                  shortDesc: 'The phone number',
+                  longDesc: 'The phone number in any format',
+                },
+                category: {
+                  displayName: 'Category',
+                  shortDesc: 'Type of phone number',
+                  longDesc: 'The category or type of this phone number',
                 },
               },
             },
@@ -529,18 +517,16 @@ const CopperCrmAppEn = {
           longDesc: 'List of email addresses for the person',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  email: {
-                    displayName: 'Email Address',
-                    shortDesc: 'The email address',
-                    longDesc: 'Email address',
-                  },
-                  category: {
-                    displayName: 'Category',
-                    shortDesc: 'Type of email',
-                    longDesc: 'The category or type of this email (work, personal, or other)',
-                  },
+              fields: {
+                email: {
+                  displayName: 'Email Address',
+                  shortDesc: 'The email address',
+                  longDesc: 'Email address',
+                },
+                category: {
+                  displayName: 'Category',
+                  shortDesc: 'Type of email',
+                  longDesc: 'The category or type of this email (work, personal, or other)',
                 },
               },
             },
@@ -552,19 +538,17 @@ const CopperCrmAppEn = {
           longDesc: 'List of phone numbers for the person',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  number: {
-                    displayName: 'Phone Number',
-                    shortDesc: 'The phone number',
-                    longDesc: 'Phone number',
-                  },
-                  category: {
-                    displayName: 'Category',
-                    shortDesc: 'Type of phone number',
-                    longDesc:
-                      'The category or type of this phone number (work, mobile, home, or other)',
-                  },
+              fields: {
+                number: {
+                  displayName: 'Phone Number',
+                  shortDesc: 'The phone number',
+                  longDesc: 'Phone number',
+                },
+                category: {
+                  displayName: 'Category',
+                  shortDesc: 'Type of phone number',
+                  longDesc:
+                    'The category or type of this phone number (work, mobile, home, or other)',
                 },
               },
             },
@@ -576,18 +560,16 @@ const CopperCrmAppEn = {
           longDesc: 'List of social media profiles for the person',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  url: {
-                    displayName: 'URL',
-                    shortDesc: 'Social profile URL',
-                    longDesc: 'Social profile URL',
-                  },
-                  category: {
-                    displayName: 'Platform',
-                    shortDesc: 'Social media platform',
-                    longDesc: 'Social platform',
-                  },
+              fields: {
+                url: {
+                  displayName: 'URL',
+                  shortDesc: 'Social profile URL',
+                  longDesc: 'Social profile URL',
+                },
+                category: {
+                  displayName: 'Platform',
+                  shortDesc: 'Social media platform',
+                  longDesc: 'Social platform',
                 },
               },
             },
@@ -610,18 +592,16 @@ const CopperCrmAppEn = {
           longDesc: 'List of websites associated with the person',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  url: {
-                    displayName: 'URL',
-                    shortDesc: 'Website URL',
-                    longDesc: 'Website URL',
-                  },
-                  category: {
-                    displayName: 'Category',
-                    shortDesc: 'Type of website',
-                    longDesc: 'The category or purpose of this website (work, personal, or other)',
-                  },
+              fields: {
+                url: {
+                  displayName: 'URL',
+                  shortDesc: 'Website URL',
+                  longDesc: 'Website URL',
+                },
+                category: {
+                  displayName: 'Category',
+                  shortDesc: 'Type of website',
+                  longDesc: 'The category or purpose of this website (work, personal, or other)',
                 },
               },
             },
@@ -1579,18 +1559,16 @@ const CopperCrmAppEn = {
           longDesc: 'Updated list of phone numbers',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  number: {
-                    displayName: 'Phone Number',
-                    shortDesc: 'The phone number',
-                    longDesc: 'The phone number in any format',
-                  },
-                  category: {
-                    displayName: 'Category',
-                    shortDesc: 'Type of phone number',
-                    longDesc: 'The category or type of this phone number',
-                  },
+              fields: {
+                number: {
+                  displayName: 'Phone Number',
+                  shortDesc: 'The phone number',
+                  longDesc: 'The phone number in any format',
+                },
+                category: {
+                  displayName: 'Category',
+                  shortDesc: 'Type of phone number',
+                  longDesc: 'The category or type of this phone number',
                 },
               },
             },
@@ -1607,18 +1585,16 @@ const CopperCrmAppEn = {
           longDesc: 'Updated list of social media profiles',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  url: {
-                    displayName: 'URL',
-                    shortDesc: 'Social media profile URL',
-                    longDesc: 'The full URL to the social media profile',
-                  },
-                  category: {
-                    displayName: 'Platform',
-                    shortDesc: 'Social media platform',
-                    longDesc: 'The social media platform',
-                  },
+              fields: {
+                url: {
+                  displayName: 'URL',
+                  shortDesc: 'Social media profile URL',
+                  longDesc: 'The full URL to the social media profile',
+                },
+                category: {
+                  displayName: 'Platform',
+                  shortDesc: 'Social media platform',
+                  longDesc: 'The social media platform',
                 },
               },
             },
@@ -1635,18 +1611,16 @@ const CopperCrmAppEn = {
           longDesc: 'Updated list of websites',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  url: {
-                    displayName: 'URL',
-                    shortDesc: 'Website URL',
-                    longDesc: 'The full URL of the website',
-                  },
-                  category: {
-                    displayName: 'Category',
-                    shortDesc: 'Type of website',
-                    longDesc: 'The category or purpose of this website',
-                  },
+              fields: {
+                url: {
+                  displayName: 'URL',
+                  shortDesc: 'Website URL',
+                  longDesc: 'The full URL of the website',
+                },
+                category: {
+                  displayName: 'Category',
+                  shortDesc: 'Type of website',
+                  longDesc: 'The category or purpose of this website',
                 },
               },
             },
@@ -1722,18 +1696,16 @@ const CopperCrmAppEn = {
           longDesc: 'Updated list of associated websites',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  url: {
-                    displayName: 'URL',
-                    shortDesc: 'Website URL',
-                    longDesc: 'The full URL of the website',
-                  },
-                  category: {
-                    displayName: 'Category',
-                    shortDesc: 'Type of website',
-                    longDesc: 'The category or purpose of this website',
-                  },
+              fields: {
+                url: {
+                  displayName: 'URL',
+                  shortDesc: 'Website URL',
+                  longDesc: 'The full URL of the website',
+                },
+                category: {
+                  displayName: 'Category',
+                  shortDesc: 'Type of website',
+                  longDesc: 'The category or purpose of this website',
                 },
               },
             },
@@ -1745,18 +1717,16 @@ const CopperCrmAppEn = {
           longDesc: 'Updated list of social media profiles',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  url: {
-                    displayName: 'URL',
-                    shortDesc: 'Social media profile URL',
-                    longDesc: 'The full URL to the social media profile',
-                  },
-                  category: {
-                    displayName: 'Platform',
-                    shortDesc: 'Social media platform',
-                    longDesc: 'The social media platform',
-                  },
+              fields: {
+                url: {
+                  displayName: 'URL',
+                  shortDesc: 'Social media profile URL',
+                  longDesc: 'The full URL to the social media profile',
+                },
+                category: {
+                  displayName: 'Platform',
+                  shortDesc: 'Social media platform',
+                  longDesc: 'The social media platform',
                 },
               },
             },
@@ -1787,18 +1757,16 @@ const CopperCrmAppEn = {
           longDesc: 'Updated list of phone numbers',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  number: {
-                    displayName: 'Phone Number',
-                    shortDesc: 'The phone number',
-                    longDesc: 'The phone number in any format',
-                  },
-                  category: {
-                    displayName: 'Category',
-                    shortDesc: 'Type of phone number',
-                    longDesc: 'The category or type of this phone number',
-                  },
+              fields: {
+                number: {
+                  displayName: 'Phone Number',
+                  shortDesc: 'The phone number',
+                  longDesc: 'The phone number in any format',
+                },
+                category: {
+                  displayName: 'Category',
+                  shortDesc: 'Type of phone number',
+                  longDesc: 'The category or type of this phone number',
                 },
               },
             },
@@ -2037,18 +2005,16 @@ const CopperCrmAppEn = {
           longDesc: 'Updated list of email addresses',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  email: {
-                    displayName: 'Email Address',
-                    shortDesc: 'The email address',
-                    longDesc: 'Email address',
-                  },
-                  category: {
-                    displayName: 'Category',
-                    shortDesc: 'Type of email',
-                    longDesc: 'The category or type of this email',
-                  },
+              fields: {
+                email: {
+                  displayName: 'Email Address',
+                  shortDesc: 'The email address',
+                  longDesc: 'Email address',
+                },
+                category: {
+                  displayName: 'Category',
+                  shortDesc: 'Type of email',
+                  longDesc: 'The category or type of this email',
                 },
               },
             },
@@ -2060,18 +2026,16 @@ const CopperCrmAppEn = {
           longDesc: 'Updated list of phone numbers',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  number: {
-                    displayName: 'Phone Number',
-                    shortDesc: 'The phone number',
-                    longDesc: 'Phone number',
-                  },
-                  category: {
-                    displayName: 'Category',
-                    shortDesc: 'Type of phone number',
-                    longDesc: 'The category or type of this phone number',
-                  },
+              fields: {
+                number: {
+                  displayName: 'Phone Number',
+                  shortDesc: 'The phone number',
+                  longDesc: 'Phone number',
+                },
+                category: {
+                  displayName: 'Category',
+                  shortDesc: 'Type of phone number',
+                  longDesc: 'The category or type of this phone number',
                 },
               },
             },
@@ -2083,18 +2047,16 @@ const CopperCrmAppEn = {
           longDesc: 'Updated list of social media profiles',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  url: {
-                    displayName: 'URL',
-                    shortDesc: 'Social profile URL',
-                    longDesc: 'Social profile URL',
-                  },
-                  category: {
-                    displayName: 'Platform',
-                    shortDesc: 'Social media platform',
-                    longDesc: 'Social platform',
-                  },
+              fields: {
+                url: {
+                  displayName: 'URL',
+                  shortDesc: 'Social profile URL',
+                  longDesc: 'Social profile URL',
+                },
+                category: {
+                  displayName: 'Platform',
+                  shortDesc: 'Social media platform',
+                  longDesc: 'Social platform',
                 },
               },
             },
@@ -2116,18 +2078,16 @@ const CopperCrmAppEn = {
           longDesc: 'Updated list of associated websites',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  url: {
-                    displayName: 'URL',
-                    shortDesc: 'Website URL',
-                    longDesc: 'Website URL',
-                  },
-                  category: {
-                    displayName: 'Category',
-                    shortDesc: 'Type of website',
-                    longDesc: 'The category or purpose of this website',
-                  },
+              fields: {
+                url: {
+                  displayName: 'URL',
+                  shortDesc: 'Website URL',
+                  longDesc: 'Website URL',
+                },
+                category: {
+                  displayName: 'Category',
+                  shortDesc: 'Type of website',
+                  longDesc: 'The category or purpose of this website',
                 },
               },
             },

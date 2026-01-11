@@ -257,6 +257,24 @@ const FrontAppEn = {
           shortDesc: 'Contact handles (email, phone, etc.)',
           longDesc:
             'A list of handles for the contact. Each handle consists of a handle value (e.g., email address) and a source type (email, phone, twitter, etc.). At least one handle is required.',
+          type: {
+            element_type: {
+              fields: {
+                handle: {
+                  displayName: 'Handle',
+                  shortDesc: 'The handle value',
+                  longDesc:
+                    'The actual handle value, such as an email address, phone number, or social media username.',
+                },
+                source: {
+                  displayName: 'Source',
+                  shortDesc: 'The type of handle',
+                  longDesc:
+                    'The type of handle: email, phone, twitter, facebook, intercom, front_chat, or custom.',
+                },
+              },
+            },
+          },
         },
         links: {
           displayName: 'Links',

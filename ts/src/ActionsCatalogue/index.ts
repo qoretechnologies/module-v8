@@ -66,6 +66,7 @@ import linkedin from '../apps/linkedin';
 import linkedinOrganizations from '../apps/linkedin-organizations';
 import magento from '../apps/magento';
 import mailchimp from '../apps/mailchimp';
+import mautic from '../apps/mautic';
 import messenger360 from '../apps/messenger360';
 import monday from '../apps/monday';
 import netsuite from '../apps/netsuite';
@@ -174,6 +175,7 @@ const NEW_APPS = {
   linkedinOrganizations,
   magento,
   mailchimp,
+  mautic,
   messenger360,
   monday,
   netsuite,

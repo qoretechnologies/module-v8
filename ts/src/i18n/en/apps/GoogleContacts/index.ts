@@ -171,17 +171,19 @@ const GoogleContactsAppEn = {
           longDesc:
             'A list of additional phone numbers with their respective types. Each entry contains a number and type.',
           type: {
-            fields: {
-              number: {
-                displayName: 'Phone Number',
-                shortDesc: 'The phone number',
-                longDesc: 'The phone number value.',
-              },
-              type: {
-                displayName: 'Phone Type',
-                shortDesc: 'Type of phone number',
-                longDesc:
-                  'The type of phone number: "home", "work", "mobile", "main", "homeFax", "workFax", "pager", or "other". Default is "other".',
+            element_type: {
+              fields: {
+                number: {
+                  displayName: 'Phone Number',
+                  shortDesc: 'The phone number',
+                  longDesc: 'The phone number value.',
+                },
+                type: {
+                  displayName: 'Phone Type',
+                  shortDesc: 'Type of phone number',
+                  longDesc:
+                    'The type of phone number: "home", "work", "mobile", "main", "homeFax", "workFax", "pager", or "other". Default is "other".',
+                },
               },
             },
           },

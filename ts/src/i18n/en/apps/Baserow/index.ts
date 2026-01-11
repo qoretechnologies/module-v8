@@ -151,25 +151,23 @@ const BaserowAppEn = {
                   'Define one or more filter conditions. Each condition specifies a field, operator, and value to match against.',
                 type: {
                   element_type: {
-                    type: {
-                      fields: {
-                        type: {
-                          displayName: 'Type',
-                          shortDesc: 'The comparison operator',
-                          longDesc:
-                            'Choose the comparison operator for this filter condition (equal, contains, empty, etc.).',
-                        },
-                        field: {
-                          displayName: 'Field',
-                          shortDesc: 'The field to filter on',
-                          longDesc: 'Select the table field to apply this filter condition to.',
-                        },
-                        value: {
-                          displayName: 'Value',
-                          shortDesc: 'The value to compare against',
-                          longDesc:
-                            'The value to compare the field against using the selected operator.',
-                        },
+                    fields: {
+                      type: {
+                        displayName: 'Type',
+                        shortDesc: 'The comparison operator',
+                        longDesc:
+                          'Choose the comparison operator for this filter condition (equal, contains, empty, etc.).',
+                      },
+                      field: {
+                        displayName: 'Field',
+                        shortDesc: 'The field to filter on',
+                        longDesc: 'Select the table field to apply this filter condition to.',
+                      },
+                      value: {
+                        displayName: 'Value',
+                        shortDesc: 'The value to compare against',
+                        longDesc:
+                          'The value to compare the field against using the selected operator.',
                       },
                     },
                   },
@@ -266,24 +264,22 @@ const BaserowAppEn = {
                   'Define one or more filter conditions. Only new rows matching these conditions will trigger the event.',
                 type: {
                   element_type: {
-                    type: {
-                      fields: {
-                        type: {
-                          displayName: 'Type',
-                          shortDesc: 'The comparison operator',
-                          longDesc: 'Choose the comparison operator for this filter condition.',
-                        },
-                        field: {
-                          displayName: 'Field',
-                          shortDesc: 'The field to filter on',
-                          longDesc: 'Select the table field to apply this filter condition to.',
-                        },
-                        value: {
-                          displayName: 'Value',
-                          shortDesc: 'The value to match',
-                          longDesc:
-                            'The value to compare against. Only new rows matching this condition will trigger the event.',
-                        },
+                    fields: {
+                      type: {
+                        displayName: 'Type',
+                        shortDesc: 'The comparison operator',
+                        longDesc: 'Choose the comparison operator for this filter condition.',
+                      },
+                      field: {
+                        displayName: 'Field',
+                        shortDesc: 'The field to filter on',
+                        longDesc: 'Select the table field to apply this filter condition to.',
+                      },
+                      value: {
+                        displayName: 'Value',
+                        shortDesc: 'The value to match',
+                        longDesc:
+                          'The value to compare against. Only new rows matching this condition will trigger the event.',
                       },
                     },
                   },

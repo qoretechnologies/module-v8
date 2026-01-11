@@ -55,6 +55,7 @@ import LinkedIn from './apps/LinkedIn';
 import LinkedInOrganizations from './apps/LinkedInOrganizations';
 import Magento from './apps/Magento';
 import Mailchimp from './apps/Mailchimp';
+import Mautic from './apps/Mautic';
 import Messenger360 from './apps/Messenger360';
 import Monday from './apps/Monday';
 import NetSuite from './apps/NetSuite';
@@ -144,6 +145,7 @@ const en = {
     Xero,
     Dynamics,
     Mailchimp,
+    Mautic,
     Notion,
     Jira,
     Stripe,

@@ -342,17 +342,19 @@ const GoogleDriveAppEn = {
           longDesc:
             'Specify how to sort the returned files. You can add multiple sorting criteria, each with a field and direction.',
           type: {
-            fields: {
-              field: {
-                displayName: 'Field',
-                shortDesc: 'Field to sort by',
-                longDesc:
-                  'The file property to use for sorting, such as name, creation time, or modification time.',
-              },
-              direction: {
-                displayName: 'Direction',
-                shortDesc: 'Sort direction',
-                longDesc: 'The direction to sort in, either ascending (asc) or descending (desc).',
+            element_type: {
+              fields: {
+                field: {
+                  displayName: 'Field',
+                  shortDesc: 'Field to sort by',
+                  longDesc:
+                    'The file property to use for sorting, such as name, creation time, or modification time.',
+                },
+                direction: {
+                  displayName: 'Direction',
+                  shortDesc: 'Sort direction',
+                  longDesc: 'The direction to sort in, either ascending (asc) or descending (desc).',
+                },
               },
             },
           },

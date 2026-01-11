@@ -147,21 +147,23 @@ const GoogleFormsAppEn = {
           longDesc:
             'Filter responses based on specific question answers. Each filter specifies a question ID, filter type, and expected value.',
           type: {
-            fields: {
-              question_id: {
-                displayName: 'Question ID',
-                shortDesc: 'The question to filter by',
-                longDesc: 'The unique identifier of the question to filter responses by.',
-              },
-              filter_type: {
-                displayName: 'Filter Type',
-                shortDesc: 'Type of filter to apply',
-                longDesc: 'Whether the answer should contain or exactly equal the filter value.',
-              },
-              value: {
-                displayName: 'Filter Value',
-                shortDesc: 'Value to filter by',
-                longDesc: 'The value to match against the question answers.',
+            element_type: {
+              fields: {
+                question_id: {
+                  displayName: 'Question ID',
+                  shortDesc: 'The question to filter by',
+                  longDesc: 'The unique identifier of the question to filter responses by.',
+                },
+                filter_type: {
+                  displayName: 'Filter Type',
+                  shortDesc: 'Type of filter to apply',
+                  longDesc: 'Whether the answer should contain or exactly equal the filter value.',
+                },
+                value: {
+                  displayName: 'Filter Value',
+                  shortDesc: 'Value to filter by',
+                  longDesc: 'The value to match against the question answers.',
+                },
               },
             },
           },

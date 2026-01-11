@@ -29,16 +29,18 @@ const SerenityAppEn = {
           shortDesc: 'An array of key-value pairs for additional context.',
           longDesc: 'An array of key-value pairs for additional context.',
           type: {
-            fields: {
-              key: {
-                displayName: 'Key',
-                shortDesc: 'The key of the parameter',
-                longDesc: 'The key of the parameter',
-              },
-              value: {
-                displayName: 'Value',
-                shortDesc: 'The value of the parameter',
-                longDesc: 'The value of the parameter',
+            element_type: {
+              fields: {
+                key: {
+                  displayName: 'Key',
+                  shortDesc: 'The key of the parameter',
+                  longDesc: 'The key of the parameter',
+                },
+                value: {
+                  displayName: 'Value',
+                  shortDesc: 'The value of the parameter',
+                  longDesc: 'The value of the parameter',
+                },
               },
             },
           },
@@ -70,16 +72,18 @@ const SerenityAppEn = {
           shortDesc: 'An array of key-value pairs for execution context.',
           longDesc: 'An array of key-value pairs for execution context.',
           type: {
-            fields: {
-              key: {
-                displayName: 'Key',
-                shortDesc: 'The key of the parameter',
-                longDesc: 'The key of the parameter',
-              },
-              value: {
-                displayName: 'Value',
-                shortDesc: 'The value of the parameter',
-                longDesc: 'The value of the parameter',
+            element_type: {
+              fields: {
+                Key: {
+                  displayName: 'Key',
+                  shortDesc: 'The key of the parameter',
+                  longDesc: 'The key of the parameter',
+                },
+                Value: {
+                  displayName: 'Value',
+                  shortDesc: 'The value of the parameter',
+                  longDesc: 'The value of the parameter',
+                },
               },
             },
           },

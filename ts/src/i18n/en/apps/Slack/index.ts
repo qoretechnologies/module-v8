@@ -324,6 +324,22 @@ const SlackAppEn = {
           shortDesc: 'Buttons to display',
           longDesc:
             'Define the action buttons with titles and URLs. Each button links to a specific URL when clicked.',
+          type: {
+            element_type: {
+              fields: {
+                title: {
+                  displayName: 'Button Title',
+                  shortDesc: 'Text displayed on the button',
+                  longDesc: 'The text that will be shown on the action button.',
+                },
+                url: {
+                  displayName: 'Button URL',
+                  shortDesc: 'URL the button links to',
+                  longDesc: 'The URL that will be opened when the button is clicked.',
+                },
+              },
+            },
+          },
         },
         username: {
           displayName: 'Bot Username',
@@ -359,6 +375,22 @@ const SlackAppEn = {
           shortDesc: 'Buttons to display',
           longDesc:
             'Define the action buttons with titles and URLs.',
+          type: {
+            element_type: {
+              fields: {
+                title: {
+                  displayName: 'Button Title',
+                  shortDesc: 'Text displayed on the button',
+                  longDesc: 'The text that will be shown on the action button.',
+                },
+                url: {
+                  displayName: 'Button URL',
+                  shortDesc: 'URL the button links to',
+                  longDesc: 'The URL that will be opened when the button is clicked.',
+                },
+              },
+            },
+          },
         },
         username: {
           displayName: 'Bot Username',

@@ -307,7 +307,8 @@ const ZohoCRMAppEn = {
           longDesc:
             'Optional list of field-value pairs to create search criteria. When specified, only records where ALL specified fields match their corresponding values will trigger the event. Uses the "equals" operator for each field comparison.',
           type: {
-            fields: {
+            element_type: {
+              fields: {
               field: {
                 displayName: 'Field Name',
                 shortDesc: 'The API name of the field to filter on',
@@ -320,6 +321,7 @@ const ZohoCRMAppEn = {
                 longDesc:
                   'Enter the exact value that the field must equal for the record to match. The comparison uses the "equals" operator, so the field value must match this value exactly.',
               },
+            },
             },
           },
         },
@@ -566,26 +568,24 @@ const ZohoCRMAppEn = {
             'Specify the tags you want to add to the records. Each tag should include an ID and name. The tag ID takes precedence over the name if both are provided. You can optionally include a color_code (hex value). Use the List Tags action to retrieve available tags and their IDs.',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  id: {
-                    displayName: 'Tag ID',
-                    shortDesc: 'The unique identifier of the tag',
-                    longDesc:
-                      'The unique ID of an existing tag in the module. This ID takes precedence over the name field. Use the List Tags action to retrieve tag IDs. The tag must already exist in the module.',
-                  },
-                  name: {
-                    displayName: 'Tag Name',
-                    shortDesc: 'The display name of the tag',
-                    longDesc:
-                      'The display name of the tag. When both ID and name are provided, the ID takes precedence. If only the name is provided, the system will look up the tag by name.',
-                  },
-                  color_code: {
-                    displayName: 'Color Code',
-                    shortDesc: 'Optional hexadecimal color code for the tag',
-                    longDesc:
-                      'Optional hexadecimal color code for visual identification of the tag (e.g., #F17574, #57B1FD). The allowed color codes are predefined in Zoho CRM. If not specified or set to null, the tag will use its default color.',
-                  },
+              fields: {
+                id: {
+                  displayName: 'Tag ID',
+                  shortDesc: 'The unique identifier of the tag',
+                  longDesc:
+                    'The unique ID of an existing tag in the module. This ID takes precedence over the name field. Use the List Tags action to retrieve tag IDs. The tag must already exist in the module.',
+                },
+                name: {
+                  displayName: 'Tag Name',
+                  shortDesc: 'The display name of the tag',
+                  longDesc:
+                    'The display name of the tag. When both ID and name are provided, the ID takes precedence. If only the name is provided, the system will look up the tag by name.',
+                },
+                color_code: {
+                  displayName: 'Color Code',
+                  shortDesc: 'Optional hexadecimal color code for the tag',
+                  longDesc:
+                    'Optional hexadecimal color code for visual identification of the tag (e.g., #F17574, #57B1FD). The allowed color codes are predefined in Zoho CRM. If not specified or set to null, the tag will use its default color.',
                 },
               },
             },

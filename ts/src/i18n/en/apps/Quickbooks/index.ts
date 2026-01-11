@@ -191,58 +191,56 @@ const QuickbooksAppEn = {
           longDesc: 'The detailed list of expenses or items included in the bill',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  amount: {
-                    displayName: 'Amount',
-                    shortDesc: 'The amount for this line item',
-                    longDesc: 'The monetary amount for this specific line item',
-                  },
-                  description: {
-                    displayName: 'Description',
-                    shortDesc: 'Description of the line item',
-                    longDesc: 'A detailed description of what this line item represents',
-                  },
-                  tax_code_id: {
-                    displayName: 'Tax Code ID',
-                    shortDesc: 'The tax code for this line item',
-                    longDesc: 'The unique identifier of the tax code to apply to this line item',
-                  },
-                  class_id: {
-                    displayName: 'Class ID',
-                    shortDesc: 'The class for this line item',
-                    longDesc: 'The unique identifier of the class to categorize this line item',
-                  },
-                  customer_id: {
-                    displayName: 'Customer ID',
-                    shortDesc: 'The customer for this line item',
-                    longDesc: 'The unique identifier of the customer if this expense is billable',
-                  },
-                  billable_status: {
-                    displayName: 'Billable Status',
-                    shortDesc: 'Whether this line item is billable',
-                    longDesc: 'Indicates if this expense can be billed to a customer',
-                  },
-                  account_id: {
-                    displayName: 'Account ID',
-                    shortDesc: 'The account for this expense',
-                    longDesc: 'The unique identifier of the account to categorize this expense',
-                  },
-                  item_id: {
-                    displayName: 'Item ID',
-                    shortDesc: 'The item for this line',
-                    longDesc: 'The unique identifier of the item being purchased',
-                  },
-                  quantity: {
-                    displayName: 'Quantity',
-                    shortDesc: 'The quantity of the item',
-                    longDesc: 'The number of units of the item being purchased',
-                  },
-                  unit_price: {
-                    displayName: 'Unit Price',
-                    shortDesc: 'The price per unit',
-                    longDesc: 'The cost per individual unit of the item',
-                  },
+              fields: {
+                amount: {
+                  displayName: 'Amount',
+                  shortDesc: 'The amount for this line item',
+                  longDesc: 'The monetary amount for this specific line item',
+                },
+                description: {
+                  displayName: 'Description',
+                  shortDesc: 'Description of the line item',
+                  longDesc: 'A detailed description of what this line item represents',
+                },
+                tax_code_id: {
+                  displayName: 'Tax Code ID',
+                  shortDesc: 'The tax code for this line item',
+                  longDesc: 'The unique identifier of the tax code to apply to this line item',
+                },
+                class_id: {
+                  displayName: 'Class ID',
+                  shortDesc: 'The class for this line item',
+                  longDesc: 'The unique identifier of the class to categorize this line item',
+                },
+                customer_id: {
+                  displayName: 'Customer ID',
+                  shortDesc: 'The customer for this line item',
+                  longDesc: 'The unique identifier of the customer if this expense is billable',
+                },
+                billable_status: {
+                  displayName: 'Billable Status',
+                  shortDesc: 'Whether this line item is billable',
+                  longDesc: 'Indicates if this expense can be billed to a customer',
+                },
+                account_id: {
+                  displayName: 'Account ID',
+                  shortDesc: 'The account for this expense',
+                  longDesc: 'The unique identifier of the account to categorize this expense',
+                },
+                item_id: {
+                  displayName: 'Item ID',
+                  shortDesc: 'The item for this line',
+                  longDesc: 'The unique identifier of the item being purchased',
+                },
+                quantity: {
+                  displayName: 'Quantity',
+                  shortDesc: 'The quantity of the item',
+                  longDesc: 'The number of units of the item being purchased',
+                },
+                unit_price: {
+                  displayName: 'Unit Price',
+                  shortDesc: 'The price per unit',
+                  longDesc: 'The cost per individual unit of the item',
                 },
               },
             },
@@ -272,58 +270,56 @@ const QuickbooksAppEn = {
           longDesc: 'The detailed list of expenses or items included in the bill',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  amount: {
-                    displayName: 'Amount',
-                    shortDesc: 'The amount for this line item',
-                    longDesc: 'The monetary amount for this specific line item',
-                  },
-                  description: {
-                    displayName: 'Description',
-                    shortDesc: 'Description of the line item',
-                    longDesc: 'A detailed description of what this line item represents',
-                  },
-                  tax_code_id: {
-                    displayName: 'Tax Code ID',
-                    shortDesc: 'The tax code for this line item',
-                    longDesc: 'The unique identifier of the tax code to apply to this line item',
-                  },
-                  class_id: {
-                    displayName: 'Class ID',
-                    shortDesc: 'The class for this line item',
-                    longDesc: 'The unique identifier of the class to categorize this line item',
-                  },
-                  customer_id: {
-                    displayName: 'Customer ID',
-                    shortDesc: 'The customer for this line item',
-                    longDesc: 'The unique identifier of the customer if this expense is billable',
-                  },
-                  billable_status: {
-                    displayName: 'Billable Status',
-                    shortDesc: 'Whether this line item is billable',
-                    longDesc: 'Indicates if this expense can be billed to a customer',
-                  },
-                  account_id: {
-                    displayName: 'Account ID',
-                    shortDesc: 'The account for this expense',
-                    longDesc: 'The unique identifier of the account to categorize this expense',
-                  },
-                  item_id: {
-                    displayName: 'Item ID',
-                    shortDesc: 'The item for this line',
-                    longDesc: 'The unique identifier of the item being purchased',
-                  },
-                  quantity: {
-                    displayName: 'Quantity',
-                    shortDesc: 'The quantity of the item',
-                    longDesc: 'The number of units of the item being purchased',
-                  },
-                  unit_price: {
-                    displayName: 'Unit Price',
-                    shortDesc: 'The price per unit',
-                    longDesc: 'The cost per individual unit of the item',
-                  },
+              fields: {
+                amount: {
+                  displayName: 'Amount',
+                  shortDesc: 'The amount for this line item',
+                  longDesc: 'The monetary amount for this specific line item',
+                },
+                description: {
+                  displayName: 'Description',
+                  shortDesc: 'Description of the line item',
+                  longDesc: 'A detailed description of what this line item represents',
+                },
+                tax_code_id: {
+                  displayName: 'Tax Code ID',
+                  shortDesc: 'The tax code for this line item',
+                  longDesc: 'The unique identifier of the tax code to apply to this line item',
+                },
+                class_id: {
+                  displayName: 'Class ID',
+                  shortDesc: 'The class for this line item',
+                  longDesc: 'The unique identifier of the class to categorize this line item',
+                },
+                customer_id: {
+                  displayName: 'Customer ID',
+                  shortDesc: 'The customer for this line item',
+                  longDesc: 'The unique identifier of the customer if this expense is billable',
+                },
+                billable_status: {
+                  displayName: 'Billable Status',
+                  shortDesc: 'Whether this line item is billable',
+                  longDesc: 'Indicates if this expense can be billed to a customer',
+                },
+                account_id: {
+                  displayName: 'Account ID',
+                  shortDesc: 'The account for this expense',
+                  longDesc: 'The unique identifier of the account to categorize this expense',
+                },
+                item_id: {
+                  displayName: 'Item ID',
+                  shortDesc: 'The item for this line',
+                  longDesc: 'The unique identifier of the item being purchased',
+                },
+                quantity: {
+                  displayName: 'Quantity',
+                  shortDesc: 'The quantity of the item',
+                  longDesc: 'The number of units of the item being purchased',
+                },
+                unit_price: {
+                  displayName: 'Unit Price',
+                  shortDesc: 'The price per unit',
+                  longDesc: 'The cost per individual unit of the item',
                 },
               },
             },
@@ -857,48 +853,46 @@ const QuickbooksAppEn = {
           longDesc: 'The detailed list of items or services included in the estimate',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  amount: {
-                    displayName: 'Amount',
-                    shortDesc: 'The amount for this line item',
-                    longDesc: 'The total monetary amount for this specific line item',
-                  },
-                  description: {
-                    displayName: 'Description',
-                    shortDesc: 'Description of the line item',
-                    longDesc: 'A detailed description of what this line item represents',
-                  },
-                  quantity: {
-                    displayName: 'Quantity',
-                    shortDesc: 'The quantity of the item',
-                    longDesc: 'The number of units of the item being estimated',
-                  },
-                  unit_price: {
-                    displayName: 'Unit Price',
-                    shortDesc: 'The price per unit',
-                    longDesc: 'The cost per individual unit of the item',
-                  },
-                  item_id: {
-                    displayName: 'Item ID',
-                    shortDesc: 'The item for this line',
-                    longDesc: 'The unique identifier of the item being estimated',
-                  },
-                  service_date: {
-                    displayName: 'Service Date',
-                    shortDesc: 'The date when the service will be provided',
-                    longDesc: 'The specific date when the service or item will be delivered',
-                  },
-                  tax_code_id: {
-                    displayName: 'Tax Code ID',
-                    shortDesc: 'The tax code for this line item',
-                    longDesc: 'The unique identifier of the tax code to apply to this line item',
-                  },
-                  class_id: {
-                    displayName: 'Class ID',
-                    shortDesc: 'The class for this line item',
-                    longDesc: 'The unique identifier of the class to categorize this line item',
-                  },
+              fields: {
+                amount: {
+                  displayName: 'Amount',
+                  shortDesc: 'The amount for this line item',
+                  longDesc: 'The total monetary amount for this specific line item',
+                },
+                description: {
+                  displayName: 'Description',
+                  shortDesc: 'Description of the line item',
+                  longDesc: 'A detailed description of what this line item represents',
+                },
+                quantity: {
+                  displayName: 'Quantity',
+                  shortDesc: 'The quantity of the item',
+                  longDesc: 'The number of units of the item being estimated',
+                },
+                unit_price: {
+                  displayName: 'Unit Price',
+                  shortDesc: 'The price per unit',
+                  longDesc: 'The cost per individual unit of the item',
+                },
+                item_id: {
+                  displayName: 'Item ID',
+                  shortDesc: 'The item for this line',
+                  longDesc: 'The unique identifier of the item being estimated',
+                },
+                service_date: {
+                  displayName: 'Service Date',
+                  shortDesc: 'The date when the service will be provided',
+                  longDesc: 'The specific date when the service or item will be delivered',
+                },
+                tax_code_id: {
+                  displayName: 'Tax Code ID',
+                  shortDesc: 'The tax code for this line item',
+                  longDesc: 'The unique identifier of the tax code to apply to this line item',
+                },
+                class_id: {
+                  displayName: 'Class ID',
+                  shortDesc: 'The class for this line item',
+                  longDesc: 'The unique identifier of the class to categorize this line item',
                 },
               },
             },
@@ -1015,48 +1009,46 @@ const QuickbooksAppEn = {
           longDesc: 'The detailed list of items or services included in the invoice',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  amount: {
-                    displayName: 'Amount',
-                    shortDesc: 'The amount for this line item',
-                    longDesc: 'The total monetary amount for this specific line item',
-                  },
-                  description: {
-                    displayName: 'Description',
-                    shortDesc: 'Description of the line item',
-                    longDesc: 'A detailed description of what this line item represents',
-                  },
-                  quantity: {
-                    displayName: 'Quantity',
-                    shortDesc: 'The quantity of the item',
-                    longDesc: 'The number of units of the item being invoiced',
-                  },
-                  unit_price: {
-                    displayName: 'Unit Price',
-                    shortDesc: 'The price per unit',
-                    longDesc: 'The cost per individual unit of the item',
-                  },
-                  item_id: {
-                    displayName: 'Item ID',
-                    shortDesc: 'The item for this line',
-                    longDesc: 'The unique identifier of the item being invoiced',
-                  },
-                  service_date: {
-                    displayName: 'Service Date',
-                    shortDesc: 'The date when the service was provided',
-                    longDesc: 'The specific date when the service or item was delivered',
-                  },
-                  tax_code_id: {
-                    displayName: 'Tax Code ID',
-                    shortDesc: 'The tax code for this line item',
-                    longDesc: 'The unique identifier of the tax code to apply to this line item',
-                  },
-                  class_id: {
-                    displayName: 'Class ID',
-                    shortDesc: 'The class for this line item',
-                    longDesc: 'The unique identifier of the class to categorize this line item',
-                  },
+              fields: {
+                amount: {
+                  displayName: 'Amount',
+                  shortDesc: 'The amount for this line item',
+                  longDesc: 'The total monetary amount for this specific line item',
+                },
+                description: {
+                  displayName: 'Description',
+                  shortDesc: 'Description of the line item',
+                  longDesc: 'A detailed description of what this line item represents',
+                },
+                quantity: {
+                  displayName: 'Quantity',
+                  shortDesc: 'The quantity of the item',
+                  longDesc: 'The number of units of the item being invoiced',
+                },
+                unit_price: {
+                  displayName: 'Unit Price',
+                  shortDesc: 'The price per unit',
+                  longDesc: 'The cost per individual unit of the item',
+                },
+                item_id: {
+                  displayName: 'Item ID',
+                  shortDesc: 'The item for this line',
+                  longDesc: 'The unique identifier of the item being invoiced',
+                },
+                service_date: {
+                  displayName: 'Service Date',
+                  shortDesc: 'The date when the service was provided',
+                  longDesc: 'The specific date when the service or item was delivered',
+                },
+                tax_code_id: {
+                  displayName: 'Tax Code ID',
+                  shortDesc: 'The tax code for this line item',
+                  longDesc: 'The unique identifier of the tax code to apply to this line item',
+                },
+                class_id: {
+                  displayName: 'Class ID',
+                  shortDesc: 'The class for this line item',
+                  longDesc: 'The unique identifier of the class to categorize this line item',
                 },
               },
             },
@@ -1177,48 +1169,46 @@ const QuickbooksAppEn = {
           longDesc: 'The detailed list of items or services included in the invoice',
           type: {
             element_type: {
-              type: {
-                fields: {
-                  amount: {
-                    displayName: 'Amount',
-                    shortDesc: 'The amount for this line item',
-                    longDesc: 'The total monetary amount for this specific line item',
-                  },
-                  description: {
-                    displayName: 'Description',
-                    shortDesc: 'Description of the line item',
-                    longDesc: 'A detailed description of what this line item represents',
-                  },
-                  quantity: {
-                    displayName: 'Quantity',
-                    shortDesc: 'The quantity of the item',
-                    longDesc: 'The number of units of the item being invoiced',
-                  },
-                  unit_price: {
-                    displayName: 'Unit Price',
-                    shortDesc: 'The price per unit',
-                    longDesc: 'The cost per individual unit of the item',
-                  },
-                  item_id: {
-                    displayName: 'Item ID',
-                    shortDesc: 'The item for this line',
-                    longDesc: 'The unique identifier of the item being invoiced',
-                  },
-                  service_date: {
-                    displayName: 'Service Date',
-                    shortDesc: 'The date when the service was provided',
-                    longDesc: 'The specific date when the service or item was delivered',
-                  },
-                  tax_code_id: {
-                    displayName: 'Tax Code ID',
-                    shortDesc: 'The tax code for this line item',
-                    longDesc: 'The unique identifier of the tax code to apply to this line item',
-                  },
-                  class_id: {
-                    displayName: 'Class ID',
-                    shortDesc: 'The class for this line item',
-                    longDesc: 'The unique identifier of the class to categorize this line item',
-                  },
+              fields: {
+                amount: {
+                  displayName: 'Amount',
+                  shortDesc: 'The amount for this line item',
+                  longDesc: 'The total monetary amount for this specific line item',
+                },
+                description: {
+                  displayName: 'Description',
+                  shortDesc: 'Description of the line item',
+                  longDesc: 'A detailed description of what this line item represents',
+                },
+                quantity: {
+                  displayName: 'Quantity',
+                  shortDesc: 'The quantity of the item',
+                  longDesc: 'The number of units of the item being invoiced',
+                },
+                unit_price: {
+                  displayName: 'Unit Price',
+                  shortDesc: 'The price per unit',
+                  longDesc: 'The cost per individual unit of the item',
+                },
+                item_id: {
+                  displayName: 'Item ID',
+                  shortDesc: 'The item for this line',
+                  longDesc: 'The unique identifier of the item being invoiced',
+                },
+                service_date: {
+                  displayName: 'Service Date',
+                  shortDesc: 'The date when the service was provided',
+                  longDesc: 'The specific date when the service or item was delivered',
+                },
+                tax_code_id: {
+                  displayName: 'Tax Code ID',
+                  shortDesc: 'The tax code for this line item',
+                  longDesc: 'The unique identifier of the tax code to apply to this line item',
+                },
+                class_id: {
+                  displayName: 'Class ID',
+                  shortDesc: 'The class for this line item',
+                  longDesc: 'The unique identifier of the class to categorize this line item',
                 },
               },
             },

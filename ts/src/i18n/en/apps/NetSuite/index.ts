@@ -48,16 +48,18 @@ const NetSuiteAppEn = {
           shortDesc: 'Search conditions for filtering records',
           longDesc: 'Key-value pairs defining search criteria',
           type: {
-            fields: {
-              key: {
-                displayName: 'Field Name',
-                shortDesc: 'Name of the field to filter by',
-                longDesc: 'The name of the field to filter by',
-              },
-              value: {
-                displayName: 'Field Value',
-                shortDesc: 'Value to match for the field',
-                longDesc: 'The value to match for the field',
+            element_type: {
+              fields: {
+                key: {
+                  displayName: 'Field Name',
+                  shortDesc: 'Name of the field to filter by',
+                  longDesc: 'The name of the field to filter by',
+                },
+                value: {
+                  displayName: 'Field Value',
+                  shortDesc: 'Value to match for the field',
+                  longDesc: 'The value to match for the field',
+                },
               },
             },
           },
@@ -430,24 +432,26 @@ const NetSuiteAppEn = {
           longDesc:
             'List of items being purchased in this order. Each item requires an ID and amount',
           type: {
-            fields: {
-              id: {
-                displayName: 'Item ID',
-                shortDesc: 'NetSuite item identifier',
-                longDesc:
-                  'The internal ID of the inventory item, non-inventory item, service, or other item type in NetSuite that is being ordered.',
-              },
-              quantity: {
-                displayName: 'Quantity',
-                shortDesc: 'Number of units',
-                longDesc:
-                  'The number of units being ordered for this line item. For services, this is typically hours or days.',
-              },
-              amount: {
-                displayName: 'Amount Override',
-                shortDesc: 'Custom price (optional)',
-                longDesc:
-                  'Optional custom price override for this line item. If provided, overrides the standard price calculation (quantity × rate). Leave empty to use standard pricing from the price level assigned to the customer.',
+            element_type: {
+              fields: {
+                id: {
+                  displayName: 'Item ID',
+                  shortDesc: 'NetSuite item identifier',
+                  longDesc:
+                    'The internal ID of the inventory item, non-inventory item, service, or other item type in NetSuite that is being ordered.',
+                },
+                quantity: {
+                  displayName: 'Quantity',
+                  shortDesc: 'Number of units',
+                  longDesc:
+                    'The number of units being ordered for this line item. For services, this is typically hours or days.',
+                },
+                amount: {
+                  displayName: 'Amount Override',
+                  shortDesc: 'Custom price (optional)',
+                  longDesc:
+                    'Optional custom price override for this line item. If provided, overrides the standard price calculation (quantity × rate). Leave empty to use standard pricing from the price level assigned to the customer.',
+                },
               },
             },
           },

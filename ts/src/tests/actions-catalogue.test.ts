@@ -3,13 +3,15 @@ import { forEach } from 'lodash';
 import { join } from 'node:path';
 import { actionsCatalogue } from '../ActionsCatalogue';
 
-const expectWithContext = (run: () => void, ctx: string) => {
+const collectErrors = (
+  check: () => void,
+  ctx: string,
+  errors: string[]
+): void => {
   try {
-    run();
-  } catch (err: any) {
-    const original = err.message ?? '';
-    err.message = `${ctx}\n${original}`;
-    throw err;
+    check();
+  } catch {
+    errors.push(ctx);
   }
 };
 
@@ -21,6 +23,8 @@ describe('Qorus Apps Catalogue tests', () => {
     expect(actionsCatalogue.apps).toHaveProperty('asana');
     expect(actionsCatalogue.apps).toHaveProperty('esignature');
     expect(actionsCatalogue.apps).toHaveProperty('example');
+
+    const allErrors: string[] = [];
 
     forEach(actionsCatalogue.apps, (app) => {
       expect(app.display_name).not.toBeFalsy();
@@ -44,26 +48,39 @@ describe('Qorus Apps Catalogue tests', () => {
 
         if ('options' in action) {
           const checkOption = (option: any, context: string) => {
-            expectWithContext(
+            collectErrors(
               () => expect(option.display_name).not.toBeFalsy(),
-              `${context}: "display_name" is missing/empty`
+              `${context}: "display_name" is missing/empty`,
+              allErrors
             );
-            expectWithContext(
+            collectErrors(
               () => expect(option.short_desc).not.toBeFalsy(),
-              `${context}: "short_desc" is missing/empty`
+              `${context}: "short_desc" is missing/empty`,
+              allErrors
             );
-            expectWithContext(
+            collectErrors(
               () => expect(option.desc).not.toBeFalsy(),
-              `${context}: "desc" is missing/empty`
+              `${context}: "desc" is missing/empty`,
+              allErrors
             );
-            expectWithContext(
+            collectErrors(
               () => expect(option.type).not.toBeFalsy(),
-              `${context}: "type" is missing/empty`
+              `${context}: "type" is missing/empty`,
+              allErrors
             );
-            if (typeof option.type === 'object' && option.type.fields) {
-              forEach(option.type.fields, (field) => {
-                checkOption(field, `${context} -> ${field.display_name ?? '[no name]'}`);
-              });
+            if (typeof option.type === 'object') {
+              // Handle hash type with direct fields
+              if (option.type.fields) {
+                forEach(option.type.fields, (field, fieldKey) => {
+                  checkOption(field, `${context} -> fields.${fieldKey}`);
+                });
+              }
+              // Handle list type with element_type.fields (list of hash)
+              if (option.type.element_type?.fields) {
+                forEach(option.type.element_type.fields, (field, fieldKey) => {
+                  checkOption(field, `${context} -> element_type.fields.${fieldKey}`);
+                });
+              }
             }
           };
 
@@ -91,5 +108,11 @@ describe('Qorus Apps Catalogue tests', () => {
         }
       });
     });
+
+    if (allErrors.length > 0) {
+      throw new Error(
+        `Found ${allErrors.length} locale validation error(s):\n${allErrors.join('\n')}`
+      );
+    }
   });
 });

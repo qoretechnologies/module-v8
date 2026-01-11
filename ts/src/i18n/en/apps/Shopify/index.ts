@@ -523,7 +523,8 @@ const ShopifyAppEn = {
           shortDesc: 'Items in the fulfillment order',
           longDesc: 'Specific line items within the fulfillment order',
           type: {
-            fields: {
+            element_type: {
+              fields: {
               id: {
                 displayName: 'Line Item ID',
                 shortDesc: 'Unique identifier for line item',
@@ -534,6 +535,7 @@ const ShopifyAppEn = {
                 shortDesc: 'Number of items to fulfill',
                 longDesc: 'The quantity of the specific item being fulfilled',
               },
+            },
             },
           },
         },

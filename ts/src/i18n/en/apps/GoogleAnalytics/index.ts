@@ -23,18 +23,20 @@ const GoogleAnalyticsAppEn = {
           longDesc:
             'Specify one or more date ranges for the report. Dates can be in YYYY-MM-DD format or relative values like "7daysAgo", "yesterday", "today".',
           type: {
-            fields: {
-              start_date: {
-                displayName: 'Start Date',
-                shortDesc: 'The start date of the range',
-                longDesc:
-                  'The inclusive start date for the query in YYYY-MM-DD format, or relative date like "7daysAgo", "yesterday".',
-              },
-              end_date: {
-                displayName: 'End Date',
-                shortDesc: 'The end date of the range',
-                longDesc:
-                  'The inclusive end date for the query in YYYY-MM-DD format, or relative date like "today", "yesterday".',
+            element_type: {
+              fields: {
+                start_date: {
+                  displayName: 'Start Date',
+                  shortDesc: 'The start date of the range',
+                  longDesc:
+                    'The inclusive start date for the query in YYYY-MM-DD format, or relative date like "7daysAgo", "yesterday".',
+                },
+                end_date: {
+                  displayName: 'End Date',
+                  shortDesc: 'The end date of the range',
+                  longDesc:
+                    'The inclusive end date for the query in YYYY-MM-DD format, or relative date like "today", "yesterday".',
+                },
               },
             },
           },
@@ -45,11 +47,13 @@ const GoogleAnalyticsAppEn = {
           longDesc:
             'Select the quantitative measurements to include (e.g., activeUsers, sessions, pageViews). You can include up to 10 metrics per report.',
           type: {
-            fields: {
-              name: {
-                displayName: 'Metric Name',
-                shortDesc: 'The API name of the metric',
-                longDesc: 'The API name of the metric to include in the report.',
+            element_type: {
+              fields: {
+                name: {
+                  displayName: 'Metric Name',
+                  shortDesc: 'The API name of the metric',
+                  longDesc: 'The API name of the metric to include in the report.',
+                },
               },
             },
           },
@@ -60,11 +64,13 @@ const GoogleAnalyticsAppEn = {
           longDesc:
             'Select the attributes to segment your data by (e.g., country, browser, pagePath). Dimensions are optional and allow you to break down metrics by specific categories.',
           type: {
-            fields: {
-              name: {
-                displayName: 'Dimension Name',
-                shortDesc: 'The API name of the dimension',
-                longDesc: 'The API name of the dimension to include in the report.',
+            element_type: {
+              fields: {
+                name: {
+                  displayName: 'Dimension Name',
+                  shortDesc: 'The API name of the dimension',
+                  longDesc: 'The API name of the dimension to include in the report.',
+                },
               },
             },
           },
@@ -86,21 +92,23 @@ const GoogleAnalyticsAppEn = {
           shortDesc: 'Sorting specification for the report',
           longDesc: 'Specify how to sort the report results by dimension or metric values.',
           type: {
-            fields: {
-              field_name: {
-                displayName: 'Field Name',
-                shortDesc: 'The dimension or metric name to sort by',
-                longDesc: 'The name of the dimension or metric to use for sorting.',
-              },
-              desc: {
-                displayName: 'Descending',
-                shortDesc: 'Sort in descending order',
-                longDesc: 'If true, sorts in descending order. If false, sorts in ascending order.',
-              },
-              order_type: {
-                displayName: 'Order Type',
-                shortDesc: 'Whether to sort by dimension or metric',
-                longDesc: 'Specify whether the field is a dimension or metric for proper sorting.',
+            element_type: {
+              fields: {
+                field_name: {
+                  displayName: 'Field Name',
+                  shortDesc: 'The dimension or metric name to sort by',
+                  longDesc: 'The name of the dimension or metric to use for sorting.',
+                },
+                desc: {
+                  displayName: 'Descending',
+                  shortDesc: 'Sort in descending order',
+                  longDesc: 'If true, sorts in descending order. If false, sorts in ascending order.',
+                },
+                order_type: {
+                  displayName: 'Order Type',
+                  shortDesc: 'Whether to sort by dimension or metric',
+                  longDesc: 'Specify whether the field is a dimension or metric for proper sorting.',
+                },
               },
             },
           },
@@ -146,11 +154,13 @@ const GoogleAnalyticsAppEn = {
           longDesc:
             'Select the real-time metrics to include in the report (e.g., activeUsers, screenPageViews, eventCount).',
           type: {
-            fields: {
-              name: {
-                displayName: 'Metric Name',
-                shortDesc: 'The API name of the metric',
-                longDesc: 'The API name of the real-time metric to include.',
+            element_type: {
+              fields: {
+                name: {
+                  displayName: 'Metric Name',
+                  shortDesc: 'The API name of the metric',
+                  longDesc: 'The API name of the real-time metric to include.',
+                },
               },
             },
           },
@@ -161,11 +171,13 @@ const GoogleAnalyticsAppEn = {
           longDesc:
             'Select the real-time dimensions to segment your data by (e.g., country, city, deviceCategory, unifiedScreenName).',
           type: {
-            fields: {
-              name: {
-                displayName: 'Dimension Name',
-                shortDesc: 'The API name of the dimension',
-                longDesc: 'The API name of the real-time dimension to include.',
+            element_type: {
+              fields: {
+                name: {
+                  displayName: 'Dimension Name',
+                  shortDesc: 'The API name of the dimension',
+                  longDesc: 'The API name of the real-time dimension to include.',
+                },
               },
             },
           },
@@ -176,21 +188,23 @@ const GoogleAnalyticsAppEn = {
           longDesc:
             'Specify custom time ranges for the real-time data. By default, data from the last 30 minutes is returned.',
           type: {
-            fields: {
-              name: {
-                displayName: 'Range Name',
-                shortDesc: 'A name for this time range',
-                longDesc: 'An optional name to identify this time range in the response.',
-              },
-              start_minutes_ago: {
-                displayName: 'Start Minutes Ago',
-                shortDesc: 'Start of the range in minutes ago',
-                longDesc: 'The start of the minute range, expressed as minutes ago (e.g., 29 for 29 minutes ago).',
-              },
-              end_minutes_ago: {
-                displayName: 'End Minutes Ago',
-                shortDesc: 'End of the range in minutes ago',
-                longDesc: 'The end of the minute range, expressed as minutes ago (e.g., 0 for current minute).',
+            element_type: {
+              fields: {
+                name: {
+                  displayName: 'Range Name',
+                  shortDesc: 'A name for this time range',
+                  longDesc: 'An optional name to identify this time range in the response.',
+                },
+                start_minutes_ago: {
+                  displayName: 'Start Minutes Ago',
+                  shortDesc: 'Start of the range in minutes ago',
+                  longDesc: 'The start of the minute range, expressed as minutes ago (e.g., 29 for 29 minutes ago).',
+                },
+                end_minutes_ago: {
+                  displayName: 'End Minutes Ago',
+                  shortDesc: 'End of the range in minutes ago',
+                  longDesc: 'The end of the minute range, expressed as minutes ago (e.g., 0 for current minute).',
+                },
               },
             },
           },
@@ -210,21 +224,23 @@ const GoogleAnalyticsAppEn = {
           shortDesc: 'Sorting specification for the report',
           longDesc: 'Specify how to sort the real-time report results.',
           type: {
-            fields: {
-              field_name: {
-                displayName: 'Field Name',
-                shortDesc: 'The dimension or metric name to sort by',
-                longDesc: 'The name of the dimension or metric to use for sorting.',
-              },
-              desc: {
-                displayName: 'Descending',
-                shortDesc: 'Sort in descending order',
-                longDesc: 'If true, sorts in descending order.',
-              },
-              order_type: {
-                displayName: 'Order Type',
-                shortDesc: 'Whether to sort by dimension or metric',
-                longDesc: 'Specify whether the field is a dimension or metric.',
+            element_type: {
+              fields: {
+                field_name: {
+                  displayName: 'Field Name',
+                  shortDesc: 'The dimension or metric name to sort by',
+                  longDesc: 'The name of the dimension or metric to use for sorting.',
+                },
+                desc: {
+                  displayName: 'Descending',
+                  shortDesc: 'Sort in descending order',
+                  longDesc: 'If true, sorts in descending order.',
+                },
+                order_type: {
+                  displayName: 'Order Type',
+                  shortDesc: 'Whether to sort by dimension or metric',
+                  longDesc: 'Specify whether the field is a dimension or metric.',
+                },
               },
             },
           },
@@ -267,58 +283,66 @@ const GoogleAnalyticsAppEn = {
           longDesc:
             'An array of report request configurations. Each request can have its own date ranges, metrics, dimensions, and limits. Maximum 5 requests per batch.',
           type: {
-            fields: {
-              date_ranges: {
-                displayName: 'Date Ranges',
-                shortDesc: 'The date ranges for this report',
-                longDesc: 'The date ranges for this specific report in the batch.',
-                type: {
-                  fields: {
-                    start_date: {
-                      displayName: 'Start Date',
-                      shortDesc: 'The start date of the range',
-                      longDesc: 'The start date in YYYY-MM-DD format or relative format.',
-                    },
-                    end_date: {
-                      displayName: 'End Date',
-                      shortDesc: 'The end date of the range',
-                      longDesc: 'The end date in YYYY-MM-DD format or relative format.',
-                    },
-                  },
-                },
-              },
-              metrics: {
-                displayName: 'Metrics',
-                shortDesc: 'The metrics for this report',
-                longDesc: 'The metrics to include in this specific report.',
-                type: {
-                  fields: {
-                    name: {
-                      displayName: 'Metric Name',
-                      shortDesc: 'The API name of the metric',
-                      longDesc: 'The metric name.',
+            element_type: {
+              fields: {
+                date_ranges: {
+                  displayName: 'Date Ranges',
+                  shortDesc: 'The date ranges for this report',
+                  longDesc: 'The date ranges for this specific report in the batch.',
+                  type: {
+                    element_type: {
+                      fields: {
+                        start_date: {
+                          displayName: 'Start Date',
+                          shortDesc: 'The start date of the range',
+                          longDesc: 'The start date in YYYY-MM-DD format or relative format.',
+                        },
+                        end_date: {
+                          displayName: 'End Date',
+                          shortDesc: 'The end date of the range',
+                          longDesc: 'The end date in YYYY-MM-DD format or relative format.',
+                        },
+                      },
                     },
                   },
                 },
-              },
-              dimensions: {
-                displayName: 'Dimensions',
-                shortDesc: 'The dimensions for this report',
-                longDesc: 'The dimensions to include in this specific report.',
-                type: {
-                  fields: {
-                    name: {
-                      displayName: 'Dimension Name',
-                      shortDesc: 'The API name of the dimension',
-                      longDesc: 'The dimension name.',
+                metrics: {
+                  displayName: 'Metrics',
+                  shortDesc: 'The metrics for this report',
+                  longDesc: 'The metrics to include in this specific report.',
+                  type: {
+                    element_type: {
+                      fields: {
+                        name: {
+                          displayName: 'Metric Name',
+                          shortDesc: 'The API name of the metric',
+                          longDesc: 'The metric name.',
+                        },
+                      },
                     },
                   },
                 },
-              },
-              limit: {
-                displayName: 'Limit',
-                shortDesc: 'Maximum rows for this report',
-                longDesc: 'The maximum number of rows to return for this specific report.',
+                dimensions: {
+                  displayName: 'Dimensions',
+                  shortDesc: 'The dimensions for this report',
+                  longDesc: 'The dimensions to include in this specific report.',
+                  type: {
+                    element_type: {
+                      fields: {
+                        name: {
+                          displayName: 'Dimension Name',
+                          shortDesc: 'The API name of the dimension',
+                          longDesc: 'The dimension name.',
+                        },
+                      },
+                    },
+                  },
+                },
+                limit: {
+                  displayName: 'Limit',
+                  shortDesc: 'Maximum rows for this report',
+                  longDesc: 'The maximum number of rows to return for this specific report.',
+                },
               },
             },
           },
@@ -341,11 +365,13 @@ const GoogleAnalyticsAppEn = {
           shortDesc: 'The dimensions to check',
           longDesc: 'The dimensions you want to verify can be used together.',
           type: {
-            fields: {
-              name: {
-                displayName: 'Dimension Name',
-                shortDesc: 'The API name of the dimension',
-                longDesc: 'The dimension name to check compatibility for.',
+            element_type: {
+              fields: {
+                name: {
+                  displayName: 'Dimension Name',
+                  shortDesc: 'The API name of the dimension',
+                  longDesc: 'The dimension name to check compatibility for.',
+                },
               },
             },
           },
@@ -355,11 +381,13 @@ const GoogleAnalyticsAppEn = {
           shortDesc: 'The metrics to check',
           longDesc: 'The metrics you want to verify can be used together.',
           type: {
-            fields: {
-              name: {
-                displayName: 'Metric Name',
-                shortDesc: 'The API name of the metric',
-                longDesc: 'The metric name to check compatibility for.',
+            element_type: {
+              fields: {
+                name: {
+                  displayName: 'Metric Name',
+                  shortDesc: 'The API name of the metric',
+                  longDesc: 'The metric name to check compatibility for.',
+                },
               },
             },
           },

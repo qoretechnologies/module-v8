@@ -415,15 +415,15 @@ const OutlookAppEn = {
           type: {
             element_type: {
               fields: {
-                emailAddress: {
+                address: {
                   displayName: 'Email Address',
                   shortDesc: "The attendee's email address.",
                   longDesc: 'Enter the email address of the person you want to invite.',
                 },
-                type: {
-                  displayName: 'Attendee Type',
-                  shortDesc: 'Required or optional attendee.',
-                  longDesc: 'Specify whether this person is a required or optional attendee.',
+                name: {
+                  displayName: 'Display Name',
+                  shortDesc: "The attendee's display name.",
+                  longDesc: 'Optionally enter a display name for the attendee.',
                 },
               },
             },
@@ -525,7 +525,7 @@ const OutlookAppEn = {
           type: {
             element_type: {
               fields: {
-                emailAddress: {
+                address: {
                   displayName: 'Email Address',
                   shortDesc: "Recipient's email address.",
                   longDesc: 'Enter the email address of the recipient.',
@@ -547,7 +547,7 @@ const OutlookAppEn = {
           type: {
             element_type: {
               fields: {
-                emailAddress: {
+                address: {
                   displayName: 'Email Address',
                   shortDesc: "CC recipient's email address.",
                   longDesc: 'Enter the email address of the CC recipient.',
@@ -569,7 +569,7 @@ const OutlookAppEn = {
           type: {
             element_type: {
               fields: {
-                emailAddress: {
+                address: {
                   displayName: 'Email Address',
                   shortDesc: "BCC recipient's email address.",
                   longDesc: 'Enter the email address of the BCC recipient.',
