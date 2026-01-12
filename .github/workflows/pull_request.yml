@@ -326,6 +326,14 @@ jobs:
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
           make && sudo make install
 
+      # Run module-v8 Qore tests
+      - name: Run module-v8 tests
+        run: |
+          cd test
+          qore --enable-debug v8.qtest -v
+          qore --enable-debug ts-proxy.qtest -v
+          qore --enable-debug ts-action-interface.qtest -v
+
       # Install RestSchemaDataProvider module (not yet in Qore's CMakeLists.txt)
       - name: Install RestSchemaDataProvider module
         run: |

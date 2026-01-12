@@ -1,6 +1,6 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 
-/*  TypeScriptActionWebhookEventDataProvider.qc Copyright (C) 2023 - 2024 Qore Technologies s.r.o.
+/*  TypeScriptActionWebhookEventDataProvider.qc Copyright (C) 2023 - 2026 Qore Technologies s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -151,18 +151,24 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
 
     private callback(*hash<auto> event) {
         if (format_event_data) {
-            # Call format_event_data with context and event data
-            auto formatted = getAsyncValue(format_event_data, getCallContextInfo(event_opts), event);
-            # null/undefined means skip this event
-            if (!exists formatted) {
-                debug("Event skipped by format_event_data for provider %y", name);
+            try {
+                # Call format_event_data with context and event data
+                auto formatted = getAsyncValue(format_event_data, getCallContextInfo(event_opts), event);
+                # null/undefined means skip this event
+                if (!exists formatted) {
+                    debug("Event skipped by format_event_data for provider %y", name);
+                    return;
+                }
+                if (formatted.typeCode() != NT_HASH) {
+                    throw "FORMAT-EVENT-DATA-ERROR", sprintf("format_event_data must return a hash or null/undefined; "
+                        "got %y", formatted.fullType());
+                }
+                event = formatted;
+            } catch (hash<ExceptionInfo> ex) {
+                LoggerWrapper::error("Error in format_event_data for provider %y: %s; event skipped",
+                    name, get_exception_string(ex));
                 return;
             }
-            if (formatted.typeCode() != NT_HASH) {
-                throw "FORMAT-EVENT-DATA-ERROR", sprintf("format_event_data must return a hash or null/undefined; "
-                    "got %y", formatted.fullType());
-            }
-            event = formatted;
         }
         notifyObservers(event_id, event ?? {});
     }

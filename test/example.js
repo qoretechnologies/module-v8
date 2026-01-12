@@ -1431,6 +1431,62 @@ exports.actionsCatalogue = {
             },
         });
 
+        // Test webhook trigger with format_event_data that throws an exception
+        api.registerAction({
+            "app": "js-openapi-test",
+            "action": "webhook-format-exception",
+            "display_name": "Webhook Format Exception Test",
+            "short_desc": "Test webhook with format_event_data that throws",
+            "desc": "Test webhook with format_event_data that throws an exception",
+            "action_code": 1,  // DPAT_EVENT == 1
+            "options": {
+                "name": {
+                    "type": "string",
+                    "display_name": "Name",
+                    "short_desc": "A name",
+                    "desc": "A name",
+                    "required": true,
+                    "preselected": true,
+                },
+            },
+            "webhook_method": "POST",
+            "webhook_auth": 0,
+            "webhook_register": async function(ctx, url) {
+                if (!ctx || !ctx.opts || !ctx.opts.name) {
+                    throw new Error("missing name");
+                }
+            },
+            "webhook_deregister": async function(ctx, url, reginfo) {
+            },
+            "event_info": {
+                "desc": "Exception test event",
+                "type": {
+                    "type": "hash",
+                    "fields": {
+                        "name": {
+                            "type": "string",
+                        },
+                        "code": {
+                            "type": "int",
+                        },
+                    },
+                },
+            },
+            "get_example_event_data": async function(ctx) {
+                return {
+                    "name": "example",
+                    "code": 1234,
+                };
+            },
+            // format_event_data that throws an exception for events with throw_error=true
+            "format_event_data": async function(ctx, eventData) {
+                if (eventData.throw_error === true) {
+                    throw new Error("Test error from format_event_data");
+                }
+                return eventData;
+            },
+        });
+
         // this will add actions to discord
         api.registerExistingApp({
             "name": "Discord",
