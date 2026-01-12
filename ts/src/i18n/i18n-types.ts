@@ -115933,6 +115933,417 @@ type RootTranslation = {
 				}
 			}
 		}
+		Pushover: {
+			/**
+			 * P​u​s​h​o​v​e​r
+			 */
+			displayName: string
+			groups: {
+				/**
+				 * N​o​t​i​f​i​c​a​t​i​o​n​s​ ​&​ ​A​l​e​r​t​s
+				 */
+				'0': string
+			}
+			/**
+			 * S​e​n​d​ ​p​u​s​h​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​t​o​ ​m​o​b​i​l​e​ ​d​e​v​i​c​e​s​ ​a​n​d​ ​d​e​s​k​t​o​p​s
+			 */
+			shortDesc: string
+			/**
+			 * P​u​s​h​o​v​e​r​ ​m​a​k​e​s​ ​i​t​ ​e​a​s​y​ ​t​o​ ​g​e​t​ ​r​e​a​l​-​t​i​m​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​o​n​ ​y​o​u​r​ ​A​n​d​r​o​i​d​,​ ​i​P​h​o​n​e​,​ ​i​P​a​d​,​ ​a​n​d​ ​D​e​s​k​t​o​p​.​ ​S​e​n​d​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​f​o​r​ ​u​r​g​e​n​t​ ​a​l​e​r​t​s​,​ ​s​y​s​t​e​m​ ​m​o​n​i​t​o​r​i​n​g​,​ ​o​r​ ​a​n​y​ ​a​u​t​o​m​a​t​e​d​ ​m​e​s​s​a​g​i​n​g​ ​n​e​e​d​s​.
+			 */
+			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​P​u​s​h​o​v​e​r
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​y​o​u​r​ ​P​u​s​h​o​v​e​r​ ​a​c​c​o​u​n​t​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​p​p​l​i​c​a​t​i​o​n​ ​A​P​I​ ​T​o​k​e​n​*​*​ ​a​n​d​ ​*​*​U​s​e​r​ ​K​e​y​*​*​.​
+			​
+			​1​.​ ​C​r​e​a​t​e​ ​a​n​ ​a​p​p​l​i​c​a​t​i​o​n​ ​a​t​ ​h​t​t​p​s​:​/​/​p​u​s​h​o​v​e​r​.​n​e​t​/​a​p​p​s​/​b​u​i​l​d​ ​t​o​ ​g​e​t​ ​y​o​u​r​ ​A​P​I​ ​t​o​k​e​n​
+			​2​.​ ​F​i​n​d​ ​y​o​u​r​ ​U​s​e​r​ ​K​e​y​ ​o​n​ ​y​o​u​r​ ​P​u​s​h​o​v​e​r​ ​d​a​s​h​b​o​a​r​d​ ​a​t​ ​h​t​t​p​s​:​/​/​p​u​s​h​o​v​e​r​.​n​e​t​
+			​
+			​B​o​t​h​ ​v​a​l​u​e​s​ ​a​r​e​ ​3​0​-​c​h​a​r​a​c​t​e​r​ ​a​l​p​h​a​n​u​m​e​r​i​c​ ​s​t​r​i​n​g​s​.
+				 */
+				content: string
+			}
+			actions: {
+				push_notification: {
+					/**
+					 * P​u​s​h​ ​N​o​t​i​f​i​c​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​p​u​s​h​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​t​o​ ​a​ ​u​s​e​r​ ​o​r​ ​g​r​o​u​p
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​ ​p​u​s​h​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​w​i​t​h​ ​c​u​s​t​o​m​i​z​a​b​l​e​ ​p​r​i​o​r​i​t​y​,​ ​s​o​u​n​d​,​ ​a​n​d​ ​f​o​r​m​a​t​t​i​n​g​.​ ​S​u​p​p​o​r​t​s​ ​p​r​i​o​r​i​t​i​e​s​ ​f​r​o​m​ ​l​o​w​e​s​t​ ​(​n​o​ ​a​l​e​r​t​)​ ​t​o​ ​h​i​g​h​ ​(​b​y​p​a​s​s​e​s​ ​q​u​i​e​t​ ​h​o​u​r​s​)​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * N​o​t​i​f​i​c​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					options: {
+						message: {
+							/**
+							 * M​e​s​s​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​m​e​s​s​a​g​e​ ​c​o​n​t​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​i​n​ ​t​e​x​t​ ​o​f​ ​t​h​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​.​ ​M​a​x​i​m​u​m​ ​1​0​2​4​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​n​o​t​i​f​i​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​d​i​s​p​l​a​y​e​d​ ​a​b​o​v​e​ ​t​h​e​ ​m​e​s​s​a​g​e​.​ ​M​a​x​i​m​u​m​ ​2​5​0​ ​c​h​a​r​a​c​t​e​r​s​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​y​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​ ​n​a​m​e​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						device: {
+							/**
+							 * D​e​v​i​c​e
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​s​p​e​c​i​f​i​c​ ​d​e​v​i​c​e​(​s​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​n​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​e​v​i​c​e​ ​n​a​m​e​,​ ​o​r​ ​l​e​a​v​e​ ​b​l​a​n​k​ ​t​o​ ​s​e​n​d​ ​t​o​ ​a​l​l​ ​d​e​v​i​c​e​s​.​ ​M​u​l​t​i​p​l​e​ ​d​e​v​i​c​e​s​ ​c​a​n​ ​b​e​ ​s​e​p​a​r​a​t​e​d​ ​b​y​ ​c​o​m​m​a​s​.
+							 */
+							longDesc: string
+						}
+						priority: {
+							/**
+							 * P​r​i​o​r​i​t​y
+							 */
+							displayName: string
+							/**
+							 * N​o​t​i​f​i​c​a​t​i​o​n​ ​p​r​i​o​r​i​t​y​ ​l​e​v​e​l
+							 */
+							shortDesc: string
+							/**
+							 * C​o​n​t​r​o​l​s​ ​h​o​w​ ​t​h​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​i​s​ ​d​e​l​i​v​e​r​e​d​.​ ​L​o​w​e​s​t​ ​s​h​o​w​s​ ​n​o​ ​a​l​e​r​t​,​ ​L​o​w​ ​i​s​ ​q​u​i​e​t​,​ ​N​o​r​m​a​l​ ​i​s​ ​d​e​f​a​u​l​t​,​ ​H​i​g​h​ ​b​y​p​a​s​s​e​s​ ​q​u​i​e​t​ ​h​o​u​r​s​.
+							 */
+							longDesc: string
+						}
+						sound: {
+							/**
+							 * S​o​u​n​d
+							 */
+							displayName: string
+							/**
+							 * N​o​t​i​f​i​c​a​t​i​o​n​ ​s​o​u​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​o​u​n​d​ ​t​o​ ​p​l​a​y​ ​w​h​e​n​ ​t​h​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​a​r​r​i​v​e​s​.​ ​C​h​o​o​s​e​ ​f​r​o​m​ ​p​r​e​d​e​f​i​n​e​d​ ​P​u​s​h​o​v​e​r​ ​s​o​u​n​d​s​.
+							 */
+							longDesc: string
+						}
+						format: {
+							/**
+							 * M​e​s​s​a​g​e​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​o​r​m​a​t​t​i​n​g​ ​s​t​y​l​e
+							 */
+							shortDesc: string
+							/**
+							 * P​l​a​i​n​ ​t​e​x​t​ ​(​d​e​f​a​u​l​t​)​,​ ​H​T​M​L​ ​f​o​r​ ​b​a​s​i​c​ ​f​o​r​m​a​t​t​i​n​g​ ​(​<​b​>​,​ ​<​i​>​,​ ​<​u​>​,​ ​<​a​>​)​,​ ​o​r​ ​M​o​n​o​s​p​a​c​e​ ​f​o​r​ ​c​o​d​e​-​s​t​y​l​e​ ​t​e​x​t​.
+							 */
+							longDesc: string
+						}
+						url: {
+							/**
+							 * U​R​L
+							 */
+							displayName: string
+							/**
+							 * S​u​p​p​l​e​m​e​n​t​a​r​y​ ​U​R​L
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​U​R​L​ ​t​o​ ​i​n​c​l​u​d​e​ ​w​i​t​h​ ​t​h​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​.​ ​M​a​x​i​m​u​m​ ​5​1​2​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						url_title: {
+							/**
+							 * U​R​L​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​U​R​L
+							 */
+							shortDesc: string
+							/**
+							 * D​i​s​p​l​a​y​ ​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​U​R​L​ ​l​i​n​k​.​ ​M​a​x​i​m​u​m​ ​1​0​0​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						timestamp: {
+							/**
+							 * T​i​m​e​s​t​a​m​p
+							 */
+							displayName: string
+							/**
+							 * O​v​e​r​r​i​d​e​ ​m​e​s​s​a​g​e​ ​t​i​m​e​s​t​a​m​p
+							 */
+							shortDesc: string
+							/**
+							 * U​n​i​x​ ​t​i​m​e​s​t​a​m​p​ ​t​o​ ​d​i​s​p​l​a​y​ ​a​s​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​i​m​e​,​ ​u​s​e​f​u​l​ ​f​o​r​ ​d​e​l​a​y​e​d​ ​o​r​ ​b​a​t​c​h​e​d​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						ttl: {
+							/**
+							 * T​i​m​e​ ​t​o​ ​L​i​v​e
+							 */
+							displayName: string
+							/**
+							 * M​e​s​s​a​g​e​ ​e​x​p​i​r​a​t​i​o​n​ ​t​i​m​e​ ​i​n​ ​s​e​c​o​n​d​s
+							 */
+							shortDesc: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​s​e​c​o​n​d​s​ ​b​e​f​o​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​i​s​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​d​e​l​e​t​e​d​ ​f​r​o​m​ ​d​e​v​i​c​e​s​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​t​i​m​e​-​s​e​n​s​i​t​i​v​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				push_emergency_notification: {
+					/**
+					 * P​u​s​h​ ​E​m​e​r​g​e​n​c​y​ ​N​o​t​i​f​i​c​a​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * S​e​n​d​ ​a​ ​h​i​g​h​-​p​r​i​o​r​i​t​y​ ​e​m​e​r​g​e​n​c​y​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​w​i​t​h​ ​a​c​k​n​o​w​l​e​d​g​m​e​n​t​ ​t​r​a​c​k​i​n​g
+					 */
+					shortDesc: string
+					/**
+					 * S​e​n​d​ ​a​n​ ​e​m​e​r​g​e​n​c​y​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​t​h​a​t​ ​r​e​q​u​i​r​e​s​ ​a​c​k​n​o​w​l​e​d​g​m​e​n​t​.​ ​T​h​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​w​i​l​l​ ​r​e​p​e​a​t​ ​a​t​ ​s​p​e​c​i​f​i​e​d​ ​i​n​t​e​r​v​a​l​s​ ​u​n​t​i​l​ ​a​c​k​n​o​w​l​e​d​g​e​d​ ​o​r​ ​e​x​p​i​r​e​d​.​ ​R​e​t​u​r​n​s​ ​a​ ​r​e​c​e​i​p​t​ ​I​D​ ​f​o​r​ ​t​r​a​c​k​i​n​g​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * N​o​t​i​f​i​c​a​t​i​o​n​s
+						 */
+						'0': string
+					}
+					options: {
+						message: {
+							/**
+							 * M​e​s​s​a​g​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​e​r​g​e​n​c​y​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​i​n​ ​t​e​x​t​ ​o​f​ ​t​h​e​ ​e​m​e​r​g​e​n​c​y​ ​n​o​t​i​f​i​c​a​t​i​o​n​.​ ​M​a​x​i​m​u​m​ ​1​0​2​4​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​n​o​t​i​f​i​c​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​t​l​e​ ​d​i​s​p​l​a​y​e​d​ ​a​b​o​v​e​ ​t​h​e​ ​m​e​s​s​a​g​e​.​ ​M​a​x​i​m​u​m​ ​2​5​0​ ​c​h​a​r​a​c​t​e​r​s​.
+							 */
+							longDesc: string
+						}
+						retry: {
+							/**
+							 * R​e​t​r​y​ ​I​n​t​e​r​v​a​l
+							 */
+							displayName: string
+							/**
+							 * S​e​c​o​n​d​s​ ​b​e​t​w​e​e​n​ ​r​e​t​r​i​e​s​ ​(​m​i​n​i​m​u​m​ ​3​0​)
+							 */
+							shortDesc: string
+							/**
+							 * H​o​w​ ​o​f​t​e​n​ ​(​i​n​ ​s​e​c​o​n​d​s​)​ ​P​u​s​h​o​v​e​r​ ​w​i​l​l​ ​r​e​s​e​n​d​ ​t​h​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​u​n​t​i​l​ ​a​c​k​n​o​w​l​e​d​g​e​d​.​ ​M​i​n​i​m​u​m​ ​3​0​ ​s​e​c​o​n​d​s​.
+							 */
+							longDesc: string
+						}
+						expire: {
+							/**
+							 * E​x​p​i​r​a​t​i​o​n​ ​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * S​e​c​o​n​d​s​ ​u​n​t​i​l​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​s​t​o​p​s​ ​r​e​t​r​y​i​n​g​ ​(​m​a​x​i​m​u​m​ ​1​0​8​0​0​)
+							 */
+							shortDesc: string
+							/**
+							 * H​o​w​ ​l​o​n​g​ ​(​i​n​ ​s​e​c​o​n​d​s​)​ ​t​h​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​w​i​l​l​ ​c​o​n​t​i​n​u​e​ ​r​e​t​r​y​i​n​g​.​ ​M​a​x​i​m​u​m​ ​1​0​8​0​0​ ​s​e​c​o​n​d​s​ ​(​3​ ​h​o​u​r​s​)​.
+							 */
+							longDesc: string
+						}
+						device: {
+							/**
+							 * D​e​v​i​c​e
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​s​p​e​c​i​f​i​c​ ​d​e​v​i​c​e​(​s​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​n​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​e​v​i​c​e​ ​n​a​m​e​,​ ​o​r​ ​l​e​a​v​e​ ​b​l​a​n​k​ ​t​o​ ​s​e​n​d​ ​t​o​ ​a​l​l​ ​d​e​v​i​c​e​s​.
+							 */
+							longDesc: string
+						}
+						sound: {
+							/**
+							 * S​o​u​n​d
+							 */
+							displayName: string
+							/**
+							 * N​o​t​i​f​i​c​a​t​i​o​n​ ​s​o​u​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​o​u​n​d​ ​t​o​ ​p​l​a​y​.​ ​L​o​n​g​ ​s​o​u​n​d​s​ ​l​i​k​e​ ​"​p​e​r​s​i​s​t​e​n​t​"​ ​o​r​ ​"​s​i​r​e​n​"​ ​w​o​r​k​ ​w​e​l​l​ ​f​o​r​ ​e​m​e​r​g​e​n​c​i​e​s​.
+							 */
+							longDesc: string
+						}
+						format: {
+							/**
+							 * M​e​s​s​a​g​e​ ​F​o​r​m​a​t
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​f​o​r​m​a​t​t​i​n​g​ ​s​t​y​l​e
+							 */
+							shortDesc: string
+							/**
+							 * P​l​a​i​n​ ​t​e​x​t​,​ ​H​T​M​L​,​ ​o​r​ ​M​o​n​o​s​p​a​c​e​ ​f​o​r​m​a​t​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+						url: {
+							/**
+							 * U​R​L
+							 */
+							displayName: string
+							/**
+							 * S​u​p​p​l​e​m​e​n​t​a​r​y​ ​U​R​L
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​U​R​L​ ​t​o​ ​i​n​c​l​u​d​e​ ​w​i​t​h​ ​t​h​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						url_title: {
+							/**
+							 * U​R​L​ ​T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​U​R​L
+							 */
+							shortDesc: string
+							/**
+							 * D​i​s​p​l​a​y​ ​t​e​x​t​ ​f​o​r​ ​t​h​e​ ​U​R​L​ ​l​i​n​k​.
+							 */
+							longDesc: string
+						}
+						callback: {
+							/**
+							 * C​a​l​l​b​a​c​k​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * U​R​L​ ​t​o​ ​c​a​l​l​ ​w​h​e​n​ ​a​c​k​n​o​w​l​e​d​g​e​d
+							 */
+							shortDesc: string
+							/**
+							 * P​u​s​h​o​v​e​r​ ​w​i​l​l​ ​P​O​S​T​ ​t​o​ ​t​h​i​s​ ​U​R​L​ ​w​h​e​n​ ​t​h​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​ ​i​s​ ​a​c​k​n​o​w​l​e​d​g​e​d​ ​b​y​ ​t​h​e​ ​u​s​e​r​.
+							 */
+							longDesc: string
+						}
+						tags: {
+							/**
+							 * T​a​g​s
+							 */
+							displayName: string
+							/**
+							 * T​a​g​s​ ​f​o​r​ ​b​u​l​k​ ​c​a​n​c​e​l​l​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * C​o​m​m​a​-​s​e​p​a​r​a​t​e​d​ ​t​a​g​s​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​u​s​e​d​ ​t​o​ ​c​a​n​c​e​l​ ​m​u​l​t​i​p​l​e​ ​e​m​e​r​g​e​n​c​y​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​a​t​ ​o​n​c​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				validate_user: {
+					/**
+					 * V​a​l​i​d​a​t​e​ ​U​s​e​r
+					 */
+					displayName: string
+					/**
+					 * V​a​l​i​d​a​t​e​ ​a​ ​u​s​e​r​ ​o​r​ ​g​r​o​u​p​ ​k​e​y​ ​a​n​d​ ​l​i​s​t​ ​d​e​v​i​c​e​s
+					 */
+					shortDesc: string
+					/**
+					 * V​e​r​i​f​y​ ​t​h​a​t​ ​a​ ​u​s​e​r​ ​o​r​ ​g​r​o​u​p​ ​k​e​y​ ​i​s​ ​v​a​l​i​d​ ​a​n​d​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​r​e​g​i​s​t​e​r​e​d​ ​d​e​v​i​c​e​s​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​c​o​n​f​i​r​m​i​n​g​ ​c​r​e​d​e​n​t​i​a​l​s​ ​b​e​f​o​r​e​ ​s​e​n​d​i​n​g​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * U​s​e​r​ ​M​a​n​a​g​e​m​e​n​t
+						 */
+						'0': string
+					}
+					options: {
+						device: {
+							/**
+							 * D​e​v​i​c​e
+							 */
+							displayName: string
+							/**
+							 * V​a​l​i​d​a​t​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​d​e​v​i​c​e
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​s​p​e​c​i​f​y​ ​a​ ​d​e​v​i​c​e​ ​n​a​m​e​ ​t​o​ ​v​a​l​i​d​a​t​e​ ​t​h​a​t​ ​i​t​ ​e​x​i​s​t​s​ ​f​o​r​ ​t​h​i​s​ ​u​s​e​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Slack: {
 			/**
 			 * S​l​a​c​k
@@ -234657,6 +235068,417 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Select which dispute event should trigger this webhook. Each event represents a different stage in the dispute resolution process.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Pushover: {
+			/**
+			 * Pushover
+			 */
+			displayName: () => LocalizedString
+			groups: {
+				/**
+				 * Notifications & Alerts
+				 */
+				'0': () => LocalizedString
+			}
+			/**
+			 * Send push notifications to mobile devices and desktops
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Pushover makes it easy to get real-time notifications on your Android, iPhone, iPad, and Desktop. Send notifications for urgent alerts, system monitoring, or any automated messaging needs.
+			 */
+			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Pushover
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect your Pushover account, you will need your **Application API Token** and **User Key**.
+		
+			1. Create an application at https://pushover.net/apps/build to get your API token
+			2. Find your User Key on your Pushover dashboard at https://pushover.net
+		
+			Both values are 30-character alphanumeric strings.
+				 */
+				content: () => LocalizedString
+			}
+			actions: {
+				push_notification: {
+					/**
+					 * Push Notification
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a push notification to a user or group
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send a push notification with customizable priority, sound, and formatting. Supports priorities from lowest (no alert) to high (bypasses quiet hours).
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Notifications
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						message: {
+							/**
+							 * Message
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The notification message content
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The main text of the notification. Maximum 1024 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional title for the notification
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The title displayed above the message. Maximum 250 characters. Defaults to your application name if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						device: {
+							/**
+							 * Device
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target specific device(s)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Send to a specific device name, or leave blank to send to all devices. Multiple devices can be separated by commas.
+							 */
+							longDesc: () => LocalizedString
+						}
+						priority: {
+							/**
+							 * Priority
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Notification priority level
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Controls how the notification is delivered. Lowest shows no alert, Low is quiet, Normal is default, High bypasses quiet hours.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sound: {
+							/**
+							 * Sound
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Notification sound
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The sound to play when the notification arrives. Choose from predefined Pushover sounds.
+							 */
+							longDesc: () => LocalizedString
+						}
+						format: {
+							/**
+							 * Message Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text formatting style
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Plain text (default), HTML for basic formatting (<b>, <i>, <u>, <a>), or Monospace for code-style text.
+							 */
+							longDesc: () => LocalizedString
+						}
+						url: {
+							/**
+							 * URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Supplementary URL
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A URL to include with the notification. Maximum 512 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						url_title: {
+							/**
+							 * URL Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Title for the URL
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Display text for the URL link. Maximum 100 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timestamp: {
+							/**
+							 * Timestamp
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Override message timestamp
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Unix timestamp to display as the message time, useful for delayed or batched notifications.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ttl: {
+							/**
+							 * Time to Live
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Message expiration time in seconds
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Number of seconds before the message is automatically deleted from devices. Useful for time-sensitive notifications.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				push_emergency_notification: {
+					/**
+					 * Push Emergency Notification
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Send a high-priority emergency notification with acknowledgment tracking
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Send an emergency notification that requires acknowledgment. The notification will repeat at specified intervals until acknowledged or expired. Returns a receipt ID for tracking.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Notifications
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						message: {
+							/**
+							 * Message
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The emergency notification message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The main text of the emergency notification. Maximum 1024 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional title for the notification
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The title displayed above the message. Maximum 250 characters.
+							 */
+							longDesc: () => LocalizedString
+						}
+						retry: {
+							/**
+							 * Retry Interval
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Seconds between retries (minimum 30)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * How often (in seconds) Pushover will resend the notification until acknowledged. Minimum 30 seconds.
+							 */
+							longDesc: () => LocalizedString
+						}
+						expire: {
+							/**
+							 * Expiration Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Seconds until notification stops retrying (maximum 10800)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * How long (in seconds) the notification will continue retrying. Maximum 10800 seconds (3 hours).
+							 */
+							longDesc: () => LocalizedString
+						}
+						device: {
+							/**
+							 * Device
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target specific device(s)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Send to a specific device name, or leave blank to send to all devices.
+							 */
+							longDesc: () => LocalizedString
+						}
+						sound: {
+							/**
+							 * Sound
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Notification sound
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The sound to play. Long sounds like "persistent" or "siren" work well for emergencies.
+							 */
+							longDesc: () => LocalizedString
+						}
+						format: {
+							/**
+							 * Message Format
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text formatting style
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Plain text, HTML, or Monospace formatting.
+							 */
+							longDesc: () => LocalizedString
+						}
+						url: {
+							/**
+							 * URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Supplementary URL
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A URL to include with the notification.
+							 */
+							longDesc: () => LocalizedString
+						}
+						url_title: {
+							/**
+							 * URL Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Title for the URL
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Display text for the URL link.
+							 */
+							longDesc: () => LocalizedString
+						}
+						callback: {
+							/**
+							 * Callback URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * URL to call when acknowledged
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Pushover will POST to this URL when the notification is acknowledged by the user.
+							 */
+							longDesc: () => LocalizedString
+						}
+						tags: {
+							/**
+							 * Tags
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Tags for bulk cancellation
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Comma-separated tags that can be used to cancel multiple emergency notifications at once.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				validate_user: {
+					/**
+					 * Validate User
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Validate a user or group key and list devices
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Verify that a user or group key is valid and retrieve the list of registered devices. Useful for confirming credentials before sending notifications.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * User Management
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						device: {
+							/**
+							 * Device
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Validate a specific device
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally specify a device name to validate that it exists for this user.
 							 */
 							longDesc: () => LocalizedString
 						}

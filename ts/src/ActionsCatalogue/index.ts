@@ -79,6 +79,7 @@ import paddle from '../apps/paddle';
 import patreon from '../apps/patreon';
 import paypal from '../apps/paypal';
 import pipedrive from '../apps/pipedrive';
+import pushover from '../apps/pushover';
 import quickbooks from '../apps/quickbooks';
 import salesforce from '../apps/salesforce';
 import sentry from '../apps/sentry';
@@ -188,6 +189,7 @@ const NEW_APPS = {
   patreon,
   paypal,
   pipedrive,
+  pushover,
   quickbooks,
   sendgrid,
   sentry,
