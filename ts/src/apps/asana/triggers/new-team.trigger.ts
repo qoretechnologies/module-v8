@@ -1,14 +1,11 @@
 import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { ASANA_APP_NAME } from '../constants';
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
-import { asanaEventInfoType, asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
-import {
-  deregisterAsanaWebhook,
-  getAsanaWorkspace,
-  getAsanaWorkspaceTeams,
-  getCurrentAsanaUser,
-} from './helpers';
+import { asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
+import { asanaTeamEventInfoType } from '../response-types';
+import { deregisterAsanaWebhook } from './helpers';
 import { Debugger } from '../../../utils/Debugger';
+import { asanaClient } from '../client';
 
 const asanaNewTeamTrigger = QoreAppCreator.createLocalizedTrigger({
   app: ASANA_APP_NAME,
@@ -64,15 +61,48 @@ const asanaNewTeamTrigger = QoreAppCreator.createLocalizedTrigger({
   webhook_deregister: deregisterAsanaWebhook,
   webhook_echo_header: asanaWebhookEchoHeader,
   webhook_event_loc: asanaWebhookInfoLocation,
+  format_event_data: async (context, eventData) => {
+    const token = context.conn_opts?.token;
+
+    if (!token) {
+      return eventData;
+    }
+
+    try {
+      const resourceGid = eventData.resource?.gid;
+      const userGid = eventData.user?.gid;
+      const parentGid = eventData.parent?.gid;
+
+      const [resource, user, parent] = await Promise.all([
+        resourceGid ? asanaClient.get(`teams/${resourceGid}`, { token, objectPath: 'data' }) : null,
+        userGid ? asanaClient.get(`users/${userGid}`, { token, objectPath: 'data' }) : null,
+        parentGid ? asanaClient.get(`workspaces/${parentGid}`, { token, objectPath: 'data' }) : null,
+      ]);
+
+      return {
+        ...eventData,
+        enriched: {
+          resource,
+          user,
+          parent,
+        },
+      };
+    } catch (error) {
+      Debugger.log('Error enriching Asana event data:', error);
+      return eventData;
+    }
+  },
   get_example_event_data: async (context) => {
+    const token = context?.conn_opts?.token;
+    const workspaceId = context?.opts?.workspace as string;
+
     const mockData = {
       action: 'added',
       type: 'team',
       created_at: new Date().toISOString(),
       parent: {
-        gid: '1208408525816938',
+        gid: workspaceId || '1208408525816938',
         resource_type: 'workspace',
-        name: 'Workspace Name',
       },
       resource: {
         gid: '1208408525816940',
@@ -82,48 +112,72 @@ const asanaNewTeamTrigger = QoreAppCreator.createLocalizedTrigger({
       user: {
         gid: '1206353569757060',
         resource_type: 'user',
-        name: 'user@example.com',
+      },
+      enriched: {
+        resource: {
+          gid: '1208408525816940',
+          resource_type: 'team',
+          name: 'New Team Example',
+          description: 'Team description',
+        },
+        parent: {
+          gid: workspaceId || '1208408525816938',
+          resource_type: 'workspace',
+          name: 'Workspace Name',
+        },
+        user: {
+          gid: '1206353569757060',
+          resource_type: 'user',
+          name: 'Example User',
+          email: 'user@example.com',
+        },
       },
     };
-
-    const token = context?.conn_opts?.token;
-    const workspaceId = context?.opts?.workspace;
 
     if (!token || !workspaceId) {
       return mockData;
     }
 
     try {
-      const [user, workspace, teams] = await Promise.all([
-        getCurrentAsanaUser(token),
-        getAsanaWorkspace(token, workspaceId),
-        getAsanaWorkspaceTeams(token, workspaceId),
+      const [userResult, workspaceResult, teamsResult] = await Promise.allSettled([
+        asanaClient.get('users/me', { token, objectPath: 'data' }),
+        asanaClient.get(`workspaces/${workspaceId}`, { token, objectPath: 'data' }),
+        asanaClient.get('teams', { token, objectPath: 'data', params: { workspace: workspaceId } }),
       ]);
 
-      if (user) {
-        mockData.user.gid = user.gid;
-        mockData.user.name = user.name;
+      const event = { ...mockData };
+
+      if (userResult.status === 'fulfilled' && userResult.value) {
+        const userData = userResult.value as any;
+        event.user.gid = userData.gid;
+        event.enriched.user = userData;
       }
 
-      if (workspace) {
-        mockData.parent.gid = workspace.gid;
-        mockData.parent.name = workspace.name;
+      if (workspaceResult.status === 'fulfilled' && workspaceResult.value) {
+        const workspaceData = workspaceResult.value as any;
+        event.parent.gid = workspaceData.gid;
+        event.enriched.parent = workspaceData;
       }
 
-      const team = teams?.[0];
-      if (team) {
-        mockData.resource.gid = team.gid;
-        mockData.resource.name = team.name;
+      if (teamsResult.status === 'fulfilled' && teamsResult.value) {
+        const teams = teamsResult.value as any[];
+        if (teams?.[0]) {
+          const team = teams[0];
+          event.resource.gid = team.gid;
+          event.resource.name = team.name;
+          event.enriched.resource = team;
+        }
       }
+
+      return event;
     } catch (error) {
       Debugger.log(`Asana Error: Couldn't get example event data`, error);
-    } finally {
       return mockData;
     }
   },
   event_info: {
     desc: 'New team event data',
-    type: asanaEventInfoType,
+    type: asanaTeamEventInfoType,
   },
 });
 

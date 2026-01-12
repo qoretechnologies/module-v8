@@ -3,14 +3,11 @@ import { ASANA_APP_NAME } from '../constants';
 import { getAsanaTaskIdAllowedValues } from '../helpers/get-task-id-allowed-values';
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
 import { getAsanaWorkspaceProjectIdAllowedValues } from '../helpers/get-workspace-project-id-allowed-values';
-import { asanaEventInfoType, asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
-import {
-  deregisterAsanaWebhook,
-  getAsanaTask,
-  getAsasnaTaskSubtask,
-  getCurrentAsanaUser,
-} from './helpers';
+import { asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
+import { asanaSubtaskEventInfoType } from '../response-types';
+import { deregisterAsanaWebhook } from './helpers';
 import { Debugger } from '../../../utils/Debugger';
+import { asanaClient } from '../client';
 
 const asanaNewTaskSubtaskTrigger = QoreAppCreator.createLocalizedTrigger({
   app: ASANA_APP_NAME,
@@ -78,15 +75,48 @@ const asanaNewTaskSubtaskTrigger = QoreAppCreator.createLocalizedTrigger({
   webhook_deregister: deregisterAsanaWebhook,
   webhook_echo_header: asanaWebhookEchoHeader,
   webhook_event_loc: asanaWebhookInfoLocation,
+  format_event_data: async (context, eventData) => {
+    const token = context.conn_opts?.token;
+
+    if (!token) {
+      return eventData;
+    }
+
+    try {
+      const resourceGid = eventData.resource?.gid;
+      const userGid = eventData.user?.gid;
+      const parentGid = eventData.parent?.gid;
+
+      const [resource, user, parent] = await Promise.all([
+        resourceGid ? asanaClient.get(`tasks/${resourceGid}`, { token, objectPath: 'data' }) : null,
+        userGid ? asanaClient.get(`users/${userGid}`, { token, objectPath: 'data' }) : null,
+        parentGid ? asanaClient.get(`tasks/${parentGid}`, { token, objectPath: 'data' }) : null,
+      ]);
+
+      return {
+        ...eventData,
+        enriched: {
+          resource,
+          user,
+          parent,
+        },
+      };
+    } catch (error) {
+      Debugger.log('Error enriching Asana event data:', error);
+      return eventData;
+    }
+  },
   get_example_event_data: async (context) => {
+    const token = context?.conn_opts?.token;
+    const task = context?.opts?.task as string;
+
     const mockData = {
       action: 'added',
       type: 'task',
       created_at: new Date().toISOString(),
       parent: {
-        gid: '1209628887786464',
+        gid: task || '1209628887786464',
         resource_type: 'task',
-        name: 'Parent Task',
       },
       resource: {
         gid: '1209732554321987',
@@ -97,47 +127,71 @@ const asanaNewTaskSubtaskTrigger = QoreAppCreator.createLocalizedTrigger({
       user: {
         gid: '1206353569757060',
         resource_type: 'user',
-        name: 'user@example.com',
+      },
+      enriched: {
+        resource: {
+          gid: '1209732554321987',
+          resource_type: 'task',
+          name: 'Subtask Example',
+        },
+        parent: {
+          gid: task || '1209628887786464',
+          resource_type: 'task',
+          name: 'Parent Task',
+        },
+        user: {
+          gid: '1206353569757060',
+          resource_type: 'user',
+          name: 'Example User',
+          email: 'user@example.com',
+        },
       },
     };
-
-    const token = context?.conn_opts?.token;
-    const task = context?.opts?.task as string;
 
     if (!token || !task) {
       return mockData;
     }
 
     try {
-      const [user, parent, subtask] = await Promise.all([
-        getCurrentAsanaUser(token),
-        getAsanaTask(token, task),
-        getAsasnaTaskSubtask(token, task),
+      const [userResult, parentResult, subtasksResult] = await Promise.allSettled([
+        asanaClient.get('users/me', { token, objectPath: 'data' }),
+        asanaClient.get(`tasks/${task}`, { token, objectPath: 'data' }),
+        asanaClient.get(`tasks/${task}/subtasks`, { token, objectPath: 'data', params: { limit: '1' } }),
       ]);
 
-      if (parent) {
-        mockData.parent.gid = parent.gid;
-        mockData.parent.name = parent.name;
+      const event = { ...mockData };
+
+      if (userResult.status === 'fulfilled' && userResult.value) {
+        const userData = userResult.value as any;
+        event.user.gid = userData.gid;
+        event.enriched.user = userData;
       }
 
-      if (user) {
-        mockData.user.gid = user.gid;
-        mockData.user.name = user.name;
+      if (parentResult.status === 'fulfilled' && parentResult.value) {
+        const parentData = parentResult.value as any;
+        event.parent.gid = parentData.gid;
+        event.enriched.parent = parentData;
       }
 
-      if (subtask) {
-        mockData.resource.gid = subtask.gid;
-        mockData.resource.name = subtask.name;
+      if (subtasksResult.status === 'fulfilled' && subtasksResult.value) {
+        const subtasks = subtasksResult.value as any[];
+        if (subtasks?.[0]) {
+          const subtask = subtasks[0];
+          event.resource.gid = subtask.gid;
+          event.resource.name = subtask.name;
+          event.enriched.resource = subtask;
+        }
       }
+
+      return event;
     } catch (error) {
       Debugger.log(`Asana Error: Couldn't get example event data`, error);
-    } finally {
       return mockData;
     }
   },
   event_info: {
     desc: 'New task subtask event data',
-    type: asanaEventInfoType,
+    type: asanaSubtaskEventInfoType,
   },
 });
 

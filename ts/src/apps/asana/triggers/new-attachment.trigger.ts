@@ -4,14 +4,10 @@ import { ASANA_APP_NAME } from '../constants';
 import { getAsanaTaskIdAllowedValues } from '../helpers/get-task-id-allowed-values';
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
 import { getAsanaWorkspaceProjectIdAllowedValues } from '../helpers/get-workspace-project-id-allowed-values';
-import { asanaEventInfoType, asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
-import {
-  deregisterAsanaWebhook,
-  getAsanaProject,
-  getAsanaTask,
-  getAsasnaAttachments,
-  getCurrentAsanaUser,
-} from './helpers';
+import { asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
+import { asanaAttachmentEventInfoType } from '../response-types';
+import { deregisterAsanaWebhook } from './helpers';
+import { asanaClient } from '../client';
 
 const asanaNewAttachmentTrigger = QoreAppCreator.createLocalizedTrigger({
   action: 'attachment_added',
@@ -82,75 +78,143 @@ const asanaNewAttachmentTrigger = QoreAppCreator.createLocalizedTrigger({
   webhook_event_loc: asanaWebhookInfoLocation,
   webhook_echo_header: asanaWebhookEchoHeader,
   webhook_deregister: deregisterAsanaWebhook,
+  format_event_data: async (context, eventData) => {
+    const token = context.conn_opts?.token;
+
+    if (!token) {
+      return eventData;
+    }
+
+    try {
+      const resourceGid = eventData.resource?.gid;
+      const userGid = eventData.user?.gid;
+      const parentGid = eventData.parent?.gid;
+      const parentType = eventData.parent?.resource_type;
+
+      const [resource, user, parent] = await Promise.all([
+        resourceGid ? asanaClient.get(`attachments/${resourceGid}`, { token, objectPath: 'data' }) : null,
+        userGid ? asanaClient.get(`users/${userGid}`, { token, objectPath: 'data' }) : null,
+        parentGid
+          ? asanaClient.get(`${parentType === 'project' ? 'projects' : 'tasks'}/${parentGid}`, {
+              token,
+              objectPath: 'data',
+            })
+          : null,
+      ]);
+
+      return {
+        ...eventData,
+        enriched: {
+          resource,
+          user,
+          parent,
+        },
+      };
+    } catch (error) {
+      Debugger.log('Error enriching Asana event data:', error);
+      return eventData;
+    }
+  },
   get_example_event_data: async (context) => {
     const token = context?.conn_opts?.token;
-    const project = context?.opts?.project;
-    const task = context?.opts?.task;
+    const project = context?.opts?.project as string;
+    const task = context?.opts?.task as string;
+
+    const parentGid = task || project || '1209628887786464';
+    const parentType = task ? 'task' : 'project';
 
     const mockData = {
       action: 'added',
       type: 'attachment',
       created_at: new Date().toISOString(),
       parent: {
-        gid: 'example-task-gid',
-        resource_type: 'task',
-        name: 'Example Task',
+        gid: parentGid,
+        resource_type: parentType,
       },
       resource: {
-        gid: 'example-attachment-gid',
+        gid: '1209876543210987',
         resource_type: 'attachment',
         name: 'document.pdf',
-        resource_subtype: 'pdf',
+        resource_subtype: 'external',
       },
       user: {
-        gid: 'example-user-gid',
+        gid: '1206353569757060',
         resource_type: 'user',
-        name: 'user@example.com',
+      },
+      enriched: {
+        resource: {
+          gid: '1209876543210987',
+          resource_type: 'attachment',
+          name: 'document.pdf',
+          download_url: 'https://example.com/document.pdf',
+          view_url: 'https://example.com/document.pdf',
+        },
+        parent: {
+          gid: parentGid,
+          resource_type: parentType,
+          name: task ? 'Example Task' : 'Example Project',
+        },
+        user: {
+          gid: '1206353569757060',
+          resource_type: 'user',
+          name: 'Example User',
+          email: 'user@example.com',
+        },
       },
     };
 
     if (!token || !project) {
       Debugger.log(
-        `Missing required values: ${[!token && 'token', !project && 'task'].filter(Boolean).join(', ')}`
+        `Missing required values: ${[!token && 'token', !project && 'project'].filter(Boolean).join(', ')}`
       );
-
       return mockData;
     }
 
     try {
-      const [parent, user, attachments] = await Promise.all([
-        task ? getAsanaTask(token, task) : getAsanaProject(token, project),
-        getCurrentAsanaUser(token),
-        getAsasnaAttachments(token, task || project, task ? 'tasks' : 'projects'),
+      const parentPath = task ? `tasks/${task}` : `projects/${project}`;
+      const attachmentsPath = task ? `tasks/${task}/attachments` : `projects/${project}/attachments`;
+
+      const [userResult, parentResult, attachmentsResult] = await Promise.allSettled([
+        asanaClient.get('users/me', { token, objectPath: 'data' }),
+        asanaClient.get(parentPath, { token, objectPath: 'data' }),
+        asanaClient.get(attachmentsPath, { token, objectPath: 'data' }),
       ]);
 
-      if (parent) {
-        mockData.parent.gid = parent.gid;
-        mockData.parent.name = parent.name;
-        mockData.parent.resource_type = parent.resource_type;
+      const event = { ...mockData };
+
+      if (userResult.status === 'fulfilled' && userResult.value) {
+        const userData = userResult.value as any;
+        event.user.gid = userData.gid;
+        event.enriched.user = userData;
       }
 
-      if (user) {
-        mockData.user.gid = user.gid;
-        mockData.user.name = user.name;
+      if (parentResult.status === 'fulfilled' && parentResult.value) {
+        const parentData = parentResult.value as any;
+        event.parent.gid = parentData.gid;
+        event.parent.resource_type = parentData.resource_type;
+        event.enriched.parent = parentData;
       }
 
-      const attachment = attachments?.[0];
-      if (attachment) {
-        mockData.resource.gid = attachment.gid;
-        mockData.resource.name = attachment.name;
-        mockData.resource.resource_type = attachment.resource_type;
-        mockData.resource.resource_subtype = attachment.resource_subtype;
+      if (attachmentsResult.status === 'fulfilled' && attachmentsResult.value) {
+        const attachments = attachmentsResult.value as any[];
+        if (attachments?.[0]) {
+          const attachment = attachments[0];
+          event.resource.gid = attachment.gid;
+          event.resource.name = attachment.name;
+          event.resource.resource_subtype = attachment.resource_subtype || 'external';
+          event.enriched.resource = attachment;
+        }
       }
+
+      return event;
     } catch (error) {
       Debugger.log('Error fetching attachment event data:', error);
-    } finally {
       return mockData;
     }
   },
   event_info: {
     desc: 'New attachment event data',
-    type: asanaEventInfoType,
+    type: asanaAttachmentEventInfoType,
   },
 });
 
