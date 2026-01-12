@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
+import { clickUpClient } from '../client';
 import { getClickUpGroupIdAllowedValues } from '../helpers/get-group-id-allowed-values';
 import { getClickUpWorkspaceIdAllowedValues } from '../helpers/get-workspace-id-allowed-values';
 
@@ -36,13 +36,12 @@ const listGroups = QoreAppCreator.createLocalizedAction<typeof options>({
     const { group_ids } = obj || {};
 
     try {
-      return await fetchClickUpData({
+      return await clickUpClient.get('group', {
         token,
         params: {
           workspace,
           ...(group_ids && { group_ids }),
         },
-        path: `group`,
       });
     } catch (error) {
       throw new ClickUpError(`Failed to list groups: ${error}`);

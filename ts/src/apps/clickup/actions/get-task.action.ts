@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
+import { clickUpClient } from '../client';
 import { getClickUpFolderIdAllowedValues } from '../helpers/get-folder-id-allowed-values';
 import { getClickUpListIdAllowedValues } from '../helpers/get-list-id-allowed-values';
 import { getClickUpSpaceIdAllowedValues } from '../helpers/get-space-id-allowed-values';
@@ -71,13 +71,12 @@ const getTask = QoreAppCreator.createLocalizedAction<typeof options>({
     const { include_markdown_description = false, subtasks = false } = obj || {};
 
     try {
-      return await fetchClickUpData({
+      return await clickUpClient.get(`task/${task}`, {
         token,
         params: {
           include_markdown_description: include_markdown_description === true ? 'true' : 'false',
           subtasks: subtasks === true ? 'true' : 'false',
         },
-        path: `task/${task}`,
       });
     } catch (error) {
       throw new ClickUpError(`Failed to get task: ${error}`);

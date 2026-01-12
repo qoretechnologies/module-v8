@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
+import { clickUpClient } from '../client';
 import { getClickUpSpaceIdAllowedValues } from '../helpers/get-space-id-allowed-values';
 import { getClickUpWorkspaceIdAllowedValues } from '../helpers/get-workspace-id-allowed-values';
 import { getClickUpFolderIdAllowedValues } from '../helpers/get-folder-id-allowed-values';
@@ -44,10 +44,7 @@ const getFolder = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      return await fetchClickUpData({
-        token,
-        path: `folder/${folder}`,
-      });
+      return await clickUpClient.get(`folder/${folder}`, { token });
     } catch (error) {
       throw new ClickUpError(`Failed to get the folder: ${error}`);
     }

@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
+import { clickUpClient } from '../client';
 import { getClickUpDocumentIdAllowedValues } from '../helpers/get-document-id-allowed-values';
 import { getClickUpWorkspaceIdAllowedValues } from '../helpers/get-workspace-id-allowed-values';
 
@@ -60,18 +60,16 @@ const createDocumentPage = QoreAppCreator.createLocalizedAction<typeof options>(
     const { name, content, content_format, sub_title } = obj || {};
 
     try {
-      return await fetchClickUpData({
-        token,
-        version: 'v3',
-        method: 'POST',
-        path: `workspaces/${workspace}/docs/${document}/pages`,
-        body: {
+      return await clickUpClient.post(
+        clickUpClient.v3(`workspaces/${workspace}/docs/${document}/pages`),
+        {
           ...(name && { name }),
           ...(content && { content }),
           ...(content_format && { content_format }),
           ...(sub_title && { sub_title }),
         },
-      });
+        { token }
+      );
     } catch (error) {
       throw new ClickUpError(`Failed to create document page: ${error}`);
     }

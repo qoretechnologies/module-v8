@@ -4,8 +4,8 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
+import { clickUpClient } from '../client';
 import { ClickUpError } from '../constants';
-import { fetchClickUpAllowedValues } from './constants';
 
 type TClickUpItem = {
   id: number;
@@ -33,10 +33,10 @@ export const getClickUpTaskTypeAllowedValues: TQoreGetAllowedValuesFunction<
 
   const workspace = context?.opts?.workspace || context?.opts?.team || context?.opts?.team_id;
 
-  return await fetchClickUpAllowedValues<TClickUpItem>({
+  return await clickUpClient.fetchAllowedValues<TClickUpItem>({
     token,
     path: `team/${workspace}/custom_item`,
-    object: 'custom_items',
+    itemsPath: 'custom_items',
     mapItemToAllowedValue: mapClickUpItemToAllowedValue,
   });
 };

@@ -2,7 +2,7 @@ import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnolog
 import { map } from 'lodash';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
+import { clickUpClient } from '../client';
 import { getClickUpFolderIdAllowedValues } from '../helpers/get-folder-id-allowed-values';
 import { getClickUpListIdAllowedValues } from '../helpers/get-list-id-allowed-values';
 import { getClickUpSpaceIdAllowedValues } from '../helpers/get-space-id-allowed-values';
@@ -105,7 +105,7 @@ const listTasks = QoreAppCreator.createLocalizedAction<typeof options>({
     const statuses = map(status, (val) => `status=${encodeURIComponent(val)}`).join('&');
 
     try {
-      return await fetchClickUpData({
+      return await clickUpClient.get(`list/${list}/task`, {
         token,
         params: {
           archived: archived === true ? 'true' : 'false',
@@ -117,7 +117,6 @@ const listTasks = QoreAppCreator.createLocalizedAction<typeof options>({
           ...(reverse && { reverse: reverse === true ? 'true' : 'false' }),
           ...(statuses?.length && { statuses }),
         },
-        path: `list/${list}/task`,
       });
     } catch (error) {
       throw new ClickUpError(`Failed to list tasks: ${error}`);

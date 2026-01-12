@@ -34,6 +34,8 @@ import {
   NewClickUpFolder,
   NewClickUpList,
   NewClickUpTask,
+  NewClickUpTaskComment,
+  UpdatedClickUpTaskTimeTracked,
   UpdatedClickUpTask,
 } from '../apps/clickup/triggers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
@@ -667,6 +669,107 @@ describe('ClickUp', () => {
           webhook,
         });
       });
+    });
+  });
+
+  describe('Should test ClickUp triggers get_example_event_data', () => {
+    it('Should get example event data for new folder trigger', async () => {
+      const trigger = NewClickUpFolder;
+
+      if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data) {
+        throw new Error('get_example_event_data not found in trigger');
+      }
+
+      const result = await trigger.get_example_event_data({
+        ...base_context,
+        opts: { workspace } as any,
+      });
+
+      expect(result).toBeDefined();
+      expect(result.id).toBeDefined();
+      expect(result.name).toBeDefined();
+    });
+
+    it('Should get example event data for new list trigger', async () => {
+      const trigger = NewClickUpList;
+
+      if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data) {
+        throw new Error('get_example_event_data not found in trigger');
+      }
+
+      const result = await trigger.get_example_event_data({
+        ...base_context,
+        opts: { workspace } as any,
+      });
+
+      expect(result).toBeDefined();
+      expect(result.id).toBeDefined();
+      expect(result.name).toBeDefined();
+    });
+
+    it('Should get example event data for new task trigger', async () => {
+      const trigger = NewClickUpTask;
+
+      if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data) {
+        throw new Error('get_example_event_data not found in trigger');
+      }
+
+      const result = await trigger.get_example_event_data({
+        ...base_context,
+        opts: { workspace } as any,
+      });
+
+      expect(result).toBeDefined();
+      expect(result.id).toBeDefined();
+      expect(result.name).toBeDefined();
+    });
+
+    it('Should get example event data for updated task trigger', async () => {
+      const trigger = UpdatedClickUpTask;
+
+      if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data) {
+        throw new Error('get_example_event_data not found in trigger');
+      }
+
+      const result = await trigger.get_example_event_data({
+        ...base_context,
+        opts: { workspace } as any,
+      });
+
+      expect(result).toBeDefined();
+      expect(result.id).toBeDefined();
+    });
+
+    it('Should get example event data for new task comment trigger', async () => {
+      const trigger = NewClickUpTaskComment;
+
+      if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data) {
+        throw new Error('get_example_event_data not found in trigger');
+      }
+
+      const result = await trigger.get_example_event_data({
+        ...base_context,
+        opts: { workspace } as any,
+      });
+
+      expect(result).toBeDefined();
+      expect(result.id).toBeDefined();
+    });
+
+    it('Should get example event data for task time tracked updated trigger', async () => {
+      const trigger = UpdatedClickUpTaskTimeTracked;
+
+      if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data) {
+        throw new Error('get_example_event_data not found in trigger');
+      }
+
+      const result = await trigger.get_example_event_data({
+        ...base_context,
+        opts: { workspace } as any,
+      });
+
+      expect(result).toBeDefined();
+      expect(result.id).toBeDefined();
     });
   });
 

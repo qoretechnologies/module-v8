@@ -1,13 +1,10 @@
-import {
-  EQoreAppActionCode,
-  QoreAppCreator,
-  QorusRequest,
-  TQoreOptions,
-} from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
+import { Debugger } from '../../../utils/Debugger';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
+import { clickUpClient } from '../client';
 import { getClickUpWorkspaceIdAllowedValues } from '../helpers/get-workspace-id-allowed-values';
+import { clickUpTaskEventInfoType } from '../response-types';
 
 const options = {
   workspace: {
@@ -31,15 +28,14 @@ const ClickUpTaskUpdated = QoreAppCreator.createLocalizedTrigger<typeof options>
       ErrorClass: ClickUpError,
     });
 
-    const webhook = await fetchClickUpData<{ id: string }>({
-      method: 'POST',
-      token,
-      body: {
+    const webhook = await clickUpClient.post<{ id: string }>(
+      `team/${workspace}/webhook`,
+      {
         endpoint: url,
         events: ['taskUpdated'],
       },
-      path: `team/${workspace}/webhook`,
-    });
+      { token }
+    );
 
     return { webhook };
   },
@@ -56,134 +52,106 @@ const ClickUpTaskUpdated = QoreAppCreator.createLocalizedTrigger<typeof options>
       throw new ClickUpError('Webhook ID is required for deregistration.');
     }
 
-    await QorusRequest.deleteReq(
-      {
-        path: `/api/v2/webhook/${webhookId}`,
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      },
-      { endpointId: CLICKUP_APP_NAME, url: `https://api.clickup.com` }
-    );
+    await clickUpClient.delete(`webhook/${webhookId}`, { token });
   },
-  get_example_event_data: () => {
-    // Webhook data strongly depends on the changes made to the task.
-    // This is a generic example of what the data might look like.
-    // Fetching real data would require making at least four API calls, which will overwhelm the limits
-    return {
-      event: 'taskUpdated',
-      history_items: [
-        {
-          id: '2800768061568222238',
-          type: 1,
-          date: '1642734925064',
-          field: 'assignee_add',
-          parent_id: '162641062',
-          data: {},
-          source: null,
-          user: {
-            id: 183,
-            username: 'John',
-            email: 'john@company.com',
-            color: '#7b68ee',
-            initials: 'J',
-            profilePicture: null,
-          },
-          before: null,
-          after: {
-            id: 212567236,
-            username: 'John',
-            email: 'john@company.com',
-            color: '',
-            initials: 'J',
-            profilePicture: 'https://attachments.clickup.com/profilePictures/212567236_4mG.jpg',
-          },
-        },
-      ],
-      task_id: '1vj37mc',
-      webhook_id: '7fa3ec74-69a8-4530-a251-8a13730bd204',
+  format_event_data: async (context, eventData) => {
+    const token = context.conn_opts?.token;
+    const taskId = eventData.task_id;
+
+    if (!token || !taskId) {
+      return eventData;
+    }
+
+    try {
+      return await clickUpClient.get(`task/${taskId}`, { token });
+    } catch (error) {
+      Debugger.log('Error fetching ClickUp task:', error);
+      return eventData;
+    }
+  },
+  get_example_event_data: async (context) => {
+    const mockData = {
+      id: '1vj37mc',
+      custom_id: null,
+      custom_item_id: 0,
+      name: 'Updated Task Example',
+      text_content: '',
+      description: '',
+      status: { status: 'in progress', color: '#4194f6', orderindex: 1, type: 'custom' },
+      orderindex: '0',
+      date_created: '1642734631523',
+      date_updated: '1642734925064',
+      date_closed: null,
+      creator: { id: 183, username: 'John', color: '#7b68ee', profilePicture: null },
+      assignees: [{ id: 212567236, username: 'John', email: 'john@company.com', color: '', initials: 'J' }],
+      watchers: [],
+      checklists: [],
+      tags: [],
+      parent: null,
+      priority: null,
+      due_date: null,
+      start_date: null,
+      points: null,
+      time_estimate: null,
+      time_spent: null,
+      custom_fields: [],
+      list: { id: '12345' },
+      folder: { id: '67890' },
+      space: { id: '11111' },
+      url: 'https://app.clickup.com/t/1vj37mc',
     };
+
+    const token = context?.conn_opts?.token;
+    const workspace = context?.opts?.workspace;
+
+    if (!token || !workspace) {
+      return mockData;
+    }
+
+    try {
+      const spacesResponse = await clickUpClient.get<{ spaces: { id: string }[] }>(
+        `team/${workspace}/space`,
+        { token }
+      );
+      const spaces = spacesResponse.spaces || [];
+
+      if (spaces.length === 0) {
+        return mockData;
+      }
+
+      const space = spaces[0].id;
+
+      const listsResponse = await clickUpClient.get<{ lists: { id: string }[] }>(
+        `space/${space}/list`,
+        { token }
+      );
+      const lists = listsResponse.lists || [];
+
+      if (lists.length === 0) {
+        return mockData;
+      }
+
+      const list = lists[0].id;
+
+      const tasksResponse = await clickUpClient.get<{ tasks: any[] }>(
+        `list/${list}/task`,
+        { token }
+      );
+      const tasks = tasksResponse.tasks || [];
+
+      if (tasks.length === 0) {
+        return mockData;
+      }
+
+      return tasks[0];
+    } catch (error) {
+      Debugger.log('Error fetching example event data:', error);
+      return mockData;
+    }
   },
   event_info: {
-    desc: 'Updated task event data',
-    type: {
-      type: 'hash',
-      fields: {
-        event: { type: 'string' },
-        history_items: {
-          type: {
-            type: 'list',
-            element_type: {
-              type: 'hash',
-              fields: {
-                id: { type: 'string' },
-                type: { type: 'number' },
-                date: { type: 'string' },
-                field: { type: 'string' },
-                parent_id: { type: 'string' },
-                data: { type: 'hash' },
-                source: { type: 'string' },
-                user: {
-                  type: {
-                    type: 'hash',
-                    fields: {
-                      id: { type: 'number' },
-                      username: { type: 'string' },
-                      email: { type: 'string' },
-                      color: { type: 'string' },
-                      initials: { type: 'string' },
-                      profilePicture: { type: 'string' },
-                      role: { type: 'number' },
-                      role_subtype: { type: 'number' },
-                    },
-                  },
-                },
-                after: { type: 'any' },
-                before: { type: 'any' },
-                custom_field: {
-                  type: {
-                    type: 'hash',
-                    fields: {
-                      id: { type: 'string' },
-                      name: { type: 'string' },
-                      type: { type: 'string' },
-                      type_config: {
-                        type: {
-                          type: 'hash',
-                          fields: {
-                            default: { type: 'any' },
-                            placeholder: { type: 'string' },
-                            new_drop_down: { type: 'bool' },
-                            options: {
-                              type: {
-                                type: 'list',
-                                element_type: {
-                                  type: 'hash',
-                                  fields: {
-                                    id: { type: 'string' },
-                                    name: { type: 'string' },
-                                    color: { type: 'string' },
-                                    orderindex: { type: 'number' },
-                                    type: { type: 'string' },
-                                    value: { type: 'any' },
-                                  },
-                                },
-                              },
-                            },
-                          },
-                        },
-                      },
-                    },
-                  },
-                },
-              },
-            },
-          },
-        },
-        task_id: { type: 'string' },
-        webhook_id: { type: 'string' },
-      },
-    },
+    desc: 'Updated task data',
+    type: clickUpTaskEventInfoType,
   },
 });
 

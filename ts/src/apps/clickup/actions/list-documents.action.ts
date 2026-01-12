@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
+import { clickUpClient } from '../client';
 import { getClickUpSpaceIdAllowedValues } from '../helpers/get-space-id-allowed-values';
 import { getClickUpWorkspaceIdAllowedValues } from '../helpers/get-workspace-id-allowed-values';
 import { getClickUpDocumentIdAllowedValues } from '../helpers/get-document-id-allowed-values';
@@ -87,9 +87,8 @@ const listDocuments = QoreAppCreator.createLocalizedAction<typeof options>({
     } = obj || {};
 
     try {
-      return await fetchClickUpData({
+      return await clickUpClient.get(clickUpClient.v3(`workspaces/${workspace}/docs`), {
         token,
-        version: 'v3',
         params: {
           limit: limit.toString(),
           archived: archived === true ? 'true' : 'false',
@@ -99,7 +98,6 @@ const listDocuments = QoreAppCreator.createLocalizedAction<typeof options>({
           ...(parent_id && { parent_id }),
           ...(parent_type && { parent_type }),
         },
-        path: `workspaces/${workspace}/docs`,
       });
     } catch (error) {
       throw new ClickUpError(`Failed to list documents: ${error}`);

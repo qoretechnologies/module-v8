@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
+import { clickUpClient } from '../client';
 import { getClickUpFolderIdAllowedValues } from '../helpers/get-folder-id-allowed-values';
 import { getClickUpSpaceIdAllowedValues } from '../helpers/get-space-id-allowed-values';
 import { getClickUpWorkspaceMemberIdAllowedValues } from '../helpers/get-workspace-member-id-allowed-values';
@@ -79,19 +79,14 @@ const createList = QoreAppCreator.createLocalizedAction<typeof options>({
     const dueDateTime = due_date ? new Date(due_date).getTime() : undefined;
 
     try {
-      return await fetchClickUpData({
-        token,
-        method: 'POST',
-        body: {
-          name,
-          ...(content && { content }),
-          ...(assignee && { assignee }),
-          ...(priority && { priority }),
-          ...(dueDateTime && { due_date: dueDateTime }),
-          ...(markdown_content && { markdown_content }),
-        },
-        path: `folder/${folder}/list`,
-      });
+      return await clickUpClient.post(`folder/${folder}/list`, {
+        name,
+        ...(content && { content }),
+        ...(assignee && { assignee }),
+        ...(priority && { priority }),
+        ...(dueDateTime && { due_date: dueDateTime }),
+        ...(markdown_content && { markdown_content }),
+      }, { token });
     } catch (error) {
       throw new ClickUpError(`Failed to create a list: ${error}`);
     }

@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
+import { clickUpClient } from '../client';
 import { getClickUpSpaceIdAllowedValues } from '../helpers/get-space-id-allowed-values';
 import { getClickUpWorkspaceIdAllowedValues } from '../helpers/get-workspace-id-allowed-values';
 
@@ -40,14 +40,7 @@ const createFolder = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      return await fetchClickUpData({
-        token,
-        method: 'POST',
-        body: {
-          name,
-        },
-        path: `space/${space}/folder`,
-      });
+      return await clickUpClient.post(`space/${space}/folder`, { name }, { token });
     } catch (error) {
       throw new ClickUpError(`Failed to create a folder: ${error}`);
     }
