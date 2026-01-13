@@ -68,6 +68,7 @@ import Paddle from './apps/Paddle';
 import Patreon from './apps/Patreon';
 import PayPal from './apps/PayPal';
 import Pipedrive from './apps/Pipedrive';
+import Pushover from './apps/Pushover';
 import Quickbooks from './apps/Quickbooks';
 import Salesforce from './apps/Salesforce';
 import Sentry from './apps/Sentry';
@@ -187,6 +188,7 @@ const en = {
     Brevo,
     GoogleTasks,
     PayPal,
+    Pushover,
     Slack,
     SurveyMonkey,
     _testing: {
