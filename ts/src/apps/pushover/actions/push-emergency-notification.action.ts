@@ -1,4 +1,3 @@
-
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { PUSHOVER_APP_NAME, PushoverError } from '../constants';
@@ -21,12 +20,14 @@ const options = {
     type: 'string',
   },
   retry: {
-    required: true,
+    required: false,
+    preselected: true,
     type: 'number',
     default_value: 60,
   },
   expire: {
-    required: true,
+    required: false,
+    preselected: true,
     type: 'number',
     default_value: 3600,
   },
@@ -78,12 +79,14 @@ const pushEmergencyNotification = QoreAppCreator.createLocalizedAction<typeof op
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { token, user, message, retry, expire } = getQoreContextRequiredValues({
+    const { token, user, message } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },
       connectionFields: ['token', 'user'],
-      optionFields: ['message', 'retry', 'expire'],
+      optionFields: ['message'],
       ErrorClass: PushoverError,
     });
+
+    const {retry = 60, expire = 3600} = obj || {};
 
     // Validate retry (minimum 30 seconds)
     if (retry < 30) {
@@ -95,8 +98,16 @@ const pushEmergencyNotification = QoreAppCreator.createLocalizedAction<typeof op
       throw new PushoverError('Expiration time cannot exceed 10800 seconds (3 hours)');
     }
 
-    const { title, device, sound = 'pushover', format = 'plain', url, url_title, callback, tags } =
-      obj || {};
+    const {
+      title,
+      device,
+      sound = 'pushover',
+      format = 'plain',
+      url,
+      url_title,
+      callback,
+      tags,
+    } = obj || {};
 
     // Build request body
     const body: Record<string, any> = {
