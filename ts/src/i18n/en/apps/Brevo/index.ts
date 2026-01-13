@@ -4,6 +4,27 @@ const BrevoAppEn = {
   groups: ['Email & Email Marketing'],
   shortDesc: 'Brevo is a marketing platform for email, SMS, and automation campaigns.',
   longDesc: `Brevo (formerly Sendinblue) is a marketing automation platform that enables businesses to communicate with customers through email, SMS, chat, and more. It offers tools for campaign management, contact segmentation, transactional emails, and customer relationship management. Brevo helps businesses build stronger relationships with their audience by providing scalable communication and automation solutions.`,
+  connectionMessage: {
+    title: 'Connect to Brevo',
+    content: `To connect your Brevo account, you will need your **API Key**.
+
+## Getting Your API Key
+
+1. Sign in to your [Brevo account](https://app.brevo.com/)
+2. Navigate to **Settings** → **SMTP & API** → **API Keys**
+3. Click **Generate a new API key**
+4. Give your API key a descriptive name (e.g., "Qore Integration")
+5. Copy the generated API key immediately (it won't be shown again)
+
+You can also access the API keys page directly at [app.brevo.com/settings/keys/api](https://app.brevo.com/settings/keys/api)
+
+## Connection Details
+
+### API Key
+Your Brevo API key starting with \`xkeysib-\`. This key authenticates all API requests to your Brevo account.
+
+**Note:** Keep your API key secure and never share it publicly. You can revoke and regenerate keys at any time from the API Keys settings page.`,
+  },
   actions: {
     get_contact: {
       displayName: 'Get Contact',

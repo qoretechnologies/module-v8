@@ -9,6 +9,46 @@ const MagentoAppEn = {
     'E-commerce platform for building online stores and managing customers, products, and orders',
   longDesc:
     'Magento is a flexible e-commerce platform that provides businesses with a complete solution for building and managing online stores. This integration allows you to automate workflows when customer, product, order, invoice, or shipment events occur in your Magento store.',
+  connectionMessage: {
+    title: 'Connect to Magento',
+    content: `To connect to Magento, you will need your **Store URL** and an **Integration Access Token**.
+
+## Creating an Integration Token
+
+1. Log in to your Magento Admin Panel
+2. Navigate to **System** → **Integrations**
+3. Click **Add New Integration**
+4. Fill in the integration details:
+   - **Name**: Give it a descriptive name (e.g., "Qore Integration")
+   - **Email**: Your admin email
+   - **Callback URL** and **Identity Link URL**: Can be left empty for token-based access
+5. Go to the **API** tab
+6. Select the **Resource Access** level:
+   - Choose **All** for full access, or
+   - Choose **Custom** and select specific resources needed
+7. Click **Save**
+8. Click **Activate** on the integration
+9. Click **Allow** in the confirmation popup
+10. Copy the **Access Token** from the displayed credentials
+
+## Connection Details
+
+### Store URL
+Your Magento store's base URL (e.g., \`https://your-store.com\`). Include the protocol (https://) but do not include trailing slashes.
+
+### Access Token
+The integration access token generated when you activated the integration. This token authenticates all API requests.
+
+## For Magento 2.4.4 and Later
+
+If you're using Magento 2.4.4+, you may need to enable bearer token authentication:
+
+\`\`\`bash
+bin/magento config:set oauth/consumer/enable_integration_as_bearer 1
+\`\`\`
+
+**Note:** Integration tokens do not expire unless manually revoked. Store your access token securely and limit the integration's API access to only the resources needed for your use case.`,
+  },
   actions: {
     customerCustomerRepositoryV1GetByIdGet: {
       groups: ['Customers'],

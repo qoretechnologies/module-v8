@@ -6,6 +6,34 @@ const AmazonS3AppEn = {
     'Seamlessly connect to Amazon S3 to manage buckets, upload files, and automate your cloud storage workflows.',
   longDesc:
     'The Amazon S3 integration provides comprehensive actions and triggers to interact with Amazon Simple Storage Service. Whether you need to manage buckets, upload and download files, or monitor changes to your S3 objects, this integration simplifies your cloud storage automation and file management workflows.',
+  connectionMessage: {
+    title: 'Connect to AWS S3',
+    content: `To connect to Amazon S3, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
+
+## Creating AWS Credentials
+
+1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/iam/)
+2. Navigate to **IAM** → **Users** → **Create user**
+3. Enter a username and click **Next**
+4. Attach the **AmazonS3FullAccess** policy (or create a custom policy with minimum required permissions)
+5. Click **Create user**
+6. Select the user → **Security credentials** tab → **Create access key**
+7. Choose **Third-party service** and create the key
+8. Save your **Access Key ID** and **Secret Access Key** securely
+
+## Connection Details
+
+### Access Key ID
+Your AWS access key ID (starts with \`AKIA\`)
+
+### Secret Access Key
+Your AWS secret access key (only shown once when created)
+
+### Region
+The AWS region for your S3 operations (e.g., \`us-east-1\`, \`eu-west-1\`)
+
+**Note:** For security, create a dedicated IAM user with only the permissions needed for your use case. Avoid using root account credentials.`,
+  },
   triggers: {
     new_bucket: {
       displayName: 'New Bucket',

@@ -4,6 +4,27 @@ const ClaudeAppEn = {
   groups: ['AI & Language Models'],
   shortDesc: 'AI assistant for conversations, analysis, and content creation',
   longDesc: `Connect to Claude, Anthropic's AI assistant, to leverage advanced language understanding and generation capabilities. Use Claude for intelligent conversations, content creation, data analysis, code assistance, research support, and complex reasoning tasks. Claude can help automate workflows that require natural language processing, creative writing, technical documentation, and analytical thinking.`,
+  connectionMessage: {
+    title: 'Connect to Claude',
+    content: `To connect to Claude, you will need your **Anthropic API Key**.
+
+## Getting Your API Key
+
+1. Sign in to the [Anthropic Console](https://console.anthropic.com/)
+2. Navigate to **Settings** → **API Keys**
+3. Click **Create Key**
+4. Give your API key a descriptive name (e.g., "Qore Integration")
+5. Copy the generated API key immediately (it won't be shown again)
+
+You can access the API keys page directly at [console.anthropic.com/settings/keys](https://console.anthropic.com/settings/keys)
+
+## Connection Details
+
+### API Key
+Your Anthropic API key starting with \`sk-ant-\`. This key authenticates all requests to the Claude API.
+
+**Note:** Keep your API key secure and never share it publicly. API usage is billed based on the number of tokens processed. You can set spending limits and monitor usage in the Anthropic Console.`,
+  },
   actions: {
     send_message: {
       displayName: 'Send Message',

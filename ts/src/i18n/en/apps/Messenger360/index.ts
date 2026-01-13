@@ -5,6 +5,24 @@ const Messenger360AppEn = {
   shortDesc: 'Automate and send personalized WhatsApp messages using 360 Messenger.',
   longDesc:
     '360 Messenger for WhatsApp enables you to send automated and personalized messages directly through WhatsApp Business accounts. Ideal for customer engagement, notifications, and support workflows, this integration ensures fast and reliable communication at scale via WhatsApp.',
+  connectionMessage: {
+    title: 'Connect to 360 Messenger',
+    content: `To connect to 360 Messenger for WhatsApp, you will need your **API Key**.
+
+## Getting Your API Key
+
+1. Sign in to your [360 Messenger Dashboard](https://360messenger.com/)
+2. Navigate to **Settings** or **API Settings**
+3. Locate your API key or generate a new one
+4. Copy the API key for use in your integration
+
+## Connection Details
+
+### API Key
+Your 360 Messenger API key that authenticates requests to send and receive WhatsApp messages through the platform.
+
+**Note:** Keep your API key secure and never share it publicly. Your API key grants full access to send messages on behalf of your WhatsApp Business account.`,
+  },
   actions: {
     get_contacts: {
       displayName: 'Get WhatsApp Contacts',

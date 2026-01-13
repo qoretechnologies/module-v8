@@ -5,6 +5,34 @@ const AmazonSESAppEn = {
   shortDesc: 'Send emails and manage email identities with Amazon Simple Email Service.',
   longDesc:
     "The Amazon SES integration provides comprehensive email sending capabilities, identity verification, and delivery monitoring. Manage your email campaigns, verify domains and email addresses, track sending statistics, and monitor bounces and complaints through Amazon's reliable email infrastructure.",
+  connectionMessage: {
+    title: 'Connect to Amazon SES',
+    content: `To connect to Amazon SES, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
+
+## Creating AWS Credentials
+
+1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/iam/)
+2. Navigate to **IAM** → **Users** → **Create user**
+3. Enter a username and click **Next**
+4. Attach the **AmazonSESFullAccess** policy (or create a custom policy with minimum required permissions)
+5. Click **Create user**
+6. Select the user → **Security credentials** tab → **Create access key**
+7. Choose **Third-party service** and create the key
+8. Save your **Access Key ID** and **Secret Access Key** securely
+
+## Connection Details
+
+### Access Key ID
+Your AWS access key ID (starts with \`AKIA\`)
+
+### Secret Access Key
+Your AWS secret access key (only shown once when created)
+
+### Region
+The AWS region for your SES operations (e.g., \`us-east-1\`, \`eu-west-1\`)
+
+**Note:** Before sending emails, you must verify sender email addresses or domains in your SES console. For security, create a dedicated IAM user with only the permissions needed for your use case.`,
+  },
   actions: {
     send_email: {
       displayName: 'Send Email',

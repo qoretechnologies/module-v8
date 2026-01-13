@@ -6,6 +6,24 @@ const SerenityAppEn = {
   shortDesc: 'Create conversations, execute agents and manage interactions with Serenity AI Hub.',
   longDesc:
     'Enterprise AI ecosystem that enables businesses to create, manage, and scale AI agents effortlessly, enhancing productivity and innovation across various processes.',
+  connectionMessage: {
+    title: 'Connect to Serenity AI Hub',
+    content: `To connect to Serenity AI Hub, you will need your **API Key**.
+
+## Getting Your API Key
+
+1. Sign in to your [Serenity AI Hub](https://serenity.qore.ai/) account
+2. Navigate to **Developer Tools** or **API Settings**
+3. Generate a new API key or copy your existing key
+4. Give your API key a descriptive name for identification
+
+## Connection Details
+
+### API Key
+Your Serenity API key that authenticates requests to execute agents, manage conversations, and interact with the Serenity AI Hub platform.
+
+**Note:** Keep your API key secure and never share it publicly. Your API key grants access to your organization's AI agents and conversations.`,
+  },
   actions: {
     'create-conversation': {
       displayName: 'Create Conversation',

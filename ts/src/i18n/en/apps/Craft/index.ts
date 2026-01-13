@@ -12,6 +12,44 @@ const CraftAppEn = {
     ### For All Other Actions\n
     To use **Documents**, **Collections**, and **Blocks** actions, you need to connect **Selected Documents** in your Craft API configuration.
   `,
+  connectionMessage: {
+    title: 'Connect to Craft',
+    content: `To connect to Craft, you will need to create an **API connection** in the Craft app.
+
+## Creating Your API Connection
+
+1. Open the **Craft** app on your Mac or iOS device
+2. Navigate to the **Imagine** tab (AI features section)
+3. Click **Add Your First API Connection** or **+ Add API**
+4. Choose the type of API you want to create:
+   - **Daily notes & Tasks**: For task management and daily note operations
+   - **Selected Documents**: For document, collection, and block operations
+5. Follow the prompts to configure your API connection
+6. Copy the generated **API URL** and **Token** (if provided)
+
+## Connection Details
+
+### API URL
+The URL provided by Craft for your API connection. This URL is specific to your account and the type of API you created.
+
+### API Token (Optional)
+Some API configurations may include a token for additional authentication. If provided, include it in your connection settings.
+
+## API Types and Capabilities
+
+### Daily Notes & Tasks API
+Required for:
+- List Tasks, Create Task, Update Task, Delete Tasks
+- Get Daily Note Blocks
+
+### Selected Documents API
+Required for:
+- Documents: List Documents
+- Collections: List Collections, Create/Update/Delete Collection Items
+- Blocks: List Blocks, Insert Block, Delete Blocks
+
+**Note:** You may need to create multiple API connections if you want to use both task-related actions and document-related actions. Each API type provides access to different sets of functionality.`,
+  },
   triggers: {
     new_collection_item: {
       displayName: 'New Collection Item',

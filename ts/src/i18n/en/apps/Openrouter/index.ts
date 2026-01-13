@@ -5,6 +5,28 @@ const OpenrouterAppEn = {
   shortDesc: 'Access multiple AI models through a unified API',
   longDesc:
     'OpenRouter provides a unified interface to access and compare multiple AI models from different providers. Route your requests to the best model for your specific use case, with support for text generation, chat completion, and other AI capabilities from leading providers like OpenAI, Anthropic, Google, and more.',
+  connectionMessage: {
+    title: 'Connect to OpenRouter',
+    content: `To connect to OpenRouter, you will need your **API Key**.
+
+## Getting Your API Key
+
+1. Sign in to your [OpenRouter account](https://openrouter.ai/)
+2. Navigate to **Settings** → **Keys** or go directly to the keys page
+3. Click **Create Key**
+4. Give your API key a descriptive name (e.g., "Qore Integration")
+5. Optionally set a credit limit for the key
+6. Copy the generated API key immediately
+
+You can access the API keys page directly at [openrouter.ai/settings/keys](https://openrouter.ai/settings/keys)
+
+## Connection Details
+
+### API Key
+Your OpenRouter API key starting with \`sk-or-\`. This key authenticates all requests to access AI models through OpenRouter.
+
+**Note:** Keep your API key secure and never share it publicly. OpenRouter operates on a pay-per-use model. You can add credits and set spending limits in your account settings.`,
+  },
   OpenRouter: {
     actions: {
       list_models: {

@@ -6,6 +6,34 @@ const FreshdeskAppEn = {
   shortDesc: 'Cloud-based customer support software',
   longDesc:
     'Freshdesk is a cloud-based customer support platform that was founded with the mission of enabling companies of all sizes to provide great customer service. Our goal is simple: make it easy for brands to talk to their customers and make it easy for users to get in touch with businesses.',
+  connectionMessage: {
+    title: 'Connect to Freshdesk',
+    content: `To connect to Freshdesk, you will need your **Subdomain** and **API Key**.
+
+## Finding Your Subdomain
+
+Your Freshdesk subdomain is the unique identifier in your Freshdesk URL:
+- If your Freshdesk URL is \`https://yourcompany.freshdesk.com\`, your subdomain is \`yourcompany\`
+
+## Getting Your API Key
+
+1. Log in to your Freshdesk account
+2. Click on your **profile icon** in the top right corner
+3. Select **Profile settings**
+4. Scroll down to find your **API Key** section
+5. Click **View API Key** to reveal your key
+6. Copy the API key
+
+## Connection Details
+
+### Subdomain
+Your Freshdesk subdomain (e.g., \`yourcompany\` from \`yourcompany.freshdesk.com\`). Do not include the full URL, just the subdomain portion.
+
+### API Key
+Your personal Freshdesk API key. This key is tied to your user account and inherits your permissions within Freshdesk.
+
+**Note:** Your API key provides access based on your user role and permissions in Freshdesk. For production integrations, consider using a dedicated service account with appropriate permissions. Keep your API key secure and never share it publicly.`,
+  },
   triggers: {
     new_ticket_trigger: {
       displayName: 'New Ticket',

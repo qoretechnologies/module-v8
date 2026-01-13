@@ -6,6 +6,34 @@ const AmazonSQSAppEn = {
     'Connect to Amazon Simple Queue Service to manage message queues and automate message processing workflows.',
   longDesc:
     'The AWS SQS integration provides comprehensive queue management and message handling capabilities for Amazon Simple Queue Service. Create and manage queues, send messages (including JSON), receive messages with polling triggers, and automate your message-driven architectures with reliable, scalable queue operations.',
+  connectionMessage: {
+    title: 'Connect to AWS SQS',
+    content: `To connect to AWS SQS, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
+
+## Creating AWS Credentials
+
+1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/iam/)
+2. Navigate to **IAM** → **Users** → **Create user**
+3. Enter a username and click **Next**
+4. Attach the **AmazonSQSFullAccess** policy (or create a custom policy with minimum required permissions)
+5. Click **Create user**
+6. Select the user → **Security credentials** tab → **Create access key**
+7. Choose **Third-party service** and create the key
+8. Save your **Access Key ID** and **Secret Access Key** securely
+
+## Connection Details
+
+### Access Key ID
+Your AWS access key ID (starts with \`AKIA\`)
+
+### Secret Access Key
+Your AWS secret access key (only shown once when created)
+
+### Region
+The AWS region for your SQS operations (e.g., \`us-east-1\`, \`eu-west-1\`)
+
+**Note:** For security, create a dedicated IAM user with only the permissions needed for your use case. Avoid using root account credentials.`,
+  },
   triggers: {
     new_message: {
       displayName: 'New Message',

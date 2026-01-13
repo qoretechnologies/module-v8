@@ -4,6 +4,29 @@ const BigMlAppEn = {
   groups: ['AI & Language Models'],
   shortDesc: 'Machine learning platform for predictive analytics',
   longDesc: `Connect your BigML account to build, evaluate, and deploy machine learning models at scale. Create datasets, build predictive models, perform anomaly detection, cluster analysis, and time series forecasting. Automate your machine learning workflows and integrate predictive analytics into your applications with BigML's comprehensive machine learning platform.`,
+  connectionMessage: {
+    title: 'Connect to BigML',
+    content: `To connect to BigML, you will need your **Username** and **API Key**.
+
+## Getting Your API Key
+
+1. Log in to your [BigML Dashboard](https://bigml.com/dashboard)
+2. Click on the **gear icon** (configuration) in the top right corner
+3. Select **API Key** from the menu
+4. Your API key will be displayed on this page
+
+You can also access your API key directly at [bigml.com/account/apikey](https://bigml.com/account/apikey)
+
+## Connection Details
+
+### Username
+Your BigML username or the email address you use to log in to BigML.
+
+### API Key
+Your BigML API key that authenticates requests to the API. This key is unique to your account and should be kept secure.
+
+**Note:** Your API key provides full access to your BigML resources. Keep it secure and never share it publicly. If you suspect your key has been compromised, you can regenerate it from the API Key settings page.`,
+  },
   actions: {
     create_anomaly_score: {
       displayName: 'Create Anomaly Score',
