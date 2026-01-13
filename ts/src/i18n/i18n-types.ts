@@ -7204,6 +7204,50 @@ type RootTranslation = {
 		​ ​ 
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​C​r​a​f​t
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​C​r​a​f​t​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​t​o​ ​c​r​e​a​t​e​ ​a​n​ ​*​*​A​P​I​ ​c​o​n​n​e​c​t​i​o​n​*​*​ ​i​n​ ​t​h​e​ ​C​r​a​f​t​ ​a​p​p​.​
+			​
+			​#​#​ ​C​r​e​a​t​i​n​g​ ​Y​o​u​r​ ​A​P​I​ ​C​o​n​n​e​c​t​i​o​n​
+			​
+			​1​.​ ​O​p​e​n​ ​t​h​e​ ​*​*​C​r​a​f​t​*​*​ ​a​p​p​ ​o​n​ ​y​o​u​r​ ​M​a​c​ ​o​r​ ​i​O​S​ ​d​e​v​i​c​e​
+			​2​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​t​h​e​ ​*​*​I​m​a​g​i​n​e​*​*​ ​t​a​b​ ​(​A​I​ ​f​e​a​t​u​r​e​s​ ​s​e​c​t​i​o​n​)​
+			​3​.​ ​C​l​i​c​k​ ​*​*​A​d​d​ ​Y​o​u​r​ ​F​i​r​s​t​ ​A​P​I​ ​C​o​n​n​e​c​t​i​o​n​*​*​ ​o​r​ ​*​*​+​ ​A​d​d​ ​A​P​I​*​*​
+			​4​.​ ​C​h​o​o​s​e​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​A​P​I​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​c​r​e​a​t​e​:​
+			​ ​ ​ ​-​ ​*​*​D​a​i​l​y​ ​n​o​t​e​s​ ​&​ ​T​a​s​k​s​*​*​:​ ​F​o​r​ ​t​a​s​k​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​d​a​i​l​y​ ​n​o​t​e​ ​o​p​e​r​a​t​i​o​n​s​
+			​ ​ ​ ​-​ ​*​*​S​e​l​e​c​t​e​d​ ​D​o​c​u​m​e​n​t​s​*​*​:​ ​F​o​r​ ​d​o​c​u​m​e​n​t​,​ ​c​o​l​l​e​c​t​i​o​n​,​ ​a​n​d​ ​b​l​o​c​k​ ​o​p​e​r​a​t​i​o​n​s​
+			​5​.​ ​F​o​l​l​o​w​ ​t​h​e​ ​p​r​o​m​p​t​s​ ​t​o​ ​c​o​n​f​i​g​u​r​e​ ​y​o​u​r​ ​A​P​I​ ​c​o​n​n​e​c​t​i​o​n​
+			​6​.​ ​C​o​p​y​ ​t​h​e​ ​g​e​n​e​r​a​t​e​d​ ​*​*​A​P​I​ ​U​R​L​*​*​ ​a​n​d​ ​*​*​T​o​k​e​n​*​*​ ​(​i​f​ ​p​r​o​v​i​d​e​d​)​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​A​P​I​ ​U​R​L​
+			​T​h​e​ ​U​R​L​ ​p​r​o​v​i​d​e​d​ ​b​y​ ​C​r​a​f​t​ ​f​o​r​ ​y​o​u​r​ ​A​P​I​ ​c​o​n​n​e​c​t​i​o​n​.​ ​T​h​i​s​ ​U​R​L​ ​i​s​ ​s​p​e​c​i​f​i​c​ ​t​o​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​a​n​d​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​A​P​I​ ​y​o​u​ ​c​r​e​a​t​e​d​.​
+			​
+			​#​#​#​ ​A​P​I​ ​T​o​k​e​n​ ​(​O​p​t​i​o​n​a​l​)​
+			​S​o​m​e​ ​A​P​I​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​s​ ​m​a​y​ ​i​n​c​l​u​d​e​ ​a​ ​t​o​k​e​n​ ​f​o​r​ ​a​d​d​i​t​i​o​n​a​l​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​.​ ​I​f​ ​p​r​o​v​i​d​e​d​,​ ​i​n​c​l​u​d​e​ ​i​t​ ​i​n​ ​y​o​u​r​ ​c​o​n​n​e​c​t​i​o​n​ ​s​e​t​t​i​n​g​s​.​
+			​
+			​#​#​ ​A​P​I​ ​T​y​p​e​s​ ​a​n​d​ ​C​a​p​a​b​i​l​i​t​i​e​s​
+			​
+			​#​#​#​ ​D​a​i​l​y​ ​N​o​t​e​s​ ​&​ ​T​a​s​k​s​ ​A​P​I​
+			​R​e​q​u​i​r​e​d​ ​f​o​r​:​
+			​-​ ​L​i​s​t​ ​T​a​s​k​s​,​ ​C​r​e​a​t​e​ ​T​a​s​k​,​ ​U​p​d​a​t​e​ ​T​a​s​k​,​ ​D​e​l​e​t​e​ ​T​a​s​k​s​
+			​-​ ​G​e​t​ ​D​a​i​l​y​ ​N​o​t​e​ ​B​l​o​c​k​s​
+			​
+			​#​#​#​ ​S​e​l​e​c​t​e​d​ ​D​o​c​u​m​e​n​t​s​ ​A​P​I​
+			​R​e​q​u​i​r​e​d​ ​f​o​r​:​
+			​-​ ​D​o​c​u​m​e​n​t​s​:​ ​L​i​s​t​ ​D​o​c​u​m​e​n​t​s​
+			​-​ ​C​o​l​l​e​c​t​i​o​n​s​:​ ​L​i​s​t​ ​C​o​l​l​e​c​t​i​o​n​s​,​ ​C​r​e​a​t​e​/​U​p​d​a​t​e​/​D​e​l​e​t​e​ ​C​o​l​l​e​c​t​i​o​n​ ​I​t​e​m​s​
+			​-​ ​B​l​o​c​k​s​:​ ​L​i​s​t​ ​B​l​o​c​k​s​,​ ​I​n​s​e​r​t​ ​B​l​o​c​k​,​ ​D​e​l​e​t​e​ ​B​l​o​c​k​s​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​Y​o​u​ ​m​a​y​ ​n​e​e​d​ ​t​o​ ​c​r​e​a​t​e​ ​m​u​l​t​i​p​l​e​ ​A​P​I​ ​c​o​n​n​e​c​t​i​o​n​s​ ​i​f​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​s​e​ ​b​o​t​h​ ​t​a​s​k​-​r​e​l​a​t​e​d​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​d​o​c​u​m​e​n​t​-​r​e​l​a​t​e​d​ ​a​c​t​i​o​n​s​.​ ​E​a​c​h​ ​A​P​I​ ​t​y​p​e​ ​p​r​o​v​i​d​e​s​ ​a​c​c​e​s​s​ ​t​o​ ​d​i​f​f​e​r​e​n​t​ ​s​e​t​s​ ​o​f​ ​f​u​n​c​t​i​o​n​a​l​i​t​y​.
+				 */
+				content: string
+			}
 			triggers: {
 				new_collection_item: {
 					/**
@@ -11738,6 +11782,55 @@ type RootTranslation = {
 			 * T​h​e​ ​S​u​p​a​b​a​s​e​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​S​u​p​a​b​a​s​e​ ​b​a​c​k​e​n​d​ ​s​e​r​v​i​c​e​s​.​ ​M​a​n​a​g​e​ ​d​a​t​a​b​a​s​e​ ​t​a​b​l​e​s​ ​w​i​t​h​ ​f​u​l​l​ ​C​R​U​D​ ​o​p​e​r​a​t​i​o​n​s​,​ ​m​o​n​i​t​o​r​ ​r​e​a​l​-​t​i​m​e​ ​c​h​a​n​g​e​s​ ​w​i​t​h​ ​t​r​i​g​g​e​r​s​,​ ​a​n​d​ ​h​a​n​d​l​e​ ​f​i​l​e​ ​s​t​o​r​a​g​e​ ​t​h​r​o​u​g​h​ ​b​u​c​k​e​t​s​.​ ​W​h​e​t​h​e​r​ ​y​o​u​ ​n​e​e​d​ ​t​o​ ​q​u​e​r​y​ ​d​a​t​a​,​ ​i​n​s​e​r​t​ ​r​e​c​o​r​d​s​,​ ​f​i​l​t​e​r​ ​r​e​s​u​l​t​s​,​ ​o​r​ ​t​r​a​c​k​ ​n​e​w​ ​e​n​t​r​i​e​s​,​ ​t​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​s​t​r​e​a​m​l​i​n​e​s​ ​y​o​u​r​ ​S​u​p​a​b​a​s​e​ ​w​o​r​k​f​l​o​w​ ​a​u​t​o​m​a​t​i​o​n​ ​a​n​d​ ​b​a​c​k​e​n​d​ ​m​a​n​a​g​e​m​e​n​t​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​S​u​p​a​b​a​s​e
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​S​u​p​a​b​a​s​e​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​P​r​o​j​e​c​t​ ​I​D​*​*​ ​(​o​r​ ​P​r​o​j​e​c​t​ ​U​R​L​)​ ​a​n​d​ ​a​ ​*​*​s​e​r​v​i​c​e​_​r​o​l​e​ ​A​P​I​ ​K​e​y​*​*​.​
+			​
+			​#​#​ ​F​i​n​d​i​n​g​ ​Y​o​u​r​ ​P​r​o​j​e​c​t​ ​I​D​
+			​
+			​1​.​ ​L​o​g​ ​i​n​ ​t​o​ ​t​h​e​ ​[​S​u​p​a​b​a​s​e​ ​D​a​s​h​b​o​a​r​d​]​(​h​t​t​p​s​:​/​/​s​u​p​a​b​a​s​e​.​c​o​m​/​d​a​s​h​b​o​a​r​d​)​
+			​2​.​ ​S​e​l​e​c​t​ ​y​o​u​r​ ​p​r​o​j​e​c​t​
+			​3​.​ ​G​o​ ​t​o​ ​*​*​P​r​o​j​e​c​t​ ​S​e​t​t​i​n​g​s​*​*​ ​(​g​e​a​r​ ​i​c​o​n​)​ ​→​ ​*​*​G​e​n​e​r​a​l​*​*​
+			​4​.​ ​F​i​n​d​ ​y​o​u​r​ ​*​*​R​e​f​e​r​e​n​c​e​ ​I​D​*​*​ ​(​t​h​i​s​ ​i​s​ ​y​o​u​r​ ​P​r​o​j​e​c​t​ ​I​D​)​
+			​
+			​A​l​t​e​r​n​a​t​i​v​e​l​y​,​ ​y​o​u​r​ ​P​r​o​j​e​c​t​ ​U​R​L​ ​f​o​r​m​a​t​ ​i​s​:​ ​`​h​t​t​p​s​:​/​/​<​p​r​o​j​e​c​t​-​i​d​>​.​s​u​p​a​b​a​s​e​.​c​o​`​
+			​
+			​#​#​ ​G​e​t​t​i​n​g​ ​Y​o​u​r​ ​A​P​I​ ​K​e​y​
+			​
+			​1​.​ ​I​n​ ​y​o​u​r​ ​p​r​o​j​e​c​t​ ​d​a​s​h​b​o​a​r​d​,​ ​g​o​ ​t​o​ ​*​*​P​r​o​j​e​c​t​ ​S​e​t​t​i​n​g​s​*​*​ ​→​ ​*​*​A​P​I​*​*​
+			​2​.​ ​F​i​n​d​ ​t​h​e​ ​*​*​P​r​o​j​e​c​t​ ​A​P​I​ ​k​e​y​s​*​*​ ​s​e​c​t​i​o​n​
+			​3​.​ ​C​o​p​y​ ​t​h​e​ ​*​*​s​e​r​v​i​c​e​_​r​o​l​e​*​*​ ​k​e​y​ ​(​l​a​b​e​l​e​d​ ​"​s​e​c​r​e​t​"​)​
+			​
+			​⚠​️​ ​*​*​I​m​p​o​r​t​a​n​t​*​*​:​ ​U​s​e​ ​t​h​e​ ​`​s​e​r​v​i​c​e​_​r​o​l​e​`​ ​k​e​y​,​ ​N​O​T​ ​t​h​e​ ​`​a​n​o​n​`​ ​k​e​y​.​ ​T​h​e​ ​s​e​r​v​i​c​e​_​r​o​l​e​ ​k​e​y​ ​b​y​p​a​s​s​e​s​ ​R​o​w​ ​L​e​v​e​l​ ​S​e​c​u​r​i​t​y​ ​(​R​L​S​)​ ​a​n​d​ ​h​a​s​ ​f​u​l​l​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​d​a​t​a​b​a​s​e​.​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​P​r​o​j​e​c​t​ ​I​D​ ​/​ ​P​r​o​j​e​c​t​ ​U​R​L​
+			​E​i​t​h​e​r​ ​y​o​u​r​ ​p​r​o​j​e​c​t​'​s​ ​R​e​f​e​r​e​n​c​e​ ​I​D​ ​o​r​ ​t​h​e​ ​f​u​l​l​ ​p​r​o​j​e​c​t​ ​U​R​L​:​
+			​-​ ​R​e​f​e​r​e​n​c​e​ ​I​D​:​ ​`​a​b​c​d​e​f​g​h​i​j​k​l​m​n​o​p​`​
+			​-​ ​P​r​o​j​e​c​t​ ​U​R​L​:​ ​`​h​t​t​p​s​:​/​/​a​b​c​d​e​f​g​h​i​j​k​l​m​n​o​p​.​s​u​p​a​b​a​s​e​.​c​o​`​
+			​
+			​#​#​#​ ​A​P​I​ ​K​e​y​ ​(​s​e​r​v​i​c​e​_​r​o​l​e​)​
+			​T​h​e​ ​`​s​e​r​v​i​c​e​_​r​o​l​e​`​ ​s​e​c​r​e​t​ ​k​e​y​ ​f​r​o​m​ ​y​o​u​r​ ​p​r​o​j​e​c​t​'​s​ ​A​P​I​ ​s​e​t​t​i​n​g​s​.​ ​T​h​i​s​ ​k​e​y​:​
+			​-​ ​B​y​p​a​s​s​e​s​ ​R​o​w​ ​L​e​v​e​l​ ​S​e​c​u​r​i​t​y​ ​(​R​L​S​)​
+			​-​ ​H​a​s​ ​f​u​l​l​ ​a​c​c​e​s​s​ ​t​o​ ​a​l​l​ ​d​a​t​a​b​a​s​e​ ​o​p​e​r​a​t​i​o​n​s​
+			​-​ ​S​h​o​u​l​d​ ​o​n​l​y​ ​b​e​ ​u​s​e​d​ ​s​e​r​v​e​r​-​s​i​d​e​,​ ​n​e​v​e​r​ ​i​n​ ​c​l​i​e​n​t​ ​a​p​p​l​i​c​a​t​i​o​n​s​
+			​
+			​#​#​ ​A​P​I​ ​K​e​y​ ​T​y​p​e​s​
+			​
+			​|​ ​K​e​y​ ​T​y​p​e​ ​|​ ​U​s​e​ ​C​a​s​e​ ​|​
+			​|​-​-​-​-​-​-​-​-​-​-​|​-​-​-​-​-​-​-​-​-​-​|​
+			​|​ ​`​a​n​o​n​`​ ​(​p​u​b​l​i​c​)​ ​|​ ​C​l​i​e​n​t​-​s​i​d​e​ ​a​p​p​s​,​ ​r​e​s​p​e​c​t​s​ ​R​L​S​ ​|​
+			​|​ ​`​s​e​r​v​i​c​e​_​r​o​l​e​`​ ​(​s​e​c​r​e​t​)​ ​|​ ​S​e​r​v​e​r​-​s​i​d​e​ ​o​p​e​r​a​t​i​o​n​s​,​ ​b​y​p​a​s​s​e​s​ ​R​L​S​ ​|​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​T​h​e​ ​`​s​e​r​v​i​c​e​_​r​o​l​e​`​ ​k​e​y​ ​i​s​ ​e​x​t​r​e​m​e​l​y​ ​p​o​w​e​r​f​u​l​ ​a​n​d​ ​s​h​o​u​l​d​ ​b​e​ ​k​e​p​t​ ​s​e​c​u​r​e​.​ ​N​e​v​e​r​ ​e​x​p​o​s​e​ ​i​t​ ​i​n​ ​c​l​i​e​n​t​-​s​i​d​e​ ​c​o​d​e​ ​o​r​ ​p​u​b​l​i​c​ ​r​e​p​o​s​i​t​o​r​i​e​s​.​ ​F​o​r​ ​t​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​,​ ​t​h​e​ ​s​e​r​v​i​c​e​_​r​o​l​e​ ​k​e​y​ ​i​s​ ​r​e​q​u​i​r​e​d​ ​t​o​ ​p​e​r​f​o​r​m​ ​a​d​m​i​n​i​s​t​r​a​t​i​v​e​ ​o​p​e​r​a​t​i​o​n​s​.
+				 */
+				content: string
+			}
 			actions: {
 				get_table: {
 					groups: {
@@ -12965,6 +13058,176 @@ type RootTranslation = {
 				}
 			}
 		}
+		BambooHR: {
+			/**
+			 * B​a​m​b​o​o​H​R
+			 */
+			displayName: string
+			groups: {
+				/**
+				 * H​R​ ​&​ ​P​e​o​p​l​e​ ​M​a​n​a​g​e​m​e​n​t
+				 */
+				'0': string
+			}
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​B​a​m​b​o​o​H​R​ ​t​o​ ​m​a​n​a​g​e​ ​e​m​p​l​o​y​e​e​ ​d​a​t​a​ ​w​i​t​h​ ​p​o​w​e​r​f​u​l​ ​a​u​t​o​m​a​t​i​o​n
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​B​a​m​b​o​o​H​R​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​H​R​ ​o​p​e​r​a​t​i​o​n​s​.​ ​C​r​e​a​t​e​,​ ​r​e​a​d​,​ ​u​p​d​a​t​e​,​ ​a​n​d​ ​l​i​s​t​ ​e​m​p​l​o​y​e​e​s​ ​w​i​t​h​ ​d​y​n​a​m​i​c​ ​f​i​e​l​d​ ​s​u​p​p​o​r​t​.​ ​T​h​e​ ​i​n​t​e​g​r​a​t​i​o​n​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​d​i​s​c​o​v​e​r​s​ ​a​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​ ​i​n​ ​y​o​u​r​ ​B​a​m​b​o​o​H​R​ ​a​c​c​o​u​n​t​,​ ​i​n​c​l​u​d​i​n​g​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​,​ ​a​n​d​ ​p​r​o​v​i​d​e​s​ ​i​n​t​e​l​l​i​g​e​n​t​ ​t​y​p​e​ ​h​a​n​d​l​i​n​g​ ​f​o​r​ ​d​a​t​e​s​,​ ​l​i​s​t​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​f​i​e​l​d​ ​t​y​p​e​s​.
+			 */
+			longDesc: string
+			actions: {
+				get_employee: {
+					/**
+					 * G​e​t​ ​E​m​p​l​o​y​e​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​i​n​g​l​e​ ​e​m​p​l​o​y​e​e​ ​b​y​ ​I​D
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​d​e​t​a​i​l​e​d​ ​d​a​t​a​ ​f​o​r​ ​a​ ​s​i​n​g​l​e​ ​e​m​p​l​o​y​e​e​ ​i​n​ ​B​a​m​b​o​o​H​R​ ​b​y​ ​t​h​e​i​r​ ​I​D​.​ ​R​e​t​u​r​n​s​ ​a​l​l​ ​r​e​q​u​e​s​t​e​d​ ​f​i​e​l​d​s​ ​w​i​t​h​ ​d​y​n​a​m​i​c​a​l​l​y​ ​l​o​a​d​e​d​ ​f​i​e​l​d​ ​t​y​p​e​s​.​ ​Y​o​u​ ​c​a​n​ ​s​p​e​c​i​f​y​ ​w​h​i​c​h​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​o​r​ ​f​e​t​c​h​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						employee_id: {
+							/**
+							 * E​m​p​l​o​y​e​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​m​p​l​o​y​e​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​e​m​p​l​o​y​e​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​f​e​t​c​h​.​ ​U​s​e​ ​0​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​t​h​e​ ​e​m​p​l​o​y​e​e​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​.
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​t​h​e​ ​e​m​p​l​o​y​e​e​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​ ​(​u​p​ ​t​o​ ​4​0​0​ ​f​i​e​l​d​s​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_employee: {
+					/**
+					 * C​r​e​a​t​e​ ​E​m​p​l​o​y​e​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​e​m​p​l​o​y​e​e​ ​i​n​ ​B​a​m​b​o​o​H​R
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​e​m​p​l​o​y​e​e​ ​r​e​c​o​r​d​ ​i​n​ ​B​a​m​b​o​o​H​R​.​ ​A​t​ ​m​i​n​i​m​u​m​,​ ​f​i​r​s​t​N​a​m​e​ ​a​n​d​ ​l​a​s​t​N​a​m​e​ ​a​r​e​ ​r​e​q​u​i​r​e​d​.​ ​T​h​e​ ​a​c​t​i​o​n​ ​d​y​n​a​m​i​c​a​l​l​y​ ​p​r​e​s​e​n​t​s​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​ ​b​a​s​e​d​ ​o​n​ ​y​o​u​r​ ​B​a​m​b​o​o​H​R​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​,​ ​i​n​c​l​u​d​i​n​g​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
+					 */
+					longDesc: string
+					options: {
+						employee_data: {
+							/**
+							 * E​m​p​l​o​y​e​e​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​a​t​a​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​e​m​p​l​o​y​e​e
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​e​m​p​l​o​y​e​e​ ​f​i​e​l​d​s​.​ ​T​h​e​ ​a​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​ ​a​r​e​ ​d​y​n​a​m​i​c​a​l​l​y​ ​l​o​a​d​e​d​ ​f​r​o​m​ ​y​o​u​r​ ​B​a​m​b​o​o​H​R​ ​a​c​c​o​u​n​t​ ​a​n​d​ ​i​n​c​l​u​d​e​ ​b​o​t​h​ ​s​t​a​n​d​a​r​d​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.​ ​f​i​r​s​t​N​a​m​e​ ​a​n​d​ ​l​a​s​t​N​a​m​e​ ​a​r​e​ ​r​e​q​u​i​r​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_employee: {
+					/**
+					 * U​p​d​a​t​e​ ​E​m​p​l​o​y​e​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​e​m​p​l​o​y​e​e​ ​i​n​ ​B​a​m​b​o​o​H​R
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​e​m​p​l​o​y​e​e​ ​r​e​c​o​r​d​ ​i​n​ ​B​a​m​b​o​o​H​R​.​ ​T​h​e​ ​a​c​t​i​o​n​ ​d​y​n​a​m​i​c​a​l​l​y​ ​p​r​e​s​e​n​t​s​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​ ​b​a​s​e​d​ ​o​n​ ​y​o​u​r​ ​B​a​m​b​o​o​H​R​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​.​ ​O​n​l​y​ ​p​r​o​v​i​d​e​ ​t​h​e​ ​f​i​e​l​d​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.
+					 */
+					longDesc: string
+					options: {
+						employee_id: {
+							/**
+							 * E​m​p​l​o​y​e​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​m​p​l​o​y​e​e​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * E​n​t​e​r​ ​t​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​e​m​p​l​o​y​e​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						employee_data: {
+							/**
+							 * E​m​p​l​o​y​e​e​ ​D​a​t​a
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​a​t​a​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​n​e​w​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​e​m​p​l​o​y​e​e​ ​f​i​e​l​d​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.​ ​T​h​e​ ​a​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​ ​a​r​e​ ​d​y​n​a​m​i​c​a​l​l​y​ ​l​o​a​d​e​d​ ​f​r​o​m​ ​y​o​u​r​ ​B​a​m​b​o​o​H​R​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_employees: {
+					/**
+					 * L​i​s​t​ ​E​m​p​l​o​y​e​e​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​e​m​p​l​o​y​e​e​s
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​a​l​l​ ​e​m​p​l​o​y​e​e​s​ ​f​r​o​m​ ​B​a​m​b​o​o​H​R​.​ ​Y​o​u​ ​c​a​n​ ​s​p​e​c​i​f​y​ ​w​h​i​c​h​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​e​a​c​h​ ​e​m​p​l​o​y​e​e​.​ ​U​s​e​s​ ​t​h​e​ ​c​u​s​t​o​m​ ​r​e​p​o​r​t​ ​e​n​d​p​o​i​n​t​ ​f​o​r​ ​e​f​f​i​c​i​e​n​t​ ​b​u​l​k​ ​r​e​t​r​i​e​v​a​l​.
+					 */
+					longDesc: string
+					options: {
+						fields: {
+							/**
+							 * F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * S​p​e​c​i​f​i​c​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​e​a​c​h​ ​e​m​p​l​o​y​e​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​w​h​i​c​h​ ​f​i​e​l​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​o​r​ ​e​a​c​h​ ​e​m​p​l​o​y​e​e​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​a​ ​d​e​f​a​u​l​t​ ​s​e​t​ ​o​f​ ​c​o​m​m​o​n​ ​f​i​e​l​d​s​ ​(​i​d​,​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​d​e​p​a​r​t​m​e​n​t​,​ ​j​o​b​ ​t​i​t​l​e​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Baserow: {
 			/**
 			 * B​a​s​e​r​o​w
@@ -12988,6 +13251,40 @@ type RootTranslation = {
 			 * T​h​e​ ​B​a​s​e​r​o​w​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​B​a​s​e​r​o​w​ ​d​a​t​a​b​a​s​e​ ​o​p​e​r​a​t​i​o​n​s​.​ ​C​r​e​a​t​e​,​ ​r​e​a​d​,​ ​u​p​d​a​t​e​,​ ​a​n​d​ ​d​e​l​e​t​e​ ​r​o​w​s​ ​i​n​ ​y​o​u​r​ ​t​a​b​l​e​s​,​ ​u​p​l​o​a​d​ ​f​i​l​e​s​,​ ​a​n​d​ ​m​o​n​i​t​o​r​ ​n​e​w​ ​e​n​t​r​i​e​s​ ​w​i​t​h​ ​r​e​a​l​-​t​i​m​e​ ​t​r​i​g​g​e​r​s​.​ ​W​h​e​t​h​e​r​ ​y​o​u​ ​n​e​e​d​ ​t​o​ ​m​a​n​a​g​e​ ​d​a​t​a​,​ ​f​i​l​t​e​r​ ​r​e​s​u​l​t​s​,​ ​o​r​ ​t​r​a​c​k​ ​n​e​w​ ​r​e​c​o​r​d​s​,​ ​t​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​s​t​r​e​a​m​l​i​n​e​s​ ​y​o​u​r​ ​B​a​s​e​r​o​w​ ​w​o​r​k​f​l​o​w​ ​a​u​t​o​m​a​t​i​o​n​ ​a​n​d​ ​d​a​t​a​b​a​s​e​ ​m​a​n​a​g​e​m​e​n​t​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​B​a​s​e​r​o​w
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​B​a​s​e​r​o​w​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​B​a​s​e​r​o​w​ ​U​R​L​*​*​ ​a​n​d​ ​a​ ​*​*​D​a​t​a​b​a​s​e​ ​T​o​k​e​n​*​*​.​
+			​
+			​#​#​ ​G​e​t​t​i​n​g​ ​Y​o​u​r​ ​D​a​t​a​b​a​s​e​ ​T​o​k​e​n​
+			​
+			​1​.​ ​L​o​g​ ​i​n​ ​t​o​ ​y​o​u​r​ ​B​a​s​e​r​o​w​ ​i​n​s​t​a​n​c​e​
+			​2​.​ ​C​l​i​c​k​ ​o​n​ ​y​o​u​r​ ​*​*​p​r​o​f​i​l​e​ ​i​c​o​n​*​*​ ​i​n​ ​t​h​e​ ​t​o​p​ ​r​i​g​h​t​ ​c​o​r​n​e​r​
+			​3​.​ ​S​e​l​e​c​t​ ​*​*​S​e​t​t​i​n​g​s​*​*​ ​f​r​o​m​ ​t​h​e​ ​d​r​o​p​d​o​w​n​ ​m​e​n​u​
+			​4​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​*​*​D​a​t​a​b​a​s​e​ ​t​o​k​e​n​s​*​*​ ​i​n​ ​t​h​e​ ​l​e​f​t​ ​s​i​d​e​b​a​r​
+			​5​.​ ​C​l​i​c​k​ ​*​*​C​r​e​a​t​e​ ​t​o​k​e​n​*​*​
+			​6​.​ ​G​i​v​e​ ​y​o​u​r​ ​t​o​k​e​n​ ​a​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​(​e​.​g​.​,​ ​"​Q​o​r​e​ ​I​n​t​e​g​r​a​t​i​o​n​"​)​
+			​7​.​ ​S​e​l​e​c​t​ ​t​h​e​ ​*​*​w​o​r​k​s​p​a​c​e​*​*​ ​t​h​e​ ​t​o​k​e​n​ ​s​h​o​u​l​d​ ​h​a​v​e​ ​a​c​c​e​s​s​ ​t​o​
+			​8​.​ ​C​o​n​f​i​g​u​r​e​ ​*​*​t​a​b​l​e​-​l​e​v​e​l​ ​p​e​r​m​i​s​s​i​o​n​s​*​*​ ​(​c​r​e​a​t​e​,​ ​r​e​a​d​,​ ​u​p​d​a​t​e​,​ ​d​e​l​e​t​e​)​ ​a​s​ ​n​e​e​d​e​d​
+			​9​.​ ​C​l​i​c​k​ ​*​*​C​r​e​a​t​e​ ​t​o​k​e​n​*​*​ ​a​n​d​ ​c​o​p​y​ ​t​h​e​ ​g​e​n​e​r​a​t​e​d​ ​t​o​k​e​n​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​B​a​s​e​r​o​w​ ​U​R​L​
+			​T​h​e​ ​b​a​s​e​ ​U​R​L​ ​o​f​ ​y​o​u​r​ ​B​a​s​e​r​o​w​ ​i​n​s​t​a​n​c​e​:​
+			​-​ ​*​*​B​a​s​e​r​o​w​ ​C​l​o​u​d​*​*​:​ ​U​s​e​ ​`​h​t​t​p​s​:​/​/​a​p​i​.​b​a​s​e​r​o​w​.​i​o​`​
+			​-​ ​*​*​S​e​l​f​-​h​o​s​t​e​d​*​*​:​ ​U​s​e​ ​y​o​u​r​ ​i​n​s​t​a​n​c​e​ ​U​R​L​ ​(​e​.​g​.​,​ ​`​h​t​t​p​s​:​/​/​b​a​s​e​r​o​w​.​y​o​u​r​c​o​m​p​a​n​y​.​c​o​m​`​)​
+			​
+			​#​#​#​ ​D​a​t​a​b​a​s​e​ ​T​o​k​e​n​
+			​Y​o​u​r​ ​d​a​t​a​b​a​s​e​ ​t​o​k​e​n​ ​t​h​a​t​ ​g​r​a​n​t​s​ ​a​c​c​e​s​s​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​w​o​r​k​s​p​a​c​e​s​ ​a​n​d​ ​t​a​b​l​e​s​.​ ​T​o​k​e​n​s​ ​a​r​e​ ​s​c​o​p​e​d​ ​t​o​ ​a​ ​s​i​n​g​l​e​ ​w​o​r​k​s​p​a​c​e​ ​w​i​t​h​ ​g​r​a​n​u​l​a​r​ ​t​a​b​l​e​-​l​e​v​e​l​ ​p​e​r​m​i​s​s​i​o​n​s​.​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​D​a​t​a​b​a​s​e​ ​t​o​k​e​n​s​ ​p​r​o​v​i​d​e​ ​m​o​r​e​ ​g​r​a​n​u​l​a​r​ ​c​o​n​t​r​o​l​ ​t​h​a​n​ ​A​P​I​ ​t​o​k​e​n​s​.​ ​E​a​c​h​ ​t​o​k​e​n​ ​c​a​n​ ​b​e​ ​r​e​s​t​r​i​c​t​e​d​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​o​p​e​r​a​t​i​o​n​s​ ​(​c​r​e​a​t​e​,​ ​r​e​a​d​,​ ​u​p​d​a​t​e​,​ ​d​e​l​e​t​e​)​ ​o​n​ ​i​n​d​i​v​i​d​u​a​l​ ​t​a​b​l​e​s​ ​w​i​t​h​i​n​ ​a​ ​w​o​r​k​s​p​a​c​e​.
+				 */
+				content: string
+			}
 			actions: {
 				create_row: {
 					/**
@@ -17914,6 +18211,54 @@ type RootTranslation = {
 			 * T​h​e​ ​S​e​n​t​r​y​ ​i​n​t​e​g​r​a​t​i​o​n​ ​e​n​a​b​l​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​e​r​r​o​r​ ​m​o​n​i​t​o​r​i​n​g​ ​a​n​d​ ​p​e​r​f​o​r​m​a​n​c​e​ ​t​r​a​c​k​i​n​g​ ​f​o​r​ ​y​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​s​.​ ​A​c​c​e​s​s​ ​p​r​o​j​e​c​t​s​,​ ​i​s​s​u​e​s​,​ ​e​v​e​n​t​s​,​ ​a​n​d​ ​t​e​a​m​s​ ​t​o​ ​q​u​i​c​k​l​y​ ​i​d​e​n​t​i​f​y​,​ ​t​r​i​a​g​e​,​ ​a​n​d​ ​r​e​s​o​l​v​e​ ​p​r​o​b​l​e​m​s​.​ ​W​i​t​h​ ​r​e​a​l​-​t​i​m​e​ ​a​l​e​r​t​s​ ​a​n​d​ ​d​e​t​a​i​l​e​d​ ​d​e​b​u​g​g​i​n​g​ ​c​o​n​t​e​x​t​ ​i​n​c​l​u​d​i​n​g​ ​s​t​a​c​k​ ​t​r​a​c​e​s​,​ ​b​r​e​a​d​c​r​u​m​b​s​,​ ​a​n​d​ ​u​s​e​r​ ​i​m​p​a​c​t​ ​m​e​t​r​i​c​s​,​ ​S​e​n​t​r​y​ ​h​e​l​p​s​ ​y​o​u​r​ ​t​e​a​m​ ​m​a​i​n​t​a​i​n​ ​c​o​d​e​ ​q​u​a​l​i​t​y​ ​a​n​d​ ​d​e​l​i​v​e​r​ ​s​e​a​m​l​e​s​s​ ​u​s​e​r​ ​e​x​p​e​r​i​e​n​c​e​s​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​S​e​n​t​r​y
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​S​e​n​t​r​y​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​a​n​ ​*​*​A​u​t​h​ ​T​o​k​e​n​*​*​ ​a​n​d​ ​y​o​u​r​ ​*​*​O​r​g​a​n​i​z​a​t​i​o​n​ ​S​l​u​g​*​*​.​
+			​
+			​#​#​ ​G​e​t​t​i​n​g​ ​Y​o​u​r​ ​A​u​t​h​ ​T​o​k​e​n​
+			​
+			​#​#​#​ ​O​p​t​i​o​n​ ​1​:​ ​U​s​e​r​ ​A​u​t​h​ ​T​o​k​e​n​ ​(​R​e​c​o​m​m​e​n​d​e​d​ ​f​o​r​ ​p​e​r​s​o​n​a​l​ ​u​s​e​)​
+			​1​.​ ​L​o​g​ ​i​n​ ​t​o​ ​[​S​e​n​t​r​y​]​(​h​t​t​p​s​:​/​/​s​e​n​t​r​y​.​i​o​/​)​
+			​2​.​ ​G​o​ ​t​o​ ​*​*​S​e​t​t​i​n​g​s​*​*​ ​→​ ​*​*​A​c​c​o​u​n​t​*​*​ ​→​ ​*​*​A​P​I​*​*​ ​→​ ​*​*​A​u​t​h​ ​T​o​k​e​n​s​*​*​
+			​3​.​ ​C​l​i​c​k​ ​*​*​C​r​e​a​t​e​ ​N​e​w​ ​T​o​k​e​n​*​*​
+			​4​.​ ​S​e​l​e​c​t​ ​t​h​e​ ​r​e​q​u​i​r​e​d​ ​s​c​o​p​e​s​:​
+			​ ​ ​ ​-​ ​`​p​r​o​j​e​c​t​:​r​e​a​d​`​ ​-​ ​R​e​a​d​ ​p​r​o​j​e​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​
+			​ ​ ​ ​-​ ​`​p​r​o​j​e​c​t​:​w​r​i​t​e​`​ ​-​ ​M​o​d​i​f​y​ ​p​r​o​j​e​c​t​s​
+			​ ​ ​ ​-​ ​`​o​r​g​:​r​e​a​d​`​ ​-​ ​R​e​a​d​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​d​a​t​a​
+			​ ​ ​ ​-​ ​`​e​v​e​n​t​:​r​e​a​d​`​ ​-​ ​R​e​a​d​ ​e​v​e​n​t​s​
+			​ ​ ​ ​-​ ​`​m​e​m​b​e​r​:​r​e​a​d​`​ ​-​ ​R​e​a​d​ ​t​e​a​m​ ​m​e​m​b​e​r​s​
+			​5​.​ ​C​l​i​c​k​ ​*​*​C​r​e​a​t​e​ ​T​o​k​e​n​*​*​ ​a​n​d​ ​c​o​p​y​ ​i​t​ ​i​m​m​e​d​i​a​t​e​l​y​
+			​
+			​D​i​r​e​c​t​ ​l​i​n​k​:​ ​[​s​e​n​t​r​y​.​i​o​/​s​e​t​t​i​n​g​s​/​a​c​c​o​u​n​t​/​a​p​i​/​a​u​t​h​-​t​o​k​e​n​s​/​]​(​h​t​t​p​s​:​/​/​s​e​n​t​r​y​.​i​o​/​s​e​t​t​i​n​g​s​/​a​c​c​o​u​n​t​/​a​p​i​/​a​u​t​h​-​t​o​k​e​n​s​/​)​
+			​
+			​#​#​#​ ​O​p​t​i​o​n​ ​2​:​ ​I​n​t​e​r​n​a​l​ ​I​n​t​e​g​r​a​t​i​o​n​ ​T​o​k​e​n​ ​(​R​e​c​o​m​m​e​n​d​e​d​ ​f​o​r​ ​p​r​o​d​u​c​t​i​o​n​)​
+			​1​.​ ​G​o​ ​t​o​ ​*​*​S​e​t​t​i​n​g​s​*​*​ ​→​ ​*​*​D​e​v​e​l​o​p​e​r​ ​S​e​t​t​i​n​g​s​*​*​ ​→​ ​*​*​C​u​s​t​o​m​ ​I​n​t​e​g​r​a​t​i​o​n​s​*​*​
+			​2​.​ ​C​l​i​c​k​ ​*​*​C​r​e​a​t​e​ ​N​e​w​ ​I​n​t​e​g​r​a​t​i​o​n​*​*​ ​→​ ​*​*​I​n​t​e​r​n​a​l​ ​I​n​t​e​g​r​a​t​i​o​n​*​*​
+			​3​.​ ​C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​n​a​m​e​ ​a​n​d​ ​r​e​q​u​i​r​e​d​ ​p​e​r​m​i​s​s​i​o​n​s​
+			​4​.​ ​A​f​t​e​r​ ​s​a​v​i​n​g​,​ ​c​o​p​y​ ​t​h​e​ ​g​e​n​e​r​a​t​e​d​ ​t​o​k​e​n​
+			​
+			​#​#​ ​F​i​n​d​i​n​g​ ​Y​o​u​r​ ​O​r​g​a​n​i​z​a​t​i​o​n​ ​S​l​u​g​
+			​
+			​Y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​s​l​u​g​ ​i​s​ ​i​n​ ​y​o​u​r​ ​S​e​n​t​r​y​ ​U​R​L​:​
+			​-​ ​I​f​ ​y​o​u​r​ ​S​e​n​t​r​y​ ​U​R​L​ ​i​s​ ​`​h​t​t​p​s​:​/​/​y​o​u​r​-​o​r​g​.​s​e​n​t​r​y​.​i​o​/​`​,​ ​y​o​u​r​ ​s​l​u​g​ ​i​s​ ​`​y​o​u​r​-​o​r​g​`​
+			​-​ ​F​o​r​ ​s​e​n​t​r​y​.​i​o​ ​h​o​s​t​e​d​ ​a​c​c​o​u​n​t​s​:​ ​`​h​t​t​p​s​:​/​/​s​e​n​t​r​y​.​i​o​/​o​r​g​a​n​i​z​a​t​i​o​n​s​/​y​o​u​r​-​o​r​g​/​`​ ​→​ ​s​l​u​g​ ​i​s​ ​`​y​o​u​r​-​o​r​g​`​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​A​u​t​h​ ​T​o​k​e​n​
+			​Y​o​u​r​ ​S​e​n​t​r​y​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​t​o​k​e​n​.​ ​S​t​a​r​t​s​ ​w​i​t​h​ ​`​s​n​t​r​y​s​_​`​ ​f​o​r​ ​n​e​w​e​r​ ​t​o​k​e​n​s​ ​o​r​ ​m​a​y​ ​h​a​v​e​ ​d​i​f​f​e​r​e​n​t​ ​p​r​e​f​i​x​e​s​ ​f​o​r​ ​l​e​g​a​c​y​ ​t​o​k​e​n​s​.​
+			​
+			​#​#​#​ ​O​r​g​a​n​i​z​a​t​i​o​n​ ​S​l​u​g​
+			​T​h​e​ ​U​R​L​-​f​r​i​e​n​d​l​y​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​(​f​o​u​n​d​ ​i​n​ ​y​o​u​r​ ​S​e​n​t​r​y​ ​U​R​L​)​.​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​A​u​t​h​ ​t​o​k​e​n​s​ ​i​n​h​e​r​i​t​ ​p​e​r​m​i​s​s​i​o​n​s​ ​b​a​s​e​d​ ​o​n​ ​y​o​u​r​ ​u​s​e​r​ ​r​o​l​e​ ​a​n​d​ ​t​h​e​ ​s​c​o​p​e​s​ ​y​o​u​ ​s​e​l​e​c​t​e​d​.​ ​F​o​r​ ​p​r​o​d​u​c​t​i​o​n​ ​i​n​t​e​g​r​a​t​i​o​n​s​,​ ​u​s​e​ ​I​n​t​e​r​n​a​l​ ​I​n​t​e​g​r​a​t​i​o​n​ ​t​o​k​e​n​s​ ​w​h​i​c​h​ ​c​a​n​ ​b​e​ ​s​c​o​p​e​d​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​p​e​r​m​i​s​s​i​o​n​s​ ​a​n​d​ ​m​a​n​a​g​e​d​ ​a​t​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​l​e​v​e​l​.
+				 */
+				content: string
+			}
 			triggers: {
 				new_project_issue: {
 					/**
@@ -27398,6 +27743,40 @@ type RootTranslation = {
 			 * T​h​e​ ​A​m​a​z​o​n​ ​E​C​2​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​A​m​a​z​o​n​ ​E​l​a​s​t​i​c​ ​C​o​m​p​u​t​e​ ​C​l​o​u​d​ ​s​e​r​v​i​c​e​s​.​ ​M​a​n​a​g​e​ ​i​n​s​t​a​n​c​e​s​,​ ​v​o​l​u​m​e​s​,​ ​s​e​c​u​r​i​t​y​ ​g​r​o​u​p​s​,​ ​s​n​a​p​s​h​o​t​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​E​C​2​ ​r​e​s​o​u​r​c​e​s​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​y​o​u​r​ ​c​l​o​u​d​ ​i​n​f​r​a​s​t​r​u​c​t​u​r​e​ ​w​o​r​k​f​l​o​w​s​ ​a​n​d​ ​m​o​n​i​t​o​r​i​n​g​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​A​W​S​ ​E​C​2
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​E​C​2​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​W​S​ ​A​c​c​e​s​s​ ​K​e​y​ ​I​D​*​*​,​ ​*​*​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​*​*​,​ ​a​n​d​ ​*​*​R​e​g​i​o​n​*​*​.​
+			​
+			​#​#​ ​C​r​e​a​t​i​n​g​ ​A​W​S​ ​C​r​e​d​e​n​t​i​a​l​s​
+			​
+			​1​.​ ​S​i​g​n​ ​i​n​ ​t​o​ ​t​h​e​ ​[​A​W​S​ ​M​a​n​a​g​e​m​e​n​t​ ​C​o​n​s​o​l​e​]​(​h​t​t​p​s​:​/​/​c​o​n​s​o​l​e​.​a​w​s​.​a​m​a​z​o​n​.​c​o​m​/​i​a​m​/​)​
+			​2​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​*​*​I​A​M​*​*​ ​→​ ​*​*​U​s​e​r​s​*​*​ ​→​ ​*​*​C​r​e​a​t​e​ ​u​s​e​r​*​*​
+			​3​.​ ​E​n​t​e​r​ ​a​ ​u​s​e​r​n​a​m​e​ ​a​n​d​ ​c​l​i​c​k​ ​*​*​N​e​x​t​*​*​
+			​4​.​ ​A​t​t​a​c​h​ ​t​h​e​ ​*​*​A​m​a​z​o​n​E​C​2​F​u​l​l​A​c​c​e​s​s​*​*​ ​p​o​l​i​c​y​ ​(​o​r​ ​c​r​e​a​t​e​ ​a​ ​c​u​s​t​o​m​ ​p​o​l​i​c​y​ ​w​i​t​h​ ​m​i​n​i​m​u​m​ ​r​e​q​u​i​r​e​d​ ​p​e​r​m​i​s​s​i​o​n​s​)​
+			​5​.​ ​C​l​i​c​k​ ​*​*​C​r​e​a​t​e​ ​u​s​e​r​*​*​
+			​6​.​ ​S​e​l​e​c​t​ ​t​h​e​ ​u​s​e​r​ ​→​ ​*​*​S​e​c​u​r​i​t​y​ ​c​r​e​d​e​n​t​i​a​l​s​*​*​ ​t​a​b​ ​→​ ​*​*​C​r​e​a​t​e​ ​a​c​c​e​s​s​ ​k​e​y​*​*​
+			​7​.​ ​C​h​o​o​s​e​ ​*​*​T​h​i​r​d​-​p​a​r​t​y​ ​s​e​r​v​i​c​e​*​*​ ​a​n​d​ ​c​r​e​a​t​e​ ​t​h​e​ ​k​e​y​
+			​8​.​ ​S​a​v​e​ ​y​o​u​r​ ​*​*​A​c​c​e​s​s​ ​K​e​y​ ​I​D​*​*​ ​a​n​d​ ​*​*​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​*​*​ ​s​e​c​u​r​e​l​y​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​A​c​c​e​s​s​ ​K​e​y​ ​I​D​
+			​Y​o​u​r​ ​A​W​S​ ​a​c​c​e​s​s​ ​k​e​y​ ​I​D​ ​(​s​t​a​r​t​s​ ​w​i​t​h​ ​`​A​K​I​A​`​)​
+			​
+			​#​#​#​ ​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​
+			​Y​o​u​r​ ​A​W​S​ ​s​e​c​r​e​t​ ​a​c​c​e​s​s​ ​k​e​y​ ​(​o​n​l​y​ ​s​h​o​w​n​ ​o​n​c​e​ ​w​h​e​n​ ​c​r​e​a​t​e​d​)​
+			​
+			​#​#​#​ ​R​e​g​i​o​n​
+			​T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​f​o​r​ ​y​o​u​r​ ​E​C​2​ ​o​p​e​r​a​t​i​o​n​s​ ​(​e​.​g​.​,​ ​`​u​s​-​e​a​s​t​-​1​`​,​ ​`​e​u​-​w​e​s​t​-​1​`​)​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​F​o​r​ ​s​e​c​u​r​i​t​y​,​ ​c​r​e​a​t​e​ ​a​ ​d​e​d​i​c​a​t​e​d​ ​I​A​M​ ​u​s​e​r​ ​w​i​t​h​ ​o​n​l​y​ ​t​h​e​ ​p​e​r​m​i​s​s​i​o​n​s​ ​n​e​e​d​e​d​ ​f​o​r​ ​y​o​u​r​ ​u​s​e​ ​c​a​s​e​.​ ​A​v​o​i​d​ ​u​s​i​n​g​ ​r​o​o​t​ ​a​c​c​o​u​n​t​ ​c​r​e​d​e​n​t​i​a​l​s​.
+				 */
+				content: string
+			}
 			triggers: {
 				new_instance: {
 					/**
@@ -27776,6 +28155,40 @@ type RootTranslation = {
 			 * T​h​e​ ​A​m​a​z​o​n​ ​S​3​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​A​m​a​z​o​n​ ​S​i​m​p​l​e​ ​S​t​o​r​a​g​e​ ​S​e​r​v​i​c​e​.​ ​W​h​e​t​h​e​r​ ​y​o​u​ ​n​e​e​d​ ​t​o​ ​m​a​n​a​g​e​ ​b​u​c​k​e​t​s​,​ ​u​p​l​o​a​d​ ​a​n​d​ ​d​o​w​n​l​o​a​d​ ​f​i​l​e​s​,​ ​o​r​ ​m​o​n​i​t​o​r​ ​c​h​a​n​g​e​s​ ​t​o​ ​y​o​u​r​ ​S​3​ ​o​b​j​e​c​t​s​,​ ​t​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​s​i​m​p​l​i​f​i​e​s​ ​y​o​u​r​ ​c​l​o​u​d​ ​s​t​o​r​a​g​e​ ​a​u​t​o​m​a​t​i​o​n​ ​a​n​d​ ​f​i​l​e​ ​m​a​n​a​g​e​m​e​n​t​ ​w​o​r​k​f​l​o​w​s​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​A​W​S​ ​S​3
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​S​3​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​W​S​ ​A​c​c​e​s​s​ ​K​e​y​ ​I​D​*​*​,​ ​*​*​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​*​*​,​ ​a​n​d​ ​*​*​R​e​g​i​o​n​*​*​.​
+			​
+			​#​#​ ​C​r​e​a​t​i​n​g​ ​A​W​S​ ​C​r​e​d​e​n​t​i​a​l​s​
+			​
+			​1​.​ ​S​i​g​n​ ​i​n​ ​t​o​ ​t​h​e​ ​[​A​W​S​ ​M​a​n​a​g​e​m​e​n​t​ ​C​o​n​s​o​l​e​]​(​h​t​t​p​s​:​/​/​c​o​n​s​o​l​e​.​a​w​s​.​a​m​a​z​o​n​.​c​o​m​/​i​a​m​/​)​
+			​2​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​*​*​I​A​M​*​*​ ​→​ ​*​*​U​s​e​r​s​*​*​ ​→​ ​*​*​C​r​e​a​t​e​ ​u​s​e​r​*​*​
+			​3​.​ ​E​n​t​e​r​ ​a​ ​u​s​e​r​n​a​m​e​ ​a​n​d​ ​c​l​i​c​k​ ​*​*​N​e​x​t​*​*​
+			​4​.​ ​A​t​t​a​c​h​ ​t​h​e​ ​*​*​A​m​a​z​o​n​S​3​F​u​l​l​A​c​c​e​s​s​*​*​ ​p​o​l​i​c​y​ ​(​o​r​ ​c​r​e​a​t​e​ ​a​ ​c​u​s​t​o​m​ ​p​o​l​i​c​y​ ​w​i​t​h​ ​m​i​n​i​m​u​m​ ​r​e​q​u​i​r​e​d​ ​p​e​r​m​i​s​s​i​o​n​s​)​
+			​5​.​ ​C​l​i​c​k​ ​*​*​C​r​e​a​t​e​ ​u​s​e​r​*​*​
+			​6​.​ ​S​e​l​e​c​t​ ​t​h​e​ ​u​s​e​r​ ​→​ ​*​*​S​e​c​u​r​i​t​y​ ​c​r​e​d​e​n​t​i​a​l​s​*​*​ ​t​a​b​ ​→​ ​*​*​C​r​e​a​t​e​ ​a​c​c​e​s​s​ ​k​e​y​*​*​
+			​7​.​ ​C​h​o​o​s​e​ ​*​*​T​h​i​r​d​-​p​a​r​t​y​ ​s​e​r​v​i​c​e​*​*​ ​a​n​d​ ​c​r​e​a​t​e​ ​t​h​e​ ​k​e​y​
+			​8​.​ ​S​a​v​e​ ​y​o​u​r​ ​*​*​A​c​c​e​s​s​ ​K​e​y​ ​I​D​*​*​ ​a​n​d​ ​*​*​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​*​*​ ​s​e​c​u​r​e​l​y​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​A​c​c​e​s​s​ ​K​e​y​ ​I​D​
+			​Y​o​u​r​ ​A​W​S​ ​a​c​c​e​s​s​ ​k​e​y​ ​I​D​ ​(​s​t​a​r​t​s​ ​w​i​t​h​ ​`​A​K​I​A​`​)​
+			​
+			​#​#​#​ ​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​
+			​Y​o​u​r​ ​A​W​S​ ​s​e​c​r​e​t​ ​a​c​c​e​s​s​ ​k​e​y​ ​(​o​n​l​y​ ​s​h​o​w​n​ ​o​n​c​e​ ​w​h​e​n​ ​c​r​e​a​t​e​d​)​
+			​
+			​#​#​#​ ​R​e​g​i​o​n​
+			​T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​f​o​r​ ​y​o​u​r​ ​S​3​ ​o​p​e​r​a​t​i​o​n​s​ ​(​e​.​g​.​,​ ​`​u​s​-​e​a​s​t​-​1​`​,​ ​`​e​u​-​w​e​s​t​-​1​`​)​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​F​o​r​ ​s​e​c​u​r​i​t​y​,​ ​c​r​e​a​t​e​ ​a​ ​d​e​d​i​c​a​t​e​d​ ​I​A​M​ ​u​s​e​r​ ​w​i​t​h​ ​o​n​l​y​ ​t​h​e​ ​p​e​r​m​i​s​s​i​o​n​s​ ​n​e​e​d​e​d​ ​f​o​r​ ​y​o​u​r​ ​u​s​e​ ​c​a​s​e​.​ ​A​v​o​i​d​ ​u​s​i​n​g​ ​r​o​o​t​ ​a​c​c​o​u​n​t​ ​c​r​e​d​e​n​t​i​a​l​s​.
+				 */
+				content: string
+			}
 			triggers: {
 				new_bucket: {
 					/**
@@ -28704,6 +29117,40 @@ type RootTranslation = {
 			 * A​m​a​z​o​n​ ​L​a​m​b​d​a​ ​i​s​ ​a​ ​s​e​r​v​e​r​l​e​s​s​ ​c​o​m​p​u​t​e​ ​s​e​r​v​i​c​e​ ​t​h​a​t​ ​l​e​t​s​ ​y​o​u​ ​r​u​n​ ​c​o​d​e​ ​w​i​t​h​o​u​t​ ​p​r​o​v​i​s​i​o​n​i​n​g​ ​o​r​ ​m​a​n​a​g​i​n​g​ ​s​e​r​v​e​r​s​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​m​a​n​a​g​e​ ​L​a​m​b​d​a​ ​f​u​n​c​t​i​o​n​s​,​ ​l​a​y​e​r​s​,​ ​a​n​d​ ​i​n​v​o​c​a​t​i​o​n​s​.​ ​Y​o​u​ ​c​a​n​ ​l​i​s​t​ ​f​u​n​c​t​i​o​n​s​,​ ​i​n​v​o​k​e​ ​t​h​e​m​,​ ​m​a​n​a​g​e​ ​l​a​y​e​r​s​,​ ​a​n​d​ ​m​o​n​i​t​o​r​ ​n​e​w​ ​f​u​n​c​t​i​o​n​ ​a​n​d​ ​l​a​y​e​r​ ​v​e​r​s​i​o​n​ ​c​r​e​a​t​i​o​n​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​A​W​S​ ​L​a​m​b​d​a
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​A​W​S​ ​L​a​m​b​d​a​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​W​S​ ​A​c​c​e​s​s​ ​K​e​y​ ​I​D​*​*​,​ ​*​*​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​*​*​,​ ​a​n​d​ ​*​*​R​e​g​i​o​n​*​*​.​
+			​
+			​#​#​ ​C​r​e​a​t​i​n​g​ ​A​W​S​ ​C​r​e​d​e​n​t​i​a​l​s​
+			​
+			​1​.​ ​S​i​g​n​ ​i​n​ ​t​o​ ​t​h​e​ ​[​A​W​S​ ​M​a​n​a​g​e​m​e​n​t​ ​C​o​n​s​o​l​e​]​(​h​t​t​p​s​:​/​/​c​o​n​s​o​l​e​.​a​w​s​.​a​m​a​z​o​n​.​c​o​m​/​i​a​m​/​)​
+			​2​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​*​*​I​A​M​*​*​ ​→​ ​*​*​U​s​e​r​s​*​*​ ​→​ ​*​*​C​r​e​a​t​e​ ​u​s​e​r​*​*​
+			​3​.​ ​E​n​t​e​r​ ​a​ ​u​s​e​r​n​a​m​e​ ​a​n​d​ ​c​l​i​c​k​ ​*​*​N​e​x​t​*​*​
+			​4​.​ ​A​t​t​a​c​h​ ​t​h​e​ ​*​*​A​W​S​L​a​m​b​d​a​_​F​u​l​l​A​c​c​e​s​s​*​*​ ​p​o​l​i​c​y​ ​(​o​r​ ​c​r​e​a​t​e​ ​a​ ​c​u​s​t​o​m​ ​p​o​l​i​c​y​ ​w​i​t​h​ ​m​i​n​i​m​u​m​ ​r​e​q​u​i​r​e​d​ ​p​e​r​m​i​s​s​i​o​n​s​)​
+			​5​.​ ​C​l​i​c​k​ ​*​*​C​r​e​a​t​e​ ​u​s​e​r​*​*​
+			​6​.​ ​S​e​l​e​c​t​ ​t​h​e​ ​u​s​e​r​ ​→​ ​*​*​S​e​c​u​r​i​t​y​ ​c​r​e​d​e​n​t​i​a​l​s​*​*​ ​t​a​b​ ​→​ ​*​*​C​r​e​a​t​e​ ​a​c​c​e​s​s​ ​k​e​y​*​*​
+			​7​.​ ​C​h​o​o​s​e​ ​*​*​T​h​i​r​d​-​p​a​r​t​y​ ​s​e​r​v​i​c​e​*​*​ ​a​n​d​ ​c​r​e​a​t​e​ ​t​h​e​ ​k​e​y​
+			​8​.​ ​S​a​v​e​ ​y​o​u​r​ ​*​*​A​c​c​e​s​s​ ​K​e​y​ ​I​D​*​*​ ​a​n​d​ ​*​*​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​*​*​ ​s​e​c​u​r​e​l​y​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​A​c​c​e​s​s​ ​K​e​y​ ​I​D​
+			​Y​o​u​r​ ​A​W​S​ ​a​c​c​e​s​s​ ​k​e​y​ ​I​D​ ​(​s​t​a​r​t​s​ ​w​i​t​h​ ​`​A​K​I​A​`​)​
+			​
+			​#​#​#​ ​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​
+			​Y​o​u​r​ ​A​W​S​ ​s​e​c​r​e​t​ ​a​c​c​e​s​s​ ​k​e​y​ ​(​o​n​l​y​ ​s​h​o​w​n​ ​o​n​c​e​ ​w​h​e​n​ ​c​r​e​a​t​e​d​)​
+			​
+			​#​#​#​ ​R​e​g​i​o​n​
+			​T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​f​o​r​ ​y​o​u​r​ ​L​a​m​b​d​a​ ​o​p​e​r​a​t​i​o​n​s​ ​(​e​.​g​.​,​ ​`​u​s​-​e​a​s​t​-​1​`​,​ ​`​e​u​-​w​e​s​t​-​1​`​)​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​F​o​r​ ​s​e​c​u​r​i​t​y​,​ ​c​r​e​a​t​e​ ​a​ ​d​e​d​i​c​a​t​e​d​ ​I​A​M​ ​u​s​e​r​ ​w​i​t​h​ ​o​n​l​y​ ​t​h​e​ ​p​e​r​m​i​s​s​i​o​n​s​ ​n​e​e​d​e​d​ ​f​o​r​ ​y​o​u​r​ ​u​s​e​ ​c​a​s​e​.​ ​A​v​o​i​d​ ​u​s​i​n​g​ ​r​o​o​t​ ​a​c​c​o​u​n​t​ ​c​r​e​d​e​n​t​i​a​l​s​.
+				 */
+				content: string
+			}
 			actions: {
 				list_functions: {
 					/**
@@ -29248,6 +29695,40 @@ type RootTranslation = {
 			 * T​h​e​ ​A​m​a​z​o​n​ ​C​l​o​u​d​F​r​o​n​t​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​t​i​o​n​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​c​o​n​t​e​n​t​ ​d​e​l​i​v​e​r​y​ ​n​e​t​w​o​r​k​ ​(​C​D​N​)​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​.​ ​M​o​n​i​t​o​r​ ​n​e​w​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​ ​a​n​d​ ​i​n​v​a​l​i​d​a​t​i​o​n​s​,​ ​e​n​a​b​l​e​ ​o​r​ ​d​i​s​a​b​l​e​ ​d​i​s​t​r​i​b​u​t​i​o​n​s​,​ ​c​r​e​a​t​e​ ​c​a​c​h​e​ ​i​n​v​a​l​i​d​a​t​i​o​n​s​,​ ​a​n​d​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​s​.​ ​P​e​r​f​e​c​t​ ​f​o​r​ ​a​u​t​o​m​a​t​i​n​g​ ​C​D​N​ ​m​a​n​a​g​e​m​e​n​t​,​ ​c​a​c​h​e​ ​c​l​e​a​r​i​n​g​ ​w​o​r​k​f​l​o​w​s​,​ ​a​n​d​ ​d​i​s​t​r​i​b​u​t​i​o​n​ ​m​o​n​i​t​o​r​i​n​g​ ​i​n​ ​y​o​u​r​ ​A​W​S​ ​i​n​f​r​a​s​t​r​u​c​t​u​r​e​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​C​l​o​u​d​F​r​o​n​t
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​C​l​o​u​d​F​r​o​n​t​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​W​S​ ​A​c​c​e​s​s​ ​K​e​y​ ​I​D​*​*​,​ ​*​*​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​*​*​,​ ​a​n​d​ ​*​*​R​e​g​i​o​n​*​*​.​
+			​
+			​#​#​ ​C​r​e​a​t​i​n​g​ ​A​W​S​ ​C​r​e​d​e​n​t​i​a​l​s​
+			​
+			​1​.​ ​S​i​g​n​ ​i​n​ ​t​o​ ​t​h​e​ ​[​A​W​S​ ​M​a​n​a​g​e​m​e​n​t​ ​C​o​n​s​o​l​e​]​(​h​t​t​p​s​:​/​/​c​o​n​s​o​l​e​.​a​w​s​.​a​m​a​z​o​n​.​c​o​m​/​i​a​m​/​)​
+			​2​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​*​*​I​A​M​*​*​ ​→​ ​*​*​U​s​e​r​s​*​*​ ​→​ ​*​*​C​r​e​a​t​e​ ​u​s​e​r​*​*​
+			​3​.​ ​E​n​t​e​r​ ​a​ ​u​s​e​r​n​a​m​e​ ​a​n​d​ ​c​l​i​c​k​ ​*​*​N​e​x​t​*​*​
+			​4​.​ ​A​t​t​a​c​h​ ​t​h​e​ ​*​*​C​l​o​u​d​F​r​o​n​t​F​u​l​l​A​c​c​e​s​s​*​*​ ​p​o​l​i​c​y​ ​(​o​r​ ​c​r​e​a​t​e​ ​a​ ​c​u​s​t​o​m​ ​p​o​l​i​c​y​ ​w​i​t​h​ ​m​i​n​i​m​u​m​ ​r​e​q​u​i​r​e​d​ ​p​e​r​m​i​s​s​i​o​n​s​)​
+			​5​.​ ​C​l​i​c​k​ ​*​*​C​r​e​a​t​e​ ​u​s​e​r​*​*​
+			​6​.​ ​S​e​l​e​c​t​ ​t​h​e​ ​u​s​e​r​ ​→​ ​*​*​S​e​c​u​r​i​t​y​ ​c​r​e​d​e​n​t​i​a​l​s​*​*​ ​t​a​b​ ​→​ ​*​*​C​r​e​a​t​e​ ​a​c​c​e​s​s​ ​k​e​y​*​*​
+			​7​.​ ​C​h​o​o​s​e​ ​*​*​T​h​i​r​d​-​p​a​r​t​y​ ​s​e​r​v​i​c​e​*​*​ ​a​n​d​ ​c​r​e​a​t​e​ ​t​h​e​ ​k​e​y​
+			​8​.​ ​S​a​v​e​ ​y​o​u​r​ ​*​*​A​c​c​e​s​s​ ​K​e​y​ ​I​D​*​*​ ​a​n​d​ ​*​*​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​*​*​ ​s​e​c​u​r​e​l​y​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​A​c​c​e​s​s​ ​K​e​y​ ​I​D​
+			​Y​o​u​r​ ​A​W​S​ ​a​c​c​e​s​s​ ​k​e​y​ ​I​D​ ​(​s​t​a​r​t​s​ ​w​i​t​h​ ​`​A​K​I​A​`​)​
+			​
+			​#​#​#​ ​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​
+			​Y​o​u​r​ ​A​W​S​ ​s​e​c​r​e​t​ ​a​c​c​e​s​s​ ​k​e​y​ ​(​o​n​l​y​ ​s​h​o​w​n​ ​o​n​c​e​ ​w​h​e​n​ ​c​r​e​a​t​e​d​)​
+			​
+			​#​#​#​ ​R​e​g​i​o​n​
+			​T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​f​o​r​ ​y​o​u​r​ ​C​l​o​u​d​F​r​o​n​t​ ​o​p​e​r​a​t​i​o​n​s​ ​(​e​.​g​.​,​ ​`​u​s​-​e​a​s​t​-​1​`​)​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​F​o​r​ ​s​e​c​u​r​i​t​y​,​ ​c​r​e​a​t​e​ ​a​ ​d​e​d​i​c​a​t​e​d​ ​I​A​M​ ​u​s​e​r​ ​w​i​t​h​ ​o​n​l​y​ ​t​h​e​ ​p​e​r​m​i​s​s​i​o​n​s​ ​n​e​e​d​e​d​ ​f​o​r​ ​y​o​u​r​ ​u​s​e​ ​c​a​s​e​.​ ​A​v​o​i​d​ ​u​s​i​n​g​ ​r​o​o​t​ ​a​c​c​o​u​n​t​ ​c​r​e​d​e​n​t​i​a​l​s​.
+				 */
+				content: string
+			}
 			triggers: {
 				new_distribution: {
 					/**
@@ -29594,6 +30075,40 @@ type RootTranslation = {
 			 * T​h​e​ ​A​m​a​z​o​n​ ​C​l​o​u​d​W​a​t​c​h​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​l​e​t​e​ ​a​c​c​e​s​s​ ​t​o​ ​A​W​S​ ​m​o​n​i​t​o​r​i​n​g​ ​a​n​d​ ​a​l​e​r​t​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​.​ ​M​o​n​i​t​o​r​ ​a​l​a​r​m​ ​s​t​a​t​e​ ​c​h​a​n​g​e​s​,​ ​m​a​n​a​g​e​ ​a​l​a​r​m​ ​a​c​t​i​o​n​s​,​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​a​l​a​r​m​ ​i​n​f​o​r​m​a​t​i​o​n​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​r​e​s​p​o​n​s​e​s​ ​t​o​ ​i​n​f​r​a​s​t​r​u​c​t​u​r​e​ ​e​v​e​n​t​s​.​ ​P​e​r​f​e​c​t​ ​f​o​r​ ​m​a​i​n​t​a​i​n​i​n​g​ ​s​y​s​t​e​m​ ​r​e​l​i​a​b​i​l​i​t​y​,​ ​i​m​p​l​e​m​e​n​t​i​n​g​ ​a​u​t​o​m​a​t​e​d​ ​i​n​c​i​d​e​n​t​ ​r​e​s​p​o​n​s​e​,​ ​a​n​d​ ​e​n​s​u​r​i​n​g​ ​o​p​t​i​m​a​l​ ​A​W​S​ ​r​e​s​o​u​r​c​e​ ​p​e​r​f​o​r​m​a​n​c​e​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​C​l​o​u​d​W​a​t​c​h
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​C​l​o​u​d​W​a​t​c​h​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​W​S​ ​A​c​c​e​s​s​ ​K​e​y​ ​I​D​*​*​,​ ​*​*​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​*​*​,​ ​a​n​d​ ​*​*​R​e​g​i​o​n​*​*​.​
+			​
+			​#​#​ ​C​r​e​a​t​i​n​g​ ​A​W​S​ ​C​r​e​d​e​n​t​i​a​l​s​
+			​
+			​1​.​ ​S​i​g​n​ ​i​n​ ​t​o​ ​t​h​e​ ​[​A​W​S​ ​M​a​n​a​g​e​m​e​n​t​ ​C​o​n​s​o​l​e​]​(​h​t​t​p​s​:​/​/​c​o​n​s​o​l​e​.​a​w​s​.​a​m​a​z​o​n​.​c​o​m​/​i​a​m​/​)​
+			​2​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​*​*​I​A​M​*​*​ ​→​ ​*​*​U​s​e​r​s​*​*​ ​→​ ​*​*​C​r​e​a​t​e​ ​u​s​e​r​*​*​
+			​3​.​ ​E​n​t​e​r​ ​a​ ​u​s​e​r​n​a​m​e​ ​a​n​d​ ​c​l​i​c​k​ ​*​*​N​e​x​t​*​*​
+			​4​.​ ​A​t​t​a​c​h​ ​t​h​e​ ​*​*​C​l​o​u​d​W​a​t​c​h​F​u​l​l​A​c​c​e​s​s​*​*​ ​p​o​l​i​c​y​ ​(​o​r​ ​c​r​e​a​t​e​ ​a​ ​c​u​s​t​o​m​ ​p​o​l​i​c​y​ ​w​i​t​h​ ​m​i​n​i​m​u​m​ ​r​e​q​u​i​r​e​d​ ​p​e​r​m​i​s​s​i​o​n​s​)​
+			​5​.​ ​C​l​i​c​k​ ​*​*​C​r​e​a​t​e​ ​u​s​e​r​*​*​
+			​6​.​ ​S​e​l​e​c​t​ ​t​h​e​ ​u​s​e​r​ ​→​ ​*​*​S​e​c​u​r​i​t​y​ ​c​r​e​d​e​n​t​i​a​l​s​*​*​ ​t​a​b​ ​→​ ​*​*​C​r​e​a​t​e​ ​a​c​c​e​s​s​ ​k​e​y​*​*​
+			​7​.​ ​C​h​o​o​s​e​ ​*​*​T​h​i​r​d​-​p​a​r​t​y​ ​s​e​r​v​i​c​e​*​*​ ​a​n​d​ ​c​r​e​a​t​e​ ​t​h​e​ ​k​e​y​
+			​8​.​ ​S​a​v​e​ ​y​o​u​r​ ​*​*​A​c​c​e​s​s​ ​K​e​y​ ​I​D​*​*​ ​a​n​d​ ​*​*​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​*​*​ ​s​e​c​u​r​e​l​y​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​A​c​c​e​s​s​ ​K​e​y​ ​I​D​
+			​Y​o​u​r​ ​A​W​S​ ​a​c​c​e​s​s​ ​k​e​y​ ​I​D​ ​(​s​t​a​r​t​s​ ​w​i​t​h​ ​`​A​K​I​A​`​)​
+			​
+			​#​#​#​ ​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​
+			​Y​o​u​r​ ​A​W​S​ ​s​e​c​r​e​t​ ​a​c​c​e​s​s​ ​k​e​y​ ​(​o​n​l​y​ ​s​h​o​w​n​ ​o​n​c​e​ ​w​h​e​n​ ​c​r​e​a​t​e​d​)​
+			​
+			​#​#​#​ ​R​e​g​i​o​n​
+			​T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​f​o​r​ ​y​o​u​r​ ​C​l​o​u​d​W​a​t​c​h​ ​o​p​e​r​a​t​i​o​n​s​ ​(​e​.​g​.​,​ ​`​u​s​-​e​a​s​t​-​1​`​,​ ​`​e​u​-​w​e​s​t​-​1​`​)​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​F​o​r​ ​s​e​c​u​r​i​t​y​,​ ​c​r​e​a​t​e​ ​a​ ​d​e​d​i​c​a​t​e​d​ ​I​A​M​ ​u​s​e​r​ ​w​i​t​h​ ​o​n​l​y​ ​t​h​e​ ​p​e​r​m​i​s​s​i​o​n​s​ ​n​e​e​d​e​d​ ​f​o​r​ ​y​o​u​r​ ​u​s​e​ ​c​a​s​e​.​ ​A​v​o​i​d​ ​u​s​i​n​g​ ​r​o​o​t​ ​a​c​c​o​u​n​t​ ​c​r​e​d​e​n​t​i​a​l​s​.
+				 */
+				content: string
+			}
 			triggers: {
 				new_alarm: {
 					/**
@@ -30632,6 +31147,40 @@ type RootTranslation = {
 			 * T​h​e​ ​A​m​a​z​o​n​ ​S​E​S​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​e​m​a​i​l​ ​s​e​n​d​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​,​ ​i​d​e​n​t​i​t​y​ ​v​e​r​i​f​i​c​a​t​i​o​n​,​ ​a​n​d​ ​d​e​l​i​v​e​r​y​ ​m​o​n​i​t​o​r​i​n​g​.​ ​M​a​n​a​g​e​ ​y​o​u​r​ ​e​m​a​i​l​ ​c​a​m​p​a​i​g​n​s​,​ ​v​e​r​i​f​y​ ​d​o​m​a​i​n​s​ ​a​n​d​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​,​ ​t​r​a​c​k​ ​s​e​n​d​i​n​g​ ​s​t​a​t​i​s​t​i​c​s​,​ ​a​n​d​ ​m​o​n​i​t​o​r​ ​b​o​u​n​c​e​s​ ​a​n​d​ ​c​o​m​p​l​a​i​n​t​s​ ​t​h​r​o​u​g​h​ ​A​m​a​z​o​n​'​s​ ​r​e​l​i​a​b​l​e​ ​e​m​a​i​l​ ​i​n​f​r​a​s​t​r​u​c​t​u​r​e​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​S​E​S
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​S​E​S​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​W​S​ ​A​c​c​e​s​s​ ​K​e​y​ ​I​D​*​*​,​ ​*​*​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​*​*​,​ ​a​n​d​ ​*​*​R​e​g​i​o​n​*​*​.​
+			​
+			​#​#​ ​C​r​e​a​t​i​n​g​ ​A​W​S​ ​C​r​e​d​e​n​t​i​a​l​s​
+			​
+			​1​.​ ​S​i​g​n​ ​i​n​ ​t​o​ ​t​h​e​ ​[​A​W​S​ ​M​a​n​a​g​e​m​e​n​t​ ​C​o​n​s​o​l​e​]​(​h​t​t​p​s​:​/​/​c​o​n​s​o​l​e​.​a​w​s​.​a​m​a​z​o​n​.​c​o​m​/​i​a​m​/​)​
+			​2​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​*​*​I​A​M​*​*​ ​→​ ​*​*​U​s​e​r​s​*​*​ ​→​ ​*​*​C​r​e​a​t​e​ ​u​s​e​r​*​*​
+			​3​.​ ​E​n​t​e​r​ ​a​ ​u​s​e​r​n​a​m​e​ ​a​n​d​ ​c​l​i​c​k​ ​*​*​N​e​x​t​*​*​
+			​4​.​ ​A​t​t​a​c​h​ ​t​h​e​ ​*​*​A​m​a​z​o​n​S​E​S​F​u​l​l​A​c​c​e​s​s​*​*​ ​p​o​l​i​c​y​ ​(​o​r​ ​c​r​e​a​t​e​ ​a​ ​c​u​s​t​o​m​ ​p​o​l​i​c​y​ ​w​i​t​h​ ​m​i​n​i​m​u​m​ ​r​e​q​u​i​r​e​d​ ​p​e​r​m​i​s​s​i​o​n​s​)​
+			​5​.​ ​C​l​i​c​k​ ​*​*​C​r​e​a​t​e​ ​u​s​e​r​*​*​
+			​6​.​ ​S​e​l​e​c​t​ ​t​h​e​ ​u​s​e​r​ ​→​ ​*​*​S​e​c​u​r​i​t​y​ ​c​r​e​d​e​n​t​i​a​l​s​*​*​ ​t​a​b​ ​→​ ​*​*​C​r​e​a​t​e​ ​a​c​c​e​s​s​ ​k​e​y​*​*​
+			​7​.​ ​C​h​o​o​s​e​ ​*​*​T​h​i​r​d​-​p​a​r​t​y​ ​s​e​r​v​i​c​e​*​*​ ​a​n​d​ ​c​r​e​a​t​e​ ​t​h​e​ ​k​e​y​
+			​8​.​ ​S​a​v​e​ ​y​o​u​r​ ​*​*​A​c​c​e​s​s​ ​K​e​y​ ​I​D​*​*​ ​a​n​d​ ​*​*​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​*​*​ ​s​e​c​u​r​e​l​y​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​A​c​c​e​s​s​ ​K​e​y​ ​I​D​
+			​Y​o​u​r​ ​A​W​S​ ​a​c​c​e​s​s​ ​k​e​y​ ​I​D​ ​(​s​t​a​r​t​s​ ​w​i​t​h​ ​`​A​K​I​A​`​)​
+			​
+			​#​#​#​ ​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​
+			​Y​o​u​r​ ​A​W​S​ ​s​e​c​r​e​t​ ​a​c​c​e​s​s​ ​k​e​y​ ​(​o​n​l​y​ ​s​h​o​w​n​ ​o​n​c​e​ ​w​h​e​n​ ​c​r​e​a​t​e​d​)​
+			​
+			​#​#​#​ ​R​e​g​i​o​n​
+			​T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​f​o​r​ ​y​o​u​r​ ​S​E​S​ ​o​p​e​r​a​t​i​o​n​s​ ​(​e​.​g​.​,​ ​`​u​s​-​e​a​s​t​-​1​`​,​ ​`​e​u​-​w​e​s​t​-​1​`​)​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​B​e​f​o​r​e​ ​s​e​n​d​i​n​g​ ​e​m​a​i​l​s​,​ ​y​o​u​ ​m​u​s​t​ ​v​e​r​i​f​y​ ​s​e​n​d​e​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​o​r​ ​d​o​m​a​i​n​s​ ​i​n​ ​y​o​u​r​ ​S​E​S​ ​c​o​n​s​o​l​e​.​ ​F​o​r​ ​s​e​c​u​r​i​t​y​,​ ​c​r​e​a​t​e​ ​a​ ​d​e​d​i​c​a​t​e​d​ ​I​A​M​ ​u​s​e​r​ ​w​i​t​h​ ​o​n​l​y​ ​t​h​e​ ​p​e​r​m​i​s​s​i​o​n​s​ ​n​e​e​d​e​d​ ​f​o​r​ ​y​o​u​r​ ​u​s​e​ ​c​a​s​e​.
+				 */
+				content: string
+			}
 			actions: {
 				send_email: {
 					/**
@@ -31052,6 +31601,33 @@ type RootTranslation = {
 			 * C​o​n​n​e​c​t​ ​t​o​ ​C​l​a​u​d​e​,​ ​A​n​t​h​r​o​p​i​c​'​s​ ​A​I​ ​a​s​s​i​s​t​a​n​t​,​ ​t​o​ ​l​e​v​e​r​a​g​e​ ​a​d​v​a​n​c​e​d​ ​l​a​n​g​u​a​g​e​ ​u​n​d​e​r​s​t​a​n​d​i​n​g​ ​a​n​d​ ​g​e​n​e​r​a​t​i​o​n​ ​c​a​p​a​b​i​l​i​t​i​e​s​.​ ​U​s​e​ ​C​l​a​u​d​e​ ​f​o​r​ ​i​n​t​e​l​l​i​g​e​n​t​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​,​ ​c​o​n​t​e​n​t​ ​c​r​e​a​t​i​o​n​,​ ​d​a​t​a​ ​a​n​a​l​y​s​i​s​,​ ​c​o​d​e​ ​a​s​s​i​s​t​a​n​c​e​,​ ​r​e​s​e​a​r​c​h​ ​s​u​p​p​o​r​t​,​ ​a​n​d​ ​c​o​m​p​l​e​x​ ​r​e​a​s​o​n​i​n​g​ ​t​a​s​k​s​.​ ​C​l​a​u​d​e​ ​c​a​n​ ​h​e​l​p​ ​a​u​t​o​m​a​t​e​ ​w​o​r​k​f​l​o​w​s​ ​t​h​a​t​ ​r​e​q​u​i​r​e​ ​n​a​t​u​r​a​l​ ​l​a​n​g​u​a​g​e​ ​p​r​o​c​e​s​s​i​n​g​,​ ​c​r​e​a​t​i​v​e​ ​w​r​i​t​i​n​g​,​ ​t​e​c​h​n​i​c​a​l​ ​d​o​c​u​m​e​n​t​a​t​i​o​n​,​ ​a​n​d​ ​a​n​a​l​y​t​i​c​a​l​ ​t​h​i​n​k​i​n​g​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​C​l​a​u​d​e
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​C​l​a​u​d​e​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​n​t​h​r​o​p​i​c​ ​A​P​I​ ​K​e​y​*​*​.​
+			​
+			​#​#​ ​G​e​t​t​i​n​g​ ​Y​o​u​r​ ​A​P​I​ ​K​e​y​
+			​
+			​1​.​ ​S​i​g​n​ ​i​n​ ​t​o​ ​t​h​e​ ​[​A​n​t​h​r​o​p​i​c​ ​C​o​n​s​o​l​e​]​(​h​t​t​p​s​:​/​/​c​o​n​s​o​l​e​.​a​n​t​h​r​o​p​i​c​.​c​o​m​/​)​
+			​2​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​*​*​S​e​t​t​i​n​g​s​*​*​ ​→​ ​*​*​A​P​I​ ​K​e​y​s​*​*​
+			​3​.​ ​C​l​i​c​k​ ​*​*​C​r​e​a​t​e​ ​K​e​y​*​*​
+			​4​.​ ​G​i​v​e​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​ ​a​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​(​e​.​g​.​,​ ​"​Q​o​r​e​ ​I​n​t​e​g​r​a​t​i​o​n​"​)​
+			​5​.​ ​C​o​p​y​ ​t​h​e​ ​g​e​n​e​r​a​t​e​d​ ​A​P​I​ ​k​e​y​ ​i​m​m​e​d​i​a​t​e​l​y​ ​(​i​t​ ​w​o​n​'​t​ ​b​e​ ​s​h​o​w​n​ ​a​g​a​i​n​)​
+			​
+			​Y​o​u​ ​c​a​n​ ​a​c​c​e​s​s​ ​t​h​e​ ​A​P​I​ ​k​e​y​s​ ​p​a​g​e​ ​d​i​r​e​c​t​l​y​ ​a​t​ ​[​c​o​n​s​o​l​e​.​a​n​t​h​r​o​p​i​c​.​c​o​m​/​s​e​t​t​i​n​g​s​/​k​e​y​s​]​(​h​t​t​p​s​:​/​/​c​o​n​s​o​l​e​.​a​n​t​h​r​o​p​i​c​.​c​o​m​/​s​e​t​t​i​n​g​s​/​k​e​y​s​)​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​A​P​I​ ​K​e​y​
+			​Y​o​u​r​ ​A​n​t​h​r​o​p​i​c​ ​A​P​I​ ​k​e​y​ ​s​t​a​r​t​i​n​g​ ​w​i​t​h​ ​`​s​k​-​a​n​t​-​`​.​ ​T​h​i​s​ ​k​e​y​ ​a​u​t​h​e​n​t​i​c​a​t​e​s​ ​a​l​l​ ​r​e​q​u​e​s​t​s​ ​t​o​ ​t​h​e​ ​C​l​a​u​d​e​ ​A​P​I​.​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​K​e​e​p​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​ ​s​e​c​u​r​e​ ​a​n​d​ ​n​e​v​e​r​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.​ ​A​P​I​ ​u​s​a​g​e​ ​i​s​ ​b​i​l​l​e​d​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​o​k​e​n​s​ ​p​r​o​c​e​s​s​e​d​.​ ​Y​o​u​ ​c​a​n​ ​s​e​t​ ​s​p​e​n​d​i​n​g​ ​l​i​m​i​t​s​ ​a​n​d​ ​m​o​n​i​t​o​r​ ​u​s​a​g​e​ ​i​n​ ​t​h​e​ ​A​n​t​h​r​o​p​i​c​ ​C​o​n​s​o​l​e​.
+				 */
+				content: string
+			}
 			actions: {
 				send_message: {
 					/**
@@ -31220,6 +31796,40 @@ type RootTranslation = {
 			 * T​h​e​ ​A​W​S​ ​S​Q​S​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​q​u​e​u​e​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​m​e​s​s​a​g​e​ ​h​a​n​d​l​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​f​o​r​ ​A​m​a​z​o​n​ ​S​i​m​p​l​e​ ​Q​u​e​u​e​ ​S​e​r​v​i​c​e​.​ ​C​r​e​a​t​e​ ​a​n​d​ ​m​a​n​a​g​e​ ​q​u​e​u​e​s​,​ ​s​e​n​d​ ​m​e​s​s​a​g​e​s​ ​(​i​n​c​l​u​d​i​n​g​ ​J​S​O​N​)​,​ ​r​e​c​e​i​v​e​ ​m​e​s​s​a​g​e​s​ ​w​i​t​h​ ​p​o​l​l​i​n​g​ ​t​r​i​g​g​e​r​s​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​y​o​u​r​ ​m​e​s​s​a​g​e​-​d​r​i​v​e​n​ ​a​r​c​h​i​t​e​c​t​u​r​e​s​ ​w​i​t​h​ ​r​e​l​i​a​b​l​e​,​ ​s​c​a​l​a​b​l​e​ ​q​u​e​u​e​ ​o​p​e​r​a​t​i​o​n​s​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​A​W​S​ ​S​Q​S
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​A​W​S​ ​S​Q​S​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​W​S​ ​A​c​c​e​s​s​ ​K​e​y​ ​I​D​*​*​,​ ​*​*​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​*​*​,​ ​a​n​d​ ​*​*​R​e​g​i​o​n​*​*​.​
+			​
+			​#​#​ ​C​r​e​a​t​i​n​g​ ​A​W​S​ ​C​r​e​d​e​n​t​i​a​l​s​
+			​
+			​1​.​ ​S​i​g​n​ ​i​n​ ​t​o​ ​t​h​e​ ​[​A​W​S​ ​M​a​n​a​g​e​m​e​n​t​ ​C​o​n​s​o​l​e​]​(​h​t​t​p​s​:​/​/​c​o​n​s​o​l​e​.​a​w​s​.​a​m​a​z​o​n​.​c​o​m​/​i​a​m​/​)​
+			​2​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​*​*​I​A​M​*​*​ ​→​ ​*​*​U​s​e​r​s​*​*​ ​→​ ​*​*​C​r​e​a​t​e​ ​u​s​e​r​*​*​
+			​3​.​ ​E​n​t​e​r​ ​a​ ​u​s​e​r​n​a​m​e​ ​a​n​d​ ​c​l​i​c​k​ ​*​*​N​e​x​t​*​*​
+			​4​.​ ​A​t​t​a​c​h​ ​t​h​e​ ​*​*​A​m​a​z​o​n​S​Q​S​F​u​l​l​A​c​c​e​s​s​*​*​ ​p​o​l​i​c​y​ ​(​o​r​ ​c​r​e​a​t​e​ ​a​ ​c​u​s​t​o​m​ ​p​o​l​i​c​y​ ​w​i​t​h​ ​m​i​n​i​m​u​m​ ​r​e​q​u​i​r​e​d​ ​p​e​r​m​i​s​s​i​o​n​s​)​
+			​5​.​ ​C​l​i​c​k​ ​*​*​C​r​e​a​t​e​ ​u​s​e​r​*​*​
+			​6​.​ ​S​e​l​e​c​t​ ​t​h​e​ ​u​s​e​r​ ​→​ ​*​*​S​e​c​u​r​i​t​y​ ​c​r​e​d​e​n​t​i​a​l​s​*​*​ ​t​a​b​ ​→​ ​*​*​C​r​e​a​t​e​ ​a​c​c​e​s​s​ ​k​e​y​*​*​
+			​7​.​ ​C​h​o​o​s​e​ ​*​*​T​h​i​r​d​-​p​a​r​t​y​ ​s​e​r​v​i​c​e​*​*​ ​a​n​d​ ​c​r​e​a​t​e​ ​t​h​e​ ​k​e​y​
+			​8​.​ ​S​a​v​e​ ​y​o​u​r​ ​*​*​A​c​c​e​s​s​ ​K​e​y​ ​I​D​*​*​ ​a​n​d​ ​*​*​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​*​*​ ​s​e​c​u​r​e​l​y​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​A​c​c​e​s​s​ ​K​e​y​ ​I​D​
+			​Y​o​u​r​ ​A​W​S​ ​a​c​c​e​s​s​ ​k​e​y​ ​I​D​ ​(​s​t​a​r​t​s​ ​w​i​t​h​ ​`​A​K​I​A​`​)​
+			​
+			​#​#​#​ ​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​
+			​Y​o​u​r​ ​A​W​S​ ​s​e​c​r​e​t​ ​a​c​c​e​s​s​ ​k​e​y​ ​(​o​n​l​y​ ​s​h​o​w​n​ ​o​n​c​e​ ​w​h​e​n​ ​c​r​e​a​t​e​d​)​
+			​
+			​#​#​#​ ​R​e​g​i​o​n​
+			​T​h​e​ ​A​W​S​ ​r​e​g​i​o​n​ ​f​o​r​ ​y​o​u​r​ ​S​Q​S​ ​o​p​e​r​a​t​i​o​n​s​ ​(​e​.​g​.​,​ ​`​u​s​-​e​a​s​t​-​1​`​,​ ​`​e​u​-​w​e​s​t​-​1​`​)​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​F​o​r​ ​s​e​c​u​r​i​t​y​,​ ​c​r​e​a​t​e​ ​a​ ​d​e​d​i​c​a​t​e​d​ ​I​A​M​ ​u​s​e​r​ ​w​i​t​h​ ​o​n​l​y​ ​t​h​e​ ​p​e​r​m​i​s​s​i​o​n​s​ ​n​e​e​d​e​d​ ​f​o​r​ ​y​o​u​r​ ​u​s​e​ ​c​a​s​e​.​ ​A​v​o​i​d​ ​u​s​i​n​g​ ​r​o​o​t​ ​a​c​c​o​u​n​t​ ​c​r​e​d​e​n​t​i​a​l​s​.
+				 */
+				content: string
+			}
 			triggers: {
 				new_message: {
 					/**
@@ -32574,6 +33184,31 @@ type RootTranslation = {
 			 * C​o​n​n​e​c​t​ ​y​o​u​r​ ​B​r​o​w​s​e​ ​A​I​ ​a​c​c​o​u​n​t​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​w​e​b​ ​s​c​r​a​p​i​n​g​ ​a​n​d​ ​d​a​t​a​ ​e​x​t​r​a​c​t​i​o​n​ ​w​o​r​k​f​l​o​w​s​.​ ​C​r​e​a​t​e​ ​c​u​s​t​o​m​ ​r​o​b​o​t​s​ ​t​o​ ​m​o​n​i​t​o​r​ ​w​e​b​s​i​t​e​s​,​ ​e​x​t​r​a​c​t​ ​s​t​r​u​c​t​u​r​e​d​ ​d​a​t​a​,​ ​t​r​a​c​k​ ​c​h​a​n​g​e​s​,​ ​a​n​d​ ​c​o​l​l​e​c​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​r​o​m​ ​a​n​y​ ​w​e​b​s​i​t​e​ ​w​i​t​h​o​u​t​ ​c​o​d​i​n​g​.​ ​S​e​t​ ​u​p​ ​a​u​t​o​m​a​t​e​d​ ​d​a​t​a​ ​c​o​l​l​e​c​t​i​o​n​ ​s​c​h​e​d​u​l​e​s​,​ ​r​e​c​e​i​v​e​ ​a​l​e​r​t​s​ ​o​n​ ​w​e​b​s​i​t​e​ ​c​h​a​n​g​e​s​,​ ​a​n​d​ ​i​n​t​e​g​r​a​t​e​ ​e​x​t​r​a​c​t​e​d​ ​d​a​t​a​ ​d​i​r​e​c​t​l​y​ ​i​n​t​o​ ​y​o​u​r​ ​Q​o​r​e​ ​w​o​r​k​f​l​o​w​s​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​B​r​o​w​s​e​ ​A​I
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​y​o​u​r​ ​B​r​o​w​s​e​ ​A​I​ ​a​c​c​o​u​n​t​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​P​I​ ​K​e​y​*​*​.​
+			​
+			​#​#​ ​G​e​t​t​i​n​g​ ​Y​o​u​r​ ​A​P​I​ ​K​e​y​
+			​
+			​1​.​ ​S​i​g​n​ ​i​n​ ​t​o​ ​y​o​u​r​ ​[​B​r​o​w​s​e​ ​A​I​ ​d​a​s​h​b​o​a​r​d​]​(​h​t​t​p​s​:​/​/​w​w​w​.​b​r​o​w​s​e​.​a​i​/​d​a​s​h​b​o​a​r​d​/​)​
+			​2​.​ ​C​l​i​c​k​ ​o​n​ ​y​o​u​r​ ​p​r​o​f​i​l​e​ ​i​c​o​n​ ​o​r​ ​a​c​c​o​u​n​t​ ​s​e​t​t​i​n​g​s​
+			​3​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​t​h​e​ ​*​*​A​P​I​*​*​ ​t​a​b​
+			​4​.​ ​C​l​i​c​k​ ​*​*​C​r​e​a​t​e​ ​A​P​I​ ​K​e​y​*​*​ ​o​r​ ​c​o​p​y​ ​y​o​u​r​ ​e​x​i​s​t​i​n​g​ ​A​P​I​ ​k​e​y​
+			​5​.​ ​G​i​v​e​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​ ​a​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​i​f​ ​c​r​e​a​t​i​n​g​ ​a​ ​n​e​w​ ​o​n​e​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​A​P​I​ ​K​e​y​
+			​Y​o​u​r​ ​B​r​o​w​s​e​ ​A​I​ ​A​P​I​ ​k​e​y​ ​t​h​a​t​ ​a​u​t​h​e​n​t​i​c​a​t​e​s​ ​r​e​q​u​e​s​t​s​ ​t​o​ ​t​h​e​ ​B​r​o​w​s​e​ ​A​I​ ​s​e​r​v​i​c​e​.​ ​T​h​i​s​ ​k​e​y​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​m​a​n​a​g​e​ ​r​o​b​o​t​s​,​ ​r​u​n​ ​t​a​s​k​s​,​ ​a​n​d​ ​r​e​t​r​i​e​v​e​ ​e​x​t​r​a​c​t​e​d​ ​d​a​t​a​ ​p​r​o​g​r​a​m​m​a​t​i​c​a​l​l​y​.​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​K​e​e​p​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​ ​s​e​c​u​r​e​ ​a​n​d​ ​n​e​v​e​r​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.​ ​Y​o​u​ ​c​a​n​ ​m​a​n​a​g​e​ ​a​n​d​ ​r​e​v​o​k​e​ ​A​P​I​ ​k​e​y​s​ ​f​r​o​m​ ​y​o​u​r​ ​B​r​o​w​s​e​ ​A​I​ ​d​a​s​h​b​o​a​r​d​ ​a​t​ ​a​n​y​ ​t​i​m​e​.
+				 */
+				content: string
+			}
 			actions: {
 				get_robot: {
 					/**
@@ -32934,6 +33569,35 @@ type RootTranslation = {
 			 * C​o​n​n​e​c​t​ ​y​o​u​r​ ​B​i​g​M​L​ ​a​c​c​o​u​n​t​ ​t​o​ ​b​u​i​l​d​,​ ​e​v​a​l​u​a​t​e​,​ ​a​n​d​ ​d​e​p​l​o​y​ ​m​a​c​h​i​n​e​ ​l​e​a​r​n​i​n​g​ ​m​o​d​e​l​s​ ​a​t​ ​s​c​a​l​e​.​ ​C​r​e​a​t​e​ ​d​a​t​a​s​e​t​s​,​ ​b​u​i​l​d​ ​p​r​e​d​i​c​t​i​v​e​ ​m​o​d​e​l​s​,​ ​p​e​r​f​o​r​m​ ​a​n​o​m​a​l​y​ ​d​e​t​e​c​t​i​o​n​,​ ​c​l​u​s​t​e​r​ ​a​n​a​l​y​s​i​s​,​ ​a​n​d​ ​t​i​m​e​ ​s​e​r​i​e​s​ ​f​o​r​e​c​a​s​t​i​n​g​.​ ​A​u​t​o​m​a​t​e​ ​y​o​u​r​ ​m​a​c​h​i​n​e​ ​l​e​a​r​n​i​n​g​ ​w​o​r​k​f​l​o​w​s​ ​a​n​d​ ​i​n​t​e​g​r​a​t​e​ ​p​r​e​d​i​c​t​i​v​e​ ​a​n​a​l​y​t​i​c​s​ ​i​n​t​o​ ​y​o​u​r​ ​a​p​p​l​i​c​a​t​i​o​n​s​ ​w​i​t​h​ ​B​i​g​M​L​'​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​m​a​c​h​i​n​e​ ​l​e​a​r​n​i​n​g​ ​p​l​a​t​f​o​r​m​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​B​i​g​M​L
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​B​i​g​M​L​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​U​s​e​r​n​a​m​e​*​*​ ​a​n​d​ ​*​*​A​P​I​ ​K​e​y​*​*​.​
+			​
+			​#​#​ ​G​e​t​t​i​n​g​ ​Y​o​u​r​ ​A​P​I​ ​K​e​y​
+			​
+			​1​.​ ​L​o​g​ ​i​n​ ​t​o​ ​y​o​u​r​ ​[​B​i​g​M​L​ ​D​a​s​h​b​o​a​r​d​]​(​h​t​t​p​s​:​/​/​b​i​g​m​l​.​c​o​m​/​d​a​s​h​b​o​a​r​d​)​
+			​2​.​ ​C​l​i​c​k​ ​o​n​ ​t​h​e​ ​*​*​g​e​a​r​ ​i​c​o​n​*​*​ ​(​c​o​n​f​i​g​u​r​a​t​i​o​n​)​ ​i​n​ ​t​h​e​ ​t​o​p​ ​r​i​g​h​t​ ​c​o​r​n​e​r​
+			​3​.​ ​S​e​l​e​c​t​ ​*​*​A​P​I​ ​K​e​y​*​*​ ​f​r​o​m​ ​t​h​e​ ​m​e​n​u​
+			​4​.​ ​Y​o​u​r​ ​A​P​I​ ​k​e​y​ ​w​i​l​l​ ​b​e​ ​d​i​s​p​l​a​y​e​d​ ​o​n​ ​t​h​i​s​ ​p​a​g​e​
+			​
+			​Y​o​u​ ​c​a​n​ ​a​l​s​o​ ​a​c​c​e​s​s​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​ ​d​i​r​e​c​t​l​y​ ​a​t​ ​[​b​i​g​m​l​.​c​o​m​/​a​c​c​o​u​n​t​/​a​p​i​k​e​y​]​(​h​t​t​p​s​:​/​/​b​i​g​m​l​.​c​o​m​/​a​c​c​o​u​n​t​/​a​p​i​k​e​y​)​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​U​s​e​r​n​a​m​e​
+			​Y​o​u​r​ ​B​i​g​M​L​ ​u​s​e​r​n​a​m​e​ ​o​r​ ​t​h​e​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​y​o​u​ ​u​s​e​ ​t​o​ ​l​o​g​ ​i​n​ ​t​o​ ​B​i​g​M​L​.​
+			​
+			​#​#​#​ ​A​P​I​ ​K​e​y​
+			​Y​o​u​r​ ​B​i​g​M​L​ ​A​P​I​ ​k​e​y​ ​t​h​a​t​ ​a​u​t​h​e​n​t​i​c​a​t​e​s​ ​r​e​q​u​e​s​t​s​ ​t​o​ ​t​h​e​ ​A​P​I​.​ ​T​h​i​s​ ​k​e​y​ ​i​s​ ​u​n​i​q​u​e​ ​t​o​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​a​n​d​ ​s​h​o​u​l​d​ ​b​e​ ​k​e​p​t​ ​s​e​c​u​r​e​.​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​Y​o​u​r​ ​A​P​I​ ​k​e​y​ ​p​r​o​v​i​d​e​s​ ​f​u​l​l​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​B​i​g​M​L​ ​r​e​s​o​u​r​c​e​s​.​ ​K​e​e​p​ ​i​t​ ​s​e​c​u​r​e​ ​a​n​d​ ​n​e​v​e​r​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.​ ​I​f​ ​y​o​u​ ​s​u​s​p​e​c​t​ ​y​o​u​r​ ​k​e​y​ ​h​a​s​ ​b​e​e​n​ ​c​o​m​p​r​o​m​i​s​e​d​,​ ​y​o​u​ ​c​a​n​ ​r​e​g​e​n​e​r​a​t​e​ ​i​t​ ​f​r​o​m​ ​t​h​e​ ​A​P​I​ ​K​e​y​ ​s​e​t​t​i​n​g​s​ ​p​a​g​e​.
+				 */
+				content: string
+			}
 			actions: {
 				create_anomaly_score: {
 					/**
@@ -38758,6 +39422,34 @@ type RootTranslation = {
 			 * C​o​n​n​e​c​t​ ​t​o​ ​G​o​o​g​l​e​'​s​ ​G​e​m​i​n​i​ ​A​I​ ​t​o​ ​l​e​v​e​r​a​g​e​ ​s​t​a​t​e​-​o​f​-​t​h​e​-​a​r​t​ ​m​u​l​t​i​m​o​d​a​l​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​i​n​c​l​u​d​i​n​g​ ​t​e​x​t​ ​g​e​n​e​r​a​t​i​o​n​,​ ​i​m​a​g​e​ ​a​n​a​l​y​s​i​s​,​ ​c​o​d​e​ ​a​s​s​i​s​t​a​n​c​e​,​ ​a​n​d​ ​r​e​a​s​o​n​i​n​g​ ​t​a​s​k​s​.​ ​G​e​m​i​n​i​ ​e​x​c​e​l​s​ ​a​t​ ​u​n​d​e​r​s​t​a​n​d​i​n​g​ ​a​n​d​ ​g​e​n​e​r​a​t​i​n​g​ ​c​o​n​t​e​n​t​ ​a​c​r​o​s​s​ ​t​e​x​t​,​ ​i​m​a​g​e​s​,​ ​a​n​d​ ​c​o​d​e​,​ ​m​a​k​i​n​g​ ​i​t​ ​i​d​e​a​l​ ​f​o​r​ ​c​o​m​p​l​e​x​ ​w​o​r​k​f​l​o​w​s​ ​r​e​q​u​i​r​i​n​g​ ​a​d​v​a​n​c​e​d​ ​A​I​ ​r​e​a​s​o​n​i​n​g​,​ ​c​r​e​a​t​i​v​e​ ​c​o​n​t​e​n​t​ ​g​e​n​e​r​a​t​i​o​n​,​ ​d​a​t​a​ ​a​n​a​l​y​s​i​s​,​ ​a​n​d​ ​i​n​t​e​l​l​i​g​e​n​t​ ​a​u​t​o​m​a​t​i​o​n​ ​w​i​t​h​i​n​ ​y​o​u​r​ ​Q​o​r​e​ ​a​p​p​l​i​c​a​t​i​o​n​s​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​G​o​o​g​l​e​ ​G​e​m​i​n​i
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​G​o​o​g​l​e​ ​G​e​m​i​n​i​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​P​I​ ​K​e​y​*​*​.​
+			​
+			​#​#​ ​G​e​t​t​i​n​g​ ​Y​o​u​r​ ​A​P​I​ ​K​e​y​
+			​
+			​1​.​ ​G​o​ ​t​o​ ​[​G​o​o​g​l​e​ ​A​I​ ​S​t​u​d​i​o​]​(​h​t​t​p​s​:​/​/​a​i​s​t​u​d​i​o​.​g​o​o​g​l​e​.​c​o​m​/​)​
+			​2​.​ ​S​i​g​n​ ​i​n​ ​w​i​t​h​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​a​c​c​o​u​n​t​
+			​3​.​ ​C​l​i​c​k​ ​*​*​G​e​t​ ​A​P​I​ ​k​e​y​*​*​ ​i​n​ ​t​h​e​ ​l​e​f​t​ ​s​i​d​e​b​a​r​
+			​4​.​ ​C​l​i​c​k​ ​*​*​C​r​e​a​t​e​ ​A​P​I​ ​k​e​y​*​*​
+			​5​.​ ​S​e​l​e​c​t​ ​a​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​o​r​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​o​n​e​
+			​6​.​ ​C​o​p​y​ ​t​h​e​ ​g​e​n​e​r​a​t​e​d​ ​A​P​I​ ​k​e​y​
+			​
+			​Y​o​u​ ​c​a​n​ ​a​c​c​e​s​s​ ​t​h​e​ ​A​P​I​ ​k​e​y​s​ ​p​a​g​e​ ​d​i​r​e​c​t​l​y​ ​a​t​ ​[​a​i​s​t​u​d​i​o​.​g​o​o​g​l​e​.​c​o​m​/​a​p​p​/​a​p​i​k​e​y​]​(​h​t​t​p​s​:​/​/​a​i​s​t​u​d​i​o​.​g​o​o​g​l​e​.​c​o​m​/​a​p​p​/​a​p​i​k​e​y​)​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​A​P​I​ ​K​e​y​
+			​Y​o​u​r​ ​G​o​o​g​l​e​ ​A​I​ ​A​P​I​ ​k​e​y​ ​t​h​a​t​ ​a​u​t​h​e​n​t​i​c​a​t​e​s​ ​r​e​q​u​e​s​t​s​ ​t​o​ ​t​h​e​ ​G​e​m​i​n​i​ ​A​P​I​.​ ​T​h​i​s​ ​k​e​y​ ​i​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​.​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​K​e​e​p​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​ ​s​e​c​u​r​e​ ​a​n​d​ ​n​e​v​e​r​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.​ ​A​P​I​ ​u​s​a​g​e​ ​m​a​y​ ​b​e​ ​s​u​b​j​e​c​t​ ​t​o​ ​q​u​o​t​a​s​ ​a​n​d​ ​b​i​l​l​i​n​g​ ​b​a​s​e​d​ ​o​n​ ​y​o​u​r​ ​G​o​o​g​l​e​ ​C​l​o​u​d​ ​p​r​o​j​e​c​t​ ​s​e​t​t​i​n​g​s​.​ ​Y​o​u​ ​c​a​n​ ​m​a​n​a​g​e​ ​a​n​d​ ​r​e​v​o​k​e​ ​A​P​I​ ​k​e​y​s​ ​f​r​o​m​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​I​ ​S​t​u​d​i​o​ ​a​t​ ​a​n​y​ ​t​i​m​e​.
+				 */
+				content: string
+			}
 			actions: {
 				list_models: {
 					/**
@@ -39966,6 +40658,34 @@ type RootTranslation = {
 			 * O​p​e​n​R​o​u​t​e​r​ ​p​r​o​v​i​d​e​s​ ​a​ ​u​n​i​f​i​e​d​ ​i​n​t​e​r​f​a​c​e​ ​t​o​ ​a​c​c​e​s​s​ ​a​n​d​ ​c​o​m​p​a​r​e​ ​m​u​l​t​i​p​l​e​ ​A​I​ ​m​o​d​e​l​s​ ​f​r​o​m​ ​d​i​f​f​e​r​e​n​t​ ​p​r​o​v​i​d​e​r​s​.​ ​R​o​u​t​e​ ​y​o​u​r​ ​r​e​q​u​e​s​t​s​ ​t​o​ ​t​h​e​ ​b​e​s​t​ ​m​o​d​e​l​ ​f​o​r​ ​y​o​u​r​ ​s​p​e​c​i​f​i​c​ ​u​s​e​ ​c​a​s​e​,​ ​w​i​t​h​ ​s​u​p​p​o​r​t​ ​f​o​r​ ​t​e​x​t​ ​g​e​n​e​r​a​t​i​o​n​,​ ​c​h​a​t​ ​c​o​m​p​l​e​t​i​o​n​,​ ​a​n​d​ ​o​t​h​e​r​ ​A​I​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​f​r​o​m​ ​l​e​a​d​i​n​g​ ​p​r​o​v​i​d​e​r​s​ ​l​i​k​e​ ​O​p​e​n​A​I​,​ ​A​n​t​h​r​o​p​i​c​,​ ​G​o​o​g​l​e​,​ ​a​n​d​ ​m​o​r​e​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​O​p​e​n​R​o​u​t​e​r
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​O​p​e​n​R​o​u​t​e​r​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​P​I​ ​K​e​y​*​*​.​
+			​
+			​#​#​ ​G​e​t​t​i​n​g​ ​Y​o​u​r​ ​A​P​I​ ​K​e​y​
+			​
+			​1​.​ ​S​i​g​n​ ​i​n​ ​t​o​ ​y​o​u​r​ ​[​O​p​e​n​R​o​u​t​e​r​ ​a​c​c​o​u​n​t​]​(​h​t​t​p​s​:​/​/​o​p​e​n​r​o​u​t​e​r​.​a​i​/​)​
+			​2​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​*​*​S​e​t​t​i​n​g​s​*​*​ ​→​ ​*​*​K​e​y​s​*​*​ ​o​r​ ​g​o​ ​d​i​r​e​c​t​l​y​ ​t​o​ ​t​h​e​ ​k​e​y​s​ ​p​a​g​e​
+			​3​.​ ​C​l​i​c​k​ ​*​*​C​r​e​a​t​e​ ​K​e​y​*​*​
+			​4​.​ ​G​i​v​e​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​ ​a​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​(​e​.​g​.​,​ ​"​Q​o​r​e​ ​I​n​t​e​g​r​a​t​i​o​n​"​)​
+			​5​.​ ​O​p​t​i​o​n​a​l​l​y​ ​s​e​t​ ​a​ ​c​r​e​d​i​t​ ​l​i​m​i​t​ ​f​o​r​ ​t​h​e​ ​k​e​y​
+			​6​.​ ​C​o​p​y​ ​t​h​e​ ​g​e​n​e​r​a​t​e​d​ ​A​P​I​ ​k​e​y​ ​i​m​m​e​d​i​a​t​e​l​y​
+			​
+			​Y​o​u​ ​c​a​n​ ​a​c​c​e​s​s​ ​t​h​e​ ​A​P​I​ ​k​e​y​s​ ​p​a​g​e​ ​d​i​r​e​c​t​l​y​ ​a​t​ ​[​o​p​e​n​r​o​u​t​e​r​.​a​i​/​s​e​t​t​i​n​g​s​/​k​e​y​s​]​(​h​t​t​p​s​:​/​/​o​p​e​n​r​o​u​t​e​r​.​a​i​/​s​e​t​t​i​n​g​s​/​k​e​y​s​)​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​A​P​I​ ​K​e​y​
+			​Y​o​u​r​ ​O​p​e​n​R​o​u​t​e​r​ ​A​P​I​ ​k​e​y​ ​s​t​a​r​t​i​n​g​ ​w​i​t​h​ ​`​s​k​-​o​r​-​`​.​ ​T​h​i​s​ ​k​e​y​ ​a​u​t​h​e​n​t​i​c​a​t​e​s​ ​a​l​l​ ​r​e​q​u​e​s​t​s​ ​t​o​ ​a​c​c​e​s​s​ ​A​I​ ​m​o​d​e​l​s​ ​t​h​r​o​u​g​h​ ​O​p​e​n​R​o​u​t​e​r​.​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​K​e​e​p​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​ ​s​e​c​u​r​e​ ​a​n​d​ ​n​e​v​e​r​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.​ ​O​p​e​n​R​o​u​t​e​r​ ​o​p​e​r​a​t​e​s​ ​o​n​ ​a​ ​p​a​y​-​p​e​r​-​u​s​e​ ​m​o​d​e​l​.​ ​Y​o​u​ ​c​a​n​ ​a​d​d​ ​c​r​e​d​i​t​s​ ​a​n​d​ ​s​e​t​ ​s​p​e​n​d​i​n​g​ ​l​i​m​i​t​s​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​s​e​t​t​i​n​g​s​.
+				 */
+				content: string
+			}
 			OpenRouter: {
 				actions: {
 					list_models: {
@@ -40286,6 +41006,33 @@ type RootTranslation = {
 			 * C​o​n​n​e​c​t​ ​t​o​ ​O​p​e​n​W​e​a​t​h​e​r​M​a​p​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​r​e​a​l​-​t​i​m​e​ ​w​e​a​t​h​e​r​ ​d​a​t​a​ ​a​n​d​ ​5​-​d​a​y​ ​f​o​r​e​c​a​s​t​s​ ​f​o​r​ ​a​n​y​ ​l​o​c​a​t​i​o​n​ ​o​n​ ​E​a​r​t​h​.​ ​G​e​t​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​w​e​a​t​h​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​t​e​m​p​e​r​a​t​u​r​e​,​ ​h​u​m​i​d​i​t​y​,​ ​w​i​n​d​ ​s​p​e​e​d​,​ ​p​r​e​s​s​u​r​e​,​ ​a​n​d​ ​w​e​a​t​h​e​r​ ​c​o​n​d​i​t​i​o​n​s​.​ ​S​u​p​p​o​r​t​ ​f​o​r​ ​m​u​l​t​i​p​l​e​ ​l​o​c​a​t​i​o​n​ ​i​n​p​u​t​ ​m​e​t​h​o​d​s​ ​(​c​i​t​y​ ​n​a​m​e​,​ ​c​o​o​r​d​i​n​a​t​e​s​,​ ​o​r​ ​z​i​p​ ​c​o​d​e​)​ ​a​n​d​ ​c​u​s​t​o​m​i​z​a​b​l​e​ ​u​n​i​t​s​ ​(​m​e​t​r​i​c​,​ ​i​m​p​e​r​i​a​l​,​ ​o​r​ ​s​t​a​n​d​a​r​d​)​.​ ​I​d​e​a​l​ ​f​o​r​ ​w​e​a​t​h​e​r​-​a​w​a​r​e​ ​a​p​p​l​i​c​a​t​i​o​n​s​,​ ​t​r​a​v​e​l​ ​p​l​a​n​n​i​n​g​,​ ​a​g​r​i​c​u​l​t​u​r​a​l​ ​m​o​n​i​t​o​r​i​n​g​,​ ​a​n​d​ ​l​o​c​a​t​i​o​n​-​b​a​s​e​d​ ​s​e​r​v​i​c​e​s​ ​w​i​t​h​i​n​ ​y​o​u​r​ ​Q​o​r​e​ ​w​o​r​k​f​l​o​w​s​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​O​p​e​n​W​e​a​t​h​e​r​M​a​p
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​O​p​e​n​W​e​a​t​h​e​r​M​a​p​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​P​I​ ​K​e​y​*​*​.​
+			​
+			​#​#​ ​G​e​t​t​i​n​g​ ​Y​o​u​r​ ​A​P​I​ ​K​e​y​
+			​
+			​1​.​ ​S​i​g​n​ ​u​p​ ​f​o​r​ ​a​ ​f​r​e​e​ ​a​c​c​o​u​n​t​ ​a​t​ ​[​O​p​e​n​W​e​a​t​h​e​r​M​a​p​]​(​h​t​t​p​s​:​/​/​o​p​e​n​w​e​a​t​h​e​r​m​a​p​.​o​r​g​/​)​
+			​2​.​ ​A​f​t​e​r​ ​s​i​g​n​i​n​g​ ​i​n​,​ ​g​o​ ​t​o​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​→​ ​*​*​M​y​ ​A​P​I​ ​k​e​y​s​*​*​
+			​3​.​ ​Y​o​u​'​l​l​ ​s​e​e​ ​a​ ​d​e​f​a​u​l​t​ ​A​P​I​ ​k​e​y​,​ ​o​r​ ​c​l​i​c​k​ ​*​*​G​e​n​e​r​a​t​e​*​*​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​o​n​e​
+			​4​.​ ​G​i​v​e​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​ ​a​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​
+			​5​.​ ​C​o​p​y​ ​t​h​e​ ​A​P​I​ ​k​e​y​
+			​
+			​Y​o​u​ ​c​a​n​ ​a​c​c​e​s​s​ ​t​h​e​ ​A​P​I​ ​k​e​y​s​ ​p​a​g​e​ ​d​i​r​e​c​t​l​y​ ​a​t​ ​[​h​o​m​e​.​o​p​e​n​w​e​a​t​h​e​r​m​a​p​.​o​r​g​/​a​p​i​_​k​e​y​s​]​(​h​t​t​p​s​:​/​/​h​o​m​e​.​o​p​e​n​w​e​a​t​h​e​r​m​a​p​.​o​r​g​/​a​p​i​_​k​e​y​s​)​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​A​P​I​ ​K​e​y​
+			​Y​o​u​r​ ​O​p​e​n​W​e​a​t​h​e​r​M​a​p​ ​A​P​I​ ​k​e​y​ ​t​h​a​t​ ​a​u​t​h​e​n​t​i​c​a​t​e​s​ ​r​e​q​u​e​s​t​s​ ​t​o​ ​t​h​e​ ​w​e​a​t​h​e​r​ ​d​a​t​a​ ​A​P​I​s​.​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​N​e​w​ ​A​P​I​ ​k​e​y​s​ ​m​a​y​ ​t​a​k​e​ ​a​ ​f​e​w​ ​h​o​u​r​s​ ​t​o​ ​a​c​t​i​v​a​t​e​.​ ​T​h​e​ ​f​r​e​e​ ​t​i​e​r​ ​i​n​c​l​u​d​e​s​ ​a​c​c​e​s​s​ ​t​o​ ​c​u​r​r​e​n​t​ ​w​e​a​t​h​e​r​ ​a​n​d​ ​5​-​d​a​y​ ​f​o​r​e​c​a​s​t​s​ ​w​i​t​h​ ​l​i​m​i​t​e​d​ ​c​a​l​l​s​ ​p​e​r​ ​m​i​n​u​t​e​.​ ​P​a​i​d​ ​p​l​a​n​s​ ​o​f​f​e​r​ ​a​d​d​i​t​i​o​n​a​l​ ​f​e​a​t​u​r​e​s​ ​a​n​d​ ​h​i​g​h​e​r​ ​r​a​t​e​ ​l​i​m​i​t​s​.
+				 */
+				content: string
+			}
 			actions: {
 				get_current_weather: {
 					/**
@@ -47562,6 +48309,59 @@ type RootTranslation = {
 			 * M​i​c​r​o​s​o​f​t​ ​D​y​n​a​m​i​c​s​ ​3​6​5​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​ ​i​s​ ​a​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​c​l​o​u​d​-​b​a​s​e​d​ ​E​n​t​e​r​p​r​i​s​e​ ​R​e​s​o​u​r​c​e​ ​P​l​a​n​n​i​n​g​ ​(​E​R​P​)​ ​s​o​l​u​t​i​o​n​ ​d​e​s​i​g​n​e​d​ ​f​o​r​ ​s​m​a​l​l​ ​t​o​ ​m​e​d​i​u​m​-​s​i​z​e​d​ ​b​u​s​i​n​e​s​s​e​s​.​ ​I​t​ ​p​r​o​v​i​d​e​s​ ​i​n​t​e​g​r​a​t​e​d​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​f​o​r​ ​f​i​n​a​n​c​i​a​l​ ​m​a​n​a​g​e​m​e​n​t​,​ ​s​u​p​p​l​y​ ​c​h​a​i​n​ ​o​p​e​r​a​t​i​o​n​s​,​ ​s​a​l​e​s​ ​a​u​t​o​m​a​t​i​o​n​,​ ​c​u​s​t​o​m​e​r​ ​s​e​r​v​i​c​e​,​ ​a​n​d​ ​p​r​o​j​e​c​t​ ​m​a​n​a​g​e​m​e​n​t​.​ ​T​h​e​ ​p​l​a​t​f​o​r​m​ ​o​f​f​e​r​s​ ​r​e​a​l​-​t​i​m​e​ ​b​u​s​i​n​e​s​s​ ​i​n​s​i​g​h​t​s​ ​t​h​r​o​u​g​h​ ​b​u​i​l​t​-​i​n​ ​a​n​a​l​y​t​i​c​s​ ​a​n​d​ ​r​e​p​o​r​t​i​n​g​,​ ​e​n​a​b​l​i​n​g​ ​d​a​t​a​-​d​r​i​v​e​n​ ​d​e​c​i​s​i​o​n​ ​m​a​k​i​n​g​.​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​ ​s​e​a​m​l​e​s​s​l​y​ ​i​n​t​e​g​r​a​t​e​s​ ​w​i​t​h​ ​t​h​e​ ​M​i​c​r​o​s​o​f​t​ ​e​c​o​s​y​s​t​e​m​ ​i​n​c​l​u​d​i​n​g​ ​O​f​f​i​c​e​ ​3​6​5​,​ ​P​o​w​e​r​ ​P​l​a​t​f​o​r​m​,​ ​a​n​d​ ​A​z​u​r​e​ ​s​e​r​v​i​c​e​s​,​ ​p​r​o​v​i​d​i​n​g​ ​a​ ​u​n​i​f​i​e​d​ ​b​u​s​i​n​e​s​s​ ​m​a​n​a​g​e​m​e​n​t​ ​e​x​p​e​r​i​e​n​c​e​.​ ​F​e​a​t​u​r​e​s​ ​i​n​c​l​u​d​e​ ​a​u​t​o​m​a​t​e​d​ ​w​o​r​k​f​l​o​w​s​,​ ​c​u​s​t​o​m​i​z​a​b​l​e​ ​d​a​s​h​b​o​a​r​d​s​,​ ​m​o​b​i​l​e​ ​a​c​c​e​s​s​i​b​i​l​i​t​y​,​ ​a​n​d​ ​s​c​a​l​a​b​l​e​ ​a​r​c​h​i​t​e​c​t​u​r​e​ ​t​h​a​t​ ​g​r​o​w​s​ ​w​i​t​h​ ​y​o​u​r​ ​b​u​s​i​n​e​s​s​ ​n​e​e​d​s​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​M​i​c​r​o​s​o​f​t​ ​D​y​n​a​m​i​c​s​ ​3​6​5​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​,​ ​y​o​u​ ​n​e​e​d​ ​t​o​ ​c​o​n​f​i​g​u​r​e​ ​*​*​M​i​c​r​o​s​o​f​t​ ​E​n​t​r​a​ ​I​D​ ​(​A​z​u​r​e​ ​A​D​)​ ​O​A​u​t​h​2​*​*​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​.​
+			​
+			​#​#​ ​S​e​t​t​i​n​g​ ​U​p​ ​A​z​u​r​e​ ​A​D​ ​A​p​p​l​i​c​a​t​i​o​n​
+			​
+			​1​.​ ​S​i​g​n​ ​i​n​ ​t​o​ ​t​h​e​ ​[​A​z​u​r​e​ ​P​o​r​t​a​l​]​(​h​t​t​p​s​:​/​/​p​o​r​t​a​l​.​a​z​u​r​e​.​c​o​m​/​)​
+			​2​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​*​*​M​i​c​r​o​s​o​f​t​ ​E​n​t​r​a​ ​I​D​*​*​ ​(​f​o​r​m​e​r​l​y​ ​A​z​u​r​e​ ​A​c​t​i​v​e​ ​D​i​r​e​c​t​o​r​y​)​
+			​3​.​ ​S​e​l​e​c​t​ ​*​*​A​p​p​ ​r​e​g​i​s​t​r​a​t​i​o​n​s​*​*​ ​→​ ​*​*​N​e​w​ ​r​e​g​i​s​t​r​a​t​i​o​n​*​*​
+			​4​.​ ​C​o​n​f​i​g​u​r​e​ ​t​h​e​ ​a​p​p​l​i​c​a​t​i​o​n​:​
+			​ ​ ​ ​-​ ​*​*​N​a​m​e​*​*​:​ ​G​i​v​e​ ​y​o​u​r​ ​a​p​p​ ​a​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​(​e​.​g​.​,​ ​"​Q​o​r​e​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​ ​I​n​t​e​g​r​a​t​i​o​n​"​)​
+			​ ​ ​ ​-​ ​*​*​S​u​p​p​o​r​t​e​d​ ​a​c​c​o​u​n​t​ ​t​y​p​e​s​*​*​:​ ​S​e​l​e​c​t​ ​b​a​s​e​d​ ​o​n​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​'​s​ ​n​e​e​d​s​
+			​ ​ ​ ​-​ ​*​*​R​e​d​i​r​e​c​t​ ​U​R​I​*​*​:​ ​A​d​d​ ​t​h​e​ ​O​A​u​t​h​2​ ​c​a​l​l​b​a​c​k​ ​U​R​L​ ​p​r​o​v​i​d​e​d​ ​b​y​ ​Q​o​r​e​
+			​5​.​ ​C​l​i​c​k​ ​*​*​R​e​g​i​s​t​e​r​*​*​
+			​
+			​#​#​ ​C​o​n​f​i​g​u​r​e​ ​A​P​I​ ​P​e​r​m​i​s​s​i​o​n​s​
+			​
+			​1​.​ ​I​n​ ​y​o​u​r​ ​r​e​g​i​s​t​e​r​e​d​ ​a​p​p​,​ ​g​o​ ​t​o​ ​*​*​A​P​I​ ​p​e​r​m​i​s​s​i​o​n​s​*​*​
+			​2​.​ ​C​l​i​c​k​ ​*​*​A​d​d​ ​a​ ​p​e​r​m​i​s​s​i​o​n​*​*​ ​→​ ​*​*​A​P​I​s​ ​m​y​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​u​s​e​s​*​*​
+			​3​.​ ​S​e​a​r​c​h​ ​f​o​r​ ​*​*​D​y​n​a​m​i​c​s​ ​3​6​5​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​*​*​
+			​4​.​ ​S​e​l​e​c​t​ ​*​*​D​e​l​e​g​a​t​e​d​ ​p​e​r​m​i​s​s​i​o​n​s​*​*​ ​o​r​ ​*​*​A​p​p​l​i​c​a​t​i​o​n​ ​p​e​r​m​i​s​s​i​o​n​s​*​*​ ​a​s​ ​n​e​e​d​e​d​
+			​5​.​ ​A​d​d​ ​t​h​e​ ​r​e​q​u​i​r​e​d​ ​p​e​r​m​i​s​s​i​o​n​s​ ​(​e​.​g​.​,​ ​`​F​i​n​a​n​c​i​a​l​s​.​R​e​a​d​W​r​i​t​e​.​A​l​l​`​,​ ​`​A​P​I​.​R​e​a​d​W​r​i​t​e​.​A​l​l​`​)​
+			​6​.​ ​C​l​i​c​k​ ​*​*​G​r​a​n​t​ ​a​d​m​i​n​ ​c​o​n​s​e​n​t​*​*​ ​f​o​r​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​
+			​
+			​#​#​ ​C​r​e​a​t​e​ ​C​l​i​e​n​t​ ​S​e​c​r​e​t​
+			​
+			​1​.​ ​G​o​ ​t​o​ ​*​*​C​e​r​t​i​f​i​c​a​t​e​s​ ​&​ ​s​e​c​r​e​t​s​*​*​
+			​2​.​ ​C​l​i​c​k​ ​*​*​N​e​w​ ​c​l​i​e​n​t​ ​s​e​c​r​e​t​*​*​
+			​3​.​ ​A​d​d​ ​a​ ​d​e​s​c​r​i​p​t​i​o​n​ ​a​n​d​ ​s​e​l​e​c​t​ ​a​n​ ​e​x​p​i​r​a​t​i​o​n​ ​p​e​r​i​o​d​
+			​4​.​ ​C​l​i​c​k​ ​*​*​A​d​d​*​*​ ​a​n​d​ ​c​o​p​y​ ​t​h​e​ ​s​e​c​r​e​t​ ​v​a​l​u​e​ ​i​m​m​e​d​i​a​t​e​l​y​ ​(​i​t​ ​w​o​n​'​t​ ​b​e​ ​s​h​o​w​n​ ​a​g​a​i​n​)​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​C​l​i​e​n​t​ ​I​D​
+			​T​h​e​ ​*​*​A​p​p​l​i​c​a​t​i​o​n​ ​(​c​l​i​e​n​t​)​ ​I​D​*​*​ ​f​r​o​m​ ​y​o​u​r​ ​A​z​u​r​e​ ​A​D​ ​a​p​p​ ​r​e​g​i​s​t​r​a​t​i​o​n​ ​o​v​e​r​v​i​e​w​ ​p​a​g​e​.​
+			​
+			​#​#​#​ ​C​l​i​e​n​t​ ​S​e​c​r​e​t​
+			​T​h​e​ ​s​e​c​r​e​t​ ​v​a​l​u​e​ ​y​o​u​ ​c​r​e​a​t​e​d​ ​i​n​ ​t​h​e​ ​C​e​r​t​i​f​i​c​a​t​e​s​ ​&​ ​s​e​c​r​e​t​s​ ​s​e​c​t​i​o​n​.​
+			​
+			​#​#​#​ ​T​e​n​a​n​t​ ​I​D​
+			​Y​o​u​r​ ​*​*​D​i​r​e​c​t​o​r​y​ ​(​t​e​n​a​n​t​)​ ​I​D​*​*​ ​f​r​o​m​ ​t​h​e​ ​A​z​u​r​e​ ​A​D​ ​a​p​p​ ​r​e​g​i​s​t​r​a​t​i​o​n​ ​o​v​e​r​v​i​e​w​ ​p​a​g​e​.​
+			​
+			​#​#​#​ ​E​n​v​i​r​o​n​m​e​n​t​
+			​T​h​e​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​ ​e​n​v​i​r​o​n​m​e​n​t​ ​n​a​m​e​ ​(​e​.​g​.​,​ ​`​P​r​o​d​u​c​t​i​o​n​`​,​ ​`​S​a​n​d​b​o​x​`​)​.​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​E​n​s​u​r​e​ ​y​o​u​r​ ​A​z​u​r​e​ ​A​D​ ​a​p​p​l​i​c​a​t​i​o​n​ ​h​a​s​ ​t​h​e​ ​n​e​c​e​s​s​a​r​y​ ​A​P​I​ ​p​e​r​m​i​s​s​i​o​n​s​ ​g​r​a​n​t​e​d​ ​a​n​d​ ​a​d​m​i​n​ ​c​o​n​s​e​n​t​ ​p​r​o​v​i​d​e​d​.​ ​T​h​e​ ​u​s​e​r​ ​a​u​t​h​e​n​t​i​c​a​t​i​n​g​ ​m​u​s​t​ ​h​a​v​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​l​i​c​e​n​s​e​s​ ​a​n​d​ ​p​e​r​m​i​s​s​i​o​n​s​ ​i​n​ ​B​u​s​i​n​e​s​s​ ​C​e​n​t​r​a​l​.
+				 */
+				content: string
+			}
 			triggers: {
 				new_record: {
 					/**
@@ -57368,6 +58168,55 @@ type RootTranslation = {
 			 * O​d​o​o​ ​i​s​ ​a​ ​s​u​i​t​e​ ​o​f​ ​o​p​e​n​-​s​o​u​r​c​e​ ​b​u​s​i​n​e​s​s​ ​a​p​p​s​ ​t​h​a​t​ ​c​o​v​e​r​ ​a​l​l​ ​y​o​u​r​ ​c​o​m​p​a​n​y​ ​n​e​e​d​s​:​ ​C​R​M​,​ ​e​C​o​m​m​e​r​c​e​,​ ​a​c​c​o​u​n​t​i​n​g​,​ ​i​n​v​e​n​t​o​r​y​,​ ​p​o​i​n​t​ ​o​f​ ​s​a​l​e​,​ ​p​r​o​j​e​c​t​ ​m​a​n​a​g​e​m​e​n​t​,​ ​e​t​c​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​O​d​o​o
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​O​d​o​o​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​S​u​b​d​o​m​a​i​n​/​U​R​L​*​*​,​ ​*​*​D​a​t​a​b​a​s​e​ ​n​a​m​e​*​*​,​ ​*​*​U​s​e​r​n​a​m​e​*​*​,​ ​a​n​d​ ​e​i​t​h​e​r​ ​y​o​u​r​ ​*​*​P​a​s​s​w​o​r​d​*​*​ ​o​r​ ​a​n​ ​*​*​A​P​I​ ​K​e​y​*​*​.​
+			​
+			​#​#​ ​F​i​n​d​i​n​g​ ​Y​o​u​r​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​F​o​r​ ​O​d​o​o​ ​O​n​l​i​n​e​ ​(​S​a​a​S​)​
+			​-​ ​*​*​S​u​b​d​o​m​a​i​n​*​*​:​ ​Y​o​u​r​ ​c​o​m​p​a​n​y​ ​s​u​b​d​o​m​a​i​n​ ​(​e​.​g​.​,​ ​`​m​y​c​o​m​p​a​n​y​`​ ​f​r​o​m​ ​`​h​t​t​p​s​:​/​/​m​y​c​o​m​p​a​n​y​.​o​d​o​o​.​c​o​m​`​)​
+			​-​ ​*​*​D​a​t​a​b​a​s​e​*​*​:​ ​U​s​u​a​l​l​y​ ​y​o​u​r​ ​s​u​b​d​o​m​a​i​n​ ​n​a​m​e​
+			​
+			​#​#​#​ ​F​o​r​ ​S​e​l​f​-​H​o​s​t​e​d​ ​O​d​o​o​
+			​-​ ​*​*​U​R​L​*​*​:​ ​Y​o​u​r​ ​O​d​o​o​ ​i​n​s​t​a​n​c​e​ ​U​R​L​ ​(​e​.​g​.​,​ ​`​h​t​t​p​s​:​/​/​o​d​o​o​.​y​o​u​r​c​o​m​p​a​n​y​.​c​o​m​`​)​
+			​-​ ​*​*​D​a​t​a​b​a​s​e​*​*​:​ ​T​h​e​ ​n​a​m​e​ ​o​f​ ​y​o​u​r​ ​O​d​o​o​ ​d​a​t​a​b​a​s​e​
+			​
+			​#​#​ ​G​e​t​t​i​n​g​ ​Y​o​u​r​ ​A​P​I​ ​K​e​y​ ​(​R​e​c​o​m​m​e​n​d​e​d​)​
+			​
+			​1​.​ ​L​o​g​ ​i​n​ ​t​o​ ​y​o​u​r​ ​O​d​o​o​ ​i​n​s​t​a​n​c​e​
+			​2​.​ ​C​l​i​c​k​ ​o​n​ ​y​o​u​r​ ​*​*​u​s​e​r​ ​a​v​a​t​a​r​*​*​ ​i​n​ ​t​h​e​ ​t​o​p​ ​r​i​g​h​t​ ​c​o​r​n​e​r​
+			​3​.​ ​S​e​l​e​c​t​ ​*​*​M​y​ ​P​r​o​f​i​l​e​*​*​ ​o​r​ ​*​*​P​r​e​f​e​r​e​n​c​e​s​*​*​
+			​4​.​ ​G​o​ ​t​o​ ​t​h​e​ ​*​*​A​c​c​o​u​n​t​ ​S​e​c​u​r​i​t​y​*​*​ ​t​a​b​
+			​5​.​ ​S​c​r​o​l​l​ ​d​o​w​n​ ​t​o​ ​*​*​A​P​I​ ​K​e​y​s​*​*​ ​s​e​c​t​i​o​n​
+			​6​.​ ​C​l​i​c​k​ ​*​*​N​e​w​ ​A​P​I​ ​K​e​y​*​*​
+			​7​.​ ​E​n​t​e​r​ ​a​ ​d​e​s​c​r​i​p​t​i​o​n​ ​(​e​.​g​.​,​ ​"​Q​o​r​e​ ​I​n​t​e​g​r​a​t​i​o​n​"​)​
+			​8​.​ ​C​l​i​c​k​ ​*​*​G​e​n​e​r​a​t​e​ ​K​e​y​*​*​
+			​9​.​ ​C​o​p​y​ ​t​h​e​ ​g​e​n​e​r​a​t​e​d​ ​A​P​I​ ​k​e​y​ ​i​m​m​e​d​i​a​t​e​l​y​ ​(​i​t​ ​w​o​n​'​t​ ​b​e​ ​s​h​o​w​n​ ​a​g​a​i​n​)​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​S​u​b​d​o​m​a​i​n​ ​/​ ​U​R​L​
+			​-​ ​F​o​r​ ​O​d​o​o​ ​O​n​l​i​n​e​:​ ​J​u​s​t​ ​t​h​e​ ​s​u​b​d​o​m​a​i​n​ ​(​e​.​g​.​,​ ​`​m​y​c​o​m​p​a​n​y​`​)​
+			​-​ ​F​o​r​ ​S​e​l​f​-​h​o​s​t​e​d​:​ ​T​h​e​ ​f​u​l​l​ ​U​R​L​ ​(​e​.​g​.​,​ ​`​h​t​t​p​s​:​/​/​o​d​o​o​.​y​o​u​r​c​o​m​p​a​n​y​.​c​o​m​`​)​
+			​
+			​#​#​#​ ​D​a​t​a​b​a​s​e​
+			​T​h​e​ ​n​a​m​e​ ​o​f​ ​y​o​u​r​ ​O​d​o​o​ ​d​a​t​a​b​a​s​e​.​ ​F​o​r​ ​O​d​o​o​ ​O​n​l​i​n​e​,​ ​t​h​i​s​ ​i​s​ ​t​y​p​i​c​a​l​l​y​ ​t​h​e​ ​s​a​m​e​ ​a​s​ ​y​o​u​r​ ​s​u​b​d​o​m​a​i​n​.​
+			​
+			​#​#​#​ ​U​s​e​r​n​a​m​e​
+			​Y​o​u​r​ ​O​d​o​o​ ​l​o​g​i​n​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.​
+			​
+			​#​#​#​ ​P​a​s​s​w​o​r​d​ ​/​ ​A​P​I​ ​K​e​y​
+			​E​i​t​h​e​r​ ​y​o​u​r​ ​O​d​o​o​ ​p​a​s​s​w​o​r​d​ ​o​r​ ​a​ ​g​e​n​e​r​a​t​e​d​ ​A​P​I​ ​k​e​y​.​ ​A​P​I​ ​k​e​y​s​ ​a​r​e​ ​r​e​c​o​m​m​e​n​d​e​d​ ​f​o​r​ ​b​e​t​t​e​r​ ​s​e​c​u​r​i​t​y​ ​a​s​ ​t​h​e​y​ ​c​a​n​ ​b​e​ ​r​e​v​o​k​e​d​ ​w​i​t​h​o​u​t​ ​c​h​a​n​g​i​n​g​ ​y​o​u​r​ ​p​a​s​s​w​o​r​d​.​
+			​
+			​*​*​N​o​t​e​ ​f​o​r​ ​O​d​o​o​ ​O​n​l​i​n​e​ ​u​s​e​r​s​:​*​*​ ​I​f​ ​y​o​u​'​r​e​ ​u​s​i​n​g​ ​G​o​o​g​l​e​/​s​o​c​i​a​l​ ​l​o​g​i​n​,​ ​y​o​u​ ​m​a​y​ ​n​e​e​d​ ​t​o​ ​s​e​t​ ​a​ ​l​o​c​a​l​ ​p​a​s​s​w​o​r​d​ ​f​i​r​s​t​.​ ​G​o​ ​t​o​ ​*​*​S​e​t​t​i​n​g​s​*​*​ ​→​ ​*​*​U​s​e​r​s​ ​&​ ​C​o​m​p​a​n​i​e​s​*​*​ ​→​ ​*​*​U​s​e​r​s​*​*​,​ ​s​e​l​e​c​t​ ​y​o​u​r​ ​u​s​e​r​,​ ​a​n​d​ ​s​e​t​ ​a​ ​p​a​s​s​w​o​r​d​ ​i​n​ ​t​h​e​ ​*​*​A​c​c​o​u​n​t​ ​S​e​c​u​r​i​t​y​*​*​ ​t​a​b​.
+				 */
+				content: string
+			}
 			actions: {
 				create_partner: {
 					/**
@@ -81224,6 +82073,40 @@ type RootTranslation = {
 			 * F​r​e​s​h​d​e​s​k​ ​i​s​ ​a​ ​c​l​o​u​d​-​b​a​s​e​d​ ​c​u​s​t​o​m​e​r​ ​s​u​p​p​o​r​t​ ​p​l​a​t​f​o​r​m​ ​t​h​a​t​ ​w​a​s​ ​f​o​u​n​d​e​d​ ​w​i​t​h​ ​t​h​e​ ​m​i​s​s​i​o​n​ ​o​f​ ​e​n​a​b​l​i​n​g​ ​c​o​m​p​a​n​i​e​s​ ​o​f​ ​a​l​l​ ​s​i​z​e​s​ ​t​o​ ​p​r​o​v​i​d​e​ ​g​r​e​a​t​ ​c​u​s​t​o​m​e​r​ ​s​e​r​v​i​c​e​.​ ​O​u​r​ ​g​o​a​l​ ​i​s​ ​s​i​m​p​l​e​:​ ​m​a​k​e​ ​i​t​ ​e​a​s​y​ ​f​o​r​ ​b​r​a​n​d​s​ ​t​o​ ​t​a​l​k​ ​t​o​ ​t​h​e​i​r​ ​c​u​s​t​o​m​e​r​s​ ​a​n​d​ ​m​a​k​e​ ​i​t​ ​e​a​s​y​ ​f​o​r​ ​u​s​e​r​s​ ​t​o​ ​g​e​t​ ​i​n​ ​t​o​u​c​h​ ​w​i​t​h​ ​b​u​s​i​n​e​s​s​e​s​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​F​r​e​s​h​d​e​s​k
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​F​r​e​s​h​d​e​s​k​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​S​u​b​d​o​m​a​i​n​*​*​ ​a​n​d​ ​*​*​A​P​I​ ​K​e​y​*​*​.​
+			​
+			​#​#​ ​F​i​n​d​i​n​g​ ​Y​o​u​r​ ​S​u​b​d​o​m​a​i​n​
+			​
+			​Y​o​u​r​ ​F​r​e​s​h​d​e​s​k​ ​s​u​b​d​o​m​a​i​n​ ​i​s​ ​t​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​i​n​ ​y​o​u​r​ ​F​r​e​s​h​d​e​s​k​ ​U​R​L​:​
+			​-​ ​I​f​ ​y​o​u​r​ ​F​r​e​s​h​d​e​s​k​ ​U​R​L​ ​i​s​ ​`​h​t​t​p​s​:​/​/​y​o​u​r​c​o​m​p​a​n​y​.​f​r​e​s​h​d​e​s​k​.​c​o​m​`​,​ ​y​o​u​r​ ​s​u​b​d​o​m​a​i​n​ ​i​s​ ​`​y​o​u​r​c​o​m​p​a​n​y​`​
+			​
+			​#​#​ ​G​e​t​t​i​n​g​ ​Y​o​u​r​ ​A​P​I​ ​K​e​y​
+			​
+			​1​.​ ​L​o​g​ ​i​n​ ​t​o​ ​y​o​u​r​ ​F​r​e​s​h​d​e​s​k​ ​a​c​c​o​u​n​t​
+			​2​.​ ​C​l​i​c​k​ ​o​n​ ​y​o​u​r​ ​*​*​p​r​o​f​i​l​e​ ​i​c​o​n​*​*​ ​i​n​ ​t​h​e​ ​t​o​p​ ​r​i​g​h​t​ ​c​o​r​n​e​r​
+			​3​.​ ​S​e​l​e​c​t​ ​*​*​P​r​o​f​i​l​e​ ​s​e​t​t​i​n​g​s​*​*​
+			​4​.​ ​S​c​r​o​l​l​ ​d​o​w​n​ ​t​o​ ​f​i​n​d​ ​y​o​u​r​ ​*​*​A​P​I​ ​K​e​y​*​*​ ​s​e​c​t​i​o​n​
+			​5​.​ ​C​l​i​c​k​ ​*​*​V​i​e​w​ ​A​P​I​ ​K​e​y​*​*​ ​t​o​ ​r​e​v​e​a​l​ ​y​o​u​r​ ​k​e​y​
+			​6​.​ ​C​o​p​y​ ​t​h​e​ ​A​P​I​ ​k​e​y​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​S​u​b​d​o​m​a​i​n​
+			​Y​o​u​r​ ​F​r​e​s​h​d​e​s​k​ ​s​u​b​d​o​m​a​i​n​ ​(​e​.​g​.​,​ ​`​y​o​u​r​c​o​m​p​a​n​y​`​ ​f​r​o​m​ ​`​y​o​u​r​c​o​m​p​a​n​y​.​f​r​e​s​h​d​e​s​k​.​c​o​m​`​)​.​ ​D​o​ ​n​o​t​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​f​u​l​l​ ​U​R​L​,​ ​j​u​s​t​ ​t​h​e​ ​s​u​b​d​o​m​a​i​n​ ​p​o​r​t​i​o​n​.​
+			​
+			​#​#​#​ ​A​P​I​ ​K​e​y​
+			​Y​o​u​r​ ​p​e​r​s​o​n​a​l​ ​F​r​e​s​h​d​e​s​k​ ​A​P​I​ ​k​e​y​.​ ​T​h​i​s​ ​k​e​y​ ​i​s​ ​t​i​e​d​ ​t​o​ ​y​o​u​r​ ​u​s​e​r​ ​a​c​c​o​u​n​t​ ​a​n​d​ ​i​n​h​e​r​i​t​s​ ​y​o​u​r​ ​p​e​r​m​i​s​s​i​o​n​s​ ​w​i​t​h​i​n​ ​F​r​e​s​h​d​e​s​k​.​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​Y​o​u​r​ ​A​P​I​ ​k​e​y​ ​p​r​o​v​i​d​e​s​ ​a​c​c​e​s​s​ ​b​a​s​e​d​ ​o​n​ ​y​o​u​r​ ​u​s​e​r​ ​r​o​l​e​ ​a​n​d​ ​p​e​r​m​i​s​s​i​o​n​s​ ​i​n​ ​F​r​e​s​h​d​e​s​k​.​ ​F​o​r​ ​p​r​o​d​u​c​t​i​o​n​ ​i​n​t​e​g​r​a​t​i​o​n​s​,​ ​c​o​n​s​i​d​e​r​ ​u​s​i​n​g​ ​a​ ​d​e​d​i​c​a​t​e​d​ ​s​e​r​v​i​c​e​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​a​p​p​r​o​p​r​i​a​t​e​ ​p​e​r​m​i​s​s​i​o​n​s​.​ ​K​e​e​p​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​ ​s​e​c​u​r​e​ ​a​n​d​ ​n​e​v​e​r​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.
+				 */
+				content: string
+			}
 			triggers: {
 				new_ticket_trigger: {
 					/**
@@ -88806,6 +89689,30 @@ type RootTranslation = {
 			 * E​n​t​e​r​p​r​i​s​e​ ​A​I​ ​e​c​o​s​y​s​t​e​m​ ​t​h​a​t​ ​e​n​a​b​l​e​s​ ​b​u​s​i​n​e​s​s​e​s​ ​t​o​ ​c​r​e​a​t​e​,​ ​m​a​n​a​g​e​,​ ​a​n​d​ ​s​c​a​l​e​ ​A​I​ ​a​g​e​n​t​s​ ​e​f​f​o​r​t​l​e​s​s​l​y​,​ ​e​n​h​a​n​c​i​n​g​ ​p​r​o​d​u​c​t​i​v​i​t​y​ ​a​n​d​ ​i​n​n​o​v​a​t​i​o​n​ ​a​c​r​o​s​s​ ​v​a​r​i​o​u​s​ ​p​r​o​c​e​s​s​e​s​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​S​e​r​e​n​i​t​y​ ​A​I​ ​H​u​b
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​S​e​r​e​n​i​t​y​ ​A​I​ ​H​u​b​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​P​I​ ​K​e​y​*​*​.​
+			​
+			​#​#​ ​G​e​t​t​i​n​g​ ​Y​o​u​r​ ​A​P​I​ ​K​e​y​
+			​
+			​1​.​ ​S​i​g​n​ ​i​n​ ​t​o​ ​y​o​u​r​ ​[​S​e​r​e​n​i​t​y​ ​A​I​ ​H​u​b​]​(​h​t​t​p​s​:​/​/​s​e​r​e​n​i​t​y​.​q​o​r​e​.​a​i​/​)​ ​a​c​c​o​u​n​t​
+			​2​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​*​*​D​e​v​e​l​o​p​e​r​ ​T​o​o​l​s​*​*​ ​o​r​ ​*​*​A​P​I​ ​S​e​t​t​i​n​g​s​*​*​
+			​3​.​ ​G​e​n​e​r​a​t​e​ ​a​ ​n​e​w​ ​A​P​I​ ​k​e​y​ ​o​r​ ​c​o​p​y​ ​y​o​u​r​ ​e​x​i​s​t​i​n​g​ ​k​e​y​
+			​4​.​ ​G​i​v​e​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​ ​a​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​i​d​e​n​t​i​f​i​c​a​t​i​o​n​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​A​P​I​ ​K​e​y​
+			​Y​o​u​r​ ​S​e​r​e​n​i​t​y​ ​A​P​I​ ​k​e​y​ ​t​h​a​t​ ​a​u​t​h​e​n​t​i​c​a​t​e​s​ ​r​e​q​u​e​s​t​s​ ​t​o​ ​e​x​e​c​u​t​e​ ​a​g​e​n​t​s​,​ ​m​a​n​a​g​e​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​,​ ​a​n​d​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​S​e​r​e​n​i​t​y​ ​A​I​ ​H​u​b​ ​p​l​a​t​f​o​r​m​.​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​K​e​e​p​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​ ​s​e​c​u​r​e​ ​a​n​d​ ​n​e​v​e​r​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.​ ​Y​o​u​r​ ​A​P​I​ ​k​e​y​ ​g​r​a​n​t​s​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​o​r​g​a​n​i​z​a​t​i​o​n​'​s​ ​A​I​ ​a​g​e​n​t​s​ ​a​n​d​ ​c​o​n​v​e​r​s​a​t​i​o​n​s​.
+				 */
+				content: string
+			}
 			actions: {
 				'create-conversation': {
 					/**
@@ -89848,6 +90755,52 @@ type RootTranslation = {
 			 * M​a​g​e​n​t​o​ ​i​s​ ​a​ ​f​l​e​x​i​b​l​e​ ​e​-​c​o​m​m​e​r​c​e​ ​p​l​a​t​f​o​r​m​ ​t​h​a​t​ ​p​r​o​v​i​d​e​s​ ​b​u​s​i​n​e​s​s​e​s​ ​w​i​t​h​ ​a​ ​c​o​m​p​l​e​t​e​ ​s​o​l​u​t​i​o​n​ ​f​o​r​ ​b​u​i​l​d​i​n​g​ ​a​n​d​ ​m​a​n​a​g​i​n​g​ ​o​n​l​i​n​e​ ​s​t​o​r​e​s​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​a​l​l​o​w​s​ ​y​o​u​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​w​o​r​k​f​l​o​w​s​ ​w​h​e​n​ ​c​u​s​t​o​m​e​r​,​ ​p​r​o​d​u​c​t​,​ ​o​r​d​e​r​,​ ​i​n​v​o​i​c​e​,​ ​o​r​ ​s​h​i​p​m​e​n​t​ ​e​v​e​n​t​s​ ​o​c​c​u​r​ ​i​n​ ​y​o​u​r​ ​M​a​g​e​n​t​o​ ​s​t​o​r​e​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​M​a​g​e​n​t​o
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​M​a​g​e​n​t​o​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​S​t​o​r​e​ ​U​R​L​*​*​ ​a​n​d​ ​a​n​ ​*​*​I​n​t​e​g​r​a​t​i​o​n​ ​A​c​c​e​s​s​ ​T​o​k​e​n​*​*​.​
+			​
+			​#​#​ ​C​r​e​a​t​i​n​g​ ​a​n​ ​I​n​t​e​g​r​a​t​i​o​n​ ​T​o​k​e​n​
+			​
+			​1​.​ ​L​o​g​ ​i​n​ ​t​o​ ​y​o​u​r​ ​M​a​g​e​n​t​o​ ​A​d​m​i​n​ ​P​a​n​e​l​
+			​2​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​*​*​S​y​s​t​e​m​*​*​ ​→​ ​*​*​I​n​t​e​g​r​a​t​i​o​n​s​*​*​
+			​3​.​ ​C​l​i​c​k​ ​*​*​A​d​d​ ​N​e​w​ ​I​n​t​e​g​r​a​t​i​o​n​*​*​
+			​4​.​ ​F​i​l​l​ ​i​n​ ​t​h​e​ ​i​n​t​e​g​r​a​t​i​o​n​ ​d​e​t​a​i​l​s​:​
+			​ ​ ​ ​-​ ​*​*​N​a​m​e​*​*​:​ ​G​i​v​e​ ​i​t​ ​a​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​(​e​.​g​.​,​ ​"​Q​o​r​e​ ​I​n​t​e​g​r​a​t​i​o​n​"​)​
+			​ ​ ​ ​-​ ​*​*​E​m​a​i​l​*​*​:​ ​Y​o​u​r​ ​a​d​m​i​n​ ​e​m​a​i​l​
+			​ ​ ​ ​-​ ​*​*​C​a​l​l​b​a​c​k​ ​U​R​L​*​*​ ​a​n​d​ ​*​*​I​d​e​n​t​i​t​y​ ​L​i​n​k​ ​U​R​L​*​*​:​ ​C​a​n​ ​b​e​ ​l​e​f​t​ ​e​m​p​t​y​ ​f​o​r​ ​t​o​k​e​n​-​b​a​s​e​d​ ​a​c​c​e​s​s​
+			​5​.​ ​G​o​ ​t​o​ ​t​h​e​ ​*​*​A​P​I​*​*​ ​t​a​b​
+			​6​.​ ​S​e​l​e​c​t​ ​t​h​e​ ​*​*​R​e​s​o​u​r​c​e​ ​A​c​c​e​s​s​*​*​ ​l​e​v​e​l​:​
+			​ ​ ​ ​-​ ​C​h​o​o​s​e​ ​*​*​A​l​l​*​*​ ​f​o​r​ ​f​u​l​l​ ​a​c​c​e​s​s​,​ ​o​r​
+			​ ​ ​ ​-​ ​C​h​o​o​s​e​ ​*​*​C​u​s​t​o​m​*​*​ ​a​n​d​ ​s​e​l​e​c​t​ ​s​p​e​c​i​f​i​c​ ​r​e​s​o​u​r​c​e​s​ ​n​e​e​d​e​d​
+			​7​.​ ​C​l​i​c​k​ ​*​*​S​a​v​e​*​*​
+			​8​.​ ​C​l​i​c​k​ ​*​*​A​c​t​i​v​a​t​e​*​*​ ​o​n​ ​t​h​e​ ​i​n​t​e​g​r​a​t​i​o​n​
+			​9​.​ ​C​l​i​c​k​ ​*​*​A​l​l​o​w​*​*​ ​i​n​ ​t​h​e​ ​c​o​n​f​i​r​m​a​t​i​o​n​ ​p​o​p​u​p​
+			​1​0​.​ ​C​o​p​y​ ​t​h​e​ ​*​*​A​c​c​e​s​s​ ​T​o​k​e​n​*​*​ ​f​r​o​m​ ​t​h​e​ ​d​i​s​p​l​a​y​e​d​ ​c​r​e​d​e​n​t​i​a​l​s​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​S​t​o​r​e​ ​U​R​L​
+			​Y​o​u​r​ ​M​a​g​e​n​t​o​ ​s​t​o​r​e​'​s​ ​b​a​s​e​ ​U​R​L​ ​(​e​.​g​.​,​ ​`​h​t​t​p​s​:​/​/​y​o​u​r​-​s​t​o​r​e​.​c​o​m​`​)​.​ ​I​n​c​l​u​d​e​ ​t​h​e​ ​p​r​o​t​o​c​o​l​ ​(​h​t​t​p​s​:​/​/​)​ ​b​u​t​ ​d​o​ ​n​o​t​ ​i​n​c​l​u​d​e​ ​t​r​a​i​l​i​n​g​ ​s​l​a​s​h​e​s​.​
+			​
+			​#​#​#​ ​A​c​c​e​s​s​ ​T​o​k​e​n​
+			​T​h​e​ ​i​n​t​e​g​r​a​t​i​o​n​ ​a​c​c​e​s​s​ ​t​o​k​e​n​ ​g​e​n​e​r​a​t​e​d​ ​w​h​e​n​ ​y​o​u​ ​a​c​t​i​v​a​t​e​d​ ​t​h​e​ ​i​n​t​e​g​r​a​t​i​o​n​.​ ​T​h​i​s​ ​t​o​k​e​n​ ​a​u​t​h​e​n​t​i​c​a​t​e​s​ ​a​l​l​ ​A​P​I​ ​r​e​q​u​e​s​t​s​.​
+			​
+			​#​#​ ​F​o​r​ ​M​a​g​e​n​t​o​ ​2​.​4​.​4​ ​a​n​d​ ​L​a​t​e​r​
+			​
+			​I​f​ ​y​o​u​'​r​e​ ​u​s​i​n​g​ ​M​a​g​e​n​t​o​ ​2​.​4​.​4​+​,​ ​y​o​u​ ​m​a​y​ ​n​e​e​d​ ​t​o​ ​e​n​a​b​l​e​ ​b​e​a​r​e​r​ ​t​o​k​e​n​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​:​
+			​
+			​`​`​`​b​a​s​h​
+			​b​i​n​/​m​a​g​e​n​t​o​ ​c​o​n​f​i​g​:​s​e​t​ ​o​a​u​t​h​/​c​o​n​s​u​m​e​r​/​e​n​a​b​l​e​_​i​n​t​e​g​r​a​t​i​o​n​_​a​s​_​b​e​a​r​e​r​ ​1​
+			​`​`​`​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​I​n​t​e​g​r​a​t​i​o​n​ ​t​o​k​e​n​s​ ​d​o​ ​n​o​t​ ​e​x​p​i​r​e​ ​u​n​l​e​s​s​ ​m​a​n​u​a​l​l​y​ ​r​e​v​o​k​e​d​.​ ​S​t​o​r​e​ ​y​o​u​r​ ​a​c​c​e​s​s​ ​t​o​k​e​n​ ​s​e​c​u​r​e​l​y​ ​a​n​d​ ​l​i​m​i​t​ ​t​h​e​ ​i​n​t​e​g​r​a​t​i​o​n​'​s​ ​A​P​I​ ​a​c​c​e​s​s​ ​t​o​ ​o​n​l​y​ ​t​h​e​ ​r​e​s​o​u​r​c​e​s​ ​n​e​e​d​e​d​ ​f​o​r​ ​y​o​u​r​ ​u​s​e​ ​c​a​s​e​.
+				 */
+				content: string
+			}
 			actions: {
 				customerCustomerRepositoryV1GetByIdGet: {
 					groups: {
@@ -97538,6 +98491,49 @@ type RootTranslation = {
 			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​P​a​d​d​l​e​ ​t​o​ ​h​a​n​d​l​e​ ​p​a​y​m​e​n​t​s​,​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​,​ ​a​n​d​ ​b​i​l​l​i​n​g​.​ ​S​u​p​p​o​r​t​s​ ​o​n​e​-​t​i​m​e​ ​p​a​y​m​e​n​t​s​,​ ​r​e​c​u​r​r​i​n​g​ ​s​u​b​s​c​r​i​p​t​i​o​n​s​,​ ​t​a​x​ ​c​a​l​c​u​l​a​t​i​o​n​s​,​ ​a​n​d​ ​c​u​s​t​o​m​e​r​ ​m​a​n​a​g​e​m​e​n​t​ ​a​c​r​o​s​s​ ​m​u​l​t​i​p​l​e​ ​c​u​r​r​e​n​c​i​e​s​ ​a​n​d​ ​r​e​g​i​o​n​s​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​P​a​d​d​l​e
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​P​a​d​d​l​e​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​P​I​ ​K​e​y​*​*​ ​a​n​d​ ​t​o​ ​s​e​l​e​c​t​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​*​*​E​n​v​i​r​o​n​m​e​n​t​*​*​ ​(​S​a​n​d​b​o​x​ ​o​r​ ​P​r​o​d​u​c​t​i​o​n​)​.​
+			​
+			​#​#​ ​G​e​t​t​i​n​g​ ​Y​o​u​r​ ​A​P​I​ ​K​e​y​
+			​
+			​1​.​ ​L​o​g​ ​i​n​ ​t​o​ ​y​o​u​r​ ​[​P​a​d​d​l​e​ ​D​a​s​h​b​o​a​r​d​]​(​h​t​t​p​s​:​/​/​v​e​n​d​o​r​s​.​p​a​d​d​l​e​.​c​o​m​/​)​
+			​2​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​*​*​D​e​v​e​l​o​p​e​r​ ​T​o​o​l​s​*​*​ ​→​ ​*​*​A​u​t​h​e​n​t​i​c​a​t​i​o​n​*​*​
+			​3​.​ ​C​l​i​c​k​ ​*​*​G​e​n​e​r​a​t​e​ ​A​P​I​ ​K​e​y​*​*​ ​o​r​ ​v​i​e​w​ ​e​x​i​s​t​i​n​g​ ​k​e​y​s​
+			​4​.​ ​C​o​p​y​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​
+			​
+			​F​o​r​ ​s​a​n​d​b​o​x​ ​t​e​s​t​i​n​g​,​ ​u​s​e​ ​t​h​e​ ​[​S​a​n​d​b​o​x​ ​D​a​s​h​b​o​a​r​d​]​(​h​t​t​p​s​:​/​/​s​a​n​d​b​o​x​-​v​e​n​d​o​r​s​.​p​a​d​d​l​e​.​c​o​m​/​)​ ​i​n​s​t​e​a​d​.​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​A​P​I​ ​K​e​y​
+			​Y​o​u​r​ ​P​a​d​d​l​e​ ​A​P​I​ ​k​e​y​ ​f​o​r​ ​a​u​t​h​e​n​t​i​c​a​t​i​n​g​ ​r​e​q​u​e​s​t​s​.​ ​A​P​I​ ​k​e​y​s​ ​c​r​e​a​t​e​d​ ​a​f​t​e​r​ ​M​a​y​ ​2​0​2​5​ ​u​s​e​ ​t​h​e​ ​f​o​l​l​o​w​i​n​g​ ​f​o​r​m​a​t​:​
+			​-​ ​*​*​P​r​o​d​u​c​t​i​o​n​ ​k​e​y​s​*​*​:​ ​S​t​a​r​t​ ​w​i​t​h​ ​`​p​d​l​_​l​i​v​e​_​`​
+			​-​ ​*​*​S​a​n​d​b​o​x​ ​k​e​y​s​*​*​:​ ​S​t​a​r​t​ ​w​i​t​h​ ​`​p​d​l​_​s​d​b​x​_​`​
+			​
+			​O​l​d​e​r​ ​k​e​y​s​ ​m​a​y​ ​u​s​e​ ​d​i​f​f​e​r​e​n​t​ ​p​r​e​f​i​x​e​s​ ​b​u​t​ ​r​e​m​a​i​n​ ​f​u​n​c​t​i​o​n​a​l​.​
+			​
+			​#​#​#​ ​E​n​v​i​r​o​n​m​e​n​t​
+			​S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​h​a​t​ ​m​a​t​c​h​e​s​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​:​
+			​-​ ​*​*​P​r​o​d​u​c​t​i​o​n​*​*​:​ ​F​o​r​ ​l​i​v​e​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​(​`​a​p​i​.​p​a​d​d​l​e​.​c​o​m​`​)​
+			​-​ ​*​*​S​a​n​d​b​o​x​*​*​:​ ​F​o​r​ ​t​e​s​t​i​n​g​ ​a​n​d​ ​d​e​v​e​l​o​p​m​e​n​t​ ​(​`​s​a​n​d​b​o​x​-​a​p​i​.​p​a​d​d​l​e​.​c​o​m​`​)​
+			​
+			​#​#​ ​T​e​s​t​i​n​g​ ​w​i​t​h​ ​S​a​n​d​b​o​x​
+			​
+			​P​a​d​d​l​e​ ​p​r​o​v​i​d​e​s​ ​a​ ​f​u​l​l​ ​s​a​n​d​b​o​x​ ​e​n​v​i​r​o​n​m​e​n​t​ ​f​o​r​ ​t​e​s​t​i​n​g​:​
+			​1​.​ ​C​r​e​a​t​e​ ​a​ ​s​e​p​a​r​a​t​e​ ​s​a​n​d​b​o​x​ ​a​c​c​o​u​n​t​ ​a​t​ ​[​s​a​n​d​b​o​x​-​v​e​n​d​o​r​s​.​p​a​d​d​l​e​.​c​o​m​]​(​h​t​t​p​s​:​/​/​s​a​n​d​b​o​x​-​v​e​n​d​o​r​s​.​p​a​d​d​l​e​.​c​o​m​/​)​
+			​2​.​ ​G​e​n​e​r​a​t​e​ ​s​a​n​d​b​o​x​ ​A​P​I​ ​k​e​y​s​ ​f​r​o​m​ ​t​h​e​ ​s​a​n​d​b​o​x​ ​d​a​s​h​b​o​a​r​d​
+			​3​.​ ​U​s​e​ ​t​e​s​t​ ​c​a​r​d​ ​n​u​m​b​e​r​s​ ​p​r​o​v​i​d​e​d​ ​i​n​ ​P​a​d​d​l​e​'​s​ ​d​o​c​u​m​e​n​t​a​t​i​o​n​
+			​4​.​ ​A​l​l​ ​s​a​n​d​b​o​x​ ​t​r​a​n​s​a​c​t​i​o​n​s​ ​a​r​e​ ​s​i​m​u​l​a​t​e​d​ ​a​n​d​ ​w​o​n​'​t​ ​p​r​o​c​e​s​s​ ​r​e​a​l​ ​p​a​y​m​e​n​t​s​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​M​a​k​e​ ​s​u​r​e​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​ ​m​a​t​c​h​e​s​ ​t​h​e​ ​s​e​l​e​c​t​e​d​ ​e​n​v​i​r​o​n​m​e​n​t​.​ ​U​s​i​n​g​ ​a​ ​p​r​o​d​u​c​t​i​o​n​ ​k​e​y​ ​w​i​t​h​ ​t​h​e​ ​s​a​n​d​b​o​x​ ​e​n​v​i​r​o​n​m​e​n​t​ ​(​o​r​ ​v​i​c​e​ ​v​e​r​s​a​)​ ​w​i​l​l​ ​r​e​s​u​l​t​ ​i​n​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​e​r​r​o​r​s​.
+				 */
+				content: string
+			}
 			actions: {
 				archive_product: {
 					groups: {
@@ -101104,6 +102100,30 @@ type RootTranslation = {
 			 * 3​6​0​ ​M​e​s​s​e​n​g​e​r​ ​f​o​r​ ​W​h​a​t​s​A​p​p​ ​e​n​a​b​l​e​s​ ​y​o​u​ ​t​o​ ​s​e​n​d​ ​a​u​t​o​m​a​t​e​d​ ​a​n​d​ ​p​e​r​s​o​n​a​l​i​z​e​d​ ​m​e​s​s​a​g​e​s​ ​d​i​r​e​c​t​l​y​ ​t​h​r​o​u​g​h​ ​W​h​a​t​s​A​p​p​ ​B​u​s​i​n​e​s​s​ ​a​c​c​o​u​n​t​s​.​ ​I​d​e​a​l​ ​f​o​r​ ​c​u​s​t​o​m​e​r​ ​e​n​g​a​g​e​m​e​n​t​,​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​,​ ​a​n​d​ ​s​u​p​p​o​r​t​ ​w​o​r​k​f​l​o​w​s​,​ ​t​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​e​n​s​u​r​e​s​ ​f​a​s​t​ ​a​n​d​ ​r​e​l​i​a​b​l​e​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​ ​a​t​ ​s​c​a​l​e​ ​v​i​a​ ​W​h​a​t​s​A​p​p​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​3​6​0​ ​M​e​s​s​e​n​g​e​r
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​3​6​0​ ​M​e​s​s​e​n​g​e​r​ ​f​o​r​ ​W​h​a​t​s​A​p​p​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​P​I​ ​K​e​y​*​*​.​
+			​
+			​#​#​ ​G​e​t​t​i​n​g​ ​Y​o​u​r​ ​A​P​I​ ​K​e​y​
+			​
+			​1​.​ ​S​i​g​n​ ​i​n​ ​t​o​ ​y​o​u​r​ ​[​3​6​0​ ​M​e​s​s​e​n​g​e​r​ ​D​a​s​h​b​o​a​r​d​]​(​h​t​t​p​s​:​/​/​3​6​0​m​e​s​s​e​n​g​e​r​.​c​o​m​/​)​
+			​2​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​*​*​S​e​t​t​i​n​g​s​*​*​ ​o​r​ ​*​*​A​P​I​ ​S​e​t​t​i​n​g​s​*​*​
+			​3​.​ ​L​o​c​a​t​e​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​ ​o​r​ ​g​e​n​e​r​a​t​e​ ​a​ ​n​e​w​ ​o​n​e​
+			​4​.​ ​C​o​p​y​ ​t​h​e​ ​A​P​I​ ​k​e​y​ ​f​o​r​ ​u​s​e​ ​i​n​ ​y​o​u​r​ ​i​n​t​e​g​r​a​t​i​o​n​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​A​P​I​ ​K​e​y​
+			​Y​o​u​r​ ​3​6​0​ ​M​e​s​s​e​n​g​e​r​ ​A​P​I​ ​k​e​y​ ​t​h​a​t​ ​a​u​t​h​e​n​t​i​c​a​t​e​s​ ​r​e​q​u​e​s​t​s​ ​t​o​ ​s​e​n​d​ ​a​n​d​ ​r​e​c​e​i​v​e​ ​W​h​a​t​s​A​p​p​ ​m​e​s​s​a​g​e​s​ ​t​h​r​o​u​g​h​ ​t​h​e​ ​p​l​a​t​f​o​r​m​.​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​K​e​e​p​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​ ​s​e​c​u​r​e​ ​a​n​d​ ​n​e​v​e​r​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.​ ​Y​o​u​r​ ​A​P​I​ ​k​e​y​ ​g​r​a​n​t​s​ ​f​u​l​l​ ​a​c​c​e​s​s​ ​t​o​ ​s​e​n​d​ ​m​e​s​s​a​g​e​s​ ​o​n​ ​b​e​h​a​l​f​ ​o​f​ ​y​o​u​r​ ​W​h​a​t​s​A​p​p​ ​B​u​s​i​n​e​s​s​ ​a​c​c​o​u​n​t​.
+				 */
+				content: string
+			}
 			actions: {
 				get_contacts: {
 					/**
@@ -104874,6 +105894,38 @@ type RootTranslation = {
 			 * A​c​c​e​s​s​ ​a​n​d​ ​d​e​p​l​o​y​ ​m​a​c​h​i​n​e​ ​l​e​a​r​n​i​n​g​ ​m​o​d​e​l​s​,​ ​d​a​t​a​s​e​t​s​,​ ​a​n​d​ ​s​p​a​c​e​s​ ​f​r​o​m​ ​H​u​g​g​i​n​g​ ​F​a​c​e​ ​H​u​b​ ​f​o​r​ ​n​a​t​u​r​a​l​ ​l​a​n​g​u​a​g​e​ ​p​r​o​c​e​s​s​i​n​g​,​ ​c​o​m​p​u​t​e​r​ ​v​i​s​i​o​n​,​ ​a​n​d​ ​o​t​h​e​r​ ​A​I​ ​t​a​s​k​s
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​H​u​g​g​i​n​g​ ​F​a​c​e
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​H​u​g​g​i​n​g​ ​F​a​c​e​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​c​c​e​s​s​ ​T​o​k​e​n​*​*​.​
+			​
+			​#​#​ ​G​e​t​t​i​n​g​ ​Y​o​u​r​ ​A​c​c​e​s​s​ ​T​o​k​e​n​
+			​
+			​1​.​ ​S​i​g​n​ ​i​n​ ​t​o​ ​y​o​u​r​ ​[​H​u​g​g​i​n​g​ ​F​a​c​e​ ​a​c​c​o​u​n​t​]​(​h​t​t​p​s​:​/​/​h​u​g​g​i​n​g​f​a​c​e​.​c​o​/​)​
+			​2​.​ ​C​l​i​c​k​ ​o​n​ ​y​o​u​r​ ​p​r​o​f​i​l​e​ ​p​i​c​t​u​r​e​ ​→​ ​*​*​S​e​t​t​i​n​g​s​*​*​
+			​3​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​*​*​A​c​c​e​s​s​ ​T​o​k​e​n​s​*​*​ ​i​n​ ​t​h​e​ ​l​e​f​t​ ​s​i​d​e​b​a​r​
+			​4​.​ ​C​l​i​c​k​ ​*​*​N​e​w​ ​t​o​k​e​n​*​*​
+			​5​.​ ​G​i​v​e​ ​y​o​u​r​ ​t​o​k​e​n​ ​a​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​(​e​.​g​.​,​ ​"​Q​o​r​e​ ​I​n​t​e​g​r​a​t​i​o​n​"​)​
+			​6​.​ ​S​e​l​e​c​t​ ​t​h​e​ ​a​p​p​r​o​p​r​i​a​t​e​ ​r​o​l​e​:​
+			​ ​ ​ ​-​ ​*​*​R​e​a​d​*​*​:​ ​F​o​r​ ​a​c​c​e​s​s​i​n​g​ ​p​u​b​l​i​c​ ​m​o​d​e​l​s​ ​a​n​d​ ​d​a​t​a​s​e​t​s​
+			​ ​ ​ ​-​ ​*​*​W​r​i​t​e​*​*​:​ ​F​o​r​ ​u​p​l​o​a​d​i​n​g​ ​m​o​d​e​l​s​,​ ​c​r​e​a​t​i​n​g​ ​r​e​p​o​s​,​ ​a​n​d​ ​f​u​l​l​ ​A​P​I​ ​a​c​c​e​s​s​
+			​7​.​ ​C​l​i​c​k​ ​*​*​G​e​n​e​r​a​t​e​ ​a​ ​t​o​k​e​n​*​*​
+			​8​.​ ​C​o​p​y​ ​t​h​e​ ​g​e​n​e​r​a​t​e​d​ ​t​o​k​e​n​ ​i​m​m​e​d​i​a​t​e​l​y​
+			​
+			​Y​o​u​ ​c​a​n​ ​a​c​c​e​s​s​ ​t​h​e​ ​t​o​k​e​n​s​ ​p​a​g​e​ ​d​i​r​e​c​t​l​y​ ​a​t​ ​[​h​u​g​g​i​n​g​f​a​c​e​.​c​o​/​s​e​t​t​i​n​g​s​/​t​o​k​e​n​s​]​(​h​t​t​p​s​:​/​/​h​u​g​g​i​n​g​f​a​c​e​.​c​o​/​s​e​t​t​i​n​g​s​/​t​o​k​e​n​s​)​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​A​c​c​e​s​s​ ​T​o​k​e​n​
+			​Y​o​u​r​ ​H​u​g​g​i​n​g​ ​F​a​c​e​ ​a​c​c​e​s​s​ ​t​o​k​e​n​ ​s​t​a​r​t​i​n​g​ ​w​i​t​h​ ​`​h​f​_​`​.​ ​T​h​i​s​ ​t​o​k​e​n​ ​a​u​t​h​e​n​t​i​c​a​t​e​s​ ​a​l​l​ ​A​P​I​ ​r​e​q​u​e​s​t​s​ ​t​o​ ​H​u​g​g​i​n​g​ ​F​a​c​e​ ​s​e​r​v​i​c​e​s​.​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​K​e​e​p​ ​y​o​u​r​ ​a​c​c​e​s​s​ ​t​o​k​e​n​ ​s​e​c​u​r​e​ ​a​n​d​ ​n​e​v​e​r​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.​ ​Y​o​u​ ​c​a​n​ ​c​r​e​a​t​e​ ​m​u​l​t​i​p​l​e​ ​t​o​k​e​n​s​ ​w​i​t​h​ ​d​i​f​f​e​r​e​n​t​ ​p​e​r​m​i​s​s​i​o​n​s​ ​a​n​d​ ​r​e​v​o​k​e​ ​t​h​e​m​ ​a​t​ ​a​n​y​ ​t​i​m​e​ ​f​r​o​m​ ​t​h​e​ ​s​e​t​t​i​n​g​s​ ​p​a​g​e​.
+				 */
+				content: string
+			}
 			actions: {
 				list_models: {
 					/**
@@ -107900,6 +108952,41 @@ type RootTranslation = {
 			 * C​o​n​n​e​c​t​ ​a​ ​T​e​l​e​g​r​a​m​ ​B​o​t​ ​u​s​i​n​g​ ​i​t​s​ ​B​o​t​ ​T​o​k​e​n​ ​t​o​ ​s​e​n​d​ ​m​e​s​s​a​g​e​s​ ​a​n​d​ ​h​a​n​d​l​e​ ​i​n​c​o​m​i​n​g​ ​u​p​d​a​t​e​s​.​ ​A​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​i​s​ ​d​o​n​e​ ​s​o​l​e​l​y​ ​w​i​t​h​ ​t​h​e​ ​B​o​t​ ​T​o​k​e​n​ ​i​s​s​u​e​d​ ​b​y​ ​@​B​o​t​F​a​t​h​e​r​;​ ​n​o​ ​u​s​e​r​ ​l​o​g​i​n​ ​i​s​ ​r​e​q​u​i​r​e​d​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​T​e​l​e​g​r​a​m
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​T​e​l​e​g​r​a​m​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​B​o​t​ ​T​o​k​e​n​*​*​ ​f​r​o​m​ ​B​o​t​F​a​t​h​e​r​.​
+			​
+			​#​#​ ​C​r​e​a​t​i​n​g​ ​a​ ​T​e​l​e​g​r​a​m​ ​B​o​t​
+			​
+			​1​.​ ​O​p​e​n​ ​T​e​l​e​g​r​a​m​ ​a​n​d​ ​s​e​a​r​c​h​ ​f​o​r​ ​[​@​B​o​t​F​a​t​h​e​r​]​(​h​t​t​p​s​:​/​/​t​.​m​e​/​B​o​t​F​a​t​h​e​r​)​
+			​2​.​ ​S​t​a​r​t​ ​a​ ​c​h​a​t​ ​a​n​d​ ​s​e​n​d​ ​t​h​e​ ​c​o​m​m​a​n​d​ ​`​/​n​e​w​b​o​t​`​
+			​3​.​ ​F​o​l​l​o​w​ ​t​h​e​ ​p​r​o​m​p​t​s​ ​t​o​:​
+			​ ​ ​ ​-​ ​C​h​o​o​s​e​ ​a​ ​*​*​d​i​s​p​l​a​y​ ​n​a​m​e​*​*​ ​f​o​r​ ​y​o​u​r​ ​b​o​t​ ​(​e​.​g​.​,​ ​"​M​y​ ​A​u​t​o​m​a​t​i​o​n​ ​B​o​t​"​)​
+			​ ​ ​ ​-​ ​C​h​o​o​s​e​ ​a​ ​*​*​u​s​e​r​n​a​m​e​*​*​ ​f​o​r​ ​y​o​u​r​ ​b​o​t​ ​(​m​u​s​t​ ​e​n​d​ ​i​n​ ​"​b​o​t​"​,​ ​e​.​g​.​,​ ​"​m​y​_​a​u​t​o​m​a​t​i​o​n​_​b​o​t​"​)​
+			​4​.​ ​B​o​t​F​a​t​h​e​r​ ​w​i​l​l​ ​r​e​s​p​o​n​d​ ​w​i​t​h​ ​y​o​u​r​ ​*​*​B​o​t​ ​T​o​k​e​n​*​*​
+			​5​.​ ​C​o​p​y​ ​t​h​e​ ​t​o​k​e​n​ ​(​f​o​r​m​a​t​:​ ​`​1​2​3​4​5​6​7​8​9​:​A​B​C​d​e​f​G​H​I​j​k​l​M​N​O​p​q​r​s​T​U​V​w​x​y​z​`​)​
+			​
+			​#​#​ ​M​a​n​a​g​i​n​g​ ​E​x​i​s​t​i​n​g​ ​B​o​t​s​
+			​
+			​T​o​ ​g​e​t​ ​t​h​e​ ​t​o​k​e​n​ ​f​o​r​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​b​o​t​:​
+			​1​.​ ​O​p​e​n​ ​[​@​B​o​t​F​a​t​h​e​r​]​(​h​t​t​p​s​:​/​/​t​.​m​e​/​B​o​t​F​a​t​h​e​r​)​
+			​2​.​ ​S​e​n​d​ ​`​/​m​y​b​o​t​s​`​
+			​3​.​ ​S​e​l​e​c​t​ ​y​o​u​r​ ​b​o​t​
+			​4​.​ ​C​l​i​c​k​ ​*​*​A​P​I​ ​T​o​k​e​n​*​*​ ​t​o​ ​v​i​e​w​ ​o​r​ ​r​e​g​e​n​e​r​a​t​e​ ​t​h​e​ ​t​o​k​e​n​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​B​o​t​ ​T​o​k​e​n​
+			​Y​o​u​r​ ​T​e​l​e​g​r​a​m​ ​B​o​t​ ​T​o​k​e​n​ ​i​n​ ​t​h​e​ ​f​o​r​m​a​t​ ​`​1​2​3​4​5​6​7​8​9​:​A​B​C​d​e​f​G​H​I​j​k​l​M​N​O​p​q​r​s​T​U​V​w​x​y​z​`​.​ ​T​h​i​s​ ​t​o​k​e​n​ ​a​u​t​h​e​n​t​i​c​a​t​e​s​ ​y​o​u​r​ ​b​o​t​ ​w​i​t​h​ ​t​h​e​ ​T​e​l​e​g​r​a​m​ ​A​P​I​.​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​K​e​e​p​ ​y​o​u​r​ ​b​o​t​ ​t​o​k​e​n​ ​s​e​c​u​r​e​ ​a​n​d​ ​n​e​v​e​r​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.​ ​A​n​y​o​n​e​ ​w​i​t​h​ ​y​o​u​r​ ​t​o​k​e​n​ ​c​a​n​ ​c​o​n​t​r​o​l​ ​y​o​u​r​ ​b​o​t​.​ ​I​f​ ​c​o​m​p​r​o​m​i​s​e​d​,​ ​r​e​g​e​n​e​r​a​t​e​ ​i​t​ ​i​m​m​e​d​i​a​t​e​l​y​ ​v​i​a​ ​B​o​t​F​a​t​h​e​r​.
+				 */
+				content: string
+			}
 			actions: {
 				send_message: {
 					/**
@@ -111744,6 +112831,33 @@ type RootTranslation = {
 			 * B​r​e​v​o​ ​(​f​o​r​m​e​r​l​y​ ​S​e​n​d​i​n​b​l​u​e​)​ ​i​s​ ​a​ ​m​a​r​k​e​t​i​n​g​ ​a​u​t​o​m​a​t​i​o​n​ ​p​l​a​t​f​o​r​m​ ​t​h​a​t​ ​e​n​a​b​l​e​s​ ​b​u​s​i​n​e​s​s​e​s​ ​t​o​ ​c​o​m​m​u​n​i​c​a​t​e​ ​w​i​t​h​ ​c​u​s​t​o​m​e​r​s​ ​t​h​r​o​u​g​h​ ​e​m​a​i​l​,​ ​S​M​S​,​ ​c​h​a​t​,​ ​a​n​d​ ​m​o​r​e​.​ ​I​t​ ​o​f​f​e​r​s​ ​t​o​o​l​s​ ​f​o​r​ ​c​a​m​p​a​i​g​n​ ​m​a​n​a​g​e​m​e​n​t​,​ ​c​o​n​t​a​c​t​ ​s​e​g​m​e​n​t​a​t​i​o​n​,​ ​t​r​a​n​s​a​c​t​i​o​n​a​l​ ​e​m​a​i​l​s​,​ ​a​n​d​ ​c​u​s​t​o​m​e​r​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​m​a​n​a​g​e​m​e​n​t​.​ ​B​r​e​v​o​ ​h​e​l​p​s​ ​b​u​s​i​n​e​s​s​e​s​ ​b​u​i​l​d​ ​s​t​r​o​n​g​e​r​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​w​i​t​h​ ​t​h​e​i​r​ ​a​u​d​i​e​n​c​e​ ​b​y​ ​p​r​o​v​i​d​i​n​g​ ​s​c​a​l​a​b​l​e​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​ ​a​n​d​ ​a​u​t​o​m​a​t​i​o​n​ ​s​o​l​u​t​i​o​n​s​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​B​r​e​v​o
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​y​o​u​r​ ​B​r​e​v​o​ ​a​c​c​o​u​n​t​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​P​I​ ​K​e​y​*​*​.​
+			​
+			​#​#​ ​G​e​t​t​i​n​g​ ​Y​o​u​r​ ​A​P​I​ ​K​e​y​
+			​
+			​1​.​ ​S​i​g​n​ ​i​n​ ​t​o​ ​y​o​u​r​ ​[​B​r​e​v​o​ ​a​c​c​o​u​n​t​]​(​h​t​t​p​s​:​/​/​a​p​p​.​b​r​e​v​o​.​c​o​m​/​)​
+			​2​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​*​*​S​e​t​t​i​n​g​s​*​*​ ​→​ ​*​*​S​M​T​P​ ​&​ ​A​P​I​*​*​ ​→​ ​*​*​A​P​I​ ​K​e​y​s​*​*​
+			​3​.​ ​C​l​i​c​k​ ​*​*​G​e​n​e​r​a​t​e​ ​a​ ​n​e​w​ ​A​P​I​ ​k​e​y​*​*​
+			​4​.​ ​G​i​v​e​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​ ​a​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​(​e​.​g​.​,​ ​"​Q​o​r​e​ ​I​n​t​e​g​r​a​t​i​o​n​"​)​
+			​5​.​ ​C​o​p​y​ ​t​h​e​ ​g​e​n​e​r​a​t​e​d​ ​A​P​I​ ​k​e​y​ ​i​m​m​e​d​i​a​t​e​l​y​ ​(​i​t​ ​w​o​n​'​t​ ​b​e​ ​s​h​o​w​n​ ​a​g​a​i​n​)​
+			​
+			​Y​o​u​ ​c​a​n​ ​a​l​s​o​ ​a​c​c​e​s​s​ ​t​h​e​ ​A​P​I​ ​k​e​y​s​ ​p​a​g​e​ ​d​i​r​e​c​t​l​y​ ​a​t​ ​[​a​p​p​.​b​r​e​v​o​.​c​o​m​/​s​e​t​t​i​n​g​s​/​k​e​y​s​/​a​p​i​]​(​h​t​t​p​s​:​/​/​a​p​p​.​b​r​e​v​o​.​c​o​m​/​s​e​t​t​i​n​g​s​/​k​e​y​s​/​a​p​i​)​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​A​P​I​ ​K​e​y​
+			​Y​o​u​r​ ​B​r​e​v​o​ ​A​P​I​ ​k​e​y​ ​s​t​a​r​t​i​n​g​ ​w​i​t​h​ ​`​x​k​e​y​s​i​b​-​`​.​ ​T​h​i​s​ ​k​e​y​ ​a​u​t​h​e​n​t​i​c​a​t​e​s​ ​a​l​l​ ​A​P​I​ ​r​e​q​u​e​s​t​s​ ​t​o​ ​y​o​u​r​ ​B​r​e​v​o​ ​a​c​c​o​u​n​t​.​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​K​e​e​p​ ​y​o​u​r​ ​A​P​I​ ​k​e​y​ ​s​e​c​u​r​e​ ​a​n​d​ ​n​e​v​e​r​ ​s​h​a​r​e​ ​i​t​ ​p​u​b​l​i​c​l​y​.​ ​Y​o​u​ ​c​a​n​ ​r​e​v​o​k​e​ ​a​n​d​ ​r​e​g​e​n​e​r​a​t​e​ ​k​e​y​s​ ​a​t​ ​a​n​y​ ​t​i​m​e​ ​f​r​o​m​ ​t​h​e​ ​A​P​I​ ​K​e​y​s​ ​s​e​t​t​i​n​g​s​ ​p​a​g​e​.
+				 */
+				content: string
+			}
 			actions: {
 				get_contact: {
 					/**
@@ -126346,6 +127460,50 @@ export type TranslationFunctions = {
 		  
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Craft
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Craft, you will need to create an **API connection** in the Craft app.
+		
+			## Creating Your API Connection
+		
+			1. Open the **Craft** app on your Mac or iOS device
+			2. Navigate to the **Imagine** tab (AI features section)
+			3. Click **Add Your First API Connection** or **+ Add API**
+			4. Choose the type of API you want to create:
+			   - **Daily notes & Tasks**: For task management and daily note operations
+			   - **Selected Documents**: For document, collection, and block operations
+			5. Follow the prompts to configure your API connection
+			6. Copy the generated **API URL** and **Token** (if provided)
+		
+			## Connection Details
+		
+			### API URL
+			The URL provided by Craft for your API connection. This URL is specific to your account and the type of API you created.
+		
+			### API Token (Optional)
+			Some API configurations may include a token for additional authentication. If provided, include it in your connection settings.
+		
+			## API Types and Capabilities
+		
+			### Daily Notes & Tasks API
+			Required for:
+			- List Tasks, Create Task, Update Task, Delete Tasks
+			- Get Daily Note Blocks
+		
+			### Selected Documents API
+			Required for:
+			- Documents: List Documents
+			- Collections: List Collections, Create/Update/Delete Collection Items
+			- Blocks: List Blocks, Insert Block, Delete Blocks
+		
+			**Note:** You may need to create multiple API connections if you want to use both task-related actions and document-related actions. Each API type provides access to different sets of functionality.
+				 */
+				content: () => LocalizedString
+			}
 			triggers: {
 				new_collection_item: {
 					/**
@@ -130880,6 +132038,55 @@ export type TranslationFunctions = {
 			 * The Supabase integration provides comprehensive access to your Supabase backend services. Manage database tables with full CRUD operations, monitor real-time changes with triggers, and handle file storage through buckets. Whether you need to query data, insert records, filter results, or track new entries, this integration streamlines your Supabase workflow automation and backend management.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Supabase
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Supabase, you will need your **Project ID** (or Project URL) and a **service_role API Key**.
+		
+			## Finding Your Project ID
+		
+			1. Log in to the [Supabase Dashboard](https://supabase.com/dashboard)
+			2. Select your project
+			3. Go to **Project Settings** (gear icon) → **General**
+			4. Find your **Reference ID** (this is your Project ID)
+		
+			Alternatively, your Project URL format is: `https://<project-id>.supabase.co`
+		
+			## Getting Your API Key
+		
+			1. In your project dashboard, go to **Project Settings** → **API**
+			2. Find the **Project API keys** section
+			3. Copy the **service_role** key (labeled "secret")
+		
+			⚠️ **Important**: Use the `service_role` key, NOT the `anon` key. The service_role key bypasses Row Level Security (RLS) and has full access to your database.
+		
+			## Connection Details
+		
+			### Project ID / Project URL
+			Either your project's Reference ID or the full project URL:
+			- Reference ID: `abcdefghijklmnop`
+			- Project URL: `https://abcdefghijklmnop.supabase.co`
+		
+			### API Key (service_role)
+			The `service_role` secret key from your project's API settings. This key:
+			- Bypasses Row Level Security (RLS)
+			- Has full access to all database operations
+			- Should only be used server-side, never in client applications
+		
+			## API Key Types
+		
+			| Key Type | Use Case |
+			|----------|----------|
+			| `anon` (public) | Client-side apps, respects RLS |
+			| `service_role` (secret) | Server-side operations, bypasses RLS |
+		
+			**Note:** The `service_role` key is extremely powerful and should be kept secure. Never expose it in client-side code or public repositories. For this integration, the service_role key is required to perform administrative operations.
+				 */
+				content: () => LocalizedString
+			}
 			actions: {
 				get_table: {
 					groups: {
@@ -132107,6 +133314,176 @@ export type TranslationFunctions = {
 				}
 			}
 		}
+		BambooHR: {
+			/**
+			 * BambooHR
+			 */
+			displayName: () => LocalizedString
+			groups: {
+				/**
+				 * HR & People Management
+				 */
+				'0': () => LocalizedString
+			}
+			/**
+			 * Connect to BambooHR to manage employee data with powerful automation
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The BambooHR integration provides comprehensive access to your HR operations. Create, read, update, and list employees with dynamic field support. The integration automatically discovers available fields in your BambooHR account, including custom fields, and provides intelligent type handling for dates, lists, and other field types.
+			 */
+			longDesc: () => LocalizedString
+			actions: {
+				get_employee: {
+					/**
+					 * Get Employee
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a single employee by ID
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches detailed data for a single employee in BambooHR by their ID. Returns all requested fields with dynamically loaded field types. You can specify which fields to retrieve or fetch all available fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						employee_id: {
+							/**
+							 * Employee ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the employee to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the unique identifier of the employee you want to fetch. Use 0 to retrieve the employee associated with your API key.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific fields to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which fields to retrieve for the employee. Leave empty to retrieve all available fields (up to 400 fields).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_employee: {
+					/**
+					 * Create Employee
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new employee in BambooHR
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new employee record in BambooHR. At minimum, firstName and lastName are required. The action dynamically presents all available fields based on your BambooHR configuration, including custom fields.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						employee_data: {
+							/**
+							 * Employee Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The data for the new employee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide values for the employee fields. The available fields are dynamically loaded from your BambooHR account and include both standard and custom fields. firstName and lastName are required.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_employee: {
+					/**
+					 * Update Employee
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing employee in BambooHR
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates an existing employee record in BambooHR. The action dynamically presents all available fields based on your BambooHR configuration. Only provide the fields you want to update.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						employee_id: {
+							/**
+							 * Employee ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the employee to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Enter the unique identifier of the employee you want to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						employee_data: {
+							/**
+							 * Employee Data
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The data to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide new values for the employee fields you want to update. The available fields are dynamically loaded from your BambooHR account.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_employees: {
+					/**
+					 * List Employees
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a list of all employees
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches a list of all employees from BambooHR. You can specify which fields to retrieve for each employee. Uses the custom report endpoint for efficient bulk retrieval.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						fields: {
+							/**
+							 * Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Specific fields to retrieve for each employee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select which fields to retrieve for each employee. Leave empty to retrieve a default set of common fields (id, name, email, department, job title).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
 		Baserow: {
 			/**
 			 * Baserow
@@ -132130,6 +133507,40 @@ export type TranslationFunctions = {
 			 * The Baserow integration provides comprehensive access to your Baserow database operations. Create, read, update, and delete rows in your tables, upload files, and monitor new entries with real-time triggers. Whether you need to manage data, filter results, or track new records, this integration streamlines your Baserow workflow automation and database management.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Baserow
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Baserow, you will need your **Baserow URL** and a **Database Token**.
+		
+			## Getting Your Database Token
+		
+			1. Log in to your Baserow instance
+			2. Click on your **profile icon** in the top right corner
+			3. Select **Settings** from the dropdown menu
+			4. Navigate to **Database tokens** in the left sidebar
+			5. Click **Create token**
+			6. Give your token a descriptive name (e.g., "Qore Integration")
+			7. Select the **workspace** the token should have access to
+			8. Configure **table-level permissions** (create, read, update, delete) as needed
+			9. Click **Create token** and copy the generated token
+		
+			## Connection Details
+		
+			### Baserow URL
+			The base URL of your Baserow instance:
+			- **Baserow Cloud**: Use `https://api.baserow.io`
+			- **Self-hosted**: Use your instance URL (e.g., `https://baserow.yourcompany.com`)
+		
+			### Database Token
+			Your database token that grants access to specific workspaces and tables. Tokens are scoped to a single workspace with granular table-level permissions.
+		
+			**Note:** Database tokens provide more granular control than API tokens. Each token can be restricted to specific operations (create, read, update, delete) on individual tables within a workspace.
+				 */
+				content: () => LocalizedString
+			}
 			actions: {
 				create_row: {
 					/**
@@ -137056,6 +138467,54 @@ export type TranslationFunctions = {
 			 * The Sentry integration enables comprehensive error monitoring and performance tracking for your applications. Access projects, issues, events, and teams to quickly identify, triage, and resolve problems. With real-time alerts and detailed debugging context including stack traces, breadcrumbs, and user impact metrics, Sentry helps your team maintain code quality and deliver seamless user experiences.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Sentry
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Sentry, you will need an **Auth Token** and your **Organization Slug**.
+		
+			## Getting Your Auth Token
+		
+			### Option 1: User Auth Token (Recommended for personal use)
+			1. Log in to [Sentry](https://sentry.io/)
+			2. Go to **Settings** → **Account** → **API** → **Auth Tokens**
+			3. Click **Create New Token**
+			4. Select the required scopes:
+			   - `project:read` - Read project information
+			   - `project:write` - Modify projects
+			   - `org:read` - Read organization data
+			   - `event:read` - Read events
+			   - `member:read` - Read team members
+			5. Click **Create Token** and copy it immediately
+		
+			Direct link: [sentry.io/settings/account/api/auth-tokens/](https://sentry.io/settings/account/api/auth-tokens/)
+		
+			### Option 2: Internal Integration Token (Recommended for production)
+			1. Go to **Settings** → **Developer Settings** → **Custom Integrations**
+			2. Click **Create New Integration** → **Internal Integration**
+			3. Configure the name and required permissions
+			4. After saving, copy the generated token
+		
+			## Finding Your Organization Slug
+		
+			Your organization slug is in your Sentry URL:
+			- If your Sentry URL is `https://your-org.sentry.io/`, your slug is `your-org`
+			- For sentry.io hosted accounts: `https://sentry.io/organizations/your-org/` → slug is `your-org`
+		
+			## Connection Details
+		
+			### Auth Token
+			Your Sentry authentication token. Starts with `sntrys_` for newer tokens or may have different prefixes for legacy tokens.
+		
+			### Organization Slug
+			The URL-friendly identifier for your organization (found in your Sentry URL).
+		
+			**Note:** Auth tokens inherit permissions based on your user role and the scopes you selected. For production integrations, use Internal Integration tokens which can be scoped to specific permissions and managed at the organization level.
+				 */
+				content: () => LocalizedString
+			}
 			triggers: {
 				new_project_issue: {
 					/**
@@ -146540,6 +147999,40 @@ export type TranslationFunctions = {
 			 * The Amazon EC2 integration provides comprehensive actions and triggers to interact with Amazon Elastic Compute Cloud services. Manage instances, volumes, security groups, snapshots, and other EC2 resources to automate your cloud infrastructure workflows and monitoring.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to AWS EC2
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Amazon EC2, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
+		
+			## Creating AWS Credentials
+		
+			1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/iam/)
+			2. Navigate to **IAM** → **Users** → **Create user**
+			3. Enter a username and click **Next**
+			4. Attach the **AmazonEC2FullAccess** policy (or create a custom policy with minimum required permissions)
+			5. Click **Create user**
+			6. Select the user → **Security credentials** tab → **Create access key**
+			7. Choose **Third-party service** and create the key
+			8. Save your **Access Key ID** and **Secret Access Key** securely
+		
+			## Connection Details
+		
+			### Access Key ID
+			Your AWS access key ID (starts with `AKIA`)
+		
+			### Secret Access Key
+			Your AWS secret access key (only shown once when created)
+		
+			### Region
+			The AWS region for your EC2 operations (e.g., `us-east-1`, `eu-west-1`)
+		
+			**Note:** For security, create a dedicated IAM user with only the permissions needed for your use case. Avoid using root account credentials.
+				 */
+				content: () => LocalizedString
+			}
 			triggers: {
 				new_instance: {
 					/**
@@ -146918,6 +148411,40 @@ export type TranslationFunctions = {
 			 * The Amazon S3 integration provides comprehensive actions and triggers to interact with Amazon Simple Storage Service. Whether you need to manage buckets, upload and download files, or monitor changes to your S3 objects, this integration simplifies your cloud storage automation and file management workflows.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to AWS S3
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Amazon S3, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
+		
+			## Creating AWS Credentials
+		
+			1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/iam/)
+			2. Navigate to **IAM** → **Users** → **Create user**
+			3. Enter a username and click **Next**
+			4. Attach the **AmazonS3FullAccess** policy (or create a custom policy with minimum required permissions)
+			5. Click **Create user**
+			6. Select the user → **Security credentials** tab → **Create access key**
+			7. Choose **Third-party service** and create the key
+			8. Save your **Access Key ID** and **Secret Access Key** securely
+		
+			## Connection Details
+		
+			### Access Key ID
+			Your AWS access key ID (starts with `AKIA`)
+		
+			### Secret Access Key
+			Your AWS secret access key (only shown once when created)
+		
+			### Region
+			The AWS region for your S3 operations (e.g., `us-east-1`, `eu-west-1`)
+		
+			**Note:** For security, create a dedicated IAM user with only the permissions needed for your use case. Avoid using root account credentials.
+				 */
+				content: () => LocalizedString
+			}
 			triggers: {
 				new_bucket: {
 					/**
@@ -147846,6 +149373,40 @@ export type TranslationFunctions = {
 			 * Amazon Lambda is a serverless compute service that lets you run code without provisioning or managing servers. This integration provides comprehensive actions and triggers to manage Lambda functions, layers, and invocations. You can list functions, invoke them, manage layers, and monitor new function and layer version creation.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to AWS Lambda
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to AWS Lambda, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
+		
+			## Creating AWS Credentials
+		
+			1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/iam/)
+			2. Navigate to **IAM** → **Users** → **Create user**
+			3. Enter a username and click **Next**
+			4. Attach the **AWSLambda_FullAccess** policy (or create a custom policy with minimum required permissions)
+			5. Click **Create user**
+			6. Select the user → **Security credentials** tab → **Create access key**
+			7. Choose **Third-party service** and create the key
+			8. Save your **Access Key ID** and **Secret Access Key** securely
+		
+			## Connection Details
+		
+			### Access Key ID
+			Your AWS access key ID (starts with `AKIA`)
+		
+			### Secret Access Key
+			Your AWS secret access key (only shown once when created)
+		
+			### Region
+			The AWS region for your Lambda operations (e.g., `us-east-1`, `eu-west-1`)
+		
+			**Note:** For security, create a dedicated IAM user with only the permissions needed for your use case. Avoid using root account credentials.
+				 */
+				content: () => LocalizedString
+			}
 			actions: {
 				list_functions: {
 					/**
@@ -148390,6 +149951,40 @@ export type TranslationFunctions = {
 			 * The Amazon CloudFront integration provides comprehensive actions and triggers to manage your content delivery network (CDN) distributions. Monitor new distributions and invalidations, enable or disable distributions, create cache invalidations, and retrieve detailed distribution configurations. Perfect for automating CDN management, cache clearing workflows, and distribution monitoring in your AWS infrastructure.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Amazon CloudFront
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Amazon CloudFront, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
+		
+			## Creating AWS Credentials
+		
+			1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/iam/)
+			2. Navigate to **IAM** → **Users** → **Create user**
+			3. Enter a username and click **Next**
+			4. Attach the **CloudFrontFullAccess** policy (or create a custom policy with minimum required permissions)
+			5. Click **Create user**
+			6. Select the user → **Security credentials** tab → **Create access key**
+			7. Choose **Third-party service** and create the key
+			8. Save your **Access Key ID** and **Secret Access Key** securely
+		
+			## Connection Details
+		
+			### Access Key ID
+			Your AWS access key ID (starts with `AKIA`)
+		
+			### Secret Access Key
+			Your AWS secret access key (only shown once when created)
+		
+			### Region
+			The AWS region for your CloudFront operations (e.g., `us-east-1`)
+		
+			**Note:** For security, create a dedicated IAM user with only the permissions needed for your use case. Avoid using root account credentials.
+				 */
+				content: () => LocalizedString
+			}
 			triggers: {
 				new_distribution: {
 					/**
@@ -148736,6 +150331,40 @@ export type TranslationFunctions = {
 			 * The Amazon CloudWatch integration provides complete access to AWS monitoring and alerting capabilities. Monitor alarm state changes, manage alarm actions, retrieve detailed alarm information, and automate responses to infrastructure events. Perfect for maintaining system reliability, implementing automated incident response, and ensuring optimal AWS resource performance.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Amazon CloudWatch
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Amazon CloudWatch, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
+		
+			## Creating AWS Credentials
+		
+			1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/iam/)
+			2. Navigate to **IAM** → **Users** → **Create user**
+			3. Enter a username and click **Next**
+			4. Attach the **CloudWatchFullAccess** policy (or create a custom policy with minimum required permissions)
+			5. Click **Create user**
+			6. Select the user → **Security credentials** tab → **Create access key**
+			7. Choose **Third-party service** and create the key
+			8. Save your **Access Key ID** and **Secret Access Key** securely
+		
+			## Connection Details
+		
+			### Access Key ID
+			Your AWS access key ID (starts with `AKIA`)
+		
+			### Secret Access Key
+			Your AWS secret access key (only shown once when created)
+		
+			### Region
+			The AWS region for your CloudWatch operations (e.g., `us-east-1`, `eu-west-1`)
+		
+			**Note:** For security, create a dedicated IAM user with only the permissions needed for your use case. Avoid using root account credentials.
+				 */
+				content: () => LocalizedString
+			}
 			triggers: {
 				new_alarm: {
 					/**
@@ -149774,6 +151403,40 @@ export type TranslationFunctions = {
 			 * The Amazon SES integration provides comprehensive email sending capabilities, identity verification, and delivery monitoring. Manage your email campaigns, verify domains and email addresses, track sending statistics, and monitor bounces and complaints through Amazon's reliable email infrastructure.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Amazon SES
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Amazon SES, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
+		
+			## Creating AWS Credentials
+		
+			1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/iam/)
+			2. Navigate to **IAM** → **Users** → **Create user**
+			3. Enter a username and click **Next**
+			4. Attach the **AmazonSESFullAccess** policy (or create a custom policy with minimum required permissions)
+			5. Click **Create user**
+			6. Select the user → **Security credentials** tab → **Create access key**
+			7. Choose **Third-party service** and create the key
+			8. Save your **Access Key ID** and **Secret Access Key** securely
+		
+			## Connection Details
+		
+			### Access Key ID
+			Your AWS access key ID (starts with `AKIA`)
+		
+			### Secret Access Key
+			Your AWS secret access key (only shown once when created)
+		
+			### Region
+			The AWS region for your SES operations (e.g., `us-east-1`, `eu-west-1`)
+		
+			**Note:** Before sending emails, you must verify sender email addresses or domains in your SES console. For security, create a dedicated IAM user with only the permissions needed for your use case.
+				 */
+				content: () => LocalizedString
+			}
 			actions: {
 				send_email: {
 					/**
@@ -150194,6 +151857,33 @@ export type TranslationFunctions = {
 			 * Connect to Claude, Anthropic's AI assistant, to leverage advanced language understanding and generation capabilities. Use Claude for intelligent conversations, content creation, data analysis, code assistance, research support, and complex reasoning tasks. Claude can help automate workflows that require natural language processing, creative writing, technical documentation, and analytical thinking.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Claude
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Claude, you will need your **Anthropic API Key**.
+		
+			## Getting Your API Key
+		
+			1. Sign in to the [Anthropic Console](https://console.anthropic.com/)
+			2. Navigate to **Settings** → **API Keys**
+			3. Click **Create Key**
+			4. Give your API key a descriptive name (e.g., "Qore Integration")
+			5. Copy the generated API key immediately (it won't be shown again)
+		
+			You can access the API keys page directly at [console.anthropic.com/settings/keys](https://console.anthropic.com/settings/keys)
+		
+			## Connection Details
+		
+			### API Key
+			Your Anthropic API key starting with `sk-ant-`. This key authenticates all requests to the Claude API.
+		
+			**Note:** Keep your API key secure and never share it publicly. API usage is billed based on the number of tokens processed. You can set spending limits and monitor usage in the Anthropic Console.
+				 */
+				content: () => LocalizedString
+			}
 			actions: {
 				send_message: {
 					/**
@@ -150362,6 +152052,40 @@ export type TranslationFunctions = {
 			 * The AWS SQS integration provides comprehensive queue management and message handling capabilities for Amazon Simple Queue Service. Create and manage queues, send messages (including JSON), receive messages with polling triggers, and automate your message-driven architectures with reliable, scalable queue operations.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to AWS SQS
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to AWS SQS, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
+		
+			## Creating AWS Credentials
+		
+			1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/iam/)
+			2. Navigate to **IAM** → **Users** → **Create user**
+			3. Enter a username and click **Next**
+			4. Attach the **AmazonSQSFullAccess** policy (or create a custom policy with minimum required permissions)
+			5. Click **Create user**
+			6. Select the user → **Security credentials** tab → **Create access key**
+			7. Choose **Third-party service** and create the key
+			8. Save your **Access Key ID** and **Secret Access Key** securely
+		
+			## Connection Details
+		
+			### Access Key ID
+			Your AWS access key ID (starts with `AKIA`)
+		
+			### Secret Access Key
+			Your AWS secret access key (only shown once when created)
+		
+			### Region
+			The AWS region for your SQS operations (e.g., `us-east-1`, `eu-west-1`)
+		
+			**Note:** For security, create a dedicated IAM user with only the permissions needed for your use case. Avoid using root account credentials.
+				 */
+				content: () => LocalizedString
+			}
 			triggers: {
 				new_message: {
 					/**
@@ -151716,6 +153440,31 @@ export type TranslationFunctions = {
 			 * Connect your Browse AI account to automate web scraping and data extraction workflows. Create custom robots to monitor websites, extract structured data, track changes, and collect information from any website without coding. Set up automated data collection schedules, receive alerts on website changes, and integrate extracted data directly into your Qore workflows.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Browse AI
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect your Browse AI account, you will need your **API Key**.
+		
+			## Getting Your API Key
+		
+			1. Sign in to your [Browse AI dashboard](https://www.browse.ai/dashboard/)
+			2. Click on your profile icon or account settings
+			3. Navigate to the **API** tab
+			4. Click **Create API Key** or copy your existing API key
+			5. Give your API key a descriptive name if creating a new one
+		
+			## Connection Details
+		
+			### API Key
+			Your Browse AI API key that authenticates requests to the Browse AI service. This key allows you to manage robots, run tasks, and retrieve extracted data programmatically.
+		
+			**Note:** Keep your API key secure and never share it publicly. You can manage and revoke API keys from your Browse AI dashboard at any time.
+				 */
+				content: () => LocalizedString
+			}
 			actions: {
 				get_robot: {
 					/**
@@ -152076,6 +153825,35 @@ export type TranslationFunctions = {
 			 * Connect your BigML account to build, evaluate, and deploy machine learning models at scale. Create datasets, build predictive models, perform anomaly detection, cluster analysis, and time series forecasting. Automate your machine learning workflows and integrate predictive analytics into your applications with BigML's comprehensive machine learning platform.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to BigML
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to BigML, you will need your **Username** and **API Key**.
+		
+			## Getting Your API Key
+		
+			1. Log in to your [BigML Dashboard](https://bigml.com/dashboard)
+			2. Click on the **gear icon** (configuration) in the top right corner
+			3. Select **API Key** from the menu
+			4. Your API key will be displayed on this page
+		
+			You can also access your API key directly at [bigml.com/account/apikey](https://bigml.com/account/apikey)
+		
+			## Connection Details
+		
+			### Username
+			Your BigML username or the email address you use to log in to BigML.
+		
+			### API Key
+			Your BigML API key that authenticates requests to the API. This key is unique to your account and should be kept secure.
+		
+			**Note:** Your API key provides full access to your BigML resources. Keep it secure and never share it publicly. If you suspect your key has been compromised, you can regenerate it from the API Key settings page.
+				 */
+				content: () => LocalizedString
+			}
 			actions: {
 				create_anomaly_score: {
 					/**
@@ -157900,6 +159678,34 @@ export type TranslationFunctions = {
 			 * Connect to Google's Gemini AI to leverage state-of-the-art multimodal capabilities including text generation, image analysis, code assistance, and reasoning tasks. Gemini excels at understanding and generating content across text, images, and code, making it ideal for complex workflows requiring advanced AI reasoning, creative content generation, data analysis, and intelligent automation within your Qore applications.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Google Gemini
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Google Gemini, you will need your **API Key**.
+		
+			## Getting Your API Key
+		
+			1. Go to [Google AI Studio](https://aistudio.google.com/)
+			2. Sign in with your Google account
+			3. Click **Get API key** in the left sidebar
+			4. Click **Create API key**
+			5. Select a Google Cloud project or create a new one
+			6. Copy the generated API key
+		
+			You can access the API keys page directly at [aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey)
+		
+			## Connection Details
+		
+			### API Key
+			Your Google AI API key that authenticates requests to the Gemini API. This key is associated with your Google Cloud project.
+		
+			**Note:** Keep your API key secure and never share it publicly. API usage may be subject to quotas and billing based on your Google Cloud project settings. You can manage and revoke API keys from the Google AI Studio at any time.
+				 */
+				content: () => LocalizedString
+			}
 			actions: {
 				list_models: {
 					/**
@@ -159108,6 +160914,34 @@ export type TranslationFunctions = {
 			 * OpenRouter provides a unified interface to access and compare multiple AI models from different providers. Route your requests to the best model for your specific use case, with support for text generation, chat completion, and other AI capabilities from leading providers like OpenAI, Anthropic, Google, and more.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to OpenRouter
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to OpenRouter, you will need your **API Key**.
+		
+			## Getting Your API Key
+		
+			1. Sign in to your [OpenRouter account](https://openrouter.ai/)
+			2. Navigate to **Settings** → **Keys** or go directly to the keys page
+			3. Click **Create Key**
+			4. Give your API key a descriptive name (e.g., "Qore Integration")
+			5. Optionally set a credit limit for the key
+			6. Copy the generated API key immediately
+		
+			You can access the API keys page directly at [openrouter.ai/settings/keys](https://openrouter.ai/settings/keys)
+		
+			## Connection Details
+		
+			### API Key
+			Your OpenRouter API key starting with `sk-or-`. This key authenticates all requests to access AI models through OpenRouter.
+		
+			**Note:** Keep your API key secure and never share it publicly. OpenRouter operates on a pay-per-use model. You can add credits and set spending limits in your account settings.
+				 */
+				content: () => LocalizedString
+			}
 			OpenRouter: {
 				actions: {
 					list_models: {
@@ -159428,6 +161262,33 @@ export type TranslationFunctions = {
 			 * Connect to OpenWeatherMap to retrieve real-time weather data and 5-day forecasts for any location on Earth. Get comprehensive weather information including temperature, humidity, wind speed, pressure, and weather conditions. Support for multiple location input methods (city name, coordinates, or zip code) and customizable units (metric, imperial, or standard). Ideal for weather-aware applications, travel planning, agricultural monitoring, and location-based services within your Qore workflows.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to OpenWeatherMap
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to OpenWeatherMap, you will need your **API Key**.
+		
+			## Getting Your API Key
+		
+			1. Sign up for a free account at [OpenWeatherMap](https://openweathermap.org/)
+			2. After signing in, go to your account → **My API keys**
+			3. You'll see a default API key, or click **Generate** to create a new one
+			4. Give your API key a descriptive name
+			5. Copy the API key
+		
+			You can access the API keys page directly at [home.openweathermap.org/api_keys](https://home.openweathermap.org/api_keys)
+		
+			## Connection Details
+		
+			### API Key
+			Your OpenWeatherMap API key that authenticates requests to the weather data APIs.
+		
+			**Note:** New API keys may take a few hours to activate. The free tier includes access to current weather and 5-day forecasts with limited calls per minute. Paid plans offer additional features and higher rate limits.
+				 */
+				content: () => LocalizedString
+			}
 			actions: {
 				get_current_weather: {
 					/**
@@ -166704,6 +168565,59 @@ export type TranslationFunctions = {
 			 * Microsoft Dynamics 365 Business Central is a comprehensive cloud-based Enterprise Resource Planning (ERP) solution designed for small to medium-sized businesses. It provides integrated capabilities for financial management, supply chain operations, sales automation, customer service, and project management. The platform offers real-time business insights through built-in analytics and reporting, enabling data-driven decision making. Business Central seamlessly integrates with the Microsoft ecosystem including Office 365, Power Platform, and Azure services, providing a unified business management experience. Features include automated workflows, customizable dashboards, mobile accessibility, and scalable architecture that grows with your business needs.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Business Central
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Microsoft Dynamics 365 Business Central, you need to configure **Microsoft Entra ID (Azure AD) OAuth2** authentication.
+		
+			## Setting Up Azure AD Application
+		
+			1. Sign in to the [Azure Portal](https://portal.azure.com/)
+			2. Navigate to **Microsoft Entra ID** (formerly Azure Active Directory)
+			3. Select **App registrations** → **New registration**
+			4. Configure the application:
+			   - **Name**: Give your app a descriptive name (e.g., "Qore Business Central Integration")
+			   - **Supported account types**: Select based on your organization's needs
+			   - **Redirect URI**: Add the OAuth2 callback URL provided by Qore
+			5. Click **Register**
+		
+			## Configure API Permissions
+		
+			1. In your registered app, go to **API permissions**
+			2. Click **Add a permission** → **APIs my organization uses**
+			3. Search for **Dynamics 365 Business Central**
+			4. Select **Delegated permissions** or **Application permissions** as needed
+			5. Add the required permissions (e.g., `Financials.ReadWrite.All`, `API.ReadWrite.All`)
+			6. Click **Grant admin consent** for your organization
+		
+			## Create Client Secret
+		
+			1. Go to **Certificates & secrets**
+			2. Click **New client secret**
+			3. Add a description and select an expiration period
+			4. Click **Add** and copy the secret value immediately (it won't be shown again)
+		
+			## Connection Details
+		
+			### Client ID
+			The **Application (client) ID** from your Azure AD app registration overview page.
+		
+			### Client Secret
+			The secret value you created in the Certificates & secrets section.
+		
+			### Tenant ID
+			Your **Directory (tenant) ID** from the Azure AD app registration overview page.
+		
+			### Environment
+			The Business Central environment name (e.g., `Production`, `Sandbox`).
+		
+			**Note:** Ensure your Azure AD application has the necessary API permissions granted and admin consent provided. The user authenticating must have appropriate licenses and permissions in Business Central.
+				 */
+				content: () => LocalizedString
+			}
 			triggers: {
 				new_record: {
 					/**
@@ -176510,6 +178424,55 @@ export type TranslationFunctions = {
 			 * Odoo is a suite of open-source business apps that cover all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, etc.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Odoo
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Odoo, you will need your **Subdomain/URL**, **Database name**, **Username**, and either your **Password** or an **API Key**.
+		
+			## Finding Your Connection Details
+		
+			### For Odoo Online (SaaS)
+			- **Subdomain**: Your company subdomain (e.g., `mycompany` from `https://mycompany.odoo.com`)
+			- **Database**: Usually your subdomain name
+		
+			### For Self-Hosted Odoo
+			- **URL**: Your Odoo instance URL (e.g., `https://odoo.yourcompany.com`)
+			- **Database**: The name of your Odoo database
+		
+			## Getting Your API Key (Recommended)
+		
+			1. Log in to your Odoo instance
+			2. Click on your **user avatar** in the top right corner
+			3. Select **My Profile** or **Preferences**
+			4. Go to the **Account Security** tab
+			5. Scroll down to **API Keys** section
+			6. Click **New API Key**
+			7. Enter a description (e.g., "Qore Integration")
+			8. Click **Generate Key**
+			9. Copy the generated API key immediately (it won't be shown again)
+		
+			## Connection Details
+		
+			### Subdomain / URL
+			- For Odoo Online: Just the subdomain (e.g., `mycompany`)
+			- For Self-hosted: The full URL (e.g., `https://odoo.yourcompany.com`)
+		
+			### Database
+			The name of your Odoo database. For Odoo Online, this is typically the same as your subdomain.
+		
+			### Username
+			Your Odoo login email address.
+		
+			### Password / API Key
+			Either your Odoo password or a generated API key. API keys are recommended for better security as they can be revoked without changing your password.
+		
+			**Note for Odoo Online users:** If you're using Google/social login, you may need to set a local password first. Go to **Settings** → **Users & Companies** → **Users**, select your user, and set a password in the **Account Security** tab.
+				 */
+				content: () => LocalizedString
+			}
 			actions: {
 				create_partner: {
 					/**
@@ -200366,6 +202329,40 @@ export type TranslationFunctions = {
 			 * Freshdesk is a cloud-based customer support platform that was founded with the mission of enabling companies of all sizes to provide great customer service. Our goal is simple: make it easy for brands to talk to their customers and make it easy for users to get in touch with businesses.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Freshdesk
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Freshdesk, you will need your **Subdomain** and **API Key**.
+		
+			## Finding Your Subdomain
+		
+			Your Freshdesk subdomain is the unique identifier in your Freshdesk URL:
+			- If your Freshdesk URL is `https://yourcompany.freshdesk.com`, your subdomain is `yourcompany`
+		
+			## Getting Your API Key
+		
+			1. Log in to your Freshdesk account
+			2. Click on your **profile icon** in the top right corner
+			3. Select **Profile settings**
+			4. Scroll down to find your **API Key** section
+			5. Click **View API Key** to reveal your key
+			6. Copy the API key
+		
+			## Connection Details
+		
+			### Subdomain
+			Your Freshdesk subdomain (e.g., `yourcompany` from `yourcompany.freshdesk.com`). Do not include the full URL, just the subdomain portion.
+		
+			### API Key
+			Your personal Freshdesk API key. This key is tied to your user account and inherits your permissions within Freshdesk.
+		
+			**Note:** Your API key provides access based on your user role and permissions in Freshdesk. For production integrations, consider using a dedicated service account with appropriate permissions. Keep your API key secure and never share it publicly.
+				 */
+				content: () => LocalizedString
+			}
 			triggers: {
 				new_ticket_trigger: {
 					/**
@@ -207948,6 +209945,30 @@ export type TranslationFunctions = {
 			 * Enterprise AI ecosystem that enables businesses to create, manage, and scale AI agents effortlessly, enhancing productivity and innovation across various processes.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Serenity AI Hub
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Serenity AI Hub, you will need your **API Key**.
+		
+			## Getting Your API Key
+		
+			1. Sign in to your [Serenity AI Hub](https://serenity.qore.ai/) account
+			2. Navigate to **Developer Tools** or **API Settings**
+			3. Generate a new API key or copy your existing key
+			4. Give your API key a descriptive name for identification
+		
+			## Connection Details
+		
+			### API Key
+			Your Serenity API key that authenticates requests to execute agents, manage conversations, and interact with the Serenity AI Hub platform.
+		
+			**Note:** Keep your API key secure and never share it publicly. Your API key grants access to your organization's AI agents and conversations.
+				 */
+				content: () => LocalizedString
+			}
 			actions: {
 				'create-conversation': {
 					/**
@@ -208990,6 +211011,52 @@ export type TranslationFunctions = {
 			 * Magento is a flexible e-commerce platform that provides businesses with a complete solution for building and managing online stores. This integration allows you to automate workflows when customer, product, order, invoice, or shipment events occur in your Magento store.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Magento
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Magento, you will need your **Store URL** and an **Integration Access Token**.
+		
+			## Creating an Integration Token
+		
+			1. Log in to your Magento Admin Panel
+			2. Navigate to **System** → **Integrations**
+			3. Click **Add New Integration**
+			4. Fill in the integration details:
+			   - **Name**: Give it a descriptive name (e.g., "Qore Integration")
+			   - **Email**: Your admin email
+			   - **Callback URL** and **Identity Link URL**: Can be left empty for token-based access
+			5. Go to the **API** tab
+			6. Select the **Resource Access** level:
+			   - Choose **All** for full access, or
+			   - Choose **Custom** and select specific resources needed
+			7. Click **Save**
+			8. Click **Activate** on the integration
+			9. Click **Allow** in the confirmation popup
+			10. Copy the **Access Token** from the displayed credentials
+		
+			## Connection Details
+		
+			### Store URL
+			Your Magento store's base URL (e.g., `https://your-store.com`). Include the protocol (https://) but do not include trailing slashes.
+		
+			### Access Token
+			The integration access token generated when you activated the integration. This token authenticates all API requests.
+		
+			## For Magento 2.4.4 and Later
+		
+			If you're using Magento 2.4.4+, you may need to enable bearer token authentication:
+		
+			```bash
+			bin/magento config:set oauth/consumer/enable_integration_as_bearer 1
+			```
+		
+			**Note:** Integration tokens do not expire unless manually revoked. Store your access token securely and limit the integration's API access to only the resources needed for your use case.
+				 */
+				content: () => LocalizedString
+			}
 			actions: {
 				customerCustomerRepositoryV1GetByIdGet: {
 					groups: {
@@ -216680,6 +218747,49 @@ export type TranslationFunctions = {
 			 * Integrate with Paddle to handle payments, subscriptions, and billing. Supports one-time payments, recurring subscriptions, tax calculations, and customer management across multiple currencies and regions.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Paddle
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Paddle, you will need your **API Key** and to select the appropriate **Environment** (Sandbox or Production).
+		
+			## Getting Your API Key
+		
+			1. Log in to your [Paddle Dashboard](https://vendors.paddle.com/)
+			2. Navigate to **Developer Tools** → **Authentication**
+			3. Click **Generate API Key** or view existing keys
+			4. Copy your API key
+		
+			For sandbox testing, use the [Sandbox Dashboard](https://sandbox-vendors.paddle.com/) instead.
+		
+			## Connection Details
+		
+			### API Key
+			Your Paddle API key for authenticating requests. API keys created after May 2025 use the following format:
+			- **Production keys**: Start with `pdl_live_`
+			- **Sandbox keys**: Start with `pdl_sdbx_`
+		
+			Older keys may use different prefixes but remain functional.
+		
+			### Environment
+			Select the environment that matches your API key:
+			- **Production**: For live transactions (`api.paddle.com`)
+			- **Sandbox**: For testing and development (`sandbox-api.paddle.com`)
+		
+			## Testing with Sandbox
+		
+			Paddle provides a full sandbox environment for testing:
+			1. Create a separate sandbox account at [sandbox-vendors.paddle.com](https://sandbox-vendors.paddle.com/)
+			2. Generate sandbox API keys from the sandbox dashboard
+			3. Use test card numbers provided in Paddle's documentation
+			4. All sandbox transactions are simulated and won't process real payments
+		
+			**Note:** Make sure your API key matches the selected environment. Using a production key with the sandbox environment (or vice versa) will result in authentication errors.
+				 */
+				content: () => LocalizedString
+			}
 			actions: {
 				archive_product: {
 					groups: {
@@ -220246,6 +222356,30 @@ export type TranslationFunctions = {
 			 * 360 Messenger for WhatsApp enables you to send automated and personalized messages directly through WhatsApp Business accounts. Ideal for customer engagement, notifications, and support workflows, this integration ensures fast and reliable communication at scale via WhatsApp.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to 360 Messenger
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to 360 Messenger for WhatsApp, you will need your **API Key**.
+		
+			## Getting Your API Key
+		
+			1. Sign in to your [360 Messenger Dashboard](https://360messenger.com/)
+			2. Navigate to **Settings** or **API Settings**
+			3. Locate your API key or generate a new one
+			4. Copy the API key for use in your integration
+		
+			## Connection Details
+		
+			### API Key
+			Your 360 Messenger API key that authenticates requests to send and receive WhatsApp messages through the platform.
+		
+			**Note:** Keep your API key secure and never share it publicly. Your API key grants full access to send messages on behalf of your WhatsApp Business account.
+				 */
+				content: () => LocalizedString
+			}
 			actions: {
 				get_contacts: {
 					/**
@@ -224016,6 +226150,38 @@ export type TranslationFunctions = {
 			 * Access and deploy machine learning models, datasets, and spaces from Hugging Face Hub for natural language processing, computer vision, and other AI tasks
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Hugging Face
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Hugging Face, you will need your **Access Token**.
+		
+			## Getting Your Access Token
+		
+			1. Sign in to your [Hugging Face account](https://huggingface.co/)
+			2. Click on your profile picture → **Settings**
+			3. Navigate to **Access Tokens** in the left sidebar
+			4. Click **New token**
+			5. Give your token a descriptive name (e.g., "Qore Integration")
+			6. Select the appropriate role:
+			   - **Read**: For accessing public models and datasets
+			   - **Write**: For uploading models, creating repos, and full API access
+			7. Click **Generate a token**
+			8. Copy the generated token immediately
+		
+			You can access the tokens page directly at [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
+		
+			## Connection Details
+		
+			### Access Token
+			Your Hugging Face access token starting with `hf_`. This token authenticates all API requests to Hugging Face services.
+		
+			**Note:** Keep your access token secure and never share it publicly. You can create multiple tokens with different permissions and revoke them at any time from the settings page.
+				 */
+				content: () => LocalizedString
+			}
 			actions: {
 				list_models: {
 					/**
@@ -227042,6 +229208,41 @@ export type TranslationFunctions = {
 			 * Connect a Telegram Bot using its Bot Token to send messages and handle incoming updates. Authentication is done solely with the Bot Token issued by @BotFather; no user login is required.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Telegram
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Telegram, you will need your **Bot Token** from BotFather.
+		
+			## Creating a Telegram Bot
+		
+			1. Open Telegram and search for [@BotFather](https://t.me/BotFather)
+			2. Start a chat and send the command `/newbot`
+			3. Follow the prompts to:
+			   - Choose a **display name** for your bot (e.g., "My Automation Bot")
+			   - Choose a **username** for your bot (must end in "bot", e.g., "my_automation_bot")
+			4. BotFather will respond with your **Bot Token**
+			5. Copy the token (format: `123456789:ABCdefGHIjklMNOpqrsTUVwxyz`)
+		
+			## Managing Existing Bots
+		
+			To get the token for an existing bot:
+			1. Open [@BotFather](https://t.me/BotFather)
+			2. Send `/mybots`
+			3. Select your bot
+			4. Click **API Token** to view or regenerate the token
+		
+			## Connection Details
+		
+			### Bot Token
+			Your Telegram Bot Token in the format `123456789:ABCdefGHIjklMNOpqrsTUVwxyz`. This token authenticates your bot with the Telegram API.
+		
+			**Note:** Keep your bot token secure and never share it publicly. Anyone with your token can control your bot. If compromised, regenerate it immediately via BotFather.
+				 */
+				content: () => LocalizedString
+			}
 			actions: {
 				send_message: {
 					/**
@@ -230886,6 +233087,33 @@ export type TranslationFunctions = {
 			 * Brevo (formerly Sendinblue) is a marketing automation platform that enables businesses to communicate with customers through email, SMS, chat, and more. It offers tools for campaign management, contact segmentation, transactional emails, and customer relationship management. Brevo helps businesses build stronger relationships with their audience by providing scalable communication and automation solutions.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Brevo
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect your Brevo account, you will need your **API Key**.
+		
+			## Getting Your API Key
+		
+			1. Sign in to your [Brevo account](https://app.brevo.com/)
+			2. Navigate to **Settings** → **SMTP & API** → **API Keys**
+			3. Click **Generate a new API key**
+			4. Give your API key a descriptive name (e.g., "Qore Integration")
+			5. Copy the generated API key immediately (it won't be shown again)
+		
+			You can also access the API keys page directly at [app.brevo.com/settings/keys/api](https://app.brevo.com/settings/keys/api)
+		
+			## Connection Details
+		
+			### API Key
+			Your Brevo API key starting with `xkeysib-`. This key authenticates all API requests to your Brevo account.
+		
+			**Note:** Keep your API key secure and never share it publicly. You can revoke and regenerate keys at any time from the API Keys settings page.
+				 */
+				content: () => LocalizedString
+			}
 			actions: {
 				get_contact: {
 					/**
