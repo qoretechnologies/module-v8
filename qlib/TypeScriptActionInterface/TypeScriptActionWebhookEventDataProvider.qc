@@ -1,6 +1,6 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 
-/*  TypeScriptActionWebhookEventDataProvider.qc Copyright (C) 2023 - 2024 Qore Technologies s.r.o.
+/*  TypeScriptActionWebhookEventDataProvider.qc Copyright (C) 2023 - 2026 Qore Technologies s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -47,6 +47,8 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         *string webhook_confirmation_url_loc;
         *string webhook_confirmation_method;
         *string webhook_assume_json;
+        #! Optional async function to transform or filter webhook event data
+        *hash<AsyncCallInfo> format_event_data;
 
         #! Event options for the webhook register and deregister calls
         *hash<auto> event_opts;
@@ -69,7 +71,8 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
             *list<auto> webhook_perms, *string webhook_event_loc, *string webhook_echo_header,
             *softlist<string> webhook_echo_body_keys, *string webhook_confirmation_key_loc,
             auto webhook_confirmation_value, *string webhook_confirmation_url_loc,
-            *string webhook_confirmation_method, *string webhook_assume_json)
+            *string webhook_confirmation_method, *string webhook_assume_json,
+            *hash<AsyncCallInfo> format_event_data)
             : TypeScriptActionEventDataProviderBase(name, event_id, event, get_example_event_data, get_dynamic_type,
                 fctx) {
         self.method = method;
@@ -84,6 +87,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         self.webhook_confirmation_url_loc = webhook_confirmation_url_loc;
         self.webhook_confirmation_method = webhook_confirmation_method;
         self.webhook_assume_json = webhook_assume_json;
+        self.format_event_data = format_event_data;
     }
 
     destructor() {
@@ -146,6 +150,26 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
     }
 
     private callback(*hash<auto> event) {
+        if (format_event_data) {
+            try {
+                # Call format_event_data with context and event data
+                auto formatted = getAsyncValue(format_event_data, getCallContextInfo(event_opts), event);
+                # null/undefined means skip this event
+                if (!exists formatted) {
+                    debug("Event skipped by format_event_data for provider %y", name);
+                    return;
+                }
+                if (formatted.typeCode() != NT_HASH) {
+                    throw "FORMAT-EVENT-DATA-ERROR", sprintf("format_event_data must return a hash or null/undefined; "
+                        "got %y", formatted.fullType());
+                }
+                event = formatted;
+            } catch (hash<ExceptionInfo> ex) {
+                LoggerWrapper::error("Error in format_event_data for provider %y: %s; event skipped",
+                    name, get_exception_string(ex));
+                return;
+            }
+        }
         notifyObservers(event_id, event ?? {});
     }
 

@@ -1,11 +1,7 @@
-import {
-  EQoreAppActionCode,
-  QoreAppCreator,
-  QorusRequest,
-  TQoreOptions,
-} from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
+import { clickUpClient } from '../client';
 import { getClickUpFolderIdAllowedValues } from '../helpers/get-folder-id-allowed-values';
 import { getClickUpListIdAllowedValues } from '../helpers/get-list-id-allowed-values';
 import { getClickUpSpaceIdAllowedValues } from '../helpers/get-space-id-allowed-values';
@@ -64,18 +60,7 @@ const deleteTask = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      await QorusRequest.deleteReq(
-        {
-          path: `/api/v2/task/${task}`,
-          headers: {
-            Authorization: token,
-          },
-        },
-        {
-          url: 'https://api.clickup.com',
-          endpointId: CLICKUP_APP_NAME,
-        }
-      );
+      await clickUpClient.delete(`task/${task}`, { token });
     } catch (error) {
       throw new ClickUpError(`Failed to delete task: ${error}`);
     }

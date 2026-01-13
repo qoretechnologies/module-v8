@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
+import { clickUpClient } from '../client';
 import { getClickUpChannelIdAllowedValues } from '../helpers/get-channel-id-allowed-values';
 import { getClickUpGroupIdAllowedValues } from '../helpers/get-group-id-allowed-values';
 import { getClickUpWorkspaceIdAllowedValues } from '../helpers/get-workspace-id-allowed-values';
@@ -76,11 +76,9 @@ const sendChannelMessage = QoreAppCreator.createLocalizedAction<typeof options>(
     const { assignee, group_assignee, followers, content_format } = obj || {};
 
     try {
-      return await fetchClickUpData({
-        token,
-        version: 'v3',
-        method: 'POST',
-        body: {
+      return await clickUpClient.post(
+        clickUpClient.v3(`workspaces/${workspace}/chat/channels/${channel}/messages`),
+        {
           content,
           type,
           ...(assignee && { assignee }),
@@ -88,8 +86,8 @@ const sendChannelMessage = QoreAppCreator.createLocalizedAction<typeof options>(
           ...(followers && { followers }),
           ...(content_format && { content_format }),
         },
-        path: `workspaces/${workspace}/chat/channels/${channel}/messages`,
-      });
+        { token }
+      );
     } catch (error) {
       throw new ClickUpError(`Failed to send message: ${error}`);
     }

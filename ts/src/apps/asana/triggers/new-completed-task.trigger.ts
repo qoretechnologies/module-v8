@@ -2,14 +2,11 @@ import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnolog
 import { ASANA_APP_NAME } from '../constants';
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
 import { getAsanaWorkspaceProjectIdAllowedValues } from '../helpers/get-workspace-project-id-allowed-values';
-import { asanaEventInfoType, asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
-import {
-  deregisterAsanaWebhook,
-  getAsanaProject,
-  getAsanaProjectTasks,
-  getCurrentAsanaUser,
-} from './helpers';
+import { asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
+import { asanaTaskEventInfoType } from '../response-types';
+import { deregisterAsanaWebhook } from './helpers';
 import { Debugger } from '../../../utils/Debugger';
+import { asanaClient } from '../client';
 
 const asanaTaskCompletedTrigger = QoreAppCreator.createLocalizedTrigger({
   app: ASANA_APP_NAME,
@@ -72,15 +69,48 @@ const asanaTaskCompletedTrigger = QoreAppCreator.createLocalizedTrigger({
   webhook_deregister: deregisterAsanaWebhook,
   webhook_echo_header: asanaWebhookEchoHeader,
   webhook_event_loc: asanaWebhookInfoLocation,
+  format_event_data: async (context, eventData) => {
+    const token = context.conn_opts?.token;
+
+    if (!token) {
+      return eventData;
+    }
+
+    try {
+      const resourceGid = eventData.resource?.gid;
+      const userGid = eventData.user?.gid;
+      const parentGid = eventData.parent?.gid;
+
+      const [resource, user, parent] = await Promise.all([
+        resourceGid ? asanaClient.get(`tasks/${resourceGid}`, { token, objectPath: 'data' }) : null,
+        userGid ? asanaClient.get(`users/${userGid}`, { token, objectPath: 'data' }) : null,
+        parentGid ? asanaClient.get(`projects/${parentGid}`, { token, objectPath: 'data' }) : null,
+      ]);
+
+      return {
+        ...eventData,
+        enriched: {
+          resource,
+          user,
+          parent,
+        },
+      };
+    } catch (error) {
+      Debugger.log('Error enriching Asana event data:', error);
+      return eventData;
+    }
+  },
   get_example_event_data: async (context) => {
+    const token = context?.conn_opts?.token;
+    const projectId = context?.opts?.project as string;
+
     const mockData = {
       action: 'changed',
       type: 'task',
       created_at: new Date().toISOString(),
       parent: {
-        gid: '1208499061475139',
+        gid: projectId || '1208499061475139',
         resource_type: 'project',
-        name: 'Project Name',
       },
       resource: {
         gid: '1209628887786464',
@@ -91,52 +121,76 @@ const asanaTaskCompletedTrigger = QoreAppCreator.createLocalizedTrigger({
       user: {
         gid: '1206353569757060',
         resource_type: 'user',
-        name: 'user@example.com',
       },
       change: {
         field: 'completed',
         action: 'changed',
       },
+      enriched: {
+        resource: {
+          gid: '1209628887786464',
+          resource_type: 'task',
+          name: 'Completed Task Example',
+          completed: true,
+        },
+        parent: {
+          gid: projectId || '1208499061475139',
+          resource_type: 'project',
+          name: 'Project Name',
+        },
+        user: {
+          gid: '1206353569757060',
+          resource_type: 'user',
+          name: 'Example User',
+          email: 'user@example.com',
+        },
+      },
     };
-
-    const token = context?.conn_opts?.token;
-    const projectId = context?.opts?.project as string;
 
     if (!token || !projectId) {
       return mockData;
     }
 
     try {
-      const [user, project, tasks] = await Promise.all([
-        getCurrentAsanaUser(token),
-        getAsanaProject(token, projectId),
-        getAsanaProjectTasks(token, projectId),
+      const [userResult, projectResult, tasksResult] = await Promise.allSettled([
+        asanaClient.get('users/me', { token, objectPath: 'data' }),
+        asanaClient.get(`projects/${projectId}`, { token, objectPath: 'data' }),
+        asanaClient.get(`projects/${projectId}/tasks`, { token, objectPath: 'data', params: { limit: '1', opt_fields: 'gid,name,resource_subtype,notes,due_on,completed,assignee' } }),
       ]);
 
-      if (user) {
-        mockData.user.gid = user.gid;
-        mockData.user.name = user.name;
+      const event = { ...mockData };
+
+      if (userResult.status === 'fulfilled' && userResult.value) {
+        const userData = userResult.value as any;
+        event.user.gid = userData.gid;
+        event.enriched.user = userData;
       }
 
-      const task = tasks?.[0];
-      if (task) {
-        mockData.resource.gid = task.gid;
-        mockData.resource.name = task.name;
+      if (projectResult.status === 'fulfilled' && projectResult.value) {
+        const projectData = projectResult.value as any;
+        event.parent.gid = projectData.gid;
+        event.enriched.parent = projectData;
       }
 
-      if (project) {
-        mockData.parent.gid = project.gid;
-        mockData.parent.name = project.name;
+      if (tasksResult.status === 'fulfilled' && tasksResult.value) {
+        const tasks = tasksResult.value as any[];
+        if (tasks?.[0]) {
+          const task = tasks[0];
+          event.resource.gid = task.gid;
+          event.resource.name = task.name;
+          event.enriched.resource = task;
+        }
       }
+
+      return event;
     } catch (error) {
       Debugger.log(`Asana Error: Couldn't get example event data`, error);
-    } finally {
       return mockData;
     }
   },
   event_info: {
     desc: 'New completed task event data',
-    type: asanaEventInfoType,
+    type: asanaTaskEventInfoType,
   },
 });
 

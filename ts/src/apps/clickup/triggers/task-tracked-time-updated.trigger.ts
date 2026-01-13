@@ -1,13 +1,10 @@
-import {
-  EQoreAppActionCode,
-  QoreAppCreator,
-  QorusRequest,
-  TQoreOptions,
-} from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
+import { Debugger } from '../../../utils/Debugger';
+import { clickUpClient } from '../client';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
 import { getClickUpWorkspaceIdAllowedValues } from '../helpers/get-workspace-id-allowed-values';
+import { clickUpTimeEntryEventInfoType } from '../response-types';
 
 const options = {
   workspace: {
@@ -31,15 +28,14 @@ const ClickUpTaskTimeTrackedUpdated = QoreAppCreator.createLocalizedTrigger<type
       ErrorClass: ClickUpError,
     });
 
-    const webhook = await fetchClickUpData<{ id: string }>({
-      method: 'POST',
-      token,
-      body: {
+    const webhook = await clickUpClient.post<{ id: string }>(
+      `team/${workspace}/webhook`,
+      {
         endpoint: url,
         events: ['taskTimeTrackedUpdated'],
       },
-      path: `team/${workspace}/webhook`,
-    });
+      { token }
+    );
 
     return { webhook };
   },
@@ -56,129 +52,128 @@ const ClickUpTaskTimeTrackedUpdated = QoreAppCreator.createLocalizedTrigger<type
       throw new ClickUpError('Webhook ID is required for deregistration.');
     }
 
-    await QorusRequest.deleteReq(
-      {
-        path: `/api/v2/webhook/${webhookId}`,
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      },
-      { endpointId: CLICKUP_APP_NAME, url: `https://api.clickup.com` }
-    );
+    await clickUpClient.delete(`webhook/${webhookId}`, { token });
   },
-  get_example_event_data: () => {
-    return {
-      event: 'taskTimeTrackedUpdated',
-      history_items: [
-        {
-          id: '2800809188061123931',
-          type: 1,
-          date: '1642737376354',
-          field: 'time_spent',
-          parent_id: '162641285',
-          data: {
-            total_time: '900000',
-            rollup_time: '900000',
-          },
-          source: null,
-          user: {
-            id: 183,
-            username: 'John',
-            email: 'john@company.com',
-            color: '#7b68ee',
-            initials: 'J',
-            profilePicture: null,
-          },
-          before: null,
-          after: {
-            id: '2800809188061119507',
-            start: '1642736476215',
-            end: '1642737376215',
-            time: '900000',
-            source: 'clickup',
-            date_added: '1642737376354',
-          },
-        },
-      ],
-      task_id: '1vj38vv',
-      data: {
-        description: 'Time Tracking Created',
-        interval_id: '2800809188061119507',
+  format_event_data: async (context, eventData) => {
+    const token = context.conn_opts?.token;
+    const taskId = eventData.task_id;
+    const intervalId = eventData.data?.interval_id;
+
+    if (!token || !taskId) {
+      return eventData;
+    }
+
+    try {
+      const timeEntriesResponse = await clickUpClient.get<{ data: any[] }>(
+        `task/${taskId}/time`,
+        { token }
+      );
+
+      const timeEntries = timeEntriesResponse.data || [];
+
+      // Return specific interval or first one
+      const entry = intervalId
+        ? timeEntries.find((e: any) => e.id === intervalId)
+        : timeEntries[0];
+
+      return entry || eventData;
+    } catch (error) {
+      Debugger.log('Error fetching ClickUp time entry:', error);
+      return eventData;
+    }
+  },
+  get_example_event_data: async (context) => {
+    const mockData = {
+      id: '2800809188061119507',
+      task: {
+        id: '1vj38vv',
+        name: 'Example Task',
+        status: { status: 'to do', color: '#f9d900', type: 'open', orderindex: 0 },
+        custom_type: null,
       },
-      webhook_id: '7fa3ec74-69a8-4530-a251-8a13730bd204',
+      wid: '12345',
+      user: {
+        id: 183,
+        username: 'John',
+        email: 'john@company.com',
+        color: '#7b68ee',
+        initials: 'J',
+        profilePicture: null,
+      },
+      billable: false,
+      start: '1642736476215',
+      end: '1642737376215',
+      duration: '900000',
+      description: '',
+      tags: [],
+      source: 'clickup',
+      at: '1642737376354',
     };
+
+    const token = context?.conn_opts?.token;
+    const workspace = context?.opts?.workspace;
+
+    if (!token || !workspace) {
+      return mockData;
+    }
+
+    try {
+      const spacesResponse = await clickUpClient.get<{ spaces: { id: string }[] }>(
+        `team/${workspace}/space`,
+        { token }
+      );
+      const spaces = spacesResponse.spaces || [];
+
+      if (spaces.length === 0) {
+        return mockData;
+      }
+
+      const space = spaces[0].id;
+
+      const listsResponse = await clickUpClient.get<{ lists: { id: string }[] }>(
+        `space/${space}/list`,
+        { token }
+      );
+      const lists = listsResponse.lists || [];
+
+      if (lists.length === 0) {
+        return mockData;
+      }
+
+      const list = lists[0].id;
+
+      const tasksResponse = await clickUpClient.get<{ tasks: { id: string }[] }>(
+        `list/${list}/task`,
+        { token }
+      );
+      const tasks = tasksResponse.tasks || [];
+
+      if (tasks.length === 0) {
+        return mockData;
+      }
+
+      const task = tasks[0].id;
+
+      const timeEntriesResponse = await clickUpClient.get<{ data: any[] }>(
+        `task/${task}/time`,
+        { token }
+      );
+
+      const timeEntries = timeEntriesResponse.data || [];
+
+      if (timeEntries.length === 0) {
+        return mockData;
+      }
+
+      return timeEntries[0];
+    } catch (error) {
+      Debugger.log('Error fetching example event data:', error);
+      return mockData;
+    }
   },
   event_info: {
-    desc: 'Updated task event data',
-    type: {
-      type: 'hash',
-      fields: {
-        event: { type: 'string' },
-        history_items: {
-          type: {
-            type: 'list',
-            element_type: {
-              type: 'hash',
-              fields: {
-                id: { type: 'string' },
-                type: { type: 'number' },
-                date: { type: 'string' },
-                field: { type: 'string' },
-                parent_id: { type: 'string' },
-                data: {
-                  type: {
-                    type: 'hash',
-                    fields: {
-                      total_time: { type: 'string' },
-                      rollup_time: { type: 'string' },
-                    },
-                  },
-                },
-                source: { type: 'string' },
-                user: {
-                  type: {
-                    type: 'hash',
-                    fields: {
-                      id: { type: 'number' },
-                      username: { type: 'string' },
-                      email: { type: 'string' },
-                      color: { type: 'string' },
-                      initials: { type: 'string' },
-                      profilePicture: { type: 'string' },
-                    },
-                  },
-                },
-                before: { type: 'string' },
-                after: {
-                  type: {
-                    type: 'hash',
-                    fields: {
-                      id: { type: 'string' },
-                      start: { type: 'string' },
-                      end: { type: 'string' },
-                      time: { type: 'string' },
-                      source: { type: 'string' },
-                      date_added: { type: 'string' },
-                    },
-                  },
-                },
-              },
-            },
-          },
-        },
-        task_id: { type: 'string' },
-        data: {
-          type: {
-            type: 'hash',
-            fields: {
-              description: { type: 'string' },
-              interval_id: { type: 'string' },
-            },
-          },
-        },
-        webhook_id: { type: 'string' },
-      },
-    },
+    desc: 'Task time tracked data',
+    type: clickUpTimeEntryEventInfoType,
   },
 });
 

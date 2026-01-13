@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
+import { clickUpClient } from '../client';
 import { getClickUpWorkspaceIdAllowedValues } from '../helpers/get-workspace-id-allowed-values';
 
 const options = {
@@ -27,11 +27,7 @@ const listCustomFields = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      return await fetchClickUpData({
-        token,
-        version: 'v2',
-        path: `team/${workspace}/field`,
-      });
+      return await clickUpClient.get(`team/${workspace}/field`, { token });
     } catch (error) {
       throw new ClickUpError(`Failed to list custom fields: ${error}`);
     }

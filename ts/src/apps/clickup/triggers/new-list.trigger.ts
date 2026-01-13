@@ -1,14 +1,10 @@
-import {
-  EQoreAppActionCode,
-  QoreAppCreator,
-  QorusRequest,
-  TQoreOptions,
-} from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
-import { getClickUpWorkspaceIdAllowedValues } from '../helpers/get-workspace-id-allowed-values';
 import { Debugger } from '../../../utils/Debugger';
+import { clickUpClient } from '../client';
+import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
+import { getClickUpWorkspaceIdAllowedValues } from '../helpers/get-workspace-id-allowed-values';
+import { clickUpListEventInfoType } from '../response-types';
 
 const options = {
   workspace: {
@@ -32,15 +28,14 @@ const ClickUpNewList = QoreAppCreator.createLocalizedTrigger<typeof options>({
       ErrorClass: ClickUpError,
     });
 
-    const webhook = await fetchClickUpData<{ id: string }>({
-      method: 'POST',
-      token,
-      body: {
+    const webhook = await clickUpClient.post<{ id: string }>(
+      `team/${workspace}/webhook`,
+      {
         endpoint: url,
         events: ['listCreated'],
       },
-      path: `team/${workspace}/webhook`,
-    });
+      { token }
+    );
 
     return { webhook };
   },
@@ -57,76 +52,84 @@ const ClickUpNewList = QoreAppCreator.createLocalizedTrigger<typeof options>({
       throw new ClickUpError('Webhook ID is required for deregistration.');
     }
 
-    await QorusRequest.deleteReq(
-      {
-        path: `/api/v2/webhook/${webhookId}`,
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      },
-      { endpointId: CLICKUP_APP_NAME, url: `https://api.clickup.com` }
-    );
+    await clickUpClient.delete(`webhook/${webhookId}`, { token });
   },
-  get_example_event_data: async (context) => {
-    const { token, workspace } = getQoreContextRequiredValues({
-      context,
-      connectionFields: ['token'],
-      optionFields: ['workspace'],
-      ErrorClass: ClickUpError,
-    });
+  format_event_data: async (context, eventData) => {
+    const token = context.conn_opts?.token;
+    const listId = eventData.list_id;
+
+    if (!token || !listId) {
+      return eventData;
+    }
 
     try {
-      const spaces = await fetchClickUpData<{ id: string }[]>({
-        token,
-        path: `team/${workspace}/space`,
-        object: 'spaces',
-        limit: 1,
-      });
+      return await clickUpClient.get(`list/${listId}`, { token });
+    } catch (error) {
+      Debugger.log('Error fetching ClickUp list:', error);
+      return eventData;
+    }
+  },
+  get_example_event_data: async (context) => {
+    const mockData = {
+      id: '96772212',
+      name: 'Example List',
+      orderindex: 0,
+      content: '',
+      status: { status: 'open', color: '#d3d3d3', hide_label: true },
+      priority: null,
+      assignee: null,
+      due_date: null,
+      due_date_time: false,
+      start_date: null,
+      start_date_time: null,
+      folder: { id: '12345', name: 'Folder Name', hidden: false, access: true },
+      space: { id: '67890', name: 'Space Name', access: true },
+      inbound_address: '',
+      archived: false,
+      override_statuses: false,
+      statuses: [],
+      permission_level: 'create',
+    };
+
+    const token = context?.conn_opts?.token;
+    const workspace = context?.opts?.workspace;
+
+    if (!token || !workspace) {
+      return mockData;
+    }
+
+    try {
+      const spacesResponse = await clickUpClient.get<{ spaces: { id: string }[] }>(
+        `team/${workspace}/space`,
+        { token }
+      );
+      const spaces = spacesResponse.spaces || [];
 
       if (spaces.length === 0) {
-        throw new ClickUpError('No spaces found in the workspace.');
+        return mockData;
       }
 
       const space = spaces[0].id;
 
-      const lists = await fetchClickUpData<{ id: string }[]>({
-        token,
-        path: `space/${space}/list`,
-        object: 'lists',
-        limit: 1,
-      });
+      const listsResponse = await clickUpClient.get<{ lists: any[] }>(
+        `space/${space}/list`,
+        { token }
+      );
+      const lists = listsResponse.lists || [];
 
       if (lists.length === 0) {
-        throw new ClickUpError('No lists found in the space.');
+        return mockData;
       }
 
-      const list = lists[0].id;
-
-      return {
-        event: 'listCreated',
-        list_id: list,
-        webhook_id: 'example-webhook-id',
-      };
+      return lists[0];
     } catch (error) {
       Debugger.log('Error fetching example event data:', error);
-
-      return {
-        event: 'listCreated',
-        list_id: '96772212',
-        webhook_id: '7fa3ec74-69a8-4530-a251-8a13730bd204',
-      };
+      return mockData;
     }
   },
   event_info: {
-    desc: 'List created event data',
-    type: {
-      type: 'hash',
-      fields: {
-        event: { type: 'string' },
-        list_id: { type: 'string' },
-        webhook_id: { type: 'string' },
-      },
-    },
+    desc: 'New list data',
+    type: clickUpListEventInfoType,
   },
 });
 

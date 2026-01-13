@@ -1,14 +1,10 @@
-import {
-  EQoreAppActionCode,
-  QoreAppCreator,
-  QorusRequest,
-  TQoreOptions,
-} from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { Debugger } from '../../../utils/Debugger';
+import { clickUpClient } from '../client';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
 import { getClickUpWorkspaceIdAllowedValues } from '../helpers/get-workspace-id-allowed-values';
+import { clickUpFolderEventInfoType } from '../response-types';
 
 const options = {
   workspace: {
@@ -32,15 +28,14 @@ const ClickUpNewFolder = QoreAppCreator.createLocalizedTrigger<typeof options>({
       ErrorClass: ClickUpError,
     });
 
-    const webhook = await fetchClickUpData<{ id: string }>({
-      method: 'POST',
-      token,
-      body: {
+    const webhook = await clickUpClient.post<{ id: string }>(
+      `team/${workspace}/webhook`,
+      {
         endpoint: url,
         events: ['folderCreated'],
       },
-      path: `team/${workspace}/webhook`,
-    });
+      { token }
+    );
 
     return { webhook };
   },
@@ -57,76 +52,78 @@ const ClickUpNewFolder = QoreAppCreator.createLocalizedTrigger<typeof options>({
       throw new ClickUpError('Webhook ID is required for deregistration.');
     }
 
-    await QorusRequest.deleteReq(
-      {
-        path: `/api/v2/webhook/${webhookId}`,
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      },
-      { endpointId: CLICKUP_APP_NAME, url: `https://api.clickup.com` }
-    );
+    await clickUpClient.delete(`webhook/${webhookId}`, { token });
   },
-  get_example_event_data: async (context) => {
-    const { token, workspace } = getQoreContextRequiredValues({
-      context,
-      connectionFields: ['token'],
-      optionFields: ['workspace'],
-      ErrorClass: ClickUpError,
-    });
+  format_event_data: async (context, eventData) => {
+    const token = context.conn_opts?.token;
+    const folderId = eventData.folder_id;
+
+    if (!token || !folderId) {
+      return eventData;
+    }
 
     try {
-      const spaces = await fetchClickUpData<{ id: string }[]>({
-        token,
-        path: `team/${workspace}/space`,
-        object: 'spaces',
-        limit: 1,
-      });
+      const folder = await clickUpClient.get(`folder/${folderId}`, { token });
+      return folder;
+    } catch (error) {
+      Debugger.log('Error fetching ClickUp folder:', error);
+      return eventData;
+    }
+  },
+  get_example_event_data: async (context) => {
+    const mockData = {
+      id: '96772212',
+      name: 'Example Folder',
+      orderindex: 0,
+      override_statuses: false,
+      hidden: false,
+      space: { id: '12345', name: 'Space Name' },
+      task_count: '0',
+      archived: false,
+      statuses: [],
+      lists: [],
+      permission_level: 'create',
+    };
+
+    const token = context?.conn_opts?.token;
+    const workspace = context?.opts?.workspace;
+
+    if (!token || !workspace) {
+      return mockData;
+    }
+
+    try {
+      const spacesResponse = await clickUpClient.get<{ spaces: { id: string }[] }>(
+        `team/${workspace}/space`,
+        { token }
+      );
+      const spaces = spacesResponse.spaces || [];
 
       if (spaces.length === 0) {
-        throw new ClickUpError('No spaces found in the workspace.');
+        return mockData;
       }
 
       const space = spaces[0].id;
 
-      const folders = await fetchClickUpData<{ id: string }[]>({
-        token,
-        path: `space/${space}/folder`,
-        object: 'folders',
-        limit: 1,
-      });
+      const foldersResponse = await clickUpClient.get<{ folders: any[] }>(
+        `space/${space}/folder`,
+        { token }
+      );
+      const folders = foldersResponse.folders || [];
 
       if (folders.length === 0) {
-        throw new ClickUpError('No folders found in the space.');
+        return mockData;
       }
 
-      const folder = folders[0].id;
-
-      return {
-        event: 'folderCreated',
-        folder_id: folder,
-        webhook_id: 'example-webhook-id',
-      };
+      return folders[0];
     } catch (error) {
       Debugger.log('Error fetching example event data:', error);
-
-      return {
-        event: 'folderCreated',
-        folder_id: '96772212',
-        webhook_id: '7fa3ec74-69a8-4530-a251-8a13730bd204',
-      };
+      return mockData;
     }
   },
   event_info: {
-    desc: 'Folder created event data',
-    type: {
-      type: 'hash',
-      fields: {
-        event: { type: 'string' },
-        folder_id: { type: 'string' },
-        webhook_id: { type: 'string' },
-      },
-    },
+    desc: 'New folder data',
+    type: clickUpFolderEventInfoType,
   },
 });
 

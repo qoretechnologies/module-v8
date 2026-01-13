@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
+import { clickUpClient } from '../client';
 import { getClickUpFolderIdAllowedValues } from '../helpers/get-folder-id-allowed-values';
 import { getClickUpListIdAllowedValues } from '../helpers/get-list-id-allowed-values';
 import { getClickUpSpaceIdAllowedValues } from '../helpers/get-space-id-allowed-values';
@@ -49,10 +49,7 @@ const getList = QoreAppCreator.createLocalizedAction<typeof options>({
     });
 
     try {
-      return await fetchClickUpData({
-        token,
-        path: `list/${list}`,
-      });
+      return await clickUpClient.get(`list/${list}`, { token });
     } catch (error) {
       throw new ClickUpError(`Failed to list lists: ${error}`);
     }

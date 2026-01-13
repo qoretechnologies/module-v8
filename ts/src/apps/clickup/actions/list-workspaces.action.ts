@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
+import { clickUpClient } from '../client';
 
 const listWorkspaces = QoreAppCreator.createLocalizedAction({
   app: CLICKUP_APP_NAME,
@@ -15,10 +15,7 @@ const listWorkspaces = QoreAppCreator.createLocalizedAction({
     });
 
     try {
-      const workspacesResponse = await fetchClickUpData<{ teams: [] }>({
-        token,
-        path: `team`,
-      });
+      const workspacesResponse = await clickUpClient.get<{ teams: [] }>('team', { token });
 
       return { workspaces: workspacesResponse.teams || [] };
     } catch (error) {

@@ -2,7 +2,7 @@ import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnolog
 import { map } from 'lodash';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
+import { clickUpClient } from '../client';
 import { getClickUpWorkspaceIdAllowedValues } from '../helpers/get-workspace-id-allowed-values';
 
 const options = {
@@ -67,9 +67,8 @@ const listChannels = QoreAppCreator.createLocalizedAction<typeof options>({
     const { cursor, limit, is_follower, include_hidden, room_types } = obj || {};
 
     try {
-      return await fetchClickUpData({
+      return await clickUpClient.get(clickUpClient.v3(`workspaces/${workspace}/chat/channels`), {
         token,
-        version: 'v3',
         params: {
           include_hidden: include_hidden === true ? 'true' : 'false',
           is_follower: is_follower === true ? 'true' : 'false',
@@ -79,7 +78,6 @@ const listChannels = QoreAppCreator.createLocalizedAction<typeof options>({
             room_types: map(room_types, (val) => `room_types=${encodeURIComponent(val)}`).join('&'),
           }),
         },
-        path: `workspaces/${workspace}/chat/channels`,
       });
     } catch (error) {
       throw new ClickUpError(`Failed to list channels: ${error}`);

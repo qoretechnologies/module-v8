@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
+import { clickUpClient } from '../client';
 import { getClickUpFolderIdAllowedValues } from '../helpers/get-folder-id-allowed-values';
 import { getClickUpGroupIdAllowedValues } from '../helpers/get-group-id-allowed-values';
 import { getClickUpListIdAllowedValues } from '../helpers/get-list-id-allowed-values';
@@ -83,17 +83,12 @@ const createTaskComment = QoreAppCreator.createLocalizedAction<typeof options>({
     const { assignee, group_assignee } = obj || {};
 
     try {
-      return await fetchClickUpData({
-        token,
-        method: 'POST',
-        body: {
-          comment_text,
-          notify_all,
-          ...(assignee && { assignee }),
-          ...(group_assignee && { group_assignee }),
-        },
-        path: `task/${task}/comment`,
-      });
+      return await clickUpClient.post(`task/${task}/comment`, {
+        comment_text,
+        notify_all,
+        ...(assignee && { assignee }),
+        ...(group_assignee && { group_assignee }),
+      }, { token });
     } catch (error) {
       throw new ClickUpError(`Failed to create task comment: ${error}`);
     }

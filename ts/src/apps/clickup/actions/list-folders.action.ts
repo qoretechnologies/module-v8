@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
+import { clickUpClient } from '../client';
 import { getClickUpSpaceIdAllowedValues } from '../helpers/get-space-id-allowed-values';
 import { getClickUpWorkspaceIdAllowedValues } from '../helpers/get-workspace-id-allowed-values';
 
@@ -42,12 +42,11 @@ const listFolders = QoreAppCreator.createLocalizedAction<typeof options>({
     const archived = obj?.archived;
 
     try {
-      return await fetchClickUpData({
+      return await clickUpClient.get(`space/${space}/folder`, {
         token,
         params: {
           archived: archived === true ? 'true' : 'false',
         },
-        path: `space/${space}/folder`,
       });
     } catch (error) {
       throw new ClickUpError(`Failed to list folders: ${error}`);

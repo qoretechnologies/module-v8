@@ -1,17 +1,14 @@
-import {
-  EQoreAppActionCode,
-  QoreAppCreator,
-  QorusRequest,
-  TQoreOptions,
-} from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
+import { Debugger } from '../../../utils/Debugger';
+import { clickUpClient } from '../client';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
-import { getClickUpWorkspaceIdAllowedValues } from '../helpers/get-workspace-id-allowed-values';
-import { getClickUpSpaceIdAllowedValues } from '../helpers/get-space-id-allowed-values';
 import { getClickUpFolderIdAllowedValues } from '../helpers/get-folder-id-allowed-values';
 import { getClickUpListIdAllowedValues } from '../helpers/get-list-id-allowed-values';
+import { getClickUpSpaceIdAllowedValues } from '../helpers/get-space-id-allowed-values';
 import { getClickUpTaskIdAllowedValues } from '../helpers/get-task-id-allowed-values';
+import { getClickUpWorkspaceIdAllowedValues } from '../helpers/get-workspace-id-allowed-values';
+import { clickUpCommentEventInfoType } from '../response-types';
 
 const options = {
   workspace: {
@@ -67,10 +64,9 @@ const ClickUpNewTaskComment = QoreAppCreator.createLocalizedTrigger<typeof optio
 
     const { space, folder, list, task } = context.opts || {};
 
-    const webhook = await fetchClickUpData<{ id: string }>({
-      method: 'POST',
-      token,
-      body: {
+    const webhook = await clickUpClient.post<{ id: string }>(
+      `team/${workspace}/webhook`,
+      {
         endpoint: url,
         ...(space && { space_id: space }),
         ...(folder && { folder_id: folder }),
@@ -78,8 +74,8 @@ const ClickUpNewTaskComment = QoreAppCreator.createLocalizedTrigger<typeof optio
         ...(task && { task_id: task }),
         events: ['taskCommentPosted'],
       },
-      path: `team/${workspace}/webhook`,
-    });
+      { token }
+    );
 
     return { webhook };
   },
@@ -96,250 +92,120 @@ const ClickUpNewTaskComment = QoreAppCreator.createLocalizedTrigger<typeof optio
       throw new ClickUpError('Webhook ID is required for deregistration.');
     }
 
-    await QorusRequest.deleteReq(
-      {
-        path: `/api/v2/webhook/${webhookId}`,
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      },
-      { endpointId: CLICKUP_APP_NAME, url: `https://api.clickup.com` }
-    );
+    await clickUpClient.delete(`webhook/${webhookId}`, { token });
   },
-  get_example_event_data: () => {
-    return {
-      event: 'taskCommentPosted',
-      history_items: [
-        {
-          id: '2800803631413624919',
-          type: 1,
-          date: '1642737045116',
-          field: 'comment',
-          parent_id: '162641285',
-          data: {},
-          source: null,
-          user: {
-            id: 183,
-            username: 'John',
-            email: 'john@company.com',
-            color: '#7b68ee',
-            initials: 'J',
-            profilePicture: null,
-          },
-          before: null,
-          after: '648893191',
-          comment: {
-            id: '648893191',
-            date: '1642737045116',
-            parent: '1vj38vv',
-            type: 1,
-            comment: [
-              {
-                text: 'comment abc1234',
-                attributes: {},
-              },
-              {
-                text: '\n',
-                attributes: {
-                  'block-id': 'block-4c8fe54f-7bff-4b7b-92a2-9142068983ea',
-                },
-              },
-            ],
-            text_content: 'comment abc1234\n',
-            x: null,
-            y: null,
-            image_y: null,
-            image_x: null,
-            page: null,
-            comment_number: null,
-            page_id: null,
-            page_name: null,
-            view_id: null,
-            view_name: null,
-            team: null,
-            user: {
-              id: 183,
-              username: 'John',
-              email: 'john@company.com',
-              color: '#7b68ee',
-              initials: 'J',
-              profilePicture: null,
-            },
-            new_thread_count: 0,
-            new_mentioned_thread_count: 0,
-            email_attachments: [],
-            threaded_users: [],
-            threaded_replies: 0,
-            threaded_assignees: 0,
-            threaded_assignees_members: [],
-            threaded_unresolved_count: 0,
-            thread_followers: [
-              {
-                id: 183,
-                username: 'John',
-                email: 'john@company.com',
-                color: '#7b68ee',
-                initials: 'J',
-                profilePicture: null,
-              },
-            ],
-            group_thread_followers: [],
-            reactions: [],
-            emails: [],
-          },
-        },
-      ],
-      task_id: '1vj38vv',
-      webhook_id: '7fa3ec74-69a8-4530-a251-8a13730bd204',
+  format_event_data: async (context, eventData) => {
+    const token = context.conn_opts?.token;
+    const taskId = eventData.task_id;
+    const commentId = eventData.history_items?.[0]?.comment?.id;
+
+    if (!token || !taskId) {
+      return eventData;
+    }
+
+    try {
+      const commentsResponse = await clickUpClient.get<{ comments: any[] }>(
+        `task/${taskId}/comment`,
+        { token }
+      );
+
+      const comments = commentsResponse.comments || [];
+
+      // Return the specific comment or the first one
+      const comment = commentId
+        ? comments.find((c: any) => c.id === commentId)
+        : comments[0];
+
+      return comment || eventData;
+    } catch (error) {
+      Debugger.log('Error fetching ClickUp comment:', error);
+      return eventData;
+    }
+  },
+  get_example_event_data: async (context) => {
+    const mockData = {
+      id: '648893191',
+      comment: [{ text: 'Example comment', attributes: {} }],
+      comment_text: 'Example comment',
+      user: {
+        id: 183,
+        username: 'John',
+        email: 'john@company.com',
+        color: '#7b68ee',
+        initials: 'J',
+        profilePicture: null,
+      },
+      resolved: false,
+      assignee: null,
+      assigned_by: null,
+      reactions: [],
+      date: '1642737045116',
     };
+
+    const token = context?.conn_opts?.token;
+    const workspace = context?.opts?.workspace;
+
+    if (!token || !workspace) {
+      return mockData;
+    }
+
+    try {
+      const spacesResponse = await clickUpClient.get<{ spaces: { id: string }[] }>(
+        `team/${workspace}/space`,
+        { token }
+      );
+      const spaces = spacesResponse.spaces || [];
+
+      if (spaces.length === 0) {
+        return mockData;
+      }
+
+      const space = spaces[0].id;
+
+      const listsResponse = await clickUpClient.get<{ lists: { id: string }[] }>(
+        `space/${space}/list`,
+        { token }
+      );
+      const lists = listsResponse.lists || [];
+
+      if (lists.length === 0) {
+        return mockData;
+      }
+
+      const list = lists[0].id;
+
+      const tasksResponse = await clickUpClient.get<{ tasks: { id: string }[] }>(
+        `list/${list}/task`,
+        { token }
+      );
+      const tasks = tasksResponse.tasks || [];
+
+      if (tasks.length === 0) {
+        return mockData;
+      }
+
+      const task = tasks[0].id;
+
+      const commentsResponse = await clickUpClient.get<{ comments: any[] }>(
+        `task/${task}/comment`,
+        { token }
+      );
+
+      const comments = commentsResponse.comments || [];
+
+      if (comments.length === 0) {
+        return mockData;
+      }
+
+      return comments[0];
+    } catch (error) {
+      Debugger.log('Error fetching example event data:', error);
+      return mockData;
+    }
   },
   event_info: {
-    desc: '',
-    type: {
-      type: 'hash',
-      fields: {
-        event: { type: 'string' },
-        history_items: {
-          type: {
-            type: 'list',
-            element_type: {
-              type: 'hash',
-              fields: {
-                id: { type: 'string' },
-                type: { type: 'number' },
-                date: { type: 'string' },
-                field: { type: 'string' },
-                parent_id: { type: 'string' },
-                data: { type: 'hash' },
-                source: { type: 'string' },
-                user: {
-                  type: {
-                    type: 'hash',
-                    fields: {
-                      id: { type: 'number' },
-                      username: { type: 'string' },
-                      email: { type: 'string' },
-                      color: { type: 'string' },
-                      initials: { type: 'string' },
-                      profilePicture: { type: 'string' },
-                    },
-                  },
-                },
-                before: { type: 'string' },
-                after: { type: 'string' },
-                comment: {
-                  type: {
-                    type: 'hash',
-                    fields: {
-                      id: { type: 'string' },
-                      date: { type: 'string' },
-                      parent: { type: 'string' },
-                      type: { type: 'number' },
-                      comment: {
-                        type: {
-                          type: 'list',
-                          element_type: {
-                            type: 'hash',
-                            fields: {
-                              text: { type: 'string' },
-                              attributes: { type: 'hash' },
-                            },
-                          },
-                        },
-                      },
-                      text_content: { type: 'string' },
-                      x: { type: 'string' },
-                      y: { type: 'string' },
-                      image_y: { type: 'string' },
-                      image_x: { type: 'string' },
-                      page: { type: 'string' },
-                      comment_number: { type: 'string' },
-                      page_id: { type: 'string' },
-                      page_name: { type: 'string' },
-                      view_id: { type: 'string' },
-                      view_name: { type: 'string' },
-                      team: { type: 'string' },
-                      user: {
-                        type: {
-                          type: 'hash',
-                          fields: {
-                            id: { type: 'number' },
-                            username: { type: 'string' },
-                            email: { type: 'string' },
-                            color: { type: 'string' },
-                            initials: { type: 'string' },
-                            profilePicture: { type: 'string' },
-                          },
-                        },
-                      },
-                      new_thread_count: { type: 'number' },
-                      new_mentioned_thread_count: { type: 'number' },
-                      email_attachments: {
-                        type: {
-                          type: 'list',
-                          element_type: 'hash',
-                        },
-                      },
-                      threaded_users: {
-                        type: {
-                          type: 'list',
-                          element_type: 'hash',
-                        },
-                      },
-                      threaded_replies: { type: 'number' },
-                      threaded_assignees: { type: 'number' },
-                      threaded_assignees_members: {
-                        type: {
-                          type: 'list',
-                          element_type: 'hash',
-                        },
-                      },
-                      threaded_unresolved_count: { type: 'number' },
-                      thread_followers: {
-                        type: {
-                          type: 'list',
-                          element_type: {
-                            type: 'hash',
-                            fields: {
-                              id: { type: 'number' },
-                              username: { type: 'string' },
-                              email: { type: 'string' },
-                              color: { type: 'string' },
-                              initials: { type: 'string' },
-                              profilePicture: { type: 'string' },
-                            },
-                          },
-                        },
-                      },
-                      group_thread_followers: {
-                        type: {
-                          type: 'list',
-                          element_type: 'hash',
-                        },
-                      },
-                      reactions: {
-                        type: {
-                          type: 'list',
-                          element_type: 'hash',
-                        },
-                      },
-                      emails: {
-                        type: {
-                          type: 'list',
-                          element_type: 'hash',
-                        },
-                      },
-                    },
-                  },
-                },
-              },
-            },
-          },
-        },
-        task_id: { type: 'string' },
-        webhook_id: { type: 'string' },
-      },
-    },
+    desc: 'New task comment data',
+    type: clickUpCommentEventInfoType,
   },
 });
 

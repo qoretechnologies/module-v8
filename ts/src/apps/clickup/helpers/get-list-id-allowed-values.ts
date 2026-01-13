@@ -4,8 +4,8 @@ import {
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
+import { clickUpClient } from '../client';
 import { ClickUpError } from '../constants';
-import { fetchClickUpAllowedValues } from './constants';
 
 type TClickUpItem = {
   id: string;
@@ -36,10 +36,10 @@ export const getClickUpListIdAllowedValues: TQoreGetAllowedValuesFunction<
   const items: IQoreAllowedValue<string>[] = [];
 
   if (folder) {
-    const folderLists = await fetchClickUpAllowedValues<TClickUpItem>({
+    const folderLists = await clickUpClient.fetchAllowedValues<TClickUpItem>({
       token,
       path: `folder/${folder}/list`,
-      object: 'lists',
+      itemsPath: 'lists',
       mapItemToAllowedValue: mapClickUpItemToAllowedValue,
     });
 
@@ -47,10 +47,10 @@ export const getClickUpListIdAllowedValues: TQoreGetAllowedValuesFunction<
   }
 
   if (space) {
-    const spaceLists = await fetchClickUpAllowedValues<TClickUpItem>({
+    const spaceLists = await clickUpClient.fetchAllowedValues<TClickUpItem>({
       token,
       path: `space/${space}/list`,
-      object: 'lists',
+      itemsPath: 'lists',
       mapItemToAllowedValue: mapClickUpItemToAllowedValue,
     });
 

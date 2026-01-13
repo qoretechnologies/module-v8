@@ -1,7 +1,7 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { CLICKUP_APP_NAME, ClickUpError } from '../constants';
-import { fetchClickUpData } from '../helpers/constants';
+import { clickUpClient } from '../client';
 import { getClickUpFolderIdAllowedValues } from '../helpers/get-folder-id-allowed-values';
 import { getClickUpGroupIdAllowedValues } from '../helpers/get-group-id-allowed-values';
 import { getClickUpListIdAllowedValues } from '../helpers/get-list-id-allowed-values';
@@ -176,31 +176,26 @@ const createTask = QoreAppCreator.createLocalizedAction<typeof options>({
     const startDateTime = start_date ? new Date(start_date).getTime() : undefined;
 
     try {
-      return await fetchClickUpData({
-        token,
-        method: 'POST',
-        body: {
-          name,
-          ...(description && { description }),
-          ...(assignees?.length && { assignees }),
-          ...(group_assignees?.length && { group_assignees }),
-          ...(tags?.length && { tags }),
-          ...(priority && { priority }),
-          ...(dueDateTime && { due_date: dueDateTime }),
-          ...(startDateTime && { start_date: startDateTime }),
-          ...(time_estimate && { time_estimate }),
-          ...(points && { points }),
-          ...(notify_all && { notify_all }),
-          ...(parent && { parent }),
-          ...(markdown_content && { markdown_content }),
-          ...(links_to && { links_to }),
-          ...(check_required_custom_fields && { check_required_custom_fields }),
-          ...(custom_fields && { custom_fields }),
-          ...(custom_item_id && { custom_item_id }),
-          ...(archived && { archived }),
-        },
-        path: `list/${list}/task`,
-      });
+      return await clickUpClient.post(`list/${list}/task`, {
+        name,
+        ...(description && { description }),
+        ...(assignees?.length && { assignees }),
+        ...(group_assignees?.length && { group_assignees }),
+        ...(tags?.length && { tags }),
+        ...(priority && { priority }),
+        ...(dueDateTime && { due_date: dueDateTime }),
+        ...(startDateTime && { start_date: startDateTime }),
+        ...(time_estimate && { time_estimate }),
+        ...(points && { points }),
+        ...(notify_all && { notify_all }),
+        ...(parent && { parent }),
+        ...(markdown_content && { markdown_content }),
+        ...(links_to && { links_to }),
+        ...(check_required_custom_fields && { check_required_custom_fields }),
+        ...(custom_fields && { custom_fields }),
+        ...(custom_item_id && { custom_item_id }),
+        ...(archived && { archived }),
+      }, { token });
     } catch (error) {
       throw new ClickUpError(`Failed to create task: ${error}`);
     }
