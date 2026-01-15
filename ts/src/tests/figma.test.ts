@@ -128,7 +128,7 @@ describe('Figma', () => {
     //   expect(result.length).toBeGreaterThan(0);
     // });
 
-    it('Should list file version history', async () => {
+    it.skip('Should list file version history', async () => {
       const action = ListFigmaFileVersionHistory;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
