@@ -38,13 +38,13 @@ const listEmployees = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { api_key, company_domain } = getQoreContextRequiredValues({
+    const { token, company_domain } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },
-      connectionFields: ['api_key', 'company_domain'],
+      connectionFields: ['token', 'company_domain'],
       ErrorClass: BambooHRError,
     });
 
-    const connectionOptions = { api_key, company_domain };
+    const connectionOptions = { token, company_domain };
 
     // Build fields list - use provided fields or get default set
     let fieldsList: string[];
@@ -77,7 +77,7 @@ const listEmployees = QoreAppCreator.createLocalizedAction<typeof options>({
           fields: fieldsList,
         },
         {
-          token: api_key,
+          token,
           connectionOptions: { company_domain },
           params: {
             format: 'JSON',

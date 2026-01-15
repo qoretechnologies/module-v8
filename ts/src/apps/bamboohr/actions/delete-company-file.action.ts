@@ -40,16 +40,16 @@ const deleteCompanyFile = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { api_key, company_domain, file_id } = getQoreContextRequiredValues({
+    const { token, company_domain, file_id } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },
-      connectionFields: ['api_key', 'company_domain'],
+      connectionFields: ['token', 'company_domain'],
       optionFields: ['file_id'],
       ErrorClass: BambooHRError,
     });
 
     try {
       await bambooHRClient.delete(`files/${file_id}`, {
-        token: api_key,
+        token,
         connectionOptions: { company_domain },
       });
 

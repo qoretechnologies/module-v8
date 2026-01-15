@@ -295,13 +295,13 @@ const REQUIRED_EMPLOYEE_FIELDS = new Set(['firstName', 'lastName']);
  * - Excludes read-only fields (none currently in BambooHR standard fields)
  */
 export const getBambooHREmployeeInputType: TQoreGetDynamicTypeFunction = async (context) => {
-  const { api_key, company_domain } = getQoreContextRequiredValues({
+  const { token, company_domain } = getQoreContextRequiredValues({
     context,
-    connectionFields: ['api_key', 'company_domain'],
+    connectionFields: ['token', 'company_domain'],
     ErrorClass: BambooHRError,
   });
 
-  const connectionOptions: IBambooHRConnectionOptions = { api_key, company_domain };
+  const connectionOptions: IBambooHRConnectionOptions = { token, company_domain };
 
   // Fetch fields and list options in parallel for efficiency
   const [fields, listOptionsMap] = await Promise.all([
@@ -346,13 +346,13 @@ export const getBambooHREmployeeInputType: TQoreGetDynamicTypeFunction = async (
  * - Excludes allowed_values (not needed in responses)
  */
 export const getBambooHREmployeeResponseType: TQoreGetDynamicTypeFunction = async (context) => {
-  const { api_key, company_domain } = getQoreContextRequiredValues({
+  const { token, company_domain } = getQoreContextRequiredValues({
     context,
-    connectionFields: ['api_key', 'company_domain'],
+    connectionFields: ['token', 'company_domain'],
     ErrorClass: BambooHRError,
   });
 
-  const connectionOptions: IBambooHRConnectionOptions = { api_key, company_domain };
+  const connectionOptions: IBambooHRConnectionOptions = { token, company_domain };
   const allFields = await getBambooHRFields(connectionOptions);
 
   // Check if user selected specific fields
@@ -507,13 +507,13 @@ export const transformBambooHREmployeeList = async (
 export const getBambooHRFieldsAllowedValues = async (
   context: Record<string, unknown>
 ): Promise<IQoreAllowedValue<string>[]> => {
-  const { api_key, company_domain } = getQoreContextRequiredValues({
+  const { token, company_domain } = getQoreContextRequiredValues({
     context,
-    connectionFields: ['api_key', 'company_domain'],
+    connectionFields: ['token', 'company_domain'],
     ErrorClass: BambooHRError,
   });
 
-  const connectionOptions: IBambooHRConnectionOptions = { api_key, company_domain };
+  const connectionOptions: IBambooHRConnectionOptions = { token, company_domain };
   const fields = await getBambooHRFields(connectionOptions);
 
   return fields.map((field) => ({
@@ -531,13 +531,13 @@ export const getBambooHRFieldsAllowedValues = async (
 export const getBambooHRStandardFieldsAllowedValues = async (
   context: Record<string, unknown>
 ): Promise<IQoreAllowedValue<string>[]> => {
-  const { api_key, company_domain } = getQoreContextRequiredValues({
+  const { token, company_domain } = getQoreContextRequiredValues({
     context,
-    connectionFields: ['api_key', 'company_domain'],
+    connectionFields: ['token', 'company_domain'],
     ErrorClass: BambooHRError,
   });
 
-  const connectionOptions: IBambooHRConnectionOptions = { api_key, company_domain };
+  const connectionOptions: IBambooHRConnectionOptions = { token, company_domain };
   const fields = await getBambooHRFields(connectionOptions);
 
   // Only return fields with aliases - numeric IDs cause 404 on GET employee endpoint

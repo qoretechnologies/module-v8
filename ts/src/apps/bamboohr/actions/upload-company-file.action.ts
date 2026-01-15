@@ -51,9 +51,9 @@ const uploadCompanyFile = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { api_key, company_domain, category, file } = getQoreContextRequiredValues({
+    const { token, company_domain, category, file } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },
-      connectionFields: ['api_key', 'company_domain'],
+      connectionFields: ['token', 'company_domain'],
       optionFields: ['category', 'file'],
       ErrorClass: BambooHRError,
     });
@@ -77,7 +77,7 @@ const uploadCompanyFile = QoreAppCreator.createLocalizedAction<typeof options>({
         fileData,
         formFields,
         {
-          token: api_key,
+          token,
           connectionOptions: { company_domain },
         }
       );

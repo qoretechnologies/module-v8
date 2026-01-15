@@ -4,17 +4,9 @@ const BambooHRAppEn = {
   shortDesc: 'Connect to BambooHR to manage employee data with powerful automation',
   longDesc:
     'The BambooHR integration provides comprehensive access to your HR operations. Create, read, update, and list employees with dynamic field support. The integration automatically discovers available fields in your BambooHR account, including custom fields, and provides intelligent type handling for dates, lists, and other field types.',
-  connectionMessage: {
-    title: 'Connect to BambooHR',
-    content: `To connect your BambooHR account, you'll need your **API Key** and **Company Domain**.
-
-1. Log in to BambooHR as an administrator
-2. Click your profile picture in the upper right corner and select "API Keys"
-3. Click "Add New Key", give it a name, and copy the generated API key
-4. Your company domain is the subdomain in your BambooHR URL (e.g., if you access BambooHR at \`yourcompany.bamboohr.com\`, your domain is \`yourcompany\`)`,
-  },
   actions: {
     get_employee: {
+      groups: ['Employees'],
       displayName: 'Get Employee',
       shortDesc: 'Retrieve a single employee by ID',
       longDesc:
@@ -35,6 +27,7 @@ const BambooHRAppEn = {
       },
     },
     create_employee: {
+      groups: ['Employees'],
       displayName: 'Create Employee',
       shortDesc: 'Create a new employee in BambooHR',
       longDesc:
@@ -49,6 +42,7 @@ const BambooHRAppEn = {
       },
     },
     update_employee: {
+      groups: ['Employees'],
       displayName: 'Update Employee',
       shortDesc: 'Update an existing employee in BambooHR',
       longDesc:
@@ -68,6 +62,7 @@ const BambooHRAppEn = {
       },
     },
     list_employees: {
+      groups: ['Employees'],
       displayName: 'List Employees',
       shortDesc: 'Retrieve a list of all employees',
       longDesc:
@@ -83,6 +78,7 @@ const BambooHRAppEn = {
     },
     // Time Off Actions
     get_whos_out: {
+      groups: ['Time Off'],
       displayName: "Get Who's Out",
       shortDesc: 'Get a summary of employees who are out',
       longDesc:
@@ -102,6 +98,7 @@ const BambooHRAppEn = {
       },
     },
     search_time_off_requests: {
+      groups: ['Time Off'],
       displayName: 'Search Time Off Requests',
       shortDesc: 'Search and filter time off requests',
       longDesc:
@@ -137,6 +134,7 @@ const BambooHRAppEn = {
     },
     // Employee File Actions
     get_all_employee_files: {
+      groups: ['Employee Files'],
       displayName: 'Get All Employee Files',
       shortDesc: 'List all files for an employee',
       longDesc:
@@ -150,6 +148,7 @@ const BambooHRAppEn = {
       },
     },
     download_employee_file: {
+      groups: ['Employee Files'],
       displayName: 'Download Employee File',
       shortDesc: 'Download an employee file',
       longDesc:
@@ -168,6 +167,7 @@ const BambooHRAppEn = {
       },
     },
     upload_employee_file: {
+      groups: ['Employee Files'],
       displayName: 'Upload Employee File',
       shortDesc: 'Upload a file to an employee',
       longDesc:
@@ -196,6 +196,7 @@ const BambooHRAppEn = {
       },
     },
     update_employee_file: {
+      groups: ['Employee Files'],
       displayName: 'Update Employee File',
       shortDesc: 'Update employee file metadata',
       longDesc:
@@ -229,6 +230,7 @@ const BambooHRAppEn = {
       },
     },
     delete_employee_file: {
+      groups: ['Employee Files'],
       displayName: 'Delete Employee File',
       shortDesc: 'Delete an employee file',
       longDesc: 'Permanently deletes a file from an employee record. This action cannot be undone.',
@@ -247,6 +249,7 @@ const BambooHRAppEn = {
     },
     // Company File Actions
     get_all_company_files: {
+      groups: ['Company Files'],
       displayName: 'Get All Company Files',
       shortDesc: 'List all company files',
       longDesc:
@@ -254,6 +257,7 @@ const BambooHRAppEn = {
       options: {},
     },
     download_company_file: {
+      groups: ['Company Files'],
       displayName: 'Download Company File',
       shortDesc: 'Download a company file',
       longDesc:
@@ -267,6 +271,7 @@ const BambooHRAppEn = {
       },
     },
     upload_company_file: {
+      groups: ['Company Files'],
       displayName: 'Upload Company File',
       shortDesc: 'Upload a company file',
       longDesc:
@@ -290,6 +295,7 @@ const BambooHRAppEn = {
       },
     },
     update_company_file: {
+      groups: ['Company Files'],
       displayName: 'Update Company File',
       shortDesc: 'Update company file metadata',
       longDesc:
@@ -318,6 +324,7 @@ const BambooHRAppEn = {
       },
     },
     delete_company_file: {
+      groups: ['Company Files'],
       displayName: 'Delete Company File',
       shortDesc: 'Delete a company file',
       longDesc: 'Permanently deletes a company file. This action cannot be undone.',

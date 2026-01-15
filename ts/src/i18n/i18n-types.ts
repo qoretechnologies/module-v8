@@ -13077,23 +13077,14 @@ type RootTranslation = {
 			 * T​h​e​ ​B​a​m​b​o​o​H​R​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​H​R​ ​o​p​e​r​a​t​i​o​n​s​.​ ​C​r​e​a​t​e​,​ ​r​e​a​d​,​ ​u​p​d​a​t​e​,​ ​a​n​d​ ​l​i​s​t​ ​e​m​p​l​o​y​e​e​s​ ​w​i​t​h​ ​d​y​n​a​m​i​c​ ​f​i​e​l​d​ ​s​u​p​p​o​r​t​.​ ​T​h​e​ ​i​n​t​e​g​r​a​t​i​o​n​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​d​i​s​c​o​v​e​r​s​ ​a​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​ ​i​n​ ​y​o​u​r​ ​B​a​m​b​o​o​H​R​ ​a​c​c​o​u​n​t​,​ ​i​n​c​l​u​d​i​n​g​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​,​ ​a​n​d​ ​p​r​o​v​i​d​e​s​ ​i​n​t​e​l​l​i​g​e​n​t​ ​t​y​p​e​ ​h​a​n​d​l​i​n​g​ ​f​o​r​ ​d​a​t​e​s​,​ ​l​i​s​t​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​f​i​e​l​d​ ​t​y​p​e​s​.
 			 */
 			longDesc: string
-			connectionMessage: {
-				/**
-				 * C​o​n​n​e​c​t​ ​t​o​ ​B​a​m​b​o​o​H​R
-				 */
-				title: string
-				/**
-				 * T​o​ ​c​o​n​n​e​c​t​ ​y​o​u​r​ ​B​a​m​b​o​o​H​R​ ​a​c​c​o​u​n​t​,​ ​y​o​u​'​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​P​I​ ​K​e​y​*​*​ ​a​n​d​ ​*​*​C​o​m​p​a​n​y​ ​D​o​m​a​i​n​*​*​.​
-			​
-			​1​.​ ​L​o​g​ ​i​n​ ​t​o​ ​B​a​m​b​o​o​H​R​ ​a​s​ ​a​n​ ​a​d​m​i​n​i​s​t​r​a​t​o​r​
-			​2​.​ ​C​l​i​c​k​ ​y​o​u​r​ ​p​r​o​f​i​l​e​ ​p​i​c​t​u​r​e​ ​i​n​ ​t​h​e​ ​u​p​p​e​r​ ​r​i​g​h​t​ ​c​o​r​n​e​r​ ​a​n​d​ ​s​e​l​e​c​t​ ​"​A​P​I​ ​K​e​y​s​"​
-			​3​.​ ​C​l​i​c​k​ ​"​A​d​d​ ​N​e​w​ ​K​e​y​"​,​ ​g​i​v​e​ ​i​t​ ​a​ ​n​a​m​e​,​ ​a​n​d​ ​c​o​p​y​ ​t​h​e​ ​g​e​n​e​r​a​t​e​d​ ​A​P​I​ ​k​e​y​
-			​4​.​ ​Y​o​u​r​ ​c​o​m​p​a​n​y​ ​d​o​m​a​i​n​ ​i​s​ ​t​h​e​ ​s​u​b​d​o​m​a​i​n​ ​i​n​ ​y​o​u​r​ ​B​a​m​b​o​o​H​R​ ​U​R​L​ ​(​e​.​g​.​,​ ​i​f​ ​y​o​u​ ​a​c​c​e​s​s​ ​B​a​m​b​o​o​H​R​ ​a​t​ ​`​y​o​u​r​c​o​m​p​a​n​y​.​b​a​m​b​o​o​h​r​.​c​o​m​`​,​ ​y​o​u​r​ ​d​o​m​a​i​n​ ​i​s​ ​`​y​o​u​r​c​o​m​p​a​n​y​`​)
-				 */
-				content: string
-			}
 			actions: {
 				get_employee: {
+					groups: {
+						/**
+						 * E​m​p​l​o​y​e​e​s
+						 */
+						'0': string
+					}
 					/**
 					 * G​e​t​ ​E​m​p​l​o​y​e​e
 					 */
@@ -13138,6 +13129,12 @@ type RootTranslation = {
 					}
 				}
 				create_employee: {
+					groups: {
+						/**
+						 * E​m​p​l​o​y​e​e​s
+						 */
+						'0': string
+					}
 					/**
 					 * C​r​e​a​t​e​ ​E​m​p​l​o​y​e​e
 					 */
@@ -13168,6 +13165,12 @@ type RootTranslation = {
 					}
 				}
 				update_employee: {
+					groups: {
+						/**
+						 * E​m​p​l​o​y​e​e​s
+						 */
+						'0': string
+					}
 					/**
 					 * U​p​d​a​t​e​ ​E​m​p​l​o​y​e​e
 					 */
@@ -13212,6 +13215,12 @@ type RootTranslation = {
 					}
 				}
 				list_employees: {
+					groups: {
+						/**
+						 * E​m​p​l​o​y​e​e​s
+						 */
+						'0': string
+					}
 					/**
 					 * L​i​s​t​ ​E​m​p​l​o​y​e​e​s
 					 */
@@ -13242,6 +13251,12 @@ type RootTranslation = {
 					}
 				}
 				get_whos_out: {
+					groups: {
+						/**
+						 * T​i​m​e​ ​O​f​f
+						 */
+						'0': string
+					}
 					/**
 					 * G​e​t​ ​W​h​o​'​s​ ​O​u​t
 					 */
@@ -13286,6 +13301,12 @@ type RootTranslation = {
 					}
 				}
 				search_time_off_requests: {
+					groups: {
+						/**
+						 * T​i​m​e​ ​O​f​f
+						 */
+						'0': string
+					}
 					/**
 					 * S​e​a​r​c​h​ ​T​i​m​e​ ​O​f​f​ ​R​e​q​u​e​s​t​s
 					 */
@@ -13372,6 +13393,12 @@ type RootTranslation = {
 					}
 				}
 				get_all_employee_files: {
+					groups: {
+						/**
+						 * E​m​p​l​o​y​e​e​ ​F​i​l​e​s
+						 */
+						'0': string
+					}
 					/**
 					 * G​e​t​ ​A​l​l​ ​E​m​p​l​o​y​e​e​ ​F​i​l​e​s
 					 */
@@ -13402,6 +13429,12 @@ type RootTranslation = {
 					}
 				}
 				download_employee_file: {
+					groups: {
+						/**
+						 * E​m​p​l​o​y​e​e​ ​F​i​l​e​s
+						 */
+						'0': string
+					}
 					/**
 					 * D​o​w​n​l​o​a​d​ ​E​m​p​l​o​y​e​e​ ​F​i​l​e
 					 */
@@ -13446,6 +13479,12 @@ type RootTranslation = {
 					}
 				}
 				upload_employee_file: {
+					groups: {
+						/**
+						 * E​m​p​l​o​y​e​e​ ​F​i​l​e​s
+						 */
+						'0': string
+					}
 					/**
 					 * U​p​l​o​a​d​ ​E​m​p​l​o​y​e​e​ ​F​i​l​e
 					 */
@@ -13518,6 +13557,12 @@ type RootTranslation = {
 					}
 				}
 				update_employee_file: {
+					groups: {
+						/**
+						 * E​m​p​l​o​y​e​e​ ​F​i​l​e​s
+						 */
+						'0': string
+					}
 					/**
 					 * U​p​d​a​t​e​ ​E​m​p​l​o​y​e​e​ ​F​i​l​e
 					 */
@@ -13604,6 +13649,12 @@ type RootTranslation = {
 					}
 				}
 				delete_employee_file: {
+					groups: {
+						/**
+						 * E​m​p​l​o​y​e​e​ ​F​i​l​e​s
+						 */
+						'0': string
+					}
 					/**
 					 * D​e​l​e​t​e​ ​E​m​p​l​o​y​e​e​ ​F​i​l​e
 					 */
@@ -13648,6 +13699,12 @@ type RootTranslation = {
 					}
 				}
 				get_all_company_files: {
+					groups: {
+						/**
+						 * C​o​m​p​a​n​y​ ​F​i​l​e​s
+						 */
+						'0': string
+					}
 					/**
 					 * G​e​t​ ​A​l​l​ ​C​o​m​p​a​n​y​ ​F​i​l​e​s
 					 */
@@ -13664,6 +13721,12 @@ type RootTranslation = {
 					}
 				}
 				download_company_file: {
+					groups: {
+						/**
+						 * C​o​m​p​a​n​y​ ​F​i​l​e​s
+						 */
+						'0': string
+					}
 					/**
 					 * D​o​w​n​l​o​a​d​ ​C​o​m​p​a​n​y​ ​F​i​l​e
 					 */
@@ -13694,6 +13757,12 @@ type RootTranslation = {
 					}
 				}
 				upload_company_file: {
+					groups: {
+						/**
+						 * C​o​m​p​a​n​y​ ​F​i​l​e​s
+						 */
+						'0': string
+					}
 					/**
 					 * U​p​l​o​a​d​ ​C​o​m​p​a​n​y​ ​F​i​l​e
 					 */
@@ -13752,6 +13821,12 @@ type RootTranslation = {
 					}
 				}
 				update_company_file: {
+					groups: {
+						/**
+						 * C​o​m​p​a​n​y​ ​F​i​l​e​s
+						 */
+						'0': string
+					}
 					/**
 					 * U​p​d​a​t​e​ ​C​o​m​p​a​n​y​ ​F​i​l​e
 					 */
@@ -13824,6 +13899,12 @@ type RootTranslation = {
 					}
 				}
 				delete_company_file: {
+					groups: {
+						/**
+						 * C​o​m​p​a​n​y​ ​F​i​l​e​s
+						 */
+						'0': string
+					}
 					/**
 					 * D​e​l​e​t​e​ ​C​o​m​p​a​n​y​ ​F​i​l​e
 					 */
@@ -134024,23 +134105,14 @@ export type TranslationFunctions = {
 			 * The BambooHR integration provides comprehensive access to your HR operations. Create, read, update, and list employees with dynamic field support. The integration automatically discovers available fields in your BambooHR account, including custom fields, and provides intelligent type handling for dates, lists, and other field types.
 			 */
 			longDesc: () => LocalizedString
-			connectionMessage: {
-				/**
-				 * Connect to BambooHR
-				 */
-				title: () => LocalizedString
-				/**
-				 * To connect your BambooHR account, you'll need your **API Key** and **Company Domain**.
-		
-			1. Log in to BambooHR as an administrator
-			2. Click your profile picture in the upper right corner and select "API Keys"
-			3. Click "Add New Key", give it a name, and copy the generated API key
-			4. Your company domain is the subdomain in your BambooHR URL (e.g., if you access BambooHR at `yourcompany.bamboohr.com`, your domain is `yourcompany`)
-				 */
-				content: () => LocalizedString
-			}
 			actions: {
 				get_employee: {
+					groups: {
+						/**
+						 * Employees
+						 */
+						'0': () => LocalizedString
+					}
 					/**
 					 * Get Employee
 					 */
@@ -134085,6 +134157,12 @@ export type TranslationFunctions = {
 					}
 				}
 				create_employee: {
+					groups: {
+						/**
+						 * Employees
+						 */
+						'0': () => LocalizedString
+					}
 					/**
 					 * Create Employee
 					 */
@@ -134115,6 +134193,12 @@ export type TranslationFunctions = {
 					}
 				}
 				update_employee: {
+					groups: {
+						/**
+						 * Employees
+						 */
+						'0': () => LocalizedString
+					}
 					/**
 					 * Update Employee
 					 */
@@ -134159,6 +134243,12 @@ export type TranslationFunctions = {
 					}
 				}
 				list_employees: {
+					groups: {
+						/**
+						 * Employees
+						 */
+						'0': () => LocalizedString
+					}
 					/**
 					 * List Employees
 					 */
@@ -134189,6 +134279,12 @@ export type TranslationFunctions = {
 					}
 				}
 				get_whos_out: {
+					groups: {
+						/**
+						 * Time Off
+						 */
+						'0': () => LocalizedString
+					}
 					/**
 					 * Get Who's Out
 					 */
@@ -134233,6 +134329,12 @@ export type TranslationFunctions = {
 					}
 				}
 				search_time_off_requests: {
+					groups: {
+						/**
+						 * Time Off
+						 */
+						'0': () => LocalizedString
+					}
 					/**
 					 * Search Time Off Requests
 					 */
@@ -134319,6 +134421,12 @@ export type TranslationFunctions = {
 					}
 				}
 				get_all_employee_files: {
+					groups: {
+						/**
+						 * Employee Files
+						 */
+						'0': () => LocalizedString
+					}
 					/**
 					 * Get All Employee Files
 					 */
@@ -134349,6 +134457,12 @@ export type TranslationFunctions = {
 					}
 				}
 				download_employee_file: {
+					groups: {
+						/**
+						 * Employee Files
+						 */
+						'0': () => LocalizedString
+					}
 					/**
 					 * Download Employee File
 					 */
@@ -134393,6 +134507,12 @@ export type TranslationFunctions = {
 					}
 				}
 				upload_employee_file: {
+					groups: {
+						/**
+						 * Employee Files
+						 */
+						'0': () => LocalizedString
+					}
 					/**
 					 * Upload Employee File
 					 */
@@ -134465,6 +134585,12 @@ export type TranslationFunctions = {
 					}
 				}
 				update_employee_file: {
+					groups: {
+						/**
+						 * Employee Files
+						 */
+						'0': () => LocalizedString
+					}
 					/**
 					 * Update Employee File
 					 */
@@ -134551,6 +134677,12 @@ export type TranslationFunctions = {
 					}
 				}
 				delete_employee_file: {
+					groups: {
+						/**
+						 * Employee Files
+						 */
+						'0': () => LocalizedString
+					}
 					/**
 					 * Delete Employee File
 					 */
@@ -134595,6 +134727,12 @@ export type TranslationFunctions = {
 					}
 				}
 				get_all_company_files: {
+					groups: {
+						/**
+						 * Company Files
+						 */
+						'0': () => LocalizedString
+					}
 					/**
 					 * Get All Company Files
 					 */
@@ -134611,6 +134749,12 @@ export type TranslationFunctions = {
 					}
 				}
 				download_company_file: {
+					groups: {
+						/**
+						 * Company Files
+						 */
+						'0': () => LocalizedString
+					}
 					/**
 					 * Download Company File
 					 */
@@ -134641,6 +134785,12 @@ export type TranslationFunctions = {
 					}
 				}
 				upload_company_file: {
+					groups: {
+						/**
+						 * Company Files
+						 */
+						'0': () => LocalizedString
+					}
 					/**
 					 * Upload Company File
 					 */
@@ -134699,6 +134849,12 @@ export type TranslationFunctions = {
 					}
 				}
 				update_company_file: {
+					groups: {
+						/**
+						 * Company Files
+						 */
+						'0': () => LocalizedString
+					}
 					/**
 					 * Update Company File
 					 */
@@ -134771,6 +134927,12 @@ export type TranslationFunctions = {
 					}
 				}
 				delete_company_file: {
+					groups: {
+						/**
+						 * Company Files
+						 */
+						'0': () => LocalizedString
+					}
 					/**
 					 * Delete Company File
 					 */

@@ -61,9 +61,9 @@ const getWhosOut = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { api_key, company_domain } = getQoreContextRequiredValues({
+    const { token, company_domain } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },
-      connectionFields: ['api_key', 'company_domain'],
+      connectionFields: ['token', 'company_domain'],
       ErrorClass: BambooHRError,
     });
 
@@ -83,7 +83,7 @@ const getWhosOut = QoreAppCreator.createLocalizedAction<typeof options>({
 
     try {
       const response = await bambooHRClient.get<IBambooHRWhosOutEntry[]>('time_off/whos_out', {
-        token: api_key,
+        token,
         connectionOptions: { company_domain },
         params,
       });

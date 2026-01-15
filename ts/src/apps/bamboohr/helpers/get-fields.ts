@@ -38,15 +38,15 @@ const isCacheValid = (timestamp: number): boolean => {
  * Fetch all available fields from BambooHR.
  * Results are cached for 5 minutes to reduce API calls.
  *
- * @param options - Connection options (api_key, company_domain)
+ * @param options - Connection options (token, company_domain)
  * @returns Array of field metadata
  */
 export const getBambooHRFields = async (
   options: IBambooHRConnectionOptions
 ): Promise<IBambooHRFieldMetadata[]> => {
-  const { api_key, company_domain } = options;
+  const { token, company_domain } = options;
 
-  if (!api_key || !company_domain) {
+  if (!token || !company_domain) {
     throw new BambooHRError('API key and company domain are required');
   }
 
@@ -60,7 +60,7 @@ export const getBambooHRFields = async (
 
   try {
     const fields = await bambooHRClient.get<IBambooHRFieldMetadata[]>('meta/fields', {
-      token: api_key,
+      token: token,
       connectionOptions: { company_domain },
     });
 

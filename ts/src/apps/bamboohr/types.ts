@@ -146,10 +146,10 @@ export interface IBambooHRCustomReportResponse {
 }
 
 /**
- * Connection options for BambooHR API.
+ * Connection options for BambooHR API (OAuth2).
  */
 export interface IBambooHRConnectionOptions {
-  api_key: string;
+  token: string;
   company_domain: string;
 }
 

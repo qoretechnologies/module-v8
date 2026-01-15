@@ -24,7 +24,7 @@ const options = {
 
 // Fetch time off requests helper
 const fetchTimeOffRequests = async (
-  api_key: string,
+  token: string,
   company_domain: string,
   employeeId?: string
 ): Promise<IBambooHRTimeOffRequest[]> => {
@@ -46,7 +46,7 @@ const fetchTimeOffRequests = async (
   }
 
   const response = await bambooHRClient.get<IBambooHRTimeOffRequest[]>('time_off/requests', {
-    token: api_key,
+    token: token,
     connectionOptions: { company_domain },
     params,
   });
@@ -76,16 +76,16 @@ const NewTimeOffRequestTrigger = QoreAppCreator.createLocalizedTrigger({
   action_code: EQoreAppActionCode.EVENT,
   options,
   event_function: async (context, update, should_stop) => {
-    const { api_key, company_domain } = getQoreContextRequiredValues({
+    const { token, company_domain } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['api_key', 'company_domain'],
+      connectionFields: ['token', 'company_domain'],
       ErrorClass: BambooHRError,
     });
 
     const employeeId = context.opts?.employee_id as string | undefined;
 
     const getItems = async () => {
-      const requests = await fetchTimeOffRequests(api_key, company_domain, employeeId);
+      const requests = await fetchTimeOffRequests(token, company_domain, employeeId);
       return requests.map(transformRequest);
     };
 
@@ -98,14 +98,14 @@ const NewTimeOffRequestTrigger = QoreAppCreator.createLocalizedTrigger({
     });
   },
   get_example_event_data: async (context) => {
-    const { api_key, company_domain } = getQoreContextRequiredValues({
+    const { token, company_domain } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['api_key', 'company_domain'],
+      connectionFields: ['token', 'company_domain'],
       ErrorClass: BambooHRError,
     });
 
     const employeeId = context.opts?.employee_id as string | undefined;
-    const requests = await fetchTimeOffRequests(api_key, company_domain, employeeId);
+    const requests = await fetchTimeOffRequests(token, company_domain, employeeId);
 
     if (requests.length === 0) {
       // Return sample data if no requests found

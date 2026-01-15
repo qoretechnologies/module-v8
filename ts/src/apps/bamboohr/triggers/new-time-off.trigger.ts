@@ -18,7 +18,7 @@ import { IBambooHRWhosOutEntry } from '../types';
 const options = {} satisfies TQoreOptions;
 
 // Fetch who's out entries
-const fetchWhosOut = async (api_key: string, company_domain: string): Promise<IBambooHRWhosOutEntry[]> => {
+const fetchWhosOut = async (token: string, company_domain: string): Promise<IBambooHRWhosOutEntry[]> => {
   // Get entries from today to 30 days in the future
   const today = new Date();
   const endDate = new Date(today);
@@ -30,7 +30,7 @@ const fetchWhosOut = async (api_key: string, company_domain: string): Promise<IB
   };
 
   const response = await bambooHRClient.get<IBambooHRWhosOutEntry[]>('time_off/whos_out', {
-    token: api_key,
+    token: token,
     connectionOptions: { company_domain },
     params,
   });
@@ -62,14 +62,14 @@ const NewTimeOffTrigger = QoreAppCreator.createLocalizedTrigger({
   action_code: EQoreAppActionCode.EVENT,
   options,
   event_function: async (context, update, should_stop) => {
-    const { api_key, company_domain } = getQoreContextRequiredValues({
+    const { token, company_domain } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['api_key', 'company_domain'],
+      connectionFields: ['token', 'company_domain'],
       ErrorClass: BambooHRError,
     });
 
     const getItems = async () => {
-      const entries = await fetchWhosOut(api_key, company_domain);
+      const entries = await fetchWhosOut(token, company_domain);
       return entries.map(transformEntry);
     };
 
@@ -82,13 +82,13 @@ const NewTimeOffTrigger = QoreAppCreator.createLocalizedTrigger({
     });
   },
   get_example_event_data: async (context) => {
-    const { api_key, company_domain } = getQoreContextRequiredValues({
+    const { token, company_domain } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['api_key', 'company_domain'],
+      connectionFields: ['token', 'company_domain'],
       ErrorClass: BambooHRError,
     });
 
-    const entries = await fetchWhosOut(api_key, company_domain);
+    const entries = await fetchWhosOut(token, company_domain);
 
     if (entries.length === 0) {
       // Return sample data if no entries found

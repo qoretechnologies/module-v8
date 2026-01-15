@@ -4,12 +4,21 @@
  * Fetches and caches file categories from BambooHR.
  * Used for allowed values in file upload actions.
  *
- * @see https://documentation.bamboohr.com/reference/metadata-get-employee-file-categories
+ * Note: BambooHR doesn't have separate category endpoints.
+ * Categories are extracted from the files/view endpoints.
+ *
+ * @see https://documentation.bamboohr.com/reference/list-company-files-and-categories
+ * @see https://documentation.bamboohr.com/reference/list-employee-files
  */
 
 import { IQoreAllowedValue } from '@qoretechnologies/ts-toolkit';
 import { bambooHRClient } from '../client';
-import { IBambooHRConnectionOptions, IBambooHRFileCategory } from '../types';
+import {
+  IBambooHRCompanyFilesResponse,
+  IBambooHRConnectionOptions,
+  IBambooHREmployeeFilesResponse,
+  IBambooHRFileCategory,
+} from '../types';
 
 // Cache for employee file categories with 5-minute TTL
 const employeeCategoriesCache = new Map<string, { data: IBambooHRFileCategory[]; timestamp: number }>();
@@ -27,24 +36,36 @@ export const clearFileCategoriesCache = (): void => {
 
 /**
  * Get employee file categories from BambooHR.
+ * Categories are extracted from the employee files endpoint.
  * Results are cached for 5 minutes.
+ *
+ * @param connectionOptions - Connection options with token and company_domain
+ * @param employeeId - Employee ID to fetch categories for (required)
  */
 export const getEmployeeFileCategories = async (
-  connectionOptions: IBambooHRConnectionOptions
+  connectionOptions: IBambooHRConnectionOptions,
+  employeeId: string
 ): Promise<IBambooHRFileCategory[]> => {
-  const cacheKey = connectionOptions.company_domain;
+  const cacheKey = `${connectionOptions.company_domain}_${employeeId}`;
   const cached = employeeCategoriesCache.get(cacheKey);
 
   if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
     return cached.data;
   }
 
-  const response = await bambooHRClient.get<IBambooHRFileCategory[]>('meta/files/categories', {
-    token: connectionOptions.api_key,
-    connectionOptions: { company_domain: connectionOptions.company_domain },
-  });
+  // Fetch from files/view endpoint and extract categories
+  const response = await bambooHRClient.get<IBambooHREmployeeFilesResponse>(
+    `employees/${employeeId}/files/view/`,
+    {
+      token: connectionOptions.token,
+      connectionOptions: { company_domain: connectionOptions.company_domain },
+    }
+  );
 
-  const categories = response || [];
+  const categories: IBambooHRFileCategory[] = (response?.categories || []).map((cat) => ({
+    id: cat.id,
+    name: cat.name,
+  }));
 
   employeeCategoriesCache.set(cacheKey, {
     data: categories,
@@ -56,6 +77,7 @@ export const getEmployeeFileCategories = async (
 
 /**
  * Get company file categories from BambooHR.
+ * Categories are extracted from the company files endpoint.
  * Results are cached for 5 minutes.
  */
 export const getCompanyFileCategories = async (
@@ -68,12 +90,16 @@ export const getCompanyFileCategories = async (
     return cached.data;
   }
 
-  const response = await bambooHRClient.get<IBambooHRFileCategory[]>('files/categories', {
-    token: connectionOptions.api_key,
+  // Fetch from files/view endpoint and extract categories
+  const response = await bambooHRClient.get<IBambooHRCompanyFilesResponse>('files/view/', {
+    token: connectionOptions.token,
     connectionOptions: { company_domain: connectionOptions.company_domain },
   });
 
-  const categories = response || [];
+  const categories: IBambooHRFileCategory[] = (response?.categories || []).map((cat) => ({
+    id: cat.id,
+    name: cat.name,
+  }));
 
   companyCategoriesCache.set(cacheKey, {
     data: categories,
@@ -85,18 +111,21 @@ export const getCompanyFileCategories = async (
 
 /**
  * Get employee file categories as allowed values for action options.
+ * Requires employee_id to be set in context.opts.
  */
 export const getEmployeeFileCategoriesAllowedValues = async (
   context: Record<string, unknown>
 ): Promise<IQoreAllowedValue<string>[]> => {
   const connOpts = context?.conn_opts as IBambooHRConnectionOptions | undefined;
+  const opts = context?.opts as Record<string, unknown> | undefined;
+  const employeeId = opts?.employee_id as string | undefined;
 
-  if (!connOpts?.api_key || !connOpts?.company_domain) {
+  if (!connOpts?.token || !connOpts?.company_domain || !employeeId) {
     return [];
   }
 
   try {
-    const categories = await getEmployeeFileCategories(connOpts);
+    const categories = await getEmployeeFileCategories(connOpts, employeeId);
 
     return categories.map((category) => ({
       value: String(category.id),
@@ -115,7 +144,7 @@ export const getCompanyFileCategoriesAllowedValues = async (
 ): Promise<IQoreAllowedValue<string>[]> => {
   const connOpts = context?.conn_opts as IBambooHRConnectionOptions | undefined;
 
-  if (!connOpts?.api_key || !connOpts?.company_domain) {
+  if (!connOpts?.token || !connOpts?.company_domain) {
     return [];
   }
 

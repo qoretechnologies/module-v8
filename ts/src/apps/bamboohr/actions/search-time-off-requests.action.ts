@@ -75,9 +75,9 @@ const searchTimeOffRequests = QoreAppCreator.createLocalizedAction<typeof option
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { api_key, company_domain, start_date, end_date } = getQoreContextRequiredValues({
+    const { token, company_domain, start_date, end_date } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },
-      connectionFields: ['api_key', 'company_domain'],
+      connectionFields: ['token', 'company_domain'],
       optionFields: ['start_date', 'end_date'],
       ErrorClass: BambooHRError,
     });
@@ -107,7 +107,7 @@ const searchTimeOffRequests = QoreAppCreator.createLocalizedAction<typeof option
 
     try {
       const response = await bambooHRClient.get<IBambooHRTimeOffRequest[]>('time_off/requests', {
-        token: api_key,
+        token,
         connectionOptions: { company_domain },
         params,
       });

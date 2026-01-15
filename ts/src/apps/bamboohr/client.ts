@@ -2,7 +2,7 @@
  * BambooHR API Client
  *
  * Extends QoreApiClient with BambooHR-specific configuration:
- * - Basic Auth (API key as username, 'x' as password)
+ * - OAuth2 Bearer token authentication
  * - Dynamic path formatting with company domain: /{companyDomain}/v1/{path}
  * - Accept header set to application/json
  * - File upload/download support for employee and company files
@@ -23,7 +23,7 @@ export class BambooHRApiClient extends QoreApiClient {
   }
 
   /**
-   * BambooHR uses Basic Auth with API key as username and 'x' as password.
+   * BambooHR uses OAuth2 Bearer token authentication.
    * Also sets Accept header to application/json.
    */
   protected buildHeaders(
@@ -34,10 +34,9 @@ export class BambooHRApiClient extends QoreApiClient {
       Accept: 'application/json',
     };
 
-    // Token is the API key - use Basic Auth
+    // Use Bearer token for OAuth2 authentication
     if (token) {
-      const credentials = Buffer.from(`${token}:x`).toString('base64');
-      headers.Authorization = `Basic ${credentials}`;
+      headers.Authorization = `Bearer ${token}`;
     }
 
     if (customHeaders) {

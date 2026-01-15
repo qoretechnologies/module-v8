@@ -31,7 +31,7 @@ const EMPLOYEE_FIELDS = [
 ];
 
 // Fetch employees using custom report
-const fetchEmployees = async (api_key: string, company_domain: string): Promise<IBambooHREmployee[]> => {
+const fetchEmployees = async (token: string, company_domain: string): Promise<IBambooHREmployee[]> => {
   const response = await bambooHRClient.post<IBambooHRCustomReportResponse>(
     'reports/custom',
     {
@@ -39,7 +39,7 @@ const fetchEmployees = async (api_key: string, company_domain: string): Promise<
       fields: EMPLOYEE_FIELDS,
     },
     {
-      token: api_key,
+      token: token,
       connectionOptions: { company_domain },
       params: {
         format: 'JSON',
@@ -75,14 +75,14 @@ const NewEmployeeTrigger = QoreAppCreator.createLocalizedTrigger({
   action_code: EQoreAppActionCode.EVENT,
   options,
   event_function: async (context, update, should_stop) => {
-    const { api_key, company_domain } = getQoreContextRequiredValues({
+    const { token, company_domain } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['api_key', 'company_domain'],
+      connectionFields: ['token', 'company_domain'],
       ErrorClass: BambooHRError,
     });
 
     const getItems = async () => {
-      const employees = await fetchEmployees(api_key, company_domain);
+      const employees = await fetchEmployees(token, company_domain);
       return employees.map(transformEmployee);
     };
 
@@ -95,13 +95,13 @@ const NewEmployeeTrigger = QoreAppCreator.createLocalizedTrigger({
     });
   },
   get_example_event_data: async (context) => {
-    const { api_key, company_domain } = getQoreContextRequiredValues({
+    const { token, company_domain } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['api_key', 'company_domain'],
+      connectionFields: ['token', 'company_domain'],
       ErrorClass: BambooHRError,
     });
 
-    const employees = await fetchEmployees(api_key, company_domain);
+    const employees = await fetchEmployees(token, company_domain);
 
     if (employees.length === 0) {
       // Return sample data if no employees found

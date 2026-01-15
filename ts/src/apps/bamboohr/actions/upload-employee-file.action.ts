@@ -19,6 +19,7 @@ const options = {
   employee_id: {
     type: 'string',
     required: true,
+    on_change: ['refetch'],
   },
   category: {
     type: 'string',
@@ -55,9 +56,9 @@ const uploadEmployeeFile = QoreAppCreator.createLocalizedAction<typeof options>(
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { api_key, company_domain, employee_id, category, file } = getQoreContextRequiredValues({
+    const { token, company_domain, employee_id, category, file } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },
-      connectionFields: ['api_key', 'company_domain'],
+      connectionFields: ['token', 'company_domain'],
       optionFields: ['employee_id', 'category', 'file'],
       ErrorClass: BambooHRError,
     });
@@ -81,7 +82,7 @@ const uploadEmployeeFile = QoreAppCreator.createLocalizedAction<typeof options>(
         fileData,
         formFields,
         {
-          token: api_key,
+          token,
           connectionOptions: { company_domain },
         }
       );

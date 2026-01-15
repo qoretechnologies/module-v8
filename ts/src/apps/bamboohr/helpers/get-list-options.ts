@@ -42,15 +42,15 @@ const isCacheValid = (timestamp: number): boolean => {
  * Fetch all list field options from BambooHR.
  * Results are cached for 5 minutes to reduce API calls.
  *
- * @param options - Connection options (api_key, company_domain)
+ * @param options - Connection options (token, company_domain)
  * @returns Array of list metadata with options
  */
 export const getBambooHRLists = async (
   options: IBambooHRConnectionOptions
 ): Promise<IBambooHRListMetadata[]> => {
-  const { api_key, company_domain } = options;
+  const { token, company_domain } = options;
 
-  if (!api_key || !company_domain) {
+  if (!token || !company_domain) {
     throw new BambooHRError('API key and company domain are required');
   }
 
@@ -64,7 +64,7 @@ export const getBambooHRLists = async (
 
   try {
     const response = await bambooHRClient.get<IBambooHRListsResponse>('meta/lists', {
-      token: api_key,
+      token: token,
       connectionOptions: { company_domain },
     });
 

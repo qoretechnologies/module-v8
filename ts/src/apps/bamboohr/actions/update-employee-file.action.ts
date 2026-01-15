@@ -58,9 +58,9 @@ const updateEmployeeFile = QoreAppCreator.createLocalizedAction<typeof options>(
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { api_key, company_domain, employee_id, file_id } = getQoreContextRequiredValues({
+    const { token, company_domain, employee_id, file_id } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },
-      connectionFields: ['api_key', 'company_domain'],
+      connectionFields: ['token', 'company_domain'],
       optionFields: ['employee_id', 'file_id'],
       ErrorClass: BambooHRError,
     });
@@ -89,7 +89,7 @@ const updateEmployeeFile = QoreAppCreator.createLocalizedAction<typeof options>(
         `employees/${employee_id}/files/${file_id}`,
         updateData,
         {
-          token: api_key,
+          token,
           connectionOptions: { company_domain },
         }
       );

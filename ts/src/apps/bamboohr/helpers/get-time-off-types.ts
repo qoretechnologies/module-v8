@@ -37,7 +37,7 @@ export const getTimeOffTypes = async (
   }
 
   const response = await bambooHRClient.get<{ timeOffTypes: IBambooHRTimeOffType[] }>('meta/time_off/types', {
-    token: connectionOptions.api_key,
+    token: connectionOptions.token,
     connectionOptions: { company_domain: connectionOptions.company_domain },
   });
 
@@ -59,7 +59,7 @@ export const getTimeOffTypesAllowedValues = async (
 ): Promise<IQoreAllowedValue<string>[]> => {
   const connOpts = context?.conn_opts as IBambooHRConnectionOptions | undefined;
 
-  if (!connOpts?.api_key || !connOpts?.company_domain) {
+  if (!connOpts?.token || !connOpts?.company_domain) {
     return [];
   }
 
