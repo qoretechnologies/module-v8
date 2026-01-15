@@ -82704,6 +82704,607 @@ type RootTranslation = {
 				}
 			}
 		}
+		NocoDB: {
+			/**
+			 * N​o​c​o​D​B
+			 */
+			displayName: string
+			groups: {
+				/**
+				 * S​p​r​e​a​d​s​h​e​e​t​s​ ​&​ ​D​a​t​a​ ​T​a​b​l​e​s
+				 */
+				'0': string
+				/**
+				 * D​a​t​a​b​a​s​e​s​ ​&​ ​B​a​c​k​e​n​d​ ​S​e​r​v​i​c​e​s
+				 */
+				'1': string
+			}
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​N​o​c​o​D​B​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​d​a​t​a​b​a​s​e​ ​t​a​b​l​e​s​ ​a​n​d​ ​r​e​c​o​r​d​s​ ​w​i​t​h​ ​p​o​w​e​r​f​u​l​ ​a​u​t​o​m​a​t​i​o​n
+			 */
+			shortDesc: string
+			/**
+			 * T​h​e​ ​N​o​c​o​D​B​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​N​o​c​o​D​B​ ​d​a​t​a​b​a​s​e​ ​o​p​e​r​a​t​i​o​n​s​.​ ​C​r​e​a​t​e​,​ ​r​e​a​d​,​ ​u​p​d​a​t​e​,​ ​a​n​d​ ​d​e​l​e​t​e​ ​r​e​c​o​r​d​s​ ​i​n​ ​y​o​u​r​ ​t​a​b​l​e​s​,​ ​a​n​d​ ​m​o​n​i​t​o​r​ ​n​e​w​ ​e​n​t​r​i​e​s​ ​w​i​t​h​ ​r​e​a​l​-​t​i​m​e​ ​t​r​i​g​g​e​r​s​.​ ​W​h​e​t​h​e​r​ ​y​o​u​ ​n​e​e​d​ ​t​o​ ​m​a​n​a​g​e​ ​d​a​t​a​,​ ​f​i​l​t​e​r​ ​r​e​s​u​l​t​s​,​ ​o​r​ ​t​r​a​c​k​ ​n​e​w​ ​r​e​c​o​r​d​s​,​ ​t​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​s​t​r​e​a​m​l​i​n​e​s​ ​y​o​u​r​ ​N​o​c​o​D​B​ ​w​o​r​k​f​l​o​w​ ​a​u​t​o​m​a​t​i​o​n​ ​a​n​d​ ​d​a​t​a​b​a​s​e​ ​m​a​n​a​g​e​m​e​n​t​.
+			 */
+			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​N​o​c​o​D​B
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​N​o​c​o​D​B​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​N​o​c​o​D​B​ ​U​R​L​*​*​ ​a​n​d​ ​a​n​ ​*​*​A​P​I​ ​T​o​k​e​n​*​*​.​
+			​
+			​#​#​ ​G​e​t​t​i​n​g​ ​Y​o​u​r​ ​A​P​I​ ​T​o​k​e​n​
+			​
+			​1​.​ ​L​o​g​ ​i​n​ ​t​o​ ​y​o​u​r​ ​N​o​c​o​D​B​ ​i​n​s​t​a​n​c​e​
+			​2​.​ ​C​l​i​c​k​ ​o​n​ ​y​o​u​r​ ​*​*​p​r​o​f​i​l​e​ ​i​c​o​n​*​*​ ​i​n​ ​t​h​e​ ​t​o​p​ ​r​i​g​h​t​ ​c​o​r​n​e​r​
+			​3​.​ ​S​e​l​e​c​t​ ​*​*​C​o​p​y​ ​A​u​t​h​ ​T​o​k​e​n​*​*​ ​f​r​o​m​ ​t​h​e​ ​d​r​o​p​d​o​w​n​ ​m​e​n​u​
+			​4​.​ ​A​l​t​e​r​n​a​t​i​v​e​l​y​,​ ​g​o​ ​t​o​ ​*​*​A​c​c​o​u​n​t​ ​S​e​t​t​i​n​g​s​*​*​ ​→​ ​*​*​T​o​k​e​n​s​*​*​ ​t​o​ ​c​r​e​a​t​e​ ​a​ ​n​e​w​ ​A​P​I​ ​t​o​k​e​n​
+			​
+			​#​#​ ​C​o​n​n​e​c​t​i​o​n​ ​D​e​t​a​i​l​s​
+			​
+			​#​#​#​ ​N​o​c​o​D​B​ ​U​R​L​
+			​T​h​e​ ​b​a​s​e​ ​U​R​L​ ​o​f​ ​y​o​u​r​ ​N​o​c​o​D​B​ ​i​n​s​t​a​n​c​e​:​
+			​-​ ​*​*​N​o​c​o​D​B​ ​C​l​o​u​d​*​*​:​ ​U​s​e​ ​`​h​t​t​p​s​:​/​/​a​p​p​.​n​o​c​o​d​b​.​c​o​m​`​
+			​-​ ​*​*​S​e​l​f​-​h​o​s​t​e​d​*​*​:​ ​U​s​e​ ​y​o​u​r​ ​i​n​s​t​a​n​c​e​ ​U​R​L​ ​(​e​.​g​.​,​ ​`​h​t​t​p​s​:​/​/​n​o​c​o​d​b​.​y​o​u​r​c​o​m​p​a​n​y​.​c​o​m​`​)​
+			​
+			​#​#​#​ ​A​P​I​ ​T​o​k​e​n​
+			​Y​o​u​r​ ​A​P​I​ ​t​o​k​e​n​ ​t​h​a​t​ ​g​r​a​n​t​s​ ​a​c​c​e​s​s​ ​t​o​ ​N​o​c​o​D​B​.​ ​T​o​k​e​n​s​ ​c​a​n​ ​b​e​ ​c​r​e​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​s​e​t​t​i​n​g​s​ ​a​n​d​ ​p​r​o​v​i​d​e​ ​a​c​c​e​s​s​ ​t​o​ ​a​l​l​ ​o​p​e​r​a​t​i​o​n​s​ ​w​i​t​h​i​n​ ​t​h​e​ ​a​u​t​h​o​r​i​z​e​d​ ​w​o​r​k​s​p​a​c​e​s​ ​a​n​d​ ​b​a​s​e​s​.​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​A​P​I​ ​t​o​k​e​n​s​ ​p​r​o​v​i​d​e​ ​f​u​l​l​ ​a​c​c​e​s​s​ ​t​o​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e​s​ ​a​n​d​ ​b​a​s​e​s​ ​y​o​u​ ​h​a​v​e​ ​p​e​r​m​i​s​s​i​o​n​s​ ​f​o​r​.​ ​E​n​s​u​r​e​ ​y​o​u​ ​k​e​e​p​ ​y​o​u​r​ ​t​o​k​e​n​s​ ​s​e​c​u​r​e​ ​a​n​d​ ​o​n​l​y​ ​u​s​e​ ​t​h​e​m​ ​i​n​ ​t​r​u​s​t​e​d​ ​e​n​v​i​r​o​n​m​e​n​t​s​.
+				 */
+				content: string
+			}
+			triggers: {
+				new_document: {
+					/**
+					 * N​e​w​ ​R​o​w
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​ ​w​h​e​n​ ​a​ ​n​e​w​ ​r​o​w​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​N​o​c​o​D​B​ ​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​a​ ​N​o​c​o​D​B​ ​t​a​b​l​e​ ​f​o​r​ ​n​e​w​ ​r​o​w​s​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​r​e​c​o​r​d​s​ ​a​r​e​ ​d​e​t​e​c​t​e​d​.​ ​Y​o​u​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​w​h​i​c​h​ ​r​o​w​s​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​e​v​e​n​t​ ​u​s​i​n​g​ ​a​ ​w​h​e​r​e​ ​c​l​a​u​s​e​.
+					 */
+					longDesc: string
+					options: {
+						workspaceId: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​c​o​D​B​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​b​a​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​c​o​D​B​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​b​a​s​e​ ​w​i​t​h​ ​t​h​e​ ​t​a​b​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​.
+							 */
+							longDesc: string
+						}
+						baseId: {
+							/**
+							 * B​a​s​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​c​o​D​B​ ​b​a​s​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​b​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​c​o​D​B​ ​b​a​s​e​ ​(​p​r​o​j​e​c​t​)​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​b​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​o​w​s​.
+							 */
+							longDesc: string
+						}
+						table: {
+							/**
+							 * T​a​b​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​b​l​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​r​o​w​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​c​o​D​B​ ​t​a​b​l​e​ ​t​o​ ​m​o​n​i​t​o​r​.​ ​T​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​f​i​r​e​ ​w​h​e​n​ ​n​e​w​ ​r​o​w​s​ ​a​r​e​ ​a​d​d​e​d​ ​t​o​ ​t​h​i​s​ ​t​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						where: {
+							/**
+							 * W​h​e​r​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​f​o​r​ ​n​e​w​ ​r​o​w​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​s​p​e​c​i​f​y​ ​a​ ​f​i​l​t​e​r​ ​u​s​i​n​g​ ​N​o​c​o​D​B​ ​w​h​e​r​e​ ​s​y​n​t​a​x​ ​(​e​.​g​.​,​ ​"​(​S​t​a​t​u​s​,​e​q​,​A​c​t​i​v​e​)​"​)​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​r​o​w​s​ ​m​a​t​c​h​i​n​g​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			actions: {
+				count_records: {
+					/**
+					 * C​o​u​n​t​ ​R​e​c​o​r​d​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​t​h​e​ ​c​o​u​n​t​ ​o​f​ ​r​e​c​o​r​d​s​ ​i​n​ ​a​ ​t​a​b​l​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​t​h​e​ ​t​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​i​n​ ​a​ ​N​o​c​o​D​B​ ​t​a​b​l​e​.​ ​Y​o​u​ ​c​a​n​ ​o​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​t​h​e​ ​c​o​u​n​t​ ​u​s​i​n​g​ ​a​ ​w​h​e​r​e​ ​c​l​a​u​s​e​ ​t​o​ ​c​o​u​n​t​ ​o​n​l​y​ ​r​e​c​o​r​d​s​ ​m​a​t​c​h​i​n​g​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.
+					 */
+					longDesc: string
+					options: {
+						workspaceId: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​c​o​D​B​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​b​a​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​c​o​D​B​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​b​a​s​e​ ​w​i​t​h​ ​t​h​e​ ​t​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						baseId: {
+							/**
+							 * B​a​s​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​c​o​D​B​ ​b​a​s​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​b​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​c​o​D​B​ ​b​a​s​e​ ​(​p​r​o​j​e​c​t​)​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						table: {
+							/**
+							 * T​a​b​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​b​l​e​ ​t​o​ ​c​o​u​n​t​ ​r​e​c​o​r​d​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​c​o​D​B​ ​t​a​b​l​e​ ​t​o​ ​c​o​u​n​t​ ​r​e​c​o​r​d​s​ ​f​r​o​m​.
+							 */
+							longDesc: string
+						}
+						where: {
+							/**
+							 * W​h​e​r​e​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​ ​t​o​ ​c​o​u​n​t​ ​s​p​e​c​i​f​i​c​ ​r​e​c​o​r​d​s
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​s​p​e​c​i​f​y​ ​a​ ​f​i​l​t​e​r​ ​u​s​i​n​g​ ​N​o​c​o​D​B​ ​w​h​e​r​e​ ​s​y​n​t​a​x​ ​(​e​.​g​.​,​ ​"​(​S​t​a​t​u​s​,​e​q​,​A​c​t​i​v​e​)​"​)​ ​t​o​ ​o​n​l​y​ ​c​o​u​n​t​ ​r​e​c​o​r​d​s​ ​m​a​t​c​h​i​n​g​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				upload_attachment: {
+					/**
+					 * U​p​l​o​a​d​ ​A​t​t​a​c​h​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​a​ ​f​i​l​e​ ​t​o​ ​a​n​ ​a​t​t​a​c​h​m​e​n​t​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​s​ ​a​ ​f​i​l​e​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​a​t​t​a​c​h​m​e​n​t​ ​f​i​e​l​d​ ​i​n​ ​a​ ​N​o​c​o​D​B​ ​r​e​c​o​r​d​.​ ​T​h​e​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​s​t​o​r​e​d​ ​i​n​ ​N​o​c​o​D​B​ ​a​n​d​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​e​c​o​r​d​.
+					 */
+					longDesc: string
+					options: {
+						workspaceId: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​c​o​D​B​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​b​a​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​c​o​D​B​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​b​a​s​e​ ​w​i​t​h​ ​t​h​e​ ​t​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						baseId: {
+							/**
+							 * B​a​s​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​c​o​D​B​ ​b​a​s​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​b​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​c​o​D​B​ ​b​a​s​e​ ​(​p​r​o​j​e​c​t​)​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						table: {
+							/**
+							 * T​a​b​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​b​l​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​c​o​D​B​ ​t​a​b​l​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​a​t​t​a​c​h​ ​t​h​e​ ​f​i​l​e​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						recordId: {
+							/**
+							 * R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​t​o​ ​a​t​t​a​c​h​ ​t​h​e​ ​f​i​l​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​l​e​ ​s​h​o​u​l​d​ ​b​e​ ​u​p​l​o​a​d​e​d​.
+							 */
+							longDesc: string
+						}
+						attachmentField: {
+							/**
+							 * A​t​t​a​c​h​m​e​n​t​ ​F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​t​t​a​c​h​m​e​n​t​ ​f​i​e​l​d​ ​t​o​ ​u​p​l​o​a​d​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t​ ​f​i​e​l​d​ ​i​n​ ​t​h​e​ ​t​a​b​l​e​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​s​t​o​r​e​d​.
+							 */
+							longDesc: string
+						}
+						file: {
+							/**
+							 * F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d​ ​t​o​ ​t​h​e​ ​a​t​t​a​c​h​m​e​n​t​ ​f​i​e​l​d​.​ ​S​u​p​p​o​r​t​s​ ​v​a​r​i​o​u​s​ ​f​i​l​e​ ​t​y​p​e​s​ ​i​n​c​l​u​d​i​n​g​ ​i​m​a​g​e​s​,​ ​d​o​c​u​m​e​n​t​s​,​ ​a​n​d​ ​m​o​r​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				link_records: {
+					/**
+					 * L​i​n​k​ ​R​e​c​o​r​d​s
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​b​e​t​w​e​e​n​ ​r​e​c​o​r​d​s
+					 */
+					shortDesc: string
+					/**
+					 * L​i​n​k​s​ ​r​e​c​o​r​d​s​ ​f​r​o​m​ ​a​n​o​t​h​e​r​ ​t​a​b​l​e​ ​t​o​ ​a​ ​r​e​c​o​r​d​ ​v​i​a​ ​a​ ​l​i​n​k​ ​f​i​e​l​d​.​ ​T​h​i​s​ ​c​r​e​a​t​e​s​ ​a​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​h​e​ ​r​e​c​o​r​d​s​ ​w​i​t​h​o​u​t​ ​a​f​f​e​c​t​i​n​g​ ​e​x​i​s​t​i​n​g​ ​l​i​n​k​s​.
+					 */
+					longDesc: string
+					options: {
+						workspaceId: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​c​o​D​B​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​b​a​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​c​o​D​B​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​b​a​s​e​ ​w​i​t​h​ ​t​h​e​ ​t​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						baseId: {
+							/**
+							 * B​a​s​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​c​o​D​B​ ​b​a​s​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​b​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​c​o​D​B​ ​b​a​s​e​ ​(​p​r​o​j​e​c​t​)​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						table: {
+							/**
+							 * T​a​b​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​b​l​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​s​o​u​r​c​e​ ​r​e​c​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​c​o​D​B​ ​t​a​b​l​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​l​i​n​k​ ​f​r​o​m​.
+							 */
+							longDesc: string
+						}
+						linkField: {
+							/**
+							 * L​i​n​k​ ​F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​l​i​n​k​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​e​ ​r​e​l​a​t​i​o​n​s​h​i​p
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​l​i​n​k​ ​f​i​e​l​d​ ​(​L​i​n​k​ ​t​o​ ​A​n​o​t​h​e​r​ ​R​e​c​o​r​d​)​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​t​h​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​b​e​t​w​e​e​n​ ​t​a​b​l​e​s​.
+							 */
+							longDesc: string
+						}
+						recordId: {
+							/**
+							 * R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​o​u​r​c​e​ ​r​e​c​o​r​d​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​i​n​ ​t​h​e​ ​s​o​u​r​c​e​ ​t​a​b​l​e​ ​t​o​ ​l​i​n​k​ ​f​r​o​m​.
+							 */
+							longDesc: string
+						}
+						linkedRecordIds: {
+							/**
+							 * R​e​c​o​r​d​s​ ​t​o​ ​L​i​n​k
+							 */
+							displayName: string
+							/**
+							 * I​D​s​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​l​i​n​k
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​I​D​s​ ​o​f​ ​r​e​c​o​r​d​s​ ​f​r​o​m​ ​t​h​e​ ​l​i​n​k​e​d​ ​t​a​b​l​e​ ​t​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​t​h​e​ ​s​o​u​r​c​e​ ​r​e​c​o​r​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				unlink_records: {
+					/**
+					 * U​n​l​i​n​k​ ​R​e​c​o​r​d​s
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​s​ ​b​e​t​w​e​e​n​ ​r​e​c​o​r​d​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​t​h​e​ ​l​i​n​k​ ​b​e​t​w​e​e​n​ ​r​e​c​o​r​d​s​ ​v​i​a​ ​a​ ​l​i​n​k​ ​f​i​e​l​d​.​ ​T​h​i​s​ ​b​r​e​a​k​s​ ​t​h​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​w​i​t​h​o​u​t​ ​d​e​l​e​t​i​n​g​ ​a​n​y​ ​r​e​c​o​r​d​s​.
+					 */
+					longDesc: string
+					options: {
+						workspaceId: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​c​o​D​B​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​b​a​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​c​o​D​B​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​b​a​s​e​ ​w​i​t​h​ ​t​h​e​ ​t​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						baseId: {
+							/**
+							 * B​a​s​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​c​o​D​B​ ​b​a​s​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​b​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​c​o​D​B​ ​b​a​s​e​ ​(​p​r​o​j​e​c​t​)​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						table: {
+							/**
+							 * T​a​b​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​b​l​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​s​o​u​r​c​e​ ​r​e​c​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​c​o​D​B​ ​t​a​b​l​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​r​e​c​o​r​d​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​n​l​i​n​k​ ​f​r​o​m​.
+							 */
+							longDesc: string
+						}
+						linkField: {
+							/**
+							 * L​i​n​k​ ​F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​l​i​n​k​ ​f​i​e​l​d​ ​w​i​t​h​ ​t​h​e​ ​r​e​l​a​t​i​o​n​s​h​i​p
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​l​i​n​k​ ​f​i​e​l​d​ ​(​L​i​n​k​ ​t​o​ ​A​n​o​t​h​e​r​ ​R​e​c​o​r​d​)​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​t​h​e​ ​r​e​l​a​t​i​o​n​s​h​i​p​ ​t​o​ ​r​e​m​o​v​e​.
+							 */
+							longDesc: string
+						}
+						recordId: {
+							/**
+							 * R​e​c​o​r​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​o​u​r​c​e​ ​r​e​c​o​r​d​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * S​p​e​c​i​f​y​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​r​e​c​o​r​d​ ​i​n​ ​t​h​e​ ​s​o​u​r​c​e​ ​t​a​b​l​e​ ​t​o​ ​u​n​l​i​n​k​ ​f​r​o​m​.
+							 */
+							longDesc: string
+						}
+						linkedRecordIds: {
+							/**
+							 * R​e​c​o​r​d​s​ ​t​o​ ​U​n​l​i​n​k
+							 */
+							displayName: string
+							/**
+							 * I​D​s​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​u​n​l​i​n​k
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​I​D​s​ ​o​f​ ​r​e​c​o​r​d​s​ ​f​r​o​m​ ​t​h​e​ ​l​i​n​k​e​d​ ​t​a​b​l​e​ ​t​o​ ​d​i​s​c​o​n​n​e​c​t​ ​f​r​o​m​ ​t​h​e​ ​s​o​u​r​c​e​ ​r​e​c​o​r​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				trigger_button: {
+					/**
+					 * T​r​i​g​g​e​r​ ​B​u​t​t​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​ ​a​ ​b​u​t​t​o​n​ ​a​c​t​i​o​n​ ​o​n​ ​r​e​c​o​r​d​s
+					 */
+					shortDesc: string
+					/**
+					 * P​r​o​g​r​a​m​m​a​t​i​c​a​l​l​y​ ​t​r​i​g​g​e​r​s​ ​a​ ​b​u​t​t​o​n​ ​a​c​t​i​o​n​ ​(​s​u​c​h​ ​a​s​ ​A​I​ ​g​e​n​e​r​a​t​i​o​n​ ​o​r​ ​w​e​b​h​o​o​k​)​ ​f​o​r​ ​s​p​e​c​i​f​i​e​d​ ​r​e​c​o​r​d​s​.​ ​M​a​x​i​m​u​m​ ​o​f​ ​2​5​ ​r​e​c​o​r​d​s​ ​c​a​n​ ​b​e​ ​p​r​o​c​e​s​s​e​d​ ​a​t​ ​a​ ​t​i​m​e​.
+					 */
+					longDesc: string
+					options: {
+						workspaceId: {
+							/**
+							 * W​o​r​k​s​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​c​o​D​B​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​b​a​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​c​o​D​B​ ​w​o​r​k​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​b​a​s​e​ ​w​i​t​h​ ​t​h​e​ ​t​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						baseId: {
+							/**
+							 * B​a​s​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​N​o​c​o​D​B​ ​b​a​s​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​b​l​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​c​o​D​B​ ​b​a​s​e​ ​(​p​r​o​j​e​c​t​)​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​t​a​b​l​e​.
+							 */
+							longDesc: string
+						}
+						table: {
+							/**
+							 * T​a​b​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​a​b​l​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​b​u​t​t​o​n​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​N​o​c​o​D​B​ ​t​a​b​l​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​b​u​t​t​o​n​ ​f​i​e​l​d​ ​t​o​ ​t​r​i​g​g​e​r​.
+							 */
+							longDesc: string
+						}
+						buttonField: {
+							/**
+							 * B​u​t​t​o​n​ ​F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​b​u​t​t​o​n​ ​f​i​e​l​d​ ​t​o​ ​t​r​i​g​g​e​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​b​u​t​t​o​n​ ​f​i​e​l​d​ ​w​h​o​s​e​ ​a​c​t​i​o​n​ ​s​h​o​u​l​d​ ​b​e​ ​t​r​i​g​g​e​r​e​d​ ​f​o​r​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​r​e​c​o​r​d​s​.
+							 */
+							longDesc: string
+						}
+						recordIds: {
+							/**
+							 * R​e​c​o​r​d​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * I​D​s​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​p​r​o​c​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​I​D​s​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​t​r​i​g​g​e​r​ ​t​h​e​ ​b​u​t​t​o​n​ ​a​c​t​i​o​n​ ​f​o​r​.​ ​M​a​x​i​m​u​m​ ​2​5​ ​r​e​c​o​r​d​s​ ​p​e​r​ ​r​e​q​u​e​s​t​.
+							 */
+							longDesc: string
+						}
+						preview: {
+							/**
+							 * P​r​e​v​i​e​w​ ​M​o​d​e
+							 */
+							displayName: string
+							/**
+							 * R​u​n​ ​i​n​ ​p​r​e​v​i​e​w​ ​m​o​d​e​ ​w​i​t​h​o​u​t​ ​s​a​v​i​n​g​ ​c​h​a​n​g​e​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​b​u​t​t​o​n​ ​a​c​t​i​o​n​ ​r​u​n​s​ ​i​n​ ​p​r​e​v​i​e​w​ ​m​o​d​e​ ​a​n​d​ ​c​h​a​n​g​e​s​ ​a​r​e​ ​n​o​t​ ​s​a​v​e​d​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​t​e​s​t​i​n​g​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Salesforce: {
 			groups: {
 				/**
@@ -203729,6 +204330,607 @@ export type TranslationFunctions = {
 					 * Removes a vendor record from NetSuite based on its ID.
 					 */
 					longDesc: () => LocalizedString
+				}
+			}
+		}
+		NocoDB: {
+			/**
+			 * NocoDB
+			 */
+			displayName: () => LocalizedString
+			groups: {
+				/**
+				 * Spreadsheets & Data Tables
+				 */
+				'0': () => LocalizedString
+				/**
+				 * Databases & Backend Services
+				 */
+				'1': () => LocalizedString
+			}
+			/**
+			 * Connect to NocoDB to manage your database tables and records with powerful automation
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * The NocoDB integration provides comprehensive access to your NocoDB database operations. Create, read, update, and delete records in your tables, and monitor new entries with real-time triggers. Whether you need to manage data, filter results, or track new records, this integration streamlines your NocoDB workflow automation and database management.
+			 */
+			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to NocoDB
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to NocoDB, you will need your **NocoDB URL** and an **API Token**.
+		
+			## Getting Your API Token
+		
+			1. Log in to your NocoDB instance
+			2. Click on your **profile icon** in the top right corner
+			3. Select **Copy Auth Token** from the dropdown menu
+			4. Alternatively, go to **Account Settings** → **Tokens** to create a new API token
+		
+			## Connection Details
+		
+			### NocoDB URL
+			The base URL of your NocoDB instance:
+			- **NocoDB Cloud**: Use `https://app.nocodb.com`
+			- **Self-hosted**: Use your instance URL (e.g., `https://nocodb.yourcompany.com`)
+		
+			### API Token
+			Your API token that grants access to NocoDB. Tokens can be created in your account settings and provide access to all operations within the authorized workspaces and bases.
+		
+			**Note:** API tokens provide full access to the workspaces and bases you have permissions for. Ensure you keep your tokens secure and only use them in trusted environments.
+				 */
+				content: () => LocalizedString
+			}
+			triggers: {
+				new_document: {
+					/**
+					 * New Row
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Trigger when a new row is added to a NocoDB table
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors a NocoDB table for new rows and triggers when new records are detected. You can optionally filter which rows trigger the event using a where clause.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspaceId: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The NocoDB workspace containing the base
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the NocoDB workspace containing the base with the table you want to monitor.
+							 */
+							longDesc: () => LocalizedString
+						}
+						baseId: {
+							/**
+							 * Base
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The NocoDB base containing the table
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the NocoDB base (project) containing the table you want to monitor for new rows.
+							 */
+							longDesc: () => LocalizedString
+						}
+						table: {
+							/**
+							 * Table
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The table to monitor for new rows
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the NocoDB table to monitor. The trigger will fire when new rows are added to this table.
+							 */
+							longDesc: () => LocalizedString
+						}
+						where: {
+							/**
+							 * Where Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional filter for new rows
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally specify a filter using NocoDB where syntax (e.g., "(Status,eq,Active)") to only trigger for rows matching specific criteria.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			actions: {
+				count_records: {
+					/**
+					 * Count Records
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get the count of records in a table
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns the total number of records in a NocoDB table. You can optionally filter the count using a where clause to count only records matching specific criteria.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspaceId: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The NocoDB workspace containing the base
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the NocoDB workspace containing the base with the table.
+							 */
+							longDesc: () => LocalizedString
+						}
+						baseId: {
+							/**
+							 * Base
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The NocoDB base containing the table
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the NocoDB base (project) containing the table.
+							 */
+							longDesc: () => LocalizedString
+						}
+						table: {
+							/**
+							 * Table
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The table to count records from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the NocoDB table to count records from.
+							 */
+							longDesc: () => LocalizedString
+						}
+						where: {
+							/**
+							 * Where Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional filter to count specific records
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally specify a filter using NocoDB where syntax (e.g., "(Status,eq,Active)") to only count records matching specific criteria.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				upload_attachment: {
+					/**
+					 * Upload Attachment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload a file to an attachment field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Uploads a file to a specific attachment field in a NocoDB record. The file will be stored in NocoDB and associated with the specified record.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspaceId: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The NocoDB workspace containing the base
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the NocoDB workspace containing the base with the table.
+							 */
+							longDesc: () => LocalizedString
+						}
+						baseId: {
+							/**
+							 * Base
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The NocoDB base containing the table
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the NocoDB base (project) containing the table.
+							 */
+							longDesc: () => LocalizedString
+						}
+						table: {
+							/**
+							 * Table
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The table containing the record
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the NocoDB table containing the record to attach the file to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						recordId: {
+							/**
+							 * Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ID of the record to attach the file to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the ID of the record where the file should be uploaded.
+							 */
+							longDesc: () => LocalizedString
+						}
+						attachmentField: {
+							/**
+							 * Attachment Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The attachment field to upload to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the attachment field in the table where the file will be stored.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file: {
+							/**
+							 * File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file to upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The file to upload to the attachment field. Supports various file types including images, documents, and more.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				link_records: {
+					/**
+					 * Link Records
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create relationships between records
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Links records from another table to a record via a link field. This creates a relationship between the records without affecting existing links.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspaceId: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The NocoDB workspace containing the base
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the NocoDB workspace containing the base with the table.
+							 */
+							longDesc: () => LocalizedString
+						}
+						baseId: {
+							/**
+							 * Base
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The NocoDB base containing the table
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the NocoDB base (project) containing the table.
+							 */
+							longDesc: () => LocalizedString
+						}
+						table: {
+							/**
+							 * Table
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The table containing the source record
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the NocoDB table containing the record you want to link from.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linkField: {
+							/**
+							 * Link Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The link field to use for the relationship
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the link field (Link to Another Record) that defines the relationship between tables.
+							 */
+							longDesc: () => LocalizedString
+						}
+						recordId: {
+							/**
+							 * Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The source record ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the ID of the record in the source table to link from.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linkedRecordIds: {
+							/**
+							 * Records to Link
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * IDs of records to link
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the IDs of records from the linked table to connect to the source record.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				unlink_records: {
+					/**
+					 * Unlink Records
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove relationships between records
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes the link between records via a link field. This breaks the relationship without deleting any records.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspaceId: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The NocoDB workspace containing the base
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the NocoDB workspace containing the base with the table.
+							 */
+							longDesc: () => LocalizedString
+						}
+						baseId: {
+							/**
+							 * Base
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The NocoDB base containing the table
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the NocoDB base (project) containing the table.
+							 */
+							longDesc: () => LocalizedString
+						}
+						table: {
+							/**
+							 * Table
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The table containing the source record
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the NocoDB table containing the record you want to unlink from.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linkField: {
+							/**
+							 * Link Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The link field with the relationship
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the link field (Link to Another Record) that defines the relationship to remove.
+							 */
+							longDesc: () => LocalizedString
+						}
+						recordId: {
+							/**
+							 * Record ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The source record ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Specify the ID of the record in the source table to unlink from.
+							 */
+							longDesc: () => LocalizedString
+						}
+						linkedRecordIds: {
+							/**
+							 * Records to Unlink
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * IDs of records to unlink
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the IDs of records from the linked table to disconnect from the source record.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				trigger_button: {
+					/**
+					 * Trigger Button
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Trigger a button action on records
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Programmatically triggers a button action (such as AI generation or webhook) for specified records. Maximum of 25 records can be processed at a time.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						workspaceId: {
+							/**
+							 * Workspace
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The NocoDB workspace containing the base
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the NocoDB workspace containing the base with the table.
+							 */
+							longDesc: () => LocalizedString
+						}
+						baseId: {
+							/**
+							 * Base
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The NocoDB base containing the table
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the NocoDB base (project) containing the table.
+							 */
+							longDesc: () => LocalizedString
+						}
+						table: {
+							/**
+							 * Table
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The table containing the button field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the NocoDB table containing the button field to trigger.
+							 */
+							longDesc: () => LocalizedString
+						}
+						buttonField: {
+							/**
+							 * Button Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The button field to trigger
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the button field whose action should be triggered for the specified records.
+							 */
+							longDesc: () => LocalizedString
+						}
+						recordIds: {
+							/**
+							 * Record IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * IDs of records to process
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the IDs of records to trigger the button action for. Maximum 25 records per request.
+							 */
+							longDesc: () => LocalizedString
+						}
+						preview: {
+							/**
+							 * Preview Mode
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Run in preview mode without saving changes
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, the button action runs in preview mode and changes are not saved. Useful for testing.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 			}
 		}

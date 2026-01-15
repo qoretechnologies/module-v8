@@ -60,6 +60,7 @@ import Mautic from './apps/Mautic';
 import Messenger360 from './apps/Messenger360';
 import Monday from './apps/Monday';
 import NetSuite from './apps/NetSuite';
+import NocoDB from './apps/NocoDB';
 import Notion from './apps/Notion';
 import Odoo from './apps/Odoo';
 import OpenRouter from './apps/Openrouter';
@@ -160,6 +161,7 @@ const en = {
     Hubspot,
     Dropbox,
     NetSuite,
+    NocoDB,
     Salesforce,
     Freshdesk,
     Front,
