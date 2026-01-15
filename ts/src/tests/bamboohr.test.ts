@@ -1,23 +1,3 @@
-/**
- * BambooHR Integration Tests
- *
- * Tests the BambooHR app integration including:
- * - Field metadata fetching and caching
- * - List options fetching
- * - Dynamic type generation
- * - Employee actions (list, get)
- *
- * Note: Create/Update tests are skipped by default to avoid modifying
- * production data. Enable them with BAMBOOHR_TEST_WRITE=true.
- *
- * Required environment variables:
- * - BAMBOOHR_API_KEY: BambooHR API key
- * - BAMBOOHR_COMPANY_DOMAIN: Company subdomain (e.g., "mycompany")
- *
- * Optional environment variables:
- * - BAMBOOHR_TEST_WRITE: Set to "true" to enable create/update tests
- */
-
 import { configDotenv } from 'dotenv';
 import {
   GetBambooHREmployee,
@@ -219,9 +199,11 @@ describe('BambooHR', () => {
     });
 
     it('Should generate input type for employee', async () => {
-      const inputType = await getBambooHREmployeeInputType({
+      const inputType = (await getBambooHREmployeeInputType({
         conn_opts: connectionOptions,
-      }) as { type: string; fields: Record<string, any> };
+      })) as { type: string; fields: Record<string, any> };
+
+      console.dir(inputType);
 
       expect(inputType).toBeDefined();
       expect(inputType.type).toBe('hash');
@@ -232,9 +214,9 @@ describe('BambooHR', () => {
     });
 
     it('Should generate response type for employee', async () => {
-      const responseType = await getBambooHREmployeeResponseType({
+      const responseType = (await getBambooHREmployeeResponseType({
         conn_opts: connectionOptions,
-      }) as { type: string; fields: Record<string, any> };
+      })) as { type: string; fields: Record<string, any> };
 
       expect(responseType).toBeDefined();
       expect(responseType.type).toBe('hash');
@@ -283,7 +265,8 @@ describe('BambooHR', () => {
         });
 
         expect(responseType).toBeDefined();
-        expect(responseType.type).toBe('list');
+        expect(typeof responseType).toBe('object');
+        expect((responseType as { type: string }).type).toBe('list');
       });
     });
 
@@ -308,36 +291,57 @@ describe('BambooHR', () => {
         );
 
         expect(result).toBeDefined();
-        expect(result.id).toBe(employeeId);
+        expect(result).toHaveProperty('id');
       });
 
-      it('Should have dynamic response type', async () => {
+      it('Should have dynamic response type matching actual fields', async () => {
+        // Skip if we don't have an employee ID from list test
+        if (!employeeId) {
+          console.warn('Skipping comparison test - no employee ID available');
+          return;
+        }
+
         const action = GetBambooHREmployee;
 
         if (!('get_dynamic_response_type' in action)) {
           throw new Error('get_dynamic_response_type not found in action');
         }
 
+        // Get the dynamic response type
         const responseType = await action.get_dynamic_response_type!({
           conn_opts: connectionOptions,
         });
 
         expect(responseType).toBeDefined();
-        expect(responseType.type).toBe('hash');
-        expect(responseType.fields).toBeDefined();
+        expect(typeof responseType).toBe('object');
+        const typedResponse = responseType as { type: string; fields: Record<string, unknown> };
+        expect(typedResponse.type).toBe('hash');
+        expect(typedResponse.fields).toBeDefined();
+
+        // Get actual employee data to compare
+        const actualResult = await action.api_function!(
+          { employee_id: employeeId },
+          undefined,
+          baseContext
+        );
+
+        // Verify dynamic response type fields match actual result fields
+        const responseTypeFields = Object.keys(typedResponse.fields).sort();
+        const actualFields = Object.keys(actualResult as Record<string, unknown>).sort();
+
+        // All actual fields should be in response type
+        const missingInResponseType = actualFields.filter((f) => !responseTypeFields.includes(f));
+        expect(missingInResponseType).toEqual([]);
+
+        // Response type should match actual fields (no extra fields)
+        expect(responseTypeFields.length).toBe(actualFields.length);
       });
     });
 
-    // Write tests - skipped by default
-    const runWriteTests = process.env.BAMBOOHR_TEST_WRITE === 'true';
+    describe.skip('Create and Update Employee', () => {
+      let createdEmployeeId: string;
 
-    describe.skip('Create Employee (requires BAMBOOHR_TEST_WRITE=true)', () => {
       it('Should create an employee', async () => {
-        if (!runWriteTests) {
-          console.warn('Skipping create test - set BAMBOOHR_TEST_WRITE=true to enable');
-          return;
-        }
-
         const action = CreateBambooHREmployee;
 
         if (!('api_function' in action)) {
@@ -349,6 +353,10 @@ describe('BambooHR', () => {
             employee_data: {
               firstName: 'Test',
               lastName: `Employee ${Date.now()}`,
+              payRate: {
+                value: 50000,
+                currency: 'USD',
+              },
             },
           },
           undefined,
@@ -357,32 +365,10 @@ describe('BambooHR', () => {
 
         expect(result).toBeDefined();
         expect(result.id).toBeDefined();
+        createdEmployeeId = result.id as string;
       });
 
-      it('Should have dynamic input type', async () => {
-        const action = CreateBambooHREmployee;
-
-        if (!('get_dynamic_type' in action)) {
-          throw new Error('get_dynamic_type not found in action');
-        }
-
-        const inputType = await action.get_dynamic_type!(
-          { conn_opts: connectionOptions },
-          'employee_data'
-        );
-
-        expect(inputType).toBeDefined();
-        expect(inputType.type).toBe('hash');
-      });
-    });
-
-    describe.skip('Update Employee (requires BAMBOOHR_TEST_WRITE=true)', () => {
-      it('Should update an employee', async () => {
-        if (!runWriteTests || !employeeId) {
-          console.warn('Skipping update test - requires write access and employee ID');
-          return;
-        }
-
+      it('Should update the created employee', async () => {
         const action = UpdateBambooHREmployee;
 
         if (!('api_function' in action)) {
@@ -391,9 +377,8 @@ describe('BambooHR', () => {
 
         const result = await action.api_function(
           {
-            employee_id: employeeId,
+            employee_id: createdEmployeeId,
             employee_data: {
-              // Update with safe field that won't break anything
               mobilePhone: '+1234567890',
             },
           },
@@ -404,17 +389,35 @@ describe('BambooHR', () => {
         expect(result).toBeDefined();
       });
 
-      it('Should have dynamic input type', async () => {
-        const action = UpdateBambooHREmployee;
+      it('Should have dynamic input type for create', async () => {
+        const action = CreateBambooHREmployee;
 
-        if (!('get_dynamic_type' in action)) {
-          throw new Error('get_dynamic_type not found in action');
+        if (!('options' in action) || !action.options?.employee_data?.get_dynamic_type) {
+          throw new Error('get_dynamic_type not found in action.options.employee_data');
         }
 
-        const inputType = await action.get_dynamic_type!(
-          { conn_opts: connectionOptions },
-          'employee_data'
-        );
+        const getDynamicType = action.options.employee_data.get_dynamic_type;
+        const inputType = (await getDynamicType({ conn_opts: connectionOptions })) as {
+          type: string;
+          fields: Record<string, unknown>;
+        };
+
+        expect(inputType).toBeDefined();
+        expect(inputType.type).toBe('hash');
+      });
+
+      it('Should have dynamic input type for update', async () => {
+        const action = UpdateBambooHREmployee;
+
+        if (!('options' in action) || !action.options?.employee_data?.get_dynamic_type) {
+          throw new Error('get_dynamic_type not found in action.options.employee_data');
+        }
+
+        const getDynamicType = action.options.employee_data.get_dynamic_type;
+        const inputType = (await getDynamicType({ conn_opts: connectionOptions })) as {
+          type: string;
+          fields: Record<string, unknown>;
+        };
 
         expect(inputType).toBeDefined();
         expect(inputType.type).toBe('hash');

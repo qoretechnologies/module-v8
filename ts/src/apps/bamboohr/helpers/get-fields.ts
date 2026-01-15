@@ -144,12 +144,17 @@ export const getApiKeyToFieldNameMap = async (
 };
 
 /**
- * Get all field aliases/IDs as a comma-separated string.
+ * Get all field aliases as a comma-separated string.
  * Useful for requesting all fields in a GET /employees/{id} call.
+ *
+ * Note: The GET employee endpoint only supports fields with aliases (standard fields).
+ * Custom fields (those with only numeric IDs) return a 404 "Unsupported Table field"
+ * error when accessed via the GET employee endpoint. Custom fields can only be
+ * retrieved via the custom reports API.
  *
  * @param options - Connection options
  * @param maxFields - Maximum number of fields to include (BambooHR has 400 field limit)
- * @returns Comma-separated string of field aliases/IDs
+ * @returns Comma-separated string of field aliases
  */
 export const getAllFieldsString = async (
   options: IBambooHRConnectionOptions,
@@ -157,9 +162,12 @@ export const getAllFieldsString = async (
 ): Promise<string> => {
   const fields = await getBambooHRFields(options);
 
+  // Only include fields with aliases - numeric IDs cause 404 errors
+  // on the GET employee endpoint
   return fields
+    .filter((field) => field.alias)
     .slice(0, maxFields)
-    .map((field) => field.alias || field.id.toString())
+    .map((field) => field.alias)
     .join(',');
 };
 

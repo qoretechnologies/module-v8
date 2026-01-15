@@ -589,6 +589,11 @@ export abstract class QoreApiClient {
       data = omit(data as any, omitKeys) as T;
     }
 
+    // Include response headers if requested
+    if (options.includeHeaders && response.headers) {
+      return { data, headers: response.headers } as T;
+    }
+
     return data;
   }
 

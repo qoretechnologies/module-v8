@@ -22,7 +22,8 @@
     "qtest": "clear && jest --config src/jest.config.ts --testMatch '**/?(*.)+(qtest).[tj]s?(x)' --detectOpenHandles --forceExit",
     "precheck": "yarn build:test && yarn test",
     "update-reqore": "yarn add -D @qoretechnologies/reqore@beta",
-    "update-toolkit": "yarn add -D @qoretechnologies/ts-toolkit@beta"
+    "update-toolkit": "yarn add -D @qoretechnologies/ts-toolkit@beta",
+    "qore:check-app": "cross-env QORE_TYPESCRIPT_ACTION_VERBOSE=1 QORE_TYPESCRIPT_ACTION_SCRIPTS=./dist/index.js qdp"
   },
   "author": "Qore Technologies s.r.o.",
   "license": "MIT",

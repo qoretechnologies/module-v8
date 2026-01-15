@@ -152,3 +152,158 @@ export interface IBambooHRConnectionOptions {
   api_key: string;
   company_domain: string;
 }
+
+/**
+ * Standard Qore file type for file uploads/downloads.
+ */
+export type TQoreFile = {
+  /** File name */
+  name: string;
+  /** MIME type (e.g., 'application/pdf', 'image/png') */
+  mime_type: string;
+  /** Base64 encoded file content */
+  content: string;
+};
+
+/**
+ * BambooHR file metadata from file list endpoints.
+ */
+export interface IBambooHRFile {
+  /** File ID */
+  id: number;
+  /** File name */
+  name: string;
+  /** Original file name */
+  originalFileName: string;
+  /** File size in bytes */
+  size: number;
+  /** Date uploaded (ISO 8601) */
+  dateCreated: string;
+  /** ID of user who uploaded */
+  createdBy: string;
+  /** Whether shared with employee */
+  shareWithEmployee: string;
+}
+
+/**
+ * BambooHR file category.
+ */
+export interface IBambooHRFileCategory {
+  /** Category ID */
+  id: number;
+  /** Category name */
+  name: string;
+}
+
+/**
+ * Response from GET /employees/{id}/files endpoint.
+ */
+export interface IBambooHREmployeeFilesResponse {
+  employee: {
+    id: string;
+  };
+  categories: Array<{
+    id: number;
+    name: string;
+    files: IBambooHRFile[];
+  }>;
+}
+
+/**
+ * Response from GET /files endpoint (company files).
+ */
+export interface IBambooHRCompanyFilesResponse {
+  categories: Array<{
+    id: number;
+    name: string;
+    files: IBambooHRFile[];
+  }>;
+}
+
+/**
+ * Time off request from GET /time_off/requests endpoint.
+ */
+export interface IBambooHRTimeOffRequest {
+  /** Request ID */
+  id: string;
+  /** Employee ID */
+  employeeId: string;
+  /** Employee name */
+  name: string;
+  /** Start date (YYYY-MM-DD) */
+  start: string;
+  /** End date (YYYY-MM-DD) */
+  end: string;
+  /** Request status */
+  status: {
+    status: 'approved' | 'denied' | 'requested' | 'canceled' | 'superceded';
+    lastChanged: string;
+    lastChangedByUserId: string;
+  };
+  /** Time off type */
+  type: {
+    id: string;
+    name: string;
+    icon: string;
+  };
+  /** Amount of time off */
+  amount: {
+    unit: string;
+    amount: string;
+  };
+  /** Notes from requester */
+  notes?: {
+    employee?: string;
+    manager?: string;
+  };
+  /** Dates included in request */
+  dates: Record<string, string>;
+  /** Actions available */
+  actions?: {
+    view?: string;
+    approve?: string;
+    deny?: string;
+    bypass?: string;
+  };
+}
+
+/**
+ * Response from GET /time_off/requests endpoint.
+ */
+export interface IBambooHRTimeOffRequestsResponse {
+  requests: IBambooHRTimeOffRequest[];
+}
+
+/**
+ * Entry from GET /time_off/whos_out endpoint.
+ */
+export interface IBambooHRWhosOutEntry {
+  /** Type: 'timeOff' or 'holiday' */
+  type: 'timeOff' | 'holiday';
+  /** Employee ID (for timeOff type) */
+  employeeId?: string;
+  /** Employee name (for timeOff type) */
+  name?: string;
+  /** Holiday name (for holiday type) */
+  holidayName?: string;
+  /** Start date (YYYY-MM-DD) */
+  start: string;
+  /** End date (YYYY-MM-DD) */
+  end: string;
+}
+
+/**
+ * Time off type from meta endpoint.
+ */
+export interface IBambooHRTimeOffType {
+  /** Time off type ID */
+  id: string;
+  /** Time off type name */
+  name: string;
+  /** Units (hours, days) */
+  units: string;
+  /** Color for display */
+  color?: string;
+  /** Icon */
+  icon?: string;
+}

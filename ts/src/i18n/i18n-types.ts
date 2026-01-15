@@ -13077,6 +13077,21 @@ type RootTranslation = {
 			 * T​h​e​ ​B​a​m​b​o​o​H​R​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​H​R​ ​o​p​e​r​a​t​i​o​n​s​.​ ​C​r​e​a​t​e​,​ ​r​e​a​d​,​ ​u​p​d​a​t​e​,​ ​a​n​d​ ​l​i​s​t​ ​e​m​p​l​o​y​e​e​s​ ​w​i​t​h​ ​d​y​n​a​m​i​c​ ​f​i​e​l​d​ ​s​u​p​p​o​r​t​.​ ​T​h​e​ ​i​n​t​e​g​r​a​t​i​o​n​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​d​i​s​c​o​v​e​r​s​ ​a​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​ ​i​n​ ​y​o​u​r​ ​B​a​m​b​o​o​H​R​ ​a​c​c​o​u​n​t​,​ ​i​n​c​l​u​d​i​n​g​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​,​ ​a​n​d​ ​p​r​o​v​i​d​e​s​ ​i​n​t​e​l​l​i​g​e​n​t​ ​t​y​p​e​ ​h​a​n​d​l​i​n​g​ ​f​o​r​ ​d​a​t​e​s​,​ ​l​i​s​t​s​,​ ​a​n​d​ ​o​t​h​e​r​ ​f​i​e​l​d​ ​t​y​p​e​s​.
 			 */
 			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​B​a​m​b​o​o​H​R
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​y​o​u​r​ ​B​a​m​b​o​o​H​R​ ​a​c​c​o​u​n​t​,​ ​y​o​u​'​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​P​I​ ​K​e​y​*​*​ ​a​n​d​ ​*​*​C​o​m​p​a​n​y​ ​D​o​m​a​i​n​*​*​.​
+			​
+			​1​.​ ​L​o​g​ ​i​n​ ​t​o​ ​B​a​m​b​o​o​H​R​ ​a​s​ ​a​n​ ​a​d​m​i​n​i​s​t​r​a​t​o​r​
+			​2​.​ ​C​l​i​c​k​ ​y​o​u​r​ ​p​r​o​f​i​l​e​ ​p​i​c​t​u​r​e​ ​i​n​ ​t​h​e​ ​u​p​p​e​r​ ​r​i​g​h​t​ ​c​o​r​n​e​r​ ​a​n​d​ ​s​e​l​e​c​t​ ​"​A​P​I​ ​K​e​y​s​"​
+			​3​.​ ​C​l​i​c​k​ ​"​A​d​d​ ​N​e​w​ ​K​e​y​"​,​ ​g​i​v​e​ ​i​t​ ​a​ ​n​a​m​e​,​ ​a​n​d​ ​c​o​p​y​ ​t​h​e​ ​g​e​n​e​r​a​t​e​d​ ​A​P​I​ ​k​e​y​
+			​4​.​ ​Y​o​u​r​ ​c​o​m​p​a​n​y​ ​d​o​m​a​i​n​ ​i​s​ ​t​h​e​ ​s​u​b​d​o​m​a​i​n​ ​i​n​ ​y​o​u​r​ ​B​a​m​b​o​o​H​R​ ​U​R​L​ ​(​e​.​g​.​,​ ​i​f​ ​y​o​u​ ​a​c​c​e​s​s​ ​B​a​m​b​o​o​H​R​ ​a​t​ ​`​y​o​u​r​c​o​m​p​a​n​y​.​b​a​m​b​o​o​h​r​.​c​o​m​`​,​ ​y​o​u​r​ ​d​o​m​a​i​n​ ​i​s​ ​`​y​o​u​r​c​o​m​p​a​n​y​`​)
+				 */
+				content: string
+			}
 			actions: {
 				get_employee: {
 					/**
@@ -13224,6 +13239,682 @@ type RootTranslation = {
 							 */
 							longDesc: string
 						}
+					}
+				}
+				get_whos_out: {
+					/**
+					 * G​e​t​ ​W​h​o​'​s​ ​O​u​t
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​a​ ​s​u​m​m​a​r​y​ ​o​f​ ​e​m​p​l​o​y​e​e​s​ ​w​h​o​ ​a​r​e​ ​o​u​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​l​i​s​t​ ​o​f​ ​e​m​p​l​o​y​e​e​s​ ​w​h​o​ ​a​r​e​ ​o​u​t​ ​(​v​a​c​a​t​i​o​n​,​ ​s​i​c​k​ ​l​e​a​v​e​,​ ​e​t​c​.​)​ ​a​n​d​ ​c​o​m​p​a​n​y​ ​h​o​l​i​d​a​y​s​ ​f​o​r​ ​a​ ​g​i​v​e​n​ ​d​a​t​e​ ​r​a​n​g​e​.​ ​I​f​ ​n​o​ ​d​a​t​e​s​ ​a​r​e​ ​s​p​e​c​i​f​i​e​d​,​ ​r​e​t​u​r​n​s​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​d​a​y​ ​p​l​u​s​ ​t​h​e​ ​n​e​x​t​ ​1​4​ ​d​a​y​s​.
+					 */
+					longDesc: string
+					options: {
+						start_date: {
+							/**
+							 * S​t​a​r​t​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * S​t​a​r​t​ ​o​f​ ​t​h​e​ ​d​a​t​e​ ​r​a​n​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​q​u​e​r​y​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​t​o​d​a​y​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						end_date: {
+							/**
+							 * E​n​d​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * E​n​d​ ​o​f​ ​t​h​e​ ​d​a​t​e​ ​r​a​n​g​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​n​d​ ​d​a​t​e​ ​f​o​r​ ​t​h​e​ ​q​u​e​r​y​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​1​4​ ​d​a​y​s​ ​f​r​o​m​ ​t​h​e​ ​s​t​a​r​t​ ​d​a​t​e​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				search_time_off_requests: {
+					/**
+					 * S​e​a​r​c​h​ ​T​i​m​e​ ​O​f​f​ ​R​e​q​u​e​s​t​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​ ​a​n​d​ ​f​i​l​t​e​r​ ​t​i​m​e​ ​o​f​f​ ​r​e​q​u​e​s​t​s
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​e​s​ ​t​i​m​e​ ​o​f​f​ ​r​e​q​u​e​s​t​s​ ​i​n​ ​B​a​m​b​o​o​H​R​ ​w​i​t​h​ ​v​a​r​i​o​u​s​ ​f​i​l​t​e​r​s​.​ ​R​e​t​u​r​n​s​ ​r​e​q​u​e​s​t​s​ ​m​a​t​c​h​i​n​g​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​r​i​t​e​r​i​a​ ​i​n​c​l​u​d​i​n​g​ ​d​a​t​e​ ​r​a​n​g​e​,​ ​e​m​p​l​o​y​e​e​,​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​t​i​m​e​ ​o​f​f​ ​t​y​p​e​.
+					 */
+					longDesc: string
+					options: {
+						start_date: {
+							/**
+							 * S​t​a​r​t​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​s​t​a​r​t​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​s​h​o​w​ ​t​i​m​e​ ​o​f​f​ ​r​e​q​u​e​s​t​s​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						end_date: {
+							/**
+							 * E​n​d​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​e​n​d​ ​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​s​h​o​w​ ​t​i​m​e​ ​o​f​f​ ​r​e​q​u​e​s​t​s​ ​o​n​ ​o​r​ ​b​e​f​o​r​e​ ​t​h​i​s​ ​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						employee_id: {
+							/**
+							 * E​m​p​l​o​y​e​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​e​m​p​l​o​y​e​e
+							 */
+							shortDesc: string
+							/**
+							 * L​i​m​i​t​ ​r​e​s​u​l​t​s​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​m​p​l​o​y​e​e​ ​b​y​ ​t​h​e​i​r​ ​I​D​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​r​e​q​u​e​s​t​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​s​t​a​t​u​s​e​s​:​ ​a​p​p​r​o​v​e​d​,​ ​d​e​n​i​e​d​,​ ​r​e​q​u​e​s​t​e​d​,​ ​c​a​n​c​e​l​e​d​,​ ​s​u​p​e​r​c​e​d​e​d​.
+							 */
+							longDesc: string
+						}
+						type: {
+							/**
+							 * T​i​m​e​ ​O​f​f​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​t​i​m​e​ ​o​f​f​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​t​i​m​e​ ​o​f​f​ ​t​y​p​e​s​ ​c​o​n​f​i​g​u​r​e​d​ ​i​n​ ​y​o​u​r​ ​B​a​m​b​o​o​H​R​ ​a​c​c​o​u​n​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_all_employee_files: {
+					/**
+					 * G​e​t​ ​A​l​l​ ​E​m​p​l​o​y​e​e​ ​F​i​l​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​f​i​l​e​s​ ​f​o​r​ ​a​n​ ​e​m​p​l​o​y​e​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​l​l​ ​f​i​l​e​s​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​m​p​l​o​y​e​e​,​ ​o​r​g​a​n​i​z​e​d​ ​b​y​ ​c​a​t​e​g​o​r​y​.​ ​R​e​t​u​r​n​s​ ​f​i​l​e​ ​m​e​t​a​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​s​i​z​e​,​ ​u​p​l​o​a​d​ ​d​a​t​e​,​ ​a​n​d​ ​s​h​a​r​i​n​g​ ​s​t​a​t​u​s​.
+					 */
+					longDesc: string
+					options: {
+						employee_id: {
+							/**
+							 * E​m​p​l​o​y​e​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​p​l​o​y​e​e​ ​t​o​ ​g​e​t​ ​f​i​l​e​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​m​p​l​o​y​e​e​ ​w​h​o​s​e​ ​f​i​l​e​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				download_employee_file: {
+					/**
+					 * D​o​w​n​l​o​a​d​ ​E​m​p​l​o​y​e​e​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * D​o​w​n​l​o​a​d​ ​a​n​ ​e​m​p​l​o​y​e​e​ ​f​i​l​e
+					 */
+					shortDesc: string
+					/**
+					 * D​o​w​n​l​o​a​d​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​l​e​ ​f​r​o​m​ ​a​n​ ​e​m​p​l​o​y​e​e​ ​r​e​c​o​r​d​.​ ​R​e​t​u​r​n​s​ ​t​h​e​ ​f​i​l​e​ ​c​o​n​t​e​n​t​ ​a​s​ ​b​a​s​e​6​4​-​e​n​c​o​d​e​d​ ​b​i​n​a​r​y​ ​a​l​o​n​g​ ​w​i​t​h​ ​t​h​e​ ​M​I​M​E​ ​t​y​p​e​.
+					 */
+					longDesc: string
+					options: {
+						employee_id: {
+							/**
+							 * E​m​p​l​o​y​e​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​p​l​o​y​e​e​ ​w​h​o​ ​o​w​n​s​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​m​p​l​o​y​e​e​ ​w​h​o​s​e​ ​f​i​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​o​w​n​l​o​a​d​.
+							 */
+							longDesc: string
+						}
+						file_id: {
+							/**
+							 * F​i​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​d​o​w​n​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​d​o​w​n​l​o​a​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				upload_employee_file: {
+					/**
+					 * U​p​l​o​a​d​ ​E​m​p​l​o​y​e​e​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​a​ ​f​i​l​e​ ​t​o​ ​a​n​ ​e​m​p​l​o​y​e​e
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​s​ ​a​ ​n​e​w​ ​f​i​l​e​ ​t​o​ ​a​n​ ​e​m​p​l​o​y​e​e​ ​r​e​c​o​r​d​ ​i​n​ ​B​a​m​b​o​o​H​R​.​ ​T​h​e​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​p​l​a​c​e​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​a​t​e​g​o​r​y​.
+					 */
+					longDesc: string
+					options: {
+						employee_id: {
+							/**
+							 * E​m​p​l​o​y​e​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​p​l​o​y​e​e​ ​t​o​ ​u​p​l​o​a​d​ ​t​h​e​ ​f​i​l​e​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​m​p​l​o​y​e​e​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​t​h​e​ ​f​i​l​e​ ​w​i​t​h​.
+							 */
+							longDesc: string
+						}
+						category: {
+							/**
+							 * C​a​t​e​g​o​r​y
+							 */
+							displayName: string
+							/**
+							 * F​i​l​e​ ​c​a​t​e​g​o​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​t​o​ ​p​l​a​c​e​ ​t​h​e​ ​f​i​l​e​ ​i​n​.​ ​C​a​t​e​g​o​r​i​e​s​ ​a​r​e​ ​c​o​n​f​i​g​u​r​e​d​ ​i​n​ ​B​a​m​b​o​o​H​R​.
+							 */
+							longDesc: string
+						}
+						file: {
+							/**
+							 * F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d​.​ ​M​u​s​t​ ​i​n​c​l​u​d​e​ ​n​a​m​e​,​ ​M​I​M​E​ ​t​y​p​e​,​ ​a​n​d​ ​b​a​s​e​6​4​-​e​n​c​o​d​e​d​ ​c​o​n​t​e​n​t​.
+							 */
+							longDesc: string
+						}
+						share_with_employee: {
+							/**
+							 * S​h​a​r​e​ ​w​i​t​h​ ​E​m​p​l​o​y​e​e
+							 */
+							displayName: string
+							/**
+							 * M​a​k​e​ ​f​i​l​e​ ​v​i​s​i​b​l​e​ ​t​o​ ​e​m​p​l​o​y​e​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​m​a​k​e​ ​t​h​i​s​ ​f​i​l​e​ ​v​i​s​i​b​l​e​ ​t​o​ ​t​h​e​ ​e​m​p​l​o​y​e​e​ ​i​n​ ​t​h​e​i​r​ ​s​e​l​f​-​s​e​r​v​i​c​e​ ​p​o​r​t​a​l​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_employee_file: {
+					/**
+					 * U​p​d​a​t​e​ ​E​m​p​l​o​y​e​e​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​e​m​p​l​o​y​e​e​ ​f​i​l​e​ ​m​e​t​a​d​a​t​a
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​m​e​t​a​d​a​t​a​ ​f​o​r​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​e​m​p​l​o​y​e​e​ ​f​i​l​e​,​ ​s​u​c​h​ ​a​s​ ​n​a​m​e​,​ ​c​a​t​e​g​o​r​y​,​ ​o​r​ ​s​h​a​r​i​n​g​ ​s​e​t​t​i​n​g​s​.
+					 */
+					longDesc: string
+					options: {
+						employee_id: {
+							/**
+							 * E​m​p​l​o​y​e​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​p​l​o​y​e​e​ ​w​h​o​ ​o​w​n​s​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​m​p​l​o​y​e​e​ ​w​h​o​s​e​ ​f​i​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						file_id: {
+							/**
+							 * F​i​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​f​i​l​e​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​f​i​l​e​.
+							 */
+							longDesc: string
+						}
+						category: {
+							/**
+							 * C​a​t​e​g​o​r​y
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​c​a​t​e​g​o​r​y
+							 */
+							shortDesc: string
+							/**
+							 * M​o​v​e​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​c​a​t​e​g​o​r​y​.
+							 */
+							longDesc: string
+						}
+						share_with_employee: {
+							/**
+							 * S​h​a​r​e​ ​w​i​t​h​ ​E​m​p​l​o​y​e​e
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​ ​s​h​a​r​i​n​g​ ​s​e​t​t​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​m​a​k​e​ ​t​h​i​s​ ​f​i​l​e​ ​v​i​s​i​b​l​e​ ​t​o​ ​t​h​e​ ​e​m​p​l​o​y​e​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_employee_file: {
+					/**
+					 * D​e​l​e​t​e​ ​E​m​p​l​o​y​e​e​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​n​ ​e​m​p​l​o​y​e​e​ ​f​i​l​e
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​s​ ​a​ ​f​i​l​e​ ​f​r​o​m​ ​a​n​ ​e​m​p​l​o​y​e​e​ ​r​e​c​o​r​d​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.
+					 */
+					longDesc: string
+					options: {
+						employee_id: {
+							/**
+							 * E​m​p​l​o​y​e​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​m​p​l​o​y​e​e​ ​w​h​o​ ​o​w​n​s​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​m​p​l​o​y​e​e​ ​w​h​o​s​e​ ​f​i​l​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+						file_id: {
+							/**
+							 * F​i​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_all_company_files: {
+					/**
+					 * G​e​t​ ​A​l​l​ ​C​o​m​p​a​n​y​ ​F​i​l​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​c​o​m​p​a​n​y​ ​f​i​l​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​l​l​ ​c​o​m​p​a​n​y​ ​f​i​l​e​s​ ​o​r​g​a​n​i​z​e​d​ ​b​y​ ​c​a​t​e​g​o​r​y​.​ ​R​e​t​u​r​n​s​ ​f​i​l​e​ ​m​e​t​a​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​s​i​z​e​,​ ​u​p​l​o​a​d​ ​d​a​t​e​,​ ​a​n​d​ ​s​h​a​r​i​n​g​ ​s​t​a​t​u​s​.
+					 */
+					longDesc: string
+					options: {
+					}
+				}
+				download_company_file: {
+					/**
+					 * D​o​w​n​l​o​a​d​ ​C​o​m​p​a​n​y​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * D​o​w​n​l​o​a​d​ ​a​ ​c​o​m​p​a​n​y​ ​f​i​l​e
+					 */
+					shortDesc: string
+					/**
+					 * D​o​w​n​l​o​a​d​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​m​p​a​n​y​ ​f​i​l​e​.​ ​R​e​t​u​r​n​s​ ​t​h​e​ ​f​i​l​e​ ​c​o​n​t​e​n​t​ ​a​s​ ​b​a​s​e​6​4​-​e​n​c​o​d​e​d​ ​b​i​n​a​r​y​ ​a​l​o​n​g​ ​w​i​t​h​ ​t​h​e​ ​M​I​M​E​ ​t​y​p​e​.
+					 */
+					longDesc: string
+					options: {
+						file_id: {
+							/**
+							 * F​i​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​d​o​w​n​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​f​i​l​e​ ​t​o​ ​d​o​w​n​l​o​a​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				upload_company_file: {
+					/**
+					 * U​p​l​o​a​d​ ​C​o​m​p​a​n​y​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​a​ ​c​o​m​p​a​n​y​ ​f​i​l​e
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​s​ ​a​ ​n​e​w​ ​f​i​l​e​ ​t​o​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​f​i​l​e​s​ ​i​n​ ​B​a​m​b​o​o​H​R​.​ ​T​h​e​ ​f​i​l​e​ ​w​i​l​l​ ​b​e​ ​p​l​a​c​e​d​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​a​t​e​g​o​r​y​.
+					 */
+					longDesc: string
+					options: {
+						category: {
+							/**
+							 * C​a​t​e​g​o​r​y
+							 */
+							displayName: string
+							/**
+							 * F​i​l​e​ ​c​a​t​e​g​o​r​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​a​t​e​g​o​r​y​ ​t​o​ ​p​l​a​c​e​ ​t​h​e​ ​f​i​l​e​ ​i​n​.​ ​C​a​t​e​g​o​r​i​e​s​ ​a​r​e​ ​c​o​n​f​i​g​u​r​e​d​ ​i​n​ ​B​a​m​b​o​o​H​R​.
+							 */
+							longDesc: string
+						}
+						file: {
+							/**
+							 * F​i​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d​.​ ​M​u​s​t​ ​i​n​c​l​u​d​e​ ​n​a​m​e​,​ ​M​I​M​E​ ​t​y​p​e​,​ ​a​n​d​ ​b​a​s​e​6​4​-​e​n​c​o​d​e​d​ ​c​o​n​t​e​n​t​.
+							 */
+							longDesc: string
+						}
+						share_with_employees: {
+							/**
+							 * S​h​a​r​e​ ​w​i​t​h​ ​E​m​p​l​o​y​e​e​s
+							 */
+							displayName: string
+							/**
+							 * M​a​k​e​ ​f​i​l​e​ ​v​i​s​i​b​l​e​ ​t​o​ ​e​m​p​l​o​y​e​e​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​m​a​k​e​ ​t​h​i​s​ ​f​i​l​e​ ​v​i​s​i​b​l​e​ ​t​o​ ​a​l​l​ ​e​m​p​l​o​y​e​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_company_file: {
+					/**
+					 * U​p​d​a​t​e​ ​C​o​m​p​a​n​y​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​c​o​m​p​a​n​y​ ​f​i​l​e​ ​m​e​t​a​d​a​t​a
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​m​e​t​a​d​a​t​a​ ​f​o​r​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​m​p​a​n​y​ ​f​i​l​e​,​ ​s​u​c​h​ ​a​s​ ​n​a​m​e​,​ ​c​a​t​e​g​o​r​y​,​ ​o​r​ ​s​h​a​r​i​n​g​ ​s​e​t​t​i​n​g​s​.
+					 */
+					longDesc: string
+					options: {
+						file_id: {
+							/**
+							 * F​i​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​f​i​l​e​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​f​i​l​e​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​f​i​l​e​.
+							 */
+							longDesc: string
+						}
+						category: {
+							/**
+							 * C​a​t​e​g​o​r​y
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​c​a​t​e​g​o​r​y
+							 */
+							shortDesc: string
+							/**
+							 * M​o​v​e​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​c​a​t​e​g​o​r​y​.
+							 */
+							longDesc: string
+						}
+						share_with_employees: {
+							/**
+							 * S​h​a​r​e​ ​w​i​t​h​ ​E​m​p​l​o​y​e​e​s
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​ ​s​h​a​r​i​n​g​ ​s​e​t​t​i​n​g
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​m​a​k​e​ ​t​h​i​s​ ​f​i​l​e​ ​v​i​s​i​b​l​e​ ​t​o​ ​a​l​l​ ​e​m​p​l​o​y​e​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_company_file: {
+					/**
+					 * D​e​l​e​t​e​ ​C​o​m​p​a​n​y​ ​F​i​l​e
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​c​o​m​p​a​n​y​ ​f​i​l​e
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​s​ ​a​ ​c​o​m​p​a​n​y​ ​f​i​l​e​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​c​a​n​n​o​t​ ​b​e​ ​u​n​d​o​n​e​.
+					 */
+					longDesc: string
+					options: {
+						file_id: {
+							/**
+							 * F​i​l​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​m​p​a​n​y​ ​f​i​l​e​ ​t​o​ ​d​e​l​e​t​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				new_time_off_request: {
+					/**
+					 * N​e​w​ ​T​i​m​e​ ​O​f​f​ ​R​e​q​u​e​s​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​i​m​e​ ​o​f​f​ ​r​e​q​u​e​s​t​ ​i​s​ ​s​u​b​m​i​t​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * F​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​t​i​m​e​ ​o​f​f​ ​r​e​q​u​e​s​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​B​a​m​b​o​o​H​R​ ​w​i​t​h​ ​s​t​a​t​u​s​ ​"​r​e​q​u​e​s​t​e​d​"​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​b​u​i​l​d​i​n​g​ ​a​p​p​r​o​v​a​l​ ​w​o​r​k​f​l​o​w​s​ ​o​r​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						employee_id: {
+							/**
+							 * E​m​p​l​o​y​e​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​e​m​p​l​o​y​e​e
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​t​i​m​e​ ​o​f​f​ ​r​e​q​u​e​s​t​s​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​m​p​l​o​y​e​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				new_time_off: {
+					/**
+					 * N​e​w​ ​T​i​m​e​ ​O​f​f
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​n​e​w​ ​a​p​p​r​o​v​e​d​ ​t​i​m​e​ ​o​f​f​ ​a​p​p​e​a​r​s
+					 */
+					shortDesc: string
+					/**
+					 * F​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​a​p​p​r​o​v​e​d​ ​t​i​m​e​ ​o​f​f​ ​e​n​t​r​y​ ​a​p​p​e​a​r​s​ ​i​n​ ​t​h​e​ ​W​h​o​'​s​ ​O​u​t​ ​l​i​s​t​.​ ​T​h​i​s​ ​i​n​c​l​u​d​e​s​ ​b​o​t​h​ ​e​m​p​l​o​y​e​e​ ​t​i​m​e​ ​o​f​f​ ​a​n​d​ ​c​o​m​p​a​n​y​ ​h​o​l​i​d​a​y​s​.
+					 */
+					longDesc: string
+					options: {
+					}
+				}
+				new_employee: {
+					/**
+					 * N​e​w​ ​E​m​p​l​o​y​e​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​e​m​p​l​o​y​e​e​ ​i​s​ ​c​r​e​a​t​e​d
+					 */
+					shortDesc: string
+					/**
+					 * F​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​a​c​t​i​v​e​ ​e​m​p​l​o​y​e​e​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​B​a​m​b​o​o​H​R​.​ ​R​e​t​u​r​n​s​ ​b​a​s​i​c​ ​e​m​p​l​o​y​e​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​n​a​m​e​,​ ​e​m​a​i​l​,​ ​d​e​p​a​r​t​m​e​n​t​,​ ​a​n​d​ ​j​o​b​ ​t​i​t​l​e​.
+					 */
+					longDesc: string
+					options: {
 					}
 				}
 			}
@@ -133333,6 +134024,21 @@ export type TranslationFunctions = {
 			 * The BambooHR integration provides comprehensive access to your HR operations. Create, read, update, and list employees with dynamic field support. The integration automatically discovers available fields in your BambooHR account, including custom fields, and provides intelligent type handling for dates, lists, and other field types.
 			 */
 			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to BambooHR
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect your BambooHR account, you'll need your **API Key** and **Company Domain**.
+		
+			1. Log in to BambooHR as an administrator
+			2. Click your profile picture in the upper right corner and select "API Keys"
+			3. Click "Add New Key", give it a name, and copy the generated API key
+			4. Your company domain is the subdomain in your BambooHR URL (e.g., if you access BambooHR at `yourcompany.bamboohr.com`, your domain is `yourcompany`)
+				 */
+				content: () => LocalizedString
+			}
 			actions: {
 				get_employee: {
 					/**
@@ -133480,6 +134186,682 @@ export type TranslationFunctions = {
 							 */
 							longDesc: () => LocalizedString
 						}
+					}
+				}
+				get_whos_out: {
+					/**
+					 * Get Who's Out
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get a summary of employees who are out
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a list of employees who are out (vacation, sick leave, etc.) and company holidays for a given date range. If no dates are specified, returns the current day plus the next 14 days.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						start_date: {
+							/**
+							 * Start Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Start of the date range
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The start date for the query. Defaults to today if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						end_date: {
+							/**
+							 * End Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * End of the date range
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The end date for the query. Defaults to 14 days from the start date if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				search_time_off_requests: {
+					/**
+					 * Search Time Off Requests
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Search and filter time off requests
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Searches time off requests in BambooHR with various filters. Returns requests matching the specified criteria including date range, employee, status, and time off type.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						start_date: {
+							/**
+							 * Start Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by start date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only show time off requests on or after this date.
+							 */
+							longDesc: () => LocalizedString
+						}
+						end_date: {
+							/**
+							 * End Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by end date
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only show time off requests on or before this date.
+							 */
+							longDesc: () => LocalizedString
+						}
+						employee_id: {
+							/**
+							 * Employee ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by employee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Limit results to a specific employee by their ID.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by request status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter by one or more statuses: approved, denied, requested, canceled, superceded.
+							 */
+							longDesc: () => LocalizedString
+						}
+						type: {
+							/**
+							 * Time Off Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by time off type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Filter by one or more time off types configured in your BambooHR account.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_all_employee_files: {
+					/**
+					 * Get All Employee Files
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all files for an employee
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves all files associated with a specific employee, organized by category. Returns file metadata including name, size, upload date, and sharing status.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						employee_id: {
+							/**
+							 * Employee ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The employee to get files for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the employee whose files you want to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				download_employee_file: {
+					/**
+					 * Download Employee File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Download an employee file
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Downloads a specific file from an employee record. Returns the file content as base64-encoded binary along with the MIME type.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						employee_id: {
+							/**
+							 * Employee ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The employee who owns the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the employee whose file you want to download.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_id: {
+							/**
+							 * File ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file to download
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the file to download.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				upload_employee_file: {
+					/**
+					 * Upload Employee File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload a file to an employee
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Uploads a new file to an employee record in BambooHR. The file will be placed in the specified category.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						employee_id: {
+							/**
+							 * Employee ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The employee to upload the file to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the employee to associate the file with.
+							 */
+							longDesc: () => LocalizedString
+						}
+						category: {
+							/**
+							 * Category
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * File category
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The category to place the file in. Categories are configured in BambooHR.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file: {
+							/**
+							 * File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file to upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The file to upload. Must include name, MIME type, and base64-encoded content.
+							 */
+							longDesc: () => LocalizedString
+						}
+						share_with_employee: {
+							/**
+							 * Share with Employee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Make file visible to employee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to make this file visible to the employee in their self-service portal.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_employee_file: {
+					/**
+					 * Update Employee File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update employee file metadata
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the metadata for an existing employee file, such as name, category, or sharing settings.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						employee_id: {
+							/**
+							 * Employee ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The employee who owns the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the employee whose file you want to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_id: {
+							/**
+							 * File ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the file to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New file name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new name for the file.
+							 */
+							longDesc: () => LocalizedString
+						}
+						category: {
+							/**
+							 * Category
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New category
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Move the file to a different category.
+							 */
+							longDesc: () => LocalizedString
+						}
+						share_with_employee: {
+							/**
+							 * Share with Employee
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Update sharing setting
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to make this file visible to the employee.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_employee_file: {
+					/**
+					 * Delete Employee File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete an employee file
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently deletes a file from an employee record. This action cannot be undone.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						employee_id: {
+							/**
+							 * Employee ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The employee who owns the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the employee whose file you want to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_id: {
+							/**
+							 * File ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the file to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_all_company_files: {
+					/**
+					 * Get All Company Files
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all company files
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves all company files organized by category. Returns file metadata including name, size, upload date, and sharing status.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+					}
+				}
+				download_company_file: {
+					/**
+					 * Download Company File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Download a company file
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Downloads a specific company file. Returns the file content as base64-encoded binary along with the MIME type.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						file_id: {
+							/**
+							 * File ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file to download
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the company file to download.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				upload_company_file: {
+					/**
+					 * Upload Company File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload a company file
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Uploads a new file to the company files in BambooHR. The file will be placed in the specified category.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						category: {
+							/**
+							 * Category
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * File category
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The category to place the file in. Categories are configured in BambooHR.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file: {
+							/**
+							 * File
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file to upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The file to upload. Must include name, MIME type, and base64-encoded content.
+							 */
+							longDesc: () => LocalizedString
+						}
+						share_with_employees: {
+							/**
+							 * Share with Employees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Make file visible to employees
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to make this file visible to all employees.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_company_file: {
+					/**
+					 * Update Company File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update company file metadata
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the metadata for an existing company file, such as name, category, or sharing settings.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						file_id: {
+							/**
+							 * File ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the company file to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New file name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new name for the file.
+							 */
+							longDesc: () => LocalizedString
+						}
+						category: {
+							/**
+							 * Category
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New category
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Move the file to a different category.
+							 */
+							longDesc: () => LocalizedString
+						}
+						share_with_employees: {
+							/**
+							 * Share with Employees
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Update sharing setting
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to make this file visible to all employees.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_company_file: {
+					/**
+					 * Delete Company File
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a company file
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently deletes a company file. This action cannot be undone.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						file_id: {
+							/**
+							 * File ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the company file to delete.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				new_time_off_request: {
+					/**
+					 * New Time Off Request
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new time off request is submitted
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fires when a new time off request is created in BambooHR with status "requested". Useful for building approval workflows or notifications.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						employee_id: {
+							/**
+							 * Employee ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by employee
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for time off requests from a specific employee.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				new_time_off: {
+					/**
+					 * New Time Off
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when new approved time off appears
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fires when a new approved time off entry appears in the Who's Out list. This includes both employee time off and company holidays.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+					}
+				}
+				new_employee: {
+					/**
+					 * New Employee
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new employee is created
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fires when a new active employee is added to BambooHR. Returns basic employee information including name, email, department, and job title.
+					 */
+					longDesc: () => LocalizedString
+					options: {
 					}
 				}
 			}

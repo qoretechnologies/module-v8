@@ -55,7 +55,7 @@ const createEmployee = QoreAppCreator.createLocalizedAction<typeof options>({
 
     try {
       // Create the employee
-      const response = await bambooHRClient.post<Record<string, unknown>>(
+      const response = await bambooHRClient.post<{ data: Record<string, unknown>; headers: Record<string, string> }>(
         'employees',
         apiData,
         {
@@ -67,12 +67,11 @@ const createEmployee = QoreAppCreator.createLocalizedAction<typeof options>({
 
       // BambooHR returns the employee ID in the Location header
       // Format: https://{companyDomain}.bamboohr.com/api/v1/employees/{id}
-      const headers = (response as any)?.headers;
-      const location = headers?.location || headers?.Location;
+      const location = response.headers?.location || response.headers?.Location;
 
       let employeeId: string | undefined;
       if (location) {
-        const match = location.match(/employees\/(\d+)/);
+        const match = /employees\/(\d+)/.exec(location);
         if (match) {
           employeeId = match[1];
         }

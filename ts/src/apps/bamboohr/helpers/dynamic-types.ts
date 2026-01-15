@@ -1,22 +1,7 @@
 /**
- * BambooHR Dynamic Types - Reference Implementation
+ * BambooHR Dynamic Types
  *
- * This file serves as the reference implementation for dynamic types in Qore apps.
- * It combines the best patterns from existing implementations:
- *
- * FROM BASEROW:
- * - Declarative TypeMap for O(1) lookups (vs switch statements)
- * - Use of 'softstring' for select fields (flexible input)
- * - 'allowed_values_creatable: true' for list fields
- * - Separate functions for input vs response types
- * - Read-only field filtering for input options
- * - System fields added to response types
- *
- * FROM COPPERCRM:
- * - Factory pattern for parameterized functions
- * - 'isForResponse' flag in shared mapping function
- * - Bidirectional data transformers
- * - Strong typing with explicit union types
+ * Provides dynamic type generation for BambooHR employee fields.
  *
  * @see https://documentation.bamboohr.com/docs/field-types
  */
@@ -39,21 +24,16 @@ import {
 import { getBambooHRFields } from './get-fields';
 import { getFieldIdToAllowedValuesMap } from './get-list-options';
 
-// ============================================================================
-// PATTERN 1: Declarative Type Mapping (from Baserow)
-// ============================================================================
-
 /**
  * Type mapping configuration for BambooHR field types.
- * Provides O(1) lookup instead of switch statements.
  */
 interface ITypeMapping {
-  /** The Qore type to use */
-  qoreType: TQoreType;
+  /** The Qore type to use - can be simple string or complex type object */
+  qoreType: TQoreType | TQoreAnyType;
   /** Whether this field needs allowed values from /meta/lists */
   needsAllowedValues?: boolean;
   /** Static allowed values for known enumerated types */
-  staticAllowedValues?: IQoreAllowedValue<string>[];
+  staticAllowedValues?: IQoreAllowedValue<any>[];
   /** Short description for the field */
   shortDesc?: string;
 }
@@ -91,26 +71,36 @@ const BambooHRTypeMap: Record<TBambooHRFieldType, ITypeMapping> = {
     qoreType: 'integer',
   },
   currency: {
-    qoreType: 'number',
-    shortDesc: 'Numeric value without currency symbol',
+    qoreType: {
+      type: 'hash',
+      fields: {
+        value: {
+          type: 'number',
+          display_name: 'Amount',
+          short_desc: 'Numeric value (e.g., 27000.00)',
+          required: true,
+        },
+        currency: {
+          type: 'softstring',
+          display_name: 'Currency Code',
+          short_desc: 'ISO currency code (e.g., "EUR"). Omit for company default.',
+        },
+      },
+    },
   },
 
   // Date fields
   date: {
     qoreType: 'date',
-    shortDesc: 'Format: yyyy-mm-dd',
   },
   timestamp: {
     qoreType: 'date',
-    shortDesc: 'ISO 8601 timestamp with timezone',
   },
   passport_issued: {
     qoreType: 'date',
-    shortDesc: 'Passport issue date (yyyy-mm-dd)',
   },
   passport_expiry: {
     qoreType: 'date',
-    shortDesc: 'Passport expiration date (yyyy-mm-dd)',
   },
 
   // Contact fields
@@ -170,8 +160,12 @@ const BambooHRTypeMap: Record<TBambooHRFieldType, ITypeMapping> = {
     ],
   },
   gender: {
-    qoreType: 'string',
-    shortDesc: 'Gender designation',
+    qoreType: 'softstring',
+    staticAllowedValues: [
+      { value: 'Male', display_name: 'Male' },
+      { value: 'Female', display_name: 'Female' },
+      { value: 'Non-binary', display_name: 'Non-binary' },
+    ],
   },
   exempt: {
     qoreType: 'softstring',
@@ -229,10 +223,6 @@ const BambooHRTypeMap: Record<TBambooHRFieldType, ITypeMapping> = {
   },
 };
 
-// ============================================================================
-// PATTERN 2: Unified Mapping with isForResponse Flag (from CopperCRM)
-// ============================================================================
-
 /**
  * Options for mapping a field to a Qore option.
  */
@@ -286,9 +276,12 @@ export const mapBambooHRFieldToQoreOption = (
   return option;
 };
 
-// ============================================================================
-// PATTERN 3: Separate Input/Response Type Functions (from Baserow)
-// ============================================================================
+/**
+ * Fields that are always required when creating an employee.
+ * BambooHR documentation: "New employees must have at least a first name and a last name."
+ * Note: Additional fields become required if employee is on a Trax Payroll pay schedule.
+ */
+const REQUIRED_EMPLOYEE_FIELDS = new Set(['firstName', 'lastName']);
 
 /**
  * Get dynamic input type for employee fields.
@@ -298,6 +291,7 @@ export const mapBambooHRFieldToQoreOption = (
  * - Fetches field metadata and list options in parallel
  * - Uses field alias as key (or ID for custom fields)
  * - Includes allowed_values for select fields
+ * - Marks firstName and lastName as required (per BambooHR API docs)
  * - Excludes read-only fields (none currently in BambooHR standard fields)
  */
 export const getBambooHREmployeeInputType: TQoreGetDynamicTypeFunction = async (context) => {
@@ -321,10 +315,17 @@ export const getBambooHREmployeeInputType: TQoreGetDynamicTypeFunction = async (
     // Use alias as key if available (standard fields), otherwise use ID (custom fields)
     const fieldKey = field.alias || field.id.toString();
 
-    qoreOptions[fieldKey] = mapBambooHRFieldToQoreOption(field, {
+    const option = mapBambooHRFieldToQoreOption(field, {
       isForResponse: false,
       listOptions: listOptionsMap.get(field.id),
     });
+
+    // Mark required fields (firstName, lastName are always required per BambooHR docs)
+    if (field.alias && REQUIRED_EMPLOYEE_FIELDS.has(field.alias)) {
+      option.required = true;
+    }
+
+    qoreOptions[fieldKey] = option;
   });
 
   return {
@@ -338,7 +339,8 @@ export const getBambooHREmployeeInputType: TQoreGetDynamicTypeFunction = async (
  * Used for Get/List response types.
  *
  * Features:
- * - Includes all fields (including read-only)
+ * - If user selected specific fields via `opts.fields`, only includes those fields
+ * - If no fields selected, includes all standard fields (those with aliases)
  * - Uses normalized field name as key for user-friendly output
  * - Adds system fields (id)
  * - Excludes allowed_values (not needed in responses)
@@ -351,20 +353,44 @@ export const getBambooHREmployeeResponseType: TQoreGetDynamicTypeFunction = asyn
   });
 
   const connectionOptions: IBambooHRConnectionOptions = { api_key, company_domain };
-  const fields = await getBambooHRFields(connectionOptions);
+  const allFields = await getBambooHRFields(connectionOptions);
+
+  // Check if user selected specific fields
+  const opts = context?.opts as { fields?: string[] } | undefined;
+  const selectedFields = opts?.fields;
+  const hasSelectedFields = Array.isArray(selectedFields) && selectedFields.length > 0;
+
+  // Create a set of selected field aliases for quick lookup
+  const selectedFieldSet = hasSelectedFields ? new Set(selectedFields) : null;
 
   const qoreOptions: TQoreOptions = {};
 
-  // Add system field
+  // Add system field (always included)
   qoreOptions['id'] = {
     type: 'string',
     display_name: 'Employee ID',
     short_desc: 'Unique identifier for the employee',
   };
 
-  fields.forEach((field) => {
+  allFields.forEach((field) => {
+    const fieldAlias = field.alias;
+
+    // If user selected specific fields, only include those
+    if (selectedFieldSet && fieldAlias) {
+      if (!selectedFieldSet.has(fieldAlias)) {
+        return; // Skip fields not in user's selection
+      }
+    } else if (selectedFieldSet) {
+      // User selected fields but this field has no alias - skip it
+      // (GET endpoint only works with aliased fields anyway)
+      return;
+    } else if (!fieldAlias) {
+      // No user selection, but field has no alias - skip for GET endpoint compatibility
+      return;
+    }
+
     // Use normalized field name as key for user-friendly output
-    const fieldKey = normalizeName(field.alias || field.name);
+    const fieldKey = normalizeName(fieldAlias || field.name);
 
     qoreOptions[fieldKey] = mapBambooHRFieldToQoreOption(field, {
       isForResponse: true,
@@ -376,10 +402,6 @@ export const getBambooHREmployeeResponseType: TQoreGetDynamicTypeFunction = asyn
     fields: qoreOptions,
   };
 };
-
-// ============================================================================
-// PATTERN 4: Bidirectional Data Transformers (from CopperCRM)
-// ============================================================================
 
 /**
  * Transform user input (using field aliases/IDs) to BambooHR API format.
@@ -477,13 +499,10 @@ export const transformBambooHREmployeeList = async (
   });
 };
 
-// ============================================================================
-// PATTERN 5: Get Allowed Values Functions (for field selection)
-// ============================================================================
-
 /**
- * Get allowed values for selecting fields in actions.
- * Returns all available fields as selectable options.
+ * Get allowed values for selecting fields in actions that use the custom reports API.
+ * Returns all available fields (standard and custom) as selectable options.
+ * Use this for list-employees action which uses POST /reports/custom.
  */
 export const getBambooHRFieldsAllowedValues = async (
   context: Record<string, unknown>
@@ -501,4 +520,31 @@ export const getBambooHRFieldsAllowedValues = async (
     value: field.alias || field.id.toString(),
     display_name: field.name,
   }));
+};
+
+/**
+ * Get allowed values for selecting fields in actions that use the GET employee endpoint.
+ * Returns only standard fields (those with aliases) as selectable options.
+ * Custom fields (numeric IDs only) are not supported by GET /employees/{id}.
+ * Use this for get-employee action.
+ */
+export const getBambooHRStandardFieldsAllowedValues = async (
+  context: Record<string, unknown>
+): Promise<IQoreAllowedValue<string>[]> => {
+  const { api_key, company_domain } = getQoreContextRequiredValues({
+    context,
+    connectionFields: ['api_key', 'company_domain'],
+    ErrorClass: BambooHRError,
+  });
+
+  const connectionOptions: IBambooHRConnectionOptions = { api_key, company_domain };
+  const fields = await getBambooHRFields(connectionOptions);
+
+  // Only return fields with aliases - numeric IDs cause 404 on GET employee endpoint
+  return fields
+    .filter((field) => field.alias)
+    .map((field) => ({
+      value: field.alias as string,
+      display_name: field.name,
+    }));
 };

@@ -14,7 +14,7 @@ import { BAMBOOHR_APP_NAME, BambooHRError } from '../constants';
 import { IBambooHREmployee } from '../types';
 import {
   getBambooHREmployeeResponseType,
-  getBambooHRFieldsAllowedValues,
+  getBambooHRStandardFieldsAllowedValues,
   transformBambooHRResponseToOutput,
 } from '../helpers/dynamic-types';
 import { getAllFieldsString } from '../helpers/get-fields';
@@ -32,7 +32,7 @@ const options = {
       element_type: 'string',
     },
     required: false,
-    get_element_allowed_values: getBambooHRFieldsAllowedValues,
+    get_element_allowed_values: getBambooHRStandardFieldsAllowedValues,
   },
 } satisfies TQoreOptions;
 
