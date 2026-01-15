@@ -5,6 +5,34 @@ const BaserowAppEn = {
     'Connect to Baserow to manage your database tables, rows, and files with powerful automation',
   longDesc:
     'The Baserow integration provides comprehensive access to your Baserow database operations. Create, read, update, and delete rows in your tables, upload files, and monitor new entries with real-time triggers. Whether you need to manage data, filter results, or track new records, this integration streamlines your Baserow workflow automation and database management.',
+  connectionMessage: {
+    title: 'Connect to Baserow',
+    content: `To connect to Baserow, you will need your **Baserow URL** and a **Database Token**.
+
+## Getting Your Database Token
+
+1. Log in to your Baserow instance
+2. Click on your **profile icon** in the top right corner
+3. Select **Settings** from the dropdown menu
+4. Navigate to **Database tokens** in the left sidebar
+5. Click **Create token**
+6. Give your token a descriptive name (e.g., "Qore Integration")
+7. Select the **workspace** the token should have access to
+8. Configure **table-level permissions** (create, read, update, delete) as needed
+9. Click **Create token** and copy the generated token
+
+## Connection Details
+
+### Baserow URL
+The base URL of your Baserow instance:
+- **Baserow Cloud**: Use \`https://api.baserow.io\`
+- **Self-hosted**: Use your instance URL (e.g., \`https://baserow.yourcompany.com\`)
+
+### Database Token
+Your database token that grants access to specific workspaces and tables. Tokens are scoped to a single workspace with granular table-level permissions.
+
+**Note:** Database tokens provide more granular control than API tokens. Each token can be restricted to specific operations (create, read, update, delete) on individual tables within a workspace.`,
+  },
   actions: {
     create_row: {
       displayName: 'Create Row',

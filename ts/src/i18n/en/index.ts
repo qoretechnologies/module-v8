@@ -13,6 +13,7 @@ import AmazonSQS from './apps/AmazonSQS';
 import Asana from './apps/Asana';
 import Attio from './apps/Attio';
 import AzureDevOps from './apps/AzureDevOps';
+import BambooHR from './apps/BambooHR';
 import Baserow from './apps/Baserow';
 import BigMl from './apps/BigMl';
 import Bitbucket from './apps/Bitbucket';
@@ -103,6 +104,7 @@ const en = {
     ZohoCRM,
     Firebase,
     Supabase,
+    BambooHR,
     Baserow,
     Firestore,
     Sentry,

@@ -25,6 +25,7 @@ import amazonSqs from '../apps/amazon-sqs';
 import asana from '../apps/asana';
 import attio from '../apps/attio';
 import azureDevops from '../apps/azure-devops';
+import bamboohr from '../apps/bamboohr';
 import baserow from '../apps/baserow';
 import bigml from '../apps/bigml';
 import bitbucket from '../apps/bitbucket';
@@ -135,6 +136,7 @@ const NEW_APPS = {
   asana,
   attio,
   azureDevops,
+  bamboohr,
   baserow,
   bigml,
   bitbucket,

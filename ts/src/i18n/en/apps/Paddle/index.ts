@@ -5,6 +5,43 @@ const PaddleAppEn = {
   shortDesc: 'Payment processing and subscription management platform',
   longDesc:
     'Integrate with Paddle to handle payments, subscriptions, and billing. Supports one-time payments, recurring subscriptions, tax calculations, and customer management across multiple currencies and regions.',
+  connectionMessage: {
+    title: 'Connect to Paddle',
+    content: `To connect to Paddle, you will need your **API Key** and to select the appropriate **Environment** (Sandbox or Production).
+
+## Getting Your API Key
+
+1. Log in to your [Paddle Dashboard](https://vendors.paddle.com/)
+2. Navigate to **Developer Tools** → **Authentication**
+3. Click **Generate API Key** or view existing keys
+4. Copy your API key
+
+For sandbox testing, use the [Sandbox Dashboard](https://sandbox-vendors.paddle.com/) instead.
+
+## Connection Details
+
+### API Key
+Your Paddle API key for authenticating requests. API keys created after May 2025 use the following format:
+- **Production keys**: Start with \`pdl_live_\`
+- **Sandbox keys**: Start with \`pdl_sdbx_\`
+
+Older keys may use different prefixes but remain functional.
+
+### Environment
+Select the environment that matches your API key:
+- **Production**: For live transactions (\`api.paddle.com\`)
+- **Sandbox**: For testing and development (\`sandbox-api.paddle.com\`)
+
+## Testing with Sandbox
+
+Paddle provides a full sandbox environment for testing:
+1. Create a separate sandbox account at [sandbox-vendors.paddle.com](https://sandbox-vendors.paddle.com/)
+2. Generate sandbox API keys from the sandbox dashboard
+3. Use test card numbers provided in Paddle's documentation
+4. All sandbox transactions are simulated and won't process real payments
+
+**Note:** Make sure your API key matches the selected environment. Using a production key with the sandbox environment (or vice versa) will result in authentication errors.`,
+  },
   actions: {
     archive_product: {
       groups: ['Products'],

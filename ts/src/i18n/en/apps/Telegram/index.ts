@@ -5,6 +5,35 @@ const TelegramAppEn = {
   shortDesc: 'Connect and interact with Telegram via a bot',
   longDesc:
     'Connect a Telegram Bot using its Bot Token to send messages and handle incoming updates. Authentication is done solely with the Bot Token issued by @BotFather; no user login is required.',
+  connectionMessage: {
+    title: 'Connect to Telegram',
+    content: `To connect to Telegram, you will need your **Bot Token** from BotFather.
+
+## Creating a Telegram Bot
+
+1. Open Telegram and search for [@BotFather](https://t.me/BotFather)
+2. Start a chat and send the command \`/newbot\`
+3. Follow the prompts to:
+   - Choose a **display name** for your bot (e.g., "My Automation Bot")
+   - Choose a **username** for your bot (must end in "bot", e.g., "my_automation_bot")
+4. BotFather will respond with your **Bot Token**
+5. Copy the token (format: \`123456789:ABCdefGHIjklMNOpqrsTUVwxyz\`)
+
+## Managing Existing Bots
+
+To get the token for an existing bot:
+1. Open [@BotFather](https://t.me/BotFather)
+2. Send \`/mybots\`
+3. Select your bot
+4. Click **API Token** to view or regenerate the token
+
+## Connection Details
+
+### Bot Token
+Your Telegram Bot Token in the format \`123456789:ABCdefGHIjklMNOpqrsTUVwxyz\`. This token authenticates your bot with the Telegram API.
+
+**Note:** Keep your bot token secure and never share it publicly. Anyone with your token can control your bot. If compromised, regenerate it immediately via BotFather.`,
+  },
   actions: {
     send_message: {
       displayName: 'Send Message',

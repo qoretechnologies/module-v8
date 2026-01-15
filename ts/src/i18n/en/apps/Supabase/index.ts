@@ -6,6 +6,49 @@ const SupabaseAppEn = {
     'Connect to Supabase to manage your database tables, storage buckets, and real-time data',
   longDesc:
     'The Supabase integration provides comprehensive access to your Supabase backend services. Manage database tables with full CRUD operations, monitor real-time changes with triggers, and handle file storage through buckets. Whether you need to query data, insert records, filter results, or track new entries, this integration streamlines your Supabase workflow automation and backend management.',
+  connectionMessage: {
+    title: 'Connect to Supabase',
+    content: `To connect to Supabase, you will need your **Project ID** (or Project URL) and a **service_role API Key**.
+
+## Finding Your Project ID
+
+1. Log in to the [Supabase Dashboard](https://supabase.com/dashboard)
+2. Select your project
+3. Go to **Project Settings** (gear icon) → **General**
+4. Find your **Reference ID** (this is your Project ID)
+
+Alternatively, your Project URL format is: \`https://<project-id>.supabase.co\`
+
+## Getting Your API Key
+
+1. In your project dashboard, go to **Project Settings** → **API**
+2. Find the **Project API keys** section
+3. Copy the **service_role** key (labeled "secret")
+
+⚠️ **Important**: Use the \`service_role\` key, NOT the \`anon\` key. The service_role key bypasses Row Level Security (RLS) and has full access to your database.
+
+## Connection Details
+
+### Project ID / Project URL
+Either your project's Reference ID or the full project URL:
+- Reference ID: \`abcdefghijklmnop\`
+- Project URL: \`https://abcdefghijklmnop.supabase.co\`
+
+### API Key (service_role)
+The \`service_role\` secret key from your project's API settings. This key:
+- Bypasses Row Level Security (RLS)
+- Has full access to all database operations
+- Should only be used server-side, never in client applications
+
+## API Key Types
+
+| Key Type | Use Case |
+|----------|----------|
+| \`anon\` (public) | Client-side apps, respects RLS |
+| \`service_role\` (secret) | Server-side operations, bypasses RLS |
+
+**Note:** The \`service_role\` key is extremely powerful and should be kept secure. Never expose it in client-side code or public repositories. For this integration, the service_role key is required to perform administrative operations.`,
+  },
   actions: {
     get_table: {
       groups: ['Tables'],

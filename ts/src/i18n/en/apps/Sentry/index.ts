@@ -6,6 +6,48 @@ const SentryAppEn = {
     'Monitor and fix errors, track performance issues, and maintain application health with the developer-first debugging platform.',
   longDesc:
     'The Sentry integration enables comprehensive error monitoring and performance tracking for your applications. Access projects, issues, events, and teams to quickly identify, triage, and resolve problems. With real-time alerts and detailed debugging context including stack traces, breadcrumbs, and user impact metrics, Sentry helps your team maintain code quality and deliver seamless user experiences.',
+  connectionMessage: {
+    title: 'Connect to Sentry',
+    content: `To connect to Sentry, you will need an **Auth Token** and your **Organization Slug**.
+
+## Getting Your Auth Token
+
+### Option 1: User Auth Token (Recommended for personal use)
+1. Log in to [Sentry](https://sentry.io/)
+2. Go to **Settings** → **Account** → **API** → **Auth Tokens**
+3. Click **Create New Token**
+4. Select the required scopes:
+   - \`project:read\` - Read project information
+   - \`project:write\` - Modify projects
+   - \`org:read\` - Read organization data
+   - \`event:read\` - Read events
+   - \`member:read\` - Read team members
+5. Click **Create Token** and copy it immediately
+
+Direct link: [sentry.io/settings/account/api/auth-tokens/](https://sentry.io/settings/account/api/auth-tokens/)
+
+### Option 2: Internal Integration Token (Recommended for production)
+1. Go to **Settings** → **Developer Settings** → **Custom Integrations**
+2. Click **Create New Integration** → **Internal Integration**
+3. Configure the name and required permissions
+4. After saving, copy the generated token
+
+## Finding Your Organization Slug
+
+Your organization slug is in your Sentry URL:
+- If your Sentry URL is \`https://your-org.sentry.io/\`, your slug is \`your-org\`
+- For sentry.io hosted accounts: \`https://sentry.io/organizations/your-org/\` → slug is \`your-org\`
+
+## Connection Details
+
+### Auth Token
+Your Sentry authentication token. Starts with \`sntrys_\` for newer tokens or may have different prefixes for legacy tokens.
+
+### Organization Slug
+The URL-friendly identifier for your organization (found in your Sentry URL).
+
+**Note:** Auth tokens inherit permissions based on your user role and the scopes you selected. For production integrations, use Internal Integration tokens which can be scoped to specific permissions and managed at the organization level.`,
+  },
 
   triggers: {
     new_project_issue: {

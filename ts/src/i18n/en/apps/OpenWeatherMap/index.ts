@@ -4,6 +4,27 @@ const OpenWeatherMapAppEn = {
   groups: ['Weather', 'Data & Analytics'],
   shortDesc: 'Access current weather data and forecasts for any location worldwide',
   longDesc: `Connect to OpenWeatherMap to retrieve real-time weather data and 5-day forecasts for any location on Earth. Get comprehensive weather information including temperature, humidity, wind speed, pressure, and weather conditions. Support for multiple location input methods (city name, coordinates, or zip code) and customizable units (metric, imperial, or standard). Ideal for weather-aware applications, travel planning, agricultural monitoring, and location-based services within your Qore workflows.`,
+  connectionMessage: {
+    title: 'Connect to OpenWeatherMap',
+    content: `To connect to OpenWeatherMap, you will need your **API Key**.
+
+## Getting Your API Key
+
+1. Sign up for a free account at [OpenWeatherMap](https://openweathermap.org/)
+2. After signing in, go to your account → **My API keys**
+3. You'll see a default API key, or click **Generate** to create a new one
+4. Give your API key a descriptive name
+5. Copy the API key
+
+You can access the API keys page directly at [home.openweathermap.org/api_keys](https://home.openweathermap.org/api_keys)
+
+## Connection Details
+
+### API Key
+Your OpenWeatherMap API key that authenticates requests to the weather data APIs.
+
+**Note:** New API keys may take a few hours to activate. The free tier includes access to current weather and 5-day forecasts with limited calls per minute. Paid plans offer additional features and higher rate limits.`,
+  },
   actions: {
     get_current_weather: {
       displayName: 'Get Current Weather',

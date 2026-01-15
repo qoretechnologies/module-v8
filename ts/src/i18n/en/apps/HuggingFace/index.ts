@@ -5,6 +5,32 @@ const HuggingFaceAppEn = {
   shortDesc: 'AI models and datasets platform',
   longDesc:
     'Access and deploy machine learning models, datasets, and spaces from Hugging Face Hub for natural language processing, computer vision, and other AI tasks',
+  connectionMessage: {
+    title: 'Connect to Hugging Face',
+    content: `To connect to Hugging Face, you will need your **Access Token**.
+
+## Getting Your Access Token
+
+1. Sign in to your [Hugging Face account](https://huggingface.co/)
+2. Click on your profile picture → **Settings**
+3. Navigate to **Access Tokens** in the left sidebar
+4. Click **New token**
+5. Give your token a descriptive name (e.g., "Qore Integration")
+6. Select the appropriate role:
+   - **Read**: For accessing public models and datasets
+   - **Write**: For uploading models, creating repos, and full API access
+7. Click **Generate a token**
+8. Copy the generated token immediately
+
+You can access the tokens page directly at [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
+
+## Connection Details
+
+### Access Token
+Your Hugging Face access token starting with \`hf_\`. This token authenticates all API requests to Hugging Face services.
+
+**Note:** Keep your access token secure and never share it publicly. You can create multiple tokens with different permissions and revoke them at any time from the settings page.`,
+  },
   actions: {
     list_models: {
       displayName: 'List Models',

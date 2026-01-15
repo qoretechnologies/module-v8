@@ -4,6 +4,49 @@ const OdooAppEn = {
   groups: ['CRM & Sales Management'],
   shortDesc: 'Connect to your Odoo CRM instance',
   longDesc: `Odoo is a suite of open-source business apps that cover all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, etc.`,
+  connectionMessage: {
+    title: 'Connect to Odoo',
+    content: `To connect to Odoo, you will need your **Subdomain/URL**, **Database name**, **Username**, and either your **Password** or an **API Key**.
+
+## Finding Your Connection Details
+
+### For Odoo Online (SaaS)
+- **Subdomain**: Your company subdomain (e.g., \`mycompany\` from \`https://mycompany.odoo.com\`)
+- **Database**: Usually your subdomain name
+
+### For Self-Hosted Odoo
+- **URL**: Your Odoo instance URL (e.g., \`https://odoo.yourcompany.com\`)
+- **Database**: The name of your Odoo database
+
+## Getting Your API Key (Recommended)
+
+1. Log in to your Odoo instance
+2. Click on your **user avatar** in the top right corner
+3. Select **My Profile** or **Preferences**
+4. Go to the **Account Security** tab
+5. Scroll down to **API Keys** section
+6. Click **New API Key**
+7. Enter a description (e.g., "Qore Integration")
+8. Click **Generate Key**
+9. Copy the generated API key immediately (it won't be shown again)
+
+## Connection Details
+
+### Subdomain / URL
+- For Odoo Online: Just the subdomain (e.g., \`mycompany\`)
+- For Self-hosted: The full URL (e.g., \`https://odoo.yourcompany.com\`)
+
+### Database
+The name of your Odoo database. For Odoo Online, this is typically the same as your subdomain.
+
+### Username
+Your Odoo login email address.
+
+### Password / API Key
+Either your Odoo password or a generated API key. API keys are recommended for better security as they can be revoked without changing your password.
+
+**Note for Odoo Online users:** If you're using Google/social login, you may need to set a local password first. Go to **Settings** → **Users & Companies** → **Users**, select your user, and set a password in the **Account Security** tab.`,
+  },
   actions: {
     // Locales for partner actions
 

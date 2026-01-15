@@ -22,9 +22,7 @@ export default (locale: Locales) =>
       oauth2_grant_type: 'none',
       ping_method: 'GET',
       ping_path: '/api/contacts?limit=1',
-      ping_headers: {
-        Authorization: 'Basic ${base64_encode("${username}:${password}")}',
-      },
+      token_type: 'basic',
     },
     rest_modifiers: {
       options: MAUTIC_CONN_OPTIONS,
@@ -36,6 +34,7 @@ export default (locale: Locales) =>
 
         return {
           baseUrl: instance_url,
+          url: instance_url,
         };
       },
       url_from_option: 'instance_url',

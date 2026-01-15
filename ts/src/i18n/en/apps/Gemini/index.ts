@@ -4,6 +4,28 @@ const GeminiAppEn = {
   groups: ['AI & Language Models'],
   shortDesc: "Google's advanced AI model for multimodal understanding and generation",
   longDesc: `Connect to Google's Gemini AI to leverage state-of-the-art multimodal capabilities including text generation, image analysis, code assistance, and reasoning tasks. Gemini excels at understanding and generating content across text, images, and code, making it ideal for complex workflows requiring advanced AI reasoning, creative content generation, data analysis, and intelligent automation within your Qore applications.`,
+  connectionMessage: {
+    title: 'Connect to Google Gemini',
+    content: `To connect to Google Gemini, you will need your **API Key**.
+
+## Getting Your API Key
+
+1. Go to [Google AI Studio](https://aistudio.google.com/)
+2. Sign in with your Google account
+3. Click **Get API key** in the left sidebar
+4. Click **Create API key**
+5. Select a Google Cloud project or create a new one
+6. Copy the generated API key
+
+You can access the API keys page directly at [aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey)
+
+## Connection Details
+
+### API Key
+Your Google AI API key that authenticates requests to the Gemini API. This key is associated with your Google Cloud project.
+
+**Note:** Keep your API key secure and never share it publicly. API usage may be subject to quotas and billing based on your Google Cloud project settings. You can manage and revoke API keys from the Google AI Studio at any time.`,
+  },
   actions: {
     list_models: {
       displayName: 'List Models',

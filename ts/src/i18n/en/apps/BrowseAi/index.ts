@@ -4,6 +4,25 @@ const BrowseAiAppEn = {
   groups: ['Web Scraping & Automation'],
   shortDesc: 'Web scraping and data extraction automation platform',
   longDesc: `Connect your Browse AI account to automate web scraping and data extraction workflows. Create custom robots to monitor websites, extract structured data, track changes, and collect information from any website without coding. Set up automated data collection schedules, receive alerts on website changes, and integrate extracted data directly into your Qore workflows.`,
+  connectionMessage: {
+    title: 'Connect to Browse AI',
+    content: `To connect your Browse AI account, you will need your **API Key**.
+
+## Getting Your API Key
+
+1. Sign in to your [Browse AI dashboard](https://www.browse.ai/dashboard/)
+2. Click on your profile icon or account settings
+3. Navigate to the **API** tab
+4. Click **Create API Key** or copy your existing API key
+5. Give your API key a descriptive name if creating a new one
+
+## Connection Details
+
+### API Key
+Your Browse AI API key that authenticates requests to the Browse AI service. This key allows you to manage robots, run tasks, and retrieve extracted data programmatically.
+
+**Note:** Keep your API key secure and never share it publicly. You can manage and revoke API keys from your Browse AI dashboard at any time.`,
+  },
   actions: {
     get_robot: {
       displayName: 'Get Robot',

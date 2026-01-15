@@ -6,6 +6,34 @@ const AmazonCloudFrontAppEn = {
     'Connect to Amazon CloudFront to manage CDN distributions, cache invalidations, and content delivery.',
   longDesc:
     'The Amazon CloudFront integration provides comprehensive actions and triggers to manage your content delivery network (CDN) distributions. Monitor new distributions and invalidations, enable or disable distributions, create cache invalidations, and retrieve detailed distribution configurations. Perfect for automating CDN management, cache clearing workflows, and distribution monitoring in your AWS infrastructure.',
+  connectionMessage: {
+    title: 'Connect to Amazon CloudFront',
+    content: `To connect to Amazon CloudFront, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
+
+## Creating AWS Credentials
+
+1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/iam/)
+2. Navigate to **IAM** → **Users** → **Create user**
+3. Enter a username and click **Next**
+4. Attach the **CloudFrontFullAccess** policy (or create a custom policy with minimum required permissions)
+5. Click **Create user**
+6. Select the user → **Security credentials** tab → **Create access key**
+7. Choose **Third-party service** and create the key
+8. Save your **Access Key ID** and **Secret Access Key** securely
+
+## Connection Details
+
+### Access Key ID
+Your AWS access key ID (starts with \`AKIA\`)
+
+### Secret Access Key
+Your AWS secret access key (only shown once when created)
+
+### Region
+The AWS region for your CloudFront operations (e.g., \`us-east-1\`)
+
+**Note:** For security, create a dedicated IAM user with only the permissions needed for your use case. Avoid using root account credentials.`,
+  },
   triggers: {
     new_distribution: {
       displayName: 'New Distribution',

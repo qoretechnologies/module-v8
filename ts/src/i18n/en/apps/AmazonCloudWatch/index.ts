@@ -6,6 +6,34 @@ const AmazonCloudWatchAppEn = {
     'Monitor AWS resources and applications with comprehensive alarm management and real-time state tracking.',
   longDesc:
     'The Amazon CloudWatch integration provides complete access to AWS monitoring and alerting capabilities. Monitor alarm state changes, manage alarm actions, retrieve detailed alarm information, and automate responses to infrastructure events. Perfect for maintaining system reliability, implementing automated incident response, and ensuring optimal AWS resource performance.',
+  connectionMessage: {
+    title: 'Connect to Amazon CloudWatch',
+    content: `To connect to Amazon CloudWatch, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
+
+## Creating AWS Credentials
+
+1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/iam/)
+2. Navigate to **IAM** → **Users** → **Create user**
+3. Enter a username and click **Next**
+4. Attach the **CloudWatchFullAccess** policy (or create a custom policy with minimum required permissions)
+5. Click **Create user**
+6. Select the user → **Security credentials** tab → **Create access key**
+7. Choose **Third-party service** and create the key
+8. Save your **Access Key ID** and **Secret Access Key** securely
+
+## Connection Details
+
+### Access Key ID
+Your AWS access key ID (starts with \`AKIA\`)
+
+### Secret Access Key
+Your AWS secret access key (only shown once when created)
+
+### Region
+The AWS region for your CloudWatch operations (e.g., \`us-east-1\`, \`eu-west-1\`)
+
+**Note:** For security, create a dedicated IAM user with only the permissions needed for your use case. Avoid using root account credentials.`,
+  },
   triggers: {
     new_alarm: {
       displayName: 'New Alarm',
