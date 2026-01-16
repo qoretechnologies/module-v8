@@ -98,7 +98,7 @@ const SearchSharePointListItem = QoreAppCreator.createLocalizedAction({
       },
     });
 
-    const title = searchValue!.replaceAll("'", "''");
+    const title = searchValue!.replace("'", "''");
 
     return client
       .api(

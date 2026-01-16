@@ -71,6 +71,7 @@ import mautic from '../apps/mautic';
 import messenger360 from '../apps/messenger360';
 import monday from '../apps/monday';
 import netsuite from '../apps/netsuite';
+import nocodb from '../apps/nocodb';
 import notion from '../apps/notion';
 import odoo from '../apps/odoo';
 import openrouter from '../apps/openrouter';
@@ -182,6 +183,7 @@ const NEW_APPS = {
   messenger360,
   monday,
   netsuite,
+  nocodb,
   notion,
   odoo,
   openrouter,
