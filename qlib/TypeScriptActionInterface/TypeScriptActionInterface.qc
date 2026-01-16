@@ -1,7 +1,7 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 #! Qore TypeScriptActionInterface module definition
 
-/*  TypeScriptActionInterface.qc Copyright 2024 - 2025 Qore Technologies, s.r.o.
+/*  TypeScriptActionInterface.qc Copyright 2024 - 2026 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -2978,7 +2978,7 @@ public class TypeScriptActionInterface {
         - auth (int): one of:
           - QAUTH_NONE = 0 -> no auth required
           - QAUTH_QORUS = 1 -> authentication required
-        - perms (*list<string>): an optional list of string permissions when \c auth is 1
+        - perms (list of strings): an optional list of string permissions when \c auth is 1
         - callback (code): a callback taking the arguments passed to the webhook to generate events
         This callback must return a hash with \c url and \c ctx keys providing a URL string for the URL used for the
         webhook, and a context object for destroying the webhook, respectively
@@ -2993,12 +2993,12 @@ public class TypeScriptActionInterface {
     }
 
     #! Create a webhook and return the public URL for it
-    /** @param a hash with the following keys for the webhook
+    /** @param h hash with the following keys for the webhook
         - method (string): the HTTP method for the webhook
         - auth (int): one of:
           - QAUTH_NONE = 0 -> no auth required
           - QAUTH_QORUS = 1 -> authentication required
-        - perms (*list<string>): an optional list of string permissions when \c auth is 1
+        - perms (list of strings): an optional list of string permissions when \c auth is 1
         - callback (code): a callback taking the arguments passed to the webhook to generate events
 
         @return the hash returned by the create callback with \c url and \c ctx keys
