@@ -2,11 +2,11 @@ import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnolog
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { nocodbClient } from '../client';
 import { NOCODB_APP_NAME, NocoDBError } from '../constants';
-import { getNocoDBWorkspaceAllowedValues } from '../helpers/get-workspace-allowed-values';
 import { getNocoDBBaseAllowedValues } from '../helpers/get-base-allowed-values';
-import { getNocoDBTableAllowedValues } from '../helpers/get-table-allowed-values';
 import { getNocoDBLinkFieldAllowedValues } from '../helpers/get-link-field-allowed-values';
-import { getNocoDBTableIdByName } from '../helpers/record-based/constants';
+import { getNocoDBRecordAllowedValues } from '../helpers/get-record-allowed-values';
+import { getNocoDBTableIdAllowedValues } from '../helpers/get-table-allowed-values';
+import { getNocoDBWorkspaceAllowedValues } from '../helpers/get-workspace-allowed-values';
 
 const action = 'unlink_records';
 
@@ -26,7 +26,7 @@ const options = {
   table: {
     type: 'string',
     required: true,
-    get_allowed_values: getNocoDBTableAllowedValues,
+    get_allowed_values: getNocoDBTableIdAllowedValues,
     on_change: ['refetch'],
   },
   linkField: {
@@ -37,6 +37,7 @@ const options = {
   recordId: {
     type: 'string',
     required: true,
+    get_allowed_values: getNocoDBRecordAllowedValues,
   },
   linkedRecordIds: {
     type: {
@@ -63,12 +64,13 @@ const UnlinkRecords = QoreAppCreator.createLocalizedAction<typeof options>({
     },
   },
   api_function: async (obj, _opts, context) => {
-    const { token, url, baseId, table, linkField, recordId, linkedRecordIds } = getQoreContextRequiredValues({
-      context: { ...context, opts: obj },
-      connectionFields: ['token', 'url'],
-      optionFields: ['baseId', 'table', 'linkField', 'recordId', 'linkedRecordIds'],
-      ErrorClass: NocoDBError,
-    });
+    const { token, url, baseId, table, linkField, recordId, linkedRecordIds } =
+      getQoreContextRequiredValues({
+        context: { ...context, opts: obj },
+        connectionFields: ['token', 'url'],
+        optionFields: ['baseId', 'table', 'linkField', 'recordId', 'linkedRecordIds'],
+        ErrorClass: NocoDBError,
+      });
 
     const recordIdsToUnlink = linkedRecordIds as string[];
 
@@ -77,15 +79,10 @@ const UnlinkRecords = QoreAppCreator.createLocalizedAction<typeof options>({
     }
 
     try {
-      // Convert table name to table ID
-      const tableId = await getNocoDBTableIdByName({ token, url, baseId, tableName: table });
-
-      // v3 API endpoint: DELETE /api/v3/data/{baseId}/{tableId}/links/{linkFieldId}/{recordId}
-      // Request body: array of { id: recordId } objects
       const requestBody = recordIdsToUnlink.map((id) => ({ id: String(id) }));
 
       const response = await nocodbClient.delete<TUnlinkResponse>(
-        `data/${baseId}/${tableId}/links/${linkField}/${recordId}`,
+        `data/${baseId}/${table}/links/${linkField}/${recordId}`,
         {
           token,
           connectionOptions: { url },
@@ -98,7 +95,9 @@ const UnlinkRecords = QoreAppCreator.createLocalizedAction<typeof options>({
       if (error instanceof NocoDBError) {
         throw error;
       }
-      throw new NocoDBError(`Failed to unlink records: ${error instanceof Error ? error.message : error}`);
+      throw new NocoDBError(
+        `Failed to unlink records: ${error instanceof Error ? error.message : error}`
+      );
     }
   },
 });

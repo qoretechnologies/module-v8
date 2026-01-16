@@ -1,18 +1,24 @@
 import { configDotenv } from 'dotenv';
+import { CountRecords } from '../apps/nocodb/actions';
+import { getNocoDBAttachmentFieldAllowedValues } from '../apps/nocodb/helpers/get-attachment-field-allowed-values';
+import { getNocoDBBaseAllowedValues } from '../apps/nocodb/helpers/get-base-allowed-values';
+import { getNocoDBButtonFieldAllowedValues } from '../apps/nocodb/helpers/get-button-field-allowed-values';
+import { getNocoDBLinkFieldAllowedValues } from '../apps/nocodb/helpers/get-link-field-allowed-values';
+import {
+  getNocoDBTableAllowedValues,
+  getNocoDBTableIdAllowedValues,
+} from '../apps/nocodb/helpers/get-table-allowed-values';
+import { getNocoDBWorkspaceAllowedValues } from '../apps/nocodb/helpers/get-workspace-allowed-values';
 import { createNocoDBRecords } from '../apps/nocodb/helpers/record-based/create-records';
 import { deleteNocoDBRecords } from '../apps/nocodb/helpers/record-based/delete-records';
 import { getNocoDBRecordType } from '../apps/nocodb/helpers/record-based/get-record-type';
-import { getNocoDBTableList, parseTablePath } from '../apps/nocodb/helpers/record-based/get-table-list';
+import {
+  getNocoDBTableList,
+  parseTablePath,
+} from '../apps/nocodb/helpers/record-based/get-table-list';
 import { searchNocoDBRecords } from '../apps/nocodb/helpers/record-based/search-records';
 import { updateNocoDBRecords } from '../apps/nocodb/helpers/record-based/update-records';
-import { getNocoDBWorkspaceAllowedValues } from '../apps/nocodb/helpers/get-workspace-allowed-values';
-import { getNocoDBBaseAllowedValues } from '../apps/nocodb/helpers/get-base-allowed-values';
-import { getNocoDBTableAllowedValues } from '../apps/nocodb/helpers/get-table-allowed-values';
-import { getNocoDBAttachmentFieldAllowedValues } from '../apps/nocodb/helpers/get-attachment-field-allowed-values';
-import { getNocoDBLinkFieldAllowedValues } from '../apps/nocodb/helpers/get-link-field-allowed-values';
-import { getNocoDBButtonFieldAllowedValues } from '../apps/nocodb/helpers/get-button-field-allowed-values';
 import { NewNocoDBRow } from '../apps/nocodb/triggers';
-import { CountRecords } from '../apps/nocodb/actions';
 import { delay } from '../global/helpers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import { checkAllowedValues } from './utils';
@@ -137,7 +143,7 @@ describe('NocoDB', () => {
       }
       const baseId = bases[0].value;
 
-      const tables = await getNocoDBTableAllowedValues({
+      const tables = await getNocoDBTableIdAllowedValues({
         ...triggerContext,
         opts: { workspaceId, baseId },
       });
@@ -465,7 +471,7 @@ describe('NocoDB', () => {
       }
 
       // Get table name (not path) for triggers
-      const allowedValues = await getNocoDBTableAllowedValues(triggerContext);
+      const allowedValues = await getNocoDBTableIdAllowedValues(triggerContext);
       if (allowedValues.length > 0) {
         triggerTableName = allowedValues[0].value;
       }
@@ -580,11 +586,7 @@ describe('NocoDB', () => {
         throw new Error('api_function not found in action');
       }
 
-      const result = await action.api_function(
-        actionContext.opts,
-        undefined,
-        actionContext
-      );
+      const result = await action.api_function(actionContext.opts, undefined, actionContext);
 
       expect(result).toBeDefined();
       expect(typeof result.count).toBe('number');
@@ -608,11 +610,10 @@ describe('NocoDB', () => {
         where: '(Title,eq,NonExistentValue12345)',
       };
 
-      const result = await action.api_function(
-        optsWithFilter,
-        undefined,
-        { ...actionContext, opts: optsWithFilter }
-      );
+      const result = await action.api_function(optsWithFilter, undefined, {
+        ...actionContext,
+        opts: optsWithFilter,
+      });
 
       expect(result).toBeDefined();
       expect(typeof result.count).toBe('number');

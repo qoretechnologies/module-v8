@@ -2,12 +2,12 @@ import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnolog
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { fromV3Response, nocodbClient, NocoDBV3Record } from '../client';
 import { NOCODB_APP_NAME, NocoDBError } from '../constants';
-import { getNocoDBWorkspaceAllowedValues } from '../helpers/get-workspace-allowed-values';
 import { getNocoDBBaseAllowedValues } from '../helpers/get-base-allowed-values';
-import { getNocoDBTableAllowedValues } from '../helpers/get-table-allowed-values';
 import { getNocoDBButtonFieldAllowedValues } from '../helpers/get-button-field-allowed-values';
-import { getNocoDBTableIdByName } from '../helpers/record-based/constants';
+import { getNocoDBRecordAllowedValues } from '../helpers/get-record-allowed-values';
+import { getNocoDBTableIdAllowedValues } from '../helpers/get-table-allowed-values';
 import { getNocoDBTableColumnsResponseType } from '../helpers/get-table-columns';
+import { getNocoDBWorkspaceAllowedValues } from '../helpers/get-workspace-allowed-values';
 
 const action = 'trigger_button';
 
@@ -29,7 +29,7 @@ const options = {
   table: {
     type: 'string',
     required: true,
-    get_allowed_values: getNocoDBTableAllowedValues,
+    get_allowed_values: getNocoDBTableIdAllowedValues,
     on_change: ['refetch'],
   },
   buttonField: {
@@ -43,6 +43,7 @@ const options = {
       element_type: 'string',
     },
     required: true,
+    get_element_allowed_values: getNocoDBRecordAllowedValues,
   },
   preview: {
     type: 'bool',
@@ -93,13 +94,10 @@ const TriggerButton = QoreAppCreator.createLocalizedAction<typeof options>({
     }
 
     try {
-      // Convert table name to table ID
-      const tableId = await getNocoDBTableIdByName({ token, url, baseId, tableName: table });
-
       // v3 API endpoint: POST /api/v3/data/{baseId}/{tableId}/actions/{columnId}
       // Request body: { rowIds: string[], preview?: boolean }
       const response = await nocodbClient.post<NocoDBV3Record[]>(
-        `data/${baseId}/${tableId}/actions/${buttonField}`,
+        `data/${baseId}/${table}/actions/${buttonField}`,
         {
           rowIds: rowIds.map(String),
           preview: Boolean(preview),
@@ -120,7 +118,9 @@ const TriggerButton = QoreAppCreator.createLocalizedAction<typeof options>({
       if (error instanceof NocoDBError) {
         throw error;
       }
-      throw new NocoDBError(`Failed to trigger button action: ${error instanceof Error ? error.message : error}`);
+      throw new NocoDBError(
+        `Failed to trigger button action: ${error instanceof Error ? error.message : error}`
+      );
     }
   },
 });

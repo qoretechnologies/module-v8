@@ -3,11 +3,10 @@ import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 import { fromV3Response, nocodbClient, NocoDBV3Response } from '../client';
 import { NOCODB_APP_NAME, NocoDBError } from '../constants';
+import { getNocoDBBaseAllowedValues } from '../helpers/get-base-allowed-values';
+import { getNocoDBTableIdAllowedValues } from '../helpers/get-table-allowed-values';
 import { getNocoDBTableColumnsResponseType } from '../helpers/get-table-columns';
 import { getNocoDBWorkspaceAllowedValues } from '../helpers/get-workspace-allowed-values';
-import { getNocoDBBaseAllowedValues } from '../helpers/get-base-allowed-values';
-import { getNocoDBTableAllowedValues } from '../helpers/get-table-allowed-values';
-import { getNocoDBTableIdByName } from '../helpers/record-based/constants';
 
 const action = 'new_document';
 
@@ -27,7 +26,7 @@ const options = {
   table: {
     type: 'string',
     required: true,
-    get_allowed_values: getNocoDBTableAllowedValues,
+    get_allowed_values: getNocoDBTableIdAllowedValues,
   },
   where: {
     type: 'string',
@@ -122,9 +121,6 @@ const fetchLatestRows = async (
   const limit = 100;
 
   try {
-    // Convert table name to table ID using baseId
-    const tableId = await getNocoDBTableIdByName({ token, url, baseId, tableName: table });
-
     const queryParams: Record<string, string> = {
       limit: String(limit),
       // v3 API requires sort as JSON string: [{"field": "fieldId", "direction": "asc|desc"}]
@@ -136,19 +132,18 @@ const fetchLatestRows = async (
     }
 
     // v3 API endpoint: /api/v3/data/{baseId}/{tableId}/records
-    const response = await nocodbClient.get<NocoDBV3Response>(
-      `data/${baseId}/${tableId}/records`,
-      {
-        token,
-        connectionOptions: { url },
-        params: queryParams,
-      }
-    );
+    const response = await nocodbClient.get<NocoDBV3Response>(`data/${baseId}/${table}/records`, {
+      token,
+      connectionOptions: { url },
+      params: queryParams,
+    });
 
     // v3 response format: { records: [{ id, fields }] }
     const records = fromV3Response(response?.records || []);
     return records as Array<{ id: string; [key: string]: unknown }>;
   } catch (error) {
-    throw new NocoDBError(`Failed to fetch latest rows: ${error instanceof Error ? error.message : error}`);
+    throw new NocoDBError(
+      `Failed to fetch latest rows: ${error instanceof Error ? error.message : error}`
+    );
   }
 };

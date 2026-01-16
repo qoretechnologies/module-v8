@@ -34,7 +34,7 @@ export default (locale: Locales) =>
       oauth2_grant_type: 'none',
       ping_method: 'GET',
       ping_path: '/api/v3/meta/workspaces',
-      token_type: 'xc-token',
+      token_api_key_header: 'xc-token',
     },
     rest_modifiers: {
       options: NOCODB_CONN_OPTIONS,

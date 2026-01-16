@@ -38,7 +38,10 @@ const NocoDBTypeToQoreTypeMap: Record<string, TQoreType> = {
   AutoNumber: 'integer',
   SingleSelect: 'softstring',
   MultiSelect: { type: 'list', element_type: 'softstring' },
-  Attachment: { type: 'list', element_type: { type: 'hash', fields: { title: { type: 'string' } } } },
+  Attachment: {
+    type: 'list',
+    element_type: { type: 'hash', fields: { title: { type: 'string' } } },
+  },
   LinkToAnotherRecord: { type: 'list', element_type: 'softstring' },
   Lookup: 'any',
   Rollup: 'any',
@@ -77,7 +80,9 @@ export const getNocoDBTableColumns = async (options: {
 
     return response?.fields || [];
   } catch (error) {
-    throw new NocoDBError(`Failed to get table columns: ${error instanceof Error ? error.message : error}`);
+    throw new NocoDBError(
+      `Failed to get table columns: ${error instanceof Error ? error.message : error}`
+    );
   }
 };
 
@@ -94,9 +99,10 @@ export const getNocoDBTableColumnOptions = async (context: any): Promise<any> =>
     const fields: Record<string, TQoreType> = {};
 
     columns.forEach((column) => {
-      if (!column.system) {
-        // v3 uses 'type', v2 uses 'uidt'
-        const columnType = column.type || column.uidt || 'string';
+      // v3 uses 'type', v2 uses 'uidt'
+      const columnType = column.type || column.uidt || 'string';
+      // Skip system columns and ID type (we use lowercase 'id' from v3 response wrapper)
+      if (!column.system && columnType !== 'ID') {
         const qoreType = NocoDBTypeToQoreTypeMap[columnType] || 'string';
         fields[column.title] = qoreType;
       }
@@ -111,10 +117,20 @@ export const getNocoDBTableColumnOptions = async (context: any): Promise<any> =>
       throw error;
     }
 
-    throw new NocoDBError(`Failed to get column options: ${error instanceof Error ? error.message : error}`);
+    throw new NocoDBError(
+      `Failed to get column options: ${error instanceof Error ? error.message : error}`
+    );
   }
 };
 
 export const getNocoDBTableColumnsResponseType = async (context: any): Promise<any> => {
-  return getNocoDBTableColumnOptions(context);
+  const columnOptions = await getNocoDBTableColumnOptions(context);
+  // Add lowercase 'id' from v3 response wrapper
+  return {
+    type: 'hash',
+    fields: {
+      id: { type: 'string' },
+      ...columnOptions.fields,
+    },
+  };
 };
