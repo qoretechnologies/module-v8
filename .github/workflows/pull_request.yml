@@ -178,6 +178,7 @@ env:
   MAUTIC_USERNAME: ${{ fromJson(secrets.TEST_VARIABLES).MAUTIC_USERNAME }}
   MAUTIC_PASSWORD: ${{ fromJson(secrets.TEST_VARIABLES).MAUTIC_PASSWORD }}
   NOCODB_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).NOCODB_TOKEN }}
+  SEATABLE_API_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).SEATABLE_API_TOKEN }}
 
 jobs:
   PullRequestTests:

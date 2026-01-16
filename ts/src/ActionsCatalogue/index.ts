@@ -84,6 +84,7 @@ import pipedrive from '../apps/pipedrive';
 import pushover from '../apps/pushover';
 import quickbooks from '../apps/quickbooks';
 import salesforce from '../apps/salesforce';
+import seatable from '../apps/seatable';
 import sentry from '../apps/sentry';
 import serenity from '../apps/serenity';
 import sharepoint from '../apps/sharepoint';
@@ -195,6 +196,7 @@ const NEW_APPS = {
   pipedrive,
   pushover,
   quickbooks,
+  seatable,
   sendgrid,
   sentry,
   serenity,
