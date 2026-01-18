@@ -19,7 +19,7 @@ describe('SeaTable', () => {
   // Context for record-based operations and triggers
   const baseContext = {
     conn_opts: {
-      api_token: '',
+      token: '',
       url: 'https://cloud.seatable.io',
     } as any,
   };
@@ -34,7 +34,7 @@ describe('SeaTable', () => {
       throw new Error('Please set the SEATABLE_API_TOKEN environment variable.');
     }
 
-    baseContext.conn_opts.api_token = apiToken;
+    baseContext.conn_opts.token = apiToken;
   });
 
   afterEach(async () => {
@@ -73,14 +73,14 @@ describe('SeaTable', () => {
   let tableName: string | undefined;
 
   describe('Should test record-based helpers', () => {
-    it('Should get table list and find testing-table', async () => {
+    it('Should get table list and find test-table', async () => {
       const tables = await getSeaTableTableList(baseContext);
 
       expect(tables).toBeDefined();
       expect(tables.length).toBeGreaterThan(0);
       expect(typeof tables[0]).toBe('string');
 
-      // Find the testing-table specifically
+      // Find the test-table specifically
       const testingTable = tables.find((t) => t === TEST_TABLE_NAME);
       if (!testingTable) {
         throw new Error(
@@ -103,7 +103,7 @@ describe('SeaTable', () => {
       expect((recordType as any).fields).toBeDefined();
       // SeaTable uses _id for row ID
       expect((recordType as any).fields._id).toBeDefined();
-      // Expected fields from testing-table
+      // Expected fields from test-table
       expect((recordType as any).fields.Title).toBeDefined();
       expect((recordType as any).fields.Count).toBeDefined();
       expect((recordType as any).fields.IsActive).toBeDefined();
@@ -114,7 +114,7 @@ describe('SeaTable', () => {
         throw new Error('Table name not set');
       }
 
-      // Records in column format using expected testing-table fields
+      // Records in column format using expected test-table fields
       const testRecords = {
         Title: ['SeaTable Test Record 1', 'SeaTable Test Record 2'],
         Count: [100, 200],
@@ -320,7 +320,7 @@ describe('SeaTable', () => {
       // Get table name for triggers
       const allowedValues = await getSeaTableTableAllowedValues(baseContext);
       if (allowedValues.length > 0) {
-        // Find testing-table or use first table
+        // Find test-table or use first table
         const testingTable = allowedValues.find((t) => t.value === TEST_TABLE_NAME);
         triggerTableName = testingTable?.value || allowedValues[0].value;
       }
@@ -390,7 +390,7 @@ describe('SeaTable', () => {
         throw new Error('No tables found');
       }
 
-      // Find the testing-table specifically for action tests
+      // Find the test-table specifically for action tests
       const testingTable = allowedValues.find((t) => t.value === TEST_TABLE_NAME);
       if (!testingTable) {
         throw new Error(

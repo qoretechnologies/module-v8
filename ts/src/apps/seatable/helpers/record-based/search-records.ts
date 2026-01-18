@@ -2,7 +2,7 @@ import { TQoreSearchRecordsFunction, TQoreSearchRecordsIterator } from '@qoretec
 import { getQoreContextRequiredValues, mapObjectToColumnFormat } from '../../../../global/helpers';
 import { seatableClient, SeaTableSqlResponse } from '../../client';
 import { SeaTableError } from '../../constants';
-import { buildSeaTableFilter } from './apply-where-condition';
+import { buildSeaTableFilter, escapeIdentifier } from './apply-where-condition';
 
 export const searchSeaTableRecords: TQoreSearchRecordsFunction = async (ctx, where, opts) => {
   const { token, url } = getQoreContextRequiredValues({
@@ -32,7 +32,7 @@ export const searchSeaTableRecords: TQoreSearchRecordsFunction = async (ctx, whe
         const pageSize = Math.min(blockSize, MAX_PAGE_SIZE, limit);
 
         // Build SQL query
-        let sql = `SELECT * FROM \`${tableName}\``;
+        let sql = `SELECT * FROM \`${escapeIdentifier(tableName)}\``;
 
         // Add WHERE clause if conditions provided
         if (where) {
@@ -46,7 +46,7 @@ export const searchSeaTableRecords: TQoreSearchRecordsFunction = async (ctx, whe
         const orderBy = opts.orderBy as { field: string; direction?: string } | undefined;
         if (orderBy) {
           const direction = orderBy.direction?.toUpperCase() === 'DESC' ? 'DESC' : 'ASC';
-          sql += ` ORDER BY \`${orderBy.field}\` ${direction}`;
+          sql += ` ORDER BY \`${escapeIdentifier(orderBy.field)}\` ${direction}`;
         }
 
         // Add pagination

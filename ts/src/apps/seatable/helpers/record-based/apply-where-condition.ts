@@ -63,6 +63,14 @@ const escapeString = (value: string): string => {
   return value.replace(/'/g, "''");
 };
 
+/**
+ * Escapes backticks in SQL identifiers (table names, column names)
+ * SeaTable uses backticks for identifier quoting
+ */
+export const escapeIdentifier = (identifier: string): string => {
+  return identifier.replaceAll('`', '``');
+};
+
 const buildSingleFilter = (expr: TQoreSearchRecordsWhereConditions): string | null => {
   const { exp, args } = expr;
 
@@ -75,7 +83,7 @@ const buildSingleFilter = (expr: TQoreSearchRecordsWhereConditions): string | nu
     return null;
   }
 
-  const field = `\`${fieldArg.field}\``;
+  const field = `\`${escapeIdentifier(fieldArg.field)}\``;
   const rawValue = (args[1] as TQoreSearchRecordsValue)?.value;
 
   // Handle empty/not-empty checks
