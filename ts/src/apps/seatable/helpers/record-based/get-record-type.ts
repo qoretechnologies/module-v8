@@ -4,16 +4,16 @@ import { SeaTableError } from '../../constants';
 import { getSeaTableTableColumnOptions } from '../get-table-columns';
 
 export const getSeaTableRecordType: TQoreGetRecordTypeFunction = async (context, tableName) => {
-  const { api_token, url } = getQoreContextRequiredValues({
+  const { token, url } = getQoreContextRequiredValues({
     context,
-    connectionFields: ['api_token', 'url'],
+    connectionFields: ['token', 'url'],
     ErrorClass: SeaTableError,
   });
 
   const recordType = (await getSeaTableTableColumnOptions({
     ...context,
     opts: { ...context.opts, table: tableName },
-    conn_opts: { api_token, url },
+    conn_opts: { token, url },
   })) as IQoreTypeObjectNonList;
 
   return {

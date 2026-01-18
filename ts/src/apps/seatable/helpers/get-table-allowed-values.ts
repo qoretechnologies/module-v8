@@ -16,14 +16,14 @@ export const getSeaTableTableAllowedValues: TQoreGetAllowedValuesFunction<
   string
 > = async (context) => {
   try {
-    const { api_token, url } = getQoreContextRequiredValues({
+    const { token, url } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['api_token', 'url'],
+      connectionFields: ['token', 'url'],
       ErrorClass: SeaTableError,
     });
 
     const response = await seatableClient.baseGet<SeaTableMetadataResponse>('metadata/', {
-      connectionOptions: { url, api_token },
+      connectionOptions: { url, token },
     });
 
     const tables = response?.metadata?.tables || [];

@@ -5,9 +5,9 @@ import { SeaTableError } from '../../constants';
 import { buildSeaTableFilter } from './apply-where-condition';
 
 export const searchSeaTableRecords: TQoreSearchRecordsFunction = async (ctx, where, opts) => {
-  const { api_token, url } = getQoreContextRequiredValues({
+  const { token, url } = getQoreContextRequiredValues({
     context: ctx,
-    connectionFields: ['api_token', 'url'],
+    connectionFields: ['token', 'url'],
     ErrorClass: SeaTableError,
   });
 
@@ -56,7 +56,7 @@ export const searchSeaTableRecords: TQoreSearchRecordsFunction = async (ctx, whe
         const response = await seatableClient.basePost<SeaTableSqlResponse>(
           'sql/',
           { sql, convert_keys: true },
-          { connectionOptions: { url, api_token } }
+          { connectionOptions: { url, token } }
         );
 
         const records = response?.results || [];

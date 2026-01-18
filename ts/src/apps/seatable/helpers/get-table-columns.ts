@@ -86,15 +86,15 @@ const SeaTableTypeToQoreTypeMap: Record<string, TQoreType> = {
  * Get table columns from metadata
  */
 export const getSeaTableTableColumns = async (options: {
-  api_token: string;
+  token: string;
   url: string;
   tableName: string;
 }): Promise<SeaTableColumn[]> => {
-  const { api_token, url, tableName } = options;
+  const { token, url, tableName } = options;
 
   try {
     const response = await seatableClient.baseGet<SeaTableMetadataResponse>('metadata/', {
-      connectionOptions: { url, api_token },
+      connectionOptions: { url, token },
     });
 
     const tables = response?.metadata?.tables || [];
@@ -117,15 +117,15 @@ export const getSeaTableTableColumns = async (options: {
  * Get column type options for a table (returns Qore type schema)
  */
 export const getSeaTableTableColumnOptions = async (context: any): Promise<any> => {
-  const { api_token, url, table } = getQoreContextRequiredValues({
+  const { token, url, table } = getQoreContextRequiredValues({
     context,
-    connectionFields: ['api_token', 'url'],
+    connectionFields: ['token', 'url'],
     optionFields: ['table'],
     ErrorClass: SeaTableError,
   });
 
   try {
-    const columns = await getSeaTableTableColumns({ api_token, url, tableName: table });
+    const columns = await getSeaTableTableColumns({ token, url, tableName: table });
     const fields: Record<string, TQoreType> = {};
 
     columns.forEach((column) => {

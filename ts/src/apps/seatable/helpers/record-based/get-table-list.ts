@@ -8,16 +8,16 @@ import { SeaTableError } from '../../constants';
  * Since SeaTable API Token is scoped to a single base, we just return table names
  */
 export const getSeaTableTableList: TQoreGetTableListFunction = async (ctx) => {
-  const { api_token, url } = getQoreContextRequiredValues({
+  const { token, url } = getQoreContextRequiredValues({
     context: ctx,
-    connectionFields: ['api_token', 'url'],
+    connectionFields: ['token', 'url'],
     ErrorClass: SeaTableError,
   });
 
   try {
     // Get base metadata which includes all tables
     const response = await seatableClient.baseGet<SeaTableMetadataResponse>('metadata/', {
-      connectionOptions: { url, api_token },
+      connectionOptions: { url, token },
     });
 
     const tables = response?.metadata?.tables || [];

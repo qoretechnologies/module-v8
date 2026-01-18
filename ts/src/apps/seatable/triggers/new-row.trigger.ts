@@ -22,16 +22,16 @@ const NewRow = QoreAppCreator.createLocalizedTrigger({
   action_code: EQoreAppActionCode.EVENT,
   options,
   event_function: async (context, update, should_stop) => {
-    const { api_token, url, table } = getQoreContextRequiredValues({
+    const { token, url, table } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['api_token', 'url'],
+      connectionFields: ['token', 'url'],
       optionFields: ['table'],
       ErrorClass: SeaTableError,
     });
 
     const getItems = () => {
       return fetchLatestRows({
-        api_token,
+        token,
         url,
         table,
       });
@@ -46,15 +46,15 @@ const NewRow = QoreAppCreator.createLocalizedTrigger({
     });
   },
   get_example_event_data: async (context) => {
-    const { api_token, url, table } = getQoreContextRequiredValues({
+    const { token, url, table } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['api_token', 'url'],
+      connectionFields: ['token', 'url'],
       optionFields: ['table'],
       ErrorClass: SeaTableError,
     });
 
     const rows = await fetchLatestRows({
-      api_token,
+      token,
       url,
       table,
     });
@@ -78,19 +78,19 @@ const NewRow = QoreAppCreator.createLocalizedTrigger({
 export default NewRow;
 
 type TFetchRowsOptions = {
-  api_token: string;
+  token: string;
   url: string;
   table: string;
 };
 
 const fetchLatestRows = async (options: TFetchRowsOptions): Promise<SeaTableRow[]> => {
-  const { api_token, url, table } = options;
+  const { token, url, table } = options;
   const limit = 100;
 
   try {
     // Use list rows endpoint with sort by _mtime descending
     const response = await seatableClient.baseGet<SeaTableListRowsResponse>('rows/', {
-      connectionOptions: { url, api_token },
+      connectionOptions: { url, token },
       params: {
         table_name: table,
         limit: String(limit),

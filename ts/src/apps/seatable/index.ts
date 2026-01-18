@@ -38,7 +38,7 @@ export default (locale: Locales) =>
     },
     rest_modifiers: {
       options: SEATABLE_CONN_OPTIONS,
-      required_options: 'url,api_token',
+      required_options: 'url,token',
     },
     get_table_list: getSeaTableTableList,
     expressions: getSeaTableExpressions(locale),

@@ -26,9 +26,9 @@ const RunSql = QoreAppCreator.createLocalizedAction<typeof options>({
     },
   },
   api_function: async (_obj, _opts, context) => {
-    const { api_token, url, sql } = getQoreContextRequiredValues({
+    const { token, url, sql } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['api_token', 'url'],
+      connectionFields: ['token', 'url'],
       optionFields: ['sql'],
       ErrorClass: SeaTableError,
     });
@@ -40,7 +40,7 @@ const RunSql = QoreAppCreator.createLocalizedAction<typeof options>({
           sql,
           convert_keys: true,
         },
-        { connectionOptions: { url, api_token } }
+        { connectionOptions: { url, token } }
       );
 
       return {

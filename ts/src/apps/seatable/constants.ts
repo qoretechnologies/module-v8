@@ -19,7 +19,7 @@ export const SEATABLE_CONN_OPTIONS = {
     desc: 'Please enter your SeaTable server URL. For SeaTable Cloud, use https://cloud.seatable.io. For self-hosted instances, use your custom URL.',
     default_value: 'https://cloud.seatable.io',
   },
-  api_token: {
+  token: {
     type: 'string',
     display_name: 'SeaTable API Token',
     short_desc: 'Please enter your SeaTable API token.',

@@ -239,16 +239,16 @@ export class SeaTableApiClient extends QoreApiClient {
    * Automatically handles Base Token exchange
    *
    * @param path - The path relative to /api-gateway/api/v2/dtables/{base_uuid}/
-   * @param options - Request options including api_token in connectionOptions
+   * @param options - Request options including token in connectionOptions
    */
   async baseGet<ResponseType = unknown>(
     path: string,
-    options: BaseRequestOptions & { connectionOptions: { url: string; api_token: string } }
+    options: BaseRequestOptions & { connectionOptions: { url: string; token: string } }
   ): Promise<ResponseType> {
-    const { url, api_token } = options.connectionOptions;
+    const { url, token } = options.connectionOptions;
 
     // Get Base Token
-    const { accessToken, dtableUuid } = await this.getBaseToken(api_token, url);
+    const { accessToken, dtableUuid } = await this.getBaseToken(token, url);
 
     // Build full path with base_uuid
     const fullPath = `api-gateway/api/v2/dtables/${dtableUuid}/${path.replace(/^\/+/, '')}`;
@@ -266,12 +266,12 @@ export class SeaTableApiClient extends QoreApiClient {
   async basePost<ResponseType = unknown>(
     path: string,
     body: any,
-    options: BaseRequestOptions & { connectionOptions: { url: string; api_token: string } }
+    options: BaseRequestOptions & { connectionOptions: { url: string; token: string } }
   ): Promise<ResponseType> {
-    const { url, api_token } = options.connectionOptions;
+    const { url, token } = options.connectionOptions;
 
     // Get Base Token
-    const { accessToken, dtableUuid } = await this.getBaseToken(api_token, url);
+    const { accessToken, dtableUuid } = await this.getBaseToken(token, url);
 
     // Build full path with base_uuid
     const fullPath = `api-gateway/api/v2/dtables/${dtableUuid}/${path.replace(/^\/+/, '')}`;
@@ -289,12 +289,12 @@ export class SeaTableApiClient extends QoreApiClient {
   async basePut<ResponseType = unknown>(
     path: string,
     body: any,
-    options: BaseRequestOptions & { connectionOptions: { url: string; api_token: string } }
+    options: BaseRequestOptions & { connectionOptions: { url: string; token: string } }
   ): Promise<ResponseType> {
-    const { url, api_token } = options.connectionOptions;
+    const { url, token } = options.connectionOptions;
 
     // Get Base Token
-    const { accessToken, dtableUuid } = await this.getBaseToken(api_token, url);
+    const { accessToken, dtableUuid } = await this.getBaseToken(token, url);
 
     // Build full path with base_uuid
     const fullPath = `api-gateway/api/v2/dtables/${dtableUuid}/${path.replace(/^\/+/, '')}`;
@@ -313,12 +313,12 @@ export class SeaTableApiClient extends QoreApiClient {
   async baseDelete<ResponseType = unknown>(
     path: string,
     body: any,
-    options: BaseRequestOptions & { connectionOptions: { url: string; api_token: string } }
+    options: BaseRequestOptions & { connectionOptions: { url: string; token: string } }
   ): Promise<ResponseType> {
-    const { url, api_token } = options.connectionOptions;
+    const { url, token } = options.connectionOptions;
 
     // Get Base Token
-    const { accessToken, dtableUuid } = await this.getBaseToken(api_token, url);
+    const { accessToken, dtableUuid } = await this.getBaseToken(token, url);
 
     // Build full path with base_uuid
     const fullPath = `api-gateway/api/v2/dtables/${dtableUuid}/${path.replace(/^\/+/, '')}`;

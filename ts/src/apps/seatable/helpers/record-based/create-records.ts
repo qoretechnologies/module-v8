@@ -4,9 +4,9 @@ import { seatableClient, SeaTableAppendRowsResponse } from '../../client';
 import { SeaTableError } from '../../constants';
 
 export const createSeaTableRecords: TQoreCreateRecordsFunction = async (context, records, options) => {
-  const { api_token, url } = getQoreContextRequiredValues({
+  const { token, url } = getQoreContextRequiredValues({
     context,
-    connectionFields: ['api_token', 'url'],
+    connectionFields: ['token', 'url'],
     ErrorClass: SeaTableError,
   });
 
@@ -27,7 +27,7 @@ export const createSeaTableRecords: TQoreCreateRecordsFunction = async (context,
         table_name: tableName,
         rows: items,
       },
-      { connectionOptions: { url, api_token } }
+      { connectionOptions: { url, token } }
     );
 
     // Return created records with their IDs

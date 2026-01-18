@@ -5,9 +5,9 @@ import { SeaTableError } from '../../constants';
 import { searchSeaTableRecords } from './search-records';
 
 export const updateSeaTableRecords: TQoreUpdateRecordsFunction = async (context, set, where, options) => {
-  const { api_token, url } = getQoreContextRequiredValues({
+  const { token, url } = getQoreContextRequiredValues({
     context,
-    connectionFields: ['api_token', 'url'],
+    connectionFields: ['token', 'url'],
     ErrorClass: SeaTableError,
   });
 
@@ -53,7 +53,7 @@ export const updateSeaTableRecords: TQoreUpdateRecordsFunction = async (context,
         table_name: tableName,
         updates,
       },
-      { connectionOptions: { url, api_token } }
+      { connectionOptions: { url, token } }
     );
 
     return recordsWithIds.length;

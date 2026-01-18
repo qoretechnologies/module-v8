@@ -5,9 +5,9 @@ import { SeaTableError } from '../../constants';
 import { searchSeaTableRecords } from './search-records';
 
 export const deleteSeaTableRecords: TQoreDeleteRecordsFunction = async (context, where, options) => {
-  const { api_token, url } = getQoreContextRequiredValues({
+  const { token, url } = getQoreContextRequiredValues({
     context,
-    connectionFields: ['api_token', 'url'],
+    connectionFields: ['token', 'url'],
     ErrorClass: SeaTableError,
   });
 
@@ -48,7 +48,7 @@ export const deleteSeaTableRecords: TQoreDeleteRecordsFunction = async (context,
         table_name: tableName,
         row_ids: recordIds,
       },
-      { connectionOptions: { url, api_token } }
+      { connectionOptions: { url, token } }
     );
 
     return recordIds.length;
