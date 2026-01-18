@@ -2,12 +2,12 @@ import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnolog
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { fromV3Response, nocodbClient, NocoDBV3Record } from '../client';
 import { NOCODB_APP_NAME, NocoDBError } from '../constants';
-import { getNocoDBWorkspaceAllowedValues } from '../helpers/get-workspace-allowed-values';
-import { getNocoDBBaseAllowedValues } from '../helpers/get-base-allowed-values';
-import { getNocoDBTableAllowedValues } from '../helpers/get-table-allowed-values';
 import { getNocoDBAttachmentFieldAllowedValues } from '../helpers/get-attachment-field-allowed-values';
-import { getNocoDBTableIdByName } from '../helpers/record-based/constants';
+import { getNocoDBBaseAllowedValues } from '../helpers/get-base-allowed-values';
+import { getNocoDBRecordAllowedValues } from '../helpers/get-record-allowed-values';
+import { getNocoDBTableIdAllowedValues } from '../helpers/get-table-allowed-values';
 import { getNocoDBTableColumnsResponseType } from '../helpers/get-table-columns';
+import { getNocoDBWorkspaceAllowedValues } from '../helpers/get-workspace-allowed-values';
 
 const action = 'upload_attachment';
 
@@ -33,12 +33,13 @@ const options = {
   table: {
     type: 'string',
     required: true,
-    get_allowed_values: getNocoDBTableAllowedValues,
+    get_allowed_values: getNocoDBTableIdAllowedValues,
     on_change: ['refetch'],
   },
   recordId: {
     type: 'string',
     required: true,
+    get_allowed_values: getNocoDBRecordAllowedValues,
   },
   attachmentField: {
     type: 'string',
@@ -65,23 +66,21 @@ const UploadAttachment = QoreAppCreator.createLocalizedAction<typeof options>({
   },
   get_dynamic_response_type: getNocoDBTableColumnsResponseType,
   api_function: async (obj, _opts, context) => {
-    const { token, url, baseId, table, recordId, attachmentField, file } = getQoreContextRequiredValues({
-      context: { ...context, opts: obj },
-      connectionFields: ['token', 'url'],
-      optionFields: ['baseId', 'table', 'recordId', 'attachmentField', 'file'],
-      ErrorClass: NocoDBError,
-    });
+    const { token, url, baseId, table, recordId, attachmentField, file } =
+      getQoreContextRequiredValues({
+        context: { ...context, opts: obj },
+        connectionFields: ['token', 'url'],
+        optionFields: ['baseId', 'table', 'recordId', 'attachmentField', 'file'],
+        ErrorClass: NocoDBError,
+      });
 
     const typedFile = file as TQoreFile;
 
     try {
-      // Convert table name to table ID
-      const tableId = await getNocoDBTableIdByName({ token, url, baseId, tableName: table });
-
       // v3 API endpoint: POST /api/v3/data/{baseId}/{tableId}/records/{recordId}/fields/{fieldId}/upload
       // Request body: { contentType, file (base64), filename }
       const response = await nocodbClient.post<NocoDBV3Record>(
-        `data/${baseId}/${tableId}/records/${recordId}/fields/${attachmentField}/upload`,
+        `data/${baseId}/${table}/records/${recordId}/fields/${attachmentField}/upload`,
         {
           contentType: typedFile.mime_type,
           file: typedFile.content,
@@ -104,7 +103,9 @@ const UploadAttachment = QoreAppCreator.createLocalizedAction<typeof options>({
       if (error instanceof NocoDBError) {
         throw error;
       }
-      throw new NocoDBError(`Failed to upload attachment: ${error instanceof Error ? error.message : error}`);
+      throw new NocoDBError(
+        `Failed to upload attachment: ${error instanceof Error ? error.message : error}`
+      );
     }
   },
 });

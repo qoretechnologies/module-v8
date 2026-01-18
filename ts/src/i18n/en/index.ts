@@ -62,7 +62,6 @@ import Monday from './apps/Monday';
 import NetSuite from './apps/NetSuite';
 import NocoDB from './apps/NocoDB';
 import Notion from './apps/Notion';
-import SeaTable from './apps/SeaTable';
 import Odoo from './apps/Odoo';
 import OpenRouter from './apps/Openrouter';
 import OpenWeatherMap from './apps/OpenWeatherMap';
@@ -163,7 +162,6 @@ const en = {
     Dropbox,
     NetSuite,
     NocoDB,
-    SeaTable,
     Salesforce,
     Freshdesk,
     Front,

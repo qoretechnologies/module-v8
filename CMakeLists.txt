@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 project(qore-v8-module)
 
 set (VERSION_MAJOR 1)
@@ -16,6 +16,9 @@ if (${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.12.0")
 endif()
 
 cmake_policy(SET CMP0042 NEW)
+if (POLICY CMP0177)
+    cmake_policy(SET CMP0177 NEW)
+endif()
 
 if (UNIX AND NOT APPLE)
     set(LINUX TRUE)
@@ -98,6 +101,7 @@ set(module_name "v8")
 set(QORE_DOX_TMPL_SRC
     docs/mainpage.dox.tmpl
 )
+file(MAKE_DIRECTORY "${CMAKE_BINARY_DIR}/images")
 
 add_library(${module_name} MODULE ${CPP_SRC} ${QPP_SOURCES})
 
