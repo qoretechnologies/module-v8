@@ -95,11 +95,13 @@ import CopperCrm from './apps/CopperCrm';
 import Craft from './apps/Craft';
 import Slack from './apps/Slack';
 import SurveyMonkey from './apps/SurveyMonkey';
+import SeaTable from './apps/SeaTable';
 
 const en = {
   common: {},
   apps: {
     CopperCrm,
+    SeaTable,
     Craft,
     Monday,
     ZohoCRM,
