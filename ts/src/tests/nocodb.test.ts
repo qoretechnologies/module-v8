@@ -195,7 +195,7 @@ describe('NocoDB', () => {
     });
   });
 
-  // Table path in format "workspace/base/table" - specifically for "testing-table"
+  // Table path in format "workspace|base|table" - specifically for "testing-table"
   let tablePath: string | undefined;
   // Test table name to search for
   const TEST_TABLE_NAME = 'testing-table';
@@ -208,12 +208,12 @@ describe('NocoDB', () => {
       expect(tables.length).toBeGreaterThan(0);
       expect(typeof tables[0]).toBe('string');
 
-      // Table names should be in format "workspace/base/table"
-      const parts = tables[0].split('/');
+      // Table names should be in format "workspace|base|table"
+      const parts = tables[0].split('|');
       expect(parts.length).toBe(3);
 
       // Find the testing-table specifically
-      const testingTable = tables.find((t) => t.endsWith(`/${TEST_TABLE_NAME}`));
+      const testingTable = tables.find((t) => t.endsWith(`|${TEST_TABLE_NAME}`));
       if (!testingTable) {
         throw new Error(
           `Test table "${TEST_TABLE_NAME}" not found. Please create a table named "${TEST_TABLE_NAME}" with fields: Title (SingleLineText), Count (Number), IsActive (Checkbox)`
@@ -233,6 +233,32 @@ describe('NocoDB', () => {
       expect(parsed.workspaceTitle).toBeDefined();
       expect(parsed.baseTitle).toBeDefined();
       expect(parsed.tableName).toBe(TEST_TABLE_NAME);
+    });
+
+    it('Should parse table path with pipe separator format', () => {
+      const testPath = 'MyWorkspace|MyBase|MyTable';
+      const parsed = parseTablePath(testPath);
+
+      expect(parsed.workspaceTitle).toBe('MyWorkspace');
+      expect(parsed.baseTitle).toBe('MyBase');
+      expect(parsed.tableName).toBe('MyTable');
+    });
+
+    it('Should throw error for invalid table path format', () => {
+      // Missing parts
+      expect(() => parseTablePath('workspace|base')).toThrow(
+        'Invalid table path format: "workspace|base". Expected "workspace|base|table".'
+      );
+
+      // Old format with slashes should fail
+      expect(() => parseTablePath('workspace/base/table')).toThrow(
+        'Invalid table path format: "workspace/base/table". Expected "workspace|base|table".'
+      );
+
+      // Too many parts
+      expect(() => parseTablePath('a|b|c|d')).toThrow(
+        'Invalid table path format: "a|b|c|d". Expected "workspace|base|table".'
+      );
     });
 
     it('Should get record type with expected fields', async () => {

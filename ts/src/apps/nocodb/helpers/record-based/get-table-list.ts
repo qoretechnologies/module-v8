@@ -19,11 +19,11 @@ type NocoDBTable = {
 };
 
 /**
- * Table name format: "workspaceTitle/baseTitle/tableName"
+ * Table name format: "workspaceTitle|baseTitle|tableName"
  * This allows users to select from all available tables without needing
  * to separately select workspace and base in the record-based UI.
  */
-export const TABLE_PATH_SEPARATOR = '/';
+export const TABLE_PATH_SEPARATOR = '|';
 
 /**
  * Parse a hierarchical table path into its components
@@ -31,7 +31,7 @@ export const TABLE_PATH_SEPARATOR = '/';
 export const parseTablePath = (tablePath: string): { workspaceTitle: string; baseTitle: string; tableName: string } => {
   const parts = tablePath.split(TABLE_PATH_SEPARATOR);
   if (parts.length !== 3) {
-    throw new NocoDBError(`Invalid table path format: "${tablePath}". Expected "workspace/base/table".`);
+    throw new NocoDBError(`Invalid table path format: "${tablePath}". Expected "workspace|base|table".`);
   }
   return {
     workspaceTitle: parts[0],
@@ -131,7 +131,7 @@ export const getNocoDBTableIdByPath = async (options: {
 
 /**
  * Get all available tables across all workspaces and bases
- * Returns table names in the format: "workspace/base/table"
+ * Returns table names in the format: "workspace|base|table"
  */
 export const getNocoDBTableList: TQoreGetTableListFunction = async (ctx) => {
   const { token, url } = getQoreContextRequiredValues({
