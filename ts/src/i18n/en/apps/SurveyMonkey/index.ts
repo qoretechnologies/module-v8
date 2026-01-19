@@ -4,25 +4,6 @@ const SurveyMonkeyAppEn = {
   groups: ['Survey & Feedback'],
   shortDesc: 'Online survey platform for collecting feedback and responses',
   longDesc: `Connect your SurveyMonkey account to automate survey management, collect responses, and manage contacts. Create collectors, send surveys, retrieve responses, and set up webhooks for real-time response notifications all from within Qore.`,
-  connectionMessage: {
-    title: 'Connect to SurveyMonkey',
-    content: `To connect your SurveyMonkey account, you will need to authenticate using OAuth2.
-
-## Authentication Process
-
-1. Click the "Connect" button below
-2. You will be redirected to SurveyMonkey to authorize the connection
-3. Grant the required permissions for surveys, contacts, responses, collectors, and webhooks
-4. You will be redirected back to complete the connection
-
-## Required Scopes
-
-- surveys_read, surveys_write - Manage surveys
-- contacts_read, contacts_write - Manage contacts
-- responses_read, responses_read_detail - Read survey responses
-- collectors_read, collectors_write - Manage collectors
-- webhooks_read, webhooks_write - Set up response webhooks`,
-  },
   triggers: {
     new_response: {
       displayName: 'New Response',

@@ -1,11 +1,6 @@
 const DropboxAppEn = {
   displayName: 'Dropbox',
   groups: ['Cloud Storage & File Management'],
-  connectionMessage: {
-    title: 'OAuth Connection',
-    content:
-      'Dropbox uses OAuth 2.0 for authentication. You will be redirected to Dropbox to authorize access to your files and folders.',
-  },
   shortDesc:
     'Connect with Dropbox to manage files, folders, and shared links in your cloud storage',
   longDesc:
@@ -252,7 +247,8 @@ const DropboxAppEn = {
       groups: ['Folders'],
       displayName: 'Move Folder',
       shortDesc: 'Move a folder to a new location',
-      longDesc: 'Move a folder and all its contents from one location to another within your Dropbox.',
+      longDesc:
+        'Move a folder and all its contents from one location to another within your Dropbox.',
       options: {
         fromPath: {
           displayName: 'Source Path',
@@ -293,8 +289,7 @@ const DropboxAppEn = {
         recursive: {
           displayName: 'Recursive',
           shortDesc: 'Include contents of subfolders',
-          longDesc:
-            'If enabled, also include files and folders from all subfolders recursively.',
+          longDesc: 'If enabled, also include files and folders from all subfolders recursively.',
         },
         limit: {
           displayName: 'Limit',
@@ -330,8 +325,7 @@ const DropboxAppEn = {
         orderBy: {
           displayName: 'Order By',
           shortDesc: 'Sort order for results',
-          longDesc:
-            'How to order the search results: by relevance or by modified time.',
+          longDesc: 'How to order the search results: by relevance or by modified time.',
         },
         fileStatus: {
           displayName: 'File Status',
@@ -342,14 +336,12 @@ const DropboxAppEn = {
         filenameOnly: {
           displayName: 'Filename Only',
           shortDesc: 'Search only in file names',
-          longDesc:
-            'If enabled, search will only match file names, not file contents.',
+          longDesc: 'If enabled, search will only match file names, not file contents.',
         },
         fileExtensions: {
           displayName: 'File Extensions',
           shortDesc: 'Filter by file extensions',
-          longDesc:
-            'Comma-separated list of file extensions to filter by (e.g., "pdf,doc,txt").',
+          longDesc: 'Comma-separated list of file extensions to filter by (e.g., "pdf,doc,txt").',
         },
         fileCategories: {
           displayName: 'File Categories',
@@ -494,8 +486,7 @@ const DropboxAppEn = {
         parentFolder: {
           displayName: 'Parent Folder',
           shortDesc: 'The parent folder to monitor',
-          longDesc:
-            'Specify the path to the parent folder you want to monitor for new subfolders.',
+          longDesc: 'Specify the path to the parent folder you want to monitor for new subfolders.',
         },
       },
     },
@@ -509,8 +500,7 @@ const DropboxAppEn = {
         folder: {
           displayName: 'Folder Path',
           shortDesc: 'The folder to monitor for modified files',
-          longDesc:
-            'Specify the path to the folder you want to monitor for file modifications.',
+          longDesc: 'Specify the path to the folder you want to monitor for file modifications.',
         },
       },
     },

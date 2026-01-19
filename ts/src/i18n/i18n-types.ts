@@ -80053,16 +80053,6 @@ type RootTranslation = {
 				 */
 				'0': string
 			}
-			connectionMessage: {
-				/**
-				 * O​A​u​t​h​ ​C​o​n​n​e​c​t​i​o​n
-				 */
-				title: string
-				/**
-				 * D​r​o​p​b​o​x​ ​u​s​e​s​ ​O​A​u​t​h​ ​2​.​0​ ​f​o​r​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​.​ ​Y​o​u​ ​w​i​l​l​ ​b​e​ ​r​e​d​i​r​e​c​t​e​d​ ​t​o​ ​D​r​o​p​b​o​x​ ​t​o​ ​a​u​t​h​o​r​i​z​e​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​f​i​l​e​s​ ​a​n​d​ ​f​o​l​d​e​r​s​.
-				 */
-				content: string
-			}
 			/**
 			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​D​r​o​p​b​o​x​ ​t​o​ ​m​a​n​a​g​e​ ​f​i​l​e​s​,​ ​f​o​l​d​e​r​s​,​ ​a​n​d​ ​s​h​a​r​e​d​ ​l​i​n​k​s​ ​i​n​ ​y​o​u​r​ ​c​l​o​u​d​ ​s​t​o​r​a​g​e
 			 */
@@ -83727,16 +83717,6 @@ type RootTranslation = {
 				 * C​o​m​m​u​n​i​c​a​t​i​o​n
 				 */
 				'1': string
-			}
-			connectionMessage: {
-				/**
-				 * O​A​u​t​h​ ​C​o​n​n​e​c​t​i​o​n
-				 */
-				title: string
-				/**
-				 * F​r​o​n​t​ ​u​s​e​s​ ​O​A​u​t​h​ ​2​.​0​ ​f​o​r​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​.​ ​Y​o​u​ ​w​i​l​l​ ​b​e​ ​r​e​d​i​r​e​c​t​e​d​ ​t​o​ ​F​r​o​n​t​ ​t​o​ ​a​u​t​h​o​r​i​z​e​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​a​c​c​o​u​n​t​.
-				 */
-				content: string
 			}
 			/**
 			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​F​r​o​n​t​ ​t​o​ ​m​a​n​a​g​e​ ​s​h​a​r​e​d​ ​i​n​b​o​x​e​s​,​ ​c​o​n​t​a​c​t​s​,​ ​a​n​d​ ​c​u​s​t​o​m​e​r​ ​c​o​m​m​u​n​i​c​a​t​i​o​n​s
@@ -118966,16 +118946,6 @@ type RootTranslation = {
 				 */
 				'1': string
 			}
-			connectionMessage: {
-				/**
-				 * O​A​u​t​h​ ​C​o​n​n​e​c​t​i​o​n
-				 */
-				title: string
-				/**
-				 * S​l​a​c​k​ ​u​s​e​s​ ​O​A​u​t​h​ ​2​.​0​ ​f​o​r​ ​a​u​t​h​e​n​t​i​c​a​t​i​o​n​.​ ​Y​o​u​ ​w​i​l​l​ ​b​e​ ​r​e​d​i​r​e​c​t​e​d​ ​t​o​ ​S​l​a​c​k​ ​t​o​ ​a​u​t​h​o​r​i​z​e​ ​a​c​c​e​s​s​ ​t​o​ ​y​o​u​r​ ​w​o​r​k​s​p​a​c​e​.​ ​B​o​t​h​ ​b​o​t​ ​a​n​d​ ​u​s​e​r​ ​s​c​o​p​e​s​ ​a​r​e​ ​r​e​q​u​e​s​t​e​d​ ​f​o​r​ ​f​u​l​l​ ​f​u​n​c​t​i​o​n​a​l​i​t​y​.
-				 */
-				content: string
-			}
 			/**
 			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​S​l​a​c​k​ ​t​o​ ​s​e​n​d​ ​m​e​s​s​a​g​e​s​,​ ​m​a​n​a​g​e​ ​c​h​a​n​n​e​l​s​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​t​e​a​m​ ​c​o​m​m​u​n​i​c​a​t​i​o​n
 			 */
@@ -120106,31 +120076,6 @@ type RootTranslation = {
 			 * C​o​n​n​e​c​t​ ​y​o​u​r​ ​S​u​r​v​e​y​M​o​n​k​e​y​ ​a​c​c​o​u​n​t​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​s​u​r​v​e​y​ ​m​a​n​a​g​e​m​e​n​t​,​ ​c​o​l​l​e​c​t​ ​r​e​s​p​o​n​s​e​s​,​ ​a​n​d​ ​m​a​n​a​g​e​ ​c​o​n​t​a​c​t​s​.​ ​C​r​e​a​t​e​ ​c​o​l​l​e​c​t​o​r​s​,​ ​s​e​n​d​ ​s​u​r​v​e​y​s​,​ ​r​e​t​r​i​e​v​e​ ​r​e​s​p​o​n​s​e​s​,​ ​a​n​d​ ​s​e​t​ ​u​p​ ​w​e​b​h​o​o​k​s​ ​f​o​r​ ​r​e​a​l​-​t​i​m​e​ ​r​e​s​p​o​n​s​e​ ​n​o​t​i​f​i​c​a​t​i​o​n​s​ ​a​l​l​ ​f​r​o​m​ ​w​i​t​h​i​n​ ​Q​o​r​e​.
 			 */
 			longDesc: string
-			connectionMessage: {
-				/**
-				 * C​o​n​n​e​c​t​ ​t​o​ ​S​u​r​v​e​y​M​o​n​k​e​y
-				 */
-				title: string
-				/**
-				 * T​o​ ​c​o​n​n​e​c​t​ ​y​o​u​r​ ​S​u​r​v​e​y​M​o​n​k​e​y​ ​a​c​c​o​u​n​t​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​t​o​ ​a​u​t​h​e​n​t​i​c​a​t​e​ ​u​s​i​n​g​ ​O​A​u​t​h​2​.​
-			​
-			​#​#​ ​A​u​t​h​e​n​t​i​c​a​t​i​o​n​ ​P​r​o​c​e​s​s​
-			​
-			​1​.​ ​C​l​i​c​k​ ​t​h​e​ ​"​C​o​n​n​e​c​t​"​ ​b​u​t​t​o​n​ ​b​e​l​o​w​
-			​2​.​ ​Y​o​u​ ​w​i​l​l​ ​b​e​ ​r​e​d​i​r​e​c​t​e​d​ ​t​o​ ​S​u​r​v​e​y​M​o​n​k​e​y​ ​t​o​ ​a​u​t​h​o​r​i​z​e​ ​t​h​e​ ​c​o​n​n​e​c​t​i​o​n​
-			​3​.​ ​G​r​a​n​t​ ​t​h​e​ ​r​e​q​u​i​r​e​d​ ​p​e​r​m​i​s​s​i​o​n​s​ ​f​o​r​ ​s​u​r​v​e​y​s​,​ ​c​o​n​t​a​c​t​s​,​ ​r​e​s​p​o​n​s​e​s​,​ ​c​o​l​l​e​c​t​o​r​s​,​ ​a​n​d​ ​w​e​b​h​o​o​k​s​
-			​4​.​ ​Y​o​u​ ​w​i​l​l​ ​b​e​ ​r​e​d​i​r​e​c​t​e​d​ ​b​a​c​k​ ​t​o​ ​c​o​m​p​l​e​t​e​ ​t​h​e​ ​c​o​n​n​e​c​t​i​o​n​
-			​
-			​#​#​ ​R​e​q​u​i​r​e​d​ ​S​c​o​p​e​s​
-			​
-			​-​ ​s​u​r​v​e​y​s​_​r​e​a​d​,​ ​s​u​r​v​e​y​s​_​w​r​i​t​e​ ​-​ ​M​a​n​a​g​e​ ​s​u​r​v​e​y​s​
-			​-​ ​c​o​n​t​a​c​t​s​_​r​e​a​d​,​ ​c​o​n​t​a​c​t​s​_​w​r​i​t​e​ ​-​ ​M​a​n​a​g​e​ ​c​o​n​t​a​c​t​s​
-			​-​ ​r​e​s​p​o​n​s​e​s​_​r​e​a​d​,​ ​r​e​s​p​o​n​s​e​s​_​r​e​a​d​_​d​e​t​a​i​l​ ​-​ ​R​e​a​d​ ​s​u​r​v​e​y​ ​r​e​s​p​o​n​s​e​s​
-			​-​ ​c​o​l​l​e​c​t​o​r​s​_​r​e​a​d​,​ ​c​o​l​l​e​c​t​o​r​s​_​w​r​i​t​e​ ​-​ ​M​a​n​a​g​e​ ​c​o​l​l​e​c​t​o​r​s​
-			​-​ ​w​e​b​h​o​o​k​s​_​r​e​a​d​,​ ​w​e​b​h​o​o​k​s​_​w​r​i​t​e​ ​-​ ​S​e​t​ ​u​p​ ​r​e​s​p​o​n​s​e​ ​w​e​b​h​o​o​k​s
-				 */
-				content: string
-			}
 			triggers: {
 				new_response: {
 					/**
@@ -201802,16 +201747,6 @@ export type TranslationFunctions = {
 				 */
 				'0': () => LocalizedString
 			}
-			connectionMessage: {
-				/**
-				 * OAuth Connection
-				 */
-				title: () => LocalizedString
-				/**
-				 * Dropbox uses OAuth 2.0 for authentication. You will be redirected to Dropbox to authorize access to your files and folders.
-				 */
-				content: () => LocalizedString
-			}
 			/**
 			 * Connect with Dropbox to manage files, folders, and shared links in your cloud storage
 			 */
@@ -205476,16 +205411,6 @@ export type TranslationFunctions = {
 				 * Communication
 				 */
 				'1': () => LocalizedString
-			}
-			connectionMessage: {
-				/**
-				 * OAuth Connection
-				 */
-				title: () => LocalizedString
-				/**
-				 * Front uses OAuth 2.0 for authentication. You will be redirected to Front to authorize access to your account.
-				 */
-				content: () => LocalizedString
 			}
 			/**
 			 * Connect with Front to manage shared inboxes, contacts, and customer communications
@@ -240715,16 +240640,6 @@ export type TranslationFunctions = {
 				 */
 				'1': () => LocalizedString
 			}
-			connectionMessage: {
-				/**
-				 * OAuth Connection
-				 */
-				title: () => LocalizedString
-				/**
-				 * Slack uses OAuth 2.0 for authentication. You will be redirected to Slack to authorize access to your workspace. Both bot and user scopes are requested for full functionality.
-				 */
-				content: () => LocalizedString
-			}
 			/**
 			 * Connect with Slack to send messages, manage channels, and automate team communication
 			 */
@@ -241855,31 +241770,6 @@ export type TranslationFunctions = {
 			 * Connect your SurveyMonkey account to automate survey management, collect responses, and manage contacts. Create collectors, send surveys, retrieve responses, and set up webhooks for real-time response notifications all from within Qore.
 			 */
 			longDesc: () => LocalizedString
-			connectionMessage: {
-				/**
-				 * Connect to SurveyMonkey
-				 */
-				title: () => LocalizedString
-				/**
-				 * To connect your SurveyMonkey account, you will need to authenticate using OAuth2.
-		
-			## Authentication Process
-		
-			1. Click the "Connect" button below
-			2. You will be redirected to SurveyMonkey to authorize the connection
-			3. Grant the required permissions for surveys, contacts, responses, collectors, and webhooks
-			4. You will be redirected back to complete the connection
-		
-			## Required Scopes
-		
-			- surveys_read, surveys_write - Manage surveys
-			- contacts_read, contacts_write - Manage contacts
-			- responses_read, responses_read_detail - Read survey responses
-			- collectors_read, collectors_write - Manage collectors
-			- webhooks_read, webhooks_write - Set up response webhooks
-				 */
-				content: () => LocalizedString
-			}
 			triggers: {
 				new_response: {
 					/**

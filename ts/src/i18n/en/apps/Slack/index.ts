@@ -1,12 +1,8 @@
 const SlackAppEn = {
   displayName: 'Slack',
   groups: ['Communication', 'Team Collaboration'],
-  connectionMessage: {
-    title: 'OAuth Connection',
-    content:
-      'Slack uses OAuth 2.0 for authentication. You will be redirected to Slack to authorize access to your workspace. Both bot and user scopes are requested for full functionality.',
-  },
-  shortDesc: 'Connect with Slack to send messages, manage channels, and automate team communication',
+  shortDesc:
+    'Connect with Slack to send messages, manage channels, and automate team communication',
   longDesc:
     'Integrate with Slack to automate team communication and collaboration. Slack is a channel-based messaging platform that brings teams together. This integration enables you to send messages to channels and users, create channels, manage reactions, upload files, search messages, and monitor for new messages and events.',
   actions: {
@@ -27,8 +23,7 @@ const SlackAppEn = {
         text: {
           displayName: 'Message Text',
           shortDesc: 'The text content of the message',
-          longDesc:
-            'The main text content of your message. Supports Slack markdown formatting.',
+          longDesc: 'The main text content of your message. Supports Slack markdown formatting.',
         },
         username: {
           displayName: 'Bot Username',
@@ -58,8 +53,7 @@ const SlackAppEn = {
       groups: ['Messages'],
       displayName: 'Send Direct Message',
       shortDesc: 'Send a direct message to a user',
-      longDesc:
-        'Send a private message directly to a user in your Slack workspace.',
+      longDesc: 'Send a private message directly to a user in your Slack workspace.',
       options: {
         userId: {
           displayName: 'User',
@@ -183,8 +177,7 @@ const SlackAppEn = {
       groups: ['Channels'],
       displayName: 'Create Channel',
       shortDesc: 'Create a new Slack channel',
-      longDesc:
-        'Create a new public or private channel in your Slack workspace.',
+      longDesc: 'Create a new public or private channel in your Slack workspace.',
       options: {
         channelName: {
           displayName: 'Channel Name',
@@ -204,8 +197,7 @@ const SlackAppEn = {
       groups: ['Reactions'],
       displayName: 'Add Reaction',
       shortDesc: 'Add an emoji reaction to a message',
-      longDesc:
-        'Add an emoji reaction to a specific message in a channel.',
+      longDesc: 'Add an emoji reaction to a specific message in a channel.',
       options: {
         channel: {
           displayName: 'Channel',
@@ -266,8 +258,7 @@ const SlackAppEn = {
         userId: {
           displayName: 'User ID',
           shortDesc: 'Target user (admin only)',
-          longDesc:
-            'ID of user to update. Only admins on paid teams can update other users.',
+          longDesc: 'ID of user to update. Only admins on paid teams can update other users.',
         },
       },
     },
@@ -306,8 +297,7 @@ const SlackAppEn = {
       groups: ['Messages'],
       displayName: 'Send Action Message to Channel',
       shortDesc: 'Send a message with action buttons',
-      longDesc:
-        'Send a message to a channel with interactive action buttons that link to URLs.',
+      longDesc: 'Send a message to a channel with interactive action buttons that link to URLs.',
       options: {
         channel: {
           displayName: 'Channel',
@@ -373,8 +363,7 @@ const SlackAppEn = {
         actions: {
           displayName: 'Action Buttons',
           shortDesc: 'Buttons to display',
-          longDesc:
-            'Define the action buttons with titles and URLs.',
+          longDesc: 'Define the action buttons with titles and URLs.',
           type: {
             element_type: {
               fields: {

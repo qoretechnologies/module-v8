@@ -1,11 +1,6 @@
 const FrontAppEn = {
   displayName: 'Front',
   groups: ['Customer Support', 'Communication'],
-  connectionMessage: {
-    title: 'OAuth Connection',
-    content:
-      'Front uses OAuth 2.0 for authentication. You will be redirected to Front to authorize access to your account.',
-  },
   shortDesc: 'Connect with Front to manage shared inboxes, contacts, and customer communications',
   longDesc:
     'Integrate with Front to manage your team shared inboxes, contacts, accounts, and customer conversations. Front is a customer communication platform that brings email and messaging into a shared inbox. This integration enables you to automate contact management, organize accounts, and streamline team collaboration.',
