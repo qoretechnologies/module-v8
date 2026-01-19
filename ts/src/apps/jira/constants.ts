@@ -39,6 +39,15 @@ export const JIRA_ALLOWED_PATHS: TAllowedPaths = {
       },
     },
   },
+  '/rest/api/3/search/jql': {
+    POST: {
+      override_options: {
+        jql: {
+          required: true,
+        },
+      },
+    },
+  },
   '/rest/api/3/issue': {
     POST: {
       override_options: {

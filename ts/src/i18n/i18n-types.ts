@@ -67505,6 +67505,528 @@ type RootTranslation = {
 			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​J​i​r​a​ ​A​P​I
 			 */
 			longDesc: string
+			actions: {
+				getBanner: {
+					/**
+					 * G​e​t​ ​A​n​n​o​u​n​c​e​m​e​n​t​ ​B​a​n​n​e​r
+					 */
+					displayName: string
+					/**
+					 * G​e​t​s​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​a​n​n​o​u​n​c​e​m​e​n​t​ ​b​a​n​n​e​r​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​a​n​n​o​u​n​c​e​m​e​n​t​ ​b​a​n​n​e​r​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​J​i​r​a​ ​i​n​s​t​a​n​c​e
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * B​a​n​n​e​r
+						 */
+						'0': string
+					}
+				}
+				setBanner: {
+					/**
+					 * S​e​t​ ​A​n​n​o​u​n​c​e​m​e​n​t​ ​B​a​n​n​e​r
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​a​n​n​o​u​n​c​e​m​e​n​t​ ​b​a​n​n​e​r​ ​c​o​n​f​i​g​u​r​a​t​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​a​n​n​o​u​n​c​e​m​e​n​t​ ​b​a​n​n​e​r​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​J​i​r​a​ ​i​n​s​t​a​n​c​e
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * B​a​n​n​e​r
+						 */
+						'0': string
+					}
+				}
+				getFields: {
+					/**
+					 * G​e​t​ ​F​i​e​l​d​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​s​ ​a​l​l​ ​f​i​e​l​d​s​ ​i​n​ ​t​h​e​ ​s​y​s​t​e​m
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​l​l​ ​f​i​e​l​d​s​,​ ​b​o​t​h​ ​s​y​s​t​e​m​ ​a​n​d​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​,​ ​i​n​ ​t​h​e​ ​J​i​r​a​ ​i​n​s​t​a​n​c​e
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * F​i​e​l​d​s
+						 */
+						'0': string
+					}
+				}
+				createCustomField: {
+					/**
+					 * C​r​e​a​t​e​ ​C​u​s​t​o​m​ ​F​i​e​l​d
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​i​n​ ​t​h​e​ ​J​i​r​a​ ​i​n​s​t​a​n​c​e
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * F​i​e​l​d​s
+						 */
+						'0': string
+					}
+				}
+				updateCustomField: {
+					/**
+					 * U​p​d​a​t​e​ ​C​u​s​t​o​m​ ​F​i​e​l​d
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​ ​c​u​s​t​o​m​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​n​a​m​e​ ​a​n​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​a​ ​c​u​s​t​o​m​ ​f​i​e​l​d
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * F​i​e​l​d​s
+						 */
+						'0': string
+					}
+				}
+				trashCustomField: {
+					/**
+					 * T​r​a​s​h​ ​C​u​s​t​o​m​ ​F​i​e​l​d
+					 */
+					displayName: string
+					/**
+					 * M​o​v​e​s​ ​a​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​t​o​ ​t​r​a​s​h
+					 */
+					shortDesc: string
+					/**
+					 * M​o​v​e​s​ ​a​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​t​o​ ​t​h​e​ ​t​r​a​s​h​.​ ​T​h​e​ ​c​u​s​t​o​m​ ​f​i​e​l​d​ ​c​a​n​ ​b​e​ ​r​e​s​t​o​r​e​d​ ​f​r​o​m​ ​t​r​a​s​h​ ​w​i​t​h​i​n​ ​6​0​ ​d​a​y​s
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * F​i​e​l​d​s
+						 */
+						'0': string
+					}
+				}
+				searchAndReconsileIssuesUsingJqlPost: {
+					/**
+					 * S​e​a​r​c​h​ ​I​s​s​u​e​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​e​s​ ​f​o​r​ ​i​s​s​u​e​s​ ​u​s​i​n​g​ ​J​Q​L
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​e​s​ ​f​o​r​ ​i​s​s​u​e​s​ ​u​s​i​n​g​ ​J​Q​L​ ​(​J​i​r​a​ ​Q​u​e​r​y​ ​L​a​n​g​u​a​g​e​)​.​ ​R​e​t​u​r​n​s​ ​i​s​s​u​e​s​ ​m​a​t​c​h​i​n​g​ ​t​h​e​ ​s​e​a​r​c​h​ ​c​r​i​t​e​r​i​a
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * I​s​s​u​e​s
+						 */
+						'0': string
+					}
+				}
+				createIssue: {
+					/**
+					 * C​r​e​a​t​e​ ​I​s​s​u​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​i​s​s​u​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​i​s​s​u​e​ ​i​n​ ​a​ ​J​i​r​a​ ​p​r​o​j​e​c​t
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * I​s​s​u​e​s
+						 */
+						'0': string
+					}
+				}
+				deleteIssue: {
+					/**
+					 * D​e​l​e​t​e​ ​I​s​s​u​e
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​n​ ​i​s​s​u​e
+					 */
+					shortDesc: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​n​ ​i​s​s​u​e​ ​f​r​o​m​ ​a​ ​J​i​r​a​ ​p​r​o​j​e​c​t
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * I​s​s​u​e​s
+						 */
+						'0': string
+					}
+				}
+				getIssue: {
+					/**
+					 * G​e​t​ ​I​s​s​u​e
+					 */
+					displayName: string
+					/**
+					 * G​e​t​s​ ​a​n​ ​i​s​s​u​e​ ​b​y​ ​I​D​ ​o​r​ ​k​e​y
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​s​s​u​e​ ​b​y​ ​i​t​s​ ​I​D​ ​o​r​ ​k​e​y
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * I​s​s​u​e​s
+						 */
+						'0': string
+					}
+				}
+				editIssue: {
+					/**
+					 * E​d​i​t​ ​I​s​s​u​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​i​s​s​u​e
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​f​i​e​l​d​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​i​s​s​u​e
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * I​s​s​u​e​s
+						 */
+						'0': string
+					}
+				}
+				getComments: {
+					/**
+					 * G​e​t​ ​C​o​m​m​e​n​t​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​s​ ​a​l​l​ ​c​o​m​m​e​n​t​s​ ​f​o​r​ ​a​n​ ​i​s​s​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​l​l​ ​c​o​m​m​e​n​t​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​s​s​u​e
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * C​o​m​m​e​n​t​s
+						 */
+						'0': string
+					}
+				}
+				addComment: {
+					/**
+					 * A​d​d​ ​C​o​m​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * A​d​d​s​ ​a​ ​c​o​m​m​e​n​t​ ​t​o​ ​a​n​ ​i​s​s​u​e
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​a​ ​n​e​w​ ​c​o​m​m​e​n​t​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​s​s​u​e
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * C​o​m​m​e​n​t​s
+						 */
+						'0': string
+					}
+				}
+				deleteComment: {
+					/**
+					 * D​e​l​e​t​e​ ​C​o​m​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​ ​c​o​m​m​e​n​t​ ​f​r​o​m​ ​a​n​ ​i​s​s​u​e
+					 */
+					shortDesc: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​m​m​e​n​t​ ​f​r​o​m​ ​a​n​ ​i​s​s​u​e
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * C​o​m​m​e​n​t​s
+						 */
+						'0': string
+					}
+				}
+				getComment: {
+					/**
+					 * G​e​t​ ​C​o​m​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * G​e​t​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​m​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​m​m​e​n​t​ ​b​y​ ​i​t​s​ ​I​D
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * C​o​m​m​e​n​t​s
+						 */
+						'0': string
+					}
+				}
+				updateComment: {
+					/**
+					 * U​p​d​a​t​e​ ​C​o​m​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​ ​c​o​m​m​e​n​t
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​m​m​e​n​t​ ​o​n​ ​a​n​ ​i​s​s​u​e
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * C​o​m​m​e​n​t​s
+						 */
+						'0': string
+					}
+				}
+				getIssueWorklog: {
+					/**
+					 * G​e​t​ ​I​s​s​u​e​ ​W​o​r​k​l​o​g​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​s​ ​a​l​l​ ​w​o​r​k​l​o​g​s​ ​f​o​r​ ​a​n​ ​i​s​s​u​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​l​l​ ​w​o​r​k​l​o​g​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​s​s​u​e
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * W​o​r​k​l​o​g​s
+						 */
+						'0': string
+					}
+				}
+				addWorklog: {
+					/**
+					 * A​d​d​ ​W​o​r​k​l​o​g
+					 */
+					displayName: string
+					/**
+					 * A​d​d​s​ ​a​ ​w​o​r​k​l​o​g​ ​t​o​ ​a​n​ ​i​s​s​u​e
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​a​ ​n​e​w​ ​w​o​r​k​l​o​g​ ​e​n​t​r​y​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​i​s​s​u​e
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * W​o​r​k​l​o​g​s
+						 */
+						'0': string
+					}
+				}
+				deleteWorklog: {
+					/**
+					 * D​e​l​e​t​e​ ​W​o​r​k​l​o​g
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​ ​w​o​r​k​l​o​g​ ​f​r​o​m​ ​a​n​ ​i​s​s​u​e
+					 */
+					shortDesc: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​w​o​r​k​l​o​g​ ​e​n​t​r​y​ ​f​r​o​m​ ​a​n​ ​i​s​s​u​e
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * W​o​r​k​l​o​g​s
+						 */
+						'0': string
+					}
+				}
+				getWorklog: {
+					/**
+					 * G​e​t​ ​W​o​r​k​l​o​g
+					 */
+					displayName: string
+					/**
+					 * G​e​t​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​w​o​r​k​l​o​g
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​w​o​r​k​l​o​g​ ​e​n​t​r​y​ ​b​y​ ​i​t​s​ ​I​D
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * W​o​r​k​l​o​g​s
+						 */
+						'0': string
+					}
+				}
+				updateWorklog: {
+					/**
+					 * U​p​d​a​t​e​ ​W​o​r​k​l​o​g
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​ ​w​o​r​k​l​o​g
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​w​o​r​k​l​o​g​ ​e​n​t​r​y​ ​o​n​ ​a​n​ ​i​s​s​u​e
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * W​o​r​k​l​o​g​s
+						 */
+						'0': string
+					}
+				}
+				getAllProjects: {
+					/**
+					 * G​e​t​ ​A​l​l​ ​P​r​o​j​e​c​t​s
+					 */
+					displayName: string
+					/**
+					 * G​e​t​s​ ​a​l​l​ ​p​r​o​j​e​c​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​l​l​ ​p​r​o​j​e​c​t​s​ ​v​i​s​i​b​l​e​ ​t​o​ ​t​h​e​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​u​s​e​r
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * P​r​o​j​e​c​t​s
+						 */
+						'0': string
+					}
+				}
+				createProject: {
+					/**
+					 * C​r​e​a​t​e​ ​P​r​o​j​e​c​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​r​o​j​e​c​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​r​o​j​e​c​t​ ​i​n​ ​J​i​r​a
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * P​r​o​j​e​c​t​s
+						 */
+						'0': string
+					}
+				}
+				deleteProject: {
+					/**
+					 * D​e​l​e​t​e​ ​P​r​o​j​e​c​t
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​ ​p​r​o​j​e​c​t
+					 */
+					shortDesc: string
+					/**
+					 * D​e​l​e​t​e​s​ ​a​ ​p​r​o​j​e​c​t​ ​f​r​o​m​ ​J​i​r​a
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * P​r​o​j​e​c​t​s
+						 */
+						'0': string
+					}
+				}
+				getProject: {
+					/**
+					 * G​e​t​ ​P​r​o​j​e​c​t
+					 */
+					displayName: string
+					/**
+					 * G​e​t​s​ ​a​ ​p​r​o​j​e​c​t​ ​b​y​ ​I​D​ ​o​r​ ​k​e​y
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​r​o​j​e​c​t​ ​b​y​ ​i​t​s​ ​I​D​ ​o​r​ ​k​e​y
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * P​r​o​j​e​c​t​s
+						 */
+						'0': string
+					}
+				}
+				updateProject: {
+					/**
+					 * U​p​d​a​t​e​ ​P​r​o​j​e​c​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​ ​p​r​o​j​e​c​t
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​r​o​j​e​c​t
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * P​r​o​j​e​c​t​s
+						 */
+						'0': string
+					}
+				}
+			}
 			triggers: {
 				issue_created: {
 					/**
@@ -67519,6 +68041,12 @@ type RootTranslation = {
 					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​i​s​s​u​e​ ​i​s​ ​c​r​e​a​t​e​d
 					 */
 					longDesc: string
+					groups: {
+						/**
+						 * I​s​s​u​e​s
+						 */
+						'0': string
+					}
 					options: {
 						project: {
 							/**
@@ -67549,6 +68077,12 @@ type RootTranslation = {
 					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​n​ ​i​s​s​u​e​ ​i​s​ ​u​p​d​a​t​e​d
 					 */
 					longDesc: string
+					groups: {
+						/**
+						 * I​s​s​u​e​s
+						 */
+						'0': string
+					}
 					options: {
 						project: {
 							/**
@@ -67579,6 +68113,12 @@ type RootTranslation = {
 					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​p​r​o​j​e​c​t​ ​i​s​ ​c​r​e​a​t​e​d
 					 */
 					longDesc: string
+					groups: {
+						/**
+						 * P​r​o​j​e​c​t​s
+						 */
+						'0': string
+					}
 				}
 			}
 		}
@@ -189199,6 +189739,528 @@ export type TranslationFunctions = {
 			 * Collection of actions to interact with the Jira API
 			 */
 			longDesc: () => LocalizedString
+			actions: {
+				getBanner: {
+					/**
+					 * Get Announcement Banner
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Gets the current announcement banner configuration
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves the current announcement banner configuration for the Jira instance
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Banner
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				setBanner: {
+					/**
+					 * Set Announcement Banner
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates the announcement banner configuration
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the announcement banner configuration for the Jira instance
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Banner
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				getFields: {
+					/**
+					 * Get Fields
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Gets all fields in the system
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns all fields, both system and custom fields, in the Jira instance
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Fields
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				createCustomField: {
+					/**
+					 * Create Custom Field
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new custom field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new custom field in the Jira instance
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Fields
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				updateCustomField: {
+					/**
+					 * Update Custom Field
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates a custom field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the name and description of a custom field
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Fields
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				trashCustomField: {
+					/**
+					 * Trash Custom Field
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Moves a custom field to trash
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Moves a custom field to the trash. The custom field can be restored from trash within 60 days
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Fields
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				searchAndReconsileIssuesUsingJqlPost: {
+					/**
+					 * Search Issues
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Searches for issues using JQL
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Searches for issues using JQL (Jira Query Language). Returns issues matching the search criteria
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Issues
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				createIssue: {
+					/**
+					 * Create Issue
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new issue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new issue in a Jira project
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Issues
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				deleteIssue: {
+					/**
+					 * Delete Issue
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes an issue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Deletes an issue from a Jira project
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Issues
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				getIssue: {
+					/**
+					 * Get Issue
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Gets an issue by ID or key
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves the details of a specific issue by its ID or key
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Issues
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				editIssue: {
+					/**
+					 * Edit Issue
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates an existing issue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the fields of an existing issue
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Issues
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				getComments: {
+					/**
+					 * Get Comments
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Gets all comments for an issue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves all comments for a specific issue
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Comments
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				addComment: {
+					/**
+					 * Add Comment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Adds a comment to an issue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds a new comment to a specific issue
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Comments
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				deleteComment: {
+					/**
+					 * Delete Comment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes a comment from an issue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Deletes a specific comment from an issue
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Comments
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				getComment: {
+					/**
+					 * Get Comment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Gets a specific comment
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a specific comment by its ID
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Comments
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				updateComment: {
+					/**
+					 * Update Comment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates a comment
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates an existing comment on an issue
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Comments
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				getIssueWorklog: {
+					/**
+					 * Get Issue Worklogs
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Gets all worklogs for an issue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves all worklogs for a specific issue
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Worklogs
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				addWorklog: {
+					/**
+					 * Add Worklog
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Adds a worklog to an issue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds a new worklog entry to a specific issue
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Worklogs
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				deleteWorklog: {
+					/**
+					 * Delete Worklog
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes a worklog from an issue
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Deletes a specific worklog entry from an issue
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Worklogs
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				getWorklog: {
+					/**
+					 * Get Worklog
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Gets a specific worklog
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a specific worklog entry by its ID
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Worklogs
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				updateWorklog: {
+					/**
+					 * Update Worklog
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates a worklog
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates an existing worklog entry on an issue
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Worklogs
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				getAllProjects: {
+					/**
+					 * Get All Projects
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Gets all projects
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves all projects visible to the authenticated user
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Projects
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				createProject: {
+					/**
+					 * Create Project
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new project
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new project in Jira
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Projects
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				deleteProject: {
+					/**
+					 * Delete Project
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Deletes a project
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Deletes a project from Jira
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Projects
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				getProject: {
+					/**
+					 * Get Project
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Gets a project by ID or key
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves the details of a specific project by its ID or key
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Projects
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				updateProject: {
+					/**
+					 * Update Project
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates a project
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the details of an existing project
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Projects
+						 */
+						'0': () => LocalizedString
+					}
+				}
+			}
 			triggers: {
 				issue_created: {
 					/**
@@ -189213,6 +190275,12 @@ export type TranslationFunctions = {
 					 * Triggers when a new issue is created
 					 */
 					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Issues
+						 */
+						'0': () => LocalizedString
+					}
 					options: {
 						project: {
 							/**
@@ -189243,6 +190311,12 @@ export type TranslationFunctions = {
 					 * Triggers when an issue is updated
 					 */
 					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Issues
+						 */
+						'0': () => LocalizedString
+					}
 					options: {
 						project: {
 							/**
@@ -189273,6 +190347,12 @@ export type TranslationFunctions = {
 					 * Triggers when a new project is created
 					 */
 					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Projects
+						 */
+						'0': () => LocalizedString
+					}
 				}
 			}
 		}
