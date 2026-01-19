@@ -61,6 +61,11 @@ export default (locale: Locales) =>
     logo_mime_type: 'image/svg+xml',
     swagger: 'schemas/github.swagger.json',
     swagger_paths: createSwaggerPaths(GITHUB_ALLOWED_PATHS),
+    swagger_options: {
+      // Don't wrap responses with {body, headers} even when the OpenAPI schema defines response headers
+      // GitHub's schema has 222 headers definitions which would otherwise cause all responses to be wrapped
+      include_response_headers: false,
+    },
     rest: {
       url: 'https://api.github.com',
       data: 'json',
