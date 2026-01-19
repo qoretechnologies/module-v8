@@ -1314,6 +1314,73 @@ exports.actionsCatalogue = {
             "openapi_path": "pet/{petId}/GET",
         });
 
+        // Test app with include_response_headers: false
+        // This tests that response headers are NOT included in the response type even when
+        // the OpenAPI schema defines response headers (like the /user/login endpoint)
+        api.registerApp({
+            "name": "js-no-response-headers-test",
+            "display_name": "JavaScript No Response Headers Test",
+            "short_desc": "Test include_response_headers flag",
+            "desc": "Test app using swagger_options.include_response_headers = false",
+            "logo": 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUF' +
+                'VCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2' +
+                'ZzExLmR0ZCI+Cjxzdmcgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDUyIDYzIiB2ZXJzaW9uPSIxLj' +
+                'EiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkv' +
+                'eGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zOnNlcmlmPSJodHRwOi8vd3d3LnNlcmlmLmNvbS8iIHN0eWxlPSJmaW' +
+                'xsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6' +
+                'MjsiPgogICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwtMTYuNjUsLTIzLjAxNzIpIj4KICAgICAgICA8cGF0aCBkPS' +
+                'JNNjguMzYzLDYzLjk3M0w2OC4zNjMsNDAuMTA5QzY4LjM2Myw0MC4xMDkgNjguMzYzLDM3LjExMyA2NS43NjgsMzUuNjE1TDQ1' +
+                'LjEwMiwyMy42ODNDNDUuMTAyLDIzLjY4MyA0Mi41MDcsMjIuMTg1IDM5LjkxMiwyMy42ODNMMTkuMjQ1LDM1LjYxNUMxOS4yND' +
+                'UsMzUuNjE1IDE2LjY1LDM3LjExMyAxNi42NSw0MC4xMDlMMTYuNjUsNjMuOTczQzE2LjY1LDYzLjk3MyAxNi42NSw2Ni45Njkg' +
+                'MTkuMjQ1LDY4LjQ2N0w0Ny44MzksODQuODIyQzQ3LjgzOSw4NC44MjIgNTAuNDM0LDg2LjM2OCA1My4wMjksODQuODdMNjQuNj' +
+                'UyLDc4LjExMkw0Mi41Miw2NS41MDNMNDIuNTA3LDY1LjUxMUwzMC44NDMsNTguNzc2TDMwLjg0Myw0NS4zMDdMNDIuNTA3LDM4' +
+                'LjU3M0w1NC4xNzEsNDUuMzA3TDU0LjE3MSw1OC43NzZMNDUuMjEzLDYzLjk0OEw1OS41NjUsNzIuMDVMNjUuNzY4LDY4LjQ2OU' +
+                'M2NS43NjksNjguNDY4IDY4LjM2Myw2Ni45NyA2OC4zNjMsNjMuOTczIiBzdHlsZT0iZmlsbDpyZ2IoMjU1LDEyOCwwKTtmaWxs' +
+                'LXJ1bGU6bm9uemVybzsiLz4KICAgIDwvZz4KPC9zdmc+Cg==',
+            "logo_file_name": "test-no-headers.svg",
+            "logo_mime_type": "image/svg+xml",
+            "openapi": "PetStore.swagger.yaml",
+            // This is the key option being tested - when false, responses should NOT include headers
+            // even when the OpenAPI schema defines response headers
+            "swagger_options": {
+                "include_response_headers": false,
+            },
+            "rest": {
+                "data": "json",
+                "oauth2_auth_url":  "https://{{subdomain}}.example.com/oauth2/auth",
+                "oauth2_client_id": "x",
+                "oauth2_client_secret": "y",
+                "oauth2_grant_type": "authorization_code",
+                "oauth2_token_url": "https://{{subdomain}}.example.com/token",
+                "url": "https://{{subdomain}}.example.com/api",
+            },
+            "rest_modifiers": {
+                "options": {
+                    "subdomain": {
+                        "display_name": "Subdomain",
+                        "short_desc": "The subdomain for the URL",
+                        "desc": "The subdomain for the URL",
+                        "type": "string",
+                    },
+                },
+                "required_options": "subdomain",
+                "url_template_options": [
+                    "subdomain",
+                ],
+            },
+        });
+
+        // Action for testing include_response_headers flag - uses /user/login which has response headers
+        api.registerAction({
+            "app": "js-no-response-headers-test",
+            "action": "user-login",
+            "display_name": "User Login (No Headers)",
+            "short_desc": "User login without response headers",
+            "desc": "Test that response type does not include headers wrapper",
+            "action_code": 2,  // DPAT_API == 2
+            "openapi_path": "user/login/GET",
+        });
+
         // Test webhook trigger with format_event_data for transformation
         api.registerAction({
             "app": "js-openapi-test",

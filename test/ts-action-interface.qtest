@@ -44,6 +44,7 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
         addTestCase("sanity", \sanityTest());
         addTestCase("js", \jsTest());
         addTestCase("test API", \testApi());
+        addTestCase("include_response_headers flag", \includeResponseHeadersTest());
 
         # Return for compatibility with test harnesses that check the script's return value
         set_return_value(main());
@@ -820,6 +821,57 @@ var obj = {
             hash<string, AbstractDataField> oa3_fields = t.getFields();
             # OpenAPI 3.0 path parameter
             assertTrue(exists oa3_fields.petId);
+        }
+    }
+
+    # Test that swagger_options.include_response_headers = false works correctly
+    # When set to false, response types should NOT include the {body, headers} wrapper
+    # even when the OpenAPI schema defines response headers
+    private includeResponseHeadersTest() {
+        # Test the app with include_response_headers: false was registered
+        hash<DataProviderAppInfo> appinfo = DataProviderActionCatalog::getAppEx("js-no-response-headers-test");
+        assertEq("js-no-response-headers-test", appinfo.name);
+
+        # Test the action was registered
+        hash<DataProviderActionInfo> actioninfo = DataProviderActionCatalog::getAppActionEx(
+            "js-no-response-headers-test", "user-login");
+        assertEq("user-login", actioninfo.action);
+
+        # Create a connection for the test
+        hash<auto> config = {
+            "name": "test",
+            "url": "tsrest-js-no-response-headers-test://",
+            "opts": {
+                "subdomain": "test",
+                "token": "x",
+            },
+        };
+        TypeScriptAppRestConnection conn(config);
+
+        # Get the data provider for the user-login action
+        AbstractDataProvider prov = TypeScriptActionInterface::getDataProvider("js-no-response-headers-test", conn)
+            .getChildProviderEx("user-login");
+
+        # Get the response type - it should be a simple string type (the body), NOT a hash with body/headers
+        AbstractDataProviderType responseType = prov.getResponseType();
+        assertTrue(exists responseType);
+
+        # The response type should NOT have "body" and "headers" fields
+        # If include_response_headers was true (the default), the PetStore /user/login endpoint
+        # would return a hash with body and headers fields because it defines X-Expires-After
+        # and X-Rate-Limit headers in the OpenAPI schema
+        *hash<string, AbstractDataField> fields = responseType.getFields();
+
+        # With include_response_headers: false, we should get the body type directly (string)
+        # not the wrapper hash with body/headers
+        {
+            on_error printf("Response type: %s, fields: %y\n", responseType.getName(), keys fields);
+            # The response should NOT be a hash with body and headers
+            # It should be either a string type (body directly) or have NO body/headers wrapper
+            if (fields) {
+                assertFalse(exists fields.body && exists fields.headers,
+                    "Response should not have both body and headers when include_response_headers is false");
+            }
         }
     }
 }

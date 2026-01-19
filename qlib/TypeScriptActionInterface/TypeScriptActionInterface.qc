@@ -255,6 +255,9 @@ public class TypeScriptActionInterface {
         #! Flag AWS apps
         static hash<string, bool> aws_app_map;
 
+        #! Maps from app names to include_response_headers flag (default: True)
+        static hash<string, bool> app_include_response_headers_map;
+
         #! Connection map for testing
         static hash<string, TypeScriptAppRestConnection> cmap;
 
@@ -338,6 +341,7 @@ public class TypeScriptActionInterface {
         remove app_conn_opt_map{appname};
         remove app_url_option_map{appname};
         remove aws_app_map{appname};
+        remove app_include_response_headers_map{appname};
         remove app_schema_map{appname};
         remove app_schema_schema_map{appname};
         remove google_app_map{appname};
@@ -883,6 +887,12 @@ public class TypeScriptActionInterface {
 
         AbstractRestSchemaValidator schema;
         hash<string, AbstractRestSchemaValidator> schema_schema_map;
+        # Extract include_response_headers flag from openapi_options (default: True for backwards compatibility)
+        *bool include_response_headers;
+        if (app.openapi_options.hasKey("include_response_headers")) {
+            include_response_headers = app.openapi_options.include_response_headers;
+            remove app.openapi_options.include_response_headers;
+        }
         # Handle openapi property (with auto-detection for Swagger 2.0 vs OpenAPI 3.0 content)
         if ((*string openapi_loc = remove app.openapi).val()) {
             on_error rethrow $1.err, sprintf("%s (while loading app %y)", $1.desc, app.name);
@@ -1163,6 +1173,10 @@ public class TypeScriptActionInterface {
         }
         if (url_template_options) {
             atmap{appname} = url_template_options;
+        }
+        # Store include_response_headers flag if explicitly set (only store if False to save memory)
+        if (exists include_response_headers && !include_response_headers) {
+            app_include_response_headers_map{appname} = include_response_headers;
         }
     }
 
@@ -2000,11 +2014,13 @@ public class TypeScriptActionInterface {
 
             # check for path vars
             *hash<string, bool> path_vars = map {$1: True}, (openapi_path =~ x/\{([^\}]*)}/g);
+            # Get include_response_headers flag (default: True for backwards compatibility)
+            bool include_response_headers = app_include_response_headers_map{appname} ?? True;
             TypeScriptActionApiWithSchemaDataProvider dp(\action, openapi_path, api, path_vars,
                 (map {$1: True}, independent_path_vars), app_conn_opt_map{appname},
                 remove action.override_options, remove action.ignore_options, fctx, get_dynamic_request_type,
                 get_dynamic_response_type, request_data_converter, response_data_converter, request_type,
-                response_type);
+                response_type, include_response_headers);
             child = dp;
 
             action.output_type = child.getResponseType();

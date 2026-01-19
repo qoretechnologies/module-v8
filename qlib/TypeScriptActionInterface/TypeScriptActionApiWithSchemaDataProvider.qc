@@ -1,7 +1,7 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 #! Qore TypeScriptActionInterface module definition
 
-/*  TypeScriptActionApiWithSchemaDataProvider.qc Copyright 2024 Qore Technologies, s.r.o.
+/*  TypeScriptActionApiWithSchemaDataProvider.qc Copyright 2024 - 2026 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -61,6 +61,9 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         #! If the response only has a body key
         bool res_only_body;
 
+        #! Whether to include response headers in the response (default: True for backwards compatibility)
+        bool include_response_headers = True;
+
         #! Connection to REST schema path option map
         *hash<string, string> conn_opt_map;
 
@@ -111,9 +114,10 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             ActionFunctionContext fctx, *hash<AsyncCallInfo> get_dynamic_request_type,
             *hash<AsyncCallInfo> get_dynamic_response_type, *hash<AsyncCallInfo> request_data_converter,
             *hash<AsyncCallInfo> response_data_converter, *AbstractDataProviderType request_type,
-            *AbstractDataProviderType response_type)
+            *AbstractDataProviderType response_type, bool include_response_headers = True)
             : TypeScriptActionApiDataProvider(action.action, api, fctx, get_dynamic_request_type,
             get_dynamic_response_type) {
+        self.include_response_headers = include_response_headers;
         self.rest_schema = remove action.openapi_schema;
         schema_path =~ s/^\///;
         self.schema_path = schema_path;
@@ -616,8 +620,10 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         response_type_done = True;
         checkDataProvider();
         response_type_info.type = prov.getResponseType();
+        # If include_response_headers is False, unwrap the body even when headers field is present
+        # This allows apps to opt-out of the {body, headers} wrapper when the OpenAPI schema defines response headers
         if (response_type_info.type && (*hash<string, AbstractDataField> fields = response_type_info.type.getFields())
-            && fields.size() == 1 && fields.body) {
+            && fields.body && (fields.size() == 1 || !include_response_headers)) {
             res_only_body = True;
             response_type_info.type = fields.body.getType();
         }
