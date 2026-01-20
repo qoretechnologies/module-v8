@@ -541,7 +541,7 @@ class TsProxy inherits TypeScriptProxy {
             sendString(yaml);
             return True;
         } catch (hash<ExceptionInfo> ex) {
-            if (ex.err == "SOCKET-CLOSED" || ex.desc =~ /EPIPE/) {
+            if (isSocketClosedError(ex)) {
                 parent_closed = True;
                 info("Parent socket closed; exiting");
                 return False;
@@ -557,12 +557,16 @@ class TsProxy inherits TypeScriptProxy {
             sendString(event_socket, yaml);
             return True;
         } catch (hash<ExceptionInfo> ex) {
-            if (ex.err == "SOCKET-CLOSED" || ex.desc =~ /EPIPE/) {
+            if (isSocketClosedError(ex)) {
                 info("Event socket closed; stopping event thread");
                 return False;
             }
             rethrow;
         }
+    }
+
+    private *bool isSocketClosedError(hash<ExceptionInfo> ex) {
+        return ex.err == "SOCKET-CLOSED" || ex.err == "SOCKET-NOT-OPEN" || ex.desc =~ /EPIPE/;
     }
 
     private *bool retry(hash<ExceptionInfo> ex) {

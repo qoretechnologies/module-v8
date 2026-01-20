@@ -204,13 +204,17 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         try {
             sem_write.write(".");
         } catch (hash<ExceptionInfo> ex) {
-            # ignore
+            @debug {
+                TSAI::debug("stopMasterListener(): sem_write error: %s", get_exception_string(ex));
+            }
         }
         if (master) {
             try {
                 master.shutdown();
             } catch (hash<ExceptionInfo> ex) {
-                # ignore
+                @debug {
+                    TSAI::debug("stopMasterListener(): master shutdown error: %s", get_exception_string(ex));
+                }
             }
         }
         master_listener_cnt.waitForZero();
@@ -409,7 +413,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 if (ex.err == "SOCKET-TIMEOUT") {
                     continue;
                 }
-                if (ex.err == "SOCKET-NOT-OPEN" || ex.err == "SOCKET-CLOSED") {
+                if (isSocketClosedError(ex)) {
                     error("The event socket for PID %d is closed; terminating", proc.id());
                     break;
                 }
@@ -431,7 +435,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 }
             } catch (hash<ExceptionInfo> ex) {
                 logChildOutput();
-                if (ex.err == "SOCKET-NOT-OPEN" || ex.err == "SOCKET-CLOSED") {
+                if (isSocketClosedError(ex)) {
                     error("Error in event listener thread: %s; terminating", get_exception_string(ex));
                     break;
                 }
@@ -686,7 +690,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             try {
                 sendString(yaml);
             } catch (hash<ExceptionInfo> ex) {
-                if (ex.err == "SOCKET-CLOSED" || ex.err == "EPIPE" || ex.desc =~ /EPIPE/) {
+                if (isSocketClosedError(ex)) {
+                    info("Stop command aborted: socket closed (%s)", get_exception_string(ex));
                     break;
                 }
                 if (retryIntern(ex, NOTHING, RF_NO_RESTART)) {
@@ -707,6 +712,10 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
         stopEventListener();
         logChildOutput(True);
+    }
+
+    private static *bool isSocketClosedError(hash<ExceptionInfo> ex) {
+        return ex.err == "SOCKET-NOT-OPEN" || ex.err == "SOCKET-CLOSED" || ex.err == "EPIPE" || ex.desc =~ /EPIPE/;
     }
 
     #! Starts the child process

@@ -48,7 +48,10 @@ public class TsProxyTest inherits QUnit::Test {
 
     private checkEnvironment() {
         string local_bin = sprintf("%s/../bin", get_script_dir());
-        @assert(hstat(local_bin));
+        if (!hstat(local_bin)) {
+            skip_reason = sprintf("Local bin directory missing: %s", local_bin);
+            return;
+        }
         setenv("PATH", local_bin + ":" + ENV.PATH);
 
         # Check if ts-proxy binary is available
@@ -157,7 +160,6 @@ public class TsProxyTest inherits QUnit::Test {
 
         JavaScriptProgramProxy proxy();
         int pid = proxy.getInfo()."proxy-pid";
-        @assert(pid > 0);
         assertTrue(pid > 0, "proxy should be running for restart test");
 
         setenv("TS_PROXY_TEST_FORCE_RESTART_ERROR", "1");
@@ -225,7 +227,6 @@ public class TsProxyTest inherits QUnit::Test {
 
         JavaScriptProgramProxy proxy();
         int pid = proxy.getInfo()."proxy-pid";
-        @assert(pid > 0);
         assertTrue(pid > 0, "proxy should be running for send error test");
 
         Mutex m();
