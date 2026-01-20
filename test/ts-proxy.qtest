@@ -5,6 +5,7 @@
 %enable-all-warnings
 %new-style
 %strict-args
+%modern
 
 %requires QUnit
 %requires ../qlib/TypeScriptActionInterface
@@ -25,6 +26,8 @@ public class TsProxyTest inherits QUnit::Test {
 
         addTestCase("proxy tests", \proxyTests());
         addTestCase("proxy restart error handling", \proxyRestartErrorHandlingTest());
+        addTestCase("proxy send error handling", \proxySendErrorHandlingTest());
+        addTestCase("proxy startup send error handling", \proxyStartupSendErrorHandlingTest());
 
         set_return_value(main());
     }
@@ -44,6 +47,10 @@ public class TsProxyTest inherits QUnit::Test {
     }
 
     private checkEnvironment() {
+        string local_bin = sprintf("%s/../bin", get_script_dir());
+        @assert(hstat(local_bin));
+        setenv("PATH", local_bin + ":" + ENV.PATH);
+
         # Check if ts-proxy binary is available
         try {
             string path = trim(`which ts-proxy 2>/dev/null`);
@@ -85,16 +92,18 @@ public class TsProxyTest inherits QUnit::Test {
         JavaScriptProgramProxy::init(new Mutex());
         on_exit JavaScriptProgramProxy::shutdown();
 
+        JavaScriptProgramProxy proxy1();
+        JavaScriptProgramProxy proxy2();
+
         # Test 1: Proxy lifecycle
         {
-            JavaScriptProgramProxy proxy();
 
             # Verify the proxy has valid info
-            hash<auto> info = proxy.getInfo();
+            hash<auto> info = proxy1.getInfo();
             assertTrue(info."proxy-pid" > 0, "proxy should have a valid PID");
 
             # Verify we can get the unique hash
-            string uh = proxy.uniqueHash();
+            string uh = proxy1.uniqueHash();
             assertTrue(uh.val(), "proxy should have a unique hash");
 
             if (m_options.verbose > 1) {
@@ -104,9 +113,6 @@ public class TsProxyTest inherits QUnit::Test {
 
         # Test 2: Multiple proxies can be created
         {
-            JavaScriptProgramProxy proxy1();
-            JavaScriptProgramProxy proxy2();
-
             hash<auto> info1 = proxy1.getInfo();
             hash<auto> info2 = proxy2.getInfo();
 
@@ -121,8 +127,7 @@ public class TsProxyTest inherits QUnit::Test {
 
         # Test 3: Proxy restart after child kill
         {
-            JavaScriptProgramProxy proxy();
-            hash<auto> info = proxy.getInfo();
+            hash<auto> info = proxy1.getInfo();
             int original_pid = info."proxy-pid";
             assertTrue(original_pid > 0, "proxy should have original PID");
 
@@ -136,7 +141,7 @@ public class TsProxyTest inherits QUnit::Test {
 
             # The restart happens lazily on next command
             # We just verify the proxy object is still valid
-            assertTrue(proxy.uniqueHash().val(), "proxy should still have valid hash after child kill");
+            assertTrue(proxy1.uniqueHash().val(), "proxy should still have valid hash after child kill");
 
             if (m_options.verbose > 1) {
                 printf("Proxy restart test passed - original PID: %d\n", original_pid);
@@ -157,6 +162,8 @@ public class TsProxyTest inherits QUnit::Test {
 
         setenv("TS_PROXY_TEST_FORCE_RESTART_ERROR", "1");
         on_exit unsetenv("TS_PROXY_TEST_FORCE_RESTART_ERROR");
+        setenv("TS_PROXY_TEST_RESPONSE_TIMEOUT_MS", "1500");
+        on_exit unsetenv("TS_PROXY_TEST_RESPONSE_TIMEOUT_MS");
 
         try {
             system(sprintf("kill -9 %d 2>/dev/null", pid));
@@ -193,13 +200,92 @@ public class TsProxyTest inherits QUnit::Test {
         on_exit m.unlock();
         date start = now_us();
         while (!done) {
-            if (!cond.wait(m, 5s)) {
+            if (!cond.wait(m, 200ms)) {
                 break;
             }
-            if (now_us() - start > 5s) {
+            if (now_us() - start > 2s) {
                 break;
             }
         }
         assertTrue(done, "restart retry should not deadlock");
+    }
+
+    private proxySendErrorHandlingTest() {
+        skipIfNotReady();
+
+        JavaScriptProgramProxy::init(new Mutex());
+        on_exit JavaScriptProgramProxy::shutdown();
+
+        setenv("TS_PROXY_TEST_FORCE_SEND_ERROR", "1");
+        ENV.TS_PROXY_TEST_FORCE_SEND_ERROR = "1";
+        on_exit unsetenv("TS_PROXY_TEST_FORCE_SEND_ERROR");
+        on_exit remove ENV.TS_PROXY_TEST_FORCE_SEND_ERROR;
+        setenv("TS_PROXY_TEST_RESPONSE_TIMEOUT_MS", "1500");
+        on_exit unsetenv("TS_PROXY_TEST_RESPONSE_TIMEOUT_MS");
+
+        JavaScriptProgramProxy proxy();
+        int pid = proxy.getInfo()."proxy-pid";
+        @assert(pid > 0);
+        assertTrue(pid > 0, "proxy should be running for send error test");
+
+        Mutex m();
+        Condition cond();
+        bool done = False;
+        background sub () {
+            try {
+                proxy.getDynamicOptions("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING);
+            } catch (hash<ExceptionInfo> ex) {
+                # ignore
+            }
+            m.lock();
+            on_exit m.unlock();
+            done = True;
+            cond.broadcast();
+        }();
+
+        m.lock();
+        on_exit m.unlock();
+        date start = now_us();
+        while (!done) {
+            if (!cond.wait(m, 200ms)) {
+                break;
+            }
+            if (now_us() - start > 2s) {
+                break;
+            }
+        }
+        assertTrue(done, "send error should not deadlock");
+
+        unsetenv("TS_PROXY_TEST_FORCE_SEND_ERROR");
+        remove ENV.TS_PROXY_TEST_FORCE_SEND_ERROR;
+        bool threw = False;
+        try {
+            proxy.getDynamicOptions("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING);
+        } catch (hash<ExceptionInfo> ex) {
+            threw = True;
+        }
+        assertTrue(threw, "send error should not break subsequent calls");
+    }
+
+    private proxyStartupSendErrorHandlingTest() {
+        skipIfNotReady();
+
+        JavaScriptProgramProxy::init(new Mutex());
+        on_exit JavaScriptProgramProxy::shutdown();
+
+        setenv("TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP", "1");
+        ENV.TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP = "1";
+        on_exit unsetenv("TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP");
+        on_exit remove ENV.TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP;
+        setenv("TS_PROXY_TEST_STARTUP_TIMEOUT_MS", "1500");
+        on_exit unsetenv("TS_PROXY_TEST_STARTUP_TIMEOUT_MS");
+
+        bool threw = False;
+        try {
+            JavaScriptProgramProxy proxy();
+        } catch (hash<ExceptionInfo> ex) {
+            threw = True;
+        }
+        assertTrue(threw, "startup send error should raise");
     }
 }

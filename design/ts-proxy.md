@@ -55,6 +55,11 @@ force `restartProcessIntern()` to throw. It is used by `test/ts-proxy.qtest` to
 validate that restart failures do not deadlock callers and that errors are
 propagated correctly.
 
+`TS_PROXY_TEST_FORCE_SEND_ERROR` forces the next parent socket send to fail
+after startup, simulating EPIPE/SOCKET-CLOSED behavior when responding to a
+command. `TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP` forces the startup `CC_STARTED`
+send to fail. Both are used for negative and corner-case tests.
+
 ## Operational Notes
 - The UNIX socket path is short to avoid the ~104-byte limit.
 - If the child dies mid-command, the parent retries based on `RetryCounter`

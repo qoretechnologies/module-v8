@@ -201,9 +201,19 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
     static stopMasterListener() {
         master_listener_stop = True;
-        sem_write.write(".");
+        try {
+            sem_write.write(".");
+        } catch (hash<ExceptionInfo> ex) {
+            # ignore
+        }
+        if (master) {
+            try {
+                master.shutdown();
+            } catch (hash<ExceptionInfo> ex) {
+                # ignore
+            }
+        }
         master_listener_cnt.waitForZero();
-        master.shutdown();
         delete master;
         remove master_listener_stop;
         remove sem_read;
@@ -225,6 +235,13 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         int size = cmap.size();
         map delete cmap{$1}, keys cmap;
         TSAI::info("Shut down %d client%s", size, size == 1 ? "" : "s");
+        if (!cmap && master_path.val()) {
+            if (master) {
+                stopMasterListener();
+            } else {
+                remove master_path;
+            }
+        }
     }
 
     bool supportsEvent(string key) {
@@ -669,6 +686,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             try {
                 sendString(yaml);
             } catch (hash<ExceptionInfo> ex) {
+                if (ex.err == "SOCKET-CLOSED" || ex.err == "EPIPE" || ex.desc =~ /EPIPE/) {
+                    break;
+                }
                 if (retryIntern(ex, NOTHING, RF_NO_RESTART)) {
                     continue;
                 }
@@ -703,6 +723,28 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         hash<auto> env = ENV + {
             "TS_PROXY_PROCESS_KEY": uh,
         };
+        timeout startup_timeout = 20s;
+        @debug {
+            *string send_error = getenv("TS_PROXY_TEST_FORCE_SEND_ERROR");
+            if (send_error.val()) {
+                env.TS_PROXY_TEST_FORCE_SEND_ERROR = send_error;
+            }
+            *string start_send_error = getenv("TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP");
+            if (start_send_error && start_send_error.val()) {
+                env.TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP = start_send_error;
+            }
+            *string startup_timeout_ms = getenv("TS_PROXY_TEST_STARTUP_TIMEOUT_MS");
+            if (startup_timeout_ms && startup_timeout_ms.val()) {
+                try {
+                    int ms = startup_timeout_ms.toInt();
+                    if (ms > 0) {
+                        startup_timeout = ms * 1ms;
+                    }
+                } catch (hash<ExceptionInfo> ex) {
+                    # ignore invalid value
+                }
+            }
+        }
         proc = new Process("ts-proxy", args, {
             "env": env,
             "close_fds": True,
@@ -725,7 +767,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                         rethrow;
                     }
                     date d = now_us() - start;
-                    if (d >= 20s || !proc.running()) {
+                    if (d >= startup_timeout || !proc.running()) {
                         rethrow "CHILD-ERROR", sprintf("Timeout (%y) waiting for startup message from child "
                             "process: %s", d, get_exception_string(ex));
                     }
@@ -794,6 +836,19 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     #! Sends a command from the parent to the child with a response
     private auto sendCommandArgs(*date io_timeout, string cmd, *softlist<auto> args,
             date response_timeout = DefaultRequestTimeout, *bool no_restart_event) {
+        @debug {
+            *string response_timeout_ms = getenv("TS_PROXY_TEST_RESPONSE_TIMEOUT_MS");
+            if (response_timeout_ms && response_timeout_ms.val()) {
+                try {
+                    int ms = response_timeout_ms.toInt();
+                    if (ms > 0) {
+                        response_timeout = ms * 1ms;
+                    }
+                } catch (hash<ExceptionInfo> ex) {
+                    # ignore invalid value
+                }
+            }
+        }
         string yaml = makeSend(cmd, {"args": args});
         hash<auto> h;
         RetryCounter rc();
@@ -970,8 +1025,10 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
     # Called with no locks held
     private restartProcessIntern(*bool no_restart_event) {
-        if (ENV.TS_PROXY_TEST_FORCE_RESTART_ERROR) {
-            throw "TS-PROXY-TEST-ERROR", "Forced restart error for testing";
+        @debug {
+            if (ENV.TS_PROXY_TEST_FORCE_RESTART_ERROR) {
+                throw "TS-PROXY-TEST-ERROR", "Forced restart error for testing";
+            }
         }
         @assert(proc);
         int pid = proc.id();

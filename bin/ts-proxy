@@ -4,6 +4,7 @@
 %require-types
 %strict-args
 %enable-all-warnings
+%modern
 
 %requires TypeScriptActionInterface
 %requires RestClient
@@ -47,6 +48,10 @@ class TsProxy inherits TypeScriptProxy {
         hash<EventInfo> event;
 
         AbstractDataProviderBulkRecordInterface search;
+
+        bool parent_closed;
+
+        bool test_send_error_used;
     }
 
     constructor() : TypeScriptProxy(False) {
@@ -68,7 +73,15 @@ class TsProxy inherits TypeScriptProxy {
             "pkey": pkey,
             "pid": getpid(),
         });
-        sendString(yaml);
+        @debug {
+            if (getenv("TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP")) {
+                throw "SOCKET-CLOSED", "Forced startup send error for testing";
+            }
+        }
+        if (!safeSendParent(yaml)) {
+            info("Parent socket closed during startup; exiting");
+            exit(0);
+        }
         info("Connected to server: %y", s.getPeerInfo());
         commandLoop();
     }
@@ -91,7 +104,9 @@ class TsProxy inherits TypeScriptProxy {
         string yaml = makeSend(CC_STATUS, {
             "info": sprintf("%N", info),
         });
-        sendString(yaml);
+        if (!safeSendParent(yaml)) {
+            return;
+        }
     }
 
     private setupLogger(string name = "console") {
@@ -191,7 +206,9 @@ class TsProxy inherits TypeScriptProxy {
                         "desc": get_exception_string(ex),
                     }
                 });
-                sendString(yaml);
+                if (!safeSendParent(yaml)) {
+                    break;
+                }
             }
         }
 
@@ -223,7 +240,7 @@ class TsProxy inherits TypeScriptProxy {
         string yaml = makeSend(CC_OK, {
             "rv": rv,
         });
-        sendString(yaml);
+        safeSendParent(yaml);
     }
 
     private releaseSearch() {
@@ -234,7 +251,7 @@ class TsProxy inherits TypeScriptProxy {
             info("No active search to release");
         }
         string yaml = makeSend(CC_OK);
-        sendString(yaml);
+        safeSendParent(yaml);
     }
 
     private getRecords() {
@@ -251,7 +268,7 @@ class TsProxy inherits TypeScriptProxy {
         string yaml = makeSend(CC_OK, {
             "rv": rv,
         });
-        sendString(yaml);
+        safeSendParent(yaml);
     }
 
     private setupEvent(string app, string action, string key, *hash<auto> arg0) {
@@ -278,7 +295,10 @@ class TsProxy inherits TypeScriptProxy {
             "pkey": pkey,
             "pid": getpid(),
         });
-        sendString(event_socket, yaml);
+        if (!safeSendEvent(event_socket, yaml)) {
+            info("Event socket closed during setup; event not started");
+            return;
+        }
         info("Connected to server event socket: %y", event_socket.getPeerInfo());
 
         Counter cnt(1);
@@ -287,7 +307,7 @@ class TsProxy inherits TypeScriptProxy {
         cnt.waitForZero();
 
         yaml = makeSend(CC_OK);
-        sendString(yaml);
+        safeSendParent(yaml);
         ecnt.dec();
         info("Started event thread");
     }
@@ -326,7 +346,10 @@ class TsProxy inherits TypeScriptProxy {
                         "key": key,
                         "event": event_data,
                     });
-                    sendString(event_socket, yaml);
+                    if (!safeSendEvent(event_socket, yaml)) {
+                        event.stop_flag = True;
+                        return;
+                    }
                 },
                 bool sub () {
                     return event.stop_flag;
@@ -342,7 +365,7 @@ class TsProxy inherits TypeScriptProxy {
                 string yaml = makeSend(CC_EVENT_TERMINATED, {
                     "key": key,
                 });
-                sendString(event_socket, yaml);
+                safeSendEvent(event_socket, yaml);
             }
         } catch (hash<ExceptionInfo> ex) {
             error("EVENT-THREAD-ERROR", "Exception in event thread: %s", get_exception_string(ex));
@@ -361,7 +384,7 @@ class TsProxy inherits TypeScriptProxy {
                         "desc": sprintf("Event key %y is unknown; managed event key: %y", key, event.key),
                     },
                 });
-                sendString(yaml);
+                safeSendParent(yaml);
                 info("Cannot release unknown event key %y; managed event key: %y", key, event.key);
                 return;
             }
@@ -378,7 +401,7 @@ class TsProxy inherits TypeScriptProxy {
             }
         }
         string yaml = makeSend(CC_OK);
-        sendString(yaml);
+        safeSendParent(yaml);
         info("Released event %y", key);
     }
 
@@ -406,7 +429,7 @@ class TsProxy inherits TypeScriptProxy {
         string yaml = makeSend(CC_OK, {
             "rv": rv,
         });
-        sendString(yaml);
+        safeSendParent(yaml);
     }
 
     private getEventType(string app, string action, *string conn_name, *hash<auto> conn_opts, *hash<auto> options) {
@@ -425,7 +448,7 @@ class TsProxy inherits TypeScriptProxy {
         string yaml = makeSend(CC_OK, {
             "rv": type ? type.serialize() : NOTHING,
         });
-        sendString(yaml);
+        safeSendParent(yaml);
     }
 
     private getDynamicOptions(string app, string action, *string conn_name, *hash<auto> conn_opts,
@@ -446,7 +469,7 @@ class TsProxy inherits TypeScriptProxy {
         string yaml = makeSend(CC_OK, {
             "rv": rv ? Serializable::serialize(rv) : NOTHING,
         });
-        sendString(yaml);
+        safeSendParent(yaml);
     }
 
     private getRequestType(string app, string action, *string conn_name, *hash<auto> conn_opts, *hash<auto> options) {
@@ -468,7 +491,7 @@ class TsProxy inherits TypeScriptProxy {
         string yaml = makeSend(CC_OK, {
             "rv": type ? type.serialize() : NOTHING,
         });
-        sendString(yaml);
+        safeSendParent(yaml);
     }
 
     private getResponseType(string app, string action, *string conn_name, *hash<auto> conn_opts,
@@ -491,7 +514,7 @@ class TsProxy inherits TypeScriptProxy {
         string yaml = makeSend(CC_OK, {
             "rv": type ? type.serialize() : NOTHING,
         });
-        sendString(yaml);
+        safeSendParent(yaml);
     }
 
     private TypeScriptAppRestConnection getRestConnection(string app, string conn_name, *hash<auto> conn_opts) {
@@ -501,6 +524,45 @@ class TsProxy inherits TypeScriptProxy {
             "url": "tsrest-" + app.lwr() + "://x",
             "opts": conn_opts,
         });
+    }
+
+    private *bool safeSendParent(string yaml) {
+        @assert(yaml.val());
+        if (parent_closed) {
+            return False;
+        }
+        @debug {
+            if (getenv("TS_PROXY_TEST_FORCE_SEND_ERROR") && !test_send_error_used) {
+                test_send_error_used = True;
+                throw "SOCKET-CLOSED", "Forced send error for testing";
+            }
+        }
+        try {
+            sendString(yaml);
+            return True;
+        } catch (hash<ExceptionInfo> ex) {
+            if (ex.err == "SOCKET-CLOSED" || ex.desc =~ /EPIPE/) {
+                parent_closed = True;
+                info("Parent socket closed; exiting");
+                return False;
+            }
+            rethrow;
+        }
+    }
+
+    private *bool safeSendEvent(Socket event_socket, string yaml) {
+        @assert(event_socket);
+        @assert(yaml.val());
+        try {
+            sendString(event_socket, yaml);
+            return True;
+        } catch (hash<ExceptionInfo> ex) {
+            if (ex.err == "SOCKET-CLOSED" || ex.desc =~ /EPIPE/) {
+                info("Event socket closed; stopping event thread");
+                return False;
+            }
+            rethrow;
+        }
     }
 
     private *bool retry(hash<ExceptionInfo> ex) {
