@@ -57,10 +57,14 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
         } else if (m_options.verbose > 2) {
             level = LoggerLevel::getLevelInfo();
         } else {
-            level = LoggerLevel::getLevelError();
+            level = LoggerLevel::getLevelFatal();
         }
         logger = new Logger("console", level);
-        logger.addAppender(new StdoutAppender());
+        if (m_options.verbose > 2) {
+            logger.addAppender(new StdoutAppender());
+        } else {
+            logger.addAppender(new LoggerAppenderNull());
+        }
         DataProvider::setGlobalLogger(logger);
     }
 
@@ -455,8 +459,11 @@ async function runWithTimeout(promise, delay) {
         MyObserver o();
         cast<Observable>(prov).registerObserver(o);
         # Temporarily disable logger to avoid console noise from expected error
-        logger.removeAllAppenders();
-        on_exit logger.addAppender(new StdoutAppender());
+        if (m_options.verbose <= 2) {
+            *LoggerInterface saved_logger = DataProvider::getGlobalLogger();
+            DataProvider::setGlobalLogger(NOTHING);
+            on_exit DataProvider::setGlobalLogger(saved_logger);
+        }
         cast<DelayedObservable>(prov).observersReady();
         on_exit cast<DelayedObservable>(prov).stopEvents();
 

@@ -165,7 +165,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
                 }
                 event = formatted;
             } catch (hash<ExceptionInfo> ex) {
-                LoggerWrapper::error("Error in format_event_data for provider %y: %s; event skipped",
+                TSAI::error("Error in format_event_data for provider %y: %s; event skipped",
                     name, get_exception_string(ex));
                 return;
             }
