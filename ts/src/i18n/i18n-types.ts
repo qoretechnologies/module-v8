@@ -67645,6 +67645,33 @@ type RootTranslation = {
 						 */
 						'0': string
 					}
+					options: {
+						jql: {
+							/**
+							 * J​Q​L​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * J​Q​L​ ​q​u​e​r​y​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​i​s​s​u​e​s​.​ ​M​u​s​t​ ​b​e​ ​a​ ​b​o​u​n​d​e​d​ ​q​u​e​r​y​ ​w​i​t​h​ ​s​e​a​r​c​h​ ​r​e​s​t​r​i​c​t​i​o​n​s​.
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​J​Q​L​ ​(​J​i​r​a​ ​Q​u​e​r​y​ ​L​a​n​g​u​a​g​e​)​ ​e​x​p​r​e​s​s​i​o​n​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​i​s​s​u​e​s​.​
+						​
+						​*​*​C​o​m​m​o​n​ ​J​Q​L​ ​E​x​a​m​p​l​e​s​:​*​*​
+						​-​ ​`​p​r​o​j​e​c​t​ ​=​ ​"​M​Y​-​P​R​O​J​E​C​T​"​`​ ​-​ ​A​l​l​ ​i​s​s​u​e​s​ ​i​n​ ​a​ ​p​r​o​j​e​c​t​
+						​-​ ​`​a​s​s​i​g​n​e​e​ ​=​ ​c​u​r​r​e​n​t​U​s​e​r​(​)​`​ ​-​ ​I​s​s​u​e​s​ ​a​s​s​i​g​n​e​d​ ​t​o​ ​c​u​r​r​e​n​t​ ​u​s​e​r​
+						​-​ ​`​s​t​a​t​u​s​ ​=​ ​"​I​n​ ​P​r​o​g​r​e​s​s​"​`​ ​-​ ​I​s​s​u​e​s​ ​w​i​t​h​ ​s​p​e​c​i​f​i​c​ ​s​t​a​t​u​s​
+						​-​ ​`​c​r​e​a​t​e​d​ ​>​=​ ​-​7​d​`​ ​-​ ​I​s​s​u​e​s​ ​c​r​e​a​t​e​d​ ​i​n​ ​t​h​e​ ​l​a​s​t​ ​7​ ​d​a​y​s​
+						​-​ ​`​p​r​i​o​r​i​t​y​ ​=​ ​H​i​g​h​ ​A​N​D​ ​s​t​a​t​u​s​ ​!​=​ ​D​o​n​e​`​ ​-​ ​H​i​g​h​ ​p​r​i​o​r​i​t​y​ ​o​p​e​n​ ​i​s​s​u​e​s​
+						​-​ ​`​l​a​b​e​l​s​ ​i​n​ ​(​b​u​g​,​ ​c​r​i​t​i​c​a​l​)​`​ ​-​ ​I​s​s​u​e​s​ ​w​i​t​h​ ​s​p​e​c​i​f​i​c​ ​l​a​b​e​l​s​
+						​-​ ​`​r​e​p​o​r​t​e​r​ ​=​ ​c​u​r​r​e​n​t​U​s​e​r​(​)​ ​O​R​D​E​R​ ​B​Y​ ​c​r​e​a​t​e​d​ ​D​E​S​C​`​ ​-​ ​Y​o​u​r​ ​r​e​p​o​r​t​e​d​ ​i​s​s​u​e​s​,​ ​n​e​w​e​s​t​ ​f​i​r​s​t​
+						​
+						​*​*​N​o​t​e​:​*​*​ ​F​o​r​ ​p​e​r​f​o​r​m​a​n​c​e​ ​r​e​a​s​o​n​s​,​ ​t​h​i​s​ ​f​i​e​l​d​ ​r​e​q​u​i​r​e​s​ ​a​ ​b​o​u​n​d​e​d​ ​q​u​e​r​y​ ​(​a​ ​q​u​e​r​y​ ​w​i​t​h​ ​s​e​a​r​c​h​ ​r​e​s​t​r​i​c​t​i​o​n​s​)​.​ ​U​n​b​o​u​n​d​e​d​ ​q​u​e​r​i​e​s​ ​l​i​k​e​ ​`​o​r​d​e​r​ ​b​y​ ​k​e​y​ ​d​e​s​c​`​ ​a​r​e​ ​n​o​t​ ​a​l​l​o​w​e​d​.
+							 */
+							longDesc: string
+						}
+					}
 				}
 				createIssue: {
 					/**
@@ -119482,7 +119509,7 @@ type RootTranslation = {
 				 */
 				'0': string
 				/**
-				 * T​e​a​m​ ​C​o​l​l​a​b​o​r​a​t​i​o​n
+				 * T​e​a​m​ ​C​o​m​m​u​n​i​c​a​t​i​o​n​ ​&​ ​C​h​a​t
 				 */
 				'1': string
 			}
@@ -189879,6 +189906,33 @@ export type TranslationFunctions = {
 						 */
 						'0': () => LocalizedString
 					}
+					options: {
+						jql: {
+							/**
+							 * JQL Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * JQL query to search for issues. Must be a bounded query with search restrictions.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A JQL (Jira Query Language) expression to search for issues.
+					
+						**Common JQL Examples:**
+						- `project = "MY-PROJECT"` - All issues in a project
+						- `assignee = currentUser()` - Issues assigned to current user
+						- `status = "In Progress"` - Issues with specific status
+						- `created >= -7d` - Issues created in the last 7 days
+						- `priority = High AND status != Done` - High priority open issues
+						- `labels in (bug, critical)` - Issues with specific labels
+						- `reporter = currentUser() ORDER BY created DESC` - Your reported issues, newest first
+					
+						**Note:** For performance reasons, this field requires a bounded query (a query with search restrictions). Unbounded queries like `order by key desc` are not allowed.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
 				}
 				createIssue: {
 					/**
@@ -241716,7 +241770,7 @@ export type TranslationFunctions = {
 				 */
 				'0': () => LocalizedString
 				/**
-				 * Team Collaboration
+				 * Team Communication & Chat
 				 */
 				'1': () => LocalizedString
 			}
