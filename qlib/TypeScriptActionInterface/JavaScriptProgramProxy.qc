@@ -1,7 +1,7 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 #! Qore TypeScriptActionInterface module definition
 
-/*  JavaScriptProgramProxy.qc Copyright 2024 Qore Technologies, s.r.o.
+/*  JavaScriptProgramProxy.qc Copyright 2024 - 2026 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -746,6 +746,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         on_exit global_lock.unlock();
 
         if (master_path.val()) {
+            @assert(master);
             return;
         }
 
@@ -763,6 +764,10 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             throw "TS-PROXY-ERROR", sprintf("%s: %s; cannot bind master proxy listener", master_path, strerror());
         }
 
+        if (!master) {
+            master = new Socket();
+        }
+        @assert(master);
         master.bindUNIX(master_path);
         master.listen();
         TSAI::info("Started master listener on %y", master_path);
@@ -931,21 +936,33 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                     return;
                 }
                 error("Child process aborted; restarting");
+                @assert(proc);
+                @debug("JavaScriptProgramProxy::checkRestart() detected dead child; restarting PID %d", proc.id());
                 if (rc) {
                     rc.restart();
                 }
+                bool restarted;
                 restarting = True;
                 delete al;
 
-                # run the restart unlocked
-                restartProcessIntern(restart_flags & RF_NO_EVENT ? True : False);
+                try {
+                    # run the restart unlocked
+                    @debug("JavaScriptProgramProxy::checkRestart() restart begin for PID %d", proc.id());
+                    restartProcessIntern(restart_flags & RF_NO_EVENT ? True : False);
+                    restarted = True;
+                    @debug("JavaScriptProgramProxy::checkRestart() restart complete for PID %d", proc.id());
+                } catch (hash<ExceptionInfo> ex) {
+                    @debug("JavaScriptProgramProxy::checkRestart() restart failed for PID %d: %s",
+                        proc.id(), get_exception_string(ex));
+                    error("Error restarting child process: %s", get_exception_string(ex));
+                }
 
                 al = new AutoLock(m);
                 remove restarting;
                 if (wait_restart) {
                     cond_restart.broadcast();
                 }
-                return True;
+                return restarted ? True : False;
             }
         }
         return;
@@ -953,8 +970,15 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
     # Called with no locks held
     private restartProcessIntern(*bool no_restart_event) {
+        if (ENV.TS_PROXY_TEST_FORCE_RESTART_ERROR) {
+            throw "TS-PROXY-TEST-ERROR", "Forced restart error for testing";
+        }
+        @assert(proc);
         int pid = proc.id();
         if (proc.running()) {
+            @debug {
+                info("restartProcessIntern(): terminating child PID %d", pid);
+            }
             proc.terminate();
         }
         delete s;

@@ -24,6 +24,7 @@ public class TsProxyTest inherits QUnit::Test {
         checkEnvironment();
 
         addTestCase("proxy tests", \proxyTests());
+        addTestCase("proxy restart error handling", \proxyRestartErrorHandlingTest());
 
         set_return_value(main());
     }
@@ -141,5 +142,64 @@ public class TsProxyTest inherits QUnit::Test {
                 printf("Proxy restart test passed - original PID: %d\n", original_pid);
             }
         }
+    }
+
+    private proxyRestartErrorHandlingTest() {
+        skipIfNotReady();
+
+        JavaScriptProgramProxy::init(new Mutex());
+        on_exit JavaScriptProgramProxy::shutdown();
+
+        JavaScriptProgramProxy proxy();
+        int pid = proxy.getInfo()."proxy-pid";
+        @assert(pid > 0);
+        assertTrue(pid > 0, "proxy should be running for restart test");
+
+        setenv("TS_PROXY_TEST_FORCE_RESTART_ERROR", "1");
+        on_exit unsetenv("TS_PROXY_TEST_FORCE_RESTART_ERROR");
+
+        try {
+            system(sprintf("kill -9 %d 2>/dev/null", pid));
+        } catch (hash<ExceptionInfo> ex) {
+            # ignore
+        }
+
+        bool threw = False;
+        try {
+            proxy.getDynamicOptions("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING);
+        } catch (hash<ExceptionInfo> ex) {
+            threw = True;
+        }
+        assertTrue(threw, "restart error should propagate");
+
+        unsetenv("TS_PROXY_TEST_FORCE_RESTART_ERROR");
+
+        Mutex m();
+        Condition cond();
+        bool done = False;
+        background sub () {
+            try {
+                proxy.getDynamicOptions("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING);
+            } catch (hash<ExceptionInfo> ex) {
+                # ignore
+            }
+            m.lock();
+            on_exit m.unlock();
+            done = True;
+            cond.broadcast();
+        }();
+
+        m.lock();
+        on_exit m.unlock();
+        date start = now_us();
+        while (!done) {
+            if (!cond.wait(m, 5s)) {
+                break;
+            }
+            if (now_us() - start > 5s) {
+                break;
+            }
+        }
+        assertTrue(done, "restart retry should not deadlock");
     }
 }
