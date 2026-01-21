@@ -2,7 +2,7 @@
 
 const TeamsAppEn = {
   displayName: 'Microsoft Teams',
-  groups: ['Team Communication & Chat'],
+  groups: ['Messaging & Real-time Communication'],
   shortDesc: 'Collaborate with your team using channels, meetings, and messages',
   longDesc:
     'Microsoft Teams is a collaboration platform that enables messaging, file sharing, video meetings, and app integration within your organization.',

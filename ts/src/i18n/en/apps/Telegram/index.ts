@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 const TelegramAppEn = {
   displayName: 'Telegram',
-  groups: ['Team Communication & Chat'],
+  groups: ['Messaging & Real-time Communication'],
   shortDesc: 'Connect and interact with Telegram via a bot',
   longDesc:
     'Connect a Telegram Bot using its Bot Token to send messages and handle incoming updates. Authentication is done solely with the Bot Token issued by @BotFather; no user login is required.',
