@@ -1,6 +1,6 @@
 const HelpScoutAppEn = {
   displayName: 'Help Scout',
-  groups: ['Customer Support'],
+  groups: ['Customer Support & Helpdesk'],
   connectionMessage: {
     title: 'OAuth Connection',
     content:

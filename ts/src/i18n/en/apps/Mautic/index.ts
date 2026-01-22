@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 const MauticAppEn = {
   displayName: 'Mautic',
-  groups: ['Marketing Automation', 'CRM', 'Email & Email Marketing'],
+  groups: ['Marketing Automation', 'CRM & Sales Management', 'Email & Email Marketing'],
   shortDesc: 'Open-source marketing automation platform',
   longDesc:
     'Connect your Mautic instance to automate marketing campaigns, manage contacts and companies, segment audiences, and send targeted emails. Build powerful marketing workflows with full control over your data.',

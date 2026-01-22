@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 const OpenWeatherMapAppEn = {
   displayName: 'OpenWeatherMap',
-  groups: ['Weather', 'Data & Analytics'],
+  groups: ['Weather', 'Analytics & Reporting'],
   shortDesc: 'Access current weather data and forecasts for any location worldwide',
   longDesc: `Connect to OpenWeatherMap to retrieve real-time weather data and 5-day forecasts for any location on Earth. Get comprehensive weather information including temperature, humidity, wind speed, pressure, and weather conditions. Support for multiple location input methods (city name, coordinates, or zip code) and customizable units (metric, imperial, or standard). Ideal for weather-aware applications, travel planning, agricultural monitoring, and location-based services within your Qore workflows.`,
   connectionMessage: {

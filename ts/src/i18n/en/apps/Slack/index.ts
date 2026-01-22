@@ -2,7 +2,7 @@ import type { TAppGroups } from '../../../groups';
 
 const SlackAppEn = {
   displayName: 'Slack',
-  groups: ['Communication', 'Team Communication & Chat'] satisfies TAppGroups,
+  groups: ['Messaging & Real-time Communication'] satisfies TAppGroups,
   shortDesc:
     'Connect with Slack to send messages, manage channels, and automate team communication',
   longDesc:

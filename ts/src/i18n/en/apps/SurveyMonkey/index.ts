@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 const SurveyMonkeyAppEn = {
   displayName: 'SurveyMonkey',
-  groups: ['Survey & Feedback'],
+  groups: ['Forms, Surveys & Scheduling'],
   shortDesc: 'Online survey platform for collecting feedback and responses',
   longDesc: `Connect your SurveyMonkey account to automate survey management, collect responses, and manage contacts. Create collectors, send surveys, retrieve responses, and set up webhooks for real-time response notifications all from within Qore.`,
   triggers: {

@@ -22,25 +22,19 @@ export const APP_GROUPS = [
   'DevOps & Cloud Infrastructure',
 
   // Communication
-  'Communication',
-  'Email & Communication',
   'Email & Email Marketing',
   'Messaging & Real-time Communication',
   'Notifications & Alerts',
-  'Team Communication & Chat',
   'Video Conferencing & Meetings',
 
   // CRM & Sales
-  'CRM',
   'CRM & Sales Management',
 
   // Customer Support
-  'Customer Support',
   'Customer Support & Helpdesk',
 
   // Data & Analytics
   'Analytics & Reporting',
-  'Data & Analytics',
 
   // Design & Creative
   'Design & Creative Tools',
@@ -59,7 +53,6 @@ export const APP_GROUPS = [
 
   // Forms & Surveys
   'Forms, Surveys & Scheduling',
-  'Survey & Feedback',
 
   // HR & People
   'HR & People Management',

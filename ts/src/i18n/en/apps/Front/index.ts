@@ -1,6 +1,6 @@
 const FrontAppEn = {
   displayName: 'Front',
-  groups: ['Customer Support', 'Communication'],
+  groups: ['Customer Support & Helpdesk', 'Messaging & Real-time Communication'],
   shortDesc: 'Connect with Front to manage shared inboxes, contacts, and customer communications',
   longDesc:
     'Integrate with Front to manage your team shared inboxes, contacts, accounts, and customer conversations. Front is a customer communication platform that brings email and messaging into a shared inbox. This integration enables you to automate contact management, organize accounts, and streamline team collaboration.',
