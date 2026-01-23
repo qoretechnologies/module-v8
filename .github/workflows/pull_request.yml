@@ -323,6 +323,7 @@ jobs:
       # Build V8-module
       - name: Build V8-module
         run: |
+          git submodule update --init
           mkdir build
           cd build
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
