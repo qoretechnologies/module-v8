@@ -279,6 +279,9 @@ int QoreV8Program::saveQoreReference(const QoreValue& rv, ExceptionSink& xsink) 
         args->push(rv.refSelf(), &xsink);
 
         QoreV8ProgramHelper v8h(&xsink, this);
+        if (!v8h) {
+            return -1;  // Exception already raised in v8h constructor
+        }
         QoreV8StackLocationHelper slh(v8h);
 
         save_ref_callback->execValue(*args, &xsink);
