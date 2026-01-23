@@ -38,6 +38,7 @@
 #include <set>
 #include <map>
 #include <memory>
+#include <optional>
 
 class QoreV8Program : public AbstractQoreProgramExternalData {
     friend class QoreV8ProgramHelper;
@@ -233,10 +234,7 @@ public:
             locker(pgm->isolate),
             isolate_scope(pgm->isolate),
             handle_scope(pgm->isolate),
-            tryCatch(pgm->isolate),
-            //origin(pgm->isolate, pgm->label.Get(pgm->isolate)),
-            context(pgm->ctx.Get(pgm->isolate)),
-            context_scope(context) {
+            tryCatch(pgm->isolate) {
         AutoLocker al(pgm->m);
         if (!pgm->valid) {
             if (!silent) {
@@ -262,6 +260,10 @@ public:
         ++pgm->opcount;
         this->xsink = xsink;
         this->pgm = pgm;
+        // Initialize context and context_scope AFTER validity check to avoid crash
+        // if ctx has been Reset() by another thread
+        context = pgm->ctx.Get(pgm->isolate);
+        context_scope.emplace(context);
     }
 
     DLLLOCAL ~QoreV8ProgramHelper() {
@@ -308,7 +310,7 @@ private:
     v8::TryCatch tryCatch;
     //v8::ScriptOrigin origin;
     v8::Local<v8::Context> context;
-    v8::Context::Scope context_scope;
+    std::optional<v8::Context::Scope> context_scope;
 };
 
 class QoreV8Dereferencer;
