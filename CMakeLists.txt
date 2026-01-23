@@ -28,6 +28,27 @@ find_package(Qore 2.0 REQUIRED)
 
 find_library(LIBNODE NAMES node HINTS ENV NODE_LIB_DIR REQUIRED)
 
+# Find libjsig for JVM signal chaining (optional - needed when both V8 and JVM are used)
+# This prevents signal handler conflicts between V8 and JVM
+# Search common JVM installation paths
+file(GLOB JAVA_LIB_PATHS
+    /usr/lib/jvm/*/lib
+    /usr/lib/jvm/*/lib/server
+    /usr/lib64/jvm/*/lib
+    /usr/lib64/jvm/*/lib/server
+)
+find_library(LIBJSIG NAMES jsig
+    HINTS
+        ENV JAVA_HOME
+        ${JAVA_LIB_PATHS}
+    PATH_SUFFIXES lib lib/server
+)
+if (LIBJSIG)
+    message(STATUS "Found libjsig: ${LIBJSIG} - enabling JVM signal chaining support")
+else()
+    message(STATUS "libjsig not found - JVM signal chaining support disabled (OK if JVM not installed)")
+endif()
+
 if (DEFINED ENV{NODE_INCLUDE_DIR})
     include_directories(BEFORE "$ENV{NODE_INCLUDE_DIR}")
 elseif(EXISTS /usr/include/node/node.h)
@@ -123,7 +144,11 @@ if (DEFINED ENV{DOXYGEN_EXECUTABLE})
 endif()
 
 set(MODULE_DOX_INPUT ${CMAKE_BINARY_DIR})
-qore_external_binary_module(${module_name} ${PROJECT_VERSION} ${LIBNODE})
+if (LIBJSIG)
+    qore_external_binary_module(${module_name} ${PROJECT_VERSION} ${LIBNODE} ${LIBJSIG})
+else()
+    qore_external_binary_module(${module_name} ${PROJECT_VERSION} ${LIBNODE})
+endif()
 
 qore_user_modules("${QMOD}")
 qore_external_user_module("qlib/TypeScriptProxy" "")
