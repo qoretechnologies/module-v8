@@ -305,6 +305,7 @@ jobs:
         run: |
           git clone https://github.com/qoretechnologies/module-json.git
           cd module-json
+          git submodule update --init
           mkdir build
           cd build
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
