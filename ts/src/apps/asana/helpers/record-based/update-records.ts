@@ -18,6 +18,7 @@ import {
   getAsanaCustomFields,
   getAsanaProjectByPath,
   MAX_PAGE_SIZE,
+  normalizeSetToSingleRecord,
 } from './constants';
 
 type TTask = {
@@ -204,16 +205,8 @@ export const updateAsanaRecords: TQoreUpdateRecordsFunction = async (context, se
       return 0;
     }
 
-    // Convert set data from column format to object
-    const setArray = mapColumnFormatToObject(set);
-
-    // Validate that exactly one record is provided in `set`
-    if (setArray.length > 1) {
-      throw new AsanaError(
-        `Asana update supports a single record in 'set'; received ${setArray.length} records.`
-      );
-    }
-    const updateData = setArray[0] || {};
+    // Normalize set data to a single flat object (handles both column format and plain objects)
+    const updateData = normalizeSetToSingleRecord(set, mapColumnFormatToObject);
 
     // Transform update data to Asana payload
     const updatePayload = transformUpdateToPayload(updateData, customFieldMap);

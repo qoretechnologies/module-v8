@@ -19,41 +19,9 @@ import {
   CUSTOM_FIELD_PREFIX,
   getAsanaCustomFields,
   getAsanaProjectByPath,
+  TAsanaTask,
+  transformTaskToRecord,
 } from './constants';
-
-type TTask = {
-  gid: string;
-  name: string;
-  notes?: string;
-  html_notes?: string;
-  completed?: boolean;
-  completed_at?: string | null;
-  due_on?: string | null;
-  due_at?: string | null;
-  start_on?: string | null;
-  start_at?: string | null;
-  assignee?: { gid: string; name?: string } | null;
-  followers?: Array<{ gid: string }>;
-  projects?: Array<{ gid: string }>;
-  tags?: Array<{ gid: string }>;
-  parent?: { gid: string } | null;
-  created_at?: string;
-  modified_at?: string;
-  permalink_url?: string;
-  resource_subtype?: string;
-  custom_fields?: Array<{
-    gid: string;
-    name: string;
-    resource_subtype?: string;
-    display_value?: string;
-    text_value?: string;
-    number_value?: number;
-    enum_value?: { gid: string; name: string } | null;
-    multi_enum_values?: Array<{ gid: string; name: string }>;
-    people_value?: Array<{ gid: string }>;
-    date_value?: { date: string } | null;
-  }>;
-};
 
 /**
  * Transform a record to Asana task payload format
@@ -186,66 +154,6 @@ const transformRecordToTaskPayload = (
 };
 
 /**
- * Transform an Asana task response to flat record format
- */
-const transformTaskToRecord = (task: TTask): Record<string, unknown> => {
-  const record: Record<string, unknown> = {
-    id: task.gid,
-    name: task.name,
-    notes: task.notes || '',
-    html_notes: task.html_notes || '',
-    completed: task.completed || false,
-    completed_at: task.completed_at || null,
-    due_on: task.due_on || null,
-    due_at: task.due_at || null,
-    start_on: task.start_on || null,
-    start_at: task.start_at || null,
-    assignee: task.assignee?.gid || null,
-    followers: task.followers?.map((f) => f.gid) || [],
-    projects: task.projects?.map((p) => p.gid) || [],
-    tags: task.tags?.map((t) => t.gid) || [],
-    parent: task.parent?.gid || null,
-    created_at: task.created_at || null,
-    modified_at: task.modified_at || null,
-    permalink_url: task.permalink_url || '',
-    resource_subtype: task.resource_subtype || 'default_task',
-  };
-
-  // Flatten custom fields
-  if (task.custom_fields) {
-    for (const cf of task.custom_fields) {
-      const fieldKey = `${CUSTOM_FIELD_PREFIX}${cf.name}`;
-      const fieldType = cf.resource_subtype;
-
-      switch (fieldType) {
-        case 'text':
-          record[fieldKey] = cf.text_value || cf.display_value || null;
-          break;
-        case 'number':
-          record[fieldKey] = cf.number_value ?? null;
-          break;
-        case 'enum':
-          record[fieldKey] = cf.enum_value?.name || null;
-          break;
-        case 'multi_enum':
-          record[fieldKey] = cf.multi_enum_values?.map((v) => v.name) || [];
-          break;
-        case 'people':
-          record[fieldKey] = cf.people_value?.map((p) => p.gid) || [];
-          break;
-        case 'date':
-          record[fieldKey] = cf.date_value?.date || null;
-          break;
-        default:
-          record[fieldKey] = cf.display_value || null;
-      }
-    }
-  }
-
-  return record;
-};
-
-/**
  * Create tasks (records) in an Asana project.
  * Tasks are created sequentially since Asana does not support batch creation.
  */
@@ -292,7 +200,7 @@ export const createAsanaRecords: TQoreCreateRecordsFunction = async (context, re
         throw new AsanaError('Task name is required');
       }
 
-      const createdTask = await asanaClient.post<{ data: TTask }>(
+      const createdTask = await asanaClient.post<{ data: TAsanaTask }>(
         'tasks',
         { data: taskPayload },
         { token }

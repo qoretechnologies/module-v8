@@ -6,7 +6,15 @@
  * Copyright 2026 Qore Technologies, s.r.o.
  */
 
-export { AsanaError, clearMappingsCache, getAsanaProjectByPath, getAsanaCustomFields } from './constants';
+export {
+  AsanaError,
+  clearMappingsCache,
+  getAsanaProjectByPath,
+  getAsanaCustomFields,
+  TAsanaTask,
+  transformTaskToRecord,
+  normalizeSetToSingleRecord,
+} from './constants';
 export { getAsanaTableList } from './get-table-list';
 export { getAsanaRecordType, getCustomFieldByName } from './get-record-type';
 export { getAsanaExpressions } from './get-expressions';
