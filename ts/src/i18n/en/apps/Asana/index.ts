@@ -329,6 +329,73 @@ const AsanaAppEn = {
 
     getTimePeriods: { groups: ['Other'] },
   },
+  expressions: {
+    '&&': {
+      displayName: 'And',
+      shortDesc: 'Logical AND operator',
+      longDesc: 'Combines multiple conditions where all must be true',
+    },
+    '||': {
+      displayName: 'Or',
+      shortDesc: 'Logical OR operator',
+      longDesc: 'Combines multiple conditions where at least one must be true',
+    },
+    '==': {
+      displayName: 'Equals',
+      shortDesc: 'Field equals value',
+      longDesc: 'Matches records where the field equals the specified value',
+    },
+    '!=': {
+      displayName: 'Not Equals',
+      shortDesc: 'Field does not equal value',
+      longDesc: 'Matches records where the field does not equal the specified value',
+    },
+    '>': {
+      displayName: 'Greater Than',
+      shortDesc: 'Field is greater than value',
+      longDesc: 'Matches records where the field value is greater than the specified value',
+    },
+    '>=': {
+      displayName: 'Greater Than or Equal',
+      shortDesc: 'Field is greater than or equal to value',
+      longDesc: 'Matches records where the field value is greater than or equal to the specified value',
+    },
+    '<': {
+      displayName: 'Less Than',
+      shortDesc: 'Field is less than value',
+      longDesc: 'Matches records where the field value is less than the specified value',
+    },
+    '<=': {
+      displayName: 'Less Than or Equal',
+      shortDesc: 'Field is less than or equal to value',
+      longDesc: 'Matches records where the field value is less than or equal to the specified value',
+    },
+    'is-set': {
+      displayName: 'Is Set',
+      shortDesc: 'Field has a value',
+      longDesc: 'Matches records where the field has a value (is not empty)',
+    },
+    'is-not-set': {
+      displayName: 'Is Not Set',
+      shortDesc: 'Field has no value',
+      longDesc: 'Matches records where the field has no value (is empty)',
+    },
+    contains: {
+      displayName: 'Contains',
+      shortDesc: 'Field contains value',
+      longDesc: 'Matches records where the field contains the specified substring',
+    },
+    'starts-with': {
+      displayName: 'Starts With',
+      shortDesc: 'Field starts with value',
+      longDesc: 'Matches records where the field value starts with the specified prefix',
+    },
+    'ends-with': {
+      displayName: 'Ends With',
+      shortDesc: 'Field ends with value',
+      longDesc: 'Matches records where the field value ends with the specified suffix',
+    },
+  },
 };
 
 export default AsanaAppEn;

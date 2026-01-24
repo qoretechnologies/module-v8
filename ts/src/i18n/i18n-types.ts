@@ -25305,6 +25305,190 @@ type RootTranslation = {
 					}
 				}
 			}
+			expressions: {
+				'&&': {
+					/**
+					 * A​n​d
+					 */
+					displayName: string
+					/**
+					 * L​o​g​i​c​a​l​ ​A​N​D​ ​o​p​e​r​a​t​o​r
+					 */
+					shortDesc: string
+					/**
+					 * C​o​m​b​i​n​e​s​ ​m​u​l​t​i​p​l​e​ ​c​o​n​d​i​t​i​o​n​s​ ​w​h​e​r​e​ ​a​l​l​ ​m​u​s​t​ ​b​e​ ​t​r​u​e
+					 */
+					longDesc: string
+				}
+				'||': {
+					/**
+					 * O​r
+					 */
+					displayName: string
+					/**
+					 * L​o​g​i​c​a​l​ ​O​R​ ​o​p​e​r​a​t​o​r
+					 */
+					shortDesc: string
+					/**
+					 * C​o​m​b​i​n​e​s​ ​m​u​l​t​i​p​l​e​ ​c​o​n​d​i​t​i​o​n​s​ ​w​h​e​r​e​ ​a​t​ ​l​e​a​s​t​ ​o​n​e​ ​m​u​s​t​ ​b​e​ ​t​r​u​e
+					 */
+					longDesc: string
+				}
+				'==': {
+					/**
+					 * E​q​u​a​l​s
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​e​q​u​a​l​s​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'!=': {
+					/**
+					 * N​o​t​ ​E​q​u​a​l​s
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'>': {
+					/**
+					 * G​r​e​a​t​e​r​ ​T​h​a​n
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'>=': {
+					/**
+					 * G​r​e​a​t​e​r​ ​T​h​a​n​ ​o​r​ ​E​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'<': {
+					/**
+					 * L​e​s​s​ ​T​h​a​n
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'<=': {
+					/**
+					 * L​e​s​s​ ​T​h​a​n​ ​o​r​ ​E​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'is-set': {
+					/**
+					 * I​s​ ​S​e​t
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​(​i​s​ ​n​o​t​ ​e​m​p​t​y​)
+					 */
+					longDesc: string
+				}
+				'is-not-set': {
+					/**
+					 * I​s​ ​N​o​t​ ​S​e​t
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​h​a​s​ ​n​o​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​h​a​s​ ​n​o​ ​v​a​l​u​e​ ​(​i​s​ ​e​m​p​t​y​)
+					 */
+					longDesc: string
+				}
+				contains: {
+					/**
+					 * C​o​n​t​a​i​n​s
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​u​b​s​t​r​i​n​g
+					 */
+					longDesc: string
+				}
+				'starts-with': {
+					/**
+					 * S​t​a​r​t​s​ ​W​i​t​h
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​s​t​a​r​t​s​ ​w​i​t​h​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​s​t​a​r​t​s​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​p​r​e​f​i​x
+					 */
+					longDesc: string
+				}
+				'ends-with': {
+					/**
+					 * E​n​d​s​ ​W​i​t​h
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​e​n​d​s​ ​w​i​t​h​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​e​n​d​s​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​u​f​f​i​x
+					 */
+					longDesc: string
+				}
+			}
 		}
 		Todoist: {
 			/**
@@ -42070,7 +42254,7 @@ type RootTranslation = {
 				 */
 				'0': string
 				/**
-				 * D​a​t​a​ ​&​ ​A​n​a​l​y​t​i​c​s
+				 * A​n​a​l​y​t​i​c​s​ ​&​ ​R​e​p​o​r​t​i​n​g
 				 */
 				'1': string
 			}
@@ -48769,7 +48953,7 @@ type RootTranslation = {
 			displayName: string
 			groups: {
 				/**
-				 * T​e​a​m​ ​C​o​m​m​u​n​i​c​a​t​i​o​n​ ​&​ ​C​h​a​t
+				 * M​e​s​s​a​g​i​n​g​ ​&​ ​R​e​a​l​-​t​i​m​e​ ​C​o​m​m​u​n​i​c​a​t​i​o​n
 				 */
 				'0': string
 				/**
@@ -64035,7 +64219,7 @@ type RootTranslation = {
 				 */
 				'0': string
 				/**
-				 * C​R​M
+				 * C​R​M​ ​&​ ​S​a​l​e​s​ ​M​a​n​a​g​e​m​e​n​t
 				 */
 				'1': string
 				/**
@@ -76052,7 +76236,7 @@ type RootTranslation = {
 			displayName: string
 			groups: {
 				/**
-				 * C​u​s​t​o​m​e​r​ ​S​u​p​p​o​r​t
+				 * C​u​s​t​o​m​e​r​ ​S​u​p​p​o​r​t​ ​&​ ​H​e​l​p​d​e​s​k
 				 */
 				'0': string
 			}
@@ -84461,11 +84645,11 @@ type RootTranslation = {
 			displayName: string
 			groups: {
 				/**
-				 * C​u​s​t​o​m​e​r​ ​S​u​p​p​o​r​t
+				 * C​u​s​t​o​m​e​r​ ​S​u​p​p​o​r​t​ ​&​ ​H​e​l​p​d​e​s​k
 				 */
 				'0': string
 				/**
-				 * C​o​m​m​u​n​i​c​a​t​i​o​n
+				 * M​e​s​s​a​g​i​n​g​ ​&​ ​R​e​a​l​-​t​i​m​e​ ​C​o​m​m​u​n​i​c​a​t​i​o​n
 				 */
 				'1': string
 			}
@@ -91073,7 +91257,7 @@ type RootTranslation = {
 			displayName: string
 			groups: {
 				/**
-				 * T​e​a​m​ ​C​o​m​m​u​n​i​c​a​t​i​o​n​ ​&​ ​C​h​a​t
+				 * M​e​s​s​a​g​i​n​g​ ​&​ ​R​e​a​l​-​t​i​m​e​ ​C​o​m​m​u​n​i​c​a​t​i​o​n
 				 */
 				'0': string
 			}
@@ -111164,7 +111348,7 @@ type RootTranslation = {
 			displayName: string
 			groups: {
 				/**
-				 * T​e​a​m​ ​C​o​m​m​u​n​i​c​a​t​i​o​n​ ​&​ ​C​h​a​t
+				 * M​e​s​s​a​g​i​n​g​ ​&​ ​R​e​a​l​-​t​i​m​e​ ​C​o​m​m​u​n​i​c​a​t​i​o​n
 				 */
 				'0': string
 			}
@@ -113809,7 +113993,7 @@ type RootTranslation = {
 			displayName: string
 			groups: {
 				/**
-				 * E​m​a​i​l​ ​&​ ​C​o​m​m​u​n​i​c​a​t​i​o​n
+				 * E​m​a​i​l​ ​&​ ​E​m​a​i​l​ ​M​a​r​k​e​t​i​n​g
 				 */
 				'0': string
 			}
@@ -119689,13 +119873,9 @@ type RootTranslation = {
 			displayName: string
 			groups: {
 				/**
-				 * C​o​m​m​u​n​i​c​a​t​i​o​n
+				 * M​e​s​s​a​g​i​n​g​ ​&​ ​R​e​a​l​-​t​i​m​e​ ​C​o​m​m​u​n​i​c​a​t​i​o​n
 				 */
 				'0': string
-				/**
-				 * T​e​a​m​ ​C​o​m​m​u​n​i​c​a​t​i​o​n​ ​&​ ​C​h​a​t
-				 */
-				'1': string
 			}
 			/**
 			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​S​l​a​c​k​ ​t​o​ ​s​e​n​d​ ​m​e​s​s​a​g​e​s​,​ ​m​a​n​a​g​e​ ​c​h​a​n​n​e​l​s​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​t​e​a​m​ ​c​o​m​m​u​n​i​c​a​t​i​o​n
@@ -120815,7 +120995,7 @@ type RootTranslation = {
 			displayName: string
 			groups: {
 				/**
-				 * S​u​r​v​e​y​ ​&​ ​F​e​e​d​b​a​c​k
+				 * F​o​r​m​s​,​ ​S​u​r​v​e​y​s​ ​&​ ​S​c​h​e​d​u​l​i​n​g
 				 */
 				'0': string
 			}
@@ -147750,6 +147930,190 @@ export type TranslationFunctions = {
 					}
 				}
 			}
+			expressions: {
+				'&&': {
+					/**
+					 * And
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Logical AND operator
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Combines multiple conditions where all must be true
+					 */
+					longDesc: () => LocalizedString
+				}
+				'||': {
+					/**
+					 * Or
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Logical OR operator
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Combines multiple conditions where at least one must be true
+					 */
+					longDesc: () => LocalizedString
+				}
+				'==': {
+					/**
+					 * Equals
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field equals value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field equals the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'!=': {
+					/**
+					 * Not Equals
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field does not equal value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field does not equal the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'>': {
+					/**
+					 * Greater Than
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is greater than value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is greater than the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'>=': {
+					/**
+					 * Greater Than or Equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is greater than or equal to value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is greater than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'<': {
+					/**
+					 * Less Than
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is less than value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is less than the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'<=': {
+					/**
+					 * Less Than or Equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is less than or equal to value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is less than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'is-set': {
+					/**
+					 * Is Set
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field has a value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field has a value (is not empty)
+					 */
+					longDesc: () => LocalizedString
+				}
+				'is-not-set': {
+					/**
+					 * Is Not Set
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field has no value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field has no value (is empty)
+					 */
+					longDesc: () => LocalizedString
+				}
+				contains: {
+					/**
+					 * Contains
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field contains value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field contains the specified substring
+					 */
+					longDesc: () => LocalizedString
+				}
+				'starts-with': {
+					/**
+					 * Starts With
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field starts with value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value starts with the specified prefix
+					 */
+					longDesc: () => LocalizedString
+				}
+				'ends-with': {
+					/**
+					 * Ends With
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field ends with value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value ends with the specified suffix
+					 */
+					longDesc: () => LocalizedString
+				}
+			}
 		}
 		Todoist: {
 			/**
@@ -164515,7 +164879,7 @@ export type TranslationFunctions = {
 				 */
 				'0': () => LocalizedString
 				/**
-				 * Data & Analytics
+				 * Analytics & Reporting
 				 */
 				'1': () => LocalizedString
 			}
@@ -171214,7 +171578,7 @@ export type TranslationFunctions = {
 			displayName: () => LocalizedString
 			groups: {
 				/**
-				 * Team Communication & Chat
+				 * Messaging & Real-time Communication
 				 */
 				'0': () => LocalizedString
 				/**
@@ -186480,7 +186844,7 @@ export type TranslationFunctions = {
 				 */
 				'0': () => LocalizedString
 				/**
-				 * CRM
+				 * CRM & Sales Management
 				 */
 				'1': () => LocalizedString
 				/**
@@ -198497,7 +198861,7 @@ export type TranslationFunctions = {
 			displayName: () => LocalizedString
 			groups: {
 				/**
-				 * Customer Support
+				 * Customer Support & Helpdesk
 				 */
 				'0': () => LocalizedString
 			}
@@ -206906,11 +207270,11 @@ export type TranslationFunctions = {
 			displayName: () => LocalizedString
 			groups: {
 				/**
-				 * Customer Support
+				 * Customer Support & Helpdesk
 				 */
 				'0': () => LocalizedString
 				/**
-				 * Communication
+				 * Messaging & Real-time Communication
 				 */
 				'1': () => LocalizedString
 			}
@@ -213518,7 +213882,7 @@ export type TranslationFunctions = {
 			displayName: () => LocalizedString
 			groups: {
 				/**
-				 * Team Communication & Chat
+				 * Messaging & Real-time Communication
 				 */
 				'0': () => LocalizedString
 			}
@@ -233609,7 +233973,7 @@ export type TranslationFunctions = {
 			displayName: () => LocalizedString
 			groups: {
 				/**
-				 * Team Communication & Chat
+				 * Messaging & Real-time Communication
 				 */
 				'0': () => LocalizedString
 			}
@@ -236254,7 +236618,7 @@ export type TranslationFunctions = {
 			displayName: () => LocalizedString
 			groups: {
 				/**
-				 * Email & Communication
+				 * Email & Email Marketing
 				 */
 				'0': () => LocalizedString
 			}
@@ -242134,13 +242498,9 @@ export type TranslationFunctions = {
 			displayName: () => LocalizedString
 			groups: {
 				/**
-				 * Communication
+				 * Messaging & Real-time Communication
 				 */
 				'0': () => LocalizedString
-				/**
-				 * Team Communication & Chat
-				 */
-				'1': () => LocalizedString
 			}
 			/**
 			 * Connect with Slack to send messages, manage channels, and automate team communication
@@ -243260,7 +243620,7 @@ export type TranslationFunctions = {
 			displayName: () => LocalizedString
 			groups: {
 				/**
-				 * Survey & Feedback
+				 * Forms, Surveys & Scheduling
 				 */
 				'0': () => LocalizedString
 			}

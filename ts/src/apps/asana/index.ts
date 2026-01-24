@@ -1,4 +1,4 @@
-import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import { TQoreAppWithActions, TQoreRecordBasedApp } from '@qoretechnologies/ts-toolkit';
 import {
   buildActionsFromSwaggerSchema,
   mapActionsToApp,
@@ -9,6 +9,16 @@ import { Locales } from '../../i18n/i18n-types';
 import asana from '../../schemas/asana.swagger.json';
 import { ASANA_ALLOWED_PATHS, ASANA_APP_NAME } from './constants';
 import * as ASANA_TRIGGERS from './triggers';
+
+// Record-based helpers
+import { createAsanaRecords } from './helpers/record-based/create-records';
+import { deleteAsanaRecords } from './helpers/record-based/delete-records';
+import { getAsanaExpressions } from './helpers/record-based/get-expressions';
+import { getAsanaRecordType } from './helpers/record-based/get-record-type';
+import { AsanaSearchOptions } from './helpers/record-based/get-search-options';
+import { getAsanaTableList } from './helpers/record-based/get-table-list';
+import { searchAsanaRecords } from './helpers/record-based/search-records';
+import { updateAsanaRecords } from './helpers/record-based/update-records';
 
 export const ASANA_ACTIONS = buildActionsFromSwaggerSchema({
   schema: asana as any,
@@ -61,4 +71,13 @@ export default (locale: Locales) =>
       ping_method: 'GET',
       ping_path: '/api/1.0/users/me',
     },
-  }) satisfies TQoreAppWithActions;
+    // Record-based helpers
+    get_table_list: getAsanaTableList,
+    expressions: getAsanaExpressions(locale),
+    get_record_type: getAsanaRecordType,
+    search_records: searchAsanaRecords,
+    search_options: AsanaSearchOptions,
+    create_records: createAsanaRecords,
+    update_records: updateAsanaRecords,
+    delete_records: deleteAsanaRecords,
+  }) satisfies TQoreRecordBasedApp & TQoreAppWithActions;
