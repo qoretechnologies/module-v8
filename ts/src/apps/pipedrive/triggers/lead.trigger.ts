@@ -49,7 +49,7 @@ export const pipedriveLeadDataType = {
         type: 'string',
       },
       is_archived: {
-        type: 'boolean',
+        type: 'bool',
       },
       label_ids: {
         type: {
@@ -87,7 +87,7 @@ export const pipedriveLeadDataType = {
         type: 'string',
       },
       was_seen: {
-        type: 'boolean',
+        type: 'bool',
       },
       value: {
         type: {

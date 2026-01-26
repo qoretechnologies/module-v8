@@ -1,7 +1,7 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 #! Qore TypeScriptActionInterface module definition
 
-/*  TypeScriptActionApiWithSchemaDataProvider.qc Copyright 2024 Qore Technologies, s.r.o.
+/*  TypeScriptActionApiWithSchemaDataProvider.qc Copyright 2024 - 2026 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -24,7 +24,7 @@
 
 #! Main namespace for the TypeScriptActionInterface module
 public namespace TypeScriptActionInterface {
-#! Generic API data provider for TypeScript actions based on a Swagger schema
+#! Generic API data provider for TypeScript actions based on a REST schema (Swagger 2.0 or OpenAPI 3.0/3.1)
 public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptActionApiDataProvider {
     public {
         #! Provider info
@@ -40,14 +40,14 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
     }
 
     private {
-        #! Optional Swagger schema label
-        *string swagger_schema;
+        #! Optional REST schema label
+        *string rest_schema;
 
-        #! Swagger path
-        string swagger_path;
+        #! REST schema path
+        string schema_path;
 
         #! API data provider
-        SwaggerRequestDataProvider prov;
+        RestSchemaRequestDataProvider prov;
 
         #! Path vars
         *hash<string, bool> path_vars;
@@ -61,7 +61,10 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         #! If the response only has a body key
         bool res_only_body;
 
-        #! Connection to Swagger path option map
+        #! Whether to include response headers in the response (default: True for backwards compatibility)
+        bool include_response_headers = True;
+
+        #! Connection to REST schema path option map
         *hash<string, string> conn_opt_map;
 
         #! Query option set
@@ -76,6 +79,9 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         #! Saved option override info
         *hash<auto> override_options_save;
 
+        #! Saved ignore options list
+        *list<auto> ignore_options_save;
+
         #! Saved action attributes
         *hash<auto> action_save;
 
@@ -89,7 +95,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         *hash<AsyncCallInfo> response_data_converter;
 
         #! Global request type info per action for dynamic types: app-action -> type info
-        static hash<string, AbstractDataProviderType> grtmap;
+        static hash<string, hash<TypeProviderInfo>> grtmap;
 
         #! Info on flattened request types: request key -> top-level key -> actual location
         static hash<string, *hash<string, list<string>>> reqmap;
@@ -102,17 +108,19 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
     }
 
     #! Creates the object from the arguments
-    constructor(reference<hash<auto>> action, string swagger_path, *hash<AsyncCallInfo> api,
+    constructor(reference<hash<auto>> action, string schema_path, *hash<AsyncCallInfo> api,
             *hash<string, bool> path_vars, *hash<string, bool> independent_path_vars,
-            *hash<string, string> conn_opt_map, *hash<auto> override_options, ActionFunctionContext fctx,
-            *hash<AsyncCallInfo> get_dynamic_request_type, *hash<AsyncCallInfo> get_dynamic_response_type,
-            *hash<AsyncCallInfo> request_data_converter, *hash<AsyncCallInfo> response_data_converter,
-            *AbstractDataProviderType request_type, *AbstractDataProviderType response_type)
+            *hash<string, string> conn_opt_map, *hash<auto> override_options, *softlist<auto> ignore_options,
+            ActionFunctionContext fctx, *hash<AsyncCallInfo> get_dynamic_request_type,
+            *hash<AsyncCallInfo> get_dynamic_response_type, *hash<AsyncCallInfo> request_data_converter,
+            *hash<AsyncCallInfo> response_data_converter, *AbstractDataProviderType request_type,
+            *AbstractDataProviderType response_type, bool include_response_headers = True)
             : TypeScriptActionApiDataProvider(action.action, api, fctx, get_dynamic_request_type,
             get_dynamic_response_type) {
-        self.swagger_schema = remove action.swagger_schema;
-        swagger_path =~ s/^\///;
-        self.swagger_path = swagger_path;
+        self.include_response_headers = include_response_headers;
+        self.rest_schema = remove action.openapi_schema;
+        schema_path =~ s/^\///;
+        self.schema_path = schema_path;
         self.path_vars = path_vars;
         self.conn_opt_map = conn_opt_map;
         self.request_data_converter = request_data_converter;
@@ -134,9 +142,11 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 info += action_save;
                 if (request_type_info.type && (*hash<string, AbstractDataField> fields =
                     request_type_info.type.getFields())) {
-                    info.options = DataProviderActionCatalog::getActionOptionFromFields(fields);
+                    info.options = DataProviderActionCatalog::getActionOptionFromFields(fields) - ignore_options;
                 }
             };
+        } else if (ignore_options) {
+            ignore_options_save = ignore_options;
         }
         if (request_type) {
             if (override_options) {
@@ -149,7 +159,18 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             }
             request_type_done = True;
             string key = sprintf("%s-%s", action.app, action.action);
-            request_type_info.type = grtmap{key} = request_type;
+            grtmap{key} = <TypeProviderInfo>{
+                "type": request_type,
+                "prov": self,
+            };
+            request_type_info.type = request_type;
+        } else if (!override_options && !action.options) {
+            NoIoHelper nih();
+            createRequestType();
+            if (request_type_info.type && (*hash<string, AbstractDataField> fields =
+                request_type_info.type.getFields())) {
+                action.options = DataProviderActionCatalog::getActionOptionFromFields(fields);
+            }
         }
         if (response_type) {
             if (get_dynamic_response_type) {
@@ -300,7 +321,17 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         return TypeScriptActionApiDataProvider::tryGetActionOptionsFromRequestTypeWithData(req);
     }
 
-    private overrideOptions(HashDataType type) {
+    #! Returns action options corresponding to the given option data
+    *hash<string, hash<ActionOptionInfo>> tryGetActionOptionsWithOptions(hash<DataProviderActionInfo> action,
+            *hash<auto> options) {
+        TSAI::debug("TypeScriptActionApiWithSchemaDataProvider::tryGetActionOptionsWithOptions() @%s/%s conn: %y "
+            "opts: %y", action.app, action.action, conn ? conn.getName() : "n/a", options);
+        DataProviderContextHelper apch(self);
+        return TypeScriptActionApiDataProvider::tryGetActionOptionsWithOptions(action, options);
+    }
+
+    private *bool overrideOptions(HashDataType type) {
+        *bool do_not_cache;
         *hash<string, AbstractDataField> fields = type.getFields();
         foreach hash<auto> i in (override_options_save.pairIterator()) {
             # find option to update
@@ -308,12 +339,16 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             list<string> l = k.split(".");
             string key = l[0];
 
-            on_error rethrow $1.err, sprintf("%s (while processing option %y in %y)", $1.desc, key, i.key);
-
             *AbstractDataField f = fields{key};
             hash<auto> opt;
             if (!f) {
-                TypeScriptActionInterface::getOptionFunctions(\action_save, self, i.key, \i.value, True);
+                on_error rethrow $1.err, sprintf("%s (while add new field %y in %y for type %y; existing fields: %y)",
+                    $1.desc, key, i.key, type.getName(), keys fields);
+
+                if (TypeScriptActionInterface::getOptionFunctions(\action_save, self, i.key, \i.value, True)
+                    && !do_not_cache) {
+                    do_not_cache = True;
+                }
                 if (l.size() > 1) {
                     overrideOptionType("option", type, l, i.value, k);
                     continue;
@@ -326,7 +361,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 if (i.value_depends_on) {
                     depmap{key} = map {$1: True}, i.value.depends_on;
                 }
-                if (prov.op.method != "GET") {
+                if (prov.getName() != "GET") {
                     reqmap{request_key}{key} = ("body",);
                     rreqmap{request_key}{"body." + key} = key;
                 } else {
@@ -334,14 +369,22 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                     rreqmap{request_key}{"query." + key} = key;
                 }
             } else {
+                on_error rethrow $1.err, sprintf("%s (while overriding existing option %y in %y for type %y)",
+                    $1.desc, key, i.key, type.getName());
+
                 if (!(f instanceof QoreDataField)) {
                     throw "OPTION-OVERRIDE-ERROR", sprintf("App %y action %y option %y: cannot override %s; "
                         "expecting \"QoreDataField\"", action_save.app, action_save.action, key, f.className());
                 }
                 if (l.size() == 1) {
-                    TypeScriptActionInterface::getOptionFunctions(\action_save, self, i.key, \i.value, True);
+                    if (TypeScriptActionInterface::getOptionFunctions(\action_save, self, i.key, \i.value, True)
+                        && !do_not_cache) {
+                        do_not_cache = True;
+                    }
                 }
-                overrideOptionType("option", type, l, i.value, k);
+                if (overrideOptionType("option", type, l, i.value, k) && !do_not_cache) {
+                    do_not_cache = True;
+                }
                 if (l.size() == 1 && (*list<auto> dl = i.value.depends_on)) {
                     depmap{l[0]} = map {$1: True}, dl;
                 }
@@ -349,8 +392,10 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         }
     }
 
-    private overrideOptionType(string path, AbstractDataProviderType type, list<string> l, hash<auto> type_hash, string k) {
-        TypeScriptActionApiWithSchemaDataProvider::overrideOptionType(path, action_save, type, l, type_hash, k, self);
+    private *bool overrideOptionType(string path, AbstractDataProviderType type, list<string> l, hash<auto> type_hash,
+            string k) {
+        return TypeScriptActionApiWithSchemaDataProvider::overrideOptionType(path, action_save, type, l, type_hash, k,
+            self);
     }
 
     #! Returns the request type for this API
@@ -386,17 +431,24 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         request_key = sprintf("%s-%s", app, action);
 
         # check global map unlocked
-        request_type_info.type = grtmap{request_key};
-        if (!request_type_info.type) {
+        if (!checkRequestType(request_key)) {
             # check again in the lock
             gtlock.lock();
             on_exit gtlock.unlock();
 
-            request_type_info.type = grtmap{request_key};
-            if (!request_type_info.type) {
+            if (!checkRequestType(request_key)) {
                 createRequestTypeIntern();
-                return;
             }
+        }
+    }
+
+    #! Checks the request type and merges any reference data maps from the source provider if found
+    private *bool checkRequestType(string key) {
+        if (grtmap{key}) {
+            request_type_info.type = grtmap{key}.type;
+            map omap{$1.key} = $1.value, grtmap{key}.prov.omap.pairIterator(), !omap{$1.key};
+            map romap{$1.key} = $1.value, grtmap{key}.prov.romap.pairIterator(), !romap{$1.key};
+            return True;
         }
     }
 
@@ -404,7 +456,16 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
     private createRequestTypeIntern() {
         request_type_info.type = prov.getRequestType();
 
-        if (request_type_info.type && (*hash<string, AbstractDataField> fields = request_type_info.type.getFields())) {
+        *hash<string, AbstractDataField> fields;
+        if (request_type_info.type && (fields = request_type_info.type.getFields())
+            && fields{ignore_options_save}) {
+            fields -= ignore_options_save;
+            request_type_info.type = request_type_info.type.copyWithFields(fields);
+            # disable the request type check
+            prov.disableRequestTypeCheck();
+        }
+
+        if (fields) {
             HashDataType newreq;
             code check = sub (hash<string, AbstractDataField> fields, string key) {
                 list<string> l = (key,);
@@ -496,6 +557,8 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             request_type_info.type = new HashDataType(AutoHashType, "RestRequestType", fields);
         }
 
+        # do not cache dynamic types (types with get_dynamic_type() functions)
+        *bool do_not_cache;
         # allow options to be updated
         if (override_options_save) {
             if (!request_type_info.type) {
@@ -511,14 +574,15 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 throw "ACTION-ERROR", sprintf("Cannot override options of app %y action %y with non-hash "
                     "request type %y", action_save.app, action_save.action, request_type_info.type.getName());
             }
-            overrideOptions(cast<HashDataType>(request_type_info.type));
-            if (!prov.op.consumes) {
-                prov.op.consumes{MimeTypeJson} = True;
+            do_not_cache = overrideOptions(cast<HashDataType>(request_type_info.type));
+            # Set JSON as accepted content type if not already set
+            if (!prov.getConsumes()) {
+                prov.setConsumes(MimeTypeJson);
             }
             prov.disableRequestTypeCheck();
         }
 
-        if (request_type_info.type && (*hash<string, AbstractDataField> fields = request_type_info.type.getFields())) {
+        if (request_type_info.type && (fields = request_type_info.type.getFields())) {
             NoIoHelper nih();
             action_save.options = DataProviderActionCatalog::getActionOptionFromFields(fields);
             TypeScriptActionInterface::sortOptions({"name": action_save.app}, action_save, \action_save.options);
@@ -540,7 +604,12 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
             }
         }
 
-        grtmap{request_key} = request_type_info.type;
+        if (!do_not_cache) {
+            grtmap{request_key} = <TypeProviderInfo>{
+                "type": request_type_info.type,
+                "prov": self,
+            };
+        }
     }
 
     #! Creates the response type for this API
@@ -551,8 +620,10 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         response_type_done = True;
         checkDataProvider();
         response_type_info.type = prov.getResponseType();
+        # If include_response_headers is False, unwrap the body even when headers field is present
+        # This allows apps to opt-out of the {body, headers} wrapper when the OpenAPI schema defines response headers
         if (response_type_info.type && (*hash<string, AbstractDataField> fields = response_type_info.type.getFields())
-            && fields.size() == 1 && fields.body) {
+            && fields.body && (fields.size() == 1 || !include_response_headers)) {
             res_only_body = True;
             response_type_info.type = fields.body.getType();
         }
@@ -560,10 +631,16 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
 
     AbstractDataProvider checkDataProvider() {
         if (!prov) {
-            on_error rethrow $1.err, sprintf("Error setting data provider from appp %y action %y: %s (Swagger "
-                "path: %y)", app, action, $1.desc, swagger_path);
-            prov = TypeScriptActionInterface::getSwaggerDataProvider(app, swagger_schema)
-                .getChildProviderPath(swagger_path);
+            on_error rethrow $1.err, sprintf("Error setting data provider from app %y action %y: %s (REST schema "
+                "path: %y)", app, action, $1.desc, schema_path);
+
+            AbstractDataProvider p = TypeScriptActionInterface::getSchemaDataProvider(app, rest_schema)
+                .getChildProviderPath(schema_path);
+            if (!(p instanceof RestSchemaRequestDataProvider)) {
+                throw "ACTION-ERROR", sprintf("App %y action %y: REST schema path %y is not an API endpoint (%s -> %y)", app,
+                    action, schema_path, p.className(), p.getChildProviderNames());
+            }
+            prov = cast<RestSchemaRequestDataProvider>(p);
         }
         return prov;
     }
@@ -615,7 +692,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
     private auto doRequestImpl(auto req, *hash<auto> request_options) {
         on_error rethrow $1.err, sprintf("%s (req: %y request_options: %y)", $1.desc, req, request_options);
         if (!api) {
-            return makeSwaggerRequest(req, request_options);
+            return makeSchemaRequest(req, request_options);
         }
         if (path_vars) {
             request_options.path_vars = remove req{keys path_vars};
@@ -636,14 +713,14 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
 
         @return the response to the request
     */
-    private auto makeSwaggerRequest(auto req, *hash<auto> request_options) {
+    private auto makeSchemaRequest(auto req, *hash<auto> request_options) {
         checkDataProvider();
         # *always* replace the RestClient with each call; it can have outdated auth info
         prov.setRestClient(rest = conn.get());
         if (req && req.typeCode() == NT_HASH) {
             checkUpdateRestOptions(rest, req);
         }
-        if (exists (*string base_path = conn.orig_opts.swagger_base_path)) {
+        if (exists (*string base_path = conn.orig_opts.openapi_base_path ?? conn.orig_opts.swagger_base_path)) {
             request_options.base_path = base_path;
         }
         if (path_vars) {
@@ -659,18 +736,19 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
         }
 
         hash<auto> req0;
-        debug("Action options for action %y: %y reqmap: %y", getName(), req, reqmap{request_key});
+        debug("Action options for action %y: %y reqmap: %y", getName(), LoggerUtil::getArgSummary(req),
+            reqmap{request_key});
         map fixOptimizedValue(\req0, $1.value, $1.key, remove req{$1.key}), reqmap{request_key}.pairIterator(),
             req.hasKey($1.key);
         map req0{$1.key} = $1.value, req.pairIterator(), !req0.hasKey($1.key);
         req = req0;
-        debug("REST request for action %y: %y", getName(), req);
+        debug("REST request for action %y: %y", getName(), LoggerUtil::getArgSummary(req));
 
         *hash<DataContextInfo> ctxinfo;
         if (request_data_converter) {
             ctxinfo = getCallContextInfo();
             req = getAsyncValue(request_data_converter, req, ctxinfo);
-            debug("REST request for action after conversion %y: %y", getName(), req);
+            debug("REST request for action after conversion %y: %y", getName(), LoggerUtil::getArgSummary(req));
         }
 
         auto rv = prov.doRequest(req, request_options +
@@ -684,7 +762,7 @@ public class TypeScriptActionApiWithSchemaDataProvider inherits TypeScriptAction
                 ctxinfo = getCallContextInfo();
             }
             rv = getAsyncValue(response_data_converter, rv, ctxinfo);
-            debug("REST response for action after conversion %y: %y", getName(), rv);
+            debug("REST response for action after conversion %y: %y", getName(), LoggerUtil::getArgSummary(rv));
         }
         return res_only_body ? rv.body : rv;
     }
@@ -719,8 +797,13 @@ class ActionProviderContextHelper {
         if (prov && (prov instanceof TypeScriptActionDataProviderBase)) {
             return cast<TypeScriptActionDataProviderBase>(prov);
         } else if (prov) {
-            TSAI::info("IGNORING %y", prov.className());
+            TSAI::warn("IGNORING %y", prov.className());
         }
     }
+}
+
+hashdecl TypeProviderInfo {
+    AbstractDataProviderType type;
+    TypeScriptActionDataProviderBase prov;
 }
 }

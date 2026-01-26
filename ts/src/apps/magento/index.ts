@@ -1,18 +1,9 @@
-import {
-  TQoreAppActionFunctionContext,
-  TQoreAppWithActions,
-  TQoreMappedOptions,
-} from '@qoretechnologies/ts-toolkit';
+import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
+import { MAGENTO_ACTIONS, MAGENTO_APP_LOGO, MAGENTO_APP_NAME } from './constants';
 import * as MAGENTO_TRIGGERS from './triggers';
-import {
-  MAGENTO_ACTIONS,
-  MAGENTO_APP_LOGO,
-  MAGENTO_APP_NAME,
-  MAGENTO_CONN_OPTIONS,
-} from './constants';
 
 export default (locale: Locales) =>
   ({
@@ -49,39 +40,17 @@ export default (locale: Locales) =>
       },
     },
     rest: {
-      url: '{{instance_url}}/rest',
-      oauth2_token_url: '{{instance_url}}/rest/V1/integration/admin/token',
-      oauth2_token_expiry_hint: 60,
       data: 'json',
-      oauth2_grant_type: 'password',
+      oauth2_grant_type: 'none',
       ping_method: 'GET',
-      ping_path: '/V1/store/storeConfigs',
+      ping_path: '/rest/V1/store/storeConfigs',
+      custom_token_auth: 'body-user-pass',
+      custom_token_location: 'body-direct',
+      custom_token_method: 'POST',
+      custom_token_path: '/rest/V1/integration/admin/token',
+      oauth2_token_expiry_hint: 60,
     },
     rest_modifiers: {
-      required_options: 'instance_url,username,password',
-      url_template_options: ['instance_url'],
-      set_options_post_auth: (
-        context: Omit<TQoreAppActionFunctionContext<typeof MAGENTO_CONN_OPTIONS>, 'opts'>
-      ): TQoreMappedOptions<typeof MAGENTO_CONN_OPTIONS> => {
-        const instanceUrl = context.conn_opts?.instance_url;
-        const username = context.conn_opts?.username;
-        const password = context.conn_opts?.password;
-
-        const missingValues: string[] = [];
-
-        if (!instanceUrl) missingValues.push('instance_url');
-        if (!username) missingValues.push('username');
-        if (!password) missingValues.push('password');
-
-        if (missingValues.length) {
-          throw new Error(`All of the following values are required: ${missingValues.join(', ')}`);
-        }
-
-        return {
-          instance_url: instanceUrl!,
-          username: username!,
-          password: password!,
-        };
-      },
+      required_options: 'username,password',
     },
   }) satisfies TQoreAppWithActions;

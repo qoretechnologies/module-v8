@@ -3,7 +3,7 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { fetchPipedriveAllowedValues } from './constants';
+import { fetchPipedriveAllowedValues } from './client';
 
 type TPipedriveStageData = {
   id: string;

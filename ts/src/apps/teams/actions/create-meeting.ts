@@ -55,7 +55,7 @@ const options = {
     required: false,
   },
   isOnlineMeeting: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: true,
   },
@@ -87,7 +87,7 @@ const response_type = {
       },
     },
     success: {
-      type: 'boolean',
+      type: 'bool',
     },
     error: {
       type: 'string',
@@ -95,7 +95,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const CreateTeamsMeeting = QoreAppCreator.createLocalizedAction<typeof options>({
+const CreateTeamsMeeting = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'create-meeting',
   app: TEAMS_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -211,3 +211,5 @@ export const CreateTeamsMeeting = QoreAppCreator.createLocalizedAction<typeof op
   options,
   response_type,
 });
+
+export default CreateTeamsMeeting;

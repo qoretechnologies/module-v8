@@ -1,5 +1,5 @@
 import { TQoreAppWithActions, TQoreMappedOptions } from '@qoretechnologies/ts-toolkit';
-import { actionsCatalogue } from '../../ActionsCatalogue';
+import { getOauth2ClientSecret } from '../../utils/oauth2-client-secret';
 import {
   buildActionsFromSwaggerSchema,
   createSwaggerPaths,
@@ -68,7 +68,7 @@ export default (locale: Locales) =>
       data: 'json',
       oauth2_grant_type: 'authorization_code',
       oauth2_client_id: 'ca_RBbHjT1Rfnd1id8ccxMtAvq1N0VnXtmu',
-      oauth2_client_secret: actionsCatalogue.getOauth2ClientSecret(STRIPE_APP_NAME),
+      oauth2_client_secret: getOauth2ClientSecret(STRIPE_APP_NAME),
       oauth2_auth_url: 'https://marketplace.stripe.com/oauth/v2/authorize',
       oauth2_token_url: 'https://api.stripe.com/v1/oauth/token',
       oauth2_token_auth_secret_only: true,

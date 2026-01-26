@@ -3,7 +3,7 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { fetchPipedriveAllowedValues } from './constants';
+import { fetchPipedriveAllowedValues } from './client';
 
 type TPipedriveProjectTemplateData = {
   id: string;
@@ -31,7 +31,7 @@ export const getPipedriveProjectTemplateIdAllowedValues: TQoreGetAllowedValuesFu
   const projectTemplates = await fetchPipedriveAllowedValues<TPipedriveProjectTemplateData>({
     token,
     mapItemToAllowedValue: mapPipedriveProjectTemplate,
-    path: '/projectTemplates',
+    path: 'v1/projectTemplates',
   });
 
   return projectTemplates;

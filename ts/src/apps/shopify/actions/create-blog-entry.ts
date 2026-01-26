@@ -60,7 +60,7 @@ const options = {
   },
 } satisfies TQoreOptions;
 
-export const CreateShopifyBlogEntry = QoreAppCreator.createLocalizedAction<typeof options>({
+const CreateShopifyBlogEntry = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'create-blog-entry',
   app: SHOPIFY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -144,3 +144,5 @@ export const CreateShopifyBlogEntry = QoreAppCreator.createLocalizedAction<typeo
   options,
   response_type: ShopifyAddBlogEntryResponseType,
 });
+
+export default CreateShopifyBlogEntry;

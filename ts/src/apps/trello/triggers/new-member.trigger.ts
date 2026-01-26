@@ -103,13 +103,13 @@ const TrelloNewMemberTrigger = QoreAppCreator.createLocalizedTrigger<typeof opti
         username: { type: 'string' },
         initials: { type: 'string' },
         memberType: { type: 'string' },
-        confirmed: { type: 'boolean' },
+        confirmed: { type: 'bool' },
         avatarUrl: { type: 'string', required: false },
         avatarHash: { type: 'string', required: false },
         email: { type: 'string', required: false },
-        activityBlocked: { type: 'boolean' },
+        activityBlocked: { type: 'bool' },
         nonPublic: { type: 'hash' },
-        nonPublicAvailable: { type: 'boolean' },
+        nonPublicAvailable: { type: 'bool' },
         idMemberReferrer: { type: 'string', required: false },
         idPremOrgsAdmin: {
           type: {

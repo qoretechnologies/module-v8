@@ -1,7 +1,6 @@
-import { Octokit } from '@octokit/rest';
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
-import { GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
+import { createGitHubClient, GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 export const getGitHubPullIdAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
@@ -14,9 +13,7 @@ export const getGitHubPullIdAllowedValues: TQoreGetAllowedValuesFunction = async
     throw new Error('The token, owner and repo are required to get Github pull allowed values');
   }
 
-  const octokit = new Octokit({
-    auth: token,
-  });
+  const octokit = await createGitHubClient(token);
 
   Debugger.log('Github Pull allowed values opts', {
     opts: context.opts,

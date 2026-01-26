@@ -35,7 +35,7 @@ type THubspotObjectProperty = {
 };
 
 export const HUBSPOT_TO_QORE_TYPE_MAPPING: Record<string, TQoreSimpleType> = {
-  bool: 'boolean',
+  bool: 'bool',
   enumeration: 'softstring',
   date: 'date',
   datetime: 'date',
@@ -114,7 +114,7 @@ export const getHubspotPropertyOptionFunction = ({
             (option): IQoreAllowedValue<any> => ({
               display_name: option.label,
               value:
-                HUBSPOT_TO_QORE_TYPE_MAPPING[property.type] === 'boolean'
+                HUBSPOT_TO_QORE_TYPE_MAPPING[property.type] === 'bool'
                   ? option.value === 'true'
                   : option.value,
             })

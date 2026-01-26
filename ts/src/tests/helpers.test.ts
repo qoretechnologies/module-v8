@@ -217,6 +217,8 @@ it('Should map a trigger to app', () => {
     'Test Trigger Info Short Description'
   );
 
-  const subInfo = (eventInfoType.fields?.testTriggerInfo.type as IQoreTypeObjectNonList).fields;
+  const testTriggerInfoType = eventInfoType.fields!.testTriggerInfo.type as IQoreTypeObjectNonList;
+
+  const subInfo = testTriggerInfoType.fields;
   expect(subInfo?.testTriggerInfo1.display_name).toBe('Test Trigger Info 1');
 });

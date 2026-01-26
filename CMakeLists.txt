@@ -1,9 +1,9 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 project(qore-v8-module)
 
 set (VERSION_MAJOR 1)
 set (VERSION_MINOR 0)
-set (VERSION_PATCH 0)
+set (VERSION_PATCH 3)
 
 set(PROJECT_VERSION "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}")
 
@@ -16,6 +16,9 @@ if (${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.12.0")
 endif()
 
 cmake_policy(SET CMP0042 NEW)
+if (POLICY CMP0177)
+    cmake_policy(SET CMP0177 NEW)
+endif()
 
 if (UNIX AND NOT APPLE)
     set(LINUX TRUE)
@@ -24,6 +27,27 @@ endif()
 find_package(Qore 2.0 REQUIRED)
 
 find_library(LIBNODE NAMES node HINTS ENV NODE_LIB_DIR REQUIRED)
+
+# Find libjsig for JVM signal chaining (optional - needed when both V8 and JVM are used)
+# This prevents signal handler conflicts between V8 and JVM
+# Search common JVM installation paths
+file(GLOB JAVA_LIB_PATHS
+    /usr/lib/jvm/*/lib
+    /usr/lib/jvm/*/lib/server
+    /usr/lib64/jvm/*/lib
+    /usr/lib64/jvm/*/lib/server
+)
+find_library(LIBJSIG NAMES jsig
+    HINTS
+        ENV JAVA_HOME
+        ${JAVA_LIB_PATHS}
+    PATH_SUFFIXES lib lib/server
+)
+if (LIBJSIG)
+    message(STATUS "Found libjsig: ${LIBJSIG} - enabling JVM signal chaining support")
+else()
+    message(STATUS "libjsig not found - JVM signal chaining support disabled (OK if JVM not installed)")
+endif()
 
 if (DEFINED ENV{NODE_INCLUDE_DIR})
     include_directories(BEFORE "$ENV{NODE_INCLUDE_DIR}")
@@ -38,13 +62,13 @@ endif()
 #set(V8_COMPILE_FLAGS "-DV8_COMPRESS_POINTERS -DV8_31BIT_SMIS_ON_64BIT_ARCH")
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${V8_COMPILE_FLAGS}")
 
-# Check for C++17
+# Check for C++20
 include(CheckCXXCompilerFlag)
-CHECK_CXX_COMPILER_FLAG("-std=c++17" COMPILER_SUPPORTS_CXX17)
+CHECK_CXX_COMPILER_FLAG("-std=c++20" COMPILER_SUPPORTS_CXX17)
 if(COMPILER_SUPPORTS_CXX17)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20")
 else()
-    message(FATAL_ERROR "The compiler ${CMAKE_CXX_COMPILER} has no C++17 support. Please use a different C++ compiler.")
+    message(FATAL_ERROR "The compiler ${CMAKE_CXX_COMPILER} has no C++20 support. Please use a different C++ compiler.")
 endif()
 
 #add_custom_command(OUTPUT ${CMAKE_SOURCE_DIR}/ts/dist/index.js
@@ -98,6 +122,7 @@ set(module_name "v8")
 set(QORE_DOX_TMPL_SRC
     docs/mainpage.dox.tmpl
 )
+file(MAKE_DIRECTORY "${CMAKE_BINARY_DIR}/images")
 
 add_library(${module_name} MODULE ${CPP_SRC} ${QPP_SOURCES})
 
@@ -119,7 +144,11 @@ if (DEFINED ENV{DOXYGEN_EXECUTABLE})
 endif()
 
 set(MODULE_DOX_INPUT ${CMAKE_BINARY_DIR})
-qore_external_binary_module(${module_name} ${PROJECT_VERSION} ${LIBNODE})
+if (LIBJSIG)
+    qore_external_binary_module(${module_name} ${PROJECT_VERSION} ${LIBNODE} ${LIBJSIG})
+else()
+    qore_external_binary_module(${module_name} ${PROJECT_VERSION} ${LIBNODE})
+endif()
 
 qore_user_modules("${QMOD}")
 qore_external_user_module("qlib/TypeScriptProxy" "")

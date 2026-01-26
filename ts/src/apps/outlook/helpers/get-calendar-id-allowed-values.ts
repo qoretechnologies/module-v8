@@ -41,9 +41,9 @@ export const getOutlookCalendarIdAllowedValues: TQoreGetAllowedValuesFunction<
         display_name: calendar.name!,
         value: calendar.id!,
         short_desc:
-          `Owner: ${calendar.owner?.address || 'Unknown'}\n\n` +
-          `Can Share: ${calendar.canShare ? 'Yes' : 'No'}\n\n` +
-          `Can Edit: ${calendar.canEdit ? 'Yes' : 'No'}\n\n`,
+          `Owner: ${calendar.owner?.address || 'Unknown'}\n` +
+          `Can Share: ${calendar.canShare ? 'Yes' : 'No'}\n` +
+          `Can Edit: ${calendar.canEdit ? 'Yes' : 'No'}\n`,
       });
     }
     if (response['@odata.nextLink']) {

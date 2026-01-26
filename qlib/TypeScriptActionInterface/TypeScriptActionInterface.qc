@@ -1,7 +1,7 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 #! Qore TypeScriptActionInterface module definition
 
-/*  TypeScriptActionInterface.qc Copyright 2024 - 2025 Qore Technologies, s.r.o.
+/*  TypeScriptActionInterface.qc Copyright 2024 - 2026 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -84,6 +84,30 @@ hashdecl RestGetAllowedValuesInfo {
     *string short_descs;
 }
 
+#! When defining Google apps
+hashdecl GoogleAppInfo {
+    #! The name of the Google API in the Discovery API
+    string api;
+
+    #! The resource path to the APIs under the app in the Discory API
+    /** Only provided if the app should generate actions automatically
+    */
+    *string resource;
+
+    #! Any path arguments to be automatically provided when making calls: key -> value
+    *hash<auto> path_args;
+
+    #! Any path prefix for the subpaths
+    /** This option is only used with subpaths, which is only used if \a resource is set
+    */
+    *string path_prefix;
+
+    #! A list of one or more subpaths to use to only expose the given paths in the app
+    /** Ignored if \a resource is not set
+    */
+    *list<string> subpaths;
+}
+
 #! Required attributes for RestGetAllowedValuesInfo
 const RestGetAllowedValuesRequiredKeys = {
     "method": True,
@@ -107,15 +131,17 @@ public class TypeScriptActionInterface {
         static JavaScriptThreadProcessPool server;
 
         const TypeKeys = (
-            "name", "display_name", "short_desc", "desc", "example_value", "default_value", "multiselect",
+            "name", "display_name", "short_desc", "desc", "example_value", "default_value",
             "type", "allowed_values", "allowed_values_creatable",
             "get_allowed_values",
             "element_type", "element_allowed_values", "element_allowed_values_creatable",
             "get_element_allowed_values",
-            "attr", "required", "on_change", "preselected",
+            "attr", "required", "on_change", "preselected", "depends_on", "validation_regex",
         );
 
         const TypeScriptAppRestConnectionOptions = RestConnection::ConnectionScheme.options;
+
+        const TypeScriptAwsAppRestConnectionOptions = TypeScriptAwsAppRestConnection::ConnectionScheme.options;
 
         #! This provides all supported REST connection option names
         const TypeScriptAppRestOptionKeys = (
@@ -162,11 +188,21 @@ public class TypeScriptActionInterface {
 
         #! Default event ID
         const DefaultEventId = "event";
+
+        #! Default table path var
+        const TablePathVar = <DataProviderPathVarInfo>{
+            "display_name": "Table",
+            "desc": "The table name",
+            "short_desc": "The table name",
+        };
     }
 
     private {
         #! App map for delayed initialization: app -> info
         static hash<string, hash<AppInfo>> appmap;
+
+        #! App map after app initialization: app -> info
+        static hash<string, hash<AppInfo>> initialized_appmap;
 
         #! Init map for apps already initialized
         static hash<string, bool> initmap;
@@ -180,17 +216,20 @@ public class TypeScriptActionInterface {
         #! Maps from app names to REST getOptions
         static hash<string, hash<auto>> armap;
 
-        #! Maps from app names to Swagger schemas
-        static hash<string, SwaggerSchema> app_swagger_map;
+        #! Maps from app names to REST schemas (Swagger 2.0 or OpenAPI 3.0/3.1)
+        static hash<string, AbstractRestSchemaValidator> app_schema_map;
 
-        #! Maps from app names to SwaggerDataProvider objects
-        static hash<string, SwaggerDataProvider> app_swagger_dp;
+        #! Maps from app names to RestSchemaDataProvider objects
+        static hash<string, RestSchemaDataProvider> app_schema_dp;
 
-        #! Maps from app and schema names to Swagger schemas
-        static hash<string, hash<string, SwaggerSchema>> app_swagger_schema_map;
+        #! Maps from app and schema names to REST schemas (Swagger 2.0 or OpenAPI 3.0/3.1)
+        static hash<string, hash<string, AbstractRestSchemaValidator>> app_schema_schema_map;
 
-        #! Maps from app and schema names names to SwaggerDataProvider objects
-        static hash<string, hash<string, SwaggerDataProvider>> app_swagger_schema_dp;
+        #! Maps from app and schema names to RestSchemaDataProvider objects
+        static hash<string, hash<string, RestSchemaDataProvider>> app_schema_schema_dp;
+
+        #! Maps from lower-case app names to Google app definitions
+        static hash<string, hash<GoogleAppInfo>> google_app_map;
 
         #! Maps from app names to REST template options; app -> option -> True
         static hash<string, hash<string, bool>> atmap;
@@ -207,8 +246,17 @@ public class TypeScriptActionInterface {
         #! Maps from app names to connection update info
         static hash<string, hash<auto>> app_conn_update_map;
 
-        #! Maps from app names to connection -> Swagger path option maps
+        #! Maps from app names to connection -> REST schema path option maps
         static hash<string, hash<string, string>> app_conn_opt_map;
+
+        #! Maps from app names to URL option names
+        static hash<string, string> app_url_option_map;
+
+        #! Flag AWS apps
+        static hash<string, bool> aws_app_map;
+
+        #! Maps from app names to include_response_headers flag (default: True)
+        static hash<string, bool> app_include_response_headers_map;
 
         #! Connection map for testing
         static hash<string, TypeScriptAppRestConnection> cmap;
@@ -253,7 +301,7 @@ public class TypeScriptActionInterface {
             on_demand = True;
         }
         if (opts & DPO_DisableOnDemandInitialization) {
-            TypeScriptActionInterface::initAllApps();
+            TypeScriptActionInterface::initAllApps(opts & DPO_EnableOnDemandActions ? False : True);
         }
     }
 
@@ -277,6 +325,7 @@ public class TypeScriptActionInterface {
         remove appcasemap{name};
         remove initmap{name};
         remove appmap{name};
+        remove initialized_appmap{name};
 
         string appname = app.name.lwr();
 
@@ -290,8 +339,12 @@ public class TypeScriptActionInterface {
         remove app_post_auth_code_map{appname};
         remove app_conn_update_map{appname};
         remove app_conn_opt_map{appname};
-        remove app_swagger_map{appname};
-        remove app_swagger_schema_map{appname};
+        remove app_url_option_map{appname};
+        remove aws_app_map{appname};
+        remove app_include_response_headers_map{appname};
+        remove app_schema_map{appname};
+        remove app_schema_schema_map{appname};
+        remove google_app_map{appname};
         remove atmap{appname};
         ConnectionSchemeCache::deregisterScheme(sname);
     }
@@ -371,10 +424,11 @@ public class TypeScriptActionInterface {
     }
 
     #! Shuts the server down if it's running
-    static shutdownServer() {
+    static shutdownServer(*int signal) {
         sm.lock();
         on_exit sm.unlock();
 
+        *JavaScriptThreadProcessPool server = remove TypeScriptActionInterface::server;
         if (!server) {
             return;
         }
@@ -502,9 +556,152 @@ public class TypeScriptActionInterface {
         if (*hash<auto> info = DynamicAppContextHelper::get(app.name)) {
             app += info;
             DynamicAppContextHelper::addApp(app.name);
+            TSAI::info("Registering dynamic app with info: %N", info);
+        }
+        hash<AsyncCallInfo> get_table_list;
+        hash<AsyncCallInfo> begin_transaction;
+        hash<AsyncCallInfo> commit;
+        hash<AsyncCallInfo> rollback;
+        hash<AsyncCallInfo> get_record_type;
+        hash<AsyncCallInfo> search_records;
+        hash<AsyncCallInfo> create_records;
+        hash<AsyncCallInfo> update_records;
+        hash<AsyncCallInfo> upsert_records;
+        hash<AsyncCallInfo> delete_records;
+
+        hash<auto> expressions;
+        hash<auto> search_options;
+        hash<auto> create_options;
+        hash<auto> upsert_options;
+
+        timeout io_timeout;
+        if (app.get_table_list) {
+            io_timeout = seconds(remove app.io_timeout_secs ?? DefaultIoTimeoutSecs);
+            get_table_list = tryGetAsyncAttribute(\app, "get_table_list", "get table list", pool, io_timeout,
+                app.name);
+        }
+        code check_record_based = sub () {
+            if (!get_table_list) {
+                throw "APP-ERROR", sprintf("App %y cannot define 'begin_transaction' without also defining "
+                    "'get_table_list'", app.name);
+            }
+        };
+# transaction management is disabled until we have a concrete use case
+# and solve transaction persistence / thread-resource issues
+%ifdef TransactionManagement
+        if (app.begin_transaction) {
+            check_record_based();
+            begin_transaction = tryGetAsyncAttribute(\app, "begin_transaction", "begin transaction", pool, io_timeout,
+                app.name);
+        }
+        if (app.commit) {
+            check_record_based();
+            commit = tryGetAsyncAttribute(\app, "commit", "commit transaction", pool, io_timeout,
+                app.name);
+        } else if (app.begin_transaction) {
+            throw "APP-ERROR", sprintf("App %y cannot define 'begin_transaction' without also defining 'commit'",
+                app.name);
+        }
+        if (app.rollback) {
+            check_record_based();
+            rollback = tryGetAsyncAttribute(\app, "rollback", "rollback transaction", pool, io_timeout,
+                app.name);
+        } else if (app.commit) {
+            throw "APP-ERROR", sprintf("App %y cannot define 'commit' without also defining 'rollback'",
+                app.name);
+        }
+%else
+        app -= ("begin_transaction", "commit", "rollback");
+%endif
+        if (app.get_record_type) {
+            check_record_based();
+            get_record_type = tryGetAsyncAttribute(\app, "get_record_type", "get record type", pool, io_timeout,
+                app.name);
+        } else if (get_table_list) {
+            throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y is missing its \"get_record_type\" attribute, but this "
+                "attribute is required for apps supporting tables", app.name);
+        }
+
+        if (app.expressions) {
+            check_record_based();
+            expressions = remove app.expressions;
+        }
+
+        if (app.search_records) {
+            check_record_based();
+            search_records = tryGetAsyncAttribute(\app, "search_records", "search records", pool, io_timeout,
+                app.name);
+        }
+
+        if (app.create_records) {
+            check_record_based();
+            create_records = tryGetAsyncAttribute(\app, "create_records", "create records", pool, io_timeout,
+                app.name);
+
+            if (app.create_options) {
+                create_options = remove app.create_options;
+            }
+        } else if (app.create_options) {
+            throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y cannot define \"get_create_options\" without also "
+                "defining 'create_records()'", app.name);
+        }
+
+        if (app.update_records) {
+            check_record_based();
+            update_records = tryGetAsyncAttribute(\app, "update_records", "update records", pool, io_timeout,
+                app.name);
+        }
+
+        if (app.upsert_records) {
+            check_record_based();
+            upsert_records = tryGetAsyncAttribute(\app, "upsert_records", "upsert records", pool, io_timeout,
+                app.name);
+
+            if (app.upsert_options) {
+                upsert_options = remove app.upsert_options;
+            }
+        } else if (app.upsert_options) {
+            throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y cannot define \"upsert_options\" without also "
+                "defining 'upsert_records()'", app.name);
+        }
+
+        if (app.delete_records) {
+            check_record_based();
+            delete_records = tryGetAsyncAttribute(\app, "delete_records", "delete records", pool, io_timeout,
+                app.name);
+        }
+
+        if (app.search_options) {
+            if (!expressions) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y cannot define \"search_options\" when it "
+                    "uses generic search functionality (missing 'expressions')", app.name);
+            }
+            if (!search_records && !update_records && !delete_records) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y cannot define \"search_options\" without also "
+                    "defining at least one of 'search_records()', 'update_records()', or 'delete_records()'",
+                    app.name);
+            }
+            search_options = remove app.search_options;
         }
         appmap{app.name} = <AppInfo>{
             "app": app,
+
+            "get_table_list": get_table_list,
+            "begin_transaction": begin_transaction,
+            "commit": commit,
+            "rollback": rollback,
+            "get_record_type": get_record_type,
+            "search_records": search_records,
+            "create_records": create_records,
+            "update_records": update_records,
+            "upsert_records": upsert_records,
+            "delete_records": delete_records,
+
+            "expressions": expressions,
+            "search_options": search_options,
+            "create_options": create_options,
+            "upsert_options": upsert_options,
+
             "pool": pool,
         };
 
@@ -519,6 +716,7 @@ public class TypeScriptActionInterface {
         DataProviderActionCatalog::registerPendingApp(app.name, sub () {
             TypeScriptActionInterface::initApp(app.name);
         });
+        TSAI::info("Registered TypeScript app %y -> %y", app.name, app.info);
         TSAI::debug("Registered TypeScript app %y", app.name);
     }
 
@@ -570,25 +768,51 @@ public class TypeScriptActionInterface {
         return False;
     }
 
-    static bool initApp(string app, *bool do_actions) {
+    static bool initApp(string app, *bool do_actions, *string dynamic_path) {
         if (exists (*string rn = appcasemap{app})) {
             app = rn;
         }
-        return TypeScriptActionInterface::initAppIntern(app, do_actions);
+        return TypeScriptActionInterface::initAppIntern(app, do_actions, dynamic_path);
     }
 
-    static private synchronized bool initAppIntern(string app, *bool do_actions) {
+    static hash<AppInfo> getInitializedRecordBasedAppInfo(string app) {
+        if (exists (*string rn = appcasemap{app})) {
+            app = rn;
+        }
+        *hash<AppInfo> info = initialized_appmap{app};
+        if (!info) {
+            throw "APP-ERROR", sprintf("No app %y has been initialized", app);
+        }
+        if (!info.get_table_list) {
+            throw "APP-ERROR", sprintf("App %y is not a record-based app", app);
+        }
+        return info;
+    }
+
+    static private synchronized bool initAppIntern(string app, *bool do_actions, *string dynamic_path) {
         if (initmap{app}) {
             return False;
         }
         if (*hash<AppInfo> info = remove appmap{app}) {
             return TypeScriptActionInterface::initAppIntern(info, do_actions);
         }
+        if (dynamic_path) {
+            string fname = sprintf("%s/index.js", dynamic_path);
+            if (is_readable(fname)) {
+                TSAI::debug("Loading dynamic app %y from path %y", app, fname);
+                # try to load the dynamic app from the given path
+                if (*list<string> apps = TypeScriptActionInterface::registerDynamicAppsFromJavaScript(
+                    dynamic_path, File::readTextFile(fname))) {
+                    return TypeScriptActionInterface::initAppIntern(app, do_actions);
+                }
+            }
+        }
         throw "APP-ERROR", sprintf("No app %y has been registered for deferred initialization by the "
             "TypeScriptActionInterface module", app);
     }
 
     static private bool initAppIntern(hash<AppInfo> info, *bool do_actions) {
+        initialized_appmap{info.app.name} = info;
         initmap{info.app.name} = True;
         # change the cwd to process relative paths and restore on exit
         string cwd = getcwd();
@@ -600,6 +824,10 @@ public class TypeScriptActionInterface {
         }
 
         TypeScriptActionInterface::registerAppIntern(info.app, info.pool);
+        # always initialize record-based actions if applicable
+        if (info.get_table_list) {
+            TypeScriptActionInterface::registerRecordBasedActions(info);
+        }
 
         if (do_actions) {
             TypeScriptActionInterface::checkAppActions(info.app.name);
@@ -639,30 +867,109 @@ public class TypeScriptActionInterface {
         on_success TSAI::debug("TypeScriptActionInterface: registered app %y", app.name);
         on_error TSAI::error("%s", get_exception_string($1));
         string appname = app.name.lwr();
-        SwaggerSchema schema;
-        hash<string, SwaggerSchema> swagger_schema_map;
-        if ((*string swagger_loc = remove app.swagger).val()) {
+
+        # Normalize swagger_* aliases to openapi_* (openapi_* are the primary property names)
+        if (app.swagger) {
+            app.openapi = remove app.swagger;
+        }
+        if (app.swagger_options) {
+            app.openapi_options = remove app.swagger_options;
+        }
+        if (app.swagger_paths) {
+            app.openapi_paths = remove app.swagger_paths;
+        }
+        if (app.swagger_type_overrides) {
+            app.openapi_type_overrides = remove app.swagger_type_overrides;
+        }
+        if (app.swagger_schema_map) {
+            app.openapi_schema_map = remove app.swagger_schema_map;
+        }
+
+        AbstractRestSchemaValidator schema;
+        hash<string, AbstractRestSchemaValidator> schema_schema_map;
+        # Extract include_response_headers flag from openapi_options (default: True for backwards compatibility)
+        *bool include_response_headers;
+        if (app.openapi_options.hasKey("include_response_headers")) {
+            include_response_headers = app.openapi_options.include_response_headers;
+            remove app.openapi_options.include_response_headers;
+        }
+        # Handle openapi property (with auto-detection for Swagger 2.0 vs OpenAPI 3.0 content)
+        if ((*string openapi_loc = remove app.openapi).val()) {
             on_error rethrow $1.err, sprintf("%s (while loading app %y)", $1.desc, app.name);
-            if (app.swagger_schema_map) {
-                throw "APP-ERROR", "Invalid 'swagger_schema_map' property; this property cannot be given if "
-                    "`swagger` is provided";
+            if (app.openapi_schema_map) {
+                throw "APP-ERROR", "Invalid 'openapi_schema_map' property; this property "
+                    "cannot be given if `openapi` is provided";
             }
-            schema = TypeScriptActionInterface::getSwaggerSchema(appname, swagger_loc, remove app.swagger_options,
-                remove app.swagger_paths, remove app.swagger_type_overrides);
-        } else if (*hash<auto> schema_map = remove app.swagger_schema_map) {
-            *hash<auto> swagger_options = remove app.swagger_options;
-            foreach hash<auto> i in (schema_map.pairIterator()) {
+            schema = TypeScriptActionInterface::getRestSchema(appname, openapi_loc, remove app.openapi_options,
+                remove app.openapi_paths, remove app.openapi_type_overrides);
+        # Handle schema map
+        } else if (*hash<auto> smap = remove app.openapi_schema_map) {
+            *hash<auto> schema_options = remove app.openapi_options;
+            foreach hash<auto> i in (smap.pairIterator()) {
                 on_error rethrow $1.err, sprintf("%s (while creating schema for app %y schema %y): %y", $1.desc,
                     app.name, i.key, i.value);
-                swagger_schema_map{i.key} = TypeScriptActionInterface::getSwaggerSchema(appname, i.value.swagger,
-                    remove i.value.swagger_options ?? swagger_options,
-                    remove i.value.swagger_paths, remove i.value.swagger_type_overrides);
+                # Normalize swagger alias to openapi in map entries
+                if (i.value.swagger) {
+                    i.value.openapi = remove i.value.swagger;
+                }
+                if (i.value.swagger_options) {
+                    i.value.openapi_options = remove i.value.swagger_options;
+                }
+                if (i.value.swagger_paths) {
+                    i.value.openapi_paths = remove i.value.swagger_paths;
+                }
+                if (i.value.swagger_type_overrides) {
+                    i.value.openapi_type_overrides = remove i.value.swagger_type_overrides;
+                }
+                string schema_loc = i.value.openapi;
+                if (!schema_loc) {
+                    throw "APP-ERROR", sprintf("Schema map entry %y must have an 'openapi' key",
+                        i.key);
+                }
+                schema_schema_map{i.key} = TypeScriptActionInterface::getRestSchema(appname, schema_loc,
+                    remove i.value.openapi_options ?? schema_options,
+                    remove i.value.openapi_paths, remove i.value.openapi_type_overrides);
             }
         }
         hash<auto> app0 += app;
         if (app.logo) {
             app0.logo = parse_base64_string(app.logo);
         }
+
+        hash<GoogleAppInfo> google_app;
+        if (exists (*hash<auto> h = remove app0.google_app)) {
+            if (schema) {
+                throw "APP-ERROR", sprintf("App %y cannot define both the \"google_app\" (%y) and \"openapi\" "
+                    "attributes", app.name, google_app);
+            }
+            if (schema_schema_map) {
+                throw "APP-ERROR", sprintf("App %y cannot define both the \"google_app\" (%y) and "
+                    "\"openapi_schema_map\" attributes", app.name, google_app);
+            }
+            if (h.api.typeCode() != NT_STRING) {
+                throw "APP-ERROR", sprintf("App %y google_app.api must be a string; got type %y instead",
+                    app.name, h.api.fullType());
+            }
+            if (exists h.resource && (h.resource.typeCode() != NT_STRING)) {
+                throw "APP-ERROR", sprintf("App %y google_app.resource must be a string if present; got type %y "
+                    "instead", app.name, h.resource.fullType());
+            }
+            if (exists h.path_args && (h.path_args.typeCode() != NT_HASH)) {
+                throw "APP-ERROR", sprintf("App %y google_app.path_args must be a hash; got type %y instead",
+                    app.name, h.path_args.fullType());
+            }
+            if (exists h.path_prefix && (h.path_prefix.typeCode() != NT_STRING)) {
+                throw "APP-ERROR", sprintf("App %y google_app.path_prefix must be a string; got type %y instead",
+                    app.name, h.path_prefix.fullType());
+            }
+            if (exists h.subpaths && (h.subpaths.typeCode() != NT_LIST)) {
+                throw "APP-ERROR", sprintf("App %y google_app.subpaths must be a list; got type %y instead",
+                    app.name, h.subpaths.fullType());
+            }
+
+            google_app = cast<hash<GoogleAppInfo>>(h);
+        }
+
         hash<string, bool> url_template_options;
         if (*hash<auto> rest = remove app0.rest) {
             string sname = "tsrest-" + app.name.lwr();
@@ -672,21 +979,32 @@ public class TypeScriptActionInterface {
                 url = regex_subst(url, "^https?", sname);
             }
 
-            hash<string, hash<ConnectionOptionInfo>> opts = TypeScriptAppRestConnectionOptions;
+            # check for AWS apps
+            *string aws_service = remove app0.rest_modifiers.aws_service;
+
+            hash<string, hash<ConnectionOptionInfo>> opts = aws_service
+                ? TypeScriptAwsAppRestConnectionOptions
+                : TypeScriptAppRestConnectionOptions;
             foreach hash<auto> i in (rest.pairIterator()) {
                 if (!opts{i.key}) {
-                    throw "TYPESCRIPT-REST-OPTION-ERROR", sprintf("Unknown REST connection option %y; known "
-                        "options: %y", i.key, keys opts);
+                    throw "TYPESCRIPT-REST-OPTION-ERROR", sprintf("Unknown REST connection option %y for app %y; known "
+                        "options: %y", i.key, app.name, keys opts);
                 }
                 if (exists i.value) {
                     opts{i.key}.default_value = i.value;
                 }
             }
+            if (aws_service) {
+                opts.service.default_value = aws_service;
+            }
+
             *string required_options;
             hash<AsyncCallInfo> post_auth;
             hash<AsyncCallInfo> post_auth_code;
             hash<auto> conn_update;
             hash<string, string> conn_opt_map;
+            string url_from_option;
+            *softlist<hash<UiMessageInfo>> messages;
             if (*hash<auto> rest_modifiers = remove app0.rest_modifiers) {
                 foreach hash<auto> i in (rest_modifiers.options.pairIterator()) {
                     if (i.value.allowed_values) {
@@ -700,6 +1018,27 @@ public class TypeScriptActionInterface {
                 }
                 if (rest_modifiers.required_options.val()) {
                     required_options = rest_modifiers.required_options;
+                    if (aws_service) {
+                        if (required_options !~ /\bregion\b/) {
+                            required_options += ",region";
+                        }
+                        if (required_options !~ /\baccess_key_id\b/) {
+                            required_options += ",access_key_id";
+                        }
+                        if (required_options !~ /\bsecret_access_key\b/) {
+                            required_options += ",secret_access_key";
+                        }
+                    }
+                } else if (aws_service) {
+                    required_options = "region,access_key_id,secret_access_key";
+                }
+                if (rest_modifiers.messages) {
+                    try {
+                        messages = map cast<hash<UiMessageInfo>>($1), rest_modifiers.messages;
+                    } catch (hash<ExceptionInfo> ex) {
+                        throw "REST-MODIFIER-ERROR", sprintf("The 'messages' REST modifier option must be a list of "
+                            "UI message info hashes; got %y -> %s", rest_modifiers.messages, ex.desc);
+                    }
                 }
                 if (rest_modifiers.set_options_post_auth.val()) {
                     if (!rest_modifiers.set_options_post_auth.callp()) {
@@ -763,12 +1102,18 @@ public class TypeScriptActionInterface {
                 if (rest_modifiers.url_template_options) {
                     url_template_options = map {$1: True}, rest_modifiers.url_template_options;
                 }
+                if (rest_modifiers.url_from_option) {
+                    url_from_option = rest_modifiers.url_from_option;
+                }
+            } else if (aws_service) {
+                required_options = "region,access_key_id,secret_access_key";
             }
+
             hash<ConnectionSchemeInfo> scheme = <ConnectionSchemeInfo>{
                 "display_name": app.display_name,
                 "short_desc": app.short_desc,
                 "desc": app.desc,
-                "cls": Class::forName("TypeScriptAppRestConnection"),
+                "cls": Class::forName(aws_service ? "TypeScriptAwsAppRestConnection" : "TypeScriptAppRestConnection"),
                 "schemes": {
                     sname: True,
                 },
@@ -778,6 +1123,7 @@ public class TypeScriptActionInterface {
                 "options": opts,
                 "required_options": required_options,
                 "auto_url": exists url,
+                "messages": messages,
             };
             ConnectionSchemeCache::registerScheme(sname, scheme);
             samap{sname} = app.name;
@@ -798,6 +1144,12 @@ public class TypeScriptActionInterface {
             if (conn_opt_map) {
                 app_conn_opt_map{appname} = conn_opt_map;
             }
+            if (url_from_option) {
+                app_url_option_map{appname} = url_from_option;
+            }
+            if (aws_service) {
+                aws_app_map{appname} = True;
+            }
         }
         DataProviderActionCatalog::registerApp(cast<hash<DataProviderAppInfo>>(app0));
 
@@ -805,14 +1157,26 @@ public class TypeScriptActionInterface {
         TypeScriptActionInterface::checkRoot();
         root.registerChild(appname, prov);
 
-        if (schema) {
-            app_swagger_map{appname} = schema;
+        if (google_app) {
+            if (google_app.resource.val()) {
+                # register all actions for the app
+                prov.registerGoogleAppActions(app.name, google_app);
+            }
+            google_app_map{appname} = google_app;
         }
-        if (swagger_schema_map) {
-            app_swagger_schema_map{appname} = swagger_schema_map;
+
+        if (schema) {
+            app_schema_map{appname} = schema;
+        }
+        if (schema_schema_map) {
+            app_schema_schema_map{appname} = schema_schema_map;
         }
         if (url_template_options) {
             atmap{appname} = url_template_options;
+        }
+        # Store include_response_headers flag if explicitly set (only store if False to save memory)
+        if (exists include_response_headers && !include_response_headers) {
+            app_include_response_headers_map{appname} = include_response_headers;
         }
     }
 
@@ -826,8 +1190,8 @@ public class TypeScriptActionInterface {
         root.registerChild(appname, prov);
     }
 
-    static SwaggerSchema getSwaggerSchema(string appname, string swagger_loc, *hash<auto> swagger_opts,
-            *list<auto> paths, *hash<auto> swagger_type_overrides) {
+    static AbstractRestSchemaValidator getRestSchema(string appname, string schema_loc, *hash<auto> schema_opts,
+            *list<auto> paths, *hash<auto> type_overrides) {
         # first check cache
         string path_sha512;
         if (paths) {
@@ -835,21 +1199,25 @@ public class TypeScriptActionInterface {
         } else {
             path_sha512 = "none";
         }
-        string filename = sprintf("swagger-%s-%s.yaml", encode_url(swagger_loc, True), path_sha512);
+        string filename = sprintf("schema-%s-%s.yaml", encode_url(schema_loc, True), path_sha512);
         bool store_in_cache;
         *string schema_source = TypeScriptActionInterface::getCachedSchema(\store_in_cache, filename);
         if (!schema_source) {
-            schema_source = FileLocationHandler::getTextFileFromLocation(swagger_loc);
+            schema_source = FileLocationHandler::getTextFileFromLocation(schema_loc);
             if (paths) {
+                # Note: path optimization currently only works for Swagger 2.0 schemas
                 schema_source = TypeScriptActionInterface::getOptimizedSchema(appname, schema_source, paths);
             }
         }
-        SwaggerSchema schema = SwaggerLoader::fromString(schema_source, NOTHING, swagger_opts);
+
+        # Auto-detect schema type (Swagger 2.0 vs OpenAPI 3.0) and format (JSON vs YAML)
+        AbstractRestSchemaValidator schema = RestSchemaLoader::fromString(schema_source, NOTHING, schema_opts);
+
         if (store_in_cache) {
             TypeScriptActionInterface::cacheSchema(filename, schema_source);
         }
-        if (swagger_type_overrides) {
-            TypeScriptActionInterface::overrideTypes(appname, schema, swagger_type_overrides);
+        if (type_overrides) {
+            TypeScriptActionInterface::overrideTypes(appname, schema, type_overrides);
         }
         return schema;
     }
@@ -865,9 +1233,9 @@ public class TypeScriptActionInterface {
             string m;
             if (l.size() == 2) {
                 m = (pop l).upr();
-                if (!SwaggerDataProvider::HttpMethods{m}) {
+                if (!RestSchemaDataProvider::HttpMethods{m}) {
                     throw "INVALID-HTTP-METHOD", sprintf("Method %y is unknown; expecting one of: %y", m,
-                        keys SwaggerDataProvider::HttpMethods);
+                        keys RestSchemaDataProvider::HttpMethods);
                 }
             }
             string p = l.join("/");
@@ -932,6 +1300,130 @@ public class TypeScriptActionInterface {
         return schema_source;
     }
 
+    static registerRecordBasedActions(hash<AppInfo> info) {
+        int cnt;
+        # option function map; type -> function map
+        hash<string, hash<string, hash<auto>>> ofmap;
+        hash<DataProviderInfo> prov_info = TypeScriptActionRecordBasedDataProvider::getDataProviderInfo(info, \ofmap);
+        if (info.search_records) {
+            string desc = sprintf("Search for matching records in the given table in app %y", info.app.name);
+            DataProviderActionCatalog::registerAction(<DataProviderActionInfo>{
+                "app": info.app.name,
+                "action": "search",
+                "display_name": "Search Records",
+                "short_desc": desc,
+                "desc": desc,
+                "action_code": DPAT_FIND,
+                "path": "tables/{table}",
+                "path_vars": {
+                    "table": TablePathVar,
+                },
+                "groups": ("Record-Based",),
+                "data_dependent_options": True,
+                "data_provider_info": prov_info,
+            });
+            desc = sprintf("Search for a single matching record in the given table in app %y", info.app.name);
+            DataProviderActionCatalog::registerAction(<DataProviderActionInfo>{
+                "app": info.app.name,
+                "action": "search-single",
+                "display_name": "Find a Single Record",
+                "short_desc": desc,
+                "desc": desc,
+                "action_code": DPAT_FIND_SINGLE,
+                "path": "tables/{table}",
+                "path_vars": {
+                    "table": TablePathVar,
+                },
+                "groups": ("Record-Based",),
+                "data_dependent_options": True,
+                "data_provider_info": prov_info,
+            });
+            ++cnt;
+        }
+        if (info.create_records) {
+            string desc = sprintf("Create new records in the given table in app %y", info.app.name);
+            DataProviderActionCatalog::registerAction(<DataProviderActionInfo>{
+                "app": info.app.name,
+                "action": "create",
+                "display_name": "Create Records",
+                "short_desc": desc,
+                "desc": desc,
+                "action_code": DPAT_CREATE,
+                "path": "tables/{table}",
+                "path_vars": {
+                    "table": TablePathVar,
+                },
+                "groups": ("Record-Based",),
+                "data_dependent_options": True,
+                "data_provider_info": prov_info,
+            });
+            ++cnt;
+        }
+        if (info.update_records) {
+            string desc = sprintf("Update existing records in the given table in app %y", info.app.name);
+            DataProviderActionCatalog::registerAction(<DataProviderActionInfo>{
+                "app": info.app.name,
+                "action": "update",
+                "display_name": "Update Records",
+                "short_desc": desc,
+                "desc": desc,
+                "action_code": DPAT_UPDATE,
+                "path": "tables/{table}",
+                "path_vars": {
+                    "table": TablePathVar,
+                },
+                "groups": ("Record-Based",),
+                "data_dependent_options": True,
+                "data_provider_info": prov_info,
+            });
+            ++cnt;
+        }
+        if (info.upsert_records) {
+            string desc = sprintf("Upsert records in the given table in app %y", info.app.name);
+            DataProviderActionCatalog::registerAction(<DataProviderActionInfo>{
+                "app": info.app.name,
+                "action": "upsert",
+                "display_name": "Upsert Records",
+                "short_desc": desc,
+                "desc": desc,
+                "action_code": DPAT_UPSERT,
+                "path": "tables/{table}",
+                "path_vars": {
+                    "table": TablePathVar,
+                },
+                "groups": ("Record-Based",),
+                "data_dependent_options": True,
+                "data_provider_info": prov_info,
+            });
+            ++cnt;
+        }
+        if (info.delete_records) {
+            string desc = sprintf("Delete records from the given table in app %y", info.app.name);
+            DataProviderActionCatalog::registerAction(<DataProviderActionInfo>{
+                "app": info.app.name,
+                "action": "delete",
+                "display_name": "Delete Records",
+                "short_desc": desc,
+                "desc": desc,
+                "action_code": DPAT_DELETE,
+                "path": "tables/{table}",
+                "path_vars": {
+                    "table": TablePathVar,
+                },
+                "groups": ("Record-Based",),
+                "data_dependent_options": True,
+                "data_provider_info": prov_info,
+            });
+            ++cnt;
+        }
+        if (!cnt) {
+            throw "APP-ERROR", sprintf("App %y is a record-based app but has no record-based actions", info.app.name);
+        }
+        ActionFunctionContext fctx(info.app.name, "tables", info.pool);
+        TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(info.app.name);
+        prov.registerChild("tables", new TypeScriptActionTablesDataProvider(fctx, prov_info, ofmap));
+    }
+
     static scanType(hash<auto> h, reference<hash<string, bool>> tmap, *hash<auto> definitions, *string name) {
         if (exists (*string ref = ((h."$ref" ?? h.schema."$ref" ?? h.items."$ref" ?? h.additionalProperties."$ref"
             ?? h.additionalProperties.items."$ref")
@@ -943,6 +1435,30 @@ public class TypeScriptActionInterface {
         map TypeScriptActionInterface::scanType($1, \tmap, definitions), h.allOf;
         map TypeScriptActionInterface::scanType($1, \tmap, definitions), h.anyOf;
         map TypeScriptActionInterface::scanType($1, \tmap, definitions), h.properties.iterator();
+    }
+
+    # Used by external code to add child data providers to an app
+    static registerAppChildDataProvider(string app, AbstractDataProvider prov) {
+        initApp(app);
+        TypeScriptActionAppDataProvider parent = TypeScriptActionInterface::getAppDataProvider(app);
+        parent.registerChild(prov.getName(), prov);
+    }
+
+    # Used by external code to add child data providers to an app
+    static bool tryRegisterAppChildDataProvider(string app, AbstractDataProvider prov) {
+        try {
+            registerAppChildDataProvider(app, prov);
+            return True;
+        } catch (hash<ExceptionInfo> ex) {
+            TSAI::warn("Failed to register child provider of app %y: %s: %s", app, ex.err, ex.desc);
+        }
+        return False;
+    }
+
+    # Used by external code to revert adding child data providers to an app
+    static *AbstractDataProvider deregisterAppChildDataProvider(string app, string child) {
+        TypeScriptActionAppDataProvider parent = TypeScriptActionInterface::getAppDataProvider(app);
+        return parent.deregisterChild(child);
     }
 
     static addReference(string ref, reference<hash<string, bool>> tmap, *hash<auto> definitions) {
@@ -1017,6 +1533,14 @@ public class TypeScriptActionInterface {
 
     #! Returns the path to the data provider
     static generateDataProvider(reference<hash<auto>> action, JavaScriptProgramPool pool) {
+        # Normalize swagger_* aliases to openapi_* (openapi_* are the primary property names)
+        if (action.swagger_schema) {
+            action.openapi_schema = remove action.swagger_schema;
+        }
+        if (action.swagger_path) {
+            action.openapi_path = remove action.swagger_path;
+        }
+
         hash<DataProviderAppInfo> app;
         {
             on_error rethrow "TYPESCRIPT-ACTION-ERROR", sprintf("Error registering action %y: %s: %s", action.action,
@@ -1024,21 +1548,21 @@ public class TypeScriptActionInterface {
             app = DataProviderActionCatalog::getAppEx(action.app);
         }
         string appname = action.app.lwr();
-        *SwaggerSchema schema;
-        if (exists (*string swagger_schema = action.swagger_schema)) {
-            schema = app_swagger_schema_map{appname}{swagger_schema};
+        *AbstractRestSchemaValidator schema;
+        if (exists (*string rest_schema = action.openapi_schema)) {
+            schema = app_schema_schema_map{appname}{rest_schema};
             if (!schema) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y refers to unknown Swagger schema %y; "
-                    "known schemas for this app: %y", app.name, action.action, swagger_schema,
-                    keys app_swagger_schema_map{appname});
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y refers to unknown REST schema %y; "
+                    "known schemas for this app: %y", app.name, action.action, rest_schema,
+                    keys app_schema_schema_map{appname});
             }
         } else {
-            if ((action.action_code == DPAT_API) && !action.api_function && app_swagger_schema_map{appname}) {
+            if ((action.action_code == DPAT_API) && !action.api_function && app_schema_schema_map{appname}) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y API action %y has no 'api_function' attribute and "
-                    "is missing the \"swagger_schema\" attribute; known schemas for this app: %y", app.name,
-                    action.action, keys app_swagger_schema_map{appname});
+                    "is missing the \"openapi_schema\" attribute; known schemas for this app: %y", app.name,
+                    action.action, keys app_schema_schema_map{appname});
             }
-            schema = app_swagger_map{appname};
+            schema = app_schema_map{appname};
         }
 
         switch (action.action_code) {
@@ -1056,171 +1580,14 @@ public class TypeScriptActionInterface {
                 break;
             }
 
-            case DPAT_FIND: {
-                TypeScriptActionInterface::generateSearchDataProvider(app, \action, pool, schema);
-                string actionname = action.action.lwr();
-                if (!smap{appname}{actionname}) {
-                    smap{appname}{actionname} = True;
-                }
-                break;
-            }
-
-            case DPAT_CREATE: {
-                TypeScriptActionInterface::generateCreateDataProvider(app, \action, pool, schema);
-                string actionname = action.action.lwr();
-                if (!crmap{appname}{actionname}) {
-                    crmap{appname}{actionname} = True;
-                }
-                break;
-            }
-
-            case DPAT_UPDATE: {
-                TypeScriptActionInterface::generateUpdateDataProvider(app, \action, pool, schema);
-                string actionname = action.action.lwr();
-                if (!updmap{appname}{actionname}) {
-                    updmap{appname}{actionname} = True;
-                }
-                break;
-            }
-
-            case DPAT_UPSERT: {
-                TypeScriptActionInterface::generateUpsertDataProvider(app, \action, pool, schema);
-                string actionname = action.action.lwr();
-                if (!upsmap{appname}{actionname}) {
-                    upsmap{appname}{actionname} = True;
-                }
-                break;
-            }
-
-            case DPAT_DELETE: {
-                TypeScriptActionInterface::generateDeleteDataProvider(app, \action, pool, schema);
-                string actionname = action.action.lwr();
-                if (!dmap{appname}{actionname}) {
-                    dmap{appname}{actionname} = True;
-                }
-                break;
-            }
-
             default:
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y action_code: %y is unsupported",
                     action.app, action.action, action.action_code);
         }
     }
 
-    static generateSearchDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
-            JavaScriptProgramPool pool, *SwaggerSchema schema) {
-        timeout io_timeout = seconds(remove action.io_timeout_secs ?? DefaultIoTimeoutSecs);
-
-        *hash<AsyncCallInfo> get_record_type = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
-            "get_record_type", "get record type", pool, io_timeout, action.app, action.action);
-        if (!get_record_type) {
-            throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y is missing its \"get_record_type\" "
-                "attribute, but this attribute is required for actions supporting searches", action.app,
-                action.action);
-        }
-
-        ActionFunctionContext fctx(app.name, action.action, pool);
-        if (*hash<auto> opts = remove action.options) {
-            action.options = TypeScriptActionInterface::getOptions(app, \action, opts, fctx);
-            if (fctx.dmap) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"options\" "
-                    "attribute; search actions do not support get_dependent_options() callbacks", action.app,
-                    action.action);
-            }
-        }
-        *hash<AsyncCallInfo> begin_transaction = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
-            "begin_transaction", "begin transaction", pool, io_timeout, action.app, action.action);
-        *hash<AsyncCallInfo> commit = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
-            "commit", "commit", pool, io_timeout, action.app, action.action);
-        *hash<AsyncCallInfo> rollback = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
-            "rollback", "rollback", pool, io_timeout, action.app, action.action);
-
-        *hash<AsyncCallInfo> search_records = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
-            "search_records", "search records", pool, io_timeout, action.app, action.action);
-        if (!search_records) {
-            throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y is missing its \"search_records\" "
-                "attribute, but this attribute is required for actions supporting searches", action.app,
-                action.action);
-        }
-
-        bool uses_generic_search = remove action.uses_generic_search ?? False;
-
-        hash<string, hash<DataProviderOptionInfo>> search_options;
-        if (*hash<auto> opts = remove action.search_options) {
-            if (uses_generic_search) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y cannot define \"search_options\" when "
-                    "\"uses_generic_search\" is also defined", action.app, action.action);
-            }
-            throw "UNSUPPORTED", "search options are not yet supported";
-        } else if (uses_generic_search) {
-            search_options = AbstractDataProvider::GenericRecordSearchOptions;
-        }
-
-        hash<string, hash<DataProviderExpressionInfo>> expressions;
-        if (*hash<auto> opts = remove action.expressions) {
-            if (uses_generic_search) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y cannot define \"expressions\" when "
-                    "\"uses_generic_search\" is also defined", action.app, action.action);
-            }
-            throw "UNSUPPORTED", "custom expressions are not yet supported";
-        } else {
-            expressions = AbstractDataProvider::GenericExpressions;
-        }
-
-        TypeScriptActionSearchDataProvider child(action.action, get_record_type, begin_transaction, commit, rollback,
-            search_records, search_options, expressions, !uses_generic_search, fctx);
-
-        TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);
-        prov.registerChild(action.action, child);
-
-        #printf("Registered %s %s (%y)\n", action.app, action.action);
-
-        action.path = action.action;
-    }
-
-    static registerAppChildDataProvider(string app, AbstractDataProvider prov) {
-        initApp(app);
-        TypeScriptActionAppDataProvider parent = TypeScriptActionInterface::getAppDataProvider(app);
-        parent.registerChild(prov.getName(), prov);
-    }
-
-    static bool tryRegisterAppChildDataProvider(string app, AbstractDataProvider prov) {
-        try {
-            registerAppChildDataProvider(app, prov);
-            return True;
-        } catch (hash<ExceptionInfo> ex) {
-            TSAI::warn("Failed to register child provider of app %y: %s: %s", app, ex.err, ex.desc);
-        }
-        return False;
-    }
-
-    static *AbstractDataProvider deregisterAppChildDataProvider(string app, string child) {
-        TypeScriptActionAppDataProvider parent = TypeScriptActionInterface::getAppDataProvider(app);
-        return parent.deregisterChild(child);
-    }
-
-    static generateCreateDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
-            JavaScriptProgramPool pool, *SwaggerSchema schema) {
-        throw "UNSUPPORTED";
-    }
-
-    static generateUpdateDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
-            JavaScriptProgramPool pool, *SwaggerSchema schema) {
-        throw "UNSUPPORTED";
-    }
-
-    static generateUpsertDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
-            JavaScriptProgramPool pool, *SwaggerSchema schema) {
-        throw "UNSUPPORTED";
-    }
-
-    static generateDeleteDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
-            JavaScriptProgramPool pool, *SwaggerSchema schema) {
-        throw "UNSUPPORTED";
-    }
-
     static string generateEventDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
-            JavaScriptProgramPool pool, *SwaggerSchema schema) {
+            JavaScriptProgramPool pool, *AbstractRestSchemaValidator schema) {
         ActionFunctionContext fctx(app.name, action.action, pool);
         # get event info
         string event_id;
@@ -1363,13 +1730,44 @@ public class TypeScriptActionInterface {
                     "attribute; got type %y; expecting \"list<string>\"", action.app, action.action,
                     webhook_echo_body_keys.fullType());
             }
-
+            auto webhook_confirmation_key_loc = remove action.webhook_confirmation_key_loc;
+            if (exists webhook_confirmation_key_loc && webhook_confirmation_key_loc.typeCode() != NT_STRING) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid "
+                    "\"webhook_confirmation_key_loc\" attribute; got type %y; expecting \"string\"", action.app,
+                    action.action, webhook_confirmation_key_loc.fullType());
+            }
+            auto webhook_confirmation_value = remove action.webhook_confirmation_value;
+            auto webhook_confirmation_url_loc = remove action.webhook_confirmation_url_loc;
+            if (exists webhook_confirmation_url_loc && webhook_confirmation_url_loc.typeCode() != NT_STRING) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid "
+                    "\"webhook_confirmation_url_loc\" attribute; got type %y; expecting \"string\"", action.app,
+                    action.action, webhook_confirmation_url_loc.fullType());
+            }
+            auto webhook_confirmation_method = remove action.webhook_confirmation_method;
+            if (exists webhook_confirmation_method && webhook_confirmation_method.typeCode() != NT_STRING) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid "
+                    "\"webhook_confirmation_method\" attribute; got type %y; expecting \"string\"", action.app,
+                    action.action, webhook_confirmation_url_loc.fullType());
+            }
+            auto webhook_assume_json = remove action.webhook_assume_json;
+            if (exists webhook_assume_json && (webhook_assume_json.typeCode() != NT_STRING)) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"webhook_assume_json\" "
+                    "attribute; got type %y; expecting \"string\"", action.app, action.action,
+                    webhook_assume_json.fullType());
+            }
+            *hash<AsyncCallInfo> format_event_data = TypeScriptActionInterface::tryGetAsyncAttribute(\action,
+                "format_event_data", "format event data", pool, io_timeout, action.app, action.action);
             TypeScriptActionInterface::registerAsyncCall(\webhook_register, "app", app.name, action.action);
             TypeScriptActionInterface::registerAsyncCall(\webhook_deregister, "app", app.name, action.action);
+            if (format_event_data) {
+                TypeScriptActionInterface::registerAsyncCall(\format_event_data, "app", app.name, action.action);
+            }
 
             child = new TypeScriptActionWebhookEventDataProvider(action.action, event_id, event_info,
                 get_example_event_data, get_dynamic_type, fctx, method, webhook_register, webhook_deregister,
-                webhook_auth, webhook_perms, webhook_event_loc, webhook_echo_header, webhook_echo_body_keys);
+                webhook_auth, webhook_perms, webhook_event_loc, webhook_echo_header, webhook_echo_body_keys,
+                webhook_confirmation_key_loc, webhook_confirmation_value, webhook_confirmation_url_loc,
+                webhook_confirmation_method, webhook_assume_json, format_event_data);
             rv = AES_WH_EVENT;
         } else {
             auto event_function = remove action.event_function;
@@ -1441,11 +1839,47 @@ public class TypeScriptActionInterface {
     }
 
     static generateApiDataProvider(hash<DataProviderAppInfo> app, reference<hash<auto>> action,
-            JavaScriptProgramPool pool, *SwaggerSchema schema) {
+            JavaScriptProgramPool pool, *AbstractRestSchemaValidator schema) {
+        string appname = app.name.lwr();
+        hash<auto> google_action;
+        if (auto h = remove action.google_action) {
+            if (h.typeCode() != NT_HASH) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"google_action\" "
+                    "attribute; got type %y; expecting \"hash\"", action.app, action.action,
+                    h.fullType());
+            }
+            # must have a registered google app for this action
+            *hash<GoogleAppInfo> gapp = google_app_map{appname};
+            if (!gapp) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"google_action\" "
+                    "attribute; app %y is not registered as a Google app", action.app, action.action, h.app);
+            }
+
+            if (h.resource.typeCode() != NT_STRING) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y \"google_action.resource\" must be a "
+                    "string; got type %y instead", app.name, action.action, h.resource.fullType());
+            }
+            (*string category, *string name) = (h.resource =~ x/([^\/]+)\/([^\/]+)/);
+            if (!category.val() || !name.val()) {
+                throw "APP-ERROR", sprintf("Invalid resource %y for app %y action %y; must be of the form "
+                    "category/resource", h.resource, app.name, action.action);
+            }
+            if (exists h.path_args && (h.path_args.typeCode() != NT_HASH)) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y \"google_action.path_args\" must be a "
+                    "hash when present; got type %y instead", app.name, action.action, h.path_args.fullType());
+            }
+            if (exists h.query_args && (h.query_args.typeCode() != NT_HASH)) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y \"google_action.query_args\" must be a "
+                    "hash when present; got type %y instead", app.name, action.action, h.query_args.fullType());
+            }
+            h.app = gapp;
+
+            google_action = h;
+        }
         hash<AsyncCallInfo> api;
         {
             auto api_function = remove action.api_function;
-            if (!api_function.callp() && !schema) {
+            if (!api_function.callp() && !schema && !google_action) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has no REST schema and has a missing or "
                     "invalid \"api_function\" attribute; got type %y; expecting a callable value", action.app,
                     action.action, api_function.fullType());
@@ -1562,16 +1996,16 @@ public class TypeScriptActionInterface {
         }
 
         TypeScriptActionApiDataProvider child;
-        if ((*string swagger_path = remove action.swagger_path).val()) {
+        if ((*string openapi_path = remove action.openapi_path).val()) {
             if (!schema) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"swagger_path\" "
-                    "attribute %y; this attribute can only been used when the application declares a Swagger schema",
-                    action.app, action.action, swagger_path);
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"openapi_path\" "
+                    "attribute %y; this attribute can only be used when the application declares a REST schema",
+                    action.app, action.action, openapi_path);
             }
             if (remove action.options) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"options\" property; "
-                    "this property cannot be defined when \"swagger_path\" (%y) is also defined for the action",
-                    action.app, action.action, swagger_path);
+                    "this property cannot be defined when \"openapi_path\" (%y) is also defined for the action",
+                    action.app, action.action, openapi_path);
             }
 
             *softlist<string> independent_path_vars = remove action.independent_path_vars;
@@ -1579,17 +2013,23 @@ public class TypeScriptActionInterface {
             ActionFunctionContext fctx(action.app, action.action, pool);
 
             # check for path vars
-            *hash<string, bool> path_vars = map {$1: True}, (swagger_path =~ x/\{([^\}]*)}/g);
-            TypeScriptActionApiWithSchemaDataProvider dp(\action, swagger_path, api, path_vars,
-                (map {$1: True}, independent_path_vars), app_conn_opt_map{app.name.lwr()},
-                remove action.override_options, fctx, get_dynamic_request_type, get_dynamic_response_type,
-                request_data_converter, response_data_converter, request_type, response_type);
+            *hash<string, bool> path_vars = map {$1: True}, (openapi_path =~ x/\{([^\}]*)}/g);
+            # Get include_response_headers flag (default: True for backwards compatibility)
+            bool include_response_headers = app_include_response_headers_map{appname} ?? True;
+            TypeScriptActionApiWithSchemaDataProvider dp(\action, openapi_path, api, path_vars,
+                (map {$1: True}, independent_path_vars), app_conn_opt_map{appname},
+                remove action.override_options, remove action.ignore_options, fctx, get_dynamic_request_type,
+                get_dynamic_response_type, request_data_converter, response_data_converter, request_type,
+                response_type, include_response_headers);
             child = dp;
 
             action.output_type = child.getResponseType();
+        } else if (google_action) {
+            child = new TypeScriptActionGoogleApiDataProvider(action.action, google_action, api, fctx,
+                get_dynamic_request_type, get_dynamic_response_type);
         } else {
             child = new TypeScriptActionApiDataProvider(action.action, api, request_type, response_type, fctx,
-                get_dynamic_request_type);
+                get_dynamic_request_type, get_dynamic_response_type);
         }
 
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);
@@ -1635,15 +2075,16 @@ public class TypeScriptActionInterface {
         root.setLogger(DataProvider::getGlobalLogger());
     }
 
-    static getOptionFunctions(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
-            reference<hash<auto>> h, *bool keep_field_functions) {
-        on_error rethrow $1.err, sprintf("%s (while processing option %y)", $1.desc, key);
-        date io_timeout = seconds(remove h.io_timeout_secs ?? DefaultIoTimeoutSecs);
+    static *bool getOptionAllowedValuesFunction(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
+            reference<hash<auto>> h, *date io_timeout, *bool keep_field_functions) {
         if (exists (auto get_allowed_values = remove h.get_allowed_values)) {
             if (!get_allowed_values.callp()) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
                     "\"get_allowed_values\" attribute; got type %y; expecting a callable value", action.app,
                     action.action, key, get_allowed_values.fullType());
+            }
+            if (!io_timeout) {
+                io_timeout = seconds(remove h.io_timeout_secs ?? DefaultIoTimeoutSecs);
             }
             fctx.omap{key} = <AsyncCallInfo>{
                 "app": action.app,
@@ -1658,14 +2099,23 @@ public class TypeScriptActionInterface {
             TypeScriptActionInterface::registerAsyncCall(\fctx.omap{key}, "app", action.app, action.action, key);
 
             h.ref_data = key;
+            action.data_dependent_options = True;
             # remove any manual allowed values
             remove h.allowed_values;
+            return True;
         }
+    }
+
+    static *bool getOptionElementAllowedValuesFunction(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
+            reference<hash<auto>> h, *date io_timeout, *bool keep_field_functions) {
         if (exists (auto get_element_allowed_values = remove h.get_element_allowed_values)) {
             if (!get_element_allowed_values.callp()) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
                     "\"get_allowed_values\" attribute; got type %y; expecting a callable value", action.app,
                     action.action, key, get_element_allowed_values.fullType());
+            }
+            if (!io_timeout) {
+                io_timeout = seconds(remove h.io_timeout_secs ?? DefaultIoTimeoutSecs);
             }
             fctx.eomap{key} = <AsyncCallInfo>{
                 "app": action.app,
@@ -1680,9 +2130,59 @@ public class TypeScriptActionInterface {
             TypeScriptActionInterface::registerAsyncCall(\fctx.eomap{key}, "app", action.app, action.action, key);
 
             h.element_ref_data = key;
+            action.data_dependent_options = True;
             # remove any manual allowed values
             remove h.element_allowed_values;
+            return True;
         }
+    }
+
+    static *bool getOptionDefaultValueFunction(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
+            reference<hash<auto>> h, *date io_timeout, *bool keep_field_functions) {
+        if (exists (auto get_default_value = h.get_default_value)) {
+            if (!get_default_value.callp()) {
+                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
+                    "\"get_default_value\" attribute; got type %y; expecting a callable value", action.app,
+                    action.action, key, get_default_value.fullType());
+            }
+            if (!io_timeout) {
+                io_timeout = seconds(remove h.io_timeout_secs ?? DefaultIoTimeoutSecs);
+            }
+            fctx.dvmap{key} = <AsyncCallInfo>{
+                "app": action.app,
+                "action": action.action,
+                "type": "get_default_value",
+                "label": sprintf("Default value data function for app %y action %y option %y", action.app,
+                    action.action, key),
+                "pool": fctx.pool,
+                "async_call": get_default_value,
+                "to": io_timeout,
+            };
+            TypeScriptActionInterface::registerAsyncCall(\fctx.dvmap{key}, "app", action.app, action.action, key);
+            h.default_ref_data = key;
+            action.data_dependent_options = True;
+            if (!keep_field_functions) {
+                remove h.get_default_value;
+            }
+            return True;
+        }
+    }
+
+    #! Returns True if any option functions were found
+    static *bool getOptionFunctions(reference<hash<auto>> action, ActionFunctionContext fctx, string key,
+            reference<hash<auto>> h, *bool keep_field_functions) {
+        on_error rethrow $1.err, sprintf("%s (while processing option %y)", $1.desc, key);
+        date io_timeout = seconds(remove h.io_timeout_secs ?? DefaultIoTimeoutSecs);
+
+        *bool found = getOptionAllowedValuesFunction(\action, fctx, key, \h, io_timeout, keep_field_functions);
+        if (getOptionElementAllowedValuesFunction(\action, fctx, key, \h, io_timeout, keep_field_functions)
+            && !found) {
+            found = True;
+        }
+        if (getOptionDefaultValueFunction(\action, fctx, key, \h, io_timeout, keep_field_functions) && !found) {
+            found = True;
+        }
+
         if (exists (auto rest_get_allowed_values = remove h.rest_get_allowed_values)) {
             if (rest_get_allowed_values.typeCode() != NT_HASH) {
                 throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
@@ -1709,6 +2209,7 @@ public class TypeScriptActionInterface {
             h.ref_data = key;
             # remove any manual allowed values
             remove h.allowed_values;
+            found = True;
         }
         if (exists (auto rest_get_element_allowed_values = remove h.rest_get_element_allowed_values)) {
             if (rest_get_element_allowed_values.typeCode() != NT_HASH) {
@@ -1738,6 +2239,9 @@ public class TypeScriptActionInterface {
             h.element_ref_data = key;
             # remove any manual allowed values
             remove h.element_allowed_values;
+            if (!found) {
+                found = True;
+            }
         }
         if (exists (auto get_dependent_options = remove h.get_dependent_options)) {
             if (!get_dependent_options.callp()) {
@@ -1757,6 +2261,9 @@ public class TypeScriptActionInterface {
             };
             TypeScriptActionInterface::registerAsyncCall(\fctx.dmap{key}, "app", action.app, action.action, key);
             action.data_dependent_options = True;
+            if (!found) {
+                found = True;
+            }
         }
         if (exists (auto get_dependent_response_options = remove h.get_dependent_response_options)) {
             if (!get_dependent_response_options.callp()) {
@@ -1775,6 +2282,9 @@ public class TypeScriptActionInterface {
                 "to": io_timeout,
             };
             TypeScriptActionInterface::registerAsyncCall(\fctx.drmap{key}, "app", action.app, action.action, key);
+            if (!found) {
+                found = True;
+            }
         }
         if (exists (auto get_dynamic_type = h.get_dynamic_type)) {
             if (!get_dynamic_type.callp()) {
@@ -1799,33 +2309,14 @@ public class TypeScriptActionInterface {
             if (!keep_field_functions) {
                 remove h.get_dynamic_type;
             }
-        }
-        if (exists (auto get_default_value = h.get_default_value)) {
-            if (!get_default_value.callp()) {
-                throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y option %y has an invalid "
-                    "\"get_default_value\" attribute; got type %y; expecting a callable value", action.app,
-                    action.action, key, get_default_value.fullType());
-            }
-            fctx.dvmap{key} = <AsyncCallInfo>{
-                "app": action.app,
-                "action": action.action,
-                "type": "get_default_value",
-                "label": sprintf("Default value data function for app %y action %y option %y", action.app,
-                    action.action, key),
-                "pool": fctx.pool,
-                "async_call": get_default_value,
-                "to": io_timeout,
-            };
-            TypeScriptActionInterface::registerAsyncCall(\fctx.dvmap{key}, "app", action.app, action.action, key);
-            h.default_ref_data = key;
-            action.data_dependent_options = True;
-            if (!keep_field_functions) {
-                remove h.get_default_value;
+            if (!found) {
+                found = True;
             }
         }
         if (h.required && !h.preselected && !exists h.default_value) {
             h.preselected = True;
         }
+        return found;
     }
 
     static *hash<string, hash<ActionOptionInfo>> getOptions(hash<DataProviderAppInfo> app,
@@ -1874,8 +2365,10 @@ public class TypeScriptActionInterface {
         opts = new_opts;
     }
 
-    static hash<ActionOptionInfo> getOptionInfo(string path, hash<auto> opt, *ActionFunctionContext fctx) {
-        opt.type = TypeScriptActionInterface::getType(path, opt.type, opt.required, remove opt.element_type, fctx);
+    static hash<auto> getOptionHashInfo(string path, hash<auto> opt, *ActionFunctionContext fctx,
+            *bool resolve_dynamic) {
+        opt.type = TypeScriptActionInterface::getType(path, opt.type, opt.required, remove opt.element_type, fctx,
+            NOTHING, resolve_dynamic);
         if (opt.allowed_values) {
             opt.allowed_values = map cast<hash<AllowedValueInfo>>($1), opt.allowed_values;
         }
@@ -1885,11 +2378,19 @@ public class TypeScriptActionInterface {
         if (opt.required_groups) {
             opt.required_groups = cast<list<string>>(opt.required_groups);
         }
-        return cast<hash<ActionOptionInfo>>(opt);
+        if (opt.messages) {
+            opt.messages = map cast<hash<UiMessageInfo>>($1), opt.messages;
+        }
+        return opt;
+    }
+
+    static hash<ActionOptionInfo> getOptionInfo(string path, hash<auto> opt, *ActionFunctionContext fctx,
+            *bool resolve_dynamic) {
+        return cast<hash<ActionOptionInfo>>(getOptionHashInfo(path, opt, fctx, resolve_dynamic));
     }
 
     static AbstractDataProviderType getType(string path, string name, *bool required, auto element_type,
-            *ActionFunctionContext fctx, *bool ignore_dup) {
+            *ActionFunctionContext fctx, *bool ignore_dup, *bool resolve_dynamic) {
         if (!required) {
             if (name !~ /^\*/ && name != "auto" && name != "any") {
                 name = "*" + name;
@@ -1901,7 +2402,7 @@ public class TypeScriptActionInterface {
         path += "-" + name;
         if (exists element_type) {
             AbstractDataProviderType et = TypeScriptActionInterface::getType(path + "-element",
-                element_type, NOTHING, NOTHING, fctx, ignore_dup);
+                element_type, NOTHING, NOTHING, fctx, ignore_dup, resolve_dynamic);
             if (name =~ /^\*?list$/) {
                 return new ListDataType(et, !required);
             } else if (name =~ /^\*?hash$/) {
@@ -1919,8 +2420,47 @@ public class TypeScriptActionInterface {
         return type;
     }
 
+    static AbstractDataProviderType getGoogleType(bool input, string path, hash<auto> h, *bool required,
+            auto element_type, *ActionFunctionContext fctx, *bool ignore_dup) {
+        on_error rethrow $1.err, sprintf("%s (type: %y)", $1.desc, h);
+        string key = input ? "google_input_type" : "google_output_type";
+        if (h{key}.typeCode() != NT_HASH) {
+            throw "TYPE-ERROR", sprintf("Expecting %y to be type \"hash\"; got %y instead", key, h{key}.fullType());
+        }
+        if (h{key}.app.typeCode() != NT_STRING) {
+            throw "TYPE-ERROR", sprintf("Expecting %y.\"app\" to be type \"string\"; got %y instead", key,
+                h{key}.app.fullType());
+        }
+        string app = h{key}.app;
+        if (h{key}.type.typeCode() != NT_STRING) {
+            throw "TYPE-ERROR", sprintf("Expecting %y.\"type\" to be type \"string\"; got %y instead", key,
+                h{key}.type.fullType());
+        }
+        string type = h{key}.type;
+        if (h.size() > 1) {
+            throw "TYPE-ERROR", sprintf("Google type description has unsupported keys: %y", keys (h - key));
+        }
+        if (element_type) {
+            throw "TYPE-ERROR", sprintf("Cannot use an element type with Google %s type %y %y",
+                input ? "input" : "output", app, type);
+        }
+        AbstractDataProviderType rv = input
+            ? GoogleDataProviderBase::getInputTypeForSchema(app, type)
+            : GoogleDataProviderBase::getTypeForSchema(app, type);
+        if (!required) {
+            rv = rv.getOrNothingType();
+        }
+        return rv;
+    }
+
     static AbstractDataProviderType getType(string path, hash<auto> h, *bool required, auto element_type,
-            *ActionFunctionContext fctx, *bool ignore_dup) {
+            *ActionFunctionContext fctx, *bool ignore_dup, *bool resolve_dynamic) {
+        if (h.google_input_type) {
+            return getGoogleType(True, path, h, required, element_type, fctx, ignore_dup);
+        } else if (h.google_output_type) {
+            return getGoogleType(False, path, h, required, element_type, fctx, ignore_dup);
+        }
+
         if (h.required.typeCode() == NT_BOOLEAN) {
             required = h.required;
         }
@@ -1940,7 +2480,7 @@ public class TypeScriptActionInterface {
         }
 
         if (h.type.typeCode() != NT_STRING) {
-            return TypeScriptActionInterface::getHashType(path, h, required, fctx, ignore_dup, tags);
+            return TypeScriptActionInterface::getHashType(path, h, required, fctx, ignore_dup, tags, resolve_dynamic);
         }
 
         hash<auto> info;
@@ -1956,25 +2496,20 @@ public class TypeScriptActionInterface {
             *hash<auto> f = remove h.fields;
             HashDataType ht(type, attr.name, NOTHING, tags, default_value, attr);
             if (f) {
-                TypeScriptActionInterface::getHashTypeIntern(path, ht, f, required, fctx, ignore_dup);
+                TypeScriptActionInterface::getHashTypeIntern(path, ht, f, required, fctx, ignore_dup,
+                    resolve_dynamic);
             } else if (exists element_type) {
                 AbstractDataProviderType element_type = TypeScriptActionInterface::getType(path + "-element",
-                    element_type, NOTHING, NOTHING, fctx);
+                    element_type, NOTHING, NOTHING, fctx, ignore_dup, resolve_dynamic);
                 ht.setDefaultOtherFieldType(element_type);
             }
             rv = ht;
         } else if (orig.type == "list") {
-            AbstractDataProviderType et;
-            if (auto t = (remove h.element_type ?? element_type)) {
-                et = TypeScriptActionInterface::getType(path, t, NOTHING, NOTHING, fctx);
-            }
-            rv = new ListDataType(et ?? AutoType, !orig.required, NOTHING, tags, default_value, attr);
+            rv = getListType(path, \h, orig.required, element_type, fctx, ignore_dup, tags, default_value, attr,
+                resolve_dynamic);
         } else if (orig.type == "softlist") {
-            AbstractDataProviderType et;
-            if (auto t = (remove h.element_type ?? element_type)) {
-                et = TypeScriptActionInterface::getType(path + "-element", t, NOTHING, NOTHING, fctx);
-            }
-            rv = new SoftListDataType(et ?? AutoType, !orig.required, NOTHING, tags, default_value, attr);
+            rv = getListType(path, \h, orig.required, element_type, fctx, ignore_dup, tags, default_value, attr,
+                resolve_dynamic, True);
         } else {
             if (*hash<auto> f = remove h.fields) {
                 throw "TYPE-ERROR", sprintf("Type %y cannot support fields; use type \"hash\" with fields",
@@ -1986,44 +2521,96 @@ public class TypeScriptActionInterface {
             rv = new QoreDataType(type, NOTHING, tags, default_value, attr);
         }
         if (h) {
-            throw "TYPE-ERROR", sprintf("Type description has unknown keys: %y", keys h);
+            throw "TYPE-ERROR", sprintf("Type description at path %y has unknown keys: %y", path, keys h);
         }
         return rv;
     }
 
+    static AbstractDataProviderType getListType(string path, reference<hash<auto>> h, *bool required,
+            auto element_type, *ActionFunctionContext fctx, *bool ignore_dup, *hash<auto> tags,
+            auto default_value, hash<NameDescInfo> attr, *bool resolve_dynamic, *bool soft) {
+        AbstractDataProviderType et;
+        if (auto t = (remove h.element_type ?? element_type)) {
+            et = TypeScriptActionInterface::getType(path + "-element", t, NOTHING, NOTHING, fctx, ignore_dup,
+                resolve_dynamic);
+            if (!required) {
+                et = et.getOrNothingType();
+            }
+        }
+        hash<QoreTypeInfo> info = <QoreTypeInfo>{
+            "type": required ? AutoListType : AutoListOrNothingType,
+            "name": attr.name,
+            "display_name": attr.display_name,
+            "short_desc": attr.short_desc,
+            "desc": attr.desc,
+            "tags": tags,
+            "default_value": default_value,
+        };
+        if (soft) {
+            return new SoftListDataType(info, et ?? AutoType);
+        }
+        return new ListDataType(info, et ?? AutoType);
+    }
+
     static HashDataType getHashType(string path, hash<auto> h, *bool required, *ActionFunctionContext fctx,
-            *bool ignore_dup, *hash<auto> tags) {
+            *bool ignore_dup, *hash<auto> tags, *bool resolve_dynamic) {
         on_error rethrow $1.err, sprintf("%s (type: %y)", $1.desc, h);
         HashDataType type(required ? AutoHashType : AutoHashOrNothingType, NOTHING, NOTHING, tags);
-        return TypeScriptActionInterface::getHashTypeIntern(path, type, h, required, fctx, ignore_dup);
+        return TypeScriptActionInterface::getHashTypeIntern(path, type, h, required, fctx, ignore_dup,
+            resolve_dynamic);
     }
 
     static HashDataType getHashTypeIntern(string path, HashDataType type, hash<auto> h, *bool required,
-            *ActionFunctionContext fctx, *bool ignore_dup) {
+            *ActionFunctionContext fctx, *bool ignore_dup, *bool resolve_dynamic) {
         on_error rethrow $1.err, sprintf("%s (fields: %y)", $1.desc, h);
-        map type.addField(TypeScriptActionInterface::getField(path, $1.key, $1.value, fctx, ignore_dup)),
-            h.pairIterator();
+        if (*hash<auto> err = (map {$1.key: $1.value}, h.pairIterator(), (
+            $1.value.typeCode() != NT_HASH && $1.value.typeCode () != NT_STRING))) {
+            throw "TYPE-ERROR", sprintf("%y: the following fields could not be parsed: %y", path, err);
+        }
+        map type.addField(TypeScriptActionInterface::getField(path, $1.key, $1.value, fctx, ignore_dup,
+            resolve_dynamic)), h.pairIterator();
         checkFieldDependencies(type);
         return type;
     }
 
     static AbstractDataProviderType getType(string path, auto v, *bool required, auto element_type,
-            *ActionFunctionContext fctx, *bool ignore_dup) {
+            *ActionFunctionContext fctx, *bool ignore_dup, *bool resolve_dynamic) {
         throw "TYPE-ERROR", sprintf("Expecting \"string\" or \"hash\" for the option \"type\"; got %y "
             "instead", v.fullType());
     }
 
-    static TypeScriptDataField getField(string path, string name, hash<auto> h, *ActionFunctionContext fctx,
-            *bool ignore_dup) {
-        on_error rethrow $1.err, sprintf("%s (field: %y)", $1.desc, h);
-        *bool req = remove h.required;
-        path += "-" + name;
-        AbstractDataProviderType type = TypeScriptActionInterface::getType(path, remove h.type, req,
-            remove h.element_type, fctx, ignore_dup);
-        hash<auto> rv = TypeScriptActionInterface::getFieldHash(path, name, type, \h, req, fctx, ignore_dup);
-        if (h) {
-            throw "FIELD-ERROR", sprintf("Description for field %y has unknown keys: %y", name, keys h);
+    static TypeScriptDataField getField(string path, string name, string type, *ActionFunctionContext fctx,
+            *bool ignore_dup, *bool resolve_dynamic) {
+        on_error rethrow $1.err, sprintf("%s (field: %N)", $1.desc, type);
+        bool req;
+        if (type =~ /^\*/) {
+            type = type[1..];
+        } else {
+            req = True;
         }
+        return new TypeScriptDataField({
+            "name": name,
+            "type": TypeScriptActionInterface::getType(path, type, req, NOTHING, fctx, ignore_dup, resolve_dynamic),
+        }, fctx);
+    }
+
+    static TypeScriptDataField getField(string path, string name, hash<auto> h, *ActionFunctionContext fctx,
+            *bool ignore_dup, *bool resolve_dynamic) {
+        hash<auto> rv;
+        {
+            hash<auto> orig = h;
+            on_error rethrow $1.err, sprintf("%s (field: %N)", $1.desc, orig);
+            *bool req = remove h.required;
+            path += "-" + name;
+            AbstractDataProviderType type = TypeScriptActionInterface::getType(path, remove h.type, req,
+                remove h.element_type, fctx, ignore_dup, resolve_dynamic);
+            rv = TypeScriptActionInterface::getFieldHash(path, name, type, \h, req, fctx, ignore_dup,
+                resolve_dynamic);
+            if (h) {
+                throw "FIELD-ERROR", sprintf("Description for field %y has unknown keys: %y", name, keys h);
+            }
+        }
+        on_error rethrow $1.err, sprintf("%s (field desc: %N)", $1.desc, rv);
         return new TypeScriptDataField(rv, fctx);
     }
 
@@ -2042,16 +2629,12 @@ public class TypeScriptActionInterface {
     }
 
     static hash<auto> getFieldHash(string path, string name, AbstractDataProviderType type,
-            reference<hash<auto>> type_hash, *bool req, *ActionFunctionContext fctx, *bool ignore_dup) {
+            reference<hash<auto>> type_hash, *bool req, *ActionFunctionContext fctx, *bool ignore_dup,
+            *bool resolve_dynamic) {
         hash<auto> info += {
             "name": name,
             "type": type,
         };
-
-        # turn on multiselect for all list types
-        if (type.getBaseTypeCode() == NT_LIST) {
-            info.multiselect = True;
-        }
 
         if (req) {
             if (!type.isMandatory()) {
@@ -2090,11 +2673,11 @@ public class TypeScriptActionInterface {
         if (*softlist<auto> l = remove type_hash.depends_on) {
             info.attr.depends_on = l;
         }
+        if ((*string str = remove type_hash.validation_regex).val()) {
+            info.attr.validation_regex = str;
+        }
         if (exists (auto v = remove type_hash.on_change)) {
             info.attr.on_change = v;
-        }
-        if (remove type_hash.multiselect) {
-            info.multiselect = True;
         }
         if (auto v = remove type_hash.allowed_values) {
             info.allowed_values = v;
@@ -2119,8 +2702,8 @@ public class TypeScriptActionInterface {
         }
         if (exists (auto v = remove type_hash.default_value)) {
             info.default_value = v;
-        } else if (!info.default_value) {
-            info.default_value = info.type.getDefaultValue();
+        } else if (!exists info.default_value && exists (v = info.type.getDefaultValue())) {
+            info.default_value = v;
         }
         if (exists (auto v = remove type_hash.example_value)) {
             info.example_value = v;
@@ -2144,8 +2727,13 @@ public class TypeScriptActionInterface {
 
                 # remove any manual allowed values
                 remove info.allowed_values;
-                info.attr.ref_data = key;
-                info.attr.dynamic = True;
+                if (resolve_dynamic) {
+                    info.allowed_values = cast<AbstractDataProvider>(fctx).getReferenceDataSafe(key,
+                        DataProviderDataContextHelper::getHash());
+                } else {
+                    info.attr.ref_data = key;
+                    info.attr.dynamic = True;
+                }
             }
             if (exists (*code c = remove type_hash.get_element_allowed_values)) {
                 string key = sprintf("%s-%s", path, name);
@@ -2165,8 +2753,13 @@ public class TypeScriptActionInterface {
 
                 # remove any manual allowed values
                 remove info.element_allowed_values;
-                info.attr.element_ref_data = key;
-                info.attr.dynamic = True;
+                if (resolve_dynamic) {
+                    info.allowed_values = cast<AbstractDataProvider>(fctx).getElementReferenceDataSafe(key,
+                        DataProviderDataContextHelper::getHash());
+                } else {
+                    info.attr.element_ref_data = key;
+                    info.attr.dynamic = True;
+                }
             }
             if (exists (*code c = remove type_hash.get_dynamic_type)) {
                 string key = sprintf("%s-%s", path, name);
@@ -2225,8 +2818,13 @@ public class TypeScriptActionInterface {
                 };
                 string ix = TypeScriptActionInterface::registerAsyncCall(ignore_dup, \fctx.dvmap{key}, "app",
                     fctx.app, fctx.action, key);
-                info.attr.get_default_value = ix;
-                info.attr.dynamic = True;
+                if (resolve_dynamic) {
+                    info.default_value = cast<AbstractDataProvider>(fctx).getReferenceDataValueSafe(ix,
+                        DataProviderDataContextHelper::getHash());
+                } else {
+                    info.attr.get_default_value = ix;
+                    info.attr.dynamic = True;
+                }
             }
         }
         if (info.attr.dynamic) {
@@ -2270,7 +2868,9 @@ public class TypeScriptActionInterface {
         if (cmap{opts.name}) {
             throw "TYPESCRIPT-CONNECTION-ERROR", sprintf("Duplicate connection name %y", opts.name);
         }
-        TypeScriptAppRestConnection conn(opts);
+        TypeScriptAppRestConnection conn = aws_app_map{app.lwr()}
+            ? new TypeScriptAwsAppRestConnection(opts)
+            : new TypeScriptAppRestConnection(opts);
         cmap{opts.name} = conn;
         return opts.name;
     }
@@ -2338,9 +2938,22 @@ public class TypeScriptActionInterface {
     }
 
     static string processUrl(string url, hash<auto> opts, hash<string, bool> url_template_options) {
-        map url = replace(url, "{{" + $1 + "}}", opts{$1}), keys url_template_options,
-            opts{$1}.typeCode() == NT_STRING && opts{$1}.val();
+        foreach string pat in (keys url_template_options) {
+            if (opts{pat} =~ /^https?:\/\//) {
+                url = regex_subst(url, "^(https?://)?.*{{" + pat + "}}", opts{pat});
+            } else {
+                url = replace(url, "{{" + pat + "}}", opts{pat} ?? "");
+            }
+        }
         return url;
+    }
+
+    static *string getDynamicAppPath(*string app) {
+        return initialized_appmap{app}.app.info.path ?? appmap{app}.app.info.path;
+    }
+
+    static *string getUrlOptionForApp(string app) {
+        return app_url_option_map{app.lwr()};
     }
 
     static *hash<AsyncCallInfo> getPostAuthCall(string app) {
@@ -2359,26 +2972,6 @@ public class TypeScriptActionInterface {
         string appname = app.lwr();
         return exists smap{appname} || exists crmap{appname} || exists updmap{appname} || exists upsmap{appname}
             || dmap{appname};
-    }
-
-    static bool appSupportsSearch(string app) {
-        return exists smap{app.lwr()};
-    }
-
-    static bool appSupportsCreate(string app) {
-        return exists crmap{app.lwr()};
-    }
-
-    static bool appSupportsUpdate(string app) {
-        return exists updmap{app.lwr()};
-    }
-
-    static bool appSupportsUpsert(string app) {
-        return exists upsmap{app.lwr()};
-    }
-
-    static bool appSupportsDelete(string app) {
-        return exists dmap{app.lwr()};
     }
 
     static *hash<auto> getConnectionUpdateOptions(string app) {
@@ -2401,7 +2994,7 @@ public class TypeScriptActionInterface {
         - auth (int): one of:
           - QAUTH_NONE = 0 -> no auth required
           - QAUTH_QORUS = 1 -> authentication required
-        - perms (*list<string>): an optional list of string permissions when \c auth is 1
+        - perms (list of strings): an optional list of string permissions when \c auth is 1
         - callback (code): a callback taking the arguments passed to the webhook to generate events
         This callback must return a hash with \c url and \c ctx keys providing a URL string for the URL used for the
         webhook, and a context object for destroying the webhook, respectively
@@ -2416,12 +3009,12 @@ public class TypeScriptActionInterface {
     }
 
     #! Create a webhook and return the public URL for it
-    /** @param a hash with the following keys for the webhook
+    /** @param h hash with the following keys for the webhook
         - method (string): the HTTP method for the webhook
         - auth (int): one of:
           - QAUTH_NONE = 0 -> no auth required
           - QAUTH_QORUS = 1 -> authentication required
-        - perms (*list<string>): an optional list of string permissions when \c auth is 1
+        - perms (list of strings): an optional list of string permissions when \c auth is 1
         - callback (code): a callback taking the arguments passed to the webhook to generate events
 
         @return the hash returned by the create callback with \c url and \c ctx keys
@@ -2441,27 +3034,28 @@ public class TypeScriptActionInterface {
         TypeScriptActionInterface::WebhookDelete(info);
     }
 
-    #! Returns a Swagger data provider for the given app
-    static SwaggerDataProvider getSwaggerDataProvider(string app, *string swagger_schema) {
+    #! Returns a REST schema data provider for the given app (supports Swagger 2.0 and OpenAPI 3.0/3.1)
+    static RestSchemaDataProvider getSchemaDataProvider(string app, *string schema_name) {
         string appname = app.lwr();
-        *SwaggerDataProvider rv = exists swagger_schema
-            ? app_swagger_schema_dp{appname}{swagger_schema}
-            : app_swagger_dp{appname};
+        *RestSchemaDataProvider rv = exists schema_name
+            ? app_schema_schema_dp{appname}{schema_name}
+            : app_schema_dp{appname};
         if (!rv) {
-            *SwaggerSchema schema = exists swagger_schema
-                ? app_swagger_schema_map{appname}{swagger_schema}
-                : app_swagger_map{appname};
+            *AbstractRestSchemaValidator schema = exists schema_name
+                ? app_schema_schema_map{appname}{schema_name}
+                : app_schema_map{appname};
             if (!schema) {
-                if (exists swagger_schema) {
-                    throw "APP-ERROR", sprintf("App %y has no Swagger schema %y", app, swagger_schema);
+                if (exists schema_name) {
+                    throw "APP-ERROR", sprintf("App %y has no REST schema %y", app, schema_name);
                 } else {
-                    throw "APP-ERROR", sprintf("App %y has no Swagger schema", app);
+                    throw "APP-ERROR", sprintf("App %y has no REST schema", app);
                 }
             }
-            if (exists swagger_schema) {
-                app_swagger_schema_dp{appname}{swagger_schema} = rv = new SwaggerDataProvider(schema);
+            rv = new RestSchemaDataProvider(schema);
+            if (exists schema_name) {
+                app_schema_schema_dp{appname}{schema_name} = rv;
             } else {
-                app_swagger_dp{appname} = rv = new SwaggerDataProvider(schema);
+                app_schema_dp{appname} = rv;
             }
         }
         return rv;
@@ -2524,8 +3118,45 @@ public class TypeScriptActionInterface {
         }
     }
 
-    static private overrideTypes(string app, SwaggerSchema schema, hash<auto> swagger_type_overrides) {
-        foreach hash<auto> i in (swagger_type_overrides.pairIterator()) {
+    static resolveDynamicType(TypeScriptActionDataProviderBase prov, auto req, HashDataType type) {
+        # find allowed values
+        foreach TypeScriptDataField f in (type.getFields().iterator()) {
+            *hash<auto> attr = f.getAttributes();
+            if (attr.ref_data.val()) {
+                f.setAllowedValues(prov.getReferenceData(attr.ref_data, req) ?? (), f.getAllowedValuesCreatable());
+                f.replaceAttributes(attr - "ref_data");
+            }
+            if (attr.element_ref_data.val()) {
+                f.setElementAllowedValues(prov.getReferenceData(attr.element_ref_data, req) ?? (),
+                    f.getElementAllowedValuesCreatable());
+                f.replaceAttributes(attr - "element_ref_data");
+            }
+            if (attr.default_ref_data) {
+                hash<AsyncCallInfo> call = TypeScriptActionInterface::getCall(attr.get_default_value);
+                try {
+                    auto v = prov.getAsyncValue(call, prov.getCallContextInfo(req));
+                    f.setDefaultValue(v);
+                } catch (hash<ExceptionInfo> ex) {
+                    TSAI::error("Failed to retrieve default value for field %y: %y: %s", f.getName(), call.label,
+                        get_exception_string(ex));
+                }
+                f.replaceAttributes(attr - "default_ref_data");
+            }
+            AbstractDataProviderType t = f.getType();
+            if (t instanceof HashDataType) {
+                resolveDynamicType(prov, req, cast<HashDataType>(t));
+            }
+            if (t instanceof ListDataType) {
+                ListDataType ldt = cast<ListDataType>(t);
+                if (ldt.getElementType() instanceof HashDataType) {
+                    resolveDynamicType(prov, req, cast<HashDataType>(ldt.getElementType()));
+                }
+            }
+        }
+    }
+
+    static private overrideTypes(string app, AbstractRestSchemaValidator schema, hash<auto> type_overrides) {
+        foreach hash<auto> i in (type_overrides.pairIterator()) {
             list<string> l = i.key.split(".");
             string n = shift l;
             AbstractDataProviderType t = schema.getTypeForReference(n);
@@ -2534,7 +3165,7 @@ public class TypeScriptActionInterface {
                 t = TypeScriptActionInterface::getModifiedType(app, n, t, i.value);
                 schema.replaceCachedTypeForReference(n, t);
             } else {
-                TypeScriptActionApiWithSchemaDataProvider::overrideOptionType("swagger-" + i.key, {
+                TypeScriptActionApiWithSchemaDataProvider::overrideOptionType("schema-" + i.key, {
                     "app": app,
                     "action": "<all>",
                 }, t, l, i.value, i.key);
@@ -2569,7 +3200,7 @@ public class TypeScriptActionInterface {
             (remove h{"name", "display_name", "desc", "short_desc", "default_value"}).pairIterator();
 
         if (h) {
-            throw "APP-ERROR", sprintf("App %y: cannot update the following attributes on Swagger types: %y", app, h);
+            throw "APP-ERROR", sprintf("App %y: cannot update the following attributes on REST schema types: %y", app, h);
         }
 
         return rv;
@@ -2628,6 +3259,72 @@ hashdecl AppInfo {
 
     #! The current working directory
     string cwd = getcwd();
+
+    #! Callback to list tables for the app; required for apps that support record-based actions
+    *hash<AsyncCallInfo> get_table_list;
+
+    #! Callback to begine a transaction in the app; only supported for apps that support record-based actions
+    *hash<AsyncCallInfo> begin_transaction;
+
+    #! Callback to begin a transaction in the app; only supported for apps that support record-based actions
+    /** must be declared if the app declares a begin_transaction callback
+    */
+    *hash<AsyncCallInfo> commit;
+
+    #! Callback to roll back a transaction in the app; only supported for apps that support record-based actions
+    /** must be declared if the app declares commit or begin_transaction callbacks
+    */
+    *hash<AsyncCallInfo> rollback;
+
+    #! Callback to retrieve the record type for a given table; required for apps that support record-based actions
+    /** must be declared if the app declares a get_table_list callback
+    */
+    *hash<AsyncCallInfo> get_record_type;
+
+    #! Callback to make native searches for the app
+    /** May only be declared if the app declares a get_table_list callback
+    */
+    *hash<AsyncCallInfo> search_records;
+
+    #! Callback to create record(s) for the app
+    /** May only be declared if the app declares a get_table_list callback
+    */
+    *hash<AsyncCallInfo> create_records;
+
+    #! Callback to update record(s) for the app
+    /** May only be declared if the app declares a get_table_list callback
+    */
+    *hash<AsyncCallInfo> update_records;
+
+    #! Callback to upsert record(s) for the app
+    /** May only be declared if the app declares a get_table_list callback
+    */
+    *hash<AsyncCallInfo> upsert_records;
+
+    #! Callback to delete record(s) for the app
+    /** May only be declared if the app declares a get_table_list callback
+    */
+    *hash<AsyncCallInfo> delete_records;
+
+    #! Supported expressions with record-based options for the app
+    /** May only be declared if the app declares a get_table_list callback
+    */
+    *hash<auto> expressions;
+
+    #! Search options for the app
+    /** May only be declared if the app declares \a get_table_list and \a search_records callbacks
+    */
+    *hash<auto> search_options;
+
+    #! Create options for the app
+    /** May only be declared if the app declares \a get_table_list and \a create_records callbacks
+    */
+    *hash<auto> create_options;
+
+    #! Upsert options for the app
+    /** May only be declared if the app declares \a get_table_list and \a upsert_records callbacks
+    */
+    *hash<auto> upsert_options;
 
     # The program pool info
     JavaScriptProgramPool pool;

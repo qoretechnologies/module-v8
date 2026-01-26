@@ -29,13 +29,13 @@ export const pipedriveActivityDataType = {
     type: 'hash',
     fields: {
       active_flag: {
-        type: 'boolean',
+        type: 'bool',
       },
       deal_id: {
         type: 'number',
       },
       done: {
-        type: 'boolean',
+        type: 'bool',
       },
       due_date: {
         type: 'string',

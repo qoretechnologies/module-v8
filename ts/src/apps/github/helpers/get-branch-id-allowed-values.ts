@@ -1,7 +1,6 @@
-import { Octokit } from '@octokit/rest';
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
-import { GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
+import { createGitHubClient, GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 export const getGitHubBranchIdAllowedValues: TQoreGetAllowedValuesFunction = async (
   context
@@ -19,9 +18,7 @@ export const getGitHubBranchIdAllowedValues: TQoreGetAllowedValuesFunction = asy
     isTokenPresent: !!token,
   });
 
-  const octokit = new Octokit({
-    auth: token,
-  });
+  const octokit = await createGitHubClient(token);
 
   const branches: IQoreAllowedValue[] = [];
   const startTime = Date.now();

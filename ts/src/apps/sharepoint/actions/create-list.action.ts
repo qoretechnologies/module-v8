@@ -57,10 +57,10 @@ const response_type = {
             type: 'string',
           },
           hidden: {
-            type: 'boolean',
+            type: 'bool',
           },
           contentTypesEnabled: {
-            type: 'boolean',
+            type: 'bool',
           },
         },
       },
@@ -84,7 +84,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const CreateSharePointList = QoreAppCreator.createLocalizedAction({
+const CreateSharePointList = QoreAppCreator.createLocalizedAction({
   action: 'create-list',
   app: SHAREPOINT_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -123,3 +123,5 @@ export const CreateSharePointList = QoreAppCreator.createLocalizedAction({
   options,
   response_type,
 });
+
+export default CreateSharePointList;

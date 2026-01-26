@@ -3,7 +3,7 @@ import {
   TQoreAppWithActions,
   TQoreMappedOptions,
 } from '@qoretechnologies/ts-toolkit';
-import { actionsCatalogue } from '../../ActionsCatalogue';
+import { getOauth2ClientSecret } from '../../utils/oauth2-client-secret';
 import { createSwaggerPaths, mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
@@ -45,7 +45,7 @@ export default (locale: Locales) =>
       'NC45djY0LjNMNjAuNyA0M0gxNC42em0xMjAuNiAxMTUuN0g2MC4zVjY3LjJsMjguOCAzNy4xaDQ2LjEiIGZ' +
       'pbGw9IiMxMjU1ODAiLz48L3N2Zz4=',
     logo_file_name: 'netsuite-logo.svg',
-    logo_mime_type: 'image/scg+xml',
+    logo_mime_type: 'image/svg+xml',
     swagger: 'schemas/netsuite.swagger.json',
     swagger_paths: createSwaggerPaths(NETSUITE_ALLOWED_PATHS),
     rest: {
@@ -53,7 +53,7 @@ export default (locale: Locales) =>
       data: 'json',
       oauth2_grant_type: 'authorization_code',
       oauth2_client_id: 'b8eea47e7be3799b5b441f02bc099f1fed6213abc8ae099d07aa51764db2816e',
-      oauth2_client_secret: actionsCatalogue.getOauth2ClientSecret(NETSUITE_APP_NAME),
+      oauth2_client_secret: getOauth2ClientSecret(NETSUITE_APP_NAME),
       oauth2_auth_url: 'https://system.netsuite.com/app/login/oauth2/authorize.nl',
       oauth2_token_url:
         'https://{{account_id}}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token',

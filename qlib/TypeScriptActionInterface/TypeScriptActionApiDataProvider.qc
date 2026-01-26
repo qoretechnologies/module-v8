@@ -58,16 +58,41 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
         response_type_info.type = response_type;
     }
 
-    private constructor(string name, *hash<AsyncCallInfo> api, ActionFunctionContext fctx)
+    private constructor(string name, *hash<AsyncCallInfo> api, ActionFunctionContext fctx,
+            *hash<AsyncCallInfo> get_dynamic_request_type, *hash<AsyncCallInfo> get_dynamic_response_type)
             : TypeScriptActionDataProviderBase(name, fctx) {
         if (api) {
             self.api = api;
+        }
+        if (get_dynamic_request_type) {
+            request_type_info.get_dynamic_type = get_dynamic_request_type;
+        }
+        if (get_dynamic_response_type) {
+            response_type_info.get_dynamic_type = get_dynamic_response_type;
         }
     }
 
     #! "Normalizes" the request and response for testing if necessary
     auto makeNormalizedRequest(auto req, *hash<auto> request_options) {
         return doRequest(req, request_options);
+    }
+
+    #! Returns action options corresponding to the given option data
+    *hash<string, hash<ActionOptionInfo>> tryGetActionOptionsWithOptions(hash<DataProviderActionInfo> action,
+            auto options) {
+        if ((*AbstractDataProviderType rv = getRequestTypeWithDataImpl(options))
+            && (*hash<auto> fields = rv.getFields())) {
+            return action.options + DataProviderActionCatalog::getActionOptionFromFields(fields);
+        }
+        return action.options;
+    }
+
+    #! Returns a data type for the given base type and request / option data
+    *hash<string, hash<ActionOptionInfo>> getActionOptionsWithOptions(hash<auto> options) {
+        if ((*AbstractDataProviderType rv = getRequestTypeWithDataImpl(options))
+            && (*hash<auto> fields = rv.getFields())) {
+            return DataProviderActionCatalog::getActionOptionFromFields(fields);
+        }
     }
 
     #! Makes a request and returns the response
@@ -87,6 +112,17 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
         return getDynamicTypeIntern("request", \request_type_info, NOTHING, dtmap);
     }
 
+    #! Returns the description of a successful request message in the context of the given option data
+    /** @param options action option data for the data provider
+
+        @return the request type for this provider in the context of the given option data
+
+        @throw INVALID-OPERATION the data provider does not support the request API
+    */
+    private *AbstractDataProviderType getRequestTypeWithOptionsImpl(*hash<auto> options) {
+        return getRequestTypeWithDataImpl(options);
+    }
+
     #! Returns the description of a successful request message with call data, if any
     /** @param req sample request data that can be used to determine the final type
 
@@ -95,10 +131,9 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
         @note
         - Only called if the provider supports the request / response API
         - This API is meant to provide information about request data types that can depend on the call data
-
-        @since DataProvider 3.0
     */
     private *AbstractDataProviderType getRequestTypeWithDataImpl(auto req) {
+        TSAI::debug("getRequestTypeWithDataImpl(req: %y) dmap: %y", LoggerUtil::getArgSummary(req), keys dmap);
         *AbstractDataProviderType rt = getRequestTypeImpl();
         if (!dmap || !exists req) {
             return rt;

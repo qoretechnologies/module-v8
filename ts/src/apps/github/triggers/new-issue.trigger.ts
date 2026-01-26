@@ -129,7 +129,7 @@ const githubNewRepositoryIssueTrigger = QoreAppCreator.createLocalizedTrigger({
                 type: 'softstring',
               },
               locked: {
-                type: 'boolean',
+                type: 'bool',
               },
               assignee: {
                 type: {

@@ -364,7 +364,7 @@ const createCustomer = async (context: TShopifyContextWithConn, data: TCreateCus
   return createCustomerResult.data.customerCreate;
 };
 
-export const CreateShopifyCustomer = QoreAppCreator.createLocalizedAction<typeof options>({
+const CreateShopifyCustomer = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'create-customer',
   app: SHOPIFY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -398,3 +398,5 @@ export const CreateShopifyCustomer = QoreAppCreator.createLocalizedAction<typeof
   options,
   response_type: ShopifyCreateCustomerResponseType,
 });
+
+export default CreateShopifyCustomer;

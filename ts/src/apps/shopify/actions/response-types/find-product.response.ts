@@ -51,23 +51,23 @@ export const ShopifyFindProductResponseType = {
               desc: 'The product status (ACTIVE, ARCHIVED, DRAFT)',
             },
             isGiftCard: {
-              type: 'boolean',
+              type: 'bool',
               desc: 'Whether the product is a gift card',
             },
             requiresSellingPlan: {
-              type: 'boolean',
+              type: 'bool',
               desc: 'Whether the product can only be purchased with a selling plan',
             },
             tracksInventory: {
-              type: 'boolean',
+              type: 'bool',
               desc: 'Whether inventory tracking has been enabled for the product',
             },
             hasOnlyDefaultVariant: {
-              type: 'boolean',
+              type: 'bool',
               desc: 'Whether the product has only a single variant with the default option and value',
             },
             hasOutOfStockVariants: {
-              type: 'boolean',
+              type: 'bool',
               desc: 'Whether the product has variants that are out of stock',
             },
             createdAt: {
@@ -320,7 +320,7 @@ export const ShopifyFindProductResponseType = {
         type: 'hash',
         fields: {
           hasNextPage: {
-            type: 'boolean',
+            type: 'bool',
           },
           endCursor: {
             type: 'string',

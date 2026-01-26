@@ -25,7 +25,7 @@ const mapMagentoOrder = (order: TMagentoOrderData): IQoreAllowedValue<string> =>
   display_name:
     `${order.customer_firstname} ${order.customer_lastname} ` +
     `- ${order.base_grand_total} ${order.base_currency_code}`,
-  value: order.entity_id,
+  value: order.entity_id.toString(),
   desc:
     `Status: ${order.status}\n\n` +
     `Customer: ${order.customer_email}\n\n` +
@@ -34,7 +34,8 @@ const mapMagentoOrder = (order: TMagentoOrderData): IQoreAllowedValue<string> =>
 });
 
 export const getMagentoOrderIdAllowedValues: TQoreGetAllowedValuesFunction<
-  TCustomConnOptions
+  TCustomConnOptions,
+  string
 > = async (context): Promise<IQoreAllowedValue<string>[]> => {
   const token = context?.conn_opts?.token;
   const url = context?.conn_opts?.url;

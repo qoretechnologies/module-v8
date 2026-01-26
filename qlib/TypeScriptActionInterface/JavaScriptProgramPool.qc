@@ -24,7 +24,11 @@
 
 #! Main namespace for the TypeScriptActionInterface module
 public namespace TypeScriptActionInterface {
-#! JavaScript program pool class
+#! JavaScript program holder class
+/** JavaScript is single-threaded, so there is no need for a pool mechanism.
+    This class holds a single JavaScriptProgram instance and provides static
+    methods to look up the holder for a given program.
+*/
 public class JavaScriptProgramPool {
     public {}
 
@@ -34,78 +38,37 @@ public class JavaScriptProgramPool {
         # JavaScript source path
         string path;
 
-        # atomic lock
-        Mutex m();
-        # program cache
-        hash<string, JavaScriptProgram> cache;
-        # free map
-        hash<string, bool> fmap;
+        # The single JavaScript program instance
+        JavaScriptProgram pgm;
+
         # current working directory of program, so require() calls can work when cloning the code
         string cwd = getcwd();
         # initialization code
         code init;
 
-        # maps program unique hashes to pools
+        # maps program unique hashes to holders
         static hash<string, JavaScriptProgramPool> pmap;
 
-        # indicates the first program unique hash for each pool
+        # indicates the first program unique hash for each holder
         static hash<string, bool> firstmap;
-
-        int max;
-        int waiting;
-        Condition cond();
     }
 
-    #! Creates the object and the initial template program
-    constructor(string source, string path, code init, int max = 1) {
+    #! Creates the object and the JavaScript program
+    constructor(string source, string path, code init) {
         self.source = source;
         self.path = path;
         self.init = init;
-        self.max = max;
-        getNewIntern(True);
+        createProgram(True);
     }
 
-    JavaScriptProgram get() {
-        m.lock();
-        on_exit m.unlock();
-
-        while (True) {
-            if (fmap) {
-                string k = fmap.firstKey();
-                remove fmap{k};
-                return cache{k};
-            }
-            if (cache.size() == max) {
-                do {
-                    ++waiting;
-                    cond.wait(m);
-                    --waiting;
-                } while (!fmap);
-                continue;
-            }
-            return getNewIntern();
-        }
+    #! Returns the JavaScript program
+    JavaScriptProgram getProgram() {
+        return pgm;
     }
 
-    release(JavaScriptProgram pgm) {
-        string k = pgm.uniqueHash();
-        if (!cache{k}) {
-            throw "INVALID-PROGRAM", sprintf("The JavaScriptProgram passed (%y) was not provided from the pool", k);
-        }
-
-        m.lock();
-        on_exit m.unlock();
-        if (fmap{k}) {
-            throw "INVALID-PROGRAM", sprintf("The JavaScriptProgram passed (%y) was not allocated from the pool", k);
-        }
-        fmap{k} = True;
-        if (waiting) {
-            cond.signal();
-        }
-    }
-
-    int size() {
-        return cache.size();
+    #! Returns the unique hash of the program
+    string uniqueHash() {
+        return pgm.uniqueHash();
     }
 
     registerAppActions(object obj) {
@@ -132,32 +95,27 @@ public class JavaScriptProgramPool {
         return pool;
     }
 
-    private JavaScriptProgram getNewIntern(*bool first) {
+    private createProgram(*bool first) {
         string olddir = getcwd();
         chdir(cwd);
         on_exit chdir(olddir);
 
         date start = now_us();
-        on_exit info("perf: JavaScriptProgramPool new pool for %y: %y", path, now_us() - start);
+        on_exit info("perf: JavaScriptProgramPool new program for %y: %y", path, now_us() - start);
 
-        JavaScriptProgram pgm(source, path);
+        pgm = new JavaScriptProgram(source, path);
         string h0 = pgm.uniqueHash();
         pmap{h0} = self;
-        cache{h0} = pgm;
         if (first) {
             firstmap{h0} = True;
-            fmap{h0} = True;
         }
         on_error {
             remove pmap{h0};
-            remove cache{h0};
             if (first) {
                 remove firstmap{h0};
-                remove fmap{h0};
             }
         }
         init(pgm);
-        return pgm;
     }
 }
 }

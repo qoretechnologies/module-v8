@@ -12,7 +12,7 @@ import {
   getNetsuiteSalesOrderStatusIdAllowedValues,
   getNetsuiteSalesOrderStatusObjectAllowedValues,
 } from '../helpers/get-order-status-id-allowed-values';
-import { NETSUITE_CONN_OPTIONS } from '../constants';
+import { NETSUITE_CONN_OPTIONS } from '../conn-options';
 import { netsuiteObjectCreationResponseDataConverter } from '../helpers/object-creation-response-data-converter';
 import { getNetsuiteSalesOrderIdAllowedValues } from '../helpers/get-sales-order-id-allowed-values';
 

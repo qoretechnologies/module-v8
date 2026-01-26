@@ -1,5 +1,5 @@
 import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
-import { NETSUITE_CONN_OPTIONS } from '../constants';
+import { NETSUITE_CONN_OPTIONS } from '../conn-options';
 import { netsuiteObjectCreationResponseDataConverter } from '../helpers/object-creation-response-data-converter';
 import { getNetsuiteJournalEntryIdAllowedValues } from '../helpers/get-journal-entry-id-allowed-values';
 

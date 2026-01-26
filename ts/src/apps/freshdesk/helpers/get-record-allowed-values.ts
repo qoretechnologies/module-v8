@@ -5,7 +5,7 @@ import {
   TQoreGetDefaultValueFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
-import { FRESHDESK_CONN_OPTIONS } from '../constants';
+import { FRESHDESK_CONN_OPTIONS } from '../conn-options';
 export const getFreshdeskRecordCurrentValue: TQoreGetDefaultValueFunction<
   typeof FRESHDESK_CONN_OPTIONS
 > = async (context): Promise<any> => {

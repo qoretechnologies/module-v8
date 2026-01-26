@@ -1,0 +1,10 @@
+export { default as CreateOdooLead } from './create-lead.action';
+export { default as CreateOdooPartner } from './create-partner.action';
+export { default as DeleteOdooLead } from './delete-lead.action';
+export { default as DeleteOdooPartner } from './delete-partner.action';
+export { default as GetOdooLead } from './get-lead.action';
+export { default as GetOdooPartner } from './get-partner.action';
+export { default as ListOdooCompanies } from './list-companies.action';
+export { default as ListOdooLeads } from './list-leads.action';
+export { default as ListOdooPartners } from './list-partners.action';
+export { default as UpdateOdooLead } from './update-lead.action';

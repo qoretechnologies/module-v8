@@ -1,8 +1,4 @@
-import {
-  IQoreAppActionWithWebhookBase,
-  TQoreAppActionFunctionContext,
-  TQoreOptions,
-} from '@qoretechnologies/ts-toolkit';
+import { IQoreAppActionWithWebhookBase } from '@qoretechnologies/ts-toolkit';
 import { STRIPE_ACTIONS } from '../apps/stripe';
 import * as STRIPE_TRIGGERS from '../apps/stripe/triggers';
 let connection: string;
@@ -350,7 +346,7 @@ describe('Tests Stripe Actions', () => {
   describe(`Should test Stripe Triggers`, () => {
     let webhook: Record<string, any>;
     it('Should register stripe webhook', async () => {
-      const trigger = STRIPE_TRIGGERS['chargeSucceeded'] as IQoreAppActionWithWebhookBase<any>;
+      const trigger = STRIPE_TRIGGERS['StripeChargeSucceeded'] as IQoreAppActionWithWebhookBase;
       expect(trigger).toBeDefined();
       expect(trigger.webhook_register).toBeDefined();
       const result = await trigger.webhook_register(
@@ -368,7 +364,7 @@ describe('Tests Stripe Actions', () => {
     it('Should deregister stripe webhook', async () => {
       expect(webhook).toBeDefined();
 
-      const trigger = STRIPE_TRIGGERS['chargeSucceeded'] as IQoreAppActionWithWebhookBase<any>;
+      const trigger = STRIPE_TRIGGERS['StripeChargeSucceeded'] as IQoreAppActionWithWebhookBase;
       expect(trigger).toBeDefined();
       expect(trigger.webhook_deregister).toBeDefined();
 
@@ -385,13 +381,11 @@ describe('Tests Stripe Actions', () => {
       }
     });
     it('Should get example stripe webhook data', async () => {
-      const trigger = STRIPE_TRIGGERS['chargeSucceeded'] as IQoreAppActionWithWebhookBase<any>;
+      const trigger = STRIPE_TRIGGERS['StripeChargeSucceeded'] as IQoreAppActionWithWebhookBase;
       expect(trigger).toBeDefined();
-      const getExampleData = trigger.get_example_event_data as (
-        context: TQoreAppActionFunctionContext<any, TQoreOptions>
-      ) => Record<string, any> | Promise<Record<string, any>>;
+      const getExampleData = trigger.get_example_event_data;
       expect(getExampleData).toBeDefined();
-      const exampleData = await getExampleData({
+      const exampleData = await getExampleData!({
         conn_opts: {
           token,
         },

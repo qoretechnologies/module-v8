@@ -1,0 +1,305 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+
+%require-types
+%enable-all-warnings
+%new-style
+%strict-args
+%modern
+
+%requires QUnit
+%requires ../qlib/TypeScriptActionInterface
+%requires v8
+
+%exec-class TsProxyTest
+
+public class TsProxyTest inherits QUnit::Test {
+    private {
+        Logger logger;
+        bool env_ready = False;
+        string skip_reason;
+    }
+
+    constructor() : Test("TsProxyTest", "1.0") {
+        setupLogger();
+        checkEnvironment();
+
+        addTestCase("proxy tests", \proxyTests());
+        addTestCase("proxy restart error handling", \proxyRestartErrorHandlingTest());
+        addTestCase("proxy send error handling", \proxySendErrorHandlingTest());
+        addTestCase("proxy startup send error handling", \proxyStartupSendErrorHandlingTest());
+
+        set_return_value(main());
+    }
+
+    private setupLogger() {
+        LoggerLevel level;
+        if (m_options.verbose > 3) {
+            level = LoggerLevel::getLevelDebug();
+        } else if (m_options.verbose > 2) {
+            level = LoggerLevel::getLevelInfo();
+        } else {
+            level = LoggerLevel::getLevelFatal();
+        }
+        logger = new Logger("console", level);
+        if (m_options.verbose > 2) {
+            logger.addAppender(new StdoutAppender());
+        } else {
+            logger.addAppender(new LoggerAppenderNull());
+        }
+        DataProvider::setGlobalLogger(logger);
+    }
+
+    private checkEnvironment() {
+        string local_bin = sprintf("%s/../bin", get_script_dir());
+        if (!hstat(local_bin)) {
+            skip_reason = sprintf("Local bin directory missing: %s", local_bin);
+            return;
+        }
+        setenv("PATH", local_bin + ":" + ENV.PATH);
+
+        # Check if ts-proxy binary is available
+        try {
+            string path = trim(`which ts-proxy 2>/dev/null`);
+            if (!path.val()) {
+                skip_reason = "ts-proxy binary not found in PATH; ensure module-v8/bin is in PATH";
+                return;
+            }
+        } catch (hash<ExceptionInfo> ex) {
+            skip_reason = sprintf("Cannot locate ts-proxy: %s", ex.desc);
+            return;
+        }
+
+        # Check if we can create UNIX sockets in tmp
+        try {
+            string test_path = sprintf("%s/ts-proxy-test-%d.sock", tmp_location(), getpid());
+            Socket s();
+            s.bindUNIX(test_path);
+            s.close();
+            unlink(test_path);
+        } catch (hash<ExceptionInfo> ex) {
+            skip_reason = sprintf("Cannot create UNIX sockets in tmp: %s", ex.desc);
+            return;
+        }
+
+        env_ready = True;
+    }
+
+    private skipIfNotReady() {
+        if (!env_ready) {
+            testSkip(skip_reason);
+        }
+    }
+
+    # All proxy tests run in a single test case to share the proxy infrastructure
+    private proxyTests() {
+        skipIfNotReady();
+
+        # Initialize the proxy pool once for all tests
+        JavaScriptProgramProxy::init(new Mutex());
+        on_exit JavaScriptProgramProxy::shutdown();
+
+        JavaScriptProgramProxy proxy1();
+        JavaScriptProgramProxy proxy2();
+
+        # Test 1: Proxy lifecycle
+        {
+
+            # Verify the proxy has valid info
+            hash<auto> info = proxy1.getInfo();
+            assertTrue(info."proxy-pid" > 0, "proxy should have a valid PID");
+
+            # Verify we can get the unique hash
+            string uh = proxy1.uniqueHash();
+            assertTrue(uh.val(), "proxy should have a unique hash");
+
+            if (m_options.verbose > 1) {
+                printf("Proxy lifecycle test passed - PID: %d\n", info."proxy-pid");
+            }
+        }
+
+        # Test 2: Multiple proxies can be created
+        {
+            hash<auto> info1 = proxy1.getInfo();
+            hash<auto> info2 = proxy2.getInfo();
+
+            assertTrue(info1."proxy-pid" > 0, "proxy1 should be running");
+            assertTrue(info2."proxy-pid" > 0, "proxy2 should be running");
+            assertTrue(info1."proxy-pid" != info2."proxy-pid", "proxies should have different PIDs");
+
+            if (m_options.verbose > 1) {
+                printf("Multiple proxy test passed - PIDs: %d, %d\n", info1."proxy-pid", info2."proxy-pid");
+            }
+        }
+
+        # Test 3: Proxy restart after child kill
+        {
+            hash<auto> info = proxy1.getInfo();
+            int original_pid = info."proxy-pid";
+            assertTrue(original_pid > 0, "proxy should have original PID");
+
+            # Kill the child process to trigger restart logic
+            try {
+                system(sprintf("kill -9 %d 2>/dev/null", original_pid));
+                usleep(100ms);
+            } catch (hash<ExceptionInfo> ex) {
+                # Ignore - process may already be gone
+            }
+
+            # The restart happens lazily on next command
+            # We just verify the proxy object is still valid
+            assertTrue(proxy1.uniqueHash().val(), "proxy should still have valid hash after child kill");
+
+            if (m_options.verbose > 1) {
+                printf("Proxy restart test passed - original PID: %d\n", original_pid);
+            }
+        }
+    }
+
+    private proxyRestartErrorHandlingTest() {
+        skipIfNotReady();
+
+        JavaScriptProgramProxy::init(new Mutex());
+        on_exit JavaScriptProgramProxy::shutdown();
+
+        JavaScriptProgramProxy proxy();
+        int pid = proxy.getInfo()."proxy-pid";
+        assertTrue(pid > 0, "proxy should be running for restart test");
+
+        setenv("TS_PROXY_TEST_FORCE_RESTART_ERROR", "1");
+        on_exit unsetenv("TS_PROXY_TEST_FORCE_RESTART_ERROR");
+        setenv("TS_PROXY_TEST_RESPONSE_TIMEOUT_MS", "1500");
+        on_exit unsetenv("TS_PROXY_TEST_RESPONSE_TIMEOUT_MS");
+
+        try {
+            system(sprintf("kill -9 %d 2>/dev/null", pid));
+        } catch (hash<ExceptionInfo> ex) {
+            # ignore
+        }
+
+        bool threw = False;
+        try {
+            proxy.getDynamicOptions("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING);
+        } catch (hash<ExceptionInfo> ex) {
+            threw = True;
+        }
+        assertTrue(threw, "restart error should propagate");
+
+        unsetenv("TS_PROXY_TEST_FORCE_RESTART_ERROR");
+
+        Mutex m();
+        Condition cond();
+        bool done = False;
+        background sub () {
+            try {
+                proxy.getDynamicOptions("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING);
+            } catch (hash<ExceptionInfo> ex) {
+                # ignore
+            }
+            m.lock();
+            on_exit m.unlock();
+            done = True;
+            cond.broadcast();
+        }();
+
+        m.lock();
+        on_exit m.unlock();
+        date start = now_us();
+        while (!done) {
+            if (!cond.wait(m, 200ms)) {
+                break;
+            }
+            if (now_us() - start > 2s) {
+                break;
+            }
+        }
+        assertTrue(done, "restart retry should not deadlock");
+    }
+
+    private proxySendErrorHandlingTest() {
+        skipIfNotReady();
+
+        JavaScriptProgramProxy::init(new Mutex());
+        on_exit JavaScriptProgramProxy::shutdown();
+
+        setenv("TS_PROXY_TEST_FORCE_SEND_ERROR", "1");
+        ENV.TS_PROXY_TEST_FORCE_SEND_ERROR = "1";
+        on_exit unsetenv("TS_PROXY_TEST_FORCE_SEND_ERROR");
+        on_exit remove ENV.TS_PROXY_TEST_FORCE_SEND_ERROR;
+        setenv("TS_PROXY_TEST_RESPONSE_TIMEOUT_MS", "1500");
+        on_exit unsetenv("TS_PROXY_TEST_RESPONSE_TIMEOUT_MS");
+
+        JavaScriptProgramProxy proxy();
+        int pid = proxy.getInfo()."proxy-pid";
+        assertTrue(pid > 0, "proxy should be running for send error test");
+
+        Mutex m();
+        Condition cond();
+        bool done = False;
+        background sub () {
+            try {
+                proxy.getDynamicOptions("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING);
+            } catch (hash<ExceptionInfo> ex) {
+                # ignore
+            }
+            m.lock();
+            on_exit m.unlock();
+            done = True;
+            cond.broadcast();
+        }();
+
+        m.lock();
+        on_exit m.unlock();
+        date start = now_us();
+        while (!done) {
+            if (!cond.wait(m, 200ms)) {
+                break;
+            }
+            if (now_us() - start > 2s) {
+                break;
+            }
+        }
+        assertTrue(done, "send error should not deadlock");
+
+        unsetenv("TS_PROXY_TEST_FORCE_SEND_ERROR");
+        remove ENV.TS_PROXY_TEST_FORCE_SEND_ERROR;
+        bool threw = False;
+        try {
+            proxy.getDynamicOptions("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING);
+        } catch (hash<ExceptionInfo> ex) {
+            threw = True;
+        }
+        assertTrue(threw, "send error should not break subsequent calls");
+    }
+
+    private proxyStartupSendErrorHandlingTest() {
+        skipIfNotReady();
+
+        bool debug_enabled = False;
+        @debug {
+            debug_enabled = True;
+        }
+        if (!debug_enabled) {
+            testSkip("startup send error hook requires running with debugging enabled");
+            return;
+        }
+
+        JavaScriptProgramProxy::init(new Mutex());
+        on_exit JavaScriptProgramProxy::shutdown();
+
+        setenv("TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP", "1");
+        ENV.TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP = "1";
+        on_exit unsetenv("TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP");
+        on_exit remove ENV.TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP;
+        setenv("TS_PROXY_TEST_STARTUP_TIMEOUT_MS", "1500");
+        on_exit unsetenv("TS_PROXY_TEST_STARTUP_TIMEOUT_MS");
+
+        bool threw = False;
+        try {
+            JavaScriptProgramProxy proxy();
+        } catch (hash<ExceptionInfo> ex) {
+            threw = True;
+        }
+        assertTrue(threw, "startup send error should raise");
+    }
+}

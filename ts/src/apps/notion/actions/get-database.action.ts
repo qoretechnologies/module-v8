@@ -1,0 +1,140 @@
+import {
+  EQoreAppActionCode,
+  QoreAppCreator,
+  TQoreOptions,
+  TQoreResponseType,
+} from '@qoretechnologies/ts-toolkit';
+import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { NOTION_APP_NAME, NotionError } from '../constants';
+import { createNotionClient, getNotionRickTextFieldPlainText } from '../helpers/constants';
+import { omit } from 'lodash';
+import { DatabaseObjectResponse } from '@notionhq/client';
+
+const action = 'get_database';
+
+const options = {
+  database_id: {
+    type: 'string',
+    required: true,
+  },
+} satisfies TQoreOptions;
+
+const getDatabase = QoreAppCreator.createLocalizedAction<typeof options>({
+  app: NOTION_APP_NAME,
+  action,
+  action_code: EQoreAppActionCode.ACTION,
+  options,
+  api_function: async (obj, _opts, context) => {
+    const { token, database_id } = getQoreContextRequiredValues({
+      context: { ...context, opts: obj },
+      connectionFields: ['token'],
+      optionFields: ['database_id'],
+      ErrorClass: NotionError,
+    });
+
+    try {
+      const client = createNotionClient(token);
+      const response = (await client.databases.retrieve({
+        database_id,
+      })) as DatabaseObjectResponse;
+
+      return {
+        ...omit(response, ['object']),
+        title: getNotionRickTextFieldPlainText(response.title),
+        description: getNotionRickTextFieldPlainText(response.description),
+      };
+    } catch (error) {
+      throw new NotionError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
+    }
+  },
+  response_type: {
+    type: 'hash',
+    fields: {
+      id: { type: 'string' },
+      title: { type: 'string' },
+      description: { type: 'string' },
+      is_inline: { type: 'bool' },
+      in_trash: { type: 'bool' },
+      is_locked: { type: 'bool' },
+      created_time: { type: 'string' },
+      last_edited_time: { type: 'string' },
+      url: { type: 'string' },
+      public_url: { type: 'string' },
+      data_sources: {
+        type: {
+          type: 'list',
+          element_type: {
+            type: 'hash',
+            fields: {
+              id: { type: 'string' },
+              name: { type: 'string' },
+            },
+          },
+        },
+      },
+      icon: {
+        type: {
+          type: 'hash',
+          fields: {
+            type: { type: 'string' },
+            emoji: { type: 'string' },
+            file: {
+              type: {
+                type: 'hash',
+                fields: {
+                  url: { type: 'string' },
+                  expiry_time: { type: 'string' },
+                },
+              },
+            },
+            custom_emoji: {
+              type: {
+                type: 'hash',
+                fields: {
+                  id: { type: 'string' },
+                  name: { type: 'string' },
+                  url: { type: 'string' },
+                },
+              },
+            },
+            external: {
+              type: {
+                type: 'hash',
+                fields: {
+                  url: { type: 'string' },
+                },
+              },
+            },
+          },
+        },
+      },
+      cover: {
+        type: {
+          type: 'hash',
+          fields: {
+            type: { type: 'string' },
+            external: {
+              type: {
+                type: 'hash',
+                fields: {
+                  url: { type: 'string' },
+                },
+              },
+            },
+            file: {
+              type: {
+                type: 'hash',
+                fields: {
+                  url: { type: 'string' },
+                  expiry_time: { type: 'string' },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  } satisfies TQoreResponseType,
+});
+
+export default getDatabase;

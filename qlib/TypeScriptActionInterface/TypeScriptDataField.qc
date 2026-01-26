@@ -23,7 +23,7 @@
 
 #! Main namespace for the TypeScriptActionInterface module
 public namespace TypeScriptActionInterface {
-#! The TypeScript data field
+#! The TypeScript data field class
 public class TypeScriptDataField inherits DataProvider::QoreDataField {
     #! Creates the field from the argument
     constructor(hash<auto> h, *ActionFunctionContext fctx) : QoreDataField(h) {
@@ -37,9 +37,14 @@ public class TypeScriptDataField inherits DataProvider::QoreDataField {
                 auto res;
                 *TypeScriptActionApiWithSchemaDataProvider prov = ActionProviderContextHelper::get();
                 if (prov) {
-                    res = prov.getAsyncValue(call, prov.getCallContextInfo(DataProviderDataContextHelper::get()));
+                    res = prov.getAsyncValueWithCache(call, {
+                        "prov": prov.uniqueHash(),
+                        "key": sprintf("dynamic-type-%s", attr.dynamic_type),
+                    }, prov.getCallContextInfo(DataProviderDataContextHelper::get()));
                 } else {
-                    res = TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING, call);
+                    res = TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING, call, NOTHING, {
+                        "key": sprintf("dynamic-type-%s", attr.dynamic_type),
+                    });
                 }
                 if (res) {
                     return TypeScriptActionInterface::getType(name, res, attr.required, NOTHING, prov);
@@ -59,9 +64,14 @@ public class TypeScriptDataField inherits DataProvider::QoreDataField {
             try {
                 *TypeScriptActionApiWithSchemaDataProvider prov = ActionProviderContextHelper::get();
                 if (prov) {
-                    return prov.getAsyncValue(call, prov.getCallContextInfo(DataProviderDataContextHelper::get()));
+                    return prov.getAsyncValueWithCache(call, {
+                        "prov": prov.uniqueHash(),
+                        "key": sprintf("default-value-%s", attr.get_default_value),
+                    }, prov.getCallContextInfo(DataProviderDataContextHelper::get()));
                 } else {
-                    return TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING, call);
+                    return TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING, call, NOTHING, {
+                        "key": sprintf("default-value-%s", attr.get_default_value),
+                    });
                 }
             } catch (hash<ExceptionInfo> ex) {
                 TSAI::error("Failed to retrieve default value for field %y: %y: %s", name, call.label,

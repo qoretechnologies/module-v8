@@ -97,10 +97,10 @@ const TrelloNewListTrigger = QoreAppCreator.createLocalizedTrigger<typeof option
       fields: {
         id: { type: 'string' },
         name: { type: 'string' },
-        closed: { type: 'boolean' },
+        closed: { type: 'bool' },
         idBoard: { type: 'string' },
         pos: { type: 'number' },
-        subscribed: { type: 'boolean' },
+        subscribed: { type: 'bool' },
         softLimit: { type: 'integer', required: false },
         status: { type: 'string', required: false },
         creationMethod: { type: 'string', required: false },

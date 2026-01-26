@@ -1,8 +1,10 @@
-export { CreateOutlookEvent } from './create-event';
-export { ListOutlookContacts } from './list-contacts';
-export { ListOutlookEvents } from './list-events';
-export { CreateOutlookContact } from './create-contact';
-export { UpdateOutlookContact } from './update-contact';
-export { DeleteOutlookContact } from './delete-contact';
-export { DeleteOutlookEvent } from './delete-event';
-export { SendOutlookEmail } from './send-email';
+export { default as CreateOutlookContact } from './create-contact';
+export { default as CreateOutlookEvent } from './create-event';
+export { default as DeleteOutlookContact } from './delete-contact';
+export { default as DeleteOutlookEvent } from './delete-event';
+export { default as ListOutlookContacts } from './list-contacts';
+export { default as ListOutlookEvents } from './list-events';
+export { default as ManageOutlookEmail } from './manage-email';
+export { default as SearchOutlookEmails } from './search-emails';
+export { default as SendOutlookEmail } from './send-email';
+export { default as UpdateOutlookContact } from './update-contact';

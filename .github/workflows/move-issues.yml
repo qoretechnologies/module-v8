@@ -1,0 +1,269 @@
+name: Move Linked Issues to Ready on PR Close
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - develop
+
+env:
+  TARGET_STATUS: "🔖 Ready"
+
+jobs:
+  move-issues-to-ready:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Move linked issues to target status
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.WORKFLOW_PAT }}
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const prNumber = context.payload.pull_request.number;
+            const prNodeId = context.payload.pull_request.node_id;
+            const targetStatus = process.env.TARGET_STATUS;
+
+            console.log(`Processing PR #${prNumber} in ${owner}/${repo}`);
+            console.log(`Target status: ${targetStatus}`);
+
+            try {
+              const linkedIssuesQuery = `
+                query($prNodeId: ID!) {
+                  node(id: $prNodeId) {
+                    ... on PullRequest {
+                      closingIssuesReferences(first: 50, userLinkedOnly: false) {
+                        nodes {
+                          id
+                          number
+                          title
+                        }
+                      }
+                      timelineItems(itemTypes: [CONNECTED_EVENT, DISCONNECTED_EVENT], first: 100) {
+                        nodes {
+                          ... on ConnectedEvent {
+                            id
+                            subject {
+                              ... on Issue {
+                                id
+                                number
+                                title
+                              }
+                            }
+                          }
+                          ... on DisconnectedEvent {
+                            id
+                            subject {
+                              ... on Issue {
+                                id
+                                number
+                                title
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              `;
+              
+              const result = await github.graphql(linkedIssuesQuery, {
+                prNodeId: prNodeId
+              });
+              
+              const closingIssues = result.node.closingIssuesReferences.nodes || [];
+              
+              const issueConnections = {};
+              result.node.timelineItems.nodes.forEach(event => {
+                if (event.subject && event.subject.number) {
+                  const issueNum = event.subject.number;
+                  if (event.__typename === 'ConnectedEvent') {
+                    issueConnections[issueNum] = event.subject;
+                  } else if (event.__typename === 'DisconnectedEvent') {
+                    delete issueConnections[issueNum];
+                  }
+                }
+              });
+              
+              const connectedIssues = Object.values(issueConnections);
+              
+              const allIssuesMap = new Map();
+              [...closingIssues, ...connectedIssues].forEach(issue => {
+                if (issue && issue.number) {
+                  allIssuesMap.set(issue.number, issue);
+                }
+              });
+              
+              const linkedIssues = Array.from(allIssuesMap.values());
+              
+              if (linkedIssues.length === 0) {
+                console.log('No linked issues found for this PR');
+                return;
+              }
+              
+              console.log(`Found ${linkedIssues.length} linked issue(s):`);
+              linkedIssues.forEach(issue => {
+                console.log(`  - Issue #${issue.number}: ${issue.title}`);
+              });
+              
+              for (const issue of linkedIssues) {
+                try {
+                  console.log(`\nProcessing issue #${issue.number}...`);
+                  
+                  const projectItemsQuery = `
+                    query($issueId: ID!) {
+                      node(id: $issueId) {
+                        ... on Issue {
+                          projectItems(first: 10) {
+                            nodes {
+                              id
+                              isArchived
+                              project {
+                                id
+                                title
+                                number
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  `;
+                  
+                  const projectItemsResult = await github.graphql(projectItemsQuery, {
+                    issueId: issue.id
+                  });
+                  
+                  const projectItems = projectItemsResult.node.projectItems.nodes;
+                  
+                  if (projectItems.length === 0) {
+                    console.log(`  ⚠️  Issue #${issue.number} is not in any project`);
+                    continue;
+                  }
+                  
+                  console.log(`  Found in ${projectItems.length} project(s)`);
+                  
+                  for (const projectItem of projectItems) {
+                    try {
+                      console.log(`  Processing project "${projectItem.project.title}"`);
+                      
+                      if (projectItem.isArchived) {
+                        console.log(`    ⚠️  Item is archived, unarchiving...`);
+                        
+                        const unarchiveMutation = `
+                          mutation($projectId: ID!, $itemId: ID!) {
+                            unarchiveProjectV2Item(
+                              input: {
+                                projectId: $projectId
+                                itemId: $itemId
+                              }
+                            ) {
+                              item {
+                                id
+                                isArchived
+                              }
+                            }
+                          }
+                        `;
+                        
+                        await github.graphql(unarchiveMutation, {
+                          projectId: projectItem.project.id,
+                          itemId: projectItem.id
+                        });
+                        
+                        console.log(`    ✅ Unarchived successfully`);
+                      }
+
+                      const projectFieldsQuery = `
+                        query($projectId: ID!) {
+                          node(id: $projectId) {
+                            ... on ProjectV2 {
+                              field(name: "Status") {
+                                ... on ProjectV2SingleSelectField {
+                                  id
+                                  name
+                                  options {
+                                    id
+                                    name
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      `;
+                      
+                      const projectFieldsResult = await github.graphql(projectFieldsQuery, {
+                        projectId: projectItem.project.id
+                      });
+                      
+                      const statusField = projectFieldsResult.node.field;
+                      
+                      if (!statusField) {
+                        console.log(`    ⚠️  No Status field found`);
+                        continue;
+                      }
+                      
+                      const targetOption = statusField.options.find(opt => 
+                        opt.name.toLowerCase() === targetStatus.toLowerCase()
+                      );
+                      
+                      if (!targetOption) {
+                        console.log(`    ⚠️  No "${targetStatus}" status found`);
+                        console.log(`    Available: ${statusField.options.map(o => o.name).join(', ')}`);
+                        continue;
+                      }
+                      
+                      const updateMutation = `
+                        mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $optionId: String!) {
+                          updateProjectV2ItemFieldValue(
+                            input: {
+                              projectId: $projectId
+                              itemId: $itemId
+                              fieldId: $fieldId
+                              value: { singleSelectOptionId: $optionId }
+                            }
+                          ) {
+                            projectV2Item {
+                              id
+                              fieldValueByName(name: "Status") {
+                                ... on ProjectV2ItemFieldSingleSelectValue {
+                                  name
+                                }
+                              }
+                            }
+                          }
+                        }
+                      `;
+                      
+                      const updateResult = await github.graphql(updateMutation, {
+                        projectId: projectItem.project.id,
+                        itemId: projectItem.id,
+                        fieldId: statusField.id,
+                        optionId: targetOption.id
+                      });
+                      
+                      const newStatus = updateResult.updateProjectV2ItemFieldValue.projectV2Item.fieldValueByName.name;
+                      console.log(`    ✅ Moved to "${newStatus}"`);
+                      
+                    } catch (projectError) {
+                      console.error(`    ❌ Error:`, projectError.message);
+                    }
+                  }
+                  
+                } catch (issueError) {
+                  console.error(`  ❌ Error processing issue #${issue.number}:`, issueError.message);
+                }
+              }
+              
+              console.log('\n✨ Workflow completed successfully');
+              
+            } catch (error) {
+              console.error('❌ Fatal error:', error.message);
+              if (error.errors) {
+                error.errors.forEach(err => console.error(`  - ${err.message}`));
+              }
+              throw error;
+            }

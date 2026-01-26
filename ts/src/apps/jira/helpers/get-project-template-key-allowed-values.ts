@@ -1,5 +1,5 @@
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
-import { JIRA_CONN_OPTIONS } from '../constants';
+import { JIRA_CONN_OPTIONS } from '../conn-options';
 
 export const getJiraProjectTemplateKeyAllowedValues: TQoreGetAllowedValuesFunction<
   typeof JIRA_CONN_OPTIONS

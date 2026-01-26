@@ -1,0 +1,204 @@
+import {
+  EQoreAppActionCode,
+  QoreAppCreator,
+  TQoreOptions,
+  TQoreResponseType,
+  TQoreTypeObject,
+} from '@qoretechnologies/ts-toolkit';
+import { omit } from 'lodash';
+import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
+import { NOTION_APP_NAME, NotionError } from '../constants';
+import {
+  createNotionClient,
+  mapNotionPropertiesToSimpleObject,
+  NotionFieldMapping,
+} from '../helpers/constants';
+import {
+  getNotionDataSourceProperties,
+  getNotionDataSourceResponseType,
+} from '../helpers/get-data-source-properties';
+import { getNotionDataSourceAllowedValues } from '../helpers/get-datasource-allowed-values';
+import { getNotionDataSourceItemAllowedValues } from '../helpers/get-data-source-item-allowed-values';
+import { PageObjectResponse } from '@notionhq/client';
+
+const action = 'update_database_item';
+
+const options = {
+  data_source_id: {
+    type: 'string',
+    required: true,
+    get_allowed_values: getNotionDataSourceAllowedValues,
+    on_change: ['refetch'],
+  },
+  item_id: {
+    type: 'string',
+    get_allowed_values: getNotionDataSourceItemAllowedValues,
+    required: true,
+  },
+  properties: {
+    type: 'hash',
+    required: true,
+    get_dynamic_type: getNotionDataSourceProperties,
+  },
+} satisfies TQoreOptions;
+
+const responseType = {
+  type: 'hash',
+  fields: {
+    id: { type: 'string' },
+    created_time: { type: 'string' },
+    last_edited_time: { type: 'string' },
+    created_by: {
+      type: {
+        type: 'hash',
+        fields: {
+          object: { type: 'string' },
+          id: { type: 'string' },
+        },
+      },
+    },
+    last_edited_by: {
+      type: {
+        type: 'hash',
+        fields: {
+          object: { type: 'string' },
+          id: { type: 'string' },
+        },
+      },
+    },
+    icon: {
+      type: {
+        type: 'hash',
+        fields: {
+          type: { type: 'string' },
+          emoji: { type: 'string' },
+          file: {
+            type: {
+              type: 'hash',
+              fields: {
+                url: { type: 'string' },
+                expiry_time: { type: 'string' },
+              },
+            },
+          },
+          custom_emoji: {
+            type: {
+              type: 'hash',
+              fields: {
+                id: { type: 'string' },
+                name: { type: 'string' },
+                url: { type: 'string' },
+              },
+            },
+          },
+          external: {
+            type: {
+              type: 'hash',
+              fields: {
+                url: { type: 'string' },
+              },
+            },
+          },
+        },
+      },
+    },
+    cover: {
+      type: {
+        type: 'hash',
+        fields: {
+          type: { type: 'string' },
+          external: {
+            type: {
+              type: 'hash',
+              fields: {
+                url: { type: 'string' },
+              },
+            },
+          },
+          file: {
+            type: {
+              type: 'hash',
+              fields: {
+                url: { type: 'string' },
+                expiry_time: { type: 'string' },
+              },
+            },
+          },
+        },
+      },
+    },
+    parent: {
+      type: {
+        type: 'hash',
+        fields: {
+          type: { type: 'string' },
+          data_source_id: { type: 'string' },
+          database_id: { type: 'string' },
+        },
+      },
+    },
+    archived: { type: 'bool' },
+    in_trash: { type: 'bool' },
+    is_locked: { type: 'bool' },
+    properties: { type: 'hash' },
+    url: { type: 'string' },
+    public_url: { type: 'string' },
+  },
+} satisfies TQoreResponseType;
+
+const updateDatabaseItem = QoreAppCreator.createLocalizedAction<typeof options>({
+  app: NOTION_APP_NAME,
+  action,
+  action_code: EQoreAppActionCode.ACTION,
+  options,
+  api_function: async (obj, _opts, context) => {
+    const { token, data_source_id, properties, item_id } = getQoreContextRequiredValues({
+      context: { ...context, opts: obj },
+      connectionFields: ['token'],
+      optionFields: ['data_source_id', 'properties', 'item_id'],
+      ErrorClass: NotionError,
+    });
+
+    try {
+      const client = createNotionClient(token);
+      const propertiesFormatted: Record<string, any> = {};
+
+      const { properties: dataSourceProps } = await client.dataSources.retrieve({
+        data_source_id,
+      });
+
+      Object.keys(properties).forEach((key) => {
+        if (properties[key]) {
+          const fieldType: string = dataSourceProps[key].type;
+          propertiesFormatted[key] = NotionFieldMapping[fieldType].buildNotionType(properties[key]);
+        }
+      });
+
+      const response = (await client.pages.update({
+        page_id: item_id,
+        properties: propertiesFormatted,
+      })) as PageObjectResponse;
+
+      return omit(
+        { ...response, properties: mapNotionPropertiesToSimpleObject(response.properties) },
+        ['object', 'request_id']
+      );
+    } catch (error) {
+      throw new NotionError(`Failed to ${humanizeNameTitle(action)}: ${error}`);
+    }
+  },
+  response_type: responseType,
+  get_dynamic_response_type: async (context) => {
+    const propertiesType = await getNotionDataSourceResponseType(context);
+
+    return {
+      type: 'hash',
+      fields: {
+        ...responseType.fields,
+        properties: { type: propertiesType as TQoreTypeObject },
+      },
+    };
+  },
+});
+
+export default updateDatabaseItem;

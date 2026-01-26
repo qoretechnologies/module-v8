@@ -1,14 +1,22 @@
 import { IQoreAppActionWithFunction } from '@qoretechnologies/ts-toolkit';
-import { CreateOutlookEvent } from '../apps/outlook/actions';
-import { CreateOutlookContact } from '../apps/outlook/actions/create-contact';
-import { DeleteOutlookContact } from '../apps/outlook/actions/delete-contact';
-import { DeleteOutlookEvent } from '../apps/outlook/actions/delete-event';
-import { ListOutlookContacts } from '../apps/outlook/actions/list-contacts';
-import { UpdateOutlookContact } from '../apps/outlook/actions/update-contact';
+import {
+  CreateOutlookContact,
+  CreateOutlookEvent,
+  DeleteOutlookContact,
+  DeleteOutlookEvent,
+  ListOutlookContacts,
+  ListOutlookEvents,
+  SearchOutlookEmails,
+  UpdateOutlookContact,
+} from '../apps/outlook/actions';
 import { getOutlookCalendarIdAllowedValues } from '../apps/outlook/helpers/get-calendar-id-allowed-values';
 import { getOutlookContactIdAllowedValues } from '../apps/outlook/helpers/get-contact-id-allowed-values';
 import { getOutlookEventIdAllowedValues } from '../apps/outlook/helpers/get-event-id-allowed-values';
 import { getOutlookRecipientsAllowedValues } from '../apps/outlook/helpers/get-recepient-allowed-values';
+import { getOutlookMailFoldersAllowedValues } from '../apps/outlook/helpers/get-email-folder-allowed-values';
+import { getOutlookEmailAllowedValues } from '../apps/outlook/helpers/get-outlook-email-allowed-values';
+import { configDotenv } from 'dotenv';
+configDotenv({ path: '.env' });
 
 describe('Should test Outlook actions', () => {
   const refreshToken = process.env.OUTLOOK_REFRESH_TOKEN;
@@ -71,6 +79,24 @@ describe('Should test Outlook actions', () => {
       calendarId = allowed_values[0].value;
     });
 
+    it('Should get Outlook email folder allowed values', async () => {
+      const allowed_values = await getOutlookMailFoldersAllowedValues({
+        conn_opts: { token } as any,
+      });
+
+      expect(allowed_values).toBeDefined();
+      expect(allowed_values.length).toBeGreaterThan(0);
+    });
+
+    it('Should get Outlook email allowed values', async () => {
+      const allowed_values = await getOutlookEmailAllowedValues({
+        conn_opts: { token } as any,
+      });
+
+      expect(allowed_values).toBeDefined();
+      expect(allowed_values.length).toBeGreaterThan(0);
+    });
+
     it('Should get Outlook Contact ID allowed values', async () => {
       const allowed_values = await getOutlookContactIdAllowedValues({
         conn_opts: { token } as any,
@@ -128,7 +154,7 @@ describe('Should test Outlook actions', () => {
 
       expect(result).toBeDefined();
       expect(result.id).toBeDefined();
-      contactId = result?.id;
+      contactId = result.id;
     });
 
     it('Should create an outlook event', async () => {
@@ -153,7 +179,7 @@ describe('Should test Outlook actions', () => {
 
       expect(result).toBeDefined();
       expect(result.id).toBeDefined();
-      eventId = result?.id;
+      eventId = result.id;
     });
 
     it('Should list Outlook contacts', async () => {
@@ -171,7 +197,7 @@ describe('Should test Outlook actions', () => {
     });
 
     it('Should list Outlook events', async () => {
-      const action = ListOutlookContacts as IQoreAppActionWithFunction;
+      const action = ListOutlookEvents as IQoreAppActionWithFunction;
       const result = await action.api_function(
         {
           calendarId,
@@ -230,6 +256,16 @@ describe('Should test Outlook actions', () => {
     //   expect(result).toBeDefined();
     //   expect(result.success).toBe(true);
     // });
+
+    it('Should search search outlook emails', async () => {
+      const action = SearchOutlookEmails as IQoreAppActionWithFunction;
+      const result = await action.api_function({ limit: 3 }, undefined, {
+        conn_opts: { token } as any,
+      });
+
+      expect(result).toBeDefined();
+      expect(result.length).toBeGreaterThan(0);
+    });
 
     it('Should delete an Outlook contact', async () => {
       const action = DeleteOutlookContact as IQoreAppActionWithFunction;

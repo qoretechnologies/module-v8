@@ -61,6 +61,7 @@ QoreV8Program::QoreV8Program() : save_ref_callback(nullptr) {
         for (const std::string& err : errors) {
             fprintf(stderr, "v8 module init error: %s: %s\n", init_result->args()[0].c_str(), err.c_str());
         }
+        valid = false;  // Mark as invalid so init() will fail gracefully
         return;
     }
 
@@ -171,7 +172,7 @@ size_t QoreV8Program::heapLimitCallback(void* ptr, size_t current_heap_limit, si
 }
 
 int QoreV8Program::init(ExceptionSink* xsink) {
-    if (!valid) {
+    if (!valid || !isolate) {
         xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "Could not initialize JavaScript program");
         return -1;
     }
@@ -192,6 +193,10 @@ int QoreV8Program::init(ExceptionSink* xsink) {
         v8::Context::Scope context_scope(setup->context());
         v8::TryCatch tryCatch(isolate);
 
+        // Set ctx and global early so checkException() can use them if LoadEnvironment fails
+        ctx.Reset(isolate, setup->context());
+        global.Reset(isolate, setup->context()->Global());
+
         // Set up the Node.js instance for execution, and run code inside of it.
         // There is also a variant that takes a callback and provides it with
         // the `require` and `process` objects, so that it can manually compile
@@ -208,15 +213,18 @@ int QoreV8Program::init(ExceptionSink* xsink) {
             "  'filename': process.env._qore_v8_filename\n"
             "});");
         v8::MaybeLocal<v8::Value> loadenv_ret = node::LoadEnvironment(env, envstr.c_str());
-        valid = !loadenv_ret.IsEmpty();
-        if (!valid) {
+        if (loadenv_ret.IsEmpty()) {
+            // Call checkException() while valid is still true so we can properly convert the exception
             if (!checkException(xsink, tryCatch)) {
                 xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "Unknown error initializing program");
             }
+            // Now mark as invalid after exception handling is complete
+            valid = false;
+            // Reset ctx and global since init failed
+            ctx.Reset();
+            global.Reset();
             return -1;
         }
-
-        global.Reset(isolate, setup->context()->Global());
     }
 
     AutoLocker al(global_lock);
@@ -257,6 +265,7 @@ void QoreV8Program::deleteIntern(ExceptionSink* xsink) {
         node::Stop(env);
         env = nullptr;
     }
+    ctx.Reset();
     global.Reset();
 }
 
@@ -273,10 +282,20 @@ int QoreV8Program::saveQoreReference(const QoreValue& rv, ExceptionSink& xsink) 
     //    rv.getFullTypeName(), *save_ref_callback);
 
     if (save_ref_callback) {
+        // Check if isolate is valid before creating helper
+        // (isolate can be nullptr if program initialization failed)
+        if (!isolate) {
+            xsink.raiseException("JAVASCRIPT-PROGRAM-ERROR", "The JavaScript program was not properly initialized");
+            return -1;
+        }
+
         ReferenceHolder<QoreListNode> args(new QoreListNode(autoTypeInfo), &xsink);
         args->push(rv.refSelf(), &xsink);
 
         QoreV8ProgramHelper v8h(&xsink, this);
+        if (!v8h) {
+            return -1;  // Exception already raised in v8h constructor
+        }
         QoreV8StackLocationHelper slh(v8h);
 
         save_ref_callback->execValue(*args, &xsink);
@@ -345,6 +364,23 @@ int QoreV8Program::checkException(ExceptionSink* xsink, const v8::TryCatch& tryC
         // convert to a string
         v8::String::Utf8Value exception(isolate, ex);
 
+        v8::Local<v8::Context> context(isolate->GetCurrentContext());
+
+        // convert to a Qore value
+        ValueHolder arg(xsink);
+        if (ex->IsObject()) {
+            v8::MaybeLocal<v8::Object> o = ex->ToObject(context);
+            assert(!o.IsEmpty());
+            ReferenceHolder<QoreV8Object> arg_obj(new QoreV8Object(const_cast<QoreV8Program*>(this),
+                o.ToLocalChecked()), xsink);
+            QoreV8ProgramHelper ph(xsink, const_cast<QoreV8Program*>(this));
+            if (ph) {
+                arg = arg_obj->toData(ph);
+            }
+        } else {
+            arg = const_cast<QoreV8Program*>(this)->getQoreValue(xsink, ex);
+        }
+
         v8::Local<v8::Message> msg = tryCatch.Message();
         if (msg.IsEmpty()) {
             xsink->raiseException("JAVASCRIPT-EXCEPTION", new QoreStringNode(*exception));
@@ -352,8 +388,6 @@ int QoreV8Program::checkException(ExceptionSink* xsink, const v8::TryCatch& tryC
         }
 
         SimpleRefHolder<QoreStringNode> desc(new QoreStringNode(*exception));
-
-        v8::Local<v8::Context> context(isolate->GetCurrentContext());
 
         // add Java call stack to Qore call stack
         QoreExternalProgramLocationWrapper loc;
@@ -367,14 +401,14 @@ int QoreV8Program::checkException(ExceptionSink* xsink, const v8::TryCatch& tryC
             desc->concat(code_line);
         }
 
-        xsink->raiseExceptionArg(loc.get(), "JAVASCRIPT-EXCEPTION", QoreValue(), desc.release(), stack);
+        xsink->raiseExceptionArg(loc.get(), "JAVASCRIPT-EXCEPTION", arg.release(), desc.release(), stack);
         return -1;
     }
     return 0;
 }
 
 QoreValue QoreV8Program::getQoreValue(ExceptionSink* xsink, v8::Local<v8::Value> val) {
-    v8::Local<v8::Context> context = setup->context(); //this->context.Get(isolate);
+    v8::Local<v8::Context> context = ctx.Get(isolate);
 
     const v8::TryCatch tryCatch(isolate);
     if (val->IsInt32() || val->IsUint32()) {
@@ -706,7 +740,7 @@ v8::Local<v8::Value> QoreV8Program::getV8Value(const QoreValue val, ExceptionSin
 
         case NT_HASH: {
             const QoreHashNode* h = val.get<const QoreHashNode>();
-            v8::Local<v8::Context> context = setup->context(); //this->context.Get(isolate);
+            v8::Local<v8::Context> context = ctx.Get(isolate);
             v8::Local<v8::Object> obj = v8::Object::New(isolate);
             ConstHashIterator i(h);
             while (i.next()) {
@@ -776,7 +810,7 @@ v8::MaybeLocal<v8::Function> QoreV8Program::getV8Function(ExceptionSink* xsink, 
     gext.SetWeak(cbinfo, deref_callref, v8::WeakCallbackType::kParameter);
 #endif
 
-    v8::Local<v8::Context> context = setup->context();
+    v8::Local<v8::Context> context = ctx.Get(isolate);
     v8::MaybeLocal<v8::Function> func = v8::Function::New(context, call_callref, ext);
     if (func.IsEmpty()) {
         //printd(5, "call: %p -> func empty\n", call);
@@ -794,6 +828,12 @@ v8::MaybeLocal<v8::Function> QoreV8Program::getV8Function(ExceptionSink* xsink, 
 }
 
 QoreObject* QoreV8Program::getGlobal(ExceptionSink* xsink) {
+    // Check if isolate is valid before creating helper
+    if (!isolate) {
+        xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "The JavaScript program was not properly initialized");
+        return nullptr;
+    }
+
     QoreV8ProgramHelper v8h(xsink, this);
     if (*xsink) {
         return nullptr;

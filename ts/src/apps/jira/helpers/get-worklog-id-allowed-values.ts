@@ -5,7 +5,7 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
 import { Debugger } from '../../../utils/Debugger';
-import { JIRA_CONN_OPTIONS } from '../constants';
+import { JIRA_CONN_OPTIONS } from '../conn-options';
 import { JIRA_ALLOWED_VALUES_FETCH_DELAY, JIRA_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 const fetchJiraWorklogs = async ({
@@ -41,10 +41,10 @@ const fetchJiraWorklogs = async ({
 
 const mapJiraWorklog = (worklog: any): IQoreAllowedValue => ({
   value: worklog.id,
-  display_name: `${worklog?.id} - ${worklog?.timeSpent}`,
+  display_name: `${worklog.id} - ${worklog.timeSpent}`,
   desc:
-    `Id: ${worklog?.id}\n\nAuthor: ${worklog?.author?.displayName}\n\n` +
-    `Started: ${new Date(worklog?.started).toUTCString()}\n\nTime spent: ${worklog?.timeSpent}\n\n`,
+    `Id: ${worklog.id}\n\nAuthor: ${worklog.author?.displayName}\n\n` +
+    `Started: ${new Date(worklog.started).toUTCString()}\n\nTime spent: ${worklog.timeSpent}\n\n`,
 });
 
 export const getJiraWorklogIdAllowedValues: TQoreGetAllowedValuesFunction<

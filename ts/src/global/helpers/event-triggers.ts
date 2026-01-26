@@ -1,3 +1,4 @@
+import { get } from 'lodash';
 import { Debugger } from '../../utils/Debugger';
 import {
   DEFAULT_TRIGGER_POLLING_INTERVAL,
@@ -47,10 +48,11 @@ export const pollCreatedItemsForTrigger = async <ItemType extends Record<string,
   trigger_name: string;
   uniqueField: keyof ItemType;
   getItems: () => Promise<ItemType[]>;
+  updateLastPollTime?: (lastPoll: Date) => void;
   update: (data: ItemType) => void;
   should_stop: () => boolean;
 }) => {
-  const { trigger_name, getItems, update, should_stop, uniqueField } = opts;
+  const { trigger_name, getItems, update, should_stop, uniqueField, updateLastPollTime } = opts;
 
   try {
     const initialItems = await getItems();
@@ -73,6 +75,9 @@ export const pollCreatedItemsForTrigger = async <ItemType extends Record<string,
         );
       }
 
+      if (updateLastPollTime) {
+        updateLastPollTime(new Date());
+      }
       await delayOrCancel(DEFAULT_TRIGGER_POLLING_INTERVAL, should_stop);
     }
   } catch (error) {
@@ -112,7 +117,7 @@ export const pollUpdatedItemsForTrigger = async <ItemType extends Record<string,
     const initialItems = await getItems();
 
     for (const item of initialItems) {
-      const initialTime = new Date(item[updatedDateField]).getTime();
+      const initialTime = new Date(get(item, updatedDateField)).getTime();
       lastSeenEdits.set(item[uniqueField], initialTime);
     }
 
@@ -122,7 +127,7 @@ export const pollUpdatedItemsForTrigger = async <ItemType extends Record<string,
 
       for (const item of latestItems) {
         const previousEditTime = lastSeenEdits.get(item[uniqueField]);
-        const newEditTime = new Date(item[updatedDateField]).getTime();
+        const newEditTime = new Date(get(item, updatedDateField)).getTime();
         if (!previousEditTime || newEditTime > previousEditTime) {
           update(item);
           lastSeenEdits.set(item[uniqueField], newEditTime);

@@ -1,6 +1,7 @@
 import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
 import { Debugger } from '../../../utils/Debugger';
+import { Client } from '@hubspot/api-client';
 
 export const HUBSPOT_ALLOWED_VALUES_TIMEOUT = 60_000;
 export const HUBSPOT_ALLOWED_VALUES_FETCH_DELAY = 300;
@@ -177,4 +178,8 @@ export const fetchHubspotRecords = async <ItemType = unknown>(
   }
 
   return items;
+};
+
+export const createHubspotClient = (token: string) => {
+  return new Client({ accessToken: token });
 };

@@ -38,6 +38,7 @@
 #include <set>
 #include <map>
 #include <memory>
+#include <optional>
 
 class QoreV8Program : public AbstractQoreProgramExternalData {
     friend class QoreV8ProgramHelper;
@@ -155,6 +156,7 @@ protected:
     QoreString label;
 
     v8::Global<v8::Object> global;
+    v8::Global<v8::Context> ctx;
 
     QoreObject* self = nullptr;
     QoreProgram* qpgm = getProgram();
@@ -228,14 +230,22 @@ private:
 
 class QoreV8ProgramHelper {
 public:
-    DLLLOCAL QoreV8ProgramHelper(ExceptionSink* xsink, QoreV8Program* pgm, bool silent = false) :
-            locker(pgm->isolate),
-            isolate_scope(pgm->isolate),
-            handle_scope(pgm->isolate),
-            tryCatch(pgm->isolate),
-            //origin(pgm->isolate, pgm->label.Get(pgm->isolate)),
-            context(pgm->setup->context()),
-            context_scope(context) {
+    DLLLOCAL QoreV8ProgramHelper(ExceptionSink* xsink, QoreV8Program* pgm, bool silent = false) {
+        // Check if isolate is valid BEFORE initializing any V8 objects
+        // (isolate can be nullptr if program initialization failed)
+        if (!pgm->isolate) {
+            if (!silent) {
+                xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "The JavaScript program was not properly initialized");
+            }
+            return;
+        }
+
+        // Initialize V8 objects now that we know isolate is valid
+        locker.emplace(pgm->isolate);
+        isolate_scope.emplace(pgm->isolate);
+        handle_scope.emplace(pgm->isolate);
+        tryCatch.emplace(pgm->isolate);
+
         AutoLocker al(pgm->m);
         if (!pgm->valid) {
             if (!silent) {
@@ -259,8 +269,21 @@ public:
             return;
         }
         ++pgm->opcount;
+        // Initialize context and context_scope AFTER validity check to avoid crash
+        // if ctx has been Reset() by another thread
+        // Also check if ctx is empty (e.g., during init() before ctx is set)
+        if (pgm->ctx.IsEmpty()) {
+            // Cannot create a valid helper without a context - decrement opcount and return
+            --pgm->opcount;
+            if (!silent) {
+                xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "The JavaScript program context is not available");
+            }
+            return;
+        }
         this->xsink = xsink;
         this->pgm = pgm;
+        context = pgm->ctx.Get(pgm->isolate);
+        context_scope.emplace(context);
     }
 
     DLLLOCAL ~QoreV8ProgramHelper() {
@@ -274,7 +297,8 @@ public:
 
     //! Checks if a JavaScript exception has been thrown and throws the corresponding Qore exception
     DLLLOCAL int checkException() const {
-        return pgm->checkException(xsink, tryCatch);
+        assert(tryCatch);
+        return pgm->checkException(xsink, *tryCatch);
     }
 
     DLLLOCAL operator bool() const {
@@ -290,24 +314,28 @@ public:
     }
 
     DLLLOCAL v8::Isolate* getIsolate() {
-        return pgm->isolate;
+        return pgm ? pgm->isolate : nullptr;
     }
 
     DLLLOCAL ExceptionSink* getExceptionSink() {
         return xsink;
     }
 
+    DLLLOCAL const v8::TryCatch& getTryCatch() const {
+        assert(tryCatch);
+        return *tryCatch;
+    }
+
 private:
     QoreV8Program* pgm = nullptr;
     ExceptionSink* xsink = nullptr;
 
-    v8::Locker locker;
-    v8::Isolate::Scope isolate_scope;
-    v8::HandleScope handle_scope;
-    v8::TryCatch tryCatch;
-    //v8::ScriptOrigin origin;
+    std::optional<v8::Locker> locker;
+    std::optional<v8::Isolate::Scope> isolate_scope;
+    std::optional<v8::HandleScope> handle_scope;
+    std::optional<v8::TryCatch> tryCatch;
     v8::Local<v8::Context> context;
-    v8::Context::Scope context_scope;
+    std::optional<v8::Context::Scope> context_scope;
 };
 
 class QoreV8Dereferencer;

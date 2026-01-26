@@ -1,9 +1,6 @@
-import {
-  TCustomConnOptions,
-  TQoreAppActionFunctionContext,
-  TQoreAppWithActions,
-  TQoreMappedOptions,
-} from '@qoretechnologies/ts-toolkit';
+import { IQoreRestConnectionModifiers, TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
+import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import {
   TRELLO_ACTIONS,
@@ -12,13 +9,9 @@ import {
   TRELLO_CONN_OPTIONS,
   TRELLO_KEY,
 } from './constants';
-import L from '../../i18n/i18n-node';
-import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import * as TRELLO_TRIGGERS from './triggers';
 
-const setOptionsPostAuth: (
-  context: Omit<TQoreAppActionFunctionContext<TCustomConnOptions>, 'opts'>
-) => TQoreMappedOptions<any> = (context) => {
+const setOptionsPostAuth: IQoreRestConnectionModifiers['set_options_post_auth'] = (context) => {
   const token = context?.conn_opts?.token;
   const key = context?.conn_opts?.key || context?.conn_opts?.oauth2_client_id;
   const redirect_url = context?.conn_opts?.oauth2_redirect_url;

@@ -8,6 +8,16 @@ import { getUserIdAllowedValues } from './helpers/get-user-id-allowed-values';
 
 export const ZENDESK_SWAGGER_API_PATH = '/api/v2/';
 
+export class ZendeskError extends Error {
+  public errorCode?: string;
+
+  constructor(message: string, errorCode?: string) {
+    super(message);
+    this.name = 'ZendeskError';
+    this.errorCode = errorCode;
+  }
+}
+
 const UserRoleAllowedValues = [{ value: 'end-user' }, { value: 'agent' }, { value: 'admin' }];
 
 export const ZENDESK_ALLOWED_PATHS = {
@@ -40,7 +50,7 @@ export const ZENDESK_ALLOWED_PATHS = {
                 required: false,
               },
               public: {
-                type: 'boolean',
+                type: 'bool',
                 required: false,
               },
             },
@@ -89,7 +99,7 @@ export const ZENDESK_ALLOWED_PATHS = {
                 required: false,
               },
               public: {
-                type: 'boolean',
+                type: 'bool',
                 required: false,
               },
             },
@@ -155,11 +165,11 @@ export const ZENDESK_ALLOWED_PATHS = {
                 required: false,
               },
               default: {
-                type: 'boolean',
+                type: 'bool',
                 required: false,
               },
               is_public: {
-                type: 'boolean',
+                type: 'bool',
                 required: false,
               },
               user_ids: {
@@ -195,11 +205,11 @@ export const ZENDESK_ALLOWED_PATHS = {
                 required: false,
               },
               default: {
-                type: 'boolean',
+                type: 'bool',
                 required: false,
               },
               is_public: {
-                type: 'boolean',
+                type: 'bool',
                 required: false,
               },
               user_ids: {
@@ -368,7 +378,7 @@ export const ZENDESK_ALLOWED_PATHS = {
           required: false,
         },
         group_id: {
-          type: 'string',
+          type: 'integer',
           allowed_values_creatable: true,
           get_allowed_values: getGroupIdAllowedValues,
         },

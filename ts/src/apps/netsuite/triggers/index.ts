@@ -1,1 +1,1 @@
-export { default as netSuiteNewRecordTrigger } from './new-record.trigger';
+export { default as NewNetSuiteRecord } from './new-record.trigger';

@@ -119,7 +119,7 @@ const hubspotTicketCreatedOrUpdatedTrigger = QoreAppCreator.createLocalizedTrigg
         id: { type: 'string' },
         createdAt: { type: 'string' },
         updatedAt: { type: 'string' },
-        archived: { type: 'boolean' },
+        archived: { type: 'bool' },
         properties: {
           type: hubspotObjectDefaultProperties,
         },

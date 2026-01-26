@@ -137,7 +137,7 @@ const createGiftCard = async (context: TShopifyContextWithConn, data: TCreateGif
 
   if (data.customerId) input.customerId = `gid://shopify/Customer/${data.customerId}`;
   if (data.note) input.note = data.note;
-  if (data.expiresOn) input.expiresOn = data.expiresOn.toISOString().split('T')[0];
+  if (data.expiresOn) input.expiresOn = new Date(data.expiresOn).toISOString().split('T')[0];
   if (data.code) input.code = data.code;
   if (data.templateSuffix) input.templateSuffix = data.templateSuffix;
 
@@ -172,7 +172,7 @@ const createGiftCard = async (context: TShopifyContextWithConn, data: TCreateGif
   return createGiftCardResult.data.giftCardCreate;
 };
 
-export const CreateShopifyGiftCard = QoreAppCreator.createLocalizedAction<typeof options>({
+const CreateShopifyGiftCard = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'create-gift-card',
   app: SHOPIFY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -219,3 +219,5 @@ export const CreateShopifyGiftCard = QoreAppCreator.createLocalizedAction<typeof
   options,
   response_type: ShopifyCreateGiftCardResponseType,
 });
+
+export default CreateShopifyGiftCard;

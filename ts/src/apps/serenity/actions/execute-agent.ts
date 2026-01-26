@@ -32,13 +32,13 @@ const options = {
       element_type: {
         type: 'hash',
         fields: {
-          key: {
+          Key: {
             type: 'string',
             get_allowed_values: getSerenityAgentParamsAllowedValues,
             allowed_values_creatable: true,
             required: true,
           },
-          value: {
+          Value: {
             type: 'string',
             required: true,
           },
@@ -104,7 +104,7 @@ const response_type = {
               type: 'number',
             },
             success: {
-              type: 'boolean',
+              type: 'bool',
             },
           },
         },
@@ -113,7 +113,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const ExecuteSerenityAgent = QoreAppCreator.createLocalizedAction<typeof options>({
+const ExecuteSerenityAgent = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'execute-agent',
   app: SERENITY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -121,8 +121,8 @@ export const ExecuteSerenityAgent = QoreAppCreator.createLocalizedAction<typeof 
     const token = context?.conn_opts?.token;
     const agentCode = data?.agentCode;
     const culture = data?.culture;
-    const params = (data?.params || []) as { Key: string; Value: string }[];
-    const volatileKnowledgeIds = data?.volatileKnowledgeIds as string[] | undefined;
+    const params = data?.params || [];
+    const volatileKnowledgeIds = data?.volatileKnowledgeIds;
 
     const missingValues: string[] = [];
 
@@ -166,3 +166,5 @@ export const ExecuteSerenityAgent = QoreAppCreator.createLocalizedAction<typeof 
   options,
   response_type,
 });
+
+export default ExecuteSerenityAgent;

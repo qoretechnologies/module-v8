@@ -90,7 +90,7 @@ const response_type = {
               type: 'number',
             },
             success: {
-              type: 'boolean',
+              type: 'bool',
             },
           },
         },
@@ -99,7 +99,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const ExecuteSerenityConversation = QoreAppCreator.createLocalizedAction<typeof options>({
+const ExecuteSerenityConversation = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'execute-conversation',
   app: SERENITY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -152,3 +152,5 @@ export const ExecuteSerenityConversation = QoreAppCreator.createLocalizedAction<
   options,
   response_type,
 });
+
+export default ExecuteSerenityConversation;

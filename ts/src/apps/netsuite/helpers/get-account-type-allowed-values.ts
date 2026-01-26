@@ -1,6 +1,6 @@
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { fetchNetsuiteAllowedValues } from './constants';
-import { NETSUITE_CONN_OPTIONS } from '../constants';
+import { NETSUITE_CONN_OPTIONS } from '../conn-options';
 
 type TNetsuiteAccountTypeData = {
   id: string;

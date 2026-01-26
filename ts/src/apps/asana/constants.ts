@@ -417,7 +417,9 @@ export const ASANA_ALLOWED_PATHS = {
       },
     },
   },
-  '/teams': { GET: {} },
+  '/teams': {
+    GET: {},
+  },
   '/teams/{team_gid}/projects': {
     GET: {},
     POST: {

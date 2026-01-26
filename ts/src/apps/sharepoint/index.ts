@@ -2,11 +2,10 @@ import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import { SHAREPOINT_APP_NAME } from './constants';
-import * as actions from './actions';
-import * as SHAREPOINT_TRIGGERS from './triggers';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 
-const SHAREPOINT_ACTIONS = Object.values(actions);
+import * as SHAREPOINT_ACTIONS from './actions';
+import * as SHAREPOINT_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
   ({
@@ -112,7 +111,6 @@ export default (locale: Locales) =>
         'Files.ReadWrite',
         'Sites.Read.All',
         'User.Read',
-        'AllSites.Manage',
       ],
       ping_method: 'GET',
       ping_path: '/v1.0/me',

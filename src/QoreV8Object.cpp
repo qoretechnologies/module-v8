@@ -49,6 +49,10 @@ QoreObject* QoreV8Object::getReferencedProgram() {
 }
 
 AbstractQoreNode* QoreV8Object::toData(QoreV8ProgramHelper& v8h) const {
+    // check for valid helper to avoid crashes with null isolate
+    if (!v8h) {
+        return nullptr;
+    }
     // the set is to ensure that we only report each object once
     v8::Local<v8::Set> objset = v8::Set::New(v8h.getIsolate());
     return toData(v8h, v8::Null(v8h.getIsolate()), **objset);
@@ -56,6 +60,10 @@ AbstractQoreNode* QoreV8Object::toData(QoreV8ProgramHelper& v8h) const {
 
 AbstractQoreNode* QoreV8Object::toData(QoreV8ProgramHelper& v8h, v8::Local<v8::Value> parent,
         v8::Set& objset) const {
+    // check for valid helper to avoid crashes with null isolate
+    if (!v8h) {
+        return nullptr;
+    }
     v8::Local<v8::Object> obj = get();
     {
         v8::Maybe<bool> b = objset.Has(v8h.getContext(), obj);

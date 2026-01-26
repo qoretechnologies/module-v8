@@ -55,7 +55,7 @@ const TeamsNewMeetingTrigger = QoreAppCreator.createLocalizedTrigger<
     });
   },
   get_example_event_data: async (context) => {
-    const token = context?.conn_opts?.token;
+    const token = context.conn_opts?.token;
     const meetingSource = context.opts?.meetingSource || 'personal';
     const teamId = context.opts?.teamId;
 
@@ -172,8 +172,8 @@ const TeamsNewMeetingTrigger = QoreAppCreator.createLocalizedTrigger<
             },
           },
         },
-        isOnlineMeeting: { type: 'boolean' },
-        isCancelled: { type: 'boolean' },
+        isOnlineMeeting: { type: 'bool' },
+        isCancelled: { type: 'bool' },
         source: { type: 'string' },
         teamName: { type: 'string', required: false },
       },

@@ -14,7 +14,7 @@ import {
 } from '../helpers/get-item-id-allowed-values';
 import { getNetsuiteCurrencyObjectAllowedValues } from '../helpers/get-currency-id-allowed-values';
 import { getNetsuiteEmployeeObjectAllowedValues } from '../helpers/get-employee-id-allowed-values';
-import { NETSUITE_CONN_OPTIONS } from '../constants';
+import { NETSUITE_CONN_OPTIONS } from '../conn-options';
 import { netsuiteObjectCreationResponseDataConverter } from '../helpers/object-creation-response-data-converter';
 import { getNetsuitePurchaseOrderIdAllowedValues } from '../helpers/get-purchase-order-id-allowed-values';
 

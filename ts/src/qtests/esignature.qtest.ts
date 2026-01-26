@@ -6,6 +6,7 @@ import {
 import _sodium from 'libsodium-wrappers';
 import { ESIGNATURE_ACTIONS, ESIGNATURE_CONN_OPTIONS } from '../apps/esignature/constants';
 import * as ESIGNATURE_TRIGGERS from '../apps/esignature/triggers';
+import { encryptGitHubSecret } from './utils';
 
 let connection: string;
 
@@ -76,9 +77,9 @@ describe('Tests eSignature Actions', () => {
 
   describe('Should test trigger creation', () => {
     it('Should create an envelope status update trigger', async () => {
-      const trigger = ESIGNATURE_TRIGGERS['envelopeStatusUpdated'] as IQoreAppActionWithWebhookBase<
-        typeof ESIGNATURE_CONN_OPTIONS
-      >;
+      const trigger = ESIGNATURE_TRIGGERS[
+        'UpdatedEsignatureEnvelopeStatus'
+      ] as IQoreAppActionWithWebhookBase<typeof ESIGNATURE_CONN_OPTIONS>;
 
       expect(trigger).toBeDefined();
       expect(trigger.webhook_register).toBeDefined();
@@ -121,9 +122,9 @@ describe('Tests eSignature Actions', () => {
     });
 
     it('Should create a template status update trigger', async () => {
-      const trigger = ESIGNATURE_TRIGGERS['templateUpdated'] as IQoreAppActionWithWebhookBase<
-        typeof ESIGNATURE_CONN_OPTIONS
-      >;
+      const trigger = ESIGNATURE_TRIGGERS[
+        'UpdatedEsignatureTemplate'
+      ] as IQoreAppActionWithWebhookBase<typeof ESIGNATURE_CONN_OPTIONS>;
 
       expect(trigger).toBeDefined();
       expect(trigger.webhook_register).toBeDefined();
@@ -508,7 +509,7 @@ const updateDocusignSecret = async (newRefreshToken: string): Promise<void> => {
     }
   );
 
-  const encryptedRefreshToken = await encryptSecret(newRefreshToken, body.key);
+  const encryptedRefreshToken = await encryptGitHubSecret(newRefreshToken, body.key);
   await testApi.execAppAction('github', 'actions-create-or-update-repo-secret', gitHubConnection, {
     owner: ghModuleRepoOwner,
     repo: ghModuleRepoName,
@@ -518,12 +519,4 @@ const updateDocusignSecret = async (newRefreshToken: string): Promise<void> => {
       key_id: body.key_id,
     },
   });
-};
-
-const encryptSecret = async (secret: string, publicKey: string): Promise<string> => {
-  const publicKeyBinary = Buffer.from(publicKey, 'base64');
-  await _sodium.ready;
-  const encryptedMessage = await _sodium.crypto_box_seal(Buffer.from(secret), publicKeyBinary);
-
-  return Buffer.from(encryptedMessage).toString('base64');
 };

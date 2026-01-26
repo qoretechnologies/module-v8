@@ -1,6 +1,6 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
-import { JIRA_CONN_OPTIONS } from '../constants';
+import { JIRA_CONN_OPTIONS } from '../conn-options';
 import { Debugger } from '../../../utils/Debugger';
 import { delay } from '../../../global/helpers';
 import { JIRA_ALLOWED_VALUES_FETCH_DELAY, JIRA_ALLOWED_VALUES_TIMEOUT } from './constants';
@@ -42,9 +42,9 @@ const mapJiraComment = (comment: {
   self: string;
 }): IQoreAllowedValue => ({
   value: comment.id,
-  display_name: comment?.author?.displayName || 'Unknown author',
+  display_name: comment.author?.displayName || 'Unknown author',
   desc:
-    `Id: ${comment.id}\n\nAuthor: ${comment?.author?.displayName}\n\nCreated: ${comment.created}\n\n` +
+    `Id: ${comment.id}\n\nAuthor: ${comment.author?.displayName}\n\nCreated: ${comment.created}\n\n` +
     `Link: [View comment](${comment.self})`,
 });
 

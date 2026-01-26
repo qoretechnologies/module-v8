@@ -2,23 +2,28 @@ exports.actionsCatalogue = {
     registerAppActions: function(api) {
         /** registerApp() takes the same arguments as DataProviderActionCatalog::registerApp() plus:
             - rest?: object -> documented below
-            - swagger?: string -> a location to a Swagger 2.0 schema = OpenAPI 2.0
-            - swagger_options?: object -> an optional hash of swagger parsing options - the main option is
+            - openapi?: string -> a location to an OpenAPI schema (supports Swagger 2.0, OpenAPI 3.0/3.1 with
+              auto-detection); alias: "swagger"
+            - openapi_options?: object -> an optional hash of schema parsing options - the main option is
               - "parse_flags": -1 -> this will turn on all lax parsing options - or you can use 128
                 (LM_ACCEPT_QUERY_OBJECTS = accept "object" as a valid type for query parameters like OpenAPI 3.0)
-            - swagger_paths?: string[] -> a list of swagger paths to build an optimized schema
-            - swagger_type_overrides?: object -> an object keyed by Swagger type (in dot notation), values are applied
-              to override the given types
-            - swagger_schema_map?: object -> keyed by swagger scheme label, values are:
-              - swagger?: string -> a location to a Swagger 2.0 schema = OpenAPI 2.0
-              - swagger_options?: object -> an optional hash of swagger parsing options - the main option is
+              alias: "swagger_options"
+            - openapi_paths?: string[] -> a list of schema paths to build an optimized schema; alias: "swagger_paths"
+            - openapi_type_overrides?: object -> an object keyed by schema type (in dot notation), values are applied
+              to override the given types; alias: "swagger_type_overrides"
+            - openapi_schema_map?: object -> keyed by schema label, values are:
+              - openapi?: string -> a location to an OpenAPI schema (supports Swagger 2.0, OpenAPI 3.0/3.1 with
+                auto-detection); alias: "swagger"
+              - openapi_options?: object -> an optional hash of schema parsing options - the main option is
                 - "parse_flags"?: int -1 -> this will turn on all lax parsing options - or you can use 128
                   (LM_ACCEPT_QUERY_OBJECTS = accept "object" as a valid type for query parameters like OpenAPI 3.0)
-                - utc_dates?: boolean -> if date/time values should be serialized in UTC as Swagger query args
-                - query_date_format?: string -> the date format to use when serializing Swagger query date args
-              - swagger_paths?: string[] -> a list of swagger paths to build an optimized schema
-              - swagger_type_overrides?: object -> an object keyed by Swagger type (in dot notation), values are
-                applied to override the given types
+                - utc_dates?: boolean -> if date/time values should be serialized in UTC as query args
+                - query_date_format?: string -> the date format to use when serializing query date args
+                alias: "swagger_options"
+              - openapi_paths?: string[] -> a list of schema paths to build an optimized schema; alias: "swagger_paths"
+              - openapi_type_overrides?: object -> an object keyed by schema type (in dot notation), values are
+                applied to override the given types; alias: "swagger_type_overrides"
+              alias: "swagger_schema_map"
         */
         api.registerApp({
             "name": "js-test",
@@ -109,6 +114,8 @@ exports.actionsCatalogue = {
                   the connection option will be used as the value of the given action option in each call where the
                   option is present
                 - io_timeout_secs?: int -> provides the I/O timeout in seconds (NOTE: not yet implemented)
+                - messages?: UiMessageInfo[] -> an optional list of UI message info hashes that will be shown in the
+                  UI when a new connection is created
                 - options?: object -> describes connection options supported by connections for this application; keys
                   are option names; values are converted to option hashes described by the COnnectionOptionInfo
                   hashdecl: https://qoretechnologies.com/manual/qorus/gitlab-docs/develop/qore/modules/ConnectionProvider/html/struct_connection_provider_1_1_connection_option_info.html
@@ -131,16 +138,25 @@ exports.actionsCatalogue = {
                   - conn_name: string -> the connection name, if any is defined
                   - conn_opts: object -> connection options + processed options from the auth response + the auth
                     response itself
+                - url_from_option?: string -> the name of an option that will provide the URL value; the option must
+                  be required
                 - url_template_options?: string[] -> a list of option names that will be used to substitute values in
                   URLs; the URL should contain strings like '{{option_name}}'
             */
             "rest_modifiers": {
+                "messages": [{
+                    "title": "Required Options",
+                    "intent": "warning",
+                    "content": "The 'Account ID' connection option is required to connect to the application but is "
+                        + "set automatically by the authentication process",
+                }],
                 "options": {
                     "account_id": {
                         "display_name": "Account ID",
                         "short_desc": "The account ID for the connection",
                         "desc": "The account ID for the connection",
                         "type": "string",
+                        "preselected": true,
                     },
                 },
                 "set_options_post_auth": async function (ctx) {
@@ -151,6 +167,380 @@ exports.actionsCatalogue = {
                 "url_template_options": [
                     "account_id",
                 ],
+            },
+            /** "get_table_list" is required for record-based action support
+                get_table_list(ctx: object): string[] {}
+                @param ctx: object -> with the following properties:
+                - conn_name: string -> the connection name, if any is defined
+                - conn_opts: object -> connection options + processed options from the auth response + the auth
+                  response itself
+                @return a list of table names (string[])
+            */
+            "get_table_list": async function(ctx) {
+                return ["test"];
+            },
+            /** "begin_transaction" allows an explicit transaction to be started
+                begin_transaction(ctx: object): void {}
+                - conn_name: string -> the connection name, if any is defined
+                - conn_opts: object -> connection options + processed options from the auth response + the auth
+                  response itself
+            */
+            "begin_transaction": async function(ctx) {
+            },
+            /** "commit" allows a transaction to be committed
+                commit(ctx: object): void {}
+                - conn_name: string -> the connection name, if any is defined
+                - conn_opts: object -> connection options + processed options from the auth response + the auth
+                  response itself
+            */
+            "commit": async function(ctx) {
+            },
+            /** "rollback" allows a transaction to be rolled back
+                rollback(ctx: object): void {}
+                - conn_name: string -> the connection name, if any is defined
+                - conn_opts: object -> connection options + processed options from the auth response + the auth
+                  response itself
+            */
+            "rollback": async function(ctx) {
+            },
+            /** "get_record_type" is required for record-based action support
+                get_record_type(ctx: object, table_name: string): object {}
+                @param ctx: object -> with the following properties:
+                - conn_name: string -> the connection name, if any is defined
+                - conn_opts: object -> connection options + processed options from the auth response + the auth
+                  response itself
+                @param table_name: string -> the name of the table to get the record type for
+                @return the record type for the given table; must be a type hash defining a "hash" type
+            */
+            "get_record_type": async function(ctx, table_name) {
+                if (table_name != 'test') {
+                    throw new Error('Unknown table ' + search_opts.table);
+                }
+                return {
+                    "type": "hash",
+                    "fields": {
+                        "id": {
+                            "type": "int",
+                            "display_name": "ID",
+                            "short_desc": "The ID",
+                            "desc": "The ID",
+                            "example_value": 1,
+                            "required": true,
+                        },
+                        "name": {
+                            "type": "string",
+                            "display_name": "Name",
+                            "short_desc": "A name",
+                            "desc": "A name",
+                            "example_value": "Bill",
+                            "required": true,
+                        },
+                    },
+                };
+            },
+            /** "expressions" defines global expressions for record-based action support
+                # the following type is used in the expression definition; "search" is for expressions that can be used
+                # in search filters, "field" is for expressions that can be used in field lists or in the value of
+                # update operations
+                type Role = 'search' | 'field';
+                # the following type describes an argument to an expression
+                type Arg = {
+                    type_code: 'any' // the argument can be an expression, an immediate value, or a field refefence
+                        | 'value',   // the argument must be an immediate value
+                        | 'field,    // the argument must be a field reference
+                    type: string | object, // the argument type
+                    display_name?: string, // the user-friendly display name for the argument
+                    short_desc?: string,   // a short plain-text description of the argument
+                    desc?: string,         // a longer description for the argument that supports markdown formatting
+                    default_value? : any,  // values must use the argument's type
+                    sensitive?: bool,      // if the argument is sensitive (password, etc)
+                    allowed_values?: AllowedValues[], // an array of objects providing the only values allowed for
+                                           // the argument
+                    allowed_values_creatable?: bool, // if true, then values not in allowed_values can be used
+                    element_allowed_values?: AllowedValues[], // an array of objects providing the only values allowed
+                                           // for list elements
+                    element_allowed_values_creatable?: bool, // if true, then values not in element_allowed_values can
+                                           // be used
+                    example_value?: any,   // values must use the argument's type
+                };
+                expressions: {
+                    [key: string]: {
+                        // the type of expression
+                        type: "operator" | "function",
+                        // the subtype of the expression
+                        subtype: "generic" | "logic-operator" = "generic",
+                        name: string,
+                        display_name: string,
+                        short_desc: string,
+                        desc: string,
+                        // the symbol or text to use when rendering the expression
+                        symbol: string,
+                        // the expression role code(s) which determine where the expression can be used
+                        roles: Role[],
+                        // the arguments the expression takes
+                        args: Arg[],
+                        // the return type of the expression
+                        return_type: string | object,
+                        // if true, the last argument can be repeated indefinitely
+                        varargs?: bool,
+                    },
+                } {}
+                standard operator names (keys for the get_expressions() return value):
+                - "&&": logical and
+                - "||": logical or
+                - "regex": regular expression match
+                - "<": less than
+                - "<=": less than or equal
+                - ">": greater than
+                - ">=": greater than or equal
+                - "=": equal
+                - "!=": not equal
+                - "in": in operator
+                - "!": logical negation
+                - "like": SQL-like "like" operator with "%" as the wildcard character
+                - "between": between operator
+                @param ctx: object -> with the following properties:
+                - conn_name: string -> the connection name, if any is defined
+                - conn_opts: object -> connection options + processed options from the auth response + the auth
+                  response itself
+                @return an object defining global expressions; the format is as described above
+            */
+            "expressions": {
+                "&&": {
+                    "type": "operator",
+                    "subtype": "logic-operator",
+                    "name": "&&",
+                    "display_name": "and (&&)",
+                    "short_desc": "Returns True if all arguments are True with logic short-circuiting",
+                    "desc": "Returns `True` if all arguments are `True` with logic short-circuiting",
+                    "symbol": "&&",
+                    "roles": ["search", "field"],
+                    "args": [
+                        {
+                            "type_code": "any",
+                            "type": "bool",
+                        },
+                    ],
+                    "varargs": true,
+                    "return_type": "bool",
+                },
+                "==": {
+                    "type": "operator",
+                    "subtype": "logic-operator",
+                    "name": "==",
+                    "display_name": "equals (==)",
+                    "short_desc": "Returns True if the two arguments are logically equal; types are converted if necessary",
+                    "desc": "Returns `True` if the two arguments are logically equal; types are converted if necessary",
+                    "symbol": "==",
+                    "roles": ["search", "field"],
+                    "args": [
+                        {
+                            "type_code": "any",
+                            "type": "any",
+                        },
+                        {
+                            "type_code": "any",
+                            "type": "any",
+                        },
+                    ],
+                    "return_type": "bool",
+                },
+                "test": {
+                    "type": "function",
+                    "name": "test",
+                    "display_name": "test",
+                    "short_desc": "Test function",
+                    "desc": "Test function",
+                    "symbol": "test",
+                    "roles": ["search", "field"],
+                    "args": [
+                        {
+                            "type_code": "any",
+                            "type": "string",
+                            "allowed_values": [
+                                {
+                                    "display_name": "A",
+                                    "short_desc": "A",
+                                    "desc": "A",
+                                    "value": "a",
+                                },
+                            ],
+                        },
+                    ],
+                    "return_type": "bool",
+                },
+            },
+
+            // executes the search and returns a list of the records matched
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+                @param where_cond?: object -> the optional search expression tree
+                @param search_opts?: object -> search options; the table will be provided as search_opts.table
+
+                @return get_record(ctx?: object, block_size: number): object -> a callable object that returns a
+                record set as an object with keys that correspond to the field names with values that are lists of
+                field values
+
+                record must be a data object that matches the record type for the table
+            */
+            "search_records": async function (ctx, where_cond, search_opts) {
+                if (search_opts.table != 'test') {
+                    throw new Error('Unknown table ' + search_opts.table);
+                }
+                let done = false;
+                function get_records(ctx, block_size) {
+                    if (!done) {
+                        done = true;
+                        return {
+                            "id": [1, 2],
+                            "name": ["a", "b"],
+                        };
+                    }
+                }
+                return get_records;
+            },
+
+            // get search options
+            "search_options": {
+                "for_update": {
+                    "display_name": "For Update?",
+                    "short_desc": "Should rows be locked for update?",
+                    "desc": "Should rows be locked for update?",
+                    "type": "string",
+                    "required": false,
+                    "default_value": false,
+                    "on_change": ["refetch"],
+                },
+                "isolation_level": {
+                    "display_name": "Transaction Isolation Level",
+                    "short_desc": "The transaction isolation level to use",
+                    "desc": "The transaction isolation level to use",
+                    "type": "string",
+                    "required": false,
+                    "get_allowed_values": async function(ctx) {
+                        // simulate a call where the connection info is required
+                        if (!ctx.conn_opts) {
+                            return;
+                        }
+                        return [
+                            {
+                                "display_name": "Read Uncommitted",
+                                "short_desc": "Read uncommitted",
+                                "desc": "Read uncommitted",
+                                "value": "read-uncommitted",
+                            },
+                            {
+                                "display_name": "Read Committed",
+                                "short_desc": "Read committed",
+                                "desc": "Read committed",
+                                "value": "read-committed",
+                            },
+                            {
+                                "display_name": "Repeatable Read",
+                                "short_desc": "Repeatable read",
+                                "desc": "Repeatable read",
+                                "value": "repeatable-read",
+                            },
+                            {
+                                "display_name": "Serializable",
+                                "short_desc": "Serializable",
+                                "desc": "Serializable",
+                                "value": "serializable",
+                            },
+                        ];
+                    },
+                    "get_default_value": async function(ctx) {
+                        // simulate a call where the connection info is required
+                        if (!ctx.conn_opts) {
+                            return;
+                        }
+                        return "read-committed";
+                    },
+                },
+            },
+
+            // creates one or more records and returns the created records
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+                @param records: object -> the record(s) to create; keys are field names and values are lists of values
+                to create for each field
+                @param create_opts?: object -> create options; the table will be provided as create_opts.table
+
+                @return object?: if any new record(s) were generated, then the return value must be an object with
+                the keys of the generated data where the values are lists of the generated data in the same order as
+                the data submitted
+            */
+            "create_records": async function (ctx, records, create_opts) {
+                if (create_opts.table != 'test') {
+                    throw new Error('Unknown table ' + create_opts.table);
+                }
+                return {
+                    "new": new Array(Object.values(records)[0].length).fill("value"),
+                };
+            },
+
+            // updates records and returns the number of records updated
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+                @param update_fields: object -> the fields to update; must resolve to a data object that matches the
+                record type for the table for the fields to be updated; values can be expressions
+                @param where_cond?: object -> the optional search expression tree
+                @param search_opts?: object -> search options; the table will be provided as search_opts.table
+                @return the number of records updated
+            */
+            "update_records": async function (ctx, update_fields, where_cond, search_opts) {
+                if (search_opts.table != 'test') {
+                    throw new Error('Unknown table ' + search_opts.table);
+                }
+                return 1;
+            },
+
+            // upserts a record and returns the result code of the operation
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+                @param records: object -> the record to upsert; keys are field names and values are lists of values
+                to create for each field
+                @param upsert_opts?: object -> upsert options; the table will be provided as upsert_opts.table
+                @return string[]?: if known, the result code of the operation for each record upserted:
+                - inserted: record inserted
+                - updated: record updated
+                - verified: record was either inserted or updated (the default if no value is returned)
+                - unchanged: record was found and no changes were necessary
+                - deleted: record was deleted (only possible with specific upsert options)
+            */
+            "upsert_records": async function (ctx, records, upsert_opts) {
+                if (upsert_opts.table != 'test') {
+                    throw new Error('Unknown table ' + upsert_opts.table);
+                }
+            },
+
+            // deletes records and returns the number of records deleted
+            /**
+                @param ctx?: object with the following properties:
+                - conn_name?: string -> the connection name, if any is defined
+                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
+                - opts?: object -> a data object with option values set for the current action
+                @param where_cond?: object -> the optional search expression tree
+                @param search_opts?: object -> search options; the table will be provided as search_opts.table
+                @return the number of records deleted
+            */
+            "delete_records": async function (ctx, where_cond, search_opts) {
+                if (search_opts.table != 'test') {
+                    throw new Error('Unknown table ' + search_opts.table);
+                }
+                return 1;
             },
         });
 
@@ -242,8 +632,6 @@ exports.actionsCatalogue = {
                   - disabled?: bool -> is the type disabled?
                   - preselected?: bool -> if fields of this type should be preselected; will set the corresponding UI
                     flag
-                  - multiselect?: bool -> can be true if the field has a list type and allowed_values are the allowed
-                    values for the list
                   - allowed_values?: AllowedValues[] -> an array of objects providing the only values allowed for
                     the option
                   - fields?: object -> a hash of field objects; only valid if \c type is "hash"; keys are field
@@ -256,8 +644,6 @@ exports.actionsCatalogue = {
                       generating example data etc
                     - default_value?: any -> (values must use the field's type) the default value if none is provided
                       by the user; this overrides any default value provided by the type
-                    - multiselect?: bool -> can be true if the field has a list type and allowed_values are the
-                      allowed values for the list
                     - allowed_values?: AllowedValues[] -> an array of objects providing the only values allowed for
                       the field - with the following properties
                     - readonly?: bool -> is the field read-only?
@@ -306,8 +692,7 @@ exports.actionsCatalogue = {
                     "required": true,
                     "preselected": true,
                     "depends_on": ["count"],
-                    "multiselect": true,
-                    "get_allowed_values": async function(ctx) {
+                    "get_element_allowed_values": async function(ctx) {
                         return [
                             {
                                 "display_name": "this",
@@ -467,102 +852,9 @@ exports.actionsCatalogue = {
             },
         });
 
-        // NOTE: this action will be executed as a REST call, no code is necessary
-        api.registerAction({
-            "app": "js-test",
-            "action": "test-search",
-            "display_name": "Test Search",
-            "short_desc": "Test search",
-            "desc": "Test search",
-            "action_code": 4,  // DPAT_FIND == 4 (record search)
-
-            // This means that there are no native search capabilities and also generic expressions are supported
-            /** all records are fetched and filtered after the fact by the DataProvider infrastructure
-
-                This option is meant for simple data providers providing just a record view of data
-
-                If this option is true, then no "search_options" or "expressions" can be defined
-
-                If this option is false, "search_options" must be defined and the "search_records" function must be
-                able to handle them
-            */
-            "uses_generic_search": true,
-
-            // returns the record type for the action
-            /**
-                @param ctx?: object with the following properties:
-                - conn_name?: string -> the connection name, if any is defined
-                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
-                - opts?: object -> a data object with option values set for the current action
-
-                @return the record type for the action; must be a hash (object)
-            */
-            "get_record_type": async function (ctx) {
-                return {
-                    "type": "hash",
-                    "fields": {
-                        "id": {
-                            "type": "int",
-                        },
-                        "name": {
-                            "type": "string",
-                        },
-                    },
-                };
-            },
-
-            // executes the search and returns a list of the records matched
-            /**
-                @param ctx?: object with the following properties:
-                - conn_name?: string -> the connection name, if any is defined
-                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
-                - opts?: object -> a data object with option values set for the current action
-                @param where_cond?: object -> the optional search expression tree
-                @param search_1opts?: object -> search options
-
-                @return a list of records (object[] | void) matching the arguments
-            */
-            "search_records": async function (ctx, where_cond, search_opts) {
-                return [
-                    {"id": 1, "name": "a"},
-                    {"id": 2, "name": "b"},
-                ];
-            },
-
-            /**
-                @param ctx?: object with the following properties:
-                - conn_name?: string -> the connection name, if any is defined
-                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
-                - opts?: object -> a data object with option values set for the current action
-            */
-            "begin_transaction": async function (ctx) {
-                // begin transaction code here
-            },
-
-            /**
-                @param ctx?: object with the following properties:
-                - conn_name?: string -> the connection name, if any is defined
-                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
-                - opts?: object -> a data object with option values set for the current action
-            */
-            "commit": async function (ctx) {
-                // commit transaction code here
-            },
-
-            /**
-                @param ctx?: object with the following properties:
-                - conn_name?: string -> the connection name, if any is defined
-                - conn_opts?: object -> connection options; for REST connections, see the 'rest' object definition
-                - opts?: object -> a data object with option values set for the current action
-            */
-            "rollback": async function (ctx) {
-                // rollback transaction code here
-            },
-        });
-
         api.registerApp({
-            "name": "js-swagger-test",
-            "display_name": "JavaScript Swagger Test",
+            "name": "js-openapi-test",
+            "display_name": "JavaScript OpenAPI Test",
             "short_desc": "Test",
             "desc": "Test",
             // "logo" is a base64-encoded string
@@ -581,9 +873,9 @@ exports.actionsCatalogue = {
                 'LjU3M0w1NC4xNzEsNDUuMzA3TDU0LjE3MSw1OC43NzZMNDUuMjEzLDYzLjk0OEw1OS41NjUsNzIuMDVMNjUuNzY4LDY4LjQ2OU' +
                 'M2NS43NjksNjguNDY4IDY4LjM2Myw2Ni45NyA2OC4zNjMsNjMuOTczIiBzdHlsZT0iZmlsbDpyZ2IoMCwyMzEsMjU1KTtmaWxs' +
                 'LXJ1bGU6bm9uemVybzsiLz4KICAgIDwvZz4KPC9zdmc+Cg==',
-            "logo_file_name": "test-swagger.svg",
+            "logo_file_name": "test-openapi.svg",
             "logo_mime_type": "image/svg+xml",
-            "swagger": "PetStore.swagger.yaml",
+            "openapi": "PetStore.swagger.yaml",
             "rest": {
                 "data": "json",
                 "oauth2_auth_url":  "https://{{subdomain}}.example.com/oauth2/auth",
@@ -611,19 +903,22 @@ exports.actionsCatalogue = {
 
         // NOTE: this action will be executed as a REST call, no code is necessary
         api.registerAction({
-            "app": "js-swagger-test",
+            "app": "js-openapi-test",
             "action": "create-pet",
             "display_name": "Create Pet",
             "short_desc": "Create pet",
             "desc": "Create pet",
             "action_code": 2,  // DPAT_API == 2
-            "swagger_path": "pet/POST",
+            "openapi_path": "pet/POST",  // alias: "swagger_path"
+            /** ignore_options?: string[] -> ignores options given in the request type
+            */
             /** override_options?: object -> allows options to be overridden; keys are non-optimized request property
                 paths and must refer to a property that will be presented as an action option after flattening /
                 optimization. The attributes of the object are handled like action option attributes
             */
             "override_options": {
                 "name": {
+                    "validation_regex": "^.*$",
                     "get_allowed_values": async (ctx) => [
                         {
                             "display_name": "Fido",
@@ -656,13 +951,13 @@ exports.actionsCatalogue = {
 
         // NOTE: this action will be executed as a REST call, no code is necessary
         api.registerAction({
-            "app": "js-swagger-test",
+            "app": "js-openapi-test",
             "action": "get-pet",
             "display_name": "Get Pet",
             "short_desc": "Get pet",
             "desc": "Get pet",
             "action_code": 2,  // DPAT_API == 2
-            "swagger_path": "pet/{id}/GET",
+            "openapi_path": "pet/{id}/GET",  // alias: "swagger_path"
             /** override_options?: object -> allows options to be overridden; keys are non-optimized request property
                 paths and must refer to a property that will be presented as an action option after flattening /
                 optimization. The attributes of the object are handled like action option attributes
@@ -691,7 +986,7 @@ exports.actionsCatalogue = {
 
         api.registerAction({
             // app: string
-            "app": "js-swagger-test",
+            "app": "js-openapi-test",
             // action: string
             "action": "webhook-event-1",
             // display_name: string
@@ -828,7 +1123,7 @@ exports.actionsCatalogue = {
         });
 
         api.registerAction({
-            "app": "js-swagger-test",
+            "app": "js-openapi-test",
             "action": "js-event-1",
             "display_name": "JavaScript Event",
             "short_desc": "JavaScript event example action",
@@ -873,14 +1168,14 @@ exports.actionsCatalogue = {
                 @note the function here will be called with no "this" context; "this" cannot be used in this function
             */
             "event_function": async function(ctx, update, should_stop) {
-                if (!ctx.opts.name) {
+                if (!ctx?.opts?.name) {
                     throw new Error("missing name");
                 }
                 var event = {
                     "name": "name-1",
                     "code": 1234,
                 };
-                if (ctx && ctx.opts && ctx.opts.extra === true) {
+                if (ctx?.opts && ctx?.opts?.extra === true) {
                     event = {...event, extra: "hi"};
                 }
                 update(event);
@@ -946,6 +1241,316 @@ exports.actionsCatalogue = {
                         },
                     };
                 }
+            },
+        });
+
+        // OpenAPI 3.0 test app
+        api.registerApp({
+            "name": "js-openapi3-test",
+            "display_name": "JavaScript OpenAPI 3.0 Test",
+            "short_desc": "OpenAPI 3.0 Test",
+            "desc": "Test app using OpenAPI 3.0 schema",
+            "logo": 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUF' +
+                'VCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2' +
+                'ZzExLmR0ZCI+Cjxzdmcgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDUyIDYzIiB2ZXJzaW9uPSIxLj' +
+                'EiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkv' +
+                'eGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zOnNlcmlmPSJodHRwOi8vd3d3LnNlcmlmLmNvbS8iIHN0eWxlPSJmaW' +
+                'xsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6' +
+                'MjsiPgogICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwtMTYuNjUsLTIzLjAxNzIpIj4KICAgICAgICA8cGF0aCBkPS' +
+                'JNNjguMzYzLDYzLjk3M0w2OC4zNjMsNDAuMTA5QzY4LjM2Myw0MC4xMDkgNjguMzYzLDM3LjExMyA2NS43NjgsMzUuNjE1TDQ1' +
+                'LjEwMiwyMy42ODNDNDUuMTAyLDIzLjY4MyA0Mi41MDcsMjIuMTg1IDM5LjkxMiwyMy42ODNMMTkuMjQ1LDM1LjYxNUMxOS4yND' +
+                'UsMzUuNjE1IDE2LjY1LDM3LjExMyAxNi42NSw0MC4xMDlMMTYuNjUsNjMuOTczQzE2LjY1LDYzLjk3MyAxNi42NSw2Ni45Njkg' +
+                'MTkuMjQ1LDY4LjQ2N0w0Ny44MzksODQuODIyQzQ3LjgzOSw4NC44MjIgNTAuNDM0LDg2LjM2OCA1My4wMjksODQuODdMNjQuNj' +
+                'UyLDc4LjExMkw0Mi41Miw2NS41MDNMNDIuNTA3LDY1LjUxMUwzMC44NDMsNTguNzc2TDMwLjg0Myw0NS4zMDdMNDIuNTA3LDM4' +
+                'LjU3M0w1NC4xNzEsNDUuMzA3TDU0LjE3MSw1OC43NzZMNDUuMjEzLDYzLjk0OEw1OS41NjUsNzIuMDVMNjUuNzY4LDY4LjQ2OU' +
+                'M2NS43NjksNjguNDY4IDY4LjM2Myw2Ni45NyA2OC4zNjMsNjMuOTczIiBzdHlsZT0iZmlsbDpyZ2IoMCwxOTIsMCk7ZmlsbC1y' +
+                'dWxlOm5vbnplcm87Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=',
+            "logo_file_name": "test-openapi3.svg",
+            "logo_mime_type": "image/svg+xml",
+            "openapi": "PetStore.openapi3.yaml",
+            "rest": {
+                "data": "json",
+                "oauth2_auth_url":  "https://{{subdomain}}.example.com/oauth2/auth",
+                "oauth2_client_id": "x",
+                "oauth2_client_secret": "y",
+                "oauth2_grant_type": "authorization_code",
+                "oauth2_token_url": "https://{{subdomain}}.example.com/token",
+                "url": "https://{{subdomain}}.example.com/api",
+            },
+            "rest_modifiers": {
+                "options": {
+                    "subdomain": {
+                        "display_name": "Subdomain",
+                        "short_desc": "The subdomain for the URL",
+                        "desc": "The subdomain for the URL",
+                        "type": "string",
+                    },
+                },
+                "required_options": "subdomain",
+                "url_template_options": [
+                    "subdomain",
+                ],
+            },
+        });
+
+        // OpenAPI 3.0 action using openapi_path
+        api.registerAction({
+            "app": "js-openapi3-test",
+            "action": "create-pet",
+            "display_name": "Create Pet (OpenAPI 3.0)",
+            "short_desc": "Create pet using OpenAPI 3.0",
+            "desc": "Create pet using OpenAPI 3.0 schema",
+            "action_code": 2,  // DPAT_API == 2
+            "openapi_path": "pet/POST",
+        });
+
+        api.registerAction({
+            "app": "js-openapi3-test",
+            "action": "get-pet",
+            "display_name": "Get Pet (OpenAPI 3.0)",
+            "short_desc": "Get pet using OpenAPI 3.0",
+            "desc": "Get pet using OpenAPI 3.0 schema",
+            "action_code": 2,  // DPAT_API == 2
+            "openapi_path": "pet/{petId}/GET",
+        });
+
+        // Test app with include_response_headers: false
+        // This tests that response headers are NOT included in the response type even when
+        // the OpenAPI schema defines response headers (like the /user/login endpoint)
+        api.registerApp({
+            "name": "js-no-response-headers-test",
+            "display_name": "JavaScript No Response Headers Test",
+            "short_desc": "Test include_response_headers flag",
+            "desc": "Test app using swagger_options.include_response_headers = false",
+            "logo": 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUF' +
+                'VCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2' +
+                'ZzExLmR0ZCI+Cjxzdmcgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDUyIDYzIiB2ZXJzaW9uPSIxLj' +
+                'EiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkv' +
+                'eGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zOnNlcmlmPSJodHRwOi8vd3d3LnNlcmlmLmNvbS8iIHN0eWxlPSJmaW' +
+                'xsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6' +
+                'MjsiPgogICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwtMTYuNjUsLTIzLjAxNzIpIj4KICAgICAgICA8cGF0aCBkPS' +
+                'JNNjguMzYzLDYzLjk3M0w2OC4zNjMsNDAuMTA5QzY4LjM2Myw0MC4xMDkgNjguMzYzLDM3LjExMyA2NS43NjgsMzUuNjE1TDQ1' +
+                'LjEwMiwyMy42ODNDNDUuMTAyLDIzLjY4MyA0Mi41MDcsMjIuMTg1IDM5LjkxMiwyMy42ODNMMTkuMjQ1LDM1LjYxNUMxOS4yND' +
+                'UsMzUuNjE1IDE2LjY1LDM3LjExMyAxNi42NSw0MC4xMDlMMTYuNjUsNjMuOTczQzE2LjY1LDYzLjk3MyAxNi42NSw2Ni45Njkg' +
+                'MTkuMjQ1LDY4LjQ2N0w0Ny44MzksODQuODIyQzQ3LjgzOSw4NC44MjIgNTAuNDM0LDg2LjM2OCA1My4wMjksODQuODdMNjQuNj' +
+                'UyLDc4LjExMkw0Mi41Miw2NS41MDNMNDIuNTA3LDY1LjUxMUwzMC44NDMsNTguNzc2TDMwLjg0Myw0NS4zMDdMNDIuNTA3LDM4' +
+                'LjU3M0w1NC4xNzEsNDUuMzA3TDU0LjE3MSw1OC43NzZMNDUuMjEzLDYzLjk0OEw1OS41NjUsNzIuMDVMNjUuNzY4LDY4LjQ2OU' +
+                'M2NS43NjksNjguNDY4IDY4LjM2Myw2Ni45NyA2OC4zNjMsNjMuOTczIiBzdHlsZT0iZmlsbDpyZ2IoMjU1LDEyOCwwKTtmaWxs' +
+                'LXJ1bGU6bm9uemVybzsiLz4KICAgIDwvZz4KPC9zdmc+Cg==',
+            "logo_file_name": "test-no-headers.svg",
+            "logo_mime_type": "image/svg+xml",
+            "openapi": "PetStore.swagger.yaml",
+            // This is the key option being tested - when false, responses should NOT include headers
+            // even when the OpenAPI schema defines response headers
+            "swagger_options": {
+                "include_response_headers": false,
+            },
+            "rest": {
+                "data": "json",
+                "oauth2_auth_url":  "https://{{subdomain}}.example.com/oauth2/auth",
+                "oauth2_client_id": "x",
+                "oauth2_client_secret": "y",
+                "oauth2_grant_type": "authorization_code",
+                "oauth2_token_url": "https://{{subdomain}}.example.com/token",
+                "url": "https://{{subdomain}}.example.com/api",
+            },
+            "rest_modifiers": {
+                "options": {
+                    "subdomain": {
+                        "display_name": "Subdomain",
+                        "short_desc": "The subdomain for the URL",
+                        "desc": "The subdomain for the URL",
+                        "type": "string",
+                    },
+                },
+                "required_options": "subdomain",
+                "url_template_options": [
+                    "subdomain",
+                ],
+            },
+        });
+
+        // Action for testing include_response_headers flag - uses /user/login which has response headers
+        api.registerAction({
+            "app": "js-no-response-headers-test",
+            "action": "user-login",
+            "display_name": "User Login (No Headers)",
+            "short_desc": "User login without response headers",
+            "desc": "Test that response type does not include headers wrapper",
+            "action_code": 2,  // DPAT_API == 2
+            "openapi_path": "user/login/GET",
+        });
+
+        // Test webhook trigger with format_event_data for transformation
+        api.registerAction({
+            "app": "js-openapi-test",
+            "action": "webhook-format-transform",
+            "display_name": "Webhook Format Transform Test",
+            "short_desc": "Test webhook with format_event_data transformation",
+            "desc": "Test webhook with format_event_data transformation",
+            "action_code": 1,  // DPAT_EVENT == 1
+            "options": {
+                "name": {
+                    "type": "string",
+                    "display_name": "Name",
+                    "short_desc": "A name",
+                    "desc": "A name",
+                    "required": true,
+                    "preselected": true,
+                },
+            },
+            "webhook_method": "POST",
+            "webhook_auth": 0,
+            "webhook_register": async function(ctx, url) {
+                if (!ctx || !ctx.opts || !ctx.opts.name) {
+                    throw new Error("missing name");
+                }
+            },
+            "webhook_deregister": async function(ctx, url, reginfo) {
+            },
+            "event_info": {
+                "desc": "Transformed data event",
+                "type": {
+                    "type": "hash",
+                    "fields": {
+                        "original_name": {
+                            "type": "string",
+                        },
+                        "transformed": {
+                            "type": "bool",
+                        },
+                        "extra_field": {
+                            "type": "string",
+                        },
+                    },
+                },
+            },
+            "get_example_event_data": async function(ctx) {
+                return {
+                    "original_name": "example",
+                    "transformed": true,
+                    "extra_field": "added by format_event_data",
+                };
+            },
+            // format_event_data transforms the incoming webhook data
+            "format_event_data": async function(ctx, eventData) {
+                return {
+                    "original_name": eventData.name,
+                    "transformed": true,
+                    "extra_field": "added by format_event_data",
+                };
+            },
+        });
+
+        // Test webhook trigger with format_event_data for filtering (skip events)
+        api.registerAction({
+            "app": "js-openapi-test",
+            "action": "webhook-format-filter",
+            "display_name": "Webhook Format Filter Test",
+            "short_desc": "Test webhook with format_event_data filtering",
+            "desc": "Test webhook with format_event_data filtering",
+            "action_code": 1,  // DPAT_EVENT == 1
+            "options": {
+                "name": {
+                    "type": "string",
+                    "display_name": "Name",
+                    "short_desc": "A name",
+                    "desc": "A name",
+                    "required": true,
+                    "preselected": true,
+                },
+            },
+            "webhook_method": "POST",
+            "webhook_auth": 0,
+            "webhook_register": async function(ctx, url) {
+                if (!ctx || !ctx.opts || !ctx.opts.name) {
+                    throw new Error("missing name");
+                }
+            },
+            "webhook_deregister": async function(ctx, url, reginfo) {
+            },
+            "event_info": {
+                "desc": "Filtered data event",
+                "type": {
+                    "type": "hash",
+                    "fields": {
+                        "name": {
+                            "type": "string",
+                        },
+                        "code": {
+                            "type": "int",
+                        },
+                    },
+                },
+            },
+            "get_example_event_data": async function(ctx) {
+                return {
+                    "name": "example",
+                    "code": 1234,
+                };
+            },
+            // format_event_data filters events - returns null to skip events with skip=true
+            "format_event_data": async function(ctx, eventData) {
+                if (eventData.skip === true) {
+                    return null;  // Skip this event
+                }
+                return eventData;
+            },
+        });
+
+        // Test webhook trigger with format_event_data that throws an exception
+        api.registerAction({
+            "app": "js-openapi-test",
+            "action": "webhook-format-exception",
+            "display_name": "Webhook Format Exception Test",
+            "short_desc": "Test webhook with format_event_data that throws",
+            "desc": "Test webhook with format_event_data that throws an exception",
+            "action_code": 1,  // DPAT_EVENT == 1
+            "options": {
+                "name": {
+                    "type": "string",
+                    "display_name": "Name",
+                    "short_desc": "A name",
+                    "desc": "A name",
+                    "required": true,
+                    "preselected": true,
+                },
+            },
+            "webhook_method": "POST",
+            "webhook_auth": 0,
+            "webhook_register": async function(ctx, url) {
+                if (!ctx || !ctx.opts || !ctx.opts.name) {
+                    throw new Error("missing name");
+                }
+            },
+            "webhook_deregister": async function(ctx, url, reginfo) {
+            },
+            "event_info": {
+                "desc": "Exception test event",
+                "type": {
+                    "type": "hash",
+                    "fields": {
+                        "name": {
+                            "type": "string",
+                        },
+                        "code": {
+                            "type": "int",
+                        },
+                    },
+                },
+            },
+            "get_example_event_data": async function(ctx) {
+                return {
+                    "name": "example",
+                    "code": 1234,
+                };
+            },
+            // format_event_data that throws an exception for events with throw_error=true
+            "format_event_data": async function(ctx, eventData) {
+                if (eventData.throw_error === true) {
+                    throw new Error("Test error from format_event_data");
+                }
+                return eventData;
             },
         });
 
@@ -1046,6 +1651,44 @@ exports.actionsCatalogue = {
                     "name": "a name",
                     "code": 1234,
                 };
+            },
+        });
+
+        api.registerApp({
+            "name": "gmail-test",
+            "display_name": "JavaScript Gmail Test",
+            "short_desc": "Gmail test",
+            "desc": "Gmail test",
+            // "logo" is a base64-encoded string
+            "logo": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+Cjxzdmcgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDUyIDYzIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zOnNlcmlmPSJodHRwOi8vd3d3LnNlcmlmLmNvbS8iIHN0eWxlPSJmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLW1pdGVybGltaXQ6MjsiPgogICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwtMTYuNjUsLTIzLjAxNzIpIj4KICAgICAgICA8cGF0aCBkPSJNNjguMzYzLDYzLjk3M0w2OC4zNjMsNDAuMTA5QzY4LjM2Myw0MC4xMDkgNjguMzYzLDM3LjExMyA2NS43NjgsMzUuNjE1TDQ1LjEwMiwyMy42ODNDNDUuMTAyLDIzLjY4MyA0Mi41MDcsMjIuMTg1IDM5LjkxMiwyMy42ODNMMTkuMjQ1LDM1LjYxNUMxOS4yNDUsMzUuNjE1IDE2LjY1LDM3LjExMyAxNi42NSw0MC4xMDlMMTYuNjUsNjMuOTczQzE2LjY1LDYzLjk3MyAxNi42NSw2Ni45NjkgMTkuMjQ1LDY4LjQ2N0w0Ny44MzksODQuODIyQzQ3LjgzOSw4NC44MjIgNTAuNDM0LDg2LjM2OCA1My4wMjksODQuODdMNjQuNjUyLDc4LjExMkw0Mi41Miw2NS41MDNMNDIuNTA3LDY1LjUxMUwzMC44NDMsNTguNzc2TDMwLjg0Myw0NS4zMDdMNDIuNTA3LDM4LjU3M0w1NC4xNzEsNDUuMzA3TDU0LjE3MSw1OC43NzZMNDUuMjEzLDYzLjk0OEw1OS41NjUsNzIuMDVMNjUuNzY4LDY4LjQ2OUM2NS43NjksNjguNDY4IDY4LjM2Myw2Ni45NyA2OC4zNjMsNjMuOTczIiBzdHlsZT0iZmlsbDpyZ2IoNjQsNjQsNjQpO2ZpbGwtcnVsZTpub256ZXJvOyIvPgogICAgPC9nPgo8L3N2Zz4K",
+            "logo_file_name": "gmail-test.svg",
+            "logo_mime_type": "image/svg+xml",
+            "google_app": {
+                "api": "gmail",
+            },
+            "rest": {
+                "data": "json",
+                "oauth2_auth_url": "https://accounts.google.com/o/oauth2/v2/auth",
+                "oauth2_client_id": "x",
+                "oauth2_client_secret": "y",
+                "oauth2_grant_type": "authorization_code",
+                "oauth2_token_url": "https://oauth2.googleapis.com/token",
+                "url": "tsrest-gmail-test://www.googleapis.com",
+            },
+        });
+
+        api.registerAction({
+            "app": "gmail-test",
+            "action": "send-email",
+            "display_name": "Send Email",
+            "short_desc": "Send email",
+            "desc": "Send email",
+            "action_code": 2,  // DPAT_API == 2
+            "google_action": {
+                "resource": "users/messages/send",
+                "path_args": {
+                    "userId": "me",
+                },
             },
         });
     }

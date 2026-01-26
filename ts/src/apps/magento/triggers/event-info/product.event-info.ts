@@ -119,7 +119,7 @@ export const magentoProductEventInfo = {
                 type: 'softnumber',
               },
               disabled: {
-                type: 'boolean',
+                type: 'bool',
               },
               types: {
                 type: {

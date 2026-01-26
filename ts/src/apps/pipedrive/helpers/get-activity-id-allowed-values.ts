@@ -3,19 +3,18 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { fetchPipedriveAllowedValues } from './constants';
+import { fetchPipedriveAllowedValues } from './client';
 
 type TPipedriveActivityData = {
   id: string;
   subject: string;
-  note: string;
-  owner_name: string;
+  done: boolean;
 };
 
 const mapPipedriveActivity = (activity: TPipedriveActivityData): IQoreAllowedValue<string> => ({
   display_name: activity.subject,
   value: activity.id,
-  desc: `Note: ${activity.note}\n\nOwner: ${activity.owner_name}`,
+  desc: `Done: ${activity.done}`,
 });
 
 export const getPipedriveActivityIdAllowedValues: TQoreGetAllowedValuesFunction<

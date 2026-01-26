@@ -54,11 +54,11 @@ export const ShopifyFindOrderResponseType = {
               desc: 'The order fulfillment status for display purposes',
             },
             confirmed: {
-              type: 'boolean',
+              type: 'bool',
               desc: 'Whether the order has been confirmed',
             },
             fulfillable: {
-              type: 'boolean',
+              type: 'bool',
               desc: 'Whether the order can be fulfilled',
             },
             note: {
@@ -241,7 +241,7 @@ export const ShopifyFindOrderResponseType = {
         type: 'hash',
         fields: {
           hasNextPage: {
-            type: 'boolean',
+            type: 'bool',
           },
           endCursor: {
             type: 'string',

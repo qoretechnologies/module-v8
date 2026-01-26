@@ -1,6 +1,6 @@
 import { QorusRequest, TQoreGetDefaultValueFunction } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
-import { JIRA_CONN_OPTIONS } from '../constants';
+import { JIRA_CONN_OPTIONS } from '../conn-options';
 import { jiraDocumentFormatOption } from '../options/jira-document.option';
 
 export const getJiraIssueDescriptionDefaultValue: TQoreGetDefaultValueFunction<

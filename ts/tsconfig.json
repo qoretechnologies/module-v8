@@ -1,23 +1,23 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "declaration": true,
+    "declaration": false,
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "target": "ES2021",
+    "lib": ["ES2022", "DOM"],
     "sourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./src",
     "paths": {
-      "src/*": ["src/*"],
-      "core/*": ["core/*"],
-      "shared/*": ["shared/*"],
-      "global/*": ["global/*"],
-      "common/*": ["common/*"],
-      "zendesk/*": ["zendesk/*"],
-      "i18n/*": ["i18n/*"]
+      "src/*": ["./src/*"],
+      "core/*": ["./src/core/*"],
+      "shared/*": ["./src/shared/*"],
+      "global/*": ["./src/global/*"],
+      "common/*": ["./src/common/*"],
+      "zendesk/*": ["./src/zendesk/*"],
+      "i18n/*": ["./src/i18n/*"]
     },
     "plugins": [
       {

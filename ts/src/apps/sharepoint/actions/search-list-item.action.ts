@@ -69,7 +69,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const SearchSharePointListItem = QoreAppCreator.createLocalizedAction({
+const SearchSharePointListItem = QoreAppCreator.createLocalizedAction({
   action: 'search-list-item',
   app: SHAREPOINT_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -98,7 +98,7 @@ export const SearchSharePointListItem = QoreAppCreator.createLocalizedAction({
       },
     });
 
-    const title = searchValue!.replaceAll("'", "''");
+    const title = searchValue!.replace("'", "''");
 
     return client
       .api(
@@ -110,3 +110,5 @@ export const SearchSharePointListItem = QoreAppCreator.createLocalizedAction({
   options,
   response_type,
 });
+
+export default SearchSharePointListItem;

@@ -19,6 +19,7 @@ const options = {
   channelId: {
     type: 'string',
     depends_on: ['teamId'],
+    on_change: ['refetch'],
     get_allowed_values: getTeamsChannelIdAllowedValues,
     get_dependent_options: getTeamsChannelIdDependentOptions,
     required: true,
@@ -48,7 +49,12 @@ const additionalOptions = {
   },
   removeMembers: {
     required_groups: ['update'],
-    type: 'list',
+    type: {
+      type: 'list',
+      element_type: {
+        type: 'string',
+      },
+    },
     required: false,
   },
 } satisfies TQoreOptions;
@@ -63,7 +69,7 @@ const response_type = {
       type: 'string',
     },
     success: {
-      type: 'boolean',
+      type: 'bool',
     },
     addedMembers: {
       type: {
@@ -76,9 +82,7 @@ const response_type = {
     removedMembers: {
       type: {
         type: 'list',
-        element_type: {
-          type: 'string',
-        },
+        element_type: 'string',
       },
     },
     error: {
@@ -87,7 +91,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const UpdateTeamsChannel = QoreAppCreator.createLocalizedAction<
+const UpdateTeamsChannel = QoreAppCreator.createLocalizedAction<
   typeof options & Partial<typeof additionalOptions>
 >({
   action: 'update-channel',
@@ -99,8 +103,8 @@ export const UpdateTeamsChannel = QoreAppCreator.createLocalizedAction<
     const channelId = data?.channelId;
     const displayName = data?.displayName;
     const description = data?.description;
-    const addMembers = (data?.addMembers as string[] | undefined) || [];
-    const removeMembers = (data?.removeMembers as string[] | undefined) || [];
+    const addMembers = data?.addMembers || [];
+    const removeMembers = data?.removeMembers || [];
 
     const missingValues: string[] = [];
     if (!token) missingValues.push('token');
@@ -190,3 +194,5 @@ export const UpdateTeamsChannel = QoreAppCreator.createLocalizedAction<
   options,
   response_type,
 });
+
+export default UpdateTeamsChannel;

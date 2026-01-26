@@ -80,7 +80,7 @@ const options = {
     ],
   },
   isOnlineMeeting: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },
@@ -157,7 +157,7 @@ const response_type = {
         },
       },
     },
-    isOnlineMeeting: { type: 'boolean' },
+    isOnlineMeeting: { type: 'bool' },
     onlineMeetingProvider: { type: 'string' },
     body: {
       type: {
@@ -171,7 +171,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const CreateOutlookEvent = QoreAppCreator.createLocalizedAction<typeof options>({
+const CreateOutlookEvent = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'create-event',
   app: OUTLOOK_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -249,3 +249,5 @@ export const CreateOutlookEvent = QoreAppCreator.createLocalizedAction<typeof op
   options,
   response_type,
 });
+
+export default CreateOutlookEvent;

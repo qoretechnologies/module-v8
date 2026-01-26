@@ -1,16 +1,22 @@
-import { actionsCatalogue } from '../../ActionsCatalogue';
+import { TQoreAppWithActions, TQoreRecordBasedApp } from '@qoretechnologies/ts-toolkit';
+import { getOauth2ClientSecret } from '../../utils/oauth2-client-secret';
 import {
   buildActionsFromSwaggerSchema,
   mapActionsToApp,
   mapTriggersToApp,
 } from '../../global/helpers';
-import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import { createSwaggerPaths } from '../../global/helpers/index';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import github from '../../schemas/github.swagger.json';
 import { GITHUB_ALLOWED_PATHS, GITHUB_APP_NAME } from './constants';
-import { createSwaggerPaths } from '../../global/helpers/index';
+import { createGitHubRecords } from './helpers/record-based/create-records';
+import { getGithubRecordType } from './helpers/record-based/get-record-type';
+import { getGitHubTableList } from './helpers/record-based/get-table-list';
+import { GithubCreateOptions, GithubSearchOptions } from './helpers/record-based/options';
+import { searchGitHubRecords } from './helpers/record-based/search-records';
 import * as githubTriggers from './triggers';
+import { getGitHubExpressions } from './helpers/record-based/get-expressions';
 
 export const GITHUB_ACTIONS = buildActionsFromSwaggerSchema({
   schema: github as any,
@@ -55,19 +61,31 @@ export default (locale: Locales) =>
     logo_mime_type: 'image/svg+xml',
     swagger: 'schemas/github.swagger.json',
     swagger_paths: createSwaggerPaths(GITHUB_ALLOWED_PATHS),
+    swagger_options: {
+      // Don't wrap responses with {body, headers} even when the OpenAPI schema defines response headers
+      // GitHub's schema has 222 headers definitions which would otherwise cause all responses to be wrapped
+      include_response_headers: false,
+    },
     rest: {
-      url: 'https://api.github.com/',
+      url: 'https://api.github.com',
       data: 'json',
       headers: {
         'X-GitHub-Api-Version': '2022-11-28',
       },
       oauth2_grant_type: 'authorization_code',
       oauth2_client_id: 'Ov23liR886f3UxFr2NVK',
-      oauth2_client_secret: actionsCatalogue.getOauth2ClientSecret(GITHUB_APP_NAME),
+      oauth2_client_secret: getOauth2ClientSecret(GITHUB_APP_NAME),
       oauth2_auth_url: 'https://github.com/login/oauth/authorize',
       oauth2_token_url: 'https://github.com/login/oauth/access_token',
       oauth2_scopes: ['repo', 'user', 'public_repo'],
       ping_method: 'GET',
-      ping_path: '',
+      ping_path: '/user',
     },
-  }) satisfies TQoreAppWithActions;
+    get_table_list: getGitHubTableList,
+    get_record_type: getGithubRecordType,
+    create_records: createGitHubRecords,
+    search_records: searchGitHubRecords,
+    search_options: GithubSearchOptions,
+    create_options: GithubCreateOptions,
+    expressions: getGitHubExpressions(locale),
+  }) satisfies TQoreAppWithActions & TQoreRecordBasedApp;

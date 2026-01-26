@@ -1,0 +1,17 @@
+export const QuickBooksAccountFieldsAllowedValues = [
+  { value: 'Name', display_name: 'Account Name' },
+  { value: 'SubAccount', display_name: 'Sub Account' },
+  { value: 'FullyQualifiedName', display_name: 'Fully Qualified Name' },
+  { value: 'Active', display_name: 'Active Status' },
+  { value: 'Classification', display_name: 'Classification' },
+  { value: 'AccountType', display_name: 'Account Type' },
+  { value: 'AccountSubType', display_name: 'Account Sub Type' },
+  { value: 'CurrentBalance', display_name: 'Current Balance' },
+  { value: 'CurrentBalanceWithSubAccounts', display_name: 'Current Balance With Sub Accounts' },
+  { value: 'domain', display_name: 'Domain' },
+  { value: 'sparse', display_name: 'Sparse' },
+  { value: 'Id', display_name: 'Account ID' },
+  { value: 'SyncToken', display_name: 'Sync Token' },
+  { value: 'MetaData.CreateTime', display_name: 'Create Time' },
+  { value: 'MetaData.LastUpdatedTime', display_name: 'Last Updated Time' },
+];

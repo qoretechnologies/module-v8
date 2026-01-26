@@ -1,6 +1,6 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 
-/*  TypeScriptActionWebhookEventDataProvider.qc Copyright (C) 2023 - 2024 Qore Technologies s.r.o.
+/*  TypeScriptActionWebhookEventDataProvider.qc Copyright (C) 2023 - 2026 Qore Technologies s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -42,6 +42,13 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         *string webhook_event_loc;
         *string webhook_echo_header;
         *softlist<string> webhook_echo_body_keys;
+        *string webhook_confirmation_key_loc;
+        auto webhook_confirmation_value;
+        *string webhook_confirmation_url_loc;
+        *string webhook_confirmation_method;
+        *string webhook_assume_json;
+        #! Optional async function to transform or filter webhook event data
+        *hash<AsyncCallInfo> format_event_data;
 
         #! Event options for the webhook register and deregister calls
         *hash<auto> event_opts;
@@ -62,15 +69,25 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
             ActionFunctionContext fctx, string method, hash<AsyncCallInfo> webhook_register,
             hash<AsyncCallInfo> webhook_deregister, *int webhook_auth,
             *list<auto> webhook_perms, *string webhook_event_loc, *string webhook_echo_header,
-            *softlist<string> webhook_echo_body_keys)
+            *softlist<string> webhook_echo_body_keys, *string webhook_confirmation_key_loc,
+            auto webhook_confirmation_value, *string webhook_confirmation_url_loc,
+            *string webhook_confirmation_method, *string webhook_assume_json,
+            *hash<AsyncCallInfo> format_event_data)
             : TypeScriptActionEventDataProviderBase(name, event_id, event, get_example_event_data, get_dynamic_type,
                 fctx) {
         self.method = method;
         self.webhook_register = webhook_register;
         self.webhook_deregister = webhook_deregister;
+        self.webhook_auth = webhook_auth;
         self.webhook_event_loc = webhook_event_loc;
         self.webhook_echo_header = webhook_echo_header;
         self.webhook_echo_body_keys = webhook_echo_body_keys;
+        self.webhook_confirmation_key_loc = webhook_confirmation_key_loc;
+        self.webhook_confirmation_value = webhook_confirmation_value;
+        self.webhook_confirmation_url_loc = webhook_confirmation_url_loc;
+        self.webhook_confirmation_method = webhook_confirmation_method;
+        self.webhook_assume_json = webhook_assume_json;
+        self.format_event_data = format_event_data;
     }
 
     destructor() {
@@ -89,6 +106,11 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
             "event_loc": webhook_event_loc,
             "echo_header": webhook_echo_header,
             "echo_body_keys": webhook_echo_body_keys,
+            "confirmation_key_loc": webhook_confirmation_key_loc,
+            "confirmation_value": webhook_confirmation_value,
+            "confirmation_url_loc": webhook_confirmation_url_loc,
+            "confirmation_method": webhook_confirmation_method,
+            "assume_json": webhook_assume_json,
             "callback": \callback(),
         });
         info("Registered webhook with URL %y", wf_info.url);
@@ -100,7 +122,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
         reginfo = getAsyncValue(webhook_register, getCallContextInfo(event_opts), wf_info.url);
         js_webhook_registered = True;
         debug("Webhook for data provider %y registered with URL %y (opts: %y, reginfo: %y)", name, wf_info.url,
-            event_opts, reginfo);
+            LoggerUtil::getArgSummary(event_opts), LoggerUtil::getArgSummary(reginfo));
     }
 
     #! Called to stop generating events
@@ -115,7 +137,7 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
             js_webhook_registered = False;
             try {
                 debug("Deregistering webhook for data provider %y on URL %y (opts: %y, reginfo: %y)", name,
-                    wf_info.url, event_opts, reginfo);
+                    wf_info.url, LoggerUtil::getArgSummary(event_opts), LoggerUtil::getArgSummary(reginfo));
                 getAsyncValue(webhook_deregister, getCallContextInfo(event_opts), wf_info.url, reginfo);
             } catch (hash<ExceptionInfo> ex) {
                 error("WEBHOOK-DEREGISTRATION-ERROR", "Error in data provider %y deregistering webhook %y: %s", name,
@@ -128,6 +150,26 @@ public class TypeScriptActionWebhookEventDataProvider inherits TypeScriptActionE
     }
 
     private callback(*hash<auto> event) {
+        if (format_event_data) {
+            try {
+                # Call format_event_data with context and event data
+                auto formatted = getAsyncValue(format_event_data, getCallContextInfo(event_opts), event);
+                # null/undefined means skip this event
+                if (!exists formatted) {
+                    debug("Event skipped by format_event_data for provider %y", name);
+                    return;
+                }
+                if (formatted.typeCode() != NT_HASH) {
+                    throw "FORMAT-EVENT-DATA-ERROR", sprintf("format_event_data must return a hash or null/undefined; "
+                        "got %y", formatted.fullType());
+                }
+                event = formatted;
+            } catch (hash<ExceptionInfo> ex) {
+                TSAI::error("Error in format_event_data for provider %y: %s; event skipped",
+                    name, get_exception_string(ex));
+                return;
+            }
+        }
         notifyObservers(event_id, event ?? {});
     }
 

@@ -11,7 +11,7 @@ import {
   TWebhookDeregisterFunction,
   TWebhookRegisterFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { fetchPipedriveData } from '../helpers/constants';
+import { pipedriveApiClient } from '../helpers/client';
 
 type TPipedriveWebhookObjectType =
   | 'activity'
@@ -179,7 +179,7 @@ export const getPipedriveEventInfoType = (
                 type: 'string',
               },
               is_bulk_edit: {
-                type: 'boolean',
+                type: 'bool',
               },
               timestamp: {
                 type: 'string',
@@ -281,7 +281,7 @@ export const createGetPipedriveExampleEventDataFunction = (
   return async (
     context: TQoreAppActionFunctionContext<TCustomConnOptions>
   ): Promise<Record<string, any>> => {
-    const action = context?.opts?.action as TPipedriveWebhookEventAction;
+    const action = context.opts?.action as TPipedriveWebhookEventAction;
     const token = context.conn_opts?.token;
 
     if (!token) {
@@ -289,14 +289,17 @@ export const createGetPipedriveExampleEventDataFunction = (
     }
 
     try {
-      const response = await fetchPipedriveData({
-        path: `/${objectType}`,
+      const records = await pipedriveApiClient<Record<string, any>[]>({
+        method: 'GET',
+        path: `v1/${objectType}`,
         token: token!,
-        limit: 1,
-        offset: 0,
+        params: {
+          limit: '1',
+        },
+        object: 'data',
       });
 
-      const object = response.data[0] as Record<string, any>;
+      const object = records[0];
 
       if (!object) {
         throw new Error('No data found');

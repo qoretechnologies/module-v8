@@ -1,11 +1,10 @@
-import { Octokit } from '@octokit/rest';
 import {
   IQoreAllowedValue,
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
-import { GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
+import { createGitHubClient, GITHUB_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 const PER_PAGE = 100;
 const MAX_ITEMS = 600;
@@ -32,9 +31,7 @@ export const getGitHubOwnerAllowedValues: TQoreGetAllowedValuesFunction<
     throw new Error('The token is required to get Github owner allowed values');
   }
 
-  const octokit = new Octokit({
-    auth: token,
-  });
+  const octokit = await createGitHubClient(token);
 
   const owners: IQoreAllowedValue<string>[] = [];
   const startTime = Date.now();

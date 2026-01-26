@@ -81,7 +81,7 @@ const options = {
     required: false,
   },
   taxable: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     allowed_values: [
       { value: true, display_name: 'Taxable' },
@@ -112,7 +112,7 @@ const options = {
     ],
   },
   reverse: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: false,
   },
@@ -276,7 +276,7 @@ const findAllVariants = async (
   };
 };
 
-export const FindShopifyVariant = QoreAppCreator.createLocalizedAction<typeof options>({
+const FindShopifyVariant = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'find-variant',
   app: SHOPIFY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -301,3 +301,5 @@ export const FindShopifyVariant = QoreAppCreator.createLocalizedAction<typeof op
   options,
   response_type: ShopifyFindVariantResponseType,
 });
+
+export default FindShopifyVariant;

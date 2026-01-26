@@ -40,14 +40,14 @@ export const chargeEventInfoType = {
             },
           },
           calculated_statement_descriptor: { type: 'string' },
-          captured: { type: 'boolean' },
+          captured: { type: 'bool' },
           created: { type: 'number' },
           currency: { type: 'string' },
           customer: { type: 'string' },
           description: { type: 'string' },
           destination: { type: 'string' },
           dispute: { type: 'string' },
-          disputed: { type: 'boolean' },
+          disputed: { type: 'bool' },
           failure_balance_transaction: { type: 'string' },
           failure_code: { type: 'string' },
           failure_message: { type: 'string' },
@@ -55,7 +55,7 @@ export const chargeEventInfoType = {
             type: 'hash',
           },
           invoice: { type: 'string' },
-          livemode: { type: 'boolean' },
+          livemode: { type: 'bool' },
           metadata: {
             type: 'hash',
           },
@@ -77,7 +77,7 @@ export const chargeEventInfoType = {
               },
             },
           },
-          paid: { type: 'boolean' },
+          paid: { type: 'bool' },
           payment_intent: { type: 'string' },
           payment_method: { type: 'string' },
           payment_method_details: {
@@ -142,7 +142,7 @@ export const chargeEventInfoType = {
                         type: {
                           type: 'hash',
                           fields: {
-                            used: { type: 'boolean' },
+                            used: { type: 'bool' },
                           },
                         },
                       },
@@ -176,7 +176,7 @@ export const chargeEventInfoType = {
           receipt_email: { type: 'string' },
           receipt_number: { type: 'string' },
           receipt_url: { type: 'string' },
-          refunded: { type: 'boolean' },
+          refunded: { type: 'bool' },
           review: { type: 'string' },
           shipping: {
             type: 'hash',

@@ -4,6 +4,7 @@ import { getTeamsTeamIdAllowedValues } from '../helpers/get-team-id-allowed-valu
 export const TeamsMeetingSourceOption = {
   type: 'string',
   default_value: 'personal',
+  on_change: ['refetch'],
   get_dependent_options: (context) => {
     const meetingSource = context?.opts?.meetingSource || 'personal';
 

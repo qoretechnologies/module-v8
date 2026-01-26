@@ -1,13 +1,12 @@
-import { TAllowedPaths } from '@qoretechnologies/ts-toolkit';
-import { MAGENTO_CONN_OPTIONS } from '../constants';
-import { getMagentoSearchCriteriaOptions } from './constants';
-import { getMagentoOrderFieldsAllowedValues } from '../helpers/get-object-fields-allowed-values';
+import { TAllowedPaths, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 import {
   getMagentoCustomerEmailAllowedValues,
   getMagentoCustomerIdAllowedValues,
 } from '../helpers/get-customer-id-allowed-values';
-import { getMagentoProductSkuObjectAllowedValues } from '../helpers/get-product-sku-allowed-values';
+import { getMagentoOrderFieldsAllowedValues } from '../helpers/get-object-fields-allowed-values';
 import { getMagentoOrderIdAllowedValues } from '../helpers/get-order-id-allowed-values';
+import { getMagentoProductSkuObjectAllowedValues } from '../helpers/get-product-sku-allowed-values';
+import { getMagentoSearchCriteriaOptions } from './constants';
 
 export const MAGENTO_ORDERS_ALLOWED_PATHS = {
   '/V1/orders': {
@@ -18,20 +17,31 @@ export const MAGENTO_ORDERS_ALLOWED_PATHS = {
   '/V1/orders/create': {
     PUT: {
       override_options: {
-        'entity.customer_id': {
+        customer_id: {
           get_allowed_values: getMagentoCustomerIdAllowedValues,
+          required: false,
+          preselected: true,
+          type: 'softstring',
+          required_groups: ['order_customer'],
         },
-        'entity.customer_email': {
+        customer_email: {
+          required_groups: ['order_customer'],
+          allowed_values_creatable: true,
+          preselected: true,
+          required: false,
           get_allowed_values: getMagentoCustomerEmailAllowedValues,
         },
-        'entity.items': {
+        items: {
           element_allowed_values_creatable: true,
           get_element_allowed_values: getMagentoProductSkuObjectAllowedValues,
         },
-        'entity.payment': {
+        payment: {
           required: true,
         },
-        'entity.payment.method': {
+        'payment.cc_last4': {
+          required: false,
+        },
+        'payment.method': {
           required: true,
           allowed_values_creatable: true,
           allowed_values: [
@@ -49,6 +59,7 @@ export const MAGENTO_ORDERS_ALLOWED_PATHS = {
     GET: {
       override_options: {
         id: {
+          type: 'softstring',
           get_allowed_values: getMagentoOrderIdAllowedValues,
         },
       },
@@ -58,6 +69,7 @@ export const MAGENTO_ORDERS_ALLOWED_PATHS = {
     GET: {
       override_options: {
         id: {
+          type: 'softstring',
           get_allowed_values: getMagentoOrderIdAllowedValues,
         },
       },
@@ -65,21 +77,22 @@ export const MAGENTO_ORDERS_ALLOWED_PATHS = {
     POST: {
       override_options: {
         id: {
+          type: 'softstring',
           get_allowed_values: getMagentoOrderIdAllowedValues,
         },
-        'statusHistory.parent_id': {
+        parent_id: {
           required: false,
         },
-        'statusHistory.is_visible_on_front': {
+        is_visible_on_front: {
           required: false,
         },
-        'statusHistory.is_customer_notified': {
+        is_customer_notified: {
           required: false,
         },
-        'statusHistory.comment': {
+        comment: {
           required: true,
         },
       },
     },
   },
-} satisfies TAllowedPaths<typeof MAGENTO_CONN_OPTIONS>;
+} satisfies TAllowedPaths<TCustomConnOptions>;

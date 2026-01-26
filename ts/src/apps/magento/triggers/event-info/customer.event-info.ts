@@ -105,10 +105,10 @@ export const magentoCustomerEventInfo = {
                 type: 'string',
               },
               default_shipping: {
-                type: 'boolean',
+                type: 'bool',
               },
               default_billing: {
-                type: 'boolean',
+                type: 'bool',
               },
             },
           },
@@ -122,7 +122,7 @@ export const magentoCustomerEventInfo = {
           type: 'hash',
           fields: {
             is_subscribed: {
-              type: 'boolean',
+              type: 'bool',
             },
           },
         },

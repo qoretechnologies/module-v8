@@ -32,7 +32,7 @@ export const eventRepositoryType = {
       },
     },
     private: {
-      type: 'boolean',
+      type: 'bool',
     },
     html_url: {
       type: 'softstring',
@@ -41,7 +41,7 @@ export const eventRepositoryType = {
       type: 'softstring',
     },
     fork: {
-      type: 'boolean',
+      type: 'bool',
     },
     created_at: {
       type: 'softdate',
@@ -65,16 +65,16 @@ export const eventRepositoryType = {
       type: 'softstring',
     },
     has_issues: {
-      type: 'boolean',
+      type: 'bool',
     },
     has_downloads: {
-      type: 'boolean',
+      type: 'bool',
     },
     has_wiki: {
-      type: 'boolean',
+      type: 'bool',
     },
     has_pages: {
-      type: 'boolean',
+      type: 'bool',
     },
     forks_count: {
       type: 'int',
@@ -83,10 +83,10 @@ export const eventRepositoryType = {
       type: 'softstring',
     },
     archived: {
-      type: 'boolean',
+      type: 'bool',
     },
     disabled: {
-      type: 'boolean',
+      type: 'bool',
     },
     open_issues_count: {
       type: 'int',

@@ -3,14 +3,11 @@ import { ASANA_APP_NAME } from '../constants';
 import { getAsanaTaskIdAllowedValues } from '../helpers/get-task-id-allowed-values';
 import { getAsanaWorkspaceIdAllowedValuesRest } from '../helpers/get-workspace-id-allowed-values';
 import { getAsanaWorkspaceProjectIdAllowedValues } from '../helpers/get-workspace-project-id-allowed-values';
-import { asanaEventInfoType, asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
-import {
-  deregisterAsanaWebhook,
-  getAsanaTask,
-  getAsanaTaskStories,
-  getCurrentAsanaUser,
-} from './helpers';
+import { asanaWebhookEchoHeader, asanaWebhookInfoLocation } from './constants';
+import { asanaStoryEventInfoType } from '../response-types';
+import { deregisterAsanaWebhook } from './helpers';
 import { Debugger } from '../../../utils/Debugger';
+import { asanaClient } from '../client';
 
 const asanaNewTaskCommentTrigger = QoreAppCreator.createLocalizedTrigger({
   app: ASANA_APP_NAME,
@@ -79,15 +76,48 @@ const asanaNewTaskCommentTrigger = QoreAppCreator.createLocalizedTrigger({
   webhook_deregister: deregisterAsanaWebhook,
   webhook_echo_header: asanaWebhookEchoHeader,
   webhook_event_loc: asanaWebhookInfoLocation,
+  format_event_data: async (context, eventData) => {
+    const token = context.conn_opts?.token;
+
+    if (!token) {
+      return eventData;
+    }
+
+    try {
+      const resourceGid = eventData.resource?.gid;
+      const userGid = eventData.user?.gid;
+      const parentGid = eventData.parent?.gid;
+
+      const [resource, user, parent] = await Promise.all([
+        resourceGid ? asanaClient.get(`stories/${resourceGid}`, { token, objectPath: 'data' }) : null,
+        userGid ? asanaClient.get(`users/${userGid}`, { token, objectPath: 'data' }) : null,
+        parentGid ? asanaClient.get(`tasks/${parentGid}`, { token, objectPath: 'data' }) : null,
+      ]);
+
+      return {
+        ...eventData,
+        enriched: {
+          resource,
+          user,
+          parent,
+        },
+      };
+    } catch (error) {
+      Debugger.log('Error enriching Asana event data:', error);
+      return eventData;
+    }
+  },
   get_example_event_data: async (context) => {
+    const token = context?.conn_opts?.token;
+    const task = context?.opts?.task as string;
+
     const mockData = {
       action: 'added',
       type: 'story',
       created_at: new Date().toISOString(),
       parent: {
-        gid: '1209628887786464',
+        gid: task || '1209628887786464',
         resource_type: 'task',
-        name: 'Task Name',
       },
       resource: {
         gid: '1209843667890123',
@@ -98,48 +128,74 @@ const asanaNewTaskCommentTrigger = QoreAppCreator.createLocalizedTrigger({
       user: {
         gid: '1206353569757060',
         resource_type: 'user',
-        name: 'user@example.com',
+      },
+      enriched: {
+        resource: {
+          gid: '1209843667890123',
+          resource_type: 'story',
+          resource_subtype: 'comment_added',
+          text: 'This is an example comment on a task',
+          type: 'comment',
+        },
+        parent: {
+          gid: task || '1209628887786464',
+          resource_type: 'task',
+          name: 'Task Name',
+        },
+        user: {
+          gid: '1206353569757060',
+          resource_type: 'user',
+          name: 'Example User',
+          email: 'user@example.com',
+        },
       },
     };
-
-    const token = context?.conn_opts?.token;
-    const task = context?.opts?.task as string;
 
     if (!token || !task) {
       return mockData;
     }
 
     try {
-      const [user, parent, stories] = await Promise.all([
-        getCurrentAsanaUser(token),
-        getAsanaTask(token, task),
-        getAsanaTaskStories(token, task, 'comments'),
+      const [userResult, parentResult, storiesResult] = await Promise.allSettled([
+        asanaClient.get('users/me', { token, objectPath: 'data' }),
+        asanaClient.get(`tasks/${task}`, { token, objectPath: 'data' }),
+        asanaClient.get(`tasks/${task}/stories`, { token, objectPath: 'data' }),
       ]);
 
-      if (parent) {
-        mockData.parent.gid = parent.gid;
-        mockData.parent.name = parent.name;
+      const event = { ...mockData };
+
+      if (userResult.status === 'fulfilled' && userResult.value) {
+        const userData = userResult.value as any;
+        event.user.gid = userData.gid;
+        event.enriched.user = userData;
       }
 
-      if (user) {
-        mockData.user.gid = user.gid;
-        mockData.user.name = user.name;
+      if (parentResult.status === 'fulfilled' && parentResult.value) {
+        const parentData = parentResult.value as any;
+        event.parent.gid = parentData.gid;
+        event.enriched.parent = parentData;
       }
 
-      const comment = stories?.[0];
-      if (comment) {
-        mockData.resource.gid = comment.gid;
-        mockData.resource.text = comment.text;
+      if (storiesResult.status === 'fulfilled' && storiesResult.value) {
+        const stories = storiesResult.value as any[];
+        const comment = stories?.find((s: any) => s.type === 'comment') || stories?.[0];
+        if (comment) {
+          event.resource.gid = comment.gid;
+          event.resource.text = comment.text;
+          event.resource.resource_subtype = comment.resource_subtype || 'comment_added';
+          event.enriched.resource = comment;
+        }
       }
+
+      return event;
     } catch (error) {
       Debugger.log(`Asana Error: Couldn't get example event data`, error);
-    } finally {
       return mockData;
     }
   },
   event_info: {
     desc: 'New task comment event data',
-    type: asanaEventInfoType,
+    type: asanaStoryEventInfoType,
   },
 });
 

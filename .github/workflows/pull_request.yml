@@ -10,20 +10,20 @@ env:
   ZENDESK_SUBDOMAIN: ${{ secrets.ZENDESK_SUBDOMAIN }}
   ZENDESK_USER: ${{ secrets.ZENDESK_USER }}
   ZENDESK_API_KEY: ${{ secrets.ZENDESK_API_KEY }}
-  SLACK_ACCESS_TOKEN: ${{ secrets.SLACK_ACCESS_TOKEN }}
-  SLACK_USER_ACCESS_TOKEN: ${{ secrets.SLACK_USER_ACCESS_TOKEN }}
-  SLACK_USER_EMAIL: ${{ secrets.SLACK_USER_EMAIL }}
-  DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
-  DROPBOX_CLIENT_ID: ${{ secrets.DROPBOX_CLIENT_ID }}
-  DROPBOX_CLIENT_SECRET: ${{ secrets.DROPBOX_CLIENT_SECRET }}
-  NOTION_ACCESS_TOKEN: ${{ secrets.NOTION_ACCESS_TOKEN }}
+  SLACK_ACCESS_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).SLACK_ACCESS_TOKEN }}
+  SLACK_USER_ACCESS_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).SLACK_USER_ACCESS_TOKEN }}
+  SLACK_USER_EMAIL: ${{ fromJson(secrets.TEST_VARIABLES).SLACK_USER_EMAIL }}
+  DROPBOX_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).DROPBOX_REFRESH_TOKEN }}
+  DROPBOX_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).DROPBOX_CLIENT_ID }}
+  DROPBOX_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).DROPBOX_CLIENT_SECRET }}
+  NOTION_ACCESS_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).NOTION_ACCESS_TOKEN }}
   GH_PAT: ${{ secrets.GH_PAT }}
   ASANA_PAT: ${{ secrets.ASANA_PAT }}
   ASANA_WORKSPACE_ID: ${{ secrets.ASANA_WORKSPACE_ID }}
-  JIRA_USERNAME: ${{ secrets.JIRA_USERNAME }}
-  JIRA_PASSWORD: ${{ secrets.JIRA_PASSWORD }}
-  JIRA_CLOUD_ID: ${{ secrets.JIRA_CLOUD_ID }}
-  JIRA_LEAD_ACCOUNT_ID: ${{ secrets.JIRA_LEAD_ACCOUNT_ID }}
+  JIRA_USERNAME: ${{ fromJson(secrets.TEST_VARIABLES).JIRA_USERNAME }}
+  JIRA_PASSWORD: ${{ fromJson(secrets.TEST_VARIABLES).JIRA_PASSWORD }}
+  JIRA_CLOUD_ID: ${{ fromJson(secrets.TEST_VARIABLES).JIRA_CLOUD_ID }}
+  JIRA_LEAD_ACCOUNT_ID: ${{ fromJson(secrets.TEST_VARIABLES).JIRA_LEAD_ACCOUNT_ID }}
   GH_PAT_FOR_SECRETS: ${{ secrets.GH_PAT_FOR_SECRETS }}
   GH_MODULE_REPO_OWNER: ${{ secrets.GH_MODULE_REPO_OWNER }}
   GH_MODULE_REPO_NAME: ${{ secrets.GH_MODULE_REPO_NAME }}
@@ -31,27 +31,155 @@ env:
   DOCUSIGN_REFRESH_TOKEN: ${{ secrets.DOCUSIGN_REFRESH_TOKEN }}
   DOCUSIGN_CLIENT_ID: ${{ secrets.DOCUSIGN_CLIENT_ID }}
   DOCUSIGN_CLIENT_SECRET: ${{ secrets.DOCUSIGN_CLIENT_SECRET }}
-  STRIPE_API_KEY: ${{ secrets.STRIPE_API_KEY }}
+  STRIPE_API_KEY: ${{ fromJson(secrets.TEST_VARIABLES).STRIPE_API_KEY }}
   FRESHDESK_SUBDOMAIN: ${{ secrets.FRESHDESK_SUBDOMAIN }}
   FRESHDESK_API_KEY: ${{ secrets.FRESHDESK_API_KEY }}
-  HUBSPOT_TOKEN: ${{ secrets.HUBSPOT_TOKEN }}
-  MONDAY_TOKEN: ${{ secrets.MONDAY_TOKEN }}
-  OUTLOOK_CLIENT_ID: ${{ secrets.OUTLOOK_CLIENT_ID }}
-  OUTLOOK_CLIENT_SECRET: ${{ secrets.OUTLOOK_CLIENT_SECRET }}
-  OUTLOOK_REFRESH_TOKEN: ${{ secrets.OUTLOOK_REFRESH_TOKEN }}
-  TEAMS_CLIENT_ID: ${{ secrets.TEAMS_CLIENT_ID }}
-  TEAMS_CLIENT_SECRET: ${{ secrets.TEAMS_CLIENT_SECRET }}
-  TEAMS_REFRESH_TOKEN: ${{ secrets.TEAMS_REFRESH_TOKEN }}
-  SERENITY_API_KEY: ${{ secrets.SERENITY_API_KEY }}
-  PIPEDRIVE_REFRESH_TOKEN: ${{ secrets.PIPEDRIVE_REFRESH_TOKEN }}
-  PIPEDRIVE_CLIENT_ID: ${{ secrets.PIPEDRIVE_CLIENT_ID }}
-  PIPEDRIVE_CLIENT_SECRET: ${{ secrets.PIPEDRIVE_CLIENT_SECRET }}
-  SERENITY_CONVERSATION_AGENT_CODE: ${{ secrets.SERENITY_CONVERSATION_AGENT_CODE }}
-  SERENITY_SYSTEM_AGENT_CODE: ${{ secrets.SERENITY_SYSTEM_AGENT_CODE }}
-  SHOPIFY_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
-  SHOPIFY_SHOP: ${{ secrets.SHOPIFY_SHOP }}
-  TRELLO_TOKEN: ${{ secrets.TRELLO_TOKEN }}
-  TRELLO_KEY: ${{ secrets.TRELLO_KEY }}  
+  HUBSPOT_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).HUBSPOT_TOKEN }}
+  MONDAY_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).MONDAY_TOKEN }}
+  OUTLOOK_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).OUTLOOK_CLIENT_ID }}
+  OUTLOOK_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).OUTLOOK_CLIENT_SECRET }}
+  OUTLOOK_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).OUTLOOK_REFRESH_TOKEN }}
+  TEAMS_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).TEAMS_CLIENT_ID }}
+  TEAMS_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).TEAMS_CLIENT_SECRET }}
+  TEAMS_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).TEAMS_REFRESH_TOKEN }}
+  SERENITY_API_KEY: ${{ fromJson(secrets.TEST_VARIABLES).SERENITY_API_KEY }}
+  PIPEDRIVE_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).PIPEDRIVE_REFRESH_TOKEN }}
+  PIPEDRIVE_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).PIPEDRIVE_CLIENT_ID }}
+  PIPEDRIVE_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).PIPEDRIVE_CLIENT_SECRET }}
+  SERENITY_CONVERSATION_AGENT_CODE: ${{ fromJson(secrets.TEST_VARIABLES).SERENITY_CONVERSATION_AGENT_CODE }}
+  SERENITY_SYSTEM_AGENT_CODE: ${{ fromJson(secrets.TEST_VARIABLES).SERENITY_SYSTEM_AGENT_CODE }}
+  SHOPIFY_ACCESS_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).SHOPIFY_ACCESS_TOKEN }}
+  SHOPIFY_SHOP: ${{ fromJson(secrets.TEST_VARIABLES).SHOPIFY_SHOP }}
+  MAILCHIMP_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).MAILCHIMP_TOKEN }}
+  MAILCHIMP_DATACENTER: ${{ fromJson(secrets.TEST_VARIABLES).MAILCHIMP_DATACENTER }}
+  INTERCOM_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).INTERCOM_TOKEN }}
+  ATTIO_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).ATTIO_TOKEN }}
+  GOOGLE_SHEETS_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_SHEETS_REFRESH_TOKEN }}
+  GOOGLE_SHEETS_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_SHEETS_CLIENT_ID }}
+  GOOGLE_SHEETS_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_SHEETS_CLIENT_SECRET }}
+  GOOGLE_DRIVE_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_DRIVE_REFRESH_TOKEN }}
+  GOOGLE_DRIVE_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_DRIVE_CLIENT_ID }}
+  GOOGLE_DRIVE_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_DRIVE_CLIENT_SECRET }}
+  GOOGLE_FORMS_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_FORMS_REFRESH_TOKEN }}
+  GOOGLE_FORMS_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_FORMS_CLIENT_ID }}
+  GOOGLE_FORMS_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_FORMS_CLIENT_SECRET }}
+  GOOGLE_MEET_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_MEET_CLIENT_SECRET }}
+  GOOGLE_MEET_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_MEET_CLIENT_ID }}
+  GOOGLE_MEET_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_MEET_REFRESH_TOKEN }}
+  GOOGLE_DOCS_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_DOCS_CLIENT_SECRET }}
+  GOOGLE_DOCS_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_DOCS_CLIENT_ID }}
+  GOOGLE_DOCS_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_DOCS_REFRESH_TOKEN }}
+  GOOGLE_CONTACTS_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_CONTACTS_CLIENT_SECRET }}
+  GOOGLE_CONTACTS_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_CONTACTS_CLIENT_ID }}
+  GOOGLE_CONTACTS_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_CONTACTS_REFRESH_TOKEN }}
+  ZOOM_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).ZOOM_REFRESH_TOKEN }}
+  ZOOM_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).ZOOM_CLIENT_ID }}
+  ZOOM_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).ZOOM_CLIENT_SECRET }}
+  CONFLUENCE_USERNAME: ${{ fromJson(secrets.TEST_VARIABLES).CONFLUENCE_USERNAME }}
+  CONFLUENCE_PASSWORD: ${{ fromJson(secrets.TEST_VARIABLES).CONFLUENCE_PASSWORD }}
+  CONFLUENCE_CLOUD_ID: ${{ fromJson(secrets.TEST_VARIABLES).CONFLUENCE_CLOUD_ID }}
+  BITBUCKET_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).BITBUCKET_CLIENT_ID }}
+  BITBUCKET_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).BITBUCKET_CLIENT_SECRET }}
+  BITBUCKET_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).BITBUCKET_REFRESH_TOKEN }}
+  FACEBOOK_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).FACEBOOK_TOKEN }}
+  ODOO_SUBDOMAIN: ${{ fromJson(secrets.TEST_VARIABLES).ODOO_SUBDOMAIN }}
+  ODOO_USERNAME: ${{ fromJson(secrets.TEST_VARIABLES).ODOO_USERNAME }}
+  ODOO_PASSWORD: ${{ fromJson(secrets.TEST_VARIABLES).ODOO_PASSWORD }}
+  PADDLE_SANDBOX_API_KEY: ${{ secrets.PADDLE_SANDBOX_API_KEY }}
+  BUSINESS_CENTRAL_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).BUSINESS_CENTRAL_CLIENT_SECRET }}
+  BUSINESS_CENTRAL_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).BUSINESS_CENTRAL_CLIENT_ID }}
+  BUSINESS_CENTRAL_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).BUSINESS_CENTRAL_REFRESH_TOKEN }}
+  TYPEFORM_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).TYPEFORM_TOKEN }}
+  AIRTABLE_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).AIRTABLE_TOKEN }}
+  QUICKBOOKS_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).QUICKBOOKS_REFRESH_TOKEN }}
+  QUICKBOOKS_REALM_ID: ${{ fromJson(secrets.TEST_VARIABLES).QUICKBOOKS_REALM_ID }}
+  QUICKBOOKS_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).QUICKBOOKS_CLIENT_ID }}
+  QUICKBOOKS_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).QUICKBOOKS_CLIENT_SECRET }}
+  GOOGLE_CHAT_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_CHAT_CLIENT_SECRET }}
+  GOOGLE_CHAT_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_CHAT_CLIENT_ID }}
+  GOOGLE_CHAT_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_CHAT_REFRESH_TOKEN }}
+  CALENDLY_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).CALENDLY_TOKEN }}
+  KLAVIYO_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).KLAVIYO_REFRESH_TOKEN }}
+  KLAVIYO_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).KLAVIYO_CLIENT_ID }}
+  KLAVIYO_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).KLAVIYO_CLIENT_SECRET }}
+  KLAVIYO_CODE_VERIFIER: ${{ fromJson(secrets.TEST_VARIABLES).KLAVIYO_CODE_VERIFIER }}
+  CLICK_UP_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).CLICK_UP_TOKEN }}
+  WEBFLOW_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).WEBFLOW_TOKEN }}
+  ACTIVE_CAMPAIGN_INSTANCE_URL: ${{ fromJson(secrets.TEST_VARIABLES).ACTIVE_CAMPAIGN_INSTANCE_URL }}
+  ACTIVE_CAMPAIGN_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).ACTIVE_CAMPAIGN_TOKEN }}
+  BROWSE_AI_API_KEY: ${{ fromJson(secrets.TEST_VARIABLES).BROWSE_AI_API_KEY }}
+  BIG_ML_USERNAME: ${{ fromJson(secrets.TEST_VARIABLES).BIG_ML_USERNAME }}
+  BIG_ML_API_KEY: ${{ fromJson(secrets.TEST_VARIABLES).BIG_ML_API_KEY }}
+  YOUTUBE_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).YOUTUBE_REFRESH_TOKEN }}
+  YOUTUBE_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).YOUTUBE_CLIENT_ID }}
+  YOUTUBE_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).YOUTUBE_CLIENT_SECRET }}
+  CANVA_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).CANVA_CLIENT_ID }}
+  CANVA_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).CANVA_CLIENT_SECRET }}
+  CANVA_REFRESH_TOKEN: ${{ secrets.CANVA_REFRESH_TOKEN }}
+  CANVA_CODE_VERIFIER: ${{ fromJson(secrets.TEST_VARIABLES).CANVA_CODE_VERIFIER }}
+  CANVA_REFRESH_TOKEN_SECRET_NAME: ${{ fromJson(secrets.TEST_VARIABLES).CANVA_REFRESH_TOKEN_SECRET_NAME }}
+  FIGMA_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).FIGMA_CLIENT_ID }}
+  FIGMA_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).FIGMA_CLIENT_SECRET }}
+  FIGMA_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).FIGMA_REFRESH_TOKEN }}
+  BREVO_API_KEY: ${{ fromJson(secrets.TEST_VARIABLES).BREVO_API_KEY }}
+  GOOGLE_TASKS_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_TASKS_CLIENT_ID }}
+  GOOGLE_TASKS_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_TASKS_CLIENT_SECRET }}
+  GOOGLE_TASKS_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_TASKS_REFRESH_TOKEN }}
+  AMAZON_ACCESS_KEY_ID: ${{ fromJson(secrets.TEST_VARIABLES).AMAZON_ACCESS_KEY_ID }}
+  AMAZON_SECRET_ACCESS_KEY: ${{ fromJson(secrets.TEST_VARIABLES).AMAZON_SECRET_ACCESS_KEY }}
+  AZURE_AD_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).AZURE_AD_REFRESH_TOKEN }}
+  AZURE_AD_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).AZURE_AD_CLIENT_ID }}
+  AZURE_AD_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).AZURE_AD_CLIENT_SECRET }}
+  AZURE_DEVOPS_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).AZURE_DEVOPS_CLIENT_SECRET }}
+  AZURE_DEVOPS_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).AZURE_DEVOPS_CLIENT_ID }}
+  AZURE_DEVOPS_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).AZURE_DEVOPS_REFRESH_TOKEN }}
+  PAYPAL_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).PAYPAL_CLIENT_ID }}
+  PAYPAL_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).PAYPAL_CLIENT_SECRET }}
+  PATREON_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).PATREON_TOKEN }}
+  TODOIST_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).TODOIST_TOKEN }}
+  SENTRY_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).SENTRY_TOKEN }}
+  SUPABASE_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).SUPABASE_TOKEN }}
+  SUPABASE_PROJECT_ID: ${{ fromJson(secrets.TEST_VARIABLES).SUPABASE_PROJECT_ID }}
+  FIRESTORE_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).FIRESTORE_CLIENT_SECRET }}
+  FIRESTORE_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).FIRESTORE_CLIENT_ID }}
+  FIRESTORE_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).FIRESTORE_REFRESH_TOKEN }}
+  FIREBASE_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).FIREBASE_CLIENT_SECRET }}
+  FIREBASE_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).FIREBASE_CLIENT_ID }}
+  FIREBASE_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).FIREBASE_REFRESH_TOKEN }}
+  BASEROW_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).BASEROW_TOKEN }}
+  GOOGLE_INTEGRATIONS_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_INTEGRATIONS_REFRESH_TOKEN }}
+  GOOGLE_INTEGRATIONS_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_INTEGRATIONS_CLIENT_SECRET }}
+  GOOGLE_INTEGRATIONS_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_INTEGRATIONS_CLIENT_ID }}
+  GOOGLE_ANALYTICS_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_ANALYTICS_REFRESH_TOKEN }}
+  GOOGLE_ANALYTICS_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_ANALYTICS_CLIENT_SECRET }}
+  GOOGLE_ANALYTICS_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_ANALYTICS_CLIENT_ID }}
+  GOOGLE_ANALYTICS_PROPERTY_ID: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_ANALYTICS_PROPERTY_ID }}
+  ZOHO_CRM_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).ZOHO_CRM_CLIENT_SECRET }}
+  ZOHO_CRM_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).ZOHO_CRM_CLIENT_ID }}
+  ZOHO_CRM_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).ZOHO_CRM_REFRESH_TOKEN }}
+  GITLAB_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).GITLAB_TOKEN }}
+  COPPER_CRM_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).COPPER_CRM_TOKEN }}
+  CRAFT_URL: ${{ fromJson(secrets.TEST_VARIABLES).CRAFT_URL }}
+  TWILIO_ACCOUNT_SID: ${{ fromJson(secrets.TEST_VARIABLES).TWILIO_ACCOUNT_SID }}
+  TWILIO_AUTH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).TWILIO_AUTH_TOKEN }}
+  SENDGRID_API_KEY: ${{ fromJson(secrets.TEST_VARIABLES).SENDGRID_API_KEY }}
+  ZENDESK_REFRESH_TOKEN_SECRET_NAME: ${{ fromJson(secrets.TEST_VARIABLES).ZENDESK_REFRESH_TOKEN_SECRET_NAME }}
+  ZENDESK_RECORD_BASED_SUBDOMAIN: ${{ fromJson(secrets.TEST_VARIABLES).ZENDESK_RECORD_BASED_SUBDOMAIN }}
+  ZENDESK_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).ZENDESK_CLIENT_SECRET }}
+  ZENDESK_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).ZENDESK_CLIENT_ID }}
+  ZENDESK_REFRESH_TOKEN: ${{ secrets.ZENDESK_REFRESH_TOKEN }}
+  HELPSCOUT_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).HELPSCOUT_CLIENT_SECRET }}
+  HELPSCOUT_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).HELPSCOUT_CLIENT_ID }}
+  FRONT_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).FRONT_TOKEN }}
+  SURVEYMONKEY_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).SURVEYMONKEY_TOKEN }}
+  SURVEYMONKEY_WEBHOOK_URL: ${{ fromJson(secrets.TEST_VARIABLES).SURVEYMONKEY_WEBHOOK_URL }}
+  OPEN_WEATHER_MAP_API_KEY: ${{ fromJson(secrets.TEST_VARIABLES).OPEN_WEATHER_MAP_API_KEY }}
+  MAUTIC_INSTANCE_URL: ${{ fromJson(secrets.TEST_VARIABLES).MAUTIC_INSTANCE_URL }}
+  MAUTIC_USERNAME: ${{ fromJson(secrets.TEST_VARIABLES).MAUTIC_USERNAME }}
+  MAUTIC_PASSWORD: ${{ fromJson(secrets.TEST_VARIABLES).MAUTIC_PASSWORD }}
+  NOCODB_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).NOCODB_TOKEN }}
+  SEATABLE_API_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).SEATABLE_API_TOKEN }}
+  TRELLO_KEY: ${{ secrets.TRELLO_KEY }}
 
 jobs:
   PullRequestTests:
@@ -65,7 +193,7 @@ jobs:
         id: current_time
         with:
           format: YYYYMMDD-HH
-          utcOffset: '+01:00'
+          utcOffset: "+01:00"
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Get repo
@@ -80,11 +208,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 20.11.0
-
-      - name: Save release version to outputs
-        id: save_release_version
-        run: echo ::set-output name=version::$(node -pe "require('./package.json').version")
+          node-version: 20.19.5
 
       # Install App Catalogue dependencies
       - name: Installing modules
@@ -99,11 +223,22 @@ jobs:
           cd ts
           yarn build:test
 
+      # Check system resources
+      - name: Check system resources
+        run: |
+          df -h
+          free -h
+          node --version
+          npm --version
+
       # Run App Catalogue unit tets
       - name: Run unit tests
+        timeout-minutes: 60
         run: |
           cd ts
-          yarn test:ci
+          NODE_OPTIONS="--max_old_space_size=8192" yarn test:ci
+        env:
+          NODE_OPTIONS: "--max_old_space_size=8192"
 
       # Install system dependencies needed for building Qore and modules
       - name: Install dependencies
@@ -119,6 +254,8 @@ jobs:
             libssl-dev \
             zlib1g-dev \
             libbz2-dev \
+            libbrotli-dev \
+            libnghttp2-dev \
             doxygen \
             libnode-dev \
             libyaml-dev \
@@ -127,7 +264,7 @@ jobs:
       # Clone the Qore repository and build it
       - name: Clone and Build Qore
         run: |
-          git clone https://github.com/qorelanguage/qore.git
+          git clone --branch develop https://github.com/qoretechnologies/qore.git
           cd qore
           mkdir build
           cd build
@@ -147,7 +284,7 @@ jobs:
       # Clone and build yaml-module
       - name: Clone and build yaml module
         run: |
-          git clone https://github.com/qorelanguage/module-yaml.git
+          git clone https://github.com/qoretechnologies/module-yaml.git
           cd module-yaml
           mkdir build
           cd build
@@ -157,7 +294,7 @@ jobs:
       # Clone and build uuid-module
       - name: Clone and build uuid module
         run: |
-          git clone https://github.com/qorelanguage/module-uuid.git
+          git clone https://github.com/qoretechnologies/module-uuid.git
           cd module-uuid
           mkdir build
           cd build
@@ -167,8 +304,9 @@ jobs:
       # Clone and build json-module
       - name: Clone and build json-module
         run: |
-          git clone https://github.com/qorelanguage/module-json.git
+          git clone https://github.com/qoretechnologies/module-json.git
           cd module-json
+          git submodule update --init
           mkdir build
           cd build
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
@@ -177,7 +315,7 @@ jobs:
       # Clone and build process-module
       - name: Clone and build process-module
         run: |
-          git clone https://github.com/qorelanguage/module-process.git
+          git clone https://github.com/qoretechnologies/module-process.git
           cd module-process
           mkdir build
           cd build
@@ -187,42 +325,43 @@ jobs:
       # Build V8-module
       - name: Build V8-module
         run: |
+          git submodule update --init
           mkdir build
           cd build
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
           make && sudo make install
 
+      # Run module-v8 Qore tests
+      - name: Run module-v8 tests
+        run: |
+          cd test
+          qore --enable-debug v8.qtest -v
+          qore --enable-debug ts-proxy.qtest -v
+          qore --enable-debug ts-action-interface.qtest -v
+
+      # Install RestSchemaDataProvider module (not yet in Qore's CMakeLists.txt)
+      - name: Install RestSchemaDataProvider module
+        run: |
+          echo "Installing RestSchemaDataProvider from qore source..."
+          sudo cp -r qore/qlib/RestSchemaDataProvider /usr/local/share/qore-modules/
+          echo "Verifying installation..."
+          ls -la /usr/local/share/qore-modules/RestSchemaDataProvider/
+
       # Test catalogue actions made with schema
       - name: Test catalogue actions
         run: |
           cd ts
-          yarn test-build && QORE_TYPESCRIPT_ACTION_SCRIPTS=./dist/index.js QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS=./dist/index.js qore -l TypeScriptActionInterface -nX 1
-
-      # - name: Serve Storybook and run tests
-      #   run: |
-      #     npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-      #       "npx http-server storybook-static --port 6008 --silent" \
-      #       "npx wait-on tcp:6008 && yarn test-storybook"
-
-      # - name: Publish to Chromatic
-      #   id: chromatic_publish
-      #   uses: chromaui/action@v1
-      #   with:
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      #     projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-      #     exitZeroOnChanges: true
-      #     allowConsoleErrors: true
-      #     debug: true
+          NODE_OPTIONS="--max_old_space_size=8192" yarn test-build && NODE_OPTIONS="--max_old_space_size=8192" QORE_TYPESCRIPT_ACTION_SCRIPTS=./dist/index.js QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS=./dist/index.js qore -l TypeScriptActionInterface -nX 1
 
       # Notify Discord if Success
       - name: Discord notification success
         env:
           DISCORD_WEBHOOK: ${{secrets.DISCORD_WEBHOOK}}
           DISCORD_EMBEDS: '[{ "author": {  "icon_url": "https://avatars.githubusercontent.com/${{ github.actor }}", "name": "${{ github.actor }}", "url": "https://github.com/${{github.actor}}" },"url": "https://github.com/${{github.repository}}/commit/${{github.sha}}","fields": [{ "name": "Commit Message", "value": "${{ steps.get_head_commit_message.outputs.HEAD_COMMIT_MESSAGE }}"},{ "name": "Repository", "value": "[${{github.event.repository.name}}](${{github.event.repository.clone_url}})", "inline": true },{ "name": "Branch", "value": "[${{github.ref_name}}](https://github.com/${{github.repository}}/pull/${{github.ref_name}})", "inline": true },{ "name": "Event", "value": "${{github.event_name}}", "inline": true },{ "name": "Author", "value": "[${{github.actor}}](https://github.com/${{github.actor}})", "inline": true },{ "name": "Job", "value": "${{github.job}}", "inline": true},{ "name": "Version", "value": "v${{ steps.save_release_version.outputs.version }}", "inline": true},{ "name": "", "value": "🤖 [Github Action](https://github.com/${{ github.repository}}/actions/runs/${{ github.run_id}})"}],"color":65280,"footer":{"text": "Published at ${{steps.current_time.outputs.readableTime}}"}}]'
-          DISCORD_AVATAR: 'https://github.com/qoretechnologies/qorus-vscode/blob/95ad81fa8654fe83bb41f68f4de42ae088298e59/public/q-symbol-small.png?raw=true'
+          DISCORD_AVATAR: "https://github.com/qoretechnologies/qorus-vscode/blob/95ad81fa8654fe83bb41f68f4de42ae088298e59/public/q-symbol-small.png?raw=true"
         uses: Ilshidur/action-discord@0.3.2
         with:
-          args: ':white_check_mark: Tests run #${{ github.run_number }} for [PR](${{ github.event.pull_request.html_url }}) triggered by ${{ github.triggering_actor }} *succeeded*, install the canary version via `yarn add @qoretechnologies/qorus-actions-catalogue@${{ steps.bump.outputs.version }}`.'
+          args: ":white_check_mark: Tests run #${{ github.run_number }} for [PR](${{ github.event.pull_request.html_url }}) triggered by ${{ github.triggering_actor }} *succeeded*, install the canary version via `yarn add @qoretechnologies/qorus-actions-catalogue@${{ steps.bump.outputs.version }}`."
         if: success()
 
       # Notify discord if failure
@@ -230,8 +369,8 @@ jobs:
         env:
           DISCORD_WEBHOOK: ${{secrets.DISCORD_WEBHOOK}}
           DISCORD_EMBEDS: '[{ "author": {  "icon_url": "https://avatars.githubusercontent.com/${{ github.actor }}", "name": "${{ github.actor }}", "url": "https://github.com/${{github.actor}}" },"url": "https://github.com/${{github.repository}}/commit/${{github.sha}}","fields": [{ "name": "Commit Message", "value": "${{ steps.get_head_commit_message.outputs.HEAD_COMMIT_MESSAGE }}"},{ "name": "Repository", "value": "[${{github.event.repository.name}}](${{github.event.repository.clone_url}})", "inline": true },{ "name": "Branch", "value": "[${{github.ref_name}}](https://github.com/${{github.repository}}/pull/${{github.ref_name}})", "inline": true },{ "name": "Event", "value": "${{github.event_name}}", "inline": true },{ "name": "Author", "value": "[${{github.actor}}](https://github.com/${{github.actor}})", "inline": true },{ "name": "Job", "value": "${{github.job}}", "inline": true },{ "name": "Version", "value": "v${{ steps.save_release_version.outputs.version }}", "inline": true},{ "name": "", "value": "🤖 [Github Action](https://github.com/${{ github.repository}}/actions/runs/${{ github.run_id}})"}],"color":16711680,"footer":{"text": "Published at ${{steps.current_time.outputs.readableTime}}"}}]'
-          DISCORD_AVATAR: 'https://github.com/qoretechnologies/qorus-vscode/blob/95ad81fa8654fe83bb41f68f4de42ae088298e59/public/q-symbol-small.png?raw=true'
+          DISCORD_AVATAR: "https://github.com/qoretechnologies/qorus-vscode/blob/95ad81fa8654fe83bb41f68f4de42ae088298e59/public/q-symbol-small.png?raw=true"
         uses: Ilshidur/action-discord@0.3.2
         with:
-          args: ':exclamation: Tests run #${{ github.run_number }} for [PR](${{ github.event.pull_request.html_url }}) triggered by ${{ github.triggering_actor }} *failed*!'
+          args: ":exclamation: Tests run #${{ github.run_number }} for [PR](${{ github.event.pull_request.html_url }}) triggered by ${{ github.triggering_actor }} *failed*!"
         if: failure()

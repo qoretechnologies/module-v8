@@ -16,12 +16,12 @@ exports.qtester = {
             return value: the return value of the API call
     */
     run: function(testapi) {
-        c = testapi.createConnection('js-swagger-test', {
+        let c = testapi.createConnection('js-openapi-test', {
             'opts': {
                 'subdomain': 'www',
             },
         });
-        res = testapi.execAppAction('js-swagger-test', 'create-pet', c, {
+        let res = testapi.execAppAction('js-openapi-test', 'create-pet', c, {
             'body': {
                 'id': 'Test',
                 'name': 'Rex',

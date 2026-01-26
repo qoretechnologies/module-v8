@@ -60,7 +60,7 @@ const options = {
     desc: 'Field to sort customers by',
   },
   reverse: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: true,
   },
@@ -146,7 +146,7 @@ const findCustomers = async (context: TShopifyContextWithConn, data: TFindCustom
   };
 };
 
-export const FindShopifyCustomer = QoreAppCreator.createLocalizedAction<typeof options>({
+const FindShopifyCustomer = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'find-customer',
   app: SHOPIFY_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -173,3 +173,5 @@ export const FindShopifyCustomer = QoreAppCreator.createLocalizedAction<typeof o
   options,
   response_type: ShopifyFindCustomerResponseType,
 });
+
+export default FindShopifyCustomer;

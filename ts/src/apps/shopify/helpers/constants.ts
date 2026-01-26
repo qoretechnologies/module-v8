@@ -209,16 +209,18 @@ export const extractShopifyNodes = (data: Record<string, any>): Record<string, a
   return data;
 };
 
-export const transformShopifyResponse = (response: Record<string, any>) => {
+export const transformShopifyResponse = (response: ClientResponse) => {
   if (response.data) {
     const operationKey = Object.keys(response.data)[0];
     const operationData = response.data[operationKey];
 
-    if (operationData?.nodes && Array.isArray(operationData.nodes)) {
+    if (!operationData) return [];
+
+    if (operationData.nodes && Array.isArray(operationData.nodes)) {
       return operationData.nodes.map((node: any) => extractShopifyNodes(node));
     }
 
-    if (operationData?.edges && Array.isArray(operationData.edges)) {
+    if (operationData.edges && Array.isArray(operationData.edges)) {
       return extractShopifyNodes(operationData);
     }
 

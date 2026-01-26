@@ -186,7 +186,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const CreateOutlookContact = QoreAppCreator.createLocalizedAction<typeof options>({
+const CreateOutlookContact = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'create-contact',
   app: OUTLOOK_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -221,7 +221,7 @@ export const CreateOutlookContact = QoreAppCreator.createLocalizedAction<typeof 
     });
 
     const formattedEmailAddresses = emailAddresses
-      ? (emailAddresses as { address: string; name?: string }[]).map((email) => ({
+      ? emailAddresses.map((email) => ({
           address: email.address,
           name: email.name || `${givenName} ${surname || ''}`.trim(),
         }))
@@ -257,3 +257,5 @@ export const CreateOutlookContact = QoreAppCreator.createLocalizedAction<typeof 
   options,
   response_type,
 });
+
+export default CreateOutlookContact;

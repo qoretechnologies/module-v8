@@ -1,4 +1,4 @@
-import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import { TQoreAppWithActions, TQoreRecordBasedApp } from '@qoretechnologies/ts-toolkit';
 import { createSwaggerPaths, mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
@@ -8,9 +8,17 @@ import {
   PIPEDRIVE_APP_LOGO,
   PIPEDRIVE_APP_NAME,
 } from './constants';
-import { actionsCatalogue } from '../../ActionsCatalogue';
+import { getOauth2ClientSecret } from '../../utils/oauth2-client-secret';
 
 import * as PIPEDRIVE_TRIGGERS from './triggers';
+import { getPipedriveRecordType } from './helpers/record-based/get-record-type';
+import { getPipedriveTableList } from './helpers/record-based/get-table-list';
+import { getPipedriveExpressions } from './helpers/record-based/get-expressions';
+import { createPipedriveRecords } from './helpers/record-based/create-records';
+import { updatePipedriveRecords } from './helpers/record-based/update-records';
+import { deletePipedriveRecords } from './helpers/record-based/delete-records';
+import { searchPipedriveRecords } from './helpers/record-based/search-records';
+import { PipedriveSearchOptions } from './helpers/record-based/get-search-options';
 
 export default (locale: Locales) =>
   ({
@@ -30,7 +38,7 @@ export default (locale: Locales) =>
       data: 'json',
       oauth2_grant_type: 'authorization_code',
       oauth2_client_id: '145b10fac80be7a2',
-      oauth2_client_secret: actionsCatalogue.getOauth2ClientSecret(PIPEDRIVE_APP_NAME),
+      oauth2_client_secret: getOauth2ClientSecret(PIPEDRIVE_APP_NAME),
       oauth2_auth_url: 'https://oauth.pipedrive.com/oauth/authorize',
       oauth2_token_url: 'https://oauth.pipedrive.com/oauth/token',
       oauth2_token_use_basic_auth: true,
@@ -71,4 +79,13 @@ export default (locale: Locales) =>
     swagger_options: {
       parse_flags: -1,
     },
-  }) satisfies TQoreAppWithActions;
+    get_record_type: getPipedriveRecordType,
+    get_table_list: getPipedriveTableList,
+    expressions: getPipedriveExpressions(locale),
+    create_records: createPipedriveRecords,
+    update_records: updatePipedriveRecords,
+    delete_records: deletePipedriveRecords,
+    search_records: searchPipedriveRecords,
+    search_options: PipedriveSearchOptions,
+    
+  }) satisfies TQoreAppWithActions & TQoreRecordBasedApp;

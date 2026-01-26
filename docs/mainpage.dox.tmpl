@@ -111,6 +111,22 @@ JavaScriptProgram::setSaveReferenceCallback(callback);
 
     @section v8releasenotes v8 Module Release Notes
 
+    @subsection v8_1_0_4 v8 Module Version 1.0.4
+    - improved ts-proxy restart robustness and shutdown handling to avoid deadlocks
+    - handled EPIPE and closed sockets more gracefully in ts-proxy communications
+
+    @subsection v8_1_0_3 v8 Module Version 1.0.3
+    - fixed a bug returning action option info for Swagger-based actions
+      (<a href="https://github.com/qorelanguage/qore/issues/4956">issue 4956</a>)
+
+    @subsection v8_1_0_2 v8 Module Version 1.0.2
+    - fixed a bug returning reference data in action providers
+      (<a href="https://github.com/qorelanguage/qore/issues/4955">issue 4955</a>)
+
+    @subsection v8_1_0_1 v8 Module Version 1.0.1
+    - fixed a bug retrieving dynamic types in the \c ts-proxy process
+      (<a href="https://github.com/qorelanguage/qore/issues/4938">issue 4938</a>)
+
     @subsection v8_1_0 v8 Module Version 1.0
     - initial public release
 */

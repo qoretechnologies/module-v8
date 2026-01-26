@@ -3,6 +3,7 @@ import { Config } from 'jest';
 const config: Config = {
   preset: 'ts-jest',
   testEnvironment: 'node',
+  maxWorkers: '50%',
   coverageReporters: ['json-summary', 'text', 'lcov'],
   testTimeout: 60000,
   moduleFileExtensions: ['ts', 'js', 'json', 'node'],
@@ -17,6 +18,7 @@ const config: Config = {
     '^.+\\.ts$': 'ts-jest',
   },
   testMatch: ['<rootDir>/**/*.(spec|test).ts'],
+  testPathIgnorePatterns: ['/node_modules/', '\\.skip\\.ts$'],
   transformIgnorePatterns: ['<rootDir>/../node_modules/(?!@octokit)'],
 };
 

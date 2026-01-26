@@ -1,26 +1,26 @@
-import { actionsCatalogue } from '../../ActionsCatalogue';
+import { TQoreAppWithActions, TQoreRecordBasedApp } from '@qoretechnologies/ts-toolkit';
 import {
   buildActionsFromSwaggerSchema,
   createSwaggerPaths,
   mapActionsToApp,
   mapTriggersToApp,
 } from '../../global/helpers';
-import { TQoreAppWithActions, TCustomConnOptions } from '@qoretechnologies/ts-toolkit';
 import { L } from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import ZendeskSchema from '../../schemas/zendesk.swagger.json';
+import { ZENDESK_APP_NAME, ZENDESK_CONN_OPTIONS } from './app-constants';
 import { ZENDESK_ALLOWED_PATHS } from './constants';
 import * as zendeskTriggers from './triggers';
+import { createZendeskRecords } from './helpers/record-based/create-records';
+import { deleteZendeskRecords } from './helpers/record-based/delete-records';
+import { getZendeskExpressions } from './helpers/record-based/get-expressions';
+import { getZendeskRecordType } from './helpers/record-based/get-record-type';
+import { ZendeskSearchOptions } from './helpers/record-based/get-search-options';
+import { getZendeskTableList } from './helpers/record-based/get-table-list';
+import { searchZendeskRecords } from './helpers/record-based/search-records';
+import { updateZendeskRecords } from './helpers/record-based/update-records';
 
-export const ZENDESK_APP_NAME = 'Zendesk';
-export const ZENDESK_CONN_OPTIONS = {
-  subdomain: {
-    display_name: 'Subdomain',
-    short_desc: 'The subdomain for the URL',
-    desc: 'The subdomain for the URL',
-    type: 'string',
-  },
-} satisfies TCustomConnOptions;
+export { ZENDESK_APP_NAME, ZENDESK_CONN_OPTIONS };
 
 export const ZENDESK_ACTIONS = buildActionsFromSwaggerSchema({
   schema: ZendeskSchema as any,
@@ -28,23 +28,16 @@ export const ZENDESK_ACTIONS = buildActionsFromSwaggerSchema({
   app: ZENDESK_APP_NAME,
 });
 
-/*
- * Returns the app object with all the actions ready to use, using translations
- * @param locale - the locale
- * @returns TQoreAppWithActions
- */
 export default (locale: Locales) =>
   ({
+    name: ZENDESK_APP_NAME,
     display_name: L[locale].apps[ZENDESK_APP_NAME].displayName(),
     short_desc: L[locale].apps[ZENDESK_APP_NAME].shortDesc(),
-    name: ZENDESK_APP_NAME,
     actions: [
       ...mapActionsToApp(ZENDESK_APP_NAME, ZENDESK_ACTIONS, locale),
       ...mapTriggersToApp(ZENDESK_APP_NAME, zendeskTriggers, locale),
     ],
     desc: L[locale].apps[ZENDESK_APP_NAME].longDesc(),
-    // This is a white Zendesk styled "Z" logo used in accordance with Zendesk's Brand / Logo Guidelines
-    // https://web-assets.zendesk.com/pdf/Zendesk-logo-guidelines-legal-04-22-22.pdf
     logo:
       'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICIt' +
       'Ly9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+Cjxzdm' +
@@ -68,9 +61,7 @@ export default (locale: Locales) =>
     rest: {
       url: `https://{{subdomain}}.zendesk.com`,
       data: 'json',
-      oauth2_client_secret: actionsCatalogue.getOauth2ClientSecret(ZENDESK_APP_NAME),
       oauth2_grant_type: 'authorization_code',
-      oauth2_client_id: 'zdg-qorus-integration-engine',
       oauth2_auth_url: 'https://{{subdomain}}.zendesk.com/oauth/authorizations/new',
       oauth2_token_url: 'https://{{subdomain}}.zendesk.com/oauth/tokens',
       oauth2_scopes: ['read', 'write'],
@@ -82,4 +73,12 @@ export default (locale: Locales) =>
       required_options: 'subdomain',
       url_template_options: ['subdomain'],
     },
-  }) satisfies TQoreAppWithActions;
+    expressions: getZendeskExpressions(locale),
+    get_record_type: getZendeskRecordType,
+    get_table_list: getZendeskTableList,
+    search_options: ZendeskSearchOptions,
+    search_records: searchZendeskRecords,
+    create_records: createZendeskRecords,
+    update_records: updateZendeskRecords,
+    delete_records: deleteZendeskRecords,
+  }) satisfies TQoreAppWithActions & TQoreRecordBasedApp;

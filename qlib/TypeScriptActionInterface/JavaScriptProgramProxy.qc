@@ -1,7 +1,7 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 #! Qore TypeScriptActionInterface module definition
 
-/*  JavaScriptProgramProxy.qc Copyright 2024 Qore Technologies, s.r.o.
+/*  JavaScriptProgramProxy.qc Copyright 2024 - 2026 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -41,6 +41,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
         #! Event source info
         hash<EventSourceInfo> event;
+
+        #! Bulk search request ID
+        string search_id;
     }
 
     private {
@@ -78,7 +81,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         hash<auto> command_in_progress;
 
         #! Event count
-        Counter event_cnt();
+        #Counter event_cnt();
 
         #! Event socket counter
         Counter es_cnt();
@@ -151,7 +154,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         on_error {
             global_lock.lock();
             on_exit global_lock.unlock();
-            cmap{uh} = self;
+            remove cmap{uh};
         }
 
         startChildProcess();
@@ -198,15 +201,30 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
     static stopMasterListener() {
         master_listener_stop = True;
-        sem_write.write(".");
+        try {
+            sem_write.write(".");
+        } catch (hash<ExceptionInfo> ex) {
+            @debug {
+                TSAI::debug("stopMasterListener(): sem_write error: %s", get_exception_string(ex));
+            }
+        }
+        if (master) {
+            try {
+                master.shutdown();
+            } catch (hash<ExceptionInfo> ex) {
+                @debug {
+                    TSAI::debug("stopMasterListener(): master shutdown error: %s", get_exception_string(ex));
+                }
+            }
+        }
         master_listener_cnt.waitForZero();
-        master.shutdown();
         delete master;
         remove master_listener_stop;
         remove sem_read;
         remove sem_write;
         remove sem_info;
         TSAI::info("Shut down master listener on %y", master_path);
+        unlink(master_path);
         remove master_path;
     }
 
@@ -221,18 +239,72 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         int size = cmap.size();
         map delete cmap{$1}, keys cmap;
         TSAI::info("Shut down %d client%s", size, size == 1 ? "" : "s");
+        if (!cmap && master_path.val()) {
+            if (master) {
+                stopMasterListener();
+            } else {
+                remove master_path;
+            }
+        }
     }
 
     bool supportsEvent(string key) {
         return event.key == key ? True : False;
     }
 
+    *hash<auto> searchRecords(string app, string id, string conn_name, hash<auto> conn_opts, int block_size,
+            *hash<DataProviderExpression> where_cond, hash<auto> search_options, *hash<DataContextInfo> options) {
+        ASSERT(!event && !search_id);
+        search_id = id;
+        on_error remove search_id;
+        info("Setting up search for PID %d @%s: %y", proc.id(), app, id);
+        *hash<auto> rv = sendCommandArgs(NOTHING, PC_SEARCH_RECORDS, (app, conn_name, conn_opts, block_size,
+            where_cond ? Serializable::serialize(where_cond) : NOTHING, search_options));
+        if (!rv.firstValue().lsize()) {
+            remove search_id;
+            info("Search @%s: %y complete -> %y", app, id, LoggerUtil::getArgSummary(rv));
+        } else {
+            info("Search @%s: %y started -> %y", app, id, LoggerUtil::getArgSummary(rv));
+        }
+        return rv;
+    }
+
+    releaseSearch(string id) {
+        ASSERT(!event);
+        if (search_id) {
+            ASSERT(search_id == id);
+            info("Releasing search for PID %d: %y", proc.id(), id);
+            sendCommandArgs(NOTHING, PC_RELEASE_SEARCH, NOTHING, NOTHING, True);
+            info("Search %y released", id);
+            remove search_id;
+        } else {
+            info("Search %y already released", id);
+        }
+    }
+
+    *hash<auto> getRecords(string id) {
+        if (search_id != id) {
+            throw "SEARCH-ERROR", sprintf("Search %y was interrupted due to a proxy restart", id);
+        }
+        auto rv = sendCommandArgs(NOTHING, PC_GET_RECORDS);
+        if (!rv.firstValue().lsize()) {
+            info("Search %y complete -> %y", id, LoggerUtil::getArgSummary(rv));
+            remove search_id;
+        } else {
+            info("Search %y continuing -> %y", id, LoggerUtil::getArgSummary(rv));
+        }
+        return rv;
+    }
+
     # Called with the global lock held
-    setupEventSourceLocked(TypeScriptActionEventDataProvider observable, string app, string action, string key,
+    setupEventSource(TypeScriptActionEventDataProvider observable, string app, string action, string key,
             *hash<DataContextInfo> options) {
+        ASSERT(!event && !search_id);
+        /*
         if (event) {
             throw "EVENT-ERROR", sprintf("Event key %y is already registered", event.key);
         }
+        */
         string ekey = observable.uniqueHash();
         event = <EventSourceInfo>{
             "key": key,
@@ -244,17 +316,14 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             },
         };
 
-        event_cnt.inc();
-        on_error event_cnt.dec();
-
-        global_lock.unlock();
-        on_exit global_lock.lock();
+        #event_cnt.inc();
+        #on_error event_cnt.dec();
 
         on_error removeEventSource(ekey);
-        setupEventSourceLockedIntern();
+        setupEventSourceIntern();
     }
 
-    private setupEventSourceLockedIntern() {
+    private setupEventSourceIntern() {
         info("Setting up event source for PID %d @%s/%s %y", proc.id(), event.app, event.action, event.key);
         sendCommandArgs(NOTHING, PC_SETUP_EVENT, (event.app, event.action, event.key, event.options), NOTHING, True);
         info("Event source for @%s/%s %y ready", event.app, event.action, event.key);
@@ -288,8 +357,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     private eventListenerThread(Socket event_socket) {
-        info("Started event thread for PID %d for @%s/%s %y", proc.id(), event.app, event.action, event.key);
-        hash<auto> einfo = event{"app", "action", "key"};
+        hash<auto> einfo;
         on_exit {
             remove es_exit;
             remove es_tid;
@@ -298,8 +366,24 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             remove es_sem_info;
 
             es_cnt.dec();
-            info("Stopped event thread for PID %d for @%s/%s %y", proc.id(), einfo.app, einfo.action, einfo.key);
+            if (einfo) {
+                info("Stopped event thread for PID %d for @%s/%s %y", proc.id(), einfo.app, einfo.action, einfo.key);
+            } else {
+                info("Stopped event thread for PID %d", proc.id());
+            }
         }
+
+        if (!event) {
+            if (es_exit) {
+                # event already released
+                info("Cannot start event listener thread: no event source registered");
+            } else {
+                error("Failed to start event listener thread: no event source registered");
+            }
+            return;
+        }
+        info("Started event thread for PID %d for @%s/%s %y", proc.id(), event.app, event.action, event.key);
+        einfo = event{"app", "action", "key"};
 
         on_error error("Error in event listener thread for PID %d: %s", proc.id(), get_exception_string($1));
         softlist<hash<SocketPollInfo>> poll_list = (es_sem_info, <SocketPollInfo>{
@@ -329,7 +413,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 if (ex.err == "SOCKET-TIMEOUT") {
                     continue;
                 }
-                if (ex.err == "SOCKET-NOT-OPEN" || ex.err == "SOCKET-CLOSED") {
+                if (isSocketClosedError(ex)) {
                     error("The event socket for PID %d is closed; terminating", proc.id());
                     break;
                 }
@@ -351,14 +435,14 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 }
             } catch (hash<ExceptionInfo> ex) {
                 logChildOutput();
-                if (ex.err == "SOCKET-NOT-OPEN" || ex.err == "SOCKET-CLOSED") {
+                if (isSocketClosedError(ex)) {
                     error("Error in event listener thread: %s; terminating", get_exception_string(ex));
                     break;
                 }
                 error("Error in listener thread: %s; continuing to listen for events", get_exception_string(ex));
                 continue;
             }
-            debug("Got event message: %y", v);
+            debug("Got event message: %y", LoggerUtil::getArgSummary(v));
 
             if (v.cmd == CC_EVENT) {
                 if (!event.omap) {
@@ -482,7 +566,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             args += argv;
         }
         auto rv = sendCommandArgs(api.to, PC_CALL, args);
-        debug("getAsyncValue(%y): %y", argv, rv);
+        debug("getAsyncValue(%y): %y", LoggerUtil::getArgSummary(argv), LoggerUtil::getArgSummary(rv));
         return rv;
     }
 
@@ -490,7 +574,18 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             auto req) {
         *binary bin = sendCommandArgs(NOTHING, cmd, (app, action, conn_name, conn_opts, req));
         *HashDataType rv = bin ? Serializable::deserialize(bin) : NOTHING;
-        debug("getRequestType(app %y action %y req %y): %y", app, action, req, rv);
+        debug("getDynamicType(app %y action %y req %y conn_opts: %y): %y", app, action,
+            LoggerUtil::getArgSummary(req), LoggerUtil::getArgSummary(conn_opts),
+            LoggerUtil::getArgSummary(rv));
+        return rv;
+    }
+
+    *hash<string, hash<ActionOptionInfo>> getDynamicOptions(string app, string action, *string conn_name,
+            *hash<auto> conn_opts, auto req) {
+        *binary bin = sendCommandArgs(NOTHING, PC_GET_DYNAMIC_OPTIONS, (app, action, conn_name, conn_opts, req));
+        *hash<string, hash<ActionOptionInfo>> rv = bin ? Serializable::deserialize(bin) : NOTHING;
+        debug("getDynamicOptions(app %y action %y req %y): %y", app, action, LoggerUtil::getArgSummary(req),
+            LoggerUtil::getArgSummary(rv));
         return rv;
     }
 
@@ -546,8 +641,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                             v.cmd);
                         continue;
                     }
-                    TSAI::debug("Got message from proxy PID %d: %y for proxy: %y", proxy.proc.id(), v,
-                        proxy.uniqueHash());
+                    TSAI::debug("Got message from proxy PID %d: %y for proxy: %y", proxy.proc.id(),
+                        LoggerUtil::getArgSummary(v), proxy.uniqueHash());
                     hash<auto> msg = {
                         "cmd": CC_OK,
                         "socket": s0,
@@ -595,6 +690,10 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             try {
                 sendString(yaml);
             } catch (hash<ExceptionInfo> ex) {
+                if (isSocketClosedError(ex)) {
+                    info("Stop command aborted: socket closed (%s)", get_exception_string(ex));
+                    break;
+                }
                 if (retryIntern(ex, NOTHING, RF_NO_RESTART)) {
                     continue;
                 }
@@ -615,6 +714,10 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         logChildOutput(True);
     }
 
+    private static *bool isSocketClosedError(hash<ExceptionInfo> ex) {
+        return ex.err == "SOCKET-NOT-OPEN" || ex.err == "SOCKET-CLOSED" || ex.err == "EPIPE" || ex.desc =~ /EPIPE/;
+    }
+
     #! Starts the child process
     private startChildProcess() {
         checkStartMasterListener();
@@ -629,6 +732,28 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         hash<auto> env = ENV + {
             "TS_PROXY_PROCESS_KEY": uh,
         };
+        timeout startup_timeout = 20s;
+        @debug {
+            *string send_error = getenv("TS_PROXY_TEST_FORCE_SEND_ERROR");
+            if (send_error.val()) {
+                env.TS_PROXY_TEST_FORCE_SEND_ERROR = send_error;
+            }
+            *string start_send_error = getenv("TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP");
+            if (start_send_error && start_send_error.val()) {
+                env.TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP = start_send_error;
+            }
+            *string startup_timeout_ms = getenv("TS_PROXY_TEST_STARTUP_TIMEOUT_MS");
+            if (startup_timeout_ms && startup_timeout_ms.val()) {
+                try {
+                    int ms = startup_timeout_ms.toInt();
+                    if (ms > 0) {
+                        startup_timeout = ms * 1ms;
+                    }
+                } catch (hash<ExceptionInfo> ex) {
+                    # ignore invalid value
+                }
+            }
+        }
         proc = new Process("ts-proxy", args, {
             "env": env,
             "close_fds": True,
@@ -651,7 +776,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                         rethrow;
                     }
                     date d = now_us() - start;
-                    if (d >= 20s || !proc.running()) {
+                    if (d >= startup_timeout || !proc.running()) {
                         rethrow "CHILD-ERROR", sprintf("Timeout (%y) waiting for startup message from child "
                             "process: %s", d, get_exception_string(ex));
                     }
@@ -665,9 +790,6 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         s = h.socket;
         logChildOutput();
         info("Child process ready");
-        #if (start_listener) {
-        #    startListener();
-        #}
     }
 
     static private checkStartMasterListener() {
@@ -675,6 +797,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         on_exit global_lock.unlock();
 
         if (master_path.val()) {
+            @assert(master);
             return;
         }
 
@@ -687,6 +810,15 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
         on_error remove master_path, remove master;
 
+        # delete the socket file if it exsts
+        if (hstat(master_path) && unlink(master_path)) {
+            throw "TS-PROXY-ERROR", sprintf("%s: %s; cannot bind master proxy listener", master_path, strerror());
+        }
+
+        if (!master) {
+            master = new Socket();
+        }
+        @assert(master);
         master.bindUNIX(master_path);
         master.listen();
         TSAI::info("Started master listener on %y", master_path);
@@ -713,6 +845,19 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     #! Sends a command from the parent to the child with a response
     private auto sendCommandArgs(*date io_timeout, string cmd, *softlist<auto> args,
             date response_timeout = DefaultRequestTimeout, *bool no_restart_event) {
+        @debug {
+            *string response_timeout_ms = getenv("TS_PROXY_TEST_RESPONSE_TIMEOUT_MS");
+            if (response_timeout_ms && response_timeout_ms.val()) {
+                try {
+                    int ms = response_timeout_ms.toInt();
+                    if (ms > 0) {
+                        response_timeout = ms * 1ms;
+                    }
+                } catch (hash<ExceptionInfo> ex) {
+                    # ignore invalid value
+                }
+            }
+        }
         string yaml = makeSend(cmd, {"args": args});
         hash<auto> h;
         RetryCounter rc();
@@ -728,7 +873,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 if (!yaml.val()) {
                     yaml = makeSend(cmd, {"args": args});
                 }
-                debug("Sending command %y", yaml);
+                debug("Sending command %y", LoggerUtil::getArgSummary(yaml));
                 sendString(yaml);
                 on_exit remove command_in_progress;
                 h = waitForResponse(response_timeout);
@@ -855,21 +1000,33 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                     return;
                 }
                 error("Child process aborted; restarting");
+                @assert(proc);
+                @debug("JavaScriptProgramProxy::checkRestart() detected dead child; restarting PID %d", proc.id());
                 if (rc) {
                     rc.restart();
                 }
+                bool restarted;
                 restarting = True;
                 delete al;
 
-                # run the restart unlocked
-                restartProcessIntern(restart_flags & RF_NO_EVENT ? True : False);
+                try {
+                    # run the restart unlocked
+                    @debug("JavaScriptProgramProxy::checkRestart() restart begin for PID %d", proc.id());
+                    restartProcessIntern(restart_flags & RF_NO_EVENT ? True : False);
+                    restarted = True;
+                    @debug("JavaScriptProgramProxy::checkRestart() restart complete for PID %d", proc.id());
+                } catch (hash<ExceptionInfo> ex) {
+                    @debug("JavaScriptProgramProxy::checkRestart() restart failed for PID %d: %s",
+                        proc.id(), get_exception_string(ex));
+                    error("Error restarting child process: %s", get_exception_string(ex));
+                }
 
                 al = new AutoLock(m);
                 remove restarting;
                 if (wait_restart) {
                     cond_restart.broadcast();
                 }
-                return True;
+                return restarted ? True : False;
             }
         }
         return;
@@ -877,8 +1034,17 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
     # Called with no locks held
     private restartProcessIntern(*bool no_restart_event) {
+        @debug {
+            if (ENV.TS_PROXY_TEST_FORCE_RESTART_ERROR) {
+                throw "TS-PROXY-TEST-ERROR", "Forced restart error for testing";
+            }
+        }
+        @assert(proc);
         int pid = proc.id();
         if (proc.running()) {
+            @debug {
+                info("restartProcessIntern(): terminating child PID %d", pid);
+            }
             proc.terminate();
         }
         delete s;
@@ -895,16 +1061,20 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
 
         *hash<EventSourceInfo> event;
+        *string search_id;
         {
             global_lock.lock();
             on_exit global_lock.unlock();
 
             event = self.event;
+            search_id = remove self.search_id;
         }
 
         if (event) {
             info("Restarting event listener for @%s/%s %y", event.app, event.action, event.key);
-            setupEventSourceLockedIntern();
+            setupEventSourceIntern();
+        } else if (search_id.val()) {
+            info("Search %y aborted", search_id);
         }
     }
 
@@ -926,7 +1096,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             str = pfx + str;
             str = replace(str, "\n", "\n" + pfx);
             error("Child error output follows:\n%s", str);
-            rv."stdout" = str;
+            rv."stderr" = str;
         }
         if (always_output && !rv) {
             info("child has no output");
@@ -1000,7 +1170,7 @@ class RetryCounter {
         TSAI::error("Not retrying cmd: %y args: %y that has failed %d times", command_in_progress.cmd,
             command_in_progress.args, MaxRetries);
 %else
-        if (command_in_progress.out =~ /EPIPE/) {
+        if (ex.desc =~ /EPIPE/) {
             return True;
         }
         return False;

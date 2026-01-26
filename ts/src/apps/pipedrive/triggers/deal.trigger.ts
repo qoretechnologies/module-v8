@@ -118,7 +118,7 @@ export const pipedriveDealDataType = {
         type: 'string',
       },
       is_archived: {
-        type: 'boolean',
+        type: 'bool',
       },
       archive_time: {
         type: 'string',

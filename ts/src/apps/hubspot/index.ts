@@ -1,18 +1,30 @@
-import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
-import { actionsCatalogue } from '../../ActionsCatalogue';
+import { TQoreAppWithActions, TQoreRecordBasedApp } from '@qoretechnologies/ts-toolkit';
+import { getOauth2ClientSecret } from '../../utils/oauth2-client-secret';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
-import { HUBSPOT_APP_NAME } from './constants';
 import { HUBSPOT_COMPANIES_ACTIONS } from './allowed-paths/companies';
 import { HUBSPOT_CONTACTS_ACTIONS } from './allowed-paths/contacts';
 import { HUBSPOT_CUSTOM_OBJECTS_ACTIONS } from './allowed-paths/custom-objects';
 import { HUBSPOT_DEALS_ACTIONS } from './allowed-paths/deals';
 import { HUBSPOT_LEADS_ACTIONS } from './allowed-paths/leads';
+import { HUBSPOT_LISTS_ACTIONS } from './allowed-paths/lists';
 import { HUBSPOT_PRODUCTS_ACTIONS } from './allowed-paths/products';
 import { HUBSPOT_TICKETS_ACTIONS } from './allowed-paths/tickets';
 import { HUBSPOT_USERS_ACTIONS } from './allowed-paths/users';
+import { HUBSPOT_APP_NAME } from './constants';
 import * as HUBSPOT_TRIGGERS from './triggers';
+import * as HUBSPOT_ACTIONS from './actions';
+import { HubspotSearchOptions } from './helpers/record-based/get-search-options';
+import { getHubspotExpressions } from './helpers/record-based/get-expressions';
+import { getHubspotRecordType } from './helpers/record-based/get-record-type';
+import { getHubspotTableList } from './helpers/record-based/get-table-list';
+import { HubspotUpsertOptions } from './helpers/record-based/get-upsert-options';
+import { searchHubspotRecords } from './helpers/record-based/search-records';
+import { createHubspotRecords } from './helpers/record-based/create-records';
+import { updateHubspotRecords } from './helpers/record-based/update-records';
+import { deleteHubspotRecords } from './helpers/record-based/delete-records';
+import { upsertHubspotRecords } from './helpers/record-based/upsert-records';
 
 export default (locale: Locales) =>
   ({
@@ -50,6 +62,8 @@ export default (locale: Locales) =>
       ...mapActionsToApp(HUBSPOT_APP_NAME, HUBSPOT_PRODUCTS_ACTIONS, locale),
       ...mapActionsToApp(HUBSPOT_APP_NAME, HUBSPOT_TICKETS_ACTIONS, locale),
       ...mapActionsToApp(HUBSPOT_APP_NAME, HUBSPOT_USERS_ACTIONS, locale),
+      ...mapActionsToApp(HUBSPOT_APP_NAME, HUBSPOT_LISTS_ACTIONS, locale),
+      ...mapActionsToApp(HUBSPOT_APP_NAME, HUBSPOT_ACTIONS, locale),
       ...mapTriggersToApp(HUBSPOT_APP_NAME, HUBSPOT_TRIGGERS, locale),
     ],
     rest: {
@@ -57,7 +71,7 @@ export default (locale: Locales) =>
       data: 'json',
       oauth2_grant_type: 'authorization_code',
       oauth2_client_id: '483b815d-b266-46c0-8dd5-c84bdb6c1331',
-      oauth2_client_secret: actionsCatalogue.getOauth2ClientSecret(HUBSPOT_APP_NAME),
+      oauth2_client_secret: getOauth2ClientSecret(HUBSPOT_APP_NAME),
       oauth2_auth_url: 'https://app.hubspot.com/oauth/authorize',
       oauth2_token_url: 'https://api.hubapi.com/oauth/v1/token',
       oauth2_scopes: [
@@ -81,6 +95,8 @@ export default (locale: Locales) =>
         'crm.objects.leads.write',
         'crm.objects.users.read',
         'crm.objects.users.write',
+        'crm.lists.read',
+        'crm.lists.write',
       ],
       ping_method: 'GET',
       ping_path: '/integrations/v1/me',
@@ -113,5 +129,18 @@ export default (locale: Locales) =>
       users: {
         swagger: 'schemas/hubspot/users.swagger.json',
       },
+      lists: {
+        swagger: 'schemas/hubspot/lists.swagger.json',
+      },
     },
-  }) satisfies TQoreAppWithActions;
+    search_options: HubspotSearchOptions,
+    upsert_options: HubspotUpsertOptions,
+    expressions: getHubspotExpressions(locale),
+    get_record_type: getHubspotRecordType,
+    get_table_list: getHubspotTableList,
+    search_records: searchHubspotRecords,
+    create_records: createHubspotRecords,
+    update_records: updateHubspotRecords,
+    delete_records: deleteHubspotRecords,
+    upsert_records: upsertHubspotRecords,
+  }) satisfies TQoreAppWithActions & TQoreRecordBasedApp;

@@ -95,7 +95,7 @@ const options = {
     ],
   },
   saveToSentItems: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
     default_value: true,
   },
@@ -110,12 +110,12 @@ const options = {
 const response_type = {
   type: 'hash',
   fields: {
-    success: { type: 'boolean' },
+    success: { type: 'bool' },
     message: { type: 'string' },
   },
 } satisfies TQoreResponseType;
 
-export const SendOutlookEmail = QoreAppCreator.createLocalizedAction<typeof options>({
+const SendOutlookEmail = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'send-email',
   app: OUTLOOK_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -187,3 +187,5 @@ export const SendOutlookEmail = QoreAppCreator.createLocalizedAction<typeof opti
   options,
   response_type,
 });
+
+export default SendOutlookEmail;

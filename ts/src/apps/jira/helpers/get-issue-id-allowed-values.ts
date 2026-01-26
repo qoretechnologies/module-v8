@@ -5,7 +5,7 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { delay } from '../../../global/helpers';
 import { Debugger } from '../../../utils/Debugger';
-import { JIRA_CONN_OPTIONS } from '../constants';
+import { JIRA_CONN_OPTIONS } from '../conn-options';
 import { JIRA_ALLOWED_VALUES_FETCH_DELAY, JIRA_ALLOWED_VALUES_TIMEOUT } from './constants';
 
 const fetchJiraIssues = async ({
@@ -50,11 +50,11 @@ const mapJiraIssue = (issue: {
   key: any;
 }): IQoreAllowedValue => ({
   value: issue.id,
-  display_name: issue?.fields?.summary,
+  display_name: issue.fields?.summary,
   desc:
-    `Key: ${issue.key}\n\nId: ${issue.id}\n\nType: ${issue?.fields?.issuetype?.name}\n\n` +
-    `Project: ${issue?.fields?.project?.name}\n\nStatus: ${issue?.fields?.status?.name}\n\n` +
-    `Priority: ${issue?.fields?.priority?.name}\n\nAssignee: ${issue?.fields?.assignee?.displayName}\n\n`,
+    `Key: ${issue.key}\n\nId: ${issue.id}\n\nType: ${issue.fields?.issuetype?.name}\n\n` +
+    `Project: ${issue.fields?.project?.name}\n\nStatus: ${issue.fields?.status?.name}\n\n` +
+    `Priority: ${issue.fields?.priority?.name}\n\nAssignee: ${issue.fields?.assignee?.displayName}\n\n`,
 });
 
 export const getJiraIssueIdAllowedValues: TQoreGetAllowedValuesFunction<

@@ -59,7 +59,7 @@ const options = {
     required: false,
   },
   isOnlineMeeting: {
-    type: 'boolean',
+    type: 'bool',
     required: false,
   },
   timeZone: {
@@ -89,7 +89,7 @@ const response_type = {
       },
     },
     success: {
-      type: 'boolean',
+      type: 'bool',
     },
     error: {
       type: 'string',
@@ -97,7 +97,7 @@ const response_type = {
   },
 } satisfies TQoreResponseType;
 
-export const UpdateTeamsMeeting = QoreAppCreator.createLocalizedAction<typeof options>({
+const UpdateTeamsMeeting = QoreAppCreator.createLocalizedAction<typeof options>({
   action: 'update-meeting',
   app: TEAMS_APP_NAME,
   action_code: EQoreAppActionCode.ACTION,
@@ -111,7 +111,7 @@ export const UpdateTeamsMeeting = QoreAppCreator.createLocalizedAction<typeof op
     const channelId = data?.channelId;
     const content = data?.content;
     const location = data?.location;
-    const attendees = data?.attendees as string[] | undefined;
+    const attendees = data?.attendees;
     const isOnlineMeeting = data?.isOnlineMeeting;
     const timeZone = data?.timeZone;
 
@@ -229,3 +229,5 @@ export const UpdateTeamsMeeting = QoreAppCreator.createLocalizedAction<typeof op
   options,
   response_type,
 });
+
+export default UpdateTeamsMeeting;

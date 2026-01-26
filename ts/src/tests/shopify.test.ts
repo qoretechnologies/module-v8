@@ -1,16 +1,18 @@
 import { IQoreAppActionWithFunction } from '@qoretechnologies/ts-toolkit';
-import { AddLineItemToShopifyOrder } from '../apps/shopify/actions/add-line-item-to-order';
-import { AddTagToShopifyCustomer } from '../apps/shopify/actions/add-tag-to-customer';
-import { CreateShopifyBlogEntry } from '../apps/shopify/actions/create-blog-entry';
-import { CreateShopifyCompany } from '../apps/shopify/actions/create-company';
-import { CreateShopifyCustomer } from '../apps/shopify/actions/create-customer';
-import { CreateShopifyDraftOrder } from '../apps/shopify/actions/create-draft-order';
-import { CreateShopifyFulfillment } from '../apps/shopify/actions/create-fulfillment';
-import { CreateShopifyGiftCard } from '../apps/shopify/actions/create-gift-card';
-import { FindShopifyCustomer } from '../apps/shopify/actions/find-customer';
-import { FindShopifyOrder } from '../apps/shopify/actions/find-order';
-import { FindShopifyProduct } from '../apps/shopify/actions/find-product';
-import { FindShopifyVariant } from '../apps/shopify/actions/find-variant';
+import {
+  AddLineItemToShopifyOrder,
+  AddTagToShopifyCustomer,
+  CreateShopifyBlogEntry,
+  CreateShopifyCompany,
+  CreateShopifyCustomer,
+  CreateShopifyDraftOrder,
+  CreateShopifyFulfillment,
+  CreateShopifyGiftCard,
+  FindShopifyCustomer,
+  FindShopifyOrder,
+  FindShopifyProduct,
+  FindShopifyVariant,
+} from '../apps/shopify/actions';
 import { getShopifyBlogIdAllowedValues } from '../apps/shopify/helpers/get-blog-id-allowed-values';
 import { getShopifyCurrencyAllowedValues } from '../apps/shopify/helpers/get-currency-allowed-values';
 import { getShopifyCustomerIdAllowedValues } from '../apps/shopify/helpers/get-customer-id-allowed-values';
@@ -21,11 +23,13 @@ import { getShopifyLocationIdAllowedValues } from '../apps/shopify/helpers/get-l
 import { getShopifyOrderIdAllowedValues } from '../apps/shopify/helpers/get-order-id-allowed-values';
 import { getShopifyParentTransactionIdAllowedValues } from '../apps/shopify/helpers/get-parent-transaction-id-allowed-values';
 import { getShopifyProductVariantIdAllowedValues } from '../apps/shopify/helpers/get-product-variant-id-allowed-values';
+import { getShopifyProductIdAllowedValues } from '../apps/shopify/helpers/get-shopify-product-id-allowed-values';
 import { getShopifyTaxExemptionsAllowedValues } from '../apps/shopify/helpers/get-tax-exemptions-allowed-values';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import { getShopifyProductIdAllowedValues } from '../apps/shopify/helpers/get-shopify-product-id-allowed-values';
+import { configDotenv } from 'dotenv';
 
 Debugger.level = DebugLevels.Verbose;
+configDotenv({ path: '.env' });
 
 describe('Should test Shopify integration', () => {
   const shopifyShop = process.env.SHOPIFY_SHOP;
@@ -40,8 +44,6 @@ describe('Should test Shopify integration', () => {
   let orderId: string;
   let currency: string;
   let fulfillmentOrderId: string;
-  let fulfillmentOrderLineItemId: string;
-  let locationId: string;
 
   beforeAll(() => {
     if (!shopifyShop || !shopifyAccessToken) {
@@ -92,7 +94,6 @@ describe('Should test Shopify integration', () => {
 
       if (allowed_values.length > 0) {
         fulfillmentOrderId = allowed_values[0].value;
-        console.log(`Using fulfillment order ID: ${fulfillmentOrderId}`);
       } else {
         console.warn(
           'No fulfillment orders found in store.' +
@@ -114,16 +115,6 @@ describe('Should test Shopify integration', () => {
 
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);
-
-      if (allowed_values.length > 0) {
-        fulfillmentOrderLineItemId = allowed_values[0].value;
-        console.log(`Using fulfillment order line item ID: ${fulfillmentOrderLineItemId}`);
-      } else {
-        console.warn(
-          'No fulfillment order line items found in store.' +
-            'Create at least one fulfillment order line item in your Shopify admin to run the action tests.'
-        );
-      }
     });
 
     it('Should get Shopify tax exemptions allowed values', async () => {
@@ -163,7 +154,6 @@ describe('Should test Shopify integration', () => {
 
       if (allowed_values.length > 0) {
         currency = allowed_values[0].value;
-        console.log(`Using currency: ${currency}`);
       } else {
         console.warn(
           'No currencies found in store. Create at least one currency in your Shopify admin to run the action tests.'
@@ -181,15 +171,6 @@ describe('Should test Shopify integration', () => {
 
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);
-
-      if (allowed_values.length > 0) {
-        locationId = allowed_values[0].value;
-        console.log(`Using location ID: ${locationId}`);
-      } else {
-        console.warn(
-          'No locations found in store. Create at least one location in your Shopify admin to run the action tests.'
-        );
-      }
     });
 
     it('Should get Shopify customer IDs allowed values', async () => {
@@ -204,7 +185,6 @@ describe('Should test Shopify integration', () => {
 
       if (allowed_values.length > 0) {
         customerId = allowed_values[0].value;
-        console.log(`Using customer ID: ${customerId}`);
       } else {
         console.warn(
           'No customers found in store. Create at least one customer in your Shopify admin to run the action tests.'
@@ -224,7 +204,6 @@ describe('Should test Shopify integration', () => {
 
       if (allowed_values.length > 0) {
         blogId = allowed_values[0].value;
-        console.log(`Using blog ID: ${blogId}`);
       } else {
         console.warn(
           'No blogs found in store. Create at least one blog in your Shopify admin to run the action tests.'
@@ -244,7 +223,6 @@ describe('Should test Shopify integration', () => {
 
       if (allowed_values.length > 0) {
         orderId = allowed_values.at(-1)!.value;
-        console.log(`Using order ID: ${orderId}`);
       } else {
         console.warn(
           'No orders found in store. Create at least one order in your Shopify admin to run the action tests.'
@@ -264,7 +242,6 @@ describe('Should test Shopify integration', () => {
 
       if (allowed_values.length > 0) {
         variantId = allowed_values[0].value;
-        console.log(`Using product variant ID: ${variantId}`);
       } else {
         console.warn(
           'No product variants found in store. Create at least one product to run the action tests.'
@@ -444,7 +421,6 @@ describe('Should test Shopify integration', () => {
 
           if (allowed_values.length > 0) {
             fulfillmentOrderId = allowed_values[0].value;
-            console.log(`Using fulfillment order ID: ${fulfillmentOrderId}`);
           }
         });
 
