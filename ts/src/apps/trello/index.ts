@@ -1,4 +1,8 @@
-import { IQoreRestConnectionModifiers, TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import {
+  IQoreRestConnectionModifiers,
+  TQoreAppWithActions,
+  TQoreRecordBasedApp,
+} from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
@@ -7,9 +11,18 @@ import {
   TRELLO_APP_LOGO,
   TRELLO_APP_NAME,
   TRELLO_CONN_OPTIONS,
-  TRELLO_KEY,
 } from './constants';
 import * as TRELLO_TRIGGERS from './triggers';
+
+// Record-based helpers
+import { createTrelloRecords } from './helpers/record-based/create-records';
+import { deleteTrelloRecords } from './helpers/record-based/delete-records';
+import { getTrelloExpressions } from './helpers/record-based/get-expressions';
+import { getTrelloRecordType } from './helpers/record-based/get-record-type';
+import { TrelloSearchOptions } from './helpers/record-based/get-search-options';
+import { getTrelloTableList } from './helpers/record-based/get-table-list';
+import { searchTrelloRecords } from './helpers/record-based/search-records';
+import { updateTrelloRecords } from './helpers/record-based/update-records';
 
 const setOptionsPostAuth: IQoreRestConnectionModifiers['set_options_post_auth'] = (context) => {
   const token = context?.conn_opts?.token;
@@ -46,16 +59,16 @@ export default (locale: Locales) =>
     rest: {
       url: 'https://api.trello.com',
       data: 'json',
-      oauth2_grant_type: 'authorization_code',
+      oauth2_grant_type: 'implicit',
       oauth2_auth_url: 'https://trello.com/1/OAuthAuthorizeToken',
-      oauth2_token_url: 'https://trello.com/1/OAuthGetAccessToken',
       oauth2_auth_args: {
         expiration: 'never',
         callback_method: 'fragment',
         scope: 'read,write',
-        key: TRELLO_KEY,
+        // Use template variable - will be substituted with oauth2_client_id value from cloud
+        key: '{{oauth2_client_id}}',
       },
-      oauth2_client_id: TRELLO_KEY,
+      // oauth2_client_id not set here - comes from cloud configuration (like Slack)
       oauth2_client_secret: 'x',
       oauth2_scopes: ['read', 'write'],
       ping_method: 'GET',
@@ -72,4 +85,14 @@ export default (locale: Locales) =>
       set_options_post_auth_code: setOptionsPostAuth,
       options: TRELLO_CONN_OPTIONS,
     },
-  }) satisfies TQoreAppWithActions;
+
+    // Record-based helpers
+    get_table_list: getTrelloTableList,
+    expressions: getTrelloExpressions(locale),
+    get_record_type: getTrelloRecordType,
+    search_records: searchTrelloRecords,
+    search_options: TrelloSearchOptions,
+    create_records: createTrelloRecords,
+    update_records: updateTrelloRecords,
+    delete_records: deleteTrelloRecords,
+  }) satisfies TQoreRecordBasedApp & TQoreAppWithActions;
