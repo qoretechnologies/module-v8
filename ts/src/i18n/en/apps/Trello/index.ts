@@ -43,14 +43,6 @@ const TrelloAppEn = {
       shortDesc: 'Triggers when a new board is created.',
       longDesc:
         'This trigger fires when a new Trello board is created or shared with the authenticated user.',
-      options: {
-        includeOrganizationInfo: {
-          displayName: 'Include Organization Info',
-          shortDesc: 'Include organization name and details.',
-          longDesc:
-            'When enabled, the trigger will include additional information about the organization the board belongs to.',
-        },
-      },
     },
     'new-card': {
       displayName: 'New Card',
@@ -121,12 +113,6 @@ const TrelloAppEn = {
           longDesc:
             'Select the Trello board where you want to monitor for new members being added.',
         },
-        includeAllFields: {
-          displayName: 'Include All Fields',
-          shortDesc: 'Include all available member information.',
-          longDesc:
-            'When enabled, the trigger will fetch all available fields for each member, providing more comprehensive information.',
-        },
       },
     },
   },
@@ -159,7 +145,8 @@ const TrelloAppEn = {
     '>=': {
       displayName: 'Greater Than or Equal',
       shortDesc: 'Field is greater than or equal to value',
-      longDesc: 'Matches records where the field value is greater than or equal to the specified value',
+      longDesc:
+        'Matches records where the field value is greater than or equal to the specified value',
     },
     '<': {
       displayName: 'Less Than',
@@ -169,7 +156,8 @@ const TrelloAppEn = {
     '<=': {
       displayName: 'Less Than or Equal',
       shortDesc: 'Field is less than or equal to value',
-      longDesc: 'Matches records where the field value is less than or equal to the specified value',
+      longDesc:
+        'Matches records where the field value is less than or equal to the specified value',
     },
     'is-set': {
       displayName: 'Is Set',

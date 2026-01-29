@@ -37,7 +37,9 @@ export const fetchTrelloData = async <DataType = unknown>(
 
     return responseData;
   } catch (error) {
-    throw new TrelloError(`Failed to fetch data for ${path}: ${error}`);
+    throw new TrelloError(
+      `Failed to fetch data for ${path}: ${error?.message || JSON.stringify(error)}`
+    );
   }
 };
 
@@ -57,6 +59,8 @@ export const getTrelloAllowedValues = async <ItemType, TAllowedValue>(
 
     return allowedValues;
   } catch (error) {
-    throw new TrelloError(`Failed to get Trello allowed values for ${path}: ${error}`);
+    throw new TrelloError(
+      `Failed to get Trello allowed values for ${path}: ${error?.message || JSON.stringify(error)}`
+    );
   }
 };

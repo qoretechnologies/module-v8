@@ -91355,22 +91355,6 @@ type RootTranslation = {
 					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​T​r​e​l​l​o​ ​b​o​a​r​d​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​s​h​a​r​e​d​ ​w​i​t​h​ ​t​h​e​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​u​s​e​r​.
 					 */
 					longDesc: string
-					options: {
-						includeOrganizationInfo: {
-							/**
-							 * I​n​c​l​u​d​e​ ​O​r​g​a​n​i​z​a​t​i​o​n​ ​I​n​f​o
-							 */
-							displayName: string
-							/**
-							 * I​n​c​l​u​d​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​n​a​m​e​ ​a​n​d​ ​d​e​t​a​i​l​s​.
-							 */
-							shortDesc: string
-							/**
-							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​i​n​c​l​u​d​e​ ​a​d​d​i​t​i​o​n​a​l​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​t​h​e​ ​b​o​a​r​d​ ​b​e​l​o​n​g​s​ ​t​o​.
-							 */
-							longDesc: string
-						}
-					}
 				}
 				'new-card': {
 					/**
@@ -91529,20 +91513,6 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * S​e​l​e​c​t​ ​t​h​e​ ​T​r​e​l​l​o​ ​b​o​a​r​d​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​e​m​b​e​r​s​ ​b​e​i​n​g​ ​a​d​d​e​d​.
-							 */
-							longDesc: string
-						}
-						includeAllFields: {
-							/**
-							 * I​n​c​l​u​d​e​ ​A​l​l​ ​F​i​e​l​d​s
-							 */
-							displayName: string
-							/**
-							 * I​n​c​l​u​d​e​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​m​e​m​b​e​r​ ​i​n​f​o​r​m​a​t​i​o​n​.
-							 */
-							shortDesc: string
-							/**
-							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​f​e​t​c​h​ ​a​l​l​ ​a​v​a​i​l​a​b​l​e​ ​f​i​e​l​d​s​ ​f​o​r​ ​e​a​c​h​ ​m​e​m​b​e​r​,​ ​p​r​o​v​i​d​i​n​g​ ​m​o​r​e​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​i​n​f​o​r​m​a​t​i​o​n​.
 							 */
 							longDesc: string
 						}
@@ -214436,22 +214406,6 @@ export type TranslationFunctions = {
 					 * This trigger fires when a new Trello board is created or shared with the authenticated user.
 					 */
 					longDesc: () => LocalizedString
-					options: {
-						includeOrganizationInfo: {
-							/**
-							 * Include Organization Info
-							 */
-							displayName: () => LocalizedString
-							/**
-							 * Include organization name and details.
-							 */
-							shortDesc: () => LocalizedString
-							/**
-							 * When enabled, the trigger will include additional information about the organization the board belongs to.
-							 */
-							longDesc: () => LocalizedString
-						}
-					}
 				}
 				'new-card': {
 					/**
@@ -214610,20 +214564,6 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Select the Trello board where you want to monitor for new members being added.
-							 */
-							longDesc: () => LocalizedString
-						}
-						includeAllFields: {
-							/**
-							 * Include All Fields
-							 */
-							displayName: () => LocalizedString
-							/**
-							 * Include all available member information.
-							 */
-							shortDesc: () => LocalizedString
-							/**
-							 * When enabled, the trigger will fetch all available fields for each member, providing more comprehensive information.
 							 */
 							longDesc: () => LocalizedString
 						}

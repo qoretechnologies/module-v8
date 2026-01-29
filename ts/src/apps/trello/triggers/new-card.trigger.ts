@@ -101,6 +101,7 @@ const options = {
   listId: {
     type: 'string',
     required: false,
+    depends_on: ['boardId', 'source'],
     get_allowed_values: getTrelloBoardListsIdAllowedValues,
   },
 } satisfies TQoreOptions;
