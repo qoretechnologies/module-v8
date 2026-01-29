@@ -61,6 +61,8 @@ export default (locale: Locales) =>
       data: 'json',
       oauth2_grant_type: 'implicit',
       oauth2_auth_url: 'https://trello.com/1/OAuthAuthorizeToken',
+      // Trello doesn't pass through the state parameter, so embed it in redirect_uri
+      oauth2_redirect_passthrough_state: false,
       oauth2_auth_args: {
         expiration: 'never',
         callback_method: 'fragment',
