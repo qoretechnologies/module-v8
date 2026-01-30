@@ -33,6 +33,6 @@ export default (locale: Locales) =>
         prompt: 'consent',
       },
       ping_method: 'GET',
-      ping_path: '/oauth2/v3/userinfo',
+      ping_path: '/v1beta/accounts',
     },
   }) satisfies TQoreAppWithActions;
