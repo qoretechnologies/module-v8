@@ -16,7 +16,7 @@ export default (locale: Locales) =>
     logo_mime_type: 'image/svg+xml',
     actions: [...mapActionsToApp(GOOGLE_ANALYTICS_APP_NAME, GOOGLE_ANALYTICS_ACTIONS, locale)],
     rest: {
-      url: 'https://analyticsdata.googleapis.com',
+      url: 'https://www.googleapis.com',
       data: 'json',
       oauth2_grant_type: 'authorization_code',
       oauth2_auth_url: 'https://accounts.google.com/o/oauth2/v2/auth',
@@ -33,6 +33,6 @@ export default (locale: Locales) =>
         prompt: 'consent',
       },
       ping_method: 'GET',
-      ping_path: '/v1beta/accounts',
+      ping_path: '/oauth2/v3/userinfo',
     },
   }) satisfies TQoreAppWithActions;
