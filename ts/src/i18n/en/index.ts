@@ -25,6 +25,8 @@ import Canva from './apps/Canva';
 import Claude from './apps/Claude';
 import ClickUp from './apps/ClickUp';
 import Confluence from './apps/Confluence';
+import CopperCrm from './apps/CopperCrm';
+import Craft from './apps/Craft';
 import DocusignESignature from './apps/DocusignESignature';
 import Dropbox from './apps/Dropbox';
 import Dynamics from './apps/Dynamics';
@@ -73,17 +75,21 @@ import Pipedrive from './apps/Pipedrive';
 import Pushover from './apps/Pushover';
 import Quickbooks from './apps/Quickbooks';
 import Salesforce from './apps/Salesforce';
+import SeaTable from './apps/SeaTable';
+import SendGrid from './apps/SendGrid';
 import Sentry from './apps/Sentry';
 import Serenity from './apps/Serenity';
 import SharePoint from './apps/SharePoint';
 import Shopify from './apps/Shopify';
+import Slack from './apps/Slack';
 import Stripe from './apps/Stripe';
 import Supabase from './apps/Supabase';
+import SurveyMonkey from './apps/SurveyMonkey';
 import Teams from './apps/Teams';
 import Telegram from './apps/Telegram';
-import Twilio from './apps/Twilio';
-import SendGrid from './apps/SendGrid';
 import Todoist from './apps/Todoist';
+import Trello from './apps/Trello';
+import Twilio from './apps/Twilio';
 import Typeform from './apps/Typeform';
 import Webflow from './apps/Webflow';
 import Xero from './apps/Xero';
@@ -91,11 +97,6 @@ import YouTube from './apps/YouTube';
 import Zendesk from './apps/Zendesk';
 import ZohoCRM from './apps/ZohoCRM';
 import Zoom from './apps/Zoom';
-import CopperCrm from './apps/CopperCrm';
-import Craft from './apps/Craft';
-import Slack from './apps/Slack';
-import SurveyMonkey from './apps/SurveyMonkey';
-import SeaTable from './apps/SeaTable';
 
 const en = {
   common: {},
@@ -170,6 +171,7 @@ const en = {
     SharePoint,
     Klaviyo,
     Outlook,
+    Trello,
     Teams,
     Serenity,
     Pipedrive,

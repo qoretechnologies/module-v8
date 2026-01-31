@@ -112,6 +112,7 @@ import dropbox from '../apps/dropbox';
 import front from '../apps/front';
 import slack from '../apps/slack';
 import surveyMonkey from '../apps/survey-monkey';
+import trello from '../apps/trello';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -207,6 +208,7 @@ const NEW_APPS = {
   teams,
   telegram,
   todoist,
+  trello,
   twilio,
   typeform,
   webflow,

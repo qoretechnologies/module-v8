@@ -91250,6 +91250,432 @@ type RootTranslation = {
 				}
 			}
 		}
+		Trello: {
+			groups: {
+				/**
+				 * P​r​o​j​e​c​t​ ​&​ ​T​a​s​k​ ​M​a​n​a​g​e​m​e​n​t
+				 */
+				'0': string
+			}
+			/**
+			 * T​r​e​l​l​o
+			 */
+			displayName: string
+			/**
+			 * T​r​e​l​l​o​ ​i​s​ ​a​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​ ​t​o​o​l​ ​t​h​a​t​ ​o​r​g​a​n​i​z​e​s​ ​y​o​u​r​ ​p​r​o​j​e​c​t​s​ ​i​n​t​o​ ​b​o​a​r​d​s​.
+			 */
+			shortDesc: string
+			/**
+			 * T​r​e​l​l​o​ ​i​s​ ​a​ ​c​o​l​l​a​b​o​r​a​t​i​o​n​ ​t​o​o​l​ ​t​h​a​t​ ​o​r​g​a​n​i​z​e​s​ ​y​o​u​r​ ​p​r​o​j​e​c​t​s​ ​i​n​t​o​ ​b​o​a​r​d​s​.​ ​I​t​ ​i​s​ ​a​ ​w​e​b​-​b​a​s​e​d​ ​K​a​n​b​a​n​-​s​t​y​l​e​ ​l​i​s​t​-​m​a​k​i​n​g​ ​a​p​p​l​i​c​a​t​i​o​n​ ​a​n​d​ ​i​s​ ​a​ ​s​u​b​s​i​d​i​a​r​y​ ​o​f​ ​A​t​l​a​s​s​i​a​n​.
+			 */
+			longDesc: string
+			triggers: {
+				'card-due': {
+					/**
+					 * C​a​r​d​ ​D​u​e
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​c​a​r​d​ ​b​e​c​o​m​e​s​ ​o​v​e​r​d​u​e​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​c​a​r​d​ ​h​a​s​ ​p​a​s​s​e​d​ ​i​t​s​ ​d​u​e​ ​d​a​t​e​ ​a​n​d​ ​h​a​s​ ​n​o​t​ ​b​e​e​n​ ​m​a​r​k​e​d​ ​a​s​ ​c​o​m​p​l​e​t​e​.
+					 */
+					longDesc: string
+					options: {
+						source: {
+							/**
+							 * S​o​u​r​c​e
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​n​ ​e​n​t​i​r​e​ ​b​o​a​r​d​ ​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​"​b​o​a​r​d​"​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​l​i​s​t​s​ ​o​n​ ​a​ ​b​o​a​r​d​,​ ​o​r​ ​"​l​i​s​t​"​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​ ​o​n​l​y​.
+							 */
+							longDesc: string
+						}
+						boardId: {
+							/**
+							 * B​o​a​r​d
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​b​o​a​r​d​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​a​r​d​s​ ​t​o​ ​m​o​n​i​t​o​r​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​T​r​e​l​l​o​ ​b​o​a​r​d​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​c​a​r​d​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​d​u​e​ ​d​a​t​e​s​.
+							 */
+							longDesc: string
+						}
+						listId: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​a​r​d​s​ ​t​o​ ​m​o​n​i​t​o​r​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​o​v​e​r​d​u​e​ ​c​a​r​d​s​.​ ​O​n​l​y​ ​r​e​q​u​i​r​e​d​ ​i​f​ ​S​o​u​r​c​e​ ​i​s​ ​s​e​t​ ​t​o​ ​"​l​i​s​t​"​.
+							 */
+							longDesc: string
+						}
+						includeDueComplete: {
+							/**
+							 * I​n​c​l​u​d​e​ ​C​o​m​p​l​e​t​e​d​ ​C​a​r​d​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​c​a​r​d​s​ ​m​a​r​k​e​d​ ​a​s​ ​c​o​m​p​l​e​t​e​.
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​i​n​c​l​u​d​e​ ​o​v​e​r​d​u​e​ ​c​a​r​d​s​ ​t​h​a​t​ ​h​a​v​e​ ​b​e​e​n​ ​m​a​r​k​e​d​ ​a​s​ ​c​o​m​p​l​e​t​e​.​ ​B​y​ ​d​e​f​a​u​l​t​,​ ​o​n​l​y​ ​i​n​c​o​m​p​l​e​t​e​ ​o​v​e​r​d​u​e​ ​c​a​r​d​s​ ​a​r​e​ ​i​n​c​l​u​d​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-board': {
+					/**
+					 * N​e​w​ ​B​o​a​r​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​b​o​a​r​d​ ​i​s​ ​c​r​e​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​T​r​e​l​l​o​ ​b​o​a​r​d​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​r​ ​s​h​a​r​e​d​ ​w​i​t​h​ ​t​h​e​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​u​s​e​r​.
+					 */
+					longDesc: string
+				}
+				'new-card': {
+					/**
+					 * N​e​w​ ​C​a​r​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​a​r​d​ ​i​s​ ​c​r​e​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​c​a​r​d​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​b​o​a​r​d​ ​o​r​ ​l​i​s​t​ ​i​n​ ​T​r​e​l​l​o​.
+					 */
+					longDesc: string
+					options: {
+						source: {
+							/**
+							 * S​o​u​r​c​e
+							 */
+							displayName: string
+							/**
+							 * C​h​o​o​s​e​ ​w​h​e​t​h​e​r​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​n​ ​e​n​t​i​r​e​ ​b​o​a​r​d​ ​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​"​b​o​a​r​d​"​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​l​i​s​t​s​ ​o​n​ ​a​ ​b​o​a​r​d​,​ ​o​r​ ​"​l​i​s​t​"​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​ ​o​n​l​y​.
+							 */
+							longDesc: string
+						}
+						boardId: {
+							/**
+							 * B​o​a​r​d
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​b​o​a​r​d​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​a​r​d​s​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​T​r​e​l​l​o​ ​b​o​a​r​d​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​a​r​d​s​ ​b​e​i​n​g​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						listId: {
+							/**
+							 * L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​a​r​d​s​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​l​i​s​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​c​a​r​d​s​.​ ​O​n​l​y​ ​r​e​q​u​i​r​e​d​ ​i​f​ ​S​o​u​r​c​e​ ​i​s​ ​s​e​t​ ​t​o​ ​"​l​i​s​t​"​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-label': {
+					/**
+					 * N​e​w​ ​L​a​b​e​l
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​l​a​b​e​l​ ​i​s​ ​c​r​e​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​l​a​b​e​l​ ​i​s​ ​c​r​e​a​t​e​d​ ​o​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​T​r​e​l​l​o​ ​b​o​a​r​d​.
+					 */
+					longDesc: string
+					options: {
+						boardId: {
+							/**
+							 * B​o​a​r​d
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​b​o​a​r​d​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​l​a​b​e​l​s​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​T​r​e​l​l​o​ ​b​o​a​r​d​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​l​a​b​e​l​s​ ​b​e​i​n​g​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-list': {
+					/**
+					 * N​e​w​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​l​i​s​t​ ​i​s​ ​c​r​e​a​t​e​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​l​i​s​t​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​T​r​e​l​l​o​ ​b​o​a​r​d​.
+					 */
+					longDesc: string
+					options: {
+						boardId: {
+							/**
+							 * B​o​a​r​d
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​b​o​a​r​d​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​l​i​s​t​s​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​T​r​e​l​l​o​ ​b​o​a​r​d​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​l​i​s​t​s​ ​b​e​i​n​g​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						includeArchivedLists: {
+							/**
+							 * I​n​c​l​u​d​e​ ​A​r​c​h​i​v​e​d​ ​L​i​s​t​s
+							 */
+							displayName: string
+							/**
+							 * I​n​c​l​u​d​e​ ​l​i​s​t​s​ ​t​h​a​t​ ​a​r​e​ ​a​r​c​h​i​v​e​d​.
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​w​i​l​l​ ​i​n​c​l​u​d​e​ ​n​e​w​ ​l​i​s​t​s​ ​t​h​a​t​ ​a​r​e​ ​a​r​c​h​i​v​e​d​.​ ​B​y​ ​d​e​f​a​u​l​t​,​ ​o​n​l​y​ ​o​p​e​n​ ​l​i​s​t​s​ ​a​r​e​ ​i​n​c​l​u​d​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				'new-member': {
+					/**
+					 * N​e​w​ ​M​e​m​b​e​r
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​m​e​m​b​e​r​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​b​o​a​r​d​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​m​e​m​b​e​r​ ​i​s​ ​a​d​d​e​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​T​r​e​l​l​o​ ​b​o​a​r​d​.
+					 */
+					longDesc: string
+					options: {
+						boardId: {
+							/**
+							 * B​o​a​r​d
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​b​o​a​r​d​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​e​m​b​e​r​s​.
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​T​r​e​l​l​o​ ​b​o​a​r​d​ ​w​h​e​r​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​n​e​w​ ​m​e​m​b​e​r​s​ ​b​e​i​n​g​ ​a​d​d​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			expressions: {
+				'&&': {
+					/**
+					 * A​n​d
+					 */
+					displayName: string
+					/**
+					 * L​o​g​i​c​a​l​ ​A​N​D​ ​o​p​e​r​a​t​o​r
+					 */
+					shortDesc: string
+					/**
+					 * C​o​m​b​i​n​e​s​ ​m​u​l​t​i​p​l​e​ ​c​o​n​d​i​t​i​o​n​s​ ​w​h​e​r​e​ ​a​l​l​ ​m​u​s​t​ ​b​e​ ​t​r​u​e
+					 */
+					longDesc: string
+				}
+				'||': {
+					/**
+					 * O​r
+					 */
+					displayName: string
+					/**
+					 * L​o​g​i​c​a​l​ ​O​R​ ​o​p​e​r​a​t​o​r
+					 */
+					shortDesc: string
+					/**
+					 * C​o​m​b​i​n​e​s​ ​m​u​l​t​i​p​l​e​ ​c​o​n​d​i​t​i​o​n​s​ ​w​h​e​r​e​ ​a​t​ ​l​e​a​s​t​ ​o​n​e​ ​m​u​s​t​ ​b​e​ ​t​r​u​e
+					 */
+					longDesc: string
+				}
+				'==': {
+					/**
+					 * E​q​u​a​l​s
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​e​q​u​a​l​s​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'!=': {
+					/**
+					 * N​o​t​ ​E​q​u​a​l​s
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'>': {
+					/**
+					 * G​r​e​a​t​e​r​ ​T​h​a​n
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'>=': {
+					/**
+					 * G​r​e​a​t​e​r​ ​T​h​a​n​ ​o​r​ ​E​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'<': {
+					/**
+					 * L​e​s​s​ ​T​h​a​n
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'<=': {
+					/**
+					 * L​e​s​s​ ​T​h​a​n​ ​o​r​ ​E​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'is-set': {
+					/**
+					 * I​s​ ​S​e​t
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​(​i​s​ ​n​o​t​ ​e​m​p​t​y​)
+					 */
+					longDesc: string
+				}
+				'is-not-set': {
+					/**
+					 * I​s​ ​N​o​t​ ​S​e​t
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​h​a​s​ ​n​o​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​h​a​s​ ​n​o​ ​v​a​l​u​e​ ​(​i​s​ ​e​m​p​t​y​)
+					 */
+					longDesc: string
+				}
+				contains: {
+					/**
+					 * C​o​n​t​a​i​n​s
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​u​b​s​t​r​i​n​g
+					 */
+					longDesc: string
+				}
+			}
+		}
 		Teams: {
 			/**
 			 * M​i​c​r​o​s​o​f​t​ ​T​e​a​m​s
@@ -213872,6 +214298,432 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 						}
 					}
+				}
+			}
+		}
+		Trello: {
+			groups: {
+				/**
+				 * Project & Task Management
+				 */
+				'0': () => LocalizedString
+			}
+			/**
+			 * Trello
+			 */
+			displayName: () => LocalizedString
+			/**
+			 * Trello is a collaboration tool that organizes your projects into boards.
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Trello is a collaboration tool that organizes your projects into boards. It is a web-based Kanban-style list-making application and is a subsidiary of Atlassian.
+			 */
+			longDesc: () => LocalizedString
+			triggers: {
+				'card-due': {
+					/**
+					 * Card Due
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a card becomes overdue.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a card has passed its due date and has not been marked as complete.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						source: {
+							/**
+							 * Source
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose whether to monitor an entire board or a specific list.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select "board" to monitor all lists on a board, or "list" to monitor a specific list only.
+							 */
+							longDesc: () => LocalizedString
+						}
+						boardId: {
+							/**
+							 * Board
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The board containing the cards to monitor.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Trello board that contains the cards you want to monitor for due dates.
+							 */
+							longDesc: () => LocalizedString
+						}
+						listId: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific list containing the cards to monitor.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select a specific list to monitor for overdue cards. Only required if Source is set to "list".
+							 */
+							longDesc: () => LocalizedString
+						}
+						includeDueComplete: {
+							/**
+							 * Include Completed Cards
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include cards marked as complete.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, the trigger will include overdue cards that have been marked as complete. By default, only incomplete overdue cards are included.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-board': {
+					/**
+					 * New Board
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new board is created.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a new Trello board is created or shared with the authenticated user.
+					 */
+					longDesc: () => LocalizedString
+				}
+				'new-card': {
+					/**
+					 * New Card
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new card is created.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a new card is added to a specified board or list in Trello.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						source: {
+							/**
+							 * Source
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Choose whether to monitor an entire board or a specific list.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select "board" to monitor all lists on a board, or "list" to monitor a specific list only.
+							 */
+							longDesc: () => LocalizedString
+						}
+						boardId: {
+							/**
+							 * Board
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The board to monitor for new cards.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Trello board where you want to monitor for new cards being created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						listId: {
+							/**
+							 * List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The specific list to monitor for new cards.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select a specific list to monitor for new cards. Only required if Source is set to "list".
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-label': {
+					/**
+					 * New Label
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new label is created.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a new label is created on a specified Trello board.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						boardId: {
+							/**
+							 * Board
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The board to monitor for new labels.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Trello board where you want to monitor for new labels being created.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-list': {
+					/**
+					 * New List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new list is created.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a new list is added to a specified Trello board.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						boardId: {
+							/**
+							 * Board
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The board to monitor for new lists.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Trello board where you want to monitor for new lists being created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						includeArchivedLists: {
+							/**
+							 * Include Archived Lists
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Include lists that are archived.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, the trigger will include new lists that are archived. By default, only open lists are included.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				'new-member': {
+					/**
+					 * New Member
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new member is added to a board.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires when a new member is added to a specified Trello board.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						boardId: {
+							/**
+							 * Board
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The board to monitor for new members.
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Trello board where you want to monitor for new members being added.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			expressions: {
+				'&&': {
+					/**
+					 * And
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Logical AND operator
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Combines multiple conditions where all must be true
+					 */
+					longDesc: () => LocalizedString
+				}
+				'||': {
+					/**
+					 * Or
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Logical OR operator
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Combines multiple conditions where at least one must be true
+					 */
+					longDesc: () => LocalizedString
+				}
+				'==': {
+					/**
+					 * Equals
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field equals value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field equals the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'!=': {
+					/**
+					 * Not Equals
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field does not equal value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field does not equal the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'>': {
+					/**
+					 * Greater Than
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is greater than value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is greater than the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'>=': {
+					/**
+					 * Greater Than or Equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is greater than or equal to value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is greater than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'<': {
+					/**
+					 * Less Than
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is less than value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is less than the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'<=': {
+					/**
+					 * Less Than or Equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is less than or equal to value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is less than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'is-set': {
+					/**
+					 * Is Set
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field has a value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field has a value (is not empty)
+					 */
+					longDesc: () => LocalizedString
+				}
+				'is-not-set': {
+					/**
+					 * Is Not Set
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field has no value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field has no value (is empty)
+					 */
+					longDesc: () => LocalizedString
+				}
+				contains: {
+					/**
+					 * Contains
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field contains value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field contains the specified substring
+					 */
+					longDesc: () => LocalizedString
 				}
 			}
 		}

@@ -179,6 +179,8 @@ env:
   MAUTIC_PASSWORD: ${{ fromJson(secrets.TEST_VARIABLES).MAUTIC_PASSWORD }}
   NOCODB_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).NOCODB_TOKEN }}
   SEATABLE_API_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).SEATABLE_API_TOKEN }}
+  TRELLO_KEY: ${{ fromJson(secrets.TEST_VARIABLES).TRELLO_KEY }}
+  TRELLO_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).TRELLO_TOKEN }}
 
 jobs:
   PullRequestTests:
