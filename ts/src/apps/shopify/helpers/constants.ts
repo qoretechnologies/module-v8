@@ -1,6 +1,6 @@
 import { IQoreAllowedValue, TQoreAppActionFunctionContext } from '@qoretechnologies/ts-toolkit';
 import { ClientResponse, createAdminApiClient } from '@shopify/admin-api-client';
-import { SHOPIFY_CONN_OPTIONS } from '../constants';
+import { SHOPIFY_API_VERSION, SHOPIFY_CONN_OPTIONS } from '../constants';
 
 export interface TShopifyClient {
   request: (
@@ -41,7 +41,7 @@ export const createShopifyClient = (
     const shopDomain = `${shop}.myshopify.com`;
 
     const adminClient = createAdminApiClient({
-      apiVersion: '2025-04',
+      apiVersion: SHOPIFY_API_VERSION,
       accessToken: token as string,
       storeDomain: shopDomain,
     });
