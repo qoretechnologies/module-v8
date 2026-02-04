@@ -2,6 +2,7 @@ import {
   QorusRequest,
   TQoreAppWithActions,
   TQoreMappedOptions,
+  TQoreRecordBasedApp,
 } from '@qoretechnologies/ts-toolkit';
 import { getOauth2ClientSecret } from '../../utils/oauth2-client-secret';
 import {
@@ -15,6 +16,16 @@ import { Locales } from '../../i18n/i18n-types';
 import jira from '../../schemas/jira.swagger.json';
 import { JIRA_ALLOWED_PATHS, JIRA_APP_NAME, JIRA_CONN_OPTIONS } from './constants';
 import * as JIRA_TRIGGERS from './triggers';
+
+// Record-based helpers
+import { createJiraRecords } from './helpers/record-based/create-records';
+import { deleteJiraRecords } from './helpers/record-based/delete-records';
+import { getJiraExpressions } from './helpers/record-based/get-expressions';
+import { getJiraRecordType } from './helpers/record-based/get-record-type';
+import { JiraSearchOptions } from './helpers/record-based/get-search-options';
+import { getJiraTableList } from './helpers/record-based/get-table-list';
+import { searchJiraRecords } from './helpers/record-based/search-records';
+import { updateJiraRecords } from './helpers/record-based/update-records';
 
 export const JIRA_ACTIONS = buildActionsFromSwaggerSchema({
   schema: jira as any,
@@ -136,4 +147,14 @@ export default (locale: Locales) =>
       },
       url_template_options: ['cloud_id'],
     },
-  }) satisfies TQoreAppWithActions;
+
+    // Record-based helpers
+    get_table_list: getJiraTableList,
+    expressions: getJiraExpressions(locale),
+    get_record_type: getJiraRecordType,
+    search_records: searchJiraRecords,
+    search_options: JiraSearchOptions,
+    create_records: createJiraRecords,
+    update_records: updateJiraRecords,
+    delete_records: deleteJiraRecords,
+  }) satisfies TQoreRecordBasedApp & TQoreAppWithActions;
