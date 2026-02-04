@@ -3,6 +3,65 @@ const JiraAppEn = {
   groups: ['Project & Task Management'],
   shortDesc: 'Collection of actions to interact with the Jira API',
   longDesc: 'Collection of actions to interact with the Jira API',
+  expressions: {
+    '&&': {
+      displayName: 'And',
+      shortDesc: 'Logical AND operator',
+      longDesc: 'Combines multiple conditions where all must be true (JQL: AND)',
+    },
+    '||': {
+      displayName: 'Or',
+      shortDesc: 'Logical OR operator',
+      longDesc: 'Combines multiple conditions where at least one must be true (JQL: OR)',
+    },
+    '==': {
+      displayName: 'Equals',
+      shortDesc: 'Field equals value',
+      longDesc: 'Matches issues where the field equals the specified value (JQL: =)',
+    },
+    '!=': {
+      displayName: 'Not Equals',
+      shortDesc: 'Field does not equal value',
+      longDesc: 'Matches issues where the field does not equal the specified value (JQL: !=)',
+    },
+    '>': {
+      displayName: 'Greater Than',
+      shortDesc: 'Field is greater than value',
+      longDesc: 'Matches issues where the field value is greater than the specified value (JQL: >)',
+    },
+    '>=': {
+      displayName: 'Greater Than or Equal',
+      shortDesc: 'Field is greater than or equal to value',
+      longDesc:
+        'Matches issues where the field value is greater than or equal to the specified value (JQL: >=)',
+    },
+    '<': {
+      displayName: 'Less Than',
+      shortDesc: 'Field is less than value',
+      longDesc: 'Matches issues where the field value is less than the specified value (JQL: <)',
+    },
+    '<=': {
+      displayName: 'Less Than or Equal',
+      shortDesc: 'Field is less than or equal to value',
+      longDesc:
+        'Matches issues where the field value is less than or equal to the specified value (JQL: <=)',
+    },
+    'is-set': {
+      displayName: 'Is Set',
+      shortDesc: 'Field has a value',
+      longDesc: 'Matches issues where the field has a value (JQL: IS NOT EMPTY)',
+    },
+    'is-not-set': {
+      displayName: 'Is Not Set',
+      shortDesc: 'Field has no value',
+      longDesc: 'Matches issues where the field has no value (JQL: IS EMPTY)',
+    },
+    contains: {
+      displayName: 'Contains',
+      shortDesc: 'Field contains value',
+      longDesc: 'Matches issues where the field contains the specified text (JQL: ~)',
+    },
+  },
   actions: {
     // Banner actions
     getBanner: {
