@@ -1,4 +1,8 @@
-import { TQoreAppWithActions, TQoreMappedOptions } from '@qoretechnologies/ts-toolkit';
+import {
+  TQoreAppWithActions,
+  TQoreMappedOptions,
+  TQoreRecordBasedApp,
+} from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
@@ -12,6 +16,16 @@ import {
 
 import * as SHOPIFY_ACTIONS from './actions';
 import * as SHOPIFY_TRIGGERS from './triggers';
+
+// Record-based helpers
+import { createShopifyRecords } from './helpers/record-based/create-records';
+import { deleteShopifyRecords } from './helpers/record-based/delete-records';
+import { getShopifyExpressions } from './helpers/record-based/get-expressions';
+import { getShopifyRecordType } from './helpers/record-based/get-record-type';
+import { ShopifySearchOptions } from './helpers/record-based/get-search-options';
+import { getShopifyTableList } from './helpers/record-based/get-table-list';
+import { searchShopifyRecords } from './helpers/record-based/search-records';
+import { updateShopifyRecords } from './helpers/record-based/update-records';
 
 export default (locale: Locales) =>
   ({
@@ -45,10 +59,11 @@ export default (locale: Locales) =>
         context
       ): TQoreMappedOptions<typeof SHOPIFY_POST_AUTH_CODE_CONN_OPTIONS> => {
         const token = context?.conn_opts?.token;
-        if (!token)
+        if (!token) {
           return {
             ping_headers: {},
           };
+        }
 
         return {
           ping_headers: {
@@ -57,4 +72,14 @@ export default (locale: Locales) =>
         };
       },
     },
-  }) satisfies TQoreAppWithActions;
+
+    // Record-based helpers
+    get_table_list: getShopifyTableList,
+    expressions: getShopifyExpressions(locale),
+    get_record_type: getShopifyRecordType,
+    search_records: searchShopifyRecords,
+    search_options: ShopifySearchOptions,
+    create_records: createShopifyRecords,
+    update_records: updateShopifyRecords,
+    delete_records: deleteShopifyRecords,
+  }) satisfies TQoreRecordBasedApp & TQoreAppWithActions;
