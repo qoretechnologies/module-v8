@@ -13,7 +13,7 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, mapObjectToColumnFormat } from '../../../../global/helpers';
 import { executeShopifyGraphQL } from '../constants';
-import { convertWhereToShopifyQuery, sortRecords as sortRecordsClientSide } from './apply-where-condition';
+import { convertWhereToShopifyQuery } from './apply-where-condition';
 import {
   MAX_PAGE_SIZE,
   PRODUCT_FIELDS_FRAGMENT,
@@ -50,7 +50,15 @@ export const searchShopifyRecords: TQoreSearchRecordsFunction = async (ctx, wher
 
   // Get orderBy options
   const orderBy = opts?.orderBy as { field: string; direction?: string } | undefined;
+  const supportedSortKeys = ['TITLE', 'PRODUCT_TYPE', 'VENDOR', 'UPDATED_AT', 'CREATED_AT', 'BEST_SELLING', 'INVENTORY_TOTAL', 'ID'];
   const sortKey = orderBy?.field || 'TITLE';
+
+  if (orderBy?.field && !supportedSortKeys.includes(orderBy.field)) {
+    throw new ShopifyRecordError(
+      `Unsupported sort field: ${orderBy.field}. Supported fields: ${supportedSortKeys.join(', ')}`
+    );
+  }
+
   const reverse = orderBy?.direction === 'desc';
 
   // Iterator state
@@ -114,11 +122,6 @@ export const searchShopifyRecords: TQoreSearchRecordsFunction = async (ctx, wher
 
   // Fetch initial page
   await fetchPage();
-
-  // Apply client-side sorting if needed (Shopify handles most sorting server-side)
-  if (orderBy && !['TITLE', 'PRODUCT_TYPE', 'VENDOR', 'UPDATED_AT', 'CREATED_AT', 'BEST_SELLING', 'INVENTORY_TOTAL', 'ID'].includes(orderBy.field)) {
-    recordsBuffer = sortRecordsClientSide(recordsBuffer, orderBy);
-  }
 
   /**
    * Iterator function that returns batches of records

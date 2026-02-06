@@ -124,6 +124,18 @@ const buildQueryPart = (operator: string, field: string, value: unknown): string
 };
 
 /**
+ * Escape a string for safe inclusion in Shopify GraphQL query
+ */
+const escapeQueryString = (value: string): string => {
+  return value
+    .replaceAll('\\', '\\\\') // escape backslashes first
+    .replaceAll('"', '\\"') // escape double quotes
+    .replaceAll('\n', '\\n') // escape newlines
+    .replaceAll('\r', '\\r') // escape carriage returns
+    .replaceAll('\t', '\\t'); // escape tabs
+};
+
+/**
  * Format a value for Shopify query string
  */
 const formatValue = (value: unknown): string => {
@@ -137,12 +149,14 @@ const formatValue = (value: unknown): string => {
       return value.toLowerCase();
     }
 
+    const escaped = escapeQueryString(value);
+
     // Quote strings with spaces (escaped for GraphQL query string)
     if (value.includes(' ')) {
-      return `\\"${value}\\"`;
+      return `\\"${escaped}\\"`;
     }
 
-    return value;
+    return escaped;
   }
 
   if (typeof value === 'number') {

@@ -267,10 +267,16 @@ export const transformRecordToProductInput = (
           productInput.tags = value;
           break;
         case 'seoTitle':
-          productInput.seo = { ...(productInput.seo as object || {}), title: value };
+          productInput.seo = {
+            ...(typeof productInput.seo === 'object' && productInput.seo !== null ? productInput.seo : {}),
+            title: value,
+          };
           break;
         case 'seoDescription':
-          productInput.seo = { ...(productInput.seo as object || {}), description: value };
+          productInput.seo = {
+            ...(typeof productInput.seo === 'object' && productInput.seo !== null ? productInput.seo : {}),
+            description: value,
+          };
           break;
         // Read-only fields - skip
         case 'createdAt':
