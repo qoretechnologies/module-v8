@@ -1151,4 +1151,491 @@ describe('Shopify Record-Based', () => {
       }
     });
   });
+
+  describe('Should test Shopify expression filtering (integration tests)', () => {
+    const base_context = {
+      conn_opts: {
+        token: '',
+        shop: '',
+      } as any,
+    };
+
+    let hasCredentials = false;
+    let testProductIds: string[] = [];
+
+    beforeAll(() => {
+      const token = process.env.SHOPIFY_ACCESS_TOKEN;
+      const shop = process.env.SHOPIFY_SHOP;
+
+      if (!token || !shop) {
+        console.warn('SHOPIFY_ACCESS_TOKEN or SHOPIFY_SHOP not set, skipping integration tests');
+        return;
+      }
+
+      hasCredentials = true;
+      base_context.conn_opts.token = token;
+      base_context.conn_opts.shop = shop;
+    });
+
+    afterAll(async () => {
+      if (!hasCredentials) return;
+
+      // Clean up any test products created
+      for (const productId of testProductIds) {
+        try {
+          const whereCondition = {
+            exp: '==',
+            args: [
+              { type_code: 'field reference', field: 'id' },
+              { type_code: 'value', value: productId },
+            ],
+          } as any;
+
+          await deleteShopifyRecords(base_context, whereCondition, { table: 'Products' });
+          await delay(500);
+        } catch {
+          // Product may already be deleted
+        }
+      }
+    });
+
+    afterEach(async () => {
+      if (hasCredentials) {
+        await delay(500);
+      }
+    });
+
+    it('Should search with NOT EQUALS expression', async () => {
+      if (!hasCredentials) {
+        console.warn('Skipping: SHOPIFY_ACCESS_TOKEN or SHOPIFY_SHOP not set');
+        return;
+      }
+
+      // Search for products that are NOT archived
+      const whereCondition = {
+        exp: '!=',
+        args: [
+          { type_code: 'field reference', field: 'status' },
+          { type_code: 'value', value: 'ARCHIVED' },
+        ],
+      } as any;
+
+      const iterator = await searchShopifyRecords(base_context, whereCondition, {
+        table: 'Products',
+      });
+
+      expect(iterator).toBeDefined();
+      const batch = await iterator(base_context, 10);
+
+      if (batch) {
+        const records = mapColumnFormatToObject(batch);
+        expect(Array.isArray(records)).toBe(true);
+        // All returned records should NOT be archived
+        for (const record of records) {
+          expect(record.status).not.toBe('ARCHIVED');
+        }
+      }
+    });
+
+    it('Should search with CONTAINS expression', async () => {
+      if (!hasCredentials) {
+        console.warn('Skipping: SHOPIFY_ACCESS_TOKEN or SHOPIFY_SHOP not set');
+        return;
+      }
+
+      // First create a product with a unique title for testing
+      const timestamp = Date.now();
+      const uniqueTitle = `ContainsTest-${timestamp}`;
+
+      const createRecords = {
+        title: [uniqueTitle],
+        description: ['Product for contains expression test'],
+        status: ['DRAFT'],
+      };
+
+      const createdRecords = await createShopifyRecords(base_context, createRecords, {
+        table: 'Products',
+      });
+
+      expect(createdRecords.id).toBeDefined();
+      testProductIds.push(createdRecords.id[0] as string);
+
+      await delay(2000); // Wait for indexing
+
+      // Search using contains expression
+      const whereCondition = {
+        exp: 'contains',
+        args: [
+          { type_code: 'field reference', field: 'title' },
+          { type_code: 'value', value: 'ContainsTest' },
+        ],
+      } as any;
+
+      const iterator = await searchShopifyRecords(base_context, whereCondition, {
+        table: 'Products',
+      });
+
+      expect(iterator).toBeDefined();
+      const batch = await iterator(base_context, 50);
+
+      if (batch) {
+        const records = mapColumnFormatToObject(batch);
+        expect(Array.isArray(records)).toBe(true);
+        // All returned records should contain "ContainsTest" in title
+        for (const record of records) {
+          expect((record.title as string).toLowerCase()).toContain('containstest');
+        }
+      }
+    }, 30000);
+
+    it('Should search with OR expression', async () => {
+      if (!hasCredentials) {
+        console.warn('Skipping: SHOPIFY_ACCESS_TOKEN or SHOPIFY_SHOP not set');
+        return;
+      }
+
+      // Search for products that are ACTIVE OR DRAFT
+      const whereCondition = {
+        exp: '||',
+        args: [
+          {
+            exp: '==',
+            args: [
+              { type_code: 'field reference', field: 'status' },
+              { type_code: 'value', value: 'ACTIVE' },
+            ],
+          },
+          {
+            exp: '==',
+            args: [
+              { type_code: 'field reference', field: 'status' },
+              { type_code: 'value', value: 'DRAFT' },
+            ],
+          },
+        ],
+      } as any;
+
+      const iterator = await searchShopifyRecords(base_context, whereCondition, {
+        table: 'Products',
+      });
+
+      expect(iterator).toBeDefined();
+      const batch = await iterator(base_context, 10);
+
+      if (batch) {
+        const records = mapColumnFormatToObject(batch);
+        expect(Array.isArray(records)).toBe(true);
+        // All returned records should be either ACTIVE or DRAFT
+        for (const record of records) {
+          expect(['ACTIVE', 'DRAFT']).toContain(record.status);
+        }
+      }
+    });
+
+    it('Should search with GREATER THAN expression on inventory', async () => {
+      if (!hasCredentials) {
+        console.warn('Skipping: SHOPIFY_ACCESS_TOKEN or SHOPIFY_SHOP not set');
+        return;
+      }
+
+      // Search for products with inventory > 0
+      const whereCondition = {
+        exp: '>',
+        args: [
+          { type_code: 'field reference', field: 'totalInventory' },
+          { type_code: 'value', value: 0 },
+        ],
+      } as any;
+
+      const iterator = await searchShopifyRecords(base_context, whereCondition, {
+        table: 'Products',
+      });
+
+      expect(iterator).toBeDefined();
+      const batch = await iterator(base_context, 10);
+
+      if (batch) {
+        const records = mapColumnFormatToObject(batch);
+        expect(Array.isArray(records)).toBe(true);
+        // All returned records should have inventory > 0
+        for (const record of records) {
+          expect(record.totalInventory).toBeGreaterThan(0);
+        }
+      }
+    });
+
+    it('Should search with LESS THAN OR EQUAL expression on inventory', async () => {
+      if (!hasCredentials) {
+        console.warn('Skipping: SHOPIFY_ACCESS_TOKEN or SHOPIFY_SHOP not set');
+        return;
+      }
+
+      // Search for products with inventory <= 100
+      const whereCondition = {
+        exp: '<=',
+        args: [
+          { type_code: 'field reference', field: 'totalInventory' },
+          { type_code: 'value', value: 100 },
+        ],
+      } as any;
+
+      const iterator = await searchShopifyRecords(base_context, whereCondition, {
+        table: 'Products',
+      });
+
+      expect(iterator).toBeDefined();
+      const batch = await iterator(base_context, 10);
+
+      if (batch) {
+        const records = mapColumnFormatToObject(batch);
+        expect(Array.isArray(records)).toBe(true);
+        // All returned records should have inventory <= 100
+        for (const record of records) {
+          expect(record.totalInventory).toBeLessThanOrEqual(100);
+        }
+      }
+    });
+
+    it('Should search with IS-SET expression', async () => {
+      if (!hasCredentials) {
+        console.warn('Skipping: SHOPIFY_ACCESS_TOKEN or SHOPIFY_SHOP not set');
+        return;
+      }
+
+      // Search for products where vendor is set
+      const whereCondition = {
+        exp: 'is-set',
+        args: [{ type_code: 'field reference', field: 'vendor' }],
+      } as any;
+
+      const iterator = await searchShopifyRecords(base_context, whereCondition, {
+        table: 'Products',
+      });
+
+      expect(iterator).toBeDefined();
+      const batch = await iterator(base_context, 10);
+
+      if (batch) {
+        const records = mapColumnFormatToObject(batch);
+        expect(Array.isArray(records)).toBe(true);
+        // All returned records should have vendor set
+        for (const record of records) {
+          expect(record.vendor).toBeTruthy();
+        }
+      }
+    });
+
+    it('Should search with IS-NOT-SET expression', async () => {
+      if (!hasCredentials) {
+        console.warn('Skipping: SHOPIFY_ACCESS_TOKEN or SHOPIFY_SHOP not set');
+        return;
+      }
+
+      // Search for products where publishedAt is not set (draft products)
+      const whereCondition = {
+        exp: 'is-not-set',
+        args: [{ type_code: 'field reference', field: 'publishedAt' }],
+      } as any;
+
+      const iterator = await searchShopifyRecords(base_context, whereCondition, {
+        table: 'Products',
+      });
+
+      expect(iterator).toBeDefined();
+      const batch = await iterator(base_context, 10);
+
+      // This may return empty results if all products are published - that's ok
+      if (batch) {
+        const records = mapColumnFormatToObject(batch);
+        expect(Array.isArray(records)).toBe(true);
+      }
+    });
+
+    it('Should search with complex nested expression (AND with OR)', async () => {
+      if (!hasCredentials) {
+        console.warn('Skipping: SHOPIFY_ACCESS_TOKEN or SHOPIFY_SHOP not set');
+        return;
+      }
+
+      // Complex: (status == ACTIVE OR status == DRAFT) AND vendor is-set
+      const whereCondition = {
+        exp: '&&',
+        args: [
+          {
+            exp: '||',
+            args: [
+              {
+                exp: '==',
+                args: [
+                  { type_code: 'field reference', field: 'status' },
+                  { type_code: 'value', value: 'ACTIVE' },
+                ],
+              },
+              {
+                exp: '==',
+                args: [
+                  { type_code: 'field reference', field: 'status' },
+                  { type_code: 'value', value: 'DRAFT' },
+                ],
+              },
+            ],
+          },
+          {
+            exp: 'is-set',
+            args: [{ type_code: 'field reference', field: 'vendor' }],
+          },
+        ],
+      } as any;
+
+      const iterator = await searchShopifyRecords(base_context, whereCondition, {
+        table: 'Products',
+      });
+
+      expect(iterator).toBeDefined();
+      const batch = await iterator(base_context, 10);
+
+      if (batch) {
+        const records = mapColumnFormatToObject(batch);
+        expect(Array.isArray(records)).toBe(true);
+        // All returned records should match the complex condition
+        for (const record of records) {
+          expect(['ACTIVE', 'DRAFT']).toContain(record.status);
+          expect(record.vendor).toBeTruthy();
+        }
+      }
+    });
+
+    it('Should search with expression and orderBy combined', async () => {
+      if (!hasCredentials) {
+        console.warn('Skipping: SHOPIFY_ACCESS_TOKEN or SHOPIFY_SHOP not set');
+        return;
+      }
+
+      // Search for active products sorted by title descending
+      const whereCondition = {
+        exp: '==',
+        args: [
+          { type_code: 'field reference', field: 'status' },
+          { type_code: 'value', value: 'ACTIVE' },
+        ],
+      } as any;
+
+      const iterator = await searchShopifyRecords(base_context, whereCondition, {
+        table: 'Products',
+        orderBy: { field: 'TITLE', direction: 'desc' },
+      });
+
+      expect(iterator).toBeDefined();
+      const batch = await iterator(base_context, 10);
+
+      if (batch) {
+        const records = mapColumnFormatToObject(batch);
+        expect(Array.isArray(records)).toBe(true);
+
+        // All records should be active
+        for (const record of records) {
+          expect(record.status).toBe('ACTIVE');
+        }
+
+        // Verify sorting (titles should be in descending order)
+        if (records.length >= 2) {
+          for (let i = 0; i < records.length - 1; i++) {
+            const current = (records[i].title as string).toLowerCase();
+            const next = (records[i + 1].title as string).toLowerCase();
+            expect(current >= next).toBe(true);
+          }
+        }
+      }
+    });
+
+    it('Should verify update with expression-based WHERE condition', async () => {
+      if (!hasCredentials) {
+        console.warn('Skipping: SHOPIFY_ACCESS_TOKEN or SHOPIFY_SHOP not set');
+        return;
+      }
+
+      // Create a test product
+      const timestamp = Date.now();
+      const createRecords = {
+        title: [`UpdateExprTest-${timestamp}`],
+        description: ['Original description'],
+        vendor: ['ExprTestVendor'],
+        status: ['DRAFT'],
+      };
+
+      const createdRecords = await createShopifyRecords(base_context, createRecords, {
+        table: 'Products',
+      });
+
+      expect(createdRecords.id).toBeDefined();
+      const productId = createdRecords.id[0] as string;
+      testProductIds.push(productId);
+
+      // Update using ID-based WHERE condition
+      const whereCondition = {
+        exp: '==',
+        args: [
+          { type_code: 'field reference', field: 'id' },
+          { type_code: 'value', value: productId },
+        ],
+      } as any;
+
+      const updateCount = await updateShopifyRecords(
+        base_context,
+        { description: ['Updated via expression WHERE'] },
+        whereCondition,
+        { table: 'Products' }
+      );
+
+      expect(updateCount).toBe(1);
+
+      // Verify the update by searching
+      const iterator = await searchShopifyRecords(base_context, whereCondition, {
+        table: 'Products',
+      });
+
+      const batch = await iterator(base_context, 10);
+
+      // Note: Due to Shopify indexing delays, we may not immediately see the update in search
+      // The important thing is the update operation succeeded
+      expect(batch).toBeDefined();
+    }, 30000);
+
+    it('Should verify delete with expression-based WHERE condition', async () => {
+      if (!hasCredentials) {
+        console.warn('Skipping: SHOPIFY_ACCESS_TOKEN or SHOPIFY_SHOP not set');
+        return;
+      }
+
+      // Create a test product specifically for deletion
+      const timestamp = Date.now();
+      const createRecords = {
+        title: [`DeleteExprTest-${timestamp}`],
+        description: ['Product to be deleted'],
+        status: ['DRAFT'],
+      };
+
+      const createdRecords = await createShopifyRecords(base_context, createRecords, {
+        table: 'Products',
+      });
+
+      expect(createdRecords.id).toBeDefined();
+      const productId = createdRecords.id[0] as string;
+
+      // Delete using ID-based WHERE condition
+      const whereCondition = {
+        exp: '==',
+        args: [
+          { type_code: 'field reference', field: 'id' },
+          { type_code: 'value', value: productId },
+        ],
+      } as any;
+
+      const deleteCount = await deleteShopifyRecords(base_context, whereCondition, { table: 'Products' });
+
+      expect(deleteCount).toBe(1);
+
+      // Product should be deleted - don't add to cleanup list
+    }, 30000);
+  });
 });
