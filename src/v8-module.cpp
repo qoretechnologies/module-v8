@@ -2,7 +2,7 @@
 /*
     v8 Qore module
 
-    Copyright (C) 2020 - 2024 Qore Technologies, s.r.o.
+    Copyright (C) 2020 - 2026 Qore Technologies, s.r.o.
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
@@ -30,12 +30,12 @@
 std::unique_ptr<node::MultiIsolatePlatform> platform;
 std::shared_ptr<node::InitializationResult> init_result;
 
-static QoreStringNode* v8_module_init_info(qore_module_init_info& info);
-static void v8_module_ns_init(QoreNamespace* rns, QoreNamespace* qns);
+static void v8_module_init(QoreModuleInitContext& ctx, ExceptionSink& xsink);
+static void v8_module_ns_init(QoreNamespace* rns, QoreNamespace* qns, ExceptionSink& xsink);
 static void v8_module_delete();
 //static void v8_module_parse_cmd(const QoreString& cmd, ExceptionSink* xsink);
 
-static QoreStringNode* v8_module_init_intern(qore_module_init_info& info, bool repeat);
+static QoreStringNode* v8_module_init_intern(bool repeat);
 
 // module declaration for Qore 0.9.5+
 void v8_qore_module_desc(QoreModuleInfo& mod_info) {
@@ -46,7 +46,7 @@ void v8_qore_module_desc(QoreModuleInfo& mod_info) {
     mod_info.url = "http://qore.org";
     mod_info.api_major = QORE_MODULE_API_MAJOR;
     mod_info.api_minor = QORE_MODULE_API_MINOR;
-    mod_info.init_info = v8_module_init_info;
+    mod_info.init = v8_module_init;
     mod_info.ns_init = v8_module_ns_init;
     mod_info.del = v8_module_delete;
     //mod_info.parse_cmd = v8_module_parse_cmd;
@@ -99,11 +99,14 @@ static void v8_module_shutdown() {
     platform = nullptr;
 }
 
-static QoreStringNode* v8_module_init_info(qore_module_init_info& info) {
-    return v8_module_init_intern(info, false);
+static void v8_module_init(QoreModuleInitContext& ctx, ExceptionSink& xsink) {
+    QoreStringNode* err = v8_module_init_intern(false);
+    if (err) {
+        xsink.raiseException("MODULE-INIT-ERROR", err);
+    }
 }
 
-static QoreStringNode* v8_module_init_intern(qore_module_init_info& info, bool repeat) {
+static QoreStringNode* v8_module_init_intern(bool repeat) {
     if (!V8NS) {
         V8NS = new QoreNamespace("V8");
         preinitJavaScriptObjectClass();
@@ -112,10 +115,7 @@ static QoreStringNode* v8_module_init_intern(qore_module_init_info& info, bool r
         V8NS->addSystemClass(initJavaScriptPromiseClass(*V8NS));
     }
 
-    const char* argv0 = info.path.c_str();
-    //printd(5, "v8_module_init_intern() argv0: %s\n", argv0);
-
-    std::vector<std::string> args = {argv0};
+    std::vector<std::string> args = {"qore"};
     init_result =
         node::InitializeOncePerProcess(args, {
             node::ProcessInitializationFlags::kNoInitializeV8,
@@ -147,7 +147,7 @@ static QoreStringNode* v8_module_init_intern(qore_module_init_info& info, bool r
     return nullptr;
 }
 
-static void v8_module_ns_init(QoreNamespace* rns, QoreNamespace* qns) {
+static void v8_module_ns_init(QoreNamespace* rns, QoreNamespace* qns, ExceptionSink& xsink) {
     QoreProgram* pgm = getProgram();
     assert(pgm->getRootNS() == rns);
     if (!pgm->getExternalData(QORE_V8_MODULE_NAME)) {
