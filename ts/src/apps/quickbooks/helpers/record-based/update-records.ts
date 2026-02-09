@@ -139,9 +139,12 @@ export const updateQuickbooksRecords: TQoreUpdateRecordsFunction = async (
       }
 
       offset += entities.length;
-      const queryResponse = response?.QueryResponse as Record<string, unknown> | undefined;
-      const totalCount = (queryResponse?.totalCount as number) || 0;
-      if (offset >= totalCount || entities.length < MAX_PAGE_SIZE) {
+      const queryResponse = response?.QueryResponse as { totalCount?: number } | undefined;
+      const totalCount = queryResponse?.totalCount;
+      if (
+        (typeof totalCount === 'number' && totalCount > 0 && offset >= totalCount) ||
+        entities.length < MAX_PAGE_SIZE
+      ) {
         hasMore = false;
       }
     }

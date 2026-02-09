@@ -550,11 +550,18 @@ export const SORTABLE_FIELDS: Record<SupportedEntity, IQoreAllowedValue<string>[
 };
 
 /**
+ * Overrides for entities whose find method doesn't follow the simple "s" suffix pattern.
+ */
+const FIND_METHOD_OVERRIDES: Record<string, string> = {
+  JournalEntry: 'findJournalEntries',
+};
+
+/**
  * Get the dynamic find method name for a given entity type.
- * QuickBooks library exposes find{EntityName}s() for each entity.
+ * QuickBooks library exposes find{PluralEntityName}() for each entity.
  */
 export const getFindMethodName = (entityName: string): string => {
-  return `find${entityName}s`;
+  return FIND_METHOD_OVERRIDES[entityName] || `find${entityName}s`;
 };
 
 /**

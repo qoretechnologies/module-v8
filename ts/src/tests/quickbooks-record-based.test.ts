@@ -191,7 +191,7 @@ describe('QuickBooks Record-Based', () => {
     it('Should generate correct find method names', () => {
       expect(getFindMethodName('Customer')).toBe('findCustomers');
       expect(getFindMethodName('Invoice')).toBe('findInvoices');
-      expect(getFindMethodName('JournalEntry')).toBe('findJournalEntrys');
+      expect(getFindMethodName('JournalEntry')).toBe('findJournalEntries');
     });
 
     it('Should validate entity types correctly', () => {
@@ -1385,6 +1385,33 @@ describe('QuickBooks Record-Based', () => {
           if (records.length > 0) {
             expect(records[0].Id).toBeDefined();
             expect(records[0].Name).toBeDefined();
+          }
+        }
+      },
+      60000
+    );
+
+    it(
+      'Should search journal entries',
+      async () => {
+        if (!hasCredentials) {
+          console.warn('Skipping: credentials not set');
+          return;
+        }
+
+        const iterator = await searchQuickbooksRecords(base_context, undefined, {
+          table: 'JournalEntry',
+        });
+
+        expect(iterator).toBeDefined();
+        const batch = await iterator(base_context, 10);
+
+        if (batch) {
+          const records = mapColumnFormatToObject(batch);
+          expect(Array.isArray(records)).toBe(true);
+
+          if (records.length > 0) {
+            expect(records[0].Id).toBeDefined();
           }
         }
       },

@@ -62,74 +62,79 @@ export const searchQuickbooksRecords: TQoreSearchRecordsFunction = async (ctx, w
     let hasMore = true;
 
     const get_records: TQoreSearchRecordsIterator = async (_ctx, blockSize) => {
-      if (!hasMore || totalFetched >= limit) {
-        return null;
-      }
-
-      try {
-        const pageSize = Math.min(blockSize, MAX_PAGE_SIZE, limit - totalFetched);
-
-        // Build QueryInput for the find method
-        const queryInput: Record<string, unknown> = {
-          limit: pageSize,
-          offset,
-          fetchAll: false,
-        };
-
-        // Add filter criteria
-        if (criteria.length > 0) {
-          queryInput.items = criteria;
-        }
-
-        // Add sort
-        if (orderBy?.field) {
-          const direction = orderBy.direction === 'desc' ? 'desc' : 'asc';
-          queryInput[direction] = orderBy.field;
-        }
-
-        // Call find method dynamically (e.g., findCustomers, findInvoices)
-        const findMethod = getFindMethodName(entityType);
-        const response = await (client as unknown as Record<string, Function>)[findMethod](queryInput);
-
-        const entities = getEntityFromQueryResponse(response, entityType) as Record<string, unknown>[];
-
-        if (entities.length === 0) {
-          hasMore = false;
+      while (true) {
+        if (!hasMore || totalFetched >= limit) {
           return null;
         }
 
-        totalFetched += entities.length;
-        offset += entities.length;
+        try {
+          const pageSize = Math.min(blockSize, MAX_PAGE_SIZE, limit - totalFetched);
 
-        // Check if there are more records
-        const queryResponse = response?.QueryResponse as Record<string, unknown> | undefined;
-        const totalCount = (queryResponse?.totalCount as number) || 0;
-        if (totalFetched >= totalCount || entities.length < pageSize) {
-          hasMore = false;
-        }
+          // Build QueryInput for the find method
+          const queryInput: Record<string, unknown> = {
+            limit: pageSize,
+            offset,
+            fetchAll: false,
+          };
 
-        // Apply client-side filtering if needed (for ||, !=, is-set, is-not-set)
-        let records = entities;
-        if (clientSideFilter) {
-          records = filterRecordsClientSide(entities, clientSideFilter);
-        }
-
-        if (records.length === 0) {
-          // Client-side filter removed all results but there may be more pages
-          if (hasMore) {
-            return get_records(_ctx, blockSize);
+          // Add filter criteria
+          if (criteria.length > 0) {
+            queryInput.items = criteria;
           }
-          return null;
-        }
 
-        return mapObjectToColumnFormat(records);
-      } catch (error) {
-        if (error instanceof QuickbooksError || error instanceof QuickbooksRecordError) {
-          throw error;
+          // Add sort
+          if (orderBy?.field) {
+            const direction = orderBy.direction === 'desc' ? 'desc' : 'asc';
+            queryInput[direction] = orderBy.field;
+          }
+
+          // Call find method dynamically (e.g., findCustomers, findInvoices)
+          const findMethod = getFindMethodName(entityType);
+          const response = await (client as unknown as Record<string, Function>)[findMethod](queryInput);
+
+          const entities = getEntityFromQueryResponse(response, entityType) as Record<string, unknown>[];
+
+          if (entities.length === 0) {
+            hasMore = false;
+            return null;
+          }
+
+          totalFetched += entities.length;
+          offset += entities.length;
+
+          // Check if there are more records
+          const queryResponse = response?.QueryResponse as { totalCount?: number } | undefined;
+          const totalCount = queryResponse?.totalCount;
+          if (
+            (typeof totalCount === 'number' && totalCount > 0 && totalFetched >= totalCount) ||
+            entities.length < pageSize
+          ) {
+            hasMore = false;
+          }
+
+          // Apply client-side filtering if needed (for ||, !=, is-set, is-not-set)
+          let records = entities;
+          if (clientSideFilter) {
+            records = filterRecordsClientSide(entities, clientSideFilter);
+          }
+
+          if (records.length === 0) {
+            // Client-side filter removed all results, continue to next page
+            if (hasMore) {
+              continue;
+            }
+            return null;
+          }
+
+          return mapObjectToColumnFormat(records);
+        } catch (error) {
+          if (error instanceof QuickbooksError || error instanceof QuickbooksRecordError) {
+            throw error;
+          }
+          throw new QuickbooksRecordError(
+            `Failed to search ${entityType} records: ${getQuickbooksErrorMessage(error)}`
+          );
         }
-        throw new QuickbooksRecordError(
-          `Failed to search ${entityType} records: ${getQuickbooksErrorMessage(error)}`
-        );
       }
     };
 
