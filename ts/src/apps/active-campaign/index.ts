@@ -1,4 +1,8 @@
-import { TQoreAppActionFunctionContext, TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import {
+  TQoreAppActionFunctionContext,
+  TQoreAppWithActions,
+  TQoreRecordBasedApp,
+} from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
@@ -10,6 +14,16 @@ import {
 
 import * as ACTIVE_CAMPAIGN_ACTIONS from './actions';
 import * as ACTIVE_CAMPAIGN_TRIGGERS from './triggers';
+
+// Record-based helpers
+import { createActiveCampaignRecords } from './helpers/record-based/create-records';
+import { deleteActiveCampaignRecords } from './helpers/record-based/delete-records';
+import { getActiveCampaignExpressions } from './helpers/record-based/get-expressions';
+import { getActiveCampaignRecordType } from './helpers/record-based/get-record-type';
+import { ActiveCampaignSearchOptions } from './helpers/record-based/get-search-options';
+import { getActiveCampaignTableList } from './helpers/record-based/get-table-list';
+import { searchActiveCampaignRecords } from './helpers/record-based/search-records';
+import { updateActiveCampaignRecords } from './helpers/record-based/update-records';
 
 export default (locale: Locales) =>
   ({
@@ -46,4 +60,14 @@ export default (locale: Locales) =>
       },
       url_from_option: 'instance_url',
     },
-  }) satisfies TQoreAppWithActions;
+
+    // Record-based helpers
+    get_table_list: getActiveCampaignTableList,
+    expressions: getActiveCampaignExpressions(locale),
+    get_record_type: getActiveCampaignRecordType,
+    search_records: searchActiveCampaignRecords,
+    search_options: ActiveCampaignSearchOptions,
+    create_records: createActiveCampaignRecords,
+    update_records: updateActiveCampaignRecords,
+    delete_records: deleteActiveCampaignRecords,
+  }) satisfies TQoreRecordBasedApp & TQoreAppWithActions;

@@ -3,34 +3,30 @@ import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { SENDGRID_CONN_OPTIONS, SendGridError } from '../constants';
 import { createSendGridClient } from './constants';
 
-interface ISendGridSender {
+interface ISendGridVerifiedSender {
   id: number;
   nickname: string;
-  from: {
-    email: string;
-    name: string;
-  };
-  reply_to: {
-    email: string;
-    name: string;
-  };
-  verified: {
-    status: boolean;
-    reason: string;
-  };
+  from_email: string;
+  from_name: string;
+  reply_to: string;
+  reply_to_name: string;
+  verified: boolean;
+  locked: boolean;
 }
 
-type TSendGridSendersResponse = ISendGridSender[]; 
+interface ISendGridVerifiedSendersResponse {
+  results: ISendGridVerifiedSender[];
+}
 
-const mapSenderToAllowedValue = (sender: ISendGridSender): IQoreAllowedValue<string> => {
-  const displayName = sender.from.name
-    ? `${sender.from.name} <${sender.from.email}>`
-    : sender.from.email;
+const mapSenderToAllowedValue = (sender: ISendGridVerifiedSender): IQoreAllowedValue<string> => {
+  const displayName = sender.from_name
+    ? `${sender.from_name} <${sender.from_email}>`
+    : sender.from_email;
 
   return {
-    value: sender.from.email,
+    value: sender.from_email,
     display_name: displayName,
-    desc: `Nickname: ${sender.nickname}\nVerified: ${sender.verified.status ? 'Yes' : 'No'}`,
+    desc: `Nickname: ${sender.nickname}\nVerified: ${sender.verified ? 'Yes' : 'No'}`,
   };
 };
 
@@ -48,16 +44,16 @@ export const getSendGridSenderAllowedValues: TQoreGetAllowedValuesFunction<
 
   try {
     const [response] = await client.request({
-      url: '/v3/senders',
+      url: '/v3/verified_senders',
       method: 'GET',
     });
 
-    const data = response.body as TSendGridSendersResponse;
+    const data = response.body as ISendGridVerifiedSendersResponse;
 
-    return data.map(mapSenderToAllowedValue);
+    return data.results.map(mapSenderToAllowedValue);
   } catch (error) {
     throw new SendGridError(
-      `Failed to fetch allowed values for senders: ${error.message || error}`
+      `Failed to fetch allowed values for senders: ${error instanceof Error ? error.message : error}`
     );
   }
 };
