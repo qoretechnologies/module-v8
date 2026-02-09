@@ -18,6 +18,7 @@ import {
   normalizeSetToSingleRecord,
   TActiveCampaignRecordType,
   transformRecordToPayload,
+  transformToRecord,
 } from './constants';
 
 /**
@@ -105,12 +106,15 @@ export const updateActiveCampaignRecords: TQoreUpdateRecordsFunction = async (co
       break;
     }
 
-    // Apply client-side filtering
-    const matchingItems = filterRecords(items, remainingWhere);
+    // Transform raw API items to records so WHERE conditions match record field names
+    const records = items.map((item) => transformToRecord(item, tableName));
+
+    // Apply client-side filtering on transformed records
+    const matchingRecords = filterRecords(records, remainingWhere);
 
     // Update each matching record
-    for (const item of matchingItems) {
-      const itemId = String(item.id);
+    for (const record of matchingRecords) {
+      const itemId = String(record.id);
 
       await activeCampaignClient.put<Record<string, unknown>>(
         `${entityConfig.apiPath}/${itemId}`,

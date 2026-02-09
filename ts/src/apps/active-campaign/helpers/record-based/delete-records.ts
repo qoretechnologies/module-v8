@@ -16,6 +16,7 @@ import {
   ENTITY_CONFIG,
   MAX_PAGE_SIZE,
   TActiveCampaignRecordType,
+  transformToRecord,
 } from './constants';
 
 /**
@@ -76,12 +77,15 @@ export const deleteActiveCampaignRecords: TQoreDeleteRecordsFunction = async (co
       break;
     }
 
-    // Apply client-side filtering
-    const matchingItems = filterRecords(items, remainingWhere);
+    // Transform raw API items to records so WHERE conditions match record field names
+    const records = items.map((item) => transformToRecord(item, tableName));
+
+    // Apply client-side filtering on transformed records
+    const matchingRecords = filterRecords(records, remainingWhere);
 
     // Delete each matching record
-    for (const item of matchingItems) {
-      const itemId = String(item.id);
+    for (const record of matchingRecords) {
+      const itemId = String(record.id);
 
       await activeCampaignClient.delete(
         `${entityConfig.apiPath}/${itemId}`,
@@ -93,7 +97,7 @@ export const deleteActiveCampaignRecords: TQoreDeleteRecordsFunction = async (co
 
     // After deletion, don't increase offset — items shift.
     // But we need to handle the case where we deleted all items on this page.
-    if (matchingItems.length === items.length) {
+    if (matchingRecords.length === items.length) {
       // All items matched and were deleted, fetch same offset
       const total = (response?.meta as Record<string, unknown>)?.total;
       if (total !== undefined) {
@@ -103,7 +107,7 @@ export const deleteActiveCampaignRecords: TQoreDeleteRecordsFunction = async (co
       }
     } else {
       // Some items didn't match, move offset past them
-      offset += items.length - matchingItems.length;
+      offset += items.length - matchingRecords.length;
 
       const total = (response?.meta as Record<string, unknown>)?.total;
       if (total !== undefined) {

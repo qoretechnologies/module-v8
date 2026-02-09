@@ -129,7 +129,8 @@ export const extractServerSideParams = (
 
         if (value !== undefined && searchableFields.includes(field) && !serverParams.search) {
           serverParams.search = value;
-          return true;
+          // Use search only as a coarse pre-filter; keep condition for client-side validation
+          return false;
         }
       }
     }
@@ -354,6 +355,21 @@ export const sortRecords = (
 };
 
 /**
+ * Map record field names (camelCase) to API sort field names (snake_case)
+ */
+const SORT_FIELD_TO_API: Record<string, string> = {
+  firstName: 'first_name',
+  lastName: 'last_name',
+};
+
+/**
+ * Convert a record field name to the corresponding API sort field name
+ */
+export const toApiSortField = (field: string): string => {
+  return SORT_FIELD_TO_API[field] || field;
+};
+
+/**
  * Check if a sort field can be handled server-side for a given entity
  */
 export const canSortServerSide = (
@@ -363,5 +379,6 @@ export const canSortServerSide = (
   if (!field) {
     return false;
   }
-  return ENTITY_CONFIG[entityType].sortableFields.includes(field);
+  const apiField = toApiSortField(field);
+  return ENTITY_CONFIG[entityType].sortableFields.includes(apiField);
 };

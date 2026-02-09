@@ -13,7 +13,13 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, mapObjectToColumnFormat } from '../../../../global/helpers';
 import { activeCampaignClient } from '../constants';
-import { canSortServerSide, extractServerSideParams, filterRecords, sortRecords } from './apply-where-condition';
+import {
+  canSortServerSide,
+  extractServerSideParams,
+  filterRecords,
+  sortRecords,
+  toApiSortField,
+} from './apply-where-condition';
 import {
   ActiveCampaignRecordError,
   ACTIVE_CAMPAIGN_RECORD_TYPES,
@@ -177,7 +183,7 @@ export const searchActiveCampaignRecords: TQoreSearchRecordsFunction = async (ct
   const useServerSort = canSortServerSide(tableName, orderBy?.field);
 
   if (useServerSort && orderBy) {
-    serverParams[`orders[${orderBy.field}]`] = orderBy.direction || 'asc';
+    serverParams[`orders[${toApiSortField(orderBy.field)}]`] = orderBy.direction || 'asc';
   }
 
   // Track whether we need to fetch custom fields
@@ -187,14 +193,16 @@ export const searchActiveCampaignRecords: TQoreSearchRecordsFunction = async (ct
   let offset = 0;
   let hasMore = true;
   let totalReturned = 0;
+  let leftover: Record<string, unknown>[] = [];
 
   const getRecords: TQoreSearchRecordsIterator = async (_ctx, blockSize) => {
-    if (!hasMore || totalReturned >= limit) {
+    if (leftover.length === 0 && (!hasMore || totalReturned >= limit)) {
       return null;
     }
 
     const pageSize = Math.min(blockSize || MAX_PAGE_SIZE, MAX_PAGE_SIZE);
-    let filteredBatch: Record<string, unknown>[] = [];
+    let filteredBatch: Record<string, unknown>[] = [...leftover];
+    leftover = [];
 
     // Keep fetching pages until we have enough filtered records or run out
     while (filteredBatch.length < pageSize && hasMore && totalReturned + filteredBatch.length < limit) {
@@ -263,8 +271,9 @@ export const searchActiveCampaignRecords: TQoreSearchRecordsFunction = async (ct
       return null;
     }
 
-    // Trim to requested block size
+    // Trim to requested block size, preserve excess for next call
     const batch = filteredBatch.slice(0, pageSize);
+    leftover = filteredBatch.slice(pageSize);
     totalReturned += batch.length;
 
     // Apply client-side sorting if server-side not available
