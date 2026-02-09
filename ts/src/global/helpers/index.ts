@@ -436,7 +436,7 @@ export const normalizeAppName = (appName: string): TStringWithFirstUpperCaseChar
 
 export const mapTriggersToApp = (
   app: keyof Translation['apps'],
-  triggers: Record<string, TQorePartialEventAction> | TQorePartialEventAction[],
+  triggers: Record<string, TQorePartialEventAction<any>> | TQorePartialEventAction<any>[],
   locale: Locales
 ): TQoreAppEventAction[] => {
   const mappedTriggers = Object.entries(triggers).map(([_a, trigger]) => {
@@ -583,7 +583,7 @@ export const fixOptions = (
     path: string[] = []
   ): TQoreOptions => {
     return reduce(
-      collection,
+      collection as TQoreOptions,
       (fixedOptions: TQoreOptions, option: TQoreAppActionOption, key: string): TQoreOptions => {
         const currentPath = [...path, key];
         let optionType = undefined;

@@ -1,4 +1,4 @@
-import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import { TQoreAppWithActions, TQoreRecordBasedApp } from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
@@ -6,6 +6,18 @@ import { QUICKBOOKS_APP_LOGO, QUICKBOOKS_APP_NAME, QUICKBOOKS_CONN_OPTIONS } fro
 
 import * as QUICKBOOKS_ACTIONS from './actions';
 import * as QUICKBOOKS_TRIGGERS from './triggers';
+
+// Record-based helpers
+import {
+  createQuickbooksRecords,
+  deleteQuickbooksRecords,
+  getQuickbooksExpressions,
+  getQuickbooksRecordType,
+  getQuickbooksTableList,
+  QuickbooksSearchOptions,
+  searchQuickbooksRecords,
+  updateQuickbooksRecords,
+} from './helpers/record-based';
 
 export default (locale: Locales) =>
   ({
@@ -55,4 +67,13 @@ export default (locale: Locales) =>
         };
       },
     },
-  }) satisfies TQoreAppWithActions;
+    // Record-based support
+    get_table_list: getQuickbooksTableList,
+    expressions: getQuickbooksExpressions(locale),
+    get_record_type: getQuickbooksRecordType,
+    search_records: searchQuickbooksRecords,
+    search_options: QuickbooksSearchOptions,
+    create_records: createQuickbooksRecords,
+    update_records: updateQuickbooksRecords,
+    delete_records: deleteQuickbooksRecords,
+  }) satisfies TQoreRecordBasedApp & TQoreAppWithActions;
