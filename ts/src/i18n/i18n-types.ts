@@ -30754,7 +30754,7 @@ type RootTranslation = {
 		}
 		AmazonCloudFront: {
 			/**
-			 * C​l​o​u​d​F​r​o​n​t
+			 * A​m​a​z​o​n​ ​C​l​o​u​d​F​r​o​n​t
 			 */
 			displayName: string
 			groups: {
@@ -52873,6 +52873,36 @@ type RootTranslation = {
 						}
 					}
 				}
+				create_invoice_from_estimate: {
+					/**
+					 * C​r​e​a​t​e​ ​I​n​v​o​i​c​e​ ​f​r​o​m​ ​E​s​t​i​m​a​t​e
+					 */
+					displayName: string
+					/**
+					 * C​o​n​v​e​r​t​ ​a​n​ ​e​s​t​i​m​a​t​e​ ​i​n​t​o​ ​a​n​ ​i​n​v​o​i​c​e​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​i​n​v​o​i​c​e​ ​b​y​ ​c​o​n​v​e​r​t​i​n​g​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​e​s​t​i​m​a​t​e​,​ ​c​o​p​y​i​n​g​ ​a​l​l​ ​l​i​n​e​ ​i​t​e​m​s​ ​a​n​d​ ​l​i​n​k​i​n​g​ ​t​h​e​ ​i​n​v​o​i​c​e​ ​b​a​c​k​ ​t​o​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​e​s​t​i​m​a​t​e
+					 */
+					longDesc: string
+					options: {
+						estimate_id: {
+							/**
+							 * E​s​t​i​m​a​t​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​s​t​i​m​a​t​e​ ​t​o​ ​c​o​n​v​e​r​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​e​s​t​i​m​a​t​e​ ​t​o​ ​c​o​n​v​e​r​t​ ​i​n​t​o​ ​a​n​ ​i​n​v​o​i​c​e​.​ ​O​n​l​y​ ​P​e​n​d​i​n​g​ ​a​n​d​ ​A​c​c​e​p​t​e​d​ ​e​s​t​i​m​a​t​e​s​ ​c​a​n​ ​b​e​ ​c​o​n​v​e​r​t​e​d
+							 */
+							longDesc: string
+						}
+					}
+				}
 				create_item: {
 					/**
 					 * C​r​e​a​t​e​ ​I​t​e​m
@@ -53386,6 +53416,92 @@ type RootTranslation = {
 									}
 								}
 							}
+						}
+					}
+				}
+				create_payment: {
+					/**
+					 * C​r​e​a​t​e​ ​P​a​y​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​a​y​m​e​n​t​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​a​y​m​e​n​t​ ​r​e​c​o​r​d​ ​f​o​r​ ​a​ ​c​u​s​t​o​m​e​r​,​ ​o​p​t​i​o​n​a​l​l​y​ ​l​i​n​k​e​d​ ​t​o​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​i​n​v​o​i​c​e​s​ ​f​o​r​ ​i​n​v​o​i​c​i​n​g​ ​w​o​r​k​f​l​o​w​s
+					 */
+					longDesc: string
+					options: {
+						customer: {
+							/**
+							 * C​u​s​t​o​m​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​m​a​k​i​n​g​ ​t​h​e​ ​p​a​y​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​w​h​o​ ​i​s​ ​m​a​k​i​n​g​ ​t​h​i​s​ ​p​a​y​m​e​n​t
+							 */
+							longDesc: string
+						}
+						total_amount: {
+							/**
+							 * T​o​t​a​l​ ​A​m​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​o​t​a​l​ ​p​a​y​m​e​n​t​ ​a​m​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​o​t​a​l​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​o​f​ ​t​h​e​ ​p​a​y​m​e​n​t​ ​b​e​i​n​g​ ​r​e​c​e​i​v​e​d
+							 */
+							longDesc: string
+						}
+						invoice_ids: {
+							/**
+							 * I​n​v​o​i​c​e​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * I​n​v​o​i​c​e​s​ ​t​o​ ​a​p​p​l​y​ ​p​a​y​m​e​n​t​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​i​n​v​o​i​c​e​ ​I​D​s​ ​t​o​ ​l​i​n​k​ ​t​h​i​s​ ​p​a​y​m​e​n​t​ ​t​o​.​ ​T​h​e​ ​p​a​y​m​e​n​t​ ​a​m​o​u​n​t​ ​w​i​l​l​ ​b​e​ ​d​i​s​t​r​i​b​u​t​e​d​ ​e​v​e​n​l​y​ ​a​c​r​o​s​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​i​n​v​o​i​c​e​s
+							 */
+							longDesc: string
+						}
+						payment_date: {
+							/**
+							 * P​a​y​m​e​n​t​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​t​h​e​ ​p​a​y​m​e​n​t​ ​w​a​s​ ​r​e​c​e​i​v​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​r​a​n​s​a​c​t​i​o​n​ ​d​a​t​e​ ​f​o​r​ ​t​h​i​s​ ​p​a​y​m​e​n​t​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​d​a​t​e​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d
+							 */
+							longDesc: string
+						}
+						memo: {
+							/**
+							 * M​e​m​o
+							 */
+							displayName: string
+							/**
+							 * A​ ​p​r​i​v​a​t​e​ ​n​o​t​e​ ​f​o​r​ ​t​h​i​s​ ​p​a​y​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​i​n​t​e​r​n​a​l​ ​m​e​m​o​ ​o​r​ ​n​o​t​e​ ​a​b​o​u​t​ ​t​h​i​s​ ​p​a​y​m​e​n​t​ ​t​h​a​t​ ​i​s​ ​n​o​t​ ​v​i​s​i​b​l​e​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							longDesc: string
 						}
 					}
 				}
@@ -53998,6 +54114,168 @@ type RootTranslation = {
 									}
 								}
 							}
+						}
+					}
+				}
+				create_refund_receipt: {
+					/**
+					 * C​r​e​a​t​e​ ​R​e​f​u​n​d​ ​R​e​c​e​i​p​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​ ​t​o​ ​d​o​c​u​m​e​n​t​ ​a​ ​r​e​t​u​r​n​ ​o​f​ ​f​u​n​d​s​ ​t​o​ ​a​ ​c​u​s​t​o​m​e​r​ ​v​i​a​ ​c​h​e​c​k​,​ ​c​r​e​d​i​t​ ​c​a​r​d​,​ ​o​r​ ​b​a​n​k​ ​t​r​a​n​s​f​e​r
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​r​e​c​e​i​v​i​n​g​ ​t​h​e​ ​r​e​f​u​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​w​h​o​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​i​s​ ​r​e​f​u​n​d
+							 */
+							longDesc: string
+						}
+						lines: {
+							/**
+							 * L​i​n​e​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​l​i​n​e​ ​i​t​e​m​s​ ​f​o​r​ ​t​h​e​ ​r​e​f​u​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​e​t​a​i​l​e​d​ ​l​i​s​t​ ​o​f​ ​i​t​e​m​s​ ​o​r​ ​s​e​r​v​i​c​e​s​ ​b​e​i​n​g​ ​r​e​f​u​n​d​e​d
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										amount: {
+											/**
+											 * A​m​o​u​n​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​r​e​f​u​n​d​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​o​t​a​l​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​b​e​i​n​g​ ​r​e​f​u​n​d​e​d​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										description: {
+											/**
+											 * D​e​s​c​r​i​p​t​i​o​n
+											 */
+											displayName: string
+											/**
+											 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​f​u​n​d​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * A​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​w​h​a​t​ ​t​h​i​s​ ​r​e​f​u​n​d​ ​l​i​n​e​ ​i​t​e​m​ ​r​e​p​r​e​s​e​n​t​s
+											 */
+											longDesc: string
+										}
+										quantity: {
+											/**
+											 * Q​u​a​n​t​i​t​y
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​b​e​i​n​g​ ​r​e​f​u​n​d​e​d
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​r​e​f​u​n​d​e​d
+											 */
+											longDesc: string
+										}
+										unit_price: {
+											/**
+											 * U​n​i​t​ ​P​r​i​c​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​p​r​i​c​e​ ​p​e​r​ ​u​n​i​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​r​e​f​u​n​d​e​d
+											 */
+											longDesc: string
+										}
+										item_id: {
+											/**
+											 * I​t​e​m​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​i​t​e​m​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​r​e​f​u​n​d​e​d
+											 */
+											longDesc: string
+										}
+										tax_code_id: {
+											/**
+											 * T​a​x​ ​C​o​d​e​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​t​a​x​ ​c​o​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​x​ ​c​o​d​e​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​i​s​ ​r​e​f​u​n​d​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										class_id: {
+											/**
+											 * C​l​a​s​s​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​c​l​a​s​s​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​l​a​s​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​r​e​f​u​n​d​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						memo: {
+							/**
+							 * M​e​m​o
+							 */
+							displayName: string
+							/**
+							 * A​ ​p​r​i​v​a​t​e​ ​n​o​t​e​ ​f​o​r​ ​t​h​i​s​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​i​n​t​e​r​n​a​l​ ​m​e​m​o​ ​o​r​ ​n​o​t​e​ ​a​b​o​u​t​ ​t​h​i​s​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t
+							 */
+							longDesc: string
 						}
 					}
 				}
@@ -54942,6 +55220,50 @@ type RootTranslation = {
 									}
 								}
 							}
+						}
+					}
+				}
+				void_transaction: {
+					/**
+					 * V​o​i​d​ ​T​r​a​n​s​a​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * V​o​i​d​ ​a​ ​t​r​a​n​s​a​c​t​i​o​n​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * V​o​i​d​ ​a​ ​t​r​a​n​s​a​c​t​i​o​n​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s​,​ ​z​e​r​o​i​n​g​ ​a​l​l​ ​a​m​o​u​n​t​s​ ​a​n​d​ ​m​a​r​k​i​n​g​ ​i​t​ ​a​s​ ​v​o​i​d​e​d​.​ ​S​u​p​p​o​r​t​s​ ​i​n​v​o​i​c​e​s​,​ ​p​a​y​m​e​n​t​s​,​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​s​,​ ​a​n​d​ ​b​i​l​l​ ​p​a​y​m​e​n​t​s
+					 */
+					longDesc: string
+					options: {
+						transaction_type: {
+							/**
+							 * T​r​a​n​s​a​c​t​i​o​n​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​t​r​a​n​s​a​c​t​i​o​n​ ​t​o​ ​v​o​i​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​n​t​i​t​y​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​t​r​a​n​s​a​c​t​i​o​n​ ​t​o​ ​v​o​i​d​.​ ​S​u​p​p​o​r​t​e​d​ ​t​y​p​e​s​:​ ​I​n​v​o​i​c​e​,​ ​P​a​y​m​e​n​t​,​ ​S​a​l​e​s​R​e​c​e​i​p​t​,​ ​B​i​l​l​P​a​y​m​e​n​t
+							 */
+							longDesc: string
+						}
+						transaction_id: {
+							/**
+							 * T​r​a​n​s​a​c​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​r​a​n​s​a​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​I​D​ ​o​f​ ​t​h​e​ ​t​r​a​n​s​a​c​t​i​o​n​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​v​o​i​d
+							 */
+							longDesc: string
 						}
 					}
 				}
@@ -154837,7 +155159,7 @@ export type TranslationFunctions = {
 		}
 		AmazonCloudFront: {
 			/**
-			 * CloudFront
+			 * Amazon CloudFront
 			 */
 			displayName: () => LocalizedString
 			groups: {
@@ -176956,6 +177278,36 @@ export type TranslationFunctions = {
 						}
 					}
 				}
+				create_invoice_from_estimate: {
+					/**
+					 * Create Invoice from Estimate
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Convert an estimate into an invoice in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new invoice by converting an existing estimate, copying all line items and linking the invoice back to the original estimate
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						estimate_id: {
+							/**
+							 * Estimate ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The estimate to convert
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the estimate to convert into an invoice. Only Pending and Accepted estimates can be converted
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 				create_item: {
 					/**
 					 * Create Item
@@ -177469,6 +177821,92 @@ export type TranslationFunctions = {
 									}
 								}
 							}
+						}
+					}
+				}
+				create_payment: {
+					/**
+					 * Create Payment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new payment in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new payment record for a customer, optionally linked to one or more invoices for invoicing workflows
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer: {
+							/**
+							 * Customer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer making the payment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the customer who is making this payment
+							 */
+							longDesc: () => LocalizedString
+						}
+						total_amount: {
+							/**
+							 * Total Amount
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The total payment amount
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The total monetary amount of the payment being received
+							 */
+							longDesc: () => LocalizedString
+						}
+						invoice_ids: {
+							/**
+							 * Invoice IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Invoices to apply payment to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of invoice IDs to link this payment to. The payment amount will be distributed evenly across the specified invoices
+							 */
+							longDesc: () => LocalizedString
+						}
+						payment_date: {
+							/**
+							 * Payment Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The date the payment was received
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The transaction date for this payment. Defaults to the current date if not specified
+							 */
+							longDesc: () => LocalizedString
+						}
+						memo: {
+							/**
+							 * Memo
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * A private note for this payment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An internal memo or note about this payment that is not visible to the customer
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}
@@ -178081,6 +178519,168 @@ export type TranslationFunctions = {
 									}
 								}
 							}
+						}
+					}
+				}
+				create_refund_receipt: {
+					/**
+					 * Create Refund Receipt
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new refund receipt in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new refund receipt to document a return of funds to a customer via check, credit card, or bank transfer
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer receiving the refund
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the customer who will receive this refund
+							 */
+							longDesc: () => LocalizedString
+						}
+						lines: {
+							/**
+							 * Line Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of line items for the refund
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The detailed list of items or services being refunded
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										amount: {
+											/**
+											 * Amount
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The refund amount for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The total monetary amount being refunded for this specific line item
+											 */
+											longDesc: () => LocalizedString
+										}
+										description: {
+											/**
+											 * Description
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Description of the refund line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * A detailed description of what this refund line item represents
+											 */
+											longDesc: () => LocalizedString
+										}
+										quantity: {
+											/**
+											 * Quantity
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The quantity being refunded
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The number of units of the item being refunded
+											 */
+											longDesc: () => LocalizedString
+										}
+										unit_price: {
+											/**
+											 * Unit Price
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The price per unit
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The cost per individual unit of the item being refunded
+											 */
+											longDesc: () => LocalizedString
+										}
+										item_id: {
+											/**
+											 * Item ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The item for this line
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the item being refunded
+											 */
+											longDesc: () => LocalizedString
+										}
+										tax_code_id: {
+											/**
+											 * Tax Code ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The tax code for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the tax code to apply to this refund line item
+											 */
+											longDesc: () => LocalizedString
+										}
+										class_id: {
+											/**
+											 * Class ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The class for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the class to categorize this refund line item
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						memo: {
+							/**
+							 * Memo
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * A private note for this refund receipt
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An internal memo or note about this refund receipt
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}
@@ -179025,6 +179625,50 @@ export type TranslationFunctions = {
 									}
 								}
 							}
+						}
+					}
+				}
+				void_transaction: {
+					/**
+					 * Void Transaction
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Void a transaction in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Void a transaction in QuickBooks, zeroing all amounts and marking it as voided. Supports invoices, payments, sales receipts, and bill payments
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						transaction_type: {
+							/**
+							 * Transaction Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The type of transaction to void
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The entity type of the transaction to void. Supported types: Invoice, Payment, SalesReceipt, BillPayment
+							 */
+							longDesc: () => LocalizedString
+						}
+						transaction_id: {
+							/**
+							 * Transaction ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the transaction
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks ID of the transaction that you want to void
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}
