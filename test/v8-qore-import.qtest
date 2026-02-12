@@ -1,0 +1,764 @@
+#!/usr/bin/env qore
+
+%modern
+
+%requires v8
+%requires QUnit
+
+%exec-class V8QoreImportTest
+
+class V8QoreImportTest inherits Test {
+    constructor() : Test("v8 qore import test", "1.0") {
+        addTestCase("qore global exists", \qoreGlobalTest());
+        addTestCase("namespace access", \namespaceAccessTest());
+        addTestCase("function calls", \functionCallTest());
+        addTestCase("constants", \constantTest());
+        addTestCase("class instantiation", \classInstantiationTest());
+        addTestCase("method calls", \methodCallTest());
+        addTestCase("static methods", \staticMethodTest());
+        addTestCase("error handling", \errorHandlingTest());
+        addTestCase("value round-trip", \valueRoundTripTest());
+        addTestCase("property enumeration", \enumerationTest());
+        addTestCase("multiple objects", \multipleObjectsTest());
+        addTestCase("deep namespace", \deepNamespaceTest());
+        addTestCase("list and type marshalling", \hashAndListTest());
+        addTestCase("type conversion", \typeConversionTest());
+        addTestCase("string functions", \stringFunctionTest());
+        addTestCase("math functions", \mathFunctionTest());
+        addTestCase("negative constructor", \negativeConstructorTest());
+        addTestCase("read-only namespace", \readOnlyTest());
+        addTestCase("multiple programs", \multiProgramTest());
+        addTestCase("object return", \objectReturnTest());
+        addTestCase("object passing", \objectPassingTest());
+        addTestCase("callback chain", \callbackChainTest());
+        # Set return value for compatibility with test harnesses that check the return value
+        set_return_value(main());
+    }
+
+    qoreGlobalTest() {
+        JavaScriptProgram js("
+globalThis.hasQore = typeof qore !== 'undefined';
+globalThis.qoreType = typeof qore;
+", "test-qore-global.js");
+        JavaScriptObject global = js.getGlobal();
+        assertTrue(global.hasQore);
+        assertEq("object", global.qoreType);
+    }
+
+    namespaceAccessTest() {
+        # Test that the Qore namespace is accessible
+        JavaScriptProgram js("
+globalThis.hasQoreNs = typeof qore.Qore !== 'undefined';
+globalThis.qoreNsType = typeof qore.Qore;
+// Test nested namespace: Qore::Thread
+globalThis.hasThread = typeof qore.Qore.Thread !== 'undefined';
+globalThis.threadType = typeof qore.Qore.Thread;
+", "test-ns-access.js");
+        JavaScriptObject global = js.getGlobal();
+        assertTrue(global.hasQoreNs);
+        assertEq("object", global.qoreNsType);
+        assertTrue(global.hasThread);
+        assertEq("object", global.threadType);
+
+        # Test accessing a non-existent namespace returns undefined
+        js = new JavaScriptProgram("
+globalThis.noExist = typeof qore.NonExistentNamespace123;
+", "test-ns-noexist.js");
+        global = js.getGlobal();
+        assertEq("undefined", global.noExist);
+    }
+
+    functionCallTest() {
+        # Test calling Qore::type()
+        JavaScriptProgram js("
+globalThis.typeResult = qore.Qore.type('hello');
+", "test-func-type.js");
+        JavaScriptObject global = js.getGlobal();
+        assertEq("string", global.typeResult);
+
+        # Test calling Qore::typename()
+        js = new JavaScriptProgram("
+globalThis.tnResult = qore.Qore.typename(42);
+", "test-func-typename.js");
+        global = js.getGlobal();
+        assertEq("integer", global.tnResult);
+
+        # Test calling a function with multiple args
+        js = new JavaScriptProgram("
+globalThis.replaceResult = qore.Qore.replace('hello world', 'world', 'qore');
+", "test-func-replace.js");
+        global = js.getGlobal();
+        assertEq("hello qore", global.replaceResult);
+
+        # Test calling a function with no args
+        js = new JavaScriptProgram("
+globalThis.nowResult = qore.Qore.now();
+", "test-func-now.js");
+        global = js.getGlobal();
+        # now() returns a date string
+        assertEq(Type::String, global.nowResult.type());
+    }
+
+    constantTest() {
+        # Test accessing Qore constants
+        JavaScriptProgram js("
+globalThis.trueVal = qore.Qore.True;
+globalThis.falseVal = qore.Qore.False;
+globalThis.nothingVal = qore.Qore.NOTHING;
+globalThis.intType = qore.Qore.NT_INT;
+", "test-constants.js");
+        JavaScriptObject global = js.getGlobal();
+        assertTrue(global.trueVal);
+        assertFalse(global.falseVal);
+        assertNothing(global.nothingVal);
+        # NT_INT is an integer constant
+        assertEq(Type::Int, global.intType.type());
+    }
+
+    classInstantiationTest() {
+        # Mutex, Queue, Counter are in Qore::Thread namespace
+        # Test creating a Mutex and basic operations
+        JavaScriptProgram js("
+var mutex = new qore.Qore.Thread.Mutex();
+globalThis.mutexCreated = mutex !== null && mutex !== undefined;
+mutex.lock();
+mutex.unlock();
+globalThis.mutexWorks = true;
+", "test-class-mutex.js");
+        JavaScriptObject global = js.getGlobal();
+        assertTrue(global.mutexCreated);
+        assertTrue(global.mutexWorks);
+
+        # Test creating a Counter
+        js = new JavaScriptProgram("
+var counter = new qore.Qore.Thread.Counter(1);
+globalThis.counterCreated = counter !== null && counter !== undefined;
+counter.dec();
+globalThis.counterValue = counter.getCount();
+", "test-class-counter.js");
+        global = js.getGlobal();
+        assertTrue(global.counterCreated);
+        assertEq(0, global.counterValue);
+
+        # Test creating a TimeZone (in Qore namespace directly)
+        js = new JavaScriptProgram("
+var tz = new qore.Qore.TimeZone('UTC');
+globalThis.tzCreated = tz !== null && tz !== undefined;
+globalThis.tzRegion = tz.region();
+", "test-class-timezone.js");
+        global = js.getGlobal();
+        assertTrue(global.tzCreated);
+        assertEq("UTC", global.tzRegion);
+    }
+
+    methodCallTest() {
+        # Test Queue push/get
+        JavaScriptProgram js("
+var q = new qore.Qore.Thread.Queue();
+q.push(42);
+q.push('hello');
+q.push(true);
+globalThis.val1 = q.get();
+globalThis.val2 = q.get();
+globalThis.val3 = q.get();
+globalThis.qSize = q.size();
+", "test-method-queue.js");
+        JavaScriptObject global = js.getGlobal();
+        assertEq(42, global.val1);
+        assertEq("hello", global.val2);
+        assertTrue(global.val3);
+        assertEq(0, global.qSize);
+    }
+
+    staticMethodTest() {
+        # TimeZone::get() is a static method that returns the current TimeZone
+        JavaScriptProgram js("
+var result;
+try {
+    var tz = qore.Qore.TimeZone.get();
+    result = tz !== null && tz !== undefined;
+} catch (e) {
+    result = false;
+    globalThis.staticErr = e.message + ' ' + e.stack;
+}
+globalThis.staticResult = result;
+", "test-static-methods.js");
+        JavaScriptObject global = js.getGlobal();
+        assertTrue(global.staticResult);
+    }
+
+    errorHandlingTest() {
+        # Test that Qore exceptions propagate to JS as catchable errors
+        {
+            JavaScriptProgram js("
+globalThis.funcError = false;
+try {
+    // hextoint with invalid hex string throws PARSE-HEX-ERROR
+    qore.Qore.hextoint('not_hex');
+} catch (e) {
+    globalThis.funcError = true;
+    globalThis.funcErrMsg = String(e);
+}
+", "test-error-func-call.js");
+            JavaScriptObject global = js.getGlobal();
+            assertTrue(global.funcError);
+            assertRegex("PARSE-HEX-ERROR", global.funcErrMsg);
+        }
+
+        # Test that accessing a non-existent property returns undefined
+        {
+            JavaScriptProgram js("
+globalThis.noMethod = typeof qore.Qore.nonExistentThing12345;
+", "test-error-noprop.js");
+            JavaScriptObject global = js.getGlobal();
+            assertEq("undefined", global.noMethod);
+        }
+
+        # Test that Queue.empty() works correctly on empty queue
+        {
+            JavaScriptProgram js("
+var q = new qore.Qore.Thread.Queue();
+globalThis.isEmpty = q.empty();
+q.push(42);
+globalThis.isEmptyAfterPush = q.empty();
+", "test-queue-empty.js");
+            JavaScriptObject global = js.getGlobal();
+            assertTrue(global.isEmpty);
+            assertFalse(global.isEmptyAfterPush);
+        }
+    }
+
+    valueRoundTripTest() {
+        # Test passing values from Qore to JS via callbacks and back
+        JavaScriptProgram js("
+function roundTrip(val) {
+    return val;
+}
+
+function callQoreFunc(func, arg) {
+    return func(arg);
+}
+", "test-roundtrip.js");
+        JavaScriptObject global = js.getGlobal();
+        code roundTrip = global.roundTrip.toData();
+
+        # Test various types round-trip correctly
+        assertEq(42, roundTrip(42));
+        assertEq("hello", roundTrip("hello"));
+        assertEq(True, roundTrip(True));
+        assertEq(3.14, roundTrip(3.14));
+
+        # Test calling a Qore callback from JS
+        code callQoreFunc = global.callQoreFunc.toData();
+        code qoreUpper = string sub (string s) { return s.upr(); };
+        assertEq("HELLO", callQoreFunc(qoreUpper, "hello"));
+    }
+
+    enumerationTest() {
+        # Test that Object.keys() works on namespace wrappers
+        JavaScriptProgram js("
+globalThis.enumTestPassed = true;
+try {
+    var keys = Object.keys(qore.Qore);
+    globalThis.hasKeys = keys.length > 0;
+    // Check that known items are enumerated
+    globalThis.hasType = keys.indexOf('type') >= 0 || keys.indexOf('Thread') >= 0;
+} catch (e) {
+    globalThis.enumTestPassed = false;
+    globalThis.enumError = e.message;
+}
+", "test-enum.js");
+        JavaScriptObject global = js.getGlobal();
+        assertTrue(global.enumTestPassed);
+        assertTrue(global.hasKeys);
+    }
+
+    multipleObjectsTest() {
+        # Test that class template caching works correctly with multiple instances
+        JavaScriptProgram js("
+var m1 = new qore.Qore.Thread.Mutex();
+var m2 = new qore.Qore.Thread.Mutex();
+// Lock and unlock independently
+m1.lock();
+m1.unlock();
+m2.lock();
+m2.unlock();
+globalThis.mutexIndependent = true;
+
+// Test multiple Queue instances don't share state
+var q1 = new qore.Qore.Thread.Queue();
+var q2 = new qore.Qore.Thread.Queue();
+q1.push('q1_item');
+q2.push('q2_item');
+globalThis.q1Val = q1.get();
+globalThis.q2Val = q2.get();
+globalThis.q1Empty = q1.empty();
+globalThis.q2Empty = q2.empty();
+
+// Test multiple Counter instances with different initial values
+var c1 = new qore.Qore.Thread.Counter(3);
+var c2 = new qore.Qore.Thread.Counter(7);
+globalThis.c1Count = c1.getCount();
+globalThis.c2Count = c2.getCount();
+c1.dec();
+globalThis.c1After = c1.getCount();
+globalThis.c2After = c2.getCount();
+", "test-multiple-objects.js");
+        JavaScriptObject global = js.getGlobal();
+        assertTrue(global.mutexIndependent);
+        assertEq("q1_item", global.q1Val);
+        assertEq("q2_item", global.q2Val);
+        assertTrue(global.q1Empty);
+        assertTrue(global.q2Empty);
+        assertEq(3, global.c1Count);
+        assertEq(7, global.c2Count);
+        assertEq(2, global.c1After);
+        assertEq(7, global.c2After);
+    }
+
+    deepNamespaceTest() {
+        JavaScriptProgram js("
+// Access deeply nested namespace
+var threadNs = qore.Qore.Thread;
+globalThis.threadExists = typeof threadNs !== 'undefined';
+
+// Verify repeated access returns consistent results (caching)
+var threadNs2 = qore.Qore.Thread;
+globalThis.cacheConsistent = typeof threadNs2 !== 'undefined';
+
+// Access a class through deep namespace path
+var mutex = new qore.Qore.Thread.Mutex();
+globalThis.deepClassWorks = mutex !== null && mutex !== undefined;
+mutex.lock();
+mutex.unlock();
+globalThis.deepMethodWorks = true;
+
+// Verify root qore object enumerates top-level namespaces
+var rootKeys = Object.keys(qore);
+globalThis.rootHasKeys = rootKeys.length > 0;
+globalThis.rootHasQore = rootKeys.indexOf('Qore') >= 0;
+
+// Access a function through a cached namespace path
+var type1 = qore.Qore.type('test1');
+var type2 = qore.Qore.type('test2');
+globalThis.cachedFuncWorks = type1 === 'string' && type2 === 'string';
+", "test-deep-namespace.js");
+        JavaScriptObject global = js.getGlobal();
+        assertTrue(global.threadExists);
+        assertTrue(global.cacheConsistent);
+        assertTrue(global.deepClassWorks);
+        assertTrue(global.deepMethodWorks);
+        assertTrue(global.rootHasKeys);
+        assertTrue(global.rootHasQore);
+        assertTrue(global.cachedFuncWorks);
+    }
+
+    hashAndListTest() {
+        # Test list/array marshalling through Qore functions
+        {
+            JavaScriptProgram js("
+// Test type() on a list
+var list = [10, 20, 30, 40, 50];
+globalThis.listType = qore.Qore.type(list);
+globalThis.listLen = list.length;
+
+// Test split() returns a list
+var parts = qore.Qore.split(' ', 'hello world test');
+globalThis.splitLen = parts.length;
+globalThis.splitFirst = parts[0];
+globalThis.splitLast = parts[2];
+
+// Test join() on a list
+var joined = qore.Qore.join('-', parts);
+globalThis.joinResult = joined;
+
+// Test nested list
+var nested = [[1, 2], [3, 4]];
+globalThis.nestedType = qore.Qore.type(nested);
+globalThis.nestedLen = nested.length;
+globalThis.innerLen = nested[0].length;
+", "test-list-marshalling.js");
+            JavaScriptObject global = js.getGlobal();
+            assertEq("list", global.listType);
+            assertEq(5, global.listLen);
+            assertEq(3, global.splitLen);
+            assertEq("hello", global.splitFirst);
+            assertEq("test", global.splitLast);
+            assertEq("hello-world-test", global.joinResult);
+            assertEq("list", global.nestedType);
+            assertEq(2, global.nestedLen);
+            assertEq(2, global.innerLen);
+        }
+
+        # Test Qore hash return value becomes usable JS object
+        {
+            JavaScriptProgram js("
+function testHashReturn(createHashFunc) {
+    var h = createHashFunc();
+    globalThis.hashName = h.name;
+    globalThis.hashAge = h.age;
+    globalThis.hashKeyCount = Object.keys(h).length;
+}
+", "test-hash-return.js");
+            JavaScriptObject global = js.getGlobal();
+            code testHashReturn = global.testHashReturn.toData();
+            code createHash = hash<auto> sub () {
+                return {"name": "Alice", "age": 30, "active": True};
+            };
+            testHashReturn(createHash);
+            global = js.getGlobal();
+            assertEq("Alice", global.hashName);
+            assertEq(30, global.hashAge);
+            assertEq(3, global.hashKeyCount);
+        }
+    }
+
+    typeConversionTest() {
+        JavaScriptProgram js("
+// int conversion
+globalThis.intFromStr = qore.Qore.int('42');
+globalThis.intFromFloat = qore.Qore.int(3.7);
+globalThis.intFromBool = qore.Qore.int(true);
+
+// string conversion
+globalThis.strFromInt = qore.Qore.string(42);
+globalThis.strType = typeof globalThis.strFromInt;
+
+// float conversion
+globalThis.floatFromStr = qore.Qore.float('3.14');
+
+// boolean conversion
+globalThis.boolFromInt = qore.Qore.boolean(1);
+globalThis.boolFromZero = qore.Qore.boolean(0);
+globalThis.boolFromStr = qore.Qore.boolean('hello');
+globalThis.boolFromEmpty = qore.Qore.boolean('');
+
+// Negative numbers
+globalThis.negInt = qore.Qore.int('-100');
+globalThis.negFloat = qore.Qore.float('-2.5');
+
+// Large integers
+globalThis.largeInt = qore.Qore.int('999999999');
+", "test-type-conversion.js");
+        JavaScriptObject global = js.getGlobal();
+        assertEq(42, global.intFromStr);
+        assertEq(3, global.intFromFloat);
+        assertEq(1, global.intFromBool);
+        assertEq("42", global.strFromInt);
+        assertEq("string", global.strType);
+        assertEq(3.14, global.floatFromStr);
+        assertTrue(global.boolFromInt);
+        assertFalse(global.boolFromZero);
+        assertTrue(global.boolFromStr);
+        assertFalse(global.boolFromEmpty);
+        assertEq(-100, global.negInt);
+        assertEq(-2.5, global.negFloat);
+        assertEq(999999999, global.largeInt);
+    }
+
+    stringFunctionTest() {
+        JavaScriptProgram js("
+// substr
+globalThis.sub1 = qore.Qore.substr('hello world', 0, 5);
+globalThis.sub2 = qore.Qore.substr('hello world', 6);
+
+// length
+globalThis.len1 = qore.Qore.length('hello');
+
+// index
+globalThis.idx1 = qore.Qore.index('hello world', 'world');
+globalThis.idx2 = qore.Qore.index('hello world', 'xyz');
+
+// sprintf
+globalThis.fmt1 = qore.Qore.sprintf('Hello %s #%d', 'World', 42);
+
+// toupper / tolower
+globalThis.upper = qore.Qore.toupper('hello');
+globalThis.lower = qore.Qore.tolower('HELLO');
+
+// trim
+globalThis.trimmed = qore.Qore.trim('  hello  ');
+
+// chr and ord
+globalThis.chrResult = qore.Qore.chr(65);
+globalThis.ordResult = qore.Qore.ord('A');
+", "test-string-functions.js");
+        JavaScriptObject global = js.getGlobal();
+        assertEq("hello", global.sub1);
+        assertEq("world", global.sub2);
+        assertEq(5, global.len1);
+        assertEq(6, global.idx1);
+        assertEq(-1, global.idx2);
+        assertEq("Hello World #42", global.fmt1);
+        assertEq("HELLO", global.upper);
+        assertEq("hello", global.lower);
+        assertEq("hello", global.trimmed);
+        assertEq("A", global.chrResult);
+        assertEq(65, global.ordResult);
+    }
+
+    mathFunctionTest() {
+        JavaScriptProgram js("
+// abs
+globalThis.absPos = qore.Qore.abs(42);
+globalThis.absNeg = qore.Qore.abs(-42);
+globalThis.absFloat = qore.Qore.abs(-3.14);
+
+// min and max with list arguments
+globalThis.minResult = qore.Qore.min([10, 20, 5, 30]);
+globalThis.maxResult = qore.Qore.max([10, 20, 5, 30]);
+", "test-math-functions.js");
+        JavaScriptObject global = js.getGlobal();
+        assertEq(42, global.absPos);
+        assertEq(42, global.absNeg);
+        assertEq(3.14, global.absFloat);
+        assertEq(5, global.minResult);
+        assertEq(30, global.maxResult);
+    }
+
+    negativeConstructorTest() {
+        # Test calling class constructor without 'new' keyword (should throw)
+        {
+            JavaScriptProgram js("
+globalThis.noNewError = false;
+globalThis.noNewMsg = '';
+try {
+    qore.Qore.Thread.Mutex();
+} catch (e) {
+    globalThis.noNewError = true;
+    globalThis.noNewMsg = String(e);
+}
+", "test-negative-constructor.js");
+            JavaScriptObject global = js.getGlobal();
+            assertTrue(global.noNewError);
+            assertRegex("JAVASCRIPT-CONSTRUCTOR-ERROR", global.noNewMsg);
+        }
+
+        # Test method call on wrong object type (calling a non-existent method)
+        {
+            JavaScriptProgram js("
+globalThis.badMethodError = false;
+try {
+    var mutex = new qore.Qore.Thread.Mutex();
+    // Mutex doesn't have a 'push' method
+    mutex.push('test');
+} catch (e) {
+    globalThis.badMethodError = true;
+    globalThis.badMethodMsg = String(e);
+}
+", "test-bad-method-call.js");
+            JavaScriptObject global = js.getGlobal();
+            assertTrue(global.badMethodError);
+            assertEq(Type::String, global.badMethodMsg.type());
+        }
+    }
+
+    readOnlyTest() {
+        JavaScriptProgram js("
+// Verify existing function is accessible
+globalThis.originalResult = qore.Qore.type('test');
+
+// Try to overwrite a namespace property (should be silently ignored in sloppy mode)
+qore.Qore.type = 123;
+
+// Verify the function still works after attempted overwrite
+globalThis.afterOverwrite = qore.Qore.type('test');
+
+// Try to delete a namespace property (should fail, property is DontDelete)
+var deleteResult = delete qore.Qore.type;
+globalThis.deleteResult = deleteResult;
+
+// Verify it still works after delete attempt
+globalThis.afterDelete = qore.Qore.type('test');
+
+// Setting a non-existent property on namespace (allowed since it's a new own property)
+qore.Qore.myCustomProp = 'custom';
+globalThis.customPropSet = qore.Qore.myCustomProp;
+
+// Verify real namespace members still accessible after setting custom property
+globalThis.stillWorks = qore.Qore.type('final');
+", "test-readonly.js");
+        JavaScriptObject global = js.getGlobal();
+        assertEq("string", global.originalResult);
+        assertEq("string", global.afterOverwrite);
+        assertEq("string", global.afterDelete);
+        assertEq("string", global.stillWorks);
+    }
+
+    multiProgramTest() {
+        # Create two separate programs that both use qore.* independently
+        JavaScriptProgram js1("
+globalThis.typeResult = qore.Qore.type('hello');
+globalThis.counter = new qore.Qore.Thread.Counter(5);
+globalThis.counterVal = globalThis.counter.getCount();
+", "test-multi-prog1.js");
+        JavaScriptProgram js2("
+globalThis.typeResult = qore.Qore.type(42);
+globalThis.counter = new qore.Qore.Thread.Counter(10);
+globalThis.counterVal = globalThis.counter.getCount();
+", "test-multi-prog2.js");
+        JavaScriptObject g1 = js1.getGlobal();
+        JavaScriptObject g2 = js2.getGlobal();
+        assertEq("string", g1.typeResult);
+        assertEq(5, g1.counterVal);
+        assertEq("integer", g2.typeResult);
+        assertEq(10, g2.counterVal);
+
+        # Verify modifying one program doesn't affect the other
+        JavaScriptProgram js3("
+globalThis.typeResult = qore.Qore.type(3.14);
+", "test-multi-prog3.js");
+        JavaScriptObject g3 = js3.getGlobal();
+        assertEq("float", g3.typeResult);
+        # Re-check js1 is unaffected
+        g1 = js1.getGlobal();
+        assertEq("string", g1.typeResult);
+    }
+
+    objectReturnTest() {
+        # Test that static methods returning Qore objects produce usable JS objects
+        JavaScriptProgram js("
+// Get default timezone using static method
+var tz = qore.Qore.TimeZone.get();
+globalThis.tzExists = tz !== null && tz !== undefined;
+globalThis.tzRegion = tz.region();
+globalThis.tzRegionType = typeof globalThis.tzRegion;
+
+// Verify we can call multiple methods on the returned object
+globalThis.tzUTCOffset = tz.UTCOffset();
+
+// Create a TimeZone, then use it
+var utc = new qore.Qore.TimeZone('UTC');
+var utcRegion = utc.region();
+globalThis.utcRegion = utcRegion;
+globalThis.utcOffset = utc.UTCOffset();
+", "test-object-return.js");
+        JavaScriptObject global = js.getGlobal();
+        assertTrue(global.tzExists);
+        assertEq("string", global.tzRegionType);
+        assertEq(Type::String, global.tzRegion.type());
+        assertEq(Type::Int, global.tzUTCOffset.type());
+        assertEq("UTC", global.utcRegion);
+        assertEq(0, global.utcOffset);
+    }
+
+    objectPassingTest() {
+        # Test passing a Qore object to JS and using it from both sides
+        JavaScriptProgram js("
+function useQueue(q) {
+    q.push('from_js');
+    return q.get();
+}
+function getQueueSize(q) {
+    return q.size();
+}
+", "test-object-passing.js");
+        JavaScriptObject global = js.getGlobal();
+        code useQueue = global.useQueue.toData();
+        code getQueueSize = global.getQueueSize.toData();
+
+        # Create a Queue in Qore and pass it to JS
+        {
+            Queue q();
+            q.push("from_qore");
+            q.push("second_item");
+
+            # JS function pushes "from_js" then pops "from_qore"
+            auto result = useQueue(q);
+            assertEq("from_qore", result);
+
+            # Queue should have: ["second_item", "from_js"]
+            assertEq(2, getQueueSize(q));
+            assertEq("second_item", q.get());
+            assertEq("from_js", q.get());
+        }
+
+        # Test passing an object created by a Qore closure to JS
+        JavaScriptProgram js2("
+function testObjectFromQore(createQ) {
+    var q = createQ();
+    q.push('js_added');
+    globalThis.qResult1 = q.get();
+    globalThis.qResult2 = q.get();
+    globalThis.qResult3 = q.get();
+}
+", "test-object-from-qore.js");
+        JavaScriptObject global2 = js2.getGlobal();
+        code testFunc = global2.testObjectFromQore.toData();
+        code createQueue = auto sub () {
+            Queue q();
+            q.push("qore_item1");
+            q.push("qore_item2");
+            return q;
+        };
+        testFunc(createQueue);
+        global2 = js2.getGlobal();
+        assertEq("qore_item1", global2.qResult1);
+        assertEq("qore_item2", global2.qResult2);
+        assertEq("js_added", global2.qResult3);
+    }
+
+    callbackChainTest() {
+        # Test 1: JS callback that accesses qore.* when called from Qore
+        {
+            JavaScriptProgram js("
+function callbackUsingQore(val) {
+    return qore.Qore.type(val);
+}
+", "test-callback-qore-access.js");
+            JavaScriptObject global = js.getGlobal();
+            code callbackUsingQore = global.callbackUsingQore.toData();
+            assertEq("string", callbackUsingQore("hello"));
+            assertEq("integer", callbackUsingQore(42));
+            assertEq("float", callbackUsingQore(3.14));
+        }
+
+        # Test 2: JS calls Qore callback which processes and returns
+        {
+            JavaScriptProgram js("
+function chainTest(qoreCb, val) {
+    return qoreCb(val);
+}
+", "test-callback-chain.js");
+            JavaScriptObject global = js.getGlobal();
+            code chainTest = global.chainTest.toData();
+            code qoreCb = auto sub (auto val) { return Qore::type(val); };
+            assertEq("string", chainTest(qoreCb, "hello"));
+            assertEq("integer", chainTest(qoreCb, 42));
+        }
+
+        # Test 3: Multiple Qore callbacks called from JS in sequence with qore.* access
+        {
+            JavaScriptProgram js("
+function multiCallback(cb1, cb2, val) {
+    var intermediate = cb1(val);
+    var result = cb2(intermediate);
+    // Also verify qore.* still works after callback chain
+    var typeCheck = qore.Qore.type(result);
+    return typeCheck;
+}
+", "test-multi-callback.js");
+            JavaScriptObject global = js.getGlobal();
+            code multiCallback = global.multiCallback.toData();
+            code cb1 = auto sub (auto val) { return val + " processed"; };
+            code cb2 = auto sub (auto val) { return val.upr(); };
+            assertEq("string", multiCallback(cb1, cb2, "hello"));
+        }
+
+        # Test 4: JS callback performs complex qore.* operations
+        {
+            JavaScriptProgram js("
+function complexCallback(val) {
+    // Multiple qore.* calls in a single callback invocation
+    var t = qore.Qore.type(val);
+    var len = qore.Qore.length(val);
+    var upper = qore.Qore.toupper(val);
+    return t + ':' + len + ':' + upper;
+}
+", "test-complex-callback.js");
+            JavaScriptObject global = js.getGlobal();
+            code complexCallback = global.complexCallback.toData();
+            assertEq("string:5:HELLO", complexCallback("hello"));
+        }
+    }
+}
