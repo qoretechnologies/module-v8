@@ -7,6 +7,31 @@
 
 %exec-class V8QoreImportTest
 
+#! Test class with public and private members for member access tests
+class TestMemberClass {
+    public {
+        string name;
+        int age;
+        *string nullable_field;
+    }
+    private {
+        string secret = "hidden";
+    }
+
+    constructor(string n, int a) {
+        name = n;
+        age = a;
+    }
+
+    string getName() {
+        return name;
+    }
+
+    string getSecret() {
+        return secret;
+    }
+}
+
 class V8QoreImportTest inherits Test {
     constructor() : Test("v8 qore import test", "1.0") {
         addTestCase("qore global exists", \qoreGlobalTest());
@@ -31,6 +56,7 @@ class V8QoreImportTest inherits Test {
         addTestCase("object return", \objectReturnTest());
         addTestCase("object passing", \objectPassingTest());
         addTestCase("callback chain", \callbackChainTest());
+        addTestCase("member access", \memberAccessTest());
         # Set return value for compatibility with test harnesses that check the return value
         set_return_value(main());
     }
@@ -759,6 +785,215 @@ function complexCallback(val) {
             JavaScriptObject global = js.getGlobal();
             code complexCallback = global.complexCallback.toData();
             assertEq("string:5:HELLO", complexCallback("hello"));
+        }
+    }
+
+    memberAccessTest() {
+        # Test 1: Read public members from JS
+        {
+            JavaScriptProgram js("
+function readMembers(obj) {
+    globalThis.memberName = obj.name;
+    globalThis.memberAge = obj.age;
+}
+", "test-member-read.js");
+            JavaScriptObject global = js.getGlobal();
+            code readMembers = global.readMembers.toData();
+            TestMemberClass tc("Alice", 30);
+            readMembers(tc);
+            global = js.getGlobal();
+            assertEq("Alice", global.memberName);
+            assertEq(30, global.memberAge);
+        }
+
+        # Test 2: Write public members from JS, verify in Qore
+        {
+            JavaScriptProgram js("
+function setMembers(obj, newName, newAge) {
+    obj.name = newName;
+    obj.age = newAge;
+}
+", "test-member-write.js");
+            JavaScriptObject global = js.getGlobal();
+            code setMembers = global.setMembers.toData();
+            TestMemberClass tc("Bob", 25);
+            setMembers(tc, "Charlie", 42);
+            assertEq("Charlie", tc.name);
+            assertEq(42, tc.age);
+        }
+
+        # Test 3: Private member access is denied
+        {
+            JavaScriptProgram js("
+function testPrivateAccess(obj) {
+    try {
+        var val = obj.secret;
+        globalThis.privateAccessOk = true;
+    } catch (e) {
+        globalThis.privateAccessOk = false;
+        globalThis.privateErrMsg = String(e);
+    }
+}
+", "test-member-private.js");
+            JavaScriptObject global = js.getGlobal();
+            code testPrivateAccess = global.testPrivateAccess.toData();
+            TestMemberClass tc("Dave", 40);
+            testPrivateAccess(tc);
+            global = js.getGlobal();
+            assertFalse(global.privateAccessOk);
+            assertRegex("JAVASCRIPT-MEMBER-ACCESS-ERROR", global.privateErrMsg);
+        }
+
+        # Test 4: Object.keys() includes public members only
+        {
+            JavaScriptProgram js("
+function testKeys(obj) {
+    var keys = Object.keys(obj);
+    globalThis.keyCount = keys.length;
+    globalThis.hasName = keys.indexOf('name') >= 0;
+    globalThis.hasAge = keys.indexOf('age') >= 0;
+    globalThis.hasNullable = keys.indexOf('nullable_field') >= 0;
+    globalThis.hasSecret = keys.indexOf('secret') >= 0;
+}
+", "test-member-keys.js");
+            JavaScriptObject global = js.getGlobal();
+            code testKeys = global.testKeys.toData();
+            TestMemberClass tc("Eve", 35);
+            testKeys(tc);
+            global = js.getGlobal();
+            assertTrue(global.hasName);
+            assertTrue(global.hasAge);
+            assertTrue(global.hasNullable);
+            assertFalse(global.hasSecret);
+            assertEq(3, global.keyCount);
+        }
+
+        # Test 5: 'in' operator works for public members
+        {
+            JavaScriptProgram js("
+function testIn(obj) {
+    globalThis.hasName = 'name' in obj;
+    globalThis.hasAge = 'age' in obj;
+    globalThis.hasSecret = 'secret' in obj;
+    globalThis.hasNonExistent = 'nonExistent' in obj;
+    // Methods should still be found via prototype
+    globalThis.hasGetName = 'getName' in obj;
+}
+", "test-member-in.js");
+            JavaScriptObject global = js.getGlobal();
+            code testIn = global.testIn.toData();
+            TestMemberClass tc("Frank", 50);
+            testIn(tc);
+            global = js.getGlobal();
+            assertTrue(global.hasName);
+            assertTrue(global.hasAge);
+            assertFalse(global.hasSecret);
+            assertFalse(global.hasNonExistent);
+            assertTrue(global.hasGetName);
+        }
+
+        # Test 6: Round-trip: set in Qore, read in JS, modify in JS, verify in Qore
+        {
+            JavaScriptProgram js("
+function roundTrip(obj) {
+    // Read values originally set in Qore
+    globalThis.initialName = obj.name;
+    globalThis.initialAge = obj.age;
+    // Modify in JS
+    obj.name = 'JSModified';
+    obj.age = 77;
+}
+", "test-member-roundtrip.js");
+            JavaScriptObject global = js.getGlobal();
+            code roundTrip = global.roundTrip.toData();
+            TestMemberClass tc("QoreSet", 10);
+            roundTrip(tc);
+            global = js.getGlobal();
+            # JS read the Qore-set values
+            assertEq("QoreSet", global.initialName);
+            assertEq(10, global.initialAge);
+            # Qore sees the JS-set values
+            assertEq("JSModified", tc.name);
+            assertEq(77, tc.age);
+        }
+
+        # Test 7: Methods still work and are not shadowed by interceptor
+        {
+            JavaScriptProgram js("
+function testMethodsAndMembers(obj) {
+    globalThis.methodResult = obj.getName();
+    globalThis.memberResult = obj.name;
+    globalThis.secretViaMethod = obj.getSecret();
+}
+", "test-member-no-shadow.js");
+            JavaScriptObject global = js.getGlobal();
+            code testMethods = global.testMethodsAndMembers.toData();
+            TestMemberClass tc("Grace", 28);
+            testMethods(tc);
+            global = js.getGlobal();
+            assertEq("Grace", global.methodResult);
+            assertEq("Grace", global.memberResult);
+            assertEq("hidden", global.secretViaMethod);
+        }
+
+        # Test 8: NOTHING/nullable member access
+        {
+            JavaScriptProgram js("
+function testNullable(obj) {
+    globalThis.nullableVal = obj.nullable_field;
+    globalThis.isNullish = obj.nullable_field == null;
+}
+", "test-member-nullable.js");
+            JavaScriptObject global = js.getGlobal();
+            code testNullable = global.testNullable.toData();
+            TestMemberClass tc("Hank", 45);
+            testNullable(tc);
+            global = js.getGlobal();
+            # NOTHING maps to null/undefined in JS
+            assertTrue(global.isNullish);
+        }
+
+        # Test 9: Setting private member from JS is denied
+        {
+            JavaScriptProgram js("
+function testPrivateSet(obj) {
+    try {
+        obj.secret = 'hacked';
+        globalThis.privateSetOk = true;
+    } catch (e) {
+        globalThis.privateSetOk = false;
+        globalThis.privateSetErr = String(e);
+    }
+}
+", "test-member-private-set.js");
+            JavaScriptObject global = js.getGlobal();
+            code testPrivateSet = global.testPrivateSet.toData();
+            TestMemberClass tc("Ivy", 22);
+            testPrivateSet(tc);
+            global = js.getGlobal();
+            assertFalse(global.privateSetOk);
+            assertRegex("JAVASCRIPT-MEMBER-ACCESS-ERROR", global.privateSetErr);
+            # Verify private member was not modified
+            assertEq("hidden", tc.getSecret());
+        }
+
+        # Test 10: Setting non-existent property creates JS-only property (not a Qore member)
+        {
+            JavaScriptProgram js("
+function testJsOnlyProp(obj) {
+    obj.jsOnly = 'custom';
+    globalThis.jsOnlyVal = obj.jsOnly;
+    // Qore member should still work
+    globalThis.nameStillWorks = obj.name;
+}
+", "test-member-js-only.js");
+            JavaScriptObject global = js.getGlobal();
+            code testJsOnly = global.testJsOnlyProp.toData();
+            TestMemberClass tc("Jack", 33);
+            testJsOnly(tc);
+            global = js.getGlobal();
+            assertEq("custom", global.jsOnlyVal);
+            assertEq("Jack", global.nameStillWorks);
         }
     }
 }

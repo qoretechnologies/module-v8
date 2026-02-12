@@ -25,6 +25,8 @@
 #include "QoreV8ClassWrapper.h"
 #include "QoreV8Program.h"
 
+#include <vector>
+
 void QoreV8ClassWrapper::addAncestorMethods(v8::Isolate* isolate, v8::Local<v8::Context> context,
         QoreV8Program* pgm, v8::Local<v8::FunctionTemplate> tmpl, const QoreClass& cls,
         std::set<std::string>& instance_methods, std::set<std::string>& static_methods,
@@ -293,6 +295,23 @@ v8::Local<v8::FunctionTemplate> QoreV8ClassWrapper::getOrCreateTemplate(v8::Isol
             instance_methods, static_methods, constant_names);
     }
 
+    // Build the member cache once per class template (avoids O(n) iterator scan per access)
+    QoreV8MemberHandlerData* mhdata = new QoreV8MemberHandlerData(pgm, cls);
+    pgm->trackMemberHandlerData(mhdata);
+
+    // Add named property handler for instance member access (get/set public members)
+    v8::Local<v8::External> mh_ext = v8::External::New(isolate, mhdata);
+    v8::NamedPropertyHandlerConfiguration member_config(
+        member_getter,
+        member_setter,
+        member_query,
+        nullptr,                                  // no deleter
+        member_enumerator,
+        mh_ext,
+        v8::PropertyHandlerFlags::kNonMasking     // don't shadow prototype methods
+    );
+    tmpl->InstanceTemplate()->SetHandler(member_config);
+
     // Cache the template
     pgm->cacheClassTemplate(cls, isolate, tmpl);
 
@@ -527,4 +546,266 @@ void QoreV8ClassWrapper::weak_callback(const v8::WeakCallbackInfo<QoreV8ObjectRe
     ref->pgm->untrackObjectRef(ref);
     ref->persistent.Reset();
     delete ref;
+}
+
+#if V8_MAJOR_VERSION >= 12
+v8::Intercepted QoreV8ClassWrapper::member_getter(v8::Local<v8::Name> property,
+        const v8::PropertyCallbackInfo<v8::Value>& info) {
+#else
+void QoreV8ClassWrapper::member_getter(v8::Local<v8::Name> property,
+        const v8::PropertyCallbackInfo<v8::Value>& info) {
+#endif
+    if (!property->IsString()) {
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kNo;
+#else
+        return;
+#endif
+    }
+
+    v8::Isolate* isolate = info.GetIsolate();
+    v8::String::Utf8Value prop_name(isolate, property);
+    const char* name = *prop_name;
+
+    v8::Local<v8::Object> holder = info.Holder();
+    if (holder->InternalFieldCount() < 1) {
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kNo;
+#else
+        return;
+#endif
+    }
+
+    QoreObject* qobj = reinterpret_cast<QoreObject*>(
+        holder->GetAlignedPointerFromInternalField(0));
+    if (!qobj) {
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kNo;
+#else
+        return;
+#endif
+    }
+
+    // Get cached member metadata from the handler data (O(1) lookup)
+    v8::Local<v8::Value> data = info.Data();
+    QoreV8MemberHandlerData* mhdata = reinterpret_cast<QoreV8MemberHandlerData*>(
+        v8::Local<v8::External>::Cast(data)->Value());
+
+    auto it = mhdata->members.find(name);
+    if (it == mhdata->members.end()) {
+        // Not a declared member — let V8 handle normally
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kNo;
+#else
+        return;
+#endif
+    }
+
+    if (it->second != Public) {
+        ExceptionSink xsink;
+        xsink.raiseException("JAVASCRIPT-MEMBER-ACCESS-ERROR",
+            "cannot access private/internal member '%s' of class '%s'", name,
+            qobj->getClassName());
+        QoreV8Program::raiseV8Exception(xsink, isolate);
+#if V8_MAJOR_VERSION >= 12
+        // V8 12+ requires a return value when returning kYes; set placeholder since exception is pending
+        info.GetReturnValue().Set(v8::Null(isolate));
+        return v8::Intercepted::kYes;
+#else
+        return;
+#endif
+    }
+
+    // Get the member value
+    ExceptionSink xsink;
+    ValueHolder val(qobj->getReferencedMemberNoMethod(name, &xsink), &xsink);
+    if (xsink) {
+        QoreV8Program::raiseV8Exception(xsink, isolate);
+#if V8_MAJOR_VERSION >= 12
+        info.GetReturnValue().Set(v8::Null(isolate));
+        return v8::Intercepted::kYes;
+#else
+        return;
+#endif
+    }
+
+    v8::Local<v8::Value> v8val = mhdata->pgm->getV8Value(*val, &xsink);
+    if (xsink) {
+        QoreV8Program::raiseV8Exception(xsink, isolate);
+#if V8_MAJOR_VERSION >= 12
+        info.GetReturnValue().Set(v8::Null(isolate));
+        return v8::Intercepted::kYes;
+#else
+        return;
+#endif
+    }
+
+    info.GetReturnValue().Set(v8val);
+#if V8_MAJOR_VERSION >= 12
+    return v8::Intercepted::kYes;
+#endif
+}
+
+#if V8_MAJOR_VERSION >= 12
+v8::Intercepted QoreV8ClassWrapper::member_setter(v8::Local<v8::Name> property,
+        v8::Local<v8::Value> value, const v8::PropertyCallbackInfo<void>& info) {
+#else
+void QoreV8ClassWrapper::member_setter(v8::Local<v8::Name> property,
+        v8::Local<v8::Value> value, const v8::PropertyCallbackInfo<v8::Value>& info) {
+#endif
+    if (!property->IsString()) {
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kNo;
+#else
+        return;
+#endif
+    }
+
+    v8::Isolate* isolate = info.GetIsolate();
+    v8::String::Utf8Value prop_name(isolate, property);
+    const char* name = *prop_name;
+
+    v8::Local<v8::Object> holder = info.Holder();
+    if (holder->InternalFieldCount() < 1) {
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kNo;
+#else
+        return;
+#endif
+    }
+
+    QoreObject* qobj = reinterpret_cast<QoreObject*>(
+        holder->GetAlignedPointerFromInternalField(0));
+    if (!qobj) {
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kNo;
+#else
+        return;
+#endif
+    }
+
+    // Get cached member metadata from the handler data (O(1) lookup)
+    v8::Local<v8::Value> data = info.Data();
+    QoreV8MemberHandlerData* mhdata = reinterpret_cast<QoreV8MemberHandlerData*>(
+        v8::Local<v8::External>::Cast(data)->Value());
+
+    auto it = mhdata->members.find(name);
+    if (it == mhdata->members.end()) {
+        // Not a declared member — let V8 handle normally (allows JS-only properties)
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kNo;
+#else
+        return;
+#endif
+    }
+
+    if (it->second != Public) {
+        ExceptionSink xsink;
+        xsink.raiseException("JAVASCRIPT-MEMBER-ACCESS-ERROR",
+            "cannot set private/internal member '%s' of class '%s'", name,
+            qobj->getClassName());
+        QoreV8Program::raiseV8Exception(xsink, isolate);
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kYes;
+#else
+        return;
+#endif
+    }
+
+    // Convert V8 value to QoreValue
+    ExceptionSink xsink;
+    ValueHolder qval(mhdata->pgm->getQoreValue(&xsink, value), &xsink);
+    if (xsink) {
+        QoreV8Program::raiseV8Exception(xsink, isolate);
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kYes;
+#else
+        return;
+#endif
+    }
+
+    // Set the member value
+    qobj->setValue(name, qval.release(), &xsink);
+    if (xsink) {
+        QoreV8Program::raiseV8Exception(xsink, isolate);
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kYes;
+#else
+        return;
+#endif
+    }
+
+#if V8_MAJOR_VERSION >= 12
+    return v8::Intercepted::kYes;
+#endif
+}
+
+#if V8_MAJOR_VERSION >= 12
+v8::Intercepted QoreV8ClassWrapper::member_query(v8::Local<v8::Name> property,
+        const v8::PropertyCallbackInfo<v8::Integer>& info) {
+#else
+void QoreV8ClassWrapper::member_query(v8::Local<v8::Name> property,
+        const v8::PropertyCallbackInfo<v8::Integer>& info) {
+#endif
+    if (!property->IsString()) {
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kNo;
+#else
+        return;
+#endif
+    }
+
+    v8::Isolate* isolate = info.GetIsolate();
+    v8::String::Utf8Value prop_name(isolate, property);
+    const char* name = *prop_name;
+
+    v8::Local<v8::Object> holder = info.Holder();
+    if (holder->InternalFieldCount() < 1) {
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kNo;
+#else
+        return;
+#endif
+    }
+
+    // Get cached member metadata from the handler data (O(1) lookup)
+    v8::Local<v8::Value> data = info.Data();
+    QoreV8MemberHandlerData* mhdata = reinterpret_cast<QoreV8MemberHandlerData*>(
+        v8::Local<v8::External>::Cast(data)->Value());
+
+    auto it = mhdata->members.find(name);
+    if (it != mhdata->members.end() && it->second == Public) {
+        // Public member: writable, enumerable, non-deletable
+        info.GetReturnValue().Set(v8::Integer::New(isolate, v8::DontDelete));
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kYes;
+#else
+        return;
+#endif
+    }
+
+#if V8_MAJOR_VERSION >= 12
+    return v8::Intercepted::kNo;
+#endif
+}
+
+void QoreV8ClassWrapper::member_enumerator(const v8::PropertyCallbackInfo<v8::Array>& info) {
+    v8::Isolate* isolate = info.GetIsolate();
+
+    // Get cached member metadata from the handler data
+    v8::Local<v8::Value> data = info.Data();
+    QoreV8MemberHandlerData* mhdata = reinterpret_cast<QoreV8MemberHandlerData*>(
+        v8::Local<v8::External>::Cast(data)->Value());
+
+    std::vector<v8::Local<v8::Value>> names;
+    names.reserve(mhdata->public_member_names.size());
+    for (const std::string& mname : mhdata->public_member_names) {
+        v8::MaybeLocal<v8::String> s = v8::String::NewFromUtf8(isolate, mname.c_str());
+        if (!s.IsEmpty()) {
+            names.push_back(s.ToLocalChecked());
+        }
+    }
+
+    v8::Local<v8::Array> result = v8::Array::New(isolate, names.data(), names.size());
+    info.GetReturnValue().Set(result);
 }

@@ -166,6 +166,8 @@ void QoreV8NamespaceWrapper::getter(v8::Local<v8::Name> property,
         if (xsink) {
             QoreV8Program::raiseV8Exception(xsink, isolate);
 #if V8_MAJOR_VERSION >= 12
+            // V8 12+ requires a return value when returning kYes; set placeholder since exception is pending
+            info.GetReturnValue().Set(v8::Null(isolate));
             return v8::Intercepted::kYes;
 #else
             return;

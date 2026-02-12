@@ -36,6 +36,8 @@
 
 #include <set>
 #include <string>
+#include <unordered_map>
+#include <vector>
 
 // forward declarations
 class QoreV8Program;
@@ -88,6 +90,35 @@ private:
 
     //! Weak callback to clean up QoreObject ref when JS object is GC'd
     static void weak_callback(const v8::WeakCallbackInfo<QoreV8ObjectRef>& data);
+
+#if V8_MAJOR_VERSION >= 12
+    //! Named property getter for instance members (V8 12+ returns Intercepted)
+    static v8::Intercepted member_getter(v8::Local<v8::Name> property,
+        const v8::PropertyCallbackInfo<v8::Value>& info);
+
+    //! Named property setter for instance members (V8 12+ returns Intercepted)
+    static v8::Intercepted member_setter(v8::Local<v8::Name> property, v8::Local<v8::Value> value,
+        const v8::PropertyCallbackInfo<void>& info);
+
+    //! Named property query for instance members (V8 12+ returns Intercepted)
+    static v8::Intercepted member_query(v8::Local<v8::Name> property,
+        const v8::PropertyCallbackInfo<v8::Integer>& info);
+#else
+    //! Named property getter for instance members
+    static void member_getter(v8::Local<v8::Name> property,
+        const v8::PropertyCallbackInfo<v8::Value>& info);
+
+    //! Named property setter for instance members
+    static void member_setter(v8::Local<v8::Name> property, v8::Local<v8::Value> value,
+        const v8::PropertyCallbackInfo<v8::Value>& info);
+
+    //! Named property query for instance members
+    static void member_query(v8::Local<v8::Name> property,
+        const v8::PropertyCallbackInfo<v8::Integer>& info);
+#endif
+
+    //! Named property enumerator for instance members
+    static void member_enumerator(const v8::PropertyCallbackInfo<v8::Array>& info);
 };
 
 //! Data associated with a class constructor callback
@@ -107,6 +138,29 @@ struct QoreV8MethodData {
 
     DLLLOCAL QoreV8MethodData(QoreV8Program* pgm, const char* name, const QoreClass* cls)
         : pgm(pgm), method_name(name), cls(cls) {
+    }
+};
+
+//! Cached member metadata for the named property interceptor on instance templates
+/** Built once per class template; avoids O(n) QoreClassMemberIterator scan on every property access.
+*/
+struct QoreV8MemberHandlerData {
+    QoreV8Program* pgm;
+    //! Maps every declared member name → its ClassAccess level
+    std::unordered_map<std::string, ClassAccess> members;
+    //! Public member names in declaration order (for the enumerator callback)
+    std::vector<std::string> public_member_names;
+
+    DLLLOCAL QoreV8MemberHandlerData(QoreV8Program* pgm, const QoreClass& cls) : pgm(pgm) {
+        QoreClassMemberIterator it(cls);
+        while (it.next()) {
+            const char* name = it.getName();
+            ClassAccess access = it.getMember().getAccess();
+            members[name] = access;
+            if (access == Public) {
+                public_member_names.push_back(name);
+            }
+        }
     }
 };
 

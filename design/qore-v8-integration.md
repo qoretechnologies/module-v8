@@ -104,6 +104,75 @@ It reuses the cached `FunctionTemplate` to create a new V8 instance (via
 `InstanceTemplate()->NewInstance()`) without calling the constructor, then stores the existing
 `QoreObject*` in the internal field with a `realRef()` for reference counting.
 
+### Member Interceptor (Public Data Members)
+
+Instance templates have a `NamedPropertyHandlerConfiguration` that provides transparent
+read/write access to public Qore data members from JavaScript.
+
+#### Configuration
+
+```cpp
+v8::NamedPropertyHandlerConfiguration config(
+    member_getter,       // getter - reads public members via getReferencedMemberNoMethod()
+    member_setter,       // setter - writes public members via setValue()
+    member_query,        // query  - reports public members as DontDelete
+    nullptr,             // deleter (not supported)
+    member_enumerator,   // enumerator - lists public member names
+    ext,                 // data: v8::External wrapping QoreV8MemberHandlerData*
+    v8::PropertyHandlerFlags::kNonMasking  // prototype methods take precedence
+);
+tmpl->InstanceTemplate()->SetHandler(config);
+```
+
+The `kNonMasking` flag is critical: it ensures that prototype methods (e.g., `lock()`,
+`getCount()`) are resolved before the interceptor fires. Without this flag, a member named
+the same as a method would shadow the method.
+
+#### QoreV8MemberHandlerData (O(1) Member Lookup Cache)
+
+Rather than iterating `QoreClassMemberIterator` on every property access (O(n) per access),
+member metadata is cached once per class template in `QoreV8MemberHandlerData`:
+
+```cpp
+struct QoreV8MemberHandlerData {
+    QoreV8Program* pgm;
+    std::unordered_map<std::string, ClassAccess> members;  // O(1) lookup
+    std::vector<std::string> public_member_names;           // for enumerator
+};
+```
+
+The struct is built in `getOrCreateTemplate()` by iterating `QoreClassMemberIterator` once,
+collecting all member names and their access levels. It is passed to all four interceptor
+callbacks via a `v8::External` data parameter.
+
+#### Getter Flow
+
+1. Extract `QoreV8MemberHandlerData*` from the callback's `Data()` external.
+2. Look up the property name in `mhdata->members` (O(1) hash lookup).
+3. If not found → return `kNo` (V8 falls through to prototype chain / undefined).
+4. If found but not `Public` → raise V8 exception ("JAVASCRIPT-ERROR: cannot access
+   private/internal member").
+5. Get `QoreObject*` from internal field 0.
+6. Call `qobj->getReferencedMemberNoMethod(name, &xsink)` (access-controlled, no
+   memberGate trigger).
+7. Convert result to V8 value via `pgm->getV8Value()`.
+
+#### Setter Flow
+
+1. Look up property name in `mhdata->members`.
+2. If not found → return `kNo` (allows setting JavaScript-only properties on the object).
+3. If found but not `Public` → raise V8 exception.
+4. Convert V8 value to Qore value via `pgm->getQoreValue()`.
+5. Call `qobj->setValue(name, val, &xsink)`.
+
+#### V8 12+ Intercepted Return Type
+
+V8 12+ changed the interceptor signature to return `v8::Intercepted` (`kYes` or `kNo`)
+instead of `void`. When returning `kYes`, V8 **requires** a return value to be set via
+`info.GetReturnValue().Set()` — even if an exception is pending. Failure to set a return
+value causes a fatal `Check failed: !IsTheHole(*slot, isolate)` crash. All error paths that
+return `kYes` set `v8::Null(isolate)` as a placeholder.
+
 ### Constructor Guard
 
 If a class constructor function is called without `new` (i.e., `info.IsConstructCall()` is
@@ -143,8 +212,8 @@ tracked resources:
 2. **nsDataRefs**: All tracked `QoreV8NamespaceData` objects are cleaned up (persistent handles
    reset, cache entries destroyed).
 3. **classTemplateCache**: Cleared (v8::Global destructors reset handles).
-4. **Callback data**: All `QoreV8ClassData`, `QoreV8MethodData`, and `QoreV8FunctionData` structs
-   are deleted.
+4. **Callback data**: All `QoreV8ClassData`, `QoreV8MethodData`, `QoreV8FunctionData`, and
+   `QoreV8MemberHandlerData` structs are deleted.
 
 This ensures no leaks even if V8's GC hasn't run before program destruction.
 
@@ -157,6 +226,7 @@ This ensures no leaks even if V8's GC hasn't run before program destruction.
 - `std::vector<QoreV8ClassData*> classDataRefs`
 - `std::vector<QoreV8MethodData*> methodDataRefs`
 - `std::vector<QoreV8FunctionData*> funcDataRefs`
+- `std::vector<QoreV8MemberHandlerData*> memberHandlerDataRefs`
 
 Objects are added to tracking when created (`trackXxx()`) and removed when GC'd normally
 (`untrackXxx()`). On program destruction, remaining tracked objects are cleaned up deterministically.

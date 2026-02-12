@@ -124,6 +124,41 @@ try {
 }
     @endcode
 
+    @subsection v8_qore_import_members Public Member Access
+
+    %Qore objects wrapped in JavaScript support direct access to public data members via standard property syntax.
+    Reading, writing, and enumerating public members all work as expected:
+
+    @code{.js}
+// Given a Qore class with public members: string name, int age
+var obj = new qore.MyNamespace.MyClass("Alice", 30);
+
+// Read public members
+var n = obj.name;   // "Alice"
+var a = obj.age;    // 30
+
+// Write public members
+obj.name = "Bob";
+obj.age = 25;
+
+// Enumerate public members with Object.keys()
+var keys = Object.keys(obj);  // ["name", "age"]
+
+// Check member existence with 'in'
+var has = "name" in obj;  // true
+
+// Private/internal members are not accessible — access raises an exception
+// var secret = obj.secret;  // throws JAVASCRIPT-ERROR
+    @endcode
+
+    @note Methods are not shadowed by member access — prototype methods take precedence over the
+    member interceptor. If a class has both a public member \c name and a method \c lock(), calling
+    \c obj.lock() invokes the method, while \c obj.name reads the member.
+
+    @note JavaScript-only properties can be set on wrapped objects without affecting the underlying
+    %Qore object. If a property name does not correspond to a declared public member, it is stored
+    as a regular JavaScript property.
+
     @subsection v8_qore_import_enumeration Enumeration
 
     \c Object.keys() can be used on namespace wrappers to discover available members:
@@ -208,6 +243,7 @@ JavaScriptProgram::setSaveReferenceCallback(callback);
     - added the \c qore global object for transparent access to %Qore APIs from JavaScript
     - JavaScript code can now access %Qore namespaces, classes, functions, constants, and enums
     - class wrapping supports constructors, instance methods, static methods, and inheritance
+    - public data members of wrapped %Qore objects can be read, written, and enumerated from JavaScript
     - %Qore exceptions propagate as catchable JavaScript errors
 
     @subsection v8_1_0_4 v8 Module Version 1.0.4

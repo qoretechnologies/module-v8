@@ -48,6 +48,7 @@ struct QoreV8ObjectRef;
 struct QoreV8ClassData;
 struct QoreV8MethodData;
 struct QoreV8FunctionData;
+struct QoreV8MemberHandlerData;
 
 class QoreV8Program : public AbstractQoreProgramExternalData {
     friend class QoreV8ProgramHelper;
@@ -180,6 +181,7 @@ public:
     DLLLOCAL void trackClassData(QoreV8ClassData* d) { classDataRefs.push_back(d); }
     DLLLOCAL void trackMethodData(QoreV8MethodData* d) { methodDataRefs.push_back(d); }
     DLLLOCAL void trackFunctionData(QoreV8FunctionData* d) { funcDataRefs.push_back(d); }
+    DLLLOCAL void trackMemberHandlerData(QoreV8MemberHandlerData* d) { memberHandlerDataRefs.push_back(d); }
 
 protected:
     std::unique_ptr<node::CommonEnvironmentSetup> setup;
@@ -213,6 +215,8 @@ protected:
     std::vector<QoreV8MethodData*> methodDataRefs;
     //! Tracked function callback data for cleanup
     std::vector<QoreV8FunctionData*> funcDataRefs;
+    //! Tracked member handler data for cleanup
+    std::vector<QoreV8MemberHandlerData*> memberHandlerDataRefs;
 
     unsigned opcount = 0;
     bool to_destroy = false;

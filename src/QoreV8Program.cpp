@@ -318,6 +318,10 @@ void QoreV8Program::deleteIntern(ExceptionSink* xsink) {
         delete d;
     }
     funcDataRefs.clear();
+    for (auto* d : memberHandlerDataRefs) {
+        delete d;
+    }
+    memberHandlerDataRefs.clear();
 
     ctx.Reset();
     global.Reset();
