@@ -121382,6 +121382,156 @@ type RootTranslation = {
 						}
 					}
 				}
+				delete_message: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * D​e​l​e​t​e​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​m​e​s​s​a​g​e​ ​f​r​o​m​ ​a​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​f​r​o​m​ ​a​ ​S​l​a​c​k​ ​c​h​a​n​n​e​l​.​ ​Y​o​u​ ​n​e​e​d​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​i​m​e​s​t​a​m​p​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​w​h​i​c​h​ ​m​e​s​s​a​g​e​ ​t​o​ ​d​e​l​e​t​e​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​n​n​e​l​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​a​s​ ​p​o​s​t​e​d​.
+							 */
+							longDesc: string
+						}
+						timestamp: {
+							/**
+							 * M​e​s​s​a​g​e​ ​T​i​m​e​s​t​a​m​p
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​(​t​s​)​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.​ ​Y​o​u​ ​c​a​n​ ​a​l​s​o​ ​p​a​s​t​e​ ​a​ ​S​l​a​c​k​ ​m​e​s​s​a​g​e​ ​l​i​n​k​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				pin_message: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * P​i​n​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * P​i​n​ ​a​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * P​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​c​h​a​n​n​e​l​ ​s​o​ ​i​t​ ​a​p​p​e​a​r​s​ ​i​n​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​d​e​t​a​i​l​s​.​ ​P​i​n​n​e​d​ ​m​e​s​s​a​g​e​s​ ​a​r​e​ ​e​a​s​i​l​y​ ​a​c​c​e​s​s​i​b​l​e​ ​f​o​r​ ​a​l​l​ ​c​h​a​n​n​e​l​ ​m​e​m​b​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​n​n​e​l​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						timestamp: {
+							/**
+							 * M​e​s​s​a​g​e​ ​T​i​m​e​s​t​a​m​p
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​p​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​(​t​s​)​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​p​i​n​.​ ​Y​o​u​ ​c​a​n​ ​a​l​s​o​ ​p​a​s​t​e​ ​a​ ​S​l​a​c​k​ ​m​e​s​s​a​g​e​ ​l​i​n​k​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				unpin_message: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * U​n​p​i​n​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * U​n​p​i​n​ ​a​ ​m​e​s​s​a​g​e​ ​f​r​o​m​ ​a​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​p​i​n​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​i​n​ ​a​ ​c​h​a​n​n​e​l​.​ ​T​h​e​ ​m​e​s​s​a​g​e​ ​i​t​s​e​l​f​ ​i​s​ ​n​o​t​ ​d​e​l​e​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​n​n​e​l​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​t​h​e​ ​p​i​n​n​e​d​ ​m​e​s​s​a​g​e​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						timestamp: {
+							/**
+							 * M​e​s​s​a​g​e​ ​T​i​m​e​s​t​a​m​p
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​u​n​p​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​(​t​s​)​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​n​p​i​n​.​ ​Y​o​u​ ​c​a​n​ ​a​l​s​o​ ​p​a​s​t​e​ ​a​ ​S​l​a​c​k​ ​m​e​s​s​a​g​e​ ​l​i​n​k​.
+							 */
+							longDesc: string
+						}
+					}
+				}
 				create_channel: {
 					groups: {
 						/**
@@ -121427,6 +121577,142 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * I​f​ ​e​n​a​b​l​e​d​,​ ​c​r​e​a​t​e​ ​a​ ​p​r​i​v​a​t​e​ ​c​h​a​n​n​e​l​ ​i​n​s​t​e​a​d​ ​o​f​ ​a​ ​p​u​b​l​i​c​ ​o​n​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				archive_channel: {
+					groups: {
+						/**
+						 * C​h​a​n​n​e​l​s
+						 */
+						'0': string
+					}
+					/**
+					 * A​r​c​h​i​v​e​ ​C​h​a​n​n​e​l
+					 */
+					displayName: string
+					/**
+					 * A​r​c​h​i​v​e​ ​a​ ​S​l​a​c​k​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * A​r​c​h​i​v​e​ ​a​ ​c​h​a​n​n​e​l​ ​i​n​ ​y​o​u​r​ ​S​l​a​c​k​ ​w​o​r​k​s​p​a​c​e​.​ ​A​r​c​h​i​v​e​d​ ​c​h​a​n​n​e​l​s​ ​a​r​e​ ​r​e​a​d​-​o​n​l​y​ ​a​n​d​ ​h​i​d​d​e​n​ ​f​r​o​m​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​l​i​s​t​ ​b​y​ ​d​e​f​a​u​l​t​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​a​r​c​h​i​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​r​c​h​i​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				unarchive_channel: {
+					groups: {
+						/**
+						 * C​h​a​n​n​e​l​s
+						 */
+						'0': string
+					}
+					/**
+					 * U​n​a​r​c​h​i​v​e​ ​C​h​a​n​n​e​l
+					 */
+					displayName: string
+					/**
+					 * U​n​a​r​c​h​i​v​e​ ​a​ ​S​l​a​c​k​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * R​e​s​t​o​r​e​ ​a​n​ ​a​r​c​h​i​v​e​d​ ​c​h​a​n​n​e​l​ ​s​o​ ​i​t​ ​b​e​c​o​m​e​s​ ​a​c​t​i​v​e​ ​a​g​a​i​n​.​ ​M​e​m​b​e​r​s​ ​w​i​l​l​ ​b​e​ ​a​b​l​e​ ​t​o​ ​p​o​s​t​ ​m​e​s​s​a​g​e​s​ ​o​n​c​e​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​i​s​ ​u​n​a​r​c​h​i​v​e​d​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​r​c​h​i​v​e​d​ ​c​h​a​n​n​e​l​ ​t​o​ ​r​e​s​t​o​r​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​r​c​h​i​v​e​d​ ​c​h​a​n​n​e​l​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​n​a​r​c​h​i​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_channels: {
+					groups: {
+						/**
+						 * C​h​a​n​n​e​l​s
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​C​h​a​n​n​e​l​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​c​h​a​n​n​e​l​s​ ​i​n​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​h​a​n​n​e​l​s​ ​i​n​ ​y​o​u​r​ ​S​l​a​c​k​ ​w​o​r​k​s​p​a​c​e​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​c​h​a​n​n​e​l​ ​t​y​p​e​ ​a​n​d​ ​w​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​a​r​c​h​i​v​e​d​ ​c​h​a​n​n​e​l​s​.
+					 */
+					longDesc: string
+					options: {
+						types: {
+							/**
+							 * C​h​a​n​n​e​l​ ​T​y​p​e​s
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​s​ ​o​f​ ​c​h​a​n​n​e​l​s​ ​t​o​ ​i​n​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * C​o​m​m​a​-​s​e​p​a​r​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​c​h​a​n​n​e​l​ ​t​y​p​e​s​.​ ​O​p​t​i​o​n​s​:​ ​p​u​b​l​i​c​_​c​h​a​n​n​e​l​,​ ​p​r​i​v​a​t​e​_​c​h​a​n​n​e​l​,​ ​m​p​i​m​,​ ​i​m​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​p​u​b​l​i​c​_​c​h​a​n​n​e​l​,​p​r​i​v​a​t​e​_​c​h​a​n​n​e​l​.
+							 */
+							longDesc: string
+						}
+						excludeArchived: {
+							/**
+							 * E​x​c​l​u​d​e​ ​A​r​c​h​i​v​e​d
+							 */
+							displayName: string
+							/**
+							 * E​x​c​l​u​d​e​ ​a​r​c​h​i​v​e​d​ ​c​h​a​n​n​e​l​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​a​r​c​h​i​v​e​d​ ​c​h​a​n​n​e​l​s​ ​a​r​e​ ​e​x​c​l​u​d​e​d​ ​f​r​o​m​ ​t​h​e​ ​r​e​s​u​l​t​s​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​t​r​u​e​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​c​h​a​n​n​e​l​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​a​n​n​e​l​s​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​0​.
 							 */
 							longDesc: string
 						}
@@ -121605,6 +121891,78 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * I​D​ ​o​f​ ​u​s​e​r​ ​t​o​ ​u​p​d​a​t​e​.​ ​O​n​l​y​ ​a​d​m​i​n​s​ ​o​n​ ​p​a​i​d​ ​t​e​a​m​s​ ​c​a​n​ ​u​p​d​a​t​e​ ​o​t​h​e​r​ ​u​s​e​r​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_users: {
+					groups: {
+						/**
+						 * U​s​e​r​s
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​U​s​e​r​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​u​s​e​r​s​ ​i​n​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​u​s​e​r​s​ ​i​n​ ​y​o​u​r​ ​S​l​a​c​k​ ​w​o​r​k​s​p​a​c​e​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​i​r​ ​p​r​o​f​i​l​e​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​u​s​e​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​s​e​r​s​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_user_info: {
+					groups: {
+						/**
+						 * U​s​e​r​s
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​U​s​e​r​ ​I​n​f​o
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​u​s​e​r
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​p​r​o​f​i​l​e​ ​a​n​d​ ​a​c​c​o​u​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​S​l​a​c​k​ ​u​s​e​r​ ​b​y​ ​t​h​e​i​r​ ​u​s​e​r​ ​I​D​.
+					 */
+					longDesc: string
+					options: {
+						userId: {
+							/**
+							 * U​s​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​s​e​r​ ​t​o​ ​g​e​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​s​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
 							 */
 							longDesc: string
 						}
@@ -122048,6 +122406,42 @@ type RootTranslation = {
 					 */
 					longDesc: string
 					options: {
+					}
+				}
+				app_mention: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * A​p​p​ ​M​e​n​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​t​h​e​ ​b​o​t​ ​i​s​ ​m​e​n​t​i​o​n​e​d​ ​i​n​ ​a​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​s​o​m​e​o​n​e​ ​m​e​n​t​i​o​n​s​ ​t​h​e​ ​b​o​t​ ​i​n​ ​a​ ​m​e​s​s​a​g​e​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​h​a​n​n​e​l​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​r​e​s​p​o​n​d​ ​t​o​ ​d​i​r​e​c​t​ ​r​e​q​u​e​s​t​s​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​m​e​n​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​b​o​t​ ​m​e​n​t​i​o​n​s​.​ ​M​a​k​e​ ​s​u​r​e​ ​t​h​e​ ​b​o​t​ ​i​s​ ​a​ ​m​e​m​b​e​r​ ​o​f​ ​t​h​e​ ​c​h​a​n​n​e​l​.
+							 */
+							longDesc: string
+						}
 					}
 				}
 			}
@@ -245071,6 +245465,156 @@ export type TranslationFunctions = {
 						}
 					}
 				}
+				delete_message: {
+					groups: {
+						/**
+						 * Messages
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Delete Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a message from a channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Delete a specific message from a Slack channel. You need the message timestamp to identify which message to delete.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The channel containing the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the channel where the message was posted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timestamp: {
+							/**
+							 * Message Timestamp
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Timestamp of the message to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The timestamp (ts) of the message you want to delete. You can also paste a Slack message link.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				pin_message: {
+					groups: {
+						/**
+						 * Messages
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Pin Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Pin a message to a channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Pin a specific message to a channel so it appears in the channel details. Pinned messages are easily accessible for all channel members.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The channel containing the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the channel where the message is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timestamp: {
+							/**
+							 * Message Timestamp
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Timestamp of the message to pin
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The timestamp (ts) of the message you want to pin. You can also paste a Slack message link.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				unpin_message: {
+					groups: {
+						/**
+						 * Messages
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Unpin Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Unpin a message from a channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Remove a pin from a specific message in a channel. The message itself is not deleted.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The channel containing the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the channel where the pinned message is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timestamp: {
+							/**
+							 * Message Timestamp
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Timestamp of the message to unpin
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The timestamp (ts) of the message you want to unpin. You can also paste a Slack message link.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 				create_channel: {
 					groups: {
 						/**
@@ -245116,6 +245660,142 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * If enabled, create a private channel instead of a public one.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				archive_channel: {
+					groups: {
+						/**
+						 * Channels
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Archive Channel
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Archive a Slack channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Archive a channel in your Slack workspace. Archived channels are read-only and hidden from the channel list by default.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The channel to archive
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the channel you want to archive.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				unarchive_channel: {
+					groups: {
+						/**
+						 * Channels
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Unarchive Channel
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Unarchive a Slack channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Restore an archived channel so it becomes active again. Members will be able to post messages once the channel is unarchived.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The archived channel to restore
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the archived channel you want to unarchive.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_channels: {
+					groups: {
+						/**
+						 * Channels
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Channels
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List channels in the workspace
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of channels in your Slack workspace. You can filter by channel type and whether to include archived channels.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						types: {
+							/**
+							 * Channel Types
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Types of channels to include
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Comma-separated list of channel types. Options: public_channel, private_channel, mpim, im. Default is public_channel,private_channel.
+							 */
+							longDesc: () => LocalizedString
+						}
+						excludeArchived: {
+							/**
+							 * Exclude Archived
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Exclude archived channels
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, archived channels are excluded from the results. Default is true.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum channels to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of channels to retrieve. Default is 200.
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -245294,6 +245974,78 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * ID of user to update. Only admins on paid teams can update other users.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_users: {
+					groups: {
+						/**
+						 * Users
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Users
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List users in the workspace
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of users in your Slack workspace including their profile information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum users to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of users to retrieve. Default is 200.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_user_info: {
+					groups: {
+						/**
+						 * Users
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get User Info
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get detailed information about a user
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed profile and account information for a specific Slack user by their user ID.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						userId: {
+							/**
+							 * User
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The user to get information for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the user whose information you want to retrieve.
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -245737,6 +246489,42 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 					options: {
+					}
+				}
+				app_mention: {
+					groups: {
+						/**
+						 * Messages
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * App Mention
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when the bot is mentioned in a channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever someone mentions the bot in a message in the specified channel. Use this to respond to direct requests.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The channel to monitor for mentions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the channel to monitor for bot mentions. Make sure the bot is a member of the channel.
+							 */
+							longDesc: () => LocalizedString
+						}
 					}
 				}
 			}

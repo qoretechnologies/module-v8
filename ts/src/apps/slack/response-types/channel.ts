@@ -84,6 +84,48 @@ export const SlackCreateChannelResponseType = {
 } satisfies TQoreResponseType;
 
 /**
+ * List channels response type
+ */
+export const SlackListChannelsResponseType = {
+  type: 'hash',
+  fields: {
+    channels: {
+      type: {
+        type: 'list',
+        element_type: SlackChannelResponseType,
+      },
+      short_desc: 'List of channels in the workspace',
+    },
+  },
+} satisfies TQoreResponseType;
+
+/**
+ * Archive channel response type
+ */
+export const SlackArchiveChannelResponseType = {
+  type: 'hash',
+  fields: {
+    ok: {
+      type: 'bool',
+      short_desc: 'Indicates if the channel was archived successfully',
+    },
+  },
+} satisfies TQoreResponseType;
+
+/**
+ * Unarchive channel response type
+ */
+export const SlackUnarchiveChannelResponseType = {
+  type: 'hash',
+  fields: {
+    ok: {
+      type: 'bool',
+      short_desc: 'Indicates if the channel was unarchived successfully',
+    },
+  },
+} satisfies TQoreResponseType;
+
+/**
  * TypeScript type for Slack channel
  */
 export type TSlackChannel = {

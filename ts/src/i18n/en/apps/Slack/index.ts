@@ -174,6 +174,66 @@ const SlackAppEn = {
         },
       },
     },
+    delete_message: {
+      groups: ['Messages'],
+      displayName: 'Delete Message',
+      shortDesc: 'Delete a message from a channel',
+      longDesc:
+        'Delete a specific message from a Slack channel. You need the message timestamp to identify which message to delete.',
+      options: {
+        channel: {
+          displayName: 'Channel',
+          shortDesc: 'The channel containing the message',
+          longDesc: 'Select the channel where the message was posted.',
+        },
+        timestamp: {
+          displayName: 'Message Timestamp',
+          shortDesc: 'Timestamp of the message to delete',
+          longDesc:
+            'The timestamp (ts) of the message you want to delete. You can also paste a Slack message link.',
+        },
+      },
+    },
+    pin_message: {
+      groups: ['Messages'],
+      displayName: 'Pin Message',
+      shortDesc: 'Pin a message to a channel',
+      longDesc:
+        'Pin a specific message to a channel so it appears in the channel details. Pinned messages are easily accessible for all channel members.',
+      options: {
+        channel: {
+          displayName: 'Channel',
+          shortDesc: 'The channel containing the message',
+          longDesc: 'Select the channel where the message is located.',
+        },
+        timestamp: {
+          displayName: 'Message Timestamp',
+          shortDesc: 'Timestamp of the message to pin',
+          longDesc:
+            'The timestamp (ts) of the message you want to pin. You can also paste a Slack message link.',
+        },
+      },
+    },
+    unpin_message: {
+      groups: ['Messages'],
+      displayName: 'Unpin Message',
+      shortDesc: 'Unpin a message from a channel',
+      longDesc:
+        'Remove a pin from a specific message in a channel. The message itself is not deleted.',
+      options: {
+        channel: {
+          displayName: 'Channel',
+          shortDesc: 'The channel containing the message',
+          longDesc: 'Select the channel where the pinned message is located.',
+        },
+        timestamp: {
+          displayName: 'Message Timestamp',
+          shortDesc: 'Timestamp of the message to unpin',
+          longDesc:
+            'The timestamp (ts) of the message you want to unpin. You can also paste a Slack message link.',
+        },
+      },
+    },
     // Channel actions
     create_channel: {
       groups: ['Channels'],
@@ -191,6 +251,59 @@ const SlackAppEn = {
           displayName: 'Private Channel',
           shortDesc: 'Make the channel private',
           longDesc: 'If enabled, create a private channel instead of a public one.',
+        },
+      },
+    },
+    archive_channel: {
+      groups: ['Channels'],
+      displayName: 'Archive Channel',
+      shortDesc: 'Archive a Slack channel',
+      longDesc:
+        'Archive a channel in your Slack workspace. Archived channels are read-only and hidden from the channel list by default.',
+      options: {
+        channel: {
+          displayName: 'Channel',
+          shortDesc: 'The channel to archive',
+          longDesc: 'Select the channel you want to archive.',
+        },
+      },
+    },
+    unarchive_channel: {
+      groups: ['Channels'],
+      displayName: 'Unarchive Channel',
+      shortDesc: 'Unarchive a Slack channel',
+      longDesc:
+        'Restore an archived channel so it becomes active again. Members will be able to post messages once the channel is unarchived.',
+      options: {
+        channel: {
+          displayName: 'Channel',
+          shortDesc: 'The archived channel to restore',
+          longDesc: 'Select the archived channel you want to unarchive.',
+        },
+      },
+    },
+    list_channels: {
+      groups: ['Channels'],
+      displayName: 'List Channels',
+      shortDesc: 'List channels in the workspace',
+      longDesc:
+        'Retrieve a list of channels in your Slack workspace. You can filter by channel type and whether to include archived channels.',
+      options: {
+        types: {
+          displayName: 'Channel Types',
+          shortDesc: 'Types of channels to include',
+          longDesc:
+            'Comma-separated list of channel types. Options: public_channel, private_channel, mpim, im. Default is public_channel,private_channel.',
+        },
+        excludeArchived: {
+          displayName: 'Exclude Archived',
+          shortDesc: 'Exclude archived channels',
+          longDesc: 'If enabled, archived channels are excluded from the results. Default is true.',
+        },
+        limit: {
+          displayName: 'Limit',
+          shortDesc: 'Maximum channels to return',
+          longDesc: 'The maximum number of channels to retrieve. Default is 200.',
         },
       },
     },
@@ -261,6 +374,34 @@ const SlackAppEn = {
           displayName: 'User ID',
           shortDesc: 'Target user (admin only)',
           longDesc: 'ID of user to update. Only admins on paid teams can update other users.',
+        },
+      },
+    },
+    list_users: {
+      groups: ['Users'],
+      displayName: 'List Users',
+      shortDesc: 'List users in the workspace',
+      longDesc:
+        'Retrieve a list of users in your Slack workspace including their profile information.',
+      options: {
+        limit: {
+          displayName: 'Limit',
+          shortDesc: 'Maximum users to return',
+          longDesc: 'The maximum number of users to retrieve. Default is 200.',
+        },
+      },
+    },
+    get_user_info: {
+      groups: ['Users'],
+      displayName: 'Get User Info',
+      shortDesc: 'Get detailed information about a user',
+      longDesc:
+        'Retrieve detailed profile and account information for a specific Slack user by their user ID.',
+      options: {
+        userId: {
+          displayName: 'User',
+          shortDesc: 'The user to get information for',
+          longDesc: 'Select the user whose information you want to retrieve.',
         },
       },
     },
@@ -440,6 +581,21 @@ const SlackAppEn = {
       longDesc:
         'This trigger fires whenever a new public or private channel is created in the workspace.',
       options: {},
+    },
+    app_mention: {
+      groups: ['Messages'],
+      displayName: 'App Mention',
+      shortDesc: 'Triggers when the bot is mentioned in a channel',
+      longDesc:
+        'This trigger fires whenever someone mentions the bot in a message in the specified channel. Use this to respond to direct requests.',
+      options: {
+        channel: {
+          displayName: 'Channel',
+          shortDesc: 'The channel to monitor for mentions',
+          longDesc:
+            'Select the channel to monitor for bot mentions. Make sure the bot is a member of the channel.',
+        },
+      },
     },
   },
 };
