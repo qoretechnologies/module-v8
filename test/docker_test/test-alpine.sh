@@ -29,6 +29,7 @@ export MAKE_JOBS=4
 echo && echo "-- building module --"
 mkdir -p ${MODULE_SRC_DIR}/build
 cd ${MODULE_SRC_DIR}/build
+export NODE_LIB_DIR=/opt/nodejs/lib
 cmake .. -DCMAKE_BUILD_TYPE=debug -DCMAKE_INSTALL_PREFIX=${INSTALL_PREFIX} -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 make -j${MAKE_JOBS}
 make install
@@ -48,5 +49,5 @@ chown -R qore:qore ${MODULE_SRC_DIR}
 export QORE_MODULE_DIR=${MODULE_SRC_DIR}/qlib:${QORE_MODULE_DIR}
 cd ${MODULE_SRC_DIR}
 for test in test/*.qtest; do
-    gosu qore:qore qore $test -vv
+    gosu qore:qore qore --enable-debug $test -vv
 done
