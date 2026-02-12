@@ -71,14 +71,24 @@ public:
         QoreV8Program* pgm, const QoreNamespace& ns);
 
 private:
+#if V8_MAJOR_VERSION >= 12
+    //! Named property getter interceptor (V8 12+ returns Intercepted)
+    static v8::Intercepted getter(v8::Local<v8::Name> property,
+        const v8::PropertyCallbackInfo<v8::Value>& info);
+
+    //! Named property query interceptor (V8 12+ returns Intercepted)
+    static v8::Intercepted query(v8::Local<v8::Name> property,
+        const v8::PropertyCallbackInfo<v8::Integer>& info);
+#else
     //! Named property getter interceptor
     static void getter(v8::Local<v8::Name> property, const v8::PropertyCallbackInfo<v8::Value>& info);
 
-    //! Named property enumerator interceptor
-    static void enumerator(const v8::PropertyCallbackInfo<v8::Array>& info);
-
     //! Named property query interceptor
     static void query(v8::Local<v8::Name> property, const v8::PropertyCallbackInfo<v8::Integer>& info);
+#endif
+
+    //! Named property enumerator interceptor
+    static void enumerator(const v8::PropertyCallbackInfo<v8::Array>& info);
 
     //! Weak callback to clean up namespace data when the V8 object is garbage collected
     static void weak_callback(const v8::WeakCallbackInfo<QoreV8NamespaceData>& data);

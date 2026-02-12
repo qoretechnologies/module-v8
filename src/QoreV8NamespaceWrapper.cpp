@@ -68,11 +68,20 @@ void QoreV8NamespaceWrapper::weak_callback(const v8::WeakCallbackInfo<QoreV8Name
     delete ns_data;
 }
 
+#if V8_MAJOR_VERSION >= 12
+v8::Intercepted QoreV8NamespaceWrapper::getter(v8::Local<v8::Name> property,
+        const v8::PropertyCallbackInfo<v8::Value>& info) {
+#else
 void QoreV8NamespaceWrapper::getter(v8::Local<v8::Name> property,
         const v8::PropertyCallbackInfo<v8::Value>& info) {
+#endif
     // Only handle string properties
     if (!property->IsString()) {
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kNo;
+#else
         return;
+#endif
     }
 
     v8::Isolate* isolate = info.GetIsolate();
@@ -86,14 +95,22 @@ void QoreV8NamespaceWrapper::getter(v8::Local<v8::Name> property,
     QoreV8NamespaceData* ns_data = reinterpret_cast<QoreV8NamespaceData*>(
         holder->GetAlignedPointerFromInternalField(0));
     if (!ns_data) {
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kNo;
+#else
         return;
+#endif
     }
 
     // Check cache first
     auto it = ns_data->cache.find(name);
     if (it != ns_data->cache.end()) {
         info.GetReturnValue().Set(it->second.Get(isolate));
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kYes;
+#else
         return;
+#endif
     }
 
     const QoreNamespace* ns = ns_data->ns;
@@ -106,7 +123,11 @@ void QoreV8NamespaceWrapper::getter(v8::Local<v8::Name> property,
         result = create(isolate, context, pgm, *child_ns);
         ns_data->cache[name].Reset(isolate, result);
         info.GetReturnValue().Set(result);
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kYes;
+#else
         return;
+#endif
     }
 
     // 2. Look up as class
@@ -115,7 +136,11 @@ void QoreV8NamespaceWrapper::getter(v8::Local<v8::Name> property,
         result = QoreV8ClassWrapper::create(isolate, context, pgm, *cls);
         ns_data->cache[name].Reset(isolate, result);
         info.GetReturnValue().Set(result);
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kYes;
+#else
         return;
+#endif
     }
 
     // 3. Look up as function
@@ -124,7 +149,11 @@ void QoreV8NamespaceWrapper::getter(v8::Local<v8::Name> property,
         result = wrapFunction(isolate, context, pgm, *ns, name);
         ns_data->cache[name].Reset(isolate, result);
         info.GetReturnValue().Set(result);
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kYes;
+#else
         return;
+#endif
     }
 
     // 4. Look up as constant
@@ -136,11 +165,19 @@ void QoreV8NamespaceWrapper::getter(v8::Local<v8::Name> property,
         val.discard(&xsink);
         if (xsink) {
             QoreV8Program::raiseV8Exception(xsink, isolate);
+#if V8_MAJOR_VERSION >= 12
+            return v8::Intercepted::kYes;
+#else
             return;
+#endif
         }
         ns_data->cache[name].Reset(isolate, result);
         info.GetReturnValue().Set(result);
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kYes;
+#else
         return;
+#endif
     }
 
     // 5. Look up as enum
@@ -149,16 +186,32 @@ void QoreV8NamespaceWrapper::getter(v8::Local<v8::Name> property,
         result = wrapEnum(isolate, context, pgm, *ed);
         ns_data->cache[name].Reset(isolate, result);
         info.GetReturnValue().Set(result);
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kYes;
+#else
         return;
+#endif
     }
 
     // Not found - return undefined (default behavior)
+#if V8_MAJOR_VERSION >= 12
+    return v8::Intercepted::kNo;
+#endif
 }
 
+#if V8_MAJOR_VERSION >= 12
+v8::Intercepted QoreV8NamespaceWrapper::query(v8::Local<v8::Name> property,
+        const v8::PropertyCallbackInfo<v8::Integer>& info) {
+#else
 void QoreV8NamespaceWrapper::query(v8::Local<v8::Name> property,
         const v8::PropertyCallbackInfo<v8::Integer>& info) {
+#endif
     if (!property->IsString()) {
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kNo;
+#else
         return;
+#endif
     }
 
     v8::Isolate* isolate = info.GetIsolate();
@@ -169,14 +222,22 @@ void QoreV8NamespaceWrapper::query(v8::Local<v8::Name> property,
     QoreV8NamespaceData* ns_data = reinterpret_cast<QoreV8NamespaceData*>(
         holder->GetAlignedPointerFromInternalField(0));
     if (!ns_data) {
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kNo;
+#else
         return;
+#endif
     }
 
     // Check cache first
     auto it = ns_data->cache.find(name);
     if (it != ns_data->cache.end()) {
         info.GetReturnValue().Set(v8::Integer::New(isolate, v8::ReadOnly | v8::DontDelete));
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kYes;
+#else
         return;
+#endif
     }
 
     const QoreNamespace* ns = ns_data->ns;
@@ -185,7 +246,16 @@ void QoreV8NamespaceWrapper::query(v8::Local<v8::Name> property,
     if (ns->findLocalNamespace(name) || ns->findLocalClass(name) || ns->findLocalFunction(name)
         || ns->findLocalConstant(name) || ns->findLocalEnum(name)) {
         info.GetReturnValue().Set(v8::Integer::New(isolate, v8::ReadOnly | v8::DontDelete));
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kYes;
+#else
+        return;
+#endif
     }
+
+#if V8_MAJOR_VERSION >= 12
+    return v8::Intercepted::kNo;
+#endif
 }
 
 void QoreV8NamespaceWrapper::enumerator(const v8::PropertyCallbackInfo<v8::Array>& info) {
