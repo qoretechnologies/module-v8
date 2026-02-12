@@ -350,6 +350,7 @@ void QoreV8ClassWrapper::constructor_callback(const v8::FunctionCallbackInfo<v8:
 
     // Store the QoreObject in the JS object's internal field
     v8::Local<v8::Object> js_obj = info.This();
+    qobj->tRef();
     js_obj->SetAlignedPointerInInternalField(0, qobj);
 
     // Set up weak reference so the QoreObject is dereferenced when the JS object is GC'd
@@ -357,8 +358,11 @@ void QoreV8ClassWrapper::constructor_callback(const v8::FunctionCallbackInfo<v8:
     obj_ref->persistent.SetWeak(obj_ref, weak_callback, v8::WeakCallbackType::kParameter);
     pgm->trackObjectRef(obj_ref);
 
-    // Save the Qore reference so it's not collected prematurely
+    // Save the Qore reference so it's not collected prematurely (takes its own reference)
     pgm->saveQoreReference(qobj, xsink);
+    // Release the original constructor reference; the save list holds its own ref,
+    // and tRef() keeps the C++ memory alive for V8
+    qobj->deref(&xsink);
     if (xsink) {
         QoreV8Program::raiseV8Exception(xsink, isolate);
         return;
@@ -496,7 +500,7 @@ v8::Local<v8::Object> QoreV8ClassWrapper::wrapExistingObject(v8::Isolate* isolat
     v8::Local<v8::Object> js_obj = maybe_obj.ToLocalChecked();
 
     // Store the QoreObject in the internal field
-    qobj->realRef();
+    qobj->tRef();
     js_obj->SetAlignedPointerInInternalField(0, qobj);
 
     // Set up weak reference for GC cleanup
@@ -518,8 +522,7 @@ v8::Local<v8::Object> QoreV8ClassWrapper::wrapExistingObject(v8::Isolate* isolat
 void QoreV8ClassWrapper::weak_callback(const v8::WeakCallbackInfo<QoreV8ObjectRef>& data) {
     QoreV8ObjectRef* ref = data.GetParameter();
     if (ref->qobj) {
-        ExceptionSink xsink;
-        ref->qobj->realDeref(&xsink);
+        ref->qobj->tDeref();
     }
     ref->pgm->untrackObjectRef(ref);
     ref->persistent.Reset();

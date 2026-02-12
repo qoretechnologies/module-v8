@@ -287,7 +287,7 @@ void QoreV8Program::deleteIntern(ExceptionSink* xsink) {
     // Clean up tracked object references (deref QoreObjects wrapped by JS)
     for (auto* ref : objectRefs) {
         if (ref->qobj) {
-            ref->qobj->realDeref(xsink);
+            ref->qobj->tDeref();
         }
         ref->persistent.Reset();
         delete ref;

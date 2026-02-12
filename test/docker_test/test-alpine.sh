@@ -30,6 +30,7 @@ echo && echo "-- building module --"
 mkdir -p ${MODULE_SRC_DIR}/build
 cd ${MODULE_SRC_DIR}/build
 export NODE_LIB_DIR=/opt/nodejs/lib
+export NODE_INCLUDE_DIR=/opt/nodejs/include/node
 cmake .. -DCMAKE_BUILD_TYPE=debug -DCMAKE_INSTALL_PREFIX=${INSTALL_PREFIX} -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 make -j${MAKE_JOBS}
 make install
