@@ -249,12 +249,15 @@ const len = (val as string).length;
     representation and are used only for compile-time type checking:
 
     @code{.ts}
-interface Person {
+interface Animal {
     name: string;
+}
+
+interface Person extends Animal {
     age: number;
 }
 
-interface Dog extends Person {
+interface Dog extends Animal {
     breed: string;
 }
 
@@ -507,6 +510,8 @@ JavaScriptProgram::setSaveReferenceCallback(callback);
       generics, namespaces, and all standard TypeScript syntax
     - TypeScript programs inherit all @ref V8::JavaScriptProgram "JavaScriptProgram" methods and the
       \c qore global object for %Qore API access
+    - fixed a memory leak in \c QoreV8ProgramData::deref() where tracked V8 resources were not cleaned up
+      when a constructor failed
 
     @subsection v8_2_0 v8 Module Version 2.0
     - added the \c qore global object for transparent access to %Qore APIs from JavaScript
