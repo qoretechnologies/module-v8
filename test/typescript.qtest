@@ -1,0 +1,1060 @@
+#!/usr/bin/env qore
+
+%modern
+
+%requires v8
+%requires QUnit
+%requires Util
+
+%exec-class TypeScriptTest
+
+class TypeScriptTest inherits Test {
+    constructor() : Test("TypeScript test", "1.0") {
+        # Unit tests - TypeScript language features
+        addTestCase("basic type stripping", \basicTypeStrippingTest());
+        addTestCase("type aliases and union types", \typeAliasUnionTest());
+        addTestCase("interfaces", \interfaceTest());
+        addTestCase("interface extends", \interfaceExtendsTest());
+        addTestCase("enums", \enumTest());
+        addTestCase("const enums", \constEnumTest());
+        addTestCase("typed classes", \typedClassTest());
+        addTestCase("class inheritance", \classInheritanceTest());
+        addTestCase("arrow functions with types", \arrowFunctionTest());
+        addTestCase("generics", \genericsTest());
+        addTestCase("tuple types", \tupleTypeTest());
+        addTestCase("type assertions", \typeAssertionTest());
+        addTestCase("optional and default parameters", \optionalDefaultParamsTest());
+        addTestCase("rest parameters", \restParametersTest());
+        addTestCase("destructuring with types", \destructuringTest());
+        addTestCase("readonly modifier", \readonlyTest());
+        addTestCase("TS namespace transpilation", \namespaceTest());
+        addTestCase("literal types and const", \literalTypesTest());
+        addTestCase("intersection types", \intersectionTypeTest());
+        addTestCase("plain JS in TypeScript", \plainJsTest());
+
+        # Integration tests - inherited methods and Qore interop
+        addTestCase("inherited getGlobal", \inheritedGetGlobalTest());
+        addTestCase("inherited setSaveReferenceCallback", \inheritedSaveRefCallbackTest());
+        addTestCase("inherited spinOnce", \inheritedSpinOnceTest());
+        addTestCase("qore global access", \qoreGlobalAccessTest());
+        addTestCase("qore class instantiation from TS", \qoreClassFromTsTest());
+        addTestCase("qore function calls from TS", \qoreFunctionCallsTest());
+        addTestCase("async/promises", \asyncPromiseTest());
+        addTestCase("event loop integration", \eventLoopTest());
+        addTestCase("multiple TypeScriptProgram instances", \multiProgramTest());
+
+        # Copy, lifecycle, and error tests
+        addTestCase("copy semantics", \copyTest());
+        addTestCase("copy preserves transpilation", \copyTranspileTest());
+        addTestCase("TS syntax error", \syntaxErrorTest());
+        addTestCase("invalid source", \invalidSourceTest());
+        addTestCase("empty source", \emptySourceTest());
+        addTestCase("runtime error from TS", \runtimeErrorTest());
+        addTestCase("custom error properties from TS", \customErrorTest());
+        addTestCase("JavaScriptProgram rejects TypeScript", \jsRejectsTypeScriptTest());
+
+        set_return_value(main());
+    }
+
+    # --------------------------------------------------------------------------
+    # TypeScript language feature tests
+    # --------------------------------------------------------------------------
+
+    basicTypeStrippingTest() {
+        # Basic typed variable declarations
+        TypeScriptProgram ts("
+            const x: number = 42;
+            const s: string = 'hello';
+            const b: boolean = true;
+            const n: null = null;
+            globalThis.x = x;
+            globalThis.s = s;
+            globalThis.b = b;
+            globalThis.n = n;
+        ", "basic.ts");
+        JavaScriptObject global = ts.getGlobal();
+        assertEq(42, global.x);
+        assertEq("hello", global.s);
+        assertEq(True, global.b);
+        assertNothing(global.n);
+
+        # Typed function
+        ts = new TypeScriptProgram("
+            function add(a: number, b: number): number {
+                return a + b;
+            }
+            globalThis.add = add;
+        ", "func.ts");
+        global = ts.getGlobal();
+        code add = global.add.toData();
+        assertEq(5, add(2, 3));
+        assertEq(0, add(-1, 1));
+        assertEq(-3, add(-1, -2));
+    }
+
+    typeAliasUnionTest() {
+        TypeScriptProgram ts("
+            type StringOrNumber = string | number;
+            type ID = string | number;
+            type Pair = [string, number];
+
+            function describe(val: StringOrNumber): string {
+                if (typeof val === 'string') {
+                    return 'string:' + val;
+                }
+                return 'number:' + val;
+            }
+
+            function makeId(id: ID): string {
+                return 'id-' + id;
+            }
+
+            globalThis.describe = describe;
+            globalThis.makeId = makeId;
+        ", "union.ts");
+        JavaScriptObject global = ts.getGlobal();
+        code describe = global.describe.toData();
+        code makeId = global.makeId.toData();
+        assertEq("string:hello", describe("hello"));
+        assertEq("number:42", describe(42));
+        assertEq("id-abc", makeId("abc"));
+        assertEq("id-123", makeId(123));
+    }
+
+    interfaceTest() {
+        TypeScriptProgram ts("
+            interface Person {
+                name: string;
+                age: number;
+            }
+
+            function makePerson(name: string, age: number): Person {
+                return { name, age };
+            }
+
+            function describePerson(p: Person): string {
+                return p.name + ' is ' + p.age;
+            }
+
+            globalThis.makePerson = makePerson;
+            globalThis.describePerson = describePerson;
+        ", "interface.ts");
+        JavaScriptObject global = ts.getGlobal();
+        code makePerson = global.makePerson.toData();
+        code describePerson = global.describePerson.toData();
+        auto person = makePerson("Alice", 30);
+        assertEq("Alice", person.name);
+        assertEq(30, person.age);
+        assertEq("Alice is 30", describePerson(person));
+    }
+
+    interfaceExtendsTest() {
+        TypeScriptProgram ts("
+            interface Animal {
+                name: string;
+            }
+
+            interface Dog extends Animal {
+                breed: string;
+            }
+
+            function makeDog(name: string, breed: string): Dog {
+                return { name, breed };
+            }
+
+            globalThis.makeDog = makeDog;
+        ", "iface_extends.ts");
+        JavaScriptObject global = ts.getGlobal();
+        code makeDog = global.makeDog.toData();
+        auto dog = makeDog("Rex", "Labrador");
+        assertEq("Rex", dog.name);
+        assertEq("Labrador", dog.breed);
+    }
+
+    enumTest() {
+        # Numeric and string enums
+        TypeScriptProgram ts("
+            enum Color {
+                Red,
+                Green,
+                Blue
+            }
+            globalThis.Color = Color;
+
+            enum Direction {
+                Up = 'UP',
+                Down = 'DOWN',
+                Left = 'LEFT',
+                Right = 'RIGHT'
+            }
+            globalThis.Direction = Direction;
+
+            // Numeric enum with explicit start value
+            enum StatusCode {
+                OK = 200,
+                NotFound = 404,
+                ServerError = 500
+            }
+            globalThis.StatusCode = StatusCode;
+        ", "enum.ts");
+        JavaScriptObject global = ts.getGlobal();
+
+        # Numeric enum
+        assertEq(0, global.Color.Red);
+        assertEq(1, global.Color.Green);
+        assertEq(2, global.Color.Blue);
+
+        # String enum
+        assertEq("UP", global.Direction.Up);
+        assertEq("DOWN", global.Direction.Down);
+        assertEq("LEFT", global.Direction.Left);
+        assertEq("RIGHT", global.Direction.Right);
+
+        # Explicit numeric enum
+        assertEq(200, global.StatusCode.OK);
+        assertEq(404, global.StatusCode.NotFound);
+        assertEq(500, global.StatusCode.ServerError);
+    }
+
+    constEnumTest() {
+        # const enums are inlined by the transpiler
+        TypeScriptProgram ts("
+            const enum Flags {
+                None = 0,
+                Read = 1,
+                Write = 2,
+                Execute = 4
+            }
+            globalThis.flags = Flags.Read | Flags.Write;
+        ", "const_enum.ts");
+        JavaScriptObject global = ts.getGlobal();
+        assertEq(3, global.flags);
+    }
+
+    typedClassTest() {
+        TypeScriptProgram ts("
+            class Calculator {
+                private value: number;
+
+                constructor(initial: number) {
+                    this.value = initial;
+                }
+
+                add(n: number): Calculator {
+                    this.value += n;
+                    return this;
+                }
+
+                subtract(n: number): Calculator {
+                    this.value -= n;
+                    return this;
+                }
+
+                getResult(): number {
+                    return this.value;
+                }
+
+                static create(initial: number): Calculator {
+                    return new Calculator(initial);
+                }
+            }
+
+            function createCalculator(initial: number): Calculator {
+                return Calculator.create(initial);
+            }
+
+            globalThis.createCalculator = createCalculator;
+        ", "class.ts");
+        JavaScriptObject global = ts.getGlobal();
+        code createCalculator = global.createCalculator.toData();
+        JavaScriptObject calc = createCalculator(10);
+        assertEq(10, calc.getResult());
+        calc.add(5);
+        assertEq(15, calc.getResult());
+        calc.subtract(3);
+        assertEq(12, calc.getResult());
+
+        # Method chaining
+        JavaScriptObject calc2 = createCalculator(0);
+        calc2.add(10).add(20).subtract(5);
+        assertEq(25, calc2.getResult());
+    }
+
+    classInheritanceTest() {
+        TypeScriptProgram ts("
+            class Shape {
+                constructor(public name: string) {}
+
+                describe(): string {
+                    return 'Shape: ' + this.name;
+                }
+            }
+
+            class Circle extends Shape {
+                constructor(public radius: number) {
+                    super('circle');
+                }
+
+                area(): number {
+                    return Math.PI * this.radius * this.radius;
+                }
+
+                describe(): string {
+                    return 'Circle(r=' + this.radius + ')';
+                }
+            }
+
+            function createCircle(r: number): Circle {
+                return new Circle(r);
+            }
+
+            globalThis.createCircle = createCircle;
+        ", "class_inherit.ts");
+        JavaScriptObject global = ts.getGlobal();
+        code createCircle = global.createCircle.toData();
+        JavaScriptObject circle = createCircle(5);
+        assertEq("Circle(r=5)", circle.describe());
+        float area = circle.area();
+        assertTrue(area > 78.0 && area < 79.0);
+    }
+
+    arrowFunctionTest() {
+        TypeScriptProgram ts("
+            const multiply = (a: number, b: number): number => a * b;
+            const greet = (name: string): string => 'Hello, ' + name + '!';
+            const toUpper = (s: string): string => s.toUpperCase();
+            const noop = (): void => {};
+            globalThis.multiply = multiply;
+            globalThis.greet = greet;
+            globalThis.toUpper = toUpper;
+            globalThis.noop = noop;
+        ", "arrow.ts");
+        JavaScriptObject global = ts.getGlobal();
+        code multiply = global.multiply.toData();
+        code greet = global.greet.toData();
+        code toUpper = global.toUpper.toData();
+        code noop = global.noop.toData();
+        assertEq(12, multiply(3, 4));
+        assertEq(0, multiply(0, 999));
+        assertEq("Hello, World!", greet("World"));
+        assertEq("ABC", toUpper("abc"));
+        assertNothing(noop());
+    }
+
+    genericsTest() {
+        TypeScriptProgram ts("
+            function identity<T>(arg: T): T {
+                return arg;
+            }
+
+            function firstElement<T>(arr: T[]): T | undefined {
+                return arr[0];
+            }
+
+            function lastElement<T>(arr: T[]): T | undefined {
+                return arr[arr.length - 1];
+            }
+
+            function mapArray<T, U>(arr: T[], fn: (item: T) => U): U[] {
+                return arr.map(fn);
+            }
+
+            globalThis.identity = identity;
+            globalThis.firstElement = firstElement;
+            globalThis.lastElement = lastElement;
+            globalThis.mapArray = mapArray;
+        ", "generics.ts");
+        JavaScriptObject global = ts.getGlobal();
+        code identity = global.identity.toData();
+        code firstElement = global.firstElement.toData();
+        code lastElement = global.lastElement.toData();
+        code mapArray = global.mapArray.toData();
+
+        assertEq(42, identity(42));
+        assertEq("test", identity("test"));
+        assertEq(True, identity(True));
+
+        assertEq(1, firstElement((1, 2, 3)));
+        assertEq("a", firstElement(("a", "b")));
+        assertEq(3, lastElement((1, 2, 3)));
+        assertEq("c", lastElement(("a", "b", "c")));
+
+        # Note: JS Array.map passes (value, index, array) to the callback;
+        # use *auto for extra args to avoid strict-args error
+        list<auto> doubled = mapArray((1, 2, 3), auto sub (int x, *auto idx, *auto arr) { return x * 2; });
+        assertEq((2, 4, 6), doubled);
+    }
+
+    tupleTypeTest() {
+        TypeScriptProgram ts("
+            function makePair(a: string, b: number): [string, number] {
+                return [a, b];
+            }
+
+            function swap<A, B>(pair: [A, B]): [B, A] {
+                return [pair[1], pair[0]];
+            }
+
+            globalThis.makePair = makePair;
+            globalThis.swap = swap;
+        ", "tuple.ts");
+        JavaScriptObject global = ts.getGlobal();
+        code makePair = global.makePair.toData();
+        code swap = global.swap.toData();
+        assertEq(("hello", 42), makePair("hello", 42));
+        assertEq((42, "hello"), swap(("hello", 42)));
+    }
+
+    typeAssertionTest() {
+        TypeScriptProgram ts("
+            function getLength(val: any): number {
+                return (val as string).length;
+            }
+
+            function asNumber(val: any): number {
+                return <number>val;
+            }
+
+            globalThis.getLength = getLength;
+            globalThis.asNumber = asNumber;
+        ", "assertion.ts");
+        JavaScriptObject global = ts.getGlobal();
+        code getLength = global.getLength.toData();
+        code asNumber = global.asNumber.toData();
+        assertEq(5, getLength("hello"));
+        assertEq(0, getLength(""));
+        assertEq(42, asNumber(42));
+    }
+
+    optionalDefaultParamsTest() {
+        TypeScriptProgram ts("
+            function greet(name: string, greeting?: string): string {
+                if (greeting) {
+                    return greeting + ', ' + name + '!';
+                }
+                return 'Hello, ' + name + '!';
+            }
+
+            function repeat(s: string, count: number = 3): string {
+                return s.repeat(count);
+            }
+
+            function createUser(
+                name: string,
+                age: number = 0,
+                email?: string
+            ): object {
+                return { name, age, email: email || 'none' };
+            }
+
+            globalThis.greet = greet;
+            globalThis.repeat = repeat;
+            globalThis.createUser = createUser;
+        ", "optional_default.ts");
+        JavaScriptObject global = ts.getGlobal();
+        code greet = global.greet.toData();
+        code repeat = global.repeat.toData();
+        code createUser = global.createUser.toData();
+
+        # Optional parameter
+        assertEq("Hello, World!", greet("World"));
+        assertEq("Hi, World!", greet("World", "Hi"));
+
+        # Default parameter
+        assertEq("abcabcabc", repeat("abc"));
+        assertEq("abcabc", repeat("abc", 2));
+        assertEq("abc", repeat("abc", 1));
+
+        # Multiple optional/default params
+        auto user = createUser("Alice");
+        assertEq("Alice", user.name);
+        assertEq(0, user.age);
+    }
+
+    restParametersTest() {
+        TypeScriptProgram ts("
+            function sum(...numbers: number[]): number {
+                return numbers.reduce((a, b) => a + b, 0);
+            }
+
+            function joinStrings(separator: string, ...parts: string[]): string {
+                return parts.join(separator);
+            }
+
+            globalThis.sum = sum;
+            globalThis.joinStrings = joinStrings;
+        ", "rest.ts");
+        JavaScriptObject global = ts.getGlobal();
+        code sum = global.sum.toData();
+        code joinStrings = global.joinStrings.toData();
+        assertEq(0, sum());
+        assertEq(10, sum(1, 2, 3, 4));
+        assertEq(100, sum(50, 50));
+        assertEq("a-b-c", joinStrings("-", "a", "b", "c"));
+        assertEq("hello world", joinStrings(" ", "hello", "world"));
+    }
+
+    destructuringTest() {
+        TypeScriptProgram ts("
+            function getCoords(point: { x: number; y: number }): string {
+                const { x, y }: { x: number; y: number } = point;
+                return x + ',' + y;
+            }
+
+            function head([first, ...rest]: number[]): number {
+                return first;
+            }
+
+            globalThis.getCoords = getCoords;
+            globalThis.head = head;
+        ", "destructuring.ts");
+        JavaScriptObject global = ts.getGlobal();
+        code getCoords = global.getCoords.toData();
+        code head = global.head.toData();
+        assertEq("3,4", getCoords({"x": 3, "y": 4}));
+        assertEq(1, head((1, 2, 3)));
+    }
+
+    readonlyTest() {
+        TypeScriptProgram ts("
+            interface Config {
+                readonly host: string;
+                readonly port: number;
+            }
+
+            function makeConfig(host: string, port: number): Config {
+                return { host, port };
+            }
+
+            function getHost(config: Readonly<Config>): string {
+                return config.host;
+            }
+
+            globalThis.makeConfig = makeConfig;
+            globalThis.getHost = getHost;
+        ", "readonly.ts");
+        JavaScriptObject global = ts.getGlobal();
+        code makeConfig = global.makeConfig.toData();
+        code getHost = global.getHost.toData();
+        auto config = makeConfig("localhost", 8080);
+        assertEq("localhost", config.host);
+        assertEq(8080, config.port);
+        assertEq("localhost", getHost(config));
+    }
+
+    namespaceTest() {
+        # TypeScript namespaces are transpiled to IIFEs in transform mode
+        TypeScriptProgram ts("
+            namespace MathUtils {
+                export function square(x: number): number {
+                    return x * x;
+                }
+
+                export function cube(x: number): number {
+                    return x * x * x;
+                }
+            }
+
+            globalThis.MathUtils = MathUtils;
+        ", "namespace.ts");
+        JavaScriptObject global = ts.getGlobal();
+        assertEq(9, global.MathUtils.square(3));
+        assertEq(27, global.MathUtils.cube(3));
+        assertEq(100, global.MathUtils.square(10));
+    }
+
+    literalTypesTest() {
+        TypeScriptProgram ts("
+            type YesNo = 'yes' | 'no';
+            type OneTwo = 1 | 2;
+
+            function isYes(val: YesNo): boolean {
+                return val === 'yes';
+            }
+
+            function describe(val: OneTwo): string {
+                return val === 1 ? 'one' : 'two';
+            }
+
+            const PI: 3.14 = 3.14;
+            const GREETING: 'hello' = 'hello';
+
+            globalThis.isYes = isYes;
+            globalThis.describe = describe;
+            globalThis.PI = PI;
+            globalThis.GREETING = GREETING;
+        ", "literal_types.ts");
+        JavaScriptObject global = ts.getGlobal();
+        code isYes = global.isYes.toData();
+        code describe = global.describe.toData();
+        assertEq(True, isYes("yes"));
+        assertEq(False, isYes("no"));
+        assertEq("one", describe(1));
+        assertEq("two", describe(2));
+        assertEq(3.14, global.PI);
+        assertEq("hello", global.GREETING);
+    }
+
+    intersectionTypeTest() {
+        TypeScriptProgram ts("
+            interface HasName {
+                name: string;
+            }
+
+            interface HasAge {
+                age: number;
+            }
+
+            type Person = HasName & HasAge;
+
+            function makePerson(name: string, age: number): Person {
+                return { name, age };
+            }
+
+            globalThis.makePerson = makePerson;
+        ", "intersection.ts");
+        JavaScriptObject global = ts.getGlobal();
+        code makePerson = global.makePerson.toData();
+        auto person = makePerson("Bob", 25);
+        assertEq("Bob", person.name);
+        assertEq(25, person.age);
+    }
+
+    plainJsTest() {
+        # Valid JavaScript should work fine in TypeScriptProgram too
+        TypeScriptProgram ts("
+            var x = 42;
+            var obj = { a: 'hello', b: [1, 2, 3] };
+            function add(a, b) { return a + b; }
+            globalThis.x = x;
+            globalThis.obj = obj;
+            globalThis.add = add;
+        ", "plain.js");
+        JavaScriptObject global = ts.getGlobal();
+        assertEq(42, global.x);
+        assertEq("hello", global.obj.a);
+        assertEq((1, 2, 3), global.obj.b);
+        assertEq(3, global.add(1, 2));
+    }
+
+    # --------------------------------------------------------------------------
+    # Integration tests - inherited methods and Qore interop
+    # --------------------------------------------------------------------------
+
+    inheritedGetGlobalTest() {
+        TypeScriptProgram ts("
+            globalThis.answer = 42;
+            globalThis.msg = 'hello from TypeScript';
+        ", "inherited_global.ts");
+
+        # getGlobal() is inherited from JavaScriptProgram
+        JavaScriptObject global = ts.getGlobal();
+        assertEq(42, global.answer);
+        assertEq("hello from TypeScript", global.msg);
+
+        # Verify TypeScriptProgram is a JavaScriptProgram (shares the same data)
+        assertEq("TypeScriptProgram", ts.className());
+    }
+
+    inheritedSaveRefCallbackTest() {
+        TypeScriptProgram ts("
+            function storeCallback(cb) {
+                globalThis.storedCb = cb;
+            }
+
+            function callStored(arg) {
+                return globalThis.storedCb(arg);
+            }
+
+            globalThis.storeCallback = storeCallback;
+            globalThis.callStored = callStored;
+        ", "save_ref.ts");
+
+        # setSaveReferenceCallback() is inherited from JavaScriptProgram
+        list<auto> ref_store;
+        code callback = sub (auto v) {
+            ref_store += v;
+        };
+        ts.setSaveReferenceCallback(callback);
+
+        JavaScriptObject global = ts.getGlobal();
+        code storeCallback = global.storeCallback.toData();
+        code callStored = global.callStored.toData();
+
+        code myFunc = int sub (int x) { return x * 10; };
+        storeCallback(myFunc);
+        assertEq(50, callStored(5));
+        assertEq(100, callStored(10));
+    }
+
+    inheritedSpinOnceTest() {
+        TypeScriptProgram ts("
+            var result: any = {};
+            function startTimer(): void {
+                setTimeout(function() {
+                    result.done = true;
+                    result.value = 42;
+                }, 1);
+            }
+            globalThis.result = result;
+            globalThis.startTimer = startTimer;
+        ", "spinonce.ts");
+
+        JavaScriptObject global = ts.getGlobal();
+        code startTimer = global.startTimer.toData();
+        startTimer();
+
+        # spinOnce() is inherited from JavaScriptProgram
+        ts.spinOnce();
+        assertEq(True, global.result.done);
+        assertEq(42, global.result.value);
+    }
+
+    qoreGlobalAccessTest() {
+        TypeScriptProgram ts("
+            const typeResult: string = qore.Qore.type('hello');
+            const upperResult: string = qore.Qore.toupper('hello');
+            const absResult: number = qore.Qore.abs(-42);
+            const intResult: number = qore.Qore.int('99');
+            const splitResult: string[] = qore.Qore.split(',', 'a,b,c');
+
+            globalThis.typeResult = typeResult;
+            globalThis.upperResult = upperResult;
+            globalThis.absResult = absResult;
+            globalThis.intResult = intResult;
+            globalThis.splitResult = splitResult;
+        ", "qore_access.ts");
+        JavaScriptObject global = ts.getGlobal();
+        assertEq("string", global.typeResult);
+        assertEq("HELLO", global.upperResult);
+        assertEq(42, global.absResult);
+        assertEq(99, global.intResult);
+        assertEq(("a", "b", "c"), global.splitResult);
+    }
+
+    qoreClassFromTsTest() {
+        # Instantiate and use Qore classes from TypeScript
+        TypeScriptProgram ts("
+            const mutex = new qore.Qore.Thread.Mutex();
+            mutex.lock();
+            mutex.unlock();
+            globalThis.mutexOk = true;
+
+            const counter = new qore.Qore.Thread.Counter(3);
+            counter.dec();
+            counter.dec();
+            globalThis.counterValue = counter.getCount();
+        ", "qore_class.ts");
+        JavaScriptObject global = ts.getGlobal();
+        assertEq(True, global.mutexOk);
+        assertEq(1, global.counterValue);
+    }
+
+    qoreFunctionCallsTest() {
+        TypeScriptProgram ts("
+            const formatted: string = qore.Qore.sprintf('Hello %s, you are %d', 'World', 42);
+            const joined: string = qore.Qore.join('-', 'a', 'b', 'c');
+
+            globalThis.formatted = formatted;
+            globalThis.joined = joined;
+
+            // Test exception propagation from Qore functions
+            globalThis.callBadFunc = function(): string {
+                try {
+                    qore.Qore.hextoint('not_hex');
+                    return 'no error';
+                } catch (e) {
+                    return 'caught: ' + e.toString().substring(0, 20);
+                }
+            };
+        ", "qore_funcs.ts");
+        JavaScriptObject global = ts.getGlobal();
+        assertEq("Hello World, you are 42", global.formatted);
+        assertEq("a-b-c", global.joined);
+        code callBadFunc = global.callBadFunc.toData();
+        assertRegex("^caught: ", callBadFunc());
+    }
+
+    asyncPromiseTest() {
+        TypeScriptProgram ts("
+            function fetchValue(): Promise<number> {
+                return new Promise<number>((resolve) => {
+                    setTimeout(() => resolve(42), 1);
+                });
+            }
+
+            function asyncAdd(a: number, b: number): Promise<number> {
+                return new Promise<number>((resolve) => {
+                    setTimeout(() => resolve(a + b), 1);
+                });
+            }
+
+            function asyncFail(): Promise<number> {
+                return new Promise<number>((_, reject) => {
+                    setTimeout(() => reject(new Error('async failure')), 1);
+                });
+            }
+
+            globalThis.fetchValue = fetchValue;
+            globalThis.asyncAdd = asyncAdd;
+            globalThis.asyncFail = asyncFail;
+        ", "async.ts");
+        JavaScriptObject global = ts.getGlobal();
+        code fetchValue = global.fetchValue.toData();
+        code asyncAdd = global.asyncAdd.toData();
+        code asyncFail = global.asyncFail.toData();
+
+        # Resolve case
+        {
+            JavaScriptPromise p = fetchValue();
+            auto val;
+            p.then(sub (auto v) { val = v; });
+            p.wait();
+            assertEq(42, val);
+        }
+
+        # Resolve with typed args
+        {
+            JavaScriptPromise p = asyncAdd(10, 20);
+            auto val;
+            p.then(sub (auto v) { val = v; });
+            p.wait();
+            assertEq(30, val);
+        }
+
+        # Reject case
+        {
+            JavaScriptPromise p = asyncFail();
+            auto err;
+            p.then(sub (auto v) {}, sub (auto e) { err = e; });
+            p.wait();
+            assertRegex("async failure", err.toString());
+        }
+    }
+
+    eventLoopTest() {
+        # Test event loop integration with TypeScript using EventEmitter
+        TypeScriptProgram ts("
+            const EventEmitter = require('node:events');
+            const eventEmitter = new EventEmitter();
+
+            async function doPromise(): Promise<string> {
+                return new Promise<string>(function (resolve) {
+                    eventEmitter.on('ts_event', (v: string) => {
+                        resolve(v);
+                    });
+                });
+            }
+
+            function emitEvent(v: string): void {
+                eventEmitter.emit('ts_event', v);
+            }
+
+            globalThis.doPromise = doPromise;
+            globalThis.emitEvent = emitEvent;
+        ", "eventloop.ts");
+
+        JavaScriptObject global = ts.getGlobal();
+        code doPromise = global.getProperty("doPromise").toData();
+        code emitEvent = global.getProperty("emitEvent").toData();
+
+        JavaScriptPromise p = doPromise();
+        string expected = get_random_string();
+        emitEvent(expected);
+
+        string result;
+        p.then(sub (string s) { result = s; });
+        p.wait();
+        assertEq(expected, result);
+    }
+
+    multiProgramTest() {
+        # Multiple TypeScriptProgram instances running concurrently
+        TypeScriptProgram ts1("
+            const prefix: string = 'ts1';
+            function greet(name: string): string {
+                return prefix + ':' + name;
+            }
+            globalThis.greet = greet;
+        ", "multi1.ts");
+
+        TypeScriptProgram ts2("
+            const prefix: string = 'ts2';
+            function greet(name: string): string {
+                return prefix + ':' + name;
+            }
+            globalThis.greet = greet;
+        ", "multi2.ts");
+
+        TypeScriptProgram ts3("
+            enum Mode { A, B, C }
+            globalThis.Mode = Mode;
+        ", "multi3.ts");
+
+        # Each has its own isolated global
+        code greet1 = ts1.getGlobal().greet.toData();
+        code greet2 = ts2.getGlobal().greet.toData();
+
+        assertEq("ts1:World", greet1("World"));
+        assertEq("ts2:World", greet2("World"));
+        assertEq(0, ts3.getGlobal().Mode.A);
+        assertEq(2, ts3.getGlobal().Mode.C);
+
+        # Verify programs don't interfere with each other
+        assertEq("ts1:test", greet1("test"));
+        assertEq("ts2:test", greet2("test"));
+    }
+
+    # --------------------------------------------------------------------------
+    # Copy, lifecycle, and error tests
+    # --------------------------------------------------------------------------
+
+    copyTest() {
+        TypeScriptProgram ts("
+            const val: number = 99;
+            globalThis.val = val;
+        ", "copy.ts");
+        assertEq(99, ts.getGlobal().val);
+
+        # Copy creates a working independent copy
+        TypeScriptProgram ts2 = ts.copy();
+        assertEq(99, ts2.getGlobal().val);
+
+        # Copies are independent
+        assertEq("TypeScriptProgram", ts2.className());
+    }
+
+    copyTranspileTest() {
+        # Verify that copied programs still transpile TypeScript (transpile_ts flag preserved)
+        TypeScriptProgram ts("
+            enum Fruit { Apple, Banana, Cherry }
+            const typed: number = 42;
+            globalThis.Fruit = Fruit;
+            globalThis.typed = typed;
+        ", "copy_transpile.ts");
+        assertEq(0, ts.getGlobal().Fruit.Apple);
+
+        # The copy re-runs init() with transpile_ts=true, so enums are transpiled again
+        TypeScriptProgram ts2 = ts.copy();
+        assertEq(0, ts2.getGlobal().Fruit.Apple);
+        assertEq(1, ts2.getGlobal().Fruit.Banana);
+        assertEq(2, ts2.getGlobal().Fruit.Cherry);
+        assertEq(42, ts2.getGlobal().typed);
+    }
+
+    syntaxErrorTest() {
+        # TypeScript syntax errors should result in JAVASCRIPT-EXCEPTION
+        assertThrows("JAVASCRIPT-EXCEPTION", sub () {
+            TypeScriptProgram ts("
+                function foo( { }
+            ", "syntax_error.ts");
+        });
+    }
+
+    invalidSourceTest() {
+        # Completely invalid source
+        assertThrows("JAVASCRIPT-EXCEPTION", sub () {
+            TypeScriptProgram ts("
+                <<<INVALID>>>
+            ", "invalid.ts");
+        });
+
+        # Unterminated string
+        assertThrows("JAVASCRIPT-EXCEPTION", sub () {
+            TypeScriptProgram ts("
+                const s: string = 'unterminated
+            ", "unterminated.ts");
+        });
+    }
+
+    emptySourceTest() {
+        # Empty source should work (nothing to transpile)
+        TypeScriptProgram ts("", "empty.ts");
+        JavaScriptObject global = ts.getGlobal();
+        assertEq("JavaScriptObject", global.className());
+
+        # Whitespace-only source
+        TypeScriptProgram ts2("   \n\n   ", "whitespace.ts");
+        JavaScriptObject global2 = ts2.getGlobal();
+        assertEq("JavaScriptObject", global2.className());
+
+        # Comment-only source
+        TypeScriptProgram ts3("// just a comment\n/* block comment */", "comments.ts");
+        JavaScriptObject global3 = ts3.getGlobal();
+        assertEq("JavaScriptObject", global3.className());
+    }
+
+    runtimeErrorTest() {
+        TypeScriptProgram ts("
+            function willThrow(): never {
+                throw new Error('TS runtime error');
+            }
+            globalThis.willThrow = willThrow;
+        ", "runtime_error.ts");
+        JavaScriptObject global = ts.getGlobal();
+        code willThrow = global.willThrow.toData();
+        assertThrows("JAVASCRIPT-EXCEPTION", ".*TS runtime error.*", willThrow);
+    }
+
+    customErrorTest() {
+        # Verify custom error properties propagate from TypeScript
+        TypeScriptProgram ts("
+            function throwCustom(): never {
+                const err = new Error('Custom error');
+                (err as any).code = 'TS_ERR';
+                (err as any).details = { line: 42, file: 'test.ts' };
+                throw err;
+            }
+            globalThis.throwCustom = throwCustom;
+        ", "custom_error.ts");
+        JavaScriptObject global = ts.getGlobal();
+        code throwCustom = global.throwCustom.toData();
+        try {
+            throwCustom();
+            assertTrue(False, "throwCustom() should have thrown an exception");
+        } catch (hash<ExceptionInfo> ex) {
+            assertEq("JAVASCRIPT-EXCEPTION", ex.err);
+            assertEq("TS_ERR", ex.arg.code);
+            assertEq(42, ex.arg.details.line);
+            assertEq("test.ts", ex.arg.details.file);
+        }
+    }
+
+    jsRejectsTypeScriptTest() {
+        # TypeScript with type annotations should fail in JavaScriptProgram
+        assertThrows("JAVASCRIPT-EXCEPTION", sub () {
+            JavaScriptProgram js("
+                const x: number = 42;
+            ", "typed.ts");
+        });
+
+        # TypeScript enums should fail in JavaScriptProgram
+        assertThrows("JAVASCRIPT-EXCEPTION", sub () {
+            JavaScriptProgram js("
+                enum Color { Red, Green, Blue }
+            ", "enum.ts");
+        });
+
+        # TypeScript interfaces should fail in JavaScriptProgram
+        assertThrows("JAVASCRIPT-EXCEPTION", sub () {
+            JavaScriptProgram js("
+                interface Person { name: string; age: number; }
+                function makePerson(name: string, age: number): Person {
+                    return { name, age };
+                }
+            ", "iface.ts");
+        });
+
+        # Confirm TypeScriptProgram handles the same code successfully
+        TypeScriptProgram ts("
+            const x: number = 42;
+            enum Color { Red, Green, Blue }
+            interface Person { name: string; age: number; }
+            globalThis.x = x;
+            globalThis.Color = Color;
+        ", "valid.ts");
+        JavaScriptObject global = ts.getGlobal();
+        assertEq(42, global.x);
+        assertEq(0, global.Color.Red);
+    }
+}

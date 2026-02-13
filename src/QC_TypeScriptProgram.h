@@ -1,10 +1,10 @@
 /* -*- mode: c++; indent-tabs-mode: nil -*- */
 /*
-    QC_JavaScriptProgram.h
+    QC_TypeScriptProgram.h
 
     Qore Programming Language
 
-    Copyright (C) 2024 - 2026 Qore Technologies, s.r.o.
+    Copyright (C) 2026 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -29,16 +29,15 @@
     information.
 */
 
-#ifndef _QORE_CLASS_JAVASCRIPTPROGRAM
+#ifndef _QORE_CLASS_TYPESCRIPTPROGRAM
 
-#define _QORE_CLASS_JAVASCRIPTPROGRAM
+#define _QORE_CLASS_TYPESCRIPTPROGRAM
 
-#include "v8-module.h"
-#include "QoreV8Program.h"
+#include "QC_JavaScriptProgram.h"
 
-DLLLOCAL extern qore_classid_t CID_JAVASCRIPTPROGRAM;
-DLLLOCAL extern QoreClass* QC_JAVASCRIPTPROGRAM;
+DLLLOCAL extern qore_classid_t CID_TYPESCRIPTPROGRAM;
+DLLLOCAL extern QoreClass* QC_TYPESCRIPTPROGRAM;
 
-DLLLOCAL QoreClass* initJavaScriptProgramClass(QoreNamespace& ns);
+DLLLOCAL QoreClass* initTypeScriptProgramClass(QoreNamespace& ns);
 
 #endif

@@ -18,6 +18,7 @@
 
     Main classes:
     - @ref V8::JavaScriptProgram "JavaScriptProgram"
+    - @ref V8::TypeScriptProgram "TypeScriptProgram"
     - @ref V8::JavaScriptObject "JavaScriptObject"
 
     @section v8_examples Examples
@@ -159,6 +160,266 @@ var has = "name" in obj;  // true
     %Qore object. If a property name does not correspond to a declared public member, it is stored
     as a regular JavaScript property.
 
+    @section v8_typescript TypeScript Support
+
+    The @ref V8::TypeScriptProgram "TypeScriptProgram" class extends @ref V8::JavaScriptProgram "JavaScriptProgram"
+    to support TypeScript source code. TypeScript is transpiled to JavaScript at runtime using Node.js's built-in
+    \c stripTypeScriptTypes() API (requires Node.js 24+), which handles type stripping, enum transformation, and
+    namespace transformation with zero external dependencies.
+
+    @subsection v8_ts_requirements Requirements
+
+    - <b>Node.js 24+</b> is required for TypeScript transpilation. The \c stripTypeScriptTypes() API is not
+      available in earlier versions. If the API is not available, the constructor throws a
+      \c JAVASCRIPT-EXCEPTION error.
+    - The transpilation uses \c transform mode, which supports type stripping, enums, and namespace transformation.
+
+    @subsection v8_ts_basic_example Basic Example
+
+    @code{.py}
+#!/usr/bin/env qore
+
+%new-style
+%require-types
+%strict-args
+%enable-all-warnings
+
+%requires v8
+
+TypeScriptProgram ts("
+    const x: number = 42;
+    enum Color { Red, Green, Blue }
+    function greet(name: string): string {
+        return 'Hello, ' + name;
+    }
+    globalThis.x = x;
+    globalThis.Color = Color;
+    globalThis.greet = greet;
+", "example.ts");
+
+JavaScriptObject global = ts.getGlobal();
+printf("x = %d\n", global.x);                 # x = 42
+printf("Color.Red = %d\n", global.Color.Red);  # Color.Red = 0
+printf("%s\n", global.greet("World"));         # Hello, World
+    @endcode
+
+    @subsection v8_ts_features Supported TypeScript Features
+
+    The following TypeScript features are supported through \c transform mode transpilation:
+
+    @par Type Annotations
+    All TypeScript type annotations are stripped, including typed variables, function parameters,
+    return types, type aliases, union types, intersection types, literal types, generics, tuple types,
+    optional parameters, and \c readonly modifiers:
+
+    @code{.ts}
+// Type annotations on variables and functions
+const x: number = 42;
+const name: string = "hello";
+
+function add(a: number, b: number): number {
+    return a + b;
+}
+
+// Type aliases and union types
+type StringOrNumber = string | number;
+type ID = string | number;
+
+// Generics
+function identity<T>(arg: T): T {
+    return arg;
+}
+
+// Optional and default parameters
+function greet(name: string, greeting?: string): string {
+    return (greeting || 'Hello') + ', ' + name;
+}
+
+// Tuple types
+function makePair(a: string, b: number): [string, number] {
+    return [a, b];
+}
+
+// Type assertions
+const len = (val as string).length;
+    @endcode
+
+    @par Interfaces
+    TypeScript interfaces are fully stripped during transpilation. They have no runtime
+    representation and are used only for compile-time type checking:
+
+    @code{.ts}
+interface Person {
+    name: string;
+    age: number;
+}
+
+interface Dog extends Person {
+    breed: string;
+}
+
+function makePerson(name: string, age: number): Person {
+    return { name, age };
+}
+    @endcode
+
+    @par Enums
+    Both numeric and string enums are transpiled to JavaScript objects. Const enums are
+    inlined at transpilation time:
+
+    @code{.ts}
+// Numeric enum
+enum Color { Red, Green, Blue }
+// Color.Red === 0, Color.Green === 1, Color.Blue === 2
+
+// String enum
+enum Direction {
+    Up = 'UP',
+    Down = 'DOWN',
+    Left = 'LEFT',
+    Right = 'RIGHT'
+}
+
+// Const enums are inlined (no runtime object)
+const enum Flags { None = 0, Read = 1, Write = 2, Execute = 4 }
+const rw = Flags.Read | Flags.Write;  // rw === 3
+    @endcode
+
+    @par Classes with Types
+    TypeScript classes with typed constructors, methods, and members are transpiled to
+    standard JavaScript ES6 classes, including inheritance:
+
+    @code{.ts}
+class Calculator {
+    private value: number;
+
+    constructor(initial: number) {
+        this.value = initial;
+    }
+
+    add(n: number): Calculator {
+        this.value += n;
+        return this;
+    }
+
+    getResult(): number {
+        return this.value;
+    }
+}
+
+class Shape {
+    constructor(public name: string) {}
+}
+
+class Circle extends Shape {
+    constructor(public radius: number) {
+        super('circle');
+    }
+
+    area(): number {
+        return Math.PI * this.radius * this.radius;
+    }
+}
+    @endcode
+
+    @par Namespaces
+    TypeScript namespaces are transpiled to IIFEs (Immediately Invoked Function Expressions)
+    in \c transform mode:
+
+    @code{.ts}
+namespace MathUtils {
+    export function square(x: number): number {
+        return x * x;
+    }
+
+    export function cube(x: number): number {
+        return x * x * x;
+    }
+}
+
+MathUtils.square(5);  // 25
+MathUtils.cube(3);    // 27
+    @endcode
+
+    @subsection v8_ts_qore_interop Qore Interoperability from TypeScript
+
+    The \c qore global object is available in TypeScript programs, providing the same access to %Qore APIs
+    as in JavaScript programs. TypeScript type annotations can be used alongside %Qore API calls:
+
+    @code{.ts}
+// Call Qore functions with TypeScript types
+const typeResult: string = qore.Qore.type('hello');      // "string"
+const upper: string = qore.Qore.toupper('hello');        // "HELLO"
+const parts: string[] = qore.Qore.split(',', 'a,b,c');  // ["a", "b", "c"]
+
+// Instantiate Qore classes
+const counter = new qore.Qore.Thread.Counter(3);
+counter.dec();
+const count: number = counter.getCount();  // 2
+
+// Exception handling
+try {
+    qore.Qore.hextoint('not_hex');
+} catch (e) {
+    // Qore exceptions propagate as JavaScript errors
+    console.log(e.toString());
+}
+    @endcode
+
+    @subsection v8_ts_async Async/Await and Promises
+
+    TypeScript \c async/\c await syntax works with
+    @ref V8::TypeScriptProgram "TypeScriptProgram". Promises can be returned from TypeScript
+    functions and consumed in %Qore via @ref V8::JavaScriptPromise "JavaScriptPromise":
+
+    @code{.py}
+TypeScriptProgram ts("
+    function fetchValue(): Promise<number> {
+        return new Promise<number>((resolve) => {
+            setTimeout(() => resolve(42), 1);
+        });
+    }
+    globalThis.fetchValue = fetchValue;
+", "async.ts");
+
+JavaScriptObject global = ts.getGlobal();
+code fetchValue = global.fetchValue.toData();
+JavaScriptPromise p = fetchValue();
+auto val;
+p.then(sub (auto v) { val = v; });
+p.wait();
+printf("value = %d\n", val);  # value = 42
+    @endcode
+
+    @subsection v8_ts_inherited Inherited Methods
+
+    All methods from @ref V8::JavaScriptProgram "JavaScriptProgram" are inherited by
+    @ref V8::TypeScriptProgram "TypeScriptProgram", including:
+    - \c getGlobal() — access the global JavaScript object
+    - \c setSaveReferenceCallback() — manage %Qore reference lifecycle
+    - \c spinOnce() — run the Node.js event loop once
+    - \c spinEventLoop() — run the Node.js event loop continuously
+    - \c copy() — create an independent copy of the program
+
+    Copied @ref V8::TypeScriptProgram "TypeScriptProgram" objects preserve the TypeScript
+    transpilation flag, so the copy will also transpile its source code.
+
+    @subsection v8_ts_plain_js Plain JavaScript Compatibility
+
+    @ref V8::TypeScriptProgram "TypeScriptProgram" accepts plain JavaScript as well. Since the
+    transpiler only strips type annotations and transforms enums/namespaces, valid JavaScript
+    passes through unchanged:
+
+    @code{.py}
+# Plain JavaScript works in TypeScriptProgram
+TypeScriptProgram ts("
+    var x = 42;
+    function add(a, b) { return a + b; }
+    globalThis.x = x;
+    globalThis.add = add;
+", "plain.js");
+    @endcode
+
     @subsection v8_qore_import_enumeration Enumeration
 
     \c Object.keys() can be used on namespace wrappers to discover available members:
@@ -238,6 +499,14 @@ JavaScriptProgram::setSaveReferenceCallback(callback);
     @endcode
 
     @section v8releasenotes v8 Module Release Notes
+
+    @subsection v8_2_1 v8 Module Version 2.1
+    - added the @ref V8::TypeScriptProgram "TypeScriptProgram" class for runtime TypeScript transpilation and
+      execution using Node.js 24+'s built-in \c stripTypeScriptTypes() API
+    - supports type stripping, interfaces, enums (including const enums), typed classes with inheritance,
+      generics, namespaces, and all standard TypeScript syntax
+    - TypeScript programs inherit all @ref V8::JavaScriptProgram "JavaScriptProgram" methods and the
+      \c qore global object for %Qore API access
 
     @subsection v8_2_0 v8 Module Version 2.0
     - added the \c qore global object for transparent access to %Qore APIs from JavaScript
