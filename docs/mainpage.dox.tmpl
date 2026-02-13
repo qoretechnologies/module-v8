@@ -148,7 +148,7 @@ var keys = Object.keys(obj);  // ["name", "age"]
 var has = "name" in obj;  // true
 
 // Private/internal members are not accessible — access raises an exception
-// var secret = obj.secret;  // throws JAVASCRIPT-ERROR
+// var secret = obj.secret;  // throws JAVASCRIPT-MEMBER-ACCESS-ERROR
     @endcode
 
     @note Methods are not shadowed by member access — prototype methods take precedence over the

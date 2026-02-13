@@ -102,7 +102,7 @@ same class are created.
 `wrapExistingObject()` handles QoreObjects returned from Qore functions/methods to JavaScript.
 It reuses the cached `FunctionTemplate` to create a new V8 instance (via
 `InstanceTemplate()->NewInstance()`) without calling the constructor, then stores the existing
-`QoreObject*` in the internal field with a `realRef()` for reference counting.
+`QoreObject*` in the internal field with a `tRef()` for reference counting.
 
 ### Member Interceptor (Public Data Members)
 
@@ -187,7 +187,7 @@ When a `QoreObject*` is stored in a V8 object's internal field:
 1. A `QoreV8ObjectRef` struct is created holding the `QoreObject*` pointer, a persistent V8
    handle, and the owning `QoreV8Program*`.
 2. The persistent handle is set as a weak reference with `weak_callback`.
-3. When V8's GC collects the JS object, `weak_callback` calls `qobj->realDeref()` to release the
+3. When V8's GC collects the JS object, `weak_callback` calls `qobj->tDeref()` to release the
    Qore object reference, then deletes the `QoreV8ObjectRef`.
 
 ### QoreV8NamespaceData (Namespace Lifecycle)
@@ -208,7 +208,7 @@ When a `QoreV8Program` is destroyed, `deleteIntern()` performs deterministic cle
 tracked resources:
 
 1. **objectRefs**: All tracked `QoreV8ObjectRef` objects are iterated — each `QoreObject*` is
-   `realDeref()`'d, the persistent handle is reset, and the struct is deleted.
+   `tDeref()`'d, the persistent handle is reset, and the struct is deleted.
 2. **nsDataRefs**: All tracked `QoreV8NamespaceData` objects are cleaned up (persistent handles
    reset, cache entries destroyed).
 3. **classTemplateCache**: Cleared (v8::Global destructors reset handles).
