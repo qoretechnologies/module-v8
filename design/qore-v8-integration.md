@@ -150,7 +150,7 @@ callbacks via a `v8::External` data parameter.
 1. Extract `QoreV8MemberHandlerData*` from the callback's `Data()` external.
 2. Look up the property name in `mhdata->members` (O(1) hash lookup).
 3. If not found → return `kNo` (V8 falls through to prototype chain / undefined).
-4. If found but not `Public` → raise V8 exception ("JAVASCRIPT-ERROR: cannot access
+4. If found but not `Public` → raise V8 exception ("JAVASCRIPT-MEMBER-ACCESS-ERROR: cannot access
    private/internal member").
 5. Get `QoreObject*` from internal field 0.
 6. Call `qobj->getReferencedMemberNoMethod(name, &xsink)` (access-controlled, no
