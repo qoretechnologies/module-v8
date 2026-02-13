@@ -5,7 +5,7 @@
 
     Qore Programming Language
 
-    Copyright 2024 Qore Technologies, s.r.o.
+    Copyright 2024 - 2026 Qore Technologies, s.r.o.
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
@@ -90,9 +90,22 @@ QoreV8Program::QoreV8Program(const QoreString& source_code, const QoreString& so
     init(xsink);
 }
 
+QoreV8Program::QoreV8Program(const QoreString& source_code, const QoreString& source_label,
+        bool transpile_ts, ExceptionSink* xsink) : QoreV8Program() {
+    assert(source_code.getEncoding() == QCS_UTF8);
+    assert(source_label.getEncoding() == QCS_UTF8);
+
+    source = source_code;
+    label = source_label;
+    this->transpile_ts = transpile_ts;
+
+    init(xsink);
+}
+
 QoreV8Program::QoreV8Program(ExceptionSink* xsink, const QoreV8Program& old, QoreObject* self) : QoreV8Program() {
     source = old.source;
     label = old.label;
+    transpile_ts = old.transpile_ts;
 
     if (!init(xsink)) {
         this->self = self;
@@ -224,11 +237,28 @@ int QoreV8Program::init(ExceptionSink* xsink) {
         // load files from the disk, and uses the standard CommonJS file loader
         // instead of the internal-only `require` function.
 
-        QoreStringMaker envstr("const publicRequire = require('module').createRequire(process.cwd() + '/');\n"
-            "globalThis.require = publicRequire;\n"
-            "publicRequire('node:vm').runInThisContext(process.env._qore_v8_source, {\n"
-            "  'filename': process.env._qore_v8_filename\n"
-            "});");
+        QoreStringMaker envstr("const publicRequire = require('module').createRequire("
+            "process.cwd() + '/');\nglobalThis.require = publicRequire;\n");
+        if (transpile_ts) {
+            envstr.concat(
+                "const _tsStrip = require('node:module').stripTypeScriptTypes;\n"
+                "if (typeof _tsStrip !== 'function') {\n"
+                "  throw new Error('TypeScript support requires Node.js 24+ "
+                    "with stripTypeScriptTypes');\n"
+                "}\n"
+                "const _tsSource = _tsStrip(process.env._qore_v8_source, "
+                    "{ mode: 'transform' });\n"
+                "publicRequire('node:vm').runInThisContext(_tsSource, {\n"
+                "  'filename': process.env._qore_v8_filename\n"
+                "});"
+            );
+        } else {
+            envstr.concat(
+                "publicRequire('node:vm').runInThisContext(process.env._qore_v8_source, {\n"
+                "  'filename': process.env._qore_v8_filename\n"
+                "});"
+            );
+        }
         v8::MaybeLocal<v8::Value> loadenv_ret = node::LoadEnvironment(env, envstr.c_str());
         if (loadenv_ret.IsEmpty()) {
             // Call checkException() while valid is still true so we can properly convert the exception

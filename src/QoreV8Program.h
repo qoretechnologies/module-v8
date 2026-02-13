@@ -4,7 +4,7 @@
 
     Qore Programming Language
 
-    Copyright (C) 2024 Qore Technologies, s.r.o.
+    Copyright (C) 2024 - 2026 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -56,6 +56,9 @@ class QoreV8Program : public AbstractQoreProgramExternalData {
     friend class QoreV8Object;
 public:
     DLLLOCAL QoreV8Program(const QoreString& source_code, const QoreString& source_label, ExceptionSink* xsink);
+
+    DLLLOCAL QoreV8Program(const QoreString& source_code, const QoreString& source_label,
+        bool transpile_ts, ExceptionSink* xsink);
 
     DLLLOCAL QoreV8Program(const QoreV8Program& old, QoreProgram* qpgm);
 
@@ -222,6 +225,7 @@ protected:
     bool to_destroy = false;
     bool valid = true;
     bool heap_limit = false;
+    bool transpile_ts = false;
 
     static QoreThreadLock global_lock;
     typedef std::set<QoreV8Program*> pset_t;
@@ -258,6 +262,11 @@ public:
         //printd(5, "QoreV8ProgramData::QoreV8ProgramData() this: %p\n", this);
     }
 
+    DLLLOCAL QoreV8ProgramData(const QoreString& source_code, const QoreString& source_label,
+            bool transpile_ts, ExceptionSink* xsink)
+            : QoreV8Program(source_code, source_label, transpile_ts, xsink) {
+    }
+
     DLLLOCAL QoreV8ProgramData(ExceptionSink* xsink, const QoreV8ProgramData& old, QoreObject* self)
             : QoreV8Program(xsink, old, self) {
         //printd(5, "QoreV8ProgramData::QoreV8ProgramData() this: %p\n", this);
@@ -265,12 +274,17 @@ public:
 
     DLLLOCAL virtual void deref(ExceptionSink* xsink) {
         if (ROdereference()) {
+            // ensure V8 resources are cleaned up even if destructor() was not called
+            // (e.g., when the constructor fails and the object is destroyed via deref)
+            deleteIntern(xsink);
             weakDeref();
         }
     }
 
     DLLLOCAL virtual void deref() {
         if (ROdereference()) {
+            ExceptionSink xsink;
+            deleteIntern(&xsink);
             weakDeref();
         }
     }

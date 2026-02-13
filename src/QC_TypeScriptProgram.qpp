@@ -1,0 +1,70 @@
+/* -*- mode: c++; indent-tabs-mode: nil -*- */
+/** @file QC_TypeScriptProgram.cpp defines the %Qore TypeScriptProgram class */
+/*
+    QC_TypeScriptProgram.cpp
+
+    Qore Programming Language
+
+    Copyright 2026 Qore Technologies, s.r.o.
+
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either
+    version 2.1 of the License, or (at your option) any later version.
+
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public
+    License along with this library; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+*/
+
+#include "QC_TypeScriptProgram.h"
+
+//! Program for embedding and executing TypeScript code with runtime transpilation to JavaScript
+/**
+    TypeScript source code is transpiled to JavaScript using Node.js's built-in
+    \c stripTypeScriptTypes() API (requires Node.js 24+) before execution. The transpilation
+    uses \c transform mode, which handles type stripping, enums, and namespace transformation.
+
+    All methods from @ref JavaScriptProgram are inherited and work identically.
+*/
+qclass TypeScriptProgram [arg=QoreV8ProgramData* jsp; ns=V8; dom=EMBEDDED_LOGIC;
+    vparent=JavaScriptProgram];
+
+//! Creates the object, transpiles the TypeScript source to JavaScript, and executes it
+/** @param source_code the TypeScript source to transpile and execute
+    @param source_label the label or file name of the source
+
+    @throw JAVASCRIPT-PROGRAM-ERROR error initializing the program
+    @throw JAVASCRIPT-EXCEPTION error in the TypeScript source code (syntax error, etc.)
+*/
+TypeScriptProgram::constructor(string source_code, string source_label) {
+    ReferenceHolder<QoreV8ProgramData> jsp(
+        new QoreV8ProgramData(*source_code, *source_label, true, xsink), xsink);
+    if (*xsink) {
+        return;
+    }
+
+    jsp->setObject(self);
+
+    self->setPrivate(CID_TYPESCRIPTPROGRAM, jsp.release());
+}
+
+//! Destroys the TypeScript program and invalidates the object
+/**
+*/
+TypeScriptProgram::destructor() {
+    jsp->destructor(xsink);
+    jsp->deref(xsink);
+}
+
+//! Copies the object
+/**
+*/
+TypeScriptProgram::copy() {
+    self->setPrivate(CID_TYPESCRIPTPROGRAM, new QoreV8ProgramData(xsink, *jsp, self));
+}
