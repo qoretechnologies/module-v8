@@ -40,6 +40,134 @@ JavaScriptObject foo = gb.getKeyValue("foo");
 int i = foo.callAsFunction(gb, 1);
     @endcode
 
+    @section v8_qore_import Accessing Qore APIs from JavaScript
+
+    Every @ref V8::JavaScriptProgram "JavaScriptProgram" has a \c qore global object that provides transparent access to
+    all %Qore namespaces, classes, functions, constants, and enums from JavaScript.
+
+    @subsection v8_qore_import_namespaces Namespace Traversal
+
+    The \c qore object represents the %Qore root namespace. Properties are resolved lazily — accessing a name looks up
+    child namespaces, classes, functions, constants, and enums in that order:
+
+    @code{.js}
+// Access the Qore::Thread namespace
+var threadNs = qore.Qore.Thread;
+
+// Access a class through the namespace path
+var mutex = new qore.Qore.Thread.Mutex();
+
+// Call a function in the Qore namespace
+var t = qore.Qore.type("hello");  // returns "string"
+
+// Access a constant
+var nothing = qore.Qore.NOTHING;
+    @endcode
+
+    Namespace wrappers are read-only — attempting to overwrite or delete existing namespace members is silently ignored.
+    Results are cached for performance, so repeated access to the same path does not re-resolve.
+
+    @subsection v8_qore_import_classes Class Instantiation and Methods
+
+    %Qore classes accessed through the \c qore object can be instantiated with \c new and support instance methods,
+    static methods, and class constants:
+
+    @code{.js}
+// Create a Qore object
+var counter = new qore.Qore.Thread.Counter(5);
+counter.dec();
+var count = counter.getCount();  // 4
+
+// Call static methods
+var tz = qore.Qore.TimeZone.get();  // returns default timezone object
+var region = tz.region();            // call method on returned object
+
+// Class constructors require 'new' — calling without it throws an error
+try {
+    qore.Qore.Thread.Mutex();  // Error!
+} catch (e) {
+    // JAVASCRIPT-CONSTRUCTOR-ERROR: Class constructor must be called with 'new'
+}
+    @endcode
+
+    @subsection v8_qore_import_functions Function Calls and Type Conversion
+
+    %Qore functions can be called directly. Arguments are automatically converted between JavaScript and %Qore types
+    (see @ref javascript_javascript_to_qore and @ref javascript_qore_to_javascript):
+
+    @code{.js}
+// String functions
+var upper = qore.Qore.toupper("hello");     // "HELLO"
+var parts = qore.Qore.split(" ", "a b c");  // ["a", "b", "c"]
+var msg = qore.Qore.sprintf("Hi %s", "World");
+
+// Type conversion functions
+var i = qore.Qore.int("42");       // 42
+var s = qore.Qore.string(42);      // "42"
+var f = qore.Qore.float("3.14");   // 3.14
+var b = qore.Qore.boolean(1);      // true
+
+// Math functions
+var a = qore.Qore.abs(-42);        // 42
+    @endcode
+
+    @subsection v8_qore_import_exceptions Exception Propagation
+
+    %Qore exceptions raised during function calls, method calls, or object construction are propagated to JavaScript
+    as catchable errors. The error message contains the %Qore exception error code and description:
+
+    @code{.js}
+try {
+    qore.Qore.hextoint("not_hex");
+} catch (e) {
+    // e contains "PARSE-HEX-ERROR: ..."
+}
+    @endcode
+
+    @subsection v8_qore_import_members Public Member Access
+
+    %Qore objects wrapped in JavaScript support direct access to public data members via standard property syntax.
+    Reading, writing, and enumerating public members all work as expected:
+
+    @code{.js}
+// Given a Qore class with public members: string name, int age
+var obj = new qore.MyNamespace.MyClass("Alice", 30);
+
+// Read public members
+var n = obj.name;   // "Alice"
+var a = obj.age;    // 30
+
+// Write public members
+obj.name = "Bob";
+obj.age = 25;
+
+// Enumerate public members with Object.keys()
+var keys = Object.keys(obj);  // ["name", "age"]
+
+// Check member existence with 'in'
+var has = "name" in obj;  // true
+
+// Private/internal members are not accessible — access raises an exception
+// var secret = obj.secret;  // throws JAVASCRIPT-MEMBER-ACCESS-ERROR
+    @endcode
+
+    @note Methods are not shadowed by member access — prototype methods take precedence over the
+    member interceptor. If a class has both a public member \c name and a method \c lock(), calling
+    \c obj.lock() invokes the method, while \c obj.name reads the member.
+
+    @note JavaScript-only properties can be set on wrapped objects without affecting the underlying
+    %Qore object. If a property name does not correspond to a declared public member, it is stored
+    as a regular JavaScript property.
+
+    @subsection v8_qore_import_enumeration Enumeration
+
+    \c Object.keys() can be used on namespace wrappers to discover available members:
+
+    @code{.js}
+var keys = Object.keys(qore.Qore);
+// keys contains namespace names, class names, function names, constants, and enums
+    @endcode
+
     @section javascript_javascript_to_qore JavaScript to Qore Data Conversions
 
     |!Source JavaScript Type|!Target %Qore Type
@@ -110,6 +238,13 @@ JavaScriptProgram::setSaveReferenceCallback(callback);
     @endcode
 
     @section v8releasenotes v8 Module Release Notes
+
+    @subsection v8_2_0 v8 Module Version 2.0
+    - added the \c qore global object for transparent access to %Qore APIs from JavaScript
+    - JavaScript code can now access %Qore namespaces, classes, functions, constants, and enums
+    - class wrapping supports constructors, instance methods, static methods, and inheritance
+    - public data members of wrapped %Qore objects can be read, written, and enumerated from JavaScript
+    - %Qore exceptions propagate as catchable JavaScript errors
 
     @subsection v8_1_0_4 v8 Module Version 1.0.4
     - improved ts-proxy restart robustness and shutdown handling to avoid deadlocks

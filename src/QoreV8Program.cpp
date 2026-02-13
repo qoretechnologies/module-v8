@@ -26,6 +26,8 @@
 #include "QC_JavaScriptPromise.h"
 #include "QoreV8Program.h"
 #include "QoreV8StackLocationHelper.h"
+#include "QoreV8NamespaceWrapper.h"
+#include "QoreV8ClassWrapper.h"
 
 #include <uv.h>
 
@@ -197,6 +199,21 @@ int QoreV8Program::init(ExceptionSink* xsink) {
         ctx.Reset(isolate, setup->context());
         global.Reset(isolate, setup->context()->Global());
 
+        // Inject the 'qore' global object for accessing Qore namespaces, classes, functions, and constants
+        // This must happen before LoadEnvironment() which executes the user's code
+        {
+            v8::Local<v8::Context> context = setup->context();
+            const QoreNamespace* rootNS = qpgm->getRootNS();
+            if (rootNS) {
+                v8::Local<v8::Object> qoreGlobal = QoreV8NamespaceWrapper::create(
+                    isolate, context, this, *rootNS);
+                v8::MaybeLocal<v8::String> key = v8::String::NewFromUtf8(isolate, "qore");
+                if (!key.IsEmpty()) {
+                    global.Get(isolate)->Set(context, key.ToLocalChecked(), qoreGlobal).Check();
+                }
+            }
+        }
+
         // Set up the Node.js instance for execution, and run code inside of it.
         // There is also a variant that takes a callback and provides it with
         // the `require` and `process` objects, so that it can manually compile
@@ -225,6 +242,7 @@ int QoreV8Program::init(ExceptionSink* xsink) {
             global.Reset();
             return -1;
         }
+
     }
 
     AutoLocker al(global_lock);
@@ -265,6 +283,46 @@ void QoreV8Program::deleteIntern(ExceptionSink* xsink) {
         node::Stop(env);
         env = nullptr;
     }
+
+    // Clean up tracked object references (deref QoreObjects wrapped by JS)
+    for (auto* ref : objectRefs) {
+        if (ref->qobj) {
+            ref->qobj->tDeref();
+        }
+        ref->persistent.Reset();
+        delete ref;
+    }
+    objectRefs.clear();
+
+    // Clean up tracked namespace data (persistent handles + cache entries)
+    for (auto* d : nsDataRefs) {
+        d->persistent.Reset();
+        // cache entries are v8::Global<v8::Value> - destroyed by map destructor
+        delete d;
+    }
+    nsDataRefs.clear();
+
+    // Clean up class template cache
+    classTemplateCache.clear();
+
+    // Clean up callback data structs
+    for (auto* d : classDataRefs) {
+        delete d;
+    }
+    classDataRefs.clear();
+    for (auto* d : methodDataRefs) {
+        delete d;
+    }
+    methodDataRefs.clear();
+    for (auto* d : funcDataRefs) {
+        delete d;
+    }
+    funcDataRefs.clear();
+    for (auto* d : memberHandlerDataRefs) {
+        delete d;
+    }
+    memberHandlerDataRefs.clear();
+
     ctx.Reset();
     global.Reset();
 }
@@ -771,12 +829,19 @@ v8::Local<v8::Value> QoreV8Program::getV8Value(const QoreValue val, ExceptionSin
             if (*xsink) {
                 return v8::Null(isolate);
             }
-            if (!pd) {
+            if (pd) {
+                return handle_scope.Escape(pd->get(xsink, isolate));
+            }
+            // Wrap non-JavaScript Qore objects using the class wrapper
+            v8::Local<v8::Context> context = ctx.Get(isolate);
+            v8::Local<v8::Object> wrapped = QoreV8ClassWrapper::wrapExistingObject(
+                isolate, context, this, obj);
+            if (wrapped.IsEmpty()) {
                 xsink->raiseException("JAVASCRIPT-TYPE-ERROR", "Cannot convert Qore values of type '%s' to a V8 "
                     "value", val.getFullTypeName());
                 return v8::Null(isolate);
             }
-            return handle_scope.Escape(pd->get(xsink, isolate));
+            return handle_scope.Escape(wrapped);
         }
 
         case NT_RUNTIME_CLOSURE:
@@ -841,4 +906,21 @@ QoreObject* QoreV8Program::getGlobal(ExceptionSink* xsink) {
 
     v8::Local<v8::Object> g = global.Get(isolate);
     return new QoreObject(QC_JAVASCRIPTOBJECT, getProgram(), new QoreV8Object(this, g));
+}
+
+QoreValue QoreV8Program::callFunction(const char* name, const QoreListNode* args, ExceptionSink* xsink) {
+    return qpgm->callFunction(name, args, xsink);
+}
+
+v8::Local<v8::FunctionTemplate> QoreV8Program::getClassTemplate(const QoreClass& cls) {
+    auto it = classTemplateCache.find(&cls);
+    if (it != classTemplateCache.end()) {
+        return it->second.Get(isolate);
+    }
+    return v8::Local<v8::FunctionTemplate>();
+}
+
+void QoreV8Program::cacheClassTemplate(const QoreClass& cls, v8::Isolate* isolate,
+        v8::Local<v8::FunctionTemplate> tmpl) {
+    classTemplateCache[&cls].Reset(isolate, tmpl);
 }

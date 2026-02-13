@@ -93,6 +93,8 @@ set(CPP_SRC
     src/QoreV8CallStack.cpp
     src/QoreV8StackLocationHelper.cpp
     src/QoreV8CallReference.cpp
+    src/QoreV8NamespaceWrapper.cpp
+    src/QoreV8ClassWrapper.cpp
 )
 
 set(QMOD
