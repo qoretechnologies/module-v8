@@ -3,10 +3,19 @@ import {
   TQoreAppActionFunctionContext,
   TQoreAppWithActions,
   TQoreMappedOptions,
+  TQoreRecordBasedApp,
 } from '@qoretechnologies/ts-toolkit';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import { FRESHDESK_ACTIONS, FRESHDESK_APP_NAME, FRESHDESK_CONN_OPTIONS } from './constants';
+import { createFreshdeskRecords } from './helpers/record-based/create-records';
+import { deleteFreshdeskRecords } from './helpers/record-based/delete-records';
+import { getFreshdeskExpressions } from './helpers/record-based/get-expressions';
+import { getFreshdeskRecordType } from './helpers/record-based/get-record-type';
+import { FreshdeskSearchOptions } from './helpers/record-based/get-search-options';
+import { getFreshdeskTableList } from './helpers/record-based/get-table-list';
+import { searchFreshdeskRecords } from './helpers/record-based/search-records';
+import { updateFreshdeskRecords } from './helpers/record-based/update-records';
 import * as FRESHDESK_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
@@ -65,4 +74,14 @@ export default (locale: Locales) =>
         };
       },
     },
-  }) satisfies TQoreAppWithActions;
+
+    // Record-based helpers
+    get_table_list: getFreshdeskTableList,
+    expressions: getFreshdeskExpressions(locale),
+    get_record_type: getFreshdeskRecordType,
+    search_records: searchFreshdeskRecords,
+    search_options: FreshdeskSearchOptions,
+    create_records: createFreshdeskRecords,
+    update_records: updateFreshdeskRecords,
+    delete_records: deleteFreshdeskRecords,
+  }) satisfies TQoreRecordBasedApp & TQoreAppWithActions;

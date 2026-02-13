@@ -28802,7 +28802,7 @@ type RootTranslation = {
 		}
 		AmazonEC2: {
 			/**
-			 * A​W​S​ ​E​C​2
+			 * A​m​a​z​o​n​ ​E​C​2
 			 */
 			displayName: string
 			groups: {
@@ -28821,7 +28821,7 @@ type RootTranslation = {
 			longDesc: string
 			connectionMessage: {
 				/**
-				 * C​o​n​n​e​c​t​ ​t​o​ ​A​W​S​ ​E​C​2
+				 * C​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​E​C​2
 				 */
 				title: string
 				/**
@@ -29210,7 +29210,7 @@ type RootTranslation = {
 		}
 		AmazonS3: {
 			/**
-			 * A​W​S​ ​S​3
+			 * A​m​a​z​o​n​ ​S​3
 			 */
 			displayName: string
 			groups: {
@@ -29233,7 +29233,7 @@ type RootTranslation = {
 			longDesc: string
 			connectionMessage: {
 				/**
-				 * C​o​n​n​e​c​t​ ​t​o​ ​A​W​S​ ​S​3
+				 * C​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​S​3
 				 */
 				title: string
 				/**
@@ -31570,7 +31570,7 @@ type RootTranslation = {
 		}
 		AmazonSNS: {
 			/**
-			 * A​W​S​ ​S​N​S
+			 * A​m​a​z​o​n​ ​S​N​S
 			 */
 			displayName: string
 			groups: {
@@ -32851,7 +32851,7 @@ type RootTranslation = {
 		}
 		AmazonSQS: {
 			/**
-			 * A​W​S​ ​S​Q​S
+			 * A​m​a​z​o​n​ ​S​Q​S
 			 */
 			displayName: string
 			groups: {
@@ -32869,16 +32869,16 @@ type RootTranslation = {
 			 */
 			shortDesc: string
 			/**
-			 * T​h​e​ ​A​W​S​ ​S​Q​S​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​q​u​e​u​e​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​m​e​s​s​a​g​e​ ​h​a​n​d​l​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​f​o​r​ ​A​m​a​z​o​n​ ​S​i​m​p​l​e​ ​Q​u​e​u​e​ ​S​e​r​v​i​c​e​.​ ​C​r​e​a​t​e​ ​a​n​d​ ​m​a​n​a​g​e​ ​q​u​e​u​e​s​,​ ​s​e​n​d​ ​m​e​s​s​a​g​e​s​ ​(​i​n​c​l​u​d​i​n​g​ ​J​S​O​N​)​,​ ​r​e​c​e​i​v​e​ ​m​e​s​s​a​g​e​s​ ​w​i​t​h​ ​p​o​l​l​i​n​g​ ​t​r​i​g​g​e​r​s​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​y​o​u​r​ ​m​e​s​s​a​g​e​-​d​r​i​v​e​n​ ​a​r​c​h​i​t​e​c​t​u​r​e​s​ ​w​i​t​h​ ​r​e​l​i​a​b​l​e​,​ ​s​c​a​l​a​b​l​e​ ​q​u​e​u​e​ ​o​p​e​r​a​t​i​o​n​s​.
+			 * T​h​e​ ​A​m​a​z​o​n​ ​S​Q​S​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​q​u​e​u​e​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​m​e​s​s​a​g​e​ ​h​a​n​d​l​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​f​o​r​ ​A​m​a​z​o​n​ ​S​i​m​p​l​e​ ​Q​u​e​u​e​ ​S​e​r​v​i​c​e​.​ ​C​r​e​a​t​e​ ​a​n​d​ ​m​a​n​a​g​e​ ​q​u​e​u​e​s​,​ ​s​e​n​d​ ​m​e​s​s​a​g​e​s​ ​(​i​n​c​l​u​d​i​n​g​ ​J​S​O​N​)​,​ ​r​e​c​e​i​v​e​ ​m​e​s​s​a​g​e​s​ ​w​i​t​h​ ​p​o​l​l​i​n​g​ ​t​r​i​g​g​e​r​s​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​y​o​u​r​ ​m​e​s​s​a​g​e​-​d​r​i​v​e​n​ ​a​r​c​h​i​t​e​c​t​u​r​e​s​ ​w​i​t​h​ ​r​e​l​i​a​b​l​e​,​ ​s​c​a​l​a​b​l​e​ ​q​u​e​u​e​ ​o​p​e​r​a​t​i​o​n​s​.
 			 */
 			longDesc: string
 			connectionMessage: {
 				/**
-				 * C​o​n​n​e​c​t​ ​t​o​ ​A​W​S​ ​S​Q​S
+				 * C​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​S​Q​S
 				 */
 				title: string
 				/**
-				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​A​W​S​ ​S​Q​S​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​W​S​ ​A​c​c​e​s​s​ ​K​e​y​ ​I​D​*​*​,​ ​*​*​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​*​*​,​ ​a​n​d​ ​*​*​R​e​g​i​o​n​*​*​.​
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​S​Q​S​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​W​S​ ​A​c​c​e​s​s​ ​K​e​y​ ​I​D​*​*​,​ ​*​*​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​*​*​,​ ​a​n​d​ ​*​*​R​e​g​i​o​n​*​*​.​
 			​
 			​#​#​ ​C​r​e​a​t​i​n​g​ ​A​W​S​ ​C​r​e​d​e​n​t​i​a​l​s​
 			​
@@ -85274,15 +85274,171 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * F​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​’​s​ ​d​e​t​a​i​l​s​ ​a​r​e​ ​u​p​d​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​F​r​e​s​h​d​e​s​k​ ​i​n​s​t​a​n​c​e​.​ ​F​o​r​ ​e​x​a​m​p​l​e​,​ ​c​h​a​n​g​e​s​ ​t​o​ ​n​a​m​e​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​,​ ​e​m​a​i​l​,​ ​o​r​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
+					 * F​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​'​s​ ​d​e​t​a​i​l​s​ ​a​r​e​ ​u​p​d​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​F​r​e​s​h​d​e​s​k​ ​i​n​s​t​a​n​c​e​.​ ​F​o​r​ ​e​x​a​m​p​l​e​,​ ​c​h​a​n​g​e​s​ ​t​o​ ​n​a​m​e​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​,​ ​e​m​a​i​l​,​ ​o​r​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
 					 */
 					longDesc: string
 					event_info: {
 						/**
-						 * S​t​r​u​c​t​u​r​e​ ​a​n​d​ ​t​y​p​e​s​ ​f​o​r​ ​F​r​e​s​h​d​e​s​k​’​s​ ​u​p​d​a​t​e​d​ ​c​o​n​t​a​c​t​ ​d​a​t​a​ ​p​a​y​l​o​a​d​.
+						 * S​t​r​u​c​t​u​r​e​ ​a​n​d​ ​t​y​p​e​s​ ​f​o​r​ ​F​r​e​s​h​d​e​s​k​'​s​ ​u​p​d​a​t​e​d​ ​c​o​n​t​a​c​t​ ​d​a​t​a​ ​p​a​y​l​o​a​d​.
 						 */
 						desc: string
 					}
+				}
+			}
+			expressions: {
+				'&&': {
+					/**
+					 * A​n​d
+					 */
+					displayName: string
+					/**
+					 * L​o​g​i​c​a​l​ ​A​N​D​ ​o​p​e​r​a​t​o​r
+					 */
+					shortDesc: string
+					/**
+					 * C​o​m​b​i​n​e​s​ ​m​u​l​t​i​p​l​e​ ​c​o​n​d​i​t​i​o​n​s​ ​w​h​e​r​e​ ​a​l​l​ ​m​u​s​t​ ​b​e​ ​t​r​u​e
+					 */
+					longDesc: string
+				}
+				'||': {
+					/**
+					 * O​r
+					 */
+					displayName: string
+					/**
+					 * L​o​g​i​c​a​l​ ​O​R​ ​o​p​e​r​a​t​o​r
+					 */
+					shortDesc: string
+					/**
+					 * C​o​m​b​i​n​e​s​ ​m​u​l​t​i​p​l​e​ ​c​o​n​d​i​t​i​o​n​s​ ​w​h​e​r​e​ ​a​t​ ​l​e​a​s​t​ ​o​n​e​ ​m​u​s​t​ ​b​e​ ​t​r​u​e
+					 */
+					longDesc: string
+				}
+				'==': {
+					/**
+					 * E​q​u​a​l​s
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​e​q​u​a​l​s​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'!=': {
+					/**
+					 * N​o​t​ ​E​q​u​a​l​s
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'>': {
+					/**
+					 * G​r​e​a​t​e​r​ ​T​h​a​n
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'>=': {
+					/**
+					 * G​r​e​a​t​e​r​ ​T​h​a​n​ ​o​r​ ​E​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'<': {
+					/**
+					 * L​e​s​s​ ​T​h​a​n
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'<=': {
+					/**
+					 * L​e​s​s​ ​T​h​a​n​ ​o​r​ ​E​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				contains: {
+					/**
+					 * C​o​n​t​a​i​n​s
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​u​b​s​t​r​i​n​g
+					 */
+					longDesc: string
+				}
+				'is-set': {
+					/**
+					 * I​s​ ​S​e​t
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​(​i​s​ ​n​o​t​ ​e​m​p​t​y​)
+					 */
+					longDesc: string
+				}
+				'is-not-set': {
+					/**
+					 * I​s​ ​N​o​t​ ​S​e​t
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​h​a​s​ ​n​o​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​h​a​s​ ​n​o​ ​v​a​l​u​e​ ​(​i​s​ ​e​m​p​t​y​)
+					 */
+					longDesc: string
 				}
 			}
 		}
@@ -153207,7 +153363,7 @@ export type TranslationFunctions = {
 		}
 		AmazonEC2: {
 			/**
-			 * AWS EC2
+			 * Amazon EC2
 			 */
 			displayName: () => LocalizedString
 			groups: {
@@ -153226,7 +153382,7 @@ export type TranslationFunctions = {
 			longDesc: () => LocalizedString
 			connectionMessage: {
 				/**
-				 * Connect to AWS EC2
+				 * Connect to Amazon EC2
 				 */
 				title: () => LocalizedString
 				/**
@@ -153615,7 +153771,7 @@ export type TranslationFunctions = {
 		}
 		AmazonS3: {
 			/**
-			 * AWS S3
+			 * Amazon S3
 			 */
 			displayName: () => LocalizedString
 			groups: {
@@ -153638,7 +153794,7 @@ export type TranslationFunctions = {
 			longDesc: () => LocalizedString
 			connectionMessage: {
 				/**
-				 * Connect to AWS S3
+				 * Connect to Amazon S3
 				 */
 				title: () => LocalizedString
 				/**
@@ -155975,7 +156131,7 @@ export type TranslationFunctions = {
 		}
 		AmazonSNS: {
 			/**
-			 * AWS SNS
+			 * Amazon SNS
 			 */
 			displayName: () => LocalizedString
 			groups: {
@@ -157256,7 +157412,7 @@ export type TranslationFunctions = {
 		}
 		AmazonSQS: {
 			/**
-			 * AWS SQS
+			 * Amazon SQS
 			 */
 			displayName: () => LocalizedString
 			groups: {
@@ -157274,16 +157430,16 @@ export type TranslationFunctions = {
 			 */
 			shortDesc: () => LocalizedString
 			/**
-			 * The AWS SQS integration provides comprehensive queue management and message handling capabilities for Amazon Simple Queue Service. Create and manage queues, send messages (including JSON), receive messages with polling triggers, and automate your message-driven architectures with reliable, scalable queue operations.
+			 * The Amazon SQS integration provides comprehensive queue management and message handling capabilities for Amazon Simple Queue Service. Create and manage queues, send messages (including JSON), receive messages with polling triggers, and automate your message-driven architectures with reliable, scalable queue operations.
 			 */
 			longDesc: () => LocalizedString
 			connectionMessage: {
 				/**
-				 * Connect to AWS SQS
+				 * Connect to Amazon SQS
 				 */
 				title: () => LocalizedString
 				/**
-				 * To connect to AWS SQS, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
+				 * To connect to Amazon SQS, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
 		
 			## Creating AWS Credentials
 		
@@ -209679,15 +209835,171 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Fires whenever an existing contact’s details are updated in your Freshdesk instance. For example, changes to name, phone number, email, or custom fields.
+					 * Fires whenever an existing contact's details are updated in your Freshdesk instance. For example, changes to name, phone number, email, or custom fields.
 					 */
 					longDesc: () => LocalizedString
 					event_info: {
 						/**
-						 * Structure and types for Freshdesk’s updated contact data payload.
+						 * Structure and types for Freshdesk's updated contact data payload.
 						 */
 						desc: () => LocalizedString
 					}
+				}
+			}
+			expressions: {
+				'&&': {
+					/**
+					 * And
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Logical AND operator
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Combines multiple conditions where all must be true
+					 */
+					longDesc: () => LocalizedString
+				}
+				'||': {
+					/**
+					 * Or
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Logical OR operator
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Combines multiple conditions where at least one must be true
+					 */
+					longDesc: () => LocalizedString
+				}
+				'==': {
+					/**
+					 * Equals
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field equals value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field equals the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'!=': {
+					/**
+					 * Not Equals
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field does not equal value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field does not equal the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'>': {
+					/**
+					 * Greater Than
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is greater than value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is greater than the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'>=': {
+					/**
+					 * Greater Than or Equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is greater than or equal to value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is greater than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'<': {
+					/**
+					 * Less Than
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is less than value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is less than the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'<=': {
+					/**
+					 * Less Than or Equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is less than or equal to value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is less than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				contains: {
+					/**
+					 * Contains
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field contains value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field contains the specified substring
+					 */
+					longDesc: () => LocalizedString
+				}
+				'is-set': {
+					/**
+					 * Is Set
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field has a value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field has a value (is not empty)
+					 */
+					longDesc: () => LocalizedString
+				}
+				'is-not-set': {
+					/**
+					 * Is Not Set
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field has no value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field has no value (is empty)
+					 */
+					longDesc: () => LocalizedString
 				}
 			}
 		}
