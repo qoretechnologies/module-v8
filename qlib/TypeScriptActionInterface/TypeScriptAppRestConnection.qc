@@ -382,7 +382,10 @@ public class TypeScriptAppRestConnection inherits RestConnection {
             if (*hash<AsyncCallInfo> post_auth = TypeScriptActionInterface::getPostAuthCall(appname)) {
                 try {
                     *hash<auto> new_opts = TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING, post_auth, {
-                        "conn_opts": rv.opts,
+                        "conn_name": config.name,
+                        "conn_opts": {
+                            "url": rv.url,
+                        } + rv.opts,
                     });
                     if (new_opts) {
                         rv.opts += new_opts;
@@ -403,7 +406,10 @@ public class TypeScriptAppRestConnection inherits RestConnection {
                 try {
                     *hash<auto> new_opts = TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING,
                             post_auth_code, {
-                        "conn_opts": rv.opts,
+                        "conn_name": config.name,
+                        "conn_opts": {
+                            "url": rv.url,
+                        } + rv.opts,
                     });
                     if (new_opts) {
                         rv.opts += new_opts;
