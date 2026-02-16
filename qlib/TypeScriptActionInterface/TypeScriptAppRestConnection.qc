@@ -1,7 +1,7 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 #! Qore TypeScriptActionInterface module definition
 
-/*  TypeScriptActionRestConnection.qc Copyright 2024 Qore Technologies, s.r.o.
+/*  TypeScriptActionRestConnection.qc Copyright 2024 - 2026 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -372,6 +372,62 @@ public class TypeScriptAppRestConnection inherits RestConnection {
             }
             rv.url = val;
         }
+
+        # For non-OAuth2 connections, call post-auth hooks during construction
+        # (for OAuth2 connections, these are called via checkLogin() -> getUpdateOptionsAfterLogin())
+        *string grant_type = rv.opts.oauth2_grant_type;
+        if (!grant_type.val() || grant_type == "none") {
+            string appname = config.opts.app;
+            string conn_scheme = "tsrest-" + appname.lwr() + "://";
+            if (*hash<AsyncCallInfo> post_auth = TypeScriptActionInterface::getPostAuthCall(appname)) {
+                try {
+                    *hash<auto> new_opts = TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING, post_auth, {
+                        "conn_name": config.name,
+                        "conn_opts": {
+                            "url": rv.url,
+                        } + rv.opts,
+                    });
+                    if (new_opts) {
+                        rv.opts += new_opts;
+                        if (new_opts.url.val()) {
+                            if (new_opts.url =~ /^https?:\/\//) {
+                                rv.url = regex_subst(new_opts.url, "^https?://", conn_scheme);
+                            } else {
+                                rv.url = new_opts.url;
+                            }
+                        }
+                    }
+                } catch (hash<ExceptionInfo> ex) {
+                    TSAI::error("Error executing post-auth for non-OAuth2 app %y: %s: %s",
+                        appname, ex.err, ex.desc);
+                }
+            }
+            if (*hash<AsyncCallInfo> post_auth_code = TypeScriptActionInterface::getPostAuthCodeCall(appname)) {
+                try {
+                    *hash<auto> new_opts = TypeScriptActionDataProviderBase::getAsyncValueArgs(NOTHING,
+                            post_auth_code, {
+                        "conn_name": config.name,
+                        "conn_opts": {
+                            "url": rv.url,
+                        } + rv.opts,
+                    });
+                    if (new_opts) {
+                        rv.opts += new_opts;
+                        if (new_opts.url.val()) {
+                            if (new_opts.url =~ /^https?:\/\//) {
+                                rv.url = regex_subst(new_opts.url, "^https?://", conn_scheme);
+                            } else {
+                                rv.url = new_opts.url;
+                            }
+                        }
+                    }
+                } catch (hash<ExceptionInfo> ex) {
+                    TSAI::error("Error executing post-auth-code for non-OAuth2 app %y: %s: %s",
+                        appname, ex.err, ex.desc);
+                }
+            }
+        }
+
         return rv;
     }
 }
