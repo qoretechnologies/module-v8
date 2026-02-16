@@ -175,11 +175,11 @@ const buildQueryFromExpression = (
     case '>':
       return `${field}:>${formattedValue}`;
     case '>=':
-      return `${field}:>${formattedValue}`;
+      return `${field}:>=${formattedValue}`;
     case '<':
       return `${field}:<${formattedValue}`;
     case '<=':
-      return `${field}:<${formattedValue}`;
+      return `${field}:<=${formattedValue}`;
     default:
       return null;
   }

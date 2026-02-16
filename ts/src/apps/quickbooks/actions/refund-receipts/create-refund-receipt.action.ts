@@ -78,8 +78,8 @@ const createRefundReceipt = QoreAppCreator.createLocalizedAction<typeof options>
           DetailType: 'SalesItemLineDetail',
           Amount: line.amount,
           ...(line.description && { Description: line.description }),
-          ...(line.quantity && { Qty: line.quantity }),
-          ...(line.unit_price && { UnitPrice: line.unit_price }),
+          ...(line.quantity != null && { Qty: line.quantity }),
+          ...(line.unit_price != null && { UnitPrice: line.unit_price }),
           SalesItemLineDetail: {
             ...(line.item_id && { ItemRef: { value: line.item_id } }),
             ...(line.tax_code_id && { TaxCodeRef: { value: line.tax_code_id } }),
