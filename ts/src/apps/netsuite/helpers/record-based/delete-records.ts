@@ -8,8 +8,7 @@
  */
 
 import { TQoreDeleteRecordsFunction } from '@qoretechnologies/ts-toolkit';
-import { getQoreContextRequiredValues } from '../../../../global/helpers';
-import { delay } from '../../../../global/helpers';
+import { delay, getQoreContextRequiredValues } from '../../../../global/helpers';
 import { Debugger } from '../../../../utils/Debugger';
 import { buildSuiteQlWhereClause } from './apply-where-condition';
 import {
@@ -50,6 +49,13 @@ export const deleteNetsuiteRecords: TQoreDeleteRecordsFunction = async (
 
   // Find matching records
   const whereClause = buildSuiteQlWhereClause(where);
+
+  if (!whereClause) {
+    throw new NetsuiteRecordError(
+      'WHERE condition produced an empty clause. Cannot delete without a valid filter.'
+    );
+  }
+
   const matchingIds = await findMatchingRecordIds({
     token,
     accountId: account_id,

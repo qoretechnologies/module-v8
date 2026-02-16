@@ -9,10 +9,10 @@
 
 import { TQoreUpdateRecordsFunction } from '@qoretechnologies/ts-toolkit';
 import {
+  delay,
   getQoreContextRequiredValues,
   mapColumnFormatToObject,
 } from '../../../../global/helpers';
-import { delay } from '../../../../global/helpers';
 import { Debugger } from '../../../../utils/Debugger';
 import { buildSuiteQlWhereClause } from './apply-where-condition';
 import {
@@ -47,6 +47,13 @@ export const updateNetsuiteRecords: TQoreUpdateRecordsFunction = async (
 
   // Find matching records
   const whereClause = buildSuiteQlWhereClause(where);
+
+  if (where && !whereClause) {
+    throw new NetsuiteRecordError(
+      'WHERE condition produced an empty clause. Cannot update without a valid filter.'
+    );
+  }
+
   const matchingIds = await findMatchingRecordIds({
     token,
     accountId: account_id,

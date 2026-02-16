@@ -20,7 +20,10 @@ const processExpression = (where: TQoreSearchRecordsWhereConditions): string => 
   // Handle logical operators (AND, OR)
   if (exp === '&&') {
     const clauses = args
-      .filter((a): a is TQoreSearchRecordsWhereConditions => typeof a === 'object' && 'exp' in a)
+      .filter(
+        (a): a is TQoreSearchRecordsWhereConditions =>
+          a !== null && typeof a === 'object' && 'exp' in a
+      )
       .map((a) => processExpression(a))
       .filter((c) => c.length > 0);
     return clauses.length > 0 ? `(${clauses.join(' AND ')})` : '';
@@ -28,7 +31,10 @@ const processExpression = (where: TQoreSearchRecordsWhereConditions): string => 
 
   if (exp === '||') {
     const clauses = args
-      .filter((a): a is TQoreSearchRecordsWhereConditions => typeof a === 'object' && 'exp' in a)
+      .filter(
+        (a): a is TQoreSearchRecordsWhereConditions =>
+          a !== null && typeof a === 'object' && 'exp' in a
+      )
       .map((a) => processExpression(a))
       .filter((c) => c.length > 0);
     return clauses.length > 0 ? `(${clauses.join(' OR ')})` : '';
@@ -53,8 +59,14 @@ const processExpression = (where: TQoreSearchRecordsWhereConditions): string => 
 
   switch (exp) {
     case '==':
+      if (value == null) {
+        return `${field} IS NULL`;
+      }
       return `${field} = ${escapeSqlValue(value)}`;
     case '!=':
+      if (value == null) {
+        return `${field} IS NOT NULL`;
+      }
       return `${field} != ${escapeSqlValue(value)}`;
     case '>':
       return `${field} > ${escapeSqlValue(value)}`;

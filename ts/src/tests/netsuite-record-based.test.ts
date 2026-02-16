@@ -34,8 +34,8 @@ import { Debugger, DebugLevels } from '../utils/Debugger';
 Debugger.level = DebugLevels.Verbose;
 
 configDotenv({ path: '.env' });
-// Skip tets because of absence of credentials for NetSuite API.
-describe.skip('NetSuite Record-Based', () => {
+// Skip integration tests because of the absence of credentials for NetSuite API.
+describe('NetSuite Record-Based', () => {
   // ========================================================================
   // Unit Tests — no API access required
   // ========================================================================
@@ -610,6 +610,42 @@ describe.skip('NetSuite Record-Based', () => {
       expect(buildSuiteQlWhereClause(where)).toBe("isinactive = 'F'");
     });
 
+    it('Should convert == null to IS NULL', () => {
+      const where = {
+        exp: '==',
+        args: [
+          { type_code: 'field reference', field: 'email' },
+          { type_code: 'value', value: null },
+        ],
+      } as any;
+
+      expect(buildSuiteQlWhereClause(where)).toBe('email IS NULL');
+    });
+
+    it('Should convert != null to IS NOT NULL', () => {
+      const where = {
+        exp: '!=',
+        args: [
+          { type_code: 'field reference', field: 'email' },
+          { type_code: 'value', value: null },
+        ],
+      } as any;
+
+      expect(buildSuiteQlWhereClause(where)).toBe('email IS NOT NULL');
+    });
+
+    it('Should convert == undefined to IS NULL', () => {
+      const where = {
+        exp: '==',
+        args: [
+          { type_code: 'field reference', field: 'phone' },
+          { type_code: 'value', value: undefined },
+        ],
+      } as any;
+
+      expect(buildSuiteQlWhereClause(where)).toBe('phone IS NULL');
+    });
+
     it('Should return empty string for missing field reference', () => {
       const where = {
         exp: '==',
@@ -657,7 +693,7 @@ describe.skip('NetSuite Record-Based', () => {
   // Integration Tests — require NetSuite credentials
   // ========================================================================
 
-  describe('Should test NetSuite record-based helpers (integration tests)', () => {
+  describe.skip('Should test NetSuite record-based helpers (integration tests)', () => {
     const base_context = {
       conn_opts: {
         token: '',
@@ -1105,7 +1141,7 @@ describe.skip('NetSuite Record-Based', () => {
   // CRUD Integration Tests — require NetSuite sandbox credentials
   // ========================================================================
 
-  describe('Should test NetSuite CRUD operations (integration tests)', () => {
+  describe.skip('Should test NetSuite CRUD operations (integration tests)', () => {
     const base_context = {
       conn_opts: {
         token: '',

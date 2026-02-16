@@ -10,11 +10,11 @@
 
 import { TQoreCreateRecordsFunction } from '@qoretechnologies/ts-toolkit';
 import {
+  delay,
   getQoreContextRequiredValues,
   mapColumnFormatToObject,
   mapObjectToColumnFormat,
 } from '../../../../global/helpers';
-import { delay } from '../../../../global/helpers';
 import { Debugger } from '../../../../utils/Debugger';
 import { netsuiteRecordRequest, NetsuiteRecordError, REST_OPERATION_DELAY } from './constants';
 
