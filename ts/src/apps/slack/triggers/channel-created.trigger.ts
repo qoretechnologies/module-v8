@@ -91,8 +91,10 @@ const fetchRecentChannels = async (token: string): Promise<TChannelCreatedEvent[
         creator: (channel as any).creator,
       },
     }));
-  } catch (error) {
-    throw new SlackError(`Failed to fetch channels: ${error.message || error}`);
+  } catch (error: Error | unknown) {
+    throw new SlackError(
+      `Failed to fetch channels: ${error instanceof Error ? error.message : String(error)}`
+    );
   }
 };
 

@@ -1,5 +1,4 @@
 import {
-  TQoreAppActionFunctionContext,
   TQoreAppWithActions,
   TQoreRecordBasedApp,
 } from '@qoretechnologies/ts-toolkit';
@@ -49,9 +48,7 @@ export default (locale: Locales) =>
     rest_modifiers: {
       options: ACTIVE_CAMPAIGN_CONN_OPTIONS,
       required_options: 'instance_url,token',
-      set_options_post_auth: (
-        context: Omit<TQoreAppActionFunctionContext<typeof ACTIVE_CAMPAIGN_CONN_OPTIONS>, 'opts'>
-      ) => {
+      set_options_post_auth: (context) => {
         const instance_url = context.conn_opts?.instance_url;
 
         return {

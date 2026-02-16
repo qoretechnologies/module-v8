@@ -1,6 +1,9 @@
-import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
+import {
+  IQoreAllowedValue,
+  TCustomConnOptions,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { ACTIVE_CAMPAIGN_CONN_OPTIONS } from '../constants';
 import { activeCampaignClient } from './constants';
 type ActiveCampaignItem = {
   id: string;
@@ -25,7 +28,7 @@ const mapActiveCampaignItemToAllowedValue = (
 };
 
 export const getActiveCampaignContactAllowedValues: TQoreGetAllowedValuesFunction<
-  typeof ACTIVE_CAMPAIGN_CONN_OPTIONS,
+  TCustomConnOptions,
   string
 > = async (context) => {
   const { token, instance_url } = getQoreContextRequiredValues({

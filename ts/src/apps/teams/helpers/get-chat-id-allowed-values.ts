@@ -33,12 +33,12 @@ export const getTeamsChatIdAllowedValues: TQoreGetAllowedValuesFunction<
 
     while (response.value.length > 0) {
       for (const chat of response.value as Chat[]) {
-        const members = chat.members || [];
+        const members = (chat.members || []) as (ConversationMember & { userId: string })[];
         let memberNames = '';
 
         if (members.length > 0) {
           const visibleMembers = members
-            .filter((member: ConversationMember & { userId: string }) => member.userId !== myId)
+            .filter((member) => (member.userId || member.id) !== myId)
             .slice(0, 3)
             .map((m) => m.displayName || 'Unknown');
           memberNames = visibleMembers.join(', ');

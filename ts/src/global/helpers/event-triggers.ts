@@ -46,7 +46,7 @@ export const delayOrCancel = (ms: number, shouldStop: () => boolean): Promise<vo
  */
 export const pollCreatedItemsForTrigger = async <ItemType extends Record<string, any>>(opts: {
   trigger_name: string;
-  uniqueField: keyof ItemType;
+  uniqueField: string;
   getItems: () => Promise<ItemType[]>;
   updateLastPollTime?: (lastPoll: Date) => void;
   update: (data: ItemType) => void;
@@ -56,16 +56,17 @@ export const pollCreatedItemsForTrigger = async <ItemType extends Record<string,
 
   try {
     const initialItems = await getItems();
-    let processedItems = new Set(initialItems.map((item) => item[uniqueField]));
+    let processedItems = new Set(initialItems.map((item) => get(item, uniqueField)));
 
     while (!should_stop()) {
       const latestItems = await getItems();
       latestItems.reverse();
 
       for (const item of latestItems) {
-        if (!processedItems.has(item[uniqueField])) {
+        const value = get(item, uniqueField);
+        if (!processedItems.has(value)) {
           update(item);
-          processedItems.add(item[uniqueField]);
+          processedItems.add(value);
         }
       }
 
@@ -103,8 +104,8 @@ export const pollCreatedItemsForTrigger = async <ItemType extends Record<string,
  */
 export const pollUpdatedItemsForTrigger = async <ItemType extends Record<string, any>>(opts: {
   trigger_name: string;
-  uniqueField: keyof ItemType;
-  updatedDateField: keyof ItemType;
+  uniqueField: string;
+  updatedDateField: string;
   getItems: () => Promise<ItemType[]>;
   update: (data: ItemType) => void;
   should_stop: () => boolean;
@@ -118,7 +119,7 @@ export const pollUpdatedItemsForTrigger = async <ItemType extends Record<string,
 
     for (const item of initialItems) {
       const initialTime = new Date(get(item, updatedDateField)).getTime();
-      lastSeenEdits.set(item[uniqueField], initialTime);
+      lastSeenEdits.set(get(item, uniqueField), initialTime);
     }
 
     while (!should_stop()) {
@@ -126,11 +127,12 @@ export const pollUpdatedItemsForTrigger = async <ItemType extends Record<string,
       latestItems.reverse();
 
       for (const item of latestItems) {
-        const previousEditTime = lastSeenEdits.get(item[uniqueField]);
+        const itemKey = get(item, uniqueField);
+        const previousEditTime = lastSeenEdits.get(itemKey);
         const newEditTime = new Date(get(item, updatedDateField)).getTime();
         if (!previousEditTime || newEditTime > previousEditTime) {
           update(item);
-          lastSeenEdits.set(item[uniqueField], newEditTime);
+          lastSeenEdits.set(itemKey, newEditTime);
         }
       }
 

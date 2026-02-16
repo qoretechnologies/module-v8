@@ -6,7 +6,10 @@
  * Copyright 2026 Qore Technologies, s.r.o.
  */
 
-import { TQoreSearchRecordsWhereConditions } from '@qoretechnologies/ts-toolkit';
+import {
+  isQoreRecordSearchExpression,
+  TQoreSearchRecordsWhereConditions,
+} from '@qoretechnologies/ts-toolkit';
 
 /**
  * Map Qore field names to Shopify query field names
@@ -28,7 +31,9 @@ const FIELD_MAPPING: Record<string, string> = {
 /**
  * Convert a Qore WHERE condition to a Shopify GraphQL query string
  */
-export const convertWhereToShopifyQuery = (where: TQoreSearchRecordsWhereConditions | undefined): string => {
+export const convertWhereToShopifyQuery = (
+  where: TQoreSearchRecordsWhereConditions | undefined
+): string => {
   if (!where) {
     return '';
   }
@@ -49,14 +54,16 @@ const processCondition = (condition: TQoreSearchRecordsWhereConditions): string 
   // Logical operators
   if (exp === '&&') {
     const parts = args
-      .map((arg: TQoreSearchRecordsWhereConditions) => processCondition(arg))
+      .filter(isQoreRecordSearchExpression)
+      .map((arg) => processCondition(arg))
       .filter(Boolean);
     return parts.length > 0 ? parts.join(' AND ') : '';
   }
 
   if (exp === '||') {
     const parts = args
-      .map((arg: TQoreSearchRecordsWhereConditions) => processCondition(arg))
+      .filter(isQoreRecordSearchExpression)
+      .map((arg) => processCondition(arg))
       .filter(Boolean);
     return parts.length > 0 ? `(${parts.join(' OR ')})` : '';
   }
@@ -192,7 +199,10 @@ export const filterRecordsClientSide = (
 /**
  * Evaluate a condition against a single record
  */
-const evaluateCondition = (record: Record<string, unknown>, condition: TQoreSearchRecordsWhereConditions): boolean => {
+const evaluateCondition = (
+  record: Record<string, unknown>,
+  condition: TQoreSearchRecordsWhereConditions
+): boolean => {
   const { exp, args } = condition;
 
   if (!exp || !args) {
@@ -201,11 +211,11 @@ const evaluateCondition = (record: Record<string, unknown>, condition: TQoreSear
 
   // Logical operators
   if (exp === '&&') {
-    return args.every((arg: TQoreSearchRecordsWhereConditions) => evaluateCondition(record, arg));
+    return args.filter(isQoreRecordSearchExpression).every((arg) => evaluateCondition(record, arg));
   }
 
   if (exp === '||') {
-    return args.some((arg: TQoreSearchRecordsWhereConditions) => evaluateCondition(record, arg));
+    return args.filter(isQoreRecordSearchExpression).some((arg) => evaluateCondition(record, arg));
   }
 
   // Comparison operators
@@ -227,7 +237,11 @@ const evaluateCondition = (record: Record<string, unknown>, condition: TQoreSear
 /**
  * Evaluate a comparison between field value and compare value
  */
-const evaluateComparison = (operator: string, fieldValue: unknown, compareValue: unknown): boolean => {
+const evaluateComparison = (
+  operator: string,
+  fieldValue: unknown,
+  compareValue: unknown
+): boolean => {
   switch (operator) {
     case '==':
       return fieldValue === compareValue;
@@ -236,16 +250,32 @@ const evaluateComparison = (operator: string, fieldValue: unknown, compareValue:
       return fieldValue !== compareValue;
 
     case '>':
-      return typeof fieldValue === 'number' && typeof compareValue === 'number' && fieldValue > compareValue;
+      return (
+        typeof fieldValue === 'number' &&
+        typeof compareValue === 'number' &&
+        fieldValue > compareValue
+      );
 
     case '>=':
-      return typeof fieldValue === 'number' && typeof compareValue === 'number' && fieldValue >= compareValue;
+      return (
+        typeof fieldValue === 'number' &&
+        typeof compareValue === 'number' &&
+        fieldValue >= compareValue
+      );
 
     case '<':
-      return typeof fieldValue === 'number' && typeof compareValue === 'number' && fieldValue < compareValue;
+      return (
+        typeof fieldValue === 'number' &&
+        typeof compareValue === 'number' &&
+        fieldValue < compareValue
+      );
 
     case '<=':
-      return typeof fieldValue === 'number' && typeof compareValue === 'number' && fieldValue <= compareValue;
+      return (
+        typeof fieldValue === 'number' &&
+        typeof compareValue === 'number' &&
+        fieldValue <= compareValue
+      );
 
     case 'contains':
       return (
