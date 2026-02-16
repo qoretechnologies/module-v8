@@ -557,7 +557,7 @@ describe('Freshdesk', () => {
   // INTEGRATION TESTS — require FRESHDESK_SUBDOMAIN + FRESHDESK_API_KEY
   // ────────────────────────────────────────────────────
 
-  describe('Record-based helpers (integration)', () => {
+  describe.skip('Record-based helpers (integration)', () => {
     const baseContext = {
       conn_opts: {
         token: '',
