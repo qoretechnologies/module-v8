@@ -1,12 +1,12 @@
 import {
   IQoreAllowedValue,
-  QorusRequest,
   TQoreAppActionFunctionContext,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
+import { Debugger } from '../../../utils/Debugger';
+import { freshdeskClient } from '../client';
 import { FRESHDESK_CONN_OPTIONS } from '../conn-options';
 import { fetchFreshdeskAllowedValues } from './constants';
-import { Debugger } from '../../../utils/Debugger';
 
 type TFreshdeskTicket = {
   id: number;
@@ -27,22 +27,19 @@ export const getTicketFields = async (
   token: string,
   subdomain: string
 ): Promise<{ id: number; name: string }[]> => {
-  const ticketFieldsResponse = await QorusRequest.get<{ data: { id: number; name: string }[] }>(
+  const data = await freshdeskClient.get<{ id: number; name: string }[]>(
+    '/api/v2/admin/ticket_fields',
     {
-      path: '/api/v2/admin/ticket_fields',
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    },
-    {
-      url: `https://${subdomain}.freshdesk.com`,
-      endpointId: 'Freshdesk',
+      token,
+      connectionOptions: { subdomain },
     }
   );
 
-  if (!ticketFieldsResponse?.data) throw new Error('Failed to get freshdesk ticket fields');
+  if (!data) {
+    throw new Error('Failed to get freshdesk ticket fields');
+  }
 
-  return ticketFieldsResponse.data;
+  return data;
 };
 
 export const getFreshdeskTicketField = async (
@@ -51,23 +48,20 @@ export const getFreshdeskTicketField = async (
   subdomain: string
 ): Promise<TFreshdeskTicketField> => {
   try {
-    const ticketFieldResponse = await QorusRequest.get<{ data: TFreshdeskTicketField }>(
+    const data = await freshdeskClient.get<TFreshdeskTicketField>(
+      `/api/v2/admin/ticket_fields/${fieldId}`,
       {
-        path: `/api/v2/admin/ticket_fields/${fieldId}`,
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      },
-      {
-        url: `https://${subdomain}.freshdesk.com`,
-        endpointId: 'Freshdesk',
+        token,
+        connectionOptions: { subdomain },
       }
     );
 
-    if (!ticketFieldResponse?.data) throw new Error('Failed to get freshdesk ticket field');
+    if (!data) {
+      throw new Error('Failed to get freshdesk ticket field');
+    }
 
-    return ticketFieldResponse.data;
-  } catch (error) {
+    return data;
+  } catch {
     throw new Error('Failed to get freshdesk ticket field');
   }
 };
@@ -153,13 +147,13 @@ async function getFreshdeskFieldAllowedValues(
     if (!field.choices) throw new Error(`Failed to get ${fieldName} field choices`);
 
     return field.choices.map(
-      (choice): IQoreAllowedValue<number> => ({
+      (choice): IQoreAllowedValue => ({
         value: choice.id,
         display_name: choice.label,
       })
     );
   } catch (error) {
-    Debugger.log(error);
+    Debugger.log(String(error));
 
     return defaultValues;
   }
@@ -167,18 +161,18 @@ async function getFreshdeskFieldAllowedValues(
 
 export const getFreshdeskTicketStatusAllowedValues: TQoreGetAllowedValuesFunction<
   typeof FRESHDESK_CONN_OPTIONS
-> = async (context: TQoreAppActionFunctionContext<typeof FRESHDESK_CONN_OPTIONS>) =>
-  await getFreshdeskFieldAllowedValues('status', context, FreshdeskTicketStatusAllowedValues);
+> = async (context?) =>
+  await getFreshdeskFieldAllowedValues('status', context!, FreshdeskTicketStatusAllowedValues);
 
 export const getFreshdeskTicketPriorityAllowedValues: TQoreGetAllowedValuesFunction<
   typeof FRESHDESK_CONN_OPTIONS
-> = async (context: TQoreAppActionFunctionContext<typeof FRESHDESK_CONN_OPTIONS>) =>
-  await getFreshdeskFieldAllowedValues('priority', context, FreshdeskTicketPriorityAllowedValues);
+> = async (context?) =>
+  await getFreshdeskFieldAllowedValues('priority', context!, FreshdeskTicketPriorityAllowedValues);
 
 export const getFreshdeskTicketSourceAllowedValues: TQoreGetAllowedValuesFunction<
   typeof FRESHDESK_CONN_OPTIONS
-> = async (context: TQoreAppActionFunctionContext<typeof FRESHDESK_CONN_OPTIONS>) =>
-  await getFreshdeskFieldAllowedValues('source', context, FreshdeskTicketSourceAllowedValues);
+> = async (context?) =>
+  await getFreshdeskFieldAllowedValues('source', context!, FreshdeskTicketSourceAllowedValues);
 
 export const FreshdeskTicketStatusAllowedValues = [
   {

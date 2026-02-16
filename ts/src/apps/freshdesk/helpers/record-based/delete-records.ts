@@ -10,6 +10,7 @@
 import { TQoreDeleteRecordsFunction } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { Debugger } from '../../../../utils/Debugger';
+import { freshdeskClient } from '../../client';
 import { buildFreshdeskWhere } from './apply-where-condition';
 import {
   ENTITY_CONFIG,
@@ -17,8 +18,6 @@ import {
   MAX_PAGE_SIZE,
   MAX_SEARCH_PAGES,
   SEARCH_PAGE_SIZE,
-  freshdeskDelete,
-  freshdeskGet,
   resolveEntity,
 } from './constants';
 
@@ -33,6 +32,7 @@ const findMatchingRecordIds = async (
 ): Promise<number[]> => {
   const config = ENTITY_CONFIG[entity as keyof typeof ENTITY_CONFIG];
   const ids: number[] = [];
+  const connOpts = { connectionOptions: { subdomain } };
 
   const { query, clientFilter } = buildFreshdeskWhere(
     where as import('@qoretechnologies/ts-toolkit').TQoreSearchRecordsWhereConditions
@@ -40,12 +40,16 @@ const findMatchingRecordIds = async (
 
   if (query) {
     for (let page = 1; page <= MAX_SEARCH_PAGES; page++) {
-      const response = await freshdeskGet<{
+      const response = await freshdeskClient.get<{
         total: number;
         results: Array<{ id: number } & Record<string, unknown>>;
-      }>(config.searchPath, token, subdomain, {
-        query: `"${query}"`,
-        page: String(page),
+      }>(config.searchPath, {
+        token,
+        ...connOpts,
+        params: {
+          query: `"${query}"`,
+          page: String(page),
+        },
       });
 
       const items = response?.results || [];
@@ -66,12 +70,13 @@ const findMatchingRecordIds = async (
     }
   } else if (clientFilter) {
     for (let page = 1; ; page++) {
-      const response = await freshdeskGet<Array<{ id: number } & Record<string, unknown>>>(
-        config.listPath,
+      const response = await freshdeskClient.get<
+        Array<{ id: number } & Record<string, unknown>>
+      >(config.listPath, {
         token,
-        subdomain,
-        { per_page: String(MAX_PAGE_SIZE), page: String(page) }
-      );
+        ...connOpts,
+        params: { per_page: String(MAX_PAGE_SIZE), page: String(page) },
+      });
 
       const items = response || [];
 
@@ -126,7 +131,10 @@ export const deleteFreshdeskRecords: TQoreDeleteRecordsFunction = async (
     let deletedCount = 0;
     for (const id of matchingIds) {
       try {
-        await freshdeskDelete(`${config.singlePath}/${id}`, token, subdomain);
+        await freshdeskClient.delete(`${config.singlePath}/${id}`, {
+          token,
+          connectionOptions: { subdomain },
+        });
         deletedCount++;
       } catch (error) {
         Debugger.log(`Failed to delete ${entity} ${id}: ${error}`);

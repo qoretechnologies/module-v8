@@ -12,6 +12,7 @@ import {
   TQoreSearchRecordsIterator,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, mapObjectToColumnFormat } from '../../../../global/helpers';
+import { freshdeskClient } from '../../client';
 import { buildFreshdeskWhere } from './apply-where-condition';
 import {
   ENTITY_CONFIG,
@@ -19,7 +20,6 @@ import {
   MAX_PAGE_SIZE,
   MAX_SEARCH_PAGES,
   SEARCH_PAGE_SIZE,
-  freshdeskGet,
   resolveEntity,
   transformEntityToRecord,
 } from './constants';
@@ -39,6 +39,7 @@ export const searchFreshdeskRecords: TQoreSearchRecordsFunction = async (ctx, wh
   const entity = resolveEntity(tablePath);
   const limit = (opts?.limit as number) || MAX_PAGE_SIZE;
   const config = ENTITY_CONFIG[entity];
+  const connOpts = { connectionOptions: { subdomain } };
 
   try {
     // Build WHERE condition if provided
@@ -68,15 +69,17 @@ export const searchFreshdeskRecords: TQoreSearchRecordsFunction = async (ctx, wh
             return null;
           }
 
-          const response = await freshdeskGet<{ total: number; results: Record<string, unknown>[] }>(
-            config.searchPath,
+          const response = await freshdeskClient.get<{
+            total: number;
+            results: Record<string, unknown>[];
+          }>(config.searchPath, {
             token,
-            subdomain,
-            {
+            ...connOpts,
+            params: {
               query: `"${serverQuery}"`,
               page: String(currentPage),
-            }
-          );
+            },
+          });
 
           items = response?.results || [];
 
@@ -98,11 +101,13 @@ export const searchFreshdeskRecords: TQoreSearchRecordsFunction = async (ctx, wh
             params.order_type = orderBy.direction === 'desc' ? 'desc' : 'asc';
           }
 
-          const response = await freshdeskGet<Record<string, unknown>[]>(
+          const response = await freshdeskClient.get<Record<string, unknown>[]>(
             config.listPath,
-            token,
-            subdomain,
-            params
+            {
+              token,
+              ...connOpts,
+              params,
+            }
           );
 
           items = response || [];

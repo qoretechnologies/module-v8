@@ -7,7 +7,8 @@ import {
 } from '@qoretechnologies/ts-toolkit';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
-import { FRESHDESK_ACTIONS, FRESHDESK_APP_NAME, FRESHDESK_CONN_OPTIONS } from './constants';
+import { FRESHDESK_ACTIONS } from './allowed-paths';
+import { FRESHDESK_APP_NAME, FRESHDESK_CONN_OPTIONS } from './constants';
 import { createFreshdeskRecords } from './helpers/record-based/create-records';
 import { deleteFreshdeskRecords } from './helpers/record-based/delete-records';
 import { getFreshdeskExpressions } from './helpers/record-based/get-expressions';
@@ -59,11 +60,18 @@ export default (locale: Locales) =>
       set_options_post_auth: (
         context: Omit<TQoreAppActionFunctionContext<typeof FRESHDESK_CONN_OPTIONS>, 'opts'>
       ): TQoreMappedOptions<typeof FRESHDESK_CONN_OPTIONS> => {
-        const subdomain = context.conn_opts?.subdomain;
+        let subdomain = context.conn_opts?.subdomain;
         const apiKey = context.conn_opts?.apiKey;
 
         if (!subdomain || !apiKey) {
           throw new Error('Subdomain and API Key are required');
+        }
+
+        // Normalize subdomain in case user inputs the full URL instead of just the subdomain
+        subdomain = subdomain.trim().replace(/\/+$/, '').replace(/^https?:\/\//, '');
+
+        if (subdomain.endsWith('.freshdesk.com')) {
+          subdomain = subdomain.replace('.freshdesk.com', '');
         }
 
         return {

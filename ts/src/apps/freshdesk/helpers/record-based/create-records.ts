@@ -13,10 +13,10 @@ import {
   mapColumnFormatToObject,
   mapObjectToColumnFormat,
 } from '../../../../global/helpers';
+import { freshdeskClient } from '../../client';
 import {
   ENTITY_CONFIG,
   FreshdeskRecordError,
-  freshdeskPost,
   resolveEntity,
   transformEntityToRecord,
   transformRecordToPayload,
@@ -47,11 +47,13 @@ export const createFreshdeskRecords: TQoreCreateRecordsFunction = async (
     for (const record of recordsArray) {
       const payload = transformRecordToPayload(record, entity);
 
-      const created = await freshdeskPost<Record<string, unknown>>(
+      const created = await freshdeskClient.post<Record<string, unknown>>(
         config.listPath,
         payload,
-        token,
-        subdomain
+        {
+          token,
+          connectionOptions: { subdomain },
+        }
       );
 
       if (created) {

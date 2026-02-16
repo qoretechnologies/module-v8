@@ -9,8 +9,9 @@
  * Copyright 2026 Qore Technologies, s.r.o.
  */
 
-import { QorusRequest, TQoreType } from '@qoretechnologies/ts-toolkit';
+import { TQoreType } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../../utils/Debugger';
+import { freshdeskClient } from '../../client';
 
 /**
  * Custom error class for Freshdesk record-based operations
@@ -226,18 +227,10 @@ export const getCustomFields = async (
   const fieldsMap = new Map<string, TFreshdeskCustomField>();
 
   try {
-    const response = await QorusRequest.get<{ data: TFreshdeskCustomField[] }>(
-      {
-        path: config.fieldsPath,
-        headers: { Authorization: `Bearer ${token}` },
-      },
-      {
-        url: `https://${subdomain}.freshdesk.com`,
-        endpointId: 'Freshdesk',
-      }
-    );
-
-    const fields = response?.data;
+    const fields = await freshdeskClient.get<TFreshdeskCustomField[]>(config.fieldsPath, {
+      token,
+      connectionOptions: { subdomain },
+    });
 
     if (Array.isArray(fields)) {
       for (const field of fields) {
@@ -395,100 +388,3 @@ export const normalizeSetToSingleRecord = (
   return {};
 };
 
-/**
- * Make a GET request to the Freshdesk API
- */
-export const freshdeskGet = async <T = unknown>(
-  path: string,
-  token: string,
-  subdomain: string,
-  params?: Record<string, string>
-): Promise<T | undefined> => {
-  const response = await QorusRequest.get<{ data: T }>(
-    {
-      path,
-      params,
-      headers: { Authorization: `Bearer ${token}` },
-    },
-    {
-      url: `https://${subdomain}.freshdesk.com`,
-      endpointId: 'Freshdesk',
-    }
-  );
-
-  return response?.data as T | undefined;
-};
-
-/**
- * Make a POST request to the Freshdesk API
- */
-export const freshdeskPost = async <T = unknown>(
-  path: string,
-  data: Record<string, unknown>,
-  token: string,
-  subdomain: string
-): Promise<T | undefined> => {
-  const response = await QorusRequest.post<{ data: T }>(
-    {
-      path,
-      data,
-      headers: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json',
-      },
-    },
-    {
-      url: `https://${subdomain}.freshdesk.com`,
-      endpointId: 'Freshdesk',
-    }
-  );
-
-  return response?.data as T | undefined;
-};
-
-/**
- * Make a PUT request to the Freshdesk API
- */
-export const freshdeskPut = async <T = unknown>(
-  path: string,
-  data: Record<string, unknown>,
-  token: string,
-  subdomain: string
-): Promise<T | undefined> => {
-  const response = await QorusRequest.put<{ data: T }>(
-    {
-      path,
-      data,
-      headers: {
-        Authorization: `Bearer ${token}`,
-        'Content-Type': 'application/json',
-      },
-    },
-    {
-      url: `https://${subdomain}.freshdesk.com`,
-      endpointId: 'Freshdesk',
-    }
-  );
-
-  return response?.data as T | undefined;
-};
-
-/**
- * Make a DELETE request to the Freshdesk API
- */
-export const freshdeskDelete = async (
-  path: string,
-  token: string,
-  subdomain: string
-): Promise<void> => {
-  await QorusRequest.deleteReq(
-    {
-      path,
-      headers: { Authorization: `Bearer ${token}` },
-    },
-    {
-      url: `https://${subdomain}.freshdesk.com`,
-      endpointId: 'Freshdesk',
-    }
-  );
-};

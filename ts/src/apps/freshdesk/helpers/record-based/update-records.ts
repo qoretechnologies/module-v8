@@ -10,6 +10,7 @@
 import { TQoreUpdateRecordsFunction } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, mapColumnFormatToObject } from '../../../../global/helpers';
 import { Debugger } from '../../../../utils/Debugger';
+import { freshdeskClient } from '../../client';
 import { buildFreshdeskWhere } from './apply-where-condition';
 import {
   ENTITY_CONFIG,
@@ -17,8 +18,6 @@ import {
   MAX_PAGE_SIZE,
   MAX_SEARCH_PAGES,
   SEARCH_PAGE_SIZE,
-  freshdeskGet,
-  freshdeskPut,
   normalizeSetToSingleRecord,
   resolveEntity,
   transformRecordToPayload,
@@ -35,6 +34,7 @@ const findMatchingRecordIds = async (
 ): Promise<number[]> => {
   const config = ENTITY_CONFIG[entity as keyof typeof ENTITY_CONFIG];
   const ids: number[] = [];
+  const connOpts = { connectionOptions: { subdomain } };
 
   if (where) {
     const { query, clientFilter } = buildFreshdeskWhere(
@@ -44,12 +44,16 @@ const findMatchingRecordIds = async (
     if (query) {
       // Use search endpoint
       for (let page = 1; page <= MAX_SEARCH_PAGES; page++) {
-        const response = await freshdeskGet<{
+        const response = await freshdeskClient.get<{
           total: number;
           results: Array<{ id: number } & Record<string, unknown>>;
-        }>(config.searchPath, token, subdomain, {
-          query: `"${query}"`,
-          page: String(page),
+        }>(config.searchPath, {
+          token,
+          ...connOpts,
+          params: {
+            query: `"${query}"`,
+            page: String(page),
+          },
         });
 
         const items = response?.results || [];
@@ -71,12 +75,13 @@ const findMatchingRecordIds = async (
     } else if (clientFilter) {
       // No server query, fetch all and filter client-side
       for (let page = 1; ; page++) {
-        const response = await freshdeskGet<Array<{ id: number } & Record<string, unknown>>>(
-          config.listPath,
+        const response = await freshdeskClient.get<
+          Array<{ id: number } & Record<string, unknown>>
+        >(config.listPath, {
           token,
-          subdomain,
-          { per_page: String(MAX_PAGE_SIZE), page: String(page) }
-        );
+          ...connOpts,
+          params: { per_page: String(MAX_PAGE_SIZE), page: String(page) },
+        });
 
         const items = response || [];
 
@@ -125,7 +130,10 @@ export const updateFreshdeskRecords: TQoreUpdateRecordsFunction = async (
     }
 
     // Normalize set data
-    const updateData = normalizeSetToSingleRecord(set, mapColumnFormatToObject);
+    const updateData = normalizeSetToSingleRecord(
+      set,
+      mapColumnFormatToObject as (data: Record<string, unknown>) => Record<string, unknown>[]
+    );
     const payload = transformRecordToPayload(updateData, entity);
 
     if (Object.keys(payload).length === 0) {
@@ -136,7 +144,10 @@ export const updateFreshdeskRecords: TQoreUpdateRecordsFunction = async (
     let updatedCount = 0;
     for (const id of matchingIds) {
       try {
-        await freshdeskPut(`${config.singlePath}/${id}`, payload, token, subdomain);
+        await freshdeskClient.put(`${config.singlePath}/${id}`, payload, {
+          token,
+          connectionOptions: { subdomain },
+        });
         updatedCount++;
       } catch (error) {
         Debugger.log(`Failed to update ${entity} ${id}: ${error}`);
