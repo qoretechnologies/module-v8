@@ -42,42 +42,74 @@ export const searchNetsuiteRecords: TQoreSearchRecordsFunction = async (ctx, whe
     orderByClause = ` ORDER BY ${safeField} ${direction}`;
   }
 
-  const limit = (opts?.limit as number) || 100000;
-  let offset = 0;
-  let hasMore = true;
+  const totalLimit = (opts?.limit as number) || 100000;
   let totalFetched = 0;
+  let exhausted = false;
+
+  // Internal buffer: SuiteQL requires offset % limit == 0, so we fetch in
+  // fixed-size pages and serve from the buffer to honour variable blockSize.
+  let buffer: Record<string, unknown>[] = [];
+  let suiteQlOffset = 0;
+  let suiteQlPageSize = 0; // set on first call
 
   const baseQuery = `SELECT * FROM ${safeRecordType}${
     whereClause ? ` WHERE ${whereClause}` : ''
   }${orderByClause}`;
 
+  const fillBuffer = async (minPageSize: number): Promise<void> => {
+    if (exhausted) {
+      return;
+    }
+
+    // Set page size on first fetch and keep it constant so offset stays aligned
+    if (suiteQlPageSize === 0) {
+      suiteQlPageSize = Math.min(minPageSize, MAX_PAGE_SIZE);
+    }
+
+    const result = await fetchSuiteQlData({
+      accountId: account_id,
+      token,
+      q: baseQuery,
+      limit: suiteQlPageSize,
+      offset: suiteQlOffset,
+    });
+
+    if (!result.items || result.items.length === 0) {
+      exhausted = true;
+      return;
+    }
+
+    buffer.push(...(result.items as Record<string, unknown>[]));
+    suiteQlOffset += result.items.length;
+
+    if (!result.hasMore) {
+      exhausted = true;
+    }
+  };
+
   const get_records: TQoreSearchRecordsIterator = async (_ctx, blockSize) => {
-    if (!hasMore || totalFetched >= limit) {
+    if (totalFetched >= totalLimit) {
       return null;
     }
 
-    const currentPageSize = Math.min(blockSize, MAX_PAGE_SIZE, limit - totalFetched);
+    const remaining = totalLimit - totalFetched;
+    const needed = Math.min(blockSize, remaining);
 
     try {
-      const result = await fetchSuiteQlData({
-        accountId: account_id,
-        token,
-        q: baseQuery,
-        limit: currentPageSize,
-        offset,
-      });
+      // Fill buffer until we have enough items or data is exhausted
+      while (buffer.length < needed && !exhausted) {
+        await fillBuffer(needed);
+      }
 
-      if (!result.items || result.items.length === 0) {
-        hasMore = false;
+      if (buffer.length === 0) {
         return null;
       }
 
-      totalFetched += result.items.length;
-      offset += result.items.length;
-      hasMore = result.hasMore && totalFetched < limit;
+      // Take the requested number of items from the buffer
+      const batch = buffer.splice(0, needed);
+      totalFetched += batch.length;
 
-      const records = result.items as Record<string, unknown>[];
-      return mapObjectToColumnFormat(records);
+      return mapObjectToColumnFormat(batch);
     } catch (error) {
       if (error instanceof NetsuiteRecordError) {
         throw error;
