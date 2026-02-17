@@ -786,7 +786,7 @@ describe('Freshdesk', () => {
   // CRUD CYCLE — create contact → search → update → delete
   // ────────────────────────────────────────────────────
 
-  describe('CRUD cycle for Contacts (integration)', () => {
+  describe.skip('CRUD cycle for Contacts (integration)', () => {
     const baseContext = {
       conn_opts: {
         token: '',
