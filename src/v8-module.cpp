@@ -22,6 +22,7 @@
 #include "v8-module.h"
 
 #include "QC_JavaScriptProgram.h"
+#include "QC_TypeScriptProgram.h"
 #include "QC_JavaScriptObject.h"
 #include "QC_JavaScriptPromise.h"
 #include "QoreV8Program.h"
@@ -111,6 +112,7 @@ static QoreStringNode* v8_module_init_intern(bool repeat) {
         V8NS = new QoreNamespace("V8");
         preinitJavaScriptObjectClass();
         V8NS->addSystemClass(initJavaScriptProgramClass(*V8NS));
+        V8NS->addSystemClass(initTypeScriptProgramClass(*V8NS));
         V8NS->addSystemClass(initJavaScriptObjectClass(*V8NS));
         V8NS->addSystemClass(initJavaScriptPromiseClass(*V8NS));
     }

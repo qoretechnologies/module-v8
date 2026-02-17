@@ -4,7 +4,7 @@
 
     Qore Programming Language
 
-    Copyright (C) 2024 Qore Technologies, s.r.o.
+    Copyright (C) 2024 - 2026 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -37,8 +37,18 @@
 
 #include <set>
 #include <map>
+#include <vector>
+#include <string>
 #include <memory>
 #include <optional>
+
+// Forward declarations for tracking wrapper data
+struct QoreV8NamespaceData;
+struct QoreV8ObjectRef;
+struct QoreV8ClassData;
+struct QoreV8MethodData;
+struct QoreV8FunctionData;
+struct QoreV8MemberHandlerData;
 
 class QoreV8Program : public AbstractQoreProgramExternalData {
     friend class QoreV8ProgramHelper;
@@ -46,6 +56,9 @@ class QoreV8Program : public AbstractQoreProgramExternalData {
     friend class QoreV8Object;
 public:
     DLLLOCAL QoreV8Program(const QoreString& source_code, const QoreString& source_label, ExceptionSink* xsink);
+
+    DLLLOCAL QoreV8Program(const QoreString& source_code, const QoreString& source_label,
+        bool transpile_ts, ExceptionSink* xsink);
 
     DLLLOCAL QoreV8Program(const QoreV8Program& old, QoreProgram* qpgm);
 
@@ -147,6 +160,32 @@ public:
 
     DLLLOCAL int saveQoreReference(const QoreValue& rv, ExceptionSink& xsink);
 
+    //! Calls a Qore function by fully-qualified name
+    DLLLOCAL QoreValue callFunction(const char* name, const QoreListNode* args, ExceptionSink* xsink);
+
+    //! Returns a cached class template for the given class, or an empty handle if not cached
+    DLLLOCAL v8::Local<v8::FunctionTemplate> getClassTemplate(const QoreClass& cls);
+
+    //! Caches a class template for the given class
+    DLLLOCAL void cacheClassTemplate(const QoreClass& cls, v8::Isolate* isolate,
+        v8::Local<v8::FunctionTemplate> tmpl);
+
+    //! Track a namespace data object for cleanup on program destruction
+    DLLLOCAL void trackNamespaceData(QoreV8NamespaceData* d) { nsDataRefs.insert(d); }
+    //! Untrack a namespace data object (called from weak callback when GC'd normally)
+    DLLLOCAL void untrackNamespaceData(QoreV8NamespaceData* d) { nsDataRefs.erase(d); }
+
+    //! Track an object reference for cleanup on program destruction
+    DLLLOCAL void trackObjectRef(QoreV8ObjectRef* r) { objectRefs.insert(r); }
+    //! Untrack an object reference (called from weak callback when GC'd normally)
+    DLLLOCAL void untrackObjectRef(QoreV8ObjectRef* r) { objectRefs.erase(r); }
+
+    //! Track callback data objects for cleanup on program destruction
+    DLLLOCAL void trackClassData(QoreV8ClassData* d) { classDataRefs.push_back(d); }
+    DLLLOCAL void trackMethodData(QoreV8MethodData* d) { methodDataRefs.push_back(d); }
+    DLLLOCAL void trackFunctionData(QoreV8FunctionData* d) { funcDataRefs.push_back(d); }
+    DLLLOCAL void trackMemberHandlerData(QoreV8MemberHandlerData* d) { memberHandlerDataRefs.push_back(d); }
+
 protected:
     std::unique_ptr<node::CommonEnvironmentSetup> setup;
     v8::Isolate* isolate = nullptr;
@@ -166,10 +205,27 @@ protected:
     // call reference for saving Qore references
     mutable ReferenceHolder<ResolvedCallReferenceNode> save_ref_callback;
 
+    //! Cache of V8 FunctionTemplates for Qore classes (for class wrapping)
+    std::map<const QoreClass*, v8::Global<v8::FunctionTemplate>> classTemplateCache;
+
+    //! Tracked namespace data objects for deterministic cleanup
+    std::set<QoreV8NamespaceData*> nsDataRefs;
+    //! Tracked object references (QoreObject wrappers) for deterministic cleanup
+    std::set<QoreV8ObjectRef*> objectRefs;
+    //! Tracked class callback data for cleanup
+    std::vector<QoreV8ClassData*> classDataRefs;
+    //! Tracked method callback data for cleanup
+    std::vector<QoreV8MethodData*> methodDataRefs;
+    //! Tracked function callback data for cleanup
+    std::vector<QoreV8FunctionData*> funcDataRefs;
+    //! Tracked member handler data for cleanup
+    std::vector<QoreV8MemberHandlerData*> memberHandlerDataRefs;
+
     unsigned opcount = 0;
     bool to_destroy = false;
     bool valid = true;
     bool heap_limit = false;
+    bool transpile_ts = false;
 
     static QoreThreadLock global_lock;
     typedef std::set<QoreV8Program*> pset_t;
@@ -206,6 +262,11 @@ public:
         //printd(5, "QoreV8ProgramData::QoreV8ProgramData() this: %p\n", this);
     }
 
+    DLLLOCAL QoreV8ProgramData(const QoreString& source_code, const QoreString& source_label,
+            bool transpile_ts, ExceptionSink* xsink)
+            : QoreV8Program(source_code, source_label, transpile_ts, xsink) {
+    }
+
     DLLLOCAL QoreV8ProgramData(ExceptionSink* xsink, const QoreV8ProgramData& old, QoreObject* self)
             : QoreV8Program(xsink, old, self) {
         //printd(5, "QoreV8ProgramData::QoreV8ProgramData() this: %p\n", this);
@@ -213,12 +274,17 @@ public:
 
     DLLLOCAL virtual void deref(ExceptionSink* xsink) {
         if (ROdereference()) {
+            // ensure V8 resources are cleaned up even if destructor() was not called
+            // (e.g., when the constructor fails and the object is destroyed via deref)
+            deleteIntern(xsink);
             weakDeref();
         }
     }
 
     DLLLOCAL virtual void deref() {
         if (ROdereference()) {
+            ExceptionSink xsink;
+            deleteIntern(&xsink);
             weakDeref();
         }
     }

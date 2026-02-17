@@ -935,6 +935,10 @@ public class TypeScriptActionInterface {
         if (app.logo) {
             app0.logo = parse_base64_string(app.logo);
         }
+        # default groups to ApiIntegration for JS/TS apps that don't specify it
+        if (!app0.groups) {
+            app0.groups = (DataProvider::AppGroup::ApiIntegration,);
+        }
 
         hash<GoogleAppInfo> google_app;
         if (exists (*hash<auto> h = remove app0.google_app)) {

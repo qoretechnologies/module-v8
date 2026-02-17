@@ -41,6 +41,7 @@ const CustomApp = ts_toolkit_1.QoreAppCreator.createApp({
   display_name: 'Testing External App',
   desc: 'This is a custom testing external app',
   short_desc: 'External testing app',
+  groups: ['Other'],
   logo:
     'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUF' +
     'VCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2' +

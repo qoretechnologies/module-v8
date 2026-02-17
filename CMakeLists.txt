@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.10)
 project(qore-v8-module)
 
-set (VERSION_MAJOR 1)
-set (VERSION_MINOR 0)
-set (VERSION_PATCH 3)
+set (VERSION_MAJOR 2)
+set (VERSION_MINOR 1)
+set (VERSION_PATCH 0)
 
 set(PROJECT_VERSION "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}")
 
@@ -81,6 +81,7 @@ endif()
 
 set(QPP_SRC
     src/QC_JavaScriptProgram.qpp
+    src/QC_TypeScriptProgram.qpp
     src/QC_JavaScriptObject.qpp
     src/QC_JavaScriptPromise.qpp
 )
@@ -93,6 +94,8 @@ set(CPP_SRC
     src/QoreV8CallStack.cpp
     src/QoreV8StackLocationHelper.cpp
     src/QoreV8CallReference.cpp
+    src/QoreV8NamespaceWrapper.cpp
+    src/QoreV8ClassWrapper.cpp
 )
 
 set(QMOD

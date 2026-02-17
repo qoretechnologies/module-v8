@@ -2,6 +2,7 @@ import {
   TQoreAppActionFunctionContext,
   TQoreAppWithActions,
   TQoreMappedOptions,
+  TQoreRecordBasedApp,
 } from '@qoretechnologies/ts-toolkit';
 import { getOauth2ClientSecret } from '../../utils/oauth2-client-secret';
 import { createSwaggerPaths, mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
@@ -16,6 +17,14 @@ import {
   NETSUITE_CONN_OPTIONS,
   NETSUITE_SIMPLIFIED_ACTIONS,
 } from './constants';
+import { createNetsuiteRecords } from './helpers/record-based/create-records';
+import { deleteNetsuiteRecords } from './helpers/record-based/delete-records';
+import { getNetsuiteExpressions } from './helpers/record-based/get-expressions';
+import { getNetsuiteRecordType } from './helpers/record-based/get-record-type';
+import { NetsuiteSearchOptions } from './helpers/record-based/get-search-options';
+import { getNetsuiteTableList } from './helpers/record-based/get-table-list';
+import { searchNetsuiteRecords } from './helpers/record-based/search-records';
+import { updateNetsuiteRecords } from './helpers/record-based/update-records';
 import * as NETSUITE_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
@@ -82,4 +91,14 @@ export default (locale: Locales) =>
         };
       },
     },
-  }) satisfies TQoreAppWithActions;
+
+    // Record-based support
+    get_table_list: getNetsuiteTableList,
+    expressions: getNetsuiteExpressions(locale),
+    get_record_type: getNetsuiteRecordType,
+    search_records: searchNetsuiteRecords,
+    search_options: NetsuiteSearchOptions,
+    create_records: createNetsuiteRecords,
+    update_records: updateNetsuiteRecords,
+    delete_records: deleteNetsuiteRecords,
+  }) satisfies TQoreRecordBasedApp & TQoreAppWithActions;
