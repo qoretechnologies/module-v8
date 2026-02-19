@@ -1,13 +1,13 @@
 /* eslint-disable max-len */
 const AmazonS3AppEn = {
-  displayName: 'AWS S3',
+  displayName: 'Amazon S3',
   groups: ['Cloud Storage & File Management', 'DevOps & Cloud Infrastructure'],
   shortDesc:
     'Seamlessly connect to Amazon S3 to manage buckets, upload files, and automate your cloud storage workflows.',
   longDesc:
     'The Amazon S3 integration provides comprehensive actions and triggers to interact with Amazon Simple Storage Service. Whether you need to manage buckets, upload and download files, or monitor changes to your S3 objects, this integration simplifies your cloud storage automation and file management workflows.',
   connectionMessage: {
-    title: 'Connect to AWS S3',
+    title: 'Connect to Amazon S3',
     content: `To connect to Amazon S3, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
 
 ## Creating AWS Credentials

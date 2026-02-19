@@ -173,6 +173,40 @@ export const SlackSearchMessagesResponseType = {
 } satisfies TQoreResponseType;
 
 /**
+ * Delete message response type
+ */
+export const SlackDeleteMessageResponseType = {
+  type: 'hash',
+  fields: {
+    ok: {
+      type: 'bool',
+      short_desc: 'Indicates if the message was deleted successfully',
+    },
+    channel: {
+      type: 'string',
+      short_desc: 'Channel where the message was deleted',
+    },
+    ts: {
+      type: 'string',
+      short_desc: 'Timestamp of the deleted message',
+    },
+  },
+} satisfies TQoreResponseType;
+
+/**
+ * Pin/unpin message response type
+ */
+export const SlackPinResponseType = {
+  type: 'hash',
+  fields: {
+    ok: {
+      type: 'bool',
+      short_desc: 'Indicates if the pin operation was successful',
+    },
+  },
+} satisfies TQoreResponseType;
+
+/**
  * TypeScript type for Slack message
  */
 export type TSlackMessage = {

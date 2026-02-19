@@ -1,14 +1,14 @@
 /* eslint-disable max-len */
 const AmazonSQSAppEn = {
-  displayName: 'AWS SQS',
+  displayName: 'Amazon SQS',
   groups: ['DevOps & Cloud Infrastructure', 'Messaging & Real-time Communication'],
   shortDesc:
     'Connect to Amazon Simple Queue Service to manage message queues and automate message processing workflows.',
   longDesc:
-    'The AWS SQS integration provides comprehensive queue management and message handling capabilities for Amazon Simple Queue Service. Create and manage queues, send messages (including JSON), receive messages with polling triggers, and automate your message-driven architectures with reliable, scalable queue operations.',
+    'The Amazon SQS integration provides comprehensive queue management and message handling capabilities for Amazon Simple Queue Service. Create and manage queues, send messages (including JSON), receive messages with polling triggers, and automate your message-driven architectures with reliable, scalable queue operations.',
   connectionMessage: {
-    title: 'Connect to AWS SQS',
-    content: `To connect to AWS SQS, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
+    title: 'Connect to Amazon SQS',
+    content: `To connect to Amazon SQS, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
 
 ## Creating AWS Credentials
 

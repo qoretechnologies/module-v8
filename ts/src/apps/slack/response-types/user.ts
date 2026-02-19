@@ -88,7 +88,7 @@ const SlackUserProfileType = {
 /**
  * Slack user type
  */
-const SlackUserType = {
+export const SlackUserType = {
   type: 'hash',
   fields: {
     id: {
@@ -192,6 +192,36 @@ export const SlackUpdateProfileResponseType = {
       short_desc: 'Indicates if the profile was updated',
     },
     profile: { type: SlackUserProfileType },
+  },
+} satisfies TQoreResponseType;
+
+/**
+ * List users response type
+ */
+export const SlackListUsersResponseType = {
+  type: 'hash',
+  fields: {
+    members: {
+      type: {
+        type: 'list',
+        element_type: SlackUserType,
+      },
+      short_desc: 'List of users in the workspace',
+    },
+  },
+} satisfies TQoreResponseType;
+
+/**
+ * Get user info response type
+ */
+export const SlackGetUserInfoResponseType = {
+  type: 'hash',
+  fields: {
+    ok: {
+      type: 'bool',
+      short_desc: 'Indicates if the user was found',
+    },
+    user: { type: SlackUserType },
   },
 } satisfies TQoreResponseType;
 

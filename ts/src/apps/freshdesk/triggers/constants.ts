@@ -1,8 +1,6 @@
-import {
-  QorusRequest,
-  TQoreAppActionWithEventOrWebhookEventInfo,
-} from '@qoretechnologies/ts-toolkit';
+import { TQoreAppActionWithEventOrWebhookEventInfo } from '@qoretechnologies/ts-toolkit';
 import { DEFAULT_TRIGGER_POLL_ITEM_LIMIT } from '../../../global/constants';
+import { freshdeskClient } from '../client';
 
 export const FreshdeskContactEventInfo = {
   desc: 'Contact event data',
@@ -235,28 +233,15 @@ export const fetchFreshdeskEventItem = async <ItemType = any>(options: {
 }): Promise<ItemType[]> => {
   const { token, subdomain, path, order_by, limit = DEFAULT_TRIGGER_POLL_ITEM_LIMIT } = options;
 
-  const response = await QorusRequest.get<{
-    data: ItemType[];
-  }>(
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      path,
-      params: {
-        per_page: limit.toString(),
-        order_by,
-        order_type: 'desc',
-      },
+  const response = await freshdeskClient.get<ItemType[]>(path, {
+    token,
+    connectionOptions: { subdomain },
+    params: {
+      per_page: limit.toString(),
+      order_by,
+      order_type: 'desc',
     },
-    { url: `https://${subdomain}.freshdesk.com`, endpointId: 'Freshdesk' }
-  );
+  });
 
-  const responseData = response?.data;
-
-  if (!responseData) {
-    return [];
-  }
-
-  return responseData;
+  return response || [];
 };

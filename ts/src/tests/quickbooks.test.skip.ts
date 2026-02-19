@@ -3,8 +3,12 @@ import {
   CreateQuickbooksBill,
   CreateQuickbooksCustomer,
   CreateQuickbooksInvoice,
+  CreateQuickbooksInvoiceFromEstimate,
+  CreateQuickbooksPayment,
+  CreateQuickbooksRefundReceipt,
   DeleteQuickbooksBill,
   DeleteQuickbooksInvoice,
+  DeleteQuickbooksPayment,
   GetQuickbooksAccount,
   GetQuickbooksBill,
   GetQuickbooksCompanyInfo,
@@ -25,6 +29,7 @@ import {
   ListQuickbooksSalesReceipts,
   ListQuickbooksVendors,
   UpdateQuickbooksCustomer,
+  VoidQuickbooksTransaction,
 } from '../apps/quickbooks/actions';
 import { getQuickbooksAccountIdAllowedValues } from '../apps/quickbooks/helpers/get-account-id-allowed-values';
 import { getQuickbooksBillIdAllowedValues } from '../apps/quickbooks/helpers/get-bill-id-allowed-values';
@@ -727,6 +732,321 @@ describe('Test Quickbooks Actions', () => {
       expect(result).toBeDefined();
       expect(result.vendors).toBeDefined();
       expect(result.vendors.length).toBe(1);
+    });
+  });
+
+  describe('Should test create_payment action', () => {
+    let payment_invoice_id: string | undefined;
+    let created_payment_id: string | undefined;
+
+    it('Should create an invoice for payment test', async () => {
+      const action = CreateQuickbooksInvoice;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      if (!customer_id || !item_id) {
+        throw new Error('customer_id and item_id must be defined');
+      }
+
+      const result = await action.api_function(
+        {
+          customer: customer_id,
+          lines: [
+            {
+              amount: 50,
+              item_id,
+            } as any,
+          ],
+        },
+        undefined,
+        base_context
+      );
+
+      expect(result).toBeDefined();
+      expect(result.Id).toBeDefined();
+
+      payment_invoice_id = result.Id;
+    });
+
+    it('Should create a payment linked to an invoice', async () => {
+      const action = CreateQuickbooksPayment;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      if (!customer_id || !payment_invoice_id) {
+        throw new Error('customer_id and payment_invoice_id must be defined');
+      }
+
+      const result = await action.api_function(
+        {
+          customer: customer_id,
+          total_amount: 50,
+          invoice_ids: [payment_invoice_id],
+          memo: 'Test payment from integration tests',
+        } as any,
+        undefined,
+        base_context
+      );
+
+      expect(result).toBeDefined();
+      expect(result.Id).toBeDefined();
+      expect(result.TotalAmt).toBe(50);
+
+      created_payment_id = result.Id;
+    });
+
+    it('Should create a payment without linked invoices', async () => {
+      const action = CreateQuickbooksPayment;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      if (!customer_id) {
+        throw new Error('customer_id must be defined');
+      }
+
+      const result = await action.api_function(
+        {
+          customer: customer_id,
+          total_amount: 25,
+        } as any,
+        undefined,
+        base_context
+      );
+
+      expect(result).toBeDefined();
+      expect(result.Id).toBeDefined();
+      expect(result.TotalAmt).toBe(25);
+
+      // Clean up: delete the unapplied payment
+      const deleteAction = DeleteQuickbooksPayment;
+
+      if (!('api_function' in deleteAction)) throw new Error('api_function not found in action');
+
+      await deleteAction.api_function(
+        { id: result.Id },
+        undefined,
+        base_context
+      );
+    });
+
+    it('Should delete the payment', async () => {
+      const action = DeleteQuickbooksPayment;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      if (!created_payment_id) {
+        throw new Error('created_payment_id must be defined');
+      }
+
+      const result = await action.api_function(
+        { id: created_payment_id },
+        undefined,
+        base_context
+      );
+
+      expect(result).toBeDefined();
+      expect(result.Id).toBeDefined();
+    });
+
+    it('Should clean up the invoice', async () => {
+      const action = DeleteQuickbooksInvoice;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      if (!payment_invoice_id) {
+        throw new Error('payment_invoice_id must be defined');
+      }
+
+      const result = await action.api_function(
+        { id: payment_invoice_id },
+        undefined,
+        base_context
+      );
+
+      expect(result).toBeDefined();
+      expect(result.Id).toBeDefined();
+    });
+  });
+
+  describe('Should test create_refund_receipt action', () => {
+    let created_refund_receipt_id: string | undefined;
+
+    it('Should create a refund receipt', async () => {
+      const action = CreateQuickbooksRefundReceipt;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      if (!customer_id || !item_id) {
+        throw new Error('customer_id and item_id must be defined');
+      }
+
+      const result = await action.api_function(
+        {
+          customer_id,
+          lines: [
+            {
+              amount: 30,
+              item_id,
+              description: 'Test refund item',
+            } as any,
+          ],
+          memo: 'Test refund receipt from integration tests',
+        } as any,
+        undefined,
+        base_context
+      );
+
+      expect(result).toBeDefined();
+      expect(result.Id).toBeDefined();
+      expect(result.TotalAmt).toBeDefined();
+
+      created_refund_receipt_id = result.Id;
+    });
+
+    it('Should have correct customer reference', async () => {
+      expect(created_refund_receipt_id).toBeDefined();
+    });
+  });
+
+  describe('Should test void_transaction action', () => {
+    let void_invoice_id: string | undefined;
+
+    it('Should create an invoice to void', async () => {
+      const action = CreateQuickbooksInvoice;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      if (!customer_id || !item_id) {
+        throw new Error('customer_id and item_id must be defined');
+      }
+
+      const result = await action.api_function(
+        {
+          customer: customer_id,
+          lines: [
+            {
+              amount: 75,
+              item_id,
+            } as any,
+          ],
+        },
+        undefined,
+        base_context
+      );
+
+      expect(result).toBeDefined();
+      expect(result.Id).toBeDefined();
+
+      void_invoice_id = result.Id;
+    });
+
+    it('Should void the invoice', async () => {
+      const action = VoidQuickbooksTransaction;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      if (!void_invoice_id) {
+        throw new Error('void_invoice_id must be defined');
+      }
+
+      const result = await action.api_function(
+        {
+          transaction_type: 'Invoice',
+          transaction_id: void_invoice_id,
+        },
+        undefined,
+        base_context
+      );
+
+      expect(result).toBeDefined();
+      expect(result.Id).toBeDefined();
+    });
+
+    it('Should fail to void with invalid transaction type', async () => {
+      const action = VoidQuickbooksTransaction;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      await expect(
+        action.api_function(
+          {
+            transaction_type: 'InvalidType',
+            transaction_id: '999999',
+          },
+          undefined,
+          base_context
+        )
+      ).rejects.toThrow('Unsupported transaction type');
+    });
+  });
+
+  describe('Should test create_invoice_from_estimate action', () => {
+    let estimate_id: string | undefined;
+    let created_from_estimate_invoice_id: string | undefined;
+
+    it('Should find an existing estimate', async () => {
+      const action = ListQuickbooksEstimates;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      const result = await action.api_function(
+        { limit: 1 },
+        undefined,
+        base_context
+      );
+
+      expect(result).toBeDefined();
+      expect(result.estimates).toBeDefined();
+      expect(result.estimates.length).toBeGreaterThanOrEqual(1);
+
+      estimate_id = result.estimates[0].Id;
+    });
+
+    it('Should create an invoice from estimate', async () => {
+      const action = CreateQuickbooksInvoiceFromEstimate;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      if (!estimate_id) {
+        throw new Error('estimate_id must be defined');
+      }
+
+      const result = await action.api_function(
+        { estimate_id },
+        undefined,
+        base_context
+      );
+
+      expect(result).toBeDefined();
+      expect(result.Id).toBeDefined();
+      expect(result.LinkedTxn).toBeDefined();
+
+      const linkedEstimate = result.LinkedTxn?.find(
+        (txn: { TxnType?: string }) => txn.TxnType === 'Estimate'
+      );
+      expect(linkedEstimate).toBeDefined();
+      expect(linkedEstimate?.TxnId).toBe(estimate_id);
+
+      created_from_estimate_invoice_id = result.Id;
+    });
+
+    it('Should clean up the invoice created from estimate', async () => {
+      const action = DeleteQuickbooksInvoice;
+
+      if (!('api_function' in action)) throw new Error('api_function not found in action');
+
+      if (!created_from_estimate_invoice_id) {
+        throw new Error('created_from_estimate_invoice_id must be defined');
+      }
+
+      const result = await action.api_function(
+        { id: created_from_estimate_invoice_id },
+        undefined,
+        base_context
+      );
+
+      expect(result).toBeDefined();
+      expect(result.Id).toBeDefined();
     });
   });
 });

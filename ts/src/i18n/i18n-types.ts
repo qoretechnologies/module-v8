@@ -28802,7 +28802,7 @@ type RootTranslation = {
 		}
 		AmazonEC2: {
 			/**
-			 * A​W​S​ ​E​C​2
+			 * A​m​a​z​o​n​ ​E​C​2
 			 */
 			displayName: string
 			groups: {
@@ -28821,7 +28821,7 @@ type RootTranslation = {
 			longDesc: string
 			connectionMessage: {
 				/**
-				 * C​o​n​n​e​c​t​ ​t​o​ ​A​W​S​ ​E​C​2
+				 * C​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​E​C​2
 				 */
 				title: string
 				/**
@@ -29210,7 +29210,7 @@ type RootTranslation = {
 		}
 		AmazonS3: {
 			/**
-			 * A​W​S​ ​S​3
+			 * A​m​a​z​o​n​ ​S​3
 			 */
 			displayName: string
 			groups: {
@@ -29233,7 +29233,7 @@ type RootTranslation = {
 			longDesc: string
 			connectionMessage: {
 				/**
-				 * C​o​n​n​e​c​t​ ​t​o​ ​A​W​S​ ​S​3
+				 * C​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​S​3
 				 */
 				title: string
 				/**
@@ -30754,7 +30754,7 @@ type RootTranslation = {
 		}
 		AmazonCloudFront: {
 			/**
-			 * C​l​o​u​d​F​r​o​n​t
+			 * A​m​a​z​o​n​ ​C​l​o​u​d​F​r​o​n​t
 			 */
 			displayName: string
 			groups: {
@@ -31570,7 +31570,7 @@ type RootTranslation = {
 		}
 		AmazonSNS: {
 			/**
-			 * A​W​S​ ​S​N​S
+			 * A​m​a​z​o​n​ ​S​N​S
 			 */
 			displayName: string
 			groups: {
@@ -32851,7 +32851,7 @@ type RootTranslation = {
 		}
 		AmazonSQS: {
 			/**
-			 * A​W​S​ ​S​Q​S
+			 * A​m​a​z​o​n​ ​S​Q​S
 			 */
 			displayName: string
 			groups: {
@@ -32869,16 +32869,16 @@ type RootTranslation = {
 			 */
 			shortDesc: string
 			/**
-			 * T​h​e​ ​A​W​S​ ​S​Q​S​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​q​u​e​u​e​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​m​e​s​s​a​g​e​ ​h​a​n​d​l​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​f​o​r​ ​A​m​a​z​o​n​ ​S​i​m​p​l​e​ ​Q​u​e​u​e​ ​S​e​r​v​i​c​e​.​ ​C​r​e​a​t​e​ ​a​n​d​ ​m​a​n​a​g​e​ ​q​u​e​u​e​s​,​ ​s​e​n​d​ ​m​e​s​s​a​g​e​s​ ​(​i​n​c​l​u​d​i​n​g​ ​J​S​O​N​)​,​ ​r​e​c​e​i​v​e​ ​m​e​s​s​a​g​e​s​ ​w​i​t​h​ ​p​o​l​l​i​n​g​ ​t​r​i​g​g​e​r​s​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​y​o​u​r​ ​m​e​s​s​a​g​e​-​d​r​i​v​e​n​ ​a​r​c​h​i​t​e​c​t​u​r​e​s​ ​w​i​t​h​ ​r​e​l​i​a​b​l​e​,​ ​s​c​a​l​a​b​l​e​ ​q​u​e​u​e​ ​o​p​e​r​a​t​i​o​n​s​.
+			 * T​h​e​ ​A​m​a​z​o​n​ ​S​Q​S​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​q​u​e​u​e​ ​m​a​n​a​g​e​m​e​n​t​ ​a​n​d​ ​m​e​s​s​a​g​e​ ​h​a​n​d​l​i​n​g​ ​c​a​p​a​b​i​l​i​t​i​e​s​ ​f​o​r​ ​A​m​a​z​o​n​ ​S​i​m​p​l​e​ ​Q​u​e​u​e​ ​S​e​r​v​i​c​e​.​ ​C​r​e​a​t​e​ ​a​n​d​ ​m​a​n​a​g​e​ ​q​u​e​u​e​s​,​ ​s​e​n​d​ ​m​e​s​s​a​g​e​s​ ​(​i​n​c​l​u​d​i​n​g​ ​J​S​O​N​)​,​ ​r​e​c​e​i​v​e​ ​m​e​s​s​a​g​e​s​ ​w​i​t​h​ ​p​o​l​l​i​n​g​ ​t​r​i​g​g​e​r​s​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​y​o​u​r​ ​m​e​s​s​a​g​e​-​d​r​i​v​e​n​ ​a​r​c​h​i​t​e​c​t​u​r​e​s​ ​w​i​t​h​ ​r​e​l​i​a​b​l​e​,​ ​s​c​a​l​a​b​l​e​ ​q​u​e​u​e​ ​o​p​e​r​a​t​i​o​n​s​.
 			 */
 			longDesc: string
 			connectionMessage: {
 				/**
-				 * C​o​n​n​e​c​t​ ​t​o​ ​A​W​S​ ​S​Q​S
+				 * C​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​S​Q​S
 				 */
 				title: string
 				/**
-				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​A​W​S​ ​S​Q​S​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​W​S​ ​A​c​c​e​s​s​ ​K​e​y​ ​I​D​*​*​,​ ​*​*​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​*​*​,​ ​a​n​d​ ​*​*​R​e​g​i​o​n​*​*​.​
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​A​m​a​z​o​n​ ​S​Q​S​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​y​o​u​r​ ​*​*​A​W​S​ ​A​c​c​e​s​s​ ​K​e​y​ ​I​D​*​*​,​ ​*​*​S​e​c​r​e​t​ ​A​c​c​e​s​s​ ​K​e​y​*​*​,​ ​a​n​d​ ​*​*​R​e​g​i​o​n​*​*​.​
 			​
 			​#​#​ ​C​r​e​a​t​i​n​g​ ​A​W​S​ ​C​r​e​d​e​n​t​i​a​l​s​
 			​
@@ -52873,6 +52873,36 @@ type RootTranslation = {
 						}
 					}
 				}
+				create_invoice_from_estimate: {
+					/**
+					 * C​r​e​a​t​e​ ​I​n​v​o​i​c​e​ ​f​r​o​m​ ​E​s​t​i​m​a​t​e
+					 */
+					displayName: string
+					/**
+					 * C​o​n​v​e​r​t​ ​a​n​ ​e​s​t​i​m​a​t​e​ ​i​n​t​o​ ​a​n​ ​i​n​v​o​i​c​e​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​i​n​v​o​i​c​e​ ​b​y​ ​c​o​n​v​e​r​t​i​n​g​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​e​s​t​i​m​a​t​e​,​ ​c​o​p​y​i​n​g​ ​a​l​l​ ​l​i​n​e​ ​i​t​e​m​s​ ​a​n​d​ ​l​i​n​k​i​n​g​ ​t​h​e​ ​i​n​v​o​i​c​e​ ​b​a​c​k​ ​t​o​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​e​s​t​i​m​a​t​e
+					 */
+					longDesc: string
+					options: {
+						estimate_id: {
+							/**
+							 * E​s​t​i​m​a​t​e​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​s​t​i​m​a​t​e​ ​t​o​ ​c​o​n​v​e​r​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​e​s​t​i​m​a​t​e​ ​t​o​ ​c​o​n​v​e​r​t​ ​i​n​t​o​ ​a​n​ ​i​n​v​o​i​c​e​.​ ​O​n​l​y​ ​P​e​n​d​i​n​g​ ​a​n​d​ ​A​c​c​e​p​t​e​d​ ​e​s​t​i​m​a​t​e​s​ ​c​a​n​ ​b​e​ ​c​o​n​v​e​r​t​e​d
+							 */
+							longDesc: string
+						}
+					}
+				}
 				create_item: {
 					/**
 					 * C​r​e​a​t​e​ ​I​t​e​m
@@ -53386,6 +53416,92 @@ type RootTranslation = {
 									}
 								}
 							}
+						}
+					}
+				}
+				create_payment: {
+					/**
+					 * C​r​e​a​t​e​ ​P​a​y​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​a​y​m​e​n​t​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​p​a​y​m​e​n​t​ ​r​e​c​o​r​d​ ​f​o​r​ ​a​ ​c​u​s​t​o​m​e​r​,​ ​o​p​t​i​o​n​a​l​l​y​ ​l​i​n​k​e​d​ ​t​o​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​i​n​v​o​i​c​e​s​ ​f​o​r​ ​i​n​v​o​i​c​i​n​g​ ​w​o​r​k​f​l​o​w​s
+					 */
+					longDesc: string
+					options: {
+						customer: {
+							/**
+							 * C​u​s​t​o​m​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​m​a​k​i​n​g​ ​t​h​e​ ​p​a​y​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​w​h​o​ ​i​s​ ​m​a​k​i​n​g​ ​t​h​i​s​ ​p​a​y​m​e​n​t
+							 */
+							longDesc: string
+						}
+						total_amount: {
+							/**
+							 * T​o​t​a​l​ ​A​m​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​o​t​a​l​ ​p​a​y​m​e​n​t​ ​a​m​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​o​t​a​l​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​o​f​ ​t​h​e​ ​p​a​y​m​e​n​t​ ​b​e​i​n​g​ ​r​e​c​e​i​v​e​d
+							 */
+							longDesc: string
+						}
+						invoice_ids: {
+							/**
+							 * I​n​v​o​i​c​e​ ​I​D​s
+							 */
+							displayName: string
+							/**
+							 * I​n​v​o​i​c​e​s​ ​t​o​ ​a​p​p​l​y​ ​p​a​y​m​e​n​t​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​i​n​v​o​i​c​e​ ​I​D​s​ ​t​o​ ​l​i​n​k​ ​t​h​i​s​ ​p​a​y​m​e​n​t​ ​t​o​.​ ​T​h​e​ ​p​a​y​m​e​n​t​ ​a​m​o​u​n​t​ ​w​i​l​l​ ​b​e​ ​d​i​s​t​r​i​b​u​t​e​d​ ​e​v​e​n​l​y​ ​a​c​r​o​s​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​i​n​v​o​i​c​e​s
+							 */
+							longDesc: string
+						}
+						payment_date: {
+							/**
+							 * P​a​y​m​e​n​t​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​t​h​e​ ​p​a​y​m​e​n​t​ ​w​a​s​ ​r​e​c​e​i​v​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​r​a​n​s​a​c​t​i​o​n​ ​d​a​t​e​ ​f​o​r​ ​t​h​i​s​ ​p​a​y​m​e​n​t​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​d​a​t​e​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d
+							 */
+							longDesc: string
+						}
+						memo: {
+							/**
+							 * M​e​m​o
+							 */
+							displayName: string
+							/**
+							 * A​ ​p​r​i​v​a​t​e​ ​n​o​t​e​ ​f​o​r​ ​t​h​i​s​ ​p​a​y​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​i​n​t​e​r​n​a​l​ ​m​e​m​o​ ​o​r​ ​n​o​t​e​ ​a​b​o​u​t​ ​t​h​i​s​ ​p​a​y​m​e​n​t​ ​t​h​a​t​ ​i​s​ ​n​o​t​ ​v​i​s​i​b​l​e​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r
+							 */
+							longDesc: string
 						}
 					}
 				}
@@ -53998,6 +54114,168 @@ type RootTranslation = {
 									}
 								}
 							}
+						}
+					}
+				}
+				create_refund_receipt: {
+					/**
+					 * C​r​e​a​t​e​ ​R​e​f​u​n​d​ ​R​e​c​e​i​p​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t​ ​t​o​ ​d​o​c​u​m​e​n​t​ ​a​ ​r​e​t​u​r​n​ ​o​f​ ​f​u​n​d​s​ ​t​o​ ​a​ ​c​u​s​t​o​m​e​r​ ​v​i​a​ ​c​h​e​c​k​,​ ​c​r​e​d​i​t​ ​c​a​r​d​,​ ​o​r​ ​b​a​n​k​ ​t​r​a​n​s​f​e​r
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​r​e​c​e​i​v​i​n​g​ ​t​h​e​ ​r​e​f​u​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​w​h​o​ ​w​i​l​l​ ​r​e​c​e​i​v​e​ ​t​h​i​s​ ​r​e​f​u​n​d
+							 */
+							longDesc: string
+						}
+						lines: {
+							/**
+							 * L​i​n​e​ ​I​t​e​m​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​l​i​n​e​ ​i​t​e​m​s​ ​f​o​r​ ​t​h​e​ ​r​e​f​u​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​e​t​a​i​l​e​d​ ​l​i​s​t​ ​o​f​ ​i​t​e​m​s​ ​o​r​ ​s​e​r​v​i​c​e​s​ ​b​e​i​n​g​ ​r​e​f​u​n​d​e​d
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										amount: {
+											/**
+											 * A​m​o​u​n​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​r​e​f​u​n​d​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​o​t​a​l​ ​m​o​n​e​t​a​r​y​ ​a​m​o​u​n​t​ ​b​e​i​n​g​ ​r​e​f​u​n​d​e​d​ ​f​o​r​ ​t​h​i​s​ ​s​p​e​c​i​f​i​c​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										description: {
+											/**
+											 * D​e​s​c​r​i​p​t​i​o​n
+											 */
+											displayName: string
+											/**
+											 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​r​e​f​u​n​d​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * A​ ​d​e​t​a​i​l​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​w​h​a​t​ ​t​h​i​s​ ​r​e​f​u​n​d​ ​l​i​n​e​ ​i​t​e​m​ ​r​e​p​r​e​s​e​n​t​s
+											 */
+											longDesc: string
+										}
+										quantity: {
+											/**
+											 * Q​u​a​n​t​i​t​y
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​q​u​a​n​t​i​t​y​ ​b​e​i​n​g​ ​r​e​f​u​n​d​e​d
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​u​n​i​t​s​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​r​e​f​u​n​d​e​d
+											 */
+											longDesc: string
+										}
+										unit_price: {
+											/**
+											 * U​n​i​t​ ​P​r​i​c​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​p​r​i​c​e​ ​p​e​r​ ​u​n​i​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​o​s​t​ ​p​e​r​ ​i​n​d​i​v​i​d​u​a​l​ ​u​n​i​t​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​r​e​f​u​n​d​e​d
+											 */
+											longDesc: string
+										}
+										item_id: {
+											/**
+											 * I​t​e​m​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​i​t​e​m​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​i​t​e​m​ ​b​e​i​n​g​ ​r​e​f​u​n​d​e​d
+											 */
+											longDesc: string
+										}
+										tax_code_id: {
+											/**
+											 * T​a​x​ ​C​o​d​e​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​t​a​x​ ​c​o​d​e​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​a​x​ ​c​o​d​e​ ​t​o​ ​a​p​p​l​y​ ​t​o​ ​t​h​i​s​ ​r​e​f​u​n​d​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+										class_id: {
+											/**
+											 * C​l​a​s​s​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​c​l​a​s​s​ ​f​o​r​ ​t​h​i​s​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​c​l​a​s​s​ ​t​o​ ​c​a​t​e​g​o​r​i​z​e​ ​t​h​i​s​ ​r​e​f​u​n​d​ ​l​i​n​e​ ​i​t​e​m
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						memo: {
+							/**
+							 * M​e​m​o
+							 */
+							displayName: string
+							/**
+							 * A​ ​p​r​i​v​a​t​e​ ​n​o​t​e​ ​f​o​r​ ​t​h​i​s​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​i​n​t​e​r​n​a​l​ ​m​e​m​o​ ​o​r​ ​n​o​t​e​ ​a​b​o​u​t​ ​t​h​i​s​ ​r​e​f​u​n​d​ ​r​e​c​e​i​p​t
+							 */
+							longDesc: string
 						}
 					}
 				}
@@ -54942,6 +55220,50 @@ type RootTranslation = {
 									}
 								}
 							}
+						}
+					}
+				}
+				void_transaction: {
+					/**
+					 * V​o​i​d​ ​T​r​a​n​s​a​c​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * V​o​i​d​ ​a​ ​t​r​a​n​s​a​c​t​i​o​n​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s
+					 */
+					shortDesc: string
+					/**
+					 * V​o​i​d​ ​a​ ​t​r​a​n​s​a​c​t​i​o​n​ ​i​n​ ​Q​u​i​c​k​B​o​o​k​s​,​ ​z​e​r​o​i​n​g​ ​a​l​l​ ​a​m​o​u​n​t​s​ ​a​n​d​ ​m​a​r​k​i​n​g​ ​i​t​ ​a​s​ ​v​o​i​d​e​d​.​ ​S​u​p​p​o​r​t​s​ ​i​n​v​o​i​c​e​s​,​ ​p​a​y​m​e​n​t​s​,​ ​s​a​l​e​s​ ​r​e​c​e​i​p​t​s​,​ ​a​n​d​ ​b​i​l​l​ ​p​a​y​m​e​n​t​s
+					 */
+					longDesc: string
+					options: {
+						transaction_type: {
+							/**
+							 * T​r​a​n​s​a​c​t​i​o​n​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​t​r​a​n​s​a​c​t​i​o​n​ ​t​o​ ​v​o​i​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​e​n​t​i​t​y​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​t​r​a​n​s​a​c​t​i​o​n​ ​t​o​ ​v​o​i​d​.​ ​S​u​p​p​o​r​t​e​d​ ​t​y​p​e​s​:​ ​I​n​v​o​i​c​e​,​ ​P​a​y​m​e​n​t​,​ ​S​a​l​e​s​R​e​c​e​i​p​t​,​ ​B​i​l​l​P​a​y​m​e​n​t
+							 */
+							longDesc: string
+						}
+						transaction_id: {
+							/**
+							 * T​r​a​n​s​a​c​t​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​o​f​ ​t​h​e​ ​t​r​a​n​s​a​c​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​Q​u​i​c​k​B​o​o​k​s​ ​I​D​ ​o​f​ ​t​h​e​ ​t​r​a​n​s​a​c​t​i​o​n​ ​t​h​a​t​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​v​o​i​d
+							 */
+							longDesc: string
 						}
 					}
 				}
@@ -85136,15 +85458,171 @@ type RootTranslation = {
 					 */
 					shortDesc: string
 					/**
-					 * F​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​’​s​ ​d​e​t​a​i​l​s​ ​a​r​e​ ​u​p​d​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​F​r​e​s​h​d​e​s​k​ ​i​n​s​t​a​n​c​e​.​ ​F​o​r​ ​e​x​a​m​p​l​e​,​ ​c​h​a​n​g​e​s​ ​t​o​ ​n​a​m​e​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​,​ ​e​m​a​i​l​,​ ​o​r​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
+					 * F​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​a​c​t​'​s​ ​d​e​t​a​i​l​s​ ​a​r​e​ ​u​p​d​a​t​e​d​ ​i​n​ ​y​o​u​r​ ​F​r​e​s​h​d​e​s​k​ ​i​n​s​t​a​n​c​e​.​ ​F​o​r​ ​e​x​a​m​p​l​e​,​ ​c​h​a​n​g​e​s​ ​t​o​ ​n​a​m​e​,​ ​p​h​o​n​e​ ​n​u​m​b​e​r​,​ ​e​m​a​i​l​,​ ​o​r​ ​c​u​s​t​o​m​ ​f​i​e​l​d​s​.
 					 */
 					longDesc: string
 					event_info: {
 						/**
-						 * S​t​r​u​c​t​u​r​e​ ​a​n​d​ ​t​y​p​e​s​ ​f​o​r​ ​F​r​e​s​h​d​e​s​k​’​s​ ​u​p​d​a​t​e​d​ ​c​o​n​t​a​c​t​ ​d​a​t​a​ ​p​a​y​l​o​a​d​.
+						 * S​t​r​u​c​t​u​r​e​ ​a​n​d​ ​t​y​p​e​s​ ​f​o​r​ ​F​r​e​s​h​d​e​s​k​'​s​ ​u​p​d​a​t​e​d​ ​c​o​n​t​a​c​t​ ​d​a​t​a​ ​p​a​y​l​o​a​d​.
 						 */
 						desc: string
 					}
+				}
+			}
+			expressions: {
+				'&&': {
+					/**
+					 * A​n​d
+					 */
+					displayName: string
+					/**
+					 * L​o​g​i​c​a​l​ ​A​N​D​ ​o​p​e​r​a​t​o​r
+					 */
+					shortDesc: string
+					/**
+					 * C​o​m​b​i​n​e​s​ ​m​u​l​t​i​p​l​e​ ​c​o​n​d​i​t​i​o​n​s​ ​w​h​e​r​e​ ​a​l​l​ ​m​u​s​t​ ​b​e​ ​t​r​u​e
+					 */
+					longDesc: string
+				}
+				'||': {
+					/**
+					 * O​r
+					 */
+					displayName: string
+					/**
+					 * L​o​g​i​c​a​l​ ​O​R​ ​o​p​e​r​a​t​o​r
+					 */
+					shortDesc: string
+					/**
+					 * C​o​m​b​i​n​e​s​ ​m​u​l​t​i​p​l​e​ ​c​o​n​d​i​t​i​o​n​s​ ​w​h​e​r​e​ ​a​t​ ​l​e​a​s​t​ ​o​n​e​ ​m​u​s​t​ ​b​e​ ​t​r​u​e
+					 */
+					longDesc: string
+				}
+				'==': {
+					/**
+					 * E​q​u​a​l​s
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​e​q​u​a​l​s​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'!=': {
+					/**
+					 * N​o​t​ ​E​q​u​a​l​s
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'>': {
+					/**
+					 * G​r​e​a​t​e​r​ ​T​h​a​n
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'>=': {
+					/**
+					 * G​r​e​a​t​e​r​ ​T​h​a​n​ ​o​r​ ​E​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'<': {
+					/**
+					 * L​e​s​s​ ​T​h​a​n
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'<=': {
+					/**
+					 * L​e​s​s​ ​T​h​a​n​ ​o​r​ ​E​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				contains: {
+					/**
+					 * C​o​n​t​a​i​n​s
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​u​b​s​t​r​i​n​g
+					 */
+					longDesc: string
+				}
+				'is-set': {
+					/**
+					 * I​s​ ​S​e​t
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​(​i​s​ ​n​o​t​ ​e​m​p​t​y​)
+					 */
+					longDesc: string
+				}
+				'is-not-set': {
+					/**
+					 * I​s​ ​N​o​t​ ​S​e​t
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​h​a​s​ ​n​o​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​h​a​s​ ​n​o​ ​v​a​l​u​e​ ​(​i​s​ ​e​m​p​t​y​)
+					 */
+					longDesc: string
 				}
 			}
 		}
@@ -121566,6 +122044,156 @@ type RootTranslation = {
 						}
 					}
 				}
+				delete_message: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * D​e​l​e​t​e​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​m​e​s​s​a​g​e​ ​f​r​o​m​ ​a​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​f​r​o​m​ ​a​ ​S​l​a​c​k​ ​c​h​a​n​n​e​l​.​ ​Y​o​u​ ​n​e​e​d​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​i​m​e​s​t​a​m​p​ ​t​o​ ​i​d​e​n​t​i​f​y​ ​w​h​i​c​h​ ​m​e​s​s​a​g​e​ ​t​o​ ​d​e​l​e​t​e​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​n​n​e​l​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​w​a​s​ ​p​o​s​t​e​d​.
+							 */
+							longDesc: string
+						}
+						timestamp: {
+							/**
+							 * M​e​s​s​a​g​e​ ​T​i​m​e​s​t​a​m​p
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​(​t​s​)​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​d​e​l​e​t​e​.​ ​Y​o​u​ ​c​a​n​ ​a​l​s​o​ ​p​a​s​t​e​ ​a​ ​S​l​a​c​k​ ​m​e​s​s​a​g​e​ ​l​i​n​k​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				pin_message: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * P​i​n​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * P​i​n​ ​a​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * P​i​n​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​t​o​ ​a​ ​c​h​a​n​n​e​l​ ​s​o​ ​i​t​ ​a​p​p​e​a​r​s​ ​i​n​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​d​e​t​a​i​l​s​.​ ​P​i​n​n​e​d​ ​m​e​s​s​a​g​e​s​ ​a​r​e​ ​e​a​s​i​l​y​ ​a​c​c​e​s​s​i​b​l​e​ ​f​o​r​ ​a​l​l​ ​c​h​a​n​n​e​l​ ​m​e​m​b​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​n​n​e​l​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						timestamp: {
+							/**
+							 * M​e​s​s​a​g​e​ ​T​i​m​e​s​t​a​m​p
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​p​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​(​t​s​)​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​p​i​n​.​ ​Y​o​u​ ​c​a​n​ ​a​l​s​o​ ​p​a​s​t​e​ ​a​ ​S​l​a​c​k​ ​m​e​s​s​a​g​e​ ​l​i​n​k​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				unpin_message: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * U​n​p​i​n​ ​M​e​s​s​a​g​e
+					 */
+					displayName: string
+					/**
+					 * U​n​p​i​n​ ​a​ ​m​e​s​s​a​g​e​ ​f​r​o​m​ ​a​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​p​i​n​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​m​e​s​s​a​g​e​ ​i​n​ ​a​ ​c​h​a​n​n​e​l​.​ ​T​h​e​ ​m​e​s​s​a​g​e​ ​i​t​s​e​l​f​ ​i​s​ ​n​o​t​ ​d​e​l​e​t​e​d​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​n​n​e​l​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​m​e​s​s​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​w​h​e​r​e​ ​t​h​e​ ​p​i​n​n​e​d​ ​m​e​s​s​a​g​e​ ​i​s​ ​l​o​c​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						timestamp: {
+							/**
+							 * M​e​s​s​a​g​e​ ​T​i​m​e​s​t​a​m​p
+							 */
+							displayName: string
+							/**
+							 * T​i​m​e​s​t​a​m​p​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​t​o​ ​u​n​p​i​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​i​m​e​s​t​a​m​p​ ​(​t​s​)​ ​o​f​ ​t​h​e​ ​m​e​s​s​a​g​e​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​n​p​i​n​.​ ​Y​o​u​ ​c​a​n​ ​a​l​s​o​ ​p​a​s​t​e​ ​a​ ​S​l​a​c​k​ ​m​e​s​s​a​g​e​ ​l​i​n​k​.
+							 */
+							longDesc: string
+						}
+					}
+				}
 				create_channel: {
 					groups: {
 						/**
@@ -121611,6 +122239,142 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * I​f​ ​e​n​a​b​l​e​d​,​ ​c​r​e​a​t​e​ ​a​ ​p​r​i​v​a​t​e​ ​c​h​a​n​n​e​l​ ​i​n​s​t​e​a​d​ ​o​f​ ​a​ ​p​u​b​l​i​c​ ​o​n​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				archive_channel: {
+					groups: {
+						/**
+						 * C​h​a​n​n​e​l​s
+						 */
+						'0': string
+					}
+					/**
+					 * A​r​c​h​i​v​e​ ​C​h​a​n​n​e​l
+					 */
+					displayName: string
+					/**
+					 * A​r​c​h​i​v​e​ ​a​ ​S​l​a​c​k​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * A​r​c​h​i​v​e​ ​a​ ​c​h​a​n​n​e​l​ ​i​n​ ​y​o​u​r​ ​S​l​a​c​k​ ​w​o​r​k​s​p​a​c​e​.​ ​A​r​c​h​i​v​e​d​ ​c​h​a​n​n​e​l​s​ ​a​r​e​ ​r​e​a​d​-​o​n​l​y​ ​a​n​d​ ​h​i​d​d​e​n​ ​f​r​o​m​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​l​i​s​t​ ​b​y​ ​d​e​f​a​u​l​t​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​a​r​c​h​i​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​a​r​c​h​i​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				unarchive_channel: {
+					groups: {
+						/**
+						 * C​h​a​n​n​e​l​s
+						 */
+						'0': string
+					}
+					/**
+					 * U​n​a​r​c​h​i​v​e​ ​C​h​a​n​n​e​l
+					 */
+					displayName: string
+					/**
+					 * U​n​a​r​c​h​i​v​e​ ​a​ ​S​l​a​c​k​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * R​e​s​t​o​r​e​ ​a​n​ ​a​r​c​h​i​v​e​d​ ​c​h​a​n​n​e​l​ ​s​o​ ​i​t​ ​b​e​c​o​m​e​s​ ​a​c​t​i​v​e​ ​a​g​a​i​n​.​ ​M​e​m​b​e​r​s​ ​w​i​l​l​ ​b​e​ ​a​b​l​e​ ​t​o​ ​p​o​s​t​ ​m​e​s​s​a​g​e​s​ ​o​n​c​e​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​i​s​ ​u​n​a​r​c​h​i​v​e​d​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​r​c​h​i​v​e​d​ ​c​h​a​n​n​e​l​ ​t​o​ ​r​e​s​t​o​r​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​r​c​h​i​v​e​d​ ​c​h​a​n​n​e​l​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​u​n​a​r​c​h​i​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_channels: {
+					groups: {
+						/**
+						 * C​h​a​n​n​e​l​s
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​C​h​a​n​n​e​l​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​c​h​a​n​n​e​l​s​ ​i​n​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​c​h​a​n​n​e​l​s​ ​i​n​ ​y​o​u​r​ ​S​l​a​c​k​ ​w​o​r​k​s​p​a​c​e​.​ ​Y​o​u​ ​c​a​n​ ​f​i​l​t​e​r​ ​b​y​ ​c​h​a​n​n​e​l​ ​t​y​p​e​ ​a​n​d​ ​w​h​e​t​h​e​r​ ​t​o​ ​i​n​c​l​u​d​e​ ​a​r​c​h​i​v​e​d​ ​c​h​a​n​n​e​l​s​.
+					 */
+					longDesc: string
+					options: {
+						types: {
+							/**
+							 * C​h​a​n​n​e​l​ ​T​y​p​e​s
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​s​ ​o​f​ ​c​h​a​n​n​e​l​s​ ​t​o​ ​i​n​c​l​u​d​e
+							 */
+							shortDesc: string
+							/**
+							 * C​o​m​m​a​-​s​e​p​a​r​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​c​h​a​n​n​e​l​ ​t​y​p​e​s​.​ ​O​p​t​i​o​n​s​:​ ​p​u​b​l​i​c​_​c​h​a​n​n​e​l​,​ ​p​r​i​v​a​t​e​_​c​h​a​n​n​e​l​,​ ​m​p​i​m​,​ ​i​m​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​p​u​b​l​i​c​_​c​h​a​n​n​e​l​,​p​r​i​v​a​t​e​_​c​h​a​n​n​e​l​.
+							 */
+							longDesc: string
+						}
+						excludeArchived: {
+							/**
+							 * E​x​c​l​u​d​e​ ​A​r​c​h​i​v​e​d
+							 */
+							displayName: string
+							/**
+							 * E​x​c​l​u​d​e​ ​a​r​c​h​i​v​e​d​ ​c​h​a​n​n​e​l​s
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​a​r​c​h​i​v​e​d​ ​c​h​a​n​n​e​l​s​ ​a​r​e​ ​e​x​c​l​u​d​e​d​ ​f​r​o​m​ ​t​h​e​ ​r​e​s​u​l​t​s​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​t​r​u​e​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​c​h​a​n​n​e​l​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​h​a​n​n​e​l​s​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​0​.
 							 */
 							longDesc: string
 						}
@@ -121789,6 +122553,78 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * I​D​ ​o​f​ ​u​s​e​r​ ​t​o​ ​u​p​d​a​t​e​.​ ​O​n​l​y​ ​a​d​m​i​n​s​ ​o​n​ ​p​a​i​d​ ​t​e​a​m​s​ ​c​a​n​ ​u​p​d​a​t​e​ ​o​t​h​e​r​ ​u​s​e​r​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_users: {
+					groups: {
+						/**
+						 * U​s​e​r​s
+						 */
+						'0': string
+					}
+					/**
+					 * L​i​s​t​ ​U​s​e​r​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​u​s​e​r​s​ ​i​n​ ​t​h​e​ ​w​o​r​k​s​p​a​c​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​l​i​s​t​ ​o​f​ ​u​s​e​r​s​ ​i​n​ ​y​o​u​r​ ​S​l​a​c​k​ ​w​o​r​k​s​p​a​c​e​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​i​r​ ​p​r​o​f​i​l​e​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​u​s​e​r​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​u​s​e​r​s​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​2​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_user_info: {
+					groups: {
+						/**
+						 * U​s​e​r​s
+						 */
+						'0': string
+					}
+					/**
+					 * G​e​t​ ​U​s​e​r​ ​I​n​f​o
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​u​s​e​r
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​e​d​ ​p​r​o​f​i​l​e​ ​a​n​d​ ​a​c​c​o​u​n​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​c​ ​S​l​a​c​k​ ​u​s​e​r​ ​b​y​ ​t​h​e​i​r​ ​u​s​e​r​ ​I​D​.
+					 */
+					longDesc: string
+					options: {
+						userId: {
+							/**
+							 * U​s​e​r
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​u​s​e​r​ ​t​o​ ​g​e​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​s​e​ ​i​n​f​o​r​m​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
 							 */
 							longDesc: string
 						}
@@ -122232,6 +123068,42 @@ type RootTranslation = {
 					 */
 					longDesc: string
 					options: {
+					}
+				}
+				app_mention: {
+					groups: {
+						/**
+						 * M​e​s​s​a​g​e​s
+						 */
+						'0': string
+					}
+					/**
+					 * A​p​p​ ​M​e​n​t​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​t​h​e​ ​b​o​t​ ​i​s​ ​m​e​n​t​i​o​n​e​d​ ​i​n​ ​a​ ​c​h​a​n​n​e​l
+					 */
+					shortDesc: string
+					/**
+					 * T​h​i​s​ ​t​r​i​g​g​e​r​ ​f​i​r​e​s​ ​w​h​e​n​e​v​e​r​ ​s​o​m​e​o​n​e​ ​m​e​n​t​i​o​n​s​ ​t​h​e​ ​b​o​t​ ​i​n​ ​a​ ​m​e​s​s​a​g​e​ ​i​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​h​a​n​n​e​l​.​ ​U​s​e​ ​t​h​i​s​ ​t​o​ ​r​e​s​p​o​n​d​ ​t​o​ ​d​i​r​e​c​t​ ​r​e​q​u​e​s​t​s​.
+					 */
+					longDesc: string
+					options: {
+						channel: {
+							/**
+							 * C​h​a​n​n​e​l
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​m​e​n​t​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​h​a​n​n​e​l​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​b​o​t​ ​m​e​n​t​i​o​n​s​.​ ​M​a​k​e​ ​s​u​r​e​ ​t​h​e​ ​b​o​t​ ​i​s​ ​a​ ​m​e​m​b​e​r​ ​o​f​ ​t​h​e​ ​c​h​a​n​n​e​l​.
+							 */
+							longDesc: string
+						}
 					}
 				}
 			}
@@ -152675,7 +153547,7 @@ export type TranslationFunctions = {
 		}
 		AmazonEC2: {
 			/**
-			 * AWS EC2
+			 * Amazon EC2
 			 */
 			displayName: () => LocalizedString
 			groups: {
@@ -152694,7 +153566,7 @@ export type TranslationFunctions = {
 			longDesc: () => LocalizedString
 			connectionMessage: {
 				/**
-				 * Connect to AWS EC2
+				 * Connect to Amazon EC2
 				 */
 				title: () => LocalizedString
 				/**
@@ -153083,7 +153955,7 @@ export type TranslationFunctions = {
 		}
 		AmazonS3: {
 			/**
-			 * AWS S3
+			 * Amazon S3
 			 */
 			displayName: () => LocalizedString
 			groups: {
@@ -153106,7 +153978,7 @@ export type TranslationFunctions = {
 			longDesc: () => LocalizedString
 			connectionMessage: {
 				/**
-				 * Connect to AWS S3
+				 * Connect to Amazon S3
 				 */
 				title: () => LocalizedString
 				/**
@@ -154627,7 +155499,7 @@ export type TranslationFunctions = {
 		}
 		AmazonCloudFront: {
 			/**
-			 * CloudFront
+			 * Amazon CloudFront
 			 */
 			displayName: () => LocalizedString
 			groups: {
@@ -155443,7 +156315,7 @@ export type TranslationFunctions = {
 		}
 		AmazonSNS: {
 			/**
-			 * AWS SNS
+			 * Amazon SNS
 			 */
 			displayName: () => LocalizedString
 			groups: {
@@ -156724,7 +157596,7 @@ export type TranslationFunctions = {
 		}
 		AmazonSQS: {
 			/**
-			 * AWS SQS
+			 * Amazon SQS
 			 */
 			displayName: () => LocalizedString
 			groups: {
@@ -156742,16 +157614,16 @@ export type TranslationFunctions = {
 			 */
 			shortDesc: () => LocalizedString
 			/**
-			 * The AWS SQS integration provides comprehensive queue management and message handling capabilities for Amazon Simple Queue Service. Create and manage queues, send messages (including JSON), receive messages with polling triggers, and automate your message-driven architectures with reliable, scalable queue operations.
+			 * The Amazon SQS integration provides comprehensive queue management and message handling capabilities for Amazon Simple Queue Service. Create and manage queues, send messages (including JSON), receive messages with polling triggers, and automate your message-driven architectures with reliable, scalable queue operations.
 			 */
 			longDesc: () => LocalizedString
 			connectionMessage: {
 				/**
-				 * Connect to AWS SQS
+				 * Connect to Amazon SQS
 				 */
 				title: () => LocalizedString
 				/**
-				 * To connect to AWS SQS, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
+				 * To connect to Amazon SQS, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
 		
 			## Creating AWS Credentials
 		
@@ -176746,6 +177618,36 @@ export type TranslationFunctions = {
 						}
 					}
 				}
+				create_invoice_from_estimate: {
+					/**
+					 * Create Invoice from Estimate
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Convert an estimate into an invoice in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new invoice by converting an existing estimate, copying all line items and linking the invoice back to the original estimate
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						estimate_id: {
+							/**
+							 * Estimate ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The estimate to convert
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the estimate to convert into an invoice. Only Pending and Accepted estimates can be converted
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 				create_item: {
 					/**
 					 * Create Item
@@ -177259,6 +178161,92 @@ export type TranslationFunctions = {
 									}
 								}
 							}
+						}
+					}
+				}
+				create_payment: {
+					/**
+					 * Create Payment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new payment in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new payment record for a customer, optionally linked to one or more invoices for invoicing workflows
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer: {
+							/**
+							 * Customer
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer making the payment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the customer who is making this payment
+							 */
+							longDesc: () => LocalizedString
+						}
+						total_amount: {
+							/**
+							 * Total Amount
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The total payment amount
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The total monetary amount of the payment being received
+							 */
+							longDesc: () => LocalizedString
+						}
+						invoice_ids: {
+							/**
+							 * Invoice IDs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Invoices to apply payment to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of invoice IDs to link this payment to. The payment amount will be distributed evenly across the specified invoices
+							 */
+							longDesc: () => LocalizedString
+						}
+						payment_date: {
+							/**
+							 * Payment Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The date the payment was received
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The transaction date for this payment. Defaults to the current date if not specified
+							 */
+							longDesc: () => LocalizedString
+						}
+						memo: {
+							/**
+							 * Memo
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * A private note for this payment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An internal memo or note about this payment that is not visible to the customer
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}
@@ -177871,6 +178859,168 @@ export type TranslationFunctions = {
 									}
 								}
 							}
+						}
+					}
+				}
+				create_refund_receipt: {
+					/**
+					 * Create Refund Receipt
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new refund receipt in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Create a new refund receipt to document a return of funds to a customer via check, credit card, or bank transfer
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer receiving the refund
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier of the customer who will receive this refund
+							 */
+							longDesc: () => LocalizedString
+						}
+						lines: {
+							/**
+							 * Line Items
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of line items for the refund
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The detailed list of items or services being refunded
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										amount: {
+											/**
+											 * Amount
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The refund amount for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The total monetary amount being refunded for this specific line item
+											 */
+											longDesc: () => LocalizedString
+										}
+										description: {
+											/**
+											 * Description
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Description of the refund line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * A detailed description of what this refund line item represents
+											 */
+											longDesc: () => LocalizedString
+										}
+										quantity: {
+											/**
+											 * Quantity
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The quantity being refunded
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The number of units of the item being refunded
+											 */
+											longDesc: () => LocalizedString
+										}
+										unit_price: {
+											/**
+											 * Unit Price
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The price per unit
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The cost per individual unit of the item being refunded
+											 */
+											longDesc: () => LocalizedString
+										}
+										item_id: {
+											/**
+											 * Item ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The item for this line
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the item being refunded
+											 */
+											longDesc: () => LocalizedString
+										}
+										tax_code_id: {
+											/**
+											 * Tax Code ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The tax code for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the tax code to apply to this refund line item
+											 */
+											longDesc: () => LocalizedString
+										}
+										class_id: {
+											/**
+											 * Class ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The class for this line item
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The unique identifier of the class to categorize this refund line item
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						memo: {
+							/**
+							 * Memo
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * A private note for this refund receipt
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An internal memo or note about this refund receipt
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}
@@ -178815,6 +179965,50 @@ export type TranslationFunctions = {
 									}
 								}
 							}
+						}
+					}
+				}
+				void_transaction: {
+					/**
+					 * Void Transaction
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Void a transaction in QuickBooks
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Void a transaction in QuickBooks, zeroing all amounts and marking it as voided. Supports invoices, payments, sales receipts, and bill payments
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						transaction_type: {
+							/**
+							 * Transaction Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The type of transaction to void
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The entity type of the transaction to void. Supported types: Invoice, Payment, SalesReceipt, BillPayment
+							 */
+							longDesc: () => LocalizedString
+						}
+						transaction_id: {
+							/**
+							 * Transaction ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The unique identifier of the transaction
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The QuickBooks ID of the transaction that you want to void
+							 */
+							longDesc: () => LocalizedString
 						}
 					}
 				}
@@ -209009,15 +210203,171 @@ export type TranslationFunctions = {
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Fires whenever an existing contact’s details are updated in your Freshdesk instance. For example, changes to name, phone number, email, or custom fields.
+					 * Fires whenever an existing contact's details are updated in your Freshdesk instance. For example, changes to name, phone number, email, or custom fields.
 					 */
 					longDesc: () => LocalizedString
 					event_info: {
 						/**
-						 * Structure and types for Freshdesk’s updated contact data payload.
+						 * Structure and types for Freshdesk's updated contact data payload.
 						 */
 						desc: () => LocalizedString
 					}
+				}
+			}
+			expressions: {
+				'&&': {
+					/**
+					 * And
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Logical AND operator
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Combines multiple conditions where all must be true
+					 */
+					longDesc: () => LocalizedString
+				}
+				'||': {
+					/**
+					 * Or
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Logical OR operator
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Combines multiple conditions where at least one must be true
+					 */
+					longDesc: () => LocalizedString
+				}
+				'==': {
+					/**
+					 * Equals
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field equals value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field equals the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'!=': {
+					/**
+					 * Not Equals
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field does not equal value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field does not equal the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'>': {
+					/**
+					 * Greater Than
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is greater than value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is greater than the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'>=': {
+					/**
+					 * Greater Than or Equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is greater than or equal to value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is greater than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'<': {
+					/**
+					 * Less Than
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is less than value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is less than the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'<=': {
+					/**
+					 * Less Than or Equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is less than or equal to value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is less than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				contains: {
+					/**
+					 * Contains
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field contains value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field contains the specified substring
+					 */
+					longDesc: () => LocalizedString
+				}
+				'is-set': {
+					/**
+					 * Is Set
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field has a value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field has a value (is not empty)
+					 */
+					longDesc: () => LocalizedString
+				}
+				'is-not-set': {
+					/**
+					 * Is Not Set
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field has no value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field has no value (is empty)
+					 */
+					longDesc: () => LocalizedString
 				}
 			}
 		}
@@ -245439,6 +246789,156 @@ export type TranslationFunctions = {
 						}
 					}
 				}
+				delete_message: {
+					groups: {
+						/**
+						 * Messages
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Delete Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Delete a message from a channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Delete a specific message from a Slack channel. You need the message timestamp to identify which message to delete.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The channel containing the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the channel where the message was posted.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timestamp: {
+							/**
+							 * Message Timestamp
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Timestamp of the message to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The timestamp (ts) of the message you want to delete. You can also paste a Slack message link.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				pin_message: {
+					groups: {
+						/**
+						 * Messages
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Pin Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Pin a message to a channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Pin a specific message to a channel so it appears in the channel details. Pinned messages are easily accessible for all channel members.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The channel containing the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the channel where the message is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timestamp: {
+							/**
+							 * Message Timestamp
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Timestamp of the message to pin
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The timestamp (ts) of the message you want to pin. You can also paste a Slack message link.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				unpin_message: {
+					groups: {
+						/**
+						 * Messages
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Unpin Message
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Unpin a message from a channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Remove a pin from a specific message in a channel. The message itself is not deleted.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The channel containing the message
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the channel where the pinned message is located.
+							 */
+							longDesc: () => LocalizedString
+						}
+						timestamp: {
+							/**
+							 * Message Timestamp
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Timestamp of the message to unpin
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The timestamp (ts) of the message you want to unpin. You can also paste a Slack message link.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 				create_channel: {
 					groups: {
 						/**
@@ -245484,6 +246984,142 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * If enabled, create a private channel instead of a public one.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				archive_channel: {
+					groups: {
+						/**
+						 * Channels
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Archive Channel
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Archive a Slack channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Archive a channel in your Slack workspace. Archived channels are read-only and hidden from the channel list by default.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The channel to archive
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the channel you want to archive.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				unarchive_channel: {
+					groups: {
+						/**
+						 * Channels
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Unarchive Channel
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Unarchive a Slack channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Restore an archived channel so it becomes active again. Members will be able to post messages once the channel is unarchived.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The archived channel to restore
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the archived channel you want to unarchive.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_channels: {
+					groups: {
+						/**
+						 * Channels
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Channels
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List channels in the workspace
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of channels in your Slack workspace. You can filter by channel type and whether to include archived channels.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						types: {
+							/**
+							 * Channel Types
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Types of channels to include
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Comma-separated list of channel types. Options: public_channel, private_channel, mpim, im. Default is public_channel,private_channel.
+							 */
+							longDesc: () => LocalizedString
+						}
+						excludeArchived: {
+							/**
+							 * Exclude Archived
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Exclude archived channels
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, archived channels are excluded from the results. Default is true.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum channels to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of channels to retrieve. Default is 200.
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -245662,6 +247298,78 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * ID of user to update. Only admins on paid teams can update other users.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_users: {
+					groups: {
+						/**
+						 * Users
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * List Users
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List users in the workspace
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve a list of users in your Slack workspace including their profile information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum users to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of users to retrieve. Default is 200.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_user_info: {
+					groups: {
+						/**
+						 * Users
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * Get User Info
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get detailed information about a user
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieve detailed profile and account information for a specific Slack user by their user ID.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						userId: {
+							/**
+							 * User
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The user to get information for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the user whose information you want to retrieve.
 							 */
 							longDesc: () => LocalizedString
 						}
@@ -246105,6 +247813,42 @@ export type TranslationFunctions = {
 					 */
 					longDesc: () => LocalizedString
 					options: {
+					}
+				}
+				app_mention: {
+					groups: {
+						/**
+						 * Messages
+						 */
+						'0': () => LocalizedString
+					}
+					/**
+					 * App Mention
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when the bot is mentioned in a channel
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * This trigger fires whenever someone mentions the bot in a message in the specified channel. Use this to respond to direct requests.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						channel: {
+							/**
+							 * Channel
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The channel to monitor for mentions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the channel to monitor for bot mentions. Make sure the bot is a member of the channel.
+							 */
+							longDesc: () => LocalizedString
+						}
 					}
 				}
 			}

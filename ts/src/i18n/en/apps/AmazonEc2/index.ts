@@ -1,12 +1,12 @@
 /* eslint-disable max-len */
 const AmazonEc2AppEn = {
-  displayName: 'AWS EC2',
+  displayName: 'Amazon EC2',
   groups: ['DevOps & Cloud Infrastructure'],
   shortDesc: 'Connect to Amazon EC2 to manage and automate your cloud infrastructure operations.',
   longDesc:
     'The Amazon EC2 integration provides comprehensive actions and triggers to interact with Amazon Elastic Compute Cloud services. Manage instances, volumes, security groups, snapshots, and other EC2 resources to automate your cloud infrastructure workflows and monitoring.',
   connectionMessage: {
-    title: 'Connect to AWS EC2',
+    title: 'Connect to Amazon EC2',
     content: `To connect to Amazon EC2, you will need your **AWS Access Key ID**, **Secret Access Key**, and **Region**.
 
 ## Creating AWS Credentials

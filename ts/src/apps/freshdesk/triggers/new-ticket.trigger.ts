@@ -1,4 +1,5 @@
-import { EQoreAppActionCode, QoreAppCreator, QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { EQoreAppActionCode, QoreAppCreator } from '@qoretechnologies/ts-toolkit';
+import { freshdeskClient } from '../client';
 import { FRESHDESK_APP_NAME } from '../constants';
 import {
   FreshdeskTicketPriorityAllowedValues,
@@ -72,65 +73,61 @@ const FreshdeskNewTicketTrigger = QoreAppCreator.createLocalizedTrigger({
       );
     }
 
-    const response = await QorusRequest.post<{ data: { name: string; id: number } }>(
+    const responseData = await freshdeskClient.post<{ name: string; id: number }>(
+      '/api/v2/automations/1/rules',
       {
-        path: '/api/v2/automations/1/rules',
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        data: {
-          name: 'Qorus New Ticket Trigger ',
-          active: true,
-          conditions: [
-            {
-              name: 'condition_set_1',
-              match_type: 'any',
-              properties: [
-                {
-                  field_name: 'status',
-                  resource_type: 'ticket',
-                  operator: 'in',
-                  value: ticketStatus,
-                },
-                ...(ticketPriority.length
-                  ? [
-                      {
-                        field_name: 'priority',
-                        resource_type: 'ticket',
-                        operator: 'in',
-                        value: ticketPriority,
-                      },
-                    ]
-                  : []),
-              ],
-            },
-          ],
-          actions: [
-            {
-              field_name: 'trigger_webhook',
-              request_type: 'POST',
-              url,
-              content_layout: '1',
-              content_type: 'JSON',
-              content: {
-                ticket_id: '{{ticket.id}}',
-                ticket_subject: '{{ticket.subject}}',
-                ticket_description: '{{ticket.description}}',
-                ticket_url: '{{ticket.url}}',
-                ticket_due_by_time: '{{ticket.due_by_time}}',
-                ticket_status: '{{ticket.status}}',
-                ticket_priority: '{{ticket.priority}}',
-                ticket_source: '{{ticket.source}}',
-                ticket_ticket_type: '{{ticket.ticket_type}}',
+        name: 'Qorus New Ticket Trigger ',
+        active: true,
+        conditions: [
+          {
+            name: 'condition_set_1',
+            match_type: 'any',
+            properties: [
+              {
+                field_name: 'status',
+                resource_type: 'ticket',
+                operator: 'in',
+                value: ticketStatus,
               },
+              ...(ticketPriority.length
+                ? [
+                    {
+                      field_name: 'priority',
+                      resource_type: 'ticket',
+                      operator: 'in',
+                      value: ticketPriority,
+                    },
+                  ]
+                : []),
+            ],
+          },
+        ],
+        actions: [
+          {
+            field_name: 'trigger_webhook',
+            request_type: 'POST',
+            url,
+            content_layout: '1',
+            content_type: 'JSON',
+            content: {
+              ticket_id: '{{ticket.id}}',
+              ticket_subject: '{{ticket.subject}}',
+              ticket_description: '{{ticket.description}}',
+              ticket_url: '{{ticket.url}}',
+              ticket_due_by_time: '{{ticket.due_by_time}}',
+              ticket_status: '{{ticket.status}}',
+              ticket_priority: '{{ticket.priority}}',
+              ticket_source: '{{ticket.source}}',
+              ticket_ticket_type: '{{ticket.ticket_type}}',
             },
-          ],
-        },
+          },
+        ],
       },
-      { url: `https://${subdomain}.freshdesk.com`, endpointId: 'Freshdesk' }
+      {
+        token,
+        connectionOptions: { subdomain },
+      }
     );
-
-    const responseData = response?.data;
 
     if (!responseData) return;
 
@@ -148,15 +145,10 @@ const FreshdeskNewTicketTrigger = QoreAppCreator.createLocalizedTrigger({
 
     const { webhook } = regInfo;
 
-    await QorusRequest.deleteReq<any>(
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        path: `/api/v2/automations/1/rules/${webhook.id}`,
-      },
-      { url: `https://${subdomain}.freshdesk.com`, endpointId: 'Freshdesk' }
-    );
+    await freshdeskClient.delete(`/api/v2/automations/1/rules/${webhook.id}`, {
+      token,
+      connectionOptions: { subdomain },
+    });
   },
 
   get_example_event_data: async (context) => {
@@ -169,24 +161,15 @@ const FreshdeskNewTicketTrigger = QoreAppCreator.createLocalizedTrigger({
       );
     }
 
-    const response = await QorusRequest.get<{
-      data: TTicket[];
-    }>(
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        path: '/api/v2/tickets',
-        params: {
-          per_page: '1',
-          order_by: 'created_at',
-          order_type: 'desc',
-        },
+    const responseData = await freshdeskClient.get<TTicket[]>('/api/v2/tickets', {
+      token,
+      connectionOptions: { subdomain },
+      params: {
+        per_page: '1',
+        order_by: 'created_at',
+        order_type: 'desc',
       },
-      { url: `https://${subdomain}.freshdesk.com`, endpointId: 'Freshdesk' }
-    );
-
-    const responseData = response?.data;
+    });
 
     if (!responseData?.length) {
       return;

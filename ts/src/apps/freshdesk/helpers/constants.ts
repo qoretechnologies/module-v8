@@ -1,4 +1,5 @@
-import { IQoreAllowedValue, QorusRequest } from '@qoretechnologies/ts-toolkit';
+import { IQoreAllowedValue } from '@qoretechnologies/ts-toolkit';
+import { freshdeskClient } from '../client';
 
 export type TFetchFreshdeskAllowedValuesOptions<ItemType = unknown> = {
   token: string;
@@ -12,29 +13,19 @@ export const fetchFreshdeskAllowedValues = async <ItemType = unknown>(
 ): Promise<IQoreAllowedValue[]> => {
   const { path, subdomain, token } = options;
 
-  const response = await QorusRequest.get<{
-    data: ItemType[];
-  }>(
-    {
-      path,
-      params: {
-        per_page: '100',
-      },
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    },
-    {
-      url: `https://${subdomain}.freshdesk.com`,
-      endpointId: 'Freshdesk',
+  try {
+    const data = await freshdeskClient.get<ItemType[]>(path, {
+      token,
+      connectionOptions: { subdomain },
+      params: { per_page: '100' },
+    });
+
+    if (!data) {
+      return [];
     }
-  );
 
-  const data = response?.data;
-
-  if (!data) {
+    return data.map(options.mapItemToAllowedValue);
+  } catch {
     return [];
   }
-
-  return data.map(options.mapItemToAllowedValue);
 };
