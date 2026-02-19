@@ -72,6 +72,8 @@ export default (locale: Locales) =>
         'users:read.email',
         'files:write',
         'files:read',
+        'pins:read',
+        'pins:write',
       ],
       oauth2_auth_args: {
         user_scope: [
