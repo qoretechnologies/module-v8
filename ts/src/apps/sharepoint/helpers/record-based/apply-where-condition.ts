@@ -23,17 +23,11 @@ const escapeODataValue = (value: string): string => {
 
 /**
  * Format a value for OData filter based on its type.
- * - Strings are wrapped in single quotes
+ * - Strings are wrapped in single quotes (dates arrive as ISO 8601 strings and are handled correctly)
  * - Numbers and booleans are used as-is
- * - Dates are formatted as ISO strings
  */
 const formatODataValue = (value: unknown): string => {
   if (typeof value === 'string') {
-    // Check if it looks like a date
-    const date = new Date(value);
-    if (!isNaN(date.getTime()) && value.includes('-') && value.length >= 10) {
-      return `'${date.toISOString()}'`;
-    }
     return `'${escapeODataValue(value)}'`;
   }
   if (typeof value === 'number') {

@@ -438,6 +438,22 @@ describe('SharePoint', () => {
         expect(filter).toBe('fields/Notes eq null');
       });
 
+      it('Should pass date strings through without transformation', () => {
+        const filter = buildODataFilter({
+          exp: '==',
+          args: [{ field: 'DueDate' }, { value: '2026-01-15T10:30:00.000Z' }],
+        });
+        expect(filter).toBe("fields/DueDate eq '2026-01-15T10:30:00.000Z'");
+      });
+
+      it('Should not misidentify date-like strings as dates', () => {
+        const filter = buildODataFilter({
+          exp: '==',
+          args: [{ field: 'Title' }, { value: '2026-01-01-report' }],
+        });
+        expect(filter).toBe("fields/Title eq '2026-01-01-report'");
+      });
+
       it('Should throw on unsupported operator', () => {
         expect(() =>
           buildODataFilter({
