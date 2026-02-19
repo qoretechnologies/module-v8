@@ -141,7 +141,6 @@ const NEW_APPS = {
   azureDevops,
   bamboohr,
   baserow,
-  bigml,
   bitbucket,
   brevo,
   browserAi,
@@ -223,6 +222,7 @@ const NEW_APPS = {
 } as const;
 
 const EXISTING_APPS = {
+  bigml,
   salesforce,
   dynamics,
   businessCentral,
