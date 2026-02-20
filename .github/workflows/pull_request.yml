@@ -202,18 +202,21 @@ jobs:
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Get repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
 
       - name: Print head git commit message
         id: get_head_commit_message
-        run: echo "::set-output name=HEAD_COMMIT_MESSAGE::$(git show -s --format=%s)"
+        run: echo "HEAD_COMMIT_MESSAGE=$(git show -s --format=%s)" >> "$GITHUB_OUTPUT"
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 20.19.5
+
+      - name: Enable Corepack
+        run: corepack enable
 
       # Install App Catalogue dependencies
       - name: Installing modules
