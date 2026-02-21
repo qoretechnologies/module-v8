@@ -34,20 +34,18 @@ qclass JavaScriptObject [arg=QoreV8Object* o; ns=V8];
 /** @param pgm the JavaScriptProgram where the object will be created from
 */
 JavaScriptObject::constructor(JavaScriptProgram[QoreV8ProgramData] pgm) {
-    ReferenceHolder<QoreV8ProgramData> holder(pgm, xsink);
-
-    QoreV8ProgramHelper v8h(xsink, pgm);
+    QoreV8ProgramHelper v8h(xsink, *pgm);
     if (*xsink) {
         return;
     }
 
     v8::Isolate* isolate = pgm->getIsolate();
 
-    //printd(5, "JavaScriptObject::constructor() pgm: %p isolate: %p\n", pgm, isolate);
+    //printd(5, "JavaScriptObject::constructor() pgm: %p isolate: %p\n", *pgm, isolate);
 
     v8::Local<v8::Object> obj = v8::Object::New(isolate);
     //printd(5, "JavaScriptObject::constructor() created %p\n", *obj);
-    self->setPrivate(CID_JAVASCRIPTOBJECT, new QoreV8Object(pgm, obj));
+    self->setPrivate(CID_JAVASCRIPTOBJECT, new QoreV8Object(*pgm, obj));
 }
 
 //! Call the object as a function and return the result
