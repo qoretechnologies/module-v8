@@ -241,7 +241,7 @@ int QoreV8Program::init(ExceptionSink* xsink) {
             "process.cwd() + '/');\nglobalThis.require = publicRequire;\n");
         if (transpile_ts) {
             envstr.concat(
-                "const _tsStrip = require('node:module').stripTypeScriptTypes;\n"
+                "const _tsStrip = require('module').stripTypeScriptTypes;\n"
                 "if (typeof _tsStrip !== 'function') {\n"
                 "  throw new Error('TypeScript support requires Node.js 24+ "
                     "with stripTypeScriptTypes');\n"
