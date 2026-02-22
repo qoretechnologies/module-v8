@@ -432,6 +432,151 @@ var keys = Object.keys(qore.Qore);
 // keys contains namespace names, class names, function names, constants, and enums
     @endcode
 
+    @section v8_inprocess_pool In-Process JavaScript Program Pool
+
+    The @ref TypeScriptActionInterface::JavaScriptInProcessPool "JavaScriptInProcessPool" class manages a pool
+    of identical @ref V8::JavaScriptProgram "JavaScriptProgram" instances for concurrent thread access
+    <b>without IPC overhead</b>. Unlike the out-of-process pool (which spawns child processes and communicates
+    over UNIX sockets with YAML serialization), the in-process pool runs JavaScript directly in the %Qore
+    process via V8 isolates.
+
+    Each pool program is a full clone of the original: same source, same init code, same closures. The pool
+    creates programs on demand when all existing ones are busy, up to an optional maximum size. When the
+    maximum is reached, requesting threads block until a program becomes available.
+
+    @subsection v8_inprocess_pool_dispatch Dispatch Priority
+
+    When a data provider executes an async call, the dispatch order is:
+    -# <b>In-process pool</b> — lowest latency, no IPC overhead
+    -# <b>Out-of-process pool</b> — IPC via \c ts-proxy child processes
+    -# <b>Single-program direct</b> — serialized on one program
+
+    @subsection v8_inprocess_pool_ondemand On-Demand Pool (Recommended)
+
+    The simplest approach: enable on-demand creation and let the pool be lazily created on first use.
+    All data provider dispatch will use the in-process pool transparently.
+
+    @code{.py}
+%requires TypeScriptActionInterface
+
+# Enable on-demand with a pool size limit of 8 programs
+TypeScriptActionInterface::startInProcessServerOnDemand(NOTHING, 8);
+
+# The pool is created automatically on first checkInProcessServer() call.
+# All data provider dispatch (execAsyncValueArgs, getDynamicDataType, etc.)
+# will use the in-process pool transparently.
+
+# To shut down cleanly:
+TypeScriptActionInterface::shutdownInProcessServer();
+TypeScriptActionInterface::disableInProcessServerOnDemand();
+    @endcode
+
+    @subsection v8_inprocess_pool_ondemand_pool On-Demand with Specific Pool
+
+    If you have a specific @ref TypeScriptActionInterface::JavaScriptProgramPool "JavaScriptProgramPool"
+    (e.g., from a particular script), pass it explicitly:
+
+    @code{.py}
+%requires TypeScriptActionInterface
+
+JavaScriptProgramPool my_pool(source, path, init_callback);
+
+# Use this specific pool for in-process server creation, max 4 concurrent programs
+TypeScriptActionInterface::startInProcessServerOnDemand(my_pool, 4);
+    @endcode
+
+    @subsection v8_inprocess_pool_direct Direct Pool Injection
+
+    For full control, create the pool yourself and inject it:
+
+    @code{.py}
+%requires TypeScriptActionInterface
+
+JavaScriptProgramPool pool(source, path, init_callback);
+JavaScriptInProcessPool ip(pool, 16);  # max 16 concurrent programs
+
+TypeScriptActionInterface::setInProcessServer(ip);
+
+# Later:
+TypeScriptActionInterface::shutdownInProcessServer();
+    @endcode
+
+    @subsection v8_inprocess_pool_dp Via DataProvider Options
+
+    In a server environment, set the \c DPO_EnableInProcessServers option before initialization:
+
+    @code{.py}
+DataProvider::addOptions(DPO_EnableInProcessServers);
+    @endcode
+
+    This causes \c TypeScriptActionInterface::init() to set the on-demand flag so the pool is lazily
+    created on first use.
+
+    @subsection v8_inprocess_pool_direct_api Direct Pool API
+
+    The pool can also be used directly without the \c TypeScriptActionInterface wrapper:
+
+    @code{.py}
+%requires TypeScriptActionInterface
+
+JavaScriptProgramPool pool(source, path, init_callback);
+JavaScriptInProcessPool ip(pool, 4);
+
+# Acquire a program for this thread
+hash<InProcessProgramInfo> info = ip.get();
+on_exit ip.release(info);
+
+# Use info.pgm (the JavaScriptProgram) directly
+auto result = info.pgm.callFunction("myFunction", args);
+
+# Or use info.call_map to look up closures by key
+code my_closure = info.call_map{api_key};
+auto result = my_closure(args);
+    @endcode
+
+    For dispatching via the standard async call path:
+
+    @code{.py}
+auto result = ip.execCall(api_info, args);
+    @endcode
+
+    @subsection v8_inprocess_pool_concurrent Concurrent Access Example
+
+    The pool handles concurrent access transparently. Each thread gets its own program:
+
+    @code{.py}
+%requires TypeScriptActionInterface
+
+JavaScriptProgramPool pool(source, path, init_callback);
+# Create a bounded pool with max 4 concurrent programs
+JavaScriptInProcessPool ip(pool, 4);
+
+# Launch 8 threads — 4 will execute concurrently, 4 will wait
+list<int> tids;
+Counter done(8);
+for (int i = 0; i < 8; ++i) {
+    tids += background sub () {
+        on_exit done.dec();
+        hash<InProcessProgramInfo> info = ip.get();
+        on_exit ip.release(info);
+
+        # Each thread has its own V8 isolate — no serialization
+        auto result = info.pgm.callFunction("computeResult", (i,));
+    }();
+}
+done.waitForZero();
+ip.shutdown();
+    @endcode
+
+    @subsection v8_inprocess_pool_sizing Pool Sizing
+
+    - <b>\c NOTHING (unlimited)</b>: Pool grows without bound. Each program is a V8
+      isolate with its own heap, so unbounded growth can consume significant memory.
+      Use only when the number of concurrent threads is naturally limited.
+    - <b>Fixed \c max_size</b>: Threads beyond the limit block in \c get() until a program
+      is released. Choose based on expected concurrency and available memory.
+      A reasonable starting point is the number of CPU cores.
+
     @section javascript_javascript_to_qore JavaScript to Qore Data Conversions
 
     |!Source JavaScript Type|!Target %Qore Type
@@ -502,6 +647,21 @@ JavaScriptProgram::setSaveReferenceCallback(callback);
     @endcode
 
     @section v8releasenotes v8 Module Release Notes
+
+    @subsection v8_2_2 v8 Module Version 2.2
+    - added the @ref TypeScriptActionInterface::JavaScriptInProcessPool "JavaScriptInProcessPool" class for
+      concurrent in-process JavaScript execution without IPC overhead
+      (<a href="https://github.com/qoretechnologies/module-v8/issues/225">issue 225</a>)
+    - added @ref TypeScriptActionInterface::InProcessProgramInfo "InProcessProgramInfo" hashdecl
+    - added on-demand pool creation via
+      @ref TypeScriptActionInterface::TypeScriptActionInterface::startInProcessServerOnDemand()
+      "TypeScriptActionInterface::startInProcessServerOnDemand()" with configurable maximum pool size
+    - added direct pool injection via
+      @ref TypeScriptActionInterface::TypeScriptActionInterface::setInProcessServer()
+      "TypeScriptActionInterface::setInProcessServer()"
+    - added clone-mode closure capture mechanism using thread-local
+      @ref TypeScriptActionInterfacePriv::Priv::PoolCloneModeHelper "PoolCloneModeHelper" to create
+      pool programs without modifying global state
 
     @subsection v8_2_1 v8 Module Version 2.1
     - added the @ref V8::TypeScriptProgram "TypeScriptProgram" class for runtime TypeScript transpilation and

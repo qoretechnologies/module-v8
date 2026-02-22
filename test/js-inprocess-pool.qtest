@@ -1,0 +1,627 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+
+%modern
+
+%requires QUnit
+%requires RestClient
+%requires ../qlib/TypeScriptActionInterface
+%requires v8
+
+%exec-class JavaScriptInProcessPoolTest
+
+public class JavaScriptInProcessPoolTest inherits QUnit::Test {
+    private {
+        Logger logger;
+        #! The test pool created in globalSetUp with proper init callback
+        static JavaScriptProgramPool test_pool;
+    }
+
+    constructor() : Test("JavaScriptInProcessPoolTest", "1.0") {
+        setupLogger();
+
+        addTestCase("pool creation", \poolCreationTest());
+        addTestCase("get and release", \getAndReleaseTest());
+        addTestCase("thread reuse", \threadReuseTest());
+        addTestCase("concurrent access", \concurrentAccessTest());
+        addTestCase("closure mapping", \closureMappingTest());
+        addTestCase("dispatch integration", \dispatchIntegrationTest());
+        addTestCase("error handling", \errorHandlingTest());
+        addTestCase("shutdown safety", \shutdownSafetyTest());
+        addTestCase("bounded pool contention", \boundedPoolContentionTest());
+        addTestCase("sustained contention throughput", \sustainedContentionTest());
+        addTestCase("shutdown under contention", \shutdownUnderContentionTest());
+        addTestCase("on-demand max size", \onDemandMaxSizeTest());
+        addTestCase("shutdown", \shutdownTest());
+
+        # Return for compatibility with test harnesses that check the script's return value
+        set_return_value(main());
+    }
+
+    setupLogger() {
+        LoggerLevel level;
+        if (m_options.verbose > 3) {
+            level = LoggerLevel::getLevelDebug();
+        } else if (m_options.verbose > 2) {
+            level = LoggerLevel::getLevelInfo();
+        } else {
+            level = LoggerLevel::getLevelFatal();
+        }
+        logger = new Logger("console", level);
+        if (m_options.verbose > 2) {
+            logger.addAppender(new StdoutAppender());
+        } else {
+            logger.addAppender(new LoggerAppenderNull());
+        }
+        DataProvider::setGlobalLogger(logger);
+    }
+
+    globalSetUp() {
+        chdir(get_script_dir());
+        # Create pool with a proper init callback that calls registerAppActions
+        # This ensures clone programs also register apps (matching the production pattern)
+        string source = "var exports = {};
+// Returns a Promise that resolves immediately with the state of 'promise'
+function promiseState(promise) {
+  const pendingState = { status: 'pending' };
+  return Promise.race([promise, pendingState]).then(
+    (value) =>
+      value === pendingState ? value : { status: 'fulfilled', value },
+    (reason) => ({ status: 'rejected', reason }),
+  );
+}
+
+async function runWithTimeout(promise, delay) {
+  if (typeof promise === 'function') {
+    promise = promise();
+  }
+  if (!(promise instanceof Promise)) {
+    return promise;
+  }
+
+  // this inspects the state of the promise and returns immediately
+  // without this call, there is an 8-second delay when 'promise' rejects
+  await promiseState(promise);
+
+  // timeout variable to cancel the timeout in case the async function is faster
+  let timeout;
+  // get a promise to a cancelable timeout
+  let top = new Promise((_, reject) => (timeout = setTimeout(() => reject(new Error('Request timed out')), delay)));
+  // run the promise and cancel the timeout
+  return Promise.race([
+    promise,
+    top
+  ]).finally(() => {
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+  });
+}\n" + File::readTextFile("example.js");
+        test_pool = new JavaScriptProgramPool(source, "example.js",
+            sub (JavaScriptProgram pgm) {
+                JavaScriptObject global = pgm.getGlobal();
+                global.exports.actionsCatalogue.registerAppActions(TypeScriptActionInterface::Api);
+            });
+    }
+
+    globalTearDown() {
+        # ensure in-process server is shut down
+        TypeScriptActionInterface::shutdownInProcessServer();
+        TypeScriptActionInterface::disableInProcessServerOnDemand();
+    }
+
+    #! Returns the test pool for use in tests
+    static JavaScriptProgramPool getTestPool() {
+        return test_pool;
+    }
+
+    #! Test that the pool is created with MinPrograms pre-allocated programs
+    private poolCreationTest() {
+        JavaScriptProgramPool pool = getTestPool();
+        assertTrue(exists pool, "A test JavaScriptProgramPool must be registered");
+
+        JavaScriptInProcessPool ip(pool);
+        assertTrue(exists ip, "In-process pool must be created successfully");
+
+        # verify the pool has a unique hash
+        string hash_val = ip.uniqueHash();
+        assertTrue(hash_val.val(), "Pool unique hash must not be empty");
+        assertTrue(hash_val.find("-inprocess") >= 0, "Pool hash must contain '-inprocess' suffix");
+    }
+
+    #! Test that get() acquires a program and release() returns it to idle
+    private getAndReleaseTest() {
+        JavaScriptProgramPool pool = getTestPool();
+        JavaScriptInProcessPool ip(pool);
+
+        # get a program
+        hash<InProcessProgramInfo> info = ip.get();
+        assertTrue(exists info.pgm, "Program must exist in info");
+        assertTrue(exists info.call_map, "Call map must exist in info");
+        assertTrue(info.id.val(), "Program ID must not be empty");
+        assertEq(gettid(), info.tid, "Program must be assigned to current thread");
+
+        # release and verify we can get again
+        ip.release(info);
+
+        # get again - should get same program back (only one in idle pool)
+        hash<InProcessProgramInfo> info2 = ip.get();
+        assertEq(info.id, info2.id, "Should get same program back after release");
+        ip.release(info2);
+    }
+
+    #! Test that the same thread gets the same program on repeated get() calls
+    private threadReuseTest() {
+        JavaScriptProgramPool pool = getTestPool();
+        JavaScriptInProcessPool ip(pool);
+
+        # first get
+        hash<InProcessProgramInfo> info1 = ip.get();
+        string first_id = info1.id;
+
+        # second get on same thread (without releasing) - should return same program
+        hash<InProcessProgramInfo> info2 = ip.get();
+        assertEq(first_id, info2.id, "Same thread must get same program without release");
+
+        ip.release(info1);
+        ip.release(info2);
+    }
+
+    #! Test that concurrent threads get different programs and pool grows on demand
+    private concurrentAccessTest() {
+        JavaScriptProgramPool pool = getTestPool();
+        JavaScriptInProcessPool ip(pool);
+
+        int num_threads = 4;
+        Counter start_barrier(1);
+        Counter done_counter(num_threads);
+        Mutex result_mutex();
+        list<string> program_ids = ();
+        list<string> errors = ();
+
+        for (int i = 0; i < num_threads; ++i) {
+            background sub () {
+                try {
+                    # wait for all threads to start
+                    start_barrier.waitForZero();
+
+                    hash<InProcessProgramInfo> info = ip.get();
+                    on_exit ip.release(info);
+
+                    # hold the program for a bit to force other threads to create new ones
+                    usleep(100ms);
+
+                    result_mutex.lock();
+                    on_exit result_mutex.unlock();
+                    program_ids += info.id;
+                } catch (hash<ExceptionInfo> ex) {
+                    result_mutex.lock();
+                    on_exit result_mutex.unlock();
+                    errors += sprintf("%s: %s", ex.err, ex.desc);
+                }
+                done_counter.dec();
+            }();
+        }
+
+        # release all threads at once
+        start_barrier.dec();
+
+        # wait for all threads to complete
+        done_counter.waitForZero();
+
+        assertEq(0, errors.size(), sprintf("No errors expected; got: %y", errors));
+        assertEq(num_threads, program_ids.size(), "Each thread must get a program");
+
+        # verify that at least some threads got different programs (pool grew)
+        hash<string, bool> unique_ids;
+        map (unique_ids{$1} = True), program_ids;
+        assertTrue(unique_ids.size() > 1,
+            sprintf("Pool must grow: expected >1 unique programs, got %d from %y", unique_ids.size(), program_ids));
+    }
+
+    #! Test that the pooled program's call_map has the expected keys
+    /** Verifies that clone mode captures all closure types:
+        - Action-level: api_function, get_dynamic_request_type
+        - Option-level: get_allowed_values, get_element_allowed_values, get_dependent_options,
+          get_dependent_response_options, get_dynamic_type
+        - App-level REST modifiers: post_auth, conn_update
+    */
+    private closureMappingTest() {
+        JavaScriptProgramPool pool = getTestPool();
+        JavaScriptInProcessPool ip(pool);
+
+        hash<InProcessProgramInfo> info = ip.get();
+        on_exit ip.release(info);
+
+        # Action-level closures
+        assertTrue(info.call_map.hasKey("app-js-test-test-api-api_function"),
+            "Pool must have api_function closure");
+        assertTrue(info.call_map.hasKey("app-js-test-test-api-get_dynamic_request_type-api_function"),
+            "Pool must have get_dynamic_request_type closure");
+
+        # Option-level closures
+        assertTrue(info.call_map.hasKey("app-js-test-test-api-count-get_allowed_values"),
+            "Pool must have get_allowed_values closure for 'count' option");
+        assertTrue(info.call_map.hasKey("app-js-test-test-api-other-get_element_allowed_values"),
+            "Pool must have get_element_allowed_values closure for 'other' option");
+        assertTrue(info.call_map.hasKey("app-js-test-test-api-key-get_dependent_options"),
+            "Pool must have get_dependent_options closure for 'key' option");
+        assertTrue(info.call_map.hasKey("app-js-test-test-api-key-get_dependent_response_options"),
+            "Pool must have get_dependent_response_options closure for 'key' option");
+        assertTrue(info.call_map.hasKey("app-js-test-test-api-dyn-get_dynamic_type"),
+            "Pool must have get_dynamic_type closure for 'dyn' option");
+
+        # App-level REST modifier closures
+        assertTrue(info.call_map.hasKey("app-js-test-post_auth"),
+            "Pool must have post_auth closure from rest_modifiers");
+        assertTrue(info.call_map.hasKey("app-js-test-conn_update"),
+            "Pool must have conn_update closure from rest_modifiers");
+
+        # verify all closures are callable
+        int non_callable = 0;
+        foreach hash<auto> i in (info.call_map.pairIterator()) {
+            if (!i.value.callp()) {
+                ++non_callable;
+            }
+        }
+        assertEq(0, non_callable, "All closures in call_map must be callable");
+        assertTrue(info.call_map.size() > 0, "call_map must not be empty");
+    }
+
+    #! Test dispatching calls through the in-process pool via the data provider path
+    private dispatchIntegrationTest() {
+        # initialize the "js-test" app (triggers registerAppIntern which sets up REST options)
+        TypeScriptActionInterface::initApp("js-test");
+
+        # test making an API call through the pool via the data provider
+        hash<auto> config = {
+            "name": "test",
+            "url": "tsrest-js-test://",
+            "opts": {
+                "token": "x",
+            },
+        };
+        TypeScriptAppRestConnection conn(config);
+
+        AbstractDataProvider parent = TypeScriptActionInterface::getDataProvider("js-test", conn);
+        AbstractDataProvider prov = parent.getChildProviderEx("test-api");
+
+        # create in-process pool from test pool and set it as the global in-process server
+        TypeScriptActionInterface::setInProcessServer(new JavaScriptInProcessPool(getTestPool()));
+        on_exit TypeScriptActionInterface::shutdownInProcessServer();
+
+        # get request type (exercises getDynamicDataType through pool)
+        AbstractDataProviderType t = prov.getRequestType();
+        assertTrue(exists t, "Request type must exist");
+        *hash<string, AbstractDataField> fields = t.getFields();
+        assertTrue(exists fields, "Request type must have fields");
+
+        # test concurrent dispatch through the data provider
+        int num_threads = 3;
+        Counter done(num_threads);
+        Mutex result_mutex();
+        list<bool> results = ();
+        list<string> errors = ();
+
+        for (int i = 0; i < num_threads; ++i) {
+            background sub () {
+                try {
+                    AbstractDataProvider tp = TypeScriptActionInterface::getDataProvider("js-test", conn)
+                        .getChildProviderEx("test-api");
+                    AbstractDataProviderType tt = tp.getRequestType();
+                    result_mutex.lock();
+                    on_exit result_mutex.unlock();
+                    results += exists tt;
+                } catch (hash<ExceptionInfo> ex) {
+                    result_mutex.lock();
+                    on_exit result_mutex.unlock();
+                    errors += sprintf("%s: %s", ex.err, ex.desc);
+                }
+                done.dec();
+            }();
+        }
+
+        done.waitForZero();
+        assertEq(0, errors.size(), sprintf("No concurrent dispatch errors expected; got: %y", errors));
+        assertEq(num_threads, results.size(), "All concurrent threads must complete");
+        assertTrue((foldl $1 && $2, results), "All concurrent results must be successful");
+    }
+
+    #! Test error handling for pool operations
+    private errorHandlingTest() {
+        JavaScriptProgramPool pool = getTestPool();
+        JavaScriptInProcessPool ip(pool);
+
+        # test that execCall with a non-existent key throws
+        hash<AsyncCallInfo> bad_api = <AsyncCallInfo>{
+            "key": "nonexistent-key-that-does-not-exist",
+            "label": "test-bad-key",
+            "type": "test",
+            "to": 30s,
+        };
+        assertThrows("POOL-CALL-ERROR", \ip.execCall(), (bad_api,));
+    }
+
+    #! Test shutdown edge cases: get() after shutdown, double shutdown, release() after shutdown
+    private shutdownSafetyTest() {
+        JavaScriptProgramPool pool = getTestPool();
+
+        # get() after shutdown must throw POOL-SHUTDOWN
+        {
+            JavaScriptInProcessPool ip(pool);
+            hash<InProcessProgramInfo> info = ip.get();
+            ip.shutdown();
+            # release after shutdown is a no-op (program already removed from amap)
+            ip.release(info);
+            assertThrows("POOL-SHUTDOWN", \ip.get());
+        }
+
+        # double shutdown must not crash or deadlock
+        {
+            JavaScriptInProcessPool ip(pool);
+            hash<InProcessProgramInfo> info = ip.get();
+            ip.release(info);
+            ip.shutdown();
+            ip.shutdown();
+            # get after double shutdown still throws
+            assertThrows("POOL-SHUTDOWN", \ip.get());
+        }
+    }
+
+    #! Test that a bounded pool (max_size) forces threads to wait and all complete without deadlock
+    private boundedPoolContentionTest() {
+        JavaScriptProgramPool pool = getTestPool();
+        int max_size = 2;
+        int num_threads = 8;
+        JavaScriptInProcessPool ip(pool, max_size);
+
+        Counter start_barrier(1);
+        Counter done_counter(num_threads);
+        Mutex result_mutex();
+        list<string> program_ids = ();
+        list<string> errors = ();
+
+        for (int i = 0; i < num_threads; ++i) {
+            background sub () {
+                try {
+                    start_barrier.waitForZero();
+
+                    hash<InProcessProgramInfo> info = ip.get();
+                    on_exit ip.release(info);
+
+                    # hold the program briefly to force contention
+                    usleep(50ms);
+
+                    result_mutex.lock();
+                    on_exit result_mutex.unlock();
+                    program_ids += info.id;
+                } catch (hash<ExceptionInfo> ex) {
+                    result_mutex.lock();
+                    on_exit result_mutex.unlock();
+                    errors += sprintf("%s: %s", ex.err, ex.desc);
+                }
+                done_counter.dec();
+            }();
+        }
+
+        # release all threads at once
+        start_barrier.dec();
+
+        # all threads must complete (no deadlock) within a reasonable time
+        done_counter.waitForZero();
+
+        assertEq(0, errors.size(), sprintf("No errors expected in bounded pool; got: %y", errors));
+        assertEq(num_threads, program_ids.size(), "All threads must complete in bounded pool");
+
+        # verify pool stayed within bounds: at most max_size unique programs
+        hash<string, bool> unique_ids;
+        map (unique_ids{$1} = True), program_ids;
+        assertTrue(unique_ids.size() <= max_size,
+            sprintf("Pool must not exceed max_size=%d; got %d unique programs: %y",
+                max_size, unique_ids.size(), keys unique_ids));
+        assertTrue(unique_ids.size() > 0, "At least one program must have been used");
+    }
+
+    #! Test sustained acquire/release throughput under contention on a bounded pool
+    private sustainedContentionTest() {
+        JavaScriptProgramPool pool = getTestPool();
+        int max_size = 2;
+        int num_threads = 4;
+        int iterations_per_thread = 20;
+        JavaScriptInProcessPool ip(pool, max_size);
+
+        Counter start_barrier(1);
+        Counter done_counter(num_threads);
+        Mutex result_mutex();
+        list<int> completed_counts = ();
+        list<string> errors = ();
+
+        for (int i = 0; i < num_threads; ++i) {
+            background sub () {
+                int count = 0;
+                try {
+                    start_barrier.waitForZero();
+
+                    for (int j = 0; j < iterations_per_thread; ++j) {
+                        hash<InProcessProgramInfo> info = ip.get();
+                        on_exit ip.release(info);
+
+                        # minimal work to simulate rapid acquire/release cycling
+                        ++count;
+                    }
+                } catch (hash<ExceptionInfo> ex) {
+                    result_mutex.lock();
+                    on_exit result_mutex.unlock();
+                    errors += sprintf("%s: %s (after %d iterations)", ex.err, ex.desc, count);
+                }
+                result_mutex.lock();
+                on_exit result_mutex.unlock();
+                completed_counts += count;
+                done_counter.dec();
+            }();
+        }
+
+        start_barrier.dec();
+        done_counter.waitForZero();
+
+        assertEq(0, errors.size(), sprintf("No errors in sustained contention; got: %y", errors));
+        assertEq(num_threads, completed_counts.size(), "All threads must report completion");
+        int total = (foldl $1 + $2, completed_counts);
+        assertEq(num_threads * iterations_per_thread, total,
+            sprintf("All iterations must complete: expected %d, got %d", num_threads * iterations_per_thread, total));
+    }
+
+    #! Test that shutdown correctly wakes threads waiting for a bounded pool
+    private shutdownUnderContentionTest() {
+        JavaScriptProgramPool pool = getTestPool();
+        int max_size = 1;
+        JavaScriptInProcessPool ip(pool, max_size);
+
+        # acquire the single program so waiting threads will block
+        hash<InProcessProgramInfo> info = ip.get();
+
+        int num_waiting = 3;
+        Counter started(num_waiting);
+        Counter done_counter(num_waiting);
+        Mutex result_mutex();
+        list<string> got_errors = ();
+
+        for (int i = 0; i < num_waiting; ++i) {
+            background sub () {
+                try {
+                    started.dec();
+                    # this will block because the single program is held by the main thread
+                    hash<InProcessProgramInfo> winfo = ip.get();
+                    # if we get here, release it
+                    ip.release(winfo);
+                } catch (hash<ExceptionInfo> ex) {
+                    result_mutex.lock();
+                    on_exit result_mutex.unlock();
+                    got_errors += ex.err;
+                }
+                done_counter.dec();
+            }();
+        }
+
+        # wait for all threads to be started (they'll be blocked in ip.get())
+        started.waitForZero();
+        # give threads time to enter cond.wait()
+        usleep(100ms);
+
+        # call shutdown while our program is still held — all 3 waiters will see
+        # shutdown_flag and throw POOL-SHUTDOWN (if we released first, one waiter
+        # would successfully acquire the program before shutdown runs)
+        ip.shutdown();
+
+        # release our program (no-op after shutdown cleared amap)
+        ip.release(info);
+
+        # all waiting threads must wake up and exit
+        done_counter.waitForZero();
+
+        # all threads should have gotten POOL-SHUTDOWN errors
+        assertEq(num_waiting, got_errors.size(),
+            sprintf("All waiting threads must get errors; got %d of %d", got_errors.size(), num_waiting));
+        foreach string err in (got_errors) {
+            assertEq("POOL-SHUTDOWN", err, "Waiting thread must get POOL-SHUTDOWN on shutdown");
+        }
+    }
+
+    #! Test that startInProcessServerOnDemand() passes max_size to the pool
+    private onDemandMaxSizeTest() {
+        JavaScriptProgramPool pool = getTestPool();
+        int max_size = 2;
+        int num_threads = 4;
+
+        TypeScriptActionInterface::startInProcessServerOnDemand(pool, max_size);
+        on_exit {
+            TypeScriptActionInterface::shutdownInProcessServer();
+            TypeScriptActionInterface::disableInProcessServerOnDemand();
+        }
+
+        # force pool creation via checkInProcessServer
+        *JavaScriptInProcessPool ip = TypeScriptActionInterface::checkInProcessServer();
+        assertTrue(exists ip, "On-demand pool must be created");
+
+        # run concurrent threads to verify max_size is enforced
+        Counter start_barrier(1);
+        Counter done_counter(num_threads);
+        Mutex result_mutex();
+        list<string> program_ids = ();
+        list<string> errors = ();
+
+        for (int i = 0; i < num_threads; ++i) {
+            background sub () {
+                try {
+                    start_barrier.waitForZero();
+                    hash<InProcessProgramInfo> info = ip.get();
+                    on_exit ip.release(info);
+
+                    usleep(50ms);
+
+                    result_mutex.lock();
+                    on_exit result_mutex.unlock();
+                    program_ids += info.id;
+                } catch (hash<ExceptionInfo> ex) {
+                    result_mutex.lock();
+                    on_exit result_mutex.unlock();
+                    errors += sprintf("%s: %s", ex.err, ex.desc);
+                }
+                done_counter.dec();
+            }();
+        }
+
+        start_barrier.dec();
+        done_counter.waitForZero();
+
+        assertEq(0, errors.size(), sprintf("No errors expected; got: %y", errors));
+        assertEq(num_threads, program_ids.size(), "All threads must complete");
+
+        hash<string, bool> unique_ids;
+        map (unique_ids{$1} = True), program_ids;
+        assertTrue(unique_ids.size() <= max_size,
+            sprintf("On-demand pool must respect max_size=%d; got %d unique programs",
+                max_size, unique_ids.size()));
+    }
+
+    #! Test clean shutdown of the pool
+    private shutdownTest() {
+        JavaScriptProgramPool pool = getTestPool();
+
+        {
+            JavaScriptInProcessPool ip(pool);
+
+            # acquire and release a program to ensure the pool is active
+            hash<InProcessProgramInfo> info = ip.get();
+            ip.release(info);
+
+            # pool goes out of scope here - destructor should clean up
+        }
+
+        # test shutdown via TypeScriptActionInterface
+        TypeScriptActionInterface::setInProcessServer(new JavaScriptInProcessPool(pool));
+        *JavaScriptInProcessPool ip = TypeScriptActionInterface::checkInProcessServer();
+        assertTrue(exists ip, "Pool must be available after setInProcessServer");
+
+        TypeScriptActionInterface::shutdownInProcessServer();
+        *JavaScriptInProcessPool ip2 = TypeScriptActionInterface::checkInProcessServer();
+        assertNothing(ip2, "Pool must not be available after shutdown without on-demand");
+
+        # test on-demand behavior (pass test pool for on-demand creation)
+        TypeScriptActionInterface::startInProcessServerOnDemand(pool);
+        on_exit TypeScriptActionInterface::disableInProcessServerOnDemand();
+
+        *JavaScriptInProcessPool ip3 = TypeScriptActionInterface::checkInProcessServer();
+        assertTrue(exists ip3, "Pool must be created on-demand");
+
+        TypeScriptActionInterface::shutdownInProcessServer();
+        *JavaScriptInProcessPool ip4 = TypeScriptActionInterface::checkInProcessServer();
+        assertTrue(exists ip4, "Pool must be re-created since on-demand is still enabled");
+
+        # disable on-demand and verify
+        TypeScriptActionInterface::shutdownInProcessServer();
+        TypeScriptActionInterface::disableInProcessServerOnDemand();
+        *JavaScriptInProcessPool ip5 = TypeScriptActionInterface::checkInProcessServer();
+        assertNothing(ip5, "Pool must not be created after disabling on-demand");
+    }
+}
