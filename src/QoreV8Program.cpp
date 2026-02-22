@@ -73,6 +73,9 @@ QoreV8Program::QoreV8Program() : save_ref_callback(nullptr) {
 #endif
 
     isolate->AddNearHeapLimitCallback(heapLimitCallback, this);
+    isolate->SetFatalErrorHandler(fatalErrorCallback);
+    isolate->SetOOMErrorHandler(oomErrorCallback);
+    isolate->SetAbortOnUncaughtExceptionCallback(shouldAbortOnUncaughtException);
     //isolate->SetMicrotasksPolicy(v8::MicrotasksPolicy::kAuto);
     assert(isolate);
     env = setup->env();
@@ -186,6 +189,50 @@ size_t QoreV8Program::heapLimitCallback(void* ptr, size_t current_heap_limit, si
     return current_heap_limit + 1024 * 1024 * 50;
 }
 
+void QoreV8Program::fatalErrorCallback(const char* location, const char* message) {
+    printd(0, "V8 fatal error at %s: %s\n", location ? location : "<unknown>", message ? message : "<unknown>");
+    v8::Isolate* isolate = v8::Isolate::GetCurrent();
+    if (!isolate) {
+        printd(0, "V8 fatal error: no current isolate; cannot mark program invalid\n");
+        return;
+    }
+    AutoLocker al(global_lock);
+    for (auto& pgm : pset) {
+        if (pgm->isolate == isolate) {
+            AutoLocker al2(pgm->m);
+            pgm->fatal_error = true;
+            pgm->valid = false;
+            return;
+        }
+    }
+    printd(0, "V8 fatal error: no matching program found for isolate %p\n", isolate);
+}
+
+void QoreV8Program::oomErrorCallback(const char* location, const v8::OOMDetails& details) {
+    printd(0, "V8 OOM error at %s: %s\n", location ? location : "<unknown>",
+        details.detail ? details.detail : "<unknown>");
+    v8::Isolate* isolate = v8::Isolate::GetCurrent();
+    if (!isolate) {
+        printd(0, "V8 OOM error: no current isolate; cannot mark program invalid\n");
+        return;
+    }
+    AutoLocker al(global_lock);
+    for (auto& pgm : pset) {
+        if (pgm->isolate == isolate) {
+            AutoLocker al2(pgm->m);
+            pgm->fatal_error = true;
+            pgm->heap_limit = true;
+            pgm->valid = false;
+            return;
+        }
+    }
+    printd(0, "V8 OOM error: no matching program found for isolate %p\n", isolate);
+}
+
+bool QoreV8Program::shouldAbortOnUncaughtException(v8::Isolate* isolate) {
+    return false;
+}
+
 int QoreV8Program::init(ExceptionSink* xsink) {
     if (!valid || !isolate) {
         xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "Could not initialize JavaScript program");
@@ -211,6 +258,13 @@ int QoreV8Program::init(ExceptionSink* xsink) {
         // Set ctx and global early so checkException() can use them if LoadEnvironment fails
         ctx.Reset(isolate, setup->context());
         global.Reset(isolate, setup->context()->Global());
+
+        // Prevent Node.js from calling exit() which would terminate the entire Qore process
+        node::SetProcessExitHandler(env, [this](node::Environment* env, int exit_code) {
+            printd(5, "Node.js requested process exit with code %d; marking program invalid\n", exit_code);
+            AutoLocker al(m);
+            valid = false;
+        });
 
         // Inject the 'qore' global object for accessing Qore namespaces, classes, functions, and constants
         // This must happen before LoadEnvironment() which executes the user's code
@@ -637,21 +691,94 @@ void QoreV8Program::raiseV8Exception(ExceptionSink& xsink, v8::Isolate* isolate)
     xsink.clear();
 }
 
-int QoreV8Program::spinOnce() {
-    uv_loop_t* loop = setup->event_loop();
+int QoreV8Program::checkSpinValid(ExceptionSink* xsink) {
+    if (!isolate || !setup || !env) {
+        if (xsink) {
+            xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "The JavaScript program was not properly initialized");
+        }
+        return -1;
+    }
 
-    v8::Locker locker(isolate);
-    v8::Isolate::Scope isolate_scope(isolate);
-
-    uv_run(loop, UV_RUN_DEFAULT);
-
+    AutoLocker al(m);
+    if (!valid || fatal_error || heap_limit || to_destroy) {
+        if (xsink) {
+            if (fatal_error) {
+                xsink->raiseException("JAVASCRIPT-FATAL-ERROR",
+                    "The given JavaScriptProgram has encountered a fatal V8 error and can no longer be accessed");
+            } else if (heap_limit) {
+                xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR",
+                    "The given JavaScriptProgram has exceeded its heap memory limit and can no longer be accessed");
+            } else if (to_destroy) {
+                xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR",
+                    "The given JavaScriptProgram has been marked for destruction and can no longer be accessed");
+            } else {
+                xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR",
+                    "The given JavaScriptProgram has been destroyed and can no longer be accessed");
+            }
+        }
+        return -1;
+    }
+    ++opcount;
     return 0;
 }
 
-int QoreV8Program::spinEventLoop() {
-    v8::Locker locker(isolate);
-    v8::Isolate::Scope isolate_scope(isolate);
-    return node::SpinEventLoop(env).FromMaybe(1);
+void QoreV8Program::decrementOpcount(ExceptionSink* xsink) {
+    AutoLocker al(m);
+    if (!--opcount && to_destroy) {
+        destructor(xsink);
+    }
+}
+
+int QoreV8Program::spinOnce(ExceptionSink* xsink) {
+    if (checkSpinValid(xsink)) {
+        return -1;
+    }
+
+    int rv;
+    {
+        v8::Locker locker(isolate);
+        v8::Isolate::Scope isolate_scope(isolate);
+        v8::HandleScope handle_scope(isolate);
+        v8::Context::Scope context_scope(ctx.Get(isolate));
+        v8::TryCatch tryCatch(isolate);
+
+        uv_loop_t* loop = setup->event_loop();
+        uv_run(loop, UV_RUN_DEFAULT);
+
+        rv = 0;
+        if (xsink && tryCatch.HasCaught()) {
+            checkException(xsink, tryCatch);
+            rv = -1;
+        }
+    }
+
+    decrementOpcount(xsink);
+    return rv;
+}
+
+int QoreV8Program::spinEventLoop(ExceptionSink* xsink) {
+    if (checkSpinValid(xsink)) {
+        return -1;
+    }
+
+    int rv;
+    {
+        v8::Locker locker(isolate);
+        v8::Isolate::Scope isolate_scope(isolate);
+        v8::HandleScope handle_scope(isolate);
+        v8::Context::Scope context_scope(ctx.Get(isolate));
+        v8::TryCatch tryCatch(isolate);
+
+        rv = node::SpinEventLoop(env).FromMaybe(1);
+
+        if (xsink && tryCatch.HasCaught()) {
+            checkException(xsink, tryCatch);
+            rv = -1;
+        }
+    }
+
+    decrementOpcount(xsink);
+    return rv;
 }
 
 // use a simple value to dereference callbacks
@@ -679,13 +806,18 @@ public:
 };
 
 static void call_callref(const v8::FunctionCallbackInfo<v8::Value>& info) {
+    v8::Isolate* isolate = info.GetIsolate();
     v8::Local<v8::Value> v = info.Data();
-    assert(v->IsExternal());
+    if (!v->IsExternal()) {
+        ExceptionSink xsink;
+        xsink.raiseException("JAVASCRIPT-INTERNAL-ERROR", "Invalid callref callback data");
+        QoreV8Program::raiseV8Exception(xsink, isolate);
+        return;
+    }
 
     v8::Local<v8::External> ext = v8::Local<v8::External>::Cast(v);
     QoreV8CallbackInfo* cbinfo = reinterpret_cast<QoreV8CallbackInfo*>(ext->Value());
     ExceptionSink xsink;
-    v8::Isolate* isolate = info.GetIsolate();
     if (!cbinfo || !cbinfo->ref) {
         xsink.raiseException("CALLBACK-ERROR", "Cannot call a callback that has already gone out of scope");
         // raise JS exception

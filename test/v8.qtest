@@ -20,6 +20,7 @@ class V8Test inherits Test {
         addTestCase("async test", \asyncTest());
         addTestCase("v8 program test", \v8ProgramTest());
         addTestCase("exception test", \v8ExceptionTest());
+        addTestCase("crash safety test", \crashSafetyTest());
         # Set return value for compatibility with test harnesses that check the return value
         set_return_value(main());
     }
@@ -887,5 +888,101 @@ obj", "test.js");
         }
         on_error printf("exception arg: %y\n", ex.arg);
         assertEq("DUPLICATE-RECORD", ex.arg.errorCode);
+    }
+
+    crashSafetyTest() {
+        # Test: stack overflow — verify infinite recursion raises exception, not SIGSEGV
+        {
+            hash<ExceptionInfo> ex;
+            try {
+                JavaScriptProgram js("
+function recurse() { return recurse(); }
+recurse();
+", "stack_overflow_test.js");
+                assertFalse(True, "Stack overflow should have thrown an exception");
+            } catch (hash<ExceptionInfo> ex0) {
+                ex = ex0;
+            }
+            assertEq("JAVASCRIPT-EXCEPTION", ex.err);
+        }
+
+        # Test: spinOnce properly returns after event loop work
+        {
+            JavaScriptProgram js("
+var result = 'not_set';
+function scheduleWork() {
+    return new Promise(function(resolve) {
+        setTimeout(function() {
+            result = 'done';
+            resolve(result);
+        }, 1);
+    });
+}
+", "timer_test.js");
+            JavaScriptObject global = js.getGlobal();
+            code scheduleWork = global.scheduleWork.toData();
+            JavaScriptPromise p = scheduleWork();
+            string val;
+            p.then(sub (auto v) { val = v; });
+            p.wait();
+            assertEq("done", val);
+        }
+
+        # Test: spinOnce catches exceptions from JS callbacks in the event loop
+        {
+            JavaScriptProgram js("
+function throwInTimer() {
+    return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            try {
+                throw new Error('timer error');
+            } catch (e) {
+                reject(e);
+            }
+        }, 1);
+    });
+}
+", "timer_error_test.js");
+            JavaScriptObject global = js.getGlobal();
+            code throwInTimer = global.throwInTimer.toData();
+            JavaScriptPromise p = throwInTimer();
+            hash<auto> result;
+            p.then(sub (auto v) {
+                result = {"loc": "then", "val": v};
+            }, sub (auto e) {
+                result = {"loc": "reject", "val": e.toString()};
+            });
+            p.wait();
+            assertEq("reject", result.loc);
+            assertRegex("timer error", result.val);
+        }
+
+        # Test: process.exit() interception — verify it doesn't kill the Qore process
+        # and the program is marked invalid for subsequent access
+        {
+            JavaScriptProgram js("process.exit(0);", "exit_test.js");
+            # Program constructs successfully but is marked invalid by our exit handler
+            hash<ExceptionInfo> ex;
+            try {
+                js.getGlobal();
+                assertFalse(True, "getGlobal() after process.exit() should have thrown");
+            } catch (hash<ExceptionInfo> ex0) {
+                ex = ex0;
+            }
+            assertEq("JAVASCRIPT-PROGRAM-ERROR", ex.err);
+        }
+
+        # Test: JS exception during initialization is properly reported
+        {
+            hash<ExceptionInfo> ex;
+            try {
+                JavaScriptProgram js("throw new Error('init error');", "init_error_test.js");
+                assertFalse(True, "JS init error should have thrown an exception");
+            } catch (hash<ExceptionInfo> ex0) {
+                ex = ex0;
+            }
+            assertEq("JAVASCRIPT-EXCEPTION", ex.err);
+            assertRegex("init error", ex.desc);
+        }
     }
 }
