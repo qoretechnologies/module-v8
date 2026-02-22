@@ -1,6 +1,6 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 
-/*  TypeScriptActionEventDataProvider.qc Copyright (C) 2023 - 2024 Qore Technologies s.r.o.
+/*  TypeScriptActionEventDataProvider.qc Copyright (C) 2023 - 2026 Qore Technologies s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -178,7 +178,17 @@ public class TypeScriptActionEventDataProvider inherits TypeScriptActionEventDat
         m.lock();
         on_exit m.unlock();
 
-        if (TSAI::checkServer()) {
+        if (TSAI::checkInProcessServer()) {
+            # in-process pool uses the direct event thread path
+            info("Starting in-process event thread for data provider %y for connection %y options %y", name,
+                conn.name, event_options);
+            running = True;
+            on_error running = False;
+            Counter c(1);
+            int tid = background startEventThread(c);
+            c.waitForZero();
+            info("Started in-process event thread in TID %d", tid);
+        } else if (TSAI::checkServer()) {
             info("Starting external process for data provider %y for connection %y options %y", name, conn.name,
                 event_options);
             running = True;

@@ -77,6 +77,27 @@ module TypeScriptActionInterface {
 
     @section TypeScriptActionInterface_relnotes Release Notes
 
+    @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - added @ref TypeScriptActionInterface::JavaScriptInProcessPool "JavaScriptInProcessPool" class for
+      concurrent in-process JavaScript execution without IPC overhead
+      (<a href="https://github.com/qoretechnologies/module-v8/issues/225">issue 225</a>)
+    - added @ref TypeScriptActionInterface::InProcessProgramInfo "InProcessProgramInfo" hashdecl
+    - added @ref TypeScriptActionInterface::TypeScriptActionInterface::startInProcessServerOnDemand()
+      "TypeScriptActionInterface::startInProcessServerOnDemand()" for lazy pool creation with
+      configurable maximum pool size
+    - added @ref TypeScriptActionInterface::TypeScriptActionInterface::setInProcessServer()
+      "TypeScriptActionInterface::setInProcessServer()" for direct pool injection
+    - added @ref TypeScriptActionInterface::TypeScriptActionInterface::checkInProcessServer()
+      "TypeScriptActionInterface::checkInProcessServer()" for pool access with double-checked locking
+    - added @ref TypeScriptActionInterface::TypeScriptActionInterface::shutdownInProcessServer()
+      "TypeScriptActionInterface::shutdownInProcessServer()" for safe pool shutdown
+    - added clone-mode closure capture mechanism using thread-local
+      @ref TypeScriptActionInterfacePriv::Priv::PoolCloneModeHelper "PoolCloneModeHelper" to create
+      pool programs without modifying global state
+    - added static chdir mutex in
+      @ref TypeScriptActionInterface::JavaScriptProgramPool "JavaScriptProgramPool" to prevent
+      concurrent chdir() races during program creation
+
     @subsection TypeScriptActionInterface_v1_0 TypeScriptActionInterface v1.0
     - initial release of the module
 */

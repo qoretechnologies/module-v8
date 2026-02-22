@@ -1,6 +1,6 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 
-/*  TypeScriptActionRecordBasedDataProvider.qc Copyright (C) 2023 - 2024 Qore Technologies s.r.o.
+/*  TypeScriptActionRecordBasedDataProvider.qc Copyright (C) 2023 - 2026 Qore Technologies s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -238,7 +238,14 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             "table": name,
         });
         where_cond = cast<*hash<DataProviderExpression>>(getSearchExpression(where_cond, search_options));
-        if (TSAI::checkServer()) {
+        if (TSAI::checkInProcessServer()) {
+            # in-process pool uses the same path as direct execution
+            *code get_records = getAsyncValue(search_records, cctx,
+                info.expressions ? convertExpression(where_cond) : NOTHING,
+                info.expressions ? search_options : NOTHING);
+            return new TypeScriptBulkRecordInterface(block_size, self, get_records, cctx,
+                info.expressions ? NOTHING : where_cond, search_options);
+        } else if (TSAI::checkServer()) {
             return new TypeScriptBulkRecordProxyInterface(block_size, self, conn.name, conn.getRealOptions(),
                 where_cond, search_options, cctx);
         } else {
@@ -269,7 +276,14 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             "table": name,
         });
         where_cond = processSearchParameters(where_cond, search_options);
-        if (TSAI::checkServer()) {
+        if (TSAI::checkInProcessServer()) {
+            # in-process pool uses the same path as direct execution
+            *code get_records = getAsyncValue(search_records, cctx,
+                info.expressions ? convertExpression(where_cond) : NOTHING,
+                info.expressions ? search_options : NOTHING);
+            return new TypeScriptBulkRecordInterface(block_size, self, get_records, cctx,
+                info.expressions ? NOTHING : where_cond, search_options);
+        } else if (TSAI::checkServer()) {
             return new TypeScriptBulkRecordProxyInterface(block_size, self, conn.name, conn.getRealOptions(),
                 where_cond, search_options, cctx);
         } else {
