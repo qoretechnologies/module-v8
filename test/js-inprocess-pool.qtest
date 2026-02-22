@@ -164,6 +164,7 @@ async function runWithTimeout(promise, delay) {
         assertEq(first_id, info2.id, "Same thread must get same program without release");
 
         ip.release(info1);
+        ip.release(info2);
     }
 
     #! Test that concurrent threads get different programs and pool grows on demand

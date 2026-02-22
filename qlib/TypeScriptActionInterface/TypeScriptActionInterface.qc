@@ -678,7 +678,7 @@ public class TypeScriptActionInterface {
                 if (IgnoreDuplicateAppHelper::get()) {
                     return;
                 }
-                throw "APP-ERROR", sprintf("App %y has already been regstered and is pending initialization",
+                throw "APP-ERROR", sprintf("App %y has already been registered and is pending initialization",
                     app.name);
             }
             if (initmap{app.name}) {
@@ -879,7 +879,7 @@ public class TypeScriptActionInterface {
             if (IgnoreDuplicateAppHelper::get()) {
                 return;
             }
-            throw "APP-ERROR", sprintf("App %y has already been regstered and is pending initialization", app.name);
+            throw "APP-ERROR", sprintf("App %y has already been registered and is pending initialization", app.name);
         }
         if (initmap{app.name}) {
             if (IgnoreDuplicateAppHelper::get()) {
