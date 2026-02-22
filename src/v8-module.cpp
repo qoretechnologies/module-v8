@@ -143,6 +143,7 @@ static QoreStringNode* v8_module_init_intern(bool repeat) {
 
     // Initialize V8.
     v8::V8::InitializePlatform(platform.get());
+    v8::V8::SetFlagsFromString("--no-hard-abort");
     v8::V8::Initialize();
 
     //printd(5, "v8_module_init_intern()\n");

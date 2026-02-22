@@ -202,18 +202,21 @@ jobs:
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Get repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
 
       - name: Print head git commit message
         id: get_head_commit_message
-        run: echo "::set-output name=HEAD_COMMIT_MESSAGE::$(git show -s --format=%s)"
+        run: echo "HEAD_COMMIT_MESSAGE=$(git show -s --format=%s)" >> "$GITHUB_OUTPUT"
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 20.19.5
+          node-version: 24
+
+      - name: Enable Corepack
+        run: corepack enable
 
       # Install App Catalogue dependencies
       - name: Installing modules
@@ -344,9 +347,24 @@ jobs:
             libbrotli-dev \
             libnghttp2-dev \
             doxygen \
-            libnode-dev \
             libyaml-dev \
             uuid-dev
+
+      # Install pre-built Node.js 24 with development headers and libnode.so
+      - name: Install Node.js 24 development files
+        run: |
+          NODEJS_VERSION="24.11.1"
+          NODEJS_INSTALL_PREFIX="/opt/nodejs"
+          NODEJS_ARCH="amd64"
+          NODEJS_TARBALL="nodejs-${NODEJS_VERSION}-ubuntu24.04-${NODEJS_ARCH}.tar.bz2"
+          curl -fsSL -O "https://hq.qoretechnologies.com/~pchalupny/node-builds/${NODEJS_TARBALL}"
+          sudo tar -xjf ${NODEJS_TARBALL} -C /
+          rm -f ${NODEJS_TARBALL}
+          # Create symlink for libnode.so
+          lib=$(ls ${NODEJS_INSTALL_PREFIX}/lib/libnode.so.* | sort | tail -n 1)
+          sudo ln -sf "$(basename "$lib")" ${NODEJS_INSTALL_PREFIX}/lib/libnode.so
+          echo "Node.js 24 dev files installed"
+          ls ${NODEJS_INSTALL_PREFIX}/include/node/v8.h
 
       # Clone the Qore repository and build it
       - name: Clone and Build Qore
@@ -355,13 +373,14 @@ jobs:
           cd qore
           mkdir build
           cd build
-          V8_INCLUDE_DIR=/usr/include/node cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
+          V8_INCLUDE_DIR=/opt/nodejs/include/node NODE_LIB_DIR=/opt/nodejs/lib cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
           make && sudo make install
 
       #  Update library paths to ensure Qore can find its shared libraries
       - name: Update Library Path
         run: |
           echo '/usr/local/lib' | sudo tee /etc/ld.so.conf.d/qore.conf
+          echo '/opt/nodejs/lib' | sudo tee -a /etc/ld.so.conf.d/qore.conf
           sudo ldconfig
 
       # Verify Qore installation by checking the version
@@ -415,7 +434,7 @@ jobs:
           git submodule update --init
           mkdir build
           cd build
-          cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
+          NODE_LIB_DIR=/opt/nodejs/lib cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
           make && sudo make install
 
       # Run module-v8 Qore tests

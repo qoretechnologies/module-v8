@@ -330,7 +330,12 @@ void QoreV8ClassWrapper::constructor_callback(const v8::FunctionCallbackInfo<v8:
     }
 
     v8::Local<v8::Value> v = info.Data();
-    assert(v->IsExternal());
+    if (!v->IsExternal()) {
+        ExceptionSink xsink;
+        xsink.raiseException("JAVASCRIPT-INTERNAL-ERROR", "Invalid constructor callback data");
+        QoreV8Program::raiseV8Exception(xsink, isolate);
+        return;
+    }
     QoreV8ClassData* cls_data = reinterpret_cast<QoreV8ClassData*>(
         v8::Local<v8::External>::Cast(v)->Value());
 
@@ -393,7 +398,12 @@ void QoreV8ClassWrapper::constructor_callback(const v8::FunctionCallbackInfo<v8:
 void QoreV8ClassWrapper::method_callback(const v8::FunctionCallbackInfo<v8::Value>& info) {
     v8::Isolate* isolate = info.GetIsolate();
     v8::Local<v8::Value> v = info.Data();
-    assert(v->IsExternal());
+    if (!v->IsExternal()) {
+        ExceptionSink xsink;
+        xsink.raiseException("JAVASCRIPT-INTERNAL-ERROR", "Invalid method callback data");
+        QoreV8Program::raiseV8Exception(xsink, isolate);
+        return;
+    }
 
     QoreV8MethodData* mdata = reinterpret_cast<QoreV8MethodData*>(
         v8::Local<v8::External>::Cast(v)->Value());
@@ -453,7 +463,12 @@ void QoreV8ClassWrapper::method_callback(const v8::FunctionCallbackInfo<v8::Valu
 void QoreV8ClassWrapper::static_method_callback(const v8::FunctionCallbackInfo<v8::Value>& info) {
     v8::Isolate* isolate = info.GetIsolate();
     v8::Local<v8::Value> v = info.Data();
-    assert(v->IsExternal());
+    if (!v->IsExternal()) {
+        ExceptionSink xsink;
+        xsink.raiseException("JAVASCRIPT-INTERNAL-ERROR", "Invalid static method callback data");
+        QoreV8Program::raiseV8Exception(xsink, isolate);
+        return;
+    }
 
     QoreV8MethodData* mdata = reinterpret_cast<QoreV8MethodData*>(
         v8::Local<v8::External>::Cast(v)->Value());
@@ -588,10 +603,16 @@ void QoreV8ClassWrapper::member_getter(v8::Local<v8::Name> property,
 
     // Get cached member metadata from the handler data (O(1) lookup)
     v8::Local<v8::Value> data = info.Data();
-    assert(data->IsExternal());
-    QoreV8MemberHandlerData* mhdata = reinterpret_cast<QoreV8MemberHandlerData*>(
-        v8::Local<v8::External>::Cast(data)->Value());
-    assert(mhdata);
+    QoreV8MemberHandlerData* mhdata = nullptr;
+    if (!data->IsExternal()
+        || !(mhdata = reinterpret_cast<QoreV8MemberHandlerData*>(
+            v8::Local<v8::External>::Cast(data)->Value()))) {
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kNo;
+#else
+        return;
+#endif
+    }
 
     auto it = mhdata->members.find(name);
     if (it == mhdata->members.end()) {
@@ -688,10 +709,16 @@ void QoreV8ClassWrapper::member_setter(v8::Local<v8::Name> property,
 
     // Get cached member metadata from the handler data (O(1) lookup)
     v8::Local<v8::Value> data = info.Data();
-    assert(data->IsExternal());
-    QoreV8MemberHandlerData* mhdata = reinterpret_cast<QoreV8MemberHandlerData*>(
-        v8::Local<v8::External>::Cast(data)->Value());
-    assert(mhdata);
+    QoreV8MemberHandlerData* mhdata = nullptr;
+    if (!data->IsExternal()
+        || !(mhdata = reinterpret_cast<QoreV8MemberHandlerData*>(
+            v8::Local<v8::External>::Cast(data)->Value()))) {
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kNo;
+#else
+        return;
+#endif
+    }
 
     auto it = mhdata->members.find(name);
     if (it == mhdata->members.end()) {
@@ -774,10 +801,16 @@ void QoreV8ClassWrapper::member_query(v8::Local<v8::Name> property,
 
     // Get cached member metadata from the handler data (O(1) lookup)
     v8::Local<v8::Value> data = info.Data();
-    assert(data->IsExternal());
-    QoreV8MemberHandlerData* mhdata = reinterpret_cast<QoreV8MemberHandlerData*>(
-        v8::Local<v8::External>::Cast(data)->Value());
-    assert(mhdata);
+    QoreV8MemberHandlerData* mhdata = nullptr;
+    if (!data->IsExternal()
+        || !(mhdata = reinterpret_cast<QoreV8MemberHandlerData*>(
+            v8::Local<v8::External>::Cast(data)->Value()))) {
+#if V8_MAJOR_VERSION >= 12
+        return v8::Intercepted::kNo;
+#else
+        return;
+#endif
+    }
 
     auto it = mhdata->members.find(name);
     if (it != mhdata->members.end() && it->second == Public) {
@@ -800,10 +833,13 @@ void QoreV8ClassWrapper::member_enumerator(const v8::PropertyCallbackInfo<v8::Ar
 
     // Get cached member metadata from the handler data
     v8::Local<v8::Value> data = info.Data();
-    assert(data->IsExternal());
-    QoreV8MemberHandlerData* mhdata = reinterpret_cast<QoreV8MemberHandlerData*>(
-        v8::Local<v8::External>::Cast(data)->Value());
-    assert(mhdata);
+    QoreV8MemberHandlerData* mhdata = nullptr;
+    if (!data->IsExternal()
+        || !(mhdata = reinterpret_cast<QoreV8MemberHandlerData*>(
+            v8::Local<v8::External>::Cast(data)->Value()))) {
+        info.GetReturnValue().Set(v8::Array::New(isolate));
+        return;
+    }
 
     std::vector<v8::Local<v8::Value>> names;
     names.reserve(mhdata->public_member_names.size());
