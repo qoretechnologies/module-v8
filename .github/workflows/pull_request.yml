@@ -373,7 +373,7 @@ jobs:
           cd qore
           mkdir build
           cd build
-          V8_INCLUDE_DIR=/opt/nodejs/include/node cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
+          V8_INCLUDE_DIR=/opt/nodejs/include/node NODE_LIB_DIR=/opt/nodejs/lib cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
           make && sudo make install
 
       #  Update library paths to ensure Qore can find its shared libraries
@@ -434,7 +434,7 @@ jobs:
           git submodule update --init
           mkdir build
           cd build
-          cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
+          NODE_LIB_DIR=/opt/nodejs/lib cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
           make && sudo make install
 
       # Run module-v8 Qore tests
