@@ -1,7 +1,7 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 #! Qore TypeScriptActionInterface module definition
 
-/*  TypeScriptActionInterfacePriv.qc Copyright 2024 Qore Technologies, s.r.o.
+/*  TypeScriptActionInterfacePriv.qc Copyright 2024 - 2026 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -201,6 +201,13 @@ function setenv(vr, value) {
         return sprintf("%s/%s", dir, name);
     }
 
+    #! Returns the first available JavaScriptProgramPool from the program store
+    static *JavaScriptProgramPool getFirstPool() {
+        foreach hash<auto> i in (pstore.pairIterator()) {
+            return i.value;
+        }
+    }
+
     static private registerApp(JavaScriptProgram pgm) {
         JavaScriptObject global = pgm.getGlobal();
         if (!global.exports.actionsCatalogue) {
@@ -292,6 +299,37 @@ class DynamicAppContextHelper {
 
     static *bool replacing() {
         return _app_ctx.replace;
+    }
+}
+
+#! Thread-local flag for pool clone mode
+thread_local *bool _pool_clone_mode;
+#! Thread-local storage for closures captured during pool clone mode
+thread_local *hash<string, code> _pool_clone_closures;
+
+#! Helper class for managing pool clone mode
+/** When active, registerAsyncCall() and registerAsyncCallArgs() will capture closures to the thread-local
+    _pool_clone_closures hash instead of modifying global state (acmap).
+*/
+class PoolCloneModeHelper {
+    private {
+        *bool old;
+    }
+
+    constructor() {
+        old = _pool_clone_mode;
+        _pool_clone_mode = True;
+        _pool_clone_closures = {};
+    }
+
+    destructor() {
+        _pool_clone_mode = old;
+        remove _pool_clone_closures;
+    }
+
+    #! Returns the closures captured during clone mode
+    static *hash<string, code> getClosures() {
+        return _pool_clone_closures;
     }
 }
 }
