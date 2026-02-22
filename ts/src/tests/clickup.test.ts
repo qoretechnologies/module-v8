@@ -50,6 +50,7 @@ import {
   UpdatedClickUpTaskTimeTracked,
   UpdatedClickUpTask,
 } from '../apps/clickup/triggers';
+import { clickUpClient } from '../apps/clickup/client';
 import { mapColumnFormatToObject } from '../global/helpers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import { delay } from '../global/helpers';
@@ -544,6 +545,25 @@ describe('ClickUp', () => {
   });
 
   describe('Should test ClickUp triggers webhook registration', () => {
+    /** Delete all existing webhooks for the workspace to avoid "already exists" errors */
+    const cleanupExistingWebhooks = async () => {
+      if (!workspace) return;
+
+      const token = base_context.conn_opts.token;
+      const response = await clickUpClient.get<{ webhooks: { id: string }[] }>(
+        `team/${workspace}/webhook`,
+        { token }
+      );
+
+      for (const wh of response.webhooks ?? []) {
+        await clickUpClient.delete(`webhook/${wh.id}`, { token });
+      }
+    };
+
+    beforeAll(async () => {
+      await cleanupExistingWebhooks();
+    });
+
     describe('Should test new folder webhook registration', () => {
       let webhook: { id: string } | undefined;
       it('Should register the new folder webhook', async () => {
