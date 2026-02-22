@@ -958,18 +958,11 @@ function throwInTimer() {
         }
 
         # Test: process.exit() interception — verify it doesn't kill the Qore process
-        # and the program is marked invalid for subsequent access
+        # and the program raises an exception during initialization
         {
-            JavaScriptProgram js("process.exit(0);", "exit_test.js");
-            # Program constructs successfully but is marked invalid by our exit handler
-            hash<ExceptionInfo> ex;
-            try {
-                js.getGlobal();
-                assertFalse(True, "getGlobal() after process.exit() should have thrown");
-            } catch (hash<ExceptionInfo> ex0) {
-                ex = ex0;
-            }
-            assertEq("JAVASCRIPT-PROGRAM-ERROR", ex.err);
+            assertThrows("JAVASCRIPT-PROGRAM-ERROR", sub () {
+                JavaScriptProgram js("process.exit(0);", "exit_test.js");
+            });
         }
 
         # Test: JS exception during initialization is properly reported

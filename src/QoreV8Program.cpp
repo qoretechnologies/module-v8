@@ -259,7 +259,7 @@ int QoreV8Program::init(ExceptionSink* xsink) {
         ctx.Reset(isolate, setup->context());
         global.Reset(isolate, setup->context()->Global());
 
-        // Prevent Node.js from calling exit() which would terminate the entire Qore process
+        // Intercept Node.js exit() to mark the program invalid instead of terminating the Qore process
         node::SetProcessExitHandler(env, [this](node::Environment* env, int exit_code) {
             printd(5, "Node.js requested process exit with code %d; marking program invalid\n", exit_code);
             AutoLocker al(m);
@@ -322,6 +322,18 @@ int QoreV8Program::init(ExceptionSink* xsink) {
             // Now mark as invalid after exception handling is complete
             valid = false;
             // Reset ctx and global since init failed
+            ctx.Reset();
+            global.Reset();
+            return -1;
+        }
+
+        // Check if process.exit() was called during LoadEnvironment(), which would have marked
+        // the program invalid via SetProcessExitHandler
+        if (!valid) {
+            if (!checkException(xsink, tryCatch)) {
+                xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR",
+                    "JavaScript program called process.exit() during initialization");
+            }
             ctx.Reset();
             global.Reset();
             return -1;
@@ -809,6 +821,7 @@ static void call_callref(const v8::FunctionCallbackInfo<v8::Value>& info) {
     v8::Isolate* isolate = info.GetIsolate();
     v8::Local<v8::Value> v = info.Data();
     if (!v->IsExternal()) {
+        printd(0, "call_callref: invalid callback data (not External)\n");
         ExceptionSink xsink;
         xsink.raiseException("JAVASCRIPT-INTERNAL-ERROR", "Invalid callref callback data");
         QoreV8Program::raiseV8Exception(xsink, isolate);
