@@ -9,7 +9,22 @@
 %exec-class TypeScriptTest
 
 class TypeScriptTest inherits Test {
+    private {
+        bool ts_available;
+        string skip_reason;
+    }
+
     constructor() : Test("TypeScript test", "1.0") {
+        # Check if TypeScript transpilation is available (requires Node.js 24+ with
+        # stripTypeScriptTypes)
+        try {
+            TypeScriptProgram ts("const x: number = 1;", "check.ts");
+            ts_available = True;
+        } catch (hash<ExceptionInfo> ex) {
+            ts_available = False;
+            skip_reason = sprintf("TypeScript transpilation not available: %s", ex.desc);
+        }
+
         # Unit tests - TypeScript language features
         addTestCase("basic type stripping", \basicTypeStrippingTest());
         addTestCase("type aliases and union types", \typeAliasUnionTest());
@@ -56,11 +71,18 @@ class TypeScriptTest inherits Test {
         set_return_value(main());
     }
 
+    private skipIfTsUnavailable() {
+        if (!ts_available) {
+            testSkip(skip_reason);
+        }
+    }
+
     # --------------------------------------------------------------------------
     # TypeScript language feature tests
     # --------------------------------------------------------------------------
 
     basicTypeStrippingTest() {
+        skipIfTsUnavailable();
         # Basic typed variable declarations
         TypeScriptProgram ts("
             const x: number = 42;
@@ -93,6 +115,7 @@ class TypeScriptTest inherits Test {
     }
 
     typeAliasUnionTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             type StringOrNumber = string | number;
             type ID = string | number;
@@ -122,6 +145,7 @@ class TypeScriptTest inherits Test {
     }
 
     interfaceTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             interface Person {
                 name: string;
@@ -149,6 +173,7 @@ class TypeScriptTest inherits Test {
     }
 
     interfaceExtendsTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             interface Animal {
                 name: string;
@@ -172,6 +197,7 @@ class TypeScriptTest inherits Test {
     }
 
     enumTest() {
+        skipIfTsUnavailable();
         # Numeric and string enums
         TypeScriptProgram ts("
             enum Color {
@@ -217,6 +243,7 @@ class TypeScriptTest inherits Test {
     }
 
     constEnumTest() {
+        skipIfTsUnavailable();
         # const enums are inlined by the transpiler
         TypeScriptProgram ts("
             const enum Flags {
@@ -232,6 +259,7 @@ class TypeScriptTest inherits Test {
     }
 
     typedClassTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             class Calculator {
                 private value: number;
@@ -281,6 +309,7 @@ class TypeScriptTest inherits Test {
     }
 
     classInheritanceTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             class Shape {
                 constructor(public name: string) {}
@@ -319,6 +348,7 @@ class TypeScriptTest inherits Test {
     }
 
     arrowFunctionTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             const multiply = (a: number, b: number): number => a * b;
             const greet = (name: string): string => 'Hello, ' + name + '!';
@@ -342,6 +372,7 @@ class TypeScriptTest inherits Test {
     }
 
     genericsTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             function identity<T>(arg: T): T {
                 return arg;
@@ -386,6 +417,7 @@ class TypeScriptTest inherits Test {
     }
 
     tupleTypeTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             function makePair(a: string, b: number): [string, number] {
                 return [a, b];
@@ -406,6 +438,7 @@ class TypeScriptTest inherits Test {
     }
 
     typeAssertionTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             function getLength(val: any): number {
                 return (val as string).length;
@@ -427,6 +460,7 @@ class TypeScriptTest inherits Test {
     }
 
     optionalDefaultParamsTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             function greet(name: string, greeting?: string): string {
                 if (greeting) {
@@ -472,6 +506,7 @@ class TypeScriptTest inherits Test {
     }
 
     restParametersTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             function sum(...numbers: number[]): number {
                 return numbers.reduce((a, b) => a + b, 0);
@@ -495,6 +530,7 @@ class TypeScriptTest inherits Test {
     }
 
     destructuringTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             function getCoords(point: { x: number; y: number }): string {
                 const { x, y }: { x: number; y: number } = point;
@@ -516,6 +552,7 @@ class TypeScriptTest inherits Test {
     }
 
     readonlyTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             interface Config {
                 readonly host: string;
@@ -543,6 +580,7 @@ class TypeScriptTest inherits Test {
     }
 
     namespaceTest() {
+        skipIfTsUnavailable();
         # TypeScript namespaces are transpiled to IIFEs in transform mode
         TypeScriptProgram ts("
             namespace MathUtils {
@@ -564,6 +602,7 @@ class TypeScriptTest inherits Test {
     }
 
     literalTypesTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             type YesNo = 'yes' | 'no';
             type OneTwo = 1 | 2;
@@ -596,6 +635,7 @@ class TypeScriptTest inherits Test {
     }
 
     intersectionTypeTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             interface HasName {
                 name: string;
@@ -621,6 +661,7 @@ class TypeScriptTest inherits Test {
     }
 
     plainJsTest() {
+        skipIfTsUnavailable();
         # Valid JavaScript should work fine in TypeScriptProgram too
         TypeScriptProgram ts("
             var x = 42;
@@ -642,6 +683,7 @@ class TypeScriptTest inherits Test {
     # --------------------------------------------------------------------------
 
     inheritedGetGlobalTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             globalThis.answer = 42;
             globalThis.msg = 'hello from TypeScript';
@@ -657,6 +699,7 @@ class TypeScriptTest inherits Test {
     }
 
     inheritedSaveRefCallbackTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             function storeCallback(cb) {
                 globalThis.storedCb = cb;
@@ -688,6 +731,7 @@ class TypeScriptTest inherits Test {
     }
 
     inheritedSpinOnceTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             var result: any = {};
             function startTimer(): void {
@@ -711,6 +755,7 @@ class TypeScriptTest inherits Test {
     }
 
     qoreGlobalAccessTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             const typeResult: string = qore.Qore.type('hello');
             const upperResult: string = qore.Qore.toupper('hello');
@@ -733,6 +778,7 @@ class TypeScriptTest inherits Test {
     }
 
     qoreClassFromTsTest() {
+        skipIfTsUnavailable();
         # Instantiate and use Qore classes from TypeScript
         TypeScriptProgram ts("
             const mutex = new qore.Qore.Thread.Mutex();
@@ -751,6 +797,7 @@ class TypeScriptTest inherits Test {
     }
 
     qoreFunctionCallsTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             const formatted: string = qore.Qore.sprintf('Hello %s, you are %d', 'World', 42);
             const joined: string = qore.Qore.join('-', 'a', 'b', 'c');
@@ -776,6 +823,7 @@ class TypeScriptTest inherits Test {
     }
 
     asyncPromiseTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             function fetchValue(): Promise<number> {
                 return new Promise<number>((resolve) => {
@@ -833,6 +881,7 @@ class TypeScriptTest inherits Test {
     }
 
     eventLoopTest() {
+        skipIfTsUnavailable();
         # Test event loop integration with TypeScript using EventEmitter
         TypeScriptProgram ts("
             const EventEmitter = require('node:events');
@@ -869,6 +918,7 @@ class TypeScriptTest inherits Test {
     }
 
     multiProgramTest() {
+        skipIfTsUnavailable();
         # Multiple TypeScriptProgram instances running concurrently
         TypeScriptProgram ts1("
             const prefix: string = 'ts1';
@@ -910,6 +960,7 @@ class TypeScriptTest inherits Test {
     # --------------------------------------------------------------------------
 
     copyTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             const val: number = 99;
             globalThis.val = val;
@@ -925,6 +976,7 @@ class TypeScriptTest inherits Test {
     }
 
     copyTranspileTest() {
+        skipIfTsUnavailable();
         # Verify that copied programs still transpile TypeScript (transpile_ts flag preserved)
         TypeScriptProgram ts("
             enum Fruit { Apple, Banana, Cherry }
@@ -943,6 +995,7 @@ class TypeScriptTest inherits Test {
     }
 
     syntaxErrorTest() {
+        skipIfTsUnavailable();
         # TypeScript syntax errors should result in JAVASCRIPT-EXCEPTION
         assertThrows("JAVASCRIPT-EXCEPTION", sub () {
             TypeScriptProgram ts("
@@ -952,6 +1005,7 @@ class TypeScriptTest inherits Test {
     }
 
     invalidSourceTest() {
+        skipIfTsUnavailable();
         # Completely invalid source
         assertThrows("JAVASCRIPT-EXCEPTION", sub () {
             TypeScriptProgram ts("
@@ -968,6 +1022,7 @@ class TypeScriptTest inherits Test {
     }
 
     emptySourceTest() {
+        skipIfTsUnavailable();
         # Empty source should work (nothing to transpile)
         TypeScriptProgram ts("", "empty.ts");
         JavaScriptObject global = ts.getGlobal();
@@ -985,6 +1040,7 @@ class TypeScriptTest inherits Test {
     }
 
     runtimeErrorTest() {
+        skipIfTsUnavailable();
         TypeScriptProgram ts("
             function willThrow(): never {
                 throw new Error('TS runtime error');
@@ -997,6 +1053,7 @@ class TypeScriptTest inherits Test {
     }
 
     customErrorTest() {
+        skipIfTsUnavailable();
         # Verify custom error properties propagate from TypeScript
         TypeScriptProgram ts("
             function throwCustom(): never {
@@ -1021,6 +1078,7 @@ class TypeScriptTest inherits Test {
     }
 
     jsRejectsTypeScriptTest() {
+        skipIfTsUnavailable();
         # TypeScript with type annotations should fail in JavaScriptProgram
         assertThrows("JAVASCRIPT-EXCEPTION", sub () {
             JavaScriptProgram js("

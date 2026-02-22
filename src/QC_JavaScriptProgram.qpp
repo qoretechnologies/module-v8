@@ -103,12 +103,12 @@ JavaScriptProgram::setSaveReferenceCallback(*code save_ref_callback) [dom=PROCES
 /**
 */
 int JavaScriptProgram::spinOnce() {
-    return jsp->spinOnce();
+    return jsp->spinOnce(xsink);
 }
 
 //! Spins the event loop the program
 /**
 */
 int JavaScriptProgram::spinEventLoop() {
-    return jsp->spinEventLoop();
+    return jsp->spinEventLoop(xsink);
 }
