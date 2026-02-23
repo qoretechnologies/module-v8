@@ -1,7 +1,7 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 #! Qore TypeScriptActionInterface module definition
 
-/*  TypeScriptActionRootDataProvider.qc Copyright 2024 Qore Technologies, s.r.o.
+/*  TypeScriptActionRootDataProvider.qc Copyright 2024 - 2026 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -76,9 +76,13 @@ class TypeScriptActionRootDataProvider inherits AbstractDataProvider {
 
     #! Return data provider summary info
     *list<hash<DataProviderSummaryInfo>> getChildProviderSummaryInfo() {
-        TypeScriptActionInterface::initAllApps();
-        return map cast<hash<DataProviderSummaryInfo>>($1.getInfo(){DataProviderSummaryInfoKeys}),
-            childMap.iterator();
+        # Return info from already-initialized apps
+        *list<hash<DataProviderSummaryInfo>> rv =
+            map cast<hash<DataProviderSummaryInfo>>($1.getInfo(){DataProviderSummaryInfoKeys}),
+                childMap.iterator();
+        # Also return summary info for pending (not-yet-initialized) apps from metadata
+        rv += TypeScriptActionInterface::getPendingAppSummaryInfo();
+        return rv;
     }
 
     #! Returns a list of child data provider names, if any

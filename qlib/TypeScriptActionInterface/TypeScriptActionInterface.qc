@@ -373,6 +373,18 @@ public class TypeScriptActionInterface {
         return map $1.lwr(), keys appmap;
     }
 
+    #! Returns summary info for pending (not-yet-initialized) apps from metadata
+    static *list<hash<DataProviderSummaryInfo>> getPendingAppSummaryInfo() {
+        return map <DataProviderSummaryInfo>{
+            "name": $1.value.app.name.lwr(),
+            "display_name": $1.value.app.display_name,
+            "short_desc": $1.value.app.short_desc,
+            "desc": $1.value.app.desc,
+            "type": "TypeScriptActionAppDataProvider",
+            "supports_children": True,
+        }, appmap.pairIterator();
+    }
+
     #! Sets the server to start on demand
     static startServerOnDemand() {
         sm.lock();
