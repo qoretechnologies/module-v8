@@ -11,7 +11,6 @@ import { createGitHubClient } from '../constants';
 import {
   formatGitHubRecord,
   getGitHubTableKeys,
-  needsRepoAndOwner,
   TGitHubTable,
 } from './constants';
 import {
@@ -44,7 +43,7 @@ export const createGitHubRecords: TQoreCreateRecordsFunction<
     throw new GitHubError('Table option is required');
   }
 
-  if (needsRepoAndOwner(table) && (!owner || !repo)) {
+  if (!owner || !repo) {
     throw new GitHubError(`Owner and Repo options are required to create records for ${table}`);
   }
 
@@ -70,7 +69,8 @@ export const createGitHubRecords: TQoreCreateRecordsFunction<
       const result = await createGitHubRecord({
         record: {
           ...recordFields,
-          ...(needsRepoAndOwner(table) && { owner, repo }),
+          owner,
+          repo,
         },
         token,
         tableName: table as TGitHubTable,
@@ -131,8 +131,6 @@ const createGitHubRecord = async (options: {
         return await client.rest.pulls.create(record);
       case 'releases':
         return await client.rest.repos.createRelease(record);
-      case 'repositories':
-        return await client.rest.repos.createForAuthenticatedUser(record);
       default:
         throw new GitHubError(`Unsupported table name: ${tableName}`);
     }

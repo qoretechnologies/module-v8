@@ -9,7 +9,6 @@ import { createGitHubClient } from '../constants';
 import {
   formatGitHubRecord,
   getGitHubTableKeys,
-  needsRepoAndOwner,
   TGitHubTable,
 } from './constants';
 import { extractGitHubErrorMessage } from './extract-error';
@@ -33,7 +32,7 @@ export const searchGitHubRecords: TQoreSearchRecordsFunction<
     throw new GitHubError('Table option is required');
   }
 
-  if (needsRepoAndOwner(table) && (!owner || !repo)) {
+  if (!owner || !repo) {
     throw new GitHubError(`Owner and Repo options are required to search ${table}`);
   }
 
@@ -168,14 +167,6 @@ const createPaginationIterable = (
         owner,
         repo,
         ...baseParams,
-      });
-    }
-
-    case 'repositories': {
-      return client.paginate.iterator('GET /user/repos', {
-        ...baseParams,
-        visibility: 'all',
-        affiliation: 'owner,collaborator,organization_member',
       });
     }
 

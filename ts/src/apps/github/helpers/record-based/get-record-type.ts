@@ -7,7 +7,7 @@ import { GitHubError } from '../../constants';
 import { getGitHubAssigneesAllowedValues } from '../get-assignee-allowed-values';
 import { getGitHubIssueLabelsAllowedValues } from '../get-issue-label-allowed-values';
 
-export const GitHubTables = ['issues', 'pulls', 'releases', 'repositories'] as const;
+export const GitHubTables = ['issues', 'pulls', 'releases'] as const;
 export type TGitHubTable = (typeof GitHubTables)[number];
 
 const commonFields = {
@@ -205,137 +205,7 @@ export const GitHubReleaseRecordType = {
   },
 } satisfies TQoreTypeObject;
 
-export const GitHubRepositoryRecordType = {
-  type: 'hash',
-  fields: {
-    ...commonFields,
-
-    name: {
-      type: 'string',
-      required: true,
-      short_desc: 'Repository name',
-      display_name: 'Name',
-    },
-    description: {
-      type: 'string',
-      short_desc: 'Repository description',
-      display_name: 'Description',
-    },
-    homepage: {
-      type: 'string',
-      short_desc: 'Repository homepage URL',
-      display_name: 'Homepage',
-    },
-    private: {
-      type: 'bool',
-      short_desc: 'Create as private repository',
-      display_name: 'Private',
-    },
-    has_issues: {
-      type: 'bool',
-      short_desc: 'Enable issues for this repository',
-      display_name: 'Has Issues',
-    },
-    has_projects: {
-      type: 'bool',
-      short_desc: 'Enable projects for this repository',
-      display_name: 'Has Projects',
-    },
-    has_wiki: {
-      type: 'bool',
-      short_desc: 'Enable wiki for this repository',
-      display_name: 'Has Wiki',
-    },
-    has_discussions: {
-      type: 'bool',
-      short_desc: 'Enable discussions for this repository',
-      display_name: 'Has Discussions',
-    },
-    team_id: {
-      type: 'integer',
-      short_desc: 'Team with access to this repository',
-      display_name: 'Team ID',
-    },
-    auto_init: {
-      type: 'bool',
-      short_desc: 'Initialize with README file',
-      display_name: 'Auto Initialize',
-    },
-    gitignore_template: {
-      type: 'string',
-      short_desc: 'Gitignore template to use',
-      display_name: 'Gitignore Template',
-    },
-    license_template: {
-      type: 'string',
-      short_desc: 'License template to use',
-      display_name: 'License Template',
-    },
-    allow_squash_merge: {
-      type: 'bool',
-      short_desc: 'Allow squash merging pull requests',
-      display_name: 'Allow Squash Merge',
-    },
-    allow_merge_commit: {
-      type: 'bool',
-      short_desc: 'Allow merge commits for pull requests',
-      display_name: 'Allow Merge Commit',
-    },
-    allow_rebase_merge: {
-      type: 'bool',
-      short_desc: 'Allow rebase merging pull requests',
-      display_name: 'Allow Rebase Merge',
-    },
-    delete_branch_on_merge: {
-      type: 'bool',
-      short_desc: 'Auto-delete head branches after merge',
-      display_name: 'Delete Branch on Merge',
-    },
-    squash_merge_commit_title: {
-      type: 'string',
-      allowed_values: [
-        { display_name: 'PR title', value: 'PR_TITLE' },
-        { display_name: 'Commit title', value: 'COMMIT_OR_PR_TITLE' },
-      ],
-      short_desc: 'Title format for squash merge commits',
-      display_name: 'Squash Merge Commit Title',
-    },
-    merge_commit_title: {
-      type: 'string',
-      allowed_values: [
-        { display_name: 'PR title', value: 'PR_TITLE' },
-        { display_name: 'Merge commit message', value: 'MERGE_MESSAGE' },
-      ],
-      short_desc: 'Title format for merge commits',
-      display_name: 'Merge Commit Title',
-    },
-    merge_commit_message: {
-      type: 'string',
-      allowed_values: [
-        { display_name: 'PR body', value: 'PR_BODY' },
-        { display_name: 'PR title', value: 'PR_TITLE' },
-        { display_name: 'Blank', value: 'BLANK' },
-      ],
-      short_desc: 'Message format for merge commits',
-      display_name: 'Merge Commit Message',
-    },
-    has_downloads: {
-      type: 'bool',
-      short_desc: 'Enable downloads for this repository',
-      display_name: 'Has Downloads',
-    },
-    is_template: {
-      type: 'bool',
-      short_desc: 'Mark as template repository',
-      display_name: 'Is Template',
-    },
-  },
-} satisfies TQoreTypeObject;
-
-export const getGithubRecordType: TQoreGetRecordTypeFunction = (
-  _context,
-  tableName: TGitHubTable
-) => {
+export const getGithubRecordType: TQoreGetRecordTypeFunction = (_context, tableName: string) => {
   switch (tableName) {
     case 'issues':
       return GitHubIssueRecordType;
@@ -343,8 +213,6 @@ export const getGithubRecordType: TQoreGetRecordTypeFunction = (
       return GitHubPullRequestRecordType;
     case 'releases':
       return GitHubReleaseRecordType;
-    case 'repositories':
-      return GitHubRepositoryRecordType;
     default:
       throw new GitHubError(`Table ${tableName} is not supported yet`);
   }

@@ -497,20 +497,7 @@ const GithubAppEn = {
     'search-issues-and-pull-requests': { groups: ['Search'] },
     'search-repos': { groups: ['Search'] },
   },
-  expressions: {
-    type: {
-      displayName: 'type',
-      shortDesc: 'Filter by record type',
-      longDesc: 'Filters records based on their type (e.g., public/private repositories, open/closed issues)',
-      args: [
-        {
-          displayName: 'Type',
-          shortDesc: 'The type to filter by',
-          longDesc: 'Select the type of records to retrieve. Options vary by table: repositories can be public/private/all, while issues and pull requests can be open/closed/all',
-        },
-      ],
-    },
-  },
+  expressions: {},
 };
 
 export default GithubAppEn;

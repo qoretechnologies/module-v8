@@ -3,15 +3,10 @@ import {
   GitHubIssueRecordType,
   GitHubPullRequestRecordType,
   GitHubReleaseRecordType,
-  GitHubRepositoryRecordType,
   type TGitHubTable,
 } from './get-record-type';
 
 export { GitHubTables, type TGitHubTable } from './get-record-type';
-
-export const needsRepoAndOwner = (tableName: string): boolean => {
-  return ['issues', 'pulls', 'releases'].includes(tableName);
-};
 
 export const getGitHubTableKeys = (tableName: TGitHubTable): string[] => {
   switch (tableName) {
@@ -21,8 +16,6 @@ export const getGitHubTableKeys = (tableName: TGitHubTable): string[] => {
       return Object.keys(GitHubPullRequestRecordType.fields);
     case 'releases':
       return Object.keys(GitHubReleaseRecordType.fields);
-    case 'repositories':
-      return Object.keys(GitHubRepositoryRecordType.fields);
     default:
       return [];
   }
