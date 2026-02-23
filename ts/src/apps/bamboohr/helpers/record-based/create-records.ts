@@ -17,8 +17,8 @@ import { bambooHRClient } from '../../client';
 import { BambooHRError } from '../../constants';
 import { IBambooHRConnectionOptions, IBambooHREmployee } from '../../types';
 import { transformBambooHRResponseToOutput, transformInputToBambooHRFormat } from '../dynamic-types';
-import { getAllFieldsString } from '../get-fields';
-import { BambooHRRecordError, EMPLOYEES_TABLE } from './constants';
+import { getAllFieldsString, getBambooHRFields } from '../get-fields';
+import { BambooHRRecordError, buildNormalizedToAliasMap, denormalizeRecordKeys, EMPLOYEES_TABLE } from './constants';
 
 /**
  * Create new employees in BambooHR.
@@ -45,10 +45,15 @@ export const createBambooHRRecords: TQoreCreateRecordsFunction = async (ctx, rec
   const recordsArray = mapColumnFormatToObject(records);
   const createdRecords: Record<string, unknown>[] = [];
 
+  // Build reverse mapping: normalized names (first_name) → original aliases (firstName)
+  const allFields = await getBambooHRFields(connectionOptions);
+  const normalizedToAlias = buildNormalizedToAliasMap(allFields);
+
   // Create employees sequentially (no batch create in BambooHR API)
   for (const record of recordsArray) {
-    // Transform input to BambooHR API format
-    const apiData = transformInputToBambooHRFormat(record);
+    // Reverse-normalize field names for BambooHR API (first_name → firstName)
+    const denormalizedRecord = denormalizeRecordKeys(record, normalizedToAlias);
+    const apiData = transformInputToBambooHRFormat(denormalizedRecord);
 
     // Create the employee
     const response = await bambooHRClient.post<{

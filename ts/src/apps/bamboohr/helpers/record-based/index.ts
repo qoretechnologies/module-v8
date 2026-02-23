@@ -6,7 +6,14 @@
  * Copyright 2026 Qore Technologies, s.r.o.
  */
 
-export { BambooHRRecordError, EMPLOYEES_TABLE, MAX_PAGE_SIZE, normalizeSetToSingleRecord } from './constants';
+export {
+  BambooHRRecordError,
+  EMPLOYEES_TABLE,
+  MAX_PAGE_SIZE,
+  normalizeSetToSingleRecord,
+  buildNormalizedToAliasMap,
+  denormalizeRecordKeys,
+} from './constants';
 export { filterRecords, sortRecords } from './apply-where-condition';
 export { createBambooHRRecords } from './create-records';
 export { getBambooHRExpressions } from './get-expressions';

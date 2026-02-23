@@ -1145,6 +1145,54 @@ describe.skip('BambooHR', () => {
 });
 
 // ============================================================================
+// Record-Based Unit Tests (no API calls)
+// ============================================================================
+
+describe('BambooHR Record-Based Unit Tests', () => {
+  describe('Get Table List', () => {
+    it('Should return Employees as the only table', () => {
+      const tables = getBambooHRTableList({});
+
+      expect(tables).toBeDefined();
+      expect(Array.isArray(tables)).toBe(true);
+      expect(tables).toEqual([EMPLOYEES_TABLE]);
+    });
+  });
+
+  describe('Expressions', () => {
+    it('Should return valid expression definitions', () => {
+      const expressions = getBambooHRExpressions('en');
+
+      expect(expressions).toBeDefined();
+      expect(typeof expressions).toBe('object');
+
+      // Should have all expected operators
+      expect(expressions['&&']).toBeDefined();
+      expect(expressions['||']).toBeDefined();
+      expect(expressions['==']).toBeDefined();
+      expect(expressions['!=']).toBeDefined();
+      expect(expressions['>']).toBeDefined();
+      expect(expressions['>=']).toBeDefined();
+      expect(expressions['<']).toBeDefined();
+      expect(expressions['<=']).toBeDefined();
+      expect(expressions['contains']).toBeDefined();
+      expect(expressions['is-set']).toBeDefined();
+      expect(expressions['is-not-set']).toBeDefined();
+    });
+
+    it('Should have localized display names', () => {
+      const expressions = getBambooHRExpressions('en');
+
+      const equalsExpr = expressions['=='];
+      expect(equalsExpr.display_name).toBeDefined();
+      expect(equalsExpr.display_name.length).toBeGreaterThan(0);
+      expect(equalsExpr.short_desc).toBeDefined();
+      expect(equalsExpr.desc).toBeDefined();
+    });
+  });
+});
+
+// ============================================================================
 // Client-Side Filtering Unit Tests (no API calls)
 // ============================================================================
 

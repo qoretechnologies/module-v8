@@ -9,13 +9,20 @@
 
 import { TQoreUpdateRecordsFunction } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../../global/helpers';
+import { Debugger } from '../../../../utils/Debugger';
 import { bambooHRClient } from '../../client';
 import { BambooHRError } from '../../constants';
 import { IBambooHRConnectionOptions, IBambooHRCustomReportResponse, IBambooHREmployee } from '../../types';
 import { transformBambooHREmployeeList, transformInputToBambooHRFormat } from '../dynamic-types';
 import { getBambooHRFields } from '../get-fields';
 import { filterRecords } from './apply-where-condition';
-import { BambooHRRecordError, EMPLOYEES_TABLE, normalizeSetToSingleRecord } from './constants';
+import {
+  BambooHRRecordError,
+  buildNormalizedToAliasMap,
+  denormalizeRecordKeys,
+  EMPLOYEES_TABLE,
+  normalizeSetToSingleRecord,
+} from './constants';
 
 /**
  * Update employees matching WHERE conditions.
@@ -82,8 +89,10 @@ export const updateBambooHRRecords: TQoreUpdateRecordsFunction = async (ctx, set
     ? normalizeSetToSingleRecord(set)
     : (set as Record<string, unknown>);
 
-  // Transform set values to BambooHR API format
-  const apiData = transformInputToBambooHRFormat(setValues);
+  // Reverse-normalize field names for BambooHR API (first_name → firstName)
+  const normalizedToAlias = buildNormalizedToAliasMap(allFields);
+  const denormalizedSetValues = denormalizeRecordKeys(setValues, normalizedToAlias);
+  const apiData = transformInputToBambooHRFormat(denormalizedSetValues);
 
   // Update each matching employee
   let updatedCount = 0;
@@ -108,6 +117,7 @@ export const updateBambooHRRecords: TQoreUpdateRecordsFunction = async (ctx, set
     } catch (error) {
       // Log but continue with remaining records
       // (consistent with Asana's error tolerance pattern)
+      Debugger.log(`Failed to update BambooHR employee "${employeeId}": ${error}`);
     }
   }
 
