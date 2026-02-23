@@ -146,11 +146,14 @@ export interface IBambooHRCustomReportResponse {
 }
 
 /**
- * Connection options for BambooHR API (OAuth2).
+ * Connection options for BambooHR API.
+ * Supports both OAuth2 (token) and API key (api_key) authentication.
+ * When api_key is provided, Basic Auth is used instead of Bearer token.
  */
 export interface IBambooHRConnectionOptions {
   token: string;
   company_domain: string;
+  api_key?: string;
 }
 
 /**

@@ -34,10 +34,23 @@ import {
   NewBambooHRTimeOff,
   NewBambooHREmployee,
 } from '../apps/bamboohr/triggers';
+import { filterRecords, sortRecords } from '../apps/bamboohr/helpers/record-based/apply-where-condition';
+import {
+  getBambooHRTableList,
+  getBambooHRRecordType,
+  getBambooHRExpressions,
+  searchBambooHRRecords,
+  createBambooHRRecords,
+  updateBambooHRRecords,
+  EMPLOYEES_TABLE,
+  BambooHRRecordError,
+} from '../apps/bamboohr/helpers/record-based';
 import { delay } from '../global/helpers';
+import { bambooHRClient } from '../apps/bamboohr/client';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import { checkAllowedValues } from './utils';
 import { IBambooHRConnectionOptions, IBambooHRFieldMetadata } from '../apps/bamboohr/types';
+import { TQoreSearchRecordsWhereConditions } from '@qoretechnologies/ts-toolkit';
 
 configDotenv({ path: '.env' });
 Debugger.level = DebugLevels.Verbose;
@@ -56,18 +69,22 @@ describe.skip('BambooHR', () => {
   };
 
   beforeAll(async () => {
-    const token = process.env.BAMBOOHR_TOKEN;
+    const apiKey = process.env.BAMBOOHR_API_KEY;
     const companyDomain = process.env.BAMBOOHR_COMPANY_DOMAIN;
 
-    if (!token || !companyDomain) {
+    if (!apiKey || !companyDomain) {
       throw new Error(
-        'Please set BAMBOOHR_TOKEN and BAMBOOHR_COMPANY_DOMAIN environment variables.'
+        'Please set BAMBOOHR_API_KEY and BAMBOOHR_COMPANY_DOMAIN environment variables.'
       );
     }
 
-    baseContext.conn_opts.token = token;
+    // Set API key on the singleton client for Basic Auth
+    bambooHRClient.setApiKey(apiKey);
+
+    // token is still required by helpers' validation checks
+    baseContext.conn_opts.token = apiKey;
     baseContext.conn_opts.company_domain = companyDomain;
-    connectionOptions.token = token;
+    connectionOptions.token = apiKey;
     connectionOptions.company_domain = companyDomain;
   });
 
@@ -959,6 +976,455 @@ describe.skip('BambooHR', () => {
           trigger.event_info as { type: { fields: Record<string, unknown> } }
         );
       });
+    });
+  });
+
+  // ============================================================================
+  // Record-Based Support Tests
+  // ============================================================================
+
+  describe('Record-Based Support', () => {
+    describe('Get Table List', () => {
+      it('Should return Employees as the only table', () => {
+        const tables = getBambooHRTableList(baseContext);
+
+        expect(tables).toBeDefined();
+        expect(Array.isArray(tables)).toBe(true);
+        expect(tables).toEqual([EMPLOYEES_TABLE]);
+      });
+    });
+
+    describe('Get Record Type', () => {
+      it('Should return a valid record type for Employees', async () => {
+        const recordType = await getBambooHRRecordType(baseContext, EMPLOYEES_TABLE);
+
+        expect(recordType).toBeDefined();
+        expect(recordType.type).toBe('hash');
+
+        const typedResult = recordType as { type: string; fields: Record<string, unknown> };
+        expect(typedResult.fields).toBeDefined();
+
+        // Should have the id field
+        expect(typedResult.fields.id).toBeDefined();
+
+        // Should have standard employee fields
+        expect(Object.keys(typedResult.fields).length).toBeGreaterThan(1);
+      });
+
+      it('Should throw for unknown table name', async () => {
+        await expect(
+          getBambooHRRecordType(baseContext, 'InvalidTable')
+        ).rejects.toThrow(BambooHRRecordError);
+      });
+    });
+
+    describe('Expressions', () => {
+      it('Should return valid expression definitions', () => {
+        const expressions = getBambooHRExpressions('en');
+
+        expect(expressions).toBeDefined();
+        expect(typeof expressions).toBe('object');
+
+        // Should have all expected operators
+        expect(expressions['&&']).toBeDefined();
+        expect(expressions['||']).toBeDefined();
+        expect(expressions['==']).toBeDefined();
+        expect(expressions['!=']).toBeDefined();
+        expect(expressions['>']).toBeDefined();
+        expect(expressions['>=']).toBeDefined();
+        expect(expressions['<']).toBeDefined();
+        expect(expressions['<=']).toBeDefined();
+        expect(expressions['contains']).toBeDefined();
+        expect(expressions['is-set']).toBeDefined();
+        expect(expressions['is-not-set']).toBeDefined();
+      });
+
+      it('Should have localized display names', () => {
+        const expressions = getBambooHRExpressions('en');
+
+        const equalsExpr = expressions['=='];
+        expect(equalsExpr.display_name).toBeDefined();
+        expect(equalsExpr.display_name.length).toBeGreaterThan(0);
+        expect(equalsExpr.short_desc).toBeDefined();
+        expect(equalsExpr.desc).toBeDefined();
+      });
+    });
+
+    describe('Search Records', () => {
+      it('Should return employees in column format via iterator', async () => {
+        const iterator = await searchBambooHRRecords(
+          baseContext,
+          undefined,
+          { table: EMPLOYEES_TABLE, limit: 10 }
+        );
+
+        expect(iterator).toBeDefined();
+        expect(typeof iterator).toBe('function');
+
+        // Get first batch
+        const batch = await iterator(baseContext, 10);
+
+        expect(batch).toBeDefined();
+        if (batch) {
+          // Column format: { fieldName: [values...] }
+          expect(typeof batch).toBe('object');
+          const keys = Object.keys(batch);
+          expect(keys.length).toBeGreaterThan(0);
+
+          // Each key should have an array value
+          for (const key of keys) {
+            expect(Array.isArray(batch[key])).toBe(true);
+          }
+
+          // Should have id field
+          expect(batch.id).toBeDefined();
+        }
+      });
+
+      it('Should throw for unknown table name', async () => {
+        await expect(
+          searchBambooHRRecords(
+            baseContext,
+            undefined,
+            { table: 'InvalidTable', limit: 10 }
+          )
+        ).rejects.toThrow(BambooHRRecordError);
+      });
+    });
+
+    describe('Create Records', () => {
+      it('Should create an employee via record-based interface', async () => {
+        const records = {
+          firstName: ['RecordTest'],
+          lastName: [`Employee ${Date.now()}`],
+        };
+
+        const result = await createBambooHRRecords(
+          baseContext,
+          records,
+          { table: EMPLOYEES_TABLE }
+        );
+
+        expect(result).toBeDefined();
+        expect(typeof result).toBe('object');
+
+        // Should return column format with at least id
+        expect(result.id).toBeDefined();
+        expect(Array.isArray(result.id)).toBe(true);
+        expect(result.id.length).toBe(1);
+      });
+    });
+
+    describe('Update Records', () => {
+      it('Should update employees matching a WHERE condition', async () => {
+        // First create an employee to update
+        const uniqueLastName = `UpdateTest${Date.now()}`;
+        await createBambooHRRecords(
+          baseContext,
+          { firstName: ['UpdateTest'], lastName: [uniqueLastName] },
+          { table: EMPLOYEES_TABLE }
+        );
+
+        // Update using WHERE condition to match by last_name
+        const where: TQoreSearchRecordsWhereConditions = {
+          exp: '==',
+          args: [{ field: 'last_name' }, { value: uniqueLastName }],
+        };
+
+        const updatedCount = await updateBambooHRRecords(
+          baseContext,
+          { mobilePhone: '+9876543210' },
+          where,
+          { table: EMPLOYEES_TABLE }
+        );
+
+        expect(updatedCount).toBeGreaterThanOrEqual(1);
+      });
+    });
+  });
+});
+
+// ============================================================================
+// Record-Based Unit Tests (no API calls)
+// ============================================================================
+
+describe('BambooHR Record-Based Unit Tests', () => {
+  describe('Get Table List', () => {
+    it('Should return Employees as the only table', () => {
+      const tables = getBambooHRTableList({});
+
+      expect(tables).toBeDefined();
+      expect(Array.isArray(tables)).toBe(true);
+      expect(tables).toEqual([EMPLOYEES_TABLE]);
+    });
+  });
+
+  describe('Expressions', () => {
+    it('Should return valid expression definitions', () => {
+      const expressions = getBambooHRExpressions('en');
+
+      expect(expressions).toBeDefined();
+      expect(typeof expressions).toBe('object');
+
+      // Should have all expected operators
+      expect(expressions['&&']).toBeDefined();
+      expect(expressions['||']).toBeDefined();
+      expect(expressions['==']).toBeDefined();
+      expect(expressions['!=']).toBeDefined();
+      expect(expressions['>']).toBeDefined();
+      expect(expressions['>=']).toBeDefined();
+      expect(expressions['<']).toBeDefined();
+      expect(expressions['<=']).toBeDefined();
+      expect(expressions['contains']).toBeDefined();
+      expect(expressions['is-set']).toBeDefined();
+      expect(expressions['is-not-set']).toBeDefined();
+    });
+
+    it('Should have localized display names', () => {
+      const expressions = getBambooHRExpressions('en');
+
+      const equalsExpr = expressions['=='];
+      expect(equalsExpr.display_name).toBeDefined();
+      expect(equalsExpr.display_name.length).toBeGreaterThan(0);
+      expect(equalsExpr.short_desc).toBeDefined();
+      expect(equalsExpr.desc).toBeDefined();
+    });
+  });
+});
+
+// ============================================================================
+// Client-Side Filtering Unit Tests (no API calls)
+// ============================================================================
+
+describe('BambooHR Client-Side Filtering', () => {
+  const sampleRecords: Record<string, unknown>[] = [
+    { id: '1', first_name: 'Alice', last_name: 'Smith', department: 'Engineering', hire_date: '2020-01-15', salary: 90000, status: 'Active' },
+    { id: '2', first_name: 'Bob', last_name: 'Jones', department: 'Marketing', hire_date: '2021-06-01', salary: 75000, status: 'Active' },
+    { id: '3', first_name: 'Charlie', last_name: 'Brown', department: 'Engineering', hire_date: '2022-03-10', salary: 85000, status: 'Inactive' },
+    { id: '4', first_name: 'Diana', last_name: 'Prince', department: 'Sales', hire_date: '2019-08-20', salary: 95000, status: 'Active' },
+    { id: '5', first_name: 'Eve', last_name: null, department: null, hire_date: null, salary: null, status: null },
+  ];
+
+  describe('filterRecords', () => {
+    it('Should return all records when no filter is provided', () => {
+      const result = filterRecords(sampleRecords);
+      expect(result.length).toBe(5);
+    });
+
+    it('Should filter with == operator', () => {
+      const where: TQoreSearchRecordsWhereConditions = {
+        exp: '==',
+        args: [{ field: 'department' }, { value: 'Engineering' }],
+      };
+
+      const result = filterRecords(sampleRecords, where);
+      expect(result.length).toBe(2);
+      expect(result.every((r) => r.department === 'Engineering')).toBe(true);
+    });
+
+    it('Should filter with != operator', () => {
+      const where: TQoreSearchRecordsWhereConditions = {
+        exp: '!=',
+        args: [{ field: 'status' }, { value: 'Active' }],
+      };
+
+      const result = filterRecords(sampleRecords, where);
+      // Inactive (Charlie) + null status (Eve, since null != 'Active')
+      expect(result.length).toBe(2);
+    });
+
+    it('Should filter with > operator (numeric)', () => {
+      const where: TQoreSearchRecordsWhereConditions = {
+        exp: '>',
+        args: [{ field: 'salary' }, { value: 85000 }],
+      };
+
+      const result = filterRecords(sampleRecords, where);
+      expect(result.length).toBe(2);
+      expect(result.every((r) => (r.salary as number) > 85000)).toBe(true);
+    });
+
+    it('Should filter with >= operator', () => {
+      const where: TQoreSearchRecordsWhereConditions = {
+        exp: '>=',
+        args: [{ field: 'salary' }, { value: 85000 }],
+      };
+
+      const result = filterRecords(sampleRecords, where);
+      expect(result.length).toBe(3);
+    });
+
+    it('Should filter with < operator', () => {
+      const where: TQoreSearchRecordsWhereConditions = {
+        exp: '<',
+        args: [{ field: 'salary' }, { value: 80000 }],
+      };
+
+      const result = filterRecords(sampleRecords, where);
+      expect(result.length).toBe(1);
+      expect(result[0].first_name).toBe('Bob');
+    });
+
+    it('Should filter with <= operator', () => {
+      const where: TQoreSearchRecordsWhereConditions = {
+        exp: '<=',
+        args: [{ field: 'salary' }, { value: 85000 }],
+      };
+
+      const result = filterRecords(sampleRecords, where);
+      expect(result.length).toBe(2);
+    });
+
+    it('Should filter with contains operator (case-insensitive)', () => {
+      const where: TQoreSearchRecordsWhereConditions = {
+        exp: 'contains',
+        args: [{ field: 'first_name' }, { value: 'al' }],
+      };
+
+      const result = filterRecords(sampleRecords, where);
+      expect(result.length).toBe(1);
+      expect(result[0].first_name).toBe('Alice');
+    });
+
+    it('Should filter with is-set operator', () => {
+      const where: TQoreSearchRecordsWhereConditions = {
+        exp: 'is-set',
+        args: [{ field: 'department' }],
+      };
+
+      const result = filterRecords(sampleRecords, where);
+      expect(result.length).toBe(4); // Eve has null department
+    });
+
+    it('Should filter with is-not-set operator', () => {
+      const where: TQoreSearchRecordsWhereConditions = {
+        exp: 'is-not-set',
+        args: [{ field: 'department' }],
+      };
+
+      const result = filterRecords(sampleRecords, where);
+      expect(result.length).toBe(1);
+      expect(result[0].first_name).toBe('Eve');
+    });
+
+    it('Should filter with && (AND) operator', () => {
+      const where: TQoreSearchRecordsWhereConditions = {
+        exp: '&&',
+        args: [
+          { exp: '==', args: [{ field: 'department' }, { value: 'Engineering' }] },
+          { exp: '==', args: [{ field: 'status' }, { value: 'Active' }] },
+        ],
+      };
+
+      const result = filterRecords(sampleRecords, where);
+      expect(result.length).toBe(1);
+      expect(result[0].first_name).toBe('Alice');
+    });
+
+    it('Should filter with || (OR) operator', () => {
+      const where: TQoreSearchRecordsWhereConditions = {
+        exp: '||',
+        args: [
+          { exp: '==', args: [{ field: 'department' }, { value: 'Engineering' }] },
+          { exp: '==', args: [{ field: 'department' }, { value: 'Sales' }] },
+        ],
+      };
+
+      const result = filterRecords(sampleRecords, where);
+      expect(result.length).toBe(3);
+    });
+
+    it('Should handle nested logical operators', () => {
+      const where: TQoreSearchRecordsWhereConditions = {
+        exp: '&&',
+        args: [
+          {
+            exp: '||',
+            args: [
+              { exp: '==', args: [{ field: 'department' }, { value: 'Engineering' }] },
+              { exp: '==', args: [{ field: 'department' }, { value: 'Marketing' }] },
+            ],
+          },
+          { exp: '==', args: [{ field: 'status' }, { value: 'Active' }] },
+        ],
+      };
+
+      const result = filterRecords(sampleRecords, where);
+      expect(result.length).toBe(2); // Alice (Engineering, Active) + Bob (Marketing, Active)
+    });
+
+    it('Should compare dates with > operator', () => {
+      const where: TQoreSearchRecordsWhereConditions = {
+        exp: '>',
+        args: [{ field: 'hire_date' }, { value: '2021-01-01' }],
+      };
+
+      const result = filterRecords(sampleRecords, where);
+      expect(result.length).toBe(2); // Bob (2021-06-01) and Charlie (2022-03-10)
+    });
+  });
+
+  describe('sortRecords', () => {
+    it('Should return records unchanged when no orderBy is provided', () => {
+      const result = sortRecords(sampleRecords);
+      expect(result.length).toBe(5);
+    });
+
+    it('Should sort by string field ascending', () => {
+      const result = sortRecords(sampleRecords, { field: 'first_name', direction: 'asc' });
+
+      expect(result[0].first_name).toBe('Alice');
+      expect(result[1].first_name).toBe('Bob');
+      expect(result[2].first_name).toBe('Charlie');
+      expect(result[3].first_name).toBe('Diana');
+    });
+
+    it('Should sort by string field descending', () => {
+      const result = sortRecords(sampleRecords, { field: 'first_name', direction: 'desc' });
+
+      // Eve has null last_name, null sorts to bottom in desc
+      expect(result[0].first_name).toBe('Eve');
+      expect(result[1].first_name).toBe('Diana');
+      expect(result[2].first_name).toBe('Charlie');
+    });
+
+    it('Should sort by numeric field ascending', () => {
+      const result = sortRecords(
+        sampleRecords.filter((r) => r.salary !== null),
+        { field: 'salary', direction: 'asc' }
+      );
+
+      expect(result[0].salary).toBe(75000);
+      expect(result[1].salary).toBe(85000);
+      expect(result[2].salary).toBe(90000);
+      expect(result[3].salary).toBe(95000);
+    });
+
+    it('Should sort by date field', () => {
+      const result = sortRecords(
+        sampleRecords.filter((r) => r.hire_date !== null),
+        { field: 'hire_date', direction: 'asc' }
+      );
+
+      expect(result[0].first_name).toBe('Diana'); // 2019-08-20
+      expect(result[1].first_name).toBe('Alice'); // 2020-01-15
+      expect(result[2].first_name).toBe('Bob'); // 2021-06-01
+      expect(result[3].first_name).toBe('Charlie'); // 2022-03-10
+    });
+
+    it('Should handle null values in sorting', () => {
+      const result = sortRecords(sampleRecords, { field: 'salary', direction: 'asc' });
+
+      // Null values should sort to the end in ascending order
+      expect(result[result.length - 1].salary).toBe(null);
+    });
+
+    it('Should not mutate the original array', () => {
+      const original = [...sampleRecords];
+      sortRecords(sampleRecords, { field: 'first_name', direction: 'desc' });
+
+      // Original array should be unchanged
+      expect(sampleRecords).toEqual(original);
     });
   });
 });
