@@ -11,6 +11,7 @@ import { createGitHubClient } from '../constants';
 import {
   formatGitHubRecord,
   getGitHubTableKeys,
+  needsRepoAndOwner,
   TGitHubTable,
 } from './constants';
 import {
@@ -37,13 +38,13 @@ export const createGitHubRecords: TQoreCreateRecordsFunction<
     ErrorClass: GitHubError,
   });
 
-  const { table, owner, repo } = options || {};
+  const { table, owner, repo } = options ?? {};
 
   if (!table) {
     throw new GitHubError('Table option is required');
   }
 
-  if (!owner || !repo) {
+  if (needsRepoAndOwner(table) && (!owner || !repo)) {
     throw new GitHubError(`Owner and Repo options are required to create records for ${table}`);
   }
 
@@ -69,8 +70,7 @@ export const createGitHubRecords: TQoreCreateRecordsFunction<
       const result = await createGitHubRecord({
         record: {
           ...recordFields,
-          owner,
-          repo,
+          ...(needsRepoAndOwner(table) && { owner, repo }),
         },
         token,
         tableName: table as TGitHubTable,

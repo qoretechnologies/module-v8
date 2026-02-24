@@ -678,6 +678,41 @@ const HubspotAppEn = {
       ],
     },
   },
+  searchOptions: {
+    orderBy: {
+      displayName: 'Order By',
+      shortDesc: 'Sort results by a specific field',
+      longDesc: 'Define the field and direction to sort search results',
+      type: {
+        fields: {
+          column: {
+            displayName: 'Column',
+            shortDesc: 'The column to sort by',
+            longDesc: 'The name of the column to use for sorting results',
+          },
+          ascending: {
+            displayName: 'Ascending',
+            shortDesc: 'Sort in ascending order',
+            longDesc: 'When enabled, results are sorted in ascending order (A-Z, 0-9)',
+          },
+        },
+      },
+    },
+    limit: {
+      displayName: 'Limit',
+      shortDesc: 'Maximum number of records to return',
+      longDesc:
+        'The maximum number of records to return. If not specified, all matching records will be returned.',
+    },
+  },
+  upsertOptions: {
+    idProperty: {
+      displayName: 'ID Property',
+      shortDesc: 'The unique identifier property for upsert operations',
+      longDesc:
+        'The unique identifier property name used to determine if a record already exists for updating. If no matching record is found, a new record will be created.',
+    },
+  },
 };
 
 export default HubspotAppEn;

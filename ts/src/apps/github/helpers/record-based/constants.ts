@@ -8,6 +8,10 @@ import {
 
 export { GitHubTables, type TGitHubTable } from './get-record-type';
 
+export const needsRepoAndOwner = (tableName: string): boolean => {
+  return ['issues', 'pulls', 'releases'].includes(tableName);
+};
+
 export const getGitHubTableKeys = (tableName: TGitHubTable): string[] => {
   switch (tableName) {
     case 'issues':

@@ -9,6 +9,7 @@ import { createGitHubClient } from '../constants';
 import {
   formatGitHubRecord,
   getGitHubTableKeys,
+  needsRepoAndOwner,
   TGitHubTable,
 } from './constants';
 import { extractGitHubErrorMessage } from './extract-error';
@@ -32,7 +33,7 @@ export const searchGitHubRecords: TQoreSearchRecordsFunction<
     throw new GitHubError('Table option is required');
   }
 
-  if (!owner || !repo) {
+  if (needsRepoAndOwner(table) && (!owner || !repo)) {
     throw new GitHubError(`Owner and Repo options are required to search ${table}`);
   }
 

@@ -3,6 +3,7 @@ import {
   TQoreGetDynamicTypeFunction,
   TQoreTypeObject,
 } from '@qoretechnologies/ts-toolkit';
+import { Debugger } from '../../../../utils/Debugger';
 import { PipedriveError } from '../../constants';
 import { getPipedriveDealChannelAllowedValues } from '../get-deal-properties-allowed-values';
 import { getPipedrivePersonIdAllowedValues } from '../get-person-id-allowed-values';
@@ -19,14 +20,12 @@ export const PipedriveLeadFields = {
   },
   person_id: {
     type: 'int',
-    get_allowed_values: getPipedrivePersonIdAllowedValues,
     allowed_values_creatable: true,
     desc: 'The ID of a person which this lead will be linked to',
   },
   organization_id: {
     type: 'int',
     desc: 'The ID of an organization which this lead will be linked to',
-    get_allowed_values: getPipedriveOrganizationIdAllowedValues,
     allowed_values_creatable: true,
   },
   value: { type: 'hash', desc: 'The potential value of the lead' },
@@ -45,25 +44,55 @@ export const PipedriveLeadFields = {
   },
   channel: {
     type: 'int',
-    get_allowed_values: getPipedriveDealChannelAllowedValues,
     allowed_values_creatable: true,
     desc: 'The ID of Marketing channel this lead was created from',
   },
   channel_id: {
     type: 'int',
     desc: 'The optional ID to further distinguish the Marketing channel',
-    get_allowed_values: getPipedriveDealChannelAllowedValues,
     allowed_values_creatable: true,
   },
 } satisfies Record<string, TQoreAppActionOption>;
 
 export const getPipedriveLeadRecordType: TQoreGetDynamicTypeFunction = async (
-  _context
+  context
 ): Promise<TQoreTypeObject> => {
   try {
+    let personAllowedValues;
+    let organizationAllowedValues;
+    let channelAllowedValues;
+
+    try {
+      [personAllowedValues, organizationAllowedValues, channelAllowedValues] = await Promise.all([
+        getPipedrivePersonIdAllowedValues(context),
+        getPipedriveOrganizationIdAllowedValues(context),
+        getPipedriveDealChannelAllowedValues(context),
+      ]);
+    } catch (error) {
+      Debugger.log('Failed to resolve Pipedrive lead allowed values for record type', error);
+    }
+
     return {
       type: 'hash',
-      fields: PipedriveLeadFields,
+      fields: {
+        ...PipedriveLeadFields,
+        person_id: {
+          ...PipedriveLeadFields.person_id,
+          ...(personAllowedValues && { allowed_values: personAllowedValues }),
+        },
+        organization_id: {
+          ...PipedriveLeadFields.organization_id,
+          ...(organizationAllowedValues && { allowed_values: organizationAllowedValues }),
+        },
+        channel: {
+          ...PipedriveLeadFields.channel,
+          ...(channelAllowedValues && { allowed_values: channelAllowedValues }),
+        },
+        channel_id: {
+          ...PipedriveLeadFields.channel_id,
+          ...(channelAllowedValues && { allowed_values: channelAllowedValues }),
+        },
+      },
     };
   } catch (error) {
     throw new PipedriveError(`Failed to get Pipedrive lead record type: ${error.message || error}`);

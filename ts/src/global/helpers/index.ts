@@ -27,6 +27,7 @@ import {
   TQoreRequestDataConverterFunction,
   TQoreResponseDataConverterFunction,
   TQoreSearchRecordsExpressionDefinition,
+  TQoreCrudOptions,
   TQoreSearchRecordsExpressions,
   TQoreTypeObject,
   TStringWithFirstUpperCaseCharacter,
@@ -348,6 +349,75 @@ export const mapExpressionsToApp = (
   });
 
   return localeExpressions;
+};
+
+export type TQoreCrudOptionType = 'searchOptions' | 'createOptions' | 'upsertOptions';
+
+export const mapCrudOptionsToApp = (
+  app: keyof Translation['apps'],
+  options: TQoreCrudOptions,
+  crudType: TQoreCrudOptionType,
+  locale: Locales
+): TQoreCrudOptions => {
+  const getLocalizedField = (field: string, path: string[]): string => {
+    const localizationPath = ['apps', app, crudType, ...path];
+    const localization = get(L[locale], localizationPath);
+
+    return localization?.[field]?.() || '';
+  };
+
+  const processOptions = (
+    collection: TQoreCrudOptions,
+    path: string[] = []
+  ): TQoreCrudOptions => {
+    return reduce<TQoreCrudOptions, Record<string, any>>(
+      collection,
+      (result, option, key) => {
+        const currentPath = [...path, key];
+        let optionType: Record<string, any> | undefined;
+
+        if (typeof option.type === 'object' && option.type.type === 'hash' && option.type.fields) {
+          const fields = processOptions(
+            option.type.fields as TQoreCrudOptions,
+            [...currentPath, 'type', 'fields']
+          );
+          optionType = { ...option.type, fields };
+        }
+
+        if (
+          typeof option.type === 'object' &&
+          option.type.type === 'list' &&
+          option.type.element_type &&
+          typeof option.type.element_type === 'object' &&
+          option.type.element_type.type === 'hash' &&
+          option.type.element_type.fields
+        ) {
+          const elementFields = processOptions(
+            option.type.element_type.fields as TQoreCrudOptions,
+            [...currentPath, 'type', 'element_type', 'fields']
+          );
+          optionType = {
+            ...option.type,
+            element_type: { ...option.type.element_type, fields: elementFields },
+          };
+        }
+
+        return {
+          ...result,
+          [key]: {
+            ...option,
+            ...(optionType && { type: optionType }),
+            display_name: option.display_name || getLocalizedField('displayName', currentPath),
+            short_desc: option.short_desc || getLocalizedField('shortDesc', currentPath),
+            desc: option.desc || getLocalizedField('longDesc', currentPath),
+          },
+        };
+      },
+      {}
+    ) as TQoreCrudOptions;
+  };
+
+  return processOptions(options);
 };
 
 export const mapObjectToColumnFormat = <T extends Record<string, any>>(
@@ -802,3 +872,4 @@ export const formatDateReadable = (
   }
 };
 export * from './QoreApiClient';
+export * from './strip-record-type-functions';

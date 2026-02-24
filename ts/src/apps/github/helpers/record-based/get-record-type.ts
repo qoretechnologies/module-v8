@@ -6,6 +6,7 @@ import {
 import { GitHubError } from '../../constants';
 import { getGitHubAssigneesAllowedValues } from '../get-assignee-allowed-values';
 import { getGitHubIssueLabelsAllowedValues } from '../get-issue-label-allowed-values';
+import { Debugger } from '../../../../utils/Debugger';
 
 export const GitHubTables = ['issues', 'pulls', 'releases'] as const;
 export type TGitHubTable = (typeof GitHubTables)[number];
@@ -55,7 +56,6 @@ export const GitHubIssueRecordType = {
     },
     assignee: {
       type: 'string',
-      get_allowed_values: getGitHubAssigneesAllowedValues,
       allowed_values_creatable: true,
       short_desc: 'User assigned to this issue',
       display_name: 'Assignee',
@@ -66,13 +66,11 @@ export const GitHubIssueRecordType = {
         element_type: 'string',
       },
       element_allowed_values_creatable: true,
-      get_element_allowed_values: getGitHubAssigneesAllowedValues,
       short_desc: 'Users assigned to this issue',
       display_name: 'Assignees',
     },
     labels: {
       element_allowed_values_creatable: true,
-      get_element_allowed_values: getGitHubIssueLabelsAllowedValues,
       type: {
         type: 'list',
         element_type: 'string',
@@ -205,10 +203,40 @@ export const GitHubReleaseRecordType = {
   },
 } satisfies TQoreTypeObject;
 
-export const getGithubRecordType: TQoreGetRecordTypeFunction = (_context, tableName: string) => {
+export const getGithubRecordType: TQoreGetRecordTypeFunction = async (context, tableName: string) => {
   switch (tableName) {
-    case 'issues':
-      return GitHubIssueRecordType;
+    case 'issues': {
+      let assigneeAllowedValues;
+      let labelsAllowedValues;
+
+      try {
+        [assigneeAllowedValues, labelsAllowedValues] = await Promise.all([
+          getGitHubAssigneesAllowedValues(context),
+          getGitHubIssueLabelsAllowedValues(context),
+        ]);
+      } catch (error) {
+        Debugger.log('Failed to resolve GitHub issue allowed values for record type', error);
+      }
+
+      return {
+        ...GitHubIssueRecordType,
+        fields: {
+          ...GitHubIssueRecordType.fields,
+          assignee: {
+            ...GitHubIssueRecordType.fields.assignee,
+            ...(assigneeAllowedValues && { allowed_values: assigneeAllowedValues }),
+          },
+          assignees: {
+            ...GitHubIssueRecordType.fields.assignees,
+            ...(assigneeAllowedValues && { element_allowed_values: assigneeAllowedValues }),
+          },
+          labels: {
+            ...GitHubIssueRecordType.fields.labels,
+            ...(labelsAllowedValues && { element_allowed_values: labelsAllowedValues }),
+          },
+        },
+      };
+    }
     case 'pulls':
       return GitHubPullRequestRecordType;
     case 'releases':
