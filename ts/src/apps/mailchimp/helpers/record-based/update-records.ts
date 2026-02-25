@@ -69,8 +69,9 @@ export const updateMailchimpRecords: TQoreUpdateRecordsFunction = async (
     batch = await iterator(ctx, 1000);
   }
 
-  // Update each matching member
+  // Update each matching member, collecting any per-record errors
   let updatedCount = 0;
+  const errors: string[] = [];
 
   for (const member of matchingRecords) {
     try {
@@ -89,9 +90,14 @@ export const updateMailchimpRecords: TQoreUpdateRecordsFunction = async (
 
       updatedCount++;
     } catch (error) {
-      // Log failure but continue with remaining records
-      console.error(`Failed to update member ${member.email_address}: ${error}`);
+      errors.push(`${member.email_address}: ${error}`);
     }
+  }
+
+  if (errors.length > 0) {
+    throw new MailchimpError(
+      `Updated ${updatedCount} of ${matchingRecords.length} members; ${errors.length} failed:\n${errors.join('\n')}`
+    );
   }
 
   return updatedCount;

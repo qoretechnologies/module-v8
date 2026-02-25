@@ -14,6 +14,7 @@ import {
 import {
   getListIdByName,
   getSubscriberHash,
+  mailchimpGetOrNull,
   mailchimpPut,
   MailchimpError,
   TMailchimpMember,
@@ -59,21 +60,22 @@ export const upsertMailchimpRecords: TQoreUpsertRecordsFunction = async (ctx, re
 
       const subscriberHash = await getSubscriberHash(email);
 
+      // Check if member exists before PUT to reliably detect insert vs update
+      const existing = await mailchimpGetOrNull<TMailchimpMember>({
+        token,
+        datacenter,
+        path: `lists/${listId}/members/${subscriberHash}`,
+      });
+
       // Mailchimp PUT is natively upsert
-      const result = await mailchimpPut<TMailchimpMember>({
+      await mailchimpPut<TMailchimpMember>({
         token,
         datacenter,
         path: `lists/${listId}/members/${subscriberHash}`,
         body: payload,
       });
 
-      // Determine if this was an insert or update based on timestamps
-      // If signup timestamp matches last_changed, it's likely a new member
-      if (result.timestamp_signup === result.last_changed) {
-        results.push('inserted');
-      } else {
-        results.push('updated');
-      }
+      results.push(existing ? 'updated' : 'inserted');
     } catch (error) {
       if (error instanceof MailchimpError) {
         throw error;

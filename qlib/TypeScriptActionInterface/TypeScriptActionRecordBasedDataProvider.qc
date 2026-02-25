@@ -115,7 +115,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
                     updateOptionIntern(i.key, j.key, j.value, \action_ctx);
                 } catch (hash<ExceptionInfo> ex) {
                     TSAI::error("Error evaluating option functions in @%s/%s for %s option %y in table %y: %s", app,
-                        action_ctx, i.key, j.key, name, get_exception_string(ex));
+                        action, i.key, j.key, name, get_exception_string(ex));
                 }
             }
         }

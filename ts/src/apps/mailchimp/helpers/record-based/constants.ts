@@ -337,6 +337,29 @@ export const mailchimpPut = async <T>(options: {
 };
 
 /**
+ * GET a single Mailchimp resource, returning null if not found.
+ */
+export const mailchimpGetOrNull = async <T>(options: {
+  token: string;
+  datacenter: string;
+  path: string;
+}): Promise<T | null> => {
+  const { token, datacenter, path } = options;
+  try {
+    const response = await QorusRequest.get<{ data: T }>(
+      {
+        path: `/3.0/${path}`,
+        headers: { Authorization: `Bearer ${token}` },
+      },
+      getMailchimpEndpoint(datacenter)
+    );
+    return response?.data ?? null;
+  } catch {
+    return null;
+  }
+};
+
+/**
  * Make a DELETE request to Mailchimp API
  */
 export const mailchimpDelete = async (options: {

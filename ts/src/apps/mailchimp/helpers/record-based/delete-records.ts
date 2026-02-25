@@ -52,8 +52,9 @@ export const deleteMailchimpRecords: TQoreDeleteRecordsFunction = async (ctx, wh
     batch = await iterator(ctx, 1000);
   }
 
-  // Delete each matching member
+  // Delete each matching member, collecting any per-record errors
   let deletedCount = 0;
+  const errors: string[] = [];
 
   for (const email of matchingEmails) {
     try {
@@ -67,9 +68,14 @@ export const deleteMailchimpRecords: TQoreDeleteRecordsFunction = async (ctx, wh
 
       deletedCount++;
     } catch (error) {
-      // Log failure but continue with remaining records
-      console.error(`Failed to delete member ${email}: ${error}`);
+      errors.push(`${email}: ${error}`);
     }
+  }
+
+  if (errors.length > 0) {
+    throw new MailchimpError(
+      `Deleted ${deletedCount} of ${matchingEmails.length} members; ${errors.length} failed:\n${errors.join('\n')}`
+    );
   }
 
   return deletedCount;
