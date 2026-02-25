@@ -127,17 +127,16 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         string key = type + "_" + option;
         if (TypeScriptActionInterface::getOptionFunctions(\action, self, key, \fmap)) {
             if (omap{key} || romap{key}) {
+                info{type}{option}.allowed_values = getReferenceDataImpl(key);
                 info{type}{option}.ref_data = key;
-                # don't set allowed_values here; addExtraOptions() will call
-                # getReferenceData() dynamically with current option values
             }
             if (eomap{key} || reomap{key}) {
+                info{type}{option}.element_allowed_values = getElementReferenceDataImpl(key);
                 info{type}{option}.element_ref_data = key;
-                # don't set element_allowed_values here; let addExtraOptions() use the dynamic path
             }
             if (dvmap{key}) {
+                info{type}{option}.default_value = getReferenceDataValueImpl(key);
                 info{type}{option}.default_ref_data = key;
-                # don't set default_value here; let addExtraOptions() use the dynamic path
             }
         }
     }
