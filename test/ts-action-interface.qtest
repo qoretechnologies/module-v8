@@ -747,8 +747,9 @@ var obj = {
         assertEq("TypeScriptAppRestConnection", cast<object>(prov).getConnection().className());
 
         assertFalse(prov.getSearchOptions().for_update.default_value);
-        assertEq("read-uncommitted", prov.getSearchOptions().isolation_level.allowed_values[0].value);
-        assertEq("read-committed", prov.getSearchOptions().isolation_level.default_value);
+        assertEq("search_options_isolation_level", prov.getSearchOptions().isolation_level.ref_data);
+        assertEq("read-uncommitted", prov.getReferenceData("search_options_isolation_level")[0].value);
+        assertEq("read-committed", prov.getReferenceDataValue("search_options_isolation_level"));
 
         AbstractDataProviderRecordIterator i = prov.searchRecords();
         assertTrue(i.next());
