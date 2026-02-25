@@ -502,9 +502,11 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             throw "SEARCH-OPTION-TYPE-ERROR", sprintf("The '%s_options' function for app %y search option %y "
                 "returned type %y; expecting \"hash\"", type, app, name, v.fullType());
         }
-        option_functions = remove v{OptionFunctions};
-        v.type = TypeScriptActionInterface::getType(type + " option " + name + " type", remove v.type);
-        return cast<hash<DataProviderOptionInfo>>(v);
+        hash<auto> opt = v;
+        option_functions = remove opt{OptionFunctions};
+        opt.type = TypeScriptActionInterface::getType(type + " option " + name + " type", opt.type, opt.required,
+            remove opt.element_type);
+        return cast<hash<DataProviderOptionInfo>>(opt);
     }
 
     private static hash<DataProviderExpressionInfo> getExpression(string app, string name, auto v) {
