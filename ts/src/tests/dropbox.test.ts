@@ -403,8 +403,8 @@ describe('Should test Dropbox', () => {
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
 
-      // Wait a bit for Dropbox to index the file
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // Wait for Dropbox to index recently uploaded/moved files (indexing can take 15-30s)
+      await new Promise((resolve) => setTimeout(resolve, 5000));
 
       const result = await retry(
         async () => {
@@ -424,8 +424,8 @@ describe('Should test Dropbox', () => {
 
           return searchResult;
         },
-        3,
-        2000
+        5,
+        3000
       );
 
       expect(result).toBeDefined();

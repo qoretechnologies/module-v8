@@ -588,6 +588,7 @@ public class TypeScriptActionInterface {
             }
             if (acmap{key} && ((acmap{key} - "key") == (call - "key"))) {
                 # function is being reused
+                call.key = key;
                 return key;
             }
             # function is being replaced
@@ -615,6 +616,7 @@ public class TypeScriptActionInterface {
         }
         if (acmap{key} && ((acmap{key} - "key") == (call - "key"))) {
             # function is being reused
+            call.key = key;
             return key;
         }
         call.key = key;
@@ -1583,6 +1585,24 @@ public class TypeScriptActionInterface {
             throw "APP-ERROR", sprintf("App %y is a record-based app but has no record-based actions", info.app.name);
         }
         ActionFunctionContext fctx(info.app.name, "tables", info.pool);
+        # Pre-register option functions in acmap so the proxy child process has them;
+        # uses copies of ofmap values so the original stays intact for setConnection()
+        {
+            hash<auto> action_ctx += {
+                "app": info.app.name,
+                "action": "tables",
+            };
+            foreach hash<auto> i in (ofmap.pairIterator()) {
+                foreach hash<auto> j in (i.value.pairIterator()) {
+                    if (!j.value) {
+                        continue;
+                    }
+                    string key = i.key + "_options_" + j.key;
+                    hash<auto> fmap_copy = j.value;
+                    TypeScriptActionInterface::getOptionFunctions(\action_ctx, fctx, key, \fmap_copy);
+                }
+            }
+        }
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(info.app.name);
         prov.registerChild("tables", new TypeScriptActionTablesDataProvider(fctx, prov_info, ofmap));
     }

@@ -1,5 +1,5 @@
 import { TQoreGetRecordTypeFunction, TQoreTypeObject } from '@qoretechnologies/ts-toolkit';
-import { getQoreContextRequiredValues } from '../../../../global/helpers';
+import { getQoreContextRequiredValues, stripRecordTypeFunctions } from '../../../../global/helpers';
 import { HubspotError } from '../../constants';
 import {
   getHubspotCompanyPropertiesType,
@@ -78,7 +78,7 @@ export const getHubspotRecordType: TQoreGetRecordTypeFunction = async (
       }
     }
 
-    return type as TQoreTypeObject;
+    return stripRecordTypeFunctions(type as TQoreTypeObject);
   } catch (error) {
     if (error instanceof HubspotError) {
       throw error;

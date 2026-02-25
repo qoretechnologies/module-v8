@@ -38,7 +38,7 @@ export const createGitHubRecords: TQoreCreateRecordsFunction<
     ErrorClass: GitHubError,
   });
 
-  const { table, owner, repo } = options || {};
+  const { table, owner, repo } = options ?? {};
 
   if (!table) {
     throw new GitHubError('Table option is required');
@@ -131,8 +131,6 @@ const createGitHubRecord = async (options: {
         return await client.rest.pulls.create(record);
       case 'releases':
         return await client.rest.repos.createRelease(record);
-      case 'repositories':
-        return await client.rest.repos.createForAuthenticatedUser(record);
       default:
         throw new GitHubError(`Unsupported table name: ${tableName}`);
     }

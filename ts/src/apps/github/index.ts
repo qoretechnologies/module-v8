@@ -13,10 +13,10 @@ import { GITHUB_ALLOWED_PATHS, GITHUB_APP_NAME } from './constants';
 import { createGitHubRecords } from './helpers/record-based/create-records';
 import { getGithubRecordType } from './helpers/record-based/get-record-type';
 import { getGitHubTableList } from './helpers/record-based/get-table-list';
+import { getGitHubExpressions } from './helpers/record-based/get-expressions';
 import { GithubCreateOptions, GithubSearchOptions } from './helpers/record-based/options';
 import { searchGitHubRecords } from './helpers/record-based/search-records';
 import * as githubTriggers from './triggers';
-import { getGitHubExpressions } from './helpers/record-based/get-expressions';
 
 export const GITHUB_ACTIONS = buildActionsFromSwaggerSchema({
   schema: github as any,

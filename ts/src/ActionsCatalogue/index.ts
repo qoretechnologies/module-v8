@@ -5,6 +5,7 @@ import {
   TQoreAppAction,
   TQoreApps,
   TQoreAppWithActions,
+  TQoreCrudOptions,
   TQoreExistingApps,
   TQoreRecordBasedApp,
 } from '@qoretechnologies/ts-toolkit';
@@ -103,6 +104,7 @@ import zendesk from '../apps/zendesk';
 import zohocrm from '../apps/zohocrm';
 import zoom from '../apps/zoom';
 import { Log } from '../decorators/Logger';
+import { mapCrudOptionsToApp, TQoreCrudOptionType } from '../global/helpers';
 import L from '../i18n/i18n-node';
 import { Locales } from '../i18n/i18n-types';
 import { Debugger, DebugLevels } from '../utils/Debugger';
@@ -332,8 +334,30 @@ export class ActionsCatalogue {
           ? Object.values(localeGroups).map((fn: any) => fn())
           : ['Other'];
 
+        const crudOptionTypes: { key: string; localeKey: TQoreCrudOptionType }[] = [
+          { key: 'search_options', localeKey: 'searchOptions' },
+          { key: 'create_options', localeKey: 'createOptions' },
+          { key: 'upsert_options', localeKey: 'upsertOptions' },
+        ];
+
+        const mappedCrudOptions: Record<string, TQoreCrudOptions> = {};
+        for (const { key, localeKey } of crudOptionTypes) {
+          const options = (app as unknown as Record<string, unknown>)[key] as
+            | TQoreCrudOptions
+            | undefined;
+          if (options) {
+            mappedCrudOptions[key] = mapCrudOptionsToApp(
+              app.name as keyof typeof L.en.apps,
+              options,
+              localeKey,
+              this.locale
+            );
+          }
+        }
+
         this.apps[appName] = {
           ...app,
+          ...mappedCrudOptions,
           groups,
           ...(connectionMessageTitle &&
             connectionMessageContent && {

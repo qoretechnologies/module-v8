@@ -612,6 +612,39 @@ const MondayAppEn = {
       ],
     },
   },
+  searchOptions: {
+    orderBy: {
+      displayName: 'Order By',
+      shortDesc: 'Sort results by a specific field',
+      longDesc: 'Define the field and direction to sort search results',
+      type: {
+        fields: {
+          column: {
+            displayName: 'Column',
+            shortDesc: 'The column to sort by',
+            longDesc: 'The name of the column to use for sorting results',
+          },
+          ascending: {
+            displayName: 'Ascending',
+            shortDesc: 'Sort in ascending order',
+            longDesc: 'When enabled, results are sorted in ascending order (A-Z, 0-9)',
+          },
+        },
+      },
+    },
+    group_id: {
+      displayName: 'Group',
+      shortDesc: 'The group to filter items by',
+      longDesc: 'Select a group within the board to filter items',
+    },
+  },
+  createOptions: {
+    group_id: {
+      displayName: 'Group',
+      shortDesc: 'The group to create the item in',
+      longDesc: 'Select a group within the board where the new item will be created',
+    },
+  },
 };
 
 export default MondayAppEn;

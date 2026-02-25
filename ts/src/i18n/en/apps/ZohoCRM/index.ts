@@ -606,6 +606,35 @@ const ZohoCRMAppEn = {
       },
     },
   },
+  searchOptions: {
+    orderBy: {
+      displayName: 'Order By',
+      shortDesc: 'Sort results by a specific field',
+      longDesc: 'Define the field and direction to sort search results',
+      type: {
+        fields: {
+          column: {
+            displayName: 'Column',
+            shortDesc: 'The column to sort by',
+            longDesc: 'The name of the column to use for sorting results',
+          },
+          ascending: {
+            displayName: 'Ascending',
+            shortDesc: 'Sort in ascending order',
+            longDesc: 'When enabled, results are sorted in ascending order (A-Z, 0-9)',
+          },
+        },
+      },
+    },
+  },
+  upsertOptions: {
+    duplicate_check_fields: {
+      displayName: 'Duplicate Check Fields',
+      shortDesc: 'Fields to check for duplicate records',
+      longDesc:
+        'A list of field API names used to check for duplicate records during upsert. If a record with matching values for these fields exists, it will be updated; otherwise, a new record will be created.',
+    },
+  },
 };
 
 export default ZohoCRMAppEn;

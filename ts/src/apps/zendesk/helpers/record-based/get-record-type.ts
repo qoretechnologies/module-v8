@@ -148,6 +148,18 @@ const getUserRecordType = async (
     Debugger.log('Failed to get dynamic user fields, falling back to static fields');
   }
 
+  let brandAllowedValues;
+  let organizationAllowedValues;
+
+  try {
+    [brandAllowedValues, organizationAllowedValues] = await Promise.all([
+      getBrandIdAllowedValues(context as any),
+      getOrganizationIdAllowedValues(context as any),
+    ]);
+  } catch (error) {
+    Debugger.log('Failed to resolve Zendesk user allowed values for record type', error);
+  }
+
   return {
     type: 'hash',
     fields: {
@@ -174,7 +186,7 @@ const getUserRecordType = async (
           element_type: 'integer',
         },
         desc: 'The brand IDs that the agent has access to',
-        get_element_allowed_values: getBrandIdAllowedValues,
+        ...(brandAllowedValues && { element_allowed_values: brandAllowedValues }),
       },
       phone: {
         type: 'string',
@@ -183,7 +195,7 @@ const getUserRecordType = async (
       organization_id: {
         type: 'integer',
         desc: 'The id of the organization this user is associated with',
-        get_allowed_values: getOrganizationIdAllowedValues,
+        ...(organizationAllowedValues && { allowed_values: organizationAllowedValues }),
       },
       time_zone: {
         type: 'string',
@@ -242,6 +254,14 @@ const getOrganizationRecordType = async (
     Debugger.log('Failed to get dynamic organization fields, falling back to static fields');
   }
 
+  let groupAllowedValues;
+
+  try {
+    groupAllowedValues = await getGroupIdAllowedValues(context as any);
+  } catch (error) {
+    Debugger.log('Failed to resolve Zendesk group allowed values for record type', error);
+  }
+
   return {
     type: 'hash',
     fields: {
@@ -267,7 +287,7 @@ const getOrganizationRecordType = async (
       group_id: {
         type: 'integer',
         desc: 'New tickets from users in this organization are automatically put in this group',
-        get_allowed_values: getGroupIdAllowedValues,
+        ...(groupAllowedValues && { allowed_values: groupAllowedValues }),
       },
       shared_tickets: {
         type: 'bool',

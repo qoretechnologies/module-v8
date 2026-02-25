@@ -498,17 +498,62 @@ const GithubAppEn = {
     'search-repos': { groups: ['Search'] },
   },
   expressions: {
-    type: {
-      displayName: 'type',
-      shortDesc: 'Filter by record type',
-      longDesc: 'Filters records based on their type (e.g., public/private repositories, open/closed issues)',
+    state: {
+      displayName: 'State',
+      shortDesc: 'Filter by state',
+      longDesc: 'Filters records based on their state (open/closed)',
       args: [
         {
-          displayName: 'Type',
-          shortDesc: 'The type to filter by',
-          longDesc: 'Select the type of records to retrieve. Options vary by table: repositories can be public/private/all, while issues and pull requests can be open/closed/all',
+          displayName: 'State',
+          shortDesc: 'The state to filter by',
+          longDesc: 'Select the state of records to retrieve: open, closed, or all',
         },
       ],
+    },
+  },
+  searchOptions: {
+    repo: {
+      displayName: 'Repository',
+      shortDesc: 'The name of the repository',
+      longDesc:
+        'The name of the repository. For example, for "qoretechnologies/qorus", the repo value would be "qorus"',
+    },
+    owner: {
+      displayName: 'Owner',
+      shortDesc: 'The owner of the repository',
+      longDesc: 'The owner of the repository. Can be either a user or an organization',
+    },
+    orderBy: {
+      displayName: 'Order By',
+      shortDesc: 'Sort results by a specific field',
+      longDesc: 'Define the field and direction to sort search results',
+      type: {
+        fields: {
+          column: {
+            displayName: 'Column',
+            shortDesc: 'The column to sort by',
+            longDesc: 'The name of the column to use for sorting results',
+          },
+          ascending: {
+            displayName: 'Ascending',
+            shortDesc: 'Sort in ascending order',
+            longDesc: 'When enabled, results are sorted in ascending order (A-Z, 0-9)',
+          },
+        },
+      },
+    },
+  },
+  createOptions: {
+    repo: {
+      displayName: 'Repository',
+      shortDesc: 'The name of the repository',
+      longDesc:
+        'The name of the repository. For example, for "qoretechnologies/qorus", the repo value would be "qorus"',
+    },
+    owner: {
+      displayName: 'Owner',
+      shortDesc: 'The owner of the repository',
+      longDesc: 'The owner of the repository. Can be either a user or an organization',
     },
   },
 };

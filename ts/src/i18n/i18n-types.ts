@@ -7251,6 +7251,54 @@ type RootTranslation = {
 					}
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							field: {
+								/**
+								 * F​i​e​l​d
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							direction: {
+								/**
+								 * D​i​r​e​c​t​i​o​n
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+								 */
+								longDesc: string
+							}
+						}
+					}
+				}
+			}
 			actions: {
 				run_sql: {
 					/**
@@ -9868,6 +9916,84 @@ type RootTranslation = {
 					}
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							column: {
+								/**
+								 * C​o​l​u​m​n
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							ascending: {
+								/**
+								 * A​s​c​e​n​d​i​n​g
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+								 */
+								shortDesc: string
+								/**
+								 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​r​e​s​u​l​t​s​ ​a​r​e​ ​s​o​r​t​e​d​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​ ​(​A​-​Z​,​ ​0​-​9​)
+								 */
+								longDesc: string
+							}
+						}
+					}
+				}
+				group_id: {
+					/**
+					 * G​r​o​u​p
+					 */
+					displayName: string
+					/**
+					 * T​h​e​ ​g​r​o​u​p​ ​t​o​ ​f​i​l​t​e​r​ ​i​t​e​m​s​ ​b​y
+					 */
+					shortDesc: string
+					/**
+					 * S​e​l​e​c​t​ ​a​ ​g​r​o​u​p​ ​w​i​t​h​i​n​ ​t​h​e​ ​b​o​a​r​d​ ​t​o​ ​f​i​l​t​e​r​ ​i​t​e​m​s
+					 */
+					longDesc: string
+				}
+			}
+			createOptions: {
+				group_id: {
+					/**
+					 * G​r​o​u​p
+					 */
+					displayName: string
+					/**
+					 * T​h​e​ ​g​r​o​u​p​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​i​t​e​m​ ​i​n
+					 */
+					shortDesc: string
+					/**
+					 * S​e​l​e​c​t​ ​a​ ​g​r​o​u​p​ ​w​i​t​h​i​n​ ​t​h​e​ ​b​o​a​r​d​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​i​t​e​m​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d
+					 */
+					longDesc: string
+				}
+			}
 		}
 		ZohoCRM: {
 			/**
@@ -11292,6 +11418,70 @@ type RootTranslation = {
 							longDesc: string
 						}
 					}
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							column: {
+								/**
+								 * C​o​l​u​m​n
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							ascending: {
+								/**
+								 * A​s​c​e​n​d​i​n​g
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+								 */
+								shortDesc: string
+								/**
+								 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​r​e​s​u​l​t​s​ ​a​r​e​ ​s​o​r​t​e​d​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​ ​(​A​-​Z​,​ ​0​-​9​)
+								 */
+								longDesc: string
+							}
+						}
+					}
+				}
+			}
+			upsertOptions: {
+				duplicate_check_fields: {
+					/**
+					 * D​u​p​l​i​c​a​t​e​ ​C​h​e​c​k​ ​F​i​e​l​d​s
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​s​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​d​u​p​l​i​c​a​t​e​ ​r​e​c​o​r​d​s
+					 */
+					shortDesc: string
+					/**
+					 * A​ ​l​i​s​t​ ​o​f​ ​f​i​e​l​d​ ​A​P​I​ ​n​a​m​e​s​ ​u​s​e​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​d​u​p​l​i​c​a​t​e​ ​r​e​c​o​r​d​s​ ​d​u​r​i​n​g​ ​u​p​s​e​r​t​.​ ​I​f​ ​a​ ​r​e​c​o​r​d​ ​w​i​t​h​ ​m​a​t​c​h​i​n​g​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​s​e​ ​f​i​e​l​d​s​ ​e​x​i​s​t​s​,​ ​i​t​ ​w​i​l​l​ ​b​e​ ​u​p​d​a​t​e​d​;​ ​o​t​h​e​r​w​i​s​e​,​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+					 */
+					longDesc: string
 				}
 			}
 		}
@@ -13177,6 +13367,68 @@ type RootTranslation = {
 					}
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							column: {
+								/**
+								 * C​o​l​u​m​n
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							ascending: {
+								/**
+								 * A​s​c​e​n​d​i​n​g
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+								 */
+								shortDesc: string
+								/**
+								 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​r​e​s​u​l​t​s​ ​a​r​e​ ​s​o​r​t​e​d​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​ ​(​A​-​Z​,​ ​0​-​9​)
+								 */
+								longDesc: string
+							}
+						}
+					}
+				}
+				limit: {
+					/**
+					 * L​i​m​i​t
+					 */
+					displayName: string
+					/**
+					 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n
+					 */
+					shortDesc: string
+					/**
+					 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​t​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​t​h​e​ ​s​e​a​r​c​h
+					 */
+					longDesc: string
+				}
+			}
 		}
 		BambooHR: {
 			/**
@@ -14960,6 +15212,54 @@ type RootTranslation = {
 										longDesc: string
 									}
 								}
+							}
+						}
+					}
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							column: {
+								/**
+								 * C​o​l​u​m​n
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							ascending: {
+								/**
+								 * A​s​c​e​n​d​i​n​g
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+								 */
+								shortDesc: string
+								/**
+								 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​r​e​s​u​l​t​s​ ​a​r​e​ ​s​o​r​t​e​d​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​ ​(​A​-​Z​,​ ​0​-​9​)
+								 */
+								longDesc: string
 							}
 						}
 					}
@@ -25458,6 +25758,54 @@ type RootTranslation = {
 						 * O​t​h​e​r
 						 */
 						'0': string
+					}
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							field: {
+								/**
+								 * F​i​e​l​d
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							direction: {
+								/**
+								 * D​i​r​e​c​t​i​o​n
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+								 */
+								longDesc: string
+							}
+						}
 					}
 				}
 			}
@@ -40634,6 +40982,54 @@ type RootTranslation = {
 					}
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							field: {
+								/**
+								 * F​i​e​l​d
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							direction: {
+								/**
+								 * D​i​r​e​c​t​i​o​n
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+								 */
+								longDesc: string
+							}
+						}
+					}
+				}
+			}
 			expressions: {
 				'&&': {
 					/**
@@ -48397,6 +48793,36 @@ type RootTranslation = {
 					}
 				}
 			}
+			searchOptions: {
+				sheet_id: {
+					/**
+					 * S​h​e​e​t
+					 */
+					displayName: string
+					/**
+					 * T​h​e​ ​s​p​e​c​i​f​i​c​ ​s​h​e​e​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t
+					 */
+					shortDesc: string
+					/**
+					 * S​e​l​e​c​t​ ​t​h​e​ ​s​p​e​c​i​f​i​c​ ​s​h​e​e​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​r​e​a​d​s​h​e​e​t​ ​t​o​ ​s​e​a​r​c​h​ ​i​n​.​ ​E​a​c​h​ ​s​h​e​e​t​ ​h​a​s​ ​a​ ​u​n​i​q​u​e​ ​I​D​ ​w​i​t​h​i​n​ ​a​ ​s​p​r​e​a​d​s​h​e​e​t​.
+					 */
+					longDesc: string
+				}
+				limit: {
+					/**
+					 * L​i​m​i​t
+					 */
+					displayName: string
+					/**
+					 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n
+					 */
+					shortDesc: string
+					/**
+					 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​a​l​l​ ​m​a​t​c​h​i​n​g​ ​r​e​c​o​r​d​s​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+					 */
+					longDesc: string
+				}
+			}
 		}
 		GoogleContacts: {
 			/**
@@ -56016,6 +56442,54 @@ type RootTranslation = {
 					longDesc: string
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							field: {
+								/**
+								 * F​i​e​l​d
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							direction: {
+								/**
+								 * D​i​r​e​c​t​i​o​n
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+								 */
+								longDesc: string
+							}
+						}
+					}
+				}
+			}
 		}
 		Attio: {
 			/**
@@ -57950,6 +58424,84 @@ type RootTranslation = {
 					}
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							column: {
+								/**
+								 * C​o​l​u​m​n
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							ascending: {
+								/**
+								 * A​s​c​e​n​d​i​n​g
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+								 */
+								shortDesc: string
+								/**
+								 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​r​e​s​u​l​t​s​ ​a​r​e​ ​s​o​r​t​e​d​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​ ​(​A​-​Z​,​ ​0​-​9​)
+								 */
+								longDesc: string
+							}
+						}
+					}
+				}
+				limit: {
+					/**
+					 * M​a​x​i​m​u​m​ ​R​e​c​o​r​d​s
+					 */
+					displayName: string
+					/**
+					 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n
+					 */
+					shortDesc: string
+					/**
+					 * T​h​e​ ​m​a​x​i​m​u​m​ ​t​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​ ​a​c​r​o​s​s​ ​a​l​l​ ​p​a​g​e​s​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​a​l​l​ ​m​a​t​c​h​i​n​g​ ​r​e​c​o​r​d​s​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+					 */
+					longDesc: string
+				}
+			}
+			upsertOptions: {
+				matching_attribute: {
+					/**
+					 * M​a​t​c​h​i​n​g​ ​A​t​t​r​i​b​u​t​e
+					 */
+					displayName: string
+					/**
+					 * A​t​t​r​i​b​u​t​e​ ​t​o​ ​m​a​t​c​h​ ​f​o​r​ ​u​p​s​e​r​t​.​ ​M​u​s​t​ ​b​e​ ​a​ ​u​n​i​q​u​e​ ​a​t​t​r​i​b​u​t​e​.
+					 */
+					shortDesc: string
+					/**
+					 * T​h​e​ ​a​t​t​r​i​b​u​t​e​ ​u​s​e​d​ ​t​o​ ​d​e​t​e​r​m​i​n​e​ ​i​f​ ​a​ ​r​e​c​o​r​d​ ​a​l​r​e​a​d​y​ ​e​x​i​s​t​s​ ​f​o​r​ ​u​p​d​a​t​i​n​g​.​ ​I​f​ ​n​o​ ​e​x​i​s​t​i​n​g​ ​r​e​c​o​r​d​ ​i​s​ ​f​o​u​n​d​,​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+					 */
+					longDesc: string
+				}
+			}
 		}
 		Airtable: {
 			/**
@@ -58586,6 +59138,54 @@ type RootTranslation = {
 							 * S​e​l​e​c​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​v​i​e​w​ ​f​r​o​m​ ​t​h​e​ ​t​a​b​l​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​o​n​l​y​ ​r​e​c​o​r​d​s​ ​t​h​a​t​ ​m​a​t​c​h​ ​t​h​e​ ​v​i​e​w​'​s​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​s​o​r​t​i​n​g​ ​c​r​i​t​e​r​i​a
 							 */
 							longDesc: string
+						}
+					}
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							column: {
+								/**
+								 * C​o​l​u​m​n
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							ascending: {
+								/**
+								 * A​s​c​e​n​d​i​n​g
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+								 */
+								shortDesc: string
+								/**
+								 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​r​e​s​u​l​t​s​ ​a​r​e​ ​s​o​r​t​e​d​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​ ​(​A​-​Z​,​ ​0​-​9​)
+								 */
+								longDesc: string
+							}
 						}
 					}
 				}
@@ -64855,6 +65455,210 @@ type RootTranslation = {
 					}
 				}
 			}
+			expressions: {
+				'&&': {
+					/**
+					 * A​n​d
+					 */
+					displayName: string
+					/**
+					 * L​o​g​i​c​a​l​ ​A​N​D​ ​o​p​e​r​a​t​o​r
+					 */
+					shortDesc: string
+					/**
+					 * C​o​m​b​i​n​e​s​ ​m​u​l​t​i​p​l​e​ ​c​o​n​d​i​t​i​o​n​s​ ​w​h​e​r​e​ ​a​l​l​ ​m​u​s​t​ ​b​e​ ​t​r​u​e
+					 */
+					longDesc: string
+				}
+				'||': {
+					/**
+					 * O​r
+					 */
+					displayName: string
+					/**
+					 * L​o​g​i​c​a​l​ ​O​R​ ​o​p​e​r​a​t​o​r
+					 */
+					shortDesc: string
+					/**
+					 * C​o​m​b​i​n​e​s​ ​m​u​l​t​i​p​l​e​ ​c​o​n​d​i​t​i​o​n​s​ ​w​h​e​r​e​ ​a​t​ ​l​e​a​s​t​ ​o​n​e​ ​m​u​s​t​ ​b​e​ ​t​r​u​e
+					 */
+					longDesc: string
+				}
+				'==': {
+					/**
+					 * E​q​u​a​l​s
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​e​q​u​a​l​s​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​e​q​u​a​l​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'!=': {
+					/**
+					 * N​o​t​ ​E​q​u​a​l​s
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​d​o​e​s​ ​n​o​t​ ​e​q​u​a​l​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'>': {
+					/**
+					 * G​r​e​a​t​e​r​ ​T​h​a​n
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'>=': {
+					/**
+					 * G​r​e​a​t​e​r​ ​T​h​a​n​ ​o​r​ ​E​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​g​r​e​a​t​e​r​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'<': {
+					/**
+					 * L​e​s​s​ ​T​h​a​n
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'<=': {
+					/**
+					 * L​e​s​s​ ​T​h​a​n​ ​o​r​ ​E​q​u​a​l
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​i​s​ ​l​e​s​s​ ​t​h​a​n​ ​o​r​ ​e​q​u​a​l​ ​t​o​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e
+					 */
+					longDesc: string
+				}
+				'is-set': {
+					/**
+					 * I​s​ ​S​e​t
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​h​a​s​ ​a​ ​v​a​l​u​e​ ​(​i​s​ ​n​o​t​ ​e​m​p​t​y​)
+					 */
+					longDesc: string
+				}
+				'is-not-set': {
+					/**
+					 * I​s​ ​N​o​t​ ​S​e​t
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​h​a​s​ ​n​o​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​h​a​s​ ​n​o​ ​v​a​l​u​e​ ​(​i​s​ ​e​m​p​t​y​)
+					 */
+					longDesc: string
+				}
+				contains: {
+					/**
+					 * C​o​n​t​a​i​n​s
+					 */
+					displayName: string
+					/**
+					 * F​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​v​a​l​u​e
+					 */
+					shortDesc: string
+					/**
+					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​u​b​s​t​r​i​n​g
+					 */
+					longDesc: string
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							field: {
+								/**
+								 * F​i​e​l​d
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							direction: {
+								/**
+								 * D​i​r​e​c​t​i​o​n
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+								 */
+								longDesc: string
+							}
+						}
+					}
+				}
+			}
 		}
 		Mautic: {
 			/**
@@ -68501,6 +69305,68 @@ type RootTranslation = {
 					}
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							column: {
+								/**
+								 * C​o​l​u​m​n
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							ascending: {
+								/**
+								 * A​s​c​e​n​d​i​n​g
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+								 */
+								shortDesc: string
+								/**
+								 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​r​e​s​u​l​t​s​ ​a​r​e​ ​s​o​r​t​e​d​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​ ​(​A​-​Z​,​ ​0​-​9​)
+								 */
+								longDesc: string
+							}
+						}
+					}
+				}
+				limit: {
+					/**
+					 * L​i​m​i​t
+					 */
+					displayName: string
+					/**
+					 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n
+					 */
+					shortDesc: string
+					/**
+					 * S​e​t​ ​t​h​e​ ​m​a​x​i​m​u​m​ ​t​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​f​r​o​m​ ​t​h​e​ ​s​e​a​r​c​h
+					 */
+					longDesc: string
+				}
+			}
 		}
 		Jira: {
 			/**
@@ -68521,6 +69387,54 @@ type RootTranslation = {
 			 * C​o​l​l​e​c​t​i​o​n​ ​o​f​ ​a​c​t​i​o​n​s​ ​t​o​ ​i​n​t​e​r​a​c​t​ ​w​i​t​h​ ​t​h​e​ ​J​i​r​a​ ​A​P​I
 			 */
 			longDesc: string
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							field: {
+								/**
+								 * F​i​e​l​d
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							direction: {
+								/**
+								 * D​i​r​e​c​t​i​o​n
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+								 */
+								longDesc: string
+							}
+						}
+					}
+				}
+			}
 			expressions: {
 				'&&': {
 					/**
@@ -71953,35 +72867,141 @@ type RootTranslation = {
 				}
 			}
 			expressions: {
-				type: {
+				state: {
 					/**
-					 * t​y​p​e
+					 * S​t​a​t​e
 					 */
 					displayName: string
 					/**
-					 * F​i​l​t​e​r​ ​b​y​ ​r​e​c​o​r​d​ ​t​y​p​e
+					 * F​i​l​t​e​r​ ​b​y​ ​s​t​a​t​e
 					 */
 					shortDesc: string
 					/**
-					 * F​i​l​t​e​r​s​ ​r​e​c​o​r​d​s​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​i​r​ ​t​y​p​e​ ​(​e​.​g​.​,​ ​p​u​b​l​i​c​/​p​r​i​v​a​t​e​ ​r​e​p​o​s​i​t​o​r​i​e​s​,​ ​o​p​e​n​/​c​l​o​s​e​d​ ​i​s​s​u​e​s​)
+					 * F​i​l​t​e​r​s​ ​r​e​c​o​r​d​s​ ​b​a​s​e​d​ ​o​n​ ​t​h​e​i​r​ ​s​t​a​t​e​ ​(​o​p​e​n​/​c​l​o​s​e​d​)
 					 */
 					longDesc: string
 					args: {
 						'0': {
 							/**
-							 * T​y​p​e
+							 * S​t​a​t​e
 							 */
 							displayName: string
 							/**
-							 * T​h​e​ ​t​y​p​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
+							 * T​h​e​ ​s​t​a​t​e​ ​t​o​ ​f​i​l​t​e​r​ ​b​y
 							 */
 							shortDesc: string
 							/**
-							 * S​e​l​e​c​t​ ​t​h​e​ ​t​y​p​e​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​.​ ​O​p​t​i​o​n​s​ ​v​a​r​y​ ​b​y​ ​t​a​b​l​e​:​ ​r​e​p​o​s​i​t​o​r​i​e​s​ ​c​a​n​ ​b​e​ ​p​u​b​l​i​c​/​p​r​i​v​a​t​e​/​a​l​l​,​ ​w​h​i​l​e​ ​i​s​s​u​e​s​ ​a​n​d​ ​p​u​l​l​ ​r​e​q​u​e​s​t​s​ ​c​a​n​ ​b​e​ ​o​p​e​n​/​c​l​o​s​e​d​/​a​l​l
+							 * S​e​l​e​c​t​ ​t​h​e​ ​s​t​a​t​e​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​r​i​e​v​e​:​ ​o​p​e​n​,​ ​c​l​o​s​e​d​,​ ​o​r​ ​a​l​l
 							 */
 							longDesc: string
 						}
 					}
+				}
+			}
+			searchOptions: {
+				repo: {
+					/**
+					 * R​e​p​o​s​i​t​o​r​y
+					 */
+					displayName: string
+					/**
+					 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y​.​ ​F​o​r​ ​e​x​a​m​p​l​e​,​ ​f​o​r​ ​"​q​o​r​e​t​e​c​h​n​o​l​o​g​i​e​s​/​q​o​r​u​s​"​,​ ​t​h​e​ ​r​e​p​o​ ​v​a​l​u​e​ ​w​o​u​l​d​ ​b​e​ ​"​q​o​r​u​s​"
+					 */
+					longDesc: string
+				}
+				owner: {
+					/**
+					 * O​w​n​e​r
+					 */
+					displayName: string
+					/**
+					 * T​h​e​ ​o​w​n​e​r​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * T​h​e​ ​o​w​n​e​r​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y​.​ ​C​a​n​ ​b​e​ ​e​i​t​h​e​r​ ​a​ ​u​s​e​r​ ​o​r​ ​a​n​ ​o​r​g​a​n​i​z​a​t​i​o​n
+					 */
+					longDesc: string
+				}
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							column: {
+								/**
+								 * C​o​l​u​m​n
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							ascending: {
+								/**
+								 * A​s​c​e​n​d​i​n​g
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+								 */
+								shortDesc: string
+								/**
+								 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​r​e​s​u​l​t​s​ ​a​r​e​ ​s​o​r​t​e​d​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​ ​(​A​-​Z​,​ ​0​-​9​)
+								 */
+								longDesc: string
+							}
+						}
+					}
+				}
+			}
+			createOptions: {
+				repo: {
+					/**
+					 * R​e​p​o​s​i​t​o​r​y
+					 */
+					displayName: string
+					/**
+					 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y​.​ ​F​o​r​ ​e​x​a​m​p​l​e​,​ ​f​o​r​ ​"​q​o​r​e​t​e​c​h​n​o​l​o​g​i​e​s​/​q​o​r​u​s​"​,​ ​t​h​e​ ​r​e​p​o​ ​v​a​l​u​e​ ​w​o​u​l​d​ ​b​e​ ​"​q​o​r​u​s​"
+					 */
+					longDesc: string
+				}
+				owner: {
+					/**
+					 * O​w​n​e​r
+					 */
+					displayName: string
+					/**
+					 * T​h​e​ ​o​w​n​e​r​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y
+					 */
+					shortDesc: string
+					/**
+					 * T​h​e​ ​o​w​n​e​r​ ​o​f​ ​t​h​e​ ​r​e​p​o​s​i​t​o​r​y​.​ ​C​a​n​ ​b​e​ ​e​i​t​h​e​r​ ​a​ ​u​s​e​r​ ​o​r​ ​a​n​ ​o​r​g​a​n​i​z​a​t​i​o​n
+					 */
+					longDesc: string
 				}
 			}
 		}
@@ -77032,6 +78052,68 @@ type RootTranslation = {
 					}
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							column: {
+								/**
+								 * C​o​l​u​m​n
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							ascending: {
+								/**
+								 * A​s​c​e​n​d​i​n​g
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+								 */
+								shortDesc: string
+								/**
+								 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​r​e​s​u​l​t​s​ ​a​r​e​ ​s​o​r​t​e​d​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​ ​(​A​-​Z​,​ ​0​-​9​)
+								 */
+								longDesc: string
+							}
+						}
+					}
+				}
+				limit: {
+					/**
+					 * L​i​m​i​t
+					 */
+					displayName: string
+					/**
+					 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n
+					 */
+					shortDesc: string
+					/**
+					 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.
+					 */
+					longDesc: string
+				}
+			}
 		}
 		HelpScout: {
 			/**
@@ -81780,6 +82862,84 @@ type RootTranslation = {
 					}
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							column: {
+								/**
+								 * C​o​l​u​m​n
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							ascending: {
+								/**
+								 * A​s​c​e​n​d​i​n​g
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+								 */
+								shortDesc: string
+								/**
+								 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​r​e​s​u​l​t​s​ ​a​r​e​ ​s​o​r​t​e​d​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​ ​(​A​-​Z​,​ ​0​-​9​)
+								 */
+								longDesc: string
+							}
+						}
+					}
+				}
+				limit: {
+					/**
+					 * L​i​m​i​t
+					 */
+					displayName: string
+					/**
+					 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n
+					 */
+					shortDesc: string
+					/**
+					 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​c​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​I​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​,​ ​a​l​l​ ​m​a​t​c​h​i​n​g​ ​r​e​c​o​r​d​s​ ​w​i​l​l​ ​b​e​ ​r​e​t​u​r​n​e​d​.
+					 */
+					longDesc: string
+				}
+			}
+			upsertOptions: {
+				idProperty: {
+					/**
+					 * I​D​ ​P​r​o​p​e​r​t​y
+					 */
+					displayName: string
+					/**
+					 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​p​r​o​p​e​r​t​y​ ​f​o​r​ ​u​p​s​e​r​t​ ​o​p​e​r​a​t​i​o​n​s
+					 */
+					shortDesc: string
+					/**
+					 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​p​r​o​p​e​r​t​y​ ​n​a​m​e​ ​u​s​e​d​ ​t​o​ ​d​e​t​e​r​m​i​n​e​ ​i​f​ ​a​ ​r​e​c​o​r​d​ ​a​l​r​e​a​d​y​ ​e​x​i​s​t​s​ ​f​o​r​ ​u​p​d​a​t​i​n​g​.​ ​I​f​ ​n​o​ ​m​a​t​c​h​i​n​g​ ​r​e​c​o​r​d​ ​i​s​ ​f​o​u​n​d​,​ ​a​ ​n​e​w​ ​r​e​c​o​r​d​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+					 */
+					longDesc: string
+				}
+			}
 		}
 		Dropbox: {
 			/**
@@ -84736,6 +85896,54 @@ type RootTranslation = {
 					longDesc: string
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							field: {
+								/**
+								 * F​i​e​l​d
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							direction: {
+								/**
+								 * D​i​r​e​c​t​i​o​n
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+								 */
+								longDesc: string
+							}
+						}
+					}
+				}
+			}
 		}
 		NocoDB: {
 			/**
@@ -84859,6 +86067,54 @@ type RootTranslation = {
 							 * O​p​t​i​o​n​a​l​l​y​ ​s​p​e​c​i​f​y​ ​a​ ​f​i​l​t​e​r​ ​u​s​i​n​g​ ​N​o​c​o​D​B​ ​w​h​e​r​e​ ​s​y​n​t​a​x​ ​(​e​.​g​.​,​ ​"​(​S​t​a​t​u​s​,​e​q​,​A​c​t​i​v​e​)​"​)​ ​t​o​ ​o​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​r​o​w​s​ ​m​a​t​c​h​i​n​g​ ​s​p​e​c​i​f​i​c​ ​c​r​i​t​e​r​i​a​.
 							 */
 							longDesc: string
+						}
+					}
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							field: {
+								/**
+								 * F​i​e​l​d
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							direction: {
+								/**
+								 * D​i​r​e​c​t​i​o​n
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+								 */
+								longDesc: string
+							}
 						}
 					}
 				}
@@ -85622,6 +86878,54 @@ type RootTranslation = {
 						 * S​t​r​u​c​t​u​r​e​ ​a​n​d​ ​t​y​p​e​s​ ​f​o​r​ ​F​r​e​s​h​d​e​s​k​'​s​ ​u​p​d​a​t​e​d​ ​c​o​n​t​a​c​t​ ​d​a​t​a​ ​p​a​y​l​o​a​d​.
 						 */
 						desc: string
+					}
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							field: {
+								/**
+								 * F​i​e​l​d
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							direction: {
+								/**
+								 * D​i​r​e​c​t​i​o​n
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+								 */
+								longDesc: string
+							}
+						}
 					}
 				}
 			}
@@ -88547,6 +89851,54 @@ type RootTranslation = {
 					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​ ​s​t​a​r​t​s​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​t​r​i​n​g
 					 */
 					longDesc: string
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							field: {
+								/**
+								 * F​i​e​l​d
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							direction: {
+								/**
+								 * D​i​r​e​c​t​i​o​n
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+								 */
+								longDesc: string
+							}
+						}
+					}
 				}
 			}
 		}
@@ -92961,6 +94313,54 @@ type RootTranslation = {
 					longDesc: string
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							field: {
+								/**
+								 * F​i​e​l​d
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							direction: {
+								/**
+								 * D​i​r​e​c​t​i​o​n
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+								 */
+								longDesc: string
+							}
+						}
+					}
+				}
+			}
 		}
 		Teams: {
 			/**
@@ -94851,6 +96251,54 @@ type RootTranslation = {
 							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​c​h​e​c​k​ ​f​o​r​ ​a​ ​n​o​n​-​n​u​l​l​ ​v​a​l​u​e
 							 */
 							longDesc: string
+						}
+					}
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							column: {
+								/**
+								 * C​o​l​u​m​n
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​o​l​u​m​n​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							ascending: {
+								/**
+								 * A​s​c​e​n​d​i​n​g
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r
+								 */
+								shortDesc: string
+								/**
+								 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​r​e​s​u​l​t​s​ ​a​r​e​ ​s​o​r​t​e​d​ ​i​n​ ​a​s​c​e​n​d​i​n​g​ ​o​r​d​e​r​ ​(​A​-​Z​,​ ​0​-​9​)
+								 */
+								longDesc: string
+							}
 						}
 					}
 				}
@@ -101135,6 +102583,54 @@ type RootTranslation = {
 					 * M​a​t​c​h​e​s​ ​r​e​c​o​r​d​s​ ​w​h​e​r​e​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​e​m​p​t​y​ ​o​r​ ​n​o​t​ ​s​e​t
 					 */
 					longDesc: string
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							field: {
+								/**
+								 * F​i​e​l​d
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							direction: {
+								/**
+								 * D​i​r​e​c​t​i​o​n
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+								 */
+								longDesc: string
+							}
+						}
+					}
 				}
 			}
 			triggers: {
@@ -110146,6 +111642,54 @@ type RootTranslation = {
 							 * S​e​l​e​c​t​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​d​e​a​l​ ​i​s​ ​o​p​e​n​,​ ​w​o​n​,​ ​o​r​ ​l​o​s​t
 							 */
 							longDesc: string
+						}
+					}
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * O​r​d​e​r​ ​B​y
+					 */
+					displayName: string
+					/**
+					 * S​o​r​t​ ​r​e​s​u​l​t​s​ ​b​y​ ​a​ ​s​p​e​c​i​f​i​c​ ​f​i​e​l​d
+					 */
+					shortDesc: string
+					/**
+					 * D​e​f​i​n​e​ ​t​h​e​ ​f​i​e​l​d​ ​a​n​d​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​s​e​a​r​c​h​ ​r​e​s​u​l​t​s
+					 */
+					longDesc: string
+					type: {
+						fields: {
+							field: {
+								/**
+								 * F​i​e​l​d
+								 */
+								displayName: string
+								/**
+								 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​s​o​r​t​ ​b​y
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​s​e​ ​f​o​r​ ​s​o​r​t​i​n​g​ ​r​e​s​u​l​t​s
+								 */
+								longDesc: string
+							}
+							direction: {
+								/**
+								 * D​i​r​e​c​t​i​o​n
+								 */
+								displayName: string
+								/**
+								 * S​o​r​t​ ​d​i​r​e​c​t​i​o​n
+								 */
+								shortDesc: string
+								/**
+								 * T​h​e​ ​d​i​r​e​c​t​i​o​n​ ​t​o​ ​s​o​r​t​ ​r​e​s​u​l​t​s​ ​(​a​s​c​e​n​d​i​n​g​ ​o​r​ ​d​e​s​c​e​n​d​i​n​g​)
+								 */
+								longDesc: string
+							}
 						}
 					}
 				}
@@ -132294,6 +133838,54 @@ export type TranslationFunctions = {
 					}
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							field: {
+								/**
+								 * Field
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The field to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the field to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							direction: {
+								/**
+								 * Direction
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort direction
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The direction to sort results (ascending or descending)
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
+				}
+			}
 			actions: {
 				run_sql: {
 					/**
@@ -134911,6 +136503,84 @@ export type TranslationFunctions = {
 					}
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							column: {
+								/**
+								 * Column
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The column to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the column to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							ascending: {
+								/**
+								 * Ascending
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort in ascending order
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * When enabled, results are sorted in ascending order (A-Z, 0-9)
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
+				}
+				group_id: {
+					/**
+					 * Group
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * The group to filter items by
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Select a group within the board to filter items
+					 */
+					longDesc: () => LocalizedString
+				}
+			}
+			createOptions: {
+				group_id: {
+					/**
+					 * Group
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * The group to create the item in
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Select a group within the board where the new item will be created
+					 */
+					longDesc: () => LocalizedString
+				}
+			}
 		}
 		ZohoCRM: {
 			/**
@@ -136335,6 +138005,70 @@ export type TranslationFunctions = {
 							longDesc: () => LocalizedString
 						}
 					}
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							column: {
+								/**
+								 * Column
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The column to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the column to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							ascending: {
+								/**
+								 * Ascending
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort in ascending order
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * When enabled, results are sorted in ascending order (A-Z, 0-9)
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
+				}
+			}
+			upsertOptions: {
+				duplicate_check_fields: {
+					/**
+					 * Duplicate Check Fields
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Fields to check for duplicate records
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * A list of field API names used to check for duplicate records during upsert. If a record with matching values for these fields exists, it will be updated; otherwise, a new record will be created.
+					 */
+					longDesc: () => LocalizedString
 				}
 			}
 		}
@@ -138220,6 +139954,68 @@ export type TranslationFunctions = {
 					}
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							column: {
+								/**
+								 * Column
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The column to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the column to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							ascending: {
+								/**
+								 * Ascending
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort in ascending order
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * When enabled, results are sorted in ascending order (A-Z, 0-9)
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
+				}
+				limit: {
+					/**
+					 * Limit
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Maximum number of records to return
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Set the maximum total number of records to retrieve from the search
+					 */
+					longDesc: () => LocalizedString
+				}
+			}
 		}
 		BambooHR: {
 			/**
@@ -140003,6 +141799,54 @@ export type TranslationFunctions = {
 										longDesc: () => LocalizedString
 									}
 								}
+							}
+						}
+					}
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							column: {
+								/**
+								 * Column
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The column to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the column to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							ascending: {
+								/**
+								 * Ascending
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort in ascending order
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * When enabled, results are sorted in ascending order (A-Z, 0-9)
+								 */
+								longDesc: () => LocalizedString
 							}
 						}
 					}
@@ -150501,6 +152345,54 @@ export type TranslationFunctions = {
 						 * Other
 						 */
 						'0': () => LocalizedString
+					}
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							field: {
+								/**
+								 * Field
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The field to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the field to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							direction: {
+								/**
+								 * Direction
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort direction
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The direction to sort results (ascending or descending)
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
 					}
 				}
 			}
@@ -165677,6 +167569,54 @@ export type TranslationFunctions = {
 					}
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							field: {
+								/**
+								 * Field
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The field to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the field to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							direction: {
+								/**
+								 * Direction
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort direction
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The direction to sort results (ascending or descending)
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
+				}
+			}
 			expressions: {
 				'&&': {
 					/**
@@ -173440,6 +175380,36 @@ export type TranslationFunctions = {
 					}
 				}
 			}
+			searchOptions: {
+				sheet_id: {
+					/**
+					 * Sheet
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * The specific sheet within the spreadsheet
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Select the specific sheet within the spreadsheet to search in. Each sheet has a unique ID within a spreadsheet.
+					 */
+					longDesc: () => LocalizedString
+				}
+				limit: {
+					/**
+					 * Limit
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Maximum number of records to return
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * The maximum number of records to return. If not specified, all matching records will be returned.
+					 */
+					longDesc: () => LocalizedString
+				}
+			}
 		}
 		GoogleContacts: {
 			/**
@@ -181059,6 +183029,54 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							field: {
+								/**
+								 * Field
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The field to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the field to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							direction: {
+								/**
+								 * Direction
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort direction
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The direction to sort results (ascending or descending)
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
+				}
+			}
 		}
 		Attio: {
 			/**
@@ -182993,6 +185011,84 @@ export type TranslationFunctions = {
 					}
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							column: {
+								/**
+								 * Column
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The column to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the column to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							ascending: {
+								/**
+								 * Ascending
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort in ascending order
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * When enabled, results are sorted in ascending order (A-Z, 0-9)
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
+				}
+				limit: {
+					/**
+					 * Maximum Records
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Maximum number of records to return
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * The maximum total number of records to return across all pages. If not specified, all matching records will be returned.
+					 */
+					longDesc: () => LocalizedString
+				}
+			}
+			upsertOptions: {
+				matching_attribute: {
+					/**
+					 * Matching Attribute
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Attribute to match for upsert. Must be a unique attribute.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * The attribute used to determine if a record already exists for updating. If no existing record is found, a new record will be created.
+					 */
+					longDesc: () => LocalizedString
+				}
+			}
 		}
 		Airtable: {
 			/**
@@ -183629,6 +185725,54 @@ export type TranslationFunctions = {
 							 * Select a specific view from the table to monitor only records that match the view's filtering and sorting criteria
 							 */
 							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							column: {
+								/**
+								 * Column
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The column to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the column to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							ascending: {
+								/**
+								 * Ascending
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort in ascending order
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * When enabled, results are sorted in ascending order (A-Z, 0-9)
+								 */
+								longDesc: () => LocalizedString
+							}
 						}
 					}
 				}
@@ -189898,6 +192042,210 @@ export type TranslationFunctions = {
 					}
 				}
 			}
+			expressions: {
+				'&&': {
+					/**
+					 * And
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Logical AND operator
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Combines multiple conditions where all must be true
+					 */
+					longDesc: () => LocalizedString
+				}
+				'||': {
+					/**
+					 * Or
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Logical OR operator
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Combines multiple conditions where at least one must be true
+					 */
+					longDesc: () => LocalizedString
+				}
+				'==': {
+					/**
+					 * Equals
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field equals value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field equals the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'!=': {
+					/**
+					 * Not Equals
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field does not equal value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field does not equal the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'>': {
+					/**
+					 * Greater Than
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is greater than value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is greater than the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'>=': {
+					/**
+					 * Greater Than or Equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is greater than or equal to value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is greater than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'<': {
+					/**
+					 * Less Than
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is less than value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is less than the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'<=': {
+					/**
+					 * Less Than or Equal
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field is less than or equal to value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field value is less than or equal to the specified value
+					 */
+					longDesc: () => LocalizedString
+				}
+				'is-set': {
+					/**
+					 * Is Set
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field has a value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field has a value (is not empty)
+					 */
+					longDesc: () => LocalizedString
+				}
+				'is-not-set': {
+					/**
+					 * Is Not Set
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field has no value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field has no value (is empty)
+					 */
+					longDesc: () => LocalizedString
+				}
+				contains: {
+					/**
+					 * Contains
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Field contains value
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Matches records where the field contains the specified substring
+					 */
+					longDesc: () => LocalizedString
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							field: {
+								/**
+								 * Field
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The field to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the field to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							direction: {
+								/**
+								 * Direction
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort direction
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The direction to sort results (ascending or descending)
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
+				}
+			}
 		}
 		Mautic: {
 			/**
@@ -193544,6 +195892,68 @@ export type TranslationFunctions = {
 					}
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							column: {
+								/**
+								 * Column
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The column to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the column to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							ascending: {
+								/**
+								 * Ascending
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort in ascending order
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * When enabled, results are sorted in ascending order (A-Z, 0-9)
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
+				}
+				limit: {
+					/**
+					 * Limit
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Maximum number of records to return
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Set the maximum total number of records to retrieve from the search
+					 */
+					longDesc: () => LocalizedString
+				}
+			}
 		}
 		Jira: {
 			/**
@@ -193564,6 +195974,54 @@ export type TranslationFunctions = {
 			 * Collection of actions to interact with the Jira API
 			 */
 			longDesc: () => LocalizedString
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							field: {
+								/**
+								 * Field
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The field to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the field to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							direction: {
+								/**
+								 * Direction
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort direction
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The direction to sort results (ascending or descending)
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
+				}
+			}
 			expressions: {
 				'&&': {
 					/**
@@ -196996,35 +199454,141 @@ export type TranslationFunctions = {
 				}
 			}
 			expressions: {
-				type: {
+				state: {
 					/**
-					 * type
+					 * State
 					 */
 					displayName: () => LocalizedString
 					/**
-					 * Filter by record type
+					 * Filter by state
 					 */
 					shortDesc: () => LocalizedString
 					/**
-					 * Filters records based on their type (e.g., public/private repositories, open/closed issues)
+					 * Filters records based on their state (open/closed)
 					 */
 					longDesc: () => LocalizedString
 					args: {
 						'0': {
 							/**
-							 * Type
+							 * State
 							 */
 							displayName: () => LocalizedString
 							/**
-							 * The type to filter by
+							 * The state to filter by
 							 */
 							shortDesc: () => LocalizedString
 							/**
-							 * Select the type of records to retrieve. Options vary by table: repositories can be public/private/all, while issues and pull requests can be open/closed/all
+							 * Select the state of records to retrieve: open, closed, or all
 							 */
 							longDesc: () => LocalizedString
 						}
 					}
+				}
+			}
+			searchOptions: {
+				repo: {
+					/**
+					 * Repository
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * The name of the repository
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * The name of the repository. For example, for "qoretechnologies/qorus", the repo value would be "qorus"
+					 */
+					longDesc: () => LocalizedString
+				}
+				owner: {
+					/**
+					 * Owner
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * The owner of the repository
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * The owner of the repository. Can be either a user or an organization
+					 */
+					longDesc: () => LocalizedString
+				}
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							column: {
+								/**
+								 * Column
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The column to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the column to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							ascending: {
+								/**
+								 * Ascending
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort in ascending order
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * When enabled, results are sorted in ascending order (A-Z, 0-9)
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
+				}
+			}
+			createOptions: {
+				repo: {
+					/**
+					 * Repository
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * The name of the repository
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * The name of the repository. For example, for "qoretechnologies/qorus", the repo value would be "qorus"
+					 */
+					longDesc: () => LocalizedString
+				}
+				owner: {
+					/**
+					 * Owner
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * The owner of the repository
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * The owner of the repository. Can be either a user or an organization
+					 */
+					longDesc: () => LocalizedString
 				}
 			}
 		}
@@ -202075,6 +204639,68 @@ export type TranslationFunctions = {
 					}
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							column: {
+								/**
+								 * Column
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The column to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the column to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							ascending: {
+								/**
+								 * Ascending
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort in ascending order
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * When enabled, results are sorted in ascending order (A-Z, 0-9)
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
+				}
+				limit: {
+					/**
+					 * Limit
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Maximum number of records to return
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * The maximum number of records to return.
+					 */
+					longDesc: () => LocalizedString
+				}
+			}
 		}
 		HelpScout: {
 			/**
@@ -206823,6 +209449,84 @@ export type TranslationFunctions = {
 					}
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							column: {
+								/**
+								 * Column
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The column to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the column to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							ascending: {
+								/**
+								 * Ascending
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort in ascending order
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * When enabled, results are sorted in ascending order (A-Z, 0-9)
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
+				}
+				limit: {
+					/**
+					 * Limit
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Maximum number of records to return
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * The maximum number of records to return. If not specified, all matching records will be returned.
+					 */
+					longDesc: () => LocalizedString
+				}
+			}
+			upsertOptions: {
+				idProperty: {
+					/**
+					 * ID Property
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * The unique identifier property for upsert operations
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * The unique identifier property name used to determine if a record already exists for updating. If no matching record is found, a new record will be created.
+					 */
+					longDesc: () => LocalizedString
+				}
+			}
 		}
 		Dropbox: {
 			/**
@@ -209779,6 +212483,54 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							field: {
+								/**
+								 * Field
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The field to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the field to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							direction: {
+								/**
+								 * Direction
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort direction
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The direction to sort results (ascending or descending)
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
+				}
+			}
 		}
 		NocoDB: {
 			/**
@@ -209902,6 +212654,54 @@ export type TranslationFunctions = {
 							 * Optionally specify a filter using NocoDB where syntax (e.g., "(Status,eq,Active)") to only trigger for rows matching specific criteria.
 							 */
 							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							field: {
+								/**
+								 * Field
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The field to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the field to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							direction: {
+								/**
+								 * Direction
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort direction
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The direction to sort results (ascending or descending)
+								 */
+								longDesc: () => LocalizedString
+							}
 						}
 					}
 				}
@@ -210665,6 +213465,54 @@ export type TranslationFunctions = {
 						 * Structure and types for Freshdesk's updated contact data payload.
 						 */
 						desc: () => LocalizedString
+					}
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							field: {
+								/**
+								 * Field
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The field to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the field to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							direction: {
+								/**
+								 * Direction
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort direction
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The direction to sort results (ascending or descending)
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
 					}
 				}
 			}
@@ -213590,6 +216438,54 @@ export type TranslationFunctions = {
 					 * Matches records where the field value starts with the specified string
 					 */
 					longDesc: () => LocalizedString
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							field: {
+								/**
+								 * Field
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The field to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the field to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							direction: {
+								/**
+								 * Direction
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort direction
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The direction to sort results (ascending or descending)
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
 				}
 			}
 		}
@@ -218004,6 +220900,54 @@ export type TranslationFunctions = {
 					longDesc: () => LocalizedString
 				}
 			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							field: {
+								/**
+								 * Field
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The field to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the field to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							direction: {
+								/**
+								 * Direction
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort direction
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The direction to sort results (ascending or descending)
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
+				}
+			}
 		}
 		Teams: {
 			/**
@@ -219894,6 +222838,54 @@ export type TranslationFunctions = {
 							 * The field to check for a non-null value
 							 */
 							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							column: {
+								/**
+								 * Column
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The column to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the column to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							ascending: {
+								/**
+								 * Ascending
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort in ascending order
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * When enabled, results are sorted in ascending order (A-Z, 0-9)
+								 */
+								longDesc: () => LocalizedString
+							}
 						}
 					}
 				}
@@ -226178,6 +229170,54 @@ export type TranslationFunctions = {
 					 * Matches records where the field is empty or not set
 					 */
 					longDesc: () => LocalizedString
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							field: {
+								/**
+								 * Field
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The field to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the field to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							direction: {
+								/**
+								 * Direction
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort direction
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The direction to sort results (ascending or descending)
+								 */
+								longDesc: () => LocalizedString
+							}
+						}
+					}
 				}
 			}
 			triggers: {
@@ -235189,6 +238229,54 @@ export type TranslationFunctions = {
 							 * Select whether the deal is open, won, or lost
 							 */
 							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			searchOptions: {
+				orderBy: {
+					/**
+					 * Order By
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Sort results by a specific field
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Define the field and direction to sort search results
+					 */
+					longDesc: () => LocalizedString
+					type: {
+						fields: {
+							field: {
+								/**
+								 * Field
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * The field to sort by
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The name of the field to use for sorting results
+								 */
+								longDesc: () => LocalizedString
+							}
+							direction: {
+								/**
+								 * Direction
+								 */
+								displayName: () => LocalizedString
+								/**
+								 * Sort direction
+								 */
+								shortDesc: () => LocalizedString
+								/**
+								 * The direction to sort results (ascending or descending)
+								 */
+								longDesc: () => LocalizedString
+							}
 						}
 					}
 				}

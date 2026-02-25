@@ -705,6 +705,32 @@ const NotionAppEn = {
       ],
     },
   },
+  searchOptions: {
+    orderBy: {
+      displayName: 'Order By',
+      shortDesc: 'Sort results by a specific field',
+      longDesc: 'Define the field and direction to sort search results',
+      type: {
+        fields: {
+          column: {
+            displayName: 'Column',
+            shortDesc: 'The column to sort by',
+            longDesc: 'The name of the column to use for sorting results',
+          },
+          ascending: {
+            displayName: 'Ascending',
+            shortDesc: 'Sort in ascending order',
+            longDesc: 'When enabled, results are sorted in ascending order (A-Z, 0-9)',
+          },
+        },
+      },
+    },
+    limit: {
+      displayName: 'Limit',
+      shortDesc: 'Maximum number of records to return',
+      longDesc: 'Set the maximum total number of records to retrieve from the search',
+    },
+  },
 };
 
 export default NotionAppEn;

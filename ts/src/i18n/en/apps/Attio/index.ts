@@ -778,6 +778,41 @@ const AttioAppEn = {
       },
     },
   },
+  searchOptions: {
+    orderBy: {
+      displayName: 'Order By',
+      shortDesc: 'Sort results by a specific field',
+      longDesc: 'Define the field and direction to sort search results',
+      type: {
+        fields: {
+          column: {
+            displayName: 'Column',
+            shortDesc: 'The column to sort by',
+            longDesc: 'The name of the column to use for sorting results',
+          },
+          ascending: {
+            displayName: 'Ascending',
+            shortDesc: 'Sort in ascending order',
+            longDesc: 'When enabled, results are sorted in ascending order (A-Z, 0-9)',
+          },
+        },
+      },
+    },
+    limit: {
+      displayName: 'Maximum Records',
+      shortDesc: 'Maximum number of records to return',
+      longDesc:
+        'The maximum total number of records to return across all pages. If not specified, all matching records will be returned.',
+    },
+  },
+  upsertOptions: {
+    matching_attribute: {
+      displayName: 'Matching Attribute',
+      shortDesc: 'Attribute to match for upsert. Must be a unique attribute.',
+      longDesc:
+        'The attribute used to determine if a record already exists for updating. If no existing record is found, a new record will be created.',
+    },
+  },
 };
 
 export default AttioAppEn;
