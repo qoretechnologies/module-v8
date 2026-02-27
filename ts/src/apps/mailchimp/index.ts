@@ -2,6 +2,7 @@ import {
   QorusRequest,
   TQoreAppWithActions,
   TQoreMappedOptions,
+  TQoreRecordBasedApp,
 } from '@qoretechnologies/ts-toolkit';
 import { createSwaggerPaths, mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
@@ -14,6 +15,17 @@ import {
   MAILCHIMP_CONN_OPTIONS,
   MailchimpError,
 } from './constants';
+import {
+  createMailchimpRecords,
+  deleteMailchimpRecords,
+  getMailchimpExpressions,
+  getMailchimpRecordType,
+  getMailchimpTableList,
+  MailchimpSearchOptions,
+  searchMailchimpRecords,
+  updateMailchimpRecords,
+  upsertMailchimpRecords,
+} from './helpers/record-based';
 
 import * as MAILCHIMP_TRIGGERS from './triggers';
 
@@ -72,4 +84,15 @@ export default (locale: Locales) =>
         }
       },
     },
-  }) satisfies TQoreAppWithActions;
+
+    // Record-based support: audiences as tables, members as records
+    get_table_list: getMailchimpTableList,
+    expressions: getMailchimpExpressions(locale),
+    get_record_type: getMailchimpRecordType,
+    search_records: searchMailchimpRecords,
+    search_options: MailchimpSearchOptions,
+    create_records: createMailchimpRecords,
+    update_records: updateMailchimpRecords,
+    delete_records: deleteMailchimpRecords,
+    upsert_records: upsertMailchimpRecords,
+  }) satisfies TQoreRecordBasedApp & TQoreAppWithActions;

@@ -175,6 +175,27 @@ const TrelloAppEn = {
       longDesc: 'Matches records where the field contains the specified substring',
     },
   },
+  searchOptions: {
+    orderBy: {
+      displayName: 'Order By',
+      shortDesc: 'Sort results by a specific field',
+      longDesc: 'Define the field and direction to sort search results',
+      type: {
+        fields: {
+          field: {
+            displayName: 'Field',
+            shortDesc: 'The field to sort by',
+            longDesc: 'The name of the field to use for sorting results',
+          },
+          direction: {
+            displayName: 'Direction',
+            shortDesc: 'Sort direction',
+            longDesc: 'The direction to sort results (ascending or descending)',
+          },
+        },
+      },
+    },
+  },
 };
 
 export default TrelloAppEn;

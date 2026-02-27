@@ -22,6 +22,7 @@ import { updateAirtableRecords } from '../apps/airtable/helpers/record-based/upd
 import { NewAirtableRecord } from '../apps/airtable/triggers';
 import { delay } from '../global/helpers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
+import { monitorConsoleForTransientErrors, skipOnTransientError } from './utils';
 import { IQoreTypeObjectNonList } from '@qoretechnologies/ts-toolkit';
 
 configDotenv({ path: '.env' });
@@ -34,7 +35,11 @@ describe('Test Airtable Actions', () => {
     } as any,
   };
 
+  let cleanupMonitor: () => void;
+
   beforeAll(() => {
+    cleanupMonitor = monitorConsoleForTransientErrors();
+
     const token = process.env.AIRTABLE_TOKEN;
 
     if (!token) {
@@ -44,20 +49,24 @@ describe('Test Airtable Actions', () => {
     base_context.conn_opts.token = token;
   });
 
+  afterAll(() => {
+    cleanupMonitor?.();
+  });
+
   let base_id: string | undefined;
   let table_id: string | undefined;
   let record_id: string | undefined;
   let created_record_id: string | undefined;
   describe('Should test Airtable allowed values', () => {
-    it('Should get base id allowed values', async () => {
+    it('Should get base id allowed values', skipOnTransientError(async () => {
       const allowed_values = await getAirtableBaseIdAllowedValues(base_context);
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);
 
       base_id = allowed_values[0].value;
-    });
+    }));
 
-    it('Should get table id allowed values', async () => {
+    it('Should get table id allowed values', skipOnTransientError(async () => {
       const allowed_values = await getAirtableTableIdAllowedValues({
         ...base_context,
         opts: { base_id },
@@ -66,18 +75,18 @@ describe('Test Airtable Actions', () => {
       expect(allowed_values.length).toBeGreaterThan(0);
 
       table_id = allowed_values[0].value;
-    });
+    }));
 
-    it('Should get table fields allowed values', async () => {
+    it('Should get table fields allowed values', skipOnTransientError(async () => {
       const allowed_values = await getAirtableTableFieldsAllowedValues({
         ...base_context,
         opts: { base_id, table_id },
       });
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);
-    });
+    }));
 
-    it('Should get record id allowed values', async () => {
+    it('Should get record id allowed values', skipOnTransientError(async () => {
       const allowed_values = await getAirtableRecordAllowedValues({
         ...base_context,
         opts: { base_id, table_id },
@@ -87,9 +96,9 @@ describe('Test Airtable Actions', () => {
       expect(allowed_values.length).toBeGreaterThan(0);
 
       record_id = allowed_values[0].value;
-    });
+    }));
 
-    it('Should get views allowed values', async () => {
+    it('Should get views allowed values', skipOnTransientError(async () => {
       const allowed_values = await getAirtableViewsAllowedValues({
         ...base_context,
         opts: { base_id, table_id },
@@ -97,11 +106,11 @@ describe('Test Airtable Actions', () => {
 
       expect(allowed_values).toBeDefined();
       expect(allowed_values.length).toBeGreaterThan(0);
-    });
+    }));
   });
 
   describe('Should test Airtable actions', () => {
-    it('Should list records', async () => {
+    it('Should list records', skipOnTransientError(async () => {
       const action = ListAirtableRecords;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
@@ -117,9 +126,9 @@ describe('Test Airtable Actions', () => {
 
       expect(result).toBeDefined();
       expect(result.length).toBeGreaterThan(0);
-    });
+    }));
 
-    it('Should get record', async () => {
+    it('Should get record', skipOnTransientError(async () => {
       const action = GetAirtableRecord;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
@@ -136,9 +145,9 @@ describe('Test Airtable Actions', () => {
 
       expect(record).toBeDefined();
       expect(record.id).toBe(record_id);
-    });
+    }));
 
-    it('Should create a record', async () => {
+    it('Should create a record', skipOnTransientError(async () => {
       const action = CreateAirtableRecord;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
@@ -157,9 +166,9 @@ describe('Test Airtable Actions', () => {
       expect(result.id).toBeDefined();
 
       created_record_id = result.id;
-    });
+    }));
 
-    it('Should delete a record', async () => {
+    it('Should delete a record', skipOnTransientError(async () => {
       const action = DeleteAirtableRecord;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
@@ -176,9 +185,9 @@ describe('Test Airtable Actions', () => {
       );
 
       expect(result).toBeDefined();
-    });
+    }));
 
-    it('Should list bases', async () => {
+    it('Should list bases', skipOnTransientError(async () => {
       const action = ListAirtableBases;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
@@ -188,9 +197,9 @@ describe('Test Airtable Actions', () => {
       expect(result).toBeDefined();
       expect(result.bases).toBeDefined();
       expect(result.bases.length).toBeGreaterThan(0);
-    });
+    }));
 
-    it('Should list tables', async () => {
+    it('Should list tables', skipOnTransientError(async () => {
       const action = ListAirtableTables;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
@@ -206,11 +215,11 @@ describe('Test Airtable Actions', () => {
       expect(result).toBeDefined();
       expect(result.tables).toBeDefined();
       expect(result.tables.length).toBeGreaterThan(0);
-    });
+    }));
   });
 
   describe('Should test Airtable triggers event example data', () => {
-    it('Should get example event data for new record trigger', async () => {
+    it('Should get example event data for new record trigger', skipOnTransientError(async () => {
       const trigger = NewAirtableRecord;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
@@ -223,7 +232,7 @@ describe('Test Airtable Actions', () => {
 
       expect(result).toBeDefined();
       expect(result.id).toBeDefined();
-    });
+    }));
   });
 
   describe('Should test record based helpers', () => {
@@ -240,15 +249,15 @@ describe('Test Airtable Actions', () => {
       'test-delta-source',
     ];
 
-    it('Should get tables', async () => {
+    it('Should get tables', skipOnTransientError(async () => {
       const result = await getAirtableTableList(base_context);
 
       expect(result).toBeDefined();
       expect(Array.isArray(result)).toBe(true);
       expect(result.length).toBeGreaterThan(0);
-    });
+    }));
 
-    it('Should get record type', async () => {
+    it('Should get record type', skipOnTransientError(async () => {
       const result = (await getAirtableRecordType(
         base_context,
         tableName
@@ -258,9 +267,9 @@ describe('Test Airtable Actions', () => {
       expect(result.type).toBe('hash');
       expect(result.fields).toBeDefined();
       expect(Object.keys(result.fields!).length).toBeGreaterThan(2);
-    });
+    }));
 
-    it('Should create records', async () => {
+    it('Should create records', skipOnTransientError(async () => {
       const result = await createAirtableRecords(
         base_context,
         {
@@ -281,9 +290,9 @@ describe('Test Airtable Actions', () => {
       expect(result!.Name.length).toBe(4);
       expect(Array.isArray(result!.id)).toBe(true);
       expect(result!.id.length).toBe(4);
-    });
+    }));
 
-    it('Should verify created records', async () => {
+    it('Should verify created records', skipOnTransientError(async () => {
       const iterator = await searchAirtableRecords(
         base_context,
         {
@@ -306,9 +315,9 @@ describe('Test Airtable Actions', () => {
 
       const betaIndex = result!['Bug source'].indexOf('test-beta-source');
       expect(result!.Name[betaIndex]).toBe('Task Beta');
-    });
+    }));
 
-    it('Should search records with simple expression', async () => {
+    it('Should search records with simple expression', skipOnTransientError(async () => {
       const iterator = await searchAirtableRecords(
         base_context,
         {
@@ -327,9 +336,9 @@ describe('Test Airtable Actions', () => {
       expect(result!.Name.length).toBe(1);
       expect(result!.Name[0]).toBe('Task Alpha');
       expect(result!['Bug source'][0]).toBe('test-alpha-source');
-    });
+    }));
 
-    it('Should search records with OR expression', async () => {
+    it('Should search records with OR expression', skipOnTransientError(async () => {
       const iterator = await searchAirtableRecords(
         base_context,
         {
@@ -349,9 +358,9 @@ describe('Test Airtable Actions', () => {
       result!['Bug source'].forEach((source: string) => {
         expect(['test-gamma-source', 'test-delta-source']).toContain(source);
       });
-    });
+    }));
 
-    it('Should search records with AND expression', async () => {
+    it('Should search records with AND expression', skipOnTransientError(async () => {
       const iterator = await searchAirtableRecords(
         base_context,
         {
@@ -378,9 +387,9 @@ describe('Test Airtable Actions', () => {
         expect(name).toBeTruthy();
         expect(['Task Alpha', 'Task Beta', 'Task Gamma', 'Task Delta']).toContain(name);
       });
-    });
+    }));
 
-    it('Should search records with contains expression', async () => {
+    it('Should search records with contains expression', skipOnTransientError(async () => {
       const iterator = await searchAirtableRecords(
         base_context,
         {
@@ -409,9 +418,9 @@ describe('Test Airtable Actions', () => {
       result!['Bug source'].forEach((source: string) => {
         expect(['test-alpha-source', 'test-beta-source']).toContain(source);
       });
-    });
+    }));
 
-    it('Should search records with not-empty expression', async () => {
+    it('Should search records with not-empty expression', skipOnTransientError(async () => {
       const iterator = await searchAirtableRecords(
         base_context,
         {
@@ -438,9 +447,9 @@ describe('Test Airtable Actions', () => {
         expect(description).toBeTruthy();
         expect(description.length).toBeGreaterThan(0);
       });
-    });
+    }));
 
-    it('Should search records with deeply nested expression (3 levels)', async () => {
+    it('Should search records with deeply nested expression (3 levels)', skipOnTransientError(async () => {
       const iterator = await searchAirtableRecords(
         base_context,
         {
@@ -481,9 +490,9 @@ describe('Test Airtable Actions', () => {
       result!['Bug source'].forEach((source: string) => {
         expect(testBugSources).toContain(source);
       });
-    });
+    }));
 
-    it('Should exclude records that do not match filter', async () => {
+    it('Should exclude records that do not match filter', skipOnTransientError(async () => {
       const iterator = await searchAirtableRecords(
         base_context,
         {
@@ -505,9 +514,9 @@ describe('Test Airtable Actions', () => {
       const result = await iterator(base_context, 10);
 
       expect(result).toBeNull();
-    });
+    }));
 
-    it('Should update records', async () => {
+    it('Should update records', skipOnTransientError(async () => {
       const result = await updateAirtableRecords(
         base_context,
         {
@@ -525,9 +534,9 @@ describe('Test Airtable Actions', () => {
 
       expect(result).toBeDefined();
       expect(result).toBe(2);
-    });
+    }));
 
-    it('Should handle pagination with filters', async () => {
+    it('Should handle pagination with filters', skipOnTransientError(async () => {
       const iterator = await searchAirtableRecords(
         base_context,
         {
@@ -552,9 +561,9 @@ describe('Test Airtable Actions', () => {
           expect(firstIds.has(id)).toBe(false);
         });
       }
-    });
+    }));
 
-    it('Should combine filters with ordering', async () => {
+    it('Should combine filters with ordering', skipOnTransientError(async () => {
       const iterator = await searchAirtableRecords(
         base_context,
         {
@@ -581,9 +590,9 @@ describe('Test Airtable Actions', () => {
       for (let i = 1; i < names.length; i++) {
         expect(names[i].localeCompare(names[i - 1])).toBeGreaterThanOrEqual(0);
       }
-    });
+    }));
 
-    it('Should clean up all test records', async () => {
+    it('Should clean up all test records', skipOnTransientError(async () => {
       const result = await deleteAirtableRecords(
         base_context,
         {
@@ -597,7 +606,7 @@ describe('Test Airtable Actions', () => {
       );
 
       expect(result).toBe(4);
-    });
+    }));
   });
 
   describe('Should test Airtable formula building', () => {

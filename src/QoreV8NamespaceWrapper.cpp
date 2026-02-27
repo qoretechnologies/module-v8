@@ -363,12 +363,17 @@ v8::Local<v8::Value> QoreV8NamespaceWrapper::wrapFunction(v8::Isolate* isolate, 
 }
 
 void QoreV8NamespaceWrapper::call_function(const v8::FunctionCallbackInfo<v8::Value>& info) {
+    v8::Isolate* isolate = info.GetIsolate();
     v8::Local<v8::Value> v = info.Data();
-    assert(v->IsExternal());
+    if (!v->IsExternal()) {
+        ExceptionSink xsink;
+        xsink.raiseException("JAVASCRIPT-INTERNAL-ERROR", "Invalid function callback data");
+        QoreV8Program::raiseV8Exception(xsink, isolate);
+        return;
+    }
 
     v8::Local<v8::External> ext = v8::Local<v8::External>::Cast(v);
     QoreV8FunctionData* func_data = reinterpret_cast<QoreV8FunctionData*>(ext->Value());
-    v8::Isolate* isolate = info.GetIsolate();
 
     ExceptionSink xsink;
 

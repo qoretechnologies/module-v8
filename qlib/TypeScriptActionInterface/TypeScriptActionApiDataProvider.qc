@@ -79,10 +79,21 @@ public class TypeScriptActionApiDataProvider inherits TypeScriptActionDataProvid
 
     #! Returns action options corresponding to the given option data
     *hash<string, hash<ActionOptionInfo>> tryGetActionOptionsWithOptions(hash<DataProviderActionInfo> action,
-            auto options) {
-        if ((*AbstractDataProviderType rv = getRequestTypeWithDataImpl(options))
-            && (*hash<auto> fields = rv.getFields())) {
-            return action.options + DataProviderActionCatalog::getActionOptionFromFields(fields);
+            *hash<auto> options) {
+        # ensure thread-local data context is set for getDynamicTypeIntern
+        DataProviderDataContextHelper dch(options);
+        TSAI::debug("tryGetActionOptionsWithOptions() @%s/%s options: %y dtmap: %y", app, self.action,
+            options, keys dtmap);
+        *AbstractDataProviderType rv = getRequestTypeWithDataImpl(options);
+        TSAI::debug("tryGetActionOptionsWithOptions() @%s/%s rv: %y fields: %y", app, self.action,
+            rv ? rv.getName() : "n/a", rv ? keys rv.getFields() : NOTHING);
+        if (rv && (*hash<auto> fields = rv.getFields())) {
+            *hash<string, hash<ActionOptionInfo>> new_opts =
+                DataProviderActionCatalog::getActionOptionFromFields(fields);
+            TSAI::debug("tryGetActionOptionsWithOptions() @%s/%s new_opts: %y type: %y", app, self.action,
+                keys new_opts,
+                (map {$1.key: $1.value.type ? $1.value.type.getName() : "n/a"}, new_opts.pairIterator()));
+            return action.options + new_opts;
         }
         return action.options;
     }

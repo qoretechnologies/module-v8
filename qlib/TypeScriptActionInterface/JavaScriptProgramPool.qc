@@ -1,7 +1,7 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 #! Qore TypeScriptActionInterface module definition
 
-/*  JavaScriptProgramPool.qc Copyright 2024 Qore Technologies, s.r.o.
+/*  JavaScriptProgramPool.qc Copyright 2024 - 2026 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -51,6 +51,9 @@ public class JavaScriptProgramPool {
 
         # indicates the first program unique hash for each holder
         static hash<string, bool> firstmap;
+
+        #! Mutex to serialize chdir() calls during program creation (chdir is process-global)
+        static Mutex chdir_mutex();
     }
 
     #! Creates the object and the JavaScript program
@@ -95,7 +98,57 @@ public class JavaScriptProgramPool {
         return pool;
     }
 
+    #! Returns the JavaScript source code
+    string getSource() {
+        return source;
+    }
+
+    #! Returns the JavaScript source path
+    string getPath() {
+        return path;
+    }
+
+    #! Returns the current working directory
+    string getCwd() {
+        return cwd;
+    }
+
+    #! Returns the initialization code
+    code getInit() {
+        return init;
+    }
+
+    #! Creates a new JavaScriptProgram for use in an in-process pool
+    /** The caller must set _pool_clone_mode before calling this method to capture closures
+        without modifying global state.
+
+        @return a new JavaScriptProgram with the same source and init code
+    */
+    JavaScriptProgram createProgramForPool() {
+        # serialize chdir() calls — chdir is process-global and concurrent calls race
+        chdir_mutex.lock();
+        on_exit chdir_mutex.unlock();
+
+        string olddir = getcwd();
+        chdir(cwd);
+        on_exit chdir(olddir);
+
+        date start = now_us();
+        on_exit info("perf: JavaScriptProgramPool new pool program for %y: %y", path, now_us() - start);
+
+        JavaScriptProgram new_pgm = new JavaScriptProgram(source, path);
+        string h0 = new_pgm.uniqueHash();
+        pmap{h0} = self;
+        on_error remove pmap{h0};
+        init(new_pgm);
+        return new_pgm;
+    }
+
     private createProgram(*bool first) {
+        # serialize chdir() calls — chdir is process-global and concurrent calls race
+        chdir_mutex.lock();
+        on_exit chdir_mutex.unlock();
+
         string olddir = getcwd();
         chdir(cwd);
         on_exit chdir(olddir);

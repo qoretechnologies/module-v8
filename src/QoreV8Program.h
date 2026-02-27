@@ -117,9 +117,9 @@ public:
         return *save_ref_callback;
     }
 
-    DLLLOCAL int spinOnce();
+    DLLLOCAL int spinOnce(ExceptionSink* xsink = nullptr);
 
-    DLLLOCAL int spinEventLoop();
+    DLLLOCAL int spinEventLoop(ExceptionSink* xsink = nullptr);
 
     DLLLOCAL void setObject(QoreObject* self) {
         assert(!this->self);
@@ -225,6 +225,7 @@ protected:
     bool to_destroy = false;
     bool valid = true;
     bool heap_limit = false;
+    bool fatal_error = false;
     bool transpile_ts = false;
 
     static QoreThreadLock global_lock;
@@ -246,6 +247,16 @@ protected:
 
     DLLLOCAL static size_t heapLimitCallback(void* ptr, size_t current_heap_limit,
             size_t initial_heap_limit);
+
+    //! Checks if the program is valid for spin operations; raises exception and returns -1 on error
+    DLLLOCAL int checkSpinValid(ExceptionSink* xsink);
+
+    //! Decrements opcount and triggers deferred destruction if needed
+    DLLLOCAL void decrementOpcount(ExceptionSink* xsink);
+
+    DLLLOCAL static void fatalErrorCallback(const char* location, const char* message);
+    DLLLOCAL static void oomErrorCallback(const char* location, const v8::OOMDetails& details);
+    DLLLOCAL static bool shouldAbortOnUncaughtException(v8::Isolate* isolate);
 };
 
 class QoreV8CallStack : public QoreCallStack {
@@ -317,6 +328,13 @@ public:
             if (!silent) {
                 xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "The given JavaScriptProgram has been destroyed "
                     "and can no longer be accessed");
+            }
+            return;
+        }
+        if (pgm->fatal_error) {
+            if (!silent) {
+                xsink->raiseException("JAVASCRIPT-FATAL-ERROR",
+                    "The given JavaScriptProgram has encountered a fatal V8 error and can no longer be accessed");
             }
             return;
         }

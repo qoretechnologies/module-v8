@@ -171,14 +171,6 @@ const createPaginationIterable = (
       });
     }
 
-    case 'repositories': {
-      return client.paginate.iterator('GET /user/repos', {
-        ...baseParams,
-        visibility: 'all',
-        affiliation: 'owner,collaborator,organization_member',
-      });
-    }
-
     default:
       throw new GitHubError(`Unsupported table name: ${tableName}`);
   }

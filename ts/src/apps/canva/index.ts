@@ -4,8 +4,8 @@ import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import { CANVA_APP_LOGO, CANVA_APP_NAME } from './constants';
 
-import * as CAMVA_ACTIONS from './actions';
-import * as CAMVA_TRIGGERS from './triggers';
+import * as CANVA_ACTIONS from './actions';
+import * as CANVA_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
   ({
@@ -17,8 +17,8 @@ export default (locale: Locales) =>
     logo_file_name: 'canva-logo.svg',
     logo_mime_type: 'image/svg+xml',
     actions: [
-      ...mapActionsToApp(CANVA_APP_NAME, CAMVA_ACTIONS, locale),
-      ...mapTriggersToApp(CANVA_APP_NAME, CAMVA_TRIGGERS, locale),
+      ...mapActionsToApp(CANVA_APP_NAME, CANVA_ACTIONS, locale),
+      ...mapTriggersToApp(CANVA_APP_NAME, CANVA_TRIGGERS, locale),
     ],
     rest: {
       url: 'https://api.canva.com',

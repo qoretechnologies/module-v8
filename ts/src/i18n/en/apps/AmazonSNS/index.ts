@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 const AmazonSNSAppEn = {
-  displayName: 'AWS SNS',
+  displayName: 'Amazon SNS',
   groups: ['DevOps & Cloud Infrastructure', 'Messaging & Real-time Communication'],
   shortDesc: 'Send notifications and messages through Amazon Simple Notification Service.',
   longDesc:

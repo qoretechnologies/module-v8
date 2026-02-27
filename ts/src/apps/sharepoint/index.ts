@@ -1,4 +1,4 @@
-import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
+import { TQoreAppWithActions, TQoreRecordBasedApp } from '@qoretechnologies/ts-toolkit';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import { SHAREPOINT_APP_NAME } from './constants';
@@ -6,6 +6,16 @@ import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 
 import * as SHAREPOINT_ACTIONS from './actions';
 import * as SHAREPOINT_TRIGGERS from './triggers';
+
+// Record-based helpers
+import { createSharePointRecords } from './helpers/record-based/create-records';
+import { deleteSharePointRecords } from './helpers/record-based/delete-records';
+import { getSharePointExpressions } from './helpers/record-based/get-expressions';
+import { getSharePointRecordType } from './helpers/record-based/get-record-type';
+import { SharePointSearchOptions } from './helpers/record-based/get-search-options';
+import { getSharePointTableList } from './helpers/record-based/get-table-list';
+import { searchSharePointRecords } from './helpers/record-based/search-records';
+import { updateSharePointRecords } from './helpers/record-based/update-records';
 
 export default (locale: Locales) =>
   ({
@@ -115,4 +125,13 @@ export default (locale: Locales) =>
       ping_method: 'GET',
       ping_path: '/v1.0/me',
     },
-  }) satisfies TQoreAppWithActions;
+    // Record-based helpers
+    get_table_list: getSharePointTableList,
+    expressions: getSharePointExpressions(locale),
+    get_record_type: getSharePointRecordType,
+    search_records: searchSharePointRecords,
+    search_options: SharePointSearchOptions,
+    create_records: createSharePointRecords,
+    update_records: updateSharePointRecords,
+    delete_records: deleteSharePointRecords,
+  }) satisfies TQoreRecordBasedApp & TQoreAppWithActions;

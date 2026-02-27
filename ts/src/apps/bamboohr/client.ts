@@ -23,7 +23,9 @@ export class BambooHRApiClient extends QoreApiClient {
   }
 
   /**
-   * BambooHR uses OAuth2 Bearer token authentication.
+   * BambooHR supports both OAuth2 Bearer token and API key (Basic Auth).
+   * When api_key is set via setApiKey(), Basic Auth is used.
+   * Otherwise, Bearer token authentication is used.
    * Also sets Accept header to application/json.
    */
   protected buildHeaders(
@@ -34,8 +36,12 @@ export class BambooHRApiClient extends QoreApiClient {
       Accept: 'application/json',
     };
 
-    // Use Bearer token for OAuth2 authentication
-    if (token) {
+    if (this.apiKey) {
+      // API key uses Basic Auth with the key as password
+      const encoded = Buffer.from(`${this.apiKey}:x`).toString('base64');
+      headers.Authorization = `Basic ${encoded}`;
+    } else if (token) {
+      // OAuth2 Bearer token
       headers.Authorization = `Bearer ${token}`;
     }
 
@@ -45,6 +51,16 @@ export class BambooHRApiClient extends QoreApiClient {
 
     return headers;
   }
+
+  /**
+   * Set API key for Basic Auth authentication.
+   * Used for testing and non-OAuth2 access.
+   */
+  setApiKey(apiKey: string | undefined): void {
+    this.apiKey = apiKey;
+  }
+
+  private apiKey?: string;
 
   /**
    * Override get to include company domain in path.

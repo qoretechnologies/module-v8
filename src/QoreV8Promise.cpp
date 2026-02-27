@@ -48,7 +48,9 @@ int QoreV8Promise::wait(QoreV8ProgramHelper& v8h) {
     v8::Isolate* isolate = v8h.getIsolate();
     v8::Local<v8::Promise> p = get();
     while (p->State() == v8::Promise::kPending) {
-        v8h.getProgram()->spinOnce();
+        if (v8h.getProgram()->spinOnce(v8h.getExceptionSink())) {
+            return -1;
+        }
         isolate->PerformMicrotaskCheckpoint();
     }
     return 0;

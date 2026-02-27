@@ -567,6 +567,20 @@ const GoogleSheetsAppEn = {
       ],
     },
   },
+  searchOptions: {
+    sheet_id: {
+      displayName: 'Sheet',
+      shortDesc: 'The specific sheet within the spreadsheet',
+      longDesc:
+        'Select the specific sheet within the spreadsheet to search in. Each sheet has a unique ID within a spreadsheet.',
+    },
+    limit: {
+      displayName: 'Limit',
+      shortDesc: 'Maximum number of records to return',
+      longDesc:
+        'The maximum number of records to return. If not specified, all matching records will be returned.',
+    },
+  },
 };
 
 export default GoogleSheetsAppEn;

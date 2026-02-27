@@ -1,6 +1,6 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 
-/*  TypeScriptActionDataProviderBase.qc Copyright (C) 2023 - 2024 Qore Technologies s.r.o.
+/*  TypeScriptActionDataProviderBase.qc Copyright (C) 2023 - 2026 Qore Technologies s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -214,6 +214,11 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         on_exit TSAI::debug("perf: %y get async value: %y (args: %y)", api.label, now_us() - start, args);
         on_error TSAI::error("%s", get_exception_string($1));
 
+        # check in-process pool first (no IPC overhead)
+        if (*JavaScriptInProcessPool ip = TSAI::checkInProcessServer()) {
+            return ip.execCall(api, args);
+        }
+
         # handle the call with a remote process
         if (TSAI::checkServer()) {
             TSAI::info("%y: acquiring proxy for %y: %y", api.label, api.key, LoggerUtil::getArgSummary(args));
@@ -222,6 +227,27 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             on_exit TypeScriptActionInterface::server.release(proxy);
             return proxy.getAsyncValue(api, args);
         }
+
+        return execAsyncValueDirect(logger, api, args);
+    }
+
+    #! Executes the async call directly (no pool/server dispatch)
+    /** Called from execAsyncValueArgs() when no pool or server is active, and from
+        JavaScriptInProcessPool::execCall() to avoid re-entering the pool check.
+
+        @param logger optional logger for post-processing callbacks
+        @param api the async call info
+        @param args optional arguments to pass to the call
+
+        @return the result of the call
+    */
+    static auto execAsyncValueDirect(*LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args) {
+        if (_ts_no_io) {
+            return;
+        }
+        date start = now_us();
+        on_exit TSAI::debug("perf: %y direct async value: %y (args: %y)", api.label, now_us() - start, args);
+        on_error TSAI::error("%s", get_exception_string($1));
 
         auto v;
         try {
@@ -474,7 +500,15 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         }
 
         *hash<string, hash<ActionOptionInfo>> rv;
-        if (TSAI::checkServer()) {
+        if (TSAI::checkInProcessServer()) {
+            # in-process pool uses the same path as direct execution
+            TSAI::debug("getActionOptionsWithOptions() in-process pool exec options: %y slice: %y", options,
+                keys slice);
+            rv = getActionOptionsWithOptionsIntern({
+                "app": app,
+                "action": action,
+            }, slice, options);
+        } else if (TSAI::checkServer()) {
             TSAI::debug("Starting proxy for app %y action %y: plain dynamic type with args: %y", app, action, options);
             JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
             TSAI::debug("Proxy started for app %y action %y: plain dynamic type with args", app, action);
@@ -517,7 +551,10 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         }
 
         *HashDataType type;
-        if (TSAI::checkServer()) {
+        if (TSAI::checkInProcessServer()) {
+            # in-process pool uses the same path as direct execution
+            type = getDynamicOptionTypeIntern(rt, slice, req);
+        } else if (TSAI::checkServer()) {
             TSAI::debug("Starting proxy for app %y action %y: dynamic type with args: %y", app, action,
                 LoggerUtil::getArgSummary(req));
             JavaScriptProgramProxy proxy = TypeScriptActionInterface::server.get();
@@ -854,6 +891,8 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         }
         bool err;
         if (!type_info.dtfields_done && dtmap) {
+            # track if any options were skipped due to unsatisfied dependencies
+            bool skipped;
             foreach hash<auto> i in (dtmap.pairIterator()) {
                 debug("Retrieving dynamic %s type for option %y for data provider %y", dtype, i.key, getName());
                 # include any context data in case request-specific info needs to be returned
@@ -865,6 +904,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                     && opts{deps}.size() != deps.size()) {
                     debug("Skipping dynamic %s type for option %y for data provider %y; deps %y not satisfied (%y)",
                         dtype, i.key, getName(), deps, opts{deps});
+                    skipped = True;
                     continue;
                 }
 
@@ -887,6 +927,8 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
                     AbstractDataProviderType t = TypeScriptActionInterface::getType(dtype + " option " + i.key, res,
                         NOTHING, NOTHING, self);
+                    debug("getDynamicTypeIntern() dtmap %y: got type %y fields: %y", i.key, t.getName(),
+                        keys t.getFields());
                     TypeScriptDataField field({
                         "name": i.key,
                         "type": t,
@@ -898,7 +940,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                     err = True;
                 }
             }
-            if (!err) {
+            if (!err && !skipped) {
                 type_info.dtfields_done = True;
             }
         }
@@ -911,6 +953,10 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             map type_info.type.addOrReplaceField($1), type_info.dtfields.iterator();
             debug("Added / replaced dynamic fields: %y", keys type_info.dtfields);
         }
+        debug("getDynamicTypeIntern() returning type: %y fields: %y dtfields: %y dtfields_done: %y",
+            type_info.type ? type_info.type.getName() : "n/a",
+            type_info.type ? keys type_info.type.getFields() : NOTHING,
+            keys type_info.dtfields, type_info.dtfields_done);
         return type_info.type;
     }
 

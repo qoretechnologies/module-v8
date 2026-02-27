@@ -4,8 +4,8 @@ import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import { BREVO_APP_LOGO, BREVO_APP_NAME, BREVO_CONN_OPTIONS } from './constants';
 
-import * as ACTIVE_CAMPAIGN_ACTIONS from './actions';
-import * as ACTIVE_CAMPAIGN_TRIGGERS from './triggers';
+import * as BREVO_ACTIONS from './actions';
+import * as BREVO_TRIGGERS from './triggers';
 
 export default (locale: Locales) =>
   ({
@@ -14,8 +14,8 @@ export default (locale: Locales) =>
     desc: L[locale].apps[BREVO_APP_NAME].longDesc(),
     name: BREVO_APP_NAME,
     actions: [
-      ...mapActionsToApp(BREVO_APP_NAME, ACTIVE_CAMPAIGN_ACTIONS, locale),
-      ...mapTriggersToApp(BREVO_APP_NAME, ACTIVE_CAMPAIGN_TRIGGERS, locale),
+      ...mapActionsToApp(BREVO_APP_NAME, BREVO_ACTIONS, locale),
+      ...mapTriggersToApp(BREVO_APP_NAME, BREVO_TRIGGERS, locale),
     ],
     logo: BREVO_APP_LOGO,
     logo_file_name: 'logo.svg',

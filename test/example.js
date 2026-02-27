@@ -165,6 +165,12 @@ exports.actionsCatalogue = {
                         "account_id": "abc123",
                     };
                 },
+                "connection_update_option": {
+                    "option": "account_id",
+                    "code": async function (ctx) {
+                        return {"account_id": ctx.opt_value};
+                    },
+                },
                 "url_template_options": [
                     "account_id",
                 ],
@@ -764,6 +770,16 @@ exports.actionsCatalogue = {
                         } else {
                             throw new Error('unknown key ' + ctx.opts.key);
                         }
+                    },
+                    "get_dependent_response_options": async function(ctx) {
+                        return {
+                            "resp0": {
+                                "type": "string",
+                                "display_name": "Resp0",
+                                "short_desc": "Response option 0",
+                                "desc": "Response option 0",
+                            },
+                        };
                     },
                 },
                 "dyn": {

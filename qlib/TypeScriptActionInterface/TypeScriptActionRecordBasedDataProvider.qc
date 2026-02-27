@@ -1,6 +1,6 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 
-/*  TypeScriptActionRecordBasedDataProvider.qc Copyright (C) 2023 - 2024 Qore Technologies s.r.o.
+/*  TypeScriptActionRecordBasedDataProvider.qc Copyright (C) 2023 - 2026 Qore Technologies s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -101,7 +101,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         if (!ofmap) {
             return;
         }
-        hash<auto> action += {
+        hash<auto> action_ctx += {
             "app": app,
             "action": action,
         };
@@ -112,7 +112,7 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
                     continue;
                 }
                 try {
-                    updateOptionIntern(i.key, j.key, j.value, \action);
+                    updateOptionIntern(i.key, j.key, j.value, \action_ctx);
                 } catch (hash<ExceptionInfo> ex) {
                     TSAI::error("Error evaluating option functions in @%s/%s for %s option %y in table %y: %s", app,
                         action, i.key, j.key, name, get_exception_string(ex));
@@ -127,13 +127,13 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
         string key = type + "_" + option;
         if (TypeScriptActionInterface::getOptionFunctions(\action, self, key, \fmap)) {
             if (omap{key} || romap{key}) {
-                info{type}{option}.allowed_values = getReferenceDataImpl(key);
+                info{type}{option}.ref_data = key;
             }
             if (eomap{key} || reomap{key}) {
-                info{type}{option}.element_allowed_values = getElementReferenceDataImpl(key);
+                info{type}{option}.element_ref_data = key;
             }
             if (dvmap{key}) {
-                info{type}{option}.default_value = getReferenceDataValueImpl(key);
+                info{type}{option}.default_ref_data = key;
             }
         }
     }
@@ -238,7 +238,14 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             "table": name,
         });
         where_cond = cast<*hash<DataProviderExpression>>(getSearchExpression(where_cond, search_options));
-        if (TSAI::checkServer()) {
+        if (TSAI::checkInProcessServer()) {
+            # in-process pool uses the same path as direct execution
+            *code get_records = getAsyncValue(search_records, cctx,
+                info.expressions ? convertExpression(where_cond) : NOTHING,
+                info.expressions ? search_options : NOTHING);
+            return new TypeScriptBulkRecordInterface(block_size, self, get_records, cctx,
+                info.expressions ? NOTHING : where_cond, search_options);
+        } else if (TSAI::checkServer()) {
             return new TypeScriptBulkRecordProxyInterface(block_size, self, conn.name, conn.getRealOptions(),
                 where_cond, search_options, cctx);
         } else {
@@ -269,7 +276,14 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             "table": name,
         });
         where_cond = processSearchParameters(where_cond, search_options);
-        if (TSAI::checkServer()) {
+        if (TSAI::checkInProcessServer()) {
+            # in-process pool uses the same path as direct execution
+            *code get_records = getAsyncValue(search_records, cctx,
+                info.expressions ? convertExpression(where_cond) : NOTHING,
+                info.expressions ? search_options : NOTHING);
+            return new TypeScriptBulkRecordInterface(block_size, self, get_records, cctx,
+                info.expressions ? NOTHING : where_cond, search_options);
+        } else if (TSAI::checkServer()) {
             return new TypeScriptBulkRecordProxyInterface(block_size, self, conn.name, conn.getRealOptions(),
                 where_cond, search_options, cctx);
         } else {
@@ -488,9 +502,11 @@ public class TypeScriptActionRecordBasedDataProvider inherits TypeScriptActionDa
             throw "SEARCH-OPTION-TYPE-ERROR", sprintf("The '%s_options' function for app %y search option %y "
                 "returned type %y; expecting \"hash\"", type, app, name, v.fullType());
         }
-        option_functions = remove v{OptionFunctions};
-        v.type = TypeScriptActionInterface::getType(type + " option " + name + " type", remove v.type);
-        return cast<hash<DataProviderOptionInfo>>(v);
+        hash<auto> opt = v;
+        option_functions = remove opt{OptionFunctions};
+        opt.type = TypeScriptActionInterface::getType(type + " option " + name + " type", opt.type, opt.required,
+            remove opt.element_type);
+        return cast<hash<DataProviderOptionInfo>>(opt);
     }
 
     private static hash<DataProviderExpressionInfo> getExpression(string app, string name, auto v) {

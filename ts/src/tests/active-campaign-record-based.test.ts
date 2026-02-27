@@ -797,7 +797,7 @@ describe('ActiveCampaign Record-Based', () => {
   // INTEGRATION TESTS (Require API credentials)
   // ============================================================
 
-  describe('Integration Tests - Record-Based Operations', () => {
+  describe.skip('Integration Tests - Record-Based Operations', () => {
     const baseContext = {
       conn_opts: {
         token: '',

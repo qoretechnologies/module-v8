@@ -1216,6 +1216,20 @@ const QuickbooksAppEn = {
         },
       },
     },
+    create_invoice_from_estimate: {
+      displayName: 'Create Invoice from Estimate',
+      shortDesc: 'Convert an estimate into an invoice in QuickBooks',
+      longDesc:
+        'Create a new invoice by converting an existing estimate, copying all line items and linking the invoice back to the original estimate',
+      options: {
+        estimate_id: {
+          displayName: 'Estimate ID',
+          shortDesc: 'The estimate to convert',
+          longDesc:
+            'The unique identifier of the estimate to convert into an invoice. Only Pending and Accepted estimates can be converted',
+        },
+      },
+    },
     create_item: {
       displayName: 'Create Item',
       shortDesc: 'Create a new item in QuickBooks',
@@ -1426,6 +1440,40 @@ const QuickbooksAppEn = {
               },
             },
           },
+        },
+      },
+    },
+    create_payment: {
+      displayName: 'Create Payment',
+      shortDesc: 'Create a new payment in QuickBooks',
+      longDesc:
+        'Create a new payment record for a customer, optionally linked to one or more invoices for invoicing workflows',
+      options: {
+        customer: {
+          displayName: 'Customer',
+          shortDesc: 'The customer making the payment',
+          longDesc: 'The unique identifier of the customer who is making this payment',
+        },
+        total_amount: {
+          displayName: 'Total Amount',
+          shortDesc: 'The total payment amount',
+          longDesc: 'The total monetary amount of the payment being received',
+        },
+        invoice_ids: {
+          displayName: 'Invoice IDs',
+          shortDesc: 'Invoices to apply payment to',
+          longDesc:
+            'A list of invoice IDs to link this payment to. The payment amount will be distributed evenly across the specified invoices',
+        },
+        payment_date: {
+          displayName: 'Payment Date',
+          shortDesc: 'The date the payment was received',
+          longDesc: 'The transaction date for this payment. Defaults to the current date if not specified',
+        },
+        memo: {
+          displayName: 'Memo',
+          shortDesc: 'A private note for this payment',
+          longDesc: 'An internal memo or note about this payment that is not visible to the customer',
         },
       },
     },
@@ -1679,6 +1727,70 @@ const QuickbooksAppEn = {
               },
             },
           },
+        },
+      },
+    },
+    create_refund_receipt: {
+      displayName: 'Create Refund Receipt',
+      shortDesc: 'Create a new refund receipt in QuickBooks',
+      longDesc:
+        'Create a new refund receipt to document a return of funds to a customer via check, credit card, or bank transfer',
+      options: {
+        customer_id: {
+          displayName: 'Customer ID',
+          shortDesc: 'The customer receiving the refund',
+          longDesc: 'The unique identifier of the customer who will receive this refund',
+        },
+        lines: {
+          displayName: 'Line Items',
+          shortDesc: 'List of line items for the refund',
+          longDesc: 'The detailed list of items or services being refunded',
+          type: {
+            element_type: {
+              fields: {
+                amount: {
+                  displayName: 'Amount',
+                  shortDesc: 'The refund amount for this line item',
+                  longDesc: 'The total monetary amount being refunded for this specific line item',
+                },
+                description: {
+                  displayName: 'Description',
+                  shortDesc: 'Description of the refund line item',
+                  longDesc: 'A detailed description of what this refund line item represents',
+                },
+                quantity: {
+                  displayName: 'Quantity',
+                  shortDesc: 'The quantity being refunded',
+                  longDesc: 'The number of units of the item being refunded',
+                },
+                unit_price: {
+                  displayName: 'Unit Price',
+                  shortDesc: 'The price per unit',
+                  longDesc: 'The cost per individual unit of the item being refunded',
+                },
+                item_id: {
+                  displayName: 'Item ID',
+                  shortDesc: 'The item for this line',
+                  longDesc: 'The unique identifier of the item being refunded',
+                },
+                tax_code_id: {
+                  displayName: 'Tax Code ID',
+                  shortDesc: 'The tax code for this line item',
+                  longDesc: 'The unique identifier of the tax code to apply to this refund line item',
+                },
+                class_id: {
+                  displayName: 'Class ID',
+                  shortDesc: 'The class for this line item',
+                  longDesc: 'The unique identifier of the class to categorize this refund line item',
+                },
+              },
+            },
+          },
+        },
+        memo: {
+          displayName: 'Memo',
+          shortDesc: 'A private note for this refund receipt',
+          longDesc: 'An internal memo or note about this refund receipt',
         },
       },
     },
@@ -2063,6 +2175,25 @@ const QuickbooksAppEn = {
         },
       },
     },
+    void_transaction: {
+      displayName: 'Void Transaction',
+      shortDesc: 'Void a transaction in QuickBooks',
+      longDesc:
+        'Void a transaction in QuickBooks, zeroing all amounts and marking it as voided. Supports invoices, payments, sales receipts, and bill payments',
+      options: {
+        transaction_type: {
+          displayName: 'Transaction Type',
+          shortDesc: 'The type of transaction to void',
+          longDesc:
+            'The entity type of the transaction to void. Supported types: Invoice, Payment, SalesReceipt, BillPayment',
+        },
+        transaction_id: {
+          displayName: 'Transaction ID',
+          shortDesc: 'The unique identifier of the transaction',
+          longDesc: 'The QuickBooks ID of the transaction that you want to void',
+        },
+      },
+    },
   },
   triggers: {
     bill_trigger: {
@@ -2322,6 +2453,27 @@ const QuickbooksAppEn = {
       displayName: 'Starts With',
       shortDesc: 'Field starts with value',
       longDesc: 'Matches records where the field value starts with the specified prefix',
+    },
+  },
+  searchOptions: {
+    orderBy: {
+      displayName: 'Order By',
+      shortDesc: 'Sort results by a specific field',
+      longDesc: 'Define the field and direction to sort search results',
+      type: {
+        fields: {
+          field: {
+            displayName: 'Field',
+            shortDesc: 'The field to sort by',
+            longDesc: 'The name of the field to use for sorting results',
+          },
+          direction: {
+            displayName: 'Direction',
+            shortDesc: 'Sort direction',
+            longDesc: 'The direction to sort results (ascending or descending)',
+          },
+        },
+      },
     },
   },
 };

@@ -1,5 +1,5 @@
 import { TQoreGetRecordTypeFunction } from '@qoretechnologies/ts-toolkit';
-import { getQoreContextRequiredValues } from '../../../../global/helpers';
+import { getQoreContextRequiredValues, stripRecordTypeFunctions } from '../../../../global/helpers';
 import { AttioError } from '../../constants';
 import { getAttioAttributesAsQoreOptions } from '../get-object-properties';
 
@@ -20,10 +20,10 @@ export const getAttioRecordType: TQoreGetRecordTypeFunction = async (context, ta
 
     const options = await getAttioAttributesAsQoreOptions(target, table, token);
 
-    return {
+    return stripRecordTypeFunctions({
       type: 'hash',
       fields: options,
-    };
+    });
   } catch (error) {
     if (error instanceof AttioError) {
       throw error;

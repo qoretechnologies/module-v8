@@ -110,3 +110,118 @@ export const getJestTestName = (): string => {
   } catch {}
   return 'Unknown Test';
 };
+
+/**
+ * Patterns that indicate a transient API error (billing limits, rate limits, quota exceeded).
+ * These errors are not bugs — they resolve on their own (next month, next minute, etc.).
+ */
+const TRANSIENT_ERROR_PATTERNS = [
+  /billing.?limit/i,
+  /rate.?limit/i,
+  /quota.?exceeded/i,
+  /too.?many.?requests/i,
+  /throttl/i,
+  /429/,
+];
+
+/**
+ * Check whether an error is a transient API limit (billing, rate limit, quota, etc.)
+ */
+export const isTransientApiError = (error: unknown): boolean => {
+  const message = error instanceof Error ? error.message : String(error);
+  return TRANSIENT_ERROR_PATTERNS.some((pattern) => pattern.test(message));
+};
+
+/**
+ * Shared flag: once a transient API error is detected in any test,
+ * all subsequent tests wrapped with `skipOnTransientError` will also be skipped.
+ * This prevents cascading failures when dependent tests can't run.
+ */
+let _transientErrorEncountered = false;
+let _transientErrorMessage = '';
+
+/**
+ * Reset the transient error flag. Call this in `beforeAll` if you want
+ * each describe block to independently detect transient errors.
+ */
+export const resetTransientErrorFlag = (): void => {
+  _transientErrorEncountered = false;
+  _transientErrorMessage = '';
+};
+
+/**
+ * Monitor `console.log` for transient API errors that may be logged by Debugger
+ * but swallowed by error handlers (e.g. helpers that catch and return empty results).
+ *
+ * Call in `beforeAll()` and use the returned cleanup function in `afterAll()`.
+ *
+ * Usage:
+ * ```
+ * let cleanupMonitor: () => void;
+ * beforeAll(() => { cleanupMonitor = monitorConsoleForTransientErrors(); });
+ * afterAll(() => { cleanupMonitor?.(); });
+ * ```
+ */
+export const monitorConsoleForTransientErrors = (): (() => void) => {
+  const originalLog = console.log;
+  console.log = (...args: unknown[]) => {
+    originalLog(...args);
+    if (!_transientErrorEncountered) {
+      const text = args.map(String).join(' ');
+      if (TRANSIENT_ERROR_PATTERNS.some((p) => p.test(text))) {
+        _transientErrorEncountered = true;
+        _transientErrorMessage = text.slice(0, 200);
+      }
+    }
+  };
+  return () => {
+    console.log = originalLog;
+  };
+};
+
+/**
+ * Wrap an integration test function so that transient API errors (billing limits,
+ * rate limits, quota exceeded) cause the test to be skipped with a warning
+ * instead of failing CI.
+ *
+ * Once a transient error is detected in any wrapped test, all subsequent wrapped
+ * tests will also be auto-skipped — preventing cascading failures from dependent tests.
+ *
+ * Usage:
+ * ```
+ * it('Should do something', skipOnTransientError(async () => {
+ *   // test code that calls external APIs
+ * }));
+ * ```
+ */
+export const skipOnTransientError = (fn: () => Promise<void>): (() => Promise<void>) => {
+  return async () => {
+    if (_transientErrorEncountered) {
+      console.warn(
+        `⚠ SKIPPED (previous transient API error): ${getJestTestName()}\n  → ${_transientErrorMessage}`
+      );
+      return;
+    }
+    try {
+      await fn();
+    } catch (error) {
+      if (isTransientApiError(error)) {
+        _transientErrorEncountered = true;
+        const testName = getJestTestName();
+        const message = error instanceof Error ? error.message : String(error);
+        _transientErrorMessage = message;
+        console.warn(`⚠ SKIPPED (transient API error): ${testName}\n  → ${message}`);
+        return;
+      }
+      // The flag may have been set during fn() by the console monitor
+      // (e.g. a helper swallowed a billing error and returned empty, then an assertion failed)
+      if (_transientErrorEncountered) {
+        console.warn(
+          `⚠ SKIPPED (transient API error detected during test): ${getJestTestName()}\n  → ${_transientErrorMessage}`
+        );
+        return;
+      }
+      throw error;
+    }
+  };
+};

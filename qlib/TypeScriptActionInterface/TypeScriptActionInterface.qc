@@ -290,6 +290,18 @@ public class TypeScriptActionInterface {
 
         #! On-demand server flag
         static bool on_demand;
+
+        #! In-process pool for concurrent access without IPC overhead
+        static JavaScriptInProcessPool in_process_server;
+
+        #! In-process on-demand flag
+        static bool in_process_on_demand;
+
+        #! Optional pool for on-demand in-process server creation
+        static *JavaScriptProgramPool in_process_on_demand_pool;
+
+        #! Optional maximum pool size for on-demand in-process server creation
+        static *int in_process_max_size;
     }
 
     #! Performs static initialization of the module
@@ -299,6 +311,8 @@ public class TypeScriptActionInterface {
         int opts = DataProvider::getOptions();
         if (opts & DPO_EnableServers) {
             on_demand = True;
+        } else if (opts & DPO_EnableInProcessServers) {
+            in_process_on_demand = True;
         }
         if (opts & DPO_DisableOnDemandInitialization) {
             TypeScriptActionInterface::initAllApps(opts & DPO_EnableOnDemandActions ? False : True);
@@ -357,6 +371,18 @@ public class TypeScriptActionInterface {
     #! Returns a list of all pending apps
     static *list<string> getPendingApps() {
         return map $1.lwr(), keys appmap;
+    }
+
+    #! Returns summary info for pending (not-yet-initialized) apps from metadata
+    static *list<hash<DataProviderSummaryInfo>> getPendingAppSummaryInfo() {
+        return map <DataProviderSummaryInfo>{
+            "name": $1.value.app.name.lwr(),
+            "display_name": $1.value.app.display_name,
+            "short_desc": $1.value.app.short_desc,
+            "desc": $1.value.app.desc,
+            "type": "TypeScriptActionAppDataProvider",
+            "supports_children": True,
+        }, appmap.pairIterator();
     }
 
     #! Sets the server to start on demand
@@ -437,6 +463,110 @@ public class TypeScriptActionInterface {
         delete server;
     }
 
+    #! Returns the first registered JavaScriptProgramPool, if any
+    static *JavaScriptProgramPool getFirstPool() {
+        return TypeScriptActionInterfacePriv::getFirstPool();
+    }
+
+    #! Sets the in-process server to start on demand
+    /** @param pool optional specific pool to use; if not provided, uses the first registered pool
+        @param max_size optional maximum number of programs in the pool; NOTHING = unlimited
+    */
+    static startInProcessServerOnDemand(*JavaScriptProgramPool pool, *int max_size) {
+        sm.lock();
+        on_exit sm.unlock();
+
+        in_process_on_demand = True;
+        in_process_on_demand_pool = pool;
+        in_process_max_size = max_size;
+    }
+
+    #! Sets the in-process server directly
+    /** Replaces any existing in-process server with the given pool instance.
+        The caller is responsible for creating the pool with the desired max_size.
+
+        @param ip the in-process pool to use as the server
+
+        @par Example:
+        @code{.py}
+        JavaScriptInProcessPool ip(pool, 8);
+        TypeScriptActionInterface::setInProcessServer(ip);
+        @endcode
+    */
+    static setInProcessServer(JavaScriptInProcessPool ip) {
+        sm.lock();
+        on_exit sm.unlock();
+
+        in_process_server = ip;
+    }
+
+    #! Disables on-demand in-process server creation and clears any stored pool/max_size configuration
+    static disableInProcessServerOnDemand() {
+        sm.lock();
+        on_exit sm.unlock();
+
+        in_process_on_demand = False;
+        remove in_process_on_demand_pool;
+        remove in_process_max_size;
+    }
+
+    #! Returns the in-process pool if active, starting it on demand if configured
+    /** Uses double-checked locking: first checks without the mutex for the fast path,
+        then acquires the mutex and checks again to avoid races during lazy creation.
+
+        @return the in-process pool, or NOTHING if not active and on-demand is not configured
+    */
+    static *JavaScriptInProcessPool checkInProcessServer() {
+        if (in_process_server) {
+            return in_process_server;
+        }
+        if (!in_process_on_demand) {
+            return;
+        }
+
+        # lock and check everything again in case of contention
+        sm.lock();
+        on_exit sm.unlock();
+        if (in_process_server) {
+            return in_process_server;
+        }
+        if (in_process_on_demand) {
+            TypeScriptActionInterface::startInProcessServerIntern();
+            return in_process_server;
+        }
+    }
+
+    #! Starts the in-process server using registered program pools
+    private static startInProcessServerIntern() {
+        # use the on-demand pool if set, otherwise find the first registered pool
+        *JavaScriptProgramPool pool = in_process_on_demand_pool ?? TypeScriptActionInterfacePriv::getFirstPool();
+        if (!pool) {
+            throw "IN-PROCESS-SERVER-ERROR", "Cannot start in-process server: no JavaScriptProgramPool available";
+        }
+
+        in_process_server = new JavaScriptInProcessPool(pool, in_process_max_size);
+        DataProvider::registerShutdownHandler(in_process_server.uniqueHash(),
+            \TypeScriptActionInterface::shutdownInProcessServer());
+    }
+
+    #! Shuts the in-process server down if it's running
+    /** Calls shutdown() on the pool (which wakes waiting threads and sets the shutdown flag)
+        rather than deleting the pool immediately, since concurrent threads may still be
+        executing against the pool via checkInProcessServer()->execCall().
+    */
+    static shutdownInProcessServer(*int signal) {
+        sm.lock();
+        on_exit sm.unlock();
+
+        *JavaScriptInProcessPool ip = remove in_process_server;
+        if (!ip) {
+            return;
+        }
+
+        DataProvider::deregisterShutdownHandler(ip.uniqueHash());
+        ip.shutdown();
+    }
+
     static string getCamelCaseAppName(string lc) {
         *string name = appcasemap{lc};
         if (!exists name) {
@@ -450,8 +580,15 @@ public class TypeScriptActionInterface {
         string key;
         try {
             key = (foldl $1 + "-" + $2, argv) + sprintf("-%s", call.type);
+            # in pool clone mode, capture closures without modifying global state
+            if (_pool_clone_mode) {
+                call.key = key;
+                _pool_clone_closures{key} = call.async_call;
+                return key;
+            }
             if (acmap{key} && ((acmap{key} - "key") == (call - "key"))) {
                 # function is being reused
+                call.key = key;
                 return key;
             }
             # function is being replaced
@@ -471,8 +608,15 @@ public class TypeScriptActionInterface {
 
     static string registerAsyncCallArgs(reference<hash<AsyncCallInfo>> call, list<auto> args) {
         string key = (foldl $1 + "-" + $2, args) + sprintf("-%s", call.type);
+        # in pool clone mode, capture closures without modifying global state
+        if (_pool_clone_mode) {
+            call.key = key;
+            _pool_clone_closures{key} = call.async_call;
+            return key;
+        }
         if (acmap{key} && ((acmap{key} - "key") == (call - "key"))) {
             # function is being reused
+            call.key = key;
             return key;
         }
         call.key = key;
@@ -498,7 +642,7 @@ public class TypeScriptActionInterface {
             on_error rethrow "APP-ERROR", sprintf("Error registering app %y: %s", app.name, $1.desc);
             pool = JavaScriptProgramPool::getPool(pgm, \first);
         }
-        if (first) {
+        if (first || _pool_clone_mode) {
             TypeScriptActionInterface::registerApp(app.toData(), pool);
         }
     }
@@ -513,7 +657,7 @@ public class TypeScriptActionInterface {
             on_error rethrow "APP-ERROR", sprintf("Error registering existing app %y: %s", app.name, $1.desc);
             pool = JavaScriptProgramPool::getPool(pgm, \first);
         }
-        if (first) {
+        if (first || _pool_clone_mode) {
             TypeScriptActionInterface::registerExistingApp(app.toData(), pool);
         }
     }
@@ -529,35 +673,48 @@ public class TypeScriptActionInterface {
                 action.app, action.action, $1.desc);
             pool = JavaScriptProgramPool::getPool(pgm, \first);
         }
-        if (first) {
+        if (first || _pool_clone_mode) {
             TypeScriptActionInterface::registerAction(action.toData(), pool);
             TSAI::debug("Registered TypeScript app %y action %y: %s", action.app, action.action);
         }
     }
 
     static registerApp(hash<auto> app, JavaScriptProgramPool pool) {
-        if (app.name =~ / /) {
-            throw "APP-ERROR", sprintf("App name %y is invalid; it contains one or more spaces", app.name);
-        }
-        deregisterDynamicApp(app.name);
         string appname = app.name.lwr();
-        if (exists appcasemap{app.name}) {
-            if (IgnoreDuplicateAppHelper::get()) {
-                return;
+
+        if (!_pool_clone_mode) {
+            # Validation only needed for first registration
+            if (app.name =~ / /) {
+                throw "APP-ERROR", sprintf("App name %y is invalid; it contains one or more spaces", app.name);
             }
-            throw "APP-ERROR", sprintf("App %y has already been regstered and is pending initialization", app.name);
-        }
-        if (initmap{app.name}) {
-            if (IgnoreDuplicateAppHelper::get()) {
-                return;
+            deregisterDynamicApp(app.name);
+            if (exists appcasemap{app.name}) {
+                if (IgnoreDuplicateAppHelper::get()) {
+                    return;
+                }
+                throw "APP-ERROR", sprintf("App %y has already been registered and is pending initialization",
+                    app.name);
             }
-            throw "APP-ERROR", sprintf("App %y has already been registered", app.name);
+            if (initmap{app.name}) {
+                if (IgnoreDuplicateAppHelper::get()) {
+                    return;
+                }
+                throw "APP-ERROR", sprintf("App %y has already been registered", app.name);
+            }
+            if (*hash<auto> info = DynamicAppContextHelper::get(app.name)) {
+                app += info;
+                DynamicAppContextHelper::addApp(app.name);
+                TSAI::info("Registering dynamic app with info: %N", info);
+            }
         }
-        if (*hash<auto> info = DynamicAppContextHelper::get(app.name)) {
-            app += info;
-            DynamicAppContextHelper::addApp(app.name);
-            TSAI::info("Registering dynamic app with info: %N", info);
+
+        if (_pool_clone_mode) {
+            # In clone mode, extract all app-level closures via the shared tryGetAsyncAttribute path.
+            # Also extract REST modifier closures that are normally registered in registerAppIntern.
+            captureAppClosures(app, pool);
+            return;
         }
+
         hash<AsyncCallInfo> get_table_list;
         hash<AsyncCallInfo> begin_transaction;
         hash<AsyncCallInfo> commit;
@@ -721,6 +878,10 @@ public class TypeScriptActionInterface {
     }
 
     static registerExistingApp(hash<auto> app, JavaScriptProgramPool pool) {
+        if (_pool_clone_mode) {
+            # In clone mode, existing apps have no JS closures to capture; skip
+            return;
+        }
         if (app.name.typeCode() != NT_STRING || !app.name.val()) {
             throw "APP-ERROR", sprintf("App name %y is invalid; must be a non-empty string", app.name);
         }
@@ -732,7 +893,7 @@ public class TypeScriptActionInterface {
             if (IgnoreDuplicateAppHelper::get()) {
                 return;
             }
-            throw "APP-ERROR", sprintf("App %y has already been regstered and is pending initialization", app.name);
+            throw "APP-ERROR", sprintf("App %y has already been registered and is pending initialization", app.name);
         }
         if (initmap{app.name}) {
             if (IgnoreDuplicateAppHelper::get()) {
@@ -1424,6 +1585,24 @@ public class TypeScriptActionInterface {
             throw "APP-ERROR", sprintf("App %y is a record-based app but has no record-based actions", info.app.name);
         }
         ActionFunctionContext fctx(info.app.name, "tables", info.pool);
+        # Pre-register option functions in acmap so the proxy child process has them;
+        # uses copies of ofmap values so the original stays intact for setConnection()
+        {
+            hash<auto> action_ctx += {
+                "app": info.app.name,
+                "action": "tables",
+            };
+            foreach hash<auto> i in (ofmap.pairIterator()) {
+                foreach hash<auto> j in (i.value.pairIterator()) {
+                    if (!j.value) {
+                        continue;
+                    }
+                    string key = i.key + "_options_" + j.key;
+                    hash<auto> fmap_copy = j.value;
+                    TypeScriptActionInterface::getOptionFunctions(\action_ctx, fctx, key, \fmap_copy);
+                }
+            }
+        }
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(info.app.name);
         prov.registerChild("tables", new TypeScriptActionTablesDataProvider(fctx, prov_info, ofmap));
     }
@@ -1513,6 +1692,11 @@ public class TypeScriptActionInterface {
     }
 
     static registerAction(hash<auto> action, JavaScriptProgramPool pool) {
+        if (_pool_clone_mode) {
+            # In clone mode, only extract async call closures; skip all global state registration
+            captureActionClosures(action, pool);
+            return;
+        }
         # register the action immediately if the app has already been registered
         if (initmap{action.app}) {
             TypeScriptActionInterface::registerActionIntern(action, pool);
@@ -1801,8 +1985,191 @@ public class TypeScriptActionInterface {
         #printf("Registered %s %s (%y)\n", action.app, action.action);
 
         action.action_val = event_id;
-        action.path = action.action;
+        action.path = "/" + action.action;
         return rv;
+    }
+
+    #! Extracts app-level async closures in pool clone mode without modifying global state
+    /** This method must be kept in sync with registerApp(hash, pool) and registerAppIntern().
+        It captures all closures that would normally be registered during app registration:
+        - Table/record closures: get_table_list, get_record_type, search_records, create_records,
+          update_records, upsert_records, delete_records (direct app attributes)
+        - REST modifier closures: post_auth (rest_modifiers.set_options_post_auth),
+          post_auth_code (rest_modifiers.set_options_post_auth_code),
+          conn_update (rest_modifiers.connection_update_option.code)
+    */
+    private static captureAppClosures(hash<auto> app, JavaScriptProgramPool pool) {
+        timeout io_timeout = seconds(app.io_timeout_secs ?? DefaultIoTimeoutSecs);
+        string name = app.name;
+
+        # Extract table/record async attribute closures (direct app attributes)
+        foreach string attr in ("get_table_list", "get_record_type", "search_records", "create_records",
+                "update_records", "upsert_records", "delete_records") {
+            tryGetAsyncAttribute(\app, attr, attr, pool, io_timeout, name);
+        }
+
+        # Extract REST modifier closures from their actual paths in the app hash
+        if (*hash<auto> rest_modifiers = app.rest_modifiers) {
+            if (rest_modifiers.set_options_post_auth.callp()) {
+                hash<AsyncCallInfo> call = <AsyncCallInfo>{
+                    "app": name,
+                    "type": "post_auth",
+                    "label": sprintf("clone: post_auth for app %y", name),
+                    "pool": pool,
+                    "async_call": rest_modifiers.set_options_post_auth,
+                    "to": seconds(rest_modifiers.io_timeout_secs ?? DefaultPostAuthIoTimeoutSecs),
+                };
+                TypeScriptActionInterface::registerAsyncCall(\call, "app", name);
+            }
+            if (rest_modifiers.set_options_post_auth_code.callp()) {
+                hash<AsyncCallInfo> call = <AsyncCallInfo>{
+                    "app": name,
+                    "type": "post_auth_code",
+                    "label": sprintf("clone: post_auth_code for app %y", name),
+                    "pool": pool,
+                    "async_call": rest_modifiers.set_options_post_auth_code,
+                    "to": seconds(rest_modifiers.io_timeout_secs ?? DefaultPostAuthIoTimeoutSecs),
+                };
+                TypeScriptActionInterface::registerAsyncCall(\call, "app", name);
+            }
+            if (rest_modifiers.connection_update_option.val()
+                    && rest_modifiers.connection_update_option."code".callp()) {
+                hash<AsyncCallInfo> call = <AsyncCallInfo>{
+                    "app": name,
+                    "type": "conn_update",
+                    "label": sprintf("clone: conn_update for app %y", name),
+                    "pool": pool,
+                    "async_call": rest_modifiers.connection_update_option."code",
+                    "to": seconds(rest_modifiers.io_timeout_secs ?? DefaultIoTimeoutSecs),
+                };
+                TypeScriptActionInterface::registerAsyncCall(\call, "app", name);
+            }
+        }
+    }
+
+    #! Extracts action-level async closures in pool clone mode without modifying global state
+    /** This method must be kept in sync with generateApiDataProvider() and generateEventDataProvider().
+        It captures all closures that would normally be registered during action registration:
+        - API closures: api_function, get_dynamic_request_type, get_dynamic_response_type,
+          request_data_converter, response_data_converter
+        - Event closures: get_dynamic_type, get_example_event_data, format_event_data, event_function
+        - Webhook closures: webhook_register, webhook_deregister
+        - Option closures: get_allowed_values, get_element_allowed_values, get_default_value,
+          get_dependent_options, get_dependent_response_options, get_dynamic_type
+    */
+    private static captureActionClosures(hash<auto> action, JavaScriptProgramPool pool) {
+        string app = action.app;
+        string act = action.action;
+        timeout io_timeout = seconds(action.io_timeout_secs ?? DefaultIoTimeoutSecs);
+
+        # API-level closures directly registered (matching key generation in generateApiDataProvider)
+        if (action.api_function.callp()) {
+            hash<AsyncCallInfo> call = <AsyncCallInfo>{
+                "app": app,
+                "action": act,
+                "type": "api_function",
+                "label": sprintf("clone: API function for app %y action %y", app, act),
+                "pool": pool,
+                "async_call": action.api_function,
+                "to": seconds(io_timeout),
+            };
+            TypeScriptActionInterface::registerAsyncCall(\call, "app", app, act);
+        }
+
+        # Closures registered with extra arg in key (type = "api_function", extra arg distinguishes them)
+        foreach string attr in ("get_dynamic_request_type", "get_dynamic_response_type",
+                "request_data_converter", "response_data_converter") {
+            if (action{attr}.callp()) {
+                hash<AsyncCallInfo> call = <AsyncCallInfo>{
+                    "app": app,
+                    "action": act,
+                    "type": "api_function",
+                    "label": sprintf("clone: %s for app %y action %y", attr, app, act),
+                    "pool": pool,
+                    "async_call": action{attr},
+                    "to": seconds(io_timeout),
+                };
+                TypeScriptActionInterface::registerAsyncCall(\call, "app", app, act, attr);
+            }
+        }
+
+        # Event-related closures (registered via tryGetAsyncAttribute or direct; type = attribute name)
+        foreach string attr in ("get_dynamic_type", "get_example_event_data", "format_event_data") {
+            tryGetAsyncAttribute(\action, attr, attr, pool, io_timeout, app, act);
+        }
+
+        # Event function (type = "event_function")
+        if (action.event_function.callp()) {
+            hash<AsyncCallInfo> call = <AsyncCallInfo>{
+                "app": app,
+                "action": act,
+                "type": "event_function",
+                "label": sprintf("clone: event function for app %y action %y", app, act),
+                "pool": pool,
+                "async_call": action.event_function,
+                "to": seconds(io_timeout),
+            };
+            TypeScriptActionInterface::registerAsyncCall(\call, "app", app, act);
+        }
+
+        # Webhook closures (type = "webhook_register" / "webhook_deregister")
+        foreach string attr in ("webhook_register", "webhook_deregister") {
+            if (action{attr}.callp()) {
+                hash<AsyncCallInfo> call = <AsyncCallInfo>{
+                    "app": app,
+                    "action": act,
+                    "type": attr,
+                    "label": sprintf("clone: %s for app %y action %y", attr, app, act),
+                    "pool": pool,
+                    "async_call": action{attr},
+                    "to": seconds(io_timeout),
+                };
+                TypeScriptActionInterface::registerAsyncCall(\call, "app", app, act);
+            }
+        }
+
+        # Option-level closures
+        if (action.options.typeCode() == NT_HASH) {
+            foreach hash<auto> i in (action.options.pairIterator()) {
+                if (i.value.typeCode() != NT_HASH) {
+                    continue;
+                }
+                # get_allowed_values, get_element_allowed_values, get_default_value
+                foreach string opt_attr in ("get_allowed_values", "get_element_allowed_values",
+                        "get_default_value") {
+                    if (i.value{opt_attr}.callp()) {
+                        hash<AsyncCallInfo> call = <AsyncCallInfo>{
+                            "app": app,
+                            "action": act,
+                            "type": opt_attr,
+                            "label": sprintf("clone: %s for app %y action %y option %y",
+                                opt_attr, app, act, i.key),
+                            "pool": pool,
+                            "async_call": i.value{opt_attr},
+                            "to": seconds(io_timeout),
+                        };
+                        TypeScriptActionInterface::registerAsyncCall(\call, "app", app, act, i.key);
+                    }
+                }
+                # Dependent option closures
+                foreach string dep_attr in ("get_dependent_options", "get_dependent_response_options",
+                        "get_dynamic_type") {
+                    if (i.value{dep_attr}.callp()) {
+                        hash<AsyncCallInfo> call = <AsyncCallInfo>{
+                            "app": app,
+                            "action": act,
+                            "type": dep_attr,
+                            "label": sprintf("clone: %s for app %y action %y option %y",
+                                dep_attr, app, act, i.key),
+                            "pool": pool,
+                            "async_call": i.value{dep_attr},
+                            "to": seconds(io_timeout),
+                        };
+                        TypeScriptActionInterface::registerAsyncCall(\call, "app", app, act, i.key);
+                    }
+                }
+            }
+        }
     }
 
     static *hash<AsyncCallInfo> tryGetAsyncAttribute(reference<hash<auto>> h, string key, string type,
@@ -2041,7 +2408,7 @@ public class TypeScriptActionInterface {
 
         TSAI::debug("Registered provider/action %s/%s", prov.getName(), action.action);
 
-        action.path = action.action;
+        action.path = "/" + action.action;
     }
 
     static TypeScriptActionAppDataProvider getAppDataProvider(string app) {

@@ -5,17 +5,21 @@ import { getGitHubRepositoryIdAllowedValues } from '../get-repository-id-allowed
 export const GithubCommonOptions = {
   repo: {
     get_allowed_values: getGitHubRepositoryIdAllowedValues,
-    preselected: true,
+    required: true,
     type: 'string',
     on_change: ['refetch'],
     allowed_values_creatable: true,
+    display_name: 'Repository',
+    short_desc: `The name of the repository. For example, for the repository "qoretechnologies/qorus", the repo value would be "qorus".`,
   },
   owner: {
     get_allowed_values: getGitHubOwnerAllowedValues,
-    preselected: true,
+    required: true,
     type: 'string',
     on_change: ['refetch'],
     allowed_values_creatable: true,
+    display_name: 'Owner',
+    short_desc: `The owner of the repository. Can be either a user or an organization.`,
   },
 } satisfies TQoreCrudOptions;
 

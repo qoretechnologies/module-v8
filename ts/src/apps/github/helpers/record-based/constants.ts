@@ -3,7 +3,6 @@ import {
   GitHubIssueRecordType,
   GitHubPullRequestRecordType,
   GitHubReleaseRecordType,
-  GitHubRepositoryRecordType,
   type TGitHubTable,
 } from './get-record-type';
 
@@ -21,8 +20,6 @@ export const getGitHubTableKeys = (tableName: TGitHubTable): string[] => {
       return Object.keys(GitHubPullRequestRecordType.fields);
     case 'releases':
       return Object.keys(GitHubReleaseRecordType.fields);
-    case 'repositories':
-      return Object.keys(GitHubRepositoryRecordType.fields);
     default:
       return [];
   }
