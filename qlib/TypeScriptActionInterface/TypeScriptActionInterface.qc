@@ -1985,7 +1985,7 @@ public class TypeScriptActionInterface {
         #printf("Registered %s %s (%y)\n", action.app, action.action);
 
         action.action_val = event_id;
-        action.path = action.action;
+        action.path = "/" + action.action;
         return rv;
     }
 
@@ -2408,7 +2408,7 @@ public class TypeScriptActionInterface {
 
         TSAI::debug("Registered provider/action %s/%s", prov.getName(), action.action);
 
-        action.path = action.action;
+        action.path = "/" + action.action;
     }
 
     static TypeScriptActionAppDataProvider getAppDataProvider(string app) {

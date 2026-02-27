@@ -891,6 +891,8 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
         }
         bool err;
         if (!type_info.dtfields_done && dtmap) {
+            # track if any options were skipped due to unsatisfied dependencies
+            bool skipped;
             foreach hash<auto> i in (dtmap.pairIterator()) {
                 debug("Retrieving dynamic %s type for option %y for data provider %y", dtype, i.key, getName());
                 # include any context data in case request-specific info needs to be returned
@@ -902,6 +904,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                     && opts{deps}.size() != deps.size()) {
                     debug("Skipping dynamic %s type for option %y for data provider %y; deps %y not satisfied (%y)",
                         dtype, i.key, getName(), deps, opts{deps});
+                    skipped = True;
                     continue;
                 }
 
@@ -924,6 +927,8 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
 
                     AbstractDataProviderType t = TypeScriptActionInterface::getType(dtype + " option " + i.key, res,
                         NOTHING, NOTHING, self);
+                    debug("getDynamicTypeIntern() dtmap %y: got type %y fields: %y", i.key, t.getName(),
+                        keys t.getFields());
                     TypeScriptDataField field({
                         "name": i.key,
                         "type": t,
@@ -935,7 +940,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                     err = True;
                 }
             }
-            if (!err) {
+            if (!err && !skipped) {
                 type_info.dtfields_done = True;
             }
         }
@@ -948,6 +953,10 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
             map type_info.type.addOrReplaceField($1), type_info.dtfields.iterator();
             debug("Added / replaced dynamic fields: %y", keys type_info.dtfields);
         }
+        debug("getDynamicTypeIntern() returning type: %y fields: %y dtfields: %y dtfields_done: %y",
+            type_info.type ? type_info.type.getName() : "n/a",
+            type_info.type ? keys type_info.type.getFields() : NOTHING,
+            keys type_info.dtfields, type_info.dtfields_done);
         return type_info.type;
     }
 
