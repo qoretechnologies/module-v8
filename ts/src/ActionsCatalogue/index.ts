@@ -40,6 +40,7 @@ import clickup from '../apps/clickup';
 import confluence from '../apps/confluence';
 import coppercrm from '../apps/coppercrm';
 import craft from '../apps/craft';
+import dropbox from '../apps/dropbox';
 import dynamics from '../apps/dynamics';
 import esignature from '../apps/esignature';
 import facebookPages from '../apps/facebook-pages';
@@ -47,9 +48,11 @@ import figma from '../apps/figma';
 import firebase from '../apps/firebase';
 import firestore from '../apps/firestore';
 import freshdesk from '../apps/freshdesk';
+import front from '../apps/front';
 import gemini from '../apps/gemini';
 import github from '../apps/github';
 import gitlab from '../apps/gitlab';
+import googleAds from '../apps/google-ads';
 import googleAnalytics from '../apps/google-analytics';
 import googleChat from '../apps/google-chat';
 import googleContacts from '../apps/google-contacts';
@@ -59,6 +62,7 @@ import googleForms from '../apps/google-forms';
 import googleMeet from '../apps/google-meet';
 import googleSheets from '../apps/google-sheets';
 import googleTasks from '../apps/google-tasks';
+import helpscout from '../apps/helpscout';
 import hubspot from '../apps/hubspot';
 import huggingFace from '../apps/hugging-face';
 import intercom from '../apps/intercom';
@@ -75,8 +79,8 @@ import netsuite from '../apps/netsuite';
 import nocodb from '../apps/nocodb';
 import notion from '../apps/notion';
 import odoo from '../apps/odoo';
-import openrouter from '../apps/openrouter';
 import openWeatherMap from '../apps/open-weather-map';
+import openrouter from '../apps/openrouter';
 import outlook from '../apps/outlook';
 import paddle from '../apps/paddle';
 import patreon from '../apps/patreon';
@@ -86,15 +90,19 @@ import pushover from '../apps/pushover';
 import quickbooks from '../apps/quickbooks';
 import salesforce from '../apps/salesforce';
 import seatable from '../apps/seatable';
+import sendgrid from '../apps/sendgrid';
 import sentry from '../apps/sentry';
 import serenity from '../apps/serenity';
 import sharepoint from '../apps/sharepoint';
 import shopify from '../apps/shopify';
+import slack from '../apps/slack';
 import stripe from '../apps/stripe';
 import supabase from '../apps/supabase';
+import surveyMonkey from '../apps/survey-monkey';
 import teams from '../apps/teams';
 import telegram from '../apps/telegram';
 import todoist from '../apps/todoist';
+import trello from '../apps/trello';
 import twilio from '../apps/twilio';
 import typeform from '../apps/typeform';
 import webflow from '../apps/webflow';
@@ -108,13 +116,6 @@ import { mapCrudOptionsToApp, TQoreCrudOptionType } from '../global/helpers';
 import L from '../i18n/i18n-node';
 import { Locales } from '../i18n/i18n-types';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import sendgrid from '../apps/sendgrid';
-import helpscout from '../apps/helpscout';
-import dropbox from '../apps/dropbox';
-import front from '../apps/front';
-import slack from '../apps/slack';
-import surveyMonkey from '../apps/survey-monkey';
-import trello from '../apps/trello';
 
 if (process.env.TS_DEBUG) {
   Debugger.level = DebugLevels.Verbose;
@@ -168,6 +169,7 @@ const NEW_APPS = {
   googleChat,
   googleContacts,
   googleDocs,
+  googleAds,
   googleDrive,
   googleForms,
   googleMeet,

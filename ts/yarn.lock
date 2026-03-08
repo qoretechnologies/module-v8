@@ -2116,6 +2116,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@isaacs/ttlcache@npm:^1.2.2":
+  version: 1.4.1
+  resolution: "@isaacs/ttlcache@npm:1.4.1"
+  checksum: 10c0/6921de516917b02673a58e543c2b06fd04237cbf6d089ca22d6e98defa4b1e9a48258cb071d6b581284bb497bea687320788830541511297eecbe6e93a665bbf
+  languageName: node
+  linkType: hard
+
 "@istanbuljs/load-nyc-config@npm:^1.0.0":
   version: 1.1.0
   resolution: "@istanbuljs/load-nyc-config@npm:1.1.0"
@@ -6837,6 +6844,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios@npm:^1.6.7":
+  version: 1.13.6
+  resolution: "axios@npm:1.13.6"
+  dependencies:
+    follow-redirects: "npm:^1.15.11"
+    form-data: "npm:^4.0.5"
+    proxy-from-env: "npm:^1.1.0"
+  checksum: 10c0/51fb5af055c3b85662fa97df17d986ae2c37d13bf86d50b6bb36b6b3a2dec6966a1d3a14ab3774b71707b155ae3597ed9b7babdf1a1a863d1a31840cb8e7ec71
+  languageName: node
+  linkType: hard
+
 "azure-devops-node-api@npm:^15.1.1":
   version: 15.1.2
   resolution: "azure-devops-node-api@npm:15.1.2"
@@ -7451,6 +7469,13 @@ __metadata:
     safe-buffer: "npm:^5.2.1"
     to-buffer: "npm:^1.2.2"
   checksum: 10c0/53c5046a9d9b60c586479b8f13fde263c3f905e13f11e8e04c7a311ce399c91d9c3ec96642332e0de077d356e1014ee12bba96f74fbaad0de750f49122258836
+  languageName: node
+  linkType: hard
+
+"circ-json@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "circ-json@npm:1.0.4"
+  checksum: 10c0/6b2723f7122d0ffdf94f397d127cb8ffd9e2ac333d73ac3eb130d268b10000563762f88360f53272c6662861d1e5718edc6dd36425f684b023ad807900379989
   languageName: node
   linkType: hard
 
@@ -9212,7 +9237,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.15.6":
+"follow-redirects@npm:^1.15.11, follow-redirects@npm:^1.15.6":
   version: 1.15.11
   resolution: "follow-redirects@npm:1.15.11"
   peerDependenciesMeta:
@@ -9262,7 +9287,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"form-data@npm:^4.0.0, form-data@npm:^4.0.4, form-data@npm:~4.0.4":
+"form-data@npm:^4.0.0, form-data@npm:^4.0.4, form-data@npm:^4.0.5, form-data@npm:~4.0.4":
   version: 4.0.5
   resolution: "form-data@npm:4.0.5"
   dependencies:
@@ -9631,6 +9656,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"google-ads-api@npm:^23.0.0":
+  version: 23.0.0
+  resolution: "google-ads-api@npm:23.0.0"
+  dependencies:
+    "@isaacs/ttlcache": "npm:^1.2.2"
+    axios: "npm:^1.6.7"
+    circ-json: "npm:^1.0.4"
+    google-ads-node: "npm:23.0.0"
+    google-auth-library: "npm:^9.15.1"
+    google-gax: "npm:^5.0.6"
+    long: "npm:^4.0.0"
+    stream-json: "npm:^1.8.0"
+  checksum: 10c0/e96f8e009ff95b393519c05ce177ad490f4748f2b7aa16e3c8fbbc0905c9b9f5bcaf47ea4ff9d2d6e2ddb5c62a72864c30ceed84d78cb2f26f18d7decba0483c
+  languageName: node
+  linkType: hard
+
+"google-ads-node@npm:23.0.0":
+  version: 23.0.0
+  resolution: "google-ads-node@npm:23.0.0"
+  dependencies:
+    google-gax: "npm:^5.0.6"
+    lru-cache: "npm:^10.2.0"
+  checksum: 10c0/7bd66b791aaca8554444812f9b6793fadddd935b3fb0fcaff72417bdb99b2cc68932f29110ddc604bf09ab656f334f672902c3ffe6a22aa9bf8da92969bd33ee
+  languageName: node
+  linkType: hard
+
 "google-auth-library@npm:^10.0.0-rc.1, google-auth-library@npm:^10.1.0, google-auth-library@npm:^10.3.0":
   version: 10.5.0
   resolution: "google-auth-library@npm:10.5.0"
@@ -9646,7 +9697,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"google-auth-library@npm:^9.3.0":
+"google-auth-library@npm:^9.15.1, google-auth-library@npm:^9.3.0":
   version: 9.15.1
   resolution: "google-auth-library@npm:9.15.1"
   dependencies:
@@ -9680,7 +9731,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"google-gax@npm:^5.0.0":
+"google-gax@npm:^5.0.0, google-gax@npm:^5.0.6":
   version: 5.0.6
   resolution: "google-gax@npm:5.0.6"
   dependencies:
@@ -11552,6 +11603,13 @@ __metadata:
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: 10c0/d8cbea072bb08655bb4c989da418994b073a608dffa608b09ac04b43a791b12aeae7cd7ad919aa4c925f33b48490b5cfe6c1f71d827956071dae2e7bb3a6b74c
+  languageName: node
+  linkType: hard
+
+"long@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "long@npm:4.0.0"
+  checksum: 10c0/50a6417d15b06104dbe4e3d4a667c39b137f130a9108ea8752b352a4cfae047531a3ac351c181792f3f8768fe17cca6b0f406674a541a86fb638aaac560d83ed
   languageName: node
   linkType: hard
 
@@ -13771,6 +13829,7 @@ __metadata:
     eslint-plugin-storybook: "npm:^9.1.6"
     facebook-nodejs-business-sdk: "npm:^24.0.0"
     fs: "npm:^0.0.1-security"
+    google-ads-api: "npm:^23.0.0"
     google-auth-library: "npm:^10.3.0"
     i18n: "npm:^0.15.1"
     is-base64: "npm:^1.1.0"
@@ -15193,12 +15252,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"stream-chain@npm:^2.2.5":
+  version: 2.2.5
+  resolution: "stream-chain@npm:2.2.5"
+  checksum: 10c0/c512f50190d7c92d688fa64e7af540c51b661f9c2b775fc72bca38ea9bca515c64c22c2197b1be463741daacbaaa2dde8a8ea24ebda46f08391224f15249121a
+  languageName: node
+  linkType: hard
+
 "stream-events@npm:^1.0.5":
   version: 1.0.5
   resolution: "stream-events@npm:1.0.5"
   dependencies:
     stubs: "npm:^3.0.0"
   checksum: 10c0/5d235a5799a483e94ea8829526fe9d95d76460032d5e78555fe4f801949ac6a27ea2212e4e0827c55f78726b3242701768adf2d33789465f51b31ed8ebd6b086
+  languageName: node
+  linkType: hard
+
+"stream-json@npm:^1.8.0":
+  version: 1.9.1
+  resolution: "stream-json@npm:1.9.1"
+  dependencies:
+    stream-chain: "npm:^2.2.5"
+  checksum: 10c0/0521e5cb3fb6b0e2561d715975e891bd81fa77d0239c8d0b1756846392bc3c7cdd7f1ddb0fe7ed77e6fdef58daab9e665d3b39f7d677bd0859e65a2bff59b92c
   languageName: node
   linkType: hard
 
