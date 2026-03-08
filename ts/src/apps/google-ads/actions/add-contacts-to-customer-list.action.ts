@@ -122,7 +122,15 @@ const addContactsToCustomerList = QoreAppCreator.createLocalizedAction<typeof op
       }
 
       // Step 2: Build user identifiers and add operations
-      const operations = contacts.map((contact: { email?: string; phone_number?: string }) => {
+      const validContacts = contacts.filter(
+        (contact: { email?: string; phone_number?: string }) => contact.email || contact.phone_number
+      );
+
+      if (validContacts.length === 0) {
+        throw new GoogleAdsError('At least one contact must have an email or phone number');
+      }
+
+      const operations = validContacts.map((contact: { email?: string; phone_number?: string }) => {
         const userIdentifiers: Record<string, string>[] = [];
 
         if (contact.email) {
@@ -132,7 +140,7 @@ const addContactsToCustomerList = QoreAppCreator.createLocalizedAction<typeof op
         }
 
         if (contact.phone_number) {
-          const normalizedPhone = contact.phone_number.trim().replace(/[\s-()]/g, '');
+          const normalizedPhone = contact.phone_number.trim().replace(/[\s()-]/g, '');
           userIdentifiers.push({
             hashedPhoneNumber: sha256Hash(normalizedPhone),
           });

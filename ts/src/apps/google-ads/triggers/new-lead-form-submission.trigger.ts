@@ -47,6 +47,9 @@ const fetchLeadFormSubmissions = async (
     `;
 
     if (campaignId) {
+      if (!/^\d+$/.test(campaignId)) {
+        throw new GoogleAdsError(`Invalid campaign ID: ${campaignId}`);
+      }
       query += ` WHERE campaign.id = ${campaignId}`;
     }
 

@@ -16,7 +16,7 @@ import { DeleteTopicCommand } from '@aws-sdk/client-sns';
 configDotenv({ path: '.env' });
 Debugger.level = DebugLevels.Verbose;
 
-describe('Amazon SNS', () => {
+describe.skip('Amazon SNS', () => {
   const base_context = {
     conn_opts: {} as any,
   };

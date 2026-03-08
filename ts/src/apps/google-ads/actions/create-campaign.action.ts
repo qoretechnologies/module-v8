@@ -93,7 +93,7 @@ const createCampaign = QoreAppCreator.createLocalizedAction<typeof options>({
       target_search_network = true,
     } = obj || {};
 
-    if (!name || !channel_type || !daily_budget || !bidding_strategy) {
+    if (!name || !channel_type || daily_budget === undefined || daily_budget === null || !bidding_strategy) {
       throw new GoogleAdsError('Name, channel type, daily budget, and bidding strategy are required');
     }
 
@@ -128,13 +128,13 @@ const createCampaign = QoreAppCreator.createLocalizedAction<typeof options>({
       // Set bidding strategy
       switch (bidding_strategy) {
         case 'MAXIMIZE_CONVERSIONS':
-          campaignResource.maximize_conversions = { target_cpa_micros: 0 };
+          campaignResource.maximize_conversions = {};
           break;
         case 'MAXIMIZE_CONVERSION_VALUE':
-          campaignResource.maximize_conversion_value = { target_roas: 0 };
+          campaignResource.maximize_conversion_value = {};
           break;
         case 'MAXIMIZE_CLICKS':
-          campaignResource.target_spend = { cpc_bid_ceiling_micros: 0 };
+          campaignResource.target_spend = {};
           break;
         case 'MANUAL_CPC':
           campaignResource.manual_cpc = { enhanced_cpc_enabled: false };
@@ -142,8 +142,6 @@ const createCampaign = QoreAppCreator.createLocalizedAction<typeof options>({
         case 'TARGET_IMPRESSION_SHARE':
           campaignResource.target_impression_share = {
             location: enums.TargetImpressionShareLocation.ANYWHERE_ON_PAGE,
-            location_fraction_micros: 0,
-            cpc_bid_ceiling_micros: 0,
           };
           break;
         default:
