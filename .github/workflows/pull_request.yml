@@ -251,7 +251,7 @@ jobs:
           cd ts
           set +e
           node --experimental-vm-modules \
-            ./node_modules/jest/bin/jest.js --ci --maxWorkers=1 --workerIdleMemoryLimit=2048MB \
+            ./node_modules/jest/bin/jest.js --ci --maxWorkers=50% --workerIdleMemoryLimit=2048MB \
             --config src/jest.config.ts --json --outputFile=test-results.json
           TEST_EXIT_CODE=$?
           set -e
@@ -333,7 +333,7 @@ jobs:
           sys.exit(0)
           PYEOF
         env:
-          NODE_OPTIONS: "--max_old_space_size=8192"
+          NODE_OPTIONS: "--max_old_space_size=16384"
 
       # Install system dependencies needed for building Qore and modules
       - name: Install dependencies
