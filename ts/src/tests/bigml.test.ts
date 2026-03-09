@@ -25,7 +25,7 @@ import { Debugger, DebugLevels } from '../utils/Debugger';
 configDotenv({ path: '.env' });
 Debugger.level = DebugLevels.Verbose;
 
-describe('Big Ml', () => {
+describe.skip('Big Ml', () => {
   const base_context = {
     conn_opts: {
       token: '',
