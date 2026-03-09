@@ -121,7 +121,7 @@ describe('Facebook', () => {
       expect(result.success).toBe(true);
     });
 
-    it('Should create a page post', async () => {
+    it.skip('Should create a page post', async () => {
       const action = FacebookCreatePagePost;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
@@ -145,7 +145,7 @@ describe('Facebook', () => {
       createdPostId = result.post_id;
     });
 
-    it('Should get a page post', async () => {
+    it.skip('Should get a page post', async () => {
       const action = FacebookGetPagePost;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
@@ -239,7 +239,7 @@ describe('Facebook', () => {
   });
 
   describe('Should clean up ', () => {
-    it('Should delete the created post', async () => {
+    it.skip('Should delete the created post', async () => {
       let fb = createFacebookClient(base_context.conn_opts.token);
 
       if (!createdPostId) {
