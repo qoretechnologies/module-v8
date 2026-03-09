@@ -355,6 +355,19 @@ jobs:
             libyaml-dev \
             uuid-dev
 
+      # Install QUIC-capable OpenSSL (quictls) for ngtcp2 support required by Qore
+      - name: Install quictls OpenSSL
+        run: |
+          QUICTLS_VERSION="3.3.0-quic1"
+          git clone --depth 1 --branch "openssl-${QUICTLS_VERSION}" https://github.com/quictls/openssl.git /tmp/quictls
+          cd /tmp/quictls
+          ./Configure --prefix=/usr/local/quictls --libdir=lib no-tests
+          make -j$(nproc)
+          sudo make install_sw
+          echo "/usr/local/quictls/lib" | sudo tee /etc/ld.so.conf.d/quictls.conf
+          sudo ldconfig
+          echo "PKG_CONFIG_PATH=/usr/local/quictls/lib/pkgconfig:${PKG_CONFIG_PATH}" >> $GITHUB_ENV
+
       # Install pre-built Node.js 24 with development headers and libnode.so
       - name: Install Node.js 24 development files
         run: |
@@ -376,12 +389,13 @@ jobs:
         run: |
           git clone --branch develop https://github.com/qoretechnologies/qore.git
           cd qore
-          # Skip QUIC/HTTP3 support - Ubuntu 24.04's OpenSSL lacks QUIC APIs
-          sed -i 's/set(QUIC_FOUND_SYSTEM FALSE)/set(QUIC_FOUND_SYSTEM TRUE)/' CMakeLists.txt
           mkdir build
           cd build
-          V8_INCLUDE_DIR=/opt/nodejs/include/node NODE_LIB_DIR=/opt/nodejs/lib cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
-          make && sudo make install
+          V8_INCLUDE_DIR=/opt/nodejs/include/node NODE_LIB_DIR=/opt/nodejs/lib \
+            OPENSSL_ROOT_DIR=/usr/local/quictls \
+            cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release \
+              -DOPENSSL_ROOT_DIR=/usr/local/quictls
+          make -j$(nproc) && sudo make install
 
       #  Update library paths to ensure Qore can find its shared libraries
       - name: Update Library Path
