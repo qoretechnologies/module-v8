@@ -376,6 +376,8 @@ jobs:
         run: |
           git clone --branch develop https://github.com/qoretechnologies/qore.git
           cd qore
+          # Skip QUIC/HTTP3 support - Ubuntu 24.04's OpenSSL lacks QUIC APIs
+          sed -i 's/set(QUIC_FOUND_SYSTEM FALSE)/set(QUIC_FOUND_SYSTEM TRUE)/' CMakeLists.txt
           mkdir build
           cd build
           V8_INCLUDE_DIR=/opt/nodejs/include/node NODE_LIB_DIR=/opt/nodejs/lib cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
