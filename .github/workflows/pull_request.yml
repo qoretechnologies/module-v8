@@ -251,7 +251,7 @@ jobs:
           cd ts
           set +e
           node --experimental-vm-modules \
-            ./node_modules/jest/bin/jest.js --ci --maxWorkers=50% \
+            ./node_modules/jest/bin/jest.js --ci --maxWorkers=1 \
             --config src/jest.config.ts --json --outputFile=test-results.json
           TEST_EXIT_CODE=$?
           set -e
