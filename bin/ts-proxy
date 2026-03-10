@@ -52,6 +52,7 @@ class TsProxy inherits TypeScriptProxy {
         bool parent_closed;
 
         bool test_send_error_used;
+        bool startup_complete;
     }
 
     constructor() : TypeScriptProxy(False) {
@@ -83,6 +84,7 @@ class TsProxy inherits TypeScriptProxy {
             exit(0);
         }
         info("Connected to server: %y", s.getPeerInfo());
+        startup_complete = True;
         commandLoop();
     }
 
@@ -532,7 +534,7 @@ class TsProxy inherits TypeScriptProxy {
             return False;
         }
         @debug {
-            if (getenv("TS_PROXY_TEST_FORCE_SEND_ERROR") && !test_send_error_used) {
+            if (startup_complete && getenv("TS_PROXY_TEST_FORCE_SEND_ERROR") && !test_send_error_used) {
                 test_send_error_used = True;
                 throw "SOCKET-CLOSED", "Forced send error for testing";
             }

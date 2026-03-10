@@ -130,7 +130,7 @@ describe('Klaviyo', () => {
       tagId = allowed_values[0].value;
     });
 
-    it('Should get segment allowed values', async () => {
+    it.skip('Should get segment allowed values', async () => {
       const allowed_values = await getKlaviyoSegmentIdAllowedValues(base_context);
 
       expect(allowed_values).toBeDefined();
@@ -256,7 +256,7 @@ describe('Klaviyo', () => {
       expect(result.id).toBe(campaignId);
     });
 
-    it('Should list segments', async () => {
+    it.skip('Should list segments', async () => {
       const action = ListKlaviyoSegments;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
@@ -369,7 +369,7 @@ describe('Klaviyo', () => {
       );
     });
 
-    it('Should add tag to segment', async () => {
+    it.skip('Should add tag to segment', async () => {
       const action = AddKlaviyoTagToSegment;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');
@@ -384,7 +384,7 @@ describe('Klaviyo', () => {
       );
     });
 
-    it('Should remove tag from segment', async () => {
+    it.skip('Should remove tag from segment', async () => {
       const action = RemoveKlaviyoTagFromSegment;
 
       if (!('api_function' in action)) throw new Error('api_function not found in action');

@@ -185,6 +185,11 @@ env:
   SEATABLE_API_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).SEATABLE_API_TOKEN }}
   TRELLO_KEY: ${{ fromJson(secrets.TEST_VARIABLES).TRELLO_KEY }}
   TRELLO_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).TRELLO_TOKEN }}
+  GOOGLE_ADS_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_ADS_REFRESH_TOKEN }}
+  GOOGLE_ADS_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_ADS_CLIENT_ID }}
+  GOOGLE_ADS_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_ADS_CLIENT_SECRET }}
+  GOOGLE_ADS_DEVELOPER_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_ADS_DEVELOPER_TOKEN }}
+  GOOGLE_ADS_CUSTOMER_ID: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_ADS_CUSTOMER_ID }}
 
 jobs:
   PullRequestTests:
@@ -246,7 +251,7 @@ jobs:
           cd ts
           set +e
           node --experimental-vm-modules \
-            ./node_modules/jest/bin/jest.js --ci --maxWorkers=50% \
+            ./node_modules/jest/bin/jest.js --ci --maxWorkers=50% --workerIdleMemoryLimit=2048MB \
             --config src/jest.config.ts --json --outputFile=test-results.json
           TEST_EXIT_CODE=$?
           set -e
@@ -328,7 +333,7 @@ jobs:
           sys.exit(0)
           PYEOF
         env:
-          NODE_OPTIONS: "--max_old_space_size=8192"
+          NODE_OPTIONS: "--max_old_space_size=16384"
 
       # Install system dependencies needed for building Qore and modules
       - name: Install dependencies
@@ -341,7 +346,6 @@ jobs:
             bison \
             libmpfr-dev \
             libpcre3-dev \
-            libssl-dev \
             zlib1g-dev \
             libbz2-dev \
             libbrotli-dev \
@@ -349,6 +353,25 @@ jobs:
             doxygen \
             libyaml-dev \
             uuid-dev
+
+      # Install OpenSSL 3.5+ with native QUIC support (SSL_set_quic_tls_cbs)
+      # System OpenSSL 3.0.x lacks QUIC APIs needed by ngtcp2 for Qore's HTTP/3 support
+      # Qore's CI Docker images do the same via /etc/profile.d/quic.sh + OPENSSL_ROOT_DIR
+      - name: Install OpenSSL 3.5
+        run: |
+          # Remove system OpenSSL dev headers to avoid conflicts with OpenSSL 3.5
+          sudo apt-get remove -y libssl-dev 2>/dev/null || true
+          OPENSSL_VERSION="3.5.0"
+          OPENSSL_PREFIX="/opt/openssl-3.5"
+          curl -fsSL "https://github.com/openssl/openssl/releases/download/openssl-${OPENSSL_VERSION}/openssl-${OPENSSL_VERSION}.tar.gz" -o /tmp/openssl.tar.gz
+          cd /tmp && tar xzf openssl.tar.gz
+          cd "/tmp/openssl-${OPENSSL_VERSION}"
+          ./Configure --prefix=${OPENSSL_PREFIX} --libdir=lib no-tests
+          make -j$(nproc)
+          sudo make install_sw
+          echo "${OPENSSL_PREFIX}/lib" | sudo tee /etc/ld.so.conf.d/openssl35.conf
+          sudo ldconfig
+          echo "OPENSSL_ROOT_DIR=${OPENSSL_PREFIX}" >> $GITHUB_ENV
 
       # Install pre-built Node.js 24 with development headers and libnode.so
       - name: Install Node.js 24 development files
@@ -374,7 +397,7 @@ jobs:
           mkdir build
           cd build
           V8_INCLUDE_DIR=/opt/nodejs/include/node NODE_LIB_DIR=/opt/nodejs/lib cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
-          make && sudo make install
+          make -j$(nproc) && sudo make install
 
       #  Update library paths to ensure Qore can find its shared libraries
       - name: Update Library Path

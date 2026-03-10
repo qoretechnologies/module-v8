@@ -43,6 +43,7 @@ import GoogleAnalytics from './apps/GoogleAnalytics';
 import GoogleChat from './apps/GoogleChat';
 import GoogleContacts from './apps/GoogleContacts';
 import GoogleDocs from './apps/GoogleDocs';
+import GoogleAds from './apps/GoogleAds';
 import GoogleDrive from './apps/GoogleDrive';
 import GoogleForms from './apps/GoogleForms';
 import GoogleMeet from './apps/GoogleMeet';
@@ -139,6 +140,7 @@ const en = {
     GoogleDocs,
     GoogleMeet,
     GoogleForms,
+    GoogleAds,
     GoogleDrive,
     GoogleSheets,
     GoogleContacts,

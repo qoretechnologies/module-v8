@@ -46242,6 +46242,3160 @@ type RootTranslation = {
 				}
 			}
 		}
+		GoogleAds: {
+			/**
+			 * G​o​o​g​l​e​ ​A​d​s
+			 */
+			displayName: string
+			groups: {
+				/**
+				 * A​d​v​e​r​t​i​s​i​n​g​ ​&​ ​M​a​r​k​e​t​i​n​g
+				 */
+				'0': string
+				/**
+				 * G​o​o​g​l​e​ ​W​o​r​k​s​p​a​c​e​ ​S​u​i​t​e
+				 */
+				'1': string
+			}
+			/**
+			 * C​o​n​n​e​c​t​ ​w​i​t​h​ ​G​o​o​g​l​e​ ​A​d​s​ ​t​o​ ​m​a​n​a​g​e​ ​c​a​m​p​a​i​g​n​s​,​ ​c​o​n​v​e​r​s​i​o​n​s​,​ ​a​n​d​ ​a​u​d​i​e​n​c​e​s
+			 */
+			shortDesc: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​G​o​o​g​l​e​ ​A​d​s​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​a​d​v​e​r​t​i​s​i​n​g​ ​c​a​m​p​a​i​g​n​s​,​ ​t​r​a​c​k​ ​c​o​n​v​e​r​s​i​o​n​s​,​ ​s​y​n​c​ ​c​u​s​t​o​m​e​r​ ​l​i​s​t​s​,​ ​a​n​d​ ​a​u​t​o​m​a​t​e​ ​r​e​p​o​r​t​i​n​g​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​c​o​v​e​r​s​ ​c​a​m​p​a​i​g​n​ ​m​a​n​a​g​e​m​e​n​t​,​ ​a​d​ ​g​r​o​u​p​ ​a​n​d​ ​a​d​ ​C​R​U​D​,​ ​k​e​y​w​o​r​d​ ​m​a​n​a​g​e​m​e​n​t​,​ ​b​u​d​g​e​t​ ​a​n​d​ ​b​i​d​d​i​n​g​ ​s​t​r​a​t​e​g​i​e​s​,​ ​o​f​f​l​i​n​e​ ​c​o​n​v​e​r​s​i​o​n​ ​u​p​l​o​a​d​s​,​ ​c​u​s​t​o​m​e​r​ ​m​a​t​c​h​ ​a​u​d​i​e​n​c​e​s​,​ ​a​n​d​ ​l​e​a​d​ ​f​o​r​m​ ​t​r​i​g​g​e​r​s​.
+			 */
+			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​G​o​o​g​l​e​ ​A​d​s
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​G​o​o​g​l​e​ ​A​d​s​,​ ​y​o​u​ ​n​e​e​d​ ​a​ ​*​*​G​o​o​g​l​e​ ​O​A​u​t​h​2​ ​c​o​n​n​e​c​t​i​o​n​*​*​ ​a​n​d​ ​a​ ​f​o​l​l​o​w​i​n​g​ ​a​d​d​i​t​i​o​n​a​l​ ​o​p​t​i​o​n​s​:​
+			​
+			​#​#​ ​D​e​v​e​l​o​p​e​r​ ​T​o​k​e​n​
+			​A​ ​d​e​v​e​l​o​p​e​r​ ​t​o​k​e​n​ ​i​s​ ​r​e​q​u​i​r​e​d​ ​t​o​ ​a​c​c​e​s​s​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​A​P​I​.​ ​T​o​ ​o​b​t​a​i​n​ ​o​n​e​:​
+			​1​.​ ​S​i​g​n​ ​i​n​ ​t​o​ ​y​o​u​r​ ​*​*​G​o​o​g​l​e​ ​A​d​s​ ​M​a​n​a​g​e​r​ ​A​c​c​o​u​n​t​*​*​
+			​2​.​ ​N​a​v​i​g​a​t​e​ ​t​o​ ​*​*​T​o​o​l​s​ ​&​ ​S​e​t​t​i​n​g​s​*​*​ ​>​ ​*​*​A​P​I​ ​C​e​n​t​e​r​*​*​
+			​3​.​ ​A​p​p​l​y​ ​f​o​r​ ​a​ ​d​e​v​e​l​o​p​e​r​ ​t​o​k​e​n​ ​i​f​ ​y​o​u​ ​d​o​n​'​t​ ​h​a​v​e​ ​o​n​e​
+			​4​.​ ​C​o​p​y​ ​t​h​e​ ​2​2​-​c​h​a​r​a​c​t​e​r​ ​a​l​p​h​a​n​u​m​e​r​i​c​ ​t​o​k​e​n​
+			​
+			​#​#​ ​M​a​n​a​g​e​r​ ​A​c​c​o​u​n​t​ ​I​D​ ​(​O​p​t​i​o​n​a​l​)​
+			​I​f​ ​y​o​u​'​r​e​ ​u​s​i​n​g​ ​a​ ​M​a​n​a​g​e​r​ ​A​c​c​o​u​n​t​ ​(​M​C​C​)​ ​t​o​ ​a​c​c​e​s​s​ ​c​l​i​e​n​t​ ​a​c​c​o​u​n​t​s​,​ ​e​n​t​e​r​ ​t​h​e​ ​M​a​n​a​g​e​r​ ​A​c​c​o​u​n​t​ ​I​D​ ​(​1​0​ ​d​i​g​i​t​s​,​ ​w​i​t​h​o​u​t​ ​h​y​p​h​e​n​s​)​.​
+			​
+			​*​*​N​o​t​e​:​*​*​ ​T​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t​ ​i​s​ ​s​e​l​e​c​t​e​d​ ​p​e​r​ ​a​c​t​i​o​n​.​ ​A​f​t​e​r​ ​c​o​n​n​e​c​t​i​n​g​,​ ​y​o​u​ ​w​i​l​l​ ​b​e​ ​a​b​l​e​ ​t​o​ ​c​h​o​o​s​e​ ​f​r​o​m​ ​y​o​u​r​ ​a​c​c​e​s​s​i​b​l​e​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​s​ ​w​h​e​n​ ​c​o​n​f​i​g​u​r​i​n​g​ ​e​a​c​h​ ​a​c​t​i​o​n​.
+				 */
+				content: string
+			}
+			actions: {
+				get_customer_info: {
+					/**
+					 * G​e​t​ ​C​u​s​t​o​m​e​r​ ​I​n​f​o
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​d​e​t​a​i​l​s​ ​a​b​o​u​t​ ​t​h​e​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​,​ ​i​n​c​l​u​d​i​n​g​ ​a​c​c​e​s​s​i​b​l​e​ ​c​u​s​t​o​m​e​r​ ​I​D​s​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_campaigns: {
+					/**
+					 * L​i​s​t​ ​C​a​m​p​a​i​g​n​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​c​a​m​p​a​i​g​n​s​ ​w​i​t​h​ ​p​e​r​f​o​r​m​a​n​c​e​ ​m​e​t​r​i​c​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​c​a​m​p​a​i​g​n​s​ ​f​r​o​m​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​s​t​a​t​u​s​ ​f​i​l​t​e​r​i​n​g​ ​a​n​d​ ​p​e​r​f​o​r​m​a​n​c​e​ ​m​e​t​r​i​c​s​ ​f​o​r​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​d​a​t​e​ ​r​a​n​g​e​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						status_filter: {
+							/**
+							 * S​t​a​t​u​s​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​c​a​m​p​a​i​g​n​s​ ​b​y​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​c​a​m​p​a​i​g​n​s​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​t​a​t​u​s​.​ ​I​f​ ​n​o​t​ ​s​e​t​,​ ​a​l​l​ ​n​o​n​-​r​e​m​o​v​e​d​ ​c​a​m​p​a​i​g​n​s​ ​a​r​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+						date_range: {
+							/**
+							 * D​a​t​e​ ​R​a​n​g​e
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​r​a​n​g​e​ ​f​o​r​ ​p​e​r​f​o​r​m​a​n​c​e​ ​m​e​t​r​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​e​d​e​f​i​n​e​d​ ​d​a​t​e​ ​r​a​n​g​e​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​p​e​r​f​o​r​m​a​n​c​e​ ​m​e​t​r​i​c​s​ ​a​l​o​n​g​s​i​d​e​ ​c​a​m​p​a​i​g​n​ ​d​a​t​a​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​a​m​p​a​i​g​n​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​a​m​p​a​i​g​n​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_campaign: {
+					/**
+					 * G​e​t​ ​C​a​m​p​a​i​g​n
+					 */
+					displayName: string
+					/**
+					 * G​e​t​ ​d​e​t​a​i​l​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​d​e​t​a​i​l​e​d​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​a​m​p​a​i​g​n​ ​b​y​ ​i​t​s​ ​I​D​,​ ​i​n​c​l​u​d​i​n​g​ ​s​t​a​t​u​s​,​ ​b​u​d​g​e​t​,​ ​b​i​d​d​i​n​g​ ​s​t​r​a​t​e​g​y​,​ ​a​n​d​ ​p​e​r​f​o​r​m​a​n​c​e​ ​m​e​t​r​i​c​s​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						campaign_id: {
+							/**
+							 * C​a​m​p​a​i​g​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_campaign: {
+					/**
+					 * C​r​e​a​t​e​ ​C​a​m​p​a​i​g​n
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​a​d​v​e​r​t​i​s​i​n​g​ ​c​a​m​p​a​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​a​m​p​a​i​g​n​ ​i​n​ ​G​o​o​g​l​e​ ​A​d​s​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​h​a​n​n​e​l​ ​t​y​p​e​,​ ​b​u​d​g​e​t​,​ ​b​i​d​d​i​n​g​ ​s​t​r​a​t​e​g​y​,​ ​a​n​d​ ​t​a​r​g​e​t​i​n​g​ ​s​e​t​t​i​n​g​s​.​ ​A​ ​c​a​m​p​a​i​g​n​ ​b​u​d​g​e​t​ ​i​s​ ​c​r​e​a​t​e​d​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * C​a​m​p​a​i​g​n​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​c​a​m​p​a​i​g​n
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​a​m​p​a​i​g​n​.
+							 */
+							longDesc: string
+						}
+						channel_type: {
+							/**
+							 * C​h​a​n​n​e​l​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * A​d​v​e​r​t​i​s​i​n​g​ ​c​h​a​n​n​e​l​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​a​d​v​e​r​t​i​s​i​n​g​ ​c​h​a​n​n​e​l​ ​f​o​r​ ​t​h​i​s​ ​c​a​m​p​a​i​g​n​ ​(​e​.​g​.​,​ ​S​e​a​r​c​h​,​ ​D​i​s​p​l​a​y​,​ ​S​h​o​p​p​i​n​g​,​ ​V​i​d​e​o​)​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * I​n​i​t​i​a​l​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​s​t​a​r​t​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​a​s​ ​e​n​a​b​l​e​d​ ​o​r​ ​p​a​u​s​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​P​A​U​S​E​D​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​w​i​t​h​o​u​t​ ​i​m​m​e​d​i​a​t​e​l​y​ ​s​e​r​v​i​n​g​ ​a​d​s​.
+							 */
+							longDesc: string
+						}
+						daily_budget: {
+							/**
+							 * D​a​i​l​y​ ​B​u​d​g​e​t
+							 */
+							displayName: string
+							/**
+							 * D​a​i​l​y​ ​b​u​d​g​e​t​ ​a​m​o​u​n​t​ ​i​n​ ​a​c​c​o​u​n​t​ ​c​u​r​r​e​n​c​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​i​l​y​ ​b​u​d​g​e​t​ ​a​m​o​u​n​t​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​c​u​r​r​e​n​c​y​ ​(​e​.​g​.​,​ ​5​0​.​0​0​ ​f​o​r​ ​$​5​0​/​d​a​y​)​.
+							 */
+							longDesc: string
+						}
+						bidding_strategy: {
+							/**
+							 * B​i​d​d​i​n​g​ ​S​t​r​a​t​e​g​y
+							 */
+							displayName: string
+							/**
+							 * C​a​m​p​a​i​g​n​ ​b​i​d​d​i​n​g​ ​s​t​r​a​t​e​g​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​b​i​d​d​i​n​g​ ​s​t​r​a​t​e​g​y​ ​t​o​ ​u​s​e​ ​f​o​r​ ​t​h​i​s​ ​c​a​m​p​a​i​g​n​.
+							 */
+							longDesc: string
+						}
+						target_google_search: {
+							/**
+							 * T​a​r​g​e​t​ ​G​o​o​g​l​e​ ​S​e​a​r​c​h
+							 */
+							displayName: string
+							/**
+							 * S​h​o​w​ ​a​d​s​ ​o​n​ ​G​o​o​g​l​e​ ​S​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​s​h​o​w​ ​a​d​s​ ​o​n​ ​G​o​o​g​l​e​ ​S​e​a​r​c​h​ ​r​e​s​u​l​t​s​ ​p​a​g​e​s​.
+							 */
+							longDesc: string
+						}
+						target_search_network: {
+							/**
+							 * T​a​r​g​e​t​ ​S​e​a​r​c​h​ ​N​e​t​w​o​r​k
+							 */
+							displayName: string
+							/**
+							 * S​h​o​w​ ​a​d​s​ ​o​n​ ​s​e​a​r​c​h​ ​p​a​r​t​n​e​r​ ​s​i​t​e​s
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​s​h​o​w​ ​a​d​s​ ​o​n​ ​G​o​o​g​l​e​ ​s​e​a​r​c​h​ ​p​a​r​t​n​e​r​ ​w​e​b​s​i​t​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_campaign: {
+					/**
+					 * U​p​d​a​t​e​ ​C​a​m​p​a​i​g​n
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​a​m​p​a​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​c​a​m​p​a​i​g​n​ ​p​r​o​p​e​r​t​i​e​s​ ​s​u​c​h​ ​a​s​ ​n​a​m​e​,​ ​s​t​a​t​u​s​ ​(​e​n​a​b​l​e​/​p​a​u​s​e​)​,​ ​a​n​d​ ​b​i​d​d​i​n​g​ ​s​t​r​a​t​e​g​y​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						campaign_id: {
+							/**
+							 * C​a​m​p​a​i​g​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * C​a​m​p​a​i​g​n​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​a​m​p​a​i​g​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​a​m​p​a​i​g​n​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​k​e​e​p​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​s​t​a​t​u​s​ ​f​o​r​ ​t​h​e​ ​c​a​m​p​a​i​g​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​s​t​a​t​u​s​ ​t​o​ ​E​N​A​B​L​E​D​,​ ​P​A​U​S​E​D​,​ ​o​r​ ​R​E​M​O​V​E​D​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				remove_campaign: {
+					/**
+					 * R​e​m​o​v​e​ ​C​a​m​p​a​i​g​n
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​c​a​m​p​a​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​(​s​o​f​t​ ​d​e​l​e​t​e​s​)​ ​a​ ​c​a​m​p​a​i​g​n​ ​f​r​o​m​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​a​c​c​o​u​n​t​.​ ​T​h​e​ ​c​a​m​p​a​i​g​n​ ​w​i​l​l​ ​b​e​ ​m​a​r​k​e​d​ ​a​s​ ​R​E​M​O​V​E​D​ ​a​n​d​ ​w​i​l​l​ ​n​o​ ​l​o​n​g​e​r​ ​s​e​r​v​e​ ​a​d​s​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						campaign_id: {
+							/**
+							 * C​a​m​p​a​i​g​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​r​e​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​r​e​m​o​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_ad_groups: {
+					/**
+					 * L​i​s​t​ ​A​d​ ​G​r​o​u​p​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​d​ ​g​r​o​u​p​s​ ​w​i​t​h​ ​p​e​r​f​o​r​m​a​n​c​e​ ​m​e​t​r​i​c​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​d​ ​g​r​o​u​p​s​ ​f​r​o​m​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​a​c​c​o​u​n​t​,​ ​o​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​e​d​ ​b​y​ ​c​a​m​p​a​i​g​n​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						campaign_id: {
+							/**
+							 * C​a​m​p​a​i​g​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​a​m​p​a​i​g​n
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​a​d​ ​g​r​o​u​p​s​ ​b​e​l​o​n​g​i​n​g​ ​t​o​ ​t​h​i​s​ ​c​a​m​p​a​i​g​n​.
+							 */
+							longDesc: string
+						}
+						status_filter: {
+							/**
+							 * S​t​a​t​u​s​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​a​d​ ​g​r​o​u​p​s​ ​b​y​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​a​d​ ​g​r​o​u​p​s​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​t​a​t​u​s​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​a​d​ ​g​r​o​u​p​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​a​d​ ​g​r​o​u​p​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_ad_group: {
+					/**
+					 * C​r​e​a​t​e​ ​A​d​ ​G​r​o​u​p
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​a​d​ ​g​r​o​u​p​ ​w​i​t​h​i​n​ ​a​ ​c​a​m​p​a​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​a​d​ ​g​r​o​u​p​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​c​a​m​p​a​i​g​n​ ​w​i​t​h​ ​t​h​e​ ​g​i​v​e​n​ ​n​a​m​e​,​ ​t​y​p​e​,​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​C​P​C​ ​b​i​d​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						campaign_id: {
+							/**
+							 * C​a​m​p​a​i​g​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​a​d​ ​g​r​o​u​p​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​a​d​ ​g​r​o​u​p​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * A​d​ ​G​r​o​u​p​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​a​d​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​a​d​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+						type: {
+							/**
+							 * A​d​ ​G​r​o​u​p​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​a​d​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​y​p​e​ ​o​f​ ​a​d​ ​g​r​o​u​p​ ​t​o​ ​c​r​e​a​t​e​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * I​n​i​t​i​a​l​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​s​t​a​r​t​ ​t​h​e​ ​a​d​ ​g​r​o​u​p​ ​a​s​ ​e​n​a​b​l​e​d​ ​o​r​ ​p​a​u​s​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​P​A​U​S​E​D​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​a​d​ ​g​r​o​u​p​ ​w​i​t​h​o​u​t​ ​i​m​m​e​d​i​a​t​e​l​y​ ​s​e​r​v​i​n​g​ ​a​d​s​.
+							 */
+							longDesc: string
+						}
+						cpc_bid: {
+							/**
+							 * C​P​C​ ​B​i​d
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​c​o​s​t​-​p​e​r​-​c​l​i​c​k​ ​b​i​d​ ​a​m​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​C​P​C​ ​b​i​d​ ​a​m​o​u​n​t​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​c​u​r​r​e​n​c​y​ ​(​e​.​g​.​,​ ​1​.​5​0​ ​f​o​r​ ​$​1​.​5​0​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_ad_group: {
+					/**
+					 * U​p​d​a​t​e​ ​A​d​ ​G​r​o​u​p
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​a​d​ ​g​r​o​u​p
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​d​ ​g​r​o​u​p​ ​p​r​o​p​e​r​t​i​e​s​ ​s​u​c​h​ ​a​s​ ​n​a​m​e​,​ ​s​t​a​t​u​s​,​ ​a​n​d​ ​C​P​C​ ​b​i​d​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						ad_group_id: {
+							/**
+							 * A​d​ ​G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​d​ ​g​r​o​u​p​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​d​ ​g​r​o​u​p​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * A​d​ ​G​r​o​u​p​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​a​d​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​a​d​ ​g​r​o​u​p​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​k​e​e​p​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​s​t​a​t​u​s​ ​f​o​r​ ​t​h​e​ ​a​d​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​a​d​ ​g​r​o​u​p​ ​s​t​a​t​u​s​ ​t​o​ ​E​N​A​B​L​E​D​,​ ​P​A​U​S​E​D​,​ ​o​r​ ​R​E​M​O​V​E​D​.
+							 */
+							longDesc: string
+						}
+						cpc_bid: {
+							/**
+							 * C​P​C​ ​B​i​d
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​m​a​x​i​m​u​m​ ​C​P​C​ ​b​i​d​ ​a​m​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​m​a​x​i​m​u​m​ ​C​P​C​ ​b​i​d​ ​a​m​o​u​n​t​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​c​u​r​r​e​n​c​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				remove_ad_group: {
+					/**
+					 * R​e​m​o​v​e​ ​A​d​ ​G​r​o​u​p
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​a​n​ ​a​d​ ​g​r​o​u​p
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​(​s​o​f​t​ ​d​e​l​e​t​e​s​)​ ​a​n​ ​a​d​ ​g​r​o​u​p​.​ ​I​t​ ​w​i​l​l​ ​b​e​ ​m​a​r​k​e​d​ ​a​s​ ​R​E​M​O​V​E​D​ ​a​n​d​ ​i​t​s​ ​a​d​s​ ​w​i​l​l​ ​s​t​o​p​ ​s​e​r​v​i​n​g​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						ad_group_id: {
+							/**
+							 * A​d​ ​G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​d​ ​g​r​o​u​p​ ​t​o​ ​r​e​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​d​ ​g​r​o​u​p​ ​t​o​ ​r​e​m​o​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_ads: {
+					/**
+					 * L​i​s​t​ ​A​d​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​d​s​ ​w​i​t​h​ ​p​e​r​f​o​r​m​a​n​c​e​ ​m​e​t​r​i​c​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​d​s​ ​f​r​o​m​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​a​c​c​o​u​n​t​,​ ​o​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​e​d​ ​b​y​ ​c​a​m​p​a​i​g​n​,​ ​a​d​ ​g​r​o​u​p​,​ ​o​r​ ​s​t​a​t​u​s​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						campaign_id: {
+							/**
+							 * C​a​m​p​a​i​g​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​a​m​p​a​i​g​n
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​a​d​s​ ​b​e​l​o​n​g​i​n​g​ ​t​o​ ​t​h​i​s​ ​c​a​m​p​a​i​g​n​.
+							 */
+							longDesc: string
+						}
+						ad_group_id: {
+							/**
+							 * A​d​ ​G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​d​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​a​d​s​ ​b​e​l​o​n​g​i​n​g​ ​t​o​ ​t​h​i​s​ ​a​d​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+						status_filter: {
+							/**
+							 * S​t​a​t​u​s​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​a​d​s​ ​b​y​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​a​d​s​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​t​a​t​u​s​.​ ​I​f​ ​n​o​t​ ​s​e​t​,​ ​a​l​l​ ​n​o​n​-​r​e​m​o​v​e​d​ ​a​d​s​ ​a​r​e​ ​r​e​t​u​r​n​e​d​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​a​d​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​a​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_responsive_search_ad: {
+					/**
+					 * C​r​e​a​t​e​ ​R​e​s​p​o​n​s​i​v​e​ ​S​e​a​r​c​h​ ​A​d
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​r​e​s​p​o​n​s​i​v​e​ ​s​e​a​r​c​h​ ​a​d
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​r​e​s​p​o​n​s​i​v​e​ ​s​e​a​r​c​h​ ​a​d​ ​(​R​S​A​)​ ​i​n​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​a​d​ ​g​r​o​u​p​ ​w​i​t​h​ ​m​u​l​t​i​p​l​e​ ​h​e​a​d​l​i​n​e​s​,​ ​d​e​s​c​r​i​p​t​i​o​n​s​,​ ​a​n​d​ ​f​i​n​a​l​ ​U​R​L​s​.​ ​G​o​o​g​l​e​ ​A​d​s​ ​w​i​l​l​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​t​e​s​t​ ​c​o​m​b​i​n​a​t​i​o​n​s​ ​t​o​ ​f​i​n​d​ ​t​h​e​ ​b​e​s​t​-​p​e​r​f​o​r​m​i​n​g​ ​a​d​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						ad_group_id: {
+							/**
+							 * A​d​ ​G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​d​ ​g​r​o​u​p​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​a​d​ ​i​n
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​d​ ​g​r​o​u​p​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​w​ ​a​d​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						headlines: {
+							/**
+							 * H​e​a​d​l​i​n​e​s
+							 */
+							displayName: string
+							/**
+							 * A​d​ ​h​e​a​d​l​i​n​e​s​ ​(​3​-​1​5​ ​r​e​q​u​i​r​e​d​)
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​h​e​a​d​l​i​n​e​s​ ​f​o​r​ ​t​h​e​ ​r​e​s​p​o​n​s​i​v​e​ ​s​e​a​r​c​h​ ​a​d​.​ ​P​r​o​v​i​d​e​ ​a​t​ ​l​e​a​s​t​ ​3​ ​a​n​d​ ​u​p​ ​t​o​ ​1​5​ ​h​e​a​d​l​i​n​e​s​ ​(​m​a​x​ ​3​0​ ​c​h​a​r​a​c​t​e​r​s​ ​e​a​c​h​)​.
+							 */
+							longDesc: string
+						}
+						descriptions: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * A​d​ ​d​e​s​c​r​i​p​t​i​o​n​s​ ​(​2​-​4​ ​r​e​q​u​i​r​e​d​)
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​d​e​s​c​r​i​p​t​i​o​n​s​ ​f​o​r​ ​t​h​e​ ​r​e​s​p​o​n​s​i​v​e​ ​s​e​a​r​c​h​ ​a​d​.​ ​P​r​o​v​i​d​e​ ​a​t​ ​l​e​a​s​t​ ​2​ ​a​n​d​ ​u​p​ ​t​o​ ​4​ ​d​e​s​c​r​i​p​t​i​o​n​s​ ​(​m​a​x​ ​9​0​ ​c​h​a​r​a​c​t​e​r​s​ ​e​a​c​h​)​.
+							 */
+							longDesc: string
+						}
+						final_urls: {
+							/**
+							 * F​i​n​a​l​ ​U​R​L​s
+							 */
+							displayName: string
+							/**
+							 * L​a​n​d​i​n​g​ ​p​a​g​e​ ​U​R​L​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​U​R​L​s​ ​t​h​a​t​ ​u​s​e​r​s​ ​w​i​l​l​ ​b​e​ ​d​i​r​e​c​t​e​d​ ​t​o​ ​a​f​t​e​r​ ​c​l​i​c​k​i​n​g​ ​t​h​e​ ​a​d​.
+							 */
+							longDesc: string
+						}
+						path1: {
+							/**
+							 * D​i​s​p​l​a​y​ ​P​a​t​h​ ​1
+							 */
+							displayName: string
+							/**
+							 * F​i​r​s​t​ ​p​a​r​t​ ​o​f​ ​t​h​e​ ​d​i​s​p​l​a​y​ ​U​R​L​ ​p​a​t​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​r​s​t​ ​p​a​r​t​ ​o​f​ ​t​h​e​ ​d​i​s​p​l​a​y​ ​U​R​L​ ​p​a​t​h​ ​s​h​o​w​n​ ​i​n​ ​t​h​e​ ​a​d​ ​(​m​a​x​ ​1​5​ ​c​h​a​r​a​c​t​e​r​s​)​.
+							 */
+							longDesc: string
+						}
+						path2: {
+							/**
+							 * D​i​s​p​l​a​y​ ​P​a​t​h​ ​2
+							 */
+							displayName: string
+							/**
+							 * S​e​c​o​n​d​ ​p​a​r​t​ ​o​f​ ​t​h​e​ ​d​i​s​p​l​a​y​ ​U​R​L​ ​p​a​t​h
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​s​e​c​o​n​d​ ​p​a​r​t​ ​o​f​ ​t​h​e​ ​d​i​s​p​l​a​y​ ​U​R​L​ ​p​a​t​h​ ​s​h​o​w​n​ ​i​n​ ​t​h​e​ ​a​d​ ​(​m​a​x​ ​1​5​ ​c​h​a​r​a​c​t​e​r​s​)​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * I​n​i​t​i​a​l​ ​S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​s​t​a​r​t​ ​t​h​e​ ​a​d​ ​a​s​ ​e​n​a​b​l​e​d​ ​o​r​ ​p​a​u​s​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​o​ ​P​A​U​S​E​D​ ​t​o​ ​c​r​e​a​t​e​ ​t​h​e​ ​a​d​ ​w​i​t​h​o​u​t​ ​i​m​m​e​d​i​a​t​e​l​y​ ​s​e​r​v​i​n​g​ ​i​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_ad_status: {
+					/**
+					 * U​p​d​a​t​e​ ​A​d​ ​S​t​a​t​u​s
+					 */
+					displayName: string
+					/**
+					 * E​n​a​b​l​e​,​ ​p​a​u​s​e​,​ ​o​r​ ​r​e​m​o​v​e​ ​a​n​ ​a​d
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​s​t​a​t​u​s​ ​o​f​ ​a​n​ ​a​d​ ​w​i​t​h​i​n​ ​a​n​ ​a​d​ ​g​r​o​u​p​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						ad_group_id: {
+							/**
+							 * A​d​ ​G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​d​ ​g​r​o​u​p​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​a​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​d​ ​g​r​o​u​p​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​a​d​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						ad_id: {
+							/**
+							 * A​d
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​d​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​d​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​s​t​a​t​u​s​ ​f​o​r​ ​t​h​e​ ​a​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​a​d​ ​s​t​a​t​u​s​ ​t​o​ ​E​N​A​B​L​E​D​,​ ​P​A​U​S​E​D​,​ ​o​r​ ​R​E​M​O​V​E​D​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				remove_ad: {
+					/**
+					 * R​e​m​o​v​e​ ​A​d
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​a​n​ ​a​d
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​(​s​o​f​t​ ​d​e​l​e​t​e​s​)​ ​a​n​ ​a​d​ ​f​r​o​m​ ​a​n​ ​a​d​ ​g​r​o​u​p​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						ad_group_id: {
+							/**
+							 * A​d​ ​G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​d​ ​g​r​o​u​p​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​a​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​d​ ​g​r​o​u​p​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​a​d​ ​t​o​ ​r​e​m​o​v​e​.
+							 */
+							longDesc: string
+						}
+						ad_id: {
+							/**
+							 * A​d
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​d​ ​t​o​ ​r​e​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​d​ ​t​o​ ​r​e​m​o​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_keywords: {
+					/**
+					 * L​i​s​t​ ​K​e​y​w​o​r​d​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​k​e​y​w​o​r​d​s​ ​w​i​t​h​ ​p​e​r​f​o​r​m​a​n​c​e​ ​m​e​t​r​i​c​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​k​e​y​w​o​r​d​s​ ​f​r​o​m​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​a​c​c​o​u​n​t​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​i​l​t​e​r​i​n​g​ ​b​y​ ​c​a​m​p​a​i​g​n​ ​o​r​ ​a​d​ ​g​r​o​u​p​,​ ​i​n​c​l​u​d​i​n​g​ ​p​e​r​f​o​r​m​a​n​c​e​ ​m​e​t​r​i​c​s​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						campaign_id: {
+							/**
+							 * C​a​m​p​a​i​g​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​a​m​p​a​i​g​n
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​k​e​y​w​o​r​d​s​ ​b​e​l​o​n​g​i​n​g​ ​t​o​ ​t​h​i​s​ ​c​a​m​p​a​i​g​n​.
+							 */
+							longDesc: string
+						}
+						ad_group_id: {
+							/**
+							 * A​d​ ​G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​d​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​k​e​y​w​o​r​d​s​ ​b​e​l​o​n​g​i​n​g​ ​t​o​ ​t​h​i​s​ ​a​d​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+						date_range: {
+							/**
+							 * D​a​t​e​ ​R​a​n​g​e
+							 */
+							displayName: string
+							/**
+							 * D​a​t​e​ ​r​a​n​g​e​ ​f​o​r​ ​p​e​r​f​o​r​m​a​n​c​e​ ​m​e​t​r​i​c​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​r​e​d​e​f​i​n​e​d​ ​d​a​t​e​ ​r​a​n​g​e​ ​f​o​r​ ​r​e​t​r​i​e​v​i​n​g​ ​p​e​r​f​o​r​m​a​n​c​e​ ​m​e​t​r​i​c​s​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​k​e​y​w​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​k​e​y​w​o​r​d​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_keywords: {
+					/**
+					 * A​d​d​ ​K​e​y​w​o​r​d​s
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​k​e​y​w​o​r​d​s​ ​t​o​ ​a​n​ ​a​d​ ​g​r​o​u​p
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​k​e​y​w​o​r​d​s​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​a​d​ ​g​r​o​u​p​ ​w​i​t​h​ ​t​h​e​ ​g​i​v​e​n​ ​m​a​t​c​h​ ​t​y​p​e​ ​a​n​d​ ​o​p​t​i​o​n​a​l​ ​C​P​C​ ​b​i​d​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						ad_group_id: {
+							/**
+							 * A​d​ ​G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​d​ ​g​r​o​u​p​ ​t​o​ ​a​d​d​ ​k​e​y​w​o​r​d​s​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​d​ ​g​r​o​u​p​ ​w​h​e​r​e​ ​t​h​e​ ​k​e​y​w​o​r​d​s​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​.
+							 */
+							longDesc: string
+						}
+						keywords: {
+							/**
+							 * K​e​y​w​o​r​d​s
+							 */
+							displayName: string
+							/**
+							 * K​e​y​w​o​r​d​s​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​k​e​y​w​o​r​d​ ​e​n​t​r​i​e​s​ ​t​o​ ​a​d​d​,​ ​e​a​c​h​ ​w​i​t​h​ ​t​e​x​t​ ​a​n​d​ ​m​a​t​c​h​ ​t​y​p​e​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										text: {
+											/**
+											 * K​e​y​w​o​r​d​ ​T​e​x​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​k​e​y​w​o​r​d​ ​t​e​x​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​k​e​y​w​o​r​d​ ​p​h​r​a​s​e​ ​t​o​ ​t​a​r​g​e​t​.
+											 */
+											longDesc: string
+										}
+										match_type: {
+											/**
+											 * M​a​t​c​h​ ​T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * K​e​y​w​o​r​d​ ​m​a​t​c​h​ ​t​y​p​e
+											 */
+											shortDesc: string
+											/**
+											 * H​o​w​ ​c​l​o​s​e​l​y​ ​t​h​e​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​m​u​s​t​ ​m​a​t​c​h​:​ ​B​R​O​A​D​,​ ​P​H​R​A​S​E​,​ ​o​r​ ​E​X​A​C​T​.
+											 */
+											longDesc: string
+										}
+										cpc_bid: {
+											/**
+											 * C​P​C​ ​B​i​d
+											 */
+											displayName: string
+											/**
+											 * O​p​t​i​o​n​a​l​ ​C​P​C​ ​b​i​d​ ​o​v​e​r​r​i​d​e
+											 */
+											shortDesc: string
+											/**
+											 * A​n​ ​o​p​t​i​o​n​a​l​ ​C​P​C​ ​b​i​d​ ​a​m​o​u​n​t​ ​f​o​r​ ​t​h​i​s​ ​k​e​y​w​o​r​d​.​ ​O​v​e​r​r​i​d​e​s​ ​t​h​e​ ​a​d​ ​g​r​o​u​p​ ​b​i​d​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				add_negative_keywords: {
+					/**
+					 * A​d​d​ ​N​e​g​a​t​i​v​e​ ​K​e​y​w​o​r​d​s
+					 */
+					displayName: string
+					/**
+					 * A​d​d​ ​n​e​g​a​t​i​v​e​ ​k​e​y​w​o​r​d​s​ ​t​o​ ​a​ ​c​a​m​p​a​i​g​n
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​c​a​m​p​a​i​g​n​-​l​e​v​e​l​ ​n​e​g​a​t​i​v​e​ ​k​e​y​w​o​r​d​s​ ​t​o​ ​p​r​e​v​e​n​t​ ​a​d​s​ ​f​r​o​m​ ​s​h​o​w​i​n​g​ ​f​o​r​ ​c​e​r​t​a​i​n​ ​s​e​a​r​c​h​ ​t​e​r​m​s​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						campaign_id: {
+							/**
+							 * C​a​m​p​a​i​g​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​a​d​d​ ​n​e​g​a​t​i​v​e​ ​k​e​y​w​o​r​d​s​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​w​h​e​r​e​ ​t​h​e​ ​n​e​g​a​t​i​v​e​ ​k​e​y​w​o​r​d​s​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​.
+							 */
+							longDesc: string
+						}
+						keywords: {
+							/**
+							 * N​e​g​a​t​i​v​e​ ​K​e​y​w​o​r​d​s
+							 */
+							displayName: string
+							/**
+							 * N​e​g​a​t​i​v​e​ ​k​e​y​w​o​r​d​s​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​n​e​g​a​t​i​v​e​ ​k​e​y​w​o​r​d​ ​e​n​t​r​i​e​s​ ​t​o​ ​a​d​d​,​ ​e​a​c​h​ ​w​i​t​h​ ​t​e​x​t​ ​a​n​d​ ​m​a​t​c​h​ ​t​y​p​e​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										text: {
+											/**
+											 * K​e​y​w​o​r​d​ ​T​e​x​t
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​n​e​g​a​t​i​v​e​ ​k​e​y​w​o​r​d​ ​t​e​x​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​k​e​y​w​o​r​d​ ​p​h​r​a​s​e​ ​t​o​ ​e​x​c​l​u​d​e​.
+											 */
+											longDesc: string
+										}
+										match_type: {
+											/**
+											 * M​a​t​c​h​ ​T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * K​e​y​w​o​r​d​ ​m​a​t​c​h​ ​t​y​p​e
+											 */
+											shortDesc: string
+											/**
+											 * H​o​w​ ​c​l​o​s​e​l​y​ ​t​h​e​ ​s​e​a​r​c​h​ ​q​u​e​r​y​ ​m​u​s​t​ ​m​a​t​c​h​ ​f​o​r​ ​e​x​c​l​u​s​i​o​n​:​ ​B​R​O​A​D​,​ ​P​H​R​A​S​E​,​ ​o​r​ ​E​X​A​C​T​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				update_keyword: {
+					/**
+					 * U​p​d​a​t​e​ ​K​e​y​w​o​r​d
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​ ​k​e​y​w​o​r​d​ ​s​t​a​t​u​s​ ​o​r​ ​b​i​d
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​k​e​y​w​o​r​d​ ​i​n​ ​a​n​ ​a​d​ ​g​r​o​u​p​,​ ​a​l​l​o​w​i​n​g​ ​y​o​u​ ​t​o​ ​c​h​a​n​g​e​ ​i​t​s​ ​s​t​a​t​u​s​ ​o​r​ ​C​P​C​ ​b​i​d​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						ad_group_id: {
+							/**
+							 * A​d​ ​G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​d​ ​g​r​o​u​p​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​k​e​y​w​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​d​ ​g​r​o​u​p​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​k​e​y​w​o​r​d​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						criterion_id: {
+							/**
+							 * K​e​y​w​o​r​d​ ​C​r​i​t​e​r​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​r​i​t​e​r​i​o​n​ ​I​D​ ​o​f​ ​t​h​e​ ​k​e​y​w​o​r​d​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​r​i​t​e​r​i​o​n​ ​I​D​ ​o​f​ ​t​h​e​ ​k​e​y​w​o​r​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​a​d​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+						status: {
+							/**
+							 * S​t​a​t​u​s
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​s​t​a​t​u​s​ ​f​o​r​ ​t​h​e​ ​k​e​y​w​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​t​ ​t​h​e​ ​k​e​y​w​o​r​d​ ​s​t​a​t​u​s​ ​t​o​ ​E​N​A​B​L​E​D​,​ ​P​A​U​S​E​D​,​ ​o​r​ ​R​E​M​O​V​E​D​.
+							 */
+							longDesc: string
+						}
+						cpc_bid: {
+							/**
+							 * C​P​C​ ​B​i​d
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​m​a​x​i​m​u​m​ ​C​P​C​ ​b​i​d​ ​a​m​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​m​a​x​i​m​u​m​ ​C​P​C​ ​b​i​d​ ​a​m​o​u​n​t​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​c​u​r​r​e​n​c​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				remove_keyword: {
+					/**
+					 * R​e​m​o​v​e​ ​K​e​y​w​o​r​d
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​a​ ​k​e​y​w​o​r​d​ ​f​r​o​m​ ​a​n​ ​a​d​ ​g​r​o​u​p
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​k​e​y​w​o​r​d​ ​f​r​o​m​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​a​d​ ​g​r​o​u​p​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						ad_group_id: {
+							/**
+							 * A​d​ ​G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​d​ ​g​r​o​u​p​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​k​e​y​w​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​a​d​ ​g​r​o​u​p​ ​t​h​a​t​ ​c​o​n​t​a​i​n​s​ ​t​h​e​ ​k​e​y​w​o​r​d​ ​t​o​ ​r​e​m​o​v​e​.
+							 */
+							longDesc: string
+						}
+						criterion_id: {
+							/**
+							 * K​e​y​w​o​r​d​ ​C​r​i​t​e​r​i​o​n​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​r​i​t​e​r​i​o​n​ ​I​D​ ​o​f​ ​t​h​e​ ​k​e​y​w​o​r​d​ ​t​o​ ​r​e​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​r​i​t​e​r​i​o​n​ ​I​D​ ​o​f​ ​t​h​e​ ​k​e​y​w​o​r​d​ ​w​i​t​h​i​n​ ​t​h​e​ ​a​d​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_budgets: {
+					/**
+					 * L​i​s​t​ ​B​u​d​g​e​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​c​a​m​p​a​i​g​n​ ​b​u​d​g​e​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​l​l​ ​c​a​m​p​a​i​g​n​ ​b​u​d​g​e​t​s​ ​i​n​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​a​c​c​o​u​n​t​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​b​u​d​g​e​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​b​u​d​g​e​t​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_budget: {
+					/**
+					 * C​r​e​a​t​e​ ​B​u​d​g​e​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​a​m​p​a​i​g​n​ ​b​u​d​g​e​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​a​m​p​a​i​g​n​ ​b​u​d​g​e​t​ ​w​i​t​h​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​d​a​i​l​y​ ​a​m​o​u​n​t​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * B​u​d​g​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​b​u​d​g​e​t
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​a​m​p​a​i​g​n​ ​b​u​d​g​e​t​.
+							 */
+							longDesc: string
+						}
+						daily_amount: {
+							/**
+							 * D​a​i​l​y​ ​A​m​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * D​a​i​l​y​ ​b​u​d​g​e​t​ ​a​m​o​u​n​t​ ​i​n​ ​a​c​c​o​u​n​t​ ​c​u​r​r​e​n​c​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​i​l​y​ ​b​u​d​g​e​t​ ​a​m​o​u​n​t​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​c​u​r​r​e​n​c​y​ ​(​e​.​g​.​,​ ​5​0​.​0​0​ ​f​o​r​ ​$​5​0​/​d​a​y​)​.
+							 */
+							longDesc: string
+						}
+						delivery_method: {
+							/**
+							 * D​e​l​i​v​e​r​y​ ​M​e​t​h​o​d
+							 */
+							displayName: string
+							/**
+							 * H​o​w​ ​t​h​e​ ​b​u​d​g​e​t​ ​i​s​ ​s​p​e​n​t​ ​t​h​r​o​u​g​h​o​u​t​ ​t​h​e​ ​d​a​y
+							 */
+							shortDesc: string
+							/**
+							 * S​T​A​N​D​A​R​D​ ​s​p​r​e​a​d​s​ ​t​h​e​ ​b​u​d​g​e​t​ ​e​v​e​n​l​y​.​ ​A​C​C​E​L​E​R​A​T​E​D​ ​s​p​e​n​d​s​ ​i​t​ ​a​s​ ​f​a​s​t​ ​a​s​ ​p​o​s​s​i​b​l​e​ ​(​d​e​p​r​e​c​a​t​e​d​ ​f​o​r​ ​m​o​s​t​ ​c​a​m​p​a​i​g​n​ ​t​y​p​e​s​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_budget: {
+					/**
+					 * U​p​d​a​t​e​ ​B​u​d​g​e​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​a​m​p​a​i​g​n​ ​b​u​d​g​e​t
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​d​a​i​l​y​ ​a​m​o​u​n​t​ ​o​r​ ​n​a​m​e​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​a​m​p​a​i​g​n​ ​b​u​d​g​e​t​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						budget_id: {
+							/**
+							 * B​u​d​g​e​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​b​u​d​g​e​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​b​u​d​g​e​t​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * B​u​d​g​e​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​b​u​d​g​e​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​b​u​d​g​e​t​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​k​e​e​p​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						daily_amount: {
+							/**
+							 * D​a​i​l​y​ ​A​m​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​d​a​i​l​y​ ​b​u​d​g​e​t​ ​a​m​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​d​a​i​l​y​ ​b​u​d​g​e​t​ ​a​m​o​u​n​t​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​c​u​r​r​e​n​c​y​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_bidding_strategies: {
+					/**
+					 * L​i​s​t​ ​B​i​d​d​i​n​g​ ​S​t​r​a​t​e​g​i​e​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​p​o​r​t​f​o​l​i​o​ ​b​i​d​d​i​n​g​ ​s​t​r​a​t​e​g​i​e​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​l​l​ ​p​o​r​t​f​o​l​i​o​ ​b​i​d​d​i​n​g​ ​s​t​r​a​t​e​g​i​e​s​ ​i​n​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​a​c​c​o​u​n​t​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​s​t​r​a​t​e​g​i​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​b​i​d​d​i​n​g​ ​s​t​r​a​t​e​g​i​e​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_bidding_strategy: {
+					/**
+					 * C​r​e​a​t​e​ ​B​i​d​d​i​n​g​ ​S​t​r​a​t​e​g​y
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​p​o​r​t​f​o​l​i​o​ ​b​i​d​d​i​n​g​ ​s​t​r​a​t​e​g​y
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​p​o​r​t​f​o​l​i​o​ ​b​i​d​d​i​n​g​ ​s​t​r​a​t​e​g​y​ ​t​h​a​t​ ​c​a​n​ ​b​e​ ​s​h​a​r​e​d​ ​a​c​r​o​s​s​ ​m​u​l​t​i​p​l​e​ ​c​a​m​p​a​i​g​n​s​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * S​t​r​a​t​e​g​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​b​i​d​d​i​n​g​ ​s​t​r​a​t​e​g​y
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​p​o​r​t​f​o​l​i​o​ ​b​i​d​d​i​n​g​ ​s​t​r​a​t​e​g​y​.
+							 */
+							longDesc: string
+						}
+						type: {
+							/**
+							 * S​t​r​a​t​e​g​y​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​b​i​d​d​i​n​g​ ​s​t​r​a​t​e​g​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​b​i​d​d​i​n​g​ ​o​p​t​i​m​i​z​a​t​i​o​n​ ​g​o​a​l​ ​(​e​.​g​.​,​ ​T​a​r​g​e​t​ ​C​P​A​,​ ​T​a​r​g​e​t​ ​R​O​A​S​,​ ​M​a​x​i​m​i​z​e​ ​C​o​n​v​e​r​s​i​o​n​s​)​.
+							 */
+							longDesc: string
+						}
+						target_cpa: {
+							/**
+							 * T​a​r​g​e​t​ ​C​P​A
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​c​o​s​t​-​p​e​r​-​a​c​q​u​i​s​i​t​i​o​n​ ​a​m​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​r​g​e​t​ ​C​P​A​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​c​u​r​r​e​n​c​y​.​ ​R​e​q​u​i​r​e​d​ ​w​h​e​n​ ​s​t​r​a​t​e​g​y​ ​t​y​p​e​ ​i​s​ ​T​A​R​G​E​T​_​C​P​A​.
+							 */
+							longDesc: string
+						}
+						target_roas: {
+							/**
+							 * T​a​r​g​e​t​ ​R​O​A​S
+							 */
+							displayName: string
+							/**
+							 * T​a​r​g​e​t​ ​r​e​t​u​r​n​ ​o​n​ ​a​d​ ​s​p​e​n​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​t​a​r​g​e​t​ ​R​O​A​S​ ​a​s​ ​a​ ​r​a​t​i​o​ ​(​e​.​g​.​,​ ​3​.​0​ ​f​o​r​ ​3​0​0​%​ ​R​O​A​S​)​.​ ​R​e​q​u​i​r​e​d​ ​w​h​e​n​ ​s​t​r​a​t​e​g​y​ ​t​y​p​e​ ​i​s​ ​T​A​R​G​E​T​_​R​O​A​S​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_bidding_strategy: {
+					/**
+					 * U​p​d​a​t​e​ ​B​i​d​d​i​n​g​ ​S​t​r​a​t​e​g​y
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​ ​a​ ​p​o​r​t​f​o​l​i​o​ ​b​i​d​d​i​n​g​ ​s​t​r​a​t​e​g​y
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​p​o​r​t​f​o​l​i​o​ ​b​i​d​d​i​n​g​ ​s​t​r​a​t​e​g​y​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						strategy_id: {
+							/**
+							 * B​i​d​d​i​n​g​ ​S​t​r​a​t​e​g​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​b​i​d​d​i​n​g​ ​s​t​r​a​t​e​g​y​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​b​i​d​d​i​n​g​ ​s​t​r​a​t​e​g​y​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * S​t​r​a​t​e​g​y​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​b​i​d​d​i​n​g​ ​s​t​r​a​t​e​g​y
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​n​a​m​e​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​k​e​e​p​ ​t​h​e​ ​c​u​r​r​e​n​t​ ​n​a​m​e​.
+							 */
+							longDesc: string
+						}
+						target_cpa: {
+							/**
+							 * T​a​r​g​e​t​ ​C​P​A
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​a​r​g​e​t​ ​C​P​A​ ​a​m​o​u​n​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​a​r​g​e​t​ ​C​P​A​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​c​u​r​r​e​n​c​y​.
+							 */
+							longDesc: string
+						}
+						target_roas: {
+							/**
+							 * T​a​r​g​e​t​ ​R​O​A​S
+							 */
+							displayName: string
+							/**
+							 * U​p​d​a​t​e​d​ ​t​a​r​g​e​t​ ​R​O​A​S
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​a​r​g​e​t​ ​R​O​A​S​ ​a​s​ ​a​ ​r​a​t​i​o​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				run_campaign_report: {
+					/**
+					 * R​u​n​ ​C​a​m​p​a​i​g​n​ ​R​e​p​o​r​t
+					 */
+					displayName: string
+					/**
+					 * G​e​n​e​r​a​t​e​ ​a​ ​c​a​m​p​a​i​g​n​ ​p​e​r​f​o​r​m​a​n​c​e​ ​r​e​p​o​r​t
+					 */
+					shortDesc: string
+					/**
+					 * R​u​n​s​ ​a​ ​p​e​r​f​o​r​m​a​n​c​e​ ​r​e​p​o​r​t​ ​a​c​r​o​s​s​ ​c​a​m​p​a​i​g​n​s​ ​w​i​t​h​ ​c​o​n​f​i​g​u​r​a​b​l​e​ ​m​e​t​r​i​c​s​,​ ​d​a​t​e​ ​r​a​n​g​e​,​ ​a​n​d​ ​f​i​l​t​e​r​s​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						date_range: {
+							/**
+							 * D​a​t​e​ ​R​a​n​g​e
+							 */
+							displayName: string
+							/**
+							 * P​r​e​d​e​f​i​n​e​d​ ​d​a​t​e​ ​r​a​n​g​e​ ​f​o​r​ ​t​h​e​ ​r​e​p​o​r​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​r​a​n​g​e​ ​f​o​r​ ​t​h​e​ ​r​e​p​o​r​t​.​ ​U​s​e​ ​p​r​e​d​e​f​i​n​e​d​ ​r​a​n​g​e​s​ ​l​i​k​e​ ​L​A​S​T​_​7​_​D​A​Y​S​,​ ​L​A​S​T​_​3​0​_​D​A​Y​S​,​ ​e​t​c​.
+							 */
+							longDesc: string
+						}
+						start_date: {
+							/**
+							 * S​t​a​r​t​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​s​t​a​r​t​ ​d​a​t​e​ ​(​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​s​t​a​r​t​ ​d​a​t​e​ ​i​n​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​f​o​r​m​a​t​.​ ​U​s​e​d​ ​w​h​e​n​ ​D​a​t​e​ ​R​a​n​g​e​ ​i​s​ ​s​e​t​ ​t​o​ ​C​U​S​T​O​M​.
+							 */
+							longDesc: string
+						}
+						end_date: {
+							/**
+							 * E​n​d​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​e​n​d​ ​d​a​t​e​ ​(​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​e​n​d​ ​d​a​t​e​ ​i​n​ ​Y​Y​Y​Y​-​M​M​-​D​D​ ​f​o​r​m​a​t​.​ ​U​s​e​d​ ​w​h​e​n​ ​D​a​t​e​ ​R​a​n​g​e​ ​i​s​ ​s​e​t​ ​t​o​ ​C​U​S​T​O​M​.
+							 */
+							longDesc: string
+						}
+						status_filter: {
+							/**
+							 * S​t​a​t​u​s​ ​F​i​l​t​e​r
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​a​m​p​a​i​g​n​ ​s​t​a​t​u​s
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​i​n​c​l​u​d​e​ ​c​a​m​p​a​i​g​n​s​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​t​a​t​u​s​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				run_ad_group_report: {
+					/**
+					 * R​u​n​ ​A​d​ ​G​r​o​u​p​ ​R​e​p​o​r​t
+					 */
+					displayName: string
+					/**
+					 * G​e​n​e​r​a​t​e​ ​a​n​ ​a​d​ ​g​r​o​u​p​ ​p​e​r​f​o​r​m​a​n​c​e​ ​r​e​p​o​r​t
+					 */
+					shortDesc: string
+					/**
+					 * R​u​n​s​ ​a​ ​p​e​r​f​o​r​m​a​n​c​e​ ​r​e​p​o​r​t​ ​a​c​r​o​s​s​ ​a​d​ ​g​r​o​u​p​s​ ​w​i​t​h​ ​c​o​n​f​i​g​u​r​a​b​l​e​ ​m​e​t​r​i​c​s​ ​a​n​d​ ​d​a​t​e​ ​r​a​n​g​e​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						campaign_id: {
+							/**
+							 * C​a​m​p​a​i​g​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​a​m​p​a​i​g​n
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​i​n​c​l​u​d​e​ ​a​d​ ​g​r​o​u​p​s​ ​f​r​o​m​ ​t​h​i​s​ ​c​a​m​p​a​i​g​n​.
+							 */
+							longDesc: string
+						}
+						date_range: {
+							/**
+							 * D​a​t​e​ ​R​a​n​g​e
+							 */
+							displayName: string
+							/**
+							 * P​r​e​d​e​f​i​n​e​d​ ​d​a​t​e​ ​r​a​n​g​e​ ​f​o​r​ ​t​h​e​ ​r​e​p​o​r​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​r​a​n​g​e​ ​f​o​r​ ​t​h​e​ ​r​e​p​o​r​t​.
+							 */
+							longDesc: string
+						}
+						start_date: {
+							/**
+							 * S​t​a​r​t​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​s​t​a​r​t​ ​d​a​t​e​ ​(​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​s​t​a​r​t​ ​d​a​t​e​.​ ​U​s​e​d​ ​w​h​e​n​ ​D​a​t​e​ ​R​a​n​g​e​ ​i​s​ ​C​U​S​T​O​M​.
+							 */
+							longDesc: string
+						}
+						end_date: {
+							/**
+							 * E​n​d​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​e​n​d​ ​d​a​t​e​ ​(​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​e​n​d​ ​d​a​t​e​.​ ​U​s​e​d​ ​w​h​e​n​ ​D​a​t​e​ ​R​a​n​g​e​ ​i​s​ ​C​U​S​T​O​M​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				run_keyword_report: {
+					/**
+					 * R​u​n​ ​K​e​y​w​o​r​d​ ​R​e​p​o​r​t
+					 */
+					displayName: string
+					/**
+					 * G​e​n​e​r​a​t​e​ ​a​ ​k​e​y​w​o​r​d​ ​p​e​r​f​o​r​m​a​n​c​e​ ​r​e​p​o​r​t
+					 */
+					shortDesc: string
+					/**
+					 * R​u​n​s​ ​a​ ​p​e​r​f​o​r​m​a​n​c​e​ ​r​e​p​o​r​t​ ​a​c​r​o​s​s​ ​k​e​y​w​o​r​d​s​ ​w​i​t​h​ ​m​e​t​r​i​c​s​ ​l​i​k​e​ ​c​l​i​c​k​s​,​ ​i​m​p​r​e​s​s​i​o​n​s​,​ ​C​P​C​,​ ​a​n​d​ ​c​o​n​v​e​r​s​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						campaign_id: {
+							/**
+							 * C​a​m​p​a​i​g​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​a​m​p​a​i​g​n
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​i​n​c​l​u​d​e​ ​k​e​y​w​o​r​d​s​ ​f​r​o​m​ ​t​h​i​s​ ​c​a​m​p​a​i​g​n​.
+							 */
+							longDesc: string
+						}
+						ad_group_id: {
+							/**
+							 * A​d​ ​G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​a​d​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​i​n​c​l​u​d​e​ ​k​e​y​w​o​r​d​s​ ​f​r​o​m​ ​t​h​i​s​ ​a​d​ ​g​r​o​u​p​.
+							 */
+							longDesc: string
+						}
+						date_range: {
+							/**
+							 * D​a​t​e​ ​R​a​n​g​e
+							 */
+							displayName: string
+							/**
+							 * P​r​e​d​e​f​i​n​e​d​ ​d​a​t​e​ ​r​a​n​g​e​ ​f​o​r​ ​t​h​e​ ​r​e​p​o​r​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​r​a​n​g​e​ ​f​o​r​ ​t​h​e​ ​r​e​p​o​r​t​.
+							 */
+							longDesc: string
+						}
+						start_date: {
+							/**
+							 * S​t​a​r​t​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​s​t​a​r​t​ ​d​a​t​e​ ​(​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​s​t​a​r​t​ ​d​a​t​e​.​ ​U​s​e​d​ ​w​h​e​n​ ​D​a​t​e​ ​R​a​n​g​e​ ​i​s​ ​C​U​S​T​O​M​.
+							 */
+							longDesc: string
+						}
+						end_date: {
+							/**
+							 * E​n​d​ ​D​a​t​e
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​ ​e​n​d​ ​d​a​t​e​ ​(​Y​Y​Y​Y​-​M​M​-​D​D​)
+							 */
+							shortDesc: string
+							/**
+							 * C​u​s​t​o​m​ ​e​n​d​ ​d​a​t​e​.​ ​U​s​e​d​ ​w​h​e​n​ ​D​a​t​e​ ​R​a​n​g​e​ ​i​s​ ​C​U​S​T​O​M​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​o​w​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				run_custom_report: {
+					/**
+					 * R​u​n​ ​C​u​s​t​o​m​ ​R​e​p​o​r​t
+					 */
+					displayName: string
+					/**
+					 * R​u​n​ ​a​ ​c​u​s​t​o​m​ ​G​A​Q​L​ ​q​u​e​r​y
+					 */
+					shortDesc: string
+					/**
+					 * E​x​e​c​u​t​e​ ​a​ ​r​a​w​ ​G​o​o​g​l​e​ ​A​d​s​ ​Q​u​e​r​y​ ​L​a​n​g​u​a​g​e​ ​(​G​A​Q​L​)​ ​q​u​e​r​y​ ​f​o​r​ ​a​d​v​a​n​c​e​d​ ​r​e​p​o​r​t​i​n​g​.​ ​G​A​Q​L​ ​s​u​p​p​o​r​t​s​ ​S​E​L​E​C​T​,​ ​F​R​O​M​,​ ​W​H​E​R​E​,​ ​O​R​D​E​R​ ​B​Y​,​ ​a​n​d​ ​L​I​M​I​T​ ​c​l​a​u​s​e​s​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						query: {
+							/**
+							 * G​A​Q​L​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​G​A​Q​L​ ​q​u​e​r​y​ ​t​o​ ​e​x​e​c​u​t​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​G​o​o​g​l​e​ ​A​d​s​ ​Q​u​e​r​y​ ​L​a​n​g​u​a​g​e​ ​q​u​e​r​y​.​ ​E​x​a​m​p​l​e​:​ ​S​E​L​E​C​T​ ​c​a​m​p​a​i​g​n​.​n​a​m​e​,​ ​m​e​t​r​i​c​s​.​c​l​i​c​k​s​ ​F​R​O​M​ ​c​a​m​p​a​i​g​n​ ​W​H​E​R​E​ ​c​a​m​p​a​i​g​n​.​s​t​a​t​u​s​ ​=​ ​'​E​N​A​B​L​E​D​'​ ​A​N​D​ ​s​e​g​m​e​n​t​s​.​d​a​t​e​ ​D​U​R​I​N​G​ ​L​A​S​T​_​3​0​_​D​A​Y​S
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_conversion_actions: {
+					/**
+					 * L​i​s​t​ ​C​o​n​v​e​r​s​i​o​n​ ​A​c​t​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​l​l​ ​c​o​n​v​e​r​s​i​o​n​ ​a​c​t​i​o​n​ ​d​e​f​i​n​i​t​i​o​n​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​l​l​ ​c​o​n​v​e​r​s​i​o​n​ ​a​c​t​i​o​n​s​ ​c​o​n​f​i​g​u​r​e​d​ ​i​n​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​a​c​c​o​u​n​t​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​v​e​r​s​i​o​n​ ​a​c​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​v​e​r​s​i​o​n​ ​a​c​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				upload_click_conversion: {
+					/**
+					 * U​p​l​o​a​d​ ​C​l​i​c​k​ ​C​o​n​v​e​r​s​i​o​n
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​a​n​ ​o​f​f​l​i​n​e​ ​c​l​i​c​k​ ​c​o​n​v​e​r​s​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​s​ ​a​n​ ​o​f​f​l​i​n​e​ ​c​o​n​v​e​r​s​i​o​n​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​G​o​o​g​l​e​ ​C​l​i​c​k​ ​I​D​ ​(​G​C​L​I​D​)​.​ ​T​h​i​s​ ​c​l​o​s​e​s​ ​t​h​e​ ​l​o​o​p​ ​b​e​t​w​e​e​n​ ​a​d​ ​c​l​i​c​k​s​ ​a​n​d​ ​o​f​f​l​i​n​e​ ​s​a​l​e​s​/​a​c​t​i​o​n​s​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						gclid: {
+							/**
+							 * G​C​L​I​D
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​C​l​i​c​k​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​G​o​o​g​l​e​ ​C​l​i​c​k​ ​I​D​ ​(​G​C​L​I​D​)​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​.​ ​F​o​u​n​d​ ​i​n​ ​t​h​e​ ​U​R​L​ ​a​f​t​e​r​ ​a​ ​u​s​e​r​ ​c​l​i​c​k​s​ ​a​n​ ​a​d​.
+							 */
+							longDesc: string
+						}
+						conversion_action_id: {
+							/**
+							 * C​o​n​v​e​r​s​i​o​n​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​a​c​t​i​o​n​ ​t​o​ ​r​e​c​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​h​i​s​ ​c​o​n​v​e​r​s​i​o​n​ ​s​h​o​u​l​d​ ​b​e​ ​a​t​t​r​i​b​u​t​e​d​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						conversion_date_time: {
+							/**
+							 * C​o​n​v​e​r​s​i​o​n​ ​D​a​t​e​/​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​o​c​c​u​r​r​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​i​n​ ​f​o​r​m​a​t​:​ ​y​y​y​y​-​m​m​-​d​d​ ​H​H​:​m​m​:​s​s​+​|​-​H​H​:​m​m​ ​(​e​.​g​.​,​ ​2​0​2​6​-​0​3​-​0​1​ ​1​2​:​0​0​:​0​0​+​0​0​:​0​0​)​.
+							 */
+							longDesc: string
+						}
+						conversion_value: {
+							/**
+							 * C​o​n​v​e​r​s​i​o​n​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * M​o​n​e​t​a​r​y​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​i​n​ ​y​o​u​r​ ​a​c​c​o​u​n​t​ ​c​u​r​r​e​n​c​y​.
+							 */
+							longDesc: string
+						}
+						currency_code: {
+							/**
+							 * C​u​r​r​e​n​c​y​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * I​S​O​ ​4​2​1​7​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​v​a​l​u​e​ ​(​e​.​g​.​,​ ​U​S​D​,​ ​E​U​R​,​ ​G​B​P​)​.
+							 */
+							longDesc: string
+						}
+						order_id: {
+							/**
+							 * O​r​d​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * U​n​i​q​u​e​ ​o​r​d​e​r​/​t​r​a​n​s​a​c​t​i​o​n​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​o​r​d​e​r​ ​o​r​ ​t​r​a​n​s​a​c​t​i​o​n​.​ ​U​s​e​d​ ​f​o​r​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				upload_call_conversion: {
+					/**
+					 * U​p​l​o​a​d​ ​C​a​l​l​ ​C​o​n​v​e​r​s​i​o​n
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​a​n​ ​o​f​f​l​i​n​e​ ​c​a​l​l​ ​c​o​n​v​e​r​s​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​s​ ​a​ ​c​o​n​v​e​r​s​i​o​n​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​a​ ​p​h​o​n​e​ ​c​a​l​l​ ​f​r​o​m​ ​a​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​a​l​l​ ​e​x​t​e​n​s​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						caller_id: {
+							/**
+							 * C​a​l​l​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * P​h​o​n​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​c​a​l​l​e​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​o​f​ ​t​h​e​ ​c​a​l​l​e​r​ ​i​n​ ​E​.​1​6​4​ ​f​o​r​m​a​t​ ​(​e​.​g​.​,​ ​+​1​8​0​0​5​5​5​0​1​0​0​)​.
+							 */
+							longDesc: string
+						}
+						conversion_action_id: {
+							/**
+							 * C​o​n​v​e​r​s​i​o​n​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​a​c​t​i​o​n​ ​t​o​ ​r​e​c​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​h​i​s​ ​c​o​n​v​e​r​s​i​o​n​ ​s​h​o​u​l​d​ ​b​e​ ​a​t​t​r​i​b​u​t​e​d​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						conversion_date_time: {
+							/**
+							 * C​o​n​v​e​r​s​i​o​n​ ​D​a​t​e​/​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​o​c​c​u​r​r​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​i​n​ ​f​o​r​m​a​t​:​ ​y​y​y​y​-​m​m​-​d​d​ ​H​H​:​m​m​:​s​s​+​|​-​H​H​:​m​m​.
+							 */
+							longDesc: string
+						}
+						call_start_date_time: {
+							/**
+							 * C​a​l​l​ ​S​t​a​r​t​ ​D​a​t​e​/​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​h​e​ ​c​a​l​l​ ​s​t​a​r​t​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​w​h​e​n​ ​t​h​e​ ​c​a​l​l​ ​s​t​a​r​t​e​d​ ​i​n​ ​f​o​r​m​a​t​:​ ​y​y​y​y​-​m​m​-​d​d​ ​H​H​:​m​m​:​s​s​+​|​-​H​H​:​m​m​.
+							 */
+							longDesc: string
+						}
+						conversion_value: {
+							/**
+							 * C​o​n​v​e​r​s​i​o​n​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * M​o​n​e​t​a​r​y​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​.
+							 */
+							longDesc: string
+						}
+						currency_code: {
+							/**
+							 * C​u​r​r​e​n​c​y​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * I​S​O​ ​4​2​1​7​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​v​a​l​u​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				upload_enhanced_conversion: {
+					/**
+					 * U​p​l​o​a​d​ ​E​n​h​a​n​c​e​d​ ​C​o​n​v​e​r​s​i​o​n
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​a​n​ ​e​n​h​a​n​c​e​d​ ​c​o​n​v​e​r​s​i​o​n​ ​w​i​t​h​ ​u​s​e​r​ ​d​a​t​a
+					 */
+					shortDesc: string
+					/**
+					 * U​p​l​o​a​d​s​ ​a​ ​c​o​n​v​e​r​s​i​o​n​ ​u​s​i​n​g​ ​h​a​s​h​e​d​ ​f​i​r​s​t​-​p​a​r​t​y​ ​u​s​e​r​ ​d​a​t​a​ ​(​e​m​a​i​l​,​ ​p​h​o​n​e​)​ ​i​n​s​t​e​a​d​ ​o​f​ ​a​ ​G​C​L​I​D​.​ ​U​s​e​r​ ​d​a​t​a​ ​i​s​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​S​H​A​-​2​5​6​ ​h​a​s​h​e​d​ ​b​e​f​o​r​e​ ​u​p​l​o​a​d​ ​f​o​r​ ​p​r​i​v​a​c​y​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						conversion_action_id: {
+							/**
+							 * C​o​n​v​e​r​s​i​o​n​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​a​c​t​i​o​n​ ​t​o​ ​r​e​c​o​r​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​a​c​t​i​o​n​ ​t​h​a​t​ ​t​h​i​s​ ​c​o​n​v​e​r​s​i​o​n​ ​s​h​o​u​l​d​ ​b​e​ ​a​t​t​r​i​b​u​t​e​d​ ​t​o​.
+							 */
+							longDesc: string
+						}
+						conversion_date_time: {
+							/**
+							 * C​o​n​v​e​r​s​i​o​n​ ​D​a​t​e​/​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​o​c​c​u​r​r​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​i​n​ ​f​o​r​m​a​t​:​ ​y​y​y​y​-​m​m​-​d​d​ ​H​H​:​m​m​:​s​s​+​|​-​H​H​:​m​m​.
+							 */
+							longDesc: string
+						}
+						conversion_value: {
+							/**
+							 * C​o​n​v​e​r​s​i​o​n​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * M​o​n​e​t​a​r​y​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​o​n​e​t​a​r​y​ ​v​a​l​u​e​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​.
+							 */
+							longDesc: string
+						}
+						currency_code: {
+							/**
+							 * C​u​r​r​e​n​c​y​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * I​S​O​ ​4​2​1​7​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​v​a​l​u​e​.
+							 */
+							longDesc: string
+						}
+						email: {
+							/**
+							 * E​m​a​i​l
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​e​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.​ ​W​i​l​l​ ​b​e​ ​n​o​r​m​a​l​i​z​e​d​ ​a​n​d​ ​S​H​A​-​2​5​6​ ​h​a​s​h​e​d​ ​b​e​f​o​r​e​ ​u​p​l​o​a​d​.
+							 */
+							longDesc: string
+						}
+						phone_number: {
+							/**
+							 * P​h​o​n​e​ ​N​u​m​b​e​r
+							 */
+							displayName: string
+							/**
+							 * C​u​s​t​o​m​e​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​ ​E​.​1​6​4​ ​f​o​r​m​a​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​ ​E​.​1​6​4​ ​f​o​r​m​a​t​ ​(​e​.​g​.​,​ ​+​1​8​0​0​5​5​5​0​1​0​0​)​.​ ​W​i​l​l​ ​b​e​ ​S​H​A​-​2​5​6​ ​h​a​s​h​e​d​ ​b​e​f​o​r​e​ ​u​p​l​o​a​d​.
+							 */
+							longDesc: string
+						}
+						order_id: {
+							/**
+							 * O​r​d​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * U​n​i​q​u​e​ ​o​r​d​e​r​/​t​r​a​n​s​a​c​t​i​o​n​ ​I​D
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​d​e​d​u​p​l​i​c​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				upload_conversion_adjustment: {
+					/**
+					 * U​p​l​o​a​d​ ​C​o​n​v​e​r​s​i​o​n​ ​A​d​j​u​s​t​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * A​d​j​u​s​t​ ​o​r​ ​r​e​t​r​a​c​t​ ​a​ ​p​r​e​v​i​o​u​s​l​y​ ​u​p​l​o​a​d​e​d​ ​c​o​n​v​e​r​s​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * A​d​j​u​s​t​s​ ​t​h​e​ ​v​a​l​u​e​ ​o​f​ ​a​ ​p​r​e​v​i​o​u​s​l​y​ ​u​p​l​o​a​d​e​d​ ​c​o​n​v​e​r​s​i​o​n​ ​o​r​ ​r​e​t​r​a​c​t​s​ ​i​t​ ​e​n​t​i​r​e​l​y​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						conversion_action_id: {
+							/**
+							 * C​o​n​v​e​r​s​i​o​n​ ​A​c​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​a​c​t​i​o​n​ ​t​o​ ​a​d​j​u​s​t
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​a​c​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​t​o​ ​a​d​j​u​s​t​.
+							 */
+							longDesc: string
+						}
+						adjustment_type: {
+							/**
+							 * A​d​j​u​s​t​m​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​y​p​e​ ​o​f​ ​a​d​j​u​s​t​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * R​E​S​T​A​T​E​ ​t​o​ ​c​h​a​n​g​e​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​v​a​l​u​e​,​ ​R​E​T​R​A​C​T​I​O​N​ ​t​o​ ​r​e​m​o​v​e​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​e​n​t​i​r​e​l​y​.
+							 */
+							longDesc: string
+						}
+						order_id: {
+							/**
+							 * O​r​d​e​r​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * O​r​d​e​r​ ​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​t​o​ ​a​d​j​u​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​o​r​d​e​r​ ​I​D​ ​t​h​a​t​ ​w​a​s​ ​p​r​o​v​i​d​e​d​ ​w​h​e​n​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​w​a​s​ ​o​r​i​g​i​n​a​l​l​y​ ​u​p​l​o​a​d​e​d​.
+							 */
+							longDesc: string
+						}
+						gclid: {
+							/**
+							 * G​C​L​I​D
+							 */
+							displayName: string
+							/**
+							 * G​C​L​I​D​ ​o​f​ ​t​h​e​ ​c​o​n​v​e​r​s​i​o​n​ ​t​o​ ​a​d​j​u​s​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​G​C​L​I​D​ ​a​s​s​o​c​i​a​t​e​d​ ​w​i​t​h​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​c​o​n​v​e​r​s​i​o​n​.​ ​R​e​q​u​i​r​e​d​ ​i​f​ ​O​r​d​e​r​ ​I​D​ ​w​a​s​ ​n​o​t​ ​s​e​t​.
+							 */
+							longDesc: string
+						}
+						adjustment_date_time: {
+							/**
+							 * A​d​j​u​s​t​m​e​n​t​ ​D​a​t​e​/​T​i​m​e
+							 */
+							displayName: string
+							/**
+							 * W​h​e​n​ ​t​h​e​ ​a​d​j​u​s​t​m​e​n​t​ ​o​c​c​u​r​r​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​d​a​t​e​ ​a​n​d​ ​t​i​m​e​ ​o​f​ ​t​h​e​ ​a​d​j​u​s​t​m​e​n​t​ ​i​n​ ​f​o​r​m​a​t​:​ ​y​y​y​y​-​m​m​-​d​d​ ​H​H​:​m​m​:​s​s​+​|​-​H​H​:​m​m​.
+							 */
+							longDesc: string
+						}
+						adjusted_value: {
+							/**
+							 * A​d​j​u​s​t​e​d​ ​V​a​l​u​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​c​o​n​v​e​r​s​i​o​n​ ​v​a​l​u​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​e​w​ ​c​o​n​v​e​r​s​i​o​n​ ​v​a​l​u​e​.​ ​R​e​q​u​i​r​e​d​ ​f​o​r​ ​R​E​S​T​A​T​E​ ​a​d​j​u​s​t​m​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						currency_code: {
+							/**
+							 * C​u​r​r​e​n​c​y​ ​C​o​d​e
+							 */
+							displayName: string
+							/**
+							 * I​S​O​ ​4​2​1​7​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​c​u​r​r​e​n​c​y​ ​c​o​d​e​ ​f​o​r​ ​t​h​e​ ​a​d​j​u​s​t​e​d​ ​v​a​l​u​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				list_customer_lists: {
+					/**
+					 * L​i​s​t​ ​C​u​s​t​o​m​e​r​ ​L​i​s​t​s
+					 */
+					displayName: string
+					/**
+					 * L​i​s​t​ ​a​u​d​i​e​n​c​e​/​c​u​s​t​o​m​e​r​ ​m​a​t​c​h​ ​l​i​s​t​s
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​l​l​ ​u​s​e​r​ ​l​i​s​t​s​ ​(​c​u​s​t​o​m​e​r​ ​m​a​t​c​h​ ​l​i​s​t​s​)​ ​i​n​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​a​c​c​o​u​n​t​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​l​i​s​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​u​s​t​o​m​e​r​ ​l​i​s​t​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_customer_list: {
+					/**
+					 * C​r​e​a​t​e​ ​C​u​s​t​o​m​e​r​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​c​u​s​t​o​m​e​r​ ​m​a​t​c​h​ ​a​u​d​i​e​n​c​e​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​C​R​M​-​b​a​s​e​d​ ​u​s​e​r​ ​l​i​s​t​ ​f​o​r​ ​c​u​s​t​o​m​e​r​ ​m​a​t​c​h​ ​t​a​r​g​e​t​i​n​g​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * L​i​s​t​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​m​a​t​c​h​ ​l​i​s​t​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​l​i​s​t
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​l​i​s​t​ ​a​n​d​ ​i​t​s​ ​i​n​t​e​n​d​e​d​ ​u​s​e​.
+							 */
+							longDesc: string
+						}
+						membership_life_span: {
+							/**
+							 * M​e​m​b​e​r​s​h​i​p​ ​L​i​f​e​ ​S​p​a​n
+							 */
+							displayName: string
+							/**
+							 * D​a​y​s​ ​u​n​t​i​l​ ​a​ ​m​e​m​b​e​r​ ​i​s​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​r​e​m​o​v​e​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​d​a​y​s​ ​a​ ​u​s​e​r​ ​r​e​m​a​i​n​s​ ​o​n​ ​t​h​e​ ​l​i​s​t​.​ ​S​e​t​ ​t​o​ ​1​0​0​0​0​ ​f​o​r​ ​n​o​ ​e​x​p​i​r​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_contacts_to_customer_list: {
+					/**
+					 * A​d​d​ ​C​o​n​t​a​c​t​s​ ​t​o​ ​C​u​s​t​o​m​e​r​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * U​p​l​o​a​d​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​a​ ​c​u​s​t​o​m​e​r​ ​m​a​t​c​h​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​a​ ​c​u​s​t​o​m​e​r​ ​m​a​t​c​h​ ​l​i​s​t​ ​u​s​i​n​g​ ​h​a​s​h​e​d​ ​u​s​e​r​ ​d​a​t​a​.​ ​E​m​a​i​l​ ​a​d​d​r​e​s​s​e​s​ ​a​n​d​ ​p​h​o​n​e​ ​n​u​m​b​e​r​s​ ​a​r​e​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​n​o​r​m​a​l​i​z​e​d​ ​a​n​d​ ​S​H​A​-​2​5​6​ ​h​a​s​h​e​d​ ​b​e​f​o​r​e​ ​u​p​l​o​a​d​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						user_list_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​l​i​s​t​ ​t​o​ ​a​d​d​ ​c​o​n​t​a​c​t​s​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​m​a​t​c​h​ ​l​i​s​t​ ​w​h​e​r​e​ ​c​o​n​t​a​c​t​s​ ​w​i​l​l​ ​b​e​ ​a​d​d​e​d​.
+							 */
+							longDesc: string
+						}
+						contacts: {
+							/**
+							 * C​o​n​t​a​c​t​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​a​d​d
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​w​i​t​h​ ​e​m​a​i​l​,​ ​p​h​o​n​e​,​ ​o​r​ ​a​d​d​r​e​s​s​ ​d​a​t​a​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​l​i​s​t​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										email: {
+											/**
+											 * E​m​a​i​l
+											 */
+											displayName: string
+											/**
+											 * C​o​n​t​a​c​t​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​o​n​t​a​c​t​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​.​ ​W​i​l​l​ ​b​e​ ​n​o​r​m​a​l​i​z​e​d​ ​a​n​d​ ​S​H​A​-​2​5​6​ ​h​a​s​h​e​d​ ​b​e​f​o​r​e​ ​u​p​l​o​a​d​.
+											 */
+											longDesc: string
+										}
+										phone_number: {
+											/**
+											 * P​h​o​n​e​ ​N​u​m​b​e​r
+											 */
+											displayName: string
+											/**
+											 * C​o​n​t​a​c​t​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​ ​E​.​1​6​4​ ​f​o​r​m​a​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​o​n​t​a​c​t​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​ ​E​.​1​6​4​ ​f​o​r​m​a​t​ ​(​e​.​g​.​,​ ​+​1​8​0​0​5​5​5​0​1​0​0​)​.​ ​W​i​l​l​ ​b​e​ ​S​H​A​-​2​5​6​ ​h​a​s​h​e​d​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				remove_contacts_from_customer_list: {
+					/**
+					 * R​e​m​o​v​e​ ​C​o​n​t​a​c​t​s​ ​f​r​o​m​ ​C​u​s​t​o​m​e​r​ ​L​i​s​t
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​a​ ​c​u​s​t​o​m​e​r​ ​m​a​t​c​h​ ​l​i​s​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​ ​a​ ​c​u​s​t​o​m​e​r​ ​m​a​t​c​h​ ​l​i​s​t​ ​u​s​i​n​g​ ​t​h​e​i​r​ ​i​d​e​n​t​i​f​y​i​n​g​ ​i​n​f​o​r​m​a​t​i​o​n​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						user_list_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​L​i​s​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​u​s​t​o​m​e​r​ ​l​i​s​t​ ​t​o​ ​r​e​m​o​v​e​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​m​a​t​c​h​ ​l​i​s​t​ ​t​o​ ​r​e​m​o​v​e​ ​c​o​n​t​a​c​t​s​ ​f​r​o​m​.
+							 */
+							longDesc: string
+						}
+						contacts: {
+							/**
+							 * C​o​n​t​a​c​t​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​t​o​ ​r​e​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​a​c​t​s​ ​w​i​t​h​ ​e​m​a​i​l​,​ ​p​h​o​n​e​,​ ​o​r​ ​a​d​d​r​e​s​s​ ​d​a​t​a​ ​t​o​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​c​u​s​t​o​m​e​r​ ​l​i​s​t​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										email: {
+											/**
+											 * E​m​a​i​l
+											 */
+											displayName: string
+											/**
+											 * C​o​n​t​a​c​t​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​o​n​t​a​c​t​ ​e​m​a​i​l​ ​a​d​d​r​e​s​s​ ​t​o​ ​m​a​t​c​h​ ​f​o​r​ ​r​e​m​o​v​a​l​.
+											 */
+											longDesc: string
+										}
+										phone_number: {
+											/**
+											 * P​h​o​n​e​ ​N​u​m​b​e​r
+											 */
+											displayName: string
+											/**
+											 * C​o​n​t​a​c​t​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​i​n​ ​E​.​1​6​4​ ​f​o​r​m​a​t
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​c​o​n​t​a​c​t​ ​p​h​o​n​e​ ​n​u​m​b​e​r​ ​t​o​ ​m​a​t​c​h​ ​f​o​r​ ​r​e​m​o​v​a​l​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			triggers: {
+				new_lead_form_submission: {
+					/**
+					 * N​e​w​ ​L​e​a​d​ ​F​o​r​m​ ​S​u​b​m​i​s​s​i​o​n
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​l​e​a​d​ ​i​s​ ​s​u​b​m​i​t​t​e​d​ ​t​h​r​o​u​g​h​ ​a​ ​G​o​o​g​l​e​ ​A​d​s​ ​l​e​a​d​ ​f​o​r​m​ ​e​x​t​e​n​s​i​o​n
+					 */
+					shortDesc: string
+					/**
+					 * M​o​n​i​t​o​r​s​ ​G​o​o​g​l​e​ ​A​d​s​ ​l​e​a​d​ ​f​o​r​m​ ​e​x​t​e​n​s​i​o​n​s​ ​f​o​r​ ​n​e​w​ ​s​u​b​m​i​s​s​i​o​n​s​.​ ​P​o​l​l​s​ ​t​h​e​ ​l​e​a​d​ ​f​o​r​m​ ​s​u​b​m​i​s​s​i​o​n​ ​d​a​t​a​ ​a​n​d​ ​t​r​i​g​g​e​r​s​ ​f​o​r​ ​e​a​c​h​ ​n​e​w​ ​l​e​a​d​.
+					 */
+					longDesc: string
+					options: {
+						customer_id: {
+							/**
+							 * C​u​s​t​o​m​e​r​ ​A​c​c​o​u​n​t
+							 */
+							displayName: string
+							/**
+							 * G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​G​o​o​g​l​e​ ​A​d​s​ ​c​u​s​t​o​m​e​r​ ​a​c​c​o​u​n​t​ ​(​C​u​s​t​o​m​e​r​ ​I​D​)​ ​f​o​r​ ​t​h​i​s​ ​a​c​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						campaign_id: {
+							/**
+							 * C​a​m​p​a​i​g​n
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​c​a​m​p​a​i​g​n
+							 */
+							shortDesc: string
+							/**
+							 * O​n​l​y​ ​t​r​i​g​g​e​r​ ​f​o​r​ ​l​e​a​d​ ​f​o​r​m​ ​s​u​b​m​i​s​s​i​o​n​s​ ​f​r​o​m​ ​t​h​i​s​ ​c​a​m​p​a​i​g​n​.​ ​L​e​a​v​e​ ​e​m​p​t​y​ ​t​o​ ​m​o​n​i​t​o​r​ ​a​l​l​ ​c​a​m​p​a​i​g​n​s​.
+							 */
+							longDesc: string
+						}
+					}
+					event_info: {
+						/**
+						 * C​o​n​t​a​i​n​s​ ​i​n​f​o​r​m​a​t​i​o​n​ ​a​b​o​u​t​ ​t​h​e​ ​l​e​a​d​ ​f​o​r​m​ ​s​u​b​m​i​s​s​i​o​n​ ​i​n​c​l​u​d​i​n​g​ ​c​o​n​t​a​c​t​ ​d​e​t​a​i​l​s​,​ ​c​a​m​p​a​i​g​n​ ​i​n​f​o​,​ ​a​n​d​ ​G​C​L​I​D​.
+						 */
+						desc: string
+					}
+				}
+			}
+		}
 		GoogleDrive: {
 			/**
 			 * G​o​o​g​l​e​ ​D​r​i​v​e
@@ -172825,6 +175979,3160 @@ export type TranslationFunctions = {
 								}
 							}
 						}
+					}
+				}
+			}
+		}
+		GoogleAds: {
+			/**
+			 * Google Ads
+			 */
+			displayName: () => LocalizedString
+			groups: {
+				/**
+				 * Advertising & Marketing
+				 */
+				'0': () => LocalizedString
+				/**
+				 * Google Workspace Suite
+				 */
+				'1': () => LocalizedString
+			}
+			/**
+			 * Connect with Google Ads to manage campaigns, conversions, and audiences
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Integrate with Google Ads to manage your advertising campaigns, track conversions, sync customer lists, and automate reporting. This integration covers campaign management, ad group and ad CRUD, keyword management, budget and bidding strategies, offline conversion uploads, customer match audiences, and lead form triggers.
+			 */
+			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Google Ads
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Google Ads, you need a **Google OAuth2 connection** and a following additional options:
+		
+			## Developer Token
+			A developer token is required to access the Google Ads API. To obtain one:
+			1. Sign in to your **Google Ads Manager Account**
+			2. Navigate to **Tools & Settings** > **API Center**
+			3. Apply for a developer token if you don't have one
+			4. Copy the 22-character alphanumeric token
+		
+			## Manager Account ID (Optional)
+			If you're using a Manager Account (MCC) to access client accounts, enter the Manager Account ID (10 digits, without hyphens).
+		
+			**Note:** The Google Ads Customer Account is selected per action. After connecting, you will be able to choose from your accessible customer accounts when configuring each action.
+				 */
+				content: () => LocalizedString
+			}
+			actions: {
+				get_customer_info: {
+					/**
+					 * Get Customer Info
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get information about the current Google Ads customer account
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns details about the authenticated Google Ads customer account, including accessible customer IDs.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_campaigns: {
+					/**
+					 * List Campaigns
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List campaigns with performance metrics
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves campaigns from the Google Ads account with optional status filtering and performance metrics for a specified date range.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status_filter: {
+							/**
+							 * Status Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter campaigns by status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return campaigns with the specified status. If not set, all non-removed campaigns are returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+						date_range: {
+							/**
+							 * Date Range
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date range for performance metrics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The predefined date range for retrieving performance metrics alongside campaign data.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of campaigns to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of campaigns to return. Default is 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_campaign: {
+					/**
+					 * Get Campaign
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Get details of a specific campaign
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves detailed information about a specific campaign by its ID, including status, budget, bidding strategy, and performance metrics.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						campaign_id: {
+							/**
+							 * Campaign
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The campaign to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the campaign to retrieve details for.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_campaign: {
+					/**
+					 * Create Campaign
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new advertising campaign
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new campaign in Google Ads with the specified channel type, budget, bidding strategy, and targeting settings. A campaign budget is created automatically.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Campaign Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the new campaign
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A descriptive name for the campaign.
+							 */
+							longDesc: () => LocalizedString
+						}
+						channel_type: {
+							/**
+							 * Channel Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Advertising channel type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of advertising channel for this campaign (e.g., Search, Display, Shopping, Video).
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Initial Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to start the campaign as enabled or paused
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to PAUSED to create the campaign without immediately serving ads.
+							 */
+							longDesc: () => LocalizedString
+						}
+						daily_budget: {
+							/**
+							 * Daily Budget
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Daily budget amount in account currency
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The daily budget amount in your account currency (e.g., 50.00 for $50/day).
+							 */
+							longDesc: () => LocalizedString
+						}
+						bidding_strategy: {
+							/**
+							 * Bidding Strategy
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Campaign bidding strategy
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The bidding strategy to use for this campaign.
+							 */
+							longDesc: () => LocalizedString
+						}
+						target_google_search: {
+							/**
+							 * Target Google Search
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Show ads on Google Search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to show ads on Google Search results pages.
+							 */
+							longDesc: () => LocalizedString
+						}
+						target_search_network: {
+							/**
+							 * Target Search Network
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Show ads on search partner sites
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Whether to show ads on Google search partner websites.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_campaign: {
+					/**
+					 * Update Campaign
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing campaign
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates campaign properties such as name, status (enable/pause), and bidding strategy.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						campaign_id: {
+							/**
+							 * Campaign
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The campaign to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the campaign to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Campaign Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New name for the campaign
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated name for the campaign. Leave empty to keep the current name.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New status for the campaign
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the campaign status to ENABLED, PAUSED, or REMOVED.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				remove_campaign: {
+					/**
+					 * Remove Campaign
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove a campaign
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes (soft deletes) a campaign from the Google Ads account. The campaign will be marked as REMOVED and will no longer serve ads.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						campaign_id: {
+							/**
+							 * Campaign
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The campaign to remove
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the campaign to remove.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_ad_groups: {
+					/**
+					 * List Ad Groups
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List ad groups with performance metrics
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves ad groups from the Google Ads account, optionally filtered by campaign.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						campaign_id: {
+							/**
+							 * Campaign
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by campaign
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return ad groups belonging to this campaign.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status_filter: {
+							/**
+							 * Status Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter ad groups by status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return ad groups with the specified status.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of ad groups to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of ad groups to return. Default is 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_ad_group: {
+					/**
+					 * Create Ad Group
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new ad group within a campaign
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new ad group in a specified campaign with the given name, type, status, and CPC bid.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						campaign_id: {
+							/**
+							 * Campaign
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The campaign to create the ad group in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the campaign where the new ad group will be created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Ad Group Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the new ad group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A descriptive name for the ad group.
+							 */
+							longDesc: () => LocalizedString
+						}
+						type: {
+							/**
+							 * Ad Group Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of ad group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The type of ad group to create.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Initial Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to start the ad group as enabled or paused
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to PAUSED to create the ad group without immediately serving ads.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cpc_bid: {
+							/**
+							 * CPC Bid
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum cost-per-click bid amount
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum CPC bid amount in your account currency (e.g., 1.50 for $1.50).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_ad_group: {
+					/**
+					 * Update Ad Group
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing ad group
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates ad group properties such as name, status, and CPC bid.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ad_group_id: {
+							/**
+							 * Ad Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ad group to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the ad group to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Ad Group Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New name for the ad group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated name for the ad group. Leave empty to keep the current name.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New status for the ad group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the ad group status to ENABLED, PAUSED, or REMOVED.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cpc_bid: {
+							/**
+							 * CPC Bid
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New maximum CPC bid amount
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated maximum CPC bid amount in your account currency.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				remove_ad_group: {
+					/**
+					 * Remove Ad Group
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove an ad group
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes (soft deletes) an ad group. It will be marked as REMOVED and its ads will stop serving.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ad_group_id: {
+							/**
+							 * Ad Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ad group to remove
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the ad group to remove.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_ads: {
+					/**
+					 * List Ads
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List ads with performance metrics
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves ads from the Google Ads account, optionally filtered by campaign, ad group, or status.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						campaign_id: {
+							/**
+							 * Campaign
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by campaign
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return ads belonging to this campaign.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ad_group_id: {
+							/**
+							 * Ad Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by ad group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return ads belonging to this ad group.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status_filter: {
+							/**
+							 * Status Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter ads by status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return ads with the specified status. If not set, all non-removed ads are returned.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of ads to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of ads to return. Default is 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_responsive_search_ad: {
+					/**
+					 * Create Responsive Search Ad
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new responsive search ad
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a responsive search ad (RSA) in a specified ad group with multiple headlines, descriptions, and final URLs. Google Ads will automatically test combinations to find the best-performing ad.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ad_group_id: {
+							/**
+							 * Ad Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ad group to create the ad in
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the ad group where the new ad will be created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						headlines: {
+							/**
+							 * Headlines
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Ad headlines (3-15 required)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of headlines for the responsive search ad. Provide at least 3 and up to 15 headlines (max 30 characters each).
+							 */
+							longDesc: () => LocalizedString
+						}
+						descriptions: {
+							/**
+							 * Descriptions
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Ad descriptions (2-4 required)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of descriptions for the responsive search ad. Provide at least 2 and up to 4 descriptions (max 90 characters each).
+							 */
+							longDesc: () => LocalizedString
+						}
+						final_urls: {
+							/**
+							 * Final URLs
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Landing page URLs
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The URLs that users will be directed to after clicking the ad.
+							 */
+							longDesc: () => LocalizedString
+						}
+						path1: {
+							/**
+							 * Display Path 1
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * First part of the display URL path
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The first part of the display URL path shown in the ad (max 15 characters).
+							 */
+							longDesc: () => LocalizedString
+						}
+						path2: {
+							/**
+							 * Display Path 2
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Second part of the display URL path
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The second part of the display URL path shown in the ad (max 15 characters).
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Initial Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to start the ad as enabled or paused
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set to PAUSED to create the ad without immediately serving it.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_ad_status: {
+					/**
+					 * Update Ad Status
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Enable, pause, or remove an ad
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the status of an ad within an ad group.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ad_group_id: {
+							/**
+							 * Ad Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ad group containing the ad
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the ad group that contains the ad to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ad_id: {
+							/**
+							 * Ad
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ad to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the ad to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New status for the ad
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the ad status to ENABLED, PAUSED, or REMOVED.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				remove_ad: {
+					/**
+					 * Remove Ad
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove an ad
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes (soft deletes) an ad from an ad group.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ad_group_id: {
+							/**
+							 * Ad Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ad group containing the ad
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the ad group that contains the ad to remove.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ad_id: {
+							/**
+							 * Ad
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ad to remove
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The ID of the ad to remove.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_keywords: {
+					/**
+					 * List Keywords
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List keywords with performance metrics
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves keywords from the Google Ads account with optional filtering by campaign or ad group, including performance metrics.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						campaign_id: {
+							/**
+							 * Campaign
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by campaign
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return keywords belonging to this campaign.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ad_group_id: {
+							/**
+							 * Ad Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by ad group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only return keywords belonging to this ad group.
+							 */
+							longDesc: () => LocalizedString
+						}
+						date_range: {
+							/**
+							 * Date Range
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Date range for performance metrics
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The predefined date range for retrieving performance metrics.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of keywords to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of keywords to return. Default is 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_keywords: {
+					/**
+					 * Add Keywords
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add keywords to an ad group
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds one or more keywords to a specified ad group with the given match type and optional CPC bid.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ad_group_id: {
+							/**
+							 * Ad Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ad group to add keywords to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the ad group where the keywords will be added.
+							 */
+							longDesc: () => LocalizedString
+						}
+						keywords: {
+							/**
+							 * Keywords
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Keywords to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of keyword entries to add, each with text and match type.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										text: {
+											/**
+											 * Keyword Text
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The keyword text
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The keyword phrase to target.
+											 */
+											longDesc: () => LocalizedString
+										}
+										match_type: {
+											/**
+											 * Match Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Keyword match type
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * How closely the search query must match: BROAD, PHRASE, or EXACT.
+											 */
+											longDesc: () => LocalizedString
+										}
+										cpc_bid: {
+											/**
+											 * CPC Bid
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Optional CPC bid override
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * An optional CPC bid amount for this keyword. Overrides the ad group bid.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				add_negative_keywords: {
+					/**
+					 * Add Negative Keywords
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Add negative keywords to a campaign
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds campaign-level negative keywords to prevent ads from showing for certain search terms.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						campaign_id: {
+							/**
+							 * Campaign
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The campaign to add negative keywords to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the campaign where the negative keywords will be added.
+							 */
+							longDesc: () => LocalizedString
+						}
+						keywords: {
+							/**
+							 * Negative Keywords
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Negative keywords to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of negative keyword entries to add, each with text and match type.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										text: {
+											/**
+											 * Keyword Text
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The negative keyword text
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The keyword phrase to exclude.
+											 */
+											longDesc: () => LocalizedString
+										}
+										match_type: {
+											/**
+											 * Match Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Keyword match type
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * How closely the search query must match for exclusion: BROAD, PHRASE, or EXACT.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				update_keyword: {
+					/**
+					 * Update Keyword
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update a keyword status or bid
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates an existing keyword in an ad group, allowing you to change its status or CPC bid.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ad_group_id: {
+							/**
+							 * Ad Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ad group containing the keyword
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the ad group that contains the keyword to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						criterion_id: {
+							/**
+							 * Keyword Criterion ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The criterion ID of the keyword to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The criterion ID of the keyword within the ad group.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status: {
+							/**
+							 * Status
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New status for the keyword
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Set the keyword status to ENABLED, PAUSED, or REMOVED.
+							 */
+							longDesc: () => LocalizedString
+						}
+						cpc_bid: {
+							/**
+							 * CPC Bid
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New maximum CPC bid amount
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated maximum CPC bid amount in your account currency.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				remove_keyword: {
+					/**
+					 * Remove Keyword
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove a keyword from an ad group
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes a keyword from the specified ad group.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ad_group_id: {
+							/**
+							 * Ad Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The ad group containing the keyword
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the ad group that contains the keyword to remove.
+							 */
+							longDesc: () => LocalizedString
+						}
+						criterion_id: {
+							/**
+							 * Keyword Criterion ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The criterion ID of the keyword to remove
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The criterion ID of the keyword within the ad group.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_budgets: {
+					/**
+					 * List Budgets
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List campaign budgets
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves all campaign budgets in the Google Ads account.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of budgets to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of budgets to return. Default is 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_budget: {
+					/**
+					 * Create Budget
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new campaign budget
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new campaign budget with a specified daily amount.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Budget Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the budget
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A descriptive name for the campaign budget.
+							 */
+							longDesc: () => LocalizedString
+						}
+						daily_amount: {
+							/**
+							 * Daily Amount
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Daily budget amount in account currency
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The daily budget amount in your account currency (e.g., 50.00 for $50/day).
+							 */
+							longDesc: () => LocalizedString
+						}
+						delivery_method: {
+							/**
+							 * Delivery Method
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * How the budget is spent throughout the day
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * STANDARD spreads the budget evenly. ACCELERATED spends it as fast as possible (deprecated for most campaign types).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_budget: {
+					/**
+					 * Update Budget
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update an existing campaign budget
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the daily amount or name of an existing campaign budget.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						budget_id: {
+							/**
+							 * Budget
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The budget to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the budget to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Budget Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New name for the budget
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated name for the budget. Leave empty to keep the current name.
+							 */
+							longDesc: () => LocalizedString
+						}
+						daily_amount: {
+							/**
+							 * Daily Amount
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New daily budget amount
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated daily budget amount in your account currency.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_bidding_strategies: {
+					/**
+					 * List Bidding Strategies
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List portfolio bidding strategies
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves all portfolio bidding strategies in the Google Ads account.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of strategies to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of bidding strategies to return. Default is 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_bidding_strategy: {
+					/**
+					 * Create Bidding Strategy
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a portfolio bidding strategy
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new portfolio bidding strategy that can be shared across multiple campaigns.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Strategy Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the bidding strategy
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A descriptive name for the portfolio bidding strategy.
+							 */
+							longDesc: () => LocalizedString
+						}
+						type: {
+							/**
+							 * Strategy Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of bidding strategy
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The bidding optimization goal (e.g., Target CPA, Target ROAS, Maximize Conversions).
+							 */
+							longDesc: () => LocalizedString
+						}
+						target_cpa: {
+							/**
+							 * Target CPA
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target cost-per-acquisition amount
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The target CPA in your account currency. Required when strategy type is TARGET_CPA.
+							 */
+							longDesc: () => LocalizedString
+						}
+						target_roas: {
+							/**
+							 * Target ROAS
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Target return on ad spend
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The target ROAS as a ratio (e.g., 3.0 for 300% ROAS). Required when strategy type is TARGET_ROAS.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_bidding_strategy: {
+					/**
+					 * Update Bidding Strategy
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Update a portfolio bidding strategy
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates an existing portfolio bidding strategy.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						strategy_id: {
+							/**
+							 * Bidding Strategy
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The bidding strategy to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the bidding strategy to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Strategy Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New name for the bidding strategy
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated name. Leave empty to keep the current name.
+							 */
+							longDesc: () => LocalizedString
+						}
+						target_cpa: {
+							/**
+							 * Target CPA
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated target CPA amount
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated target CPA in your account currency.
+							 */
+							longDesc: () => LocalizedString
+						}
+						target_roas: {
+							/**
+							 * Target ROAS
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Updated target ROAS
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated target ROAS as a ratio.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				run_campaign_report: {
+					/**
+					 * Run Campaign Report
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Generate a campaign performance report
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Runs a performance report across campaigns with configurable metrics, date range, and filters.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						date_range: {
+							/**
+							 * Date Range
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Predefined date range for the report
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date range for the report. Use predefined ranges like LAST_7_DAYS, LAST_30_DAYS, etc.
+							 */
+							longDesc: () => LocalizedString
+						}
+						start_date: {
+							/**
+							 * Start Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom start date (YYYY-MM-DD)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom start date in YYYY-MM-DD format. Used when Date Range is set to CUSTOM.
+							 */
+							longDesc: () => LocalizedString
+						}
+						end_date: {
+							/**
+							 * End Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom end date (YYYY-MM-DD)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom end date in YYYY-MM-DD format. Used when Date Range is set to CUSTOM.
+							 */
+							longDesc: () => LocalizedString
+						}
+						status_filter: {
+							/**
+							 * Status Filter
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by campaign status
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only include campaigns with the specified status.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of rows
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of rows to return. Default is 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				run_ad_group_report: {
+					/**
+					 * Run Ad Group Report
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Generate an ad group performance report
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Runs a performance report across ad groups with configurable metrics and date range.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						campaign_id: {
+							/**
+							 * Campaign
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by campaign
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only include ad groups from this campaign.
+							 */
+							longDesc: () => LocalizedString
+						}
+						date_range: {
+							/**
+							 * Date Range
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Predefined date range for the report
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date range for the report.
+							 */
+							longDesc: () => LocalizedString
+						}
+						start_date: {
+							/**
+							 * Start Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom start date (YYYY-MM-DD)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom start date. Used when Date Range is CUSTOM.
+							 */
+							longDesc: () => LocalizedString
+						}
+						end_date: {
+							/**
+							 * End Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom end date (YYYY-MM-DD)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom end date. Used when Date Range is CUSTOM.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of rows
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of rows to return. Default is 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				run_keyword_report: {
+					/**
+					 * Run Keyword Report
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Generate a keyword performance report
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Runs a performance report across keywords with metrics like clicks, impressions, CPC, and conversions.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						campaign_id: {
+							/**
+							 * Campaign
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by campaign
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only include keywords from this campaign.
+							 */
+							longDesc: () => LocalizedString
+						}
+						ad_group_id: {
+							/**
+							 * Ad Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by ad group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only include keywords from this ad group.
+							 */
+							longDesc: () => LocalizedString
+						}
+						date_range: {
+							/**
+							 * Date Range
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Predefined date range for the report
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date range for the report.
+							 */
+							longDesc: () => LocalizedString
+						}
+						start_date: {
+							/**
+							 * Start Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom start date (YYYY-MM-DD)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom start date. Used when Date Range is CUSTOM.
+							 */
+							longDesc: () => LocalizedString
+						}
+						end_date: {
+							/**
+							 * End Date
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Custom end date (YYYY-MM-DD)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Custom end date. Used when Date Range is CUSTOM.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of rows
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of rows to return. Default is 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				run_custom_report: {
+					/**
+					 * Run Custom Report
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Run a custom GAQL query
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Execute a raw Google Ads Query Language (GAQL) query for advanced reporting. GAQL supports SELECT, FROM, WHERE, ORDER BY, and LIMIT clauses.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						query: {
+							/**
+							 * GAQL Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The GAQL query to execute
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A Google Ads Query Language query. Example: SELECT campaign.name, metrics.clicks FROM campaign WHERE campaign.status = 'ENABLED' AND segments.date DURING LAST_30_DAYS
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_conversion_actions: {
+					/**
+					 * List Conversion Actions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List all conversion action definitions
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves all conversion actions configured in the Google Ads account.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of conversion actions to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of conversion actions to return. Default is 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				upload_click_conversion: {
+					/**
+					 * Upload Click Conversion
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload an offline click conversion
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Uploads an offline conversion associated with a Google Click ID (GCLID). This closes the loop between ad clicks and offline sales/actions.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						gclid: {
+							/**
+							 * GCLID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Click ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The Google Click ID (GCLID) associated with the conversion. Found in the URL after a user clicks an ad.
+							 */
+							longDesc: () => LocalizedString
+						}
+						conversion_action_id: {
+							/**
+							 * Conversion Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversion action to record
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the conversion action that this conversion should be attributed to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						conversion_date_time: {
+							/**
+							 * Conversion Date/Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When the conversion occurred
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date and time of the conversion in format: yyyy-mm-dd HH:mm:ss+|-HH:mm (e.g., 2026-03-01 12:00:00+00:00).
+							 */
+							longDesc: () => LocalizedString
+						}
+						conversion_value: {
+							/**
+							 * Conversion Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Monetary value of the conversion
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The monetary value of the conversion in your account currency.
+							 */
+							longDesc: () => LocalizedString
+						}
+						currency_code: {
+							/**
+							 * Currency Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ISO 4217 currency code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The currency code for the conversion value (e.g., USD, EUR, GBP).
+							 */
+							longDesc: () => LocalizedString
+						}
+						order_id: {
+							/**
+							 * Order ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Unique order/transaction ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A unique identifier for the order or transaction. Used for deduplication.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				upload_call_conversion: {
+					/**
+					 * Upload Call Conversion
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload an offline call conversion
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Uploads a conversion associated with a phone call from a Google Ads call extension.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						caller_id: {
+							/**
+							 * Caller ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Phone number of the caller
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The phone number of the caller in E.164 format (e.g., +18005550100).
+							 */
+							longDesc: () => LocalizedString
+						}
+						conversion_action_id: {
+							/**
+							 * Conversion Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversion action to record
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the conversion action that this conversion should be attributed to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						conversion_date_time: {
+							/**
+							 * Conversion Date/Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When the conversion occurred
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date and time of the conversion in format: yyyy-mm-dd HH:mm:ss+|-HH:mm.
+							 */
+							longDesc: () => LocalizedString
+						}
+						call_start_date_time: {
+							/**
+							 * Call Start Date/Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When the call started
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date and time when the call started in format: yyyy-mm-dd HH:mm:ss+|-HH:mm.
+							 */
+							longDesc: () => LocalizedString
+						}
+						conversion_value: {
+							/**
+							 * Conversion Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Monetary value of the conversion
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The monetary value of the conversion.
+							 */
+							longDesc: () => LocalizedString
+						}
+						currency_code: {
+							/**
+							 * Currency Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ISO 4217 currency code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The currency code for the conversion value.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				upload_enhanced_conversion: {
+					/**
+					 * Upload Enhanced Conversion
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload an enhanced conversion with user data
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Uploads a conversion using hashed first-party user data (email, phone) instead of a GCLID. User data is automatically SHA-256 hashed before upload for privacy.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						conversion_action_id: {
+							/**
+							 * Conversion Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversion action to record
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the conversion action that this conversion should be attributed to.
+							 */
+							longDesc: () => LocalizedString
+						}
+						conversion_date_time: {
+							/**
+							 * Conversion Date/Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When the conversion occurred
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date and time of the conversion in format: yyyy-mm-dd HH:mm:ss+|-HH:mm.
+							 */
+							longDesc: () => LocalizedString
+						}
+						conversion_value: {
+							/**
+							 * Conversion Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Monetary value of the conversion
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The monetary value of the conversion.
+							 */
+							longDesc: () => LocalizedString
+						}
+						currency_code: {
+							/**
+							 * Currency Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ISO 4217 currency code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The currency code for the conversion value.
+							 */
+							longDesc: () => LocalizedString
+						}
+						email: {
+							/**
+							 * Email
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Customer email address
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The customer email address. Will be normalized and SHA-256 hashed before upload.
+							 */
+							longDesc: () => LocalizedString
+						}
+						phone_number: {
+							/**
+							 * Phone Number
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Customer phone number in E.164 format
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The customer phone number in E.164 format (e.g., +18005550100). Will be SHA-256 hashed before upload.
+							 */
+							longDesc: () => LocalizedString
+						}
+						order_id: {
+							/**
+							 * Order ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Unique order/transaction ID
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A unique identifier for deduplication.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				upload_conversion_adjustment: {
+					/**
+					 * Upload Conversion Adjustment
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Adjust or retract a previously uploaded conversion
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adjusts the value of a previously uploaded conversion or retracts it entirely.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						conversion_action_id: {
+							/**
+							 * Conversion Action
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The conversion action to adjust
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the conversion action of the conversion to adjust.
+							 */
+							longDesc: () => LocalizedString
+						}
+						adjustment_type: {
+							/**
+							 * Adjustment Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Type of adjustment
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * RESTATE to change the conversion value, RETRACTION to remove the conversion entirely.
+							 */
+							longDesc: () => LocalizedString
+						}
+						order_id: {
+							/**
+							 * Order ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Order ID of the conversion to adjust
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The order ID that was provided when the conversion was originally uploaded.
+							 */
+							longDesc: () => LocalizedString
+						}
+						gclid: {
+							/**
+							 * GCLID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * GCLID of the conversion to adjust
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The GCLID associated with the original conversion. Required if Order ID was not set.
+							 */
+							longDesc: () => LocalizedString
+						}
+						adjustment_date_time: {
+							/**
+							 * Adjustment Date/Time
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * When the adjustment occurred
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The date and time of the adjustment in format: yyyy-mm-dd HH:mm:ss+|-HH:mm.
+							 */
+							longDesc: () => LocalizedString
+						}
+						adjusted_value: {
+							/**
+							 * Adjusted Value
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New conversion value
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The new conversion value. Required for RESTATE adjustments.
+							 */
+							longDesc: () => LocalizedString
+						}
+						currency_code: {
+							/**
+							 * Currency Code
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * ISO 4217 currency code
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The currency code for the adjusted value.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				list_customer_lists: {
+					/**
+					 * List Customer Lists
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * List audience/customer match lists
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves all user lists (customer match lists) in the Google Ads account.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of lists to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of customer lists to return. Default is 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_customer_list: {
+					/**
+					 * Create Customer List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new customer match audience list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new CRM-based user list for customer match targeting.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * List Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Name for the customer list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A descriptive name for the customer match list.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Description of the customer list
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A description of the customer list and its intended use.
+							 */
+							longDesc: () => LocalizedString
+						}
+						membership_life_span: {
+							/**
+							 * Membership Life Span
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Days until a member is automatically removed
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of days a user remains on the list. Set to 10000 for no expiration.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_contacts_to_customer_list: {
+					/**
+					 * Add Contacts to Customer List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Upload contacts to a customer match list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds contacts to a customer match list using hashed user data. Email addresses and phone numbers are automatically normalized and SHA-256 hashed before upload.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						user_list_id: {
+							/**
+							 * Customer List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer list to add contacts to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the customer match list where contacts will be added.
+							 */
+							longDesc: () => LocalizedString
+						}
+						contacts: {
+							/**
+							 * Contacts
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of contacts to add
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of contacts with email, phone, or address data to add to the customer list.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										email: {
+											/**
+											 * Email
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Contact email address
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The contact email address. Will be normalized and SHA-256 hashed before upload.
+											 */
+											longDesc: () => LocalizedString
+										}
+										phone_number: {
+											/**
+											 * Phone Number
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Contact phone number in E.164 format
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The contact phone number in E.164 format (e.g., +18005550100). Will be SHA-256 hashed.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				remove_contacts_from_customer_list: {
+					/**
+					 * Remove Contacts from Customer List
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Remove contacts from a customer match list
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes contacts from a customer match list using their identifying information.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						user_list_id: {
+							/**
+							 * Customer List
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The customer list to remove contacts from
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the customer match list to remove contacts from.
+							 */
+							longDesc: () => LocalizedString
+						}
+						contacts: {
+							/**
+							 * Contacts
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of contacts to remove
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of contacts with email, phone, or address data to remove from the customer list.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										email: {
+											/**
+											 * Email
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Contact email address
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The contact email address to match for removal.
+											 */
+											longDesc: () => LocalizedString
+										}
+										phone_number: {
+											/**
+											 * Phone Number
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Contact phone number in E.164 format
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The contact phone number to match for removal.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			triggers: {
+				new_lead_form_submission: {
+					/**
+					 * New Lead Form Submission
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new lead is submitted through a Google Ads lead form extension
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Monitors Google Ads lead form extensions for new submissions. Polls the lead form submission data and triggers for each new lead.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						customer_id: {
+							/**
+							 * Customer Account
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Google Ads customer account to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Google Ads customer account (Customer ID) for this action.
+							 */
+							longDesc: () => LocalizedString
+						}
+						campaign_id: {
+							/**
+							 * Campaign
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by campaign
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Only trigger for lead form submissions from this campaign. Leave empty to monitor all campaigns.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+					event_info: {
+						/**
+						 * Contains information about the lead form submission including contact details, campaign info, and GCLID.
+						 */
+						desc: () => LocalizedString
 					}
 				}
 			}

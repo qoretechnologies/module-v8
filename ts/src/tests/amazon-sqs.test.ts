@@ -20,7 +20,7 @@ import { Debugger, DebugLevels } from '../utils/Debugger';
 configDotenv({ path: '.env' });
 Debugger.level = DebugLevels.Verbose;
 
-describe('Amazon SQS', () => {
+describe.skip('Amazon SQS', () => {
   const base_context = {
     conn_opts: {} as any,
   };

@@ -57,7 +57,8 @@ export const APP_GROUPS = [
   // HR & People
   'HR & People Management',
 
-  // Marketing
+  // Marketing & Advertising
+  'Advertising & Marketing',
   'Marketing Automation',
 
   // Project & Task Management

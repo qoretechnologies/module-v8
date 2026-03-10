@@ -754,7 +754,17 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 }
             }
         }
-        proc = new Process("ts-proxy", args, {
+        string cmd = "ts-proxy";
+        @debug {
+            # When running with --enable-debug, spawn child via qore interpreter
+            # so that @debug blocks in ts-proxy are also active
+            string ts_proxy_path = trim(`which ts-proxy 2>/dev/null`);
+            if (ts_proxy_path.val()) {
+                cmd = "qore";
+                args = ("--enable-debug", ts_proxy_path) + args;
+            }
+        }
+        proc = new Process(cmd, args, {
             "env": env,
             "close_fds": True,
         });
