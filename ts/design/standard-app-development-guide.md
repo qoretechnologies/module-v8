@@ -256,6 +256,59 @@ const options = {
 };
 ```
 
+### Required Groups
+
+When multiple optional fields exist and at least one must be provided (e.g., update actions where
+at least one field to update is required), use `required_groups`. Options sharing the same group
+name tell the UI that at least one option in the group must be filled:
+
+```typescript
+const options = {
+  resource_id: {
+    type: 'string',
+    required: true,
+  },
+  name: {
+    type: 'string',
+    required: false,
+    required_groups: ['update_field'],
+  },
+  status: {
+    type: 'string',
+    required: false,
+    required_groups: ['update_field'],
+    allowed_values: [
+      { value: 'active', display_name: 'Active' },
+      { value: 'paused', display_name: 'Paused' },
+    ],
+  },
+} satisfies TQoreOptions;
+```
+
+This also works inside nested hash fields (e.g., list element types):
+
+```typescript
+contacts: {
+  type: {
+    type: 'list',
+    element_type: {
+      type: 'hash',
+      fields: {
+        email: { type: 'string', required: false, required_groups: ['contact_identifier'] },
+        phone_number: { type: 'string', required: false, required_groups: ['contact_identifier'] },
+      },
+    },
+  },
+},
+```
+
+**Common use cases:**
+- **Update actions** — at least one field to update must be provided (`required_groups: ['update_field']`)
+- **Contact identifiers** — at least one of email/phone/ID must be provided
+- **Destination options** — at least one target (section, project, folder) must be selected
+
+See: `src/apps/todoist/actions/move-task-to-section.action.ts`, `src/apps/youtube/triggers/new-livestream.trigger.ts`
+
 ### Dynamic Types
 
 When an option's type depends on another option's value:

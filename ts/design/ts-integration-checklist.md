@@ -103,6 +103,8 @@ For each option across all actions:
 - [ ] `get_dynamic_type` for options whose type depends on other option values
 - [ ] `on_change: ['refetch']` on parent options that affect dependent options
 - [ ] No `any` type (use `unknown` or specific types)
+- [ ] Update actions: optional updatable fields have `required_groups: ['update_field']` so at least one must be filled
+- [ ] Options where at least one of a group must be provided use `required_groups` with a shared group name
 
 ---
 

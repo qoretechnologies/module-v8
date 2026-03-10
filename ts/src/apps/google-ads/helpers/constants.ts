@@ -29,12 +29,24 @@ export const getGoogleAdsErrorMessage = (error: unknown): string => {
         const msg = e.message || e.error_code || '';
         return typeof msg === 'object' ? JSON.stringify(msg) : String(msg);
       });
-      return messages.join('; ') || JSON.stringify(error);
+      const joined = messages.join('; ');
+      if (joined) {
+        return joined;
+      }
+      try {
+        return JSON.stringify(error);
+      } catch {
+        return String(error);
+      }
     }
     if (errObj.message) {
       return String(errObj.message);
     }
-    return JSON.stringify(error);
+    try {
+      return JSON.stringify(error);
+    } catch {
+      return String(error);
+    }
   }
   return String(error);
 };

@@ -18,10 +18,12 @@ const options = {
   name: {
     type: 'string',
     required: false,
+    required_groups: ['update_field'],
   },
   status: {
     type: 'string',
     required: false,
+    required_groups: ['update_field'],
     allowed_values: [
       { value: 'ENABLED', display_name: 'Enabled' },
       { value: 'PAUSED', display_name: 'Paused' },

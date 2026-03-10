@@ -26,6 +26,7 @@ const options = {
   status: {
     type: 'string',
     required: false,
+    required_groups: ['update_field'],
     allowed_values: [
       { value: 'ENABLED', display_name: 'Enabled' },
       { value: 'PAUSED', display_name: 'Paused' },
@@ -35,6 +36,7 @@ const options = {
   cpc_bid: {
     type: 'float',
     required: false,
+    required_groups: ['update_field'],
   },
 } satisfies TQoreOptions;
 
@@ -54,6 +56,10 @@ const updateKeyword = QoreAppCreator.createLocalizedAction<typeof options>({
 
     if (!criterion_id) {
       throw new GoogleAdsError('Criterion ID is required');
+    }
+
+    if (!status && (cpc_bid === undefined || cpc_bid === null)) {
+      throw new GoogleAdsError('At least one field to update (status or cpc_bid) is required');
     }
 
     const customerId = String(customer_id).replace(/-/g, '');

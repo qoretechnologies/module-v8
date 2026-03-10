@@ -18,14 +18,17 @@ const options = {
   name: {
     type: 'string',
     required: false,
+    required_groups: ['update_field'],
   },
   target_cpa: {
     type: 'float',
     required: false,
+    required_groups: ['update_field'],
   },
   target_roas: {
     type: 'float',
     required: false,
+    required_groups: ['update_field'],
   },
 } satisfies TQoreOptions;
 
@@ -41,6 +44,14 @@ const updateBiddingStrategy = QoreAppCreator.createLocalizedAction<typeof option
 
     if (!strategy_id) {
       throw new GoogleAdsError('Strategy ID is required');
+    }
+
+    if (
+      (name === undefined || name === null || name === '') &&
+      (target_cpa === undefined || target_cpa === null) &&
+      (target_roas === undefined || target_roas === null)
+    ) {
+      throw new GoogleAdsError('At least one field to update (name, target_cpa, or target_roas) is required');
     }
 
     const customerId = String(customer_id).replace(/-/g, '');

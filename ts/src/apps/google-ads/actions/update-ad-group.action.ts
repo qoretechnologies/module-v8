@@ -1,8 +1,8 @@
 // Copyright 2026 Qore Technologies, s.r.o.
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
-import { enums, MutateOperation, resources, toMicros } from 'google-ads-api';
+import { enums, MutateOperation, resources } from 'google-ads-api';
 import { GOOGLE_ADS_APP_NAME, GoogleAdsError } from '../constants';
-import { CUSTOMER_ID_OPTION, getGoogleAdsCustomerFromContext, getGoogleAdsErrorMessage } from '../helpers/constants';
+import { CUSTOMER_ID_OPTION, getGoogleAdsCustomerFromContext, getGoogleAdsErrorMessage, toMicros } from '../helpers/constants';
 import { getGoogleAdsAdGroupAllowedValues } from '../helpers/get-ad-group-allowed-values';
 
 const action = 'update_ad_group';
@@ -18,10 +18,12 @@ const options = {
   name: {
     type: 'string',
     required: false,
+    required_groups: ['update_field'],
   },
   status: {
     type: 'string',
     required: false,
+    required_groups: ['update_field'],
     allowed_values: [
       { value: 'ENABLED', display_name: 'Enabled' },
       { value: 'PAUSED', display_name: 'Paused' },
@@ -31,6 +33,7 @@ const options = {
   cpc_bid: {
     type: 'float',
     required: false,
+    required_groups: ['update_field'],
   },
 } satisfies TQoreOptions;
 

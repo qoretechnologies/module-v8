@@ -39,10 +39,12 @@ const options = {
           email: {
             type: 'string',
             required: false,
+            required_groups: ['contact_identifier'],
           },
           phone_number: {
             type: 'string',
             required: false,
+            required_groups: ['contact_identifier'],
           },
         },
       },
@@ -187,7 +189,7 @@ const addContactsToCustomerList = QoreAppCreator.createLocalizedAction<typeof op
       return {
         job_resource_name: jobResourceName,
         user_list_id,
-        contacts_added: contacts.length,
+        contacts_added: validContacts.length,
         status: 'RUNNING',
       };
     } catch (error: unknown) {

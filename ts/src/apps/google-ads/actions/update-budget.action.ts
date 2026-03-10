@@ -18,10 +18,12 @@ const options = {
   name: {
     type: 'string',
     required: false,
+    required_groups: ['update_field'],
   },
   daily_amount: {
     type: 'float',
     required: false,
+    required_groups: ['update_field'],
   },
 } satisfies TQoreOptions;
 
@@ -37,6 +39,10 @@ const updateBudget = QoreAppCreator.createLocalizedAction<typeof options>({
 
     if (!budget_id) {
       throw new GoogleAdsError('Budget ID is required');
+    }
+
+    if ((name === undefined || name === null || name === '') && daily_amount === undefined) {
+      throw new GoogleAdsError('At least one field to update (name or daily_amount) is required');
     }
 
     const customerId = String(customer_id).replace(/-/g, '');
