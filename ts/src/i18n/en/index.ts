@@ -25,6 +25,7 @@ import Canva from './apps/Canva';
 import Claude from './apps/Claude';
 import ClickUp from './apps/ClickUp';
 import Confluence from './apps/Confluence';
+import Contentful from './apps/Contentful';
 import CopperCrm from './apps/CopperCrm';
 import Craft from './apps/Craft';
 import DocusignESignature from './apps/DocusignESignature';
@@ -181,6 +182,7 @@ const en = {
     Shopify,
     Zoom,
     Confluence,
+    Contentful,
     Bitbucket,
     FacebookPages,
     Paddle,
