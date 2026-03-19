@@ -47,13 +47,13 @@ public class TypeScriptActionGoogleApiDataProvider inherits TypeScriptActionApiD
             ActionFunctionContext fctx, *hash<AsyncCallInfo> get_dynamic_request_type,
             *hash<AsyncCallInfo> get_dynamic_response_type)
             : TypeScriptActionApiDataProvider(name, api, fctx, get_dynamic_request_type, get_dynamic_response_type) {
-        google_api = new GoogleApiDataProvider(new RestClient({"url": "https://www.googleapis.com"}),
+        google_api = new GoogleApiDataProvider(new RestClientIo({"url": "https://www.googleapis.com"}),
             google_action.app.api, google_action.resource, google_action.path_args ?? google_action.app.path_args);
     }
 
     private synchronized checkRestClient(*hash<auto> action_opts) {
         TypeScriptActionDataProviderBase::checkRestClient(action_opts);
-        google_api.setRestClient(rest);
+        google_api.setRestClient(conn.getAsync());
     }
 
     #! Makes a request and returns the response
