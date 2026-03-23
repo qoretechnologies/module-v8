@@ -19,6 +19,16 @@ const ContentfulAppEn = {
 
 **Important:** The token is only shown once. Make sure to copy and save it securely.
 
+## Authorizing Your Token for an Organization
+
+If your Contentful account belongs to an organization, you must **authorize your token** for that organization before it can access spaces:
+
+1. Go to your [Personal Access Tokens](https://app.contentful.com/account/profile/cma_tokens) page
+2. Find your token in the list
+3. Click **Authorize** next to the organization you want the token to access
+
+Without this step, API requests will fail with an \`OrganizationAccessGrantRequired\` error, even though the token is valid.
+
 ## Permissions
 
 The CMA token inherits the permissions of the user who created it. Ensure the user has appropriate access to the spaces and environments you want to manage.`,

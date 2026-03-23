@@ -106412,6 +106412,16 @@ type RootTranslation = {
 			​
 			​*​*​I​m​p​o​r​t​a​n​t​:​*​*​ ​T​h​e​ ​t​o​k​e​n​ ​i​s​ ​o​n​l​y​ ​s​h​o​w​n​ ​o​n​c​e​.​ ​M​a​k​e​ ​s​u​r​e​ ​t​o​ ​c​o​p​y​ ​a​n​d​ ​s​a​v​e​ ​i​t​ ​s​e​c​u​r​e​l​y​.​
 			​
+			​#​#​ ​A​u​t​h​o​r​i​z​i​n​g​ ​Y​o​u​r​ ​T​o​k​e​n​ ​f​o​r​ ​a​n​ ​O​r​g​a​n​i​z​a​t​i​o​n​
+			​
+			​I​f​ ​y​o​u​r​ ​C​o​n​t​e​n​t​f​u​l​ ​a​c​c​o​u​n​t​ ​b​e​l​o​n​g​s​ ​t​o​ ​a​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​,​ ​y​o​u​ ​m​u​s​t​ ​*​*​a​u​t​h​o​r​i​z​e​ ​y​o​u​r​ ​t​o​k​e​n​*​*​ ​f​o​r​ ​t​h​a​t​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​b​e​f​o​r​e​ ​i​t​ ​c​a​n​ ​a​c​c​e​s​s​ ​s​p​a​c​e​s​:​
+			​
+			​1​.​ ​G​o​ ​t​o​ ​y​o​u​r​ ​[​P​e​r​s​o​n​a​l​ ​A​c​c​e​s​s​ ​T​o​k​e​n​s​]​(​h​t​t​p​s​:​/​/​a​p​p​.​c​o​n​t​e​n​t​f​u​l​.​c​o​m​/​a​c​c​o​u​n​t​/​p​r​o​f​i​l​e​/​c​m​a​_​t​o​k​e​n​s​)​ ​p​a​g​e​
+			​2​.​ ​F​i​n​d​ ​y​o​u​r​ ​t​o​k​e​n​ ​i​n​ ​t​h​e​ ​l​i​s​t​
+			​3​.​ ​C​l​i​c​k​ ​*​*​A​u​t​h​o​r​i​z​e​*​*​ ​n​e​x​t​ ​t​o​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​h​e​ ​t​o​k​e​n​ ​t​o​ ​a​c​c​e​s​s​
+			​
+			​W​i​t​h​o​u​t​ ​t​h​i​s​ ​s​t​e​p​,​ ​A​P​I​ ​r​e​q​u​e​s​t​s​ ​w​i​l​l​ ​f​a​i​l​ ​w​i​t​h​ ​a​n​ ​`​O​r​g​a​n​i​z​a​t​i​o​n​A​c​c​e​s​s​G​r​a​n​t​R​e​q​u​i​r​e​d​`​ ​e​r​r​o​r​,​ ​e​v​e​n​ ​t​h​o​u​g​h​ ​t​h​e​ ​t​o​k​e​n​ ​i​s​ ​v​a​l​i​d​.​
+			​
 			​#​#​ ​P​e​r​m​i​s​s​i​o​n​s​
 			​
 			​T​h​e​ ​C​M​A​ ​t​o​k​e​n​ ​i​n​h​e​r​i​t​s​ ​t​h​e​ ​p​e​r​m​i​s​s​i​o​n​s​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​c​r​e​a​t​e​d​ ​i​t​.​ ​E​n​s​u​r​e​ ​t​h​e​ ​u​s​e​r​ ​h​a​s​ ​a​p​p​r​o​p​r​i​a​t​e​ ​a​c​c​e​s​s​ ​t​o​ ​t​h​e​ ​s​p​a​c​e​s​ ​a​n​d​ ​e​n​v​i​r​o​n​m​e​n​t​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​a​n​a​g​e​.
@@ -238691,6 +238701,16 @@ export type TranslationFunctions = {
 			6. Click **Generate** and copy the generated token
 		
 			**Important:** The token is only shown once. Make sure to copy and save it securely.
+		
+			## Authorizing Your Token for an Organization
+		
+			If your Contentful account belongs to an organization, you must **authorize your token** for that organization before it can access spaces:
+		
+			1. Go to your [Personal Access Tokens](https://app.contentful.com/account/profile/cma_tokens) page
+			2. Find your token in the list
+			3. Click **Authorize** next to the organization you want the token to access
+		
+			Without this step, API requests will fail with an `OrganizationAccessGrantRequired` error, even though the token is valid.
 		
 			## Permissions
 		

@@ -5,6 +5,7 @@ import { CONTENTFUL_APP_NAME, ContentfulError } from '../../constants';
 import { getContentfulEntryAllowedValues } from '../../helpers/get-entry-allowed-values';
 import { contentfulBaseWithContentTypeOptions } from '../../helpers/shared-options';
 import { flattenEntry, getDefaultLocale, wrapFieldsWithLocale } from '../../helpers/contentful-type-mapping';
+import { getContentfulEntryFieldOptions, getContentfulEntryDynamicResponseType } from '../../helpers/get-dynamic-entry-type';
 import { ContentfulEntryResponseType } from '../../response-types';
 
 const action = 'update_entry';
@@ -21,6 +22,8 @@ const options = {
     type: 'hash',
     required: true,
     required_groups: ['update_field'],
+    get_dynamic_type: getContentfulEntryFieldOptions,
+    depends_on: ['content_type_id'],
   },
 } satisfies TQoreOptions;
 
@@ -30,6 +33,7 @@ const UpdateEntry = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   response_type: ContentfulEntryResponseType,
+  get_dynamic_response_type: getContentfulEntryDynamicResponseType,
   api_function: async (obj, _opts, context) => {
     const { space_id, entry_id, fields } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },

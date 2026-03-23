@@ -10,7 +10,7 @@ export const getContentfulEntryAllowedValues: TQoreGetAllowedValuesFunction<
   const environmentId = context?.opts?.environment_id || 'master';
   const contentTypeId = context?.opts?.content_type_id;
 
-  if (!context?.conn_opts?.access_token || !spaceId) {
+  if (!context?.conn_opts?.token || !spaceId) {
     return [];
   }
 

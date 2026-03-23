@@ -1,4 +1,7 @@
-import contentful from 'contentful-management';
+import * as contentfulModule from 'contentful-management';
+
+// Handle both ESM default import and CJS require
+const contentful = (contentfulModule as unknown as { default?: typeof contentfulModule }).default || contentfulModule;
 import { getQoreContextRequiredValues } from '../../global/helpers';
 import { ContentfulError } from './constants';
 
@@ -7,14 +10,14 @@ import { ContentfulError } from './constants';
  * Use for operations that don't need a specific space (e.g., listing spaces).
  */
 export const getContentfulClient = (context: Record<string, unknown> | undefined) => {
-  const { access_token } = getQoreContextRequiredValues({
+  const { token } = getQoreContextRequiredValues({
     context,
-    connectionFields: ['access_token'],
+    connectionFields: ['token'],
     ErrorClass: ContentfulError,
   });
 
   return contentful.createClient(
-    { accessToken: access_token },
+    { accessToken: token },
     { type: 'plain' }
   );
 };
@@ -28,14 +31,14 @@ export const getContentfulScopedClient = (
   spaceId: string,
   environmentId?: string
 ) => {
-  const { access_token } = getQoreContextRequiredValues({
+  const { token } = getQoreContextRequiredValues({
     context,
-    connectionFields: ['access_token'],
+    connectionFields: ['token'],
     ErrorClass: ContentfulError,
   });
 
   return contentful.createClient(
-    { accessToken: access_token },
+    { accessToken: token },
     {
       type: 'plain',
       defaults: {

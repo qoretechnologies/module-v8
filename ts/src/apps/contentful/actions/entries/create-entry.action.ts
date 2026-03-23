@@ -4,6 +4,7 @@ import { getContentfulScopedClient } from '../../client';
 import { CONTENTFUL_APP_NAME, ContentfulError } from '../../constants';
 import { contentfulBaseWithContentTypeOptions } from '../../helpers/shared-options';
 import { flattenEntry, getDefaultLocale, wrapFieldsWithLocale } from '../../helpers/contentful-type-mapping';
+import { getContentfulEntryFieldOptions, getContentfulEntryDynamicResponseType } from '../../helpers/get-dynamic-entry-type';
 import { ContentfulEntryResponseType } from '../../response-types';
 
 const action = 'create_entry';
@@ -13,6 +14,8 @@ const options = {
   fields: {
     type: 'hash',
     required: true,
+    get_dynamic_type: getContentfulEntryFieldOptions,
+    depends_on: ['content_type_id'],
   },
   publish: {
     type: 'bool',
@@ -27,6 +30,7 @@ const CreateEntry = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   response_type: ContentfulEntryResponseType,
+  get_dynamic_response_type: getContentfulEntryDynamicResponseType,
   api_function: async (obj, _opts, context) => {
     const { space_id, content_type_id, fields } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },

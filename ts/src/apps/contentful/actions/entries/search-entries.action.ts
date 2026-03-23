@@ -4,6 +4,7 @@ import { getContentfulScopedClient } from '../../client';
 import { CONTENTFUL_APP_NAME, ContentfulError } from '../../constants';
 import { contentfulBaseWithContentTypeOptions } from '../../helpers/shared-options';
 import { flattenEntry, getDefaultLocale } from '../../helpers/contentful-type-mapping';
+import { getContentfulEntryDynamicResponseType } from '../../helpers/get-dynamic-entry-type';
 import { ContentfulEntryListResponseType } from '../../response-types';
 
 const action = 'search_entries';
@@ -32,6 +33,7 @@ const SearchEntries = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   response_type: ContentfulEntryListResponseType,
+  get_dynamic_response_type: getContentfulEntryDynamicResponseType,
   api_function: async (obj, _opts, context) => {
     const { space_id, content_type_id } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },

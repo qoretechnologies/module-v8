@@ -7,7 +7,7 @@ export const getContentfulEnvironmentAllowedValues: TQoreGetAllowedValuesFunctio
 > = async (context) => {
   const spaceId = context?.opts?.space_id;
 
-  if (!context?.conn_opts?.access_token || !spaceId) {
+  if (!context?.conn_opts?.token || !spaceId) {
     return [];
   }
 

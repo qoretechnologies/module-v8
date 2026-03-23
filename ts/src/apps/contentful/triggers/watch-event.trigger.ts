@@ -46,9 +46,9 @@ const WatchEvent = QoreAppCreator.createLocalizedTrigger({
   webhook_method: 'POST',
 
   webhook_register: async (context, url) => {
-    const { access_token, space_id } = getQoreContextRequiredValues({
+    const { token, space_id } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['access_token'],
+      connectionFields: ['token'],
       optionFields: ['space_id'],
       ErrorClass: ContentfulError,
     });
@@ -59,7 +59,7 @@ const WatchEvent = QoreAppCreator.createLocalizedTrigger({
       const response = await QorusRequest.post<{ data: { sys: { id: string } } }>(
         {
           headers: {
-            Authorization: `Bearer ${access_token}`,
+            Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json',
           },
           data: {
@@ -85,9 +85,9 @@ const WatchEvent = QoreAppCreator.createLocalizedTrigger({
   },
 
   webhook_deregister: async (context, _url, regInfo: { webhook: { id: string } }) => {
-    const { access_token, space_id } = getQoreContextRequiredValues({
+    const { token, space_id } = getQoreContextRequiredValues({
       context,
-      connectionFields: ['access_token'],
+      connectionFields: ['token'],
       optionFields: ['space_id'],
       ErrorClass: ContentfulError,
     });
@@ -101,7 +101,7 @@ const WatchEvent = QoreAppCreator.createLocalizedTrigger({
       await QorusRequest.deleteReq<unknown>(
         {
           headers: {
-            Authorization: `Bearer ${access_token}`,
+            Authorization: `Bearer ${token}`,
           },
           path: `/spaces/${space_id}/webhook_definitions/${webhookId}`,
         },

@@ -8,7 +8,7 @@ export const getContentfulContentTypeAllowedValues: TQoreGetAllowedValuesFunctio
   const spaceId = context?.opts?.space_id;
   const environmentId = context?.opts?.environment_id || 'master';
 
-  if (!context?.conn_opts?.access_token || !spaceId) {
+  if (!context?.conn_opts?.token || !spaceId) {
     return [];
   }
 

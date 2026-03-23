@@ -30,6 +30,6 @@ export default (locale: Locales) =>
     },
     rest_modifiers: {
       options: CONTENTFUL_CONN_OPTIONS,
-      required_options: 'access_token',
+      required_options: 'token',
     },
   }) satisfies TQoreAppWithActions;

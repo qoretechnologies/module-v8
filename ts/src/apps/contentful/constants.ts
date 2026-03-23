@@ -15,7 +15,7 @@ export const CONTENTFUL_APP_LOGO =
 export const CONTENTFUL_API_URL = 'https://api.contentful.com';
 
 export const CONTENTFUL_CONN_OPTIONS = {
-  access_token: {
+  token: {
     type: 'string',
     display_name: 'Content Management API Token',
     short_desc: 'Your Contentful Content Management API access token.',

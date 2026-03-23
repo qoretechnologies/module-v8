@@ -35,7 +35,9 @@ import UpdateField from '../apps/contentful/actions/content-types/update-field.a
 import DeleteField from '../apps/contentful/actions/content-types/delete-field.action';
 import SearchContentTypes from '../apps/contentful/actions/content-types/search-content-types.action';
 import WatchEvent from '../apps/contentful/triggers/watch-event.trigger';
+import { getContentfulEntryFieldOptions, getContentfulEntryDynamicResponseType } from '../apps/contentful/helpers/get-dynamic-entry-type';
 import { getContentfulScopedClient } from '../apps/contentful/client';
+import { CONTENTFUL_API_URL } from '../apps/contentful/constants';
 import { delay } from '../global/helpers';
 import { checkAllowedValues, skipOnTransientError } from './utils';
 import { Debugger, DebugLevels } from '../utils/Debugger';
@@ -43,14 +45,28 @@ import { Debugger, DebugLevels } from '../utils/Debugger';
 Debugger.level = DebugLevels.Verbose;
 configDotenv({ path: '.env' });
 
+/**
+ * Safely call api_function on an action, narrowing the type via `in` check.
+ */
+const callAction = async (
+  action: Record<string, unknown>,
+  opts: Record<string, unknown>,
+  context: Record<string, unknown>
+): Promise<Record<string, unknown>> => {
+  if (!('api_function' in action) || typeof action.api_function !== 'function') {
+    throw new Error('api_function not found in action');
+  }
+  return action.api_function(opts, undefined, context);
+};
+
 describe('Should test Contentful actions', () => {
   const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
   const spaceId = process.env.CONTENTFUL_SPACE_ID;
-  const hasCredentials = !!(accessToken && spaceId);
+  const hasCredentials = !!(accessToken);
 
   const baseContext = {
     conn_opts: {
-      access_token: accessToken || '',
+      token: accessToken || '',
     } as Record<string, unknown>,
   };
 
@@ -60,7 +76,37 @@ describe('Should test Contentful actions', () => {
   };
 
   let testContentTypeId: string | undefined;
-  let testEntryId: string | undefined;
+
+  // ==================== Ping URL Test ====================
+  describe('Should test Contentful ping URL', () => {
+    it('Should successfully ping the Contentful API', skipOnTransientError(async () => {
+      if (!hasCredentials) {
+        return;
+      }
+      const response = await fetch(`${CONTENTFUL_API_URL}/spaces`, {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      });
+      expect(response.ok).toBe(true);
+      const data = await response.json();
+      expect(data).toBeDefined();
+      expect(data.items).toBeDefined();
+      expect(Array.isArray(data.items)).toBe(true);
+    }));
+
+    it('Should fail to ping with invalid credentials', async () => {
+      const response = await fetch(`${CONTENTFUL_API_URL}/spaces`, {
+        method: 'GET',
+        headers: {
+          Authorization: 'Bearer invalid-token-12345',
+        },
+      });
+      expect(response.ok).toBe(false);
+      expect(response.status).toBe(401);
+    });
+  });
 
   // ==================== Allowed Values Tests ====================
   describe('Should test Contentful allowed values', () => {
@@ -74,6 +120,10 @@ describe('Should test Contentful actions', () => {
       }
       const allowedValues = await getContentfulSpaceAllowedValues(baseContext);
       checkAllowedValues(allowedValues, { checkNonEmpty: true });
+      if(!baseOpts.space_id && spaceId) {
+        expect(allowedValues.some(av => av.value === spaceId)).toBe(true);
+        baseOpts.space_id = spaceId;
+      }
     }));
 
     it('Should return empty space allowed values when connection options are missing', async () => {
@@ -172,6 +222,64 @@ describe('Should test Contentful actions', () => {
     });
   });
 
+  // ==================== Dynamic Type Tests ====================
+  describe('Should test Contentful dynamic types', () => {
+    afterEach(async () => {
+      await delay(500);
+    });
+
+    it('Should return dynamic field options for a content type', skipOnTransientError(async () => {
+      if (!hasCredentials || !testContentTypeId) {
+        return;
+      }
+      const dynamicType = await getContentfulEntryFieldOptions({
+        ...baseContext,
+        opts: { space_id: spaceId, content_type_id: testContentTypeId },
+      } as unknown as Record<string, unknown>) as unknown as Record<string, unknown>;
+      expect(dynamicType).toBeDefined();
+      expect(dynamicType.type).toBe('hash');
+      expect(dynamicType.fields).toBeDefined();
+      const fields = dynamicType.fields as Record<string, unknown>;
+      expect(Object.keys(fields).length).toBeGreaterThan(0);
+      // The 'test' content type has a 'something' field of type Symbol
+      expect(fields.something).toBeDefined();
+    }));
+
+    it('Should return dynamic response type for a content type', skipOnTransientError(async () => {
+      if (!hasCredentials || !testContentTypeId) {
+        return;
+      }
+      const dynamicType = await getContentfulEntryDynamicResponseType({
+        ...baseContext,
+        opts: { space_id: spaceId, content_type_id: testContentTypeId },
+      } as unknown as Record<string, unknown>) as unknown as Record<string, unknown>;
+      expect(dynamicType).toBeDefined();
+      expect(dynamicType.type).toBe('hash');
+      expect(dynamicType.fields).toBeDefined();
+      const fields = dynamicType.fields as Record<string, unknown>;
+      // Should include system fields
+      expect(fields.id).toBeDefined();
+      expect(fields.content_type).toBeDefined();
+      expect(fields.created_at).toBeDefined();
+      expect(fields.updated_at).toBeDefined();
+      expect(fields.version).toBeDefined();
+      // Should include content type-specific fields
+      expect(fields.something).toBeDefined();
+    }));
+
+    it('Should return fallback hash type when content_type_id is missing', async () => {
+      try {
+        await getContentfulEntryFieldOptions({
+          ...baseContext,
+          opts: { space_id: spaceId },
+        } as unknown as Record<string, unknown>);
+        fail('Should have thrown');
+      } catch (error) {
+        expect(error).toBeInstanceOf(ContentfulError);
+      }
+    });
+  });
+
   // ==================== Content Type Actions Tests ====================
   describe('Should test Contentful content type actions', () => {
     let createdContentTypeId: string | undefined;
@@ -201,9 +309,9 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials) {
         return;
       }
-      const result = await SearchContentTypes.api_function!(
+      const result = await callAction(
+        SearchContentTypes as unknown as Record<string, unknown>,
         { ...baseOpts, limit: 5 },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -214,9 +322,9 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials || !testContentTypeId) {
         return;
       }
-      const result = await GetContentType.api_function!(
+      const result = await callAction(
+        GetContentType as unknown as Record<string, unknown>,
         { ...baseOpts, content_type_id: testContentTypeId },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -230,7 +338,8 @@ describe('Should test Contentful actions', () => {
         return;
       }
       const uniqueName = `Test CT ${Date.now()}`;
-      const result = await CreateContentType.api_function!(
+      const result = await callAction(
+        CreateContentType as unknown as Record<string, unknown>,
         {
           ...baseOpts,
           name: uniqueName,
@@ -240,15 +349,14 @@ describe('Should test Contentful actions', () => {
             { id: 'body', name: 'Body', type: 'Text', required: false, localized: false },
           ],
         },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
       expect(result.id).toBeDefined();
       expect(result.name).toBe(uniqueName);
       expect(result.fields).toBeDefined();
-      expect(result.fields.length).toBe(2);
-      createdContentTypeId = result.id;
+      expect((result.fields as unknown[]).length).toBe(2);
+      createdContentTypeId = result.id as string;
     }));
 
     it('Should update a content type', skipOnTransientError(async () => {
@@ -256,14 +364,14 @@ describe('Should test Contentful actions', () => {
         return;
       }
       const updatedName = `Updated CT ${Date.now()}`;
-      const result = await UpdateContentType.api_function!(
+      const result = await callAction(
+        UpdateContentType as unknown as Record<string, unknown>,
         {
           ...baseOpts,
           content_type_id: createdContentTypeId,
           name: updatedName,
           description: 'Updated description',
         },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -274,7 +382,8 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials || !createdContentTypeId) {
         return;
       }
-      const result = await AddField.api_function!(
+      const result = await callAction(
+        AddField as unknown as Record<string, unknown>,
         {
           ...baseOpts,
           content_type_id: createdContentTypeId,
@@ -284,19 +393,20 @@ describe('Should test Contentful actions', () => {
           required: false,
           localized: false,
         },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
-      expect(result.fields.length).toBe(3);
-      expect(result.fields.some((f: Record<string, unknown>) => f.id === 'testNumber')).toBe(true);
+      const fields = result.fields as Record<string, unknown>[];
+      expect(fields.length).toBe(3);
+      expect(fields.some((f) => f.id === 'testNumber')).toBe(true);
     }));
 
     it('Should update a field of a content type', skipOnTransientError(async () => {
       if (!hasCredentials || !createdContentTypeId) {
         return;
       }
-      const result = await UpdateField.api_function!(
+      const result = await callAction(
+        UpdateField as unknown as Record<string, unknown>,
         {
           ...baseOpts,
           content_type_id: createdContentTypeId,
@@ -304,22 +414,22 @@ describe('Should test Contentful actions', () => {
           field_name: 'Updated Number Field',
           required: true,
         },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
-      const updatedField = result.fields.find((f: Record<string, unknown>) => f.id === 'testNumber');
+      const fields = result.fields as Record<string, unknown>[];
+      const updatedField = fields.find((f) => f.id === 'testNumber');
       expect(updatedField).toBeDefined();
-      expect(updatedField.name).toBe('Updated Number Field');
+      expect(updatedField!.name).toBe('Updated Number Field');
     }));
 
     it('Should activate a content type', skipOnTransientError(async () => {
       if (!hasCredentials || !createdContentTypeId) {
         return;
       }
-      const result = await ActivateContentType.api_function!(
+      const result = await callAction(
+        ActivateContentType as unknown as Record<string, unknown>,
         { ...baseOpts, content_type_id: createdContentTypeId },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -330,9 +440,9 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials || !createdContentTypeId) {
         return;
       }
-      const result = await DeactivateContentType.api_function!(
+      const result = await callAction(
+        DeactivateContentType as unknown as Record<string, unknown>,
         { ...baseOpts, content_type_id: createdContentTypeId },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -343,26 +453,27 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials || !createdContentTypeId) {
         return;
       }
-      const result = await DeleteField.api_function!(
+      const result = await callAction(
+        DeleteField as unknown as Record<string, unknown>,
         {
           ...baseOpts,
           content_type_id: createdContentTypeId,
           field_id: 'testNumber',
         },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
-      expect(result.fields.every((f: Record<string, unknown>) => f.id !== 'testNumber')).toBe(true);
+      const fields = result.fields as Record<string, unknown>[];
+      expect(fields.every((f) => f.id !== 'testNumber')).toBe(true);
     }));
 
     it('Should delete a content type', skipOnTransientError(async () => {
       if (!hasCredentials || !createdContentTypeId) {
         return;
       }
-      const result = await DeleteContentType.api_function!(
+      const result = await callAction(
+        DeleteContentType as unknown as Record<string, unknown>,
         { ...baseOpts, content_type_id: createdContentTypeId },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -393,7 +504,7 @@ describe('Should test Contentful actions', () => {
         }
         try {
           const entry = await client.entry.get({ entryId: createdEntryId });
-          if ((entry.sys as Record<string, unknown>).archivedVersion) {
+          if ((entry.sys as unknown as Record<string, unknown>).archivedVersion) {
             await client.entry.unarchive({ entryId: createdEntryId });
           }
         } catch {
@@ -409,9 +520,9 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials || !testContentTypeId) {
         return;
       }
-      const result = await SearchEntries.api_function!(
+      const result = await callAction(
+        SearchEntries as unknown as Record<string, unknown>,
         { ...baseOpts, content_type_id: testContentTypeId, limit: 5 },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -422,29 +533,28 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials || !testContentTypeId) {
         return;
       }
-      const result = await CreateEntry.api_function!(
+      const result = await callAction(
+        CreateEntry as unknown as Record<string, unknown>,
         {
           ...baseOpts,
           content_type_id: testContentTypeId,
-          fields: { title: `Test Entry ${Date.now()}` },
+          fields: { something: `Test Entry ${Date.now()}` },
           publish: false,
         },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
       expect(result.id).toBeDefined();
-      createdEntryId = result.id;
-      testEntryId = result.id;
+      createdEntryId = result.id as string;
     }));
 
     it('Should get an entry', skipOnTransientError(async () => {
       if (!hasCredentials || !createdEntryId) {
         return;
       }
-      const result = await GetEntry.api_function!(
+      const result = await callAction(
+        GetEntry as unknown as Record<string, unknown>,
         { ...baseOpts, content_type_id: testContentTypeId, entry_id: createdEntryId },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -455,39 +565,39 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials || !createdEntryId) {
         return;
       }
-      const updatedTitle = `Updated Entry ${Date.now()}`;
-      const result = await UpdateEntry.api_function!(
+      const updatedValue = `Updated Entry ${Date.now()}`;
+      const result = await callAction(
+        UpdateEntry as unknown as Record<string, unknown>,
         {
           ...baseOpts,
           content_type_id: testContentTypeId,
           entry_id: createdEntryId,
-          fields: { title: updatedTitle },
+          fields: { something: updatedValue },
         },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
-      expect(result.title).toBe(updatedTitle);
+      expect(result.something).toBe(updatedValue);
     }));
 
     it('Should get an entry with replacement', skipOnTransientError(async () => {
       if (!hasCredentials || !createdEntryId) {
         return;
       }
-      const result = await GetEntryWithReplacement.api_function!(
+      const result = await callAction(
+        GetEntryWithReplacement as unknown as Record<string, unknown>,
         {
           ...baseOpts,
           content_type_id: testContentTypeId,
           entry_id: createdEntryId,
           replacements: [{ tag: 'Updated', value: 'Replaced' }],
         },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
       expect(result.id).toBe(createdEntryId);
-      if (typeof result.title === 'string') {
-        expect(result.title).toContain('Replaced');
+      if (typeof result.something === 'string') {
+        expect(result.something).toContain('Replaced');
       }
     }));
 
@@ -495,9 +605,9 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials || !createdEntryId) {
         return;
       }
-      const result = await PublishEntry.api_function!(
+      const result = await callAction(
+        PublishEntry as unknown as Record<string, unknown>,
         { ...baseOpts, entry_id: createdEntryId },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -509,9 +619,9 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials || !createdEntryId) {
         return;
       }
-      const result = await UnpublishEntry.api_function!(
+      const result = await callAction(
+        UnpublishEntry as unknown as Record<string, unknown>,
         { ...baseOpts, entry_id: createdEntryId },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -522,9 +632,9 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials || !createdEntryId) {
         return;
       }
-      const result = await ArchiveEntry.api_function!(
+      const result = await callAction(
+        ArchiveEntry as unknown as Record<string, unknown>,
         { ...baseOpts, entry_id: createdEntryId, archive: true },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -536,9 +646,9 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials || !createdEntryId) {
         return;
       }
-      const result = await ArchiveEntry.api_function!(
+      const result = await callAction(
+        ArchiveEntry as unknown as Record<string, unknown>,
         { ...baseOpts, entry_id: createdEntryId, archive: false },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -550,9 +660,9 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials || !createdEntryId) {
         return;
       }
-      const result = await DeleteEntry.api_function!(
+      const result = await callAction(
+        DeleteEntry as unknown as Record<string, unknown>,
         { ...baseOpts, content_type_id: testContentTypeId, entry_id: createdEntryId },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -583,7 +693,7 @@ describe('Should test Contentful actions', () => {
         }
         try {
           const asset = await client.asset.get({ assetId: createdAssetId });
-          if ((asset.sys as Record<string, unknown>).archivedVersion) {
+          if ((asset.sys as unknown as Record<string, unknown>).archivedVersion) {
             await client.asset.unarchive({ assetId: createdAssetId });
           }
         } catch {
@@ -599,9 +709,9 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials) {
         return;
       }
-      const result = await SearchAssets.api_function!(
+      const result = await callAction(
+        SearchAssets as unknown as Record<string, unknown>,
         { ...baseOpts, limit: 5 },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -612,32 +722,31 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials) {
         return;
       }
-      const result = await CreateAsset.api_function!(
+      const result = await callAction(
+        CreateAsset as unknown as Record<string, unknown>,
         {
           ...baseOpts,
           title: `Test Asset ${Date.now()}`,
           description: 'Test asset created by integration tests',
           file_name: 'test-image.png',
-          file_url:
-            'https://images.ctfassets.net/fo9twyrwpveg/6wsHKoGRMQ2WYCUaYmoKeY/d3e8e4e9f34eed9df3b4ab29cc6a5bd5/hedgehog.jpg',
-          content_type: 'image/jpeg',
+          file_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/100px-PNG_transparency_demonstration_1.png',
+          content_type: 'image/png',
           publish: false,
         },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
       expect(result.id).toBeDefined();
-      createdAssetId = result.id;
-    }), 30000);
+      createdAssetId = result.id as string;
+    }), 60000);
 
     it('Should get an asset', skipOnTransientError(async () => {
       if (!hasCredentials || !createdAssetId) {
         return;
       }
-      const result = await GetAsset.api_function!(
+      const result = await callAction(
+        GetAsset as unknown as Record<string, unknown>,
         { ...baseOpts, asset_id: createdAssetId },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -649,13 +758,13 @@ describe('Should test Contentful actions', () => {
         return;
       }
       const updatedTitle = `Updated Asset ${Date.now()}`;
-      const result = await UpdateAsset.api_function!(
+      const result = await callAction(
+        UpdateAsset as unknown as Record<string, unknown>,
         {
           ...baseOpts,
           asset_id: createdAssetId,
           title: updatedTitle,
         },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -666,9 +775,9 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials || !createdAssetId) {
         return;
       }
-      const result = await PublishAsset.api_function!(
+      const result = await callAction(
+        PublishAsset as unknown as Record<string, unknown>,
         { ...baseOpts, asset_id: createdAssetId },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -679,9 +788,9 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials || !createdAssetId) {
         return;
       }
-      const result = await UnpublishAsset.api_function!(
+      const result = await callAction(
+        UnpublishAsset as unknown as Record<string, unknown>,
         { ...baseOpts, asset_id: createdAssetId },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -692,9 +801,9 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials || !createdAssetId) {
         return;
       }
-      const result = await ArchiveAsset.api_function!(
+      const result = await callAction(
+        ArchiveAsset as unknown as Record<string, unknown>,
         { ...baseOpts, asset_id: createdAssetId, archive: true },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -706,9 +815,9 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials || !createdAssetId) {
         return;
       }
-      const result = await ArchiveAsset.api_function!(
+      const result = await callAction(
+        ArchiveAsset as unknown as Record<string, unknown>,
         { ...baseOpts, asset_id: createdAssetId, archive: false },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -720,9 +829,9 @@ describe('Should test Contentful actions', () => {
       if (!hasCredentials || !createdAssetId) {
         return;
       }
-      const result = await DeleteAsset.api_function!(
+      const result = await callAction(
+        DeleteAsset as unknown as Record<string, unknown>,
         { ...baseOpts, asset_id: createdAssetId },
-        undefined,
         baseContext as unknown as Record<string, unknown>
       );
       expect(result).toBeDefined();
@@ -749,7 +858,9 @@ describe('Should test Contentful actions', () => {
       );
       expect(result).toBeDefined();
 
-      const eventInfoFields = Object.keys(trigger.event_info!.type.fields);
+      const eventInfo = trigger.event_info!;
+      const eventType = eventInfo.type as { fields: Record<string, unknown> };
+      const eventInfoFields = Object.keys(eventType.fields);
       const exampleFields = Object.keys(result);
 
       const missingFields = eventInfoFields.filter((f) => !exampleFields.includes(f));
@@ -765,14 +876,14 @@ describe('Should test Contentful actions', () => {
     it('Should throw error with invalid access token', async () => {
       const invalidContext = {
         conn_opts: {
-          access_token: 'invalid-token-12345',
+          token: 'invalid-token-12345',
         } as Record<string, unknown>,
       };
 
       await expect(
-        GetEntry.api_function!(
+        callAction(
+          GetEntry as unknown as Record<string, unknown>,
           { space_id: spaceId || 'test', entry_id: 'nonexistent' },
-          undefined,
           invalidContext as unknown as Record<string, unknown>
         )
       ).rejects.toThrow(ContentfulError);
@@ -783,9 +894,9 @@ describe('Should test Contentful actions', () => {
         return;
       }
       await expect(
-        GetEntry.api_function!(
+        callAction(
+          GetEntry as unknown as Record<string, unknown>,
           { ...baseOpts, content_type_id: testContentTypeId, entry_id: 'nonexistent-entry-id' },
-          undefined,
           baseContext as unknown as Record<string, unknown>
         )
       ).rejects.toThrow(ContentfulError);
@@ -796,9 +907,9 @@ describe('Should test Contentful actions', () => {
         return;
       }
       await expect(
-        GetAsset.api_function!(
+        callAction(
+          GetAsset as unknown as Record<string, unknown>,
           { ...baseOpts, asset_id: 'nonexistent-asset-id' },
-          undefined,
           baseContext as unknown as Record<string, unknown>
         )
       ).rejects.toThrow(ContentfulError);
@@ -809,9 +920,9 @@ describe('Should test Contentful actions', () => {
         return;
       }
       await expect(
-        GetContentType.api_function!(
+        callAction(
+          GetContentType as unknown as Record<string, unknown>,
           { ...baseOpts, content_type_id: 'nonexistent-content-type-id' },
-          undefined,
           baseContext as unknown as Record<string, unknown>
         )
       ).rejects.toThrow(ContentfulError);
@@ -822,9 +933,9 @@ describe('Should test Contentful actions', () => {
         return;
       }
       await expect(
-        CreateEntry.api_function!(
+        callAction(
+          CreateEntry as unknown as Record<string, unknown>,
           { space_id: spaceId } as Record<string, unknown>,
-          undefined,
           baseContext as unknown as Record<string, unknown>
         )
       ).rejects.toThrow();

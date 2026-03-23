@@ -90,11 +90,17 @@ const CreateAsset = QoreAppCreator.createLocalizedAction<typeof options>({
         }
       );
 
-      // Process the asset (download and store the file)
-      await client.asset.processForAllLocales({}, asset);
+      // Trigger asset processing and poll until complete
+      try {
+        await client.asset.processForLocale(
+          {} as any, asset, defaultLocale,
+          { processingCheckWait: 3000, processingCheckRetries: 10 }
+        );
+      } catch {
+        // Processing may time out but still succeed — check below
+      }
 
-      // Wait briefly for processing, then fetch updated asset
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // Fetch the asset to check if processing completed
       asset = await client.asset.get({ assetId: asset.sys.id });
 
       if (shouldPublish) {

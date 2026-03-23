@@ -5,6 +5,7 @@ import { CONTENTFUL_APP_NAME, ContentfulError } from '../../constants';
 import { getContentfulEntryAllowedValues } from '../../helpers/get-entry-allowed-values';
 import { contentfulBaseWithContentTypeOptions } from '../../helpers/shared-options';
 import { flattenEntry, getDefaultLocale } from '../../helpers/contentful-type-mapping';
+import { getContentfulEntryDynamicResponseType } from '../../helpers/get-dynamic-entry-type';
 import { ContentfulEntryResponseType } from '../../response-types';
 
 const action = 'get_entry_with_replacement';
@@ -38,6 +39,7 @@ const GetEntryWithReplacement = QoreAppCreator.createLocalizedAction<typeof opti
   action_code: EQoreAppActionCode.ACTION,
   options,
   response_type: ContentfulEntryResponseType,
+  get_dynamic_response_type: getContentfulEntryDynamicResponseType,
   api_function: async (obj, _opts, context) => {
     const { space_id, entry_id, replacements } = getQoreContextRequiredValues({
       context: { ...context, opts: obj },

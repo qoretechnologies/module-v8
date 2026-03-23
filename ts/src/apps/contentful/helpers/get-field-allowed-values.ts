@@ -9,7 +9,7 @@ export const getContentfulFieldAllowedValues: TQoreGetAllowedValuesFunction<
   const environmentId = context?.opts?.environment_id || 'master';
   const contentTypeId = context?.opts?.content_type_id;
 
-  if (!context?.conn_opts?.access_token || !spaceId || !contentTypeId) {
+  if (!context?.conn_opts?.token || !spaceId || !contentTypeId) {
     return [];
   }
 
