@@ -354,7 +354,8 @@ jobs:
             libnghttp2-dev \
             doxygen \
             libyaml-dev \
-            uuid-dev
+            uuid-dev \
+            libeigen3-dev
 
       # Install OpenSSL 3.5+ with native QUIC support (SSL_set_quic_tls_cbs)
       # System OpenSSL 3.0.x lacks QUIC APIs needed by ngtcp2 for Qore's HTTP/3 support
