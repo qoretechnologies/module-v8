@@ -355,6 +355,9 @@ jobs:
             doxygen \
             libyaml-dev \
             uuid-dev \
+            libeigen3-dev \
+            libprotobuf-dev \
+            protobuf-compiler \
             libeigen3-dev
 
       # Install OpenSSL 3.5+ with native QUIC support (SSL_set_quic_tls_cbs)

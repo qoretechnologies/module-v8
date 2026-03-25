@@ -172,7 +172,7 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
         google_api_provider = GoogleApiParentDataProviderClass.newObjectArgs(args);
 
         # set a dummy REST client
-        google_api_provider.setRestClient(new RestClient({"url": "https://www.googleapis.com"}));
+        google_api_provider.setRestClient(new RestClientIo({"url": "https://www.googleapis.com"}));
 
         # register actions
         registerActions(app, google_api_provider);
@@ -273,7 +273,7 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
             if (!p.getLogger() && logger) {
                 p.setLogger(logger);
             }
-            cast<GoogleDataProviderBase>(p).setRestClient(conn.get());
+            cast<GoogleDataProviderBase>(p).setRestClient(conn.getAsync());
             return p;
         }
     }

@@ -146,8 +146,9 @@ export class SlackApiClient extends QoreApiClient {
   }
 
   /**
-   * Fetch paginated data with POST requests
-   * Slack uses POST for paginated endpoints too
+   * Fetch paginated data using GET with query parameters.
+   * Slack's cursor-based pagination requires params as query parameters —
+   * the cursor is ignored when sent in a JSON POST body.
    */
   async fetchPaginatedPost<ItemType = unknown>(
     options: SlackCursorOptions
@@ -172,19 +173,20 @@ export class SlackApiClient extends QoreApiClient {
           break;
         }
 
-        // Build request body
-        const body: Record<string, any> = {
+        // Build query parameters
+        const params: Record<string, any> = {
           limit: options.limit || 200,
           ...options.params,
         };
 
         if (cursor) {
-          body.cursor = cursor;
+          params.cursor = cursor;
         }
 
-        // Make POST request
-        const response = await this.post<any>(options.path, body, {
+        // Use GET with query params — Slack ignores cursor in JSON POST body
+        const response = await this.get<any>(options.path, {
           token: options.token,
+          params,
         });
 
         // Extract items
