@@ -23,6 +23,9 @@ export const getNotionDiscussionsAllowedValues: TQoreGetAllowedValuesFunction<
     const notion = createNotionClient(token);
     const allDiscussions: IQoreAllowedValue<string>[] = [];
 
+    const TIMEOUT_MS = 10_000;
+    const startTime = Date.now();
+
     const pagesResponse = await notion.search({
       filter: {
         property: 'object',
@@ -36,6 +39,11 @@ export const getNotionDiscussionsAllowedValues: TQoreGetAllowedValuesFunction<
     });
 
     for (const page of pagesResponse.results as PageObjectResponse[]) {
+      if (allDiscussions.length > 0 && Date.now() - startTime >= TIMEOUT_MS) {
+        Debugger.log('Discussion fetch timed out after 10s, returning partial results');
+        break;
+      }
+
       try {
         const commentsResponse = await notion.comments.list({
           block_id: page.id,
