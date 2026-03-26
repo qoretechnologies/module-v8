@@ -357,8 +357,8 @@ jobs:
             uuid-dev \
             libeigen3-dev \
             libprotobuf-dev \
-            protobuf-compiler \
-            libeigen3-dev
+            libprotoc-dev \
+            protobuf-compiler
 
       # Install OpenSSL 3.5+ with native QUIC support (SSL_set_quic_tls_cbs)
       # System OpenSSL 3.0.x lacks QUIC APIs needed by ngtcp2 for Qore's HTTP/3 support
