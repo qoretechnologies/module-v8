@@ -1457,6 +1457,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@contentful/rich-text-types@npm:^16.6.1":
+  version: 16.8.5
+  resolution: "@contentful/rich-text-types@npm:16.8.5"
+  checksum: 10c0/0af82d501bb26d854fa3bc68136db1f0738428135066876062370637f219cd51f10abecf8e02a72c2cf9eb012523add21f4a3f72af4981a7ad4c95a9bbcb237f
+  languageName: node
+  linkType: hard
+
 "@cspotcode/source-map-support@npm:^0.8.0":
   version: 0.8.1
   resolution: "@cspotcode/source-map-support@npm:0.8.1"
@@ -4906,6 +4913,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rollup/rollup-linux-x64-gnu@npm:^4.18.0":
+  version: 4.59.0
+  resolution: "@rollup/rollup-linux-x64-gnu@npm:4.59.0"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
 "@rtsao/scc@npm:^1.1.0":
   version: 1.1.0
   resolution: "@rtsao/scc@npm:1.1.0"
@@ -6844,7 +6858,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.6.7":
+"axios@npm:^1.13.5, axios@npm:^1.6.7":
   version: 1.13.6
   resolution: "axios@npm:1.13.6"
   dependencies:
@@ -7625,6 +7639,35 @@ __metadata:
   dependencies:
     json5: "npm:^1.0.1"
   checksum: 10c0/74c96654eaa035c0e1e4610cdb9554d8eccfe236196386f9a1df70203bdd4deca85f77b0c6019f174fa58c992ebefa41ff5fbf59a2654c36030371f4affc5567
+  languageName: node
+  linkType: hard
+
+"contentful-management@npm:^11.74.0":
+  version: 11.74.0
+  resolution: "contentful-management@npm:11.74.0"
+  dependencies:
+    "@contentful/rich-text-types": "npm:^16.6.1"
+    axios: "npm:^1.13.5"
+    contentful-sdk-core: "npm:^9.4.4"
+    fast-copy: "npm:^3.0.0"
+    globals: "npm:^15.15.0"
+  checksum: 10c0/9b53bb096a3319d4287fd1697dc51ce99a09ed253f1d1bc9d2572e7ba1e178efe032c1ee1d49aa7df4fdca22c1b4955dd9ffbf659f864e6523f47c244cdf8c1a
+  languageName: node
+  linkType: hard
+
+"contentful-sdk-core@npm:^9.4.4":
+  version: 9.4.4
+  resolution: "contentful-sdk-core@npm:9.4.4"
+  dependencies:
+    "@rollup/rollup-linux-x64-gnu": "npm:^4.18.0"
+    fast-copy: "npm:^3.0.2"
+    lodash: "npm:^4.17.23"
+    process: "npm:^0.11.10"
+    qs: "npm:^6.15.0"
+  dependenciesMeta:
+    "@rollup/rollup-linux-x64-gnu":
+      optional: true
+  checksum: 10c0/70d011fded18274a13bf86213b71916e4b94057e0393b0d3c1da5478002ffbe816db4803644b3f8fb3cec488062645241504eca2121313c6df09f61b85012cfd
   languageName: node
   linkType: hard
 
@@ -9012,6 +9055,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-copy@npm:^3.0.0, fast-copy@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "fast-copy@npm:3.0.2"
+  checksum: 10c0/02e8b9fd03c8c024d2987760ce126456a0e17470850b51e11a1c3254eed6832e4733ded2d93316c82bc0b36aeb991ad1ff48d1ba95effe7add7c3ab8d8eb554a
+  languageName: node
+  linkType: hard
+
 "fast-deep-equal@npm:^3.1.1, fast-deep-equal@npm:^3.1.3":
   version: 3.1.3
   resolution: "fast-deep-equal@npm:3.1.3"
@@ -9618,7 +9668,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^15.11.0":
+"globals@npm:^15.11.0, globals@npm:^15.15.0":
   version: 15.15.0
   resolution: "globals@npm:15.15.0"
   checksum: 10c0/f9ae80996392ca71316495a39bec88ac43ae3525a438b5626cd9d5ce9d5500d0a98a266409605f8cd7241c7acf57c354a48111ea02a767ba4f374b806d6861fe
@@ -11603,6 +11653,13 @@ __metadata:
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: 10c0/d8cbea072bb08655bb4c989da418994b073a608dffa608b09ac04b43a791b12aeae7cd7ad919aa4c925f33b48490b5cfe6c1f71d827956071dae2e7bb3a6b74c
+  languageName: node
+  linkType: hard
+
+"lodash@npm:^4.17.23":
+  version: 4.17.23
+  resolution: "lodash@npm:4.17.23"
+  checksum: 10c0/1264a90469f5bb95d4739c43eb6277d15b6d9e186df4ac68c3620443160fc669e2f14c11e7d8b2ccf078b81d06147c01a8ccced9aab9f9f63d50dcf8cace6bf6
   languageName: node
   linkType: hard
 
@@ -13813,6 +13870,7 @@ __metadata:
     axios: "npm:^1.12.0"
     azure-devops-node-api: "npm:^15.1.1"
     brace-expansion: "npm:^4.0.1"
+    contentful-management: "npm:^11.74.0"
     copyfiles: "npm:^2.4.1"
     cross-env: "npm:^10.1.0"
     dayjs: "npm:^1.11.18"
@@ -13873,6 +13931,15 @@ __metadata:
   dependencies:
     side-channel: "npm:^1.1.0"
   checksum: 10c0/8ea5d91bf34f440598ee389d4a7d95820e3b837d3fd9f433871f7924801becaa0cd3b3b4628d49a7784d06a8aea9bc4554d2b6d8d584e2d221dc06238a42909c
+  languageName: node
+  linkType: hard
+
+"qs@npm:^6.15.0":
+  version: 6.15.0
+  resolution: "qs@npm:6.15.0"
+  dependencies:
+    side-channel: "npm:^1.1.0"
+  checksum: 10c0/ff341078a78a991d8a48b4524d52949211447b4b1ad907f489cac0770cbc346a28e47304455c0320e5fb000f8762d64b03331e3b71865f663bf351bcba8cdb4b
   languageName: node
   linkType: hard
 

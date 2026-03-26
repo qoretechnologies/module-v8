@@ -38,6 +38,7 @@ import canva from '../apps/canva';
 import claude from '../apps/claude';
 import clickup from '../apps/clickup';
 import confluence from '../apps/confluence';
+import contentful from '../apps/contentful';
 import coppercrm from '../apps/coppercrm';
 import craft from '../apps/craft';
 import dropbox from '../apps/dropbox';
@@ -153,6 +154,7 @@ const NEW_APPS = {
   claude,
   clickup,
   confluence,
+  contentful,
   coppercrm,
   craft,
   dropbox,
