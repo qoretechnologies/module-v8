@@ -54,6 +54,8 @@ env:
   MAILCHIMP_DATACENTER: ${{ fromJson(secrets.TEST_VARIABLES).MAILCHIMP_DATACENTER }}
   INTERCOM_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).INTERCOM_TOKEN }}
   ATTIO_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).ATTIO_TOKEN }}
+  CONTENTFUL_ACCESS_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).CONTENTFUL_ACCESS_TOKEN }}
+  CONTENTFUL_SPACE_ID: ${{ fromJson(secrets.TEST_VARIABLES).CONTENTFUL_SPACE_ID }}
   GOOGLE_SHEETS_REFRESH_TOKEN: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_SHEETS_REFRESH_TOKEN }}
   GOOGLE_SHEETS_CLIENT_ID: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_SHEETS_CLIENT_ID }}
   GOOGLE_SHEETS_CLIENT_SECRET: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_SHEETS_CLIENT_SECRET }}
@@ -355,6 +357,7 @@ jobs:
             uuid-dev \
             libeigen3-dev \
             libprotobuf-dev \
+            libprotoc-dev \
             protobuf-compiler
 
       # Install OpenSSL 3.5+ with native QUIC support (SSL_set_quic_tls_cbs)

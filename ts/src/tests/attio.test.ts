@@ -346,7 +346,7 @@ describe('Should test attio actions', () => {
   });
 
   describe('Should test attio record based helpers', () => {
-    const table = 'test_objects';
+    const table = 'objects';
 
     it('Should get table list', async () => {
       const result = await getAttioTableList(baseContext);

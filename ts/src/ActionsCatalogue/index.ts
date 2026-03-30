@@ -37,6 +37,7 @@ import calendly from '../apps/calendly';
 import canva from '../apps/canva';
 import clickup from '../apps/clickup';
 import confluence from '../apps/confluence';
+import contentful from '../apps/contentful';
 import coppercrm from '../apps/coppercrm';
 import craft from '../apps/craft';
 import dropbox from '../apps/dropbox';
@@ -149,6 +150,7 @@ const NEW_APPS = {
   canva,
   clickup,
   confluence,
+  contentful,
   coppercrm,
   craft,
   dropbox,

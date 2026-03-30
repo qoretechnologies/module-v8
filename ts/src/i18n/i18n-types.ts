@@ -106374,6 +106374,2555 @@ type RootTranslation = {
 				}
 			}
 		}
+		Contentful: {
+			/**
+			 * C​o​n​t​e​n​t​f​u​l
+			 */
+			displayName: string
+			groups: {
+				/**
+				 * D​o​c​u​m​e​n​t​s​ ​&​ ​D​o​c​u​m​e​n​t​a​t​i​o​n
+				 */
+				'0': string
+			}
+			/**
+			 * C​o​n​n​e​c​t​ ​t​o​ ​C​o​n​t​e​n​t​f​u​l​ ​t​o​ ​m​a​n​a​g​e​ ​y​o​u​r​ ​c​o​n​t​e​n​t​,​ ​a​s​s​e​t​s​,​ ​a​n​d​ ​c​o​n​t​e​n​t​ ​m​o​d​e​l​s
+			 */
+			shortDesc: string
+			/**
+			 * I​n​t​e​g​r​a​t​e​ ​w​i​t​h​ ​C​o​n​t​e​n​t​f​u​l​ ​t​o​ ​a​u​t​o​m​a​t​e​ ​c​o​n​t​e​n​t​ ​m​a​n​a​g​e​m​e​n​t​ ​w​o​r​k​f​l​o​w​s​.​ ​C​r​e​a​t​e​,​ ​u​p​d​a​t​e​,​ ​p​u​b​l​i​s​h​,​ ​a​n​d​ ​m​a​n​a​g​e​ ​e​n​t​r​i​e​s​,​ ​a​s​s​e​t​s​,​ ​a​n​d​ ​c​o​n​t​e​n​t​ ​t​y​p​e​s​.​ ​M​o​n​i​t​o​r​ ​c​o​n​t​e​n​t​ ​c​h​a​n​g​e​s​ ​w​i​t​h​ ​r​e​a​l​-​t​i​m​e​ ​w​e​b​h​o​o​k​ ​t​r​i​g​g​e​r​s​.​ ​T​h​i​s​ ​i​n​t​e​g​r​a​t​i​o​n​ ​p​r​o​v​i​d​e​s​ ​f​u​l​l​ ​a​c​c​e​s​s​ ​t​o​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​C​o​n​t​e​n​t​ ​M​a​n​a​g​e​m​e​n​t​ ​A​P​I​ ​f​o​r​ ​c​o​m​p​r​e​h​e​n​s​i​v​e​ ​h​e​a​d​l​e​s​s​ ​C​M​S​ ​a​u​t​o​m​a​t​i​o​n​.
+			 */
+			longDesc: string
+			connectionMessage: {
+				/**
+				 * C​o​n​n​e​c​t​ ​t​o​ ​C​o​n​t​e​n​t​f​u​l
+				 */
+				title: string
+				/**
+				 * T​o​ ​c​o​n​n​e​c​t​ ​t​o​ ​C​o​n​t​e​n​t​f​u​l​,​ ​y​o​u​ ​w​i​l​l​ ​n​e​e​d​ ​a​ ​*​*​C​o​n​t​e​n​t​ ​M​a​n​a​g​e​m​e​n​t​ ​A​P​I​ ​(​C​M​A​)​ ​T​o​k​e​n​*​*​.​
+			​
+			​#​#​ ​G​e​t​t​i​n​g​ ​Y​o​u​r​ ​C​M​A​ ​T​o​k​e​n​
+			​
+			​1​.​ ​L​o​g​ ​i​n​ ​t​o​ ​y​o​u​r​ ​[​C​o​n​t​e​n​t​f​u​l​]​(​h​t​t​p​s​:​/​/​a​p​p​.​c​o​n​t​e​n​t​f​u​l​.​c​o​m​)​ ​a​c​c​o​u​n​t​
+			​2​.​ ​G​o​ ​t​o​ ​*​*​S​e​t​t​i​n​g​s​*​*​ ​(​g​e​a​r​ ​i​c​o​n​ ​i​n​ ​t​h​e​ ​t​o​p​ ​n​a​v​i​g​a​t​i​o​n​)​
+			​3​.​ ​S​e​l​e​c​t​ ​*​*​C​M​A​ ​t​o​k​e​n​s​*​*​ ​f​r​o​m​ ​t​h​e​ ​l​e​f​t​ ​s​i​d​e​b​a​r​
+			​4​.​ ​C​l​i​c​k​ ​*​*​C​r​e​a​t​e​ ​p​e​r​s​o​n​a​l​ ​a​c​c​e​s​s​ ​t​o​k​e​n​*​*​
+			​5​.​ ​G​i​v​e​ ​y​o​u​r​ ​t​o​k​e​n​ ​a​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​(​e​.​g​.​,​ ​"​Q​o​r​e​ ​I​n​t​e​g​r​a​t​i​o​n​"​)​
+			​6​.​ ​C​l​i​c​k​ ​*​*​G​e​n​e​r​a​t​e​*​*​ ​a​n​d​ ​c​o​p​y​ ​t​h​e​ ​g​e​n​e​r​a​t​e​d​ ​t​o​k​e​n​
+			​
+			​*​*​I​m​p​o​r​t​a​n​t​:​*​*​ ​T​h​e​ ​t​o​k​e​n​ ​i​s​ ​o​n​l​y​ ​s​h​o​w​n​ ​o​n​c​e​.​ ​M​a​k​e​ ​s​u​r​e​ ​t​o​ ​c​o​p​y​ ​a​n​d​ ​s​a​v​e​ ​i​t​ ​s​e​c​u​r​e​l​y​.​
+			​
+			​#​#​ ​A​u​t​h​o​r​i​z​i​n​g​ ​Y​o​u​r​ ​T​o​k​e​n​ ​f​o​r​ ​a​n​ ​O​r​g​a​n​i​z​a​t​i​o​n​
+			​
+			​I​f​ ​y​o​u​r​ ​C​o​n​t​e​n​t​f​u​l​ ​a​c​c​o​u​n​t​ ​b​e​l​o​n​g​s​ ​t​o​ ​a​n​ ​o​r​g​a​n​i​z​a​t​i​o​n​,​ ​y​o​u​ ​m​u​s​t​ ​*​*​a​u​t​h​o​r​i​z​e​ ​y​o​u​r​ ​t​o​k​e​n​*​*​ ​f​o​r​ ​t​h​a​t​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​b​e​f​o​r​e​ ​i​t​ ​c​a​n​ ​a​c​c​e​s​s​ ​s​p​a​c​e​s​:​
+			​
+			​1​.​ ​G​o​ ​t​o​ ​y​o​u​r​ ​[​P​e​r​s​o​n​a​l​ ​A​c​c​e​s​s​ ​T​o​k​e​n​s​]​(​h​t​t​p​s​:​/​/​a​p​p​.​c​o​n​t​e​n​t​f​u​l​.​c​o​m​/​a​c​c​o​u​n​t​/​p​r​o​f​i​l​e​/​c​m​a​_​t​o​k​e​n​s​)​ ​p​a​g​e​
+			​2​.​ ​F​i​n​d​ ​y​o​u​r​ ​t​o​k​e​n​ ​i​n​ ​t​h​e​ ​l​i​s​t​
+			​3​.​ ​C​l​i​c​k​ ​*​*​A​u​t​h​o​r​i​z​e​*​*​ ​n​e​x​t​ ​t​o​ ​t​h​e​ ​o​r​g​a​n​i​z​a​t​i​o​n​ ​y​o​u​ ​w​a​n​t​ ​t​h​e​ ​t​o​k​e​n​ ​t​o​ ​a​c​c​e​s​s​
+			​
+			​W​i​t​h​o​u​t​ ​t​h​i​s​ ​s​t​e​p​,​ ​A​P​I​ ​r​e​q​u​e​s​t​s​ ​w​i​l​l​ ​f​a​i​l​ ​w​i​t​h​ ​a​n​ ​`​O​r​g​a​n​i​z​a​t​i​o​n​A​c​c​e​s​s​G​r​a​n​t​R​e​q​u​i​r​e​d​`​ ​e​r​r​o​r​,​ ​e​v​e​n​ ​t​h​o​u​g​h​ ​t​h​e​ ​t​o​k​e​n​ ​i​s​ ​v​a​l​i​d​.​
+			​
+			​#​#​ ​P​e​r​m​i​s​s​i​o​n​s​
+			​
+			​T​h​e​ ​C​M​A​ ​t​o​k​e​n​ ​i​n​h​e​r​i​t​s​ ​t​h​e​ ​p​e​r​m​i​s​s​i​o​n​s​ ​o​f​ ​t​h​e​ ​u​s​e​r​ ​w​h​o​ ​c​r​e​a​t​e​d​ ​i​t​.​ ​E​n​s​u​r​e​ ​t​h​e​ ​u​s​e​r​ ​h​a​s​ ​a​p​p​r​o​p​r​i​a​t​e​ ​a​c​c​e​s​s​ ​t​o​ ​t​h​e​ ​s​p​a​c​e​s​ ​a​n​d​ ​e​n​v​i​r​o​n​m​e​n​t​s​ ​y​o​u​ ​w​a​n​t​ ​t​o​ ​m​a​n​a​g​e​.
+				 */
+				content: string
+			}
+			actions: {
+				get_entry: {
+					/**
+					 * G​e​t​ ​a​n​ ​E​n​t​r​y
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​t​t​r​i​b​u​t​e​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​n​t​r​y
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​s​i​n​g​l​e​ ​e​n​t​r​y​ ​b​y​ ​i​t​s​ ​I​D​ ​f​r​o​m​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​s​p​a​c​e​ ​a​n​d​ ​e​n​v​i​r​o​n​m​e​n​t​.​ ​R​e​t​u​r​n​s​ ​a​l​l​ ​e​n​t​r​y​ ​f​i​e​l​d​s​ ​w​i​t​h​ ​t​h​e​i​r​ ​v​a​l​u​e​s​ ​i​n​ ​t​h​e​ ​d​e​f​a​u​l​t​ ​l​o​c​a​l​e​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * E​n​t​r​i​e​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​e​n​t​r​y​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						content_type_id: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​e​n​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​f​i​l​t​e​r​ ​e​n​t​r​i​e​s​ ​b​y​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						entry_id: {
+							/**
+							 * E​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​t​r​y​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​n​t​r​y​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_entry_with_replacement: {
+					/**
+					 * G​e​t​ ​a​n​ ​E​n​t​r​y​ ​w​i​t​h​ ​R​e​p​l​a​c​e​m​e​n​t
+					 */
+					displayName: string
+					/**
+					 * R​e​p​l​a​c​e​s​ ​t​e​x​t​ ​f​i​e​l​d​s​ ​w​i​t​h​ ​n​e​w​ ​v​a​l​u​e​s​ ​u​s​i​n​g​ ​s​p​e​c​i​f​i​c​ ​t​a​g​s​;​ ​r​e​t​u​r​n​s​ ​n​e​w​ ​v​a​l​u​e​s​ ​a​s​ ​o​u​t​p​u​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​n​ ​e​n​t​r​y​ ​a​n​d​ ​p​e​r​f​o​r​m​s​ ​t​e​x​t​ ​r​e​p​l​a​c​e​m​e​n​t​s​ ​o​n​ ​a​l​l​ ​s​t​r​i​n​g​ ​f​i​e​l​d​s​.​ ​F​o​r​ ​e​a​c​h​ ​r​e​p​l​a​c​e​m​e​n​t​ ​p​a​i​r​,​ ​a​l​l​ ​o​c​c​u​r​r​e​n​c​e​s​ ​o​f​ ​t​h​e​ ​t​a​g​ ​a​r​e​ ​r​e​p​l​a​c​e​d​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​v​a​l​u​e​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​t​e​m​p​l​a​t​e​-​b​a​s​e​d​ ​c​o​n​t​e​n​t​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * E​n​t​r​i​e​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​e​n​t​r​y​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						content_type_id: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​e​n​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​f​i​l​t​e​r​ ​e​n​t​r​i​e​s​ ​b​y​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						entry_id: {
+							/**
+							 * E​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​t​r​y​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​a​n​d​ ​a​p​p​l​y​ ​r​e​p​l​a​c​e​m​e​n​t​s​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​n​t​r​y​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+						replacements: {
+							/**
+							 * R​e​p​l​a​c​e​m​e​n​t​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​t​a​g​/​v​a​l​u​e​ ​p​a​i​r​s​ ​f​o​r​ ​t​e​x​t​ ​r​e​p​l​a​c​e​m​e​n​t
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​a​ ​l​i​s​t​ ​o​f​ ​r​e​p​l​a​c​e​m​e​n​t​ ​p​a​i​r​s​.​ ​E​a​c​h​ ​p​a​i​r​ ​h​a​s​ ​a​ ​"​t​a​g​"​ ​(​p​l​a​c​e​h​o​l​d​e​r​ ​t​o​ ​f​i​n​d​)​ ​a​n​d​ ​a​ ​"​v​a​l​u​e​"​ ​(​t​e​x​t​ ​t​o​ ​r​e​p​l​a​c​e​ ​i​t​ ​w​i​t​h​)​.​ ​A​l​l​ ​s​t​r​i​n​g​ ​f​i​e​l​d​s​ ​i​n​ ​t​h​e​ ​e​n​t​r​y​ ​w​i​l​l​ ​b​e​ ​p​r​o​c​e​s​s​e​d​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										tag: {
+											/**
+											 * T​a​g
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​t​a​g​/​p​l​a​c​e​h​o​l​d​e​r​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​i​n​ ​t​e​x​t​ ​f​i​e​l​d​s
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​a​g​ ​o​r​ ​p​l​a​c​e​h​o​l​d​e​r​ ​t​e​x​t​ ​t​o​ ​s​e​a​r​c​h​ ​f​o​r​ ​w​i​t​h​i​n​ ​a​l​l​ ​s​t​r​i​n​g​ ​f​i​e​l​d​s​ ​o​f​ ​t​h​e​ ​e​n​t​r​y​.
+											 */
+											longDesc: string
+										}
+										value: {
+											/**
+											 * V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * T​h​e​ ​r​e​p​l​a​c​e​m​e​n​t​ ​v​a​l​u​e
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​t​e​x​t​ ​t​h​a​t​ ​w​i​l​l​ ​r​e​p​l​a​c​e​ ​a​l​l​ ​o​c​c​u​r​r​e​n​c​e​s​ ​o​f​ ​t​h​e​ ​t​a​g​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				create_entry: {
+					/**
+					 * C​r​e​a​t​e​ ​a​n​ ​E​n​t​r​y
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​e​n​t​r​y
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​e​n​t​r​y​ ​o​f​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​i​n​ ​t​h​e​ ​g​i​v​e​n​ ​s​p​a​c​e​ ​a​n​d​ ​e​n​v​i​r​o​n​m​e​n​t​.​ ​O​p​t​i​o​n​a​l​l​y​ ​p​u​b​l​i​s​h​e​s​ ​t​h​e​ ​e​n​t​r​y​ ​i​m​m​e​d​i​a​t​e​l​y​ ​a​f​t​e​r​ ​c​r​e​a​t​i​o​n​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * E​n​t​r​i​e​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​e​n​t​r​y​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						content_type_id: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​e​n​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​h​a​t​ ​d​e​f​i​n​e​s​ ​t​h​e​ ​s​c​h​e​m​a​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​e​n​t​r​y​.
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​e​n​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​a​s​ ​a​ ​k​e​y​-​v​a​l​u​e​ ​o​b​j​e​c​t​.​ ​K​e​y​s​ ​s​h​o​u​l​d​ ​m​a​t​c​h​ ​t​h​e​ ​f​i​e​l​d​ ​I​D​s​ ​o​f​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						publish: {
+							/**
+							 * P​u​b​l​i​s​h
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​p​u​b​l​i​s​h​ ​t​h​e​ ​e​n​t​r​y​ ​a​f​t​e​r​ ​c​r​e​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​e​n​t​r​y​ ​w​i​l​l​ ​b​e​ ​p​u​b​l​i​s​h​e​d​ ​i​m​m​e​d​i​a​t​e​l​y​ ​a​f​t​e​r​ ​c​r​e​a​t​i​o​n​.​ ​O​t​h​e​r​w​i​s​e​,​ ​i​t​ ​w​i​l​l​ ​b​e​ ​s​a​v​e​d​ ​a​s​ ​a​ ​d​r​a​f​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_entry: {
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​E​n​t​r​y
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​n​t​r​y​ ​b​y​ ​i​t​s​ ​I​D
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​e​n​t​r​y​ ​w​i​t​h​ ​n​e​w​ ​f​i​e​l​d​ ​v​a​l​u​e​s​.​ ​O​n​l​y​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d​s​ ​a​r​e​ ​u​p​d​a​t​e​d​;​ ​o​t​h​e​r​ ​f​i​e​l​d​s​ ​r​e​m​a​i​n​ ​u​n​c​h​a​n​g​e​d​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * E​n​t​r​i​e​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​e​n​t​r​y​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						content_type_id: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​e​n​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​f​i​l​t​e​r​ ​e​n​t​r​i​e​s​ ​b​y​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						entry_id: {
+							/**
+							 * E​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​t​r​y​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​n​t​r​y​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * P​r​o​v​i​d​e​ ​t​h​e​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​t​o​ ​u​p​d​a​t​e​ ​a​s​ ​a​ ​k​e​y​-​v​a​l​u​e​ ​o​b​j​e​c​t​.​ ​O​n​l​y​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d​s​ ​w​i​l​l​ ​b​e​ ​c​h​a​n​g​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_entry: {
+					/**
+					 * D​e​l​e​t​e​ ​a​n​ ​E​n​t​r​y
+					 */
+					displayName: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​e​n​t​r​y
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​s​ ​a​n​ ​e​n​t​r​y​ ​f​r​o​m​ ​t​h​e​ ​s​p​a​c​e​.​ ​I​f​ ​t​h​e​ ​e​n​t​r​y​ ​i​s​ ​p​u​b​l​i​s​h​e​d​,​ ​i​t​ ​w​i​l​l​ ​b​e​ ​u​n​p​u​b​l​i​s​h​e​d​ ​f​i​r​s​t​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​i​s​ ​i​r​r​e​v​e​r​s​i​b​l​e​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * E​n​t​r​i​e​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​e​n​t​r​y​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						content_type_id: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​e​n​t​r​y
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​f​i​l​t​e​r​ ​e​n​t​r​i​e​s​ ​b​y​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						entry_id: {
+							/**
+							 * E​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​t​r​y​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​n​t​r​y​ ​t​o​ ​p​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				publish_entry: {
+					/**
+					 * P​u​b​l​i​s​h​ ​a​n​ ​E​n​t​r​y
+					 */
+					displayName: string
+					/**
+					 * C​h​a​n​g​e​s​ ​e​n​t​r​y​ ​s​t​a​t​u​s​ ​t​o​ ​"​p​u​b​l​i​s​h​e​d​"
+					 */
+					shortDesc: string
+					/**
+					 * P​u​b​l​i​s​h​e​s​ ​a​ ​d​r​a​f​t​ ​e​n​t​r​y​,​ ​m​a​k​i​n​g​ ​i​t​ ​a​v​a​i​l​a​b​l​e​ ​t​h​r​o​u​g​h​ ​t​h​e​ ​C​o​n​t​e​n​t​ ​D​e​l​i​v​e​r​y​ ​A​P​I​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * E​n​t​r​i​e​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​e​n​t​r​y​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						content_type_id: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​f​i​l​t​e​r​ ​e​n​t​r​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​f​i​l​t​e​r​ ​t​h​e​ ​e​n​t​r​y​ ​d​r​o​p​d​o​w​n​.
+							 */
+							longDesc: string
+						}
+						entry_id: {
+							/**
+							 * E​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​t​r​y​ ​t​o​ ​p​u​b​l​i​s​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​n​t​r​y​ ​t​o​ ​p​u​b​l​i​s​h​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				unpublish_entry: {
+					/**
+					 * U​n​p​u​b​l​i​s​h​ ​a​n​ ​E​n​t​r​y
+					 */
+					displayName: string
+					/**
+					 * P​u​t​s​ ​a​n​ ​e​n​t​r​y​ ​b​a​c​k​ ​i​n​t​o​ ​"​d​r​a​f​t​"​ ​s​t​a​t​e
+					 */
+					shortDesc: string
+					/**
+					 * U​n​p​u​b​l​i​s​h​e​s​ ​a​n​ ​e​n​t​r​y​,​ ​r​e​m​o​v​i​n​g​ ​i​t​ ​f​r​o​m​ ​t​h​e​ ​C​o​n​t​e​n​t​ ​D​e​l​i​v​e​r​y​ ​A​P​I​ ​a​n​d​ ​r​e​v​e​r​t​i​n​g​ ​i​t​ ​t​o​ ​d​r​a​f​t​ ​s​t​a​t​e​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * E​n​t​r​i​e​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​e​n​t​r​y​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						content_type_id: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​f​i​l​t​e​r​ ​e​n​t​r​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​f​i​l​t​e​r​ ​t​h​e​ ​e​n​t​r​y​ ​d​r​o​p​d​o​w​n​.
+							 */
+							longDesc: string
+						}
+						entry_id: {
+							/**
+							 * E​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​t​r​y​ ​t​o​ ​u​n​p​u​b​l​i​s​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​n​t​r​y​ ​t​o​ ​u​n​p​u​b​l​i​s​h​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				archive_entry: {
+					/**
+					 * A​r​c​h​i​v​e​/​U​n​a​r​c​h​i​v​e​ ​a​n​ ​E​n​t​r​y
+					 */
+					displayName: string
+					/**
+					 * A​r​c​h​i​v​e​s​/​U​n​a​r​c​h​i​v​e​s​ ​a​n​ ​u​n​p​u​b​l​i​s​h​e​d​ ​e​n​t​r​y
+					 */
+					shortDesc: string
+					/**
+					 * A​r​c​h​i​v​e​s​ ​o​r​ ​u​n​a​r​c​h​i​v​e​s​ ​a​n​ ​e​n​t​r​y​.​ ​T​h​e​ ​e​n​t​r​y​ ​m​u​s​t​ ​b​e​ ​u​n​p​u​b​l​i​s​h​e​d​ ​b​e​f​o​r​e​ ​i​t​ ​c​a​n​ ​b​e​ ​a​r​c​h​i​v​e​d​.​ ​A​r​c​h​i​v​e​d​ ​e​n​t​r​i​e​s​ ​a​r​e​ ​h​i​d​d​e​n​ ​f​r​o​m​ ​t​h​e​ ​d​e​f​a​u​l​t​ ​e​n​t​r​y​ ​l​i​s​t​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * E​n​t​r​i​e​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​e​n​t​r​y​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						content_type_id: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​f​i​l​t​e​r​ ​e​n​t​r​i​e​s
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​f​i​l​t​e​r​ ​t​h​e​ ​e​n​t​r​y​ ​d​r​o​p​d​o​w​n​.
+							 */
+							longDesc: string
+						}
+						entry_id: {
+							/**
+							 * E​n​t​r​y
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​t​r​y​ ​t​o​ ​a​r​c​h​i​v​e​ ​o​r​ ​u​n​a​r​c​h​i​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​e​n​t​r​y​.
+							 */
+							longDesc: string
+						}
+						archive: {
+							/**
+							 * A​r​c​h​i​v​e
+							 */
+							displayName: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​a​r​c​h​i​v​e​,​ ​f​a​l​s​e​ ​t​o​ ​u​n​a​r​c​h​i​v​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​e​n​t​r​y​ ​w​i​l​l​ ​b​e​ ​a​r​c​h​i​v​e​d​.​ ​W​h​e​n​ ​d​i​s​a​b​l​e​d​,​ ​t​h​e​ ​e​n​t​r​y​ ​w​i​l​l​ ​b​e​ ​u​n​a​r​c​h​i​v​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				search_entries: {
+					/**
+					 * S​e​a​r​c​h​ ​E​n​t​r​i​e​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​e​s​ ​f​o​r​ ​e​n​t​r​i​e​s
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​e​s​ ​f​o​r​ ​e​n​t​r​i​e​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​u​l​l​-​t​e​x​t​ ​s​e​a​r​c​h​.​ ​R​e​t​u​r​n​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​e​n​t​r​i​e​s​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * E​n​t​r​i​e​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​s​e​a​r​c​h​ ​i​n​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						content_type_id: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​f​i​l​t​e​r​ ​r​e​s​u​l​t​s​ ​b​y​.
+							 */
+							longDesc: string
+						}
+						query: {
+							/**
+							 * S​e​a​r​c​h​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * F​u​l​l​-​t​e​x​t​ ​s​e​a​r​c​h​ ​q​u​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​e​x​t​ ​t​o​ ​s​e​a​r​c​h​ ​a​c​r​o​s​s​ ​a​l​l​ ​t​e​x​t​ ​f​i​e​l​d​s​ ​o​f​ ​t​h​e​ ​e​n​t​r​i​e​s​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​n​t​r​i​e​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​e​n​t​r​i​e​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​,​ ​m​a​x​i​m​u​m​ ​i​s​ ​1​0​0​0​.
+							 */
+							longDesc: string
+						}
+						skip: {
+							/**
+							 * S​k​i​p
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​e​n​t​r​i​e​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​e​n​t​r​i​e​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_asset: {
+					/**
+					 * G​e​t​ ​a​n​ ​A​s​s​e​t
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​t​t​r​i​b​u​t​e​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​a​s​s​e​t
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​s​i​n​g​l​e​ ​a​s​s​e​t​ ​b​y​ ​i​t​s​ ​I​D​,​ ​r​e​t​u​r​n​i​n​g​ ​m​e​t​a​d​a​t​a​ ​i​n​c​l​u​d​i​n​g​ ​t​i​t​l​e​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​f​i​l​e​ ​U​R​L​,​ ​M​I​M​E​ ​t​y​p​e​,​ ​a​n​d​ ​s​i​z​e​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * A​s​s​e​t​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​a​s​s​e​t​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						asset_id: {
+							/**
+							 * A​s​s​e​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​s​s​e​t​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​s​s​e​t​ ​t​o​ ​r​e​t​r​i​e​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_asset: {
+					/**
+					 * C​r​e​a​t​e​ ​a​n​ ​A​s​s​e​t
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​a​s​s​e​t
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​a​s​s​e​t​ ​f​r​o​m​ ​a​ ​U​R​L​.​ ​T​h​e​ ​a​s​s​e​t​ ​w​i​l​l​ ​b​e​ ​p​r​o​c​e​s​s​e​d​ ​(​d​o​w​n​l​o​a​d​e​d​ ​a​n​d​ ​s​t​o​r​e​d​)​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​.​ ​O​p​t​i​o​n​a​l​l​y​ ​p​u​b​l​i​s​h​e​s​ ​t​h​e​ ​a​s​s​e​t​ ​a​f​t​e​r​ ​c​r​e​a​t​i​o​n​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * A​s​s​e​t​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​a​s​s​e​t​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​s​s​e​t​ ​t​i​t​l​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​a​s​s​e​t​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​s​s​e​t​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​a​s​s​e​t​.
+							 */
+							longDesc: string
+						}
+						file_name: {
+							/**
+							 * F​i​l​e​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​a​s​s​e​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​f​i​l​e​ ​n​a​m​e​ ​i​n​c​l​u​d​i​n​g​ ​e​x​t​e​n​s​i​o​n​ ​(​e​.​g​.​,​ ​"​p​h​o​t​o​.​j​p​g​"​)​.
+							 */
+							longDesc: string
+						}
+						file_url: {
+							/**
+							 * F​i​l​e​ ​U​R​L
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​U​R​L​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​t​o​ ​u​p​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​p​u​b​l​i​c​l​y​ ​a​c​c​e​s​s​i​b​l​e​ ​U​R​L​ ​f​r​o​m​ ​w​h​i​c​h​ ​C​o​n​t​e​n​t​f​u​l​ ​w​i​l​l​ ​d​o​w​n​l​o​a​d​ ​t​h​e​ ​f​i​l​e​.
+							 */
+							longDesc: string
+						}
+						content_type: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​M​I​M​E​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​f​i​l​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​M​I​M​E​ ​t​y​p​e​ ​o​f​ ​t​h​e​ ​f​i​l​e​ ​(​e​.​g​.​,​ ​"​i​m​a​g​e​/​j​p​e​g​"​,​ ​"​a​p​p​l​i​c​a​t​i​o​n​/​p​d​f​"​)​.
+							 */
+							longDesc: string
+						}
+						publish: {
+							/**
+							 * P​u​b​l​i​s​h
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​o​ ​p​u​b​l​i​s​h​ ​t​h​e​ ​a​s​s​e​t​ ​a​f​t​e​r​ ​c​r​e​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​a​s​s​e​t​ ​w​i​l​l​ ​b​e​ ​p​u​b​l​i​s​h​e​d​ ​i​m​m​e​d​i​a​t​e​l​y​ ​a​f​t​e​r​ ​p​r​o​c​e​s​s​i​n​g​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_asset: {
+					/**
+					 * U​p​d​a​t​e​ ​a​n​ ​A​s​s​e​t
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​n​ ​a​s​s​e​t​ ​b​y​ ​i​t​s​ ​I​D
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​t​i​t​l​e​ ​a​n​d​/​o​r​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​a​s​s​e​t​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * A​s​s​e​t​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​a​s​s​e​t​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						asset_id: {
+							/**
+							 * A​s​s​e​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​s​s​e​t​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​s​s​e​t​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						title: {
+							/**
+							 * T​i​t​l​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​a​s​s​e​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​t​i​t​l​e​ ​f​o​r​ ​t​h​e​ ​a​s​s​e​t​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​a​s​s​e​t
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​a​s​s​e​t​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_asset: {
+					/**
+					 * D​e​l​e​t​e​ ​a​n​ ​A​s​s​e​t
+					 */
+					displayName: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​s​ ​a​n​ ​u​n​p​u​b​l​i​s​h​e​d​ ​a​s​s​e​t
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​s​ ​a​n​ ​a​s​s​e​t​.​ ​I​f​ ​t​h​e​ ​a​s​s​e​t​ ​i​s​ ​p​u​b​l​i​s​h​e​d​,​ ​i​t​ ​w​i​l​l​ ​b​e​ ​u​n​p​u​b​l​i​s​h​e​d​ ​f​i​r​s​t​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​i​s​ ​i​r​r​e​v​e​r​s​i​b​l​e​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * A​s​s​e​t​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​a​s​s​e​t​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						asset_id: {
+							/**
+							 * A​s​s​e​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​s​s​e​t​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​s​s​e​t​ ​t​o​ ​p​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				publish_asset: {
+					/**
+					 * P​u​b​l​i​s​h​ ​a​n​ ​A​s​s​e​t
+					 */
+					displayName: string
+					/**
+					 * C​h​a​n​g​e​s​ ​a​s​s​e​t​ ​s​t​a​t​u​s​ ​t​o​ ​"​p​u​b​l​i​s​h​e​d​"
+					 */
+					shortDesc: string
+					/**
+					 * P​u​b​l​i​s​h​e​s​ ​a​ ​d​r​a​f​t​ ​a​s​s​e​t​,​ ​m​a​k​i​n​g​ ​i​t​ ​a​v​a​i​l​a​b​l​e​ ​t​h​r​o​u​g​h​ ​t​h​e​ ​C​o​n​t​e​n​t​ ​D​e​l​i​v​e​r​y​ ​A​P​I​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * A​s​s​e​t​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​a​s​s​e​t​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						asset_id: {
+							/**
+							 * A​s​s​e​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​s​s​e​t​ ​t​o​ ​p​u​b​l​i​s​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​s​s​e​t​ ​t​o​ ​p​u​b​l​i​s​h​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				unpublish_asset: {
+					/**
+					 * U​n​p​u​b​l​i​s​h​ ​a​n​ ​A​s​s​e​t
+					 */
+					displayName: string
+					/**
+					 * P​u​t​s​ ​a​n​ ​a​s​s​e​t​ ​b​a​c​k​ ​i​n​t​o​ ​"​d​r​a​f​t​"​ ​s​t​a​t​e
+					 */
+					shortDesc: string
+					/**
+					 * U​n​p​u​b​l​i​s​h​e​s​ ​a​n​ ​a​s​s​e​t​,​ ​r​e​m​o​v​i​n​g​ ​i​t​ ​f​r​o​m​ ​t​h​e​ ​C​o​n​t​e​n​t​ ​D​e​l​i​v​e​r​y​ ​A​P​I​ ​a​n​d​ ​r​e​v​e​r​t​i​n​g​ ​i​t​ ​t​o​ ​d​r​a​f​t​ ​s​t​a​t​e​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * A​s​s​e​t​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​a​s​s​e​t​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						asset_id: {
+							/**
+							 * A​s​s​e​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​s​s​e​t​ ​t​o​ ​u​n​p​u​b​l​i​s​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​s​s​e​t​ ​t​o​ ​u​n​p​u​b​l​i​s​h​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				archive_asset: {
+					/**
+					 * A​r​c​h​i​v​e​/​U​n​a​r​c​h​i​v​e​ ​a​n​ ​A​s​s​e​t
+					 */
+					displayName: string
+					/**
+					 * A​r​c​h​i​v​e​s​/​U​n​a​r​c​h​i​v​e​s​ ​a​n​ ​u​n​p​u​b​l​i​s​h​e​d​ ​a​s​s​e​t
+					 */
+					shortDesc: string
+					/**
+					 * A​r​c​h​i​v​e​s​ ​o​r​ ​u​n​a​r​c​h​i​v​e​s​ ​a​n​ ​a​s​s​e​t​.​ ​T​h​e​ ​a​s​s​e​t​ ​m​u​s​t​ ​b​e​ ​u​n​p​u​b​l​i​s​h​e​d​ ​b​e​f​o​r​e​ ​i​t​ ​c​a​n​ ​b​e​ ​a​r​c​h​i​v​e​d​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * A​s​s​e​t​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​a​s​s​e​t​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						asset_id: {
+							/**
+							 * A​s​s​e​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​a​s​s​e​t​ ​t​o​ ​a​r​c​h​i​v​e​ ​o​r​ ​u​n​a​r​c​h​i​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​r​ ​e​n​t​e​r​ ​t​h​e​ ​I​D​ ​o​f​ ​t​h​e​ ​a​s​s​e​t​.
+							 */
+							longDesc: string
+						}
+						archive: {
+							/**
+							 * A​r​c​h​i​v​e
+							 */
+							displayName: string
+							/**
+							 * S​e​t​ ​t​o​ ​t​r​u​e​ ​t​o​ ​a​r​c​h​i​v​e​,​ ​f​a​l​s​e​ ​t​o​ ​u​n​a​r​c​h​i​v​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​a​s​s​e​t​ ​w​i​l​l​ ​b​e​ ​a​r​c​h​i​v​e​d​.​ ​W​h​e​n​ ​d​i​s​a​b​l​e​d​,​ ​t​h​e​ ​a​s​s​e​t​ ​w​i​l​l​ ​b​e​ ​u​n​a​r​c​h​i​v​e​d​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				search_assets: {
+					/**
+					 * S​e​a​r​c​h​ ​A​s​s​e​t​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​e​s​ ​f​o​r​ ​a​s​s​e​t​s
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​e​s​ ​f​o​r​ ​a​s​s​e​t​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​f​u​l​l​-​t​e​x​t​ ​s​e​a​r​c​h​ ​a​n​d​ ​M​I​M​E​ ​t​y​p​e​ ​f​i​l​t​e​r​i​n​g​.​ ​R​e​t​u​r​n​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​a​s​s​e​t​s​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * A​s​s​e​t​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​s​e​a​r​c​h​ ​i​n​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						query: {
+							/**
+							 * S​e​a​r​c​h​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * F​u​l​l​-​t​e​x​t​ ​s​e​a​r​c​h​ ​q​u​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​e​x​t​ ​t​o​ ​s​e​a​r​c​h​ ​a​c​r​o​s​s​ ​a​s​s​e​t​ ​t​i​t​l​e​s​ ​a​n​d​ ​d​e​s​c​r​i​p​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						mime_type_group: {
+							/**
+							 * M​I​M​E​ ​T​y​p​e​ ​G​r​o​u​p
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​b​y​ ​f​i​l​e​ ​t​y​p​e​ ​g​r​o​u​p
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​ ​a​s​s​e​t​s​ ​b​y​ ​M​I​M​E​ ​t​y​p​e​ ​g​r​o​u​p​ ​(​e​.​g​.​,​ ​i​m​a​g​e​,​ ​v​i​d​e​o​,​ ​a​u​d​i​o​,​ ​p​d​f​d​o​c​u​m​e​n​t​)​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​a​s​s​e​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​a​s​s​e​t​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​,​ ​m​a​x​i​m​u​m​ ​i​s​ ​1​0​0​0​.
+							 */
+							longDesc: string
+						}
+						skip: {
+							/**
+							 * S​k​i​p
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​a​s​s​e​t​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​a​s​s​e​t​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				get_content_type: {
+					/**
+					 * G​e​t​ ​a​ ​C​o​n​t​e​n​t​ ​T​y​p​e
+					 */
+					displayName: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​t​t​r​i​b​u​t​e​s​ ​o​f​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​e​n​t​ ​t​y​p​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​r​i​e​v​e​s​ ​a​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​b​y​ ​i​t​s​ ​I​D​,​ ​i​n​c​l​u​d​i​n​g​ ​i​t​s​ ​n​a​m​e​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​a​n​d​ ​f​i​e​l​d​ ​d​e​f​i​n​i​t​i​o​n​s​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * C​o​n​t​e​n​t​ ​T​y​p​e​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						content_type_id: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​r​e​t​r​i​e​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​d​e​t​a​i​l​s​ ​f​o​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_content_type: {
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​C​o​n​t​e​n​t​ ​T​y​p​e
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​o​n​t​e​n​t​ ​t​y​p​e
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​n​a​m​e​,​ ​d​e​s​c​r​i​p​t​i​o​n​,​ ​a​n​d​ ​f​i​e​l​d​ ​d​e​f​i​n​i​t​i​o​n​s​.​ ​T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​ ​i​n​ ​d​r​a​f​t​ ​s​t​a​t​e​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * C​o​n​t​e​n​t​ ​T​y​p​e​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​w​h​e​r​e​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​w​i​l​l​ ​b​e​ ​c​r​e​a​t​e​d​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​n​a​m​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​d​e​s​c​r​i​p​t​i​v​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​(​e​.​g​.​,​ ​"​B​l​o​g​ ​P​o​s​t​"​,​ ​"​P​r​o​d​u​c​t​"​)​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​d​e​s​c​r​i​p​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * A​n​ ​o​p​t​i​o​n​a​l​ ​d​e​s​c​r​i​p​t​i​o​n​ ​e​x​p​l​a​i​n​i​n​g​ ​t​h​e​ ​p​u​r​p​o​s​e​ ​o​f​ ​t​h​i​s​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​d​e​f​i​n​i​t​i​o​n​s​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​l​i​s​t​ ​o​f​ ​f​i​e​l​d​ ​d​e​f​i​n​i​t​i​o​n​s​.​ ​E​a​c​h​ ​f​i​e​l​d​ ​r​e​q​u​i​r​e​s​ ​a​n​ ​I​D​,​ ​n​a​m​e​,​ ​a​n​d​ ​t​y​p​e​.​ ​S​u​p​p​o​r​t​e​d​ ​t​y​p​e​s​:​ ​S​y​m​b​o​l​,​ ​T​e​x​t​,​ ​I​n​t​e​g​e​r​,​ ​N​u​m​b​e​r​,​ ​D​a​t​e​,​ ​B​o​o​l​e​a​n​,​ ​R​i​c​h​T​e​x​t​,​ ​L​i​n​k​,​ ​A​r​r​a​y​,​ ​O​b​j​e​c​t​,​ ​L​o​c​a​t​i​o​n​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										id: {
+											/**
+											 * F​i​e​l​d​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​f​i​e​l​d
+											 */
+											shortDesc: string
+											/**
+											 * A​ ​u​n​i​q​u​e​ ​I​D​ ​f​o​r​ ​t​h​e​ ​f​i​e​l​d​ ​(​e​.​g​.​,​ ​"​h​e​r​o​I​m​a​g​e​"​,​ ​"​p​u​b​l​i​s​h​D​a​t​e​"​)​.​ ​M​u​s​t​ ​b​e​ ​u​n​i​q​u​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.
+											 */
+											longDesc: string
+										}
+										name: {
+											/**
+											 * F​i​e​l​d​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * D​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​f​i​e​l​d
+											 */
+											shortDesc: string
+											/**
+											 * A​ ​h​u​m​a​n​-​r​e​a​d​a​b​l​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​f​i​e​l​d​ ​(​e​.​g​.​,​ ​"​H​e​r​o​ ​I​m​a​g​e​"​,​ ​"​P​u​b​l​i​s​h​ ​D​a​t​e​"​)​.
+											 */
+											longDesc: string
+										}
+										type: {
+											/**
+											 * F​i​e​l​d​ ​T​y​p​e
+											 */
+											displayName: string
+											/**
+											 * D​a​t​a​ ​t​y​p​e​ ​(​S​y​m​b​o​l​,​ ​T​e​x​t​,​ ​I​n​t​e​g​e​r​,​ ​N​u​m​b​e​r​,​ ​D​a​t​e​,​ ​B​o​o​l​e​a​n​,​ ​R​i​c​h​T​e​x​t​,​ ​L​i​n​k​,​ ​A​r​r​a​y​,​ ​O​b​j​e​c​t​,​ ​L​o​c​a​t​i​o​n​)
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​d​a​t​a​ ​t​y​p​e​ ​f​o​r​ ​t​h​e​ ​f​i​e​l​d​.​ ​S​u​p​p​o​r​t​e​d​ ​t​y​p​e​s​:​ ​S​y​m​b​o​l​ ​(​s​h​o​r​t​ ​t​e​x​t​)​,​ ​T​e​x​t​ ​(​l​o​n​g​ ​t​e​x​t​)​,​ ​I​n​t​e​g​e​r​,​ ​N​u​m​b​e​r​,​ ​D​a​t​e​,​ ​B​o​o​l​e​a​n​,​ ​R​i​c​h​T​e​x​t​,​ ​L​i​n​k​,​ ​A​r​r​a​y​,​ ​O​b​j​e​c​t​,​ ​L​o​c​a​t​i​o​n​.
+											 */
+											longDesc: string
+										}
+										required: {
+											/**
+											 * R​e​q​u​i​r​e​d
+											 */
+											displayName: string
+											/**
+											 * W​h​e​t​h​e​r​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​r​e​q​u​i​r​e​d
+											 */
+											shortDesc: string
+											/**
+											 * I​f​ ​e​n​a​b​l​e​d​,​ ​e​n​t​r​i​e​s​ ​m​u​s​t​ ​p​r​o​v​i​d​e​ ​a​ ​v​a​l​u​e​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​.
+											 */
+											longDesc: string
+										}
+										localized: {
+											/**
+											 * L​o​c​a​l​i​z​e​d
+											 */
+											displayName: string
+											/**
+											 * W​h​e​t​h​e​r​ ​t​h​e​ ​f​i​e​l​d​ ​s​u​p​p​o​r​t​s​ ​l​o​c​a​l​i​z​a​t​i​o​n
+											 */
+											shortDesc: string
+											/**
+											 * I​f​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​f​i​e​l​d​ ​c​a​n​ ​h​a​v​e​ ​d​i​f​f​e​r​e​n​t​ ​v​a​l​u​e​s​ ​f​o​r​ ​d​i​f​f​e​r​e​n​t​ ​l​o​c​a​l​e​s​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				update_content_type: {
+					/**
+					 * U​p​d​a​t​e​ ​a​ ​C​o​n​t​e​n​t​ ​T​y​p​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​b​y​ ​i​t​s​ ​I​D
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​n​a​m​e​ ​a​n​d​/​o​r​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * C​o​n​t​e​n​t​ ​T​y​p​e​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						content_type_id: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						name: {
+							/**
+							 * N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						description: {
+							/**
+							 * D​e​s​c​r​i​p​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​d​e​s​c​r​i​p​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_content_type: {
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​C​o​n​t​e​n​t​ ​T​y​p​e
+					 */
+					displayName: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​s​ ​a​ ​d​e​a​c​t​i​v​a​t​e​d​ ​c​o​n​t​e​n​t​ ​t​y​p​e
+					 */
+					shortDesc: string
+					/**
+					 * P​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​s​ ​a​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.​ ​T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​m​u​s​t​ ​b​e​ ​d​e​a​c​t​i​v​a​t​e​d​ ​(​u​n​p​u​b​l​i​s​h​e​d​)​ ​f​i​r​s​t​.​ ​T​h​i​s​ ​a​c​t​i​o​n​ ​i​s​ ​i​r​r​e​v​e​r​s​i​b​l​e​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * C​o​n​t​e​n​t​ ​T​y​p​e​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						content_type_id: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​d​e​l​e​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​p​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				activate_content_type: {
+					/**
+					 * A​c​t​i​v​a​t​e​ ​a​ ​C​o​n​t​e​n​t​ ​T​y​p​e
+					 */
+					displayName: string
+					/**
+					 * A​c​t​i​v​a​t​e​s​ ​a​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​b​y​ ​i​t​s​ ​I​D
+					 */
+					shortDesc: string
+					/**
+					 * P​u​b​l​i​s​h​e​s​ ​(​a​c​t​i​v​a​t​e​s​)​ ​a​ ​c​o​n​t​e​n​t​ ​t​y​p​e​,​ ​m​a​k​i​n​g​ ​i​t​ ​a​v​a​i​l​a​b​l​e​ ​f​o​r​ ​c​r​e​a​t​i​n​g​ ​e​n​t​r​i​e​s​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * C​o​n​t​e​n​t​ ​T​y​p​e​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						content_type_id: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​a​c​t​i​v​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​a​c​t​i​v​a​t​e​ ​(​p​u​b​l​i​s​h​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				deactivate_content_type: {
+					/**
+					 * D​e​a​c​t​i​v​a​t​e​ ​a​ ​C​o​n​t​e​n​t​ ​T​y​p​e
+					 */
+					displayName: string
+					/**
+					 * C​h​a​n​g​e​s​ ​a​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​s​t​a​t​u​s​ ​t​o​ ​"​d​r​a​f​t​"
+					 */
+					shortDesc: string
+					/**
+					 * U​n​p​u​b​l​i​s​h​e​s​ ​(​d​e​a​c​t​i​v​a​t​e​s​)​ ​a​ ​c​o​n​t​e​n​t​ ​t​y​p​e​,​ ​r​e​v​e​r​t​i​n​g​ ​i​t​ ​t​o​ ​d​r​a​f​t​ ​s​t​a​t​e​.​ ​N​o​ ​n​e​w​ ​e​n​t​r​i​e​s​ ​c​a​n​ ​b​e​ ​c​r​e​a​t​e​d​ ​f​o​r​ ​a​ ​d​e​a​c​t​i​v​a​t​e​d​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * C​o​n​t​e​n​t​ ​T​y​p​e​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						content_type_id: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​d​e​a​c​t​i​v​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​d​e​a​c​t​i​v​a​t​e​ ​(​u​n​p​u​b​l​i​s​h​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				add_field_to_content_type: {
+					/**
+					 * A​d​d​ ​a​ ​F​i​e​l​d​ ​t​o​ ​a​ ​C​o​n​t​e​n​t​ ​T​y​p​e
+					 */
+					displayName: string
+					/**
+					 * A​d​d​s​ ​a​ ​n​e​w​ ​f​i​e​l​d​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​e​n​t​ ​t​y​p​e
+					 */
+					shortDesc: string
+					/**
+					 * A​d​d​s​ ​a​ ​n​e​w​ ​f​i​e​l​d​ ​d​e​f​i​n​i​t​i​o​n​ ​t​o​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.​ ​T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​w​i​l​l​ ​n​e​e​d​ ​t​o​ ​b​e​ ​r​e​-​a​c​t​i​v​a​t​e​d​ ​a​f​t​e​r​ ​a​d​d​i​n​g​ ​t​h​e​ ​f​i​e​l​d​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * C​o​n​t​e​n​t​ ​T​y​p​e​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						content_type_id: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​a​d​d​ ​t​h​e​ ​f​i​e​l​d​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​m​o​d​i​f​y​.
+							 */
+							longDesc: string
+						}
+						field_id: {
+							/**
+							 * F​i​e​l​d​ ​I​D
+							 */
+							displayName: string
+							/**
+							 * U​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​u​n​i​q​u​e​ ​I​D​ ​f​o​r​ ​t​h​e​ ​f​i​e​l​d​ ​(​e​.​g​.​,​ ​"​h​e​r​o​I​m​a​g​e​"​,​ ​"​p​u​b​l​i​s​h​D​a​t​e​"​)​.​ ​M​u​s​t​ ​b​e​ ​u​n​i​q​u​e​ ​w​i​t​h​i​n​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						field_name: {
+							/**
+							 * F​i​e​l​d​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * D​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​n​e​w​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * A​ ​h​u​m​a​n​-​r​e​a​d​a​b​l​e​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​f​i​e​l​d​ ​(​e​.​g​.​,​ ​"​H​e​r​o​ ​I​m​a​g​e​"​,​ ​"​P​u​b​l​i​s​h​ ​D​a​t​e​"​)​.
+							 */
+							longDesc: string
+						}
+						field_type: {
+							/**
+							 * F​i​e​l​d​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​d​a​t​a​ ​t​y​p​e​ ​f​o​r​ ​t​h​e​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​d​a​t​a​ ​t​y​p​e​:​ ​S​y​m​b​o​l​ ​(​s​h​o​r​t​ ​t​e​x​t​)​,​ ​T​e​x​t​ ​(​l​o​n​g​ ​t​e​x​t​)​,​ ​I​n​t​e​g​e​r​,​ ​N​u​m​b​e​r​,​ ​D​a​t​e​,​ ​B​o​o​l​e​a​n​,​ ​R​i​c​h​T​e​x​t​,​ ​L​i​n​k​,​ ​A​r​r​a​y​,​ ​O​b​j​e​c​t​,​ ​o​r​ ​L​o​c​a​t​i​o​n​.
+							 */
+							longDesc: string
+						}
+						required: {
+							/**
+							 * R​e​q​u​i​r​e​d
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​r​e​q​u​i​r​e​d
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​e​n​t​r​i​e​s​ ​m​u​s​t​ ​p​r​o​v​i​d​e​ ​a​ ​v​a​l​u​e​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​.
+							 */
+							longDesc: string
+						}
+						localized: {
+							/**
+							 * L​o​c​a​l​i​z​e​d
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​f​i​e​l​d​ ​s​u​p​p​o​r​t​s​ ​l​o​c​a​l​i​z​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * I​f​ ​e​n​a​b​l​e​d​,​ ​t​h​e​ ​f​i​e​l​d​ ​c​a​n​ ​h​a​v​e​ ​d​i​f​f​e​r​e​n​t​ ​v​a​l​u​e​s​ ​f​o​r​ ​d​i​f​f​e​r​e​n​t​ ​l​o​c​a​l​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				update_field_of_content_type: {
+					/**
+					 * U​p​d​a​t​e​ ​a​ ​F​i​e​l​d​ ​o​f​ ​a​ ​C​o​n​t​e​n​t​ ​T​y​p​e
+					 */
+					displayName: string
+					/**
+					 * U​p​d​a​t​e​s​ ​a​ ​f​i​e​l​d​ ​i​n​s​i​d​e​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​e​n​t​ ​t​y​p​e
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​t​h​e​ ​p​r​o​p​e​r​t​i​e​s​ ​o​f​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​f​i​e​l​d​ ​i​n​ ​a​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * C​o​n​t​e​n​t​ ​T​y​p​e​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						content_type_id: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​m​o​d​i​f​y​.
+							 */
+							longDesc: string
+						}
+						field_id: {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​p​d​a​t​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​u​p​d​a​t​e​.
+							 */
+							longDesc: string
+						}
+						field_name: {
+							/**
+							 * F​i​e​l​d​ ​N​a​m​e
+							 */
+							displayName: string
+							/**
+							 * N​e​w​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​p​d​a​t​e​d​ ​d​i​s​p​l​a​y​ ​n​a​m​e​ ​f​o​r​ ​t​h​e​ ​f​i​e​l​d​.
+							 */
+							longDesc: string
+						}
+						required: {
+							/**
+							 * R​e​q​u​i​r​e​d
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​f​i​e​l​d​ ​i​s​ ​r​e​q​u​i​r​e​d
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​w​h​e​t​h​e​r​ ​e​n​t​r​i​e​s​ ​m​u​s​t​ ​p​r​o​v​i​d​e​ ​a​ ​v​a​l​u​e​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​.
+							 */
+							longDesc: string
+						}
+						localized: {
+							/**
+							 * L​o​c​a​l​i​z​e​d
+							 */
+							displayName: string
+							/**
+							 * W​h​e​t​h​e​r​ ​t​h​e​ ​f​i​e​l​d​ ​s​u​p​p​o​r​t​s​ ​l​o​c​a​l​i​z​a​t​i​o​n
+							 */
+							shortDesc: string
+							/**
+							 * U​p​d​a​t​e​ ​w​h​e​t​h​e​r​ ​t​h​e​ ​f​i​e​l​d​ ​c​a​n​ ​h​a​v​e​ ​d​i​f​f​e​r​e​n​t​ ​v​a​l​u​e​s​ ​f​o​r​ ​d​i​f​f​e​r​e​n​t​ ​l​o​c​a​l​e​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				delete_field_from_content_type: {
+					/**
+					 * D​e​l​e​t​e​ ​a​ ​F​i​e​l​d​ ​f​r​o​m​ ​a​ ​C​o​n​t​e​n​t​ ​T​y​p​e
+					 */
+					displayName: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​f​i​e​l​d​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​c​o​n​t​e​n​t​ ​t​y​p​e
+					 */
+					shortDesc: string
+					/**
+					 * R​e​m​o​v​e​s​ ​a​ ​f​i​e​l​d​ ​f​r​o​m​ ​a​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.​ ​T​h​e​ ​f​i​e​l​d​ ​i​s​ ​f​i​r​s​t​ ​m​a​r​k​e​d​ ​a​s​ ​o​m​i​t​t​e​d​,​ ​t​h​e​n​ ​r​e​m​o​v​e​d​ ​e​n​t​i​r​e​l​y​.​ ​E​x​i​s​t​i​n​g​ ​e​n​t​r​y​ ​d​a​t​a​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​ ​w​i​l​l​ ​b​e​ ​l​o​s​t​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * C​o​n​t​e​n​t​ ​T​y​p​e​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​u​s​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						content_type_id: {
+							/**
+							 * C​o​n​t​e​n​t​ ​T​y​p​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​c​o​n​t​a​i​n​i​n​g​ ​t​h​e​ ​f​i​e​l​d
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​t​o​ ​m​o​d​i​f​y​.
+							 */
+							longDesc: string
+						}
+						field_id: {
+							/**
+							 * F​i​e​l​d
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​f​i​e​l​d​ ​t​o​ ​r​e​m​o​v​e
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​t​o​ ​p​e​r​m​a​n​e​n​t​l​y​ ​r​e​m​o​v​e​ ​f​r​o​m​ ​t​h​e​ ​c​o​n​t​e​n​t​ ​t​y​p​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				search_content_types: {
+					/**
+					 * S​e​a​r​c​h​ ​C​o​n​t​e​n​t​ ​T​y​p​e​s
+					 */
+					displayName: string
+					/**
+					 * S​e​a​r​c​h​e​s​ ​f​o​r​ ​c​o​n​t​e​n​t​ ​t​y​p​e​s
+					 */
+					shortDesc: string
+					/**
+					 * S​e​a​r​c​h​e​s​ ​f​o​r​ ​c​o​n​t​e​n​t​ ​t​y​p​e​s​ ​w​i​t​h​ ​o​p​t​i​o​n​a​l​ ​t​e​x​t​ ​f​i​l​t​e​r​i​n​g​.​ ​R​e​t​u​r​n​s​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​c​o​n​t​e​n​t​ ​t​y​p​e​s​ ​w​i​t​h​ ​t​h​e​i​r​ ​f​i​e​l​d​ ​d​e​f​i​n​i​t​i​o​n​s​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * C​o​n​t​e​n​t​ ​T​y​p​e​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​s​e​a​r​c​h
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​s​e​a​r​c​h​ ​i​n​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						query: {
+							/**
+							 * S​e​a​r​c​h​ ​Q​u​e​r​y
+							 */
+							displayName: string
+							/**
+							 * T​e​x​t​ ​s​e​a​r​c​h​ ​q​u​e​r​y
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​t​e​x​t​ ​t​o​ ​s​e​a​r​c​h​ ​a​c​r​o​s​s​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​n​a​m​e​s​ ​a​n​d​ ​d​e​s​c​r​i​p​t​i​o​n​s​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​r​e​t​u​r​n
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​e​n​t​ ​t​y​p​e​s​ ​t​o​ ​r​e​t​u​r​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​1​0​0​.
+							 */
+							longDesc: string
+						}
+						skip: {
+							/**
+							 * S​k​i​p
+							 */
+							displayName: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​r​e​s​u​l​t​s​ ​t​o​ ​s​k​i​p
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​c​o​n​t​e​n​t​ ​t​y​p​e​s​ ​t​o​ ​s​k​i​p​ ​f​o​r​ ​p​a​g​i​n​a​t​i​o​n​.​ ​D​e​f​a​u​l​t​ ​i​s​ ​0​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+			triggers: {
+				watch_event: {
+					/**
+					 * W​a​t​c​h​ ​a​n​ ​E​v​e​n​t
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​e​v​e​n​t​ ​o​c​c​u​r​s
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​w​e​b​h​o​o​k​ ​i​n​ ​C​o​n​t​e​n​t​f​u​l​ ​t​h​a​t​ ​t​r​i​g​g​e​r​s​ ​w​h​e​n​ ​s​e​l​e​c​t​e​d​ ​e​v​e​n​t​s​ ​o​c​c​u​r​.​ ​S​u​p​p​o​r​t​s​ ​e​n​t​r​y​,​ ​a​s​s​e​t​,​ ​a​n​d​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​e​v​e​n​t​s​ ​s​u​c​h​ ​a​s​ ​c​r​e​a​t​i​o​n​,​ ​u​p​d​a​t​e​s​,​ ​p​u​b​l​i​s​h​i​n​g​,​ ​a​n​d​ ​d​e​l​e​t​i​o​n​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * E​v​e​n​t​s
+						 */
+						'0': string
+					}
+					options: {
+						space_id: {
+							/**
+							 * S​p​a​c​e
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​C​o​n​t​e​n​t​f​u​l​ ​s​p​a​c​e​ ​t​o​ ​m​o​n​i​t​o​r​ ​f​o​r​ ​e​v​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+						environment_id: {
+							/**
+							 * E​n​v​i​r​o​n​m​e​n​t
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​t​o​ ​u​s​e​ ​(​d​e​f​a​u​l​t​:​ ​m​a​s​t​e​r​)
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​t​h​e​ ​e​n​v​i​r​o​n​m​e​n​t​ ​w​i​t​h​i​n​ ​t​h​e​ ​s​p​a​c​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​"​m​a​s​t​e​r​"​ ​i​f​ ​n​o​t​ ​s​p​e​c​i​f​i​e​d​.
+							 */
+							longDesc: string
+						}
+						event_types: {
+							/**
+							 * E​v​e​n​t​ ​T​y​p​e​s
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​t​y​p​e​s​ ​o​f​ ​e​v​e​n​t​s​ ​t​o​ ​w​a​t​c​h​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * S​e​l​e​c​t​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​e​v​e​n​t​ ​t​y​p​e​s​ ​t​o​ ​t​r​i​g​g​e​r​ ​o​n​.​ ​E​v​e​n​t​s​ ​i​n​c​l​u​d​e​ ​e​n​t​r​y​,​ ​a​s​s​e​t​,​ ​a​n​d​ ​c​o​n​t​e​n​t​ ​t​y​p​e​ ​l​i​f​e​c​y​c​l​e​ ​e​v​e​n​t​s​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+			}
+		}
 		Bitbucket: {
 			/**
 			 * B​i​t​b​u​c​k​e​t
@@ -236108,6 +238657,2555 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Filter pages by their subtype (live pages or regular pages).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+		}
+		Contentful: {
+			/**
+			 * Contentful
+			 */
+			displayName: () => LocalizedString
+			groups: {
+				/**
+				 * Documents & Documentation
+				 */
+				'0': () => LocalizedString
+			}
+			/**
+			 * Connect to Contentful to manage your content, assets, and content models
+			 */
+			shortDesc: () => LocalizedString
+			/**
+			 * Integrate with Contentful to automate content management workflows. Create, update, publish, and manage entries, assets, and content types. Monitor content changes with real-time webhook triggers. This integration provides full access to the Contentful Content Management API for comprehensive headless CMS automation.
+			 */
+			longDesc: () => LocalizedString
+			connectionMessage: {
+				/**
+				 * Connect to Contentful
+				 */
+				title: () => LocalizedString
+				/**
+				 * To connect to Contentful, you will need a **Content Management API (CMA) Token**.
+		
+			## Getting Your CMA Token
+		
+			1. Log in to your [Contentful](https://app.contentful.com) account
+			2. Go to **Settings** (gear icon in the top navigation)
+			3. Select **CMA tokens** from the left sidebar
+			4. Click **Create personal access token**
+			5. Give your token a descriptive name (e.g., "Qore Integration")
+			6. Click **Generate** and copy the generated token
+		
+			**Important:** The token is only shown once. Make sure to copy and save it securely.
+		
+			## Authorizing Your Token for an Organization
+		
+			If your Contentful account belongs to an organization, you must **authorize your token** for that organization before it can access spaces:
+		
+			1. Go to your [Personal Access Tokens](https://app.contentful.com/account/profile/cma_tokens) page
+			2. Find your token in the list
+			3. Click **Authorize** next to the organization you want the token to access
+		
+			Without this step, API requests will fail with an `OrganizationAccessGrantRequired` error, even though the token is valid.
+		
+			## Permissions
+		
+			The CMA token inherits the permissions of the user who created it. Ensure the user has appropriate access to the spaces and environments you want to manage.
+				 */
+				content: () => LocalizedString
+			}
+			actions: {
+				get_entry: {
+					/**
+					 * Get an Entry
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns attributes of a specific entry
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a single entry by its ID from the specified space and environment. Returns all entry fields with their values in the default locale.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Entries
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the entry.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type_id: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content type of the entry
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the content type to filter entries by type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						entry_id: {
+							/**
+							 * Entry
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The entry to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the entry to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_entry_with_replacement: {
+					/**
+					 * Get an Entry with Replacement
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Replaces text fields with new values using specific tags; returns new values as output
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves an entry and performs text replacements on all string fields. For each replacement pair, all occurrences of the tag are replaced with the specified value. Useful for template-based content.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Entries
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the entry.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type_id: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content type of the entry
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the content type to filter entries by type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						entry_id: {
+							/**
+							 * Entry
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The entry to retrieve and apply replacements to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the entry to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+						replacements: {
+							/**
+							 * Replacements
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of tag/value pairs for text replacement
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide a list of replacement pairs. Each pair has a "tag" (placeholder to find) and a "value" (text to replace it with). All string fields in the entry will be processed.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										tag: {
+											/**
+											 * Tag
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The tag/placeholder to search for in text fields
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The tag or placeholder text to search for within all string fields of the entry.
+											 */
+											longDesc: () => LocalizedString
+										}
+										value: {
+											/**
+											 * Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * The replacement value
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The text that will replace all occurrences of the tag.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				create_entry: {
+					/**
+					 * Create an Entry
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new entry
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new entry of the specified content type in the given space and environment. Optionally publishes the entry immediately after creation.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Entries
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space where the entry will be created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type_id: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content type for the new entry
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the content type that defines the schema for the new entry.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The field values for the new entry
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the field values as a key-value object. Keys should match the field IDs of the content type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						publish: {
+							/**
+							 * Publish
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to publish the entry after creation
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, the entry will be published immediately after creation. Otherwise, it will be saved as a draft.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_entry: {
+					/**
+					 * Update an Entry
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates a specific entry by its ID
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates an existing entry with new field values. Only the specified fields are updated; other fields remain unchanged.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Entries
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the entry.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type_id: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content type of the entry
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the content type to filter entries by type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						entry_id: {
+							/**
+							 * Entry
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The entry to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the entry to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The field values to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Provide the field values to update as a key-value object. Only the specified fields will be changed.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_entry: {
+					/**
+					 * Delete an Entry
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Permanently removes a specific entry
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently deletes an entry from the space. If the entry is published, it will be unpublished first. This action is irreversible.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Entries
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the entry.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type_id: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content type of the entry
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the content type to filter entries by type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						entry_id: {
+							/**
+							 * Entry
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The entry to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the entry to permanently remove.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				publish_entry: {
+					/**
+					 * Publish an Entry
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Changes entry status to "published"
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Publishes a draft entry, making it available through the Content Delivery API.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Entries
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the entry.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type_id: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content type to filter entries
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the content type to filter the entry dropdown.
+							 */
+							longDesc: () => LocalizedString
+						}
+						entry_id: {
+							/**
+							 * Entry
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The entry to publish
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the entry to publish.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				unpublish_entry: {
+					/**
+					 * Unpublish an Entry
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Puts an entry back into "draft" state
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Unpublishes an entry, removing it from the Content Delivery API and reverting it to draft state.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Entries
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the entry.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type_id: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content type to filter entries
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the content type to filter the entry dropdown.
+							 */
+							longDesc: () => LocalizedString
+						}
+						entry_id: {
+							/**
+							 * Entry
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The entry to unpublish
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the entry to unpublish.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				archive_entry: {
+					/**
+					 * Archive/Unarchive an Entry
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Archives/Unarchives an unpublished entry
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Archives or unarchives an entry. The entry must be unpublished before it can be archived. Archived entries are hidden from the default entry list.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Entries
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the entry.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type_id: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content type to filter entries
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the content type to filter the entry dropdown.
+							 */
+							longDesc: () => LocalizedString
+						}
+						entry_id: {
+							/**
+							 * Entry
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The entry to archive or unarchive
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the entry.
+							 */
+							longDesc: () => LocalizedString
+						}
+						archive: {
+							/**
+							 * Archive
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Set to true to archive, false to unarchive
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, the entry will be archived. When disabled, the entry will be unarchived.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				search_entries: {
+					/**
+					 * Search Entries
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Searches for entries
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Searches for entries of a specific content type with optional full-text search. Returns a paginated list of entries.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Entries
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space to search in.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type_id: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content type to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the content type to filter results by.
+							 */
+							longDesc: () => LocalizedString
+						}
+						query: {
+							/**
+							 * Search Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Full-text search query
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional text to search across all text fields of the entries.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of entries to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of entries to return. Default is 100, maximum is 1000.
+							 */
+							longDesc: () => LocalizedString
+						}
+						skip: {
+							/**
+							 * Skip
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of entries to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of entries to skip for pagination. Default is 0.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_asset: {
+					/**
+					 * Get an Asset
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns attributes of a specific asset
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a single asset by its ID, returning metadata including title, description, file URL, MIME type, and size.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Assets
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the asset.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						asset_id: {
+							/**
+							 * Asset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The asset to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the asset to retrieve.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_asset: {
+					/**
+					 * Create an Asset
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new asset
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new asset from a URL. The asset will be processed (downloaded and stored) automatically. Optionally publishes the asset after creation.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Assets
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space where the asset will be created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The asset title
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A descriptive title for the asset.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The asset description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional description for the asset.
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_name: {
+							/**
+							 * File Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The file name for the asset
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The file name including extension (e.g., "photo.jpg").
+							 */
+							longDesc: () => LocalizedString
+						}
+						file_url: {
+							/**
+							 * File URL
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The URL of the file to upload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The publicly accessible URL from which Contentful will download the file.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The MIME type of the file
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The MIME type of the file (e.g., "image/jpeg", "application/pdf").
+							 */
+							longDesc: () => LocalizedString
+						}
+						publish: {
+							/**
+							 * Publish
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether to publish the asset after creation
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, the asset will be published immediately after processing.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_asset: {
+					/**
+					 * Update an Asset
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates an asset by its ID
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the title and/or description of an existing asset.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Assets
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the asset.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						asset_id: {
+							/**
+							 * Asset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The asset to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the asset to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						title: {
+							/**
+							 * Title
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New title for the asset
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated title for the asset.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New description for the asset
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated description for the asset.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_asset: {
+					/**
+					 * Delete an Asset
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Permanently removes an unpublished asset
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently deletes an asset. If the asset is published, it will be unpublished first. This action is irreversible.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Assets
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the asset.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						asset_id: {
+							/**
+							 * Asset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The asset to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the asset to permanently remove.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				publish_asset: {
+					/**
+					 * Publish an Asset
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Changes asset status to "published"
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Publishes a draft asset, making it available through the Content Delivery API.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Assets
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the asset.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						asset_id: {
+							/**
+							 * Asset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The asset to publish
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the asset to publish.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				unpublish_asset: {
+					/**
+					 * Unpublish an Asset
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Puts an asset back into "draft" state
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Unpublishes an asset, removing it from the Content Delivery API and reverting it to draft state.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Assets
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the asset.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						asset_id: {
+							/**
+							 * Asset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The asset to unpublish
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the asset to unpublish.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				archive_asset: {
+					/**
+					 * Archive/Unarchive an Asset
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Archives/Unarchives an unpublished asset
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Archives or unarchives an asset. The asset must be unpublished before it can be archived.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Assets
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the asset.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						asset_id: {
+							/**
+							 * Asset
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The asset to archive or unarchive
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select or enter the ID of the asset.
+							 */
+							longDesc: () => LocalizedString
+						}
+						archive: {
+							/**
+							 * Archive
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Set to true to archive, false to unarchive
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When enabled, the asset will be archived. When disabled, the asset will be unarchived.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				search_assets: {
+					/**
+					 * Search Assets
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Searches for assets
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Searches for assets with optional full-text search and MIME type filtering. Returns a paginated list of assets.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Assets
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space to search in.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						query: {
+							/**
+							 * Search Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Full-text search query
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional text to search across asset titles and descriptions.
+							 */
+							longDesc: () => LocalizedString
+						}
+						mime_type_group: {
+							/**
+							 * MIME Type Group
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter by file type group
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optionally filter assets by MIME type group (e.g., image, video, audio, pdfdocument).
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of assets to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of assets to return. Default is 100, maximum is 1000.
+							 */
+							longDesc: () => LocalizedString
+						}
+						skip: {
+							/**
+							 * Skip
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of assets to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of assets to skip for pagination. Default is 0.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				get_content_type: {
+					/**
+					 * Get a Content Type
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Returns attributes of a specific content type
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Retrieves a content type by its ID, including its name, description, and field definitions.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Content Types
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the content type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type_id: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content type to retrieve
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the content type to retrieve details for.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_content_type: {
+					/**
+					 * Create a Content Type
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Creates a new content type
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new content type with the specified name, description, and field definitions. The content type will be created in draft state.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Content Types
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space where the content type will be created.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content type name
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A descriptive name for the content type (e.g., "Blog Post", "Product").
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content type description
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * An optional description explaining the purpose of this content type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The field definitions for the content type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A list of field definitions. Each field requires an ID, name, and type. Supported types: Symbol, Text, Integer, Number, Date, Boolean, RichText, Link, Array, Object, Location.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										id: {
+											/**
+											 * Field ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Unique identifier for the field
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * A unique ID for the field (e.g., "heroImage", "publishDate"). Must be unique within the content type.
+											 */
+											longDesc: () => LocalizedString
+										}
+										name: {
+											/**
+											 * Field Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Display name for the field
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * A human-readable name for the field (e.g., "Hero Image", "Publish Date").
+											 */
+											longDesc: () => LocalizedString
+										}
+										type: {
+											/**
+											 * Field Type
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Data type (Symbol, Text, Integer, Number, Date, Boolean, RichText, Link, Array, Object, Location)
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The data type for the field. Supported types: Symbol (short text), Text (long text), Integer, Number, Date, Boolean, RichText, Link, Array, Object, Location.
+											 */
+											longDesc: () => LocalizedString
+										}
+										required: {
+											/**
+											 * Required
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Whether the field is required
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * If enabled, entries must provide a value for this field.
+											 */
+											longDesc: () => LocalizedString
+										}
+										localized: {
+											/**
+											 * Localized
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Whether the field supports localization
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * If enabled, the field can have different values for different locales.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				update_content_type: {
+					/**
+					 * Update a Content Type
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates a specific content type by its ID
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the name and/or description of an existing content type.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Content Types
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the content type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type_id: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content type to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the content type to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						name: {
+							/**
+							 * Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New name for the content type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated name for the content type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						description: {
+							/**
+							 * Description
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New description for the content type
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated description for the content type.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_content_type: {
+					/**
+					 * Delete a Content Type
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Permanently removes a deactivated content type
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Permanently deletes a content type. The content type must be deactivated (unpublished) first. This action is irreversible.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Content Types
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the content type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type_id: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content type to delete
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the content type to permanently remove.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				activate_content_type: {
+					/**
+					 * Activate a Content Type
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Activates a content type by its ID
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Publishes (activates) a content type, making it available for creating entries.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Content Types
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the content type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type_id: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content type to activate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the content type to activate (publish).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				deactivate_content_type: {
+					/**
+					 * Deactivate a Content Type
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Changes a content type status to "draft"
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Unpublishes (deactivates) a content type, reverting it to draft state. No new entries can be created for a deactivated content type.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Content Types
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the content type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type_id: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content type to deactivate
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the content type to deactivate (unpublish).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				add_field_to_content_type: {
+					/**
+					 * Add a Field to a Content Type
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Adds a new field to a specific content type
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Adds a new field definition to an existing content type. The content type will need to be re-activated after adding the field.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Content Types
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the content type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type_id: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content type to add the field to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the content type to modify.
+							 */
+							longDesc: () => LocalizedString
+						}
+						field_id: {
+							/**
+							 * Field ID
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Unique identifier for the new field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A unique ID for the field (e.g., "heroImage", "publishDate"). Must be unique within the content type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						field_name: {
+							/**
+							 * Field Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Display name for the new field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * A human-readable name for the field (e.g., "Hero Image", "Publish Date").
+							 */
+							longDesc: () => LocalizedString
+						}
+						field_type: {
+							/**
+							 * Field Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The data type for the field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the data type: Symbol (short text), Text (long text), Integer, Number, Date, Boolean, RichText, Link, Array, Object, or Location.
+							 */
+							longDesc: () => LocalizedString
+						}
+						required: {
+							/**
+							 * Required
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether the field is required
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, entries must provide a value for this field.
+							 */
+							longDesc: () => LocalizedString
+						}
+						localized: {
+							/**
+							 * Localized
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether the field supports localization
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * If enabled, the field can have different values for different locales.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				update_field_of_content_type: {
+					/**
+					 * Update a Field of a Content Type
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Updates a field inside a specific content type
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates the properties of an existing field in a content type.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Content Types
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the content type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type_id: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content type containing the field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the content type to modify.
+							 */
+							longDesc: () => LocalizedString
+						}
+						field_id: {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The field to update
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the field to update.
+							 */
+							longDesc: () => LocalizedString
+						}
+						field_name: {
+							/**
+							 * Field Name
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * New display name for the field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The updated display name for the field.
+							 */
+							longDesc: () => LocalizedString
+						}
+						required: {
+							/**
+							 * Required
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether the field is required
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update whether entries must provide a value for this field.
+							 */
+							longDesc: () => LocalizedString
+						}
+						localized: {
+							/**
+							 * Localized
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Whether the field supports localization
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Update whether the field can have different values for different locales.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				delete_field_from_content_type: {
+					/**
+					 * Delete a Field from a Content Type
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Removes a field from a specific content type
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Removes a field from a content type. The field is first marked as omitted, then removed entirely. Existing entry data for this field will be lost.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Content Types
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to use
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space containing the content type.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						content_type_id: {
+							/**
+							 * Content Type
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The content type containing the field
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the content type to modify.
+							 */
+							longDesc: () => LocalizedString
+						}
+						field_id: {
+							/**
+							 * Field
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The field to remove
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the field to permanently remove from the content type.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				search_content_types: {
+					/**
+					 * Search Content Types
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Searches for content types
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Searches for content types with optional text filtering. Returns a paginated list of content types with their field definitions.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Content Types
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to search
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space to search in.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						query: {
+							/**
+							 * Search Query
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Text search query
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional text to search across content type names and descriptions.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of results to return
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The maximum number of content types to return. Default is 100.
+							 */
+							longDesc: () => LocalizedString
+						}
+						skip: {
+							/**
+							 * Skip
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Number of results to skip
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The number of content types to skip for pagination. Default is 0.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+			}
+			triggers: {
+				watch_event: {
+					/**
+					 * Watch an Event
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new event occurs
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a webhook in Contentful that triggers when selected events occur. Supports entry, asset, and content type events such as creation, updates, publishing, and deletion.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Events
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						space_id: {
+							/**
+							 * Space
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The Contentful space to monitor
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the Contentful space to monitor for events.
+							 */
+							longDesc: () => LocalizedString
+						}
+						environment_id: {
+							/**
+							 * Environment
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The environment to use (default: master)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select the environment within the space. Defaults to "master" if not specified.
+							 */
+							longDesc: () => LocalizedString
+						}
+						event_types: {
+							/**
+							 * Event Types
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The types of events to watch for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Select one or more event types to trigger on. Events include entry, asset, and content type lifecycle events.
 							 */
 							longDesc: () => LocalizedString
 						}

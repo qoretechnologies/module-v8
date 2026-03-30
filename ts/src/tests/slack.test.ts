@@ -154,6 +154,9 @@ describe('Should test Slack', () => {
     it('Should get channel allowed values', async () => {
       const allowedValues = await getSlackChannelsAllowedValues(baseContext);
 
+      console.log('Length of allowed values:', allowedValues.length);
+      console.dir(allowedValues, { depth: null });
+
       expect(allowedValues).toBeDefined();
       expect(Array.isArray(allowedValues)).toBe(true);
 
