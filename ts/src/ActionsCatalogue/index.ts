@@ -35,7 +35,6 @@ import browserAi from '../apps/browse-ai';
 import businessCentral from '../apps/business-central';
 import calendly from '../apps/calendly';
 import canva from '../apps/canva';
-import claude from '../apps/claude';
 import clickup from '../apps/clickup';
 import confluence from '../apps/confluence';
 import coppercrm from '../apps/coppercrm';
@@ -49,7 +48,6 @@ import firebase from '../apps/firebase';
 import firestore from '../apps/firestore';
 import freshdesk from '../apps/freshdesk';
 import front from '../apps/front';
-import gemini from '../apps/gemini';
 import github from '../apps/github';
 import gitlab from '../apps/gitlab';
 import googleAds from '../apps/google-ads';
@@ -64,7 +62,6 @@ import googleSheets from '../apps/google-sheets';
 import googleTasks from '../apps/google-tasks';
 import helpscout from '../apps/helpscout';
 import hubspot from '../apps/hubspot';
-import huggingFace from '../apps/hugging-face';
 import intercom from '../apps/intercom';
 import jira from '../apps/jira';
 import klaviyo from '../apps/klaviyo';
@@ -150,7 +147,6 @@ const NEW_APPS = {
   browserAi,
   calendly,
   canva,
-  claude,
   clickup,
   confluence,
   coppercrm,
@@ -162,7 +158,6 @@ const NEW_APPS = {
   firebase,
   firestore,
   freshdesk,
-  gemini,
   github,
   gitlab,
   googleAnalytics,
@@ -177,7 +172,6 @@ const NEW_APPS = {
   googleTasks,
   helpscout,
   hubspot,
-  huggingFace,
   intercom,
   jira,
   klaviyo,
