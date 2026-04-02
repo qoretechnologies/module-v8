@@ -308,66 +308,80 @@ private:
 class QoreV8ProgramHelper {
 public:
     DLLLOCAL QoreV8ProgramHelper(ExceptionSink* xsink, QoreV8Program* pgm, bool silent = false) {
-        // Check if isolate is valid BEFORE initializing any V8 objects
-        // (isolate can be nullptr if program initialization failed)
-        if (!pgm->isolate) {
-            if (!silent) {
-                xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "The JavaScript program was not properly initialized");
+        // Acquire the mutex FIRST to check validity and increment opcount atomically.
+        // This prevents deleteIntern() from destroying the isolate between our validity
+        // check and V8 object creation (race condition that caused intermittent SIGSEGV
+        // in CI when loading many TypeScript data providers concurrently).
+        {
+            AutoLocker al(pgm->m);
+            if (!pgm->isolate) {
+                if (!silent) {
+                    xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR",
+                        "The JavaScript program was not properly initialized");
+                }
+                return;
             }
-            return;
+            if (!pgm->valid) {
+                if (!silent) {
+                    xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR",
+                        "The given JavaScriptProgram has been destroyed "
+                        "and can no longer be accessed");
+                }
+                return;
+            }
+            if (pgm->fatal_error) {
+                if (!silent) {
+                    xsink->raiseException("JAVASCRIPT-FATAL-ERROR",
+                        "The given JavaScriptProgram has encountered a fatal V8 error "
+                        "and can no longer be accessed");
+                }
+                return;
+            }
+            if (pgm->heap_limit) {
+                if (!silent) {
+                    xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR",
+                        "The given JavaScriptProgram has exceeded its heap "
+                        "memory limit and can no longer be accessed");
+                }
+                return;
+            }
+            if (pgm->to_destroy) {
+                if (!silent) {
+                    xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR",
+                        "The given JavaScriptProgram has been marked for "
+                        "destruction and can no longer be accessed");
+                }
+                return;
+            }
+            // Increment opcount while holding the lock; this prevents deleteIntern()
+            // from proceeding with destruction while we create V8 objects below.
+            // Set this->pgm and this->xsink immediately so that the destructor will
+            // decrement opcount even if V8 object creation below throws.
+            ++pgm->opcount;
+            this->pgm = pgm;
+            this->xsink = xsink;
         }
 
-        // Initialize V8 objects now that we know isolate is valid
+        // Now opcount > 0, so deleteIntern() will defer destruction — safe to create
+        // V8 objects without the Qore mutex (V8 Locker provides its own synchronization)
         locker.emplace(pgm->isolate);
         isolate_scope.emplace(pgm->isolate);
         handle_scope.emplace(pgm->isolate);
         tryCatch.emplace(pgm->isolate);
 
-        AutoLocker al(pgm->m);
-        if (!pgm->valid) {
-            if (!silent) {
-                xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "The given JavaScriptProgram has been destroyed "
-                    "and can no longer be accessed");
+        {
+            AutoLocker al(pgm->m);
+            if (pgm->ctx.IsEmpty()) {
+                if (!silent) {
+                    xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR",
+                        "The JavaScript program context is not available");
+                }
+                return;
             }
-            return;
+            context = pgm->ctx.Get(pgm->isolate);
+            context_scope.emplace(context);
+            initialized = true;
         }
-        if (pgm->fatal_error) {
-            if (!silent) {
-                xsink->raiseException("JAVASCRIPT-FATAL-ERROR",
-                    "The given JavaScriptProgram has encountered a fatal V8 error and can no longer be accessed");
-            }
-            return;
-        }
-        if (pgm->heap_limit) {
-            if (!silent) {
-                xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "The given JavaScriptProgram has exceeded its heap "
-                    "memory limit and can no longer be accessed");
-            }
-            return;
-        }
-        if (pgm->to_destroy) {
-            if (!silent) {
-                xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "The given JavaScriptProgram has been marked for "
-                    "destruction and can no longer be accessed");
-            }
-            return;
-        }
-        ++pgm->opcount;
-        // Initialize context and context_scope AFTER validity check to avoid crash
-        // if ctx has been Reset() by another thread
-        // Also check if ctx is empty (e.g., during init() before ctx is set)
-        if (pgm->ctx.IsEmpty()) {
-            // Cannot create a valid helper without a context - decrement opcount and return
-            --pgm->opcount;
-            if (!silent) {
-                xsink->raiseException("JAVASCRIPT-PROGRAM-ERROR", "The JavaScript program context is not available");
-            }
-            return;
-        }
-        this->xsink = xsink;
-        this->pgm = pgm;
-        context = pgm->ctx.Get(pgm->isolate);
-        context_scope.emplace(context);
     }
 
     DLLLOCAL ~QoreV8ProgramHelper() {
@@ -386,7 +400,7 @@ public:
     }
 
     DLLLOCAL operator bool() const {
-        return (bool) pgm;
+        return initialized;
     }
 
     DLLLOCAL QoreV8Program* getProgram() {
@@ -413,6 +427,7 @@ public:
 private:
     QoreV8Program* pgm = nullptr;
     ExceptionSink* xsink = nullptr;
+    bool initialized = false;
 
     std::optional<v8::Locker> locker;
     std::optional<v8::Isolate::Scope> isolate_scope;
