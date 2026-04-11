@@ -36,7 +36,7 @@ void copy_refs(ExceptionSink* xsink, QoreObject* source, QoreObject* target) {
     if (!v1) {
         ReferenceHolder<QoreListNode> rh(new QoreListNode(autoTypeInfo), xsink);
         tl = *rh;
-        target->setMemberValue("promise_refs", QC_JAVASCRIPTPROMISE, *rh, xsink);
+        target->setMemberValue("promise_refs", QC_JAVASCRIPTPROMISE, rh.release(), xsink);
     } else {
         tl = v1->get<QoreListNode>();
     }
@@ -51,7 +51,7 @@ void save_ref(ExceptionSink* xsink, ReferenceHolder<QoreListNode>& ref, QoreObje
         v->get<QoreListNode>()->push(ref->refSelf(), xsink);
         //printd(5, "save_ref() obj %p added reference: %p\n", obj, *ref);
     } else {
-        obj->setMemberValue("promise_refs", QC_JAVASCRIPTPROMISE, *ref, xsink);
+        obj->setMemberValue("promise_refs", QC_JAVASCRIPTPROMISE, ref.release(), xsink);
         //printd(5, "save_ref() obj %p set reference: %p\n", obj, *ref);
     }
 }
