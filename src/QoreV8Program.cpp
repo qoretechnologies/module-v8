@@ -467,12 +467,15 @@ int QoreV8Program::saveQoreReferenceDefault(const QoreValue& rv, ExceptionSink& 
     QoreHashNode* data = qpgm->getThreadData();
     assert(data);
     const char* domain_name;
+    std::string domain_storage;
     // get key name where to save the data if possible
     QoreValue v = data->getKeyValue("_v8_save");
     if (v.getType() != NT_STRING) {
         domain_name = "_v8_save";
     } else {
-        domain_name = v.get<const QoreStringNode>()->c_str();
+        QoreStringValueHelper domain(v);
+        domain_storage.assign(domain->c_str(), domain->size());
+        domain_name = domain_storage.c_str();
     }
 
     QoreValue kv = data->getKeyValue(domain_name);
@@ -676,7 +679,9 @@ void QoreV8Program::raiseV8Exception(ExceptionSink& xsink, v8::Isolate* isolate)
     const QoreValue errv = xsink.getExceptionErr();
     const QoreValue descv = xsink.getExceptionDesc();
     if (errv.getType() == NT_STRING) {
-        errstr = errv.get<const QoreStringNode>();
+        QoreStringValueHelper str(errv);
+        err.set(*str);
+        errstr = &err;
     } else {
         if (errv.getAsString(err, 0, &xsink)) {
             xsink.clear();
@@ -685,7 +690,9 @@ void QoreV8Program::raiseV8Exception(ExceptionSink& xsink, v8::Isolate* isolate)
         errstr = &err;
     }
     if (descv.getType() == NT_STRING) {
-        descstr = descv.get<const QoreStringNode>();
+        QoreStringValueHelper str(descv);
+        desc.set(*str);
+        descstr = &desc;
     } else {
         if (descv.getAsString(desc, 0, &xsink)) {
             xsink.clear();
@@ -912,7 +919,8 @@ v8::Local<v8::Value> QoreV8Program::getV8Value(const QoreValue val, ExceptionSin
         }
 
         case NT_STRING: {
-            v8::MaybeLocal<v8::String> rv = v8::String::NewFromUtf8(isolate, val.get<const QoreStringNode>()->c_str(),
+            QoreStringValueHelper str(val);
+            v8::MaybeLocal<v8::String> rv = v8::String::NewFromUtf8(isolate, str->c_str(),
                 v8::NewStringType::kNormal);
             if (rv.IsEmpty()) {
                 checkException(xsink, tryCatch);

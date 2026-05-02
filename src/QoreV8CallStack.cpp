@@ -77,10 +77,12 @@ QoreV8CallStack::QoreV8CallStack(v8::Isolate* isolate, const v8::TryCatch& tryCa
                     assert(file.getType() == NT_STRING);
                     QoreValue line = l->retrieveEntry(offset + 2);
                     assert(line.getType() == NT_STRING);
-                    long ln = strtol(line.get<const QoreStringNode>()->c_str(), nullptr, 10);
+                    QoreStringValueHelper line_str(line);
+                    long ln = strtol(line_str->c_str(), nullptr, 10);
 
-                    add(CT_USER, file.get<const QoreStringNode>()->c_str(), ln, ln,
-                        func.get<const QoreStringNode>()->c_str(), "JavaScript");
+                    QoreStringValueHelper file_str(file);
+                    QoreStringValueHelper func_str(func);
+                    add(CT_USER, file_str->c_str(), ln, ln, func_str->c_str(), "JavaScript");
                     offset += 3;
                 }
             } else {
