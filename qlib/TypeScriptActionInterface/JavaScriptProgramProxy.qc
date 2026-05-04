@@ -488,6 +488,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     private removeEventSource(string ekey) {
+        bool stop;
         {
             global_lock.lock();
             on_exit global_lock.unlock();
@@ -495,8 +496,13 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             remove event.omap{ekey};
             if (!event.omap) {
                 remove event;
-                stopEventListener();
+                stop = True;
             }
+        }
+        # stopEventListener() must run without global_lock held: the listener thread can call notify() callbacks
+        # that need global_lock through the JS proxy pool, which would deadlock
+        if (stop) {
+            stopEventListener();
         }
     }
 
@@ -542,6 +548,13 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             }
         }
         if (stop && !in_listener) {
+            # release global_lock while stopping the listener and sending PC_RELEASE_EVENT: stopEventListener() waits
+            # for the listener thread to exit, but the listener thread may be running a notify() callback (FSM, etc.)
+            # that needs to acquire global_lock through the JS proxy pool, which would deadlock. The contract for this
+            # method is that global_lock is held on entry and exit, so we re-acquire it before returning.
+            global_lock.unlock();
+            on_exit global_lock.lock();
+
             stopEventListener();
             try {
                 sendCommandArgs(NOTHING, PC_RELEASE_EVENT, key, NOTHING, True);
