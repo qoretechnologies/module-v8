@@ -193,10 +193,13 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     hash<auto> getInfo() {
-        return {
+        hash<auto> rv = {
             "proxy-pid": proc.id(),
-            "event-listener-tid": es_tid,
         };
+        if (es_tid) {
+            rv."event-listener-tid" = es_tid;
+        }
+        return rv;
     }
 
     static stopMasterListener() {

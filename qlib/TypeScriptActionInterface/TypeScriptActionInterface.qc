@@ -3230,20 +3230,24 @@ public class TypeScriptActionInterface {
 
     #! Creates a connection for the given app
     static string createConnection(string app, *hash<auto> opts) {
-        if (!opts.name.val()) {
-            opts.name = sprintf("app-%s", get_random_string());
+        hash<auto> config;
+        if (opts) {
+            map config{$1.key} = $1.value, opts.pairIterator();
         }
-        if (!opts.url.val()) {
-            opts.url = sprintf("tsrest-%s://", app);
+        if (!config.name.val()) {
+            config.name = sprintf("app-%s", get_random_string());
         }
-        if (cmap{opts.name}) {
-            throw "TYPESCRIPT-CONNECTION-ERROR", sprintf("Duplicate connection name %y", opts.name);
+        if (!config.url.val()) {
+            config.url = sprintf("tsrest-%s://", app);
+        }
+        if (cmap{config.name}) {
+            throw "TYPESCRIPT-CONNECTION-ERROR", sprintf("Duplicate connection name %y", config.name);
         }
         TypeScriptAppRestConnection conn = aws_app_map{app.lwr()}
-            ? new TypeScriptAwsAppRestConnection(opts)
-            : new TypeScriptAppRestConnection(opts);
-        cmap{opts.name} = conn;
-        return opts.name;
+            ? new TypeScriptAwsAppRestConnection(config)
+            : new TypeScriptAppRestConnection(config);
+        cmap{config.name} = conn;
+        return config.name;
     }
 
     #! Returns the connection object created with createConnection()
