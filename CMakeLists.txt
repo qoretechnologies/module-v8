@@ -26,7 +26,72 @@ endif()
 
 find_package(Qore 2.0 REQUIRED)
 
-find_library(LIBNODE NAMES node HINTS ENV NODE_LIB_DIR REQUIRED)
+# Locate libnode. When NODE_LIB_DIR is set we MUST use the libnode in that
+# directory; falling back to a system libnode while including Node headers
+# from somewhere else leads to header/library version mismatches (e.g.
+# undefined symbol v8::api_internal::GetFunctionTemplateData when Node 24
+# headers are compiled against Node 22's libnode).
+if (DEFINED ENV{NODE_LIB_DIR})
+    find_library(LIBNODE NAMES node
+        HINTS ENV NODE_LIB_DIR
+        NO_DEFAULT_PATH)
+    if (NOT LIBNODE)
+        # Some Node tarballs ship only the versioned soname (e.g.
+        # libnode.so.137) without the unversioned development symlink.
+        # Pick the highest-numbered versioned library in NODE_LIB_DIR.
+        file(GLOB _node_versioned_libs "$ENV{NODE_LIB_DIR}/libnode.so.*"
+                                       "$ENV{NODE_LIB_DIR}/libnode.*.dylib")
+        if (_node_versioned_libs)
+            list(SORT _node_versioned_libs)
+            list(REVERSE _node_versioned_libs)
+            list(GET _node_versioned_libs 0 LIBNODE)
+            set(LIBNODE "${LIBNODE}" CACHE FILEPATH "libnode location" FORCE)
+        endif()
+    endif()
+    if (NOT LIBNODE)
+        message(FATAL_ERROR "NODE_LIB_DIR=$ENV{NODE_LIB_DIR} is set but no libnode was found there")
+    endif()
+else()
+    find_library(LIBNODE NAMES node REQUIRED)
+endif()
+message(STATUS "Using libnode: ${LIBNODE}")
+
+# Determine the Node include directory we will compile against and verify
+# that it matches the libnode we'll link to. A mismatch silently produces
+# a .qmod that fails at load time with undefined v8::api_internal::* symbols.
+if (DEFINED ENV{NODE_INCLUDE_DIR})
+    set(_node_include_dir "$ENV{NODE_INCLUDE_DIR}")
+elseif(EXISTS /usr/include/node/node_version.h)
+    set(_node_include_dir "/usr/include/node")
+endif()
+
+if (_node_include_dir AND EXISTS "${_node_include_dir}/node_version.h")
+    file(STRINGS "${_node_include_dir}/node_version.h" _node_ver_line
+        REGEX "^#define[ \t]+NODE_MODULE_VERSION[ \t]+")
+    string(REGEX REPLACE ".*NODE_MODULE_VERSION[ \t]+([0-9]+).*" "\\1"
+        _node_header_modver "${_node_ver_line}")
+
+    # libnode's SOVERSION is NODE_MODULE_VERSION; extract it from the
+    # resolved library path or from its actual soname.
+    get_filename_component(_libnode_real "${LIBNODE}" REALPATH)
+    get_filename_component(_libnode_name "${_libnode_real}" NAME)
+    string(REGEX MATCH "libnode\\.so\\.([0-9]+)" _m "${_libnode_name}")
+    set(_libnode_modver "${CMAKE_MATCH_1}")
+    if (NOT _libnode_modver)
+        string(REGEX MATCH "libnode\\.([0-9]+)\\.dylib" _m "${_libnode_name}")
+        set(_libnode_modver "${CMAKE_MATCH_1}")
+    endif()
+
+    if (_node_header_modver AND _libnode_modver
+        AND NOT _node_header_modver STREQUAL _libnode_modver)
+        message(FATAL_ERROR
+            "Node header/library mismatch: headers in ${_node_include_dir} "
+            "report NODE_MODULE_VERSION=${_node_header_modver}, but ${LIBNODE} "
+            "resolves to ${_libnode_real} (NODE_MODULE_VERSION=${_libnode_modver}). "
+            "Set NODE_LIB_DIR to the matching Node install or fix NODE_INCLUDE_DIR.")
+    endif()
+    message(STATUS "Node module ABI version: ${_node_header_modver}")
+endif()
 
 # Find libjsig for JVM signal chaining (optional - needed when both V8 and JVM are used)
 # This prevents signal handler conflicts between V8 and JVM
@@ -49,10 +114,8 @@ else()
     message(STATUS "libjsig not found - JVM signal chaining support disabled (OK if JVM not installed)")
 endif()
 
-if (DEFINED ENV{NODE_INCLUDE_DIR})
-    include_directories(BEFORE "$ENV{NODE_INCLUDE_DIR}")
-elseif(EXISTS /usr/include/node/node.h)
-    include_directories(BEFORE "/usr/include/node")
+if (_node_include_dir)
+    include_directories(BEFORE "${_node_include_dir}")
 endif()
 
 if (DEFINED ENV{V8_CPPGC_INCLUDE_DIR})
