@@ -7,6 +7,7 @@ import { HUBSPOT_COMPANIES_ACTIONS } from './allowed-paths/companies';
 import { HUBSPOT_CONTACTS_ACTIONS } from './allowed-paths/contacts';
 import { HUBSPOT_CUSTOM_OBJECTS_ACTIONS } from './allowed-paths/custom-objects';
 import { HUBSPOT_DEALS_ACTIONS } from './allowed-paths/deals';
+import { HUBSPOT_FORMS_ACTIONS } from './allowed-paths/forms';
 import { HUBSPOT_LEADS_ACTIONS } from './allowed-paths/leads';
 import { HUBSPOT_LISTS_ACTIONS } from './allowed-paths/lists';
 import { HUBSPOT_PRODUCTS_ACTIONS } from './allowed-paths/products';
@@ -63,6 +64,7 @@ export default (locale: Locales) =>
       ...mapActionsToApp(HUBSPOT_APP_NAME, HUBSPOT_TICKETS_ACTIONS, locale),
       ...mapActionsToApp(HUBSPOT_APP_NAME, HUBSPOT_USERS_ACTIONS, locale),
       ...mapActionsToApp(HUBSPOT_APP_NAME, HUBSPOT_LISTS_ACTIONS, locale),
+      ...mapActionsToApp(HUBSPOT_APP_NAME, HUBSPOT_FORMS_ACTIONS, locale),
       ...mapActionsToApp(HUBSPOT_APP_NAME, HUBSPOT_ACTIONS, locale),
       ...mapTriggersToApp(HUBSPOT_APP_NAME, HUBSPOT_TRIGGERS, locale),
     ],
@@ -97,6 +99,7 @@ export default (locale: Locales) =>
         'crm.objects.users.write',
         'crm.lists.read',
         'crm.lists.write',
+        'forms',
       ],
       ping_method: 'GET',
       ping_path: '/integrations/v1/me',
@@ -131,6 +134,9 @@ export default (locale: Locales) =>
       },
       lists: {
         swagger: 'schemas/hubspot/lists.swagger.json',
+      },
+      forms: {
+        swagger: 'schemas/hubspot/forms.swagger.json',
       },
     },
     search_options: HubspotSearchOptions,

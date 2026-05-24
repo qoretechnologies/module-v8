@@ -1,6 +1,11 @@
-import { IQoreTypeObjectNonList } from '@qoretechnologies/ts-toolkit';
+import { IQoreAppActionWithFunction, IQoreTypeObjectNonList } from '@qoretechnologies/ts-toolkit';
 import { configDotenv } from 'dotenv';
 import { difference } from 'lodash';
+import getHubspotFormSubmissionsAction from '../apps/hubspot/actions/get-form-submissions.action';
+import submitHubspotFormAction from '../apps/hubspot/actions/submit-form.action';
+import { getHubspotFormAllowedValues } from '../apps/hubspot/helpers/get-form-allowed-values';
+import { getHubspotFormFieldAllowedValues } from '../apps/hubspot/helpers/get-form-field-allowed-values';
+import { getHubspotPortalId } from '../apps/hubspot/helpers/get-portal-id';
 import { createHubspotRecords } from '../apps/hubspot/helpers/record-based/create-records';
 import { deleteHubspotRecords } from '../apps/hubspot/helpers/record-based/delete-records';
 import { getHubspotRecordType } from '../apps/hubspot/helpers/record-based/get-record-type';
@@ -8,8 +13,9 @@ import { getHubspotTableList } from '../apps/hubspot/helpers/record-based/get-ta
 import { searchHubspotRecords } from '../apps/hubspot/helpers/record-based/search-records';
 import { updateHubspotRecords } from '../apps/hubspot/helpers/record-based/update-records';
 import { upsertHubspotRecords } from '../apps/hubspot/helpers/record-based/upsert-records';
+import HubspotFormSubmittedTrigger from '../apps/hubspot/triggers/form-submitted.trigger';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import { retry } from './utils';
+import { checkAllowedValues, retry } from './utils';
 
 Debugger.level = DebugLevels.Verbose;
 configDotenv({ path: '.env' });
@@ -371,6 +377,204 @@ describe('Should test Hubspot record based helpers', () => {
       );
 
       expect(result).toBe(3);
+    });
+  });
+});
+
+describe('Should test Hubspot forms integration', () => {
+  const baseContext = {
+    conn_opts: {
+      token: '',
+    },
+    opts: {} as Record<string, unknown>,
+  };
+
+  let hasFormTestEnv = false;
+  let testFormId: string | undefined;
+
+  beforeAll(() => {
+    const token = process.env.HUBSPOT_TOKEN;
+
+    if (!token) {
+      throw new Error('HUBSPOT_TOKEN is not defined in environment variables');
+    }
+
+    baseContext.conn_opts.token = token;
+
+    testFormId = process.env.HUBSPOT_TEST_FORM_GUID;
+    hasFormTestEnv = Boolean(testFormId);
+  });
+
+  describe('getHubspotPortalId helper', () => {
+    it('Should resolve portalId from /integrations/v1/me', async () => {
+      const portalId = await getHubspotPortalId(baseContext.conn_opts.token);
+
+      expect(typeof portalId).toBe('number');
+      expect(portalId).toBeGreaterThan(0);
+    });
+
+    it('Should return undefined for an empty token', async () => {
+      const portalId = await getHubspotPortalId('');
+
+      expect(portalId).toBeUndefined();
+    });
+  });
+
+  describe('getHubspotFormAllowedValues helper', () => {
+    it('Should return allowed values for the connected portal', async () => {
+      const allowedValues = await getHubspotFormAllowedValues(baseContext);
+
+      checkAllowedValues(allowedValues, { checkNonEmpty: false });
+    });
+
+    it('Should return an empty array when no token is provided', async () => {
+      const allowedValues = await getHubspotFormAllowedValues({ conn_opts: { token: '' } });
+
+      expect(allowedValues).toEqual([]);
+    });
+  });
+
+  describe('getHubspotFormFieldAllowedValues helper', () => {
+    it('Should return an empty array when token or formId is missing', async () => {
+      expect(await getHubspotFormFieldAllowedValues({ conn_opts: { token: '' } })).toEqual([]);
+      expect(
+        await getHubspotFormFieldAllowedValues({
+          conn_opts: baseContext.conn_opts,
+          opts: {},
+        })
+      ).toEqual([]);
+    });
+
+    it('Should return field allowed values when formId is provided', async () => {
+      if (!hasFormTestEnv || !testFormId) {
+        return;
+      }
+
+      const allowedValues = await getHubspotFormFieldAllowedValues({
+        conn_opts: baseContext.conn_opts,
+        opts: { formId: testFormId },
+      });
+
+      checkAllowedValues(allowedValues, { checkNonEmpty: true });
+    });
+  });
+
+  describe('Form submitted trigger', () => {
+    it('Should declare event_info fields matching get_example_event_data output', async () => {
+      if (!hasFormTestEnv || !testFormId) {
+        return;
+      }
+
+      const trigger = HubspotFormSubmittedTrigger;
+
+      if (!trigger.get_example_event_data) {
+        throw new Error('Trigger is missing get_example_event_data');
+      }
+
+      const exampleData = await trigger.get_example_event_data({
+        ...baseContext,
+        opts: { formId: testFormId },
+      });
+
+      if (!exampleData) {
+        return;
+      }
+
+      const eventInfoFields = Object.keys(
+        (trigger.event_info as { type: { fields: Record<string, unknown> } }).type.fields
+      );
+      const exampleFields = Object.keys(exampleData as Record<string, unknown>);
+
+      const missing = eventInfoFields.filter((f) => !exampleFields.includes(f));
+      const extra = exampleFields.filter((f) => !eventInfoFields.includes(f));
+
+      expect(missing).toEqual([]);
+      expect(extra).toEqual([]);
+    });
+  });
+
+  describe('Submit and read form submissions round-trip', () => {
+    it('Should submit and then read the submission back', async () => {
+      if (!hasFormTestEnv || !testFormId) {
+        return;
+      }
+
+      const marker = `qore-test-${Date.now()}@example.com`;
+      const submitAction = submitHubspotFormAction as IQoreAppActionWithFunction;
+      const readAction = getHubspotFormSubmissionsAction as IQoreAppActionWithFunction;
+
+      const submitResponse = (await submitAction.api_function(
+        {
+          formId: testFormId,
+          fields: [{ name: 'email', value: marker }],
+        },
+        undefined,
+        baseContext
+      )) as { inlineMessage: string; redirectUri: string };
+
+      expect(submitResponse).toBeDefined();
+      expect(typeof submitResponse.inlineMessage).toBe('string');
+
+      const submissions = (await retry(
+        async () => {
+          const result = (await readAction.api_function(
+            { formId: testFormId, limit: 50, maxResults: 100 },
+            undefined,
+            baseContext
+          )) as {
+            results: Array<{ values: Array<{ name: string; value: string }> }>;
+          };
+
+          const hit = result.results.find((s) =>
+            s.values.some((v) => v.name === 'email' && v.value === marker)
+          );
+
+          if (!hit) {
+            throw new Error('submission not yet indexed');
+          }
+
+          return result.results;
+        },
+        5,
+        2000
+      )) as Array<{ values: Array<{ name: string; value: string }> }>;
+
+      expect(Array.isArray(submissions)).toBe(true);
+      expect(submissions.length).toBeGreaterThan(0);
+    });
+  });
+
+  describe('get_form_submissions input validation', () => {
+    it('Should reject calls missing formId', async () => {
+      const readAction = getHubspotFormSubmissionsAction as IQoreAppActionWithFunction;
+
+      await expect(readAction.api_function({}, undefined, baseContext)).rejects.toThrow(/formId/);
+    });
+  });
+
+  describe('submit_form input validation', () => {
+    it('Should reject calls missing formId', async () => {
+      const submitAction = submitHubspotFormAction as IQoreAppActionWithFunction;
+
+      await expect(
+        submitAction.api_function(
+          { fields: [{ name: 'email', value: 'x@y.z' }] },
+          undefined,
+          baseContext
+        )
+      ).rejects.toThrow(/formId/);
+    });
+
+    it('Should reject calls missing fields when formId is provided', async () => {
+      if (!hasFormTestEnv || !testFormId) {
+        return;
+      }
+
+      const submitAction = submitHubspotFormAction as IQoreAppActionWithFunction;
+
+      await expect(
+        submitAction.api_function({ formId: testFormId, fields: [] }, undefined, baseContext)
+      ).rejects.toThrow(/field/i);
     });
   });
 });

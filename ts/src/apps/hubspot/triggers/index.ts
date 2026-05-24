@@ -6,3 +6,4 @@ export { default as HubspotLeadCreatedOrUpdated } from './lead-created-or-update
 export { default as HubspotProductCreatedOrUpdated } from './product-created-or-updated.trigger';
 export { default as HubspotTicketCreatedOrUpdated } from './ticket-created-or-updated.trigger';
 export { default as HubspotUserCreatedOrUpdated } from './user-created-or-updated.trigger';
+export { default as HubspotFormSubmitted } from './form-submitted.trigger';

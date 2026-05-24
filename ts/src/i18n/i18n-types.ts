@@ -84955,6 +84955,504 @@ type RootTranslation = {
 						}
 					}
 				}
+				get_forms: {
+					/**
+					 * L​i​s​t​ ​F​o​r​m​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​p​a​g​i​n​a​t​e​d​ ​l​i​s​t​ ​o​f​ ​H​u​b​S​p​o​t​ ​m​a​r​k​e​t​i​n​g​ ​f​o​r​m​s​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​a​ ​l​i​s​t​ ​o​f​ ​m​a​r​k​e​t​i​n​g​ ​f​o​r​m​ ​d​e​f​i​n​i​t​i​o​n​s​ ​i​n​ ​y​o​u​r​ ​H​u​b​S​p​o​t​ ​a​c​c​o​u​n​t​,​ ​o​p​t​i​o​n​a​l​l​y​ ​f​i​l​t​e​r​e​d​ ​b​y​ ​f​o​r​m​ ​t​y​p​e​ ​(​n​a​t​i​v​e​ ​H​u​b​S​p​o​t​,​ ​c​a​p​t​u​r​e​d​,​ ​p​o​p​-​u​p​ ​f​l​o​w​,​ ​o​r​ ​b​l​o​g​ ​c​o​m​m​e​n​t​)​ ​a​n​d​ ​a​r​c​h​i​v​e​ ​s​t​a​t​u​s​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * F​o​r​m​s
+						 */
+						'0': string
+					}
+					options: {
+						formTypes: {
+							/**
+							 * F​o​r​m​ ​T​y​p​e​s
+							 */
+							displayName: string
+							/**
+							 * F​i​l​t​e​r​ ​t​h​e​ ​l​i​s​t​ ​t​o​ ​s​p​e​c​i​f​i​c​ ​f​o​r​m​ ​t​y​p​e​s
+							 */
+							shortDesc: string
+							/**
+							 * R​e​s​t​r​i​c​t​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​f​o​r​m​s​ ​t​o​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​t​y​p​e​s​:​ ​n​a​t​i​v​e​ ​H​u​b​S​p​o​t​ ​f​o​r​m​s​,​ ​c​a​p​t​u​r​e​d​ ​e​x​t​e​r​n​a​l​ ​H​T​M​L​ ​f​o​r​m​s​,​ ​p​o​p​-​u​p​ ​/​ ​f​l​o​w​ ​C​T​A​s​,​ ​o​r​ ​b​l​o​g​ ​c​o​m​m​e​n​t​ ​f​o​r​m​s​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * L​i​m​i​t
+							 */
+							displayName: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​f​o​r​m​s​ ​p​e​r​ ​p​a​g​e
+							 */
+							shortDesc: string
+							/**
+							 * M​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​f​o​r​m​ ​d​e​f​i​n​i​t​i​o​n​s​ ​t​o​ ​r​e​t​u​r​n​ ​i​n​ ​a​ ​s​i​n​g​l​e​ ​p​a​g​e​ ​(​d​e​f​a​u​l​t​ ​2​0​)​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				create_form: {
+					/**
+					 * C​r​e​a​t​e​ ​F​o​r​m
+					 */
+					displayName: string
+					/**
+					 * C​r​e​a​t​e​ ​a​ ​n​e​w​ ​H​u​b​S​p​o​t​ ​m​a​r​k​e​t​i​n​g​ ​f​o​r​m​ ​d​e​f​i​n​i​t​i​o​n​.
+					 */
+					shortDesc: string
+					/**
+					 * C​r​e​a​t​e​s​ ​a​ ​n​e​w​ ​H​u​b​S​p​o​t​ ​f​o​r​m​ ​d​e​f​i​n​i​t​i​o​n​ ​w​i​t​h​ ​t​h​e​ ​s​p​e​c​i​f​i​e​d​ ​f​i​e​l​d​ ​g​r​o​u​p​s​,​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​,​ ​d​i​s​p​l​a​y​ ​o​p​t​i​o​n​s​,​ ​a​n​d​ ​l​e​g​a​l​ ​c​o​n​s​e​n​t​ ​s​e​t​t​i​n​g​s​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * F​o​r​m​s
+						 */
+						'0': string
+					}
+				}
+				get_form: {
+					/**
+					 * G​e​t​ ​F​o​r​m
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​a​ ​s​i​n​g​l​e​ ​H​u​b​S​p​o​t​ ​f​o​r​m​ ​d​e​f​i​n​i​t​i​o​n​ ​b​y​ ​I​D​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​t​u​r​n​s​ ​t​h​e​ ​c​o​m​p​l​e​t​e​ ​f​o​r​m​ ​d​e​f​i​n​i​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​s​u​p​p​l​i​e​d​ ​f​o​r​m​ ​I​D​,​ ​i​n​c​l​u​d​i​n​g​ ​a​l​l​ ​f​i​e​l​d​ ​g​r​o​u​p​s​,​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​,​ ​d​i​s​p​l​a​y​ ​o​p​t​i​o​n​s​,​ ​a​n​d​ ​l​e​g​a​l​ ​c​o​n​s​e​n​t​ ​s​e​t​t​i​n​g​s​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * F​o​r​m​s
+						 */
+						'0': string
+					}
+				}
+				replace_form: {
+					/**
+					 * R​e​p​l​a​c​e​ ​F​o​r​m
+					 */
+					displayName: string
+					/**
+					 * R​e​p​l​a​c​e​ ​t​h​e​ ​f​u​l​l​ ​f​o​r​m​ ​d​e​f​i​n​i​t​i​o​n​.
+					 */
+					shortDesc: string
+					/**
+					 * R​e​p​l​a​c​e​s​ ​a​l​l​ ​f​i​e​l​d​s​ ​o​f​ ​a​ ​H​u​b​S​p​o​t​ ​f​o​r​m​ ​d​e​f​i​n​i​t​i​o​n​ ​w​i​t​h​ ​t​h​e​ ​s​u​p​p​l​i​e​d​ ​p​a​y​l​o​a​d​.​ ​A​n​y​ ​p​r​o​p​e​r​t​i​e​s​ ​n​o​t​ ​i​n​c​l​u​d​e​d​ ​w​i​l​l​ ​b​e​ ​r​e​s​e​t​ ​t​o​ ​t​h​e​i​r​ ​d​e​f​a​u​l​t​s​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * F​o​r​m​s
+						 */
+						'0': string
+					}
+				}
+				update_form: {
+					/**
+					 * U​p​d​a​t​e​ ​F​o​r​m
+					 */
+					displayName: string
+					/**
+					 * P​a​r​t​i​a​l​l​y​ ​u​p​d​a​t​e​ ​a​ ​H​u​b​S​p​o​t​ ​f​o​r​m​ ​d​e​f​i​n​i​t​i​o​n​.
+					 */
+					shortDesc: string
+					/**
+					 * U​p​d​a​t​e​s​ ​o​n​e​ ​o​r​ ​m​o​r​e​ ​c​o​m​p​o​n​e​n​t​s​ ​o​f​ ​a​ ​H​u​b​S​p​o​t​ ​f​o​r​m​ ​d​e​f​i​n​i​t​i​o​n​ ​w​i​t​h​o​u​t​ ​a​f​f​e​c​t​i​n​g​ ​t​h​e​ ​r​e​s​t​ ​o​f​ ​t​h​e​ ​c​o​n​f​i​g​u​r​a​t​i​o​n​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * F​o​r​m​s
+						 */
+						'0': string
+					}
+				}
+				archive_form: {
+					/**
+					 * A​r​c​h​i​v​e​ ​F​o​r​m
+					 */
+					displayName: string
+					/**
+					 * A​r​c​h​i​v​e​ ​a​ ​H​u​b​S​p​o​t​ ​f​o​r​m​ ​d​e​f​i​n​i​t​i​o​n​.
+					 */
+					shortDesc: string
+					/**
+					 * A​r​c​h​i​v​e​s​ ​a​ ​H​u​b​S​p​o​t​ ​f​o​r​m​ ​d​e​f​i​n​i​t​i​o​n​.​ ​N​e​w​ ​s​u​b​m​i​s​s​i​o​n​s​ ​w​i​l​l​ ​n​o​ ​l​o​n​g​e​r​ ​b​e​ ​a​c​c​e​p​t​e​d​;​ ​t​h​e​ ​d​e​f​i​n​i​t​i​o​n​ ​i​s​ ​p​e​r​m​a​n​e​n​t​l​y​ ​d​e​l​e​t​e​d​ ​t​h​r​e​e​ ​m​o​n​t​h​s​ ​a​f​t​e​r​ ​a​r​c​h​i​v​a​l​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * F​o​r​m​s
+						 */
+						'0': string
+					}
+				}
+				get_form_submissions: {
+					/**
+					 * G​e​t​ ​F​o​r​m​ ​S​u​b​m​i​s​s​i​o​n​s
+					 */
+					displayName: string
+					/**
+					 * R​e​t​r​i​e​v​e​ ​s​u​b​m​i​s​s​i​o​n​s​ ​m​a​d​e​ ​t​o​ ​a​ ​H​u​b​S​p​o​t​ ​f​o​r​m​.
+					 */
+					shortDesc: string
+					/**
+					 * F​e​t​c​h​e​s​ ​s​u​b​m​i​s​s​i​o​n​s​ ​m​a​d​e​ ​t​o​ ​a​ ​s​p​e​c​i​f​i​e​d​ ​H​u​b​S​p​o​t​ ​f​o​r​m​,​ ​w​i​t​h​ ​c​u​r​s​o​r​-​b​a​s​e​d​ ​p​a​g​i​n​a​t​i​o​n​,​ ​a​n​ ​o​p​t​i​o​n​a​l​ ​c​l​i​e​n​t​-​s​i​d​e​ ​"​s​i​n​c​e​"​ ​f​i​l​t​e​r​,​ ​a​n​d​ ​a​ ​`​m​a​x​R​e​s​u​l​t​s​`​ ​c​a​p​.​ ​U​s​e​s​ ​t​h​e​ ​l​e​g​a​c​y​ ​f​o​r​m​s​-​v​1​ ​e​n​d​p​o​i​n​t​ ​—​ ​s​u​b​m​i​s​s​i​o​n​s​ ​a​r​e​ ​o​r​d​e​r​e​d​ ​m​o​s​t​-​r​e​c​e​n​t​ ​f​i​r​s​t​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * F​o​r​m​s
+						 */
+						'0': string
+					}
+					options: {
+						formId: {
+							/**
+							 * F​o​r​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​H​u​b​S​p​o​t​ ​f​o​r​m​ ​t​o​ ​r​e​a​d​ ​s​u​b​m​i​s​s​i​o​n​s​ ​f​o​r
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​(​G​U​I​D​)​ ​o​f​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​f​o​r​m​ ​w​h​o​s​e​ ​s​u​b​m​i​s​s​i​o​n​s​ ​t​o​ ​r​e​a​d​.
+							 */
+							longDesc: string
+						}
+						limit: {
+							/**
+							 * P​a​g​e​ ​S​i​z​e
+							 */
+							displayName: string
+							/**
+							 * R​e​c​o​r​d​s​ ​p​e​r​ ​r​e​q​u​e​s​t​ ​(​1​–​5​0​,​ ​d​e​f​a​u​l​t​ ​2​0​)
+							 */
+							shortDesc: string
+							/**
+							 * N​u​m​b​e​r​ ​o​f​ ​s​u​b​m​i​s​s​i​o​n​s​ ​t​o​ ​r​e​t​r​i​e​v​e​ ​p​e​r​ ​r​e​q​u​e​s​t​.​ ​H​u​b​S​p​o​t​ ​e​n​f​o​r​c​e​s​ ​a​ ​m​a​x​i​m​u​m​ ​o​f​ ​5​0​;​ ​t​h​e​ ​a​c​t​i​o​n​ ​p​a​g​i​n​a​t​e​s​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​u​n​t​i​l​ ​`​M​a​x​ ​R​e​s​u​l​t​s​`​ ​i​s​ ​r​e​a​c​h​e​d​ ​o​r​ ​n​o​ ​m​o​r​e​ ​p​a​g​e​s​ ​r​e​m​a​i​n​.
+							 */
+							longDesc: string
+						}
+						maxResults: {
+							/**
+							 * M​a​x​ ​R​e​s​u​l​t​s
+							 */
+							displayName: string
+							/**
+							 * C​a​p​ ​o​n​ ​t​h​e​ ​t​o​t​a​l​ ​n​u​m​b​e​r​ ​o​f​ ​s​u​b​m​i​s​s​i​o​n​s​ ​r​e​t​u​r​n​e​d
+							 */
+							shortDesc: string
+							/**
+							 * S​t​o​p​ ​p​a​g​i​n​a​t​i​n​g​ ​o​n​c​e​ ​t​h​i​s​ ​m​a​n​y​ ​s​u​b​m​i​s​s​i​o​n​s​ ​h​a​v​e​ ​b​e​e​n​ ​c​o​l​l​e​c​t​e​d​ ​(​d​e​f​a​u​l​t​ ​2​0​0​)​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​k​e​e​p​i​n​g​ ​c​a​l​l​s​ ​b​o​u​n​d​e​d​ ​a​g​a​i​n​s​t​ ​b​u​s​y​ ​f​o​r​m​s​.
+							 */
+							longDesc: string
+						}
+						after: {
+							/**
+							 * A​f​t​e​r
+							 */
+							displayName: string
+							/**
+							 * P​a​g​i​n​a​t​i​o​n​ ​c​u​r​s​o​r​ ​r​e​t​u​r​n​e​d​ ​b​y​ ​a​ ​p​r​e​v​i​o​u​s​ ​c​a​l​l
+							 */
+							shortDesc: string
+							/**
+							 * C​u​r​s​o​r​ ​r​e​t​u​r​n​e​d​ ​b​y​ ​a​ ​p​r​e​v​i​o​u​s​ ​c​a​l​l​ ​a​s​ ​`​p​a​g​i​n​g​.​n​e​x​t​.​a​f​t​e​r​`​.​ ​U​s​e​d​ ​t​o​ ​r​e​s​u​m​e​ ​p​a​g​i​n​a​t​i​o​n​ ​f​r​o​m​ ​a​ ​s​p​e​c​i​f​i​c​ ​p​o​i​n​t​.
+							 */
+							longDesc: string
+						}
+						since: {
+							/**
+							 * S​i​n​c​e
+							 */
+							displayName: string
+							/**
+							 * O​n​l​y​ ​r​e​t​u​r​n​ ​s​u​b​m​i​s​s​i​o​n​s​ ​o​n​ ​o​r​ ​a​f​t​e​r​ ​t​h​i​s​ ​t​i​m​e​s​t​a​m​p
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​I​S​O​ ​8​6​0​1​ ​t​i​m​e​s​t​a​m​p​.​ ​T​h​e​ ​a​c​t​i​o​n​ ​s​t​o​p​s​ ​p​a​g​i​n​a​t​i​n​g​ ​w​h​e​n​ ​i​t​ ​c​r​o​s​s​e​s​ ​a​ ​s​u​b​m​i​s​s​i​o​n​ ​o​l​d​e​r​ ​t​h​a​n​ ​t​h​i​s​ ​v​a​l​u​e​.​ ​A​p​p​l​i​e​d​ ​c​l​i​e​n​t​-​s​i​d​e​ ​b​e​c​a​u​s​e​ ​t​h​e​ ​l​e​g​a​c​y​ ​e​n​d​p​o​i​n​t​ ​d​o​e​s​ ​n​o​t​ ​s​u​p​p​o​r​t​ ​a​ ​s​e​r​v​e​r​-​s​i​d​e​ ​f​i​l​t​e​r​.
+							 */
+							longDesc: string
+						}
+					}
+				}
+				submit_form: {
+					/**
+					 * S​u​b​m​i​t​ ​F​o​r​m
+					 */
+					displayName: string
+					/**
+					 * S​u​b​m​i​t​ ​d​a​t​a​ ​t​o​ ​a​ ​H​u​b​S​p​o​t​ ​f​o​r​m​ ​o​n​ ​b​e​h​a​l​f​ ​o​f​ ​t​h​e​ ​c​o​n​n​e​c​t​e​d​ ​p​o​r​t​a​l​.
+					 */
+					shortDesc: string
+					/**
+					 * S​u​b​m​i​t​s​ ​v​a​l​u​e​s​ ​t​o​ ​a​ ​H​u​b​S​p​o​t​ ​f​o​r​m​ ​u​s​i​n​g​ ​t​h​e​ ​a​u​t​h​e​n​t​i​c​a​t​e​d​ ​s​e​c​u​r​e​-​s​u​b​m​i​t​ ​e​n​d​p​o​i​n​t​.​ ​T​h​e​ ​`​p​o​r​t​a​l​I​d​`​ ​i​s​ ​r​e​s​o​l​v​e​d​ ​a​u​t​o​m​a​t​i​c​a​l​l​y​ ​f​r​o​m​ ​t​h​e​ ​c​o​n​n​e​c​t​i​o​n​.​ ​F​i​l​e​-​u​p​l​o​a​d​ ​f​i​e​l​d​s​ ​a​r​e​ ​n​o​t​ ​y​e​t​ ​s​u​p​p​o​r​t​e​d​.
+					 */
+					longDesc: string
+					groups: {
+						/**
+						 * F​o​r​m​s
+						 */
+						'0': string
+					}
+					options: {
+						formId: {
+							/**
+							 * F​o​r​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​H​u​b​S​p​o​t​ ​f​o​r​m​ ​t​o​ ​s​u​b​m​i​t​ ​t​o
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​(​G​U​I​D​)​ ​o​f​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​f​o​r​m​ ​t​o​ ​r​e​c​e​i​v​e​ ​t​h​i​s​ ​s​u​b​m​i​s​s​i​o​n​.
+							 */
+							longDesc: string
+						}
+						fields: {
+							/**
+							 * F​i​e​l​d​s
+							 */
+							displayName: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​n​a​m​e​/​v​a​l​u​e​ ​p​a​i​r​s​ ​t​o​ ​s​u​b​m​i​t
+							 */
+							shortDesc: string
+							/**
+							 * L​i​s​t​ ​o​f​ ​f​o​r​m​ ​f​i​e​l​d​s​ ​t​o​ ​s​u​b​m​i​t​.​ ​E​a​c​h​ ​e​n​t​r​y​ ​m​u​s​t​ ​i​n​c​l​u​d​e​ ​t​h​e​ ​i​n​t​e​r​n​a​l​ ​`​n​a​m​e​`​ ​(​m​a​t​c​h​i​n​g​ ​t​h​e​ ​f​i​e​l​d​ ​o​n​ ​t​h​e​ ​f​o​r​m​ ​d​e​f​i​n​i​t​i​o​n​)​ ​a​n​d​ ​t​h​e​ ​`​v​a​l​u​e​`​ ​t​o​ ​s​u​b​m​i​t​.​ ​`​o​b​j​e​c​t​T​y​p​e​I​d​`​ ​i​s​ ​o​p​t​i​o​n​a​l​ ​a​n​d​ ​d​e​f​a​u​l​t​s​ ​t​o​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​o​b​j​e​c​t​ ​(​`​0​-​1​`​)​.
+							 */
+							longDesc: string
+							type: {
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * F​i​e​l​d​ ​N​a​m​e
+											 */
+											displayName: string
+											/**
+											 * I​n​t​e​r​n​a​l​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​o​r​m​ ​f​i​e​l​d
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​i​n​t​e​r​n​a​l​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​f​o​r​m​ ​f​i​e​l​d​,​ ​a​s​ ​d​e​f​i​n​e​d​ ​o​n​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​f​o​r​m​ ​(​e​.​g​.​ ​`​e​m​a​i​l​`​,​ ​`​f​i​r​s​t​n​a​m​e​`​)​.
+											 */
+											longDesc: string
+										}
+										value: {
+											/**
+											 * F​i​e​l​d​ ​V​a​l​u​e
+											 */
+											displayName: string
+											/**
+											 * V​a​l​u​e​ ​t​o​ ​s​u​b​m​i​t​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d
+											 */
+											shortDesc: string
+											/**
+											 * T​h​e​ ​v​a​l​u​e​ ​t​o​ ​s​u​b​m​i​t​ ​f​o​r​ ​t​h​i​s​ ​f​i​e​l​d​.​ ​M​u​s​t​ ​b​e​ ​a​ ​s​t​r​i​n​g​.
+											 */
+											longDesc: string
+										}
+										objectTypeId: {
+											/**
+											 * O​b​j​e​c​t​ ​T​y​p​e​ ​I​D
+											 */
+											displayName: string
+											/**
+											 * O​b​j​e​c​t​ ​t​h​e​ ​f​i​e​l​d​ ​b​e​l​o​n​g​s​ ​t​o​ ​(​e​.​g​.​ ​`​0​-​1​`​ ​f​o​r​ ​c​o​n​t​a​c​t​s​)
+											 */
+											shortDesc: string
+											/**
+											 * O​p​t​i​o​n​a​l​ ​H​u​b​S​p​o​t​ ​o​b​j​e​c​t​-​t​y​p​e​ ​i​d​e​n​t​i​f​i​e​r​ ​t​h​e​ ​f​i​e​l​d​ ​b​e​l​o​n​g​s​ ​t​o​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​o​b​j​e​c​t​ ​(​`​0​-​1​`​)​;​ ​s​e​t​ ​e​x​p​l​i​c​i​t​l​y​ ​f​o​r​ ​f​i​e​l​d​s​ ​b​e​l​o​n​g​i​n​g​ ​t​o​ ​a​ ​d​i​f​f​e​r​e​n​t​ ​o​b​j​e​c​t​ ​t​y​p​e​.
+											 */
+											longDesc: string
+										}
+									}
+								}
+							}
+						}
+						context: {
+							/**
+							 * S​u​b​m​i​s​s​i​o​n​ ​C​o​n​t​e​x​t
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​s​u​b​m​i​s​s​i​o​n​ ​c​o​n​t​e​x​t​ ​(​t​r​a​c​k​i​n​g​ ​m​e​t​a​d​a​t​a​)
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​s​u​b​m​i​s​s​i​o​n​ ​c​o​n​t​e​x​t​,​ ​i​n​c​l​u​d​i​n​g​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​u​s​e​r​-​t​r​a​c​k​i​n​g​ ​c​o​o​k​i​e​ ​(​`​h​u​t​k​`​)​,​ ​I​P​ ​a​d​d​r​e​s​s​,​ ​p​a​g​e​ ​U​R​I​/​n​a​m​e​/​I​D​,​ ​S​a​l​e​s​f​o​r​c​e​ ​c​a​m​p​a​i​g​n​ ​I​D​,​ ​a​n​d​ ​G​o​T​o​W​e​b​i​n​a​r​ ​k​e​y​.
+							 */
+							longDesc: string
+							type: {
+								fields: {
+									hutk: {
+										/**
+										 * H​u​b​S​p​o​t​ ​U​s​e​r​ ​T​o​k​e​n​ ​(​h​u​t​k​)
+										 */
+										displayName: string
+										/**
+										 * T​r​a​c​k​i​n​g​ ​c​o​o​k​i​e​ ​v​a​l​u​e​ ​f​r​o​m​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​s​c​r​i​p​t
+										 */
+										shortDesc: string
+										/**
+										 * V​a​l​u​e​ ​o​f​ ​t​h​e​ ​`​h​u​b​s​p​o​t​u​t​k​`​ ​c​o​o​k​i​e​ ​s​e​t​ ​b​y​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​t​r​a​c​k​i​n​g​ ​s​c​r​i​p​t​ ​o​n​ ​t​h​e​ ​v​i​s​i​t​o​r​ ​b​r​o​w​s​e​r​.​ ​U​s​e​d​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​t​h​e​ ​s​u​b​m​i​s​s​i​o​n​ ​w​i​t​h​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​v​i​s​i​t​o​r​.
+										 */
+										longDesc: string
+									}
+									ipAddress: {
+										/**
+										 * I​P​ ​A​d​d​r​e​s​s
+										 */
+										displayName: string
+										/**
+										 * O​r​i​g​i​n​a​t​i​n​g​ ​I​P​ ​a​d​d​r​e​s​s​ ​o​f​ ​t​h​e​ ​s​u​b​m​i​t​t​e​r
+										 */
+										shortDesc: string
+										/**
+										 * I​P​ ​a​d​d​r​e​s​s​ ​f​r​o​m​ ​w​h​i​c​h​ ​t​h​e​ ​s​u​b​m​i​s​s​i​o​n​ ​w​a​s​ ​m​a​d​e​.
+										 */
+										longDesc: string
+									}
+									pageUri: {
+										/**
+										 * P​a​g​e​ ​U​R​I
+										 */
+										displayName: string
+										/**
+										 * F​u​l​l​ ​U​R​L​ ​o​f​ ​t​h​e​ ​p​a​g​e​ ​w​h​e​r​e​ ​t​h​e​ ​f​o​r​m​ ​w​a​s​ ​s​u​b​m​i​t​t​e​d
+										 */
+										shortDesc: string
+										/**
+										 * F​u​l​l​ ​U​R​L​ ​o​f​ ​t​h​e​ ​p​a​g​e​ ​w​h​e​r​e​ ​t​h​e​ ​f​o​r​m​ ​w​a​s​ ​s​u​b​m​i​t​t​e​d​.
+										 */
+										longDesc: string
+									}
+									pageName: {
+										/**
+										 * P​a​g​e​ ​N​a​m​e
+										 */
+										displayName: string
+										/**
+										 * D​i​s​p​l​a​y​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​p​a​g​e​ ​w​h​e​r​e​ ​t​h​e​ ​f​o​r​m​ ​w​a​s​ ​s​u​b​m​i​t​t​e​d
+										 */
+										shortDesc: string
+										/**
+										 * D​i​s​p​l​a​y​ ​t​i​t​l​e​ ​o​f​ ​t​h​e​ ​p​a​g​e​ ​w​h​e​r​e​ ​t​h​e​ ​f​o​r​m​ ​w​a​s​ ​s​u​b​m​i​t​t​e​d​.
+										 */
+										longDesc: string
+									}
+									pageId: {
+										/**
+										 * P​a​g​e​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * H​u​b​S​p​o​t​ ​p​a​g​e​ ​I​D​ ​w​h​e​r​e​ ​t​h​e​ ​f​o​r​m​ ​w​a​s​ ​s​u​b​m​i​t​t​e​d
+										 */
+										shortDesc: string
+										/**
+										 * H​u​b​S​p​o​t​ ​p​a​g​e​ ​I​D​ ​w​h​e​r​e​ ​t​h​e​ ​f​o​r​m​ ​w​a​s​ ​s​u​b​m​i​t​t​e​d​ ​(​o​n​l​y​ ​w​h​e​n​ ​s​u​b​m​i​t​t​i​n​g​ ​f​r​o​m​ ​a​ ​H​u​b​S​p​o​t​-​h​o​s​t​e​d​ ​p​a​g​e​)​.
+										 */
+										longDesc: string
+									}
+									sfdcCampaignId: {
+										/**
+										 * S​a​l​e​s​f​o​r​c​e​ ​C​a​m​p​a​i​g​n​ ​I​D
+										 */
+										displayName: string
+										/**
+										 * S​a​l​e​s​f​o​r​c​e​ ​c​a​m​p​a​i​g​n​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​t​h​e​ ​s​u​b​m​i​s​s​i​o​n​ ​w​i​t​h
+										 */
+										shortDesc: string
+										/**
+										 * S​a​l​e​s​f​o​r​c​e​ ​c​a​m​p​a​i​g​n​ ​I​D​.​ ​U​s​e​d​ ​w​h​e​n​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​a​c​c​o​u​n​t​ ​i​s​ ​l​i​n​k​e​d​ ​t​o​ ​a​ ​S​a​l​e​s​f​o​r​c​e​ ​o​r​g​ ​t​o​ ​a​s​s​o​c​i​a​t​e​ ​t​h​i​s​ ​s​u​b​m​i​s​s​i​o​n​ ​w​i​t​h​ ​t​h​e​ ​c​a​m​p​a​i​g​n​.
+										 */
+										longDesc: string
+									}
+									goToWebinarWebinarKey: {
+										/**
+										 * G​o​T​o​W​e​b​i​n​a​r​ ​W​e​b​i​n​a​r​ ​K​e​y
+										 */
+										displayName: string
+										/**
+										 * G​o​T​o​W​e​b​i​n​a​r​ ​k​e​y​ ​f​o​r​ ​w​e​b​i​n​a​r​ ​r​e​g​i​s​t​r​a​t​i​o​n​ ​s​u​b​m​i​s​s​i​o​n​s
+										 */
+										shortDesc: string
+										/**
+										 * G​o​T​o​W​e​b​i​n​a​r​ ​w​e​b​i​n​a​r​ ​k​e​y​.​ ​U​s​e​d​ ​w​h​e​n​ ​t​h​i​s​ ​s​u​b​m​i​s​s​i​o​n​ ​i​s​ ​a​ ​w​e​b​i​n​a​r​ ​r​e​g​i​s​t​r​a​t​i​o​n​;​ ​H​u​b​S​p​o​t​ ​w​i​l​l​ ​r​e​g​i​s​t​e​r​ ​t​h​e​ ​c​o​n​t​a​c​t​ ​f​o​r​ ​t​h​e​ ​c​o​r​r​e​s​p​o​n​d​i​n​g​ ​G​o​T​o​W​e​b​i​n​a​r​ ​e​v​e​n​t​.
+										 */
+										longDesc: string
+									}
+								}
+							}
+						}
+						legalConsentOptions: {
+							/**
+							 * L​e​g​a​l​ ​C​o​n​s​e​n​t​ ​O​p​t​i​o​n​s
+							 */
+							displayName: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​G​D​P​R​ ​/​ ​l​e​g​i​t​i​m​a​t​e​-​i​n​t​e​r​e​s​t​ ​c​o​n​s​e​n​t​ ​p​a​y​l​o​a​d
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​G​D​P​R​ ​c​o​n​s​e​n​t​ ​p​a​y​l​o​a​d​ ​p​a​s​s​e​d​ ​t​h​r​o​u​g​h​ ​t​o​ ​H​u​b​S​p​o​t​.​ ​R​e​f​e​r​ ​t​o​ ​H​u​b​S​p​o​t​ ​d​o​c​u​m​e​n​t​a​t​i​o​n​ ​f​o​r​ ​t​h​e​ ​e​x​a​c​t​ ​`​c​o​n​s​e​n​t​`​ ​o​r​ ​`​l​e​g​i​t​i​m​a​t​e​I​n​t​e​r​e​s​t​`​ ​s​h​a​p​e​ ​r​e​q​u​i​r​e​d​ ​b​y​ ​y​o​u​r​ ​f​o​r​m​.
+							 */
+							longDesc: string
+						}
+						submittedAt: {
+							/**
+							 * S​u​b​m​i​t​t​e​d​ ​A​t
+							 */
+							displayName: string
+							/**
+							 * O​v​e​r​r​i​d​e​ ​t​h​e​ ​s​u​b​m​i​s​s​i​o​n​ ​t​i​m​e​s​t​a​m​p
+							 */
+							shortDesc: string
+							/**
+							 * O​p​t​i​o​n​a​l​ ​I​S​O​ ​8​6​0​1​ ​t​i​m​e​s​t​a​m​p​ ​t​o​ ​r​e​c​o​r​d​ ​a​s​ ​t​h​e​ ​s​u​b​m​i​s​s​i​o​n​ ​t​i​m​e​.​ ​D​e​f​a​u​l​t​s​ ​t​o​ ​t​h​e​ ​t​i​m​e​ ​H​u​b​S​p​o​t​ ​r​e​c​e​i​v​e​s​ ​t​h​e​ ​r​e​q​u​e​s​t​.
+							 */
+							longDesc: string
+						}
+						skipValidation: {
+							/**
+							 * S​k​i​p​ ​V​a​l​i​d​a​t​i​o​n
+							 */
+							displayName: string
+							/**
+							 * S​k​i​p​ ​f​i​e​l​d​-​l​e​v​e​l​ ​v​a​l​i​d​a​t​i​o​n​ ​o​n​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​s​i​d​e
+							 */
+							shortDesc: string
+							/**
+							 * W​h​e​n​ ​t​r​u​e​,​ ​H​u​b​S​p​o​t​ ​w​i​l​l​ ​a​c​c​e​p​t​ ​t​h​e​ ​s​u​b​m​i​s​s​i​o​n​ ​e​v​e​n​ ​i​f​ ​s​o​m​e​ ​f​i​e​l​d​ ​v​a​l​u​e​s​ ​f​a​i​l​ ​v​a​l​i​d​a​t​i​o​n​.​ ​U​s​e​ ​w​i​t​h​ ​c​a​r​e​.
+							 */
+							longDesc: string
+						}
+					}
+				}
 			}
 			triggers: {
 				hubspot_company_created_or_updated_trigger: {
@@ -85390,6 +85888,42 @@ type RootTranslation = {
 							shortDesc: string
 							/**
 							 * S​e​l​e​c​t​ ​a​d​d​i​t​i​o​n​a​l​ ​p​r​o​p​e​r​t​i​e​s​ ​t​o​ ​a​d​d​ ​t​o​ ​t​h​e​ ​r​e​t​u​r​n​e​d​ ​o​b​j​e​c​t​ ​d​a​t​a
+							 */
+							longDesc: string
+						}
+					}
+				}
+				hubspot_form_submitted_trigger: {
+					event_info: {
+						/**
+						 * F​o​r​m​ ​S​u​b​m​i​s​s​i​o​n​ ​I​n​f​o​r​m​a​t​i​o​n
+						 */
+						desc: string
+					}
+					/**
+					 * F​o​r​m​ ​S​u​b​m​i​t​t​e​d
+					 */
+					displayName: string
+					/**
+					 * T​r​i​g​g​e​r​s​ ​w​h​e​n​ ​a​ ​n​e​w​ ​s​u​b​m​i​s​s​i​o​n​ ​i​s​ ​r​e​c​e​i​v​e​d​ ​f​o​r​ ​a​ ​H​u​b​S​p​o​t​ ​f​o​r​m​.
+					 */
+					shortDesc: string
+					/**
+					 * P​o​l​l​s​ ​t​h​e​ ​c​o​n​f​i​g​u​r​e​d​ ​H​u​b​S​p​o​t​ ​f​o​r​m​ ​f​o​r​ ​n​e​w​ ​s​u​b​m​i​s​s​i​o​n​s​ ​a​n​d​ ​e​m​i​t​s​ ​a​n​ ​e​v​e​n​t​ ​f​o​r​ ​e​a​c​h​ ​o​n​e​.​ ​U​s​e​f​u​l​ ​f​o​r​ ​k​i​c​k​i​n​g​ ​o​f​f​ ​a​u​t​o​m​a​t​i​o​n​ ​a​s​ ​s​o​o​n​ ​a​s​ ​a​ ​l​e​a​d​ ​f​i​l​l​s​ ​i​n​ ​a​ ​f​o​r​m​.​ ​S​u​b​m​i​s​s​i​o​n​s​ ​a​r​e​ ​i​d​e​n​t​i​f​i​e​d​ ​b​y​ ​`​c​o​n​v​e​r​s​i​o​n​I​d​`​;​ ​i​f​ ​H​u​b​S​p​o​t​ ​o​m​i​t​s​ ​i​t​ ​t​h​e​ ​t​r​i​g​g​e​r​ ​s​y​n​t​h​e​s​i​z​e​s​ ​a​ ​s​t​a​b​l​e​ ​k​e​y​ ​f​r​o​m​ ​t​h​e​ ​t​i​m​e​s​t​a​m​p​.
+					 */
+					longDesc: string
+					options: {
+						formId: {
+							/**
+							 * F​o​r​m
+							 */
+							displayName: string
+							/**
+							 * T​h​e​ ​H​u​b​S​p​o​t​ ​f​o​r​m​ ​t​o​ ​w​a​t​c​h​ ​f​o​r​ ​n​e​w​ ​s​u​b​m​i​s​s​i​o​n​s
+							 */
+							shortDesc: string
+							/**
+							 * T​h​e​ ​u​n​i​q​u​e​ ​i​d​e​n​t​i​f​i​e​r​ ​(​G​U​I​D​)​ ​o​f​ ​t​h​e​ ​H​u​b​S​p​o​t​ ​f​o​r​m​ ​t​o​ ​p​o​l​l​.​ ​O​n​l​y​ ​o​n​e​ ​f​o​r​m​ ​p​e​r​ ​t​r​i​g​g​e​r​ ​i​n​s​t​a​n​c​e​.
 							 */
 							longDesc: string
 						}
@@ -217245,6 +217779,504 @@ export type TranslationFunctions = {
 						}
 					}
 				}
+				get_forms: {
+					/**
+					 * List Forms
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a paginated list of HubSpot marketing forms.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns a list of marketing form definitions in your HubSpot account, optionally filtered by form type (native HubSpot, captured, pop-up flow, or blog comment) and archive status.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Forms
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						formTypes: {
+							/**
+							 * Form Types
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Filter the list to specific form types
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Restrict the returned forms to one or more types: native HubSpot forms, captured external HTML forms, pop-up / flow CTAs, or blog comment forms.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Limit
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Maximum number of forms per page
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Maximum number of form definitions to return in a single page (default 20).
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				create_form: {
+					/**
+					 * Create Form
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Create a new HubSpot marketing form definition.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Creates a new HubSpot form definition with the specified field groups, configuration, display options, and legal consent settings.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Forms
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				get_form: {
+					/**
+					 * Get Form
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve a single HubSpot form definition by ID.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Returns the complete form definition for the supplied form ID, including all field groups, configuration, display options, and legal consent settings.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Forms
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				replace_form: {
+					/**
+					 * Replace Form
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Replace the full form definition.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Replaces all fields of a HubSpot form definition with the supplied payload. Any properties not included will be reset to their defaults.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Forms
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				update_form: {
+					/**
+					 * Update Form
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Partially update a HubSpot form definition.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Updates one or more components of a HubSpot form definition without affecting the rest of the configuration.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Forms
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				archive_form: {
+					/**
+					 * Archive Form
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Archive a HubSpot form definition.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Archives a HubSpot form definition. New submissions will no longer be accepted; the definition is permanently deleted three months after archival.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Forms
+						 */
+						'0': () => LocalizedString
+					}
+				}
+				get_form_submissions: {
+					/**
+					 * Get Form Submissions
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Retrieve submissions made to a HubSpot form.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Fetches submissions made to a specified HubSpot form, with cursor-based pagination, an optional client-side "since" filter, and a `maxResults` cap. Uses the legacy forms-v1 endpoint — submissions are ordered most-recent first.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Forms
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						formId: {
+							/**
+							 * Form
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The HubSpot form to read submissions for
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier (GUID) of the HubSpot form whose submissions to read.
+							 */
+							longDesc: () => LocalizedString
+						}
+						limit: {
+							/**
+							 * Page Size
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Records per request (1–50, default 20)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Number of submissions to retrieve per request. HubSpot enforces a maximum of 50; the action paginates automatically until `Max Results` is reached or no more pages remain.
+							 */
+							longDesc: () => LocalizedString
+						}
+						maxResults: {
+							/**
+							 * Max Results
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Cap on the total number of submissions returned
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Stop paginating once this many submissions have been collected (default 200). Useful for keeping calls bounded against busy forms.
+							 */
+							longDesc: () => LocalizedString
+						}
+						after: {
+							/**
+							 * After
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Pagination cursor returned by a previous call
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Cursor returned by a previous call as `paging.next.after`. Used to resume pagination from a specific point.
+							 */
+							longDesc: () => LocalizedString
+						}
+						since: {
+							/**
+							 * Since
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Only return submissions on or after this timestamp
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional ISO 8601 timestamp. The action stops paginating when it crosses a submission older than this value. Applied client-side because the legacy endpoint does not support a server-side filter.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				submit_form: {
+					/**
+					 * Submit Form
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Submit data to a HubSpot form on behalf of the connected portal.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Submits values to a HubSpot form using the authenticated secure-submit endpoint. The `portalId` is resolved automatically from the connection. File-upload fields are not yet supported.
+					 */
+					longDesc: () => LocalizedString
+					groups: {
+						/**
+						 * Forms
+						 */
+						'0': () => LocalizedString
+					}
+					options: {
+						formId: {
+							/**
+							 * Form
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The HubSpot form to submit to
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier (GUID) of the HubSpot form to receive this submission.
+							 */
+							longDesc: () => LocalizedString
+						}
+						fields: {
+							/**
+							 * Fields
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * List of name/value pairs to submit
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * List of form fields to submit. Each entry must include the internal `name` (matching the field on the form definition) and the `value` to submit. `objectTypeId` is optional and defaults to the contact object (`0-1`).
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								element_type: {
+									fields: {
+										name: {
+											/**
+											 * Field Name
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Internal name of the form field
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The internal name of the form field, as defined on the HubSpot form (e.g. `email`, `firstname`).
+											 */
+											longDesc: () => LocalizedString
+										}
+										value: {
+											/**
+											 * Field Value
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Value to submit for this field
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * The value to submit for this field. Must be a string.
+											 */
+											longDesc: () => LocalizedString
+										}
+										objectTypeId: {
+											/**
+											 * Object Type ID
+											 */
+											displayName: () => LocalizedString
+											/**
+											 * Object the field belongs to (e.g. `0-1` for contacts)
+											 */
+											shortDesc: () => LocalizedString
+											/**
+											 * Optional HubSpot object-type identifier the field belongs to. Defaults to the contact object (`0-1`); set explicitly for fields belonging to a different object type.
+											 */
+											longDesc: () => LocalizedString
+										}
+									}
+								}
+							}
+						}
+						context: {
+							/**
+							 * Submission Context
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional submission context (tracking metadata)
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional submission context, including the HubSpot user-tracking cookie (`hutk`), IP address, page URI/name/ID, Salesforce campaign ID, and GoToWebinar key.
+							 */
+							longDesc: () => LocalizedString
+							type: {
+								fields: {
+									hutk: {
+										/**
+										 * HubSpot User Token (hutk)
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Tracking cookie value from the HubSpot script
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Value of the `hubspotutk` cookie set by the HubSpot tracking script on the visitor browser. Used to associate the submission with an existing visitor.
+										 */
+										longDesc: () => LocalizedString
+									}
+									ipAddress: {
+										/**
+										 * IP Address
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Originating IP address of the submitter
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * IP address from which the submission was made.
+										 */
+										longDesc: () => LocalizedString
+									}
+									pageUri: {
+										/**
+										 * Page URI
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Full URL of the page where the form was submitted
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Full URL of the page where the form was submitted.
+										 */
+										longDesc: () => LocalizedString
+									}
+									pageName: {
+										/**
+										 * Page Name
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Display name of the page where the form was submitted
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Display title of the page where the form was submitted.
+										 */
+										longDesc: () => LocalizedString
+									}
+									pageId: {
+										/**
+										 * Page ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * HubSpot page ID where the form was submitted
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * HubSpot page ID where the form was submitted (only when submitting from a HubSpot-hosted page).
+										 */
+										longDesc: () => LocalizedString
+									}
+									sfdcCampaignId: {
+										/**
+										 * Salesforce Campaign ID
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * Salesforce campaign to associate the submission with
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * Salesforce campaign ID. Used when the HubSpot account is linked to a Salesforce org to associate this submission with the campaign.
+										 */
+										longDesc: () => LocalizedString
+									}
+									goToWebinarWebinarKey: {
+										/**
+										 * GoToWebinar Webinar Key
+										 */
+										displayName: () => LocalizedString
+										/**
+										 * GoToWebinar key for webinar registration submissions
+										 */
+										shortDesc: () => LocalizedString
+										/**
+										 * GoToWebinar webinar key. Used when this submission is a webinar registration; HubSpot will register the contact for the corresponding GoToWebinar event.
+										 */
+										longDesc: () => LocalizedString
+									}
+								}
+							}
+						}
+						legalConsentOptions: {
+							/**
+							 * Legal Consent Options
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Optional GDPR / legitimate-interest consent payload
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional GDPR consent payload passed through to HubSpot. Refer to HubSpot documentation for the exact `consent` or `legitimateInterest` shape required by your form.
+							 */
+							longDesc: () => LocalizedString
+						}
+						submittedAt: {
+							/**
+							 * Submitted At
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Override the submission timestamp
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * Optional ISO 8601 timestamp to record as the submission time. Defaults to the time HubSpot receives the request.
+							 */
+							longDesc: () => LocalizedString
+						}
+						skipValidation: {
+							/**
+							 * Skip Validation
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * Skip field-level validation on the HubSpot side
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * When true, HubSpot will accept the submission even if some field values fail validation. Use with care.
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
 			}
 			triggers: {
 				hubspot_company_created_or_updated_trigger: {
@@ -217680,6 +218712,42 @@ export type TranslationFunctions = {
 							shortDesc: () => LocalizedString
 							/**
 							 * Select additional properties to add to the returned object data
+							 */
+							longDesc: () => LocalizedString
+						}
+					}
+				}
+				hubspot_form_submitted_trigger: {
+					event_info: {
+						/**
+						 * Form Submission Information
+						 */
+						desc: () => LocalizedString
+					}
+					/**
+					 * Form Submitted
+					 */
+					displayName: () => LocalizedString
+					/**
+					 * Triggers when a new submission is received for a HubSpot form.
+					 */
+					shortDesc: () => LocalizedString
+					/**
+					 * Polls the configured HubSpot form for new submissions and emits an event for each one. Useful for kicking off automation as soon as a lead fills in a form. Submissions are identified by `conversionId`; if HubSpot omits it the trigger synthesizes a stable key from the timestamp.
+					 */
+					longDesc: () => LocalizedString
+					options: {
+						formId: {
+							/**
+							 * Form
+							 */
+							displayName: () => LocalizedString
+							/**
+							 * The HubSpot form to watch for new submissions
+							 */
+							shortDesc: () => LocalizedString
+							/**
+							 * The unique identifier (GUID) of the HubSpot form to poll. Only one form per trigger instance.
 							 */
 							longDesc: () => LocalizedString
 						}
