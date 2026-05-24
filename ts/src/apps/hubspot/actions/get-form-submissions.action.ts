@@ -108,6 +108,7 @@ export const getHubspotFormSubmissionsAction = QoreAppCreator.createLocalizedAct
       const results = data?.results ?? [];
 
       if (!results.length) {
+        after = undefined;
         break;
       }
 
@@ -124,11 +125,19 @@ export const getHubspotFormSubmissionsAction = QoreAppCreator.createLocalizedAct
         }
       }
 
-      if (reachedSinceBoundary || collected.length >= maxResults) {
+      const nextAfter = data?.paging?.next?.after;
+
+      if (reachedSinceBoundary) {
+        after = undefined;
         break;
       }
 
-      after = data?.paging?.next?.after;
+      if (collected.length >= maxResults) {
+        after = nextAfter;
+        break;
+      }
+
+      after = nextAfter;
 
       if (after) {
         await delay(FORMS_SUBMISSIONS_PAGE_DELAY_MS);

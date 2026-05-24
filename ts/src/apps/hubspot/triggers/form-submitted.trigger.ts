@@ -5,6 +5,7 @@ import {
   TQoreOptions,
   TQoreTypeObject,
 } from '@qoretechnologies/ts-toolkit';
+import { delay } from '../../../global/helpers';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 import { HUBSPOT_APP_NAME } from '../constants';
 import { getHubspotFormAllowedValues } from '../helpers/get-form-allowed-values';
@@ -12,6 +13,8 @@ import { getHubspotFormAllowedValues } from '../helpers/get-form-allowed-values'
 const triggerName = 'hubspot_form_submitted_trigger';
 
 const FORM_SUBMISSIONS_POLL_PAGE_SIZE = 50;
+const FORM_SUBMISSIONS_POLL_MAX_ITEMS = 200;
+const FORM_SUBMISSIONS_POLL_PAGE_DELAY_MS = 200;
 
 type THubspotSubmission = {
   conversionId?: string;
@@ -59,26 +62,59 @@ const fetchLatestSubmissions = async (
   token: string,
   formId: string
 ): Promise<THubspotSubmission[]> => {
-  const response = await QorusRequest.get<{ data: THubspotSubmissionsResponse }>(
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      path: `/form-integrations/v1/submissions/forms/${formId}`,
-      params: { limit: FORM_SUBMISSIONS_POLL_PAGE_SIZE },
-    },
-    {
-      url: 'https://api.hubapi.com',
-      endpointId: 'Hubspot',
+  const collected: THubspotSubmission[] = [];
+  let after: string | undefined = undefined;
+
+  do {
+    const params: Record<string, string | number> = { limit: FORM_SUBMISSIONS_POLL_PAGE_SIZE };
+
+    if (after) {
+      params.after = after;
     }
-  );
 
-  const results = response?.data?.results ?? [];
+    const response = await QorusRequest.get<{ data: THubspotSubmissionsResponse }>(
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        path: `/form-integrations/v1/submissions/forms/${formId}`,
+        params,
+      },
+      {
+        url: 'https://api.hubapi.com',
+        endpointId: 'Hubspot',
+      }
+    );
 
-  return results.map((s, idx) => ({
-    ...s,
-    conversionId: s.conversionId ?? `${s.submittedAt}_${idx}`,
-  }));
+    const results = response?.data?.results ?? [];
+
+    if (!results.length) {
+      break;
+    }
+
+    for (const s of results) {
+      collected.push({
+        ...s,
+        conversionId: s.conversionId ?? `${s.submittedAt}_${collected.length}`,
+      });
+
+      if (collected.length >= FORM_SUBMISSIONS_POLL_MAX_ITEMS) {
+        break;
+      }
+    }
+
+    if (collected.length >= FORM_SUBMISSIONS_POLL_MAX_ITEMS) {
+      break;
+    }
+
+    after = response?.data?.paging?.next?.after;
+
+    if (after) {
+      await delay(FORM_SUBMISSIONS_POLL_PAGE_DELAY_MS);
+    }
+  } while (after);
+
+  return collected;
 };
 
 const normalizeSubmission = (submission: THubspotSubmission): Record<string, unknown> => ({

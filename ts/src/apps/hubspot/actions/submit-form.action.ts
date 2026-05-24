@@ -57,6 +57,8 @@ const options = {
           name: {
             type: 'string',
             required: true,
+            allowed_values_creatable: true,
+            get_allowed_values: getHubspotFormFieldAllowedValues,
           },
           value: {
             type: 'string',
@@ -69,7 +71,6 @@ const options = {
         },
       },
     },
-    get_element_allowed_values: getHubspotFormFieldAllowedValues,
   },
   context: {
     required: false,
@@ -113,18 +114,18 @@ export const submitHubspotFormAction = QoreAppCreator.createLocalizedAction({
       optionFields: ['formId'],
     });
 
-    const portalId = await getHubspotPortalId(token);
-
-    if (!portalId) {
-      throw new HubspotError(
-        'Unable to resolve HubSpot portalId from /integrations/v1/me — the connection may be missing the required scope.'
-      );
-    }
-
     const rawFields = (obj?.fields as THubspotSubmitFormField[] | undefined) ?? [];
 
     if (!rawFields.length) {
       throw new HubspotError('At least one form field is required to submit a form.');
+    }
+
+    const portalId = await getHubspotPortalId(token);
+
+    if (!portalId) {
+      throw new HubspotError(
+        'Unable to resolve HubSpot portalId from /integrations/v1/me — the access token may be invalid, expired, or the request failed.'
+      );
     }
 
     const body: THubspotSubmitFormBody = {

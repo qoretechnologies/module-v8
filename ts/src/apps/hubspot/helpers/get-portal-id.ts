@@ -1,8 +1,6 @@
 import { QorusRequest } from '@qoretechnologies/ts-toolkit';
 import { Debugger } from '../../../utils/Debugger';
 
-const portalIdCache = new Map<string, number>();
-
 type TIntegrationsMeResponse = {
   portalId: number;
   timeZone?: string;
@@ -12,12 +10,6 @@ type TIntegrationsMeResponse = {
 export const getHubspotPortalId = async (token: string): Promise<number | undefined> => {
   if (!token) {
     return undefined;
-  }
-
-  const cached = portalIdCache.get(token);
-
-  if (cached !== undefined) {
-    return cached;
   }
 
   try {
@@ -41,8 +33,6 @@ export const getHubspotPortalId = async (token: string): Promise<number | undefi
 
       return undefined;
     }
-
-    portalIdCache.set(token, portalId);
 
     return portalId;
   } catch (error) {
