@@ -42,7 +42,7 @@ qclass TypeScriptProgram [arg=QoreV8ProgramData* jsp; ns=V8; dom=EMBEDDED_LOGIC;
     @throw JAVASCRIPT-PROGRAM-ERROR error initializing the program
     @throw JAVASCRIPT-EXCEPTION error in the TypeScript source code (syntax error, etc.)
 */
-TypeScriptProgram::constructor(string source_code, string source_label) {
+TypeScriptProgram::constructor(string source_code, string source_label) [flags=NAMED_ARGS] {
     ReferenceHolder<QoreV8ProgramData> jsp(
         new QoreV8ProgramData(*source_code, *source_label, true, xsink), xsink);
     if (*xsink) {

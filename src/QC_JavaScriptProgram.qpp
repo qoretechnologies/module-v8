@@ -34,7 +34,7 @@ qclass JavaScriptProgram [arg=QoreV8ProgramData* jsp; ns=V8; dom=EMBEDDED_LOGIC]
 /** @param source_code the JavaScript source to parse and compile
     @param source_label the label or file name of the source
 */
-JavaScriptProgram::constructor(string source_code, string source_label) {
+JavaScriptProgram::constructor(string source_code, string source_label) [flags=NAMED_ARGS] {
     ReferenceHolder<QoreV8ProgramData> jsp(new QoreV8ProgramData(*source_code, *source_label, xsink),
         xsink);
     if (*xsink) {
@@ -73,30 +73,30 @@ JavaScriptObject JavaScriptProgram::getGlobal() {
 
 //! Sets the "save reference" callback for %Qore data stored in JavaScript objects
 /** @par Example:
-    @code{.py}
+    @code{.q}
 hash<auto> ref_cache;
 code callback = sub (auto v) {
     # save reference to value in cache, so it doesn't go out of scope
-    object_cache{v.uniqueHash()} = v;
+    ref_cache{v.uniqueHash()} = v;
 }
 v8pgm.setSaveReferenceCallback(callback);
     @endcode
 
-    @param save_ref_callback the callback to save any %Qore values stored in Python code
+    @param save_reference_callback the callback to save any %Qore values stored in JavaScript code
 
     Due to the differences in garbage collection approaches between %Qore and JavaScript, %Qore objects must be
     managed with a deterministic life cycle; JavaScript objects have only weak references to %Qore values due to the
     lack of destructors in JavaScript and the lack of determinism in the JavaScript runtime for object lifecycle
     management.
 
-    The callback set here will be called any time a %Qore reference is stored in a Python object; if no callback is
+    The callback set here will be called any time a %Qore reference is stored in a JavaScript object; if no callback is
     set, then the standard thread-local implementation is used where %Qore references are saved in a thread-local
     hash.
 
     @see @ref v8_qore_reference_lifecycle_management for more information
 */
-JavaScriptProgram::setSaveReferenceCallback(*code save_ref_callback) [dom=PROCESS] {
-    jsp->setSaveReferenceCallback(save_ref_callback);
+JavaScriptProgram::setSaveReferenceCallback(*code save_reference_callback) [dom=PROCESS;flags=NAMED_ARGS] {
+    jsp->setSaveReferenceCallback(save_reference_callback);
 }
 
 //! Spins the event loop once for the program

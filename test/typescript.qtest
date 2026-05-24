@@ -26,6 +26,7 @@ class TypeScriptTest inherits Test {
         }
 
         # Unit tests - TypeScript language features
+        addTestCase("named argument calls", \namedArgumentTest());
         addTestCase("basic type stripping", \basicTypeStrippingTest());
         addTestCase("type aliases and union types", \typeAliasUnionTest());
         addTestCase("interfaces", \interfaceTest());
@@ -80,6 +81,18 @@ class TypeScriptTest inherits Test {
     # --------------------------------------------------------------------------
     # TypeScript language feature tests
     # --------------------------------------------------------------------------
+
+    namedArgumentTest() {
+        skipIfTsUnavailable();
+        TypeScriptProgram ts(source_code: "
+            const add = (a: number, b: number): number => a + b;
+            globalThis.total = add(2, 3);
+        ",
+            source_label: "named.ts");
+
+        assertEq(5, ts.getGlobal().total);
+        ts.setSaveReferenceCallback(save_reference_callback: NOTHING);
+    }
 
     basicTypeStrippingTest() {
         skipIfTsUnavailable();
@@ -718,7 +731,7 @@ class TypeScriptTest inherits Test {
         code callback = sub (auto v) {
             ref_store += v;
         };
-        ts.setSaveReferenceCallback(callback);
+        ts.setSaveReferenceCallback(save_reference_callback: callback);
 
         JavaScriptObject global = ts.getGlobal();
         code storeCallback = global.storeCallback.toData();
