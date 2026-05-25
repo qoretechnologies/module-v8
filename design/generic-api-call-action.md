@@ -11,7 +11,20 @@ For the full design, see
 
 ## How it works
 
-The `DataProvider` module's reflective default for
+Two cooperating layers — gating and dispatch — together decide whether a
+TypeScript app gets `make-api-call`:
+
+**Gating (qore side, registration-time).** The qore framework injects
+`make-api-call` iff the app's connection scheme is REST-derived — i.e. the
+scheme's `ConnectionSchemeInfo.cls` inherits `RestClient::RestConnection`.
+Every TypeScript app registers its connection via
+`TypeScriptAppRestConnection` or `TypeScriptAwsAppRestConnection`, both of
+which `inherits RestConnection`, so the predicate **always returns True** for
+TypeScript apps. The action is therefore registered for every TypeScript app
+with no per-app code.
+
+**Dispatch (qore side, call-time).** When the user clicks the action, the
+`DataProvider` module's reflective default for
 `getRestClientForGenericCallImpl()` walks the actual class hierarchy of
 `self` looking for either:
 
@@ -37,19 +50,21 @@ alongside the app's typed actions under the auto-injected `__call__` child
 path (action name: `make-api-call`).
 
 If a TypeScript app should NOT expose the generic call action (e.g., the
-app's REST surface is dangerous to expose generically, or the connection
-backing the app is not actually REST), set `disable_generic_api_call: true`
-when calling `registerApp()` from TypeScript. The qore-side framework
-respects the flag and skips auto-registration.
+app's authors have a canonical equivalent of their own, or the app is
+compliance-sensitive and a free-form API surface is undesirable), set
+`disable_generic_api_call: true` when calling `registerApp()` from
+TypeScript. The qore-side framework respects the flag and skips
+auto-registration.
 
 ## When the connection isn't REST
 
-If a future TypeScript app uses a non-REST connection (e.g., a custom
-protocol with no `restDoRequest()` method), the reflective discovery's
-duck-type check fails and the framework correctly does not auto-inject the
-action — no opt-out required. The opt-out is only needed when the connection
-HAS a `restDoRequest()` method but the app's authors do not want generic
-calls exposed.
+Under the current gating model this case **cannot occur** for TypeScript
+apps registered through the standard interface — every such app uses
+`TypeScriptAppRestConnection` (or its AWS variant), both of which inherit
+`RestConnection`, so they always satisfy the positive REST predicate. If
+a future TypeScript framework path registers an app with a non-REST
+connection class, the predicate rejects it on the basis of its class
+hierarchy alone and no opt-out is required.
 
 ## Reference
 
