@@ -93,27 +93,6 @@ if (_node_include_dir AND EXISTS "${_node_include_dir}/node_version.h")
     message(STATUS "Node module ABI version: ${_node_header_modver}")
 endif()
 
-# Find libjsig for JVM signal chaining (optional - needed when both V8 and JVM are used)
-# This prevents signal handler conflicts between V8 and JVM
-# Search common JVM installation paths
-file(GLOB JAVA_LIB_PATHS
-    /usr/lib/jvm/*/lib
-    /usr/lib/jvm/*/lib/server
-    /usr/lib64/jvm/*/lib
-    /usr/lib64/jvm/*/lib/server
-)
-find_library(LIBJSIG NAMES jsig
-    HINTS
-        ENV JAVA_HOME
-        ${JAVA_LIB_PATHS}
-    PATH_SUFFIXES lib lib/server
-)
-if (LIBJSIG)
-    message(STATUS "Found libjsig: ${LIBJSIG} - enabling JVM signal chaining support")
-else()
-    message(STATUS "libjsig not found - JVM signal chaining support disabled (OK if JVM not installed)")
-endif()
-
 if (_node_include_dir)
     include_directories(BEFORE "${_node_include_dir}")
 endif()
@@ -210,11 +189,7 @@ if (DEFINED ENV{DOXYGEN_EXECUTABLE})
 endif()
 
 set(MODULE_DOX_INPUT ${CMAKE_BINARY_DIR})
-if (LIBJSIG)
-    qore_external_binary_module(${module_name} ${PROJECT_VERSION} ${LIBNODE} ${LIBJSIG})
-else()
-    qore_external_binary_module(${module_name} ${PROJECT_VERSION} ${LIBNODE})
-endif()
+qore_external_binary_module(${module_name} ${PROJECT_VERSION} ${LIBNODE})
 
 qore_user_modules("${QMOD}")
 qore_external_user_module("qlib/TypeScriptProxy" "")
