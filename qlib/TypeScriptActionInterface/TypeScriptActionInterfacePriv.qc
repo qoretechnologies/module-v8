@@ -33,6 +33,9 @@ class TypeScriptActionInterfacePriv {
         #! Static storage for JavaScriptProgramPool objects for app / actions, to ensure they do not go out of scope
         static hash<string, JavaScriptProgramPool> pstore;
 
+        #! True when static JavaScript action initialization has already run
+        static bool initialized;
+
         #! Default code in each JavaScriptProgram object
         const DefaultCode = "const __filename = process.env._qore_v8_filename;
 const __dirname = process.env._qore_v8_dirname;
@@ -82,6 +85,11 @@ function setenv(vr, value) {
     }
 
     static init() {
+        if (initialized) {
+            return;
+        }
+        initialized = True;
+
         if (!DataProvider::getGlobalLogger()) {
             LoggerLevel ll;
             if (ENV.QORE_TYPESCRIPT_ACTION_VERBOSE) {

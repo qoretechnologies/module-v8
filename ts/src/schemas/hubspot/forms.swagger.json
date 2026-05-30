@@ -1,0 +1,2500 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Base spec for all HubSpot Projects",
+    "title": "Forms",
+    "version": "v3",
+    "x-hubspot-api-use-case": "Programmatically change certain parts of a HubSpot form based on more complex use-cases or data from a third-party service (displaying a field dynamically based on data you're querying from an external source).",
+    "x-hubspot-introduction": "Use the forms API to create and manage forms in your HubSpot account, which you can then embed on your website to collect form submissions from website visitors.",
+    "x-hubspot-product-tier-requirements": {
+      "cms": "FREE",
+      "commerce": "FREE",
+      "crmHub": "FREE",
+      "dataHub": "FREE",
+      "marketing": "FREE",
+      "sales": "FREE",
+      "service": "FREE"
+    },
+    "x-hubspot-related-documentation": [
+      {
+        "name": "Forms Guide",
+        "url": "https://developers.hubspot.com/docs/guides/api/marketing/forms"
+      }
+    ]
+  },
+  "host": "api.hubapi.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/marketing/v3/forms": {
+      "get": {
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.",
+            "in": "query",
+            "name": "after",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "Whether to return only results that have been archived.",
+            "in": "query",
+            "name": "archived",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "collectionFormat": "multi",
+            "description": "",
+            "in": "query",
+            "items": {
+              "enum": [
+                "hubspot",
+                "captured",
+                "flow",
+                "blog_comment",
+                "all"
+              ],
+              "example": null,
+              "type": "string"
+            },
+            "name": "formTypes",
+            "required": false,
+            "type": "array"
+          },
+          {
+            "description": "The maximum number of results to display per page.",
+            "format": "int32",
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/CollectionResponseFormDefinitionBaseForwardPaging"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "forms"
+            ]
+          }
+        ],
+        "tags": [
+          "Basic"
+        ],
+        "operationId": "get_forms"
+      },
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FormDefinitionCreateRequestBase"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/FormDefinitionBase"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "forms"
+            ]
+          }
+        ],
+        "tags": [
+          "Basic"
+        ],
+        "operationId": "create_form"
+      }
+    },
+    "/marketing/v3/forms/{formId}": {
+      "delete": {
+        "produces": [
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "",
+            "in": "path",
+            "name": "formId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "forms"
+            ]
+          }
+        ],
+        "tags": [
+          "Basic"
+        ],
+        "description": "Archive a form definition. New submissions will not be accepted and the form definition will be permanently deleted after 3 months.",
+        "operationId": "archive_form",
+        "summary": "Archive a form definition"
+      },
+      "get": {
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "",
+            "in": "path",
+            "name": "formId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "Whether to return only results that have been archived.",
+            "in": "query",
+            "name": "archived",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/FormDefinitionBase"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "forms"
+            ]
+          }
+        ],
+        "tags": [
+          "Basic"
+        ],
+        "description": "Returns a form based on the form ID provided.",
+        "operationId": "get_form",
+        "summary": "Get a form definition"
+      },
+      "patch": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "",
+            "in": "path",
+            "name": "formId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/HubSpotFormDefinitionPatchRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/FormDefinitionBase"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "forms"
+            ]
+          }
+        ],
+        "tags": [
+          "Basic"
+        ],
+        "description": "Update some of the form definition components",
+        "operationId": "update_form",
+        "summary": "Partially update a form definition"
+      },
+      "put": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "application/octet-stream"
+        ],
+        "parameters": [
+          {
+            "description": "",
+            "in": "path",
+            "name": "formId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/HubSpotFormDefinition"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/FormDefinitionBase"
+            }
+          },
+          "default": {
+            "description": "An error occurred.",
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "forms"
+            ]
+          }
+        ],
+        "tags": [
+          "Basic"
+        ],
+        "description": "Update all fields of a hubspot form definition.",
+        "operationId": "replace_form",
+        "summary": "Update a form definition"
+      }
+    }
+  },
+  "definitions": {
+    "CollectionResponseFormDefinitionBaseForwardPaging": {
+      "example": null,
+      "properties": {
+        "paging": {
+          "$ref": "#/definitions/ForwardPaging"
+        },
+        "results": {
+          "example": null,
+          "items": {
+            "example": null
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "results"
+      ],
+      "type": "object"
+    },
+    "DatepickerField": {
+      "example": null,
+      "properties": {
+        "defaultValue": {
+          "description": "The value filled in by default. This value will be submitted unless the customer modifies it.",
+          "example": null,
+          "type": "string"
+        },
+        "dependentFields": {
+          "description": "A list of other fields to make visible based on the value filled in for this field.",
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/DependentField"
+          },
+          "type": "array"
+        },
+        "description": {
+          "description": "Additional text helping the customer to complete the field.",
+          "example": null,
+          "type": "string"
+        },
+        "fieldType": {
+          "default": "datepicker",
+          "description": "Determines how the field will be displayed and validated.",
+          "enum": [
+            "datepicker"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "hidden": {
+          "description": "Whether a field should be hidden or not. Hidden fields won't appear on the form, but can be used to pass a value to a property without requiring the customer to fill it in.",
+          "example": null,
+          "type": "boolean"
+        },
+        "label": {
+          "description": "The main label for the form field.",
+          "example": null,
+          "type": "string"
+        },
+        "name": {
+          "description": "The identifier of the field. In combination with the object type ID, it must be unique.",
+          "example": null,
+          "type": "string"
+        },
+        "objectTypeId": {
+          "description": "A unique ID for this field's CRM object type. For example a CONTACT field will have the object type ID 0-1.",
+          "example": null,
+          "type": "string"
+        },
+        "placeholder": {
+          "description": "The prompt text showing when the field isn't filled in.",
+          "example": null,
+          "type": "string"
+        },
+        "required": {
+          "description": "Whether a value for this field is required when submitting the form.",
+          "example": null,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "dependentFields",
+        "fieldType",
+        "hidden",
+        "label",
+        "name",
+        "objectTypeId",
+        "required"
+      ],
+      "title": "datepicker",
+      "type": "object",
+      "x-hubspot-sub-type-impl": true
+    },
+    "DependentField": {
+      "example": null,
+      "properties": {
+        "dependentCondition": {
+          "$ref": "#/definitions/DependentFieldFilter"
+        },
+        "dependentField": {
+          "description": "A form field that will be conditionally displayed based on whether the dependent condition is met.",
+          "example": null
+        }
+      },
+      "required": [
+        "dependentCondition",
+        "dependentField"
+      ],
+      "type": "object"
+    },
+    "DependentFieldFilter": {
+      "example": null,
+      "properties": {
+        "operator": {
+          "description": "The comparison operator used to evaluate the dependent field condition. Supports equality (eq, neq), string operations (contains, doesnt_contain, str_starts_with, str_ends_with), numeric comparisons (lt, lte, gt, gte), range checks (between, not_between), set operations (set_any, set_not_any, set_eq, set_neq), and time-based conditions (within_time, within_time_reverse).",
+          "enum": [
+            "between",
+            "contains",
+            "doesnt_contain",
+            "eq",
+            "gt",
+            "gte",
+            "is_not_empty",
+            "lt",
+            "lte",
+            "neq",
+            "not_between",
+            "set_all",
+            "set_any",
+            "set_eq",
+            "set_neq",
+            "set_not_all",
+            "set_not_any",
+            "str_ends_with",
+            "str_starts_with",
+            "within_time",
+            "within_time_reverse"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "rangeEnd": {
+          "description": "The end value for range-based operators (between, not_between). Must be provided together with rangeStart.",
+          "example": null,
+          "type": "string"
+        },
+        "rangeStart": {
+          "description": "The start value for range-based operators (between, not_between). Must be provided together with rangeEnd.",
+          "example": null,
+          "type": "string"
+        },
+        "value": {
+          "description": "The single value to compare against when using operators like eq, neq, contains, lt, gt, and other single-value comparison operators.",
+          "example": null,
+          "type": "string"
+        },
+        "values": {
+          "example": null,
+          "items": {
+            "example": null,
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "operator",
+        "rangeEnd",
+        "rangeStart",
+        "value",
+        "values"
+      ],
+      "type": "object"
+    },
+    "DropdownField": {
+      "example": null,
+      "properties": {
+        "defaultValues": {
+          "description": "The values selected by default. Those values will be submitted unless the customer modifies them.",
+          "example": null,
+          "items": {
+            "example": null,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "dependentFields": {
+          "description": "A list of other fields to make visible based on the value filled in for this field.",
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/DependentField"
+          },
+          "type": "array"
+        },
+        "description": {
+          "description": "Additional text helping the customer to complete the field.",
+          "example": null,
+          "type": "string"
+        },
+        "fieldType": {
+          "default": "dropdown",
+          "description": "Determines how the field will be displayed and validated.",
+          "enum": [
+            "dropdown"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "hidden": {
+          "description": "Whether a field should be hidden or not. Hidden fields won't appear on the form, but can be used to pass a value to a property without requiring the customer to fill it in.",
+          "example": null,
+          "type": "boolean"
+        },
+        "label": {
+          "description": "The main label for the form field.",
+          "example": null,
+          "type": "string"
+        },
+        "name": {
+          "description": "The identifier of the field. In combination with the object type ID, it must be unique.",
+          "example": null,
+          "type": "string"
+        },
+        "objectTypeId": {
+          "description": "A unique ID for this field's CRM object type. For example a CONTACT field will have the object type ID 0-1.",
+          "example": null,
+          "type": "string"
+        },
+        "options": {
+          "description": "The list of available choices for this field.",
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/EnumeratedFieldOption"
+          },
+          "type": "array"
+        },
+        "placeholder": {
+          "description": "The prompt text showing when the field isn't filled in.",
+          "example": null,
+          "type": "string"
+        },
+        "required": {
+          "description": "Whether a value for this field is required when submitting the form.",
+          "example": null,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "defaultValues",
+        "dependentFields",
+        "fieldType",
+        "hidden",
+        "label",
+        "name",
+        "objectTypeId",
+        "options",
+        "required"
+      ],
+      "title": "dropdown",
+      "type": "object",
+      "x-hubspot-sub-type-impl": true
+    },
+    "EmailField": {
+      "example": null,
+      "properties": {
+        "defaultValue": {
+          "description": "The value filled in by default. This value will be submitted unless the customer modifies it.",
+          "example": null,
+          "type": "string"
+        },
+        "dependentFields": {
+          "description": "A list of other fields to make visible based on the value filled in for this field.",
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/DependentField"
+          },
+          "type": "array"
+        },
+        "description": {
+          "description": "Additional text helping the customer to complete the field.",
+          "example": null,
+          "type": "string"
+        },
+        "fieldType": {
+          "default": "email",
+          "description": "Determines how the field will be displayed and validated.",
+          "enum": [
+            "email"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "hidden": {
+          "description": "Whether a field should be hidden or not. Hidden fields won't appear on the form, but can be used to pass a value to a property without requiring the customer to fill it in.",
+          "example": null,
+          "type": "boolean"
+        },
+        "label": {
+          "description": "The main label for the form field.",
+          "example": null,
+          "type": "string"
+        },
+        "name": {
+          "description": "The identifier of the field. In combination with the object type ID, it must be unique.",
+          "example": null,
+          "type": "string"
+        },
+        "objectTypeId": {
+          "description": "A unique ID for this field's CRM object type. For example a CONTACT field will have the object type ID 0-1.",
+          "example": null,
+          "type": "string"
+        },
+        "placeholder": {
+          "description": "The prompt text showing when the field isn't filled in.",
+          "example": null,
+          "type": "string"
+        },
+        "required": {
+          "description": "Whether a value for this field is required when submitting the form.",
+          "example": null,
+          "type": "boolean"
+        },
+        "validation": {
+          "$ref": "#/definitions/EmailFieldValidation"
+        }
+      },
+      "required": [
+        "dependentFields",
+        "fieldType",
+        "hidden",
+        "label",
+        "name",
+        "objectTypeId",
+        "required",
+        "validation"
+      ],
+      "title": "email",
+      "type": "object",
+      "x-hubspot-sub-type-impl": true
+    },
+    "EmailFieldValidation": {
+      "example": null,
+      "properties": {
+        "blockedEmailDomains": {
+          "description": "A list of email domains to block.",
+          "example": null,
+          "items": {
+            "example": null,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "useDefaultBlockList": {
+          "description": "Whether to block the free email providers.",
+          "example": null,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "blockedEmailDomains",
+        "useDefaultBlockList"
+      ],
+      "type": "object"
+    },
+    "EnumeratedFieldOption": {
+      "example": null,
+      "properties": {
+        "description": {
+          "description": "Additional descriptive text about the option.",
+          "example": null,
+          "type": "string"
+        },
+        "displayOrder": {
+          "description": "The order the choices will be displayed in.",
+          "example": null,
+          "format": "int32",
+          "type": "integer"
+        },
+        "label": {
+          "description": "The visible label for this choice.",
+          "example": null,
+          "type": "string"
+        },
+        "value": {
+          "description": "The value which will be submitted if this choice is selected.",
+          "example": null,
+          "type": "string"
+        }
+      },
+      "required": [
+        "displayOrder",
+        "label",
+        "value"
+      ],
+      "type": "object"
+    },
+    "Error": {
+      "example": {
+        "category": "VALIDATION_ERROR",
+        "correlationId": "aeb5f871-7f07-4993-9211-075dc63e7cbf",
+        "links": {
+          "knowledge-base": "https://www.hubspot.com/products/service/knowledge-base"
+        },
+        "message": "Invalid input (details will vary based on the error)"
+      },
+      "properties": {
+        "category": {
+          "description": "The error category",
+          "example": null,
+          "type": "string"
+        },
+        "context": {
+          "additionalProperties": {
+            "example": null,
+            "items": {
+              "example": null,
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "description": "Context about the error condition",
+          "example": "{invalidPropertyName=[propertyValue], missingScopes=[scope1, scope2]}",
+          "type": "object"
+        },
+        "correlationId": {
+          "description": "A unique identifier for the request. Include this value with any error reports or support tickets",
+          "example": "aeb5f871-7f07-4993-9211-075dc63e7cbf",
+          "format": "uuid",
+          "type": "string"
+        },
+        "errors": {
+          "description": "further information about the error",
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/ErrorDetail"
+          },
+          "type": "array"
+        },
+        "links": {
+          "additionalProperties": {
+            "example": null,
+            "type": "string"
+          },
+          "description": "A map of link names to associated URIs containing documentation about the error or recommended remediation steps",
+          "example": null,
+          "type": "object"
+        },
+        "message": {
+          "description": "A human readable message describing the error along with remediation steps where appropriate",
+          "example": "An error occurred",
+          "type": "string"
+        },
+        "subCategory": {
+          "description": "A specific category that contains more specific detail about the error",
+          "example": null,
+          "type": "string"
+        }
+      },
+      "required": [
+        "category",
+        "correlationId",
+        "message"
+      ],
+      "type": "object"
+    },
+    "ErrorDetail": {
+      "example": null,
+      "properties": {
+        "code": {
+          "description": "The status code associated with the error detail",
+          "example": null,
+          "type": "string"
+        },
+        "context": {
+          "additionalProperties": {
+            "example": null,
+            "items": {
+              "example": null,
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "description": "Context about the error condition",
+          "example": "{missingScopes=[scope1, scope2]}",
+          "type": "object"
+        },
+        "in": {
+          "description": "The name of the field or parameter in which the error was found.",
+          "example": null,
+          "type": "string"
+        },
+        "message": {
+          "description": "A human readable message describing the error along with remediation steps where appropriate",
+          "example": null,
+          "type": "string"
+        },
+        "subCategory": {
+          "description": "A specific category that contains more specific detail about the error",
+          "example": null,
+          "type": "string"
+        }
+      },
+      "required": [
+        "message"
+      ],
+      "type": "object"
+    },
+    "FieldGroup": {
+      "example": null,
+      "properties": {
+        "fields": {
+          "description": "The form fields included in the group",
+          "example": null,
+          "items": {
+            "example": null
+          },
+          "type": "array"
+        },
+        "groupType": {
+          "description": "The type of field grouping. Values: default_group (standard fields), progressive, and queued.",
+          "enum": [
+            "default_group",
+            "progressive",
+            "queued"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "richText": {
+          "description": "A block of rich text or an image. Those can be used to add extra information for the customers filling in the form. If the field group includes fields, the rich text will be displayed before the fields.",
+          "example": null,
+          "type": "string"
+        },
+        "richTextType": {
+          "description": "The type of rich text included. The default value is text. Values: text, image.",
+          "enum": [
+            "image",
+            "text"
+          ],
+          "example": null,
+          "type": "string"
+        }
+      },
+      "required": [
+        "fields",
+        "groupType",
+        "richTextType"
+      ],
+      "type": "object"
+    },
+    "FileField": {
+      "example": null,
+      "properties": {
+        "allowMultipleFiles": {
+          "description": "Whether to allow the upload of multiple files.",
+          "example": null,
+          "type": "boolean"
+        },
+        "defaultValue": {
+          "description": "The value filled in by default. This value will be submitted unless the customer modifies it.",
+          "example": null,
+          "type": "string"
+        },
+        "dependentFields": {
+          "description": "A list of other fields to make visible based on the value filled in for this field.",
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/DependentField"
+          },
+          "type": "array"
+        },
+        "description": {
+          "description": "Additional text helping the customer to complete the field.",
+          "example": null,
+          "type": "string"
+        },
+        "fieldType": {
+          "default": "file",
+          "description": "Determines how the field will be displayed and validated.",
+          "enum": [
+            "file"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "hidden": {
+          "description": "Whether a field should be hidden or not. Hidden fields won't appear on the form, but can be used to pass a value to a property without requiring the customer to fill it in.",
+          "example": null,
+          "type": "boolean"
+        },
+        "label": {
+          "description": "The main label for the form field.",
+          "example": null,
+          "type": "string"
+        },
+        "name": {
+          "description": "The identifier of the field. In combination with the object type ID, it must be unique.",
+          "example": null,
+          "type": "string"
+        },
+        "objectTypeId": {
+          "description": "A unique ID for this field's CRM object type. For example a CONTACT field will have the object type ID 0-1.",
+          "example": null,
+          "type": "string"
+        },
+        "placeholder": {
+          "description": "The prompt text showing when the field isn't filled in.",
+          "example": null,
+          "type": "string"
+        },
+        "required": {
+          "description": "Whether a value for this field is required when submitting the form.",
+          "example": null,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "allowMultipleFiles",
+        "dependentFields",
+        "fieldType",
+        "hidden",
+        "label",
+        "name",
+        "objectTypeId",
+        "required"
+      ],
+      "title": "file",
+      "type": "object",
+      "x-hubspot-sub-type-impl": true
+    },
+    "FormDefinitionBase": {
+      "example": null,
+      "properties": {},
+      "type": "object"
+    },
+    "FormDefinitionCreateRequestBase": {
+      "example": null,
+      "properties": {},
+      "type": "object"
+    },
+    "FormDisplayOptions": {
+      "example": null,
+      "properties": {
+        "cssClass": {
+          "description": "Custom CSS class name(s) to apply to the form element for additional styling.",
+          "example": null,
+          "type": "string"
+        },
+        "renderRawHtml": {
+          "description": "Whether the form will render as raw HTML as opposed to inside an iFrame.",
+          "example": null,
+          "type": "boolean"
+        },
+        "style": {
+          "$ref": "#/definitions/FormStyle"
+        },
+        "submitButtonText": {
+          "description": "The text displayed on the form submit button.",
+          "example": null,
+          "type": "string"
+        },
+        "theme": {
+          "description": "The theme used for styling the input fields. This will not apply if the form is added to a HubSpot CMS page.",
+          "enum": [
+            "canvas",
+            "default_style",
+            "legacy",
+            "linear",
+            "round",
+            "sharp"
+          ],
+          "example": null,
+          "type": "string"
+        }
+      },
+      "required": [
+        "renderRawHtml",
+        "style",
+        "submitButtonText",
+        "theme"
+      ],
+      "type": "object"
+    },
+    "FormPostSubmitAction": {
+      "example": null,
+      "properties": {
+        "type": {
+          "description": "The action to take after submit. The default action is displaying a thank you message.",
+          "enum": [
+            "redirect_url",
+            "thank_you"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "value": {
+          "description": "The thank you text or the page to redirect to.",
+          "example": null,
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "value"
+      ],
+      "type": "object"
+    },
+    "FormStyle": {
+      "example": null,
+      "properties": {
+        "backgroundWidth": {
+          "description": "The width of the form background. Accepts percentage (e.g., \"100%\") or pixel values (e.g., \"600px\").",
+          "example": null,
+          "type": "string"
+        },
+        "fontFamily": {
+          "description": "Font family used throughout the form (e.g., \"arial, helvetica, sans-serif\").",
+          "example": null,
+          "type": "string"
+        },
+        "helpTextColor": {
+          "description": "Hex color code for help text displayed below form fields.",
+          "example": null,
+          "type": "string"
+        },
+        "helpTextSize": {
+          "description": "Font size for help text. Accepts pixel values (e.g., \"11px\").",
+          "example": null,
+          "type": "string"
+        },
+        "labelTextColor": {
+          "description": "Hex color code for field labels.",
+          "example": null,
+          "type": "string"
+        },
+        "labelTextSize": {
+          "description": "Font size for field labels. Accepts pixel values (e.g., \"11px\").",
+          "example": null,
+          "type": "string"
+        },
+        "legalConsentTextColor": {
+          "description": "Hex color code for legal consent text.",
+          "example": null,
+          "type": "string"
+        },
+        "legalConsentTextSize": {
+          "description": "Font size for legal consent text. Accepts pixel values (e.g., \"14px\").",
+          "example": null,
+          "type": "string"
+        },
+        "submitAlignment": {
+          "description": "Horizontal alignment of the submit button. Values: left, center, right.",
+          "enum": [
+            "center",
+            "left",
+            "right"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "submitColor": {
+          "description": "Hex color code for the submit button background.",
+          "example": null,
+          "type": "string"
+        },
+        "submitFontColor": {
+          "description": "Hex color code for the submit button text.",
+          "example": null,
+          "type": "string"
+        },
+        "submitSize": {
+          "description": "Font size for submit button text. Accepts pixel values (e.g., \"12px\").",
+          "example": null,
+          "type": "string"
+        }
+      },
+      "required": [
+        "backgroundWidth",
+        "fontFamily",
+        "helpTextColor",
+        "helpTextSize",
+        "labelTextColor",
+        "labelTextSize",
+        "legalConsentTextColor",
+        "legalConsentTextSize",
+        "submitAlignment",
+        "submitColor",
+        "submitFontColor",
+        "submitSize"
+      ],
+      "type": "object"
+    },
+    "ForwardPaging": {
+      "example": null,
+      "properties": {
+        "next": {
+          "$ref": "#/definitions/NextPage"
+        }
+      },
+      "type": "object"
+    },
+    "HubSpotFormConfiguration": {
+      "example": null,
+      "properties": {
+        "allowLinkToResetKnownValues": {
+          "description": "Whether to add a reset link to the form. This removes any pre-populated content on the form and creates a new contact on submission.",
+          "example": null,
+          "type": "boolean"
+        },
+        "archivable": {
+          "description": "Whether the form can be archived.",
+          "example": null,
+          "type": "boolean"
+        },
+        "cloneable": {
+          "description": "Whether the form can be cloned.",
+          "example": null,
+          "type": "boolean"
+        },
+        "createNewContactForNewEmail": {
+          "description": "Whether to create a new contact when a form is submitted with an email address that doesn\u2019t match any in your existing contacts records.",
+          "example": null,
+          "type": "boolean"
+        },
+        "editable": {
+          "description": "Whether the form can be edited.",
+          "example": null,
+          "type": "boolean"
+        },
+        "embedType": {
+          "enum": [
+            "V3",
+            "V4"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "language": {
+          "description": "The language of the form.",
+          "enum": [
+            "af",
+            "ar-eg",
+            "bg",
+            "bn",
+            "ca-es",
+            "cs",
+            "da",
+            "de",
+            "el",
+            "en",
+            "en-gb",
+            "es",
+            "es-mx",
+            "fi",
+            "fr",
+            "fr-ca",
+            "he-il",
+            "hr",
+            "hu",
+            "id",
+            "it",
+            "ja",
+            "ko",
+            "lt",
+            "ms",
+            "nl",
+            "no-no",
+            "pl",
+            "pt",
+            "pt-br",
+            "ro",
+            "ru",
+            "sk",
+            "sl",
+            "sv",
+            "th",
+            "tl",
+            "tr",
+            "uk",
+            "vi",
+            "zh-cn",
+            "zh-hk",
+            "zh-tw"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "lifecycleStages": {
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/LifecycleStage"
+          },
+          "type": "array"
+        },
+        "notifyContactOwner": {
+          "description": "Whether to send a notification email to the contact owner when a submission is received.",
+          "example": null,
+          "type": "boolean"
+        },
+        "notifyRecipients": {
+          "description": "The list of user IDs to receive a notification email when a submission is received.",
+          "example": null,
+          "items": {
+            "example": null,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "postSubmitAction": {
+          "$ref": "#/definitions/FormPostSubmitAction"
+        },
+        "prePopulateKnownValues": {
+          "description": "Whether contact fields should pre-populate with known information when a contact returns to your site.",
+          "example": null,
+          "type": "boolean"
+        },
+        "recaptchaEnabled": {
+          "description": "Whether CAPTCHA (spam prevention) is enabled.",
+          "example": null,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "allowLinkToResetKnownValues",
+        "archivable",
+        "cloneable",
+        "createNewContactForNewEmail",
+        "editable",
+        "language",
+        "lifecycleStages",
+        "notifyContactOwner",
+        "notifyRecipients",
+        "postSubmitAction",
+        "prePopulateKnownValues",
+        "recaptchaEnabled"
+      ],
+      "type": "object"
+    },
+    "HubSpotFormDefinition": {
+      "example": null,
+      "properties": {
+        "archived": {
+          "example": null,
+          "type": "boolean"
+        },
+        "archivedAt": {
+          "example": null,
+          "format": "date-time",
+          "type": "string"
+        },
+        "configuration": {
+          "$ref": "#/definitions/HubSpotFormConfiguration"
+        },
+        "createdAt": {
+          "example": null,
+          "format": "date-time",
+          "type": "string"
+        },
+        "displayOptions": {
+          "$ref": "#/definitions/FormDisplayOptions"
+        },
+        "fieldGroups": {
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/FieldGroup"
+          },
+          "type": "array"
+        },
+        "formType": {
+          "default": "hubspot",
+          "enum": [
+            "hubspot"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "id": {
+          "example": null,
+          "type": "string"
+        },
+        "legalConsentOptions": {
+          "example": null
+        },
+        "name": {
+          "example": null,
+          "type": "string"
+        },
+        "updatedAt": {
+          "example": null,
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "required": [
+        "archived",
+        "configuration",
+        "createdAt",
+        "displayOptions",
+        "fieldGroups",
+        "formType",
+        "id",
+        "legalConsentOptions",
+        "name",
+        "updatedAt"
+      ],
+      "type": "object",
+      "x-hubspot-sub-type-impl": true
+    },
+    "HubSpotFormDefinitionCreateRequest": {
+      "example": null,
+      "properties": {
+        "archived": {
+          "example": null,
+          "type": "boolean"
+        },
+        "archivedAt": {
+          "example": null,
+          "format": "date-time",
+          "type": "string"
+        },
+        "configuration": {
+          "$ref": "#/definitions/HubSpotFormConfiguration"
+        },
+        "createdAt": {
+          "example": null,
+          "format": "date-time",
+          "type": "string"
+        },
+        "displayOptions": {
+          "$ref": "#/definitions/FormDisplayOptions"
+        },
+        "fieldGroups": {
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/FieldGroup"
+          },
+          "type": "array"
+        },
+        "formType": {
+          "default": "hubspot",
+          "enum": [
+            "hubspot"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "legalConsentOptions": {
+          "example": null
+        },
+        "name": {
+          "example": null,
+          "type": "string"
+        },
+        "updatedAt": {
+          "example": null,
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "required": [
+        "archived",
+        "configuration",
+        "createdAt",
+        "displayOptions",
+        "fieldGroups",
+        "formType",
+        "legalConsentOptions",
+        "name",
+        "updatedAt"
+      ],
+      "type": "object",
+      "x-hubspot-sub-type-impl": true
+    },
+    "HubSpotFormDefinitionPatchRequest": {
+      "example": null,
+      "properties": {
+        "archived": {
+          "description": "Whether this form is archived.",
+          "example": null,
+          "type": "boolean"
+        },
+        "configuration": {
+          "$ref": "#/definitions/HubSpotFormConfiguration"
+        },
+        "displayOptions": {
+          "$ref": "#/definitions/FormDisplayOptions"
+        },
+        "fieldGroups": {
+          "description": "The fields in the form, grouped in rows.",
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/FieldGroup"
+          },
+          "type": "array"
+        },
+        "legalConsentOptions": {
+          "description": "Configuration for legal consent and data processing compliance options. Supports types: none, legitimate_interest, explicit_consent_to_process, implicit_consent_to_process.",
+          "example": null
+        },
+        "name": {
+          "description": "The name of the form. Expected to be unique for a hub.",
+          "example": null,
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "LegalConsentCheckbox": {
+      "example": null,
+      "properties": {
+        "label": {
+          "description": "The main label for the form field.",
+          "example": null,
+          "type": "string"
+        },
+        "required": {
+          "description": "Whether this checkbox is required when submitting the form.",
+          "example": null,
+          "type": "boolean"
+        },
+        "subscriptionTypeId": {
+          "description": "The ID of the subscription type associated with this consent checkbox.",
+          "example": null,
+          "format": "int64",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "label",
+        "required",
+        "subscriptionTypeId"
+      ],
+      "type": "object"
+    },
+    "LegalConsentOptionsExplicitConsentToProcess": {
+      "example": null,
+      "properties": {
+        "communicationConsentText": {
+          "description": "Text explaining communication consent preferences. Informs users about how their contact information will be used for communications.",
+          "example": null,
+          "type": "string"
+        },
+        "communicationsCheckboxes": {
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/LegalConsentCheckbox"
+          },
+          "type": "array"
+        },
+        "consentToProcessCheckboxLabel": {
+          "description": "Label text for the consent to process checkbox.",
+          "example": null,
+          "type": "string"
+        },
+        "consentToProcessFooterText": {
+          "description": "Footer text for the consent to process section.",
+          "example": null,
+          "type": "string"
+        },
+        "consentToProcessText": {
+          "description": "Text explaining the consent to process personal data.",
+          "example": null,
+          "type": "string"
+        },
+        "privacyText": {
+          "description": "Text explaining the privacy policy and data handling practices. Required field that informs users about their privacy rights and how their data is protected.",
+          "example": null,
+          "type": "string"
+        },
+        "type": {
+          "default": "explicit_consent_to_process",
+          "description": "The legal consent type.",
+          "enum": [
+            "explicit_consent_to_process"
+          ],
+          "example": null,
+          "type": "string"
+        }
+      },
+      "required": [
+        "communicationsCheckboxes",
+        "privacyText",
+        "type"
+      ],
+      "title": "explicit_consent_to_process",
+      "type": "object",
+      "x-hubspot-sub-type-impl": true
+    },
+    "LegalConsentOptionsImplicitConsentToProcess": {
+      "example": null,
+      "properties": {
+        "communicationConsentText": {
+          "description": "Text explaining communication consent preferences.",
+          "example": null,
+          "type": "string"
+        },
+        "communicationsCheckboxes": {
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/LegalConsentCheckbox"
+          },
+          "type": "array"
+        },
+        "consentToProcessText": {
+          "description": "Text explaining the consent to process personal data.",
+          "example": null,
+          "type": "string"
+        },
+        "privacyText": {
+          "description": "Text explaining the privacy policy and data handling practices.",
+          "example": null,
+          "type": "string"
+        },
+        "type": {
+          "default": "implicit_consent_to_process",
+          "description": "The legal consent type.",
+          "enum": [
+            "implicit_consent_to_process"
+          ],
+          "example": null,
+          "type": "string"
+        }
+      },
+      "required": [
+        "communicationsCheckboxes",
+        "privacyText",
+        "type"
+      ],
+      "title": "implicit_consent_to_process",
+      "type": "object",
+      "x-hubspot-sub-type-impl": true
+    },
+    "LegalConsentOptionsLegitimateInterest": {
+      "example": null,
+      "properties": {
+        "lawfulBasis": {
+          "description": "The lawful basis for data processing under legitimate interest. Values: lead (processing for lead generation), client (processing for existing clients), other (other legitimate interests). Default: lead.",
+          "enum": [
+            "client",
+            "lead",
+            "other"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "privacyText": {
+          "description": "Text explaining the privacy policy and data handling practices.",
+          "example": null,
+          "type": "string"
+        },
+        "subscriptionTypeIds": {
+          "example": null,
+          "items": {
+            "example": null,
+            "format": "int64",
+            "type": "integer"
+          },
+          "type": "array"
+        },
+        "type": {
+          "default": "legitimate_interest",
+          "description": "The legal consent type.",
+          "enum": [
+            "legitimate_interest"
+          ],
+          "example": null,
+          "type": "string"
+        }
+      },
+      "required": [
+        "lawfulBasis",
+        "privacyText",
+        "subscriptionTypeIds",
+        "type"
+      ],
+      "title": "legitimate_interest",
+      "type": "object",
+      "x-hubspot-sub-type-impl": true
+    },
+    "LegalConsentOptionsNone": {
+      "example": null,
+      "properties": {
+        "type": {
+          "default": "none",
+          "description": "The legal consent type. Set to \"none\" to indicate no legal consent configuration is required for this form.",
+          "enum": [
+            "none"
+          ],
+          "example": null,
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "title": "none",
+      "type": "object",
+      "x-hubspot-sub-type-impl": true
+    },
+    "LifecycleStage": {
+      "example": null,
+      "properties": {
+        "objectTypeId": {
+          "description": "The objectTypeId for both contact and company",
+          "example": null,
+          "type": "string"
+        },
+        "value": {
+          "description": "The internal name of the contact's lifecycle stage set when submitting a form",
+          "example": null,
+          "type": "string"
+        }
+      },
+      "required": [
+        "objectTypeId",
+        "value"
+      ],
+      "type": "object"
+    },
+    "MobilePhoneField": {
+      "example": null,
+      "properties": {
+        "defaultValue": {
+          "description": "The value filled in by default. This value will be submitted unless the customer modifies it.",
+          "example": null,
+          "type": "string"
+        },
+        "dependentFields": {
+          "description": "A list of other fields to make visible based on the value filled in for this field.",
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/DependentField"
+          },
+          "type": "array"
+        },
+        "description": {
+          "description": "Additional text helping the customer to complete the field.",
+          "example": null,
+          "type": "string"
+        },
+        "fieldType": {
+          "default": "mobile_phone",
+          "description": "Determines how the field will be displayed and validated.",
+          "enum": [
+            "mobile_phone"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "hidden": {
+          "description": "Whether a field should be hidden or not. Hidden fields won't appear on the form, but can be used to pass a value to a property without requiring the customer to fill it in.",
+          "example": null,
+          "type": "boolean"
+        },
+        "label": {
+          "description": "The main label for the form field.",
+          "example": null,
+          "type": "string"
+        },
+        "name": {
+          "description": "The identifier of the field. In combination with the object type ID, it must be unique.",
+          "example": null,
+          "type": "string"
+        },
+        "objectTypeId": {
+          "description": "A unique ID for this field's CRM object type. For example a CONTACT field will have the object type ID 0-1.",
+          "example": null,
+          "type": "string"
+        },
+        "placeholder": {
+          "description": "The prompt text showing when the field isn't filled in.",
+          "example": null,
+          "type": "string"
+        },
+        "required": {
+          "description": "Whether a value for this field is required when submitting the form.",
+          "example": null,
+          "type": "boolean"
+        },
+        "validation": {
+          "$ref": "#/definitions/PhoneFieldValidation"
+        }
+      },
+      "required": [
+        "dependentFields",
+        "fieldType",
+        "hidden",
+        "label",
+        "name",
+        "objectTypeId",
+        "required",
+        "validation"
+      ],
+      "title": "mobile_phone",
+      "type": "object",
+      "x-hubspot-sub-type-impl": true
+    },
+    "MultiLineTextField": {
+      "example": null,
+      "properties": {
+        "defaultValue": {
+          "description": "The value filled in by default. This value will be submitted unless the customer modifies it.",
+          "example": null,
+          "type": "string"
+        },
+        "dependentFields": {
+          "description": "A list of other fields to make visible based on the value filled in for this field.",
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/DependentField"
+          },
+          "type": "array"
+        },
+        "description": {
+          "description": "Additional text helping the customer to complete the field.",
+          "example": null,
+          "type": "string"
+        },
+        "fieldType": {
+          "default": "multi_line_text",
+          "description": "Determines how the field will be displayed and validated.",
+          "enum": [
+            "multi_line_text"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "hidden": {
+          "description": "Whether a field should be hidden or not. Hidden fields won't appear on the form, but can be used to pass a value to a property without requiring the customer to fill it in.",
+          "example": null,
+          "type": "boolean"
+        },
+        "label": {
+          "description": "The main label for the form field.",
+          "example": null,
+          "type": "string"
+        },
+        "name": {
+          "description": "The identifier of the field. In combination with the object type ID, it must be unique.",
+          "example": null,
+          "type": "string"
+        },
+        "objectTypeId": {
+          "description": "A unique ID for this field's CRM object type. For example a CONTACT field will have the object type ID 0-1.",
+          "example": null,
+          "type": "string"
+        },
+        "placeholder": {
+          "description": "The prompt text showing when the field isn't filled in.",
+          "example": null,
+          "type": "string"
+        },
+        "required": {
+          "description": "Whether a value for this field is required when submitting the form.",
+          "example": null,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "dependentFields",
+        "fieldType",
+        "hidden",
+        "label",
+        "name",
+        "objectTypeId",
+        "required"
+      ],
+      "title": "multi_line_text",
+      "type": "object",
+      "x-hubspot-sub-type-impl": true
+    },
+    "MultipleCheckboxesField": {
+      "example": null,
+      "properties": {
+        "defaultValues": {
+          "description": "The values selected by default. Those values will be submitted unless the customer modifies them.",
+          "example": null,
+          "items": {
+            "example": null,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "dependentFields": {
+          "description": "A list of other fields to make visible based on the value filled in for this field.",
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/DependentField"
+          },
+          "type": "array"
+        },
+        "description": {
+          "description": "Additional text helping the customer to complete the field.",
+          "example": null,
+          "type": "string"
+        },
+        "fieldType": {
+          "default": "multiple_checkboxes",
+          "description": "Determines how the field will be displayed and validated.",
+          "enum": [
+            "multiple_checkboxes"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "hidden": {
+          "description": "Whether a field should be hidden or not. Hidden fields won't appear on the form, but can be used to pass a value to a property without requiring the customer to fill it in.",
+          "example": null,
+          "type": "boolean"
+        },
+        "label": {
+          "description": "The main label for the form field.",
+          "example": null,
+          "type": "string"
+        },
+        "name": {
+          "description": "The identifier of the field. In combination with the object type ID, it must be unique.",
+          "example": null,
+          "type": "string"
+        },
+        "objectTypeId": {
+          "description": "A unique ID for this field's CRM object type. For example a CONTACT field will have the object type ID 0-1.",
+          "example": null,
+          "type": "string"
+        },
+        "options": {
+          "description": "The list of available choices for this field.",
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/EnumeratedFieldOption"
+          },
+          "type": "array"
+        },
+        "required": {
+          "description": "Whether a value for this field is required when submitting the form.",
+          "example": null,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "defaultValues",
+        "dependentFields",
+        "fieldType",
+        "hidden",
+        "label",
+        "name",
+        "objectTypeId",
+        "options",
+        "required"
+      ],
+      "title": "multiple_checkboxes",
+      "type": "object",
+      "x-hubspot-sub-type-impl": true
+    },
+    "NextPage": {
+      "description": "Specifies the paging information needed to retrieve the next set of results in a paginated API response",
+      "example": null,
+      "properties": {
+        "after": {
+          "description": "The pagination cursor token used to fetch the next page of results. Pass this value in subsequent requests to continue pagination.",
+          "example": null,
+          "type": "string"
+        },
+        "link": {
+          "description": "The complete URL to retrieve the next page of results in paginated responses.",
+          "example": null,
+          "type": "string"
+        }
+      },
+      "required": [
+        "after"
+      ],
+      "type": "object"
+    },
+    "NumberField": {
+      "example": null,
+      "properties": {
+        "defaultValue": {
+          "description": "The value filled in by default. This value will be submitted unless the customer modifies it.",
+          "example": null,
+          "type": "string"
+        },
+        "dependentFields": {
+          "description": "A list of other fields to make visible based on the value filled in for this field.",
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/DependentField"
+          },
+          "type": "array"
+        },
+        "description": {
+          "description": "Additional text helping the customer to complete the field.",
+          "example": null,
+          "type": "string"
+        },
+        "fieldType": {
+          "default": "number",
+          "description": "Determines how the field will be displayed and validated.",
+          "enum": [
+            "number"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "hidden": {
+          "description": "Whether a field should be hidden or not. Hidden fields won't appear on the form, but can be used to pass a value to a property without requiring the customer to fill it in.",
+          "example": null,
+          "type": "boolean"
+        },
+        "label": {
+          "description": "The main label for the form field.",
+          "example": null,
+          "type": "string"
+        },
+        "name": {
+          "description": "The identifier of the field. In combination with the object type ID, it must be unique.",
+          "example": null,
+          "type": "string"
+        },
+        "objectTypeId": {
+          "description": "A unique ID for this field's CRM object type. For example a CONTACT field will have the object type ID 0-1.",
+          "example": null,
+          "type": "string"
+        },
+        "placeholder": {
+          "description": "The prompt text showing when the field isn't filled in.",
+          "example": null,
+          "type": "string"
+        },
+        "required": {
+          "description": "Whether a value for this field is required when submitting the form.",
+          "example": null,
+          "type": "boolean"
+        },
+        "validation": {
+          "$ref": "#/definitions/NumberFieldValidation"
+        }
+      },
+      "required": [
+        "dependentFields",
+        "fieldType",
+        "hidden",
+        "label",
+        "name",
+        "objectTypeId",
+        "required"
+      ],
+      "title": "number",
+      "type": "object",
+      "x-hubspot-sub-type-impl": true
+    },
+    "NumberFieldValidation": {
+      "example": null,
+      "properties": {
+        "maxAllowedDigits": {
+          "description": "The maximum number of digits allowed for number field input. Must be greater than or equal to minAllowedDigits.",
+          "example": null,
+          "format": "int32",
+          "type": "integer"
+        },
+        "minAllowedDigits": {
+          "description": "The minimum number of digits required for valid number field input. Must be less than or equal to maxAllowedDigits.",
+          "example": null,
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "maxAllowedDigits",
+        "minAllowedDigits"
+      ],
+      "type": "object"
+    },
+    "PaymentLinkRadioField": {
+      "example": null,
+      "properties": {
+        "defaultValues": {
+          "example": null,
+          "items": {
+            "example": null,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "dependentFields": {
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/DependentField"
+          },
+          "type": "array"
+        },
+        "description": {
+          "description": "Additional descriptive text about the field.",
+          "example": null,
+          "type": "string"
+        },
+        "fieldType": {
+          "default": "payment_link_radio",
+          "description": "The field type identifier.",
+          "enum": [
+            "payment_link_radio"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "hidden": {
+          "description": "Whether the field is a hidden field.",
+          "example": null,
+          "type": "boolean"
+        },
+        "label": {
+          "description": "The visible label displayed with the field to describe its purpose to form users.",
+          "example": null,
+          "type": "string"
+        },
+        "name": {
+          "description": "The internal API name used to identify this field in API requests and responses.",
+          "example": null,
+          "type": "string"
+        },
+        "objectTypeId": {
+          "description": "The CRM object type this field is associated with (e.g., contacts, deals).",
+          "example": null,
+          "type": "string"
+        },
+        "options": {
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/EnumeratedFieldOption"
+          },
+          "type": "array"
+        },
+        "required": {
+          "description": "Whether users must select an option before submitting the form.",
+          "example": null,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "defaultValues",
+        "dependentFields",
+        "fieldType",
+        "hidden",
+        "label",
+        "name",
+        "objectTypeId",
+        "options",
+        "required"
+      ],
+      "title": "payment_link_radio",
+      "type": "object",
+      "x-hubspot-sub-type-impl": true
+    },
+    "PhoneField": {
+      "example": null,
+      "properties": {
+        "defaultValue": {
+          "description": "The value filled in by default. This value will be submitted unless the customer modifies it.",
+          "example": null,
+          "type": "string"
+        },
+        "dependentFields": {
+          "description": "A list of other fields to make visible based on the value filled in for this field.",
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/DependentField"
+          },
+          "type": "array"
+        },
+        "description": {
+          "description": "Additional text helping the customer to complete the field.",
+          "example": null,
+          "type": "string"
+        },
+        "fieldType": {
+          "default": "phone",
+          "description": "Determines how the field will be displayed and validated.",
+          "enum": [
+            "phone"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "hidden": {
+          "description": "Whether a field should be hidden or not. Hidden fields won't appear on the form, but can be used to pass a value to a property without requiring the customer to fill it in.",
+          "example": null,
+          "type": "boolean"
+        },
+        "label": {
+          "description": "The main label for the form field.",
+          "example": null,
+          "type": "string"
+        },
+        "name": {
+          "description": "The identifier of the field. In combination with the object type ID, it must be unique.",
+          "example": null,
+          "type": "string"
+        },
+        "objectTypeId": {
+          "description": "A unique ID for this field's CRM object type. For example a CONTACT field will have the object type ID 0-1.",
+          "example": null,
+          "type": "string"
+        },
+        "placeholder": {
+          "description": "The prompt text showing when the field isn't filled in.",
+          "example": null,
+          "type": "string"
+        },
+        "required": {
+          "description": "Whether a value for this field is required when submitting the form.",
+          "example": null,
+          "type": "boolean"
+        },
+        "useCountryCodeSelect": {
+          "description": "Whether to display a country code drop down next to the phone field.",
+          "example": null,
+          "type": "boolean"
+        },
+        "validation": {
+          "$ref": "#/definitions/PhoneFieldValidation"
+        }
+      },
+      "required": [
+        "dependentFields",
+        "fieldType",
+        "hidden",
+        "label",
+        "name",
+        "objectTypeId",
+        "required",
+        "useCountryCodeSelect",
+        "validation"
+      ],
+      "title": "phone",
+      "type": "object",
+      "x-hubspot-sub-type-impl": true
+    },
+    "PhoneFieldValidation": {
+      "example": null,
+      "properties": {
+        "maxAllowedDigits": {
+          "description": "The maximum number of digits allowed in the phone number. Default: 20. Must be greater than or equal to minAllowedDigits.",
+          "example": null,
+          "format": "int32",
+          "type": "integer"
+        },
+        "minAllowedDigits": {
+          "description": "The minimum number of digits required in the phone number. Default: 7. Must be less than or equal to maxAllowedDigits.",
+          "example": null,
+          "format": "int32",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "maxAllowedDigits",
+        "minAllowedDigits"
+      ],
+      "type": "object"
+    },
+    "RadioField": {
+      "example": null,
+      "properties": {
+        "defaultValues": {
+          "description": "The values selected by default. Those values will be submitted unless the customer modifies them.",
+          "example": null,
+          "items": {
+            "example": null,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "dependentFields": {
+          "description": "A list of other fields to make visible based on the value filled in for this field.",
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/DependentField"
+          },
+          "type": "array"
+        },
+        "description": {
+          "description": "Additional text helping the customer to complete the field.",
+          "example": null,
+          "type": "string"
+        },
+        "fieldType": {
+          "default": "radio",
+          "description": "Determines how the field will be displayed and validated.",
+          "enum": [
+            "radio"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "hidden": {
+          "description": "Whether a field should be hidden or not. Hidden fields won't appear on the form, but can be used to pass a value to a property without requiring the customer to fill it in.",
+          "example": null,
+          "type": "boolean"
+        },
+        "label": {
+          "description": "The main label for the form field.",
+          "example": null,
+          "type": "string"
+        },
+        "name": {
+          "description": "The identifier of the field. In combination with the object type ID, it must be unique.",
+          "example": null,
+          "type": "string"
+        },
+        "objectTypeId": {
+          "description": "A unique ID for this field's CRM object type. For example a CONTACT field will have the object type ID 0-1.",
+          "example": null,
+          "type": "string"
+        },
+        "options": {
+          "description": "The list of available choices for this field.",
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/EnumeratedFieldOption"
+          },
+          "type": "array"
+        },
+        "placeholder": {
+          "description": "The prompt text showing when the field isn't filled in.",
+          "example": null,
+          "type": "string"
+        },
+        "required": {
+          "description": "Whether a value for this field is required when submitting the form.",
+          "example": null,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "defaultValues",
+        "dependentFields",
+        "fieldType",
+        "hidden",
+        "label",
+        "name",
+        "objectTypeId",
+        "options",
+        "required"
+      ],
+      "title": "radio",
+      "type": "object",
+      "x-hubspot-sub-type-impl": true
+    },
+    "SingleCheckboxField": {
+      "example": null,
+      "properties": {
+        "defaultValue": {
+          "description": "The value filled in by default. This value will be submitted unless the customer modifies it.",
+          "example": null,
+          "type": "string"
+        },
+        "dependentFields": {
+          "description": "A list of other fields to make visible based on the value filled in for this field.",
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/DependentField"
+          },
+          "type": "array"
+        },
+        "description": {
+          "description": "Additional text helping the customer to complete the field.",
+          "example": null,
+          "type": "string"
+        },
+        "fieldType": {
+          "default": "single_checkbox",
+          "description": "Determines how the field will be displayed and validated.",
+          "enum": [
+            "single_checkbox"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "hidden": {
+          "description": "Whether a field should be hidden or not. Hidden fields won't appear on the form, but can be used to pass a value to a property without requiring the customer to fill it in.",
+          "example": null,
+          "type": "boolean"
+        },
+        "label": {
+          "description": "The main label for the form field.",
+          "example": null,
+          "type": "string"
+        },
+        "name": {
+          "description": "The identifier of the field. In combination with the object type ID, it must be unique.",
+          "example": null,
+          "type": "string"
+        },
+        "objectTypeId": {
+          "description": "A unique ID for this field's CRM object type. For example a CONTACT field will have the object type ID 0-1.",
+          "example": null,
+          "type": "string"
+        },
+        "required": {
+          "description": "Whether a value for this field is required when submitting the form.",
+          "example": null,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "dependentFields",
+        "fieldType",
+        "hidden",
+        "label",
+        "name",
+        "objectTypeId",
+        "required"
+      ],
+      "title": "single_checkbox",
+      "type": "object",
+      "x-hubspot-sub-type-impl": true
+    },
+    "SingleLineTextField": {
+      "example": null,
+      "properties": {
+        "defaultValue": {
+          "description": "The value filled in by default. This value will be submitted unless the customer modifies it.",
+          "example": null,
+          "type": "string"
+        },
+        "dependentFields": {
+          "description": "A list of other fields to make visible based on the value filled in for this field.",
+          "example": null,
+          "items": {
+            "$ref": "#/definitions/DependentField"
+          },
+          "type": "array"
+        },
+        "description": {
+          "description": "Additional text helping the customer to complete the field.",
+          "example": null,
+          "type": "string"
+        },
+        "fieldType": {
+          "default": "single_line_text",
+          "description": "Determines how the field will be displayed and validated.",
+          "enum": [
+            "single_line_text"
+          ],
+          "example": null,
+          "type": "string"
+        },
+        "hidden": {
+          "description": "Whether a field should be hidden or not. Hidden fields won't appear on the form, but can be used to pass a value to a property without requiring the customer to fill it in.",
+          "example": null,
+          "type": "boolean"
+        },
+        "label": {
+          "description": "The main label for the form field.",
+          "example": null,
+          "type": "string"
+        },
+        "name": {
+          "description": "The identifier of the field. In combination with the object type ID, it must be unique.",
+          "example": null,
+          "type": "string"
+        },
+        "objectTypeId": {
+          "description": "A unique ID for this field's CRM object type. For example a CONTACT field will have the object type ID 0-1.",
+          "example": null,
+          "type": "string"
+        },
+        "placeholder": {
+          "description": "The prompt text showing when the field isn't filled in.",
+          "example": null,
+          "type": "string"
+        },
+        "required": {
+          "description": "Whether a value for this field is required when submitting the form.",
+          "example": null,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "dependentFields",
+        "fieldType",
+        "hidden",
+        "label",
+        "name",
+        "objectTypeId",
+        "required"
+      ],
+      "title": "single_line_text",
+      "type": "object",
+      "x-hubspot-sub-type-impl": true
+    }
+  },
+  "securityDefinitions": {
+    "developer_hapikey": {
+      "in": "query",
+      "name": "hapikey",
+      "type": "apiKey"
+    },
+    "oauth2": {
+      "authorizationUrl": "https://app.hubspot.com/oauth/authorize",
+      "flow": "accessCode",
+      "scopes": {
+        "forms": ""
+      },
+      "tokenUrl": "https://api.hubapi.com/oauth/v1/token",
+      "type": "oauth2"
+    },
+    "private_apps": {
+      "in": "header",
+      "name": "private-app",
+      "type": "apiKey"
+    },
+    "private_apps_legacy": {
+      "in": "header",
+      "name": "private-app-legacy",
+      "type": "apiKey"
+    }
+  },
+  "tags": [
+    {
+      "name": "Basic"
+    }
+  ],
+  "x-components": {
+    "responses": {
+      "Error": {
+        "content": {
+          "*/*": {
+            "example": null,
+            "schema": {
+              "$ref": "#/definitions/Error"
+            }
+          }
+        },
+        "description": "An error occurred."
+      }
+    }
+  },
+  "x-hubspot-available-client-libraries": [
+    "Node",
+    "Python",
+    "Ruby",
+    "PHP"
+  ],
+  "x-hubspot-product-tier-requirements": {
+    "cms": "FREE",
+    "commerce": "FREE",
+    "crmHub": "FREE",
+    "dataHub": "FREE",
+    "marketing": "FREE",
+    "sales": "FREE",
+    "service": "FREE"
+  }
+}

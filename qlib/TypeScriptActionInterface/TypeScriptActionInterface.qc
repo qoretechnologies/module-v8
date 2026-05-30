@@ -336,12 +336,12 @@ public class TypeScriptActionInterface {
             remove_path(app.info.path);
         }
 
-        remove appcasemap{name};
+        string appname = app.name.lwr();
+
+        remove appcasemap{appname};
         remove initmap{name};
         remove appmap{name};
         remove initialized_appmap{name};
-
-        string appname = app.name.lwr();
 
         root.deregisterChild(appname);
 
@@ -371,6 +371,11 @@ public class TypeScriptActionInterface {
     #! Returns a list of all pending apps
     static *list<string> getPendingApps() {
         return map $1.lwr(), keys appmap;
+    }
+
+    #! Returns this module's path for data-provider catalog indexing
+    static private *string getModulePath() {
+        return get_module_hash().TypeScriptActionInterface.path;
     }
 
     #! Returns summary info for pending (not-yet-initialized) apps from metadata
@@ -687,8 +692,11 @@ public class TypeScriptActionInterface {
             if (app.name =~ / /) {
                 throw "APP-ERROR", sprintf("App name %y is invalid; it contains one or more spaces", app.name);
             }
-            deregisterDynamicApp(app.name);
-            if (exists appcasemap{app.name}) {
+            *hash<auto> dynamic_info = DynamicAppContextHelper::get(app.name);
+            if (dynamic_info && DynamicAppContextHelper::replacing()) {
+                deregisterDynamicApp(app.name);
+            }
+            if (exists appcasemap{appname}) {
                 if (IgnoreDuplicateAppHelper::get()) {
                     return;
                 }
@@ -701,10 +709,10 @@ public class TypeScriptActionInterface {
                 }
                 throw "APP-ERROR", sprintf("App %y has already been registered", app.name);
             }
-            if (*hash<auto> info = DynamicAppContextHelper::get(app.name)) {
-                app += info;
+            if (dynamic_info) {
+                app += dynamic_info;
                 DynamicAppContextHelper::addApp(app.name);
-                TSAI::info("Registering dynamic app with info: %N", info);
+                TSAI::info("Registering dynamic app with info: %N", dynamic_info);
             }
         }
 
@@ -872,7 +880,7 @@ public class TypeScriptActionInterface {
         }
         DataProviderActionCatalog::registerPendingApp(app.name, sub () {
             TypeScriptActionInterface::initApp(app.name);
-        });
+        }, TypeScriptActionInterface::getModulePath());
         TSAI::info("Registered TypeScript app %y -> %y", app.name, app.info);
         TSAI::debug("Registered TypeScript app %y", app.name);
     }
@@ -889,7 +897,7 @@ public class TypeScriptActionInterface {
             throw "APP-ERROR", sprintf("App module %y is invalid; must be a non-empty string", app."module");
         }
         string appname = app.name.lwr();
-        if (exists appcasemap{app.name}) {
+        if (exists appcasemap{appname}) {
             if (IgnoreDuplicateAppHelper::get()) {
                 return;
             }

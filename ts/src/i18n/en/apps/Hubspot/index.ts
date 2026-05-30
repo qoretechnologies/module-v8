@@ -346,6 +346,209 @@ const HubspotAppEn = {
         },
       },
     },
+    get_forms: {
+      displayName: 'List Forms',
+      shortDesc: 'Retrieve a paginated list of HubSpot marketing forms.',
+      longDesc:
+        'Returns a list of marketing form definitions in your HubSpot account, optionally filtered by form type (native HubSpot, captured, pop-up flow, or blog comment) and archive status.',
+      groups: ['Forms'],
+      options: {
+        formTypes: {
+          displayName: 'Form Types',
+          shortDesc: 'Filter the list to specific form types',
+          longDesc:
+            'Restrict the returned forms to one or more types: native HubSpot forms, captured external HTML forms, pop-up / flow CTAs, or blog comment forms.',
+        },
+        limit: {
+          displayName: 'Limit',
+          shortDesc: 'Maximum number of forms per page',
+          longDesc: 'Maximum number of form definitions to return in a single page (default 20).',
+        },
+      },
+    },
+    create_form: {
+      displayName: 'Create Form',
+      shortDesc: 'Create a new HubSpot marketing form definition.',
+      longDesc:
+        'Creates a new HubSpot form definition with the specified field groups, configuration, display options, and legal consent settings.',
+      groups: ['Forms'],
+    },
+    get_form: {
+      displayName: 'Get Form',
+      shortDesc: 'Retrieve a single HubSpot form definition by ID.',
+      longDesc:
+        'Returns the complete form definition for the supplied form ID, including all field groups, configuration, display options, and legal consent settings.',
+      groups: ['Forms'],
+    },
+    replace_form: {
+      displayName: 'Replace Form',
+      shortDesc: 'Replace the full form definition.',
+      longDesc:
+        'Replaces all fields of a HubSpot form definition with the supplied payload. Any properties not included will be reset to their defaults.',
+      groups: ['Forms'],
+    },
+    update_form: {
+      displayName: 'Update Form',
+      shortDesc: 'Partially update a HubSpot form definition.',
+      longDesc:
+        'Updates one or more components of a HubSpot form definition without affecting the rest of the configuration.',
+      groups: ['Forms'],
+    },
+    archive_form: {
+      displayName: 'Archive Form',
+      shortDesc: 'Archive a HubSpot form definition.',
+      longDesc:
+        'Archives a HubSpot form definition. New submissions will no longer be accepted; the definition is permanently deleted three months after archival.',
+      groups: ['Forms'],
+    },
+    get_form_submissions: {
+      displayName: 'Get Form Submissions',
+      shortDesc: 'Retrieve submissions made to a HubSpot form.',
+      longDesc:
+        'Fetches submissions made to a specified HubSpot form, with cursor-based pagination, an optional client-side "since" filter, and a `maxResults` cap. Uses the legacy forms-v1 endpoint — submissions are ordered most-recent first.',
+      groups: ['Forms'],
+      options: {
+        formId: {
+          displayName: 'Form',
+          shortDesc: 'The HubSpot form to read submissions for',
+          longDesc: 'The unique identifier (GUID) of the HubSpot form whose submissions to read.',
+        },
+        limit: {
+          displayName: 'Page Size',
+          shortDesc: 'Records per request (1–50, default 20)',
+          longDesc:
+            'Number of submissions to retrieve per request. HubSpot enforces a maximum of 50; the action paginates automatically until `Max Results` is reached or no more pages remain.',
+        },
+        maxResults: {
+          displayName: 'Max Results',
+          shortDesc: 'Cap on the total number of submissions returned',
+          longDesc:
+            'Stop paginating once this many submissions have been collected (default 200). Useful for keeping calls bounded against busy forms.',
+        },
+        after: {
+          displayName: 'After',
+          shortDesc: 'Pagination cursor returned by a previous call',
+          longDesc:
+            'Cursor returned by a previous call as `paging.next.after`. Used to resume pagination from a specific point.',
+        },
+        since: {
+          displayName: 'Since',
+          shortDesc: 'Only return submissions on or after this timestamp',
+          longDesc:
+            'Optional ISO 8601 timestamp. The action stops paginating when it crosses a submission older than this value. Applied client-side because the legacy endpoint does not support a server-side filter.',
+        },
+      },
+    },
+    submit_form: {
+      displayName: 'Submit Form',
+      shortDesc: 'Submit data to a HubSpot form on behalf of the connected portal.',
+      longDesc:
+        'Submits values to a HubSpot form using the authenticated secure-submit endpoint. The `portalId` is resolved automatically from the connection. File-upload fields are not yet supported.',
+      groups: ['Forms'],
+      options: {
+        formId: {
+          displayName: 'Form',
+          shortDesc: 'The HubSpot form to submit to',
+          longDesc: 'The unique identifier (GUID) of the HubSpot form to receive this submission.',
+        },
+        fields: {
+          displayName: 'Fields',
+          shortDesc: 'List of name/value pairs to submit',
+          longDesc:
+            'List of form fields to submit. Each entry must include the internal `name` (matching the field on the form definition) and the `value` to submit. `objectTypeId` is optional and defaults to the contact object (`0-1`).',
+          type: {
+            element_type: {
+              fields: {
+                name: {
+                  displayName: 'Field Name',
+                  shortDesc: 'Internal name of the form field',
+                  longDesc:
+                    'The internal name of the form field, as defined on the HubSpot form (e.g. `email`, `firstname`).',
+                },
+                value: {
+                  displayName: 'Field Value',
+                  shortDesc: 'Value to submit for this field',
+                  longDesc: 'The value to submit for this field. Must be a string.',
+                },
+                objectTypeId: {
+                  displayName: 'Object Type ID',
+                  shortDesc: 'Object the field belongs to (e.g. `0-1` for contacts)',
+                  longDesc:
+                    'Optional HubSpot object-type identifier the field belongs to. Defaults to the contact object (`0-1`); set explicitly for fields belonging to a different object type.',
+                },
+              },
+            },
+          },
+        },
+        context: {
+          displayName: 'Submission Context',
+          shortDesc: 'Optional submission context (tracking metadata)',
+          longDesc:
+            'Optional submission context, including the HubSpot user-tracking cookie (`hutk`), IP address, page URI/name/ID, Salesforce campaign ID, and GoToWebinar key.',
+          type: {
+            fields: {
+              hutk: {
+                displayName: 'HubSpot User Token (hutk)',
+                shortDesc: 'Tracking cookie value from the HubSpot script',
+                longDesc:
+                  'Value of the `hubspotutk` cookie set by the HubSpot tracking script on the visitor browser. Used to associate the submission with an existing visitor.',
+              },
+              ipAddress: {
+                displayName: 'IP Address',
+                shortDesc: 'Originating IP address of the submitter',
+                longDesc: 'IP address from which the submission was made.',
+              },
+              pageUri: {
+                displayName: 'Page URI',
+                shortDesc: 'Full URL of the page where the form was submitted',
+                longDesc: 'Full URL of the page where the form was submitted.',
+              },
+              pageName: {
+                displayName: 'Page Name',
+                shortDesc: 'Display name of the page where the form was submitted',
+                longDesc: 'Display title of the page where the form was submitted.',
+              },
+              pageId: {
+                displayName: 'Page ID',
+                shortDesc: 'HubSpot page ID where the form was submitted',
+                longDesc:
+                  'HubSpot page ID where the form was submitted (only when submitting from a HubSpot-hosted page).',
+              },
+              sfdcCampaignId: {
+                displayName: 'Salesforce Campaign ID',
+                shortDesc: 'Salesforce campaign to associate the submission with',
+                longDesc:
+                  'Salesforce campaign ID. Used when the HubSpot account is linked to a Salesforce org to associate this submission with the campaign.',
+              },
+              goToWebinarWebinarKey: {
+                displayName: 'GoToWebinar Webinar Key',
+                shortDesc: 'GoToWebinar key for webinar registration submissions',
+                longDesc:
+                  'GoToWebinar webinar key. Used when this submission is a webinar registration; HubSpot will register the contact for the corresponding GoToWebinar event.',
+              },
+            },
+          },
+        },
+        legalConsentOptions: {
+          displayName: 'Legal Consent Options',
+          shortDesc: 'Optional GDPR / legitimate-interest consent payload',
+          longDesc:
+            'Optional GDPR consent payload passed through to HubSpot. Refer to HubSpot documentation for the exact `consent` or `legitimateInterest` shape required by your form.',
+        },
+        submittedAt: {
+          displayName: 'Submitted At',
+          shortDesc: 'Override the submission timestamp',
+          longDesc:
+            'Optional ISO 8601 timestamp to record as the submission time. Defaults to the time HubSpot receives the request.',
+        },
+        skipValidation: {
+          displayName: 'Skip Validation',
+          shortDesc: 'Skip field-level validation on the HubSpot side',
+          longDesc:
+            'When true, HubSpot will accept the submission even if some field values fail validation. Use with care.',
+        },
+      },
+    },
   },
   triggers: {
     hubspot_company_created_or_updated_trigger: {
@@ -434,6 +637,23 @@ const HubspotAppEn = {
       longDesc:
         'This trigger fires upon the creation or update of a user within HubSpot, helping you keep track of user accounts and maintain updated access control for your team.',
       options: HubspotTriggerOptionsEn,
+    },
+    hubspot_form_submitted_trigger: {
+      event_info: {
+        desc: 'Form Submission Information',
+      },
+      displayName: 'Form Submitted',
+      shortDesc: 'Triggers when a new submission is received for a HubSpot form.',
+      longDesc:
+        'Polls the configured HubSpot form for new submissions and emits an event for each one. Useful for kicking off automation as soon as a lead fills in a form. Submissions are identified by `conversionId`; if HubSpot omits it the trigger synthesizes a stable key from the timestamp.',
+      options: {
+        formId: {
+          displayName: 'Form',
+          shortDesc: 'The HubSpot form to watch for new submissions',
+          longDesc:
+            'The unique identifier (GUID) of the HubSpot form to poll. Only one form per trigger instance.',
+        },
+      },
     },
   },
   expressions: {
