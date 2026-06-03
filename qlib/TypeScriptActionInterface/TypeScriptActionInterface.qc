@@ -3332,6 +3332,12 @@ public class TypeScriptActionInterface {
     }
 
     static *string getDynamicAppPath(*string app) {
+        if (!app) {
+            return;
+        }
+        if (exists (*string rn = appcasemap{app})) {
+            app = rn;
+        }
         return initialized_appmap{app}.app.info.path ?? appmap{app}.app.info.path;
     }
 

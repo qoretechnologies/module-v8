@@ -470,6 +470,7 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
     #! Returns call context info
     *hash<DataContextInfo> getCallContextInfo(*hash<auto> action_opts) {
         *RestConnection conn = self.conn ?? _thread_conn;
+        *string dynamic_path = TypeScriptActionInterface::getDynamicAppPath(conn ? conn.getAppName() : app);
         if (conn) {
             return <DataContextInfo>{
                 "conn_name": conn.name,
@@ -477,11 +478,12 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                     "url": conn.real_url,
                 },
                 "opts": action_opts,
-                "dynamic_path": TypeScriptActionInterface::getDynamicAppPath(conn.getAppName()),
+                "dynamic_path": dynamic_path,
             };
-        } else if (action_opts) {
+        } else if (action_opts || dynamic_path) {
             return <DataContextInfo>{
                 "opts": action_opts,
+                "dynamic_path": dynamic_path,
             };
         }
     }
