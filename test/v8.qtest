@@ -14,6 +14,7 @@ class V8Test inherits Test {
 
     constructor() : Test("v8 test", "1.0") {
         addTestCase("function test", \functionTest());
+        addTestCase("named argument calls", \namedArgumentTest());
         addTestCase("timeout", \timeoutTest());
         addTestCase("process", \processTest());
         addTestCase("io test", \ioTest());
@@ -72,6 +73,25 @@ obj", "test.js");
         assertEq(1, h.b);
         assertEq("hi", h.c.d.e);
 */
+    }
+
+    namedArgumentTest() {
+        JavaScriptProgram js(source_code: "
+function add(a, b) {
+    return a + b;
+}
+globalThis.add = add;
+",
+            source_label: "named.js");
+
+        JavaScriptObject global = js.getGlobal();
+        JavaScriptObject add = global.add;
+        assertEq(5, add.callAsFunctionArgs(this_arg: NOTHING, arguments: (2, 3)));
+
+        JavaScriptObject obj(program: js);
+        assertEq("JavaScriptObject", obj.className());
+
+        js.setSaveReferenceCallback(save_reference_callback: NOTHING);
     }
 
     timeoutTest() {

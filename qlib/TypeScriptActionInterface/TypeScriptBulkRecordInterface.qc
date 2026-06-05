@@ -83,7 +83,6 @@ public class TypeScriptBulkRecordInterface inherits AbstractDataProviderBulkReco
         while (True) {
             auto results = TypeScriptActionDataProviderBase::execAsyncValueArgs(prov.getLogger(), get_records,
                 (cctx, block_size));
-            results = cast<*hash<auto>>(results);
             if (!results || !results.firstValue().size()) {
                 return {};
             }
