@@ -15,6 +15,7 @@ const options = {
   userId: {
     type: 'string',
     required: true,
+    allowed_values_creatable: true,
     get_allowed_values: getSlackUsersAllowedValues,
   },
   text: {
