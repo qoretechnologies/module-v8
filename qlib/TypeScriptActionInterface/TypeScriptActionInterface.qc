@@ -3552,7 +3552,7 @@ public class TypeScriptActionInterface {
             if (!l) {
                 # override existing type
                 t = TypeScriptActionInterface::getModifiedType(app, n, t, i.value);
-                schema.replaceCachedTypeForReference(n, t);
+                schema.replaceTypeForReference(n, t);
             } else {
                 TypeScriptActionApiWithSchemaDataProvider::overrideOptionType("schema-" + i.key, {
                     "app": app,
