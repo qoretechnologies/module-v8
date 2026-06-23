@@ -53,7 +53,7 @@ export default (locale: Locales) =>
       oauth2_auth_url: 'https://slack.com/oauth/v2/authorize',
       oauth2_token_url: 'https://slack.com/api/oauth.v2.access',
       ping_method: 'POST',
-      ping_path: '/auth.test',
+      ping_path: 'auth.test',
       oauth2_scopes: [
         'channels:read',
         'channels:manage',

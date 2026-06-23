@@ -26,11 +26,12 @@ export default (locale: Locales) =>
       url: PUSHOVER_BASE_URL,
       data: 'json',
       oauth2_grant_type: 'none',
-      ping_method: 'POST',
-      ping_path: '/users/validate.json',
+      ping_method: 'GET',
+      ping_path: 'groups.json?token={{token}}',
     },
     rest_modifiers: {
       options: PUSHOVER_CONN_OPTIONS,
       required_options: 'token,user',
+      url_template_options: ['token'],
     },
   }) satisfies TQoreAppWithActions;

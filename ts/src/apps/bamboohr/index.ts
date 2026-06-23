@@ -58,7 +58,7 @@ export default (locale: Locales) =>
       oauth2_token_url: 'https://{{company_domain}}.bamboohr.com/token.php',
       oauth2_scopes: BAMBOOHR_OAUTH2_SCOPES,
       ping_method: 'GET',
-      ping_path: '/{{company_domain}}/v1/meta/fields',
+      ping_path: '{{company_domain}}/v1/meta/fields',
       ping_headers: {
         Accept: 'application/json',
       },
