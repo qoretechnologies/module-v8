@@ -227,11 +227,13 @@ export class ActionsCatalogue {
   }
 
   public initializeCatalogue() {
-    // NEW-style apps are no longer loaded eagerly here: they are registered as
-    // pending from the build-time manifest (see scripts/gen-app-manifest) and
-    // loaded on demand via loadAppFromPath(), so only the apps actually used
-    // are ever parsed/instantiated.  Only the small "custom" and "existing"
-    // app sets are initialized up front.
+    // NEW-style apps are no longer loaded eagerly here.  At runtime they are
+    // registered as pending from the data provider index (resolved through the
+    // generated directory<->app-name map, ts-app-dirs.yaml) and each app's
+    // implementation is loaded on demand via loadAppFromPath(), so only the apps
+    // actually used are ever parsed/instantiated.  Only the small "custom" and
+    // "existing" app sets are initialized up front here; use loadAllNewApps() to
+    // eagerly load the full NEW_APPS set (e.g. for tooling/tests).
     Object.entries(CUSTOM_APPS).forEach(([appName, customApp]) => {
       this.apps[appName] = customApp;
     });
@@ -328,6 +330,25 @@ export class ActionsCatalogue {
   // load exactly the catalogue's apps (and not unrelated/WIP directories).
   public getNewAppDirs(): readonly string[] {
     return NEW_APP_DIRS;
+  }
+
+  /**
+   * Eagerly load and map every NEW_APPS app into `this.apps`, keyed by directory
+   * name. Runtime loads apps lazily on demand via loadAppFromPath(); this is
+   * provided for tooling and tests that need the full catalogue in a Node
+   * context (it is the eager equivalent of the former initializeCatalogue() loop).
+   */
+  public loadAllNewApps(): void {
+    NEW_APP_DIRS.forEach((dir) => {
+      // resolve relative to this module (../apps/<dir>) so the module loader
+      // caches it the same way the former static imports did
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      const mod = require(`../apps/${dir}`);
+      const getApp = (mod && (mod.default || mod)) as (
+        locale: Locales
+      ) => TQoreAppWithActions;
+      this.apps[dir] = this.processNewApp(getApp);
+    });
   }
 
   public getOauth2ClientSecret(appName: string): string {

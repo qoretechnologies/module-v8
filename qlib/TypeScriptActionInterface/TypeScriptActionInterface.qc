@@ -395,18 +395,20 @@ public class TypeScriptActionInterface {
     }
 
     #! Registers the module's apps as pending from the data index, loaded on demand
-    /** Enumerates the app directories under \a apps_dir and, using the data index
-        (ProviderIndexUtil) to resolve each \c "tsrest-<dir>" scheme to its app name,
-        registers each app pending through the standard registerPendingApp() /
-        registerPendingScheme() primitives — exactly the closures the catalogue and
+    /** Reads the generated directory<->app-name map (\c ts-app-dirs.yaml, written next
+        to \a apps_dir by a previous full load) rather than scanning the filesystem,
+        and for each mapped app that the data index (ProviderIndexUtil) exposes as a
+        \c "tsrest-" app, registers it pending through the standard registerPendingApp()
+        / registerPendingScheme() primitives — exactly the closures the catalogue and
         connection layers already use to trigger on-demand init.  The app
         implementation and its SDK are NOT loaded here; each app's JS is loaded from
         its directory only on first use (see initAppIntern()).
 
-        @param apps_dir the directory holding the per-app subdirectories
-        @return the number of apps registered pending (0 if the data index has no
-        matching entries, e.g. while the index is being built — the caller then
-        falls back to a full load)
+        @param apps_dir the directory holding the per-app subdirectories (its parent
+        holds the \c ts-app-dirs.yaml map)
+        @return the number of apps registered pending (0 if the map is missing/empty,
+        e.g. before the index has ever been built — the caller then falls back to a
+        full load)
     */
     static int registerPendingAppsFromIndex(string apps_dir) {
         # The app directory name is not derivable from the app name (e.g. dir

@@ -192,14 +192,19 @@ function setenv(vr, value) {
         return global.exports.actionsCatalogue.loadAppFromPath(TypeScriptActionInterface::Api, app_path);
     }
 
-    #! Eagerly load and register every app under the given directory
+    #! Eagerly load and register every curated app under the given directory
     /** Fallback used when the data index / app-dir map is not available (e.g. while
         `qctl update-index` builds the index): the apps cannot be registered pending,
-        so load them all so they can be enumerated/indexed.  Each app is loaded into
-        its own pool and registered fully (scheme + catalogue).  As a side effect the
-        directory <-> app-name map is (re)written next to the app directory so that
-        subsequent runtime starts can register apps pending from the index without
-        loading them (the app directory name is not derivable from the app name).
+        so load them all so they can be enumerated/indexed.  Each curated app (see
+        the catalogue's \c getNewAppDirs()) is loaded through the master catalogue
+        (\c require() in the master program, not a separate pool) and registered with
+        \c registerApp(); any pending action initialization is completed later by
+        @ref TypeScriptActionInterface::TypeScriptActionInterface::initAllApps()
+        "initAllApps()" when \c DPO_DisableOnDemandInitialization is set.  As a side
+        effect the directory <-> app-name map is (re)written next to the app directory
+        so that subsequent runtime starts can register apps pending from the index
+        without loading them (the app directory name is not derivable from the app
+        name).
     */
     static loadAllAppsFromDir(string apps_dir) {
         if (!master) {
