@@ -12,103 +12,9 @@ import {
 import fs from 'fs';
 import { omit } from 'lodash';
 import path from 'path';
-import activeCampaign from '../apps/active-campaign';
-import activeDirectory from '../apps/active-directory';
-import airtable from '../apps/airtable';
-import amazonCloudfront from '../apps/amazon-cloudfront';
-import amazonCloudWatch from '../apps/amazon-cloudwatch';
-import amazonEc2 from '../apps/amazon-ec2';
-import amazonLambda from '../apps/amazon-lambda';
-import amazonS3 from '../apps/amazon-s3';
-import amazonSes from '../apps/amazon-ses';
-import amazonSns from '../apps/amazon-sns';
-import amazonSqs from '../apps/amazon-sqs';
-import asana from '../apps/asana';
-import attio from '../apps/attio';
-import azureDevops from '../apps/azure-devops';
-import bamboohr from '../apps/bamboohr';
-import baserow from '../apps/baserow';
-import bigml from '../apps/bigml';
-import bitbucket from '../apps/bitbucket';
-import brevo from '../apps/brevo';
-import browserAi from '../apps/browse-ai';
 import businessCentral from '../apps/business-central';
-import calendly from '../apps/calendly';
-import canva from '../apps/canva';
-import clickup from '../apps/clickup';
-import confluence from '../apps/confluence';
-import contentful from '../apps/contentful';
-import coppercrm from '../apps/coppercrm';
-import craft from '../apps/craft';
-import dropbox from '../apps/dropbox';
 import dynamics from '../apps/dynamics';
-import esignature from '../apps/esignature';
-import facebookPages from '../apps/facebook-pages';
-import figma from '../apps/figma';
-import firebase from '../apps/firebase';
-import firestore from '../apps/firestore';
-import freshdesk from '../apps/freshdesk';
-import front from '../apps/front';
-import github from '../apps/github';
-import gitlab from '../apps/gitlab';
-import googleAds from '../apps/google-ads';
-import googleAnalytics from '../apps/google-analytics';
-import googleChat from '../apps/google-chat';
-import googleContacts from '../apps/google-contacts';
-import googleDocs from '../apps/google-docs';
-import googleDrive from '../apps/google-drive';
-import googleForms from '../apps/google-forms';
-import googleMeet from '../apps/google-meet';
-import googleSheets from '../apps/google-sheets';
-import googleTasks from '../apps/google-tasks';
-import helpscout from '../apps/helpscout';
-import hubspot from '../apps/hubspot';
-import intercom from '../apps/intercom';
-import jira from '../apps/jira';
-import klaviyo from '../apps/klaviyo';
-import linkedin from '../apps/linkedin';
-import linkedinOrganizations from '../apps/linkedin-organizations';
-import magento from '../apps/magento';
-import mailchimp from '../apps/mailchimp';
-import mautic from '../apps/mautic';
-import messenger360 from '../apps/messenger360';
-import monday from '../apps/monday';
-import netsuite from '../apps/netsuite';
-import nocodb from '../apps/nocodb';
-import notion from '../apps/notion';
-import odoo from '../apps/odoo';
-import openWeatherMap from '../apps/open-weather-map';
-import openrouter from '../apps/openrouter';
-import outlook from '../apps/outlook';
-import paddle from '../apps/paddle';
-import patreon from '../apps/patreon';
-import paypal from '../apps/paypal';
-import pipedrive from '../apps/pipedrive';
-import pushover from '../apps/pushover';
-import quickbooks from '../apps/quickbooks';
 import salesforce from '../apps/salesforce';
-import seatable from '../apps/seatable';
-import sendgrid from '../apps/sendgrid';
-import sentry from '../apps/sentry';
-import serenity from '../apps/serenity';
-import sharepoint from '../apps/sharepoint';
-import shopify from '../apps/shopify';
-import slack from '../apps/slack';
-import stripe from '../apps/stripe';
-import supabase from '../apps/supabase';
-import surveyMonkey from '../apps/survey-monkey';
-import teams from '../apps/teams';
-import telegram from '../apps/telegram';
-import todoist from '../apps/todoist';
-import trello from '../apps/trello';
-import twilio from '../apps/twilio';
-import typeform from '../apps/typeform';
-import webflow from '../apps/webflow';
-import xero from '../apps/xero';
-import youtube from '../apps/youtube';
-import zendesk from '../apps/zendesk';
-import zohocrm from '../apps/zohocrm';
-import zoom from '../apps/zoom';
 import { Log } from '../decorators/Logger';
 import { mapCrudOptionsToApp, TQoreCrudOptionType } from '../global/helpers';
 import L from '../i18n/i18n-node';
@@ -125,102 +31,107 @@ export interface IQoreApi {
   registerAction: (action: TQoreAppAction) => void;
 }
 
-const NEW_APPS = {
-  activeCampaign,
-  activeDirectory,
-  airtable,
-  amazonEc2,
-  amazonS3,
-  amazonSes,
-  amazonLambda,
-  amazonCloudfront,
-  amazonCloudWatch,
-  amazonSns,
-  amazonSqs,
-  asana,
-  attio,
-  azureDevops,
-  bamboohr,
-  baserow,
-  bigml,
-  bitbucket,
-  brevo,
-  browserAi,
-  calendly,
-  canva,
-  clickup,
-  confluence,
-  contentful,
-  coppercrm,
-  craft,
-  dropbox,
-  esignature,
-  facebookPages,
-  figma,
-  firebase,
-  firestore,
-  freshdesk,
-  github,
-  gitlab,
-  googleAnalytics,
-  googleChat,
-  googleContacts,
-  googleDocs,
-  googleAds,
-  googleDrive,
-  googleForms,
-  googleMeet,
-  googleSheets,
-  googleTasks,
-  helpscout,
-  hubspot,
-  intercom,
-  jira,
-  klaviyo,
-  linkedin,
-  linkedinOrganizations,
-  magento,
-  mailchimp,
-  mautic,
-  messenger360,
-  monday,
-  netsuite,
-  nocodb,
-  notion,
-  odoo,
-  openrouter,
-  openWeatherMap,
-  outlook,
-  paddle,
-  patreon,
-  paypal,
-  pipedrive,
-  pushover,
-  quickbooks,
-  seatable,
-  sendgrid,
-  sentry,
-  serenity,
-  sharepoint,
-  shopify,
-  stripe,
-  supabase,
-  teams,
-  telegram,
-  todoist,
-  trello,
-  twilio,
-  typeform,
-  webflow,
-  xero,
-  youtube,
-  zendesk,
-  zohocrm,
-  zoom,
-  front,
-  slack,
-  surveyMonkey,
-} as const;
+// Curated list of the app directories that make up NEW_APPS. These apps are
+// loaded lazily by path on demand (loadAppFromPath) instead of being imported
+// eagerly; this list is the lazy equivalent of the former NEW_APPS object and
+// must be kept in sync with it (it deliberately excludes work-in-progress app
+// directories that are not part of the catalogue).
+const NEW_APP_DIRS: readonly string[] = [
+  'active-campaign',
+  'active-directory',
+  'airtable',
+  'amazon-cloudfront',
+  'amazon-cloudwatch',
+  'amazon-ec2',
+  'amazon-lambda',
+  'amazon-s3',
+  'amazon-ses',
+  'amazon-sns',
+  'amazon-sqs',
+  'asana',
+  'attio',
+  'azure-devops',
+  'bamboohr',
+  'baserow',
+  'bigml',
+  'bitbucket',
+  'brevo',
+  'browse-ai',
+  'calendly',
+  'canva',
+  'clickup',
+  'confluence',
+  'contentful',
+  'coppercrm',
+  'craft',
+  'dropbox',
+  'esignature',
+  'facebook-pages',
+  'figma',
+  'firebase',
+  'firestore',
+  'freshdesk',
+  'front',
+  'github',
+  'gitlab',
+  'google-ads',
+  'google-analytics',
+  'google-chat',
+  'google-contacts',
+  'google-docs',
+  'google-drive',
+  'google-forms',
+  'google-meet',
+  'google-sheets',
+  'google-tasks',
+  'helpscout',
+  'hubspot',
+  'intercom',
+  'jira',
+  'klaviyo',
+  'linkedin',
+  'linkedin-organizations',
+  'magento',
+  'mailchimp',
+  'mautic',
+  'messenger360',
+  'monday',
+  'netsuite',
+  'nocodb',
+  'notion',
+  'odoo',
+  'open-weather-map',
+  'openrouter',
+  'outlook',
+  'paddle',
+  'patreon',
+  'paypal',
+  'pipedrive',
+  'pushover',
+  'quickbooks',
+  'seatable',
+  'sendgrid',
+  'sentry',
+  'serenity',
+  'sharepoint',
+  'shopify',
+  'slack',
+  'stripe',
+  'supabase',
+  'survey-monkey',
+  'teams',
+  'telegram',
+  'todoist',
+  'trello',
+  'twilio',
+  'typeform',
+  'webflow',
+  'xero',
+  'youtube',
+  'zendesk',
+  'zohocrm',
+  'zoom',
+];
 
 const EXISTING_APPS = {
   salesforce,
@@ -316,70 +227,127 @@ export class ActionsCatalogue {
   }
 
   public initializeCatalogue() {
-    Object.entries(NEW_APPS).forEach(
-      ([appName, getApp]: [string, (locale: Locales) => TQoreAppWithActions]) => {
-        const app = getApp(this.locale);
-        const localeGroups = (L[this.locale].apps as any)[app.name]?.groups;
-        const localeConnectionMessage = (L[this.locale].apps as any)[app.name]?.connectionMessage;
-        const connectionMessageTitle = localeConnectionMessage
-          ? localeConnectionMessage.title()
-          : undefined;
-        const connectionMessageContent = localeConnectionMessage
-          ? localeConnectionMessage.content()
-          : undefined;
-
-        const groups = localeGroups
-          ? Object.values(localeGroups).map((fn: any) => fn())
-          : ['Other'];
-
-        const crudOptionTypes: { key: string; localeKey: TQoreCrudOptionType }[] = [
-          { key: 'search_options', localeKey: 'searchOptions' },
-          { key: 'create_options', localeKey: 'createOptions' },
-          { key: 'upsert_options', localeKey: 'upsertOptions' },
-        ];
-
-        const mappedCrudOptions: Record<string, TQoreCrudOptions> = {};
-        for (const { key, localeKey } of crudOptionTypes) {
-          const options = (app as unknown as Record<string, unknown>)[key] as
-            | TQoreCrudOptions
-            | undefined;
-          if (options) {
-            mappedCrudOptions[key] = mapCrudOptionsToApp(
-              app.name as keyof typeof L.en.apps,
-              options,
-              localeKey,
-              this.locale
-            );
-          }
-        }
-
-        this.apps[appName] = {
-          ...app,
-          ...mappedCrudOptions,
-          groups,
-          ...(connectionMessageTitle &&
-            connectionMessageContent && {
-              rest_modifiers: {
-                ...(app.rest_modifiers || {}),
-                messages: [
-                  {
-                    intent: 'info',
-                    title: connectionMessageTitle,
-                    content: connectionMessageContent,
-                  },
-                ],
-              },
-            }),
-        };
-      }
-    );
-
+    // NEW-style apps are no longer loaded eagerly here.  At runtime they are
+    // registered as pending from the data provider index (resolved through the
+    // generated directory<->app-name map, ts-app-dirs.yaml) and each app's
+    // implementation is loaded on demand via loadAppFromPath(), so only the apps
+    // actually used are ever parsed/instantiated.  Only the small "custom" and
+    // "existing" app sets are initialized up front here; use loadAllNewApps() to
+    // eagerly load the full NEW_APPS set (e.g. for tooling/tests).
     Object.entries(CUSTOM_APPS).forEach(([appName, customApp]) => {
       this.apps[appName] = customApp;
     });
 
     Object.entries(EXISTING_APPS).forEach(([appName, getApp]) => {
       this.existingApps[appName] = getApp(this.locale);
+    });
+  }
+
+  /** Apply locale groups, CRUD options and connection messages to a single
+      NEW-style app (a locale-function export), producing the fully mapped app
+      definition.  Extracted from the former eager initializeCatalogue() loop. */
+  private processNewApp(
+    getApp: (locale: Locales) => TQoreAppWithActions
+  ): TQoreAppWithActions {
+    const app = getApp(this.locale);
+    const localeGroups = (L[this.locale].apps as any)[app.name]?.groups;
+    const localeConnectionMessage = (L[this.locale].apps as any)[app.name]?.connectionMessage;
+    const connectionMessageTitle = localeConnectionMessage
+      ? localeConnectionMessage.title()
+      : undefined;
+    const connectionMessageContent = localeConnectionMessage
+      ? localeConnectionMessage.content()
+      : undefined;
+
+    const groups = localeGroups
+      ? Object.values(localeGroups).map((fn: any) => fn())
+      : ['Other'];
+
+    const crudOptionTypes: { key: string; localeKey: TQoreCrudOptionType }[] = [
+      { key: 'search_options', localeKey: 'searchOptions' },
+      { key: 'create_options', localeKey: 'createOptions' },
+      { key: 'upsert_options', localeKey: 'upsertOptions' },
+    ];
+
+    const mappedCrudOptions: Record<string, TQoreCrudOptions> = {};
+    for (const { key, localeKey } of crudOptionTypes) {
+      const options = (app as unknown as Record<string, unknown>)[key] as
+        | TQoreCrudOptions
+        | undefined;
+      if (options) {
+        mappedCrudOptions[key] = mapCrudOptionsToApp(
+          app.name as keyof typeof L.en.apps,
+          options,
+          localeKey,
+          this.locale
+        );
+      }
+    }
+
+    return {
+      ...app,
+      ...mappedCrudOptions,
+      groups,
+      ...(connectionMessageTitle &&
+        connectionMessageContent && {
+          rest_modifiers: {
+            ...(app.rest_modifiers || {}),
+            messages: [
+              {
+                intent: 'info',
+                title: connectionMessageTitle,
+                content: connectionMessageContent,
+              },
+            ],
+          },
+        }),
+    };
+  }
+
+  /** Load a single NEW-style app from its directory on demand and register its
+      actions.  Called from the Qore side (initApp) for apps that were
+      registered pending from the manifest, so only used apps are ever loaded
+      (and only then is the app's SDK pulled in). */
+  loadAppFromPath(api: IQoreApi, appPath: string): string {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const mod = require(appPath);
+    const getApp = mod && (mod.default || mod);
+    if (typeof getApp !== 'function') {
+      throw new Error(`App at ${appPath} does not export a locale function`);
+    }
+    const app = this.processNewApp(getApp);
+    this.apps[app.name] = app;
+    this.registerAppCollection(
+      { [app.name]: app },
+      (a) => api.registerApp(a),
+      (action) => api.registerAction(action)
+    );
+    // return the app name so the Qore side can build a dir <-> name map
+    return app.name;
+  }
+
+  // Returns the curated list of NEW_APPS directory names so the Qore side can
+  // load exactly the catalogue's apps (and not unrelated/WIP directories).
+  public getNewAppDirs(): readonly string[] {
+    return NEW_APP_DIRS;
+  }
+
+  /**
+   * Eagerly load and map every NEW_APPS app into `this.apps`, keyed by directory
+   * name. Runtime loads apps lazily on demand via loadAppFromPath(); this is
+   * provided for tooling and tests that need the full catalogue in a Node
+   * context (it is the eager equivalent of the former initializeCatalogue() loop).
+   */
+  public loadAllNewApps(): void {
+    NEW_APP_DIRS.forEach((dir) => {
+      // resolve relative to this module (../apps/<dir>) so the module loader
+      // caches it the same way the former static imports did
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      const mod = require(`../apps/${dir}`);
+      const getApp = (mod && (mod.default || mod)) as (
+        locale: Locales
+      ) => TQoreAppWithActions;
+      this.apps[dir] = this.processNewApp(getApp);
     });
   }
 

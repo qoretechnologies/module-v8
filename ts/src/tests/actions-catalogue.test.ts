@@ -20,6 +20,9 @@ const collectErrors = (
 describe('Qorus Apps Catalogue tests', () => {
   it('Should register the apps', () => {
     actionsCatalogue.initializeCatalogue();
+    // NEW-style apps load lazily on demand at runtime; eagerly load the full set
+    // here so this test can validate every app's metadata in a Node context.
+    actionsCatalogue.loadAllNewApps();
 
     expect(actionsCatalogue.apps).toHaveProperty('zendesk');
     expect(actionsCatalogue.apps).toHaveProperty('asana');

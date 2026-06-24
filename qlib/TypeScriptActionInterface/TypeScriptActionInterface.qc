@@ -180,6 +180,10 @@ public class TypeScriptActionInterface {
         #! Default post_auth I/O timeout in seconds
         const DefaultPostAuthIoTimeoutSecs = 30;
 
+        #! Name of the directory <-> app-name map file (written next to the app dir during
+        #! a full load; used to register apps pending from the data index at runtime)
+        const AppDirMapFile = "ts-app-dirs.yaml";
+
         #! JavaScript event subtype for connections
         const AES_JS_EVENT = "javascript-event";
 
@@ -388,6 +392,77 @@ public class TypeScriptActionInterface {
             "type": "TypeScriptActionAppDataProvider",
             "supports_children": True,
         }, appmap.pairIterator();
+    }
+
+    #! Registers the module's apps as pending from the data index, loaded on demand
+    /** Reads the generated directory<->app-name map (\c ts-app-dirs.yaml, written next
+        to \a apps_dir by a previous full load) rather than scanning the filesystem,
+        and for each mapped app that the data index (ProviderIndexUtil) exposes as a
+        \c "tsrest-" app, registers it pending through the standard registerPendingApp()
+        / registerPendingScheme() primitives — exactly the closures the catalogue and
+        connection layers already use to trigger on-demand init.  The app
+        implementation and its SDK are NOT loaded here; each app's JS is loaded from
+        its directory only on first use (see initAppIntern()).
+
+        @param apps_dir the directory holding the per-app subdirectories (its parent
+        holds the \c ts-app-dirs.yaml map)
+        @return the number of apps registered pending (0 if the map is missing/empty,
+        e.g. before the index has ever been built — the caller then falls back to a
+        full load)
+    */
+    static int registerPendingAppsFromIndex(string apps_dir) {
+        # The app directory name is not derivable from the app name (e.g. dir
+        # "active-directory" -> app "AzureActiveDirectory", "esignature" ->
+        # "DocuSignESignature"), so use the directory <-> app-name map written by a
+        # previous full load (loadAllAppsFromDir, run during `qctl update-index`).
+        string map_file = dirname(apps_dir) + DirSep + AppDirMapFile;
+        if (!is_readable(map_file)) {
+            return 0;
+        }
+        *hash<auto> dirmap = parse_yaml(File::readTextFile(map_file));
+        if (!dirmap) {
+            return 0;
+        }
+        # index app info keyed by name (tsrest apps only)
+        hash<string, hash<auto>> by_name;
+        foreach hash<auto> ai in (ProviderIndexUtil::getCachedApps() ?? ()) {
+            if (ai.name.val() && ai.scheme.val() && ai.scheme =~ /^tsrest-/) {
+                by_name{ai.name} = ai;
+            }
+        }
+        int count = 0;
+        foreach hash<auto> i in (dirmap.pairIterator()) {
+            string dname = i.key;
+            string name = i.value;
+            *hash<auto> info = by_name{name};
+            if (!info) {
+                # not a tsrest app in the index (e.g. an "existing" app provided by
+                # another module); skip
+                continue;
+            }
+            string appname = name.lwr();
+            if (exists appcasemap{appname} || initmap{name}) {
+                continue;
+            }
+            appmap{name} = <AppInfo>{
+                "app": {
+                    "name": name,
+                    "display_name": info.display_name,
+                    "short_desc": info.short_desc,
+                    "desc": info.desc,
+                },
+                "pending_path": apps_dir + DirSep + dname,
+            };
+            appcasemap{appname} = name;
+            ConnectionSchemeCache::registerPendingScheme(info.scheme, sub () {
+                TypeScriptActionInterface::initApp(name);
+            });
+            DataProviderActionCatalog::registerPendingApp(name, sub () {
+                TypeScriptActionInterface::initApp(name);
+            }, TypeScriptActionInterface::getModulePath());
+            ++count;
+        }
+        return count;
     }
 
     #! Sets the server to start on demand
@@ -697,11 +772,16 @@ public class TypeScriptActionInterface {
                 deregisterDynamicApp(app.name);
             }
             if (exists appcasemap{appname}) {
-                if (IgnoreDuplicateAppHelper::get()) {
+                if (CompletingPendingAppHelper::get()) {
+                    # completing an app registered pending from the index: fall through
+                    # to register the full app; the pending scheme/catalogue already
+                    # exist and are skipped below
+                } else if (IgnoreDuplicateAppHelper::get()) {
                     return;
+                } else {
+                    throw "APP-ERROR", sprintf("App %y has already been registered and is pending "
+                        "initialization", app.name);
                 }
-                throw "APP-ERROR", sprintf("App %y has already been registered and is pending initialization",
-                    app.name);
             }
             if (initmap{app.name}) {
                 if (IgnoreDuplicateAppHelper::get()) {
@@ -872,15 +952,20 @@ public class TypeScriptActionInterface {
 
         appcasemap{appname} = app.name;
 
-        if (app.rest) {
-            string sname = "tsrest-" + appname;
-            ConnectionSchemeCache::registerPendingScheme(sname, sub () {
+        # When completing an app registered pending from the index, the pending
+        # connection scheme + catalogue entry are already in place (pointing at the
+        # same initApp() closure), so do not re-register them.
+        if (!CompletingPendingAppHelper::get()) {
+            if (app.rest) {
+                string sname = "tsrest-" + appname;
+                ConnectionSchemeCache::registerPendingScheme(sname, sub () {
+                    TypeScriptActionInterface::initApp(app.name);
+                });
+            }
+            DataProviderActionCatalog::registerPendingApp(app.name, sub () {
                 TypeScriptActionInterface::initApp(app.name);
-            });
+            }, TypeScriptActionInterface::getModulePath());
         }
-        DataProviderActionCatalog::registerPendingApp(app.name, sub () {
-            TypeScriptActionInterface::initApp(app.name);
-        }, TypeScriptActionInterface::getModulePath());
         TSAI::info("Registered TypeScript app %y -> %y", app.name, app.info);
         TSAI::debug("Registered TypeScript app %y", app.name);
     }
@@ -962,7 +1047,24 @@ public class TypeScriptActionInterface {
         if (initmap{app}) {
             return False;
         }
-        if (*hash<AppInfo> info = remove appmap{app}) {
+        if (*hash<AppInfo> info = appmap{app}) {
+            if (info.pending_path) {
+                # app registered pending from the index: load its implementation (and
+                # SDK) on demand via the master catalogue.  registerApp() runs in
+                # "completing" mode and replaces this pending entry with the full app,
+                # keeping the already-registered pending scheme + catalogue entry.
+                string load_path = info.pending_path;
+                {
+                    CompletingPendingAppHelper cpah();
+                    TypeScriptActionInterfacePriv::loadAppFromPath(load_path);
+                }
+                if (!(info = remove appmap{app})) {
+                    throw "APP-ERROR", sprintf("App %y failed to load its implementation from %y", app,
+                        load_path);
+                }
+                return TypeScriptActionInterface::initAppIntern(info, do_actions);
+            }
+            remove appmap{app};
             return TypeScriptActionInterface::initAppIntern(info, do_actions);
         }
         if (dynamic_path) {
@@ -3648,6 +3750,15 @@ hashdecl AppInfo {
 
     #! The current working directory
     string cwd = getcwd();
+
+    #! Lazy-manifest apps: directory holding the app's index.js, loaded on first init
+    /** When set, this AppInfo carries only lightweight manifest metadata (name,
+        display_name, short_desc, desc) and no JS pool/closures; the real app
+        implementation (and its SDK) is loaded from this path on demand by
+        initAppIntern().  This lets the catalogue register all apps cheaply and
+        only load the ones actually used (see registerPendingAppsFromIndex()).
+    */
+    *string pending_path;
 
     #! Callback to list tables for the app; required for apps that support record-based actions
     *hash<AsyncCallInfo> get_table_list;
