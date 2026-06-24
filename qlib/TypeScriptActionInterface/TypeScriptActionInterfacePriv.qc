@@ -115,6 +115,19 @@ function setenv(vr, value) {
                 && (*JavaScriptProgramPool master = createPool(script_path, cwd,
                     \TypeScriptActionInterfacePriv::registerApp()))) {
                 TypeScriptActionInterfacePriv::master = master;
+
+                # Register the module's apps pending from the data index for lazy,
+                # on-demand loading (see design/lazy-app-loading.md).  If the index is
+                # not yet available (e.g. while `qctl update-index` builds it), no apps
+                # are registered here and the DPO_DisableOnDemandInitialization path
+                # below performs a full load instead.
+                string apps_dir = dirname(script_path) + DirSep + "apps";
+                if (is_dir(apps_dir)) {
+                    if (!TypeScriptActionInterface::registerPendingAppsFromIndex(apps_dir)) {
+                        # data index unavailable (e.g. while it is being built): full load
+                        TypeScriptActionInterfacePriv::loadAllAppsFromDir(apps_dir);
+                    }
+                }
             }
 
             *string scripts = ENV.QORE_TYPESCRIPT_ACTION_SCRIPTS;
@@ -160,10 +173,9 @@ function setenv(vr, value) {
         }
     }
 
-    #! Load a manifest-pending app's implementation on demand via the master catalogue
-    /** Used for apps registered pending from the build-time manifest: the master
-        catalogue (now lightweight — it does not eagerly import all apps) loads
-        only the requested app's JS from its directory and registers it.
+    #! Load a single app's implementation on demand via the master catalogue
+    /** The master catalogue (now lightweight — it does not eagerly import all apps)
+        loads only the requested app's JS from its directory and registers it.
     */
     static loadAppFromPath(string app_path) {
         if (!master) {
@@ -172,6 +184,25 @@ function setenv(vr, value) {
         }
         JavaScriptObject global = master.getProgram().getGlobal();
         global.exports.actionsCatalogue.loadAppFromPath(TypeScriptActionInterface::Api, app_path);
+    }
+
+    #! Eagerly load and register every app under the given directory
+    /** Fallback used when the data index is not available (e.g. while
+        `qctl update-index` builds it): the apps cannot be registered pending from
+        the index, so load them all so they can be enumerated/indexed.  Each app is
+        loaded into its own pool and registered fully (scheme + catalogue).
+    */
+    static loadAllAppsFromDir(string apps_dir) {
+        Dir d();
+        d.chdir(apps_dir);
+        foreach string dname in (d.listDirs()) {
+            string app_path = apps_dir + DirSep + dname;
+            try {
+                loadAppFromPath(app_path);
+            } catch (hash<ExceptionInfo> ex) {
+                TSAI::error("Failed to load app from %y: %s: %s", app_path, ex.err, ex.desc);
+            }
+        }
     }
 
      #! Register a dynamic JavaScript file
@@ -277,6 +308,31 @@ class IgnoreDuplicateAppHelper {
 
     static *bool get() {
         return _app_ignore_dup;
+    }
+}
+thread_local *bool _app_completing_pending;
+#! Set while loading the implementation of an app that was registered pending from the index
+/** When set, registerApp() completes the existing pending entry (fills in the app's
+    closures/pool) instead of throwing "already registered" or re-registering the
+    pending connection scheme + catalogue entry, which already point at the correct
+    initApp() closure.  See design/lazy-app-loading.md.
+*/
+class CompletingPendingAppHelper {
+    private {
+        *bool b;
+    }
+
+    constructor() {
+        b = _app_completing_pending;
+        _app_completing_pending = True;
+    }
+
+    destructor() {
+        _app_completing_pending = b;
+    }
+
+    static *bool get() {
+        return _app_completing_pending;
     }
 }
 thread_local *hash<auto> _app_ctx;
