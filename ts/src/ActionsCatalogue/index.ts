@@ -31,7 +31,107 @@ export interface IQoreApi {
   registerAction: (action: TQoreAppAction) => void;
 }
 
-// NEW_APPS are loaded lazily by path on demand (loadAppFromPath); see manifest
+// Curated list of the app directories that make up NEW_APPS. These apps are
+// loaded lazily by path on demand (loadAppFromPath) instead of being imported
+// eagerly; this list is the lazy equivalent of the former NEW_APPS object and
+// must be kept in sync with it (it deliberately excludes work-in-progress app
+// directories that are not part of the catalogue).
+const NEW_APP_DIRS: readonly string[] = [
+  'active-campaign',
+  'active-directory',
+  'airtable',
+  'amazon-cloudfront',
+  'amazon-cloudwatch',
+  'amazon-ec2',
+  'amazon-lambda',
+  'amazon-s3',
+  'amazon-ses',
+  'amazon-sns',
+  'amazon-sqs',
+  'asana',
+  'attio',
+  'azure-devops',
+  'bamboohr',
+  'baserow',
+  'bigml',
+  'bitbucket',
+  'brevo',
+  'browse-ai',
+  'calendly',
+  'canva',
+  'clickup',
+  'confluence',
+  'contentful',
+  'coppercrm',
+  'craft',
+  'dropbox',
+  'esignature',
+  'facebook-pages',
+  'figma',
+  'firebase',
+  'firestore',
+  'freshdesk',
+  'front',
+  'github',
+  'gitlab',
+  'google-ads',
+  'google-analytics',
+  'google-chat',
+  'google-contacts',
+  'google-docs',
+  'google-drive',
+  'google-forms',
+  'google-meet',
+  'google-sheets',
+  'google-tasks',
+  'helpscout',
+  'hubspot',
+  'intercom',
+  'jira',
+  'klaviyo',
+  'linkedin',
+  'linkedin-organizations',
+  'magento',
+  'mailchimp',
+  'mautic',
+  'messenger360',
+  'monday',
+  'netsuite',
+  'nocodb',
+  'notion',
+  'odoo',
+  'open-weather-map',
+  'openrouter',
+  'outlook',
+  'paddle',
+  'patreon',
+  'paypal',
+  'pipedrive',
+  'pushover',
+  'quickbooks',
+  'seatable',
+  'sendgrid',
+  'sentry',
+  'serenity',
+  'sharepoint',
+  'shopify',
+  'slack',
+  'stripe',
+  'supabase',
+  'survey-monkey',
+  'teams',
+  'telegram',
+  'todoist',
+  'trello',
+  'twilio',
+  'typeform',
+  'webflow',
+  'xero',
+  'youtube',
+  'zendesk',
+  'zohocrm',
+  'zoom',
+];
 
 const EXISTING_APPS = {
   salesforce,
@@ -222,6 +322,12 @@ export class ActionsCatalogue {
     );
     // return the app name so the Qore side can build a dir <-> name map
     return app.name;
+  }
+
+  // Returns the curated list of NEW_APPS directory names so the Qore side can
+  // load exactly the catalogue's apps (and not unrelated/WIP directories).
+  public getNewAppDirs(): readonly string[] {
+    return NEW_APP_DIRS;
   }
 
   public getOauth2ClientSecret(appName: string): string {

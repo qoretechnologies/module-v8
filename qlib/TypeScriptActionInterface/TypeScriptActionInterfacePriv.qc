@@ -202,10 +202,16 @@ function setenv(vr, value) {
         loading them (the app directory name is not derivable from the app name).
     */
     static loadAllAppsFromDir(string apps_dir) {
-        Dir d();
-        d.chdir(apps_dir);
+        if (!master) {
+            throw "APP-REGISTRATION-ERROR", "Cannot load apps: no master catalogue is loaded";
+        }
+        # load only the catalogue's curated NEW_APPS directories, not every
+        # subdirectory under apps/ (which can include unrelated or work-in-progress
+        # apps that are deliberately excluded from the catalogue)
+        JavaScriptObject global = master.getProgram().getGlobal();
+        *list<auto> dirs = global.exports.actionsCatalogue.getNewAppDirs();
         hash<string, string> dirmap;
-        foreach string dname in (d.listDirs()) {
+        foreach string dname in (dirs) {
             string app_path = apps_dir + DirSep + dname;
             try {
                 *string name = loadAppFromPath(app_path);
