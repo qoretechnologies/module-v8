@@ -87,12 +87,15 @@ re-register the scheme/catalogue. This is the one careful framework change.
   the catalogue and initialize all apps) so the index can be (re)built. The
   index is built once at image-build time; runtime only reads it.
 
-### 5. Phase 3 — dynamic option values
+### 5. Phase 3 — dynamic option values (handled by the lazy-init triggers)
 Options whose `allowed_values`/`default_value` are functions (e.g.
-`getPaddleProductIdAllowedValues`) can't be served from the index; requesting
-them must trigger `initApp` for that app (cf. the earlier
-`restore eager evaluation of allowed_values` fix). Until then they resolve on
-first init.
+`getPaddleProductIdAllowedValues`) can't be served from the index. They are
+served by the app's action data provider, which is only reachable through
+`TypeScriptActionRootDataProvider::getChildProviderImpl()` (→ `initApp`) or
+`DataProviderActionCatalog::getAppEx()` (→ `initApp`); both transparently load
+the app on access, after which the dynamic values resolve normally. Verified:
+accessing a pending app's action request type loads only that app and exposes
+the dynamic-allowed-values option. No extra code is required.
 
 ## Transparency acceptance test
 

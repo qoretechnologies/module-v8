@@ -206,7 +206,7 @@ export class ActionsCatalogue {
       actions.  Called from the Qore side (initApp) for apps that were
       registered pending from the manifest, so only used apps are ever loaded
       (and only then is the app's SDK pulled in). */
-  loadAppFromPath(api: IQoreApi, appPath: string) {
+  loadAppFromPath(api: IQoreApi, appPath: string): string {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     const mod = require(appPath);
     const getApp = mod && (mod.default || mod);
@@ -220,6 +220,8 @@ export class ActionsCatalogue {
       (a) => api.registerApp(a),
       (action) => api.registerAction(action)
     );
+    // return the app name so the Qore side can build a dir <-> name map
+    return app.name;
   }
 
   public getOauth2ClientSecret(appName: string): string {
