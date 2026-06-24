@@ -21,6 +21,7 @@ public class TsProxyTest inherits QUnit::Test {
         checkEnvironment();
 
         addTestCase("proxy tests", \proxyTests());
+        addTestCase("proxy command socket close mid-command", \proxySocketCloseMidCommandTest());
         addTestCase("proxy restart error handling", \proxyRestartErrorHandlingTest());
         addTestCase("proxy send error handling", \proxySendErrorHandlingTest());
         addTestCase("proxy startup send error handling", \proxyStartupSendErrorHandlingTest());
@@ -150,6 +151,47 @@ public class TsProxyTest inherits QUnit::Test {
                 printf("Proxy restart test passed - original PID: %d\n", original_pid);
             }
         }
+    }
+
+    private proxySocketCloseMidCommandTest() {
+        skipIfNotReady();
+
+        bool debug_enabled = False;
+        @debug {
+            debug_enabled = True;
+        }
+        if (!debug_enabled) {
+            testSkip("socket-close hook requires running with debugging enabled");
+            return;
+        }
+
+        JavaScriptProgramProxy::init(new Mutex());
+        on_exit JavaScriptProgramProxy::shutdown();
+
+        JavaScriptProgramProxy proxy();
+        int pid = proxy.getInfo()."proxy-pid";
+        assertTrue(pid > 0, "proxy should be running for socket-close test");
+
+        # The hook closes the command IPC socket during waitForResponse while the child process is
+        # still alive, producing SOCKET-NOT-OPEN with proc.running() == True - exactly the
+        # align-products CI race. With the fix the proxy restarts the child and retries the command,
+        # so the call must NOT surface a fatal socket error and the child must have been restarted.
+        setenv("TS_PROXY_TEST_FORCE_SOCKET_CLOSE", "1");
+        on_exit unsetenv("TS_PROXY_TEST_FORCE_SOCKET_CLOSE");
+
+        *string sock_err;
+        try {
+            proxy.getDynamicOptions("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING);
+        } catch (hash<ExceptionInfo> ex) {
+            # an app-not-found (or similar) error is acceptable; a socket-closed error is the regression
+            if (ex.err == "SOCKET-NOT-OPEN" || ex.err == "SOCKET-CLOSED") {
+                sock_err = ex.err;
+            }
+        }
+        assertTrue(!sock_err.val(),
+            "a command socket close mid-command must be recovered, not surfaced as a fatal socket error");
+        assertTrue(proxy.getInfo()."proxy-pid" != pid,
+            "child must be restarted after the command socket was closed");
     }
 
     private proxyRestartErrorHandlingTest() {

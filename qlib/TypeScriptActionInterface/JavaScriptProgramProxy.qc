@@ -931,6 +931,16 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         date start = now_us();
         while (True) {
             int i;
+            @debug {
+                # TEST: simulate the command IPC socket being closed/reset by the peer while the
+                # child process is still alive (reproduces the align-products SOCKET-NOT-OPEN race);
+                # fires once
+                if (getenv("TS_PROXY_TEST_FORCE_SOCKET_CLOSE").val()) {
+                    unsetenv("TS_PROXY_TEST_FORCE_SOCKET_CLOSE");
+                    info("TEST: forcing command socket close to simulate a peer reset mid-command");
+                    s.close();
+                }
+            }
             try {
                 # first read message size
                 i = s.recvi8(1s);
@@ -997,14 +1007,13 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     }
 
     private *bool retryIntern(hash<ExceptionInfo> ex, *RetryCounter rc, *int restart_flags) {
-        if (checkRestart(rc, restart_flags)) {
+        if (checkRestart(rc, restart_flags, ex)) {
             return True;
         }
         return rc ? rc.retry(ex, command_in_progress) : True;
     }
 
-    private *bool checkRestart(*RetryCounter rc, *int restart_flags) {
-        bool restart;
+    private *bool checkRestart(*RetryCounter rc, *int restart_flags, *hash<ExceptionInfo> ex) {
         {
             AutoLock al(m);
             if (restarting) {
@@ -1020,14 +1029,23 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 logChildOutput();
             }
 
-            if (!proc.running()) {
+            # Restart the child when it has died, or when the command IPC socket was closed/reset
+            # while the child process is still alive.  A broken command channel makes the child
+            # unusable for commands, so it must be restarted and the command retried; otherwise the
+            # underlying SOCKET-NOT-OPEN propagates as a fatal error.  This last case is a race:
+            # under load (e.g. the lazy-init first-call latency) the command can sit in
+            # waitForResponse long enough for the peer to drop the socket while proc.running() is
+            # still true - the qorus-api align-products CI failure.
+            bool socket_dead = ex.err == "SOCKET-NOT-OPEN";
+            if (!proc.running() || socket_dead) {
+                string reason = proc.running() ? "command socket closed" : "aborted";
                 if (restart_flags & RF_NO_RESTART) {
-                    error("Child process aborted; not restarting");
+                    error("Child process %s; not restarting", reason);
                     return;
                 }
-                error("Child process aborted; restarting");
+                error("Child process %s; restarting", reason);
                 @assert(proc);
-                @debug("JavaScriptProgramProxy::checkRestart() detected dead child; restarting PID %d", proc.id());
+                @debug("JavaScriptProgramProxy::checkRestart() restart trigger (%s) for PID %d", reason, proc.id());
                 if (rc) {
                     rc.restart();
                 }
@@ -1041,10 +1059,10 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                     restartProcessIntern(restart_flags & RF_NO_EVENT ? True : False);
                     restarted = True;
                     @debug("JavaScriptProgramProxy::checkRestart() restart complete for PID %d", proc.id());
-                } catch (hash<ExceptionInfo> ex) {
+                } catch (hash<ExceptionInfo> ex1) {
                     @debug("JavaScriptProgramProxy::checkRestart() restart failed for PID %d: %s",
-                        proc.id(), get_exception_string(ex));
-                    error("Error restarting child process: %s", get_exception_string(ex));
+                        proc.id(), get_exception_string(ex1));
+                    error("Error restarting child process: %s", get_exception_string(ex1));
                 }
 
                 al = new AutoLock(m);

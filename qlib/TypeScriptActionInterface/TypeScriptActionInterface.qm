@@ -88,6 +88,11 @@ module TypeScriptActionInterface {
       is written next to the app directory during a full load (e.g. \c "qctl update-index") and read at
       runtime to register apps pending from the index; if it is unavailable the module falls back to a
       full load
+    - fixed a race where a command could fail with a fatal \c SOCKET-NOT-OPEN error when the command
+      IPC socket to the @ref TypeScriptProxy "ts-proxy" child was closed while the child process was
+      still running (more likely under load, such as the lazy-load latency of a first app call): the
+      proxy now restarts the child and retries the command instead of surfacing the socket error to
+      the caller
     - added @ref TypeScriptActionInterface::JavaScriptInProcessPool "JavaScriptInProcessPool" class for
       concurrent in-process JavaScript execution without IPC overhead
       (<a href="https://github.com/qoretechnologies/module-v8/issues/225">issue 225</a>)
