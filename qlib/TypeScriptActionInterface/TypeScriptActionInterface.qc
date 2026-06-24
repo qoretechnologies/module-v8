@@ -390,6 +390,32 @@ public class TypeScriptActionInterface {
         }, appmap.pairIterator();
     }
 
+    #! Registers apps from a lightweight manifest as pending, loaded on demand
+    /** Each entry must provide: name, display_name, short_desc, desc, and path
+        (the directory holding the app's index.js).  Only metadata is registered
+        here — the app implementation and its SDK are NOT loaded — so the full
+        catalogue is advertised cheaply and each app's JS is loaded from \c path
+        only on first use (see initAppIntern()).
+    */
+    static registerPendingAppFromManifest(list<auto> manifest) {
+        foreach hash<auto> entry in (manifest) {
+            string appname = entry.name.lwr();
+            if (exists appcasemap{appname} || initmap{entry.name}) {
+                continue;
+            }
+            appmap{entry.name} = <AppInfo>{
+                "app": {
+                    "name": entry.name,
+                    "display_name": entry.display_name,
+                    "short_desc": entry.short_desc,
+                    "desc": entry.desc,
+                },
+                "pending_path": entry.path,
+            };
+            appcasemap{appname} = entry.name;
+        }
+    }
+
     #! Sets the server to start on demand
     static startServerOnDemand() {
         sm.lock();
@@ -963,7 +989,16 @@ public class TypeScriptActionInterface {
             return False;
         }
         if (*hash<AppInfo> info = remove appmap{app}) {
-            return TypeScriptActionInterface::initAppIntern(info, do_actions);
+            if (info.pending_path) {
+                # lightweight manifest entry: load the real app implementation
+                # (and its SDK) on demand via the master catalogue, then init it.
+                # Drop the case-map stub so the load re-registers the app cleanly.
+                remove appcasemap{app.lwr()};
+                TypeScriptActionInterfacePriv::loadAppFromPath(info.pending_path);
+                return TypeScriptActionInterface::initAppIntern(app, do_actions);
+            } else {
+                return TypeScriptActionInterface::initAppIntern(info, do_actions);
+            }
         }
         if (dynamic_path) {
             string fname = sprintf("%s/index.js", dynamic_path);
@@ -3648,6 +3683,15 @@ hashdecl AppInfo {
 
     #! The current working directory
     string cwd = getcwd();
+
+    #! Lazy-manifest apps: directory holding the app's index.js, loaded on first init
+    /** When set, this AppInfo carries only lightweight manifest metadata (name,
+        display_name, short_desc, desc) and no JS pool/closures; the real app
+        implementation (and its SDK) is loaded from this path on demand by
+        initAppIntern().  This lets the catalogue register all apps cheaply and
+        only load the ones actually used (see registerPendingAppFromManifest()).
+    */
+    *string pending_path;
 
     #! Callback to list tables for the app; required for apps that support record-based actions
     *hash<AsyncCallInfo> get_table_list;

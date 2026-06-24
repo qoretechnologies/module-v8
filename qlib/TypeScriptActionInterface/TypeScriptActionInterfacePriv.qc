@@ -160,6 +160,20 @@ function setenv(vr, value) {
         }
     }
 
+    #! Load a manifest-pending app's implementation on demand via the master catalogue
+    /** Used for apps registered pending from the build-time manifest: the master
+        catalogue (now lightweight — it does not eagerly import all apps) loads
+        only the requested app's JS from its directory and registers it.
+    */
+    static loadAppFromPath(string app_path) {
+        if (!master) {
+            throw "APP-REGISTRATION-ERROR", sprintf("Cannot load pending app from %y: no master "
+                "catalogue is loaded", app_path);
+        }
+        JavaScriptObject global = master.getProgram().getGlobal();
+        global.exports.actionsCatalogue.loadAppFromPath(TypeScriptActionInterface::Api, app_path);
+    }
+
      #! Register a dynamic JavaScript file
     static *list<string> processDynamicJavaScriptAppFile(string base_dir, data fdata, *bool replace) {
         if (!master) {
