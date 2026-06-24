@@ -80,6 +80,14 @@ module TypeScriptActionInterface {
     @section TypeScriptActionInterface_relnotes Release Notes
 
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - added lazy, on-demand app loading: instead of eagerly loading every app (and its SDK) when the
+      module is loaded, apps are registered \a pending from the data provider index and each app's
+      implementation is loaded only on first use (via the catalogue, connection scheme, or data
+      provider tree); this is transparent to API users and significantly reduces the memory used by
+      the @ref TypeScriptProxy "ts-proxy" layer. A directory&lt;-&gt;app-name map (\c ts-app-dirs.yaml)
+      is written next to the app directory during a full load (e.g. \c "qctl update-index") and read at
+      runtime to register apps pending from the index; if it is unavailable the module falls back to a
+      full load
     - added @ref TypeScriptActionInterface::JavaScriptInProcessPool "JavaScriptInProcessPool" class for
       concurrent in-process JavaScript execution without IPC overhead
       (<a href="https://github.com/qoretechnologies/module-v8/issues/225">issue 225</a>)
