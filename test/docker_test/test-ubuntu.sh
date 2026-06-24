@@ -34,6 +34,19 @@ cmake .. -DCMAKE_BUILD_TYPE=debug -DCMAKE_INSTALL_PREFIX=${INSTALL_PREFIX}
 make -j${MAKE_JOBS}
 make install
 
+# build the TypeScript dist from THIS branch so the tests run against the
+# matching catalogue.  The build must be self-contained: do not depend on a
+# pre-built dist from the base image, which may be out of sync with the qlib in
+# this branch.
+echo && echo "-- building TypeScript dist --"
+cd ${MODULE_SRC_DIR}/ts
+corepack enable
+yarn install
+export NODE_OPTIONS="--max-old-space-size=8192"
+yarn build
+echo "export QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT=${MODULE_SRC_DIR}/ts/dist/index.js" >> ${ENV_FILE}
+. ${ENV_FILE}
+
 # add Qore user and group
 groupadd -o -g ${QORE_GID} qore
 useradd -o -m -d /home/qore -u ${QORE_UID} -g ${QORE_GID} qore
