@@ -405,18 +405,28 @@ public class TypeScriptActionInterface {
         falls back to a full load)
     */
     static int registerPendingAppsFromIndex(string apps_dir) {
-        # resolve "tsrest-<dir>" schemes to app info from the data index
-        hash<string, hash<auto>> by_scheme = map {$1.scheme: $1},
-            ProviderIndexUtil::getCachedApps() ?? (), $1.scheme.val();
-        if (!by_scheme) {
+        # Build a map of normalized-key -> app info for tsrest apps in the data index.
+        # The app directory is kebab-case (e.g. "active-campaign") while the
+        # connection scheme is "tsrest-" + app name lower-cased with no separators
+        # (e.g. "tsrest-activecampaign"), so match on a normalized key (lower-case,
+        # alphanumeric only).
+        hash<string, hash<auto>> by_key;
+        foreach hash<auto> ai in (ProviderIndexUtil::getCachedApps() ?? ()) {
+            if (!ai.scheme.val() || !(ai.scheme =~ /^tsrest-/)) {
+                continue;
+            }
+            string suffix = ai.scheme;
+            suffix =~ s/^tsrest-//;
+            by_key{TypeScriptActionInterface::normalizeAppKey(suffix)} = ai;
+        }
+        if (!by_key) {
             return 0;
         }
         int count = 0;
         Dir d();
         d.chdir(apps_dir);
         foreach string dname in (d.listDirs()) {
-            string scheme = "tsrest-" + dname;
-            *hash<auto> info = by_scheme{scheme};
+            *hash<auto> info = by_key{TypeScriptActionInterface::normalizeAppKey(dname)};
             if (!info) {
                 continue;
             }
@@ -435,7 +445,7 @@ public class TypeScriptActionInterface {
                 "pending_path": apps_dir + DirSep + dname,
             };
             appcasemap{appname} = name;
-            ConnectionSchemeCache::registerPendingScheme(scheme, sub () {
+            ConnectionSchemeCache::registerPendingScheme(info.scheme, sub () {
                 TypeScriptActionInterface::initApp(name);
             });
             DataProviderActionCatalog::registerPendingApp(name, sub () {
@@ -444,6 +454,13 @@ public class TypeScriptActionInterface {
             ++count;
         }
         return count;
+    }
+
+    #! Normalizes an app name/scheme fragment to a comparison key (lower-case alphanumeric)
+    static string normalizeAppKey(string s) {
+        s = s.lwr();
+        s =~ s/[^a-z0-9]//g;
+        return s;
     }
 
     #! Sets the server to start on demand
