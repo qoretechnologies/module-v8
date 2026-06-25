@@ -180,8 +180,9 @@ async function nodelay() {
             assertEq("then", rv."where");
             assertEq('Main request timed out', rv.val.message);
 
-            # allow async operation that timed out to complete
-            js.spinOnce();
+            # allow async operation that timed out to complete; spinEventLoop() runs the loop to completion
+            # (spinOnce() only does a single non-blocking pass and would not wait for the pending timer)
+            js.spinEventLoop();
         }
     }
 
@@ -204,7 +205,9 @@ function test() {
             JavaScriptObject global = js.getGlobal();
             code test = global.test.toData();
             test();
-            js.spinOnce();
+            # run the loop to completion so the child process exits and its output callback fires; spinOnce() only
+            # does a single non-blocking pass and would not wait for the child process to complete
+            js.spinEventLoop();
             assertEq(Type::String, global.exports.io.toData().stdout.type());
         }
     }
@@ -480,7 +483,9 @@ async function runAsync(a, enqueue) {
             Counter c(1);
             background sub () {
                 c.dec();
-                bgq.push(js.spinOnce());
+                # run the loop to completion so the awaited 1ms timer fires and enqueue() runs; spinOnce() does a
+                # single non-blocking pass and would not wait for the timer, so q.get() below would block forever
+                bgq.push(js.spinEventLoop());
             }();
             c.waitForZero();
 
@@ -540,7 +545,9 @@ async function runAsync(a, b) {
             code a = global.getProperty("runAsync").toData();
             JavaScriptObject rv(js);
             auto v = a(f, rv);
-            int ec = js.spinOnce();
+            # run the loop to completion so the awaited 1ms timer fires; spinOnce() only does a single
+            # non-blocking pass and would not wait for the pending timer
+            int ec = js.spinEventLoop();
             assertEq(0, ec);
             assertEq(100, rv.toData().result);
         }
@@ -561,7 +568,9 @@ async function runAsync(a, b) {
             code a = global.getProperty("runAsync").toData();
             JavaScriptObject rv(js);
             auto v = a(f, rv);
-            int ec = js.spinOnce();
+            # run the loop to completion so the awaited 1ms timer fires; spinOnce() only does a single
+            # non-blocking pass and would not wait for the pending timer
+            int ec = js.spinEventLoop();
             assertEq(0, ec);
             assertEq(100, rv.toData().result);
         }
@@ -584,14 +593,17 @@ async function runAsync(a, b) {
     }
 }
 ", "test.js");
-            int ec = js.spinOnce();
+            # run the loop to completion (no work pending yet, returns immediately); spinOnce() would also work
+            # here but spinEventLoop() is used consistently for the drive-to-completion calls in this test
+            int ec = js.spinEventLoop();
             assertEq(0, ec);
             JavaScriptObject global = js.getGlobal();
             auto f = global.getProperty("doPromise");
             code a = global.getProperty("runAsync").toData();
             JavaScriptObject rv(js);
             auto v = a(f, rv);
-            ec = js.spinOnce();
+            # run the loop to completion so the awaited 1ms timer fires and the rejection is caught
+            ec = js.spinEventLoop();
             assertEq(0, ec);
             hash<auto> h = rv.toData();
             assertEq("Test error", h.error.message);

@@ -761,8 +761,11 @@ class TypeScriptTest inherits Test {
         code startTimer = global.startTimer.toData();
         startTimer();
 
-        # spinOnce() is inherited from JavaScriptProgram
+        # spinOnce() is inherited from JavaScriptProgram; it performs a single non-blocking pass of the event
+        # loop (UV_RUN_NOWAIT) and does not wait for the pending timer to fire
         ts.spinOnce();
+        # spinEventLoop() (also inherited) runs the loop to completion, deterministically firing the pending timer
+        ts.spinEventLoop();
         assertEq(True, global.result.done);
         assertEq(42, global.result.value);
     }

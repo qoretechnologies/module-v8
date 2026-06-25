@@ -117,7 +117,14 @@ public:
         return *save_ref_callback;
     }
 
-    DLLLOCAL int spinOnce(ExceptionSink* xsink = nullptr);
+    //! Pumps the embedded Node/libuv event loop a single time
+    /** @param xsink for %Qore-side exceptions
+        @param wait if @ref true, blocks until at least one event is processed (UV_RUN_ONCE) - used by waiting
+        (polling) loops that re-check Promise state; if @ref false (the default), drains ready I/O without blocking
+        (UV_RUN_NOWAIT).  In neither case is UV_RUN_DEFAULT used, as that over-runs on keep-alive upstreams; see
+        the implementation for details.
+    */
+    DLLLOCAL int spinOnce(ExceptionSink* xsink = nullptr, bool wait = false);
 
     DLLLOCAL int spinEventLoop(ExceptionSink* xsink = nullptr);
 

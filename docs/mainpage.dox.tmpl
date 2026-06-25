@@ -649,6 +649,12 @@ JavaScriptProgram::setSaveReferenceCallback(callback);
     @section v8releasenotes v8 Module Release Notes
 
     @subsection v8_2_2 v8 Module Version 2.2
+    - fixed ~15s of fixed latency per app action against upstreams that keep the HTTP connection open after the
+      response (ex: Slack, YouTube / Google APIs); the embedded Node event loop was pumped with \c UV_RUN_DEFAULT,
+      which over-runs until no active handles remain, so a lingering keep-alive socket stalled delivery until it
+      idled out even though the response had already arrived; the loop is now pumped with \c UV_RUN_ONCE while
+      waiting on a Promise and \c UV_RUN_NOWAIT for best-effort drains
+      (<a href="https://github.com/qoretechnologies/qorus/issues/343">qorus issue 343</a>)
     - added the @ref TypeScriptActionInterface::JavaScriptInProcessPool "JavaScriptInProcessPool" class for
       concurrent in-process JavaScript execution without IPC overhead
       (<a href="https://github.com/qoretechnologies/module-v8/issues/225">issue 225</a>)

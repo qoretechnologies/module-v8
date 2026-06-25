@@ -4,7 +4,7 @@
 
     Qore Programming Language
 
-    Copyright (C) 2024 Qore Technologies, s.r.o.
+    Copyright (C) 2024 - 2026 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -48,7 +48,10 @@ int QoreV8Promise::wait(QoreV8ProgramHelper& v8h) {
     v8::Isolate* isolate = v8h.getIsolate();
     v8::Local<v8::Promise> p = get();
     while (p->State() == v8::Promise::kPending) {
-        if (v8h.getProgram()->spinOnce(v8h.getExceptionSink())) {
+        // pass wait = true so each iteration blocks until at least one event is processed (UV_RUN_ONCE) and then
+        // returns to re-check the Promise state and flush microtasks; this delivers as soon as the Promise settles
+        // instead of stalling until the libuv loop goes idle (which over-runs on keep-alive upstreams)
+        if (v8h.getProgram()->spinOnce(v8h.getExceptionSink(), true)) {
             return -1;
         }
         isolate->PerformMicrotaskCheckpoint();

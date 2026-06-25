@@ -748,7 +748,7 @@ void QoreV8Program::decrementOpcount(ExceptionSink* xsink) {
     }
 }
 
-int QoreV8Program::spinOnce(ExceptionSink* xsink) {
+int QoreV8Program::spinOnce(ExceptionSink* xsink, bool wait) {
     if (checkSpinValid(xsink)) {
         return -1;
     }
@@ -762,7 +762,14 @@ int QoreV8Program::spinOnce(ExceptionSink* xsink) {
         v8::TryCatch tryCatch(isolate);
 
         uv_loop_t* loop = setup->event_loop();
-        uv_run(loop, UV_RUN_DEFAULT);
+        // NOTE: do not use UV_RUN_DEFAULT here; it runs the loop until no active handles remain, which over-runs
+        // when an upstream keeps the connection open after the response (keep-alive socket / persistent HTTP-2
+        // session - ex: slack.com, googleapis.com): the lingering socket handle stays active, so the loop will not
+        // return until the socket idles out (~15s) even though the response already arrived.  In waiting (polling)
+        // contexts use UV_RUN_ONCE, which blocks until at least one event is processed and then returns so the
+        // caller can re-check Promise state and flush microtasks; otherwise use UV_RUN_NOWAIT to drain any ready
+        // I/O without blocking (best-effort pump that must never re-introduce the keep-alive stall).
+        uv_run(loop, wait ? UV_RUN_ONCE : UV_RUN_NOWAIT);
 
         rv = 0;
         if (xsink && tryCatch.HasCaught()) {

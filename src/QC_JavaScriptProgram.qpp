@@ -99,14 +99,18 @@ JavaScriptProgram::setSaveReferenceCallback(*code save_reference_callback) [dom=
     jsp->setSaveReferenceCallback(save_reference_callback);
 }
 
-//! Spins the event loop once for the program
-/**
+//! Pumps the event loop once, draining any ready I/O without blocking
+/** This performs a single non-blocking pass of the embedded Node/libuv event loop (UV_RUN_NOWAIT): any I/O that
+    is already complete is delivered, but the call does not wait for pending operations.  It deliberately does
+    \b not run the loop to completion, as that would over-run and stall for the keep-alive idle timeout (~15s)
+    when an upstream leaves its connection open after the response.  To run the loop until all pending work
+    completes, use @ref spinEventLoop() instead.
 */
 int JavaScriptProgram::spinOnce() {
     return jsp->spinOnce(xsink);
 }
 
-//! Spins the event loop the program
+//! Spins the event loop until all pending work for the program completes
 /**
 */
 int JavaScriptProgram::spinEventLoop() {

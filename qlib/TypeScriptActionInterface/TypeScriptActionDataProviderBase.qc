@@ -285,7 +285,10 @@ public class TypeScriptActionDataProviderBase inherits AbstractDataProvider, Act
                     });
                 }
             };
-            # wait for any I/O in the background in case it did not complete
+            # best-effort non-blocking pump to drain any I/O that is already complete; the actual wait for
+            # completion is driven by the background v.wait() call below.  This must not block: spinOnce() does a
+            # single non-blocking pass (UV_RUN_NOWAIT) - running the loop to completion here would stall for the
+            # upstream keep-alive idle timeout (~15s) when the connection is left open after the response
             on_exit js.spinOnce();
 
             try {
