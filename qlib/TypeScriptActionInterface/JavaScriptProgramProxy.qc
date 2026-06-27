@@ -277,7 +277,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         if (search_id) {
             ASSERT(search_id == id);
             info("Releasing search for PID %d: %y", proc.id(), id);
-            sendCommandArgs(NOTHING, PC_RELEASE_SEARCH, NOTHING, NOTHING, True);
+            sendCommandArgs(NOTHING, PC_RELEASE_SEARCH, NOTHING, NOTHING, True, RF_NO_EVENT | RF_NO_RESTART);
             info("Search %y released", id);
             remove search_id;
         } else {
@@ -560,7 +560,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
             stopEventListener();
             try {
-                sendCommandArgs(NOTHING, PC_RELEASE_EVENT, key, NOTHING, True);
+                sendCommandArgs(NOTHING, PC_RELEASE_EVENT, key, NOTHING, True, RF_NO_EVENT | RF_NO_RESTART);
             } catch (hash<ExceptionInfo> ex) {
                 if (proc.running()) {
                     killChild();
@@ -870,7 +870,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
     #! Sends a command from the parent to the child with a response
     private auto sendCommandArgs(*date io_timeout, string cmd, *softlist<auto> args,
-            date response_timeout = DefaultRequestTimeout, *bool no_restart_event) {
+            date response_timeout = DefaultRequestTimeout, *bool no_restart_event, *int restart_flags) {
         @debug {
             *string response_timeout_ms = getenv("TS_PROXY_TEST_RESPONSE_TIMEOUT_MS");
             if (response_timeout_ms && response_timeout_ms.val()) {
@@ -887,6 +887,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         string yaml = makeSend(cmd, {"args": args});
         hash<auto> h;
         RetryCounter rc();
+        int flags = restart_flags ?? (no_restart_event ? RF_NO_EVENT : 0);
 
         while (True) {
             try {
@@ -908,8 +909,8 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                         keys ValidResponses);
                 }
             } catch (hash<ExceptionInfo> ex) {
-                bool restarted = retryIntern(ex, rc, no_restart_event ? RF_NO_EVENT : 0);
-                if (restarted && !no_restart_event) {
+                bool restarted = retryIntern(ex, rc, flags);
+                if (restarted && !(flags & RF_NO_EVENT)) {
                     info("Restarting command due to error");
                     continue;
                 }
