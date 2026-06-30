@@ -1,0 +1,98 @@
+#!/usr/bin/env qore
+# -*- mode: qore; indent-tabs-mode: nil -*-
+# Copyright 2026 Qore Technologies, s.r.o.
+#
+# Phase 0 measurement harness for design/lazy-action-loading.md.
+#
+# Measures, per app, the JS-side cost of loadAppFromPath() (require + schema/action
+# mapping + per-action registration callbacks) plus the action count and the RSS
+# delta. The Qore-side data-provider materialisation (cost "b") is deliberately
+# replaced with a counting sink so we isolate the JS-side load/parse cost (cost
+# "a") and the action count that drives "b".
+#
+# Run from the module root:
+#   QORE_MODULE_DIR=build:qlib qore --enable-debug test/profile-app-load.qr [appdir ...]
+# Default app dirs: every directory under ts/dist/apps.
+
+%modern
+
+%requires Util
+%requires v8
+%requires ../qlib/TypeScriptActionInterface
+
+%exec-class ProfileAppLoad
+
+class ProfileAppLoad {
+    private {
+        # JS prelude equivalent to TypeScriptActionInterfacePriv::DefaultCode (the bits index.js needs)
+        const Prelude = "const __filename = process.env._qore_v8_filename;
+const __dirname = process.env._qore_v8_dirname;
+var exports = {};
+";
+        int reg_actions;
+        int reg_apps;
+    }
+
+    constructor() {
+        string root = normalize_dir(get_script_dir() + "/..");
+        string dist = root + "/ts/dist";
+        string master = dist + "/index.js";
+        string apps_dir = dist + "/apps";
+        if (!is_file(master)) {
+            stderr.printf("master script not built: %y (run `cd ts && yarn build`)\n", master);
+            exit(2);
+        }
+
+        list<string> targets = ARGV;
+        if (!targets) {
+            targets = map basename($1), glob(apps_dir + "/*"), is_dir($1);
+        }
+
+        # build the master catalogue pool from the real dist master script
+        setenv("_qore_v8_filename", master);
+        setenv("_qore_v8_dirname", dist);
+        string cwd = getcwd();
+        chdir(dist);
+        on_exit chdir(cwd);
+        JavaScriptProgramPool pool(Prelude + File::readTextFile("index.js"), master, sub (JavaScriptProgram pgm) {});
+        JavaScriptObject cat = pool.getProgram().getGlobal().exports.actionsCatalogue;
+
+        # counting API sink: isolates JS-side load cost + counts actions
+        hash<string, code> api = {
+            "registerApp": sub (auto app) { ++reg_apps; },
+            "registerExistingApp": sub (auto app) { ++reg_apps; },
+            "registerAction": sub (auto action) { ++reg_actions; },
+        };
+
+        printf("%-22s %10s %10s %12s %12s\n", "app", "actions", "load_ms", "rss_delta_kb", "ms_per_act");
+        printf("%s\n", strmul("-", 70));
+        foreach string app in (targets) {
+            string app_path = apps_dir + "/" + app;
+            if (!is_dir(app_path)) {
+                stderr.printf("skip %y: not a directory under ts/dist/apps\n", app);
+                continue;
+            }
+            reg_actions = reg_apps = 0;
+            int rss0 = getRssKb();
+            date t0 = now_us();
+            try {
+                cat.loadAppFromPath(api, app_path);
+            } catch (hash<ExceptionInfo> ex) {
+                stderr.printf("load %y failed: %s\n", app, get_exception_string(ex));
+                continue;
+            }
+            int load_us = (now_us() - t0).durationMicroseconds();
+            int rss1 = getRssKb();
+            float ms = load_us / 1000.0;
+            printf("%-22s %10d %10.1f %12d %12s\n", app, reg_actions, ms, rss1 - rss0,
+                reg_actions ? sprintf("%.2f", ms / reg_actions) : "n/a");
+        }
+    }
+
+    # resident set size in KiB from /proc/self/statm (field 2 = resident pages)
+    static int getRssKb() {
+        string statm = File::readTextFile("/proc/self/statm");
+        int pages = statm.split(" ")[1].toInt();
+        return (pages * 4096) / 1024;
+    }
+}

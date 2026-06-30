@@ -178,6 +178,51 @@ transparency backstop: a touch of an unregistered action triggers
 3. Phase 2 codemod app-by-app behind the same flag; schema-app `mapSingleAction`.
 4. Phase 3 completion path + transparency tests; remove the flag once green.
 
+## Measured (Phase 0)
+
+Harness: `test/profile-app-load.qr` builds the real `ts/dist` master catalogue and
+calls `actionsCatalogue.loadAppFromPath()` per app with a counting API sink, so it
+isolates the **JS-side** load cost (require + schema/action mapping + the
+per-action registration callbacks) and the action count. The first row is a
+warmup that absorbs one-time infra (i18n, helpers, V8 heap); rows below are
+incremental.
+
+```
+app                    actions   load_ms   rss_delta_kb   ms_per_act
+telegram (warmup)            9     258.2          30572        28.69
+github (schema)             47     394.9         130928         8.40
+stripe                      50     174.2          41332         3.48
+shopify                     19      75.0          22016         3.95
+jira                        28      68.8          30208         2.46
+hubspot                     78      87.4           5792         1.12
+slack                       24      28.7            768         1.19
+notion                      18      88.3           3680         4.91
+pushover                     3       6.9              0         2.29
+```
+
+Findings:
+
+- **The first-call window is real and large for schema apps.** `Github` costs
+  ~**395 ms** and ~**130 MB** of JS-side RSS to materialise **47** actions when a
+  `webhook_register` needs **1**. This is precisely the lazy-init latency that
+  drops the command socket; Phase 1 (register only the requested action) targets
+  the per-action portion directly.
+- **Cost scales with action count**, in both time and memory — the premise of
+  Phases 1–2. Large/schema apps (`Github` 47, `Stripe` 50, `HubSpot` 78) are the
+  ones that matter; tiny apps (`pushover` 3) are already cheap, so the optimisation
+  is self-targeting.
+- **A fixed floor exists** (swagger parse + `processNewApp` setup) that per-action
+  filtering will not remove; Phase 0 cannot separate it from the per-action cost
+  without the Phase 1 code, so the realisable saving is "most of, not all of" the
+  per-action share.
+
+Caveats: this measures JS-side load only — the Qore-side data-provider
+materialisation (cost "b") is additional and scales with the same action count.
+RSS deltas are read from `/proc/self/statm` and are noisy (V8 heap growth / GC
+timing — e.g. `slack` reads ~0); treat memory figures as order-of-magnitude and
+`load_ms` as the more stable signal. Numbers are from one dev host
+(aarch64, debug build) and are for relative comparison, not absolute budgets.
+
 ## Relationship to the restart-bound fix
 
 The restart bound (commit `e96d1969`) is the **safety net** — it stops a broken
