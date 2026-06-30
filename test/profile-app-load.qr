@@ -57,11 +57,15 @@ var exports = {};
         JavaScriptProgramPool pool(Prelude + File::readTextFile("index.js"), master, sub (JavaScriptProgram pgm) {});
         JavaScriptObject cat = pool.getProgram().getGlobal().exports.actionsCatalogue;
 
-        # counting API sink: isolates JS-side load cost + counts actions
+        # counting API sink: isolates JS-side load cost + counts actions.
+        # With TS_PROFILE_REALSINK=1 the sink also calls action.toData() to include the
+        # per-action JS->Qore serialization that production registerAction() performs, so
+        # the delta vs the no-op sink is the cost Phase 1 (action filtering) would save.
+        bool realsink = ENV.TS_PROFILE_REALSINK.toBool();
         hash<string, code> api = {
-            "registerApp": sub (auto app) { ++reg_apps; },
-            "registerExistingApp": sub (auto app) { ++reg_apps; },
-            "registerAction": sub (auto action) { ++reg_actions; },
+            "registerApp": sub (auto app) { ++reg_apps; if (realsink) { app.toData(); } },
+            "registerExistingApp": sub (auto app) { ++reg_apps; if (realsink) { app.toData(); } },
+            "registerAction": sub (auto action) { ++reg_actions; if (realsink) { action.toData(); } },
         };
 
         printf("%-22s %10s %10s %12s %12s\n", "app", "actions", "load_ms", "rss_delta_kb", "ms_per_act");

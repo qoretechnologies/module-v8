@@ -216,8 +216,39 @@ Findings:
   without the Phase 1 code, so the realisable saving is "most of, not all of" the
   per-action share.
 
+### Where the cost actually is (no-op vs real sink)
+
+Re-running with the sink also calling `action.toData()` (the per-action JS→Qore
+serialization that the real `registerAction` performs) isolates the part Phase 1
+(action-registration filtering) would remove from the part only Phase 2 (lazy
+mapping) can:
+
+```
+app       actions   require+map floor (ms)   +per-action serialize (ms)   Phase-1 saving
+github         47                    389                        429        ~40 ms (~9%)
+stripe         50                    175                        184        ~9 ms  (~5%)
+hubspot        78                     91                        104        ~13 ms (~14%)
+```
+
+**~85–95% of the first-call cost is the `require()` + (for schema apps) the
+Swagger `mapActionsToApp` of *all* operations** — the floor that filtering
+registration does **not** touch. The per-action serialization that **Phase 1**
+removes is only ~0.2–0.85 ms/action (~5–15% of load), and likewise a minority of
+RSS.
+
+**Re-prioritisation:** Phase 1 alone is low ROI and carries the transparency/
+completion complexity (the `initmap` short-circuit, partial→full completion).
+The high-value work is **Phase 2 for schema apps** — map a *single* operation on
+demand (`mapSingleAction(app, opId, locale)`) instead of the whole schema. Once
+only the requested action is *materialised in JS*, there is only one action to
+register, so Phase 1's filter is **subsumed** by Phase 2 for the cases that
+matter (`Github`, `Stripe`, …). Recommended order: do Phase 2 (schema-app lazy
+mapping) first; treat Phase 1 filtering as a small companion that falls out of it.
+
 Caveats: this measures JS-side load only — the Qore-side data-provider
-materialisation (cost "b") is additional and scales with the same action count.
+materialisation (cost "b") is additional but, like registration, is already lazy
+in the hot path (`do_actions=False` materialises only the requested action) and
+scales with the same action count.
 RSS deltas are read from `/proc/self/statm` and are noisy (V8 heap growth / GC
 timing — e.g. `slack` reads ~0); treat memory figures as order-of-magnitude and
 `load_ms` as the more stable signal. Numbers are from one dev host
