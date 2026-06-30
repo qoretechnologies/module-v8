@@ -245,10 +245,62 @@ register, so Phase 1's filter is **subsumed** by Phase 2 for the cases that
 matter (`Github`, `Stripe`, …). Recommended order: do Phase 2 (schema-app lazy
 mapping) first; treat Phase 1 filtering as a small companion that falls out of it.
 
-Caveats: this measures JS-side load only — the Qore-side data-provider
-materialisation (cost "b") is additional but, like registration, is already lazy
-in the hot path (`do_actions=False` materialises only the requested action) and
-scales with the same action count.
+### Where the cost REALLY is (decisive): the swagger schema, not the actions
+
+Splitting `Github`'s load with a node micro-bench (`process.hrtime`):
+
+```
+require(github.swagger.json)   340.8 ms   (37.5 MB, 630 paths)   ~127 MB heap
+require(helpers + constants)   187.4 ms   (one-time, shared across all apps)
+buildActionsFromSwaggerSchema    4.3 ms   -> 40 actions
+```
+
+**The entire per-app cost is parsing the oversized swagger schema.** Building the
+action specs from it is ~4 ms; mapping/registration is single-digit ms. So
+*lazy action mapping (Phase 2 as first framed) saves ~0* — the 37.5 MB JSON is
+parsed on `require()` regardless of how many of its operations become actions.
+
+This is a module-wide pattern: **16 schemas, ~83 MB total**, of which only a
+small `allowedPaths` subset is ever used per app:
+
+```
+github 37.5 MB · mailchimp 9.4 · netsuite 6.1 · esignature 4.4 · stripe 3.5
+pipedrive 3.1 · jira 2.8 · gitlab 2.8 · asana 2.6 · zendesk 1.2 · …  (19 schema apps)
+```
+
+`Github` uses ~24 of 630 paths (~4%). The bulk of the schema (unused paths +
+their `$ref` definitions) is parsed and held in memory for nothing.
+
+### Revised approach: prune schemas at build time (supersedes runtime lazy mapping)
+
+The high-value, lower-risk fix is **build-time swagger pruning**: for each schema
+app, emit a schema containing only the `allowedPaths` operations plus their
+transitively `$ref`-referenced `definitions`/`components`. Expected effect on
+`Github`: 37.5 MB → well under 1 MB, ~341 ms → ~10 ms parse, ~127 MB → a few MB
+heap — per ts-proxy child and per Qore-side swagger type derivation.
+
+- **Build step**: a script in the `ts` build pipeline (alongside `copy-schemas`)
+  that reads each schema-app's `allowedPaths`, tree-shakes the schema (keep used
+  paths; walk `$ref` closure to keep only referenced definitions), and writes the
+  pruned schema to `dist/schemas/`. Source schemas stay intact for reference.
+- **Correctness risk**: `$ref` closure must be complete (including transitive and
+  `allOf`/`oneOf`/`anyOf` refs) so runtime request/response type derivation for
+  the kept actions is unchanged. This is the main thing to test.
+- **Transparency**: none of the runtime registration/init machinery changes, so
+  there is no partial-state/completion problem — a major simplification over the
+  runtime-lazy designs above.
+- **Generality**: one build step helps all 19 schema apps; hand-written apps
+  (barrel imports) are a separate, smaller follow-up if measurements justify it.
+
+Phase 1 (action-registration filtering) remains low ROI and is **not** needed if
+schemas are pruned. The runtime-lazy designs (Phases 1–3 above) are retained for
+history but are superseded by schema pruning for the apps that dominate the cost.
+
+Caveat on the earlier table: it measures JS-side load only — the Qore-side
+data-provider materialisation (cost "b") is additional but, like registration, is
+already lazy in the hot path (`do_actions=False` materialises only the requested
+action). The Qore side ALSO parses the same swagger for type derivation, so
+schema pruning helps it too.
 RSS deltas are read from `/proc/self/statm` and are noisy (V8 heap growth / GC
 timing — e.g. `slack` reads ~0); treat memory figures as order-of-magnitude and
 `load_ms` as the more stable signal. Numbers are from one dev host
