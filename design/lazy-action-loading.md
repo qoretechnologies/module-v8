@@ -296,6 +296,39 @@ Phase 1 (action-registration filtering) remains low ROI and is **not** needed if
 schemas are pruned. The runtime-lazy designs (Phases 1–3 above) are retained for
 history but are superseded by schema pruning for the apps that dominate the cost.
 
+### Implemented: `ts/scripts/prune-schemas.js` (build step)
+
+A post-build step (`yarn prune-schemas`, wired into `build`/`build:debug`/
+`test-build` after `copy-schemas`) prunes each schema app's `dist/schemas` file
+to only the operations the app exposes (its actions' `swagger_path`) plus the
+**transitive `$ref` closure** of those operations and the schema metadata; it
+drops unreferenced definitions/components and vendor blobs (`x-webhooks` etc.).
+`src/schemas` is left intact. The script self-validates: it throws if pruning
+would leave any dangling local `$ref`.
+
+Measured (all 16 schema apps, one dev host):
+
+```
+total  77.40 MB -> 9.72 MB  (saved 67.68 MB, ~87%)
+github 37.57 -> 1.04 MB (97%, 24/630 paths)   mailchimp 9.39 -> 0.38 (96%)
+gitlab  2.77 -> 0.69 (75%)   jira 2.80 -> 0.61 (78%)   netsuite 6.08 -> 1.69 (72%)
+```
+
+End-to-end app-load (harness, github): **~395 ms → ~71 ms**, **~131 MB → ~11 MB**
+JS-side RSS; `jira` ~69 → ~50 ms and ~30 MB → ~0.4 MB. The Qore-side swagger type
+derivation reads the same pruned file, so it benefits identically.
+
+Correctness:
+- `Github` (no `$ref`s): all 40 kept operations are **byte-identical** to the
+  pristine source — type derivation provably unchanged.
+- `$ref` apps (Stripe, Jira, NetSuite, GitLab, …): **no dangling `$ref`** in any
+  pruned schema (built-in self-check + independent re-scan), and each app still
+  builds its full action set; existing qtests pass (11/11, 127 assertions).
+
+Deploy note: this takes effect when the `ts` bundle is rebuilt (`yarn build`);
+the pruned schemas ship in `dist/schemas`. Hand-written (non-schema) apps are
+unaffected and remain a separate, smaller follow-up if measurements justify it.
+
 Caveat on the earlier table: it measures JS-side load only — the Qore-side
 data-provider materialisation (cost "b") is additional but, like registration, is
 already lazy in the hot path (`do_actions=False` materialises only the requested
