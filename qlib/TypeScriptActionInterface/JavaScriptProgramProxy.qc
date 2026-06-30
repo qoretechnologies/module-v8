@@ -195,6 +195,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
     hash<auto> getInfo() {
         hash<auto> rv = {
             "proxy-pid": proc.id(),
+            "restart-count": restart_count,
         };
         if (es_tid) {
             rv."event-listener-tid" = es_tid;
@@ -941,6 +942,14 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                     info("TEST: forcing command socket close to simulate a peer reset mid-command");
                     s.close();
                 }
+                # TEST: simulate a command that ALWAYS breaks the command channel (e.g. a
+                # webhook_register that drops the socket during lazy-init on every attempt);
+                # unlike the hook above this one is NOT cleared, so it reproduces the infinite
+                # restart/respawn loop and verifies the RetryCounter::MaxRestarts bound
+                if (getenv("TS_PROXY_TEST_FORCE_SOCKET_CLOSE_ALWAYS").val()) {
+                    info("TEST: forcing command socket close on every command (deterministic failure)");
+                    s.close();
+                }
             }
             try {
                 # first read message size
@@ -1042,6 +1051,18 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 string reason = proc.running() ? "command socket closed" : "aborted";
                 if (restart_flags & RF_NO_RESTART) {
                     error("Child process %s; not restarting", reason);
+                    return;
+                }
+                # Bound the number of restarts for a single command; a command that
+                # deterministically breaks the command channel (e.g. the lazy-init first-call
+                # latency on a webhook_register) must fail after RetryCounter::MaxRestarts
+                # attempts instead of respawning the child process forever at 100% CPU.
+                if (rc && !rc.canRestart()) {
+                    error("Child process %s, but the command has already been restarted %d times; giving up "
+                        "instead of restarting again", reason, RetryCounter::MaxRestarts);
+                    if (ex) {
+                        throw ex.err, ex.desc, ex.arg;
+                    }
                     return;
                 }
                 error("Child process %s; restarting", reason);
@@ -1181,6 +1202,13 @@ hashdecl EventSourceInfo {
 }
 class RetryCounter {
     public {
+        #! Maximum number of child restarts for a single command before giving up
+        /** Bounds the SOCKET-NOT-OPEN / dead-child restart path so that a command that
+            deterministically breaks the command channel (e.g. the lazy-init first-call
+            latency on a \c webhook_register) fails after this many restarts instead of
+            respawning the child process forever at 100% CPU.
+        */
+        const MaxRestarts = 3;
 %ifdef RestartLogic
         const MaxRetries = 3;
 %endif
@@ -1192,6 +1220,11 @@ class RetryCounter {
         # error map: err hash -> count
         hash<string, int> emap;
 %endif
+    }
+
+    #! Returns @ref True if the child may still be restarted for the current command
+    bool canRestart() {
+        return restarts < MaxRestarts;
     }
 
     restart() {

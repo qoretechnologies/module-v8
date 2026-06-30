@@ -22,6 +22,7 @@ public class TsProxyTest inherits QUnit::Test {
 
         addTestCase("proxy tests", \proxyTests());
         addTestCase("proxy command socket close mid-command", \proxySocketCloseMidCommandTest());
+        addTestCase("proxy bounded restart on persistent socket close", \proxyBoundedRestartTest());
         addTestCase("proxy restart error handling", \proxyRestartErrorHandlingTest());
         addTestCase("proxy send error handling", \proxySendErrorHandlingTest());
         addTestCase("proxy startup send error handling", \proxyStartupSendErrorHandlingTest());
@@ -192,6 +193,52 @@ public class TsProxyTest inherits QUnit::Test {
             "a command socket close mid-command must be recovered, not surfaced as a fatal socket error");
         assertTrue(proxy.getInfo()."proxy-pid" != pid,
             "child must be restarted after the command socket was closed");
+    }
+
+    private proxyBoundedRestartTest() {
+        skipIfNotReady();
+
+        bool debug_enabled = False;
+        @debug {
+            debug_enabled = True;
+        }
+        if (!debug_enabled) {
+            testSkip("persistent socket-close hook requires running with debugging enabled");
+            return;
+        }
+
+        # this value must match RetryCounter::MaxRestarts in JavaScriptProgramProxy.qc (internal class)
+        int expected_max_restarts = 3;
+
+        JavaScriptProgramProxy::init(new Mutex());
+        on_exit JavaScriptProgramProxy::shutdown();
+
+        JavaScriptProgramProxy proxy();
+        int pid = proxy.getInfo()."proxy-pid";
+        assertTrue(pid > 0, "proxy should be running for bounded-restart test");
+        assertEq(0, proxy.getInfo()."restart-count", "the child must not have been restarted before the test");
+
+        # Force the command IPC socket closed on EVERY command attempt while the child process
+        # stays alive (SOCKET-NOT-OPEN with proc.running() == True). This reproduces a command
+        # that deterministically breaks the command channel (e.g. the webhook_register lazy-init
+        # loop). Without the bound the proxy respawns the child forever at 100% CPU; with the fix
+        # the command must give up after RetryCounter::MaxRestarts restarts.
+        setenv("TS_PROXY_TEST_FORCE_SOCKET_CLOSE_ALWAYS", "1");
+        on_exit unsetenv("TS_PROXY_TEST_FORCE_SOCKET_CLOSE_ALWAYS");
+
+        *string sock_err;
+        try {
+            proxy.getDynamicOptions("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING);
+        } catch (hash<ExceptionInfo> ex) {
+            sock_err = ex.err;
+        }
+
+        # the command must terminate with a socket error instead of looping forever
+        assertTrue(sock_err == "SOCKET-NOT-OPEN" || sock_err == "SOCKET-CLOSED",
+            "a command that always breaks the command channel must give up with a socket error, not loop forever");
+        # the number of child restarts must be bounded and deterministic (no timing/polling)
+        assertEq(expected_max_restarts, proxy.getInfo()."restart-count",
+            "the child must be restarted exactly MaxRestarts times before the command gives up");
     }
 
     private proxyRestartErrorHandlingTest() {
