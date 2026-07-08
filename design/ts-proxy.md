@@ -43,6 +43,14 @@ Key behaviors:
 - The `restarting` flag is cleared in all cases, even when restart fails, and
   any waiters are woken up. This prevents `checkRestart()` waiters from blocking
   indefinitely.
+- Commands marked `RF_NO_RESTART`, such as event/search release during teardown,
+  do not wait behind an active restart. They fail fast because teardown must not
+  depend on a restart that may itself be blocked on the event being torn down.
+- The restart owner TID is tracked so restart-internal commands cannot wait on
+  their own `restarting` state if a nested restart-path error occurs.
+- Releasing an event while its proxy is restarting aborts the restarted child
+  instead of sending a child `RELEASE-EVENT` command. This prevents a stale event
+  setup from surviving after the parent has already removed the observer.
 - If a restart fails, the failure is logged and the caller receives an error;
   the proxy is no longer stuck in the restarting state.
 
@@ -59,6 +67,10 @@ propagated correctly.
 after startup, simulating EPIPE/SOCKET-CLOSED behavior when responding to a
 command. `TS_PROXY_TEST_FORCE_SEND_ERROR_STARTUP` forces the startup `CC_STARTED`
 send to fail. Both are used for negative and corner-case tests.
+
+`TS_PROXY_TEST_RESTART_WAIT_FAST_PATHS` enables a `getInfo()` debug probe used
+by `test/ts-proxy.qtest` to verify that no-restart teardown commands and
+restart-owner reentry do not wait on `cond_restart`.
 
 ## Operational Notes
 - The UNIX socket path is short to avoid the ~104-byte limit.

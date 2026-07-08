@@ -68,6 +68,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         #! Restarting flag
         bool restarting;
 
+        #! TID running the current restart
+        *int restarting_tid;
+
         #! Restart condition
         Condition cond_restart();
 
@@ -165,10 +168,15 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             m.lock();
             on_exit m.unlock();
 
+            if (restarting) {
+                abortRestartLocked("proxy destruction");
+            }
             while (restarting) {
                 ++wait_restart;
-                cond_restart.wait(m);
-                --wait_restart;
+                {
+                    on_exit --wait_restart;
+                    cond_restart.wait(m);
+                }
             }
 
             if (proc && proc.running()) {
@@ -199,6 +207,12 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         };
         if (es_tid) {
             rv."event-listener-tid" = es_tid;
+        }
+        @debug {
+            if (getenv("TS_PROXY_TEST_RESTART_WAIT_FAST_PATHS").val()) {
+                rv."test-no-restart-retry" = testRetryWhileRestarting(-1, RF_NO_RESTART) ? 1 : 0;
+                rv."test-owner-retry" = testRetryWhileRestarting(gettid(), RF_NO_EVENT | RF_NO_RESTART) ? 1 : 0;
+            }
         }
         return rv;
     }
@@ -327,10 +341,18 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         setupEventSourceIntern();
     }
 
-    private setupEventSourceIntern() {
-        info("Setting up event source for PID %d @%s/%s %y", proc.id(), event.app, event.action, event.key);
-        sendCommandArgs(NOTHING, PC_SETUP_EVENT, (event.app, event.action, event.key, event.options), NOTHING, True);
-        info("Event source for @%s/%s %y ready", event.app, event.action, event.key);
+    private setupEventSourceIntern(*int restart_flags) {
+        *hash<EventSourceInfo> current_event = event;
+        if (!current_event) {
+            info("Skipping event source setup for PID %d; event source was released", proc.id());
+            return;
+        }
+        info("Setting up event source for PID %d @%s/%s %y", proc.id(), current_event.app, current_event.action,
+            current_event.key);
+        sendCommandArgs(NOTHING, PC_SETUP_EVENT,
+            (current_event.app, current_event.action, current_event.key, current_event.options), NOTHING, True,
+            restart_flags);
+        info("Event source for @%s/%s %y ready", current_event.app, current_event.action, current_event.key);
     }
 
     private stopEventListener() {
@@ -560,6 +582,9 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             on_exit global_lock.lock();
 
             stopEventListener();
+            if (cancelRestartForEventRelease(key)) {
+                return;
+            }
             try {
                 sendCommandArgs(NOTHING, PC_RELEASE_EVENT, key, NOTHING, True, RF_NO_EVENT | RF_NO_RESTART);
             } catch (hash<ExceptionInfo> ex) {
@@ -575,6 +600,56 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
         #debug("JavaScriptProgramProxy::releaseEventSourceLocked() key: %y remaining: %y stop: %y", key,
         #    keys event.omap);
+    }
+
+    private bool cancelRestartForEventRelease(string key) {
+        AutoLock al(m);
+        if (!restarting) {
+            return False;
+        }
+        abortRestartLocked(sprintf("event key %y release", key));
+        return True;
+    }
+
+    private abortRestartLocked(string reason) {
+        error("Aborting restarted child during %s", reason);
+        try {
+            proc.terminate();
+        } catch (hash<ExceptionInfo> ex) {
+            @debug {
+                debug("Error terminating child during %s: %s", reason, get_exception_string(ex));
+            }
+        }
+        try {
+            delete s;
+        } catch (hash<ExceptionInfo> ex) {
+            @debug {
+                debug("Error closing command socket during %s: %s", reason, get_exception_string(ex));
+            }
+        }
+    }
+
+    private bool testRetryWhileRestarting(int tid, int flags) {
+        {
+            AutoLock al(m);
+            restarting = True;
+            restarting_tid = tid;
+        }
+        on_exit {
+            AutoLock al(m);
+            remove restarting;
+            remove restarting_tid;
+            if (wait_restart) {
+                cond_restart.broadcast();
+            }
+        }
+
+        hash<ExceptionInfo> ex = <ExceptionInfo>{
+            "err": "SOCKET-NOT-OPEN",
+            "desc": "forced restart fast-path test error",
+        };
+        RetryCounter rc();
+        return retryIntern(ex, rc, flags) ? True : False;
     }
 
     auto getAsyncValue(hash<AsyncCallInfo> api, ...) {
@@ -1020,17 +1095,31 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         if (checkRestart(rc, restart_flags, ex)) {
             return True;
         }
+        if ((restart_flags ?? 0) & RF_NO_RESTART) {
+            return False;
+        }
         return rc ? rc.retry(ex, command_in_progress) : True;
     }
 
     private *bool checkRestart(*RetryCounter rc, *int restart_flags, *hash<ExceptionInfo> ex) {
+        int flags = restart_flags ?? 0;
         {
             AutoLock al(m);
             if (restarting) {
+                if (restarting_tid == gettid()) {
+                    error("Restart logic was re-entered by the restart owner; not waiting on itself");
+                    return False;
+                }
+                if (flags & RF_NO_RESTART) {
+                    error("Restart already in progress; not waiting for a no-restart command");
+                    return False;
+                }
                 while (restarting) {
                     ++wait_restart;
-                    cond_restart.wait(m);
-                    --wait_restart;
+                    {
+                        on_exit --wait_restart;
+                        cond_restart.wait(m);
+                    }
                 }
                 return True;
             }
@@ -1046,10 +1135,10 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             # under load (e.g. the lazy-init first-call latency) the command can sit in
             # waitForResponse long enough for the peer to drop the socket while proc.running() is
             # still true - the qorus-api align-products CI failure.
-            bool socket_dead = ex.err == "SOCKET-NOT-OPEN";
+            bool socket_dead = ex && ex.err == "SOCKET-NOT-OPEN";
             if (!proc.running() || socket_dead) {
                 string reason = proc.running() ? "command socket closed" : "aborted";
-                if (restart_flags & RF_NO_RESTART) {
+                if (flags & RF_NO_RESTART) {
                     error("Child process %s; not restarting", reason);
                     return;
                 }
@@ -1073,12 +1162,13 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 }
                 bool restarted;
                 restarting = True;
+                restarting_tid = gettid();
                 delete al;
 
                 try {
                     # run the restart unlocked
                     @debug("JavaScriptProgramProxy::checkRestart() restart begin for PID %d", proc.id());
-                    restartProcessIntern(restart_flags & RF_NO_EVENT ? True : False);
+                    restartProcessIntern(flags & RF_NO_EVENT ? True : False);
                     restarted = True;
                     @debug("JavaScriptProgramProxy::checkRestart() restart complete for PID %d", proc.id());
                 } catch (hash<ExceptionInfo> ex1) {
@@ -1089,6 +1179,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
                 al = new AutoLock(m);
                 remove restarting;
+                remove restarting_tid;
                 if (wait_restart) {
                     cond_restart.broadcast();
                 }
@@ -1138,7 +1229,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
 
         if (event) {
             info("Restarting event listener for @%s/%s %y", event.app, event.action, event.key);
-            setupEventSourceIntern();
+            setupEventSourceIntern(RF_NO_EVENT | RF_NO_RESTART);
         } else if (search_id.val()) {
             info("Search %y aborted", search_id);
         }

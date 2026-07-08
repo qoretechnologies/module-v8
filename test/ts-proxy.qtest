@@ -24,6 +24,7 @@ public class TsProxyTest inherits QUnit::Test {
         addTestCase("proxy command socket close mid-command", \proxySocketCloseMidCommandTest());
         addTestCase("proxy bounded restart on persistent socket close", \proxyBoundedRestartTest());
         addTestCase("proxy restart error handling", \proxyRestartErrorHandlingTest());
+        addTestCase("proxy restart wait fast paths", \proxyRestartWaitFastPathTest());
         addTestCase("proxy send error handling", \proxySendErrorHandlingTest());
         addTestCase("proxy startup send error handling", \proxyStartupSendErrorHandlingTest());
 
@@ -355,6 +356,32 @@ public class TsProxyTest inherits QUnit::Test {
             threw = True;
         }
         assertTrue(threw, "send error should not break subsequent calls");
+    }
+
+    private proxyRestartWaitFastPathTest() {
+        skipIfNotReady();
+
+        bool debug_enabled = False;
+        @debug {
+            debug_enabled = True;
+        }
+        if (!debug_enabled) {
+            testSkip("restart wait fast-path hook requires running with debugging enabled");
+            return;
+        }
+
+        JavaScriptProgramProxy::init(new Mutex());
+        on_exit JavaScriptProgramProxy::shutdown();
+
+        JavaScriptProgramProxy proxy();
+        setenv("TS_PROXY_TEST_RESTART_WAIT_FAST_PATHS", "1");
+        on_exit unsetenv("TS_PROXY_TEST_RESTART_WAIT_FAST_PATHS");
+        hash<auto> rv = proxy.getInfo();
+
+        assertEq(0, rv."test-no-restart-retry",
+            "a no-restart command must not wait or retry while a restart is already active");
+        assertEq(0, rv."test-owner-retry",
+            "the restart owner must not wait on its own restart state after a nested restart-path error");
     }
 
     private proxyStartupSendErrorHandlingTest() {
