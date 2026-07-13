@@ -202,6 +202,14 @@ public class TypeScriptActionInterface {
     }
 
     private {
+        #! The base directory for apps currently being registered
+        /** App definitions can refer to their resources with paths relative to the directory holding the app
+            catalogue (ex: \c "schemas/asana.swagger.json"); those paths must be resolved relative to that
+            directory and not to the current working directory of the process registering the apps, which is
+            arbitrary (ex: \c "qctl update-index" run from any directory)
+        */
+        static *string app_base_dir;
+
         #! App map for delayed initialization: app -> info
         static hash<string, hash<AppInfo>> appmap;
 
@@ -410,6 +418,19 @@ public class TypeScriptActionInterface {
         e.g. before the index has ever been built — the caller then falls back to a
         full load)
     */
+    #! Sets the base directory used to resolve paths in app definitions relative to the app catalogue
+    /** @param dir the directory holding the app catalogue; @ref nothing to resolve relative paths against the
+        current working directory of the process
+    */
+    static setAppBaseDir(*string dir) {
+        app_base_dir = dir;
+    }
+
+    #! Returns the base directory used to resolve paths in app definitions relative to the app catalogue
+    static string getAppBaseDir() {
+        return app_base_dir ?? getcwd();
+    }
+
     static int registerPendingAppsFromIndex(string apps_dir) {
         # The app directory name is not derivable from the app name (e.g. dir
         # "active-directory" -> app "AzureActiveDirectory", "esignature" ->
@@ -451,6 +472,8 @@ public class TypeScriptActionInterface {
                     "short_desc": info.short_desc,
                     "desc": info.desc,
                 },
+                # app definitions refer to their resources relative to the app catalogue directory
+                "cwd": dirname(apps_dir),
                 "pending_path": apps_dir + DirSep + dname,
             };
             appcasemap{appname} = name;
@@ -930,6 +953,7 @@ public class TypeScriptActionInterface {
         }
         appmap{app.name} = <AppInfo>{
             "app": app,
+            "cwd": TypeScriptActionInterface::getAppBaseDir(),
 
             "get_table_list": get_table_list,
             "begin_transaction": begin_transaction,
@@ -1000,6 +1024,7 @@ public class TypeScriptActionInterface {
 
         hash<AppInfo> info = <AppInfo>{
             "app": app,
+            "cwd": TypeScriptActionInterface::getAppBaseDir(),
             "pool": pool,
         };
 

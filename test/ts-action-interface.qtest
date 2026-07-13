@@ -42,6 +42,7 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
         addTestCase("js", \jsTest());
         addTestCase("test API", \testApi());
         addTestCase("include_response_headers flag", \includeResponseHeadersTest());
+        addTestCase("app base dir", \appBaseDirTest());
 
         # Return for compatibility with test harnesses that check the script's return value
         set_return_value(main());
@@ -881,6 +882,28 @@ var obj = {
             }
         }
     }
+
+    #! App definitions refer to their resources relative to the app catalogue, not to the process's cwd
+    appBaseDirTest() {
+        string old_dir = getcwd();
+        on_exit {
+            chdir(old_dir);
+            TypeScriptActionInterface::setAppBaseDir();
+        }
+
+        # with no app base dir set, paths in app definitions are resolved against the current working directory
+        TypeScriptActionInterface::setAppBaseDir();
+        chdir(tmp_location());
+        assertEq(getcwd(), TypeScriptActionInterface::getAppBaseDir());
+
+        # apps registered from a catalogue resolve their paths against the catalogue directory, so that an app
+        # that refers to a schema as (ex) "schemas/asana.swagger.json" loads no matter where the process that
+        # registers the app was started from
+        TypeScriptActionInterface::setAppBaseDir(old_dir);
+        assertEq(old_dir, TypeScriptActionInterface::getAppBaseDir());
+        chdir("/");
+        assertEq(old_dir, TypeScriptActionInterface::getAppBaseDir());
+    }
 }
 
 class TestRestClient inherits TypeScriptAppRestClient {
@@ -917,4 +940,5 @@ class MyObserver inherits Observer {
         }
         return l[0];
     }
+
 }

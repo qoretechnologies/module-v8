@@ -111,9 +111,19 @@ function setenv(vr, value) {
             string cwd = getcwd();
 
             # initialize master TypeScript action script first
-            if ((*string script_path = ENV.QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT).val()
-                && (*JavaScriptProgramPool master = createPool(script_path, cwd,
-                    \TypeScriptActionInterfacePriv::registerApp()))) {
+            if ((*string script_path = ENV.QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT).val()) {
+                # app definitions in the catalogue refer to their resources with paths relative to the catalogue
+                # directory (ex: "schemas/asana.swagger.json"), so apps registered from the catalogue must resolve
+                # such paths relative to that directory and not to the current working directory of this process,
+                # which is arbitrary (ex: "qctl update-index" run from any directory)
+                TypeScriptActionInterface::setAppBaseDir(dirname(script_path));
+                on_exit TypeScriptActionInterface::setAppBaseDir();
+
+                *JavaScriptProgramPool master = createPool(script_path, cwd,
+                    \TypeScriptActionInterfacePriv::registerApp());
+                if (!master) {
+                    return;
+                }
                 TypeScriptActionInterfacePriv::master = master;
 
                 # Register the module's apps pending from the data index for lazy,
