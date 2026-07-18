@@ -1051,7 +1051,39 @@ public class TypeScriptActionInterface {
         if (exists (*string rn = appcasemap{app})) {
             app = rn;
         }
-        return TypeScriptActionInterface::initAppIntern(app, do_actions, dynamic_path);
+        # fast path: if the app is already initialized, return without taking the process-global
+        # module-load lock, keeping hot repeated initApp() calls off that cold-path lock (this
+        # check never loads a module, so it cannot participate in the deadlock described below)
+        if (TypeScriptActionInterface::appInitialized(app)) {
+            return False;
+        }
+        # cold path: acquire libqore's module-load lock BEFORE the initAppIntern() serialization
+        # lock (the class-static lock shared by all synchronized methods here, referred to as "S"
+        # below).  initAppIntern() and the registration code it drives lazily load modules (REST
+        # schema validators via RestSchemaLoader, the app's own module via the provider index, the
+        # generic-api-call builder, ...), so it holds S across module loading.  Meanwhile a
+        # concurrent cold module load holds the module-load lock while running the loaded module's
+        # initializer, which can call back into initApp() (e.g. a module registering an app child
+        # data provider) and there needs S.  Those two orders ("S -> module-load lock" and
+        # "module-load lock -> S") are an ABBA deadlock.
+        #
+        # Taking the module-load lock first here gives a single global order "module-load lock -> S"
+        # on every path into initAppIntern(), matching the order that a cold module load already
+        # uses, so the cycle cannot form.  The module-load lock is recursive, so the nested module
+        # loads performed under S re-acquire it for free, and this is also safe when the caller
+        # already holds it (initApp() invoked from a module initializer).
+        return call_with_module_load_lock(bool sub () {
+            return TypeScriptActionInterface::initAppIntern(app, do_actions, dynamic_path);
+        });
+    }
+
+    #! Returns @ref True if the given app has already been initialized
+    /** Taken under the initAppIntern() serialization lock (S) alone; this never loads a module, so
+        it cannot participate in the module-load-lock/S deadlock and must not take the module-load
+        lock (see initApp()).
+    */
+    static private synchronized bool appInitialized(string app) {
+        return initmap{app} ?? False;
     }
 
     static hash<AppInfo> getInitializedRecordBasedAppInfo(string app) {

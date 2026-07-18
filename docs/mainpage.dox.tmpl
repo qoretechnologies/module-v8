@@ -649,6 +649,13 @@ JavaScriptProgram::setSaveReferenceCallback(callback);
     @section v8releasenotes v8 Module Release Notes
 
     @subsection v8_2_2 v8 Module Version 2.2
+    - fixed a deadlock that could hang the process (most visibly during shutdown) when apps were initialized
+      concurrently: on-demand app initialization holds an internal lock while lazily loading modules (REST schema
+      validators, the app's own module, etc.), and a concurrent module load could, from its initializer, register
+      an app child data provider and re-enter app initialization &mdash; the two lock orders formed an ABBA
+      deadlock; app initialization now acquires the global module-load lock before its own lock (via
+      @ref Qore::call_with_module_load_lock() "call_with_module_load_lock()"), giving a single consistent lock
+      order (requires %Qore 3.0)
     - fixed ~15s of fixed latency per app action against upstreams that keep the HTTP connection open after the
       response (ex: Slack, YouTube / Google APIs); the embedded Node event loop was pumped with \c UV_RUN_DEFAULT,
       which over-runs until no active handles remain, so a lingering keep-alive socket stalled delivery until it
