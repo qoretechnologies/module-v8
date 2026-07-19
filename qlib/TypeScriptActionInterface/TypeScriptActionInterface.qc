@@ -300,6 +300,20 @@ public class TypeScriptActionInterface {
         #! Server lock
         static Mutex sm();
 
+        #! App-initialization in-progress markers: app name -> owning thread TID
+        /** Serializes per-app initialization without holding any global lock across the module loads
+            performed during app registration (see initApp()).  While an entry is present, that app is
+            being initialized by the mapped TID; the entry is removed and @ref app_init_cond broadcast
+            on completion (success or failure).
+        */
+        static hash<string, int> app_init_inprogress;
+
+        #! Lock guarding @ref app_init_inprogress and @ref app_init_cond (a short-held leaf lock)
+        static Mutex app_init_lock();
+
+        #! Condition used to wait for a concurrent initialization of the same app to complete
+        static Condition app_init_cond();
+
         #! On-demand server flag
         static bool on_demand;
 
@@ -1051,39 +1065,58 @@ public class TypeScriptActionInterface {
         if (exists (*string rn = appcasemap{app})) {
             app = rn;
         }
-        # fast path: if the app is already initialized, return without taking the process-global
-        # module-load lock, keeping hot repeated initApp() calls off that cold-path lock (this
-        # check never loads a module, so it cannot participate in the deadlock described below)
-        if (TypeScriptActionInterface::appInitialized(app)) {
-            return False;
-        }
-        # cold path: acquire libqore's module-load lock BEFORE the initAppIntern() serialization
-        # lock (the class-static lock shared by all synchronized methods here, referred to as "S"
-        # below).  initAppIntern() and the registration code it drives lazily load modules (REST
-        # schema validators via RestSchemaLoader, the app's own module via the provider index, the
-        # generic-api-call builder, ...), so it holds S across module loading.  Meanwhile a
-        # concurrent cold module load holds the module-load lock while running the loaded module's
-        # initializer, which can call back into initApp() (e.g. a module registering an app child
-        # data provider) and there needs S.  Those two orders ("S -> module-load lock" and
-        # "module-load lock -> S") are an ABBA deadlock.
+        # Serialize per-app initialization with an in-progress marker instead of holding a global
+        # lock across app registration.  initAppIntern() and the registration code it drives lazily
+        # load modules (REST schema validators via RestSchemaLoader, the app's own module via the
+        # provider index, the generic-api-call builder, ...).  If we held any process-global lock (S)
+        # across those loads, a concurrent cold module load - which holds libqore's module-load lock
+        # while running the loaded module's initializer, and can call back into initApp() (e.g. a
+        # module registering an app child data provider) needing S - would form an "S -> module-load
+        # lock" vs. "module-load lock -> S" ABBA deadlock.  (This deadlock used to be masked by the
+        # process-global AOT module-load lock, which is now inert.)
         #
-        # Taking the module-load lock first here gives a single global order "module-load lock -> S"
-        # on every path into initAppIntern(), matching the order that a cold module load already
-        # uses, so the cycle cannot form.  The module-load lock is recursive, so the nested module
-        # loads performed under S re-acquire it for free, and this is also safe when the caller
-        # already holds it (initApp() invoked from a module initializer).
-        return call_with_module_load_lock(bool sub () {
-            return TypeScriptActionInterface::initAppIntern(app, do_actions, dynamic_path);
-        });
+        # The fix: claim initialization of this specific app under a short-held leaf lock, then run
+        # the registration (including all module loads) with NO global lock held.  Concurrent
+        # initialization of the SAME app waits on the marker; concurrent initialization of DIFFERENT
+        # apps proceeds in parallel (each shared static map mutation is individually atomic under the
+        # variable's own runtime lock).  A re-entrant initApp() on the same thread (from a module
+        # initializer running under this app's own registration) short-circuits via the marker's TID.
+        {
+            app_init_lock.lock();
+            on_exit app_init_lock.unlock();
+            while (True) {
+                *int owner = app_init_inprogress{app};
+                if (owner) {
+                    if (owner == gettid()) {
+                        # re-entrant initApp() on this thread: the app is already being initialized
+                        # by us (nested module init callback) -> nothing to do
+                        return False;
+                    }
+                    # another thread is initializing this app; wait for it to finish, then re-check
+                    app_init_cond.wait(app_init_lock);
+                    continue;
+                }
+                if (initmap{app}) {
+                    # already fully initialized
+                    return False;
+                }
+                # claim initialization of this app
+                app_init_inprogress{app} = gettid();
+                break;
+            }
+        }
+        # run registration with NO global lock held; finishAppInit() clears the marker and wakes any
+        # waiters on both normal return and exception unwind (exception-safe)
+        on_exit TypeScriptActionInterface::finishAppInit(app);
+        return TypeScriptActionInterface::initAppIntern(app, do_actions, dynamic_path);
     }
 
-    #! Returns @ref True if the given app has already been initialized
-    /** Taken under the initAppIntern() serialization lock (S) alone; this never loads a module, so
-        it cannot participate in the module-load-lock/S deadlock and must not take the module-load
-        lock (see initApp()).
-    */
-    static private synchronized bool appInitialized(string app) {
-        return initmap{app} ?? False;
+    #! Clears the in-progress marker for the given app and wakes any threads waiting on it
+    static private finishAppInit(string app) {
+        app_init_lock.lock();
+        on_exit app_init_lock.unlock();
+        remove app_init_inprogress{app};
+        app_init_cond.broadcast();
     }
 
     static hash<AppInfo> getInitializedRecordBasedAppInfo(string app) {
@@ -1100,7 +1133,13 @@ public class TypeScriptActionInterface {
         return info;
     }
 
-    static private synchronized bool initAppIntern(string app, *bool do_actions, *string dynamic_path) {
+    #! Performs app initialization; must be called only with this app's in-progress marker held (see initApp())
+    /** No global serialization lock is held here so that the module loads performed during app
+        registration cannot deadlock against a concurrent module load that calls back into initApp().
+        Per-app serialization is provided by the caller's in-progress marker; individual shared static
+        map mutations are atomic under each variable's own runtime lock.
+    */
+    static private bool initAppIntern(string app, *bool do_actions, *string dynamic_path) {
         if (initmap{app}) {
             return False;
         }
@@ -2579,8 +2618,11 @@ public class TypeScriptActionInterface {
     }
 
     static TypeScriptActionAppDataProvider getAppDataProvider(string app) {
-        if (*hash<AppInfo> info = remove appmap{app}) {
-            TypeScriptActionInterface::initAppIntern(info);
+        if (appmap{app}) {
+            # route pending-app initialization through initApp() so it is serialized by the per-app
+            # in-progress marker; calling initAppIntern() directly here would bypass the marker and
+            # race a concurrent initApp() for the same app
+            TypeScriptActionInterface::initApp(app);
         }
         string appname = app.lwr();
         return root.getChildProviderEx(appname);
