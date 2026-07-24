@@ -978,7 +978,7 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                 }
                 debug("Sending command %y", LoggerUtil::getArgSummary(yaml));
                 @debug {
-                    # TEST: simulate the parent's command send hitting the real Qore Socket::send()
+                    # TEST: simulate the parent command send hitting the real Qore Socket::send()
                     # EPIPE shape (SOCKET-SEND-ERROR / "Broken pipe") that occurs when the child closes
                     # its end of the command socket mid-send. Unlike TS_PROXY_TEST_FORCE_SOCKET_CLOSE
                     # (which forces the recv-side SOCKET-NOT-OPEN), this exercises the send-side path;
