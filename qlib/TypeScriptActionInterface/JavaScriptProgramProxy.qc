@@ -977,6 +977,21 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                     yaml = makeSend(cmd, {"args": args});
                 }
                 debug("Sending command %y", LoggerUtil::getArgSummary(yaml));
+                @debug {
+                    # TEST: simulate the parent's command send hitting the real Qore Socket::send()
+                    # EPIPE shape (SOCKET-SEND-ERROR / "Broken pipe") that occurs when the child closes
+                    # its end of the command socket mid-send. Unlike TS_PROXY_TEST_FORCE_SOCKET_CLOSE
+                    # (which forces the recv-side SOCKET-NOT-OPEN), this exercises the send-side path;
+                    # fires once, so the retry sends to the restarted child.
+                    if (getenv("TS_PROXY_TEST_FORCE_PARENT_SEND_ERROR").val()) {
+                        unsetenv("TS_PROXY_TEST_FORCE_PARENT_SEND_ERROR");
+                        throw "SOCKET-SEND-ERROR", "error while executing Socket::send(): Broken pipe", EPIPE;
+                    }
+                    # TEST: same but on EVERY attempt (not cleared) - for the bounded-restart test.
+                    if (getenv("TS_PROXY_TEST_FORCE_PARENT_SEND_ERROR_ALWAYS").val()) {
+                        throw "SOCKET-SEND-ERROR", "error while executing Socket::send(): Broken pipe", EPIPE;
+                    }
+                }
                 sendString(yaml);
                 on_exit remove command_in_progress;
                 h = waitForResponse(response_timeout);
@@ -1131,11 +1146,23 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
             # Restart the child when it has died, or when the command IPC socket was closed/reset
             # while the child process is still alive.  A broken command channel makes the child
             # unusable for commands, so it must be restarted and the command retried; otherwise the
-            # underlying SOCKET-NOT-OPEN propagates as a fatal error.  This last case is a race:
+            # underlying socket error propagates as a fatal error.  This last case is a race:
             # under load (e.g. the lazy-init first-call latency) the command can sit in
             # waitForResponse long enough for the peer to drop the socket while proc.running() is
             # still true - the qorus-api align-products CI failure.
-            bool socket_dead = ex && ex.err == "SOCKET-NOT-OPEN";
+            #
+            # The break surfaces two ways depending on which side of the channel notices first:
+            #   - recv side (parent blocked in waitForResponse): SOCKET-NOT-OPEN
+            #   - send side (parent's command send races the child's close): the Qore Socket::send()
+            #     EPIPE, i.e. err "SOCKET-SEND-ERROR", desc "...Broken pipe", arg == EPIPE
+            # Both mean the command frame never completed, so both are safe to restart and retry (see
+            # design/ts-proxy.md: "EPIPE or socket-close failures ... should [be treated] as restart
+            # conditions").  Match SOCKET-SEND-ERROR only for EPIPE/broken-pipe (a genuinely dead
+            # peer) - a send timeout is a distinct SOCKET-TIMEOUT error, not this - and deliberately
+            # do NOT widen this to SOCKET-CLOSED: that can occur recv-side after the child has already
+            # executed the command, where a retry could re-run a non-idempotent action.
+            bool socket_dead = ex && (ex.err == "SOCKET-NOT-OPEN"
+                || (ex.err == "SOCKET-SEND-ERROR" && (ex.arg == EPIPE || ex.desc =~ /Broken pipe/i)));
             if (!proc.running() || socket_dead) {
                 string reason = proc.running() ? "command socket closed" : "aborted";
                 if (flags & RF_NO_RESTART) {

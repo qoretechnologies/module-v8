@@ -23,6 +23,8 @@ public class TsProxyTest inherits QUnit::Test {
         addTestCase("proxy tests", \proxyTests());
         addTestCase("proxy command socket close mid-command", \proxySocketCloseMidCommandTest());
         addTestCase("proxy bounded restart on persistent socket close", \proxyBoundedRestartTest());
+        addTestCase("proxy parent send error mid-command", \proxyParentSendErrorMidCommandTest());
+        addTestCase("proxy parent send error bounded restart", \proxyParentSendErrorBoundedRestartTest());
         addTestCase("proxy restart error handling", \proxyRestartErrorHandlingTest());
         addTestCase("proxy restart wait fast paths", \proxyRestartWaitFastPathTest());
         addTestCase("proxy send error handling", \proxySendErrorHandlingTest());
@@ -237,6 +239,92 @@ public class TsProxyTest inherits QUnit::Test {
         # the command must terminate with a socket error instead of looping forever
         assertTrue(sock_err == "SOCKET-NOT-OPEN" || sock_err == "SOCKET-CLOSED",
             "a command that always breaks the command channel must give up with a socket error, not loop forever");
+        # the number of child restarts must be bounded and deterministic (no timing/polling)
+        assertEq(expected_max_restarts, proxy.getInfo()."restart-count",
+            "the child must be restarted exactly MaxRestarts times before the command gives up");
+    }
+
+    private proxyParentSendErrorMidCommandTest() {
+        skipIfNotReady();
+
+        bool debug_enabled = False;
+        @debug {
+            debug_enabled = True;
+        }
+        if (!debug_enabled) {
+            testSkip("parent-send-error hook requires running with debugging enabled");
+            return;
+        }
+
+        JavaScriptProgramProxy::init(new Mutex());
+        on_exit JavaScriptProgramProxy::shutdown();
+
+        JavaScriptProgramProxy proxy();
+        int pid = proxy.getInfo()."proxy-pid";
+        assertTrue(pid > 0, "proxy should be running for parent-send-error test");
+
+        # The hook makes the parent's command send raise the real Qore Socket::send() EPIPE shape
+        # (SOCKET-SEND-ERROR / "Broken pipe") once - the send-side sibling of the SOCKET-NOT-OPEN
+        # race, which the recv-side hook (proxySocketCloseMidCommandTest) cannot reach. With the fix
+        # the proxy treats it as a dead command channel, restarts the child, and retries the command,
+        # so the call must NOT surface a fatal socket error and the child must have been restarted.
+        setenv("TS_PROXY_TEST_FORCE_PARENT_SEND_ERROR", "1");
+        on_exit unsetenv("TS_PROXY_TEST_FORCE_PARENT_SEND_ERROR");
+
+        *string sock_err;
+        try {
+            proxy.getDynamicOptions("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING);
+        } catch (hash<ExceptionInfo> ex) {
+            # an app-not-found (or similar) error is acceptable; a socket error is the regression
+            if (ex.err == "SOCKET-SEND-ERROR" || ex.err == "SOCKET-NOT-OPEN" || ex.err == "SOCKET-CLOSED") {
+                sock_err = ex.err;
+            }
+        }
+        assertTrue(!sock_err.val(),
+            "a parent-send EPIPE mid-command must be recovered, not surfaced as a fatal socket error");
+        assertTrue(proxy.getInfo()."proxy-pid" != pid,
+            "child must be restarted after the parent's command send hit EPIPE");
+    }
+
+    private proxyParentSendErrorBoundedRestartTest() {
+        skipIfNotReady();
+
+        bool debug_enabled = False;
+        @debug {
+            debug_enabled = True;
+        }
+        if (!debug_enabled) {
+            testSkip("persistent parent-send-error hook requires running with debugging enabled");
+            return;
+        }
+
+        # this value must match RetryCounter::MaxRestarts in JavaScriptProgramProxy.qc (internal class)
+        int expected_max_restarts = 3;
+
+        JavaScriptProgramProxy::init(new Mutex());
+        on_exit JavaScriptProgramProxy::shutdown();
+
+        JavaScriptProgramProxy proxy();
+        int pid = proxy.getInfo()."proxy-pid";
+        assertTrue(pid > 0, "proxy should be running for parent-send bounded-restart test");
+        assertEq(0, proxy.getInfo()."restart-count", "the child must not have been restarted before the test");
+
+        # Force the parent's command send to raise EPIPE on EVERY attempt. Without the bound the
+        # proxy would restart the child forever; with the fix the command must give up after
+        # RetryCounter::MaxRestarts restarts, terminating with the (send-side) socket error.
+        setenv("TS_PROXY_TEST_FORCE_PARENT_SEND_ERROR_ALWAYS", "1");
+        on_exit unsetenv("TS_PROXY_TEST_FORCE_PARENT_SEND_ERROR_ALWAYS");
+
+        *string sock_err;
+        try {
+            proxy.getDynamicOptions("no-such-app", "no-such-action", NOTHING, NOTHING, NOTHING);
+        } catch (hash<ExceptionInfo> ex) {
+            sock_err = ex.err;
+        }
+
+        # the command must terminate with the socket error instead of looping forever
+        assertEq("SOCKET-SEND-ERROR", sock_err,
+            "a parent send that always breaks must give up with the terminal socket error, not loop forever");
         # the number of child restarts must be bounded and deterministic (no timing/polling)
         assertEq(expected_max_restarts, proxy.getInfo()."restart-count",
             "the child must be restarted exactly MaxRestarts times before the command gives up");
