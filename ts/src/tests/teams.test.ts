@@ -152,7 +152,7 @@ describe('Should test Microsoft Teams actions', () => {
       });
 
       expect(allowedValues).toBeDefined();
-      expect(allowedValues.length).toBeGreaterThan;
+      expect(allowedValues.length).toBeGreaterThan(0);
     });
 
     itIntegration('Should get Teams meeting ID allowed values', async () => {
