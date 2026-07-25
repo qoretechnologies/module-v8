@@ -25,8 +25,69 @@ import { getShopifyParentTransactionIdAllowedValues } from '../apps/shopify/help
 import { getShopifyProductVariantIdAllowedValues } from '../apps/shopify/helpers/get-product-variant-id-allowed-values';
 import { getShopifyProductIdAllowedValues } from '../apps/shopify/helpers/get-shopify-product-id-allowed-values';
 import { getShopifyTaxExemptionsAllowedValues } from '../apps/shopify/helpers/get-tax-exemptions-allowed-values';
+import { executeShopifyGraphQL, extractShopifyNumericId } from '../apps/shopify/helpers/constants';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import { configDotenv } from 'dotenv';
+
+// Shopify's Admin API only returns orders from the last 60 days unless the app has the
+// `read_all_orders` scope, so a manually-created test order eventually ages out and the
+// order-dependent action tests lose their `orderId`. This creates a fresh order on demand by
+// completing a draft order (with a custom line item, so no product/variant is required).
+async function createShopifyTestOrder(shop: string, token: string): Promise<string> {
+  const context = { conn_opts: { shop, token } } as any;
+
+  const createDraftMutation = `
+    mutation draftOrderCreate($input: DraftOrderInput!) {
+      draftOrderCreate(input: $input) {
+        draftOrder { id }
+        userErrors { field message }
+      }
+    }
+  `;
+
+  const created = await executeShopifyGraphQL(context, createDraftMutation, {
+    input: {
+      lineItems: [{ title: 'Automated test item', quantity: 1, originalUnitPrice: 10.0 }],
+    },
+  });
+
+  const draftErrors = created.data?.draftOrderCreate?.userErrors ?? [];
+  if (draftErrors.length > 0) {
+    throw new Error(
+      `Failed to create test draft order: ${draftErrors.map((e: any) => e.message).join('; ')}`
+    );
+  }
+
+  const draftId = created.data?.draftOrderCreate?.draftOrder?.id;
+  if (!draftId) {
+    throw new Error('Failed to create test draft order: no draft order id returned');
+  }
+
+  const completeDraftMutation = `
+    mutation draftOrderComplete($id: ID!) {
+      draftOrderComplete(id: $id, paymentPending: true) {
+        draftOrder { order { id } }
+        userErrors { field message }
+      }
+    }
+  `;
+
+  const completed = await executeShopifyGraphQL(context, completeDraftMutation, { id: draftId });
+
+  const completeErrors = completed.data?.draftOrderComplete?.userErrors ?? [];
+  if (completeErrors.length > 0) {
+    throw new Error(
+      `Failed to complete test draft order: ${completeErrors.map((e: any) => e.message).join('; ')}`
+    );
+  }
+
+  const orderGid = completed.data?.draftOrderComplete?.draftOrder?.order?.id;
+  if (!orderGid) {
+    throw new Error('Failed to complete test draft order: no order id returned');
+  }
+
+  return extractShopifyNumericId(orderGid, 'Order');
+}
 
 Debugger.level = DebugLevels.Verbose;
 configDotenv({ path: '.env' });
@@ -224,9 +285,9 @@ describe('Should test Shopify integration', () => {
       if (allowed_values.length > 0) {
         orderId = allowed_values.at(-1)!.value;
       } else {
-        console.warn(
-          'No orders found in store. Create at least one order in your Shopify admin to run the action tests.'
-        );
+        // No recent orders (Shopify only returns the last 60 days without the
+        // `read_all_orders` scope); create a fresh one so the action tests stay stable.
+        orderId = await createShopifyTestOrder(shopifyShop!, shopifyAccessToken!);
       }
     });
 

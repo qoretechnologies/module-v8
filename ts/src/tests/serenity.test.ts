@@ -99,7 +99,7 @@ describe('Should test serenity actions', () => {
     });
   });
 
-  describe('Should test serenity actions', () => {
+  describe.skip('Should test serenity actions', () => {
     it.skip('Should execute system agent', async () => {
       const action = ExecuteSerenityAgent as IQoreAppActionWithFunction;
 

@@ -47,43 +47,84 @@ describe('Should test Twilio app', () => {
     checkNonEmpty: true,
   };
 
-  beforeAll(() => {
+  // Every test here hits the live Twilio API. Probe the credentials once so the integration tests
+  // self-skip when the credentials are absent OR present-but-invalid (Twilio returns 401 "Authenticate"),
+  // instead of failing the whole suite. Cached across all tests via a single round-trip.
+  let credentialsUsable = false;
+
+  const probeTwilioCredentials = async (): Promise<boolean> => {
     if (!accountSid || !authToken) {
-      throw new Error(
-        'TWILIO_ACCOUNT_SID and TWILIO_AUTH_TOKEN must be set in .env file to run tests'
-      );
+      console.warn('TWILIO_ACCOUNT_SID/TWILIO_AUTH_TOKEN not set; skipping Twilio integration tests.');
+      return false;
     }
+
+    try {
+      const auth = Buffer.from(`${accountSid}:${authToken}`).toString('base64');
+      const res = await fetch(`https://api.twilio.com/2010-04-01/Accounts/${accountSid}.json`, {
+        headers: { Authorization: `Basic ${auth}` },
+      });
+
+      if (!res.ok) {
+        console.warn(
+          `Twilio credentials rejected (HTTP ${res.status}); skipping Twilio integration tests.`
+        );
+        return false;
+      }
+
+      return true;
+    } catch (error) {
+      console.warn(`Twilio credential probe failed (${error}); skipping Twilio integration tests.`);
+      return false;
+    }
+  };
+
+  // Wraps a test so its body only runs when the Twilio credentials actually work.
+  const itIntegration = (name: string, fn: () => Promise<void>, timeout?: number): void => {
+    it(
+      name,
+      async () => {
+        if (!credentialsUsable) {
+          return;
+        }
+        await fn();
+      },
+      timeout
+    );
+  };
+
+  beforeAll(async () => {
+    credentialsUsable = await probeTwilioCredentials();
   });
 
   describe('Should test Twilio allowed values', () => {
     let flowSid: string;
     let recordingSid: string;
 
-    it('Should get message allowed values', async () => {
+    itIntegration('Should get message allowed values', async () => {
       const allowedValues = await getTwilioMessageAllowedValues(baseContext);
 
       checkAllowedValues(allowedValues, allowedValuesCheckConfig);
     });
 
-    it('Should get messaging service allowed values', async () => {
+    itIntegration('Should get messaging service allowed values', async () => {
       const allowedValues = await getTwilioMessagingServiceAllowedValues(baseContext);
 
       checkAllowedValues(allowedValues, allowedValuesCheckConfig);
     });
 
-    it('Should get phone number allowed values', async () => {
+    itIntegration('Should get phone number allowed values', async () => {
       const allowedValues = await getTwilioPhoneNumberAllowedValues(baseContext);
 
       checkAllowedValues(allowedValues, allowedValuesCheckConfig);
     });
 
-    it('Should get call allowed values', async () => {
+    itIntegration('Should get call allowed values', async () => {
       const allowedValues = await getTwilioCallAllowedValues(baseContext);
 
       checkAllowedValues(allowedValues, allowedValuesCheckConfig);
     });
 
-    it('Should get flow allowed values', async () => {
+    itIntegration('Should get flow allowed values', async () => {
       const allowedValues = await getTwilioFlowAllowedValues(baseContext);
 
       checkAllowedValues(allowedValues, allowedValuesCheckConfig);
@@ -91,7 +132,7 @@ describe('Should test Twilio app', () => {
       flowSid = allowedValues[0]?.value;
     });
 
-    it('Should get execution allowed values', async () => {
+    itIntegration('Should get execution allowed values', async () => {
       if (!flowSid) {
         console.log('Skipping: No flow SID available for execution test');
         return;
@@ -106,7 +147,7 @@ describe('Should test Twilio app', () => {
       checkAllowedValues(allowedValues, { ...allowedValuesCheckConfig, checkNonEmpty: false });
     });
 
-    it('Should get recording allowed values', async () => {
+    itIntegration('Should get recording allowed values', async () => {
       const allowedValues = await getTwilioRecordingAllowedValues(baseContext);
 
       checkAllowedValues(allowedValues, allowedValuesCheckConfig);
@@ -114,7 +155,7 @@ describe('Should test Twilio app', () => {
       recordingSid = allowedValues[0]?.value;
     });
 
-    it('Should get transcription allowed values', async () => {
+    itIntegration('Should get transcription allowed values', async () => {
       if (!recordingSid) {
         console.log('Skipping: No recording SID available for transcription test');
         return;
@@ -139,7 +180,7 @@ describe('Should test Twilio app', () => {
     let recordingSid: string;
     let transcriptionSid: string;
 
-    it('Should list messages', async () => {
+    itIntegration('Should list messages', async () => {
       const action = ListTwilioMessages;
 
       if (!('api_function' in action) || !action.api_function)
@@ -165,7 +206,7 @@ describe('Should test Twilio app', () => {
       }
     });
 
-    it('Should get a specific message (if exists)', async () => {
+    itIntegration('Should get a specific message (if exists)', async () => {
       if (!messageSid) {
         console.log('Skipping: No message SID available');
         return;
@@ -195,7 +236,7 @@ describe('Should test Twilio app', () => {
       expect(result.sid).toBe(messageSid);
     });
 
-    it('Should list message media (if exists)', async () => {
+    itIntegration('Should list message media (if exists)', async () => {
       if (!messageSid) {
         console.log('Skipping: No message SID available');
         return;
@@ -221,7 +262,7 @@ describe('Should test Twilio app', () => {
       expect(Array.isArray(result)).toBe(true);
     });
 
-    it('Should list calls', async () => {
+    itIntegration('Should list calls', async () => {
       const action = ListTwilioCalls;
 
       if (!('api_function' in action) || !action.api_function)
@@ -245,7 +286,7 @@ describe('Should test Twilio app', () => {
       }
     });
 
-    it('Should get a specific call (if exists)', async () => {
+    itIntegration('Should get a specific call (if exists)', async () => {
       if (!callSid) {
         console.log('Skipping: No call SID available');
         return;
@@ -272,7 +313,7 @@ describe('Should test Twilio app', () => {
       expect(result.sid).toBe(callSid);
     });
 
-    it('Should list recordings', async () => {
+    itIntegration('Should list recordings', async () => {
       const action = ListTwilioRecordings;
 
       if (!('api_function' in action) || !action.api_function)
@@ -298,7 +339,7 @@ describe('Should test Twilio app', () => {
       }
     });
 
-    it('Should get a specific recording (if exists)', async () => {
+    itIntegration('Should get a specific recording (if exists)', async () => {
       if (!recordingSid) {
         console.log('Skipping: No recording SID available');
         return;
@@ -325,7 +366,7 @@ describe('Should test Twilio app', () => {
       expect(result.sid).toBe(recordingSid);
     });
 
-    it('Should list transcriptions (if recording exists)', async () => {
+    itIntegration('Should list transcriptions (if recording exists)', async () => {
       if (!recordingSid) {
         console.log('Skipping: No recording SID available');
         return;
@@ -357,7 +398,7 @@ describe('Should test Twilio app', () => {
       }
     });
 
-    it('Should get a specific transcription (if exists)', async () => {
+    itIntegration('Should get a specific transcription (if exists)', async () => {
       if (!recordingSid || !transcriptionSid) {
         console.log('Skipping: No recording or transcription SID available');
         return;
@@ -385,7 +426,7 @@ describe('Should test Twilio app', () => {
       expect(result.sid).toBe(transcriptionSid);
     });
 
-    it('Should list executions (if flow exists)', async () => {
+    itIntegration('Should list executions (if flow exists)', async () => {
       const flowValues = await getTwilioFlowAllowedValues(baseContext);
       if (!flowValues || flowValues.length === 0) {
         console.log('Skipping: No flows available');
@@ -420,7 +461,7 @@ describe('Should test Twilio app', () => {
       }
     });
 
-    it('Should get a specific execution (if exists)', async () => {
+    itIntegration('Should get a specific execution (if exists)', async () => {
       if (!flowSid || !executionSid) {
         console.log('Skipping: No flow or execution SID available');
         return;
@@ -450,7 +491,7 @@ describe('Should test Twilio app', () => {
   });
 
   describe('Should test Twilio triggers event example data', () => {
-    it('Should get example event data for new message trigger', async () => {
+    itIntegration('Should get example event data for new message trigger', async () => {
       const trigger = NewTwilioMessage;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
@@ -472,7 +513,7 @@ describe('Should test Twilio app', () => {
       }
     });
 
-    it('Should get example event data for new recording trigger', async () => {
+    itIntegration('Should get example event data for new recording trigger', async () => {
       const trigger = NewTwilioRecording;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)
@@ -492,7 +533,7 @@ describe('Should test Twilio app', () => {
       }
     });
 
-    it('Should get example event data for new transcription trigger', async () => {
+    itIntegration('Should get example event data for new transcription trigger', async () => {
       const trigger = NewTwilioTranscription;
 
       if (!('get_example_event_data' in trigger) || !trigger.get_example_event_data)

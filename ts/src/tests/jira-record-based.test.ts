@@ -33,6 +33,13 @@ Debugger.level = DebugLevels.Verbose;
 
 configDotenv({ path: '.env' });
 
+// The record-based Jira helpers talk to the OAuth-2.0 gateway (api.atlassian.com/ex/jira/{cloudId}),
+// which only accepts Bearer tokens — Basic Auth (username/password) is silently rejected there with
+// a 404. So the integration tests can only run with a real OAuth token; gate them to report as
+// skipped (not a misleading pass) when JIRA_TOKEN is absent, rather than letting the table-list test
+// fail and the rest vacuously pass on a missing tablePath.
+const describeIntegration = process.env.JIRA_TOKEN ? describe : describe.skip;
+
 describe('Jira Record-Based', () => {
   // Unit tests that don't require API access
   describe('Should test Jira expressions and search options (unit tests)', () => {
@@ -408,7 +415,7 @@ describe('Jira Record-Based', () => {
   });
 
   // Integration tests that require API access
-  describe('Should test Jira record-based helpers (integration tests)', () => {
+  describeIntegration('Should test Jira record-based helpers (integration tests)', () => {
     const base_context = {
       conn_opts: {} as Record<string, string>,
     };
