@@ -370,7 +370,22 @@ jobs:
             libeigen3-dev \
             libprotobuf-dev \
             libprotoc-dev \
-            protobuf-compiler
+            protobuf-compiler \
+            libssh2-1-dev \
+            libssh-dev
+
+      # Qore's in-tree dataframe module requires Apache Arrow/Parquet headers
+      # (modules/dataframe/src/df_parquet.cpp -> arrow/api.h). Ubuntu 24.04 has no
+      # libarrow-dev in apt (it's only in universe on 26.04, which is why the canonical
+      # qore-test-base image gets it from apt), so add Apache's own apt repo here.
+      - name: Install Apache Arrow
+        run: |
+          cd /tmp
+          curl -fsSL -o apache-arrow.deb \
+            "https://apache.jfrog.io/artifactory/arrow/$(lsb_release --id --short | tr 'A-Z' 'a-z')/apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb"
+          sudo apt-get install -y ./apache-arrow.deb
+          sudo apt-get update
+          sudo apt-get install -y libarrow-dev libparquet-dev
 
       # Install OpenSSL 3.5+ with native QUIC support (SSL_set_quic_tls_cbs)
       # System OpenSSL 3.0.x lacks QUIC APIs needed by ngtcp2 for Qore's HTTP/3 support
