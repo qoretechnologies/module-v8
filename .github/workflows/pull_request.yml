@@ -450,7 +450,12 @@ jobs:
           cd qore
           mkdir build
           cd build
-          V8_INCLUDE_DIR=/opt/nodejs/include/node NODE_LIB_DIR=/opt/nodejs/lib cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
+          # -DQORE_BUILD_AOT_MODULES=OFF: don't AOT-compile the qlib data-provider qmods.
+          # AOT (added in Qore's 2026-06 JIT/AOT work) requires every wrapped binary module
+          # to be loadable at build time (e.g. MongoDbDataProvider.qmod needs the mongodb
+          # module), but module-v8 doesn't build all optional modules. AOT is a perf-only
+          # optimization we don't need; the qmods still load and run interpreted.
+          V8_INCLUDE_DIR=/opt/nodejs/include/node NODE_LIB_DIR=/opt/nodejs/lib cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release -DQORE_BUILD_AOT_MODULES=OFF
           make -j$(nproc) && sudo make install
 
       #  Update library paths to ensure Qore can find its shared libraries
