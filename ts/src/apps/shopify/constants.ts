@@ -17,7 +17,7 @@ export const SHOPIFY_POST_AUTH_CODE_CONN_OPTIONS = {
   },
 } satisfies TCustomConnOptions;
 
-export const SHOPIFY_API_VERSION = '2025-07';
+export const SHOPIFY_API_VERSION = '2026-10';
 
 export const SHOPIFY_SCOPES = [
   'read_analytics',

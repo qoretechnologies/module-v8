@@ -20,6 +20,57 @@ Debugger.level = DebugLevels.Verbose;
 
 configDotenv({ path: '.env' });
 
+// Integration tests require a live Asana connection; skip them (reported as skipped, not passed)
+// when no credentials are available, and run them automatically when ASANA_TOKEN is set.
+const describeIntegration = process.env.ASANA_TOKEN ? describe : describe.skip;
+
+// Several Asana integration features (custom fields, task search) require a paid plan. Probe the
+// account tier once against the live API so the integration tests self-skip on a free account
+// without needing a dedicated env flag. The probe is cached so the integration blocks share a
+// single network round-trip.
+let asanaTierProbe: Promise<boolean> | undefined;
+
+function isAsanaFreeTierError(error: unknown): boolean {
+  const message = String((error as { message?: string })?.message ?? error);
+  return /premium|not available for free/i.test(message);
+}
+
+async function isAsanaPremiumAccount(token: string): Promise<boolean> {
+  if (!asanaTierProbe) {
+    asanaTierProbe = (async () => {
+      try {
+        const workspaces = await asanaClient.get<{ data: Array<{ gid: string }> }>('workspaces', {
+          token,
+        });
+        const workspaceGid = workspaces?.data?.[0]?.gid;
+
+        if (!workspaceGid) {
+          return false;
+        }
+
+        // Custom fields are premium-gated; a successful call means the account is on a paid plan.
+        await asanaClient.get(`workspaces/${workspaceGid}/custom_fields`, {
+          token,
+          params: { limit: 1 },
+        });
+
+        return true;
+      } catch (error) {
+        if (isAsanaFreeTierError(error)) {
+          console.warn('Asana account is on a free plan; skipping premium-gated integration tests.');
+          return false;
+        }
+
+        // Unknown error (network, auth, etc.) — let the individual tests run and surface the real
+        // failure rather than silently skipping.
+        return true;
+      }
+    })();
+  }
+
+  return asanaTierProbe;
+}
+
 describe('Asana', () => {
   // Unit tests that don't require API access
   describe('Should test Asana expressions and search options (unit tests)', () => {
@@ -200,7 +251,7 @@ describe('Asana', () => {
   });
 
   // Integration tests that require API access
-  describe('Should test Asana record-based helpers (integration tests)', () => {
+  describeIntegration('Should test Asana record-based helpers (integration tests)', () => {
     const base_context = {
       conn_opts: {
         token: '',
@@ -209,11 +260,15 @@ describe('Asana', () => {
 
     let hasToken = false;
 
-    beforeAll(() => {
+    beforeAll(async () => {
       const token = process.env.ASANA_TOKEN;
 
       if (!token) {
         console.warn('ASANA_TOKEN not set, skipping integration tests');
+        return;
+      }
+
+      if (!(await isAsanaPremiumAccount(token))) {
         return;
       }
 
@@ -232,7 +287,6 @@ describe('Asana', () => {
 
     it('Should get table list (all workspace|project paths)', async () => {
       if (!hasToken) {
-        console.warn('Skipping: ASANA_TOKEN not set');
         return;
       }
 
@@ -259,7 +313,6 @@ describe('Asana', () => {
 
     it('Should get record type for a project', async () => {
       if (!hasToken) {
-        console.warn('Skipping: ASANA_TOKEN not set');
         return;
       }
       if (!tablePath) {
@@ -322,7 +375,6 @@ describe('Asana', () => {
 
     it('Should search records (tasks) in a project', async () => {
       if (!hasToken) {
-        console.warn('Skipping: ASANA_TOKEN not set');
         return;
       }
       if (!tablePath) {
@@ -353,7 +405,6 @@ describe('Asana', () => {
 
     it('Should create a record (task)', async () => {
       if (!hasToken) {
-        console.warn('Skipping: ASANA_TOKEN not set');
         return;
       }
       if (!tablePath) {
@@ -380,7 +431,6 @@ describe('Asana', () => {
 
     it('Should search for the created record', async () => {
       if (!hasToken) {
-        console.warn('Skipping: ASANA_TOKEN not set');
         return;
       }
       if (!tablePath) {
@@ -404,7 +454,6 @@ describe('Asana', () => {
 
     it('Should update the created record', async () => {
       if (!hasToken) {
-        console.warn('Skipping: ASANA_TOKEN not set');
         return;
       }
       if (!tablePath) {
@@ -447,7 +496,6 @@ describe('Asana', () => {
 
     it('Should delete the created record', async () => {
       if (!hasToken) {
-        console.warn('Skipping: ASANA_TOKEN not set');
         return;
       }
       if (!tablePath) {
@@ -478,7 +526,7 @@ describe('Asana', () => {
     });
   });
 
-  describe('Should test Asana search with expressions and sorting (integration tests)', () => {
+  describeIntegration('Should test Asana search with expressions and sorting (integration tests)', () => {
     const base_context = {
       conn_opts: {
         token: '',
@@ -494,6 +542,10 @@ describe('Asana', () => {
 
       if (!token) {
         console.warn('ASANA_TOKEN not set, skipping integration tests');
+        return;
+      }
+
+      if (!(await isAsanaPremiumAccount(token))) {
         return;
       }
 
@@ -534,7 +586,6 @@ describe('Asana', () => {
 
     it('Should search records with orderBy (ascending)', async () => {
       if (!hasToken) {
-        console.warn('Skipping: ASANA_TOKEN not set');
         return;
       }
       if (!tablePath) {
@@ -559,7 +610,6 @@ describe('Asana', () => {
 
     it('Should search records with orderBy (descending)', async () => {
       if (!hasToken) {
-        console.warn('Skipping: ASANA_TOKEN not set');
         return;
       }
       if (!tablePath) {
@@ -583,7 +633,6 @@ describe('Asana', () => {
 
     it('Should search records with equality expression on completed', async () => {
       if (!hasToken) {
-        console.warn('Skipping: ASANA_TOKEN not set');
         return;
       }
       if (!tablePath) {
@@ -619,7 +668,6 @@ describe('Asana', () => {
 
     it('Should create, update, and delete records with WHERE conditions', async () => {
       if (!hasToken) {
-        console.warn('Skipping: ASANA_TOKEN not set');
         return;
       }
       if (!tablePath) {
@@ -707,7 +755,6 @@ describe('Asana', () => {
 
     it('Should search with AND expression', async () => {
       if (!hasToken) {
-        console.warn('Skipping: ASANA_TOKEN not set');
         return;
       }
       if (!tablePath) {
@@ -775,7 +822,7 @@ describe('Asana', () => {
     }, 30_000);
   });
 
-  describe('Should test Asana search with various expressions (integration tests)', () => {
+  describeIntegration('Should test Asana search with various expressions (integration tests)', () => {
     const base_context = {
       conn_opts: {
         token: '',
@@ -791,6 +838,10 @@ describe('Asana', () => {
 
       if (!token) {
         console.warn('ASANA_TOKEN not set, skipping integration tests');
+        return;
+      }
+
+      if (!(await isAsanaPremiumAccount(token))) {
         return;
       }
 
@@ -1183,7 +1234,7 @@ describe('Asana', () => {
     }, 30_000);
   });
 
-  describe('Should test Asana path parsing and caching (integration tests)', () => {
+  describeIntegration('Should test Asana path parsing and caching (integration tests)', () => {
     const base_context = {
       conn_opts: {
         token: '',
@@ -1192,11 +1243,15 @@ describe('Asana', () => {
 
     let hasToken = false;
 
-    beforeAll(() => {
+    beforeAll(async () => {
       const token = process.env.ASANA_TOKEN;
 
       if (!token) {
         console.warn('ASANA_TOKEN not set, skipping integration tests');
+        return;
+      }
+
+      if (!(await isAsanaPremiumAccount(token))) {
         return;
       }
 
@@ -1212,7 +1267,6 @@ describe('Asana', () => {
 
     it('Should handle invalid table paths gracefully', async () => {
       if (!hasToken) {
-        console.warn('Skipping: ASANA_TOKEN not set');
         return;
       }
 
@@ -1225,7 +1279,6 @@ describe('Asana', () => {
 
     it('Should handle non-existent workspace gracefully', async () => {
       if (!hasToken) {
-        console.warn('Skipping: ASANA_TOKEN not set');
         return;
       }
 
@@ -1238,7 +1291,6 @@ describe('Asana', () => {
 
     it('Should cache workspace and project mappings', async () => {
       if (!hasToken) {
-        console.warn('Skipping: ASANA_TOKEN not set');
         return;
       }
 

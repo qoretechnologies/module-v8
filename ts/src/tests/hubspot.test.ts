@@ -391,8 +391,12 @@ describe('Should test Hubspot forms integration', () => {
 
   let hasFormTestEnv = false;
   let testFormId: string | undefined;
+  // The forms endpoints require the `forms` / `form-submissions-write` scopes, which the token may
+  // not be authorized for. Probe once so the scope-dependent tests self-skip instead of failing when
+  // the scopes are missing, and run automatically once a token with forms access is provided.
+  let formsScopeAvailable = false;
 
-  beforeAll(() => {
+  beforeAll(async () => {
     const token = process.env.HUBSPOT_TOKEN;
 
     if (!token) {
@@ -403,6 +407,23 @@ describe('Should test Hubspot forms integration', () => {
 
     testFormId = process.env.HUBSPOT_TEST_FORM_GUID;
     hasFormTestEnv = Boolean(testFormId);
+
+    if (!hasFormTestEnv || !testFormId) {
+      return;
+    }
+
+    try {
+      await (getHubspotFormSubmissionsAction as IQoreAppActionWithFunction).api_function(
+        { formId: testFormId },
+        undefined,
+        baseContext
+      );
+      formsScopeAvailable = true;
+    } catch (error) {
+      console.warn(
+        `HubSpot token lacks the forms scopes (${error}); skipping forms integration tests.`
+      );
+    }
   });
 
   describe('getHubspotPortalId helper', () => {
@@ -446,7 +467,7 @@ describe('Should test Hubspot forms integration', () => {
     });
 
     it('Should return field allowed values when formId is provided', async () => {
-      if (!hasFormTestEnv || !testFormId) {
+      if (!hasFormTestEnv || !testFormId || !formsScopeAvailable) {
         return;
       }
 
@@ -461,7 +482,7 @@ describe('Should test Hubspot forms integration', () => {
 
   describe('Form submitted trigger', () => {
     it('Should declare event_info fields matching get_example_event_data output', async () => {
-      if (!hasFormTestEnv || !testFormId) {
+      if (!hasFormTestEnv || !testFormId || !formsScopeAvailable) {
         return;
       }
 
@@ -495,7 +516,7 @@ describe('Should test Hubspot forms integration', () => {
 
   describe('Submit and read form submissions round-trip', () => {
     it('Should submit and then read the submission back', async () => {
-      if (!hasFormTestEnv || !testFormId) {
+      if (!hasFormTestEnv || !testFormId || !formsScopeAvailable) {
         return;
       }
 

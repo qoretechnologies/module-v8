@@ -4,6 +4,7 @@ import { getContentfulScopedClient } from '../../client';
 import { CONTENTFUL_APP_NAME, ContentfulError } from '../../constants';
 import { contentfulBaseOptions } from '../../helpers/shared-options';
 import { getContentfulAssetAllowedValues } from '../../helpers/get-asset-allowed-values';
+import { ensureAssetProcessed } from '../../helpers/contentful-type-mapping';
 import { ContentfulPublishResponseType } from '../../response-types';
 
 const action = 'publish_asset';
@@ -34,7 +35,8 @@ const PublishAsset = QoreAppCreator.createLocalizedAction<typeof options>({
 
     try {
       const client = getContentfulScopedClient(context, space_id, environmentId);
-      const asset = await client.asset.get({ assetId: asset_id });
+      // An asset whose file is not yet processed cannot be published (badFileUrl); make sure it is.
+      const asset = await ensureAssetProcessed(client, asset_id);
 
       const published = await client.asset.publish(
         { assetId: asset_id },

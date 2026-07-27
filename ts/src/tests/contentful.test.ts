@@ -729,7 +729,9 @@ describe('Should test Contentful actions', () => {
           title: `Test Asset ${Date.now()}`,
           description: 'Test asset created by integration tests',
           file_name: 'test-image.png',
-          file_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/100px-PNG_transparency_demonstration_1.png',
+          // Use a small image from a host Contentful's server-side fetcher can ingest quickly;
+          // some hosts (e.g. Wikimedia) block/rate-limit it and leave the asset unprocessable.
+          file_url: 'https://dummyimage.com/60x60/000/fff.png',
           content_type: 'image/png',
           publish: false,
         },

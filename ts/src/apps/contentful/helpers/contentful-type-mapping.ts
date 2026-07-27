@@ -116,6 +116,76 @@ export const flattenAsset = <
   };
 };
 
+type AssetFileLocale = { url?: string; upload?: string };
+
+type ProcessableAsset = {
+  sys: { id: string; version: number };
+  fields: { file?: Record<string, AssetFileLocale> };
+};
+
+type ContentfulAssetProcessingClient = {
+  asset: {
+    get: (params: { assetId: string }) => Promise<ProcessableAsset>;
+    processForAllLocales: (
+      params: Record<string, unknown>,
+      asset: ProcessableAsset,
+      options?: { processingCheckWait?: number; processingCheckRetries?: number }
+    ) => Promise<ProcessableAsset>;
+  };
+};
+
+/**
+ * Returns true once every locale of the asset's file has been processed (rehosted by Contentful,
+ * i.e. exposes a `url` rather than only an `upload` source).
+ */
+const isAssetProcessed = (asset: ProcessableAsset): boolean => {
+  const fileLocales = asset.fields?.file;
+
+  if (!fileLocales) {
+    return false;
+  }
+
+  const locales = Object.values(fileLocales);
+
+  return locales.length > 0 && locales.every((file) => !!file?.url);
+};
+
+/**
+ * Ensures an asset's uploaded file has been processed by Contentful before it is published.
+ * Contentful rejects publishing an asset whose file is still an un-rehosted upload URL
+ * (`ValidationFailed: badFileUrl`). Returns the processed asset (with a valid `url`), triggering
+ * processing and polling if needed. Throws if processing does not complete in time.
+ */
+export const ensureAssetProcessed = async (
+  client: ContentfulAssetProcessingClient,
+  assetId: string
+): Promise<ProcessableAsset> => {
+  let asset = await client.asset.get({ assetId });
+
+  if (isAssetProcessed(asset)) {
+    return asset;
+  }
+
+  try {
+    await client.asset.processForAllLocales({}, asset, {
+      processingCheckWait: 2000,
+      processingCheckRetries: 20,
+    });
+  } catch {
+    // Processing may report a timeout but still complete server-side; validate via a fresh fetch.
+  }
+
+  asset = await client.asset.get({ assetId });
+
+  if (!isAssetProcessed(asset)) {
+    throw new ContentfulError(
+      `Asset ${assetId} file has not finished processing and cannot be published yet`
+    );
+  }
+
+  return asset;
+};
+
 /**
  * Maps Contentful field types to Qore types.
  */

@@ -3,7 +3,7 @@ import { getQoreContextRequiredValues } from '../../../../global/helpers';
 import { getContentfulScopedClient } from '../../client';
 import { CONTENTFUL_APP_NAME, ContentfulError } from '../../constants';
 import { contentfulBaseOptions } from '../../helpers/shared-options';
-import { flattenAsset, getDefaultLocale } from '../../helpers/contentful-type-mapping';
+import { ensureAssetProcessed, flattenAsset, getDefaultLocale } from '../../helpers/contentful-type-mapping';
 import { ContentfulAssetResponseType } from '../../response-types';
 
 const action = 'create_asset';
@@ -90,18 +90,9 @@ const CreateAsset = QoreAppCreator.createLocalizedAction<typeof options>({
         }
       );
 
-      // Trigger asset processing and poll until complete
-      try {
-        await client.asset.processForLocale(
-          {} as any, asset, defaultLocale,
-          { processingCheckWait: 3000, processingCheckRetries: 10 }
-        );
-      } catch {
-        // Processing may time out but still succeed — check below
-      }
-
-      // Fetch the asset to check if processing completed
-      asset = await client.asset.get({ assetId: asset.sys.id });
+      // Ensure the uploaded file is processed (rehosted by Contentful) before returning; an
+      // unprocessed asset holds only an upload URL and cannot be published.
+      asset = (await ensureAssetProcessed(client, asset.sys.id)) as typeof asset;
 
       if (shouldPublish) {
         asset = await client.asset.publish(

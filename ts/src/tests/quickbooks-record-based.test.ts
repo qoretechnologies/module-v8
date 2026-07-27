@@ -687,9 +687,9 @@ describe('QuickBooks Record-Based', () => {
 
       const filtered = filterRecordsClientSide(mockRecords, where);
       expect(filtered.length).toBe(2);
-      expect(filtered.every((r) => r.Email !== null && r.Email !== '' && r.Email !== undefined)).toBe(
-        true
-      );
+      expect(
+        filtered.every((r) => r.Email !== null && r.Email !== '' && r.Email !== undefined)
+      ).toBe(true);
     });
 
     it('Should filter with is-not-set operator', () => {
@@ -829,7 +829,8 @@ describe('QuickBooks Record-Based', () => {
 
       const formBody = Object.keys(data)
         .map(
-          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key as keyof typeof data])}`
+          (key) =>
+            `${encodeURIComponent(key)}=${encodeURIComponent(data[key as keyof typeof data])}`
         )
         .join('&');
 
@@ -865,598 +866,502 @@ describe('QuickBooks Record-Based', () => {
     let createdInvoiceId: string | undefined;
     let testCustomerId: string | undefined;
 
-    it(
-      'Should get table list',
-      async () => {
-        if (!hasCredentials) {
-          console.warn('Skipping: credentials not set');
-          return;
+    it('Should get table list', async () => {
+      if (!hasCredentials) {
+        return;
+      }
+
+      const tables = await getQuickbooksTableList(base_context);
+
+      expect(tables).toBeDefined();
+      expect(Array.isArray(tables)).toBe(true);
+      expect(tables.length).toBe(19);
+      expect(tables).toContain('Customer');
+      expect(tables).toContain('Invoice');
+    }, 30000);
+
+    it('Should get record type for Customer', async () => {
+      if (!hasCredentials) {
+        return;
+      }
+
+      const recordType = await getQuickbooksRecordType(base_context, 'Customer');
+
+      expect(recordType).toBeDefined();
+      expect(recordType.type).toBe('hash');
+
+      if (recordType.type !== 'hash' || !('fields' in recordType) || !recordType.fields) {
+        throw new Error('Record type should be a hash with fields');
+      }
+
+      expect(recordType.fields.Id).toBeDefined();
+      expect(recordType.fields.DisplayName).toBeDefined();
+    }, 30000);
+
+    it('Should throw for unknown entity type', async () => {
+      if (!hasCredentials) {
+        return;
+      }
+
+      await expect(async () => {
+        await getQuickbooksRecordType(base_context, 'InvalidEntity');
+      }).rejects.toThrow(QuickbooksRecordError);
+    }, 30000);
+
+    it('Should search customers with no filter', async () => {
+      if (!hasCredentials) {
+        return;
+      }
+
+      const iterator = await searchQuickbooksRecords(base_context, undefined, {
+        table: 'Customer',
+      });
+
+      expect(iterator).toBeDefined();
+      expect(typeof iterator).toBe('function');
+
+      const batch = await iterator(base_context, 10);
+
+      if (batch) {
+        const records = mapColumnFormatToObject(batch);
+        expect(Array.isArray(records)).toBe(true);
+
+        if (records.length > 0) {
+          expect(records[0].Id).toBeDefined();
+          expect(records[0].DisplayName).toBeDefined();
+
+          // Save a customer ID for later tests
+          testCustomerId = records[0].Id as string;
         }
-
-        const tables = await getQuickbooksTableList(base_context);
-
-        expect(tables).toBeDefined();
-        expect(Array.isArray(tables)).toBe(true);
-        expect(tables.length).toBe(19);
-        expect(tables).toContain('Customer');
-        expect(tables).toContain('Invoice');
-      },
-      30000
-    );
-
-    it(
-      'Should get record type for Customer',
-      async () => {
-        if (!hasCredentials) {
-          console.warn('Skipping: credentials not set');
-          return;
-        }
-
-        const recordType = await getQuickbooksRecordType(base_context, 'Customer');
-
-        expect(recordType).toBeDefined();
-        expect(recordType.type).toBe('hash');
-
-        if (recordType.type !== 'hash' || !('fields' in recordType) || !recordType.fields) {
-          throw new Error('Record type should be a hash with fields');
-        }
-
-        expect(recordType.fields.Id).toBeDefined();
-        expect(recordType.fields.DisplayName).toBeDefined();
-      },
-      30000
-    );
-
-    it(
-      'Should throw for unknown entity type',
-      async () => {
-        if (!hasCredentials) {
-          console.warn('Skipping: credentials not set');
-          return;
-        }
-
-        await expect(async () => {
-          await getQuickbooksRecordType(base_context, 'InvalidEntity');
-        }).rejects.toThrow(QuickbooksRecordError);
-      },
-      30000
-    );
-
-    it(
-      'Should search customers with no filter',
-      async () => {
-        if (!hasCredentials) {
-          console.warn('Skipping: credentials not set');
-          return;
-        }
-
-        const iterator = await searchQuickbooksRecords(base_context, undefined, {
-          table: 'Customer',
-        });
-
-        expect(iterator).toBeDefined();
-        expect(typeof iterator).toBe('function');
-
-        const batch = await iterator(base_context, 10);
-
-        if (batch) {
-          const records = mapColumnFormatToObject(batch);
-          expect(Array.isArray(records)).toBe(true);
-
-          if (records.length > 0) {
-            expect(records[0].Id).toBeDefined();
-            expect(records[0].DisplayName).toBeDefined();
-
-            // Save a customer ID for later tests
-            testCustomerId = records[0].Id as string;
-          }
-        }
-      },
-      60000
-    );
-
-    it(
-      'Should search customers with == filter',
-      async () => {
-        if (!hasCredentials || !testCustomerId) {
-          console.warn('Skipping: credentials not set or no test customer');
-          return;
-        }
-
-        const where = {
-          exp: '==',
-          args: [
-            { type_code: 'field reference', field: 'Id' },
-            { type_code: 'value', value: testCustomerId },
-          ],
-        } as any;
-
-        const iterator = await searchQuickbooksRecords(base_context, where, {
-          table: 'Customer',
-        });
-
-        const batch = await iterator(base_context, 10);
-
-        expect(batch).not.toBeNull();
-        if (batch) {
-          const records = mapColumnFormatToObject(batch);
-          expect(records.length).toBe(1);
-          expect(records[0].Id).toBe(testCustomerId);
-        }
-      },
-      60000
-    );
-
-    it(
-      'Should search customers with contains filter',
-      async () => {
-        if (!hasCredentials) {
-          console.warn('Skipping: credentials not set');
-          return;
-        }
-
-        // Search for customers with 'a' in their name (very common)
-        const where = {
-          exp: 'contains',
-          args: [
-            { type_code: 'field reference', field: 'DisplayName' },
-            { type_code: 'value', value: 'a' },
-          ],
-        } as any;
-
-        const iterator = await searchQuickbooksRecords(base_context, where, {
-          table: 'Customer',
-        });
-
-        const batch = await iterator(base_context, 10);
-
-        if (batch) {
-          const records = mapColumnFormatToObject(batch);
-          expect(Array.isArray(records)).toBe(true);
-          // All returned records should contain 'a' in their name (case-insensitive is done server side via LIKE)
-        }
-      },
-      60000
-    );
-
-    it(
-      'Should search customers with AND conditions',
-      async () => {
-        if (!hasCredentials) {
-          console.warn('Skipping: credentials not set');
-          return;
-        }
-
-        const where = {
-          exp: '&&',
-          args: [
-            {
-              exp: 'contains',
-              args: [
-                { type_code: 'field reference', field: 'DisplayName' },
-                { type_code: 'value', value: '' },
-              ],
-            },
-            {
-              exp: '>=',
-              args: [
-                { type_code: 'field reference', field: 'Balance' },
-                { type_code: 'value', value: 0 },
-              ],
-            },
-          ],
-        } as any;
-
-        const iterator = await searchQuickbooksRecords(base_context, where, {
-          table: 'Customer',
-        });
-
-        const batch = await iterator(base_context, 10);
-
-        if (batch) {
-          const records = mapColumnFormatToObject(batch);
-          expect(Array.isArray(records)).toBe(true);
-        }
-      },
-      60000
-    );
-
-    it(
-      'Should search accounts with orderBy',
-      async () => {
-        if (!hasCredentials) {
-          console.warn('Skipping: credentials not set');
-          return;
-        }
-
-        const iterator = await searchQuickbooksRecords(base_context, undefined, {
-          table: 'Account',
-          orderBy: { field: 'Name', direction: 'asc' },
-        });
-
-        expect(iterator).toBeDefined();
-        const batch = await iterator(base_context, 10);
-
-        if (batch) {
-          const records = mapColumnFormatToObject(batch);
-          expect(Array.isArray(records)).toBe(true);
-        }
-      },
-      60000
-    );
-
-    it(
-      'Should create a customer record',
-      async () => {
-        if (!hasCredentials) {
-          console.warn('Skipping: credentials not set');
-          return;
-        }
-
-        const timestamp = Date.now();
-        const records = {
-          DisplayName: [`RecordTest Customer ${timestamp}`],
-          CompanyName: [`Test Company ${timestamp}`],
-          PrimaryEmailAddr: [{ Address: `test-${timestamp}@example.com` }],
-        };
-
-        const result = await createQuickbooksRecords(base_context, records, {
-          table: 'Customer',
-        });
-
-        expect(result).toBeDefined();
-        expect(result.Id).toBeDefined();
-        expect(Array.isArray(result.Id)).toBe(true);
-        expect(result.Id.length).toBe(1);
-
-        // Save for later cleanup/tests
-        testCustomerId = result.Id[0] as string;
-      },
-      60000
-    );
-
-    it(
-      'Should update a customer record',
-      async () => {
-        if (!hasCredentials || !testCustomerId) {
-          console.warn('Skipping: credentials not set or no test customer');
-          return;
-        }
-
-        const timestamp = Date.now();
-        const updateSet = {
-          CompanyName: `Updated Company ${timestamp}`,
-        };
-
-        const where = {
-          exp: '==',
-          args: [
-            { type_code: 'field reference', field: 'Id' },
-            { type_code: 'value', value: testCustomerId },
-          ],
-        } as any;
-
-        const updatedCount = await updateQuickbooksRecords(base_context, updateSet, where, {
-          table: 'Customer',
-        });
-
-        expect(updatedCount).toBe(1);
-
-        // Verify the update by searching
-        await delay(1000);
-        const iterator = await searchQuickbooksRecords(base_context, where, {
-          table: 'Customer',
-        });
-
-        const batch = await iterator(base_context, 10);
-
-        if (batch) {
-          const records = mapColumnFormatToObject(batch);
-          expect(records.length).toBe(1);
-          expect(records[0].CompanyName).toBe(`Updated Company ${timestamp}`);
-        }
-      },
-      120000
-    );
-
-    it(
-      'Should return 0 when updating with empty set',
-      async () => {
-        if (!hasCredentials || !testCustomerId) {
-          console.warn('Skipping: credentials not set or no test customer');
-          return;
-        }
-
-        const where = {
-          exp: '==',
-          args: [
-            { type_code: 'field reference', field: 'Id' },
-            { type_code: 'value', value: testCustomerId },
-          ],
-        } as any;
-
-        const updatedCount = await updateQuickbooksRecords(base_context, {}, where, {
-          table: 'Customer',
-        });
-
-        expect(updatedCount).toBe(0);
-      },
-      60000
-    );
-
-    it(
-      'Should return 0 when deleting non-matching records',
-      async () => {
-        if (!hasCredentials) {
-          console.warn('Skipping: credentials not set');
-          return;
-        }
-
-        const where = {
-          exp: '==',
-          args: [
-            { type_code: 'field reference', field: 'Id' },
-            { type_code: 'value', value: '999999999' },
-          ],
-        } as any;
-
-        const deletedCount = await deleteQuickbooksRecords(base_context, where, {
-          table: 'Invoice',
-        });
-
-        expect(deletedCount).toBe(0);
-      },
-      60000
-    );
-
-    it(
-      'Should throw when deleting entity that does not support deletion',
-      async () => {
-        if (!hasCredentials) {
-          console.warn('Skipping: credentials not set');
-          return;
-        }
-
-        const where = {
-          exp: '==',
-          args: [
-            { type_code: 'field reference', field: 'Id' },
-            { type_code: 'value', value: '1' },
-          ],
-        } as any;
-
-        await expect(async () => {
-          await deleteQuickbooksRecords(base_context, where, { table: 'Customer' });
-        }).rejects.toThrow(/does not support deletion/);
-      },
-      30000
-    );
-
-    it(
-      'Should throw when deleting without WHERE condition',
-      async () => {
-        if (!hasCredentials) {
-          console.warn('Skipping: credentials not set');
-          return;
-        }
-
-        await expect(async () => {
-          await deleteQuickbooksRecords(base_context, undefined, { table: 'Invoice' });
-        }).rejects.toThrow(/WHERE condition is required/);
-      },
-      30000
-    );
-
-    it(
-      'Should throw when table name is missing',
-      async () => {
-        if (!hasCredentials) {
-          console.warn('Skipping: credentials not set');
-          return;
-        }
-
-        await expect(async () => {
-          await searchQuickbooksRecords(base_context, undefined, {} as any);
-        }).rejects.toThrow(/Table name is required/);
-
-        await expect(async () => {
-          await createQuickbooksRecords(base_context, { Name: ['test'] }, {} as any);
-        }).rejects.toThrow(/Table name is required/);
-
-        await expect(async () => {
-          await updateQuickbooksRecords(
-            base_context,
-            { Name: 'test' },
-            { exp: '==', args: [] } as any,
-            {} as any
-          );
-        }).rejects.toThrow(/Table name is required/);
-
-        await expect(async () => {
-          await deleteQuickbooksRecords(
-            base_context,
-            { exp: '==', args: [] } as any,
-            {} as any
-          );
-        }).rejects.toThrow(/Table name is required/);
-      },
-      30000
-    );
-
-    it(
-      'Should create and then delete an invoice',
-      async () => {
-        if (!hasCredentials) {
-          console.warn('Skipping: credentials not set');
-          return;
-        }
-
-        // First, we need a customer to create an invoice for
-        // Search for an existing customer
-        const customerIterator = await searchQuickbooksRecords(base_context, undefined, {
-          table: 'Customer',
-          limit: 1,
-        });
-
-        const customerBatch = await customerIterator(base_context, 1);
-
-        if (!customerBatch) {
-          console.warn('No customers found, skipping invoice create/delete test');
-          return;
-        }
-
-        const customers = mapColumnFormatToObject(customerBatch);
-
-        if (customers.length === 0) {
-          console.warn('No customers found, skipping invoice create/delete test');
-          return;
-        }
-
-        const customerId = customers[0].Id as string;
-
-        // Create an invoice
-        const invoiceRecords = {
-          CustomerRef: [{ value: customerId }],
-          Line: [
-            [
-              {
-                Amount: 100,
-                DetailType: 'SalesItemLineDetail',
-                SalesItemLineDetail: {
-                  ItemRef: { value: '1', name: 'Services' },
-                },
-              },
+      }
+    }, 60000);
+
+    it('Should search customers with == filter', async () => {
+      if (!hasCredentials || !testCustomerId) {
+        console.warn('Skipping: credentials not set or no test customer');
+        return;
+      }
+
+      const where = {
+        exp: '==',
+        args: [
+          { type_code: 'field reference', field: 'Id' },
+          { type_code: 'value', value: testCustomerId },
+        ],
+      } as any;
+
+      const iterator = await searchQuickbooksRecords(base_context, where, {
+        table: 'Customer',
+      });
+
+      const batch = await iterator(base_context, 10);
+
+      expect(batch).not.toBeNull();
+      if (batch) {
+        const records = mapColumnFormatToObject(batch);
+        expect(records.length).toBe(1);
+        expect(records[0].Id).toBe(testCustomerId);
+      }
+    }, 60000);
+
+    it('Should search customers with contains filter', async () => {
+      if (!hasCredentials) {
+        return;
+      }
+
+      // Search for customers with 'a' in their name (very common)
+      const where = {
+        exp: 'contains',
+        args: [
+          { type_code: 'field reference', field: 'DisplayName' },
+          { type_code: 'value', value: 'a' },
+        ],
+      } as any;
+
+      const iterator = await searchQuickbooksRecords(base_context, where, {
+        table: 'Customer',
+      });
+
+      const batch = await iterator(base_context, 10);
+
+      if (batch) {
+        const records = mapColumnFormatToObject(batch);
+        expect(Array.isArray(records)).toBe(true);
+        // All returned records should contain 'a' in their name (case-insensitive is done server side via LIKE)
+      }
+    }, 60000);
+
+    it('Should search customers with AND conditions', async () => {
+      if (!hasCredentials) {
+        return;
+      }
+
+      const where = {
+        exp: '&&',
+        args: [
+          {
+            exp: 'contains',
+            args: [
+              { type_code: 'field reference', field: 'DisplayName' },
+              { type_code: 'value', value: '' },
             ],
+          },
+          {
+            exp: '>=',
+            args: [
+              { type_code: 'field reference', field: 'Balance' },
+              { type_code: 'value', value: 0 },
+            ],
+          },
+        ],
+      } as any;
+
+      const iterator = await searchQuickbooksRecords(base_context, where, {
+        table: 'Customer',
+      });
+
+      const batch = await iterator(base_context, 10);
+
+      if (batch) {
+        const records = mapColumnFormatToObject(batch);
+        expect(Array.isArray(records)).toBe(true);
+      }
+    }, 60000);
+
+    it('Should search accounts with orderBy', async () => {
+      if (!hasCredentials) {
+        return;
+      }
+
+      const iterator = await searchQuickbooksRecords(base_context, undefined, {
+        table: 'Account',
+        orderBy: { field: 'Name', direction: 'asc' },
+      });
+
+      expect(iterator).toBeDefined();
+      const batch = await iterator(base_context, 10);
+
+      if (batch) {
+        const records = mapColumnFormatToObject(batch);
+        expect(Array.isArray(records)).toBe(true);
+      }
+    }, 60000);
+
+    it('Should create a customer record', async () => {
+      if (!hasCredentials) {
+        return;
+      }
+
+      const timestamp = Date.now();
+      const records = {
+        DisplayName: [`RecordTest Customer ${timestamp}`],
+        CompanyName: [`Test Company ${timestamp}`],
+        PrimaryEmailAddr: [{ Address: `test-${timestamp}@example.com` }],
+      };
+
+      const result = await createQuickbooksRecords(base_context, records, {
+        table: 'Customer',
+      });
+
+      expect(result).toBeDefined();
+      expect(result.Id).toBeDefined();
+      expect(Array.isArray(result.Id)).toBe(true);
+      expect(result.Id.length).toBe(1);
+
+      // Save for later cleanup/tests
+      testCustomerId = result.Id[0] as string;
+    }, 60000);
+
+    it('Should update a customer record', async () => {
+      if (!hasCredentials || !testCustomerId) {
+        console.warn('Skipping: credentials not set or no test customer');
+        return;
+      }
+
+      const timestamp = Date.now();
+      const updateSet = {
+        CompanyName: `Updated Company ${timestamp}`,
+      };
+
+      const where = {
+        exp: '==',
+        args: [
+          { type_code: 'field reference', field: 'Id' },
+          { type_code: 'value', value: testCustomerId },
+        ],
+      } as any;
+
+      const updatedCount = await updateQuickbooksRecords(base_context, updateSet, where, {
+        table: 'Customer',
+      });
+
+      expect(updatedCount).toBe(1);
+
+      // Verify the update by searching
+      await delay(1000);
+      const iterator = await searchQuickbooksRecords(base_context, where, {
+        table: 'Customer',
+      });
+
+      const batch = await iterator(base_context, 10);
+
+      if (batch) {
+        const records = mapColumnFormatToObject(batch);
+        expect(records.length).toBe(1);
+        expect(records[0].CompanyName).toBe(`Updated Company ${timestamp}`);
+      }
+    }, 120000);
+
+    it('Should return 0 when updating with empty set', async () => {
+      if (!hasCredentials || !testCustomerId) {
+        console.warn('Skipping: credentials not set or no test customer');
+        return;
+      }
+
+      const where = {
+        exp: '==',
+        args: [
+          { type_code: 'field reference', field: 'Id' },
+          { type_code: 'value', value: testCustomerId },
+        ],
+      } as any;
+
+      const updatedCount = await updateQuickbooksRecords(base_context, {}, where, {
+        table: 'Customer',
+      });
+
+      expect(updatedCount).toBe(0);
+    }, 60000);
+
+    it('Should return 0 when deleting non-matching records', async () => {
+      if (!hasCredentials) {
+        return;
+      }
+
+      const where = {
+        exp: '==',
+        args: [
+          { type_code: 'field reference', field: 'Id' },
+          { type_code: 'value', value: '999999999' },
+        ],
+      } as any;
+
+      const deletedCount = await deleteQuickbooksRecords(base_context, where, {
+        table: 'Invoice',
+      });
+
+      expect(deletedCount).toBe(0);
+    }, 60000);
+
+    it('Should throw when deleting entity that does not support deletion', async () => {
+      if (!hasCredentials) {
+        return;
+      }
+
+      const where = {
+        exp: '==',
+        args: [
+          { type_code: 'field reference', field: 'Id' },
+          { type_code: 'value', value: '1' },
+        ],
+      } as any;
+
+      await expect(async () => {
+        await deleteQuickbooksRecords(base_context, where, { table: 'Customer' });
+      }).rejects.toThrow(/does not support deletion/);
+    }, 30000);
+
+    it('Should throw when deleting without WHERE condition', async () => {
+      if (!hasCredentials) {
+        return;
+      }
+
+      await expect(async () => {
+        await deleteQuickbooksRecords(base_context, undefined, { table: 'Invoice' });
+      }).rejects.toThrow(/WHERE condition is required/);
+    }, 30000);
+
+    it('Should throw when table name is missing', async () => {
+      if (!hasCredentials) {
+        return;
+      }
+
+      await expect(async () => {
+        await searchQuickbooksRecords(base_context, undefined, {} as any);
+      }).rejects.toThrow(/Table name is required/);
+
+      await expect(async () => {
+        await createQuickbooksRecords(base_context, { Name: ['test'] }, {} as any);
+      }).rejects.toThrow(/Table name is required/);
+
+      await expect(async () => {
+        await updateQuickbooksRecords(
+          base_context,
+          { Name: 'test' },
+          { exp: '==', args: [] } as any,
+          {} as any
+        );
+      }).rejects.toThrow(/Table name is required/);
+
+      await expect(async () => {
+        await deleteQuickbooksRecords(base_context, { exp: '==', args: [] } as any, {} as any);
+      }).rejects.toThrow(/Table name is required/);
+    }, 30000);
+
+    it('Should create and then delete an invoice', async () => {
+      if (!hasCredentials) {
+        return;
+      }
+
+      // First, we need a customer to create an invoice for
+      // Search for an existing customer
+      const customerIterator = await searchQuickbooksRecords(base_context, undefined, {
+        table: 'Customer',
+        limit: 1,
+      });
+
+      const customerBatch = await customerIterator(base_context, 1);
+
+      if (!customerBatch) {
+        console.warn('No customers found, skipping invoice create/delete test');
+        return;
+      }
+
+      const customers = mapColumnFormatToObject(customerBatch);
+
+      if (customers.length === 0) {
+        console.warn('No customers found, skipping invoice create/delete test');
+        return;
+      }
+
+      const customerId = customers[0].Id as string;
+
+      // Create an invoice
+      const invoiceRecords = {
+        CustomerRef: [{ value: customerId }],
+        Line: [
+          [
+            {
+              Amount: 100,
+              DetailType: 'SalesItemLineDetail',
+              SalesItemLineDetail: {
+                ItemRef: { value: '1', name: 'Services' },
+              },
+            },
           ],
-        };
+        ],
+      };
 
-        const createResult = await createQuickbooksRecords(base_context, invoiceRecords, {
-          table: 'Invoice',
-        });
+      const createResult = await createQuickbooksRecords(base_context, invoiceRecords, {
+        table: 'Invoice',
+      });
 
-        expect(createResult).toBeDefined();
-        expect(createResult.Id).toBeDefined();
-        expect(Array.isArray(createResult.Id)).toBe(true);
-        expect(createResult.Id.length).toBe(1);
+      expect(createResult).toBeDefined();
+      expect(createResult.Id).toBeDefined();
+      expect(Array.isArray(createResult.Id)).toBe(true);
+      expect(createResult.Id.length).toBe(1);
 
-        createdInvoiceId = createResult.Id[0] as string;
+      createdInvoiceId = createResult.Id[0] as string;
 
-        // Wait for the record to be committed
-        await delay(2000);
+      // Wait for the record to be committed
+      await delay(2000);
 
-        // Now delete the invoice
-        const where = {
-          exp: '==',
-          args: [
-            { type_code: 'field reference', field: 'Id' },
-            { type_code: 'value', value: createdInvoiceId },
-          ],
-        } as any;
+      // Now delete the invoice
+      const where = {
+        exp: '==',
+        args: [
+          { type_code: 'field reference', field: 'Id' },
+          { type_code: 'value', value: createdInvoiceId },
+        ],
+      } as any;
 
-        const deletedCount = await deleteQuickbooksRecords(base_context, where, {
-          table: 'Invoice',
-        });
+      const deletedCount = await deleteQuickbooksRecords(base_context, where, {
+        table: 'Invoice',
+      });
 
-        expect(deletedCount).toBe(1);
-        createdInvoiceId = undefined; // Cleaned up
-      },
-      120000
-    );
+      expect(deletedCount).toBe(1);
+      createdInvoiceId = undefined; // Cleaned up
+    }, 120000);
 
-    it(
-      'Should search items (products/services)',
-      async () => {
-        if (!hasCredentials) {
-          console.warn('Skipping: credentials not set');
-          return;
+    it('Should search items (products/services)', async () => {
+      if (!hasCredentials) {
+        return;
+      }
+
+      const iterator = await searchQuickbooksRecords(base_context, undefined, {
+        table: 'Item',
+      });
+
+      expect(iterator).toBeDefined();
+      const batch = await iterator(base_context, 10);
+
+      if (batch) {
+        const records = mapColumnFormatToObject(batch);
+        expect(Array.isArray(records)).toBe(true);
+
+        if (records.length > 0) {
+          expect(records[0].Id).toBeDefined();
+          expect(records[0].Name).toBeDefined();
         }
+      }
+    }, 60000);
 
-        const iterator = await searchQuickbooksRecords(base_context, undefined, {
-          table: 'Item',
-        });
+    it('Should search journal entries', async () => {
+      if (!hasCredentials) {
+        return;
+      }
 
-        expect(iterator).toBeDefined();
-        const batch = await iterator(base_context, 10);
+      const iterator = await searchQuickbooksRecords(base_context, undefined, {
+        table: 'JournalEntry',
+      });
 
-        if (batch) {
-          const records = mapColumnFormatToObject(batch);
-          expect(Array.isArray(records)).toBe(true);
+      expect(iterator).toBeDefined();
+      const batch = await iterator(base_context, 10);
 
-          if (records.length > 0) {
-            expect(records[0].Id).toBeDefined();
-            expect(records[0].Name).toBeDefined();
+      if (batch) {
+        const records = mapColumnFormatToObject(batch);
+        expect(Array.isArray(records)).toBe(true);
+
+        if (records.length > 0) {
+          expect(records[0].Id).toBeDefined();
+        }
+      }
+    }, 60000);
+
+    it('Should handle pagination correctly', async () => {
+      if (!hasCredentials) {
+        return;
+      }
+
+      // Request a very small batch to force pagination
+      const iterator = await searchQuickbooksRecords(base_context, undefined, {
+        table: 'Account',
+        limit: 100,
+      });
+
+      expect(iterator).toBeDefined();
+
+      // Get first batch
+      const batch1 = await iterator(base_context, 2);
+
+      if (batch1) {
+        const records1 = mapColumnFormatToObject(batch1);
+        expect(records1.length).toBeLessThanOrEqual(2);
+
+        // Get second batch
+        const batch2 = await iterator(base_context, 2);
+
+        if (batch2) {
+          const records2 = mapColumnFormatToObject(batch2);
+          expect(records2.length).toBeLessThanOrEqual(2);
+
+          // Ensure different records returned (no overlap)
+          if (records1.length > 0 && records2.length > 0) {
+            expect(records1[0].Id).not.toBe(records2[0].Id);
           }
         }
-      },
-      60000
-    );
-
-    it(
-      'Should search journal entries',
-      async () => {
-        if (!hasCredentials) {
-          console.warn('Skipping: credentials not set');
-          return;
-        }
-
-        const iterator = await searchQuickbooksRecords(base_context, undefined, {
-          table: 'JournalEntry',
-        });
-
-        expect(iterator).toBeDefined();
-        const batch = await iterator(base_context, 10);
-
-        if (batch) {
-          const records = mapColumnFormatToObject(batch);
-          expect(Array.isArray(records)).toBe(true);
-
-          if (records.length > 0) {
-            expect(records[0].Id).toBeDefined();
-          }
-        }
-      },
-      60000
-    );
-
-    it(
-      'Should handle pagination correctly',
-      async () => {
-        if (!hasCredentials) {
-          console.warn('Skipping: credentials not set');
-          return;
-        }
-
-        // Request a very small batch to force pagination
-        const iterator = await searchQuickbooksRecords(base_context, undefined, {
-          table: 'Account',
-          limit: 100,
-        });
-
-        expect(iterator).toBeDefined();
-
-        // Get first batch
-        const batch1 = await iterator(base_context, 2);
-
-        if (batch1) {
-          const records1 = mapColumnFormatToObject(batch1);
-          expect(records1.length).toBeLessThanOrEqual(2);
-
-          // Get second batch
-          const batch2 = await iterator(base_context, 2);
-
-          if (batch2) {
-            const records2 = mapColumnFormatToObject(batch2);
-            expect(records2.length).toBeLessThanOrEqual(2);
-
-            // Ensure different records returned (no overlap)
-            if (records1.length > 0 && records2.length > 0) {
-              expect(records1[0].Id).not.toBe(records2[0].Id);
-            }
-          }
-        }
-      },
-      60000
-    );
+      }
+    }, 60000);
 
     // Cleanup: if any test-created records remain, attempt to clean up
     afterAll(async () => {
