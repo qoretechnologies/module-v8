@@ -463,8 +463,32 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libarrow-dev libparquet-dev
 
+      # Resolve the exact upstream commits this job builds; they form the cache key, so an
+      # unchanged upstream restores the toolchain and a moved one rebuilds it.
+      - name: Resolve upstream build inputs
+        id: build_inputs
+        run: |
+          {
+            echo "qore=$(git ls-remote https://github.com/qoretechnologies/qore.git refs/heads/develop | cut -f1)"
+            for m in yaml uuid json process; do
+              echo "module_${m}=$(git ls-remote https://github.com/qoretechnologies/module-${m}.git HEAD | cut -f1)"
+            done
+          } >> "$GITHUB_OUTPUT"
+
+      # Qore plus the yaml/uuid/json/process modules are installed for real AND staged into
+      # ~/qore-dist via DESTDIR, so a later run with the same upstream commits restores the
+      # whole toolchain with a copy instead of a ~15 minute rebuild. Staging under $HOME
+      # keeps actions/cache away from root-owned paths.
+      - name: Cache Qore toolchain
+        id: qore_cache
+        uses: actions/cache@v4
+        with:
+          path: ~/qore-dist
+          key: qore-dist-ubuntu24-llvm21-${{ steps.build_inputs.outputs.qore }}-${{ steps.build_inputs.outputs.module_yaml }}-${{ steps.build_inputs.outputs.module_uuid }}-${{ steps.build_inputs.outputs.module_json }}-${{ steps.build_inputs.outputs.module_process }}
+
       # Clone the Qore repository and build it
       - name: Clone and Build Qore
+        if: steps.qore_cache.outputs.cache-hit != 'true'
         run: |
           git clone --branch develop https://github.com/qoretechnologies/qore.git
           cd qore
@@ -477,6 +501,13 @@ jobs:
           # optimization we don't need; the qmods still load and run interpreted.
           V8_INCLUDE_DIR=/opt/nodejs/include/node NODE_LIB_DIR=/opt/nodejs/lib cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release -DQORE_BUILD_AOT_MODULES=OFF
           make -j$(nproc) && sudo make install
+          make install DESTDIR="$HOME/qore-dist"
+
+      # On a cache hit none of the build steps ran; lay the staged toolchain down over /
+      - name: Restore cached Qore toolchain
+        if: steps.qore_cache.outputs.cache-hit == 'true'
+        run: |
+          sudo cp -a "$HOME/qore-dist/." /
 
       #  Update library paths to ensure Qore can find its shared libraries
       - name: Update Library Path
@@ -491,6 +522,7 @@ jobs:
 
       # Clone and build yaml-module
       - name: Clone and build yaml module
+        if: steps.qore_cache.outputs.cache-hit != 'true'
         run: |
           git clone https://github.com/qoretechnologies/module-yaml.git
           cd module-yaml
@@ -498,9 +530,11 @@ jobs:
           cd build
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
           make && sudo make install
+          make install DESTDIR="$HOME/qore-dist"
 
       # Clone and build uuid-module
       - name: Clone and build uuid module
+        if: steps.qore_cache.outputs.cache-hit != 'true'
         run: |
           git clone https://github.com/qoretechnologies/module-uuid.git
           cd module-uuid
@@ -508,9 +542,11 @@ jobs:
           cd build
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
           make && sudo make install
+          make install DESTDIR="$HOME/qore-dist"
 
       # Clone and build json-module
       - name: Clone and build json-module
+        if: steps.qore_cache.outputs.cache-hit != 'true'
         run: |
           git clone https://github.com/qoretechnologies/module-json.git
           cd module-json
@@ -519,9 +555,11 @@ jobs:
           cd build
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
           make && sudo make install
+          make install DESTDIR="$HOME/qore-dist"
 
       # Clone and build process-module
       - name: Clone and build process-module
+        if: steps.qore_cache.outputs.cache-hit != 'true'
         run: |
           git clone https://github.com/qoretechnologies/module-process.git
           cd module-process
@@ -529,6 +567,7 @@ jobs:
           cd build
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
           make && sudo make install
+          make install DESTDIR="$HOME/qore-dist"
 
       # Build V8-module
       - name: Build V8-module
@@ -548,10 +587,15 @@ jobs:
           qore --enable-debug ts-action-interface.qtest -v
 
       # Install RestSchemaDataProvider module (not yet in Qore's CMakeLists.txt)
+      # Ships only in the qore source tree, so stage it into the dist as well — on a cache
+      # hit there is no qore/ checkout to copy it from, it comes back with the toolchain.
       - name: Install RestSchemaDataProvider module
+        if: steps.qore_cache.outputs.cache-hit != 'true'
         run: |
           echo "Installing RestSchemaDataProvider from qore source..."
           sudo cp -r qore/qlib/RestSchemaDataProvider /usr/local/share/qore-modules/
+          mkdir -p "$HOME/qore-dist/usr/local/share/qore-modules"
+          cp -r qore/qlib/RestSchemaDataProvider "$HOME/qore-dist/usr/local/share/qore-modules/"
           echo "Verifying installation..."
           ls -la /usr/local/share/qore-modules/RestSchemaDataProvider/
 
