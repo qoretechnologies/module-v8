@@ -195,29 +195,21 @@ env:
   GOOGLE_ADS_CUSTOMER_ID: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_ADS_CUSTOMER_ID }}
 
 jobs:
-  PullRequestTests:
+  # App catalogue TypeScript build + jest unit tests. Nothing here needs Qore, so this
+  # runs in parallel with the qore_tests job instead of ahead of it.
+  unit_tests:
     # The type of runner that the job will run on
     runs-on: ubuntu-24.04
+    outputs:
+      apps_to_check: ${{ steps.unit_tests.outputs.apps_to_check }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Get current time for the commit
-      - name: Get current time
-        uses: josStorer/get-current-time@v2.0.2
-        id: current_time
-        with:
-          format: YYYYMMDD-HH
-          utcOffset: "+01:00"
-
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Get repo
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
-
-      - name: Print head git commit message
-        id: get_head_commit_message
-        run: echo "HEAD_COMMIT_MESSAGE=$(git show -s --format=%s)" >> "$GITHUB_OUTPUT"
 
       - uses: actions/setup-node@v4
         with:
@@ -249,6 +241,7 @@ jobs:
 
       # Run App Catalogue unit tests
       - name: Run unit tests
+        id: unit_tests
         timeout-minutes: 60
         run: |
           cd ts
@@ -334,16 +327,43 @@ jobs:
           if apps:
               app_list = ", ".join(sorted(apps))
               print(f"::warning::App test suites need review (not blocking the pipeline): {app_list}")
-              gh_env = os.environ.get("GITHUB_ENV")
-              if gh_env:
-                  with open(gh_env, "a") as f:
-                      f.write(f"APPS_TO_CHECK={app_list}\n")
+              # Exported as a step output (not GITHUB_ENV) so the separate notify job can
+              # read it via needs.unit_tests.outputs.apps_to_check.
+              gh_out = os.environ.get("GITHUB_OUTPUT")
+              if gh_out:
+                  with open(gh_out, "a") as f:
+                      f.write(f"apps_to_check={app_list}\n")
 
           print("Continuing pipeline; test-suite failures reported to Discord.")
           sys.exit(0)
           PYEOF
         env:
           NODE_OPTIONS: "--max_old_space_size=16384"
+
+  # Qore toolchain + module-v8 build and its Qore-side tests. Runs in parallel with
+  # unit_tests: none of these steps depend on the jest suites, and previously they sat
+  # behind ~38 minutes of them in the same job.
+  qore_tests:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Get repo
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      # Required by the "Test catalogue actions" step at the end of this job (yarn test-build)
+      - name: Installing modules
+        run: |
+          cd ts
+          yarn install
 
       # Install system dependencies needed for building Qore and modules
       - name: Install dependencies
@@ -541,6 +561,32 @@ jobs:
           cd ts
           NODE_OPTIONS="--max_old_space_size=8192" yarn test-build && NODE_OPTIONS="--max_old_space_size=8192" QORE_TYPESCRIPT_ACTION_SCRIPTS=./dist/index.js QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS=./dist/index.js qore -l TypeScriptActionInterface -nX 1
 
+  # Single notification point for both jobs above. Runs even when one of them fails so
+  # the Discord webhook still fires exactly once per run.
+  notify:
+    needs: [unit_tests, qore_tests]
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      # Get current time for the commit
+      - name: Get current time
+        uses: josStorer/get-current-time@v2.0.2
+        id: current_time
+        with:
+          format: YYYYMMDD-HH
+          utcOffset: "+01:00"
+
+      # Shallow checkout: only needed to read the head commit message below
+      - name: Get repo
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 1
+
+      - name: Print head git commit message
+        id: get_head_commit_message
+        run: echo "HEAD_COMMIT_MESSAGE=$(git show -s --format=%s)" >> "$GITHUB_OUTPUT"
+
       # Notify Discord if Success
       - name: Discord notification success
         env:
@@ -549,8 +595,8 @@ jobs:
           DISCORD_AVATAR: "https://github.com/qoretechnologies/qorus-vscode/blob/95ad81fa8654fe83bb41f68f4de42ae088298e59/public/q-symbol-small.png?raw=true"
         uses: Ilshidur/action-discord@0.3.2
         with:
-          args: ":white_check_mark: Tests run #${{ github.run_number }} for [PR](${{ github.event.pull_request.html_url }}) triggered by ${{ github.triggering_actor }} *succeeded*, install the canary version via `yarn add @qoretechnologies/qorus-actions-catalogue@${{ steps.bump.outputs.version }}`.${{ env.APPS_TO_CHECK != '' && format(' :warning: **Apps with test failures — please check:** {0}', env.APPS_TO_CHECK) || '' }}"
-        if: success()
+          args: ":white_check_mark: Tests run #${{ github.run_number }} for [PR](${{ github.event.pull_request.html_url }}) triggered by ${{ github.triggering_actor }} *succeeded*, install the canary version via `yarn add @qoretechnologies/qorus-actions-catalogue@${{ steps.bump.outputs.version }}`.${{ needs.unit_tests.outputs.apps_to_check != '' && format(' :warning: **Apps with test failures — please check:** {0}', needs.unit_tests.outputs.apps_to_check) || '' }}"
+        if: needs.unit_tests.result == 'success' && needs.qore_tests.result == 'success'
 
       # Notify discord if failure
       - name: Discord notification failure
@@ -561,4 +607,4 @@ jobs:
         uses: Ilshidur/action-discord@0.3.2
         with:
           args: ":exclamation: Tests run #${{ github.run_number }} for [PR](${{ github.event.pull_request.html_url }}) triggered by ${{ github.triggering_actor }} *failed*!"
-        if: failure()
+        if: needs.unit_tests.result != 'success' || needs.qore_tests.result != 'success'
