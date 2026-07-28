@@ -201,7 +201,6 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-24.04
     outputs:
-      apps_to_check: ${{ steps.unit_tests.outputs.apps_to_check }}
       # Full breakdown (counts, and failing apps with the line that failed) for the notification
       summary_json: ${{ steps.unit_tests.outputs.summary_json }}
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -372,12 +371,6 @@ jobs:
           if apps:
               app_list = ", ".join(sorted(apps))
               print(f"::warning::App test suites need review (not blocking the pipeline): {app_list}")
-              # Exported as a step output (not GITHUB_ENV) so the separate notify job can
-              # read it via needs.unit_tests.outputs.apps_to_check.
-              gh_out = os.environ.get("GITHUB_OUTPUT")
-              if gh_out:
-                  with open(gh_out, "a") as f:
-                      f.write(f"apps_to_check={app_list}\n")
 
           print("Continuing pipeline; test-suite failures reported to Discord.")
           sys.exit(0)
@@ -668,14 +661,6 @@ jobs:
     if: always()
     runs-on: ubuntu-24.04
     steps:
-      # Get current time for the commit
-      - name: Get current time
-        uses: josStorer/get-current-time@v2.0.2
-        id: current_time
-        with:
-          format: YYYYMMDD-HH
-          utcOffset: "+01:00"
-
       # Shallow checkout: only needed to read the head commit message below
       - name: Get repo
         uses: actions/checkout@v4
