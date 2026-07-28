@@ -316,7 +316,11 @@ jobs:
                   if app:
                       hit = re.search(re.escape(app) + r"\.test\.ts:(\d+):", msgs)
                       where = transient_at if is_transient else real_at
-                      where.setdefault(app, int(hit.group(1)) if hit else None)
+                      # Keep the app even when this particular message carries no line, but let
+                      # a later failure that does have one fill it in. setdefault() alone would
+                      # pin the first None and lose a line the next failure could have supplied.
+                      if where.get(app) is None:
+                          where[app] = int(hit.group(1)) if hit else None
 
           if transient:
               print(f"::warning::{len(transient)} transient test failure(s) (timeouts/5xx/rate-limit):")
@@ -679,12 +683,15 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          # Emit one object per job and slurp them into a single array: with --paginate, gh
+          # applies the jq filter per page, so a filter that builds its own array would emit
+          # one array per page and land a multi-line value in GITHUB_OUTPUT.
           gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/jobs" --paginate \
-            --jq '[.jobs[] | {name, conclusion, url: .html_url,
+            --jq '.jobs[] | {name, conclusion, url: .html_url,
                   minutes: (if .started_at and .completed_at
                             then (((.completed_at|fromdateiso8601) - (.started_at|fromdateiso8601)) / 60 | floor | tostring) + "m"
-                            else null end)}]' > /tmp/jobs.json
-          echo "jobs_json=$(jq -c . /tmp/jobs.json)" >> "$GITHUB_OUTPUT"
+                            else null end)}' | jq -sc . > /tmp/jobs.json
+          echo "jobs_json=$(cat /tmp/jobs.json)" >> "$GITHUB_OUTPUT"
 
       # Components V2 message (link buttons, avatar accessory, deep links to failing lines).
       # Sent by a script rather than an action because Ilshidur/action-discord can only post
