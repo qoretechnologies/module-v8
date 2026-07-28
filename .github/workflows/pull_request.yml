@@ -324,6 +324,24 @@ jobs:
               print("::error::Jest failed but no individual test results were found in the output.")
               sys.exit(1)
 
+          # Tolerating app failures must not extend to tolerating a broken harness. Run #722
+          # reported success while every suite failed and nothing ran at all (jest workers
+          # OOMed), which is exactly the outcome this pipeline must never call green.
+          total_suites = data.get("numTotalTestSuites") or 0
+          failed_suites = data.get("numFailedTestSuites") or 0
+          total_tests = data.get("numTotalTests") or 0
+
+          if total_tests == 0:
+              print(f"::error::No tests executed at all ({failed_suites}/{total_suites} suites "
+                    "failed to run). This is a harness failure, not app flakiness.")
+              sys.exit(1)
+
+          if total_suites and failed_suites / total_suites > 0.5:
+              pct = 100 * failed_suites / total_suites
+              print(f"::error::{failed_suites}/{total_suites} suites failed ({pct:.0f}%). A failure "
+                    "rate that high is systemic (harness/config/network), not per-app flakiness.")
+              sys.exit(1)
+
           if apps:
               app_list = ", ".join(sorted(apps))
               print(f"::warning::App test suites need review (not blocking the pipeline): {app_list}")
@@ -338,10 +356,10 @@ jobs:
           sys.exit(0)
           PYEOF
         env:
-          # Sized for the runner, not the machine we wish we had: 4 jest workers plus the
-          # main process each get this ceiling, and a 16GB ceiling on a 15GB runner let the
-          # heaps grow until the VM was killed (SIGTERM/143 before a single suite finished).
-          NODE_OPTIONS: "--max_old_space_size=3072"
+          # Workers transpile instead of type-checking now (see ts/tsconfig.jest.json), so a
+          # suite costs ~350MB of heap rather than >4GB. This ceiling is headroom, not a
+          # target: four workers at that size use well under a quarter of the 15GB runner.
+          NODE_OPTIONS: "--max_old_space_size=4096"
 
   # Qore toolchain + module-v8 build and its Qore-side tests. Runs in parallel with
   # unit_tests: none of these steps depend on the jest suites, and previously they sat

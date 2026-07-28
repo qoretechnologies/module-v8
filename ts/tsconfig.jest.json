@@ -1,0 +1,14 @@
+{
+  // Jest-only TypeScript config: extends the base but turns on isolatedModules so
+  // ts-jest transpiles each file with transpileModule instead of building a full
+  // TypeScript program and type-checking it in every worker.
+  //
+  // Type safety is not lost: `yarn build:test` (tsc --noEmit over tsconfig.build.json)
+  // still type-checks the whole project in its own CI step, so doing it again inside
+  // each jest worker was duplicated work — and it was the reason workers needed
+  // multiple GB of heap each and OOMed under any worker count above two.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "isolatedModules": true
+  }
+}

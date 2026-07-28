@@ -15,7 +15,10 @@ const config: Config = {
     '^i18n/(.*)$': '<rootDir>/i18n/$1',
   },
   transform: {
-    '^.+\\.ts$': 'ts-jest',
+    // Point ts-jest at tsconfig.jest.json (isolatedModules: true) so each worker
+    // transpiles instead of type-checking. `yarn build:test` still type-checks the
+    // project, so nothing is lost — but workers no longer hold a TS program in memory.
+    '^.+\\.ts$': ['ts-jest', { tsconfig: '<rootDir>/../tsconfig.jest.json' }],
   },
   testMatch: ['<rootDir>/**/*.(spec|test).ts'],
   testPathIgnorePatterns: ['/node_modules/', '\\.skip\\.ts$'],
