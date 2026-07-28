@@ -338,7 +338,10 @@ jobs:
           sys.exit(0)
           PYEOF
         env:
-          NODE_OPTIONS: "--max_old_space_size=16384"
+          # Sized for the runner, not the machine we wish we had: 4 jest workers plus the
+          # main process each get this ceiling, and a 16GB ceiling on a 15GB runner let the
+          # heaps grow until the VM was killed (SIGTERM/143 before a single suite finished).
+          NODE_OPTIONS: "--max_old_space_size=3072"
 
   # Qore toolchain + module-v8 build and its Qore-side tests. Runs in parallel with
   # unit_tests: none of these steps depend on the jest suites, and previously they sat
@@ -500,8 +503,12 @@ jobs:
           # module), but module-v8 doesn't build all optional modules. AOT is a perf-only
           # optimization we don't need; the qmods still load and run interpreted.
           V8_INCLUDE_DIR=/opt/nodejs/include/node NODE_LIB_DIR=/opt/nodejs/lib cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release -DQORE_BUILD_AOT_MODULES=OFF
-          make -j$(nproc) && sudo make install
+          make -j$(nproc)
+          # Stage first, unprivileged: sudo make install writes install_manifest.txt
+          # into the build dir as root, which a later unprivileged install cannot
+          # overwrite (root can overwrite ours, not the other way round).
           make install DESTDIR="$HOME/qore-dist"
+          sudo make install
 
       # On a cache hit none of the build steps ran; lay the staged toolchain down over /
       - name: Restore cached Qore toolchain
@@ -529,8 +536,9 @@ jobs:
           mkdir build
           cd build
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
-          make && sudo make install
+          make
           make install DESTDIR="$HOME/qore-dist"
+          sudo make install
 
       # Clone and build uuid-module
       - name: Clone and build uuid module
@@ -541,8 +549,9 @@ jobs:
           mkdir build
           cd build
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
-          make && sudo make install
+          make
           make install DESTDIR="$HOME/qore-dist"
+          sudo make install
 
       # Clone and build json-module
       - name: Clone and build json-module
@@ -554,8 +563,9 @@ jobs:
           mkdir build
           cd build
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
-          make && sudo make install
+          make
           make install DESTDIR="$HOME/qore-dist"
+          sudo make install
 
       # Clone and build process-module
       - name: Clone and build process-module
@@ -566,8 +576,9 @@ jobs:
           mkdir build
           cd build
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
-          make && sudo make install
+          make
           make install DESTDIR="$HOME/qore-dist"
+          sudo make install
 
       # Build V8-module
       - name: Build V8-module
