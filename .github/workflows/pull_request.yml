@@ -202,6 +202,8 @@ jobs:
     runs-on: ubuntu-24.04
     outputs:
       apps_to_check: ${{ steps.unit_tests.outputs.apps_to_check }}
+      # Full breakdown (counts, and failing apps with the line that failed) for the notification
+      summary_json: ${{ steps.unit_tests.outputs.summary_json }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -295,6 +297,10 @@ jobs:
           apps = set()
           transient = []
           real = []
+          # app -> first failing source line, so the notification can deep-link to it.
+          # jest puts "src/tests/<app>.test.ts:<line>:<col>" in the failure stack trace.
+          real_at = {}
+          transient_at = {}
 
           for suite in data.get("testResults", []):
               app = app_of(suite.get("name"))
@@ -306,8 +312,12 @@ jobs:
               for test in failed:
                   msgs = " ".join(test.get("failureMessages", []))
                   name = " › ".join(test.get("ancestorTitles", []) + [test.get("title", "")])
-                  bucket = transient if any(re.search(p, msgs, re.IGNORECASE) for p in TRANSIENT_PATTERNS) else real
-                  bucket.append(name)
+                  is_transient = any(re.search(p, msgs, re.IGNORECASE) for p in TRANSIENT_PATTERNS)
+                  (transient if is_transient else real).append(name)
+                  if app:
+                      hit = re.search(re.escape(app) + r"\.test\.ts:(\d+):", msgs)
+                      where = transient_at if is_transient else real_at
+                      where.setdefault(app, int(hit.group(1)) if hit else None)
 
           if transient:
               print(f"::warning::{len(transient)} transient test failure(s) (timeouts/5xx/rate-limit):")
@@ -319,6 +329,26 @@ jobs:
               for r in real:
                   print(f"  - {r}")
 
+          total_suites = data.get("numTotalTestSuites") or 0
+          failed_suites = data.get("numFailedTestSuites") or 0
+          total_tests = data.get("numTotalTests") or 0
+
+          # Emitted before the failure checks below so the notification still has the full
+          # picture on a run that ends up failing — that is exactly when it matters most.
+          gh_out = os.environ.get("GITHUB_OUTPUT")
+          if gh_out:
+              summary = {
+                  "total_suites": total_suites,
+                  "failed_suites": failed_suites,
+                  "total_tests": total_tests,
+                  "passed_tests": data.get("numPassedTests") or 0,
+                  "real": [{"app": a, "line": l} for a, l in sorted(real_at.items())],
+                  "transient": [{"app": a, "line": l} for a, l in sorted(transient_at.items())],
+                  "apps": sorted(apps),
+              }
+              with open(gh_out, "a") as f:
+                  f.write("summary_json=" + json.dumps(summary, separators=(",", ":")) + "\n")
+
           if not apps and not transient and not real:
               # Jest failed but no individual test failures found — config/compile error.
               print("::error::Jest failed but no individual test results were found in the output.")
@@ -327,9 +357,6 @@ jobs:
           # Tolerating app failures must not extend to tolerating a broken harness. Run #722
           # reported success while every suite failed and nothing ran at all (jest workers
           # OOMed), which is exactly the outcome this pipeline must never call green.
-          total_suites = data.get("numTotalTestSuites") or 0
-          failed_suites = data.get("numFailedTestSuites") or 0
-          total_tests = data.get("numTotalTests") or 0
 
           if total_tests == 0:
               print(f"::error::No tests executed at all ({failed_suites}/{total_suites} suites "
@@ -660,24 +687,36 @@ jobs:
         id: get_head_commit_message
         run: echo "HEAD_COMMIT_MESSAGE=$(git show -s --format=%s)" >> "$GITHUB_OUTPUT"
 
-      # Notify Discord if Success
-      - name: Discord notification success
+      # Per-job results and durations for the notification. Uses the Actions API because a
+      # job cannot see its siblings' timings through the needs context.
+      - name: Collect job results
+        id: jobs
         env:
-          DISCORD_WEBHOOK: ${{secrets.DISCORD_WEBHOOK}}
-          DISCORD_EMBEDS: '[{ "author": {  "icon_url": "https://avatars.githubusercontent.com/${{ github.actor }}", "name": "${{ github.actor }}", "url": "https://github.com/${{github.actor}}" },"url": "https://github.com/${{github.repository}}/commit/${{github.sha}}","fields": [{ "name": "Commit Message", "value": "${{ steps.get_head_commit_message.outputs.HEAD_COMMIT_MESSAGE }}"},{ "name": "Repository", "value": "[${{github.event.repository.name}}](${{github.event.repository.clone_url}})", "inline": true },{ "name": "Branch", "value": "[${{github.ref_name}}](https://github.com/${{github.repository}}/pull/${{github.ref_name}})", "inline": true },{ "name": "Event", "value": "${{github.event_name}}", "inline": true },{ "name": "Author", "value": "[${{github.actor}}](https://github.com/${{github.actor}})", "inline": true },{ "name": "Job", "value": "${{github.job}}", "inline": true},{ "name": "Version", "value": "v${{ steps.save_release_version.outputs.version }}", "inline": true},{ "name": "", "value": "🤖 [Github Action](https://github.com/${{ github.repository}}/actions/runs/${{ github.run_id}})"}],"color":65280,"footer":{"text": "Published at ${{steps.current_time.outputs.readableTime}}"}}]'
-          DISCORD_AVATAR: "https://github.com/qoretechnologies/qorus-vscode/blob/95ad81fa8654fe83bb41f68f4de42ae088298e59/public/q-symbol-small.png?raw=true"
-        uses: Ilshidur/action-discord@0.3.2
-        with:
-          args: ":white_check_mark: Tests run #${{ github.run_number }} for [PR](${{ github.event.pull_request.html_url }}) triggered by ${{ github.triggering_actor }} *succeeded*, install the canary version via `yarn add @qoretechnologies/qorus-actions-catalogue@${{ steps.bump.outputs.version }}`.${{ needs.unit_tests.outputs.apps_to_check != '' && format(' :warning: **Apps with test failures — please check:** {0}', needs.unit_tests.outputs.apps_to_check) || '' }}"
-        if: needs.unit_tests.result == 'success' && needs.qore_tests.result == 'success'
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/jobs" --paginate \
+            --jq '[.jobs[] | {name, conclusion, url: .html_url,
+                  minutes: (if .started_at and .completed_at
+                            then (((.completed_at|fromdateiso8601) - (.started_at|fromdateiso8601)) / 60 | floor | tostring) + "m"
+                            else null end)}]' > /tmp/jobs.json
+          echo "jobs_json=$(jq -c . /tmp/jobs.json)" >> "$GITHUB_OUTPUT"
 
-      # Notify discord if failure
-      - name: Discord notification failure
+      # Components V2 message (link buttons, avatar accessory, deep links to failing lines).
+      # Sent by a script rather than an action because Ilshidur/action-discord can only post
+      # content and classic embeds, which cannot carry components or the required flag.
+      - name: Send Discord notification
         env:
-          DISCORD_WEBHOOK: ${{secrets.DISCORD_WEBHOOK}}
-          DISCORD_EMBEDS: '[{ "author": {  "icon_url": "https://avatars.githubusercontent.com/${{ github.actor }}", "name": "${{ github.actor }}", "url": "https://github.com/${{github.actor}}" },"url": "https://github.com/${{github.repository}}/commit/${{github.sha}}","fields": [{ "name": "Commit Message", "value": "${{ steps.get_head_commit_message.outputs.HEAD_COMMIT_MESSAGE }}"},{ "name": "Repository", "value": "[${{github.event.repository.name}}](${{github.event.repository.clone_url}})", "inline": true },{ "name": "Branch", "value": "[${{github.ref_name}}](https://github.com/${{github.repository}}/pull/${{github.ref_name}})", "inline": true },{ "name": "Event", "value": "${{github.event_name}}", "inline": true },{ "name": "Author", "value": "[${{github.actor}}](https://github.com/${{github.actor}})", "inline": true },{ "name": "Job", "value": "${{github.job}}", "inline": true },{ "name": "Version", "value": "v${{ steps.save_release_version.outputs.version }}", "inline": true},{ "name": "", "value": "🤖 [Github Action](https://github.com/${{ github.repository}}/actions/runs/${{ github.run_id}})"}],"color":16711680,"footer":{"text": "Published at ${{steps.current_time.outputs.readableTime}}"}}]'
-          DISCORD_AVATAR: "https://github.com/qoretechnologies/qorus-vscode/blob/95ad81fa8654fe83bb41f68f4de42ae088298e59/public/q-symbol-small.png?raw=true"
-        uses: Ilshidur/action-discord@0.3.2
-        with:
-          args: ":exclamation: Tests run #${{ github.run_number }} for [PR](${{ github.event.pull_request.html_url }}) triggered by ${{ github.triggering_actor }} *failed*!"
-        if: needs.unit_tests.result != 'success' || needs.qore_tests.result != 'success'
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.event.pull_request.head.sha }}
+          RUN_ID: ${{ github.run_id }}
+          RUN_NUMBER: ${{ github.run_number }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          ACTOR: ${{ github.triggering_actor }}
+          BRANCH: ${{ github.ref_name }}
+          EVENT: ${{ github.event_name }}
+          COMMIT_MSG: ${{ steps.get_head_commit_message.outputs.HEAD_COMMIT_MESSAGE }}
+          JOBS_JSON: ${{ steps.jobs.outputs.jobs_json }}
+          SUMMARY_JSON: ${{ needs.unit_tests.outputs.summary_json }}
+        run: python3 .github/scripts/discord-notify.py
