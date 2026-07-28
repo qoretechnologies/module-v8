@@ -195,29 +195,21 @@ env:
   GOOGLE_ADS_CUSTOMER_ID: ${{ fromJson(secrets.TEST_VARIABLES).GOOGLE_ADS_CUSTOMER_ID }}
 
 jobs:
-  PullRequestTests:
+  # App catalogue TypeScript build + jest unit tests. Nothing here needs Qore, so this
+  # runs in parallel with the qore_tests job instead of ahead of it.
+  unit_tests:
     # The type of runner that the job will run on
     runs-on: ubuntu-24.04
+    outputs:
+      apps_to_check: ${{ steps.unit_tests.outputs.apps_to_check }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Get current time for the commit
-      - name: Get current time
-        uses: josStorer/get-current-time@v2.0.2
-        id: current_time
-        with:
-          format: YYYYMMDD-HH
-          utcOffset: "+01:00"
-
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Get repo
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
-
-      - name: Print head git commit message
-        id: get_head_commit_message
-        run: echo "HEAD_COMMIT_MESSAGE=$(git show -s --format=%s)" >> "$GITHUB_OUTPUT"
 
       - uses: actions/setup-node@v4
         with:
@@ -249,12 +241,13 @@ jobs:
 
       # Run App Catalogue unit tests
       - name: Run unit tests
+        id: unit_tests
         timeout-minutes: 60
         run: |
           cd ts
           set +e
           node --experimental-vm-modules \
-            ./node_modules/jest/bin/jest.js --ci --maxWorkers=50% --workerIdleMemoryLimit=2048MB \
+            ./node_modules/jest/bin/jest.js --ci --maxWorkers=100% --workerIdleMemoryLimit=2048MB \
             --config src/jest.config.ts --json --outputFile=test-results.json
           TEST_EXIT_CODE=$?
           set -e
@@ -334,16 +327,46 @@ jobs:
           if apps:
               app_list = ", ".join(sorted(apps))
               print(f"::warning::App test suites need review (not blocking the pipeline): {app_list}")
-              gh_env = os.environ.get("GITHUB_ENV")
-              if gh_env:
-                  with open(gh_env, "a") as f:
-                      f.write(f"APPS_TO_CHECK={app_list}\n")
+              # Exported as a step output (not GITHUB_ENV) so the separate notify job can
+              # read it via needs.unit_tests.outputs.apps_to_check.
+              gh_out = os.environ.get("GITHUB_OUTPUT")
+              if gh_out:
+                  with open(gh_out, "a") as f:
+                      f.write(f"apps_to_check={app_list}\n")
 
           print("Continuing pipeline; test-suite failures reported to Discord.")
           sys.exit(0)
           PYEOF
         env:
-          NODE_OPTIONS: "--max_old_space_size=16384"
+          # Sized for the runner, not the machine we wish we had: 4 jest workers plus the
+          # main process each get this ceiling, and a 16GB ceiling on a 15GB runner let the
+          # heaps grow until the VM was killed (SIGTERM/143 before a single suite finished).
+          NODE_OPTIONS: "--max_old_space_size=3072"
+
+  # Qore toolchain + module-v8 build and its Qore-side tests. Runs in parallel with
+  # unit_tests: none of these steps depend on the jest suites, and previously they sat
+  # behind ~38 minutes of them in the same job.
+  qore_tests:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Get repo
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      # Required by the "Test catalogue actions" step at the end of this job (yarn test-build)
+      - name: Installing modules
+        run: |
+          cd ts
+          yarn install
 
       # Install system dependencies needed for building Qore and modules
       - name: Install dependencies
@@ -443,8 +466,32 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libarrow-dev libparquet-dev
 
+      # Resolve the exact upstream commits this job builds; they form the cache key, so an
+      # unchanged upstream restores the toolchain and a moved one rebuilds it.
+      - name: Resolve upstream build inputs
+        id: build_inputs
+        run: |
+          {
+            echo "qore=$(git ls-remote https://github.com/qoretechnologies/qore.git refs/heads/develop | cut -f1)"
+            for m in yaml uuid json process; do
+              echo "module_${m}=$(git ls-remote https://github.com/qoretechnologies/module-${m}.git HEAD | cut -f1)"
+            done
+          } >> "$GITHUB_OUTPUT"
+
+      # Qore plus the yaml/uuid/json/process modules are installed for real AND staged into
+      # ~/qore-dist via DESTDIR, so a later run with the same upstream commits restores the
+      # whole toolchain with a copy instead of a ~15 minute rebuild. Staging under $HOME
+      # keeps actions/cache away from root-owned paths.
+      - name: Cache Qore toolchain
+        id: qore_cache
+        uses: actions/cache@v4
+        with:
+          path: ~/qore-dist
+          key: qore-dist-ubuntu24-llvm21-${{ steps.build_inputs.outputs.qore }}-${{ steps.build_inputs.outputs.module_yaml }}-${{ steps.build_inputs.outputs.module_uuid }}-${{ steps.build_inputs.outputs.module_json }}-${{ steps.build_inputs.outputs.module_process }}
+
       # Clone the Qore repository and build it
       - name: Clone and Build Qore
+        if: steps.qore_cache.outputs.cache-hit != 'true'
         run: |
           git clone --branch develop https://github.com/qoretechnologies/qore.git
           cd qore
@@ -456,7 +503,18 @@ jobs:
           # module), but module-v8 doesn't build all optional modules. AOT is a perf-only
           # optimization we don't need; the qmods still load and run interpreted.
           V8_INCLUDE_DIR=/opt/nodejs/include/node NODE_LIB_DIR=/opt/nodejs/lib cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release -DQORE_BUILD_AOT_MODULES=OFF
-          make -j$(nproc) && sudo make install
+          make -j$(nproc)
+          # Stage first, unprivileged: sudo make install writes install_manifest.txt
+          # into the build dir as root, which a later unprivileged install cannot
+          # overwrite (root can overwrite ours, not the other way round).
+          make install DESTDIR="$HOME/qore-dist"
+          sudo make install
+
+      # On a cache hit none of the build steps ran; lay the staged toolchain down over /
+      - name: Restore cached Qore toolchain
+        if: steps.qore_cache.outputs.cache-hit == 'true'
+        run: |
+          sudo cp -a "$HOME/qore-dist/." /
 
       #  Update library paths to ensure Qore can find its shared libraries
       - name: Update Library Path
@@ -471,26 +529,33 @@ jobs:
 
       # Clone and build yaml-module
       - name: Clone and build yaml module
+        if: steps.qore_cache.outputs.cache-hit != 'true'
         run: |
           git clone https://github.com/qoretechnologies/module-yaml.git
           cd module-yaml
           mkdir build
           cd build
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
-          make && sudo make install
+          make
+          make install DESTDIR="$HOME/qore-dist"
+          sudo make install
 
       # Clone and build uuid-module
       - name: Clone and build uuid module
+        if: steps.qore_cache.outputs.cache-hit != 'true'
         run: |
           git clone https://github.com/qoretechnologies/module-uuid.git
           cd module-uuid
           mkdir build
           cd build
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
-          make && sudo make install
+          make
+          make install DESTDIR="$HOME/qore-dist"
+          sudo make install
 
       # Clone and build json-module
       - name: Clone and build json-module
+        if: steps.qore_cache.outputs.cache-hit != 'true'
         run: |
           git clone https://github.com/qoretechnologies/module-json.git
           cd module-json
@@ -498,17 +563,22 @@ jobs:
           mkdir build
           cd build
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
-          make && sudo make install
+          make
+          make install DESTDIR="$HOME/qore-dist"
+          sudo make install
 
       # Clone and build process-module
       - name: Clone and build process-module
+        if: steps.qore_cache.outputs.cache-hit != 'true'
         run: |
           git clone https://github.com/qoretechnologies/module-process.git
           cd module-process
           mkdir build
           cd build
           cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
-          make && sudo make install
+          make
+          make install DESTDIR="$HOME/qore-dist"
+          sudo make install
 
       # Build V8-module
       - name: Build V8-module
@@ -528,10 +598,15 @@ jobs:
           qore --enable-debug ts-action-interface.qtest -v
 
       # Install RestSchemaDataProvider module (not yet in Qore's CMakeLists.txt)
+      # Ships only in the qore source tree, so stage it into the dist as well — on a cache
+      # hit there is no qore/ checkout to copy it from, it comes back with the toolchain.
       - name: Install RestSchemaDataProvider module
+        if: steps.qore_cache.outputs.cache-hit != 'true'
         run: |
           echo "Installing RestSchemaDataProvider from qore source..."
           sudo cp -r qore/qlib/RestSchemaDataProvider /usr/local/share/qore-modules/
+          mkdir -p "$HOME/qore-dist/usr/local/share/qore-modules"
+          cp -r qore/qlib/RestSchemaDataProvider "$HOME/qore-dist/usr/local/share/qore-modules/"
           echo "Verifying installation..."
           ls -la /usr/local/share/qore-modules/RestSchemaDataProvider/
 
@@ -541,6 +616,32 @@ jobs:
           cd ts
           NODE_OPTIONS="--max_old_space_size=8192" yarn test-build && NODE_OPTIONS="--max_old_space_size=8192" QORE_TYPESCRIPT_ACTION_SCRIPTS=./dist/index.js QORE_TYPESCRIPT_ACTION_TEST_SCRIPTS=./dist/index.js qore -l TypeScriptActionInterface -nX 1
 
+  # Single notification point for both jobs above. Runs even when one of them fails so
+  # the Discord webhook still fires exactly once per run.
+  notify:
+    needs: [unit_tests, qore_tests]
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      # Get current time for the commit
+      - name: Get current time
+        uses: josStorer/get-current-time@v2.0.2
+        id: current_time
+        with:
+          format: YYYYMMDD-HH
+          utcOffset: "+01:00"
+
+      # Shallow checkout: only needed to read the head commit message below
+      - name: Get repo
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 1
+
+      - name: Print head git commit message
+        id: get_head_commit_message
+        run: echo "HEAD_COMMIT_MESSAGE=$(git show -s --format=%s)" >> "$GITHUB_OUTPUT"
+
       # Notify Discord if Success
       - name: Discord notification success
         env:
@@ -549,8 +650,8 @@ jobs:
           DISCORD_AVATAR: "https://github.com/qoretechnologies/qorus-vscode/blob/95ad81fa8654fe83bb41f68f4de42ae088298e59/public/q-symbol-small.png?raw=true"
         uses: Ilshidur/action-discord@0.3.2
         with:
-          args: ":white_check_mark: Tests run #${{ github.run_number }} for [PR](${{ github.event.pull_request.html_url }}) triggered by ${{ github.triggering_actor }} *succeeded*, install the canary version via `yarn add @qoretechnologies/qorus-actions-catalogue@${{ steps.bump.outputs.version }}`.${{ env.APPS_TO_CHECK != '' && format(' :warning: **Apps with test failures — please check:** {0}', env.APPS_TO_CHECK) || '' }}"
-        if: success()
+          args: ":white_check_mark: Tests run #${{ github.run_number }} for [PR](${{ github.event.pull_request.html_url }}) triggered by ${{ github.triggering_actor }} *succeeded*, install the canary version via `yarn add @qoretechnologies/qorus-actions-catalogue@${{ steps.bump.outputs.version }}`.${{ needs.unit_tests.outputs.apps_to_check != '' && format(' :warning: **Apps with test failures — please check:** {0}', needs.unit_tests.outputs.apps_to_check) || '' }}"
+        if: needs.unit_tests.result == 'success' && needs.qore_tests.result == 'success'
 
       # Notify discord if failure
       - name: Discord notification failure
@@ -561,4 +662,4 @@ jobs:
         uses: Ilshidur/action-discord@0.3.2
         with:
           args: ":exclamation: Tests run #${{ github.run_number }} for [PR](${{ github.event.pull_request.html_url }}) triggered by ${{ github.triggering_actor }} *failed*!"
-        if: failure()
+        if: needs.unit_tests.result != 'success' || needs.qore_tests.result != 'success'
