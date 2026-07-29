@@ -181,7 +181,7 @@ if (process.env.CUSTOM_APPS_DIR) {
  * @param action - the action being registered.
  * @returns the action, with its event function wrapped when it has one.
  */
-const withCheckpointSupport = (action: TQoreAppAction): TQoreAppAction => {
+export const withCheckpointSupport = (action: TQoreAppAction): TQoreAppAction => {
   if (!('event_function' in action) || typeof action.event_function !== 'function') {
     return action;
   }
@@ -190,14 +190,17 @@ const withCheckpointSupport = (action: TQoreAppAction): TQoreAppAction => {
 
   return {
     ...action,
+    // the original's return value is propagated: an async event function returns a promise that the
+    // Qore side awaits, so discarding it here would let the host treat the function as already
+    // finished and would swallow a rejection
     event_function: (
       context: Parameters<typeof event_function>[0],
       update: Parameters<typeof event_function>[1],
       should_stop: Parameters<typeof event_function>[2],
       checkpoint: unknown
-    ) =>
+    ): unknown =>
       runWithTriggerCheckpoint(isTriggerCheckpoint(checkpoint) ? checkpoint : undefined, () =>
-        (event_function as (...args: unknown[]) => void)(context, update, should_stop, checkpoint)
+        (event_function as (...args: unknown[]) => unknown)(context, update, should_stop, checkpoint)
       ),
   } as TQoreAppAction;
 };
