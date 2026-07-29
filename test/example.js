@@ -1262,6 +1262,62 @@ exports.actionsCatalogue = {
             },
         });
 
+        api.registerAction({
+            "app": "js-openapi-test",
+            "action": "js-event-checkpoint",
+            "display_name": "JavaScript Checkpoint Event",
+            "short_desc": "JavaScript event action exercising the durable checkpoint API",
+            "desc": "JavaScript event action exercising the durable checkpoint API",
+            "action_code": 1,  // DPAT_EVENT == 1
+            "options": {},
+            /** Exercises the fourth event function argument: the durable checkpoint API.
+
+                Reports the position restored from the previous run, then stores a replacement position, so a
+                test can assert that a checkpoint survives the Qore/JavaScript boundary in both directions.
+            */
+            "event_function": async function(ctx, update, should_stop, checkpoint) {
+                const restored = checkpoint ? checkpoint.get() : undefined;
+                update({
+                    "name": "checkpoint-event",
+                    // report what the previous run left behind, so the test can assert restoration
+                    "code": restored && restored.cursor ? restored.cursor : 0,
+                });
+                if (checkpoint) {
+                    // stored only after the event has been raised: a position stored first would be a
+                    // position for an event that may never have been delivered
+                    await checkpoint.set({"cursor": (restored && restored.cursor ? restored.cursor : 0) + 1});
+                }
+                // returns once the position has been stored: update() delivers synchronously, so there is
+                // nothing left to wait for, and looping here would only tie up the JavaScript thread
+            },
+            "event_info": {
+                "desc": "Checkpoint event",
+                "type": {
+                    "type": "hash",
+                    "fields": {
+                        "name": {
+                            "type": "string",
+                            "display_name": "Event Name",
+                            "short_desc": "Event name",
+                            "desc": "Event name",
+                        },
+                        "code": {
+                            "type": "int",
+                            "display_name": "Restored Cursor",
+                            "short_desc": "The cursor restored from the previous run",
+                            "desc": "The cursor restored from the previous run",
+                        },
+                    },
+                },
+            },
+            "get_example_event_data": async function (ctx) {
+                return {
+                    "name": "checkpoint-event",
+                    "code": 0,
+                };
+            },
+        });
+
         // OpenAPI 3.0 test app
         api.registerApp({
             "name": "js-openapi3-test",
