@@ -378,12 +378,12 @@ public class TsProxyTest inherits QUnit::Test {
 
         m.lock();
         on_exit m.unlock();
+        # NOTE: the deadline is only a deadlock guard; it must stay well above the cost of a cold
+        # proxy child respawn (~4.5s on Alpine CI), otherwise a correct implementation still fails
         date start = now_us();
         while (!done) {
-            if (!cond.wait(m, 200ms)) {
-                break;
-            }
-            if (now_us() - start > 2s) {
+            cond.wait(m, 1s);
+            if (now_us() - start > 30s) {
                 break;
             }
         }
@@ -424,12 +424,12 @@ public class TsProxyTest inherits QUnit::Test {
 
         m.lock();
         on_exit m.unlock();
+        # NOTE: the deadline is only a deadlock guard; it must stay well above the cost of a cold
+        # proxy child respawn (~4.5s on Alpine CI), otherwise a correct implementation still fails
         date start = now_us();
         while (!done) {
-            if (!cond.wait(m, 200ms)) {
-                break;
-            }
-            if (now_us() - start > 2s) {
+            cond.wait(m, 1s);
+            if (now_us() - start > 30s) {
                 break;
             }
         }
