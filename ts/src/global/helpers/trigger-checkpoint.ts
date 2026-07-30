@@ -9,8 +9,13 @@ import { Debugger } from '../../utils/Debugger';
  * silently skips everything that arrived while it was not running.
  */
 export interface ITriggerCheckpoint {
-  /** Returns the state stored by the previous run, or `undefined` if there is none. */
-  get: <T = Record<string, any>>() => T | undefined;
+  /**
+   * Returns the state stored by the previous run, or `undefined` if there is none.
+   *
+   * The shape is whatever the trigger stored, so this is deliberately untyped here: the caller knows the
+   * shape it wrote and validates it, which {@link loadTriggerCheckpoint} exposes as its type parameter.
+   */
+  get: () => Record<string, any> | undefined;
   /**
    * Durably stores the replacement state.
    *
@@ -99,6 +104,9 @@ export const saveTriggerCheckpoint = async (
 /**
  * Returns the state stored by the previous run of the current trigger, if any.
  *
+ * The stored state crosses a restart and the host's storage, so `T` states what the caller wrote rather
+ * than what was read back; callers validate the value before trusting it.
+ *
  * @param trigger_name - the trigger name, for diagnostics.
  */
 export const loadTriggerCheckpoint = <T = Record<string, any>>(
@@ -111,7 +119,7 @@ export const loadTriggerCheckpoint = <T = Record<string, any>>(
   }
 
   try {
-    return checkpoint.get<T>();
+    return checkpoint.get() as T | undefined;
   } catch (error) {
     Debugger.log(`Could not read the delivery checkpoint for trigger: ${trigger_name}`, error);
     return undefined;

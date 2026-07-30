@@ -21,6 +21,12 @@ interface ITestItem extends Record<string, any> {
   updated?: string;
 }
 
+/** A checkpoint API that also exposes what it stored, so a test can assert on it. */
+type TTestCheckpoint = ITriggerCheckpoint & {
+  saved: Record<string, any>[];
+  state?: Record<string, any>;
+};
+
 /**
  * A checkpoint API backed by memory, standing in for the host's durable storage.
  *
@@ -31,10 +37,10 @@ interface ITestItem extends Record<string, any> {
 const makeCheckpoint = (
   initial?: Record<string, any>,
   trace?: string[]
-): ITriggerCheckpoint & { saved: Record<string, any>[]; state?: Record<string, any> } => {
-  const cp: any = {
+): TTestCheckpoint => {
+  const cp: TTestCheckpoint = {
     state: initial,
-    saved: [] as Record<string, any>[],
+    saved: [],
     get: () => cp.state,
     set: async (state: Record<string, any>) => {
       trace?.push('stored');
