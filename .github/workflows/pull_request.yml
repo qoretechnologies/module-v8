@@ -406,6 +406,12 @@ jobs:
       credentials:
         username: ${{ secrets.QORE_REGISTRY_USER }}
         password: ${{ secrets.QORE_REGISTRY_TOKEN }}
+    # A container job defaults to `sh`, not `bash`: GitHub cannot assume bash exists in an
+    # arbitrary image. This one has it, and the steps below want it (indirect expansion in
+    # "Publish image environment" is a bash feature that dash rejects outright).
+    defaults:
+      run:
+        shell: bash
     steps:
       - name: Get repo
         uses: actions/checkout@v4
