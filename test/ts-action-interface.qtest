@@ -33,6 +33,8 @@ public class TypeScriptActionInterfaceTest inherits QUnit::Test {
 
         addTestCase("js event extension", \jsEventExtensionTest());
         addTestCase("js events", \jsEventTest());
+        addTestCase("event checkpoints", \eventCheckpointTest());
+        addTestCase("event checkpoint validation", \eventCheckpointValidationTest());
         addTestCase("webhook events", \webhookEventTest());
         addTestCase("webhook format_event_data transform", \webhookFormatEventDataTransformTest());
         addTestCase("webhook format_event_data filter", \webhookFormatEventDataFilterTest());
@@ -153,6 +155,93 @@ async function runWithTimeout(promise, delay) {
                 "code": 1234,
             },
         }, event);
+    }
+
+    #! A TypeScript event function must be able to keep a durable position across a reload
+    /** The whole point of a checkpoint is that the position survives the host restarting the provider. This
+        drives the real Qore/JavaScript boundary in both directions: the state restored into the provider must
+        reach \c checkpoint.get() in JavaScript, and the state passed to \c checkpoint.set() must reach the
+        host's storage callback.
+    */
+    private eventCheckpointTest() {
+        hash<auto> config = {
+            "name": "test",
+            "url": "tsrest-js-openapi-test://",
+            "opts": {
+                "subdomain": "test",
+                "token": "x",
+            },
+        };
+        TypeScriptAppRestConnection conn(config);
+
+        list<hash<auto>> saved = ();
+        AbstractDataProvider prov =
+            TypeScriptActionInterface::getDataProvider("js-openapi-test", conn)
+                .getChildProviderEx("js-event-checkpoint");
+
+        # a fresh provider has nothing to restore, so the event function reports cursor 0
+        MyObserver o();
+        cast<Observable>(prov).registerObserver(o);
+        cast<AbstractWatchDataProviderBase>(prov).setCheckpointPersistence(NOTHING,
+            sub (hash<auto> checkpoint) {
+                saved += checkpoint;
+            });
+        cast<DelayedObservable>(prov).observersReady();
+        on_exit cast<DelayedObservable>(prov).stopEvents();
+
+        hash<auto> event = o.waitForEvent();
+        assertEq("checkpoint-event", event.data.name);
+        assertEq(0, event.data.code, "nothing was restored on a first start");
+
+        # the position stored by the event function reached the host callback, in a versioned envelope
+        assertEq(1, saved.size(), "the event function's checkpoint reached the host");
+        assertEq(1, saved[0].version, "the checkpoint is versioned");
+        assertEq(1, saved[0].seq, "the first checkpoint carries sequence 1");
+        assertEq({"cursor": 1}, saved[0].state, "the state the event function stored round-tripped intact");
+
+        # a replacement provider given that checkpoint must resume from it rather than start over
+        AbstractDataProvider prov2 =
+            TypeScriptActionInterface::getDataProvider("js-openapi-test", conn)
+                .getChildProviderEx("js-event-checkpoint");
+        list<hash<auto>> saved2 = ();
+        MyObserver o2();
+        cast<Observable>(prov2).registerObserver(o2);
+        cast<AbstractWatchDataProviderBase>(prov2).setCheckpointPersistence(saved[0],
+            sub (hash<auto> checkpoint) {
+                saved2 += checkpoint;
+            });
+        cast<DelayedObservable>(prov2).observersReady();
+        on_exit cast<DelayedObservable>(prov2).stopEvents();
+
+        hash<auto> event2 = o2.waitForEvent();
+        assertEq(1, event2.data.code, "the stored position was restored into the event function");
+        assertEq({"cursor": 2}, saved2[0].state, "the resumed run advanced from the restored position");
+        assertEq(2, saved2[0].seq, "the sequence number advances with the restored checkpoint");
+    }
+
+    #! A checkpoint envelope in an unknown shape must be rejected rather than silently ignored
+    private eventCheckpointValidationTest() {
+        hash<auto> config = {
+            "name": "test",
+            "url": "tsrest-js-openapi-test://",
+            "opts": {
+                "subdomain": "test",
+                "token": "x",
+            },
+        };
+        TypeScriptAppRestConnection conn(config);
+        AbstractDataProvider prov =
+            TypeScriptActionInterface::getDataProvider("js-openapi-test", conn)
+                .getChildProviderEx("js-event-checkpoint");
+
+        assertThrows("WATCH-CHECKPOINT-ERROR", "version 1", sub () {
+            cast<AbstractWatchDataProviderBase>(prov).setCheckpointPersistence({"version": 2, "seq": 1},
+                sub (hash<auto> checkpoint) {});
+        });
+        assertThrows("WATCH-CHECKPOINT-ERROR", "non-negative seq", sub () {
+            cast<AbstractWatchDataProviderBase>(prov).setCheckpointPersistence({"version": 1, "seq": -1},
+                sub (hash<auto> checkpoint) {});
+        });
     }
 
     private jsEventTest() {

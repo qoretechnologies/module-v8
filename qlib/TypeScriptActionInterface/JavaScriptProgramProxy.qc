@@ -349,9 +349,12 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
         }
         info("Setting up event source for PID %d @%s/%s %y", proc.id(), current_event.app, current_event.action,
             current_event.key);
+        # take the checkpoint state from an observer rather than from the value captured at registration, so a
+        # restarted child resumes from the position the previous child reached rather than replaying from startup
+        auto checkpoint_state = current_event.omap.firstValue().getCheckpointState();
         sendCommandArgs(NOTHING, PC_SETUP_EVENT,
-            (current_event.app, current_event.action, current_event.key, current_event.options), NOTHING, True,
-            restart_flags);
+            (current_event.app, current_event.action, current_event.key, current_event.options, checkpoint_state),
+            NOTHING, True, restart_flags);
         info("Event source for @%s/%s %y ready", current_event.app, current_event.action, current_event.key);
     }
 
@@ -481,6 +484,23 @@ public class JavaScriptProgramProxy inherits TypeScriptProxy {
                         info("notify() done for %y", i.key);
                     } catch (hash<ExceptionInfo> ex) {
                         error("Error notifying observer %y for key %y: %s", i.key, v.key, get_exception_string(ex));
+                    }
+                }
+                continue;
+            }
+            if (v.cmd == CC_EVENT_CHECKPOINT) {
+                if (!event.omap) {
+                    error("No observers for event checkpoint for key %y; ignoring", v.key);
+                    continue;
+                }
+                foreach hash<auto> i in (event.omap.pairIterator()) {
+                    try {
+                        i.value.persistEventCheckpoint(v.state);
+                    } catch (hash<ExceptionInfo> ex) {
+                        # the item covered by this checkpoint has already been delivered, so a failed write costs
+                        # re-delivery on the next start, never a lost event
+                        error("Error storing event checkpoint for observer %y for key %y: %s", i.key, v.key,
+                            get_exception_string(ex));
                     }
                 }
                 continue;

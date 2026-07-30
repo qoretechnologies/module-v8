@@ -19,6 +19,10 @@ import { Log } from '../decorators/Logger';
 import { mapCrudOptionsToApp, TQoreCrudOptionType } from '../global/helpers';
 import L from '../i18n/i18n-node';
 import { Locales } from '../i18n/i18n-types';
+import {
+  isTriggerCheckpoint,
+  runWithTriggerCheckpoint,
+} from '../global/helpers/trigger-checkpoint';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 
 if (process.env.TS_DEBUG) {
@@ -162,6 +166,45 @@ if (process.env.CUSTOM_APPS_DIR) {
   importIndexFilesFromDir(path.resolve(process.env.CUSTOM_APPS_DIR));
 }
 
+/**
+ * Publishes the host's durable checkpoint API to an action's event function.
+ *
+ * Qore calls an event function with `(context, update, should_stop, checkpoint)`. Threading that fourth
+ * argument through every trigger and on into its polling helper would mean touching every trigger for a
+ * concern none of them expresses directly, so it is published here instead: the event function still runs
+ * with its own signature, and `getTriggerCheckpoint()` resolves the API for whatever polling helper it
+ * calls, however deep the async call stack goes.
+ *
+ * The original function is also called with the checkpoint as its fourth argument, so a trigger that wants
+ * to drive the cursor itself can simply declare the parameter.
+ *
+ * @param action - the action being registered.
+ * @returns the action, with its event function wrapped when it has one.
+ */
+export const withCheckpointSupport = (action: TQoreAppAction): TQoreAppAction => {
+  if (!('event_function' in action) || typeof action.event_function !== 'function') {
+    return action;
+  }
+
+  const { event_function } = action;
+
+  return {
+    ...action,
+    // the original's return value is propagated: an async event function returns a promise that the
+    // Qore side awaits, so discarding it here would let the host treat the function as already
+    // finished and would swallow a rejection
+    event_function: (
+      context: Parameters<typeof event_function>[0],
+      update: Parameters<typeof event_function>[1],
+      should_stop: Parameters<typeof event_function>[2],
+      checkpoint: unknown
+    ): unknown =>
+      runWithTriggerCheckpoint(isTriggerCheckpoint(checkpoint) ? checkpoint : undefined, () =>
+        (event_function as (...args: unknown[]) => unknown)(context, update, should_stop, checkpoint)
+      ),
+  } as TQoreAppAction;
+};
+
 export class ActionsCatalogue {
   public readonly apps: TQoreApps = {};
   public readonly existingApps: TQoreExistingApps = {};
@@ -222,7 +265,7 @@ export class ActionsCatalogue {
       }
 
       registerAppFn(app);
-      actions.forEach(registerActionFn);
+      actions.forEach((action) => registerActionFn(withCheckpointSupport(action)));
     });
   }
 

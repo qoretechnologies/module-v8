@@ -1,7 +1,7 @@
 # -*- mode: qore; indent-tabs-mode: nil -*-
 #! Qore TypeScriptProxy module definition
 
-/*  TypeScriptProxy.qc Copyright 2024 - 2025 Qore Technologies, s.r.o.
+/*  TypeScriptProxy.qc Copyright 2024 - 2026 Qore Technologies, s.r.o.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -93,6 +93,14 @@ public const CC_EVENT_START = "EVENT-START";
 
 #! Child command: "EVENT-TERMINATED"
 public const CC_EVENT_TERMINATED = "EVENT-TERMINATED";
+
+#! Child command: "EVENT-CHECKPOINT"
+/** Sent by the child when an event function stores a delivery checkpoint, so that the parent can make it
+    durable through the host's checkpoint callback.
+
+    @since TypeScriptProxy 1.1
+*/
+public const CC_EVENT_CHECKPOINT = "EVENT-CHECKPOINT";
 
 #! Child command: "STATUS"
 public const CC_STATUS = "STATUS";

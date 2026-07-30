@@ -23,6 +23,8 @@ hashdecl EventInfo {
     int waiting;
     #! stop flag
     bool stop_flag = False;
+    #! the checkpoint state handed to the event function, updated as the event function stores new positions
+    auto checkpoint_state;
 }
 
 class TsProxy inherits TypeScriptProxy {
@@ -162,7 +164,7 @@ class TsProxy inherits TypeScriptProxy {
                         break;
 
                     case PC_SETUP_EVENT:
-                        setupEvent(h.args[0], h.args[1], h.args[2], h.args[3]);
+                        setupEvent(h.args[0], h.args[1], h.args[2], h.args[3], h.args[4]);
                         break;
 
                     case PC_RELEASE_EVENT:
@@ -273,7 +275,7 @@ class TsProxy inherits TypeScriptProxy {
         safeSendParent(yaml);
     }
 
-    private setupEvent(string app, string action, string key, *hash<auto> arg0) {
+    private setupEvent(string app, string action, string key, *hash<auto> arg0, auto checkpoint_state) {
         ASSERT(!search);
         TypeScriptActionInterface::initApp(app);
         TypeScriptActionInterface::initAppAction(app, action);
@@ -284,6 +286,7 @@ class TsProxy inherits TypeScriptProxy {
         event = <EventInfo>{
             "key": key,
             "event": TypeScriptActionInterface::getCall(key),
+            "checkpoint_state": checkpoint_state,
         };
         *hash<DataContextInfo> arg;
         if (arg0) {
@@ -355,6 +358,28 @@ class TsProxy inherits TypeScriptProxy {
                 },
                 bool sub () {
                     return event.stop_flag;
+                },
+                {
+                    "get": auto sub () {
+                        return event.checkpoint_state;
+                    },
+                    "set": sub (auto state) {
+                        # values arriving from JavaScript are wrapped; unwrap them before sending
+                        if (state instanceof JavaScriptObject) {
+                            state = cast<JavaScriptObject>(state).toData();
+                        }
+                        string yaml = makeSend(CC_EVENT_CHECKPOINT, {
+                            "key": key,
+                            "state": state,
+                        });
+                        if (!safeSendEvent(event_socket, yaml)) {
+                            event.stop_flag = True;
+                            throw "EVENT-CHECKPOINT-ERROR", sprintf("the event socket for key %y is closed; the "
+                                "checkpoint could not be stored", key);
+                        }
+                        # keep the local copy current so a restart of this event source resumes from here
+                        event.checkpoint_state = state;
+                    },
                 })
             );
             info("Event function for @%s/%s: %s returned", call.app, call.action, call.key);

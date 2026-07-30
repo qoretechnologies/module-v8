@@ -699,9 +699,9 @@ const OutlookAppEn = {
         },
         action: {
           displayName: 'Email Action',
-          shortDesc: 'Action to perform after triggering',
+          shortDesc: 'Action to perform once the email event has been raised',
           longDesc:
-            'Optional action to perform on emails after the trigger runs. Choose "None" to leave emails unchanged, "Delete" to remove the email, or "Move" to relocate the email to another folder.',
+            'Optional action to perform on each email once its event has been raised. Choose "None" to leave emails unchanged, "Delete" to remove the email, or "Move" to relocate the email to another folder.\n\nThe action runs as soon as the event has been **raised**, which is not the same as the consumer having **processed** it: a consumer that receives the event and then fails, times out, or is restarted mid-processing has already lost the email, and a delete cannot be undone. For any workload that must not lose the source email, leave this set to "None" and act from the consumer once processing has succeeded, using the message ID the event carries.',
         },
         targetFolderId: {
           displayName: 'Target Folder',
