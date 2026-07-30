@@ -385,11 +385,27 @@ jobs:
           # target: four workers at that size use well under a quarter of the 15GB runner.
           NODE_OPTIONS: "--max_old_space_size=4096"
 
-  # Qore toolchain + module-v8 build and its Qore-side tests. Runs in parallel with
-  # unit_tests: none of these steps depend on the jest suites, and previously they sat
-  # behind ~38 minutes of them in the same job.
+  # module-v8's Qore-side build and its Qore tests. Runs in parallel with unit_tests:
+  # none of these steps depend on the jest suites, and previously they sat behind
+  # ~38 minutes of them in the same job.
+  #
+  # The job runs in qore-test-base, the same image GitLab CI uses (see .gitlab-ci.yml).
+  # That image already ships qore develop plus every module this job used to clone and
+  # build for itself -- yaml, uuid, json, process -- together with the node 24 dev files,
+  # LLVM, OpenSSL 3.5 and Arrow it needed to build them. Doing that per run cost ~22 of
+  # the job's ~28 minutes, and caching only ever covered part of it: the OpenSSL-from-
+  # source and apt steps ran even on a cache hit. What is left below is the work that is
+  # actually specific to the pull request.
   qore_tests:
     runs-on: ubuntu-24.04
+    container:
+      image: registry.qoretechnologies.com/infrastructure/qore-test-base/qore-test-base:develop
+      # Read-only (read_registry) deploy token for infrastructure/qore-test-base. Held as
+      # organization secrets, not repository ones: this repository sits at GitHub's limit
+      # of 100 repository secrets, so a 101st is rejected.
+      credentials:
+        username: ${{ secrets.QORE_REGISTRY_USER }}
+        password: ${{ secrets.QORE_REGISTRY_TOKEN }}
     steps:
       - name: Get repo
         uses: actions/checkout@v4
@@ -397,260 +413,31 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
-
-      - name: Enable Corepack
-        run: corepack enable
-
-      # Required by the "Test catalogue actions" step at the end of this job (yarn test-build)
-      - name: Installing modules
+      # The image keeps its toolchain out of the default environment and in /tmp/env.sh:
+      # qore lives under /opt, node under /opt/nodejs. Every GitHub step runs in a fresh
+      # shell that does not source that file, so publish what the later steps need once.
+      #
+      # QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT is deliberately NOT published: in the image it
+      # points at a TypeScript dist built from develop, and these tests must run against
+      # the dist built from this branch. test-ubuntu.sh rebuilds that dist and repoints the
+      # variable itself, so leaving it unset here keeps the stale one from being picked up.
+      - name: Publish image environment
         run: |
-          cd ts
-          yarn install
+          . /tmp/env.sh
+          printf '%s\n' "${INSTALL_PREFIX}/bin" "${NODEJS_INSTALL_PREFIX}/bin" >> "$GITHUB_PATH"
+          for var in LD_LIBRARY_PATH INSTALL_PREFIX NODE_LIB_DIR NODE_INCLUDE_DIR QORE_MODULE_DIR; do
+            printf '%s=%s\n' "${var}" "${!var}"
+          done >> "$GITHUB_ENV"
 
-      # Install system dependencies needed for building Qore and modules
-      - name: Install dependencies
-        run: |
-          sudo apt update
-          sudo apt install -y \
-            cmake \
-            pkg-config \
-            flex \
-            bison \
-            libmpfr-dev \
-            libpcre3-dev \
-            zlib1g-dev \
-            libbz2-dev \
-            libbrotli-dev \
-            libzstd-dev \
-            liblz4-dev \
-            libkrb5-dev \
-            libutf8proc-dev \
-            libnghttp2-dev \
-            doxygen \
-            libyaml-dev \
-            uuid-dev \
-            libeigen3-dev \
-            libprotobuf-dev \
-            libprotoc-dev \
-            protobuf-compiler \
-            libssh2-1-dev \
-            libssh-dev
-
-      # Install OpenSSL 3.5+ with native QUIC support (SSL_set_quic_tls_cbs)
-      # System OpenSSL 3.0.x lacks QUIC APIs needed by ngtcp2 for Qore's HTTP/3 support
-      # Qore's CI Docker images do the same via /etc/profile.d/quic.sh + OPENSSL_ROOT_DIR
-      - name: Install OpenSSL 3.5
-        run: |
-          # Remove system OpenSSL dev headers to avoid conflicts with OpenSSL 3.5
-          sudo apt-get remove -y libssl-dev 2>/dev/null || true
-          OPENSSL_VERSION="3.5.0"
-          OPENSSL_PREFIX="/opt/openssl-3.5"
-          curl -fsSL "https://github.com/openssl/openssl/releases/download/openssl-${OPENSSL_VERSION}/openssl-${OPENSSL_VERSION}.tar.gz" -o /tmp/openssl.tar.gz
-          cd /tmp && tar xzf openssl.tar.gz
-          cd "/tmp/openssl-${OPENSSL_VERSION}"
-          ./Configure --prefix=${OPENSSL_PREFIX} --libdir=lib no-tests
-          make -j$(nproc)
-          sudo make install_sw
-          echo "${OPENSSL_PREFIX}/lib" | sudo tee /etc/ld.so.conf.d/openssl35.conf
-          sudo ldconfig
-          echo "OPENSSL_ROOT_DIR=${OPENSSL_PREFIX}" >> $GITHUB_ENV
-
-      # Install pre-built Node.js 24 with development headers and libnode.so
-      - name: Install Node.js 24 development files
-        run: |
-          NODEJS_VERSION="24.11.1"
-          NODEJS_INSTALL_PREFIX="/opt/nodejs"
-          NODEJS_ARCH="amd64"
-          NODEJS_TARBALL="nodejs-${NODEJS_VERSION}-ubuntu24.04-${NODEJS_ARCH}.tar.bz2"
-          curl -fsSL -O "https://hq.qoretechnologies.com/~pchalupny/node-builds/${NODEJS_TARBALL}"
-          sudo tar -xjf ${NODEJS_TARBALL} -C /
-          rm -f ${NODEJS_TARBALL}
-          # Create symlink for libnode.so
-          lib=$(ls ${NODEJS_INSTALL_PREFIX}/lib/libnode.so.* | sort | tail -n 1)
-          sudo ln -sf "$(basename "$lib")" ${NODEJS_INSTALL_PREFIX}/lib/libnode.so
-          echo "Node.js 24 dev files installed"
-          ls ${NODEJS_INSTALL_PREFIX}/include/node/v8.h
-
-      # Ubuntu 24.04's default LLVM is 18, which is too old to compile current Qore
-      # develop (its JIT/AOT support tracks newer LLVM releases). Install LLVM 21 — the
-      # version Qore's canonical build-tools/setup-ubuntu.sh uses — from apt.llvm.org and
-      # point CMake at it (find_package(LLVM CONFIG) honours LLVM_DIR / CMAKE_PREFIX_PATH).
-      # Add the repo with curl, not llvm.sh/wget: wget fails SSL verification after the
-      # OpenSSL 3.5 swap above (and llvm.sh uses wget internally). The apt line is http +
-      # gpg-signed (integrity via signed-by), so it sidesteps apt TLS too.
-      - name: Install LLVM 21 for Qore build
-        run: |
-          curl -fsSL https://apt.llvm.org/llvm-snapshot.gpg.key \
-            | sudo gpg --dearmor -o /usr/share/keyrings/llvm.gpg
-          echo "deb [signed-by=/usr/share/keyrings/llvm.gpg] http://apt.llvm.org/noble/ llvm-toolchain-noble-21 main" \
-            | sudo tee /etc/apt/sources.list.d/llvm.list
-          sudo apt-get update
-          sudo apt-get install -y llvm-21-dev
-          LLVM_PREFIX=$(ls -d /usr/lib/llvm-* | sort -V | tail -1)
-          echo "Selected LLVM prefix: ${LLVM_PREFIX}"
-          echo "LLVM_DIR=${LLVM_PREFIX}/lib/cmake/llvm" >> "$GITHUB_ENV"
-          echo "CMAKE_PREFIX_PATH=${LLVM_PREFIX}:${CMAKE_PREFIX_PATH}" >> "$GITHUB_ENV"
-
-      # Apache Arrow/Parquet for Qore's in-tree dataframe module (df_parquet.cpp ->
-      # arrow/api.h). Ubuntu 24.04 has no libarrow-dev in apt, so use Apache's repo.
-      # This MUST run after "Install OpenSSL 3.5": libarrow-dev depends on libssl-dev, so
-      # the OpenSSL step's `apt-get remove libssl-dev` cascade-removes Arrow if it was
-      # installed earlier. Installing it last (nothing removes packages after) keeps it.
-      - name: Install Apache Arrow
-        run: |
-          cd /tmp
-          curl -fsSL -o apache-arrow.deb \
-            "https://apache.jfrog.io/artifactory/arrow/$(lsb_release --id --short | tr 'A-Z' 'a-z')/apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb"
-          sudo apt-get install -y ./apache-arrow.deb
-          sudo apt-get update
-          sudo apt-get install -y libarrow-dev libparquet-dev
-
-      # Resolve the exact upstream commits this job builds; they form the cache key, so an
-      # unchanged upstream restores the toolchain and a moved one rebuilds it.
-      - name: Resolve upstream build inputs
-        id: build_inputs
-        run: |
-          {
-            echo "qore=$(git ls-remote https://github.com/qoretechnologies/qore.git refs/heads/develop | cut -f1)"
-            for m in yaml uuid json process; do
-              echo "module_${m}=$(git ls-remote https://github.com/qoretechnologies/module-${m}.git HEAD | cut -f1)"
-            done
-          } >> "$GITHUB_OUTPUT"
-
-      # Qore plus the yaml/uuid/json/process modules are installed for real AND staged into
-      # ~/qore-dist via DESTDIR, so a later run with the same upstream commits restores the
-      # whole toolchain with a copy instead of a ~15 minute rebuild. Staging under $HOME
-      # keeps actions/cache away from root-owned paths.
-      - name: Cache Qore toolchain
-        id: qore_cache
-        uses: actions/cache@v4
-        with:
-          path: ~/qore-dist
-          key: qore-dist-ubuntu24-llvm21-${{ steps.build_inputs.outputs.qore }}-${{ steps.build_inputs.outputs.module_yaml }}-${{ steps.build_inputs.outputs.module_uuid }}-${{ steps.build_inputs.outputs.module_json }}-${{ steps.build_inputs.outputs.module_process }}
-
-      # Clone the Qore repository and build it
-      - name: Clone and Build Qore
-        if: steps.qore_cache.outputs.cache-hit != 'true'
-        run: |
-          git clone --branch develop https://github.com/qoretechnologies/qore.git
-          cd qore
-          mkdir build
-          cd build
-          # -DQORE_BUILD_AOT_MODULES=OFF: don't AOT-compile the qlib data-provider qmods.
-          # AOT (added in Qore's 2026-06 JIT/AOT work) requires every wrapped binary module
-          # to be loadable at build time (e.g. MongoDbDataProvider.qmod needs the mongodb
-          # module), but module-v8 doesn't build all optional modules. AOT is a perf-only
-          # optimization we don't need; the qmods still load and run interpreted.
-          V8_INCLUDE_DIR=/opt/nodejs/include/node NODE_LIB_DIR=/opt/nodejs/lib cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release -DQORE_BUILD_AOT_MODULES=OFF
-          make -j$(nproc)
-          # Stage first, unprivileged: sudo make install writes install_manifest.txt
-          # into the build dir as root, which a later unprivileged install cannot
-          # overwrite (root can overwrite ours, not the other way round).
-          make install DESTDIR="$HOME/qore-dist"
-          sudo make install
-
-      # On a cache hit none of the build steps ran; lay the staged toolchain down over /
-      - name: Restore cached Qore toolchain
-        if: steps.qore_cache.outputs.cache-hit == 'true'
-        run: |
-          sudo cp -a "$HOME/qore-dist/." /
-
-      #  Update library paths to ensure Qore can find its shared libraries
-      - name: Update Library Path
-        run: |
-          echo '/usr/local/lib' | sudo tee /etc/ld.so.conf.d/qore.conf
-          echo '/opt/nodejs/lib' | sudo tee -a /etc/ld.so.conf.d/qore.conf
-          sudo ldconfig
-
-      # Verify Qore installation by checking the version
-      - name: Verify Qore Installation
+      - name: Verify Qore installation
         run: qore --version
 
-      # Clone and build yaml-module
-      - name: Clone and build yaml module
-        if: steps.qore_cache.outputs.cache-hit != 'true'
-        run: |
-          git clone https://github.com/qoretechnologies/module-yaml.git
-          cd module-yaml
-          mkdir build
-          cd build
-          cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
-          make
-          make install DESTDIR="$HOME/qore-dist"
-          sudo make install
-
-      # Clone and build uuid-module
-      - name: Clone and build uuid module
-        if: steps.qore_cache.outputs.cache-hit != 'true'
-        run: |
-          git clone https://github.com/qoretechnologies/module-uuid.git
-          cd module-uuid
-          mkdir build
-          cd build
-          cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
-          make
-          make install DESTDIR="$HOME/qore-dist"
-          sudo make install
-
-      # Clone and build json-module
-      - name: Clone and build json-module
-        if: steps.qore_cache.outputs.cache-hit != 'true'
-        run: |
-          git clone https://github.com/qoretechnologies/module-json.git
-          cd module-json
-          git submodule update --init
-          mkdir build
-          cd build
-          cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
-          make
-          make install DESTDIR="$HOME/qore-dist"
-          sudo make install
-
-      # Clone and build process-module
-      - name: Clone and build process-module
-        if: steps.qore_cache.outputs.cache-hit != 'true'
-        run: |
-          git clone https://github.com/qoretechnologies/module-process.git
-          cd module-process
-          mkdir build
-          cd build
-          cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
-          make
-          make install DESTDIR="$HOME/qore-dist"
-          sudo make install
-
-      # Build V8-module
-      - name: Build V8-module
-        run: |
-          git submodule update --init
-          mkdir build
-          cd build
-          NODE_INCLUDE_DIR=/opt/nodejs/include/node NODE_LIB_DIR=/opt/nodejs/lib cmake .. -DSINGLE_COMPILATION_UNIT=1 -DCMAKE_BUILD_TYPE=release
-          make && sudo make install
-
-      # Run module-v8 Qore tests
-      - name: Run module-v8 tests
-        run: |
-          cd test
-          qore --enable-debug v8.qtest -v
-          qore --enable-debug ts-proxy.qtest -v
-          qore --enable-debug ts-action-interface.qtest -v
-
-      # Install RestSchemaDataProvider module (not yet in Qore's CMakeLists.txt)
-      # Ships only in the qore source tree, so stage it into the dist as well — on a cache
-      # hit there is no qore/ checkout to copy it from, it comes back with the toolchain.
-      - name: Install RestSchemaDataProvider module
-        if: steps.qore_cache.outputs.cache-hit != 'true'
-        run: |
-          echo "Installing RestSchemaDataProvider from qore source..."
-          sudo cp -r qore/qlib/RestSchemaDataProvider /usr/local/share/qore-modules/
-          mkdir -p "$HOME/qore-dist/usr/local/share/qore-modules"
-          cp -r qore/qlib/RestSchemaDataProvider "$HOME/qore-dist/usr/local/share/qore-modules/"
-          echo "Verifying installation..."
-          ls -la /usr/local/share/qore-modules/RestSchemaDataProvider/
+      # Builds the module from this branch over the image's copy, rebuilds the TypeScript
+      # dist so the Qore tests exercise this branch's catalogue, and runs every
+      # test/*.qtest as an unprivileged user. This is the script GitLab CI runs, so the two
+      # pipelines share one sequence instead of maintaining two that drift apart.
+      - name: Build and test module-v8
+        run: test/docker_test/test-ubuntu.sh
 
       # Test catalogue actions made with schema
       - name: Test catalogue actions
