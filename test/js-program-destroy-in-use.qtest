@@ -1,0 +1,66 @@
+#!/usr/bin/env qore
+
+%modern
+
+%requires v8
+%requires QUnit
+
+%exec-class JsProgramDestroyInUseTest
+
+#! Tests destroying a JavaScript program while a JavaScript call is in progress in another thread
+/** The deferred destruction path used to relock the (non-recursive) program lock: the thread finishing the
+    call in progress held the program lock and then ran the deferred destructor, which acquires the same lock,
+    deadlocking the thread.  The same path is used when the module is unloaded at process exit.
+
+    @note If this test hangs, the deferred destruction path is relocking the program lock again
+*/
+class JsProgramDestroyInUseTest inherits Test {
+    constructor() : Test("js program destroy in use test", "1.0") {
+        addTestCase("destroy while a call is in progress", \destroyWhileCallInProgress());
+
+        set_return_value(main());
+    }
+
+    #! Returns a program whose "run" function signals Qore and then waits for Qore before returning
+    private JavaScriptProgram getProgram() {
+        return new JavaScriptProgram("
+globalThis.run = function(signalStarted, waitGo) {
+    signalStarted();
+    waitGo();
+    return 'done';
+};
+", "destroy-in-use.js");
+    }
+
+    destroyWhileCallInProgress() {
+        JavaScriptProgram js = getProgram();
+        JavaScriptObject g = js.getGlobal();
+
+        Counter started(1);
+        Counter go(1);
+        Counter done(1);
+        auto rv;
+
+        background sub () {
+            on_exit done.dec();
+            rv = g.run(sub () { started.dec(); }, sub () { go.waitForZero(); });
+        }();
+
+        # the JavaScript call is now in progress in the background thread
+        started.waitForZero();
+
+        # request destruction while the call is in progress; this must return immediately and defer the
+        # destruction until the call in progress completes
+        delete js;
+
+        # let the JavaScript call complete; the background thread runs the deferred destruction
+        go.dec();
+        done.waitForZero();
+
+        assertEq("done", rv, "the call in progress completes after the program is destroyed");
+    }
+
+    # NOTE: there is no test with several calls in progress at once; a V8 isolate can only be entered by one
+    # thread at a time (v8::Locker), so concurrent calls into the same program are serialized by design
+
+}

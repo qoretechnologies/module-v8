@@ -347,12 +347,31 @@ int QoreV8Program::init(ExceptionSink* xsink) {
     return 0;
 }
 
-void QoreV8Program::shutdown() {
+bool QoreV8Program::shutdown() {
+    // NOTE: a snapshot of the program set is taken under the global lock rather than iterating the set
+    // directly; other threads insert entries in init() and erase them in the destructor, and iterating the
+    // set while another thread modifies it invalidates the iterator.  The global lock cannot be held across
+    // deleteIntern(), because the program destructor acquires the global lock with the program lock held
+    pset_t progs;
+    {
+        AutoLocker al(global_lock);
+        progs = pset;
+    }
+
+    bool rv = true;
     ExceptionSink xsink;
-    for (auto& i : pset) {
+    for (auto& i : progs) {
         i->deleteIntern(&xsink);
+        if (i->hasPendingOps()) {
+            // JavaScript code is still being executed in this program in another thread; deleteIntern() has
+            // flagged the program for destruction when the operation in progress completes.  The node
+            // environment must not be torn down here, as it is still in use
+            rv = false;
+            continue;
+        }
         i->setup = nullptr;
     }
+    return rv;
 }
 
 void QoreV8Program::deleteIntern(ExceptionSink* xsink) {
@@ -742,8 +761,15 @@ int QoreV8Program::checkSpinValid(ExceptionSink* xsink) {
 }
 
 void QoreV8Program::decrementOpcount(ExceptionSink* xsink) {
-    AutoLocker al(m);
-    if (!--opcount && to_destroy) {
+    bool destroy;
+    {
+        AutoLocker al(m);
+        destroy = !--opcount && to_destroy;
+    }
+    // NOTE: the deferred destructor must be run with the program lock released; destructor() ->
+    // deleteIntern() acquires the same (non-recursive) lock, and the program destructor acquires the global
+    // lock, which must never be acquired while the program lock is held
+    if (destroy) {
         destructor(xsink);
     }
 }

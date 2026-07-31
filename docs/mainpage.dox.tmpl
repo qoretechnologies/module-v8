@@ -649,6 +649,18 @@ JavaScriptProgram::setSaveReferenceCallback(callback);
     @section v8releasenotes v8 Module Release Notes
 
     @subsection v8_2_2 v8 Module Version 2.2
+    - fixed a deadlock that hung the calling thread when a JavaScript program was destroyed while a call was in
+      progress in another thread; destruction is deferred until the call in progress completes, but the deferred
+      destructor was run with the (non-recursive) program lock held, and it acquires the same lock, so the thread
+      finishing the call deadlocked against itself; the deferred destructor now runs with the lock released
+      (<a href="https://github.com/qoretechnologies/qore/issues/5383">qore issue 5383</a>)
+    - fixed a race in module shutdown, where the set of JavaScript programs was iterated without holding the lock
+      protecting it, while other threads could insert and erase entries concurrently
+      (<a href="https://github.com/qoretechnologies/qore/issues/5383">qore issue 5383</a>)
+    - V8 and node are no longer torn down at module shutdown when JavaScript code is still being executed in
+      another thread; disposing of the isolate and the platform under running code crashes the process, so the
+      platform is intentionally leaked instead, as the process is terminating in any case
+      (<a href="https://github.com/qoretechnologies/qore/issues/5383">qore issue 5383</a>)
     - fixed a deadlock that could hang the process (most visibly during shutdown) when apps were initialized
       concurrently: on-demand app initialization holds an internal lock while lazily loading modules (REST schema
       validators, the app's own module, etc.), and a concurrent module load could, from its initializer, register

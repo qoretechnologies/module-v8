@@ -80,6 +80,12 @@ public:
         deleteIntern(xsink);
     }
 
+    //! Returns True if JavaScript code is currently being executed in this program in any thread
+    DLLLOCAL bool hasPendingOps() {
+        AutoLocker al(m);
+        return (bool)opcount;
+    }
+
     DLLLOCAL virtual AbstractQoreProgramExternalData* copy(QoreProgram* pgm) const {
         return new QoreV8Program(*this, pgm);
     }
@@ -163,7 +169,11 @@ public:
     //! Raises an exception in the given isolate from the Qore exception
     DLLLOCAL static void raiseV8Exception(ExceptionSink& xsink, v8::Isolate* isolate);
 
-    DLLLOCAL static void shutdown();
+    //! Tears down all JavaScript programs
+    /** @return True if all programs were torn down; False if JavaScript code is still being executed in
+        another thread, in which case V8 must not be disposed of
+    */
+    DLLLOCAL static bool shutdown();
 
     DLLLOCAL int saveQoreReference(const QoreValue& rv, ExceptionSink& xsink);
 
@@ -413,8 +423,15 @@ public:
 
     DLLLOCAL ~QoreV8ProgramHelper() {
         if (pgm) {
-            AutoLocker al(pgm->m);
-            if (!--pgm->opcount && pgm->to_destroy) {
+            bool destroy;
+            {
+                AutoLocker al(pgm->m);
+                destroy = !--pgm->opcount && pgm->to_destroy;
+            }
+            // NOTE: the deferred destructor must be run with the program lock released; destructor() ->
+            // deleteIntern() acquires the same (non-recursive) lock, and the program destructor acquires the
+            // global lock, which must never be acquired while the program lock is held
+            if (destroy) {
                 pgm->destructor(xsink);
             }
         }

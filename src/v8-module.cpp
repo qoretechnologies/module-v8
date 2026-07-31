@@ -91,7 +91,14 @@ static sig_vec_t sig_vec = {
 
 static void v8_module_shutdown() {
     //printd(5, "v8_module_shutdown()\n");
-    QoreV8Program::shutdown();
+    if (!QoreV8Program::shutdown()) {
+        // JavaScript code is still being executed in another thread; disposing of V8 and tearing down node
+        // here would destroy the isolate and the platform under running code, which crashes the process.
+        // The process is terminating in any case, so the platform is intentionally leaked instead; the
+        // operating system reclaims the memory
+        printd(1, "v8_module_shutdown(): JavaScript code is still being executed; skipping V8 teardown\n");
+        return;
+    }
 
     v8::V8::Dispose();
     v8::V8::DisposePlatform();
