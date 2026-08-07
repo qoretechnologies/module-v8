@@ -482,6 +482,7 @@ public class TypeScriptActionInterface {
             appmap{name} = <AppInfo>{
                 "app": {
                     "name": name,
+                    "presentation_source_locale": info.presentation_source_locale,
                     "display_name": info.display_name,
                     "short_desc": info.short_desc,
                     "desc": info.desc,
