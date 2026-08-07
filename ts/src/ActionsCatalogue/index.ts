@@ -113,7 +113,6 @@ const NEW_APP_DIRS: readonly string[] = [
   'sendgrid',
   'sentry',
   'serenity',
-  'sharepoint',
   'shopify',
   'slack',
   'stripe',
