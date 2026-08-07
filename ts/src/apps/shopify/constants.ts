@@ -17,7 +17,12 @@ export const SHOPIFY_POST_AUTH_CODE_CONN_OPTIONS = {
   },
 } satisfies TCustomConnOptions;
 
-export const SHOPIFY_API_VERSION = '2026-10';
+// the current stable version; Shopify supports each stable release for at least 12
+// months (2026-07 is supported until 2027-07-16). Do not pin a release candidate here: a
+// candidate becomes available on the previous stable release date and may contain
+// backwards-incompatible changes, and Shopify reserves it for testing rather than
+// production use
+export const SHOPIFY_API_VERSION = '2026-07';
 
 export const SHOPIFY_SCOPES = [
   'read_analytics',
