@@ -80,6 +80,15 @@ module TypeScriptActionInterface {
     @section TypeScriptActionInterface_relnotes Release Notes
 
     @subsection TypeScriptActionInterface_v1_1 TypeScriptActionInterface v1.1
+    - fixed the source-owned provider i18n catalogs shipped in
+      \c qlib/TypeScriptActionInterface/i18n to cover only the apps and actions exported by this
+      module's TypeScript catalogue; catalogs extracted on a host with other data-provider modules
+      installed also captured foreign presentation strings (the \c WebSockets app owned by
+      \c WebSocketClient, and the Slack \c watch-messages action owned by the Qorus
+      \c QorusSlackServices module), and catalogs for apps that had been removed from the catalogue
+      were left behind. The catalogs must now be regenerated with
+      \c test/docker_test/update-i18n.sh, which pins the extraction to the module set CI verifies
+      against
     - added lazy, on-demand app loading: instead of eagerly loading every app (and its SDK) when the
       module is loaded, apps are registered \a pending from the data provider index and each app's
       implementation is loaded only on first use (via the catalogue, connection scheme, or data

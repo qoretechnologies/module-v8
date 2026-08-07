@@ -48,11 +48,11 @@ echo "export QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT=${MODULE_SRC_DIR}/ts/dist/inde
 . ${ENV_FILE}
 
 # Ensure that every provider presentation string exported by the TypeScript
-# catalogue has a current source-owned native i18n entry. Run this only after
-# rebuilding dist/index.js so the base image cannot hide source drift.
-qore-data-provider-i18n --check \
-    --output "${MODULE_SRC_DIR}/qlib/TypeScriptActionInterface/i18n" \
-    --module TypeScriptActionInterface
+# catalogue has a current source-owned native i18n entry, and that no catalog
+# survives for an app that has been removed from the catalogue. Run this only
+# after rebuilding dist/index.js so the base image cannot hide source drift.
+${MODULE_SRC_DIR}/test/docker_test/check-i18n.sh \
+    "${MODULE_SRC_DIR}/qlib/TypeScriptActionInterface/i18n"
 
 # add Qore user and group
 groupadd -o -g ${QORE_GID} qore

@@ -483,6 +483,78 @@
           "source": "The name of the Salesforce table (also called an \"sobject\"), ex: `Account`",
           "message": "The name of the Salesforce table (also called an \"sobject\"), ex: `Account`"
         },
+        "app.U2FsZXNmb3JjZQ.action.bmV3X3JlY29yZF90cmlnZ2Vy.display_name": {
+          "source": "New Record",
+          "message": "New Record"
+        },
+        "app.U2FsZXNmb3JjZQ.action.bmV3X3JlY29yZF90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when a new record is created in the specified object.",
+          "message": "Triggers when a new record is created in the specified object."
+        },
+        "app.U2FsZXNmb3JjZQ.action.bmV3X3JlY29yZF90cmlnZ2Vy.desc": {
+          "source": "This trigger fires whenever a new record is created in a specified Salesforce object. You can configure the object type to target specific record types, such as Leads, Contacts, or custom objects. It is useful for automating workflows triggered by record creation.",
+          "message": "This trigger fires whenever a new record is created in a specified Salesforce object. You can configure the object type to target specific record types, such as Leads, Contacts, or custom objects. It is useful for automating workflows triggered by record creation."
+        },
+        "app.U2FsZXNmb3JjZQ.action.bmV3X3JlY29yZF90cmlnZ2Vy.option.b2JqZWN0.display_name": {
+          "source": "Object Type",
+          "message": "Object Type"
+        },
+        "app.U2FsZXNmb3JjZQ.action.bmV3X3JlY29yZF90cmlnZ2Vy.option.b2JqZWN0.short_desc": {
+          "source": "The Salesforce object to monitor for new records.",
+          "message": "The Salesforce object to monitor for new records."
+        },
+        "app.U2FsZXNmb3JjZQ.action.bmV3X3JlY29yZF90cmlnZ2Vy.option.b2JqZWN0.desc": {
+          "source": "Select the Salesforce object (e.g., Lead, Account, Contact) where this trigger will monitor for newly created records.",
+          "message": "Select the Salesforce object (e.g., Lead, Account, Contact) where this trigger will monitor for newly created records."
+        },
+        "app.U2FsZXNmb3JjZQ.action.dXBkYXRlZF9yZWNvcmRfdHJpZ2dlcg.display_name": {
+          "source": "Updated Record",
+          "message": "Updated Record"
+        },
+        "app.U2FsZXNmb3JjZQ.action.dXBkYXRlZF9yZWNvcmRfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when an existing record is updated.",
+          "message": "Triggers when an existing record is updated."
+        },
+        "app.U2FsZXNmb3JjZQ.action.dXBkYXRlZF9yZWNvcmRfdHJpZ2dlcg.desc": {
+          "source": "This trigger fires whenever an existing record in a specified Salesforce object is updated. It is useful for workflows that depend on changes to specific fields or records, such as updating downstream systems or notifying users of record changes.",
+          "message": "This trigger fires whenever an existing record in a specified Salesforce object is updated. It is useful for workflows that depend on changes to specific fields or records, such as updating downstream systems or notifying users of record changes."
+        },
+        "app.U2FsZXNmb3JjZQ.action.dXBkYXRlZF9yZWNvcmRfdHJpZ2dlcg.option.b2JqZWN0.display_name": {
+          "source": "Object Type",
+          "message": "Object Type"
+        },
+        "app.U2FsZXNmb3JjZQ.action.dXBkYXRlZF9yZWNvcmRfdHJpZ2dlcg.option.b2JqZWN0.short_desc": {
+          "source": "The Salesforce object to monitor for updates.",
+          "message": "The Salesforce object to monitor for updates."
+        },
+        "app.U2FsZXNmb3JjZQ.action.dXBkYXRlZF9yZWNvcmRfdHJpZ2dlcg.option.b2JqZWN0.desc": {
+          "source": "Specify the Salesforce object (e.g., Opportunity, Contact, or custom objects) where this trigger will monitor for record updates.",
+          "message": "Specify the Salesforce object (e.g., Opportunity, Contact, or custom objects) where this trigger will monitor for record updates."
+        },
+        "app.U2FsZXNmb3JjZQ.action.bmV3X2NvbnRhY3RfdHJpZ2dlcg.display_name": {
+          "source": "New Contact",
+          "message": "New Contact"
+        },
+        "app.U2FsZXNmb3JjZQ.action.bmV3X2NvbnRhY3RfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when a new Contact record is created.",
+          "message": "Triggers when a new Contact record is created."
+        },
+        "app.U2FsZXNmb3JjZQ.action.bmV3X2NvbnRhY3RfdHJpZ2dlcg.desc": {
+          "source": "This trigger fires whenever a new Contact record is created in Salesforce. It is ideal for automating workflows such as contact notifications, integrations, or CRM updates.",
+          "message": "This trigger fires whenever a new Contact record is created in Salesforce. It is ideal for automating workflows such as contact notifications, integrations, or CRM updates."
+        },
+        "app.U2FsZXNmb3JjZQ.action.bmV3X2xlYWRfdHJpZ2dlcg.display_name": {
+          "source": "New Lead",
+          "message": "New Lead"
+        },
+        "app.U2FsZXNmb3JjZQ.action.bmV3X2xlYWRfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when a new Lead record is created.",
+          "message": "Triggers when a new Lead record is created."
+        },
+        "app.U2FsZXNmb3JjZQ.action.bmV3X2xlYWRfdHJpZ2dlcg.desc": {
+          "source": "This trigger activates whenever a new Lead record is created in Salesforce. It is commonly used for workflows related to lead generation, qualification, or assignment.",
+          "message": "This trigger activates whenever a new Lead record is created in Salesforce. It is commonly used for workflows related to lead generation, qualification, or assignment."
+        },
         "app.U2FsZXNmb3JjZQ.action.cHVic3ViLWV2ZW50.display_name": {
           "source": "Salesforce Event",
           "message": "Salesforce Event"
@@ -578,78 +650,6 @@
         "app.U2FsZXNmb3JjZQ.action.cHVic3ViLWV2ZW50.option.bnVtX3JlcXVlc3RlZA.desc": {
           "source": "How many events the client keeps requested from the server at a time; between 1 and 100, which is the maximum the Pub/Sub API accepts in a single `FetchRequest`",
           "message": "How many events the client keeps requested from the server at a time; between 1 and 100, which is the maximum the Pub/Sub API accepts in a single `FetchRequest`"
-        },
-        "app.U2FsZXNmb3JjZQ.action.bmV3X3JlY29yZF90cmlnZ2Vy.display_name": {
-          "source": "New Record",
-          "message": "New Record"
-        },
-        "app.U2FsZXNmb3JjZQ.action.bmV3X3JlY29yZF90cmlnZ2Vy.short_desc": {
-          "source": "Triggers when a new record is created in the specified object.",
-          "message": "Triggers when a new record is created in the specified object."
-        },
-        "app.U2FsZXNmb3JjZQ.action.bmV3X3JlY29yZF90cmlnZ2Vy.desc": {
-          "source": "This trigger fires whenever a new record is created in a specified Salesforce object. You can configure the object type to target specific record types, such as Leads, Contacts, or custom objects. It is useful for automating workflows triggered by record creation.",
-          "message": "This trigger fires whenever a new record is created in a specified Salesforce object. You can configure the object type to target specific record types, such as Leads, Contacts, or custom objects. It is useful for automating workflows triggered by record creation."
-        },
-        "app.U2FsZXNmb3JjZQ.action.bmV3X3JlY29yZF90cmlnZ2Vy.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
-          "message": "Object Type"
-        },
-        "app.U2FsZXNmb3JjZQ.action.bmV3X3JlY29yZF90cmlnZ2Vy.option.b2JqZWN0.short_desc": {
-          "source": "The Salesforce object to monitor for new records.",
-          "message": "The Salesforce object to monitor for new records."
-        },
-        "app.U2FsZXNmb3JjZQ.action.bmV3X3JlY29yZF90cmlnZ2Vy.option.b2JqZWN0.desc": {
-          "source": "Select the Salesforce object (e.g., Lead, Account, Contact) where this trigger will monitor for newly created records.",
-          "message": "Select the Salesforce object (e.g., Lead, Account, Contact) where this trigger will monitor for newly created records."
-        },
-        "app.U2FsZXNmb3JjZQ.action.dXBkYXRlZF9yZWNvcmRfdHJpZ2dlcg.display_name": {
-          "source": "Updated Record",
-          "message": "Updated Record"
-        },
-        "app.U2FsZXNmb3JjZQ.action.dXBkYXRlZF9yZWNvcmRfdHJpZ2dlcg.short_desc": {
-          "source": "Triggers when an existing record is updated.",
-          "message": "Triggers when an existing record is updated."
-        },
-        "app.U2FsZXNmb3JjZQ.action.dXBkYXRlZF9yZWNvcmRfdHJpZ2dlcg.desc": {
-          "source": "This trigger fires whenever an existing record in a specified Salesforce object is updated. It is useful for workflows that depend on changes to specific fields or records, such as updating downstream systems or notifying users of record changes.",
-          "message": "This trigger fires whenever an existing record in a specified Salesforce object is updated. It is useful for workflows that depend on changes to specific fields or records, such as updating downstream systems or notifying users of record changes."
-        },
-        "app.U2FsZXNmb3JjZQ.action.dXBkYXRlZF9yZWNvcmRfdHJpZ2dlcg.option.b2JqZWN0.display_name": {
-          "source": "Object Type",
-          "message": "Object Type"
-        },
-        "app.U2FsZXNmb3JjZQ.action.dXBkYXRlZF9yZWNvcmRfdHJpZ2dlcg.option.b2JqZWN0.short_desc": {
-          "source": "The Salesforce object to monitor for updates.",
-          "message": "The Salesforce object to monitor for updates."
-        },
-        "app.U2FsZXNmb3JjZQ.action.dXBkYXRlZF9yZWNvcmRfdHJpZ2dlcg.option.b2JqZWN0.desc": {
-          "source": "Specify the Salesforce object (e.g., Opportunity, Contact, or custom objects) where this trigger will monitor for record updates.",
-          "message": "Specify the Salesforce object (e.g., Opportunity, Contact, or custom objects) where this trigger will monitor for record updates."
-        },
-        "app.U2FsZXNmb3JjZQ.action.bmV3X2NvbnRhY3RfdHJpZ2dlcg.display_name": {
-          "source": "New Contact",
-          "message": "New Contact"
-        },
-        "app.U2FsZXNmb3JjZQ.action.bmV3X2NvbnRhY3RfdHJpZ2dlcg.short_desc": {
-          "source": "Triggers when a new Contact record is created.",
-          "message": "Triggers when a new Contact record is created."
-        },
-        "app.U2FsZXNmb3JjZQ.action.bmV3X2NvbnRhY3RfdHJpZ2dlcg.desc": {
-          "source": "This trigger fires whenever a new Contact record is created in Salesforce. It is ideal for automating workflows such as contact notifications, integrations, or CRM updates.",
-          "message": "This trigger fires whenever a new Contact record is created in Salesforce. It is ideal for automating workflows such as contact notifications, integrations, or CRM updates."
-        },
-        "app.U2FsZXNmb3JjZQ.action.bmV3X2xlYWRfdHJpZ2dlcg.display_name": {
-          "source": "New Lead",
-          "message": "New Lead"
-        },
-        "app.U2FsZXNmb3JjZQ.action.bmV3X2xlYWRfdHJpZ2dlcg.short_desc": {
-          "source": "Triggers when a new Lead record is created.",
-          "message": "Triggers when a new Lead record is created."
-        },
-        "app.U2FsZXNmb3JjZQ.action.bmV3X2xlYWRfdHJpZ2dlcg.desc": {
-          "source": "This trigger activates whenever a new Lead record is created in Salesforce. It is commonly used for workflows related to lead generation, qualification, or assignment.",
-          "message": "This trigger activates whenever a new Lead record is created in Salesforce. It is commonly used for workflows related to lead generation, qualification, or assignment."
         }
       }
     }
