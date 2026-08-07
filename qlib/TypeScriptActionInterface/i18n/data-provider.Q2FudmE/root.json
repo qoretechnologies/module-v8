@@ -1,0 +1,869 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "root": {
+      "messages": {
+        "app.Q2FudmE.display_name": {
+          "source": "Canva",
+          "message": "Canva"
+        },
+        "app.Q2FudmE.short_desc": {
+          "source": "Design platform for creating graphics, presentations, and visual content",
+          "message": "Design platform for creating graphics, presentations, and visual content"
+        },
+        "app.Q2FudmE.desc": {
+          "source": "Canva is a graphic design platform that allows users to create social media graphics, presentations, posters, documents and other visual content. It provides a drag-and-drop interface and access to millions of photographs, graphics and fonts.",
+          "message": "Canva is a graphic design platform that allows users to create social media graphics, presentations, posters, documents and other visual content. It provides a drag-and-drop interface and access to millions of photographs, graphics and fonts."
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Make an API call"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Canva",
+          "message": "Make a custom API call to Canva"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Canva** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Make a custom HTTP / REST API call to **Canva** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP Method"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI Path"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`."
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body Type"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "How the body is serialized and what Content-Type is sent"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on."
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; use connection serialization and let the REST client decide"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serialize body as JSON"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value."
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serialize body as application/x-www-form-urlencoded form fields"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans)."
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Upload a file using multipart/form-data"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header."
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Send body as XML"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`."
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Send body as YAML"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`."
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Plain Text"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Send body as text/plain"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`."
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Raw Binary"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Send body as raw bytes"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`."
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "The request body"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes."
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Path Variables"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Values for {name} placeholders in path"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded."
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Query Arguments"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Query string parameters"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`."
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Custom Headers"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Extra request headers"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default)."
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Expected Status Codes"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Response status codes treated as success"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws)."
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Return Errors as Data"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Return non-2xx responses normally instead of throwing"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only."
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Include Debug Info"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Include request/timing/size debug info in the response"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.display_name": {
+          "source": "Upload Image",
+          "message": "Upload Image"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.short_desc": {
+          "source": "Upload an image file to Canva",
+          "message": "Upload an image file to Canva"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.desc": {
+          "source": "Upload an image file to your Canva account and optionally set a name and tags",
+          "message": "Upload an image file to your Canva account and optionally set a name and tags"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.aW1hZ2U.display_name": {
+          "source": "Image File",
+          "message": "Image File"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.aW1hZ2U.short_desc": {
+          "source": "The image file to upload",
+          "message": "The image file to upload"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.aW1hZ2U.desc": {
+          "source": "Select an image file from your device to upload to Canva",
+          "message": "Select an image file from your device to upload to Canva"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Name"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.bmFtZQ.short_desc": {
+          "source": "Optional name for the image",
+          "message": "Optional name for the image"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.bmFtZQ.desc": {
+          "source": "Set a custom name for the uploaded image. If not provided, the original filename will be used",
+          "message": "Set a custom name for the uploaded image. If not provided, the original filename will be used"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.dGFncw.short_desc": {
+          "source": "Optional tags for the image",
+          "message": "Optional tags for the image"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.dGFncw.desc": {
+          "source": "Add tags to help organize and find your image later",
+          "message": "Add tags to help organize and find your image later"
+        },
+        "app.Q2FudmE.action.Z2V0X2ltYWdl.display_name": {
+          "source": "Get Image",
+          "message": "Get Image"
+        },
+        "app.Q2FudmE.action.Z2V0X2ltYWdl.short_desc": {
+          "source": "Retrieve image details from Canva",
+          "message": "Retrieve image details from Canva"
+        },
+        "app.Q2FudmE.action.Z2V0X2ltYWdl.desc": {
+          "source": "Get detailed information about a specific image asset in your Canva account",
+          "message": "Get detailed information about a specific image asset in your Canva account"
+        },
+        "app.Q2FudmE.action.Z2V0X2ltYWdl.option.aWQ.display_name": {
+          "source": "Image ID",
+          "message": "Image ID"
+        },
+        "app.Q2FudmE.action.Z2V0X2ltYWdl.option.aWQ.short_desc": {
+          "source": "The unique identifier of the image",
+          "message": "The unique identifier of the image"
+        },
+        "app.Q2FudmE.action.Z2V0X2ltYWdl.option.aWQ.desc": {
+          "source": "The Canva asset ID of the image you want to retrieve",
+          "message": "The Canva asset ID of the image you want to retrieve"
+        },
+        "app.Q2FudmE.action.ZGVsZXRlX2ltYWdl.display_name": {
+          "source": "Delete Image",
+          "message": "Delete Image"
+        },
+        "app.Q2FudmE.action.ZGVsZXRlX2ltYWdl.short_desc": {
+          "source": "Delete an image from Canva",
+          "message": "Delete an image from Canva"
+        },
+        "app.Q2FudmE.action.ZGVsZXRlX2ltYWdl.desc": {
+          "source": "Permanently delete an image asset from your Canva account",
+          "message": "Permanently delete an image asset from your Canva account"
+        },
+        "app.Q2FudmE.action.ZGVsZXRlX2ltYWdl.option.aWQ.display_name": {
+          "source": "Image ID",
+          "message": "Image ID"
+        },
+        "app.Q2FudmE.action.ZGVsZXRlX2ltYWdl.option.aWQ.short_desc": {
+          "source": "The unique identifier of the image to delete",
+          "message": "The unique identifier of the image to delete"
+        },
+        "app.Q2FudmE.action.ZGVsZXRlX2ltYWdl.option.aWQ.desc": {
+          "source": "The Canva asset ID of the image you want to delete",
+          "message": "The Canva asset ID of the image you want to delete"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.display_name": {
+          "source": "Update Image",
+          "message": "Update Image"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.short_desc": {
+          "source": "Update image name and tags",
+          "message": "Update image name and tags"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.desc": {
+          "source": "Update the name and tags of an existing image in your Canva account",
+          "message": "Update the name and tags of an existing image in your Canva account"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.option.aWQ.display_name": {
+          "source": "Image ID",
+          "message": "Image ID"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.option.aWQ.short_desc": {
+          "source": "The unique identifier of the image",
+          "message": "The unique identifier of the image"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.option.aWQ.desc": {
+          "source": "The Canva asset ID of the image you want to update",
+          "message": "The Canva asset ID of the image you want to update"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Name"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.option.bmFtZQ.short_desc": {
+          "source": "New name for the image",
+          "message": "New name for the image"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.option.bmFtZQ.desc": {
+          "source": "Update the name of the image asset",
+          "message": "Update the name of the image asset"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.option.dGFncw.short_desc": {
+          "source": "New tags for the image",
+          "message": "New tags for the image"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.option.dGFncw.desc": {
+          "source": "Update the tags associated with the image for better organization",
+          "message": "Update the tags associated with the image for better organization"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.display_name": {
+          "source": "Upload Image by URL",
+          "message": "Upload Image by URL"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.short_desc": {
+          "source": "Upload an image from a URL to Canva",
+          "message": "Upload an image from a URL to Canva"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.desc": {
+          "source": "Upload an image to your Canva account by providing a URL to the image",
+          "message": "Upload an image to your Canva account by providing a URL to the image"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.option.dXJs.display_name": {
+          "source": "Image URL",
+          "message": "Image URL"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.option.dXJs.short_desc": {
+          "source": "The URL of the image to upload",
+          "message": "The URL of the image to upload"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.option.dXJs.desc": {
+          "source": "Provide a direct URL to the image file you want to upload to Canva",
+          "message": "Provide a direct URL to the image file you want to upload to Canva"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Name"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.option.bmFtZQ.short_desc": {
+          "source": "Optional name for the image",
+          "message": "Optional name for the image"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.option.bmFtZQ.desc": {
+          "source": "Set a custom name for the uploaded image. If not provided, the filename from the URL will be used",
+          "message": "Set a custom name for the uploaded image. If not provided, the filename from the URL will be used"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.option.dGFncw.short_desc": {
+          "source": "Optional tags for the image",
+          "message": "Optional tags for the image"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.option.dGFncw.desc": {
+          "source": "Add tags to help organize and find your image later",
+          "message": "Add tags to help organize and find your image later"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.display_name": {
+          "source": "List Designs",
+          "message": "List Designs"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.short_desc": {
+          "source": "List your Canva designs",
+          "message": "List your Canva designs"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.desc": {
+          "source": "Retrieve a list of your Canva designs with optional filtering and sorting",
+          "message": "Retrieve a list of your Canva designs with optional filtering and sorting"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "Search Query"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.cXVlcnk.short_desc": {
+          "source": "Search term to filter designs",
+          "message": "Search term to filter designs"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.cXVlcnk.desc": {
+          "source": "Enter a search term to find specific designs by title or content",
+          "message": "Enter a search term to find specific designs by title or content"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.Y29udGludWF0aW9u.display_name": {
+          "source": "Continuation Token",
+          "message": "Continuation Token"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.Y29udGludWF0aW9u.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token for pagination"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.Y29udGludWF0aW9u.desc": {
+          "source": "Use this token to continue from where the previous request left off",
+          "message": "Use this token to continue from where the previous request left off"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.b3duZXJzaGlw.display_name": {
+          "source": "Ownership Filter",
+          "message": "Ownership Filter"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.b3duZXJzaGlw.short_desc": {
+          "source": "Filter by ownership type",
+          "message": "Filter by ownership type"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.b3duZXJzaGlw.desc": {
+          "source": "Choose whether to show all designs, only owned designs, or only shared designs",
+          "message": "Choose whether to show all designs, only owned designs, or only shared designs"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.b3duZXJzaGlw.allowed-value.c3RyaW5nOmFueQ.display_name": {
+          "source": "Any",
+          "message": "Any"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.b3duZXJzaGlw.allowed-value.c3RyaW5nOm93bmVk.display_name": {
+          "source": "Owned",
+          "message": "Owned"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.b3duZXJzaGlw.allowed-value.c3RyaW5nOnNoYXJlZA.display_name": {
+          "source": "Shared",
+          "message": "Shared"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.display_name": {
+          "source": "Sort By",
+          "message": "Sort By"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.short_desc": {
+          "source": "How to sort the results",
+          "message": "How to sort the results"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.desc": {
+          "source": "Choose how to sort the returned designs list",
+          "message": "Choose how to sort the returned designs list"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.allowed-value.c3RyaW5nOnJlbGV2YW5jZQ.display_name": {
+          "source": "Relevance",
+          "message": "Relevance"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.allowed-value.c3RyaW5nOm1vZGlmaWVkX2Rlc2NlbmRpbmc.display_name": {
+          "source": "Modified Descending",
+          "message": "Modified Descending"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.allowed-value.c3RyaW5nOm1vZGlmaWVkX2FzY2VuZGluZw.display_name": {
+          "source": "Modified Ascending",
+          "message": "Modified Ascending"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.allowed-value.c3RyaW5nOnRpdGxlX2Rlc2NlbmRpbmc.display_name": {
+          "source": "Title Descending",
+          "message": "Title Descending"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.allowed-value.c3RyaW5nOnRpdGxlX2FzY2VuZGluZw.display_name": {
+          "source": "Title Ascending",
+          "message": "Title Ascending"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.display_name": {
+          "source": "Create Comment Thread",
+          "message": "Create Comment Thread"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.short_desc": {
+          "source": "Create a new comment thread on a design",
+          "message": "Create a new comment thread on a design"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.desc": {
+          "source": "Start a new comment thread on a Canva design to collaborate with team members",
+          "message": "Start a new comment thread on a Canva design to collaborate with team members"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.option.ZGVzaWdu.display_name": {
+          "source": "Design",
+          "message": "Design"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.option.ZGVzaWdu.short_desc": {
+          "source": "The design to comment on",
+          "message": "The design to comment on"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.option.ZGVzaWdu.desc": {
+          "source": "Select the Canva design where you want to create the comment thread",
+          "message": "Select the Canva design where you want to create the comment thread"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "Message"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.option.bWVzc2FnZQ.short_desc": {
+          "source": "The comment message",
+          "message": "The comment message"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.option.bWVzc2FnZQ.desc": {
+          "source": "Enter the text content of your comment",
+          "message": "Enter the text content of your comment"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.option.YXNzaWduZWU.display_name": {
+          "source": "Assignee",
+          "message": "Assignee"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.option.YXNzaWduZWU.short_desc": {
+          "source": "Optional person to assign the comment to",
+          "message": "Optional person to assign the comment to"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.option.YXNzaWduZWU.desc": {
+          "source": "Assign this comment to a specific team member for action",
+          "message": "Assign this comment to a specific team member for action"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.display_name": {
+          "source": "Create Reply",
+          "message": "Create Reply"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.short_desc": {
+          "source": "Reply to an existing comment thread",
+          "message": "Reply to an existing comment thread"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.desc": {
+          "source": "Add a reply to an existing comment thread on a Canva design",
+          "message": "Add a reply to an existing comment thread on a Canva design"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.option.ZGVzaWdu.display_name": {
+          "source": "Design",
+          "message": "Design"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.option.ZGVzaWdu.short_desc": {
+          "source": "The design containing the thread",
+          "message": "The design containing the thread"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.option.ZGVzaWdu.desc": {
+          "source": "Select the Canva design that contains the comment thread",
+          "message": "Select the Canva design that contains the comment thread"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.option.dGhyZWFk.display_name": {
+          "source": "Thread ID",
+          "message": "Thread ID"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.option.dGhyZWFk.short_desc": {
+          "source": "The comment thread to reply to",
+          "message": "The comment thread to reply to"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.option.dGhyZWFk.desc": {
+          "source": "The unique identifier of the comment thread you want to reply to",
+          "message": "The unique identifier of the comment thread you want to reply to"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "Message"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.option.bWVzc2FnZQ.short_desc": {
+          "source": "The reply message",
+          "message": "The reply message"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.option.bWVzc2FnZQ.desc": {
+          "source": "Enter the text content of your reply",
+          "message": "Enter the text content of your reply"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.display_name": {
+          "source": "List Thread Replies",
+          "message": "List Thread Replies"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.short_desc": {
+          "source": "List replies in a comment thread",
+          "message": "List replies in a comment thread"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.desc": {
+          "source": "Retrieve all replies from a specific comment thread on a Canva design",
+          "message": "Retrieve all replies from a specific comment thread on a Canva design"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of replies to return",
+          "message": "Maximum number of replies to return"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of replies to retrieve (default: 50)",
+          "message": "Set the maximum number of replies to retrieve (default: 50)"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.Y29udGludWF0aW9u.display_name": {
+          "source": "Continuation Token",
+          "message": "Continuation Token"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.Y29udGludWF0aW9u.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token for pagination"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.Y29udGludWF0aW9u.desc": {
+          "source": "Use this token to continue from where the previous request left off",
+          "message": "Use this token to continue from where the previous request left off"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.ZGVzaWdu.display_name": {
+          "source": "Design",
+          "message": "Design"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.ZGVzaWdu.short_desc": {
+          "source": "The design containing the thread",
+          "message": "The design containing the thread"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.ZGVzaWdu.desc": {
+          "source": "Select the Canva design that contains the comment thread",
+          "message": "Select the Canva design that contains the comment thread"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.dGhyZWFk.display_name": {
+          "source": "Thread ID",
+          "message": "Thread ID"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.dGhyZWFk.short_desc": {
+          "source": "The comment thread to get replies from",
+          "message": "The comment thread to get replies from"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.dGhyZWFk.desc": {
+          "source": "The unique identifier of the comment thread whose replies you want to list",
+          "message": "The unique identifier of the comment thread whose replies you want to list"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.display_name": {
+          "source": "New Design",
+          "message": "New Design"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.short_desc": {
+          "source": "Triggers when a new design is created",
+          "message": "Triggers when a new design is created"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.desc": {
+          "source": "This trigger fires when a new design is created in your Canva account, with optional filtering by ownership and search query",
+          "message": "This trigger fires when a new design is created in your Canva account, with optional filtering by ownership and search query"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "Search Query"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.cXVlcnk.short_desc": {
+          "source": "Filter designs by search term",
+          "message": "Filter designs by search term"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.cXVlcnk.desc": {
+          "source": "Optional search term to filter which designs trigger the event. Only designs matching this query will trigger the event",
+          "message": "Optional search term to filter which designs trigger the event. Only designs matching this query will trigger the event"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.b3duZXJzaGlw.display_name": {
+          "source": "Ownership Filter",
+          "message": "Ownership Filter"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.b3duZXJzaGlw.short_desc": {
+          "source": "Filter by ownership type",
+          "message": "Filter by ownership type"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.b3duZXJzaGlw.desc": {
+          "source": "Choose whether to monitor all designs, only your owned designs, or only shared designs",
+          "message": "Choose whether to monitor all designs, only your owned designs, or only shared designs"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.b3duZXJzaGlw.allowed-value.c3RyaW5nOmFueQ.display_name": {
+          "source": "Any",
+          "message": "Any"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.b3duZXJzaGlw.allowed-value.c3RyaW5nOm93bmVk.display_name": {
+          "source": "Owned",
+          "message": "Owned"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.b3duZXJzaGlw.allowed-value.c3RyaW5nOnNoYXJlZA.display_name": {
+          "source": "Shared",
+          "message": "Shared"
+        },
+        "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.display_name": {
+          "source": "New Thread Reply",
+          "message": "New Thread Reply"
+        },
+        "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.short_desc": {
+          "source": "Triggers when a new reply is added to a comment thread",
+          "message": "Triggers when a new reply is added to a comment thread"
+        },
+        "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.desc": {
+          "source": "This trigger fires when someone adds a new reply to a specific comment thread on a Canva design",
+          "message": "This trigger fires when someone adds a new reply to a specific comment thread on a Canva design"
+        },
+        "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.option.ZGVzaWdu.display_name": {
+          "source": "Design",
+          "message": "Design"
+        },
+        "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.option.ZGVzaWdu.short_desc": {
+          "source": "The design to monitor for new replies",
+          "message": "The design to monitor for new replies"
+        },
+        "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.option.ZGVzaWdu.desc": {
+          "source": "Select the Canva design that contains the comment thread you want to monitor for new replies",
+          "message": "Select the Canva design that contains the comment thread you want to monitor for new replies"
+        },
+        "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.option.dGhyZWFk.display_name": {
+          "source": "Thread ID",
+          "message": "Thread ID"
+        },
+        "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.option.dGhyZWFk.short_desc": {
+          "source": "The comment thread to monitor",
+          "message": "The comment thread to monitor"
+        },
+        "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.option.dGhyZWFk.desc": {
+          "source": "The unique identifier of the comment thread you want to monitor for new replies",
+          "message": "The unique identifier of the comment thread you want to monitor for new replies"
+        }
+      }
+    }
+  }
+}

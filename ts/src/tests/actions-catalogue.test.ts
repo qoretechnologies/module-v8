@@ -32,6 +32,9 @@ describe('Qorus Apps Catalogue tests', () => {
     const allErrors: string[] = [];
 
     forEach(actionsCatalogue.apps, (app) => {
+      expect(
+        (app as unknown as { presentation_source_locale?: string }).presentation_source_locale
+      ).toBe('en');
       expect(app.display_name).not.toBeFalsy();
       expect(app.short_desc).not.toBeFalsy();
       expect(app.desc).not.toBeFalsy();
@@ -112,6 +115,12 @@ describe('Qorus Apps Catalogue tests', () => {
           expect(action.swagger_path.includes('undefined')).not.toBeTruthy();
         }
       });
+    });
+
+    forEach(actionsCatalogue.existingApps, (app) => {
+      expect(
+        (app as unknown as { presentation_source_locale?: string }).presentation_source_locale
+      ).toBe('en');
     });
 
     if (allErrors.length > 0) {

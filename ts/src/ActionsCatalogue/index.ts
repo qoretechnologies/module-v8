@@ -253,7 +253,10 @@ export class ActionsCatalogue {
   ) {
     Object.keys(collection).forEach((appName) => {
       const collectionApp = collection[appName] as T;
-      const app = omit(collectionApp, 'actions');
+      // Preserve the locale that produced all app/action/option prose.  The
+      // Qore side transports this as provider provenance and must never infer
+      // a source language from the text itself.
+      const app = this.withPresentationSourceLocale(omit(collectionApp, 'actions'));
 
       let actions: TQoreAppAction[] = [];
 
@@ -275,11 +278,11 @@ export class ActionsCatalogue {
     // "existing" app sets are initialized up front here; use loadAllNewApps() to
     // eagerly load the full NEW_APPS set (e.g. for tooling/tests).
     Object.entries(CUSTOM_APPS).forEach(([appName, customApp]) => {
-      this.apps[appName] = customApp;
+      this.apps[appName] = this.withPresentationSourceLocale({ ...customApp });
     });
 
     Object.entries(EXISTING_APPS).forEach(([appName, getApp]) => {
-      this.existingApps[appName] = getApp(this.locale);
+      this.existingApps[appName] = this.withPresentationSourceLocale(getApp(this.locale));
     });
   }
 
@@ -324,7 +327,7 @@ export class ActionsCatalogue {
       }
     }
 
-    return {
+    const localizedApp = {
       ...app,
       ...mappedCrudOptions,
       groups,
@@ -342,6 +345,12 @@ export class ActionsCatalogue {
           },
         }),
     };
+    return this.withPresentationSourceLocale(localizedApp);
+  }
+
+  private withPresentationSourceLocale<T extends object>(app: T): T {
+    (app as Record<string, unknown>).presentation_source_locale = this.locale;
+    return app;
   }
 
   /** Load a single NEW-style app from its directory on demand and register its

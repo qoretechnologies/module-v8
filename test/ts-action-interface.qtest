@@ -682,6 +682,7 @@ var obj = {
         string name = "TestApp-" + get_random_string();
         hash<auto> app = {
             "name": name,
+            "presentation_source_locale": "cs-CZ",
             "display_name": "TestApp",
             "short_desc": "Test",
             "desc": "Test",
@@ -694,6 +695,8 @@ var obj = {
         TypeScriptActionInterface::registerApp(app, pool);
         hash<DataProviderAppInfo> appinfo = DataProviderActionCatalog::getAppEx(name);
         assertEq(name, appinfo.name);
+        assertEq("cs-CZ", appinfo.presentation_source_locale,
+            "the TypeScript app registration path preserves locale provenance");
 
         hash<auto> action = {
             "app": name,

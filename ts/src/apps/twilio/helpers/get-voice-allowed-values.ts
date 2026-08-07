@@ -2,7 +2,6 @@ import { IQoreAllowedValue } from '@qoretechnologies/ts-toolkit';
 
 export const TwilioVoiceAllowedValues: IQoreAllowedValue<string>[] = [
   // English voices (most common)
-  { display_name: 'English (US) - Polly Amy (Female, Neural)', value: 'Polly.Amy-Neural' },
   { display_name: 'English (US) - Polly Joanna (Female, Neural)', value: 'Polly.Joanna-Neural' },
   { display_name: 'English (US) - Polly Matthew (Male, Neural)', value: 'Polly.Matthew-Neural' },
   { display_name: 'English (US) - Polly Joey (Male, Neural)', value: 'Polly.Joey-Neural' },

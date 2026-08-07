@@ -1,0 +1,1025 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "root": {
+      "messages": {
+        "app.Qml0YnVja2V0.display_name": {
+          "source": "Bitbucket",
+          "message": "Bitbucket"
+        },
+        "app.Qml0YnVja2V0.short_desc": {
+          "source": "Bitbucket is a Git repository management solution designed for professional teams.",
+          "message": "Bitbucket is a Git repository management solution designed for professional teams."
+        },
+        "app.Qml0YnVja2V0.desc": {
+          "source": "Bitbucket is a Git repository management solution designed for professional teams. It provides features such as pull requests, code reviews, and continuous integration to help teams collaborate on code effectively.",
+          "message": "Bitbucket is a Git repository management solution designed for professional teams. It provides features such as pull requests, code reviews, and continuous integration to help teams collaborate on code effectively."
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Make an API call"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Bitbucket",
+          "message": "Make a custom API call to Bitbucket"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Bitbucket** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Make a custom HTTP / REST API call to **Bitbucket** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP Method"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI Path"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`."
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body Type"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "How the body is serialized and what Content-Type is sent"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on."
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; use connection serialization and let the REST client decide"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serialize body as JSON"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value."
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serialize body as application/x-www-form-urlencoded form fields"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans)."
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Upload a file using multipart/form-data"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header."
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Send body as XML"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`."
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Send body as YAML"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`."
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Plain Text"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Send body as text/plain"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`."
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Raw Binary"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Send body as raw bytes"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`."
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "The request body"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes."
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Path Variables"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Values for {name} placeholders in path"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded."
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Query Arguments"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Query string parameters"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`."
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Custom Headers"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Extra request headers"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default)."
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Expected Status Codes"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Response status codes treated as success"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws)."
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Return Errors as Data"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Return non-2xx responses normally instead of throwing"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only."
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Include Debug Info"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Include request/timing/size debug info in the response"
+        },
+        "app.Qml0YnVja2V0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfY29tbWl0X2NvbW1pdF9nZXQ.display_name": {
+          "source": "Get a Commit",
+          "message": "Get a Commit"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfY29tbWl0X2NvbW1pdF9nZXQ.short_desc": {
+          "source": "Get a commit",
+          "message": "Get a commit"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfY29tbWl0X2NvbW1pdF9nZXQ.desc": {
+          "source": "Returns the specified commit.",
+          "message": "Returns the specified commit."
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfY29tbWl0X2NvbW1pdF9hcHByb3ZlX2RlbGV0ZQ.display_name": {
+          "source": "Unapprove a Commit",
+          "message": "Unapprove a Commit"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfY29tbWl0X2NvbW1pdF9hcHByb3ZlX2RlbGV0ZQ.short_desc": {
+          "source": "Unapprove a commit",
+          "message": "Unapprove a commit"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfY29tbWl0X2NvbW1pdF9hcHByb3ZlX2RlbGV0ZQ.desc": {
+          "source": "Redact the authenticated user's approval of the specified commit.\n\nThis operation is only available to users that have explicit access to\nthe repository. In contrast, just the fact that a repository is\npublicly accessible to users does not give them the ability to approve\ncommits.",
+          "message": "Redact the authenticated user's approval of the specified commit.\n\nThis operation is only available to users that have explicit access to\nthe repository. In contrast, just the fact that a repository is\npublicly accessible to users does not give them the ability to approve\ncommits."
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfY29tbWl0X2NvbW1pdF9hcHByb3ZlX3Bvc3Q.display_name": {
+          "source": "Approve a Commit",
+          "message": "Approve a Commit"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfY29tbWl0X2NvbW1pdF9hcHByb3ZlX3Bvc3Q.short_desc": {
+          "source": "Approve a commit",
+          "message": "Approve a commit"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfY29tbWl0X2NvbW1pdF9hcHByb3ZlX3Bvc3Q.desc": {
+          "source": "Approve the specified commit as the authenticated user.\n\nThis operation is only available to users that have explicit access to\nthe repository. In contrast, just the fact that a repository is\npublicly accessible to users does not give them the ability to approve\ncommits.",
+          "message": "Approve the specified commit as the authenticated user.\n\nThis operation is only available to users that have explicit access to\nthe repository. In contrast, just the fact that a repository is\npublicly accessible to users does not give them the ability to approve\ncommits."
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfY29tbWl0X2NvbW1pdF9jb21tZW50c19nZXQ.display_name": {
+          "source": "List a Commit's Comments",
+          "message": "List a Commit's Comments"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfY29tbWl0X2NvbW1pdF9jb21tZW50c19nZXQ.short_desc": {
+          "source": "List a commit's comments",
+          "message": "List a commit's comments"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfY29tbWl0X2NvbW1pdF9jb21tZW50c19nZXQ.desc": {
+          "source": "Returns the commit's comments.\n\nThis includes both global and inline comments.\n\nThe default sorting is oldest to newest and can be overridden with\nthe `sort` query parameter.",
+          "message": "Returns the commit's comments.\n\nThis includes both global and inline comments.\n\nThe default sorting is oldest to newest and can be overridden with\nthe `sort` query parameter."
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfY29tbWl0X2NvbW1pdF9jb21tZW50c19wb3N0.display_name": {
+          "source": "Create Comment for a Commit",
+          "message": "Create Comment for a Commit"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfY29tbWl0X2NvbW1pdF9jb21tZW50c19wb3N0.short_desc": {
+          "source": "Create comment for a commit",
+          "message": "Create comment for a commit"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfY29tbWl0X2NvbW1pdF9jb21tZW50c19wb3N0.desc": {
+          "source": "Creates new comment on the specified commit.\n\nTo post a reply to an existing comment, include the `parent.id` field:\n\n```\n$ curl https:-api.bitbucket.org-2.0-repositories-atlassian-prlinks-commit-db9ba1e031d07a02603eae0e559a7adc010257fc-comments- \\\n  -X POST -u evzijst \\\n  -H 'Content-Type: application-json' \\\n  -d '\"content\": \"raw\": \"One more thing!\",\n       \"parent\": \"id\": 5728901'\n```",
+          "message": "Creates new comment on the specified commit.\n\nTo post a reply to an existing comment, include the `parent.id` field:\n\n```\n$ curl https:-api.bitbucket.org-2.0-repositories-atlassian-prlinks-commit-db9ba1e031d07a02603eae0e559a7adc010257fc-comments- \\\n  -X POST -u evzijst \\\n  -H 'Content-Type: application-json' \\\n  -d '\"content\": \"raw\": \"One more thing!\",\n       \"parent\": \"id\": 5728901'\n```"
+        },
+        "app.Qml0YnVja2V0.action.Z2V0UmVwb3J0c0ZvckNvbW1pdA.display_name": {
+          "source": "List Reports",
+          "message": "List Reports"
+        },
+        "app.Qml0YnVja2V0.action.Z2V0UmVwb3J0c0ZvckNvbW1pdA.short_desc": {
+          "source": "List reports",
+          "message": "List reports"
+        },
+        "app.Qml0YnVja2V0.action.Z2V0UmVwb3J0c0ZvckNvbW1pdA.desc": {
+          "source": "Returns a paginated list of Reports linked to this commit.",
+          "message": "Returns a paginated list of Reports linked to this commit."
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfY29tbWl0c19nZXQ.display_name": {
+          "source": "List Commits",
+          "message": "List Commits"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfY29tbWl0c19nZXQ.short_desc": {
+          "source": "List commits",
+          "message": "List commits"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfY29tbWl0c19nZXQ.desc": {
+          "source": "These are the repository's commits. They are paginated and returned\nin reverse chronological order, similar to the output of `git log`.\nLike these tools, the DAG can be filtered.\n\n#### GET -repositories-workspace-repo_slug-commits-\n\nReturns all commits in the repo in topological order (newest commit\nfirst). All branches and tags are included (similar to\n`git log -all`).\n\n#### GET -repositories-workspace-repo_slug-commits-?exclude=master\n\nReturns all commits in the repo that are not on master\n(similar to `git log -all ^master`).\n\n#### GET -repositories-workspace-repo_slug-commits-?include=foo&include=bar&exclude=fu&exclude=fubar\n\nReturns all commits that are on refs `foo` or `bar`, but not on `fu` or\n`fubar` (similar to `git log foo bar ^fu ^fubar`).\n\nAn optional `path` parameter can be specified that will limit the\nresults to commits that affect that path. `path` can either be a file\nor a directory. If a directory is specified, commits are returned that\nhave modified any file in the directory tree rooted by `path`. It is\nimportant to note that if the `path` parameter is specified, the commits\nreturned by this endpoint may no longer be a DAG, parent commits that\ndo not modify the path will be omitted from the response.\n\n#### GET -repositories-workspace-repo_slug-commits-?path=README.md&include=foo&include=bar&exclude=master\n\nReturns all commits that are on refs `foo` or `bar`, but not on `master`\nthat changed the file README.md.\n\n#### GET -repositories-workspace-repo_slug-commits-?path=src-&include=foo&include=bar&exclude=master\n\nReturns all commits that are on refs `foo` or `bar`, but not on `master`\nthat changed to a file in any file in the directory src or its children.\n\nBecause the response could include a very large number of commits, it\nis paginated. Follow the 'next' link in the response to navigate to the\nnext page of commits. As with other paginated resources, do not\nconstruct your own links.\n\nWhen the include and exclude parameters are more than can fit in a\nquery string, clients can use a `x-www-form-urlencoded` POST instead.",
+          "message": "These are the repository's commits. They are paginated and returned\nin reverse chronological order, similar to the output of `git log`.\nLike these tools, the DAG can be filtered.\n\n#### GET -repositories-workspace-repo_slug-commits-\n\nReturns all commits in the repo in topological order (newest commit\nfirst). All branches and tags are included (similar to\n`git log -all`).\n\n#### GET -repositories-workspace-repo_slug-commits-?exclude=master\n\nReturns all commits in the repo that are not on master\n(similar to `git log -all ^master`).\n\n#### GET -repositories-workspace-repo_slug-commits-?include=foo&include=bar&exclude=fu&exclude=fubar\n\nReturns all commits that are on refs `foo` or `bar`, but not on `fu` or\n`fubar` (similar to `git log foo bar ^fu ^fubar`).\n\nAn optional `path` parameter can be specified that will limit the\nresults to commits that affect that path. `path` can either be a file\nor a directory. If a directory is specified, commits are returned that\nhave modified any file in the directory tree rooted by `path`. It is\nimportant to note that if the `path` parameter is specified, the commits\nreturned by this endpoint may no longer be a DAG, parent commits that\ndo not modify the path will be omitted from the response.\n\n#### GET -repositories-workspace-repo_slug-commits-?path=README.md&include=foo&include=bar&exclude=master\n\nReturns all commits that are on refs `foo` or `bar`, but not on `master`\nthat changed the file README.md.\n\n#### GET -repositories-workspace-repo_slug-commits-?path=src-&include=foo&include=bar&exclude=master\n\nReturns all commits that are on refs `foo` or `bar`, but not on `master`\nthat changed to a file in any file in the directory src or its children.\n\nBecause the response could include a very large number of commits, it\nis paginated. Follow the 'next' link in the response to navigate to the\nnext page of commits. As with other paginated resources, do not\nconstruct your own links.\n\nWhen the include and exclude parameters are more than can fit in a\nquery string, clients can use a `x-www-form-urlencoded` POST instead."
+        },
+        "app.Qml0YnVja2V0.action.Z2V0RGVwbG95bWVudHNGb3JSZXBvc2l0b3J5.display_name": {
+          "source": "List Deployments",
+          "message": "List Deployments"
+        },
+        "app.Qml0YnVja2V0.action.Z2V0RGVwbG95bWVudHNGb3JSZXBvc2l0b3J5.short_desc": {
+          "source": "List deployments",
+          "message": "List deployments"
+        },
+        "app.Qml0YnVja2V0.action.Z2V0RGVwbG95bWVudHNGb3JSZXBvc2l0b3J5.desc": {
+          "source": "Find deployments",
+          "message": "Find deployments"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX2dldA.display_name": {
+          "source": "List Pull Requests",
+          "message": "List Pull Requests"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX2dldA.short_desc": {
+          "source": "List pull requests",
+          "message": "List pull requests"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX2dldA.desc": {
+          "source": "Returns all pull requests on the specified repository.\n\nBy default only open pull requests are returned. This can be controlled\nusing the `state` query parameter. To retrieve pull requests that are\nin one of multiple states, repeat the `state` parameter for each\nindividual state.\n\nThis endpoint also supports filtering and sorting of the results. See\n[filtering and sorting](-cloud-bitbucket-rest-intro-#filtering) for more details.",
+          "message": "Returns all pull requests on the specified repository.\n\nBy default only open pull requests are returned. This can be controlled\nusing the `state` query parameter. To retrieve pull requests that are\nin one of multiple states, repeat the `state` parameter for each\nindividual state.\n\nThis endpoint also supports filtering and sorting of the results. See\n[filtering and sorting](-cloud-bitbucket-rest-intro-#filtering) for more details."
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3Bvc3Q.display_name": {
+          "source": "Create a Pull Request",
+          "message": "Create a Pull Request"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3Bvc3Q.short_desc": {
+          "source": "Create a pull request",
+          "message": "Create a pull request"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3Bvc3Q.desc": {
+          "source": "Creates a new pull request where the destination repository is\nthis repository and the author is the authenticated user.\n\nThe minimum required fields to create a pull request are `title` and\n`source`, specified by a branch name.\n\n```\ncurl https:-api.bitbucket.org-2.0-repositories-my-workspace-my-repository-pullrequests \\\n    -u my-username:my-password \\\n    -request POST \\\n    -header 'Content-Type: application-json' \\\n    -data '\n        \"title\": \"My Title\",\n        \"source\": \n            \"branch\": \n                \"name\": \"staging\"\n            \n        \n    '\n```\n\nIf the pull request's `destination` is not specified, it will default\nto the `repository.mainbranch`. To open a pull request to a\ndifferent branch, say from a feature branch to a staging branch,\nspecify a `destination` (same format as the `source`):\n\n```\n\n    \"title\": \"My Title\",\n    \"source\": \n        \"branch\": \n            \"name\": \"my-feature-branch\"\n        \n    ,\n    \"destination\": \n        \"branch\": \n            \"name\": \"staging\"\n        \n    \n\n```\n\nReviewers can be specified by adding an array of user objects as the\n`reviewers` property.\n\n```\n\n    \"title\": \"My Title\",\n    \"source\": \n        \"branch\": \n            \"name\": \"my-feature-branch\"\n        \n    ,\n    \"reviewers\": [\n        \n            \"uuid\": \"504c3b62-8120-4f0c-a7bc-87800b9d6f70\"\n        \n    ]\n\n```\n\nOther fields:\n\n* `description` - a string\n* `close_source_branch` - boolean that specifies if the source branch should be closed upon merging\n* `draft` - boolean that specifies whether the pull request is a draft",
+          "message": "Creates a new pull request where the destination repository is\nthis repository and the author is the authenticated user.\n\nThe minimum required fields to create a pull request are `title` and\n`source`, specified by a branch name.\n\n```\ncurl https:-api.bitbucket.org-2.0-repositories-my-workspace-my-repository-pullrequests \\\n    -u my-username:my-password \\\n    -request POST \\\n    -header 'Content-Type: application-json' \\\n    -data '\n        \"title\": \"My Title\",\n        \"source\": \n            \"branch\": \n                \"name\": \"staging\"\n            \n        \n    '\n```\n\nIf the pull request's `destination` is not specified, it will default\nto the `repository.mainbranch`. To open a pull request to a\ndifferent branch, say from a feature branch to a staging branch,\nspecify a `destination` (same format as the `source`):\n\n```\n\n    \"title\": \"My Title\",\n    \"source\": \n        \"branch\": \n            \"name\": \"my-feature-branch\"\n        \n    ,\n    \"destination\": \n        \"branch\": \n            \"name\": \"staging\"\n        \n    \n\n```\n\nReviewers can be specified by adding an array of user objects as the\n`reviewers` property.\n\n```\n\n    \"title\": \"My Title\",\n    \"source\": \n        \"branch\": \n            \"name\": \"my-feature-branch\"\n        \n    ,\n    \"reviewers\": [\n        \n            \"uuid\": \"504c3b62-8120-4f0c-a7bc-87800b9d6f70\"\n        \n    ]\n\n```\n\nOther fields:\n\n* `description` - a string\n* `close_source_branch` - boolean that specifies if the source branch should be closed upon merging\n* `draft` - boolean that specifies whether the pull request is a draft"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9nZXQ.display_name": {
+          "source": "Get a Pull Request",
+          "message": "Get a Pull Request"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9nZXQ.short_desc": {
+          "source": "Get a pull request",
+          "message": "Get a pull request"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9nZXQ.desc": {
+          "source": "Returns the specified pull request.",
+          "message": "Returns the specified pull request."
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9wdXQ.display_name": {
+          "source": "Update a Pull Request",
+          "message": "Update a Pull Request"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9wdXQ.short_desc": {
+          "source": "Update a pull request",
+          "message": "Update a pull request"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9wdXQ.desc": {
+          "source": "Mutates the specified pull request.\n\nThis can be used to change the pull request's branches or description.\n\nOnly open pull requests can be mutated.",
+          "message": "Mutates the specified pull request.\n\nThis can be used to change the pull request's branches or description.\n\nOnly open pull requests can be mutated."
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9jb21tZW50c19nZXQ.display_name": {
+          "source": "List Comments on a Pull Request",
+          "message": "List Comments on a Pull Request"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9jb21tZW50c19nZXQ.short_desc": {
+          "source": "List comments on a pull request",
+          "message": "List comments on a pull request"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9jb21tZW50c19nZXQ.desc": {
+          "source": "Returns a paginated list of the pull request's comments.\n\nThis includes both global, inline comments and replies.\n\nThe default sorting is oldest to newest and can be overridden with\nthe `sort` query parameter.\n\nThis endpoint also supports filtering and sorting of the results. See\n[filtering and sorting](-cloud-bitbucket-rest-intro-#filtering) for more\ndetails.",
+          "message": "Returns a paginated list of the pull request's comments.\n\nThis includes both global, inline comments and replies.\n\nThe default sorting is oldest to newest and can be overridden with\nthe `sort` query parameter.\n\nThis endpoint also supports filtering and sorting of the results. See\n[filtering and sorting](-cloud-bitbucket-rest-intro-#filtering) for more\ndetails."
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9jb21tZW50c19wb3N0.display_name": {
+          "source": "Create a Comment on a Pull Request",
+          "message": "Create a Comment on a Pull Request"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9jb21tZW50c19wb3N0.short_desc": {
+          "source": "Create a comment on a pull request",
+          "message": "Create a comment on a pull request"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9jb21tZW50c19wb3N0.desc": {
+          "source": "Creates a new pull request comment.\n\nReturns the newly created pull request comment.",
+          "message": "Creates a new pull request comment.\n\nReturns the newly created pull request comment."
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9jb21tZW50c19jb21tZW50X2lkX2RlbGV0ZQ.display_name": {
+          "source": "Delete a Comment on a Pull Request",
+          "message": "Delete a Comment on a Pull Request"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9jb21tZW50c19jb21tZW50X2lkX2RlbGV0ZQ.short_desc": {
+          "source": "Delete a comment on a pull request",
+          "message": "Delete a comment on a pull request"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9jb21tZW50c19jb21tZW50X2lkX2RlbGV0ZQ.desc": {
+          "source": "Deletes a specific pull request comment.",
+          "message": "Deletes a specific pull request comment."
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9jb21tZW50c19jb21tZW50X2lkX2dldA.display_name": {
+          "source": "Get a Comment on a Pull Request",
+          "message": "Get a Comment on a Pull Request"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9jb21tZW50c19jb21tZW50X2lkX2dldA.short_desc": {
+          "source": "Get a comment on a pull request",
+          "message": "Get a comment on a pull request"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9jb21tZW50c19jb21tZW50X2lkX2dldA.desc": {
+          "source": "Returns a specific pull request comment.",
+          "message": "Returns a specific pull request comment."
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9jb21tZW50c19jb21tZW50X2lkX3B1dA.display_name": {
+          "source": "Update a Comment on a Pull Request",
+          "message": "Update a Comment on a Pull Request"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9jb21tZW50c19jb21tZW50X2lkX3B1dA.short_desc": {
+          "source": "Update a comment on a pull request",
+          "message": "Update a comment on a pull request"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHVsbHJlcXVlc3RzX3B1bGxfcmVxdWVzdF9pZF9jb21tZW50c19jb21tZW50X2lkX3B1dA.desc": {
+          "source": "Updates a specific pull request comment.",
+          "message": "Updates a specific pull request comment."
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX2dldA.display_name": {
+          "source": "List Public Repositories",
+          "message": "List Public Repositories"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX2dldA.short_desc": {
+          "source": "List public repositories",
+          "message": "List public repositories"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX2dldA.desc": {
+          "source": "Returns a paginated list of all public repositories.\n\nThis endpoint also supports filtering and sorting of the results. See\n[filtering and sorting](-cloud-bitbucket-rest-intro-#filtering) for more details.",
+          "message": "Returns a paginated list of all public repositories.\n\nThis endpoint also supports filtering and sorting of the results. See\n[filtering and sorting](-cloud-bitbucket-rest-intro-#filtering) for more details."
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX2dldA.option.YWZ0ZXI.display_name": {
+          "source": "After",
+          "message": "After"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX2dldA.option.YWZ0ZXI.short_desc": {
+          "source": "Filter the results to include only repositories created on or",
+          "message": "Filter the results to include only repositories created on or"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX2dldA.option.YWZ0ZXI.desc": {
+          "source": "Filter the results to include only repositories created on or\nafter this [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)\n timestamp. Example: `YYYY-MM-DDTHH:mm:ss.sssZ`",
+          "message": "Filter the results to include only repositories created on or\nafter this [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)\n timestamp. Example: `YYYY-MM-DDTHH:mm:ss.sssZ`"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX2dldA.option.cm9sZQ.display_name": {
+          "source": "Role",
+          "message": "Role"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX2dldA.option.cm9sZQ.short_desc": {
+          "source": "Filters the result based on the authenticated user's role on each repository",
+          "message": "Filters the result based on the authenticated user's role on each repository"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX2dldA.option.cm9sZQ.desc": {
+          "source": "Filters the result based on the authenticated user's role on each repository.\n\n* **member**: returns repositories to which the user has explicit read access\n* **contributor**: returns repositories to which the user has explicit write access\n* **admin**: returns repositories to which the user has explicit administrator access\n* **owner**: returns all repositories owned by the current user\n",
+          "message": "Filters the result based on the authenticated user's role on each repository.\n\n* **member**: returns repositories to which the user has explicit read access\n* **contributor**: returns repositories to which the user has explicit write access\n* **admin**: returns repositories to which the user has explicit administrator access\n* **owner**: returns all repositories owned by the current user\n"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX2dldA.option.cQ.display_name": {
+          "source": "Q",
+          "message": "Q"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX2dldA.option.cQ.short_desc": {
+          "source": "Query string to narrow down the response as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering)",
+          "message": "Query string to narrow down the response as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering)"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX2dldA.option.cQ.desc": {
+          "source": "Query string to narrow down the response as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).\n`role` parameter must also be specified.\n",
+          "message": "Query string to narrow down the response as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).\n`role` parameter must also be specified.\n"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX2dldA.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Sort"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX2dldA.option.c29ydA.short_desc": {
+          "source": "Field by which the results should be sorted as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering)",
+          "message": "Field by which the results should be sorted as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering)"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX2dldA.option.c29ydA.desc": {
+          "source": "Field by which the results should be sorted as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).\n",
+          "message": "Field by which the results should be sorted as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).\n"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9nZXQ.display_name": {
+          "source": "List Repositories in a Workspace",
+          "message": "List Repositories in a Workspace"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9nZXQ.short_desc": {
+          "source": "List repositories in a workspace",
+          "message": "List repositories in a workspace"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9nZXQ.desc": {
+          "source": "Returns a paginated list of all repositories owned by the specified\nworkspace.\n\nThe result can be narrowed down based on the authenticated user's role.\n\nE.g. with `?role=contributor`, only those repositories that the\nauthenticated user has write access to are returned (this includes any\nrepo the user is an admin on, as that implies write access).\n\nThis endpoint also supports filtering and sorting of the results. See\n[filtering and sorting](-cloud-bitbucket-rest-intro-#filtering) for more details.",
+          "message": "Returns a paginated list of all repositories owned by the specified\nworkspace.\n\nThe result can be narrowed down based on the authenticated user's role.\n\nE.g. with `?role=contributor`, only those repositories that the\nauthenticated user has write access to are returned (this includes any\nrepo the user is an admin on, as that implies write access).\n\nThis endpoint also supports filtering and sorting of the results. See\n[filtering and sorting](-cloud-bitbucket-rest-intro-#filtering) for more details."
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfZGVsZXRl.display_name": {
+          "source": "Delete a Repository",
+          "message": "Delete a Repository"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfZGVsZXRl.short_desc": {
+          "source": "Delete a repository",
+          "message": "Delete a repository"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfZGVsZXRl.desc": {
+          "source": "Deletes the repository. This is an irreversible operation.\n\nThis does not affect its forks.",
+          "message": "Deletes the repository. This is an irreversible operation.\n\nThis does not affect its forks."
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfZ2V0.display_name": {
+          "source": "Get a Repository",
+          "message": "Get a Repository"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfZ2V0.short_desc": {
+          "source": "Get a repository",
+          "message": "Get a repository"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfZ2V0.desc": {
+          "source": "Returns the object describing this repository.",
+          "message": "Returns the object describing this repository."
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcG9zdA.display_name": {
+          "source": "Create a Repository",
+          "message": "Create a Repository"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcG9zdA.short_desc": {
+          "source": "Create a repository",
+          "message": "Create a repository"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcG9zdA.desc": {
+          "source": "Creates a new repository.\n\nNote: In order to set the project for the newly created repository,\npass in either the project key or the project UUID as part of the\nrequest body as shown in the examples below:\n\n```\n$ curl -X POST -H \"Content-Type: application-json\" -d '\n    \"scm\": \"git\",\n    \"project\": \n        \"key\": \"MARS\"\n    \n' https:-api.bitbucket.org-2.0-repositories-teamsinspace-hablanding\n```\n\nor\n\n```\n$ curl -X POST -H \"Content-Type: application-json\" -d '\n    \"scm\": \"git\",\n    \"project\": \n        \"key\": \"ba516952-992a-4c2d-acbd-17d502922f96\"\n    \n' https:-api.bitbucket.org-2.0-repositories-teamsinspace-hablanding\n```\n\nThe project must be assigned for all repositories. If the project is not provided,\nthe repository is automatically assigned to the oldest project in the workspace.\n\nNote: In the examples above, the workspace ID `teamsinspace`,\nand-or the repository name `hablanding` can be replaced by UUIDs.",
+          "message": "Creates a new repository.\n\nNote: In order to set the project for the newly created repository,\npass in either the project key or the project UUID as part of the\nrequest body as shown in the examples below:\n\n```\n$ curl -X POST -H \"Content-Type: application-json\" -d '\n    \"scm\": \"git\",\n    \"project\": \n        \"key\": \"MARS\"\n    \n' https:-api.bitbucket.org-2.0-repositories-teamsinspace-hablanding\n```\n\nor\n\n```\n$ curl -X POST -H \"Content-Type: application-json\" -d '\n    \"scm\": \"git\",\n    \"project\": \n        \"key\": \"ba516952-992a-4c2d-acbd-17d502922f96\"\n    \n' https:-api.bitbucket.org-2.0-repositories-teamsinspace-hablanding\n```\n\nThe project must be assigned for all repositories. If the project is not provided,\nthe repository is automatically assigned to the oldest project in the workspace.\n\nNote: In the examples above, the workspace ID `teamsinspace`,\nand-or the repository name `hablanding` can be replaced by UUIDs."
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHV0.display_name": {
+          "source": "Update a Repository",
+          "message": "Update a Repository"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHV0.short_desc": {
+          "source": "Update a repository",
+          "message": "Update a repository"
+        },
+        "app.Qml0YnVja2V0.action.cmVwb3NpdG9yaWVzX3dvcmtzcGFjZV9yZXBvX3NsdWdfcHV0.desc": {
+          "source": "Since this endpoint can be used to both update and to create a\nrepository, the request body depends on the intent.\n\n#### Creation\n\nSee the POST documentation for the repository endpoint for an example\nof the request body.\n\n#### Update\n\nNote: Changing the `name` of the repository will cause the location to\nbe changed. This is because the URL of the repo is derived from the\nname (a process called slugification). In such a scenario, it is\npossible for the request to fail if the newly created slug conflicts\nwith an existing repository's slug. But if there is no conflict,\nthe new location will be returned in the `Location` header of the\nresponse.",
+          "message": "Since this endpoint can be used to both update and to create a\nrepository, the request body depends on the intent.\n\n#### Creation\n\nSee the POST documentation for the repository endpoint for an example\nof the request body.\n\n#### Update\n\nNote: Changing the `name` of the repository will cause the location to\nbe changed. This is because the URL of the repo is derived from the\nname (a process called slugification). In such a scenario, it is\npossible for the request to fail if the newly created slug conflicts\nwith an existing repository's slug. But if there is no conflict,\nthe new location will be returned in the `Location` header of the\nresponse."
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoVGVhbQ.display_name": {
+          "source": "Search for Code in a Team's Repositories",
+          "message": "Search for Code in a Team's Repositories"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoVGVhbQ.short_desc": {
+          "source": "Search for code in a team's repositories",
+          "message": "Search for code in a team's repositories"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoVGVhbQ.desc": {
+          "source": "Search for code in the repositories of the specified team.\n\nNote that searches can match in the file's text (`content_matches`),\nthe path (`path_matches`), or both.\n\nYou can use the same syntax for the search query as in the UI.\nE.g. to search for \"foo\" only within the repository \"demo\",\nuse the query parameter `search_query=foo+repo:demo`.\n\nSimilar to other APIs, you can request more fields using a\n`fields` query parameter. E.g. to get some more information about\nthe repository of matched files, use the query parameter\n`search_query=foo&fields=%2Bvalues.file.commit.repository`\n(the `%2B` is a URL-encoded `+`).\n\nTry `fields=%2Bvalues.*.*.*.*` to get an idea what's possible.\n",
+          "message": "Search for code in the repositories of the specified team.\n\nNote that searches can match in the file's text (`content_matches`),\nthe path (`path_matches`), or both.\n\nYou can use the same syntax for the search query as in the UI.\nE.g. to search for \"foo\" only within the repository \"demo\",\nuse the query parameter `search_query=foo+repo:demo`.\n\nSimilar to other APIs, you can request more fields using a\n`fields` query parameter. E.g. to get some more information about\nthe repository of matched files, use the query parameter\n`search_query=foo&fields=%2Bvalues.file.commit.repository`\n(the `%2B` is a URL-encoded `+`).\n\nTry `fields=%2Bvalues.*.*.*.*` to get an idea what's possible.\n"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoVGVhbQ.option.dXNlcm5hbWU.display_name": {
+          "source": "Username",
+          "message": "Username"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoVGVhbQ.option.dXNlcm5hbWU.short_desc": {
+          "source": "URI path variable \"username\"",
+          "message": "URI path variable \"username\""
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoVGVhbQ.option.dXNlcm5hbWU.desc": {
+          "source": "URI path variable \"username\"",
+          "message": "URI path variable \"username\""
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoVGVhbQ.option.c2VhcmNoX3F1ZXJ5.display_name": {
+          "source": "Search Query",
+          "message": "Search Query"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoVGVhbQ.option.c2VhcmNoX3F1ZXJ5.short_desc": {
+          "source": "The search query",
+          "message": "The search query"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoVGVhbQ.option.c2VhcmNoX3F1ZXJ5.desc": {
+          "source": "The search query",
+          "message": "The search query"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoVGVhbQ.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "Page"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoVGVhbQ.option.cGFnZQ.short_desc": {
+          "source": "Which page of the search results to retrieve",
+          "message": "Which page of the search results to retrieve"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoVGVhbQ.option.cGFnZQ.desc": {
+          "source": "Which page of the search results to retrieve",
+          "message": "Which page of the search results to retrieve"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoVGVhbQ.option.cGFnZWxlbg.display_name": {
+          "source": "Pagelen",
+          "message": "Pagelen"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoVGVhbQ.option.cGFnZWxlbg.short_desc": {
+          "source": "How many search results to retrieve per page",
+          "message": "How many search results to retrieve per page"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoVGVhbQ.option.cGFnZWxlbg.desc": {
+          "source": "How many search results to retrieve per page",
+          "message": "How many search results to retrieve per page"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoQWNjb3VudA.display_name": {
+          "source": "Search for Code in a User's Repositories",
+          "message": "Search for Code in a User's Repositories"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoQWNjb3VudA.short_desc": {
+          "source": "Search for code in a user's repositories",
+          "message": "Search for code in a user's repositories"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoQWNjb3VudA.desc": {
+          "source": "Search for code in the repositories of the specified user.\n\nNote that searches can match in the file's text (`content_matches`),\nthe path (`path_matches`), or both.\n\nYou can use the same syntax for the search query as in the UI.\nE.g. to search for \"foo\" only within the repository \"demo\",\nuse the query parameter `search_query=foo+repo:demo`.\n\nSimilar to other APIs, you can request more fields using a\n`fields` query parameter. E.g. to get some more information about\nthe repository of matched files, use the query parameter\n`search_query=foo&fields=%2Bvalues.file.commit.repository`\n(the `%2B` is a URL-encoded `+`).\n",
+          "message": "Search for code in the repositories of the specified user.\n\nNote that searches can match in the file's text (`content_matches`),\nthe path (`path_matches`), or both.\n\nYou can use the same syntax for the search query as in the UI.\nE.g. to search for \"foo\" only within the repository \"demo\",\nuse the query parameter `search_query=foo+repo:demo`.\n\nSimilar to other APIs, you can request more fields using a\n`fields` query parameter. E.g. to get some more information about\nthe repository of matched files, use the query parameter\n`search_query=foo&fields=%2Bvalues.file.commit.repository`\n(the `%2B` is a URL-encoded `+`).\n"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoQWNjb3VudA.option.c2VsZWN0ZWRfdXNlcg.display_name": {
+          "source": "Selected User",
+          "message": "Selected User"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoQWNjb3VudA.option.c2VsZWN0ZWRfdXNlcg.short_desc": {
+          "source": "URI path variable \"selected_user\"",
+          "message": "URI path variable \"selected_user\""
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoQWNjb3VudA.option.c2VsZWN0ZWRfdXNlcg.desc": {
+          "source": "URI path variable \"selected_user\"",
+          "message": "URI path variable \"selected_user\""
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoQWNjb3VudA.option.c2VhcmNoX3F1ZXJ5.display_name": {
+          "source": "Search Query",
+          "message": "Search Query"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoQWNjb3VudA.option.c2VhcmNoX3F1ZXJ5.short_desc": {
+          "source": "The search query",
+          "message": "The search query"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoQWNjb3VudA.option.c2VhcmNoX3F1ZXJ5.desc": {
+          "source": "The search query",
+          "message": "The search query"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoQWNjb3VudA.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "Page"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoQWNjb3VudA.option.cGFnZQ.short_desc": {
+          "source": "Which page of the search results to retrieve",
+          "message": "Which page of the search results to retrieve"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoQWNjb3VudA.option.cGFnZQ.desc": {
+          "source": "Which page of the search results to retrieve",
+          "message": "Which page of the search results to retrieve"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoQWNjb3VudA.option.cGFnZWxlbg.display_name": {
+          "source": "Pagelen",
+          "message": "Pagelen"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoQWNjb3VudA.option.cGFnZWxlbg.short_desc": {
+          "source": "How many search results to retrieve per page",
+          "message": "How many search results to retrieve per page"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoQWNjb3VudA.option.cGFnZWxlbg.desc": {
+          "source": "How many search results to retrieve per page",
+          "message": "How many search results to retrieve per page"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoV29ya3NwYWNl.display_name": {
+          "source": "Search for Code in a Workspace",
+          "message": "Search for Code in a Workspace"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoV29ya3NwYWNl.short_desc": {
+          "source": "Search for code in a workspace",
+          "message": "Search for code in a workspace"
+        },
+        "app.Qml0YnVja2V0.action.c2VhcmNoV29ya3NwYWNl.desc": {
+          "source": "Search for code in the repositories of the specified workspace.\n\nNote that searches can match in the file's text (`content_matches`),\nthe path (`path_matches`), or both.\n\nYou can use the same syntax for the search query as in the UI.\nE.g. to search for \"foo\" only within the repository \"demo\",\nuse the query parameter `search_query=foo+repo:demo`.\n\nSimilar to other APIs, you can request more fields using a\n`fields` query parameter. E.g. to get some more information about\nthe repository of matched files, use the query parameter\n`search_query=foo&fields=%2Bvalues.file.commit.repository`\n(the `%2B` is a URL-encoded `+`).\n\nTry `fields=%2Bvalues.*.*.*.*` to get an idea what's possible.\n",
+          "message": "Search for code in the repositories of the specified workspace.\n\nNote that searches can match in the file's text (`content_matches`),\nthe path (`path_matches`), or both.\n\nYou can use the same syntax for the search query as in the UI.\nE.g. to search for \"foo\" only within the repository \"demo\",\nuse the query parameter `search_query=foo+repo:demo`.\n\nSimilar to other APIs, you can request more fields using a\n`fields` query parameter. E.g. to get some more information about\nthe repository of matched files, use the query parameter\n`search_query=foo&fields=%2Bvalues.file.commit.repository`\n(the `%2B` is a URL-encoded `+`).\n\nTry `fields=%2Bvalues.*.*.*.*` to get an idea what's possible.\n"
+        },
+        "app.Qml0YnVja2V0.action.d29ya3NwYWNlc19nZXQ.display_name": {
+          "source": "List Workspaces for User",
+          "message": "List Workspaces for User"
+        },
+        "app.Qml0YnVja2V0.action.d29ya3NwYWNlc19nZXQ.short_desc": {
+          "source": "List workspaces for user",
+          "message": "List workspaces for user"
+        },
+        "app.Qml0YnVja2V0.action.d29ya3NwYWNlc19nZXQ.desc": {
+          "source": "Returns a list of workspaces accessible by the authenticated user.\n\nResults may be further [filtered or sorted](-cloud-bitbucket-rest-intro-#filtering) by\nworkspace or permission by adding the following query string parameters:\n\n* `q=slug=\"bbworkspace1\"` or `q=is_private=true`\n* `sort=created_on`\n\nNote that the query parameter values need to be URL escaped so that `=`\nwould become `%3D`.\n\n**The `collaborator` role is being removed from the Bitbucket Cloud API. For more information,\nsee the [deprecation announcement](-cloud-bitbucket-deprecation-notice-collaborator-role-).**",
+          "message": "Returns a list of workspaces accessible by the authenticated user.\n\nResults may be further [filtered or sorted](-cloud-bitbucket-rest-intro-#filtering) by\nworkspace or permission by adding the following query string parameters:\n\n* `q=slug=\"bbworkspace1\"` or `q=is_private=true`\n* `sort=created_on`\n\nNote that the query parameter values need to be URL escaped so that `=`\nwould become `%3D`.\n\n**The `collaborator` role is being removed from the Bitbucket Cloud API. For more information,\nsee the [deprecation announcement](-cloud-bitbucket-deprecation-notice-collaborator-role-).**"
+        },
+        "app.Qml0YnVja2V0.action.d29ya3NwYWNlc19nZXQ.option.cm9sZQ.display_name": {
+          "source": "Role",
+          "message": "Role"
+        },
+        "app.Qml0YnVja2V0.action.d29ya3NwYWNlc19nZXQ.option.cm9sZQ.desc": {
+          "source": "\n            Filters the workspaces based on the authenticated user's role on each workspace.\n\n            * **member**: returns a list of all the workspaces which the caller is a member of\n                at least one workspace group or repository\n            * **collaborator**: returns a list of workspaces which the caller has write access\n                to at least one repository in the workspace\n            * **owner**: returns a list of workspaces which the caller has administrator access\n            ",
+          "message": "\n            Filters the workspaces based on the authenticated user's role on each workspace.\n\n            * **member**: returns a list of all the workspaces which the caller is a member of\n                at least one workspace group or repository\n            * **collaborator**: returns a list of workspaces which the caller has write access\n                to at least one repository in the workspace\n            * **owner**: returns a list of workspaces which the caller has administrator access\n            "
+        },
+        "app.Qml0YnVja2V0.action.d29ya3NwYWNlc19nZXQ.option.cQ.display_name": {
+          "source": "Q",
+          "message": "Q"
+        },
+        "app.Qml0YnVja2V0.action.d29ya3NwYWNlc19nZXQ.option.cQ.desc": {
+          "source": "\nQuery string to narrow down the response. See\n[filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for details.",
+          "message": "\nQuery string to narrow down the response. See\n[filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for details."
+        },
+        "app.Qml0YnVja2V0.action.d29ya3NwYWNlc19nZXQ.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Sort"
+        },
+        "app.Qml0YnVja2V0.action.d29ya3NwYWNlc19nZXQ.option.c29ydA.desc": {
+          "source": "\nName of a response property to sort results. See\n[filtering and sorting](/cloud/bitbucket/rest/intro/#sorting-query-results)\nfor details.\n",
+          "message": "\nName of a response property to sort results. See\n[filtering and sorting](/cloud/bitbucket/rest/intro/#sorting-query-results)\nfor details.\n"
+        },
+        "app.Qml0YnVja2V0.action.d29ya3NwYWNlc193b3Jrc3BhY2VfZ2V0.display_name": {
+          "source": "Get a Workspace",
+          "message": "Get a Workspace"
+        },
+        "app.Qml0YnVja2V0.action.d29ya3NwYWNlc193b3Jrc3BhY2VfZ2V0.short_desc": {
+          "source": "Get a workspace",
+          "message": "Get a workspace"
+        },
+        "app.Qml0YnVja2V0.action.d29ya3NwYWNlc193b3Jrc3BhY2VfZ2V0.desc": {
+          "source": "Returns the requested workspace.",
+          "message": "Returns the requested workspace."
+        },
+        "app.Qml0YnVja2V0.action.d29ya3NwYWNlc193b3Jrc3BhY2VfbWVtYmVyc19nZXQ.display_name": {
+          "source": "List Users in a Workspace",
+          "message": "List Users in a Workspace"
+        },
+        "app.Qml0YnVja2V0.action.d29ya3NwYWNlc193b3Jrc3BhY2VfbWVtYmVyc19nZXQ.short_desc": {
+          "source": "List users in a workspace",
+          "message": "List users in a workspace"
+        },
+        "app.Qml0YnVja2V0.action.d29ya3NwYWNlc193b3Jrc3BhY2VfbWVtYmVyc19nZXQ.desc": {
+          "source": "Returns all members of the requested workspace.\n\nThis endpoint additionally supports [filtering](-cloud-bitbucket-rest-intro-#filtering) by\nemail address, if called by a workspace administrator, integration or workspace access\ntoken. This is done by adding the following query string parameter:\n\n* `q=user.email IN (\"user1@org.com\",\"user2@org.com\")`\n\nWhen filtering by email, you can query up to 90 addresses at a time.\nNote that the query parameter values need to be URL escaped, so the final query string\nshould be:\n\n* `q=user.email%20IN%20(%22user1@org.com%22,%22user2@org.com%22)`\n\nEmail addresses that you filter by (and only these email addresses) can be included in the\nresponse using the `fields` query parameter:\n\n* `&fields=+values.user.email` - add the `email` field to the default `user` response object\n* `&fields=values.user.email,values.user.account_id` - only return user email addresses and\naccount IDs\n\nOnce again, all query parameter values must be URL escaped.",
+          "message": "Returns all members of the requested workspace.\n\nThis endpoint additionally supports [filtering](-cloud-bitbucket-rest-intro-#filtering) by\nemail address, if called by a workspace administrator, integration or workspace access\ntoken. This is done by adding the following query string parameter:\n\n* `q=user.email IN (\"user1@org.com\",\"user2@org.com\")`\n\nWhen filtering by email, you can query up to 90 addresses at a time.\nNote that the query parameter values need to be URL escaped, so the final query string\nshould be:\n\n* `q=user.email%20IN%20(%22user1@org.com%22,%22user2@org.com%22)`\n\nEmail addresses that you filter by (and only these email addresses) can be included in the\nresponse using the `fields` query parameter:\n\n* `&fields=+values.user.email` - add the `email` field to the default `user` response object\n* `&fields=values.user.email,values.user.account_id` - only return user email addresses and\naccount IDs\n\nOnce again, all query parameter values must be URL escaped."
+        },
+        "app.Qml0YnVja2V0.action.d29ya3NwYWNlc193b3Jrc3BhY2VfcHJvamVjdHNfZ2V0.display_name": {
+          "source": "List Projects in a Workspace",
+          "message": "List Projects in a Workspace"
+        },
+        "app.Qml0YnVja2V0.action.d29ya3NwYWNlc193b3Jrc3BhY2VfcHJvamVjdHNfZ2V0.short_desc": {
+          "source": "List projects in a workspace",
+          "message": "List projects in a workspace"
+        },
+        "app.Qml0YnVja2V0.action.d29ya3NwYWNlc193b3Jrc3BhY2VfcHJvamVjdHNfZ2V0.desc": {
+          "source": "Returns the list of projects in this workspace.",
+          "message": "Returns the list of projects in this workspace."
+        },
+        "app.Qml0YnVja2V0.action.bmV3X2RlcGxveW1lbnQ.display_name": {
+          "source": "New Deployment",
+          "message": "New Deployment"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X2RlcGxveW1lbnQ.short_desc": {
+          "source": "Triggers when a new deployment is created for a repository.",
+          "message": "Triggers when a new deployment is created for a repository."
+        },
+        "app.Qml0YnVja2V0.action.bmV3X2RlcGxveW1lbnQ.desc": {
+          "source": "Monitors a Bitbucket repository for new deployments and triggers when deployments are created or updated. Provides comprehensive deployment information including environment, state, commit details, and deployment steps.",
+          "message": "Monitors a Bitbucket repository for new deployments and triggers when deployments are created or updated. Provides comprehensive deployment information including environment, state, commit details, and deployment steps."
+        },
+        "app.Qml0YnVja2V0.action.bmV3X2RlcGxveW1lbnQ.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace",
+          "message": "Workspace"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X2RlcGxveW1lbnQ.option.d29ya3NwYWNl.short_desc": {
+          "source": "The Bitbucket workspace",
+          "message": "The Bitbucket workspace"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X2RlcGxveW1lbnQ.option.d29ya3NwYWNl.desc": {
+          "source": "The Bitbucket workspace (organization or user account) that contains the repository to monitor for deployments.",
+          "message": "The Bitbucket workspace (organization or user account) that contains the repository to monitor for deployments."
+        },
+        "app.Qml0YnVja2V0.action.bmV3X2RlcGxveW1lbnQ.option.cmVwb19zbHVn.display_name": {
+          "source": "Repository",
+          "message": "Repository"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X2RlcGxveW1lbnQ.option.cmVwb19zbHVn.short_desc": {
+          "source": "The repository to monitor",
+          "message": "The repository to monitor"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X2RlcGxveW1lbnQ.option.cmVwb19zbHVn.desc": {
+          "source": "The repository slug (name) of the Bitbucket repository to monitor for new deployments.",
+          "message": "The repository slug (name) of the Bitbucket repository to monitor for new deployments."
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.display_name": {
+          "source": "New Pull Request",
+          "message": "New Pull Request"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.short_desc": {
+          "source": "Triggers when a new pull request is created or updated.",
+          "message": "Triggers when a new pull request is created or updated."
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.desc": {
+          "source": "Monitors a Bitbucket repository for new pull requests and triggers when pull requests are created or their state changes. Supports filtering by pull request state and provides detailed information about the pull request, reviewers, and changes.",
+          "message": "Monitors a Bitbucket repository for new pull requests and triggers when pull requests are created or their state changes. Supports filtering by pull request state and provides detailed information about the pull request, reviewers, and changes."
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace",
+          "message": "Workspace"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.option.d29ya3NwYWNl.short_desc": {
+          "source": "The Bitbucket workspace",
+          "message": "The Bitbucket workspace"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.option.d29ya3NwYWNl.desc": {
+          "source": "The Bitbucket workspace (organization or user account) that contains the repository to monitor for pull requests.",
+          "message": "The Bitbucket workspace (organization or user account) that contains the repository to monitor for pull requests."
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.option.cmVwb19zbHVn.display_name": {
+          "source": "Repository",
+          "message": "Repository"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.option.cmVwb19zbHVn.short_desc": {
+          "source": "The repository to monitor",
+          "message": "The repository to monitor"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.option.cmVwb19zbHVn.desc": {
+          "source": "The repository slug (name) of the Bitbucket repository to monitor for new pull requests.",
+          "message": "The repository slug (name) of the Bitbucket repository to monitor for new pull requests."
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.option.c3RhdGU.display_name": {
+          "source": "Pull Request State",
+          "message": "Pull Request State"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.option.c3RhdGU.short_desc": {
+          "source": "Filter by pull request state",
+          "message": "Filter by pull request state"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.option.c3RhdGU.desc": {
+          "source": "Optional filter to monitor only pull requests in a specific state (Open, Merged, Declined, or Superseded). If not specified, all pull requests will be monitored.",
+          "message": "Optional filter to monitor only pull requests in a specific state (Open, Merged, Declined, or Superseded). If not specified, all pull requests will be monitored."
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.option.c3RhdGU.allowed-value.c3RyaW5nOk9QRU4.display_name": {
+          "source": "Open",
+          "message": "Open"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.option.c3RhdGU.allowed-value.c3RyaW5nOk9QRU4.desc": {
+          "source": "Pull requests that are currently open and awaiting review",
+          "message": "Pull requests that are currently open and awaiting review"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.option.c3RhdGU.allowed-value.c3RyaW5nOk1FUkdFRA.display_name": {
+          "source": "Merged",
+          "message": "Merged"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.option.c3RhdGU.allowed-value.c3RyaW5nOk1FUkdFRA.desc": {
+          "source": "Pull requests that have been successfully merged",
+          "message": "Pull requests that have been successfully merged"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.option.c3RhdGU.allowed-value.c3RyaW5nOkRFQ0xJTkVE.display_name": {
+          "source": "Declined",
+          "message": "Declined"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.option.c3RhdGU.allowed-value.c3RyaW5nOkRFQ0xJTkVE.desc": {
+          "source": "Pull requests that have been declined or rejected",
+          "message": "Pull requests that have been declined or rejected"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.option.c3RhdGU.allowed-value.c3RyaW5nOlNVUEVSU0VERUQ.display_name": {
+          "source": "Superseded",
+          "message": "Superseded"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X3B1bGxfcmVxdWVzdA.option.c3RhdGU.allowed-value.c3RyaW5nOlNVUEVSU0VERUQ.desc": {
+          "source": "Pull requests that have been superseded by another pull request",
+          "message": "Pull requests that have been superseded by another pull request"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X2NvbW1pdA.display_name": {
+          "source": "New Commit",
+          "message": "New Commit"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X2NvbW1pdA.short_desc": {
+          "source": "Triggers when a new commit is pushed to a repository.",
+          "message": "Triggers when a new commit is pushed to a repository."
+        },
+        "app.Qml0YnVja2V0.action.bmV3X2NvbW1pdA.desc": {
+          "source": "Monitors a Bitbucket repository for new commits and triggers when commits are pushed to any branch. Provides detailed commit information including author, message, hash, and repository details.",
+          "message": "Monitors a Bitbucket repository for new commits and triggers when commits are pushed to any branch. Provides detailed commit information including author, message, hash, and repository details."
+        },
+        "app.Qml0YnVja2V0.action.bmV3X2NvbW1pdA.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace",
+          "message": "Workspace"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X2NvbW1pdA.option.d29ya3NwYWNl.short_desc": {
+          "source": "The Bitbucket workspace",
+          "message": "The Bitbucket workspace"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X2NvbW1pdA.option.d29ya3NwYWNl.desc": {
+          "source": "The Bitbucket workspace (organization or user account) that contains the repository to monitor.",
+          "message": "The Bitbucket workspace (organization or user account) that contains the repository to monitor."
+        },
+        "app.Qml0YnVja2V0.action.bmV3X2NvbW1pdA.option.cmVwb19zbHVn.display_name": {
+          "source": "Repository",
+          "message": "Repository"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X2NvbW1pdA.option.cmVwb19zbHVn.short_desc": {
+          "source": "The repository to monitor",
+          "message": "The repository to monitor"
+        },
+        "app.Qml0YnVja2V0.action.bmV3X2NvbW1pdA.option.cmVwb19zbHVn.desc": {
+          "source": "The repository slug (name) of the Bitbucket repository to monitor for new commits.",
+          "message": "The repository slug (name) of the Bitbucket repository to monitor for new commits."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1213 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "root": {
+      "messages": {
+        "app.QW1hem9uUzM.display_name": {
+          "source": "Amazon S3",
+          "message": "Amazon S3"
+        },
+        "app.QW1hem9uUzM.short_desc": {
+          "source": "Seamlessly connect to Amazon S3 to manage buckets, upload files, and automate your cloud storage workflows.",
+          "message": "Seamlessly connect to Amazon S3 to manage buckets, upload files, and automate your cloud storage workflows."
+        },
+        "app.QW1hem9uUzM.desc": {
+          "source": "The Amazon S3 integration provides comprehensive actions and triggers to interact with Amazon Simple Storage Service. Whether you need to manage buckets, upload and download files, or monitor changes to your S3 objects, this integration simplifies your cloud storage automation and file management workflows.",
+          "message": "The Amazon S3 integration provides comprehensive actions and triggers to interact with Amazon Simple Storage Service. Whether you need to manage buckets, upload and download files, or monitor changes to your S3 objects, this integration simplifies your cloud storage automation and file management workflows."
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Make an API call"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Amazon S3",
+          "message": "Make a custom API call to Amazon S3"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Amazon S3** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Make a custom HTTP / REST API call to **Amazon S3** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP Method"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI Path"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`."
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body Type"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "How the body is serialized and what Content-Type is sent"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on."
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; use connection serialization and let the REST client decide"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serialize body as JSON"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value."
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serialize body as application/x-www-form-urlencoded form fields"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans)."
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Upload a file using multipart/form-data"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header."
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Send body as XML"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`."
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Send body as YAML"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`."
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Plain Text"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Send body as text/plain"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`."
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Raw Binary"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Send body as raw bytes"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`."
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "The request body"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes."
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Path Variables"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Values for {name} placeholders in path"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded."
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Query Arguments"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Query string parameters"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`."
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Custom Headers"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Extra request headers"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default)."
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Expected Status Codes"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Response status codes treated as success"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws)."
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Return Errors as Data"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Return non-2xx responses normally instead of throwing"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only."
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Include Debug Info"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Include request/timing/size debug info in the response"
+        },
+        "app.QW1hem9uUzM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX2J1Y2tldA.display_name": {
+          "source": "Create Bucket",
+          "message": "Create Bucket"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX2J1Y2tldA.short_desc": {
+          "source": "Create a new S3 bucket",
+          "message": "Create a new S3 bucket"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX2J1Y2tldA.desc": {
+          "source": "Creates a new S3 bucket with configurable access control and object lock settings. Bucket names must be globally unique and follow AWS naming conventions.",
+          "message": "Creates a new S3 bucket with configurable access control and object lock settings. Bucket names must be globally unique and follow AWS naming conventions."
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX2J1Y2tldA.option.YnVja2V0X25hbWU.display_name": {
+          "source": "Bucket Name",
+          "message": "Bucket Name"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX2J1Y2tldA.option.YnVja2V0X25hbWU.short_desc": {
+          "source": "Name for the new bucket (must be globally unique)",
+          "message": "Name for the new bucket (must be globally unique)"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX2J1Y2tldA.option.YnVja2V0X25hbWU.desc": {
+          "source": "The name for the new S3 bucket. Must be globally unique across all AWS accounts and follow S3 naming conventions (lowercase letters, numbers, hyphens only).",
+          "message": "The name for the new S3 bucket. Must be globally unique across all AWS accounts and follow S3 naming conventions (lowercase letters, numbers, hyphens only)."
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX2J1Y2tldA.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Region"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX2J1Y2tldA.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the bucket will be created",
+          "message": "AWS region where the bucket will be created"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX2J1Y2tldA.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the S3 bucket will be created. Affects latency and data residency.",
+          "message": "The AWS region where the S3 bucket will be created. Affects latency and data residency."
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX2J1Y2tldA.option.YWNs.display_name": {
+          "source": "Access Control List (ACL)",
+          "message": "Access Control List (ACL)"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX2J1Y2tldA.option.YWNs.short_desc": {
+          "source": "Access permissions for the bucket",
+          "message": "Access permissions for the bucket"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX2J1Y2tldA.option.YWNs.desc": {
+          "source": "Predefined access control list that defines who can access the bucket and what permissions they have.",
+          "message": "Predefined access control list that defines who can access the bucket and what permissions they have."
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX2J1Y2tldA.option.YWNs.allowed-value.c3RyaW5nOnByaXZhdGU.display_name": {
+          "source": "Private",
+          "message": "Private"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX2J1Y2tldA.option.YWNs.allowed-value.c3RyaW5nOnB1YmxpYy1yZWFk.display_name": {
+          "source": "Public Read",
+          "message": "Public Read"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX2J1Y2tldA.option.YWNs.allowed-value.c3RyaW5nOnB1YmxpYy1yZWFkLXdyaXRl.display_name": {
+          "source": "Public Read Write",
+          "message": "Public Read Write"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX2J1Y2tldA.option.YWNs.allowed-value.c3RyaW5nOmF1dGhlbnRpY2F0ZWQtcmVhZA.display_name": {
+          "source": "Authenticated Read",
+          "message": "Authenticated Read"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX2J1Y2tldA.option.b2JqZWN0X2xvY2tfZW5hYmxlZA.display_name": {
+          "source": "Object Lock Enabled",
+          "message": "Object Lock Enabled"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX2J1Y2tldA.option.b2JqZWN0X2xvY2tfZW5hYmxlZA.short_desc": {
+          "source": "Enable object lock for compliance and data retention",
+          "message": "Enable object lock for compliance and data retention"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX2J1Y2tldA.option.b2JqZWN0X2xvY2tfZW5hYmxlZA.desc": {
+          "source": "Enables S3 Object Lock to prevent object deletion or modification for compliance and data retention requirements.",
+          "message": "Enables S3 Object Lock to prevent object deletion or modification for compliance and data retention requirements."
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.display_name": {
+          "source": "Create Text Object",
+          "message": "Create Text Object"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.short_desc": {
+          "source": "Upload text content directly to S3",
+          "message": "Upload text content directly to S3"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.desc": {
+          "source": "Creates an S3 object with text content, supporting various text formats and content types. Useful for uploading configuration files, logs, or document content.",
+          "message": "Creates an S3 object with text content, supporting various text formats and content types. Useful for uploading configuration files, logs, or document content."
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Region"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the bucket is located",
+          "message": "AWS region where the bucket is located"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the target S3 bucket is located.",
+          "message": "The AWS region where the target S3 bucket is located."
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.YnVja2V0X25hbWU.display_name": {
+          "source": "Bucket Name",
+          "message": "Bucket Name"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.YnVja2V0X25hbWU.short_desc": {
+          "source": "Target S3 bucket for the text object",
+          "message": "Target S3 bucket for the text object"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.YnVja2V0X25hbWU.desc": {
+          "source": "The name of the S3 bucket where the text object will be created.",
+          "message": "The name of the S3 bucket where the text object will be created."
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.b2JqZWN0X2tleQ.display_name": {
+          "source": "Object Key",
+          "message": "Object Key"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.b2JqZWN0X2tleQ.short_desc": {
+          "source": "S3 object key (file path) for the text content",
+          "message": "S3 object key (file path) for the text content"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.b2JqZWN0X2tleQ.desc": {
+          "source": "The S3 object key that serves as the unique identifier and path for the text object within the bucket.",
+          "message": "The S3 object key that serves as the unique identifier and path for the text object within the bucket."
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.Y29udGVudA.display_name": {
+          "source": "Content",
+          "message": "Content"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.Y29udGVudA.short_desc": {
+          "source": "Text content to upload",
+          "message": "Text content to upload"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.Y29udGVudA.desc": {
+          "source": "The text content that will be uploaded to S3 as the object body.",
+          "message": "The text content that will be uploaded to S3 as the object body."
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.Y29udGVudF90eXBl.display_name": {
+          "source": "Content Type",
+          "message": "Content Type"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.Y29udGVudF90eXBl.short_desc": {
+          "source": "MIME type for the text content",
+          "message": "MIME type for the text content"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.Y29udGVudF90eXBl.desc": {
+          "source": "The MIME type that describes the format of the text content being uploaded.",
+          "message": "The MIME type that describes the format of the text content being uploaded."
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOnRleHQvcGxhaW4.display_name": {
+          "source": "Plain Text",
+          "message": "Plain Text"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOnRleHQvaHRtbA.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOnRleHQvY3Nz.display_name": {
+          "source": "CSS",
+          "message": "CSS"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOnRleHQvamF2YXNjcmlwdA.display_name": {
+          "source": "JavaScript",
+          "message": "JavaScript"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9uL2pzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9uL3htbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOnRleHQvbWFya2Rvd24.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOnRleHQvY3N2.display_name": {
+          "source": "CSV",
+          "message": "CSV"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.c3RvcmFnZV9jbGFzcw.display_name": {
+          "source": "Storage Class",
+          "message": "Storage Class"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.c3RvcmFnZV9jbGFzcw.short_desc": {
+          "source": "S3 storage class for cost optimization",
+          "message": "S3 storage class for cost optimization"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.c3RvcmFnZV9jbGFzcw.desc": {
+          "source": "The S3 storage class that determines the storage costs and retrieval characteristics of the object.",
+          "message": "The S3 storage class that determines the storage costs and retrieval characteristics of the object."
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.c3RvcmFnZV9jbGFzcw.allowed-value.c3RyaW5nOlNUQU5EQVJE.display_name": {
+          "source": "Standard",
+          "message": "Standard"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.c3RvcmFnZV9jbGFzcw.allowed-value.c3RyaW5nOlJFRFVDRURfUkVEVU5EQU5DWQ.display_name": {
+          "source": "Reduced Redundancy",
+          "message": "Reduced Redundancy"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.c3RvcmFnZV9jbGFzcw.allowed-value.c3RyaW5nOlNUQU5EQVJEX0lB.display_name": {
+          "source": "Standard-Infrequent Access",
+          "message": "Standard-Infrequent Access"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.c3RvcmFnZV9jbGFzcw.allowed-value.c3RyaW5nOk9ORVpPTkVfSUE.display_name": {
+          "source": "One Zone-Infrequent Access",
+          "message": "One Zone-Infrequent Access"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.c3RvcmFnZV9jbGFzcw.allowed-value.c3RyaW5nOklOVEVMTElHRU5UX1RJRVJJTkc.display_name": {
+          "source": "Intelligent-Tiering",
+          "message": "Intelligent-Tiering"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.c3RvcmFnZV9jbGFzcw.allowed-value.c3RyaW5nOkdMQUNJRVI.display_name": {
+          "source": "Glacier",
+          "message": "Glacier"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.c3RvcmFnZV9jbGFzcw.allowed-value.c3RyaW5nOkRFRVBfQVJDSElWRQ.display_name": {
+          "source": "Glacier Deep Archive",
+          "message": "Glacier Deep Archive"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.c3RvcmFnZV9jbGFzcw.allowed-value.c3RyaW5nOkdMQUNJRVJfSVI.display_name": {
+          "source": "Glacier Instant Retrieval",
+          "message": "Glacier Instant Retrieval"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.bWV0YWRhdGE.display_name": {
+          "source": "Metadata",
+          "message": "Metadata"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.bWV0YWRhdGE.short_desc": {
+          "source": "Custom metadata key-value pairs",
+          "message": "Custom metadata key-value pairs"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.bWV0YWRhdGE.desc": {
+          "source": "Custom metadata as key-value pairs that will be stored with the object for additional context or application use.",
+          "message": "Custom metadata as key-value pairs that will be stored with the object for additional context or application use."
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.dGFncw.short_desc": {
+          "source": "Object tags for organization and cost tracking",
+          "message": "Object tags for organization and cost tracking"
+        },
+        "app.QW1hem9uUzM.action.Y3JlYXRlX3RleHRfb2JqZWN0.option.dGFncw.desc": {
+          "source": "Key-value pairs used for object organization, cost allocation, and lifecycle management.",
+          "message": "Key-value pairs used for object organization, cost allocation, and lifecycle management."
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.display_name": {
+          "source": "Upload File",
+          "message": "Upload File"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.short_desc": {
+          "source": "Upload a file to S3",
+          "message": "Upload a file to S3"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.desc": {
+          "source": "Uploads a file to S3 with support for custom object keys, storage classes, metadata, and tagging. Handles binary files through base64 encoding.",
+          "message": "Uploads a file to S3 with support for custom object keys, storage classes, metadata, and tagging. Handles binary files through base64 encoding."
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Region"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the bucket is located",
+          "message": "AWS region where the bucket is located"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the target S3 bucket is located.",
+          "message": "The AWS region where the target S3 bucket is located."
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.YnVja2V0X25hbWU.display_name": {
+          "source": "Bucket Name",
+          "message": "Bucket Name"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.YnVja2V0X25hbWU.short_desc": {
+          "source": "Target S3 bucket for the file upload",
+          "message": "Target S3 bucket for the file upload"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.YnVja2V0X25hbWU.desc": {
+          "source": "The name of the S3 bucket where the file will be uploaded.",
+          "message": "The name of the S3 bucket where the file will be uploaded."
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.display_name": {
+          "source": "File",
+          "message": "File"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.short_desc": {
+          "source": "File to upload to S3",
+          "message": "File to upload to S3"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.desc": {
+          "source": "The file to be uploaded to S3, including its content, filename, and MIME type.",
+          "message": "The file to be uploaded to S3, including its content, filename, and MIME type."
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.b2JqZWN0X2tleQ.display_name": {
+          "source": "Object Key",
+          "message": "Object Key"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.b2JqZWN0X2tleQ.short_desc": {
+          "source": "Custom S3 object key (optional, uses filename if not provided)",
+          "message": "Custom S3 object key (optional, uses filename if not provided)"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.b2JqZWN0X2tleQ.desc": {
+          "source": "Optional custom S3 object key for the uploaded file. If not provided, the original filename will be used.",
+          "message": "Optional custom S3 object key for the uploaded file. If not provided, the original filename will be used."
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.c3RvcmFnZV9jbGFzcw.display_name": {
+          "source": "Storage Class",
+          "message": "Storage Class"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.c3RvcmFnZV9jbGFzcw.short_desc": {
+          "source": "S3 storage class for cost optimization",
+          "message": "S3 storage class for cost optimization"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.c3RvcmFnZV9jbGFzcw.desc": {
+          "source": "The S3 storage class that determines the storage costs and retrieval characteristics of the uploaded file.",
+          "message": "The S3 storage class that determines the storage costs and retrieval characteristics of the uploaded file."
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.c3RvcmFnZV9jbGFzcw.allowed-value.c3RyaW5nOlNUQU5EQVJE.display_name": {
+          "source": "Standard",
+          "message": "Standard"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.c3RvcmFnZV9jbGFzcw.allowed-value.c3RyaW5nOlJFRFVDRURfUkVEVU5EQU5DWQ.display_name": {
+          "source": "Reduced Redundancy",
+          "message": "Reduced Redundancy"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.c3RvcmFnZV9jbGFzcw.allowed-value.c3RyaW5nOlNUQU5EQVJEX0lB.display_name": {
+          "source": "Standard-Infrequent Access",
+          "message": "Standard-Infrequent Access"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.c3RvcmFnZV9jbGFzcw.allowed-value.c3RyaW5nOk9ORVpPTkVfSUE.display_name": {
+          "source": "One Zone-Infrequent Access",
+          "message": "One Zone-Infrequent Access"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.c3RvcmFnZV9jbGFzcw.allowed-value.c3RyaW5nOklOVEVMTElHRU5UX1RJRVJJTkc.display_name": {
+          "source": "Intelligent-Tiering",
+          "message": "Intelligent-Tiering"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.c3RvcmFnZV9jbGFzcw.allowed-value.c3RyaW5nOkdMQUNJRVI.display_name": {
+          "source": "Glacier",
+          "message": "Glacier"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.c3RvcmFnZV9jbGFzcw.allowed-value.c3RyaW5nOkRFRVBfQVJDSElWRQ.display_name": {
+          "source": "Glacier Deep Archive",
+          "message": "Glacier Deep Archive"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.c3RvcmFnZV9jbGFzcw.allowed-value.c3RyaW5nOkdMQUNJRVJfSVI.display_name": {
+          "source": "Glacier Instant Retrieval",
+          "message": "Glacier Instant Retrieval"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.bWV0YWRhdGE.display_name": {
+          "source": "Metadata",
+          "message": "Metadata"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.bWV0YWRhdGE.short_desc": {
+          "source": "Custom metadata key-value pairs",
+          "message": "Custom metadata key-value pairs"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.bWV0YWRhdGE.desc": {
+          "source": "Custom metadata as key-value pairs that will be stored with the uploaded file.",
+          "message": "Custom metadata as key-value pairs that will be stored with the uploaded file."
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.dGFncw.short_desc": {
+          "source": "File tags for organization and cost tracking",
+          "message": "File tags for organization and cost tracking"
+        },
+        "app.QW1hem9uUzM.action.dXBsb2FkX2ZpbGU.option.dGFncw.desc": {
+          "source": "Key-value pairs used for file organization, cost allocation, and lifecycle management.",
+          "message": "Key-value pairs used for file organization, cost allocation, and lifecycle management."
+        },
+        "app.QW1hem9uUzM.action.Z2V0X29iamVjdA.display_name": {
+          "source": "Get Object",
+          "message": "Get Object"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X29iamVjdA.short_desc": {
+          "source": "Retrieve S3 object with detailed metadata",
+          "message": "Retrieve S3 object with detailed metadata"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X29iamVjdA.desc": {
+          "source": "Retrieves an S3 object with comprehensive metadata including size, modification dates, storage class, and custom metadata. Optionally includes object content.",
+          "message": "Retrieves an S3 object with comprehensive metadata including size, modification dates, storage class, and custom metadata. Optionally includes object content."
+        },
+        "app.QW1hem9uUzM.action.Z2V0X29iamVjdA.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Region"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X29iamVjdA.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the bucket is located",
+          "message": "AWS region where the bucket is located"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X29iamVjdA.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the source S3 bucket is located.",
+          "message": "The AWS region where the source S3 bucket is located."
+        },
+        "app.QW1hem9uUzM.action.Z2V0X29iamVjdA.option.YnVja2V0X25hbWU.display_name": {
+          "source": "Bucket Name",
+          "message": "Bucket Name"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X29iamVjdA.option.YnVja2V0X25hbWU.short_desc": {
+          "source": "Source S3 bucket containing the object",
+          "message": "Source S3 bucket containing the object"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X29iamVjdA.option.YnVja2V0X25hbWU.desc": {
+          "source": "The name of the S3 bucket containing the object to retrieve.",
+          "message": "The name of the S3 bucket containing the object to retrieve."
+        },
+        "app.QW1hem9uUzM.action.Z2V0X29iamVjdA.option.b2JqZWN0X2tleQ.display_name": {
+          "source": "Object Key",
+          "message": "Object Key"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X29iamVjdA.option.b2JqZWN0X2tleQ.short_desc": {
+          "source": "S3 object key to retrieve",
+          "message": "S3 object key to retrieve"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X29iamVjdA.option.b2JqZWN0X2tleQ.desc": {
+          "source": "The S3 object key that uniquely identifies the object to retrieve within the bucket.",
+          "message": "The S3 object key that uniquely identifies the object to retrieve within the bucket."
+        },
+        "app.QW1hem9uUzM.action.Z2V0X29iamVjdA.option.aW5jbHVkZV9jb250ZW50.display_name": {
+          "source": "Include Content",
+          "message": "Include Content"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X29iamVjdA.option.aW5jbHVkZV9jb250ZW50.short_desc": {
+          "source": "Whether to include the object content in the response",
+          "message": "Whether to include the object content in the response"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X29iamVjdA.option.aW5jbHVkZV9jb250ZW50.desc": {
+          "source": "When enabled, includes the actual object content in the response. Disable for metadata-only retrieval to improve performance.",
+          "message": "When enabled, includes the actual object content in the response. Disable for metadata-only retrieval to improve performance."
+        },
+        "app.QW1hem9uUzM.action.Z2V0X29iamVjdA.option.dmVyc2lvbl9pZA.display_name": {
+          "source": "Version ID",
+          "message": "Version ID"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X29iamVjdA.option.dmVyc2lvbl9pZA.short_desc": {
+          "source": "Specific version of the object to retrieve (for versioned buckets)",
+          "message": "Specific version of the object to retrieve (for versioned buckets)"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X29iamVjdA.option.dmVyc2lvbl9pZA.desc": {
+          "source": "Optional version ID to retrieve a specific version of the object from a versioned S3 bucket.",
+          "message": "Optional version ID to retrieve a specific version of the object from a versioned S3 bucket."
+        },
+        "app.QW1hem9uUzM.action.Z2V0X2ZpbGU.display_name": {
+          "source": "Get File",
+          "message": "Get File"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X2ZpbGU.short_desc": {
+          "source": "Download file from S3",
+          "message": "Download file from S3"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X2ZpbGU.desc": {
+          "source": "Downloads a file from S3 and returns it in standard file format for direct use. Simpler alternative to Get Object when only the file content is needed.",
+          "message": "Downloads a file from S3 and returns it in standard file format for direct use. Simpler alternative to Get Object when only the file content is needed."
+        },
+        "app.QW1hem9uUzM.action.Z2V0X2ZpbGU.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Region"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X2ZpbGU.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the bucket is located",
+          "message": "AWS region where the bucket is located"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X2ZpbGU.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the source S3 bucket is located.",
+          "message": "The AWS region where the source S3 bucket is located."
+        },
+        "app.QW1hem9uUzM.action.Z2V0X2ZpbGU.option.YnVja2V0X25hbWU.display_name": {
+          "source": "Bucket Name",
+          "message": "Bucket Name"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X2ZpbGU.option.YnVja2V0X25hbWU.short_desc": {
+          "source": "Source S3 bucket containing the file",
+          "message": "Source S3 bucket containing the file"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X2ZpbGU.option.YnVja2V0X25hbWU.desc": {
+          "source": "The name of the S3 bucket containing the file to download.",
+          "message": "The name of the S3 bucket containing the file to download."
+        },
+        "app.QW1hem9uUzM.action.Z2V0X2ZpbGU.option.b2JqZWN0X2tleQ.display_name": {
+          "source": "Object Key",
+          "message": "Object Key"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X2ZpbGU.option.b2JqZWN0X2tleQ.short_desc": {
+          "source": "S3 object key of the file to download",
+          "message": "S3 object key of the file to download"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X2ZpbGU.option.b2JqZWN0X2tleQ.desc": {
+          "source": "The S3 object key that uniquely identifies the file to download within the bucket.",
+          "message": "The S3 object key that uniquely identifies the file to download within the bucket."
+        },
+        "app.QW1hem9uUzM.action.Z2V0X2ZpbGU.option.dmVyc2lvbl9pZA.display_name": {
+          "source": "Version ID",
+          "message": "Version ID"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X2ZpbGU.option.dmVyc2lvbl9pZA.short_desc": {
+          "source": "Specific version of the file to download (for versioned buckets)",
+          "message": "Specific version of the file to download (for versioned buckets)"
+        },
+        "app.QW1hem9uUzM.action.Z2V0X2ZpbGU.option.dmVyc2lvbl9pZA.desc": {
+          "source": "Optional version ID to download a specific version of the file from a versioned S3 bucket.",
+          "message": "Optional version ID to download a specific version of the file from a versioned S3 bucket."
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.display_name": {
+          "source": "List Objects",
+          "message": "List Objects"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.short_desc": {
+          "source": "List all objects in an S3 bucket",
+          "message": "List all objects in an S3 bucket"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.desc": {
+          "source": "Lists all objects in an S3 bucket including files and directories with support for pagination, prefixes, and delimiters for hierarchical navigation.",
+          "message": "Lists all objects in an S3 bucket including files and directories with support for pagination, prefixes, and delimiters for hierarchical navigation."
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Region"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the bucket is located",
+          "message": "AWS region where the bucket is located"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the target S3 bucket is located.",
+          "message": "The AWS region where the target S3 bucket is located."
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.YnVja2V0X25hbWU.display_name": {
+          "source": "Bucket Name",
+          "message": "Bucket Name"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.YnVja2V0X25hbWU.short_desc": {
+          "source": "S3 bucket to list objects from",
+          "message": "S3 bucket to list objects from"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.YnVja2V0X25hbWU.desc": {
+          "source": "The name of the S3 bucket from which to list objects.",
+          "message": "The name of the S3 bucket from which to list objects."
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.cHJlZml4.display_name": {
+          "source": "Prefix Filter",
+          "message": "Prefix Filter"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.cHJlZml4.short_desc": {
+          "source": "Optional prefix to filter objects",
+          "message": "Optional prefix to filter objects"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.cHJlZml4.desc": {
+          "source": "Optional prefix to limit results to objects with keys that start with this prefix.",
+          "message": "Optional prefix to limit results to objects with keys that start with this prefix."
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.bWF4X2tleXM.display_name": {
+          "source": "Max Keys",
+          "message": "Max Keys"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.bWF4X2tleXM.short_desc": {
+          "source": "Maximum number of objects to return",
+          "message": "Maximum number of objects to return"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.bWF4X2tleXM.desc": {
+          "source": "The maximum number of objects to return in a single request. Use with continuation tokens for pagination.",
+          "message": "The maximum number of objects to return in a single request. Use with continuation tokens for pagination."
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.Y29udGludWF0aW9uX3Rva2Vu.display_name": {
+          "source": "Continuation Token",
+          "message": "Continuation Token"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.Y29udGludWF0aW9uX3Rva2Vu.short_desc": {
+          "source": "Token for pagination of results",
+          "message": "Token for pagination of results"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.Y29udGludWF0aW9uX3Rva2Vu.desc": {
+          "source": "Continuation token from a previous request to retrieve the next page of results.",
+          "message": "Continuation token from a previous request to retrieve the next page of results."
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.ZGVsaW1pdGVy.display_name": {
+          "source": "Delimiter",
+          "message": "Delimiter"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.ZGVsaW1pdGVy.short_desc": {
+          "source": "Delimiter for hierarchical listing (e.g., \"/\")",
+          "message": "Delimiter for hierarchical listing (e.g., \"/\")"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.ZGVsaW1pdGVy.desc": {
+          "source": "Character used to group objects into a hierarchy. Common prefixes will be returned separately.",
+          "message": "Character used to group objects into a hierarchy. Common prefixes will be returned separately."
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.c3RhcnRfYWZ0ZXI.display_name": {
+          "source": "Start After",
+          "message": "Start After"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.c3RhcnRfYWZ0ZXI.short_desc": {
+          "source": "Object key to start listing after",
+          "message": "Object key to start listing after"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9vYmplY3Rz.option.c3RhcnRfYWZ0ZXI.desc": {
+          "source": "Start listing objects lexicographically after this key.",
+          "message": "Start listing objects lexicographically after this key."
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.display_name": {
+          "source": "List Files",
+          "message": "List Files"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.short_desc": {
+          "source": "List files in an S3 bucket (excludes directories)",
+          "message": "List files in an S3 bucket (excludes directories)"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.desc": {
+          "source": "Lists only actual files in an S3 bucket, excluding directories and common prefixes. Supports file extension filtering and provides file-specific statistics.",
+          "message": "Lists only actual files in an S3 bucket, excluding directories and common prefixes. Supports file extension filtering and provides file-specific statistics."
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Region"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the bucket is located",
+          "message": "AWS region where the bucket is located"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the target S3 bucket is located.",
+          "message": "The AWS region where the target S3 bucket is located."
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.option.YnVja2V0X25hbWU.display_name": {
+          "source": "Bucket Name",
+          "message": "Bucket Name"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.option.YnVja2V0X25hbWU.short_desc": {
+          "source": "S3 bucket to list files from",
+          "message": "S3 bucket to list files from"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.option.YnVja2V0X25hbWU.desc": {
+          "source": "The name of the S3 bucket from which to list files.",
+          "message": "The name of the S3 bucket from which to list files."
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.option.cHJlZml4.display_name": {
+          "source": "Prefix Filter",
+          "message": "Prefix Filter"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.option.cHJlZml4.short_desc": {
+          "source": "Optional prefix to filter files",
+          "message": "Optional prefix to filter files"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.option.cHJlZml4.desc": {
+          "source": "Optional prefix to limit results to files with keys that start with this prefix.",
+          "message": "Optional prefix to limit results to files with keys that start with this prefix."
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.option.bWF4X2tleXM.display_name": {
+          "source": "Max Keys",
+          "message": "Max Keys"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.option.bWF4X2tleXM.short_desc": {
+          "source": "Maximum number of files to return",
+          "message": "Maximum number of files to return"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.option.bWF4X2tleXM.desc": {
+          "source": "The maximum number of files to return in a single request.",
+          "message": "The maximum number of files to return in a single request."
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.option.ZmlsZV9leHRlbnNpb25z.display_name": {
+          "source": "File Extensions",
+          "message": "File Extensions"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.option.ZmlsZV9leHRlbnNpb25z.short_desc": {
+          "source": "Filter by specific file extensions (e.g., [\"pdf\", \"jpg\"])",
+          "message": "Filter by specific file extensions (e.g., [\"pdf\", \"jpg\"])"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.option.ZmlsZV9leHRlbnNpb25z.desc": {
+          "source": "Optional list of file extensions to filter results. Only files with matching extensions will be returned.",
+          "message": "Optional list of file extensions to filter results. Only files with matching extensions will be returned."
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.option.Y29udGludWF0aW9uX3Rva2Vu.display_name": {
+          "source": "Continuation Token",
+          "message": "Continuation Token"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.option.Y29udGludWF0aW9uX3Rva2Vu.short_desc": {
+          "source": "Token for pagination of results",
+          "message": "Token for pagination of results"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9maWxlcw.option.Y29udGludWF0aW9uX3Rva2Vu.desc": {
+          "source": "Continuation token from a previous request to retrieve the next page of results.",
+          "message": "Continuation token from a previous request to retrieve the next page of results."
+        },
+        "app.QW1hem9uUzM.action.ZGVsZXRlX29iamVjdA.display_name": {
+          "source": "Delete Object",
+          "message": "Delete Object"
+        },
+        "app.QW1hem9uUzM.action.ZGVsZXRlX29iamVjdA.short_desc": {
+          "source": "Delete an object from S3",
+          "message": "Delete an object from S3"
+        },
+        "app.QW1hem9uUzM.action.ZGVsZXRlX29iamVjdA.desc": {
+          "source": "Deletes an object from S3 with support for versioned objects and governance retention bypass. Use with caution as deletions may be permanent.",
+          "message": "Deletes an object from S3 with support for versioned objects and governance retention bypass. Use with caution as deletions may be permanent."
+        },
+        "app.QW1hem9uUzM.action.ZGVsZXRlX29iamVjdA.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Region"
+        },
+        "app.QW1hem9uUzM.action.ZGVsZXRlX29iamVjdA.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the bucket is located",
+          "message": "AWS region where the bucket is located"
+        },
+        "app.QW1hem9uUzM.action.ZGVsZXRlX29iamVjdA.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the target S3 bucket is located.",
+          "message": "The AWS region where the target S3 bucket is located."
+        },
+        "app.QW1hem9uUzM.action.ZGVsZXRlX29iamVjdA.option.YnVja2V0X25hbWU.display_name": {
+          "source": "Bucket Name",
+          "message": "Bucket Name"
+        },
+        "app.QW1hem9uUzM.action.ZGVsZXRlX29iamVjdA.option.YnVja2V0X25hbWU.short_desc": {
+          "source": "S3 bucket containing the object to delete",
+          "message": "S3 bucket containing the object to delete"
+        },
+        "app.QW1hem9uUzM.action.ZGVsZXRlX29iamVjdA.option.YnVja2V0X25hbWU.desc": {
+          "source": "The name of the S3 bucket containing the object to delete.",
+          "message": "The name of the S3 bucket containing the object to delete."
+        },
+        "app.QW1hem9uUzM.action.ZGVsZXRlX29iamVjdA.option.b2JqZWN0X2tleQ.display_name": {
+          "source": "Object Key",
+          "message": "Object Key"
+        },
+        "app.QW1hem9uUzM.action.ZGVsZXRlX29iamVjdA.option.b2JqZWN0X2tleQ.short_desc": {
+          "source": "S3 object key to delete",
+          "message": "S3 object key to delete"
+        },
+        "app.QW1hem9uUzM.action.ZGVsZXRlX29iamVjdA.option.b2JqZWN0X2tleQ.desc": {
+          "source": "The S3 object key that uniquely identifies the object to delete within the bucket.",
+          "message": "The S3 object key that uniquely identifies the object to delete within the bucket."
+        },
+        "app.QW1hem9uUzM.action.ZGVsZXRlX29iamVjdA.option.dmVyc2lvbl9pZA.display_name": {
+          "source": "Version ID",
+          "message": "Version ID"
+        },
+        "app.QW1hem9uUzM.action.ZGVsZXRlX29iamVjdA.option.dmVyc2lvbl9pZA.short_desc": {
+          "source": "Specific version to delete (for versioned buckets)",
+          "message": "Specific version to delete (for versioned buckets)"
+        },
+        "app.QW1hem9uUzM.action.ZGVsZXRlX29iamVjdA.option.dmVyc2lvbl9pZA.desc": {
+          "source": "Optional version ID to delete a specific version of the object from a versioned S3 bucket.",
+          "message": "Optional version ID to delete a specific version of the object from a versioned S3 bucket."
+        },
+        "app.QW1hem9uUzM.action.ZGVsZXRlX29iamVjdA.option.YnlwYXNzX2dvdmVybmFuY2VfcmV0ZW50aW9u.display_name": {
+          "source": "Bypass Governance Retention",
+          "message": "Bypass Governance Retention"
+        },
+        "app.QW1hem9uUzM.action.ZGVsZXRlX29iamVjdA.option.YnlwYXNzX2dvdmVybmFuY2VfcmV0ZW50aW9u.short_desc": {
+          "source": "Bypass governance-mode object lock retention",
+          "message": "Bypass governance-mode object lock retention"
+        },
+        "app.QW1hem9uUzM.action.ZGVsZXRlX29iamVjdA.option.YnlwYXNzX2dvdmVybmFuY2VfcmV0ZW50aW9u.desc": {
+          "source": "When enabled, bypasses governance-mode Object Lock retention. Requires appropriate permissions.",
+          "message": "When enabled, bypasses governance-mode Object Lock retention. Requires appropriate permissions."
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9idWNrZXRz.display_name": {
+          "source": "List Buckets",
+          "message": "List Buckets"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9idWNrZXRz.short_desc": {
+          "source": "List all S3 buckets in the account",
+          "message": "List all S3 buckets in the account"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9idWNrZXRz.desc": {
+          "source": "Lists all S3 buckets in the AWS account with creation dates and regions. Optionally includes detailed location information for each bucket.",
+          "message": "Lists all S3 buckets in the AWS account with creation dates and regions. Optionally includes detailed location information for each bucket."
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9idWNrZXRz.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Region"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9idWNrZXRz.option.cmVnaW9u.short_desc": {
+          "source": "AWS region for the S3 client",
+          "message": "AWS region for the S3 client"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9idWNrZXRz.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the S3 client will be configured for listing buckets.",
+          "message": "The AWS region where the S3 client will be configured for listing buckets."
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9idWNrZXRz.option.aW5jbHVkZV9sb2NhdGlvbg.display_name": {
+          "source": "Include Location",
+          "message": "Include Location"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9idWNrZXRz.option.aW5jbHVkZV9sb2NhdGlvbg.short_desc": {
+          "source": "Whether to fetch the actual region for each bucket",
+          "message": "Whether to fetch the actual region for each bucket"
+        },
+        "app.QW1hem9uUzM.action.bGlzdF9idWNrZXRz.option.aW5jbHVkZV9sb2NhdGlvbg.desc": {
+          "source": "When enabled, fetches the actual AWS region for each bucket. Disable for faster responses when region information is not needed.",
+          "message": "When enabled, fetches the actual AWS region for each bucket. Disable for faster responses when region information is not needed."
+        },
+        "app.QW1hem9uUzM.action.bmV3X29yX3VwZGF0ZWRfZmlsZQ.display_name": {
+          "source": "New or Updated File",
+          "message": "New or Updated File"
+        },
+        "app.QW1hem9uUzM.action.bmV3X29yX3VwZGF0ZWRfZmlsZQ.short_desc": {
+          "source": "Triggers when files are created or modified in an S3 bucket",
+          "message": "Triggers when files are created or modified in an S3 bucket"
+        },
+        "app.QW1hem9uUzM.action.bmV3X29yX3VwZGF0ZWRfZmlsZQ.desc": {
+          "source": "Monitors an S3 bucket for new or updated files and triggers when changes are detected. Supports prefix filtering to monitor specific directories or file patterns.",
+          "message": "Monitors an S3 bucket for new or updated files and triggers when changes are detected. Supports prefix filtering to monitor specific directories or file patterns."
+        },
+        "app.QW1hem9uUzM.action.bmV3X29yX3VwZGF0ZWRfZmlsZQ.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Region"
+        },
+        "app.QW1hem9uUzM.action.bmV3X29yX3VwZGF0ZWRfZmlsZQ.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the bucket is located",
+          "message": "AWS region where the bucket is located"
+        },
+        "app.QW1hem9uUzM.action.bmV3X29yX3VwZGF0ZWRfZmlsZQ.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the S3 bucket is located for monitoring file changes.",
+          "message": "The AWS region where the S3 bucket is located for monitoring file changes."
+        },
+        "app.QW1hem9uUzM.action.bmV3X29yX3VwZGF0ZWRfZmlsZQ.option.YnVja2V0X25hbWU.display_name": {
+          "source": "Bucket Name",
+          "message": "Bucket Name"
+        },
+        "app.QW1hem9uUzM.action.bmV3X29yX3VwZGF0ZWRfZmlsZQ.option.YnVja2V0X25hbWU.short_desc": {
+          "source": "S3 bucket to monitor for file changes",
+          "message": "S3 bucket to monitor for file changes"
+        },
+        "app.QW1hem9uUzM.action.bmV3X29yX3VwZGF0ZWRfZmlsZQ.option.YnVja2V0X25hbWU.desc": {
+          "source": "The name of the S3 bucket to monitor for new or updated files.",
+          "message": "The name of the S3 bucket to monitor for new or updated files."
+        },
+        "app.QW1hem9uUzM.action.bmV3X29yX3VwZGF0ZWRfZmlsZQ.option.cHJlZml4.display_name": {
+          "source": "Prefix Filter",
+          "message": "Prefix Filter"
+        },
+        "app.QW1hem9uUzM.action.bmV3X29yX3VwZGF0ZWRfZmlsZQ.option.cHJlZml4.short_desc": {
+          "source": "Optional prefix to filter objects (e.g., \"uploads/\")",
+          "message": "Optional prefix to filter objects (e.g., \"uploads/\")"
+        },
+        "app.QW1hem9uUzM.action.bmV3X29yX3VwZGF0ZWRfZmlsZQ.option.cHJlZml4.desc": {
+          "source": "Optional prefix to limit monitoring to objects with specific key prefixes, useful for monitoring specific directories or file patterns.",
+          "message": "Optional prefix to limit monitoring to objects with specific key prefixes, useful for monitoring specific directories or file patterns."
+        },
+        "app.QW1hem9uUzM.action.bmV3X2J1Y2tldA.display_name": {
+          "source": "New Bucket",
+          "message": "New Bucket"
+        },
+        "app.QW1hem9uUzM.action.bmV3X2J1Y2tldA.short_desc": {
+          "source": "Triggers when a new S3 bucket is created",
+          "message": "Triggers when a new S3 bucket is created"
+        },
+        "app.QW1hem9uUzM.action.bmV3X2J1Y2tldA.desc": {
+          "source": "Monitors for newly created S3 buckets and triggers when a bucket is detected. Useful for tracking bucket creation events and implementing automated governance policies.",
+          "message": "Monitors for newly created S3 buckets and triggers when a bucket is detected. Useful for tracking bucket creation events and implementing automated governance policies."
+        },
+        "app.QW1hem9uUzM.action.bmV3X2J1Y2tldA.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Region"
+        },
+        "app.QW1hem9uUzM.action.bmV3X2J1Y2tldA.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to monitor for new buckets",
+          "message": "AWS region to monitor for new buckets"
+        },
+        "app.QW1hem9uUzM.action.bmV3X2J1Y2tldA.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the S3 client will be configured to monitor for new bucket creation events.",
+          "message": "The AWS region where the S3 client will be configured to monitor for new bucket creation events."
+        }
+      }
+    }
+  }
+}

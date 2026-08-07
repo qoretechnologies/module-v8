@@ -1,0 +1,1177 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "root": {
+      "messages": {
+        "app.Tm90aW9u.display_name": {
+          "source": "Notion",
+          "message": "Notion"
+        },
+        "app.Tm90aW9u.short_desc": {
+          "source": "Connect to Notion API to manage pages, databases, comments, and discussions.",
+          "message": "Connect to Notion API to manage pages, databases, comments, and discussions."
+        },
+        "app.Tm90aW9u.desc": {
+          "source": "The Notion integration provides comprehensive actions and triggers to interact with the Notion API. Manage pages, databases, comments, discussions, and users. Create, read, update, and monitor changes to your Notion workspace content.",
+          "message": "The Notion integration provides comprehensive actions and triggers to interact with the Notion API. Manage pages, databases, comments, discussions, and users. Create, read, update, and monitor changes to your Notion workspace content."
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Make an API call"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Notion",
+          "message": "Make a custom API call to Notion"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Notion** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Make a custom HTTP / REST API call to **Notion** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP Method"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI Path"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`."
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body Type"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "How the body is serialized and what Content-Type is sent"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on."
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; use connection serialization and let the REST client decide"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serialize body as JSON"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value."
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serialize body as application/x-www-form-urlencoded form fields"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans)."
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Upload a file using multipart/form-data"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header."
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Send body as XML"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`."
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Send body as YAML"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`."
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Plain Text"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Send body as text/plain"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`."
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Raw Binary"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Send body as raw bytes"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`."
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "The request body"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes."
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Path Variables"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Values for {name} placeholders in path"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded."
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Query Arguments"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Query string parameters"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`."
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Custom Headers"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Extra request headers"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default)."
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Expected Status Codes"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Response status codes treated as success"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws)."
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Return Errors as Data"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Return non-2xx responses normally instead of throwing"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only."
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Include Debug Info"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Include request/timing/size debug info in the response"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
+        },
+        "app.Tm90aW9u.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Search Records"
+        },
+        "app.Tm90aW9u.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Notion\"",
+          "message": "Search for matching records in the given table in app \"Notion\""
+        },
+        "app.Tm90aW9u.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Notion\"",
+          "message": "Search for matching records in the given table in app \"Notion\""
+        },
+        "app.Tm90aW9u.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Table"
+        },
+        "app.Tm90aW9u.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.Tm90aW9u.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.Tm90aW9u.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Find a Single Record"
+        },
+        "app.Tm90aW9u.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Notion\"",
+          "message": "Search for a single matching record in the given table in app \"Notion\""
+        },
+        "app.Tm90aW9u.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Notion\"",
+          "message": "Search for a single matching record in the given table in app \"Notion\""
+        },
+        "app.Tm90aW9u.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Table"
+        },
+        "app.Tm90aW9u.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.Tm90aW9u.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Create Records"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Notion\"",
+          "message": "Create new records in the given table in app \"Notion\""
+        },
+        "app.Tm90aW9u.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Notion\"",
+          "message": "Create new records in the given table in app \"Notion\""
+        },
+        "app.Tm90aW9u.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Table"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.Tm90aW9u.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Update Records"
+        },
+        "app.Tm90aW9u.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Notion\"",
+          "message": "Update existing records in the given table in app \"Notion\""
+        },
+        "app.Tm90aW9u.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Notion\"",
+          "message": "Update existing records in the given table in app \"Notion\""
+        },
+        "app.Tm90aW9u.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Table"
+        },
+        "app.Tm90aW9u.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.Tm90aW9u.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.Tm90aW9u.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Delete Records"
+        },
+        "app.Tm90aW9u.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Notion\"",
+          "message": "Delete records from the given table in app \"Notion\""
+        },
+        "app.Tm90aW9u.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Notion\"",
+          "message": "Delete records from the given table in app \"Notion\""
+        },
+        "app.Tm90aW9u.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Table"
+        },
+        "app.Tm90aW9u.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.Tm90aW9u.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fZGlzY3Vzc2lvbg.display_name": {
+          "source": "Add Comment to Discussion",
+          "message": "Add Comment to Discussion"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fZGlzY3Vzc2lvbg.short_desc": {
+          "source": "Add a reply to an existing discussion thread in Notion",
+          "message": "Add a reply to an existing discussion thread in Notion"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fZGlzY3Vzc2lvbg.desc": {
+          "source": "Reply to an existing discussion thread on a Notion page or block. This creates a new comment within the selected discussion.",
+          "message": "Reply to an existing discussion thread on a Notion page or block. This creates a new comment within the selected discussion."
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fZGlzY3Vzc2lvbg.option.ZGlzY3Vzc2lvbl9pZA.display_name": {
+          "source": "Discussion",
+          "message": "Discussion"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fZGlzY3Vzc2lvbg.option.ZGlzY3Vzc2lvbl9pZA.short_desc": {
+          "source": "The discussion thread to reply to",
+          "message": "The discussion thread to reply to"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fZGlzY3Vzc2lvbg.option.ZGlzY3Vzc2lvbl9pZA.desc": {
+          "source": "Select the discussion thread where you want to add your comment",
+          "message": "Select the discussion thread where you want to add your comment"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fZGlzY3Vzc2lvbg.option.dGV4dA.display_name": {
+          "source": "Comment Text",
+          "message": "Comment Text"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fZGlzY3Vzc2lvbg.option.dGV4dA.short_desc": {
+          "source": "The text content of your comment",
+          "message": "The text content of your comment"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fZGlzY3Vzc2lvbg.option.dGV4dA.desc": {
+          "source": "Enter the text content for your comment. This will be added as a plain text comment to the discussion.",
+          "message": "Enter the text content for your comment. This will be added as a plain text comment to the discussion."
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fcGFnZQ.display_name": {
+          "source": "Add Comment to Page",
+          "message": "Add Comment to Page"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fcGFnZQ.short_desc": {
+          "source": "Add a new comment to a Notion page",
+          "message": "Add a new comment to a Notion page"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fcGFnZQ.desc": {
+          "source": "Create a new comment on a Notion page. This starts a new discussion thread on the selected page.",
+          "message": "Create a new comment on a Notion page. This starts a new discussion thread on the selected page."
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fcGFnZQ.option.cGFnZV9pZA.display_name": {
+          "source": "Page",
+          "message": "Page"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fcGFnZQ.option.cGFnZV9pZA.short_desc": {
+          "source": "The Notion page to comment on",
+          "message": "The Notion page to comment on"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fcGFnZQ.option.cGFnZV9pZA.desc": {
+          "source": "Select the Notion page where you want to add a comment",
+          "message": "Select the Notion page where you want to add a comment"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fcGFnZQ.option.dGV4dA.display_name": {
+          "source": "Comment Text",
+          "message": "Comment Text"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fcGFnZQ.option.dGV4dA.short_desc": {
+          "source": "The text content of your comment",
+          "message": "The text content of your comment"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fcGFnZQ.option.dGV4dA.desc": {
+          "source": "Enter the text content for your comment. This will create a new discussion on the page.",
+          "message": "Enter the text content for your comment. This will create a new discussion on the page."
+        },
+        "app.Tm90aW9u.action.YXBwZW5kX3RvX3BhZ2U.display_name": {
+          "source": "Append to Page",
+          "message": "Append to Page"
+        },
+        "app.Tm90aW9u.action.YXBwZW5kX3RvX3BhZ2U.short_desc": {
+          "source": "Add content to the end of a Notion page",
+          "message": "Add content to the end of a Notion page"
+        },
+        "app.Tm90aW9u.action.YXBwZW5kX3RvX3BhZ2U.desc": {
+          "source": "Append new content blocks to the end of an existing Notion page. The content will be added as new blocks at the bottom of the page.",
+          "message": "Append new content blocks to the end of an existing Notion page. The content will be added as new blocks at the bottom of the page."
+        },
+        "app.Tm90aW9u.action.YXBwZW5kX3RvX3BhZ2U.option.cGFnZV9pZA.display_name": {
+          "source": "Page",
+          "message": "Page"
+        },
+        "app.Tm90aW9u.action.YXBwZW5kX3RvX3BhZ2U.option.cGFnZV9pZA.short_desc": {
+          "source": "The Notion page to append to",
+          "message": "The Notion page to append to"
+        },
+        "app.Tm90aW9u.action.YXBwZW5kX3RvX3BhZ2U.option.cGFnZV9pZA.desc": {
+          "source": "Select the Notion page where you want to add content",
+          "message": "Select the Notion page where you want to add content"
+        },
+        "app.Tm90aW9u.action.YXBwZW5kX3RvX3BhZ2U.option.Y29udGVudA.display_name": {
+          "source": "Content",
+          "message": "Content"
+        },
+        "app.Tm90aW9u.action.YXBwZW5kX3RvX3BhZ2U.option.Y29udGVudA.short_desc": {
+          "source": "The content to append to the page",
+          "message": "The content to append to the page"
+        },
+        "app.Tm90aW9u.action.YXBwZW5kX3RvX3BhZ2U.option.Y29udGVudA.desc": {
+          "source": "Enter the content you want to add to the page. Supports markdown formatting which will be converted to Notion blocks.",
+          "message": "Enter the content you want to add to the page. Supports markdown formatting which will be converted to Notion blocks."
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.display_name": {
+          "source": "Create Database Item",
+          "message": "Create Database Item"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.short_desc": {
+          "source": "Create a new item in a Notion database",
+          "message": "Create a new item in a Notion database"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.desc": {
+          "source": "Create a new page (item) in a Notion database with specified property values and optional content.",
+          "message": "Create a new page (item) in a Notion database with specified property values and optional content."
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.option.ZGF0YV9zb3VyY2VfaWQ.display_name": {
+          "source": "Database",
+          "message": "Database"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.option.ZGF0YV9zb3VyY2VfaWQ.short_desc": {
+          "source": "The Notion database to create item in",
+          "message": "The Notion database to create item in"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.option.ZGF0YV9zb3VyY2VfaWQ.desc": {
+          "source": "Select the Notion database where you want to create a new item",
+          "message": "Select the Notion database where you want to create a new item"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.option.cHJvcGVydGllcw.display_name": {
+          "source": "Properties",
+          "message": "Properties"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Property values for the new database item",
+          "message": "Property values for the new database item"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.option.cHJvcGVydGllcw.desc": {
+          "source": "Set the property values for the new database item. Available properties depend on the selected database schema.",
+          "message": "Set the property values for the new database item. Available properties depend on the selected database schema."
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.option.Y29udGVudA.display_name": {
+          "source": "Page Content",
+          "message": "Page Content"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.option.Y29udGVudA.short_desc": {
+          "source": "Optional content for the database item page",
+          "message": "Optional content for the database item page"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.option.Y29udGVudA.desc": {
+          "source": "Add content to the database item page. This will be added as a paragraph block in the page.",
+          "message": "Add content to the database item page. This will be added as a paragraph block in the page."
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.display_name": {
+          "source": "Create Page",
+          "message": "Create Page"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.short_desc": {
+          "source": "Create a new page in Notion",
+          "message": "Create a new page in Notion"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.desc": {
+          "source": "Create a new page as a child of an existing page in Notion with a title and content.",
+          "message": "Create a new page as a child of an existing page in Notion with a title and content."
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.option.cGFnZQ.display_name": {
+          "source": "Parent Page",
+          "message": "Parent Page"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.option.cGFnZQ.short_desc": {
+          "source": "The parent page where the new page will be created",
+          "message": "The parent page where the new page will be created"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.option.cGFnZQ.desc": {
+          "source": "Select the parent page under which the new page will be created",
+          "message": "Select the parent page under which the new page will be created"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.option.dGl0bGU.display_name": {
+          "source": "Page Title",
+          "message": "Page Title"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.option.dGl0bGU.short_desc": {
+          "source": "The title of the new page",
+          "message": "The title of the new page"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.option.dGl0bGU.desc": {
+          "source": "Enter the title for the new page",
+          "message": "Enter the title for the new page"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.option.Y29udGVudA.display_name": {
+          "source": "Page Content",
+          "message": "Page Content"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.option.Y29udGVudA.short_desc": {
+          "source": "The initial content of the new page",
+          "message": "The initial content of the new page"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.option.Y29udGVudA.desc": {
+          "source": "Enter the initial content for the new page. This will be added as paragraph blocks.",
+          "message": "Enter the initial content for the new page. This will be added as paragraph blocks."
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFfc291cmNl.display_name": {
+          "source": "Get Database",
+          "message": "Get Database"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFfc291cmNl.short_desc": {
+          "source": "Retrieve information about a Notion database",
+          "message": "Retrieve information about a Notion database"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFfc291cmNl.desc": {
+          "source": "Get detailed information about a specific Notion database including its properties, title, description, and metadata.",
+          "message": "Get detailed information about a specific Notion database including its properties, title, description, and metadata."
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFfc291cmNl.option.ZGF0YV9zb3VyY2VfaWQ.display_name": {
+          "source": "Database",
+          "message": "Database"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFfc291cmNl.option.ZGF0YV9zb3VyY2VfaWQ.short_desc": {
+          "source": "The Notion database to retrieve",
+          "message": "The Notion database to retrieve"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFfc291cmNl.option.ZGF0YV9zb3VyY2VfaWQ.desc": {
+          "source": "Select the Notion database you want to get information about",
+          "message": "Select the Notion database you want to get information about"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFiYXNl.display_name": {
+          "source": "Get Database Info",
+          "message": "Get Database Info"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFiYXNl.short_desc": {
+          "source": "Retrieve database information by ID",
+          "message": "Retrieve database information by ID"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFiYXNl.desc": {
+          "source": "Get detailed information about a Notion database by providing its ID directly.",
+          "message": "Get detailed information about a Notion database by providing its ID directly."
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFiYXNl.option.ZGF0YWJhc2VfaWQ.display_name": {
+          "source": "Database ID",
+          "message": "Database ID"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFiYXNl.option.ZGF0YWJhc2VfaWQ.short_desc": {
+          "source": "The ID of the Notion database",
+          "message": "The ID of the Notion database"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFiYXNl.option.ZGF0YWJhc2VfaWQ.desc": {
+          "source": "Enter the ID of the Notion database you want to retrieve information about",
+          "message": "Enter the ID of the Notion database you want to retrieve information about"
+        },
+        "app.Tm90aW9u.action.Z2V0X3BhZ2U.display_name": {
+          "source": "Get Page",
+          "message": "Get Page"
+        },
+        "app.Tm90aW9u.action.Z2V0X3BhZ2U.short_desc": {
+          "source": "Retrieve information about a Notion page",
+          "message": "Retrieve information about a Notion page"
+        },
+        "app.Tm90aW9u.action.Z2V0X3BhZ2U.desc": {
+          "source": "Get detailed information about a specific Notion page including its properties, title, and metadata.",
+          "message": "Get detailed information about a specific Notion page including its properties, title, and metadata."
+        },
+        "app.Tm90aW9u.action.Z2V0X3BhZ2U.option.cGFnZV9pZA.display_name": {
+          "source": "Page",
+          "message": "Page"
+        },
+        "app.Tm90aW9u.action.Z2V0X3BhZ2U.option.cGFnZV9pZA.short_desc": {
+          "source": "The Notion page to retrieve",
+          "message": "The Notion page to retrieve"
+        },
+        "app.Tm90aW9u.action.Z2V0X3BhZ2U.option.cGFnZV9pZA.desc": {
+          "source": "Select the Notion page you want to get information about",
+          "message": "Select the Notion page you want to get information about"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.display_name": {
+          "source": "List Comments",
+          "message": "List Comments"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.short_desc": {
+          "source": "List comments on a Notion page or block",
+          "message": "List comments on a Notion page or block"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.desc": {
+          "source": "Retrieve a list of comments on a specific Notion page or block. Returns all unresolved comments with pagination support.",
+          "message": "Retrieve a list of comments on a specific Notion page or block. Returns all unresolved comments with pagination support."
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Page Size"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of comments to retrieve per page",
+          "message": "Number of comments to retrieve per page"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.option.cGFnZV9zaXpl.desc": {
+          "source": "Set the number of comments to retrieve in a single request (maximum 100)",
+          "message": "Set the number of comments to retrieve in a single request (maximum 100)"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.option.bmV4dF9jdXJzb3I.display_name": {
+          "source": "Next Cursor",
+          "message": "Next Cursor"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.option.bmV4dF9jdXJzb3I.short_desc": {
+          "source": "Pagination cursor for retrieving next page",
+          "message": "Pagination cursor for retrieving next page"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.option.bmV4dF9jdXJzb3I.desc": {
+          "source": "Use this cursor to retrieve the next page of comments in a paginated response",
+          "message": "Use this cursor to retrieve the next page of comments in a paginated response"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.option.YmxvY2tfaWQ.display_name": {
+          "source": "Page or Block",
+          "message": "Page or Block"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.option.YmxvY2tfaWQ.short_desc": {
+          "source": "The page or block to list comments for",
+          "message": "The page or block to list comments for"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.option.YmxvY2tfaWQ.desc": {
+          "source": "Select the Notion page or block you want to retrieve comments from",
+          "message": "Select the Notion page or block you want to retrieve comments from"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.display_name": {
+          "source": "List Pages",
+          "message": "List Pages"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.short_desc": {
+          "source": "Search and list Notion pages",
+          "message": "Search and list Notion pages"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.desc": {
+          "source": "Search for and retrieve a list of Notion pages with optional query filtering and sorting.",
+          "message": "Search for and retrieve a list of Notion pages with optional query filtering and sorting."
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "Search Query"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.cXVlcnk.short_desc": {
+          "source": "Text to search for in page titles and content",
+          "message": "Text to search for in page titles and content"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.cXVlcnk.desc": {
+          "source": "Enter text to search for in page titles and content. Leave empty to retrieve all accessible pages.",
+          "message": "Enter text to search for in page titles and content. Leave empty to retrieve all accessible pages."
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.bGFzdF9lZGl0ZWQ.display_name": {
+          "source": "Sort by Last Edited",
+          "message": "Sort by Last Edited"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.bGFzdF9lZGl0ZWQ.short_desc": {
+          "source": "How to sort pages by last edited time",
+          "message": "How to sort pages by last edited time"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.bGFzdF9lZGl0ZWQ.desc": {
+          "source": "Choose whether to sort pages by last edited time in ascending or descending order",
+          "message": "Choose whether to sort pages by last edited time in ascending or descending order"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.bGFzdF9lZGl0ZWQ.allowed-value.c3RyaW5nOmRlc2NlbmRpbmc.display_name": {
+          "source": "Last edited (newest first)",
+          "message": "Last edited (newest first)"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.bGFzdF9lZGl0ZWQ.allowed-value.c3RyaW5nOmFzY2VuZGluZw.display_name": {
+          "source": "Last edited (oldest first)",
+          "message": "Last edited (oldest first)"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Page Size"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of pages to retrieve per request",
+          "message": "Number of pages to retrieve per request"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.cGFnZV9zaXpl.desc": {
+          "source": "Set the number of pages to retrieve in a single request",
+          "message": "Set the number of pages to retrieve in a single request"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.bmV4dF9jdXJzb3I.display_name": {
+          "source": "Next Cursor",
+          "message": "Next Cursor"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.bmV4dF9jdXJzb3I.short_desc": {
+          "source": "Pagination cursor for retrieving next page",
+          "message": "Pagination cursor for retrieving next page"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.bmV4dF9jdXJzb3I.desc": {
+          "source": "Use this cursor to retrieve the next page of results in a paginated response",
+          "message": "Use this cursor to retrieve the next page of results in a paginated response"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.display_name": {
+          "source": "List Databases",
+          "message": "List Databases"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.short_desc": {
+          "source": "List all Notion databases",
+          "message": "List all Notion databases"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.desc": {
+          "source": "Retrieve a list of all accessible Notion databases in your workspace with optional search filtering.",
+          "message": "Retrieve a list of all accessible Notion databases in your workspace with optional search filtering."
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "Search Query"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.option.cXVlcnk.short_desc": {
+          "source": "Text to search for in database titles",
+          "message": "Text to search for in database titles"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.option.cXVlcnk.desc": {
+          "source": "Enter text to search for in database titles. Leave empty to retrieve all accessible databases.",
+          "message": "Enter text to search for in database titles. Leave empty to retrieve all accessible databases."
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.option.bGFzdF9lZGl0ZWQ.display_name": {
+          "source": "Sort by Last Edited",
+          "message": "Sort by Last Edited"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.option.bGFzdF9lZGl0ZWQ.short_desc": {
+          "source": "How to sort databases by last edited time",
+          "message": "How to sort databases by last edited time"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.option.bGFzdF9lZGl0ZWQ.desc": {
+          "source": "Choose whether to sort databases by last edited time in ascending or descending order",
+          "message": "Choose whether to sort databases by last edited time in ascending or descending order"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.option.bGFzdF9lZGl0ZWQ.allowed-value.c3RyaW5nOmRlc2NlbmRpbmc.display_name": {
+          "source": "Last edited (newest first)",
+          "message": "Last edited (newest first)"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.option.bGFzdF9lZGl0ZWQ.allowed-value.c3RyaW5nOmFzY2VuZGluZw.display_name": {
+          "source": "Last edited (oldest first)",
+          "message": "Last edited (oldest first)"
+        },
+        "app.Tm90aW9u.action.bGlzdF91c2Vycw.display_name": {
+          "source": "List Users",
+          "message": "List Users"
+        },
+        "app.Tm90aW9u.action.bGlzdF91c2Vycw.short_desc": {
+          "source": "List users in the Notion workspace",
+          "message": "List users in the Notion workspace"
+        },
+        "app.Tm90aW9u.action.bGlzdF91c2Vycw.desc": {
+          "source": "Retrieve a list of all users in the Notion workspace including people and bots.",
+          "message": "Retrieve a list of all users in the Notion workspace including people and bots."
+        },
+        "app.Tm90aW9u.action.bGlzdF91c2Vycw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Page Size"
+        },
+        "app.Tm90aW9u.action.bGlzdF91c2Vycw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of users to retrieve per page",
+          "message": "Number of users to retrieve per page"
+        },
+        "app.Tm90aW9u.action.bGlzdF91c2Vycw.option.cGFnZV9zaXpl.desc": {
+          "source": "Set the number of users to retrieve in a single request",
+          "message": "Set the number of users to retrieve in a single request"
+        },
+        "app.Tm90aW9u.action.bGlzdF91c2Vycw.option.bmV4dF9jdXJzb3I.display_name": {
+          "source": "Next Cursor",
+          "message": "Next Cursor"
+        },
+        "app.Tm90aW9u.action.bGlzdF91c2Vycw.option.bmV4dF9jdXJzb3I.short_desc": {
+          "source": "Pagination cursor for retrieving next page",
+          "message": "Pagination cursor for retrieving next page"
+        },
+        "app.Tm90aW9u.action.bGlzdF91c2Vycw.option.bmV4dF9jdXJzb3I.desc": {
+          "source": "Use this cursor to retrieve the next page of users in a paginated response",
+          "message": "Use this cursor to retrieve the next page of users in a paginated response"
+        },
+        "app.Tm90aW9u.action.Z2V0X3VzZXI.display_name": {
+          "source": "Get User",
+          "message": "Get User"
+        },
+        "app.Tm90aW9u.action.Z2V0X3VzZXI.short_desc": {
+          "source": "Retrieve information about a Notion user",
+          "message": "Retrieve information about a Notion user"
+        },
+        "app.Tm90aW9u.action.Z2V0X3VzZXI.desc": {
+          "source": "Get detailed information about a specific Notion user including their name, type, and contact information.",
+          "message": "Get detailed information about a specific Notion user including their name, type, and contact information."
+        },
+        "app.Tm90aW9u.action.Z2V0X3VzZXI.option.dXNlcl9pZA.display_name": {
+          "source": "User",
+          "message": "User"
+        },
+        "app.Tm90aW9u.action.Z2V0X3VzZXI.option.dXNlcl9pZA.short_desc": {
+          "source": "The Notion user to retrieve",
+          "message": "The Notion user to retrieve"
+        },
+        "app.Tm90aW9u.action.Z2V0X3VzZXI.option.dXNlcl9pZA.desc": {
+          "source": "Select the Notion user you want to get information about",
+          "message": "Select the Notion user you want to get information about"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.display_name": {
+          "source": "Update Database Item",
+          "message": "Update Database Item"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.short_desc": {
+          "source": "Update an existing item in a Notion database",
+          "message": "Update an existing item in a Notion database"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.desc": {
+          "source": "Update the property values of an existing item (page) in a Notion database.",
+          "message": "Update the property values of an existing item (page) in a Notion database."
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.option.ZGF0YV9zb3VyY2VfaWQ.display_name": {
+          "source": "Database",
+          "message": "Database"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.option.ZGF0YV9zb3VyY2VfaWQ.short_desc": {
+          "source": "The Notion database containing the item",
+          "message": "The Notion database containing the item"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.option.ZGF0YV9zb3VyY2VfaWQ.desc": {
+          "source": "Select the Notion database that contains the item you want to update",
+          "message": "Select the Notion database that contains the item you want to update"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.option.aXRlbV9pZA.display_name": {
+          "source": "Database Item",
+          "message": "Database Item"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.option.aXRlbV9pZA.short_desc": {
+          "source": "The database item to update",
+          "message": "The database item to update"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.option.aXRlbV9pZA.desc": {
+          "source": "Select the specific database item (page) you want to update",
+          "message": "Select the specific database item (page) you want to update"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.option.cHJvcGVydGllcw.display_name": {
+          "source": "Properties",
+          "message": "Properties"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Property values to update",
+          "message": "Property values to update"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.option.cHJvcGVydGllcw.desc": {
+          "source": "Set the new property values for the database item. Only specified properties will be updated.",
+          "message": "Set the new property values for the database item. Only specified properties will be updated."
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.display_name": {
+          "source": "List Database Items",
+          "message": "List Database Items"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.short_desc": {
+          "source": "List items from a Notion database",
+          "message": "List items from a Notion database"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.desc": {
+          "source": "Retrieve a list of items (pages) from a Notion database with filtering and sorting options.",
+          "message": "Retrieve a list of items (pages) from a Notion database with filtering and sorting options."
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.ZGF0YV9zb3VyY2VfaWQ.display_name": {
+          "source": "Database",
+          "message": "Database"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.ZGF0YV9zb3VyY2VfaWQ.short_desc": {
+          "source": "The Notion database to list items from",
+          "message": "The Notion database to list items from"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.ZGF0YV9zb3VyY2VfaWQ.desc": {
+          "source": "Select the Notion database you want to retrieve items from",
+          "message": "Select the Notion database you want to retrieve items from"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Page Size"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of items to retrieve per page",
+          "message": "Number of items to retrieve per page"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.cGFnZV9zaXpl.desc": {
+          "source": "Set the number of database items to retrieve in a single request",
+          "message": "Set the number of database items to retrieve in a single request"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.bmV4dF9jdXJzb3I.display_name": {
+          "source": "Next Cursor",
+          "message": "Next Cursor"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.bmV4dF9jdXJzb3I.short_desc": {
+          "source": "Pagination cursor for retrieving next page",
+          "message": "Pagination cursor for retrieving next page"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.bmV4dF9jdXJzb3I.desc": {
+          "source": "Use this cursor to retrieve the next page of items in a paginated response",
+          "message": "Use this cursor to retrieve the next page of items in a paginated response"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.ZmlsdGVyX3Byb3BlcnRpZXM.display_name": {
+          "source": "Filter Properties",
+          "message": "Filter Properties"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.ZmlsdGVyX3Byb3BlcnRpZXM.short_desc": {
+          "source": "Property filters to apply to the results",
+          "message": "Property filters to apply to the results"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.ZmlsdGVyX3Byb3BlcnRpZXM.desc": {
+          "source": "Set property filters to only return items that match specific criteria",
+          "message": "Set property filters to only return items that match specific criteria"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.c29ydHM.display_name": {
+          "source": "Sort Options",
+          "message": "Sort Options"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.c29ydHM.short_desc": {
+          "source": "How to sort the returned items",
+          "message": "How to sort the returned items"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.c29ydHM.desc": {
+          "source": "Configure how the database items should be sorted in the response",
+          "message": "Configure how the database items should be sorted in the response"
+        },
+        "app.Tm90aW9u.action.bmV3X2RhdGFiYXNlX2l0ZW0.display_name": {
+          "source": "New Database Item",
+          "message": "New Database Item"
+        },
+        "app.Tm90aW9u.action.bmV3X2RhdGFiYXNlX2l0ZW0.short_desc": {
+          "source": "Triggers when a new item is created in a Notion database",
+          "message": "Triggers when a new item is created in a Notion database"
+        },
+        "app.Tm90aW9u.action.bmV3X2RhdGFiYXNlX2l0ZW0.desc": {
+          "source": "This trigger monitors a specific Notion database and fires when a new item (page) is added to it. You can filter items based on property values.",
+          "message": "This trigger monitors a specific Notion database and fires when a new item (page) is added to it. You can filter items based on property values."
+        },
+        "app.Tm90aW9u.action.bmV3X2RhdGFiYXNlX2l0ZW0.option.ZGF0YV9zb3VyY2VfaWQ.display_name": {
+          "source": "Database",
+          "message": "Database"
+        },
+        "app.Tm90aW9u.action.bmV3X2RhdGFiYXNlX2l0ZW0.option.ZGF0YV9zb3VyY2VfaWQ.short_desc": {
+          "source": "The Notion database to monitor",
+          "message": "The Notion database to monitor"
+        },
+        "app.Tm90aW9u.action.bmV3X2RhdGFiYXNlX2l0ZW0.option.ZGF0YV9zb3VyY2VfaWQ.desc": {
+          "source": "Select the Notion database that you want to monitor for new items",
+          "message": "Select the Notion database that you want to monitor for new items"
+        },
+        "app.Tm90aW9u.action.bmV3X2RhdGFiYXNlX2l0ZW0.option.ZmlsdGVyX3Byb3BlcnRpZXM.display_name": {
+          "source": "Filter Properties",
+          "message": "Filter Properties"
+        },
+        "app.Tm90aW9u.action.bmV3X2RhdGFiYXNlX2l0ZW0.option.ZmlsdGVyX3Byb3BlcnRpZXM.short_desc": {
+          "source": "Optional filters to apply to database items",
+          "message": "Optional filters to apply to database items"
+        },
+        "app.Tm90aW9u.action.bmV3X2RhdGFiYXNlX2l0ZW0.option.ZmlsdGVyX3Byb3BlcnRpZXM.desc": {
+          "source": "Set property filters to only trigger for items that match specific criteria",
+          "message": "Set property filters to only trigger for items that match specific criteria"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9kYXRhYmFzZV9pdGVt.display_name": {
+          "source": "Updated Database Item",
+          "message": "Updated Database Item"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9kYXRhYmFzZV9pdGVt.short_desc": {
+          "source": "Triggers when a database item is updated in Notion",
+          "message": "Triggers when a database item is updated in Notion"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9kYXRhYmFzZV9pdGVt.desc": {
+          "source": "This trigger monitors a specific Notion database and fires when an existing item (page) is modified. You can filter items based on property values.",
+          "message": "This trigger monitors a specific Notion database and fires when an existing item (page) is modified. You can filter items based on property values."
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9kYXRhYmFzZV9pdGVt.option.ZGF0YV9zb3VyY2VfaWQ.display_name": {
+          "source": "Database",
+          "message": "Database"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9kYXRhYmFzZV9pdGVt.option.ZGF0YV9zb3VyY2VfaWQ.short_desc": {
+          "source": "The Notion database to monitor",
+          "message": "The Notion database to monitor"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9kYXRhYmFzZV9pdGVt.option.ZGF0YV9zb3VyY2VfaWQ.desc": {
+          "source": "Select the Notion database that you want to monitor for updated items",
+          "message": "Select the Notion database that you want to monitor for updated items"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9kYXRhYmFzZV9pdGVt.option.ZmlsdGVyX3Byb3BlcnRpZXM.display_name": {
+          "source": "Filter Properties",
+          "message": "Filter Properties"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9kYXRhYmFzZV9pdGVt.option.ZmlsdGVyX3Byb3BlcnRpZXM.short_desc": {
+          "source": "Optional filters to apply to database items",
+          "message": "Optional filters to apply to database items"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9kYXRhYmFzZV9pdGVt.option.ZmlsdGVyX3Byb3BlcnRpZXM.desc": {
+          "source": "Set property filters to only trigger for items that match specific criteria",
+          "message": "Set property filters to only trigger for items that match specific criteria"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9wYWdl.display_name": {
+          "source": "Updated Page",
+          "message": "Updated Page"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9wYWdl.short_desc": {
+          "source": "Triggers when a specific Notion page is updated",
+          "message": "Triggers when a specific Notion page is updated"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9wYWdl.desc": {
+          "source": "This trigger monitors a specific Notion page and fires when the page is modified. It tracks changes to the page content, properties, or metadata.",
+          "message": "This trigger monitors a specific Notion page and fires when the page is modified. It tracks changes to the page content, properties, or metadata."
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9wYWdl.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "Page"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9wYWdl.option.cGFnZQ.short_desc": {
+          "source": "The Notion page to monitor for updates",
+          "message": "The Notion page to monitor for updates"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9wYWdl.option.cGFnZQ.desc": {
+          "source": "Select the specific Notion page you want to monitor for changes. The trigger will fire whenever this page is edited or updated.",
+          "message": "Select the specific Notion page you want to monitor for changes. The trigger will fire whenever this page is edited or updated."
+        }
+      }
+    }
+  }
+}

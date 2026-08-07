@@ -20,6 +20,7 @@ import { getTwilioMessagingServiceAllowedValues } from '../apps/twilio/helpers/g
 import { getTwilioPhoneNumberAllowedValues } from '../apps/twilio/helpers/get-phone-number-allowed-values';
 import { getTwilioRecordingAllowedValues } from '../apps/twilio/helpers/get-recording-allowed-values';
 import { getTwilioTranscriptionAllowedValues } from '../apps/twilio/helpers/get-transcription-allowed-values';
+import { TwilioVoiceAllowedValues } from '../apps/twilio/helpers/get-voice-allowed-values';
 import {
   NewTwilioMessage,
   NewTwilioRecording,
@@ -94,6 +95,11 @@ describe('Should test Twilio app', () => {
 
   beforeAll(async () => {
     credentialsUsable = await probeTwilioCredentials();
+  });
+
+  it('Should expose each voice technical identity once', () => {
+    const values = TwilioVoiceAllowedValues.map(({ value }) => value);
+    expect(new Set(values).size).toBe(values.length);
   });
 
   describe('Should test Twilio allowed values', () => {

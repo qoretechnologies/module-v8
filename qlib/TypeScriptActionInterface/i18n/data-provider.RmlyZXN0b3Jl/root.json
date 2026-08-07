@@ -1,0 +1,1061 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "root": {
+      "messages": {
+        "app.RmlyZXN0b3Jl.display_name": {
+          "source": "Firestore",
+          "message": "Firestore"
+        },
+        "app.RmlyZXN0b3Jl.short_desc": {
+          "source": "Connect to Google Cloud Firestore to manage your NoSQL document database.",
+          "message": "Connect to Google Cloud Firestore to manage your NoSQL document database."
+        },
+        "app.RmlyZXN0b3Jl.desc": {
+          "source": "The Firestore integration enables you to interact with Google Cloud Firestore, a flexible, scalable NoSQL cloud database. Create, read, update, and delete documents, manage collections, and execute queries to automate your document database operations seamlessly.",
+          "message": "The Firestore integration enables you to interact with Google Cloud Firestore, a flexible, scalable NoSQL cloud database. Create, read, update, and delete documents, manage collections, and execute queries to automate your document database operations seamlessly."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Make an API call"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Firestore",
+          "message": "Make a custom API call to Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Firestore** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Make a custom HTTP / REST API call to **Firestore** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP Method"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI Path"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body Type"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "How the body is serialized and what Content-Type is sent"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; use connection serialization and let the REST client decide"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serialize body as JSON"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serialize body as application/x-www-form-urlencoded form fields"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans)."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Upload a file using multipart/form-data"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Send body as XML"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Send body as YAML"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Plain Text"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Send body as text/plain"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Raw Binary"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Send body as raw bytes"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "The request body"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Path Variables"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Values for {name} placeholders in path"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Query Arguments"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Query string parameters"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Custom Headers"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Extra request headers"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default)."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Expected Status Codes"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Response status codes treated as success"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws)."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Return Errors as Data"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Return non-2xx responses normally instead of throwing"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Include Debug Info"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Include request/timing/size debug info in the response"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.display_name": {
+          "source": "List Projects",
+          "message": "List Projects"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.short_desc": {
+          "source": "List all Google Cloud projects accessible with the current credentials",
+          "message": "List all Google Cloud projects accessible with the current credentials"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.desc": {
+          "source": "Retrieves a list of all Google Cloud projects that are accessible with your credentials. You can filter projects by name and use pagination to navigate through large result sets. This is useful for discovering which projects contain Firestore databases.",
+          "message": "Retrieves a list of all Google Cloud projects that are accessible with your credentials. You can filter projects by name and use pagination to navigate through large result sets. This is useful for discovering which projects contain Firestore databases."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.display_name": {
+          "source": "Project Name",
+          "message": "Project Name"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.short_desc": {
+          "source": "Filter projects by name",
+          "message": "Filter projects by name"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.desc": {
+          "source": "Optional filter to search for projects containing this name. The search is case-insensitive and matches partial names.",
+          "message": "Optional filter to search for projects containing this name. The search is case-insensitive and matches partial names."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Page Size"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of projects to return per page",
+          "message": "Number of projects to return per page"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.desc": {
+          "source": "The maximum number of projects to return in a single request. Default is 100. Use this with pagination tokens to retrieve large result sets.",
+          "message": "The maximum number of projects to return in a single request. Default is 100. Use this with pagination tokens to retrieve large result sets."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
+          "source": "Next Page Token",
+          "message": "Next Page Token"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
+          "source": "Token for retrieving the next page of results",
+          "message": "Token for retrieving the next page of results"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.desc": {
+          "source": "Pagination token obtained from a previous request. Use this to retrieve the next page of projects when there are more results than the page size.",
+          "message": "Pagination token obtained from a previous request. Use this to retrieve the next page of projects when there are more results than the page size."
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.display_name": {
+          "source": "Create Document",
+          "message": "Create Document"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.short_desc": {
+          "source": "Create a new document in a Firestore collection",
+          "message": "Create a new document in a Firestore collection"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.desc": {
+          "source": "Creates a new document in the specified Firestore collection. You can either let Firestore auto-generate a document ID or provide your own. The document data can be specified through structured fields or as a custom hash object.",
+          "message": "Creates a new document in the specified Firestore collection. You can either let Firestore auto-generate a document ID or provide your own. The document data can be specified through structured fields or as a custom hash object."
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "The Google Cloud project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "The unique identifier for your Google Cloud project containing the Firestore database"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Collection Path"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "The path to the Firestore collection"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection where the document will be created. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "The full path to the collection where the document will be created. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "Document ID"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "Custom document ID (optional)",
+          "message": "Custom document ID (optional)"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "Optional custom identifier for the document. If not provided, Firestore will auto-generate a unique ID. Document IDs must be valid UTF-8 strings and cannot contain forward slashes.",
+          "message": "Optional custom identifier for the document. If not provided, Firestore will auto-generate a unique ID. Document IDs must be valid UTF-8 strings and cannot contain forward slashes."
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.display_name": {
+          "source": "Document Data",
+          "message": "Document Data"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.short_desc": {
+          "source": "The data to store in the document",
+          "message": "The data to store in the document"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.desc": {
+          "source": "The structured data to store in the document. This will be dynamically typed based on the collection schema if available. Each field will be stored with its appropriate Firestore data type.",
+          "message": "The structured data to store in the document. This will be dynamically typed based on the collection schema if available. Each field will be stored with its appropriate Firestore data type."
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.display_name": {
+          "source": "Additional Data",
+          "message": "Additional Data"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.short_desc": {
+          "source": "Additional fields to include in the document",
+          "message": "Additional fields to include in the document"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.desc": {
+          "source": "Optional additional fields to merge with the structured data. Use this to add fields that are not part of the predefined schema or to include dynamic fields.",
+          "message": "Optional additional fields to merge with the structured data. Use this to add fields that are not part of the predefined schema or to include dynamic fields."
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.display_name": {
+          "source": "Get Document",
+          "message": "Get Document"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.short_desc": {
+          "source": "Retrieve a specific document from a Firestore collection",
+          "message": "Retrieve a specific document from a Firestore collection"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.desc": {
+          "source": "Fetches a single document by its ID from a Firestore collection. Returns the complete document data including metadata such as creation time and last update time. This action will fail if the document does not exist.",
+          "message": "Fetches a single document by its ID from a Firestore collection. Returns the complete document data including metadata such as creation time and last update time. This action will fail if the document does not exist."
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "The Google Cloud project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "The unique identifier for your Google Cloud project containing the Firestore database"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Collection Path"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "The path to the Firestore collection"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection containing the document. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "The full path to the collection containing the document. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "Document ID"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "The ID of the document to retrieve",
+          "message": "The ID of the document to retrieve"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "The unique identifier of the document you want to retrieve. This is the document ID that was either auto-generated or specified when the document was created.",
+          "message": "The unique identifier of the document you want to retrieve. This is the document ID that was either auto-generated or specified when the document was created."
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.display_name": {
+          "source": "Update Document",
+          "message": "Update Document"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.short_desc": {
+          "source": "Update an existing document in a Firestore collection",
+          "message": "Update an existing document in a Firestore collection"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.desc": {
+          "source": "Updates an existing document in Firestore with new data. You can choose to merge the new data with existing fields or replace the entire document. By default, the update merges new fields while preserving unspecified fields.",
+          "message": "Updates an existing document in Firestore with new data. You can choose to merge the new data with existing fields or replace the entire document. By default, the update merges new fields while preserving unspecified fields."
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "The Google Cloud project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "The unique identifier for your Google Cloud project containing the Firestore database"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Collection Path"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "The path to the Firestore collection"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection containing the document. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "The full path to the collection containing the document. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "Document ID"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "The ID of the document to update",
+          "message": "The ID of the document to update"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "The unique identifier of the document you want to update. The document must exist or the operation will fail.",
+          "message": "The unique identifier of the document you want to update. The document must exist or the operation will fail."
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.display_name": {
+          "source": "Document Data",
+          "message": "Document Data"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.short_desc": {
+          "source": "The new data for the document",
+          "message": "The new data for the document"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.desc": {
+          "source": "The data to update in the document. When merge is enabled, only the specified fields will be updated. When merge is disabled, this data will replace the entire document.",
+          "message": "The data to update in the document. When merge is enabled, only the specified fields will be updated. When merge is disabled, this data will replace the entire document."
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.display_name": {
+          "source": "Additional Data",
+          "message": "Additional Data"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.short_desc": {
+          "source": "Additional fields to update",
+          "message": "Additional fields to update"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.desc": {
+          "source": "Optional additional fields to merge with the structured data. Use this to update fields that are not part of the predefined schema or to include dynamic fields.",
+          "message": "Optional additional fields to merge with the structured data. Use this to update fields that are not part of the predefined schema or to include dynamic fields."
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.bWVyZ2U.display_name": {
+          "source": "Merge",
+          "message": "Merge"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.bWVyZ2U.short_desc": {
+          "source": "Whether to merge with existing data",
+          "message": "Whether to merge with existing data"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.bWVyZ2U.desc": {
+          "source": "When true (default), only the specified fields are updated and other fields remain unchanged. When false, the entire document is replaced with the new data.",
+          "message": "When true (default), only the specified fields are updated and other fields remain unchanged. When false, the entire document is replaced with the new data."
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.display_name": {
+          "source": "Delete Document",
+          "message": "Delete Document"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.short_desc": {
+          "source": "Delete a document from a Firestore collection",
+          "message": "Delete a document from a Firestore collection"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.desc": {
+          "source": "Permanently deletes a document from a Firestore collection. This operation cannot be undone. The document must exist or the operation will fail. All subcollections under the document will NOT be automatically deleted.",
+          "message": "Permanently deletes a document from a Firestore collection. This operation cannot be undone. The document must exist or the operation will fail. All subcollections under the document will NOT be automatically deleted."
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "The Google Cloud project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "The unique identifier for your Google Cloud project containing the Firestore database"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Collection Path"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "The path to the Firestore collection"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection containing the document. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "The full path to the collection containing the document. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "Document ID"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "The ID of the document to delete",
+          "message": "The ID of the document to delete"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "The unique identifier of the document you want to delete. The document must exist or the operation will fail.",
+          "message": "The unique identifier of the document you want to delete. The document must exist or the operation will fail."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.display_name": {
+          "source": "List Documents",
+          "message": "List Documents"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.short_desc": {
+          "source": "List all documents in a Firestore collection",
+          "message": "List all documents in a Firestore collection"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.desc": {
+          "source": "Retrieves all documents from a specified Firestore collection. You can limit the number of results and specify ordering criteria. This action returns the complete document data along with metadata for each document.",
+          "message": "Retrieves all documents from a specified Firestore collection. You can limit the number of results and specify ordering criteria. This action returns the complete document data along with metadata for each document."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "The Google Cloud project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "The unique identifier for your Google Cloud project containing the Firestore database"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Collection Path"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "The path to the Firestore collection"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection whose documents you want to list. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "The full path to the collection whose documents you want to list. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of documents to return",
+          "message": "Maximum number of documents to return"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of documents to retrieve. Default is 100. Use this to control the size of the result set and improve performance.",
+          "message": "The maximum number of documents to retrieve. Default is 100. Use this to control the size of the result set and improve performance."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "Order By"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.short_desc": {
+          "source": "Field to order documents by",
+          "message": "Field to order documents by"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.desc": {
+          "source": "Optional field name to use for ordering the documents. The field must exist in the documents and be of a comparable type (string, number, date).",
+          "message": "Optional field name to use for ordering the documents. The field must exist in the documents and be of a comparable type (string, number, date)."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.display_name": {
+          "source": "Order Direction",
+          "message": "Order Direction"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.short_desc": {
+          "source": "Sort direction for ordering",
+          "message": "Sort direction for ordering"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.desc": {
+          "source": "The direction to sort documents when an order_by field is specified. Choose ascending for lowest to highest or descending for highest to lowest.",
+          "message": "The direction to sort documents when an order_by field is specified. Choose ascending for lowest to highest or descending for highest to lowest."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.allowed-value.c3RyaW5nOkFTQ0VORElORw.display_name": {
+          "source": "Ascending",
+          "message": "Ascending"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.allowed-value.c3RyaW5nOkRFU0NFTkRJTkc.display_name": {
+          "source": "Descending",
+          "message": "Descending"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
+          "source": "List Collections",
+          "message": "List Collections"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
+          "source": "List all collections in a Firestore database or document",
+          "message": "List all collections in a Firestore database or document"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.desc": {
+          "source": "Retrieves all collection IDs at the root level of a Firestore database or within a specific document. This is useful for discovering the structure of your Firestore database and navigating nested collections.",
+          "message": "Retrieves all collection IDs at the root level of a Firestore database or within a specific document. This is useful for discovering the structure of your Firestore database and navigating nested collections."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "The Google Cloud project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "The unique identifier for your Google Cloud project containing the Firestore database"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.display_name": {
+          "source": "Parent Document Path",
+          "message": "Parent Document Path"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.short_desc": {
+          "source": "Path to the parent document (optional)",
+          "message": "Path to the parent document (optional)"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.desc": {
+          "source": "Optional path to a document whose subcollections you want to list. If not specified, lists root-level collections. Format: collection_id/document_id",
+          "message": "Optional path to a document whose subcollections you want to list. If not specified, lists root-level collections. Format: collection_id/document_id"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.display_name": {
+          "source": "Get Collection",
+          "message": "Get Collection"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.short_desc": {
+          "source": "Get information about a Firestore collection",
+          "message": "Get information about a Firestore collection"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.desc": {
+          "source": "Retrieves metadata and information about a specific Firestore collection. This includes checking if the collection exists, whether it has documents, and optionally retrieving sample documents from the collection.",
+          "message": "Retrieves metadata and information about a specific Firestore collection. This includes checking if the collection exists, whether it has documents, and optionally retrieving sample documents from the collection."
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "The Google Cloud project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "The unique identifier for your Google Cloud project containing the Firestore database"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.Y29sbGVjdGlvbl9pZA.display_name": {
+          "source": "Collection ID",
+          "message": "Collection ID"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.Y29sbGVjdGlvbl9pZA.short_desc": {
+          "source": "The ID of the collection",
+          "message": "The ID of the collection"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.Y29sbGVjdGlvbl9pZA.desc": {
+          "source": "The identifier of the collection you want to retrieve information about. This is the collection name without any parent path.",
+          "message": "The identifier of the collection you want to retrieve information about. This is the collection name without any parent path."
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.display_name": {
+          "source": "Parent Document Path",
+          "message": "Parent Document Path"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.short_desc": {
+          "source": "Path to the parent document (optional)",
+          "message": "Path to the parent document (optional)"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.desc": {
+          "source": "Optional path to the parent document if this is a subcollection. If not specified, assumes this is a root-level collection. Format: collection_id/document_id",
+          "message": "Optional path to the parent document if this is a subcollection. If not specified, assumes this is a root-level collection. Format: collection_id/document_id"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.display_name": {
+          "source": "Include Sample Documents",
+          "message": "Include Sample Documents"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.short_desc": {
+          "source": "Whether to include sample documents",
+          "message": "Whether to include sample documents"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.desc": {
+          "source": "When true, includes sample documents from the collection in the response. This helps you understand the structure and content of the collection.",
+          "message": "When true, includes sample documents from the collection in the response. This helps you understand the structure and content of the collection."
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.display_name": {
+          "source": "Sample Limit",
+          "message": "Sample Limit"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.short_desc": {
+          "source": "Number of sample documents to include",
+          "message": "Number of sample documents to include"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.desc": {
+          "source": "The maximum number of sample documents to retrieve when include_sample_documents is true. Default is 5.",
+          "message": "The maximum number of sample documents to retrieve when include_sample_documents is true. Default is 5."
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.display_name": {
+          "source": "Query Documents",
+          "message": "Query Documents"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.short_desc": {
+          "source": "Query documents in a Firestore collection with filters and ordering",
+          "message": "Query documents in a Firestore collection with filters and ordering"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.desc": {
+          "source": "Performs advanced queries on a Firestore collection with support for multiple filters, ordering, and limits. This allows you to search for specific documents based on field values and retrieve them in a particular order.",
+          "message": "Performs advanced queries on a Firestore collection with support for multiple filters, ordering, and limits. This allows you to search for specific documents based on field values and retrieve them in a particular order."
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "The Google Cloud project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "The unique identifier for your Google Cloud project containing the Firestore database"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Collection Path"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "The path to the Firestore collection"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection you want to query. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "The full path to the collection you want to query. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.ZmlsdGVycw.display_name": {
+          "source": "Filters",
+          "message": "Filters"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.ZmlsdGVycw.short_desc": {
+          "source": "Filter criteria for documents",
+          "message": "Filter criteria for documents"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.ZmlsdGVycw.desc": {
+          "source": "Optional list of filters to apply to the query. Multiple filters are combined with AND logic. Each filter specifies a field, comparison operator, and value to match.",
+          "message": "Optional list of filters to apply to the query. Multiple filters are combined with AND logic. Each filter specifies a field, comparison operator, and value to match."
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "Order By"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.short_desc": {
+          "source": "Ordering criteria for results",
+          "message": "Ordering criteria for results"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.desc": {
+          "source": "Optional list of ordering criteria to apply to the query results. Documents will be sorted by the specified fields in the order they are listed.",
+          "message": "Optional list of ordering criteria to apply to the query results. Documents will be sorted by the specified fields in the order they are listed."
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of documents to return",
+          "message": "Maximum number of documents to return"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.bGltaXQ.desc": {
+          "source": "The maximum number of documents to retrieve. Default is 100. Use this to control query performance and result set size.",
+          "message": "The maximum number of documents to retrieve. Default is 100. Use this to control query performance and result set size."
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.display_name": {
+          "source": "Backup to Google Cloud Storage",
+          "message": "Backup to Google Cloud Storage"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.short_desc": {
+          "source": "Export Firestore data to Google Cloud Storage",
+          "message": "Export Firestore data to Google Cloud Storage"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.desc": {
+          "source": "Creates a backup of your Firestore database or specific collections by exporting the data to Google Cloud Storage. This is useful for disaster recovery, data migration, or creating snapshots of your database at a point in time.",
+          "message": "Creates a backup of your Firestore database or specific collections by exporting the data to Google Cloud Storage. This is useful for disaster recovery, data migration, or creating snapshots of your database at a point in time."
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "The Google Cloud project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database to backup",
+          "message": "The unique identifier for your Google Cloud project containing the Firestore database to backup"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.display_name": {
+          "source": "Output URI Prefix",
+          "message": "Output URI Prefix"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.short_desc": {
+          "source": "GCS bucket URI where backup will be stored",
+          "message": "GCS bucket URI where backup will be stored"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.desc": {
+          "source": "The Google Cloud Storage URI prefix where the backup files will be written. Format: gs://bucket-name/path/to/backup. The bucket must already exist and you must have write permissions.",
+          "message": "The Google Cloud Storage URI prefix where the backup files will be written. Format: gs://bucket-name/path/to/backup. The bucket must already exist and you must have write permissions."
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.display_name": {
+          "source": "Collection IDs",
+          "message": "Collection IDs"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.short_desc": {
+          "source": "Specific collections to backup (optional)",
+          "message": "Specific collections to backup (optional)"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.desc": {
+          "source": "Optional list of collection IDs to backup. If not specified, the entire database will be backed up. Use this to create selective backups of specific collections.",
+          "message": "Optional list of collection IDs to backup. If not specified, the entire database will be backed up. Use this to create selective backups of specific collections."
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.display_name": {
+          "source": "Restore from Google Cloud Storage",
+          "message": "Restore from Google Cloud Storage"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.short_desc": {
+          "source": "Import Firestore data from Google Cloud Storage",
+          "message": "Import Firestore data from Google Cloud Storage"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.desc": {
+          "source": "Restores Firestore data from a previous backup stored in Google Cloud Storage. This operation can restore the entire database or specific collections. Warning: This will overwrite existing documents with the same IDs.",
+          "message": "Restores Firestore data from a previous backup stored in Google Cloud Storage. This operation can restore the entire database or specific collections. Warning: This will overwrite existing documents with the same IDs."
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "The Google Cloud project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project where the data will be restored",
+          "message": "The unique identifier for your Google Cloud project where the data will be restored"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.display_name": {
+          "source": "Input URI Prefix",
+          "message": "Input URI Prefix"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.short_desc": {
+          "source": "GCS bucket URI where backup is stored",
+          "message": "GCS bucket URI where backup is stored"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.desc": {
+          "source": "The Google Cloud Storage URI prefix where the backup files are located. This should match the output_uri_prefix used when creating the backup. Format: gs://bucket-name/path/to/backup",
+          "message": "The Google Cloud Storage URI prefix where the backup files are located. This should match the output_uri_prefix used when creating the backup. Format: gs://bucket-name/path/to/backup"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.display_name": {
+          "source": "Collection IDs",
+          "message": "Collection IDs"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.short_desc": {
+          "source": "Specific collections to restore (optional)",
+          "message": "Specific collections to restore (optional)"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.desc": {
+          "source": "Optional list of collection IDs to restore from the backup. If not specified, all collections in the backup will be restored. Use this to selectively restore specific collections.",
+          "message": "Optional list of collection IDs to restore from the backup. If not specified, all collections in the backup will be restored. Use this to selectively restore specific collections."
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.display_name": {
+          "source": "New Document",
+          "message": "New Document"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.short_desc": {
+          "source": "Triggers when a new document is created in a Firestore collection",
+          "message": "Triggers when a new document is created in a Firestore collection"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.desc": {
+          "source": "Monitors a Firestore collection for newly created documents. Documents are ordered based on your specified criteria, and the trigger activates when new documents appear at the top of the ordered list. You can optionally filter documents and customize the ordering to track specific types of documents.",
+          "message": "Monitors a Firestore collection for newly created documents. Documents are ordered based on your specified criteria, and the trigger activates when new documents appear at the top of the ordered list. You can optionally filter documents and customize the ordering to track specific types of documents."
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "The Google Cloud project ID"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "The unique identifier for your Google Cloud project containing the Firestore database"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Collection Path"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "The path to the Firestore collection"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection you want to monitor. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "The full path to the collection you want to monitor. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.ZmlsdGVycw.display_name": {
+          "source": "Filters",
+          "message": "Filters"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.ZmlsdGVycw.short_desc": {
+          "source": "Optional filters to apply to documents",
+          "message": "Optional filters to apply to documents"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.ZmlsdGVycw.desc": {
+          "source": "Define one or more filters to narrow down which documents will trigger the event. Multiple filters are combined with AND logic.",
+          "message": "Define one or more filters to narrow down which documents will trigger the event. Multiple filters are combined with AND logic."
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "Order By"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.short_desc": {
+          "source": "Specify how to order documents",
+          "message": "Specify how to order documents"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.desc": {
+          "source": "Define the ordering criteria for documents. The trigger will activate for documents that appear at the top of the ordered list. If not specified, documents are ordered by creation time in descending order (newest first).",
+          "message": "Define the ordering criteria for documents. The trigger will activate for documents that appear at the top of the ordered list. If not specified, documents are ordered by creation time in descending order (newest first)."
+        }
+      }
+    }
+  }
+}

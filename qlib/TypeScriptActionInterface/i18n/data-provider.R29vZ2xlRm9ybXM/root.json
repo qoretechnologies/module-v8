@@ -1,0 +1,713 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "root": {
+      "messages": {
+        "app.R29vZ2xlRm9ybXM.display_name": {
+          "source": "Google Forms",
+          "message": "Google Forms"
+        },
+        "app.R29vZ2xlRm9ybXM.short_desc": {
+          "source": "Connect with Google Forms to manage your forms and responses",
+          "message": "Connect with Google Forms to manage your forms and responses"
+        },
+        "app.R29vZ2xlRm9ybXM.desc": {
+          "source": "Integrate with Google Forms to create, update, and manage your forms and responses. This integration allows you to perform actions and respond to events in your Google Forms account, enabling you to automate form management and data collection workflows.",
+          "message": "Integrate with Google Forms to create, update, and manage your forms and responses. This integration allows you to perform actions and respond to events in your Google Forms account, enabling you to automate form management and data collection workflows."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Make an API call"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Forms",
+          "message": "Make a custom API call to Google Forms"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Forms** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Make a custom HTTP / REST API call to **Google Forms** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP Method"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI Path"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body Type"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "How the body is serialized and what Content-Type is sent"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; use connection serialization and let the REST client decide"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serialize body as JSON"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serialize body as application/x-www-form-urlencoded form fields"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans)."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Upload a file using multipart/form-data"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Send body as XML"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Send body as YAML"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Plain Text"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Send body as text/plain"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Raw Binary"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Send body as raw bytes"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "The request body"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Path Variables"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Values for {name} placeholders in path"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Query Arguments"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Query string parameters"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Custom Headers"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Extra request headers"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default)."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Expected Status Codes"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Response status codes treated as success"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws)."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Return Errors as Data"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Return non-2xx responses normally instead of throwing"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Include Debug Info"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Include request/timing/size debug info in the response"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.display_name": {
+          "source": "Create Form",
+          "message": "Create Form"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.short_desc": {
+          "source": "Create a new Google Form with customizable questions and settings.",
+          "message": "Create a new Google Form with customizable questions and settings."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.desc": {
+          "source": "Creates a new Google Form with specified title, description, and optional questions. Supports various question types, quiz functionality, and custom form settings.",
+          "message": "Creates a new Google Form with specified title, description, and optional questions. Supports various question types, quiz functionality, and custom form settings."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Title"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.short_desc": {
+          "source": "Form title",
+          "message": "Form title"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.desc": {
+          "source": "The title of the Google Form. This will be displayed at the top of the form.",
+          "message": "The title of the Google Form. This will be displayed at the top of the form."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Description"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Form description",
+          "message": "Form description"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "An optional description that appears below the form title to provide additional context.",
+          "message": "An optional description that appears below the form title to provide additional context."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZG9jdW1lbnRfdGl0bGU.display_name": {
+          "source": "Document Title",
+          "message": "Document Title"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZG9jdW1lbnRfdGl0bGU.short_desc": {
+          "source": "Title for the document",
+          "message": "Title for the document"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZG9jdW1lbnRfdGl0bGU.desc": {
+          "source": "The document title that appears in the browser tab. If not specified, the form title will be used.",
+          "message": "The document title that appears in the browser tab. If not specified, the form title will be used."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.display_name": {
+          "source": "Form Settings",
+          "message": "Form Settings"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.short_desc": {
+          "source": "Additional form settings",
+          "message": "Additional form settings"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.desc": {
+          "source": "Configure additional form settings like email collection and quiz mode.",
+          "message": "Configure additional form settings like email collection and quiz mode."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.display_name": {
+          "source": "Questions",
+          "message": "Questions"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.short_desc": {
+          "source": "Form questions",
+          "message": "Form questions"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.desc": {
+          "source": "List of questions to add to the form. Each question can have different types and properties.",
+          "message": "List of questions to add to the form. Each question can have different types and properties."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.display_name": {
+          "source": "Get Form",
+          "message": "Get Form"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.short_desc": {
+          "source": "Retrieve details of a Google Form by ID.",
+          "message": "Retrieve details of a Google Form by ID."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.desc": {
+          "source": "Fetches comprehensive information about a Google Form, including its metadata, questions, and optionally its responses.",
+          "message": "Fetches comprehensive information about a Google Form, including its metadata, questions, and optionally its responses."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.display_name": {
+          "source": "Form ID",
+          "message": "Form ID"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.short_desc": {
+          "source": "Google Form ID",
+          "message": "Google Form ID"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.desc": {
+          "source": "The unique identifier of the Google Form to retrieve.",
+          "message": "The unique identifier of the Google Form to retrieve."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
+          "source": "Include Questions",
+          "message": "Include Questions"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
+          "source": "Include form questions in the response",
+          "message": "Include form questions in the response"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.aW5jbHVkZV9xdWVzdGlvbnM.desc": {
+          "source": "When enabled, returns the complete list of questions in the form with their properties.",
+          "message": "When enabled, returns the complete list of questions in the form with their properties."
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.display_name": {
+          "source": "Search Forms",
+          "message": "Search Forms"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.short_desc": {
+          "source": "Search for Google Forms by name with filtering options.",
+          "message": "Search for Google Forms by name with filtering options."
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.desc": {
+          "source": "Search for Google Forms in your Google Drive with options to filter by filename, specify search type, and paginate results.",
+          "message": "Search for Google Forms in your Google Drive with options to filter by filename, specify search type, and paginate results."
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.ZmlsZW5hbWU.display_name": {
+          "source": "Form Name",
+          "message": "Form Name"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.ZmlsZW5hbWU.short_desc": {
+          "source": "Name of the form to search for",
+          "message": "Name of the form to search for"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.ZmlsZW5hbWU.desc": {
+          "source": "The name or part of the name of the Google Forms to search for. Leave empty to retrieve all forms.",
+          "message": "The name or part of the name of the Google Forms to search for. Leave empty to retrieve all forms."
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.display_name": {
+          "source": "Search Type",
+          "message": "Search Type"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.short_desc": {
+          "source": "Type of search to perform",
+          "message": "Type of search to perform"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.desc": {
+          "source": "Specify whether to search for forms where the name contains the search term or matches it exactly.",
+          "message": "Specify whether to search for forms where the name contains the search term or matches it exactly."
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmNvbnRhaW5z.display_name": {
+          "source": "Contains",
+          "message": "Contains"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmV4YWN0.display_name": {
+          "source": "Exact Match",
+          "message": "Exact Match"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of forms to return",
+          "message": "Maximum number of forms to return"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.bGltaXQ.desc": {
+          "source": "The maximum number of forms to return in a single request. Maximum value is 1000.",
+          "message": "The maximum number of forms to return in a single request. Maximum value is 1000."
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.cGFnZV90b2tlbg.display_name": {
+          "source": "Page Token",
+          "message": "Page Token"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.cGFnZV90b2tlbg.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token for pagination"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.cGFnZV90b2tlbg.desc": {
+          "source": "A token returned from a previous search to continue pagination. Use the next_page_token from a previous response.",
+          "message": "A token returned from a previous search to continue pagination. Use the next_page_token from a previous response."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.display_name": {
+          "source": "Get Form Responses",
+          "message": "Get Form Responses"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.short_desc": {
+          "source": "Retrieve responses from a Google Form with filtering and pagination.",
+          "message": "Retrieve responses from a Google Form with filtering and pagination."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.desc": {
+          "source": "Retrieves all responses from a specified Google Form. Supports filtering by respondent email and answer values, pagination with page tokens, and optional inclusion of form questions and metadata.",
+          "message": "Retrieves all responses from a specified Google Form. Supports filtering by respondent email and answer values, pagination with page tokens, and optional inclusion of form questions and metadata."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.Zm9ybV9pZA.display_name": {
+          "source": "Form ID",
+          "message": "Form ID"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.Zm9ybV9pZA.short_desc": {
+          "source": "The Google Form to get responses from",
+          "message": "The Google Form to get responses from"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.Zm9ybV9pZA.desc": {
+          "source": "The unique identifier of the Google Form to retrieve responses from.",
+          "message": "The unique identifier of the Google Form to retrieve responses from."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of responses to return",
+          "message": "Maximum number of responses to return"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.bGltaXQ.desc": {
+          "source": "The maximum number of responses to return per request. Default is 50, maximum is 1000.",
+          "message": "The maximum number of responses to return per request. Default is 50, maximum is 1000."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cGFnZV90b2tlbg.display_name": {
+          "source": "Page Token",
+          "message": "Page Token"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cGFnZV90b2tlbg.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token for pagination"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cGFnZV90b2tlbg.desc": {
+          "source": "A token to retrieve the next page of results. Used for pagination through large response sets.",
+          "message": "A token to retrieve the next page of results. Used for pagination through large response sets."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cmVzcG9uZGVudF9lbWFpbA.display_name": {
+          "source": "Respondent Email",
+          "message": "Respondent Email"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cmVzcG9uZGVudF9lbWFpbA.short_desc": {
+          "source": "Filter by respondent email",
+          "message": "Filter by respondent email"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cmVzcG9uZGVudF9lbWFpbA.desc": {
+          "source": "Filter responses to only include those from respondents with emails containing this value.",
+          "message": "Filter responses to only include those from respondents with emails containing this value."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.display_name": {
+          "source": "Filter Answers",
+          "message": "Filter Answers"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.short_desc": {
+          "source": "Filter responses by specific answer values",
+          "message": "Filter responses by specific answer values"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.desc": {
+          "source": "Filter responses based on specific question answers. Each filter specifies a question ID, filter type, and expected value.",
+          "message": "Filter responses based on specific question answers. Each filter specifies a question ID, filter type, and expected value."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
+          "source": "Include Questions",
+          "message": "Include Questions"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
+          "source": "Include form questions in response",
+          "message": "Include form questions in response"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9xdWVzdGlvbnM.desc": {
+          "source": "Whether to include the form questions and metadata in the response. Default is false.",
+          "message": "Whether to include the form questions and metadata in the response. Default is false."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
+          "source": "Include Answers",
+          "message": "Include Answers"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {
+          "source": "Include detailed answers in response",
+          "message": "Include detailed answers in response"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9hbnN3ZXJz.desc": {
+          "source": "Whether to include the detailed answer data for each response. Default is true.",
+          "message": "Whether to include the detailed answer data for each response. Default is true."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.display_name": {
+          "source": "Get Form Response",
+          "message": "Get Form Response"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.short_desc": {
+          "source": "Retrieve a specific response from a Google Form by its ID.",
+          "message": "Retrieve a specific response from a Google Form by its ID."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.desc": {
+          "source": "Retrieves a single response from a specified Google Form using the response ID. Optionally includes form questions and metadata for additional context.",
+          "message": "Retrieves a single response from a specified Google Form using the response ID. Optionally includes form questions and metadata for additional context."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.display_name": {
+          "source": "Form ID",
+          "message": "Form ID"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.short_desc": {
+          "source": "The Google Form to get the response from",
+          "message": "The Google Form to get the response from"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.desc": {
+          "source": "The unique identifier of the Google Form that contains the response.",
+          "message": "The unique identifier of the Google Form that contains the response."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.cmVzcG9uc2VfaWQ.display_name": {
+          "source": "Response ID",
+          "message": "Response ID"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.cmVzcG9uc2VfaWQ.short_desc": {
+          "source": "The specific response to retrieve",
+          "message": "The specific response to retrieve"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.cmVzcG9uc2VfaWQ.desc": {
+          "source": "The unique identifier of the form response to retrieve.",
+          "message": "The unique identifier of the form response to retrieve."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
+          "source": "Include Questions",
+          "message": "Include Questions"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
+          "source": "Include form questions in response",
+          "message": "Include form questions in response"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.desc": {
+          "source": "Whether to include the form questions and metadata in the response. Default is false.",
+          "message": "Whether to include the form questions and metadata in the response. Default is false."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.display_name": {
+          "source": "New Form Response",
+          "message": "New Form Response"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.short_desc": {
+          "source": "Triggers when a new response is submitted to a Google Form.",
+          "message": "Triggers when a new response is submitted to a Google Form."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.desc": {
+          "source": "Monitors a Google Form for new responses and triggers when someone submits a new response. Optionally includes form questions and metadata in the event data.",
+          "message": "Monitors a Google Form for new responses and triggers when someone submits a new response. Optionally includes form questions and metadata in the event data."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.display_name": {
+          "source": "Form ID",
+          "message": "Form ID"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.short_desc": {
+          "source": "The Google Form to monitor",
+          "message": "The Google Form to monitor"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.desc": {
+          "source": "The unique identifier of the Google Form to monitor for new responses.",
+          "message": "The unique identifier of the Google Form to monitor for new responses."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
+          "source": "Include Questions",
+          "message": "Include Questions"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
+          "source": "Include form questions in the event data",
+          "message": "Include form questions in the event data"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.desc": {
+          "source": "Whether to include the form questions and metadata in each triggered event. Default is false.",
+          "message": "Whether to include the form questions and metadata in each triggered event. Default is false."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
+          "source": "Include Answers",
+          "message": "Include Answers"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {
+          "source": "Include detailed answers in the event data",
+          "message": "Include detailed answers in the event data"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9hbnN3ZXJz.desc": {
+          "source": "Whether to include the form answers in each triggered event. Default is false.",
+          "message": "Whether to include the form answers in each triggered event. Default is false."
+        }
+      }
+    }
+  }
+}

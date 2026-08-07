@@ -1,0 +1,953 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "root": {
+      "messages": {
+        "app.U2VudHJ5.display_name": {
+          "source": "Sentry",
+          "message": "Sentry"
+        },
+        "app.U2VudHJ5.short_desc": {
+          "source": "Monitor and fix errors, track performance issues, and maintain application health with the developer-first debugging platform.",
+          "message": "Monitor and fix errors, track performance issues, and maintain application health with the developer-first debugging platform."
+        },
+        "app.U2VudHJ5.desc": {
+          "source": "The Sentry integration enables comprehensive error monitoring and performance tracking for your applications. Access projects, issues, events, and teams to quickly identify, triage, and resolve problems. With real-time alerts and detailed debugging context including stack traces, breadcrumbs, and user impact metrics, Sentry helps your team maintain code quality and deliver seamless user experiences.",
+          "message": "The Sentry integration enables comprehensive error monitoring and performance tracking for your applications. Access projects, issues, events, and teams to quickly identify, triage, and resolve problems. With real-time alerts and detailed debugging context including stack traces, breadcrumbs, and user impact metrics, Sentry helps your team maintain code quality and deliver seamless user experiences."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Make an API call"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Sentry",
+          "message": "Make a custom API call to Sentry"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Sentry** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Make a custom HTTP / REST API call to **Sentry** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP Method"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI Path"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body Type"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "How the body is serialized and what Content-Type is sent"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; use connection serialization and let the REST client decide"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serialize body as JSON"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serialize body as application/x-www-form-urlencoded form fields"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans)."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Upload a file using multipart/form-data"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Send body as XML"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Send body as YAML"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Plain Text"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Send body as text/plain"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Raw Binary"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Send body as raw bytes"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "The request body"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Path Variables"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Values for {name} placeholders in path"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Query Arguments"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Query string parameters"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Custom Headers"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Extra request headers"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default)."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Expected Status Codes"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Response status codes treated as success"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws)."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Return Errors as Data"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Return non-2xx responses normally instead of throwing"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Include Debug Info"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Include request/timing/size debug info in the response"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.display_name": {
+          "source": "List Projects",
+          "message": "List Projects"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.short_desc": {
+          "source": "Retrieve all projects in your organization",
+          "message": "Retrieve all projects in your organization"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.desc": {
+          "source": "Fetches a paginated list of all projects within your Sentry organization. Each project represents an individual application or service being monitored. Returns project details including name, platform, creation date, team membership, and configuration.",
+          "message": "Fetches a paginated list of all projects within your Sentry organization. Each project represents an individual application or service being monitored. Returns project details including name, platform, creation date, team membership, and configuration."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Cursor"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "Pagination cursor for retrieving additional results"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to fetch the next or previous page of results. Leave empty to start from the beginning.",
+          "message": "Use the cursor from a previous response to fetch the next or previous page of results. Leave empty to start from the beginning."
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.display_name": {
+          "source": "Get Project Details",
+          "message": "Get Project Details"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.short_desc": {
+          "source": "Retrieve detailed information about a specific project",
+          "message": "Retrieve detailed information about a specific project"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.desc": {
+          "source": "Fetches comprehensive details about a specific Sentry project, including configuration options, team assignments, integrations, features, symbol sources, and project statistics. Use this to understand project settings and capabilities.",
+          "message": "Fetches comprehensive details about a specific Sentry project, including configuration options, team assignments, integrations, features, symbol sources, and project statistics. Use this to understand project settings and capabilities."
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdElk.short_desc": {
+          "source": "The project to retrieve",
+          "message": "The project to retrieve"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdElk.desc": {
+          "source": "Select or enter the slug identifier of the project you want to retrieve details for.",
+          "message": "Select or enter the slug identifier of the project you want to retrieve details for."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.display_name": {
+          "source": "List Project Events",
+          "message": "List Project Events"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.short_desc": {
+          "source": "Retrieve events from a specific project",
+          "message": "Retrieve events from a specific project"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.desc": {
+          "source": "Fetches a paginated list of events (individual error or transaction occurrences) from a specific project. Events are the raw data sent to Sentry and are grouped into issues. Use the full parameter to retrieve complete event payloads including context, breadcrumbs, and metadata.",
+          "message": "Fetches a paginated list of events (individual error or transaction occurrences) from a specific project. Events are the raw data sent to Sentry and are grouped into issues. Use the full parameter to retrieve complete event payloads including context, breadcrumbs, and metadata."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.cHJvamVjdElk.short_desc": {
+          "source": "The project to retrieve events from",
+          "message": "The project to retrieve events from"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.cHJvamVjdElk.desc": {
+          "source": "Select the project whose events you want to list.",
+          "message": "Select the project whose events you want to list."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.ZnVsbA.display_name": {
+          "source": "Full Details",
+          "message": "Full Details"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.ZnVsbA.short_desc": {
+          "source": "Whether to return complete event data",
+          "message": "Whether to return complete event data"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.ZnVsbA.desc": {
+          "source": "When enabled, returns the full event payload including all context, breadcrumbs, stack traces, and metadata. When disabled, returns summary information only.",
+          "message": "When enabled, returns the full event payload including all context, breadcrumbs, stack traces, and metadata. When disabled, returns summary information only."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Cursor"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "Pagination cursor for retrieving additional results"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to navigate through pages of events.",
+          "message": "Use the cursor from a previous response to navigate through pages of events."
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.display_name": {
+          "source": "Get Event Details",
+          "message": "Get Event Details"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.short_desc": {
+          "source": "Retrieve detailed information about a specific event",
+          "message": "Retrieve detailed information about a specific event"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.desc": {
+          "source": "Fetches complete details about a specific event, including the full stack trace, breadcrumbs (trail of events leading to the error), user context, device information, tags, SDK details, and all captured metadata. Essential for debugging and understanding the exact conditions when an error occurred.",
+          "message": "Fetches complete details about a specific event, including the full stack trace, breadcrumbs (trail of events leading to the error), user context, device information, tags, SDK details, and all captured metadata. Essential for debugging and understanding the exact conditions when an error occurred."
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.cHJvamVjdElk.short_desc": {
+          "source": "The project containing the event",
+          "message": "The project containing the event"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.cHJvamVjdElk.desc": {
+          "source": "Select the project that the event belongs to.",
+          "message": "Select the project that the event belongs to."
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.ZXZlbnRJZA.display_name": {
+          "source": "Event ID",
+          "message": "Event ID"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.ZXZlbnRJZA.short_desc": {
+          "source": "The unique identifier of the event",
+          "message": "The unique identifier of the event"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.ZXZlbnRJZA.desc": {
+          "source": "Enter the event ID (hexadecimal string) you want to retrieve. Event IDs can be found in issue details or event listings.",
+          "message": "Enter the event ID (hexadecimal string) you want to retrieve. Event IDs can be found in issue details or event listings."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.display_name": {
+          "source": "List Project Issues",
+          "message": "List Project Issues"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.short_desc": {
+          "source": "Retrieve issues from a specific project",
+          "message": "Retrieve issues from a specific project"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.desc": {
+          "source": "Fetches a paginated list of issues (grouped errors or problems) from a specific project. Issues represent single bugs affecting your application, with multiple event occurrences grouped by fingerprint. Filter by query to find specific types of issues, and use statistics period to see relevant metrics.",
+          "message": "Fetches a paginated list of issues (grouped errors or problems) from a specific project. Issues represent single bugs affecting your application, with multiple event occurrences grouped by fingerprint. Filter by query to find specific types of issues, and use statistics period to see relevant metrics."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cHJvamVjdElk.short_desc": {
+          "source": "The project to retrieve issues from",
+          "message": "The project to retrieve issues from"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cHJvamVjdElk.desc": {
+          "source": "Select the project whose issues you want to list.",
+          "message": "Select the project whose issues you want to list."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cXVlcnk.display_name": {
+          "source": "Query Filter",
+          "message": "Query Filter"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cXVlcnk.short_desc": {
+          "source": "Search query to filter issues",
+          "message": "Search query to filter issues"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cXVlcnk.desc": {
+          "source": "Use Sentry query syntax to filter issues by properties like status, assignee, tags, platform, or time range. Example: \"is:unresolved assigned:me\"",
+          "message": "Use Sentry query syntax to filter issues by properties like status, assignee, tags, platform, or time range. Example: \"is:unresolved assigned:me\""
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.display_name": {
+          "source": "Statistics Period",
+          "message": "Statistics Period"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.short_desc": {
+          "source": "Time period for issue statistics",
+          "message": "Time period for issue statistics"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.desc": {
+          "source": "The time range for calculating issue statistics such as event count, frequency, and user impact.",
+          "message": "The time range for calculating issue statistics such as event count, frequency, and user impact."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjE0ZA.display_name": {
+          "source": "14 days",
+          "message": "14 days"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjI0aA.display_name": {
+          "source": "24 hours",
+          "message": "24 hours"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjMwZA.display_name": {
+          "source": "30 days",
+          "message": "30 days"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjdk.display_name": {
+          "source": "7 days",
+          "message": "7 days"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c2hvcnRJZExvb2t1cA.display_name": {
+          "source": "Short ID Lookup",
+          "message": "Short ID Lookup"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c2hvcnRJZExvb2t1cA.short_desc": {
+          "source": "Whether to look up issues by their short ID",
+          "message": "Whether to look up issues by their short ID"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c2hvcnRJZExvb2t1cA.desc": {
+          "source": "When enabled, allows searching for issues using their short IDs (e.g., PROJECT-123) instead of full issue IDs.",
+          "message": "When enabled, allows searching for issues using their short IDs (e.g., PROJECT-123) instead of full issue IDs."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Cursor"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "Pagination cursor for retrieving additional results"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to navigate through pages of issues.",
+          "message": "Use the cursor from a previous response to navigate through pages of issues."
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.display_name": {
+          "source": "Get Issue Details",
+          "message": "Get Issue Details"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.short_desc": {
+          "source": "Retrieve detailed information about a specific issue",
+          "message": "Retrieve detailed information about a specific issue"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.desc": {
+          "source": "Fetches comprehensive details about a specific issue, including its status, metadata, assignment, statistics (event count, user impact, frequency), participants, activity history, linked integrations, and the latest event details. Essential for understanding the full context and history of a problem.",
+          "message": "Fetches comprehensive details about a specific issue, including its status, metadata, assignment, statistics (event count, user impact, frequency), participants, activity history, linked integrations, and the latest event details. Essential for understanding the full context and history of a problem."
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.option.aXNzdWVJZA.display_name": {
+          "source": "Issue ID",
+          "message": "Issue ID"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.option.aXNzdWVJZA.short_desc": {
+          "source": "The unique identifier of the issue",
+          "message": "The unique identifier of the issue"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.option.aXNzdWVJZA.desc": {
+          "source": "Enter the issue ID you want to retrieve. Issue IDs are numeric values that can be found in the Sentry UI or from list operations.",
+          "message": "Enter the issue ID you want to retrieve. Issue IDs are numeric values that can be found in the Sentry UI or from list operations."
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.display_name": {
+          "source": "Update Issue",
+          "message": "Update Issue"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.short_desc": {
+          "source": "Update the status or properties of an issue",
+          "message": "Update the status or properties of an issue"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.desc": {
+          "source": "Modifies an issue's status (resolved, unresolved, ignored), assignment, bookmarked state, subscription status, or visibility. Use this to triage issues, assign them to team members, resolve bugs, or mark issues as ignored. Status changes can trigger alerts and affect issue grouping.",
+          "message": "Modifies an issue's status (resolved, unresolved, ignored), assignment, bookmarked state, subscription status, or visibility. Use this to triage issues, assign them to team members, resolve bugs, or mark issues as ignored. Status changes can trigger alerts and affect issue grouping."
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.cHJvamVjdElk.short_desc": {
+          "source": "The project containing the issue (optional)",
+          "message": "The project containing the issue (optional)"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.cHJvamVjdElk.desc": {
+          "source": "Optionally specify the project for context. While issues can be updated by ID alone, providing the project can be helpful for organization.",
+          "message": "Optionally specify the project for context. While issues can be updated by ID alone, providing the project can be helpful for organization."
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNzdWVJZA.display_name": {
+          "source": "Issue ID",
+          "message": "Issue ID"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNzdWVJZA.short_desc": {
+          "source": "The unique identifier of the issue to update",
+          "message": "The unique identifier of the issue to update"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNzdWVJZA.desc": {
+          "source": "Enter the issue ID you want to update. You can find issue IDs in the Sentry UI or from list/search operations.",
+          "message": "Enter the issue ID you want to update. You can find issue IDs in the Sentry UI or from list/search operations."
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Status"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.short_desc": {
+          "source": "The new status for the issue",
+          "message": "The new status for the issue"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.desc": {
+          "source": "Change the issue status to control its lifecycle. \"Resolved\" marks it as fixed, \"Unresolved\" reopens it, \"Ignored\" archives it temporarily, and \"Resolved in Next Release\" indicates it will be fixed in an upcoming deployment.",
+          "message": "Change the issue status to control its lifecycle. \"Resolved\" marks it as fixed, \"Unresolved\" reopens it, \"Ignored\" archives it temporarily, and \"Resolved in Next Release\" indicates it will be fixed in an upcoming deployment."
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.allowed-value.c3RyaW5nOnJlc29sdmVk.display_name": {
+          "source": "Resolved",
+          "message": "Resolved"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.allowed-value.c3RyaW5nOnVucmVzb2x2ZWQ.display_name": {
+          "source": "Unresolved",
+          "message": "Unresolved"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.allowed-value.c3RyaW5nOmlnbm9yZWQ.display_name": {
+          "source": "Ignored",
+          "message": "Ignored"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.allowed-value.c3RyaW5nOnJlc29sdmVkSW5OZXh0UmVsZWFzZQ.display_name": {
+          "source": "Resolved in Next Release",
+          "message": "Resolved in Next Release"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.YXNzaWduZWRUbw.display_name": {
+          "source": "Assigned To",
+          "message": "Assigned To"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.YXNzaWduZWRUbw.short_desc": {
+          "source": "User or team to assign the issue to",
+          "message": "User or team to assign the issue to"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.YXNzaWduZWRUbw.desc": {
+          "source": "Assign the issue to a specific user or team for ownership and accountability. Enter a team slug (e.g., \"team:backend\") or user ID.",
+          "message": "Assign the issue to a specific user or team for ownership and accountability. Enter a team slug (e.g., \"team:backend\") or user ID."
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aGFzU2Vlbg.display_name": {
+          "source": "Has Seen",
+          "message": "Has Seen"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aGFzU2Vlbg.short_desc": {
+          "source": "Mark whether the issue has been viewed",
+          "message": "Mark whether the issue has been viewed"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aGFzU2Vlbg.desc": {
+          "source": "Mark the issue as seen (reviewed) or unseen. This helps track which issues have been triaged by your team.",
+          "message": "Mark the issue as seen (reviewed) or unseen. This helps track which issues have been triaged by your team."
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNCb29rbWFya2Vk.display_name": {
+          "source": "Is Bookmarked",
+          "message": "Is Bookmarked"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNCb29rbWFya2Vk.short_desc": {
+          "source": "Bookmark status for the issue",
+          "message": "Bookmark status for the issue"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNCb29rbWFya2Vk.desc": {
+          "source": "Bookmark the issue for easy access and filtering. Bookmarked issues appear in your personal issue list.",
+          "message": "Bookmark the issue for easy access and filtering. Bookmarked issues appear in your personal issue list."
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNTdWJzY3JpYmVk.display_name": {
+          "source": "Is Subscribed",
+          "message": "Is Subscribed"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNTdWJzY3JpYmVk.short_desc": {
+          "source": "Subscription status for notifications",
+          "message": "Subscription status for notifications"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNTdWJzY3JpYmVk.desc": {
+          "source": "Subscribe to or unsubscribe from notifications about this issue. When subscribed, you'll receive alerts when the issue changes or escalates.",
+          "message": "Subscribe to or unsubscribe from notifications about this issue. When subscribed, you'll receive alerts when the issue changes or escalates."
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNQdWJsaWM.display_name": {
+          "source": "Is Public",
+          "message": "Is Public"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNQdWJsaWM.short_desc": {
+          "source": "Whether the issue should be publicly accessible",
+          "message": "Whether the issue should be publicly accessible"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNQdWJsaWM.desc": {
+          "source": "Control whether the issue is publicly visible via a share link. Public issues can be viewed by anyone with the link, even without Sentry access.",
+          "message": "Control whether the issue is publicly visible via a share link. Public issues can be viewed by anyone with the link, even without Sentry access."
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.display_name": {
+          "source": "List Teams",
+          "message": "List Teams"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.short_desc": {
+          "source": "Retrieve all teams in your organization",
+          "message": "Retrieve all teams in your organization"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.desc": {
+          "source": "Fetches a paginated list of all teams within your Sentry organization. Teams represent groups of developers working together on projects. Returns team details including member count, access permissions, role assignments, linked projects, and external team integrations.",
+          "message": "Fetches a paginated list of all teams within your Sentry organization. Teams represent groups of developers working together on projects. Returns team details including member count, access permissions, role assignments, linked projects, and external team integrations."
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Cursor"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "Pagination cursor for retrieving additional results"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to navigate through pages of teams.",
+          "message": "Use the cursor from a previous response to navigate through pages of teams."
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.display_name": {
+          "source": "Get Team Details",
+          "message": "Get Team Details"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.short_desc": {
+          "source": "Retrieve detailed information about a specific team",
+          "message": "Retrieve detailed information about a specific team"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.desc": {
+          "source": "Fetches comprehensive details about a specific team, including its members, assigned projects, access permissions, role settings, external integrations (like Slack channels), and organization-level role. Use this to understand team structure and project ownership.",
+          "message": "Fetches comprehensive details about a specific team, including its members, assigned projects, access permissions, role settings, external integrations (like Slack channels), and organization-level role. Use this to understand team structure and project ownership."
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "Team ID"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.option.dGVhbUlk.short_desc": {
+          "source": "The team slug to retrieve",
+          "message": "The team slug to retrieve"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.option.dGVhbUlk.desc": {
+          "source": "Enter the team slug (URL-friendly identifier) of the team you want to retrieve details for.",
+          "message": "Enter the team slug (URL-friendly identifier) of the team you want to retrieve details for."
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.display_name": {
+          "source": "List Organization Issues",
+          "message": "List Organization Issues"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.short_desc": {
+          "source": "Retrieve issues across the entire organization",
+          "message": "Retrieve issues across the entire organization"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.desc": {
+          "source": "Fetches a paginated list of issues from all projects within your organization. This provides organization-wide visibility into problems across all applications and services. Use query filters to narrow down results by project, platform, status, or other criteria.",
+          "message": "Fetches a paginated list of issues from all projects within your organization. This provides organization-wide visibility into problems across all applications and services. Use query filters to narrow down results by project, platform, status, or other criteria."
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.cXVlcnk.display_name": {
+          "source": "Query Filter",
+          "message": "Query Filter"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.cXVlcnk.short_desc": {
+          "source": "Search query to filter issues",
+          "message": "Search query to filter issues"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.cXVlcnk.desc": {
+          "source": "Use Sentry query syntax to filter issues across all projects. Filter by project, platform, environment, status, tags, or any other issue property.",
+          "message": "Use Sentry query syntax to filter issues across all projects. Filter by project, platform, environment, status, tags, or any other issue property."
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.display_name": {
+          "source": "Statistics Period",
+          "message": "Statistics Period"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.short_desc": {
+          "source": "Time period for issue statistics",
+          "message": "Time period for issue statistics"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.desc": {
+          "source": "The time range for calculating issue statistics and metrics across the organization.",
+          "message": "The time range for calculating issue statistics and metrics across the organization."
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjE0ZA.display_name": {
+          "source": "14 days",
+          "message": "14 days"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjI0aA.display_name": {
+          "source": "24 hours",
+          "message": "24 hours"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjMwZA.display_name": {
+          "source": "30 days",
+          "message": "30 days"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjdk.display_name": {
+          "source": "7 days",
+          "message": "7 days"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c2hvcnRJZExvb2t1cA.display_name": {
+          "source": "Short ID Lookup",
+          "message": "Short ID Lookup"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c2hvcnRJZExvb2t1cA.short_desc": {
+          "source": "Whether to look up issues by their short ID",
+          "message": "Whether to look up issues by their short ID"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c2hvcnRJZExvb2t1cA.desc": {
+          "source": "When enabled, allows searching for issues using their short IDs across all projects.",
+          "message": "When enabled, allows searching for issues using their short IDs across all projects."
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Cursor"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "Pagination cursor for retrieving additional results"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to retrieve additional pages of organization-wide issues.",
+          "message": "Use the cursor from a previous response to retrieve additional pages of organization-wide issues."
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.display_name": {
+          "source": "New Project Issue",
+          "message": "New Project Issue"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.short_desc": {
+          "source": "Triggers when a new issue is detected in a specific project",
+          "message": "Triggers when a new issue is detected in a specific project"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.desc": {
+          "source": "Monitors a specific Sentry project and triggers when a new issue (grouped error or problem) is detected. Issues represent single bugs or problems in your application, with events grouped by fingerprint. Use optional query filters and time periods to focus on specific types of issues.",
+          "message": "Monitors a specific Sentry project and triggers when a new issue (grouped error or problem) is detected. Issues represent single bugs or problems in your application, with events grouped by fingerprint. Use optional query filters and time periods to focus on specific types of issues."
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cHJvamVjdElk.short_desc": {
+          "source": "The project to monitor for new issues",
+          "message": "The project to monitor for new issues"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cHJvamVjdElk.desc": {
+          "source": "Select the Sentry project you want to monitor. Projects represent individual applications or services within your organization.",
+          "message": "Select the Sentry project you want to monitor. Projects represent individual applications or services within your organization."
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cXVlcnk.display_name": {
+          "source": "Query Filter",
+          "message": "Query Filter"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cXVlcnk.short_desc": {
+          "source": "Optional search query to filter issues",
+          "message": "Optional search query to filter issues"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cXVlcnk.desc": {
+          "source": "Use Sentry query syntax to filter which issues trigger this event. For example, filter by browser, device, tags, or whether errors are unhandled.",
+          "message": "Use Sentry query syntax to filter which issues trigger this event. For example, filter by browser, device, tags, or whether errors are unhandled."
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.display_name": {
+          "source": "Statistics Period",
+          "message": "Statistics Period"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.short_desc": {
+          "source": "Time period for issue statistics",
+          "message": "Time period for issue statistics"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.desc": {
+          "source": "The time range for collecting issue statistics. Affects metrics like event counts and user impact within the selected period.",
+          "message": "The time range for collecting issue statistics. Affects metrics like event counts and user impact within the selected period."
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjE0ZA.display_name": {
+          "source": "14 days",
+          "message": "14 days"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjI0aA.display_name": {
+          "source": "24 hours",
+          "message": "24 hours"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjMwZA.display_name": {
+          "source": "30 days",
+          "message": "30 days"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjdk.display_name": {
+          "source": "7 days",
+          "message": "7 days"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.display_name": {
+          "source": "New Organization Issue",
+          "message": "New Organization Issue"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.short_desc": {
+          "source": "Triggers when a new issue is detected across the entire organization",
+          "message": "Triggers when a new issue is detected across the entire organization"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.desc": {
+          "source": "Monitors all projects within your Sentry organization and triggers when a new issue is detected in any project. This provides organization-wide visibility into problems across all applications and services. Use query filters to focus on specific issue types or characteristics.",
+          "message": "Monitors all projects within your Sentry organization and triggers when a new issue is detected in any project. This provides organization-wide visibility into problems across all applications and services. Use query filters to focus on specific issue types or characteristics."
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.cXVlcnk.display_name": {
+          "source": "Query Filter",
+          "message": "Query Filter"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.cXVlcnk.short_desc": {
+          "source": "Optional search query to filter issues",
+          "message": "Optional search query to filter issues"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.cXVlcnk.desc": {
+          "source": "Use Sentry query syntax to filter which issues trigger this event across all projects. Filter by properties like platform, environment, release, or custom tags.",
+          "message": "Use Sentry query syntax to filter which issues trigger this event across all projects. Filter by properties like platform, environment, release, or custom tags."
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.display_name": {
+          "source": "Statistics Period",
+          "message": "Statistics Period"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.short_desc": {
+          "source": "Time period for issue statistics",
+          "message": "Time period for issue statistics"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.desc": {
+          "source": "The time range for collecting issue statistics across all projects. Determines the time window for metrics like frequency and user impact.",
+          "message": "The time range for collecting issue statistics across all projects. Determines the time window for metrics like frequency and user impact."
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjE0ZA.display_name": {
+          "source": "14 days",
+          "message": "14 days"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjI0aA.display_name": {
+          "source": "24 hours",
+          "message": "24 hours"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjMwZA.display_name": {
+          "source": "30 days",
+          "message": "30 days"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjdk.display_name": {
+          "source": "7 days",
+          "message": "7 days"
+        }
+      }
+    }
+  }
+}

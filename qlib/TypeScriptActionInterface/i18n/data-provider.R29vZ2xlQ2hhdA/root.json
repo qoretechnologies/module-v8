@@ -1,0 +1,809 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "root": {
+      "messages": {
+        "app.R29vZ2xlQ2hhdA.display_name": {
+          "source": "Google Chat",
+          "message": "Google Chat"
+        },
+        "app.R29vZ2xlQ2hhdA.short_desc": {
+          "source": "Send messages and manage conversations in Google Chat",
+          "message": "Send messages and manage conversations in Google Chat"
+        },
+        "app.R29vZ2xlQ2hhdA.desc": {
+          "source": "Connect to Google Chat to send direct messages, post to spaces, manage conversations, and interact with your team collaboration platform. Automate notifications, respond to messages, and streamline your Google Workspace communication workflows.",
+          "message": "Connect to Google Chat to send direct messages, post to spaces, manage conversations, and interact with your team collaboration platform. Automate notifications, respond to messages, and streamline your Google Workspace communication workflows."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Make an API call"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Chat",
+          "message": "Make a custom API call to Google Chat"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Chat** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Make a custom HTTP / REST API call to **Google Chat** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP Method"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI Path"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body Type"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "How the body is serialized and what Content-Type is sent"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; use connection serialization and let the REST client decide"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serialize body as JSON"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serialize body as application/x-www-form-urlencoded form fields"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans)."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Upload a file using multipart/form-data"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Send body as XML"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Send body as YAML"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Plain Text"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Send body as text/plain"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Raw Binary"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Send body as raw bytes"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "The request body"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Path Variables"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Values for {name} placeholders in path"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Query Arguments"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Query string parameters"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Custom Headers"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Extra request headers"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default)."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Expected Status Codes"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Response status codes treated as success"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws)."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Return Errors as Data"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Return non-2xx responses normally instead of throwing"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Include Debug Info"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Include request/timing/size debug info in the response"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.display_name": {
+          "source": "List Spaces",
+          "message": "List Spaces"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.short_desc": {
+          "source": "List spaces",
+          "message": "List spaces"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.desc": {
+          "source": "List spaces",
+          "message": "List spaces"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "Page Size"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of spaces to return per page",
+          "message": "Number of spaces to return per page"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVNpemU.desc": {
+          "source": "The maximum number of spaces to return in a single page. Default is 20.",
+          "message": "The maximum number of spaces to return in a single page. Default is 20."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVRva2Vu.display_name": {
+          "source": "Page Token",
+          "message": "Page Token"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVRva2Vu.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token for pagination"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.cGFnZVRva2Vu.desc": {
+          "source": "A page token, received from a previous list spaces call. Provide this to retrieve the subsequent page.",
+          "message": "A page token, received from a previous list spaces call. Provide this to retrieve the subsequent page."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.c3BhY2VUeXBl.display_name": {
+          "source": "Space Type",
+          "message": "Space Type"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.c3BhY2VUeXBl.short_desc": {
+          "source": "Filter spaces by type",
+          "message": "Filter spaces by type"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.c3BhY2VUeXBl.desc": {
+          "source": "Filter the list of spaces by their type: Space, Group Chat, or Direct Message.",
+          "message": "Filter the list of spaces by their type: Space, Group Chat, or Direct Message."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.c3BhY2VUeXBl.allowed-value.c3RyaW5nOlNQQUNF.display_name": {
+          "source": "Space",
+          "message": "Space"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.c3BhY2VUeXBl.allowed-value.c3RyaW5nOkdST1VQX0NIQVQ.display_name": {
+          "source": "Group Chat",
+          "message": "Group Chat"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9zcGFjZXM.option.c3BhY2VUeXBl.allowed-value.c3RyaW5nOkRJUkVDVF9NRVNTQUdF.display_name": {
+          "source": "Direct Message",
+          "message": "Direct Message"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X3NwYWNl.display_name": {
+          "source": "Get Space",
+          "message": "Get Space"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X3NwYWNl.short_desc": {
+          "source": "Get space",
+          "message": "Get space"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X3NwYWNl.desc": {
+          "source": "Get space",
+          "message": "Get space"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X3NwYWNl.option.aWQ.display_name": {
+          "source": "Space ID",
+          "message": "Space ID"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X3NwYWNl.option.aWQ.short_desc": {
+          "source": "The ID of the space to retrieve",
+          "message": "The ID of the space to retrieve"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X3NwYWNl.option.aWQ.desc": {
+          "source": "The unique identifier of the Google Chat space you want to get information about.",
+          "message": "The unique identifier of the Google Chat space you want to get information about."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.display_name": {
+          "source": "List Members",
+          "message": "List Members"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.short_desc": {
+          "source": "List members",
+          "message": "List members"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.desc": {
+          "source": "List members",
+          "message": "List members"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c3BhY2VJZA.display_name": {
+          "source": "Space ID",
+          "message": "Space ID"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c3BhY2VJZA.short_desc": {
+          "source": "The ID of the space to list members from",
+          "message": "The ID of the space to list members from"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c3BhY2VJZA.desc": {
+          "source": "The unique identifier of the Google Chat space whose members you want to list.",
+          "message": "The unique identifier of the Google Chat space whose members you want to list."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "Page Size"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of members to return per page",
+          "message": "Number of members to return per page"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVNpemU.desc": {
+          "source": "The maximum number of members to return in a single page. Default is 20.",
+          "message": "The maximum number of members to return in a single page. Default is 20."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVRva2Vu.display_name": {
+          "source": "Page Token",
+          "message": "Page Token"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVRva2Vu.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token for pagination"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.cGFnZVRva2Vu.desc": {
+          "source": "A page token, received from a previous list members call. Provide this to retrieve the subsequent page.",
+          "message": "A page token, received from a previous list members call. Provide this to retrieve the subsequent page."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filter"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.ZmlsdGVy.short_desc": {
+          "source": "Filter members by field and value",
+          "message": "Filter members by field and value"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.ZmlsdGVy.desc": {
+          "source": "Filter the list of members by a specific field and value, such as role or member type.",
+          "message": "Filter the list of members by a specific field and value, such as role or member type."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0dyb3Vwcw.display_name": {
+          "source": "Show Groups",
+          "message": "Show Groups"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0dyb3Vwcw.short_desc": {
+          "source": "Include group memberships in results",
+          "message": "Include group memberships in results"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0dyb3Vwcw.desc": {
+          "source": "Whether to include group memberships in the results.",
+          "message": "Whether to include group memberships in the results."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0ludml0ZWQ.display_name": {
+          "source": "Show Invited",
+          "message": "Show Invited"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0ludml0ZWQ.short_desc": {
+          "source": "Include invited members in results",
+          "message": "Include invited members in results"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.c2hvd0ludml0ZWQ.desc": {
+          "source": "Whether to include members who have been invited but not yet joined.",
+          "message": "Whether to include members who have been invited but not yet joined."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.dXNlQWRtaW5BY2Nlc3M.display_name": {
+          "source": "Use Admin Access",
+          "message": "Use Admin Access"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.dXNlQWRtaW5BY2Nlc3M.short_desc": {
+          "source": "Use admin privileges for the request",
+          "message": "Use admin privileges for the request"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZW1iZXJz.option.dXNlQWRtaW5BY2Nlc3M.desc": {
+          "source": "Whether to use admin access privileges when listing members.",
+          "message": "Whether to use admin access privileges when listing members."
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X21lbWJlcg.display_name": {
+          "source": "Get Member",
+          "message": "Get Member"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X21lbWJlcg.short_desc": {
+          "source": "Get member",
+          "message": "Get member"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X21lbWJlcg.desc": {
+          "source": "Get member",
+          "message": "Get member"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X21lbWJlcg.option.c3BhY2VJZA.display_name": {
+          "source": "Space ID",
+          "message": "Space ID"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X21lbWJlcg.option.c3BhY2VJZA.short_desc": {
+          "source": "The ID of the space",
+          "message": "The ID of the space"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X21lbWJlcg.option.c3BhY2VJZA.desc": {
+          "source": "The unique identifier of the Google Chat space.",
+          "message": "The unique identifier of the Google Chat space."
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X21lbWJlcg.option.bWVtYmVySWQ.display_name": {
+          "source": "Member ID",
+          "message": "Member ID"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X21lbWJlcg.option.bWVtYmVySWQ.short_desc": {
+          "source": "The ID of the member to retrieve",
+          "message": "The ID of the member to retrieve"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X21lbWJlcg.option.bWVtYmVySWQ.desc": {
+          "source": "The unique identifier of the member you want to get information about.",
+          "message": "The unique identifier of the member you want to get information about."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.display_name": {
+          "source": "List Messages",
+          "message": "List Messages"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.short_desc": {
+          "source": "List messages",
+          "message": "List messages"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.desc": {
+          "source": "List messages",
+          "message": "List messages"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c3BhY2VJZA.display_name": {
+          "source": "Space ID",
+          "message": "Space ID"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c3BhY2VJZA.short_desc": {
+          "source": "The ID of the space to list messages from",
+          "message": "The ID of the space to list messages from"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c3BhY2VJZA.desc": {
+          "source": "The unique identifier of the Google Chat space whose messages you want to list.",
+          "message": "The unique identifier of the Google Chat space whose messages you want to list."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "Page Size"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of messages to return per page",
+          "message": "Number of messages to return per page"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.desc": {
+          "source": "The maximum number of messages to return in a single page. Default is 25.",
+          "message": "The maximum number of messages to return in a single page. Default is 25."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVRva2Vu.display_name": {
+          "source": "Page Token",
+          "message": "Page Token"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVRva2Vu.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token for pagination"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVRva2Vu.desc": {
+          "source": "A page token, received from a previous list messages call. Provide this to retrieve the subsequent page.",
+          "message": "A page token, received from a previous list messages call. Provide this to retrieve the subsequent page."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filter"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter messages by field and value",
+          "message": "Filter messages by field and value"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.ZmlsdGVy.desc": {
+          "source": "Filter the list of messages by a specific field and value, such as create time or thread.",
+          "message": "Filter the list of messages by a specific field and value, such as create time or thread."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c2hvd0RlbGV0ZWQ.display_name": {
+          "source": "Show Deleted",
+          "message": "Show Deleted"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c2hvd0RlbGV0ZWQ.short_desc": {
+          "source": "Include deleted messages in results",
+          "message": "Include deleted messages in results"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c2hvd0RlbGV0ZWQ.desc": {
+          "source": "Whether to include deleted messages in the results.",
+          "message": "Whether to include deleted messages in the results."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c29ydE9yZGVy.display_name": {
+          "source": "Sort Order",
+          "message": "Sort Order"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c29ydE9yZGVy.short_desc": {
+          "source": "Order to sort messages by create time",
+          "message": "Order to sort messages by create time"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c29ydE9yZGVy.desc": {
+          "source": "The order to sort messages by their creation time: ascending or descending.",
+          "message": "The order to sort messages by their creation time: ascending or descending."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOkFTQw.display_name": {
+          "source": "Ascending",
+          "message": "Ascending"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bGlzdF9tZXNzYWdlcw.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOkRFU0M.display_name": {
+          "source": "Descending",
+          "message": "Descending"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X21lc3NhZ2U.display_name": {
+          "source": "Get Message",
+          "message": "Get Message"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X21lc3NhZ2U.short_desc": {
+          "source": "Get message",
+          "message": "Get message"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X21lc3NhZ2U.desc": {
+          "source": "Get message",
+          "message": "Get message"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X21lc3NhZ2U.option.c3BhY2VJZA.display_name": {
+          "source": "Space ID",
+          "message": "Space ID"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X21lc3NhZ2U.option.c3BhY2VJZA.short_desc": {
+          "source": "The ID of the space",
+          "message": "The ID of the space"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X21lc3NhZ2U.option.c3BhY2VJZA.desc": {
+          "source": "The unique identifier of the Google Chat space.",
+          "message": "The unique identifier of the Google Chat space."
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZUlk.display_name": {
+          "source": "Message ID",
+          "message": "Message ID"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZUlk.short_desc": {
+          "source": "The ID of the message to retrieve",
+          "message": "The ID of the message to retrieve"
+        },
+        "app.R29vZ2xlQ2hhdA.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZUlk.desc": {
+          "source": "The unique identifier of the message you want to get information about.",
+          "message": "The unique identifier of the message you want to get information about."
+        },
+        "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
+          "source": "Delete Message",
+          "message": "Delete Message"
+        },
+        "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
+          "source": "Delete message",
+          "message": "Delete message"
+        },
+        "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.desc": {
+          "source": "Delete message",
+          "message": "Delete message"
+        },
+        "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.option.c3BhY2VJZA.display_name": {
+          "source": "Space ID",
+          "message": "Space ID"
+        },
+        "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.option.c3BhY2VJZA.short_desc": {
+          "source": "The ID of the space",
+          "message": "The ID of the space"
+        },
+        "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.option.c3BhY2VJZA.desc": {
+          "source": "The unique identifier of the Google Chat space.",
+          "message": "The unique identifier of the Google Chat space."
+        },
+        "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZUlk.display_name": {
+          "source": "Message ID",
+          "message": "Message ID"
+        },
+        "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZUlk.short_desc": {
+          "source": "The ID of the message to delete",
+          "message": "The ID of the message to delete"
+        },
+        "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZUlk.desc": {
+          "source": "The unique identifier of the message you want to delete.",
+          "message": "The unique identifier of the message you want to delete."
+        },
+        "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.option.Zm9yY2U.display_name": {
+          "source": "Force Delete",
+          "message": "Force Delete"
+        },
+        "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.option.Zm9yY2U.short_desc": {
+          "source": "Force deletion of the message",
+          "message": "Force deletion of the message"
+        },
+        "app.R29vZ2xlQ2hhdA.action.ZGVsZXRlX21lc3NhZ2U.option.Zm9yY2U.desc": {
+          "source": "Whether to force delete the message even if it cannot be normally deleted.",
+          "message": "Whether to force delete the message even if it cannot be normally deleted."
+        },
+        "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.display_name": {
+          "source": "Send Message",
+          "message": "Send Message"
+        },
+        "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.short_desc": {
+          "source": "Send message",
+          "message": "Send message"
+        },
+        "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.desc": {
+          "source": "Send message",
+          "message": "Send message"
+        },
+        "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.option.c3BhY2VJZA.display_name": {
+          "source": "Space ID",
+          "message": "Space ID"
+        },
+        "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.option.c3BhY2VJZA.short_desc": {
+          "source": "The ID of the space to send the message to",
+          "message": "The ID of the space to send the message to"
+        },
+        "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.option.c3BhY2VJZA.desc": {
+          "source": "The unique identifier of the Google Chat space where you want to send the message.",
+          "message": "The unique identifier of the Google Chat space where you want to send the message."
+        },
+        "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.option.dGV4dA.display_name": {
+          "source": "Text",
+          "message": "Text"
+        },
+        "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.option.dGV4dA.short_desc": {
+          "source": "Plain text content of the message",
+          "message": "Plain text content of the message"
+        },
+        "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.option.dGV4dA.desc": {
+          "source": "The plain text content of the message. This is the main text that will be displayed in the chat.",
+          "message": "The plain text content of the message. This is the main text that will be displayed in the chat."
+        },
+        "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.option.bWVzc2FnZUlk.display_name": {
+          "source": "Message ID",
+          "message": "Message ID"
+        },
+        "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.option.bWVzc2FnZUlk.short_desc": {
+          "source": "ID for message replies or updates",
+          "message": "ID for message replies or updates"
+        },
+        "app.R29vZ2xlQ2hhdA.action.c2VuZF9tZXNzYWdl.option.bWVzc2FnZUlk.desc": {
+          "source": "The ID of an existing message to reply to or update. Leave empty to send a new message.",
+          "message": "The ID of an existing message to reply to or update. Leave empty to send a new message."
+        },
+        "app.R29vZ2xlQ2hhdA.action.bmV3X21lc3NhZ2U.display_name": {
+          "source": "New Message",
+          "message": "New Message"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bmV3X21lc3NhZ2U.short_desc": {
+          "source": "New message",
+          "message": "New message"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bmV3X21lc3NhZ2U.desc": {
+          "source": "New message",
+          "message": "New message"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bmV3X21lc3NhZ2U.option.c3BhY2VJZA.display_name": {
+          "source": "Space ID",
+          "message": "Space ID"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bmV3X21lc3NhZ2U.option.c3BhY2VJZA.short_desc": {
+          "source": "The Google Chat space to monitor for new messages",
+          "message": "The Google Chat space to monitor for new messages"
+        },
+        "app.R29vZ2xlQ2hhdA.action.bmV3X21lc3NhZ2U.option.c3BhY2VJZA.desc": {
+          "source": "Select the Google Chat space where you want to monitor for new messages. The trigger will fire whenever a new message is posted in this space.",
+          "message": "Select the Google Chat space where you want to monitor for new messages. The trigger will fire whenever a new message is posted in this space."
+        }
+      }
+    }
+  }
+}
