@@ -1,0 +1,2757 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "root": {
+      "messages": {
+        "app.U2hvcGlmeQ.display_name": {
+          "source": "Shopify",
+          "message": "Shopify"
+        },
+        "app.U2hvcGlmeQ.short_desc": {
+          "source": "E-commerce platform for online stores and retail point of sale",
+          "message": "E-commerce platform for online stores and retail point of sale"
+        },
+        "app.U2hvcGlmeQ.desc": {
+          "source": "Shopify is a comprehensive commerce platform that allows businesses to start, grow, and manage an online store, sell in multiple places, and synchronize online and in-person sales.",
+          "message": "Shopify is a comprehensive commerce platform that allows businesses to start, grow, and manage an online store, sell in multiple places, and synchronize online and in-person sales."
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Make an API call"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Shopify",
+          "message": "Make a custom API call to Shopify"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Shopify** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Make a custom HTTP / REST API call to **Shopify** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP Method"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI Path"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`."
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body Type"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "How the body is serialized and what Content-Type is sent"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on."
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; use connection serialization and let the REST client decide"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serialize body as JSON"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value."
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serialize body as application/x-www-form-urlencoded form fields"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans)."
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Upload a file using multipart/form-data"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header."
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Send body as XML"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`."
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Send body as YAML"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`."
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Plain Text"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Send body as text/plain"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`."
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Raw Binary"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Send body as raw bytes"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`."
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "The request body"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes."
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Path Variables"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Values for {name} placeholders in path"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded."
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Query Arguments"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Query string parameters"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`."
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Custom Headers"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Extra request headers"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default)."
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Expected Status Codes"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Response status codes treated as success"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws)."
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Return Errors as Data"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Return non-2xx responses normally instead of throwing"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only."
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Include Debug Info"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Include request/timing/size debug info in the response"
+        },
+        "app.U2hvcGlmeQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
+        },
+        "app.U2hvcGlmeQ.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Search Records"
+        },
+        "app.U2hvcGlmeQ.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Shopify\"",
+          "message": "Search for matching records in the given table in app \"Shopify\""
+        },
+        "app.U2hvcGlmeQ.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Shopify\"",
+          "message": "Search for matching records in the given table in app \"Shopify\""
+        },
+        "app.U2hvcGlmeQ.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Table"
+        },
+        "app.U2hvcGlmeQ.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.U2hvcGlmeQ.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.U2hvcGlmeQ.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Find a Single Record"
+        },
+        "app.U2hvcGlmeQ.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Shopify\"",
+          "message": "Search for a single matching record in the given table in app \"Shopify\""
+        },
+        "app.U2hvcGlmeQ.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Shopify\"",
+          "message": "Search for a single matching record in the given table in app \"Shopify\""
+        },
+        "app.U2hvcGlmeQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Table"
+        },
+        "app.U2hvcGlmeQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.U2hvcGlmeQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Create Records"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Shopify\"",
+          "message": "Create new records in the given table in app \"Shopify\""
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Shopify\"",
+          "message": "Create new records in the given table in app \"Shopify\""
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Table"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.U2hvcGlmeQ.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Update Records"
+        },
+        "app.U2hvcGlmeQ.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Shopify\"",
+          "message": "Update existing records in the given table in app \"Shopify\""
+        },
+        "app.U2hvcGlmeQ.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Shopify\"",
+          "message": "Update existing records in the given table in app \"Shopify\""
+        },
+        "app.U2hvcGlmeQ.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Table"
+        },
+        "app.U2hvcGlmeQ.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.U2hvcGlmeQ.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.U2hvcGlmeQ.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Delete Records"
+        },
+        "app.U2hvcGlmeQ.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Shopify\"",
+          "message": "Delete records from the given table in app \"Shopify\""
+        },
+        "app.U2hvcGlmeQ.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Shopify\"",
+          "message": "Delete records from the given table in app \"Shopify\""
+        },
+        "app.U2hvcGlmeQ.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Table"
+        },
+        "app.U2hvcGlmeQ.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.U2hvcGlmeQ.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.display_name": {
+          "source": "Find Product Variants",
+          "message": "Find Product Variants"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.short_desc": {
+          "source": "Search for specific product variants",
+          "message": "Search for specific product variants"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.desc": {
+          "source": "Search and filter product variants in your Shopify store based on criteria like SKU, barcode, price, or inventory status.",
+          "message": "Search and filter product variants in your Shopify store based on criteria like SKU, barcode, price, or inventory status."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdElk.display_name": {
+          "source": "Product ID",
+          "message": "Product ID"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdElk.short_desc": {
+          "source": "Filter by parent product",
+          "message": "Filter by parent product"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdElk.desc": {
+          "source": "Find variants that belong to a specific parent product using its Shopify product ID.",
+          "message": "Find variants that belong to a specific parent product using its Shopify product ID."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGl0bGU.display_name": {
+          "source": "Variant Title",
+          "message": "Variant Title"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGl0bGU.short_desc": {
+          "source": "Search by variant title",
+          "message": "Search by variant title"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGl0bGU.desc": {
+          "source": "Filter variants by matching text in their titles or option values.",
+          "message": "Filter variants by matching text in their titles or option values."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.c2t1.display_name": {
+          "source": "SKU",
+          "message": "SKU"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.c2t1.short_desc": {
+          "source": "Search by variant SKU",
+          "message": "Search by variant SKU"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.c2t1.desc": {
+          "source": "Look up variants using their Stock Keeping Unit (SKU) identifier.",
+          "message": "Look up variants using their Stock Keeping Unit (SKU) identifier."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.YmFyY29kZQ.display_name": {
+          "source": "Barcode",
+          "message": "Barcode"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.YmFyY29kZQ.short_desc": {
+          "source": "Search by barcode",
+          "message": "Search by barcode"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.YmFyY29kZQ.desc": {
+          "source": "Find variants using their UPC, ISBN, or other barcode identifiers.",
+          "message": "Find variants using their UPC, ISBN, or other barcode identifiers."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.aWQ.display_name": {
+          "source": "Variant ID",
+          "message": "Variant ID"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.aWQ.short_desc": {
+          "source": "Search by variant ID",
+          "message": "Search by variant ID"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.aWQ.desc": {
+          "source": "Look up a specific variant using its unique Shopify variant ID.",
+          "message": "Look up a specific variant using its unique Shopify variant ID."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.aW52ZW50b3J5UXVhbnRpdHk.display_name": {
+          "source": "Inventory Quantity",
+          "message": "Inventory Quantity"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.aW52ZW50b3J5UXVhbnRpdHk.short_desc": {
+          "source": "Filter by inventory quantity",
+          "message": "Filter by inventory quantity"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.aW52ZW50b3J5UXVhbnRpdHk.desc": {
+          "source": "Find variants based on their exact inventory quantity or range (e.g., \"inventory_quantity:10\" or \"inventory_quantity:>5\").",
+          "message": "Find variants based on their exact inventory quantity or range (e.g., \"inventory_quantity:10\" or \"inventory_quantity:>5\")."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFN0YXR1cw.display_name": {
+          "source": "Product Status",
+          "message": "Product Status"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFN0YXR1cw.short_desc": {
+          "source": "Filter by product status",
+          "message": "Filter by product status"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFN0YXR1cw.desc": {
+          "source": "Find variants based on whether their parent product is active, draft, or archived.",
+          "message": "Find variants based on whether their parent product is active, draft, or archived."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFN0YXR1cw.allowed-value.c3RyaW5nOkFDVElWRQ.display_name": {
+          "source": "Active",
+          "message": "Active"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFN0YXR1cw.allowed-value.c3RyaW5nOkRSQUZU.display_name": {
+          "source": "Draft",
+          "message": "Draft"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFN0YXR1cw.allowed-value.c3RyaW5nOkFSQ0hJVkVE.display_name": {
+          "source": "Archived",
+          "message": "Archived"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFR5cGU.display_name": {
+          "source": "Product Type",
+          "message": "Product Type"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFR5cGU.short_desc": {
+          "source": "Filter by product type",
+          "message": "Filter by product type"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cHJvZHVjdFR5cGU.desc": {
+          "source": "Find variants belonging to products of a specific type or category.",
+          "message": "Find variants belonging to products of a specific type or category."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGFn.display_name": {
+          "source": "Product Tag",
+          "message": "Product Tag"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGFn.short_desc": {
+          "source": "Filter by product tag",
+          "message": "Filter by product tag"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGFn.desc": {
+          "source": "Find variants belonging to products that have a specific tag.",
+          "message": "Find variants belonging to products that have a specific tag."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGFnTm90.display_name": {
+          "source": "Exclude Tag",
+          "message": "Exclude Tag"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGFnTm90.short_desc": {
+          "source": "Filter out products with tag",
+          "message": "Filter out products with tag"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGFnTm90.desc": {
+          "source": "Find variants belonging to products that do not have a specific tag.",
+          "message": "Find variants belonging to products that do not have a specific tag."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dmVuZG9y.display_name": {
+          "source": "Vendor",
+          "message": "Vendor"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dmVuZG9y.short_desc": {
+          "source": "Filter by vendor or supplier",
+          "message": "Filter by vendor or supplier"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dmVuZG9y.desc": {
+          "source": "Find variants belonging to products from a specific vendor or supplier.",
+          "message": "Find variants belonging to products from a specific vendor or supplier."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.Y29sbGVjdGlvbg.display_name": {
+          "source": "Collection",
+          "message": "Collection"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.Y29sbGVjdGlvbg.short_desc": {
+          "source": "Filter by collection",
+          "message": "Filter by collection"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.Y29sbGVjdGlvbg.desc": {
+          "source": "Find variants belonging to products in a specific collection using the collection ID.",
+          "message": "Find variants belonging to products in a specific collection using the collection ID."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.b3B0aW9uMQ.display_name": {
+          "source": "Option 1",
+          "message": "Option 1"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.b3B0aW9uMQ.short_desc": {
+          "source": "Filter by first option",
+          "message": "Filter by first option"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.b3B0aW9uMQ.desc": {
+          "source": "Find variants with a specific value for their first option (e.g., Size, Color).",
+          "message": "Find variants with a specific value for their first option (e.g., Size, Color)."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.b3B0aW9uMg.display_name": {
+          "source": "Option 2",
+          "message": "Option 2"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.b3B0aW9uMg.short_desc": {
+          "source": "Filter by second option",
+          "message": "Filter by second option"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.b3B0aW9uMg.desc": {
+          "source": "Find variants with a specific value for their second option.",
+          "message": "Find variants with a specific value for their second option."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.b3B0aW9uMw.display_name": {
+          "source": "Option 3",
+          "message": "Option 3"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.b3B0aW9uMw.short_desc": {
+          "source": "Filter by third option",
+          "message": "Filter by third option"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.b3B0aW9uMw.desc": {
+          "source": "Find variants with a specific value for their third option.",
+          "message": "Find variants with a specific value for their third option."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGF4YWJsZQ.display_name": {
+          "source": "Taxable",
+          "message": "Taxable"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGF4YWJsZQ.short_desc": {
+          "source": "Filter by tax status",
+          "message": "Filter by tax status"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGF4YWJsZQ.desc": {
+          "source": "Find variants based on whether they are taxable or non-taxable.",
+          "message": "Find variants based on whether they are taxable or non-taxable."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGF4YWJsZQ.allowed-value.Ym9vbDp0cnVl.display_name": {
+          "source": "Taxable",
+          "message": "Taxable"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dGF4YWJsZQ.allowed-value.Ym9vbDpmYWxzZQ.display_name": {
+          "source": "Non-taxable",
+          "message": "Non-taxable"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dXBkYXRlZEF0.display_name": {
+          "source": "Updated At",
+          "message": "Updated At"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dXBkYXRlZEF0.short_desc": {
+          "source": "Filter by update time",
+          "message": "Filter by update time"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.dXBkYXRlZEF0.desc": {
+          "source": "Find variants based on when they were last updated (e.g., \"updated_at:>2023-01-01\" or \"updated_at:<now\").",
+          "message": "Find variants based on when they were last updated (e.g., \"updated_at:>2023-01-01\" or \"updated_at:<now\")."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cmF3UXVlcnk.display_name": {
+          "source": "Advanced Query",
+          "message": "Advanced Query"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cmF3UXVlcnk.short_desc": {
+          "source": "Use custom search syntax",
+          "message": "Use custom search syntax"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cmF3UXVlcnk.desc": {
+          "source": "Enter a custom search query for advanced filtering using Shopify search syntax.",
+          "message": "Enter a custom search query for advanced filtering using Shopify search syntax."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.c29ydEtleQ.display_name": {
+          "source": "Sort By",
+          "message": "Sort By"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.c29ydEtleQ.short_desc": {
+          "source": "Order results by field",
+          "message": "Order results by field"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.c29ydEtleQ.desc": {
+          "source": "Specify which field to use for sorting the results.",
+          "message": "Specify which field to use for sorting the results."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.c29ydEtleQ.allowed-value.c3RyaW5nOlBPU0lUSU9O.display_name": {
+          "source": "Position",
+          "message": "Position"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.c29ydEtleQ.allowed-value.c3RyaW5nOlRJVExF.display_name": {
+          "source": "Title",
+          "message": "Title"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.c29ydEtleQ.allowed-value.c3RyaW5nOlNLVQ.display_name": {
+          "source": "SKU",
+          "message": "SKU"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.c29ydEtleQ.allowed-value.c3RyaW5nOklE.display_name": {
+          "source": "ID",
+          "message": "ID"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.c29ydEtleQ.allowed-value.c3RyaW5nOklOVkVOVE9SWV9RVUFOVElUWQ.display_name": {
+          "source": "Inventory Quantity",
+          "message": "Inventory Quantity"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.c29ydEtleQ.allowed-value.c3RyaW5nOkNSRUFURURfQVQ.display_name": {
+          "source": "Created At",
+          "message": "Created At"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.c29ydEtleQ.allowed-value.c3RyaW5nOlVQREFURURfQVQ.display_name": {
+          "source": "Updated At",
+          "message": "Updated At"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cmV2ZXJzZQ.display_name": {
+          "source": "Reverse Order",
+          "message": "Reverse Order"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cmV2ZXJzZQ.short_desc": {
+          "source": "Reverse the sort order",
+          "message": "Reverse the sort order"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.cmV2ZXJzZQ.desc": {
+          "source": "When enabled, reverses the order of the results (e.g., Z-A instead of A-Z).",
+          "message": "When enabled, reverses the order of the results (e.g., Z-A instead of A-Z)."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.bGltaXQ.display_name": {
+          "source": "Results Limit",
+          "message": "Results Limit"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "Maximum number of results"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.bGltaXQ.desc": {
+          "source": "Specify the maximum number of variants to return in the search results (max: 250).",
+          "message": "Specify the maximum number of variants to return in the search results (max: 250)."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.Y3Vyc29y.display_name": {
+          "source": "Pagination Cursor",
+          "message": "Pagination Cursor"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.Y3Vyc29y.short_desc": {
+          "source": "Navigate through pages of results",
+          "message": "Navigate through pages of results"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC12YXJpYW50.option.Y3Vyc29y.desc": {
+          "source": "Use a cursor to paginate through large sets of search results.",
+          "message": "Use a cursor to paginate through large sets of search results."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.display_name": {
+          "source": "Find Customers",
+          "message": "Find Customers"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.short_desc": {
+          "source": "Search for customers",
+          "message": "Search for customers"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.desc": {
+          "source": "Search and filter customers in your Shopify store based on names, emails, or other attributes.",
+          "message": "Search and filter customers in your Shopify store based on names, emails, or other attributes."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "Search Query"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.cXVlcnk.short_desc": {
+          "source": "Search by name or email",
+          "message": "Search by name or email"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.cXVlcnk.desc": {
+          "source": "Search for customers by their name, email, or other identifying information.",
+          "message": "Search for customers by their name, email, or other identifying information."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.bGltaXQ.display_name": {
+          "source": "Results Limit",
+          "message": "Results Limit"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "Maximum number of results"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.bGltaXQ.desc": {
+          "source": "Specify the maximum number of customers to return in the search results.",
+          "message": "Specify the maximum number of customers to return in the search results."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.Y3Vyc29y.display_name": {
+          "source": "Pagination Cursor",
+          "message": "Pagination Cursor"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.Y3Vyc29y.short_desc": {
+          "source": "Navigate through pages of results",
+          "message": "Navigate through pages of results"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.Y3Vyc29y.desc": {
+          "source": "Use a cursor to paginate through large sets of search results.",
+          "message": "Use a cursor to paginate through large sets of search results."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.c29ydEtleQ.display_name": {
+          "source": "Sort By",
+          "message": "Sort By"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.c29ydEtleQ.short_desc": {
+          "source": "Sort the results",
+          "message": "Sort the results"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.c29ydEtleQ.desc": {
+          "source": "Field to sort customers by",
+          "message": "Field to sort customers by"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.c29ydEtleQ.allowed-value.c3RyaW5nOkNSRUFURURfQVQ.display_name": {
+          "source": "Created At",
+          "message": "Created At"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.c29ydEtleQ.allowed-value.c3RyaW5nOlVQREFURURfQVQ.display_name": {
+          "source": "Updated At",
+          "message": "Updated At"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.c29ydEtleQ.allowed-value.c3RyaW5nOkxBU1RfT1JERVJfREFURQ.display_name": {
+          "source": "Last Order Date",
+          "message": "Last Order Date"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.c29ydEtleQ.allowed-value.c3RyaW5nOk5BTUU.display_name": {
+          "source": "Name",
+          "message": "Name"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.c29ydEtleQ.allowed-value.c3RyaW5nOkVNQUlM.display_name": {
+          "source": "Email",
+          "message": "Email"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.c29ydEtleQ.allowed-value.c3RyaW5nOlRPVEFMX1NQRU5U.display_name": {
+          "source": "Total Spent",
+          "message": "Total Spent"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.c29ydEtleQ.allowed-value.c3RyaW5nOk9SREVSU19DT1VOVA.display_name": {
+          "source": "Orders Count",
+          "message": "Orders Count"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.cmV2ZXJzZQ.display_name": {
+          "source": "Reverse Order",
+          "message": "Reverse Order"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.cmV2ZXJzZQ.short_desc": {
+          "source": "Reverse the sort order",
+          "message": "Reverse the sort order"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1jdXN0b21lcg.option.cmV2ZXJzZQ.desc": {
+          "source": "Toggle between ascending and descending sort order for the results.",
+          "message": "Toggle between ascending and descending sort order for the results."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.display_name": {
+          "source": "Find Orders",
+          "message": "Find Orders"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.short_desc": {
+          "source": "Search for customer orders",
+          "message": "Search for customer orders"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.desc": {
+          "source": "Search and filter orders in your Shopify store based on various criteria including customer name, email, order number, and more.",
+          "message": "Search and filter orders in your Shopify store based on various criteria including customer name, email, order number, and more."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bmFtZQ.display_name": {
+          "source": "Order Number",
+          "message": "Order Number"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bmFtZQ.short_desc": {
+          "source": "Search by order number",
+          "message": "Search by order number"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bmFtZQ.desc": {
+          "source": "Look up orders using their confirmation or order number.",
+          "message": "Look up orders using their confirmation or order number."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "Email"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZW1haWw.short_desc": {
+          "source": "Search by customer email",
+          "message": "Search by customer email"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZW1haWw.desc": {
+          "source": "Find orders associated with a specific customer email address.",
+          "message": "Find orders associated with a specific customer email address."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer ID",
+          "message": "Customer ID"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Filter by customer ID",
+          "message": "Filter by customer ID"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Find all orders placed by a specific customer using their Shopify customer ID.",
+          "message": "Find all orders placed by a specific customer using their Shopify customer ID."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y29uZmlybWF0aW9uX251bWJlcg.display_name": {
+          "source": "Confirmation Number",
+          "message": "Confirmation Number"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y29uZmlybWF0aW9uX251bWJlcg.short_desc": {
+          "source": "Search by confirmation number",
+          "message": "Search by confirmation number"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y29uZmlybWF0aW9uX251bWJlcg.desc": {
+          "source": "Find orders by their unique confirmation number provided to customers.",
+          "message": "Find orders by their unique confirmation number provided to customers."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.aWQ.display_name": {
+          "source": "Order ID",
+          "message": "Order ID"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.aWQ.short_desc": {
+          "source": "Search by order ID",
+          "message": "Search by order ID"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.aWQ.desc": {
+          "source": "Look up a specific order using its unique Shopify order ID.",
+          "message": "Look up a specific order using its unique Shopify order ID."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZmluYW5jaWFsX3N0YXR1cw.display_name": {
+          "source": "Payment Status",
+          "message": "Payment Status"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZmluYW5jaWFsX3N0YXR1cw.short_desc": {
+          "source": "Filter by payment status",
+          "message": "Filter by payment status"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZmluYW5jaWFsX3N0YXR1cw.desc": {
+          "source": "Find orders with a specific payment status (paid, pending, refunded, etc.).",
+          "message": "Find orders with a specific payment status (paid, pending, refunded, etc.)."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZmluYW5jaWFsX3N0YXR1cw.allowed-value.c3RyaW5nOnBhaWQ.display_name": {
+          "source": "Paid",
+          "message": "Paid"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZmluYW5jaWFsX3N0YXR1cw.allowed-value.c3RyaW5nOnBlbmRpbmc.display_name": {
+          "source": "Pending",
+          "message": "Pending"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZmluYW5jaWFsX3N0YXR1cw.allowed-value.c3RyaW5nOmF1dGhvcml6ZWQ.display_name": {
+          "source": "Authorized",
+          "message": "Authorized"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZmluYW5jaWFsX3N0YXR1cw.allowed-value.c3RyaW5nOnBhcnRpYWxseV9wYWlk.display_name": {
+          "source": "Partially Paid",
+          "message": "Partially Paid"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZmluYW5jaWFsX3N0YXR1cw.allowed-value.c3RyaW5nOnBhcnRpYWxseV9yZWZ1bmRlZA.display_name": {
+          "source": "Partially Refunded",
+          "message": "Partially Refunded"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZmluYW5jaWFsX3N0YXR1cw.allowed-value.c3RyaW5nOnJlZnVuZGVk.display_name": {
+          "source": "Refunded",
+          "message": "Refunded"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZmluYW5jaWFsX3N0YXR1cw.allowed-value.c3RyaW5nOnZvaWRlZA.display_name": {
+          "source": "Voided",
+          "message": "Voided"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZmluYW5jaWFsX3N0YXR1cw.allowed-value.c3RyaW5nOmV4cGlyZWQ.display_name": {
+          "source": "Expired",
+          "message": "Expired"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZnVsZmlsbG1lbnRfc3RhdHVz.display_name": {
+          "source": "Fulfillment Status",
+          "message": "Fulfillment Status"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZnVsZmlsbG1lbnRfc3RhdHVz.short_desc": {
+          "source": "Filter by shipping status",
+          "message": "Filter by shipping status"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZnVsZmlsbG1lbnRfc3RhdHVz.desc": {
+          "source": "Find orders with a specific fulfillment status (fulfilled, unfulfilled, shipped, etc.).",
+          "message": "Find orders with a specific fulfillment status (fulfilled, unfulfilled, shipped, etc.)."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZnVsZmlsbG1lbnRfc3RhdHVz.allowed-value.c3RyaW5nOnVuc2hpcHBlZA.display_name": {
+          "source": "Unshipped",
+          "message": "Unshipped"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZnVsZmlsbG1lbnRfc3RhdHVz.allowed-value.c3RyaW5nOnNoaXBwZWQ.display_name": {
+          "source": "Shipped",
+          "message": "Shipped"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZnVsZmlsbG1lbnRfc3RhdHVz.allowed-value.c3RyaW5nOmZ1bGZpbGxlZA.display_name": {
+          "source": "Fulfilled",
+          "message": "Fulfilled"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZnVsZmlsbG1lbnRfc3RhdHVz.allowed-value.c3RyaW5nOnBhcnRpYWw.display_name": {
+          "source": "Partial",
+          "message": "Partial"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZnVsZmlsbG1lbnRfc3RhdHVz.allowed-value.c3RyaW5nOnNjaGVkdWxlZA.display_name": {
+          "source": "Scheduled",
+          "message": "Scheduled"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZnVsZmlsbG1lbnRfc3RhdHVz.allowed-value.c3RyaW5nOm9uX2hvbGQ.display_name": {
+          "source": "On Hold",
+          "message": "On Hold"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZnVsZmlsbG1lbnRfc3RhdHVz.allowed-value.c3RyaW5nOnVuZnVsZmlsbGVk.display_name": {
+          "source": "Unfulfilled",
+          "message": "Unfulfilled"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.ZnVsZmlsbG1lbnRfc3RhdHVz.allowed-value.c3RyaW5nOnJlcXVlc3RfZGVjbGluZWQ.display_name": {
+          "source": "Request Declined",
+          "message": "Request Declined"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c3RhdHVz.display_name": {
+          "source": "Order Status",
+          "message": "Order Status"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c3RhdHVz.short_desc": {
+          "source": "Filter by order status",
+          "message": "Filter by order status"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c3RhdHVz.desc": {
+          "source": "Find orders based on their overall status (open, closed, cancelled).",
+          "message": "Find orders based on their overall status (open, closed, cancelled)."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c3RhdHVz.allowed-value.c3RyaW5nOm9wZW4.display_name": {
+          "source": "Open",
+          "message": "Open"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c3RhdHVz.allowed-value.c3RyaW5nOmNsb3NlZA.display_name": {
+          "source": "Closed",
+          "message": "Closed"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c3RhdHVz.allowed-value.c3RyaW5nOmNhbmNlbGxlZA.display_name": {
+          "source": "Cancelled",
+          "message": "Cancelled"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c3RhdHVz.allowed-value.c3RyaW5nOm5vdF9jbG9zZWQ.display_name": {
+          "source": "Not Closed",
+          "message": "Not Closed"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c291cmNlX25hbWU.display_name": {
+          "source": "Source",
+          "message": "Source"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c291cmNlX25hbWU.short_desc": {
+          "source": "Filter by order source",
+          "message": "Filter by order source"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c291cmNlX25hbWU.desc": {
+          "source": "Find orders from specific sources (e.g., web, draft orders, POS).",
+          "message": "Find orders from specific sources (e.g., web, draft orders, POS)."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c2FsZXNfY2hhbm5lbA.display_name": {
+          "source": "Sales Channel",
+          "message": "Sales Channel"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c2FsZXNfY2hhbm5lbA.short_desc": {
+          "source": "Filter by sales channel",
+          "message": "Filter by sales channel"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c2FsZXNfY2hhbm5lbA.desc": {
+          "source": "Find orders from specific sales channels configured in your Shopify store.",
+          "message": "Find orders from specific sales channels configured in your Shopify store."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c2t1.display_name": {
+          "source": "Product SKU",
+          "message": "Product SKU"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c2t1.short_desc": {
+          "source": "Search by product SKU",
+          "message": "Search by product SKU"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c2t1.desc": {
+          "source": "Find orders containing products with a specific SKU.",
+          "message": "Find orders containing products with a specific SKU."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3JlYXRlZF9hdA.display_name": {
+          "source": "Created Date",
+          "message": "Created Date"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3JlYXRlZF9hdA.short_desc": {
+          "source": "Filter by creation date",
+          "message": "Filter by creation date"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3JlYXRlZF9hdA.desc": {
+          "source": "Find orders created on a specific date or within a date range (e.g., 2021-01-01, <now, <=2024).",
+          "message": "Find orders created on a specific date or within a date range (e.g., 2021-01-01, <now, <=2024)."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dXBkYXRlZF9hdA.display_name": {
+          "source": "Updated Date",
+          "message": "Updated Date"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dXBkYXRlZF9hdA.short_desc": {
+          "source": "Filter by last update date",
+          "message": "Filter by last update date"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dXBkYXRlZF9hdA.desc": {
+          "source": "Find orders last updated on a specific date or within a date range.",
+          "message": "Find orders last updated on a specific date or within a date range."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cHJvY2Vzc2VkX2F0.display_name": {
+          "source": "Processed Date",
+          "message": "Processed Date"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cHJvY2Vzc2VkX2F0.short_desc": {
+          "source": "Filter by processed date",
+          "message": "Filter by processed date"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cHJvY2Vzc2VkX2F0.desc": {
+          "source": "Find orders processed on a specific date or within a date range.",
+          "message": "Find orders processed on a specific date or within a date range."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dGFn.display_name": {
+          "source": "Tag",
+          "message": "Tag"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dGFn.short_desc": {
+          "source": "Filter by order tag",
+          "message": "Filter by order tag"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dGFn.desc": {
+          "source": "Find orders that have been tagged with specific labels in Shopify.",
+          "message": "Find orders that have been tagged with specific labels in Shopify."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dGVzdA.display_name": {
+          "source": "Test Orders",
+          "message": "Test Orders"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dGVzdA.short_desc": {
+          "source": "Include/exclude test orders",
+          "message": "Include/exclude test orders"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.dGVzdA.desc": {
+          "source": "Filter to show only test orders (true) or exclude test orders (false).",
+          "message": "Filter to show only test orders (true) or exclude test orders (false)."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bG9jYXRpb25faWQ.display_name": {
+          "source": "Location",
+          "message": "Location"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bG9jYXRpb25faWQ.short_desc": {
+          "source": "Filter by store location",
+          "message": "Filter by store location"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bG9jYXRpb25faWQ.desc": {
+          "source": "Find orders associated with a specific store location or fulfillment center.",
+          "message": "Find orders associated with a specific store location or fulfillment center."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cG9fbnVtYmVy.display_name": {
+          "source": "Purchase Order Number",
+          "message": "Purchase Order Number"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cG9fbnVtYmVy.short_desc": {
+          "source": "Search by PO number",
+          "message": "Search by PO number"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cG9fbnVtYmVy.desc": {
+          "source": "Find orders associated with a specific purchase order number.",
+          "message": "Find orders associated with a specific purchase order number."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cmF3UXVlcnk.display_name": {
+          "source": "Advanced Query",
+          "message": "Advanced Query"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cmF3UXVlcnk.short_desc": {
+          "source": "Use custom search syntax",
+          "message": "Use custom search syntax"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cmF3UXVlcnk.desc": {
+          "source": "Enter a custom search query for advanced filtering using Shopify search syntax.",
+          "message": "Enter a custom search query for advanced filtering using Shopify search syntax."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c29ydEtleQ.display_name": {
+          "source": "Sort By",
+          "message": "Sort By"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c29ydEtleQ.short_desc": {
+          "source": "Sort the results",
+          "message": "Sort the results"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c29ydEtleQ.desc": {
+          "source": "Choose how to order the results (e.g., by date, order number, total value).",
+          "message": "Choose how to order the results (e.g., by date, order number, total value)."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c29ydEtleQ.allowed-value.c3RyaW5nOkNSRUFURURfQVQ.display_name": {
+          "source": "Created At",
+          "message": "Created At"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c29ydEtleQ.allowed-value.c3RyaW5nOlVQREFURURfQVQ.display_name": {
+          "source": "Updated At",
+          "message": "Updated At"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c29ydEtleQ.allowed-value.c3RyaW5nOlBST0NFU1NFRF9BVA.display_name": {
+          "source": "Processed At",
+          "message": "Processed At"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c29ydEtleQ.allowed-value.c3RyaW5nOlRPVEFMX1BSSUNF.display_name": {
+          "source": "Total Price",
+          "message": "Total Price"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.c29ydEtleQ.allowed-value.c3RyaW5nOklE.display_name": {
+          "source": "Order ID",
+          "message": "Order ID"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cmV2ZXJzZQ.display_name": {
+          "source": "Reverse Order",
+          "message": "Reverse Order"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cmV2ZXJzZQ.short_desc": {
+          "source": "Reverse the sort order",
+          "message": "Reverse the sort order"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.cmV2ZXJzZQ.desc": {
+          "source": "Toggle between ascending and descending sort order for the results.",
+          "message": "Toggle between ascending and descending sort order for the results."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bGltaXQ.display_name": {
+          "source": "Results Limit",
+          "message": "Results Limit"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "Maximum number of results"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.bGltaXQ.desc": {
+          "source": "Specify the maximum number of orders to return in the search results (max: 250).",
+          "message": "Specify the maximum number of orders to return in the search results (max: 250)."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3Vyc29y.display_name": {
+          "source": "Pagination Cursor",
+          "message": "Pagination Cursor"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3Vyc29y.short_desc": {
+          "source": "Navigate through pages of results",
+          "message": "Navigate through pages of results"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1vcmRlcg.option.Y3Vyc29y.desc": {
+          "source": "Use a cursor to paginate through large sets of search results.",
+          "message": "Use a cursor to paginate through large sets of search results."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.display_name": {
+          "source": "Find Products",
+          "message": "Find Products"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.short_desc": {
+          "source": "Search for products in your store",
+          "message": "Search for products in your store"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.desc": {
+          "source": "Search and filter products in your Shopify store based on various criteria including title, vendor, product type, and more.",
+          "message": "Search and filter products in your Shopify store based on various criteria including title, vendor, product type, and more."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.dGl0bGVRdWVyeQ.display_name": {
+          "source": "Title",
+          "message": "Title"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.dGl0bGVRdWVyeQ.short_desc": {
+          "source": "Search by product title",
+          "message": "Search by product title"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.dGl0bGVRdWVyeQ.desc": {
+          "source": "Filter products by matching text in their titles. Supports partial matches.",
+          "message": "Filter products by matching text in their titles. Supports partial matches."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.dmVuZG9yUXVlcnk.display_name": {
+          "source": "Vendor",
+          "message": "Vendor"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.dmVuZG9yUXVlcnk.short_desc": {
+          "source": "Filter by product vendor",
+          "message": "Filter by product vendor"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.dmVuZG9yUXVlcnk.desc": {
+          "source": "Find products from specific vendors or suppliers in your store.",
+          "message": "Find products from specific vendors or suppliers in your store."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cHJvZHVjdFR5cGVRdWVyeQ.display_name": {
+          "source": "Product Type",
+          "message": "Product Type"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cHJvZHVjdFR5cGVRdWVyeQ.short_desc": {
+          "source": "Filter by product type",
+          "message": "Filter by product type"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cHJvZHVjdFR5cGVRdWVyeQ.desc": {
+          "source": "Search for products based on their assigned product type category.",
+          "message": "Search for products based on their assigned product type category."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.dGFnUXVlcnk.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.dGFnUXVlcnk.short_desc": {
+          "source": "Search by product tags",
+          "message": "Search by product tags"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.dGFnUXVlcnk.desc": {
+          "source": "Find products that have been tagged with specific keywords or labels.",
+          "message": "Find products that have been tagged with specific keywords or labels."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c2t1UXVlcnk.display_name": {
+          "source": "SKU",
+          "message": "SKU"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c2t1UXVlcnk.short_desc": {
+          "source": "Search by product SKU",
+          "message": "Search by product SKU"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c2t1UXVlcnk.desc": {
+          "source": "Look up products using their Stock Keeping Unit (SKU) identifier.",
+          "message": "Look up products using their Stock Keeping Unit (SKU) identifier."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.YmFyY29kZVF1ZXJ5.display_name": {
+          "source": "Barcode",
+          "message": "Barcode"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.YmFyY29kZVF1ZXJ5.short_desc": {
+          "source": "Search by barcode",
+          "message": "Search by barcode"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.YmFyY29kZVF1ZXJ5.desc": {
+          "source": "Find products using their UPC, ISBN, or other barcode identifiers.",
+          "message": "Find products using their UPC, ISBN, or other barcode identifiers."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cHJvZHVjdElkUXVlcnk.display_name": {
+          "source": "Product ID",
+          "message": "Product ID"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cHJvZHVjdElkUXVlcnk.short_desc": {
+          "source": "Search by product ID",
+          "message": "Search by product ID"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cHJvZHVjdElkUXVlcnk.desc": {
+          "source": "Look up a specific product using its unique Shopify product ID.",
+          "message": "Look up a specific product using its unique Shopify product ID."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.Y29sbGVjdGlvbklkUXVlcnk.display_name": {
+          "source": "Collection",
+          "message": "Collection"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.Y29sbGVjdGlvbklkUXVlcnk.short_desc": {
+          "source": "Filter by collection ID",
+          "message": "Filter by collection ID"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.Y29sbGVjdGlvbklkUXVlcnk.desc": {
+          "source": "Find products that belong to a specific collection in your store.",
+          "message": "Find products that belong to a specific collection in your store."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c29ydEtleQ.display_name": {
+          "source": "Sort By",
+          "message": "Sort By"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c29ydEtleQ.short_desc": {
+          "source": "Sort the results",
+          "message": "Sort the results"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c29ydEtleQ.desc": {
+          "source": "Choose how to order the results (e.g., by title, price, created date).",
+          "message": "Choose how to order the results (e.g., by title, price, created date)."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c29ydEtleQ.allowed-value.c3RyaW5nOlRJVExF.display_name": {
+          "source": "Title",
+          "message": "Title"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c29ydEtleQ.allowed-value.c3RyaW5nOlBST0RVQ1RfVFlQRQ.display_name": {
+          "source": "Product Type",
+          "message": "Product Type"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c29ydEtleQ.allowed-value.c3RyaW5nOlZFTkRPUg.display_name": {
+          "source": "Vendor",
+          "message": "Vendor"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c29ydEtleQ.allowed-value.c3RyaW5nOlVQREFURURfQVQ.display_name": {
+          "source": "Updated At",
+          "message": "Updated At"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c29ydEtleQ.allowed-value.c3RyaW5nOkNSRUFURURfQVQ.display_name": {
+          "source": "Created At",
+          "message": "Created At"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c29ydEtleQ.allowed-value.c3RyaW5nOkJFU1RfU0VMTElORw.display_name": {
+          "source": "Best Selling",
+          "message": "Best Selling"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c29ydEtleQ.allowed-value.c3RyaW5nOlBSSUNF.display_name": {
+          "source": "Price",
+          "message": "Price"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c29ydEtleQ.allowed-value.c3RyaW5nOklE.display_name": {
+          "source": "ID",
+          "message": "ID"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.c29ydEtleQ.allowed-value.c3RyaW5nOklOVkVOVE9SWV9UT1RBTA.display_name": {
+          "source": "Inventory Total",
+          "message": "Inventory Total"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cmV2ZXJzZQ.display_name": {
+          "source": "Reverse Order",
+          "message": "Reverse Order"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cmV2ZXJzZQ.short_desc": {
+          "source": "Reverse the sort order",
+          "message": "Reverse the sort order"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cmV2ZXJzZQ.desc": {
+          "source": "Toggle between ascending and descending sort order for the results.",
+          "message": "Toggle between ascending and descending sort order for the results."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cmF3UXVlcnk.display_name": {
+          "source": "Advanced Query",
+          "message": "Advanced Query"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cmF3UXVlcnk.short_desc": {
+          "source": "Use custom search syntax",
+          "message": "Use custom search syntax"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.cmF3UXVlcnk.desc": {
+          "source": "Enter a custom search query for advanced filtering using Shopify search syntax.",
+          "message": "Enter a custom search query for advanced filtering using Shopify search syntax."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.bGltaXQ.display_name": {
+          "source": "Results Limit",
+          "message": "Results Limit"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "Maximum number of results"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.bGltaXQ.desc": {
+          "source": "Specify the maximum number of products to return in the search results.",
+          "message": "Specify the maximum number of products to return in the search results."
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.Y3Vyc29y.display_name": {
+          "source": "Pagination Cursor",
+          "message": "Pagination Cursor"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.Y3Vyc29y.short_desc": {
+          "source": "Navigate through pages of results",
+          "message": "Navigate through pages of results"
+        },
+        "app.U2hvcGlmeQ.action.ZmluZC1wcm9kdWN0.option.Y3Vyc29y.desc": {
+          "source": "Use a cursor to paginate through large sets of search results.",
+          "message": "Use a cursor to paginate through large sets of search results."
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.display_name": {
+          "source": "Add Line Item to Order",
+          "message": "Add Line Item to Order"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.short_desc": {
+          "source": "Add a new product line to an existing order",
+          "message": "Add a new product line to an existing order"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.desc": {
+          "source": "Allows adding a new line item to an existing order, with options for quantity, pricing, and other product details",
+          "message": "Allows adding a new line item to an existing order, with options for quantity, pricing, and other product details"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.b3JkZXJJZA.display_name": {
+          "source": "Order ID",
+          "message": "Order ID"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.b3JkZXJJZA.short_desc": {
+          "source": "Unique identifier of the order",
+          "message": "Unique identifier of the order"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.b3JkZXJJZA.desc": {
+          "source": "The specific order to which the line item will be added",
+          "message": "The specific order to which the line item will be added"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.dHlwZQ.display_name": {
+          "source": "Line Item Type",
+          "message": "Line Item Type"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.dHlwZQ.short_desc": {
+          "source": "Type of line item being added",
+          "message": "Type of line item being added"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.dHlwZQ.desc": {
+          "source": "Specifies the nature of the line item (e.g., product, shipping, tax)",
+          "message": "Specifies the nature of the line item (e.g., product, shipping, tax)"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.dHlwZQ.allowed-value.c3RyaW5nOnByb2R1Y3Q.display_name": {
+          "source": "Product",
+          "message": "Product"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.dHlwZQ.allowed-value.c3RyaW5nOmN1c3RvbV9pdGVt.display_name": {
+          "source": "Custom Item",
+          "message": "Custom Item"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.cXVhbnRpdHk.display_name": {
+          "source": "Quantity",
+          "message": "Quantity"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.cXVhbnRpdHk.short_desc": {
+          "source": "Number of items to add",
+          "message": "Number of items to add"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.cXVhbnRpdHk.desc": {
+          "source": "The quantity of the specific product being added to the order",
+          "message": "The quantity of the specific product being added to the order"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.bG9jYXRpb25JZA.display_name": {
+          "source": "Location ID",
+          "message": "Location ID"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.bG9jYXRpb25JZA.short_desc": {
+          "source": "Inventory location",
+          "message": "Inventory location"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.bG9jYXRpb25JZA.desc": {
+          "source": "The specific warehouse or store location where the item is stocked",
+          "message": "The specific warehouse or store location where the item is stocked"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.cmVhc29u.display_name": {
+          "source": "Reason",
+          "message": "Reason"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.cmVhc29u.short_desc": {
+          "source": "Reason for adding line item",
+          "message": "Reason for adding line item"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.cmVhc29u.desc": {
+          "source": "Explanation for why the line item is being added to the order",
+          "message": "Explanation for why the line item is being added to the order"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.bm90aWZ5Q3VzdG9tZXI.display_name": {
+          "source": "Notify Customer",
+          "message": "Notify Customer"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.bm90aWZ5Q3VzdG9tZXI.short_desc": {
+          "source": "Send notification about order change",
+          "message": "Send notification about order change"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLWxpbmUtaXRlbS10by1vcmRlcg.option.bm90aWZ5Q3VzdG9tZXI.desc": {
+          "source": "Determines whether the customer should be notified about the line item addition",
+          "message": "Determines whether the customer should be notified about the line item addition"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLXRhZy10by1jdXN0b21lcg.display_name": {
+          "source": "Add Tag to Customer",
+          "message": "Add Tag to Customer"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLXRhZy10by1jdXN0b21lcg.short_desc": {
+          "source": "Adds tags to an existing customer",
+          "message": "Adds tags to an existing customer"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLXRhZy10by1jdXN0b21lcg.desc": {
+          "source": "Appends or replaces tags for a specified customer in Shopify, useful for categorization, segmentation, or tracking purposes.",
+          "message": "Appends or replaces tags for a specified customer in Shopify, useful for categorization, segmentation, or tracking purposes."
+        },
+        "app.U2hvcGlmeQ.action.YWRkLXRhZy10by1jdXN0b21lcg.option.Y3VzdG9tZXJJZA.display_name": {
+          "source": "Customer ID",
+          "message": "Customer ID"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLXRhZy10by1jdXN0b21lcg.option.Y3VzdG9tZXJJZA.short_desc": {
+          "source": "ID of the customer",
+          "message": "ID of the customer"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLXRhZy10by1jdXN0b21lcg.option.Y3VzdG9tZXJJZA.desc": {
+          "source": "The unique identifier of the customer to whom tags will be added. Required to target the correct customer.",
+          "message": "The unique identifier of the customer to whom tags will be added. Required to target the correct customer."
+        },
+        "app.U2hvcGlmeQ.action.YWRkLXRhZy10by1jdXN0b21lcg.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLXRhZy10by1jdXN0b21lcg.option.dGFncw.short_desc": {
+          "source": "Tags to add",
+          "message": "Tags to add"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLXRhZy10by1jdXN0b21lcg.option.dGFncw.desc": {
+          "source": "A list of tags to apply to the customer, such as \"VIP\", \"loyal\", or \"newsletter\". Can be appended or replace existing tags based on the append option.",
+          "message": "A list of tags to apply to the customer, such as \"VIP\", \"loyal\", or \"newsletter\". Can be appended or replace existing tags based on the append option."
+        },
+        "app.U2hvcGlmeQ.action.YWRkLXRhZy10by1jdXN0b21lcg.option.YXBwZW5k.display_name": {
+          "source": "Append",
+          "message": "Append"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLXRhZy10by1jdXN0b21lcg.option.YXBwZW5k.short_desc": {
+          "source": "Append or replace tags",
+          "message": "Append or replace tags"
+        },
+        "app.U2hvcGlmeQ.action.YWRkLXRhZy10by1jdXN0b21lcg.option.YXBwZW5k.desc": {
+          "source": "If true, adds the new tags to the existing ones; if false, replaces all existing tags with the new ones.",
+          "message": "If true, adds the new tags to the existing ones; if false, replaces all existing tags with the new ones."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.display_name": {
+          "source": "Create Blog Entry",
+          "message": "Create Blog Entry"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.short_desc": {
+          "source": "Creates a new blog post in Shopify",
+          "message": "Creates a new blog post in Shopify"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.desc": {
+          "source": "Adds a new blog post to a specified blog in your Shopify store, allowing you to publish content such as articles, news, or updates for customers.",
+          "message": "Adds a new blog post to a specified blog in your Shopify store, allowing you to publish content such as articles, news, or updates for customers."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.YmxvZ0lk.display_name": {
+          "source": "Blog ID",
+          "message": "Blog ID"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.YmxvZ0lk.short_desc": {
+          "source": "ID of the target blog",
+          "message": "ID of the target blog"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.YmxvZ0lk.desc": {
+          "source": "The unique identifier of the blog where the new entry will be created. Required to associate the post with a specific blog.",
+          "message": "The unique identifier of the blog where the new entry will be created. Required to associate the post with a specific blog."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Title"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.dGl0bGU.short_desc": {
+          "source": "Blog post title",
+          "message": "Blog post title"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.dGl0bGU.desc": {
+          "source": "The headline or title of the blog post, displayed prominently to readers.",
+          "message": "The headline or title of the blog post, displayed prominently to readers."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.Y29udGVudA.display_name": {
+          "source": "Content",
+          "message": "Content"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.Y29udGVudA.short_desc": {
+          "source": "Blog post content",
+          "message": "Blog post content"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.Y29udGVudA.desc": {
+          "source": "The main body of the blog post, which can include text, HTML, or other formatted content to convey the message or story.",
+          "message": "The main body of the blog post, which can include text, HTML, or other formatted content to convey the message or story."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.YXV0aG9y.display_name": {
+          "source": "Author",
+          "message": "Author"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.YXV0aG9y.short_desc": {
+          "source": "Author of the blog post",
+          "message": "Author of the blog post"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.YXV0aG9y.desc": {
+          "source": "The name of the person or entity credited with writing the blog post, displayed as the author.",
+          "message": "The name of the person or entity credited with writing the blog post, displayed as the author."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.dGFncw.short_desc": {
+          "source": "Tags for the blog post",
+          "message": "Tags for the blog post"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.dGFncw.desc": {
+          "source": "A list of keywords or categories to tag the blog post, aiding in searchability and organization.",
+          "message": "A list of keywords or categories to tag the blog post, aiding in searchability and organization."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.c3VtbWFyeQ.display_name": {
+          "source": "Summary",
+          "message": "Summary"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.c3VtbWFyeQ.short_desc": {
+          "source": "Blog post summary",
+          "message": "Blog post summary"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.c3VtbWFyeQ.desc": {
+          "source": "A brief overview or excerpt of the blog post, often used as a teaser or preview in blog listings.",
+          "message": "A brief overview or excerpt of the blog post, often used as a teaser or preview in blog listings."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.cHVibGlzaGVk.display_name": {
+          "source": "Published",
+          "message": "Published"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.cHVibGlzaGVk.short_desc": {
+          "source": "Publication status",
+          "message": "Publication status"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.cHVibGlzaGVk.desc": {
+          "source": "Indicates whether the blog post is published (true) or saved as a draft (false) upon creation.",
+          "message": "Indicates whether the blog post is published (true) or saved as a draft (false) upon creation."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.aW1hZ2U.display_name": {
+          "source": "Image",
+          "message": "Image"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.aW1hZ2U.short_desc": {
+          "source": "Featured image for the post",
+          "message": "Featured image for the post"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWJsb2ctZW50cnk.option.aW1hZ2U.desc": {
+          "source": "The primary image associated with the blog post, used for visual appeal in previews or headers.",
+          "message": "The primary image associated with the blog post, used for visual appeal in previews or headers."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.display_name": {
+          "source": "Create Company",
+          "message": "Create Company"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.short_desc": {
+          "source": "Creates a new company in Shopify",
+          "message": "Creates a new company in Shopify"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.desc": {
+          "source": "Adds a new company entity to Shopify, typically for B2B purposes, including contact and location details for wholesale or enterprise customers.",
+          "message": "Adds a new company entity to Shopify, typically for B2B purposes, including contact and location details for wholesale or enterprise customers."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29tcGFueU5hbWU.display_name": {
+          "source": "Name",
+          "message": "Name"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29tcGFueU5hbWU.short_desc": {
+          "source": "Company name",
+          "message": "Company name"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29tcGFueU5hbWU.desc": {
+          "source": "The official name of the company, used for identification and display purposes.",
+          "message": "The official name of the company, used for identification and display purposes."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.ZXh0ZXJuYWxJZA.display_name": {
+          "source": "External ID",
+          "message": "External ID"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.ZXh0ZXJuYWxJZA.short_desc": {
+          "source": "External identifier",
+          "message": "External identifier"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.ZXh0ZXJuYWxJZA.desc": {
+          "source": "A unique identifier from an external system, useful for syncing or referencing the company outside Shopify.",
+          "message": "A unique identifier from an external system, useful for syncing or referencing the company outside Shopify."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bm90ZQ.display_name": {
+          "source": "Note",
+          "message": "Note"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bm90ZQ.short_desc": {
+          "source": "Company notes",
+          "message": "Company notes"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bm90ZQ.desc": {
+          "source": "Internal notes about the company, such as account details or special instructions.",
+          "message": "Internal notes about the company, such as account details or special instructions."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y3VzdG9tZXJTaW5jZQ.display_name": {
+          "source": "Customer Since",
+          "message": "Customer Since"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y3VzdG9tZXJTaW5jZQ.short_desc": {
+          "source": "Start date",
+          "message": "Start date"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y3VzdG9tZXJTaW5jZQ.desc": {
+          "source": "The date the company became a customer, formatted as a timestamp, useful for tracking tenure.",
+          "message": "The date the company became a customer, formatted as a timestamp, useful for tracking tenure."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.display_name": {
+          "source": "Contact Properties",
+          "message": "Contact Properties"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.short_desc": {
+          "source": "Primary contact details",
+          "message": "Primary contact details"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.Y29udGFjdFByb3BlcnRpZXM.desc": {
+          "source": "Details about the primary contact person for the company.",
+          "message": "Details about the primary contact person for the company."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.display_name": {
+          "source": "Location Properties",
+          "message": "Location Properties"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.short_desc": {
+          "source": "Company location details",
+          "message": "Company location details"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWNvbXBhbnk.option.bG9jYXRpb25Qcm9wZXJ0aWVz.desc": {
+          "source": "Details about the company’s physical location, including shipping and billing addresses.",
+          "message": "Details about the company’s physical location, including shipping and billing addresses."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.display_name": {
+          "source": "Create Customer",
+          "message": "Create Customer"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.short_desc": {
+          "source": "Creates a new customer in Shopify",
+          "message": "Creates a new customer in Shopify"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.desc": {
+          "source": "Adds a new customer to the Shopify store, allowing you to store their contact information, addresses, and marketing preferences for future orders and engagement.",
+          "message": "Adds a new customer to the Shopify store, allowing you to store their contact information, addresses, and marketing preferences for future orders and engagement."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "Email"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWw.short_desc": {
+          "source": "Customer email address",
+          "message": "Customer email address"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWw.desc": {
+          "source": "The primary email address of the customer, used for account creation, notifications, and marketing.",
+          "message": "The primary email address of the customer, used for account creation, notifications, and marketing."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.cGhvbmU.display_name": {
+          "source": "Phone",
+          "message": "Phone"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.cGhvbmU.short_desc": {
+          "source": "Customer phone number",
+          "message": "Customer phone number"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.cGhvbmU.desc": {
+          "source": "The customer’s phone number, useful for contact purposes and SMS marketing if consented.",
+          "message": "The customer’s phone number, useful for contact purposes and SMS marketing if consented."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.Zmlyc3ROYW1l.display_name": {
+          "source": "First Name",
+          "message": "First Name"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.Zmlyc3ROYW1l.short_desc": {
+          "source": "Customer first name",
+          "message": "Customer first name"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.Zmlyc3ROYW1l.desc": {
+          "source": "The first name of the customer, used for personalization and address details.",
+          "message": "The first name of the customer, used for personalization and address details."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.bGFzdE5hbWU.display_name": {
+          "source": "Last Name",
+          "message": "Last Name"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.bGFzdE5hbWU.short_desc": {
+          "source": "Customer last name",
+          "message": "Customer last name"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.bGFzdE5hbWU.desc": {
+          "source": "The last name of the customer, completing their full name for identification and shipping.",
+          "message": "The last name of the customer, completing their full name for identification and shipping."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.bG9jYWxl.display_name": {
+          "source": "Locale",
+          "message": "Locale"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.bG9jYWxl.short_desc": {
+          "source": "Customer language/region",
+          "message": "Customer language/region"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.bG9jYWxl.desc": {
+          "source": "The preferred language and region code for the customer, e.g., \"en-US\" or \"fr-CA\", affecting communication and formatting.",
+          "message": "The preferred language and region code for the customer, e.g., \"en-US\" or \"fr-CA\", affecting communication and formatting."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.bm90ZQ.display_name": {
+          "source": "Note",
+          "message": "Note"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.bm90ZQ.short_desc": {
+          "source": "Notes about the customer",
+          "message": "Notes about the customer"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.bm90ZQ.desc": {
+          "source": "Internal notes about the customer, such as preferences, special instructions, or account details.",
+          "message": "Internal notes about the customer, such as preferences, special instructions, or account details."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGF4RXhlbXB0.display_name": {
+          "source": "Tax Exempt",
+          "message": "Tax Exempt"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGF4RXhlbXB0.short_desc": {
+          "source": "Exempt customer from taxes",
+          "message": "Exempt customer from taxes"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGF4RXhlbXB0.desc": {
+          "source": "Indicates whether the customer is exempt from taxes on all purchases. Set to true for tax-exempt entities.",
+          "message": "Indicates whether the customer is exempt from taxes on all purchases. Set to true for tax-exempt entities."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGF4RXhlbXB0aW9ucw.display_name": {
+          "source": "Tax Exemptions",
+          "message": "Tax Exemptions"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGF4RXhlbXB0aW9ucw.short_desc": {
+          "source": "Specific tax exemptions",
+          "message": "Specific tax exemptions"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGF4RXhlbXB0aW9ucw.desc": {
+          "source": "A list of specific tax exemptions applied to the customer, such as regional or category-specific exemptions.",
+          "message": "A list of specific tax exemptions applied to the customer, such as regional or category-specific exemptions."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGFncw.short_desc": {
+          "source": "Customer tags",
+          "message": "Customer tags"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.dGFncw.desc": {
+          "source": "A list of tags to categorize or filter the customer, e.g., \"VIP\", \"wholesale\", \"new\".",
+          "message": "A list of tags to categorize or filter the customer, e.g., \"VIP\", \"wholesale\", \"new\"."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.display_name": {
+          "source": "Addresses",
+          "message": "Addresses"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.short_desc": {
+          "source": "Customer addresses",
+          "message": "Customer addresses"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.YWRkcmVzc2Vz.desc": {
+          "source": "The addresses for a customer.",
+          "message": "The addresses for a customer."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.display_name": {
+          "source": "Email Marketing Consent",
+          "message": "Email Marketing Consent"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.short_desc": {
+          "source": "Email marketing preferences",
+          "message": "Email marketing preferences"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.ZW1haWxNYXJrZXRpbmdDb25zZW50.desc": {
+          "source": "Details about the customer’s consent to receive email marketing communications.",
+          "message": "Details about the customer’s consent to receive email marketing communications."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.display_name": {
+          "source": "SMS Marketing Consent",
+          "message": "SMS Marketing Consent"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.short_desc": {
+          "source": "SMS marketing preferences",
+          "message": "SMS marketing preferences"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.c21zTWFya2V0aW5nQ29uc2VudA.desc": {
+          "source": "Details about the customer’s consent to receive SMS marketing messages.",
+          "message": "Details about the customer’s consent to receive SMS marketing messages."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.bWV0YWZpZWxkcw.display_name": {
+          "source": "Metafields",
+          "message": "Metafields"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.bWV0YWZpZWxkcw.short_desc": {
+          "source": "Custom metadata",
+          "message": "Custom metadata"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWN1c3RvbWVy.option.bWV0YWZpZWxkcw.desc": {
+          "source": "Additional metadata fields for the customer, useful for custom integrations or data storage.",
+          "message": "Additional metadata fields for the customer, useful for custom integrations or data storage."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.display_name": {
+          "source": "Create Draft Order",
+          "message": "Create Draft Order"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.short_desc": {
+          "source": "Creates a new draft order in Shopify",
+          "message": "Creates a new draft order in Shopify"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.desc": {
+          "source": "Generates a draft order that can be used to create an order manually, send invoices, or process payments later. Draft orders are useful for custom sales, wholesale orders, or pre-orders.",
+          "message": "Generates a draft order that can be used to create an order manually, send invoices, or process payments later. Draft orders are useful for custom sales, wholesale orders, or pre-orders."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.Y3VzdG9tZXJJZA.display_name": {
+          "source": "Customer ID",
+          "message": "Customer ID"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.Y3VzdG9tZXJJZA.short_desc": {
+          "source": "The ID of the customer for the draft order",
+          "message": "The ID of the customer for the draft order"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.Y3VzdG9tZXJJZA.desc": {
+          "source": "Specifies the unique identifier of the customer to associate with this draft order. Required if not using default address.",
+          "message": "Specifies the unique identifier of the customer to associate with this draft order. Required if not using default address."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "Email"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.ZW1haWw.short_desc": {
+          "source": "Customer email address",
+          "message": "Customer email address"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.ZW1haWw.desc": {
+          "source": "The email address of the customer, used for notifications and order confirmation.",
+          "message": "The email address of the customer, used for notifications and order confirmation."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGhvbmU.display_name": {
+          "source": "Phone",
+          "message": "Phone"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGhvbmU.short_desc": {
+          "source": "Customer phone number",
+          "message": "Customer phone number"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGhvbmU.desc": {
+          "source": "The phone number of the customer, useful for shipping updates or contact purposes.",
+          "message": "The phone number of the customer, useful for shipping updates or contact purposes."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bm90ZQ.display_name": {
+          "source": "Note",
+          "message": "Note"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bm90ZQ.short_desc": {
+          "source": "Additional notes for the draft order",
+          "message": "Additional notes for the draft order"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bm90ZQ.desc": {
+          "source": "A field for adding internal notes about the draft order, such as special instructions or context.",
+          "message": "A field for adding internal notes about the draft order, such as special instructions or context."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGF4RXhlbXB0.display_name": {
+          "source": "Tax Exempt",
+          "message": "Tax Exempt"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGF4RXhlbXB0.short_desc": {
+          "source": "Exempt order from taxes",
+          "message": "Exempt order from taxes"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGF4RXhlbXB0.desc": {
+          "source": "Indicates whether the entire order is exempt from taxes. Set to true for tax-exempt customers.",
+          "message": "Indicates whether the entire order is exempt from taxes. Set to true for tax-exempt customers."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGF4RXhlbXB0aW9ucw.display_name": {
+          "source": "Tax Exemptions",
+          "message": "Tax Exemptions"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGF4RXhlbXB0aW9ucw.short_desc": {
+          "source": "Specific tax exemptions",
+          "message": "Specific tax exemptions"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGF4RXhlbXB0aW9ucw.desc": {
+          "source": "List of specific tax exemptions applied to the draft order, such as regional or product-specific exemptions.",
+          "message": "List of specific tax exemptions applied to the draft order, such as regional or product-specific exemptions."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGFncw.short_desc": {
+          "source": "Tags for the draft order",
+          "message": "Tags for the draft order"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dGFncw.desc": {
+          "source": "A list of tags to categorize or filter the draft order, e.g., \"wholesale\", \"pre-order\".",
+          "message": "A list of tags to categorize or filter the draft order, e.g., \"wholesale\", \"pre-order\"."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.display_name": {
+          "source": "Shipping Address",
+          "message": "Shipping Address"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.short_desc": {
+          "source": "Customer shipping address",
+          "message": "Customer shipping address"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdBZGRyZXNz.desc": {
+          "source": "The full shipping address where the order will be delivered, including all relevant fields.",
+          "message": "The full shipping address where the order will be delivered, including all relevant fields."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.display_name": {
+          "source": "Billing Address",
+          "message": "Billing Address"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.short_desc": {
+          "source": "Customer billing address",
+          "message": "Customer billing address"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YmlsbGluZ0FkZHJlc3M.desc": {
+          "source": "The address used for billing purposes, which may differ from the shipping address.",
+          "message": "The address used for billing purposes, which may differ from the shipping address."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dXNlQ3VzdG9tZXJEZWZhdWx0QWRkcmVzcw.display_name": {
+          "source": "Use Customer Default Address",
+          "message": "Use Customer Default Address"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dXNlQ3VzdG9tZXJEZWZhdWx0QWRkcmVzcw.short_desc": {
+          "source": "Use customer’s default address",
+          "message": "Use customer’s default address"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dXNlQ3VzdG9tZXJEZWZhdWx0QWRkcmVzcw.desc": {
+          "source": "If true, uses the customer’s default shipping and billing address instead of custom ones.",
+          "message": "If true, uses the customer’s default shipping and billing address instead of custom ones."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.display_name": {
+          "source": "Line Items",
+          "message": "Line Items"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.short_desc": {
+          "source": "Products in the draft order",
+          "message": "Products in the draft order"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bGluZUl0ZW1z.desc": {
+          "source": "A list of products or variants included in the draft order, with details like quantity and price.",
+          "message": "A list of products or variants included in the draft order, with details like quantity and price."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.display_name": {
+          "source": "Applied Discount",
+          "message": "Applied Discount"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.short_desc": {
+          "source": "Order-wide discount",
+          "message": "Order-wide discount"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YXBwbGllZERpc2NvdW50.desc": {
+          "source": "Details of a discount applied to the entire draft order.",
+          "message": "Details of a discount applied to the entire draft order."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.display_name": {
+          "source": "Shipping Line",
+          "message": "Shipping Line"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.short_desc": {
+          "source": "Shipping details",
+          "message": "Shipping details"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c2hpcHBpbmdMaW5l.desc": {
+          "source": "Details about the shipping method and cost for the draft order.",
+          "message": "Details about the shipping method and cost for the draft order."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.Y3VzdG9tQXR0cmlidXRlcw.display_name": {
+          "source": "Custom Attributes",
+          "message": "Custom Attributes"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.Y3VzdG9tQXR0cmlidXRlcw.short_desc": {
+          "source": "Order custom attributes",
+          "message": "Order custom attributes"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.Y3VzdG9tQXR0cmlidXRlcw.desc": {
+          "source": "Key-value pairs for adding custom metadata to the draft order.",
+          "message": "Key-value pairs for adding custom metadata to the draft order."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YWxsb3dEaXNjb3VudENvZGVzSW5DaGVja291dA.display_name": {
+          "source": "Allow Discount Codes in Checkout",
+          "message": "Allow Discount Codes in Checkout"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YWxsb3dEaXNjb3VudENvZGVzSW5DaGVja291dA.short_desc": {
+          "source": "Enable discount codes",
+          "message": "Enable discount codes"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YWxsb3dEaXNjb3VudENvZGVzSW5DaGVja291dA.desc": {
+          "source": "If true, allows customers to apply discount codes during checkout from this draft order.",
+          "message": "If true, allows customers to apply discount codes during checkout from this draft order."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YWNjZXB0QXV0b21hdGljRGlzY291bnRz.display_name": {
+          "source": "Accept Automatic Discounts",
+          "message": "Accept Automatic Discounts"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YWNjZXB0QXV0b21hdGljRGlzY291bnRz.short_desc": {
+          "source": "Apply automatic discounts",
+          "message": "Apply automatic discounts"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.YWNjZXB0QXV0b21hdGljRGlzY291bnRz.desc": {
+          "source": "If true, automatically applies any eligible store-wide discounts to the draft order.",
+          "message": "If true, automatically applies any eligible store-wide discounts to the draft order."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.ZGlzY291bnRDb2Rlcw.display_name": {
+          "source": "Discount Codes",
+          "message": "Discount Codes"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.ZGlzY291bnRDb2Rlcw.short_desc": {
+          "source": "List of discount codes",
+          "message": "List of discount codes"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.ZGlzY291bnRDb2Rlcw.desc": {
+          "source": "A list of discount codes to apply to the draft order.",
+          "message": "A list of discount codes to apply to the draft order."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bWV0YWZpZWxkcw.display_name": {
+          "source": "Metafields",
+          "message": "Metafields"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bWV0YWZpZWxkcw.short_desc": {
+          "source": "Custom metadata",
+          "message": "Custom metadata"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bWV0YWZpZWxkcw.desc": {
+          "source": "Additional metadata fields for the draft order, useful for custom integrations.",
+          "message": "Additional metadata fields for the draft order, useful for custom integrations."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bG9jYWxpemVkRmllbGRz.display_name": {
+          "source": "Localized Fields",
+          "message": "Localized Fields"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bG9jYWxpemVkRmllbGRz.short_desc": {
+          "source": "Localized content",
+          "message": "Localized content"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.bG9jYWxpemVkRmllbGRz.desc": {
+          "source": "Fields that support localized content for different regions or languages.",
+          "message": "Fields that support localized content for different regions or languages."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHJlc2VudG1lbnRDdXJyZW5jeUNvZGU.display_name": {
+          "source": "Presentment Currency Code",
+          "message": "Presentment Currency Code"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHJlc2VudG1lbnRDdXJyZW5jeUNvZGU.short_desc": {
+          "source": "Display currency",
+          "message": "Display currency"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHJlc2VudG1lbnRDdXJyZW5jeUNvZGU.desc": {
+          "source": "The ISO 4217 currency code for displaying prices to the customer, e.g., USD, CAD.",
+          "message": "The ISO 4217 currency code for displaying prices to the customer, e.g., USD, CAD."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cG9OdW1iZXI.display_name": {
+          "source": "PO Number",
+          "message": "PO Number"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cG9OdW1iZXI.short_desc": {
+          "source": "Purchase order number",
+          "message": "Purchase order number"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cG9OdW1iZXI.desc": {
+          "source": "The purchase order number associated with the draft order, often used for B2B transactions.",
+          "message": "The purchase order number associated with the draft order, often used for B2B transactions."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.display_name": {
+          "source": "Payment Terms",
+          "message": "Payment Terms"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.short_desc": {
+          "source": "Payment conditions",
+          "message": "Payment conditions"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cGF5bWVudFRlcm1z.desc": {
+          "source": "Defines the payment terms for the draft order, such as due dates or schedules.",
+          "message": "Defines the payment terms for the draft order, such as due dates or schedules."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.display_name": {
+          "source": "Purchasing Entity",
+          "message": "Purchasing Entity"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.short_desc": {
+          "source": "Buyer details",
+          "message": "Buyer details"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cHVyY2hhc2luZ0VudGl0eQ.desc": {
+          "source": "Details about the entity making the purchase, such as a company or individual.",
+          "message": "Details about the entity making the purchase, such as a company or individual."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cmVzZXJ2ZUludmVudG9yeVVudGls.display_name": {
+          "source": "Reserve Inventory Until",
+          "message": "Reserve Inventory Until"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cmVzZXJ2ZUludmVudG9yeVVudGls.short_desc": {
+          "source": "Inventory reservation deadline",
+          "message": "Inventory reservation deadline"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.cmVzZXJ2ZUludmVudG9yeVVudGls.desc": {
+          "source": "The date and time until which the inventory is reserved for this draft order.",
+          "message": "The date and time until which the inventory is reserved for this draft order."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c291cmNlTmFtZQ.display_name": {
+          "source": "Source Name",
+          "message": "Source Name"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c291cmNlTmFtZQ.short_desc": {
+          "source": "Order source",
+          "message": "Order source"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.c291cmNlTmFtZQ.desc": {
+          "source": "The source of the draft order, e.g., \"web\", \"manual\", or an app name.",
+          "message": "The source of the draft order, e.g., \"web\", \"manual\", or an app name."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dmlzaWJsZVRvQ3VzdG9tZXI.display_name": {
+          "source": "Visible to Customer",
+          "message": "Visible to Customer"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dmlzaWJsZVRvQ3VzdG9tZXI.short_desc": {
+          "source": "Customer visibility",
+          "message": "Customer visibility"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWRyYWZ0LW9yZGVy.option.dmlzaWJsZVRvQ3VzdG9tZXI.desc": {
+          "source": "If true, the draft order is visible to the customer, e.g., in their account.",
+          "message": "If true, the draft order is visible to the customer, e.g., in their account."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.display_name": {
+          "source": "Create Fulfillment",
+          "message": "Create Fulfillment"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.short_desc": {
+          "source": "Process and ship an order",
+          "message": "Process and ship an order"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.desc": {
+          "source": "Create a fulfillment for an order, handling shipping and tracking information",
+          "message": "Create a fulfillment for an order, handling shipping and tracking information"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlcklk.display_name": {
+          "source": "Fulfillment Order ID",
+          "message": "Fulfillment Order ID"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlcklk.short_desc": {
+          "source": "Unique fulfillment order identifier",
+          "message": "Unique fulfillment order identifier"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlcklk.desc": {
+          "source": "The specific fulfillment order being processed",
+          "message": "The specific fulfillment order being processed"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlckxpbmVJdGVtcw.display_name": {
+          "source": "Fulfillment Order Line Items",
+          "message": "Fulfillment Order Line Items"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlckxpbmVJdGVtcw.short_desc": {
+          "source": "Items in the fulfillment order",
+          "message": "Items in the fulfillment order"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.ZnVsZmlsbG1lbnRPcmRlckxpbmVJdGVtcw.desc": {
+          "source": "Specific line items within the fulfillment order",
+          "message": "Specific line items within the fulfillment order"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.bm90aWZ5Q3VzdG9tZXI.display_name": {
+          "source": "Notify Customer",
+          "message": "Notify Customer"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.bm90aWZ5Q3VzdG9tZXI.short_desc": {
+          "source": "Send shipping notification",
+          "message": "Send shipping notification"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.bm90aWZ5Q3VzdG9tZXI.desc": {
+          "source": "Determines whether to send a notification to the customer about the fulfillment",
+          "message": "Determines whether to send a notification to the customer about the fulfillment"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.display_name": {
+          "source": "Tracking Information",
+          "message": "Tracking Information"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.short_desc": {
+          "source": "Shipping tracking details",
+          "message": "Shipping tracking details"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.dHJhY2tpbmdJbmZv.desc": {
+          "source": "Information for tracking the shipment",
+          "message": "Information for tracking the shipment"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.display_name": {
+          "source": "Origin Address",
+          "message": "Origin Address"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.short_desc": {
+          "source": "Shipping origin location",
+          "message": "Shipping origin location"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.b3JpZ2luQWRkcmVzcw.desc": {
+          "source": "The address from which the items are being shipped",
+          "message": "The address from which the items are being shipped"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "Message"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.bWVzc2FnZQ.short_desc": {
+          "source": "Additional fulfillment notes",
+          "message": "Additional fulfillment notes"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWZ1bGZpbGxtZW50.option.bWVzc2FnZQ.desc": {
+          "source": "Any additional information or notes about the fulfillment",
+          "message": "Any additional information or notes about the fulfillment"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.display_name": {
+          "source": "Create Gift Card",
+          "message": "Create Gift Card"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.short_desc": {
+          "source": "Generate a new gift card",
+          "message": "Generate a new gift card"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.desc": {
+          "source": "Create a gift card with customizable parameters like initial value, expiration, and recipient details",
+          "message": "Create a gift card with customizable parameters like initial value, expiration, and recipient details"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.aW5pdGlhbFZhbHVl.display_name": {
+          "source": "Initial Value",
+          "message": "Initial Value"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.aW5pdGlhbFZhbHVl.short_desc": {
+          "source": "Starting balance of gift card",
+          "message": "Starting balance of gift card"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.aW5pdGlhbFZhbHVl.desc": {
+          "source": "The initial monetary amount loaded onto the gift card",
+          "message": "The initial monetary amount loaded onto the gift card"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.Y3VzdG9tZXJJZA.display_name": {
+          "source": "Customer ID",
+          "message": "Customer ID"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.Y3VzdG9tZXJJZA.short_desc": {
+          "source": "ID of gift card recipient",
+          "message": "ID of gift card recipient"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.Y3VzdG9tZXJJZA.desc": {
+          "source": "The unique identifier of the customer receiving the gift card",
+          "message": "The unique identifier of the customer receiving the gift card"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.bm90ZQ.display_name": {
+          "source": "Note",
+          "message": "Note"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.bm90ZQ.short_desc": {
+          "source": "Additional gift card information",
+          "message": "Additional gift card information"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.bm90ZQ.desc": {
+          "source": "A personal message or additional details about the gift card",
+          "message": "A personal message or additional details about the gift card"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.ZXhwaXJlc09u.display_name": {
+          "source": "Expiration Date",
+          "message": "Expiration Date"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.ZXhwaXJlc09u.short_desc": {
+          "source": "Date when gift card expires",
+          "message": "Date when gift card expires"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.ZXhwaXJlc09u.desc": {
+          "source": "The date after which the gift card will no longer be valid",
+          "message": "The date after which the gift card will no longer be valid"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.Y29kZQ.display_name": {
+          "source": "Gift Card Code",
+          "message": "Gift Card Code"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.Y29kZQ.short_desc": {
+          "source": "Unique gift card identifier",
+          "message": "Unique gift card identifier"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.Y29kZQ.desc": {
+          "source": "The specific code used to redeem the gift card",
+          "message": "The specific code used to redeem the gift card"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.dGVtcGxhdGVTdWZmaXg.display_name": {
+          "source": "Template Suffix",
+          "message": "Template Suffix"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.dGVtcGxhdGVTdWZmaXg.short_desc": {
+          "source": "Customization of gift card template",
+          "message": "Customization of gift card template"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.dGVtcGxhdGVTdWZmaXg.desc": {
+          "source": "Optional suffix to customize the gift card's appearance or template",
+          "message": "Optional suffix to customize the gift card's appearance or template"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.display_name": {
+          "source": "Recipient Attributes",
+          "message": "Recipient Attributes"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.short_desc": {
+          "source": "Details about gift card recipient",
+          "message": "Details about gift card recipient"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLWdpZnQtY2FyZA.option.cmVjaXBpZW50QXR0cmlidXRlcw.desc": {
+          "source": "Additional information about the person receiving the gift card",
+          "message": "Additional information about the person receiving the gift card"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.display_name": {
+          "source": "Create Transaction",
+          "message": "Create Transaction"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.short_desc": {
+          "source": "Creates a transaction for an order",
+          "message": "Creates a transaction for an order"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.desc": {
+          "source": "Records a financial transaction (e.g., payment, refund) for a specific order in Shopify, linked to a payment gateway.",
+          "message": "Records a financial transaction (e.g., payment, refund) for a specific order in Shopify, linked to a payment gateway."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.b3JkZXJJZA.display_name": {
+          "source": "Order ID",
+          "message": "Order ID"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.b3JkZXJJZA.short_desc": {
+          "source": "ID of the order",
+          "message": "ID of the order"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.b3JkZXJJZA.desc": {
+          "source": "The unique identifier of the order to which this transaction applies. Required to associate the transaction correctly.",
+          "message": "The unique identifier of the order to which this transaction applies. Required to associate the transaction correctly."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.YW1vdW50.display_name": {
+          "source": "Amount",
+          "message": "Amount"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.YW1vdW50.short_desc": {
+          "source": "Transaction amount",
+          "message": "Transaction amount"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.YW1vdW50.desc": {
+          "source": "The numerical value of the transaction, such as the amount paid or refunded.",
+          "message": "The numerical value of the transaction, such as the amount paid or refunded."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.Y3VycmVuY3k.display_name": {
+          "source": "Currency",
+          "message": "Currency"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.Y3VycmVuY3k.short_desc": {
+          "source": "Transaction currency",
+          "message": "Transaction currency"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.Y3VycmVuY3k.desc": {
+          "source": "The ISO 4217 currency code for the transaction amount, e.g., \"USD\", \"EUR\".",
+          "message": "The ISO 4217 currency code for the transaction amount, e.g., \"USD\", \"EUR\"."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.dHlwZQ.display_name": {
+          "source": "Type",
+          "message": "Type"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.dHlwZQ.short_desc": {
+          "source": "Transaction type",
+          "message": "Transaction type"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.dHlwZQ.desc": {
+          "source": "The type of the transaction",
+          "message": "The type of the transaction"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.dHlwZQ.allowed-value.c3RyaW5nOkNBUFRVUkU.display_name": {
+          "source": "Capture",
+          "message": "Capture"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.dHlwZQ.allowed-value.c3RyaW5nOlNBTEU.display_name": {
+          "source": "Sale",
+          "message": "Sale"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.dHlwZQ.allowed-value.c3RyaW5nOlZPSUQ.display_name": {
+          "source": "Void",
+          "message": "Void"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.dHlwZQ.allowed-value.c3RyaW5nOlJFRlVORA.display_name": {
+          "source": "Refund",
+          "message": "Refund"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.cGFyZW50VHJhbnNhY3Rpb25JZA.display_name": {
+          "source": "Parent Transaction ID",
+          "message": "Parent Transaction ID"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.cGFyZW50VHJhbnNhY3Rpb25JZA.short_desc": {
+          "source": "ID of parent transaction",
+          "message": "ID of parent transaction"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.cGFyZW50VHJhbnNhY3Rpb25JZA.desc": {
+          "source": "The ID of a previous transaction this one relates to, e.g., for refunds or captures linked to an authorization.",
+          "message": "The ID of a previous transaction this one relates to, e.g., for refunds or captures linked to an authorization."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.Z2F0ZXdheQ.display_name": {
+          "source": "Gateway",
+          "message": "Gateway"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.Z2F0ZXdheQ.short_desc": {
+          "source": "Payment gateway",
+          "message": "Payment gateway"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.Z2F0ZXdheQ.desc": {
+          "source": "The payment gateway used for the transaction, e.g., \"shopify_payments\", \"paypal\", or a custom gateway name.",
+          "message": "The payment gateway used for the transaction, e.g., \"shopify_payments\", \"paypal\", or a custom gateway name."
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.Z2F0ZXdheQ.allowed-value.c3RyaW5nOmJvZ3Vz.display_name": {
+          "source": "Bogus (Test Gateway)",
+          "message": "Bogus (Test Gateway)"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.Z2F0ZXdheQ.allowed-value.c3RyaW5nOm1hbnVhbA.display_name": {
+          "source": "Manual",
+          "message": "Manual"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.Z2F0ZXdheQ.allowed-value.c3RyaW5nOmNhc2g.display_name": {
+          "source": "Cash",
+          "message": "Cash"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.Z2F0ZXdheQ.allowed-value.c3RyaW5nOmdpZnRfY2FyZA.display_name": {
+          "source": "Gift Card",
+          "message": "Gift Card"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.ZmluYWxDYXB0dXJl.display_name": {
+          "source": "Final Capture",
+          "message": "Final Capture"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.ZmluYWxDYXB0dXJl.short_desc": {
+          "source": "Complete capture flag",
+          "message": "Complete capture flag"
+        },
+        "app.U2hvcGlmeQ.action.Y3JlYXRlLXRyYW5zYWN0aW9u.option.ZmluYWxDYXB0dXJl.desc": {
+          "source": "If true, indicates this is the final capture of funds for an authorization; if false, partial captures may follow.",
+          "message": "If true, indicates this is the final capture of funds for an authorization; if false, partial captures may follow."
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1hYmFuZG9uZWQtY2FydC10cmlnZ2Vy.display_name": {
+          "source": "Shopify New Abandoned Cart",
+          "message": "Shopify New Abandoned Cart"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1hYmFuZG9uZWQtY2FydC10cmlnZ2Vy.short_desc": {
+          "source": "Triggers when a customer abandons a checkout in Shopify",
+          "message": "Triggers when a customer abandons a checkout in Shopify"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1hYmFuZG9uZWQtY2FydC10cmlnZ2Vy.desc": {
+          "source": "This trigger activates when a Shopify checkout is created but not completed within the specified time window. Use this to send recovery emails, offer discounts, or analyze cart abandonment patterns.",
+          "message": "This trigger activates when a Shopify checkout is created but not completed within the specified time window. Use this to send recovery emails, offer discounts, or analyze cart abandonment patterns."
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1hYmFuZG9uZWQtY2FydC10cmlnZ2Vy.option.YWJhbmRvbmVkSG91cnM.display_name": {
+          "source": "Abandoned Hours",
+          "message": "Abandoned Hours"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1hYmFuZG9uZWQtY2FydC10cmlnZ2Vy.option.YWJhbmRvbmVkSG91cnM.short_desc": {
+          "source": "Time window to consider a cart abandoned",
+          "message": "Time window to consider a cart abandoned"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1hYmFuZG9uZWQtY2FydC10cmlnZ2Vy.option.YWJhbmRvbmVkSG91cnM.desc": {
+          "source": "The number of hours to look back for abandoned carts",
+          "message": "The number of hours to look back for abandoned carts"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLXRyaWdnZXI.display_name": {
+          "source": "Shopify Blog Created",
+          "message": "Shopify Blog Created"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLXRyaWdnZXI.short_desc": {
+          "source": "Triggers when a new blog is created in Shopify",
+          "message": "Triggers when a new blog is created in Shopify"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLXRyaWdnZXI.desc": {
+          "source": "This trigger activates whenever a new blog (not an article) is created in your Shopify store. Use this to monitor blog creation or automate follow-up tasks.",
+          "message": "This trigger activates whenever a new blog (not an article) is created in your Shopify store. Use this to monitor blog creation or automate follow-up tasks."
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLWVudHJ5LXRyaWdnZXI.display_name": {
+          "source": "Shopify New Blog Article",
+          "message": "Shopify New Blog Article"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLWVudHJ5LXRyaWdnZXI.short_desc": {
+          "source": "Triggers when a blog article is created or published",
+          "message": "Triggers when a blog article is created or published"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLWVudHJ5LXRyaWdnZXI.desc": {
+          "source": "This trigger activates when a new article is created or published in a specified Shopify blog. Use this to automate social media sharing, email notifications, or content distribution workflows.",
+          "message": "This trigger activates when a new article is created or published in a specified Shopify blog. Use this to automate social media sharing, email notifications, or content distribution workflows."
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLWVudHJ5LXRyaWdnZXI.option.YmxvZ190aXRsZQ.display_name": {
+          "source": "Blog",
+          "message": "Blog"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLWVudHJ5LXRyaWdnZXI.option.YmxvZ190aXRsZQ.short_desc": {
+          "source": "Select the blog to monitor",
+          "message": "Select the blog to monitor"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1ibG9nLWVudHJ5LXRyaWdnZXI.option.YmxvZ190aXRsZQ.desc": {
+          "source": "Choose which Shopify blog to monitor for new articles.",
+          "message": "Choose which Shopify blog to monitor for new articles."
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1jdXN0b21lci1jcmVhdGVkLXRyaWdnZXI.display_name": {
+          "source": "Shopify Customer Created",
+          "message": "Shopify Customer Created"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1jdXN0b21lci1jcmVhdGVkLXRyaWdnZXI.short_desc": {
+          "source": "Triggers when a new customer account is created",
+          "message": "Triggers when a new customer account is created"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1jdXN0b21lci1jcmVhdGVkLXRyaWdnZXI.desc": {
+          "source": "This trigger activates whenever a new customer registers or is created in your Shopify store. Use this to send welcome emails, add customers to marketing lists, or create records in other systems.",
+          "message": "This trigger activates whenever a new customer registers or is created in your Shopify store. Use this to send welcome emails, add customers to marketing lists, or create records in other systems."
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1jdXN0b21lci11cGRhdGVkLXRyaWdnZXI.display_name": {
+          "source": "Shopify Customer Updated",
+          "message": "Shopify Customer Updated"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1jdXN0b21lci11cGRhdGVkLXRyaWdnZXI.short_desc": {
+          "source": "Triggers when customer information is modified",
+          "message": "Triggers when customer information is modified"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1jdXN0b21lci11cGRhdGVkLXRyaWdnZXI.desc": {
+          "source": "This trigger activates whenever customer information is updated in your Shopify store. Use this to sync customer data with other systems, track specific customer changes, or update marketing preferences.",
+          "message": "This trigger activates whenever customer information is updated in your Shopify store. Use this to sync customer data with other systems, track specific customer changes, or update marketing preferences."
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.display_name": {
+          "source": "Shopify New Order",
+          "message": "Shopify New Order"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when a new order is placed with the specified status",
+          "message": "Triggers when a new order is placed with the specified status"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.desc": {
+          "source": "This trigger activates when a new order is created in your Shopify store that matches the specified status filter. Use this to process orders, update inventory in other systems, or send custom notifications based on order status.",
+          "message": "This trigger activates when a new order is created in your Shopify store that matches the specified status filter. Use this to process orders, update inventory in other systems, or send custom notifications based on order status."
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.option.b3JkZXJTdGF0dXM.display_name": {
+          "source": "Order Status",
+          "message": "Order Status"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.option.b3JkZXJTdGF0dXM.short_desc": {
+          "source": "Filter orders by their status",
+          "message": "Filter orders by their status"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.option.b3JkZXJTdGF0dXM.desc": {
+          "source": "The status of orders to monitor",
+          "message": "The status of orders to monitor"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.option.b3JkZXJTdGF0dXM.allowed-value.c3RyaW5nOkFOWQ.display_name": {
+          "source": "Any Status",
+          "message": "Any Status"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.option.b3JkZXJTdGF0dXM.allowed-value.c3RyaW5nOk9QRU4.display_name": {
+          "source": "Open",
+          "message": "Open"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.option.b3JkZXJTdGF0dXM.allowed-value.c3RyaW5nOkNMT1NFRA.display_name": {
+          "source": "Closed",
+          "message": "Closed"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.option.b3JkZXJTdGF0dXM.allowed-value.c3RyaW5nOkNBTkNFTExFRA.display_name": {
+          "source": "Cancelled",
+          "message": "Cancelled"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.option.b3JkZXJTdGF0dXM.allowed-value.c3RyaW5nOkZVTEZJTExFRA.display_name": {
+          "source": "Fulfilled",
+          "message": "Fulfilled"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.option.b3JkZXJTdGF0dXM.allowed-value.c3RyaW5nOlBBSUQ.display_name": {
+          "source": "Paid",
+          "message": "Paid"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.option.b3JkZXJTdGF0dXM.allowed-value.c3RyaW5nOlVOUEFJRA.display_name": {
+          "source": "Unpaid",
+          "message": "Unpaid"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.option.b3JkZXJTdGF0dXM.allowed-value.c3RyaW5nOkFVVEhPUklaRUQ.display_name": {
+          "source": "Authorized",
+          "message": "Authorized"
+        },
+        "app.U2hvcGlmeQ.action.c2hvcGlmeS1uZXctb3JkZXItdHJpZ2dlcg.option.b3JkZXJTdGF0dXM.allowed-value.c3RyaW5nOlBFTkRJTkc.display_name": {
+          "source": "Pending",
+          "message": "Pending"
+        }
+      }
+    }
+  }
+}

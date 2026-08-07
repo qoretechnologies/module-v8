@@ -1,0 +1,821 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "root": {
+      "messages": {
+        "app.RmlyZWJhc2U.display_name": {
+          "source": "Firebase",
+          "message": "Firebase"
+        },
+        "app.RmlyZWJhc2U.short_desc": {
+          "source": "Connect to Firebase to manage files, users and push notifications",
+          "message": "Connect to Firebase to manage files, users and push notifications"
+        },
+        "app.RmlyZWJhc2U.desc": {
+          "source": "The Firebase integration provides comprehensive access to Firebase services including Cloud Storage for file management, Authentication for user management, and Firebase Cloud Messaging for push notifications. Automate file uploads, user account operations, and notification delivery across your Firebase projects.",
+          "message": "The Firebase integration provides comprehensive access to Firebase services including Cloud Storage for file management, Authentication for user management, and Firebase Cloud Messaging for push notifications. Automate file uploads, user account operations, and notification delivery across your Firebase projects."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Make an API call"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Firebase",
+          "message": "Make a custom API call to Firebase"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Firebase** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Make a custom HTTP / REST API call to **Firebase** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP Method"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI Path"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body Type"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "How the body is serialized and what Content-Type is sent"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; use connection serialization and let the REST client decide"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serialize body as JSON"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serialize body as application/x-www-form-urlencoded form fields"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans)."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Upload a file using multipart/form-data"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Send body as XML"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Send body as YAML"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Plain Text"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Send body as text/plain"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Raw Binary"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Send body as raw bytes"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "The request body"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Path Variables"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Values for {name} placeholders in path"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Query Arguments"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Query string parameters"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Custom Headers"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Extra request headers"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default)."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Expected Status Codes"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Response status codes treated as success"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws)."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Return Errors as Data"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Return non-2xx responses normally instead of throwing"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Include Debug Info"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Include request/timing/size debug info in the response"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.display_name": {
+          "source": "List Users",
+          "message": "List Users"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.short_desc": {
+          "source": "Retrieve a list of users from Firebase Authentication",
+          "message": "Retrieve a list of users from Firebase Authentication"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.desc": {
+          "source": "Fetches users from Firebase Authentication with support for pagination. Returns user details including email, display name, verification status, and authentication metadata. Use pagination parameters to retrieve large user lists efficiently.",
+          "message": "Fetches users from Firebase Authentication with support for pagination. Returns user details including email, display name, verification status, and authentication metadata. Use pagination parameters to retrieve large user lists efficiently."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Firebase project to query",
+          "message": "The Firebase project to query"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Firebase project from which you want to retrieve users. The project must have Firebase Authentication enabled.",
+          "message": "Select the Firebase project from which you want to retrieve users. The project must have Firebase Authentication enabled."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bWF4X3Jlc3VsdHM.display_name": {
+          "source": "Max Results",
+          "message": "Max Results"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bWF4X3Jlc3VsdHM.short_desc": {
+          "source": "Maximum number of users to return",
+          "message": "Maximum number of users to return"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bWF4X3Jlc3VsdHM.desc": {
+          "source": "Specify the maximum number of users to retrieve in a single request. Defaults to 100 if not specified. Use pagination for larger datasets.",
+          "message": "Specify the maximum number of users to retrieve in a single request. Defaults to 100 if not specified. Use pagination for larger datasets."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
+          "source": "Next Page Token",
+          "message": "Next Page Token"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
+          "source": "Token for retrieving the next page of results",
+          "message": "Token for retrieving the next page of results"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.desc": {
+          "source": "Provide the pagination token from a previous response to retrieve the next set of users. Leave empty for the first page.",
+          "message": "Provide the pagination token from a previous response to retrieve the next set of users. Leave empty for the first page."
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.display_name": {
+          "source": "Get User",
+          "message": "Get User"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.short_desc": {
+          "source": "Retrieve detailed information about a specific Firebase user",
+          "message": "Retrieve detailed information about a specific Firebase user"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.desc": {
+          "source": "Fetches comprehensive details for a specific user from Firebase Authentication including email, display name, photo URL, verification status, account creation date, and custom attributes. Useful for user profile lookups and account verification.",
+          "message": "Fetches comprehensive details for a specific user from Firebase Authentication including email, display name, photo URL, verification status, account creation date, and custom attributes. Useful for user profile lookups and account verification."
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Firebase project containing the user",
+          "message": "The Firebase project containing the user"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Firebase project where the user account exists. The project must have Firebase Authentication enabled.",
+          "message": "Select the Firebase project where the user account exists. The project must have Firebase Authentication enabled."
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "User ID"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.option.dXNlcl9pZA.short_desc": {
+          "source": "The unique identifier of the user",
+          "message": "The unique identifier of the user"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.option.dXNlcl9pZA.desc": {
+          "source": "Specify the Firebase user ID (localId) of the user whose details you want to retrieve. This is the unique identifier assigned by Firebase Authentication.",
+          "message": "Specify the Firebase user ID (localId) of the user whose details you want to retrieve. This is the unique identifier assigned by Firebase Authentication."
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.display_name": {
+          "source": "Send Push Notification",
+          "message": "Send Push Notification"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.short_desc": {
+          "source": "Send a push notification via Firebase Cloud Messaging",
+          "message": "Send a push notification via Firebase Cloud Messaging"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.desc": {
+          "source": "Sends push notifications to specific device tokens or topics using Firebase Cloud Messaging (FCM). Supports rich notifications with titles, body text, images, and custom data payloads. Configure priority levels for Android and iOS delivery.",
+          "message": "Sends push notifications to specific device tokens or topics using Firebase Cloud Messaging (FCM). Supports rich notifications with titles, body text, images, and custom data payloads. Configure priority levels for Android and iOS delivery."
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Firebase project for sending notifications",
+          "message": "The Firebase project for sending notifications"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Firebase project that will send the push notification. The project must have Firebase Cloud Messaging configured.",
+          "message": "Select the Firebase project that will send the push notification. The project must have Firebase Cloud Messaging configured."
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dG9rZW5fb3JfdG9waWM.display_name": {
+          "source": "Token or Topic",
+          "message": "Token or Topic"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dG9rZW5fb3JfdG9waWM.short_desc": {
+          "source": "Device token or topic name",
+          "message": "Device token or topic name"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dG9rZW5fb3JfdG9waWM.desc": {
+          "source": "Specify either a device registration token for sending to a specific device, or a topic name (prefixed with /topics/) for sending to all devices subscribed to that topic.",
+          "message": "Specify either a device registration token for sending to a specific device, or a topic name (prefixed with /topics/) for sending to all devices subscribed to that topic."
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Title"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dGl0bGU.short_desc": {
+          "source": "Notification title",
+          "message": "Notification title"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dGl0bGU.desc": {
+          "source": "The title text that will be displayed in the notification. Keep it concise and informative.",
+          "message": "The title text that will be displayed in the notification. Keep it concise and informative."
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.Ym9keQ.short_desc": {
+          "source": "Notification message body",
+          "message": "Notification message body"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.Ym9keQ.desc": {
+          "source": "The main content of the notification message. This text appears below the title in the notification display.",
+          "message": "The main content of the notification message. This text appears below the title in the notification display."
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.aW1hZ2U.display_name": {
+          "source": "Image",
+          "message": "Image"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.aW1hZ2U.short_desc": {
+          "source": "Optional image URL for the notification",
+          "message": "Optional image URL for the notification"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.aW1hZ2U.desc": {
+          "source": "Provide a URL to an image that will be displayed in the notification. The image should be publicly accessible and in a supported format (JPEG, PNG).",
+          "message": "Provide a URL to an image that will be displayed in the notification. The image should be publicly accessible and in a supported format (JPEG, PNG)."
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.ZGF0YQ.display_name": {
+          "source": "Data",
+          "message": "Data"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.ZGF0YQ.short_desc": {
+          "source": "Custom data payload",
+          "message": "Custom data payload"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.ZGF0YQ.desc": {
+          "source": "Additional custom key-value pairs to include with the notification. This data can be accessed by your app when the notification is received.",
+          "message": "Additional custom key-value pairs to include with the notification. This data can be accessed by your app when the notification is received."
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.cHJpb3JpdHk.display_name": {
+          "source": "Priority",
+          "message": "Priority"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.cHJpb3JpdHk.short_desc": {
+          "source": "Notification delivery priority",
+          "message": "Notification delivery priority"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.cHJpb3JpdHk.desc": {
+          "source": "Set the priority level for notification delivery. High priority notifications are delivered immediately and may wake the device. Normal priority allows for more battery-efficient delivery.",
+          "message": "Set the priority level for notification delivery. High priority notifications are delivered immediately and may wake the device. Normal priority allows for more battery-efficient delivery."
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.cHJpb3JpdHk.allowed-value.c3RyaW5nOmhpZ2g.display_name": {
+          "source": "High",
+          "message": "High"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.cHJpb3JpdHk.allowed-value.c3RyaW5nOm5vcm1hbA.display_name": {
+          "source": "Normal",
+          "message": "Normal"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.display_name": {
+          "source": "Upload File",
+          "message": "Upload File"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.short_desc": {
+          "source": "Upload a file to Firebase Cloud Storage",
+          "message": "Upload a file to Firebase Cloud Storage"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.desc": {
+          "source": "Uploads a file to a specified bucket in Firebase Cloud Storage. Returns metadata including file path, content type, size, and generation information. Optionally include custom metadata key-value pairs with the upload.",
+          "message": "Uploads a file to a specified bucket in Firebase Cloud Storage. Returns metadata including file path, content type, size, and generation information. Optionally include custom metadata key-value pairs with the upload."
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Firebase project for storage",
+          "message": "The Firebase project for storage"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Firebase project where the file will be stored. The project must have Firebase Cloud Storage enabled.",
+          "message": "Select the Firebase project where the file will be stored. The project must have Firebase Cloud Storage enabled."
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZV9wYXRo.display_name": {
+          "source": "File Path",
+          "message": "File Path"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZV9wYXRo.short_desc": {
+          "source": "Destination path in storage",
+          "message": "Destination path in storage"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZV9wYXRo.desc": {
+          "source": "Specify the full path where the file should be stored in the bucket, including the filename and any directory structure (e.g., \"images/profile/avatar.jpg\").",
+          "message": "Specify the full path where the file should be stored in the bucket, including the filename and any directory structure (e.g., \"images/profile/avatar.jpg\")."
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.YnVja2V0.display_name": {
+          "source": "Bucket",
+          "message": "Bucket"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.YnVja2V0.short_desc": {
+          "source": "Storage bucket name",
+          "message": "Storage bucket name"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.YnVja2V0.desc": {
+          "source": "Select the Cloud Storage bucket where the file will be uploaded. The bucket must exist in the selected Firebase project.",
+          "message": "Select the Cloud Storage bucket where the file will be uploaded. The bucket must exist in the selected Firebase project."
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.display_name": {
+          "source": "File",
+          "message": "File"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.short_desc": {
+          "source": "The file to upload",
+          "message": "The file to upload"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.desc": {
+          "source": "Select or provide the file to upload. The file will be transferred to Firebase Cloud Storage at the specified path.",
+          "message": "Select or provide the file to upload. The file will be transferred to Firebase Cloud Storage at the specified path."
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.bWV0YWRhdGE.display_name": {
+          "source": "Metadata",
+          "message": "Metadata"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.bWV0YWRhdGE.short_desc": {
+          "source": "Custom metadata key-value pairs",
+          "message": "Custom metadata key-value pairs"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.bWV0YWRhdGE.desc": {
+          "source": "Optional custom metadata to associate with the uploaded file. Provide as key-value pairs that can be retrieved later with the file information.",
+          "message": "Optional custom metadata to associate with the uploaded file. Provide as key-value pairs that can be retrieved later with the file information."
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.display_name": {
+          "source": "Get File Metadata",
+          "message": "Get File Metadata"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.short_desc": {
+          "source": "Retrieve metadata for a specific file in Cloud Storage",
+          "message": "Retrieve metadata for a specific file in Cloud Storage"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.desc": {
+          "source": "Fetches comprehensive metadata for a file stored in Firebase Cloud Storage including content type, size, creation date, update date, MD5 hash, custom metadata, and cache control settings. Useful for file verification and management.",
+          "message": "Fetches comprehensive metadata for a file stored in Firebase Cloud Storage including content type, size, creation date, update date, MD5 hash, custom metadata, and cache control settings. Useful for file verification and management."
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Firebase project containing the file",
+          "message": "The Firebase project containing the file"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Firebase project where the file is stored. The project must have Firebase Cloud Storage enabled.",
+          "message": "Select the Firebase project where the file is stored. The project must have Firebase Cloud Storage enabled."
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.YnVja2V0.display_name": {
+          "source": "Bucket",
+          "message": "Bucket"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.YnVja2V0.short_desc": {
+          "source": "Storage bucket containing the file",
+          "message": "Storage bucket containing the file"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.YnVja2V0.desc": {
+          "source": "Select the Cloud Storage bucket where the file is located. The bucket must exist in the selected Firebase project.",
+          "message": "Select the Cloud Storage bucket where the file is located. The bucket must exist in the selected Firebase project."
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.ZmlsZV9wYXRo.display_name": {
+          "source": "File Path",
+          "message": "File Path"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.ZmlsZV9wYXRo.short_desc": {
+          "source": "Path to the file in storage",
+          "message": "Path to the file in storage"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.ZmlsZV9wYXRo.desc": {
+          "source": "Specify the full path to the file in the bucket, including the filename and any directory structure.",
+          "message": "Specify the full path to the file in the bucket, including the filename and any directory structure."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.display_name": {
+          "source": "List Files in Bucket",
+          "message": "List Files in Bucket"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.short_desc": {
+          "source": "List all files in a Cloud Storage bucket",
+          "message": "List all files in a Cloud Storage bucket"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.desc": {
+          "source": "Retrieves a list of files from a Firebase Cloud Storage bucket with support for filtering by prefix and pagination. Returns file metadata including paths, content types, sizes, and timestamps. Useful for browsing and managing stored files.",
+          "message": "Retrieves a list of files from a Firebase Cloud Storage bucket with support for filtering by prefix and pagination. Returns file metadata including paths, content types, sizes, and timestamps. Useful for browsing and managing stored files."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Firebase project containing the bucket",
+          "message": "The Firebase project containing the bucket"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Firebase project where the storage bucket exists. The project must have Firebase Cloud Storage enabled.",
+          "message": "Select the Firebase project where the storage bucket exists. The project must have Firebase Cloud Storage enabled."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.YnVja2V0.display_name": {
+          "source": "Bucket",
+          "message": "Bucket"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.YnVja2V0.short_desc": {
+          "source": "Storage bucket to list files from",
+          "message": "Storage bucket to list files from"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.YnVja2V0.desc": {
+          "source": "Select the Cloud Storage bucket whose files you want to list. The bucket must exist in the selected Firebase project.",
+          "message": "Select the Cloud Storage bucket whose files you want to list. The bucket must exist in the selected Firebase project."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cHJlZml4.display_name": {
+          "source": "Prefix",
+          "message": "Prefix"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cHJlZml4.short_desc": {
+          "source": "Optional prefix to filter files",
+          "message": "Optional prefix to filter files"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cHJlZml4.desc": {
+          "source": "Filter results to only include files whose paths start with this prefix. Useful for listing files in a specific directory or with a specific naming pattern.",
+          "message": "Filter results to only include files whose paths start with this prefix. Useful for listing files in a specific directory or with a specific naming pattern."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.bWF4X3Jlc3VsdHM.display_name": {
+          "source": "Max Results",
+          "message": "Max Results"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.bWF4X3Jlc3VsdHM.short_desc": {
+          "source": "Maximum number of files to return",
+          "message": "Maximum number of files to return"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.bWF4X3Jlc3VsdHM.desc": {
+          "source": "Specify the maximum number of files to retrieve in a single request. Defaults to 100 if not specified. Use pagination for larger result sets.",
+          "message": "Specify the maximum number of files to retrieve in a single request. Defaults to 100 if not specified. Use pagination for larger result sets."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cGFnZV90b2tlbg.display_name": {
+          "source": "Page Token",
+          "message": "Page Token"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cGFnZV90b2tlbg.short_desc": {
+          "source": "Token for retrieving the next page",
+          "message": "Token for retrieving the next page"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cGFnZV90b2tlbg.desc": {
+          "source": "Provide the pagination token from a previous response to retrieve the next set of files. Leave empty for the first page.",
+          "message": "Provide the pagination token from a previous response to retrieve the next set of files. Leave empty for the first page."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.display_name": {
+          "source": "List Buckets",
+          "message": "List Buckets"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.short_desc": {
+          "source": "List all Cloud Storage buckets in a Firebase project",
+          "message": "List all Cloud Storage buckets in a Firebase project"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.desc": {
+          "source": "Retrieves all Cloud Storage buckets configured for a Firebase project. Returns bucket details including names, locations, storage classes, creation dates, and update timestamps. Useful for bucket management and discovery.",
+          "message": "Retrieves all Cloud Storage buckets configured for a Firebase project. Returns bucket details including names, locations, storage classes, creation dates, and update timestamps. Useful for bucket management and discovery."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Firebase project to query",
+          "message": "The Firebase project to query"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Firebase project whose storage buckets you want to list. The project must have Firebase Cloud Storage enabled.",
+          "message": "Select the Firebase project whose storage buckets you want to list. The project must have Firebase Cloud Storage enabled."
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.display_name": {
+          "source": "Delete File",
+          "message": "Delete File"
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.short_desc": {
+          "source": "Delete a file from Cloud Storage",
+          "message": "Delete a file from Cloud Storage"
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.desc": {
+          "source": "Permanently removes a file from Firebase Cloud Storage. This operation is irreversible, so use with caution. Returns confirmation of the deletion including the file path and bucket name.",
+          "message": "Permanently removes a file from Firebase Cloud Storage. This operation is irreversible, so use with caution. Returns confirmation of the deletion including the file path and bucket name."
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Firebase project containing the file",
+          "message": "The Firebase project containing the file"
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Firebase project where the file is stored. The project must have Firebase Cloud Storage enabled.",
+          "message": "Select the Firebase project where the file is stored. The project must have Firebase Cloud Storage enabled."
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.YnVja2V0.display_name": {
+          "source": "Bucket",
+          "message": "Bucket"
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.YnVja2V0.short_desc": {
+          "source": "Storage bucket containing the file",
+          "message": "Storage bucket containing the file"
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.YnVja2V0.desc": {
+          "source": "Select the Cloud Storage bucket where the file to be deleted is located. The bucket must exist in the selected Firebase project.",
+          "message": "Select the Cloud Storage bucket where the file to be deleted is located. The bucket must exist in the selected Firebase project."
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.ZmlsZV9wYXRo.display_name": {
+          "source": "File Path",
+          "message": "File Path"
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.ZmlsZV9wYXRo.short_desc": {
+          "source": "Path to the file to delete",
+          "message": "Path to the file to delete"
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.ZmlsZV9wYXRo.desc": {
+          "source": "Specify the full path to the file in the bucket that should be deleted, including the filename and any directory structure. This operation is permanent and cannot be undone.",
+          "message": "Specify the full path to the file in the bucket that should be deleted, including the filename and any directory structure. This operation is permanent and cannot be undone."
+        },
+        "app.RmlyZWJhc2U.action.bmV3X3VzZXI.display_name": {
+          "source": "New User",
+          "message": "New User"
+        },
+        "app.RmlyZWJhc2U.action.bmV3X3VzZXI.short_desc": {
+          "source": "Triggers when a new user is created in Firebase Authentication",
+          "message": "Triggers when a new user is created in Firebase Authentication"
+        },
+        "app.RmlyZWJhc2U.action.bmV3X3VzZXI.desc": {
+          "source": "Monitors Firebase Authentication for new user registrations and triggers when new accounts are created. Captures user details including email, display name, verification status, and authentication provider information. Useful for user onboarding workflows, welcome emails, and account setup automation.",
+          "message": "Monitors Firebase Authentication for new user registrations and triggers when new accounts are created. Captures user details including email, display name, verification status, and authentication provider information. Useful for user onboarding workflows, welcome emails, and account setup automation."
+        },
+        "app.RmlyZWJhc2U.action.bmV3X3VzZXI.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.RmlyZWJhc2U.action.bmV3X3VzZXI.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Firebase project to monitor",
+          "message": "The Firebase project to monitor"
+        },
+        "app.RmlyZWJhc2U.action.bmV3X3VzZXI.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Firebase project whose Authentication service you want to monitor for new user registrations. The project must have Firebase Authentication enabled.",
+          "message": "Select the Firebase project whose Authentication service you want to monitor for new user registrations. The project must have Firebase Authentication enabled."
+        }
+      }
+    }
+  }
+}

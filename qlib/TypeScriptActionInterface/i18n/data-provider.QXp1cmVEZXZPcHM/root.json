@@ -1,0 +1,913 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "root": {
+      "messages": {
+        "app.QXp1cmVEZXZPcHM.display_name": {
+          "source": "Azure DevOps",
+          "message": "Azure DevOps"
+        },
+        "app.QXp1cmVEZXZPcHM.short_desc": {
+          "source": "Connect to Azure DevOps to automate project management, code repositories, and CI/CD pipelines.",
+          "message": "Connect to Azure DevOps to automate project management, code repositories, and CI/CD pipelines."
+        },
+        "app.QXp1cmVEZXZPcHM.desc": {
+          "source": "The Azure DevOps integration provides comprehensive actions and triggers to interact with Azure DevOps Services. Manage work items, repositories, builds, releases, and team projects efficiently. Automate your development workflow by connecting Azure DevOps with other tools and services in your automation pipeline.",
+          "message": "The Azure DevOps integration provides comprehensive actions and triggers to interact with Azure DevOps Services. Manage work items, repositories, builds, releases, and team projects efficiently. Automate your development workflow by connecting Azure DevOps with other tools and services in your automation pipeline."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Make an API call"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Azure DevOps",
+          "message": "Make a custom API call to Azure DevOps"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Azure DevOps** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Make a custom HTTP / REST API call to **Azure DevOps** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP Method"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI Path"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body Type"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "How the body is serialized and what Content-Type is sent"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; use connection serialization and let the REST client decide"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serialize body as JSON"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serialize body as application/x-www-form-urlencoded form fields"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans)."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Upload a file using multipart/form-data"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Send body as XML"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Send body as YAML"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Plain Text"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Send body as text/plain"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Raw Binary"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Send body as raw bytes"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "The request body"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Path Variables"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Values for {name} placeholders in path"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Query Arguments"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Query string parameters"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Custom Headers"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Extra request headers"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default)."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Expected Status Codes"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Response status codes treated as success"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws)."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Return Errors as Data"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Return non-2xx responses normally instead of throwing"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Include Debug Info"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Include request/timing/size debug info in the response"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.display_name": {
+          "source": "Create Work Item",
+          "message": "Create Work Item"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.short_desc": {
+          "source": "Create a new work item in Azure DevOps",
+          "message": "Create a new work item in Azure DevOps"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.desc": {
+          "source": "Create a new work item such as a task, bug, epic, or user story in a specified Azure DevOps project with customizable properties and fields.",
+          "message": "Create a new work item such as a task, bug, epic, or user story in a specified Azure DevOps project with customizable properties and fields."
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Project"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.cHJvamVjdA.short_desc": {
+          "source": "The Azure DevOps project where the work item will be created",
+          "message": "The Azure DevOps project where the work item will be created"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.cHJvamVjdA.desc": {
+          "source": "Select the target project from your Azure DevOps organization where the new work item should be created.",
+          "message": "Select the target project from your Azure DevOps organization where the new work item should be created."
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.aXRlbVR5cGU.display_name": {
+          "source": "Work Item Type",
+          "message": "Work Item Type"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.aXRlbVR5cGU.short_desc": {
+          "source": "The type of work item to create",
+          "message": "The type of work item to create"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.aXRlbVR5cGU.desc": {
+          "source": "Choose the specific type of work item you want to create, such as Task, Bug, Epic, User Story, or other available types in your project.",
+          "message": "Choose the specific type of work item you want to create, such as Task, Bug, Epic, User Story, or other available types in your project."
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOkNvZGUgUmV2aWV3IFJlcXVlc3Q.display_name": {
+          "source": "Code Review Request",
+          "message": "Code Review Request"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOkNvZGUgUmV2aWV3IFJlc3BvbnNl.display_name": {
+          "source": "Code Review Response",
+          "message": "Code Review Response"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOkVwaWM.display_name": {
+          "source": "Epic",
+          "message": "Epic"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOkZlZWRiYWNrIFJlcXVlc3Q.display_name": {
+          "source": "Feedback Request",
+          "message": "Feedback Request"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOkZlZWRiYWNrIFJlc3BvbnNl.display_name": {
+          "source": "Feedback Response",
+          "message": "Feedback Response"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOklzc3Vl.display_name": {
+          "source": "Issue",
+          "message": "Issue"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOlNoYXJlZCBQYXJhbWV0ZXI.display_name": {
+          "source": "Shared Parameter",
+          "message": "Shared Parameter"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOlNoYXJlZCBTdGVwcw.display_name": {
+          "source": "Shared Steps",
+          "message": "Shared Steps"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOlRhc2s.display_name": {
+          "source": "Task",
+          "message": "Task"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOlRlc3QgQ2FzZQ.display_name": {
+          "source": "Test Case",
+          "message": "Test Case"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOlRlc3QgUGxhbg.display_name": {
+          "source": "Test Plan",
+          "message": "Test Plan"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOlRlc3QgU3VpdGU.display_name": {
+          "source": "Test Suite",
+          "message": "Test Suite"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.cHJvcGVydGllcw.display_name": {
+          "source": "Work Item Properties",
+          "message": "Work Item Properties"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Fields and values for the work item",
+          "message": "Fields and values for the work item"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Y3JlYXRlX3dvcmtfaXRlbQ.option.cHJvcGVydGllcw.desc": {
+          "source": "Configure the properties and field values for the work item, including title, description, and other custom fields based on the selected work item type.",
+          "message": "Configure the properties and field values for the work item, including title, description, and other custom fields based on the selected work item type."
+        },
+        "app.QXp1cmVEZXZPcHM.action.ZGVsZXRlX3dvcmtfaXRlbQ.display_name": {
+          "source": "Delete Work Item",
+          "message": "Delete Work Item"
+        },
+        "app.QXp1cmVEZXZPcHM.action.ZGVsZXRlX3dvcmtfaXRlbQ.short_desc": {
+          "source": "Delete a work item from Azure DevOps",
+          "message": "Delete a work item from Azure DevOps"
+        },
+        "app.QXp1cmVEZXZPcHM.action.ZGVsZXRlX3dvcmtfaXRlbQ.desc": {
+          "source": "Permanently remove a work item from the specified Azure DevOps project. This action cannot be undone.",
+          "message": "Permanently remove a work item from the specified Azure DevOps project. This action cannot be undone."
+        },
+        "app.QXp1cmVEZXZPcHM.action.ZGVsZXRlX3dvcmtfaXRlbQ.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Project"
+        },
+        "app.QXp1cmVEZXZPcHM.action.ZGVsZXRlX3dvcmtfaXRlbQ.option.cHJvamVjdA.short_desc": {
+          "source": "The Azure DevOps project containing the work item",
+          "message": "The Azure DevOps project containing the work item"
+        },
+        "app.QXp1cmVEZXZPcHM.action.ZGVsZXRlX3dvcmtfaXRlbQ.option.cHJvamVjdA.desc": {
+          "source": "Select the project where the work item to be deleted is located.",
+          "message": "Select the project where the work item to be deleted is located."
+        },
+        "app.QXp1cmVEZXZPcHM.action.ZGVsZXRlX3dvcmtfaXRlbQ.option.aWQ.display_name": {
+          "source": "Work Item ID",
+          "message": "Work Item ID"
+        },
+        "app.QXp1cmVEZXZPcHM.action.ZGVsZXRlX3dvcmtfaXRlbQ.option.aWQ.short_desc": {
+          "source": "The unique identifier of the work item to delete",
+          "message": "The unique identifier of the work item to delete"
+        },
+        "app.QXp1cmVEZXZPcHM.action.ZGVsZXRlX3dvcmtfaXRlbQ.option.aWQ.desc": {
+          "source": "Enter or select the ID of the specific work item you want to permanently delete from the project.",
+          "message": "Enter or select the ID of the specific work item you want to permanently delete from the project."
+        },
+        "app.QXp1cmVEZXZPcHM.action.Z2V0X3dvcmtfaXRlbQ.display_name": {
+          "source": "Get Work Item",
+          "message": "Get Work Item"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Z2V0X3dvcmtfaXRlbQ.short_desc": {
+          "source": "Retrieve details of a specific work item",
+          "message": "Retrieve details of a specific work item"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Z2V0X3dvcmtfaXRlbQ.desc": {
+          "source": "Fetch comprehensive information about a work item including its current state, assigned users, and all field values.",
+          "message": "Fetch comprehensive information about a work item including its current state, assigned users, and all field values."
+        },
+        "app.QXp1cmVEZXZPcHM.action.Z2V0X3dvcmtfaXRlbQ.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Project"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Z2V0X3dvcmtfaXRlbQ.option.cHJvamVjdA.short_desc": {
+          "source": "The Azure DevOps project containing the work item",
+          "message": "The Azure DevOps project containing the work item"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Z2V0X3dvcmtfaXRlbQ.option.cHJvamVjdA.desc": {
+          "source": "Select the project where the work item is located to retrieve its details.",
+          "message": "Select the project where the work item is located to retrieve its details."
+        },
+        "app.QXp1cmVEZXZPcHM.action.Z2V0X3dvcmtfaXRlbQ.option.aWQ.display_name": {
+          "source": "Work Item ID",
+          "message": "Work Item ID"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Z2V0X3dvcmtfaXRlbQ.option.aWQ.short_desc": {
+          "source": "The unique identifier of the work item",
+          "message": "The unique identifier of the work item"
+        },
+        "app.QXp1cmVEZXZPcHM.action.Z2V0X3dvcmtfaXRlbQ.option.aWQ.desc": {
+          "source": "Enter or select the ID of the work item whose details you want to retrieve.",
+          "message": "Enter or select the ID of the work item whose details you want to retrieve."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.display_name": {
+          "source": "List Projects",
+          "message": "List Projects"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.short_desc": {
+          "source": "Get a list of Azure DevOps projects",
+          "message": "Get a list of Azure DevOps projects"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.desc": {
+          "source": "Retrieve a list of all accessible projects in your Azure DevOps organization with optional filtering and pagination.",
+          "message": "Retrieve a list of all accessible projects in your Azure DevOps organization with optional filtering and pagination."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of projects to return",
+          "message": "Maximum number of projects to return"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of projects to include in the response to control pagination.",
+          "message": "Set the maximum number of projects to include in the response to control pagination."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of projects to skip",
+          "message": "Number of projects to skip"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.option.b2Zmc2V0.desc": {
+          "source": "Specify how many projects to skip from the beginning of the list for pagination purposes.",
+          "message": "Specify how many projects to skip from the beginning of the list for pagination purposes."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.option.c3RhdGVGaWx0ZXI.display_name": {
+          "source": "State Filter",
+          "message": "State Filter"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.option.c3RhdGVGaWx0ZXI.short_desc": {
+          "source": "Filter projects by their current state",
+          "message": "Filter projects by their current state"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.option.c3RhdGVGaWx0ZXI.desc": {
+          "source": "Filter the project list based on project state such as active, deleted, or other available states.",
+          "message": "Filter the project list based on project state such as active, deleted, or other available states."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.option.c3RhdGVGaWx0ZXI.allowed-value.c3RyaW5nOmFsbA.display_name": {
+          "source": "All",
+          "message": "All"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.option.c3RhdGVGaWx0ZXI.allowed-value.c3RyaW5nOmNyZWF0ZVBlbmRpbmc.display_name": {
+          "source": "Create Pending",
+          "message": "Create Pending"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.option.c3RhdGVGaWx0ZXI.allowed-value.c3RyaW5nOmRlbGV0aW5n.display_name": {
+          "source": "Deleting",
+          "message": "Deleting"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.option.c3RhdGVGaWx0ZXI.allowed-value.c3RyaW5nOmRlbGV0ZWQ.display_name": {
+          "source": "Deleted",
+          "message": "Deleted"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.option.c3RhdGVGaWx0ZXI.allowed-value.c3RyaW5nOm5ldw.display_name": {
+          "source": "New",
+          "message": "New"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.option.c3RhdGVGaWx0ZXI.allowed-value.c3RyaW5nOnVuY2hhbmdlZA.display_name": {
+          "source": "Unchanged",
+          "message": "Unchanged"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF9wcm9qZWN0cw.option.c3RhdGVGaWx0ZXI.allowed-value.c3RyaW5nOndlbGxGb3JtZWQ.display_name": {
+          "source": "WellFormed",
+          "message": "WellFormed"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF91c2Vycw.display_name": {
+          "source": "List Users",
+          "message": "List Users"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF91c2Vycw.short_desc": {
+          "source": "Get a list of users in the Azure DevOps organization",
+          "message": "Get a list of users in the Azure DevOps organization"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF91c2Vycw.desc": {
+          "source": "Retrieve a list of all users who have access to your Azure DevOps organization with pagination support.",
+          "message": "Retrieve a list of all users who have access to your Azure DevOps organization with pagination support."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF91c2Vycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF91c2Vycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of users to return",
+          "message": "Maximum number of users to return"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF91c2Vycw.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of users to include in the response for pagination control.",
+          "message": "Set the maximum number of users to include in the response for pagination control."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF91c2Vycw.option.Y29udGludWF0aW9uVG9rZW4.display_name": {
+          "source": "Continuation Token",
+          "message": "Continuation Token"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF91c2Vycw.option.Y29udGludWF0aW9uVG9rZW4.short_desc": {
+          "source": "Token for retrieving the next page of results",
+          "message": "Token for retrieving the next page of results"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF91c2Vycw.option.Y29udGludWF0aW9uVG9rZW4.desc": {
+          "source": "Provide the continuation token from a previous request to get the next set of users in the paginated results.",
+          "message": "Provide the continuation token from a previous request to get the next set of users in the paginated results."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.display_name": {
+          "source": "List Work Items",
+          "message": "List Work Items"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.short_desc": {
+          "source": "Get a list of work items from a project",
+          "message": "Get a list of work items from a project"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.desc": {
+          "source": "Retrieve work items from a specified project with filtering options by type, state, title, and pagination support.",
+          "message": "Retrieve work items from a specified project with filtering options by type, state, title, and pagination support."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Project"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.cHJvamVjdA.short_desc": {
+          "source": "The Azure DevOps project to search for work items",
+          "message": "The Azure DevOps project to search for work items"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.cHJvamVjdA.desc": {
+          "source": "Select the project from which you want to retrieve work items.",
+          "message": "Select the project from which you want to retrieve work items."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of work items to return",
+          "message": "Maximum number of work items to return"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of work items to include in the response for better performance and pagination.",
+          "message": "Set the maximum number of work items to include in the response for better performance and pagination."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.aXRlbVR5cGU.display_name": {
+          "source": "Work Item Type",
+          "message": "Work Item Type"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.aXRlbVR5cGU.short_desc": {
+          "source": "Filter by work item type",
+          "message": "Filter by work item type"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.aXRlbVR5cGU.desc": {
+          "source": "Filter the results to include only work items of a specific type such as Task, Bug, Epic, or User Story.",
+          "message": "Filter the results to include only work items of a specific type such as Task, Bug, Epic, or User Story."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOlRhc2s.display_name": {
+          "source": "Task",
+          "message": "Task"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOkVwaWM.display_name": {
+          "source": "Epic",
+          "message": "Epic"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOkZlYXR1cmU.display_name": {
+          "source": "Feature",
+          "message": "Feature"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOlVzZXIgU3Rvcnk.display_name": {
+          "source": "User Story",
+          "message": "User Story"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOklzc3Vl.display_name": {
+          "source": "Issue",
+          "message": "Issue"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOkJ1Zw.display_name": {
+          "source": "Bug",
+          "message": "Bug"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.c3RhdGU.display_name": {
+          "source": "State",
+          "message": "State"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.c3RhdGU.short_desc": {
+          "source": "Filter by work item state",
+          "message": "Filter by work item state"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.c3RhdGU.desc": {
+          "source": "Filter work items based on their current state such as New, Active, Resolved, or Closed.",
+          "message": "Filter work items based on their current state such as New, Active, Resolved, or Closed."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.c3RhdGU.allowed-value.c3RyaW5nOm5ldw.display_name": {
+          "source": "New",
+          "message": "New"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.c3RhdGU.allowed-value.c3RyaW5nOmFjdGl2ZQ.display_name": {
+          "source": "Active",
+          "message": "Active"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.c3RhdGU.allowed-value.c3RyaW5nOnJlc29sdmVk.display_name": {
+          "source": "Resolved",
+          "message": "Resolved"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.c3RhdGU.allowed-value.c3RyaW5nOmNsb3NlZA.display_name": {
+          "source": "Closed",
+          "message": "Closed"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.c3RhdGU.allowed-value.c3RyaW5nOnJlbW92ZWQ.display_name": {
+          "source": "Removed",
+          "message": "Removed"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.dGl0bGU.display_name": {
+          "source": "Title Filter",
+          "message": "Title Filter"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.dGl0bGU.short_desc": {
+          "source": "Filter by work item title",
+          "message": "Filter by work item title"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bGlzdF93b3JrX2l0ZW1z.option.dGl0bGU.desc": {
+          "source": "Search for work items that contain the specified text in their title.",
+          "message": "Search for work items that contain the specified text in their title."
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlX3dvcmtfaXRlbQ.display_name": {
+          "source": "Update Work Item",
+          "message": "Update Work Item"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlX3dvcmtfaXRlbQ.short_desc": {
+          "source": "Update an existing work item",
+          "message": "Update an existing work item"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlX3dvcmtfaXRlbQ.desc": {
+          "source": "Modify the properties and field values of an existing work item in Azure DevOps with the ability to update any available fields.",
+          "message": "Modify the properties and field values of an existing work item in Azure DevOps with the ability to update any available fields."
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlX3dvcmtfaXRlbQ.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Project"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlX3dvcmtfaXRlbQ.option.cHJvamVjdA.short_desc": {
+          "source": "The Azure DevOps project containing the work item",
+          "message": "The Azure DevOps project containing the work item"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlX3dvcmtfaXRlbQ.option.cHJvamVjdA.desc": {
+          "source": "Select the project where the work item to be updated is located.",
+          "message": "Select the project where the work item to be updated is located."
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlX3dvcmtfaXRlbQ.option.aXRlbUlk.display_name": {
+          "source": "Work Item ID",
+          "message": "Work Item ID"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlX3dvcmtfaXRlbQ.option.aXRlbUlk.short_desc": {
+          "source": "The unique identifier of the work item to update",
+          "message": "The unique identifier of the work item to update"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlX3dvcmtfaXRlbQ.option.aXRlbUlk.desc": {
+          "source": "Enter or select the ID of the work item you want to modify.",
+          "message": "Enter or select the ID of the work item you want to modify."
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlX3dvcmtfaXRlbQ.option.cHJvcGVydGllcw.display_name": {
+          "source": "Updated Properties",
+          "message": "Updated Properties"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlX3dvcmtfaXRlbQ.option.cHJvcGVydGllcw.short_desc": {
+          "source": "New values for work item fields",
+          "message": "New values for work item fields"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlX3dvcmtfaXRlbQ.option.cHJvcGVydGllcw.desc": {
+          "source": "Specify the fields and their new values that you want to update in the work item. Available fields depend on the work item type.",
+          "message": "Specify the fields and their new values that you want to update in the work item. Available fields depend on the work item type."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bmV3X3dvcmtfaXRlbQ.display_name": {
+          "source": "New Work Item",
+          "message": "New Work Item"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bmV3X3dvcmtfaXRlbQ.short_desc": {
+          "source": "Triggers when a new work item is created",
+          "message": "Triggers when a new work item is created"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bmV3X3dvcmtfaXRlbQ.desc": {
+          "source": "Receive real-time notifications whenever a new work item is created in the specified Azure DevOps project, with optional filtering by work item type.",
+          "message": "Receive real-time notifications whenever a new work item is created in the specified Azure DevOps project, with optional filtering by work item type."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bmV3X3dvcmtfaXRlbQ.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Project"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bmV3X3dvcmtfaXRlbQ.option.cHJvamVjdA.short_desc": {
+          "source": "The Azure DevOps project to monitor",
+          "message": "The Azure DevOps project to monitor"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bmV3X3dvcmtfaXRlbQ.option.cHJvamVjdA.desc": {
+          "source": "Select the project where you want to monitor for new work items being created.",
+          "message": "Select the project where you want to monitor for new work items being created."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bmV3X3dvcmtfaXRlbQ.option.aXRlbVR5cGU.display_name": {
+          "source": "Work Item Type Filter",
+          "message": "Work Item Type Filter"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bmV3X3dvcmtfaXRlbQ.option.aXRlbVR5cGU.short_desc": {
+          "source": "Filter by specific work item types",
+          "message": "Filter by specific work item types"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bmV3X3dvcmtfaXRlbQ.option.aXRlbVR5cGU.desc": {
+          "source": "Optionally filter the trigger to only fire for specific types of work items such as Tasks, Bugs, or User Stories.",
+          "message": "Optionally filter the trigger to only fire for specific types of work items such as Tasks, Bugs, or User Stories."
+        },
+        "app.QXp1cmVEZXZPcHM.action.bmV3X3dvcmtfaXRlbQ.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOlRhc2s.display_name": {
+          "source": "Task",
+          "message": "Task"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bmV3X3dvcmtfaXRlbQ.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOkVwaWM.display_name": {
+          "source": "Epic",
+          "message": "Epic"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bmV3X3dvcmtfaXRlbQ.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOklzc3Vl.display_name": {
+          "source": "Issue",
+          "message": "Issue"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bmV3X3dvcmtfaXRlbQ.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOkJ1Zw.display_name": {
+          "source": "Bug",
+          "message": "Bug"
+        },
+        "app.QXp1cmVEZXZPcHM.action.bmV3X3dvcmtfaXRlbQ.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOlVzZXIgU3Rvcnk.display_name": {
+          "source": "User Story",
+          "message": "User Story"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.display_name": {
+          "source": "Updated Work Item",
+          "message": "Updated Work Item"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.short_desc": {
+          "source": "Triggers when a work item is updated",
+          "message": "Triggers when a work item is updated"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.desc": {
+          "source": "Receive real-time notifications whenever a work item is modified in the specified Azure DevOps project, with optional filtering by work item type and changed fields.",
+          "message": "Receive real-time notifications whenever a work item is modified in the specified Azure DevOps project, with optional filtering by work item type and changed fields."
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Project"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.option.cHJvamVjdA.short_desc": {
+          "source": "The Azure DevOps project to monitor",
+          "message": "The Azure DevOps project to monitor"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.option.cHJvamVjdA.desc": {
+          "source": "Select the project where you want to monitor for work item updates.",
+          "message": "Select the project where you want to monitor for work item updates."
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.option.aXRlbVR5cGU.display_name": {
+          "source": "Work Item Type Filter",
+          "message": "Work Item Type Filter"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.option.aXRlbVR5cGU.short_desc": {
+          "source": "Filter by specific work item types",
+          "message": "Filter by specific work item types"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.option.aXRlbVR5cGU.desc": {
+          "source": "Optionally filter the trigger to only fire for updates to specific types of work items.",
+          "message": "Optionally filter the trigger to only fire for updates to specific types of work items."
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOlRhc2s.display_name": {
+          "source": "Task",
+          "message": "Task"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOkVwaWM.display_name": {
+          "source": "Epic",
+          "message": "Epic"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOklzc3Vl.display_name": {
+          "source": "Issue",
+          "message": "Issue"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOkJ1Zw.display_name": {
+          "source": "Bug",
+          "message": "Bug"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.option.aXRlbVR5cGU.allowed-value.c3RyaW5nOlVzZXIgU3Rvcnk.display_name": {
+          "source": "User Story",
+          "message": "User Story"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.option.Y2hhbmdlZEZpZWxkcw.display_name": {
+          "source": "Changed Fields Filter",
+          "message": "Changed Fields Filter"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.option.Y2hhbmdlZEZpZWxkcw.short_desc": {
+          "source": "Filter by specific field changes",
+          "message": "Filter by specific field changes"
+        },
+        "app.QXp1cmVEZXZPcHM.action.dXBkYXRlZF93b3JrX2l0ZW0.option.Y2hhbmdlZEZpZWxkcw.desc": {
+          "source": "Optionally specify which field changes should trigger this webhook. Leave empty to trigger on any field change.",
+          "message": "Optionally specify which field changes should trigger this webhook. Leave empty to trigger on any field change."
+        }
+      }
+    }
+  }
+}

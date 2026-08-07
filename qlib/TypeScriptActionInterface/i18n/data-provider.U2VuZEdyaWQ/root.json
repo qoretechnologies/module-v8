@@ -1,0 +1,1245 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "root": {
+      "messages": {
+        "app.U2VuZEdyaWQ.display_name": {
+          "source": "SendGrid",
+          "message": "SendGrid"
+        },
+        "app.U2VuZEdyaWQ.short_desc": {
+          "source": "Connect with SendGrid to send emails, manage contacts, and handle suppressions",
+          "message": "Connect with SendGrid to send emails, manage contacts, and handle suppressions"
+        },
+        "app.U2VuZEdyaWQ.desc": {
+          "source": "Integrate with Twilio SendGrid for comprehensive email management. Send transactional and marketing emails, manage your contact lists, validate email addresses for deliverability, and maintain your sender reputation by handling suppressions including blocks, bounces, and global unsubscribes. This integration provides full control over your email infrastructure and helps ensure high deliverability rates.",
+          "message": "Integrate with Twilio SendGrid for comprehensive email management. Send transactional and marketing emails, manage your contact lists, validate email addresses for deliverability, and maintain your sender reputation by handling suppressions including blocks, bounces, and global unsubscribes. This integration provides full control over your email infrastructure and helps ensure high deliverability rates."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Make an API call"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to SendGrid",
+          "message": "Make a custom API call to SendGrid"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **SendGrid** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Make a custom HTTP / REST API call to **SendGrid** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP Method"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI Path"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body Type"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "How the body is serialized and what Content-Type is sent"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; use connection serialization and let the REST client decide"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serialize body as JSON"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serialize body as application/x-www-form-urlencoded form fields"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans)."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Upload a file using multipart/form-data"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Send body as XML"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Send body as YAML"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Plain Text"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Send body as text/plain"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Raw Binary"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Send body as raw bytes"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "The request body"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Path Variables"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Values for {name} placeholders in path"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Query Arguments"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Query string parameters"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Custom Headers"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Extra request headers"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default)."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Expected Status Codes"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Response status codes treated as success"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws)."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Return Errors as Data"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Return non-2xx responses normally instead of throwing"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Include Debug Info"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Include request/timing/size debug info in the response"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.display_name": {
+          "source": "List Blocks",
+          "message": "List Blocks"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.short_desc": {
+          "source": "Retrieve a list of blocked email addresses",
+          "message": "Retrieve a list of blocked email addresses"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.desc": {
+          "source": "Retrieve a list of all email addresses that are currently on your blocks list. Blocked addresses are emails that have been rejected by receiving servers. You can filter by time range and paginate through results.",
+          "message": "Retrieve a list of all email addresses that are currently on your blocks list. Blocked addresses are emails that have been rejected by receiving servers. You can filter by time range and paginate through results."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.c3RhcnRUaW1l.display_name": {
+          "source": "Start Time",
+          "message": "Start Time"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.c3RhcnRUaW1l.short_desc": {
+          "source": "Filter blocks created after this Unix timestamp",
+          "message": "Filter blocks created after this Unix timestamp"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.c3RhcnRUaW1l.desc": {
+          "source": "Retrieve blocks that were created after this point in time. Provide the time as a Unix timestamp (seconds since epoch).",
+          "message": "Retrieve blocks that were created after this point in time. Provide the time as a Unix timestamp (seconds since epoch)."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.ZW5kVGltZQ.display_name": {
+          "source": "End Time",
+          "message": "End Time"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.ZW5kVGltZQ.short_desc": {
+          "source": "Filter blocks created before this Unix timestamp",
+          "message": "Filter blocks created before this Unix timestamp"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.ZW5kVGltZQ.desc": {
+          "source": "Retrieve blocks that were created before this point in time. Provide the time as a Unix timestamp (seconds since epoch).",
+          "message": "Retrieve blocks that were created before this point in time. Provide the time as a Unix timestamp (seconds since epoch)."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of blocks to return",
+          "message": "Maximum number of blocks to return"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.bGltaXQ.desc": {
+          "source": "The maximum number of block records to return. Default is 500.",
+          "message": "The maximum number of block records to return. Default is 500."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.b2Zmc2V0.short_desc": {
+          "source": "Starting point in the list of results",
+          "message": "Starting point in the list of results"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.b2Zmc2V0.desc": {
+          "source": "The starting point in the list of results for pagination. Default is 0.",
+          "message": "The starting point in the list of results for pagination. Default is 0."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.display_name": {
+          "source": "Get a Block",
+          "message": "Get a Block"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.short_desc": {
+          "source": "Retrieve details of a specific blocked email",
+          "message": "Retrieve details of a specific blocked email"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.desc": {
+          "source": "Fetch detailed information about a specific blocked email address, including the reason for the block and when it was added to the list.",
+          "message": "Fetch detailed information about a specific blocked email address, including the reason for the block and when it was added to the list."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "Email"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.option.ZW1haWw.short_desc": {
+          "source": "The blocked email address to retrieve",
+          "message": "The blocked email address to retrieve"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.option.ZW1haWw.desc": {
+          "source": "The email address to retrieve from the blocks list. This should be the exact email address that was blocked.",
+          "message": "The email address to retrieve from the blocks list. This should be the exact email address that was blocked."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.display_name": {
+          "source": "Delete Blocks",
+          "message": "Delete Blocks"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.short_desc": {
+          "source": "Delete blocked email addresses from your list",
+          "message": "Delete blocked email addresses from your list"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.desc": {
+          "source": "Remove email addresses from your blocks list. You can either delete all blocks at once or specify individual email addresses to remove. Deleting blocks allows those addresses to receive emails again.",
+          "message": "Remove email addresses from your blocks list. You can either delete all blocks at once or specify individual email addresses to remove. Deleting blocks allows those addresses to receive emails again."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZGVsZXRlQWxs.display_name": {
+          "source": "Delete All",
+          "message": "Delete All"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZGVsZXRlQWxs.short_desc": {
+          "source": "Delete all blocked emails",
+          "message": "Delete all blocked emails"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZGVsZXRlQWxs.desc": {
+          "source": "Set to true to delete all blocked email addresses from your list. When true, the emails parameter is ignored.",
+          "message": "Set to true to delete all blocked email addresses from your list. When true, the emails parameter is ignored."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZW1haWxz.display_name": {
+          "source": "Emails",
+          "message": "Emails"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZW1haWxz.short_desc": {
+          "source": "List of email addresses to delete",
+          "message": "List of email addresses to delete"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZW1haWxz.desc": {
+          "source": "An array of email addresses to remove from the blocks list. Required if Delete All is not set to true.",
+          "message": "An array of email addresses to remove from the blocks list. Required if Delete All is not set to true."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.display_name": {
+          "source": "Get All Bounces",
+          "message": "Get All Bounces"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.short_desc": {
+          "source": "Retrieve a list of bounced email addresses",
+          "message": "Retrieve a list of bounced email addresses"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.desc": {
+          "source": "Retrieve a list of all email addresses that have bounced. Bounces occur when an email cannot be delivered to the recipient. You can filter by time range and paginate through results.",
+          "message": "Retrieve a list of all email addresses that have bounced. Bounces occur when an email cannot be delivered to the recipient. You can filter by time range and paginate through results."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.c3RhcnRUaW1l.display_name": {
+          "source": "Start Time",
+          "message": "Start Time"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.c3RhcnRUaW1l.short_desc": {
+          "source": "Filter bounces created after this Unix timestamp",
+          "message": "Filter bounces created after this Unix timestamp"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.c3RhcnRUaW1l.desc": {
+          "source": "Retrieve bounces that were created after this point in time. Provide the time as a Unix timestamp (seconds since epoch).",
+          "message": "Retrieve bounces that were created after this point in time. Provide the time as a Unix timestamp (seconds since epoch)."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.ZW5kVGltZQ.display_name": {
+          "source": "End Time",
+          "message": "End Time"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.ZW5kVGltZQ.short_desc": {
+          "source": "Filter bounces created before this Unix timestamp",
+          "message": "Filter bounces created before this Unix timestamp"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.ZW5kVGltZQ.desc": {
+          "source": "Retrieve bounces that were created before this point in time. Provide the time as a Unix timestamp (seconds since epoch).",
+          "message": "Retrieve bounces that were created before this point in time. Provide the time as a Unix timestamp (seconds since epoch)."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of bounces to return",
+          "message": "Maximum number of bounces to return"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.bGltaXQ.desc": {
+          "source": "The maximum number of bounce records to return. Default is 500.",
+          "message": "The maximum number of bounce records to return. Default is 500."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.b2Zmc2V0.short_desc": {
+          "source": "Starting point in the list of results",
+          "message": "Starting point in the list of results"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.b2Zmc2V0.desc": {
+          "source": "The starting point in the list of results for pagination. Default is 0.",
+          "message": "The starting point in the list of results for pagination. Default is 0."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.display_name": {
+          "source": "Delete Bounces",
+          "message": "Delete Bounces"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.short_desc": {
+          "source": "Delete bounced email addresses from your list",
+          "message": "Delete bounced email addresses from your list"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.desc": {
+          "source": "Remove email addresses from your bounces list. You can either delete all bounces at once or specify individual email addresses to remove. Deleting bounces allows those addresses to receive emails again.",
+          "message": "Remove email addresses from your bounces list. You can either delete all bounces at once or specify individual email addresses to remove. Deleting bounces allows those addresses to receive emails again."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZGVsZXRlQWxs.display_name": {
+          "source": "Delete All",
+          "message": "Delete All"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZGVsZXRlQWxs.short_desc": {
+          "source": "Delete all bounced emails",
+          "message": "Delete all bounced emails"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZGVsZXRlQWxs.desc": {
+          "source": "Set to true to delete all bounced email addresses from your list. When true, the emails parameter is ignored.",
+          "message": "Set to true to delete all bounced email addresses from your list. When true, the emails parameter is ignored."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZW1haWxz.display_name": {
+          "source": "Emails",
+          "message": "Emails"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZW1haWxz.short_desc": {
+          "source": "List of email addresses to delete",
+          "message": "List of email addresses to delete"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZW1haWxz.desc": {
+          "source": "An array of email addresses to remove from the bounces list. Required if Delete All is not set to true.",
+          "message": "An array of email addresses to remove from the bounces list. Required if Delete All is not set to true."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.display_name": {
+          "source": "List Global Suppressions",
+          "message": "List Global Suppressions"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.short_desc": {
+          "source": "Retrieve a list of globally unsubscribed email addresses",
+          "message": "Retrieve a list of globally unsubscribed email addresses"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.desc": {
+          "source": "Retrieve a list of all email addresses that have globally unsubscribed from all of your emails. These addresses will not receive any emails from your account until they are removed from this list.",
+          "message": "Retrieve a list of all email addresses that have globally unsubscribed from all of your emails. These addresses will not receive any emails from your account until they are removed from this list."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.c3RhcnRUaW1l.display_name": {
+          "source": "Start Time",
+          "message": "Start Time"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.c3RhcnRUaW1l.short_desc": {
+          "source": "Filter suppressions created after this Unix timestamp",
+          "message": "Filter suppressions created after this Unix timestamp"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.c3RhcnRUaW1l.desc": {
+          "source": "Retrieve suppressions that were created after this point in time. Provide the time as a Unix timestamp (seconds since epoch).",
+          "message": "Retrieve suppressions that were created after this point in time. Provide the time as a Unix timestamp (seconds since epoch)."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.ZW5kVGltZQ.display_name": {
+          "source": "End Time",
+          "message": "End Time"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.ZW5kVGltZQ.short_desc": {
+          "source": "Filter suppressions created before this Unix timestamp",
+          "message": "Filter suppressions created before this Unix timestamp"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.ZW5kVGltZQ.desc": {
+          "source": "Retrieve suppressions that were created before this point in time. Provide the time as a Unix timestamp (seconds since epoch).",
+          "message": "Retrieve suppressions that were created before this point in time. Provide the time as a Unix timestamp (seconds since epoch)."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of suppressions to return",
+          "message": "Maximum number of suppressions to return"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.bGltaXQ.desc": {
+          "source": "The maximum number of suppression records to return. Default is 500.",
+          "message": "The maximum number of suppression records to return. Default is 500."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.b2Zmc2V0.short_desc": {
+          "source": "Starting point in the list of results",
+          "message": "Starting point in the list of results"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.b2Zmc2V0.desc": {
+          "source": "The starting point in the list of results for pagination. Default is 0.",
+          "message": "The starting point in the list of results for pagination. Default is 0."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.display_name": {
+          "source": "Get a Global Suppression",
+          "message": "Get a Global Suppression"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.short_desc": {
+          "source": "Retrieve details of a specific globally suppressed email",
+          "message": "Retrieve details of a specific globally suppressed email"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.desc": {
+          "source": "Check if a specific email address is on the global suppression list and retrieve its details.",
+          "message": "Check if a specific email address is on the global suppression list and retrieve its details."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "Email"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.option.ZW1haWw.short_desc": {
+          "source": "The email address to check",
+          "message": "The email address to check"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.option.ZW1haWw.desc": {
+          "source": "The email address to look up in the global suppression list. Returns the suppression details if found.",
+          "message": "The email address to look up in the global suppression list. Returns the suppression details if found."
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.display_name": {
+          "source": "Add Global Suppressions",
+          "message": "Add Global Suppressions"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.short_desc": {
+          "source": "Add email addresses to the global suppression list",
+          "message": "Add email addresses to the global suppression list"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.desc": {
+          "source": "Add one or more email addresses to the global suppression list. These addresses will no longer receive any emails from your account until they are removed from the list.",
+          "message": "Add one or more email addresses to the global suppression list. These addresses will no longer receive any emails from your account until they are removed from the list."
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.option.ZW1haWxz.display_name": {
+          "source": "Emails",
+          "message": "Emails"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.option.ZW1haWxz.short_desc": {
+          "source": "List of email addresses to add",
+          "message": "List of email addresses to add"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.option.ZW1haWxz.desc": {
+          "source": "An array of email addresses to add to the global suppression list. These addresses will be blocked from receiving all future emails.",
+          "message": "An array of email addresses to add to the global suppression list. These addresses will be blocked from receiving all future emails."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.display_name": {
+          "source": "Delete a Global Suppression",
+          "message": "Delete a Global Suppression"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.short_desc": {
+          "source": "Remove an email address from the global suppression list",
+          "message": "Remove an email address from the global suppression list"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.desc": {
+          "source": "Remove an email address from the global suppression list. This will allow the address to receive emails from your account again.",
+          "message": "Remove an email address from the global suppression list. This will allow the address to receive emails from your account again."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "Email"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.option.ZW1haWw.short_desc": {
+          "source": "The email address to remove",
+          "message": "The email address to remove"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.option.ZW1haWw.desc": {
+          "source": "The email address to remove from the global suppression list. Once removed, this address will be able to receive emails again.",
+          "message": "The email address to remove from the global suppression list. Once removed, this address will be able to receive emails again."
+        },
+        "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.display_name": {
+          "source": "Create a List",
+          "message": "Create a List"
+        },
+        "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.short_desc": {
+          "source": "Create a new contact list",
+          "message": "Create a new contact list"
+        },
+        "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.desc": {
+          "source": "Create a new recipient list for organizing your contacts. Lists help you segment your audience for targeted marketing campaigns.",
+          "message": "Create a new recipient list for organizing your contacts. Lists help you segment your audience for targeted marketing campaigns."
+        },
+        "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Name"
+        },
+        "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.short_desc": {
+          "source": "The name of the new list",
+          "message": "The name of the new list"
+        },
+        "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.desc": {
+          "source": "A descriptive name for your contact list. Choose a name that clearly identifies the purpose or audience of the list.",
+          "message": "A descriptive name for your contact list. Choose a name that clearly identifies the purpose or audience of the list."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9saXN0cw.display_name": {
+          "source": "Get All Lists",
+          "message": "Get All Lists"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9saXN0cw.short_desc": {
+          "source": "Retrieve all contact lists",
+          "message": "Retrieve all contact lists"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9saXN0cw.desc": {
+          "source": "Retrieve all recipient lists in your SendGrid account. Returns list details including name and recipient count.",
+          "message": "Retrieve all recipient lists in your SendGrid account. Returns list details including name and recipient count."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.display_name": {
+          "source": "Delete a List",
+          "message": "Delete a List"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.short_desc": {
+          "source": "Delete a contact list",
+          "message": "Delete a contact list"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.desc": {
+          "source": "Delete a recipient list from your SendGrid account. You can optionally delete all contacts within the list as well.",
+          "message": "Delete a recipient list from your SendGrid account. You can optionally delete all contacts within the list as well."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.bGlzdElk.display_name": {
+          "source": "List ID",
+          "message": "List ID"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.bGlzdElk.short_desc": {
+          "source": "The ID of the list to delete",
+          "message": "The ID of the list to delete"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.bGlzdElk.desc": {
+          "source": "The unique identifier of the list you want to delete. Select from your existing lists.",
+          "message": "The unique identifier of the list you want to delete. Select from your existing lists."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.ZGVsZXRlQ29udGFjdHM.display_name": {
+          "source": "Delete Contacts",
+          "message": "Delete Contacts"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.ZGVsZXRlQ29udGFjdHM.short_desc": {
+          "source": "Also delete all contacts in the list",
+          "message": "Also delete all contacts in the list"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.ZGVsZXRlQ29udGFjdHM.desc": {
+          "source": "When set to true, all contacts within the list will also be permanently deleted from your contact database. Use with caution.",
+          "message": "When set to true, all contacts within the list will also be permanently deleted from your contact database. Use with caution."
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.display_name": {
+          "source": "Add or Update a Contact",
+          "message": "Add or Update a Contact"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.short_desc": {
+          "source": "Add a new contact or update an existing one",
+          "message": "Add a new contact or update an existing one"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.desc": {
+          "source": "Add a new contact to your SendGrid contact database or update an existing contact if the email already exists. You can also assign the contact to one or more lists.",
+          "message": "Add a new contact to your SendGrid contact database or update an existing contact if the email already exists. You can also assign the contact to one or more lists."
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "Email"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.ZW1haWw.short_desc": {
+          "source": "The email address of the contact",
+          "message": "The email address of the contact"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.ZW1haWw.desc": {
+          "source": "The email address for the contact. This is the unique identifier - if a contact with this email exists, it will be updated.",
+          "message": "The email address for the contact. This is the unique identifier - if a contact with this email exists, it will be updated."
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Zmlyc3ROYW1l.display_name": {
+          "source": "First Name",
+          "message": "First Name"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Zmlyc3ROYW1l.short_desc": {
+          "source": "The first name of the contact",
+          "message": "The first name of the contact"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Zmlyc3ROYW1l.desc": {
+          "source": "The contact's first name.",
+          "message": "The contact's first name."
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGFzdE5hbWU.display_name": {
+          "source": "Last Name",
+          "message": "Last Name"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGFzdE5hbWU.short_desc": {
+          "source": "The last name of the contact",
+          "message": "The last name of the contact"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGFzdE5hbWU.desc": {
+          "source": "The contact's last name.",
+          "message": "The contact's last name."
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGlzdElkcw.display_name": {
+          "source": "List IDs",
+          "message": "List IDs"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGlzdElkcw.short_desc": {
+          "source": "Lists to add the contact to",
+          "message": "Lists to add the contact to"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGlzdElkcw.desc": {
+          "source": "One or more list IDs to add this contact to. The contact will be added to all specified lists.",
+          "message": "One or more list IDs to add this contact to. The contact will be added to all specified lists."
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Y3VzdG9tRmllbGRz.display_name": {
+          "source": "Custom Fields",
+          "message": "Custom Fields"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Y3VzdG9tRmllbGRz.short_desc": {
+          "source": "Additional custom field values",
+          "message": "Additional custom field values"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Y3VzdG9tRmllbGRz.desc": {
+          "source": "A JSON object containing custom field names and values. Custom fields must be created in your SendGrid account first.",
+          "message": "A JSON object containing custom field names and values. Custom fields must be created in your SendGrid account first."
+        },
+        "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.display_name": {
+          "source": "Search for Contacts",
+          "message": "Search for Contacts"
+        },
+        "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.short_desc": {
+          "source": "Search contacts by field value",
+          "message": "Search contacts by field value"
+        },
+        "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.desc": {
+          "source": "Search your contact database for contacts matching a specific field value. You can search by email, name, or any custom field.",
+          "message": "Search your contact database for contacts matching a specific field value. You can search by email, name, or any custom field."
+        },
+        "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.ZmllbGROYW1l.display_name": {
+          "source": "Field Name",
+          "message": "Field Name"
+        },
+        "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.ZmllbGROYW1l.short_desc": {
+          "source": "The field to search on",
+          "message": "The field to search on"
+        },
+        "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.ZmllbGROYW1l.desc": {
+          "source": "The name of the field to search. Common fields include `email`, `first_name`, `last_name`, or any custom field name.",
+          "message": "The name of the field to search. Common fields include `email`, `first_name`, `last_name`, or any custom field name."
+        },
+        "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.dmFsdWU.display_name": {
+          "source": "Value",
+          "message": "Value"
+        },
+        "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.dmFsdWU.short_desc": {
+          "source": "The value to search for",
+          "message": "The value to search for"
+        },
+        "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.dmFsdWU.desc": {
+          "source": "The value to match against the specified field. Text fields may require URL encoding.",
+          "message": "The value to match against the specified field. Text fields may require URL encoding."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.display_name": {
+          "source": "Delete Contacts",
+          "message": "Delete Contacts"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.short_desc": {
+          "source": "Permanently delete contacts from your database",
+          "message": "Permanently delete contacts from your database"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.desc": {
+          "source": "Permanently delete one or more contacts from your SendGrid contact database. This action cannot be undone.",
+          "message": "Permanently delete one or more contacts from your SendGrid contact database. This action cannot be undone."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.option.Y29udGFjdElkcw.display_name": {
+          "source": "Contact IDs",
+          "message": "Contact IDs"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.option.Y29udGFjdElkcw.short_desc": {
+          "source": "The IDs of contacts to delete",
+          "message": "The IDs of contacts to delete"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.option.Y29udGFjdElkcw.desc": {
+          "source": "An array of contact IDs to delete. Select from your existing contacts. All selected contacts will be permanently removed.",
+          "message": "An array of contact IDs to delete. Select from your existing contacts. All selected contacts will be permanently removed."
+        },
+        "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.display_name": {
+          "source": "Remove Contacts from List",
+          "message": "Remove Contacts from List"
+        },
+        "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.short_desc": {
+          "source": "Remove contacts from a specific list",
+          "message": "Remove contacts from a specific list"
+        },
+        "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.desc": {
+          "source": "Remove one or more contacts from a specific list without deleting them from your contact database. The contacts will remain in your database but will no longer be associated with the specified list.",
+          "message": "Remove one or more contacts from a specific list without deleting them from your contact database. The contacts will remain in your database but will no longer be associated with the specified list."
+        },
+        "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.bGlzdElk.display_name": {
+          "source": "List ID",
+          "message": "List ID"
+        },
+        "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.bGlzdElk.short_desc": {
+          "source": "The list to remove contacts from",
+          "message": "The list to remove contacts from"
+        },
+        "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.bGlzdElk.desc": {
+          "source": "The unique identifier of the list from which you want to remove contacts.",
+          "message": "The unique identifier of the list from which you want to remove contacts."
+        },
+        "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.Y29udGFjdElkcw.display_name": {
+          "source": "Contact IDs",
+          "message": "Contact IDs"
+        },
+        "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.Y29udGFjdElkcw.short_desc": {
+          "source": "The contacts to remove from the list",
+          "message": "The contacts to remove from the list"
+        },
+        "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.Y29udGFjdElkcw.desc": {
+          "source": "An array of contact IDs to remove from the list. The contacts will remain in your database but will be unlinked from this list.",
+          "message": "An array of contact IDs to remove from the list. The contacts will remain in your database but will be unlinked from this list."
+        },
+        "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.display_name": {
+          "source": "Validate Email",
+          "message": "Validate Email"
+        },
+        "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.short_desc": {
+          "source": "Validate an email address for deliverability",
+          "message": "Validate an email address for deliverability"
+        },
+        "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.desc": {
+          "source": "Check if an email address is valid and likely to receive emails. Returns a verdict (Valid, Risky, or Invalid) along with detailed checks including domain validity, suspected disposable address detection, and bounce history.",
+          "message": "Check if an email address is valid and likely to receive emails. Returns a verdict (Valid, Risky, or Invalid) along with detailed checks including domain validity, suspected disposable address detection, and bounce history."
+        },
+        "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "Email"
+        },
+        "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.option.ZW1haWw.short_desc": {
+          "source": "The email address to validate",
+          "message": "The email address to validate"
+        },
+        "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.option.ZW1haWw.desc": {
+          "source": "The email address you want to validate. The validation will check syntax, domain records, and historical data.",
+          "message": "The email address you want to validate. The validation will check syntax, domain records, and historical data."
+        },
+        "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.option.c291cmNl.display_name": {
+          "source": "Source",
+          "message": "Source"
+        },
+        "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.option.c291cmNl.short_desc": {
+          "source": "Optional source identifier for tracking",
+          "message": "Optional source identifier for tracking"
+        },
+        "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.option.c291cmNl.desc": {
+          "source": "An optional source string to help you track where the validation request originated from.",
+          "message": "An optional source string to help you track where the validation request originated from."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.display_name": {
+          "source": "Send Email",
+          "message": "Send Email"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.short_desc": {
+          "source": "Send an email message",
+          "message": "Send an email message"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.desc": {
+          "source": "Send a transactional email to one or more recipients. You can send plain text, HTML, or both. Supports CC, BCC, and custom reply-to addresses.",
+          "message": "Send a transactional email to one or more recipients. You can send plain text, HTML, or both. Supports CC, BCC, and custom reply-to addresses."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9FbWFpbA.display_name": {
+          "source": "To Email",
+          "message": "To Email"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9FbWFpbA.short_desc": {
+          "source": "The recipient email address",
+          "message": "The recipient email address"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9FbWFpbA.desc": {
+          "source": "The email address of the primary recipient.",
+          "message": "The email address of the primary recipient."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9OYW1l.display_name": {
+          "source": "To Name",
+          "message": "To Name"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9OYW1l.short_desc": {
+          "source": "The recipient name",
+          "message": "The recipient name"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9OYW1l.desc": {
+          "source": "Optional name of the recipient to personalize the 'To' field.",
+          "message": "Optional name of the recipient to personalize the 'To' field."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbUVtYWls.display_name": {
+          "source": "From Email",
+          "message": "From Email"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbUVtYWls.short_desc": {
+          "source": "The sender email address",
+          "message": "The sender email address"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbUVtYWls.desc": {
+          "source": "The email address that will appear as the sender. Must be a verified sender in your SendGrid account.",
+          "message": "The email address that will appear as the sender. Must be a verified sender in your SendGrid account."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbU5hbWU.display_name": {
+          "source": "From Name",
+          "message": "From Name"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbU5hbWU.short_desc": {
+          "source": "The sender name",
+          "message": "The sender name"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbU5hbWU.desc": {
+          "source": "Optional name to display as the sender in the 'From' field.",
+          "message": "Optional name to display as the sender in the 'From' field."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "Subject"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.c3ViamVjdA.short_desc": {
+          "source": "The email subject line",
+          "message": "The email subject line"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.c3ViamVjdA.desc": {
+          "source": "The subject line of the email.",
+          "message": "The subject line of the email."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dGV4dENvbnRlbnQ.display_name": {
+          "source": "Text Content",
+          "message": "Text Content"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dGV4dENvbnRlbnQ.short_desc": {
+          "source": "Plain text content of the email",
+          "message": "Plain text content of the email"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dGV4dENvbnRlbnQ.desc": {
+          "source": "The plain text version of the email content. Either text content or HTML content (or both) must be provided.",
+          "message": "The plain text version of the email content. Either text content or HTML content (or both) must be provided."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.aHRtbENvbnRlbnQ.display_name": {
+          "source": "HTML Content",
+          "message": "HTML Content"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.aHRtbENvbnRlbnQ.short_desc": {
+          "source": "HTML content of the email",
+          "message": "HTML content of the email"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.aHRtbENvbnRlbnQ.desc": {
+          "source": "The HTML version of the email content. Either text content or HTML content (or both) must be provided.",
+          "message": "The HTML version of the email content. Either text content or HTML content (or both) must be provided."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb0VtYWls.display_name": {
+          "source": "Reply-To Email",
+          "message": "Reply-To Email"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb0VtYWls.short_desc": {
+          "source": "Email address for replies",
+          "message": "Email address for replies"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb0VtYWls.desc": {
+          "source": "Optional email address that recipients should reply to. If not provided, replies will go to the sender address.",
+          "message": "Optional email address that recipients should reply to. If not provided, replies will go to the sender address."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb05hbWU.display_name": {
+          "source": "Reply-To Name",
+          "message": "Reply-To Name"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb05hbWU.short_desc": {
+          "source": "Name for the reply-to address",
+          "message": "Name for the reply-to address"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb05hbWU.desc": {
+          "source": "Optional name to display for the reply-to address.",
+          "message": "Optional name to display for the reply-to address."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.Y2NFbWFpbHM.display_name": {
+          "source": "CC Emails",
+          "message": "CC Emails"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.Y2NFbWFpbHM.short_desc": {
+          "source": "Carbon copy recipients",
+          "message": "Carbon copy recipients"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.Y2NFbWFpbHM.desc": {
+          "source": "An array of email addresses to include as CC recipients.",
+          "message": "An array of email addresses to include as CC recipients."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.YmNjRW1haWxz.display_name": {
+          "source": "BCC Emails",
+          "message": "BCC Emails"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.YmNjRW1haWxz.short_desc": {
+          "source": "Blind carbon copy recipients",
+          "message": "Blind carbon copy recipients"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.YmNjRW1haWxz.desc": {
+          "source": "An array of email addresses to include as BCC recipients.",
+          "message": "An array of email addresses to include as BCC recipients."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.display_name": {
+          "source": "Send Template Email",
+          "message": "Send Template Email"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.short_desc": {
+          "source": "Send an email message using a SendGrid template",
+          "message": "Send an email message using a SendGrid template"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.desc": {
+          "source": "Send a transactional email using a predefined SendGrid dynamic template. Customize the email content by providing dynamic template data for personalization.",
+          "message": "Send a transactional email using a predefined SendGrid dynamic template. Customize the email content by providing dynamic template data for personalization."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9FbWFpbA.display_name": {
+          "source": "To Email",
+          "message": "To Email"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9FbWFpbA.short_desc": {
+          "source": "The recipient email address",
+          "message": "The recipient email address"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9FbWFpbA.desc": {
+          "source": "The email address of the primary recipient.",
+          "message": "The email address of the primary recipient."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9OYW1l.display_name": {
+          "source": "To Name",
+          "message": "To Name"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9OYW1l.short_desc": {
+          "source": "The recipient name",
+          "message": "The recipient name"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9OYW1l.desc": {
+          "source": "Optional name of the recipient to personalize the 'To' field.",
+          "message": "Optional name of the recipient to personalize the 'To' field."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbUVtYWls.display_name": {
+          "source": "From Email",
+          "message": "From Email"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbUVtYWls.short_desc": {
+          "source": "The sender email address",
+          "message": "The sender email address"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbUVtYWls.desc": {
+          "source": "The email address that will appear as the sender. Must be a verified sender in your SendGrid account.",
+          "message": "The email address that will appear as the sender. Must be a verified sender in your SendGrid account."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbU5hbWU.display_name": {
+          "source": "From Name",
+          "message": "From Name"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbU5hbWU.short_desc": {
+          "source": "The sender name",
+          "message": "The sender name"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbU5hbWU.desc": {
+          "source": "Optional name to display as the sender in the 'From' field.",
+          "message": "Optional name to display as the sender in the 'From' field."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dGVtcGxhdGVJZA.display_name": {
+          "source": "Template ID",
+          "message": "Template ID"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dGVtcGxhdGVJZA.short_desc": {
+          "source": "The SendGrid template to use",
+          "message": "The SendGrid template to use"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dGVtcGxhdGVJZA.desc": {
+          "source": "Select the dynamic template to use for this email. The template must be created in your SendGrid account.",
+          "message": "Select the dynamic template to use for this email. The template must be created in your SendGrid account."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dmFsdWVz.display_name": {
+          "source": "Template Values",
+          "message": "Template Values"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dmFsdWVz.short_desc": {
+          "source": "Dynamic data for template personalization",
+          "message": "Dynamic data for template personalization"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dmFsdWVz.desc": {
+          "source": "A JSON object containing key-value pairs for dynamic template data. These values will replace the corresponding placeholders in the selected template.",
+          "message": "A JSON object containing key-value pairs for dynamic template data. These values will replace the corresponding placeholders in the selected template."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb0VtYWls.display_name": {
+          "source": "Reply-To Email",
+          "message": "Reply-To Email"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb0VtYWls.short_desc": {
+          "source": "Email address for replies",
+          "message": "Email address for replies"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb0VtYWls.desc": {
+          "source": "Optional email address that recipients should reply to. If not provided, replies will go to the sender address.",
+          "message": "Optional email address that recipients should reply to. If not provided, replies will go to the sender address."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb05hbWU.display_name": {
+          "source": "Reply-To Name",
+          "message": "Reply-To Name"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb05hbWU.short_desc": {
+          "source": "Name for the reply-to address",
+          "message": "Name for the reply-to address"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb05hbWU.desc": {
+          "source": "Optional name to display for the reply-to address.",
+          "message": "Optional name to display for the reply-to address."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.Y2NFbWFpbHM.display_name": {
+          "source": "CC Emails",
+          "message": "CC Emails"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.Y2NFbWFpbHM.short_desc": {
+          "source": "Carbon copy recipients",
+          "message": "Carbon copy recipients"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.Y2NFbWFpbHM.desc": {
+          "source": "An array of email addresses to include as CC recipients.",
+          "message": "An array of email addresses to include as CC recipients."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.YmNjRW1haWxz.display_name": {
+          "source": "BCC Emails",
+          "message": "BCC Emails"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.YmNjRW1haWxz.short_desc": {
+          "source": "Blind carbon copy recipients",
+          "message": "Blind carbon copy recipients"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.YmNjRW1haWxz.desc": {
+          "source": "An array of email addresses to include as BCC recipients.",
+          "message": "An array of email addresses to include as BCC recipients."
+        }
+      }
+    }
+  }
+}

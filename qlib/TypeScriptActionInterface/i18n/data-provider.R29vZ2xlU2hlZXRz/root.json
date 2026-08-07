@@ -1,0 +1,1433 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "root": {
+      "messages": {
+        "app.R29vZ2xlU2hlZXRz.display_name": {
+          "source": "Google Sheets",
+          "message": "Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.short_desc": {
+          "source": "Connect with Google Sheets to manage your spreadsheets",
+          "message": "Connect with Google Sheets to manage your spreadsheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.desc": {
+          "source": "Integrate with Google Sheets to create, update, and manage your spreadsheets. This integration allows you to perform actions and respond to events in your Google Sheets account, enabling you to automate data management and reporting workflows.",
+          "message": "Integrate with Google Sheets to create, update, and manage your spreadsheets. This integration allows you to perform actions and respond to events in your Google Sheets account, enabling you to automate data management and reporting workflows."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Make an API call"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Sheets",
+          "message": "Make a custom API call to Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Sheets** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Make a custom HTTP / REST API call to **Google Sheets** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP Method"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI Path"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body Type"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "How the body is serialized and what Content-Type is sent"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; use connection serialization and let the REST client decide"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serialize body as JSON"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serialize body as application/x-www-form-urlencoded form fields"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans)."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Upload a file using multipart/form-data"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Send body as XML"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Send body as YAML"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Plain Text"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Send body as text/plain"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Raw Binary"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Send body as raw bytes"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "The request body"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Path Variables"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Values for {name} placeholders in path"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Query Arguments"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Query string parameters"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Custom Headers"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Extra request headers"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default)."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Expected Status Codes"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Response status codes treated as success"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws)."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Return Errors as Data"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Return non-2xx responses normally instead of throwing"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Include Debug Info"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Include request/timing/size debug info in the response"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Search Records"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"GoogleSheets\"",
+          "message": "Search for matching records in the given table in app \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"GoogleSheets\"",
+          "message": "Search for matching records in the given table in app \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Table"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Find a Single Record"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"GoogleSheets\"",
+          "message": "Search for a single matching record in the given table in app \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"GoogleSheets\"",
+          "message": "Search for a single matching record in the given table in app \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Table"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Create Records"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"GoogleSheets\"",
+          "message": "Create new records in the given table in app \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"GoogleSheets\"",
+          "message": "Create new records in the given table in app \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Table"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Update Records"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"GoogleSheets\"",
+          "message": "Update existing records in the given table in app \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"GoogleSheets\"",
+          "message": "Update existing records in the given table in app \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Table"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Delete Records"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"GoogleSheets\"",
+          "message": "Delete records from the given table in app \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"GoogleSheets\"",
+          "message": "Delete records from the given table in app \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Table"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "The table name"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
+          "source": "Add Rows to Spreadsheet",
+          "message": "Add Rows to Spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
+          "source": "Add one or more rows to the end of a Google Sheets table",
+          "message": "Add one or more rows to the end of a Google Sheets table"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.desc": {
+          "source": "Append new rows to an existing Google Sheets table with data mapped to the table headers",
+          "message": "Append new rows to an existing Google Sheets table with data mapped to the table headers"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "Spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "Select the Google Sheets spreadsheet",
+          "message": "Select the Google Sheets spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The Google Sheets spreadsheet where you want to add rows",
+          "message": "The Google Sheets spreadsheet where you want to add rows"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.display_name": {
+          "source": "Worksheet",
+          "message": "Worksheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.short_desc": {
+          "source": "Select the worksheet within the spreadsheet",
+          "message": "Select the worksheet within the spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.desc": {
+          "source": "The specific worksheet within the spreadsheet where the rows will be added",
+          "message": "The specific worksheet within the spreadsheet where the rows will be added"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.display_name": {
+          "source": "Insert at Start",
+          "message": "Insert at Start"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.short_desc": {
+          "source": "Insert rows at the start of the table",
+          "message": "Insert rows at the start of the table"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.desc": {
+          "source": "If selected, new rows will be inserted at the start of the table. If not selected, rows will be appended to the end of the table.",
+          "message": "If selected, new rows will be inserted at the start of the table. If not selected, rows will be appended to the end of the table."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.display_name": {
+          "source": "Clear Spreadsheet Row(s)",
+          "message": "Clear Spreadsheet Row(s)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.short_desc": {
+          "source": "Clear content from specific rows in a Google Sheets spreadsheet",
+          "message": "Clear content from specific rows in a Google Sheets spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.desc": {
+          "source": "Remove all data from selected rows in a Google Sheets spreadsheet while preserving formatting",
+          "message": "Remove all data from selected rows in a Google Sheets spreadsheet while preserving formatting"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "Spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "Select the Google Sheets spreadsheet",
+          "message": "Select the Google Sheets spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The Google Sheets spreadsheet containing the rows to be cleared",
+          "message": "The Google Sheets spreadsheet containing the rows to be cleared"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet",
+          "message": "Sheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c2hlZXRfaWQ.short_desc": {
+          "source": "Select the sheet within the spreadsheet",
+          "message": "Select the sheet within the spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c2hlZXRfaWQ.desc": {
+          "source": "The specific sheet within the spreadsheet where rows will be cleared",
+          "message": "The specific sheet within the spreadsheet where rows will be cleared"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.display_name": {
+          "source": "Rows to Clear",
+          "message": "Rows to Clear"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.short_desc": {
+          "source": "The row numbers to clear (1-based)",
+          "message": "The row numbers to clear (1-based)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.desc": {
+          "source": "List of row indices to clear (1-based, as seen in the spreadsheet)",
+          "message": "List of row indices to clear (1-based, as seen in the spreadsheet)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.display_name": {
+          "source": "Copy Worksheet",
+          "message": "Copy Worksheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.short_desc": {
+          "source": "Copy a worksheet from one Google Sheets spreadsheet to another",
+          "message": "Copy a worksheet from one Google Sheets spreadsheet to another"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.desc": {
+          "source": "Create a copy of a worksheet from a source spreadsheet to a destination spreadsheet with optional customization",
+          "message": "Create a copy of a worksheet from a source spreadsheet to a destination spreadsheet with optional customization"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
+          "source": "Source Spreadsheet",
+          "message": "Source Spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
+          "source": "Select the source Google Sheets spreadsheet",
+          "message": "Select the source Google Sheets spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.desc": {
+          "source": "The Google Sheets spreadsheet containing the worksheet you want to copy",
+          "message": "The Google Sheets spreadsheet containing the worksheet you want to copy"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.display_name": {
+          "source": "Source Worksheet",
+          "message": "Source Worksheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.short_desc": {
+          "source": "Select the worksheet to copy",
+          "message": "Select the worksheet to copy"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.desc": {
+          "source": "The specific worksheet within the source spreadsheet that will be copied",
+          "message": "The specific worksheet within the source spreadsheet that will be copied"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Destination Spreadsheet",
+          "message": "Destination Spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "Select the destination Google Sheets spreadsheet",
+          "message": "Select the destination Google Sheets spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The Google Sheets spreadsheet where the worksheet will be copied to",
+          "message": "The Google Sheets spreadsheet where the worksheet will be copied to"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.display_name": {
+          "source": "New Worksheet Name",
+          "message": "New Worksheet Name"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.short_desc": {
+          "source": "Optional new name for the copied worksheet",
+          "message": "Optional new name for the copied worksheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.desc": {
+          "source": "Specify a custom name for the copied worksheet. If not provided, the original name will be used with \"Copy of\" prefix",
+          "message": "Specify a custom name for the copied worksheet. If not provided, the original name will be used with \"Copy of\" prefix"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
+          "source": "Insert Position",
+          "message": "Insert Position"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
+          "source": "Optional position to insert the new worksheet",
+          "message": "Optional position to insert the new worksheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.desc": {
+          "source": "The zero-based index where the new worksheet should be inserted. If not specified, the worksheet is added to the end of the spreadsheet",
+          "message": "The zero-based index where the new worksheet should be inserted. If not specified, the worksheet is added to the end of the spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.display_name": {
+          "source": "Create Spreadsheet",
+          "message": "Create Spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.short_desc": {
+          "source": "Create a new Google Sheets spreadsheet with optional headers or by copying an existing one.",
+          "message": "Create a new Google Sheets spreadsheet with optional headers or by copying an existing one."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.desc": {
+          "source": "Creates a new Google Sheets spreadsheet. You can either create it from scratch with custom headers or copy an existing spreadsheet. When headers are provided, they are formatted as bold with borders and the header row is frozen.",
+          "message": "Creates a new Google Sheets spreadsheet. You can either create it from scratch with custom headers or copy an existing spreadsheet. When headers are provided, they are formatted as bold with borders and the header row is frozen."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.display_name": {
+          "source": "Spreadsheet Title",
+          "message": "Spreadsheet Title"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.short_desc": {
+          "source": "The title for the new spreadsheet",
+          "message": "The title for the new spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.desc": {
+          "source": "The name that will be given to the newly created Google Sheets spreadsheet.",
+          "message": "The name that will be given to the newly created Google Sheets spreadsheet."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
+          "source": "Source Spreadsheet",
+          "message": "Source Spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
+          "source": "ID of an existing spreadsheet to copy",
+          "message": "ID of an existing spreadsheet to copy"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.desc": {
+          "source": "Optional. If provided, the new spreadsheet will be created as a copy of this existing spreadsheet. Headers option will be ignored if this is provided.",
+          "message": "Optional. If provided, the new spreadsheet will be created as a copy of this existing spreadsheet. Headers option will be ignored if this is provided."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.aGVhZGVycw.display_name": {
+          "source": "Headers",
+          "message": "Headers"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.aGVhZGVycw.short_desc": {
+          "source": "Column headers for the new spreadsheet",
+          "message": "Column headers for the new spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.aGVhZGVycw.desc": {
+          "source": "Optional. A list of column headers to add to the first row of the new spreadsheet. Headers will be formatted as bold with borders and the header row will be frozen. This option is ignored if a source spreadsheet is provided.",
+          "message": "Optional. A list of column headers to add to the first row of the new spreadsheet. Headers will be formatted as bold with borders and the header row will be frozen. This option is ignored if a source spreadsheet is provided."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.display_name": {
+          "source": "Create Worksheet",
+          "message": "Create Worksheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.short_desc": {
+          "source": "Create a new worksheet in a Google Sheets spreadsheet with optional headers.",
+          "message": "Create a new worksheet in a Google Sheets spreadsheet with optional headers."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.desc": {
+          "source": "Creates a new worksheet (tab) in a specified Google Sheets spreadsheet with custom title and optional column headers. Can optionally overwrite an existing worksheet with the same name.",
+          "message": "Creates a new worksheet (tab) in a specified Google Sheets spreadsheet with custom title and optional column headers. Can optionally overwrite an existing worksheet with the same name."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "Spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The Google Sheets spreadsheet where the worksheet will be created",
+          "message": "The Google Sheets spreadsheet where the worksheet will be created"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet in which to create the new worksheet.",
+          "message": "The ID of the Google Sheets spreadsheet in which to create the new worksheet."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.display_name": {
+          "source": "Worksheet Title",
+          "message": "Worksheet Title"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.short_desc": {
+          "source": "Title for the new worksheet",
+          "message": "Title for the new worksheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.desc": {
+          "source": "The name that will appear on the tab of the new worksheet.",
+          "message": "The name that will appear on the tab of the new worksheet."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.display_name": {
+          "source": "Overwrite Existing",
+          "message": "Overwrite Existing"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.short_desc": {
+          "source": "Whether to replace an existing worksheet with the same title",
+          "message": "Whether to replace an existing worksheet with the same title"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.desc": {
+          "source": "If true and a worksheet with the same title already exists, the existing worksheet will be deleted and replaced. If false and a duplicate exists, the action will fail.",
+          "message": "If true and a worksheet with the same title already exists, the existing worksheet will be deleted and replaced. If false and a duplicate exists, the action will fail."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aGVhZGVycw.display_name": {
+          "source": "Headers",
+          "message": "Headers"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aGVhZGVycw.short_desc": {
+          "source": "Column headers to add to the first row",
+          "message": "Column headers to add to the first row"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aGVhZGVycw.desc": {
+          "source": "A list of column headers that will be added to the first row of the new worksheet and formatted in bold.",
+          "message": "A list of column headers that will be added to the first row of the new worksheet and formatted in bold."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
+          "source": "Sheet Position",
+          "message": "Sheet Position"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
+          "source": "Position where the new worksheet should be placed",
+          "message": "Position where the new worksheet should be placed"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.desc": {
+          "source": "The position (zero-based index) where the new worksheet should be inserted in the spreadsheet. If not specified, the worksheet will be added at the end.",
+          "message": "The position (zero-based index) where the new worksheet should be inserted in the spreadsheet. If not specified, the worksheet will be added at the end."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.display_name": {
+          "source": "Delete Row",
+          "message": "Delete Row"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.short_desc": {
+          "source": "Delete a specific row from a Google Sheets worksheet.",
+          "message": "Delete a specific row from a Google Sheets worksheet."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.desc": {
+          "source": "Completely removes a row from a specified Google Sheets worksheet without leaving an empty space behind. The row indexing starts from 1, matching what you see in the spreadsheet UI.",
+          "message": "Completely removes a row from a specified Google Sheets worksheet without leaving an empty space behind. The row indexing starts from 1, matching what you see in the spreadsheet UI."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "Spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The Google Sheets spreadsheet containing the row to delete",
+          "message": "The Google Sheets spreadsheet containing the row to delete"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet that contains the worksheet with the row to delete.",
+          "message": "The ID of the Google Sheets spreadsheet that contains the worksheet with the row to delete."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c2hlZXRfaWQ.display_name": {
+          "source": "Worksheet",
+          "message": "Worksheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The worksheet containing the row to delete",
+          "message": "The worksheet containing the row to delete"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the worksheet (tab) within the spreadsheet that contains the row to delete.",
+          "message": "The ID of the worksheet (tab) within the spreadsheet that contains the row to delete."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.display_name": {
+          "source": "Row Index",
+          "message": "Row Index"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.short_desc": {
+          "source": "The index of the row to delete (starting from 1)",
+          "message": "The index of the row to delete (starting from 1)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.desc": {
+          "source": "The position of the row to delete, starting from 1 (not 0). This matches the row numbers you see in the Google Sheets UI. For example, to delete the very first row, use 1.",
+          "message": "The position of the row to delete, starting from 1 (not 0). This matches the row numbers you see in the Google Sheets UI. For example, to delete the very first row, use 1."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.display_name": {
+          "source": "Find Spreadsheet Rows",
+          "message": "Find Spreadsheet Rows"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.short_desc": {
+          "source": "Search for rows in a Google Sheets spreadsheet that match specific criteria.",
+          "message": "Search for rows in a Google Sheets spreadsheet that match specific criteria."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.desc": {
+          "source": "Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, pagination, and different response formats.",
+          "message": "Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, pagination, and different response formats."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "Spreadsheet ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "ID of the Google Sheets spreadsheet",
+          "message": "ID of the Google Sheets spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Sheets spreadsheet to search in. This can be found in the URL of the spreadsheet.",
+          "message": "The unique identifier of the Google Sheets spreadsheet to search in. This can be found in the URL of the spreadsheet."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet ID",
+          "message": "Sheet ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2hlZXRfaWQ.short_desc": {
+          "source": "ID of the specific sheet within the spreadsheet",
+          "message": "ID of the specific sheet within the spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the specific sheet to search within the spreadsheet. Each sheet has a unique ID that can be selected from the available sheets.",
+          "message": "The ID of the specific sheet to search within the spreadsheet. Each sheet has a unique ID that can be selected from the available sheets."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of matching rows to return",
+          "message": "Maximum number of matching rows to return"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bGltaXQ.desc": {
+          "source": "The maximum number of matching rows to include in the results. Default is 10.",
+          "message": "The maximum number of matching rows to include in the results. Default is 10."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of matching rows to skip",
+          "message": "Number of matching rows to skip"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.b2Zmc2V0.desc": {
+          "source": "The number of matching rows to skip before returning results. Used for pagination. Default is 0.",
+          "message": "The number of matching rows to skip before returning results. Used for pagination. Default is 0."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.display_name": {
+          "source": "Search From Last Row",
+          "message": "Search From Last Row"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.short_desc": {
+          "source": "Start searching from the bottom of the sheet",
+          "message": "Start searching from the bottom of the sheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.desc": {
+          "source": "When enabled, searches from the bottom of the sheet upward instead of from the top down. Useful for finding the most recent entries in sheets where new data is appended at the bottom.",
+          "message": "When enabled, searches from the bottom of the sheet upward instead of from the top down. Useful for finding the most recent entries in sheets where new data is appended at the bottom."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.display_name": {
+          "source": "Maximum Rows to Search",
+          "message": "Maximum Rows to Search"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.short_desc": {
+          "source": "Maximum number of rows to search through",
+          "message": "Maximum number of rows to search through"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.desc": {
+          "source": "Limits the total number of rows to search to control performance with large sheets. Default is 5000.",
+          "message": "Limits the total number of rows to search to control performance with large sheets. Default is 5000."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.display_name": {
+          "source": "Response Format",
+          "message": "Response Format"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.short_desc": {
+          "source": "Format of the returned rows",
+          "message": "Format of the returned rows"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.desc": {
+          "source": "Determines how the matched rows are formatted in the response. Options include raw values, values mapped to column headers, or values mapped to column letters.",
+          "message": "Determines how the matched rows are formatted in the response. Options include raw values, values mapped to column headers, or values mapped to column letters."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOnJhdw.display_name": {
+          "source": "Raw values only",
+          "message": "Raw values only"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOnJhdw.desc": {
+          "source": "Return only raw row values as arrays (most efficient)",
+          "message": "Return only raw row values as arrays (most efficient)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1oZWFkZXJz.display_name": {
+          "source": "Header mapped values",
+          "message": "Header mapped values"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1oZWFkZXJz.desc": {
+          "source": "Return values mapped to column headers",
+          "message": "Return values mapped to column headers"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1jb2x1bW5z.display_name": {
+          "source": "Column letter mapped values",
+          "message": "Column letter mapped values"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1jb2x1bW5z.desc": {
+          "source": "Return values mapped to column letters (A, B, C, etc.)",
+          "message": "Return values mapped to column letters (A, B, C, etc.)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.display_name": {
+          "source": "Search Criteria",
+          "message": "Search Criteria"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.short_desc": {
+          "source": "Criteria for finding matching rows",
+          "message": "Criteria for finding matching rows"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.desc": {
+          "source": "Defines the search criteria to use when looking for matching rows.",
+          "message": "Defines the search criteria to use when looking for matching rows."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
+          "source": "Format Spreadsheet Rows",
+          "message": "Format Spreadsheet Rows"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
+          "source": "Apply formatting to specific rows in a Google Sheets spreadsheet.",
+          "message": "Apply formatting to specific rows in a Google Sheets spreadsheet."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.desc": {
+          "source": "Apply various formatting options such as colors, text styles, and alignment to specified rows in a Google Sheets spreadsheet. Format multiple rows at once with consistent styling.",
+          "message": "Apply various formatting options such as colors, text styles, and alignment to specified rows in a Google Sheets spreadsheet. Format multiple rows at once with consistent styling."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "Spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Sheets spreadsheet to format",
+          "message": "The ID of the Google Sheets spreadsheet to format"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet containing the rows to format. This can be found in the spreadsheet URL.",
+          "message": "The ID of the Google Sheets spreadsheet containing the rows to format. This can be found in the spreadsheet URL."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.display_name": {
+          "source": "Worksheet",
+          "message": "Worksheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the specific worksheet within the spreadsheet",
+          "message": "The ID of the specific worksheet within the spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the specific worksheet (tab) containing the rows to format. Each worksheet has a unique ID within a spreadsheet.",
+          "message": "The ID of the specific worksheet (tab) containing the rows to format. Each worksheet has a unique ID within a spreadsheet."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.cm93cw.display_name": {
+          "source": "Rows",
+          "message": "Rows"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.cm93cw.short_desc": {
+          "source": "List of row numbers to format",
+          "message": "List of row numbers to format"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.cm93cw.desc": {
+          "source": "List of row numbers to format (1-based indexing). For example, [1, 2, 5] will format the first, second, and fifth rows.",
+          "message": "List of row numbers to format (1-based indexing). For example, [1, 2, 5] will format the first, second, and fifth rows."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.display_name": {
+          "source": "Background Color",
+          "message": "Background Color"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.short_desc": {
+          "source": "Background color for the cells",
+          "message": "Background color for the cells"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.desc": {
+          "source": "The background color to apply to the cells in the specified rows. Uses RGB color format.",
+          "message": "The background color to apply to the cells in the specified rows. Uses RGB color format."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.display_name": {
+          "source": "Text Color",
+          "message": "Text Color"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.short_desc": {
+          "source": "Color for the text in the cells",
+          "message": "Color for the text in the cells"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.desc": {
+          "source": "The color to apply to the text in the cells of the specified rows. Uses RGB color format.",
+          "message": "The color to apply to the text in the cells of the specified rows. Uses RGB color format."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Ym9sZA.display_name": {
+          "source": "Bold",
+          "message": "Bold"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Ym9sZA.short_desc": {
+          "source": "Make text bold",
+          "message": "Make text bold"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Ym9sZA.desc": {
+          "source": "Whether to make the text in the specified rows bold.",
+          "message": "Whether to make the text in the specified rows bold."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aXRhbGlj.display_name": {
+          "source": "Italic",
+          "message": "Italic"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aXRhbGlj.short_desc": {
+          "source": "Make text italic",
+          "message": "Make text italic"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aXRhbGlj.desc": {
+          "source": "Whether to make the text in the specified rows italic.",
+          "message": "Whether to make the text in the specified rows italic."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3RyaWtldGhyb3VnaA.display_name": {
+          "source": "Strikethrough",
+          "message": "Strikethrough"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3RyaWtldGhyb3VnaA.short_desc": {
+          "source": "Apply strikethrough to text",
+          "message": "Apply strikethrough to text"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3RyaWtldGhyb3VnaA.desc": {
+          "source": "Whether to apply strikethrough formatting to the text in the specified rows.",
+          "message": "Whether to apply strikethrough formatting to the text in the specified rows."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dW5kZXJsaW5l.display_name": {
+          "source": "Underline",
+          "message": "Underline"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dW5kZXJsaW5l.short_desc": {
+          "source": "Underline the text",
+          "message": "Underline the text"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dW5kZXJsaW5l.desc": {
+          "source": "Whether to underline the text in the specified rows.",
+          "message": "Whether to underline the text in the specified rows."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.display_name": {
+          "source": "Horizontal Alignment",
+          "message": "Horizontal Alignment"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.short_desc": {
+          "source": "Horizontal alignment of content",
+          "message": "Horizontal alignment of content"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.desc": {
+          "source": "The horizontal alignment to apply to the content in the specified rows (Left, Center, or Right).",
+          "message": "The horizontal alignment to apply to the content in the specified rows (Left, Center, or Right)."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.allowed-value.c3RyaW5nOkxFRlQ.display_name": {
+          "source": "Left",
+          "message": "Left"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.allowed-value.c3RyaW5nOkNFTlRFUg.display_name": {
+          "source": "Center",
+          "message": "Center"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.allowed-value.c3RyaW5nOlJJR0hU.display_name": {
+          "source": "Right",
+          "message": "Right"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.display_name": {
+          "source": "Vertical Alignment",
+          "message": "Vertical Alignment"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.short_desc": {
+          "source": "Vertical alignment of content",
+          "message": "Vertical alignment of content"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.desc": {
+          "source": "The vertical alignment to apply to the content in the specified rows (Top, Middle, or Bottom).",
+          "message": "The vertical alignment to apply to the content in the specified rows (Top, Middle, or Bottom)."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.allowed-value.c3RyaW5nOlRPUA.display_name": {
+          "source": "Top",
+          "message": "Top"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.allowed-value.c3RyaW5nOk1JRERMRQ.display_name": {
+          "source": "Middle",
+          "message": "Middle"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.allowed-value.c3RyaW5nOkJPVFRPTQ.display_name": {
+          "source": "Bottom",
+          "message": "Bottom"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.display_name": {
+          "source": "Font Size",
+          "message": "Font Size"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.short_desc": {
+          "source": "Text font size in points",
+          "message": "Text font size in points"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.desc": {
+          "source": "Font size in points",
+          "message": "Font size in points"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.display_name": {
+          "source": "Wrap Text",
+          "message": "Wrap Text"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.short_desc": {
+          "source": "Whether to wrap text in cells",
+          "message": "Whether to wrap text in cells"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.desc": {
+          "source": "Whether to wrap text in cells",
+          "message": "Whether to wrap text in cells"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.display_name": {
+          "source": "Search Worksheets",
+          "message": "Search Worksheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.short_desc": {
+          "source": "Find worksheets within a Google Spreadsheet by title.",
+          "message": "Find worksheets within a Google Spreadsheet by title."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.desc": {
+          "source": "Searches for worksheets (tabs) within a Google Spreadsheet by their titles. Returns detailed information about matching worksheets including dimensions, position, and visibility. Can be used to find specific worksheets or list all worksheets in a spreadsheet.",
+          "message": "Searches for worksheets (tabs) within a Google Spreadsheet by their titles. Returns detailed information about matching worksheets including dimensions, position, and visibility. Can be used to find specific worksheets or list all worksheets in a spreadsheet."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "Spreadsheet ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Spreadsheet to search within",
+          "message": "The ID of the Google Spreadsheet to search within"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Spreadsheet you want to search for worksheets in. This can be found in the spreadsheet URL.",
+          "message": "The unique identifier of the Google Spreadsheet you want to search for worksheets in. This can be found in the spreadsheet URL."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.display_name": {
+          "source": "Sheet Title",
+          "message": "Sheet Title"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.short_desc": {
+          "source": "Title text to search for (case-insensitive)",
+          "message": "Title text to search for (case-insensitive)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.desc": {
+          "source": "Search for worksheets with titles containing this text. Leave empty to list all worksheets in the spreadsheet. The search is case-insensitive by default.",
+          "message": "Search for worksheets with titles containing this text. Leave empty to list all worksheets in the spreadsheet. The search is case-insensitive by default."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.display_name": {
+          "source": "Exact Match",
+          "message": "Exact Match"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.short_desc": {
+          "source": "Whether to match the title exactly",
+          "message": "Whether to match the title exactly"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.desc": {
+          "source": "If enabled, only worksheets with exactly matching titles will be returned. If disabled (default), worksheets with titles containing the search text will be included in the results.",
+          "message": "If enabled, only worksheets with exactly matching titles will be returned. If disabled (default), worksheets with titles containing the search text will be included in the results."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
+          "source": "Update Spreadsheet Rows",
+          "message": "Update Spreadsheet Rows"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
+          "source": "Update existing rows in a Google Sheets spreadsheet.",
+          "message": "Update existing rows in a Google Sheets spreadsheet."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.desc": {
+          "source": "Updates specific rows in a Google Sheets spreadsheet by their row indices. This action allows you to modify multiple rows in a single operation while preserving the spreadsheet structure.",
+          "message": "Updates specific rows in a Google Sheets spreadsheet by their row indices. This action allows you to modify multiple rows in a single operation while preserving the spreadsheet structure."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "Spreadsheet ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Sheets spreadsheet.",
+          "message": "The ID of the Google Sheets spreadsheet."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Sheets spreadsheet you want to update rows in. This can be found in the spreadsheet URL.",
+          "message": "The unique identifier of the Google Sheets spreadsheet you want to update rows in. This can be found in the spreadsheet URL."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet ID",
+          "message": "Sheet ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the sheet within the spreadsheet.",
+          "message": "The ID of the sheet within the spreadsheet."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the specific sheet within the spreadsheet where rows will be updated.",
+          "message": "The unique identifier of the specific sheet within the spreadsheet where rows will be updated."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.display_name": {
+          "source": "Search Spreadsheets",
+          "message": "Search Spreadsheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.short_desc": {
+          "source": "Search for Google Sheets spreadsheets with advanced filtering and sorting options.",
+          "message": "Search for Google Sheets spreadsheets with advanced filtering and sorting options."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.desc": {
+          "source": "Search for Google Sheets spreadsheets in Google Drive using various criteria including filename, folder location, and custom queries. Supports sorting by different fields and directions with pagination.",
+          "message": "Search for Google Sheets spreadsheets in Google Drive using various criteria including filename, folder location, and custom queries. Supports sorting by different fields and directions with pagination."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.ZmlsZW5hbWU.display_name": {
+          "source": "Filename",
+          "message": "Filename"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.ZmlsZW5hbWU.short_desc": {
+          "source": "Name of the spreadsheet to search for",
+          "message": "Name of the spreadsheet to search for"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.ZmlsZW5hbWU.desc": {
+          "source": "The name or partial name of the Google Sheets spreadsheet to search for.",
+          "message": "The name or partial name of the Google Sheets spreadsheet to search for."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.display_name": {
+          "source": "Search Type",
+          "message": "Search Type"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.short_desc": {
+          "source": "Type of filename matching",
+          "message": "Type of filename matching"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.desc": {
+          "source": "How to match the filename - either contains the text or exact match. Default is contains.",
+          "message": "How to match the filename - either contains the text or exact match. Default is contains."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmNvbnRhaW5z.display_name": {
+          "source": "Contains",
+          "message": "Contains"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmV4YWN0.display_name": {
+          "source": "Exact Match",
+          "message": "Exact Match"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Zm9sZGVy.display_name": {
+          "source": "Folder",
+          "message": "Folder"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Zm9sZGVy.short_desc": {
+          "source": "Folder to search within",
+          "message": "Folder to search within"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Zm9sZGVy.desc": {
+          "source": "The Google Drive folder ID to limit the search to. If not specified, searches all accessible folders.",
+          "message": "The Google Drive folder ID to limit the search to. If not specified, searches all accessible folders."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "Order By"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.short_desc": {
+          "source": "Sorting criteria for results",
+          "message": "Sorting criteria for results"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.desc": {
+          "source": "List of sorting criteria to apply to the search results. Each item specifies a field and direction.",
+          "message": "List of sorting criteria to apply to the search results. Each item specifies a field and direction."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Page Size"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Maximum number of results to return",
+          "message": "Maximum number of results to return"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.desc": {
+          "source": "The maximum number of spreadsheets to return in a single request. Default is 100.",
+          "message": "The maximum number of spreadsheets to return in a single request. Default is 100."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.display_name": {
+          "source": "Custom Query",
+          "message": "Custom Query"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.short_desc": {
+          "source": "Additional search criteria",
+          "message": "Additional search criteria"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.desc": {
+          "source": "Custom Google Drive search query to add additional filtering criteria beyond the basic options.",
+          "message": "Custom Google Drive search query to add additional filtering criteria beyond the basic options."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.display_name": {
+          "source": "Create Spreadsheet Column",
+          "message": "Create Spreadsheet Column"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.short_desc": {
+          "source": "Insert a new column into a Google Sheets spreadsheet.",
+          "message": "Insert a new column into a Google Sheets spreadsheet."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.desc": {
+          "source": "Inserts a new column at the specified position in a Google Sheets spreadsheet and adds a formatted header at the top of the column.",
+          "message": "Inserts a new column at the specified position in a Google Sheets spreadsheet and adds a formatted header at the top of the column."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "Spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The Google Sheets spreadsheet",
+          "message": "The Google Sheets spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet where the column will be created.",
+          "message": "The ID of the Google Sheets spreadsheet where the column will be created."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet",
+          "message": "Sheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The sheet within the spreadsheet",
+          "message": "The sheet within the spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the specific sheet within the spreadsheet where the column will be added.",
+          "message": "The ID of the specific sheet within the spreadsheet where the column will be added."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.display_name": {
+          "source": "Column Title",
+          "message": "Column Title"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.short_desc": {
+          "source": "The title for the new column",
+          "message": "The title for the new column"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.desc": {
+          "source": "The header text that will appear at the top of the new column.",
+          "message": "The header text that will appear at the top of the new column."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.display_name": {
+          "source": "Column Index",
+          "message": "Column Index"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.short_desc": {
+          "source": "The position where the column will be inserted",
+          "message": "The position where the column will be inserted"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.desc": {
+          "source": "Zero-based index of the position where the new column should be inserted. For example, 0 means the column will be inserted at the beginning of the sheet, 1 means after the first column, etc.",
+          "message": "Zero-based index of the position where the new column should be inserted. For example, 0 means the column will be inserted at the beginning of the sheet, 1 means after the first column, etc."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.display_name": {
+          "source": "New Spreadsheet Row",
+          "message": "New Spreadsheet Row"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.short_desc": {
+          "source": "Triggers when a new row is added to a Google Sheet.",
+          "message": "Triggers when a new row is added to a Google Sheet."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.desc": {
+          "source": "Monitors a specific sheet in a Google Spreadsheet and triggers when new rows are added. The trigger provides the row data with column headers as field names.",
+          "message": "Monitors a specific sheet in a Google Spreadsheet and triggers when new rows are added. The trigger provides the row data with column headers as field names."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "Spreadsheet ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Spreadsheet to monitor",
+          "message": "The ID of the Google Spreadsheet to monitor"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Spreadsheet that contains the sheet you want to monitor for new rows.",
+          "message": "The unique identifier of the Google Spreadsheet that contains the sheet you want to monitor for new rows."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet ID",
+          "message": "Sheet ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the specific sheet to monitor",
+          "message": "The ID of the specific sheet to monitor"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the specific sheet within the spreadsheet that you want to monitor for new rows. The sheet ID can be found in the spreadsheet URL.",
+          "message": "The unique identifier of the specific sheet within the spreadsheet that you want to monitor for new rows. The sheet ID can be found in the spreadsheet URL."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.display_name": {
+          "source": "New Spreadsheet",
+          "message": "New Spreadsheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.short_desc": {
+          "source": "Triggers when a new Google Spreadsheet is created.",
+          "message": "Triggers when a new Google Spreadsheet is created."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.desc": {
+          "source": "Monitors Google Drive for newly created Google Spreadsheets. The trigger provides metadata about the newly created spreadsheet including its ID, name, URL, creation time, and owner information.",
+          "message": "Monitors Google Drive for newly created Google Spreadsheets. The trigger provides metadata about the newly created spreadsheet including its ID, name, URL, creation time, and owner information."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.display_name": {
+          "source": "New Spreadsheet Sheet",
+          "message": "New Spreadsheet Sheet"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.short_desc": {
+          "source": "Triggers when a new sheet is added to a Google Spreadsheet.",
+          "message": "Triggers when a new sheet is added to a Google Spreadsheet."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.desc": {
+          "source": "Monitors a Google Spreadsheet and triggers when new sheets are added. The trigger provides metadata about the newly created sheet including its ID, title, index position, and dimensions.",
+          "message": "Monitors a Google Spreadsheet and triggers when new sheets are added. The trigger provides metadata about the newly created sheet including its ID, title, index position, and dimensions."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "Spreadsheet ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Spreadsheet to monitor",
+          "message": "The ID of the Google Spreadsheet to monitor"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Spreadsheet that you want to monitor for new sheets. The spreadsheet ID can be found in the spreadsheet URL.",
+          "message": "The unique identifier of the Google Spreadsheet that you want to monitor for new sheets. The spreadsheet ID can be found in the spreadsheet URL."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1837 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "root": {
+      "messages": {
+        "app.TWF1dGlj.display_name": {
+          "source": "Mautic",
+          "message": "Mautic"
+        },
+        "app.TWF1dGlj.short_desc": {
+          "source": "Open-source marketing automation platform",
+          "message": "Open-source marketing automation platform"
+        },
+        "app.TWF1dGlj.desc": {
+          "source": "Connect your Mautic instance to automate marketing campaigns, manage contacts and companies, segment audiences, and send targeted emails. Build powerful marketing workflows with full control over your data.",
+          "message": "Connect your Mautic instance to automate marketing campaigns, manage contacts and companies, segment audiences, and send targeted emails. Build powerful marketing workflows with full control over your data."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Make an API call"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Mautic",
+          "message": "Make a custom API call to Mautic"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Mautic** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Make a custom HTTP / REST API call to **Mautic** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP Method"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "The HTTP method to use for the request"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI Path"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body Type"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "How the body is serialized and what Content-Type is sent"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor — selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; use connection serialization and let the REST client decide"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serialize body as JSON"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serialize body as application/x-www-form-urlencoded form fields"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans)."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Upload a file using multipart/form-data"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Send body as XML"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Send body as YAML"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Plain Text"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Send body as text/plain"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Raw Binary"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Send body as raw bytes"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "The request body"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Path Variables"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Values for {name} placeholders in path"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Query Arguments"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Query string parameters"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Custom Headers"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Extra request headers"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default)."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Expected Status Codes"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Response status codes treated as success"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws)."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Return Errors as Data"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Return non-2xx responses normally instead of throwing"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data — e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Include Debug Info"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Include request/timing/size debug info in the response"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean."
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Create Contact",
+          "message": "Create Contact"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Create a new contact",
+          "message": "Create a new contact"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.desc": {
+          "source": "Create a new contact in Mautic with the specified information.",
+          "message": "Create a new contact in Mautic with the specified information."
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email Address",
+          "message": "Email Address"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "The contact's email address",
+          "message": "The contact's email address"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "The primary email address for the contact (required)",
+          "message": "The primary email address for the contact (required)"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.display_name": {
+          "source": "First Name",
+          "message": "First Name"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.short_desc": {
+          "source": "The contact's first name",
+          "message": "The contact's first name"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.desc": {
+          "source": "The first name of the contact",
+          "message": "The first name of the contact"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.display_name": {
+          "source": "Last Name",
+          "message": "Last Name"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.short_desc": {
+          "source": "The contact's last name",
+          "message": "The contact's last name"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.desc": {
+          "source": "The last name of the contact",
+          "message": "The last name of the contact"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmU.display_name": {
+          "source": "Phone",
+          "message": "Phone"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmU.short_desc": {
+          "source": "The contact's phone number",
+          "message": "The contact's phone number"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmU.desc": {
+          "source": "The phone number for the contact",
+          "message": "The phone number for the contact"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.bW9iaWxl.display_name": {
+          "source": "Mobile",
+          "message": "Mobile"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.bW9iaWxl.short_desc": {
+          "source": "The contact's mobile number",
+          "message": "The contact's mobile number"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.bW9iaWxl.desc": {
+          "source": "The mobile phone number for the contact",
+          "message": "The mobile phone number for the contact"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.display_name": {
+          "source": "Company",
+          "message": "Company"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.short_desc": {
+          "source": "The contact's company name",
+          "message": "The contact's company name"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.desc": {
+          "source": "The name of the company the contact works for",
+          "message": "The name of the company the contact works for"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.cG9zaXRpb24.display_name": {
+          "source": "Position",
+          "message": "Position"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.cG9zaXRpb24.short_desc": {
+          "source": "The contact's job title",
+          "message": "The contact's job title"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.cG9zaXRpb24.desc": {
+          "source": "The job title or position of the contact",
+          "message": "The job title or position of the contact"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.display_name": {
+          "source": "Address Line 1",
+          "message": "Address Line 1"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.short_desc": {
+          "source": "The first line of the address",
+          "message": "The first line of the address"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.desc": {
+          "source": "The street address of the contact",
+          "message": "The street address of the contact"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.display_name": {
+          "source": "Address Line 2",
+          "message": "Address Line 2"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.short_desc": {
+          "source": "The second line of the address",
+          "message": "The second line of the address"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.desc": {
+          "source": "Additional address information",
+          "message": "Additional address information"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y2l0eQ.display_name": {
+          "source": "City",
+          "message": "City"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y2l0eQ.short_desc": {
+          "source": "The city",
+          "message": "The city"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y2l0eQ.desc": {
+          "source": "The city of the contact address",
+          "message": "The city of the contact address"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.c3RhdGU.display_name": {
+          "source": "State/Region",
+          "message": "State/Region"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.c3RhdGU.short_desc": {
+          "source": "The state or region",
+          "message": "The state or region"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.c3RhdGU.desc": {
+          "source": "The state, province, or region",
+          "message": "The state, province, or region"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.emlwY29kZQ.display_name": {
+          "source": "Postal Code",
+          "message": "Postal Code"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.emlwY29kZQ.short_desc": {
+          "source": "The postal/ZIP code",
+          "message": "The postal/ZIP code"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.emlwY29kZQ.desc": {
+          "source": "The postal or ZIP code",
+          "message": "The postal or ZIP code"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y291bnRyeQ.display_name": {
+          "source": "Country",
+          "message": "Country"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y291bnRyeQ.short_desc": {
+          "source": "The country",
+          "message": "The country"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y291bnRyeQ.desc": {
+          "source": "The country of the contact",
+          "message": "The country of the contact"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.d2Vic2l0ZQ.display_name": {
+          "source": "Website",
+          "message": "Website"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.d2Vic2l0ZQ.short_desc": {
+          "source": "The contact's website",
+          "message": "The contact's website"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.d2Vic2l0ZQ.desc": {
+          "source": "The personal or professional website URL",
+          "message": "The personal or professional website URL"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.dGFncw.short_desc": {
+          "source": "Tags to apply to the contact",
+          "message": "Tags to apply to the contact"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.dGFncw.desc": {
+          "source": "A list of tags to apply to the contact for organization and segmentation",
+          "message": "A list of tags to apply to the contact for organization and segmentation"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
+          "source": "Custom Fields",
+          "message": "Custom Fields"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
+          "source": "Custom field values",
+          "message": "Custom field values"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.desc": {
+          "source": "An object containing custom field aliases and their values. Use the field alias as the key ",
+          "message": "An object containing custom field aliases and their values. Use the field alias as the key "
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbnRhY3Q.display_name": {
+          "source": "Get Contact",
+          "message": "Get Contact"
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbnRhY3Q.short_desc": {
+          "source": "Retrieve contact details",
+          "message": "Retrieve contact details"
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbnRhY3Q.desc": {
+          "source": "Retrieve detailed information about a specific contact in Mautic including fields, tags, and DNC status.",
+          "message": "Retrieve detailed information about a specific contact in Mautic including fields, tags, and DNC status."
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbnRhY3Q.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Contact"
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbnRhY3Q.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to retrieve",
+          "message": "The contact to retrieve"
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbnRhY3Q.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to get details for",
+          "message": "Select the contact that you want to get details for"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.display_name": {
+          "source": "Get Many Contacts",
+          "message": "Get Many Contacts"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.short_desc": {
+          "source": "Retrieve a list of contacts",
+          "message": "Retrieve a list of contacts"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.desc": {
+          "source": "Retrieve a paginated list of contacts from Mautic with optional search and filtering.",
+          "message": "Retrieve a paginated list of contacts from Mautic with optional search and filtering."
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "Search"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter contacts",
+          "message": "Search term to filter contacts"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.c2VhcmNo.desc": {
+          "source": "Search for contacts by name, email, or other fields",
+          "message": "Search for contacts by name, email, or other fields"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of contacts to return",
+          "message": "Maximum number of contacts to return"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of contacts to return (default: 30)",
+          "message": "The maximum number of contacts to return (default: 30)"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.c3RhcnQ.display_name": {
+          "source": "Start",
+          "message": "Start"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.c3RhcnQ.short_desc": {
+          "source": "Starting row for pagination",
+          "message": "Starting row for pagination"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.c3RhcnQ.desc": {
+          "source": "The starting row for pagination (default: 0)",
+          "message": "The starting row for pagination (default: 0)"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.display_name": {
+          "source": "Order By",
+          "message": "Order By"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.short_desc": {
+          "source": "Field to sort results by",
+          "message": "Field to sort results by"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.desc": {
+          "source": "The field to use for sorting the results",
+          "message": "The field to use for sorting the results"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.allowed-value.c3RyaW5nOmlk.display_name": {
+          "source": "ID",
+          "message": "ID"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.allowed-value.c3RyaW5nOmVtYWls.display_name": {
+          "source": "Email",
+          "message": "Email"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.allowed-value.c3RyaW5nOmZpcnN0bmFtZQ.display_name": {
+          "source": "First Name",
+          "message": "First Name"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.allowed-value.c3RyaW5nOmxhc3RuYW1l.display_name": {
+          "source": "Last Name",
+          "message": "Last Name"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.allowed-value.c3RyaW5nOmRhdGVfYWRkZWQ.display_name": {
+          "source": "Date Added",
+          "message": "Date Added"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.allowed-value.c3RyaW5nOmxhc3RfYWN0aXZl.display_name": {
+          "source": "Last Active",
+          "message": "Last Active"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeURpcg.display_name": {
+          "source": "Order Direction",
+          "message": "Order Direction"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeURpcg.short_desc": {
+          "source": "Sort direction (asc or desc)",
+          "message": "Sort direction (asc or desc)"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeURpcg.desc": {
+          "source": "The direction to sort results: ascending or descending",
+          "message": "The direction to sort results: ascending or descending"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeURpcg.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "Ascending"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeURpcg.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "Descending"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Update Contact",
+          "message": "Update Contact"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Update an existing contact",
+          "message": "Update an existing contact"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.desc": {
+          "source": "Update the information of an existing contact in Mautic.",
+          "message": "Update the information of an existing contact in Mautic."
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Contact"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to update",
+          "message": "The contact to update"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to update",
+          "message": "Select the contact that you want to update"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email Address",
+          "message": "Email Address"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "The updated email address",
+          "message": "The updated email address"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "The new email address for the contact",
+          "message": "The new email address for the contact"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.display_name": {
+          "source": "First Name",
+          "message": "First Name"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.short_desc": {
+          "source": "The updated first name",
+          "message": "The updated first name"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.desc": {
+          "source": "The new first name of the contact",
+          "message": "The new first name of the contact"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.display_name": {
+          "source": "Last Name",
+          "message": "Last Name"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.short_desc": {
+          "source": "The updated last name",
+          "message": "The updated last name"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.desc": {
+          "source": "The new last name of the contact",
+          "message": "The new last name of the contact"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmU.display_name": {
+          "source": "Phone",
+          "message": "Phone"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmU.short_desc": {
+          "source": "The updated phone number",
+          "message": "The updated phone number"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmU.desc": {
+          "source": "The new phone number for the contact",
+          "message": "The new phone number for the contact"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.bW9iaWxl.display_name": {
+          "source": "Mobile",
+          "message": "Mobile"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.bW9iaWxl.short_desc": {
+          "source": "The updated mobile number",
+          "message": "The updated mobile number"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.bW9iaWxl.desc": {
+          "source": "The new mobile phone number",
+          "message": "The new mobile phone number"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.display_name": {
+          "source": "Company",
+          "message": "Company"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.short_desc": {
+          "source": "The updated company name",
+          "message": "The updated company name"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.desc": {
+          "source": "The new company name",
+          "message": "The new company name"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.cG9zaXRpb24.display_name": {
+          "source": "Position",
+          "message": "Position"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.cG9zaXRpb24.short_desc": {
+          "source": "The updated job title",
+          "message": "The updated job title"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.cG9zaXRpb24.desc": {
+          "source": "The new job title or position",
+          "message": "The new job title or position"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.display_name": {
+          "source": "Address Line 1",
+          "message": "Address Line 1"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.short_desc": {
+          "source": "The updated first line of the address",
+          "message": "The updated first line of the address"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.desc": {
+          "source": "The new street address",
+          "message": "The new street address"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.display_name": {
+          "source": "Address Line 2",
+          "message": "Address Line 2"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.short_desc": {
+          "source": "The updated second line of the address",
+          "message": "The updated second line of the address"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.desc": {
+          "source": "New additional address information",
+          "message": "New additional address information"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y2l0eQ.display_name": {
+          "source": "City",
+          "message": "City"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y2l0eQ.short_desc": {
+          "source": "The updated city",
+          "message": "The updated city"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y2l0eQ.desc": {
+          "source": "The new city",
+          "message": "The new city"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.c3RhdGU.display_name": {
+          "source": "State/Region",
+          "message": "State/Region"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.c3RhdGU.short_desc": {
+          "source": "The updated state or region",
+          "message": "The updated state or region"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.c3RhdGU.desc": {
+          "source": "The new state, province, or region",
+          "message": "The new state, province, or region"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.emlwY29kZQ.display_name": {
+          "source": "Postal Code",
+          "message": "Postal Code"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.emlwY29kZQ.short_desc": {
+          "source": "The updated postal/ZIP code",
+          "message": "The updated postal/ZIP code"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.emlwY29kZQ.desc": {
+          "source": "The new postal or ZIP code",
+          "message": "The new postal or ZIP code"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y291bnRyeQ.display_name": {
+          "source": "Country",
+          "message": "Country"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y291bnRyeQ.short_desc": {
+          "source": "The updated country",
+          "message": "The updated country"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y291bnRyeQ.desc": {
+          "source": "The new country",
+          "message": "The new country"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.d2Vic2l0ZQ.display_name": {
+          "source": "Website",
+          "message": "Website"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.d2Vic2l0ZQ.short_desc": {
+          "source": "The updated website",
+          "message": "The updated website"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.d2Vic2l0ZQ.desc": {
+          "source": "The new website URL",
+          "message": "The new website URL"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.dGFncw.short_desc": {
+          "source": "Tags to apply or remove",
+          "message": "Tags to apply or remove"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.dGFncw.desc": {
+          "source": "Tags to apply to the contact. Prefix with \"-\" to remove a tag (e.g., \"-oldtag\")",
+          "message": "Tags to apply to the contact. Prefix with \"-\" to remove a tag (e.g., \"-oldtag\")"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
+          "source": "Custom Fields",
+          "message": "Custom Fields"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
+          "source": "Custom field values",
+          "message": "Custom field values"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.desc": {
+          "source": "An object containing custom field aliases and their values. Use the field alias as the key ",
+          "message": "An object containing custom field aliases and their values. Use the field alias as the key "
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
+          "source": "Delete Contact",
+          "message": "Delete Contact"
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Delete a contact",
+          "message": "Delete a contact"
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbnRhY3Q.desc": {
+          "source": "Permanently delete a contact from Mautic.",
+          "message": "Permanently delete a contact from Mautic."
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Contact"
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to delete",
+          "message": "The contact to delete"
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to delete",
+          "message": "Select the contact that you want to delete"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.display_name": {
+          "source": "Edit Contact Points",
+          "message": "Edit Contact Points"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.short_desc": {
+          "source": "Add or subtract points from a contact's score",
+          "message": "Add or subtract points from a contact's score"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.desc": {
+          "source": "Modify the points score of a contact in Mautic. You can add points to reward engagement or subtract points to de-qualify leads.",
+          "message": "Modify the points score of a contact in Mautic. You can add points to reward engagement or subtract points to de-qualify leads."
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Contact"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to modify points for",
+          "message": "The contact to modify points for"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.Y29udGFjdA.desc": {
+          "source": "Select the contact whose points you want to modify",
+          "message": "Select the contact whose points you want to modify"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.b3BlcmF0aW9u.display_name": {
+          "source": "Operation",
+          "message": "Operation"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.b3BlcmF0aW9u.short_desc": {
+          "source": "Whether to add or subtract points",
+          "message": "Whether to add or subtract points"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.b3BlcmF0aW9u.desc": {
+          "source": "Choose whether to add points (increase score) or subtract points (decrease score)",
+          "message": "Choose whether to add points (increase score) or subtract points (decrease score)"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.b3BlcmF0aW9u.allowed-value.c3RyaW5nOmFkZA.display_name": {
+          "source": "Add Points",
+          "message": "Add Points"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.b3BlcmF0aW9u.allowed-value.c3RyaW5nOnN1YnRyYWN0.display_name": {
+          "source": "Subtract Points",
+          "message": "Subtract Points"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.cG9pbnRz.display_name": {
+          "source": "Points",
+          "message": "Points"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.cG9pbnRz.short_desc": {
+          "source": "The number of points to add or subtract",
+          "message": "The number of points to add or subtract"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.cG9pbnRz.desc": {
+          "source": "The number of points to add or subtract from the contact score",
+          "message": "The number of points to add or subtract from the contact score"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.display_name": {
+          "source": "Edit Do Not Contact List",
+          "message": "Edit Do Not Contact List"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.short_desc": {
+          "source": "Add or remove a contact from the do not contact list",
+          "message": "Add or remove a contact from the do not contact list"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.desc": {
+          "source": "Manage the Do Not Contact (DNC) status for a contact on a specific channel (email, SMS, etc.).",
+          "message": "Manage the Do Not Contact (DNC) status for a contact on a specific channel (email, SMS, etc.)."
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Contact"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to modify DNC status for",
+          "message": "The contact to modify DNC status for"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y29udGFjdA.desc": {
+          "source": "Select the contact whose DNC status you want to modify",
+          "message": "Select the contact whose DNC status you want to modify"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Channel"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y2hhbm5lbA.short_desc": {
+          "source": "The communication channel",
+          "message": "The communication channel"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel for the DNC entry (email, sms, etc.)",
+          "message": "Select the channel for the DNC entry (email, sms, etc.)"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y2hhbm5lbA.allowed-value.c3RyaW5nOmVtYWls.display_name": {
+          "source": "Email",
+          "message": "Email"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y2hhbm5lbA.allowed-value.c3RyaW5nOnNtcw.display_name": {
+          "source": "SMS",
+          "message": "SMS"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.b3BlcmF0aW9u.display_name": {
+          "source": "Operation",
+          "message": "Operation"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.b3BlcmF0aW9u.short_desc": {
+          "source": "Whether to add or remove from DNC list",
+          "message": "Whether to add or remove from DNC list"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.b3BlcmF0aW9u.desc": {
+          "source": "Choose whether to add the contact to the DNC list (stop communications) or remove them (allow communications)",
+          "message": "Choose whether to add the contact to the DNC list (stop communications) or remove them (allow communications)"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.b3BlcmF0aW9u.allowed-value.c3RyaW5nOmFkZA.display_name": {
+          "source": "Add to DNC List",
+          "message": "Add to DNC List"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.b3BlcmF0aW9u.allowed-value.c3RyaW5nOnJlbW92ZQ.display_name": {
+          "source": "Remove from DNC List",
+          "message": "Remove from DNC List"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.cmVhc29u.display_name": {
+          "source": "Reason",
+          "message": "Reason"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.cmVhc29u.short_desc": {
+          "source": "The reason for adding to DNC",
+          "message": "The reason for adding to DNC"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.cmVhc29u.desc": {
+          "source": "The reason for adding the contact to the do not contact list",
+          "message": "The reason for adding the contact to the do not contact list"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.cmVhc29u.allowed-value.aW50OjE.display_name": {
+          "source": "Unsubscribed",
+          "message": "Unsubscribed"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.cmVhc29u.allowed-value.aW50OjI.display_name": {
+          "source": "Bounced",
+          "message": "Bounced"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.cmVhc29u.allowed-value.aW50OjM.display_name": {
+          "source": "Manual",
+          "message": "Manual"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y29tbWVudHM.display_name": {
+          "source": "Comments",
+          "message": "Comments"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y29tbWVudHM.short_desc": {
+          "source": "Additional comments",
+          "message": "Additional comments"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y29tbWVudHM.desc": {
+          "source": "Additional notes or comments about the DNC entry",
+          "message": "Additional notes or comments about the DNC entry"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.display_name": {
+          "source": "Send Email to Contact",
+          "message": "Send Email to Contact"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.short_desc": {
+          "source": "Send an email to a specific contact",
+          "message": "Send an email to a specific contact"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.desc": {
+          "source": "Send a Mautic email template to a specific contact.",
+          "message": "Send a Mautic email template to a specific contact."
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.option.ZW1haWw.display_name": {
+          "source": "Email Template",
+          "message": "Email Template"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.option.ZW1haWw.short_desc": {
+          "source": "The email template to send",
+          "message": "The email template to send"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.option.ZW1haWw.desc": {
+          "source": "Select the Mautic email template that you want to send",
+          "message": "Select the Mautic email template that you want to send"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Contact"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to send the email to",
+          "message": "The contact to send the email to"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to send the email to",
+          "message": "Select the contact that you want to send the email to"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.display_name": {
+          "source": "Create Company",
+          "message": "Create Company"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.short_desc": {
+          "source": "Create a new company",
+          "message": "Create a new company"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.desc": {
+          "source": "Create a new company record in Mautic with the specified details.",
+          "message": "Create a new company record in Mautic with the specified details."
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.display_name": {
+          "source": "Company Name",
+          "message": "Company Name"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.short_desc": {
+          "source": "The name of the company",
+          "message": "The name of the company"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.desc": {
+          "source": "The name of the company (required)",
+          "message": "The name of the company (required)"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.display_name": {
+          "source": "Company Email",
+          "message": "Company Email"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.short_desc": {
+          "source": "The email address of the company",
+          "message": "The email address of the company"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.desc": {
+          "source": "The primary email address for the company",
+          "message": "The primary email address for the company"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.display_name": {
+          "source": "Company Phone",
+          "message": "Company Phone"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.short_desc": {
+          "source": "The phone number of the company",
+          "message": "The phone number of the company"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.desc": {
+          "source": "The primary phone number for the company",
+          "message": "The primary phone number for the company"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXdlYnNpdGU.display_name": {
+          "source": "Website",
+          "message": "Website"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXdlYnNpdGU.short_desc": {
+          "source": "The website URL of the company",
+          "message": "The website URL of the company"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXdlYnNpdGU.desc": {
+          "source": "The company website URL",
+          "message": "The company website URL"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.display_name": {
+          "source": "Address Line 1",
+          "message": "Address Line 1"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.short_desc": {
+          "source": "The first line of the company address",
+          "message": "The first line of the company address"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.desc": {
+          "source": "The street address of the company",
+          "message": "The street address of the company"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.display_name": {
+          "source": "Address Line 2",
+          "message": "Address Line 2"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.short_desc": {
+          "source": "The second line of the company address",
+          "message": "The second line of the company address"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.desc": {
+          "source": "Additional address information (suite, floor, etc.)",
+          "message": "Additional address information (suite, floor, etc.)"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWNpdHk.display_name": {
+          "source": "City",
+          "message": "City"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWNpdHk.short_desc": {
+          "source": "The city where the company is located",
+          "message": "The city where the company is located"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWNpdHk.desc": {
+          "source": "The city of the company address",
+          "message": "The city of the company address"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.display_name": {
+          "source": "State/Region",
+          "message": "State/Region"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.short_desc": {
+          "source": "The state or region of the company",
+          "message": "The state or region of the company"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.desc": {
+          "source": "The state, province, or region of the company address",
+          "message": "The state, province, or region of the company address"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.display_name": {
+          "source": "Postal Code",
+          "message": "Postal Code"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.short_desc": {
+          "source": "The postal/ZIP code of the company",
+          "message": "The postal/ZIP code of the company"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.desc": {
+          "source": "The postal or ZIP code of the company address",
+          "message": "The postal or ZIP code of the company address"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWNvdW50cnk.display_name": {
+          "source": "Country",
+          "message": "Country"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWNvdW50cnk.short_desc": {
+          "source": "The country of the company",
+          "message": "The country of the company"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWNvdW50cnk.desc": {
+          "source": "The country where the company is located",
+          "message": "The country where the company is located"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWRlc2NyaXB0aW9u.display_name": {
+          "source": "Description",
+          "message": "Description"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWRlc2NyaXB0aW9u.short_desc": {
+          "source": "A description of the company",
+          "message": "A description of the company"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWRlc2NyaXB0aW9u.desc": {
+          "source": "Additional notes or description about the company",
+          "message": "Additional notes or description about the company"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWluZHVzdHJ5.display_name": {
+          "source": "Industry",
+          "message": "Industry"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWluZHVzdHJ5.short_desc": {
+          "source": "The industry of the company",
+          "message": "The industry of the company"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWluZHVzdHJ5.desc": {
+          "source": "The industry or sector the company operates in",
+          "message": "The industry or sector the company operates in"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
+          "source": "Custom Fields",
+          "message": "Custom Fields"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
+          "source": "Custom field values",
+          "message": "Custom field values"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.desc": {
+          "source": "An object containing custom field aliases and their values. Use the field alias as the key",
+          "message": "An object containing custom field aliases and their values. Use the field alias as the key"
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbXBhbnk.display_name": {
+          "source": "Get Company",
+          "message": "Get Company"
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbXBhbnk.short_desc": {
+          "source": "Retrieve company details",
+          "message": "Retrieve company details"
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbXBhbnk.desc": {
+          "source": "Retrieve detailed information about a specific company in Mautic.",
+          "message": "Retrieve detailed information about a specific company in Mautic."
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbXBhbnk.option.Y29tcGFueQ.display_name": {
+          "source": "Company",
+          "message": "Company"
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbXBhbnk.option.Y29tcGFueQ.short_desc": {
+          "source": "The company to retrieve",
+          "message": "The company to retrieve"
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbXBhbnk.option.Y29tcGFueQ.desc": {
+          "source": "Select the company that you want to get details for",
+          "message": "Select the company that you want to get details for"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.display_name": {
+          "source": "Get Many Companies",
+          "message": "Get Many Companies"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.short_desc": {
+          "source": "Retrieve a list of companies",
+          "message": "Retrieve a list of companies"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.desc": {
+          "source": "Retrieve a paginated list of companies from Mautic with optional search and filtering.",
+          "message": "Retrieve a paginated list of companies from Mautic with optional search and filtering."
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "Search"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter companies",
+          "message": "Search term to filter companies"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.c2VhcmNo.desc": {
+          "source": "Search for companies by name or other fields",
+          "message": "Search for companies by name or other fields"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of companies to return",
+          "message": "Maximum number of companies to return"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.bGltaXQ.desc": {
+          "source": "The maximum number of companies to return (default: 30)",
+          "message": "The maximum number of companies to return (default: 30)"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.c3RhcnQ.display_name": {
+          "source": "Start",
+          "message": "Start"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.c3RhcnQ.short_desc": {
+          "source": "Starting row for pagination",
+          "message": "Starting row for pagination"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.c3RhcnQ.desc": {
+          "source": "The starting row for pagination (default: 0)",
+          "message": "The starting row for pagination (default: 0)"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeQ.display_name": {
+          "source": "Order By",
+          "message": "Order By"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeQ.short_desc": {
+          "source": "Field to sort results by",
+          "message": "Field to sort results by"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeQ.desc": {
+          "source": "The field to use for sorting the results",
+          "message": "The field to use for sorting the results"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeQ.allowed-value.c3RyaW5nOmlk.display_name": {
+          "source": "ID",
+          "message": "ID"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeQ.allowed-value.c3RyaW5nOmNvbXBhbnluYW1l.display_name": {
+          "source": "Company Name",
+          "message": "Company Name"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeQ.allowed-value.c3RyaW5nOmRhdGVfYWRkZWQ.display_name": {
+          "source": "Date Added",
+          "message": "Date Added"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeURpcg.display_name": {
+          "source": "Order Direction",
+          "message": "Order Direction"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeURpcg.short_desc": {
+          "source": "Sort direction (asc or desc)",
+          "message": "Sort direction (asc or desc)"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeURpcg.desc": {
+          "source": "The direction to sort results: ascending or descending",
+          "message": "The direction to sort results: ascending or descending"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeURpcg.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "Ascending"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeURpcg.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "Descending"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.display_name": {
+          "source": "Update Company",
+          "message": "Update Company"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.short_desc": {
+          "source": "Update an existing company",
+          "message": "Update an existing company"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.desc": {
+          "source": "Update the information of an existing company in Mautic.",
+          "message": "Update the information of an existing company in Mautic."
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueQ.display_name": {
+          "source": "Company",
+          "message": "Company"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueQ.short_desc": {
+          "source": "The company to update",
+          "message": "The company to update"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueQ.desc": {
+          "source": "Select the company that you want to update",
+          "message": "Select the company that you want to update"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.display_name": {
+          "source": "Company Name",
+          "message": "Company Name"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.short_desc": {
+          "source": "The updated name of the company",
+          "message": "The updated name of the company"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.desc": {
+          "source": "The new name for the company",
+          "message": "The new name for the company"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.display_name": {
+          "source": "Company Email",
+          "message": "Company Email"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.short_desc": {
+          "source": "The updated email address",
+          "message": "The updated email address"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.desc": {
+          "source": "The new primary email address for the company",
+          "message": "The new primary email address for the company"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.display_name": {
+          "source": "Company Phone",
+          "message": "Company Phone"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.short_desc": {
+          "source": "The updated phone number",
+          "message": "The updated phone number"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.desc": {
+          "source": "The new primary phone number for the company",
+          "message": "The new primary phone number for the company"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXdlYnNpdGU.display_name": {
+          "source": "Website",
+          "message": "Website"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXdlYnNpdGU.short_desc": {
+          "source": "The updated website URL",
+          "message": "The updated website URL"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXdlYnNpdGU.desc": {
+          "source": "The new company website URL",
+          "message": "The new company website URL"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.display_name": {
+          "source": "Address Line 1",
+          "message": "Address Line 1"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.short_desc": {
+          "source": "The updated first line of the address",
+          "message": "The updated first line of the address"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.desc": {
+          "source": "The new street address of the company",
+          "message": "The new street address of the company"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.display_name": {
+          "source": "Address Line 2",
+          "message": "Address Line 2"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.short_desc": {
+          "source": "The updated second line of the address",
+          "message": "The updated second line of the address"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.desc": {
+          "source": "New additional address information",
+          "message": "New additional address information"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWNpdHk.display_name": {
+          "source": "City",
+          "message": "City"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWNpdHk.short_desc": {
+          "source": "The updated city",
+          "message": "The updated city"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWNpdHk.desc": {
+          "source": "The new city of the company address",
+          "message": "The new city of the company address"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.display_name": {
+          "source": "State/Region",
+          "message": "State/Region"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.short_desc": {
+          "source": "The updated state or region",
+          "message": "The updated state or region"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.desc": {
+          "source": "The new state, province, or region",
+          "message": "The new state, province, or region"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.display_name": {
+          "source": "Postal Code",
+          "message": "Postal Code"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.short_desc": {
+          "source": "The updated postal/ZIP code",
+          "message": "The updated postal/ZIP code"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.desc": {
+          "source": "The new postal or ZIP code",
+          "message": "The new postal or ZIP code"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWNvdW50cnk.display_name": {
+          "source": "Country",
+          "message": "Country"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWNvdW50cnk.short_desc": {
+          "source": "The updated country",
+          "message": "The updated country"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWNvdW50cnk.desc": {
+          "source": "The new country of the company",
+          "message": "The new country of the company"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWRlc2NyaXB0aW9u.display_name": {
+          "source": "Description",
+          "message": "Description"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWRlc2NyaXB0aW9u.short_desc": {
+          "source": "The updated description",
+          "message": "The updated description"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWRlc2NyaXB0aW9u.desc": {
+          "source": "New notes or description about the company",
+          "message": "New notes or description about the company"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWluZHVzdHJ5.display_name": {
+          "source": "Industry",
+          "message": "Industry"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWluZHVzdHJ5.short_desc": {
+          "source": "The updated industry",
+          "message": "The updated industry"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWluZHVzdHJ5.desc": {
+          "source": "The new industry or sector",
+          "message": "The new industry or sector"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
+          "source": "Custom Fields",
+          "message": "Custom Fields"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
+          "source": "Custom field values",
+          "message": "Custom field values"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.desc": {
+          "source": "An object containing custom field aliases and their values. Use the field alias as the key ",
+          "message": "An object containing custom field aliases and their values. Use the field alias as the key "
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbXBhbnk.display_name": {
+          "source": "Delete Company",
+          "message": "Delete Company"
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbXBhbnk.short_desc": {
+          "source": "Delete a company",
+          "message": "Delete a company"
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbXBhbnk.desc": {
+          "source": "Permanently delete a company record from Mautic.",
+          "message": "Permanently delete a company record from Mautic."
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbXBhbnk.option.Y29tcGFueQ.display_name": {
+          "source": "Company",
+          "message": "Company"
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbXBhbnk.option.Y29tcGFueQ.short_desc": {
+          "source": "The company to delete",
+          "message": "The company to delete"
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbXBhbnk.option.Y29tcGFueQ.desc": {
+          "source": "Select the company that you want to delete",
+          "message": "Select the company that you want to delete"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.display_name": {
+          "source": "Add Contact to Company",
+          "message": "Add Contact to Company"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.short_desc": {
+          "source": "Associate a contact with a company",
+          "message": "Associate a contact with a company"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.desc": {
+          "source": "Create an association between a contact and a company in Mautic.",
+          "message": "Create an association between a contact and a company in Mautic."
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.option.Y29tcGFueQ.display_name": {
+          "source": "Company",
+          "message": "Company"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.option.Y29tcGFueQ.short_desc": {
+          "source": "The company to add the contact to",
+          "message": "The company to add the contact to"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.option.Y29tcGFueQ.desc": {
+          "source": "Select the company that you want to associate the contact with",
+          "message": "Select the company that you want to associate the contact with"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Contact"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to add to the company",
+          "message": "The contact to add to the company"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to associate with the company",
+          "message": "Select the contact that you want to associate with the company"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.display_name": {
+          "source": "Remove Contact from Company",
+          "message": "Remove Contact from Company"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.short_desc": {
+          "source": "Remove a contact from a company",
+          "message": "Remove a contact from a company"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.desc": {
+          "source": "Remove the association between a contact and a company in Mautic.",
+          "message": "Remove the association between a contact and a company in Mautic."
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.option.Y29tcGFueQ.display_name": {
+          "source": "Company",
+          "message": "Company"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.option.Y29tcGFueQ.short_desc": {
+          "source": "The company to remove the contact from",
+          "message": "The company to remove the contact from"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.option.Y29tcGFueQ.desc": {
+          "source": "Select the company that you want to remove the contact from",
+          "message": "Select the company that you want to remove the contact from"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Contact"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to remove from the company",
+          "message": "The contact to remove from the company"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to remove from the company",
+          "message": "Select the contact that you want to remove from the company"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.display_name": {
+          "source": "Add Contact to Campaign",
+          "message": "Add Contact to Campaign"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.short_desc": {
+          "source": "Manually add a contact to a campaign",
+          "message": "Manually add a contact to a campaign"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.desc": {
+          "source": "Add a specific contact to a campaign in Mautic. This allows you to manually include contacts in campaign workflows.",
+          "message": "Add a specific contact to a campaign in Mautic. This allows you to manually include contacts in campaign workflows."
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.option.Y2FtcGFpZ24.display_name": {
+          "source": "Campaign",
+          "message": "Campaign"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.option.Y2FtcGFpZ24.short_desc": {
+          "source": "The campaign to add the contact to",
+          "message": "The campaign to add the contact to"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.option.Y2FtcGFpZ24.desc": {
+          "source": "Select the campaign that you want to add the contact to",
+          "message": "Select the campaign that you want to add the contact to"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Contact"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to add to the campaign",
+          "message": "The contact to add to the campaign"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to add to the campaign",
+          "message": "Select the contact that you want to add to the campaign"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.display_name": {
+          "source": "Remove Contact from Campaign",
+          "message": "Remove Contact from Campaign"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.short_desc": {
+          "source": "Remove a contact from a campaign",
+          "message": "Remove a contact from a campaign"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.desc": {
+          "source": "Remove a specific contact from a campaign in Mautic. This stops the contact from receiving further campaign actions.",
+          "message": "Remove a specific contact from a campaign in Mautic. This stops the contact from receiving further campaign actions."
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.option.Y2FtcGFpZ24.display_name": {
+          "source": "Campaign",
+          "message": "Campaign"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.option.Y2FtcGFpZ24.short_desc": {
+          "source": "The campaign to remove the contact from",
+          "message": "The campaign to remove the contact from"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.option.Y2FtcGFpZ24.desc": {
+          "source": "Select the campaign that you want to remove the contact from",
+          "message": "Select the campaign that you want to remove the contact from"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Contact"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to remove from the campaign",
+          "message": "The contact to remove from the campaign"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to remove from the campaign",
+          "message": "Select the contact that you want to remove from the campaign"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.display_name": {
+          "source": "Add Contact to Segment",
+          "message": "Add Contact to Segment"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.short_desc": {
+          "source": "Add a contact to a segment",
+          "message": "Add a contact to a segment"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.desc": {
+          "source": "Manually add a specific contact to a segment in Mautic.",
+          "message": "Manually add a specific contact to a segment in Mautic."
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.option.c2VnbWVudA.display_name": {
+          "source": "Segment",
+          "message": "Segment"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.option.c2VnbWVudA.short_desc": {
+          "source": "The segment to add the contact to",
+          "message": "The segment to add the contact to"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.option.c2VnbWVudA.desc": {
+          "source": "Select the segment that you want to add the contact to",
+          "message": "Select the segment that you want to add the contact to"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Contact"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to add to the segment",
+          "message": "The contact to add to the segment"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to add to the segment",
+          "message": "Select the contact that you want to add to the segment"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.display_name": {
+          "source": "Remove Contact from Segment",
+          "message": "Remove Contact from Segment"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.short_desc": {
+          "source": "Remove a contact from a segment",
+          "message": "Remove a contact from a segment"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.desc": {
+          "source": "Remove a specific contact from a segment in Mautic.",
+          "message": "Remove a specific contact from a segment in Mautic."
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.option.c2VnbWVudA.display_name": {
+          "source": "Segment",
+          "message": "Segment"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.option.c2VnbWVudA.short_desc": {
+          "source": "The segment to remove the contact from",
+          "message": "The segment to remove the contact from"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.option.c2VnbWVudA.desc": {
+          "source": "Select the segment that you want to remove the contact from",
+          "message": "Select the segment that you want to remove the contact from"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Contact"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to remove from the segment",
+          "message": "The contact to remove from the segment"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to remove from the segment",
+          "message": "Select the contact that you want to remove from the segment"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.display_name": {
+          "source": "Send Email to Segment",
+          "message": "Send Email to Segment"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.short_desc": {
+          "source": "Send an email to all contacts in a segment",
+          "message": "Send an email to all contacts in a segment"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.desc": {
+          "source": "Send a Mautic segment email to all contacts in the associated segment. The email must be of type \"list\" (segment email).",
+          "message": "Send a Mautic segment email to all contacts in the associated segment. The email must be of type \"list\" (segment email)."
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.option.ZW1haWw.display_name": {
+          "source": "Segment Email",
+          "message": "Segment Email"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.option.ZW1haWw.short_desc": {
+          "source": "The segment email to send",
+          "message": "The segment email to send"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.option.ZW1haWw.desc": {
+          "source": "Select the segment email that you want to send. This must be a \"list\" type email associated with a segment.",
+          "message": "Select the segment email that you want to send. This must be a \"list\" type email associated with a segment."
+        }
+      }
+    }
+  }
+}
