@@ -14,7 +14,6 @@ import { omit } from 'lodash';
 import path from 'path';
 import businessCentral from '../apps/business-central';
 import dynamics from '../apps/dynamics';
-import salesforce from '../apps/salesforce';
 import { Log } from '../decorators/Logger';
 import { mapCrudOptionsToApp, TQoreCrudOptionType } from '../global/helpers';
 import L from '../i18n/i18n-node';
@@ -135,7 +134,6 @@ const NEW_APP_DIRS: readonly string[] = [
 ];
 
 const EXISTING_APPS = {
-  salesforce,
   dynamics,
   businessCentral,
 } as const;
