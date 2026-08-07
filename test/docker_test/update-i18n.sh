@@ -2,14 +2,8 @@
 #
 # Regenerates the source-owned data-provider i18n catalogs inside the CI base image.
 #
-# DataProviderActionCatalog is process-wide: qore-data-provider-i18n extracts a catalog for every app
-# registered in the process, not only for the apps exported by this repository's TypeScript
-# catalogue.  Running the extraction against a developer's own Qore / Qorus installation therefore
-# writes catalogs owned by other modules into this repository - for example the "WebSockets" app
-# registered by the WebSocketClient module, or Slack's "watch-messages" action registered by the
-# Qorus QorusSlackServices module - and CI, which loads neither, then reports the affected catalogs
-# as stale.  Regenerating inside the CI base image pins the module set to exactly the one CI
-# verifies against.
+# Catalog extraction is scoped to the TypeScriptActionInterface technical owner. Ambient and
+# transitive modules therefore cannot add their apps or actions to this repository's roots.
 #
 # Copyright 2026 Qore Technologies, s.r.o.
 
@@ -49,7 +43,7 @@ export QORE_TYPESCRIPT_MASTER_ACTION_SCRIPT=/src/ts/dist/index.js
 # replacement is a rename and not a cross-device copy that could fail half way through
 out=$(mktemp -d -p /src/qlib/TypeScriptActionInterface)
 trap "rm -rf ${out}" EXIT
-qore-data-provider-i18n --output "${out}" --module TypeScriptActionInterface
+qore-data-provider-i18n --output "${out}" --owner TypeScriptActionInterface
 chmod 755 "${out}"
 rm -rf /src/qlib/TypeScriptActionInterface/i18n
 mv "${out}" /src/qlib/TypeScriptActionInterface/i18n
