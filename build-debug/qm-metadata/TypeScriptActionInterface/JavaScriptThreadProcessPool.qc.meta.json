@@ -1,0 +1,1027 @@
+{
+  "schema_version": "1.3",
+  "data": {
+    "name": "",
+    "full_name": "",
+    "classes": [],
+    "functions": [],
+    "constants": [],
+    "hashdecls": [],
+    "enums": [],
+    "namespaces": [
+      {
+        "name": "TypeScriptActionInterface",
+        "full_name": "TypeScriptActionInterface",
+        "classes": [
+          {
+            "name": "JavaScriptThreadProcessPool",
+            "full_name": "TypeScriptActionInterface::JavaScriptThreadProcessPool",
+            "namespace_path": "TypeScriptActionInterface",
+            "description": "JavaScript thread process pool class",
+            "static_methods": [],
+            "instance_methods": [
+              {
+                "name": "constructor",
+                "full_name": "TypeScriptActionInterface::JavaScriptThreadProcessPool::constructor",
+                "signature": "constructor()",
+                "return_type": null,
+                "description": "Creates the object",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "get",
+                "full_name": "TypeScriptActionInterface::JavaScriptThreadProcessPool::get",
+                "signature": "JavaScriptProgramProxy get(*code setup)",
+                "return_type": "JavaScriptProgramProxy",
+                "description": "Acquires a proxy for an API call",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "setup",
+                    "type_name": "*code",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*code",
+                      "base_type": "code",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "setup"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "JavaScriptProgramProxy",
+                  "base_type": "JavaScriptProgramProxy",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "release",
+                "full_name": "TypeScriptActionInterface::JavaScriptThreadProcessPool::release",
+                "signature": "release(JavaScriptProgramProxy p)",
+                "return_type": null,
+                "description": "Releases a proxy for an API call",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "p",
+                    "type_name": "JavaScriptProgramProxy",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "JavaScriptProgramProxy",
+                      "base_type": "JavaScriptProgramProxy",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "p"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "releaseIntern",
+                "full_name": "TypeScriptActionInterface::JavaScriptThreadProcessPool::releaseIntern",
+                "signature": "releaseIntern(JavaScriptProgramProxy p)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "p",
+                    "type_name": "JavaScriptProgramProxy",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "JavaScriptProgramProxy",
+                      "base_type": "JavaScriptProgramProxy",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "p"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "searchRecords",
+                "full_name": "TypeScriptActionInterface::JavaScriptThreadProcessPool::searchRecords",
+                "signature": "*hash<auto> searchRecords(string app, string id, string conn_name, hash<auto> conn_opts, int block_size, *hash<DataProviderExpression> where_cond, hash<auto> search_options, *hash<DataContextInfo> options)",
+                "return_type": "*hash<auto>",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "app",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "id",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "conn_name",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "conn_opts",
+                    "type_name": "hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "block_size",
+                    "type_name": "int",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "int",
+                      "base_type": "int",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "where_cond",
+                    "type_name": "*hash<DataProviderExpression>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<DataProviderExpression>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "DataProviderExpression",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "DataProviderExpression",
+                            "base_type": "DataProviderExpression",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "search_options",
+                    "type_name": "hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "options",
+                    "type_name": "*hash<DataContextInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<DataContextInfo>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "DataContextInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "DataContextInfo",
+                            "base_type": "DataContextInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "app",
+                  "id",
+                  "conn_name",
+                  "conn_opts",
+                  "block_size",
+                  "where_cond",
+                  "search_options",
+                  "options"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*hash<auto>",
+                  "base_type": "hash",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "auto",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "auto",
+                        "base_type": "auto",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "releaseSearch",
+                "full_name": "TypeScriptActionInterface::JavaScriptThreadProcessPool::releaseSearch",
+                "signature": "releaseSearch(JavaScriptProgramProxy proxy, string id)",
+                "return_type": null,
+                "description": "Releases a search",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "proxy",
+                    "type_name": "JavaScriptProgramProxy",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "JavaScriptProgramProxy",
+                      "base_type": "JavaScriptProgramProxy",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "id",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "proxy",
+                  "id"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "setupEventSource",
+                "full_name": "TypeScriptActionInterface::JavaScriptThreadProcessPool::setupEventSource",
+                "signature": "JavaScriptProgramProxy setupEventSource(Observable observable, string app, string action, string key, *hash<DataContextInfo> options)",
+                "return_type": "JavaScriptProgramProxy",
+                "description": "Sets up a proxy as an event data source",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "observable",
+                    "type_name": "Observable",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "Observable",
+                      "base_type": "Observable",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "app",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "action",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "key",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "options",
+                    "type_name": "*hash<DataContextInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<DataContextInfo>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "DataContextInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "DataContextInfo",
+                            "base_type": "DataContextInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "observable",
+                  "app",
+                  "action",
+                  "key",
+                  "options"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "JavaScriptProgramProxy",
+                  "base_type": "JavaScriptProgramProxy",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "releaseEventSource",
+                "full_name": "TypeScriptActionInterface::JavaScriptThreadProcessPool::releaseEventSource",
+                "signature": "releaseEventSource(JavaScriptProgramProxy proxy, Observable observable, string key, *bool in_listener)",
+                "return_type": null,
+                "description": "Releases a proxy as an event source",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "proxy",
+                    "type_name": "JavaScriptProgramProxy",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "JavaScriptProgramProxy",
+                      "base_type": "JavaScriptProgramProxy",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "observable",
+                    "type_name": "Observable",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "Observable",
+                      "base_type": "Observable",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "key",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "in_listener",
+                    "type_name": "*bool",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*bool",
+                      "base_type": "bool",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "proxy",
+                  "observable",
+                  "key",
+                  "in_listener"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "preallocate",
+                "full_name": "TypeScriptActionInterface::JavaScriptThreadProcessPool::preallocate",
+                "signature": "preallocate(Queue q, int num)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "q",
+                    "type_name": "Queue",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "Queue",
+                      "base_type": "Queue",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "num",
+                    "type_name": "int",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "int",
+                      "base_type": "int",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "q",
+                  "num"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "getProxyIntern",
+                "full_name": "TypeScriptActionInterface::JavaScriptThreadProcessPool::getProxyIntern",
+                "signature": "hash<ProxyCacheInfo> getProxyIntern(int tid, reference<string> pkey)",
+                "return_type": "hash<ProxyCacheInfo>",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "tid",
+                    "type_name": "int",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "int",
+                      "base_type": "int",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "pkey",
+                    "type_name": "reference<string>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "reference<string>",
+                      "base_type": "reference",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "string",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "string",
+                            "base_type": "string",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "tid",
+                  "pkey"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "hash<ProxyCacheInfo>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "ProxyCacheInfo",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "ProxyCacheInfo",
+                        "base_type": "ProxyCacheInfo",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "members": [
+              {
+                "name": "m",
+                "type_name": "Mutex",
+                "access": "private",
+                "is_static": true,
+                "type_info": {
+                  "text": "Mutex",
+                  "base_type": "Mutex",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "tmap",
+                "type_name": "hash<string, string>",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "hash<string, string>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "amap",
+                "type_name": "hash<string, hash<ProxyCacheInfo>>",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "hash<string, hash<ProxyCacheInfo>>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "hash<ProxyCacheInfo>",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "hash<ProxyCacheInfo>",
+                        "base_type": "hash",
+                        "is_optional": false,
+                        "type_arguments": [
+                          {
+                            "text": "ProxyCacheInfo",
+                            "is_wildcard": false,
+                            "type_info": {
+                              "text": "ProxyCacheInfo",
+                              "base_type": "ProxyCacheInfo",
+                              "is_optional": false,
+                              "type_arguments": [],
+                              "wildcard_arguments": []
+                            }
+                          }
+                        ],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "imap",
+                "type_name": "hash<string, hash<ProxyCacheInfo>>",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "hash<string, hash<ProxyCacheInfo>>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "hash<ProxyCacheInfo>",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "hash<ProxyCacheInfo>",
+                        "base_type": "hash",
+                        "is_optional": false,
+                        "type_arguments": [
+                          {
+                            "text": "ProxyCacheInfo",
+                            "is_wildcard": false,
+                            "type_info": {
+                              "text": "ProxyCacheInfo",
+                              "base_type": "ProxyCacheInfo",
+                              "is_optional": false,
+                              "type_arguments": [],
+                              "wildcard_arguments": []
+                            }
+                          }
+                        ],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "max",
+                "type_name": "int",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "int",
+                  "base_type": "int",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "waiting",
+                "type_name": "int",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "int",
+                  "base_type": "int",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "cond",
+                "type_name": "Condition",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "Condition",
+                  "base_type": "Condition",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "constants": [
+              {
+                "name": "MinProcesses",
+                "full_name": "TypeScriptActionInterface::JavaScriptThreadProcessPool::MinProcesses"
+              }
+            ],
+            "source_file": null,
+            "access": "public",
+            "is_abstract": false,
+            "is_final": false,
+            "type_parameters": [],
+            "type_parameter_defaults": {},
+            "type_parameter_bounds": {},
+            "raw_accepts_parameterized": false,
+            "raw_construction_defaults_to_auto": false
+          }
+        ],
+        "functions": [],
+        "constants": [],
+        "hashdecls": [],
+        "enums": [],
+        "namespaces": [
+          {
+            "name": "JavaScriptThreadProcessPool",
+            "full_name": "TypeScriptActionInterface::JavaScriptThreadProcessPool",
+            "classes": [],
+            "functions": [
+              {
+                "name": "destructor",
+                "full_name": "TypeScriptActionInterface::JavaScriptThreadProcessPool::destructor",
+                "namespace_path": "TypeScriptActionInterface::JavaScriptThreadProcessPool",
+                "signature": "destructor()",
+                "return_type": null,
+                "description": "Destroys the object",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "is_deprecated": false,
+                "since": null,
+                "see_also": null,
+                "source_file": null,
+                "source_line": 63
+              }
+            ],
+            "constants": [
+              {
+                "name": "MinProcesses",
+                "full_name": "TypeScriptActionInterface::JavaScriptThreadProcessPool::MinProcesses",
+                "description": null,
+                "source_file": null
+              }
+            ],
+            "hashdecls": [],
+            "enums": [],
+            "namespaces": []
+          }
+        ]
+      },
+      {
+        "name": "Priv",
+        "full_name": "Priv",
+        "classes": [],
+        "functions": [],
+        "constants": [],
+        "hashdecls": [
+          {
+            "name": "ProxyCacheInfo",
+            "full_name": "Priv::ProxyCacheInfo",
+            "namespace_path": "Priv",
+            "description": null,
+            "members": [
+              {
+                "name": "tid",
+                "type_name": "int",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "int",
+                  "base_type": "int",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "atime",
+                "type_name": "date",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "date",
+                  "base_type": "date",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "p",
+                "type_name": "JavaScriptProgramProxy",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "JavaScriptProgramProxy",
+                  "base_type": "JavaScriptProgramProxy",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "ecount",
+                "type_name": "int",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "int",
+                  "base_type": "int",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "type_parameters": [],
+            "type_parameter_defaults": {},
+            "type_parameter_bounds": {},
+            "source_file": null
+          }
+        ],
+        "enums": [],
+        "namespaces": []
+      }
+    ]
+  }
+}

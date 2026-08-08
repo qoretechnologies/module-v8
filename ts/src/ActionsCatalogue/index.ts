@@ -89,8 +89,6 @@ const NEW_APP_DIRS: readonly string[] = [
   'intercom',
   'jira',
   'klaviyo',
-  'linkedin',
-  'linkedin-organizations',
   'magento',
   'mailchimp',
   'mautic',

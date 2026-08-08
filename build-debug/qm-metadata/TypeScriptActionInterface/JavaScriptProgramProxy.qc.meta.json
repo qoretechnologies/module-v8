@@ -1,0 +1,3050 @@
+{
+  "schema_version": "1.3",
+  "data": {
+    "name": "",
+    "full_name": "",
+    "classes": [],
+    "functions": [],
+    "constants": [],
+    "hashdecls": [],
+    "enums": [],
+    "namespaces": [
+      {
+        "name": "TypeScriptActionInterface",
+        "full_name": "TypeScriptActionInterface",
+        "classes": [
+          {
+            "name": "JavaScriptProgramProxy",
+            "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy",
+            "namespace_path": "TypeScriptActionInterface",
+            "description": "JavaScript program proxy class",
+            "static_methods": [
+              {
+                "name": "stopMasterListener",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::stopMasterListener",
+                "signature": "stopMasterListener()",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": null,
+                "access": "public",
+                "is_static": true,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "init",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::init",
+                "signature": "init(Mutex m)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "m",
+                    "type_name": "Mutex",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "Mutex",
+                      "base_type": "Mutex",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "m"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": true,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "shutdown",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::shutdown",
+                "signature": "shutdown()",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": null,
+                "access": "public",
+                "is_static": true,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "masterListenerThread",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::masterListenerThread",
+                "signature": "masterListenerThread(Counter c)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "c",
+                    "type_name": "Counter",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "Counter",
+                      "base_type": "Counter",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "c"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": true,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "isSocketClosedError",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::isSocketClosedError",
+                "signature": "*bool isSocketClosedError(hash<ExceptionInfo> ex)",
+                "return_type": "*bool",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "ex",
+                    "type_name": "hash<ExceptionInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<ExceptionInfo>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "ExceptionInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "ExceptionInfo",
+                            "base_type": "ExceptionInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "ex"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": true,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*bool",
+                  "base_type": "bool",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "checkStartMasterListener",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::checkStartMasterListener",
+                "signature": "checkStartMasterListener()",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": null,
+                "access": "private",
+                "is_static": true,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              }
+            ],
+            "instance_methods": [
+              {
+                "name": "constructor",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::constructor",
+                "signature": "constructor()",
+                "return_type": null,
+                "description": "Creates the object",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "getInfo",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::getInfo",
+                "signature": "hash<auto> getInfo()",
+                "return_type": "hash<auto>",
+                "description": null,
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "hash<auto>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "auto",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "auto",
+                        "base_type": "auto",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "supportsEvent",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::supportsEvent",
+                "signature": "bool supportsEvent(string key)",
+                "return_type": "bool",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "key",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "key"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "bool",
+                  "base_type": "bool",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "searchRecords",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::searchRecords",
+                "signature": "*hash<auto> searchRecords(string app, string id, string conn_name, hash<auto> conn_opts, int block_size, *hash<DataProviderExpression> where_cond, hash<auto> search_options, *hash<DataContextInfo> options)",
+                "return_type": "*hash<auto>",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "app",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "id",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "conn_name",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "conn_opts",
+                    "type_name": "hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "block_size",
+                    "type_name": "int",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "int",
+                      "base_type": "int",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "where_cond",
+                    "type_name": "*hash<DataProviderExpression>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<DataProviderExpression>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "DataProviderExpression",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "DataProviderExpression",
+                            "base_type": "DataProviderExpression",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "search_options",
+                    "type_name": "hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "options",
+                    "type_name": "*hash<DataContextInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<DataContextInfo>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "DataContextInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "DataContextInfo",
+                            "base_type": "DataContextInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "app",
+                  "id",
+                  "conn_name",
+                  "conn_opts",
+                  "block_size",
+                  "where_cond",
+                  "search_options",
+                  "options"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*hash<auto>",
+                  "base_type": "hash",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "auto",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "auto",
+                        "base_type": "auto",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "releaseSearch",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::releaseSearch",
+                "signature": "releaseSearch(string id)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "id",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "id"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "getRecords",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::getRecords",
+                "signature": "*hash<auto> getRecords(string id)",
+                "return_type": "*hash<auto>",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "id",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "id"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*hash<auto>",
+                  "base_type": "hash",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "auto",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "auto",
+                        "base_type": "auto",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "setupEventSource",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::setupEventSource",
+                "signature": "setupEventSource(TypeScriptActionEventDataProvider observable, string app, string action, string key, *hash<DataContextInfo> options)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "observable",
+                    "type_name": "TypeScriptActionEventDataProvider",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "TypeScriptActionEventDataProvider",
+                      "base_type": "TypeScriptActionEventDataProvider",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "app",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "action",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "key",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "options",
+                    "type_name": "*hash<DataContextInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<DataContextInfo>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "DataContextInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "DataContextInfo",
+                            "base_type": "DataContextInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "observable",
+                  "app",
+                  "action",
+                  "key",
+                  "options"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "setupEventSourceIntern",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::setupEventSourceIntern",
+                "signature": "setupEventSourceIntern(*int restart_flags)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "restart_flags",
+                    "type_name": "*int",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*int",
+                      "base_type": "int",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "restart_flags"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "stopEventListener",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::stopEventListener",
+                "signature": "stopEventListener()",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "startEventListener",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::startEventListener",
+                "signature": "startEventListener(Socket event_socket, hash<auto> v)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "event_socket",
+                    "type_name": "Socket",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "Socket",
+                      "base_type": "Socket",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "v",
+                    "type_name": "hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "event_socket",
+                  "v"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "eventListenerThread",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::eventListenerThread",
+                "signature": "eventListenerThread(Socket event_socket)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "event_socket",
+                    "type_name": "Socket",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "Socket",
+                      "base_type": "Socket",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "event_socket"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "removeEventSource",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::removeEventSource",
+                "signature": "removeEventSource(string ekey)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "ekey",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "ekey"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "addEventSourceLocked",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::addEventSourceLocked",
+                "signature": "addEventSourceLocked(TypeScriptActionEventDataProvider observable, string key)",
+                "return_type": null,
+                "description": "Add an additional observable to the event source; called with the global lock held",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "observable",
+                    "type_name": "TypeScriptActionEventDataProvider",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "TypeScriptActionEventDataProvider",
+                      "base_type": "TypeScriptActionEventDataProvider",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "key",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "observable",
+                  "key"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "releaseEventSourceLocked",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::releaseEventSourceLocked",
+                "signature": "releaseEventSourceLocked(TypeScriptActionEventDataProvider observable, string key, *bool in_listener)",
+                "return_type": null,
+                "description": "Called with the global lock held",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "observable",
+                    "type_name": "TypeScriptActionEventDataProvider",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "TypeScriptActionEventDataProvider",
+                      "base_type": "TypeScriptActionEventDataProvider",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "key",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "in_listener",
+                    "type_name": "*bool",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*bool",
+                      "base_type": "bool",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "observable",
+                  "key",
+                  "in_listener"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "cancelRestartForEventRelease",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::cancelRestartForEventRelease",
+                "signature": "bool cancelRestartForEventRelease(string key)",
+                "return_type": "bool",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "key",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "key"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "bool",
+                  "base_type": "bool",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "abortRestartLocked",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::abortRestartLocked",
+                "signature": "abortRestartLocked(string reason)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "reason",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "reason"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "testRetryWhileRestarting",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::testRetryWhileRestarting",
+                "signature": "bool testRetryWhileRestarting(int tid, int flags)",
+                "return_type": "bool",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "tid",
+                    "type_name": "int",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "int",
+                      "base_type": "int",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "flags",
+                    "type_name": "int",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "int",
+                      "base_type": "int",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "tid",
+                  "flags"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "bool",
+                  "base_type": "bool",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getAsyncValue",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::getAsyncValue",
+                "signature": "auto getAsyncValue(hash<AsyncCallInfo> api)",
+                "return_type": "auto",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "api",
+                    "type_name": "hash<AsyncCallInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<AsyncCallInfo>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "AsyncCallInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "AsyncCallInfo",
+                            "base_type": "AsyncCallInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "api"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "auto",
+                  "base_type": "auto",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getDynamicType",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::getDynamicType",
+                "signature": "*HashDataType getDynamicType(string cmd, string app, string action, *string conn_name, *hash<auto> conn_opts, auto req)",
+                "return_type": "*HashDataType",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "cmd",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "app",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "action",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "conn_name",
+                    "type_name": "*string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*string",
+                      "base_type": "string",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "conn_opts",
+                    "type_name": "*hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "req",
+                    "type_name": "auto",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "auto",
+                      "base_type": "auto",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "cmd",
+                  "app",
+                  "action",
+                  "conn_name",
+                  "conn_opts",
+                  "req"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*HashDataType",
+                  "base_type": "HashDataType",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getDynamicOptions",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::getDynamicOptions",
+                "signature": "*hash<string, hash<ActionOptionInfo>> getDynamicOptions(string app, string action, *string conn_name, *hash<auto> conn_opts, auto req)",
+                "return_type": "*hash<string, hash<ActionOptionInfo>>",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "app",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "action",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "conn_name",
+                    "type_name": "*string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*string",
+                      "base_type": "string",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "conn_opts",
+                    "type_name": "*hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "req",
+                    "type_name": "auto",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "auto",
+                      "base_type": "auto",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "app",
+                  "action",
+                  "conn_name",
+                  "conn_opts",
+                  "req"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*hash<string, hash<ActionOptionInfo>>",
+                  "base_type": "hash",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "hash<ActionOptionInfo>",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "hash<ActionOptionInfo>",
+                        "base_type": "hash",
+                        "is_optional": false,
+                        "type_arguments": [
+                          {
+                            "text": "ActionOptionInfo",
+                            "is_wildcard": false,
+                            "type_info": {
+                              "text": "ActionOptionInfo",
+                              "base_type": "ActionOptionInfo",
+                              "is_optional": false,
+                              "type_arguments": [],
+                              "wildcard_arguments": []
+                            }
+                          }
+                        ],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "stopChildProcess",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::stopChildProcess",
+                "signature": "stopChildProcess()",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "sendCommandOneWayStop",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::sendCommandOneWayStop",
+                "signature": "sendCommandOneWayStop(string cmd, *list<auto> args)",
+                "return_type": null,
+                "description": "Sends a command from the parent to the child without a response",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "cmd",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "args",
+                    "type_name": "*list<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*list<auto>",
+                      "base_type": "list",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "cmd",
+                  "args"
+                ],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "killChild",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::killChild",
+                "signature": "killChild()",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "startChildProcess",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::startChildProcess",
+                "signature": "startChildProcess()",
+                "return_type": null,
+                "description": "Starts the child process",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "sendCommandArgs",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::sendCommandArgs",
+                "signature": "auto sendCommandArgs(*date io_timeout, string cmd, *softlist<auto> args, date response_timeout = DefaultRequestTimeout, *bool no_restart_event, *int restart_flags)",
+                "return_type": "auto",
+                "description": "Sends a command from the parent to the child with a response",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "io_timeout",
+                    "type_name": "*date",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*date",
+                      "base_type": "date",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "cmd",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "args",
+                    "type_name": "*softlist<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*softlist<auto>",
+                      "base_type": "softlist",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "response_timeout",
+                    "type_name": "date",
+                    "default_value": "DefaultRequestTimeout",
+                    "type_info": {
+                      "text": "date",
+                      "base_type": "date",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "no_restart_event",
+                    "type_name": "*bool",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*bool",
+                      "base_type": "bool",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "restart_flags",
+                    "type_name": "*int",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*int",
+                      "base_type": "int",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "io_timeout",
+                  "cmd",
+                  "args",
+                  "response_timeout",
+                  "no_restart_event",
+                  "restart_flags"
+                ],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "auto",
+                  "base_type": "auto",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "waitForResponse",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::waitForResponse",
+                "signature": "hash<auto> waitForResponse(date to = DefaultIoTimeout)",
+                "return_type": "hash<auto>",
+                "description": "Wait for a command when the listener is active",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "to",
+                    "type_name": "date",
+                    "default_value": "DefaultIoTimeout",
+                    "type_info": {
+                      "text": "date",
+                      "base_type": "date",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "to"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "hash<auto>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "auto",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "auto",
+                        "base_type": "auto",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "recv",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::recv",
+                "signature": "string recv(int size, *date to)",
+                "return_type": "string",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "size",
+                    "type_name": "int",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "int",
+                      "base_type": "int",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "to",
+                    "type_name": "*date",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*date",
+                      "base_type": "date",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "size",
+                  "to"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "retryIntern",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::retryIntern",
+                "signature": "*bool retryIntern(hash<ExceptionInfo> ex, *RetryCounter rc, *int restart_flags)",
+                "return_type": "*bool",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "ex",
+                    "type_name": "hash<ExceptionInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<ExceptionInfo>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "ExceptionInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "ExceptionInfo",
+                            "base_type": "ExceptionInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "rc",
+                    "type_name": "*RetryCounter",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*RetryCounter",
+                      "base_type": "RetryCounter",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "restart_flags",
+                    "type_name": "*int",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*int",
+                      "base_type": "int",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "ex",
+                  "rc",
+                  "restart_flags"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*bool",
+                  "base_type": "bool",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "checkRestart",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::checkRestart",
+                "signature": "*bool checkRestart(*RetryCounter rc, *int restart_flags, *hash<ExceptionInfo> ex)",
+                "return_type": "*bool",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "rc",
+                    "type_name": "*RetryCounter",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*RetryCounter",
+                      "base_type": "RetryCounter",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "restart_flags",
+                    "type_name": "*int",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*int",
+                      "base_type": "int",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "ex",
+                    "type_name": "*hash<ExceptionInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<ExceptionInfo>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "ExceptionInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "ExceptionInfo",
+                            "base_type": "ExceptionInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "rc",
+                  "restart_flags",
+                  "ex"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*bool",
+                  "base_type": "bool",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "restartProcessIntern",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::restartProcessIntern",
+                "signature": "restartProcessIntern(*bool no_restart_event)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "no_restart_event",
+                    "type_name": "*bool",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*bool",
+                      "base_type": "bool",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "no_restart_event"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "logChildOutput",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::logChildOutput",
+                "signature": "*hash<auto> logChildOutput(*bool always_output)",
+                "return_type": "*hash<auto>",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "always_output",
+                    "type_name": "*bool",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*bool",
+                      "base_type": "bool",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "always_output"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*hash<auto>",
+                  "base_type": "hash",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "auto",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "auto",
+                        "base_type": "auto",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "debug",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::debug",
+                "signature": "debug(string fmt)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "fmt",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "fmt"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "info",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::info",
+                "signature": "info(string fmt)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "fmt",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "fmt"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "error",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::error",
+                "signature": "error(string fmt)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "fmt",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "fmt"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "fatal",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::fatal",
+                "signature": "fatal(string fmt)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "fmt",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "fmt"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              }
+            ],
+            "members": [
+              {
+                "name": "event",
+                "type_name": "hash<EventSourceInfo>",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "hash<EventSourceInfo>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "EventSourceInfo",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "EventSourceInfo",
+                        "base_type": "EventSourceInfo",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "search_id",
+                "type_name": "string",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "proc",
+                "type_name": "Process",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "Process",
+                  "base_type": "Process",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "listener_tid",
+                "type_name": "int",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "int",
+                  "base_type": "int",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "listener_cnt",
+                "type_name": "Counter",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "Counter",
+                  "base_type": "Counter",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "cmdq",
+                "type_name": "Queue",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "Queue",
+                  "base_type": "Queue",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "listener_stop",
+                "type_name": "bool",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "bool",
+                  "base_type": "bool",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "restart_count",
+                "type_name": "int",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "int",
+                  "base_type": "int",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "restarting",
+                "type_name": "bool",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "bool",
+                  "base_type": "bool",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "restarting_tid",
+                "type_name": "*int",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "*int",
+                  "base_type": "int",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "cond_restart",
+                "type_name": "Condition",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "Condition",
+                  "base_type": "Condition",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "wait_restart",
+                "type_name": "int",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "int",
+                  "base_type": "int",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "m",
+                "type_name": "Mutex",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "Mutex",
+                  "base_type": "Mutex",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "command_in_progress",
+                "type_name": "hash<auto>",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "hash<auto>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "auto",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "auto",
+                        "base_type": "auto",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "es_cnt",
+                "type_name": "Counter",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "Counter",
+                  "base_type": "Counter",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "es_tid",
+                "type_name": "int",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "int",
+                  "base_type": "int",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "es_exit",
+                "type_name": "bool",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "bool",
+                  "base_type": "bool",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "es_sem_write",
+                "type_name": "File",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "File",
+                  "base_type": "File",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "es_sem_read",
+                "type_name": "ReadOnlyFile",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "ReadOnlyFile",
+                  "base_type": "ReadOnlyFile",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "es_sem_info",
+                "type_name": "hash<SocketPollInfo>",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "hash<SocketPollInfo>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "SocketPollInfo",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "SocketPollInfo",
+                        "base_type": "SocketPollInfo",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "master_path",
+                "type_name": "string",
+                "access": "private",
+                "is_static": true,
+                "type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "master",
+                "type_name": "Socket",
+                "access": "private",
+                "is_static": true,
+                "type_info": {
+                  "text": "Socket",
+                  "base_type": "Socket",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "global_lock",
+                "type_name": "Mutex",
+                "access": "private",
+                "is_static": true,
+                "type_info": {
+                  "text": "Mutex",
+                  "base_type": "Mutex",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "cmap",
+                "type_name": "hash<string, JavaScriptProgramProxy>",
+                "access": "private",
+                "is_static": true,
+                "type_info": {
+                  "text": "hash<string, JavaScriptProgramProxy>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "JavaScriptProgramProxy",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "JavaScriptProgramProxy",
+                        "base_type": "JavaScriptProgramProxy",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "master_listener_tid",
+                "type_name": "int",
+                "access": "private",
+                "is_static": true,
+                "type_info": {
+                  "text": "int",
+                  "base_type": "int",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "master_listener_cnt",
+                "type_name": "Counter",
+                "access": "private",
+                "is_static": true,
+                "type_info": {
+                  "text": "Counter",
+                  "base_type": "Counter",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "master_listener_stop",
+                "type_name": "bool",
+                "access": "private",
+                "is_static": true,
+                "type_info": {
+                  "text": "bool",
+                  "base_type": "bool",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "sem_write",
+                "type_name": "File",
+                "access": "private",
+                "is_static": true,
+                "type_info": {
+                  "text": "File",
+                  "base_type": "File",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "sem_read",
+                "type_name": "ReadOnlyFile",
+                "access": "private",
+                "is_static": true,
+                "type_info": {
+                  "text": "ReadOnlyFile",
+                  "base_type": "ReadOnlyFile",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "sem_info",
+                "type_name": "hash<SocketPollInfo>",
+                "access": "private",
+                "is_static": true,
+                "type_info": {
+                  "text": "hash<SocketPollInfo>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "SocketPollInfo",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "SocketPollInfo",
+                        "base_type": "SocketPollInfo",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "constants": [
+              {
+                "name": "ProcessName",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::ProcessName"
+              },
+              {
+                "name": "ChildConnectTimeout",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::ChildConnectTimeout"
+              },
+              {
+                "name": "SetupEventTimeout",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::SetupEventTimeout"
+              },
+              {
+                "name": "DefaultRequestTimeout",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::DefaultRequestTimeout"
+              },
+              {
+                "name": "RF_NO_EVENT",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::RF_NO_EVENT"
+              },
+              {
+                "name": "RF_NO_RESTART",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::RF_NO_RESTART"
+              }
+            ],
+            "source_file": null,
+            "access": "public",
+            "is_abstract": false,
+            "is_final": false,
+            "type_parameters": [],
+            "type_parameter_defaults": {},
+            "type_parameter_bounds": {},
+            "raw_accepts_parameterized": false,
+            "raw_construction_defaults_to_auto": false
+          }
+        ],
+        "functions": [],
+        "constants": [],
+        "hashdecls": [],
+        "enums": [],
+        "namespaces": [
+          {
+            "name": "JavaScriptProgramProxy",
+            "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy",
+            "classes": [],
+            "functions": [
+              {
+                "name": "destructor",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::destructor",
+                "namespace_path": "TypeScriptActionInterface::JavaScriptProgramProxy",
+                "signature": "destructor()",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": null,
+                "is_deprecated": false,
+                "since": null,
+                "see_also": null,
+                "source_file": null,
+                "source_line": 165
+              }
+            ],
+            "constants": [
+              {
+                "name": "ProcessName",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::ProcessName",
+                "description": "Process name",
+                "source_file": null
+              },
+              {
+                "name": "ChildConnectTimeout",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::ChildConnectTimeout",
+                "description": "Child connect timeout",
+                "source_file": null
+              },
+              {
+                "name": "SetupEventTimeout",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::SetupEventTimeout",
+                "description": "Setup event timeout",
+                "source_file": null
+              },
+              {
+                "name": "DefaultRequestTimeout",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::DefaultRequestTimeout",
+                "description": "Default proxy request timeout",
+                "source_file": null
+              },
+              {
+                "name": "RF_NO_EVENT",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::RF_NO_EVENT",
+                "description": "Restart flag: do not restart event",
+                "source_file": null
+              },
+              {
+                "name": "RF_NO_RESTART",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramProxy::RF_NO_RESTART",
+                "description": "Restart flag: do not restart process",
+                "source_file": null
+              }
+            ],
+            "hashdecls": [],
+            "enums": [],
+            "namespaces": []
+          }
+        ]
+      },
+      {
+        "name": "Priv",
+        "full_name": "Priv",
+        "classes": [
+          {
+            "name": "RetryCounter",
+            "full_name": "Priv::RetryCounter",
+            "namespace_path": "Priv",
+            "description": null,
+            "static_methods": [],
+            "instance_methods": [
+              {
+                "name": "canRestart",
+                "full_name": "Priv::RetryCounter::canRestart",
+                "signature": "bool canRestart()",
+                "return_type": "bool",
+                "description": "Returns `True` if the child may still be restarted for the current command",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "bool",
+                  "base_type": "bool",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "restart",
+                "full_name": "Priv::RetryCounter::restart",
+                "signature": "restart()",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "retry",
+                "full_name": "Priv::RetryCounter::retry",
+                "signature": "*bool retry(hash<ExceptionInfo> ex, *hash<auto> command_in_progress)",
+                "return_type": "*bool",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "ex",
+                    "type_name": "hash<ExceptionInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<ExceptionInfo>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "ExceptionInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "ExceptionInfo",
+                            "base_type": "ExceptionInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "command_in_progress",
+                    "type_name": "*hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "ex",
+                  "command_in_progress"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*bool",
+                  "base_type": "bool",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "members": [
+              {
+                "name": "restarts",
+                "type_name": "int",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "int",
+                  "base_type": "int",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "constants": [
+              {
+                "name": "MaxRestarts",
+                "full_name": "Priv::RetryCounter::MaxRestarts"
+              }
+            ],
+            "source_file": null,
+            "access": "public",
+            "is_abstract": false,
+            "is_final": false,
+            "type_parameters": [],
+            "type_parameter_defaults": {},
+            "type_parameter_bounds": {},
+            "raw_accepts_parameterized": false,
+            "raw_construction_defaults_to_auto": false
+          }
+        ],
+        "functions": [],
+        "constants": [],
+        "hashdecls": [
+          {
+            "name": "EventSourceInfo",
+            "full_name": "Priv::EventSourceInfo",
+            "namespace_path": "Priv",
+            "description": null,
+            "members": [
+              {
+                "name": "app",
+                "type_name": "string",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "action",
+                "type_name": "string",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "key",
+                "type_name": "string",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "options",
+                "type_name": "*hash<auto>",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "*hash<auto>",
+                  "base_type": "hash",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "auto",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "auto",
+                        "base_type": "auto",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "omap",
+                "type_name": "hash<string, TypeScriptActionEventDataProvider>",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "hash<string, TypeScriptActionEventDataProvider>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "TypeScriptActionEventDataProvider",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "TypeScriptActionEventDataProvider",
+                        "base_type": "TypeScriptActionEventDataProvider",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "type_parameters": [],
+            "type_parameter_defaults": {},
+            "type_parameter_bounds": {},
+            "source_file": null
+          }
+        ],
+        "enums": [],
+        "namespaces": [
+          {
+            "name": "RetryCounter",
+            "full_name": "Priv::RetryCounter",
+            "classes": [],
+            "functions": [],
+            "constants": [
+              {
+                "name": "MaxRestarts",
+                "full_name": "Priv::RetryCounter::MaxRestarts",
+                "description": "Maximum number of child restarts for a single command before giving up\n\nBounds the SOCKET-NOT-OPEN / dead-child restart path so that a command that deterministically breaks the command channel (e.g. the lazy-init first-call latency on a `webhook_register)` fails after this many restarts instead of respawning the child process forever at 100% CPU.",
+                "source_file": null
+              }
+            ],
+            "hashdecls": [],
+            "enums": [],
+            "namespaces": []
+          }
+        ]
+      }
+    ]
+  }
+}

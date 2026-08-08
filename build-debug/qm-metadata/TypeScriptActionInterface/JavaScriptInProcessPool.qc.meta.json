@@ -1,0 +1,776 @@
+{
+  "schema_version": "1.3",
+  "data": {
+    "name": "",
+    "full_name": "",
+    "classes": [],
+    "functions": [],
+    "constants": [],
+    "hashdecls": [],
+    "enums": [],
+    "namespaces": [
+      {
+        "name": "TypeScriptActionInterface",
+        "full_name": "TypeScriptActionInterface",
+        "classes": [
+          {
+            "name": "JavaScriptInProcessPool",
+            "full_name": "TypeScriptActionInterface::JavaScriptInProcessPool",
+            "namespace_path": "TypeScriptActionInterface",
+            "description": "In-process pool of JavaScriptProgram instances for concurrent access\n\nThis class manages a pool of identical JavaScriptProgram instances that allows concurrent thread access without IPC overhead. Programs are created on demand when all existing programs are busy, up to an optional maximum size. When the maximum is reached, threads wait for a program to become available.",
+            "static_methods": [],
+            "instance_methods": [
+              {
+                "name": "constructor",
+                "full_name": "TypeScriptActionInterface::JavaScriptInProcessPool::constructor",
+                "signature": "constructor(JavaScriptProgramPool pool, *int max_size)",
+                "return_type": null,
+                "description": "Creates the pool with at least MinPrograms pre-allocated",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "pool",
+                    "type_name": "JavaScriptProgramPool",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "JavaScriptProgramPool",
+                      "base_type": "JavaScriptProgramPool",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    },
+                    "description": "the JavaScriptProgramPool used to create new programs"
+                  },
+                  {
+                    "name": "max_size",
+                    "type_name": "*int",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*int",
+                      "base_type": "int",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    },
+                    "description": "optional maximum number of programs in the pool; NOTHING = unlimited"
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "pool",
+                  "max_size"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "shutdown",
+                "full_name": "TypeScriptActionInterface::JavaScriptInProcessPool::shutdown",
+                "signature": "shutdown()",
+                "return_type": null,
+                "description": "Signals shutdown and wakes all waiting threads\n\nCan be called while threads are still executing methods on this object. After calling shutdown(), any thread blocked in get() will throw POOL-SHUTDOWN, and new calls to get() will also throw POOL-SHUTDOWN.",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "uniqueHash",
+                "full_name": "TypeScriptActionInterface::JavaScriptInProcessPool::uniqueHash",
+                "signature": "string uniqueHash()",
+                "return_type": "string",
+                "description": "Returns a unique hash for the pool (for DataProvider shutdown handler registration)",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "get",
+                "full_name": "TypeScriptActionInterface::JavaScriptInProcessPool::get",
+                "signature": "hash<InProcessProgramInfo> get()",
+                "return_type": "hash<InProcessProgramInfo>",
+                "description": "Acquires a program for the calling thread\n\nIf the calling thread already has a program assigned, returns it. Otherwise, takes an idle program, waits for one to become available (if at max size), or creates a new one.",
+                "return_description": "the program info for the calling thread",
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "hash<InProcessProgramInfo>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "InProcessProgramInfo",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "InProcessProgramInfo",
+                        "base_type": "InProcessProgramInfo",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "release",
+                "full_name": "TypeScriptActionInterface::JavaScriptInProcessPool::release",
+                "signature": "release(hash<InProcessProgramInfo> info)",
+                "return_type": null,
+                "description": "Releases a program back to the idle pool\n\nMust be called after get() when the caller is done with the program. Safe to call after shutdown() — the call is a no-op if the program is no longer in the active map.",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "info",
+                    "type_name": "hash<InProcessProgramInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<InProcessProgramInfo>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "InProcessProgramInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "InProcessProgramInfo",
+                            "base_type": "InProcessProgramInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    },
+                    "description": "the program info returned by get()"
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "info"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "releaseIntern",
+                "full_name": "TypeScriptActionInterface::JavaScriptInProcessPool::releaseIntern",
+                "signature": "releaseIntern(hash<InProcessProgramInfo> info)",
+                "return_type": null,
+                "description": "Releases a program back to the idle pool (must be called with mutex locked)",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "info",
+                    "type_name": "hash<InProcessProgramInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<InProcessProgramInfo>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "InProcessProgramInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "InProcessProgramInfo",
+                            "base_type": "InProcessProgramInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "info"
+                ],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "execCall",
+                "full_name": "TypeScriptActionInterface::JavaScriptInProcessPool::execCall",
+                "signature": "auto execCall(hash<AsyncCallInfo> api, *softlist<auto> args)",
+                "return_type": "auto",
+                "description": "Core dispatch method: acquires a program, executes the call, and releases",
+                "return_description": "the result of the call",
+                "params": [
+                  {
+                    "name": "api",
+                    "type_name": "hash<AsyncCallInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<AsyncCallInfo>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "AsyncCallInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "AsyncCallInfo",
+                            "base_type": "AsyncCallInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    },
+                    "description": "the async call info (from the global acmap)"
+                  },
+                  {
+                    "name": "args",
+                    "type_name": "*softlist<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*softlist<auto>",
+                      "base_type": "softlist",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    },
+                    "description": "optional arguments to pass to the call"
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "api",
+                  "args"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "auto",
+                  "base_type": "auto",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "createProgramIntern",
+                "full_name": "TypeScriptActionInterface::JavaScriptInProcessPool::createProgramIntern",
+                "signature": "hash<InProcessProgramInfo> createProgramIntern()",
+                "return_type": "hash<InProcessProgramInfo>",
+                "description": "Creates a new program with closures captured via clone mode",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "hash<InProcessProgramInfo>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "InProcessProgramInfo",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "InProcessProgramInfo",
+                        "base_type": "InProcessProgramInfo",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "members": [
+              {
+                "name": "m",
+                "type_name": "Mutex",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "Mutex",
+                  "base_type": "Mutex",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "cond",
+                "type_name": "Condition",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "Condition",
+                  "base_type": "Condition",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "tmap",
+                "type_name": "hash<string, string>",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "hash<string, string>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "amap",
+                "type_name": "hash<string, hash<InProcessProgramInfo>>",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "hash<string, hash<InProcessProgramInfo>>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "hash<InProcessProgramInfo>",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "hash<InProcessProgramInfo>",
+                        "base_type": "hash",
+                        "is_optional": false,
+                        "type_arguments": [
+                          {
+                            "text": "InProcessProgramInfo",
+                            "is_wildcard": false,
+                            "type_info": {
+                              "text": "InProcessProgramInfo",
+                              "base_type": "InProcessProgramInfo",
+                              "is_optional": false,
+                              "type_arguments": [],
+                              "wildcard_arguments": []
+                            }
+                          }
+                        ],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "imap",
+                "type_name": "hash<string, hash<InProcessProgramInfo>>",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "hash<string, hash<InProcessProgramInfo>>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "hash<InProcessProgramInfo>",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "hash<InProcessProgramInfo>",
+                        "base_type": "hash",
+                        "is_optional": false,
+                        "type_arguments": [
+                          {
+                            "text": "InProcessProgramInfo",
+                            "is_wildcard": false,
+                            "type_info": {
+                              "text": "InProcessProgramInfo",
+                              "base_type": "InProcessProgramInfo",
+                              "is_optional": false,
+                              "type_arguments": [],
+                              "wildcard_arguments": []
+                            }
+                          }
+                        ],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "waiting",
+                "type_name": "int",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "int",
+                  "base_type": "int",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "creating",
+                "type_name": "int",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "int",
+                  "base_type": "int",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "pool",
+                "type_name": "JavaScriptProgramPool",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "JavaScriptProgramPool",
+                  "base_type": "JavaScriptProgramPool",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "max_size",
+                "type_name": "*int",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "*int",
+                  "base_type": "int",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "shutdown_flag",
+                "type_name": "bool",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "bool",
+                  "base_type": "bool",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "constants": [
+              {
+                "name": "MinPrograms",
+                "full_name": "TypeScriptActionInterface::JavaScriptInProcessPool::MinPrograms"
+              }
+            ],
+            "source_file": null,
+            "access": "public",
+            "is_abstract": false,
+            "is_final": false,
+            "type_parameters": [],
+            "type_parameter_defaults": {},
+            "type_parameter_bounds": {},
+            "raw_accepts_parameterized": false,
+            "raw_construction_defaults_to_auto": false
+          }
+        ],
+        "functions": [],
+        "constants": [],
+        "hashdecls": [
+          {
+            "name": "InProcessProgramInfo",
+            "full_name": "TypeScriptActionInterface::InProcessProgramInfo",
+            "namespace_path": "TypeScriptActionInterface",
+            "description": "Information about an in-process program instance in the pool",
+            "members": [
+              {
+                "name": "pgm",
+                "type_name": "JavaScriptProgram",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "JavaScriptProgram",
+                  "base_type": "JavaScriptProgram",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "call_map",
+                "type_name": "hash<string, code>",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "hash<string, code>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "code",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "code",
+                        "base_type": "code",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "id",
+                "type_name": "string",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "tid",
+                "type_name": "*int",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "*int",
+                  "base_type": "int",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "atime",
+                "type_name": "*date",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "*date",
+                  "base_type": "date",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "ecount",
+                "type_name": "int",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "int",
+                  "base_type": "int",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "type_parameters": [],
+            "type_parameter_defaults": {},
+            "type_parameter_bounds": {},
+            "source_file": null
+          }
+        ],
+        "enums": [],
+        "namespaces": [
+          {
+            "name": "JavaScriptInProcessPool",
+            "full_name": "TypeScriptActionInterface::JavaScriptInProcessPool",
+            "classes": [],
+            "functions": [
+              {
+                "name": "destructor",
+                "full_name": "TypeScriptActionInterface::JavaScriptInProcessPool::destructor",
+                "namespace_path": "TypeScriptActionInterface::JavaScriptInProcessPool",
+                "signature": "destructor()",
+                "return_type": null,
+                "description": "Shuts down the pool and deletes all programs",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "is_deprecated": false,
+                "since": null,
+                "see_also": null,
+                "source_file": null,
+                "source_line": 108
+              }
+            ],
+            "constants": [
+              {
+                "name": "MinPrograms",
+                "full_name": "TypeScriptActionInterface::JavaScriptInProcessPool::MinPrograms",
+                "description": "Minimum number of pre-allocated programs",
+                "source_file": null
+              }
+            ],
+            "hashdecls": [],
+            "enums": [],
+            "namespaces": []
+          }
+        ]
+      }
+    ]
+  }
+}

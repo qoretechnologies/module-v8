@@ -1,0 +1,661 @@
+{
+  "schema_version": "1.3",
+  "data": {
+    "name": "",
+    "full_name": "",
+    "classes": [],
+    "functions": [],
+    "constants": [],
+    "hashdecls": [],
+    "enums": [],
+    "namespaces": [
+      {
+        "name": "TypeScriptActionInterface",
+        "full_name": "TypeScriptActionInterface",
+        "classes": [
+          {
+            "name": "JavaScriptProgramPool",
+            "full_name": "TypeScriptActionInterface::JavaScriptProgramPool",
+            "namespace_path": "TypeScriptActionInterface",
+            "description": "JavaScript program holder class\n\nJavaScript is single-threaded, so there is no need for a pool mechanism. This class holds a single JavaScriptProgram instance and provides static methods to look up the holder for a given program.",
+            "static_methods": [
+              {
+                "name": "isFirst",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramPool::isFirst",
+                "signature": "bool isFirst(JavaScriptProgram pgm)",
+                "return_type": "bool",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "pgm",
+                    "type_name": "JavaScriptProgram",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "JavaScriptProgram",
+                      "base_type": "JavaScriptProgram",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "pgm"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": true,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "bool",
+                  "base_type": "bool",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getPool",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramPool::getPool",
+                "signature": "JavaScriptProgramPool getPool(JavaScriptProgram pgm, reference<bool> first)",
+                "return_type": "JavaScriptProgramPool",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "pgm",
+                    "type_name": "JavaScriptProgram",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "JavaScriptProgram",
+                      "base_type": "JavaScriptProgram",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "first",
+                    "type_name": "reference<bool>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "reference<bool>",
+                      "base_type": "reference",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "bool",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "bool",
+                            "base_type": "bool",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "pgm",
+                  "first"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": true,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "JavaScriptProgramPool",
+                  "base_type": "JavaScriptProgramPool",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "instance_methods": [
+              {
+                "name": "constructor",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramPool::constructor",
+                "signature": "constructor(string source, string path, code init)",
+                "return_type": null,
+                "description": "Creates the object and the JavaScript program",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "source",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "path",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "init",
+                    "type_name": "code",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "code",
+                      "base_type": "code",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "source",
+                  "path",
+                  "init"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "getProgram",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramPool::getProgram",
+                "signature": "JavaScriptProgram getProgram()",
+                "return_type": "JavaScriptProgram",
+                "description": "Returns the JavaScript program",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "JavaScriptProgram",
+                  "base_type": "JavaScriptProgram",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "uniqueHash",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramPool::uniqueHash",
+                "signature": "string uniqueHash()",
+                "return_type": "string",
+                "description": "Returns the unique hash of the program",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "registerAppActions",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramPool::registerAppActions",
+                "signature": "registerAppActions(object obj)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "obj",
+                    "type_name": "object",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "object",
+                      "base_type": "object",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "obj"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "info",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramPool::info",
+                "signature": "info(string fmt)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "fmt",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "fmt"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "getSource",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramPool::getSource",
+                "signature": "string getSource()",
+                "return_type": "string",
+                "description": "Returns the JavaScript source code",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getPath",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramPool::getPath",
+                "signature": "string getPath()",
+                "return_type": "string",
+                "description": "Returns the JavaScript source path",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getCwd",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramPool::getCwd",
+                "signature": "string getCwd()",
+                "return_type": "string",
+                "description": "Returns the current working directory",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getInit",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramPool::getInit",
+                "signature": "code getInit()",
+                "return_type": "code",
+                "description": "Returns the initialization code",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "code",
+                  "base_type": "code",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "createProgramForPool",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramPool::createProgramForPool",
+                "signature": "JavaScriptProgram createProgramForPool()",
+                "return_type": "JavaScriptProgram",
+                "description": "Creates a new JavaScriptProgram for use in an in-process pool\n\nThe caller must set _pool_clone_mode before calling this method to capture closures without modifying global state.",
+                "return_description": "a new JavaScriptProgram with the same source and init code",
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "JavaScriptProgram",
+                  "base_type": "JavaScriptProgram",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "createProgram",
+                "full_name": "TypeScriptActionInterface::JavaScriptProgramPool::createProgram",
+                "signature": "createProgram(*bool first)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "first",
+                    "type_name": "*bool",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*bool",
+                      "base_type": "bool",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "first"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              }
+            ],
+            "members": [
+              {
+                "name": "source",
+                "type_name": "string",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "path",
+                "type_name": "string",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "pgm",
+                "type_name": "JavaScriptProgram",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "JavaScriptProgram",
+                  "base_type": "JavaScriptProgram",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "cwd",
+                "type_name": "string",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "init",
+                "type_name": "code",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "code",
+                  "base_type": "code",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "pmap",
+                "type_name": "hash<string, JavaScriptProgramPool>",
+                "access": "private",
+                "is_static": true,
+                "type_info": {
+                  "text": "hash<string, JavaScriptProgramPool>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "JavaScriptProgramPool",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "JavaScriptProgramPool",
+                        "base_type": "JavaScriptProgramPool",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "firstmap",
+                "type_name": "hash<string, bool>",
+                "access": "private",
+                "is_static": true,
+                "type_info": {
+                  "text": "hash<string, bool>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "bool",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "bool",
+                        "base_type": "bool",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "chdir_mutex",
+                "type_name": "Mutex",
+                "access": "private",
+                "is_static": true,
+                "type_info": {
+                  "text": "Mutex",
+                  "base_type": "Mutex",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "constants": [],
+            "source_file": null,
+            "access": "public",
+            "is_abstract": false,
+            "is_final": false,
+            "type_parameters": [],
+            "type_parameter_defaults": {},
+            "type_parameter_bounds": {},
+            "raw_accepts_parameterized": false,
+            "raw_construction_defaults_to_auto": false
+          }
+        ],
+        "functions": [],
+        "constants": [],
+        "hashdecls": [],
+        "enums": [],
+        "namespaces": []
+      }
+    ]
+  }
+}

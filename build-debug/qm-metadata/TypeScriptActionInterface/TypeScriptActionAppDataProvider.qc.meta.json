@@ -1,0 +1,830 @@
+{
+  "schema_version": "1.3",
+  "data": {
+    "name": "",
+    "full_name": "",
+    "classes": [],
+    "functions": [],
+    "constants": [],
+    "hashdecls": [],
+    "enums": [],
+    "namespaces": [
+      {
+        "name": "TypeScriptActionInterface",
+        "full_name": "TypeScriptActionInterface",
+        "classes": [
+          {
+            "name": "TypeScriptActionAppDataProvider",
+            "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider",
+            "namespace_path": "TypeScriptActionInterface",
+            "description": "App data provider for TypeScript apps",
+            "static_methods": [],
+            "instance_methods": [
+              {
+                "name": "constructor",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider::constructor",
+                "signature": "constructor(string name, *string root_data_provider)",
+                "return_type": null,
+                "description": "Creates the object",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "name",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "root_data_provider",
+                    "type_name": "*string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*string",
+                      "base_type": "string",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "name",
+                  "root_data_provider"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "copyWithParent",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider::copyWithParent",
+                "signature": "TypeScriptActionAppDataProvider copyWithParent(TypeScriptActionAppDataProvider parent, RestConnection conn)",
+                "return_type": "TypeScriptActionAppDataProvider",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "parent",
+                    "type_name": "TypeScriptActionAppDataProvider",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "TypeScriptActionAppDataProvider",
+                      "base_type": "TypeScriptActionAppDataProvider",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "conn",
+                    "type_name": "RestConnection",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "RestConnection",
+                      "base_type": "RestConnection",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "parent",
+                  "conn"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "TypeScriptActionAppDataProvider",
+                  "base_type": "TypeScriptActionAppDataProvider",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "setParent",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider::setParent",
+                "signature": "setParent(TypeScriptActionAppDataProvider parent)",
+                "return_type": null,
+                "description": "Sets the parent data provider",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "parent",
+                    "type_name": "TypeScriptActionAppDataProvider",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "TypeScriptActionAppDataProvider",
+                      "base_type": "TypeScriptActionAppDataProvider",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "parent"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "setConnection",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider::setConnection",
+                "signature": "setConnection(RestConnection conn)",
+                "return_type": null,
+                "description": "Sets the connection",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "conn",
+                    "type_name": "RestConnection",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "RestConnection",
+                      "base_type": "RestConnection",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "conn"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "getConnection",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider::getConnection",
+                "signature": "*RestConnection getConnection()",
+                "return_type": "*RestConnection",
+                "description": "Retrieves the current connection",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*RestConnection",
+                  "base_type": "RestConnection",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getName",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider::getName",
+                "signature": "string getName()",
+                "return_type": "string",
+                "description": "Returns the data provider name",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "registerChild",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider::registerChild",
+                "signature": "registerChild(string pathname, DataProvider::AbstractDataProvider prov)",
+                "return_type": null,
+                "description": "Register a new child (action) data provider",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "pathname",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "prov",
+                    "type_name": "DataProvider::AbstractDataProvider",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "DataProvider::AbstractDataProvider",
+                      "base_type": "DataProvider::AbstractDataProvider",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "pathname",
+                  "prov"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "deregisterChild",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider::deregisterChild",
+                "signature": "*AbstractDataProvider deregisterChild(string child)",
+                "return_type": "*AbstractDataProvider",
+                "description": "Deregister child data provider",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "child",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "child"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*AbstractDataProvider",
+                  "base_type": "AbstractDataProvider",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getChildProviderSummaryInfo",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider::getChildProviderSummaryInfo",
+                "signature": "*list<hash<DataProviderSummaryInfo>> getChildProviderSummaryInfo()",
+                "return_type": "*list<hash<DataProviderSummaryInfo>>",
+                "description": "Return data provider summary info",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*list<hash<DataProviderSummaryInfo>>",
+                  "base_type": "list",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "hash<DataProviderSummaryInfo>",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "hash<DataProviderSummaryInfo>",
+                        "base_type": "hash",
+                        "is_optional": false,
+                        "type_arguments": [
+                          {
+                            "text": "DataProviderSummaryInfo",
+                            "is_wildcard": false,
+                            "type_info": {
+                              "text": "DataProviderSummaryInfo",
+                              "base_type": "DataProviderSummaryInfo",
+                              "is_optional": false,
+                              "type_arguments": [],
+                              "wildcard_arguments": []
+                            }
+                          }
+                        ],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "registerGoogleAppActions",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider::registerGoogleAppActions",
+                "signature": "registerGoogleAppActions(string app, hash<GoogleAppInfo> google_app)",
+                "return_type": null,
+                "description": "Register actions for the given Google app",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "app",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "google_app",
+                    "type_name": "hash<GoogleAppInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<GoogleAppInfo>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "GoogleAppInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "GoogleAppInfo",
+                            "base_type": "GoogleAppInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "app",
+                  "google_app"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "registerActions",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider::registerActions",
+                "signature": "registerActions(string app, GoogleApiParentDataProvider provider, *string parent_path)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "app",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "provider",
+                    "type_name": "GoogleApiParentDataProvider",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "GoogleApiParentDataProvider",
+                      "base_type": "GoogleApiParentDataProvider",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "parent_path",
+                    "type_name": "*string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*string",
+                      "base_type": "string",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "app",
+                  "provider",
+                  "parent_path"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "getChildProviderNamesImpl",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider::getChildProviderNamesImpl",
+                "signature": "*list<string> getChildProviderNamesImpl()",
+                "return_type": "*list<string>",
+                "description": "Returns a list of child data provider names, if any",
+                "return_description": "a list of child data provider names, if any",
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*list<string>",
+                  "base_type": "list",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getChildProviderImpl",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider::getChildProviderImpl",
+                "signature": "*AbstractDataProvider getChildProviderImpl(string name)",
+                "return_type": "*AbstractDataProvider",
+                "description": "Returns the given child provider or `nothing` if the given child is unknown",
+                "return_description": "the given child provider or `nothing` if the given child is unknown",
+                "params": [
+                  {
+                    "name": "name",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "name"
+                ],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": [
+                  "getChildProviderEx()"
+                ],
+                "return_type_info": {
+                  "text": "*AbstractDataProvider",
+                  "base_type": "AbstractDataProvider",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getStaticInfoImpl",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider::getStaticInfoImpl",
+                "signature": "hash<DataProviderInfo> getStaticInfoImpl()",
+                "return_type": "hash<DataProviderInfo>",
+                "description": "Returns data provider static info",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "hash<DataProviderInfo>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "DataProviderInfo",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "DataProviderInfo",
+                        "base_type": "DataProviderInfo",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "members": [
+              {
+                "name": "name",
+                "type_name": "string",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "conn",
+                "type_name": "AbstractConnection",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "AbstractConnection",
+                  "base_type": "AbstractConnection",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "childMap",
+                "type_name": "hash<string, TypeScriptActionDataProviderBase>",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "hash<string, TypeScriptActionDataProviderBase>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "TypeScriptActionDataProviderBase",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "TypeScriptActionDataProviderBase",
+                        "base_type": "TypeScriptActionDataProviderBase",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "parent",
+                "type_name": "TypeScriptActionAppDataProvider",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "TypeScriptActionAppDataProvider",
+                  "base_type": "TypeScriptActionAppDataProvider",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "registerChildMethod",
+                "type_name": "*StaticMethod",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "*StaticMethod",
+                  "base_type": "StaticMethod",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "google_api_provider",
+                "type_name": "GoogleApiParentDataProvider",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "GoogleApiParentDataProvider",
+                  "base_type": "GoogleApiParentDataProvider",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "children_can_support_records",
+                "type_name": "bool",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "bool",
+                  "base_type": "bool",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "children_can_support_observers",
+                "type_name": "bool",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "bool",
+                  "base_type": "bool",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "GoogleApiParentDataProviderClass",
+                "type_name": "Class",
+                "access": "private",
+                "is_static": true,
+                "type_info": {
+                  "text": "Class",
+                  "base_type": "Class",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "constants": [
+              {
+                "name": "ProviderInfo",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider::ProviderInfo"
+              },
+              {
+                "name": "ProviderSummaryInfo",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider::ProviderSummaryInfo"
+              }
+            ],
+            "source_file": null,
+            "access": "public",
+            "is_abstract": false,
+            "is_final": false,
+            "type_parameters": [],
+            "type_parameter_defaults": {},
+            "type_parameter_bounds": {},
+            "raw_accepts_parameterized": false,
+            "raw_construction_defaults_to_auto": false
+          }
+        ],
+        "functions": [],
+        "constants": [],
+        "hashdecls": [],
+        "enums": [],
+        "namespaces": [
+          {
+            "name": "TypeScriptActionAppDataProvider",
+            "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider",
+            "classes": [],
+            "functions": [],
+            "constants": [
+              {
+                "name": "ProviderInfo",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider::ProviderInfo",
+                "description": "Provider info",
+                "source_file": null
+              },
+              {
+                "name": "ProviderSummaryInfo",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionAppDataProvider::ProviderSummaryInfo",
+                "description": "Provider summary info",
+                "source_file": null
+              }
+            ],
+            "hashdecls": [],
+            "enums": [],
+            "namespaces": []
+          }
+        ]
+      }
+    ]
+  }
+}

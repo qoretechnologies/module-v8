@@ -1,0 +1,449 @@
+{
+  "schema_version": "1.3",
+  "data": {
+    "name": "",
+    "full_name": "",
+    "classes": [],
+    "functions": [],
+    "constants": [],
+    "hashdecls": [],
+    "enums": [],
+    "namespaces": [
+      {
+        "name": "TypeScriptActionInterface",
+        "full_name": "TypeScriptActionInterface",
+        "classes": [
+          {
+            "name": "TypeScriptActionGoogleApiDataProvider",
+            "full_name": "TypeScriptActionInterface::TypeScriptActionGoogleApiDataProvider",
+            "namespace_path": "TypeScriptActionInterface",
+            "description": "API data provider for Google actions",
+            "static_methods": [],
+            "instance_methods": [
+              {
+                "name": "constructor",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionGoogleApiDataProvider::constructor",
+                "signature": "constructor(string name, hash<auto> google_action, *hash<AsyncCallInfo> api, ActionFunctionContext fctx, *hash<AsyncCallInfo> get_dynamic_request_type, *hash<AsyncCallInfo> get_dynamic_response_type)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "name",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "google_action",
+                    "type_name": "hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "api",
+                    "type_name": "*hash<AsyncCallInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<AsyncCallInfo>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "AsyncCallInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "AsyncCallInfo",
+                            "base_type": "AsyncCallInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "fctx",
+                    "type_name": "ActionFunctionContext",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "ActionFunctionContext",
+                      "base_type": "ActionFunctionContext",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "get_dynamic_request_type",
+                    "type_name": "*hash<AsyncCallInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<AsyncCallInfo>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "AsyncCallInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "AsyncCallInfo",
+                            "base_type": "AsyncCallInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "get_dynamic_response_type",
+                    "type_name": "*hash<AsyncCallInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<AsyncCallInfo>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "AsyncCallInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "AsyncCallInfo",
+                            "base_type": "AsyncCallInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "name",
+                  "google_action",
+                  "api",
+                  "fctx",
+                  "get_dynamic_request_type",
+                  "get_dynamic_response_type"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "checkRestClient",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionGoogleApiDataProvider::checkRestClient",
+                "signature": "checkRestClient(*hash<auto> action_opts)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "action_opts",
+                    "type_name": "*hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "action_opts"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "doRequestImpl",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionGoogleApiDataProvider::doRequestImpl",
+                "signature": "auto doRequestImpl(auto req, *hash<auto> request_options)",
+                "return_type": "auto",
+                "description": "Makes a request and returns the response",
+                "return_description": "the response to the request",
+                "params": [
+                  {
+                    "name": "req",
+                    "type_name": "auto",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "auto",
+                      "base_type": "auto",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    },
+                    "description": "the request to serialize and make according to the request type"
+                  },
+                  {
+                    "name": "request_options",
+                    "type_name": "*hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    },
+                    "description": "the request options; will be processed by validateRequestOptions()"
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "req",
+                  "request_options"
+                ],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "auto",
+                  "base_type": "auto",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getRequestTypeImpl",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionGoogleApiDataProvider::getRequestTypeImpl",
+                "signature": "*DataProvider::AbstractDataProviderType getRequestTypeImpl()",
+                "return_type": "*DataProvider::AbstractDataProviderType",
+                "description": "Returns the description of a successful request message, if any",
+                "return_description": "the request type for this provider",
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*DataProvider::AbstractDataProviderType",
+                  "base_type": "DataProvider::AbstractDataProviderType",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getResponseTypeImpl",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionGoogleApiDataProvider::getResponseTypeImpl",
+                "signature": "*DataProvider::AbstractDataProviderType getResponseTypeImpl()",
+                "return_type": "*DataProvider::AbstractDataProviderType",
+                "description": "Returns the description of a response message, if this object represents a response message",
+                "return_description": "the response type for this response message",
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*DataProvider::AbstractDataProviderType",
+                  "base_type": "DataProvider::AbstractDataProviderType",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getStaticInfoImpl",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionGoogleApiDataProvider::getStaticInfoImpl",
+                "signature": "hash<DataProviderInfo> getStaticInfoImpl()",
+                "return_type": "hash<DataProviderInfo>",
+                "description": "Returns data provider static info",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "hash<DataProviderInfo>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "DataProviderInfo",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "DataProviderInfo",
+                        "base_type": "DataProviderInfo",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "members": [
+              {
+                "name": "google_api",
+                "type_name": "GoogleApiDataProvider",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "GoogleApiDataProvider",
+                  "base_type": "GoogleApiDataProvider",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "constants": [
+              {
+                "name": "ProviderInfo",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionGoogleApiDataProvider::ProviderInfo"
+              },
+              {
+                "name": "ProviderSummaryInfo",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionGoogleApiDataProvider::ProviderSummaryInfo"
+              }
+            ],
+            "source_file": null,
+            "access": "public",
+            "is_abstract": false,
+            "is_final": false,
+            "type_parameters": [],
+            "type_parameter_defaults": {},
+            "type_parameter_bounds": {},
+            "raw_accepts_parameterized": false,
+            "raw_construction_defaults_to_auto": false
+          }
+        ],
+        "functions": [],
+        "constants": [],
+        "hashdecls": [],
+        "enums": [],
+        "namespaces": [
+          {
+            "name": "TypeScriptActionGoogleApiDataProvider",
+            "full_name": "TypeScriptActionInterface::TypeScriptActionGoogleApiDataProvider",
+            "classes": [],
+            "functions": [],
+            "constants": [
+              {
+                "name": "ProviderInfo",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionGoogleApiDataProvider::ProviderInfo",
+                "description": "Provider info",
+                "source_file": null
+              },
+              {
+                "name": "ProviderSummaryInfo",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionGoogleApiDataProvider::ProviderSummaryInfo",
+                "description": "Provider summary info",
+                "source_file": null
+              }
+            ],
+            "hashdecls": [],
+            "enums": [],
+            "namespaces": []
+          }
+        ]
+      }
+    ]
+  }
+}

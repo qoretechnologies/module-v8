@@ -1,0 +1,3304 @@
+{
+  "schema_version": "1.3",
+  "data": {
+    "name": "",
+    "full_name": "",
+    "classes": [],
+    "functions": [],
+    "constants": [],
+    "hashdecls": [],
+    "enums": [],
+    "namespaces": [
+      {
+        "name": "TypeScriptActionInterface",
+        "full_name": "TypeScriptActionInterface",
+        "classes": [
+          {
+            "name": "TypeScriptActionDataProviderBase",
+            "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase",
+            "namespace_path": "TypeScriptActionInterface",
+            "description": "Base class for TypeScript action data provider classes",
+            "static_methods": [
+              {
+                "name": "getAsyncValueArgs",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getAsyncValueArgs",
+                "signature": "auto getAsyncValueArgs(*LoggerInterface logger = DataProvider::getGlobalLogger(), hash<AsyncCallInfo> api, *softlist<auto> args, *hash<auto> cache_opts, *bool use_cache)",
+                "return_type": "auto",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "logger",
+                    "type_name": "*LoggerInterface",
+                    "default_value": "DataProvider::getGlobalLogger()",
+                    "type_info": {
+                      "text": "*LoggerInterface",
+                      "base_type": "LoggerInterface",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "api",
+                    "type_name": "hash<AsyncCallInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<AsyncCallInfo>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "AsyncCallInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "AsyncCallInfo",
+                            "base_type": "AsyncCallInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "args",
+                    "type_name": "*softlist<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*softlist<auto>",
+                      "base_type": "softlist",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "cache_opts",
+                    "type_name": "*hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "use_cache",
+                    "type_name": "*bool",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*bool",
+                      "base_type": "bool",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "logger",
+                  "api",
+                  "args",
+                  "cache_opts",
+                  "use_cache"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": true,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "auto",
+                  "base_type": "auto",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getKey",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getKey",
+                "signature": "string getKey(string label, *hash<auto> cache_opts)",
+                "return_type": "string",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "label",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "cache_opts",
+                    "type_name": "*hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "label",
+                  "cache_opts"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": true,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getKeyValue",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getKeyValue",
+                "signature": "string getKeyValue(auto arg)",
+                "return_type": "string",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "arg",
+                    "type_name": "auto",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "auto",
+                      "base_type": "auto",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "arg"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": true,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "execAsyncValueArgs",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::execAsyncValueArgs",
+                "signature": "auto execAsyncValueArgs(*LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args)",
+                "return_type": "auto",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "logger",
+                    "type_name": "*LoggerInterface",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*LoggerInterface",
+                      "base_type": "LoggerInterface",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "api",
+                    "type_name": "hash<AsyncCallInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<AsyncCallInfo>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "AsyncCallInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "AsyncCallInfo",
+                            "base_type": "AsyncCallInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "args",
+                    "type_name": "*softlist<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*softlist<auto>",
+                      "base_type": "softlist",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "logger",
+                  "api",
+                  "args"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": true,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "auto",
+                  "base_type": "auto",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "execAsyncValueDirect",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::execAsyncValueDirect",
+                "signature": "auto execAsyncValueDirect(*LoggerInterface logger, hash<AsyncCallInfo> api, *softlist<auto> args)",
+                "return_type": "auto",
+                "description": "Executes the async call directly (no pool/server dispatch)\n\nCalled from execAsyncValueArgs() when no pool or server is active, and from JavaScriptInProcessPool::execCall() to avoid re-entering the pool check.",
+                "return_description": "the result of the call",
+                "params": [
+                  {
+                    "name": "logger",
+                    "type_name": "*LoggerInterface",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*LoggerInterface",
+                      "base_type": "LoggerInterface",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    },
+                    "description": "optional logger for post-processing callbacks"
+                  },
+                  {
+                    "name": "api",
+                    "type_name": "hash<AsyncCallInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<AsyncCallInfo>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "AsyncCallInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "AsyncCallInfo",
+                            "base_type": "AsyncCallInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    },
+                    "description": "the async call info"
+                  },
+                  {
+                    "name": "args",
+                    "type_name": "*softlist<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*softlist<auto>",
+                      "base_type": "softlist",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    },
+                    "description": "optional arguments to pass to the call"
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "logger",
+                  "api",
+                  "args"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": true,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "auto",
+                  "base_type": "auto",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "processError",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::processError",
+                "signature": "processError(reference<string> desc, reference<hash<auto>> arg, *string errloc, auto err)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "desc",
+                    "type_name": "reference<string>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "reference<string>",
+                      "base_type": "reference",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "string",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "string",
+                            "base_type": "string",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "arg",
+                    "type_name": "reference<hash<auto>>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "reference<hash<auto>>",
+                      "base_type": "reference",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "hash<auto>",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "hash<auto>",
+                            "base_type": "hash",
+                            "is_optional": false,
+                            "type_arguments": [
+                              {
+                                "text": "auto",
+                                "is_wildcard": false,
+                                "type_info": {
+                                  "text": "auto",
+                                  "base_type": "auto",
+                                  "is_optional": false,
+                                  "type_arguments": [],
+                                  "wildcard_arguments": []
+                                }
+                              }
+                            ],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "errloc",
+                    "type_name": "*string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*string",
+                      "base_type": "string",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "err",
+                    "type_name": "auto",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "auto",
+                      "base_type": "auto",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "desc",
+                  "arg",
+                  "errloc",
+                  "err"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": true,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "stripNonSerializableData",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::stripNonSerializableData",
+                "signature": "auto stripNonSerializableData(auto v)",
+                "return_type": "auto",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "v",
+                    "type_name": "auto",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "auto",
+                      "base_type": "auto",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "v"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": true,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "auto",
+                  "base_type": "auto",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getCacheKey",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getCacheKey",
+                "signature": "string getCacheKey(list<string> skeys, hash<auto> req)",
+                "return_type": "string",
+                "description": "Returns a key to the dependent type cache for the request type",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "skeys",
+                    "type_name": "list<string>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "list<string>",
+                      "base_type": "list",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "string",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "string",
+                            "base_type": "string",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "req",
+                    "type_name": "hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "skeys",
+                  "req"
+                ],
+                "throws": [],
+                "access": "private",
+                "is_static": true,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getAllowedValues",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getAllowedValues",
+                "signature": "*softlist<hash<AllowedValueInfo>> getAllowedValues(auto v, list<string> kl)",
+                "return_type": "*softlist<hash<AllowedValueInfo>>",
+                "description": "Returns allowed values info from the given location in a hash",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "v",
+                    "type_name": "auto",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "auto",
+                      "base_type": "auto",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "kl",
+                    "type_name": "list<string>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "list<string>",
+                      "base_type": "list",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "string",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "string",
+                            "base_type": "string",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "v",
+                  "kl"
+                ],
+                "throws": [],
+                "access": "private",
+                "is_static": true,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*softlist<hash<AllowedValueInfo>>",
+                  "base_type": "softlist",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "hash<AllowedValueInfo>",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "hash<AllowedValueInfo>",
+                        "base_type": "hash",
+                        "is_optional": false,
+                        "type_arguments": [
+                          {
+                            "text": "AllowedValueInfo",
+                            "is_wildcard": false,
+                            "type_info": {
+                              "text": "AllowedValueInfo",
+                              "base_type": "AllowedValueInfo",
+                              "is_optional": false,
+                              "type_arguments": [],
+                              "wildcard_arguments": []
+                            }
+                          }
+                        ],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "instance_methods": [
+              {
+                "name": "constructor",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::constructor",
+                "signature": "constructor(string name, string app)",
+                "return_type": null,
+                "description": "Creates the object from the arguments",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "name",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "app",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "name",
+                  "app"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "constructor",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::constructor",
+                "signature": "constructor(RestConnection conn, string name)",
+                "return_type": null,
+                "description": "Creates the object from the arguments",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "conn",
+                    "type_name": "RestConnection",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "RestConnection",
+                      "base_type": "RestConnection",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "name",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "conn",
+                  "name"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "constructor",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::constructor",
+                "signature": "constructor(string name, ActionFunctionContext fctx)",
+                "return_type": null,
+                "description": "Creates the object from the arguments",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "name",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "fctx",
+                    "type_name": "ActionFunctionContext",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "ActionFunctionContext",
+                      "base_type": "ActionFunctionContext",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "name",
+                  "fctx"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "setConnection",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::setConnection",
+                "signature": "setConnection(RestConnection conn)",
+                "return_type": null,
+                "description": "Sets the connection",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "conn",
+                    "type_name": "RestConnection",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "RestConnection",
+                      "base_type": "RestConnection",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "conn"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "getConnection",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getConnection",
+                "signature": "*RestConnection getConnection()",
+                "return_type": "*RestConnection",
+                "description": "Retrieves the current connection",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*RestConnection",
+                  "base_type": "RestConnection",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getLogger",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getLogger",
+                "signature": "*LoggerInterface getLogger()",
+                "return_type": "*LoggerInterface",
+                "description": "Returns the logger interface for logging",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*LoggerInterface",
+                  "base_type": "LoggerInterface",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getName",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getName",
+                "signature": "string getName()",
+                "return_type": "string",
+                "description": "Returns the data provider name",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getSupportedReferenceData",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getSupportedReferenceData",
+                "signature": "*hash<string, bool> getSupportedReferenceData()",
+                "return_type": "*hash<string, bool>",
+                "description": "Returns information on supported reference data\n\n`getReferenceData()`",
+                "return_description": "a hash of supported reference data; keys in the hash returned are supported in calls to",
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*hash<string, bool>",
+                  "base_type": "hash",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "bool",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "bool",
+                        "base_type": "bool",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getSupportedReferenceDataValues",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getSupportedReferenceDataValues",
+                "signature": "*hash<string, bool> getSupportedReferenceDataValues()",
+                "return_type": "*hash<string, bool>",
+                "description": "Returns information on supported reference data values\n\n`getReferenceDataValues()`",
+                "return_description": "a hash of supported reference data values; keys in the hash returned are supported in calls to",
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*hash<string, bool>",
+                  "base_type": "hash",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "bool",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "bool",
+                        "base_type": "bool",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getAsyncValue",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getAsyncValue",
+                "signature": "auto getAsyncValue(hash<AsyncCallInfo> api)",
+                "return_type": "auto",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "api",
+                    "type_name": "hash<AsyncCallInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<AsyncCallInfo>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "AsyncCallInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "AsyncCallInfo",
+                            "base_type": "AsyncCallInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "api"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "auto",
+                  "base_type": "auto",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getAsyncValueWithCache",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getAsyncValueWithCache",
+                "signature": "auto getAsyncValueWithCache(hash<AsyncCallInfo> api, *hash<auto> cache_opts)",
+                "return_type": "auto",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "api",
+                    "type_name": "hash<AsyncCallInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<AsyncCallInfo>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "AsyncCallInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "AsyncCallInfo",
+                            "base_type": "AsyncCallInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "cache_opts",
+                    "type_name": "*hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "api",
+                  "cache_opts"
+                ],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "auto",
+                  "base_type": "auto",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getCallContextInfo",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getCallContextInfo",
+                "signature": "*hash<DataContextInfo> getCallContextInfo(*hash<auto> action_opts)",
+                "return_type": "*hash<DataContextInfo>",
+                "description": "Returns call context info",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "action_opts",
+                    "type_name": "*hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "action_opts"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*hash<DataContextInfo>",
+                  "base_type": "hash",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "DataContextInfo",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "DataContextInfo",
+                        "base_type": "DataContextInfo",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getActionOptionsWithOptions",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getActionOptionsWithOptions",
+                "signature": "*hash<string, hash<ActionOptionInfo>> getActionOptionsWithOptions(hash<auto> options)",
+                "return_type": "*hash<string, hash<ActionOptionInfo>>",
+                "description": "Returns a data type for the given base type and request / option data",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "options",
+                    "type_name": "hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "options"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*hash<string, hash<ActionOptionInfo>>",
+                  "base_type": "hash",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "hash<ActionOptionInfo>",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "hash<ActionOptionInfo>",
+                        "base_type": "hash",
+                        "is_optional": false,
+                        "type_arguments": [
+                          {
+                            "text": "ActionOptionInfo",
+                            "is_wildcard": false,
+                            "type_info": {
+                              "text": "ActionOptionInfo",
+                              "base_type": "ActionOptionInfo",
+                              "is_optional": false,
+                              "type_arguments": [],
+                              "wildcard_arguments": []
+                            }
+                          }
+                        ],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getDynamicDataType",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getDynamicDataType",
+                "signature": "AbstractDataProviderType getDynamicDataType(string cmd, AbstractDataProviderType rt, hash<auto> req)",
+                "return_type": "AbstractDataProviderType",
+                "description": "Returns a data type for the given base type and request / option data",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "cmd",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "rt",
+                    "type_name": "AbstractDataProviderType",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "AbstractDataProviderType",
+                      "base_type": "AbstractDataProviderType",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "req",
+                    "type_name": "hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "cmd",
+                  "rt",
+                  "req"
+                ],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "AbstractDataProviderType",
+                  "base_type": "AbstractDataProviderType",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getDynamicOptionTypeIntern",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getDynamicOptionTypeIntern",
+                "signature": "*HashDataType getDynamicOptionTypeIntern(AbstractDataProviderType rt, hash<auto> slice, hash<auto> req)",
+                "return_type": "*HashDataType",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "rt",
+                    "type_name": "AbstractDataProviderType",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "AbstractDataProviderType",
+                      "base_type": "AbstractDataProviderType",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "slice",
+                    "type_name": "hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "req",
+                    "type_name": "hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "rt",
+                  "slice",
+                  "req"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*HashDataType",
+                  "base_type": "HashDataType",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getActionOptionsWithOptionsIntern",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getActionOptionsWithOptionsIntern",
+                "signature": "*hash<string, hash<ActionOptionInfo>> getActionOptionsWithOptionsIntern(hash<auto> action, hash<auto> slice, hash<auto> options)",
+                "return_type": "*hash<string, hash<ActionOptionInfo>>",
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "action",
+                    "type_name": "hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "slice",
+                    "type_name": "hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "options",
+                    "type_name": "hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "action",
+                  "slice",
+                  "options"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*hash<string, hash<ActionOptionInfo>>",
+                  "base_type": "hash",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "hash<ActionOptionInfo>",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "hash<ActionOptionInfo>",
+                        "base_type": "hash",
+                        "is_optional": false,
+                        "type_arguments": [
+                          {
+                            "text": "ActionOptionInfo",
+                            "is_wildcard": false,
+                            "type_info": {
+                              "text": "ActionOptionInfo",
+                              "base_type": "ActionOptionInfo",
+                              "is_optional": false,
+                              "type_arguments": [],
+                              "wildcard_arguments": []
+                            }
+                          }
+                        ],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "tryGetActionOptionsWithOptionsImpl",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::tryGetActionOptionsWithOptionsImpl",
+                "signature": "*hash<string, hash<ActionOptionInfo>> tryGetActionOptionsWithOptionsImpl(hash<DataProviderActionInfo> action, *hash<auto> options)",
+                "return_type": "*hash<string, hash<ActionOptionInfo>>",
+                "description": "Returns action options corresponding to the given option data",
+                "return_description": "action options according to the available option data",
+                "params": [
+                  {
+                    "name": "action",
+                    "type_name": "hash<DataProviderActionInfo>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<DataProviderActionInfo>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "DataProviderActionInfo",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "DataProviderActionInfo",
+                            "base_type": "DataProviderActionInfo",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "options",
+                    "type_name": "*hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    },
+                    "description": "sample option data that can be used to determine the final type"
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "action",
+                  "options"
+                ],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*hash<string, hash<ActionOptionInfo>>",
+                  "base_type": "hash",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "hash<ActionOptionInfo>",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "hash<ActionOptionInfo>",
+                        "base_type": "hash",
+                        "is_optional": false,
+                        "type_arguments": [
+                          {
+                            "text": "ActionOptionInfo",
+                            "is_wildcard": false,
+                            "type_info": {
+                              "text": "ActionOptionInfo",
+                              "base_type": "ActionOptionInfo",
+                              "is_optional": false,
+                              "type_arguments": [],
+                              "wildcard_arguments": []
+                            }
+                          }
+                        ],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getReferenceDataImpl",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getReferenceDataImpl",
+                "signature": "*list<hash<AllowedValueInfo>> getReferenceDataImpl(string type, *hash<auto> action_opts)",
+                "return_type": "*list<hash<AllowedValueInfo>>",
+                "description": "Returns reference data of the given kind if available",
+                "return_description": "a list of allowed values for this data",
+                "params": [
+                  {
+                    "name": "type",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    },
+                    "description": "the unique type name of the reference data"
+                  },
+                  {
+                    "name": "action_opts",
+                    "type_name": "*hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    },
+                    "description": "an optional hash of action options when called when working with an app action"
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "type",
+                  "action_opts"
+                ],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*list<hash<AllowedValueInfo>>",
+                  "base_type": "list",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "hash<AllowedValueInfo>",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "hash<AllowedValueInfo>",
+                        "base_type": "hash",
+                        "is_optional": false,
+                        "type_arguments": [
+                          {
+                            "text": "AllowedValueInfo",
+                            "is_wildcard": false,
+                            "type_info": {
+                              "text": "AllowedValueInfo",
+                              "base_type": "AllowedValueInfo",
+                              "is_optional": false,
+                              "type_arguments": [],
+                              "wildcard_arguments": []
+                            }
+                          }
+                        ],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getElementReferenceDataImpl",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getElementReferenceDataImpl",
+                "signature": "*list<hash<AllowedValueInfo>> getElementReferenceDataImpl(string type, *hash<auto> action_opts)",
+                "return_type": "*list<hash<AllowedValueInfo>>",
+                "description": "Returns element reference data of the given kind if available",
+                "return_description": "a list of allowed element values for this data",
+                "params": [
+                  {
+                    "name": "type",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    },
+                    "description": "the unique type name of the reference data"
+                  },
+                  {
+                    "name": "action_opts",
+                    "type_name": "*hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    },
+                    "description": "an optional hash of action options when called when working with an app action"
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "type",
+                  "action_opts"
+                ],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*list<hash<AllowedValueInfo>>",
+                  "base_type": "list",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "hash<AllowedValueInfo>",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "hash<AllowedValueInfo>",
+                        "base_type": "hash",
+                        "is_optional": false,
+                        "type_arguments": [
+                          {
+                            "text": "AllowedValueInfo",
+                            "is_wildcard": false,
+                            "type_info": {
+                              "text": "AllowedValueInfo",
+                              "base_type": "AllowedValueInfo",
+                              "is_optional": false,
+                              "type_arguments": [],
+                              "wildcard_arguments": []
+                            }
+                          }
+                        ],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getReferenceDataIntern",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getReferenceDataIntern",
+                "signature": "*list<hash<AllowedValueInfo>> getReferenceDataIntern(*hash<string, hash<AsyncCallInfo>> omap, *hash<string, hash<RestGetAllowedValuesInfo>> reomap, string type, *hash<auto> action_opts, *string rtype)",
+                "return_type": "*list<hash<AllowedValueInfo>>",
+                "description": "Returns allowed value data of the given kind if available",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "omap",
+                    "type_name": "*hash<string, hash<AsyncCallInfo>>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<string, hash<AsyncCallInfo>>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "string",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "string",
+                            "base_type": "string",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        },
+                        {
+                          "text": "hash<AsyncCallInfo>",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "hash<AsyncCallInfo>",
+                            "base_type": "hash",
+                            "is_optional": false,
+                            "type_arguments": [
+                              {
+                                "text": "AsyncCallInfo",
+                                "is_wildcard": false,
+                                "type_info": {
+                                  "text": "AsyncCallInfo",
+                                  "base_type": "AsyncCallInfo",
+                                  "is_optional": false,
+                                  "type_arguments": [],
+                                  "wildcard_arguments": []
+                                }
+                              }
+                            ],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "reomap",
+                    "type_name": "*hash<string, hash<RestGetAllowedValuesInfo>>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<string, hash<RestGetAllowedValuesInfo>>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "string",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "string",
+                            "base_type": "string",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        },
+                        {
+                          "text": "hash<RestGetAllowedValuesInfo>",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "hash<RestGetAllowedValuesInfo>",
+                            "base_type": "hash",
+                            "is_optional": false,
+                            "type_arguments": [
+                              {
+                                "text": "RestGetAllowedValuesInfo",
+                                "is_wildcard": false,
+                                "type_info": {
+                                  "text": "RestGetAllowedValuesInfo",
+                                  "base_type": "RestGetAllowedValuesInfo",
+                                  "is_optional": false,
+                                  "type_arguments": [],
+                                  "wildcard_arguments": []
+                                }
+                              }
+                            ],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "type",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "action_opts",
+                    "type_name": "*hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "rtype",
+                    "type_name": "*string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*string",
+                      "base_type": "string",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "omap",
+                  "reomap",
+                  "type",
+                  "action_opts",
+                  "rtype"
+                ],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*list<hash<AllowedValueInfo>>",
+                  "base_type": "list",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "hash<AllowedValueInfo>",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "hash<AllowedValueInfo>",
+                        "base_type": "hash",
+                        "is_optional": false,
+                        "type_arguments": [
+                          {
+                            "text": "AllowedValueInfo",
+                            "is_wildcard": false,
+                            "type_info": {
+                              "text": "AllowedValueInfo",
+                              "base_type": "AllowedValueInfo",
+                              "is_optional": false,
+                              "type_arguments": [],
+                              "wildcard_arguments": []
+                            }
+                          }
+                        ],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getReferenceDataValueImpl",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getReferenceDataValueImpl",
+                "signature": "auto getReferenceDataValueImpl(string type, *hash<auto> action_opts)",
+                "return_type": "auto",
+                "description": "Returns a reference data value of the given kind if available",
+                "return_description": "the value of the reference data",
+                "params": [
+                  {
+                    "name": "type",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    },
+                    "description": "the unique type name of the reference data"
+                  },
+                  {
+                    "name": "action_opts",
+                    "type_name": "*hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    },
+                    "description": "an optional hash of action options when called when working with an app action"
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "type",
+                  "action_opts"
+                ],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "auto",
+                  "base_type": "auto",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getAttributes",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getAttributes",
+                "signature": "getAttributes(string attr, string type, auto v, list<string> attrl, reference<list<hash<AllowedValueInfo>>> rv)",
+                "return_type": null,
+                "description": "Adds attributes to allowed values",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "attr",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "type",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "v",
+                    "type_name": "auto",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "auto",
+                      "base_type": "auto",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "attrl",
+                    "type_name": "list<string>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "list<string>",
+                      "base_type": "list",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "string",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "string",
+                            "base_type": "string",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "rv",
+                    "type_name": "reference<list<hash<AllowedValueInfo>>>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "reference<list<hash<AllowedValueInfo>>>",
+                      "base_type": "reference",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "list<hash<AllowedValueInfo>>",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "list<hash<AllowedValueInfo>>",
+                            "base_type": "list",
+                            "is_optional": false,
+                            "type_arguments": [
+                              {
+                                "text": "hash<AllowedValueInfo>",
+                                "is_wildcard": false,
+                                "type_info": {
+                                  "text": "hash<AllowedValueInfo>",
+                                  "base_type": "hash",
+                                  "is_optional": false,
+                                  "type_arguments": [
+                                    {
+                                      "text": "AllowedValueInfo",
+                                      "is_wildcard": false,
+                                      "type_info": {
+                                        "text": "AllowedValueInfo",
+                                        "base_type": "AllowedValueInfo",
+                                        "is_optional": false,
+                                        "type_arguments": [],
+                                        "wildcard_arguments": []
+                                      }
+                                    }
+                                  ],
+                                  "wildcard_arguments": []
+                                }
+                              }
+                            ],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "attr",
+                  "type",
+                  "v",
+                  "attrl",
+                  "rv"
+                ],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "getAttributeIntern",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getAttributeIntern",
+                "signature": "*list<string> getAttributeIntern(string attr, string type, auto v, list<string> attrl)",
+                "return_type": "*list<string>",
+                "description": "Adds display names to allowed values",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "attr",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "type",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "v",
+                    "type_name": "auto",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "auto",
+                      "base_type": "auto",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "attrl",
+                    "type_name": "list<string>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "list<string>",
+                      "base_type": "list",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "string",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "string",
+                            "base_type": "string",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "attr",
+                  "type",
+                  "v",
+                  "attrl"
+                ],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*list<string>",
+                  "base_type": "list",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getDynamicTypeIntern",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::getDynamicTypeIntern",
+                "signature": "*DataProvider::AbstractDataProviderType getDynamicTypeIntern(string dtype, reference<hash<DynamicTypeInfo>> type_info, *hash<auto> opts = DataProviderDataContextHelper::get(), *hash<string, hash<AsyncCallInfo>> dtmap)",
+                "return_type": "*DataProvider::AbstractDataProviderType",
+                "description": "Processes a dynamic type and executes any dynamic type function to extend the type, if defined",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "dtype",
+                    "type_name": "string",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "string",
+                      "base_type": "string",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "type_info",
+                    "type_name": "reference<hash<DynamicTypeInfo>>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "reference<hash<DynamicTypeInfo>>",
+                      "base_type": "reference",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "hash<DynamicTypeInfo>",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "hash<DynamicTypeInfo>",
+                            "base_type": "hash",
+                            "is_optional": false,
+                            "type_arguments": [
+                              {
+                                "text": "DynamicTypeInfo",
+                                "is_wildcard": false,
+                                "type_info": {
+                                  "text": "DynamicTypeInfo",
+                                  "base_type": "DynamicTypeInfo",
+                                  "is_optional": false,
+                                  "type_arguments": [],
+                                  "wildcard_arguments": []
+                                }
+                              }
+                            ],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "opts",
+                    "type_name": "*hash<auto>",
+                    "default_value": "DataProviderDataContextHelper::get()",
+                    "type_info": {
+                      "text": "*hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "dtmap",
+                    "type_name": "*hash<string, hash<AsyncCallInfo>>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<string, hash<AsyncCallInfo>>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "string",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "string",
+                            "base_type": "string",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        },
+                        {
+                          "text": "hash<AsyncCallInfo>",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "hash<AsyncCallInfo>",
+                            "base_type": "hash",
+                            "is_optional": false,
+                            "type_arguments": [
+                              {
+                                "text": "AsyncCallInfo",
+                                "is_wildcard": false,
+                                "type_info": {
+                                  "text": "AsyncCallInfo",
+                                  "base_type": "AsyncCallInfo",
+                                  "is_optional": false,
+                                  "type_arguments": [],
+                                  "wildcard_arguments": []
+                                }
+                              }
+                            ],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "dtype",
+                  "type_info",
+                  "opts",
+                  "dtmap"
+                ],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "*DataProvider::AbstractDataProviderType",
+                  "base_type": "DataProvider::AbstractDataProviderType",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "checkRestClient",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::checkRestClient",
+                "signature": "checkRestClient(*hash<auto> action_opts)",
+                "return_type": null,
+                "description": "Check and assign REST client",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "action_opts",
+                    "type_name": "*hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": true,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "action_opts"
+                ],
+                "throws": [],
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "checkUpdateRestOptions",
+                "full_name": "TypeScriptActionInterface::TypeScriptActionDataProviderBase::checkUpdateRestOptions",
+                "signature": "checkUpdateRestOptions(RestClient rest, hash<auto> action_opts)",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "rest",
+                    "type_name": "RestClient",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "RestClient",
+                      "base_type": "RestClient",
+                      "is_optional": false,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "action_opts",
+                    "type_name": "hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "rest",
+                  "action_opts"
+                ],
+                "throws": null,
+                "access": "private",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              }
+            ],
+            "members": [
+              {
+                "name": "name",
+                "type_name": "string",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "string",
+                  "base_type": "string",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "conn",
+                "type_name": "RestConnection",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "RestConnection",
+                  "base_type": "RestConnection",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "rest",
+                "type_name": "RestClient",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "RestClient",
+                  "base_type": "RestClient",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "dtcache",
+                "type_name": "hash<string, AbstractDataProviderType>",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "hash<string, AbstractDataProviderType>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "AbstractDataProviderType",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "AbstractDataProviderType",
+                        "base_type": "AbstractDataProviderType",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "docache",
+                "type_name": "hash<string, *hash<string, hash<ActionOptionInfo>>>",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "hash<string, *hash<string, hash<ActionOptionInfo>>>",
+                  "base_type": "hash",
+                  "is_optional": false,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "*hash<string, hash<ActionOptionInfo>>",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "*hash<string, hash<ActionOptionInfo>>",
+                        "base_type": "hash",
+                        "is_optional": true,
+                        "type_arguments": [
+                          {
+                            "text": "string",
+                            "is_wildcard": false,
+                            "type_info": {
+                              "text": "string",
+                              "base_type": "string",
+                              "is_optional": false,
+                              "type_arguments": [],
+                              "wildcard_arguments": []
+                            }
+                          },
+                          {
+                            "text": "hash<ActionOptionInfo>",
+                            "is_wildcard": false,
+                            "type_info": {
+                              "text": "hash<ActionOptionInfo>",
+                              "base_type": "hash",
+                              "is_optional": false,
+                              "type_arguments": [
+                                {
+                                  "text": "ActionOptionInfo",
+                                  "is_wildcard": false,
+                                  "type_info": {
+                                    "text": "ActionOptionInfo",
+                                    "base_type": "ActionOptionInfo",
+                                    "is_optional": false,
+                                    "type_arguments": [],
+                                    "wildcard_arguments": []
+                                  }
+                                }
+                              ],
+                              "wildcard_arguments": []
+                            }
+                          }
+                        ],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "cache",
+                "type_name": "TypeScriptDataCache",
+                "access": "private",
+                "is_static": true,
+                "type_info": {
+                  "text": "TypeScriptDataCache",
+                  "base_type": "TypeScriptDataCache",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "constants": [],
+            "source_file": null,
+            "access": "public",
+            "is_abstract": false,
+            "is_final": false,
+            "type_parameters": [],
+            "type_parameter_defaults": {},
+            "type_parameter_bounds": {},
+            "raw_accepts_parameterized": false,
+            "raw_construction_defaults_to_auto": false
+          }
+        ],
+        "functions": [],
+        "constants": [],
+        "hashdecls": [
+          {
+            "name": "DataContextInfo",
+            "full_name": "TypeScriptActionInterface::DataContextInfo",
+            "namespace_path": "TypeScriptActionInterface",
+            "description": "Data provider data context info",
+            "members": [
+              {
+                "name": "conn_name",
+                "type_name": "*string",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "*string",
+                  "base_type": "string",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "conn_opts",
+                "type_name": "*hash<auto>",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "*hash<auto>",
+                  "base_type": "hash",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "auto",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "auto",
+                        "base_type": "auto",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "opts",
+                "type_name": "*hash<auto>",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "*hash<auto>",
+                  "base_type": "hash",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "auto",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "auto",
+                        "base_type": "auto",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "info",
+                "type_name": "*hash<auto>",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "*hash<auto>",
+                  "base_type": "hash",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "auto",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "auto",
+                        "base_type": "auto",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "dynamic_path",
+                "type_name": "*string",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "*string",
+                  "base_type": "string",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "type_parameters": [],
+            "type_parameter_defaults": {},
+            "type_parameter_bounds": {},
+            "source_file": null
+          }
+        ],
+        "enums": [],
+        "namespaces": []
+      },
+      {
+        "name": "Priv",
+        "full_name": "Priv",
+        "classes": [
+          {
+            "name": "NoIoHelper",
+            "full_name": "Priv::NoIoHelper",
+            "namespace_path": "Priv",
+            "description": null,
+            "static_methods": [],
+            "instance_methods": [
+              {
+                "name": "constructor",
+                "full_name": "Priv::NoIoHelper::constructor",
+                "signature": "constructor()",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": null,
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              }
+            ],
+            "members": [
+              {
+                "name": "old_no_io",
+                "type_name": "*bool",
+                "access": "private",
+                "is_static": false,
+                "type_info": {
+                  "text": "*bool",
+                  "base_type": "bool",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "constants": [],
+            "source_file": null,
+            "access": "public",
+            "is_abstract": false,
+            "is_final": false,
+            "type_parameters": [],
+            "type_parameter_defaults": {},
+            "type_parameter_bounds": {},
+            "raw_accepts_parameterized": false,
+            "raw_construction_defaults_to_auto": false
+          }
+        ],
+        "functions": [],
+        "constants": [],
+        "hashdecls": [
+          {
+            "name": "DynamicTypeInfo",
+            "full_name": "Priv::DynamicTypeInfo",
+            "namespace_path": "Priv",
+            "description": null,
+            "members": [
+              {
+                "name": "get_dynamic_type",
+                "type_name": "*hash<AsyncCallInfo>",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "*hash<AsyncCallInfo>",
+                  "base_type": "hash",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "AsyncCallInfo",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "AsyncCallInfo",
+                        "base_type": "AsyncCallInfo",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "dynamic_type_done",
+                "type_name": "bool",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "bool",
+                  "base_type": "bool",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "dtfields",
+                "type_name": "*hash<string, AbstractDataField>",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "*hash<string, AbstractDataField>",
+                  "base_type": "hash",
+                  "is_optional": true,
+                  "type_arguments": [
+                    {
+                      "text": "string",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "string",
+                        "base_type": "string",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    },
+                    {
+                      "text": "AbstractDataField",
+                      "is_wildcard": false,
+                      "type_info": {
+                        "text": "AbstractDataField",
+                        "base_type": "AbstractDataField",
+                        "is_optional": false,
+                        "type_arguments": [],
+                        "wildcard_arguments": []
+                      }
+                    }
+                  ],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "dtfields_done",
+                "type_name": "bool",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "bool",
+                  "base_type": "bool",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "type",
+                "type_name": "*AbstractDataProviderType",
+                "access": "public",
+                "is_static": false,
+                "type_info": {
+                  "text": "*AbstractDataProviderType",
+                  "base_type": "AbstractDataProviderType",
+                  "is_optional": true,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "type_parameters": [],
+            "type_parameter_defaults": {},
+            "type_parameter_bounds": {},
+            "source_file": null
+          }
+        ],
+        "enums": [],
+        "namespaces": [
+          {
+            "name": "NoIoHelper",
+            "full_name": "Priv::NoIoHelper",
+            "classes": [],
+            "functions": [
+              {
+                "name": "destructor",
+                "full_name": "Priv::NoIoHelper::destructor",
+                "namespace_path": "Priv::NoIoHelper",
+                "signature": "destructor()",
+                "return_type": null,
+                "description": null,
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": null,
+                "is_deprecated": false,
+                "since": null,
+                "see_also": null,
+                "source_file": null,
+                "source_line": 1018
+              }
+            ],
+            "constants": [],
+            "hashdecls": [],
+            "enums": [],
+            "namespaces": []
+          }
+        ]
+      }
+    ]
+  }
+}

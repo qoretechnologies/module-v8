@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.3",
+  "data": {
+    "name": "",
+    "full_name": "",
+    "classes": [],
+    "functions": [],
+    "constants": [],
+    "hashdecls": [],
+    "enums": [],
+    "namespaces": [
+      {
+        "name": "TypeScriptActionInterface",
+        "full_name": "TypeScriptActionInterface",
+        "classes": [
+          {
+            "name": "TypeScriptDataField",
+            "full_name": "TypeScriptActionInterface::TypeScriptDataField",
+            "namespace_path": "TypeScriptActionInterface",
+            "description": "The TypeScript data field class",
+            "static_methods": [],
+            "instance_methods": [
+              {
+                "name": "constructor",
+                "full_name": "TypeScriptActionInterface::TypeScriptDataField::constructor",
+                "signature": "constructor(hash<auto> h, *ActionFunctionContext fctx)",
+                "return_type": null,
+                "description": "Creates the field from the argument",
+                "return_description": null,
+                "params": [
+                  {
+                    "name": "h",
+                    "type_name": "hash<auto>",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "hash<auto>",
+                      "base_type": "hash",
+                      "is_optional": false,
+                      "type_arguments": [
+                        {
+                          "text": "auto",
+                          "is_wildcard": false,
+                          "type_info": {
+                            "text": "auto",
+                            "base_type": "auto",
+                            "is_optional": false,
+                            "type_arguments": [],
+                            "wildcard_arguments": []
+                          }
+                        }
+                      ],
+                      "wildcard_arguments": []
+                    }
+                  },
+                  {
+                    "name": "fctx",
+                    "type_name": "*ActionFunctionContext",
+                    "default_value": null,
+                    "type_info": {
+                      "text": "*ActionFunctionContext",
+                      "base_type": "ActionFunctionContext",
+                      "is_optional": true,
+                      "type_arguments": [],
+                      "wildcard_arguments": []
+                    }
+                  }
+                ],
+                "named_callable": true,
+                "named_parameters": [
+                  "h",
+                  "fctx"
+                ],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null
+              },
+              {
+                "name": "getType",
+                "full_name": "TypeScriptActionInterface::TypeScriptDataField::getType",
+                "signature": "AbstractDataProviderType getType()",
+                "return_type": "AbstractDataProviderType",
+                "description": "Returns the type of the field",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "AbstractDataProviderType",
+                  "base_type": "AbstractDataProviderType",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              },
+              {
+                "name": "getDefaultValue",
+                "full_name": "TypeScriptActionInterface::TypeScriptDataField::getDefaultValue",
+                "signature": "auto getDefaultValue()",
+                "return_type": "auto",
+                "description": "Get default value, if any",
+                "return_description": null,
+                "params": [],
+                "named_callable": true,
+                "named_parameters": [],
+                "throws": [],
+                "access": "public",
+                "is_static": false,
+                "is_abstract": false,
+                "is_const_method": false,
+                "is_deprecated": false,
+                "deprecated_reason": null,
+                "since": null,
+                "see_also": null,
+                "return_type_info": {
+                  "text": "auto",
+                  "base_type": "auto",
+                  "is_optional": false,
+                  "type_arguments": [],
+                  "wildcard_arguments": []
+                }
+              }
+            ],
+            "members": [],
+            "constants": [],
+            "source_file": null,
+            "access": "public",
+            "is_abstract": false,
+            "is_final": false,
+            "type_parameters": [],
+            "type_parameter_defaults": {},
+            "type_parameter_bounds": {},
+            "raw_accepts_parameterized": false,
+            "raw_construction_defaults_to_auto": false
+          }
+        ],
+        "functions": [],
+        "constants": [],
+        "hashdecls": [],
+        "enums": [],
+        "namespaces": []
+      }
+    ]
+  }
+}
