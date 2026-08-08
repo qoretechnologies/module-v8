@@ -84,8 +84,12 @@ module TypeScriptActionInterface {
       \c qlib/TypeScriptActionInterface/i18n to contain exactly the apps and actions registered by
       this module. Catalog generation is scoped to the technical source owner, so installed or
       transitive provider modules cannot add their presentation strings; source-tree validation also
-      rejects missing and orphaned catalog domains. Catalogs can be regenerated deterministically
-      with \c test/docker_test/update-i18n.sh
+      rejects missing and orphaned catalog domains. Because this module's apps are registered
+      \a pending and initialized on demand, correct owner scoping requires the \c DataProvider 3.7
+      fix for modules loaded from a deferred app initialization; without it the \c WebSockets app
+      (\c WebSocketClient) and the Slack \c watch-messages action (Qorus \c QorusSlackServices) are
+      attributed to this module wherever they are installed. Catalogs can be regenerated
+      deterministically with \c test/docker_test/update-i18n.sh
     - added lazy, on-demand app loading: instead of eagerly loading every app (and its SDK) when the
       module is loaded, apps are registered \a pending from the data provider index and each app's
       implementation is loaded only on first use (via the catalogue, connection scheme, or data
