@@ -113,7 +113,6 @@ const NEW_APP_DIRS: readonly string[] = [
   'serenity',
   'shopify',
   'slack',
-  'stripe',
   'supabase',
   'survey-monkey',
   'teams',
