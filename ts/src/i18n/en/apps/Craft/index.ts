@@ -3,15 +3,17 @@ const CraftAppEn = {
   groups: ['Documents & Documentation', 'Project & Task Management'],
   displayName: 'Craft',
   shortDesc: 'Connect to Craft to manage documents, collections, tasks, and blocks seamlessly.',
-  longDesc: `
-    The Craft integration provides comprehensive actions and triggers to interact with the Craft API. Manage your documents, collections, tasks, and blocks with powerful automation capabilities for your note-taking and document management workflows.\n\n
-    ## API Configuration Requirements\n\n
-    ### For Tasks and Daily Notes Actions\n\n
-    To use **List Tasks**, **Create Task**, **Update Task**, **Delete Tasks**, and **Get Daily Note Blocks** actions, you must create the **Daily notes & Tasks** API in the **Imagine** tab within Craft.\n\n
+  longDesc: `The Craft integration provides comprehensive actions and triggers to interact with the Craft API. Manage your documents, collections, tasks, and blocks with powerful automation capabilities for your note-taking and document management workflows.
 
-    ### For All Other Actions\n
-    To use **Documents**, **Collections**, and **Blocks** actions, you need to connect **Selected Documents** in your Craft API configuration.
-  `,
+## API Configuration Requirements
+
+### For Tasks and Daily Notes Actions
+
+To use **List Tasks**, **Create Task**, **Update Task**, **Delete Tasks**, and **Get Daily Note Blocks** actions, you must create the **Daily notes & Tasks** API in the **Imagine** tab within Craft.
+
+### For All Other Actions
+
+To use **Documents**, **Collections**, and **Blocks** actions, you need to connect **Selected Documents** in your Craft API configuration.`,
   connectionMessage: {
     title: 'Connect to Craft',
     content: `To connect to Craft, you will need to create an **API connection** in the Craft app.
