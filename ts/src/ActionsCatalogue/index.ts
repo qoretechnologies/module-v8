@@ -101,7 +101,6 @@ const NEW_APP_DIRS: readonly string[] = [
   'open-weather-map',
   'openrouter',
   'outlook',
-  'paddle',
   'patreon',
   'paypal',
   'pipedrive',
