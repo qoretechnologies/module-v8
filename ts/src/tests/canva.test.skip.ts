@@ -13,9 +13,8 @@ import {
 } from '../apps/canva/actions';
 import { getCanvaDesignAllowedValues } from '../apps/canva/helpers/get-design-allowed-values';
 import { NewCanvaDesign, NewCanvaThreadReply } from '../apps/canva/triggers';
-import { encryptGitHubSecret } from '../qtests/utils';
+import { createGitHubClient, encryptGitHubSecret } from '../qtests/utils';
 import { Debugger, DebugLevels } from '../utils/Debugger';
-import { createGitHubClient } from '../apps/github/helpers/constants';
 import { delay } from '../global/helpers';
 
 configDotenv({ path: '.env' });

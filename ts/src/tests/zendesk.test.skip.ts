@@ -16,8 +16,7 @@ import { delay } from '../global/helpers';
 import { Debugger, DebugLevels } from '../utils/Debugger';
 import { retry } from './utils';
 import _sodium from 'libsodium-wrappers';
-import { createGitHubClient } from '../apps/github/helpers/constants';
-import { encryptGitHubSecret } from '../qtests/utils';
+import { createGitHubClient, encryptGitHubSecret } from '../qtests/utils';
 
 configDotenv({ path: '.env' });
 Debugger.level = DebugLevels.Verbose;
