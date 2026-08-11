@@ -52,7 +52,7 @@ src/schemas/<app>.swagger.json   # OpenAPI schema file
 export default (locale: Locales) =>
   ({
     // ... app metadata
-    swagger: 'schemas/confluence.swagger.json',
+    swagger: 'schemas/jira.swagger.json',
     swagger_options: {
       parse_flags: -1,  // or 128, depends on schema format
     },
