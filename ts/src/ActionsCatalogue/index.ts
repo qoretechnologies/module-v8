@@ -117,7 +117,6 @@ const NEW_APP_DIRS: readonly string[] = [
   'twilio',
   'typeform',
   'webflow',
-  'xero',
   'youtube',
   'zendesk',
   'zohocrm',
