@@ -195,6 +195,24 @@ qore_user_modules("${QMOD}")
 qore_external_user_module("qlib/TypeScriptProxy" "")
 qore_external_user_module("qlib/TypeScriptActionInterface" "TypeScriptProxy")
 
+# Reconcile the installed i18n catalog root against the fragments these modules
+# currently own.  Installing catalogs is otherwise additive: TypeScriptActionInterface
+# described apps that have since migrated to native Qore providers, and its fragments
+# for them stayed installed, so catalog discovery composed both descriptions of the
+# same app and provider presentation refused to choose between them.
+#
+# This must come after every qore_external_user_module() call above, both because
+# those calls record the fragment set and because install() rules run in declaration
+# order, which is what publishes the manifest after the fragments it describes.
+# Removals are scoped to this project, so fragments Qore and other products install
+# into the same shared catalog root are untouched.
+#
+# Guarded like qore_install_qpp_metadata() below: the helper arrived in Qore 2.3,
+# while this module only requires 2.0.
+if (COMMAND qore_finalize_catalog_install)
+    qore_finalize_catalog_install()
+endif()
+
 qore_dist(${PROJECT_VERSION})
 
 # install qpp metadata files
