@@ -1768,5 +1768,20 @@ exports.actionsCatalogue = {
                 },
             },
         });
+
+        api.registerAction({
+            "app": "gmail-test",
+            "action": "eliminar-correo",
+            "display_name": "Eliminar correo",
+            "short_desc": "Lee un correo",
+            "desc": "Lee un correo",
+            "action_code": 2,  // DPAT_API == 2
+            "google_action": {
+                "resource": "users/messages/get",
+                "path_args": {
+                    "userId": "me",
+                },
+            },
+        });
     }
 };

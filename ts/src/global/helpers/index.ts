@@ -73,6 +73,14 @@ type TBuildActionsFromSwaggerSchemaParams = {
 // These fields need to be ommited from  each action, they are used for internal purposes
 export const OMMITTED_FIELDS = ['_localizationGroup'] as const;
 
+/** HTTP methods whose protocol semantics establish that an OpenAPI action is read-only. */
+export const OPENAPI_READ_ONLY_HTTP_METHODS: ReadonlySet<string> = new Set([
+  'GET',
+  'HEAD',
+  'OPTIONS',
+  'TRACE',
+]);
+
 /*
  * This function builds actions from a swagger schema automatically
  * @param schema - the swagger schema
@@ -145,10 +153,11 @@ export const buildActionsFromSwaggerSchema = ({
         actionIdentifier = `${actionIdentifier}_${actionNameModifier}`;
       }
 
-      const action: Omit<IQoreAppActionWithSwaggerPath, 'app'> = {
+      const action = {
         action: actionIdentifier,
         action_code: EQoreAppActionCode.ACTION,
         swagger_path: `${path}/${method.toUpperCase()}`,
+        mutates_state: !OPENAPI_READ_ONLY_HTTP_METHODS.has(method.toUpperCase()),
         display_name:
           // @ts-expect-error no idea whats going on here, will fix later
           L[locale].apps[app].actions[actionIdentifier as unknown].displayName() ||
@@ -197,7 +206,7 @@ export const buildActionsFromSwaggerSchema = ({
               },
             }
           : {}),
-      };
+      } satisfies Omit<IQoreAppActionWithSwaggerPath, 'app'>;
       actions.push(action);
     });
   });

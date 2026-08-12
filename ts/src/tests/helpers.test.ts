@@ -21,6 +21,35 @@ describe('Helpers tests', () => {
     expect(actions[0].swagger_path).toBe('/v2.1/accounts/POST');
     expect(actions[0].display_name).toBe('Creates new accounts.');
     expect(actions[0].short_desc).toBe('Creates new accounts.');
+    expect(actions[0].mutates_state).toBe(true);
+  });
+
+  it('Derives action mutation effects only from exact HTTP methods', () => {
+    const schema = {
+      swagger: '2.0',
+      info: { title: 'Effect contract test', version: '1.0' },
+      paths: {
+        '/safe': {
+          get: {
+            operationId: 'delete-record',
+            summary: 'Eliminar registro',
+            responses: { 200: { description: 'OK' } },
+          },
+        },
+        '/consequential': {
+          post: {
+            operationId: 'get-record',
+            summary: 'Obtener registro',
+            responses: { 200: { description: 'OK' } },
+          },
+        },
+      },
+    } as OpenAPIV2.Document;
+
+    const actions = buildActionsFromSwaggerSchema({ schema });
+
+    expect(actions.find((action) => action.action === 'delete-record')?.mutates_state).toBe(false);
+    expect(actions.find((action) => action.action === 'get-record')?.mutates_state).toBe(true);
   });
 
   it('Properly parses a swagger schema and creates actions with filtered methods', () => {

@@ -700,16 +700,20 @@ var obj = {
 
         hash<auto> action = {
             "app": name,
-            "action": "test-api",
-            "display_name": "Test API",
+            "action": "eliminar-registro",
+            "display_name": "Eliminar registro",
             "short_desc": "Test API",
             "desc": "Test API",
             "action_code": DPAT_API,
+            "mutates_state": False,
             "api_function": sub () {},
         };
         TypeScriptActionInterface::registerAction(action, pool);
-        hash<DataProviderActionInfo> actioninfo = DataProviderActionCatalog::getAppActionEx(name, "test-api");
-        assertEq("test-api", actioninfo.action);
+        hash<DataProviderActionInfo> actioninfo = DataProviderActionCatalog::getAppActionEx(name,
+            "eliminar-registro");
+        assertEq("eliminar-registro", actioninfo.action);
+        assertFalse(actioninfo.mutates_state,
+            "typed producer metadata is authoritative regardless of a cognate action identifier");
     }
 
     private jsTest() {
@@ -726,6 +730,16 @@ var obj = {
 
         actioninfo = DataProviderActionCatalog::getAppActionEx("js-openapi-test", "create-pet");
         assertEq("create-pet", actioninfo.action);
+        assertTrue(actioninfo.mutates_state, "the exact OpenAPI POST method is consequential");
+        actioninfo = DataProviderActionCatalog::getAppActionEx("js-openapi-test", "get-pet");
+        assertEq("get-pet", actioninfo.action);
+        assertFalse(actioninfo.mutates_state, "the exact OpenAPI GET method is read-only");
+
+        actioninfo = DataProviderActionCatalog::getAppActionEx("gmail-test", "send-email");
+        assertTrue(actioninfo.mutates_state, "the Google Discovery POST method is consequential");
+        actioninfo = DataProviderActionCatalog::getAppActionEx("gmail-test", "eliminar-correo");
+        assertFalse(actioninfo.mutates_state,
+            "the Google Discovery GET method is read-only despite a mutating-looking cognate identifier");
 
         hash<auto> config = {
             "name": "test",

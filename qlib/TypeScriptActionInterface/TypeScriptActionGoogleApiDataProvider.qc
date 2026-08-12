@@ -92,7 +92,9 @@ public class TypeScriptActionGoogleApiDataProvider inherits TypeScriptActionApiD
 
     #! Returns data provider static info
     private hash<DataProviderInfo> getStaticInfoImpl() {
-        return ProviderInfo;
+        hash<DataProviderInfo> rv = ProviderInfo;
+        rv.mutates_state = google_api.getInfo().mutates_state;
+        return rv;
     }
 }
 }

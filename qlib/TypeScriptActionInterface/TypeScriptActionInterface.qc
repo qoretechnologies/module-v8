@@ -2586,6 +2586,16 @@ public class TypeScriptActionInterface {
                     action.app, action.action, openapi_path);
             }
 
+            if (action.mutates_state.typeCode() != NT_BOOLEAN) {
+                *string http_method = (openapi_path =~ x/\/([^\/]+)$/)[0];
+                if (!http_method.val()) {
+                    throw "TYPESCRIPT-ACTION-ERROR", sprintf("App %y action %y has an invalid \"openapi_path\" "
+                        "attribute %y; the path must end with an HTTP method", action.app, action.action,
+                        openapi_path);
+                }
+                action.mutates_state = !DataProviderReadOnlyHttpMethods{http_method.upr()};
+            }
+
             *softlist<string> independent_path_vars = remove action.independent_path_vars;
 
             ActionFunctionContext fctx(action.app, action.action, pool);
@@ -2608,6 +2618,13 @@ public class TypeScriptActionInterface {
         } else {
             child = new TypeScriptActionApiDataProvider(action.action, api, request_type, response_type, fctx,
                 get_dynamic_request_type, get_dynamic_response_type);
+        }
+
+        if (action.mutates_state.typeCode() != NT_BOOLEAN) {
+            hash<DataProviderInfo> child_info = child.getInfo();
+            if (child_info.mutates_state.typeCode() == NT_BOOLEAN) {
+                action.mutates_state = child_info.mutates_state;
+            }
         }
 
         TypeScriptActionAppDataProvider prov = TypeScriptActionInterface::getAppDataProvider(action.app);

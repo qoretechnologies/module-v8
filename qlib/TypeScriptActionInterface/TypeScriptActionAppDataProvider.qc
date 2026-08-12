@@ -226,6 +226,7 @@ class TypeScriptActionAppDataProvider inherits AbstractDataProvider {
                     "short_desc": AbstractDataField::getShortDescription(info.desc),
                     "desc": info.desc,
                     "action_code": DPAT_API,
+                    "mutates_state": info.mutates_state,
                     "options": options,
                 };
                 DataProviderActionCatalog::registerAction(action);
