@@ -13,7 +13,7 @@ import { HUBSPOT_LISTS_ACTIONS } from './allowed-paths/lists';
 import { HUBSPOT_PRODUCTS_ACTIONS } from './allowed-paths/products';
 import { HUBSPOT_TICKETS_ACTIONS } from './allowed-paths/tickets';
 import { HUBSPOT_USERS_ACTIONS } from './allowed-paths/users';
-import { HUBSPOT_APP_NAME } from './constants';
+import { HUBSPOT_APP_NAME, HUBSPOT_OAUTH_API_VERSION } from './constants';
 import * as HUBSPOT_TRIGGERS from './triggers';
 import * as HUBSPOT_ACTIONS from './actions';
 import { HubspotSearchOptions } from './helpers/record-based/get-search-options';
@@ -75,7 +75,7 @@ export default (locale: Locales) =>
       oauth2_client_id: '483b815d-b266-46c0-8dd5-c84bdb6c1331',
       oauth2_client_secret: getOauth2ClientSecret(HUBSPOT_APP_NAME),
       oauth2_auth_url: 'https://app.hubspot.com/oauth/authorize',
-      oauth2_token_url: 'https://api.hubapi.com/oauth/v1/token',
+      oauth2_token_url: `https://api.hubapi.com/oauth/${HUBSPOT_OAUTH_API_VERSION}/token`,
       oauth2_scopes: [
         'media_bridge.read',
         'oauth',
