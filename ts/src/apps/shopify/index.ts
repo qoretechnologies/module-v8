@@ -7,6 +7,7 @@ import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import {
+  SHOPIFY_API_VERSION,
   SHOPIFY_APP_LOGO,
   SHOPIFY_APP_NAME,
   SHOPIFY_CONN_OPTIONS,
@@ -48,7 +49,9 @@ export default (locale: Locales) =>
       oauth2_auth_url: 'https://{{shop}}.myshopify.com/admin/oauth/authorize',
       oauth2_token_url: 'https://{{shop}}.myshopify.com/admin/oauth/access_token',
       oauth2_scopes: SHOPIFY_SCOPES,
-      ping_path: '/admin/api/2023-07/shop.json',
+      // the ping must ride the same version as the actions; hardcoding it left the connection test
+      // calling a version sunset since 2024 while every action used the pinned one
+      ping_path: `/admin/api/${SHOPIFY_API_VERSION}/shop.json`,
       ping_method: 'GET',
     },
     rest_modifiers: {

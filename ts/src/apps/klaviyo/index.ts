@@ -2,7 +2,7 @@ import { TQoreAppWithActions } from '@qoretechnologies/ts-toolkit';
 import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
-import { KLAVIYO_APP_LOGO, KLAVIYO_APP_NAME } from './constants';
+import { KLAVIYO_API_REVISION, KLAVIYO_APP_LOGO, KLAVIYO_APP_NAME } from './constants';
 
 import * as KLAVIYO_ACTIONS from './actions';
 import * as KLAVIYO_TRIGGERS from './triggers';
@@ -46,7 +46,7 @@ export default (locale: Locales) =>
         'tags:write',
       ],
       ping_headers: {
-        revision: '2025-04-15',
+        revision: KLAVIYO_API_REVISION,
       },
       oauth2_pkce: 'S256',
       ping_method: 'GET',

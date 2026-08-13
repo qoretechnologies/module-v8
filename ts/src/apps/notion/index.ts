@@ -3,6 +3,7 @@ import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import { NOTION_APP_LOGO, NOTION_APP_NAME } from './constants';
+import { NOTION_API_VERSION } from './helpers/constants';
 import { createNotionRecords } from './helpers/record-based/create-records';
 import { deleteNotionRecords } from './helpers/record-based/delete-records';
 import { getNotionExpressions } from './helpers/record-based/get-expressions';
@@ -42,7 +43,9 @@ export default (locale: Locales) =>
       ping_method: 'GET',
       ping_path: '/v1/users/me',
       ping_headers: {
-        'Notion-Version': '2022-02-22',
+        // the ping must announce the same version the client sends; hardcoding it left the
+        // connection test on a 2022 version while every action used the pinned one
+        'Notion-Version': NOTION_API_VERSION,
       },
     },
     expressions: getNotionExpressions(locale),
